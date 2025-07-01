@@ -23,7 +23,7 @@ let x = function (e) {
         (0, p.EW)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: _.L.AUTO });
     }, []);
     let v = i.useCallback(() => {
-            a.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON);
+            (a.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON));
         }, [t.id]),
         j = (0, r.jsx)(h.ZP.Icon, {
             icon: o.Dio,

@@ -1,4 +1,4 @@
-n.d(t, { t: () => T }), n(388685), n(314940);
+(n.d(t, { t: () => T }), n(388685), n(314940));
 var r = n(255367),
     i = n(73800),
     l = n(278074),
@@ -40,13 +40,13 @@ function T(e) {
         if (null == e) return;
         g.Z.close();
         let t = { [e.id]: e };
-        (0, p.iD)(P.id, {
+        ((0, p.iD)(P.id, {
             type: f.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
             returnToSection: N.pNK.GUILD_PRODUCTS
         }),
-            (0, h.uL)(N.Z5c.CHANNEL(P.id, I.oC.GUILD_SHOP));
+            (0, h.uL)(N.Z5c.CHANNEL(P.id, I.oC.GUILD_SHOP)));
     }, [P]);
     if (!T || Z) return (0, r.jsx)(a.$jN, {});
     if (null == P) return null;

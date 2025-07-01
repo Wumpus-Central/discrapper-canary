@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(953529);
+(n.d(t, { Z: () => w }), n(953529));
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -36,7 +36,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -78,7 +78,7 @@ function N(e, t) {
         i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -88,7 +88,7 @@ function C(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let R = new s.Z('GuildSettingsActionCreators'),
@@ -104,7 +104,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var a;
-            await Promise.all([n.e('44947'), n.e('25292'), n.e('31978'), n.e('90508'), n.e('39797'), n.e('11141'), n.e('94136'), n.e('40694'), n.e('43988'), n.e('7654'), n.e('55616'), n.e('49049'), n.e('44156'), n.e('45505'), n.e('49286'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('92754'), n.e('93375'), n.e('64679'), n.e('44606'), n.e('56534'), n.e('7463')]).then(n.bind(n, 994763)), (null == (a = g.Z.getGuild(e)) ? void 0 : a.hasFeature(O.oNc.COMMUNITY)) && (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)), t === O.pNK.MEMBER_VERIFICATION && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), p.Z.closeGuildSidebar(e), (0, o.jN)(O.S9g.GUILD_SETTINGS);
+            (await Promise.all([n.e('95355'), n.e('41979'), n.e('25292'), n.e('22878'), n.e('31978'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('90508'), n.e('8739'), n.e('7839'), n.e('28467'), n.e('86282'), n.e('38626'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('44421'), n.e('23491'), n.e('27947'), n.e('61668'), n.e('94136'), n.e('40694'), n.e('36006'), n.e('71418'), n.e('55616'), n.e('7654'), n.e('44156'), n.e('10026'), n.e('49049'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('82265'), n.e('93375'), n.e('64679'), n.e('67042'), n.e('56534'), n.e('26778')]).then(n.bind(n, 994763)), (null == (a = g.Z.getGuild(e)) ? void 0 : a.hasFeature(O.oNc.COMMUNITY)) && (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)), t === O.pNK.MEMBER_VERIFICATION && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), p.Z.closeGuildSidebar(e), (0, o.jN)(O.S9g.GUILD_SETTINGS));
         },
         close() {
             a.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' });
@@ -191,11 +191,11 @@ let R = new s.Z('GuildSettingsActionCreators'),
                 })
                 .then(
                     () => {
-                        a.Z.dispatch({
+                        (a.Z.dispatch({
                             type: 'GUILD_SETTINGS_UPDATE',
                             icon: t
                         }),
-                            c.Z.checkGuildTemplateDirty(e);
+                            c.Z.checkGuildTemplateDirty(e));
                     },
                     (e) =>
                         a.Z.dispatch({
@@ -214,7 +214,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
             var t,
                 { safetyAlertsChannelId: n, profile: r } = e;
             let i = T({}, N(e, ['safetyAlertsChannelId', 'profile']));
-            null != r && (i.profile = T({}, null != (t = i.profile) ? t : {}, r)), null != y.Z.getGuildId() && null != n && (i.safetyAlertsChannelId = n), a.Z.dispatch(T({ type: 'GUILD_SETTINGS_UPDATE' }, i));
+            (null != r && (i.profile = T({}, null != (t = i.profile) ? t : {}, r)), null != y.Z.getGuildId() && null != n && (i.safetyAlertsChannelId = n), a.Z.dispatch(T({ type: 'GUILD_SETTINGS_UPDATE' }, i)));
         },
         updateGuildProfile(e, t) {
             a.Z.dispatch(
@@ -273,11 +273,11 @@ let R = new s.Z('GuildSettingsActionCreators'),
                     })
                     .then(
                         (t) => {
-                            a.Z.dispatch({
+                            (a.Z.dispatch({
                                 type: 'GUILD_SETTINGS_SUBMIT_SUCCESS',
                                 guild: t.body
                             }),
-                                c.Z.checkGuildTemplateDirty(e);
+                                c.Z.checkGuildTemplateDirty(e));
                         },
                         (e) => {
                             if (
@@ -376,18 +376,18 @@ let R = new s.Z('GuildSettingsActionCreators'),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = f.Z.isLurking(e);
-            await i.tn.del({
+            (await i.tn.del({
                 url: O.ANM.GUILD_LEAVE(e),
                 body: { lurking: n || m.ZP.isCurrentUserGuest(e) },
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
                 P.close(),
-                t && n && (0, _.uL)(O.Z5c.GUILD_DISCOVERY);
+                t && n && (0, _.uL)(O.Z5c.GUILD_DISCOVERY));
         },
         async updateMemberRoles(e, t, n, r, o) {
             if (d.Z.isFullServerPreview(e) && t === h.default.getId()) return void (0, u.og)(e, n);
-            await i.tn.patch({
+            (await i.tn.patch({
                 url: O.ANM.GUILD_MEMBER(e, t),
                 body: { roles: n },
                 oldFormErrors: !0,
@@ -408,7 +408,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                         roleId: n,
                         userId: t
                     })
-                );
+                ));
         },
         bulkAddMemberRoles: (e, t, n) =>
             i.tn

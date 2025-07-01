@@ -7,17 +7,17 @@ var r = n(175730),
     },
     s = (function () {
         function e(e, t) {
-            (this.target = e),
+            ((this.target = e),
                 (this.observedBox = t || r.z.CONTENT_BOX),
                 (this.lastReportedSize = {
                     inlineSize: 0,
                     blockSize: 0
-                });
+                }));
         }
         return (
             (e.prototype.isActive = function () {
                 var e = (0, i.Y)(this.target, this.observedBox, !0);
-                return o(this.target) && (this.lastReportedSize = e), this.lastReportedSize.inlineSize !== e.inlineSize || this.lastReportedSize.blockSize !== e.blockSize;
+                return (o(this.target) && (this.lastReportedSize = e), this.lastReportedSize.inlineSize !== e.inlineSize || this.lastReportedSize.blockSize !== e.blockSize);
             }),
             e
         );

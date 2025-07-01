@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -7,33 +7,42 @@ var r = n(255367),
     o = n(481060),
     c = n(100527),
     d = n(906732),
-    u = n(434404),
-    m = n(892001),
-    g = n(430824),
-    p = n(893966),
-    f = n(527379),
-    h = n(305473),
-    x = n(113679),
-    b = n(440857),
-    j = n(472596),
-    _ = n(598948),
-    v = n(428936),
-    O = n(41586),
-    C = n(918192),
-    y = n(981631),
-    N = n(388032),
-    I = n(881786),
-    E = n(319586);
-function S(e) {
+    u = n(189357),
+    m = n(613464),
+    g = n(434404),
+    p = n(6025),
+    f = n(892001),
+    h = n(433355),
+    x = n(430824),
+    b = n(893966),
+    j = n(527379),
+    _ = n(305473),
+    v = n(113679),
+    O = n(440857),
+    C = n(472596),
+    y = n(598948),
+    N = n(428936),
+    I = n(41586),
+    E = n(918192),
+    S = n(981631),
+    T = n(388032),
+    P = n(881786),
+    w = n(319586);
+function R(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([g.Z], () => g.Z.getGuild(t)),
+        n = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
-        S = !1 == !!(null == n ? void 0 : n.hasFeature(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        T = (0, a.e7)([p.Z], () => p.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        P = i.useCallback(
+        R = (0, u.m)(t),
+        Z = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(t), [t]),
+        D = i.useCallback(() => {
+            p.Z.closeGuildSidebar(t);
+        }, [t]),
+        k = !1 == !!(null == n ? void 0 : n.hasFeature(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        A = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        L = i.useCallback(
             (e) => {
                 null != e &&
-                    (0, m.openUserProfileModal)({
+                    (0, f.openUserProfileModal)({
                         userId: e.userId,
                         guildId: e.guildId,
                         sourceAnalyticsLocations: l
@@ -41,94 +50,115 @@ function S(e) {
             },
             [l]
         ),
-        w = i.useRef(null),
-        R = i.useCallback(() => {
+        M = i.useRef(null),
+        G = i.useCallback(() => {
             var e;
-            null == (e = w.current) || e.resetSearchText();
+            null == (e = M.current) || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let Z = (0, j.xb)(!1, !1, T);
-    return (0, r.jsx)(d.Gt, {
+    let U = (0, C.xb)(!1, !1, A);
+    return (0, r.jsxs)(d.Gt, {
         value: l,
-        children: (0, r.jsx)('div', {
-            className: s()(E.customColumn, I.override, I.settingsColumn),
-            children: (0, r.jsx)('div', {
-                className: E.customContainer,
-                children: (0, r.jsx)(o.w0Z, {
-                    className: E.customScroller,
-                    orientation: 'auto',
+        children: [
+            (0, r.jsx)('div', {
+                className: s()(w.customColumn, P.override, P.settingsColumn),
+                children: (0, r.jsx)('div', {
+                    className: w.customContainer,
                     children: (0, r.jsx)(o.w0Z, {
-                        className: I.settingsHorizontalScroller,
+                        className: w.customScroller,
                         orientation: 'auto',
-                        children: (0, r.jsxs)('main', {
-                            className: s()(E.customColumn, E.contentColumnDefault, I.override, I.settingsColumn, I.settingsContent),
-                            children: [
-                                (0, r.jsx)(
-                                    o.hjN,
-                                    {
-                                        className: I.header,
-                                        children: (0, r.jsx)(o.vwX, {
-                                            tag: o.RB0.H1,
-                                            children: N.intl.string(N.t['S40K6+'])
-                                        })
-                                    },
-                                    'header'
-                                ),
-                                (0, r.jsx)(
-                                    o.hjN,
-                                    {
-                                        children: (0, r.jsxs)('div', {
-                                            className: I.tableContainer,
-                                            children: [
-                                                (0, r.jsx)(x.Z, { guild: n }),
-                                                (0, r.jsx)(h.Z, { guild: n }),
-                                                S
-                                                    ? (0, r.jsxs)('div', {
-                                                          className: I.mainTableContainer,
-                                                          children: [
-                                                              (0, r.jsx)(O.Z, {
-                                                                  guild: n,
-                                                                  ref: w
-                                                              }),
-                                                              (0, r.jsx)(_.Z, {
-                                                                  guild: n,
-                                                                  searchState: Z,
-                                                                  compact: !0,
-                                                                  onSelectRow: P,
-                                                                  onResetForNewMembers: R
-                                                              }),
-                                                              Z !== j.po.SUCCESS_STILL_INDEXING && (0, r.jsx)(v.Z, { guildId: n.id })
-                                                          ]
-                                                      })
-                                                    : (0, r.jsx)('div', {
-                                                          className: I.movedTable,
-                                                          children: (0, r.jsxs)('div', {
-                                                              className: I.noResultsContainer,
+                        children: (0, r.jsx)(o.w0Z, {
+                            className: P.settingsHorizontalScroller,
+                            orientation: 'auto',
+                            children: (0, r.jsxs)('main', {
+                                className: s()(w.customColumn, w.contentColumnDefault, P.override, P.settingsColumn, P.settingsContent),
+                                children: [
+                                    (0, r.jsx)(
+                                        o.hjN,
+                                        {
+                                            className: P.header,
+                                            children: (0, r.jsx)(o.vwX, {
+                                                tag: o.RB0.H1,
+                                                children: T.intl.string(T.t['S40K6+'])
+                                            })
+                                        },
+                                        'header'
+                                    ),
+                                    (0, r.jsx)(
+                                        o.hjN,
+                                        {
+                                            children: (0, r.jsxs)('div', {
+                                                className: P.tableContainer,
+                                                children: [
+                                                    (0, r.jsx)(v.Z, { guild: n }),
+                                                    (0, r.jsx)(_.Z, { guild: n }),
+                                                    k
+                                                        ? (0, r.jsxs)('div', {
+                                                              className: P.mainTableContainer,
                                                               children: [
-                                                                  (0, r.jsx)('div', { children: (0, r.jsx)(C.Z, {}) }),
-                                                                  (0, r.jsx)(o.Text, {
-                                                                      variant: 'text-md/normal',
-                                                                      color: 'text-muted',
-                                                                      children: N.intl.format(N.t.Bf6yxM, {
-                                                                          onClick: (e) => {
-                                                                              null != n && (e.preventDefault(), u.Z.close(), (0, f._X)(n.id));
-                                                                          }
-                                                                      })
-                                                                  })
+                                                                  (0, r.jsx)(I.Z, {
+                                                                      guild: n,
+                                                                      ref: M
+                                                                  }),
+                                                                  (0, r.jsx)(y.Z, {
+                                                                      guild: n,
+                                                                      searchState: U,
+                                                                      compact: !0,
+                                                                      onSelectRow: L,
+                                                                      onResetForNewMembers: G
+                                                                  }),
+                                                                  U !== C.po.SUCCESS_STILL_INDEXING && (0, r.jsx)(N.Z, { guildId: n.id })
                                                               ]
                                                           })
-                                                      })
-                                            ]
-                                        })
-                                    },
-                                    'body'
-                                ),
-                                (0, r.jsx)(b.Z, { guildId: n.id })
-                            ]
+                                                        : (0, r.jsx)('div', {
+                                                              className: P.movedTable,
+                                                              children: (0, r.jsxs)('div', {
+                                                                  className: P.noResultsContainer,
+                                                                  children: [
+                                                                      (0, r.jsx)('div', { children: (0, r.jsx)(E.Z, {}) }),
+                                                                      (0, r.jsx)(o.Text, {
+                                                                          variant: 'text-md/normal',
+                                                                          color: 'text-muted',
+                                                                          children: T.intl.format(T.t.Bf6yxM, {
+                                                                              onClick: (e) => {
+                                                                                  null != n && (e.preventDefault(), g.Z.close(), (0, j._X)(n.id));
+                                                                              }
+                                                                          })
+                                                                      })
+                                                                  ]
+                                                              })
+                                                          })
+                                                ]
+                                            })
+                                        },
+                                        'body'
+                                    ),
+                                    (0, r.jsx)(O.Z, { guildId: n.id })
+                                ]
+                            })
                         })
                     })
                 })
-            })
-        })
+            }),
+            R &&
+                null != Z &&
+                (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)(o.ZMr, {
+                            isVisible: !0,
+                            onClick: D
+                        }),
+                        (0, r.jsx)('div', {
+                            className: P.modViewSidebarContainer,
+                            style: { width: S.$Y6 },
+                            children: (0, r.jsx)(m.Z, {
+                                userId: Z.details.userId,
+                                guildId: Z.details.guildId,
+                                onClose: D
+                            })
+                        })
+                    ]
+                })
+        ]
     });
 }

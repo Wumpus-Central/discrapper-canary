@@ -1,8 +1,8 @@
-r.d(t, {
+(r.d(t, {
     B: () => j,
     r: () => h
 }),
-    r(415506);
+    r(415506));
 var n = r(255367),
     l = r(73800),
     i = r(512722),
@@ -19,7 +19,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -27,7 +27,7 @@ function m(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -35,8 +35,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -50,19 +50,19 @@ function O(e, t) {
                 n,
                 l = {},
                 i = Object.keys(e);
-            for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+            for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]));
             return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+        for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]));
     }
     return l;
 }
 let y = l.createContext(void 0);
 function j() {
     let e = l.useContext(y);
-    return o()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e;
+    return (o()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e);
 }
 function g(e) {
     var { entry: t } = e,

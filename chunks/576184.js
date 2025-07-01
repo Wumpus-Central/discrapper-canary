@@ -1,4 +1,4 @@
-s.r(r), s.d(r, { default: () => g });
+(s.r(r), s.d(r, { default: () => g }));
 var t = s(255367),
     o = s(73800),
     i = s(120356),

@@ -15,7 +15,7 @@ let n = (e, r) => {
         for (var o = 0; o < e.length; o++)
             for (var l = Math.max(0, o - t); l <= Math.min(r.length, o + t); l++)
                 if (e[o] === r[l] && !n[l]) {
-                    (n[l] = !0), a++;
+                    ((n[l] = !0), a++);
                     break;
                 }
         return a;
@@ -30,14 +30,14 @@ let n = (e, r) => {
         for (let o = 0; o < e.length; o++)
             for (let l = Math.max(0, o - t); l <= Math.min(r.length, o + t); l++)
                 if (e[o] === r[l] && !a[l]) {
-                    (n.a += e[o]), (a[l] = !0);
+                    ((n.a += e[o]), (a[l] = !0));
                     break;
                 }
         a = [];
         for (let o = 0; o < r.length; o++)
             for (let l = Math.max(0, o - t); l <= Math.min(e.length, o + t); l++)
                 if (r[o] === e[l] && !a[l]) {
-                    (n.b += r[o]), (a[l] = !0);
+                    ((n.b += r[o]), (a[l] = !0));
                     break;
                 }
         let o = 0;

@@ -15,13 +15,13 @@ let f = function (e) {
         n = s.Z.useField('categoryId'),
         f = (0, l.e7)([c.Z], () => c.Z.getCategoryName(n)),
         g = i.useCallback(() => {
-            s.Z.setState({ categoryId: u.Hk }),
+            (s.Z.setState({ categoryId: u.Hk }),
                 o.Z.loadCategoryResults({
                     loadId: t,
                     categoryId: u.Hk,
                     query: s.Z.getField('fetchedQuery'),
                     languageCode: s.Z.getField('languageCode')
-                });
+                }));
         }, [t]),
         m = n === u.Hk ? d.intl.string(d.t.Ivw1Ii) : d.intl.formatToPlainString(d.t['+1WAFR'], { categoryName: f }),
         b = n === u.Hk ? d.intl.string(d.t.aXvEjY) : d.intl.format(d.t.XLioqq, { onClick: g });

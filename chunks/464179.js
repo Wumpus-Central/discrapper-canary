@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => Y }), n(388685), n(35282), n(415506);
+(n.d(t, { ZP: () => Y }), n(388685), n(35282), n(415506));
 var r,
     i = n(255367),
     a = n(73800),
@@ -28,7 +28,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -70,7 +70,7 @@ function b(e, t) {
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -80,7 +80,7 @@ function y(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let O = 'US',
@@ -99,10 +99,10 @@ let O = 'US',
     w = (0, u.hQ)(),
     D = (0, u.hQ)();
 var L = (function (e) {
-        return (e.MODAL_US = 'modalUS'), (e.MODAL_INTL = 'modalInternational'), (e.MODAL_US_WITH_NAME = 'modalUSWithName'), (e.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'), (e.SETTINGS_US = 'settingsUS'), (e.SETTINGS_INTL = 'settingsInternational'), (e.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'), (e.SETTINGS_US_MOBILE = 'settingsUSMobile'), (e.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'), (e.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'), e;
+        return ((e.MODAL_US = 'modalUS'), (e.MODAL_INTL = 'modalInternational'), (e.MODAL_US_WITH_NAME = 'modalUSWithName'), (e.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'), (e.SETTINGS_US = 'settingsUS'), (e.SETTINGS_INTL = 'settingsInternational'), (e.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'), (e.SETTINGS_US_MOBILE = 'settingsUSMobile'), (e.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'), (e.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'), e);
     })(L || {}),
     x = (function (e) {
-        return (e.EDIT = 'edit'), (e.CREATE = 'create'), e;
+        return ((e.EDIT = 'edit'), (e.CREATE = 'create'), e);
     })(x || {});
 let k = {
         [O]: l.G,
@@ -195,10 +195,10 @@ let k = {
         let t, n;
         switch (e) {
             case O:
-                (t = _.intl.string(_.t['/95CeH'])), (n = _.intl.string(_.t['9xLNmp']));
+                ((t = _.intl.string(_.t['/95CeH'])), (n = _.intl.string(_.t['9xLNmp'])));
                 break;
             case v:
-                (t = _.intl.string(_.t.mfpJ9v)), (n = _.intl.string(_.t.Nc4Rzs));
+                ((t = _.intl.string(_.t.mfpJ9v)), (n = _.intl.string(_.t.Nc4Rzs)));
                 break;
             default:
                 t = _.intl.string(_.t.mfpJ9v);
@@ -316,7 +316,7 @@ class H extends (r = a.PureComponent) {
     validateForm(e) {
         let { values: t, dirtyFields: n } = this.state,
             r = {};
-        (e && !n.name) || this.hasValue(t.name) || 'edit' !== this.props.mode || (r.name = _.intl.string(_.t.KU5mWF)), (e && !n.country) || this.hasValue(t.country) || (r.country = _.intl.string(_.t['+bm+zM'])), (e && !n.line1) || this.hasValue(t.line1) || (r.line1 = _.intl.string(_.t['6HMkBw'])), (e && !n.city) || this.hasValue(t.city) || (r.city = _.intl.string(_.t.kOrBmZ));
+        ((e && !n.name) || this.hasValue(t.name) || 'edit' !== this.props.mode || (r.name = _.intl.string(_.t.KU5mWF)), (e && !n.country) || this.hasValue(t.country) || (r.country = _.intl.string(_.t['+bm+zM'])), (e && !n.line1) || this.hasValue(t.line1) || (r.line1 = _.intl.string(_.t['6HMkBw'])), (e && !n.city) || this.hasValue(t.city) || (r.city = _.intl.string(_.t.kOrBmZ)));
         let i = t.country;
         switch (i) {
             case O:
@@ -327,7 +327,7 @@ class H extends (r = a.PureComponent) {
                 (e && !n.state) || this.hasValue(t.state) || (r.state = _.intl.string(_.t.RIaPdH));
                 break;
             case v:
-                (e && !n.postalCode) || this.hasValue(t.postalCode) || (r.postalCode = _.intl.string(_.t.LRlhb2)), (e && !n.state) || this.hasValue(t.state) || (r.state = _.intl.string(_.t.PsJCcn));
+                ((e && !n.postalCode) || this.hasValue(t.postalCode) || (r.postalCode = _.intl.string(_.t.LRlhb2)), (e && !n.state) || this.hasValue(t.state) || (r.state = _.intl.string(_.t.PsJCcn)));
                 break;
             default:
                 (e && !n.postalCode) || this.hasValue(t.postalCode) || T.includes(null != i ? i : '') || (r.postalCode = _.intl.string(_.t.LRlhb2));
@@ -364,7 +364,7 @@ class H extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             h(this, 'state', {
                 values: {
                     name: this.props.name,
@@ -384,16 +384,16 @@ class H extends (r = a.PureComponent) {
             h(this, 'handleFieldChange', (e, t) => {
                 if (null == t) return;
                 let { values: n, errors: r, dirtyFields: i } = this.state;
-                delete r[t],
+                (delete r[t],
                     this.setState({
                         values: E(m({}, n), { [t]: e }),
                         dirtyFields: E(m({}, i), { [t]: !0 }),
                         errors: r
-                    });
-            });
+                    }));
+            }));
     }
 }
-h(H, 'Layouts', L),
+(h(H, 'Layouts', L),
     h(H, 'Modes', x),
     h(H, 'defaultProps', {
         name: '',
@@ -406,5 +406,5 @@ h(H, 'Layouts', L),
         layout: 'modalUS',
         mode: 'create',
         error: null
-    });
+    }));
 let Y = H;

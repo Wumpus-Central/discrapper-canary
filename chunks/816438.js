@@ -45,12 +45,12 @@ function _(e) {
                 state: p,
                 setOptions: function (n) {
                     var r = 'function' == typeof n ? n(p.options) : n;
-                    y(),
+                    (y(),
                         (p.options = Object.assign({}, h, p.options, r)),
                         (p.scrollParents = {
                             reference: (0, u.kK)(e) ? (0, a.Z)(e) : e.contextElement ? (0, a.Z)(e.contextElement) : [],
                             popper: (0, a.Z)(t)
-                        });
+                        }));
                     var i = (0, s.Z)((0, c.Z)([].concat(_, p.options.modifiers)));
                     return (
                         (p.orderedModifiers = i.filter(function (e) {
@@ -66,7 +66,7 @@ function _(e) {
                             t = e.reference,
                             n = e.popper;
                         if (f(t, n)) {
-                            (p.rects = {
+                            ((p.rects = {
                                 reference: (0, r.Z)(t, (0, o.Z)(n), 'fixed' === p.options.strategy),
                                 popper: (0, i.Z)(n)
                             }),
@@ -74,10 +74,10 @@ function _(e) {
                                 (p.placement = p.options.placement),
                                 p.orderedModifiers.forEach(function (e) {
                                     return (p.modifiersData[e.name] = Object.assign({}, e.data));
-                                });
+                                }));
                             for (var a = 0; a < p.orderedModifiers.length; a++) {
                                 if (!0 === p.reset) {
-                                    (p.reset = !1), (a = -1);
+                                    ((p.reset = !1), (a = -1));
                                     continue;
                                 }
                                 var s = p.orderedModifiers[a],
@@ -99,11 +99,11 @@ function _(e) {
                 },
                 update: (0, l.Z)(function () {
                     return new Promise(function (e) {
-                        E.forceUpdate(), e(p);
+                        (E.forceUpdate(), e(p));
                     });
                 }),
                 destroy: function () {
-                    y(), (g = !0);
+                    (y(), (g = !0));
                 }
             };
         if (!f(e, t)) return E;
@@ -126,10 +126,10 @@ function _(e) {
             });
         }
         function y() {
-            m.forEach(function (e) {
+            (m.forEach(function (e) {
                 return e();
             }),
-                (m = []);
+                (m = []));
         }
         return (
             E.setOptions(n).then(function (e) {

@@ -1,4 +1,4 @@
-n.d(t, { g: () => b }), n(781311), n(388685), n(35282), n(704826), n(804061);
+(n.d(t, { g: () => b }), n(781311), n(388685), n(35282), n(704826), n(804061));
 var r = n(159635),
     i = n.n(r),
     l = n(969812),
@@ -20,7 +20,7 @@ let f = /\\([*?+/])/g,
         nick: {
             action(e, t) {
                 let { channel: n } = t;
-                if (null != n.guild_id) return l.Z.changeNickname(n.guild_id, n.id, h.ME, e), { content: '' };
+                if (null != n.guild_id) return (l.Z.changeNickname(n.guild_id, n.id, h.ME, e), { content: '' });
             }
         },
         reaction: {
@@ -31,7 +31,7 @@ let f = /\\([*?+/])/g,
                 let i = p.Z.getMessages(r.id).last();
                 if (null == i || null == i.id) return;
                 let l = s.ZP.getDisambiguatedEmojiContext(r.guild_id).getByName(e.trim().slice(2, -1));
-                if (null != l) return (0, c.rU)(r.id, i.id, (0, u.g1)(l)), { content: '' };
+                if (null != l) return ((0, c.rU)(r.id, i.id, (0, u.g1)(l)), { content: '' });
             }
         },
         searchReplace: {
@@ -44,15 +44,15 @@ let f = /\\([*?+/])/g,
                 if (null == a || null == a.id) return { content: '' };
                 let [s, c, u, d] = Array.from(null != (n = e.match(this.match.regex)) ? n : []),
                     h = null != (r = null == d ? void 0 : d.split('')) ? r : [];
-                (c = c.replace(f, (e, t) => t)), (u = u.replace(f, (e, t) => t));
+                ((c = c.replace(f, (e, t) => t)), (u = u.replace(f, (e, t) => t)));
                 let m = h.includes('g') ? a.content.replaceAll(c, u) : a.content.replace(c, u);
-                return (null == m || '' === m.trim()) && 0 === a.attachments.length ? o.Z.deleteMessage(l.id, a.id) : m !== a.content && o.Z.editMessage(l.id, a.id, { content: m }), { content: '' };
+                return ((null == m || '' === m.trim()) && 0 === a.attachments.length ? o.Z.deleteMessage(l.id, a.id) : m !== a.content && o.Z.editMessage(l.id, a.id, { content: m }), { content: '' });
             }
         },
         spoiler: { action: (e) => ({ content: (0, h.XmY)(e).trim() }) }
     };
 function g(e, t, n, r) {
-    return a.ZP.trackWithMetadata(h.rMx.SLASH_COMMAND_USED, { command: e }), t.action(n, r);
+    return (a.ZP.trackWithMetadata(h.rMx.SLASH_COMMAND_USED, { command: e }), t.action(n, r));
 }
 function b(e, t) {
     for (let r in m) {

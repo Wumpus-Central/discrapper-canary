@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => q }), n(358797), n(388685);
+(n.r(t), n.d(t, { default: () => q }), n(358797), n(388685));
 var l = n(392711),
     r = n.n(l),
     i = n(261470),
@@ -31,9 +31,9 @@ var l = n(392711),
     D = n(293273),
     L = n(131951),
     U = n(158776),
-    j = n(19780),
-    C = n(306680),
-    M = n(699516),
+    C = n(19780),
+    M = n(306680),
+    j = n(699516),
     k = n(944486),
     G = n(9156),
     V = n(594174),
@@ -56,11 +56,11 @@ async function q(e, t) {
         });
     n.succeed();
     let J = Object.values(V.default.getUsers()),
-        Q = Object.values(T.Z.getGuilds()),
+        Q = T.Z.getGuildsArray(),
         K = N.Z.getAllGuildsRoles(),
         X = r().values(A.Z.getInitialOverlayState()),
         $ = w.ZP.getMutableAllGuildsAndMembers(),
-        ee = C.ZP.getAllReadStates(!0),
+        ee = M.ZP.getAllReadStates(!0),
         et = H.Z.getAllVoiceStates(),
         en = U.Z.getState(),
         el = R.Z.unavailableGuilds,
@@ -76,7 +76,7 @@ async function q(e, t) {
         eg = I.default.getAnalyticsToken(),
         eZ = W.Z.getGameForPID(t),
         eS = _.Z.getMemberCounts(),
-        eE = Array.from(M.Z.getMutableRelationships().entries()),
+        eE = Array.from(j.Z.getMutableRelationships().entries()),
         eP = Array.from(d.Z.getMessageRequestChannelIds()),
         em = k.Z.getVoiceChannelId(),
         ep = B.default.getFocusedPID(),
@@ -92,20 +92,20 @@ async function q(e, t) {
         ew = z.Z.testModeApplicationId,
         eN = {
             null: {
-                state: j.Z.getState(),
-                pings: j.Z.getPings(),
-                quality: j.Z.getQuality(),
-                hostname: j.Z.getHostname(),
-                lossRate: j.Z.getOutboundLossRate()
+                state: C.Z.getState(),
+                pings: C.Z.getPings(),
+                quality: C.Z.getQuality(),
+                hostname: C.Z.getHostname(),
+                lossRate: C.Z.getOutboundLossRate()
             }
         },
         eT = Array.from(f.Z.getState().hiddenHotspots),
         eD = s.Z.getSerializedState(),
         eL = c.Z.getState(),
         eU = Z.Z.getInitialOverlayState(),
-        ej = S.Z.getInitialOverlayState(),
-        eC = E.Z.getInitialOverlayState(),
-        eM = (0, m.xU)(a.o8, P.Z.settings),
+        eC = S.Z.getInitialOverlayState(),
+        eM = E.Z.getInitialOverlayState(),
+        ej = (0, m.xU)(a.o8, P.Z.settings),
         ek = g.Z.getOverlaySerializedState(),
         eG = v.Z.consents;
     return {
@@ -152,9 +152,9 @@ async function q(e, t) {
         serializedExperimentStore: eD,
         streamingCapabilitiesStoreState: eL,
         joinedThreads: eU,
-        threadMembers: ej,
-        threadMessages: eC,
-        userSettingsProto: eM,
+        threadMembers: eC,
+        threadMessages: eM,
+        userSettingsProto: ej,
         soundboardStoreState: ek,
         detectableApplications: eO,
         consents: eG

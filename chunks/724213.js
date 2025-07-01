@@ -1,4 +1,4 @@
-t.d(n, {
+(t.d(n, {
     hi: () => u,
     kH: () => m,
     rz: () => h
@@ -6,7 +6,7 @@ t.d(n, {
     t(997841),
     t(388685),
     t(539854),
-    t(524437);
+    t(524437));
 var l = t(549817);
 t(581883);
 var r = t(984933),
@@ -43,5 +43,5 @@ function h(e) {
                 let { channel: n } = e;
                 return n.id;
             });
-    n.forEach((e) => a.push(e)), l.Z.onboardExistingMember(e, new Set(a));
+    (n.forEach((e) => a.push(e)), l.Z.onboardExistingMember(e, new Set(a)));
 }

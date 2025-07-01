@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+(n.d(t, { Z: () => B }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -39,7 +39,7 @@ function R() {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function R() {
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    (i = n[t]),
+                                    ((i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
@@ -55,8 +55,8 @@ function R() {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = i);
-                                });
+                                            : (e[t] = i));
+                                }));
                         }
                         return e;
                     })({}, t)
@@ -88,7 +88,7 @@ function D(e) {
         [x, E] = r.useState(T.iB),
         O = (0, g.Xi)({ location: 'family_center_activity_section_web' }),
         S = r.useCallback(() => {
-            E((e) => e + T.iB), u(t);
+            (E((e) => e + T.iB), u(t));
         }, [t, u]);
     l()(b, 'No text for action type');
     let v = b.sectionHeader(c),
@@ -245,7 +245,7 @@ let Z = () => {
             },
             serialize: (e) => e,
             select: (e) => {
-                n(e), c.default.track(I.rMx.FAMILY_CENTER_ACTION, { action: T.YC.SelectTeen });
+                (n(e), c.default.track(I.rMx.FAMILY_CENTER_ACTION, { action: T.YC.SelectTeen }));
             },
             isSelected: (e) => e === t,
             options: s

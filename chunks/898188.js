@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -61,7 +61,7 @@ function N(e) {
         [R, P] = i.useState(!1),
         [w] = i.useState(new s.Z.Value(0)),
         [D] = i.useState(new s.Z.Value(0));
-    i.useEffect(() => {
+    (i.useEffect(() => {
         b
             ? s.Z.timing(w, {
                   toValue: 0,
@@ -85,7 +85,7 @@ function N(e) {
                     easing: s.Z.Easing.quad,
                     delay: 400
                 }).start();
-        }, [b, D, R, O]);
+        }, [b, D, R, O]));
     let L = i.useCallback(() => {
         null != y && (0, m.gp)(f, y.channelId);
     }, [f, y]);

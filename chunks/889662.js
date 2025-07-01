@@ -1,4 +1,4 @@
-n.d(e, { default: () => b }), n(388685);
+(n.d(e, { default: () => b }), n(388685));
 var r = n(255367),
     l = n(73800),
     c = n(374470),
@@ -11,7 +11,7 @@ var r = n(255367),
 function b(t) {
     let { text: e, target: n, onHeightUpdate: b, onSelect: d } = t,
         f = l.useCallback(() => {
-            (0, s.Zy)(), (0, c.k)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
+            ((0, s.Zy)(), (0, c.k)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0)));
         }, [n]),
         [h, y] = (0, o.Z)({
             text: e,

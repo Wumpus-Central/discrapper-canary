@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     PQ: () => m,
     ZP: () => y,
     e3: () => g
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(73800),
     i = n(688619),
     a = n.n(i),
@@ -59,12 +59,12 @@ let m = 'data-client-themes',
             r.useEffect(() => {
                 if (!(0, o.isEqual)(m, E.current)) {
                     var e, t, n;
-                    (E.current = m),
+                    ((E.current = m),
                         _({
                             colors: null != (e = null == m ? void 0 : m.colors) ? e : [],
                             gradientAngle: null != (t = null == m ? void 0 : m.gradientAngle) ? t : 0,
                             chassisMixAmount: null != (n = null == m ? void 0 : m.baseMix) ? n : f.BH
-                        });
+                        }));
                 }
             }, [m, _]),
             r.useMemo(() => {

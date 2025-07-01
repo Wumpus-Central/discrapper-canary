@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -33,7 +33,7 @@ function v(e) {
         }),
         T = (0, j.og)((0, j.T4)(v.amount, v.currency), C.interval, C.intervalCount);
     async function I() {
-        await (0, m.dP)(
+        (await (0, m.dP)(
             t,
             t.planId,
             {
@@ -44,7 +44,7 @@ function v(e) {
             h,
             l
         ),
-            s();
+            s());
     }
     return (0, i.jsxs)(u.Y0X, {
         transitionState: r,
@@ -120,7 +120,7 @@ function T(e) {
                     ? null
                     : (0, i.jsx)(u.eee, {
                           onClick: (e) => {
-                              c(!0), e.preventDefault();
+                              (c(!0), e.preventDefault());
                           },
                           className: S.cancelLink,
                           children: O.intl.string(O.t['ETE/oK'])

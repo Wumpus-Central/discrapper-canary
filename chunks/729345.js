@@ -1,4 +1,4 @@
-n.d(t, { E: () => I }), n(49124);
+(n.d(t, { E: () => I }), n(49124));
 var r = n(544891),
     i = n(668757),
     a = n(881052),
@@ -36,17 +36,17 @@ function v(e) {
 }
 async function I(e, t) {
     try {
-        await T(e), await (0, o.u)(E, t);
+        (await T(e), await (0, o.u)(E, t));
     } catch (t) {
         let e;
         throw (
-            (t instanceof a.n0 && (e = v(t)),
+            t instanceof a.n0 && (e = v(t)),
             (0, s.kr)({
                 type: s.u.DEBUG_LOG_UPLOAD_FAILED,
                 underlyingError: e,
                 errorMessage: t.message
             }),
-            t)
+            t
         );
     }
 }
@@ -77,7 +77,7 @@ async function T(e) {
         let d = n.length + a.length + o.length + s.length;
         if (d > g) {
             let e = 1 - g / d;
-            (n = n.slice(n.length - Math.floor(n.length * e))), (a = a.slice(a.length - Math.floor(a.length * e))), (o = o.slice(o.length - Math.floor(o.length * e))), (s = s.slice(s.length - Math.floor(s.length * e)));
+            ((n = n.slice(n.length - Math.floor(n.length * e))), (a = a.slice(a.length - Math.floor(a.length * e))), (o = o.slice(o.length - Math.floor(o.length * e))), (s = s.slice(s.length - Math.floor(s.length * e))));
         }
         let E = (null == O ? void 0 : O.AppOpenedTimestamp) != null ? O.AppOpenedTimestamp : null,
             b = '\n    '

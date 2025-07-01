@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     default: () => p,
     k: () => d
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(913527),
@@ -84,11 +84,11 @@ function p(e) {
                     }),
                     (0, r.jsx)(a.zxk, {
                         onClick: () => {
-                            (0, s._e)({
+                            ((0, s._e)({
                                 channelId: t.id,
                                 scheduledTimestamp: m.toISOString()
                             }),
-                                (0, a.Mr3)(d);
+                                (0, a.Mr3)(d));
                         },
                         disabled: !1,
                         children: c.intl.string(c.t.iQ1Swc)

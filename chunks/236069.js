@@ -1,27 +1,84 @@
-n.d(t, { Z: () => a }), n(388685);
-var r = n(255367);
+(n.d(t, { Z: () => C }), n(388685));
+var i = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(295474),
-    o = n(388032);
-function a(e) {
-    let { guildId: t, analyticsLocations: n, analyticsLocation: a } = e,
-        [c, s] = (0, l.ww)({
+var r = n(442837),
+    l = n(481060),
+    o = n(300284),
+    s = n(314897),
+    a = n(271383),
+    c = n(715903),
+    d = n(295474),
+    u = n(372897),
+    _ = n(526761),
+    E = n(388032);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                ((i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i));
+            }));
+    }
+    return e;
+}
+function I(e) {
+    let { guildId: t, analyticsLocations: n, analyticsLocation: r } = e,
+        [o, s] = (0, d.ww)({
             guildId: t,
             analyticsLocations: n,
-            analyticsLocation: a,
+            analyticsLocation: r,
             openWithoutBackstack: !0
         }),
-        u = s ? o.intl.string(o.t['6ndMcn']) : o.intl.string(o.t['0eiu6O']),
-        d = s ? o.intl.string(o.t.S09nw8) : o.intl.string(o.t.tEttXV);
-    return (0, r.jsxs)(i.qXd, {
-        color: i.DM8.DANGER,
+        a = s ? E.intl.string(E.t['6ndMcn']) : E.intl.string(E.t['0eiu6O']),
+        c = s ? E.intl.string(E.t.S09nw8) : E.intl.string(E.t.tEttXV);
+    return (0, i.jsxs)(l.qXd, {
+        color: l.DM8.DANGER,
         children: [
-            u,
-            (0, r.jsx)(i.EyT, {
-                onClick: c,
-                children: d
+            a,
+            (0, i.jsx)(l.EyT, {
+                onClick: o,
+                children: c
             })
         ]
     });
+}
+function p() {
+    let e = (0, o.Z)({ scrollPosition: _.Y_.GUILD_TAG });
+    return (0, i.jsxs)(l.qXd, {
+        color: l.DM8.DANGER,
+        children: [
+            E.intl.string(E.t.ZqlecX),
+            (0, i.jsx)(l.EyT, {
+                onClick: e,
+                children: E.intl.string(E.t.SJehVV)
+            })
+        ]
+    });
+}
+function C(e) {
+    let t = (0, r.e7)(
+        [s.default, a.ZP],
+        () => {
+            if (null == e.guildId) return new Set();
+            let t = s.default.getId();
+            return (0, c.no)(a.ZP.getMember(e.guildId, t));
+        },
+        [e.guildId]
+    );
+    return t.has(u.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || t.has(u.q.AUTOMOD_QUARANTINED_BIO) ? (0, i.jsx)(I, h({}, e)) : t.has(u.q.AUTOMOD_QUARANTINED_SERVER_TAG) ? (0, i.jsx)(p, {}) : (0, i.jsx)(I, h({}, e));
 }

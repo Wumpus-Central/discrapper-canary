@@ -3,14 +3,14 @@ var r = n(570140);
 let i = {
     updateChannelDimensions(e, t, n, i, a) {
         r.Z.wait(() => {
-            r.Z.dispatch({
+            (r.Z.dispatch({
                 type: 'UPDATE_CHANNEL_DIMENSIONS',
                 channelId: e,
                 scrollTop: t,
                 scrollHeight: n,
                 offsetHeight: i
             }),
-                null != a && a();
+                null != a && a());
         });
     },
     updateChannelListScroll(e, t) {

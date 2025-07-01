@@ -41,7 +41,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -163,33 +163,33 @@ function T(e) {
     });
 }
 function S(e) {
-    i.Z.dispatch({
+    (i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
-        h(f.QP.ANIMATED_AVATAR);
+        h(f.QP.ANIMATED_AVATAR));
 }
 function A(e) {
-    i.Z.dispatch({
+    (i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
-        h(f.QP.AVATAR_DECORATION);
+        h(f.QP.AVATAR_DECORATION));
 }
 function N(e) {
-    i.Z.dispatch({
+    (i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
-        h(f.QP.PROFILE_BANNER);
+        h(f.QP.PROFILE_BANNER));
 }
 function C(e) {
-    i.Z.dispatch({
+    (i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e
     }),
-        h(f.QP.PROFILE_THEME_COLOR);
+        h(f.QP.PROFILE_THEME_COLOR));
 }
 function R(e) {
-    i.Z.dispatch(p({ type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET' }, e)), h(f.QP.PRESET);
+    (i.Z.dispatch(p({ type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET' }, e)), h(f.QP.PRESET));
 }

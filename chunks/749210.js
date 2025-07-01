@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     V: () => j,
     Z: () => G
 }),
     n(415506),
     n(358797),
-    n(781311);
+    n(781311));
 var r = n(990547),
     i = n(149765),
     a = n(544891),
@@ -47,7 +47,7 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function R(e) {
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -63,11 +63,11 @@ function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -89,7 +89,7 @@ function D(e, t) {
         i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -99,7 +99,7 @@ function L(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let x = (e) => {
@@ -138,7 +138,7 @@ let G = {
             { source: u, loadId: f, lurkLocation: h } = c,
             m = null != (t = c.lurker) && t,
             O = y.default.getCurrentUser();
-        if (null != (r = null == O ? void 0 : O.hasFlag(A.xW$.QUARANTINED)) && r) return (0, d.default)(), new Promise((e, t) => t(Error()));
+        if (null != (r = null == O ? void 0 : O.hasFlag(A.xW$.QUARANTINED)) && r) return ((0, d.default)(), new Promise((e, t) => t(Error())));
         o.Z.wait(() =>
             o.Z.dispatch({
                 type: 'GUILD_JOIN',
@@ -173,7 +173,7 @@ let G = {
                     }),
                 null == g.Z.getGuild(e) && i.body.show_verification_form)
             )
-                return (0, _.uL)(A.Z5c.GUILD_MEMBER_VERIFICATION(e)), i;
+                return ((0, _.uL)(A.Z5c.GUILD_MEMBER_VERIFICATION(e)), i);
             if (
                 (null != i.body.welcome_screen &&
                     o.Z.dispatch({
@@ -208,7 +208,7 @@ let G = {
     async transitionToGuildSync(e, t, n, r) {
         let i = U((await j(e)).id, n),
             a = t;
-        (null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (a = w(R({}, t), { welcomeModalChannelId: null != i ? i : void 0 })), (0, c.Z)(A.Z5c.CHANNEL(e, i, r), a), await new Promise(setImmediate);
+        ((null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (a = w(R({}, t), { welcomeModalChannelId: null != i ? i : void 0 })), (0, c.Z)(A.Z5c.CHANNEL(e, i, r), a), await new Promise(setImmediate));
     },
     deleteGuild: k,
     selectGuild(e) {
@@ -369,7 +369,7 @@ let G = {
                 oldFormErrors: !0,
                 rejectWithError: !1
             });
-        return l.Z.checkGuildTemplateDirty(e), c;
+        return (l.Z.checkGuildTemplateDirty(e), c);
     },
     updateRolePermissions: (e, t, n) =>
         a.tn.patch({
@@ -396,7 +396,7 @@ let G = {
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return l.Z.checkGuildTemplateDirty(e), n;
+        return (l.Z.checkGuildTemplateDirty(e), n);
     },
     async batchRoleUpdate(e, t) {
         let n = await a.tn.patch({
@@ -405,7 +405,7 @@ let G = {
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return l.Z.checkGuildTemplateDirty(e), n;
+        return (l.Z.checkGuildTemplateDirty(e), n);
     },
     requestMembers(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '',
@@ -459,12 +459,12 @@ let G = {
         });
     },
     createGuildFolderLocal(e, t) {
-        O.default.track(A.rMx.GUILD_FOLDER_CREATED),
+        (O.default.track(A.rMx.GUILD_FOLDER_CREATED),
             o.Z.dispatch({
                 type: 'GUILD_FOLDER_CREATE_LOCAL',
                 sourceIds: e,
                 name: t
-            });
+            }));
     },
     editGuildFolderLocal(e, t, n) {
         o.Z.dispatch({
@@ -482,14 +482,14 @@ let G = {
     },
     toggleGuildFolderExpand(e) {
         let t = h.Z.isFolderExpanded(e);
-        O.default.track(A.rMx.GUILD_FOLDER_CLICKED, {
+        (O.default.track(A.rMx.GUILD_FOLDER_CLICKED, {
             source: 'sidebar',
             action: t ? 'collapsed' : 'expanded'
         }),
             o.Z.dispatch({
                 type: 'TOGGLE_GUILD_FOLDER_EXPAND',
                 folderId: e
-            });
+            }));
     },
     setGuildFolderExpanded(e, t) {
         o.Z.dispatch({
@@ -535,7 +535,7 @@ let G = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1000,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             r = { limit: t };
-        null != n && (r.after = n),
+        (null != n && (r.after = n),
             await a.tn
                 .get({
                     url: A.ANM.GUILD_BANS(e),
@@ -549,12 +549,12 @@ let G = {
                         bans: t.body,
                         guildId: e
                     });
-                });
+                }));
     },
     async searchGuildBans(e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10,
             i = { limit: r };
-        null != n && n.length > 0 && (i.user_ids = n),
+        (null != n && n.length > 0 && (i.user_ids = n),
             null != t && t.trim().length > 0 && (i.query = t),
             await a.tn
                 .get({
@@ -570,7 +570,7 @@ let G = {
                         userIds: n,
                         guildId: e
                     });
-                });
+                }));
     },
     async fetchGuildBans(e) {
         await a.tn

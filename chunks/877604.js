@@ -1,4 +1,4 @@
-i.d(e, { Z: () => u }), i(415506);
+(i.d(e, { Z: () => u }), i(415506));
 var s,
     n = i(255367),
     a = i(73800),
@@ -22,7 +22,7 @@ let d = (t) =>
     new Promise((e, i) => {
         null == t && i(Error('No image src passed'));
         let s = new Image();
-        (s.src = t), (s.onload = () => e(s)), (s.onerror = (t) => i(t));
+        ((s.src = t), (s.onload = () => e(s)), (s.onerror = (t) => i(t)));
     });
 class c extends (s = a.PureComponent) {
     componentDidUpdate(t) {
@@ -47,7 +47,7 @@ class c extends (s = a.PureComponent) {
                     for (var e = 1; e < arguments.length; e++) {
                         var i = null != arguments[e] ? arguments[e] : {},
                             s = Object.keys(i);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (s = s.concat(
                                 Object.getOwnPropertySymbols(i).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(i, t).enumerable;
@@ -55,7 +55,7 @@ class c extends (s = a.PureComponent) {
                             )),
                             s.forEach(function (e) {
                                 l(t, e, i[e]);
-                            });
+                            }));
                     }
                     return t;
                 })({}, u)),
@@ -88,7 +88,7 @@ class c extends (s = a.PureComponent) {
         });
     }
     constructor(t) {
-        super(t), l(this, 'unmounting', !1), l(this, 'state', { loaded: !1 }), this.initialize();
+        (super(t), l(this, 'unmounting', !1), l(this, 'state', { loaded: !1 }), this.initialize());
     }
 }
 l(c, 'defaultProps', {

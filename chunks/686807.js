@@ -1,10 +1,10 @@
 n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    s = n(201895),
-    o = n(471445),
-    l = n(823379),
+var s = n(481060),
+    i = n(201895),
+    l = n(471445),
+    o = n(823379),
     a = n(303737),
     c = n(293810),
     u = n(388032),
@@ -13,15 +13,15 @@ function f(e) {
     let { channelId: t } = e,
         n = (0, a.m7)(t);
     if (null == n) return '['.concat(u.intl.string(u.t.bz1PZW), ']');
-    let l = n.isMediaChannel() ? i.XBm : (0, o.Th)(n.type);
+    let o = n.isMediaChannel() ? s.XBm : (0, l.Th)(n.type);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.nn4, { children: (0, s.ZP)({ channel: n }) }),
+            (0, r.jsx)(s.nn4, { children: (0, i.ZP)({ channel: n }) }),
             (0, r.jsxs)('div', {
                 'aria-hidden': !0,
                 children: [
-                    null != l &&
-                        (0, r.jsx)(l, {
+                    null != o &&
+                        (0, r.jsx)(o, {
                             className: d.icon,
                             'aria-hidden': !0
                         }),
@@ -38,6 +38,6 @@ function p(e) {
         case c.Qs.INTANGIBLE:
             return e.name;
         default:
-            (0, l.vE)(e);
+            (0, o.vE)(e);
     }
 }

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     D6: () => i,
     EF: () => s,
     EW: () => r,
@@ -10,19 +10,19 @@ n.d(t, {
     ny: () => u,
     px: () => f
 }),
-    n(415506);
+    n(415506));
 let r = 1.5,
     i = 2.5,
     a = 0.125,
     o = 0.2;
 var s = (function (e) {
-        return (e.SIZE_16 = 'SIZE_16'), (e.SIZE_20 = 'SIZE_20'), (e.SIZE_24 = 'SIZE_24'), (e.SIZE_32 = 'SIZE_32'), (e.SIZE_40 = 'SIZE_40'), (e.SIZE_44 = 'SIZE_44'), (e.SIZE_48 = 'SIZE_48'), (e.SIZE_56 = 'SIZE_56'), (e.SIZE_80 = 'SIZE_80'), (e.SIZE_120 = 'SIZE_120'), (e.SIZE_152 = 'SIZE_152'), (e.DEPRECATED_SIZE_30 = 'DEPRECATED_SIZE_30'), (e.DEPRECATED_SIZE_60 = 'DEPRECATED_SIZE_60'), (e.DEPRECATED_SIZE_100 = 'DEPRECATED_SIZE_100'), e;
+        return ((e.SIZE_16 = 'SIZE_16'), (e.SIZE_20 = 'SIZE_20'), (e.SIZE_24 = 'SIZE_24'), (e.SIZE_32 = 'SIZE_32'), (e.SIZE_40 = 'SIZE_40'), (e.SIZE_44 = 'SIZE_44'), (e.SIZE_48 = 'SIZE_48'), (e.SIZE_56 = 'SIZE_56'), (e.SIZE_80 = 'SIZE_80'), (e.SIZE_120 = 'SIZE_120'), (e.SIZE_152 = 'SIZE_152'), (e.DEPRECATED_SIZE_30 = 'DEPRECATED_SIZE_30'), (e.DEPRECATED_SIZE_60 = 'DEPRECATED_SIZE_60'), (e.DEPRECATED_SIZE_100 = 'DEPRECATED_SIZE_100'), e);
     })({}),
     l = (function (e) {
-        return (e.BLACK = 'black'), (e.WHITE = 'white'), e;
+        return ((e.BLACK = 'black'), (e.WHITE = 'white'), e);
     })({}),
     c = (function (e) {
-        return (e[(e.HIGH = 0.7)] = 'HIGH'), (e[(e.LOW = 0.45)] = 'LOW'), e;
+        return ((e[(e.HIGH = 0.7)] = 'HIGH'), (e[(e.LOW = 0.45)] = 'LOW'), e);
     })({});
 let u = Object.freeze({
     SIZE_16: Object.freeze({

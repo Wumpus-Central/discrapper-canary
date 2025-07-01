@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     S1: () => u,
     ZP: () => g,
     pW: () => p,
@@ -7,7 +7,7 @@ n.d(t, {
     zc: () => _,
     zz: () => m
 }),
-    n(997841);
+    n(997841));
 var r = n(544891),
     i = n(570140),
     a = n(408987);
@@ -26,7 +26,7 @@ function u(e, t, n) {
     });
 }
 function d(e, t, n) {
-    u(e, t, n), (0, l.jN)(c.S9g.CHANNEL_SETTINGS);
+    (u(e, t, n), (0, l.jN)(c.S9g.CHANNEL_SETTINGS));
 }
 function f() {
     i.Z.dispatch({ type: 'CHANNEL_SETTINGS_CLOSE' });
@@ -137,7 +137,7 @@ async function h(e, t) {
                         channelId: e
                     });
                     let n = null == L ? void 0 : L.getGuildId();
-                    return null == n || (null == L ? void 0 : L.isThread()) || a.Z.checkGuildTemplateDirty(n), t;
+                    return (null == n || (null == L ? void 0 : L.isThread()) || a.Z.checkGuildTemplateDirty(n), t);
                 },
                 (e) => (
                     i.Z.dispatch({
@@ -157,7 +157,7 @@ async function m(e) {
         rejectWithError: !0
     });
     let n = null == t ? void 0 : t.getGuildId();
-    null == n || (null == t ? void 0 : t.isThread()) || a.Z.checkGuildTemplateDirty(n), f();
+    (null == n || (null == t ? void 0 : t.isThread()) || a.Z.checkGuildTemplateDirty(n), f());
 }
 let g = {
     init: u,

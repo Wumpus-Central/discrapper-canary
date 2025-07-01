@@ -16,5 +16,5 @@ let s = Object.freeze({
         (0, i.j)(() => l.setState({ hasUnsubmittedChanges: e }));
     },
     u = (e) => {
-        (0, i.j)(() => l.setState({ shouldShowWarning: e })), e && a.S.dispatch(o.CkL.EMPHASIZE_NOTICE);
+        ((0, i.j)(() => l.setState({ shouldShowWarning: e })), e && a.S.dispatch(o.CkL.EMPHASIZE_NOTICE));
     };

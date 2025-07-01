@@ -26,7 +26,7 @@ function _(e, t) {
         k = null == v ? null == A : null == C,
         M = !k && (N || x);
     if (!k && !M) return Promise.resolve();
-    (0, s.z)(), null != t && (0, a.vM)(t);
+    ((0, s.z)(), null != t && (0, a.vM)(t));
     let j = {
         type: m,
         withMutualGuilds: g,
@@ -45,7 +45,7 @@ function _(e, t) {
                 ? void 0
                 : p.id
     };
-    if (y) return r.Z.wait(() => (0, i.In)(e, j, d.Z)), Promise.resolve();
+    if (y) return (r.Z.wait(() => (0, i.In)(e, j, d.Z)), Promise.resolve());
     let U = (0, i.In)(e, j, d.Z);
     return M && !O ? Promise.resolve() : U;
 }

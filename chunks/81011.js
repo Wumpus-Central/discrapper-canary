@@ -42,7 +42,7 @@ let c = n.mh.D65,
         toBase(e) {
             let [t, r, a] = e;
             if (0 === t || (0, i.Wi)(t)) return [0, 0, 0];
-            (r = (0, i.sI)(r)), (a = (0, i.sI)(a));
+            ((r = (0, i.sI)(r)), (a = (0, i.sI)(a)));
             let n = r / (13 * t) + f,
                 s = a / (13 * t) + b,
                 o = t <= 8 ? t / u : Math.pow((t + 16) / 116, 3);

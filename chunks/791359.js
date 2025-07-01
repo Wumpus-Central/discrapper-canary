@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -82,7 +82,7 @@ let Z = 15 * E.Z.Millis.MINUTE,
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
                                       r = Object.keys(n);
-                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                  ('function' == typeof Object.getOwnPropertySymbols &&
                                       (r = r.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -90,7 +90,7 @@ let Z = 15 * E.Z.Millis.MINUTE,
                                       )),
                                       r.forEach(function (t) {
                                           var r;
-                                          (r = n[t]),
+                                          ((r = n[t]),
                                               t in e
                                                   ? Object.defineProperty(e, t, {
                                                         value: r,
@@ -98,8 +98,8 @@ let Z = 15 * E.Z.Millis.MINUTE,
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[t] = r);
-                                      });
+                                                  : (e[t] = r));
+                                      }));
                               }
                               return e;
                           })({}, e)),
@@ -148,10 +148,10 @@ function w() {
             currentUser: m.default.getCurrentUser()
         })),
         o = (0, c.e7)([p.Z], () => p.Z.quests);
-    i.useEffect(() => (d.Z.wait(() => O.L()), () => d.Z.wait(() => O.v())), [null == a ? void 0 : a.id]),
+    (i.useEffect(() => (d.Z.wait(() => O.L()), () => d.Z.wait(() => O.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && L();
-        }, [n, l]);
+        }, [n, l]));
     let s = i.useMemo(() => {
             let t = new Map(),
                 n = new Set(),

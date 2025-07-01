@@ -1,4 +1,4 @@
-a.d(t, { k: () => c }), a(388685);
+(a.d(t, { k: () => c }), a(388685));
 var l = a(73800),
     r = a(110924),
     s = a(626135),
@@ -23,13 +23,13 @@ function c(e, t) {
             }
         }, [a]),
         j = l.useCallback((e) => {
-            x(null), N(e), c(n.O.ERROR);
+            (x(null), N(e), c(n.O.ERROR));
         }, []),
         k = l.useCallback((e) => {
-            x(e), c(n.O.PRE_CONNECT_WAITING);
+            (x(e), c(n.O.PRE_CONNECT_WAITING));
         }, []),
         v = l.useCallback((e) => {
-            x(null), h(e), c(n.O.DISCORD_CONSENT);
+            (x(null), h(e), c(n.O.DISCORD_CONSENT));
         }, []);
     return (
         l.useEffect(() => {

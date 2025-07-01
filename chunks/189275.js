@@ -24,14 +24,14 @@ function c(e) {
         },
         {
             onCloseCallback: () => {
-                (0, o.O)(t),
+                ((0, o.O)(t),
                     a.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: s.q.DISMISS,
                         channel_id: t,
                         warning_medium: s.WR.MODAL,
                         blocked_user_ids: c,
                         ignored_user_ids: u
-                    });
+                    }));
             }
         }
     );

@@ -27,7 +27,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -69,7 +69,7 @@ function _(e) {
         id: 'delete-entry-history',
         label: f(c),
         action: () => {
-            null == _ || _({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
+            (null == _ || _({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g());
         },
         color: 'danger'
     });

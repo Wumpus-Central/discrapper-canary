@@ -70,7 +70,7 @@ function d(e) {
             })(e, v) &&
                 !r.isReferenced)
         )
-            return t.add(e), '';
+            return (t.add(e), '');
         var o = (0, n.SS)(e, 'aria-labelledby');
         if ('name' === p && !r.isReferenced && o.length > 0)
             return o
@@ -85,7 +85,7 @@ function d(e) {
         var s = r.recursion && ((0, n.xO)(e, ['button', 'combobox', 'listbox', 'textbox']) || l(e, 'range')) && 'name' === p;
         if (!s) {
             var d = (((0, n.kK)(e) && e.getAttribute('aria-label')) || '').trim();
-            if ('' !== d && 'name' === p) return t.add(e), d;
+            if ('' !== d && 'name' === p) return (t.add(e), d);
             if (!(0, n.xO)(e, ['none', 'presentation'])) {
                 var c = (function (e) {
                     if (!(0, n.kK)(e)) return null;
@@ -189,7 +189,7 @@ function d(e) {
                     }
                     return r(e, 'title');
                 })(e);
-                if (null !== c) return t.add(e), c;
+                if (null !== c) return (t.add(e), c);
             }
         }
         if (s || r.isEmbeddedInLabel || r.isReferenced) {
@@ -211,7 +211,7 @@ function d(e) {
                           .join(' ');
             }
             if (l(e, 'range')) return (t.add(e), e.hasAttribute('aria-valuetext')) ? e.getAttribute('aria-valuetext') : e.hasAttribute('aria-valuenow') ? e.getAttribute('aria-valuenow') : e.getAttribute('value') || '';
-            if ((0, n.xO)(e, ['textbox'])) return t.add(e), (0, n.LL)(e) || (0, n.ZH)(e) ? e.value : e.textContent || '';
+            if ((0, n.xO)(e, ['textbox'])) return (t.add(e), (0, n.LL)(e) || (0, n.ZH)(e) ? e.value : e.textContent || '');
         }
         if ((0, n.xO)(e, ['button', 'cell', 'checkbox', 'columnheader', 'gridcell', 'heading', 'label', 'legend', 'link', 'menuitem', 'menuitemcheckbox', 'menuitemradio', 'option', 'radio', 'row', 'rowheader', 'switch', 'tab', 'tooltip', 'treeitem']) || ((0, n.kK)(e) && r.isReferenced) || (0, n.GD)(e))
             return (
@@ -221,7 +221,7 @@ function d(e) {
                     isReferenced: !1
                 })
             );
-        if (e.nodeType === e.TEXT_NODE) return t.add(e), e.textContent || '';
+        if (e.nodeType === e.TEXT_NODE) return (t.add(e), e.textContent || '');
         if (r.recursion)
             return (
                 t.add(e),

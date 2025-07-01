@@ -38,7 +38,7 @@ class f extends (r = i.ZP.PersistedStore) {
         return { x: a.Cr.getSetting() };
     }
 }
-u(f, 'displayName', 'HabitualDNDStore'),
+(u(f, 'displayName', 'HabitualDNDStore'),
     u(f, 'persistKey', 'habitualDND'),
     new f(l.Z, {
         POST_CONNECTION_OPEN: function () {
@@ -52,6 +52,6 @@ u(f, 'displayName', 'HabitualDNDStore'),
                 : (d = []);
         },
         HABITUAL_DND_CLEAR: function () {
-            (p = !!h()), (d = []);
+            ((p = !!h()), (d = []));
         }
-    });
+    }));

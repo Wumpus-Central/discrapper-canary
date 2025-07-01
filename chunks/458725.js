@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Nk: () => c,
     hp: () => d,
     kr: () => u,
@@ -6,7 +6,7 @@ n.d(t, {
 }),
     n(388685),
     n(415506),
-    n(49124);
+    n(49124));
 var r = n(570140);
 function i(e, t) {
     if (null == e) return {};
@@ -15,7 +15,7 @@ function i(e, t) {
         i = a(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -25,12 +25,12 @@ function a(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let o = new (n(710845).Z)('AVError');
 var s = (function (e) {
-    return (e.STREAM_FAILED_TO_START = 'stream-failed-to-start'), (e.NO_INPUT_DEVICES = 'no-input-devices'), (e.NO_AUDIO_INPUT_DETECTED = 'no-audio-input-detected'), (e.DEBUG_LOG_UPLOAD_FAILED = 'debug-log-upload-failed'), (e.STREAM_VIEW_LOW_FPS = 'stream-view-low-fps'), (e.STREAM_VIEW_HIGH_PACKET_LOSS = 'stream-view-high-packet-loss'), (e.STREAM_SEND_LOW_FPS = 'stream-send-low-encode-fps'), (e.STREAM_SEND_HIGH_PACKET_LOSS = 'stream-send-high-packet-loss'), (e.STREAM_BAD_NETWORK_QUALITY = 'stream-send-network-quality'), (e.STREAM_SOUNDSHARE_FAILED = 'stream-soundshare-failed'), (e.NOISE_CANCELLER_ERROR = 'noise-canceller-error'), (e.SCREENSHARE_OS_NOT_SUPPORTED = 'screenshare-min-os-requirement'), (e.STREAM_RECONNECTING = 'stream-reconnecting'), (e.VIDEO_DECODE_ERROR = 'video-decode-error'), (e.VIDEO_ENCODE_ERROR = 'video-encode-error'), (e.STREAM_FULL = 'stream-full'), (e.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH = 'audio-capture-sample-rate-mismatch'), (e.VIDEO_STREAM_SENDER_READY_TIMEOUT = 'video-stream-sender-ready-timeout'), (e.VIDEO_STREAM_RECEIVER_READY_TIMEOUT = 'video-stream-receiver-ready-timeout'), (e.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM = 'video-stream-sender-ready-timeout-no-stream'), (e.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM = 'video-stream-receiver-ready-timeout-no-stream'), (e.CAMERA_SEND_LOW_FPS = 'camera-send-low-encode-fps'), e;
+    return ((e.STREAM_FAILED_TO_START = 'stream-failed-to-start'), (e.NO_INPUT_DEVICES = 'no-input-devices'), (e.NO_AUDIO_INPUT_DETECTED = 'no-audio-input-detected'), (e.DEBUG_LOG_UPLOAD_FAILED = 'debug-log-upload-failed'), (e.STREAM_VIEW_LOW_FPS = 'stream-view-low-fps'), (e.STREAM_VIEW_HIGH_PACKET_LOSS = 'stream-view-high-packet-loss'), (e.STREAM_SEND_LOW_FPS = 'stream-send-low-encode-fps'), (e.STREAM_SEND_HIGH_PACKET_LOSS = 'stream-send-high-packet-loss'), (e.STREAM_BAD_NETWORK_QUALITY = 'stream-send-network-quality'), (e.STREAM_SOUNDSHARE_FAILED = 'stream-soundshare-failed'), (e.NOISE_CANCELLER_ERROR = 'noise-canceller-error'), (e.SCREENSHARE_OS_NOT_SUPPORTED = 'screenshare-min-os-requirement'), (e.STREAM_RECONNECTING = 'stream-reconnecting'), (e.VIDEO_DECODE_ERROR = 'video-decode-error'), (e.VIDEO_ENCODE_ERROR = 'video-encode-error'), (e.STREAM_FULL = 'stream-full'), (e.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH = 'audio-capture-sample-rate-mismatch'), (e.VIDEO_STREAM_SENDER_READY_TIMEOUT = 'video-stream-sender-ready-timeout'), (e.VIDEO_STREAM_RECEIVER_READY_TIMEOUT = 'video-stream-receiver-ready-timeout'), (e.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM = 'video-stream-sender-ready-timeout-no-stream'), (e.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM = 'video-stream-receiver-ready-timeout-no-stream'), (e.CAMERA_SEND_LOW_FPS = 'camera-send-low-encode-fps'), e);
 })({});
 let l = {
     'stream-soundshare-failed': {
@@ -167,7 +167,7 @@ let l = {
     }
 };
 var c = (function (e) {
-    return (e.Unknown = 'Unknown'), (e.UploadErrorGeneral = 'UploadErrorCodes.GENERAL'), (e.UploadErrorNoFile = 'UploadErrorCodes.NO_FILE'), (e.UploadErrorProgress = 'UploadErrorCodes.PROGRESS'), (e.UploadErrorUpload = 'UploadErrorCodes.UPLOAD'), (e.UploadErrorRead = 'UploadErrorCodes.READ'), (e.NoiseCancellerCpuOveruse = 'NoiseCancellerError.CPU_OVERUSE'), (e.NoiseCancellerFailed = 'NoiseCancellerError.FAILED'), (e.NoiseCancellerVadCpuOveruse = 'NoiseCancellerError.VAD_CPU_OVERUSE'), e;
+    return ((e.Unknown = 'Unknown'), (e.UploadErrorGeneral = 'UploadErrorCodes.GENERAL'), (e.UploadErrorNoFile = 'UploadErrorCodes.NO_FILE'), (e.UploadErrorProgress = 'UploadErrorCodes.PROGRESS'), (e.UploadErrorUpload = 'UploadErrorCodes.UPLOAD'), (e.UploadErrorRead = 'UploadErrorCodes.READ'), (e.NoiseCancellerCpuOveruse = 'NoiseCancellerError.CPU_OVERUSE'), (e.NoiseCancellerFailed = 'NoiseCancellerError.FAILED'), (e.NoiseCancellerVadCpuOveruse = 'NoiseCancellerError.VAD_CPU_OVERUSE'), e);
 })({});
 function u(e) {
     let { type: t } = e,

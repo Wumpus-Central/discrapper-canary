@@ -1,4 +1,4 @@
-i.d(e, { Z: () => b }), i(388685);
+(i.d(e, { Z: () => b }), i(388685));
 var n = i(255367),
     r = i(73800),
     s = i(913527),
@@ -20,10 +20,10 @@ function O(t) {
         [h, O] = r.useState(!1);
     r.useEffect(() => {
         function t() {
-            O(!0),
+            (O(!0),
                 setTimeout(() => {
                     O(!1);
-                }, 1000);
+                }, 1000));
         }
         return (
             p.S.subscribe(f.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, t),
@@ -34,7 +34,7 @@ function O(t) {
     }, []);
     let b = (0, u.Z)('SlowmodeIndicator');
     if (!i) return null;
-    let y = (0, d.k)(s);
+    let S = (0, d.k)(s);
     if (!l && c > 0) {
         let t = o().duration(c);
         if (c > g.Z.Millis.HOUR) {
@@ -46,7 +46,7 @@ function O(t) {
             e = ''.concat(t.minutes(), ':').concat(i);
         }
     } else e = l ? (b ? m.intl.string(m.t['8+NidX']) : m.intl.string(m.t.SSzXvb)) : m.intl.string(m.t.Icu3bW);
-    let S = b
+    let y = b
         ? (0, n.jsxs)(a.Text, {
               className: v.cooldownText,
               variant: 'text-xs/medium',
@@ -76,7 +76,7 @@ function O(t) {
               ]
           });
     return (0, n.jsx)(a.ua7, {
-        text: y,
+        text: S,
         children: (t) => {
             var e, i;
             return (0, n.jsx)(
@@ -85,7 +85,7 @@ function O(t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var i = null != arguments[e] ? arguments[e] : {},
                             n = Object.keys(i);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(i).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(i, t).enumerable;
@@ -93,7 +93,7 @@ function O(t) {
                             )),
                             n.forEach(function (e) {
                                 var n;
-                                (n = i[e]),
+                                ((n = i[e]),
                                     e in t
                                         ? Object.defineProperty(t, e, {
                                               value: n,
@@ -101,12 +101,12 @@ function O(t) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (t[e] = n);
-                            });
+                                        : (t[e] = n));
+                            }));
                     }
                     return t;
                 })({ className: v.cooldownWrapper }, t)),
-                (i = i = { children: S }),
+                (i = i = { children: y }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
                     : (function (t, e) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(539854), n(388685);
+(n.d(t, { Z: () => m }), n(539854), n(388685));
 var r = n(243814),
     i = n(100527),
     l = n(208049),
@@ -21,7 +21,7 @@ let m = {
             await (0, l.w)();
             let e = a.Z.getSounds(),
                 t = [];
-            return e.forEach((e) => e.forEach((e) => t.push((0, o.QL)(e)))), t;
+            return (e.forEach((e) => e.forEach((e) => t.push((0, o.QL)(e)))), t);
         }
     },
     [g.Et.PLAY_SOUNDBOARD_SOUND]: {

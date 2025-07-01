@@ -1,4 +1,4 @@
-t.d(r, { default: () => b }), t(388685);
+(t.d(r, { default: () => b }), t(388685));
 var n = t(255367),
     o = t(73800),
     s = t(481060),
@@ -17,7 +17,7 @@ let b = (e) => {
         [j, p] = o.useState(!1),
         [m, g] = o.useState(!1),
         y = o.useCallback(() => {
-            g(!0), p(!1);
+            (g(!0), p(!1));
         }, []),
         { disconnectLinkRequest: O, isDisconnectLoading: k } = (0, i.G)({
             onSuccess: h,
@@ -27,7 +27,7 @@ let b = (e) => {
         transitionState: b,
         children: (0, n.jsxs)('form', {
             onSubmit: (e) => {
-                e.preventDefault(), O(t);
+                (e.preventDefault(), O(t));
             },
             children: [
                 (0, n.jsx)(c.Z.Error, { error: m ? d.intl.string(a.default.krIDd3) : void 0 }),
@@ -49,7 +49,7 @@ let b = (e) => {
                             type: s.XZJ.Types.INVERTED,
                             value: j,
                             onChange: (e, r) => {
-                                p(r), g(!1);
+                                (p(r), g(!1));
                             },
                             children: (0, n.jsx)(s.Text, {
                                 variant: 'text-xs/semibold',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(35282), n(953529);
+(n.d(t, { Z: () => h }), n(35282), n(953529));
 var r = n(544891),
     i = n(570140),
     a = n(287734),
@@ -25,7 +25,7 @@ let h = {
             rejectWithError: !1
         }),
     joinVoiceEvent(e, t) {
-        a.default.selectVoiceChannel(t), (0, o.uL)(p.Z5c.CHANNEL(e, t));
+        (a.default.selectVoiceChannel(t), (0, o.uL)(p.Z5c.CHANNEL(e, t)));
     },
     saveEvent(e, t, n, i) {
         let a = _.pg.has(t.entityType) ? t.channelId : null,
@@ -164,7 +164,7 @@ let h = {
             );
         } catch (r) {
             throw (
-                (i.Z.dispatch({
+                i.Z.dispatch({
                     type: 'GUILD_SCHEDULED_EVENT_USER_REMOVE',
                     userId: o,
                     guildId: n,
@@ -172,7 +172,7 @@ let h = {
                     guildEventExceptionId: t,
                     response: a
                 }),
-                r)
+                r
             );
         }
     },
@@ -197,7 +197,7 @@ let h = {
                 );
             } catch (r) {
                 throw (
-                    (i.Z.dispatch({
+                    i.Z.dispatch({
                         type: 'GUILD_SCHEDULED_EVENT_USER_ADD',
                         userId: a,
                         guildId: n,
@@ -205,20 +205,20 @@ let h = {
                         guildEventExceptionId: t,
                         response: o.response
                     }),
-                    r)
+                    r
                 );
             }
     },
     async updateRsvp(e, t, n, r, i) {
         if (null != (0, f.X2)(e, t))
             try {
-                await this.deleteRsvpForGuildEvent(e, t, n), null == i || i();
+                (await this.deleteRsvpForGuildEvent(e, t, n), null == i || i());
             } catch (e) {
                 null == i || i(e);
             }
         else
             try {
-                await this.createRsvpForGuildEvent(e, t, n, r), null == i || i();
+                (await this.createRsvpForGuildEvent(e, t, n, r), null == i || i());
             } catch (e) {
                 null == i || i(e);
             }

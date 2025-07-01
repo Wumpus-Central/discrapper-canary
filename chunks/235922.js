@@ -5,7 +5,7 @@ function o(e) {
     return (0, i.useMemo)(
         function () {
             var t = e.type;
-            return (0, r.k)(null != t, 'spec.type must be defined'), t;
+            return ((0, r.k)(null != t, 'spec.type must be defined'), t);
         },
         [e]
     );

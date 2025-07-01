@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(539854);
+(n.d(t, { Z: () => D }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -36,7 +36,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -78,7 +78,7 @@ function N(e, t) {
         i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -88,7 +88,7 @@ function C(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let R = [];
@@ -134,7 +134,7 @@ function P(e) {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
         };
-        return u.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => u.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e);
+        return (u.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => u.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e));
     }, [t, n]);
     let k = i.useCallback(() => {
         I.focusFirstVisibleItem();
@@ -156,13 +156,13 @@ function P(e) {
         let { isApplicationCommand: e, previousUploadOptions: r, uploadOptions: i } = j.current;
         if (e) {
             let e = [];
-            r.forEach((t) => {
+            (r.forEach((t) => {
                 i.some((e) => t.name === e.name) || e.push(t);
             }),
                 e.forEach((e) => {
                     d.Z.remove(t, e.name, n.drafts.type);
                 }),
-                x(i);
+                x(i));
         }
     }, [t, D.length, n]),
     (!C && 0 === S.length) || (C && 0 === D.length))

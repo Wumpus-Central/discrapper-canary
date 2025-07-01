@@ -13,7 +13,7 @@ function s(e, t) {
             handler: () => (t) => {
                 let { prevState: n, dispatch: r } = t,
                     l = e();
-                return i().isEqual(l, n) || r(l), l;
+                return (i().isEqual(l, n) || r(l), l);
             }
         },
         [o.zMe.VOICE_SETTINGS_UPDATE_2]: {
@@ -24,7 +24,7 @@ function s(e, t) {
                     let { prevState: r, dispatch: l } = e;
                     if (null == n.application.id) return r;
                     let a = t(n.application.id);
-                    return i().isEqual(a, r) || l(a), a;
+                    return (i().isEqual(a, r) || l(a), a);
                 };
             }
         }

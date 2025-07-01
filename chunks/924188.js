@@ -48,7 +48,7 @@ function u(t) {
                             color: 'header-secondary',
                             children: c.intl.format(c.t.Ge0HUl, {
                                 handleFalsePositiveHook: () => {
-                                    u(), (0, r.e)(e, n);
+                                    (u(), (0, r.e)(e, n));
                                 }
                             })
                         })

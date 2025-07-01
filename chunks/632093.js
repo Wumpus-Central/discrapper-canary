@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var i = n(392711),
     r = n.n(i),
     s = n(710845),
@@ -23,11 +23,11 @@ let c = new s.Z('ReadStates'),
             let t = performance.now(),
                 n = await a.Z.userGuildSettings(e).getMany(),
                 i = performance.now();
-            return c.log('asynchronously loaded in '.concat(i - t, 'ms (userGuildSettings: ').concat(n.length, ')')), n;
+            return (c.log('asynchronously loaded in '.concat(i - t, 'ms (userGuildSettings: ').concat(n.length, ')')), n);
         }
         resetInMemoryState() {}
         handleConnectionOpen(e, t) {
-            e.userGuildSettings.partial || a.Z.userGuildSettingsTransaction(t).delete(), this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t);
+            (e.userGuildSettings.partial || a.Z.userGuildSettingsTransaction(t).delete(), this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t));
         }
         handleUserGuildSettingsUpdate(e, t) {
             let n = r().max(
@@ -64,7 +64,7 @@ let c = new s.Z('ReadStates'),
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -72,7 +72,7 @@ let c = new s.Z('ReadStates'),
                                 )),
                                 i.forEach(function (t) {
                                     o(e, t, n[t]);
-                                });
+                                }));
                         }
                         return e;
                     })({}, (0, l.wL)(t.guild_id), t),

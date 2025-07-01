@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(114858),
@@ -27,7 +27,7 @@ function m(e, t, n) {
 }
 class b extends i.Component {
     componentDidMount() {
-        this.fetchStoreListing(), (0, c.e)('channel_store_listing');
+        (this.fetchStoreListing(), (0, c.e)('channel_store_listing'));
     }
     render() {
         return null != this.props.skuId
@@ -45,7 +45,7 @@ class b extends i.Component {
             : null;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'fetchStoreListing', (e) => {
                 let { channel: t, inputSkuId: n } = this.props;
                 return null != e ? o.Z.fetchChannelStoreListing(t.id, e) : null != n ? o.Z.fetchChannelStoreListing(t.id, n) : o.Z.fetchChannelStoreListing(t.id);
@@ -60,7 +60,7 @@ class b extends i.Component {
                     location: t,
                     pageSize: (0, h.getPageSize)(l)
                 });
-            });
+            }));
     }
 }
 let _ = (0, s.Z)(

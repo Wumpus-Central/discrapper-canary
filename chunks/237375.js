@@ -1,17 +1,16 @@
-n.d(t, { Z: () => v }), n(953529);
+(n.d(t, { Z: () => O }), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
     s = n(481060),
     l = n(965386),
-    c = n(118012),
-    u = n(987826),
-    d = n(826298),
-    f = n(761652),
-    _ = n(388032),
-    p = n(893541);
-function h(e, t, n) {
+    c = n(987826),
+    u = n(826298),
+    d = n(761652),
+    f = n(388032),
+    _ = n(893541);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,51 +23,51 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
+                p(e, t, n[t]);
+            }));
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let b = 200;
-function y(e, t, n) {
+let E = 200;
+function b(e, t, n) {
     return (0, r.jsx)(
-        u.Z,
+        c.Z,
         {
-            className: p.option,
+            className: _.option,
             name: e.displayName,
             state: t,
             onClick: n
@@ -76,12 +75,12 @@ function y(e, t, n) {
         e.name
     );
 }
-function O(e) {
+function y(e) {
     let { command: t, optionStates: n, onOptionClick: a } = e,
         {
             requiredOptions: o,
             setOptionalOptions: l,
-            unsetOptionalOptions: u
+            unsetOptionalOptions: c
         } = i.useMemo(() => {
             var e, r, i, a;
             let o = null != (i = null == (e = t.options) ? void 0 : e.filter((e) => e.required)) ? i : [],
@@ -98,9 +97,9 @@ function O(e) {
                 })
             };
         }, [t.options, n]),
-        d = (0, r.jsx)('div', {
-            className: p.optionalNames,
-            children: u.map((e) =>
+        u = (0, r.jsx)('div', {
+            className: _.optionalNames,
+            children: c.map((e) =>
                 (0, r.jsx)(
                     s.Text,
                     {
@@ -111,89 +110,90 @@ function O(e) {
                 )
             )
         }),
-        f = o.map((e) => y(e, null == n ? void 0 : n[e.name], a)),
-        h =
+        d = o.map((e) => b(e, null == n ? void 0 : n[e.name], a)),
+        p =
             l.length > 0
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.X6q, {
-                              className: p.optionalHeader,
+                              className: _.optionalHeader,
                               variant: 'heading-deprecated-12/semibold',
-                              children: _.intl.string(_.t['5C107O'])
+                              children: f.intl.string(f.t['5C107O'])
                           }),
-                          l.map((e) => y(e, null == n ? void 0 : n[e.name], a))
+                          l.map((e) => b(e, null == n ? void 0 : n[e.name], a))
                       ]
                   })
                 : null,
-        g =
-            u.length > 0
+        m =
+            c.length > 0
                 ? (0, r.jsx)(s.ua7, {
-                      text: d,
+                      text: u,
                       'aria-label': !1,
-                      delay: b,
+                      delay: E,
                       children: (e) =>
                           (0, r.jsx)(
-                              c.Z,
-                              E(
-                                  m(
+                              s.Text,
+                              g(
+                                  h(
                                       {
-                                          className: p.optionalCount,
-                                          color: c.Z.Colors.MUTED
+                                          className: _.optionalCount,
+                                          color: 'text-muted',
+                                          variant: 'text-sm/normal'
                                       },
                                       e
                                   ),
-                                  { children: 0 === l.length ? _.intl.formatToPlainString(_.t['0mI72t'], { count: u.length }) : _.intl.formatToPlainString(_.t.BP8N0N, { count: u.length }) }
+                                  { children: 0 === l.length ? f.intl.formatToPlainString(f.t['0mI72t'], { count: c.length }) : f.intl.formatToPlainString(f.t.BP8N0N, { count: c.length }) }
                               )
                           )
                   })
                 : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            f,
-            null != h || null != g
+            d,
+            null != p || null != m
                 ? (0, r.jsxs)('div', {
-                      className: p.optionals,
-                      children: [h, g]
+                      className: _.optionals,
+                      children: [p, m]
                   })
                 : null
         ]
     });
 }
-function v(e) {
+function O(e) {
     var t, n, a;
     let s,
-        { command: c, activeOptionName: u, channel: _, showOptions: h, showImage: m, optionStates: g, onOptionClick: E, section: b, isSelectable: y = !0 } = e,
+        { command: c, activeOptionName: f, channel: p, showOptions: h, showImage: m, optionStates: g, onOptionClick: E, section: b, isSelectable: O = !0 } = e,
         v = i.useMemo(() => {
             var e;
-            return null == c || null == (e = c.options) ? void 0 : e.find((e) => e.name === u);
-        }, [u, c]),
-        I = null != u ? (null == g ? void 0 : g[u]) : null;
+            return null == c || null == (e = c.options) ? void 0 : e.find((e) => e.name === f);
+        }, [f, c]),
+        I = null != f ? (null == g ? void 0 : g[f]) : null;
     s = null != I && (null == (t = I.lastValidationResult) ? void 0 : t.success) === !1 ? (null != (n = I.lastValidationResult.error) ? n : '') : null;
-    let T = m && null != b ? (0, d.ky)(b) : null;
+    let T = m && null != b ? (0, u.ky)(b) : null;
     return (0, r.jsxs)('div', {
-        className: o()(p.wrapper, y ? null : p.disabled),
+        className: o()(_.wrapper, O ? null : _.disabled),
         children: [
             null != T
                 ? (0, r.jsx)(T, {
-                      className: p.image,
-                      channel: _,
+                      className: _.image,
+                      channel: p,
                       section: b,
                       width: 32,
                       height: 32
                   })
                 : null,
             (0, r.jsxs)('div', {
-                className: p.infoWrapper,
+                className: _.infoWrapper,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: p.usageWrapper,
+                        className: _.usageWrapper,
                         children: [
                             (0, r.jsx)(l.BR, {
-                                className: p.title,
-                                children: f.GI + c.displayName
+                                className: _.title,
+                                children: d.GI + c.displayName
                             }),
                             h
-                                ? (0, r.jsx)(O, {
+                                ? (0, r.jsx)(y, {
                                       command: c,
                                       optionStates: g,
                                       onOptionClick: E
@@ -202,13 +202,13 @@ function v(e) {
                         ]
                     }),
                     (0, r.jsx)(l.wL, {
-                        className: o()(p.description, null != s ? p.error : null),
+                        className: o()(_.description, null != s ? _.error : null),
                         children: null != (a = null != s ? s : null == v ? void 0 : v.displayDescription) ? a : c.displayDescription
                     })
                 ]
             }),
             (0, r.jsx)(l.dY, {
-                className: p.source,
+                className: _.source,
                 children: null == b ? void 0 : b.name
             })
         ]

@@ -12,7 +12,7 @@ function s(e, t) {
         d = 0,
         f = 0;
     if (l) {
-        (c = l.width), (u = l.height);
+        ((c = l.width), (u = l.height));
         var _ = (0, o.Z)();
         (_ || (!_ && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
     }

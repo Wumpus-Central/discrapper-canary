@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     HZ: () => h,
     IB: () => E,
     cr: () => p,
@@ -14,7 +14,7 @@ n.d(t, {
     n(539854),
     n(388685),
     n(467055),
-    n(781311);
+    n(781311));
 var r = n(911969),
     i = n(555573),
     a = n(998698),
@@ -122,7 +122,7 @@ function b(e, t, n, r, a) {
             ];
         })
     );
-    return i.VP(n, s), s;
+    return (i.VP(n, s), s);
 }
 function y(e, t, n, r, s) {
     var l;
@@ -138,7 +138,7 @@ function y(e, t, n, r, s) {
             channelId: n,
             allowEmptyValues: s
         });
-    return i.g7(n, { [c.optionName]: { lastValidationResult: _ } }), _;
+    return (i.g7(n, { [c.optionName]: { lastValidationResult: _ } }), _);
 }
 function O(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
@@ -147,7 +147,7 @@ function O(e, t) {
         i = new Set(m(e)),
         a = {},
         o = new Set();
-    for (let e of t.options) (a[e.displayName] = e), i.has(e.name) || o.add(e.displayName);
+    for (let e of t.options) ((a[e.displayName] = e), i.has(e.name) || o.add(e.displayName));
     let s = null;
     for (let t = 0; t < n.length; t++) {
         let i = n[t];
@@ -159,13 +159,13 @@ function O(e, t) {
                 if (d.aj.isType(p, 'applicationCommandOption')) {
                     if (null != s) {
                         var l;
-                        (s.valueRange.focus = null != (l = d.bN.before(e, h)) ? l : d.bN.start(e, [])),
+                        ((s.valueRange.focus = null != (l = d.bN.before(e, h)) ? l : d.bN.start(e, [])),
                             (s.text = (0, u.sk)(n, {
                                 mode: 'raw',
                                 range: s.valueRange
                             }).trim()),
                             r.push(s),
-                            (s = null);
+                            (s = null));
                     }
                     continue;
                 }
@@ -203,14 +203,14 @@ function O(e, t) {
                                 },
                                 text: ''
                             };
-                        null != s &&
+                        (null != s &&
                             ((s.valueRange.focus = d.keyRange.anchor),
                             (s.text = (0, u.sk)(n, {
                                 mode: 'raw',
                                 range: s.valueRange
                             }).trim()),
                             r.push(s)),
-                            (s = d);
+                            (s = d));
                     }
             }
     }

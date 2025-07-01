@@ -21,10 +21,10 @@ let s = {},
         l = 'FETCHING';
     },
     u = (e) => {
-        (s = e.marketings.marketingsBySurfaces), (l = 'FETCHED');
+        ((s = e.marketings.marketingsBySurfaces), (l = 'FETCHED'));
     },
     d = () => {
-        (s = {}), (l = 'NOT_FETCHED');
+        ((s = {}), (l = 'NOT_FETCHED'));
     };
 class f extends (r = i.ZP.Store) {
     getMarketingBySurface(e) {

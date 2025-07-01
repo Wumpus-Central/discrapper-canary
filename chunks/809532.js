@@ -7,6 +7,6 @@ function a(e) {
     return function () {
         var n,
             r = (0, o.Z)(e);
-        return (n = t ? Reflect.construct(r, arguments, (0, o.Z)(this).constructor) : r.apply(this, arguments)), (0, i.Z)(this, n);
+        return ((n = t ? Reflect.construct(r, arguments, (0, o.Z)(this).constructor) : r.apply(this, arguments)), (0, i.Z)(this, n));
     };
 }

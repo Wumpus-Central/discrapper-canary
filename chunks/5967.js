@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     VG: () => o,
     uB: () => s
 }),
     n(388685),
-    n(35282);
+    n(35282));
 let r = /input/i,
     i = /textarea/i,
     a = new Set(['text', 'password', 'number', 'date', 'datetime-local', 'time', 'week', 'month', 'email', 'search', 'tel', 'url']);

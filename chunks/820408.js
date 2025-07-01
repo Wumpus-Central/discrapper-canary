@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var i = n(255367),
     s = n(73800),
     l = n(481060),
@@ -50,7 +50,7 @@ function j(e) {
                     ' ',
                     (0, i.jsx)(u.Z, {
                         onClick: () => {
-                            t(), r.Z.open(x.oAB.PREMIUM);
+                            (t(), r.Z.open(x.oAB.PREMIUM));
                         },
                         children: p.intl.string(p.t.hvVgAQ)
                     })

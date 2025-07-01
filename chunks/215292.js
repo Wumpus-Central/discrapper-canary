@@ -1,8 +1,8 @@
-e.d(n, {
+(e.d(n, {
     F: () => L,
     Z: () => g
 }),
-    e(388685);
+    e(388685));
 var i = e(255367),
     l = e(73800),
     s = e(442837),
@@ -31,11 +31,11 @@ function L(t) {
     let N = l.useCallback(
             async (t) => {
                 if ((t.preventDefault(), null == z)) return;
-                D(!0), I(null);
+                (D(!0), I(null));
                 let n = C.ZP.getDefaultChannel(z.id);
                 try {
                     let t = u.intl.formatToPlainString(u.t.V4lepK, { topic: T });
-                    await r.Z.createTextChannel(z.id, T, null == n ? void 0 : n.parent_id, t), g();
+                    (await r.Z.createTextChannel(z.id, T, null == n ? void 0 : n.parent_id, t), g());
                 } catch (t) {
                     I(new d.yZ(t));
                 }

@@ -14,7 +14,7 @@ let p = (e) => {
     let { transitionState: t, onClose: n, classificationId: p, source: f } = e,
         h = (0, r.Z)(),
         g = () => {
-            n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
+            (n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING));
         };
     return (0, i.jsxs)(a.Y0X, {
         className: u.modalRoot,

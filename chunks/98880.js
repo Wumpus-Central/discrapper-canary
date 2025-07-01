@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     U4: () => z,
     cG: () => el,
     kA: () => ei,
@@ -7,7 +7,7 @@ n.d(t, {
     n(953529),
     n(997841),
     n(388685),
-    n(415506);
+    n(415506));
 var l,
     i = n(255367),
     r = n(73800),
@@ -63,7 +63,7 @@ function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -71,7 +71,7 @@ function F(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -79,8 +79,8 @@ function F(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -461,7 +461,7 @@ function el(e) {
     return {
         onClickAppCard: r.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     (0, N.yw)(M.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
@@ -477,7 +477,7 @@ function el(e) {
                         application: t,
                         installOnDemand: a,
                         sectionName: n
-                    });
+                    }));
             },
             [t, a, o, s, i, l, n, c]
         )
@@ -499,12 +499,12 @@ function er(e) {
                         l,
                         i = {},
                         r = Object.keys(e);
-                    for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (l = 0; l < r.length; l++) ((n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var r = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < r.length; l++) (n = r[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (l = 0; l < r.length; l++) ((n = r[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['context', 'application', 'location', 'sectionName', 'isOneClickCTA', 'fetchesApplication']);

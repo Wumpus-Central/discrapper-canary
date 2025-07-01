@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(539854), n(583741), n(388685);
+(n.d(t, { Z: () => s }), n(539854), n(583741), n(388685));
 var r,
     i = n(73800),
     l = n(846519);
@@ -15,9 +15,9 @@ function o(e, t, n) {
         e
     );
 }
-class s extends (r = i.Component) {
+class a extends (r = i.Component) {
     componentDidMount() {
-        this.update(), this._interval.start(this.props.updateInterval, this.update);
+        (this.update(), this._interval.start(this.props.updateInterval, this.update));
     }
     componentWillUnmount() {
         this._interval.stop();
@@ -27,8 +27,8 @@ class s extends (r = i.Component) {
             i = Date.now(),
             l = 0,
             o = 0,
-            s = [],
-            a = null != e[0] ? e[0].bytes : 0;
+            a = [],
+            s = null != e[0] ? e[0].bytes : 0;
         for (; l < t + r; l++) {
             let t,
                 r = i - (l + 1) * n;
@@ -36,10 +36,10 @@ class s extends (r = i.Component) {
                 if ((t = e[o]).timestamp > r) o++;
                 else break;
             if (o === e.length) break;
-            null != t && (s.push(a - t.bytes), (a = t.bytes));
+            null != t && (a.push(s - t.bytes), (s = t.bytes));
         }
-        for (; l < t + r; l++) s.push(0);
-        return s.reverse(), s;
+        for (; l < t + r; l++) a.push(0);
+        return (a.reverse(), a);
     }
     smoothDeltaBytes(e) {
         let { pointsToSmooth: t } = this.props,
@@ -56,7 +56,7 @@ class s extends (r = i.Component) {
         return n(this.state.smoothedDeltaBytes, t, e);
     }
     constructor(e) {
-        super(e),
+        (super(e),
             o(this, '_interval', new l.Xp()),
             o(this, 'update', () => {
                 let { onUpdate: e, numUpdatesToShow: t, pointsToSmooth: n, updateInterval: r } = this.props,
@@ -71,7 +71,7 @@ class s extends (r = i.Component) {
                     },
                     () => null != e && e(r)
                 );
-            });
+            }));
         let t = this.props.getHistoricalTotalBytes(),
             n = this.calculateInitialDeltaBytes(t);
         this.state = {
@@ -81,9 +81,9 @@ class s extends (r = i.Component) {
         };
     }
 }
-o(s, 'defaultProps', {
+o(a, 'defaultProps', {
     numUpdatesToShow: 30,
     updateInterval: 500,
     pointsToSmooth: 10
 });
-let a = s;
+let s = a;

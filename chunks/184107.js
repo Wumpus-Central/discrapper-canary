@@ -10,7 +10,7 @@ class c extends (l = a.ZP.Store) {
         return s[e];
     }
 }
-(i = 'ChannelSKUStore'),
+((i = 'ChannelSKUStore'),
     (r = 'displayName') in c
         ? Object.defineProperty(c, r, {
               value: i,
@@ -18,7 +18,7 @@ class c extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (c[r] = i);
+        : (c[r] = i));
 let u = new c(o.Z, {
     CONNECTION_OPEN: function () {
         s = {};

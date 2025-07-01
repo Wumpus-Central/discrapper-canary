@@ -58,7 +58,7 @@ var r,
         try {
             s ? (i || (2 === t.rejection && J(t), (t.rejection = 1)), !0 === s ? (n = a) : (u && u.enter(), (n = s(a)), u && (u.exit(), (o = !0))), n === e.promise ? l(new L('Promise-chain cycle')) : (r = z(n)) ? d(r, n, c, l) : c(n)) : l(a);
         } catch (e) {
-            u && !o && u.exit(), l(e);
+            (u && !o && u.exit(), l(e));
         }
     },
     Y = function (e, t) {
@@ -66,18 +66,18 @@ var r,
             ((e.notified = !0),
             C(function () {
                 for (var n, r = e.reactions; (n = r.get()); ) W(n, e);
-                (e.notified = !1), t && !e.rejection && $(e);
+                ((e.notified = !1), t && !e.rejection && $(e));
             }));
     },
     G = function (e, t, n) {
         var r, o;
-        H
+        (H
             ? (((r = V.createEvent('Event')).promise = t), (r.reason = n), r.initEvent(e, !1, !0), u.dispatchEvent(r))
             : (r = {
                   promise: t,
                   reason: n
               }),
-            !O && (o = u['on' + e]) ? o(r) : e === K && Z('Unhandled promise rejection', n);
+            !O && (o = u['on' + e]) ? o(r) : e === K && Z('Unhandled promise rejection', n));
     },
     $ = function (e) {
         d(k, u, function () {
@@ -114,7 +114,7 @@ var r,
     },
     et = function (e, t, n) {
         if (!e.done) {
-            (e.done = !0), n && (e = n);
+            ((e.done = !0), n && (e = n));
             try {
                 if (e.facade === t) throw new L("Promise can't be resolved itself");
                 var r = z(t);
@@ -136,7 +136,7 @@ var r,
 if (
     F &&
     ((D = (T = function (e) {
-        b(this, D), y(e), d(r, this);
+        (b(this, D), y(e), d(r, this));
         var t = I(this);
         try {
             e(X(et, t), X(ee, t));
@@ -174,7 +174,7 @@ if (
     (o = function () {
         var e = new r(),
             t = I(e);
-        (this.promise = e), (this.resolve = X(et, t)), (this.reject = X(ee, t));
+        ((this.promise = e), (this.resolve = X(et, t)), (this.reject = X(ee, t)));
     }),
     (A.f = U =
         function (e) {
@@ -182,7 +182,7 @@ if (
         }),
     !c && v(x) && B !== Object.prototype)
 ) {
-    (i = B.then),
+    ((i = B.then),
         E ||
             p(
                 B,
@@ -194,13 +194,13 @@ if (
                     }).then(e, t);
                 },
                 { unsafe: !0 }
-            );
+            ));
     try {
         delete B.constructor;
     } catch (e) {}
     h && h(B, D);
 }
-s(
+(s(
     {
         global: !0,
         constructor: !0,
@@ -210,4 +210,4 @@ s(
     { Promise: T }
 ),
     f(T, R, !1, !0),
-    m(R);
+    m(R));

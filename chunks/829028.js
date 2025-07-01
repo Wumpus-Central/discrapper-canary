@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: 'sv',
     pluralRuleFunction: function (e, t) {
         var n = String(e).split('.'),
@@ -16,4 +16,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({
         locale: 'sv-FI',
         parentLocale: 'sv'
-    });
+    }));

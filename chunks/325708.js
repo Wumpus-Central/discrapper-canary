@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => _,
     y: () => g
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -66,15 +66,15 @@ function _(e) {
         }),
         O = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
         E = (0, s.clamp)(y, v, n),
-        I = j ? E : E + O;
+        S = j ? E : E + O;
     l.useEffect(() => {
         null == r || r(E, j);
     }, [E, r, j]);
-    let S = null != p ? p : l.Fragment;
+    let I = null != p ? p : l.Fragment;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            !j && (0, i.jsx)('div', { style: { minWidth: I } }),
-            (0, i.jsx)(S, {
+            !j && (0, i.jsx)('div', { style: { minWidth: S } }),
+            (0, i.jsx)(I, {
                 children: (0, i.jsxs)('div', {
                     className: a()(m.chatLayerWrapper, { [m.hidden]: !1 }),
                     children: [
@@ -83,7 +83,7 @@ function _(e) {
                                 [m.floating]: j,
                                 [m.notFloating]: !j
                             }),
-                            style: { width: I }
+                            style: { width: S }
                         }),
                         !j &&
                             (0, i.jsx)(b, {

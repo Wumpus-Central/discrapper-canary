@@ -14,7 +14,7 @@ var a = o.Map,
         if (!t) return r;
         for (var n = e.get(t); n && n.getParentKey(); ) {
             var i = n.getParentKey();
-            i && r.push(i), (n = i ? e.get(i) : null);
+            (i && r.push(i), (n = i ? e.get(i) : null));
         }
         return r;
     },
@@ -23,7 +23,7 @@ var a = o.Map,
         if (!t) return r;
         for (var n = i(t, e); n && e.get(n); ) {
             var o = e.get(n);
-            r.push(n), (n = o.getParentKey() ? i(o, e) : null);
+            (r.push(n), (n = o.getParentKey() ? i(o, e) : null));
         }
         return r;
     },
@@ -38,8 +38,8 @@ var a = o.Map,
         return n;
     },
     p = function (t, e, r) {
-        if (0 === e) for (; e < r; ) (t = t.shift()), e++;
-        else if (r === t.count()) for (; r > e; ) (t = t.pop()), r--;
+        if (0 === e) for (; e < r; ) ((t = t.shift()), e++);
+        else if (r === t.count()) for (; r > e; ) ((t = t.pop()), r--);
         else {
             var n = t.slice(0, e),
                 i = t.slice(r);
@@ -63,7 +63,7 @@ t.exports = function (t, e) {
     if (b) {
         var w = _.getChildKeys(),
             x = s(y, h);
-        _.getNextSiblingKey() && (S = S.concat(x)), w.isEmpty() || (S = S.concat(x.concat([y]))), (S = S.concat(s(i(_, h), h)));
+        (_.getNextSiblingKey() && (S = S.concat(x)), w.isEmpty() || (S = S.concat(x.concat([y]))), (S = S.concat(s(i(_, h), h))));
     }
     o = m === _ ? p(m.getCharacterList(), g, v) : m.getCharacterList().slice(0, g).concat(_.getCharacterList().slice(v));
     var k = m.merge({
@@ -153,12 +153,12 @@ t.exports = function (t, e) {
                     null == r.get(m.getKey()) && null != r.get(_.getKey()) && _.getParentKey() === m.getKey() && null == _.getPrevSiblingKey())
                 ) {
                     var e = m.getPrevSiblingKey();
-                    u(_.getKey(), t, function (t) {
+                    (u(_.getKey(), t, function (t) {
                         return t.merge({ prevSibling: e });
                     }),
                         u(e, t, function (t) {
                             return t.merge({ nextSibling: _.getKey() });
-                        });
+                        }));
                     var n = e ? r.get(e) : null,
                         i = n ? n.getParentKey() : null;
                     if (

@@ -18,7 +18,7 @@ function m(e) {
             null != s && (s(), (0, o.l)(g, c.up.DISMISS));
         }, [g, s]),
         f = r.useCallback(() => {
-            n(), (0, o.l)(g, c.up.LEARN_MORE);
+            (n(), (0, o.l)(g, c.up.LEARN_MORE));
         }, [g, n]);
     return (0, i.jsxs)('div', {
         className: l()(u.safetySettingsNotice, m),

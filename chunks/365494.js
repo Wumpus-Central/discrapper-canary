@@ -40,5 +40,6 @@ e.exports = {
     textContentUnread: 'textContentUnread__9a337',
     textContentRead: 'textContentRead__9a337',
     mediaPostContainer: 'mediaPostContainer__9a337',
-    mediaPostThumbnail: 'mediaPostThumbnail__9a337'
+    mediaPostThumbnail: 'mediaPostThumbnail__9a337',
+    blockedMessage: 'blockedMessage__9a337'
 };

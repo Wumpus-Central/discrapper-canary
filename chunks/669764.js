@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r,
     i = n(442837),
     a = n(570140);
@@ -19,18 +19,18 @@ let s = new Map(),
     l = new Set(),
     c = new Set();
 function u() {
-    (s = new Map()), (l = new Set()), (c = new Set());
+    ((s = new Map()), (l = new Set()), (c = new Set()));
 }
 function d(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {
-        l.add(e), c.delete(e);
+        (l.add(e), c.delete(e));
     });
 }
 function f(e) {
     let { applicationIds: t, supplementalGameData: n } = e;
-    t.forEach((e) => {
-        l.delete(e), c.delete(e);
+    (t.forEach((e) => {
+        (l.delete(e), c.delete(e));
     }),
         n.forEach((e) => {
             let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: o, platforms: l, artwork_urls: c, screenshot_urls: u, cover_image_url: d, first_release_date: f, summary_localized: _, publisher_names: p, developer_names: h } = e;
@@ -50,12 +50,12 @@ function f(e) {
                 publishers: null != p ? p : [],
                 developers: null != h ? h : []
             });
-        });
+        }));
 }
 function _(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {
-        l.delete(e), c.add(e);
+        (l.delete(e), c.add(e));
     });
 }
 class p extends (r = i.ZP.Store) {

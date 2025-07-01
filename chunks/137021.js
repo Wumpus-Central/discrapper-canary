@@ -1,4 +1,4 @@
-n.d(t, { default: () => O }), n(388685);
+(n.d(t, { default: () => O }), n(388685));
 var r = n(255367),
     l = n(73800),
     s = n(442837),
@@ -31,12 +31,12 @@ function O(e) {
                         r,
                         l = {},
                         s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    for (r = 0; r < s.length; r++) ((n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                for (r = 0; r < s.length; r++) ((n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
             return l;
         })(e, ['applicationId', 'customId', 'linkId', 'message', 'onClose', 'onCopyLink', 'onShare', 'transitionState']);
@@ -75,7 +75,7 @@ function O(e) {
         }),
         X = l.useCallback(
             (e) => {
-                R(e), G(e);
+                (R(e), G(e));
             },
             [R, G]
         ),
@@ -88,7 +88,7 @@ function O(e) {
                     });
                     if (-1 === n) return q ? t : (R(''), (A.current += 1), [e, ...t]);
                     let r = [...t];
-                    return r.splice(n, 1), (A.current += 1), r;
+                    return (r.splice(n, 1), (A.current += 1), r);
                 });
             },
             [q]
@@ -101,14 +101,14 @@ function O(e) {
                         link: M
                     }),
                     n = ''.concat(_, '\n\n').concat(t);
-                T(!0),
+                (T(!0),
                     (await Promise.all(e.map(d.qx))).filter(m.lm).forEach(async (e) => {
                         let t = b.Z.getChannel(e);
                         null != t && (await a.Z.sendMessage(e, c.ZP.parse(t, n), !1));
                     }),
                     (0, i.showToast)((0, i.createToast)(g.intl.formatToPlainString(g.t.jQULqK, { applicationName: N.name }), i.ToastType.SUCCESS)),
                     Z(!0),
-                    E();
+                    E());
             },
             [_, M, E, Z, N]
         ),
@@ -143,7 +143,7 @@ function O(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -151,7 +151,7 @@ function O(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -159,8 +159,8 @@ function O(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })({ transitionState: L }, C)),
@@ -267,7 +267,7 @@ function v(e) {
             color: i.zxk.Colors.LINK,
             onClick: function () {
                 (0, h.JG)(t, () => {
-                    n(), a(!0);
+                    (n(), a(!0));
                 });
             },
             innerClassName: j.copyButton,

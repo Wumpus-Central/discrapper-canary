@@ -1,5 +1,5 @@
 let r, i, l;
-n.d(t, { Z: () => Z }), n(539854), n(388685);
+(n.d(t, { Z: () => Z }), n(539854), n(388685));
 var a,
     o = n(392711),
     s = n.n(o),
@@ -28,7 +28,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,7 +52,7 @@ function N() {
         let e = P(O.id);
         null != e && (O = e);
     }
-    (I = m.QZA.OPEN), (v = {}), (C = !1);
+    ((I = m.QZA.OPEN), (v = {}), (C = !1));
 }
 let T = s().debounce(() => {
     C && ((null == O || s().isEqual(O, P(O.id))) && (C = !1), C || A.emitChange());
@@ -112,29 +112,29 @@ let A = new j(
                       if (((l = m.b4C.OVERVIEW), null == r)) {
                           let e = p.Z.getChannel(),
                               t = null == e ? void 0 : e.getGuildId();
-                          null != e && null != t && (d.Z.fetchForChannel(t, e.id), (y = !0)), N();
+                          (null != e && null != t && (d.Z.fetchForChannel(t, e.id), (y = !0)), N());
                       }
                   },
                   INTEGRATION_SETTINGS_SET_SECTION: function (e) {
                       let { section: t, sectionId: n } = e;
-                      (l = t), (S = n);
+                      ((l = t), (S = n));
                   },
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                       let { webhookId: t } = e,
                           n = P(t);
                       if (null == n) return !1;
-                      (O = n), (v = {}), (C = !1);
+                      ((O = n), (v = {}), (C = !1));
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                      (O = null), (v = {}), (C = !1);
+                      ((O = null), (v = {}), (C = !1));
                   },
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                       let { settings: t } = e;
                       if (null == O) return !1;
-                      (O = _({}, O)), null != t.name && O.name !== t.name && ((O.name = t.name), (C = !0)), void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (C = !0)), null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (C = !0)), C && T();
+                      ((O = _({}, O)), null != t.name && O.name !== t.name && ((O.name = t.name), (C = !0)), void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (C = !0)), null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (C = !0)), C && T());
                   },
                   CHANNEL_SETTINGS_CLOSE: function () {
-                      (i = null), (r = null), (E = []), (O = null), (I = m.QZA.CLOSED);
+                      ((i = null), (r = null), (E = []), (O = null), (I = m.QZA.CLOSED));
                   },
                   WEBHOOKS_UPDATE: function (e) {
                       let { guildId: t, channelId: n, webhooks: l } = e;
@@ -148,8 +148,8 @@ let A = new j(
                               });
                               if (null != r) {
                                   let n = _({}, t, r);
-                                  (E[e] = n), C || (null == O ? void 0 : O.id) !== n.id || (O = n);
-                              } else (null == O ? void 0 : O.id) === t.id && (O = null), E.splice(e, 1);
+                                  ((E[e] = n), C || (null == O ? void 0 : O.id) !== n.id || (O = n));
+                              } else ((null == O ? void 0 : O.id) === t.id && (O = null), E.splice(e, 1));
                           }
                           for (let e of l)
                               null ==
@@ -157,16 +157,16 @@ let A = new j(
                                       let { id: n } = t;
                                       if (n === e.id) return !0;
                                   }) && E.push(e);
-                          (E = [...E]), T();
+                          ((E = [...E]), T());
                       }
                   },
                   INTEGRATION_SETTINGS_SUBMITTING: function () {
-                      (I = m.QZA.SUBMITTING), (v = {});
+                      ((I = m.QZA.SUBMITTING), (v = {}));
                   },
                   INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
                       var t;
                       if (I !== m.QZA.SUBMITTING) return !1;
-                      (I = m.QZA.OPEN), (v = null != (t = e.errors) ? t : {});
+                      ((I = m.QZA.OPEN), (v = null != (t = e.errors) ? t : {}));
                   }
               }
     ),

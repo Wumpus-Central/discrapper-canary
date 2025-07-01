@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(925975),
@@ -52,7 +52,7 @@ class p extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'node', i.createRef()),
             u(this, 'onClickSave', () => {
                 let { textValue: e } = this.props;
@@ -100,8 +100,8 @@ class p extends i.PureComponent {
             u(this, 'onKeyDown', (e) => {
                 if (e.keyCode === a.yXg.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
-                    e.preventDefault(), e.stopPropagation(), n(t.id);
+                    (e.preventDefault(), e.stopPropagation(), n(t.id));
                 }
-            });
+            }));
     }
 }

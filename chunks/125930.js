@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(781311), n(388685);
+(n.d(t, { Z: () => y }), n(781311), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -161,7 +161,7 @@ class O extends i.PureComponent {
     }
     constructor(e) {
         var t, n;
-        super(e),
+        (super(e),
             (t = 'handleSelectOperatingSystem'),
             (n = (e) => {
                 this.setState({ selectedOperatingSystem: e });
@@ -173,7 +173,7 @@ class O extends i.PureComponent {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = n);
+                : (this[t] = n));
         let r = (0, p.getPlatform)(),
             i = Object.keys(e.systemRequirements),
             l = i[0];

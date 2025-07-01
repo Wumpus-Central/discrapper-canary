@@ -21,7 +21,7 @@ t.exports = function (t, e) {
             h = o.getStartOffset(),
             d = o.getAnchorKey();
         if (!o.isCollapsed()) {
-            e.preventDefault(), t.update(p(r, n, r.getCurrentInlineStyle(), a(r.getCurrentContent(), r.getSelection()), !0));
+            (e.preventDefault(), t.update(p(r, n, r.getCurrentInlineStyle(), a(r.getCurrentContent(), r.getSelection()), !0)));
             return;
         }
         var g = p(r, n, r.getCurrentInlineStyle(), a(r.getCurrentContent(), r.getSelection()), !1),
@@ -45,12 +45,12 @@ t.exports = function (t, e) {
                 });
         }
         if ((y || (y = f && ("'" == n || '/' == n)), y || (y = c(g.getDirectionMap()).get(d) !== c(r.getDirectionMap()).get(d)), y)) {
-            e.preventDefault(), (g = i.set(g, { forceSelection: !0 })), t.update(g);
+            (e.preventDefault(), (g = i.set(g, { forceSelection: !0 })), t.update(g));
             return;
         }
-        (t._pendingStateFromBeforeInput = g = i.set(g, { nativelyRenderedContent: g.getCurrentContent() })),
+        ((t._pendingStateFromBeforeInput = g = i.set(g, { nativelyRenderedContent: g.getCurrentContent() })),
             l(function () {
                 void 0 !== t._pendingStateFromBeforeInput && (t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
-            });
+            }));
     }
 };

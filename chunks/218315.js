@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(997841);
+(n.d(t, { Z: () => T }), n(388685), n(997841));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -33,7 +33,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,11 +49,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -70,7 +70,7 @@ function v(e, t) {
 }
 class I extends a.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'onboardingCompleteGuilds', new Set()),
             b(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
@@ -120,7 +120,7 @@ class I extends a.Z {
                 let { guildId: n, channelId: r, message: i } = e;
                 if (null == n || null == r || (null == (t = i.author) ? void 0 : t.id) !== s.default.getId()) return;
                 let a = l.Z.getChannel(r);
-                (null == a ? void 0 : a.isForumPost()) && (null == a ? void 0 : a.parent_id) != null && this._completeChatAction(n, a.parent_id), this._completeChatAction(n, r);
+                ((null == a ? void 0 : a.isForumPost()) && (null == a ? void 0 : a.parent_id) != null && this._completeChatAction(n, a.parent_id), this._completeChatAction(n, r));
             }),
             b(this, 'handleThreadCreate', (e) => {
                 var t;
@@ -157,7 +157,7 @@ class I extends a.Z {
                 var n;
                 let { completedActions: r, loading: i } = h.Z.getState(e);
                 return null == r && !i && (0, d.yE)(null != (n = t.flags) ? n : 0, E.q.STARTED_HOME_ACTIONS) ? await (0, f.Fg)(e) : r;
-            });
+            }));
     }
 }
 let T = new I();

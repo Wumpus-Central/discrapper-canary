@@ -32,7 +32,7 @@
             r = Math.floor((e % 100) / 10),
             i = e % 10,
             a = '';
-        return n > 0 && (a += t[n] + 'vatlh'), r > 0 && (a += ('' !== a ? ' ' : '') + t[r] + 'maH'), i > 0 && (a += ('' !== a ? ' ' : '') + t[i]), '' === a ? 'pagh' : a;
+        return (n > 0 && (a += t[n] + 'vatlh'), r > 0 && (a += ('' !== a ? ' ' : '') + t[r] + 'maH'), i > 0 && (a += ('' !== a ? ' ' : '') + t[i]), '' === a ? 'pagh' : a);
     }
     return e.defineLocale('tlh', {
         months: 'tera\u2019 jar wa\u2019_tera\u2019 jar cha\u2019_tera\u2019 jar wej_tera\u2019 jar loS_tera\u2019 jar vagh_tera\u2019 jar jav_tera\u2019 jar Soch_tera\u2019 jar chorgh_tera\u2019 jar Hut_tera\u2019 jar wa\u2019maH_tera\u2019 jar wa\u2019maH wa\u2019_tera\u2019 jar wa\u2019maH cha\u2019'.split('_'),

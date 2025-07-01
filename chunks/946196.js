@@ -1,20 +1,20 @@
-n.d(t, { l: () => d }), n(388685);
+(n.d(t, { l: () => d }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(695469),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(709706),
     c = n(388032),
     u = n(791422);
 function d() {
-    let e = (0, a.e7)([s.Z], () => s.Z.getError());
-    return e ? (0, r.jsx)(f, { error: e }) : null;
+    let e = (0, o.e7)([s.Z], () => s.Z.getError());
+    return e ? (0, r.jsx)(p, { error: e }) : null;
 }
-let f = (e) => {
+let p = (e) => {
     let { error: t } = e,
-        [n, a] = (0, i.useState)(!1),
-        d = (0, o.Yzy)(
+        [n, o] = (0, i.useState)(!1),
+        d = (0, a.Yzy)(
             !n,
             {
                 from: {
@@ -32,7 +32,7 @@ let f = (e) => {
             },
             'respect-motion-settings'
         ),
-        f = (() => {
+        p = (() => {
             switch (t) {
                 case s.r.ERROR_DOWNLOADING_DEPENDENCY:
                     return c.intl.string(c.t.D9neaG);
@@ -51,12 +51,12 @@ let f = (e) => {
                   children: (0, r.jsxs)('div', {
                       className: u.visibleFloater,
                       children: [
-                          (0, r.jsx)(o.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: 'text-sm/semibold',
                               color: 'always-white',
-                              children: f
+                              children: p
                           }),
-                          (0, r.jsx)(o.RyX, { onClick: () => a(!0) })
+                          (0, r.jsx)(a.RyX, { onClick: () => o(!0) })
                       ]
                   })
               })

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $Z: () => D,
     Cp: () => Z,
     F_: () => A,
@@ -10,7 +10,7 @@ n.d(t, {
     n(433524),
     n(35282),
     n(704826),
-    n(388685);
+    n(388685));
 var i = n(481060),
     r = n(570140),
     s = n(493683),
@@ -38,7 +38,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -46,7 +46,7 @@ function T(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -54,8 +54,8 @@ function T(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -120,7 +120,7 @@ function P(e, t) {
                 break;
             case d.h8.TEXT_CHANNEL:
             case d.h8.VOICE_CHANNEL:
-                r instanceof f.Sf && (h.selected_guild_id = null != r.guild_id ? r.guild_id : null), (h.selected_channel_id = r.id);
+                (r instanceof f.Sf && (h.selected_guild_id = null != r.guild_id ? r.guild_id : null), (h.selected_channel_id = r.id));
                 break;
             case d.h8.GROUP_DM:
                 h.selected_channel_id = r.id;
@@ -137,7 +137,7 @@ function R() {
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'KEYBIND',
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
-    !(function (e) {
+    (!(function (e) {
         let t;
         if (O.Z.isOpen()) return;
         let n = E.Z.getGuildId(),
@@ -153,10 +153,10 @@ function D() {
             current_channel_type: t
         });
     })(e),
-        r.Z.dispatch(T({ type: 'QUICKSWITCHER_SHOW' }, A(t)));
+        r.Z.dispatch(T({ type: 'QUICKSWITCHER_SHOW' }, A(t))));
 }
 function Z() {
-    P(S.rMx.QUICKSWITCHER_CLOSED), R();
+    (P(S.rMx.QUICKSWITCHER_CLOSED), R());
 }
 function w(e) {
     r.Z.dispatch(T({ type: 'QUICKSWITCHER_SEARCH' }, A(e)));
@@ -170,7 +170,7 @@ function k(e) {
 function L(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    R(), (0, i.pTH)(), P(S.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
+    (R(), (0, i.pTH)(), P(S.rMx.QUICKSWITCHER_RESULT_SELECTED, e));
     let { type: f, record: x } = e,
         E = { page: S.ZY5.QUICK_SWITCHER };
     switch (f) {
@@ -193,14 +193,14 @@ function L(e) {
                 }));
             break;
         case d.h8.USER:
-            s.Z.openPrivateChannel({
+            (s.Z.openPrivateChannel({
                 recipientIds: [x.id],
                 location: 'Quickswitcher'
             }),
-                a.Z.channelListScrollTo(S.ME, b.Z.getDMFromUserId(x.id));
+                a.Z.channelListScrollTo(S.ME, b.Z.getDMFromUserId(x.id)));
             break;
         case d.h8.GROUP_DM:
-            (0, g.Kh)(x.id, { navigationReplace: !0 }), a.Z.channelListScrollTo(S.ME, x.id);
+            ((0, g.Kh)(x.id, { navigationReplace: !0 }), a.Z.channelListScrollTo(S.ME, x.id));
             break;
         case d.h8.APPLICATION:
             let j = _.Z.getActiveLibraryApplication(x.id);

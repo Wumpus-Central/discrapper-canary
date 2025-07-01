@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     CF: () => Y,
     ZP: () => et,
     nD: () => Q
 }),
     n(539854),
     n(388685),
-    n(997841);
+    n(997841));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -33,8 +33,8 @@ var r = n(255367),
     N = n(430824),
     E = n(496675),
     Z = n(594174),
-    T = n(768581),
-    R = n(585483),
+    R = n(768581),
+    T = n(585483),
     _ = n(630388),
     k = n(74538),
     I = n(276554),
@@ -53,7 +53,7 @@ function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -61,7 +61,7 @@ function K(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -69,8 +69,8 @@ function K(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -141,7 +141,7 @@ let X = l.memo(function (e) {
         w = l.useRef(null),
         S = (0, a.e7)([N.Z], () => N.Z.getGuild(i)),
         E = l.useMemo(() => $(s, y, u, S), [s, y, u, S]),
-        T = l.useMemo(
+        R = l.useMemo(
             () =>
                 null == u
                     ? null
@@ -179,11 +179,11 @@ let X = l.memo(function (e) {
                         : null,
             [E, u, S]
         ),
-        R = (0, a.e7)([Z.default], () => Z.default.getCurrentUser()),
+        T = (0, a.e7)([Z.default], () => Z.default.getCurrentUser()),
         _ = l.useMemo(() => {
             let e = [],
                 n = k.ZP.isPremium(t.author),
-                l = k.ZP.isPremium(R),
+                l = k.ZP.isPremium(T),
                 i = null == o ? void 0 : o.isPrivate();
             return (
                 (0, I.R)(null != u, 'Message Username') &&
@@ -200,7 +200,7 @@ let X = l.memo(function (e) {
                             'nitro-author'
                         )
                     ),
-                null != T && e.push(T),
+                null != R && e.push(R),
                 null != S &&
                     (e.push(
                         (0, r.jsx)(
@@ -238,7 +238,7 @@ let X = l.memo(function (e) {
                     ),
                 e
             );
-        }, [t, o, u, s, T, S, R]);
+        }, [t, o, u, s, R, S, T]);
     return null == x
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -438,7 +438,7 @@ let ee = l.memo(function (e) {
                             null == k.avatar &&
                             (null == (e = g.application) ? void 0 : e.icon) != null &&
                             null !=
-                                (t = T.ZP.getApplicationIconURL({
+                                (t = R.ZP.getApplicationIconURL({
                                     id: g.application.id,
                                     icon: g.application.icon,
                                     size: D,
@@ -449,7 +449,7 @@ let ee = l.memo(function (e) {
                     }, [B, null == (t = g.application) ? void 0 : t.icon, null == (n = g.application) ? void 0 : n.id, k.avatar, D, A]);
                 if (
                     (l.useEffect(() => {
-                        if (null != h) return R.S.subscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, ''.concat(h, ':').concat(I), E), () => void R.S.unsubscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, ''.concat(h, ':').concat(I), E);
+                        if (null != h) return (T.S.subscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, ''.concat(h, ':').concat(I), E), () => void T.S.unsubscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, ''.concat(h, ':').concat(I), E));
                     }, [I, h]),
                     !b || _)
                 )
@@ -468,7 +468,7 @@ let ee = l.memo(function (e) {
                                   position: s.tq ? 'window_center' : 'right',
                                   avatarUrl:
                                       null != f.guildMemberAvatar && null != i
-                                          ? T.ZP.getGuildMemberAvatarURLSimple({
+                                          ? R.ZP.getGuildMemberAvatarURLSimple({
                                                 guildId: i,
                                                 userId: g.author.id,
                                                 avatar: f.guildMemberAvatar,
@@ -534,7 +534,7 @@ let ee = l.memo(function (e) {
             V = (0, a.e7)([N.Z], () => $(o, L, g, N.Z.getGuild(e.guildId)), [o, L, g, e.guildId]),
             Y = l.useMemo(() => {
                 let e = [];
-                return (0, _.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) && e.push((0, r.jsx)(j.Z, {}, 'suppress-notifications')), t.hasPotions() && e.push((0, r.jsx)(O.Z, { message: t })), e;
+                return ((0, _.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) && e.push((0, r.jsx)(j.Z, {}, 'suppress-notifications')), t.hasPotions() && e.push((0, r.jsx)(O.Z, { message: t })), e);
             }, [t]),
             J = (0, A.XX)(t, b),
             ee = (0, A.Dv)(t),

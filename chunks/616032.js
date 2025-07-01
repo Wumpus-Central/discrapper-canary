@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(990547),
     o = n(91192),
-    s = n(481060),
-    a = n(724757),
+    a = n(481060),
+    s = n(724757),
     c = n(213609),
     u = n(441358),
     d = n(426521),
@@ -12,7 +12,7 @@ var r = n(255367),
 function p(e) {
     let { initialized: t, items: n, loading: p, loadMore: f } = e,
         g = i.useRef(null),
-        m = (0, a.Z)('for-you', g);
+        m = (0, s.Z)('for-you', g);
     (0, c.Z)(
         {
             type: l.ImpressionTypes.VIEW,
@@ -47,22 +47,22 @@ function p(e) {
                                               r,
                                               i = {},
                                               l = Object.keys(e);
-                                          for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                          for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                           return i;
                                       })(e, t);
                                   if (Object.getOwnPropertySymbols) {
                                       var l = Object.getOwnPropertySymbols(e);
-                                      for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                      for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                   }
                                   return i;
                               })(e, ['ref']);
                           return (0, r.jsxs)(
-                              s.Den,
+                              a.Den,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -70,7 +70,7 @@ function p(e) {
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              (r = n[t]),
+                                              ((r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
@@ -78,8 +78,8 @@ function p(e) {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
-                                          });
+                                                      : (e[t] = r));
+                                          }));
                                   }
                                   return e;
                               })(
@@ -87,7 +87,7 @@ function p(e) {
                                       className: h.container,
                                       ref: (e) => {
                                           var t;
-                                          (g.current = e), (l.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                                          ((g.current = e), (l.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                                       }
                                   },
                                   o
@@ -95,7 +95,7 @@ function p(e) {
                               (i = i =
                                   {
                                       onScroll: b,
-                                      children: [(0, r.jsx)(d.U, { items: n }), p ? (0, r.jsx)(s.$jN, { className: h.spinner }) : null]
+                                      children: [(0, r.jsx)(d.U, { items: n }), p ? (0, r.jsx)(a.$jN, { className: h.spinner }) : null]
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -114,5 +114,5 @@ function p(e) {
                       }
                   })
               })
-        : (0, r.jsx)(s.$jN, { className: h.loadingPlaceholder });
+        : (0, r.jsx)(a.$jN, { className: h.loadingPlaceholder });
 }

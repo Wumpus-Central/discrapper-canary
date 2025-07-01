@@ -29,8 +29,8 @@ function s(e, t, n) {
         return;
     }
     let l = document.createElement('style');
-    l.appendChild(o(s, n, i)), t.appendChild(l);
+    (l.appendChild(o(s, n, i)), t.appendChild(l));
 }
 function l(e, t) {
-    s(e, t, ':before'), s(e, t, ':after');
+    (s(e, t, ':before'), s(e, t, ':after'));
 }

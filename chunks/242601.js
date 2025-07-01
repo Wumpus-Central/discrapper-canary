@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eT }), n(388685), n(539854);
+(n.d(t, { Z: () => eT }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -87,7 +87,7 @@ function ey(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -95,7 +95,7 @@ function ey(e) {
             )),
             r.forEach(function (t) {
                 eO(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -127,12 +127,12 @@ function ev(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -161,12 +161,12 @@ class eN extends i.PureComponent {
     }
     componentDidMount() {
         var e;
-        this.setAnimatedValue(0), g.Z.subscribe('LAYER_PUSH', this.closeAllHeaderNotices), (this.historyUnlisten = F.Z.addRouteChangeListener(this.handleHistoryChange));
+        (this.setAnimatedValue(0), g.Z.subscribe('LAYER_PUSH', this.closeAllHeaderNotices), (this.historyUnlisten = F.Z.addRouteChangeListener(this.handleHistoryChange)));
         let { location: t } = F.Z.getHistory();
         (null == (e = t.state) ? void 0 : e.shouldShowSubscribeTooltip) && this.showTimeout.start(1000, () => this.setState({ shouldShowSubscribeTooltip: !0 }));
     }
     componentWillUnmount() {
-        this.showTimeout.stop(), this.state.controller.dispose(), this.historyUnlisten(), g.Z.unsubscribe('LAYER_PUSH', this.closeAllHeaderNotices);
+        (this.showTimeout.stop(), this.state.controller.dispose(), this.historyUnlisten(), g.Z.unsubscribe('LAYER_PUSH', this.closeAllHeaderNotices));
     }
     getGuildBannerHash() {
         let { guild: e, hasChannelNotice: t } = this.props;
@@ -292,14 +292,14 @@ class eN extends i.PureComponent {
     }
     setAnimatedValueForGuildInfo(e) {
         let { communityInfoVisible: t, controller: n } = this.state;
-        ((e >= 20 && t) || (e < 20 && !t)) && (t = !t),
+        (((e >= 20 && t) || (e < 20 && !t)) && (t = !t),
             t !== this.state.communityInfoVisible && this.setState({ communityInfoVisible: t }),
             n
                 .update({
                     value: Math.min(1, Math.max(0, 1 - e / 20)),
                     immediate: !0
                 })
-                .start();
+                .start());
     }
     renderChannelList() {
         let e = this.props,
@@ -358,7 +358,7 @@ class eN extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             eO(this, 'historyUnlisten', () => {}),
             eO(this, 'guildHeaderRef', i.createRef()),
             eO(this, 'guildHeaderDropdownButtonRef', i.createRef()),
@@ -380,7 +380,7 @@ class eN extends i.PureComponent {
             }),
             eO(this, 'handleHeaderMenuToggle', (e) => {
                 let { isHeaderPopoutOpen: t } = this.props;
-                e.stopPropagation(), (0, A.l)(!t), this.closeAllHeaderNotices();
+                (e.stopPropagation(), (0, A.l)(!t), this.closeAllHeaderNotices());
             }),
             eO(this, 'handleContextMenu', (e) => {
                 let { guild: t } = this.props;
@@ -394,12 +394,12 @@ class eN extends i.PureComponent {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, m.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('55616'), n.e('44156'), n.e('49286'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('92754'), n.e('87154'), n.e('33213'), n.e('15875')]).then(n.bind(n, 545135));
+                        let { default: e } = await Promise.all([n.e('71418'), n.e('55616'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('82265'), n.e('87154'), n.e('33213'), n.e('15875')]).then(n.bind(n, 545135));
                         return (n) => (0, r.jsx)(e, eI(ey({}, n), { guild: t }));
                     });
             }),
             eO(this, 'closeAllHeaderNotices', () => {
-                this.handleCloseSubscribeTooltip(), this.handleCloseTemplateDirtyTooltip(), this.handleCloseStudentHubPrivacySettingsTooltip();
+                (this.handleCloseSubscribeTooltip(), this.handleCloseTemplateDirtyTooltip(), this.handleCloseStudentHubPrivacySettingsTooltip());
             }),
             eO(this, 'handleCloseStudentHubPrivacySettingsTooltip', () => {
                 var e;
@@ -408,7 +408,7 @@ class eN extends i.PureComponent {
                 !t && n && (0, T.EW)(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: em.L.AUTO });
             }),
             eO(this, 'handleCloseSubscribeTooltip', () => {
-                this.showTimeout.stop(), this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 });
+                (this.showTimeout.stop(), this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 }));
             }),
             eO(this, 'handleCloseTemplateDirtyTooltip', () => {
                 let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
@@ -455,7 +455,7 @@ class eN extends i.PureComponent {
             ),
             eO(this, 'setAnimatedValueForBanner', (e) => {
                 let { renderBanner: t, communityInfoVisible: n, bannerVisible: r, bannerVisibleHeight: i, controller: l } = this.state;
-                ((e >= 88 && r) || (e < 88 && !r)) && (r = !r),
+                (((e >= 88 && r) || (e < 88 && !r)) && (r = !r),
                     ((e >= 88 && !t) || (e < 88 && t)) && (t = !t),
                     (i = Math.max(88 - e, 0)),
                     (n = r),
@@ -471,12 +471,12 @@ class eN extends i.PureComponent {
                             value: Math.min(1, Math.max(0, 1 - e / 88)),
                             immediate: !0
                         })
-                        .start();
+                        .start());
             }),
             eO(this, 'pinBannerOrGuildInfo', (e) => {
                 let { scrollTop: t } = e;
                 this.setAnimatedValue(t);
-            });
+            }));
     }
 }
 function eT(e) {

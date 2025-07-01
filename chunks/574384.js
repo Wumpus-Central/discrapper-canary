@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(642613);
+(n.d(t, { Z: () => f }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     a = n(793030),
@@ -25,7 +25,7 @@ function f(e) {
                     }),
                     (g.current = !0));
             }
-            m(null), null == n ? _(null) : e(n);
+            (m(null), null == n ? _(null) : e(n));
         }, [_, n]),
         i.useEffect(() => {
             g.current && (null == h ? null != f && _(null) : h.channels.some((e) => e.id === f) || _(null));

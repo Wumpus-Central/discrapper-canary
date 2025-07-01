@@ -27,8 +27,8 @@ function y(e) {
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations()
         })),
         E = s.Z.getSettings().clipsEnabled,
-        I = (null == x ? void 0 : x.ownerId) === h.default.getId(),
-        S = !E || !(I || j) || O || null == y,
+        S = (null == x ? void 0 : x.ownerId) === h.default.getId(),
+        I = !E || !(S || j) || O || null == y,
         P = i.useCallback((e) => {
             var t, n;
             return (0, r.jsx)(
@@ -37,7 +37,7 @@ function y(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function y(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -53,8 +53,8 @@ function y(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, e)),
@@ -77,11 +77,11 @@ function y(e) {
     return (0, r.jsx)(d.Z, {
         className: _.actionBarButton,
         onClick: () => {
-            S || ((0, m.v)(n, m.d.CLIP), I ? (0, c.C1)() : (0, c.C1)(y.id));
+            I || ((0, m.v)(n, m.d.CLIP), S ? (0, c.C1)() : (0, c.C1)(y.id));
         },
-        disabled: S,
+        disabled: I,
         iconComponent: P,
-        label: null == x ? b.intl.string(b.t.eg5qtb) : I || j ? (E ? (O ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
+        label: null == x ? b.intl.string(b.t.eg5qtb) : S || j ? (E ? (O ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
         grow: !1
     });
 }

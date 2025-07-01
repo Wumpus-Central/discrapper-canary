@@ -6,16 +6,16 @@ function i(e, t) {
 function a(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+        ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
     }
 }
 function o(e, t, n) {
-    return t && a(e.prototype, t), n && a(e, n), e;
+    return (t && a(e.prototype, t), n && a(e, n), e);
 }
 var s = (function () {
     function e(t, n) {
         var r = this;
-        i(this, e),
+        (i(this, e),
             (this.isSetUp = !1),
             (this.handleRefCountChange = function () {
                 var e = r.store.getState().refCount > 0;
@@ -23,7 +23,7 @@ var s = (function () {
             }),
             (this.store = t),
             (this.monitor = n),
-            t.subscribe(this.handleRefCountChange);
+            t.subscribe(this.handleRefCountChange));
     }
     return (
         o(e, [
@@ -66,7 +66,7 @@ var s = (function () {
                     var i = (0, r.W1)(this);
                     return Object.keys(i).reduce(function (e, t) {
                         var r = i[t];
-                        return (e[t] = n(r)), e;
+                        return ((e[t] = n(r)), e);
                     }, {});
                 }
             },

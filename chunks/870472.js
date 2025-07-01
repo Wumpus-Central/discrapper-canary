@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Q: () => c,
     V: () => o
 }),
@@ -6,7 +6,7 @@ n.d(t, {
     n(539854),
     n(35282),
     n(781311),
-    n(358797);
+    n(358797));
 var r = n(73800),
     i = n(348327),
     l = n.n(i),
@@ -21,7 +21,7 @@ function o(e) {
                 let r = e(a);
                 if (l()(a, r)) return;
                 let o = t.slice(0, i + 1);
-                o.push(r), n(o), s(o.length - 1);
+                (o.push(r), n(o), s(o.length - 1));
             },
             [i, a, t]
         );
@@ -32,7 +32,7 @@ function o(e) {
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
                     n = Math.max(0, i - e);
-                return s(n), t[n];
+                return (s(n), t[n]);
             },
             [i, t]
         ),
@@ -40,7 +40,7 @@ function o(e) {
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
                     n = Math.min(t.length - 1, i + e);
-                return s(n), t[n];
+                return (s(n), t[n]);
             },
             [i, t]
         )
@@ -64,7 +64,7 @@ function c(e, t) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -72,7 +72,7 @@ function c(e, t) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -80,8 +80,8 @@ function c(e, t) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, t)),
@@ -108,7 +108,7 @@ function c(e, t) {
             document.addEventListener('keydown', t),
             document.addEventListener('keyup', n),
             () => {
-                document.removeEventListener('keydown', t), document.removeEventListener('keyup', n);
+                (document.removeEventListener('keydown', t), document.removeEventListener('keyup', n));
             }
         );
     }, [u]);
@@ -201,7 +201,7 @@ function c(e, t) {
         j = r.useCallback(
             (e) => {
                 var t;
-                u((e) => {
+                (u((e) => {
                     let { tags: t, value: n } = e;
                     return {
                         value: n,
@@ -211,7 +211,7 @@ function c(e, t) {
                     };
                 }),
                     null != e && (e.preventDefault(), e.stopPropagation()),
-                    null == (t = i.current) || t.focus();
+                    null == (t = i.current) || t.focus());
             },
             [i, u]
         ),
@@ -255,7 +255,7 @@ function c(e, t) {
                 let t = o.trim().length <= 0;
                 if (d.length > 0) {
                     var n;
-                    (0, s.flushSync)(() => {
+                    ((0, s.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n, selections: r } = e;
                             return {
@@ -268,7 +268,7 @@ function c(e, t) {
                     }),
                         null == (n = i.current) || n.focus(),
                         e.preventDefault(),
-                        e.stopPropagation();
+                        e.stopPropagation());
                 } else
                     t &&
                         ((0, s.flushSync)(() => {
@@ -317,11 +317,11 @@ function c(e, t) {
                     }),
                     setImmediate(() => {
                         var e;
-                        null == (e = i.current) || e.blur(),
+                        (null == (e = i.current) || e.blur(),
                             setTimeout(() => {
                                 var e;
                                 null == (e = l.current) || e.focus();
-                            }, 16);
+                            }, 16));
                     }),
                     e.preventDefault(),
                     e.stopPropagation());

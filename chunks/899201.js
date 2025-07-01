@@ -1,4 +1,4 @@
-n.d(t, { default: () => q }), n(388685), n(539854);
+(n.d(t, { default: () => q }), n(388685), n(539854));
 var a = n(255367),
     i = n(73800),
     l = n(120356),
@@ -56,12 +56,12 @@ function q(e) {
                         a,
                         i = {},
                         l = Object.keys(e);
-                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (a = 0; a < l.length; a++) ((n = l[a]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < l.length; a++) (n = l[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (a = 0; a < l.length; a++) ((n = l[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['applicationId', 'mediaUrl', 'channelId', 'onClose', 'transitionState']);
@@ -89,22 +89,22 @@ function q(e) {
                 a = new File([await n.arrayBuffer()], t);
             X(a);
             let i = new FileReader();
-            (i.onload = () => {
+            ((i.onload = () => {
                 var e;
                 return Y(null == i || null == (e = i.result) ? void 0 : e.toString());
             }),
-                i.readAsDataURL(a);
+                i.readAsDataURL(a));
         })();
     }, [r, X]);
     let W = (0, d.Wu)([x.Z, C.Z], () => x.Z.getInviteSuggestionRows().filter((e) => e.type === A.bm.FRIEND || e.type === A.bm.DM || C.Z.can(L.Plq.ATTACH_FILES, e.item)));
-    i.useEffect(() => {
+    (i.useEffect(() => {
         (0, p.x)({
             omitUserIds: new Set(),
             applicationId: l,
             inviteTargetType: F.Iq.EMBEDDED_APPLICATION
         });
     }, [l]),
-        i.useEffect(() => (0, p.C)(P), [P]);
+        i.useEffect(() => (0, p.C)(P), [P]));
     let J = i.useCallback(async () => {
         await Promise.all(
             U.map(async (e) => {
@@ -120,7 +120,7 @@ function q(e) {
         y === u.Dvm.EXITING && J();
     }, [J, y]);
     let $ = i.useCallback(async () => {
-            await J(), m();
+            (await J(), m());
         }, [m, J]),
         ee = i.useCallback(async () => {
             let e = 0,
@@ -141,7 +141,7 @@ function q(e) {
                 let i = await z(a),
                     r = T.Z.getUploads(i, v.d.ChannelMessage),
                     s = E.Z.getChannel(i);
-                f.Z.sendMessage(
+                (f.Z.sendMessage(
                     i,
                     null != j
                         ? w.ZP.parse(s, G.intl.formatToPlainString(G.t.jQULqK, { applicationName: '**'.concat(j.name, '**') }))
@@ -168,7 +168,7 @@ function q(e) {
                         }
                     }
                 ),
-                    g.Z.clearAll(i, v.d.ChannelMessage);
+                    g.Z.clearAll(i, v.d.ChannelMessage));
             }
             let i = x.Z.getInviteSuggestionRows()
                 .filter((e) => U.includes(e.item.id))
@@ -182,7 +182,7 @@ function q(e) {
                 n_channels: n
             });
             try {
-                await Promise.all(i), null != j && (0, u.showToast)((0, u.createToast)(G.intl.formatToPlainString(G.t.jQULqK, { applicationName: j.name }), u.ToastType.SUCCESS));
+                (await Promise.all(i), null != j && (0, u.showToast)((0, u.createToast)(G.intl.formatToPlainString(G.t.jQULqK, { applicationName: j.name }), u.ToastType.SUCCESS)));
             } catch (e) {
                 throw ((0, u.showToast)((0, u.createToast)(G.intl.string(G.t.PanA4O), u.ToastType.FAILURE)), e);
             }
@@ -192,7 +192,7 @@ function q(e) {
             let t = async () => {
                 let t = await z(e),
                     n = [...U];
-                if (n.includes(e.item.id)) g.Z.clearAll(t, v.d.ChannelMessage), (n = n.filter((t) => t !== e.item.id));
+                if (n.includes(e.item.id)) (g.Z.clearAll(t, v.d.ChannelMessage), (n = n.filter((t) => t !== e.item.id)));
                 else {
                     if (n.length >= 10) return;
                     null != V &&
@@ -218,7 +218,7 @@ function q(e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
                           a = Object.keys(n);
-                      'function' == typeof Object.getOwnPropertySymbols &&
+                      ('function' == typeof Object.getOwnPropertySymbols &&
                           (a = a.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -226,7 +226,7 @@ function q(e) {
                           )),
                           a.forEach(function (t) {
                               var a;
-                              (a = n[t]),
+                              ((a = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
                                             value: a,
@@ -234,8 +234,8 @@ function q(e) {
                                             configurable: !0,
                                             writable: !0
                                         })
-                                      : (e[t] = a);
-                          });
+                                      : (e[t] = a));
+                          }));
                   }
                   return e;
               })({ transitionState: y }, I)),
@@ -345,23 +345,23 @@ function H(e) {
     switch (t.type) {
         case A.bm.DM:
         case A.bm.FRIEND:
-            (s = (0, a.jsx)(u.qEK, {
+            ((s = (0, a.jsx)(u.qEK, {
                 size: u.EFr.SIZE_40,
                 src: t.item.getAvatarURL(null, 128, !1),
                 'aria-label': t.item.username
             })),
                 (o = M.ZP.getName(t.item)),
-                (c = M.ZP.getUserTag(t.item));
+                (c = M.ZP.getUserTag(t.item)));
             break;
         case A.bm.GROUP_DM: {
             let e = (0, y.x)(t.item),
                 n = (0, I.F6)(t.item, O.default, j.Z);
-            (s = (0, a.jsx)(u.qEK, {
+            ((s = (0, a.jsx)(u.qEK, {
                 src: e,
                 'aria-label': n,
                 size: u.EFr.SIZE_40
             })),
-                (o = (0, I.F6)(t.item, O.default, j.Z));
+                (o = (0, I.F6)(t.item, O.default, j.Z)));
             break;
         }
         case A.bm.CHANNEL: {
@@ -435,13 +435,13 @@ function K(e) {
         [r, s] = i.useState(!1),
         o = (0, d.e7)([O.default], () => O.default.getCurrentUser());
     async function c() {
-        Z.default.track(L.rMx.ACTIVITY_SHARE_MOMENT_COPY, {
+        (Z.default.track(L.rMx.ACTIVITY_SHARE_MOMENT_COPY, {
             user_id: null == o ? void 0 : o.id,
             application_id: t,
             activity_session_id: l
         }),
             await U.ZP.copyImage(n),
-            s(!0);
+            s(!0));
     }
     return (i.useEffect(() => {
         let e;

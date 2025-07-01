@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     YO: () => E,
     lG: () => g,
     mq: () => b
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(570140),
@@ -52,7 +52,7 @@ function g() {
                     disable: T
                 }
             ).enabled || T;
-    r.useEffect(() => {
+    (r.useEffect(() => {
         a.Z.wait(() => {
             S && (null == e || E) && _.ZP.fetchActiveOutboundPromotions();
         });
@@ -61,13 +61,13 @@ function g() {
             a.Z.wait(() => {
                 (0, f.t8)()
                     .then((e) => {
-                        v(e), y(!0);
+                        (v(e), y(!0));
                     })
                     .catch(() => {
-                        v([]), y(!0);
+                        (v([]), y(!0));
                     });
             });
-        }, []);
+        }, []));
     let A = {};
     for (let { code: e, promotion: t } of O) A[t.id] = e;
     let N = m(n, g, E, A),

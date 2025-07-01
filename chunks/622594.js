@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -16,7 +16,7 @@ let h = a.memo(function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     l = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (l = l.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -24,7 +24,7 @@ let h = a.memo(function (e) {
                     )),
                     l.forEach(function (t) {
                         var l;
-                        (l = n[t]),
+                        ((l = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: l,
@@ -32,8 +32,8 @@ let h = a.memo(function (e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = l);
-                    });
+                                : (e[t] = l));
+                    }));
             }
             return e;
         })({}, f.nl),
@@ -54,7 +54,7 @@ let h = a.memo(function (e) {
     a.useEffect(() => {
         if (null == b) return;
         let e = b.duration * o.Z.Millis.SECOND;
-        N(0), S(0), P(e), D(e);
+        (N(0), S(0), P(e), D(e));
     }, [b]);
     let A = a.useCallback(
             (e, t) => {
@@ -90,7 +90,7 @@ let h = a.memo(function (e) {
                 if (null == b || !E) return;
                 let t = parseInt(e.target.value),
                     n = t > O ? O : t;
-                i((0, c.my)(n)), N(n), S(n);
+                (i((0, c.my)(n)), N(n), S(n));
             },
             [b, i, O, E]
         ),
@@ -107,7 +107,7 @@ let h = a.memo(function (e) {
                 if (null == b || !I) return;
                 let t = parseInt(e.target.value),
                     n = t > w ? t : w;
-                i((0, c.my)(w)), S(w), P(n);
+                (i((0, c.my)(w)), S(w), P(n));
             },
             [b, i, I, w]
         );

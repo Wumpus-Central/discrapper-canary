@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+(n.d(t, { Z: () => k }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -230,13 +230,13 @@ let P = (e) => {
                                         (0, r.jsx)(s.zxk, {
                                             className: j.endOfFeedButton,
                                             onClick: () => {
-                                                a('shop all button', void 0, !0),
+                                                (a('shop all button', void 0, !0),
                                                     c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                                                         page_type: o,
                                                         page_category: o === x.AW.HOME || null == b ? void 0 : b.pageCategory,
                                                         cta_name: 'shop the whole shop button'
-                                                    });
+                                                    }));
                                             },
                                             children: (0, r.jsx)(s.Text, {
                                                 variant: 'text-md/medium',

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => A }), n(388685), n(415506);
+(n.d(t, { Z: () => A }), n(388685), n(415506));
 var i,
     a = n(442837),
     o = n(570140),
@@ -42,7 +42,7 @@ function b(e) {
     let { storeListing: t, channelId: n } = e;
     if (null != n) {
         let e = l.Z.createFromServer(t);
-        (f[g(n, e.skuId)] = e), (p[e.skuId] = e.id);
+        ((f[g(n, e.skuId)] = e), (p[e.skuId] = e.id));
     } else m(t);
 }
 function y(e) {
@@ -59,15 +59,15 @@ function v(e) {
     h.delete(t);
 }
 function I() {
-    (d = {}), (p = {}), (_ = {}), (f = {}), (h = new Set());
+    ((d = {}), (p = {}), (_ = {}), (f = {}), (h = new Set()));
 }
 function T() {
     if (r === s.default.locale) return !1;
-    I(), (r = s.default.locale);
+    (I(), (r = s.default.locale));
 }
 class S extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], T), (r = s.default.locale);
+        (this.waitFor(s.default), this.syncWith([s.default], T), (r = s.default.locale));
     }
     get(e) {
         return d[e];

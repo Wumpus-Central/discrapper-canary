@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+(n.d(t, { Z: () => L }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -45,7 +45,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -53,7 +53,7 @@ function D(e) {
             )),
             i.forEach(function (t) {
                 R(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -85,7 +85,7 @@ function w(e) {
             (e) => {
                 if ('c' === e.key && e.metaKey && C.wS) {
                     var t;
-                    e.preventDefault(), e.stopPropagation(), (0, C.JG)(s), null == l || null == (t = l.current) || t.focus();
+                    (e.preventDefault(), e.stopPropagation(), (0, C.JG)(s), null == l || null == (t = l.current) || t.focus());
                 }
             },
             [s]
@@ -345,13 +345,13 @@ class k extends r.PureComponent {
         (0, o.h7j)((t) => (0, i.jsx)(b.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: N.M });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             R(this, 'state', {
                 revealed: !1,
                 password: ''
             }),
             R(this, 'togglePhoneNumberVisibility', (e) => {
-                e.preventDefault(), this.setState({ revealed: !this.state.revealed });
+                (e.preventDefault(), this.setState({ revealed: !this.state.revealed }));
             }),
             R(this, 'handleDisableMFA', () => {
                 d.Z.show({
@@ -430,7 +430,7 @@ class k extends r.PureComponent {
                         })
                     )
                 );
-            });
+            }));
     }
 }
 function L(e) {

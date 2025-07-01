@@ -20,7 +20,7 @@ function u(e, t) {
     return (
         l(
             function () {
-                (i.value = n), (i.getSnapshot = t), d(i) && a({ inst: i });
+                ((i.value = n), (i.getSnapshot = t), d(i) && a({ inst: i }));
             },
             [e, n, t]
         ),

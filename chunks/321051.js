@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(692547),
@@ -13,7 +13,7 @@ function f(e) {
         [f, _] = i.useState(!1),
         p = i.useRef(null);
     function h(e) {
-        _(!1), null == t || t(e);
+        (_(!1), null == t || t(e));
     }
     let m = (e) =>
         (0, r.jsxs)('div', {

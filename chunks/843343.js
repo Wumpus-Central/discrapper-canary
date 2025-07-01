@@ -4,8 +4,8 @@ n(73800);
 var i = n(91192),
     l = n(442837),
     o = n(481060),
-    s = n(299379),
-    a = n(486472),
+    a = n(299379),
+    s = n(486472),
     c = n(430824),
     u = n(682662),
     d = n(662146),
@@ -14,7 +14,7 @@ var i = n(91192),
     f = n(552179);
 function g() {
     var e, t;
-    let n = (0, l.e7)([a.Z, c.Z], () => a.Z.unavailableGuilds.filter((e) => null == c.Z.getGuild(e)).length),
+    let n = (0, l.e7)([s.Z, c.Z], () => s.Z.unavailableGuilds.filter((e) => null == c.Z.getGuild(e)).length),
         g = (0, i.Ie)('unavailable-guilds-button');
     return n <= 0
         ? null
@@ -28,7 +28,7 @@ function g() {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   r = Object.keys(n);
-                              'function' == typeof Object.getOwnPropertySymbols &&
+                              ('function' == typeof Object.getOwnPropertySymbols &&
                                   (r = r.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function g() {
                                   )),
                                   r.forEach(function (t) {
                                       var r;
-                                      (r = n[t]),
+                                      ((r = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: r,
@@ -44,13 +44,13 @@ function g() {
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = r);
-                                  });
+                                              : (e[t] = r));
+                                  }));
                           }
                           return e;
                       })(
                           {
-                              href: (0, s.Z)(h.RK.TWITTER),
+                              href: (0, a.Z)(h.RK.TWITTER),
                               target: '_blank',
                               className: f.guildsError,
                               'aria-label': p.intl.formatToPlainString(p.t['MEpX+/'], { count: n })

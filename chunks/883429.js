@@ -97,7 +97,7 @@ let p = {
         });
         try {
             let s = await o.Z.searchThreads(e, t, n, r, a);
-            (0, u.Js)({
+            ((0, u.Js)({
                 guildId: e,
                 channelId: t,
                 numSearchResults: s.length
@@ -106,7 +106,7 @@ let p = {
                     type: 'FORUM_SEARCH_SUCCESS',
                     channelId: t,
                     threadIds: s
-                });
+                }));
         } catch (e) {
             i.Z.dispatch({
                 type: 'FORUM_SEARCH_FAILURE',

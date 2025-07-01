@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var i,
     r = n(73800),
     o = n(392711),
@@ -31,15 +31,15 @@ let m = {
     y = !1;
 function O(e) {
     let { clientX: t, clientY: n } = e;
-    (y = !0), (m.x = t), (m.y = n);
+    ((y = !0), (m.x = t), (m.y = n));
 }
 let v = new Map();
 function _(e, t) {
-    if (null == t) v.delete(e), 0 === v.size && (window.removeEventListener('mousemove', O), (y = !1));
+    if (null == t) (v.delete(e), 0 === v.size && (window.removeEventListener('mousemove', O), (y = !1)));
     else {
         let n = v.get(e);
         if (null != n && (0, a.Z)(n.zone, t.zone)) return;
-        0 === v.size && window.addEventListener('mousemove', O), v.set(e, t);
+        (0 === v.size && window.addEventListener('mousemove', O), v.set(e, t));
     }
     if (f.isPlatformEmbedded)
         if (u.default.isCurrentPidOutOfProcess()) {
@@ -58,7 +58,7 @@ function _(e, t) {
             var n;
             let e = (0, h.M)();
             if (null == e) return;
-            e.broadcastCommand({
+            (e.broadcastCommand({
                 message: 'set_click_zones',
                 zones: Array.from(v.values()).map((e) => {
                     let { zone: t } = e;
@@ -71,7 +71,7 @@ function _(e, t) {
                         let i = v.get(e);
                         null != i && (y || ((m.x = t), (m.y = n)), i.instance.click());
                     }),
-                    (b = !0));
+                    (b = !0)));
         }
 }
 let b = !1;
@@ -80,7 +80,7 @@ class E extends (i = r.PureComponent) {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
     componentWillUnmount() {
-        this.interval.stop(), _(this.zone, null);
+        (this.interval.stop(), _(this.zone, null));
     }
     componentDidUpdate(e) {
         let { observe: t } = this.props;
@@ -90,14 +90,14 @@ class E extends (i = r.PureComponent) {
         return r.Children.only(this.props.children);
     }
     observeZone() {
-        this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone);
+        (this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone));
     }
     click() {
         let e = (0, p.B)('click', m.x, m.y);
         (0, p.J)(e, m.x, m.y);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'zone', l().uniqueId('ClickArea')),
             g(this, 'interval', new c.Xp()),
             g(this, 'updateZone', () => {
@@ -115,7 +115,7 @@ class E extends (i = r.PureComponent) {
                         }
                     });
                 }
-            });
+            }));
     }
 }
 g(E, 'defaultProps', {

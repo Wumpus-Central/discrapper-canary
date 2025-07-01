@@ -1,4 +1,4 @@
-n.d(t, { default: () => y }), n(388685), n(953529), n(642613);
+(n.d(t, { default: () => y }), n(388685), n(953529), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -162,7 +162,7 @@ function y(e) {
                                     look: a.zxk.Looks.LINK,
                                     color: a.zxk.Colors.RED,
                                     onClick: () => {
-                                        j(), n();
+                                        (j(), n());
                                     },
                                     children: N.intl.string(N.t.N86XcH)
                                 })
@@ -192,9 +192,9 @@ function y(e) {
                                                     let i = {};
                                                     r.title.length <= 0 && (i.title = N.intl.string(N.t.p3PKzM));
                                                     let l = (0, v.en)(e, t, n, r);
-                                                    return null != l && (i.roles = l), i;
+                                                    return (null != l && (i.roles = l), i);
                                                 })(p, g.Z.editedOnboardingPrompts, y, t);
-                                            H(r), o().isEmpty(r) && (l(t), n());
+                                            (H(r), o().isEmpty(r) && (l(t), n()));
                                         },
                                         children: N.intl.string(N.t.R3BPHx)
                                     })

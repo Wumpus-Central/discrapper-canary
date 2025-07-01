@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     C$: () => m,
     Fe: () => d,
     Fz: () => f,
@@ -8,7 +8,7 @@ n.d(t, {
 }),
     n(388685),
     n(49124),
-    n(539854);
+    n(539854));
 var r = n(544891),
     i = n(570140);
 n(904245);
@@ -32,26 +32,26 @@ function l(e, t, n) {
 let c = 10,
     u = 600000;
 var d = (function (e) {
-        return (e[(e.REDEEMED = 1)] = 'REDEEMED'), (e[(e.PENDING = 2)] = 'PENDING'), (e[(e.CONVERTED = 3)] = 'CONVERTED'), e;
+        return ((e[(e.REDEEMED = 1)] = 'REDEEMED'), (e[(e.PENDING = 2)] = 'PENDING'), (e[(e.CONVERTED = 3)] = 'CONVERTED'), e);
     })({}),
     f = (function (e) {
-        return (e[(e.SUCCESS = 1)] = 'SUCCESS'), (e[(e.FAIL = 2)] = 'FAIL'), e;
+        return ((e[(e.SUCCESS = 1)] = 'SUCCESS'), (e[(e.FAIL = 2)] = 'FAIL'), e);
     })({});
 class _ {
     set(e, t) {
         this.cache.set(e, t);
     }
     get(e) {
-        return this._checkExpiration(), this.cache.get(e);
+        return (this._checkExpiration(), this.cache.get(e));
     }
     has(e) {
-        return this._checkExpiration(), this.cache.has(e);
+        return (this._checkExpiration(), this.cache.has(e));
     }
     _checkExpiration() {
         this.expiration < Date.now() && this.cache.clear();
     }
     constructor() {
-        l(this, 'cache', void 0), l(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + u);
+        (l(this, 'cache', void 0), l(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + u));
     }
 }
 let p = new _();
@@ -77,7 +77,7 @@ async function h(e, t, n) {
             users: o.map((e) => new a.Z(e)),
             nextIndex: l
         };
-    return p.set(i, u), u;
+    return (p.set(i, u), u);
 }
 let m = () => (
     i.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
@@ -127,9 +127,9 @@ async function g(e) {
                 ).body)
                     ? a
                     : null;
-            null != e && t.push(e), n.set(i, 1);
+            (null != e && t.push(e), n.set(i, 1));
         } catch (e) {
-            o.Z.captureException(e), n.set(i, 2);
+            (o.Z.captureException(e), n.set(i, 2));
         }
     return (
         i.Z.dispatch({

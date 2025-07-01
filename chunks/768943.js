@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(415506), n(388685);
+(n.d(t, { Z: () => V }), n(415506), n(388685));
 var r,
     i = n(442837),
     a = n(759174),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -73,11 +73,11 @@ function v(e) {
 function I(e) {
     var t;
     let n = v(e.saveData);
-    null == h.get(n) && (g = Date.now()), h.set(n, e);
+    (null == h.get(n) && (g = Date.now()), h.set(n, e));
     let r = e.saveData.messageId,
         i = e.saveData.channelId,
         a = null != (t = y.get(i)) ? t : new Set();
-    a.add(r), y.set(i, a), null == e.message && b.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(r) : E.delete(r);
+    (a.add(r), y.set(i, a), null == e.message && b.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(r) : E.delete(r));
 }
 function T(e) {
     var t;
@@ -86,13 +86,13 @@ function T(e) {
     if (null == r) return !1;
     h.delete(n);
     let i = e.messageId;
-    null == (t = y.get(r.saveData.channelId)) || t.delete(i), b.delete(i), E.delete(i), (g = Date.now());
+    (null == (t = y.get(r.saveData.channelId)) || t.delete(i), b.delete(i), E.delete(i), (g = Date.now()));
 }
 function S() {
     m = !0;
 }
 function A() {
-    (m = !0), h.clear(), y.clear(), b.clear();
+    ((m = !0), h.clear(), y.clear(), b.clear());
 }
 function N(e) {
     let { savedMessages: t } = e;
@@ -115,7 +115,7 @@ function P(e) {
         i = h.get(r);
     if ((null == i ? void 0 : i.message) == null) return !1;
     let a = d({}, i);
-    return (a.message = null), h.set(r, a), !0;
+    return ((a.message = null), h.set(r, a), !0);
 }
 function w(e) {
     let { id: t, channelId: n } = e;
@@ -142,7 +142,7 @@ function L(e) {
         r = h.get(n);
     if ((null == r ? void 0 : r.message) == null) return !1;
     let i = d({}, r);
-    (i.message = (0, s.wi)(r.message, t)), h.set(n, i);
+    ((i.message = (0, s.wi)(r.message, t)), h.set(n, i));
 }
 function x() {
     if (0 === b.size || m) return !1;

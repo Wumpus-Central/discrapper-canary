@@ -17,12 +17,12 @@ function i(e, t, n) {
     );
 }
 var a = (function (e) {
-    return (e.STREAM = 'stream'), (e.PAUSE = 'pause'), (e.STOP = 'stop'), e;
+    return ((e.STREAM = 'stream'), (e.PAUSE = 'pause'), (e.STOP = 'stop'), e);
 })({});
 class o {
     onStreamBegin(e, t, n) {
         let i = (0, r.e)(e, t);
-        (this.sound = n), null == i || null == i.windowHandle ? this.callback({ type: 'stop' }) : this._stream(i);
+        ((this.sound = n), null == i || null == i.windowHandle ? this.callback({ type: 'stop' }) : this._stream(i));
     }
     onStreamKilled() {
         this._kill();
@@ -49,17 +49,17 @@ class o {
     _stream(e) {
         var t;
         let n = (null == (t = this.application) ? void 0 : t.windowHandle) !== e.windowHandle;
-        (this.active = !0),
+        ((this.active = !0),
             (this.application = Object.assign({}, e)),
             n &&
                 this.callback({
                     type: 'stream',
                     sourceId: 'window:'.concat(this.application.windowHandle),
                     sound: this.sound
-                });
+                }));
     }
     _kill() {
-        (this.active = !1), (this.application = null);
+        ((this.active = !1), (this.application = null));
     }
     _stop() {
         this.active && (this._kill(), this.callback({ type: 'stop' }));
@@ -68,6 +68,6 @@ class o {
         this.active && ((this.application.windowHandle = null), this.callback({ type: 'pause' }));
     }
     constructor(e) {
-        i(this, 'callback', void 0), i(this, 'active', void 0), i(this, 'application', void 0), i(this, 'sound', void 0), (this.callback = e), (this.active = !1), (this.application = null), (this.sound = !0);
+        (i(this, 'callback', void 0), i(this, 'active', void 0), i(this, 'application', void 0), i(this, 'sound', void 0), (this.callback = e), (this.active = !1), (this.application = null), (this.sound = !0));
     }
 }

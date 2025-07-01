@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(539854), n(388685);
+(n.d(t, { Z: () => E }), n(539854), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -31,14 +31,14 @@ function E(e) {
     let [R, D] = (0, d.US)(P),
         Z = R === a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         w = r.useCallback(() => {
-            D(p.L.TAKE_ACTION),
+            (D(p.L.TAKE_ACTION),
                 (0, m.$r)({
                     uploadType: h.pC.AVATAR,
                     analyticsSource: N,
                     filters: v ? x : void 0,
                     guildId: C,
                     isTryItOutFlow: v
-                });
+                }));
         }, [C, N, v, D]);
     return (0, i.jsx)(g.Z, {
         className: O,

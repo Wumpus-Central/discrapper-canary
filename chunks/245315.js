@@ -6,23 +6,23 @@ n.d(t, {
 var r = n(367907),
     i = n(368859),
     l = n(626135),
-    a = n(135899),
-    o = n(981631),
-    s = n(943702);
+    s = n(135899),
+    a = n(981631),
+    o = n(943702);
 function c(e) {
-    return ((0, i.Z)(e) && e.messageReference.guild_id === a.M_) || (null != e.author && e.author.id === a.c9);
+    return ((0, i.Z)(e) && e.messageReference.guild_id === s.M_) || (null != e.author && e.author.id === s.c9);
 }
 function u() {
-    return s;
+    return o;
 }
 let d = (e) => {
     l.default.track(
-        o.rMx.USER_FLOW_TRANSITION,
+        a.rMx.USER_FLOW_TRANSITION,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ let d = (e) => {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -38,13 +38,13 @@ let d = (e) => {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })(
             {
-                flow_type: a.tA,
+                flow_type: s.tA,
                 from_step: e.fromStep,
                 to_step: e.toStep
             },

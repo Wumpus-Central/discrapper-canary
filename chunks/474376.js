@@ -1,4 +1,4 @@
-n.d(t, { g: () => j }), n(539854);
+(n.d(t, { g: () => j }), n(539854));
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -83,7 +83,7 @@ function j(e) {
                         });
                     },
                     action: () => {
-                        null == e || e(), d ? (0, b.Z)() : O(s.id);
+                        (null == e || e(), d ? (0, b.Z)() : O(s.id));
                     }
                 },
                 s.id
@@ -98,7 +98,7 @@ function j(e) {
                         id: 'manage-accounts',
                         label: x.intl.string(x.t.WbFpq6),
                         action: () => {
-                            null == e || e(), (0, b.Z)();
+                            (null == e || e(), (0, b.Z)());
                         }
                     })
                 ]

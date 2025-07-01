@@ -1,4 +1,4 @@
-n.d(t, { default: () => p }), n(388685);
+(n.d(t, { default: () => p }), n(388685));
 var r = n(255367),
     a = n(73800),
     c = n(481060),
@@ -10,7 +10,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -18,7 +18,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -26,8 +26,8 @@ function u(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -54,13 +54,13 @@ function p(e) {
         [O, f] = a.useState(t),
         g = a.useCallback(
             (e) => {
-                f((t) => b(u({}, t), { max_age: e })), n(e);
+                (f((t) => b(u({}, t), { max_age: e })), n(e));
             },
             [f, n]
         ),
         y = a.useCallback(
             (e) => {
-                f((t) => b(u({}, t), { max_uses: e })), p(e);
+                (f((t) => b(u({}, t), { max_uses: e })), p(e));
             },
             [f, p]
         );

@@ -36,5 +36,5 @@ let i = function (e, t, r, i, l, s) {
             break;
         }
     }
-    return s.delete(e), s.delete(t), b;
+    return (s.delete(e), s.delete(t), b);
 };

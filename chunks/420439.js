@@ -40,5 +40,5 @@ function u(e) {
             l.lastInitAttemptMayHaveCrashed = !1;
     }
 }
-s(c, 'displayName', 'VoiceFilterPersistedStore'), s(c, 'persistKey', 'VoiceFilterPersistedStore');
+(s(c, 'displayName', 'VoiceFilterPersistedStore'), s(c, 'persistKey', 'VoiceFilterPersistedStore'));
 let d = new c(a.Z, { VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: u });

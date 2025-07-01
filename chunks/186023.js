@@ -1,4 +1,4 @@
-n.d(t, { default: () => g }), n(388685), n(539854);
+(n.d(t, { default: () => g }), n(388685), n(539854));
 var r = n(255367),
     a = n(73800),
     i = n(286379),
@@ -33,7 +33,7 @@ let g = (e) => {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ let g = (e) => {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -49,8 +49,8 @@ let g = (e) => {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -88,7 +88,7 @@ let g = (e) => {
             var r;
             let a = f ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], h),
                 i = null == a || null == (r = a.body) ? void 0 : r.report_id;
-            null != i && w(i), R(j[e.nodeRef].report_type), null == b || b(i);
+            (null != i && w(i), R(j[e.nodeRef].report_type), null == b || b(i));
         },
         L = () => {
             var e, n;
@@ -106,7 +106,7 @@ let g = (e) => {
                     next_node: j[i].id
                 });
             }
-            N(null == a || null == (e = a.multiSelect) ? void 0 : e.state), P(null == a ? void 0 : a.textInput), T(i), E(r), null == x || x('..');
+            (N(null == a || null == (e = a.multiSelect) ? void 0 : e.state), P(null == a ? void 0 : a.textInput), T(i), E(r), null == x || x('..'));
         },
         z = a.useMemo(() => {
             let e = [],

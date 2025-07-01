@@ -23,7 +23,7 @@ function p(e) {
         ),
         b = i.useCallback(
             (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     e.stopPropagation(),
                     (0, o.E6)({
                         guild: t,
@@ -31,7 +31,7 @@ function p(e) {
                         analyticsSection: c.jXE.GUILD_BANNER,
                         analyticsObject: c.qAy.BUTTON_CTA,
                         perks: (0, d.XO)()
-                    });
+                    }));
             },
             [f, t]
         );

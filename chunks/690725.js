@@ -1,4 +1,4 @@
-n.d(t, { f: () => a }), n(415506);
+(n.d(t, { f: () => a }), n(415506));
 var r = n(4646),
     i = n(665672);
 async function a(e) {
@@ -14,6 +14,6 @@ async function a(e) {
             u = new i.Z(l, c);
         a(u.canvas);
         let d = await u.export(o);
-        return r.remove(), d;
+        return (r.remove(), d);
     }
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(997841), n(388685);
+(n.d(t, { Z: () => g }), n(997841), n(388685));
 var r = n(87051),
     i = n(147913),
     a = n(592125),
@@ -27,7 +27,7 @@ let h = +l.Z.Millis.DAY;
 class m extends i.Z {
     checkGuilds() {
         s.ZP.useNewNotifications &&
-            Object.values(o.Z.getGuilds()).forEach((e) => {
+            o.Z.getGuildsArray().forEach((e) => {
                 if (null == e.joinedAt || Date.now() - e.joinedAt.getTime() > h || s.ZP.getMessageNotifications(e.id) === f.bL.ALL_MESSAGES) return;
                 for (let t of Object.values(s.ZP.getChannelOverrides(e.id))) if ((null != t.message_notifications && t.message_notifications !== f.bL.NULL) || (null != t.flags && (0, c.EB)(t.flags, _.ic.UNREADS_ALL_MESSAGES | _.ic.UNREADS_ONLY_MENTIONS))) return;
                 let t = Object.values(a.Z.getMutableBasicGuildChannelsForGuild(e.id)).filter((e) => e.type === f.d4z.GUILD_ANNOUNCEMENT);
@@ -38,11 +38,11 @@ class m extends i.Z {
             });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'actions', {
                 GUILD_CREATE: () => this.checkGuilds(),
                 POST_CONNECTION_OPEN: () => this.checkGuilds()
-            });
+            }));
     }
 }
 let g = new m();

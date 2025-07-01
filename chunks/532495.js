@@ -34,7 +34,7 @@ function D() {
     var e, t, n, r, D, Z, w, k;
     let L = (0, l.e7)([y.default], () => {
             let e = y.default.getCurrentUser();
-            return s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
+            return (s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e);
         }),
         B = (0, l.e7)([T.Z], () => T.Z.getUserProfile(L.id)),
         {
@@ -57,7 +57,7 @@ function D() {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -65,7 +65,7 @@ function D() {
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                (i = n[t]),
+                                ((i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
@@ -73,8 +73,8 @@ function D() {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = i);
-                            });
+                                        : (e[t] = i));
+                            }));
                     }
                     return e;
                 })({}, n)),
@@ -99,18 +99,18 @@ function D() {
             image: M
         }),
         X = (0, c.gS)(),
-        Q = A.ZP.canUsePremiumProfileCustomization(L),
-        J = (0, m.gd)(M, L.avatar),
+        J = A.ZP.canUsePremiumProfileCustomization(L),
+        Q = (0, m.gd)(M, L.avatar),
         $ = (0, m.f$)(V, null == B ? void 0 : B.banner),
         ee = 'DefaultCustomizationSections';
-    (0, o.j)({
+    ((0, o.j)({
         location: ee + ' auto on',
         autoTrackExposure: !0
     }),
         (0, o.j)({
             location: ee + ' auto off',
             autoTrackExposure: !1
-        });
+        }));
     let et = (0, I.ZP)(L.id),
         en = null == et ? void 0 : et.getLegacyUsername(),
         ei = (null != (n = null == (e = K.global_name) ? void 0 : e.length) ? n : 0) > 0 ? K.global_name : null != (r = null == X ? void 0 : X.nick) ? r : [],
@@ -141,7 +141,7 @@ function D() {
                 h.Z,
                 {
                     onAvatarChange: a.I5,
-                    showRemoveAvatarButton: J,
+                    showRemoveAvatarButton: Q,
                     errors: K.avatar,
                     sectionTitle: P.intl.string(P.t.lqaIxM),
                     forcedDivider: !0
@@ -165,7 +165,7 @@ function D() {
                 },
                 'effect'
             ),
-            Q
+            J
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(

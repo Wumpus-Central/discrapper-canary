@@ -25,7 +25,7 @@ t.exports = c(
         var t = y(this),
             r = t.target,
             n = t.index++;
-        if (!r || n >= r.length) return (t.target = null), f(void 0, !0);
+        if (!r || n >= r.length) return ((t.target = null), f(void 0, !0));
         switch (t.kind) {
             case 'keys':
                 return f(n, !1);

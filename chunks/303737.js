@@ -1,58 +1,58 @@
-n.d(t, {
-    GN: () => T,
-    be: () => b,
-    g4: () => g,
-    m7: () => S,
-    r4: () => h,
-    sO: () => C,
-    yL: () => y
+(n.d(t, {
+    GN: () => C,
+    be: () => y,
+    g4: () => b,
+    m7: () => h,
+    r4: () => x,
+    sO: () => O,
+    yL: () => v
 }),
     n(539854),
     n(388685),
     n(993155),
-    n(953529);
+    n(953529));
 var r = n(991637),
     i = n.n(r),
     l = n(399606),
-    o = n(570140),
-    a = n(333848),
-    u = n(592125),
+    a = n(570140),
+    o = n(333848),
+    s = n(592125),
     c = n(923726),
-    s = n(289393),
+    u = n(289393),
     d = n(944537),
     p = n(144507),
-    f = n(853439),
-    E = n(981631),
-    O = n(176505);
+    m = n(853439),
+    f = n(981631),
+    g = n(176505);
 i().shim();
 let _ = {};
-function S(e) {
-    let t = (0, l.e7)([u.Z], () => u.Z.getChannel(e)),
-        n = (0, l.e7)([f.Z], () => f.Z.getChannel(e));
+function h(e) {
+    let t = (0, l.e7)([s.Z], () => s.Z.getChannel(e)),
+        n = (0, l.e7)([m.Z], () => m.Z.getChannel(e));
     return null != t ? t : n;
 }
-function g(e, t, n) {
-    let r = (0, l.e7)([s.Z], () => s.Z.getSubscriptionListingsForGuild(e)),
+function b(e, t, n) {
+    let r = (0, l.e7)([u.Z], () => u.Z.getSubscriptionListingsForGuild(e)),
         i = (0, d.n)((t) => t.editStateIdsForGroup[e]),
-        o = (0, d.n)((e) => e.listings);
+        a = (0, d.n)((e) => e.listings);
     if (void 0 === n || void 0 === t) return null;
-    let a = r.filter((e) => !e.soft_deleted && !e.archived).map((e) => e.subscription_plans[0].price),
-        u = [];
+    let o = r.filter((e) => !e.soft_deleted && !e.archived).map((e) => e.subscription_plans[0].price),
+        s = [];
     void 0 !== i &&
         i.forEach((e) => {
-            let t = o[e],
+            let t = a[e],
                 n = null == t ? void 0 : t.priceTier;
-            null != n && u.push(n);
+            null != n && s.push(n);
         });
-    let c = new Set(u.concat(a));
+    let c = new Set(s.concat(o));
     if (!c.has(n)) return null;
     let p = t.indexOf(n);
     if (-1 === p) return null;
-    let f = [];
-    for (let e = p + 1; e < t.length && (c.has(t[e]) || f.push(t[e]), 3 !== f.length); e++);
-    return f;
+    let m = [];
+    for (let e = p + 1; e < t.length && (c.has(t[e]) || m.push(t[e]), 3 !== m.length); e++);
+    return m;
 }
-function I(e) {
+function E(e) {
     let t = d.n.getState().editStateIdsForGroup[e],
         n = d.n.getState().listings,
         r = new Set();
@@ -62,12 +62,12 @@ function I(e) {
             let i = null == (t = n[e]) ? void 0 : t.channelBenefits;
             null == i ||
                 i.forEach((e) => {
-                    null != f.Z.getChannel(e.ref_id) && r.add(e.ref_id);
+                    null != m.Z.getChannel(e.ref_id) && r.add(e.ref_id);
                 });
         });
     let i = [];
     for (let t of r) {
-        let n = f.Z.getChannel(t);
+        let n = m.Z.getChannel(t);
         if (null != n) {
             let t = n.set('guild_id', e);
             i.push(t);
@@ -75,32 +75,32 @@ function I(e) {
     }
     return i;
 }
-function b(e) {
-    let t = I(e);
-    (_[e] = t),
+function y(e) {
+    let t = E(e);
+    ((_[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', O.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
-            o.Z.dispatch({
+            let t = e.set('flags', g.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
             });
-        });
+        }));
 }
-function T(e) {
+function C(e) {
     var t;
-    (null != (t = _[e]) ? t : I(e)).forEach((e) => {
-        o.Z.dispatch({
+    (null != (t = _[e]) ? t : E(e)).forEach((e) => {
+        a.Z.dispatch({
             type: 'CHANNEL_DELETE',
             channel: e
         });
     });
 }
-async function h(e, t) {
+async function x(e, t) {
     let n = [],
         r = [];
-    t.forEach((t) => {
-        let i = f.Z.getChannel(t.ref_id);
-        null != i && (n.push(a.Z.createRoleSubscriptionTemplateChannel(e, i.name, i.type, i.topic)), r.push(i));
+    (t.forEach((t) => {
+        let i = m.Z.getChannel(t.ref_id);
+        null != i && (n.push(o.Z.createRoleSubscriptionTemplateChannel(e, i.name, i.type, i.topic)), r.push(i));
     }),
         0 !== n.length &&
             (await Promise.allSettled(n)).forEach((n, i) => {
@@ -122,9 +122,9 @@ async function h(e, t) {
                     let e = t.findIndex((e) => e.ref_id === l);
                     -1 !== e && (null == t || t.splice(e, 1));
                 }
-            });
+            }));
 }
-function y(e, t) {
+function v(e, t) {
     var n, r;
     let i = d.n.getState().listings[e],
         l = null == i ? void 0 : i.usedTemplate;
@@ -133,41 +133,41 @@ function y(e, t) {
             templateCategory: null,
             hasChangeFromTemplate: null
         };
-    let o = f.Z.getTemplateWithCategory(t, l);
-    if (null == o)
+    let a = m.Z.getTemplateWithCategory(t, l);
+    if (null == a)
         return {
             templateCategory: null,
             hasChangeFromTemplate: null
         };
-    let a = o.listings[0];
-    if ((null == i ? void 0 : i.name) !== a.name || (null == i ? void 0 : i.description) !== a.description || (null == i ? void 0 : i.priceTier) !== a.price_tier || (null == i ? void 0 : i.image) !== a.image || (null == i ? void 0 : i.roleColor) !== a.role_color || (null == i || null == (n = i.channelBenefits) ? void 0 : n.length) !== a.channels.length || (null == i || null == (r = i.intangibleBenefits) ? void 0 : r.length) !== a.additional_perks.length)
+    let o = a.listings[0];
+    if ((null == i ? void 0 : i.name) !== o.name || (null == i ? void 0 : i.description) !== o.description || (null == i ? void 0 : i.priceTier) !== o.price_tier || (null == i ? void 0 : i.image) !== o.image || (null == i ? void 0 : i.roleColor) !== o.role_color || (null == i || null == (n = i.channelBenefits) ? void 0 : n.length) !== o.channels.length || (null == i || null == (r = i.intangibleBenefits) ? void 0 : r.length) !== o.additional_perks.length)
         return {
-            templateCategory: o.category,
+            templateCategory: a.category,
             hasChangeFromTemplate: !0
         };
-    for (let e = 0; e < a.channels.length; e++) {
+    for (let e = 0; e < o.channels.length; e++) {
         let t = i.channelBenefits[e],
-            n = a.channels[e];
+            n = o.channels[e];
         if (t.name !== n.name || t.description !== n.description || t.emoji_name !== n.emoji_name)
             return {
-                templateCategory: o.category,
+                templateCategory: a.category,
                 hasChangeFromTemplate: !0
             };
     }
-    for (let e = 0; e < a.additional_perks.length; e++) {
+    for (let e = 0; e < o.additional_perks.length; e++) {
         let t = i.intangibleBenefits[e],
-            n = a.additional_perks[e];
+            n = o.additional_perks[e];
         if (t.name !== n.name || t.description !== n.description || t.emoji_name !== n.emoji_name)
             return {
-                templateCategory: o.category,
+                templateCategory: a.category,
                 hasChangeFromTemplate: !0
             };
     }
     return {
-        templateCategory: o.category,
+        templateCategory: a.category,
         hasChangeFromTemplate: !1
     };
 }
-function C(e) {
-    return (0, p.H2)(e) && e.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, c.$F)() && (0, c.hQ)(e.id);
+function O(e) {
+    return (0, p.H2)(e) && e.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, c.$F)() && (0, c.hQ)(e.id);
 }

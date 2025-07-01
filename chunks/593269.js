@@ -1,4 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.FormatBuilder = void 0), (t.bindFormatValuesWithBuilder = l), (t.bindFormatValues = c);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.FormatBuilder = void 0), (t.bindFormatValuesWithBuilder = l), (t.bindFormatValues = c));
 let r = n(927882),
     i = n(628184);
 function a(e) {
@@ -8,7 +8,7 @@ class o {}
 t.FormatBuilder = o;
 class s extends Error {
     constructor(e, t, n) {
-        super(`No value for variable '${e}' was provided for the localized message '${t}'`), (this.variableName = e), (this.originalMessage = t), (this.nodeType = n);
+        (super(`No value for variable '${e}' was provided for the localized message '${t}'`), (this.variableName = e), (this.originalMessage = t), (this.nodeType = n));
     }
 }
 function l(e, t, n, o, u, d = {}, f, _) {
@@ -92,5 +92,5 @@ function l(e, t, n, o, u, d = {}, f, _) {
 }
 function c(e, t, n, r, i, a = {}, o) {
     let s = new e();
-    return 'string' == typeof t ? s.pushLiteralText(t) : l(s, t, n, r, i, a, o), s.finish();
+    return ('string' == typeof t ? s.pushLiteralText(t) : l(s, t, n, r, i, a, o), s.finish());
 }

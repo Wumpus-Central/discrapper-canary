@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     o: () => I,
     t: () => N
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var i = n(73800),
     r = n(392711),
     s = n.n(r),
@@ -33,7 +33,7 @@ function I() {
     return (
         i.useEffect(() => {
             let e = s().throttle(() => t(N()), 100);
-            return T.forEach((t) => t.addChangeListener(e)), () => T.forEach((t) => t.removeChangeListener(e));
+            return (T.forEach((t) => t.addChangeListener(e)), () => T.forEach((t) => t.removeChangeListener(e)));
         }, []),
         e
     );
@@ -55,7 +55,7 @@ function N() {
             a.push(r);
             continue;
         }
-        n.parentId in d || (d[n.parentId] = []), d[n.parentId].push(r);
+        (n.parentId in d || (d[n.parentId] = []), d[n.parentId].push(r));
     }
     function m(n, l) {
         let { isCollapsed: a, isMuted: o } = l;
@@ -100,7 +100,7 @@ function N() {
             getShownChannelAndThreadIds: () => a.map((e) => e.id),
             isEmpty: () => 0 === a.length,
             get channelList() {
-                return null == b && (b = m(a, this)), b;
+                return (null == b && (b = m(a, this)), b);
             }
         },
         I = s()(e)
@@ -126,7 +126,7 @@ function N() {
                     getShownChannelAndThreadIds: () => s.map((e) => e.id),
                     isEmpty: () => 0 === s.length,
                     get channelList() {
-                        return null == c && (c = m(s, this)), c;
+                        return (null == c && (c = m(s, this)), c);
                     }
                 };
             })
@@ -149,7 +149,7 @@ function N() {
         voiceChannelsSectionNumber: -999,
         getSections() {
             let e = [];
-            (e[O.Fq] = 0), (e[O.wZ] = 0), (e[O.p2] = 0), (e[O.PB] = 0), (e[O.wd] = T.channelList.length);
+            ((e[O.Fq] = 0), (e[O.wZ] = 0), (e[O.p2] = 0), (e[O.PB] = 0), (e[O.wd] = T.channelList.length));
             for (let t = 0; t < I.length; t++) e[O.wF + t] = Math.max(1, I[t].channelList.length);
             return e;
         },

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Q8: () => x,
     ZP: () => M
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -40,7 +40,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -56,11 +56,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -137,11 +137,11 @@ function x(e) {
 class k extends i.PureComponent {
     componentDidMount() {
         var e;
-        (0, c.GE)(),
+        ((0, c.GE)(),
             (null != (e = this.props.paymentRequestWallets) ? e : []).length > 0 &&
                 setTimeout(() => {
                     this.considerPaymentRequestWalletsLoaded();
-                }, L);
+                }, L));
     }
     considerPaymentRequestWalletsLoaded() {
         var e;
@@ -223,7 +223,7 @@ class k extends i.PureComponent {
         if (c) g.push(...this.createPaymentButtons(x('ALL').countryPaymentMethods));
         else {
             let { countryPaymentMethods: e, remainingPaymentMethods: t } = x(s);
-            g.push(...this.createPaymentButtons(e)), E.push(...this.createPaymentButtons(t));
+            (g.push(...this.createPaymentButtons(e)), E.push(...this.createPaymentButtons(t)));
         }
         let T = (0, r.jsxs)('div', {
             children: [
@@ -272,12 +272,12 @@ class k extends i.PureComponent {
         );
     }
     constructor(e) {
-        super(e),
+        (super(e),
             (this.state = {
                 showAllPaymentMethods: !1,
                 applePayLoaded: !1,
                 googlePayLoaded: !1
-            });
+            }));
     }
 }
 let M = s.ZP.connectStores([m.Z], () => ({

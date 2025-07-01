@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eP }), n(388685), n(415506), n(781311);
+(n.d(t, { Z: () => eP }), n(388685), n(415506), n(781311));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -76,7 +76,7 @@ function eu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -84,7 +84,7 @@ function eu(e) {
             )),
             r.forEach(function (t) {
                 ec(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -92,11 +92,11 @@ function ed(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -130,9 +130,9 @@ function em(e, t, a, o) {
                     y = null != (E = F.Z.getUploads(o, t.drafts.type)) ? E : [],
                     O = (0, D.q5)(o);
                 if (null == u && !f && !_ && (0, C.CB)(y, o)) {
-                    l(!1),
+                    (l(!1),
                         (0, p.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e('25292'), n.e('90508'), n.e('28467'), n.e('38626'), n.e('40694'), n.e('56179'), n.e('22173'), n.e('21815')]).then(n.bind(n, 273602));
+                            let { default: e } = await Promise.all([n.e('25292'), n.e('90508'), n.e('28467'), n.e('38626'), n.e('40694'), n.e('46653'), n.e('22173'), n.e('99546')]).then(n.bind(n, 273602));
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
@@ -142,7 +142,7 @@ function em(e, t, a, o) {
                                         sendMessage: () => c(i, void 0, void 0, void 0, !0)
                                     })
                                 );
-                        });
+                        }));
                     return;
                 }
                 e({
@@ -158,7 +158,7 @@ function em(e, t, a, o) {
                     let { shouldClear: i, shouldRefocus: s } = e,
                         c = eh(i, t),
                         u = null != a.current;
-                    c && (ep(o) ? h.Z.saveDraft(o, '', t.drafts.type) : u && (null == (r = a.current) || r.clearValue())), u && (l(!1), (0, A._Q)(), s && (null == (n = a.current) || n.focus()));
+                    (c && (ep(o) ? h.Z.saveDraft(o, '', t.drafts.type) : u && (null == (r = a.current) || r.clearValue())), u && (l(!1), (0, A._Q)(), s && (null == (n = a.current) || n.focus())));
                 });
             },
             [a, e, s, t, o]
@@ -179,7 +179,7 @@ function eg(e, t, n) {
     return i.useCallback(
         (r) => {
             var i, a;
-            t === q.Ie.CREATE_FORUM_POST ? null == (a = n.current) || a.insertGIF(r) : e(r.url, void 0, void 0, !0), (0, A._Q)(), null == (i = n.current) || i.focus();
+            (t === q.Ie.CREATE_FORUM_POST ? null == (a = n.current) || a.insertGIF(r) : e(r.url, void 0, void 0, !0), (0, A._Q)(), null == (i = n.current) || i.focus());
         },
         [n, e, t]
     );
@@ -189,13 +189,13 @@ function eE(e) {
         (t) => {
             let { emoji: n, willClose: r } = t,
                 i = e.current;
-            null != n &&
+            (null != n &&
                 null != i &&
                 i.insertEmoji({
                     emoji: n,
                     willClose: r
                 }),
-                r && (0, A._Q)();
+                r && (0, A._Q)());
         },
         [e]
     );
@@ -231,7 +231,7 @@ function ey(e, t) {
     return i.useCallback(
         (n, r, i) => {
             let a = e.current;
-            null != n &&
+            (null != n &&
                 null != a &&
                 (H.default.track(ea.rMx.SOUNDMOJI_SELECT, {
                     channel_id: t.id,
@@ -242,7 +242,7 @@ function ey(e, t) {
                 }),
                 a.insertSound(n)),
                 i && (0, A._Q)(),
-                null == a || a.focus();
+                null == a || a.focus());
         },
         [e, t.id, t.guild_id]
     );
@@ -259,7 +259,7 @@ function eO(e, t) {
             var n;
             !t && (null == (n = e.stickers) ? void 0 : n.allowSending) && (0, A.RO)(es.X1.STICKER, e);
         }, [t, e]);
-    (0, Y.yp)({
+    ((0, Y.yp)({
         event: ea.CkL.TOGGLE_EMOJI_POPOUT,
         handler: n
     }),
@@ -270,7 +270,7 @@ function eO(e, t) {
         (0, Y.yp)({
             event: ea.CkL.TOGGLE_STICKER_PICKER,
             handler: a
-        });
+        }));
 }
 function ev(e, t, n) {
     let [r] = i.useState(() => new s.EventEmitter());
@@ -312,7 +312,7 @@ function eS(e) {
         editorHeight: t,
         handleResize: i.useCallback(
             (t) => {
-                n(null != t ? t : 0), null == e || e(t);
+                (n(null != t ? t : 0), null == e || e(t));
             },
             [e]
         )
@@ -365,7 +365,7 @@ function eN(e, t, n) {
     );
     let s = i.useCallback(
             (e) => {
-                t.emit('autocomplete-visibility-change', e), e && (0, A._Q)();
+                (t.emit('autocomplete-visibility-change', e), e && (0, A._Q)());
             },
             [t]
         ),
@@ -437,7 +437,7 @@ function eR(e, t) {
     let ti = i.useCallback(
         (e, t, n) => {
             var r;
-            t === eo.GI && '' === tr.current && (null == (r = U.commands) ? void 0 : r.enabled) && (null == eF || eF()), null == W || W(e, t, n);
+            (t === eo.GI && '' === tr.current && (null == (r = U.commands) ? void 0 : r.enabled) && (null == eF || eF()), null == W || W(e, t, n));
         },
         [W, eF, null == (a = U.commands) ? void 0 : a.enabled]
     );

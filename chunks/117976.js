@@ -35,7 +35,7 @@ var h = {
                 return r;
             })(t, ['bgColor', 'fgColor', 'level', 'size', 'value']),
             c = new n.default(-1, i.default[u]);
-        c.addData(h), c.make();
+        (c.addData(h), c.make());
         var d = c.modules;
         return s.default.createElement(
             l.default,
@@ -66,7 +66,7 @@ var h = {
             })
         );
     });
-(g.displayName = 'QRCode'),
+((g.displayName = 'QRCode'),
     (g.propTypes = h),
     (g.defaultProps = {
         bgColor: '#FFFFFF',
@@ -74,4 +74,4 @@ var h = {
         level: 'L',
         size: 256
     }),
-    (e.default = g);
+    (e.default = g));

@@ -88,7 +88,7 @@ var r = n(73800),
                         return (
                             (m.current = i),
                             function () {
-                                i.destroy(), (m.current = null);
+                                (i.destroy(), (m.current = null));
                             }
                         );
                     }

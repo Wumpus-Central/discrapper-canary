@@ -25,7 +25,7 @@ class c extends a.h {
         function r(e) {
             return Math.ceil(e / 1024);
         }
-        (null == (t = performance.memory) ? void 0 : t.usedJSHeapSize) == null && l.error('usedJSHeapSize is not available.'),
+        ((null == (t = performance.memory) ? void 0 : t.usedJSHeapSize) == null && l.error('usedJSHeapSize is not available.'),
             setInterval(() => {
                 var e, t, i;
                 let a = null != (t = null == (e = performance.memory) ? void 0 : e.usedJSHeapSize) ? t : 0;
@@ -33,7 +33,7 @@ class c extends a.h {
                     memoryUsageKB: null != (i = this.lastMemoryUsageKB) ? i : 0,
                     usedJSHeapSizeKB: r(a)
                 });
-            }, 10000);
+            }, 10000));
     }
     getProcessUptime() {
         var e, t;
@@ -49,7 +49,7 @@ class c extends a.h {
     }
     getCurrentMemoryUsageKB() {
         let e = c.getCurrentMemoryUsageKBCore();
-        return (this.lastMemoryUsageKB = e), e;
+        return ((this.lastMemoryUsageKB = e), e);
     }
     static getCurrentMemoryUsageKBCore() {
         try {
@@ -84,7 +84,7 @@ class c extends a.h {
     }
     constructor() {
         var e, t;
-        super(), s(this, 'lastMemoryUsageKB', void 0), (this.cpuCoreCount = null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getCPUCoreCount) ? void 0 : e.call(t)), this.setupReportingTimer();
+        (super(), s(this, 'lastMemoryUsageKB', void 0), (this.cpuCoreCount = null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getCPUCoreCount) ? void 0 : e.call(t)), this.setupReportingTimer());
     }
 }
 let u = new c();

@@ -516,11 +516,11 @@ function tv(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -585,9 +585,9 @@ var tC = function (e, t) {
                     for (;;)
                         switch ((e.prev = e.next)) {
                             case 0:
-                                return (n = a.length > 1 && void 0 !== a[1] ? a[1] : {}), (r = tk(t, l()(ty)) || tm), (e.next = 4), ty[r]();
+                                return ((n = a.length > 1 && void 0 !== a[1] ? a[1] : {}), (r = tk(t, l()(ty)) || tm), (e.next = 4), ty[r]());
                             case 4:
-                                return (o = e.sent), e.abrupt('return', tg(tg(tg({}, th), o.default), !!n[t] && n[t]));
+                                return ((o = e.sent), e.abrupt('return', tg(tg(tg({}, th), o.default), !!n[t] && n[t])));
                             case 6:
                             case 'end':
                                 return e.stop();
@@ -650,11 +650,11 @@ function tx(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -683,11 +683,11 @@ function tR(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -698,7 +698,7 @@ var tF = (function () {
                 r = this,
                 o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tm,
                 a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            (0, C.Z)(this, e), (0, w.Z)(this, 'supportedLocales', void 0), (0, w.Z)(this, 'locale', void 0), (0, w.Z)(this, 'languageCode', void 0), (0, w.Z)(this, 'translations', th), (0, w.Z)(this, 'customTranslations', void 0), (0, w.Z)(this, 'loaded', void 0);
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'supportedLocales', void 0), (0, w.Z)(this, 'locale', void 0), (0, w.Z)(this, 'languageCode', void 0), (0, w.Z)(this, 'translations', th), (0, w.Z)(this, 'customTranslations', void 0), (0, w.Z)(this, 'loaded', void 0));
             var i = l()(ty);
             this.customTranslations = (function () {
                 var e,
@@ -708,22 +708,22 @@ var tF = (function () {
                     e,
                     function (e, r) {
                         var o = t_(r) || tk(r, n);
-                        return o && (e[o] = t[r]), e;
+                        return (o && (e[o] = t[r]), e);
                     },
                     {}
                 );
             })(a, i);
             var s = l()(this.customTranslations);
-            (this.supportedLocales = P()((t = I()((n = [])).call(n, (0, H.Z)(i), (0, H.Z)(s)))).call(t, function (e, t, n) {
+            ((this.supportedLocales = P()((t = I()((n = [])).call(n, (0, H.Z)(i), (0, H.Z)(s)))).call(t, function (e, t, n) {
                 return z()(n).call(n, e) === t;
             })),
-                (this.locale = t_(o) || tk(o, this.supportedLocales) || tm);
+                (this.locale = t_(o) || tk(o, this.supportedLocales) || tm));
             var c = this.locale.split('-'),
                 u = (0, q.Z)(c, 1)[0];
-            (this.languageCode = u),
+            ((this.languageCode = u),
                 (this.loaded = tZ(this.locale, this.customTranslations).then(function (e) {
                     r.translations = e;
-                }));
+                })));
         }
         return (
             (0, Z.Z)(e, [
@@ -819,10 +819,10 @@ var tF = (function () {
     },
     tE = (0, Z.Z)(function e() {
         var t = this;
-        (0, C.Z)(this, e),
+        ((0, C.Z)(this, e),
             (0, w.Z)(this, 'events', {}),
             (0, w.Z)(this, 'on', function (e, n) {
-                (t.events[e] = t.events[e] || []), t.events[e].push(n);
+                ((t.events[e] = t.events[e] || []), t.events[e].push(n));
             }),
             (0, w.Z)(this, 'off', function (e, n) {
                 var r;
@@ -830,7 +830,7 @@ var tF = (function () {
                     (t.events[e] = Y()((r = t.events[e])).call(
                         r,
                         function (e, t) {
-                            return t !== n && e.push(t), e;
+                            return (t !== n && e.push(t), e);
                         },
                         []
                     ));
@@ -841,7 +841,7 @@ var tF = (function () {
                     N()((r = t.events[e])).call(r, function (e) {
                         e(n);
                     });
-            });
+            }));
     });
 function tI() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (e) {
@@ -853,11 +853,11 @@ function tM(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -881,7 +881,7 @@ function tB(e) {
 var tT = (function () {
     function e(t) {
         var n;
-        (0, C.Z)(this, e), (0, w.Z)(this, '_id', I()((n = ''.concat(this.constructor.type, '-'))).call(n, tI())), (0, w.Z)(this, 'props', void 0), (0, w.Z)(this, 'state', void 0), (0, w.Z)(this, '_node', void 0), (0, w.Z)(this, '_component', void 0), (0, w.Z)(this, 'eventEmitter', new tE()), (0, w.Z)(this, '_parentInstance', void 0), (0, w.Z)(this, 'resources', void 0), (this.props = this.formatProps(tB(tB({}, this.constructor.defaultProps), {}, { setStatusAutomatically: !0 }, t))), (this._parentInstance = this.props._parentInstance), (this._node = null), (this.state = {}), (this.resources = this.props.modules ? this.props.modules.resources : void 0);
+        ((0, C.Z)(this, e), (0, w.Z)(this, '_id', I()((n = ''.concat(this.constructor.type, '-'))).call(n, tI())), (0, w.Z)(this, 'props', void 0), (0, w.Z)(this, 'state', void 0), (0, w.Z)(this, '_node', void 0), (0, w.Z)(this, '_component', void 0), (0, w.Z)(this, 'eventEmitter', new tE()), (0, w.Z)(this, '_parentInstance', void 0), (0, w.Z)(this, 'resources', void 0), (this.props = this.formatProps(tB(tB({}, this.constructor.defaultProps), {}, { setStatusAutomatically: !0 }, t))), (this._parentInstance = this.props._parentInstance), (this._node = null), (this.state = {}), (this.resources = this.props.modules ? this.props.modules.resources : void 0));
     }
     return (
         (0, Z.Z)(e, [
@@ -964,7 +964,7 @@ var tT = (function () {
             {
                 key: 'update',
                 value: function (e) {
-                    return (this.props = this.formatProps(tB(tB({}, this.props), e))), (this.state = {}), this.unmount().mount(this._node);
+                    return ((this.props = this.formatProps(tB(tB({}, this.props), e))), (this.state = {}), this.unmount().mount(this._node));
                 }
             },
             {
@@ -972,19 +972,19 @@ var tT = (function () {
                 value: function (e) {
                     if (!this._node) throw Error('Component is not mounted.');
                     var t = e || this.render();
-                    return (0, ec.sY)(t, this._node, null), this;
+                    return ((0, ec.sY)(t, this._node, null), this);
                 }
             },
             {
                 key: 'unmount',
                 value: function () {
-                    return this._node && (0, ec.sY)(null, this._node), this;
+                    return (this._node && (0, ec.sY)(null, this._node), this);
                 }
             },
             {
                 key: 'remove',
                 value: function () {
-                    this.unmount(), this._parentInstance && this._parentInstance.remove(this);
+                    (this.unmount(), this._parentInstance && this._parentInstance.remove(this));
                 }
             }
         ]),
@@ -1018,17 +1018,17 @@ var tD,
     t$ = ec.YM.__c,
     tQ = ec.YM.unmount;
 function tJ(e, t) {
-    ec.YM.__h && ec.YM.__h(tV, e, tH || t), (tH = 0);
+    (ec.YM.__h && ec.YM.__h(tV, e, tH || t), (tH = 0));
     var n =
         tV.__H ||
         (tV.__H = {
             __: [],
             __h: []
         });
-    return e >= n.__.length && n.__.push({ __V: tz }), n.__[e];
+    return (e >= n.__.length && n.__.push({ __V: tz }), n.__[e]);
 }
 function tX(e) {
-    return (tH = 1), t0(nn, e);
+    return ((tH = 1), t0(nn, e));
 }
 function t0(e, t, n) {
     var r = tJ(tL++, 2);
@@ -1062,7 +1062,7 @@ function t0(e, t, n) {
                 o.forEach(function (e) {
                     if (e.__N) {
                         var t = e.__[0];
-                        (e.__ = e.__N), (e.__N = void 0), t !== e.__[0] && (i = !0);
+                        ((e.__ = e.__N), (e.__N = void 0), t !== e.__[0] && (i = !0));
                     }
                 }),
                 !(!i && r.__c.props === e) && (!a || a.call(this, e, t, n))
@@ -1071,14 +1071,14 @@ function t0(e, t, n) {
         tV.u = !0;
         var a = tV.shouldComponentUpdate,
             i = tV.componentWillUpdate;
-        (tV.componentWillUpdate = function (e, t, n) {
+        ((tV.componentWillUpdate = function (e, t, n) {
             if (this.__e) {
                 var r = a;
-                (a = void 0), o(e, t, n), (a = r);
+                ((a = void 0), o(e, t, n), (a = r));
             }
             i && i.call(this, e, t, n);
         }),
-            (tV.shouldComponentUpdate = o);
+            (tV.shouldComponentUpdate = o));
     }
     return r.__N || r.__;
 }
@@ -1113,37 +1113,37 @@ function t8(e, t) {
 function t4(e) {
     var t = tV.context[e.__c],
         n = tJ(tL++, 9);
-    return (n.c = e), t ? (null == n.__ && ((n.__ = !0), t.sub(tV)), t.props.value) : e.__;
+    return ((n.c = e), t ? (null == n.__ && ((n.__ = !0), t.sub(tV)), t.props.value) : e.__);
 }
 function t3() {
     for (var e; (e = tK.shift()); )
         if (e.__P && e.__H)
             try {
-                e.__H.__h.forEach(t7), e.__H.__h.forEach(ne), (e.__H.__h = []);
+                (e.__H.__h.forEach(t7), e.__H.__h.forEach(ne), (e.__H.__h = []));
             } catch (t) {
-                (e.__H.__h = []), ec.YM.__e(t, e.__v);
+                ((e.__H.__h = []), ec.YM.__e(t, e.__v));
             }
 }
-(ec.YM.__b = function (e) {
-    (tV = null), tW && tW(e);
+((ec.YM.__b = function (e) {
+    ((tV = null), tW && tW(e));
 }),
     (ec.YM.__r = function (e) {
-        tY && tY(e), (tL = 0);
+        (tY && tY(e), (tL = 0));
         var t = (tV = e.__c).__H;
-        t &&
+        (t &&
             (tj === tV
                 ? ((t.__h = []),
                   (tV.__h = []),
                   t.__.forEach(function (e) {
-                      e.__N && (e.__ = e.__N), (e.__V = tz), (e.__N = e.i = void 0);
+                      (e.__N && (e.__ = e.__N), (e.__V = tz), (e.__N = e.i = void 0));
                   }))
                 : (t.__h.forEach(t7), t.__h.forEach(ne), (t.__h = []))),
-            (tj = tV);
+            (tj = tV));
     }),
     (ec.YM.diffed = function (e) {
         tG && tG(e);
         var t = e.__c;
-        t &&
+        (t &&
             t.__H &&
             (t.__H.__h.length &&
                 ((1 !== tK.push(t) && tU === ec.YM.requestAnimationFrame) ||
@@ -1152,33 +1152,33 @@ function t3() {
                         function (e) {
                             var t,
                                 n = function () {
-                                    clearTimeout(r), t6 && cancelAnimationFrame(t), setTimeout(e);
+                                    (clearTimeout(r), t6 && cancelAnimationFrame(t), setTimeout(e));
                                 },
                                 r = setTimeout(n, 100);
                             t6 && (t = requestAnimationFrame(n));
                         }
                     )(t3)),
             t.__H.__.forEach(function (e) {
-                e.i && (e.__H = e.i), e.__V !== tz && (e.__ = e.__V), (e.i = void 0), (e.__V = tz);
+                (e.i && (e.__H = e.i), e.__V !== tz && (e.__ = e.__V), (e.i = void 0), (e.__V = tz));
             })),
-            (tj = tV = null);
+            (tj = tV = null));
     }),
     (ec.YM.__c = function (e, t) {
-        t.some(function (e) {
+        (t.some(function (e) {
             try {
-                e.__h.forEach(t7),
+                (e.__h.forEach(t7),
                     (e.__h = e.__h.filter(function (e) {
                         return !e.__ || ne(e);
-                    }));
+                    })));
             } catch (n) {
-                t.some(function (e) {
+                (t.some(function (e) {
                     e.__h && (e.__h = []);
                 }),
                     (t = []),
-                    ec.YM.__e(n, e.__v);
+                    ec.YM.__e(n, e.__v));
             }
         }),
-            t$ && t$(e, t);
+            t$ && t$(e, t));
     }),
     (ec.YM.unmount = function (e) {
         tQ && tQ(e);
@@ -1195,16 +1195,16 @@ function t3() {
             }),
             (n.__H = void 0),
             t && ec.YM.__e(t, n.__v));
-    });
+    }));
 var t6 = 'function' == typeof requestAnimationFrame;
 function t7(e) {
     var t = tV,
         n = e.__c;
-    'function' == typeof n && ((e.__c = void 0), n()), (tV = t);
+    ('function' == typeof n && ((e.__c = void 0), n()), (tV = t));
 }
 function ne(e) {
     var t = tV;
-    (e.__c = e.__()), (tV = t);
+    ((e.__c = e.__()), (tV = t));
 }
 function nt(e, t) {
     return (
@@ -1224,11 +1224,11 @@ function na(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1253,7 +1253,7 @@ var ns = (function () {
         function e() {
             var t = this,
                 n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : nr;
-            (0, C.Z)(this, e),
+            ((0, C.Z)(this, e),
                 (0, w.Z)(this, 'resourceContext', void 0),
                 (0, w.Z)(this, 'returnImage', function (e) {
                     var t,
@@ -1291,7 +1291,7 @@ var ns = (function () {
                         return t.returnImage(n);
                     };
                 }),
-                (this.resourceContext = n);
+                (this.resourceContext = n));
         }
         return (
             (0, Z.Z)(e, [
@@ -1323,7 +1323,7 @@ var nu = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -1344,14 +1344,14 @@ var nu = (function (e) {
         return (
             (t = n.call.apply(n, I()((e = [this])).call(e, a))),
             (0, w.Z)((0, eo.Z)(t), 'onClick', function (e) {
-                e.preventDefault(), t.props.disabled || t.props.onClick(e, { complete: t.complete });
+                (e.preventDefault(), t.props.disabled || t.props.onClick(e, { complete: t.complete }));
             }),
             (0, w.Z)((0, eo.Z)(t), 'complete', function () {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1000;
-                t.setState({ completed: !0 }),
+                (t.setState({ completed: !0 }),
                     eu()(function () {
                         t.setState({ completed: !1 });
-                    }, e);
+                    }, e));
             }),
             t
         );
@@ -1489,7 +1489,7 @@ var nd = function (e, t) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -1505,7 +1505,7 @@ var nd = function (e, t) {
                 });
         function r(e, t, o) {
             var a;
-            return (0, C.Z)(this, r), (a = n.call(this, t)), (0, w.Z)((0, eo.Z)(a), 'cause', void 0), (a.name = r.errorTypes[e]), (a.cause = null == o ? void 0 : o.cause), a;
+            return ((0, C.Z)(this, r), (a = n.call(this, t)), (0, w.Z)((0, eo.Z)(a), 'cause', void 0), (a.name = r.errorTypes[e]), (a.cause = null == o ? void 0 : o.cause), a);
         }
         return (0, Z.Z)(r);
     })((0, eh.Z)(Error));
@@ -1518,11 +1518,11 @@ function nb(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1557,7 +1557,7 @@ var nk = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -1579,13 +1579,13 @@ var nk = (function (e) {
                 (0, w.Z)((0, eo.Z)(p), 'componentRef', void 0),
                 (0, w.Z)((0, eo.Z)(p), 'elementRef', void 0),
                 (0, w.Z)((0, eo.Z)(p), 'handleError', function (e) {
-                    p.setElementStatus('ready'), p.props.onError && p.props.onError(e, p.elementRef);
+                    (p.setElementStatus('ready'), p.props.onError && p.props.onError(e, p.elementRef));
                 }),
                 (0, w.Z)((0, eo.Z)(p), 'handleAdditionalDetails', function (e) {
-                    return p.props.onAdditionalDetails ? p.props.onAdditionalDetails(e, p.elementRef) : p.props.session && p.submitAdditionalDetails(e.data), e;
+                    return (p.props.onAdditionalDetails ? p.props.onAdditionalDetails(e, p.elementRef) : p.props.session && p.submitAdditionalDetails(e.data), e);
                 }),
                 (0, w.Z)((0, eo.Z)(p), 'handleOrder', function (e) {
-                    p.updateParent({ order: e.order }), p.props.onPaymentCompleted && p.props.onPaymentCompleted(e, p.elementRef);
+                    (p.updateParent({ order: e.order }), p.props.onPaymentCompleted && p.props.onPaymentCompleted(e, p.elementRef));
                 }),
                 (0, w.Z)((0, eo.Z)(p), 'handleFinalResult', function (e) {
                     if (p.props.setStatusAutomatically) {
@@ -1606,7 +1606,7 @@ var nk = (function (e) {
                             o = n[1];
                         r && p.setElementStatus(r, o);
                     }
-                    return p.props.onPaymentCompleted && p.props.onPaymentCompleted(e, p.elementRef), e;
+                    return (p.props.onPaymentCompleted && p.props.onPaymentCompleted(e, p.elementRef), e);
                 }),
                 (0, w.Z)((0, eo.Z)(p), 'setComponentRef', function (e) {
                     p.componentRef = e;
@@ -1639,7 +1639,7 @@ var nk = (function (e) {
                 {
                     key: 'setState',
                     value: function (e) {
-                        (this.state = n_(n_({}, this.state), e)), this.onChange();
+                        ((this.state = n_(n_({}, this.state), e)), this.onChange());
                     }
                 },
                 {
@@ -1652,14 +1652,14 @@ var nk = (function (e) {
                                 valid: this.state.valid,
                                 isValid: e
                             };
-                        return this.props.onChange && this.props.onChange(t, this.elementRef), e && this.onValid(), t;
+                        return (this.props.onChange && this.props.onChange(t, this.elementRef), e && this.onValid(), t);
                     }
                 },
                 {
                     key: 'onSubmit',
                     value: function () {
                         var e = this;
-                        this.props.isInstantPayment && this.elementRef.closeActivePaymentMethod(),
+                        (this.props.isInstantPayment && this.elementRef.closeActivePaymentMethod(),
                             (this.props.setStatusAutomatically && this.setElementStatus('loading'), this.props.onSubmit)
                                 ? this.props.onSubmit(
                                       {
@@ -1684,14 +1684,14 @@ var nk = (function (e) {
                                         .catch(function () {
                                             e.elementRef.setStatus('ready');
                                         })
-                                  : this.handleError(new nv('IMPLEMENTATION_ERROR', 'Could not submit the payment'));
+                                  : this.handleError(new nv('IMPLEMENTATION_ERROR', 'Could not submit the payment')));
                     }
                 },
                 {
                     key: 'onValid',
                     value: function () {
                         var e = { data: this.data };
-                        return this.props.onValid && this.props.onValid(e, this.elementRef), e;
+                        return (this.props.onValid && this.props.onValid(e, this.elementRef), e);
                     }
                 },
                 {
@@ -1709,21 +1709,21 @@ var nk = (function (e) {
                 {
                     key: 'showValidation',
                     value: function () {
-                        return this.componentRef && this.componentRef.showValidation && this.componentRef.showValidation(), this;
+                        return (this.componentRef && this.componentRef.showValidation && this.componentRef.showValidation(), this);
                     }
                 },
                 {
                     key: 'setElementStatus',
                     value: function (e, t) {
                         var n;
-                        return null == (n = this.elementRef) || n.setStatus(e, t), this;
+                        return (null == (n = this.elementRef) || n.setStatus(e, t), this);
                     }
                 },
                 {
                     key: 'setStatus',
                     value: function (e, t) {
                         var n;
-                        return null != (n = this.componentRef) && n.setStatus && this.componentRef.setStatus(e, t), this;
+                        return (null != (n = this.componentRef) && n.setStatus && this.componentRef.setStatus(e, t), this);
                     }
                 },
                 {
@@ -1768,7 +1768,7 @@ var nk = (function (e) {
                                 (r = Y()((t = l()(e))).call(
                                     t,
                                     function (t, r) {
-                                        return O()(ny).call(ny, r) ? (t[r] = e[r]) : n.push(r), t;
+                                        return (O()(ny).call(ny, r) ? (t[r] = e[r]) : n.push(r), t);
                                     },
                                     {}
                                 )),
@@ -1827,7 +1827,7 @@ var nk = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -1845,7 +1845,7 @@ var nk = (function (e) {
             var e, t;
             (0, C.Z)(this, r);
             for (var o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-            return (t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'iframeEl', void 0), t;
+            return ((t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'iframeEl', void 0), t);
         }
         return (
             (0, Z.Z)(r, [
@@ -1930,16 +1930,16 @@ var nZ = function (e, t, n) {
         var r;
         return {
             promise: new (B())(function (o, a) {
-                (r = eu()(function () {
+                ((r = eu()(function () {
                     a(n);
                 }, e)),
                     t
                         .then(function (e) {
-                            clearTimeout(r), o(e);
+                            (clearTimeout(r), o(e));
                         })
                         .catch(function (e) {
-                            clearTimeout(r), a(e);
-                        });
+                            (clearTimeout(r), a(e));
+                        }));
             }),
             cancel: function () {
                 clearTimeout(r);
@@ -1972,7 +1972,7 @@ var nZ = function (e, t, n) {
                 if (!ng(a, 'type') || a.type !== r) return 'Event data was not of expected type';
                 t(a);
             } catch (e) {
-                return (o.type = ''.concat(r, '-JSON-parse-error')), (o.comment = 'failed to JSON parse event.data'), (o.extraInfo = 'event.data = '.concat(n.data)), (o.eventDataRaw = n.data), console.debug('get-process-message-handler::CATCH::Un-parseable JSON:: parseErrorObj=', o), !1;
+                return ((o.type = ''.concat(r, '-JSON-parse-error')), (o.comment = 'failed to JSON parse event.data'), (o.extraInfo = 'event.data = '.concat(n.data)), (o.eventDataRaw = n.data), console.debug('get-process-message-handler::CATCH::Un-parseable JSON:: parseErrorObj=', o), !1);
             }
             return !0;
         };
@@ -1998,7 +1998,7 @@ var nZ = function (e, t, n) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -2014,7 +2014,7 @@ var nZ = function (e, t, n) {
                 });
         function r(e) {
             var t;
-            return (0, C.Z)(this, r), (t = n.call(this, e)), (0, w.Z)((0, eo.Z)(t), 'postMessageDomain', void 0), (0, w.Z)((0, eo.Z)(t), 'processMessageHandler', void 0), (0, w.Z)((0, eo.Z)(t), 'deviceFingerPrintPromise', void 0), (t.postMessageDomain = nP(t.props.loadingContext) || t.props.loadingContext), t;
+            return ((0, C.Z)(this, r), (t = n.call(this, e)), (0, w.Z)((0, eo.Z)(t), 'postMessageDomain', void 0), (0, w.Z)((0, eo.Z)(t), 'processMessageHandler', void 0), (0, w.Z)((0, eo.Z)(t), 'deviceFingerPrintPromise', void 0), (t.postMessageDomain = nP(t.props.loadingContext) || t.props.loadingContext), t);
         }
         return (
             (0, Z.Z)(r, [
@@ -2023,7 +2023,7 @@ var nZ = function (e, t, n) {
                     value: function () {
                         var e = this;
                         return new (B())(function (t, n) {
-                            (e.processMessageHandler = nx(e.postMessageDomain, t, 0, nw)), window.addEventListener('message', e.processMessageHandler);
+                            ((e.processMessageHandler = nx(e.postMessageDomain, t, 0, nw)), window.addEventListener('message', e.processMessageHandler));
                         });
                     }
                 },
@@ -2031,14 +2031,14 @@ var nZ = function (e, t, n) {
                     key: 'componentDidMount',
                     value: function () {
                         var e = this;
-                        (this.deviceFingerPrintPromise = nZ(20000, this.getDfpPromise(), nS)),
+                        ((this.deviceFingerPrintPromise = nZ(20000, this.getDfpPromise(), nS)),
                             this.deviceFingerPrintPromise.promise
                                 .then(function (t) {
-                                    e.props.onCompleteFingerprint(t), window.removeEventListener('message', e.processMessageHandler);
+                                    (e.props.onCompleteFingerprint(t), window.removeEventListener('message', e.processMessageHandler));
                                 })
                                 .catch(function (t) {
-                                    e.props.onErrorFingerprint(t), window.removeEventListener('message', e.processMessageHandler);
-                                });
+                                    (e.props.onErrorFingerprint(t), window.removeEventListener('message', e.processMessageHandler));
+                                }));
                     }
                 },
                 {
@@ -2069,7 +2069,7 @@ var nZ = function (e, t, n) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -2132,12 +2132,12 @@ var nZ = function (e, t, n) {
                                       },
                                       onErrorFingerprint: function (e) {
                                           var t;
-                                          n.props.onError({
+                                          (n.props.onError({
                                               errorCode: (t = e.errorCode),
                                               message: nN[t] || nN.unknownError,
                                               type: nw
                                           }),
-                                              n.setStatusComplete(e.result);
+                                              n.setStatusComplete(e.result));
                                       }
                                   })
                               )
@@ -2178,11 +2178,11 @@ function nO(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2211,7 +2211,7 @@ var nI = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -2226,28 +2226,28 @@ var nI = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r(e) {
-        (0, C.Z)(this, r),
+        ((0, C.Z)(this, r),
             (t = n.call(this, e)),
             (0, w.Z)((0, eo.Z)(t), 'nodeRiskContainer', null),
             (0, w.Z)((0, eo.Z)(t), 'onComplete', function (e) {
                 var n,
                     r = nE(nE({}, t.state.data), {}, ((0, w.Z)((n = {}), e.type, e.value), (0, w.Z)(n, 'persistentCookie', e.persistentCookie), (0, w.Z)(n, 'components', e.components), n));
-                t.setState({
+                (t.setState({
                     data: r,
                     isValid: !0
                 }),
                     t.props.risk.onComplete(t.data),
-                    t.cleanUp();
+                    t.cleanUp());
             }),
             (0, w.Z)((0, eo.Z)(t), 'onError', function (e) {
-                t.props.risk.onError(e), t.cleanUp();
+                (t.props.risk.onError(e), t.cleanUp());
             }),
             (0, w.Z)((0, eo.Z)(t), 'cleanUp', function () {
                 t.nodeRiskContainer && t.nodeRiskContainer.parentNode && t.nodeRiskContainer.parentNode.removeChild(t.nodeRiskContainer);
-            });
+            }));
         var t,
             o = (0, w.Z)({}, nw, null);
-        return t.setState({ data: o }), !0 === t.props.risk.enabled && (document.querySelector(t.props.risk.node) ? ((t.nodeRiskContainer = document.createElement('div')), document.querySelector(t.props.risk.node).appendChild(t.nodeRiskContainer), t.mount(t.nodeRiskContainer)) : t.onError({ message: 'RiskModule node was not found' })), t;
+        return (t.setState({ data: o }), !0 === t.props.risk.enabled && (document.querySelector(t.props.risk.node) ? ((t.nodeRiskContainer = document.createElement('div')), document.querySelector(t.props.risk.node).appendChild(t.nodeRiskContainer), t.mount(t.nodeRiskContainer)) : t.onError({ message: 'RiskModule node was not found' })), t);
     }
     return (
         (0, Z.Z)(r, [
@@ -2329,7 +2329,7 @@ function nB() {
         return null == e ? void 0 : e.getImage(t);
     }, []);
 }
-(0, w.Z)(nI, 'type', 'risk'),
+((0, w.Z)(nI, 'type', 'risk'),
     (0, w.Z)(nI, 'defaultProps', {
         risk: {
             enabled: !0,
@@ -2337,7 +2337,7 @@ function nB() {
             onError: function () {},
             node: 'body'
         }
-    });
+    }));
 var nT = function (e) {
         var t,
             n = e.type,
@@ -2411,17 +2411,17 @@ var nX,
     ry = e_()(),
     rv = function () {
         var e;
-        return (ry += 1), I()((e = ''.concat(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'field', '-'))).call(e, ry);
+        return ((ry += 1), I()((e = ''.concat(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'field', '-'))).call(e, ry));
     };
 function rg(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2478,16 +2478,16 @@ var r_ = function (e) {
         E = (0, q.Z)(O, 2),
         M = E[0],
         B = E[1];
-    null != C && F(!!C), null != k && B(!!k);
+    (null != C && F(!!C), null != k && B(!!k));
     var T = t8(
             function (e) {
-                F(!0), null == y || y(e);
+                (F(!0), null == y || y(e));
             },
             [y]
         ),
         D = t8(
             function (e) {
-                F(!1), null == f || f(e), null == m || m(e);
+                (F(!1), null == f || f(e), null == m || m(e));
             },
             [f, m]
         ),
@@ -2698,11 +2698,11 @@ function rx(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2731,7 +2731,7 @@ var rA = function (e) {
     rR = (function () {
         function e(t, n, r, o) {
             var a;
-            (0, C.Z)(this, e), (0, w.Z)(this, 'shouldValidate', void 0), (0, w.Z)(this, 'isValid', void 0), (0, w.Z)(this, 'errorMessage', void 0), (this.shouldValidate = O()((a = t.modes)).call(a, r)), (this.isValid = t.validate(n, o)), (this.errorMessage = t.errorMessage);
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'shouldValidate', void 0), (0, w.Z)(this, 'isValid', void 0), (0, w.Z)(this, 'errorMessage', void 0), (this.shouldValidate = O()((a = t.modes)).call(a, r)), (this.isValid = t.validate(n, o)), (this.errorMessage = t.errorMessage));
         }
         return (
             (0, Z.Z)(e, [
@@ -2749,11 +2749,11 @@ function rF(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2776,7 +2776,7 @@ function rO(e) {
 }
 var rE = (function () {
         function e(t) {
-            (0, C.Z)(this, e), (0, w.Z)(this, 'validationResults', void 0), (this.validationResults = t);
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'validationResults', void 0), (this.validationResults = t));
         }
         return (
             (0, Z.Z)(e, [
@@ -2825,7 +2825,7 @@ var rE = (function () {
     })(),
     rI = (function () {
         function e(t) {
-            (0, C.Z)(this, e),
+            ((0, C.Z)(this, e),
                 (0, w.Z)(this, 'rules', {
                     default: {
                         validate: function () {
@@ -2834,7 +2834,7 @@ var rE = (function () {
                         modes: ['blur', 'input']
                     }
                 }),
-                this.setRules(t);
+                this.setRules(t));
         }
         return (
             (0, Z.Z)(e, [
@@ -2849,7 +2849,7 @@ var rE = (function () {
                     value: function (e) {
                         var t,
                             n = null != (t = this.rules[e]) ? t : this.rules.default;
-                        return ew()(n) || (n = [n]), n;
+                        return (ew()(n) || (n = [n]), n);
                     }
                 },
                 {
@@ -2875,11 +2875,11 @@ function rM(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2909,7 +2909,7 @@ var rT = function (e, t) {
         ).call(
             n,
             function (t, n) {
-                return (t[n] = e[n]), t;
+                return ((t[n] = e[n]), t);
             },
             {}
         );
@@ -3312,13 +3312,13 @@ function rq(e) {
         p = r.disabled,
         h = r.className,
         f = t5(null);
-    t1(
+    (t1(
         function () {
             null == n || n(f.current);
         },
         [f.current, n]
     ),
-        Object.prototype.hasOwnProperty.call(r, 'onChange') && console.error('Error: Form fields that rely on InputBase may not have an onChange property');
+        Object.prototype.hasOwnProperty.call(r, 'onChange') && console.error('Error: Form fields that rely on InputBase may not have an onChange property'));
     var m = t8(
             function (e) {
                 r.onInput(e);
@@ -3340,7 +3340,7 @@ function rq(e) {
         g = t8(
             function (e) {
                 var t, n, o;
-                null == r || null == (t = r.onBlurHandler) || t.call(r, e), r.trimOnBlur && (e.target.value = eP()((o = e.target.value)).call(o)), null == r || null == (n = r.onBlur) || n.call(r, e);
+                (null == r || null == (t = r.onBlurHandler) || t.call(r, e), r.trimOnBlur && (e.target.value = eP()((o = e.target.value)).call(o)), null == r || null == (n = r.onBlur) || n.call(r, e));
             },
             [r.onBlur, r.onBlurHandler]
         ),
@@ -3363,7 +3363,7 @@ function rq(e) {
                 return 'adyen-checkout__input--'.concat(e);
             })
         );
-    r.classNameModifiers, r.uniqueId, r.isInvalid, r.isValid;
+    (r.classNameModifiers, r.uniqueId, r.isInvalid, r.isValid);
     var C = (0, k.Z)(r, rU);
     return (0, ec.h)(
         'input',
@@ -3399,11 +3399,11 @@ function rK(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -3449,10 +3449,10 @@ function rY(e) {
         f = c.errors,
         m = c.isValid,
         y = t5({});
-    l()(y.current).length || null == (t = e.setComponentRef) || t.call(e, y.current),
+    (l()(y.current).length || null == (t = e.setComponentRef) || t.call(e, y.current),
         (y.current.showValidation = function () {
             d();
-        });
+        }));
     var v = function (e) {
             var t;
             return I()((t = ''.concat(o ? ''.concat(o, '.') : ''))).call(t, e);
@@ -3556,7 +3556,7 @@ var rG = function (e) {
     rQ = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s./0-9]*$/,
     rJ = function () {
         var e = document.createElement('input');
-        return e.setAttribute('type', 'date'), 'date' === e.type;
+        return (e.setAttribute('type', 'date'), 'date' === e.type);
     },
     rX = function (e) {
         var t = e
@@ -3653,11 +3653,11 @@ function r2(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -3741,7 +3741,7 @@ function r4(e) {
                 : {
                       onInput: function (t) {
                           var n = t.target.value;
-                          (t.target.value = rX(n)), e.onInput(t);
+                          ((t.target.value = rX(n)), e.onInput(t));
                       },
                       maxLength: 10
                   }
@@ -3764,11 +3764,11 @@ function r7(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -4427,7 +4427,7 @@ var os = ['street', 'houseNumberOrName', 'postalCode', 'city', 'stateOrProvince'
         'Blob' in oP &&
         (function () {
             try {
-                return new Blob(), !0;
+                return (new Blob(), !0);
             } catch (e) {
                 return !1;
             }
@@ -4446,7 +4446,7 @@ function oB(e) {
     return e.toLowerCase();
 }
 function oT(e) {
-    return 'string' != typeof e && (e = String(e)), e;
+    return ('string' != typeof e && (e = String(e)), e);
 }
 function oD(e) {
     var t = {
@@ -4500,30 +4500,30 @@ function oV(e) {
 }
 function oj(e) {
     return new (B())(function (t, n) {
-        (e.onload = function () {
+        ((e.onload = function () {
             t(e.result);
         }),
             (e.onerror = function () {
                 n(e.error);
-            });
+            }));
     });
 }
 function oU(e) {
     var t = new FileReader(),
         n = oj(t);
-    return t.readAsArrayBuffer(e), n;
+    return (t.readAsArrayBuffer(e), n);
 }
 function oq(e) {
     if (em()(e)) return em()(e).call(e, 0);
     var t = new Uint8Array(e.byteLength);
-    return t.set(new Uint8Array(e)), t.buffer;
+    return (t.set(new Uint8Array(e)), t.buffer);
 }
 function oH() {
     return (
         (this.bodyUsed = !1),
         (this._initBody = function (e) {
             var t;
-            (this.bodyUsed = this.bodyUsed), (this._bodyInit = e), e ? ('string' == typeof e ? (this._bodyText = e) : oF && Blob.prototype.isPrototypeOf(e) ? (this._bodyBlob = e) : oO && FormData.prototype.isPrototypeOf(e) ? (this._bodyFormData = e) : oA && eH().prototype.isPrototypeOf(e) ? (this._bodyText = e.toString()) : oE && oF && (t = e) && DataView.prototype.isPrototypeOf(t) ? ((this._bodyArrayBuffer = oq(e.buffer)), (this._bodyInit = new Blob([this._bodyArrayBuffer]))) : oE && (ArrayBuffer.prototype.isPrototypeOf(e) || oM(e)) ? (this._bodyArrayBuffer = oq(e)) : (this._bodyText = e = Object.prototype.toString.call(e))) : (this._bodyText = ''), this.headers.get('content-type') || ('string' == typeof e ? this.headers.set('content-type', 'text/plain;charset=UTF-8') : this._bodyBlob && this._bodyBlob.type ? this.headers.set('content-type', this._bodyBlob.type) : oA && eH().prototype.isPrototypeOf(e) && this.headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8'));
+            ((this.bodyUsed = this.bodyUsed), (this._bodyInit = e), e ? ('string' == typeof e ? (this._bodyText = e) : oF && Blob.prototype.isPrototypeOf(e) ? (this._bodyBlob = e) : oO && FormData.prototype.isPrototypeOf(e) ? (this._bodyFormData = e) : oA && eH().prototype.isPrototypeOf(e) ? (this._bodyText = e.toString()) : oE && oF && (t = e) && DataView.prototype.isPrototypeOf(t) ? ((this._bodyArrayBuffer = oq(e.buffer)), (this._bodyInit = new Blob([this._bodyArrayBuffer]))) : oE && (ArrayBuffer.prototype.isPrototypeOf(e) || oM(e)) ? (this._bodyArrayBuffer = oq(e)) : (this._bodyText = e = Object.prototype.toString.call(e))) : (this._bodyText = ''), this.headers.get('content-type') || ('string' == typeof e ? this.headers.set('content-type', 'text/plain;charset=UTF-8') : this._bodyBlob && this._bodyBlob.type ? this.headers.set('content-type', this._bodyBlob.type) : oA && eH().prototype.isPrototypeOf(e) && this.headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8')));
         }),
         oF &&
             ((this.blob = function () {
@@ -4547,7 +4547,7 @@ function oH() {
                 n,
                 r = oV(this);
             if (r) return r;
-            if (this._bodyBlob) return (e = this._bodyBlob), (n = oj((t = new FileReader()))), t.readAsText(e), n;
+            if (this._bodyBlob) return ((e = this._bodyBlob), (n = oj((t = new FileReader()))), t.readAsText(e), n);
             if (this._bodyArrayBuffer)
                 return B().resolve(
                     (function (e) {
@@ -4568,8 +4568,8 @@ function oH() {
         this
     );
 }
-(oL.prototype.append = function (e, t) {
-    (e = oB(e)), (t = oT(t));
+((oL.prototype.append = function (e, t) {
+    ((e = oB(e)), (t = oT(t)));
     var n = J()(this)[e];
     J()(this)[e] = n ? n + ', ' + t : t;
 }),
@@ -4577,7 +4577,7 @@ function oH() {
         delete J()(this)[oB(e)];
     }),
     (oL.prototype.get = function (e) {
-        return (e = oB(e)), this.has(e) ? J()(this)[e] : null;
+        return ((e = oB(e)), this.has(e) ? J()(this)[e] : null);
     }),
     (oL.prototype.has = function (e) {
         return J()(this).hasOwnProperty(oB(e));
@@ -4615,7 +4615,7 @@ function oH() {
             oD(e)
         );
     }),
-    oR && (oL.prototype[eD()] = eU()(oL.prototype));
+    oR && (oL.prototype[eD()] = eU()(oL.prototype)));
 var oK = ['DELETE', 'GET', 'HEAD', 'OPTIONS', 'POST', 'PUT'];
 function oz(e, t) {
     if (!(this instanceof oz)) throw TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.');
@@ -4624,7 +4624,7 @@ function oz(e, t) {
         o = (t = t || {}).body;
     if (e instanceof oz) {
         if (e.bodyUsed) throw TypeError('Already read');
-        (this.url = e.url), (this.credentials = e.credentials), t.headers || (this.headers = new oL(e.headers)), (this.method = e.method), (this.mode = e.mode), (this.signal = e.signal), o || null == e._bodyInit || ((o = e._bodyInit), (e.bodyUsed = !0));
+        ((this.url = e.url), (this.credentials = e.credentials), t.headers || (this.headers = new oL(e.headers)), (this.method = e.method), (this.mode = e.mode), (this.signal = e.signal), o || null == e._bodyInit || ((o = e._bodyInit), (e.bodyUsed = !0)));
     } else this.url = String(e);
     if (((this.credentials = t.credentials || this.credentials || 'same-origin'), (!t.headers && this.headers) || (this.headers = new oL(t.headers)), (this.method = ((r = (n = t.method || this.method || 'GET').toUpperCase()), z()(oK).call(oK, r) > -1 ? r : n)), (this.mode = t.mode || this.mode || null), (this.signal = t.signal || this.signal), (this.referrer = null), ('GET' === this.method || 'HEAD' === this.method) && o)) throw TypeError('Body not allowed for GET or HEAD requests');
     if ((this._initBody(o), ('GET' === this.method || 'HEAD' === this.method) && ('no-store' === t.cache || 'no-cache' === t.cache))) {
@@ -4649,9 +4649,9 @@ function oW(e) {
 }
 function oY(e, t) {
     if (!(this instanceof oY)) throw TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.');
-    t || (t = {}), (this.type = 'default'), (this.status = void 0 === t.status ? 200 : t.status), (this.ok = this.status >= 200 && this.status < 300), (this.statusText = void 0 === t.statusText ? '' : '' + t.statusText), (this.headers = new oL(t.headers)), (this.url = t.url || ''), this._initBody(e);
+    (t || (t = {}), (this.type = 'default'), (this.status = void 0 === t.status ? 200 : t.status), (this.ok = this.status >= 200 && this.status < 300), (this.statusText = void 0 === t.statusText ? '' : '' + t.statusText), (this.headers = new oL(t.headers)), (this.url = t.url || ''), this._initBody(e));
 }
-(oz.prototype.clone = function () {
+((oz.prototype.clone = function () {
     return new oz(this, { body: this._bodyInit });
 }),
     oH.call(oz.prototype),
@@ -4669,8 +4669,8 @@ function oY(e, t) {
             status: 0,
             statusText: ''
         });
-        return (e.type = 'error'), e;
-    });
+        return ((e.type = 'error'), e);
+    }));
 var oG = [301, 302, 303, 307, 308];
 oY.redirect = function (e, t) {
     if (-1 === z()(oG).call(oG, t)) throw RangeError('Invalid status code');
@@ -4683,12 +4683,12 @@ var o$ = oP.DOMException;
 try {
     new o$();
 } catch (e) {
-    ((o$ = function (e, t) {
-        (this.message = e), (this.name = t);
+    (((o$ = function (e, t) {
+        ((this.message = e), (this.name = t));
         var n = Error(e);
         this.stack = n.stack;
     }).prototype = ez()(Error.prototype)),
-        (o$.prototype.constructor = o$);
+        (o$.prototype.constructor = o$));
 }
 function oQ(e, t) {
     return new (B())(function (n, r) {
@@ -4701,7 +4701,7 @@ function oQ(e, t) {
         function l() {
             c.abort();
         }
-        (c.onload = function () {
+        ((c.onload = function () {
             var e,
                 t,
                 r,
@@ -4776,10 +4776,10 @@ function oQ(e, t) {
                 (c.onreadystatechange = function () {
                     4 === c.readyState && o.signal.removeEventListener('abort', l);
                 })),
-            c.send(void 0 === o._bodyInit ? null : o._bodyInit);
+            c.send(void 0 === o._bodyInit ? null : o._bodyInit));
     });
 }
-(oQ.polyfill = !0), oP.fetch || ((oP.fetch = oQ), (oP.Headers = oL), (oP.Request = oz), (oP.Response = oY));
+((oQ.polyfill = !0), oP.fetch || ((oP.fetch = oQ), (oP.Headers = oL), (oP.Request = oz), (oP.Response = oY)));
 var oJ = 'undefined' != typeof window && 'fetch' in window ? window.fetch : oQ,
     oX = 'https://checkoutshopper-live.adyen.com/checkoutshopper/',
     o0 = ['amount', 'secondaryAmount', 'countryCode', 'environment', 'loadingContext', 'i18n', 'modules', 'order', 'session', 'clientKey', 'showPayButton', 'redirectFromTopWhenInIframe', 'installmentOptions', 'onPaymentCompleted', 'beforeRedirect', 'beforeSubmit', 'onSubmit', 'onActionHandled', 'onAdditionalDetails', 'onCancel', 'onChange', 'onError', 'onBalanceCheck', 'onOrderRequest', 'onOrderCreated', 'setStatusAutomatically'];
@@ -4787,11 +4787,11 @@ function o1(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -4850,7 +4850,7 @@ function o5(e, t) {
                         for (;;)
                             switch ((t.prev = t.next)) {
                                 case 0:
-                                    return (t.next = 2), n.json();
+                                    return ((t.next = 2), n.json());
                                 case 2:
                                     if (((r = t.sent), !n.ok)) {
                                         t.next = 5;
@@ -4863,9 +4863,9 @@ function o5(e, t) {
                                         t.next = 8;
                                         break;
                                     }
-                                    return o9(r.message, c), t.abrupt('return');
+                                    return (o9(r.message, c), t.abrupt('return'));
                                 case 8:
-                                    return o9(e.errorMessage || 'Service at '.concat(f, ' is not available'), c), t.abrupt('return');
+                                    return (o9(e.errorMessage || 'Service at '.concat(f, ' is not available'), c), t.abrupt('return'));
                                 case 11:
                                 case 'end':
                                     return t.stop();
@@ -4961,7 +4961,7 @@ function o6(e) {
     return (
         t1(function () {
             var e = r ? new Image() : y.current;
-            (e.src = r || c), (e.onload = v), m(!!e.complete);
+            ((e.src = r || c), (e.onload = v), m(!!e.complete));
         }, []),
         r
             ? (0, ec.h)('div', (0, er.Z)({ style: { backgroundUrl: r } }, e, { className: g }))
@@ -5012,7 +5012,7 @@ function at(e) {
             ? null
             : e.filterable
               ? function (t) {
-                    t.preventDefault(), document.activeElement === e.filterInputRef.current ? e.showList || e.toggleList(t) : e.filterInputRef.current && e.filterInputRef.current.focus();
+                    (t.preventDefault(), document.activeElement === e.filterInputRef.current ? e.showList || e.toggleList(t) : e.filterInputRef.current && e.filterInputRef.current.focus());
                 }
               : e.toggleList,
         d = i ? null : e.onFocus;
@@ -5234,7 +5234,7 @@ function ac(e) {
         },
         er = function (e) {
             var t;
-            e.preventDefault(),
+            (e.preventDefault(),
                 (t =
                     e.currentTarget instanceof HTMLElement && 'option' === e.currentTarget.getAttribute('role')
                         ? en(e)
@@ -5254,7 +5254,7 @@ function ac(e) {
                         }
                     }),
                     C && z(null),
-                    ee());
+                    ee()));
         },
         eo = function (e) {
             switch (e.key) {
@@ -5263,7 +5263,7 @@ function ac(e) {
                     er(e);
                     break;
                 case ai.arrowDown:
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         (function () {
                             if (Q && !(Q.length < 1)) {
                                 var e =
@@ -5272,12 +5272,12 @@ function ac(e) {
                                         }) + 1,
                                     t = e < Q.length ? e : 0,
                                     n = Q[t];
-                                X(n), $(n);
+                                (X(n), $(n));
                             }
-                        })();
+                        })());
                     break;
                 case ai.arrowUp:
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         (function () {
                             if (Q && !(Q.length < 1)) {
                                 var e =
@@ -5286,9 +5286,9 @@ function ac(e) {
                                         }) - 1,
                                     t = e < 0 ? Q.length - 1 : e,
                                     n = Q[t];
-                                X(n), $(n);
+                                (X(n), $(n));
                             }
-                        })();
+                        })());
             }
         };
     return (
@@ -5350,7 +5350,7 @@ function ac(e) {
                 onFocus: et,
                 onInput: function (e) {
                     var t = e.target.value;
-                    z(t), F(t), h && h(t);
+                    (z(t), F(t), h && h(t));
                 },
                 placeholder: g,
                 readonly: void 0 !== u && u,
@@ -5358,7 +5358,7 @@ function ac(e) {
                 showList: B,
                 toggleButtonRef: S,
                 toggleList: function (e) {
-                    e.preventDefault(), B ? (z(V.name), ee()) : (z(null), et());
+                    (e.preventDefault(), B ? (z(V.name), ee()) : (z(null), et()));
                 },
                 disabled: _,
                 ariaDescribedBy: b ? I()((n = ''.concat(b))).call(n, re) : null
@@ -5367,7 +5367,7 @@ function ac(e) {
                 active: G,
                 filteredItems: Q,
                 onHover: function (e) {
-                    e.preventDefault(), $(en(e));
+                    (e.preventDefault(), $(en(e)));
                 },
                 onSelect: er,
                 selected: V,
@@ -5401,13 +5401,13 @@ function al(e) {
     return (
         t2(
             function () {
-                if (!a || !i.countryHasDataset(a)) return f([]), void g(!0);
+                if (!a || !i.countryHasDataset(a)) return (f([]), void g(!0));
                 o4('states/'.concat(a), u, l.locale)
                     .then(function (e) {
-                        f(e && e.length ? e : []), g(!0);
+                        (f(e && e.length ? e : []), g(!0));
                     })
                     .catch(function () {
-                        f([]), g(!0);
+                        (f([]), g(!0));
                     });
             },
             [a]
@@ -5467,10 +5467,10 @@ function au(e) {
                               return O()(n).call(n, e.id);
                           })
                         : e;
-                    h(t || []), k(1 === t.length || _), v(!0);
+                    (h(t || []), k(1 === t.length || _), v(!0));
                 })
                 .catch(function (e) {
-                    console.error(e), h([]), v(!0);
+                    (console.error(e), h([]), v(!0));
                 });
         }, []),
         y
@@ -5576,11 +5576,11 @@ function ap(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -5611,7 +5611,7 @@ ac.defaultProps = {
 };
 var af = (function () {
         function e(t) {
-            (0, C.Z)(this, e), (0, w.Z)(this, 'specifications', void 0), (this.specifications = ah(ah({}, of), t));
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'specifications', void 0), (this.specifications = ah(ah({}, of), t)));
         }
         return (
             (0, Z.Z)(e, [
@@ -5682,10 +5682,10 @@ var af = (function () {
             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 300;
         return function () {
             for (var r = this, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-            clearTimeout(t),
+            (clearTimeout(t),
                 (t = eu()(function () {
                     return e.apply(r, a);
-                }, n));
+                }, n)));
         };
     };
 function ay(e) {
@@ -5722,7 +5722,7 @@ function ay(e) {
                                         });
                                     })
                                         .then(function (e) {
-                                            y(e),
+                                            (y(e),
                                                 p(
                                                     J()(e).call(e, function (e) {
                                                         return {
@@ -5731,10 +5731,10 @@ function ay(e) {
                                                         };
                                                     })
                                                 ),
-                                                _('');
+                                                _(''));
                                         })
                                         .catch(function (e) {
-                                            _(e), console.error('error', e);
+                                            (_(e), console.error('error', e));
                                         });
                                 case 1:
                                 case 'end':
@@ -5810,11 +5810,11 @@ function av(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -5884,7 +5884,7 @@ function ab(e) {
         D = R.triggerValidation,
         L = R.setData;
     d.current.showValidation = function () {
-        D(), S(!x || A || B ? '' : r.get('address.errors.incomplete'));
+        (D(), S(!x || A || B ? '' : r.get('address.errors.incomplete')));
     };
     var V = P()(h).call(h, function (e) {
         return !u || e === u;
@@ -5894,11 +5894,11 @@ function ab(e) {
             function () {
                 var e = p.countryHasDataset(F.country) ? '' : 'N/A',
                     t = ag(ag({}, F), {}, { stateOrProvince: e });
-                N()(i).call(i, function (e) {
+                (N()(i).call(i, function (e) {
                     var n;
                     T(e, 'input')(null != (n = t[e]) ? n : '');
                 }),
-                    t.postalCode && T('postalCode', 'blur')(F.postalCode);
+                    t.postalCode && T('postalCode', 'blur')(F.postalCode));
             },
             [F.country]
         ),
@@ -5919,7 +5919,7 @@ function ab(e) {
                                 s = F[r],
                                 c = e.data[r],
                                 l = (!o || s) && a ? s : a || s || !c ? 'N/A' : c;
-                            return null != l && l.length && (n[r] = l), n;
+                            return (null != l && l.length && (n[r] = l), n);
                         },
                         {}
                     );
@@ -5976,11 +5976,11 @@ function ab(e) {
                 (0, ec.h)(ay, {
                     onAddressLookup: e.onAddressLookup,
                     onSelect: function (e) {
-                        N()(os).call(os, function (t) {
+                        (N()(os).call(os, function (t) {
                             var n = e[t];
                             null != n && (L(t, String(n)), D());
                         }),
-                            v(!0);
+                            v(!0));
                     },
                     onManualAddress: function () {
                         k(!0);
@@ -6609,7 +6609,7 @@ var aS = ['companyDetails', 'personalDetails', 'billingAddress', 'deliveryAddres
     };
 function aI(e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    (this.status = e), (this.code = t);
+    ((this.status = e), (this.code = t));
 }
 var aM = function (e) {
         var t,
@@ -6619,7 +6619,7 @@ var aM = function (e) {
         return (
             1 ===
                 (function (e) {
-                    for (var t, n = e; n.length > 2; ) (t = em()(n).call(n, 0, 9)), (n = (ee()(t, 10) % 97) + em()(n).call(n, t.length));
+                    for (var t, n = e; n.length > 2; ) ((t = em()(n).call(n, 0, 9)), (n = (ee()(t, 10) % 97) + em()(n).call(n, t.length)));
                     return ee()(n, 10) % 97;
                 })(
                     ((n = (n = (n = o).toUpperCase()).substr(4) + n.substr(0, 4)),
@@ -6647,11 +6647,11 @@ function aD(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -6690,7 +6690,7 @@ var aV = {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -6767,7 +6767,7 @@ var aV = {
                             };
                         },
                         function () {
-                            e.target.setSelectionRange(a, a), i.onChange();
+                            (e.target.setSelectionRange(a, a), i.onChange());
                         }
                     );
                 }),
@@ -6832,7 +6832,7 @@ var aV = {
                     value: function () {
                         var e = aB(this.state.data.ibanNumber).status,
                             t = aT(this.state.data.ownerName);
-                        this.setError('iban', 'valid' !== e ? aj : null), this.setError('holder', t ? null : aV, this.onChange);
+                        (this.setError('iban', 'valid' !== e ? aj : null), this.setError('holder', t ? null : aV, this.onChange));
                     }
                 },
                 {
@@ -6919,11 +6919,11 @@ function aq(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -6972,7 +6972,7 @@ var aH = function (e) {
                       n,
                       function (e, n) {
                           var r = rd[n];
-                          return (z()(r).call(r, 'sf-') > -1 || z()(r).call(r, 'gen.01') > -1) && (e[r] = t.get(r)), e;
+                          return ((z()(r).call(r, 'sf-') > -1 || z()(r).call(r, 'gen.01') > -1) && (e[r] = t.get(r)), e);
                       },
                       {}
                   ))),
@@ -7023,7 +7023,7 @@ var aH = function (e) {
                                     y = c(r, a, s);
                                 y && (f = I()((m = ''.concat(y, ': '))).call(m, u));
                             }
-                            e.push({
+                            (e.push({
                                 field: r,
                                 errorMessage: f,
                                 errorCode: l
@@ -7031,7 +7031,7 @@ var aH = function (e) {
                                 i &&
                                     e2()(e).call(e, function (e, t) {
                                         return z()(i).call(i, e.field) - z()(i).call(i, t.field);
-                                    });
+                                    }));
                         }
                         return e;
                     },
@@ -7077,7 +7077,7 @@ var aH = function (e) {
     }),
     aY = function (e, t) {
         var n = [];
-        return e && 'function' == typeof e.querySelectorAll && (n = em()([]).call(e.querySelectorAll(t))), n;
+        return (e && 'function' == typeof e.querySelectorAll && (n = em()([]).call(e.querySelectorAll(t))), n);
     },
     aG = function (e, t) {
         if (e) return e.querySelector(t);
@@ -7145,11 +7145,11 @@ function a9(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -7238,14 +7238,14 @@ function a3(e) {
         Q = (0, q.Z)($, 2),
         X = Q[0],
         ee = Q[1];
-    (i.current.showValidation = function () {
-        (s.current = !0),
+    ((i.current.showValidation = function () {
+        ((s.current = !0),
             N()(aS).call(aS, function (e) {
                 C[e].current && C[e].current.showValidation();
             }),
-            D(a8({}, Z && { consentCheckbox: F.consentCheckbox ? null : a4 }));
+            D(a8({}, Z && { consentCheckbox: F.consentCheckbox ? null : a4 })));
     }),
-        (i.current.setStatus = G);
+        (i.current.setStatus = G));
     var et = a0(X);
     t1(
         function () {
@@ -7270,7 +7270,7 @@ function a3(e) {
                 ).call(
                     n,
                     function (e, t) {
-                        return (e[t] = F[t]), e;
+                        return ((e[t] = F[t]), e);
                     },
                     {}
                 ),
@@ -7289,7 +7289,7 @@ function a3(e) {
                                   r = (0, q.Z)(t, 2),
                                   o = r[0],
                                   a = r[1];
-                              return a && (e[I()((n = ''.concat(S))).call(n, o)] = a), e;
+                              return (a && (e[I()((n = ''.concat(S))).call(n, o)] = a), e);
                           },
                           {}
                       )
@@ -7318,10 +7318,10 @@ function a3(e) {
                 $ = null == G ? void 0 : G.currentErrorsSortedByLayout;
             switch ((ee($), null == G ? void 0 : G.action)) {
                 case rf:
-                    h && aX('.adyen-checkout__open-invoice', G.fieldToFocus),
+                    (h && aX('.adyen-checkout__open-invoice', G.fieldToFocus),
                         eu()(function () {
                             s.current = !1;
-                        }, 300);
+                        }, 300));
                     break;
                 case rm:
                     var Q = a1($, et, 'field'),
@@ -7339,7 +7339,7 @@ function a3(e) {
     );
     var en = function (e) {
         return function (t) {
-            E(function (n) {
+            (E(function (n) {
                 return a8(a8({}, n), {}, (0, w.Z)({}, e, t.data));
             }),
                 U(function (n) {
@@ -7347,7 +7347,7 @@ function a3(e) {
                 }),
                 D(function (n) {
                     return a8(a8({}, n), {}, (0, w.Z)({}, e, t.errors));
-                });
+                }));
         };
     };
     return (0, ec.h)(
@@ -7428,7 +7428,7 @@ function a3(e) {
                 label: e.consentCheckboxLabel,
                 onChange: function (e) {
                     var t = e.target.checked;
-                    E(function (e) {
+                    (E(function (e) {
                         return a8(a8({}, e), {}, { consentCheckbox: t });
                     }),
                         U(function (e) {
@@ -7436,7 +7436,7 @@ function a3(e) {
                         }),
                         D(function (e) {
                             return a8(a8({}, e), {}, { consentCheckbox: !t });
-                        });
+                        }));
                 },
                 i18n: a
             }),
@@ -7456,7 +7456,7 @@ var a6 = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -7474,7 +7474,7 @@ var a6 = (function (e) {
             var e, t;
             (0, C.Z)(this, r);
             for (var o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-            return (t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'state', { loaded: !1 }), t;
+            return ((t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'state', { loaded: !1 }), t);
         }
         return (
             (0, Z.Z)(r, [
@@ -7482,12 +7482,12 @@ var a6 = (function (e) {
                     key: 'componentDidMount',
                     value: function () {
                         var e = this;
-                        this.props.i18n
+                        (this.props.i18n
                             ? this.props.i18n.loaded.then(function () {
                                   e.setState({ loaded: !0 });
                               })
                             : this.setState({ loaded: !0 }),
-                            (this.props.i18n && this.props.loadingContext && this.props.resources) || console.error('CoreProvider - WARNING core provider is missing one of the following: i18n, loadingContext or resources');
+                            (this.props.i18n && this.props.loadingContext && this.props.resources) || console.error('CoreProvider - WARNING core provider is missing one of the following: i18n, loadingContext or resources'));
                     }
                 },
                 {
@@ -7568,11 +7568,11 @@ function is(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -7601,7 +7601,7 @@ var il = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -7616,7 +7616,7 @@ var il = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -7755,11 +7755,11 @@ function ip(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -7788,7 +7788,7 @@ var im = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -7803,7 +7803,7 @@ var im = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -7829,11 +7829,11 @@ function iy(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -7863,7 +7863,7 @@ var ig = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -7878,7 +7878,7 @@ var ig = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -7916,7 +7916,7 @@ function ib() {
         timeZoneOffset: new Date().getTimezoneOffset()
     };
 }
-(0, w.Z)(ig, 'type', 'afterpay_b2b'),
+((0, w.Z)(ig, 'type', 'afterpay_b2b'),
     (0, w.Z)(ig, 'defaultProps', {
         onChange: function () {},
         data: {
@@ -7932,7 +7932,7 @@ function ib() {
             deliveryAddress: 'editable'
         },
         showFormInstruction: !0
-    });
+    }));
 var i_ = {
         EU: 'EUR',
         UK: 'GBP',
@@ -7944,11 +7944,11 @@ function iZ(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -7983,11 +7983,11 @@ function iN(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -8115,10 +8115,10 @@ function iP(e) {
             )
                 .then(function (t) {
                     if (null == t || !t.signature) return console.error('Could not get AmazonPay signature');
-                    S(t.signature), e.showPayButton && b.Pay.renderButton('#amazonPayButton', x).onClick(P);
+                    (S(t.signature), e.showPayButton && b.Pay.renderButton('#amazonPayButton', x).onClick(P));
                 })
                 .catch(function (t) {
-                    console.error(t), e.onError && e.onError(t, v.componentRef);
+                    (console.error(t), e.onError && e.onError(t, v.componentRef));
                 });
         }, []),
         e.showPayButton
@@ -8221,7 +8221,7 @@ var iO = (0, Z.Z)(function e(t) {
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'body',
         o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    (0, C.Z)(this, e),
+    ((0, C.Z)(this, e),
         (0, w.Z)(this, 'src', void 0),
         (0, w.Z)(this, 'node', void 0),
         (0, w.Z)(this, 'attributes', void 0),
@@ -8232,17 +8232,17 @@ var iO = (0, Z.Z)(function e(t) {
             if (!n.isScriptLoadCalled)
                 return new (B())(function (e, t) {
                     var r = function () {
-                            n.script.setAttribute('data-script-loaded', 'true'), e();
+                            (n.script.setAttribute('data-script-loaded', 'true'), e());
                         },
                         o = function () {
-                            n.remove(), t(Error('Unable to load script '.concat(n.src)));
+                            (n.remove(), t(Error('Unable to load script '.concat(n.src))));
                         };
                     n.isScriptLoadCalled = !0;
                     var a = document.querySelector(n.node);
                     if (((n.script = a.querySelector('script[src="'.concat(n.src, '"]'))), n.script && n.script.getAttribute('data-script-loaded'))) e();
                     else {
-                        if (n.script) return n.script.addEventListener('load', r), void n.script.addEventListener('error', o);
-                        (n.script = document.createElement('script')), e4()(n.script, n.attributes), e4()(n.script.dataset, n.dataAttributes), (n.script.src = n.src), (n.script.async = !0), n.script.addEventListener('load', r), n.script.addEventListener('error', o), a.appendChild(n.script);
+                        if (n.script) return (n.script.addEventListener('load', r), void n.script.addEventListener('error', o));
+                        ((n.script = document.createElement('script')), e4()(n.script, n.attributes), e4()(n.script.dataset, n.dataAttributes), (n.script.src = n.src), (n.script.async = !0), n.script.addEventListener('load', r), n.script.addEventListener('error', o), a.appendChild(n.script));
                     }
                 });
         }),
@@ -8252,7 +8252,7 @@ var iO = (0, Z.Z)(function e(t) {
         (this.src = t),
         (this.node = r),
         (this.attributes = o),
-        (this.dataAttributes = a);
+        (this.dataAttributes = a));
 });
 function iE(e) {
     var t,
@@ -8349,11 +8349,11 @@ function iM(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -8382,7 +8382,7 @@ var iT = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -8397,7 +8397,7 @@ var iT = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -8530,7 +8530,7 @@ var iT = (function (e) {
         r
     );
 })();
-(0, w.Z)(iT, 'type', 'amazonpay'), (0, w.Z)(iT, 'defaultProps', iI);
+((0, w.Z)(iT, 'type', 'amazonpay'), (0, w.Z)(iT, 'defaultProps', iI));
 var iD = {
         'apple-pay': 'ApplePayButton-module_apple-pay__gYjuP',
         'apple-pay-button': 'ApplePayButton-module_apple-pay-button__l5g-d',
@@ -8560,7 +8560,7 @@ var iD = {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -8575,7 +8575,7 @@ var iD = {
                     return (0, ei.Z)(this, e);
                 });
         function r() {
-            return (0, C.Z)(this, r), n.apply(this, arguments);
+            return ((0, C.Z)(this, r), n.apply(this, arguments));
         }
         return (
             (0, Z.Z)(r, [
@@ -8601,11 +8601,11 @@ function iV(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -8634,7 +8634,7 @@ function ij(e) {
 var iU = (function () {
         function e(t, n) {
             var r = this;
-            (0, C.Z)(this, e),
+            ((0, C.Z)(this, e),
                 (0, w.Z)(this, 'session', void 0),
                 (0, w.Z)(this, 'options', void 0),
                 (this.options = n),
@@ -8659,7 +8659,7 @@ var iU = (function () {
                 'function' == typeof n.onShippingMethodSelected &&
                     (this.session.onshippingmethodselected = function (e) {
                         return r.onshippingmethodselected(e, n.onShippingMethodSelected);
-                    });
+                    }));
         }
         return (
             (0, Z.Z)(e, [
@@ -8680,7 +8680,7 @@ var iU = (function () {
                                 n.session.completeMerchantValidation(e);
                             })
                             .catch(function (e) {
-                                console.error(e), n.session.abort(), n.options.onError(e);
+                                (console.error(e), n.session.abort(), n.options.onError(e));
                             });
                     }
                 },
@@ -8709,7 +8709,7 @@ var iU = (function () {
                             return t(n, r, e);
                         })
                             .then(function (e) {
-                                console.log('onpaymentmethodselected', e), n.session.completePaymentMethodSelection(e);
+                                (console.log('onpaymentmethodselected', e), n.session.completePaymentMethodSelection(e));
                             })
                             .catch(function (e) {
                                 n.session.completePaymentMethodSelection(e);
@@ -8789,11 +8789,11 @@ function iK(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -8823,7 +8823,7 @@ var iW = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -8839,7 +8839,7 @@ var iW = (function (e) {
             });
     function o(e) {
         var t, n, a, i;
-        return (0, C.Z)(this, o), ((i = r.call(this, e)).startSession = R()((t = i.startSession)).call(t, (0, eo.Z)(i))), (i.submit = R()((n = i.submit)).call(n, (0, eo.Z)(i))), (i.validateMerchant = R()((a = i.validateMerchant)).call(a, (0, eo.Z)(i))), i;
+        return ((0, C.Z)(this, o), ((i = r.call(this, e)).startSession = R()((t = i.startSession)).call(t, (0, eo.Z)(i))), (i.submit = R()((n = i.submit)).call(n, (0, eo.Z)(i))), (i.validateMerchant = R()((a = i.validateMerchant)).call(a, (0, eo.Z)(i))), i);
     }
     return (
         (0, Z.Z)(o, [
@@ -8859,7 +8859,7 @@ var iW = (function (e) {
                                         return e && window.ApplePaySession && ApplePaySession.supportsVersion(e);
                                     });
                                 } catch (e) {
-                                    return console.warn(e), null;
+                                    return (console.warn(e), null);
                                 }
                             })(0),
                         i =
@@ -8883,7 +8883,7 @@ var iW = (function (e) {
                                   Y()(r).call(
                                       r,
                                       function (e, t) {
-                                          return o[t] && !O()(e).call(e, o[t]) && e.push(o[t]), e;
+                                          return (o[t] && !O()(e).call(e, o[t]) && e.push(o[t]), e);
                                       },
                                       []
                                   ))
@@ -8936,7 +8936,7 @@ var iW = (function (e) {
                             onValidateMerchant: a || this.validateMerchant,
                             onPaymentAuthorized: function (n, r, a) {
                                 var i;
-                                null != a && null != (i = a.payment) && null != (i = i.token) && i.paymentData && t.setState({ applePayToken: btoa(V()(a.payment.token.paymentData)) }), (0, ey.Z)((0, es.Z)(o.prototype), 'submit', t).call(t), e(n, r, a);
+                                (null != a && null != (i = a.payment) && null != (i = i.token) && i.paymentData && t.setState({ applePayToken: btoa(V()(a.payment.token.paymentData)) }), (0, ey.Z)((0, es.Z)(o.prototype), 'submit', t).call(t), e(n, r, a));
                             }
                         });
                     return new (B())(function (e, n) {
@@ -8984,10 +8984,10 @@ var iW = (function (e) {
                                                     o8(h, f)
                                                 );
                                             case 9:
-                                                (m = e.sent), (y = nF.decode(m.data)) || n('Could not decode Apple Pay session'), t(JSON.parse(y)), (e.next = 19);
+                                                ((m = e.sent), (y = nF.decode(m.data)) || n('Could not decode Apple Pay session'), t(JSON.parse(y)), (e.next = 19));
                                                 break;
                                             case 16:
-                                                (e.prev = 16), (e.t0 = e.catch(6)), n('Could not get Apple Pay session');
+                                                ((e.prev = 16), (e.t0 = e.catch(6)), n('Could not get Apple Pay session'));
                                             case 19:
                                             case 'end':
                                                 return e.stop();
@@ -9032,7 +9032,7 @@ var iW = (function (e) {
                               buttonColor: this.props.buttonColor,
                               buttonType: this.props.buttonType,
                               onClick: function (t) {
-                                  t.preventDefault(), e.submit();
+                                  (t.preventDefault(), e.submit());
                               }
                           })
                         : null;
@@ -9046,11 +9046,11 @@ function iY(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -9071,7 +9071,7 @@ function iG(e) {
     }
     return e;
 }
-(0, w.Z)(iW, 'type', 'applepay'),
+((0, w.Z)(iW, 'type', 'applepay'),
     (0, w.Z)(iW, 'defaultProps', {
         amount: {
             currency: 'USD',
@@ -9108,7 +9108,7 @@ function iG(e) {
         buttonType: 'plain',
         buttonColor: 'black',
         showPayButton: !0
-    });
+    }));
 var i$ = {
         labels: (0, w.Z)({}, oc, 'address'),
         schema: [
@@ -9131,11 +9131,11 @@ function iX(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -9164,7 +9164,7 @@ var i1 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -9179,7 +9179,7 @@ var i1 = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -9249,7 +9249,7 @@ var i5 = function (e) {
         i = t8(
             function (e) {
                 var t = e.currentTarget.value;
-                b()(e.target, 'value', { value: t }), o(e);
+                (b()(e.target, 'value', { value: t }), o(e));
             },
             [o]
         );
@@ -9324,11 +9324,11 @@ function i6(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -9396,12 +9396,12 @@ function sr(e) {
     var D = t8(
         function (e) {
             return function (t) {
-                F(e), d('issuer')(t);
+                (F(e), d('issuer')(t));
             };
         },
         [d]
     );
-    t1(
+    (t1(
         function () {
             c.onChange({
                 data: f,
@@ -9422,7 +9422,7 @@ function sr(e) {
     ),
         (this.showValidation = function () {
             p();
-        });
+        }));
     var L = Y()(r).call(
         r,
         function (e, t) {
@@ -9508,11 +9508,11 @@ function so(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -9555,11 +9555,11 @@ function ss(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -9623,11 +9623,11 @@ function su(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -9656,7 +9656,7 @@ var sp = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -9794,11 +9794,11 @@ function sh(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -9836,7 +9836,7 @@ var sm = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -9851,7 +9851,7 @@ var sm = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -9869,11 +9869,11 @@ function sy(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -9903,7 +9903,7 @@ var sg = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -9918,7 +9918,7 @@ var sg = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -9946,10 +9946,10 @@ var sb,
     sC,
     sZ,
     sw = function (e, t) {
-        return t === nL ? ((e[nV] = !1), (e[nj] = !1)) : (e[t] = !1), e;
+        return (t === nL ? ((e[nV] = !1), (e[nj] = !1)) : (e[t] = !1), e);
     },
     sS = (0, Z.Z)(function e(t) {
-        (0, C.Z)(this, e), (0, w.Z)(this, 'callbacks', void 0), (0, w.Z)(this, 'config', void 0), (0, w.Z)(this, 'props', void 0), (0, w.Z)(this, 'state', void 0), (0, w.Z)(this, 'validateForm', void 0), (0, w.Z)(this, 'handleBrandFromBinLookup', void 0), (0, w.Z)(this, 'callbacksHandler', void 0), (0, w.Z)(this, 'configHandler', void 0), (0, w.Z)(this, 'createCardSecuredFields', void 0), (0, w.Z)(this, 'createNonCardSecuredFields', void 0), (0, w.Z)(this, 'createSecuredFields', void 0), (0, w.Z)(this, 'destroySecuredFields', void 0), (0, w.Z)(this, 'handleIOSTouchEvents', void 0), (0, w.Z)(this, 'destroyTouchendListener', void 0), (0, w.Z)(this, 'destroyTouchstartListener', void 0), (0, w.Z)(this, 'handleBinValue', void 0), (0, w.Z)(this, 'handleEncryption', void 0), (0, w.Z)(this, 'handleFocus', void 0), (0, w.Z)(this, 'handleIframeConfigFeedback', void 0), (0, w.Z)(this, 'handleValidation', void 0), (0, w.Z)(this, 'handleSFShiftTab', void 0), (0, w.Z)(this, 'handleShiftTab', void 0), (0, w.Z)(this, 'isConfigured', void 0), (0, w.Z)(this, 'postMessageToAllIframes', void 0), (0, w.Z)(this, 'processAutoComplete', void 0), (0, w.Z)(this, 'processBrand', void 0), (0, w.Z)(this, 'sendBrandToCardSF', void 0), (0, w.Z)(this, 'sendExpiryDatePolicyToSF', void 0), (0, w.Z)(this, 'setFocusOnFrame', void 0), (0, w.Z)(this, 'setupSecuredField', void 0), (0, w.Z)(this, 'touchendListener', void 0), (0, w.Z)(this, 'touchstartListener', void 0), (0, w.Z)(this, 'hasGenuineTouchEvents', void 0), (0, w.Z)(this, 'encryptedAttrName', void 0), (0, w.Z)(this, 'hasRedundantCVCField', void 0), (0, w.Z)(this, 'isSingleBrandedCard', void 0), (0, w.Z)(this, 'securityCode', void 0), (this.props = t), (this.state = {}), (this.config = {}), (this.callbacks = {});
+        ((0, C.Z)(this, e), (0, w.Z)(this, 'callbacks', void 0), (0, w.Z)(this, 'config', void 0), (0, w.Z)(this, 'props', void 0), (0, w.Z)(this, 'state', void 0), (0, w.Z)(this, 'validateForm', void 0), (0, w.Z)(this, 'handleBrandFromBinLookup', void 0), (0, w.Z)(this, 'callbacksHandler', void 0), (0, w.Z)(this, 'configHandler', void 0), (0, w.Z)(this, 'createCardSecuredFields', void 0), (0, w.Z)(this, 'createNonCardSecuredFields', void 0), (0, w.Z)(this, 'createSecuredFields', void 0), (0, w.Z)(this, 'destroySecuredFields', void 0), (0, w.Z)(this, 'handleIOSTouchEvents', void 0), (0, w.Z)(this, 'destroyTouchendListener', void 0), (0, w.Z)(this, 'destroyTouchstartListener', void 0), (0, w.Z)(this, 'handleBinValue', void 0), (0, w.Z)(this, 'handleEncryption', void 0), (0, w.Z)(this, 'handleFocus', void 0), (0, w.Z)(this, 'handleIframeConfigFeedback', void 0), (0, w.Z)(this, 'handleValidation', void 0), (0, w.Z)(this, 'handleSFShiftTab', void 0), (0, w.Z)(this, 'handleShiftTab', void 0), (0, w.Z)(this, 'isConfigured', void 0), (0, w.Z)(this, 'postMessageToAllIframes', void 0), (0, w.Z)(this, 'processAutoComplete', void 0), (0, w.Z)(this, 'processBrand', void 0), (0, w.Z)(this, 'sendBrandToCardSF', void 0), (0, w.Z)(this, 'sendExpiryDatePolicyToSF', void 0), (0, w.Z)(this, 'setFocusOnFrame', void 0), (0, w.Z)(this, 'setupSecuredField', void 0), (0, w.Z)(this, 'touchendListener', void 0), (0, w.Z)(this, 'touchstartListener', void 0), (0, w.Z)(this, 'hasGenuineTouchEvents', void 0), (0, w.Z)(this, 'encryptedAttrName', void 0), (0, w.Z)(this, 'hasRedundantCVCField', void 0), (0, w.Z)(this, 'isSingleBrandedCard', void 0), (0, w.Z)(this, 'securityCode', void 0), (this.props = t), (this.state = {}), (this.config = {}), (this.callbacks = {}));
     }),
     sN = 'undefined' != typeof window && window.console && window.console.error && R()((s_ = window.console.error)).call(s_, window.console);
 'undefined' != typeof window && window.console && window.console.info && R()((sk = window.console.info)).call(sk, window.console);
@@ -9959,7 +9959,7 @@ function sA(e) {
     this.config.cardGroupTypes = ie((s = e.cardGroupTypes)) && s.length ? s : nG;
     var t = e.loadingContext;
     if (t) {
-        (this.config.loadingContext = '/' === t.charAt(t.length - 1) ? t : ''.concat(t, '/')), (this.config.isCreditCardType = !1 === O()(n$).call(n$, e.type)), (this.config.iframeUIConfig = e.iframeUIConfig), (this.config.allowedDOMAccess = !1 !== e.allowedDOMAccess && 'false' !== e.allowedDOMAccess), (this.config.autoFocus = !1 !== e.autoFocus && 'false' !== e.autoFocus), (this.config.showWarnings = !0 === e.showWarnings || 'true' === e.showWarnings), (this.config.trimTrailingSeparator = !1 !== e.trimTrailingSeparator && 'false' !== e.trimTrailingSeparator), (this.config.keypadFix = !1 !== e.keypadFix && 'false' !== e.keypadFix), (this.config.legacyInputMode = e.legacyInputMode || null), (this.config.minimumExpiryDate = e.minimumExpiryDate || null), (this.config.implementationType = e.implementationType), (this.config.sfLogAtStart = !0 === window._b$dl);
+        ((this.config.loadingContext = '/' === t.charAt(t.length - 1) ? t : ''.concat(t, '/')), (this.config.isCreditCardType = !1 === O()(n$).call(n$, e.type)), (this.config.iframeUIConfig = e.iframeUIConfig), (this.config.allowedDOMAccess = !1 !== e.allowedDOMAccess && 'false' !== e.allowedDOMAccess), (this.config.autoFocus = !1 !== e.autoFocus && 'false' !== e.autoFocus), (this.config.showWarnings = !0 === e.showWarnings || 'true' === e.showWarnings), (this.config.trimTrailingSeparator = !1 !== e.trimTrailingSeparator && 'false' !== e.trimTrailingSeparator), (this.config.keypadFix = !1 !== e.keypadFix && 'false' !== e.keypadFix), (this.config.legacyInputMode = e.legacyInputMode || null), (this.config.minimumExpiryDate = e.minimumExpiryDate || null), (this.config.implementationType = e.implementationType), (this.config.sfLogAtStart = !0 === window._b$dl));
         var n,
             r,
             o,
@@ -9971,13 +9971,13 @@ function sA(e) {
         var l = btoa(window.location.origin),
             u = !!e.forceCompat || 'function' != typeof window.TextEncoder,
             d = I()((n = ''.concat(c))).call(n, u ? 'Compat' : '');
-        (this.config.iframeSrc = I()((r = I()((o = I()((a = I()((i = ''.concat(this.config.loadingContext, 'securedfields/'))).call(i, e.clientKey, '/'))).call(a, '4.5.1', '/securedFields.html?type='))).call(o, d, '&d='))).call(r, l)), (this.config.maskSecurityCode = e.maskSecurityCode), (this.config.shouldDisableIOSArrowKeys = e.shouldDisableIOSArrowKeys);
+        ((this.config.iframeSrc = I()((r = I()((o = I()((a = I()((i = ''.concat(this.config.loadingContext, 'securedfields/'))).call(i, e.clientKey, '/'))).call(a, '4.5.1', '/securedFields.html?type='))).call(o, d, '&d='))).call(r, l)), (this.config.maskSecurityCode = e.maskSecurityCode), (this.config.shouldDisableIOSArrowKeys = e.shouldDisableIOSArrowKeys));
     } else sP('WARNING Config :: no loadingContext has been specified!');
 }
 var sR = function () {};
 function sF() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (this.callbacks.onLoad = e.onLoad ? e.onLoad : sR), (this.callbacks.onConfigSuccess = e.onConfigSuccess ? e.onConfigSuccess : sR), (this.callbacks.onFieldValid = e.onFieldValid ? e.onFieldValid : sR), (this.callbacks.onAllValid = e.onAllValid ? e.onAllValid : sR), (this.callbacks.onBrand = e.onBrand ? e.onBrand : sR), (this.callbacks.onError = e.onError ? e.onError : sR), (this.callbacks.onFocus = e.onFocus ? e.onFocus : sR), (this.callbacks.onBinValue = e.onBinValue ? e.onBinValue : sR), (this.callbacks.onAutoComplete = e.onAutoComplete ? e.onAutoComplete : sR), (this.callbacks.onAdditionalSFConfig = e.onAdditionalSFConfig ? e.onAdditionalSFConfig : sR), (this.callbacks.onAdditionalSFRemoved = e.onAdditionalSFRemoved ? e.onAdditionalSFRemoved : sR), (this.callbacks.onTouchstartIOS = e.onTouchstartIOS ? e.onTouchstartIOS : sR);
+    ((this.callbacks.onLoad = e.onLoad ? e.onLoad : sR), (this.callbacks.onConfigSuccess = e.onConfigSuccess ? e.onConfigSuccess : sR), (this.callbacks.onFieldValid = e.onFieldValid ? e.onFieldValid : sR), (this.callbacks.onAllValid = e.onAllValid ? e.onAllValid : sR), (this.callbacks.onBrand = e.onBrand ? e.onBrand : sR), (this.callbacks.onError = e.onError ? e.onError : sR), (this.callbacks.onFocus = e.onFocus ? e.onFocus : sR), (this.callbacks.onBinValue = e.onBinValue ? e.onBinValue : sR), (this.callbacks.onAutoComplete = e.onAutoComplete ? e.onAutoComplete : sR), (this.callbacks.onAdditionalSFConfig = e.onAdditionalSFConfig ? e.onAdditionalSFConfig : sR), (this.callbacks.onAdditionalSFRemoved = e.onAdditionalSFRemoved ? e.onAdditionalSFRemoved : sR), (this.callbacks.onTouchstartIOS = e.onTouchstartIOS ? e.onTouchstartIOS : sR));
 }
 var sO = function (e) {
         return {
@@ -10007,7 +10007,7 @@ function sI(e) {
         o,
         a = e.fieldType;
     if (('card' === this.state.type && ng(e, 'cvcPolicy') && it(e.cvcPolicy) && ng(this.state.securedFields, nU) && (this.state.securedFields[nU].cvcPolicy = e.cvcPolicy), sE(e, this.state.securedFields[a], this.state.type, this.props.rootNode, this.callbacks.onError), this.state.securedFields[a].isEncrypted)) {
-        (t = (function (e) {
+        ((t = (function (e) {
             var t,
                 n,
                 r,
@@ -10019,7 +10019,7 @@ function sI(e) {
                 l = ['encryptedExpiryMonth', 'encryptedExpiryYear'],
                 u = s ? 2 : 1;
             for (t = 0; t < u; t += 1) {
-                (r = s ? l[t] : o), (n = I()((d = ''.concat(a, '-encrypted-'))).call(d, r));
+                ((r = s ? l[t] : o), (n = I()((d = ''.concat(a, '-encrypted-'))).call(d, r)));
                 var d,
                     p = sO({
                         fieldType: o,
@@ -10037,11 +10037,11 @@ function sI(e) {
             txVariant: this.state.type,
             rootNode: this.props.rootNode
         })),
-            a === nD && (t[0].endDigits = '');
-        for (var i = 0, s = t.length; i < s; i += 1) this.config.allowedDOMAccess && ((n = this.props.rootNode), (r = t[i].uid), (o = void 0), (o = aG(n, '#'.concat(r))) && n.removeChild(o)), this.callbacks.onFieldValid(t[i]);
+            a === nD && (t[0].endDigits = ''));
+        for (var i = 0, s = t.length; i < s; i += 1) (this.config.allowedDOMAccess && ((n = this.props.rootNode), (r = t[i].uid), (o = void 0), (o = aG(n, '#'.concat(r))) && n.removeChild(o)), this.callbacks.onFieldValid(t[i]));
         this.state.securedFields[a].isEncrypted = !1;
     }
-    this.validateForm(), ng(e, 'brand') && this.processBrand(e);
+    (this.validateForm(), ng(e, 'brand') && this.processBrand(e));
 }
 var sM,
     sB = function (e, t, n) {
@@ -10060,14 +10060,14 @@ function sD(e) {
         r = e.fieldType;
     this.config.autoFocus && (('year' !== e.type && r !== nj) || this.setFocusOnFrame(nU), r === nV && this.setFocusOnFrame(nj));
     var o = e[r];
-    (this.state.securedFields[r].isEncrypted = !0),
+    ((this.state.securedFields[r].isEncrypted = !0),
         this.config.allowedDOMAccess &&
             (function (e, t, n) {
                 var r, o, a, i, s;
                 for (r = 0; r < e.length; r += 1) {
                     var c,
                         l = e[r];
-                    (a = l.encryptedFieldName), (o = I()((c = ''.concat(t, '-encrypted-'))).call(c, a)), (i = l.blob), (s = void 0), (s = aG(n, '#'.concat(o))) || (((s = document.createElement('input')).type = 'hidden'), (s.name = a), (s.id = o), n.appendChild(s)), s.setAttribute('value', i);
+                    ((a = l.encryptedFieldName), (o = I()((c = ''.concat(t, '-encrypted-'))).call(c, a)), (i = l.blob), (s = void 0), (s = aG(n, '#'.concat(o))) || (((s = document.createElement('input')).type = 'hidden'), (s.name = a), (s.id = o), n.appendChild(s)), s.setAttribute('value', i));
                 }
             })(o, this.state.type, this.props.rootNode),
         sE(
@@ -10079,7 +10079,7 @@ function sD(e) {
             this.state.type,
             this.props.rootNode,
             this.callbacks.onError
-        );
+        ));
     var a = (function (e) {
         var t,
             n,
@@ -10092,7 +10092,7 @@ function sD(e) {
             l = e.encryptedObjArr,
             u = [];
         for (t = 0; t < l.length; t += 1) {
-            (o = (r = l[t]).encryptedFieldName), (n = I()((d = ''.concat(s, '-encrypted-'))).call(d, o)), (a = r.blob);
+            ((o = (r = l[t]).encryptedFieldName), (n = I()((d = ''.concat(s, '-encrypted-'))).call(d, o)), (a = r.blob));
             var d,
                 p = sO({
                     fieldType: i,
@@ -10102,7 +10102,7 @@ function sD(e) {
                     txVariant: s,
                     rootNode: c
                 });
-            (p.blob = a), u.push(p);
+            ((p.blob = a), u.push(p));
         }
         return u;
     })({
@@ -10139,7 +10139,7 @@ var sL = {
     __NO_BRAND: 'noBrand',
     cards: []
 };
-sL.cards.push({
+(sL.cards.push({
     cardType: 'mc',
     startingRules: [51, 52, 53, 54, 55, 22, 23, 24, 25, 26, 27],
     permittedLengths: [16],
@@ -10363,7 +10363,7 @@ sL.cards.push({
     sL.cards.push({
         cardType: 'ticket',
         expiryDatePolicy: 'hidden'
-    });
+    }));
 var sV = {
         detectCard: function (e, t) {
             if (
@@ -10412,7 +10412,7 @@ var sV = {
                 s.length === c)
             ) {
                 var l = Math.floor(s.length / 4);
-                (r = c + (s.length % 4 > 0 ? l : l - 1)), 'amex' === e.cardType.toLowerCase() && (r = c + 2);
+                ((r = c + (s.length % 4 > 0 ? l : l - 1)), 'amex' === e.cardType.toLowerCase() && (r = c + 2));
             }
             return {
                 shortenedNewValue: o,
@@ -10424,11 +10424,11 @@ var sV = {
             if (!sM) {
                 var e,
                     t = [];
-                N()((e = sL.cards)).call(e, function (e) {
+                (N()((e = sL.cards)).call(e, function (e) {
                     var n;
                     t = I()(t).call(t, null != (n = e.permittedLengths) ? n : []);
                 }),
-                    (sM = Math.min.apply(null, t));
+                    (sM = Math.min.apply(null, t)));
             }
             return sM;
         },
@@ -10446,17 +10446,17 @@ var sV = {
         allCards: sL.cards
     },
     sj = (0, Z.Z)(function e() {
-        (0, C.Z)(this, e), (0, w.Z)(this, 'sfConfig', void 0), (0, w.Z)(this, 'fieldType', void 0), (0, w.Z)(this, 'iframeSrc', void 0), (0, w.Z)(this, 'loadingContext', void 0), (0, w.Z)(this, 'holderEl', void 0), (0, w.Z)(this, 'iframeRef', void 0), (0, w.Z)(this, 'loadToConfigTimeout', void 0), (0, w.Z)(this, '_errorType', void 0), (0, w.Z)(this, '_hasError', void 0), (0, w.Z)(this, '_isValid', void 0), (0, w.Z)(this, '_cvcPolicy', void 0), (0, w.Z)(this, '_expiryDatePolicy', void 0), (0, w.Z)(this, '_iframeContentWindow', void 0), (0, w.Z)(this, '_isEncrypted', void 0), (0, w.Z)(this, '_numKey', void 0), (0, w.Z)(this, '_iframeOnLoadListener', void 0), (0, w.Z)(this, '_postMessageListener', void 0), (0, w.Z)(this, 'onIframeLoadedCallback', void 0), (0, w.Z)(this, 'onConfigCallback', void 0), (0, w.Z)(this, 'onEncryptionCallback', void 0), (0, w.Z)(this, 'onValidationCallback', void 0), (0, w.Z)(this, 'onFocusCallback', void 0), (0, w.Z)(this, 'onBinValueCallback', void 0), (0, w.Z)(this, 'onTouchstartCallback', void 0), (0, w.Z)(this, 'onShiftTabCallback', void 0), (0, w.Z)(this, 'onAutoCompleteCallback', void 0), (this.sfConfig = {});
+        ((0, C.Z)(this, e), (0, w.Z)(this, 'sfConfig', void 0), (0, w.Z)(this, 'fieldType', void 0), (0, w.Z)(this, 'iframeSrc', void 0), (0, w.Z)(this, 'loadingContext', void 0), (0, w.Z)(this, 'holderEl', void 0), (0, w.Z)(this, 'iframeRef', void 0), (0, w.Z)(this, 'loadToConfigTimeout', void 0), (0, w.Z)(this, '_errorType', void 0), (0, w.Z)(this, '_hasError', void 0), (0, w.Z)(this, '_isValid', void 0), (0, w.Z)(this, '_cvcPolicy', void 0), (0, w.Z)(this, '_expiryDatePolicy', void 0), (0, w.Z)(this, '_iframeContentWindow', void 0), (0, w.Z)(this, '_isEncrypted', void 0), (0, w.Z)(this, '_numKey', void 0), (0, w.Z)(this, '_iframeOnLoadListener', void 0), (0, w.Z)(this, '_postMessageListener', void 0), (0, w.Z)(this, 'onIframeLoadedCallback', void 0), (0, w.Z)(this, 'onConfigCallback', void 0), (0, w.Z)(this, 'onEncryptionCallback', void 0), (0, w.Z)(this, 'onValidationCallback', void 0), (0, w.Z)(this, 'onFocusCallback', void 0), (0, w.Z)(this, 'onBinValueCallback', void 0), (0, w.Z)(this, 'onTouchstartCallback', void 0), (0, w.Z)(this, 'onShiftTabCallback', void 0), (0, w.Z)(this, 'onAutoCompleteCallback', void 0), (this.sfConfig = {}));
     });
 function sU(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -10524,11 +10524,11 @@ function sY(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -10553,11 +10553,11 @@ function s$(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -10582,11 +10582,11 @@ function sJ(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -10615,7 +10615,7 @@ var s0 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -10630,7 +10630,7 @@ var s0 = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r(e, t) {
-        (0, C.Z)(this, r), (o = n.call(this));
+        ((0, C.Z)(this, r), (o = n.call(this)));
         var o,
             a = ['fieldType', 'iframeSrc', 'cvcPolicy', 'expiryDatePolicy', 'loadingContext', 'holderEl'],
             i = sW(a).from(e);
@@ -10648,7 +10648,7 @@ var s0 = (function (e) {
             (o.numKey = (function () {
                 if (!window.crypto) return (4294967296 * Math.random()) | 0;
                 var e = new Uint32Array(1);
-                return window.crypto.getRandomValues(e), e[0];
+                return (window.crypto.getRandomValues(e), e[0]);
             })()),
             (o.isEncrypted = !1),
             (o.hasError = !1),
@@ -10724,13 +10724,13 @@ var s0 = (function (e) {
                         S);
                     this.holderEl.appendChild(A);
                     var R = aG(this.holderEl, '.js-iframe');
-                    return R && ((this.iframeContentWindow = R.contentWindow), (this.iframeOnLoadListener = this.iframeOnLoadListenerFn), aQ(R, 'load', this.iframeOnLoadListener, !1)), (this.iframeRef = R), this;
+                    return (R && ((this.iframeContentWindow = R.contentWindow), (this.iframeOnLoadListener = this.iframeOnLoadListenerFn), aQ(R, 'load', this.iframeOnLoadListener, !1)), (this.iframeRef = R), this);
                 }
             },
             {
                 key: 'iframeOnLoadListenerFn',
                 value: function () {
-                    (this.postMessageListener = this.postMessageListenerFn), aQ(window, 'message', this.postMessageListener, !1);
+                    ((this.postMessageListener = this.postMessageListenerFn), aQ(window, 'message', this.postMessageListener, !1));
                     var e = {
                         fieldType: this.fieldType,
                         extraFieldData: this.sfConfig.extraFieldData,
@@ -10751,7 +10751,7 @@ var s0 = (function (e) {
                         maskSecurityCode: this.sfConfig.maskSecurityCode,
                         disableIOSArrowKeys: this.sfConfig.disableIOSArrowKeys
                     };
-                    window._b$dl && console.log('### SecuredField:::: onIframeLoaded:: created configObj=', e), sB(e, this.iframeContentWindow, this.loadingContext), this.onIframeLoadedCallback();
+                    (window._b$dl && console.log('### SecuredField:::: onIframeLoaded:: created configObj=', e), sB(e, this.iframeContentWindow, this.loadingContext), this.onIframeLoadedCallback());
                 }
             },
             {
@@ -10768,10 +10768,10 @@ var s0 = (function (e) {
                             if (this.numKey === s.numKey)
                                 switch (s.action) {
                                     case 'encryption':
-                                        (this.isValid = !0), this.onEncryptionCallback(s);
+                                        ((this.isValid = !0), this.onEncryptionCallback(s));
                                         break;
                                     case 'config':
-                                        window._b$dl && console.log('### SecuredField::postMessageListenerFn:: configured - calling onConfigCallback', s.fieldType), this.onConfigCallback(s);
+                                        (window._b$dl && console.log('### SecuredField::postMessageListenerFn:: configured - calling onConfigCallback', s.fieldType), this.onConfigCallback(s));
                                         break;
                                     case 'focus':
                                         this.onFocusCallback(s);
@@ -10789,7 +10789,7 @@ var s0 = (function (e) {
                                         this.onAutoCompleteCallback(s);
                                         break;
                                     default:
-                                        (this.isValid = !1), this.onValidationCallback(s);
+                                        ((this.isValid = !1), this.onValidationCallback(s));
                                 }
                             else this.sfConfig.showWarnings && sP('WARNING SecuredField :: postMessage listener for iframe :: data mismatch! (Probably a message from an unrelated securedField)');
                         else this.sfConfig.showWarnings && sP('WARNING SecuredField :: postMessage listener for iframe :: data mismatch!');
@@ -10799,12 +10799,12 @@ var s0 = (function (e) {
             {
                 key: 'destroy',
                 value: function () {
-                    aJ(window, 'message', this.postMessageListener, !1),
+                    (aJ(window, 'message', this.postMessageListener, !1),
                         aJ(this.iframeRef, 'load', this.iframeOnLoadListener, !1),
                         (this.iframeContentWindow = null),
                         (function (e) {
                             for (; e.firstChild; ) e.removeChild(e.firstChild);
-                        })(this.holderEl);
+                        })(this.holderEl));
                 }
             },
             {
@@ -10832,55 +10832,55 @@ var s0 = (function (e) {
             {
                 key: 'onIframeLoaded',
                 value: function (e) {
-                    return (this.onIframeLoadedCallback = e), this;
+                    return ((this.onIframeLoadedCallback = e), this);
                 }
             },
             {
                 key: 'onEncryption',
                 value: function (e) {
-                    return (this.onEncryptionCallback = e), this;
+                    return ((this.onEncryptionCallback = e), this);
                 }
             },
             {
                 key: 'onValidation',
                 value: function (e) {
-                    return (this.onValidationCallback = e), this;
+                    return ((this.onValidationCallback = e), this);
                 }
             },
             {
                 key: 'onConfig',
                 value: function (e) {
-                    return (this.onConfigCallback = e), this;
+                    return ((this.onConfigCallback = e), this);
                 }
             },
             {
                 key: 'onFocus',
                 value: function (e) {
-                    return (this.onFocusCallback = e), this;
+                    return ((this.onFocusCallback = e), this);
                 }
             },
             {
                 key: 'onBinValue',
                 value: function (e) {
-                    return (this.onBinValueCallback = e), this;
+                    return ((this.onBinValueCallback = e), this);
                 }
             },
             {
                 key: 'onTouchstart',
                 value: function (e) {
-                    return (this.onTouchstartCallback = e), this;
+                    return ((this.onTouchstartCallback = e), this);
                 }
             },
             {
                 key: 'onShiftTab',
                 value: function (e) {
-                    return (this.onShiftTabCallback = e), this;
+                    return ((this.onShiftTabCallback = e), this);
                 }
             },
             {
                 key: 'onAutoComplete',
                 value: function (e) {
-                    return (this.onAutoCompleteCallback = e), this;
+                    return ((this.onAutoCompleteCallback = e), this);
                 }
             },
             {
@@ -10996,7 +10996,7 @@ var s0 = (function (e) {
 function s1() {
     this.encryptedAttrName = n8;
     var e = aY(this.props.rootNode, '['.concat(this.encryptedAttrName, ']'));
-    return this.config.isCreditCardType ? ((this.isSingleBrandedCard = !1), (this.securityCode = ''), this.createCardSecuredFields(e, n2, n2)) : this.createNonCardSecuredFields(e), e.length;
+    return (this.config.isCreditCardType ? ((this.isSingleBrandedCard = !1), (this.securityCode = ''), this.createCardSecuredFields(e, n2, n2)) : this.createNonCardSecuredFields(e), e.length);
 }
 function s2(e) {
     return s5.apply(this, arguments);
@@ -11024,7 +11024,7 @@ function s5() {
                                     })
                                 );
                             case 5:
-                                n++, (e.next = 1);
+                                (n++, (e.next = 1));
                                 break;
                             case 8:
                             case 'end':
@@ -11054,7 +11054,7 @@ function s8() {
                     for (;;)
                         switch ((e.prev = e.next)) {
                             case 0:
-                                'card' === (o = this.state.type) && 1 === this.config.cardGroupTypes.length && ((o = this.config.cardGroupTypes[0]), (this.state.type = o)), (this.isSingleBrandedCard = 'card' !== o), this.isSingleBrandedCard && (it((a = sV.getCardByBrand(o))) ? ((n = a.cvcPolicy || n2), (r = a.expiryDatePolicy || n2), (this.securityCode = a.securityCode)) : (this.state.type = 'unrecognised-single-brand')), (i = 0);
+                                ('card' === (o = this.state.type) && 1 === this.config.cardGroupTypes.length && ((o = this.config.cardGroupTypes[0]), (this.state.type = o)), (this.isSingleBrandedCard = 'card' !== o), this.isSingleBrandedCard && (it((a = sV.getCardByBrand(o))) ? ((n = a.cvcPolicy || n2), (r = a.expiryDatePolicy || n2), (this.securityCode = a.securityCode)) : (this.state.type = 'unrecognised-single-brand')), (i = 0));
                             case 5:
                                 if (!(i < t.length)) {
                                     e.next = 14;
@@ -11071,10 +11071,10 @@ function s8() {
                             case 10:
                                 window._b$dl && console.log('Finished setting up securedField:', c);
                             case 11:
-                                i++, (e.next = 5);
+                                (i++, (e.next = 5));
                                 break;
                             case 14:
-                                window._b$dl && console.log('Finished setting up all securedFields'),
+                                (window._b$dl && console.log('Finished setting up all securedFields'),
                                     this.isSingleBrandedCard &&
                                         ((l = {
                                             type: this.state.type,
@@ -11086,7 +11086,7 @@ function s8() {
                                         }),
                                         eu()(function () {
                                             u.callbacks.onBrand(l);
-                                        }, 0));
+                                        }, 0)));
                             case 16:
                             case 'end':
                                 return e.stop();
@@ -11131,16 +11131,16 @@ function s4(e, t, n) {
             .onIframeLoaded(function () {
                 var e;
                 if (((r.state.iframeCount += 1), window._b$dl && console.log('### createSecuredFields::onIframeLoaded:: this.state.iframeCount=', r.state.iframeCount), r.state.iframeCount > r.state.numIframes)) throw (r.destroySecuredFields(), new nv('ERROR', I()((e = 'One or more securedFields has just loaded new content. This should never happen. securedFields have been removed.\n                        iframe load count='.concat(r.state.iframeCount, '. Expected count:'))).call(e, r.state.numIframes)));
-                (s.loadToConfigTimeout = eu()(function () {
+                ((s.loadToConfigTimeout = eu()(function () {
                     a({
                         type: s.fieldType,
                         failReason: 'sf took too long to config'
                     });
                 }, 6000)),
-                    r.state.iframeCount === r.state.originalNumIframes && r.callbacks.onLoad({ iframesLoaded: !0 });
+                    r.state.iframeCount === r.state.originalNumIframes && r.callbacks.onLoad({ iframesLoaded: !0 }));
             })
             .onConfig(function (e) {
-                r.handleIframeConfigFeedback(e), clearTimeout(s.loadToConfigTimeout), (s.loadToConfigTimeout = null), o(e);
+                (r.handleIframeConfigFeedback(e), clearTimeout(s.loadToConfigTimeout), (s.loadToConfigTimeout = null), o(e));
             })
             .onFocus(function (e) {
                 r.handleFocus(e);
@@ -11149,12 +11149,12 @@ function s4(e, t, n) {
                 r.handleBinValue(e);
             })
             .onTouchstart(function (e) {
-                r.config.shouldDisableIOSArrowKeys && (r.hasGenuineTouchEvents || e.hasGenuineTouchEvents) && r.callbacks.onTouchstartIOS({ fieldType: e.fieldType }),
+                (r.config.shouldDisableIOSArrowKeys && (r.hasGenuineTouchEvents || e.hasGenuineTouchEvents) && r.callbacks.onTouchstartIOS({ fieldType: e.fieldType }),
                     (e.hasGenuineTouchEvents || r.hasGenuineTouchEvents) &&
                         r.postMessageToAllIframes({
                             fieldType: e.fieldType,
                             fieldClick: !0
-                        });
+                        }));
             })
             .onShiftTab(function (e) {
                 r.handleSFShiftTab(e.fieldType);
@@ -11196,7 +11196,7 @@ var s3 = {
             var n = t.value,
                 r = 'selectionStart' in t ? t.selectionStart : 0,
                 o = !1;
-            r === n.length && ((r -= 1), (o = !0)), (t.value = n);
+            (r === n.length && ((r -= 1), (o = !0)), (t.value = n));
             try {
                 t.setSelectionRange &&
                     (t.focus(),
@@ -11210,14 +11210,14 @@ var s3 = {
         } else if (this.config.keypadFix) {
             var a = this.props.rootNode,
                 i = document.createElement('input');
-            (i.style.width = '1px'), (i.style.height = '1px'), (i.style.opacity = '0'), (i.style.fontSize = '18px'), a.appendChild(i), i.focus(), a.removeChild(i);
+            ((i.style.width = '1px'), (i.style.height = '1px'), (i.style.opacity = '0'), (i.style.fontSize = '18px'), a.appendChild(i), i.focus(), a.removeChild(i));
         }
-        this.destroyTouchendListener(),
+        (this.destroyTouchendListener(),
             (this.state.registerFieldForIos = !1),
             this.postMessageToAllIframes({
                 fieldType: 'webInternalElement',
                 fieldClick: !0
-            });
+            }));
     },
     s7 = function (e) {
         this.hasGenuineTouchEvents = !0;
@@ -11240,12 +11240,12 @@ var s3 = {
     },
     ce = function () {
         var e = aG(document, 'body');
-        (e.style.cursor = 'pointer'), aQ(e, 'touchend', this.touchendListener), (this.state.registerFieldForIos = !0);
+        ((e.style.cursor = 'pointer'), aQ(e, 'touchend', this.touchendListener), (this.state.registerFieldForIos = !0));
     },
     ct = function () {
         if (s3.__IS_IOS) {
             var e = aG(document, 'body');
-            (e.style.cursor = 'auto'), aJ(e, 'touchend', this.touchendListener);
+            ((e.style.cursor = 'auto'), aJ(e, 'touchend', this.touchendListener));
         }
     },
     cn = function () {
@@ -11276,11 +11276,11 @@ var s3 = {
         switch (this.state.type) {
             case 'ach':
                 var t;
-                e === nK && (t = nH),
+                (e === nK && (t = nH),
                     (n = {
                         fieldToFocus: t,
                         additionalField: void 0
-                    });
+                    }));
                 break;
             case 'giftcard':
                 n = (function (e, t) {
@@ -11360,11 +11360,11 @@ function ci(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -11422,7 +11422,7 @@ function cu(e, t) {
     var n,
         r,
         o = 'card' === this.state.type;
-    if (!e || !l()(e).length) return o ? (this.sendBrandToCardSF({ brand: 'reset' }), this.sendExpiryDatePolicyToSF({ expiryDatePolicy: n2 })) : t && this.processBrand(cs(cs({}, t), {}, { fieldType: nD })), void ('card' === this.state.type && ng(this.state.securedFields, nL) && (this.state.securedFields[nL].expiryDatePolicy = n2));
+    if (!e || !l()(e).length) return (o ? (this.sendBrandToCardSF({ brand: 'reset' }), this.sendExpiryDatePolicyToSF({ expiryDatePolicy: n2 })) : t && this.processBrand(cs(cs({}, t), {}, { fieldType: nD })), void ('card' === this.state.type && ng(this.state.securedFields, nL) && (this.state.securedFields[nL].expiryDatePolicy = n2)));
     var a = e.supportedBrands[0],
         i = a.brand,
         s = null != (n = a.expiryDatePolicy) ? n : !0 === a.showExpiryDate ? n2 : n9,
@@ -11442,9 +11442,9 @@ function cu(e, t) {
             },
             (null == a ? void 0 : a.panLength) && { panLength: null == a ? void 0 : a.panLength }
         );
-        this.sendBrandToCardSF(u), this.sendExpiryDatePolicyToSF({ expiryDatePolicy: s });
+        (this.sendBrandToCardSF(u), this.sendExpiryDatePolicyToSF({ expiryDatePolicy: s }));
     }
-    ng(this.state.securedFields, nU) && (this.state.securedFields[nU].cvcPolicy = a.cvcPolicy), ng(this.state.securedFields, nL) ? (this.state.securedFields[nL].expiryDatePolicy = s) : ng(this.state.securedFields, nV) && ng(this.state.securedFields, nj) && ((this.state.securedFields[nV].expiryDatePolicy = s), (this.state.securedFields[nj].expiryDatePolicy = s)), this.validateForm();
+    (ng(this.state.securedFields, nU) && (this.state.securedFields[nU].cvcPolicy = a.cvcPolicy), ng(this.state.securedFields, nL) ? (this.state.securedFields[nL].expiryDatePolicy = s) : ng(this.state.securedFields, nV) && ng(this.state.securedFields, nj) && ((this.state.securedFields[nV].expiryDatePolicy = s), (this.state.securedFields[nj].expiryDatePolicy = s)), this.validateForm());
 }
 function cd(e, t, n) {
     var r = e.csfState,
@@ -11473,10 +11473,10 @@ function cp(e, t) {
                 fieldType: e,
                 numKey: n.securedFields[e].numKey
             };
-            N()(o).call(o, function (e) {
+            (N()(o).call(o, function (e) {
                 a[e] = t[e];
             }),
-                sB(a, sT(n, e), r.loadingContext);
+                sB(a, sT(n, e), r.loadingContext));
         });
     }
 }
@@ -11520,7 +11520,7 @@ function ch(e, t) {
                 r.loadingContext
             );
         var u = c ? sz(['brand', 'cvcPolicy', 'cvcText', 'expiryDatePolicy', 'showSocialSecurityNumber']).from(t) : null;
-        return u && u.brand && ((u.type = n.type), (u.rootNode = o.rootNode), a.onBrand(u)), !0;
+        return (u && u.brand && ((u.type = n.type), (u.rootNode = o.rootNode), a.onBrand(u)), !0);
     }
     return !1;
 }
@@ -11528,11 +11528,11 @@ function cf(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -11558,7 +11558,7 @@ function cm(e, t) {
             }
             return e;
         })({}, t);
-        delete a.numKey, o.onAutoComplete(a);
+        (delete a.numKey, o.onAutoComplete(a));
     }
     if ('cc-exp' === t.name) {
         var i,
@@ -11614,11 +11614,11 @@ function cy(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -11643,9 +11643,9 @@ function cv(e, t) {
             }
             return e;
         })({}, t);
-    delete a.numKey, (a.rootNode = r.rootNode), (a.type = n.type);
+    (delete a.numKey, (a.rootNode = r.rootNode), (a.type = n.type));
     var i = a.fieldType;
-    a.focus ? n.currentFocusObject !== i && ((n.currentFocusObject = i), s3.__IS_IOS && !n.registerFieldForIos && this.handleIOSTouchEvents()) : n.currentFocusObject === i && (n.currentFocusObject = null), (a.currentFocusObject = n.currentFocusObject), o.onFocus(a);
+    (a.focus ? n.currentFocusObject !== i && ((n.currentFocusObject = i), s3.__IS_IOS && !n.registerFieldForIos && this.handleIOSTouchEvents()) : n.currentFocusObject === i && (n.currentFocusObject = null), (a.currentFocusObject = n.currentFocusObject), o.onFocus(a));
 }
 function cg(e, t, n) {
     var r = e.csfState,
@@ -11657,7 +11657,7 @@ function cg(e, t, n) {
             type: r.type
         };
         o.onAdditionalSFConfig(a);
-    } else if (r.iframeConfigCount === r.originalNumIframes) return t(), !0;
+    } else if (r.iframeConfigCount === r.originalNumIframes) return (t(), !0);
     return !1;
 }
 function cb(e, t) {
@@ -11706,19 +11706,19 @@ function ck(e, t) {
             binValue: o,
             type: n.type
         };
-    a && ((s.encryptedBin = a), (s.uuid = i)), r.onBinValue(s);
+    (a && ((s.encryptedBin = a), (s.uuid = i)), r.onBinValue(s));
 }
 function cC() {
     var e = this;
     this.postMessageToAllIframes({ destroy: !0 });
     var t = l()(this.state.securedFields);
-    N()(t).call(t, function (t) {
+    (N()(t).call(t, function (t) {
         var n = e.state.securedFields[t];
-        n && n.destroy(), (e.state.securedFields[t] = null);
+        (n && n.destroy(), (e.state.securedFields[t] = null));
     }),
         this.destroyTouchendListener(),
         this.destroyTouchstartListener(),
-        (this.state.securedFields = {});
+        (this.state.securedFields = {}));
 }
 var cZ = function () {
         sP(''.concat(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'You cannot use secured fields', " - they are not yet configured. Use the 'onConfigSuccess' callback to know when this has happened."));
@@ -11731,7 +11731,7 @@ var cZ = function () {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -11746,7 +11746,7 @@ var cZ = function () {
                     return (0, ei.Z)(this, e);
                 });
         function r(e) {
-            (0, C.Z)(this, r),
+            ((0, C.Z)(this, r),
                 ((t = n.call(this, e)).state = {
                     type: t.props.type,
                     brand:
@@ -11770,7 +11770,7 @@ var cZ = function () {
                     registerFieldForIos: !1,
                     securedFields: {},
                     isKCP: !1
-                });
+                }));
             var t,
                 o = {
                     csfState: t.state,
@@ -11778,16 +11778,16 @@ var cZ = function () {
                     csfProps: t.props,
                     csfCallbacks: t.callbacks
                 };
-            return (t.configHandler = sA), (t.callbacksHandler = sF), (t.validateForm = ia(c_, o)), (t.isConfigured = ia(cb, o, t.validateForm)), (t.handleIframeConfigFeedback = ia(cg, o, t.isConfigured)), (t.processBrand = ia(ch, o)), (t.handleValidation = sI), (t.handleEncryption = sD), (t.createSecuredFields = s1), (t.createNonCardSecuredFields = s2), (t.createCardSecuredFields = s9), (t.setupSecuredField = s4), (t.postMessageToAllIframes = ia(cp, o)), (t.setFocusOnFrame = ia(cd, o)), (t.handleFocus = ia(cv, o)), (t.handleIOSTouchEvents = ce), (t.touchendListener = R()(s6).call(s6, (0, eo.Z)(t))), (t.destroyTouchendListener = ct), (t.touchstartListener = R()(s7).call(s7, (0, eo.Z)(t))), (t.destroyTouchstartListener = cn), (t.handleSFShiftTab = ca), (t.handleShiftTab = co), (t.destroySecuredFields = cC), (t.processAutoComplete = ia(cm, o)), (t.handleBinValue = ia(ck, o)), (t.handleBrandFromBinLookup = cu), (t.sendBrandToCardSF = cc), (t.sendExpiryDatePolicyToSF = cl), t.init(), t;
+            return ((t.configHandler = sA), (t.callbacksHandler = sF), (t.validateForm = ia(c_, o)), (t.isConfigured = ia(cb, o, t.validateForm)), (t.handleIframeConfigFeedback = ia(cg, o, t.isConfigured)), (t.processBrand = ia(ch, o)), (t.handleValidation = sI), (t.handleEncryption = sD), (t.createSecuredFields = s1), (t.createNonCardSecuredFields = s2), (t.createCardSecuredFields = s9), (t.setupSecuredField = s4), (t.postMessageToAllIframes = ia(cp, o)), (t.setFocusOnFrame = ia(cd, o)), (t.handleFocus = ia(cv, o)), (t.handleIOSTouchEvents = ce), (t.touchendListener = R()(s6).call(s6, (0, eo.Z)(t))), (t.destroyTouchendListener = ct), (t.touchstartListener = R()(s7).call(s7, (0, eo.Z)(t))), (t.destroyTouchstartListener = cn), (t.handleSFShiftTab = ca), (t.handleShiftTab = co), (t.destroySecuredFields = cC), (t.processAutoComplete = ia(cm, o)), (t.handleBinValue = ia(ck, o)), (t.handleBrandFromBinLookup = cu), (t.sendBrandToCardSF = cc), (t.sendExpiryDatePolicyToSF = cl), t.init(), t);
         }
         return (
             (0, Z.Z)(r, [
                 {
                     key: 'init',
                     value: function () {
-                        this.configHandler(this.props), this.callbacksHandler(this.props.callbacks);
+                        (this.configHandler(this.props), this.callbacksHandler(this.props.callbacks));
                         var e = this.createSecuredFields();
-                        (this.state.numIframes = this.state.originalNumIframes = e), (this.state.isKCP = !!this.props.isKCP), s3.__IS_IOS && this.config.shouldDisableIOSArrowKeys && ((this.hasGenuineTouchEvents = !1), aQ(document, 'touchstart', this.touchstartListener));
+                        ((this.state.numIframes = this.state.originalNumIframes = e), (this.state.isKCP = !!this.props.isKCP), s3.__IS_IOS && this.config.shouldDisableIOSArrowKeys && ((this.hasGenuineTouchEvents = !1), aQ(document, 'touchstart', this.touchstartListener)));
                     }
                 },
                 {
@@ -11850,7 +11850,7 @@ var cZ = function () {
                             },
                             removeSecuredField: function (t) {
                                 if (e.state.securedFields[t]) {
-                                    e.state.securedFields[t].destroy(), delete e.state.securedFields[t], (e.state.numIframes -= 1), (e.state.iframeCount -= 1);
+                                    (e.state.securedFields[t].destroy(), delete e.state.securedFields[t], (e.state.numIframes -= 1), (e.state.iframeCount -= 1));
                                     var n = {
                                         additionalIframeRemoved: !0,
                                         fieldType: t,
@@ -11876,11 +11876,11 @@ function cS(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -11921,17 +11921,17 @@ var cN = function (e) {
     },
     cx = function (e) {
         var t;
-        return 'object' === (0, _.Z)(e) && (t = e), 'string' != typeof e || (t = aG(document, e)) ? t : null;
+        return ('object' === (0, _.Z)(e) && (t = e), 'string' != typeof e || (t = aG(document, e)) ? t : null);
     };
 function cP(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -11956,28 +11956,28 @@ function cR(e, t, n, r) {
     return ((t !== n5 && t !== n9) || 0 !== n[e]) && r[e];
 }
 var cF = function (e) {
-        (this.numCharsInField[e.fieldType] = e.numChars), this.props.onFocus(e);
+        ((this.numCharsInField[e.fieldType] = e.numChars), this.props.onFocus(e));
     },
     cO = function (e) {
         var t = this;
         return (
             !this.state.detectedUnsupportedBrands &&
             (this.setState({ isSfpValid: e.allValid }, function () {
-                t.props.onChange(t.state, { event: 'handleOnAllValid' }), t.props.onAllValid(e);
+                (t.props.onChange(t.state, { event: 'handleOnAllValid' }), t.props.onAllValid(e));
             }),
             !0)
         );
     },
     cE = function (e) {
         var t = this;
-        this.setState({ autoCompleteName: e.value }, function () {
-            t.props.onChange(t.state, {
+        (this.setState({ autoCompleteName: e.value }, function () {
+            (t.props.onChange(t.state, {
                 event: 'handleOnAutoComplete',
                 fieldType: e.fieldType
             }),
-                t.setState({ autoCompleteName: null });
+                t.setState({ autoCompleteName: null }));
         }),
-            this.props.onAutoComplete(e);
+            this.props.onAutoComplete(e));
     },
     cI = function (e) {
         var t = this;
@@ -11993,11 +11993,11 @@ var cF = function (e) {
                     };
                 },
                 function () {
-                    t.props.onChange(t.state, {
+                    (t.props.onChange(t.state, {
                         event: 'handleOnFieldValid',
                         fieldType: e.fieldType
                     }),
-                        t.props.onFieldValid(e);
+                        t.props.onFieldValid(e));
                 }
             ),
             !0)
@@ -12005,20 +12005,20 @@ var cF = function (e) {
     },
     cM = function (e) {
         var t = this;
-        clearTimeout(this.csfLoadFailTimeout),
+        (clearTimeout(this.csfLoadFailTimeout),
             (this.csfLoadFailTimeout = null),
             this.props.onLoad(e),
             (this.csfConfigFailTimeout = eu()(function () {
                 'ready' !== t.state.status && (t.setState({ status: 'csfConfigFailure' }), t.props.onError(new nv('ERROR', 'secured fields have failed to configure')));
-            }, this.csfConfigFailTimeoutMS));
+            }, this.csfConfigFailTimeoutMS)));
     },
     cB = function (e) {
         var t = this;
-        clearTimeout(this.csfConfigFailTimeout),
+        (clearTimeout(this.csfConfigFailTimeout),
             (this.csfConfigFailTimeout = null),
             this.setState({ status: 'ready' }, function () {
                 t.props.onConfigSuccess(e);
-            });
+            }));
     },
     cT = function (e) {
         var t = this;
@@ -12080,11 +12080,11 @@ function cj(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -12113,7 +12113,7 @@ var cq = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -12206,14 +12206,14 @@ var cq = (function (e) {
                               })
                             : [],
                         o = Y()(r).call(r, sw, {});
-                    this.setState({ valid: o }),
+                    (this.setState({ valid: o }),
                         N()(r).call(r, function (e) {
                             n.numCharsInField[e] = 0;
                         }),
                         (this.numDateFields = P()(r).call(r, function (e) {
                             return e.match(/Expiry/);
                         }).length),
-                        r.length ? (this.destroy(), this.initializeCSF(this.rootNode)) : this.handleOnNoDataRequired();
+                        r.length ? (this.destroy(), this.initializeCSF(this.rootNode)) : this.handleOnNoDataRequired());
                 }
             },
             {
@@ -12268,10 +12268,10 @@ var cq = (function (e) {
                             maskSecurityCode: this.props.maskSecurityCode,
                             shouldDisableIOSArrowKeys: !!this.props.disableIOSArrowKeys
                         };
-                    (this.csf = cN(r)),
+                    ((this.csf = cN(r)),
                         (this.csfLoadFailTimeout = eu()(function () {
                             'ready' !== t.state.status && (t.setState({ status: 'csfLoadFailure' }), t.props.onError(new nv('ERROR', 'secured field iframes have failed to load')));
-                        }, this.csfLoadFailTimeoutMS));
+                        }, this.csfLoadFailTimeoutMS)));
                 }
             },
             {
@@ -12279,7 +12279,7 @@ var cq = (function (e) {
                 value: function () {
                     var e = this,
                         t = !1;
-                    this.props.koreanAuthenticationRequired && (t = this.issuingCountryCode ? 'kr' === this.issuingCountryCode : 'kr' === this.props.countryCode),
+                    (this.props.koreanAuthenticationRequired && (t = this.issuingCountryCode ? 'kr' === this.issuingCountryCode : 'kr' === this.props.countryCode),
                         this.state.hasKoreanFields &&
                             !t &&
                             (this.setState(
@@ -12312,7 +12312,7 @@ var cq = (function (e) {
                                 }
                             ),
                             this.csf.addSecuredField(nq),
-                            this.csf.setKCPStatus(!0));
+                            this.csf.setKCPStatus(!0)));
                 }
             },
             {
@@ -12325,7 +12325,7 @@ var cq = (function (e) {
                 key: 'handleUnsupportedCard',
                 value: function (e) {
                     var t = !!e.error;
-                    return t && this.setState({ detectedUnsupportedBrands: e.detectedBrands }), (e.rootNode = this.rootNode), this.handleOnError(e, t), this.csf && this.csf.hasUnsupportedCard(nD, e.error), t;
+                    return (t && this.setState({ detectedUnsupportedBrands: e.detectedBrands }), (e.rootNode = this.rootNode), this.handleOnError(e, t), this.csf && this.csf.hasUnsupportedCard(nD, e.error), t);
                 }
             },
             {
@@ -12378,7 +12378,7 @@ var cq = (function (e) {
                                     (s = (i = Y()(a).call(
                                         a,
                                         function (e, t) {
-                                            return e.isFieldOfType || ((e.isFieldOfType = n === t), (e.fieldIsValid = !o.errors[t])), e;
+                                            return (e.isFieldOfType || ((e.isFieldOfType = n === t), (e.fieldIsValid = !o.errors[t])), e);
                                         },
                                         {
                                             isFieldOfType: !1,
@@ -12401,7 +12401,7 @@ var cq = (function (e) {
                             error: tO(o, 'errors.'.concat(e)) || rh[e] || rp,
                             type: 'card'
                         };
-                        n.handleOnError(t, !!o.detectedUnsupportedBrands), n.csf && n.csf.isValidated && n.csf.isValidated(e, t.error);
+                        (n.handleOnError(t, !!o.detectedUnsupportedBrands), n.csf && n.csf.isValidated && n.csf.isValidated(e, t.error));
                     });
                 }
             },
@@ -12438,7 +12438,7 @@ var cq = (function (e) {
                 value: function (e, t) {
                     var n,
                         r = this;
-                    this.state.detectedUnsupportedBrands &&
+                    (this.state.detectedUnsupportedBrands &&
                         (this.setState(function (e) {
                             return {
                                 errors: cU(cU({}, e.errors), {}, (0, w.Z)({}, nD, !1)),
@@ -12451,13 +12451,13 @@ var cq = (function (e) {
                             fieldType: 'encryptedCardNumber',
                             error: ''
                         }),
-                        (this.issuingCountryCode = null == e || null == (n = e.issuingCountryCode) ? void 0 : n.toLowerCase());
+                        (this.issuingCountryCode = null == e || null == (n = e.issuingCountryCode) ? void 0 : n.toLowerCase()));
                     var o = (null == t ? void 0 : t.brand) && O()(n1).call(n1, t.brand);
-                    o &&
+                    (o &&
                         this.setState(t, function () {
                             r.props.onChange(r.state);
                         }),
-                        this.csf && this.csf.brandsFromBinLookup(e, o ? t : null);
+                        this.csf && this.csf.brandsFromBinLookup(e, o ? t : null));
                 }
             },
             {
@@ -12603,11 +12603,11 @@ function cJ(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -12636,7 +12636,7 @@ var cX = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'mc',
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'visa',
             r = cX(e);
-        return r[0].brand !== t && r[0].brand !== n && te()(r).call(r), (r.length = 1), r;
+        return (r[0].brand !== t && r[0].brand !== n && te()(r).call(r), (r.length = 1), r);
     };
 function c1(e, t, n) {
     var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -12691,22 +12691,22 @@ function c1(e, t, n) {
                             selectedBrandValue: '',
                             leadBrand: d
                         });
-                    c(v.dualBrandSelectElements),
+                    (c(v.dualBrandSelectElements),
                         u(v.selectedBrandValue),
                         i.current.processBinLookupResponse({
                             issuingCountryCode: e.issuingCountryCode,
                             supportedBrands: [v.leadBrand]
                         }),
-                        v.leadBrand.panLength > 0 && (r.current = v.leadBrand.panLength);
+                        v.leadBrand.panLength > 0 && (r.current = v.leadBrand.panLength));
                 } else
-                    c([]),
+                    (c([]),
                         u(''),
                         m || u(y[0].brand),
                         i.current.processBinLookupResponse({
                             issuingCountryCode: e.issuingCountryCode,
                             supportedBrands: y
                         }),
-                        y[0].panLength > 0 && (r.current = y[0].panLength);
+                        y[0].panLength > 0 && (r.current = y[0].panLength));
             }
         },
         handleDualBrandSelection: function (e) {
@@ -12720,7 +12720,7 @@ function c1(e, t, n) {
                 (r = Y()(s).call(
                     s,
                     function (e, n) {
-                        return n.brandObject.brand === t && e.push(n.brandObject), e;
+                        return (n.brandObject.brand === t && e.push(n.brandObject), e);
                     },
                     []
                 )).length &&
@@ -13035,11 +13035,11 @@ function lf(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -13849,11 +13849,11 @@ function lE(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -14004,7 +14004,7 @@ var lM = function (e) {
             ((t = e.onFocus),
             (n = e.onBlur),
             function (e) {
-                et(e.currentFocusObject), !0 === e.focus ? t(e) : n(e);
+                (et(e.currentFocusObject), !0 === e.focus ? t(e) : n(e));
             }),
         tv = function () {
             return (function (e) {
@@ -14023,12 +14023,12 @@ var lM = function (e) {
                             return 'number' != typeof e;
                         }),
                         p = d;
-                    s &&
+                    (s &&
                         (p = P()(d).call(d, function (e) {
                             return O()(s).call(s, e);
                         })),
                         (c = I()(c9).call(c9, p)),
-                        l && (c = t.positionHolderNameOnTop ? I()(c8).call(c8, p) : I()(c4).call(c4, p));
+                        l && (c = t.positionHolderNameOnTop ? I()(c8).call(c8, p) : I()(c4).call(c4, p)));
                 }
                 return c;
             })(
@@ -14049,7 +14049,7 @@ var lM = function (e) {
             e6('webInternalElement' !== e.fieldType ? e.fieldType : e.name);
         }, []),
         tb = function (e) {
-            tc('billingAddress', e.data), tl('billingAddress', e.isValid), tu('billingAddress', e.errors);
+            (tc('billingAddress', e.data), tl('billingAddress', e.isValid), tu('billingAddress', e.errors));
         },
         t_ =
             ((r = tv()),
@@ -14108,10 +14108,10 @@ var lM = function (e) {
                                         },
                                         n: function () {
                                             var e = n.next();
-                                            return (i = e.done), e;
+                                            return ((i = e.done), e);
                                         },
                                         e: function (e) {
-                                            (s = !0), (a = e);
+                                            ((s = !0), (a = e));
                                         },
                                         f: function () {
                                             try {
@@ -14159,8 +14159,8 @@ var lM = function (e) {
             },
             [eN, ek]
         );
-    (b.current.showValidation = function () {
-        (c.current = !0), null == f || f(), s.current.showValidation(), tt(['holderName', 'socialSecurityNumber', 'taxNumber']), null != v && v.current && v.current.showValidation();
+    ((b.current.showValidation = function () {
+        ((c.current = !0), null == f || f(), s.current.showValidation(), tt(['holderName', 'socialSecurityNumber', 'taxNumber']), null != v && v.current && v.current.showValidation());
     }),
         (b.current.processBinLookupResponse = function (e, t) {
             tk.processBinLookup(e, t);
@@ -14185,7 +14185,7 @@ var lM = function (e) {
         ),
         t1(
             function () {
-                z(
+                (z(
                     lI(
                         lI({}, K),
                         {},
@@ -14208,7 +14208,7 @@ var lM = function (e) {
                                 billingAddress: !!ta.billingAddress && ta.billingAddress
                             }
                         )
-                    );
+                    ));
                 var t,
                     n,
                     r =
@@ -14235,7 +14235,7 @@ var lM = function (e) {
                 );
             },
             [tr, ta, ti]
-        );
+        ));
     var tC = a0($);
     t1(
         function () {
@@ -14261,10 +14261,10 @@ var lM = function (e) {
                 g = null == v ? void 0 : v.currentErrorsSortedByLayout;
             switch ((Q(g), null == v ? void 0 : v.action)) {
                 case rf:
-                    m && ((b = c.current), (_ = null == v ? void 0 : v.fieldToFocus), b && (O()(nQ).call(nQ, _) ? s.current.setFocusOn(_) : lF(_, s))),
+                    (m && ((b = c.current), (_ = null == v ? void 0 : v.fieldToFocus), b && (O()(nQ).call(nQ, _) ? s.current.setFocusOn(_) : lF(_, s))),
                         eu()(function () {
                             c.current = !1;
-                        }, 300);
+                        }, 300));
                     break;
                 case rm:
                     var b,
@@ -14340,7 +14340,7 @@ var lM = function (e) {
                                         a,
                                         function (e, t) {
                                             var n;
-                                            return e.length || (O()((n = t.modes)).call(n, o) && e.push(t.validate)), e;
+                                            return (e.length || (O()((n = t.modes)).call(n, o) && e.push(t.validate)), e);
                                         },
                                         []
                                     )[0])(t.autoCompleteName)
@@ -14348,7 +14348,7 @@ var lM = function (e) {
                                         : null;
                                 i && (tc('holderName', i), tl('holderName', !0), tu('holderName', null));
                             }
-                        } else e.autoFocus && _.current > 0 && ((!L.encryptedCardNumber && null != (r = t.valid) && r.encryptedCardNumber) || (L.encryptedCardNumber && t.valid.encryptedCardNumber && 'handleOnBrand' === n.event)) && t_(), z(lI(lI({}, K), t.data)), M(lI(lI({}, E), t.errors)), V(lI(lI({}, L), t.valid)), ei(t.isSfpValid), eg(t.cvcPolicy), eW(t.showSocialSecurityNumber), eh(t.expiryDatePolicy);
+                        } else (e.autoFocus && _.current > 0 && ((!L.encryptedCardNumber && null != (r = t.valid) && r.encryptedCardNumber) || (L.encryptedCardNumber && t.valid.encryptedCardNumber && 'handleOnBrand' === n.event)) && t_(), z(lI(lI({}, K), t.data)), M(lI(lI({}, E), t.errors)), V(lI(lI({}, L), t.valid)), ei(t.isSfpValid), eg(t.cvcPolicy), eW(t.showSocialSecurityNumber), eh(t.expiryDatePolicy));
                     },
                     onBrand: e.onBrand,
                     onFocus: ty,
@@ -14442,11 +14442,11 @@ function lB(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -14454,7 +14454,7 @@ lM.defaultProps = cK;
 var lT = function (e) {
         var t = null;
         return function (n) {
-            !1 !== e.props.doBinLookup &&
+            (!1 !== e.props.doBinLookup &&
                 (n.encryptedBin && e.props.clientKey
                     ? ((t = n.uuid),
                       o8(
@@ -14477,7 +14477,7 @@ var lT = function (e) {
                                       s = Y()((a = r.brands)).call(
                                           a,
                                           function (e, t) {
-                                              return e.detectedBrands.push(t.brand), e.paymentMethodVariants.push(t.paymentMethodVariant), !0 === t.supported && e.supportedBrands.push(t), e;
+                                              return (e.detectedBrands.push(t.brand), e.paymentMethodVariants.push(t.paymentMethodVariant), !0 === t.supported && e.supportedBrands.push(t), e);
                                           },
                                           {
                                               supportedBrands: [],
@@ -14543,14 +14543,14 @@ var lT = function (e) {
                                       );
                                   }
                               } else
-                                  e.onBinLookup({
+                                  (e.onBinLookup({
                                       type: n.type,
                                       detectedBrands: null,
                                       supportedBrands: null,
                                       paymentMethodVariants: null,
                                       brands: e.props.brands || nG
                                   }),
-                                      e.processBinLookupResponse({}, !0);
+                                      e.processBinLookupResponse({}, !0));
                           else
                               (null != r && r.requestId) ||
                                   e.props.onError(
@@ -14569,7 +14569,7 @@ var lT = function (e) {
                           error: ''
                       }),
                       e.onBinLookup({ isReset: !0 }))),
-                e.props.onBinValue && e.props.onBinValue(n);
+                e.props.onBinValue && e.props.onBinValue(n));
         };
     },
     lD = (function (e) {
@@ -14580,7 +14580,7 @@ var lT = function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -14595,13 +14595,13 @@ var lT = function (e) {
                     return (0, ei.Z)(this, e);
                 });
         function r(e, t, o) {
-            (0, C.Z)(this, r), (s = n.call(this)), (0, w.Z)((0, eo.Z)(s), 'reason', void 0), (0, w.Z)((0, eo.Z)(s), 'message', void 0), (0, w.Z)((0, eo.Z)(s), 'source', void 0), (0, w.Z)((0, eo.Z)(s), 'scheme', void 0);
+            ((0, C.Z)(this, r), (s = n.call(this)), (0, w.Z)((0, eo.Z)(s), 'reason', void 0), (0, w.Z)((0, eo.Z)(s), 'message', void 0), (0, w.Z)((0, eo.Z)(s), 'source', void 0), (0, w.Z)((0, eo.Z)(s), 'scheme', void 0));
             var a,
                 i,
                 s,
                 c = 'error' in e ? (null == e || null == (a = e.error) ? void 0 : a.message) : null == e ? void 0 : e.message,
                 l = 'error' in e ? (null == e || null == (i = e.error) ? void 0 : i.reason) : null == e ? void 0 : e.reason;
-            return (s.message = c), (s.reason = l), (s.source = t), (s.scheme = o), s;
+            return ((s.message = c), (s.reason = l), (s.source = t), (s.scheme = o), s);
         }
         return (
             (0, Z.Z)(r, [
@@ -14620,7 +14620,7 @@ var lT = function (e) {
         var e, t, n, r, o, i;
         function c(e, t) {
             if (((0, C.Z)(this, c), (0, w.Z)(this, 'schemeSdk', void 0), (0, w.Z)(this, 'schemeName', void 0), (0, w.Z)(this, 'customSdkConfiguration', void 0), (0, w.Z)(this, 'sdkUrl', void 0), (0, w.Z)(this, 'scriptElement', null), !e)) throw Error('AbstractSrcInitiator: Invalid SDK URL');
-            (this.sdkUrl = e), (this.customSdkConfiguration = t);
+            ((this.sdkUrl = e), (this.customSdkConfiguration = t));
         }
         return (
             (0, Z.Z)(c, [
@@ -14638,7 +14638,7 @@ var lT = function (e) {
                                                         e.next = 4;
                                                         break;
                                                     }
-                                                    return (this.scriptElement = new iO(this.sdkUrl)), (e.next = 4), this.scriptElement.load();
+                                                    return ((this.scriptElement = new iO(this.sdkUrl)), (e.next = 4), this.scriptElement.load());
                                                 case 4:
                                                     this.assignSdkReference();
                                                 case 5:
@@ -14672,9 +14672,9 @@ var lT = function (e) {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (e.next = 3), this.schemeSdk.checkout(t);
+                                                    return ((e.prev = 0), (e.next = 3), this.schemeSdk.checkout(t));
                                                 case 3:
-                                                    return (n = e.sent), e.abrupt('return', n);
+                                                    return ((n = e.sent), e.abrupt('return', n));
                                                 case 7:
                                                     throw ((e.prev = 7), (e.t0 = e.catch(0)), new lD(e.t0, 'checkout', this.schemeName));
                                                 case 11:
@@ -14702,7 +14702,7 @@ var lT = function (e) {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (e.next = 3), this.schemeSdk.unbindAppInstance();
+                                                    return ((e.prev = 0), (e.next = 3), this.schemeSdk.unbindAppInstance());
                                                 case 3:
                                                     e.next = 9;
                                                     break;
@@ -14734,9 +14734,9 @@ var lT = function (e) {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (e.next = 3), this.schemeSdk.isRecognized();
+                                                    return ((e.prev = 0), (e.next = 3), this.schemeSdk.isRecognized());
                                                 case 3:
-                                                    return (t = e.sent), e.abrupt('return', t);
+                                                    return ((t = e.sent), e.abrupt('return', t));
                                                 case 7:
                                                     throw ((e.prev = 7), (e.t0 = e.catch(0)), new lD(e.t0, 'isRecognized', this.schemeName));
                                                 case 11:
@@ -14765,9 +14765,9 @@ var lT = function (e) {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (e.next = 3), this.schemeSdk.initiateIdentityValidation();
+                                                    return ((e.prev = 0), (e.next = 3), this.schemeSdk.initiateIdentityValidation());
                                                 case 3:
-                                                    return (t = e.sent), e.abrupt('return', t);
+                                                    return ((t = e.sent), e.abrupt('return', t));
                                                 case 7:
                                                     throw ((e.prev = 7), (e.t0 = e.catch(0)), new lD(e.t0, 'initiateIdentityValidation', this.schemeName));
                                                 case 11:
@@ -14796,9 +14796,9 @@ var lT = function (e) {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (e.next = 3), this.schemeSdk.getSrcProfile({ idTokens: t });
+                                                    return ((e.prev = 0), (e.next = 3), this.schemeSdk.getSrcProfile({ idTokens: t }));
                                                 case 3:
-                                                    return (n = e.sent), e.abrupt('return', n);
+                                                    return ((n = e.sent), e.abrupt('return', n));
                                                 case 7:
                                                     throw ((e.prev = 7), (e.t0 = e.catch(0)), new lD(e.t0, 'getSrcProfile', this.schemeName));
                                                 case 11:
@@ -14824,11 +14824,11 @@ function lV(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -14864,7 +14864,7 @@ var lU = {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -14880,7 +14880,7 @@ var lU = {
                 });
         function c(e, t) {
             var n, r;
-            return (0, C.Z)(this, c), (r = i.call(this, O()((n = e.toLowerCase())).call(n, 'live') ? 'https://assets.secure.checkout.visa.com/checkout-widget/resources/js/src-i-adapter/visa-sdk.js?v2' : 'https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/src-i-adapter/visa-sdk.js?v2', t)), (0, w.Z)((0, eo.Z)(r), 'schemeName', 'visa'), r;
+            return ((0, C.Z)(this, c), (r = i.call(this, O()((n = e.toLowerCase())).call(n, 'live') ? 'https://assets.secure.checkout.visa.com/checkout-widget/resources/js/src-i-adapter/visa-sdk.js?v2' : 'https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/src-i-adapter/visa-sdk.js?v2', t)), (0, w.Z)((0, eo.Z)(r), 'schemeName', 'visa'), r);
         }
         return (
             (0, Z.Z)(c, [
@@ -14968,7 +14968,7 @@ var lU = {
                                                         this.schemeSdk.identityLookup(o)
                                                     );
                                                 case 5:
-                                                    return (a = e.sent), e.abrupt('return', a);
+                                                    return ((a = e.sent), e.abrupt('return', a));
                                                 case 9:
                                                     throw ((e.prev = 9), (e.t0 = e.catch(1)), new lD(e.t0, 'identityLookup', this.schemeName));
                                                 case 13:
@@ -14997,9 +14997,9 @@ var lU = {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (e.next = 3), this.schemeSdk.completeIdentityValidation(t);
+                                                    return ((e.prev = 0), (e.next = 3), this.schemeSdk.completeIdentityValidation(t));
                                                 case 3:
-                                                    return (n = e.sent), e.abrupt('return', n);
+                                                    return ((n = e.sent), e.abrupt('return', n));
                                                 case 7:
                                                     throw ((e.prev = 7), (e.t0 = e.catch(0)), new lD(e.t0, 'completeIdentityValidation', this.schemeName));
                                                 case 11:
@@ -15025,11 +15025,11 @@ function lH(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -15065,7 +15065,7 @@ var lz = {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -15081,7 +15081,7 @@ var lz = {
                 });
         function c(e, t) {
             var n, r;
-            return (0, C.Z)(this, c), (r = i.call(this, O()((n = e.toLowerCase())).call(n, 'live') ? 'https://src.mastercard.com/sdk/srcsdk.mastercard.js' : 'https://sandbox.src.mastercard.com/sdk/srcsdk.mastercard.js', t)), (0, w.Z)((0, eo.Z)(r), 'schemeName', 'mc'), r;
+            return ((0, C.Z)(this, c), (r = i.call(this, O()((n = e.toLowerCase())).call(n, 'live') ? 'https://src.mastercard.com/sdk/srcsdk.mastercard.js' : 'https://sandbox.src.mastercard.com/sdk/srcsdk.mastercard.js', t)), (0, w.Z)((0, eo.Z)(r), 'schemeName', 'mc'), r);
         }
         return (
             (0, Z.Z)(c, [
@@ -15170,7 +15170,7 @@ var lz = {
                                                         this.schemeSdk.identityLookup({ consumerIdentity: o })
                                                     );
                                                 case 5:
-                                                    return (a = e.sent), e.abrupt('return', a);
+                                                    return ((a = e.sent), e.abrupt('return', a));
                                                 case 9:
                                                     throw ((e.prev = 9), (e.t0 = e.catch(1)), new lD(e.t0, 'identityLookup', this.schemeName));
                                                 case 13:
@@ -15199,9 +15199,9 @@ var lz = {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (e.next = 3), this.schemeSdk.completeIdentityValidation({ validationData: t });
+                                                    return ((e.prev = 0), (e.next = 3), this.schemeSdk.completeIdentityValidation({ validationData: t }));
                                                 case 3:
-                                                    return (n = e.sent), e.abrupt('return', n);
+                                                    return ((n = e.sent), e.abrupt('return', n));
                                                 case 7:
                                                     throw ((e.prev = 7), (e.t0 = e.catch(0)), new lD(e.t0, 'completeIdentityValidation', this.schemeName));
                                                 case 11:
@@ -15243,14 +15243,14 @@ var lz = {
         function t(e, n) {
             var r = n.dpaLocale,
                 o = n.dpaPresentationName;
-            (0, C.Z)(this, t),
+            ((0, C.Z)(this, t),
                 (0, w.Z)(this, 'schemes', void 0),
                 (0, w.Z)(this, 'customSdkConfiguration', void 0),
                 (this.schemes = e),
                 (this.customSdkConfiguration = {
                     dpaLocale: void 0 === r ? 'en_US' : r,
                     dpaPresentationName: void 0 === o ? '' : o
-                });
+                }));
         }
         return (
             (0, Z.Z)(t, [
@@ -15284,12 +15284,12 @@ var lz = {
                                                             B()
                                                                 .allSettled(i)
                                                                 .then(function (t) {
-                                                                    eg()(t).call(t, lG) && r(new nv('ERROR', 'ClickToPay -> SrcSdkLoader # Unable to load network schemes: '.concat(n.schemes.toString()))),
+                                                                    (eg()(t).call(t, lG) && r(new nv('ERROR', 'ClickToPay -> SrcSdkLoader # Unable to load network schemes: '.concat(n.schemes.toString()))),
                                                                         e(
                                                                             P()(a).call(a, function (e, n) {
                                                                                 return lY(t[n]);
                                                                             })
-                                                                        );
+                                                                        ));
                                                                 });
                                                         })
                                                     );
@@ -15317,7 +15317,7 @@ var lz = {
     },
     l0 = (function () {
         function e(t, n, r) {
-            (0, C.Z)(this, e), (0, w.Z)(this, 'dateOfCardLastUsed', void 0), (0, w.Z)(this, 'panLastFour', void 0), (0, w.Z)(this, 'srcDigitalCardId', void 0), (0, w.Z)(this, 'scheme', void 0), (0, w.Z)(this, 'artUri', void 0), (0, w.Z)(this, 'srcCorrelationId', void 0), (0, w.Z)(this, 'tokenId', void 0), (0, w.Z)(this, 'isExpired', void 0), (0, w.Z)(this, 'panExpirationMonth', void 0), (0, w.Z)(this, 'panExpirationYear', void 0), (0, w.Z)(this, 'descriptorName', void 0), (0, w.Z)(this, 'status', null), (this.dateOfCardLastUsed = t.dateOfCardLastUsed), (this.panLastFour = t.panLastFour), (this.srcDigitalCardId = t.srcDigitalCardId), (this.descriptorName = t.digitalCardData.descriptorName), (this.tokenId = t.tokenId), (this.scheme = n), (this.artUri = t.digitalCardData.artUri), (this.srcCorrelationId = r), (this.panExpirationMonth = t.panExpirationMonth), (this.panExpirationYear = t.panExpirationYear), (this.status = t.digitalCardData.status), (this.isExpired = this.confirmCardIsExpired());
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'dateOfCardLastUsed', void 0), (0, w.Z)(this, 'panLastFour', void 0), (0, w.Z)(this, 'srcDigitalCardId', void 0), (0, w.Z)(this, 'scheme', void 0), (0, w.Z)(this, 'artUri', void 0), (0, w.Z)(this, 'srcCorrelationId', void 0), (0, w.Z)(this, 'tokenId', void 0), (0, w.Z)(this, 'isExpired', void 0), (0, w.Z)(this, 'panExpirationMonth', void 0), (0, w.Z)(this, 'panExpirationYear', void 0), (0, w.Z)(this, 'descriptorName', void 0), (0, w.Z)(this, 'status', null), (this.dateOfCardLastUsed = t.dateOfCardLastUsed), (this.panLastFour = t.panLastFour), (this.srcDigitalCardId = t.srcDigitalCardId), (this.descriptorName = t.digitalCardData.descriptorName), (this.tokenId = t.tokenId), (this.scheme = n), (this.artUri = t.digitalCardData.artUri), (this.srcCorrelationId = r), (this.panExpirationMonth = t.panExpirationMonth), (this.panExpirationYear = t.panExpirationYear), (this.status = t.digitalCardData.status), (this.isExpired = this.confirmCardIsExpired()));
         }
         return (
             (0, Z.Z)(e, [
@@ -15371,7 +15371,7 @@ function l5(e, t) {
     return new Date(t.dateOfCardLastUsed).getTime() - new Date(e.dateOfCardLastUsed).getTime();
 }
 function l9(e, t) {
-    return t.isExpired ? e.expiredCards.push(t) : e.availableCards.push(t), e;
+    return (t.isExpired ? e.expiredCards.push(t) : e.availableCards.push(t), e);
 }
 var l8 = (function (e) {
     (0, ea.Z)(r, e);
@@ -15381,7 +15381,7 @@ var l8 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -15397,7 +15397,7 @@ var l8 = (function (e) {
             });
     function r(e) {
         var t;
-        return (0, C.Z)(this, r), ((t = n.call(this, e)).name = 'TimeoutError'), t;
+        return ((0, C.Z)(this, r), ((t = n.call(this, e)).name = 'TimeoutError'), t);
     }
     return (0, Z.Z)(r);
 })((0, eh.Z)(Error));
@@ -15405,11 +15405,11 @@ function l4(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -15442,7 +15442,7 @@ function l7(e, t, n) {
 var ue = (function () {
     var e, t, n, r, o, i, c, l, u;
     function d(e, t, n, r, o) {
-        (0, C.Z)(this, d), (0, w.Z)(this, 'sdkLoader', void 0), (0, w.Z)(this, 'schemesConfig', void 0), (0, w.Z)(this, 'shopperIdentity', void 0), (0, w.Z)(this, 'environment', void 0), (0, w.Z)(this, 'onTimeout', void 0), (0, w.Z)(this, 'srciTransactionId', tI()), (0, w.Z)(this, 'sdks', void 0), (0, w.Z)(this, 'validationSchemeSdk', null), (0, w.Z)(this, 'stateSubscriber', void 0), (0, w.Z)(this, 'state', l6.Idle), (0, w.Z)(this, 'shopperCards', null), (0, w.Z)(this, 'identityValidationData', null), (this.sdkLoader = t), (this.schemesConfig = e), (this.shopperIdentity = r), (this.environment = n), (this.onTimeout = o);
+        ((0, C.Z)(this, d), (0, w.Z)(this, 'sdkLoader', void 0), (0, w.Z)(this, 'schemesConfig', void 0), (0, w.Z)(this, 'shopperIdentity', void 0), (0, w.Z)(this, 'environment', void 0), (0, w.Z)(this, 'onTimeout', void 0), (0, w.Z)(this, 'srciTransactionId', tI()), (0, w.Z)(this, 'sdks', void 0), (0, w.Z)(this, 'validationSchemeSdk', null), (0, w.Z)(this, 'stateSubscriber', void 0), (0, w.Z)(this, 'state', l6.Idle), (0, w.Z)(this, 'shopperCards', null), (0, w.Z)(this, 'identityValidationData', null), (this.sdkLoader = t), (this.schemesConfig = e), (this.shopperIdentity = r), (this.environment = n), (this.onTimeout = o));
     }
     return (
         (0, Z.Z)(d, [
@@ -15470,38 +15470,38 @@ var ue = (function () {
                                     for (;;)
                                         switch ((e.prev = e.next)) {
                                             case 0:
-                                                return this.setState(l6.Loading), (e.prev = 1), (e.next = 4), this.sdkLoader.load(this.environment);
+                                                return (this.setState(l6.Loading), (e.prev = 1), (e.next = 4), this.sdkLoader.load(this.environment));
                                             case 4:
-                                                return (this.sdks = e.sent), (e.next = 7), this.initiateSdks();
+                                                return ((this.sdks = e.sent), (e.next = 7), this.initiateSdks());
                                             case 7:
-                                                return (e.next = 9), this.verifyIfShopperIsRecognized();
+                                                return ((e.next = 9), this.verifyIfShopperIsRecognized());
                                             case 9:
                                                 if (((r = void 0 !== (n = (t = e.sent).recognized) && n), (a = void 0 === (o = t.idTokens) ? null : o), !r)) {
                                                     e.next = 19;
                                                     break;
                                                 }
-                                                return (e.next = 17), this.getShopperProfile(a);
+                                                return ((e.next = 17), this.getShopperProfile(a));
                                             case 17:
-                                                return this.setState(l6.Ready), e.abrupt('return');
+                                                return (this.setState(l6.Ready), e.abrupt('return'));
                                             case 19:
                                                 if (this.shopperIdentity) {
                                                     e.next = 22;
                                                     break;
                                                 }
-                                                return this.setState(l6.NotAvailable), e.abrupt('return');
+                                                return (this.setState(l6.NotAvailable), e.abrupt('return'));
                                             case 22:
-                                                return (e.next = 24), this.verifyIfShopperIsEnrolled(this.shopperIdentity);
+                                                return ((e.next = 24), this.verifyIfShopperIsEnrolled(this.shopperIdentity));
                                             case 24:
                                                 if (!e.sent.isEnrolled) {
                                                     e.next = 29;
                                                     break;
                                                 }
-                                                return this.setState(l6.ShopperIdentified), e.abrupt('return');
+                                                return (this.setState(l6.ShopperIdentified), e.abrupt('return'));
                                             case 29:
-                                                this.setState(l6.NotAvailable), (e.next = 37);
+                                                (this.setState(l6.NotAvailable), (e.next = 37));
                                                 break;
                                             case 32:
-                                                (e.prev = 32), (e.t0 = e.catch(1)), e.t0 instanceof lD && console.warn('Error at ClickToPayService # init: '.concat(e.t0.toString())), e.t0 instanceof l8 ? (console.warn(e.t0.toString()), null == (i = this.onTimeout) || i.call(this, e.t0)) : console.warn(e.t0), this.setState(l6.NotAvailable);
+                                                ((e.prev = 32), (e.t0 = e.catch(1)), e.t0 instanceof lD && console.warn('Error at ClickToPayService # init: '.concat(e.t0.toString())), e.t0 instanceof l8 ? (console.warn(e.t0.toString()), null == (i = this.onTimeout) || i.call(this, e.t0)) : console.warn(e.t0), this.setState(l6.NotAvailable));
                                             case 37:
                                             case 'end':
                                                 return e.stop();
@@ -15540,14 +15540,14 @@ var ue = (function () {
                                                 }
                                                 throw Error('startIdentityValidation: No ValidationSDK set for the validation process');
                                             case 2:
-                                                return (e.next = 4), this.validationSchemeSdk.initiateIdentityValidation();
+                                                return ((e.next = 4), this.validationSchemeSdk.initiateIdentityValidation());
                                             case 4:
-                                                (t = e.sent.maskedValidationChannel),
+                                                ((t = e.sent.maskedValidationChannel),
                                                     (this.identityValidationData = {
                                                         maskedShopperContact: t.replace(/\*/g, '\u2022'),
                                                         selectedNetwork: lX[this.validationSchemeSdk.schemeName]
                                                     }),
-                                                    this.setState(l6.OneTimePassword);
+                                                    this.setState(l6.OneTimePassword));
                                             case 8:
                                             case 'end':
                                                 return e.stop();
@@ -15579,11 +15579,11 @@ var ue = (function () {
                                                 }
                                                 throw Error('finishIdentityValidation: No ValidationSDK set for the validation process');
                                             case 2:
-                                                return (e.next = 4), this.validationSchemeSdk.completeIdentityValidation(t);
+                                                return ((e.next = 4), this.validationSchemeSdk.completeIdentityValidation(t));
                                             case 4:
-                                                return (n = e.sent), (e.next = 7), this.getShopperProfile([n.idToken]);
+                                                return ((n = e.sent), (e.next = 7), this.getShopperProfile([n.idToken]));
                                             case 7:
-                                                this.setState(l6.Ready), (this.validationSchemeSdk = null);
+                                                (this.setState(l6.Ready), (this.validationSchemeSdk = null));
                                             case 9:
                                             case 'end':
                                                 return e.stop();
@@ -15707,9 +15707,9 @@ var ue = (function () {
                                                 e.next = 11;
                                                 break;
                                             case 8:
-                                                (e.prev = 8), (e.t0 = e.catch(2)), e.t0 instanceof lD ? console.warn('Error at ClickToPayService # logout: '.concat(e.t0.toString())) : console.warn(e.t0);
+                                                ((e.prev = 8), (e.t0 = e.catch(2)), e.t0 instanceof lD ? console.warn('Error at ClickToPayService # logout: '.concat(e.t0.toString())) : console.warn(e.t0));
                                             case 11:
-                                                (this.shopperCards = null), (this.identityValidationData = null), (this.validationSchemeSdk = null), this.setState(l6.Login);
+                                                ((this.shopperCards = null), (this.identityValidationData = null), (this.validationSchemeSdk = null), this.setState(l6.Login));
                                             case 15:
                                             case 'end':
                                                 return e.stop();
@@ -15787,7 +15787,7 @@ var ue = (function () {
                 key: 'setState',
                 value: function (e) {
                     var t;
-                    (this.state = e), null == (t = this.stateSubscriber) || t.call(this, this.state);
+                    ((this.state = e), null == (t = this.stateSubscriber) || t.call(this, this.state));
                 }
             },
             {
@@ -15830,13 +15830,13 @@ var ue = (function () {
                                                                 ).call(o, function (e) {
                                                                     return !!e;
                                                                 });
-                                                            (c = (s = Y()((a = Y()(u).call(u, l2, []))).call(a, l9, {
+                                                            ((c = (s = Y()((a = Y()(u).call(u, l2, []))).call(a, l9, {
                                                                 availableCards: [],
                                                                 expiredCards: []
                                                             })).availableCards),
                                                                 (l = s.expiredCards),
                                                                 (n.shopperCards = I()((i = [])).call(i, (0, H.Z)(e2()(c).call(c, l5)), (0, H.Z)(e2()(l).call(l, l5)))),
-                                                                e();
+                                                                e());
                                                         });
                                                 })
                                             );
@@ -15951,11 +15951,11 @@ function ut(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -16070,8 +16070,8 @@ var uo = function (e, t) {
             R = P[1],
             F = t5({}),
             O = t5(!1);
-        t1(function () {
-            h(F.current), (F.current.setStatus = R);
+        (t1(function () {
+            (h(F.current), (F.current.setStatus = R));
         }, []),
             t1(
                 function () {
@@ -16081,7 +16081,7 @@ var uo = function (e, t) {
                         });
                 },
                 [g]
-            );
+            ));
         var E = t8(
                 function () {
                     var e;
@@ -16096,7 +16096,7 @@ var uo = function (e, t) {
                             for (;;)
                                 switch ((e.prev = e.next)) {
                                     case 0:
-                                        return (e.next = 2), null == g ? void 0 : g.finishIdentityValidation(t);
+                                        return ((e.next = 2), null == g ? void 0 : g.finishIdentityValidation(t));
                                     case 2:
                                     case 'end':
                                         return e.stop();
@@ -16117,9 +16117,9 @@ var uo = function (e, t) {
                             for (;;)
                                 switch ((e.prev = e.next)) {
                                     case 0:
-                                        return (e.next = 2), null == g ? void 0 : g.startIdentityValidation();
+                                        return ((e.next = 2), null == g ? void 0 : g.startIdentityValidation());
                                     case 2:
-                                        return (t = e.sent), e.abrupt('return', t);
+                                        return ((t = e.sent), e.abrupt('return', t));
                                     case 4:
                                     case 'end':
                                         return e.stop();
@@ -16136,7 +16136,7 @@ var uo = function (e, t) {
                             for (;;)
                                 switch ((e.prev = e.next)) {
                                     case 0:
-                                        return (e.next = 2), null == g ? void 0 : g.checkout(t);
+                                        return ((e.next = 2), null == g ? void 0 : g.checkout(t));
                                     case 2:
                                         return e.abrupt('return', e.sent);
                                     case 3:
@@ -16158,7 +16158,7 @@ var uo = function (e, t) {
                             for (;;)
                                 switch ((e.prev = e.next)) {
                                     case 0:
-                                        return (e.next = 2), null == g ? void 0 : g.verifyIfShopperIsEnrolled(t);
+                                        return ((e.next = 2), null == g ? void 0 : g.verifyIfShopperIsEnrolled(t));
                                     case 2:
                                         return e.abrupt('return', e.sent);
                                     case 3:
@@ -16180,7 +16180,7 @@ var uo = function (e, t) {
                             for (;;)
                                 switch ((e.prev = e.next)) {
                                     case 0:
-                                        return (e.next = 2), null == g ? void 0 : g.logout();
+                                        return ((e.next = 2), null == g ? void 0 : g.logout());
                                     case 2:
                                     case 'end':
                                         return e.stop();
@@ -16253,7 +16253,7 @@ var ul = {
             f = p[1],
             m = nl().i18n,
             y = uc().startIdentityValidation;
-        t1(
+        (t1(
             function () {
                 var e = null;
                 return (
@@ -16274,7 +16274,7 @@ var ul = {
                     return (
                         h &&
                             (e = eu()(function () {
-                                f(!1), u(60);
+                                (f(!1), u(60));
                             }, 2000)),
                         function () {
                             return clearTimeout(e);
@@ -16282,7 +16282,7 @@ var ul = {
                     );
                 },
                 [h]
-            );
+            ));
         var v = t8(
             ((t = (0, a.Z)(
                 s().mark(function e(t) {
@@ -16291,12 +16291,12 @@ var ul = {
                             for (;;)
                                 switch ((e.prev = e.next)) {
                                     case 0:
-                                        return t.preventDefault(), (e.prev = 1), r(), f(!0), (e.next = 6), y();
+                                        return (t.preventDefault(), (e.prev = 1), r(), f(!0), (e.next = 6), y());
                                     case 6:
                                         e.next = 13;
                                         break;
                                     case 8:
-                                        (e.prev = 8), (e.t0 = e.catch(1)), n(e.t0.reason), u(0), f(!1);
+                                        ((e.prev = 8), (e.t0 = e.catch(1)), n(e.t0.reason), u(0), f(!1));
                                     case 13:
                                     case 'end':
                                         return e.stop();
@@ -16366,11 +16366,11 @@ var ul = {
             Z = k[1],
             w = t8(
                 function () {
-                    Z(!0), u();
+                    (Z(!0), u());
                 },
                 [u]
             );
-        t1(
+        (t1(
             function () {
                 l.otp && Z(!0);
             },
@@ -16384,13 +16384,13 @@ var ul = {
             ),
             t1(
                 function () {
-                    (m.current.validateInput = w), e.onSetInputHandlers(m.current);
+                    ((m.current.validateInput = w), e.onSetInputHandlers(m.current));
                 },
                 [w, e.onSetInputHandlers]
-            );
+            ));
         var S = t8(
                 function () {
-                    f('otp', ''), i(null), n || g.focus(), e.onResendCode();
+                    (f('otp', ''), i(null), n || g.focus(), e.onResendCode());
                 },
                 [e.onResendCode, g, n]
             ),
@@ -16505,7 +16505,7 @@ var ul = {
             h = e.focusFirst,
             f = e.focusAfterClose,
             m = e.onClose;
-        (n = (t = {
+        ((n = (t = {
             rootElement: u,
             shouldTrap: d,
             focusFirst: h
@@ -16534,16 +16534,16 @@ var ul = {
                         return (
                             n.addEventListener('keydown', i),
                             function () {
-                                l(null), n.removeEventListener('keydown', i);
+                                (l(null), n.removeEventListener('keydown', i));
                             }
                         );
                     }
                 },
                 [n, r, a]
-            );
+            ));
         var y = t8(
                 function () {
-                    f.focus(), m();
+                    (f.focus(), m());
                 },
                 [m, f]
             ),
@@ -16774,7 +16774,7 @@ var ug = function (e) {
             n = uc().isStandaloneComponent;
         return (0, ec.h)('div', { className: ep()('adyen-checkout-ctp__section', { 'adyen-checkout-ctp__section--standalone': n }) }, (0, ec.h)('div', { className: 'adyen-checkout-ctp__section-brand' }, (0, ec.h)(up, null), (0, ec.h)(u_, null)), t);
     };
-(uk.Title = function (e) {
+((uk.Title = function (e) {
     var t = e.endAdornment,
         n = e.children;
     return (0, ec.h)('div', { className: 'adyen-checkout-ctp__section-header' }, (0, ec.h)('h1', { className: 'adyen-checkout-ctp__section-header-title' }, n), t && (0, ec.h)('span', { className: 'adyen-checkout-ctp__section-header-adornment' }, t));
@@ -16782,7 +16782,7 @@ var ug = function (e) {
     (uk.Text = function (e) {
         var t = e.children;
         return (0, ec.h)('p', { className: 'adyen-checkout-ctp__section-text' }, t);
-    });
+    }));
 var uC = function (e) {
         var t = e.onDisplayCardComponent,
             n = nl().i18n,
@@ -16821,7 +16821,7 @@ var uC = function (e) {
             M = t8(function (e) {
                 var t = e.data,
                     n = e.isValid;
-                h(t.otp), v(n);
+                (h(t.otp), v(n));
             }, []),
             B = t8(function () {
                 S(null);
@@ -16838,14 +16838,14 @@ var uC = function (e) {
                                                 e.next = 4;
                                                 break;
                                             }
-                                            return P.validateInput(), e.abrupt('return');
+                                            return (P.validateInput(), e.abrupt('return'));
                                         case 4:
-                                            return k(!0), (e.prev = 5), (e.next = 8), o(p);
+                                            return (k(!0), (e.prev = 5), (e.next = 8), o(p));
                                         case 8:
                                             e.next = 15;
                                             break;
                                         case 10:
-                                            (e.prev = 10), (e.t0 = e.catch(5)), S(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason), k(!1), 'ACCT_INACCESSIBLE' === (null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason) && (E(!0), null == t || t());
+                                            ((e.prev = 10), (e.t0 = e.catch(5)), S(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason), k(!1), 'ACCT_INACCESSIBLE' === (null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason) && (E(!0), null == t || t()));
                                         case 15:
                                         case 'end':
                                             return e.stop();
@@ -17028,12 +17028,12 @@ var uP = function (e) {
                                             }
                                             return e.abrupt('return');
                                         case 2:
-                                            return (e.prev = 2), x(!0), C(null), h('loading'), (e.next = 8), l(v);
+                                            return ((e.prev = 2), x(!0), C(null), h('loading'), (e.next = 8), l(v));
                                         case 8:
-                                            p(e.sent), (e.next = 17);
+                                            (p(e.sent), (e.next = 17));
                                             break;
                                         case 12:
-                                            (e.prev = 12), (e.t0 = e.catch(2)), e.t0 instanceof lD && (C(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason), console.warn(I()((t = I()((n = 'CtP - Checkout: Reason: '.concat(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason, ' / Source: '))).call(n, null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.source, ' / Scheme: '))).call(t, null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.scheme))), x(!1), f(e.t0);
+                                            ((e.prev = 12), (e.t0 = e.catch(2)), e.t0 instanceof lD && (C(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason), console.warn(I()((t = I()((n = 'CtP - Checkout: Reason: '.concat(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason, ' / Source: '))).call(n, null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.source, ' / Scheme: '))).call(t, null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.scheme))), x(!1), f(e.t0));
                                         case 17:
                                         case 'end':
                                             return e.stop();
@@ -17153,11 +17153,11 @@ var uP = function (e) {
             h = d[1],
             f = t8(
                 function () {
-                    h(!0), a();
+                    (h(!0), a());
                 },
                 [a]
             );
-        t1(
+        (t1(
             function () {
                 o.shopperLogin && h(!0);
             },
@@ -17165,10 +17165,10 @@ var uP = function (e) {
         ),
             t1(
                 function () {
-                    (l.current.validateInput = f), e.onSetInputHandlers(l.current);
+                    ((l.current.validateInput = f), e.onSetInputHandlers(l.current));
                 },
                 [f, e.onSetInputHandlers]
-            );
+            ));
         var m = t8(
                 function (t) {
                     'Enter' === t.key && e.onPressEnter();
@@ -17246,7 +17246,7 @@ var uP = function (e) {
                 var t,
                     n = e.data,
                     o = e.isValid;
-                d(n.shopperLogin), m(o), (null == n || null == (t = n.shopperLogin) ? void 0 : t.length) > 0 && r(!0);
+                (d(n.shopperLogin), m(o), (null == n || null == (t = n.shopperLogin) ? void 0 : t.length) > 0 && r(!0));
             }, []),
             R = t8(
                 (0, a.Z)(
@@ -17260,25 +17260,25 @@ var uP = function (e) {
                                                 e.next = 4;
                                                 break;
                                             }
-                                            return N.validateInput(), e.abrupt('return');
+                                            return (N.validateInput(), e.abrupt('return'));
                                         case 4:
-                                            return Z(!0), (e.prev = 5), (e.next = 8), o({ shopperEmail: u });
+                                            return (Z(!0), (e.prev = 5), (e.next = 8), o({ shopperEmail: u }));
                                         case 8:
                                             if (!e.sent.isEnrolled) {
                                                 e.next = 15;
                                                 break;
                                             }
-                                            return (e.next = 13), i();
+                                            return ((e.next = 13), i());
                                         case 13:
                                             e.next = 17;
                                             break;
                                         case 15:
-                                            b('NOT_FOUND'), Z(!1);
+                                            (b('NOT_FOUND'), Z(!1));
                                         case 17:
                                             e.next = 25;
                                             break;
                                         case 19:
-                                            (e.prev = 19), (e.t0 = e.catch(5)), e.t0 instanceof lD && console.warn('CtP - Login error: '.concat(e.t0.toString())), e.t0 instanceof l8 && console.warn(e.t0.toString()), b(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason), Z(!1);
+                                            ((e.prev = 19), (e.t0 = e.catch(5)), e.t0 instanceof lD && console.warn('CtP - Login error: '.concat(e.t0.toString())), e.t0 instanceof l8 && console.warn(e.t0.toString()), b(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason), Z(!1));
                                         case 25:
                                         case 'end':
                                             return e.stop();
@@ -17340,12 +17340,12 @@ var uP = function (e) {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (e.next = 3), c();
+                                                    return ((e.prev = 0), (e.next = 3), c());
                                                 case 3:
                                                     e.next = 10;
                                                     break;
                                                 case 5:
-                                                    return (e.prev = 5), (e.t0 = e.catch(0)), e.t0 instanceof lD && console.warn('CtP - Identity Validation error: '.concat(e.t0.toString())), (e.next = 10), l();
+                                                    return ((e.prev = 5), (e.t0 = e.catch(0)), e.t0 instanceof lD && console.warn('CtP - Identity Validation error: '.concat(e.t0.toString())), (e.next = 10), l());
                                                 case 10:
                                                 case 'end':
                                                     return e.stop();
@@ -17384,14 +17384,14 @@ var uP = function (e) {
         t1(
             function () {
                 if (p) {
-                    if (c === l6.ShopperIdentified || c === l6.Ready) return i(!1), void u(!0);
+                    if (c === l6.ShopperIdentified || c === l6.Ready) return (i(!1), void u(!0));
                     c === l6.NotAvailable && (i(!0), u(!1));
                 }
             },
             [c, p]
         );
         var h = t8(function () {
-            i(!0), u(!1);
+            (i(!0), u(!1));
         }, []);
         return c === l6.NotAvailable
             ? t()
@@ -17445,11 +17445,11 @@ function uT(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -17478,7 +17478,7 @@ var uL = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -17503,16 +17503,16 @@ var uL = (function (e) {
                 t.clickToPayRef = e;
             }),
             (0, w.Z)((0, eo.Z)(t), 'onBrand', function (e) {
-                t.eventEmitter.emit('brand', uD(uD({}, e), {}, { brand: 'card' === e.brand ? null : e.brand })), t.props.onBrand && t.props.onBrand(e);
+                (t.eventEmitter.emit('brand', uD(uD({}, e), {}, { brand: 'card' === e.brand ? null : e.brand })), t.props.onBrand && t.props.onBrand(e));
             }),
             (0, w.Z)((0, eo.Z)(t), 'handleClickToPaySubmit', function (e) {
-                t.setState({
+                (t.setState({
                     data: uD({}, e),
                     valid: {},
                     errors: {},
                     isValid: !0
                 }),
-                    t.submit();
+                    t.submit());
             }),
             (0, w.Z)((0, eo.Z)(t), 'onBinValue', lT((0, eo.Z)(t))),
             e._disableClickToPay || ((t.clickToPayService = ur(t.props.configuration, t.props.clickToPayConfiguration, t.props.environment)), null == (o = t.clickToPayService) || o.initialize()),
@@ -17525,7 +17525,7 @@ var uL = (function (e) {
                 key: 'setStatus',
                 value: function (e, t) {
                     var n, r;
-                    return null != (n = this.componentRef) && n.setStatus && this.componentRef.setStatus(e, t), null != (r = this.clickToPayRef) && r.setStatus && this.clickToPayRef.setStatus(e, t), this;
+                    return (null != (n = this.componentRef) && n.setStatus && this.componentRef.setStatus(e, t), null != (r = this.clickToPayRef) && r.setStatus && this.clickToPayRef.setStatus(e, t), this);
                 }
             },
             {
@@ -17580,14 +17580,14 @@ var uL = (function (e) {
                 key: 'updateStyles',
                 value: function (e) {
                     var t;
-                    return null != (t = this.componentRef) && t.updateStyles && this.componentRef.updateStyles(e), this;
+                    return (null != (t = this.componentRef) && t.updateStyles && this.componentRef.updateStyles(e), this);
                 }
             },
             {
                 key: 'setFocusOn',
                 value: function (e) {
                     var t;
-                    return null != (t = this.componentRef) && t.setFocusOn && this.componentRef.setFocusOn(e), this;
+                    return (null != (t = this.componentRef) && t.setFocusOn && this.componentRef.setFocusOn(e), this);
                 }
             },
             {
@@ -17595,14 +17595,14 @@ var uL = (function (e) {
                 value: function (e) {
                     var t,
                         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                    return null != (t = this.componentRef) && t.processBinLookupResponse && this.componentRef.processBinLookupResponse(e, n), this;
+                    return (null != (t = this.componentRef) && t.processBinLookupResponse && this.componentRef.processBinLookupResponse(e, n), this);
                 }
             },
             {
                 key: 'handleUnsupportedCard',
                 value: function (e) {
                     var t;
-                    return null != (t = this.componentRef) && t.handleUnsupportedCard && this.componentRef.handleUnsupportedCard(e), this;
+                    return (null != (t = this.componentRef) && t.handleUnsupportedCard && this.componentRef.handleUnsupportedCard(e), this);
                 }
             },
             {
@@ -17727,23 +17727,23 @@ var uL = (function (e) {
         r
     );
 })();
-(0, w.Z)(uL, 'type', 'scheme'),
+((0, w.Z)(uL, 'type', 'scheme'),
     (0, w.Z)(uL, 'defaultProps', {
         onBinLookup: function () {},
         showBrandsUnderCardNumber: !0,
         showFormInstruction: !0,
         _disableClickToPay: !1
-    });
+    }));
 var uV = (((pf = {}).CustomerDismissed = 'CUSTOMER_DISMISSED'), (pf.CustomerRequestApproved = 'CUSTOMER_REQUEST_APPROVED'), (pf.CustomerRequestDeclined = 'CUSTOMER_REQUEST_DECLINED'), (pf.CustomerRequestFailed = 'CUSTOMER_REQUEST_FAILED'), pf);
 function uj(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -17790,7 +17790,7 @@ function uq(e) {
                         for (;;)
                             switch ((e.prev = e.next)) {
                                 case 0:
-                                    return (e.prev = 0), (e.next = 3), n.initialize();
+                                    return ((e.prev = 0), (e.next = 3), n.initialize());
                                 case 3:
                                     return (
                                         (f.current = [
@@ -17805,9 +17805,9 @@ function uq(e) {
                                                             for (;;)
                                                                 switch ((e.prev = e.next)) {
                                                                     case 0:
-                                                                        return c(new nv('ERROR', 'Payment declined by CashAppPay')), (e.next = 3), n.restart();
+                                                                        return (c(new nv('ERROR', 'Payment declined by CashAppPay')), (e.next = 3), n.restart());
                                                                     case 3:
-                                                                        return (e.next = 5), n.renderButton(l.current);
+                                                                        return ((e.next = 5), n.renderButton(l.current));
                                                                     case 5:
                                                                     case 'end':
                                                                         return e.stop();
@@ -17831,10 +17831,10 @@ function uq(e) {
                                         n.renderButton(l.current)
                                     );
                                 case 6:
-                                    h('ready'), (e.next = 12);
+                                    (h('ready'), (e.next = 12));
                                     break;
                                 case 9:
-                                    (e.prev = 9), (e.t0 = e.catch(0)), c(e.t0);
+                                    ((e.prev = 9), (e.t0 = e.catch(0)), c(e.t0));
                                 case 12:
                                 case 'end':
                                     return e.stop();
@@ -17861,10 +17861,10 @@ function uq(e) {
                     b(),
                     function () {
                         var e;
-                        n.restart(),
+                        (n.restart(),
                             N()((e = f.current)).call(e, function (e) {
                                 return e();
-                            });
+                            }));
                     }
                 );
             },
@@ -17892,11 +17892,11 @@ function uH(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -17920,7 +17920,7 @@ function uK(e) {
 var uz = (function () {
         var e, t, n, r;
         function o(e, t) {
-            (0, C.Z)(this, o), (0, w.Z)(this, 'sdkLoader', void 0), (0, w.Z)(this, 'configuration', void 0), (0, w.Z)(this, 'pay', void 0), (0, w.Z)(this, 'startAuthorization', void 0), (this.configuration = t), (this.sdkLoader = e), t.clientId || console.warn('CashAppService: clientId is missing');
+            ((0, C.Z)(this, o), (0, w.Z)(this, 'sdkLoader', void 0), (0, w.Z)(this, 'configuration', void 0), (0, w.Z)(this, 'pay', void 0), (0, w.Z)(this, 'startAuthorization', void 0), (this.configuration = t), (this.sdkLoader = e), t.clientId || console.warn('CashAppService: clientId is missing'));
         }
         return (
             (0, Z.Z)(o, [
@@ -17954,11 +17954,11 @@ var uz = (function () {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.prev = 0), (n = (t = this.configuration).environment), (r = t.clientId), (e.next = 4), this.sdkLoader.load(n);
+                                                    return ((e.prev = 0), (n = (t = this.configuration).environment), (r = t.clientId), (e.next = 4), this.sdkLoader.load(n));
                                                 case 4:
-                                                    return (o = e.sent), (e.next = 7), o.pay({ clientId: r });
+                                                    return ((o = e.sent), (e.next = 7), o.pay({ clientId: r }));
                                                 case 7:
-                                                    (this.pay = e.sent), (e.next = 13);
+                                                    ((this.pay = e.sent), (e.next = 13));
                                                     break;
                                                 case 10:
                                                     throw ((e.prev = 10), (e.t0 = e.catch(0)), new nv('ERROR', 'Error during initialization', { cause: e.t0 }));
@@ -18007,7 +18007,7 @@ var uz = (function () {
                                                         })
                                                     );
                                                 case 4:
-                                                    (a = e.sent.begin), (this.startAuthorization = a), (e.next = 12);
+                                                    ((a = e.sent.begin), (this.startAuthorization = a), (e.next = 12));
                                                     break;
                                                 case 9:
                                                     throw ((e.prev = 9), (e.t0 = e.catch(0)), new nv('ERROR', 'Error rendering CashAppPay button', { cause: e.t0 }));
@@ -18109,7 +18109,7 @@ var uz = (function () {
                                         for (;;)
                                             switch ((e.prev = e.next)) {
                                                 case 0:
-                                                    return (e.next = 2), this.pay.restart();
+                                                    return ((e.next = 2), this.pay.restart());
                                                 case 2:
                                                 case 'end':
                                                     return e.stop();
@@ -18156,7 +18156,7 @@ var uz = (function () {
                                                         e.next = 5;
                                                         break;
                                                     }
-                                                    return (o = new iO(r)), (e.next = 5), o.load();
+                                                    return ((o = new iO(r)), (e.next = 5), o.load());
                                                 case 5:
                                                     return e.abrupt('return', window.CashApp);
                                                 case 6:
@@ -18181,11 +18181,11 @@ function uY(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -18214,7 +18214,7 @@ var u$ = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -18266,13 +18266,13 @@ var u$ = (function (e) {
             }),
             (0, w.Z)((0, eo.Z)(s), 'handleAuthorize', function (e) {
                 var t = uG(uG({}, s.state.data), e);
-                s.setState({
+                (s.setState({
                     data: t,
                     valid: {},
                     errors: {},
                     isValid: !0
                 }),
-                    (0, ey.Z)(((i = (0, eo.Z)(s)), (0, es.Z)(r.prototype)), 'submit', i).call(i);
+                    (0, ey.Z)(((i = (0, eo.Z)(s)), (0, es.Z)(r.prototype)), 'submit', i).call(i));
             }),
             s.props.enableStoreDetails && s.props.storePaymentMethod && console.warn('CashAppPay: enableStoreDetails AND storePaymentMethod configuration properties should not be used together. That can lead to undesired behavior.'),
             s.props.storedPaymentMethodId
@@ -18399,11 +18399,11 @@ function uQ(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -18424,7 +18424,7 @@ function uJ(e) {
     }
     return e;
 }
-(0, w.Z)(u$, 'type', 'cashapp'),
+((0, w.Z)(u$, 'type', 'cashapp'),
     (0, w.Z)(u$, 'defaultProps', {
         onClick: function (e) {
             e.resolve();
@@ -18432,7 +18432,7 @@ function uJ(e) {
         showPayButton: !0,
         enableStoreDetails: !1,
         storePaymentMethod: !1
-    });
+    }));
 var uX = (function (e) {
     (0, ea.Z)(o, nk);
     var t,
@@ -18442,7 +18442,7 @@ var uX = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -18464,13 +18464,13 @@ var uX = (function (e) {
             (0, w.Z)((0, eo.Z)(n), 'clickToPayService', void 0),
             (0, w.Z)((0, eo.Z)(n), 'ctpConfiguration', void 0),
             (0, w.Z)((0, eo.Z)(n), 'handleClickToPaySubmit', function (e) {
-                n.setState({
+                (n.setState({
                     data: uJ({}, e),
                     valid: {},
                     errors: {},
                     isValid: !0
                 }),
-                    n.submit();
+                    n.submit());
             }),
             (n.ctpConfiguration = {
                 shopperEmail: n.props.shopperEmail,
@@ -18563,7 +18563,7 @@ var uX = (function (e) {
                                                     'return',
                                                     new (B())(function (e, n) {
                                                         t.clickToPayService.subscribeOnStateChange(function (r) {
-                                                            t.clickToPayService.shopperAccountFound && e(), (r !== l6.NotAvailable && r !== l6.Login && r !== l6.Idle) || n();
+                                                            (t.clickToPayService.shopperAccountFound && e(), (r !== l6.NotAvailable && r !== l6.Login && r !== l6.Idle) || n());
                                                         });
                                                     })
                                                 );
@@ -18616,11 +18616,11 @@ function u0(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -18650,7 +18650,7 @@ var u2 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -18681,7 +18681,7 @@ var u2 = (function (e) {
                 key: 'formatData',
                 value: function () {
                     var e = (0, ey.Z)((0, es.Z)(r.prototype), 'formatData', this).call(this);
-                    return (e.paymentMethod.type = this.constructor.type), e;
+                    return ((e.paymentMethod.type = this.constructor.type), e);
                 }
             },
             {
@@ -18753,7 +18753,7 @@ function u9(e) {
             )
     );
 }
-(0, w.Z)(u2, 'type', 'bcmc'),
+((0, w.Z)(u2, 'type', 'bcmc'),
     (0, w.Z)(
         u2,
         'defaultProps',
@@ -18764,7 +18764,7 @@ function u9(e) {
                 brands: ['bcmc', 'maestro', 'visa']
             }
         )
-    );
+    ));
 var u8 = function (e) {
     var t = e.options,
         n = void 0 === t ? [] : t,
@@ -18806,11 +18806,11 @@ function u4(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -18920,10 +18920,10 @@ function u6(e) {
                                 onChange: function (e) {
                                     var t = e.target,
                                         n = ee()(t.value, 10);
-                                    v(!0),
+                                    (v(!0),
                                         k(function (e) {
                                             return u3(u3({}, e), {}, { value: n });
-                                        });
+                                        }));
                                 }
                             })
                         ),
@@ -18935,7 +18935,7 @@ function u6(e) {
                         (0, ec.h)(nu, {
                             classNameModifiers: ['donate'],
                             onClick: function () {
-                                h('loading'), o({ data: { amount: _ } });
+                                (h('loading'), o({ data: { amount: _ } }));
                             },
                             label: s.get('donateButton'),
                             disabled: !_.value,
@@ -18946,11 +18946,11 @@ function u6(e) {
                                 classNameModifiers: ['decline'],
                                 variant: 'ghost',
                                 onClick: function () {
-                                    h('loading'),
+                                    (h('loading'),
                                         r({
                                             data: { amount: _ },
                                             isValid: y
-                                        });
+                                        }));
                                 },
                                 disabled: 'loading' === p,
                                 label: ''.concat(s.get('notNowButton'), ' \u203A')
@@ -18963,11 +18963,11 @@ function u7(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -19003,7 +19003,7 @@ var dt = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -19088,11 +19088,11 @@ var dt = (function (e) {
         r
     );
 })();
-(0, w.Z)(dt, 'type', 'donation'),
+((0, w.Z)(dt, 'type', 'donation'),
     (0, w.Z)(dt, 'defaultProps', {
         onCancel: function () {},
         onDonate: function () {}
-    });
+    }));
 var dn = function () {
     return window.location !== window.parent.location;
 };
@@ -19100,11 +19100,11 @@ function dr(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -19116,7 +19116,7 @@ var da = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -19134,7 +19134,7 @@ var da = (function (e) {
         var e, t;
         (0, C.Z)(this, r);
         for (var o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-        return (t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'postForm', void 0), t;
+        return ((t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'postForm', void 0), t);
     }
     return (
         (0, Z.Z)(r, [
@@ -19221,11 +19221,11 @@ function di(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -19260,7 +19260,7 @@ var dc = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -19275,7 +19275,7 @@ var dc = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -19339,11 +19339,11 @@ function dl(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -19364,11 +19364,11 @@ function du(e) {
     }
     return e;
 }
-(0, w.Z)(dc, 'type', 'redirect'),
+((0, w.Z)(dc, 'type', 'redirect'),
     (0, w.Z)(dc, 'defaultProps', {
         type: dc.type,
         showPayButton: !0
-    });
+    }));
 var dd = (function (e) {
     (0, ea.Z)(r, dc);
     var t,
@@ -19377,7 +19377,7 @@ var dd = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -19392,7 +19392,7 @@ var dd = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -19453,11 +19453,11 @@ function df(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -19547,7 +19547,7 @@ var dv = ['en', 'ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr'
     dg = (function () {
         var e;
         function t(e) {
-            (0, C.Z)(this, t), (0, w.Z)(this, 'paymentsClient', void 0);
+            ((0, C.Z)(this, t), (0, w.Z)(this, 'paymentsClient', void 0));
             var n = (function () {
                 switch ((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'TEST').toLowerCase()) {
                     case 'production':
@@ -19582,7 +19582,7 @@ var dv = ['en', 'ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr'
                                                     e.next = 4;
                                                     break;
                                                 }
-                                                return (r = new iO('https://pay.google.com/gp/p/js/pay.js')), (e.next = 4), r.load();
+                                                return ((r = new iO('https://pay.google.com/gp/p/js/pay.js')), (e.next = 4), r.load());
                                             case 4:
                                                 return e.abrupt('return', new google.payments.api.PaymentsClient(t));
                                             case 5:
@@ -19659,7 +19659,7 @@ var dv = ['en', 'ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr'
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -19682,14 +19682,14 @@ var dv = ['en', 'ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr'
                 (0, w.Z)((0, eo.Z)(t), 'paywithgoogleWrapper', void 0),
                 (0, w.Z)((0, eo.Z)(t), 'clicked', !1),
                 (0, w.Z)((0, eo.Z)(t), 'handleClick', function (e) {
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         e.stopPropagation(),
                         t.clicked ||
                             (t.props.onClick(e),
                             (t.clicked = !0),
                             eu()(function () {
                                 t.clicked = !1;
-                            }, 300));
+                            }, 300)));
                 }),
                 t
             );
@@ -19742,11 +19742,11 @@ function d_(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -19780,7 +19780,7 @@ var dC = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -19869,7 +19869,7 @@ var dC = (function (e) {
                                   Y()(a).call(
                                       a,
                                       function (e, t) {
-                                          return i[t] && !O()(e).call(e, i[t]) && e.push(i[t]), e;
+                                          return (i[t] && !O()(e).call(e, i[t]) && e.push(i[t]), e);
                                       },
                                       []
                                   ))
@@ -19941,7 +19941,7 @@ var dC = (function (e) {
         r
     );
 })();
-(0, w.Z)(dC, 'type', 'paywithgoogle'),
+((0, w.Z)(dC, 'type', 'paywithgoogle'),
     (0, w.Z)(dC, 'defaultProps', {
         environment: 'TEST',
         existingPaymentMethodRequired: !1,
@@ -19979,7 +19979,7 @@ var dC = (function (e) {
         shippingOptionRequired: !1,
         shippingOptionParameters: void 0,
         paymentMethods: []
-    });
+    }));
 var dZ = (function (e) {
     (0, ea.Z)(r, sp);
     var t,
@@ -19988,7 +19988,7 @@ var dZ = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -20003,7 +20003,7 @@ var dZ = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (0, Z.Z)(r);
 })();
@@ -20043,12 +20043,12 @@ function dN(e) {
         f = h[0],
         m = h[1],
         y = t5({});
-    l()(y.current).length || null == (t = c.setComponentRef) || t.call(c, y.current),
+    (l()(y.current).length || null == (t = c.setComponentRef) || t.call(c, y.current),
         (y.current.showValidation = function () {
             var e;
             null == (e = u.current) || e.showValidation();
         }),
-        (y.current.setStatus = m);
+        (y.current.setStatus = m));
     var v = r && c.showFormInstruction;
     return (0, ec.h)(
         'div',
@@ -20079,9 +20079,9 @@ function dx(e) {
         var r = document.createRange();
         r.selectNodeContents(n);
         var o = window.getSelection();
-        o.removeAllRanges(), o.addRange(r), n.setSelectionRange(0, 999999);
+        (o.removeAllRanges(), o.addRange(r), n.setSelectionRange(0, 999999));
     } else n.select();
-    document.execCommand('copy'), document.body.removeChild(n);
+    (document.execCommand('copy'), document.body.removeChild(n));
 }
 var dP = ['voucherDetails', 'className'];
 function dA(e) {
@@ -20171,7 +20171,7 @@ function dA(e) {
                                 variant: 'action',
                                 onClick: function (e, t) {
                                     var n = t.complete;
-                                    dx(a.reference), n();
+                                    (dx(a.reference), n());
                                 },
                                 icon: s({ imageFolder: 'components/' })('copy'),
                                 label: i.get('button.copy')
@@ -20256,11 +20256,11 @@ function dF(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20289,7 +20289,7 @@ var dE = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -20304,7 +20304,7 @@ var dE = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -20364,21 +20364,21 @@ var dE = (function (e) {
         r
     );
 })();
-(0, w.Z)(dE, 'type', 'econtext'),
+((0, w.Z)(dE, 'type', 'econtext'),
     (0, w.Z)(dE, 'defaultProps', {
         personalDetailsRequired: !0,
         showFormInstruction: !0
-    });
+    }));
 var dI = ['ES', 'FR'];
 function dM(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20407,7 +20407,7 @@ var dT = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -20422,7 +20422,7 @@ var dT = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -20440,11 +20440,11 @@ function dD(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20474,7 +20474,7 @@ var dV = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -20489,7 +20489,7 @@ var dV = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -20507,11 +20507,11 @@ function dj(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20541,7 +20541,7 @@ var dq = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -20556,7 +20556,7 @@ var dq = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -20574,11 +20574,11 @@ function dH(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20608,7 +20608,7 @@ var dz = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -20623,7 +20623,7 @@ var dz = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -20641,11 +20641,11 @@ function dW(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20675,7 +20675,7 @@ var dG = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -20690,7 +20690,7 @@ var dG = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -20713,7 +20713,7 @@ var d$ = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -20728,7 +20728,7 @@ var d$ = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (0, Z.Z)(r);
 })();
@@ -20739,11 +20739,11 @@ function dX(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20773,7 +20773,7 @@ var d1 = function (e) {
                   t,
                   function (e, t) {
                       var r = n[t];
-                      return ('color' !== t || O()(dQ).call(dQ, r)) && (e[t] = r), e;
+                      return (('color' !== t || O()(dQ).call(dQ, r)) && (e[t] = r), e);
                   },
                   {}
               );
@@ -20813,11 +20813,11 @@ function d9(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20881,7 +20881,7 @@ function d4(e) {
                 n = e.CREDIT,
                 r = e.PAYLATER,
                 o = e.VENMO;
-            b(t, m), p.blockPayPalCreditButton || b(n, y), p.blockPayPalPayLaterButton || b(r, v), p.blockPayPalVenmoButton || b(o, g);
+            (b(t, m), p.blockPayPalCreditButton || b(n, y), p.blockPayPalPayLaterButton || b(r, v), p.blockPayPalVenmoButton || b(o, g));
         }, []),
         (0, ec.h)(
             'div',
@@ -20925,11 +20925,11 @@ function d6(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -20964,7 +20964,7 @@ function pe(e) {
     this.setStatus = d;
     var p = t8(
             function (e, n) {
-                d('processing'), t(e, n);
+                (d('processing'), t(e, n));
             },
             [t]
         ),
@@ -21024,11 +21024,11 @@ function pn(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -21065,11 +21065,11 @@ function pa(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -21098,7 +21098,7 @@ var ps = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -21128,7 +21128,7 @@ var ps = (function (e) {
             }),
             (0, w.Z)((0, eo.Z)(o), 'updateWithAction', function (e) {
                 if (e.paymentMethodType !== o.type) throw Error('Invalid Action');
-                return e.paymentData && (o.paymentData = e.paymentData), e.sdkData && e.sdkData.token ? o.handleResolve(e.sdkData.token) : o.handleReject('No token was provided'), null;
+                return (e.paymentData && (o.paymentData = e.paymentData), e.sdkData && e.sdkData.token ? o.handleResolve(e.sdkData.token) : o.handleReject('No token was provided'), null);
             }),
             (0, w.Z)((0, eo.Z)(o), 'handleCancel', function () {
                 o.handleError(new nv('CANCEL'));
@@ -21250,7 +21250,7 @@ var ps = (function (e) {
                     return (
                         (0, ey.Z)((0, es.Z)(r.prototype), 'submit', this).call(this),
                         new (B())(function (t, n) {
-                            (e.resolve = t), (e.reject = n);
+                            ((e.resolve = t), (e.reject = n));
                         })
                     );
                 }
@@ -21299,11 +21299,11 @@ function pc(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -21431,11 +21431,11 @@ function pu(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -21456,7 +21456,7 @@ function pd(e) {
     }
     return e;
 }
-(0, w.Z)(ps, 'type', 'paypal'),
+((0, w.Z)(ps, 'type', 'paypal'),
     (0, w.Z)(ps, 'subtype', 'sdk'),
     (0, w.Z)(ps, 'defaultProps', {
         environment: 'TEST',
@@ -21483,7 +21483,7 @@ function pd(e) {
         onError: function () {},
         onShippingChange: function () {}
     }),
-    (pl.defaultProps = { phoneLabel: 'telephoneNumber' });
+    (pl.defaultProps = { phoneLabel: 'telephoneNumber' }));
 var pp,
     ph,
     pf,
@@ -21628,11 +21628,11 @@ function pg(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -21661,7 +21661,7 @@ var p_ = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -21676,7 +21676,7 @@ var p_ = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -21753,11 +21753,11 @@ function pk(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -21858,7 +21858,7 @@ function pZ(e) {
             cq,
             (0, er.Z)({ ref: n }, pw(e), {
                 onChange: function (e) {
-                    f(pC(pC({}, h), e.data)), i(pC(pC({}, a), e.errors)), u(pC(pC({}, l), e.valid)), g(e.isSfpValid);
+                    (f(pC(pC({}, h), e.data)), i(pC(pC({}, a), e.errors)), u(pC(pC({}, l), e.valid)), g(e.isSfpValid));
                 },
                 render: function () {
                     return null;
@@ -21867,7 +21867,7 @@ function pZ(e) {
         )
     );
 }
-(0, w.Z)(p_, 'type', 'qiwiwallet'),
+((0, w.Z)(p_, 'type', 'qiwiwallet'),
     (0, w.Z)(p_, 'defaultProps', {
         items: P()(
             (pm = J()(pv).call(pv, function (e) {
@@ -21897,7 +21897,7 @@ function pZ(e) {
     (pZ.defaultProps = {
         onChange: function () {},
         onError: function () {}
-    });
+    }));
 var pw = function (e) {
     return {
         allowedDOMAccess: e.allowedDOMAccess,
@@ -21934,11 +21934,11 @@ function pS(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -21967,7 +21967,7 @@ var px = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -21985,7 +21985,7 @@ var px = (function (e) {
         var e, t;
         (0, C.Z)(this, r);
         for (var o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-        return (t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'onBinValue', lT((0, eo.Z)(t))), t;
+        return ((t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'onBinValue', lT((0, eo.Z)(t))), t);
     }
     return (
         (0, Z.Z)(r, [
@@ -22009,35 +22009,35 @@ var px = (function (e) {
                 key: 'updateStyles',
                 value: function (e) {
                     var t;
-                    return null != (t = this.componentRef) && t.updateStyles && this.componentRef.updateStyles(e), this;
+                    return (null != (t = this.componentRef) && t.updateStyles && this.componentRef.updateStyles(e), this);
                 }
             },
             {
                 key: 'setFocusOn',
                 value: function (e) {
                     var t;
-                    return null != (t = this.componentRef) && t.setFocusOn && this.componentRef.setFocusOn(e), this;
+                    return (null != (t = this.componentRef) && t.setFocusOn && this.componentRef.setFocusOn(e), this);
                 }
             },
             {
                 key: 'processBinLookupResponse',
                 value: function (e) {
                     var t;
-                    return null != (t = this.componentRef) && t.processBinLookupResponse && this.componentRef.processBinLookupResponse(e), this;
+                    return (null != (t = this.componentRef) && t.processBinLookupResponse && this.componentRef.processBinLookupResponse(e), this);
                 }
             },
             {
                 key: 'dualBrandingChangeHandler',
                 value: function (e) {
                     var t;
-                    return null != (t = this.componentRef) && t.dualBrandingChangeHandler && this.componentRef.dualBrandingChangeHandler(e), this;
+                    return (null != (t = this.componentRef) && t.dualBrandingChangeHandler && this.componentRef.dualBrandingChangeHandler(e), this);
                 }
             },
             {
                 key: 'handleUnsupportedCard',
                 value: function (e) {
                     var t;
-                    return null != (t = this.componentRef) && t.handleUnsupportedCard && this.componentRef.handleUnsupportedCard(e), this;
+                    return (null != (t = this.componentRef) && t.handleUnsupportedCard && this.componentRef.handleUnsupportedCard(e), this);
                 }
             },
             {
@@ -22046,16 +22046,16 @@ var px = (function (e) {
                     var t,
                         n = this,
                         r = pN({}, e);
-                    (r.rootNode = this._node),
+                    ((r.rootNode = this._node),
                         r.isReset ||
                             (r.supportedBrandsRaw =
                                 null == (t = e.supportedBrandsRaw)
                                     ? void 0
                                     : J()(t).call(t, function (e) {
                                           var t, r;
-                                          return (e.brandImageUrl = null != (t = null == (r = n.props.brandsConfiguration[e.brand]) ? void 0 : r.icon) ? t : sH(e.brand, n.resources)), e;
+                                          return ((e.brandImageUrl = null != (t = null == (r = n.props.brandsConfiguration[e.brand]) ? void 0 : r.icon) ? t : sH(e.brand, n.resources)), e);
                                       })),
-                        this.props.onBinLookup(r);
+                        this.props.onBinLookup(r));
                 }
             },
             {
@@ -22117,20 +22117,20 @@ function pP(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
-(0, w.Z)(px, 'type', 'scheme'),
+((0, w.Z)(px, 'type', 'scheme'),
     (0, w.Z)(px, 'analyticsType', 'custom-scheme'),
     (0, w.Z)(px, 'defaultProps', {
         onBinLookup: function () {},
         brandsConfiguration: {}
-    });
+    }));
 var pA = (function (e) {
     (0, ea.Z)(r, nk);
     var t,
@@ -22139,7 +22139,7 @@ var pA = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -22154,7 +22154,7 @@ var pA = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -22233,7 +22233,7 @@ var pA = (function (e) {
         r
     );
 })();
-(0, w.Z)(pA, 'type', 'sepadirectdebit'), (0, w.Z)(pA, 'defaultProps', { showFormInstruction: !0 });
+((0, w.Z)(pA, 'type', 'sepadirectdebit'), (0, w.Z)(pA, 'defaultProps', { showFormInstruction: !0 }));
 var pR = (function (e) {
         (0, ea.Z)(r, ec.wA);
         var t,
@@ -22242,7 +22242,7 @@ var pR = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -22260,7 +22260,7 @@ var pR = (function (e) {
             var e, t;
             (0, C.Z)(this, r);
             for (var o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-            return (t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'formEl', void 0), t;
+            return ((t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'formEl', void 0), t);
         }
         return (
             (0, Z.Z)(r, [
@@ -22369,7 +22369,7 @@ var pR = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -22384,20 +22384,20 @@ var pR = (function (e) {
                     return (0, ei.Z)(this, e);
                 });
         function r(e) {
-            (0, C.Z)(this, r),
+            ((0, C.Z)(this, r),
                 (t = n.call(this, e)),
                 (0, w.Z)((0, eo.Z)(t), 'processMessageHandler', void 0),
                 (0, w.Z)((0, eo.Z)(t), 'challengePromise', void 0),
                 (0, w.Z)((0, eo.Z)(t), 'iframeCallback', function () {
-                    t.setState({ status: 'iframeLoaded' }),
+                    (t.setState({ status: 'iframeLoaded' }),
                         t.props.onActionHandled({
                             componentType: '3DS2Challenge',
                             actionDescription: 'challenge-iframe-loaded'
-                        });
-                });
+                        }));
+                }));
             var t,
                 o = pV(V()(t.props.cReqData));
-            return (t.state = { base64URLencodedData: o }), t;
+            return ((t.state = { base64URLencodedData: o }), t);
         }
         return (
             (0, Z.Z)(r, [
@@ -22406,7 +22406,7 @@ var pR = (function (e) {
                     value: function () {
                         var e = this;
                         return new (B())(function (t, n) {
-                            (e.processMessageHandler = nx(e.props.postMessageDomain, t, 0, 'challengeResult')), window.addEventListener('message', e.processMessageHandler);
+                            ((e.processMessageHandler = nx(e.props.postMessageDomain, t, 0, 'challengeResult')), window.addEventListener('message', e.processMessageHandler));
                         });
                     }
                 },
@@ -22414,20 +22414,20 @@ var pR = (function (e) {
                     key: 'componentDidMount',
                     value: function () {
                         var e = this;
-                        (this.challengePromise = nZ(600000, this.get3DS2ChallengePromise(), pF)),
+                        ((this.challengePromise = nZ(600000, this.get3DS2ChallengePromise(), pF)),
                             this.challengePromise.promise
                                 .then(function (t) {
-                                    window.removeEventListener('message', e.processMessageHandler), e.props.onCompleteChallenge(t);
+                                    (window.removeEventListener('message', e.processMessageHandler), e.props.onCompleteChallenge(t));
                                 })
                                 .catch(function (t) {
-                                    window.removeEventListener('message', e.processMessageHandler), e.props.onErrorChallenge(t);
-                                });
+                                    (window.removeEventListener('message', e.processMessageHandler), e.props.onErrorChallenge(t));
+                                }));
                     }
                 },
                 {
                     key: 'componentWillUnmount',
                     value: function () {
-                        this.challengePromise && this.challengePromise.cancel(), window.removeEventListener('message', this.processMessageHandler);
+                        (this.challengePromise && this.challengePromise.cancel(), window.removeEventListener('message', this.processMessageHandler));
                     }
                 },
                 {
@@ -22475,7 +22475,7 @@ var pR = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -22585,11 +22585,11 @@ var pR = (function (e) {
                 {
                     key: 'setStatusError',
                     value: function (e) {
-                        this.setState({
+                        (this.setState({
                             status: 'error',
                             errorInfo: e.errorInfo
                         }),
-                            this.props.onError(e);
+                            this.props.onError(e));
                     }
                 },
                 {
@@ -22614,7 +22614,7 @@ var pR = (function (e) {
                                           onErrorChallenge: function (e) {
                                               if (ng(e, 'errorCode')) {
                                                   var t = pL(e.errorCode);
-                                                  return n.props.onError(t), void n.setStatusComplete(e.result);
+                                                  return (n.props.onError(t), void n.setStatusComplete(e.result));
                                               }
                                           }
                                       },
@@ -22653,7 +22653,7 @@ var pz = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -22668,14 +22668,14 @@ var pz = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
             {
                 key: 'onComplete',
                 value: function (e) {
-                    e && (0, ey.Z)((0, es.Z)(r.prototype), 'onComplete', this).call(this, e), this.unmount();
+                    (e && (0, ey.Z)((0, es.Z)(r.prototype), 'onComplete', this).call(this, e), this.unmount());
                 }
             },
             {
@@ -22698,12 +22698,12 @@ var pz = (function (e) {
         r
     );
 })();
-(0, w.Z)(pz, 'type', 'threeDS2Challenge'),
+((0, w.Z)(pz, 'type', 'threeDS2Challenge'),
     (0, w.Z)(pz, 'defaultProps', {
         dataKey: 'threeDSResult',
         size: '02',
         type: 'ChallengeShopper'
-    });
+    }));
 var pW = 'threeDSMethodIframe',
     pY = (function (e) {
         (0, ea.Z)(r, ec.wA);
@@ -22713,7 +22713,7 @@ var pW = 'threeDSMethodIframe',
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -22728,7 +22728,7 @@ var pW = 'threeDSMethodIframe',
                     return (0, ei.Z)(this, e);
                 });
         function r(e) {
-            (0, C.Z)(this, r), (t = n.call(this, e)), (0, w.Z)((0, eo.Z)(t), 'processMessageHandler', void 0), (0, w.Z)((0, eo.Z)(t), 'fingerPrintPromise', void 0);
+            ((0, C.Z)(this, r), (t = n.call(this, e)), (0, w.Z)((0, eo.Z)(t), 'processMessageHandler', void 0), (0, w.Z)((0, eo.Z)(t), 'fingerPrintPromise', void 0));
             var t,
                 o = t.props,
                 a = o.threeDSServerTransID,
@@ -22752,7 +22752,7 @@ var pW = 'threeDSMethodIframe',
                     value: function () {
                         var e = this;
                         return new (B())(function (t, n) {
-                            (e.processMessageHandler = nx(e.props.postMessageDomain, t, 0, 'fingerPrintResult')), window.addEventListener('message', e.processMessageHandler);
+                            ((e.processMessageHandler = nx(e.props.postMessageDomain, t, 0, 'fingerPrintResult')), window.addEventListener('message', e.processMessageHandler));
                         });
                     }
                 },
@@ -22760,20 +22760,20 @@ var pW = 'threeDSMethodIframe',
                     key: 'componentDidMount',
                     value: function () {
                         var e = this;
-                        (this.fingerPrintPromise = nZ(10000, this.get3DS2MethodPromise(), pO)),
+                        ((this.fingerPrintPromise = nZ(10000, this.get3DS2MethodPromise(), pO)),
                             this.fingerPrintPromise.promise
                                 .then(function (t) {
-                                    window.removeEventListener('message', e.processMessageHandler), e.props.onCompleteFingerprint(t);
+                                    (window.removeEventListener('message', e.processMessageHandler), e.props.onCompleteFingerprint(t));
                                 })
                                 .catch(function (t) {
-                                    window.removeEventListener('message', e.processMessageHandler), e.props.onErrorFingerprint(t);
-                                });
+                                    (window.removeEventListener('message', e.processMessageHandler), e.props.onErrorFingerprint(t));
+                                }));
                     }
                 },
                 {
                     key: 'componentWillUnmount',
                     value: function () {
-                        this.fingerPrintPromise && this.fingerPrintPromise.cancel(), window.removeEventListener('message', this.processMessageHandler);
+                        (this.fingerPrintPromise && this.fingerPrintPromise.cancel(), window.removeEventListener('message', this.processMessageHandler));
                     }
                 },
                 {
@@ -22822,7 +22822,7 @@ var pG = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -22882,7 +22882,7 @@ var pG = (function (e) {
             {
                 key: 'componentDidMount',
                 value: function () {
-                    if (!this.state.fingerPrintData || !this.state.fingerPrintData.threeDSMethodURL) return this.setStatusComplete({ threeDSCompInd: 'U' }), void console.debug('### PrepareFingerprint3DS2::exiting:: no fingerPrintData or no threeDSMethodURL');
+                    if (!this.state.fingerPrintData || !this.state.fingerPrintData.threeDSMethodURL) return (this.setStatusComplete({ threeDSCompInd: 'U' }), void console.debug('### PrepareFingerprint3DS2::exiting:: no fingerPrintData or no threeDSMethodURL'));
                     this.setState({ status: 'retrievingFingerPrint' });
                 }
             },
@@ -22923,7 +22923,7 @@ var pG = (function (e) {
                                           n.setStatusComplete(e.result);
                                       },
                                       onErrorFingerprint: function (e) {
-                                          console.debug('### PrepareFingerprint3DS2::fingerprint timed-out:: errorCodeObject=', pL(e.errorCode)), n.setStatusComplete(e.result);
+                                          (console.debug('### PrepareFingerprint3DS2::fingerprint timed-out:: errorCodeObject=', pL(e.errorCode)), n.setStatusComplete(e.result));
                                       },
                                       showSpinner: r
                                   },
@@ -22942,11 +22942,11 @@ function p$(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -22997,14 +22997,14 @@ function pQ(e) {
             t.handleError(e);
         });
 }
-(0, w.Z)(pG, 'type', 'scheme'),
+((0, w.Z)(pG, 'type', 'scheme'),
     (0, w.Z)(pG, 'defaultProps', {
         onComplete: function () {},
         onError: function () {},
         paymentData: '',
         showSpinner: !0,
         onActionHandled: function () {}
-    });
+    }));
 var pJ = (function (e) {
     (0, ea.Z)(r, nk);
     var t,
@@ -23013,7 +23013,7 @@ var pJ = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -23031,14 +23031,14 @@ var pJ = (function (e) {
         var e, t;
         (0, C.Z)(this, r);
         for (var o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-        return (t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'callSubmit3DS2Fingerprint', R()(pQ).call(pQ, (0, eo.Z)(t))), t;
+        return ((t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'callSubmit3DS2Fingerprint', R()(pQ).call(pQ, (0, eo.Z)(t))), t);
     }
     return (
         (0, Z.Z)(r, [
             {
                 key: 'onComplete',
                 value: function (e) {
-                    (0, ey.Z)((0, es.Z)(r.prototype), 'onComplete', this).call(this, e), this.unmount();
+                    ((0, ey.Z)((0, es.Z)(r.prototype), 'onComplete', this).call(this, e), this.unmount());
                 }
             },
             {
@@ -23057,11 +23057,11 @@ var pJ = (function (e) {
         r
     );
 })();
-(0, w.Z)(pJ, 'type', 'threeDS2Fingerprint'),
+((0, w.Z)(pJ, 'type', 'threeDS2Fingerprint'),
     (0, w.Z)(pJ, 'defaultProps', {
         dataKey: 'fingerprintResult',
         type: 'IdentifyShopper'
-    });
+    }));
 var pX = function (e) {
         var t,
             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
@@ -23085,10 +23085,10 @@ var pX = function (e) {
     },
     p1 = (function () {
         function e(t) {
-            (0, C.Z)(this, e), (0, w.Z)(this, 'TRANSLATION_KEY', 'sr.wechatpay.timetopay'), (0, w.Z)(this, 'LONG_TIMEOUT', 180000), (0, w.Z)(this, 'MID_TIMEOUT', 60000), (0, w.Z)(this, 'SHORT_TIMEOUT', 30000), (0, w.Z)(this, 'srPanel', void 0), (0, w.Z)(this, 'i18n', void 0), (0, w.Z)(this, 'srInterval', void 0), (0, w.Z)(this, 'timeout', void 0), (0, w.Z)(this, 'timeLeft', void 0);
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'TRANSLATION_KEY', 'sr.wechatpay.timetopay'), (0, w.Z)(this, 'LONG_TIMEOUT', 180000), (0, w.Z)(this, 'MID_TIMEOUT', 60000), (0, w.Z)(this, 'SHORT_TIMEOUT', 30000), (0, w.Z)(this, 'srPanel', void 0), (0, w.Z)(this, 'i18n', void 0), (0, w.Z)(this, 'srInterval', void 0), (0, w.Z)(this, 'timeout', void 0), (0, w.Z)(this, 'timeLeft', void 0));
             var n = t.srPanel,
                 r = t.i18n;
-            (this.srPanel = n), (this.i18n = r), this.srPanel.setAriaProps({ 'aria-relevant': 'additions text' });
+            ((this.srPanel = n), (this.i18n = r), this.srPanel.setAriaProps({ 'aria-relevant': 'additions text' }));
         }
         return (
             (0, Z.Z)(e, [
@@ -23100,20 +23100,20 @@ var pX = function (e) {
                         if ('-' !== t && '-' !== n) {
                             var r = 'string' == typeof t ? ee()(t, 10) : t,
                                 o = 'string' == typeof n ? ee()(n, 10) : n;
-                            (this.timeLeft = {
+                            ((this.timeLeft = {
                                 minutes: r,
                                 seconds: o
                             }),
                                 r > 5 && this.timeout !== this.LONG_TIMEOUT && ((this.timeout = this.LONG_TIMEOUT), this.setInterval(this.timeout)),
                                 r >= 1 && r <= 5 && this.timeout !== this.MID_TIMEOUT && ((this.timeout = this.MID_TIMEOUT), this.setInterval(this.timeout)),
-                                r < 1 && o > 0 && this.timeout !== this.SHORT_TIMEOUT && ((this.timeout = this.SHORT_TIMEOUT), this.setInterval(this.timeout));
+                                r < 1 && o > 0 && this.timeout !== this.SHORT_TIMEOUT && ((this.timeout = this.SHORT_TIMEOUT), this.setInterval(this.timeout)));
                         }
                     }
                 },
                 {
                     key: 'tearDown',
                     value: function () {
-                        this.clearInterval(), this.srPanel.setAriaProps({ 'aria-relevant': this.srPanel.constructor.defaultProps.ariaAttributes['aria-relevant'] }), this.srPanel.setMessages(null);
+                        (this.clearInterval(), this.srPanel.setAriaProps({ 'aria-relevant': this.srPanel.constructor.defaultProps.ariaAttributes['aria-relevant'] }), this.srPanel.setMessages(null));
                     }
                 },
                 {
@@ -23132,9 +23132,9 @@ var pX = function (e) {
                         var t = this;
                         this.clearInterval();
                         var n = function () {
-                            t.srPanel.setMessages(null), t.srPanel.setMessages(t.getSrMessages(t.timeLeft));
+                            (t.srPanel.setMessages(null), t.srPanel.setMessages(t.getSrMessages(t.timeLeft)));
                         };
-                        n(), (this.srInterval = tc()(n, e));
+                        (n(), (this.srInterval = tc()(n, e)));
                     })
                 },
                 {
@@ -23184,7 +23184,7 @@ var pX = function (e) {
         var t = nl().i18n,
             n = t4(aW).srPanel,
             r = t5(null);
-        t1(function () {
+        (t1(function () {
             return (
                 (r.current = new p1({
                     i18n: t,
@@ -23205,7 +23205,7 @@ var pX = function (e) {
                     }
                 },
                 [e]
-            );
+            ));
     },
     p5 = function (e) {
         var t = new Date().getTime();
@@ -23245,7 +23245,7 @@ function p9(e) {
                         seconds: n,
                         percentage: o
                     };
-                    p(i), r(i);
+                    (p(i), r(i));
                 }
             }, 1000);
             return function () {
@@ -23278,11 +23278,11 @@ function p4(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -23354,11 +23354,11 @@ var p6 = function (e) {
     },
     he = function (e) {
         var t = t4(aW).srPanel;
-        t1(function () {
+        (t1(function () {
             return (
                 t.setAriaProps({ 'aria-relevant': 'additions text' }),
                 function () {
-                    t.setMessages(null), t.setAriaProps({ 'aria-relevant': t.constructor.defaultProps.ariaAttributes['aria-relevant'] });
+                    (t.setMessages(null), t.setAriaProps({ 'aria-relevant': t.constructor.defaultProps.ariaAttributes['aria-relevant'] }));
                 }
             );
         }, []),
@@ -23367,7 +23367,7 @@ var p6 = function (e) {
                     t.setMessages(e);
                 },
                 [e]
-            );
+            ));
     },
     ht = (function (e) {
         (0, ea.Z)(r, ec.wA);
@@ -23377,7 +23377,7 @@ var p6 = function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -23398,7 +23398,7 @@ var p6 = function (e) {
                 (t = n.call(this, e)),
                 (0, w.Z)((0, eo.Z)(t), 'interval', void 0),
                 (0, w.Z)((0, eo.Z)(t), 'statusInterval', function () {
-                    t.checkStatus(), t.setState({ timePassed: t.state.timePassed + t.props.delay }), t.state.timePassed >= t.props.throttleTime && t.setState({ delay: t.props.throttledInterval });
+                    (t.checkStatus(), t.setState({ timePassed: t.state.timePassed + t.props.delay }), t.state.timePassed >= t.props.throttleTime && t.setState({ delay: t.props.throttledInterval }));
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'redirectToApp', function (e) {
                     window.location.assign(e);
@@ -23407,14 +23407,14 @@ var p6 = function (e) {
                     t.setState({ percentage: e.percentage });
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'onTimeUp', function () {
-                    t.setState({ expired: !0 }), clearInterval(t.interval), t.props.onError(new nv('ERROR', 'Payment Expired'));
+                    (t.setState({ expired: !0 }), clearInterval(t.interval), t.props.onError(new nv('ERROR', 'Payment Expired')));
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'onComplete', function (e) {
-                    clearInterval(t.interval),
+                    (clearInterval(t.interval),
                         t.setState({
                             completed: !0,
                             loading: !1
-                        });
+                        }));
                     var n = {
                         data: {
                             details: { payload: e.props.payload },
@@ -23629,7 +23629,7 @@ var p6 = function (e) {
                                         variant: 'action',
                                         onClick: function (e, t) {
                                             var n = t.complete;
-                                            dx(i.props.qrCodeData), n();
+                                            (dx(i.props.qrCodeData), n());
                                         },
                                         icon: _({ imageFolder: 'components/' })('copy'),
                                         label: g.get('button.copy')
@@ -23659,11 +23659,11 @@ function hn(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -23685,7 +23685,7 @@ var hr = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -23700,7 +23700,7 @@ var hr = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -23807,11 +23807,11 @@ function ho(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -23831,7 +23831,7 @@ var ha = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -23846,7 +23846,7 @@ var ha = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -23886,11 +23886,11 @@ function hi(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -23903,7 +23903,7 @@ var hs = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -23918,7 +23918,7 @@ var hs = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -23958,11 +23958,11 @@ function hc(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -23975,7 +23975,7 @@ var hl = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -23990,7 +23990,7 @@ var hl = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -24036,7 +24036,7 @@ var hu = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -24051,7 +24051,7 @@ var hu = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (0, Z.Z)(r);
 })();
@@ -24064,7 +24064,7 @@ var hd = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -24079,7 +24079,7 @@ var hd = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (0, Z.Z)(r);
 })();
@@ -24092,7 +24092,7 @@ var hp = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -24107,7 +24107,7 @@ var hp = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (0, Z.Z)(r);
 })();
@@ -24115,11 +24115,11 @@ function hh(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -24276,11 +24276,11 @@ function hv(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -24301,12 +24301,12 @@ function hg(e) {
     }
     return e;
 }
-(0, w.Z)(hp, 'type', 'molpay_ebanking_VN'),
+((0, w.Z)(hp, 'type', 'molpay_ebanking_VN'),
     (hm.defaultProps = {
         data: {},
         items: [],
         onChange: function () {}
-    });
+    }));
 var hb = (function (e) {
     (0, ea.Z)(r, nk);
     var t,
@@ -24315,7 +24315,7 @@ var hb = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -24330,7 +24330,7 @@ var hb = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -24497,11 +24497,11 @@ function hC(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -24530,7 +24530,7 @@ var hw = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -24545,7 +24545,7 @@ var hw = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -24605,7 +24605,7 @@ var hw = (function (e) {
         r
     );
 })();
-(0, w.Z)(hw, 'type', 'doku'), (0, w.Z)(hw, 'defaultProps', { showFormInstruction: !0 });
+((0, w.Z)(hw, 'type', 'doku'), (0, w.Z)(hw, 'defaultProps', { showFormInstruction: !0 }));
 var hS = {
         socialSecurityNumber: {
             validate: cG,
@@ -24663,7 +24663,7 @@ function hx(e) {
             },
             (0, ec.h)(aC, {
                 onChange: function (t) {
-                    l(t.target.checked), e.onToggle(c);
+                    (l(t.target.checked), e.onToggle(c));
                 },
                 label: a.get('boleto.sendCopyToEmail'),
                 name: 'sendCopyToEmail'
@@ -24753,11 +24753,11 @@ function hA(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -24814,9 +24814,9 @@ function hF(e) {
         C = k[0],
         Z = k[1],
         w = t5({});
-    l()(w.current).length || null == (b = e.setComponentRef) || b.call(e, w.current),
+    (l()(w.current).length || null == (b = e.setComponentRef) || b.call(e, w.current),
         (w.current.showValidation = function () {
-            a(), e.billingAddressRequired && n.current.showValidation();
+            (a(), e.billingAddressRequired && n.current.showValidation());
         }),
         (w.current.setStatus = Z),
         t1(
@@ -24830,7 +24830,7 @@ function hF(e) {
                 });
             },
             [d, p, h]
-        );
+        ));
     var S = (0, H.Z)(e.personalDetailsRequired || e.billingAddressRequired || e.showEmailAddress ? [] : ['standalone']),
         N = e.showFormInstruction && (e.personalDetailsRequired || e.billingAddressRequired);
     return (0, ec.h)(
@@ -24851,7 +24851,7 @@ function hF(e) {
                 label: 'billingAddress',
                 data: hR(hR({}, e.data.billingAddress), {}, { country: 'BR' }),
                 onChange: function (e) {
-                    s('billingAddress', e.data), c('billingAddress', e.isValid), u('billingAddress', e.errors);
+                    (s('billingAddress', e.data), c('billingAddress', e.isValid), u('billingAddress', e.errors));
                 },
                 requiredFields: ['country', 'street', 'houseNumberOrName', 'postalCode', 'city', 'stateOrProvince'],
                 setComponentRef: function (e) {
@@ -24917,11 +24917,11 @@ function hE(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -24950,7 +24950,7 @@ var hM = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -25111,11 +25111,11 @@ function hT(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -25144,7 +25144,7 @@ var hL = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -25216,11 +25216,11 @@ var hL = (function (e) {
         r
     );
 })();
-(0, w.Z)(hL, 'type', 'oxxo'),
+((0, w.Z)(hL, 'type', 'oxxo'),
     (0, w.Z)(hL, 'defaultProps', {
         showPayButton: !1,
         name: 'Oxxo'
-    });
+    }));
 var hV = function (e) {
     var t,
         n = nl().i18n,
@@ -25281,11 +25281,11 @@ function hj(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -25314,7 +25314,7 @@ var hq = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -25399,7 +25399,7 @@ var hq = (function (e) {
         r
     );
 })();
-(0, w.Z)(hq, 'type', 'multibanco'), (0, w.Z)(hq, 'defaultProps', { showPayButton: !0 });
+((0, w.Z)(hq, 'type', 'multibanco'), (0, w.Z)(hq, 'defaultProps', { showPayButton: !0 }));
 var hH = (function (e) {
     (0, ea.Z)(r, sp);
     var t,
@@ -25408,7 +25408,7 @@ var hH = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -25423,7 +25423,7 @@ var hH = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (0, Z.Z)(r);
 })();
@@ -25431,11 +25431,11 @@ function hK(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -25465,7 +25465,7 @@ var hW = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -25480,7 +25480,7 @@ var hW = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -25613,7 +25613,7 @@ var hQ = function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -25652,7 +25652,7 @@ var hQ = function (e) {
                     t.sfp.showValidation();
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'handleFocus', function (e) {
-                    t.setState({ focusedElement: e.currentFocusObject }), !0 === e.focus ? t.props.onFocus(e) : t.props.onBlur(e);
+                    (t.setState({ focusedElement: e.currentFocusObject }), !0 === e.focus ? t.props.onFocus(e) : t.props.onBlur(e));
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'setBalance', function (e) {
                     var n = e.balance,
@@ -25754,11 +25754,11 @@ function h0(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -25807,7 +25807,7 @@ var h2 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -25873,18 +25873,18 @@ var h2 = (function (e) {
                                       return t.props.order
                                           ? t.submit()
                                           : t.onOrderRequest(t.data).then(function (e) {
-                                                t.setState({
+                                                (t.setState({
                                                     order: {
                                                         orderData: e.orderData,
                                                         pspReference: e.pspReference
                                                     }
                                                 }),
-                                                    t.submit();
+                                                    t.submit());
                                             });
                                   t.props.onRequiringConfirmation && t.props.onRequiringConfirmation();
                               })
                               .catch(function (e) {
-                                  t.setStatus((null == e ? void 0 : e.message) || 'error'), t.props.onError && t.handleError(new nv('ERROR', e));
+                                  (t.setStatus((null == e ? void 0 : e.message) || 'error'), t.props.onError && t.handleError(new nv('ERROR', e)));
                               }))
                         : (t.showValidation(), !1)
                     : t.submit();
@@ -25978,7 +25978,7 @@ var h2 = (function (e) {
         r
     );
 })();
-(0, w.Z)(h2, 'type', 'giftcard'), (0, w.Z)(h2, 'defaultProps', { brandsConfiguration: {} });
+((0, w.Z)(h2, 'type', 'giftcard'), (0, w.Z)(h2, 'defaultProps', { brandsConfiguration: {} }));
 var h5 = (function (e) {
     (0, ea.Z)(r, dc);
     var t,
@@ -25987,7 +25987,7 @@ var h5 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -26002,7 +26002,7 @@ var h5 = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (0, Z.Z)(r);
 })();
@@ -26010,11 +26010,11 @@ function h9(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -26035,12 +26035,12 @@ function h8(e) {
     }
     return e;
 }
-(0, w.Z)(h5, 'type', 'vipps'),
+((0, w.Z)(h5, 'type', 'vipps'),
     (0, w.Z)(h5, 'defaultProps', {
         type: h5.type,
         showPayButton: !0,
         name: 'Vipps'
-    });
+    }));
 var h4 = (function (e) {
     (0, ea.Z)(r, sp);
     var t,
@@ -26049,7 +26049,7 @@ var h4 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -26064,7 +26064,7 @@ var h4 = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -26082,11 +26082,11 @@ function h3(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -26116,7 +26116,7 @@ var h7 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -26131,7 +26131,7 @@ var h7 = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -26151,11 +26151,11 @@ function ft(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -26184,7 +26184,7 @@ var fr = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -26199,7 +26199,7 @@ var fr = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -26217,11 +26217,11 @@ function fo(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -26234,7 +26234,7 @@ var fa = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -26249,7 +26249,7 @@ var fa = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -26457,7 +26457,7 @@ var fi = function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -26485,7 +26485,7 @@ var fi = function (e) {
                     t.setState({ showDisableStoredPaymentMethodConfirmation: !t.state.showDisableStoredPaymentMethodConfirmation });
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'onDisableStoredPaymentMethod', function () {
-                    t.props.onDisableStoredPaymentMethod(t.props.paymentMethod), t.toggleDisableConfirmation();
+                    (t.props.onDisableStoredPaymentMethod(t.props.paymentMethod), t.toggleDisableConfirmation());
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'handleOnListItemClick', function () {
                     var e = t.props;
@@ -26705,11 +26705,11 @@ function fv(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -26738,7 +26738,7 @@ var fb = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -26753,7 +26753,7 @@ var fb = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -26908,11 +26908,11 @@ function fC(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -26941,7 +26941,7 @@ var fw = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -26997,7 +26997,7 @@ var fw = (function (e) {
                                   { orderData: r.orderData }
                               ))
                             : null;
-                    B()
+                    (B()
                         .all([c, l, u, d])
                         .then(function (e) {
                             var n,
@@ -27006,7 +27006,7 @@ var fw = (function (e) {
                                 a = r[1],
                                 i = r[2],
                                 s = r[3];
-                            t.setState({
+                            (t.setState({
                                 instantPaymentElements: i,
                                 elements: I()((n = [])).call(n, (0, H.Z)(o), (0, H.Z)(a)),
                                 orderStatus: s
@@ -27020,9 +27020,9 @@ var fw = (function (e) {
                                         }),
                                         component: 'dropin',
                                         flavor: 'dropin'
-                                    });
+                                    }));
                         }),
-                        (t.onOrderCancel = t.getOnOrderCancel());
+                        (t.onOrderCancel = t.getOnOrderCancel()));
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'setStatus', function (e) {
                     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -27043,15 +27043,15 @@ var fw = (function (e) {
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'handleOnSelectPaymentMethod', function (e) {
                     var n = t.state.activePaymentMethod;
-                    t.setActivePaymentMethod(e), ((n && n._id !== e._id) || !n) && t.props.onSelect(e);
+                    (t.setActivePaymentMethod(e), ((n && n._id !== e._id) || !n) && t.props.onSelect(e));
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'handleDisableStoredPaymentMethod', function (e) {
-                    t.setState({ isDisabling: !0 }),
+                    (t.setState({ isDisabling: !0 }),
                         new (B())(function (n, r) {
                             return t.props.onDisableStoredPaymentMethod(e.props.storedPaymentMethodId, n, r);
                         })
                             .then(function () {
-                                t.setState(function (t) {
+                                (t.setState(function (t) {
                                     var n;
                                     return {
                                         elements: P()((n = t.elements)).call(n, function (t) {
@@ -27059,11 +27059,11 @@ var fw = (function (e) {
                                         })
                                     };
                                 }),
-                                    t.setState({ isDisabling: !1 });
+                                    t.setState({ isDisabling: !1 }));
                             })
                             .catch(function () {
                                 t.setState({ isDisabling: !1 });
-                            });
+                            }));
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'getOnOrderCancel', function () {
                     return t.props.onOrderCancel
@@ -27098,7 +27098,7 @@ var fw = (function (e) {
                 {
                     key: 'componentDidUpdate',
                     value: function (e, t) {
-                        t.status.type !== this.state.status.type && this.state.activePaymentMethod && this.state.activePaymentMethod.setStatus(this.state.status.type), 'ready' === this.state.status.type && 'ready' !== t.status.type && this.props.onReady && this.props.onReady();
+                        (t.status.type !== this.state.status.type && this.state.activePaymentMethod && this.state.activePaymentMethod.setStatus(this.state.status.type), 'ready' === this.state.status.type && 'ready' !== t.status.type && this.props.onReady && this.props.onReady());
                     }
                 },
                 {
@@ -27206,11 +27206,11 @@ function fR(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -27235,11 +27235,11 @@ function fO(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -27264,11 +27264,11 @@ function fI(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -27298,7 +27298,7 @@ var fB = ['paywithgoogle', 'googlepay', 'applepay'],
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -27418,7 +27418,7 @@ var fB = ['paywithgoogle', 'googlepay', 'applepay'],
                 {
                     key: 'showValidation',
                     value: function () {
-                        return this.dropinRef.state.activePaymentMethod && this.dropinRef.state.activePaymentMethod.showValidation(), this;
+                        return (this.dropinRef.state.activePaymentMethod && this.dropinRef.state.activePaymentMethod.showValidation(), this);
                     }
                 },
                 {
@@ -27426,7 +27426,7 @@ var fB = ['paywithgoogle', 'googlepay', 'applepay'],
                     value: function (e) {
                         var t,
                             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                        return null == (t = this.dropinRef) || t.setStatus(e, n), this;
+                        return (null == (t = this.dropinRef) || t.setStatus(e, n), this);
                     }
                 },
                 {
@@ -27515,7 +27515,7 @@ var fB = ['paywithgoogle', 'googlepay', 'applepay'],
             r
         );
     })();
-(0, w.Z)(fT, 'type', 'dropin'),
+((0, w.Z)(fT, 'type', 'dropin'),
     (0, w.Z)(fT, 'defaultProps', {
         isDropin: !0,
         onReady: function () {},
@@ -27534,7 +27534,7 @@ var fB = ['paywithgoogle', 'googlepay', 'applepay'],
         showPaymentMethods: !0,
         showRemoveStoredPaymentMethodButton: !1,
         showPayButton: !0
-    });
+    }));
 var fD = 'AchInput-module_adyen-checkout__input__8WwCR',
     fL = function (e) {
         var t,
@@ -27626,11 +27626,11 @@ function fU(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -27688,11 +27688,11 @@ function fK(e) {
         O = F[0],
         E = F[1],
         I = function (e) {
-            k(fq(fq({}, _), e.data)), h(fq(fq({}, p), {}, { billingAddress: e.isValid }));
+            (k(fq(fq({}, _), e.data)), h(fq(fq({}, p), {}, { billingAddress: e.isValid })));
         },
         M = function (t) {
             var n = t.target.value;
-            v(fq(fq({}, y), {}, { holderName: n })), c(fq(fq({}, s), {}, { holderName: !!e.holderNameRequired && !fH(n) })), h(fq(fq({}, p), {}, { holderName: !e.holderNameRequired || fH(n, e.holderNameRequired) }));
+            (v(fq(fq({}, y), {}, { holderName: n })), c(fq(fq({}, s), {}, { holderName: !!e.holderNameRequired && !fH(n) })), h(fq(fq({}, p), {}, { holderName: !e.holderNameRequired || fH(n, e.holderNameRequired) })));
         },
         B = t5(null),
         T = t5(null),
@@ -27707,7 +27707,7 @@ function fK(e) {
     return (
         l()(H.current).length || null == (t = e.setComponentRef) || t.call(e, H.current),
         (H.current.showValidation = function () {
-            B.current.showValidation(), e.holderNameRequired && !p.holderName && c(fq(fq({}, s), {}, { holderName: !0 })), T.current && T.current.showValidation();
+            (B.current.showValidation(), e.holderNameRequired && !p.holderName && c(fq(fq({}, s), {}, { holderName: !0 })), T.current && T.current.showValidation());
         }),
         (H.current.setStatus = U),
         t1(function () {
@@ -27742,11 +27742,11 @@ function fK(e) {
                     styles: fq(fq({}, fj), e.styles),
                     onChange: function (t) {
                         var n = t.autoCompleteName ? t.autoCompleteName : y.holderName;
-                        v(fq(fq(fq({}, y), t.data), {}, { holderName: n })), c(fq(fq({}, s), t.errors)), h(fq(fq(fq({}, p), t.valid), {}, { holderName: !e.holderNameRequired || fH(n, e.holderNameRequired) })), S(t.isSfpValid);
+                        (v(fq(fq(fq({}, y), t.data), {}, { holderName: n })), c(fq(fq({}, s), t.errors)), h(fq(fq(fq({}, p), t.valid), {}, { holderName: !e.holderNameRequired || fH(n, e.holderNameRequired) })), S(t.isSfpValid));
                     },
                     onFocus: function (t) {
                         var n = !0 === t.focus;
-                        A(t.currentFocusObject), n ? e.onFocus(t) : e.onBlur(t);
+                        (A(t.currentFocusObject), n ? e.onFocus(t) : e.onBlur(t));
                     },
                     render: function (t, n) {
                         var o = t.setRootNode,
@@ -27863,11 +27863,11 @@ function fW(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -27896,7 +27896,7 @@ var fG = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -27911,7 +27911,7 @@ var fG = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -27928,19 +27928,19 @@ var fG = (function (e) {
                     var e,
                         t = !!this.props.storedPaymentMethodId,
                         n = fY(fY({ type: r.type }, this.state.data), {}, { ownerName: null == (e = this.state.data) ? void 0 : e.holderName }, t && { storedPaymentMethodId: this.props.storedPaymentMethodId });
-                    return delete n.holderName, fY(fY({ paymentMethod: n }, this.state.billingAddress && { billingAddress: this.state.billingAddress }), this.state.storePaymentMethod && { storePaymentMethod: this.state.storePaymentMethod });
+                    return (delete n.holderName, fY(fY({ paymentMethod: n }, this.state.billingAddress && { billingAddress: this.state.billingAddress }), this.state.storePaymentMethod && { storePaymentMethod: this.state.storePaymentMethod }));
                 }
             },
             {
                 key: 'updateStyles',
                 value: function (e) {
-                    return this.componentRef && this.componentRef.updateStyles && this.componentRef.updateStyles(e), this;
+                    return (this.componentRef && this.componentRef.updateStyles && this.componentRef.updateStyles(e), this);
                 }
             },
             {
                 key: 'setFocusOn',
                 value: function (e) {
-                    return this.componentRef && this.componentRef.setFocusOn && this.componentRef.setFocusOn(e), this;
+                    return (this.componentRef && this.componentRef.setFocusOn && this.componentRef.setFocusOn(e), this);
                 }
             },
             {
@@ -28030,11 +28030,11 @@ function f0(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -28085,7 +28085,7 @@ function f2(e) {
         y = d.isValid,
         v = d.triggerValidation,
         g = d.setSchema;
-    t1(
+    (t1(
         function () {
             g(c);
         },
@@ -28108,7 +28108,7 @@ function f2(e) {
             },
             [h, f, m, y]
         ),
-        (this.triggerValidation = v);
+        (this.triggerValidation = v));
     var b = function () {
             var e = document.querySelector('.adyen-checkout-phone-input--new [uniqueid]');
             return e ? e.getAttribute('uniqueid') : null;
@@ -28250,7 +28250,7 @@ function f5(e) {
         _ = (0, q.Z)(b, 2),
         k = _[0],
         C = _[1];
-    (this.setStatus = C), (this.showValidation = null == v || null == (h = v.current) ? void 0 : h.triggerValidation);
+    ((this.setStatus = C), (this.showValidation = null == v || null == (h = v.current) ? void 0 : h.triggerValidation));
     var Z =
             ((n = (t = {
                 allowedCountries: void 0 === g ? [] : g,
@@ -28273,7 +28273,7 @@ function f5(e) {
                                   return O()(n).call(n, e.id);
                               })
                             : e;
-                        p(
+                        (p(
                             J()(t).call(t, function (e) {
                                 var t,
                                     n,
@@ -28290,10 +28290,10 @@ function f5(e) {
                                 };
                             }) || []
                         ),
-                            c('ready');
+                            c('ready'));
                     })
                     .catch(function (e) {
-                        p([]), c('ready'), null == o || o(new nv('ERROR', e));
+                        (p([]), c('ready'), null == o || o(new nv('ERROR', e)));
                     });
             }, []),
             {
@@ -28336,22 +28336,22 @@ function f5(e) {
         )
     );
 }
-(f2.defaultProps = { phoneLabel: 'telephoneNumber' }),
+((f2.defaultProps = { phoneLabel: 'telephoneNumber' }),
     (f5.defaultProps = {
         onChange: function () {},
         phoneNumberKey: 'mobileNumber',
         phoneNumberErrorKey: 'mobileNumber.invalid'
-    });
+    }));
 var f9 = ['message'];
 function f8(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -28418,7 +28418,7 @@ function f3(e) {
         K = function () {
             var t = e.paymentData,
                 r = e.clientKey;
-            C ||
+            (C ||
                 (e.onActionHandled({
                     componentType: e.type,
                     actionDescription: 'polling-started'
@@ -28448,7 +28448,7 @@ function f3(e) {
                                         };
                                         return e.onComplete(r, n);
                                     }
-                                    f(!0), e.onError(new nv('ERROR', 'successful result, but no payload in response'));
+                                    (f(!0), e.onError(new nv('ERROR', 'successful result, but no payload in response')));
                                 })(t);
                                 break;
                             case 'error':
@@ -28468,9 +28468,9 @@ function f3(e) {
                             default:
                                 g(!1);
                         }
-                    });
+                    }));
         };
-    t1(function () {
+    (t1(function () {
         return (
             K(),
             function () {
@@ -28486,12 +28486,12 @@ function f3(e) {
                         eu()(function () {
                             K();
                             var t = I + N;
-                            M(t), t >= e.throttleTime && !D && (x(e.throttleInterval), L(!0));
+                            (M(t), t >= e.throttleTime && !D && (x(e.throttleInterval), L(!0)));
                         }, N)
                     );
             },
             [v, h, l, I]
-        );
+        ));
     var z = function (e, t) {
         return (0, ec.h)(
             'div',
@@ -28576,7 +28576,7 @@ function f3(e) {
                             F(e.percentage);
                         },
                         onCompleted: function () {
-                            f(!0), clearTimeout(U), e.onError(new nv('ERROR', 'Payment Expired'));
+                            (f(!0), clearTimeout(U), e.onError(new nv('ERROR', 'Payment Expired')));
                         }
                     }),
                     '\xA0',
@@ -28592,7 +28592,7 @@ function f3(e) {
                     classNameModifiers: ['await'],
                     onClick: function () {
                         var t;
-                        return (t = e.url), void window.location.assign(t);
+                        return ((t = e.url), void window.location.assign(t));
                     },
                     label: o.get('openApp')
                 })
@@ -28603,11 +28603,11 @@ function f6(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -28648,7 +28648,7 @@ var me = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -28663,7 +28663,7 @@ var me = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -28860,11 +28860,11 @@ function mr(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -28894,7 +28894,7 @@ var ma = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -28909,7 +28909,7 @@ var ma = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -29092,11 +29092,11 @@ function mc(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -29109,7 +29109,7 @@ var ml = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -29207,21 +29207,21 @@ var ml = (function (e) {
         r
     );
 })();
-(0, w.Z)(ml, 'type', 'bankTransfer_IBAN'),
+((0, w.Z)(ml, 'type', 'bankTransfer_IBAN'),
     (0, w.Z)(ml, 'defaultProps', {
         showPayButton: !0,
         showEmailAddress: !0
-    });
+    }));
 var mu = ['CA', 'US'];
 function md(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -29250,7 +29250,7 @@ var mh = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -29265,7 +29265,7 @@ var mh = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -29341,7 +29341,7 @@ function my(e) {
         _ = (0, q.Z)(b, 2),
         k = _[0],
         C = _[1];
-    (this.setStatus = C),
+    ((this.setStatus = C),
         (this.showValidation = function () {
             h();
         }),
@@ -29355,7 +29355,7 @@ function my(e) {
                 });
             },
             [s, m, y, v]
-        );
+        ));
     var Z = o ? [] : ['standalone'];
     return (0, ec.h)(
         'div',
@@ -29383,11 +29383,11 @@ function mv(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -29416,7 +29416,7 @@ var mb = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -29431,7 +29431,7 @@ var mb = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -29515,7 +29515,7 @@ var mb = (function (e) {
         r
     );
 })();
-(0, w.Z)(mb, 'type', 'pix'),
+((0, w.Z)(mb, 'type', 'pix'),
     (0, w.Z)(
         mb,
         'defaultProps',
@@ -29528,7 +29528,7 @@ var mb = (function (e) {
             },
             hr.defaultProps
         )
-    );
+    ));
 var m_ = /^(\d){1,8}$/,
     mk = /^(\d){6}$/,
     mC = {
@@ -29813,11 +29813,11 @@ function mP(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -29846,7 +29846,7 @@ var mR = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -29939,7 +29939,7 @@ var mR = (function (e) {
         r
     );
 })();
-(0, w.Z)(mR, 'type', 'directdebit_GB'), (0, w.Z)(mR, 'defaultProps', { showFormInstruction: !0 });
+((0, w.Z)(mR, 'type', 'directdebit_GB'), (0, w.Z)(mR, 'defaultProps', { showFormInstruction: !0 }));
 var mF = (function (e) {
         (0, ea.Z)(r, nk);
         var t,
@@ -29948,7 +29948,7 @@ var mF = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -29963,7 +29963,7 @@ var mF = (function (e) {
                     return (0, ei.Z)(this, e);
                 });
         function r() {
-            return (0, C.Z)(this, r), n.apply(this, arguments);
+            return ((0, C.Z)(this, r), n.apply(this, arguments));
         }
         return (
             (0, Z.Z)(r, [
@@ -30005,7 +30005,7 @@ var mF = (function (e) {
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -30020,7 +30020,7 @@ var mF = (function (e) {
                     return (0, ei.Z)(this, e);
                 });
         function r() {
-            return (0, C.Z)(this, r), n.apply(this, arguments);
+            return ((0, C.Z)(this, r), n.apply(this, arguments));
         }
         return (
             (0, Z.Z)(r, [
@@ -30068,18 +30068,18 @@ function mI(e) {
         s = i[0],
         c = i[1],
         l = function () {
-            c('error'),
+            (c('error'),
                 r.onComplete({
                     data: {
                         paymentData: r.paymentData,
                         details: {}
                     }
-                });
+                }));
         };
     return (
         t1(function () {
             window.klarnaAsyncCallback = function () {
-                window.Klarna.Payments.init({ client_token: t.client_token }),
+                (window.Klarna.Payments.init({ client_token: t.client_token }),
                     window.Klarna.Payments.load(
                         {
                             container: o.current,
@@ -30088,7 +30088,7 @@ function mI(e) {
                         function (e) {
                             !e.show_form || e.error ? l() : r.onLoaded();
                         }
-                    );
+                    ));
             };
             var e = new iO('https://x.klarnacdn.net/kp/lib/v1/api.js');
             return (
@@ -30135,11 +30135,11 @@ function mM(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -30207,11 +30207,11 @@ function mD(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -30223,7 +30223,7 @@ var mL = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -30339,7 +30339,7 @@ var mL = (function (e) {
         r
     );
 })();
-(0, w.Z)(mL, 'type', 'klarna'), (0, w.Z)(mL, 'defaultProps', { useKlarnaWidget: !1 });
+((0, w.Z)(mL, 'type', 'klarna'), (0, w.Z)(mL, 'defaultProps', { useKlarnaWidget: !1 }));
 var mV = (function (e) {
     (0, ea.Z)(r, dc);
     var t,
@@ -30348,7 +30348,7 @@ var mV = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -30408,11 +30408,11 @@ var mV = (function (e) {
         r
     );
 })();
-(0, w.Z)(mV, 'type', 'twint'),
+((0, w.Z)(mV, 'type', 'twint'),
     (0, w.Z)(mV, 'defaultProps', {
         type: mV.type,
         showPayButton: !0
-    });
+    }));
 var mj = function (e) {
     var t = e.i18n,
         n = e.sfpState,
@@ -30446,11 +30446,11 @@ function mU(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -30480,11 +30480,11 @@ function mK(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -30513,7 +30513,7 @@ var mW = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -30576,11 +30576,11 @@ function mY(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -30610,7 +30610,7 @@ var m$ = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -30625,7 +30625,7 @@ var m$ = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -30655,11 +30655,11 @@ function mQ(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -30689,7 +30689,7 @@ var mX = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -30704,7 +30704,7 @@ var mX = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r(e) {
-        return (0, C.Z)(this, r), n.call(this, mJ(mJ({}, e), {}, { termsAndConditions: r.termsAndConditions }));
+        return ((0, C.Z)(this, r), n.call(this, mJ(mJ({}, e), {}, { termsAndConditions: r.termsAndConditions })));
     }
     return (0, Z.Z)(r);
 })();
@@ -30712,11 +30712,11 @@ function m0(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -30737,7 +30737,7 @@ function m1(e) {
     }
     return e;
 }
-(0, w.Z)(mX, 'type', 'onlineBanking_PL'),
+((0, w.Z)(mX, 'type', 'onlineBanking_PL'),
     (0, w.Z)(mX, 'disclaimerUrlsMap', {
         regulation: 'https://www.przelewy24.pl/regulamin',
         obligation: 'https://www.przelewy24.pl/obowiazek-informacyjny-rodo-platnicy'
@@ -30745,7 +30745,7 @@ function m1(e) {
     (0, w.Z)(mX, 'termsAndConditions', {
         translationKey: 'onlineBankingPL.termsAndConditions',
         urls: [mX.disclaimerUrlsMap.regulation, mX.disclaimerUrlsMap.obligation]
-    });
+    }));
 var m2 = (function (e) {
     (0, ea.Z)(r, il);
     var t,
@@ -30754,7 +30754,7 @@ var m2 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -30769,7 +30769,7 @@ var m2 = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -30822,7 +30822,7 @@ var m5 = {
         return (
             t1(
                 function () {
-                    (c.current.validateInput = l), e.onSetInputHandlers(c.current);
+                    ((c.current.validateInput = l), e.onSetInputHandlers(c.current));
                 },
                 [l, e.onSetInputHandlers]
             ),
@@ -30937,18 +30937,18 @@ function m6(e) {
         v = (0, q.Z)(y, 2),
         g = v[0],
         b = v[1];
-    (this.setStatus = function (e) {
+    ((this.setStatus = function (e) {
         m(e);
     }),
         (this.showValidation = function () {
             u.validateInput();
-        });
+        }));
     var _ = t8(function (e) {
             d(e);
         }, []),
         k = t8(
             function (e) {
-                b(e), r(e);
+                (b(e), r(e));
             },
             [r]
         );
@@ -31021,11 +31021,11 @@ function m7(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31038,7 +31038,7 @@ var ye = (((o = ye || {}).UpiCollect = 'upi_collect'), (o.UpiQr = 'upi_qr'), o),
                     if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -31186,11 +31186,11 @@ function yn(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31211,7 +31211,7 @@ function yr(e) {
     }
     return e;
 }
-(0, w.Z)(yt, 'type', 'upi'), (0, w.Z)(yt, 'defaultProps', { defaultMode: m4.Vpa });
+((0, w.Z)(yt, 'type', 'upi'), (0, w.Z)(yt, 'defaultProps', { defaultMode: m4.Vpa }));
 var yo = (function (e) {
     (0, ea.Z)(r, sp);
     var t,
@@ -31220,7 +31220,7 @@ var yo = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -31235,7 +31235,7 @@ var yo = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -31265,11 +31265,11 @@ function ya(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31299,7 +31299,7 @@ var ys = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -31314,7 +31314,7 @@ var ys = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -31346,11 +31346,11 @@ function yc(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31371,11 +31371,11 @@ function yl(e) {
     }
     return e;
 }
-(0, w.Z)(ys, 'type', 'onlineBanking_CZ'),
+((0, w.Z)(ys, 'type', 'onlineBanking_CZ'),
     (0, w.Z)(ys, 'termsAndConditions', {
         translationKey: 'onlineBanking.termsAndConditions',
         urls: ['https://static.payu.com/sites/terms/files/payu_privacy_policy_cs.pdf']
-    });
+    }));
 var yu = (function (e) {
     (0, ea.Z)(r, sp);
     var t,
@@ -31384,7 +31384,7 @@ var yu = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -31399,7 +31399,7 @@ var yu = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -31431,11 +31431,11 @@ function yd(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31456,11 +31456,11 @@ function yp(e) {
     }
     return e;
 }
-(0, w.Z)(yu, 'type', 'onlineBanking_SK'),
+((0, w.Z)(yu, 'type', 'onlineBanking_SK'),
     (0, w.Z)(yu, 'termsAndConditions', {
         translationKey: 'onlineBanking.termsAndConditions',
         urls: ['https://static.payu.com/sites/terms/files/payu_privacy_policy_sk.pdf']
-    });
+    }));
 var yh = (function (e) {
     (0, ea.Z)(r, sp);
     var t,
@@ -31469,7 +31469,7 @@ var yh = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -31484,7 +31484,7 @@ var yh = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r(e) {
-        return (0, C.Z)(this, r), n.call(this, yp(yp({}, e), {}, { showPaymentMethodItemImages: !0 }));
+        return ((0, C.Z)(this, r), n.call(this, yp(yp({}, e), {}, { showPaymentMethodItemImages: !0 })));
     }
     return (0, Z.Z)(r);
 })();
@@ -31492,11 +31492,11 @@ function yf(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31509,7 +31509,7 @@ var ym = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -31524,7 +31524,7 @@ var ym = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -31564,11 +31564,11 @@ function yy(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31581,7 +31581,7 @@ var yv = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -31596,7 +31596,7 @@ var yv = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -31641,7 +31641,7 @@ var yg = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -31656,7 +31656,7 @@ var yg = (function (e) {
                 return (0, ei.Z)(this, e);
             });
     function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
+        return ((0, C.Z)(this, r), n.apply(this, arguments));
     }
     return (
         (0, Z.Z)(r, [
@@ -31701,11 +31701,11 @@ function yb(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31854,7 +31854,7 @@ var yk = {
     },
     yZ = function (e) {
         var t = e;
-        return 'scheme' === e && (t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? 'storedCard' : 'card'), (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})[t] || {};
+        return ('scheme' === e && (t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? 'storedCard' : 'card'), (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})[t] || {});
     };
 function yw(e) {
     return !this.length || z()(this).call(this, e.type) > -1;
@@ -31874,11 +31874,11 @@ function yA(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -31916,7 +31916,7 @@ var yF = function (e) {
                 d,
                 p,
                 h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            (0, C.Z)(this, e),
+            ((0, C.Z)(this, e),
                 (0, w.Z)(this, 'paymentMethods', []),
                 (0, w.Z)(this, 'storedPaymentMethods', []),
                 (function (e) {
@@ -31926,7 +31926,7 @@ var yF = function (e) {
                     !e || (null != e && null != (t = e.paymentMethods) && t.length) || (null != e && null != (n = e.storedPaymentMethods) && n.length) || console.warn('paymentMethodsResponse was provided but no payment methods were found.');
                 })(t),
                 (this.paymentMethods = t ? ((n = t.paymentMethods), (o = h.allowPaymentMethods), (a = h.removePaymentMethods), n ? P()((r = P()(n).call(n, yw, void 0 === o ? [] : o))).call(r, yS, void 0 === a ? [] : a) : []) : []),
-                (this.storedPaymentMethods = t ? ((i = t.storedPaymentMethods), (d = h.allowPaymentMethods), (p = h.removePaymentMethods), i ? J()((s = P()((c = P()((l = P()((u = P()(i).call(i, yP))).call(u, yw, void 0 === d ? [] : d))).call(l, yS, void 0 === p ? [] : p))).call(c, yN))).call(s, yF) : []) : []);
+                (this.storedPaymentMethods = t ? ((i = t.storedPaymentMethods), (d = h.allowPaymentMethods), (p = h.removePaymentMethods), i ? J()((s = P()((c = P()((l = P()((u = P()(i).call(i, yP))).call(u, yw, void 0 === d ? [] : d))).call(l, yS, void 0 === p ? [] : p))).call(c, yN))).call(s, yF) : []) : []));
         }
         return (
             (0, Z.Z)(e, [
@@ -31964,11 +31964,11 @@ function yE(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32077,7 +32077,7 @@ var yM = function (e) {
                     (function (e, t) {
                         if ('fingerprint' === e) {
                             var n = sz(t.elementRef ? pj : pU).from(t);
-                            return (n.showSpinner = !t.isDropin), (n.statusType = 'loading'), n;
+                            return ((n.showSpinner = !t.isDropin), (n.statusType = 'loading'), n);
                         }
                         return {
                             statusType: 'custom',
@@ -32097,11 +32097,11 @@ function yT(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32109,17 +32109,17 @@ function yD(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
 var yL = (function () {
         function e() {
-            (0, C.Z)(this, e), (0, w.Z)(this, 'storage', void 0), (this.storage = {});
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'storage', void 0), (this.storage = {}));
         }
         return (
             (0, Z.Z)(e, [
@@ -32166,7 +32166,7 @@ var yL = (function () {
     })(),
     yV = (function () {
         function e(t, n) {
-            (0, C.Z)(this, e), (0, w.Z)(this, 'prefix', 'adyen-checkout__'), (0, w.Z)(this, 'key', void 0), (0, w.Z)(this, 'storage', void 0);
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'prefix', 'adyen-checkout__'), (0, w.Z)(this, 'key', void 0), (0, w.Z)(this, 'storage', void 0));
             try {
                 this.storage = n ? window[n] : window.localStorage;
             } catch (e) {
@@ -32239,7 +32239,7 @@ var yL = (function () {
     },
     yU = (function () {
         function e() {
-            (0, C.Z)(this, e), (0, w.Z)(this, 'events', []);
+            ((0, C.Z)(this, e), (0, w.Z)(this, 'events', []));
         }
         return (
             (0, Z.Z)(e, [
@@ -32256,7 +32256,7 @@ var yL = (function () {
                             n = J()((t = this.events)).call(t, function (t) {
                                 return t(e);
                             });
-                        return (this.events = []), B().all(n);
+                        return ((this.events = []), B().all(n));
                     }
                 }
             ]),
@@ -32267,11 +32267,11 @@ function yq(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32301,7 +32301,7 @@ var yK = (function () {
             i = t.clientKey,
             s = t.analytics,
             c = t.amount;
-        (0, C.Z)(this, e),
+        ((0, C.Z)(this, e),
             (0, w.Z)(this, 'checkoutAttemptId', null),
             (0, w.Z)(this, 'props', void 0),
             (0, w.Z)(this, 'logEvent', void 0),
@@ -32405,7 +32405,7 @@ var yK = (function () {
                 loadingContext: o,
                 clientKey: i,
                 experiments: this.props.experiments
-            }));
+            })));
         var u = this.props,
             d = u.telemetry,
             p = u.enabled;
@@ -32426,7 +32426,7 @@ var yK = (function () {
                             this.checkoutAttemptId ||
                             this.collectId()
                                 .then(function (e) {
-                                    (t.checkoutAttemptId = e), t.queue.run(t.checkoutAttemptId);
+                                    ((t.checkoutAttemptId = e), t.queue.run(t.checkoutAttemptId));
                                 })
                                 .catch(function (e) {
                                     console.warn('Fetching checkoutAttemptId failed.'.concat(e ? ' Error='.concat(e) : ''));
@@ -32448,7 +32448,7 @@ function yz(e) {
     return Y()((t = l()(e))).call(
         t,
         function (t, n) {
-            return O()(o0).call(o0, n) && (t[n] = e[n]), t;
+            return (O()(o0).call(o0, n) && (t[n] = e[n]), t);
         },
         {}
     );
@@ -32457,11 +32457,11 @@ function yW(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32469,11 +32469,11 @@ function yY(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32481,11 +32481,11 @@ function yG(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32493,11 +32493,11 @@ function y$(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32505,11 +32505,11 @@ function yQ(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32517,11 +32517,11 @@ function yJ(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32533,7 +32533,7 @@ function yJ(e, t) {
 });
 var yX = (function () {
     function e(t, n, r) {
-        (0, C.Z)(this, e), (0, w.Z)(this, 'session', void 0), (0, w.Z)(this, 'storage', void 0), (0, w.Z)(this, 'clientKey', void 0), (0, w.Z)(this, 'loadingContext', void 0), (0, w.Z)(this, 'configuration', void 0);
+        ((0, C.Z)(this, e), (0, w.Z)(this, 'session', void 0), (0, w.Z)(this, 'storage', void 0), (0, w.Z)(this, 'clientKey', void 0), (0, w.Z)(this, 'loadingContext', void 0), (0, w.Z)(this, 'configuration', void 0));
         var o = (function (e) {
             if (!e || !e.id) throw Error('Invalid session');
             return (function (e) {
@@ -32556,7 +32556,7 @@ var yX = (function () {
         })(t);
         if (!n) throw Error('No clientKey available');
         if (!r) throw Error('No loadingContext available');
-        (this.storage = new yV('session', 'localStorage')), (this.clientKey = n), (this.loadingContext = r), (this.session = o), this.session.sessionData ? this.storeSession() : (this.session = this.getStoredSession());
+        ((this.storage = new yV('session', 'localStorage')), (this.clientKey = n), (this.loadingContext = r), (this.session = o), this.session.sessionData ? this.storeSession() : (this.session = this.getStoredSession()));
     }
     return (
         (0, Z.Z)(e, [
@@ -32575,7 +32575,7 @@ var yX = (function () {
             {
                 key: 'updateSessionData',
                 value: function (e) {
-                    (this.session.sessionData = e), this.storeSession();
+                    ((this.session.sessionData = e), this.storeSession());
                 }
             },
             {
@@ -32681,7 +32681,7 @@ var yX = (function () {
                         },
                         o
                     )).then(function (e) {
-                        return e.sessionData && a.updateSessionData(e.sessionData), e;
+                        return (e.sessionData && a.updateSessionData(e.sessionData), e);
                     });
                 }
             },
@@ -32719,7 +32719,7 @@ var yX = (function () {
                         },
                         o
                     )).then(function (e) {
-                        return e.sessionData && a.updateSessionData(e.sessionData), e;
+                        return (e.sessionData && a.updateSessionData(e.sessionData), e);
                     });
                 }
             },
@@ -32757,7 +32757,7 @@ var yX = (function () {
                         },
                         o
                     )).then(function (e) {
-                        return e.sessionData && a.updateSessionData(e.sessionData), e;
+                        return (e.sessionData && a.updateSessionData(e.sessionData), e);
                     });
                 }
             },
@@ -32779,7 +32779,7 @@ var yX = (function () {
                         },
                         r
                     )).then(function (e) {
-                        return e.sessionData && o.updateSessionData(e.sessionData), e;
+                        return (e.sessionData && o.updateSessionData(e.sessionData), e);
                     });
                 }
             },
@@ -32806,7 +32806,7 @@ var yX = (function () {
                         },
                         a
                     )).then(function (e) {
-                        return e.sessionData && i.updateSessionData(e.sessionData), e;
+                        return (e.sessionData && i.updateSessionData(e.sessionData), e);
                     });
                 }
             },
@@ -32873,11 +32873,11 @@ function y1(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -32906,7 +32906,7 @@ var y5 = (function (e) {
                 if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -32937,7 +32937,7 @@ var y5 = (function (e) {
             (0, w.Z)((0, eo.Z)(o), 'setMessages', function (e) {
                 if (o.props.enabled) {
                     var t = null;
-                    e && (t = ew()(e) ? e : [e]), o.componentRef.setMessages(t);
+                    (e && (t = ew()(e) ? e : [e]), o.componentRef.setMessages(t));
                 }
             }),
             (o.id = o.props.id),
@@ -32948,7 +32948,7 @@ var y5 = (function (e) {
         ) {
             if (((o._enabled = !0), !document.querySelector(o.props.node))) throw Error('Component could not mount. Root node was not found.');
             var a = document.getElementById(o.id);
-            a && document.querySelector(o.props.node).removeChild(a), (o.srPanelContainer = document.createElement('div')), (o.srPanelContainer.className = 'sr-panel-holder'), (o.srPanelContainer.id = o.id), document.querySelector(o.props.node).appendChild(o.srPanelContainer), o.mount(o.srPanelContainer);
+            (a && document.querySelector(o.props.node).removeChild(a), (o.srPanelContainer = document.createElement('div')), (o.srPanelContainer.className = 'sr-panel-holder'), (o.srPanelContainer.id = o.id), document.querySelector(o.props.node).appendChild(o.srPanelContainer), o.mount(o.srPanelContainer));
         }
         return o;
     }
@@ -33001,7 +33001,7 @@ var y5 = (function (e) {
         r
     );
 })();
-(0, w.Z)(y5, 'type', 'srPanel'),
+((0, w.Z)(y5, 'type', 'srPanel'),
     (0, w.Z)(y5, 'defaultProps', {
         enabled: !0,
         node: 'body',
@@ -33012,17 +33012,17 @@ var y5 = (function (e) {
             'aria-live': 'polite',
             'aria-atomic': 'true'
         }
-    });
+    }));
 var y9 = ['amount', 'shopperLocale', 'paymentMethods'];
 function y8(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
-        t &&
+        (t &&
             (r = P()(r).call(r, function (t) {
                 return h()(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -33052,7 +33052,7 @@ var y3 = (function () {
             i,
             s,
             c = this;
-        (0, C.Z)(this, e),
+        ((0, C.Z)(this, e),
             (0, w.Z)(this, 'session', void 0),
             (0, w.Z)(this, 'paymentMethodsResponse', void 0),
             (0, w.Z)(this, 'modules', void 0),
@@ -33086,7 +33086,7 @@ var y3 = (function () {
                 );
             }),
             (0, w.Z)(this, 'setOptions', function (e) {
-                ng(null == e ? void 0 : e.paymentMethodsConfiguration, 'scheme') && console.warn('WARNING: You cannot define a property "scheme" on the paymentMethodsConfiguration object - it should be defined as "card" otherwise it will be ignored'), ng(e, 'installmentOptions') && console.warn("WARNING: you are setting installmentOptions directly in the top level configuration object. They should be set via the 'paymentMethodsConfiguration' object or directly on the 'card' component."), (c.options = y4(y4({}, c.options), e));
+                (ng(null == e ? void 0 : e.paymentMethodsConfiguration, 'scheme') && console.warn('WARNING: You cannot define a property "scheme" on the paymentMethodsConfiguration object - it should be defined as "card" otherwise it will be ignored'), ng(e, 'installmentOptions') && console.warn("WARNING: you are setting installmentOptions directly in the top level configuration object. They should be set via the 'paymentMethodsConfiguration' object or directly on the 'card' component."), (c.options = y4(y4({}, c.options), e)));
             }),
             (this.create = R()((n = this.create)).call(n, this)),
             (this.createFromAction = R()((r = this.createFromAction)).call(r, this)),
@@ -33121,7 +33121,7 @@ var y3 = (function () {
                     }[(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '').toLowerCase()] ||
                     nr
                 );
-            })(this.options.resourceEnvironment || this.options.environment, null == (a = this.options.environmentUrls) ? void 0 : a.api));
+            })(this.options.resourceEnvironment || this.options.environment, null == (a = this.options.environmentUrls) ? void 0 : a.api)));
         var l,
             u = null == (i = this.options.clientKey) ? void 0 : i.substr(0, 4);
         if (('test' === u || 'live' === u) && !O()((s = this.loadingContext)).call(s, u)) throw Error(I()((l = "Error: you are using a '".concat(u, "' clientKey against the '"))).call(l, this.options.environment, "' environment"));
@@ -33159,7 +33159,7 @@ var y3 = (function () {
                                   );
                               })
                               .catch(function (t) {
-                                  return e.options.onError && e.options.onError(t), e;
+                                  return (e.options.onError && e.options.onError(t), e);
                               }))
                         : (this.createCoreModules(), this.createPaymentMethodsList(), B().resolve(this));
                 }
@@ -33243,9 +33243,9 @@ var y3 = (function () {
                             o = r && !t.supportedShopperInteractions ? D()((n = this.paymentMethodsResponse)).call(n, t.type) : {},
                             a = r ? yZ(t.type, this.options.paymentMethodsConfiguration, !!t.storedPaymentMethodId) : {},
                             i = new e(y4(y4(y4(y4({}, yz(this.options)), o), a), t));
-                        return t.isDropin || this.components.push(i), i;
+                        return (t.isDropin || this.components.push(i), i);
                     }
-                    if ('string' == typeof e && yk[e]) return 'dropin' === e && ng(t, 'paymentMethodsConfiguration') && console.warn("WARNING: You are setting a 'paymentMethodsConfiguration' object in the Dropin configuration options. This object will be ignored."), this.handleCreate(yk[e], y4({ type: e }, t));
+                    if ('string' == typeof e && yk[e]) return ('dropin' === e && ng(t, 'paymentMethodsConfiguration') && console.warn("WARNING: You are setting a 'paymentMethodsConfiguration' object in the Dropin configuration options. This object will be ignored."), this.handleCreate(yk[e], y4({ type: e }, t)));
                     if ('string' == typeof e && this.paymentMethodsResponse.has(e)) return this.handleCreate(yk.redirect, y4({ type: e }, t));
                     if ('object' === (0, _.Z)(e) && 'string' == typeof e.type) {
                         var s = yZ(e.type, this.options.paymentMethodsConfiguration, !!e.storedPaymentMethodId);
@@ -33302,7 +33302,7 @@ function y7() {
                 for (;;)
                     switch ((e.prev = e.next)) {
                         case 0:
-                            return (n = new y3(t)), (e.next = 3), n.initialize();
+                            return ((n = new y3(t)), (e.next = 3), n.initialize());
                         case 3:
                             return e.abrupt('return', e.sent);
                         case 4:

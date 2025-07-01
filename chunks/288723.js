@@ -83,7 +83,7 @@ let d = {
                         return e;
                     }))
                 ) {
-                    (D = x), (w = !1);
+                    ((D = x), (w = !1));
                     break;
                 }
                 P.set(x, F);
@@ -99,7 +99,7 @@ let d = {
                                         return e;
                                     });
                             });
-                            if (t) return (D = t), 'break';
+                            if (t) return ((D = t), 'break');
                         },
                         Y = Z;
                     Y > 0 && 'break' !== H(Y);

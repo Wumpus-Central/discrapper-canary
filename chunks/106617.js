@@ -5,7 +5,7 @@ class r {
     }
     release(e) {
         e.getTracks().forEach((e) => {
-            (e.onended = function () {}), e.stop();
+            ((e.onended = function () {}), e.stop());
         });
     }
 }

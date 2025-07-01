@@ -7,7 +7,7 @@ var r = n(444675);
             o = !1,
             s = e.document,
             l = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? _() : p() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u);
+        ((l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? _() : p() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u));
     }
     function c(e) {
         'function' != typeof e && (e = Function('' + e));
@@ -16,7 +16,7 @@ var r = n(444675);
             callback: e,
             args: t
         };
-        return (a[i] = o), n(i), i++;
+        return ((a[i] = o), n(i), i++);
     }
     function u(e) {
         delete a[e];
@@ -50,7 +50,7 @@ var r = n(444675);
                 try {
                     d(t);
                 } finally {
-                    u(e), (o = !1);
+                    (u(e), (o = !1));
                 }
             }
         }
@@ -81,28 +81,28 @@ var r = n(444675);
             r = function (n) {
                 n.source === e && 'string' == typeof n.data && 0 === n.data.indexOf(t) && f(+n.data.slice(t.length));
             };
-        e.addEventListener ? e.addEventListener('message', r, !1) : e.attachEvent('onmessage', r),
+        (e.addEventListener ? e.addEventListener('message', r, !1) : e.attachEvent('onmessage', r),
             (n = function (n) {
                 e.postMessage(t + n, '*');
-            });
+            }));
     }
     function m() {
         var e = new MessageChannel();
-        (e.port1.onmessage = function (e) {
+        ((e.port1.onmessage = function (e) {
             f(e.data);
         }),
             (n = function (t) {
                 e.port2.postMessage(t);
-            });
+            }));
     }
     function g() {
         var e = s.documentElement;
         n = function (t) {
             var n = s.createElement('script');
-            (n.onreadystatechange = function () {
-                f(t), (n.onreadystatechange = null), e.removeChild(n), (n = null);
+            ((n.onreadystatechange = function () {
+                (f(t), (n.onreadystatechange = null), e.removeChild(n), (n = null));
             }),
-                e.appendChild(n);
+                e.appendChild(n));
         };
     }
     function E() {

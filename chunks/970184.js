@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     CJ: () => P,
     Ee: () => M,
     Il: () => y
 }),
     n(388685),
-    n(997841);
+    n(997841));
 var l = n(255367),
     i = n(73800),
     u = n(512722),
@@ -45,7 +45,7 @@ let O = (e) => {
     A = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             l = g.gH.NORMAL;
-        return null != e && e.state !== T.F.FAILED && (e.data.interactionType === d.B8.MESSAGE_COMPONENT && e.data.componentId === t.id ? (l = g.gH.LOADING) : O(t) && (l = g.gH.DISABLED)), n && O(t) && (l = g.gH.DISABLED), l;
+        return (null != e && e.state !== T.F.FAILED && (e.data.interactionType === d.B8.MESSAGE_COMPONENT && e.data.componentId === t.id ? (l = g.gH.LOADING) : O(t) && (l = g.gH.DISABLED)), n && O(t) && (l = g.gH.DISABLED), l);
     },
     v = (e) => {
         let t = f.Z.getChannel(e),
@@ -66,7 +66,7 @@ function L(e, t) {
         a = i.useCallback(
             (t) => {
                 let n = (0, h.Z)(e, t);
-                return u(n), null == n;
+                return (u(n), null == n);
             },
             [e]
         );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685);
+(n.d(t, { Z: () => H }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(120356),
@@ -37,7 +37,7 @@ function k(e) {
     let { context: r, command: a, section: s, sectionName: c } = e,
         d = i.useCallback(() => {
             let e = j.Z.entrypoint();
-            g.yT(N.ti.COMMAND),
+            (g.yT(N.ti.COMMAND),
                 (0, x.Mo)({
                     command: a,
                     location: v.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -53,7 +53,7 @@ function k(e) {
                         source: e,
                         commandOrigin: v.bB.APPLICATION_LAUNCHER
                     }),
-                    b.S.dispatch(_.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.channel.id }));
+                    b.S.dispatch(_.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.channel.id })));
         }, [r, a, s, c]),
         p = (null != (n = null == (t = a.options) ? void 0 : t.length) ? n : 0) > 0,
         f = i.useMemo(() => (0, A.ae)(a.displayDescription, void 0), [a.displayDescription]),
@@ -148,7 +148,7 @@ function M() {
 }
 function U(e) {
     let { context: t, command: n, sectionName: r } = e;
-    (0, f.PL)(!0, !0), (0, f.em)(t, !0, !0);
+    ((0, f.PL)(!0, !0), (0, f.em)(t, !0, !0));
     let a = (0, C.D)(t),
         [o, c] = i.useState(!1),
         d = i.useCallback(

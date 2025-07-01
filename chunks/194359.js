@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(35282);
+(n.d(t, { Z: () => S }), n(388685), n(35282));
 var r = n(544891),
     i = n(780384),
     a = n(570140),
@@ -32,7 +32,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,15 +40,15 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 function O(e) {
-    (0, h.Zy)(), p.Z.show(e);
+    ((0, h.Zy)(), p.Z.show(e));
 }
 function v() {
-    (0, h.Zy)(), (0, l.default)();
+    ((0, h.Zy)(), (0, l.default)());
 }
 function I(e, t, n) {
     let { status: r, body: i } = e,
@@ -248,16 +248,16 @@ let T = {
                     rejectWithError: !1
                 })
                 .then(() => {
-                    c.Z.showIgnoreSuccessToast(e, n),
+                    (c.Z.showIgnoreSuccessToast(e, n),
                         i.uv.announce(E.intl.string(E.t.Us93CQ)),
                         a.Z.dispatch({
                             type: 'RELATIONSHIP_IGNORE_USER_SUCCESS',
                             userId: e,
                             timestamp: Date.now()
-                        });
+                        }));
                 })
                 .catch(() => {
-                    c.Z.showFailedToast(), i.uv.announce(E.intl.string(E.t.n6Jo3N));
+                    (c.Z.showFailedToast(), i.uv.announce(E.intl.string(E.t.n6Jo3N)));
                 }),
         unignoreUser: (e, t, n) =>
             r.tn
@@ -267,10 +267,10 @@ let T = {
                     rejectWithError: !1
                 })
                 .then(() => {
-                    c.Z.showUnignoreSuccessToast(e, n), i.uv.announce(E.intl.string(E.t.QlH5w8));
+                    (c.Z.showUnignoreSuccessToast(e, n), i.uv.announce(E.intl.string(E.t.QlH5w8)));
                 })
                 .catch(() => {
-                    c.Z.showFailedToast(), i.uv.announce(E.intl.string(E.t.n6Jo3N));
+                    (c.Z.showFailedToast(), i.uv.announce(E.intl.string(E.t.n6Jo3N)));
                 })
     },
     S = T;

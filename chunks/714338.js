@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(704826), n(35282), n(539854), n(781311);
+(n.d(t, { Z: () => S }), n(388685), n(704826), n(35282), n(539854), n(781311));
 var r = n(879443),
     i = n.n(r),
     a = n(360038),
@@ -19,7 +19,7 @@ let d = {},
     y = [];
 function O(e, t) {
     let n = (e) => t(e, e.key);
-    document.addEventListener(e, n), y.push(() => document.removeEventListener(e, n));
+    (document.addEventListener(e, n), y.push(() => document.removeEventListener(e, n)));
 }
 function v(e) {
     let t = [];
@@ -39,7 +39,7 @@ function T(e) {
         let i = n.comboKeysBindGlobal ? p.bindGlobal : p.bind;
         if ((null != n.action && i.call(p, r, I(t, n.action)), null != n.keyup && i.call(p, r, I(t, n.keyup), 'keyup'), null != n.keydown)) {
             let e = r.indexOf('any-character');
-            -1 !== e && (O('keydown', n.keydown), r.splice(e, 1)), r.length > 0 && i.call(p, r, I(t, n.keydown), 'keydown');
+            (-1 !== e && (O('keydown', n.keydown), r.splice(e, 1)), r.length > 0 && i.call(p, r, I(t, n.keydown), 'keydown'));
         }
         null != n.keypress && i.call(p, r, I(t, n.keypress), 'keypress');
     }
@@ -56,7 +56,7 @@ let S = {
     checkDupes(e) {
         let t = new Set(),
             n = [];
-        for (let r of v(e)) t.has(r) && n.push(r), t.add(r);
+        for (let r of v(e)) (t.has(r) && n.push(r), t.add(r));
         n.length > 0 && new o.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
     },
     setLayout(e) {
@@ -66,11 +66,11 @@ let S = {
         _ || ((_ = !0), this.checkDupes(d), T(d));
     },
     enableTemp(e) {
-        f.push(d), (d = e), T(e), (_ = !0);
+        (f.push(d), (d = e), T(e), (_ = !0));
     },
     disableTemp() {
         let e = f.pop();
-        null != e && (d = e), this.disable(), this.enable();
+        (null != e && (d = e), this.disable(), this.enable());
     },
     disable() {
         _ && ((_ = !1), y.forEach((e) => e()), (y = []), p.reset());
@@ -80,6 +80,6 @@ let S = {
     },
     hasBind(e) {
         let t = v(d);
-        return (e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), t.includes(e);
+        return ((e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), t.includes(e));
     }
 };

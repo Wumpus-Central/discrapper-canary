@@ -1,10 +1,10 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var l = n(120356),
     i = n.n(l),
     a = n(912306);
-function c(e) {
+function s(e) {
     let { source: t, className: n } = e;
     return null == t
         ? null

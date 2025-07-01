@@ -1,4 +1,4 @@
-n.d(t, { Z: () => K }), n(388685), n(457542);
+(n.d(t, { Z: () => K }), n(388685), n(457542));
 var r = n(255367),
     a = n(73800),
     i = n(741086),
@@ -45,7 +45,7 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -53,7 +53,7 @@ function H(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -61,8 +61,8 @@ function H(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -115,17 +115,17 @@ let K = (e) => {
         ey = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = H({}, eh);
-            (r[e] = {
+            ((r[e] = {
                 value: t,
                 isValid: n
             }),
-                ef(r);
+                ef(r));
         },
         eI = (e) => {
             Q(ej(e));
         };
-    a.useEffect(() => {
-        null != ee && ex(ee), null != en && ef(en);
+    (a.useEffect(() => {
+        (null != ee && ex(ee), null != en && ef(en));
     }, [ee, en]),
         a.useEffect(() => {
             if (null != er) {
@@ -154,7 +154,7 @@ let K = (e) => {
                                 })(H({}, e), { [t]: n })
                             );
             }
-        }, [er]);
+        }, [er]));
     let eO = (e) => {
             e === U.evJ.INVALID_FORM_BODY ? eg(G.intl.string(G.t.VjAAuL)) : ec ? eg(G.intl.string(W.default.psKFdH)) : eg(G.intl.string(G.t.h6D8V1));
         },
@@ -162,7 +162,7 @@ let K = (e) => {
             let t = ['', e.successNodeId];
             $(ej(t))
                 .then(() => {
-                    eg(''), eI(t);
+                    (eg(''), eI(t));
                 })
                 .catch((e) => {
                     var t;
@@ -284,7 +284,7 @@ let K = (e) => {
                             element: er,
                             onChange: (e, t) => {
                                 let n = H({}, eb);
-                                e in eb ? delete n[e] : (n[e] = t), ex(n);
+                                (e in eb ? delete n[e] : (n[e] = t), ex(n));
                             },
                             state: eb
                         }),
@@ -337,7 +337,7 @@ let K = (e) => {
                             eI(['', e.target]);
                             break;
                         case 'submit':
-                            eu(!0), eT();
+                            (eu(!0), eT());
                     }
                 },
                 onBackClicked: e.onNavigateBack,

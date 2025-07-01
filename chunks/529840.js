@@ -26,7 +26,7 @@ function C(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     a = Object.keys(r);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (a = a.concat(
                                         Object.getOwnPropertySymbols(r).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -34,7 +34,7 @@ function C(e) {
                                     )),
                                     a.forEach(function (t) {
                                         var a;
-                                        (a = r[t]),
+                                        ((a = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: a,
@@ -42,8 +42,8 @@ function C(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = a);
-                                    });
+                                                : (e[t] = a));
+                                    }));
                             }
                             return e;
                         })(

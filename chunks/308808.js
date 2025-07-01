@@ -1,10 +1,10 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         useCallback: () => l,
         useCallbackOne: () => o,
         useMemo: () => s,
         useMemoOne: () => a
-    });
+    }));
 var r = n(73800);
 function i(e, t) {
     if (e.length !== t.length) return !1;
@@ -30,7 +30,7 @@ function a(e, t) {
     return (
         (0, r.useEffect)(
             function () {
-                (a.current = !1), (o.current = s);
+                ((a.current = !1), (o.current = s));
             },
             [s]
         ),

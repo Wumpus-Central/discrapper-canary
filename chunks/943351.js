@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     V3: () => a,
     bp: () => r,
     hp: () => i,
     nl: () => l
 }),
     n(49124),
-    n(388685);
+    n(388685));
 let l = {
         waveformBlockWidth: 2,
         waveformBarWidth: 0.5,

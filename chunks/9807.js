@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(415506);
+(n.d(t, { Z: () => T }), n(388685), n(415506));
 var r,
     a = n(255367),
     i = n(73800),
@@ -33,7 +33,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -73,12 +73,12 @@ function y(e, t) {
                 r,
                 a = {},
                 i = Object.keys(e);
-            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]));
             return a;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+        for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]));
     }
     return a;
 }
@@ -112,11 +112,11 @@ let I = (e) => {
             n,
             r,
             { item: i, onPlay: l, volume: s, onVolumeChange: o, onMute: p, isMuted: m, autoPlay: h } = e;
-        if (i.type === _.s9s.YOUTUBE_VIDEO) (t = C({ url: (0, _.n8r)(i.youtubeVideoId) }, S)), (n = C({ url: ''.concat((0, _.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = u.pn.YOUTUBE);
+        if (i.type === _.s9s.YOUTUBE_VIDEO) ((t = C({ url: (0, _.n8r)(i.youtubeVideoId) }, S)), (n = C({ url: ''.concat((0, _.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = u.pn.YOUTUBE));
         else {
             let e = null != i.width ? i.width : 0,
                 r = null != i.height ? i.height : 0;
-            (t = {
+            ((t = {
                 url: i.thumbnailSrc,
                 width: e,
                 height: r
@@ -126,7 +126,7 @@ let I = (e) => {
                     proxyURL: i.src,
                     width: e,
                     height: r
-                });
+                }));
         }
         return (0, a.jsx)('div', {
             className: x.embedContainer,
@@ -159,7 +159,7 @@ class N extends (r = i.PureComponent) {
     }
     handleCurrentItemClick(e, t) {
         let { onCurrentItemClick: n } = this.props;
-        null != n && n(e, t), this.setState({ hasInteracted: !0 });
+        (null != n && n(e, t), this.setState({ hasInteracted: !0 }));
     }
     render() {
         let { items: e, autoplayInterval: t, className: n, paused: r, themedPagination: i } = this.props,
@@ -176,7 +176,7 @@ class N extends (r = i.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             v(this, 'state', {
                 hasInteracted: !1,
                 isVideoPlaying: !1,
@@ -204,7 +204,7 @@ class N extends (r = i.PureComponent) {
                 });
             }),
             v(this, 'handleChangeItem', (e) => {
-                this.setState({ isVideoPlaying: !1 }), e.type === _.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
+                (this.setState({ isVideoPlaying: !1 }), e.type === _.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) }));
             }),
             v(this, 'handleIntentionalChange', (e, t, n, r) => {
                 this.setState({ hasInteracted: !0 });
@@ -281,7 +281,7 @@ class N extends (r = i.PureComponent) {
                     onClick: () => this.handleCurrentItemClick(e, t),
                     children: n
                 });
-            });
+            }));
     }
 }
 v(N, 'defaultProps', {

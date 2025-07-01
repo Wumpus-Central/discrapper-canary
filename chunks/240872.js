@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(539854);
+(n.d(t, { Z: () => p }), n(539854));
 var r = n(255367);
 n(73800);
 var i = n(952265),
@@ -24,7 +24,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -40,11 +40,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -73,14 +73,14 @@ let p = {
                             i.push({
                                 text: h,
                                 onClick: () => {
-                                    null == g || g(), e.onClose();
+                                    (null == g || g(), e.onClose());
                                 },
                                 variant: 'secondary'
                             }),
                         i.push({
                             text: null != f ? f : c.intl.string(c.t.BddRzc),
                             onClick: () => {
-                                null == m || m(), e.onClose();
+                                (null == m || m(), e.onClose());
                             },
                             variant: p
                         }),

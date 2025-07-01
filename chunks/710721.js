@@ -14,7 +14,7 @@ class s extends a.Z {
         });
     }
     constructor(e, t) {
-        super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e));
+        (super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e)));
     }
 }
 let l = s;

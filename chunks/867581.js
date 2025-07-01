@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => D }), n(388685), n(781311), n(35282);
+(n.d(t, { Z: () => D }), n(388685), n(781311), n(35282));
 var l = n(255367),
     o = n(73800),
     a = n(120356),
@@ -25,7 +25,7 @@ let C = 'hTKzmak',
         return (0, l.jsxs)(c.P3F, {
             className: T.rowContainer,
             onClick: () => {
-                t(), (0, p.uL)(I.Z5c.GUILD_DISCOVERY);
+                (t(), (0, p.uL)(I.Z5c.GUILD_DISCOVERY));
             },
             children: [
                 (0, l.jsx)('img', {
@@ -71,7 +71,7 @@ function D(e) {
         e.preventDefault();
         let t = i.trim();
         if ('' === t) return void E(N.intl.string(N.t.IRq5am));
-        E(null), p(!0);
+        (E(null), p(!0));
         let r = t.split('/'),
             l = r[r.length - 1];
         u.ZP.resolveInvite(l, 'Join Guild', { inputValue: t }).then(
@@ -84,7 +84,7 @@ function D(e) {
                         inviteKey: t.code,
                         context: e,
                         callback: (e) => {
-                            n(), u.ZP.transitionToInvite(e);
+                            (n(), u.ZP.transitionToInvite(e));
                         }
                     }).then(
                         () => {},

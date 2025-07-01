@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(388685);
+(n.d(t, { Z: () => W }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(695469),
@@ -54,7 +54,7 @@ function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -62,7 +62,7 @@ function F(e) {
             )),
             r.forEach(function (t) {
                 V(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -70,11 +70,11 @@ function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -118,7 +118,7 @@ function W(e) {
     let eu = i.useRef(null),
         [ed, ef] = i.useState(String(Date.now())),
         [e_, ep] = i.useState(!1);
-    (0, u.Z)(() => {
+    ((0, u.Z)(() => {
         ep(!0);
     }, Y),
         (0, y.fu)({
@@ -127,7 +127,7 @@ function W(e) {
                 let { hasElementPositionChanged: t } = e;
                 t && ef(String(Date.now()));
             }
-        });
+        }));
     let eh = (0, p.Z)({ location: 'UserProfilePopout' }),
         em = t.id === n.id,
         [eg, eE] = (0, E.US)(eh && em ? [s.z.CUSTOM_STATUS_PROMPTS_COACHMARK] : []),
@@ -135,7 +135,7 @@ function W(e) {
         ey = (0, h.p)({ location: 'UserProfilePopout' }),
         eO = i.useMemo(() => (0, m.Z)(), []),
         ev = (e) => {
-            null == q || q(),
+            (null == q || q(),
                 (0, A.openUserProfileModal)(
                     H(
                         F(
@@ -149,7 +149,7 @@ function W(e) {
                         ),
                         { appContext: $ }
                     )
-                );
+                ));
         },
         eI = () =>
             Q
@@ -158,7 +158,7 @@ function W(e) {
                       id: 'view-profile',
                       label: G.intl.string(G.t['+Xp3ho']),
                       action: () => {
-                          ev(),
+                          (ev(),
                               (0, I.pQ)(
                                   F(
                                       {
@@ -167,7 +167,7 @@ function W(e) {
                                       },
                                       en
                                   )
-                              );
+                              ));
                       }
                   }),
         eT = ee ? 'div' : l.VqE;

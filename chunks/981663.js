@@ -1,4 +1,4 @@
-n(388685), n(539854);
+(n(388685), n(539854));
 var r,
     i,
     l,
@@ -8,7 +8,7 @@ var r,
 let c = new Map(),
     u = new Map();
 function d() {
-    (c = new Map()), (u = new Map());
+    ((c = new Map()), (u = new Map()));
 }
 let p = [],
     h = [];
@@ -22,7 +22,7 @@ class f extends (r = a.ZP.Store) {
         return null != (t = u.get(e)) ? t : h;
     }
 }
-(l = 'SearchRecentMessageStore'),
+((l = 'SearchRecentMessageStore'),
     (i = 'displayName') in f
         ? Object.defineProperty(f, i, {
               value: l,
@@ -47,7 +47,7 @@ class f extends (r = a.ZP.Store) {
                     e.messages.forEach((e) => {
                         let [t] = e,
                             n = (0, s.e5)(t);
-                        !d.has(n.author.id) && d.size < 15 && (d.add(n.author.id), o.push(n.author.id), (l = !0)), !h.has(n.channel_id) && h.size < 15 && (h.add(n.channel_id), p.push(n.channel_id), (a = !0));
+                        (!d.has(n.author.id) && d.size < 15 && (d.add(n.author.id), o.push(n.author.id), (l = !0)), !h.has(n.channel_id) && h.size < 15 && (h.add(n.channel_id), p.push(n.channel_id), (a = !0)));
                     });
                 }),
                 l && c.set(r, o),
@@ -57,4 +57,4 @@ class f extends (r = a.ZP.Store) {
         },
         SEARCH_RECENT_MESSAGES_CLEAR: d,
         CONNECTION_OPEN: d
-    });
+    }));

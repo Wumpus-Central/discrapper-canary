@@ -26,5 +26,5 @@ let a = function (e, t) {
     if (!c) for (; d--; ) o.unshift('..');
     !c || '' === o[0] || (o[0] && r(o[0])) || o.unshift('');
     var p = o.join('/');
-    return n && '/' !== p.substr(-1) && (p += '/'), p;
+    return (n && '/' !== p.substr(-1) && (p += '/'), p);
 };

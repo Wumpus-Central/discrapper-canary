@@ -1,12 +1,12 @@
-n.d(t, {
+(n.d(t, {
     As: () => h,
-    BP: () => b,
+    BP: () => g,
     MC: () => y,
-    dn: () => _,
+    dn: () => f,
     hL: () => T,
-    lK: () => g
+    lK: () => b
 }),
-    n(997841);
+    n(997841));
 var a = n(399606),
     o = n(991621),
     i = n(936141),
@@ -18,8 +18,8 @@ var a = n(399606),
     d = n(630388),
     m = n(255269),
     p = n(981631),
-    f = n(388032);
-let _ = (e, t) => {
+    _ = n(388032);
+let f = (e, t) => {
         let { spoiler: n, flags: a = 0 } = e,
             c = (0, r.LD)(
                 {
@@ -37,7 +37,7 @@ let _ = (e, t) => {
             );
         return c.length > 0 ? c[0] : l ? i.wk.POTENTIAL_EXPLICIT_CONTENT : n || (0, d.yE)(a, p.J0y.IS_SPOILER) ? i.wk.SPOILER : null;
     },
-    b = (e, t, n, a, c) => {
+    g = (e, t, n, a, c) => {
         let l = s.Z.getMessage(t, n);
         if (null == l) return null;
         let u = (0, r.LD)(
@@ -58,7 +58,7 @@ let _ = (e, t) => {
                 );
         return u.length > 0 ? u[0] : d ? i.wk.POTENTIAL_EXPLICIT_CONTENT : a ? i.wk.SPOILER : null;
     },
-    g = function (e, t) {
+    b = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             c = (0, r.LD)(
@@ -118,9 +118,9 @@ let y = (e) => {
     switch (e) {
         case i.wk.EXPLICIT_CONTENT:
         case i.wk.GORE_CONTENT:
-            return f.intl.string(f.t.SEgHFh);
+            return _.intl.string(_.t.SEgHFh);
         case i.wk.SPOILER:
-            return f.intl.string(f.t.XpfDHx);
+            return _.intl.string(_.t.XpfDHx);
         default:
             return;
     }

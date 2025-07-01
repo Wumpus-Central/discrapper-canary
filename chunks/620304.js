@@ -1,10 +1,10 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(695469),
-    a = n(793030),
+    a = n(695469),
+    s = n(793030),
     c = n(442837),
     u = n(481060),
     d = n(239091),
@@ -22,20 +22,20 @@ function C(e) {
     let { guild: t, withMargin: l } = e,
         C = i.useMemo(() => (0, _.Z)(t), [t]),
         j = (0, m.Z)(t.id),
-        E = i.useCallback(() => {
+        S = i.useCallback(() => {
             (0, b.Z)(t.id, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        S = (0, c.e7)([f.Z], () => {
+        E = (0, c.e7)([f.Z], () => {
             var e;
             return null != (e = f.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        S !== t.premiumSubscriberCount && (0, p.v)(t.id, t.premiumSubscriberCount);
-    }, [t.id, S, t.premiumSubscriberCount]);
-    let x = Math.min((S / C) * 100, 100),
+        E !== t.premiumSubscriberCount && (0, p.v)(t.id, t.premiumSubscriberCount);
+    }, [t.id, E, t.premiumSubscriberCount]);
+    let x = Math.min((E / C) * 100, 100),
         [I, P] = (0, u.q_F)(
             () => ({
-                width: S === t.premiumSubscriberCount ? ''.concat(x, '%') : '0%',
+                width: E === t.premiumSubscriberCount ? ''.concat(x, '%') : '0%',
                 config: {
                     tension: 285,
                     damping: 10,
@@ -43,12 +43,12 @@ function C(e) {
                 }
             }),
             'respect-motion-settings',
-            [S, t.premiumSubscriberCount]
+            [E, t.premiumSubscriberCount]
         );
     i.useEffect(() => {
         P({ width: ''.concat(x, '%') });
     }, [x, P]);
-    let N = S >= C;
+    let N = E >= C;
     return (0, r.jsx)(u.P3F, {
         'aria-label': void 0,
         role: 'button',
@@ -58,7 +58,7 @@ function C(e) {
                 right: 4
             }
         },
-        onClick: E,
+        onClick: S,
         className: o()(v.container, { [v.containerWithMargin]: l }),
         onContextMenu: (e) => {
             j &&
@@ -72,7 +72,7 @@ function C(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -80,7 +80,7 @@ function C(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -88,8 +88,8 @@ function C(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, n)),
@@ -116,7 +116,7 @@ function C(e) {
             children: [
                 (0, r.jsx)('div', {
                     className: v.progressContainer,
-                    children: (0, r.jsx)(s.animated.div, {
+                    children: (0, r.jsx)(a.animated.div, {
                         className: o()(v.progress, { [v.progressLow]: x <= 5 }),
                         style: I
                     })
@@ -127,13 +127,13 @@ function C(e) {
                         (0, r.jsxs)('div', {
                             className: v.textContentContainer,
                             children: [
-                                (0, r.jsx)(a.xv, {
+                                (0, r.jsx)(s.xv, {
                                     className: v.text,
                                     variant: 'text-xs/semibold',
                                     children: y.intl.string(O.default.NI6IhY)
                                 }),
                                 t.premiumSubscriberCount >= C &&
-                                    (0, r.jsx)(a.xv, {
+                                    (0, r.jsx)(s.xv, {
                                         className: v.text,
                                         variant: 'text-xs/semibold',
                                         children: '\uD83C\uDF89'
@@ -143,13 +143,13 @@ function C(e) {
                         (0, r.jsxs)('div', {
                             className: v.textContentContainer,
                             children: [
-                                (0, r.jsx)(a.xv, {
+                                (0, r.jsx)(s.xv, {
                                     className: v.text,
                                     variant: 'text-xs/semibold',
                                     children: N
-                                        ? y.intl.formatToPlainString(O.default['Ehpq+/'], { appliedBoostCount: S })
+                                        ? y.intl.formatToPlainString(O.default['Ehpq+/'], { appliedBoostCount: E })
                                         : y.intl.formatToPlainString(O.default['/rbPDg'], {
-                                              appliedBoostCount: S,
+                                              appliedBoostCount: E,
                                               maxBoostCount: C
                                           })
                                 }),

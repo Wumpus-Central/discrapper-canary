@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => o });
+(r.r(t), r.d(t, { default: () => o }));
 var n = r(255367);
 r(73800);
 var c = r(952265);
@@ -13,7 +13,7 @@ function o(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(r).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -21,7 +21,7 @@ function o(e) {
                             )),
                             n.forEach(function (t) {
                                 var n;
-                                (n = r[t]),
+                                ((n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: n,
@@ -29,8 +29,8 @@ function o(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = n);
-                            });
+                                        : (e[t] = n));
+                            }));
                     }
                     return e;
                 })({}, r)),

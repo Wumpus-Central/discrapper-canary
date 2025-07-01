@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685), n(415506);
+(n.d(t, { Z: () => c }), n(388685), n(415506));
 var r = n(255367),
     i = n(73800),
     a = n(902704),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,7 +48,7 @@ function d(e, t) {
                 this.listener.attach(d);
             }
             componentWillUnmount() {
-                this.listener.detach(), this.memoizedGetStateFromStores.clear();
+                (this.listener.detach(), this.memoizedGetStateFromStores.clear());
             }
             render() {
                 let { forwardedConnectStoresRef: e, childProps: t } = this.props,
@@ -56,7 +56,7 @@ function d(e, t) {
                 return (0, r.jsx)(n, l({ ref: e }, t, i));
             }
             constructor(...n) {
-                super(...n),
+                (super(...n),
                     s(this, 'memoizedGetStateFromStores', _(t)),
                     s(
                         this,
@@ -65,7 +65,7 @@ function d(e, t) {
                             let e = this.memoizedGetStateFromStores.getCachedResult(this.props.childProps);
                             (null != e && (this.memoizedGetStateFromStores.clear(), (0, a.Z)(this.memoizedGetStateFromStores(this.props.childProps), e))) || this.forceUpdate();
                         })
-                    );
+                    ));
             }
         }
         s(f, 'displayName', d);
@@ -75,7 +75,7 @@ function d(e, t) {
                 forwardedConnectStoresRef: t
             })
         );
-        return (p.displayName = 'ForwardRef('.concat(d, ')')), p;
+        return ((p.displayName = 'ForwardRef('.concat(d, ')')), p);
     };
 }
 function f(e, t) {
@@ -87,14 +87,14 @@ function f(e, t) {
                 this.listener.attach(d);
             }
             componentWillUnmount() {
-                this.listener.detach(), this.memoizedGetStateFromStores.clear();
+                (this.listener.detach(), this.memoizedGetStateFromStores.clear());
             }
             render() {
                 let e = this.memoizedGetStateFromStores(this.props);
                 return (0, r.jsx)(n, l({}, this.props, e));
             }
             constructor(...n) {
-                super(...n),
+                (super(...n),
                     s(this, 'memoizedGetStateFromStores', _(t)),
                     s(
                         this,
@@ -103,10 +103,10 @@ function f(e, t) {
                             let e = this.memoizedGetStateFromStores.getCachedResult(this.props);
                             (null != e && (this.memoizedGetStateFromStores.clear(), (0, a.Z)(this.memoizedGetStateFromStores(this.props), e))) || this.forceUpdate();
                         })
-                    );
+                    ));
             }
         }
-        return s(f, 'displayName', d), f;
+        return (s(f, 'displayName', d), f);
     };
 }
 function _(e) {
@@ -120,7 +120,7 @@ function _(e) {
     return (
         (i.getCachedResult = r),
         (i.clear = () => {
-            (t = null), (n = null);
+            ((t = null), (n = null));
         }),
         i
     );

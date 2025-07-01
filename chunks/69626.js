@@ -39,7 +39,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,11 +55,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -100,7 +100,7 @@ function N(e, t, n, i, a) {
                           application: u
                       }
                     : null;
-            s.Po({
+            (s.Po({
                 channelId: e,
                 command: null,
                 section: null
@@ -110,7 +110,7 @@ function N(e, t, n, i, a) {
                     command: o,
                     section: t,
                     location: i
-                });
+                }));
         }
     };
     '' !== p.Z.getDraft(e, p.d.ChannelMessage)
@@ -175,7 +175,7 @@ function C(e) {
         }, [g, T, O, v, n.commandName, S]),
         C = i.useCallback(
             (e) => {
-                null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && N(g.id, n.commandName, n.commandKey, c.Vh.MENTION);
+                (null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && N(g.id, n.commandName, n.commandKey, c.Vh.MENTION));
             },
             [g, n.commandKey, n.commandName]
         );
@@ -210,7 +210,7 @@ function R(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: s, onClick: l } = e,
         u = (0, a.e7)([m.Z], () => m.Z.getChannelId()),
         d = (e) => {
-            null == e || e.stopPropagation(), N(u, n, t, c.Vh.POPULAR_COMMANDS, s), null == l || l(t);
+            (null == e || e.stopPropagation(), N(u, n, t, c.Vh.POPULAR_COMMANDS, s), null == l || l(t));
         };
     return (0, r.jsx)(o.ua7, {
         text: i,

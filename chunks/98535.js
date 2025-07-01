@@ -26,7 +26,7 @@ function C(e) {
                 h(e, t);
                 let l = r && !n && !x,
                     i = t === a.T.ORB ? m.AW.ORBS : m.AW.CATALOG;
-                await u(i, l), null != t && y(t);
+                (await u(i, l), null != t && y(t));
             },
             [n, x, u, y, h]
         );

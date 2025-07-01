@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -36,7 +36,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -77,12 +77,12 @@ function N(e) {
         P = (0, u.Ye)(h.default.extractTimestamp(t.startId)),
         w = (0, a.e7)([m.Z], () => m.Z.summaryFeedback(t)),
         D = (e, n) => {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 (0, g.Z)({
                     summary: t,
                     channel: f,
                     rating: n
-                });
+                }));
         },
         L = d.Z.can(y.Plq.MANAGE_MESSAGES, f),
         x = (e) => {
@@ -198,7 +198,7 @@ function C(e) {
         c = (0, a.e7)([f.ZP], () => f.ZP.getOldestUnreadMessageId(o.id)),
         u = i.useCallback(
             (e) => {
-                s(e), l(!1);
+                (s(e), l(!1));
             },
             [s, l]
         );

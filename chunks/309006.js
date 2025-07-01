@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => m,
     a: () => h
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(392711),
@@ -62,7 +62,7 @@ let m = i.forwardRef(function (e, t) {
         b((t) => {
             let n = [...t],
                 r = n.findIndex((t) => t.id === e);
-            return n.splice(r, 1), n;
+            return (n.splice(r, 1), n);
         });
     }, []);
     return g || !O

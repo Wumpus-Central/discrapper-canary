@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(49124);
+(n.d(t, { Z: () => C }), n(49124));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -9,19 +9,19 @@ var a = n(255367),
     d = n(704215),
     u = n(481060),
     m = n(411149),
-    p = n(151480),
+    x = n(151480),
     h = n(461762),
-    x = n(680783),
+    p = n(680783),
     b = n(605236),
     f = n(675478),
     v = n(944486),
-    _ = n(388032),
+    j = n(388032),
     g = n(145634);
-function j(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function j(e) {
             )),
             a.forEach(function (t) {
                 var a;
-                (a = n[t]),
+                ((a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: a,
@@ -37,8 +37,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a);
-            });
+                        : (e[t] = a));
+            }));
     }
     return e;
 }
@@ -63,18 +63,18 @@ function y(e, t) {
 function C() {
     return (0, a.jsxs)(u.Ttm, {
         className: g.container,
-        children: [(0, a.jsx)(N, {}), (0, a.jsx)(O, {})]
+        children: [(0, a.jsx)(O, {}), (0, a.jsx)(N, {})]
     });
 }
-function N() {
+function O() {
     var e, t;
     let n = (0, c.e7)([v.Z], () => v.Z.getChannelId()),
-        l = (0, x.Z)(n),
+        l = (0, p.Z)(n),
         s = null == l ? void 0 : l.wallpaperId,
         d = (0, h.Z)(s),
         b = r.useCallback(
             (e) => {
-                null != s && (0, p.i)(s, { opacity: e });
+                null != s && (0, x.i)(s, { opacity: e });
             },
             [s]
         ),
@@ -90,23 +90,23 @@ function N() {
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        N = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 T(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        O = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        N = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         P = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        I = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        w = r.useCallback(
+        w = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        I = r.useCallback(
             (e) => {
-                null != s && (0, p.i)(s, { token_mix_amount: Math.round(e) });
+                null != s && (0, x.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s]
         ),
         k = r.useCallback(() => {
-            null != s && (0, p.i)(s, null);
+            null != s && (0, x.i)(s, null);
         }, [s]),
         R = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
         A = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
@@ -140,7 +140,7 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        j(
+                                        _(
                                             {
                                                 className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
@@ -169,7 +169,7 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        j(
+                                        _(
                                             {
                                                 className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
@@ -194,12 +194,12 @@ function N() {
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: _.intl.string(_.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: O,
+                                    onClick: N,
                                     className: g.removeButton
                                 })
                             ]
@@ -210,7 +210,7 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        j(
+                                        _(
                                             {
                                                 className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
@@ -235,7 +235,7 @@ function N() {
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: _.intl.string(_.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
@@ -251,7 +251,7 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        j(
+                                        _(
                                             {
                                                 className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
@@ -270,7 +270,7 @@ function N() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: w
+                                onValueChange: I
                             },
                             'tokenMixAmount-'.concat(A)
                         ),
@@ -280,7 +280,7 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        j(
+                                        _(
                                             {
                                                 className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
@@ -299,18 +299,18 @@ function N() {
                                     {
                                         type: 'color',
                                         value: d.link_color,
-                                        onChange: N
+                                        onChange: O
                                     },
                                     'linkColor-'.concat(d.link_color)
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: _.intl.string(_.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: I,
+                                    onClick: w,
                                     className: g.removeButton
                                 })
                             ]
@@ -325,7 +325,7 @@ function N() {
         ]
     });
 }
-function O() {
+function N() {
     let e = r.useCallback(() => {
             (0, f.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
@@ -359,11 +359,11 @@ function O() {
     });
 }
 let E = (0, s.debounce)(function (e, t) {
-        null != e && (0, p.i)(e, { primary_color: t });
+        null != e && (0, x.i)(e, { primary_color: t });
     }, 200),
     T = (0, s.debounce)(function (e, t) {
-        null != e && (0, p.i)(e, { link_color: t });
+        null != e && (0, x.i)(e, { link_color: t });
     }, 200),
     S = (0, s.debounce)(function (e, t) {
-        null != e && (0, p.i)(e, { secondary_color: t });
+        null != e && (0, x.i)(e, { secondary_color: t });
     }, 200);

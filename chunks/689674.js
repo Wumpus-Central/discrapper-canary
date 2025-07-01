@@ -19,34 +19,34 @@ function d(e) {
             },
             [p.guild_id]
         ),
-        h = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
-        g = p.type === i.d.GUILD_ANNOUNCEMENT && f,
-        _ = !d.hasFlag(u.iLy.EPHEMERAL) && (h || g),
-        b = h && null != d.messageReference ? d.messageReference.message_id : d.id,
-        x = h && null != d.messageReference ? d.messageReference.channel_id : p.id,
-        y = h && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
-        E = r.useCallback(
+        g = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
+        _ = p.type === i.d.GUILD_ANNOUNCEMENT && f,
+        h = !d.hasFlag(u.iLy.EPHEMERAL) && (g || _),
+        b = g && null != d.messageReference ? d.messageReference.message_id : d.id,
+        E = g && null != d.messageReference ? d.messageReference.channel_id : p.id,
+        y = g && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
+        C = r.useCallback(
             (e) => {
                 e
                     ? c.Z.handleMessageBecameVisible({
                           messageId: b,
                           channelId: p.id,
                           guildId: p.guild_id,
-                          sourceChannelId: x,
+                          sourceChannelId: E,
                           sourceGuildId: y
                       })
                     : c.Z.handleMessageLostVisibility(b);
             },
-            [b, p.id, p.guild_id, x, y]
+            [b, p.id, p.guild_id, E, y]
         ),
-        v = s.Z.useExperiment(
+        x = s.Z.useExperiment(
             { location: '836a4b_1' },
             {
-                disable: !_ || !m,
+                disable: !h || !m,
                 autoTrackExposure: !0
             }
         ).enabled,
-        C = (0, a.O)(E, 0, v);
+        v = (0, a.O)(C, 0, x);
     return (
         r.useEffect(
             () => () => {
@@ -54,6 +54,6 @@ function d(e) {
             },
             [b]
         ),
-        C
+        v
     );
 }

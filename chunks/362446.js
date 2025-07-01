@@ -86,7 +86,7 @@ class f extends (i = o.ZP.Store) {
         );
     }
 }
-(l = 'OverlayRTCConnectionStore'),
+((l = 'OverlayRTCConnectionStore'),
     (r = 'displayName') in f
         ? Object.defineProperty(f, r, {
               value: l,
@@ -94,7 +94,7 @@ class f extends (i = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (f[r] = l);
+        : (f[r] = l));
 let h = new f(a.Z, {
     OVERLAY_INITIALIZE: function (e) {
         u = e.rtcConnectionStates;
@@ -102,11 +102,11 @@ let h = new f(a.Z, {
     RTC_CONNECTION_STATE: function (e) {
         if (null != e.streamKey) return !1;
         let t = c(e.lobbyId);
-        (t.state = e.state), (t.hostname = e.hostname);
+        ((t.state = e.state), (t.hostname = e.hostname));
     },
     RTC_CONNECTION_PING: function (e) {
         let t = c(e.lobbyId);
-        (t.pings = e.pings), (t.quality = e.quality);
+        ((t.pings = e.pings), (t.quality = e.quality));
     },
     RTC_CONNECTION_LOSS_RATE: function (e) {
         c(e.lobbyId).lossRate = e.lossRate;

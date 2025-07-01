@@ -1,15 +1,15 @@
-n.d(t, {
+(n.d(t, {
     CZ: () => o,
     LB: () => l,
     O5: () => s,
     YC: () => a
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(433517),
     i = n(388032),
     a = (function (e) {
-        return (e.CLASSIC = 'classic'), (e.RETRO = 'retro'), (e.BUBBLE = 'bop'), (e.DUCKY = 'ducky'), (e.LOFI = 'lofi'), (e.ASMR = 'asmr'), (e.DISCODO = 'discodo'), (e.HALLOWEEN = 'halloween'), (e.WINTER_HOLIDAY = 'winter_holiday'), e;
+        return ((e.CLASSIC = 'classic'), (e.RETRO = 'retro'), (e.BUBBLE = 'bop'), (e.DUCKY = 'ducky'), (e.LOFI = 'lofi'), (e.ASMR = 'asmr'), (e.DISCODO = 'discodo'), (e.HALLOWEEN = 'halloween'), (e.WINTER_HOLIDAY = 'winter_holiday'), e);
     })({});
 let o = 'custom_notification_sounds_asmr',
     s = 'custom_notification_sounds_discodo';

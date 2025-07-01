@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(953529);
+(n.d(t, { Z: () => s }), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -8,7 +8,7 @@ var r = n(255367),
 let s = (e) => {
     let { onSubmit: t, disabled: n } = e,
         s = i.useCallback(async () => {
-            await t({}), window.location.reload();
+            (await t({}), window.location.reload());
         }, [t]);
     return (0, r.jsxs)('div', {
         className: c.container,

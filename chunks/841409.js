@@ -8,10 +8,10 @@ var i = n(399606),
 let c = () => ({
     selectedTab: (0, i.e7)([l.Z], () => l.Z.getSelectedTab()),
     handleTabChange: (e) => {
-        s.ZP.selectTab(e),
+        (s.ZP.selectTab(e),
             r.default.track(o.rMx.FAMILY_CENTER_ACTION, {
                 action: a.YC.TabChange,
                 tab: e
-            });
+            }));
     }
 });

@@ -26,7 +26,7 @@ function p(e) {
     'string' == typeof e || 'number' == typeof e || e instanceof Date || (u.error('Invalid date given to startOfDay', { d: e }), (n = new Date()));
     let r = new Date(n),
         i = r.getTime();
-    return t || (i -= r.getTimezoneOffset() * d), Math.floor(i / f) * f;
+    return (t || (i -= r.getTimezoneOffset() * d), Math.floor(i / f) * f);
 }
 function h(e, t) {
     return Math.floor((p(e, !1) - p(t, !1)) / f);
@@ -42,7 +42,7 @@ function E(e, t) {
         r = l.hg.getSetting(),
         i = ''.concat(n, ':').concat(t, ':').concat(r),
         o = _[i];
-    return null == o && (o = _[i] = (0, a.Z)(t)), o(v(e));
+    return (null == o && (o = _[i] = (0, a.Z)(t)), o(v(e)));
 }
 function b(e) {
     let t,
@@ -111,7 +111,7 @@ function S(e, t) {
     return (
         T.forEach((e) => {
             let { key: t, millisecondsInUnit: n } = e;
-            (r[t] = Math.floor(i / n)), (i -= r[t] * n);
+            ((r[t] = Math.floor(i / n)), (i -= r[t] * n));
         }),
         r
     );

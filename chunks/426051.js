@@ -17,13 +17,13 @@ function b(e) {
     let { active: t, user: n, channel: b } = e,
         _ = (0, d.V)(),
         E = i.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+            ((0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW }));
         }, []),
         O = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ);
         }, []),
         y = i.useCallback(() => {
-            c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id);
+            (c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id));
         }, [b.id, _]),
         {
             acceptMessageRequest: I,
@@ -54,7 +54,7 @@ function b(e) {
                         color: a.Ttl.PRIMARY,
                         size: a.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            I(b.id), e.stopPropagation();
+                            (I(b.id), e.stopPropagation());
                         },
                         disabled: T,
                         submitting: N,

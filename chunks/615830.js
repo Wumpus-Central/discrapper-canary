@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(539854), n(388685);
+(n.d(t, { Z: () => p }), n(539854), n(388685));
 var r,
     i = n(442837),
     a = n(570140);
@@ -27,7 +27,7 @@ function d(e) {
         if (n === e.keyVersion) return;
         t.push(n);
     }
-    t.push(e.keyVersion), (c = t);
+    (t.push(e.keyVersion), (c = t));
 }
 function f() {
     c = s;
@@ -35,7 +35,7 @@ function f() {
 class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t, n;
-        (l = null != (t = null == e ? void 0 : e.persistentCodesEnabled) && t), (c = null != (n = null == e ? void 0 : e.uploadedKeyVersions) ? n : s);
+        ((l = null != (t = null == e ? void 0 : e.persistentCodesEnabled) && t), (c = null != (n = null == e ? void 0 : e.uploadedKeyVersions) ? n : s));
     }
     getState() {
         return {
@@ -50,7 +50,7 @@ class _ extends (r = i.ZP.PersistedStore) {
         return c;
     }
 }
-o(_, 'displayName', 'SecureFramesPersistedStore'), o(_, 'persistKey', 'SecureFramesPersistedStore');
+(o(_, 'displayName', 'SecureFramesPersistedStore'), o(_, 'persistKey', 'SecureFramesPersistedStore'));
 let p = new _(a.Z, {
     SECURE_FRAMES_SETTINGS_UPDATE: u,
     SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: d,

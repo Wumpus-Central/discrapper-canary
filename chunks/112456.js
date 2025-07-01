@@ -2,10 +2,10 @@
     var n = this,
         r = n.humanize,
         i = {};
-    e.exports && (t = e.exports = i),
+    (e.exports && (t = e.exports = i),
         (t.humanize = i),
         (i.noConflict = function () {
-            return (n.humanize = r), this;
+            return ((n.humanize = r), this);
         }),
         (i.pad = function (e, t, n, r) {
             if (((e += ''), n ? n.length > 1 && (n = n.charAt(0)) : (n = ' '), 'right' == (r = void 0 === r ? 'left' : 'right'))) for (; e.length < t; ) e += n;
@@ -14,10 +14,10 @@
         }),
         (i.time = function () {
             return new Date().getTime() / 1000;
-        });
+        }));
     var a = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
         o = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
-    (i.date = function (e, t) {
+    ((i.date = function (e, t) {
         var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1000 * t),
             r = /\\?([a-z])/gi,
             s = function (e, t) {
@@ -149,7 +149,7 @@
         return e.replace(r, s);
     }),
         (i.numberFormat = function (e, t, n, r) {
-            (t = isNaN(t) ? 2 : Math.abs(t)), (n = void 0 === n ? '.' : n), (r = void 0 === r ? ',' : r);
+            ((t = isNaN(t) ? 2 : Math.abs(t)), (n = void 0 === n ? '.' : n), (r = void 0 === r ? ',' : r));
             var i = e < 0 ? '-' : '',
                 a = parseInt((e = Math.abs(+e || 0)).toFixed(t), 10) + '',
                 o = a.length > 3 ? a.length % 3 : 0;
@@ -166,7 +166,7 @@
             );
         }),
         (i.naturalDay = function (e, t) {
-            (e = void 0 === e ? i.time() : e), (t = void 0 === t ? 'Y-m-d' : t);
+            ((e = void 0 === e ? i.time() : e), (t = void 0 === t ? 'Y-m-d' : t));
             var n = 86400,
                 r = new Date(),
                 a = new Date(r.getFullYear(), r.getMonth(), r.getDate()).getTime() / 1000;
@@ -214,7 +214,7 @@
             return ((t = void 0 === t ? 1024 : t), e <= 0) ? '0 bytes' : (e < t && void 0 === n && (n = 0), void 0 === o && (o = ' '), i.intword(e, ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'], t, n, r, a, o));
         }),
         (i.intword = function (e, t, n, r, a, o, s) {
-            (c = (t = t || ['', 'K', 'M', 'B', 'T']).length - 1), (n = n || 1000), (r = isNaN(r) ? 2 : Math.abs(r)), (a = a || '.'), (o = o || ','), (s = s || '');
+            ((c = (t = t || ['', 'K', 'M', 'B', 'T']).length - 1), (n = n || 1000), (r = isNaN(r) ? 2 : Math.abs(r)), (a = a || '.'), (o = o || ','), (s = s || ''));
             for (var l, c, u = 0; u < t.length; u++)
                 if (e < Math.pow(n, u + 1)) {
                     c = u;
@@ -236,5 +236,5 @@
         (i.truncatewords = function (e, t) {
             var n = e.split(' ');
             return n.length < t ? e : n.slice(0, t).join(' ') + '\u2026';
-        });
+        }));
 }).call(this);

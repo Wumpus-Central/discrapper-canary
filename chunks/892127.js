@@ -22,7 +22,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function _(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -38,8 +38,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -71,12 +71,12 @@ let I = r.memo(function (e) {
             let o = p.Z.windowSize((0, m.ZY)((0, b.i)())),
                 l = (0, f.jL)(n, o),
                 a = (0, f.Ox)(i, o);
-            (0, s.Os)(t),
+            ((0, s.Os)(t),
                 (0, s.nv)({
                     widgetId: t,
                     anchor: l,
                     size: a
-                });
+                }));
             let d = e === g.B.MOVE,
                 h = (0, f.PY)(n, o.width, o.height, r.width, r.height);
             c.Z.track(v.rMx.OVERLAY_LAYOUT_UPDATED, {

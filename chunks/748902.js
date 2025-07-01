@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r,
     i = n(442837),
     l = n(570140),
@@ -56,7 +56,7 @@ class m extends (r = i.ZP.Store) {
 u(m, 'displayName', 'MessageRequestPreviewStore');
 let g = new m(l.Z, {
     CONNECTION_OPEN: function () {
-        (d = {}), p.clear();
+        ((d = {}), p.clear());
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
@@ -68,7 +68,7 @@ let g = new m(l.Z, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        p.delete(t.id), delete d[t.id];
+        (p.delete(t.id), delete d[t.id]);
     },
     MESSAGE_CREATE: function (e) {
         if (e.isPushNotification) return !1;
@@ -85,7 +85,7 @@ let g = new m(l.Z, {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -93,7 +93,7 @@ let g = new m(l.Z, {
                         )),
                         r.forEach(function (t) {
                             u(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
             })({}, i)),
@@ -124,7 +124,7 @@ let g = new m(l.Z, {
         let { requestedChannelIds: t, supplementalData: n } = e,
             r = new Set([...t]);
         for (let e of (n.forEach((e) => {
-            f(e.channel_id, e.message_preview), r.delete(e.channel_id);
+            (f(e.channel_id, e.message_preview), r.delete(e.channel_id));
         }),
         Array.from(r)))
             f(e, null);

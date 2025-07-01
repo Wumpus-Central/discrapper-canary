@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     $m: () => d,
     NJ: () => u,
     Xo: () => _,
     yi: () => f
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(512722),
@@ -25,7 +25,7 @@ function d() {
         [a, o] = i.useState(null),
         [c, u] = i.useState(i.createRef()),
         d = i.useCallback((e) => {
-            t(e.interactionType), r(e.interactionSource), o(e.interactionSourceId);
+            (t(e.interactionType), r(e.interactionSource), o(e.interactionSourceId));
         }, []),
         f = i.useCallback((e) => {
             u(e);
@@ -42,7 +42,7 @@ function d() {
         [E] = i.useState(new s.V7()),
         b = i.useCallback(
             (e) => {
-                g(e), h(!0), null === e ? E.stop() : E.start(l._1, () => h(!1));
+                (g(e), h(!0), null === e ? E.stop() : E.start(l._1, () => h(!1)));
             },
             [E]
         );
@@ -72,5 +72,5 @@ function f() {
 }
 function _() {
     let e = f();
-    return o()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
+    return (o()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e);
 }

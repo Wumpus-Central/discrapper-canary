@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     J6: () => v,
     LO: () => P,
     TQ: () => Z,
@@ -27,7 +27,7 @@ n.d(t, {
     n(121784),
     n(644351),
     n(146733),
-    n(388685);
+    n(388685));
 var r = n(250683),
     i = n(512722),
     a = n.n(i),
@@ -63,12 +63,12 @@ function N() {
     return h.Z.getArticleURL(b.BhN.END_TO_END_ENCRYPTION);
 }
 function Z(e, t, n, r, i) {
-    n ? m.Z.createSecureFramesVerifiedKey(e, t) : m.Z.createSecureFramesTransientKey(e, t),
+    (n ? m.Z.createSecureFramesVerifiedKey(e, t) : m.Z.createSecureFramesTransientKey(e, t),
         (0, U.M1)({
             channelId: r,
             userId: e,
             analyticsLocation: i
-        });
+        }));
 }
 function P(e, t, n) {
     if (n) {
@@ -81,7 +81,7 @@ function w(e, t) {
         title: A.intl.string(A.t['hdL15+']),
         subtitle: A.intl.string(A.t['8VGYKi']),
         onConfirm: () => {
-            m.Z.deleteSecureFramesVerifiedKey(e, t), (0, U.Pn)();
+            (m.Z.deleteSecureFramesVerifiedKey(e, t), (0, U.Pn)());
         }
     });
 }
@@ -92,7 +92,7 @@ function M(e) {
         title: A.intl.formatToPlainString(A.t.K6NGBw, { username: n }),
         subtitle: A.intl.string(A.t.F1BQKy),
         onConfirm: () => {
-            m.Z.deleteSecureFramesUserVerifiedKeys(e), (0, U.DF)();
+            (m.Z.deleteSecureFramesUserVerifiedKeys(e), (0, U.DF)());
         }
     });
 }
@@ -139,7 +139,7 @@ function K(e) {
 }
 async function L(e) {
     let t = E.default.getStaticAuthSessionId();
-    return a()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await d.Z.getMLSSigningKey(t, e);
+    return (a()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await d.Z.getMLSSigningKey(t, e));
 }
 function V(e) {
     let t = r.fromByteArray(new Uint8Array(e));
@@ -164,7 +164,7 @@ async function v(e, t, n) {
 async function k(e) {
     let { key: t, signature: n } = await L(e);
     try {
-        await l.tn.put({
+        (await l.tn.put({
             url: b.ANM.VOICE_PUBLIC_KEYS(),
             body: {
                 public_key: V(t),
@@ -173,7 +173,7 @@ async function k(e) {
             },
             rejectWithError: !1
         }),
-            m.Z.addUploadedKeyVersion(e);
+            m.Z.addUploadedKeyVersion(e));
     } catch (e) {
         throw (g.Z.captureException(e), e);
     }
@@ -185,11 +185,11 @@ async function x(e) {
     Y(e) || (await k(e));
 }
 async function j(e) {
-    if (!Y(e)) return await k(e), !0;
+    if (!Y(e)) return (await k(e), !0);
     let t = E.default.getId(),
         { key: n } = await L(e),
         r = await v(t, n, e);
-    return r || (0, U.KA)(e), r;
+    return (r || (0, U.KA)(e), r);
 }
 function B(e, t) {
     let [n, r] = t;
@@ -208,7 +208,7 @@ function B(e, t) {
 }
 function W(e) {
     let { userId: t, channelId: n, nickname: r } = e;
-    (0, U.CW)({
+    ((0, U.CW)({
         userId: t,
         channelId: n,
         keyVersion: C.GB,
@@ -217,7 +217,7 @@ function W(e) {
         s.Z.show({
             title: A.intl.string(A.t.mznLyc),
             body: A.intl.format(A.t.WY6IKS, { username: r })
-        });
+        }));
 }
 function G(e) {
     let { userId: t, guildId: n, channelId: r } = e;

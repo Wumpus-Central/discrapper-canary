@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -43,7 +43,7 @@ function O(e) {
             })
         },
         o = i.useRef(a);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         o.current = a;
     }),
         i.useEffect(() => {
@@ -56,7 +56,7 @@ function O(e) {
                 var c, u;
                 let t = a.guild_settings.sort_by_statistic_id,
                     r = a.users[0];
-                (e = null == r ? void 0 : r.user_id), (n = null == r || null == (u = r.statistics) || null == (c = u[t]) ? void 0 : c.value);
+                ((e = null == r ? void 0 : r.user_id), (n = null == r || null == (u = r.statistics) || null == (c = u[t]) ? void 0 : c.value));
             }
             s.default.track(h.rMx.LEADERBOARD_POPOUT_VIEWED, {
                 guild_id: t,
@@ -74,7 +74,7 @@ function O(e) {
                 last_interval_champion_id: e,
                 last_interval_champion_value: n
             });
-        }, [t, n, r]);
+        }, [t, n, r]));
 }
 function v(e) {
     let { leaderboard: t, application: n } = e,
@@ -137,12 +137,12 @@ let I = (e) => {
             leaderboardId: s,
             intervalOffset: -1
         });
-    (0, a.Tbt)(g),
+    ((0, a.Tbt)(g),
         O({
             guildId: n,
             leaderboardId: s,
             source: c
-        });
+        }));
     let S = (0, o.q)(null == I || null == (t = I.settings) ? void 0 : t.application_id);
     return null == I || null == S
         ? null

@@ -1,4 +1,4 @@
-t.d(l, { Z: () => m }), t(35282);
+(t.d(l, { Z: () => m }), t(35282));
 var n = t(255367);
 t(73800);
 var r = t(120356),
@@ -23,7 +23,7 @@ function m(e) {
         f = null;
     try {
         let e = s.parse(m, !0);
-        (g = e.host), (b = e.pathname), (f = null != (t = e.query.i) ? t : null), Array.isArray(f) && (f = f[0]);
+        ((g = e.host), (b = e.pathname), (f = null != (t = e.query.i) ? t : null), Array.isArray(f) && (f = f[0]));
     } catch (e) {
         return null;
     }

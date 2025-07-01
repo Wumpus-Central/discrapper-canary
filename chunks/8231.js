@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(539854);
+(n.d(t, { Z: () => D }), n(539854));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -113,14 +113,14 @@ let N = () =>
             S = (0, a.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
             v = (0, p.V)(),
             T = 'PlanComparisonTable';
-        (0, d.j)({
+        ((0, d.j)({
             location: T + ' auto on',
             autoTrackExposure: !0
         }),
             (0, d.j)({
                 location: T + ' auto off',
                 autoTrackExposure: !1
-            });
+            }));
         let I = (0, _.N)(),
             A = null == I || null == (t = I.subscription_trial) ? void 0 : t.sku_id,
             D = (0, b.Ng)(),
@@ -131,13 +131,13 @@ let N = () =>
             B = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_2),
             M = (0, E.e)(L, B, Z, k);
         if (!S || !v) return null;
-        M.push({
+        (M.push({
             label: null,
             tier0Column: null,
             tier2Column: null,
             withBottomBorder: !1
         }),
-            (n = o ? null : null != I ? (0, i.jsx)(y, {}) : (0, i.jsx)(N, {}));
+            (n = o ? null : null != I ? (0, i.jsx)(y, {}) : (0, i.jsx)(N, {})));
         let U = A === j.Si.TIER_0 || u === j.p9.TIER_0;
         return (0, i.jsx)(g.Gt, {
             value: C,
@@ -175,7 +175,7 @@ let N = () =>
                                                 for (var t = 1; t < arguments.length; t++) {
                                                     var n = null != arguments[t] ? arguments[t] : {},
                                                         i = Object.keys(n);
-                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                                         (i = i.concat(
                                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -183,7 +183,7 @@ let N = () =>
                                                         )),
                                                         i.forEach(function (t) {
                                                             var i;
-                                                            (i = n[t]),
+                                                            ((i = n[t]),
                                                                 t in e
                                                                     ? Object.defineProperty(e, t, {
                                                                           value: i,
@@ -191,8 +191,8 @@ let N = () =>
                                                                           configurable: !0,
                                                                           writable: !0
                                                                       })
-                                                                    : (e[t] = i);
-                                                        });
+                                                                    : (e[t] = i));
+                                                        }));
                                                 }
                                                 return e;
                                             })({}, e)),

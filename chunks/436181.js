@@ -26,7 +26,7 @@ function c(e) {
     };
 }
 function u() {
-    (s = null), (l = !1);
+    ((s = null), (l = !1));
 }
 function d() {
     l = !0;

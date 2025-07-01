@@ -1,4 +1,4 @@
-n.d(t, { H: () => d }), n(388685);
+(n.d(t, { H: () => d }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -19,12 +19,12 @@ function d(e) {
                         r,
                         l = {},
                         i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
             return l;
         })(e, ['chunks', 'className', 'onCopy']);
@@ -32,7 +32,7 @@ function d(e) {
         [h, p] = l.useState(!1),
         g = l.useCallback(() => {
             (0, s.JG)(f, () => {
-                p(!0), null == i || i();
+                (p(!0), null == i || i());
             });
         }, [i, f]),
         y = h ? a.owK : a.TIy;
@@ -49,7 +49,7 @@ function d(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,7 +57,7 @@ function d(e) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -65,8 +65,8 @@ function d(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, d, e)),

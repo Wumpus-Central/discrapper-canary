@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     HH: () => O,
     O9: () => f,
     Vu: () => h,
@@ -22,7 +22,7 @@ n.d(t, {
     x3: () => m
 }),
     n(953529),
-    n(388685);
+    n(388685));
 var r = n(592125),
     i = n(823379),
     a = n(700785),
@@ -38,7 +38,7 @@ let s = 7,
     h = 200,
     m = 7;
 var g = (function (e) {
-    return (e[(e.VIEW = 0)] = 'VIEW'), (e[(e.CHAT = 1)] = 'CHAT'), e;
+    return ((e[(e.VIEW = 0)] = 'VIEW'), (e[(e.CHAT = 1)] = 'CHAT'), e);
 })({});
 function E(e) {
     var t;
@@ -175,5 +175,5 @@ function N(e) {
     }
 }
 var C = (function (e) {
-    return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE'), (e[(e.RULES = 3)] = 'RULES'), (e[(e.UPDATES = 4)] = 'UPDATES'), e;
+    return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE'), (e[(e.RULES = 3)] = 'RULES'), (e[(e.UPDATES = 4)] = 'UPDATES'), e);
 })({});

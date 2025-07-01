@@ -1,8 +1,8 @@
-i.d(e, {
+(i.d(e, {
     Z: () => y,
     h: () => w
 }),
-    i(388685);
+    i(388685));
 var s,
     n = i(255367),
     a = i(73800),
@@ -62,7 +62,7 @@ function w(t) {
                     return null != s ? s : t;
                 });
             }
-            return window.addEventListener('resize', t), () => window.removeEventListener('reslize', t);
+            return (window.addEventListener('resize', t), () => window.removeEventListener('reslize', t));
         }, []),
         (0, n.jsxs)(n.Fragment, {
             children: [
@@ -147,7 +147,7 @@ class b extends (s = a.PureComponent) {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             m(this, 'state', {
                 naturalWidth: 0,
                 naturalHeight: 0,
@@ -167,7 +167,7 @@ class b extends (s = a.PureComponent) {
                             for (var e = 1; e < arguments.length; e++) {
                                 var i = null != arguments[e] ? arguments[e] : {},
                                     s = Object.keys(i);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (s = s.concat(
                                         Object.getOwnPropertySymbols(i).filter(function (t) {
                                             return Object.getOwnPropertyDescriptor(i, t).enumerable;
@@ -175,7 +175,7 @@ class b extends (s = a.PureComponent) {
                                     )),
                                     s.forEach(function (e) {
                                         m(t, e, i[e]);
-                                    });
+                                    }));
                             }
                             return t;
                         })({}, i)),
@@ -200,8 +200,8 @@ class b extends (s = a.PureComponent) {
                 let { currentTarget: e } = t,
                     { naturalWidth: i, naturalHeight: s } = e,
                     n = g(i, s);
-                null != n && this.setState(n), this.setState({ splashLoaded: !0 }), window.removeEventListener('resize', this.handleResize), window.addEventListener('resize', this.handleResize);
-            });
+                (null != n && this.setState(n), this.setState({ splashLoaded: !0 }), window.removeEventListener('resize', this.handleResize), window.addEventListener('resize', this.handleResize));
+            }));
     }
 }
 m(b, 'defaultProps', { embedded: !1 });

@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     a: () => N,
     default: () => R
 }),
     n(388685),
     n(704826),
-    n(35282);
+    n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -55,12 +55,12 @@ function R(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = f.Z.validateMessage(n, G, t.id);
-                return U(e), M(!1), { hasErrors: !0 };
+                return (U(e), M(!1), { hasErrors: !0 });
             }
             return { hasErrors: !1 };
         },
         Z = async (e) => {
-            L === w && R(), null == e || e.preventDefault(), U(null), M(!0);
+            (L === w && R(), null == e || e.preventDefault(), U(null), M(!0));
             let n = L.length,
                 r = L.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
                 i = b.ZP.parse(void 0, L),
@@ -87,7 +87,7 @@ function R(e) {
         },
         [H, Y] = i.useState((0, h.JM)(L)),
         W = (e, t, n) => {
-            x(t), Y(n);
+            (x(t), Y(n));
         },
         K = async () => (
             B || k || (await Z()),

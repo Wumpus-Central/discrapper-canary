@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,7 +51,7 @@ class f extends (r = a.Component) {
         return null != e ? this.renderProvider(e) : (0, i.jsx)(s.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             u(this, '_loadId', null),
             u(this, '_loadDate', this.props.root ? Date.now() : null),
             u(
@@ -59,7 +59,7 @@ class f extends (r = a.Component) {
                 'getLocation',
                 (0, l.oH)((e, t, n, r) => {
                     let i = {};
-                    return null != e && (i.page = e), null != t && (i.section = t), null != n && (i.object = n), null != r && (i.objectType = r), i;
+                    return (null != e && (i.page = e), null != t && (i.section = t), null != n && (i.object = n), null != r && (i.objectType = r), i);
                 })
             ),
             u(
@@ -76,7 +76,7 @@ class f extends (r = a.Component) {
                     loadId: n
                 }))
             ),
-            null != e.loadId ? (this._loadId = e.loadId) : e.root && (this._loadId = (0, o.Z)());
+            null != e.loadId ? (this._loadId = e.loadId) : e.root && (this._loadId = (0, o.Z)()));
     }
 }
-u(f, 'Pages', c.ZY5), u(f, 'Sections', c.jXE), u(f, 'Objects', c.qAy), u(f, 'ObjectTypes', c.Qqv), u(f, 'defaultProps', { root: !1 });
+(u(f, 'Pages', c.ZY5), u(f, 'Sections', c.jXE), u(f, 'Objects', c.qAy), u(f, 'ObjectTypes', c.Qqv), u(f, 'defaultProps', { root: !1 }));

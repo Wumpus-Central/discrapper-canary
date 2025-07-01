@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -30,7 +30,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -78,11 +78,11 @@ class b extends i.Component {
                                     children: h.intl.format(h.t.IodJKS, {
                                         applicationName: t,
                                         onClick: (t) => {
-                                            (0, u.ZDy)(async () => {
+                                            ((0, u.ZDy)(async () => {
                                                 let { default: t } = await n.e('51868').then(n.bind(n, 796504));
                                                 return (n) => (0, r.jsx)(t, E({ eulaId: e }, n));
                                             }),
-                                                t.preventDefault();
+                                                t.preventDefault());
                                         }
                                     })
                                 })
@@ -162,7 +162,7 @@ class b extends i.Component {
             : null;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'state', {
                 hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
                 hasAcceptedWithdrawalWaiver: !1
@@ -172,7 +172,7 @@ class b extends i.Component {
             }),
             g(this, 'handleToggleEULAAcceptance', (e, t) => {
                 this.setState({ hasAcceptedEULA: t });
-            });
+            }));
     }
 }
 let y = c.ZP.connectStores([d.Z], (e) => {

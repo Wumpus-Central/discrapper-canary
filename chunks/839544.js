@@ -27,10 +27,10 @@ function d(e) {
             return e;
         },
         set: function (n, r) {
-            (e = n),
+            ((e = n),
                 t.forEach(function (t) {
                     return t(e, r);
-                });
+                }));
         }
     };
 }
@@ -44,14 +44,14 @@ function _(e, t) {
         _ = (function (e) {
             function n() {
                 var t;
-                return (t = e.apply(this, arguments) || this), (t.emitter = d(t.props.value)), t;
+                return ((t = e.apply(this, arguments) || this), (t.emitter = d(t.props.value)), t);
             }
             (0, i.Z)(n, e);
             var r = n.prototype;
             return (
                 (r.getChildContext = function () {
                     var e;
-                    return ((e = {})[l] = this.emitter), e;
+                    return (((e = {})[l] = this.emitter), e);
                 }),
                 (r.componentWillReceiveProps = function (e) {
                     if (this.props.value !== e.value) {
@@ -67,7 +67,7 @@ function _(e, t) {
                 n
             );
         })(r.Component);
-    ((n = {})[l] = o().object.isRequired), (_.childContextTypes = n);
+    (((n = {})[l] = o().object.isRequired), (_.childContextTypes = n));
     var p = (function (t) {
         function n() {
             var e;

@@ -38,7 +38,7 @@ function d(e) {
     return (
         'r' === e[e.length - 1] ? (t.roundingPriority = 'morePrecision') : 's' === e[e.length - 1] && (t.roundingPriority = 'lessPrecision'),
         e.replace(l, function (e, n, r) {
-            return 'string' != typeof r ? ((t.minimumSignificantDigits = n.length), (t.maximumSignificantDigits = n.length)) : '+' === r ? (t.minimumSignificantDigits = n.length) : '#' === n[0] ? (t.maximumSignificantDigits = n.length) : ((t.minimumSignificantDigits = n.length), (t.maximumSignificantDigits = n.length + ('string' == typeof r ? r.length : 0))), '';
+            return ('string' != typeof r ? ((t.minimumSignificantDigits = n.length), (t.maximumSignificantDigits = n.length)) : '+' === r ? (t.minimumSignificantDigits = n.length) : '#' === n[0] ? (t.maximumSignificantDigits = n.length) : ((t.minimumSignificantDigits = n.length), (t.maximumSignificantDigits = n.length + ('string' == typeof r ? r.length : 0))), '');
         }),
         t
     );
@@ -96,10 +96,10 @@ function h(e) {
                 t.style = 'percent';
                 continue;
             case '%x100':
-                (t.style = 'percent'), (t.scale = 100);
+                ((t.style = 'percent'), (t.scale = 100));
                 continue;
             case 'currency':
-                (t.style = 'currency'), (t.currency = a.options[0]);
+                ((t.style = 'currency'), (t.currency = a.options[0]));
                 continue;
             case 'group-off':
             case ',_':
@@ -111,15 +111,15 @@ function h(e) {
                 continue;
             case 'measure-unit':
             case 'unit':
-                (t.style = 'unit'), (t.unit = o(a.options[0]));
+                ((t.style = 'unit'), (t.unit = o(a.options[0])));
                 continue;
             case 'compact-short':
             case 'K':
-                (t.notation = 'compact'), (t.compactDisplay = 'short');
+                ((t.notation = 'compact'), (t.compactDisplay = 'short'));
                 continue;
             case 'compact-long':
             case 'KK':
-                (t.notation = 'compact'), (t.compactDisplay = 'long');
+                ((t.notation = 'compact'), (t.compactDisplay = 'long'));
                 continue;
             case 'scientific':
                 t = (0, r.pi)(
@@ -141,13 +141,13 @@ function h(e) {
                 t.notation = 'standard';
                 continue;
             case 'unit-width-narrow':
-                (t.currencyDisplay = 'narrowSymbol'), (t.unitDisplay = 'narrow');
+                ((t.currencyDisplay = 'narrowSymbol'), (t.unitDisplay = 'narrow'));
                 continue;
             case 'unit-width-short':
-                (t.currencyDisplay = 'code'), (t.unitDisplay = 'short');
+                ((t.currencyDisplay = 'code'), (t.unitDisplay = 'short'));
                 continue;
             case 'unit-width-full-name':
-                (t.currencyDisplay = 'name'), (t.unitDisplay = 'long');
+                ((t.currencyDisplay = 'name'), (t.unitDisplay = 'long'));
                 continue;
             case 'unit-width-iso-code':
                 t.currencyDisplay = 'symbol';
@@ -193,7 +193,7 @@ function h(e) {
         if (s.test(a.stem)) {
             if (a.options.length > 1) throw RangeError('Fraction-precision stems only accept a single optional option');
             a.stem.replace(s, function (e, n, r, i, a, o) {
-                return '*' === r ? (t.minimumFractionDigits = n.length) : i && '#' === i[0] ? (t.maximumFractionDigits = i.length) : a && o ? ((t.minimumFractionDigits = a.length), (t.maximumFractionDigits = a.length + o.length)) : ((t.minimumFractionDigits = n.length), (t.maximumFractionDigits = n.length)), '';
+                return ('*' === r ? (t.minimumFractionDigits = n.length) : i && '#' === i[0] ? (t.maximumFractionDigits = i.length) : a && o ? ((t.minimumFractionDigits = a.length), (t.maximumFractionDigits = a.length + o.length)) : ((t.minimumFractionDigits = n.length), (t.maximumFractionDigits = n.length)), '');
             });
             var h = a.options[0];
             'w' === h ? (t = (0, r.pi)((0, r.pi)({}, t), { trailingZeroDisplay: 'stripIfInteger' })) : h && (t = (0, r.pi)((0, r.pi)({}, t), d(h)));

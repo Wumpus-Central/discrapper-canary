@@ -12,6 +12,6 @@ t.exports = function (t, e) {
         c = s.getSelection();
     if (c.getHasFocus()) {
         var l = c.set('hasFocus', !1);
-        t.props.onBlur && t.props.onBlur(e), t.update(n.acceptSelection(s, l));
+        (t.props.onBlur && t.props.onBlur(e), t.update(n.acceptSelection(s, l)));
     }
 };

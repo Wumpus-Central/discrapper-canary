@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     $j: () => Y,
     M3: () => W,
     ZP: () => z
 }),
     n(388685),
     n(642613),
-    n(415506);
+    n(415506));
 var r = n(348327),
     i = n.n(r),
     a = n(392711),
@@ -38,7 +38,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -46,7 +46,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -54,11 +54,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -107,13 +107,13 @@ function C(e) {
 }
 function R(e) {
     let t = C(e);
-    return null == t && N(e, (t = S(1))), t;
+    return (null == t && N(e, (t = S(1))), t);
 }
 function P(e) {
     (0, l.j)(() => {
         A.setState((t) => {
             let n = b({}, t);
-            return delete n[e], n;
+            return (delete n[e], n);
         });
     });
 }
@@ -142,13 +142,13 @@ function D(e) {
         });
 }
 async function L(e) {
-    await (0, c._v)(200),
+    (await (0, c._v)(200),
         null != C(e) &&
             N(e, {
                 requestState: 3,
                 abortController: null,
                 lastUpdated: Date.now()
-            });
+            }));
 }
 function x(e) {
     N(e, {
@@ -169,11 +169,11 @@ function j(e) {
         { query: r } = e;
     if (M(r)) {
         let [e, n] = (0, p.C)(r);
-        e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
+        (e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n }));
     }
     let { requireUnusualDmActivity: i, requireCommunicationDisabled: a, requireUnusualAccountActivity: o, requireUsernameQuarantined: s } = e,
         l = {};
-    i && (l.unusual_dm_activity_until = { range: { gte: Date.now() - h.rL } }), a && (l.communication_disabled_until = { range: { gte: Date.now() } }), o && (l.unusual_account_activity = o), s && (l.automod_quarantined_username = s), Object.keys(l).length > 0 && (n.safety_signals = l);
+    (i && (l.unusual_dm_activity_until = { range: { gte: Date.now() - h.rL } }), a && (l.communication_disabled_until = { range: { gte: Date.now() } }), o && (l.unusual_account_activity = o), s && (l.automod_quarantined_username = s), Object.keys(l).length > 0 && (n.safety_signals = l));
     let { selectedRoleIds: c } = e;
     c.size > 0 && (t.role_ids = { and_query: Array.from(c) });
     let { selectedJoinDateOption: u } = e;
@@ -205,7 +205,7 @@ function j(e) {
             and_query: t
         },
         { selectedSort: y } = e;
-    return null != y && (E.sort = y), E;
+    return (null != y && (E.sort = y), E);
 }
 function U(e, t) {
     return null == t ? e : b({}, e, t);
@@ -329,7 +329,7 @@ function W(e) {
 class K extends u.Z {
     handleInitialize(e) {
         let { guildId: t } = e;
-        return k(t), H(t);
+        return (k(t), H(t));
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
@@ -356,7 +356,7 @@ class K extends u.Z {
         return H(t);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             E(this, 'actions', {
                 INITIALIZE_MEMBER_SAFETY_STORE: (e) => this.handleInitialize(e),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e),
@@ -365,7 +365,7 @@ class K extends u.Z {
                 MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: (e) => this.handleGuildMemberSearchSuccess(e),
                 MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING: (e) => this.handleGuildMemberSearchStillIndexing(e),
                 MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: (e) => this.handleNewMemberTimestampRefresh(e)
-            });
+            }));
     }
 }
 let z = new K();

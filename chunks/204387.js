@@ -1,4 +1,4 @@
-r.d(t, { default: () => f }), r(388685);
+(r.d(t, { default: () => f }), r(388685));
 var a = r(255367),
     i = r(73800),
     s = r(481060),
@@ -23,7 +23,7 @@ let f = (e) => {
                     try {
                         o.default.track(x.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: L });
                         let t = await (0, C.jy)(e.map((e) => e.id));
-                        h(2), j(new Set(e)), g(t);
+                        (h(2), j(new Set(e)), g(t));
                     } catch (e) {}
                 },
                 onClose: f

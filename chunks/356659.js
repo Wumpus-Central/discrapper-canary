@@ -33,16 +33,16 @@ n.d(t, {
 var r = n(710845),
     i = n(70956),
     a = (function (e) {
-        return (e[(e.SECONDS_30 = 30 * i.Z.Millis.SECOND)] = 'SECONDS_30'), (e[(e.MINUTES_1 = i.Z.Millis.MINUTE)] = 'MINUTES_1'), (e[(e.MINUTES_2 = 2 * i.Z.Millis.MINUTE)] = 'MINUTES_2'), e;
+        return ((e[(e.SECONDS_30 = 30 * i.Z.Millis.SECOND)] = 'SECONDS_30'), (e[(e.MINUTES_1 = i.Z.Millis.MINUTE)] = 'MINUTES_1'), (e[(e.MINUTES_2 = 2 * i.Z.Millis.MINUTE)] = 'MINUTES_2'), e);
     })({}),
     o = (function (e) {
-        return (e[(e.ALL = 0)] = 'ALL'), (e[(e.FRIENDS = 1)] = 'FRIENDS'), e;
+        return ((e[(e.ALL = 0)] = 'ALL'), (e[(e.FRIENDS = 1)] = 'FRIENDS'), e);
     })({}),
     s = (function (e) {
-        return (e.DECOUPLED = 'decoupled'), (e.VIEWER = 'viewer'), (e.STREAMER = 'streamer'), e;
+        return ((e.DECOUPLED = 'decoupled'), (e.VIEWER = 'viewer'), (e.STREAMER = 'streamer'), e);
     })({}),
     l = (function (e) {
-        return (e[(e.Error = 0)] = 'Error'), (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), e;
+        return ((e[(e.Error = 0)] = 'Error'), (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), e);
     })({});
 let c = 'alt+c',
     u = 6 * i.Z.Millis.SECOND,

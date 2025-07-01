@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => f,
     y: () => d
 }),
-    n(314940);
+    n(314940));
 var r = n(73800),
     i = n(278074),
     a = n(442837),
@@ -12,7 +12,7 @@ var r = n(73800),
     c = n(710111),
     u = n(388032),
     d = (function (e) {
-        return (e[(e.JOIN_GUILD = 0)] = 'JOIN_GUILD'), (e[(e.GET_NITRO = 1)] = 'GET_NITRO'), (e[(e.NONE = 2)] = 'NONE'), e;
+        return ((e[(e.JOIN_GUILD = 0)] = 'JOIN_GUILD'), (e[(e.GET_NITRO = 1)] = 'GET_NITRO'), (e[(e.NONE = 2)] = 'NONE'), e);
     })({});
 function f(e, t, n, d) {
     let f = e.guildId === c.X8,

@@ -91,31 +91,31 @@ async function _(e, t) {
     } catch (t) {
         let e = new a.zN(t);
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_APPLY_BOOST_FAIL',
                 error: e
             }),
-            e)
+            e
         );
     }
 }
 async function p(e, t) {
     i.Z.dispatch({ type: 'GUILD_UNAPPLY_BOOST_START' });
     try {
-        await r.tn.del({
+        (await r.tn.del({
             url: c.ANM.APPLIED_GUILD_BOOST(e, t),
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-            f();
+            f());
     } catch (t) {
         let e = new a.zN(t);
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_UNAPPLY_BOOST_FAIL',
                 error: e
             }),
-            e)
+            e
         );
     }
     i.Z.dispatch({

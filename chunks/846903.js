@@ -32,7 +32,7 @@ class c extends i {
         )
             throw TypeError(`Expected \`intervalCap\` to be a number from 1 and up, got \`${null != (n = null == (t = e.intervalCap) ? void 0 : t.toString()) ? n : ''}\` (${typeof e.intervalCap})`);
         if (void 0 === e.interval || !(Number.isFinite(e.interval) && e.interval >= 0)) throw TypeError(`Expected \`interval\` to be a finite number >= 0, got \`${null != (i = null == (r = e.interval) ? void 0 : r.toString()) ? i : ''}\` (${typeof e.interval})`);
-        (this._carryoverConcurrencyCount = e.carryoverConcurrencyCount), (this._isIntervalIgnored = e.intervalCap === 1 / 0 || 0 === e.interval), (this._intervalCap = e.intervalCap), (this._interval = e.interval), (this._queue = new e.queueClass()), (this._queueClass = e.queueClass), (this.concurrency = e.concurrency), (this._timeout = e.timeout), (this._throwOnTimeout = !0 === e.throwOnTimeout), (this._isPaused = !1 === e.autoStart);
+        ((this._carryoverConcurrencyCount = e.carryoverConcurrencyCount), (this._isIntervalIgnored = e.intervalCap === 1 / 0 || 0 === e.interval), (this._intervalCap = e.intervalCap), (this._interval = e.interval), (this._queue = new e.queueClass()), (this._queueClass = e.queueClass), (this.concurrency = e.concurrency), (this._timeout = e.timeout), (this._throwOnTimeout = !0 === e.throwOnTimeout), (this._isPaused = !1 === e.autoStart));
     }
     get _doesIntervalAllowAnother() {
         return this._isIntervalIgnored || this._intervalCount < this._intervalCap;
@@ -41,13 +41,13 @@ class c extends i {
         return this._pendingCount < this._concurrency;
     }
     _next() {
-        this._pendingCount--, this._tryToStartAnother(), this.emit('next');
+        (this._pendingCount--, this._tryToStartAnother(), this.emit('next'));
     }
     _resolvePromises() {
-        this._resolveEmpty(), (this._resolveEmpty = s), 0 === this._pendingCount && (this._resolveIdle(), (this._resolveIdle = s), this.emit('idle'));
+        (this._resolveEmpty(), (this._resolveEmpty = s), 0 === this._pendingCount && (this._resolveIdle(), (this._resolveIdle = s), this.emit('idle')));
     }
     _onResumeInterval() {
-        this._onInterval(), this._initializeIntervalIfNeeded(), (this._timeoutId = void 0);
+        (this._onInterval(), this._initializeIntervalIfNeeded(), (this._timeoutId = void 0));
     }
     _isIntervalPaused() {
         let e = Date.now();
@@ -66,7 +66,7 @@ class c extends i {
         return !1;
     }
     _tryToStartAnother() {
-        if (0 === this._queue.size) return this._intervalId && clearInterval(this._intervalId), (this._intervalId = void 0), this._resolvePromises(), !1;
+        if (0 === this._queue.size) return (this._intervalId && clearInterval(this._intervalId), (this._intervalId = void 0), this._resolvePromises(), !1);
         if (!this._isPaused) {
             let e = !this._isIntervalPaused();
             if (this._doesIntervalAllowAnother && this._doesConcurrentAllowAnother) {
@@ -85,7 +85,7 @@ class c extends i {
             (this._intervalEnd = Date.now() + this._interval));
     }
     _onInterval() {
-        0 === this._intervalCount && 0 === this._pendingCount && this._intervalId && (clearInterval(this._intervalId), (this._intervalId = void 0)), (this._intervalCount = this._carryoverConcurrencyCount ? this._pendingCount : 0), this._processQueue();
+        (0 === this._intervalCount && 0 === this._pendingCount && this._intervalId && (clearInterval(this._intervalId), (this._intervalId = void 0)), (this._intervalCount = this._carryoverConcurrencyCount ? this._pendingCount : 0), this._processQueue());
     }
     _processQueue() {
         for (; this._tryToStartAnother(); );
@@ -95,12 +95,12 @@ class c extends i {
     }
     set concurrency(e) {
         if (!('number' == typeof e && e >= 1)) throw TypeError(`Expected \`concurrency\` to be a number from 1 and up, got \`${e}\` (${typeof e})`);
-        (this._concurrency = e), this._processQueue();
+        ((this._concurrency = e), this._processQueue());
     }
     async add(e, t = {}) {
         return new Promise((n, r) => {
             let i = async () => {
-                this._pendingCount++, this._intervalCount++;
+                (this._pendingCount++, this._intervalCount++);
                 try {
                     let i =
                         void 0 === this._timeout && void 0 === t.timeout
@@ -114,14 +114,14 @@ class c extends i {
                 }
                 this._next();
             };
-            this._queue.enqueue(i, t), this._tryToStartAnother(), this.emit('add');
+            (this._queue.enqueue(i, t), this._tryToStartAnother(), this.emit('add'));
         });
     }
     async addAll(e, t) {
         return Promise.all(e.map(async (e) => this.add(e, t)));
     }
     start() {
-        return this._isPaused && ((this._isPaused = !1), this._processQueue()), this;
+        return (this._isPaused && ((this._isPaused = !1), this._processQueue()), this);
     }
     pause() {
         this._isPaused = !0;
@@ -134,7 +134,7 @@ class c extends i {
             return new Promise((e) => {
                 let t = this._resolveEmpty;
                 this._resolveEmpty = () => {
-                    t(), e();
+                    (t(), e());
                 };
             });
     }
@@ -143,7 +143,7 @@ class c extends i {
             return new Promise((e) => {
                 let t = this._resolveIdle;
                 this._resolveIdle = () => {
-                    t(), e();
+                    (t(), e());
                 };
             });
     }

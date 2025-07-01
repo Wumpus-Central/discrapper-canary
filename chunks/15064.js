@@ -12,11 +12,11 @@ var r =
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+                ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
             }
         }
         return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+            return (n && e(t.prototype, n), r && e(t, r), t);
         };
     })();
 function o(e, t) {
@@ -33,7 +33,7 @@ function l(e, t) {
 }
 function c(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
+    ((e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -41,7 +41,7 @@ function c(e, t) {
             configurable: !0
         }
     })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
 }
 var u = n(73800),
     d = n(222142),
@@ -49,7 +49,7 @@ var u = n(73800),
 e.exports = function (e) {
     var t = (function (t) {
         function n() {
-            return s(this, n), l(this, (n.__proto__ || Object.getPrototypeOf(n)).apply(this, arguments));
+            return (s(this, n), l(this, (n.__proto__ || Object.getPrototypeOf(n)).apply(this, arguments)));
         }
         return (
             c(n, t),
@@ -80,7 +80,7 @@ e.exports = function (e) {
                             r = function () {
                                 !1 === f.current(t.componentRef, t._propsAnimated.__getAnimatedValue(), t) && t.forceUpdate();
                             };
-                        (this._propsAnimated = new d(e, r)), n && n.__detach();
+                        ((this._propsAnimated = new d(e, r)), n && n.__detach());
                     }
                 },
                 {

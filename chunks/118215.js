@@ -22,7 +22,7 @@ class c extends (r = a.ZP.Store) {
         return u[e];
     }
 }
-(l = 'DiscoverGuildChecklistStore'),
+((l = 'DiscoverGuildChecklistStore'),
     (n = 'displayName') in c
         ? Object.defineProperty(c, n, {
               value: l,
@@ -30,7 +30,7 @@ class c extends (r = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (c[n] = l);
+        : (c[n] = l));
 let d = new c(s.Z, {
     DISCOVER_CHECKLIST_FETCH_START: function (e) {
         o = !0;
@@ -41,7 +41,7 @@ let d = new c(s.Z, {
     DISCOVER_CHECKLIST_FETCH_SUCCESS: function (e) {
         var i;
         let { checklist: t, guildId: n } = e;
-        (o = !1),
+        ((o = !1),
             (u[n] = {
                 guildId: t.guild_id,
                 safeEnvironment: t.safe_environment,
@@ -59,6 +59,6 @@ let d = new c(s.Z, {
                 healthScore: t.health_score,
                 minimumGuildAge: null != (i = t.minimum_age) ? i : 0,
                 age: t.age
-            });
+            }));
     }
 });

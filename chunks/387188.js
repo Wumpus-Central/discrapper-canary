@@ -1,9 +1,9 @@
-n.d(t, {
-    e: () => E,
-    i: () => v
+(n.d(t, {
+    e: () => C,
+    i: () => x
 }),
     n(35282),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,19 +16,19 @@ var r = n(255367),
     p = n(834129),
     m = n(222677),
     f = n(585483),
-    h = n(339085),
-    g = n(981631),
-    _ = n(388032),
+    g = n(339085),
+    _ = n(981631),
+    h = n(388032),
     b = n(841935);
-let x = /^<(a?):(\w+):(\d+)>/;
+let E = /^<(a?):(\w+):(\d+)>/;
 function y(e) {
     let t = i.useMemo(() => {
         var t;
-        return null == (t = x.exec(e)) ? void 0 : t[3];
+        return null == (t = E.exec(e)) ? void 0 : t[3];
     }, [e]);
-    return (0, s.e7)([h.ZP], () => (null == t ? null : h.ZP.getCustomEmojiById(t)));
+    return (0, s.e7)([g.ZP], () => (null == t ? null : g.ZP.getCustomEmojiById(t)));
 }
-function E(e) {
+function C(e) {
     let { message: t, className: n } = e,
         [l, o] = i.useState(!1),
         s = t.getChannelId(),
@@ -54,7 +54,7 @@ function E(e) {
             variant: 'text-sm/semibold',
             color: 'text-secondary',
             className: b.ctaText,
-            children: _.intl.format(_.t.z5Rnl5, {
+            children: h.intl.format(h.t.z5Rnl5, {
                 renderedEmoji:
                     null == d
                         ? null
@@ -72,20 +72,20 @@ function E(e) {
         })
     });
 }
-function v(e) {
+function x(e) {
     var t;
     let { message: n, channel: l, compact: a, usernameHook: s } = e,
-        [m, h] = i.useState(!1),
-        x = (0, d.ZP)(n),
-        E = s(x),
-        v = y(n.content),
-        C = i.useCallback(() => {
-            null != v &&
-                f.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
-                    plainText: ':'.concat(v.name, ':'),
+        [m, g] = i.useState(!1),
+        E = (0, d.ZP)(n),
+        C = s(E),
+        x = y(n.content),
+        v = i.useCallback(() => {
+            null != x &&
+                f.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
+                    plainText: ':'.concat(x.name, ':'),
                     addSpace: !0
                 });
-        }, [v]);
+        }, [x]);
     return (0, r.jsx)(p.Z, {
         iconNode: (0, r.jsx)(o.EO4, {
             size: 'md',
@@ -100,26 +100,26 @@ function v(e) {
             variant: 'text-md/normal',
             color: 'text-secondary',
             children:
-                null == v
-                    ? _.intl.format(_.t.k6Jc9f, {
-                          username: x.nick,
-                          usernameHook: E
+                null == x
+                    ? h.intl.format(h.t.k6Jc9f, {
+                          username: E.nick,
+                          usernameHook: C
                       })
-                    : _.intl.format(_.t.uoCHWV, {
-                          username: x.nick,
-                          usernameHook: E,
+                    : h.intl.format(h.t.uoCHWV, {
+                          username: E.nick,
+                          usernameHook: C,
                           emoji: (0, r.jsxs)(c.P3F, {
                               className: b.clickableEmoji,
                               tag: 'span',
-                              onClick: C,
-                              onMouseEnter: () => h(!0),
-                              onMouseLeave: () => h(!1),
+                              onClick: v,
+                              onMouseEnter: () => g(!0),
+                              onMouseLeave: () => g(!1),
                               children: [
                                   (0, r.jsx)(u.Z, {
-                                      emojiName: v.name,
+                                      emojiName: x.name,
                                       size: 'default',
-                                      emojiId: v.id,
-                                      animated: v.animated,
+                                      emojiId: x.id,
+                                      animated: x.animated,
                                       isInteracting: m,
                                       channelId: l.id,
                                       messageId: n.id,
@@ -129,7 +129,7 @@ function v(e) {
                                       tag: 'span',
                                       variant: 'text-md/medium',
                                       color: 'text-primary',
-                                      children: ':'.concat(null != (t = v.originalName) ? t : v.name, ':')
+                                      children: ':'.concat(null != (t = x.originalName) ? t : x.name, ':')
                                   })
                               ]
                           })

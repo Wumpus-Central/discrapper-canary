@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -64,14 +64,14 @@ let N = (e) => {
             hasFetchedRequestToJoinGuilds: b.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: b.Z.getJoinRequestGuild(t)
         }));
-    i.useEffect(() => {
+    (i.useEffect(() => {
         null != T && (0, u.uL)(y.Z5c.CHANNEL(t));
     }, [T, t]),
         i.useEffect(() => {
             P || f.Z.fetchRequestToJoinGuilds();
-        }, [P]);
+        }, [P]));
     let A = i.useCallback(() => {
-            h(Math.max(p, I.hO.FILLING)), f.Z.removeGuildJoinRequest(t), (0, u.uL)(y.Z5c.ME);
+            (h(Math.max(p, I.hO.FILLING)), f.Z.removeGuildJoinRequest(t), (0, u.uL)(y.Z5c.ME));
         }, [t, p]),
         Z = (e, t) => () => {
             (0, a.h7j)((n) => {
@@ -82,7 +82,7 @@ let N = (e) => {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -90,7 +90,7 @@ let N = (e) => {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -98,8 +98,8 @@ let N = (e) => {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })(
@@ -137,7 +137,7 @@ let N = (e) => {
             });
         },
         x = async () => {
-            await f.Z.resetGuildJoinRequest(t), (0, g.hk)(t);
+            (await f.Z.resetGuildJoinRequest(t), (0, g.hk)(t));
         },
         L = Z(v.intl.format(v.t['9ZezpK'], { name: null == j ? void 0 : j.name }), A),
         w = Z(v.intl.format(v.t.fJwWVl, { name: null == j ? void 0 : j.name }), A);

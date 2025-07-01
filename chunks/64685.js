@@ -10,11 +10,11 @@ var r = a(573736),
     c = a(578346);
 function s(t, e) {
     let a = 'fetch';
-    (0, c.Hj)(a, t), (0, c.D2)(a, () => l(void 0, e));
+    ((0, c.Hj)(a, t), (0, c.D2)(a, () => l(void 0, e)));
 }
 function E(t) {
     let e = 'fetch-body-resolved';
-    (0, c.Hj)(e, t), (0, c.D2)(e, () => l(u));
+    ((0, c.Hj)(e, t), (0, c.D2)(e, () => l(u)));
 }
 function l(t, e = !1) {
     (!e || (0, n.t$)()) &&
@@ -29,13 +29,13 @@ function l(t, e = !1) {
                         if (2 === t.length) {
                             let [e, a] = t;
                             return {
-                                url: d(e),
+                                url: R(e),
                                 method: I(a, 'method') ? String(a.method).toUpperCase() : 'GET'
                             };
                         }
                         let e = t[0];
                         return {
-                            url: d(e),
+                            url: R(e),
                             method: I(e, 'method') ? String(e.method).toUpperCase() : 'GET'
                         };
                     })(a),
@@ -115,6 +115,6 @@ async function u(t) {
 function I(t, e) {
     return !!t && 'object' == typeof t && !!t[e];
 }
-function d(t) {
+function R(t) {
     return 'string' == typeof t ? t : t ? (I(t, 'url') ? t.url : t.toString ? t.toString() : '') : '';
 }

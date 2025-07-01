@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854);
+(n.d(t, { Z: () => j }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -40,7 +40,7 @@ class P extends i.PureComponent {
     createSound() {
         let { soundpack: e } = this.props,
             t = (0, m.uk)('discodo', e);
-        return (t.volume = 1), t;
+        return ((t.volume = 1), t);
     }
     componentDidMount() {
         this.setProblemsTimeout();
@@ -49,7 +49,7 @@ class P extends i.PureComponent {
         let { ready: n, hide: r, problems: i } = this.state,
             { connected: l, soundpack: a } = this.props,
             o = l && n && !r && !i;
-        e.soundpack !== a && (this._connectedSound = this.createSound()),
+        (e.soundpack !== a && (this._connectedSound = this.createSound()),
             e.connected !== l || o
                 ? (l && null != this.videoRef && u.K.get(C.wli) && this._connectedSound.play(),
                   this.setState({
@@ -58,7 +58,7 @@ class P extends i.PureComponent {
                   }))
                 : t.hide !== r
                   ? (r ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({ shouldRender: !0 }), setTimeout(() => this.setState({ shouldRender: !r }), 200))
-                  : t.problems !== i && i && p.Z.checkIncidents();
+                  : t.problems !== i && i && p.Z.checkIncidents());
     }
     componentWillUnmount() {
         this.clearProblemsTimeout();
@@ -150,7 +150,7 @@ class P extends i.PureComponent {
         }
     }
     constructor(e) {
-        super(e),
+        (super(e),
             T(this, 'videoRef', null),
             T(this, '_noProblemsTimeout', null),
             T(this, '_problemsTimeout', null),
@@ -338,7 +338,7 @@ class P extends i.PureComponent {
                                 )
                         })
                     ];
-                    return _.default.locale.startsWith('en-') && e.push(S.intl.string(S.t.dQ9Wqq)), e[s().random(e.length - 1)];
+                    return (_.default.locale.startsWith('en-') && e.push(S.intl.string(S.t.dQ9Wqq)), e[s().random(e.length - 1)]);
                 })()
             ),
             T(
@@ -350,7 +350,7 @@ class P extends i.PureComponent {
                 })()
             ),
             T(this, 'handleReady', () => {
-                this.setState({ ready: !0 }), (0, y.isDesktop)() && (I.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), I.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+                (this.setState({ ready: !0 }), (0, y.isDesktop)() && (I.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), I.ZP.send('UPDATE_OPEN_ON_STARTUP')));
             }),
             T(this, 'setVideoRef', (e) => {
                 this.videoRef = e;
@@ -359,16 +359,16 @@ class P extends i.PureComponent {
                 null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({ problems: !0 }), 10000));
             }),
             T(this, 'clearProblemsTimeout', () => {
-                clearTimeout(this._problemsTimeout), (this._problemsTimeout = null);
-            });
+                (clearTimeout(this._problemsTimeout), (this._problemsTimeout = null));
+            }));
         let { connected: t } = e;
-        (this.state = {
+        ((this.state = {
             ready: t,
             hide: t,
             problems: !1,
             shouldRender: !t
         }),
-            (this._connectedSound.volume = 1);
+            (this._connectedSound.volume = 1));
     }
 }
 let j = c.ZP.connectStores([f.Z, E.Z, b.Z, h.Z], () => ({

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(361932), n(187205), n(388685), n(539854), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
+(n.d(t, { Z: () => c }), n(361932), n(187205), n(388685), n(539854), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
 var r = n(73800),
     i = n(399606),
     a = n(541716),
@@ -40,7 +40,7 @@ function c(e, t) {
                             })
                         ),
                         () => {
-                            n(null), e.forEach((e) => URL.revokeObjectURL(e));
+                            (n(null), e.forEach((e) => URL.revokeObjectURL(e)));
                         }
                     );
                 }, [o]),
@@ -70,5 +70,5 @@ function c(e, t) {
             [h]
         ),
         f = [...(null != d ? d : [])];
-    return !u && m > 0 && f.push(...(null != (c = null == g ? void 0 : g.slice(0, m)) ? c : [])), f;
+    return (!u && m > 0 && f.push(...(null != (c = null == g ? void 0 : g.slice(0, m)) ? c : [])), f);
 }

@@ -20,10 +20,10 @@ function u(e, t, n) {
     );
 }
 var d = (function (e) {
-        return (e.PRIMARY = 'primary'), (e.SECONDARY = 'secondary'), (e.WARNING = 'warning'), (e.ERROR = 'error'), e;
+        return ((e.PRIMARY = 'primary'), (e.SECONDARY = 'secondary'), (e.WARNING = 'warning'), (e.ERROR = 'error'), e);
     })(d || {}),
     f = (function (e) {
-        return (e.SMALL = 'small'), (e.LARGE = 'large'), (e.NONE = 'none'), e;
+        return ((e.SMALL = 'small'), (e.LARGE = 'large'), (e.NONE = 'none'), e);
     })(f || {});
 let _ = {
         primary: c.colorPrimary,
@@ -52,5 +52,5 @@ class h extends (r = a.PureComponent) {
         });
     }
 }
-u(h, 'Colors', d), u(h, 'Sizes', f);
+(u(h, 'Colors', d), u(h, 'Sizes', f));
 let m = h;

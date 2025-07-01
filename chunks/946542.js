@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(953529), n(388685);
+(n.d(t, { Z: () => b }), n(953529), n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(481060),
@@ -67,7 +67,7 @@ function _(e) {
             [u]
         ),
         C = a.useCallback(() => {
-            (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
+            ((0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                 current_page: 'product',
                 application_id: o,
                 suggested_application_id: u.id,
@@ -75,7 +75,7 @@ function _(e) {
                 load_id: _,
                 shown_mutual_guilds_count: b.length
             }),
-                h(u.id);
+                h(u.id));
         }, [h, u.id, o, b.length, _, f]);
     return (0, r.jsxs)(i.P3F, {
         onClick: C,

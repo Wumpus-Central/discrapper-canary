@@ -1,4 +1,4 @@
-r.d(t, { default: () => _ }), r(388685);
+(r.d(t, { default: () => _ }), r(388685));
 var n = r(255367),
     i = r(73800),
     l = r(442837),
@@ -63,12 +63,12 @@ function y(e) {
         [y, O] = (0, i.useState)(null != b),
         x = (0, i.useCallback)(
             (e) => {
-                u(),
+                (u(),
                     (0, c.mK)({
                         analyticsLocations: s,
                         analyticsSource: o.Z.EDIT_NAMEPLATE_MODAL,
                         initialProductSkuId: e
-                    });
+                    }));
             },
             [s, u]
         );
@@ -95,7 +95,7 @@ function y(e) {
                     (0, n.jsx)(m.Z, {
                         selected: b,
                         onSelect: (e, t) => {
-                            _(e), O(null != t && t);
+                            (_(e), O(null != t && t));
                         },
                         onOpenShop: x,
                         available: r,
@@ -114,7 +114,7 @@ function y(e) {
                         ? (0, n.jsx)(a.zxk, {
                               disabled: void 0 === b,
                               onClick: () => {
-                                  (0, d.Wh)(b), u();
+                                  ((0, d.Wh)(b), u());
                               },
                               children: h.intl.string(h.t.Jh8fJy)
                           })

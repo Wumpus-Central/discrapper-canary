@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => K,
     dy: () => A,
     gw: () => d
@@ -10,7 +10,7 @@ n.d(t, {
     n(704826),
     n(413496),
     n(433524),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(336317),
@@ -119,7 +119,7 @@ function N(e) {
     let t = u.get(e);
     if (null != t) return t;
     let n = new A(e);
-    return u.set(e, n), n;
+    return (u.set(e, n), n);
 }
 function C(e) {
     let t = a.Z.convert.toCodePoint(e);
@@ -143,7 +143,7 @@ function x(e) {
     let t = L.get(e);
     if (null == t) {
         let n = b[e];
-        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(N)), L.set(e, t);
+        ((t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(N)), L.set(e, t));
     }
     return t;
 }
@@ -185,11 +185,11 @@ function V(e, t) {
     for (let e = 0; e < a.length; e++) {
         let t = a[e];
         if (null != r && '' !== r)
-            if (t === U) (t = r + t), (r = '');
+            if (t === U) ((t = r + t), (r = ''));
             else if (B.test(t)) {
                 r += t;
                 continue;
-            } else i.push(j(r)), (r = '');
+            } else (i.push(j(r)), (r = ''));
         else if (t === G) {
             r = t;
             continue;
@@ -204,7 +204,7 @@ function V(e, t) {
         }
         i.push(n);
     }
-    return null != r && '' !== r && i.push(j(r)), i;
+    return (null != r && '' !== r && i.push(j(r)), i);
 }
 function F(e) {
     return V(e)
@@ -255,7 +255,7 @@ let K = {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
             r = n;
-        return Object.prototype.hasOwnProperty.call(p, e) && (r = p[e]), t ? ':'.concat(r, ':') : r;
+        return (Object.prototype.hasOwnProperty.call(p, e) && (r = p[e]), t ? ':'.concat(r, ':') : r);
     },
     convertSurrogateToBase: W,
     forEach: (e) => {

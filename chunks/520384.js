@@ -15,7 +15,7 @@ function g(e) {
         { analyticsLocations: g } = (0, l.ZP)(),
         p = r.useCallback(
             (e) => {
-                (0, c.Z)('stream_previews_disabled', e, o.I0.getSetting(), g), o.I0.updateSetting(e);
+                ((0, c.Z)('stream_previews_disabled', e, o.I0.getSetting(), g), o.I0.updateSetting(e));
             },
             [g]
         ),

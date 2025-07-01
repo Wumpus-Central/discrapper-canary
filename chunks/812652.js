@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     PG: () => j,
     Vf: () => b,
     YX: () => S,
@@ -6,7 +6,7 @@ n.d(t, {
     l9: () => O
 }),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(255367);
 n(73800);
 var i = n(268146),
@@ -152,7 +152,7 @@ function y(e) {
                                             label: t !== x.LY.RESOLUTION_720 ? (0, r.jsx)(C, { label: (0, u.M)(t) }) : (0, u.M)(t),
                                             action: () =>
                                                 (function (e) {
-                                                    if (!(0, c.Z)(N, e, E, a.default.getCurrentUser(), M)) return y(), (0, h.E)({ analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                                                    if (!(0, c.Z)(N, e, E, a.default.getCurrentUser(), M)) return (y(), (0, h.E)({ analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION }));
                                                     k({
                                                         type: 'set_resolution',
                                                         resolution: e
@@ -176,7 +176,7 @@ function y(e) {
                                         label: e === x.ws.FPS_60 ? (0, r.jsx)(C, { label: ''.concat(e, 'fps') }) : ''.concat(e, 'fps'),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, c.Z)(N, T, e, a.default.getCurrentUser(), M)) return y(), (0, h.E)({ analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                                                if (!(0, c.Z)(N, T, e, a.default.getCurrentUser(), M)) return (y(), (0, h.E)({ analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION }));
                                                 k({
                                                     type: 'set_fps',
                                                     fps: e

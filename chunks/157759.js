@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(442837),
@@ -23,7 +23,7 @@ let h = (e) => {
             return null == (e = m.Z.getChannel(g.Z.getChannelId())) ? void 0 : e.guild_id;
         }),
         [y, I] = a.useState(null);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         null != y && (f(!0), j(!0));
     }, [y]),
         a.useEffect(() => {
@@ -46,9 +46,9 @@ let h = (e) => {
                     e = !0;
                 }
             );
-        }, [C, t.id]);
+        }, [C, t.id]));
     let O = a.useCallback(() => {
-            j(!1),
+            (j(!1),
                 s.ZP.trackWithMetadata(b.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
                     guild_id: C,
                     application_id: t.id,
@@ -61,7 +61,7 @@ let h = (e) => {
                             title: x.intl.string(x.t.wYqMmJ),
                             body: x.intl.string(x.t.A4Mnsr)
                         });
-                    });
+                    }));
         }, [t.id, C, y, n]),
         T = (0, i.e7)([_.Z, p.Z], () => {
             let e = p.Z.getGuild(C);

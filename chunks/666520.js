@@ -1,4 +1,4 @@
-t.d(n, { Z: () => p }), t(35282);
+(t.d(n, { Z: () => p }), t(35282));
 var l = t(255367),
     r = t(73800),
     i = t(442837),
@@ -38,7 +38,7 @@ function p(e) {
                           if (e.shiftKey) {
                               var n;
                               (null != (n = e.currentTarget.value.match(/\n/g)) ? n : []).length >= 5 && e.preventDefault();
-                          } else e.preventDefault(), e.currentTarget.blur();
+                          } else (e.preventDefault(), e.currentTarget.blur());
                       else e.which === u.yXg.SPACE && e.stopPropagation();
                   },
                   defaultValue: null != h ? h : void 0,

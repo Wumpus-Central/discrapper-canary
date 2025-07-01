@@ -13,7 +13,7 @@ var i = n(512722),
 function _(e) {
     let { handleClose: t } = e,
         { skusById: n, selectedSkuId: i, application: _ } = (0, s.JL)();
-    a()(null != i, 'Expected selectedSkuId'), a()(null != _, 'Expected application');
+    (a()(null != i, 'Expected selectedSkuId'), a()(null != _, 'Expected application'));
     let p = n[i];
     a()(null != p, 'Expected sku');
     let h = d.intl.formatToPlainString(d.t.wK0IbG, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var o = n(255367),
     r = n(73800),
     i = n(481060),
@@ -12,9 +12,9 @@ var o = n(255367),
     p = n(252417),
     m = n(264481),
     b = n(714905);
-function y(e) {
-    let { user: t, guildId: n, channelId: y, onClose: _ } = e,
-        { analyticsLocations: x } = (0, l.ZP)(),
+function _(e) {
+    let { user: t, guildId: n, channelId: _, onClose: x } = e,
+        { analyticsLocations: y } = (0, l.ZP)(),
         { context: h, trackUserProfileAction: g } = (0, s.KZ)(),
         { mutualFriends: j, mutualFriendsCount: I } = (0, d.Z)(t),
         v = (0, c.Z)();
@@ -56,17 +56,17 @@ function y(e) {
                                     user: r,
                                     status: i,
                                     guildId: n,
-                                    channelId: y,
+                                    channelId: _,
                                     onSelect: () => {
                                         var e, t;
-                                        null == _ || _(),
+                                        (null == x || x(),
                                             g({ action: 'PRESS_MUTUAL_FRIEND' }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
                                                             o = Object.keys(n);
-                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                                             (o = o.concat(
                                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -74,7 +74,7 @@ function y(e) {
                                                             )),
                                                             o.forEach(function (t) {
                                                                 var o;
-                                                                (o = n[t]),
+                                                                ((o = n[t]),
                                                                     t in e
                                                                         ? Object.defineProperty(e, t, {
                                                                               value: o,
@@ -82,15 +82,15 @@ function y(e) {
                                                                               configurable: !0,
                                                                               writable: !0
                                                                           })
-                                                                        : (e[t] = o);
-                                                            });
+                                                                        : (e[t] = o));
+                                                            }));
                                                     }
                                                     return e;
                                                 })({}, h)),
                                                 (t = t =
                                                     {
                                                         userId: r.id,
-                                                        sourceAnalyticsLocations: x
+                                                        sourceAnalyticsLocations: y
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -105,7 +105,7 @@ function y(e) {
                                                           Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                                                       }),
                                                 e)
-                                            );
+                                            ));
                                     }
                                 },
                                 t

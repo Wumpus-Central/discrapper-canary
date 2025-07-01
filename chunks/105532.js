@@ -8,11 +8,11 @@ var r = n(286233),
     u = n(340535),
     d = o('Array.prototype.slice'),
     f = function (e, t) {
-        return i(e), c(e, d(arguments, 1));
+        return (i(e), c(e, d(arguments, 1)));
     };
-r(f, {
+(r(f, {
     getPolyfill: l,
     implementation: s,
     shim: u
 }),
-    (e.exports = f);
+    (e.exports = f));

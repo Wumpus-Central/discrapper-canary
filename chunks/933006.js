@@ -1,4 +1,4 @@
-n.d(e, { default: () => j }), n(388685), n(953529);
+(n.d(e, { default: () => j }), n(388685), n(953529));
 var r = n(255367),
     o = n(73800),
     i = n(481060),
@@ -28,12 +28,12 @@ function j(t) {
                         r,
                         o = {},
                         i = Object.keys(t);
-                    for (r = 0; r < i.length; r++) (n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                    for (r = 0; r < i.length; r++) ((n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]));
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < i.length; r++) (n = i[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]));
             }
             return o;
         })(t, ['onClose']);
@@ -56,7 +56,7 @@ function j(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -64,7 +64,7 @@ function j(t) {
                     )),
                     r.forEach(function (e) {
                         var r;
-                        (r = n[e]),
+                        ((r = n[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: r,
@@ -72,8 +72,8 @@ function j(t) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (t[e] = r);
-                    });
+                                : (t[e] = r));
+                    }));
             }
             return t;
         })(
@@ -90,7 +90,7 @@ function j(t) {
                 onSubscribeClick: l.Z,
                 secondaryCTA: y.intl.string(y.t.PcTCBw),
                 onSecondaryClick: () => {
-                    _(), a.Z.open(f.oAB.PREMIUM);
+                    (_(), a.Z.open(f.oAB.PREMIUM));
                 },
                 onClose: _
             },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var i = n(255367),
     l = n(73800),
     r = n(120356),
@@ -9,12 +9,12 @@ var i = n(255367),
     d = n(741247),
     u = n(75464),
     h = n(884902),
-    g = n(189173);
-function m(e) {
+    m = n(189173);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ function m(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -30,8 +30,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -41,7 +41,7 @@ function p(e) {
     return (0, d.e)(r, t)
         ? (0, i.jsx)(o.P3F, {
               onClick: (e) => {
-                  u(!0),
+                  (u(!0),
                       (0, c.jW)(
                           e,
                           async () => {
@@ -50,7 +50,7 @@ function p(e) {
                                   var l, s;
                                   return (0, i.jsx)(
                                       e,
-                                      ((l = m({}, n)),
+                                      ((l = g({}, n)),
                                       (s = s =
                                           {
                                               role: t,
@@ -73,9 +73,9 @@ function p(e) {
                               };
                           },
                           { onClose: () => u(!1) }
-                      );
+                      ));
               },
-              className: s()(g.roleOverflow, { [g.open]: a }),
+              className: s()(m.roleOverflow, { [m.open]: a }),
               children: (0, i.jsx)(o.xhG, {
                   size: 'custom',
                   color: 'currentColor',
@@ -89,9 +89,9 @@ function f(e) {
     let { color: t, id: l, role: r, guild: s, children: c, isDragging: d, selectedItem: f, onItemSelect: x, itemType: j, locked: b, lockTooltip: v, showContextMenu: y, theme: C, roleStyle: N, onContextMenu: S, 'aria-label': E } = e,
         O = (0, h._f)(s.id, r, null == r ? void 0 : r.colorStrings);
     return d
-        ? (0, i.jsx)('div', { className: g.dragged })
+        ? (0, i.jsx)('div', { className: m.dragged })
         : (0, i.jsx)(o.njP.Item, {
-              className: g.role,
+              className: m.role,
               id: l,
               selectedItem: f,
               onItemSelect: x,
@@ -99,20 +99,20 @@ function f(e) {
               'aria-label': null != v ? ''.concat(E, ', ').concat(v) : E,
               onContextMenu: S,
               children: (0, i.jsxs)('div', {
-                  className: g.roleContent,
+                  className: m.roleContent,
                   children: [
                       'dot' === N
                           ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
                                 colors: O,
-                                className: g.roleDot,
+                                className: m.roleDot,
                                 background: !1,
                                 tooltip: !1
                             })
                           : (0, i.jsx)(o.xko, {
                                 color: null != t ? t : void 0,
                                 colors: O,
-                                className: g.roleCircle
+                                className: m.roleCircle
                             }),
                       (function () {
                           if (!b) return null;
@@ -123,9 +123,9 @@ function f(e) {
                               children: (t) =>
                                   (0, i.jsx)(
                                       u.Z,
-                                      m(
+                                      g(
                                           {
-                                              className: g.lock,
+                                              className: m.lock,
                                               src: e
                                           },
                                           t
@@ -134,7 +134,7 @@ function f(e) {
                           });
                       })(),
                       (0, i.jsx)('div', {
-                          className: g.roleInner,
+                          className: m.roleInner,
                           children: c
                       }),
                       y && null != r

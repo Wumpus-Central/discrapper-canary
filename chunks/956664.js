@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Bo: () => N,
     Dc: () => h,
     OF: () => I,
@@ -31,7 +31,7 @@ n.d(t, {
     n(121784),
     n(644351),
     n(146733),
-    n(415506);
+    n(415506));
 var r = n(512722),
     i = n.n(r),
     a = n(392711),
@@ -44,7 +44,7 @@ function c(e) {
         let e = t > r ? r / t : 1;
         t = Math.max(Math.round(t * e), a);
         let s = (n = Math.max(Math.round(n * e), o)) > i ? i / n : 1;
-        (t = Math.max(Math.round(t * s), a)), (n = Math.max(Math.round(n * s), o));
+        ((t = Math.max(Math.round(t * s), a)), (n = Math.max(Math.round(n * s), o)));
     }
     return {
         width: t,
@@ -70,14 +70,14 @@ function p(e, t, n, r) {
         a = f;
     null != n && n * i > window.innerWidth * _ && (a = (window.innerWidth * _) / n);
     let o = f;
-    return null != r && r * i > window.innerHeight * _ && (o = (window.innerHeight * _) / r), (i = parseFloat((i = Math.min(i, a, o)).toFixed(2)));
+    return (null != r && r * i > window.innerHeight * _ && (o = (window.innerHeight * _) / r), (i = parseFloat((i = Math.min(i, a, o)).toFixed(2))));
 }
 function h(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
         a = 1;
-    t > r && (a = r / t), (t = Math.round(t * a));
+    (t > r && (a = r / t), (t = Math.round(t * a)));
     let o = 1;
-    return (n = Math.round(n * a)) > i && (o = i / n), Math.min(a * o, 1);
+    return ((n = Math.round(n * a)) > i && (o = i / n), Math.min(a * o, 1));
 }
 function m(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e;
@@ -92,7 +92,7 @@ function E(e) {
 }
 function b(e, t, n) {
     let r = [];
-    for (let i = 0, a, o, s, l, c; i < t; i += n) (o = e[(a = 4 * i) + 0]), (s = e[a + 1]), (l = e[a + 2]), (void 0 === (c = e[a + 3]) || c >= 125) && !(o > 250 && s > 250 && l > 250) && r.push([o, s, l]);
+    for (let i = 0, a, o, s, l, c; i < t; i += n) ((o = e[(a = 4 * i) + 0]), (s = e[a + 1]), (l = e[a + 2]), (void 0 === (c = e[a + 3]) || c >= 125) && !(o > 250 && s > 250 && l > 250) && r.push([o, s, l]));
     return r;
 }
 let y = [[0, 0, 0]],
@@ -113,29 +113,29 @@ let I = (e) => ('number' == typeof e ? null : T(e)),
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();
-                (r.crossOrigin = 'Anonymous'),
+                ((r.crossOrigin = 'Anonymous'),
                     (r.onerror = (e) => {
-                        n(e), (r.onerror = r.onload = null), (r = null);
+                        (n(e), (r.onerror = r.onload = null), (r = null));
                     }),
                     (r.onload = () => {
-                        t(v(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
+                        (t(v(r, 5, 10)), (r.onerror = r.onload = null), (r = null));
                     }),
-                    (r.src = e);
+                    (r.src = e));
             })
     );
 function S(e) {
     return new Promise((t, n) => {
         let r = new FileReader();
-        r.readAsDataURL(e),
+        (r.readAsDataURL(e),
             (r.onload = () => {
-                i()('string' == typeof r.result, 'Result must be a string'), t(r.result);
+                (i()('string' == typeof r.result, 'Result must be a string'), t(r.result));
             }),
-            (r.onerror = (e) => n(e));
+            (r.onerror = (e) => n(e)));
     });
 }
 function A(e) {
     let t = e.split(';base64,');
-    return i()(2 === t.length, 'Input data is not a valid image.'), atob(t[1]).length;
+    return (i()(2 === t.length, 'Input data is not a valid image.'), atob(t[1]).length);
 }
 async function N(e, t, n) {
     let r = C(e);

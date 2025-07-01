@@ -22,14 +22,14 @@ var r = n(255367),
     j = n(979651),
     O = n(664342),
     E = n(124368),
-    I = n(981631),
-    S = n(388032),
+    S = n(981631),
+    I = n(388032),
     P = n(591837);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function Z(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -45,8 +45,8 @@ function Z(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -84,18 +84,18 @@ function T(e) {
             }),
             (0, y.ad)(k, { source: E.on.VOICE_AUTO_OPEN }));
     }, [M, k]);
-    let D = i.useRef(!1);
+    let L = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            if (null == A || D.current) return;
-            D.current = !0;
+            if (null == A || L.current) return;
+            L.current = !0;
             let e = (0, p.K)(C.Z.getChannel(A.id), !0);
-            (0, d.yw)(I.rMx.CHANNEL_OPENED, N(Z({}, e, (0, d.$H)(A.id)), { channel_view: T })), (0, h.a)(I.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id });
+            ((0, d.yw)(S.rMx.CHANNEL_OPENED, N(Z({}, e, (0, d.$H)(A.id)), { channel_view: T })), (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id }));
         }, [A, T]),
         null == A || null == w)
     )
         return null;
-    let L = (0, r.jsx)(O.Z, {
+    let D = (0, r.jsx)(O.Z, {
         channel: A,
         baseChannelId: l
     });
@@ -106,8 +106,8 @@ function T(e) {
                 draftType: x.d.ChannelMessage
             }),
             (0, r.jsx)(b.ZP, {
-                toolbar: L,
-                'aria-label': S.intl.string(S.t.Pwe8tL),
+                toolbar: D,
+                'aria-label': I.intl.string(I.t.Pwe8tL),
                 children: (0, _.ud)({
                     channel: A,
                     channelName: R,

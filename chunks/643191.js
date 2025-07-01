@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Sv: () => a,
     mb: () => r,
     v0: () => i
 }),
-    n(258558);
+    n(258558));
 try {
     null == Date.now && (Date.now = () => new Date().valueOf());
 } catch (e) {}

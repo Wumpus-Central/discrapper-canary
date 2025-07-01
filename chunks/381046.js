@@ -74,7 +74,7 @@ var r = n(260674),
         if (p(N) || i.isBuffer(N)) return m ? [v(I ? n : m(n, _.encoder, T, 'key', O)) + '=' + v(m(N, _.encoder, T, 'value', O))] : [v(n) + '=' + v(String(N))];
         var D = [];
         if (void 0 === N) return D;
-        if ('comma' === a && l(N)) I && m && (N = i.maybeMap(N, m)), (A = [{ value: N.length > 0 ? N.join(',') || null : void 0 }]);
+        if ('comma' === a && l(N)) (I && m && (N = i.maybeMap(N, m)), (A = [{ value: N.length > 0 ? N.join(',') || null : void 0 }]));
         else if (l(g)) A = g;
         else {
             var L = Object.keys(N);
@@ -91,7 +91,7 @@ var r = n(260674),
                     B = l(N) ? ('function' == typeof a ? a(k, G) : k) : k + (b ? '.' + G : '[' + G + ']');
                 S.set(t, R);
                 var V = r();
-                V.set(h, S), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, O, v, I, T, V));
+                (V.set(h, S), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, O, v, I, T, V)));
             }
         }
         return D;
@@ -145,7 +145,7 @@ e.exports = function (e, t) {
     if ('object' != typeof a || null === a) return '';
     var d = s[o.arrayFormat],
         f = 'comma' === d && o.commaRoundTrip;
-    n || (n = Object.keys(a)), o.sort && n.sort(o.sort);
+    (n || (n = Object.keys(a)), o.sort && n.sort(o.sort));
     for (var _ = r(), p = 0; p < n.length; ++p) {
         var h = n[p],
             E = a[h];
@@ -153,5 +153,5 @@ e.exports = function (e, t) {
     }
     var b = c.join(o.delimiter),
         y = !0 === o.addQueryPrefix ? '?' : '';
-    return o.charsetSentinel && ('iso-8859-1' === o.charset ? (y += 'utf8=%26%2310003%3B&') : (y += 'utf8=%E2%9C%93&')), b.length > 0 ? y + b : '';
+    return (o.charsetSentinel && ('iso-8859-1' === o.charset ? (y += 'utf8=%26%2310003%3B&') : (y += 'utf8=%E2%9C%93&')), b.length > 0 ? y + b : '');
 };

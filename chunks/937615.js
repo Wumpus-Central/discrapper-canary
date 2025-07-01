@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     T3: () => d,
     T4: () => c,
     og: () => u,
     xg: () => f
 }),
-    n(415506);
+    n(415506));
 var r = n(221513),
     i = n(706454),
     a = n(74538),
@@ -15,7 +15,7 @@ function c(e, t, n) {
     var a;
     let o = null != n ? n : {},
         s = null != (a = null == n ? void 0 : n.localeOverride) ? a : i.default.locale;
-    return 'en-US' === s && l.includes(i.default.systemLocale) && (o.currencyDisplay = 'code'), (0, r.T4)(e, t, s, o);
+    return ('en-US' === s && l.includes(i.default.systemLocale) && (o.currencyDisplay = 'code'), (0, r.T4)(e, t, s, o));
 }
 function u(e, t, n) {
     if (t === o.rV.YEAR) return s.intl.formatToPlainString(s.t.rS8FAw, { price: e });

@@ -33,7 +33,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,11 +49,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -72,7 +72,7 @@ let y = new o.Z('ConnectionStore'),
     O = new d.Z(),
     v = new f.Z(O),
     I = new _.Z(O);
-(O.handleIdentify = () => {
+((O.handleIdentify = () => {
     let e = s.default.getToken();
     if ((y.verbose('handleIdentify called', { hasToken: null != e }), null == e)) return null;
     let t = a.Z.getState(),
@@ -89,17 +89,17 @@ let y = new o.Z('ConnectionStore'),
             }),
             presence: v.getInitialState()
         };
-    return h.Z.clear(), i;
+    return (h.Z.clear(), i);
 }),
     (0, u.isDesktop)() &&
         i.Z.remotePowerMonitor.on('resume', () => {
             O.expeditedHeartbeat(5000, 'power monitor resumed');
         }),
     c.Z.addOfflineCallback(() => {
-        h.Z.recordStartHeadlessTask('GatewaySocket.offline'), O.networkStateChange(15000, 'network detected offline.', !1);
+        (h.Z.recordStartHeadlessTask('GatewaySocket.offline'), O.networkStateChange(15000, 'network detected offline.', !1));
     }),
     c.Z.addOnlineCallback(() => {
-        h.Z.recordStartHeadlessTask('GatewaySocket.online'), O.networkStateChange(5000, 'network detected online.');
+        (h.Z.recordStartHeadlessTask('GatewaySocket.online'), O.networkStateChange(5000, 'network detected online.'));
     }),
     O.on('disconnect', (e) => {
         let { code: t, reason: n } = e;
@@ -116,4 +116,4 @@ let y = new o.Z('ConnectionStore'),
             code: t,
             reason: n
         });
-    });
+    }));

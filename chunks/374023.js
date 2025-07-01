@@ -18,7 +18,7 @@ class a {
         if (null == a.cached) {
             var e, t;
             let n = null === r.Z || void 0 === r.Z || null == (t = r.Z.processUtils) || null == (e = t.getMainArgvSync) ? void 0 : e.call(t);
-            null != n && n.length > 1 && n.shift(), (a.cached = null != n ? n : []);
+            (null != n && n.length > 1 && n.shift(), (a.cached = null != n ? n : []));
         }
         return a.cached;
     }

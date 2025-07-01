@@ -17,7 +17,7 @@ function Z(e, t, n) {
     if (null == e || !j || !f || (null == b ? void 0 : b.entity_type) === u.WX.EXTERNAL) return null;
     let O = () => {
         if (null == n ? void 0 : n.isGuildStageVoice()) return void (0, c.NZ)(n);
-        null != e && s.Z.endEvent(e, t.id), (0, l.pTH)();
+        (null != e && s.Z.endEvent(e, t.id), (0, l.pTH)());
     };
     return (0, r.jsx)(l.sNh, {
         id: d.intl.string(d.t.qaYzPD),
@@ -31,7 +31,7 @@ function Z(e, t, n) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function Z(e, t, n) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -47,8 +47,8 @@ function Z(e, t, n) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)),

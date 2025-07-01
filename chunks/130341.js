@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     UT: () => O,
     _4: () => h,
     cm: () => x,
@@ -10,7 +10,7 @@ n.d(t, {
 }),
     n(539854),
     n(388685),
-    n(781311);
+    n(781311));
 var r = n(73800),
     i = n(658722),
     l = n.n(i),
@@ -40,7 +40,7 @@ function b(e, t) {
             () =>
                 n.reduce((e, t) => {
                     let n = o.default.getUser(t.userId);
-                    return null == n || (e[t.userId] = n), e;
+                    return (null == n || (e[t.userId] = n), e);
                 }, {}),
             [n]
         );
@@ -84,7 +84,7 @@ function j(e, t, n) {
 function _(e, t) {
     let n = r.useRef(!1);
     r.useEffect(() => {
-        u.Z.requestMembers(e, t, 200), '' === t || n.current || (c.default.track(f.rMx.SEARCH_STARTED, { search_type: 'Role Members' }), (n.current = !0));
+        (u.Z.requestMembers(e, t, 200), '' === t || n.current || (c.default.track(f.rMx.SEARCH_STARTED, { search_type: 'Role Members' }), (n.current = !0)));
     }, [e, t]);
 }
 function v(e, t) {

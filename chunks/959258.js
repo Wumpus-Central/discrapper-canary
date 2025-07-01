@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     q: () => u,
     v: () => d
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(731965);
@@ -29,7 +29,7 @@ class c {
         let i = Math.abs(e.intersectionRect.bottom - Number(null == (n = e.rootBounds) ? void 0 : n.bottom)) < Math.abs(e.intersectionRect.top - Number(null == (r = e.rootBounds) ? void 0 : r.top));
         i ? (this.visibleComponents = new Set([e.target, ...this.visibleComponents])) : this.visibleComponents.add(e.target);
         let a = i || this.animatingComponents.size < s;
-        a ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target), t.updateState(a), a && this.visibleComponents.size > s && this.stopNodeFromAnimating();
+        (a ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target), t.updateState(a), a && this.visibleComponents.size > s && this.stopNodeFromAnimating());
     }
     handleNotVisible(e, t) {
         this.visibleComponents.has(e.target) && (t.updateState(!1), this.visibleComponents.delete(e.target), this.animatingComponents.delete(e.target), this.potentiallyAnimateNewNode());
@@ -40,7 +40,7 @@ class c {
             let n = e[t];
             if (this.animatingComponents.has(n)) {
                 let e = this.registeredNodes.get(n);
-                null == e || e.updateState(!1), this.animatingComponents.delete(n);
+                (null == e || e.updateState(!1), this.animatingComponents.delete(n));
                 return;
             }
         }
@@ -50,7 +50,7 @@ class c {
             for (let e of this.visibleComponents)
                 if (!this.animatingComponents.has(e)) {
                     let t = this.registeredNodes.get(e);
-                    null == t || t.updateState(!0), this.animatingComponents.add(e);
+                    (null == t || t.updateState(!0), this.animatingComponents.add(e));
                     return;
                 }
         }
@@ -68,11 +68,11 @@ class c {
     }
     unregisterNode(e) {
         var t;
-        this.registeredNodes.delete(e), this.animatingComponents.delete(e), this.visibleComponents.delete(e), null == (t = this.observer) || t.unobserve(e), this.potentiallyAnimateNewNode();
+        (this.registeredNodes.delete(e), this.animatingComponents.delete(e), this.visibleComponents.delete(e), null == (t = this.observer) || t.unobserve(e), this.potentiallyAnimateNewNode());
     }
     cleanUp() {
         var e;
-        null == (e = this.observer) || e.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
+        (null == (e = this.observer) || e.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear());
     }
     constructor(e = !1) {
         if ((o(this, 'registeredNodes', new Map()), o(this, 'visibleComponents', new Set()), o(this, 'animatingComponents', new Set()), o(this, 'observer', void 0), e)) return;
@@ -108,7 +108,7 @@ function d(e) {
                     return {
                         animate: n,
                         registerRef: i.useCallback((n) => {
-                            null != t.current && e.unregisterNode(t.current), (t.current = n), null != t.current && e.registerNode(t.current, r);
+                            (null != t.current && e.unregisterNode(t.current), (t.current = n), null != t.current && e.registerNode(t.current, r));
                         }, [])
                     };
                 }

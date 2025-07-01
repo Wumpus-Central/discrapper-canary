@@ -16,7 +16,7 @@ function g(e) {
         p = (0, l.e7)([c.Z], () => c.Z.isUnavailable());
     return (i.useEffect(() => (s.I4(t.id), s.kZ), [t.id]),
     i.useEffect(() => {
-        s.gq(t.id, d, t.id), s.Sn(d, t.id);
+        (s.gq(t.id, d, t.id), s.Sn(d, t.id));
     }, [t.id, d]),
     p)
         ? null

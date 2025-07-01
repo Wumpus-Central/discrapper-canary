@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(374470),
@@ -29,7 +29,7 @@ function E(e) {
         { renderWindow: x, windowDispatch: v } = i.useContext(s.ZP),
         j = null != u,
         E = (0, o.Jw)(null != u ? u : ''),
-        I = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 var t;
                 if ((!j && (0, o.$s)()) || (j && !(E && n)) || d.Z.isOpen() || e.defaultPrevented) return;
@@ -49,22 +49,22 @@ function E(e) {
             },
             [n, E, j]
         );
-    i.useLayoutEffect(
+    (i.useLayoutEffect(
         () => (
-            x.addEventListener('mousedown', I),
-            x.addEventListener('contextmenu', I),
+            x.addEventListener('mousedown', S),
+            x.addEventListener('contextmenu', S),
             v.subscribe(y.CkL.POPOUT_CLOSE, O),
             () => {
-                x.removeEventListener('mousedown', I), x.removeEventListener('contextmenu', I), v.unsubscribe(y.CkL.POPOUT_CLOSE, O);
+                (x.removeEventListener('mousedown', S), x.removeEventListener('contextmenu', S), v.unsubscribe(y.CkL.POPOUT_CLOSE, O));
             }
         ),
-        [I, x, v]
+        [S, x, v]
     ),
         (0, a.Tbt)(f),
         i.useEffect(() => {
             ((!j && (0, o.$s)()) || (j && !E)) && O();
-        }, [E, j]);
-    let S = (0, b.Z)();
+        }, [E, j]));
+    let I = (0, b.Z)();
     return (0, r.jsx)(g.Z, {
         ref: f,
         context: {
@@ -72,10 +72,10 @@ function E(e) {
             type: 'channel'
         },
         entrypoint: m._b.TEXT,
-        initHistory: S
+        initHistory: I
     });
 }
-let I = i.memo(function (e) {
+let S = i.memo(function (e) {
     var { positionTargetRef: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -87,12 +87,12 @@ let I = i.memo(function (e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['positionTargetRef']);
@@ -121,7 +121,7 @@ let I = i.memo(function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -129,7 +129,7 @@ let I = i.memo(function (e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -137,8 +137,8 @@ let I = i.memo(function (e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, n)

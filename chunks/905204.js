@@ -1,4 +1,4 @@
-t.d(n, { Z: () => x }), t(472816), t(794429), t(539854), t(388685);
+(t.d(n, { Z: () => x }), t(472816), t(794429), t(539854), t(388685));
 var l = t(73800),
     r = t(392711),
     i = t.n(r),
@@ -42,8 +42,8 @@ function x(e) {
                                 m = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => l.includes(e.id));
-                                (d = i().difference(null != (r = n.roleIds) ? r : [], null != (a = null == t ? void 0 : t.roleIds) ? a : [])), (m = i().difference(null != (o = null == t ? void 0 : t.roleIds) ? o : [], null != (s = n.roleIds) ? s : []));
-                            } else if (t) (d = null != (c = n.roleIds) ? c : []), (m = []);
+                                ((d = i().difference(null != (r = n.roleIds) ? r : [], null != (a = null == t ? void 0 : t.roleIds) ? a : [])), (m = i().difference(null != (o = null == t ? void 0 : t.roleIds) ? o : [], null != (s = n.roleIds) ? s : [])));
+                            } else if (t) ((d = null != (c = n.roleIds) ? c : []), (m = []));
                             else {
                                 let t = e.options.filter((e) => l.includes(e.id)),
                                     r = t.filter((e) => n.id !== e.id),
@@ -55,7 +55,7 @@ function x(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(u.lm);
-                                (d = []), (m = i().difference(a, o));
+                                ((d = []), (m = i().difference(a, o)));
                             }
                             return {
                                 addedRoleIds: d,
@@ -69,8 +69,8 @@ function x(e) {
                                 g = [];
                             if (c.singleSelect && m) {
                                 let e = c.options.find((e) => p.includes(e.id));
-                                (f = i().difference(null != (n = d.channelIds) ? n : [], null != (t = null == e ? void 0 : e.channelIds) ? t : [])), (g = i().difference(null != (l = null == e ? void 0 : e.channelIds) ? l : [], null != (r = d.channelIds) ? r : []));
-                            } else if (m) (f = null != (a = d.channelIds) ? a : []), (g = []);
+                                ((f = i().difference(null != (n = d.channelIds) ? n : [], null != (t = null == e ? void 0 : e.channelIds) ? t : [])), (g = i().difference(null != (l = null == e ? void 0 : e.channelIds) ? l : [], null != (r = d.channelIds) ? r : [])));
+                            } else if (m) ((f = null != (a = d.channelIds) ? a : []), (g = []));
                             else {
                                 let e = c.options.filter((e) => p.includes(e.id)),
                                     n = e.filter((e) => d.id !== e.id),
@@ -82,7 +82,7 @@ function x(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(u.lm);
-                                (f = []), (g = i().difference(t, l));
+                                ((f = []), (g = i().difference(t, l)));
                             }
                             return (
                                 (0, s.hi)(o) && f.push(...h.Z.getDefaultChannelIds(o)),
@@ -102,7 +102,7 @@ function x(e) {
                             for (var n = 1; n < arguments.length; n++) {
                                 var t = null != arguments[n] ? arguments[n] : {},
                                     l = Object.keys(t);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (l = l.concat(
                                         Object.getOwnPropertySymbols(t).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -110,7 +110,7 @@ function x(e) {
                                     )),
                                     l.forEach(function (n) {
                                         var l;
-                                        (l = t[n]),
+                                        ((l = t[n]),
                                             n in e
                                                 ? Object.defineProperty(e, n, {
                                                       value: l,
@@ -118,28 +118,28 @@ function x(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[n] = l);
-                                    });
+                                                : (e[n] = l));
+                                    }));
                             }
                             return e;
                         })(
                             {},
                             g.reduce((n, t) => {
                                 let l = c.ZP.getChannelIdFlags(e, t);
-                                return (n[t] = { flags: (0, d.mB)(l, p.ic.OPT_IN_ENABLED, !0) }), n;
+                                return ((n[t] = { flags: (0, d.mB)(l, p.ic.OPT_IN_ENABLED, !0) }), n);
                             }, {}),
                             x.reduce((n, t) => {
                                 let l = c.ZP.getChannelIdFlags(e, t);
-                                return (n[t] = { flags: (0, d.mB)(l, p.ic.OPT_IN_ENABLED, !1) }), n;
+                                return ((n[t] = { flags: (0, d.mB)(l, p.ic.OPT_IN_ENABLED, !1) }), n);
                             }, {})
                         );
-                    m.Z.selectOption(e, n.id, t.id, l),
+                    (m.Z.selectOption(e, n.id, t.id, l),
                         o.Z.dispatch({
                             type: 'USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK',
                             guildId: e,
                             overrides: _
                         }),
-                        m.Z.updateRolesLocal(e, a, f);
+                        m.Z.updateRolesLocal(e, a, f));
                 },
                 [e]
             )

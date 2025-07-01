@@ -42,7 +42,7 @@ var n = r(507604),
             A ||
             w ||
             E(function () {
-                return (N[S] = !1), $(K) !== K || $(N) === N || '/a/i' !== String($(K, 'i'));
+                return ((N[S] = !1), $(K) !== K || $(N) === N || '/a/i' !== String($(K, 'i')));
             })),
     q = function (t) {
         for (var e, r = t.length, n = 0, i = '', o = !1; n <= r; n++) {
@@ -65,11 +65,11 @@ var n = r(507604),
                         break;
                     case '(' === e:
                         if (((i += e), '?:' === M(t, n + 1, n + 3))) continue;
-                        C(D, M(t, n + 1)) && ((n += 2), (u = !0)), l++;
+                        (C(D, M(t, n + 1)) && ((n += 2), (u = !0)), l++);
                         continue;
                     case '>' === e && u:
                         if ('' === f || y(a, f)) throw new k('Invalid capture group name');
-                        (a[f] = !0), (o[o.length] = [f, l]), (u = !1), (f = '');
+                        ((a[f] = !0), (o[o.length] = [f, l]), (u = !1), (f = ''));
                         continue;
                 }
             u ? (f += e) : (i += e);
@@ -103,6 +103,6 @@ if (a('RegExp', B)) {
 
     )
         x(z, $, F[G++]);
-    (m.constructor = z), (z.prototype = m), h(i, 'RegExp', z, { constructor: !0 });
+    ((m.constructor = z), (z.prototype = m), h(i, 'RegExp', z, { constructor: !0 }));
 }
 R('RegExp');

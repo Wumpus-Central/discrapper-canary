@@ -74,13 +74,13 @@ let f = function () {
                         query: t,
                         onChange: n,
                         onClear: () => {
-                            o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                            (o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                 interaction: 'search_cleared',
                                 sort_order: s,
                                 activity_restricted_guild_count: x,
                                 total_guild_count: E
                             }),
-                                n('');
+                                n(''));
                         },
                         onFocus: () =>
                             o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
@@ -130,13 +130,13 @@ let f = function () {
                                         }
                                     ],
                                     select: (e) => {
-                                        o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                                        (o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                             interaction: 'sort_order_changed',
                                             sort_order: e,
                                             activity_restricted_guild_count: x,
                                             total_guild_count: E
                                         }),
-                                            a(e);
+                                            a(e));
                                     },
                                     isSelected: (e) => s === e,
                                     serialize: String

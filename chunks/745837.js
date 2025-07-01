@@ -17,7 +17,7 @@ var i = n(120356),
     b = n(388032),
     _ = n(318098);
 function E(e) {
-    (0, s.Z)(m.Z.CLIPS), (0, h.UW)(e);
+    ((0, s.Z)(m.Z.CLIPS), (0, h.UW)(e));
 }
 function O() {
     let e = (0, a.e7)([c.ZP], () => c.ZP.getKeybindForAction(g.kg4.SAVE_CLIP));

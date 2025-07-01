@@ -108,7 +108,7 @@ function v(e) {
         o = i
             ? () => u.Z.stopRinging(t, [n])
             : () => {
-                  u.Z.ring(t, [n], 'dm_banner'), (0, m.Kh)(t);
+                  (u.Z.ring(t, [n], 'dm_banner'), (0, m.Kh)(t));
               };
     return (0, r.jsx)(s.z, {
         variant: i ? 'critical-secondary' : 'secondary',

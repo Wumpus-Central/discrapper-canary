@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(70780),
     i = n(147913),
     a = n(710845),
@@ -29,7 +29,7 @@ class h extends i.Z {
         null != this.refetchTimeout && clearTimeout(this.refetchTimeout);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'refetchTimeout', void 0),
             u(this, 'actions', { POST_CONNECTION_OPEN: () => this._handleConnectionOpen() }),
             u(this, '_handleTestRegionsResponse', (e) => {
@@ -38,23 +38,23 @@ class h extends i.Z {
                     ? o.Z.getMediaEngine()
                           .rankRtcRegions(e)
                           .then((e) => {
-                              p.verbose('RTC region latency test completed, ranked regions are: ', e), (0, r.o)(e, t);
+                              (p.verbose('RTC region latency test completed, ranked regions are: ', e), (0, r.o)(e, t));
                           })
                           .catch((e) => p.warn(e))
                     : p.verbose('RTC cached ranked preferred regions are '.concat(s.Z.getPreferredRegions()));
             }),
             u(this, '_fetchAndScheduleRefetch', () => {
-                (0, r.J)()
+                ((0, r.J)()
                     .then((e) => this._handleTestRegionsResponse(e.body))
                     .catch((e) => p.warn(e)),
-                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, _ * l.Z.Millis.MINUTE));
+                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, _ * l.Z.Millis.MINUTE)));
             }),
             u(this, '_handleConnectionOpen', () => {
                 if (c.isPlatformEmbedded && !__OVERLAY__) {
                     let e = Math.floor(d + Math.random() * f);
-                    null != this.refetchTimeout && clearTimeout(this.refetchTimeout), (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));
+                    (null != this.refetchTimeout && clearTimeout(this.refetchTimeout), (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e)));
                 }
-            });
+            }));
     }
 }
 let m = new h();

@@ -9,15 +9,15 @@ let u = { minInterval: 1000 / 60 },
             f = a.useMemo(() => Object.assign({ minInterval: 1000 / c }, u, d), [c, d]),
             m = a.useRef(null),
             h = a.useRef(null);
-        a.useEffect(() => {
+        (a.useEffect(() => {
             null != h.current && r.w > 0 && r.h > 0 && h.current.setSize(r);
         }, [r]),
             a.useEffect(() => {
                 if (null != m.current) {
                     let e = new l.Z(m.current);
-                    (h.current = e), s && e.setupOffscreenCanvas();
+                    ((h.current = e), s && e.setupOffscreenCanvas());
                 }
-            }, [m, s, r]);
+            }, [m, s, r]));
         let {
             ticking: p,
             stop: y,
@@ -25,18 +25,18 @@ let u = { minInterval: 1000 / 60 },
         } = (0, i.Z)((e) => {
             if (null != h.current) {
                 let { width: r, height: n } = h.current.canvas;
-                h.current.clearRect({
+                (h.current.clearRect({
                     x: 0,
                     y: 0,
                     w: r,
                     h: n
                 }),
-                    t(h.current, e / 1000);
+                    t(h.current, e / 1000));
             }
         }, f);
         return (
             a.useEffect(() => {
-                o && !p.current && w(), o || y();
+                (o && !p.current && w(), o || y());
             }, [o, w, y, p]),
             (0, n.jsx)('div', { children: (0, n.jsx)('canvas', { ref: m }) })
         );

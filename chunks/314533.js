@@ -7,10 +7,10 @@ var i = n(481060),
 let o = 'CONNECTIONS_GRID_MODAL_KEY';
 class s extends a.Z {
     _initialize() {
-        l.Z.subscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), l.Z.subscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide);
+        (l.Z.subscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), l.Z.subscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide));
     }
     _terminate() {
-        l.Z.unsubscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), l.Z.unsubscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide);
+        (l.Z.unsubscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), l.Z.unsubscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide));
     }
     handleShow(e) {
         let { onComplete: t, excludedPlatformTypes: l, includedPlatformTypes: a, integrations: s, onCompleteApplication: c } = e;
@@ -24,7 +24,7 @@ class s extends a.Z {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ class s extends a.Z {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -40,8 +40,8 @@ class s extends a.Z {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+(n.d(t, { Z: () => D }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -61,10 +61,10 @@ function m(e) {
 function g(e) {
     if (!l.AW.has(e.type)) return !1;
     let t = m(e);
-    null != e.memberCount && (t.memberCount = e.memberCount), null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview);
+    (null != e.memberCount && (t.memberCount = e.memberCount), null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview));
 }
 function E(e) {
-    (f = {}), e.guilds.forEach(h);
+    ((f = {}), e.guilds.forEach(h));
 }
 function b(e) {
     let { threadMembers: t } = e;
@@ -116,14 +116,14 @@ function C(e) {
 function R(e) {
     if (null != e && !(e.id in f)) {
         let t = c.Z.getChannel(e.id);
-        if (null != t) return g(t), !0;
+        if (null != t) return (g(t), !0);
     }
     return !1;
 }
 function P(e) {
     let t = f[e.id];
     if (null == t) return !1;
-    null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount);
+    (null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount));
 }
 class w extends (r = o.ZP.Store) {
     initialize() {

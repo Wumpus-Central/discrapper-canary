@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     J: () => P,
     Z: () => R
 }),
@@ -14,7 +14,7 @@ n.d(t, {
     n(804061),
     n(704826),
     n(413496),
-    n(433524);
+    n(433524));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -124,7 +124,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             if (null !== D) {
                 let e = [],
                     t = [];
-                D.socialLinks.forEach((n, r) => {
+                (D.socialLinks.forEach((n, r) => {
                     if ('' !== n) {
                         let i = V(n);
                         null !== i ? ((t[r] = i), (e[r] = !0)) : (e[r] = !1);
@@ -132,7 +132,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 }),
                     z(t),
                     L(e),
-                    G(e.every((e) => !0 === e));
+                    G(e.every((e) => !0 === e)));
             }
         }, [D]);
         let W = (0, l.e7)([v.Z], () => (null != d ? v.Z.getErrors() : null));
@@ -142,7 +142,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             },
             K = (e) => {
                 let t = () => {
-                    (0, g.W1)(d.id, e),
+                    ((0, g.W1)(d.id, e),
                         e
                             ? (0, g.Vv)({
                                   guildId: d.id,
@@ -171,7 +171,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                         _.Z.saveGuild(d.id, {
                             discoverySplash: d.discoverySplash,
                             description: d.description
-                        });
+                        }));
                 };
                 if (e) return void t();
                 null != d.vanityURLCode
@@ -187,23 +187,23 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 let n = [...D.socialLinks],
                     r = [...F],
                     i = [...A];
-                (r[t] = e), (n[t] = N.z[e].baseUrl), (i[t] = !0), L(i), z(r), G(i.every((e) => !0 === e)), (0, g.t$)(d.id, n);
+                ((r[t] = e), (n[t] = N.z[e].baseUrl), (i[t] = !0), L(i), z(r), G(i.every((e) => !0 === e)), (0, g.t$)(d.id, n));
             },
             q = (e, t) => {
                 let n = [...D.socialLinks],
                     r = n[t],
                     i = e;
-                0 === r.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) || ((n[t] = i), (0, g.t$)(d.id, n));
+                (0 === r.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) || ((n[t] = i), (0, g.t$)(d.id, n)));
             },
             Q = (e) => {
                 let t = [...U];
-                t.splice(e, 1), B(t);
+                (t.splice(e, 1), B(t));
                 let n = [...A];
-                n.splice(e, 1), L(n);
+                (n.splice(e, 1), L(n));
                 let r = [...F];
-                r.splice(e, 1), z(r);
+                (r.splice(e, 1), z(r));
                 let i = [...D.socialLinks];
-                i.splice(e, 1), (0, g.t$)(d.id, i);
+                (i.splice(e, 1), (0, g.t$)(d.id, i));
             },
             J = (e) => {
                 let { reason: t = '', emoji_name: n = '' } = e;
@@ -238,7 +238,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             ],
             et = (e, t) => {
                 let n = [...U];
-                (n[e] = t), B(n);
+                ((n[e] = t), B(n));
             };
         return (0, r.jsx)('div', {
             className: S.settingsColumn,
@@ -595,7 +595,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         onClick: () => {
                                                             if (D.socialLinks.length < 9) {
                                                                 let e = [...D.socialLinks];
-                                                                (0, g.t$)(d.id, e.concat('')), z(F.concat(''));
+                                                                ((0, g.t$)(d.id, e.concat('')), z(F.concat('')));
                                                             }
                                                         },
                                                         disabled: !R || D.socialLinks.length >= 9,

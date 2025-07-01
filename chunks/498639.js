@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(664751),
@@ -32,7 +32,7 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function R(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -48,8 +48,8 @@ function R(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -94,10 +94,10 @@ function Z(e) {
 let w = function () {
     let [e, t] = r.useState(A.Si.TIER_2),
         [n, _] = r.useState(null),
-        [x] = (0, a.Wu)([I.Z], () => [I.Z.getGuilds()]),
+        x = (0, a.Wu)([I.Z], () => I.Z.getGuildsArray()),
         [w] = (0, a.Wu)([N.ZP], () => [N.ZP.getPremiumSubscription()]);
     (0, S.t)();
-    let k = Object.values(x).map((e) => ({
+    let k = x.map((e) => ({
             value: e,
             label: e.name
         })),
@@ -112,7 +112,7 @@ let w = function () {
         { analyticsLocations: Y } = (0, g.ZP)(m.Z.PAYMENT_FLOW_TEST_PAGE),
         [W, K] = r.useState(''),
         [q, X] = r.useState(y.lds),
-        { balance: Q, isFetching: J, error: $ } = (0, v.A)(),
+        { balance: J, isFetching: Q, error: $ } = (0, v.A)(),
         { isSubmitting: ee, responseMessage: et, redeemVirtualCurrency: en } = (0, v.f)(),
         [ei, er] = r.useState(y.lds),
         [es, el] = r.useState(''),
@@ -342,7 +342,7 @@ let w = function () {
                                     variant: 'text-sm/normal',
                                     children: 'Virtual Currency Balance:'
                                 }),
-                                J
+                                Q
                                     ? (0, i.jsx)('div', {
                                           className: P.loader,
                                           children: (0, i.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE })
@@ -356,7 +356,7 @@ let w = function () {
                                                       children: ['Error fetching Virtual Currency Balance: ', $.message]
                                                   }),
                                               (0, i.jsx)(T.A4, {
-                                                  balance: null != Q ? Q : 0,
+                                                  balance: null != J ? J : 0,
                                                   balanceWidgetMode: T.b6.SELECTED
                                               })
                                           ]

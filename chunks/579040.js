@@ -19,7 +19,7 @@ e.exports =
                 delete: function (t) {
                     if (e) {
                         var n = d(e, t);
-                        return 0 === f(e) && (e = void 0), n;
+                        return (0 === f(e) && (e = void 0), n);
                     }
                     return !1;
                 },
@@ -30,7 +30,7 @@ e.exports =
                     return !!e && u(e, t);
                 },
                 set: function (t, n) {
-                    e || (e = new s()), c(e, t, n);
+                    (e || (e = new s()), c(e, t, n));
                 }
             };
         return t;

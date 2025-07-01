@@ -3,28 +3,28 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(512722),
-    o = n.n(a),
+    o = n(512722),
+    a = n.n(o),
     s = n(442837),
     c = n(481060),
     u = n(730749),
     d = n(726542),
-    f = n(40851),
-    p = n(600164),
+    p = n(40851),
+    f = n(600164),
     m = n(750154),
     g = n(892001),
-    _ = n(594174),
-    b = n(374129),
-    h = n(639351),
-    v = n(503438),
+    b = n(594174),
+    _ = n(374129),
+    v = n(639351),
+    h = n(503438),
     y = n(802856),
     O = n(387903),
     j = n(606925),
     S = n(719216),
     x = n(429589),
     I = n(636245),
-    C = n(697761),
-    P = n(611459),
+    P = n(697761),
+    C = n(611459),
     E = n(544671),
     w = n(757182),
     T = n(910424),
@@ -32,10 +32,10 @@ var i = n(120356),
     Z = n(477839),
     A = n(388032),
     D = n(603571),
-    L = n(126485);
-let k = (e) => {
-        let { user: t, color: n, look: i, activity: l, onAction: a } = e,
-            o = (0, f.Aq)();
+    k = n(126485);
+let L = (e) => {
+        let { user: t, color: n, look: i, activity: l, onAction: o } = e,
+            a = (0, p.Aq)();
         return (0, r.jsx)(
             S.Z,
             {
@@ -44,29 +44,29 @@ let k = (e) => {
                 look: i,
                 activity: l,
                 onAction: () => {
-                    o.dispatch(N.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == a || a();
+                    (a.dispatch(N.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == o || o());
                 }
             },
             'custom-activity-button'
         );
     },
     M = (0, u.Z)((e) => {
-        let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: f, channelId: g, source: M, color: R = c.zxk.Colors.WHITE, look: F = c.zxk.Looks.OUTLINED, type: U, onAction: V } = e,
-            B = (0, s.e7)([_.default], () => {
-                let e = _.default.getCurrentUser();
-                return o()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
+        let { activity: t, embeddedActivity: n, user: i, applicationStream: o, className: u, guildId: p, channelId: g, source: M, color: R = c.zxk.Colors.WHITE, look: F = c.zxk.Looks.OUTLINED, type: U, onAction: V } = e,
+            B = (0, s.e7)([b.default], () => {
+                let e = b.default.getCurrentUser();
+                return (a()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e);
             }),
-            Y = U === O.Y.STREAM_PREVIEW || null != a,
-            W = (0, v.Z)(t),
-            z = W || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL;
+            Y = U === O.Y.STREAM_PREVIEW || null != o,
+            z = (0, h.Z)(t),
+            W = z || Y ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === Z.bO) {
-            var G, H;
+            var H, G;
             return (
-                (G = (function (e) {
+                (H = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -74,7 +74,7 @@ let k = (e) => {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -82,18 +82,18 @@ let k = (e) => {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, t)),
-                (H = H =
+                (G = G =
                     {
                         buttons: [A.intl.string(D.default['Fv/2Oz'])],
                         metadata: { button_urls: [Z.U8] }
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(G, Object.getOwnPropertyDescriptors(H))
+                    ? Object.defineProperties(H, Object.getOwnPropertyDescriptors(G))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -101,11 +101,11 @@ let k = (e) => {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(H)).forEach(function (e) {
-                          Object.defineProperty(G, e, Object.getOwnPropertyDescriptor(H, e));
+                      })(Object(G)).forEach(function (e) {
+                          Object.defineProperty(H, e, Object.getOwnPropertyDescriptor(G, e));
                       }),
-                (t = G),
-                (0, r.jsx)(k, {
+                (t = H),
+                (0, r.jsx)(L, {
                     user: i,
                     color: R,
                     look: F,
@@ -114,13 +114,13 @@ let k = (e) => {
                 })
             );
         }
-        let J = z === p.Z.Direction.VERTICAL;
-        return (0, r.jsx)(p.Z, {
+        let J = W === f.Z.Direction.VERTICAL;
+        return (0, r.jsx)(f.Z, {
             grow: 0,
-            align: p.Z.Align.STRETCH,
-            direction: z,
-            wrap: J ? p.Z.Wrap.WRAP : p.Z.Wrap.NO_WRAP,
-            className: l()(u, L.buttonsWrapper, J ? L.vertical : L.horizontal),
+            align: f.Z.Align.STRETCH,
+            direction: W,
+            wrap: J ? f.Z.Wrap.WRAP : f.Z.Wrap.NO_WRAP,
+            className: l()(u, k.buttonsWrapper, J ? k.vertical : k.horizontal),
             children: (() => {
                 if ((0, y.Z)(t))
                     return (0, r.jsx)(
@@ -130,7 +130,7 @@ let k = (e) => {
                             look: F,
                             color: R,
                             onAction: V,
-                            Icon: h.Z
+                            Icon: v.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
@@ -142,17 +142,17 @@ let k = (e) => {
                             color: R,
                             platform: d.Z.get(N.ABu.PLAYSTATION),
                             onAction: V,
-                            Icon: b.Z
+                            Icon: _.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if (W) {
+                if (z) {
                     let e = (0, r.jsx)(
                             E.Z,
                             {
                                 activity: t,
                                 user: i,
-                                guildId: f,
+                                guildId: p,
                                 channelId: g,
                                 source: M,
                                 look: F,
@@ -162,7 +162,7 @@ let k = (e) => {
                             'spotify-activity-sync-button'
                         ),
                         n = (0, r.jsx)(
-                            P.Z,
+                            C.Z,
                             {
                                 activity: t,
                                 user: i,
@@ -200,7 +200,7 @@ let k = (e) => {
                               isCurrentUser: B.id === i.id,
                               color: R,
                               look: F,
-                              applicationStream: a,
+                              applicationStream: o,
                               onAction: V
                           },
                           'watch-button'
@@ -230,7 +230,7 @@ let k = (e) => {
                                   'join-activity-button'
                               ),
                               (0, r.jsx)(
-                                  C.Z,
+                                  P.Z,
                                   {
                                       activity: t,
                                       user: i,

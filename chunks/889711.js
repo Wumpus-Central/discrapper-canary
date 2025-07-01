@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     UC: () => u,
     YP: () => c,
     fO: () => d,
     pP: () => l
 }),
-    n(388685);
+    n(388685));
 var r = n(731965);
 let i = new WeakMap(),
     a = new Map(),
@@ -24,10 +24,10 @@ function s(e) {
 }
 function l(e, t, n) {
     var r, l;
-    i.set(t, e), a.set(e, n);
+    (i.set(t, e), a.set(e, n));
     let c = null != (l = null == (r = t.ownerDocument) ? void 0 : r.defaultView) ? l : window,
         u = o.get(c);
-    return null == u && ((u = s(c)), o.set(c, u)), u;
+    return (null == u && ((u = s(c)), o.set(c, u)), u);
 }
 function c(e, t) {
     e.observe(t);
@@ -36,5 +36,5 @@ function u(e, t) {
     e.unobserve(t);
 }
 function d(e, t) {
-    a.delete(e), null != t && i.delete(t);
+    (a.delete(e), null != t && i.delete(t));
 }

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Z: () => k,
     d: () => E
 }),
     n(388685),
-    n(781311);
+    n(781311));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -31,7 +31,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -47,11 +47,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -68,15 +68,15 @@ function m(e, t) {
 }
 let g = n(981631).en1 + 500;
 var E = (function (e) {
-    return (e[(e.ChannelMessage = 0)] = 'ChannelMessage'), (e[(e.ThreadSettings = 1)] = 'ThreadSettings'), (e[(e.FirstThreadMessage = 2)] = 'FirstThreadMessage'), (e[(e.ApplicationLauncherCommand = 3)] = 'ApplicationLauncherCommand'), (e[(e.Poll = 4)] = 'Poll'), (e[(e.SlashCommand = 5)] = 'SlashCommand'), (e[(e.ForwardContextMessage = 6)] = 'ForwardContextMessage'), e;
+    return ((e[(e.ChannelMessage = 0)] = 'ChannelMessage'), (e[(e.ThreadSettings = 1)] = 'ThreadSettings'), (e[(e.FirstThreadMessage = 2)] = 'FirstThreadMessage'), (e[(e.ApplicationLauncherCommand = 3)] = 'ApplicationLauncherCommand'), (e[(e.Poll = 4)] = 'Poll'), (e[(e.SlashCommand = 5)] = 'SlashCommand'), (e[(e.ForwardContextMessage = 6)] = 'ForwardContextMessage'), e);
 })({});
 let b = {};
 function y(e) {
-    return e.length > g && (e = e.substr(0, g)), e;
+    return (e.length > g && (e = e.substr(0, g)), e);
 }
 function O(e) {
     let t = b[e];
-    return null == t && (t = b[e] = {}), t;
+    return (null == t && (t = b[e] = {}), t);
 }
 function v(e) {
     let { type: t, channelId: n, draft: r, draftType: i } = e,
@@ -105,7 +105,7 @@ function T(e) {
     if (null == r) return;
     let i = O(r),
         a = i[t];
-    null == a && (a = i[t] = {}), (a[1] = m(p({ timestamp: Date.now() }, a[1], n), { parentChannelId: t }));
+    (null == a && (a = i[t] = {}), (a[1] = m(p({ timestamp: Date.now() }, a[1], n), { parentChannelId: t })));
 }
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.default.getId();
@@ -113,7 +113,7 @@ function S(e, t) {
     let r = O(n),
         i = r[e];
     if (null == i) return !1;
-    delete i[t], a().isEmpty(i) && delete r[e];
+    (delete i[t], a().isEmpty(i) && delete r[e]);
 }
 function A() {
     let e = u.default.getId();
@@ -123,10 +123,10 @@ function A() {
 }
 function N() {
     let e = u.default.getId();
-    return e in b || (b[e] = {}), A(), !1;
+    return (e in b || (b[e] = {}), A(), !1);
 }
 function C() {
-    return A(), !1;
+    return (A(), !1);
 }
 function R(e) {
     let {
@@ -135,7 +135,7 @@ function R(e) {
         n = u.default.getId();
     if (null == n) return !1;
     let r = O(n);
-    return delete r[t], !1;
+    return (delete r[t], !1);
 }
 function P(e) {
     let { channel: t } = e,
@@ -151,7 +151,7 @@ function P(e) {
         let e = r[t.parent_id];
         if (null == e) return !1;
         let n = null != (s = null == (o = e[2]) ? void 0 : o.draft) ? s : '';
-        '' !== n &&
+        ('' !== n &&
             (r[t.id] = {
                 0: {
                     timestamp: Date.now(),
@@ -159,7 +159,7 @@ function P(e) {
                 }
             }),
             S(t.parent_id, 1),
-            S(t.parent_id, 2);
+            S(t.parent_id, 2));
     }
 }
 function w(e) {
@@ -177,7 +177,7 @@ function L() {
 }
 class x extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        (b = null != e ? e : {}), L(), this.waitFor(u.default, d.Z, f.Z);
+        ((b = null != e ? e : {}), L(), this.waitFor(u.default, d.Z, f.Z));
     }
     getState() {
         return b;
@@ -231,7 +231,7 @@ class x extends (r = o.ZP.PersistedStore) {
         return null == n ? null : n[1];
     }
 }
-_(x, 'displayName', 'DraftStore'),
+(_(x, 'displayName', 'DraftStore'),
     _(x, 'persistKey', 'DraftStore'),
     _(x, 'migrations', [
         (e) => {
@@ -247,7 +247,7 @@ _(x, 'displayName', 'DraftStore'),
             for (let t in e) r[t] = e[t];
             return n;
         }
-    ]);
+    ]));
 let k = new x(s.Z, {
     CONNECTION_OPEN: N,
     LOGOUT: w,

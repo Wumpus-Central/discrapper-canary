@@ -43,7 +43,7 @@ function v(e) {
         C = (0, a.e7)([l.Z], () => l.Z.theme),
         R = (0, o.wj)(C) ? !(0, o.wj)(N) : (0, o.wj)(N),
         P = i.useRef(null);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         null == v || v(null == P ? void 0 : P.current);
     }, [P, v]),
         i.useEffect(() => {
@@ -56,7 +56,7 @@ function v(e) {
                     document.removeEventListener('keydown', e);
                 }
             );
-        }, [T, S]);
+        }, [T, S]));
     let w = async (e) => {
         if (null == e) return;
         _ === h.n_.AVATAR ? I({ action: 'SEND_REACT_AVATAR' }) : _ === h.n_.STATUS ? I({ action: 'SEND_REACT_CUSTOM_STATUS' }) : I({ action: 'SEND_REACT_ACTIVITY' });
@@ -85,7 +85,7 @@ function v(e) {
         closePopout: E.dG,
         onSelectEmoji: async (e) => {
             let { emoji: t, willClose: n } = e;
-            await w(t), n && (S(), null == T || T());
+            (await w(t), n && (S(), null == T || T()));
         },
         pickerIntention: m.Hz.PROFILE
     });

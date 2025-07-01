@@ -16,7 +16,7 @@ function u(e, t) {
     return i.ZP.getRsvp(e, t, n);
 }
 var d = (function (e) {
-    return (e[(e.SERIES = 0)] = 'SERIES'), (e[(e.RECURRENCE = 1)] = 'RECURRENCE'), e;
+    return ((e[(e.SERIES = 0)] = 'SERIES'), (e[(e.RECURRENCE = 1)] = 'RECURRENCE'), e);
 })({});
 function f() {
     return [

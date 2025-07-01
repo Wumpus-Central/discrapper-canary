@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+(n.d(t, { Z: () => A }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(512722),
@@ -29,7 +29,7 @@ function A(e) {
         ef = (0, u.a5)(H),
         e_ = (0, m.MY)(eu),
         ep = {};
-    (ep.gift_style = eo), (ep.reward_sku_ids = ef && (null == ed ? void 0 : ed.skuId) != null ? [null == ed ? void 0 : ed.skuId] : []), e_ === m.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (o()(null != eu, 'Gift recipient must be set at purchase review step for these gift options.'), (ep.recipient_id = eu.id), (ep.custom_message = es), (ep.emoji_id = null == el ? void 0 : el.id), (ep.emoji_name = (null == el ? void 0 : el.id) == null ? (null == el ? void 0 : el.surrogates) : void 0), (ep.sound_id = null == ec ? void 0 : ec.soundId));
+    ((ep.gift_style = eo), (ep.reward_sku_ids = ef && (null == ed ? void 0 : ed.skuId) != null ? [null == ed ? void 0 : ed.skuId] : []), e_ === m.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (o()(null != eu, 'Gift recipient must be set at purchase review step for these gift options.'), (ep.recipient_id = eu.id), (ep.custom_message = es), (ep.emoji_id = null == el ? void 0 : el.id), (ep.emoji_name = (null == el ? void 0 : el.id) == null ? (null == el ? void 0 : el.surrogates) : void 0), (ep.sound_id = null == ec ? void 0 : ec.soundId)));
     let eh = null == H ? void 0 : H.id,
         em = (0, O.sE)(x, Y.paymentSourceId, eh),
         { analyticsLocations: eg } = (0, l.ZP)(),
@@ -44,7 +44,7 @@ function A(e) {
         eC = null;
     if (z === T.GZQ.ONE_TIME) {
         var eR;
-        o()(null != Q, 'SKU must be selected for one-time purchases'), (eN = null != (eR = J[Q]) ? eR : null), o()(null != eN, 'SKU must exist and be fetched.');
+        (o()(null != Q, 'SKU must be selected for one-time purchases'), (eN = null != (eR = J[Q]) ? eR : null), o()(null != eN, 'SKU must exist and be fetched.'));
         let e = $[Q],
             t = null != q ? q : h.c;
         eC = null != e ? e[t] : null;
@@ -93,13 +93,13 @@ function A(e) {
             setPurchaseState: n
         },
         eD = i.useRef(ew);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         eD.current = ew;
     }),
         i.useEffect(() => {
             let { makePurchase: e } = eD.current;
             em && !ea && null == t && e();
-        }, [em, ea, t]);
+        }, [em, ea, t]));
     let eL = null != U || (z === T.GZQ.ONE_TIME && !ea);
     return em
         ? null

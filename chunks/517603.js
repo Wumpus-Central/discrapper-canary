@@ -1,5 +1,8 @@
 e.exports = {
     root: 'root__9c3be',
+    disabled: 'disabled__9c3be',
+    floatingTitle: 'floatingTitle__9c3be',
+    closeModalButton: 'closeModalButton__9c3be',
     toast: 'toast__9c3be',
     backdrop: 'backdrop__9c3be',
     backgroundImage: 'backgroundImage__9c3be',

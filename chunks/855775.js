@@ -1,9 +1,9 @@
 let r, i;
-n.d(t, {
+(n.d(t, {
     Z: () => H,
     c: () => _
 }),
-    n(388685);
+    n(388685));
 var a,
     o = n(442837),
     s = n(570140),
@@ -25,7 +25,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -77,14 +77,14 @@ let _ = 'no_payment_source',
     N = null,
     C = new Set();
 function R(e) {
-    null != r && null != y ? r(y) : null != i && i(e), (r = null), (i = null);
+    (null != r && null != y ? r(y) : null != i && i(e), (r = null), (i = null));
 }
 function P(e) {
-    R(), (p = e.skuId), (m = e.applicationId), (T = e.isIAP), (g = e.analyticsLocation), (N = e.context), (A = e.isGift), (S = !0), (I = !1), (r = e.resolve), (i = e.reject), (v = null), (y = null), (E = e.promotionId);
+    (R(), (p = e.skuId), (m = e.applicationId), (T = e.isIAP), (g = e.analyticsLocation), (N = e.context), (A = e.isGift), (S = !0), (I = !1), (r = e.resolve), (i = e.reject), (v = null), (y = null), (E = e.promotionId));
 }
 function w(e) {
     let { error: t } = e;
-    (S = !1), (N = null), R(t);
+    ((S = !1), (N = null), R(t));
 }
 function D(e) {
     let { skuId: t } = e;
@@ -92,7 +92,7 @@ function D(e) {
 }
 function L(e) {
     let { skuId: t, paymentSourceId: n, price: r } = e;
-    (b = f(u({}, b), { [t]: f(u({}, b[t]), { [null != n ? n : _]: r }) })), C.delete(t);
+    ((b = f(u({}, b), { [t]: f(u({}, b[t]), { [null != n ? n : _]: r }) })), C.delete(t));
 }
 function x(e) {
     let { skuId: t } = e;
@@ -103,7 +103,7 @@ function k() {
 }
 function M(e) {
     let { entitlements: t, giftCode: n } = e;
-    (O = !1), (y = t), (h = n);
+    ((O = !1), (y = t), (h = n));
 }
 function j(e) {
     let { giftCode: t } = e;
@@ -112,7 +112,7 @@ function j(e) {
 }
 function U(e) {
     let { error: t } = e;
-    (O = !1), (v = t);
+    ((O = !1), (v = t));
 }
 function G() {
     I = !0;
@@ -126,7 +126,7 @@ function V(e) {
 function F(e) {
     let { locked: t } = e;
     if (!t || null == N) return !1;
-    (S = !1), (N = null), R();
+    ((S = !1), (N = null), R());
 }
 class Z extends (a = o.ZP.Store) {
     getPricesForSku(e) {

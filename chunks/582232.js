@@ -70,7 +70,7 @@ var y = function (e) {
         return Array.isArray(e) ? e.filter(Boolean) : 'object' === (0, l.Z)(e) && null !== e ? [e] : [];
     },
     O = function (e) {
-        e.className, e.clearValue, e.cx, e.getStyles, e.getClassNames, e.getValue, e.hasValue, e.isMulti, e.isRtl, e.options, e.selectOption, e.selectProps, e.setValue, e.theme;
+        (e.className, e.clearValue, e.cx, e.getStyles, e.getClassNames, e.getValue, e.hasValue, e.isMulti, e.isRtl, e.options, e.selectOption, e.selectProps, e.setValue, e.theme);
         var t = (0, u.Z)(e, m);
         return (0, r.Z)({}, t);
     },
@@ -102,7 +102,7 @@ function S(e, t) {
         a = 0;
     !(function t() {
         var s;
-        (a += 10), C(e, i * ((s = (s = a) / n - 1) * s * s + 1) + r), a < n ? window.requestAnimationFrame(t) : o(e);
+        ((a += 10), C(e, i * ((s = (s = a) / n - 1) * s * s + 1) + r), a < n ? window.requestAnimationFrame(t) : o(e));
     })();
 }
 function M(e, t) {
@@ -113,7 +113,7 @@ function M(e, t) {
 }
 function I() {
     try {
-        return document.createEvent('TouchEvent'), !0;
+        return (document.createEvent('TouchEvent'), !0);
     } catch (e) {
         return !1;
     }
@@ -159,7 +159,7 @@ var T = function (e) {
                 var n = (0, s.Z)(t, 2),
                     o = n[0],
                     r = n[1];
-                return (e[o] = r), e;
+                return ((e[o] = r), e);
             }, {});
     },
     A = ['children', 'innerProps'],
@@ -351,7 +351,7 @@ var T = function (e) {
                                 isFixedPosition: t,
                                 controlHeight: M
                             });
-                        g(r.maxHeight), w(r.placement), null == c || c(r.placement);
+                        (g(r.maxHeight), w(r.placement), null == c || c(r.placement));
                     }
                 },
                 [o, i, a, u, n, c, M]
@@ -1076,7 +1076,7 @@ var T = function (e) {
             );
             var E = (0, p.useCallback)(
                 function () {
-                    'function' == typeof m.current && (m.current(), (m.current = null)), o && d.current && (m.current = (0, h.Me)(o, d.current, I, { elementResize: 'ResizeObserver' in window }));
+                    ('function' == typeof m.current && (m.current(), (m.current = null)), o && d.current && (m.current = (0, h.Me)(o, d.current, I, { elementResize: 'ResizeObserver' in window })));
                 },
                 [o, I]
             );
@@ -1088,7 +1088,7 @@ var T = function (e) {
             );
             var k = (0, p.useCallback)(
                 function (e) {
-                    (d.current = e), E();
+                    ((d.current = e), E());
                 },
                 [E]
             );

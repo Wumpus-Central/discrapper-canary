@@ -73,7 +73,7 @@ async function f(e, t, n) {
     });
 }
 function m(e, t) {
-    s.Z.delete({
+    (s.Z.delete({
         url: d.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),
         trackedActionData: {
             event: l.NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
@@ -88,7 +88,7 @@ function m(e, t) {
             type: 'GUILD_DIRECTORY_ENTRY_DELETE',
             channelId: e,
             guildId: t
-        });
+        }));
 }
 let g = i()(async (e, t) => {
         if (!c.Z.shouldFetch(e, t))

@@ -245,7 +245,7 @@ class v extends (i = o.PureComponent) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             p(this, 'handleDismiss', (e) => {
                 e.stopPropagation();
                 let { onDismissClick: t } = this.props;
@@ -263,7 +263,7 @@ class v extends (i = o.PureComponent) {
             }),
             p(this, 'handleMouseEnter', () => {
                 this.props.disabled || this.setState({ expanded: !0 });
-            });
+            }));
         let { expand: t } = e;
         this.state = { expanded: t };
     }

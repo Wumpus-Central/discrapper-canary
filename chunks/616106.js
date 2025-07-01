@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r,
     i,
     l,
@@ -16,7 +16,7 @@ class f extends (l = s.ZP.Store) {
         return !(0, p.I5)(e) && m;
     }
 }
-(i = 'SubscriptionRemindersStore'),
+((i = 'SubscriptionRemindersStore'),
     (r = 'displayName') in f
         ? Object.defineProperty(f, r, {
               value: i,
@@ -24,8 +24,8 @@ class f extends (l = s.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (f[r] = i);
-let h = new f(c.Z, {
+        : (f[r] = i));
+let g = new f(c.Z, {
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
         if (null != t) {

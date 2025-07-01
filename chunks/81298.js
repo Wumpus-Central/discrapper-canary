@@ -7,7 +7,7 @@ var n = function (e, t, r) {
         l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
         s = i - (r.getBoundingClientRect().left + window.pageXOffset),
         u = l - (r.getBoundingClientRect().top + window.pageYOffset);
-    s < 0 ? (s = 0) : s > o && (s = o), u < 0 ? (u = 0) : u > a && (u = a);
+    (s < 0 ? (s = 0) : s > o && (s = o), u < 0 ? (u = 0) : u > a && (u = a));
     var c = s / o,
         p = 1 - u / a;
     return {

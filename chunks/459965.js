@@ -16,7 +16,7 @@ function d(e, t, n) {
             isGift: n
         },
         o = r.useRef(i);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         o.current = i;
     }),
         r.useEffect(() => {
@@ -34,7 +34,7 @@ function d(e, t, n) {
                     confirmText: u.intl.string(u.t.BddRzc)
                 }),
                 t());
-        }, [e]);
+        }, [e]));
 }
 let f = [];
 function _(e, t) {

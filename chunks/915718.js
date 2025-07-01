@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(539854);
+(n.d(t, { Z: () => M }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(699516),
     O = n(594174),
     E = n(979651),
-    I = n(585483),
-    S = n(63063),
+    S = n(585483),
+    I = n(63063),
     P = n(665149),
     Z = n(981631),
     N = n(921944),
@@ -45,10 +45,10 @@ function R(e, t, n) {
 }
 class k extends i.PureComponent {
     componentDidMount() {
-        I.S.subscribe(Z.CkL.CALL_START, this.handleVoiceClick);
+        S.S.subscribe(Z.CkL.CALL_START, this.handleVoiceClick);
     }
     componentWillUnmount() {
-        I.S.unsubscribe(Z.CkL.CALL_START, this.handleVoiceClick);
+        S.S.unsubscribe(Z.CkL.CALL_START, this.handleVoiceClick);
     }
     renderVideoCallButton() {
         let e,
@@ -112,14 +112,14 @@ class k extends i.PureComponent {
                                               children: A.intl.string(A.t.xAW71d)
                                           }),
                                           (0, r.jsx)(a.eee, {
-                                              href: S.Z.getArticleURL(Z.BhN.ACTIVITIES),
+                                              href: I.Z.getArticleURL(Z.BhN.ACTIVITIES),
                                               children: A.intl.string(A.t.hvVgAQ)
                                           })
                                       ]
                                   }),
                                   buttonCTA: A.intl.string(A.t['NX+WJC']),
                                   onClick: () => {
-                                      t(), l(N.L.UNKNOWN);
+                                      (t(), l(N.L.UNKNOWN));
                                   },
                                   className: w.tooltip
                               });
@@ -136,7 +136,7 @@ class k extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             R(this, 'iconRef', i.createRef()),
             R(this, 'handleStartCall', (e, t) => {
                 let { channel: n, notFriend: r, appContext: i } = this.props,
@@ -162,7 +162,7 @@ class k extends i.PureComponent {
             }),
             R(this, 'handleBrowserNotSupported', () => {
                 (0, _.Z)();
-            });
+            }));
     }
 }
 function M(e) {
@@ -181,8 +181,8 @@ function M(e) {
             notFriend: n.type === Z.d4z.DM && null != _ && !j.Z.isFriend(_),
             isBlocked: n.type === Z.d4z.DM && null != _ && j.Z.isBlocked(_)
         })),
-        I = (0, l.e7)([O.default], () => O.default.getUser(_)),
-        S = (0, u.bp)(),
+        S = (0, l.e7)([O.default], () => O.default.getUser(_)),
+        I = (0, u.bp)(),
         P = [],
         N = (0, p.Z)(n.id),
         T = (0, l.e7)([x.Z], () => x.Z.hasLayers());
@@ -194,18 +194,18 @@ function M(e) {
         }, 250);
         return () => clearTimeout(e);
     }, []),
-    a || (null == I ? void 0 : I.bot))
+    a || (null == S ? void 0 : S.bot))
         ? null
         : (0, r.jsx)(k, {
               channel: n,
               mode: s,
               inCall: c,
               callActive: m,
-              isProvisional: null != (t = null == I ? void 0 : I.isProvisional) && t,
+              isProvisional: null != (t = null == S ? void 0 : S.isProvisional) && t,
               callUnavailable: b,
               notFriend: y,
               isBlocked: v,
-              appContext: S,
+              appContext: I,
               canShowTooltip: A,
               canShowActivityGdmTooltip: N,
               dismissibleContentTypes: P,

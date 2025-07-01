@@ -26,7 +26,7 @@ class d extends (a = i.ZP.Store) {
         return c;
     }
 }
-(l = 'RecentAvatarsStore'),
+((l = 'RecentAvatarsStore'),
     (r = 'displayName') in d
         ? Object.defineProperty(d, r, {
               value: l,
@@ -34,18 +34,18 @@ class d extends (a = i.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (d[r] = l);
+        : (d[r] = l));
 let f = new d(s.Z, {
     RECENT_AVATARS_FETCH_START: function () {
-        (u.isFetching = !0), (u.error = null);
+        ((u.isFetching = !0), (u.error = null));
     },
     RECENT_AVATARS_FETCH_SUCCESS: function (e) {
         let { avatars: t } = e;
-        (c = t), (u.isFetching = !1), (u.lastFetchedAt = Date.now());
+        ((c = t), (u.isFetching = !1), (u.lastFetchedAt = Date.now()));
     },
     RECENT_AVATARS_FETCH_FAILURE: function (e) {
         let { error: t } = e;
-        (u.isFetching = !1), (u.error = t);
+        ((u.isFetching = !1), (u.error = t));
     },
     RECENT_AVATARS_UPDATE: function () {
         u.lastFetchedAt = 0;
@@ -55,6 +55,6 @@ let f = new d(s.Z, {
         c = c.filter((e) => e.id !== t);
     },
     LOGOUT: function () {
-        (c = []), (u = o());
+        ((c = []), (u = o()));
     }
 });

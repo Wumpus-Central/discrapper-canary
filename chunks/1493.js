@@ -1,4 +1,4 @@
-n.d(t, { default: () => i }), n(388685);
+(n.d(t, { default: () => i }), n(388685));
 var r = n(255367),
     o = n(73800),
     l = n(481060),
@@ -27,7 +27,7 @@ function i(e) {
         children: (0, r.jsxs)('form', {
             onSubmit: function (e) {
                 if ((e.preventDefault(), k.toLowerCase() !== i.toLowerCase())) return void b(c);
-                null == t || t(), n();
+                (null == t || t(), n());
             },
             children: [
                 (0, r.jsx)(l.xBx, {

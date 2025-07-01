@@ -6,5 +6,5 @@ function o(e) {
     (0, a.Z)(1, arguments);
     var t = (0, r.Z)(e),
         n = new Date(0);
-    return n.setFullYear(t, 0, 4), n.setHours(0, 0, 0, 0), (0, i.Z)(n);
+    return (n.setFullYear(t, 0, 4), n.setHours(0, 0, 0, 0), (0, i.Z)(n));
 }

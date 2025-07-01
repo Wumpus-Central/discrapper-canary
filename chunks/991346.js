@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Gj: () => F,
     Pt: () => G,
     VO: () => z,
@@ -10,7 +10,7 @@ n.d(t, {
     n(794429),
     n(388685),
     n(467055),
-    n(539854);
+    n(539854));
 var i = n(73800),
     r = n(442837),
     s = n(704215),
@@ -102,14 +102,14 @@ function G() {
         V = (0, c.Go)(),
         [G] = (0, d.cv)(V ? [s.z.CLIPS_SETTINGS_BETA_TAG] : []),
         F = 'useGenerateUserSettingsSections';
-    (0, a.j)({
+    ((0, a.j)({
         location: F + ' auto on',
         autoTrackExposure: !0
     }),
         (0, a.j)({
             location: F + ' auto off',
             autoTrackExposure: !1
-        });
+        }));
     let { shouldMergeGameSettings: H } = P.b.useExperiment({ location: 'settings' }),
         z = (0, p.Xo)({ location: 'settings' }),
         Y = null != (n = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
@@ -117,8 +117,8 @@ function G() {
         K = (0, C.v4)({ location: 'settings' }),
         q = (0, o.Q)(),
         X = (0, E.Zy)({ location: M.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        Q = (0, r.e7)([T.Z], () => T.Z.hasLibraryApplication()),
-        J = (0, r.e7)([S.default], () => S.default.hasTOTPEnabled()),
+        J = (0, r.e7)([T.Z], () => T.Z.hasLibraryApplication()),
+        Q = (0, r.e7)([S.default], () => S.default.hasTOTPEnabled()),
         $ = D.Sb.useSetting(),
         ee = (0, h.Z)(),
         { hypeSquadRemoved: et } = g.Z.useExperiment({ location: 'settings' }),
@@ -160,8 +160,8 @@ function G() {
                 paymentsBlocked: q,
                 isEligibleForQuests: X,
                 isStricterMessageRequestsEnabled: ee,
-                hasLibraryApplication: Q,
-                hasTOTPEnabled: J,
+                hasLibraryApplication: J,
+                hasTOTPEnabled: Q,
                 developerMode: $,
                 isAdultUser: en,
                 hasSecureFramesVerifiedUserIds: ei,
@@ -175,7 +175,7 @@ function G() {
                 isInputProfileCustom: ed,
                 isGoreContentFilteringEnabled: eu
             }),
-        [$, G, er, es, Q, ei, J, et, L, en, X, K, W, z, U, Y, ee, B, q, H, R, v, el, ea, eo, ec, ed, eu]
+        [$, G, er, es, J, ei, Q, et, L, en, X, K, W, z, U, Y, ee, B, q, H, R, v, el, ea, eo, ec, ed, eu]
     );
 }
 function F(e) {
@@ -226,7 +226,7 @@ function F(e) {
                 l.clear();
                 break;
             }
-            Object.values(s).includes(e) && o(e), a(e);
+            (Object.values(s).includes(e) && o(e), a(e));
         }
     return l;
 }
@@ -265,7 +265,7 @@ function H(e, t, n) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -273,7 +273,7 @@ function H(e, t, n) {
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        (i = n[t]),
+                                        ((i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
@@ -281,8 +281,8 @@ function H(e, t, n) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = i);
-                                    });
+                                                : (e[t] = i));
+                                    }));
                             }
                             return e;
                         })({}, t[e])),

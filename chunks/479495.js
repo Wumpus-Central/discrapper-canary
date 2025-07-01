@@ -1,4 +1,4 @@
-r.d(t, { Z: () => P }), r(35282);
+(r.d(t, { Z: () => P }), r(35282));
 var n,
     s = r(255367),
     i = r(73800),
@@ -127,12 +127,12 @@ class S extends (n = i.PureComponent) {
     }
     constructor(e) {
         var t;
-        super(e),
+        (super(e),
             y(this, 'handleSubmit', async (e) => {
                 let { location: t, onLoginSuccess: r, source: n, resetToken: s } = this.props,
                     { password: i, error: l } = this.state;
                 if ((e.preventDefault(), 0 === i.length)) {
-                    this.setState({ error: b.intl.string(b.t.R98xDw) }), N.S.dispatch(O.CkL.WAVE_EMPHASIZE);
+                    (this.setState({ error: b.intl.string(b.t.R98xDw) }), N.S.dispatch(O.CkL.WAVE_EMPHASIZE));
                     return;
                 }
                 null != l && this.setState({ error: null });
@@ -166,9 +166,9 @@ class S extends (n = i.PureComponent) {
             y(this, 'handleTokenSubmitMFAv2', async (e, t) => {
                 let { location: r, mfaTicket: n, onLoginSuccess: s, resetToken: i, source: l } = this.props,
                     { password: a } = this.state;
-                if (0 === a.length) return d.Z.dispatch({ type: 'LOGIN_RESET' }), Promise.reject();
+                if (0 === a.length) return (d.Z.dispatch({ type: 'LOGIN_RESET' }), Promise.reject());
                 let o = i;
-                if ((null != r && (o = (0, p.Z)(r)), null == o)) return d.Z.dispatch({ type: 'LOGIN_RESET' }), Promise.reject();
+                if ((null != r && (o = (0, p.Z)(r)), null == o)) return (d.Z.dispatch({ type: 'LOGIN_RESET' }), Promise.reject());
                 this.setState({ working: !0 });
                 try {
                     let r = await h.Z.resetPasswordMFAv2({
@@ -180,11 +180,11 @@ class S extends (n = i.PureComponent) {
                         source: l
                     });
                     if (null != s) return void s(r);
-                    d.Z.dispatch({
+                    (d.Z.dispatch({
                         type: 'LOGIN_SUCCESS',
                         token: r
                     }),
-                        this.handlePasswordChangeSuccess();
+                        this.handlePasswordChangeSuccess());
                 } finally {
                     this.setState({ working: !1 });
                 }
@@ -196,7 +196,7 @@ class S extends (n = i.PureComponent) {
             }),
             y(this, 'handleGoToLogin', () => {
                 let { transitionTo: e } = this.props;
-                h.Z.loginReset(), e(O.Z5c.LOGIN, { source: 'reset_password' });
+                (h.Z.loginReset(), e(O.Z5c.LOGIN, { source: 'reset_password' }));
             }),
             y(this, 'handleOpenApp', () => {
                 (0, x.Z)('password_reset');
@@ -209,7 +209,7 @@ class S extends (n = i.PureComponent) {
                     return Array.isArray(r) ? r[0] : r;
                 }
                 return null;
-            });
+            }));
         let r = (null == (t = this.props.location) ? void 0 : t.search) != null && '' !== this.props.location.search ? (0, o.parse)(this.props.location.search) : null;
         this.state = {
             method: '',
@@ -238,7 +238,7 @@ let P = function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -246,7 +246,7 @@ let P = function (e) {
                     )),
                     n.forEach(function (t) {
                         y(e, t, r[t]);
-                    });
+                    }));
             }
             return e;
         })({}, e, t)

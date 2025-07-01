@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(433517),
     i = n(147913);
 function a(e, t, n) {
@@ -24,13 +24,13 @@ class s extends i.Z {
         r.K.set(o, this.seenForumGuidelines);
     }
     markAsSeen(e) {
-        this.seenForumGuidelines.add(e), r.K.set(o, this.seenForumGuidelines);
+        (this.seenForumGuidelines.add(e), r.K.set(o, this.seenForumGuidelines));
     }
     hasSeen(e) {
         return this.seenForumGuidelines.has(e);
     }
     constructor(...e) {
-        super(...e), a(this, 'seenForumGuidelines', new Set());
+        (super(...e), a(this, 'seenForumGuidelines', new Set()));
     }
 }
 let l = new s();

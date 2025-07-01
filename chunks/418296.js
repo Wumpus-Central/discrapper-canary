@@ -12,18 +12,18 @@ e.exports = function (e, t, n) {
         _ = !0,
         p = [],
         h = p;
-    if (n) (_ = !1), (d = a);
+    if (n) ((_ = !1), (d = a));
     else if (f >= c) {
         var m = t ? null : s(e);
         if (m) return l(m);
-        (_ = !1), (d = o), (h = new r());
+        ((_ = !1), (d = o), (h = new r()));
     } else h = t ? [] : p;
     n: for (; ++u < f; ) {
         var g = e[u],
             E = t ? t(g) : g;
         if (((g = n || 0 !== g ? g : 0), _ && E == E)) {
             for (var b = h.length; b--; ) if (h[b] === E) continue n;
-            t && h.push(E), p.push(g);
+            (t && h.push(E), p.push(g));
         } else d(h, E, n) || (h !== p && h.push(E), p.push(g));
     }
     return p;

@@ -8,7 +8,7 @@ var a = e(481060),
 function r(n) {
     let { transitionState: t, onClose: e, onDelete: r } = n;
     async function d() {
-        await (0, l.TG)(), r();
+        (await (0, l.TG)(), r());
     }
     return (0, i.jsxs)(a.Y0X, {
         size: a.CgR.SMALL,

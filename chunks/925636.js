@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'marrakesh',
         author: 'alexandre gavioli (http://github.com/alexx2/)',
@@ -19,4 +19,4 @@
         base0E: '#8868b3',
         base0F: '#b3588e'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

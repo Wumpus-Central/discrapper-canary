@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(953529), n(388685);
+(n.d(t, { Z: () => O }), n(953529), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -29,7 +29,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -158,7 +158,7 @@ class E extends i.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'activityDiscordTagRef', i.createRef()),
             m(this, 'playerAvatarRef', i.createRef()),
             m(this, 'renderUserTooltip', (e, t, n) =>
@@ -220,7 +220,7 @@ class E extends i.PureComponent {
                     },
                     n
                 )
-            );
+            ));
     }
 }
 let O = E;

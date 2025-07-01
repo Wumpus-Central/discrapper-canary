@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var s = n(255367),
     r = n(73800),
     l = n(442837),
@@ -23,10 +23,10 @@ function m(e) {
         }
     }, [n]);
     let g = async (e) => {
-            e.preventDefault(), E(null), h(!0);
+            (e.preventDefault(), E(null), h(!0));
             try {
                 let { token: e } = await (0, o.w)(C);
-                u(e), _();
+                (u(e), _());
             } catch (e) {
                 E(new a.Z(e).getAnyErrorMessage());
             } finally {
@@ -37,7 +37,7 @@ function m(e) {
             if (!j) {
                 S(!0);
                 try {
-                    await (0, o.i)(!0), (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['84yeo6']), i.ToastType.SUCCESS));
+                    (await (0, o.i)(!0), (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['84yeo6']), i.ToastType.SUCCESS)));
                 } catch (t) {
                     let e = new a.Z(t).getAnyErrorMessage();
                     null != e && (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));

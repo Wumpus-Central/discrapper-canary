@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -29,7 +29,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function j(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -45,8 +45,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -118,7 +118,7 @@ function Z(e) {
                 }));
         }, [_, E]),
         G = i.useCallback(() => {
-            E({
+            (E({
                 questId: _.id,
                 questContent: f.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE,
@@ -127,7 +127,7 @@ function Z(e) {
                 (0, C.navigateToQuestHome)({
                     fromContent: f.jn.ACTIVITY_PANEL,
                     questId: _.id
-                });
+                }));
         }, [_.id, E]),
         B = (0, I.hf)({
             quest: _,

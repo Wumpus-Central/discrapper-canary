@@ -3,7 +3,7 @@ function n(e, t) {
     for (e.push(t); 0 < n; ) {
         var r = (n - 1) >>> 1,
             i = e[r];
-        if (0 < a(i, t)) (e[r] = t), (e[n] = i), (n = r);
+        if (0 < a(i, t)) ((e[r] = t), (e[n] = i), (n = r));
         else break;
     }
 }
@@ -22,7 +22,7 @@ function i(e) {
                 c = s + 1,
                 u = e[c];
             if (0 > a(l, n)) c < i && 0 > a(u, l) ? ((e[r] = u), (e[c] = n), (r = c)) : ((e[r] = l), (e[s] = n), (r = s));
-            else if (c < i && 0 > a(u, n)) (e[r] = u), (e[c] = n), (r = c);
+            else if (c < i && 0 > a(u, n)) ((e[r] = u), (e[c] = n), (r = c));
             else break;
         }
     }
@@ -59,14 +59,14 @@ var u = [],
 function O(e) {
     for (var t = r(d); null !== t; ) {
         if (null === t.callback) i(d);
-        else if (t.startTime <= e) i(d), (t.sortIndex = t.expirationTime), n(u, t);
+        else if (t.startTime <= e) (i(d), (t.sortIndex = t.expirationTime), n(u, t));
         else break;
         t = r(d);
     }
 }
 function v(e) {
     if (((g = !1), O(e), !m))
-        if (null !== r(u)) (m = !0), w();
+        if (null !== r(u)) ((m = !0), w());
         else {
             var t = r(d);
             null !== t && D(v, t.startTime - e);
@@ -86,32 +86,32 @@ function C() {
         var n = !0;
         try {
             e: {
-                (m = !1), g && ((g = !1), b(T), (T = -1)), (h = !0);
+                ((m = !1), g && ((g = !1), b(T), (T = -1)), (h = !0));
                 var a = p;
                 try {
                     a: {
                         for (O(e), _ = r(u); null !== _ && !(_.expirationTime > e && N()); ) {
                             var s = _.callback;
                             if ('function' == typeof s) {
-                                (_.callback = null), (p = _.priorityLevel);
+                                ((_.callback = null), (p = _.priorityLevel));
                                 var l = s(_.expirationTime <= e);
                                 if (((e = t.unstable_now()), 'function' == typeof l)) {
-                                    (_.callback = l), O(e), (n = !0);
+                                    ((_.callback = l), O(e), (n = !0));
                                     break a;
                                 }
-                                _ === r(u) && i(u), O(e);
+                                (_ === r(u) && i(u), O(e));
                             } else i(u);
                             _ = r(u);
                         }
                         if (null !== _) n = !0;
                         else {
                             var c = r(d);
-                            null !== c && D(v, c.startTime - e), (n = !1);
+                            (null !== c && D(v, c.startTime - e), (n = !1));
                         }
                     }
                     break e;
                 } finally {
-                    (_ = null), (p = a), (h = !1);
+                    ((_ = null), (p = a), (h = !1));
                 }
             }
         } finally {
@@ -126,10 +126,10 @@ if ('function' == typeof y)
 else if ('undefined' != typeof MessageChannel) {
     var R = new MessageChannel(),
         P = R.port2;
-    (R.port1.onmessage = C),
+    ((R.port1.onmessage = C),
         (o = function () {
             P.postMessage(null);
-        });
+        }));
 } else
     o = function () {
         E(C, 0);
@@ -142,7 +142,7 @@ function D(e, n) {
         e(t.unstable_now());
     }, n);
 }
-(t.unstable_IdlePriority = 5),
+((t.unstable_IdlePriority = 5),
     (t.unstable_ImmediatePriority = 1),
     (t.unstable_LowPriority = 4),
     (t.unstable_NormalPriority = 3),
@@ -246,4 +246,4 @@ function D(e, n) {
                 p = n;
             }
         };
-    });
+    }));

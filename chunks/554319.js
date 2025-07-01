@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'hopscotch',
         author: 'jan t. sott',
@@ -19,4 +19,4 @@
         base0E: '#c85e7c',
         base0F: '#b33508'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

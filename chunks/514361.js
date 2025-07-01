@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var a,
     o = n(442837),
     s = n(704215),
@@ -62,7 +62,7 @@ let A = !0,
         null != i && (0, m.zi)(i.type) && (N = !0);
     };
 function D() {
-    A && (r = void 0), (N = !1);
+    (A && (r = void 0), (N = !1));
 }
 let L = () => {
         let e = !b.ZP.canUseClientThemes(E.default.getCurrentUser());
@@ -94,7 +94,7 @@ let L = () => {
     };
 class M extends (a = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x), this.syncWith([h.Z], k);
+        (null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x), this.syncWith([h.Z], k));
     }
     getState() {
         return A ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -115,16 +115,16 @@ class M extends (a = o.ZP.PersistedStore) {
         return i;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             S(this, 'migrations', [
                 (e) => {
                     var t;
                     return { gradientPresetId: null == e || null == (t = e.gradientPreset) ? void 0 : t.id };
                 }
-            ]);
+            ]));
     }
 }
-S(M, 'displayName', 'ClientThemesBackgroundStore'), S(M, 'persistKey', 'ClientThemesBackgroundStore');
+(S(M, 'displayName', 'ClientThemesBackgroundStore'), S(M, 'persistKey', 'ClientThemesBackgroundStore'));
 let j = new M(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: C,
     UPDATE_MOBILE_PENDING_THEME_INDEX: R,

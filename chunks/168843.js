@@ -19,12 +19,12 @@ function h(e) {
         tooltip: f ? p.intl.string(p.t.Axvx8f) : p.intl.string(p.t.gxChDw),
         icon: l.BFJ,
         onClick: () => {
-            a.ZP.trackWithMetadata(d.rMx.MEMBER_LIST_TOGGLED, {
+            (a.ZP.trackWithMetadata(d.rMx.MEMBER_LIST_TOGGLED, {
                 channel_id: t,
                 guild_id: h,
                 member_list_open: !f
             }),
-                o.Z.toggleMembersSection();
+                o.Z.toggleMembersSection());
         },
         selected: f
     });

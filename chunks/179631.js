@@ -1,8 +1,8 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         getDeviceState: () => o,
         logger: () => a
-    });
+    }));
 var r = n(259443),
     i = n(342825);
 let a = new r.Yd('native/DeviceState.tsx');

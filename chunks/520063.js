@@ -18,7 +18,7 @@ function m(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -26,7 +26,7 @@ function m(e) {
             )),
             l.forEach(function (n) {
                 var l;
-                (l = t[n]),
+                ((l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
@@ -34,8 +34,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
-            });
+                        : (e[n] = l));
+            }));
     }
     return e;
 }
@@ -59,7 +59,7 @@ function h(e, n) {
 }
 function j(e, n, j) {
     let P = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, o.$)(P), (0, r.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]);
+    ((0, o.$)(P), (0, r.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]));
     let x = (0, r.e7)([g.Z], () => g.Z.getChannel(j)),
         v = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         _ = (0, r.e7)([f.default], () => f.default.getCurrentUser()),

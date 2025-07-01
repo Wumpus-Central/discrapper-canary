@@ -17,7 +17,7 @@ function f(e, t, { kL: r = 1, kC: b = 1, kH: d = 1 } = {}) {
         Z = s.Z.from(n.Z, [g, y, v])[1],
         [w, M, k] = n.Z.from(t),
         O = s.Z.from(n.Z, [w, M, k])[1];
-    Z < 0 && (Z = 0), O < 0 && (O = 0);
+    (Z < 0 && (Z = 0), O < 0 && (O = 0));
     let E = u((Z + O) / 2),
         C = 0.5 * (1 - Math.sqrt(E / (E + 6103515625))),
         x = (1 + C) * y,
@@ -26,7 +26,7 @@ function f(e, t, { kL: r = 1, kC: b = 1, kH: d = 1 } = {}) {
         _ = Math.sqrt(j ** 2 + k ** 2),
         A = 0 === x && 0 === v ? 0 : Math.atan2(v, x),
         B = 0 === j && 0 === k ? 0 : Math.atan2(k, j);
-    A < 0 && (A += 2 * i), B < 0 && (B += 2 * i), (A *= c);
+    (A < 0 && (A += 2 * i), B < 0 && (B += 2 * i), (A *= c));
     let N = w - g,
         S = _ - R,
         I = (B *= c) - A,

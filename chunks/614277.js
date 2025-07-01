@@ -21,7 +21,7 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -31,7 +31,7 @@ function h(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function m(e) {
@@ -47,10 +47,10 @@ function g(e) {
     let { header: h, isLargeModal: g, stepProps: E } = m(e),
         { step: b, stepConfigs: y, setBodyNode: O, setFooterNode: v, setModalOverlayNode: I, setReadySlideId: T, premiumBrandRefreshBackgroundClassName: S } = (0, d.JL)(),
         A = y.find((e) => e.key === b);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         I(null);
     }, [b, I]),
-        l()(null != A, 'Unknown step for current payment flow.');
+        l()(null != A, 'Unknown step for current payment flow.'));
     let N = null != (c = null == A || null == (t = A.options) ? void 0 : t.hideSlider) && c,
         C = null == A || null == (n = A.options) ? void 0 : n.bodyClassName,
         R = null == A || null == (a = A.options) ? void 0 : a.sliderBodyClassName;

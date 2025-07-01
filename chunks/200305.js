@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(457542);
+(n.d(t, { Z: () => A }), n(388685), n(457542));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -172,7 +172,7 @@ let T = (e) => {
             ea = null != es ? es : null == S || null == (t = S.guild) ? void 0 : t.approximate_presence_count,
             ec = null != eo ? eo : null == S || null == (n = S.guild) ? void 0 : n.approximate_member_count,
             eu = null != G && G;
-        i.useEffect(() => {
+        (i.useEffect(() => {
             null != S && V(S.formFields);
         }, [S]),
             i.useEffect(() => {
@@ -181,7 +181,7 @@ let T = (e) => {
                         type: E.N4,
                         guild_id: M
                     });
-            }, [M]);
+            }, [M]));
         let ed = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
             { currentStep: em, setCurrentStep: ef } = (0, C.k3)(ed);
         (0, C.lk)(W);
@@ -231,38 +231,38 @@ let T = (e) => {
             })(null != (N = null == q ? void 0 : q.brandColorPrimary) ? N : '');
         if (null == z) return null;
         let eC = async () => {
-                K(!0), er(null), el(null);
+                (K(!0), er(null), el(null));
                 try {
-                    await (0, a.S2)({
+                    (await (0, a.S2)({
                         email: X,
                         password: ee
                     }),
                         K(!1),
-                        ef(C.KJ.EMAIL_CONFIRMATION);
+                        ef(C.KJ.EMAIL_CONFIRMATION));
                 } catch (n) {
                     var e, t;
-                    er(null == n || null == (e = n.body) ? void 0 : e.email), el(null == n || null == (t = n.body) ? void 0 : t.password);
+                    (er(null == n || null == (e = n.body) ? void 0 : e.email), el(null == n || null == (t = n.body) ? void 0 : t.password));
                 } finally {
                     K(!1);
                 }
             },
             ey = async () => {
                 var e, t, n, r;
-                K(!0), Y(null);
+                (K(!0), Y(null));
                 let i = null != ed ? b.ZP.getMember(M, ed.id) : null;
                 if (null != i && !i.isPending) {
                     null == A || A(!0);
                     return;
                 }
                 try {
-                    await (null == D
+                    (await (null == D
                         ? void 0
                         : D(
                               ((e = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -270,7 +270,7 @@ let T = (e) => {
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              (r = n[t]),
+                                              ((r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
@@ -278,8 +278,8 @@ let T = (e) => {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
-                                          });
+                                                      : (e[t] = r));
+                                          }));
                                   }
                                   return e;
                               })({}, null != S ? S : v.t)),
@@ -299,7 +299,7 @@ let T = (e) => {
                                     }),
                               e)
                           )),
-                        null == A || A(!0);
+                        null == A || A(!0));
                 } catch (t) {
                     let e = null == t ? void 0 : t.body;
                     (null == e || null == (n = e.errors) ? void 0 : n.version) != null || (null == e || null == (r = e.errors) ? void 0 : r.form_fields) != null ? Y(P.intl.string(P.t.PD09Sk)) : Y(null == e ? void 0 : e.message);

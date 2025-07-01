@@ -134,7 +134,7 @@ function d(e) {
         }
     ).enabled;
 }
-(0, a.B)({
+((0, a.B)({
     kind: 'user',
     id: '2024-07_icymi_negative_items',
     label: 'icymi negative content (debugging only)',
@@ -181,7 +181,7 @@ function d(e) {
                 }
             }
         ]
-    });
+    }));
 class f extends i.Z {
     _initialize() {
         r.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen);
@@ -193,7 +193,7 @@ class f extends i.Z {
         d('SearchExperimentManager', !1);
     }
 }
-new f(),
+(new f(),
     (0, a.B)({
         kind: 'user',
         id: '2025-05_icymi_new_conversation_summaries',
@@ -206,4 +206,4 @@ new f(),
                 config: { contentGenerationEnabled: !0 }
             }
         ]
-    });
+    }));

@@ -37,7 +37,7 @@ function _(e) {
 }
 class p extends i.Z {
     constructor(e) {
-        super(),
+        (super(),
             u(this, 'handleShowUrgentMessageAlert', void 0),
             u(this, 'actions', void 0),
             (this.handleShowUrgentMessageAlert = e),
@@ -45,6 +45,6 @@ class p extends i.Z {
                 POST_CONNECTION_OPEN: () => f(this.handleShowUrgentMessageAlert),
                 MESSAGE_CREATE: () => f(this.handleShowUrgentMessageAlert),
                 CHANNEL_SELECT: _
-            });
+            }));
     }
 }

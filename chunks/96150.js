@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(570140),
     i = n(317770),
     a = n(280837),
@@ -20,13 +20,13 @@ function c(e, t, n) {
 }
 class u extends i.Z {
     _initialize() {
-        r.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), r.Z.subscribe('LOGOUT', this.handleLogout);
+        (r.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), r.Z.subscribe('LOGOUT', this.handleLogout));
     }
     _terminate() {
-        r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), r.Z.unsubscribe('LOGOUT', this.handleLogout);
+        (r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), r.Z.unsubscribe('LOGOUT', this.handleLogout));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'handleVoiceChannelSelect', (e) => {
                 let { channelId: t, guildId: n } = e;
                 if (null != t) {
@@ -42,8 +42,8 @@ class u extends i.Z {
                 (0, a.O)([t, e].filter(l.lm));
             }),
             c(this, 'handleLogout', () => {
-                this.terminate(), this.handleDisconnectFromStageChannel(null);
-            });
+                (this.terminate(), this.handleDisconnectFromStageChannel(null));
+            }));
     }
 }
 let d = new u();

@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -64,13 +64,13 @@ function m(e) {
     let { channelId: t, messageId: n, content: r, source: i } = e,
         a = l.dN.getSetting(),
         c = s.ZP.unparse(r, t);
-    (p[t] = {
+    ((p[t] = {
         channelId: t,
         messageId: n,
         textValue: c,
         richValue: (0, o.JM)(a ? c : r)
     }),
-        (h[t] = i);
+        (h[t] = i));
 }
 function g(e) {
     let { channelId: t, textValue: n, richValue: r } = e,
@@ -84,7 +84,7 @@ function g(e) {
 function E(e) {
     let { channelId: t } = e;
     if (null == t || null == p[t]) return !1;
-    delete p[t], delete h[t];
+    (delete p[t], delete h[t]);
 }
 function b(e) {
     var t;

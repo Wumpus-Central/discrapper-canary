@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(539854);
+(n.d(t, { Z: () => h }), n(388685), n(539854));
 var i = n(255367),
     r = n(73800),
     s = n(921738),
@@ -27,7 +27,7 @@ class p extends r.PureComponent {
         this._mounted = !0;
     }
     componentWillUnmount() {
-        (this._mounted = !1), this.cleanUp();
+        ((this._mounted = !1), this.cleanUp());
     }
     componentDidUpdate(e) {
         this.props.defaultValue !== e.defaultValue && this.setState({ codes: this.props.defaultValue });
@@ -59,15 +59,15 @@ class p extends r.PureComponent {
         );
     }
     constructor(e) {
-        super(e),
+        (super(e),
             m(this, '_input', void 0),
             m(this, 'gs', void 0),
             m(this, '_mounted', !1),
             m(this, 'recordStart', () => {
-                c.isPlatformEmbedded && !g && ((this.gs = new a.Z()), this.gs.on('change', this.handleGSChange)), this.setState({ mode: o.c.RECORDING });
+                (c.isPlatformEmbedded && !g && ((this.gs = new a.Z()), this.gs.on('change', this.handleGSChange)), this.setState({ mode: o.c.RECORDING }));
             }),
             m(this, 'recordEnd', () => {
-                this.cleanUp(), this.setState({ mode: o.c.DEFAULT });
+                (this.cleanUp(), this.setState({ mode: o.c.DEFAULT }));
             }),
             m(this, 'toggleRecordMode', () => {
                 this.state.mode === o.c.DEFAULT ? this.recordStart() : this.recordEnd();
@@ -76,12 +76,12 @@ class p extends r.PureComponent {
                 if ((n.preventDefault(), 'keydown' === n.type)) {
                     let e = t.map((e) => [u.MoX.KEYBOARD_KEY, l()(e), u.CgE.BROWSER]),
                         { keyCode: i } = n;
-                    null ==
+                    (null ==
                         e.find((e) => {
                             let [, t] = e;
                             return i === t;
                         }) && e.push([u.MoX.KEYBOARD_KEY, i, u.CgE.BROWSER]),
-                        this.handleComboChange(e);
+                        this.handleComboChange(e));
                 }
             }),
             m(this, 'handleGSChange', (e) => {
@@ -90,8 +90,8 @@ class p extends r.PureComponent {
                 this.handleComboChange(t);
             }),
             m(this, 'handleNativeChange', (e) => {
-                e.length > 0 && this.handleComboChange(e), this.recordEnd();
-            });
+                (e.length > 0 && this.handleComboChange(e), this.recordEnd());
+            }));
         let { defaultValue: t } = e;
         this.state = {
             codes: t,

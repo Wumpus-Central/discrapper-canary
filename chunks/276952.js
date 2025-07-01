@@ -17,7 +17,7 @@ let c = Object.freeze({
     });
 function d(e) {
     let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: d = !1, className: f } = e;
-    (t = !d && t), (n = !d && n), (i = !d && i);
+    ((t = !d && t), (n = !d && n), (i = !d && i));
     let _ = {
             opacity: 1,
             height: t ? 40 : n ? 20 : 8,

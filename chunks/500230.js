@@ -1,4 +1,4 @@
-t.d(n, { Z: () => g }), t(388685);
+(t.d(n, { Z: () => g }), t(388685));
 var r = t(255367),
     i = t(73800),
     a = t(120356),
@@ -20,7 +20,7 @@ let g = function (e) {
         C = i.useMemo(() => m.go.every((e) => e.primary !== g || e.secondary !== b), [g, b]);
     function N(e) {
         let n = {};
-        void 0 !== e.primary && (n.badgeColorPrimary = e.primary), void 0 !== e.secondary && (n.badgeColorSecondary = e.secondary), u.Z.updateGuildProfile(t, n);
+        (void 0 !== e.primary && (n.badgeColorPrimary = e.primary), void 0 !== e.secondary && (n.badgeColorSecondary = e.secondary), u.Z.updateGuildProfile(t, n));
     }
     return (0, r.jsxs)('div', {
         className: n,
@@ -72,7 +72,7 @@ let g = function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
                                             r = Object.keys(t);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(t).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -80,7 +80,7 @@ let g = function (e) {
                                             )),
                                             r.forEach(function (n) {
                                                 var r;
-                                                (r = t[n]),
+                                                ((r = t[n]),
                                                     n in e
                                                         ? Object.defineProperty(e, n, {
                                                               value: r,
@@ -88,8 +88,8 @@ let g = function (e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[n] = r);
-                                            });
+                                                        : (e[n] = r));
+                                            }));
                                     }
                                     return e;
                                 })({}, e)),

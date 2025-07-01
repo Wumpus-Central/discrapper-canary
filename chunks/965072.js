@@ -1,4 +1,4 @@
-s.d(t, { default: () => u }), s(388685);
+(s.d(t, { default: () => u }), s(388685));
 var a = s(255367),
     l = s(73800),
     n = s(990547),
@@ -20,10 +20,10 @@ function u(e) {
         name: y
     });
     let E = async (e) => {
-            e.preventDefault(), z(null), _(!0);
+            (e.preventDefault(), z(null), _(!0));
             try {
                 let e = await s(C);
-                null != m && m(e), x();
+                (null != m && m(e), x());
             } catch (e) {
                 z(new r.Z(e).getAnyErrorMessage());
             } finally {
@@ -34,7 +34,7 @@ function u(e) {
             if (!T) {
                 S(!0);
                 try {
-                    await u(), (0, o.showToast)((0, o.createToast)(c.intl.string(c.t['84yeo6']), o.ToastType.SUCCESS));
+                    (await u(), (0, o.showToast)((0, o.createToast)(c.intl.string(c.t['84yeo6']), o.ToastType.SUCCESS)));
                 } catch (t) {
                     let e = new r.Z(t).getAnyErrorMessage();
                     null != e && (0, o.showToast)((0, o.createToast)(e, o.ToastType.FAILURE));

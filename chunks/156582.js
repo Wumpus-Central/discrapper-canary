@@ -14,7 +14,7 @@ let l = (e) => {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ let l = (e) => {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -30,8 +30,8 @@ let l = (e) => {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, n)),
@@ -40,7 +40,7 @@ let l = (e) => {
                         analyticsSource: t,
                         onClose: () => {
                             var e;
-                            return null == l || l(), null == (e = n.onClose) ? void 0 : e.call(n);
+                            return (null == l || l(), null == (e = n.onClose) ? void 0 : e.call(n));
                         }
                     }),
                 Object.getOwnPropertyDescriptors

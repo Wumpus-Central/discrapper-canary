@@ -1,4 +1,4 @@
-n.d(t, { default: () => T }), n(388685), n(415506);
+(n.d(t, { default: () => T }), n(388685), n(415506));
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -21,7 +21,7 @@ var i = n(255367),
     C = n(485312);
 async function O(e, t, n, i) {
     let r = (0, E.MY)(e, t);
-    await (0, u.bG)(n),
+    (await (0, u.bG)(n),
         await (0, d.Mg)(
             e,
             { items: r },
@@ -31,7 +31,7 @@ async function O(e, t, n, i) {
             },
             (0, E.UX)(r, e.currency, e.paymentSourceId),
             i
-        );
+        ));
 }
 function S(e) {
     let { premiumSubscription: t, guildBoostSlotId: n, onNext: s, onClose: d } = e,
@@ -68,12 +68,12 @@ function S(e) {
                     (0, i.jsx)(c.zxk, {
                         onClick: async () => {
                             try {
-                                p(!0), T(null);
+                                (p(!0), T(null));
                                 let e = (0, b.g)(t, 1);
-                                l()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(t, e, n, S), s();
+                                (l()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(t, e, n, S), s());
                             } catch (t) {
                                 let e = t instanceof m.HF ? t : new m.HF(t, t.code);
-                                T(j.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? j.t.dq4vq6 : j.t['5mlOCQ'])), p(!1);
+                                (T(j.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? j.t.dq4vq6 : j.t['5mlOCQ'])), p(!1));
                             }
                         },
                         submitting: u,

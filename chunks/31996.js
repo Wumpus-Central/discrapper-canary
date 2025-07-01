@@ -1,4 +1,4 @@
-n.d(t, { Q: () => c }), n(388685);
+(n.d(t, { Q: () => c }), n(388685));
 var r = n(544891),
     i = n(570140),
     a = n(430824),
@@ -7,11 +7,11 @@ var r = n(544891),
 let l = new Set();
 async function c(e) {
     if (null == a.Z.getGuild(e) && null == o.Z.getGuildOrStatus(e) && !l.has(e)) {
-        i.Z.dispatch({
+        (i.Z.dispatch({
             type: 'BASIC_GUILD_FETCH',
             guildId: e
         }),
-            l.add(e);
+            l.add(e));
         try {
             let t = (
                 await r.tn.get({

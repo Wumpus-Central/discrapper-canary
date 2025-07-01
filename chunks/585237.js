@@ -25,12 +25,12 @@ let c = {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(e, ['onDropdownClick', 'children', 'contentClassName', 'dropdownSize']);
@@ -40,7 +40,7 @@ let c = {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ let c = {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -56,8 +56,8 @@ let c = {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({}, p)),
@@ -74,7 +74,7 @@ let c = {
                                 ? (0, i.jsxs)(l.P3F, {
                                       className: c[d],
                                       onClick: (e) => {
-                                          e.stopPropagation(), null != r && r(e);
+                                          (e.stopPropagation(), null != r && r(e));
                                       },
                                       children: [
                                           (0, i.jsx)('div', { className: o.arrowSeparator }),
@@ -104,5 +104,5 @@ let c = {
             t)
         );
     };
-(u.DropdownSizes = s), (u.Sizes = l.zxk.Sizes), (u.Colors = l.zxk.Colors), (u.Looks = l.zxk.Looks);
+((u.DropdownSizes = s), (u.Sizes = l.zxk.Sizes), (u.Colors = l.zxk.Colors), (u.Looks = l.zxk.Looks));
 let d = u;

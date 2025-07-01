@@ -26,20 +26,20 @@ let f = 'GameLibraryViewStore',
     h = u.iEv.LAST_PLAYED,
     m = !1,
     g = o().debounce(() => {
-        (m = !1), O.emitChange();
+        ((m = !1), O.emitChange());
     }, _);
 function E(e) {
     let { key: t, isKeyboardEvent: n } = e;
-    n && ((m = !0), g()), (r = t);
+    (n && ((m = !0), g()), (r = t));
 }
 function b(e) {
     let { direction: t, key: n } = e;
-    (p = t),
+    ((p = t),
         (h = n),
         l.K.set(f, {
             sortDirection: p,
             sortKey: h
-        });
+        }));
 }
 class y extends (i = s.ZP.Store) {
     initialize() {

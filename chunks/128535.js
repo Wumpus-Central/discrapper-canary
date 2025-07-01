@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(539854), n(388685);
+(n.d(t, { Z: () => O }), n(539854), n(388685));
 var r = n(255367);
 n(73800);
 var s = n(120356),
@@ -80,13 +80,13 @@ let b = (e) => (0 === e.length ? f.warning : f.danger),
             } = (0, x.GI)({
                 questId: e.quest.id,
                 beforeRequest: () => {
-                    g.startAnimation(),
+                    (g.startAnimation(),
                         u({
                             questId: e.quest.id,
                             questContent: e.location,
                             questContentCTA: m.jZ.DEFIBRILLATOR,
                             sourceQuestContent: e.sourceQuestContent
-                        });
+                        }));
                 },
                 afterRequest: g.stopAnimation
             });

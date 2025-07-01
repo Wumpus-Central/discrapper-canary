@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     C: () => V,
     K: () => U
 }),
     n(388685),
     n(953529),
     n(361932),
-    n(187205);
+    n(187205));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -172,18 +172,18 @@ function U(e) {
     function v(e, t) {
         g((n) => {
             let r = new Set(n);
-            return t ? r.add(e) : r.delete(e), r;
+            return (t ? r.add(e) : r.delete(e), r);
         });
     }
     return (0, r.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault();
             let t = c.filter((e) => u.has(e));
-            a(
+            (a(
                 t.filter(E.rC).filter((e) => !x.has(e)),
                 t.filter(E.lL).filter((e) => !j.has(e))
             ),
-                o();
+                o());
         },
         children: (0, r.jsxs)(m.Y0X, {
             transitionState: t,
@@ -264,7 +264,7 @@ function B(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -272,7 +272,7 @@ function B(e) {
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              (r = n[t]),
+                                              ((r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
@@ -280,8 +280,8 @@ function B(e) {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
-                                          });
+                                                      : (e[t] = r));
+                                          }));
                                   }
                                   return e;
                               })({}, a)
@@ -426,12 +426,12 @@ function H(e) {
     function x(e, t) {
         h((n) => {
             let r = new Set(n);
-            return t ? r.add(e) : r.delete(e), r;
+            return (t ? r.add(e) : r.delete(e), r);
         });
     }
     return (0, r.jsxs)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), a(u.map((e) => e.id).filter((e) => g.has(e))), t();
+            (e.preventDefault(), a(u.map((e) => e.id).filter((e) => g.has(e))), t());
         },
         className: Z.slideForm,
         children: [

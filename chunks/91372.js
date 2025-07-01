@@ -13,7 +13,7 @@ class u extends (l = a.ZP.Store) {
         return s;
     }
 }
-(i = 'AutoUpdateStore'),
+((i = 'AutoUpdateStore'),
     (r = 'displayName') in u
         ? Object.defineProperty(u, r, {
               value: i,
@@ -21,7 +21,7 @@ class u extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (u[r] = i);
+        : (u[r] = i));
 let d = new u(o.Z, {
     CHECKING_FOR_UPDATES: c,
     UPDATE_NOT_AVAILABLE: c,

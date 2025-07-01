@@ -39,7 +39,7 @@ e.exports = function (e) {
                 end: t
             }
         ];
-        return (n[0].contains = n), n;
+        return ((n[0].contains = n), n);
     }
     let u = {
             className: 'string',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => el }), n(388685), n(781311), n(290780);
+(n.d(t, { Z: () => el }), n(388685), n(781311), n(290780));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -22,16 +22,16 @@ var r = n(255367),
     y = n(957730),
     O = n(25015),
     w = n(252032),
-    S = n(216572),
-    N = n(913663),
-    T = n(268350),
+    N = n(216572),
+    T = n(913663),
+    S = n(268350),
     P = n(456077),
     I = n(488131),
     E = n(602034),
     R = n(23750),
     k = n(703558),
-    Z = n(496675),
-    M = n(300429),
+    M = n(496675),
+    Z = n(300429),
     A = n(117530),
     L = n(594174),
     F = n(459273),
@@ -40,8 +40,8 @@ var r = n(255367),
     B = n(681154),
     H = n(883429),
     U = n(945141),
-    V = n(456269),
-    G = n(228392),
+    G = n(456269),
+    V = n(228392),
     q = n(259637),
     W = n(76451),
     X = n(470623),
@@ -57,7 +57,7 @@ function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -65,7 +65,7 @@ function er(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -73,8 +73,8 @@ function er(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -99,7 +99,7 @@ function ei(e, t) {
 let ea = p.Ie.CREATE_FORUM_POST;
 function el(e) {
     let { parentChannel: t, isSearchLoading: n, numResults: a, onChange: s, canCreatePost: o, inputRef: d } = e,
-        u = !(0, S.HL)(t) && o,
+        u = !(0, N.HL)(t) && o,
         {
             textAreaState: m,
             formOpen: f,
@@ -117,20 +117,20 @@ function el(e) {
         v = i.useCallback(() => {
             j.bumpDispatchPriority();
         }, [j]),
-        O = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.ATTACH_FILES, t)),
+        O = (0, h.e7)([M.Z], () => M.Z.can($.Plq.ATTACH_FILES, t)),
         w = (0, h.Wu)([A.Z], () => A.Z.getUploads(t.id, k.d.FirstThreadMessage)),
         P = f && O && u,
         R = (null == t ? void 0 : t.isMediaChannel()) === !0,
-        M = (function (e, t) {
+        Z = (function (e, t) {
             let n = (0, X.AF)(),
-                r = (0, V.ql)(e);
+                r = (0, G.ql)(e);
             return i.useCallback(() => {
                 let { formOpen: i, setFormOpenFromUserAction: a, name: l, textAreaState: s, hasClickedForm: o } = n.getState();
                 !i &&
                     (setTimeout(() => {
                         if (t.current instanceof g.lcI) {
                             var e, n, r, i;
-                            null == (n = t.current) || null == (e = n._textArea) || e.setSelectionRange(l.length, l.length), null == (i = t.current) || null == (r = i._textArea) || r.focus();
+                            (null == (n = t.current) || null == (e = n._textArea) || e.setSelectionRange(l.length, l.length), null == (i = t.current) || null == (r = i._textArea) || r.focus());
                         }
                     }, 0),
                     ((o && l.length > 0) || (s.textValue.trim().length > 0 && s.textValue.trim() !== r) || A.Z.getUploads(e.id, k.d.FirstThreadMessage).length > 0) && a());
@@ -145,22 +145,22 @@ function el(e) {
                 r = (0, E.r)({ parentChannel: e });
             i.useEffect(() => {
                 let { setNameError: e, setMessageError: t } = n.getState();
-                e(null), t(null);
+                (e(null), t(null));
             }, [t, n]);
             let a = i.useCallback(
                 (t, r, i) => {
                     let { name: a, textAreaState: l } = n.getState();
-                    null == t && (t = l.textValue), (t = t.trim());
+                    (null == t && (t = l.textValue), (t = t.trim()));
                     let { content: s } = y.ZP.parse(e, t);
                     if (((t = s), null == r || 0 === r.length)) {
                         var o;
-                        r = null == (o = N.Z.getStickerPreview(e.id, ea.drafts.type)) ? void 0 : o.map((e) => e.id);
+                        r = null == (o = T.Z.getStickerPreview(e.id, ea.drafts.type)) ? void 0 : o.map((e) => e.id);
                     }
                     if (((null == i || 0 === i.length) && (i = A.Z.getUploads(e.id, k.d.FirstThreadMessage)), null != i && i.length > 0 && e.isMediaChannel())) {
                         let e = i.findIndex((e) => !0 === e.isThumbnail);
                         if (e > -1) {
                             let t = i[e];
-                            i.splice(e, 1), i.unshift(t);
+                            (i.splice(e, 1), i.unshift(t));
                         }
                     }
                     let c = 0 === a.length,
@@ -181,7 +181,7 @@ function el(e) {
                         x = U.Z.hasSeen(e.id);
                     if (!u)
                         return (
-                            (0, G.P_)({
+                            (0, V.P_)({
                                 guildId: e.guild_id,
                                 channelId: e.id
                             }),
@@ -216,7 +216,7 @@ function el(e) {
                         return (
                             (0, I.ok)(n),
                             H.Z.resort(e.id),
-                            (0, T.qB)(e.id, ea.drafts.type),
+                            (0, S.qB)(e.id, ea.drafts.type),
                             d(),
                             m(!1),
                             h(!1),
@@ -249,12 +249,12 @@ function el(e) {
             children: (0, r.jsx)('div', {
                 'aria-label': u ? et.intl.string(et.t.dq7mAQ) : et.intl.string(et.t['5h0QOD']),
                 className: l()(en.container, { [en.collapsed]: !f }),
-                onClick: !f && u ? M : void 0,
+                onClick: !f && u ? Z : void 0,
                 children: (0, r.jsxs)('form', {
                     onMouseDown: v,
                     onFocus: v,
                     onSubmit: (e) => {
-                        e.preventDefault(), u && L();
+                        (e.preventDefault(), u && L());
                     },
                     children: [
                         (0, r.jsxs)('div', {
@@ -329,10 +329,10 @@ let es = i.memo(function (e) {
                 };
             }, c.X),
             m = (0, X.AF)(),
-            h = (0, V.ql)(t),
+            h = (0, G.ql)(t),
             p = i.useCallback(() => {
                 var e;
-                m.getState().resetFormState(),
+                (m.getState().resetFormState(),
                     f.Z.clearDraft(t.id, k.d.ThreadSettings),
                     f.Z.clearDraft(t.id, k.d.FirstThreadMessage),
                     x.Z.clearAll(t.id, k.d.FirstThreadMessage),
@@ -342,10 +342,10 @@ let es = i.memo(function (e) {
                     m.getState().setHasClickedForm(!1),
                     m.getState().setPreviewing(!1),
                     null == (e = a.current) || e.blur(),
-                    (0, G.Oq)({
+                    (0, V.Oq)({
                         guildId: t.guild_id,
                         channelId: t.id
-                    });
+                    }));
             }, [m, t.id, t.guild_id, a]),
             b = i.useMemo(
                 () =>
@@ -414,17 +414,17 @@ let es = i.memo(function (e) {
             b = (0, X.AF)(),
             j = null != t.topic && 0 !== t.topic.length,
             v = U.Z.hasSeen(t.id),
-            _ = (0, V.ql)(t),
+            _ = (0, G.ql)(t),
             C = (0, h.e7)([L.default], () => L.default.getCurrentUser());
-        o()(null != C, 'current user cannot be null'),
+        (o()(null != C, 'current user cannot be null'),
             (0, F.yp)({
                 event: $.CkL.FOCUS_COMPOSER_TITLE,
                 handler: () => {
                     var e;
                     let t = n.current instanceof g.lcI ? (null == (e = n.current) ? void 0 : e._textArea) : n.current;
-                    null == t || t.focus(), b.getState().setTitleFocused(!0), b.getState().setFormOpen(!0), b.getState().setHasClickedForm(!0);
+                    (null == t || t.focus(), b.getState().setTitleFocused(!0), b.getState().setFormOpen(!0), b.getState().setHasClickedForm(!0));
                 }
-            });
+            }));
         let y = i.useCallback(
                 (e) => {
                     let n = e.clipboardData.files[0];
@@ -458,10 +458,10 @@ let es = i.memo(function (e) {
                               let r = 0 === n.trim().length,
                                   i = 0 === x.textValue.trim().length,
                                   a = x.textValue.trim() === _;
-                              r && (i || a) && b.getState().setHasClickedForm(!1), u || H.Z.updateForumSearchQuery(t.id, n);
+                              (r && (i || a) && b.getState().setHasClickedForm(!1), u || H.Z.updateForumSearchQuery(t.id, n));
                           },
                           onFocus: () => {
-                              b.getState().setTitleFocused(!0), b.getState().setBodyFocused(!1);
+                              (b.getState().setTitleFocused(!0), b.getState().setBodyFocused(!1));
                           },
                           onBlur: () => {
                               b.getState().setTitleFocused(!1);
@@ -476,7 +476,7 @@ let es = i.memo(function (e) {
                                   u && f.length > 0
                                       ? null == l || l.focus()
                                       : a && e.shiftKey
-                                        ? ((0, G.nH)({
+                                        ? ((0, V.nH)({
                                               guildId: t.guild_id,
                                               channelId: t.id
                                           }),
@@ -603,7 +603,7 @@ let ed = i.memo(function (e) {
             v = (0, X.AF)();
         i.useEffect(
             () => () =>
-                (0, G.Vn)({
+                (0, V.Vn)({
                     guildId: t.guild_id,
                     channelId: t.id
                 }),
@@ -632,14 +632,14 @@ let ed = i.memo(function (e) {
                 },
                 [n]
             );
-        (0, F.yp)({
+        ((0, F.yp)({
             event: $.CkL.TEXTAREA_FOCUS,
             handler: _
         }),
             (0, F.yp)({
                 event: $.CkL.TEXTAREA_BLUR,
                 handler: C
-            });
+            }));
         let w = (0, B.Op)(m, { content: x.textValue });
         return (0, r.jsx)('div', {
             className: en.bodyContainer,
@@ -668,7 +668,7 @@ let ed = i.memo(function (e) {
                                   promptToUpload: z.d,
                                   disabled: a,
                                   onKeyDown: (e) => {
-                                      ('ArrowUp' === e.key || 'ArrowDown' === e.key) && e.stopPropagation(), b && 'Escape' === e.key && !v.getState().submitting && (null == s || s.blur(), v.getState().setFormOpen(!1), v.getState().setTitleFocused(!1), v.getState().setBodyFocused(!1), v.getState().setPreviewing(!1));
+                                      (('ArrowUp' === e.key || 'ArrowDown' === e.key) && e.stopPropagation(), b && 'Escape' === e.key && !v.getState().submitting && (null == s || s.blur(), v.getState().setFormOpen(!1), v.getState().setTitleFocused(!1), v.getState().setBodyFocused(!1), v.getState().setPreviewing(!1)));
                                   },
                                   autoCompletePosition: 'bottom'
                               })
@@ -714,7 +714,7 @@ function ef() {
         }, c.X),
         t = (0, X.AF)(),
         n = i.useCallback(() => {
-            t.getState().setPreviewing(!e), (0, G.nE)();
+            (t.getState().setPreviewing(!e), (0, V.nE)());
         }, [e, t]);
     return (0, r.jsx)(g.ua7, {
         text: e ? et.intl.string(et.t.ojM1xM) : et.intl.string(et.t.SKNnqq),
@@ -760,8 +760,8 @@ let ex = i.memo(function (e) {
         }, c.X),
         { rateLimitPerUser: o } = t,
         d = o > 0,
-        u = (0, h.e7)([M.Z], () => M.Z.getSlowmodeCooldownGuess(t.id, M.S.CreateThread)),
-        m = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.MANAGE_THREADS, t) || Z.Z.can($.Plq.MANAGE_CHANNELS, t)),
+        u = (0, h.e7)([Z.Z], () => Z.Z.getSlowmodeCooldownGuess(t.id, Z.S.CreateThread)),
+        m = (0, h.e7)([M.Z], () => M.Z.can($.Plq.MANAGE_THREADS, t) || M.Z.can($.Plq.MANAGE_CHANNELS, t)),
         f = eg(t),
         x = (0, X.AF)(),
         p = i.useCallback(() => {
@@ -834,7 +834,7 @@ let ex = i.memo(function (e) {
 });
 function ep(e) {
     let { parentChannel: t, canCreatePost: n, disabled: i, disableIfInvalid: a = !1 } = e,
-        l = (0, S.HL)(t),
+        l = (0, N.HL)(t),
         {
             submitting: s,
             name: o,
@@ -913,7 +913,7 @@ function ej(e) {
         p = i.useRef(null),
         b = i.useRef(null),
         [j, v] = i.useState(!0),
-        _ = (0, V.Vm)(t),
+        _ = (0, G.Vm)(t),
         [C, y] = i.useState(0);
     return (i.useLayoutEffect(() => {
         var e;
@@ -960,12 +960,12 @@ function ej(e) {
                                                       r,
                                                       i = {},
                                                       a = Object.keys(e);
-                                                  for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                                  for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                                   return i;
                                               })(e, t);
                                           if (Object.getOwnPropertySymbols) {
                                               var a = Object.getOwnPropertySymbols(e);
-                                              for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                              for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                           }
                                           return i;
                                       })(e, ['ref']);

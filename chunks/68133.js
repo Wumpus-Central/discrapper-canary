@@ -11,7 +11,7 @@ async function l(e, t) {
     if (e.currentSrc) {
         let t = document.createElement('canvas'),
             n = t.getContext('2d');
-        (t.width = e.clientWidth), (t.height = e.clientHeight), null == n || n.drawImage(e, 0, 0, t.width, t.height);
+        ((t.width = e.clientWidth), (t.height = e.clientHeight), null == n || n.drawImage(e, 0, 0, t.width, t.height));
         let r = t.toDataURL();
         return (0, i.Bi)(r);
     }
@@ -61,11 +61,11 @@ function _(e, t) {
                   let e = Math.floor(parseFloat(o.substring(0, o.length - 2))) - 0.1;
                   o = `${e}px`;
               }
-              (0, i.oY)(e, HTMLIFrameElement) && 'display' === a && 'inline' === o && (o = 'block'), 'd' === a && t.getAttribute('d') && (o = `path(${t.getAttribute('d')})`), n.setProperty(a, o, r.getPropertyPriority(a));
+              ((0, i.oY)(e, HTMLIFrameElement) && 'display' === a && 'inline' === o && (o = 'block'), 'd' === a && t.getAttribute('d') && (o = `path(${t.getAttribute('d')})`), n.setProperty(a, o, r.getPropertyPriority(a)));
           });
 }
 function p(e, t) {
-    (0, i.oY)(e, HTMLTextAreaElement) && (t.innerHTML = e.value), (0, i.oY)(e, HTMLInputElement) && t.setAttribute('value', e.value);
+    ((0, i.oY)(e, HTMLTextAreaElement) && (t.innerHTML = e.value), (0, i.oY)(e, HTMLInputElement) && t.setAttribute('value', e.value));
 }
 function h(e, t) {
     if ((0, i.oY)(e, HTMLSelectElement)) {
@@ -74,7 +74,7 @@ function h(e, t) {
     }
 }
 function m(e, t) {
-    return (0, i.oY)(t, Element) && (_(e, t), (0, r.b)(e, t), p(e, t), h(e, t)), t;
+    return ((0, i.oY)(t, Element) && (_(e, t), (0, r.b)(e, t), p(e, t), h(e, t)), t);
 }
 async function g(e, t) {
     let n = e.querySelectorAll ? e.querySelectorAll('use') : [];
@@ -92,7 +92,7 @@ async function g(e, t) {
     if (i.length) {
         let t = 'http://www.w3.org/1999/xhtml',
             n = document.createElementNS(t, 'svg');
-        n.setAttribute('xmlns', t), (n.style.position = 'absolute'), (n.style.width = '0'), (n.style.height = '0'), (n.style.overflow = 'hidden'), (n.style.display = 'none');
+        (n.setAttribute('xmlns', t), (n.style.position = 'absolute'), (n.style.width = '0'), (n.style.height = '0'), (n.style.overflow = 'hidden'), (n.style.display = 'none'));
         let r = document.createElementNS(t, 'defs');
         n.appendChild(r);
         for (let e = 0; e < i.length; e++) r.appendChild(i[e]);

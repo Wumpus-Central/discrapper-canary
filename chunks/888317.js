@@ -16,7 +16,7 @@ function l(e) {
               id: 'view-activity',
               label: s.intl.string(s.t.GDWYR0),
               action: () => {
-                  null == l || l({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }), d();
+                  (null == l || l({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }), d());
               }
           })
         : null;

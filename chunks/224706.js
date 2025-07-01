@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(35282), n(415506);
+(n.d(t, { Z: () => k }), n(388685), n(35282), n(415506));
 var r = n(664751),
     i = n(990547),
     a = n(243814),
@@ -142,12 +142,12 @@ async function x(e) {
                   });
               })
               .catch((e) => {
-                  S.Z.show(A.kVF.LAUNCH_GAME_FAILURE, C.intl.string(C.t.YZEBdn)),
+                  (S.Z.show(A.kVF.LAUNCH_GAME_FAILURE, C.intl.string(C.t.YZEBdn)),
                       l.Z.dispatch({
                           type: 'GAME_LAUNCH_FAIL',
                           applicationId: t,
                           error: f
-                      });
+                      }));
               }))
         : (l.Z.dispatch({
               type: 'GAME_LAUNCH_FAIL',
@@ -158,11 +158,11 @@ async function x(e) {
 }
 let k = {
     addGame(e, t) {
-        l.Z.dispatch({
+        (l.Z.dispatch({
             type: 'RUNNING_GAME_ADD_OVERRIDE',
             pid: e
         }),
-            E.default.track(A.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+            E.default.track(A.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t }));
     },
     toggleOverlay(e, t, n) {
         let r = h.Z.getGameByName(e.name);
@@ -173,7 +173,7 @@ let k = {
                     i = b.yE(r, A.eHb.OVERLAY_DISABLED);
                 t && i !== t && (r = b.x9(r, A.eHb.OVERLAY_DISABLED));
                 let a = b.yE(r, A.eHb.OVERLAY_V3_DISABLED);
-                null != n && n !== a && (r = b.x9(r, A.eHb.OVERLAY_V3_DISABLED)), T.h(e.id, e.branchId, r);
+                (null != n && n !== a && (r = b.x9(r, A.eHb.OVERLAY_V3_DISABLED)), T.h(e.id, e.branchId, r));
                 return;
             }
         }
@@ -249,7 +249,7 @@ let k = {
         if (!h.Z.canFetchDetectableGames()) return;
         let e = h.Z.detectableGamesEtag;
         l.Z.wait(() => {
-            l.Z.dispatch({ type: 'GAMES_DATABASE_FETCH' }),
+            (l.Z.dispatch({ type: 'GAMES_DATABASE_FETCH' }),
                 v.Z.get({
                     url: A.ANM.APPLICATIONS_DETECTABLE,
                     headers: { 'If-None-Match': e },
@@ -288,7 +288,7 @@ let k = {
                               })
                             : l.Z.dispatch({ type: 'GAMES_DATABASE_FETCH_FAIL' });
                     }
-                );
+                ));
         });
     },
     reportUnverifiedGame(e) {

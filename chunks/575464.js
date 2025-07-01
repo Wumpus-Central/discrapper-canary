@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(35282);
+(n.d(t, { Z: () => m }), n(35282));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -16,14 +16,14 @@ function m(e) {
     var t, n;
     let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, inlineUsername: C = !0, onClick: x, onMouseEnter: v, 'aria-setsize': j, 'aria-posinset': O } = e,
         E = (0, a.e7)([p.Z], () => p.Z.getStatus(i.id)),
-        I = (0, o.JA)(String(i.id));
+        S = (0, o.JA)(String(i.id));
     return (0, r.jsx)(
         s.P3F,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function m(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -39,8 +39,8 @@ function m(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })(
@@ -54,7 +54,7 @@ function m(e) {
                     null != v && v(m);
                 }
             },
-            I
+            S
         )),
         (n = n =
             {

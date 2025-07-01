@@ -87,13 +87,13 @@ function j(e) {
                         look: i.zxk.Looks.FILLED,
                         color: i.zxk.Colors.BRAND,
                         onClick: () => {
-                            u(),
+                            (u(),
                                 (0, n.xf)(),
                                 b(),
                                 (0, _.ps)({
                                     initialSelectedDecoration: y,
                                     analyticsLocations: D
-                                });
+                                }));
                         },
                         children: T.intl.string(T.t.BVcYCw)
                     })

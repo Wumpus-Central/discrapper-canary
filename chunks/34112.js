@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(781311), n(539338), n(388685);
+(n.d(t, { Z: () => L }), n(781311), n(539338), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -34,7 +34,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function D(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -50,8 +50,8 @@ function D(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -210,7 +210,7 @@ function G(e) {
         I(d.id);
     }
     function q() {
-        X(), S(T.ZI.MEMBERS);
+        (X(), S(T.ZI.MEMBERS));
     }
     return (0, r.jsxs)(m.P3F, {
         className: s()(R.roleRow, {

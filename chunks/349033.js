@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
+(n.d(t, {
     WU: () => c,
     Xe: () => a,
     ZP: () => u
@@ -21,7 +21,7 @@ n.d(t, {
     n(413496),
     n(433524),
     n(997841),
-    n(539854);
+    n(539854));
 let i = /.+/g,
     a = 'NON_TOKEN';
 function o(e, t, n) {
@@ -44,11 +44,11 @@ function o(e, t, n) {
 function s(e, t) {
     if (null == e) return null;
     let n = [...e];
-    return (n.index = t), n;
+    return ((n.index = t), n);
 }
 class l {
     reset(e) {
-        (this._rules = []), (this._followers = {}), (this._nonTokenType = null != e ? e : a);
+        ((this._rules = []), (this._followers = {}), (this._nonTokenType = null != e ? e : a));
     }
     addRule(e) {
         let t,
@@ -62,13 +62,13 @@ class l {
                 cache: t
             });
         r.forEach((e) => {
-            null == this._followers[e] && (this._followers[e] = []),
+            (null == this._followers[e] && (this._followers[e] = []),
                 this._followers[e].push({
                     regex: a,
                     type: n,
                     validator: i,
                     cache: t
-                });
+                }));
         });
     }
     tokenize(e) {
@@ -81,7 +81,7 @@ class l {
             let e = this._getMatch(n, t, a + r.length);
             null != e ? (null != r && '' !== r && o.push(new c(s(r.match(i), a), this._nonTokenType)), (t = e), o.push(e), (a += t.length + r.length), (n = n.substring(t.length)), (r = '')) : ((r += n[0]), (n = n.substring(1)));
         }
-        return null != r && '' !== r && o.push(new c(s(r.match(i), a), this._nonTokenType)), o;
+        return (null != r && '' !== r && o.push(new c(s(r.match(i), a), this._nonTokenType)), o);
     }
     clearCache() {
         for (let e in (this._rules.forEach((e) => {
@@ -97,13 +97,13 @@ class l {
     _getMatch(e, t, n) {
         let r,
             i = null != t ? t.type : null;
-        return (null == t ? void 0 : t.end) === n && (r = o(e, this._followers[String(i)], n)), null == r && (r = o(e, this._rules, n)), r;
+        return ((null == t ? void 0 : t.end) === n && (r = o(e, this._followers[String(i)], n)), null == r && (r = o(e, this._rules, n)), r);
     }
     constructor(e = [], t) {
-        r(this, '_rules', []), r(this, '_followers', {}), r(this, '_nonTokenType', a), this.reset(t), e.forEach((e) => this.addRule(e));
+        (r(this, '_rules', []), r(this, '_followers', {}), r(this, '_nonTokenType', a), this.reset(t), e.forEach((e) => this.addRule(e)));
     }
 }
-r(l, 'NON_TOKEN_TYPE', void 0), r(l, 'Token', void 0);
+(r(l, 'NON_TOKEN_TYPE', void 0), r(l, 'Token', void 0));
 class c {
     get end() {
         return this.start + this.length;
@@ -122,18 +122,18 @@ class c {
         return this.match[e];
     }
     setData(e, t) {
-        null == this._data && (this._data = new Map()), this._data.set(e, t);
+        (null == this._data && (this._data = new Map()), this._data.set(e, t));
     }
     getData(e) {
         if (null != this._data) return this._data.get(e);
     }
     constructor(e, t) {
-        if ((r(this, 'match', void 0), r(this, 'start', void 0), r(this, 'type', void 0), r(this, '_data', void 0), e instanceof c)) (this.match = [...e.match]), (this.start = e.start), (this.type = e.type), null != e._data && (this._data = e._data);
+        if ((r(this, 'match', void 0), r(this, 'start', void 0), r(this, 'type', void 0), r(this, '_data', void 0), e instanceof c)) ((this.match = [...e.match]), (this.start = e.start), (this.type = e.type), null != e._data && (this._data = e._data));
         else if (null != e) {
             var n;
-            (this.match = [...e]), (this.start = 'string' == typeof e ? 0 : null != (n = e.index) ? n : 0), (this.type = t);
-        } else (this.match = []), (this.start = 0), (this.type = t);
+            ((this.match = [...e]), (this.start = 'string' == typeof e ? 0 : null != (n = e.index) ? n : 0), (this.type = t));
+        } else ((this.match = []), (this.start = 0), (this.type = t));
     }
 }
-(l.NON_TOKEN_TYPE = a), (l.Token = c);
+((l.NON_TOKEN_TYPE = a), (l.Token = c));
 let u = l;

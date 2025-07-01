@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J }), n(388685), n(35282), n(358797), n(539854), n(997841);
+(n.d(t, { Z: () => J }), n(388685), n(35282), n(358797), n(539854), n(997841));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -43,7 +43,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 P(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -59,11 +59,11 @@ function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -124,7 +124,7 @@ x && (window.addEventListener('focus', H), C.ZP.on('MAIN_WINDOW_FOCUS', H));
 let Y = window.Notification;
 if (k) {
     let e = {};
-    C.ZP.on('NOTIFICATION_CLICK', (t, n) => {
+    (C.ZP.on('NOTIFICATION_CLICK', (t, n) => {
         let r = e[n];
         null != r && (r.onclick(), r.close());
     }),
@@ -137,7 +137,7 @@ if (k) {
                 null != e[this.id] && (delete e[this.id], C.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
             }
             constructor(t, { body: n, icon: r }) {
-                P(this, 'id', Y._id++),
+                (P(this, 'id', Y._id++),
                     P(this, 'title', void 0),
                     P(this, 'body', void 0),
                     P(this, 'icon', void 0),
@@ -154,25 +154,25 @@ if (k) {
                         title: this.title,
                         body: this.body,
                         icon: this.icon
-                    });
+                    }));
             }
         }),
         P(r, 'permission', 'granted'),
         P(r, '_id', 0),
-        (Y = r);
+        (Y = r));
 }
 let W = {};
 if (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports('notifications')) {
     try {
-        C.ZP.on('NOTIFICATIONS_RECEIVED_RESPONSE', (e, t, n) => {
+        (C.ZP.on('NOTIFICATIONS_RECEIVED_RESPONSE', (e, t, n) => {
             if ('dismiss' === t) delete W[n];
             else {
                 var r, i, a;
                 let e = W[n];
-                N.isPlatformEmbedded ? C.ZP.focus() : window.focus(), (null == e || null == (r = e.options) ? void 0 : r.omitClickTracking) || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, e.trackingProps)), T.default.track(R.rMx.NOTIFICATION_CLICKED, e.clickTrackingProps)), null == e || null == (a = e.options) || null == (i = a.onClick) || i.call(a);
+                (N.isPlatformEmbedded ? C.ZP.focus() : window.focus(), (null == e || null == (r = e.options) ? void 0 : r.omitClickTracking) || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, e.trackingProps)), T.default.track(R.rMx.NOTIFICATION_CLICKED, e.clickTrackingProps)), null == e || null == (a = e.options) || null == (i = a.onClick) || i.call(a));
             }
         }),
-            C.ZP.invoke('NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS');
+            C.ZP.invoke('NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS'));
     } catch (e) {
         j.warn('Native notification setup failed with error: ', e);
     }
@@ -241,19 +241,19 @@ async function Q(e, t, n, r, i) {
         null != i.sound && !1 !== i.playSoundIfDisabled && (X(i.sound, null != (a = i.volume) ? a : 1, i.soundpack), (r.ping = !0), i.omitViewTracking || T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'VIEW' }, r)));
         return;
     }
-    t.includes('\0') && (j.warn('Notification title contains null character, setting to empty string'), (t = '')), n.includes('\0') && (j.warn('Notification body contains null character, setting to empty string'), (n = ''));
+    (t.includes('\0') && (j.warn('Notification title contains null character, setting to empty string'), (t = '')), n.includes('\0') && (j.warn('Notification body contains null character, setting to empty string'), (n = '')));
     let J = null != (o = null == i ? void 0 : i.tag) ? o : null,
         $ = B && (null == P ? void 0 : P.sound) === !0 && (null == P ? void 0 : P.authorizationStatus) === 'authorized',
         ee = (e, t) => {
             var n;
-            null == (n = i.onShown) || n.call(i), i.omitViewTracking || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'VIEW' }, t)), T.default.track(R.rMx.NOTIFICATION_VIEWED, Q)), U && setTimeout(() => e.close(), 5000);
+            (null == (n = i.onShown) || n.call(i), i.omitViewTracking || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'VIEW' }, t)), T.default.track(R.rMx.NOTIFICATION_VIEWED, Q)), U && setTimeout(() => e.close(), 5000));
         };
     if ((null == i.sound || $ || (X(i.sound, null != (s = i.volume) ? s : 1, i.soundpack), (r.ping = !0)), i.isUserAvatar && null != e && (e = await (0, p.D)(e)), x && y.Z.taskbarFlash && C.ZP.flashFrame(!0), B)) {
         let a = {
             title: t,
             body: n
         };
-        null != e && (a.icon = e), (null == i ? void 0 : i.sound) != null && (a.sound = V(i.sound, i.soundpack)), (null == i ? void 0 : i.tag) != null && (a.identifier = i.tag);
+        (null != e && (a.icon = e), (null == i ? void 0 : i.sound) != null && (a.sound = V(i.sound, i.soundpack)), (null == i ? void 0 : i.tag) != null && (a.identifier = i.tag));
         let o = d.Z.getCurrentConfig(
             { location: 'showNotification' },
             {
@@ -329,7 +329,7 @@ async function Q(e, t, n, r, i) {
     return (ee(g, r),
     (g.onclick = () => {
         var e;
-        N.isPlatformEmbedded ? C.ZP.focus() : (window.focus(), g.close()), i.omitClickTracking || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, r)), T.default.track(R.rMx.NOTIFICATION_CLICKED, q)), null == (e = i.onClick) || e.call(i);
+        (N.isPlatformEmbedded ? C.ZP.focus() : (window.focus(), g.close()), i.omitClickTracking || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, r)), T.default.track(R.rMx.NOTIFICATION_CLICKED, q)), null == (e = i.onClick) || e.call(i));
     }),
     M)
         ? {

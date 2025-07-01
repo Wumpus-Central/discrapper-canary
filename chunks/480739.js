@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     AT: () => c,
     cs: () => u,
     zQ: () => f
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(512722),
     i = n.n(r),
     a = n(570140);
@@ -24,10 +24,10 @@ function o(e, t, n) {
 let s = 60000,
     l = 3000;
 var c = (function (e) {
-        return (e.FORUM_CHANNEL = 'forum_channel'), e;
+        return ((e.FORUM_CHANNEL = 'forum_channel'), e);
     })({}),
     u = (function (e) {
-        return (e[(e.IMMEDIATE = 0)] = 'IMMEDIATE'), (e[(e.IMMEDIATE_WITH_COOLDOWN = 1)] = 'IMMEDIATE_WITH_COOLDOWN'), (e[(e.IMMEDIATE_WITH_DELAY = 2)] = 'IMMEDIATE_WITH_DELAY'), e;
+        return ((e[(e.IMMEDIATE = 0)] = 'IMMEDIATE'), (e[(e.IMMEDIATE_WITH_COOLDOWN = 1)] = 'IMMEDIATE_WITH_COOLDOWN'), (e[(e.IMMEDIATE_WITH_DELAY = 2)] = 'IMMEDIATE_WITH_DELAY'), e);
     })({});
 class d {
     maybeMarkSeen(e) {
@@ -52,15 +52,15 @@ class d {
             }
             if (e) {
                 let e = Date.now();
-                (t += e - r.startTimeMillis), n.push({ startTimeMillis: e });
+                ((t += e - r.startTimeMillis), n.push({ startTimeMillis: e }));
                 continue;
             }
             n.push(r);
         }
-        return i()(n.length < 2, 'there should only be a single left over data'), (this.seenIntervals = n), Math.round(t);
+        return (i()(n.length < 2, 'there should only be a single left over data'), (this.seenIntervals = n), Math.round(t));
     }
     constructor() {
-        o(this, 'seenIntervals', void 0), (this.seenIntervals = []);
+        (o(this, 'seenIntervals', void 0), (this.seenIntervals = []));
     }
 }
 class f {
@@ -72,17 +72,17 @@ class f {
             : new Promise(
                   ((this._lastFlushTimeMillis = Date.now()), 0 === e || 1 === e)
                       ? async (e) => {
-                            await t(), e();
+                            (await t(), e());
                         }
                       : (e) => {
                             setTimeout(async () => {
-                                await t(), e();
+                                (await t(), e());
                             }, 100);
                         }
               );
     }
     constructor({ id: e, windowId: t, isPaused: n }) {
-        o(this, 'trackedFeedItems', void 0),
+        (o(this, 'trackedFeedItems', void 0),
             o(this, '_lastFlushTimeMillis', void 0),
             o(this, '_pausedFeedItemIds', void 0),
             o(this, '_paused', void 0),
@@ -95,11 +95,11 @@ class f {
             o(this, 'onFeedItemUnseen', void 0),
             o(this, 'initialize', () => {
                 var e, t;
-                a.Z.subscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), a.Z.subscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), a.Z.subscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), a.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), a.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), null == (e = (t = this).onInitialize) || e.call(t);
+                (a.Z.subscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), a.Z.subscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), a.Z.subscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), a.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), a.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), null == (e = (t = this).onInitialize) || e.call(t));
             }),
             o(this, 'terminate', () => {
                 var e, t;
-                a.Z.unsubscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), a.Z.unsubscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), a.Z.unsubscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), a.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), a.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus), null == (e = (t = this).onTerminate) || e.call(t), this.maybeFlushSeenItems(0);
+                (a.Z.unsubscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), a.Z.unsubscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), a.Z.unsubscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), a.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), a.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus), null == (e = (t = this).onTerminate) || e.call(t), this.maybeFlushSeenItems(0));
             }),
             o(this, 'handleFeedItemFlush', (e) => {
                 let { id: t, force: n } = e;
@@ -123,7 +123,7 @@ class f {
                 if (r !== this._id) return;
                 this._paused && this._pausedFeedItemIds.delete(a);
                 let o = this.getTrackedFeedItem(a).maybeMarkUnseen(i);
-                null == (t = (n = this).onFeedItemUnseen) || t.call(n, a, o), this.maybeFlushSeenItems();
+                (null == (t = (n = this).onFeedItemUnseen) || t.call(n, a, o), this.maybeFlushSeenItems());
             }),
             o(this, 'getTrackedFeedItem', (e) => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new d()), this.trackedFeedItems[e])),
             o(
@@ -139,15 +139,15 @@ class f {
             ),
             o(this, 'handleAppStateUpdate', (e) => {
                 let { state: t } = e;
-                'active' === t && this._isReactNavigationFocused && this.resume(), 'background' === t && (this._isReactNavigationFocused && this.pause(), this.maybeFlushSeenItems(0));
+                ('active' === t && this._isReactNavigationFocused && this.resume(), 'background' === t && (this._isReactNavigationFocused && this.pause(), this.maybeFlushSeenItems(0)));
             }),
             o(this, 'clearPausedFeedItemIds', () => {
-                (this._pausedFeedItemIds = new Set()), (this._paused = !1);
+                ((this._pausedFeedItemIds = new Set()), (this._paused = !1));
             }),
             o(this, 'pause', () => {
                 if (this._paused) return;
                 let e = this.getVisibleFeedItemIds();
-                e.forEach((e) => {
+                (e.forEach((e) => {
                     this.handleFeedItemUnseen({
                         id: this._id,
                         feedItemId: e,
@@ -156,7 +156,7 @@ class f {
                     });
                 }),
                     (this._paused = !0),
-                    (this._pausedFeedItemIds = e);
+                    (this._pausedFeedItemIds = e));
             }),
             o(this, 'resume', () => {
                 this._paused &&
@@ -172,7 +172,7 @@ class f {
                     this.clearPausedFeedItemIds());
             }),
             o(this, 'handleReactNavigationFocus', (e) => {
-                (this._isReactNavigationFocused = e), this._isReactNavigationFocused ? this.resume() : this.pause();
+                ((this._isReactNavigationFocused = e), this._isReactNavigationFocused ? this.resume() : this.pause());
             }),
             o(this, 'handleWindowFocus', (e) => {
                 this._windowId === e.windowId && (e.focused ? this.resume() : this.pause());
@@ -183,6 +183,6 @@ class f {
             (this._pausedFeedItemIds = new Set()),
             (this._paused = null != n && n),
             (this._isReactNavigationFocused = !0),
-            (this._lastFlushTimeMillis = Date.now());
+            (this._lastFlushTimeMillis = Date.now()));
     }
 }

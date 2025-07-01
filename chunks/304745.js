@@ -1,4 +1,4 @@
-n.d(t, { M: () => I }), n(539854);
+(n.d(t, { M: () => S }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -22,16 +22,16 @@ var r = n(255367),
     j = n(981631),
     O = n(921944),
     E = n(388032);
-function I(e) {
-    let { channel: t, idle: n, whichPopoutIsOpen: I, setWhichPopoutIsOpen: S } = e,
+function S(e) {
+    let { channel: t, idle: n, whichPopoutIsOpen: S, setWhichPopoutIsOpen: I } = e,
         P = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
         Z = (0, p.KF)(t.id),
         N = (0, p.g5)(Z),
         T = Z !== p.jy.CAN_LAUNCH || P,
         { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: k } = (0, C.Z)(200, 300),
         M = (0, d.a)({ surface: s.eR.VOICE_LAUNCHER }),
-        D = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
-        L = !T,
+        L = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
+        D = !T,
         U = i.useCallback(
             (e) => {
                 'focus' !== e.type && R();
@@ -39,17 +39,17 @@ function I(e) {
             [R]
         ),
         B = (0, c.bp)() === j.IlC.POPOUT,
-        { analyticsLocations: F, parentAnalyticsLocation: G } = (0, b.ZP)(),
-        H = i.useCallback(() => {
-            (0, _.v)(G, _.d.ACTIVITY),
+        { analyticsLocations: F, parentAnalyticsLocation: H } = (0, b.ZP)(),
+        G = i.useCallback(() => {
+            ((0, _.v)(H, _.d.ACTIVITY),
                 (0, g.Z)({
                     channel: t,
                     openInPopout: B,
                     analyticsLocations: F
-                });
-        }, [F, t, B, G]),
+                }));
+        }, [F, t, B, H]),
         V = [];
-    T || V.push(o.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, h.Z)(t.id) && !T && V.push(o.z.ACTIVITY_GDM_ROCKET_SPARKLE), T || V.push(o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
+    (T || V.push(o.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, h.Z)(t.id) && !T && V.push(o.z.ACTIVITY_GDM_ROCKET_SPARKLE), T || V.push(o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP));
     let z = i.useRef(!1),
         W = i.useRef(null);
     return (0, r.jsx)(y.ZP, {
@@ -63,18 +63,18 @@ function I(e) {
                 (0, r.jsx)(a.yRy, {
                     targetElementRef: W,
                     fixed: !0,
-                    shouldShow: A && (I === v.D.ACTIVITY || null == I),
+                    shouldShow: A && (S === v.D.ACTIVITY || null == S),
                     animation: a.yRy.Animation.FADE,
                     animationPosition: 'top',
                     position: 'top',
                     align: 'center',
                     spacing: 16,
                     onRequestClose: () => {
-                        w(!1), null == S || S(void 0);
+                        (w(!1), null == I || I(void 0));
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: i } = e;
-                        return L
+                        return D
                             ? (0, r.jsx)(f.m, {
                                   ref: (e) => {
                                       null == i || i(e);
@@ -104,7 +104,7 @@ function I(e) {
                                                 for (var t = 1; t < arguments.length; t++) {
                                                     var n = null != arguments[t] ? arguments[t] : {},
                                                         r = Object.keys(n);
-                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                                         (r = r.concat(
                                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -112,7 +112,7 @@ function I(e) {
                                                         )),
                                                         r.forEach(function (t) {
                                                             var r;
-                                                            (r = n[t]),
+                                                            ((r = n[t]),
                                                                 t in e
                                                                     ? Object.defineProperty(e, t, {
                                                                           value: r,
@@ -120,8 +120,8 @@ function I(e) {
                                                                           configurable: !0,
                                                                           writable: !0
                                                                       })
-                                                                    : (e[t] = r);
-                                                        });
+                                                                    : (e[t] = r));
+                                                        }));
                                                 }
                                                 return e;
                                             })({ ref: W }, e)),
@@ -130,10 +130,10 @@ function I(e) {
                                                     children: (0, r.jsx)(x.Z, {
                                                         disabled: T,
                                                         'aria-label': N,
-                                                        label: L ? void 0 : N,
-                                                        isActivityActive: D,
+                                                        label: D ? void 0 : N,
+                                                        isActivityActive: L,
                                                         onClick: () => {
-                                                            H(), (i === o.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === o.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(O.L.TAKE_ACTION);
+                                                            (G(), (i === o.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === o.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(O.L.TAKE_ACTION));
                                                         },
                                                         onMouseEnter: U,
                                                         onMouseLeave: k

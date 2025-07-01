@@ -20,7 +20,7 @@ async function f(e, t) {
             let t = await (0, d.rO)(e, b),
                 n = null != (y = e.name) ? y : (0, p.yl)(s.default.extractTimestamp(e.id)),
                 r = (0, u.Z)(n);
-            (0, c.d)([new File([t], ''.concat('' !== r ? r : 'clip', '.mp4'), { type: 'video/mp4' })], j, i.d.ChannelMessage, { filesMetadata: [{ clip: e }] }),
+            ((0, c.d)([new File([t], ''.concat('' !== r ? r : 'clip', '.mp4'), { type: 'video/mp4' })], j, i.d.ChannelMessage, { filesMetadata: [{ clip: e }] }),
                 o.default.track(m.rMx.CLIP_SHARED, {
                     location_stack: g,
                     guild_id: j.guild_id,
@@ -28,7 +28,7 @@ async function f(e, t) {
                     channel_type: j.type,
                     application_id: e.applicationId,
                     clip_id: e.id
-                });
+                }));
         } catch (e) {
             throw (p.jF.error(e), e);
         }
@@ -43,7 +43,7 @@ async function f(e, t) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ async function f(e, t) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -59,8 +59,8 @@ async function f(e, t) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, n)),

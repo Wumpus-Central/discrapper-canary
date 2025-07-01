@@ -1,4 +1,4 @@
-i.d(e, { Z: () => p }), i(388685);
+(i.d(e, { Z: () => p }), i(388685));
 var s,
     n = i(255367),
     a = i(73800),
@@ -56,7 +56,7 @@ class p extends (s = a.Component) {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             u(this, 'anim', new o.Z.Value(0)),
             u(this, 'animate', (t) => {
                 o.Z.spring(this.anim, {
@@ -64,7 +64,7 @@ class p extends (s = a.Component) {
                     friction: 10,
                     tension: 100
                 }).start();
-            });
+            }));
     }
 }
 u(p, 'contextType', l.Sfi);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
+(n.d(t, { Z: () => P }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282));
 var r = n(255367),
     a = n(73800),
     i = n(442837),
@@ -28,7 +28,7 @@ let P = function (e) {
         T = a.useRef(null),
         A = (0, i.e7)([u.Z], () => u.Z.getApplication(t)),
         L = (0, i.e7)([u.Z], () => u.Z.getApplicationFetchState(t));
-    a.useEffect(() => {
+    (a.useEffect(() => {
         if (null != t && null == A) {
             let e = 'true' === new URLSearchParams(location.search).get('preview') || void 0;
             d.i6(t, { noCache: e });
@@ -37,13 +37,13 @@ let P = function (e) {
         a.useEffect(() => {
             d.T4({ applicationId: t });
         }, [t]),
-        a.useEffect(() => () => N(!0), [N]);
+        a.useEffect(() => () => N(!0), [N]));
     let R = null == A ? void 0 : A.storefront_available,
         [Z, k] = a.useState(null != E ? E : y.GlobalDiscoveryAppsSections.ABOUT),
         w = a.useCallback(
             (e) => {
                 var t;
-                null == (t = T.current) || t.scrollTo({ to: 0 }), k(y.GlobalDiscoveryAppsSections.ABOUT), n(e);
+                (null == (t = T.current) || t.scrollTo({ to: 0 }), k(y.GlobalDiscoveryAppsSections.ABOUT), n(e));
             },
             [n]
         );
@@ -59,7 +59,7 @@ let P = function (e) {
             previousView: D
         },
         U = a.useRef(B);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         U.current = B;
     }),
         a.useEffect(() => {
@@ -73,7 +73,7 @@ let P = function (e) {
                     referrer: document.referrer,
                     suggested_application_ids: null == e ? void 0 : e.map((e) => e.id)
                 });
-        }, [null == A ? void 0 : A.id, M]);
+        }, [null == A ? void 0 : A.id, M]));
     let F = a.useMemo(
             () => [
                 {
@@ -98,12 +98,12 @@ let P = function (e) {
         }, [Z, A]),
         H = a.useCallback(
             (e) => {
-                (0, m.zZ)(I.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
+                ((0, m.zZ)(I.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                     application_id: t,
                     tab_name: e
                 }),
                     k(e),
-                    e === y.GlobalDiscoveryAppsSections.ABOUT ? (0, _.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, _.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+                    e === y.GlobalDiscoveryAppsSections.ABOUT ? (0, _.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, _.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e)));
             },
             [t]
         ),

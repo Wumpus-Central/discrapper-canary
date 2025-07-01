@@ -13,7 +13,7 @@ e.exports = function (e, t, n, o, s, l) {
     var p = l.get(e);
     if (p && l.get(t)) return p == t;
     var h = !0;
-    l.set(e, t), l.set(t, e);
+    (l.set(e, t), l.set(t, e));
     for (var m = c; ++f < d; ) {
         var g = e[(_ = u[f])],
             E = t[_];
@@ -29,5 +29,5 @@ e.exports = function (e, t, n, o, s, l) {
             O = t.constructor;
         y != O && 'constructor' in e && 'constructor' in t && !('function' == typeof y && y instanceof y && 'function' == typeof O && O instanceof O) && (h = !1);
     }
-    return l.delete(e), l.delete(t), h;
+    return (l.delete(e), l.delete(t), h);
 };

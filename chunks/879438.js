@@ -16,6 +16,6 @@ let s = (0, r.U)((e, t) => ({
         let s = performance.now() - t().startTime;
         s > 60000 && (s = 60000);
         let c = { elapsed: s };
-        s - t().lastOutputLogTime > 1000 && (r.info('QuestHome asset loading duration so far: '.concat(s, 'ms')), (c.lastOutputLogTime = s)), null == t().logger && (c.logger = r), (0, i.j)(() => e(c));
+        (s - t().lastOutputLogTime > 1000 && (r.info('QuestHome asset loading duration so far: '.concat(s, 'ms')), (c.lastOutputLogTime = s)), null == t().logger && (c.logger = r), (0, i.j)(() => e(c)));
     }
 }));

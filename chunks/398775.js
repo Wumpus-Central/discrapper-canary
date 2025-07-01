@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Sz: () => O,
     of: () => C
 }),
     n(539854),
     n(388685),
-    n(642613);
+    n(642613));
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -26,7 +26,7 @@ var i = n(255367),
 async function j(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: r, setIsCancelling: s, analyticsLocations: l, analyticsLocation: a } = e;
     try {
-        s(!0),
+        (s(!0),
             r(!1),
             await (0, d.Mg)(
                 t,
@@ -39,9 +39,9 @@ async function j(e) {
                 l,
                 a
             ),
-            i();
+            i());
     } catch (e) {
-        r(!0), s(!1);
+        (r(!0), s(!1));
     }
 }
 function C(e) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -15,12 +15,12 @@ let u = r.forwardRef(function (e, t) {
         [g, b] = r.useState(!1);
     r.useImperativeHandle(t, () => ({ maybeChangeToAfterTab: () => (g || f('after'), g) }));
     let f = r.useCallback((e) => {
-        j(!0),
+        (j(!0),
             setTimeout(() => {
                 l.unstable_batchedUpdates(() => {
-                    'after' === e && b(!0), j(!1), a(e);
+                    ('after' === e && b(!0), j(!1), a(e));
                 });
-            }, 400);
+            }, 400));
     }, []);
     return (0, i.jsxs)(c.Ttm, {
         className: m.content,

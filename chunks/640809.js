@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { deprecateInterpolate: () => a });
+(n.r(t), n.d(t, { deprecateInterpolate: () => a }));
 var r = 'react-spring: ',
     i = !1;
 function a() {

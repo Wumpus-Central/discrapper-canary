@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     s: () => f,
     y: () => _
 }),
     n(368063),
     n(358797),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(889711),
     a = n(493773);
@@ -15,7 +15,7 @@ function o(e, t) {
         i = s(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -25,7 +25,7 @@ function s(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function l(e, t) {
@@ -88,7 +88,7 @@ function u(e, t) {
         i = arguments.length > 3 ? arguments[3] : void 0,
         { enabled: o = !0, fireOnMount: s = !0, fireOnDepsChange: l = !1 } = i,
         u = (0, r.useRef)(!1);
-    (0, a.Ng)(() => {
+    ((0, a.Ng)(() => {
         let n = e.current;
         o &&
             s &&
@@ -101,7 +101,7 @@ function u(e, t) {
         (0, r.useLayoutEffect)(() => {
             let n = e.current;
             o && l && u.current && null != n && t(c(n));
-        }, [t, e, ...n]);
+        }, [t, e, ...n]));
 }
 function d(e) {
     let t = (0, r.useId)(),
@@ -121,15 +121,15 @@ function f(e, t) {
         o = (0, r.useId)(),
         { enabled: s = !0 } = a,
         c = (0, r.useRef)(null);
-    l(o, e.current),
+    (l(o, e.current),
         u(e, t, n, a),
         (0, r.useEffect)(() => {
             if (!s) return;
             let n = e.current;
             if (null == n) return;
             let r = (0, i.pP)(o, n, t);
-            if (((c.current = r), null != r)) return (0, i.YP)(r, n), () => (0, i.UC)(r, n);
-        }, [s, o, t, e, ...n]);
+            if (((c.current = r), null != r)) return ((0, i.YP)(r, n), () => (0, i.UC)(r, n));
+        }, [s, o, t, e, ...n]));
 }
 function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -142,7 +142,7 @@ function _(e) {
             if (!a) return;
             let e = s.current,
                 t = o.current;
-            if (null != e && null != t) return (0, i.YP)(t, e), () => (0, i.UC)(t, e);
+            if (null != e && null != t) return ((0, i.YP)(t, e), () => (0, i.UC)(t, e));
         }, [a, s, o, ...t]),
         s
     );

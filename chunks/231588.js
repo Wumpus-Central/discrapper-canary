@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => f });
+(t.r(n), t.d(n, { default: () => f }));
 var l = t(255367),
     r = t(73800),
     a = t(442837),

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(255367),
     i = n(73800),
     l = n(70097),
     o = n(576645),
-    s = n(489953);
-function a(e) {
+    a = n(489953);
+function s(e) {
     let { children: t, channel: n } = e,
-        a = (0, i.useRef)(null);
+        s = (0, i.useRef)(null);
     return ((0, o.J)(n, () => {
-        if (null != a.current) {
-            let e = a.current;
+        if (null != s.current) {
+            let e = s.current;
             e.play();
             let t = setTimeout(() => {
                 e.pause();
@@ -21,19 +21,19 @@ function a(e) {
     }),
     n.isHDStreamSplashed)
         ? (0, r.jsxs)('div', {
-              className: s.container,
+              className: a.container,
               onMouseEnter: () => {
-                  null != a.current && a.current.play();
+                  null != s.current && s.current.play();
               },
               onMouseLeave: () => {
-                  null != a.current && a.current.pause();
+                  null != s.current && s.current.pause();
               },
               children: [
                   (0, r.jsx)('div', {
-                      className: s.videoContainer,
+                      className: a.videoContainer,
                       children: (0, r.jsx)(l.Z, {
-                          ref: a,
-                          className: s.video,
+                          ref: s,
+                          className: a.video,
                           muted: !0,
                           loop: !0,
                           preload: 'auto',
@@ -44,7 +44,7 @@ function a(e) {
                       })
                   }),
                   (0, r.jsx)('div', {
-                      className: s.content,
+                      className: a.content,
                       children: t
                   })
               ]

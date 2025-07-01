@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => F }), n(388685);
+(n.d(t, { Z: () => F }), n(388685));
 var a,
     o = n(392711),
     s = n.n(o),
@@ -35,16 +35,16 @@ function I(e, t) {
 }
 function T(e, t) {
     let n = e[t];
-    return null == n && ((n = {}), (e[t] = n)), n;
+    return (null == n && ((n = {}), (e[t] = n)), n);
 }
 function S(e) {
     var t;
     let n = null != (t = m[d.ME]) ? t : {},
         r = {};
-    s().each(n, (t, n) => {
+    (s().each(n, (t, n) => {
         t.channelId !== e && (r[n] = t);
     }),
-        (m[d.ME] = r);
+        (m[d.ME] = r));
 }
 function A(e) {
     var t;
@@ -77,8 +77,8 @@ function w(e) {
         let [r] = L(e.guildId, n);
         t = t || r;
     }
-    for (let n of e.removedVoiceStateUsers) R(e.guildId, n, () => null), (t = !0);
-    return t && h++, t;
+    for (let n of e.removedVoiceStateUsers) (R(e.guildId, n, () => null), (t = !0));
+    return (t && h++, t);
 }
 function D(e) {
     let { userId: t, channelId: n, platform: r } = e;
@@ -114,22 +114,22 @@ function x(e) {
 function k(e) {
     let { user: t, sessionId: n } = e,
         a = null != r && r !== t.id;
-    return a && ((m = {}), (b = {}), (O = {}), (y = {}), E.clear()), (r = t.id), (i = n), a;
+    return (a && ((m = {}), (b = {}), (O = {}), (y = {}), E.clear()), (r = t.id), (i = n), a);
 }
 function M() {
-    (m = {}), (b = {}), (O = {}), (y = {}), E.clear();
+    ((m = {}), (b = {}), (O = {}), (y = {}), E.clear());
 }
 function j(e) {
     let { voiceStates: t, user: n, sessionId: a } = e;
     for (let [e, n] of ((m = {}), (b = {}), (O = {}), (y = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) R(e, t, () => new u.Z(r));
-    (r = n.id), (i = a);
+    ((r = n.id), (i = a));
 }
 function U(e) {
     let { guild: t } = e;
-    s().forEach(m[t.id], (e) => {
+    (s().forEach(m[t.id], (e) => {
         R(t.id, e.userId, () => null);
     }),
-        delete m[t.id];
+        delete m[t.id]);
 }
 function G(e) {
     let { channel: t } = e;

@@ -4,7 +4,7 @@ var r = n(134432),
 function i(e, t) {
     let n;
     if (null == e.image) return null;
-    null == t && (t = window.screen.width * (0, r.x_)()), (t = (0, r.oO)(t));
+    (null == t && (t = window.screen.width * (0, r.x_)()), (t = (0, r.oO)(t)));
     let i = window.GLOBAL_ENV.CDN_HOST;
     if (null != i) {
         var a;

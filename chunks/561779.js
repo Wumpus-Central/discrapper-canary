@@ -1,4 +1,4 @@
-n.d(t, { i: () => T }), n(642613), n(415506), n(388685);
+(n.d(t, { i: () => T }), n(642613), n(415506), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -30,7 +30,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -252,7 +252,7 @@ class T extends (r = a.PureComponent) {
     }
     reset() {
         var e, t, n, r;
-        null == (t = this.containerRef.current) || null == (e = t.ownerDocument) || e.removeEventListener('mousemove', this.handleMouseMove, !0), null == (r = this.containerRef.current) || null == (n = r.ownerDocument) || n.removeEventListener('mouseup', this.handleMouseUp, !0);
+        (null == (t = this.containerRef.current) || null == (e = t.ownerDocument) || e.removeEventListener('mousemove', this.handleMouseMove, !0), null == (r = this.containerRef.current) || null == (n = r.ownerDocument) || n.removeEventListener('mouseup', this.handleMouseUp, !0));
     }
     scaleValue(e) {
         return (100 * (e - this.state.min)) / this.state.range;
@@ -278,10 +278,10 @@ class T extends (r = a.PureComponent) {
         let u = c - l,
             d = (e.clientX - r) / u,
             f = a[i] + 100 * d;
-        null != (t = this.props.equidistant ? O(f, a) : O(this.unscaleValue(f), o)) && (null == s || s(o[t])), this.setState({ newClosestIndex: t });
+        (null != (t = this.props.equidistant ? O(f, a) : O(this.unscaleValue(f), o)) && (null == s || s(o[t])), this.setState({ newClosestIndex: t }));
     }
     constructor(e) {
-        super(e),
+        (super(e),
             g(this, 'containerRef', a.createRef()),
             g(this, 'grabberRef', a.createRef()),
             g(this, 'moveGrabber', (e) => {
@@ -294,9 +294,9 @@ class T extends (r = a.PureComponent) {
                     let i = r + e,
                         a = t[i];
                     if (null == a) return;
-                    (l.value = a), (l.closestMarkerIndex = i), (l.newClosestIndex = i);
+                    ((l.value = a), (l.closestMarkerIndex = i), (l.newClosestIndex = i));
                 } else l.value = c().clamp(n + e, r, i);
-                this.setState(l), l.value !== this.state.value && (null == a || a(l.value), null == o || o(l.value));
+                (this.setState(l), l.value !== this.state.value && (null == a || a(l.value), null == o || o(l.value)));
             }),
             g(this, 'handleContainerMouseDown', (e) => {
                 let t,
@@ -324,17 +324,17 @@ class T extends (r = a.PureComponent) {
                         }
                     );
                     if (-1 === e) return;
-                    this.setState({ closestMarkerIndex: e }), (t = l[e]);
+                    (this.setState({ closestMarkerIndex: e }), (t = l[e]));
                 } else {
                     let n = r - i;
-                    (t = i + n * h),
+                    ((t = i + n * h),
                         this.setState({
                             value: t,
                             dragStartValue: t
                         }),
-                        this.handleMouseDown(e);
+                        this.handleMouseDown(e));
                 }
-                null != o && o(t), null != a && a(t);
+                (null != o && o(t), null != a && a(t));
             }),
             g(this, 'handleKeyDown', (e) => {
                 let { disabled: t, orientation: n, keyboardStep: r = 1 } = this.props;
@@ -344,13 +344,13 @@ class T extends (r = a.PureComponent) {
                     o = [];
                 switch (n) {
                     case 'horizontal':
-                        (a = ['ArrowRight']), (o = ['ArrowLeft']);
+                        ((a = ['ArrowRight']), (o = ['ArrowLeft']));
                         break;
                     case 'vertical':
-                        (a = ['ArrowUp']), (o = ['ArrowDown']);
+                        ((a = ['ArrowUp']), (o = ['ArrowDown']));
                         break;
                     default:
-                        (a = ['ArrowRight', 'ArrowUp']), (o = ['ArrowLeft', 'ArrowDown']);
+                        ((a = ['ArrowRight', 'ArrowUp']), (o = ['ArrowLeft', 'ArrowDown']));
                 }
                 o.includes(i) ? (e.preventDefault(), e.stopPropagation(), this.moveGrabber(-r)) : a.includes(i) && (e.preventDefault(), e.stopPropagation(), this.moveGrabber(r));
             }),
@@ -368,10 +368,10 @@ class T extends (r = a.PureComponent) {
                 });
             }),
             g(this, 'handleMouseUp', (e) => {
-                e.stopPropagation(), this.reset();
+                (e.stopPropagation(), this.reset());
                 let { onValueChange: t, stickToMarkers: n } = this.props,
                     { newClosestIndex: r } = this.state;
-                n && null != r
+                (n && null != r
                     ? (null == t || t(this.state.sortedMarkers[r]),
                       this.setState({
                           newClosestIndex: null,
@@ -381,10 +381,10 @@ class T extends (r = a.PureComponent) {
                     this.setState({
                         active: !1,
                         dragStartValue: void 0
-                    });
+                    }));
             }),
             g(this, 'handleMouseMove', (e) => {
-                e.preventDefault(), this.props.stickToMarkers ? this.moveStaggered(e) : this.moveSmoothly(e);
+                (e.preventDefault(), this.props.stickToMarkers ? this.moveStaggered(e) : this.moveSmoothly(e));
             }),
             g(this, 'onFocus', () => {
                 this.setState({ focused: !0 });
@@ -400,7 +400,7 @@ class T extends (r = a.PureComponent) {
                     s = n - t,
                     l = o - a,
                     c = Math.min(Math.max(t + ((e.clientX - a) / l) * s, t), n);
-                null == r || r(c), this.setState({ value: c });
+                (null == r || r(c), this.setState({ value: c }));
             }),
             (this.state = E(
                 {
@@ -409,7 +409,7 @@ class T extends (r = a.PureComponent) {
                     dragStartValue: void 0
                 },
                 I(e, e.initialValue)
-            ));
+            )));
     }
 }
 function S(e) {

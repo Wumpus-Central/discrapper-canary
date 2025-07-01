@@ -21,7 +21,7 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -37,11 +37,11 @@ function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -57,12 +57,12 @@ function l(e, t) {
     );
 }
 var c = (function (e) {
-    return (e.GET_PREMIUM = 'GET_PREMIUM'), (e.JOIN_GUILD = 'JOIN_GUILD'), (e.UNAVAILABLE = 'UNAVAILABLE'), e;
+    return ((e.GET_PREMIUM = 'GET_PREMIUM'), (e.JOIN_GUILD = 'JOIN_GUILD'), (e.UNAVAILABLE = 'UNAVAILABLE'), e);
 })({});
 let u = (e) => {
         let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: r, emojiComesFromCurrentGuild: i, isDiscoverable: a } = e,
             o = 'Custom Emoji Popout';
-        return t && !n && a ? (o = 'Custom Emoji Popout (Cross-Server)') : t || !n || r ? t || n || (o = a ? 'Custom Emoji Popout (Upsell Not-Joined Cross-Server)' : 'Custom Emoji Popout (Soft Upsell)') : (o = i ? 'Custom Emoji Popout (Upsell Joined Current-Server)' : 'Custom Emoji Popout (Upsell Joined Cross-Server)'), o;
+        return (t && !n && a ? (o = 'Custom Emoji Popout (Cross-Server)') : t || !n || r ? t || n || (o = a ? 'Custom Emoji Popout (Upsell Not-Joined Cross-Server)' : 'Custom Emoji Popout (Soft Upsell)') : (o = i ? 'Custom Emoji Popout (Upsell Joined Current-Server)' : 'Custom Emoji Popout (Upsell Joined Cross-Server)'), o);
     },
     d = (e) => {
         let { sourceType: t, expressionSourceApplication: n, isPremium: a, hasJoinedEmojiSourceGuild: o, isUnusableRoleSubscriptionEmoji: s, isDiscoverable: l, emojiComesFromCurrentGuild: c, userIsRoleSubscriber: u, isRoleSubscriptionEmoji: d, shouldHideRoleSubscriptionCTA: f, onOpenPremiumSettings: _ } = e,

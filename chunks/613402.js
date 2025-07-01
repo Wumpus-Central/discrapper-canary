@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(570140),
     i = n(147913),
     a = n(885110);
@@ -17,7 +17,7 @@ function o(e, t, n) {
 }
 class s extends i.Z {
     constructor(...e) {
-        super(...e), o(this, 'stores', new Map().set(a.Z, l));
+        (super(...e), o(this, 'stores', new Map().set(a.Z, l)));
     }
 }
 function l() {

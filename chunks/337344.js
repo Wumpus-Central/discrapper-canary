@@ -25,12 +25,12 @@ function m(e) {
                 size: i.zxk.Sizes.SMALL,
                 color: i.zxk.Colors.PRIMARY,
                 onClick: () => {
-                    o.Z.close(),
+                    (o.Z.close(),
                         (0, l.iD)(t, {
                             type: s.z.ROLES,
                             roles: { [n.id]: n },
                             returnToSection: c.pNK.ROLES
-                        });
+                        }));
                 },
                 children: [
                     d.intl.string(d.t.arFPfH),

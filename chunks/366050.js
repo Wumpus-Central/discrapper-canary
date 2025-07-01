@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var a,
     o = n(442837),
     s = n(570140),
@@ -22,7 +22,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -75,7 +75,7 @@ function E(e) {
         props: s,
         docked: null != (n = s.docked) && n
     };
-    p.set(a, c), o === l.NYg.VIDEO ? null == r && (r = a) : o === l.NYg.EMBED_IFRAME && null == i && (i = a);
+    (p.set(a, c), o === l.NYg.VIDEO ? null == r && (r = a) : o === l.NYg.EMBED_IFRAME && null == i && (i = a));
 }
 function b(e) {
     let { id: t } = e;
@@ -100,11 +100,11 @@ function y(e) {
     if (null == t || (r !== t && i !== t)) return !1;
     {
         let e = new Map();
-        p.forEach((t, r) => {
+        (p.forEach((t, r) => {
             e.set(r, _(d({}, t), { position: n }));
         }),
             (p = e),
-            (m = n);
+            (m = n));
     }
 }
 function O(e) {
@@ -139,19 +139,19 @@ function S(e) {
     null != n && (n.component === l.NYg.VIDEO ? (r = t) : n.component === l.NYg.EMBED_IFRAME && (i = t));
 }
 function A() {
-    (r = null), (i = null), (p = new Map());
+    ((r = null), (i = null), (p = new Map()));
 }
 class N extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
-            (m = l.VD2.BOTTOM_RIGHT),
+            ((m = l.VD2.BOTTOM_RIGHT),
                 (g = {
                     [c.cL.VIDEO]: c.l8[c.cL.VIDEO],
                     [c.cL.CAMERA_PREVIEW]: c.l8[c.cL.CAMERA_PREVIEW]
-                });
+                }));
             return;
         }
-        (m = e.openPosition), (g = e.pipWidths);
+        ((m = e.openPosition), (g = e.pipWidths));
     }
     get pipWindow() {
         var e;
@@ -185,7 +185,7 @@ class N extends (a = o.ZP.PersistedStore) {
         };
     }
 }
-u(N, 'displayName', 'PictureInPictureStore'),
+(u(N, 'displayName', 'PictureInPictureStore'),
     u(N, 'persistKey', 'PictureInPictureStore'),
     u(N, 'migrations', [
         (e) => {
@@ -198,7 +198,7 @@ u(N, 'displayName', 'PictureInPictureStore'),
                 openPosition: null != (n = e.openPosition) ? n : l.VD2.BOTTOM_RIGHT
             };
         }
-    ]);
+    ]));
 let C = new N(s.Z, {
     PICTURE_IN_PICTURE_OPEN: E,
     PICTURE_IN_PICTURE_CLOSE: b,

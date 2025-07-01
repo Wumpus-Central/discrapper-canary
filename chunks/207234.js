@@ -27,7 +27,7 @@ let u = () => {
         comboKeysBindGlobal: !0,
         action: r().debounce(
             () => {
-                if (c.S.hasSubscribers(d.CkL.MARK_TOP_INBOX_CHANNEL_READ)) return c.S.dispatch(d.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
+                if (c.S.hasSubscribers(d.CkL.MARK_TOP_INBOX_CHANNEL_READ)) return (c.S.dispatch(d.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1);
             },
             100,
             { leading: !0 }

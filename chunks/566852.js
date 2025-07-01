@@ -1,4 +1,4 @@
-n.d(e, { default: () => m }), n(388685);
+(n.d(e, { default: () => m }), n(388685));
 var l = n(255367),
     i = n(73800),
     s = n(481060),
@@ -76,19 +76,19 @@ class x extends i.Component {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             p(this, 'handleClose', () => {
                 let { onClose: t } = this.props;
                 null == t || t();
             }),
             p(this, 'handleStreamWithoutSound', () => {
                 let { handleStream: t, onClose: e, pid: n } = this.props;
-                o.Z.continueNonelevatedProcess(n), t(), e();
+                (o.Z.continueNonelevatedProcess(n), t(), e());
             }),
             p(this, 'handleRequestElevated', () => {
                 let { handleStream: t, onClose: e, pid: n } = this.props;
-                o.Z.requestElevatedProcess(n), t(), e();
-            });
+                (o.Z.requestElevatedProcess(n), t(), e());
+            }));
     }
 }
 let m = x;

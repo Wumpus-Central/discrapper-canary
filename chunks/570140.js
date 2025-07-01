@@ -10,7 +10,7 @@ var i,
     l = n(464847),
     c = n(180893),
     u = (function (e) {
-        return (e[(e.Early = 0)] = 'Early'), (e[(e.Database = 1)] = 'Database'), (e[(e.Default = 2)] = 'Default'), e;
+        return ((e[(e.Early = 0)] = 'Early'), (e[(e.Database = 1)] = 'Database'), (e[(e.Default = 2)] = 'Default'), e);
     })({});
 r = new o.Z({ persist: null != (i = s.K.get(c.E)) && i });
 let d = new a.Up(2, r, { addBreadcrumb: l.Z });

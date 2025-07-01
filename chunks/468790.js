@@ -12,7 +12,7 @@ var e = n(764908),
     y = function (t) {
         if (!i(t)) return !1;
         try {
-            return a(f, [], t), !0;
+            return (a(f, [], t), !0);
         } catch (t) {
             return !1;
         }
@@ -31,7 +31,7 @@ var e = n(764908),
             return !0;
         }
     };
-(h.sham = !0),
+((h.sham = !0),
     (t.exports =
         !a ||
         o(function () {
@@ -46,4 +46,4 @@ var e = n(764908),
             );
         })
             ? h
-            : y);
+            : y));

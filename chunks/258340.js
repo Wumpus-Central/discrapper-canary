@@ -1,4 +1,4 @@
-r.d(t, { Z: () => h }), r(388685), r(410992), r(227481), r(730884), r(20464), r(341884), r(364341), r(629680), r(505025), r(918970), r(121784), r(644351), r(146733), r(82823), r(642613);
+(r.d(t, { Z: () => h }), r(388685), r(410992), r(227481), r(730884), r(20464), r(341884), r(364341), r(629680), r(505025), r(918970), r(121784), r(644351), r(146733), r(82823), r(642613));
 var n = r(73800),
     a = r(392711),
     i = r(633302),
@@ -25,7 +25,7 @@ let s = (e) => Math.round(4 * e) / 4,
         }, [e.h, e.w]);
         let y = n.useCallback(() => {
             let e, t;
-            return 60 === h ? p(() => 45) : (d((t) => (null != (e = Math.max(3, Math.floor(0.75 * t))) ? e : t)), m((e) => (null != (t = Math.max(6, Math.floor(0.8 * e))) ? t : e)), null != e && e < 16.875 && p(() => 28)), !0;
+            return (60 === h ? p(() => 45) : (d((t) => (null != (e = Math.max(3, Math.floor(0.75 * t))) ? e : t)), m((e) => (null != (t = Math.max(6, Math.floor(0.8 * e))) ? t : e)), null != e && e < 16.875 && p(() => 28)), !0);
         }, [h, 30]);
         return {
             SPEED: t,
@@ -70,7 +70,7 @@ let s = (e) => Math.round(4 * e) / 4,
                 for (let i = 0; i < w; i++) {
                     if (0 === n[i]) continue;
                     let l = a[i];
-                    (l.position.x -= l.velocity.x * t), (l.position.y -= l.velocity.y * t), (l.velocity.x *= h ** t), (l.velocity.y *= h ** t), (l.rotation += l.angularVelocity * t), (l.velocity.y -= r * t), f(l, e) && ((E.particleStates.current[i] = 0), (E.activeParticles.current -= 1), (E.freeParticles.current += 1));
+                    ((l.position.x -= l.velocity.x * t), (l.position.y -= l.velocity.y * t), (l.velocity.x *= h ** t), (l.velocity.y *= h ** t), (l.rotation += l.angularVelocity * t), (l.velocity.y -= r * t), f(l, e) && ((E.particleStates.current[i] = 0), (E.activeParticles.current -= 1), (E.freeParticles.current += 1)));
                 }
                 0 === E.activeParticles.current && (S.current = !1);
             },
@@ -180,7 +180,7 @@ let s = (e) => Math.round(4 * e) / 4,
                     }
                     for (let e = 0; e < w; e += 1)
                         if (0 === E.particleStates.current[e]) {
-                            (E.particles.current[e] = {
+                            ((E.particles.current[e] = {
                                 key: r,
                                 position: o,
                                 velocity: u,
@@ -190,7 +190,7 @@ let s = (e) => Math.round(4 * e) / 4,
                             }),
                                 (E.particleStates.current[e] = 1),
                                 (E.freeParticles.current -= 1),
-                                (E.activeParticles.current += 1);
+                                (E.activeParticles.current += 1));
                             break;
                         }
                     m(E);

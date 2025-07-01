@@ -9,7 +9,7 @@ var r = n(570140),
 let u = {
     openPrivateChannelAsSidebar(e) {
         let { channelId: t, messageId: n, baseChannelId: a, hasSingleMessageRequest: o } = e;
-        r.Z.dispatch({
+        (r.Z.dispatch({
             type: 'SIDEBAR_VIEW_CHANNEL',
             sidebarType: l.tI.VIEW_MESSAGE_REQUEST,
             baseChannelId: a,
@@ -25,7 +25,7 @@ let u = {
                       messageId: n,
                       flash: !0
                   })
-                : s.Z.fetchMessages({ channelId: t });
+                : s.Z.fetchMessages({ channelId: t }));
     },
     openChannelAsSidebar(e) {
         let { guildId: t, channelId: n, baseChannelId: o, flash: c = !0, details: u } = e;
@@ -64,7 +64,7 @@ let u = {
     },
     openThreadAsSidebar(e) {
         let { guildId: t, baseChannelId: n, channelId: o, flash: c = !0, details: u } = e;
-        r.Z.dispatch({
+        (r.Z.dispatch({
             type: 'SIDEBAR_VIEW_CHANNEL',
             sidebarType: l.tI.VIEW_THREAD,
             baseChannelId: n,
@@ -81,7 +81,7 @@ let u = {
                 : s.Z.fetchMessages({
                       guildId: t,
                       channelId: o
-                  });
+                  }));
     },
     closeChannelSidebar(e) {
         r.Z.dispatch({

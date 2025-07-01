@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'brewer',
         author: 'timothée poisot (http://github.com/tpoisot)',
@@ -19,4 +19,4 @@
         base0E: '#756bb1',
         base0F: '#b15928'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

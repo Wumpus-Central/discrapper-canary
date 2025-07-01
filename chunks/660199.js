@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Ay: () => u,
     He: () => f,
     K_: () => l,
@@ -7,7 +7,7 @@ n.d(t, {
 }),
     n(413496),
     n(433524),
-    n(35282);
+    n(35282));
 var r = n(913527),
     i = n.n(r),
     a = n(55935),
@@ -30,7 +30,7 @@ let s = {
             try {
                 a = i()(e.toDate()).fromNow();
             } catch (e) {}
-            return i().relativeTimeThreshold('s', t), i().relativeTimeThreshold('ss', n), i().relativeTimeThreshold('m', r), null != a ? a : i()(e.toDate()).fromNow();
+            return (i().relativeTimeThreshold('s', t), i().relativeTimeThreshold('ss', n), i().relativeTimeThreshold('m', r), null != a ? a : i()(e.toDate()).fromNow());
         }
     },
     l = 'f';

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(544891),
     i = n(704215),
     a = n(147913),
@@ -28,7 +28,7 @@ function g(e, t, n) {
 }
 class E extends a.Z {
     findEligibleGuild() {
-        let e = Object.values(l.Z.getGuilds()),
+        let e = l.Z.getGuildsArray(),
             t = u.default.getCurrentUser();
         return e.find((e) => {
             let n = (0, f.gV)(e.id, 'guild_powerups_system_message'),
@@ -47,11 +47,11 @@ class E extends a.Z {
         if (null != n) {
             this.isRequestInProgress = !0;
             try {
-                await r.tn.post({
+                (await r.tn.post({
                     url: h.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(n.id),
                     rejectWithError: !0
                 }),
-                    (0, o.EW)(i.z.TIERLESS_BOOSTING_SYSTEM_MESSAGE);
+                    (0, o.EW)(i.z.TIERLESS_BOOSTING_SYSTEM_MESSAGE));
             } catch (e) {
                 d.Z.captureException(e);
             } finally {
@@ -60,7 +60,7 @@ class E extends a.Z {
         }
     }
     constructor(...e) {
-        super(...e), g(this, 'actions', { POST_CONNECTION_OPEN: () => this.maybeSendSystemMessage() }), g(this, 'isRequestInProgress', !1);
+        (super(...e), g(this, 'actions', { POST_CONNECTION_OPEN: () => this.maybeSendSystemMessage() }), g(this, 'isRequestInProgress', !1));
     }
 }
 let b = new E();

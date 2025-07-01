@@ -1,10 +1,10 @@
-n.d(t, { U: () => G }), n(35282);
+(n.d(t, { U: () => G }), n(35282));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(596454),
-    a = n(99690),
+    a = n(596454),
+    s = n(99690),
     c = n(906732),
     u = n(812206),
     d = n(336197),
@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(833592),
     C = n(497089),
     j = n(178480),
-    E = n(418316),
-    S = n(382865),
+    S = n(418316),
+    E = n(382865),
     x = n(526146),
     I = n(400565),
     P = n(148789),
@@ -32,16 +32,16 @@ var r = n(255367),
     A = n(756688),
     R = n(886765);
 function D(e) {
-    var t, n, i, l, s;
+    var t, n, i, l, a;
     let { item: c } = e,
         u = null == (t = c.message) ? void 0 : t.content;
     if (null == u) return (0, r.jsx)('div', {});
-    let d = null != (s = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id)) ? s : new m.Z(null == (l = c.message) ? void 0 : l.author),
+    let d = null != (a = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id)) ? a : new m.Z(null == (l = c.message) ? void 0 : l.author),
         p = h.Z.parse(u);
     return (0, r.jsxs)('div', {
         className: T.messagePreviewContainer,
         children: [
-            (0, r.jsx)(a.Z, {
+            (0, r.jsx)(s.Z, {
                 user: d,
                 size: o.EFr.SIZE_24
             }),
@@ -100,9 +100,9 @@ function k(e) {
 }
 let U = i.memo(function (e) {
         var t;
-        let { item: l, ackedBeforeId: a } = e,
+        let { item: l, ackedBeforeId: s } = e,
             { analyticsLocations: u } = (0, c.ZP)(),
-            p = (0, x.I)(l, a),
+            p = (0, x.I)(l, s),
             g = i.useCallback(async () => {
                 if ((p || (0, v.wt)(l), null != l.item_enum && l.item_enum === C.AM.FIND_FRIENDS))
                     return void (0, o.ZDy)(async () => {
@@ -114,7 +114,7 @@ let U = i.memo(function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -122,7 +122,7 @@ let U = i.memo(function (e) {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -130,8 +130,8 @@ let U = i.memo(function (e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({ source: 'Notification Center' }, t)
@@ -172,14 +172,14 @@ let U = i.memo(function (e) {
                   applicationId: l.applicationId
               }));
         let b = null != l.local_id,
-            S = (0, E.Z)({
+            E = (0, S.Z)({
                 item: l,
                 renderApplication: (e) => (0, r.jsx)(k, { applicationId: e })
             }),
             { emoji_id: Z, emoji_name: A } = l,
             R =
                 null != Z || null != A
-                    ? (0, r.jsx)(s.Z, {
+                    ? (0, r.jsx)(a.Z, {
                           className: T.emoji,
                           emojiId: Z,
                           emojiName: A
@@ -191,7 +191,7 @@ let U = i.memo(function (e) {
                 (0, r.jsxs)(o.kL8, {
                     className: T.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': S,
+                    'aria-label': E,
                     onClick: g,
                     children: [
                         p ? null : (0, r.jsx)('div', { className: T.unread }),
@@ -203,7 +203,7 @@ let U = i.memo(function (e) {
                                 (0, r.jsxs)(o.Text, {
                                     variant: 'text-md/normal',
                                     color: p ? 'text-muted' : 'text-default',
-                                    children: ['string' != typeof S ? S : h.Z.parse(S), R]
+                                    children: ['string' != typeof E ? E : h.Z.parse(E), R]
                                 }),
                                 (null == (t = l.message) ? void 0 : t.content) != null ? (0, r.jsx)(D, { item: l }) : null,
                                 null != l.callout ? (0, r.jsx)(L, { item: l }) : null,
@@ -225,7 +225,7 @@ let U = i.memo(function (e) {
         let { items: t } = e,
             n = g.d$.useSetting();
         return (
-            (0, S.c)(t),
+            (0, E.c)(t),
             (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(

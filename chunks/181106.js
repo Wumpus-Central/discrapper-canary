@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,14 +49,14 @@ function p(e, t, n) {
     if (((l[t] = e), (u[i] = l), !__OVERLAY__ && e === s.OcF.FAILED)) {
         null != d[i] && d[i].stop();
         let e = new a.V7();
-        e.start(f, () =>
+        (e.start(f, () =>
             o.Z.dispatch({
                 type: 'ACTIVITY_LAUNCH_FAIL',
                 applicationId: i,
                 activityType: t
             })
         ),
-            (d[i] = e);
+            (d[i] = e));
     }
 }
 function h(e) {

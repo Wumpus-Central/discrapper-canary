@@ -1,4 +1,4 @@
-n.d(e, { default: () => h }), n(388685);
+(n.d(e, { default: () => h }), n(388685));
 var l = n(255367),
     r = n(73800),
     i = n(481060),
@@ -97,7 +97,7 @@ class f extends r.PureComponent {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             m(this, 'state', { problem: null }),
             m(this, 'handleChanged', (t) => {
                 this.setState({ problem: null != t ? t : null });
@@ -105,7 +105,7 @@ class f extends r.PureComponent {
             m(this, 'handleSubmit', () => {
                 let { stream: t, streamApplication: e, analyticsData: r, onClose: s } = this.props,
                     { problem: a } = this.state;
-                (0, o.Z)({
+                ((0, o.Z)({
                     problem: a,
                     stream: t,
                     feedback: '',
@@ -123,7 +123,7 @@ class f extends r.PureComponent {
                                     for (var e = 1; e < arguments.length; e++) {
                                         var n = null != arguments[e] ? arguments[e] : {},
                                             l = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (l = l.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (t) {
                                                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -131,13 +131,13 @@ class f extends r.PureComponent {
                                             )),
                                             l.forEach(function (e) {
                                                 m(t, e, n[e]);
-                                            });
+                                            }));
                                     }
                                     return t;
                                 })({ body: u.intl.string(u.t.mMTVnp) }, e)
                             );
-                    });
-            });
+                    }));
+            }));
     }
 }
 let h = f;

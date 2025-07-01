@@ -1,5 +1,5 @@
 var r = n(660566);
-(e.exports = E), (e.exports.parse = a), (e.exports.compile = o), (e.exports.tokensToFunction = c), (e.exports.tokensToRegExp = g);
+((e.exports = E), (e.exports.parse = a), (e.exports.compile = o), (e.exports.tokensToFunction = c), (e.exports.tokensToRegExp = g));
 var i = RegExp('(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))', 'g');
 function a(e, t) {
     for (var n, r = [], a = 0, o = 0, s = '', l = (t && t.delimiter) || '/'; null != (n = i.exec(e)); ) {
@@ -34,7 +34,7 @@ function a(e, t) {
             pattern: S ? d(S) : y ? '.*' : '[^' + u(T) + ']+?'
         });
     }
-    return o < e.length && (s += e.substr(o)), s && r.push(s), r;
+    return (o < e.length && (s += e.substr(o)), s && r.push(s), r);
 }
 function o(e, t) {
     return c(a(e, t));
@@ -89,7 +89,7 @@ function d(e) {
     return e.replace(/([=!:$\/()])/g, '\\$1');
 }
 function f(e, t) {
-    return (e.keys = t), e;
+    return ((e.keys = t), e);
 }
 function _(e) {
     return e.sensitive ? '' : 'i';
@@ -125,12 +125,12 @@ function g(e, t, n) {
         else {
             var c = u(l.prefix),
                 d = '(?:' + l.pattern + ')';
-            t.push(l), l.repeat && (d += '(?:' + c + d + ')*'), (o += d = l.optional ? (l.partial ? c + '(' + d + ')?' : '(?:' + c + '(' + d + '))?') : c + '(' + d + ')');
+            (t.push(l), l.repeat && (d += '(?:' + c + d + ')*'), (o += d = l.optional ? (l.partial ? c + '(' + d + ')?' : '(?:' + c + '(' + d + '))?') : c + '(' + d + ')'));
         }
     }
     var p = u(n.delimiter || '/'),
         h = o.slice(-p.length) === p;
-    return i || (o = (h ? o.slice(0, -p.length) : o) + '(?:' + p + '(?=$))?'), a ? (o += '$') : (o += i && h ? '' : '(?=' + p + '|$)'), f(RegExp('^' + o, _(n)), t);
+    return (i || (o = (h ? o.slice(0, -p.length) : o) + '(?:' + p + '(?=$))?'), a ? (o += '$') : (o += i && h ? '' : '(?=' + p + '|$)'), f(RegExp('^' + o, _(n)), t));
 }
 function E(e, t, n) {
     return (r(t) || ((n = t || n), (t = [])), (n = n || {}), e instanceof RegExp) ? p(e, t) : r(e) ? h(e, t, n) : m(e, t, n);

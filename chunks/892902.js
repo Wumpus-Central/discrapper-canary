@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var l,
     i,
     u,
@@ -12,11 +12,11 @@ let d = new o.Z(196606),
 function T(e, t, n) {
     var l;
     let i = null != (l = d.get(e)) ? l : new Map();
-    i.set(t, n), d.set(e, i), c++;
+    (i.set(t, n), d.set(e, i), c++);
 }
 function I(e) {
     let t = s.get(e);
-    null != t && E.delete(t), s.delete(e), d.delete(e), c++;
+    (null != t && E.delete(t), s.delete(e), d.delete(e), c++);
 }
 class p extends (l = a.ZP.Store) {
     getInteractionComponentStates() {
@@ -31,7 +31,7 @@ class p extends (l = a.ZP.Store) {
         return null == l ? null : null != (n = l.get(t)) ? n : null;
     }
 }
-(u = 'LocalInteractionComponentStateStore'),
+((u = 'LocalInteractionComponentStateStore'),
     (i = 'displayName') in p
         ? Object.defineProperty(p, i, {
               value: u,
@@ -39,19 +39,19 @@ class p extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (p[i] = u);
+        : (p[i] = u));
 let m = new p(r.Z, {
     LOGOUT: function () {
-        d.clear(), s.clear(), E.clear(), c++;
+        (d.clear(), s.clear(), E.clear(), c++);
     },
     QUEUE_INTERACTION_COMPONENT_STATE: function (e) {
         let { messageId: t, nonce: n, componentId: l, state: i } = e;
-        s.set(t, n),
+        (s.set(t, n),
             E.set(n, {
                 messageId: t,
                 componentId: l
             }),
-            T(t, l, i);
+            T(t, l, i));
     },
     SET_INTERACTION_COMPONENT_STATE: function (e) {
         let { rootContainerId: t, componentId: n, state: l } = e;
@@ -72,7 +72,7 @@ let m = new p(r.Z, {
         if (null == t) return !1;
         let n = E.get(t);
         if (null == n) return !1;
-        s.delete(n.messageId), E.delete(t), c++;
+        (s.delete(n.messageId), E.delete(t), c++);
     },
     INTERACTION_FAILURE: function (e) {
         let { nonce: t } = e;
@@ -82,11 +82,11 @@ let m = new p(r.Z, {
         !(function (e) {
             let { componentId: t, messageId: n } = e,
                 l = d.get(n);
-            if (null != l && l.has(t)) l.delete(t), 0 === l.size && d.delete(n), c++;
+            if (null != l && l.has(t)) (l.delete(t), 0 === l.size && d.delete(n), c++);
         })(n);
     },
     CLEAR_INTERACTION_MODAL_STATE: function (e) {
         let { customId: t } = e;
-        d.delete(t), c++;
+        (d.delete(t), c++);
     }
 });

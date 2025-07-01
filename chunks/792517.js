@@ -51,7 +51,7 @@ function E(e) {
                                     className: p.addCTA,
                                     tooltip: _.intl.string(_.t.wCrzur),
                                     onClick: (e) => {
-                                        e.stopPropagation(), (0, l.rn)(t.stream, { forceMultiple: !0 });
+                                        (e.stopPropagation(), (0, l.rn)(t.stream, { forceMultiple: !0 }));
                                     },
                                     isSmall: b,
                                     children: (0, r.jsx)(s.OgY, {

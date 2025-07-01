@@ -36,18 +36,18 @@ function y(e, { method: t = s.Z.gamut_mapping, space: r, deltaEMethod: f = '', j
     if (((e = (0, h.Z)(e)), a.HD(arguments[1]) ? (r = arguments[1]) : r || (r = e.space), (r = n.Z.get(r)), (0, c.Z)(e, r, { epsilon: 0 }))) return e;
     if ('css' === t)
         M = (function (e, { space: t } = {}) {
-            (e = (0, h.Z)(e)), t || (t = e.space), (t = n.Z.get(t));
+            ((e = (0, h.Z)(e)), t || (t = e.space), (t = n.Z.get(t)));
             let r = n.Z.get('oklch');
             if (t.isUnbounded) return (0, l.Z)(e, t);
             let s = (0, l.Z)(e, r),
                 o = s.coords[0];
             if (o >= 1) {
                 let r = (0, l.Z)(v.WHITE, t);
-                return (r.alpha = e.alpha), (0, l.Z)(r, t);
+                return ((r.alpha = e.alpha), (0, l.Z)(r, t));
             }
             if (o <= 0) {
                 let r = (0, l.Z)(v.BLACK, t);
-                return (r.alpha = e.alpha), (0, l.Z)(r, t);
+                return ((r.alpha = e.alpha), (0, l.Z)(r, t));
             }
             if ((0, c.Z)(s, t, { epsilon: 0 })) return (0, l.Z)(s, t);
             function u(e) {
@@ -76,7 +76,7 @@ function y(e, { method: t = s.Z.gamut_mapping, space: r, deltaEMethod: f = '', j
                 if (((m.coords[1] = e), p && (0, c.Z)(m, t, { epsilon: 0 }))) f = e;
                 else if (((g = u(m)), (y = (0, i.Z)(g, m)) < 0.02))
                     if (0.02 - y < 0.0001) break;
-                    else (p = !1), (f = e);
+                    else ((p = !1), (f = e));
                 else b = e;
             }
             return g;
@@ -134,7 +134,7 @@ function y(e, { method: t = s.Z.gamut_mapping, space: r, deltaEMethod: f = '', j
                     v = (0, u.Z)(f, c);
                 for (; v - g > p; ) {
                     let e = (0, d.Z)(f);
-                    s(
+                    (s(
                         f,
                         (e = y(e, {
                             space: r,
@@ -145,7 +145,7 @@ function y(e, { method: t = s.Z.gamut_mapping, space: r, deltaEMethod: f = '', j
                     p
                         ? (g = (0, u.Z)(f, c))
                         : (v = (0, u.Z)(f, c)),
-                        (0, b.Z)(f, c, (g + v) / 2);
+                        (0, b.Z)(f, c, (g + v) / 2));
                 }
                 M = (0, l.Z)(f, r);
             } else M = i;
@@ -154,11 +154,11 @@ function y(e, { method: t = s.Z.gamut_mapping, space: r, deltaEMethod: f = '', j
             let e = Object.values(r.coords).map((e) => e.range || []);
             M.coords = M.coords.map((t, r) => {
                 let [a, n] = e[r];
-                return void 0 !== a && (t = Math.max(a, t)), void 0 !== n && (t = Math.min(t, n)), t;
+                return (void 0 !== a && (t = Math.max(a, t)), void 0 !== n && (t = Math.min(t, n)), t);
             });
         }
     }
-    return r !== e.space && (M = (0, l.Z)(M, e.space)), (e.coords = M.coords), e;
+    return (r !== e.space && (M = (0, l.Z)(M, e.space)), (e.coords = M.coords), e);
 }
 y.returns = 'color';
 let v = {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eu }), n(388685), n(539854);
+(n.d(t, { Z: () => eu }), n(388685), n(539854));
 var r,
     l = n(392711),
     i = n.n(l),
@@ -50,7 +50,7 @@ function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -58,7 +58,7 @@ function M(e) {
             )),
             r.forEach(function (t) {
                 k(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -96,10 +96,10 @@ function z(e) {
     return Z.Z.findActivity(e, (e) => e.type !== U.IIU.CUSTOM_STATUS);
 }
 function X(e) {
-    return null == W[e] && (W = L(M({}, W), { [e]: new E.Z({ name: e }) })), W[e];
+    return (null == W[e] && (W = L(M({}, W), { [e]: new E.Z({ name: e }) })), W[e]);
 }
 function J(e) {
-    return null == K[e] && (K = L(M({}, K), { [e]: new x.Z({ url: e }) })), K[e];
+    return (null == K[e] && (K = L(M({}, K), { [e]: new x.Z({ url: e }) })), K[e]);
 }
 function q(e) {
     H.has(e) || Y.add(e);
@@ -172,11 +172,11 @@ function en(e, t, n) {
         let T = null != f ? $(f) : null;
         (null == T || T.id !== v.id) && (f = null);
         let Z = [];
-        (Z =
+        ((Z =
             null != f && null != f.party && null != f.party.id
                 ? Array.from(null != (a = j.Z.getParty(f.party.id)) ? a : []).reduce((e, t) => {
                       let n = w.default.getUser(t);
-                      return null != n && e.push(n), e;
+                      return (null != n && e.push(n), e);
                   }, [])
                 : t.filter((e) => {
                       let t = z(e.id),
@@ -191,7 +191,7 @@ function en(e, t, n) {
                 activityUser: e,
                 startedPlayingTime: null != (d = null == f || null == (l = f.timestamps) ? void 0 : l.start) ? d : null == f ? void 0 : f.created_at,
                 playingMembers: Z
-            });
+            }));
     }
     let B = 1 === T.length,
         G = [],
@@ -213,7 +213,7 @@ function en(e, t, n) {
                     .filter(D.lm)
                     .orderBy([et], ['desc'])
                     .value();
-            a.filter((e) => !v.includes(e.id)).forEach((e) => t.push(e)),
+            (a.filter((e) => !v.includes(e.id)).forEach((e) => t.push(e)),
                 B ? F.has(l) || (h = null) : ((h = o), (B = !0)),
                 F.add(l),
                 V.add(n),
@@ -222,7 +222,7 @@ function en(e, t, n) {
                     guild: o,
                     members: a,
                     voiceStates: e
-                });
+                }));
         }
     }
     return {
@@ -258,7 +258,7 @@ function el() {
     return B && O.Z.isConnected();
 }
 let ei = i().throttle(() => {
-    !(function () {
+    (!(function () {
         var e;
         if (el()) {
             if (
@@ -270,7 +270,7 @@ let ei = i().throttle(() => {
                 })(
                     ((e = Array.from(Q()).reduce((e, t) => {
                         let n = w.default.getUser(t);
-                        return null == n || n.bot || e.push(n), e;
+                        return (null == n || n.bot || e.push(n), e);
                     }, [])),
                     i()(e).groupBy((e) => {
                         var t;
@@ -299,19 +299,19 @@ let ei = i().throttle(() => {
                 Y.size > 0)
             ) {
                 let e = Array.from(Y);
-                p.ZP.fetchApplications(e), e.forEach((e) => H.add(e)), Y.clear();
+                (p.ZP.fetchApplications(e), e.forEach((e) => H.add(e)), Y.clear());
             }
             G = !0;
         }
     })(),
-        es.emitChange();
+        es.emitChange());
 }, 1000);
 function eo() {
     return !!el() && (ei(), !1);
 }
 class ea extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, g.Z, Z.Z, j.Z, R.Z, C.Z, A.Z, T.Z, v.Z], eo), this.waitFor(O.Z, P.Z, g.Z, w.default, v.Z);
+        (this.syncWith([w.default, g.Z, Z.Z, j.Z, R.Z, C.Z, A.Z, T.Z, v.Z], eo), this.waitFor(O.Z, P.Z, g.Z, w.default, v.Z));
     }
     get currentActivityParties() {
         return V;
@@ -329,10 +329,10 @@ class ea extends (r = o.ZP.Store) {
 k(ea, 'displayName', 'NowPlayingViewStore');
 let es = new ea(a.Z, {
         LOGOUT: function () {
-            (B = !1), (V = []), (F = []), Y.clear();
+            ((B = !1), (V = []), (F = []), Y.clear());
         },
         NOW_PLAYING_MOUNTED: function () {
-            (B = !0), ei();
+            ((B = !0), ei());
         },
         NOW_PLAYING_UNMOUNTED: function () {
             B = !1;

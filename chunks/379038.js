@@ -1,4 +1,4 @@
-n.d(t, { default: () => h }), n(388685);
+(n.d(t, { default: () => h }), n(388685));
 var l = n(255367),
     r = n(73800),
     i = n(481060),
@@ -17,7 +17,7 @@ function h(e) {
         [p, b] = r.useState(j),
         [_, { loading: v, error: k }] = (0, s.Z)(() => {
             let e = (0, a.Z)(t, n, p, m);
-            return null == k && g(), e;
+            return (null == k && g(), e);
         });
     return (0, l.jsxs)(i.Y0X, {
         transitionState: h,
@@ -35,11 +35,11 @@ function h(e) {
                     (0, l.jsx)(d.Z, {
                         onScheduleChange: (e) => {
                             let { startDate: t, endDate: n } = e;
-                            null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, 'hour')),
+                            (null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, 'hour')),
                                 b({
                                     startDate: t,
                                     endDate: n
-                                });
+                                }));
                         },
                         schedule: p,
                         showEndDate: null != p.endDate,

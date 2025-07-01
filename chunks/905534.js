@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(49124), n(358797);
+(n.d(t, { Z: () => s }), n(49124), n(358797));
 var r = n(626135),
     i = n(996106),
     l = n(34954),
@@ -29,10 +29,10 @@ let s = {
                 }),
                 p = (0, a.V)(n, s, c);
             return new Promise((e) => {
-                setImmediate(() => {
-                    t.addSubscription(n, s, c, d), null != p && t.dispatchToSubscriptions(s, (e) => e.socket.id === n.id, p);
+                (setImmediate(() => {
+                    (t.addSubscription(n, s, c, d), null != p && t.dispatchToSubscriptions(s, (e) => e.socket.id === n.id, p));
                 }),
-                    e({ evt: s });
+                    e({ evt: s }));
             });
         }
     },
@@ -40,7 +40,7 @@ let s = {
         handler(e) {
             let { server: t, socket: n, evt: r, args: l } = e;
             if (null == t.events[r]) throw new i.Z({ errorCode: o.lTL.INVALID_EVENT }, 'Invalid event: '.concat(r));
-            return t.removeSubscription(n, r, l), { evt: r };
+            return (t.removeSubscription(n, r, l), { evt: r });
         }
     }
 };

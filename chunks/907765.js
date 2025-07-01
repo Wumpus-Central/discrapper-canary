@@ -25,7 +25,7 @@ let i = (0, n._I)(() => {
                                 return !!a && !!r && a.type === r.type && a.value === r.value && !!s(t, e) && !!c(t, e);
                             })(a, _)))
                 )
-                    return o.X && r.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null;
+                    return (o.X && r.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null);
             } catch (t) {}
             return (t = e);
         }

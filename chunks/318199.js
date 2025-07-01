@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     default: () => m,
     r: () => g
 }),
-    n(781311);
+    n(781311));
 var r = n(255367);
 n(73800);
 var i = n(581282),
@@ -41,7 +41,7 @@ function m(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function m(e) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -57,12 +57,12 @@ function m(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({}, e)
         );
     }
-    return p.Z.captureMessage('Property type '.concat(n.properties.oneofKind, ' is not supported to render ServerDriveAnnouncementModal')), null;
+    return (p.Z.captureMessage('Property type '.concat(n.properties.oneofKind, ' is not supported to render ServerDriveAnnouncementModal')), null);
 }

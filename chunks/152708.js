@@ -54,10 +54,10 @@ class m extends (i = s.PureComponent) {
         });
     }
 }
-u(m, 'Layout', f),
+(u(m, 'Layout', f),
     u(m, 'defaultProps', {
         children: [],
         layout: 'wrap',
         columns: 4
-    });
+    }));
 let h = m;

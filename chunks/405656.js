@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $G: () => b,
     BU: () => I,
     Fr: () => R,
@@ -16,7 +16,7 @@ n.d(t, {
 }),
     n(35282),
     n(388685),
-    n(781311);
+    n(781311));
 var r = n(392711),
     i = n.n(r),
     a = n(349033),
@@ -44,7 +44,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -52,7 +52,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -86,7 +86,7 @@ let m = {
 function g(e) {
     let t = o.ZP[e],
         n = null != t ? t.queryKey : null;
-    return null == n && (n = 'content'), n;
+    return (null == n && (n = 'content'), n);
 }
 function E(e, t) {
     if (l.Z.didAgree(t)) {
@@ -105,7 +105,7 @@ function b(e) {
             case d.dCx.ANSWER_AFTER:
                 let r = e.getData('start'),
                     i = e.getData('end');
-                r && (t.min_id = u.default.fromTimestamp(r)), i && (t.max_id = u.default.fromTimestamp(i));
+                (r && (t.min_id = u.default.fromTimestamp(r)), i && (t.max_id = u.default.fromTimestamp(i)));
                 return;
         }
         let a = g(n);
@@ -135,7 +135,7 @@ function b(e) {
     }),
     Object.entries(t)))
         r instanceof Set && (t[n] = Array.from(r));
-    return t.content && ((t.content = t.content.join(' ').trim()), t.content || delete t.content), t;
+    return (t.content && ((t.content = t.content.join(' ').trim()), t.content || delete t.content), t);
 }
 function y(e, t, n) {
     let r,
@@ -208,7 +208,7 @@ function v(e, t) {
                         let t = o.ZP[r];
                         (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== '' && (n = ''.concat(t.key, ' ').concat(n));
                     }
-                    return t.type === d.Sap.FILTER && t.filter === d.dCx.FILTER_IN && null != e.channel && e.text.includes(' ') && (n = '"'.concat(n, '"')), n;
+                    return (t.type === d.Sap.FILTER && t.filter === d.dCx.FILTER_IN && null != e.channel && e.text.includes(' ') && (n = '"'.concat(n, '"')), n);
                 })
             );
         }),
@@ -236,7 +236,7 @@ function R(e, t) {
     return (null != t || !n) && (null == t || !n || !!d.KA4.test(t.type));
 }
 function P() {
-    (0, o.Pe)(), S.reset(), i()(o.ZP).forOwn((e, t) => S.addRule(p({ type: t }, e)));
+    ((0, o.Pe)(), S.reset(), i()(o.ZP).forOwn((e, t) => S.addRule(p({ type: t }, e))));
 }
 function w(e) {
     if (e === d.aib.GUILD) return !0;

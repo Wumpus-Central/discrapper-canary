@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eh }), n(388685);
+(n.d(t, { Z: () => eh }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(512722),
@@ -77,7 +77,7 @@ function ed(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -85,7 +85,7 @@ function ed(e) {
             )),
             r.forEach(function (t) {
                 eu(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -93,11 +93,11 @@ function ef(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -256,7 +256,7 @@ class ep extends i.PureComponent {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             eu(this, 'state', { screensharePopoutOpen: !1 }),
             eu(this, '_ref', i.createRef()),
             eu(this, 'handleVideo', (e) => {
@@ -271,7 +271,7 @@ class ep extends i.PureComponent {
                 let { channel: t } = this.props;
                 (0, h.Ou)();
                 let n = null != (e = t.getGuildId()) ? e : eo.ME;
-                (0, D.XU)(n, t.id), p.Z.channelListScrollTo(n, t.id);
+                ((0, D.XU)(n, t.id), p.Z.channelListScrollTo(n, t.id));
                 let r = this.activeStreamForSelectedParticipant;
                 null != r && _.Z.selectParticipant(r.channelId, (0, A.V9)(r));
             }),
@@ -283,7 +283,7 @@ class ep extends i.PureComponent {
             }),
             eu(this, 'handleStopStream', () => {
                 let { participantOnScreen: e } = this.props;
-                o()((0, es._5)(e), 'cannot stop stream for non streamer'), (0, v.v)(g.Z.VIDEO_PIP, v.d.STREAM, !1), (0, R.Z)(e.stream);
+                (o()((0, es._5)(e), 'cannot stop stream for non streamer'), (0, v.v)(g.Z.VIDEO_PIP, v.d.STREAM, !1), (0, R.Z)(e.stream));
             }),
             eu(this, 'handleHidePIP', () => {
                 let { channel: e } = this.props;
@@ -291,7 +291,7 @@ class ep extends i.PureComponent {
             }),
             eu(this, 'handleOpenPopout', () => {
                 let { channel: e } = this.props;
-                (0, v.v)(g.Z.VIDEO_PIP, v.d.POPOUT, !0), w.hP(e);
+                ((0, v.v)(g.Z.VIDEO_PIP, v.d.POPOUT, !0), w.hP(e));
             }),
             eu(this, 'renderBottomLeftControls', () => {
                 let { canSeeParticipantName: e } = this.viewProperties;
@@ -352,7 +352,7 @@ class ep extends i.PureComponent {
                           appContext: eo.IlC.APP,
                           location: g.Z.VIDEO_PIP
                       });
-            });
+            }));
     }
 }
 function eh(e) {

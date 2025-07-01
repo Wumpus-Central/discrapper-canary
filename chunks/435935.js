@@ -24,7 +24,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -66,7 +66,7 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -76,7 +76,7 @@ function m(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let g = {
@@ -127,7 +127,7 @@ class v extends (r = o.PureComponent) {
             );
         if (!d && 'string' != typeof t && 1 === o.Children.count(t)) {
             let e = o.Children.only(t);
-            return (m.style = f({}, m.style, e.props.style)), (m.className = l()(e.props.className, n)), o.cloneElement(e, m);
+            return ((m.style = f({}, m.style, e.props.style)), (m.className = l()(e.props.className, n)), o.cloneElement(e, m));
         }
         return (0, a.jsx)('div', p(f({}, m), { children: t }));
     }
@@ -165,7 +165,7 @@ class I extends (i = o.PureComponent) {
         );
     }
 }
-d(I, 'Child', v),
+(d(I, 'Child', v),
     d(I, 'Direction', g),
     d(I, 'Align', y),
     d(I, 'Justify', E),
@@ -180,4 +180,4 @@ d(I, 'Child', v),
         grow: 1,
         basis: 'auto',
         style: {}
-    });
+    }));

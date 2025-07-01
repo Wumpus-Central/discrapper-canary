@@ -5,7 +5,7 @@ function r(e) {
             t ||
                 (t = new Promise(function (n) {
                     Promise.resolve().then(function () {
-                        (t = void 0), n(e());
+                        ((t = void 0), n(e()));
                     });
                 })),
             t

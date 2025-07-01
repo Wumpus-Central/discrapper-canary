@@ -2,22 +2,22 @@ n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    a = n(725436),
-    o = n(11868),
-    s = n(217804),
+    s = n(725436),
+    a = n(11868),
+    o = n(217804),
     c = n(765305),
     u = n(244231);
 function d(e) {
     let { guildScheduledEvent: t, channel: n, onClose: d } = e,
         h = t.entity_type === c.WX.EXTERNAL,
-        p = i.useCallback((e) => (0, o.Qt)(t, d)(e), [t, d]),
-        m = (0, s.u)(t, n);
-    if (null == m) return null;
-    let { IconComponent: g, locationName: f } = m,
+        p = i.useCallback((e) => (0, a.Qt)(t, d)(e), [t, d]),
+        g = (0, o.u)(t, n);
+    if (null == g) return null;
+    let { IconComponent: m, locationName: f } = g,
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != g &&
-                    (0, r.jsx)(g, {
+                null != m &&
+                    (0, r.jsx)(m, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
@@ -28,7 +28,7 @@ function d(e) {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     className: u.locationText,
-                    children: (0, a.m)(f, !0)
+                    children: (0, s.m)(f, !0)
                 })
             ]
         });

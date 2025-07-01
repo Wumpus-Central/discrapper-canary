@@ -1,4 +1,4 @@
-n.d(t, { m: () => m }), n(388685);
+(n.d(t, { m: () => m }), n(388685));
 var a = n(73800),
     r = n(544891),
     l = n(959546),
@@ -28,11 +28,11 @@ let o = async () =>
     },
     d = async (e) => {
         let t = '/debug/entitlements/fractional-premium';
-        null != e && (t = ''.concat(t, '/').concat(e)),
+        (null != e && (t = ''.concat(t, '/').concat(e)),
             await r.tn.del({
                 url: t,
                 rejectWithError: !0
-            });
+            }));
     },
     u = async () => {
         await r.tn.post({
@@ -54,7 +54,7 @@ let o = async () =>
             }, []),
             i = (0, a.useCallback)(
                 async (e) => {
-                    await c(e), await l();
+                    (await c(e), await l());
                 },
                 [l]
             );
@@ -62,12 +62,12 @@ let o = async () =>
             grantFractionalPremium: i,
             deleteFractionalPremium: (0, a.useCallback)(
                 async (e) => {
-                    await d(e), await l();
+                    (await d(e), await l());
                 },
                 [l]
             ),
             triggerNextEntitlementFulfillment: (0, a.useCallback)(async () => {
-                await u(), await l();
+                (await u(), await l());
             }, [l]),
             refreshEntitlementList: l,
             entitlements: e,

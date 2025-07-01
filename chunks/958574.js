@@ -1,5 +1,5 @@
 var a = t(705723);
-t(864733)(r, '__esModule', { value: !0 }),
+(t(864733)(r, '__esModule', { value: !0 }),
     (r.default = void 0),
     (r.default = new (a(t(485749)).default)([
         ['aria-activedescendant', { type: 'id' }],
@@ -128,4 +128,4 @@ t(864733)(r, '__esModule', { value: !0 }),
         ['aria-valuemin', { type: 'number' }],
         ['aria-valuenow', { type: 'number' }],
         ['aria-valuetext', { type: 'string' }]
-    ]));
+    ])));

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(784620), n(973216), n(583741);
+(n.d(t, { Z: () => u }), n(388685), n(784620), n(973216), n(583741));
 var r = n(327432),
     i = n(436660),
     a = n(887490);
@@ -19,7 +19,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -212,13 +212,13 @@ function* _(e) {
                         path: o,
                         offset: 0
                     };
-                    yield e, yield e;
+                    (yield e, yield e);
                 } else if (a.bN.isInline(e, i) && a.LC.isText(i.children[0]) && 0 === i.children[0].text.length) {
                     let e = {
                         path: a.C0.child(o, 0),
                         offset: 0
                     };
-                    yield e, yield e;
+                    (yield e, yield e);
                 } else {
                     let t = {
                         anchor: n,

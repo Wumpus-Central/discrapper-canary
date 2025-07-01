@@ -1,16 +1,16 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
-    i = n(73800),
-    l = n(392711),
-    o = n.n(l),
+    l = n(73800),
+    i = n(392711),
+    s = n.n(i),
     a = n(374470),
-    s = n(481060),
-    c = n(239091),
-    u = n(294218),
+    o = n(481060),
+    u = n(239091),
+    c = n(294218),
     d = n(592125),
-    p = n(388032),
-    h = n(548185);
-function f(e, t, n) {
+    E = n(388032),
+    _ = n(548185);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,19 +27,19 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
+                A(e, t, n[t]);
+            }));
     }
     return e;
 }
-function g(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,40 +57,40 @@ function g(e, t) {
         e
     );
 }
-class b extends i.PureComponent {
+class f extends l.PureComponent {
     render() {
-        let { result: e, listItemProps: t, searchOffset: n, index: i, totalResults: l } = this.props,
-            a = o().find(e, (e) => e.isSearchHit);
+        let { result: e, listItemProps: t, searchOffset: n, index: l, totalResults: i } = this.props,
+            a = s().find(e, (e) => e.isSearchHit);
         if (null == a) return null;
-        let c = d.Z.getChannel(a.channel_id);
-        if (null == c) return null;
-        let f = 'search-result-'.concat(a.id);
-        return (0, r.jsx)(s.tEY, {
+        let u = d.Z.getChannel(a.channel_id);
+        if (null == u) return null;
+        let A = 'search-result-'.concat(a.id);
+        return (0, r.jsx)(o.tEY, {
             ringTarget: this.hitRef,
-            ringClassName: h.__invalid_searchResultFocusRing,
+            ringClassName: _.__invalid_searchResultFocusRing,
             offset: 4,
             children: (0, r.jsxs)(
                 'li',
-                g(m({ className: h.container }, t), {
-                    'aria-posinset': 1 + n + i,
-                    'aria-setsize': l,
-                    'aria-labelledby': f,
+                T(m({ className: _.container }, t), {
+                    'aria-posinset': 1 + n + l,
+                    'aria-setsize': i,
+                    'aria-labelledby': A,
                     children: [
-                        (0, r.jsx)(s.P3F, {
+                        (0, r.jsx)(o.P3F, {
                             tabIndex: -1,
                             onClick: this.handleMessageClick,
                             innerRef: this.containerRef,
-                            className: h.searchResult,
+                            className: _.searchResult,
                             focusProps: { enabled: !1 },
                             children: (0, r.jsx)(
                                 'div',
                                 {
                                     ref: this.hitRef,
-                                    className: h.message,
-                                    children: (0, r.jsx)(u.Z, {
-                                        id: f,
+                                    className: _.message,
+                                    children: (0, r.jsx)(c.Z, {
+                                        id: A,
                                         message: a,
-                                        channel: c,
+                                        channel: u,
                                         onContextMenu: (e) => this.handleContextMenu(e, a),
                                         animateAvatar: !1,
                                         subscribeToComponentDispatch: !1,
@@ -102,12 +102,12 @@ class b extends i.PureComponent {
                             )
                         }),
                         (0, r.jsx)('div', {
-                            className: h.buttonsContainer,
+                            className: _.buttonsContainer,
                             'aria-hidden': !0,
-                            children: (0, r.jsx)(s.P3F, {
-                                className: h.button,
+                            children: (0, r.jsx)(o.P3F, {
+                                className: _.button,
                                 onClick: this.jumpTo,
-                                children: p.intl.string(p.t.k5WiPT)
+                                children: E.intl.string(E.t.k5WiPT)
                             })
                         })
                     ]
@@ -116,32 +116,32 @@ class b extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
-            f(this, 'containerRef', i.createRef()),
-            f(this, 'hitRef', i.createRef()),
-            f(this, 'handleContextMenu', (e, t) => {
-                let i = d.Z.getChannel(t.channel_id);
-                null != i &&
+        (super(...e),
+            A(this, 'containerRef', l.createRef()),
+            A(this, 'hitRef', l.createRef()),
+            A(this, 'handleContextMenu', (e, t) => {
+                let l = d.Z.getChannel(t.channel_id);
+                null != l &&
                     (e.stopPropagation(),
-                    (0, c.jW)(e, async () => {
-                        let { default: e } = await n.e('53809').then(n.bind(n, 858341));
+                    (0, u.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e('16705'), n.e('32670')]).then(n.bind(n, 858341));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                g(m({}, n), {
+                                T(m({}, n), {
                                     message: t,
-                                    channel: i
+                                    channel: l
                                 })
                             );
                     }));
             }),
-            f(this, 'jumpTo', (e) => {
+            A(this, 'jumpTo', (e) => {
                 null != e && (e.preventDefault(), e.stopPropagation());
                 let { onJump: t, result: n, index: r } = this.props,
-                    i = n.find((e) => e.isSearchHit);
-                null != i && t(i, r);
+                    l = n.find((e) => e.isSearchHit);
+                null != l && t(l, r);
             }),
-            f(this, 'handleMessageClick', (e) => {
+            A(this, 'handleMessageClick', (e) => {
                 if (
                     (function (e, t) {
                         var n;
@@ -158,6 +158,6 @@ class b extends i.PureComponent {
                 )
                     return void e.stopPropagation();
                 this.jumpTo(e);
-            });
+            }));
     }
 }

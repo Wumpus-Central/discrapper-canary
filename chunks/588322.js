@@ -31,7 +31,7 @@ function x(e) {
         null == x || null == j)
     )
         return null;
-    let I = (0, r.jsx)(f.Z, { channel: x });
+    let S = (0, r.jsx)(f.Z, { channel: x });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.Z, {
@@ -39,7 +39,7 @@ function x(e) {
                 draftType: g.d.ChannelMessage
             }),
             (0, r.jsx)(d.ZP, {
-                toolbar: I,
+                toolbar: S,
                 'aria-label': y.intl.string(y.t.Pwe8tL),
                 children: (0, p.ud)({
                     channel: x,
@@ -58,7 +58,7 @@ function x(e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -66,7 +66,7 @@ function x(e) {
                                                 )),
                                                 r.forEach(function (t) {
                                                     var r;
-                                                    (r = n[t]),
+                                                    ((r = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: r,
@@ -74,8 +74,8 @@ function x(e) {
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[t] = r);
-                                                });
+                                                            : (e[t] = r));
+                                                }));
                                         }
                                         return e;
                                     })({}, t)),

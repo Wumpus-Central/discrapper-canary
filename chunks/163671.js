@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(388905),
-    o = n(414718);
-function s(e) {
+    s = n(388905),
+    a = n(414718);
+function o(e) {
     var t,
         n,
-        { children: i, className: s } = e,
+        { children: i, className: o } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -19,23 +19,23 @@ function s(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['children', 'className']);
     let u = i();
     return (0, r.jsx)(
-        a.ZP,
+        s.ZP,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function s(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -51,20 +51,20 @@ function s(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })({}, c)),
         (n = n =
             {
-                className: l()(s, o.container),
-                contentClassName: o.content,
+                className: l()(o, a.container),
+                contentClassName: a.content,
                 children: u.map((e, t) =>
                     (0, r.jsx)(
                         'div',
                         {
-                            className: o.column,
+                            className: a.column,
                             style: { flexBasis: ''.concat(100 / u.length, '%') },
                             children: e
                         },

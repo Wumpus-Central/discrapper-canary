@@ -1,10 +1,10 @@
-x.d(i, {
+(x.d(i, {
     B0: () => T,
     ZP: () => j,
     _I: () => w,
     xm: () => P
 }),
-    x(49124);
+    x(49124));
 var k = x(255367),
     r = x(73800),
     t = x(120356),
@@ -33,7 +33,7 @@ function g(a) {
     for (var i = 1; i < arguments.length; i++) {
         var x = null != arguments[i] ? arguments[i] : {},
             k = Object.keys(x);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (k = k.concat(
                 Object.getOwnPropertySymbols(x).filter(function (a) {
                     return Object.getOwnPropertyDescriptor(x, a).enumerable;
@@ -41,7 +41,7 @@ function g(a) {
             )),
             k.forEach(function (i) {
                 var k;
-                (k = x[i]),
+                ((k = x[i]),
                     i in a
                         ? Object.defineProperty(a, i, {
                               value: k,
@@ -49,8 +49,8 @@ function g(a) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (a[i] = k);
-            });
+                        : (a[i] = k));
+            }));
     }
     return a;
 }
@@ -197,7 +197,7 @@ function j(a) {
     }, [i.id, l, o]);
     let c = r.useMemo(() => i.getIconURL(135, !1, !0), [i]),
         y = () => {
-            (l.current = !0), x();
+            ((l.current = !0), x());
         };
     return (
         (0, p.ZP)(() => {

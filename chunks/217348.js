@@ -59,6 +59,6 @@ var l = function (e) {
 function d(e, t) {
     if (e.size) {
         var n = Array.from(e);
-        e.clear(), c(n, t);
+        (e.clear(), c(n, t));
     }
 }

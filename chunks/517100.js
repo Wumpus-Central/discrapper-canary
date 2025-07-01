@@ -60,12 +60,12 @@ function I() {
           });
 }
 function T() {
-    I(), v();
+    (I(), v());
 }
 function S() {
     var e;
     let t = (e) => {
-        (h = Math.max(Date.now() - e, h)), T(), setTimeout(S, 10 * c.Z.Millis.SECOND);
+        ((h = Math.max(Date.now() - e, h)), T(), setTimeout(S, 10 * c.Z.Millis.SECOND));
     };
     if ((null === s.Z || void 0 === s.Z || null == (e = s.Z.remotePowerMonitor) ? void 0 : e.getSystemIdleTimeMs) != null) {
         let e = s.Z.remotePowerMonitor.getSystemIdleTimeMs();
@@ -80,11 +80,11 @@ function N(e) {
 }
 function C(e) {
     let { userId: t, speakingFlags: n } = e;
-    return n !== _.Dg.NONE && t === d.default.getId() && P({}), !1;
+    return (n !== _.Dg.NONE && t === d.default.getId() && P({}), !1);
 }
 function R(e) {
     let { state: t } = e;
-    return (y = t === f.$7l.BACKGROUND), (h = Date.now()), T(), !1;
+    return ((y = t === f.$7l.BACKGROUND), (h = Date.now()), T(), !1);
 }
 function P(e) {
     let { timestamp: t, type: n } = e,
@@ -105,16 +105,16 @@ __OVERLAY__ ||
     (u.isPlatformEmbedded && (null === s.Z || void 0 === s.Z ? void 0 : s.Z.remotePowerMonitor) != null
         ? (S(),
           s.Z.remotePowerMonitor.on('resume', () => {
-              (E = !1), P({});
+              ((E = !1), P({}));
           }),
           s.Z.remotePowerMonitor.on('suspend', () => {
-              (E = !0), P({}), o.default.disconnect();
+              ((E = !0), P({}), o.default.disconnect());
           }),
           s.Z.remotePowerMonitor.on('lock-screen', () => {
-              (b = !0), P({});
+              ((b = !0), P({}));
           }),
           s.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (b = !1), P({});
+              ((b = !1), P({}));
           }))
         : setInterval(T, 30 * c.Z.Millis.SECOND));
 class w extends (r = i.ZP.Store) {

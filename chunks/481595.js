@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(997841);
+(n.d(t, { Z: () => U }), n(997841));
 var r = n(255367),
     i = n(73800),
     a = n(512722),
@@ -64,7 +64,7 @@ function U(e) {
         ea = H[Y],
         eo = null != V ? V : I.c,
         es = null != ea ? ea[eo] : null;
-    o()(null != er, 'SKU must exist and be fetched.'), o()(null != U, 'Application must exist.');
+    (o()(null != er, 'SKU must exist and be fetched.'), o()(null != U, 'Application must exist.'));
     let el = (0, l.e7)([h.Z, T.Z], () => T.Z.inTestModeForApplication(U.id) || h.Z.inDevModeForApplication(U.id), [U.id]),
         ec = (0, l.e7)([y.Z], () => y.Z.enabled),
         eu = s.M.EEA_COUNTRIES.has(O.Z.ipCountryCodeWithFallback),

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AY: () => N,
     F5: () => A,
     Jm: () => E,
@@ -13,7 +13,7 @@ n.d(t, {
     sf: () => m
 }),
     n(35282),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(570140),
@@ -44,10 +44,10 @@ function b() {
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_ADULT;
 }
 var y = (function (e) {
-        return (e.CTAS = 'ctas'), (e.CONTENT_TYPE = 'content_type'), e;
+        return ((e.CTAS = 'ctas'), (e.CONTENT_TYPE = 'content_type'), e);
     })({}),
     O = (function (e) {
-        return (e.VERIFIED_ADULT = 'verified_adult'), (e.VERIFIED_TEEN = 'verified_teen'), (e.ERROR = 'error'), e;
+        return ((e.VERIFIED_ADULT = 'verified_adult'), (e.VERIFIED_TEEN = 'verified_teen'), (e.ERROR = 'error'), e);
     })({});
 function v(e, t) {
     let n = c.Z.getMessage(e, t);
@@ -89,7 +89,7 @@ function S(e) {
                         entryPoint: t
                     });
                 } catch (e) {
-                    l.Z.showFailedToast(h.wQ.TIGGER_PAWTECT_ERROR), c();
+                    (l.Z.showFailedToast(h.wQ.TIGGER_PAWTECT_ERROR), c());
                 } finally {
                     n(!1);
                 }

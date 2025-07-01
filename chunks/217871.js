@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(358797);
+(n.d(t, { Z: () => E }), n(388685), n(358797));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -26,12 +26,12 @@ let j = i.memo(function (e) {
             [u, p] = i.useState(!1);
         i.useEffect(() => {
             if (null == o ? void 0 : o.displayed) return;
-            p(!1),
+            (p(!1),
                 setImmediate(() => {
                     p((null != o ? (0, y.Eo)(o.combo) : 0) > 0);
-                });
+                }));
             let e = setTimeout(() => {
-                p(!1), null != o && (0, g.ew)(o);
+                (p(!1), null != o && (0, g.ew)(o));
             }, 2000);
             return () => clearTimeout(e);
         }, [o]);
@@ -138,13 +138,13 @@ let j = i.memo(function (e) {
             let e = setTimeout(() => y(E), 1000);
             return () => clearTimeout(e);
         }, [E]);
-        let I = (0, c.q_F)({
+        let S = (0, c.q_F)({
                 opacity: +!!g,
                 transform: g ? 'translateY(0)' : 'translateY(100%)',
                 pointerEvents: 'none',
                 config: a.config.stiff
             }),
-            S = i.useMemo(
+            I = i.useMemo(
                 () =>
                     null != x
                         ? x
@@ -154,16 +154,16 @@ let j = i.memo(function (e) {
                           },
                 [x]
             ),
-            P = i.useRef(S);
+            P = i.useRef(I);
         i.useEffect(() => {
-            (S.multiplier > 1 || S.value > 0) && (P.current = S);
-        }, [S]);
+            (I.multiplier > 1 || I.value > 0) && (P.current = I);
+        }, [I]);
         let { multiplier: Z, value: N } = i.useMemo(
             () => ({
-                value: E ? S.value : P.current.value,
-                multiplier: E ? S.multiplier : P.current.multiplier
+                value: E ? I.value : P.current.value,
+                multiplier: E ? I.multiplier : P.current.multiplier
             }),
-            [E, S, P]
+            [E, I, P]
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -174,7 +174,7 @@ let j = i.memo(function (e) {
                 (0, r.jsx)(a.animated.div, {
                     ref: p,
                     className: v.combo,
-                    style: I,
+                    style: S,
                     children: (0, r.jsx)(O, {
                         value: N,
                         multiplier: Z

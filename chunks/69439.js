@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(284851),
     b = n(46140),
     j = n(388032),
-    _ = n(142468);
-let v = [
+    v = n(142468);
+let _ = [
     {
         value: b.cd.DESKTOP,
         get label() {
@@ -37,16 +37,16 @@ function y(e) {
         { value: s } = e;
     switch (s) {
         case b.cd.DESKTOP:
-            (n = (0, r.jsx)(l.pzj, {})), (t = j.intl.string(j.t.QXc019));
+            ((n = (0, r.jsx)(l.pzj, {})), (t = j.intl.string(j.t.QXc019)));
             break;
         case b.cd.CONSOLE:
-            (n = (0, r.jsx)(l.iWm, {})), (t = j.intl.string(j.t['8lAfuL']));
+            ((n = (0, r.jsx)(l.iWm, {})), (t = j.intl.string(j.t['8lAfuL'])));
             break;
         default:
             return null;
     }
     return (0, r.jsxs)('div', {
-        className: _.platformSelectorPrimaryLabel,
+        className: v.platformSelectorPrimaryLabel,
         children: [n, t]
     });
 }
@@ -89,7 +89,7 @@ function C(e) {
         en = ee && !et && J.length > 1,
         er = s.useCallback(
             (e) => {
-                $(e), e === b.cd.DESKTOP && S([]);
+                ($(e), e === b.cd.DESKTOP && S([]));
             },
             [$, S]
         ),
@@ -108,7 +108,7 @@ function C(e) {
         { startingConsoleQuest: ea, startConsoleQuest: ei } = (0, d.GI)({
             questId: O.id,
             beforeRequest: () => {
-                A.startAnimation(),
+                (A.startAnimation(),
                     R({
                         questId: O.id,
                         questContent: E,
@@ -116,10 +116,10 @@ function C(e) {
                         questContentPosition: w,
                         questContentRowIndex: P,
                         sourceQuestContent: T
-                    });
+                    }));
             },
             afterRequest: (e) => {
-                A.stopAnimation(), S(e);
+                (A.stopAnimation(), S(e));
             }
         }),
         el = (null == (C = O.userStatus) ? void 0 : C.claimedAt) != null,
@@ -129,7 +129,7 @@ function C(e) {
               color: l.Ttl.BRAND,
               submitting: q,
               onClick: null != eo ? eo : void 0,
-              className: _.button,
+              className: v.button,
               children: es
           }))
         : L
@@ -138,7 +138,7 @@ function C(e) {
                       children: [
                           (0, r.jsx)(l.zxk, {
                               color: l.Ttl.PRIMARY,
-                              className: _.button,
+                              className: v.button,
                               style: { flex: 1 },
                               onClick: () => {
                                   (0, x.openVideoQuestModal)({
@@ -147,13 +147,13 @@ function C(e) {
                                   });
                               },
                               children: (0, r.jsxs)('div', {
-                                  className: _.ctaInner,
-                                  children: [(0, r.jsx)(l.Oe7, { className: _.videoQuestPlayIcon }), (0, r.jsx)('span', { children: j.intl.string(j.t.YsCuyM) })]
+                                  className: v.ctaInner,
+                                  children: [(0, r.jsx)(l.Oe7, { className: v.videoQuestPlayIcon }), (0, r.jsx)('span', { children: j.intl.string(j.t.YsCuyM) })]
                               })
                           }),
                           (0, r.jsx)(l.zxk, {
                               color: l.Ttl.BRAND,
-                              className: _.button,
+                              className: v.button,
                               onClick: null != eo ? eo : void 0,
                               children: es
                           })
@@ -161,7 +161,7 @@ function C(e) {
                   })
                 : (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
-                      className: _.button,
+                      className: v.button,
                       onClick: null != eo ? eo : void 0,
                       children: es
                   }))
@@ -171,22 +171,22 @@ function C(e) {
                       color: l.Ttl.BRAND,
                       submitting: q,
                       onClick: null != eo ? eo : void 0,
-                      className: _.button,
+                      className: v.button,
                       children: es
                   }))
                 : F
                   ? (ec = (0, r.jsx)(l.zxk, {
                         color: l.Ttl.PRIMARY,
                         disabled: !0,
-                        className: _.button,
+                        className: v.button,
                         children: j.intl.string(j.t.BkZhUF)
                     }))
                   : Z && V && !el
                     ? (ec = et
                           ? (0, r.jsx)(l.PhF, {
-                                className: _.platformSelectorPrimary,
+                                className: v.platformSelectorPrimary,
                                 isSelected: () => !1,
-                                options: v,
+                                options: _,
                                 placeholder: j.intl.string(j.t.drVw4e),
                                 renderOptionLabel: y,
                                 select: er,
@@ -203,7 +203,7 @@ function C(e) {
                             ? k
                                 ? (0, r.jsx)(l.zxk, {
                                       color: l.Ttl.PRIMARY,
-                                      className: _.button,
+                                      className: v.button,
                                       onClick: null != eo ? eo : void 0,
                                       children: es
                                   })
@@ -211,9 +211,9 @@ function C(e) {
                                       color: l.Ttl.PRIMARY,
                                       onClick: ei,
                                       disabled: ea,
-                                      className: _.button,
+                                      className: v.button,
                                       children: (0, r.jsxs)('div', {
-                                          className: _.ctaInner,
+                                          className: v.ctaInner,
                                           children: [A.render(), j.intl.string(j.t.nPThNT)]
                                       })
                                   })
@@ -221,13 +221,13 @@ function C(e) {
                               ? (0, r.jsx)(l.zxk, {
                                     color: l.Ttl.BRAND,
                                     onClick: null != eo ? eo : void 0,
-                                    className: _.button,
+                                    className: v.button,
                                     children: es
                                 })
                               : (0, r.jsx)(l.zxk, {
                                     color: l.Ttl.PRIMARY,
                                     disabled: !0,
-                                    className: _.button,
+                                    className: v.button,
                                     children: j.intl.string(j.t['9KoPyM'])
                                 }))
                     : Z &&
@@ -237,13 +237,13 @@ function C(e) {
                                 children: [
                                     (0, r.jsx)(l.zxk, {
                                         color: l.Ttl.PRIMARY,
-                                        className: _.button,
+                                        className: v.button,
                                         disabled: !0,
                                         children: j.intl.string(j.t.V293qq)
                                     }),
                                     (0, r.jsx)(l.zxk, {
                                         color: l.Ttl.BRAND,
-                                        className: _.button,
+                                        className: v.button,
                                         onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(O, E, T),
                                         children: j.intl.string(j.t.vY9GgI)
                                     })
@@ -253,19 +253,19 @@ function C(e) {
                                 submitting: D,
                                 color: l.Ttl.BRAND,
                                 onClick: null != eo ? eo : void 0,
-                                className: _.button,
+                                className: v.button,
                                 children: es
                             }))
             : (ec = (0, r.jsx)(l.zxk, {
                   color: l.Ttl.PRIMARY,
                   disabled: !0,
-                  className: _.button,
+                  className: v.button,
                   children: j.intl.format(j.t['14o6QU'], { expiryDate: I })
               })),
     null == ec)
         ? null
         : (0, r.jsxs)('div', {
-              className: _.container,
+              className: v.container,
               children: [
                   ec,
                   en &&
@@ -282,7 +282,7 @@ function C(e) {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
                                               r = Object.keys(n);
-                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                          ('function' == typeof Object.getOwnPropertySymbols &&
                                               (r = r.concat(
                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -290,7 +290,7 @@ function C(e) {
                                               )),
                                               r.forEach(function (t) {
                                                   var r;
-                                                  (r = n[t]),
+                                                  ((r = n[t]),
                                                       t in e
                                                           ? Object.defineProperty(e, t, {
                                                                 value: r,
@@ -298,14 +298,14 @@ function C(e) {
                                                                 configurable: !0,
                                                                 writable: !0
                                                             })
-                                                          : (e[t] = r);
-                                              });
+                                                          : (e[t] = r));
+                                              }));
                                       }
                                       return e;
                                   })(
                                       {
                                           buttonRef: K,
-                                          className: a()(_.button, _.platformSelectorSecondary),
+                                          className: a()(v.button, v.platformSelectorSecondary),
                                           color: l.Ttl.PRIMARY
                                       },
                                       e
@@ -313,7 +313,7 @@ function C(e) {
                                   (n = n =
                                       {
                                           children: (0, r.jsxs)('div', {
-                                              className: _.platformSelectorSecondaryContent,
+                                              className: v.platformSelectorSecondaryContent,
                                               children: [
                                                   (function (e) {
                                                       switch (e) {
@@ -326,7 +326,7 @@ function C(e) {
                                                       }
                                                   })(G),
                                                   (0, r.jsx)(l.CJ0, {
-                                                      className: _.platformSelectorSecondaryChevron,
+                                                      className: v.platformSelectorSecondaryChevron,
                                                       color: 'currentColor'
                                                   })
                                               ]

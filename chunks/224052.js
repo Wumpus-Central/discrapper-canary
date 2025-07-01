@@ -5,7 +5,7 @@ function r(e, t) {
     let r = n(e),
         i = n(t),
         a = e;
-    return r && i ? (e.$$loader.fallbackWith(t.$$loader), (a = e)) : r || i ? (r && !i ? (a = Object.assign(e.$$baseObject, t)) : i && !r && (a = Object.assign(t.$$baseObject, e))) : (a = Object.assign(Object.assign({}, t), e)), a;
+    return (r && i ? (e.$$loader.fallbackWith(t.$$loader), (a = e)) : r || i ? (r && !i ? (a = Object.assign(e.$$baseObject, t)) : i && !r && (a = Object.assign(t.$$baseObject, e))) : (a = Object.assign(Object.assign({}, t), e)), a);
 }
 function i(e) {
     function t(t) {
@@ -33,4 +33,4 @@ function i(e) {
         r
     );
 }
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.chainMessagesObjects = r), (t.makeMessagesProxy = i);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.chainMessagesObjects = r), (t.makeMessagesProxy = i));

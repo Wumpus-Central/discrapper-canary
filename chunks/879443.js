@@ -1,7 +1,7 @@
-(e.exports = function (e) {
+((e.exports = function (e) {
     var t = this,
         n = t.constructor;
-    return (t.callbacks = {}), (t.directMap = {}), (t.sequenceLevels = {}), t.resetTimer, (t.ignoreNextKeyup = !1), (t.ignoreNextKeypress = !1), (t.nextExpectedAction = !1), (t.element = e), t.addEvents(), n.instances.push(t), t;
+    return ((t.callbacks = {}), (t.directMap = {}), (t.sequenceLevels = {}), t.resetTimer, (t.ignoreNextKeyup = !1), (t.ignoreNextKeypress = !1), (t.nextExpectedAction = !1), (t.element = e), t.addEvents(), n.instances.push(t), t);
 }),
     (e.exports.prototype.bind = n(698577)),
     (e.exports.prototype.bindMultiple = n(41463)),
@@ -23,4 +23,4 @@
     (e.exports.prototype.detach = n(415364)),
     (e.exports.instances = []),
     (e.exports.reset = n(211180)),
-    (e.exports.REVERSE_MAP = null);
+    (e.exports.REVERSE_MAP = null));

@@ -19,12 +19,12 @@ function _(e) {
     let { summary: t, channel: n } = e,
         i = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
         l = (e, r) => {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 (0, h.Z)({
                     summary: t,
                     channel: n,
                     rating: r
-                });
+                }));
         },
         c = (0, s.Yzy)(
             null == i,

@@ -13,10 +13,10 @@ let f = 10 * u.Z.Millis.MINUTE,
     p = +u.Z.Millis.MINUTE,
     h = {};
 function m(e, t) {
-    null == h[t] && (h[t] = new a.V7()),
+    (null == h[t] && (h[t] = new a.V7()),
         h[t].start(f + Math.random() * _, () => {
             null != l.Z.getLibraryApplication(e, t) && g(e, t);
-        });
+        }));
 }
 async function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],

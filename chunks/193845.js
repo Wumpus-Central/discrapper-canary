@@ -1,4 +1,4 @@
-r.d(t, { default: () => y }), r(539854);
+(r.d(t, { default: () => y }), r(539854));
 var n = r(255367),
     s = r(73800),
     i = r(149765),
@@ -177,12 +177,12 @@ function y(e) {
         let n = null != t ? o.Z.getRole(t.id, t.getEveryoneRoleId()) : void 0;
         if (null == n) return;
         let s = i.Od(n.permissions, x.mu);
-        await (0, m.Gf)(t.id, [
+        (await (0, m.Gf)(t.id, [
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {},
                         n = Object.keys(r);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (n = n.concat(
                             Object.getOwnPropertySymbols(r).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -190,7 +190,7 @@ function y(e) {
                         )),
                         n.forEach(function (t) {
                             var n;
-                            (n = r[t]),
+                            ((n = r[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: n,
@@ -198,8 +198,8 @@ function y(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = n);
-                        });
+                                    : (e[t] = n));
+                        }));
                 }
                 return e;
             })({}, n)),
@@ -218,7 +218,7 @@ function y(e) {
                   }),
             e)
         ]),
-            a();
+            a());
     };
     return (0, n.jsxs)(l.Y0X, {
         transitionState: r,

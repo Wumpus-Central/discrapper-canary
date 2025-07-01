@@ -18,25 +18,25 @@ async function S(e, t) {
             persistentCodesEnabled: e
         });
         try {
-            await (0, E.om)(d.GB), null == t || t();
+            (await (0, E.om)(d.GB), null == t || t());
         } catch (t) {
             var n;
             let e = new o.Hx(t);
-            r.Z.dispatch({
+            (r.Z.dispatch({
                 type: 'SECURE_FRAMES_SETTINGS_UPDATE',
                 persistentCodesEnabled: !1
             }),
                 i.Z.show({
                     title: _.intl.string(_.t.R0RpRU),
                     body: null != (n = e.getAnyErrorMessage()) ? n : _.intl.string(_.t.eAn6z8)
-                });
+                }));
         }
     } else
-        r.Z.dispatch({
+        (r.Z.dispatch({
             type: 'SECURE_FRAMES_SETTINGS_UPDATE',
             persistentCodesEnabled: e
         }),
-            null == t || t();
+            null == t || t());
 }
 let y = {
     clearUploadedKeyVersions: function () {
@@ -55,7 +55,7 @@ let y = {
                   confirmText: _.intl.string(_.t.aTuFYW),
                   onConfirm: async () => {
                       await S(e, () => {
-                          a.default.disconnect(), a.default.selectVoiceChannel(t);
+                          (a.default.disconnect(), a.default.selectVoiceChannel(t));
                       });
                   }
               })

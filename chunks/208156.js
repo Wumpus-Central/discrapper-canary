@@ -1,4 +1,4 @@
-n.d(t, { J: () => I }), n(388685), n(65234), n(111804), n(490233), n(97749);
+(n.d(t, { J: () => I }), n(388685), n(65234), n(111804), n(490233), n(97749));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -31,7 +31,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -47,11 +47,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -81,7 +81,7 @@ function v(e) {
         w = b({}, a);
     function D(e) {
         var n;
-        null == o || o(e.target), (S.current = e.target), A(!0), null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, N], null != t ? t : '');
+        (null == o || o(e.target), (S.current = e.target), A(!0), null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, N], null != t ? t : ''));
     }
     return (
         P === m.BRd.LIGHT ? (w.colorScheme = 'light') : (w.colorScheme = 'dark'),
@@ -125,7 +125,7 @@ function I(e) {
         [n, a] = i.useState(!1),
         s = i.useCallback(
             (e) => {
-                a(!0), null == t || t(e);
+                (a(!0), null == t || t(e));
             },
             [t]
         );

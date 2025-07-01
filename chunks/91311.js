@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r,
     i = n(442837),
     a = n(570140);
@@ -50,7 +50,7 @@ class u extends (r = i.ZP.DeviceSettingsStore) {
         return null != (t = l[e]) && t;
     }
     set(e, t) {
-        return (l[e] = t), t;
+        return ((l[e] = t), t);
     }
     all() {
         return l;
@@ -62,5 +62,5 @@ class u extends (r = i.ZP.DeviceSettingsStore) {
         });
     }
 }
-o(u, 'displayName', 'DevToolsDesignTogglesStore'), o(u, 'persistKey', 'DevToolsDesignTogglesStore');
+(o(u, 'displayName', 'DevToolsDesignTogglesStore'), o(u, 'persistKey', 'DevToolsDesignTogglesStore'));
 let d = new u(a.Z, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: c });

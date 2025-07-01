@@ -1,4 +1,4 @@
-n.d(e, { Z: () => R }), n(388685);
+(n.d(e, { Z: () => R }), n(388685));
 var l = n(255367),
     r = n(73800),
     a = n(120356),
@@ -56,7 +56,7 @@ function R(t) {
         [to, ts] = r.useState(() => (Y && null != U ? U.label() : A.intl.string(A.t['xod36+']))),
         [tu, tc] = r.useState(to),
         { ref: td, width: tm } = (0, c.ZP)(to);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         let t = tn.current;
         if (null == tm || null == t) return;
         let e = tm - 78;
@@ -77,8 +77,8 @@ function R(t) {
         }, [W]),
         (0, d.ZP)(() => {
             var t, e;
-            null == (t = tt.current) || t.focus(), null == (e = tt.current) || e.setSelection(G.length, G.length);
-        });
+            (null == (t = tt.current) || t.focus(), null == (e = tt.current) || e.setSelection(G.length, G.length));
+        }));
     let tf = (t) => {
             null != t &&
                 Q(
@@ -175,14 +175,14 @@ function R(t) {
                                             currentValue: tl,
                                             onChange: (t) => {
                                                 let e = t === tl ? null : t;
-                                                S.default.track(k.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
+                                                (S.default.track(k.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
                                                     previous_label: tl,
                                                     new_label: e,
                                                     location_stack: M
                                                 }),
                                                     tr(e),
                                                     ti(!1),
-                                                    null != e && ts((0, P.Z)(e));
+                                                    null != e && ts((0, P.Z)(e)));
                                             }
                                         })
                                     })
@@ -206,7 +206,7 @@ function R(t) {
                                                     closePopout: e,
                                                     onSelectEmoji: (t) => {
                                                         let { emoji: n, willClose: l } = t;
-                                                        tf(n), l && e();
+                                                        (tf(n), l && e());
                                                     },
                                                     pickerIntention: I.Hz.STATUS,
                                                     onNavigateAway: R
@@ -224,7 +224,7 @@ function R(t) {
                                                         for (var e = 1; e < arguments.length; e++) {
                                                             var n = null != arguments[e] ? arguments[e] : {},
                                                                 l = Object.keys(n);
-                                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                                 (l = l.concat(
                                                                     Object.getOwnPropertySymbols(n).filter(function (t) {
                                                                         return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -232,7 +232,7 @@ function R(t) {
                                                                 )),
                                                                 l.forEach(function (e) {
                                                                     var l;
-                                                                    (l = n[e]),
+                                                                    ((l = n[e]),
                                                                         e in t
                                                                             ? Object.defineProperty(t, e, {
                                                                                   value: l,
@@ -240,8 +240,8 @@ function R(t) {
                                                                                   configurable: !0,
                                                                                   writable: !0
                                                                               })
-                                                                            : (t[e] = l);
-                                                                });
+                                                                            : (t[e] = l));
+                                                                }));
                                                         }
                                                         return t;
                                                     })({}, t)),
@@ -315,7 +315,7 @@ function R(t) {
                                                 'aria-label': A.intl.string(A.t.wfYTHR),
                                                 className: Z.clearButton,
                                                 onClick: () => {
-                                                    q(''), Q(null);
+                                                    (q(''), Q(null));
                                                 },
                                                 look: s.zxk.Looks.BLANK,
                                                 size: s.zxk.Sizes.NONE,

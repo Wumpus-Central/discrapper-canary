@@ -16,16 +16,16 @@ function g(e) {
     let { user: t, nickname: n, status: g, isFocused: m } = e,
         { analyticsLocations: b } = (0, a.ZP)(),
         _ = (e) => {
-            null == e || e.stopPropagation(),
+            (null == e || e.stopPropagation(),
                 l.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' },
                     type: void 0,
                     fromFriendSuggestion: !0
-                });
+                }));
         },
         E = (e) => {
-            null == e || e.stopPropagation(), o.Z.ignore(t.id);
+            (null == e || e.stopPropagation(), o.Z.ignore(t.id));
         },
         O = g === p.Skl.OFFLINE ? p.Skl.UNKNOWN : g;
     return (0, r.jsx)(u.Z, {

@@ -21,17 +21,17 @@ r(
                         i = [],
                         s = 0,
                         u = 1;
-                    c(e, function (e) {
+                    (c(e, function (e) {
                         var a = s++,
                             c = !1;
-                        u++,
+                        (u++,
                             o(n, t, e).then(function (e) {
                                 !c && ((c = !0), (i[a] = e), --u || r(i));
-                            }, l);
+                            }, l));
                     }),
-                        --u || r(i);
+                        --u || r(i));
                 });
-            return u.error && l(u.value), n.promise;
+            return (u.error && l(u.value), n.promise);
         }
     }
 );

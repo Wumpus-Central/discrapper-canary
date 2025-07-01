@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => r });
+(n.r(t), n.d(t, { default: () => r }));
 let r = {
     transparent: 0,
     aliceblue: 4042850303,

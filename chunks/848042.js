@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'london tube',
         author: 'jan t. sott',
@@ -19,4 +19,4 @@
         base0E: '#98005d',
         base0F: '#b06110'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

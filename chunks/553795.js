@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+(n.d(t, { Z: () => P }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -67,7 +67,7 @@ let p = new Set([n(981631).ABu.CONTACTS]),
     y = {},
     O = {},
     v = (e) => {
-        (m = e.filter((e) => !p.has(e.type) && s.Z.isSupported(e.type))), (g = e.filter((e) => p.has(e.type))), (h = !1);
+        ((m = e.filter((e) => !p.has(e.type) && s.Z.isSupported(e.type))), (g = e.filter((e) => p.has(e.type))), (h = !1));
     };
 function I(e) {
     v(e.connectedAccounts.map((e) => new l.Z(e)));
@@ -85,7 +85,7 @@ function N(e) {
     let { platformType: t, id: n, revoked: r, accessToken: i } = e,
         a = m.find((e) => e.id === n && e.type === t);
     if (null == a) return !1;
-    null != r && (a.revoked = r), null != i && (a.accessToken = i);
+    (null != r && (a.revoked = r), null != i && (a.accessToken = i));
 }
 function C(e) {
     let { code: t, state: n, openid_params: r, provider: i } = e;

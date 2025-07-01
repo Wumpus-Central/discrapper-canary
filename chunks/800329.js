@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -85,8 +85,8 @@ function p(e) {
                 })(y, C, x),
             [y, C, x]
         ),
-        I = E + 1,
-        S = I * j + (I - 1) * 8 <= b,
+        S = E + 1,
+        I = S * j + (S - 1) * 8 <= b,
         P = Math.floor(j / c) + 8,
         Z = Math.max(0, x - P * O) / 2;
     return (0, r.jsx)(a.Z, {
@@ -111,7 +111,7 @@ function p(e) {
                                       {
                                           style: v,
                                           className: o()(s.tile, {
-                                              [s.padColumn]: S,
+                                              [s.padColumn]: I,
                                               [s.noVerticalMargin]: l >= (O - 1) * E,
                                               [s.noHorizontalMargin]: (l + 1) % E == 0 || l === y - 1
                                           }),

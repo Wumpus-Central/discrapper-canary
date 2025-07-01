@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -110,7 +110,7 @@ function y(e) {
                                       look: d.zxk.Looks.BLANK,
                                       className: C.cancel,
                                       onClick: () => {
-                                          b.GM(P), Z ? null == I || I() : k(!1);
+                                          (b.GM(P), Z ? null == I || I() : k(!1));
                                       },
                                       children: O.intl.string(O.t['ETE/oK'])
                                   }),
@@ -122,7 +122,7 @@ function y(e) {
                                               groupListingId: E,
                                               onBeforeDispatchNewListing: S,
                                               onAfterDispatchNewListing: (e) => {
-                                                  w(e.id), null == T || T(e);
+                                                  (w(e.id), null == T || T(e));
                                               }
                                           }),
                                       disabled: !Y || !K,
@@ -154,13 +154,13 @@ function y(e) {
                         loading: et,
                         error: null != q ? q : $,
                         handlePublishTier: () => {
-                            o()(null != E, 'group listing doesnt exist'),
+                            (o()(null != E, 'group listing doesnt exist'),
                                 o()(null != R, 'subscription listing doesnt exist'),
                                 ee({
                                     guildId: l,
                                     groupListingId: E,
                                     listingId: R.id
-                                });
+                                }));
                         },
                         onDeleteEditState: I
                     })

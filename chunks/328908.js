@@ -32,7 +32,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,11 +48,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -73,7 +73,7 @@ let d = Object.freeze({
     }),
     f = (0, r.U)(() => d),
     _ = (e, t) => {
-        a.default.track(o.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
+        (a.default.track(o.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
             (0, i.j)(() => {
                 f.setState((t) => {
                     let { messageSendConfetti: n } = t;
@@ -87,14 +87,14 @@ let d = Object.freeze({
                         })
                     };
                 });
-            });
+            }));
     },
     p = (e) => {
         (0, i.j)(() => {
             f.setState((t) => {
                 let { messageSendConfetti: n } = t,
                     r = l({}, n);
-                return delete r[e], { messageSendConfetti: r };
+                return (delete r[e], { messageSendConfetti: r });
             });
         });
     },

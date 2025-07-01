@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Gg: () => x,
     Kb: () => R,
     Ww: () => M,
@@ -11,7 +11,7 @@ n.d(t, {
     n(993155),
     n(415506),
     n(642613),
-    n(997841);
+    n(997841));
 var r = n(392711),
     i = n.n(r),
     a = n(913527),
@@ -49,7 +49,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,11 +57,11 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
-n(388032), l().shim();
+(n(388032), l().shim());
 let T = !c.tq && !c.Em && -1 !== (0, g.vu)(),
     S = 3;
 function A(e, t) {
@@ -114,7 +114,7 @@ function C() {
                 p.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
             };
             t();
-        } else await (0, d.jg)(), e();
+        } else (await (0, d.jg)(), e());
     });
 }
 async function R(e) {
@@ -123,12 +123,12 @@ async function R(e) {
         o = _.default.isAuthenticated();
     if (a && o) {
         let e = [];
-        h.Z.hasFetchedPaymentSources || e.push(null != (n = p.Z.paymentSourcesFetchRequest) ? n : (0, d.tZ)()), p.Z.ipCountryCodeLoaded || e.push((0, d.GE)()), e.push(C()), await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
+        (h.Z.hasFetchedPaymentSources || e.push(null != (n = p.Z.paymentSourcesFetchRequest) ? n : (0, d.tZ)()), p.Z.ipCountryCodeLoaded || e.push((0, d.GE)()), e.push(C()), await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]));
     }
     let s = h.Z.getDefaultBillingCountryCode(),
         l = null != (r = null == (t = h.Z.defaultPaymentSource) ? void 0 : t.id) ? r : null,
         c = m.ZP.getPremiumTypeSubscription();
-    null != c && null != c.paymentSourceId && (l = c.paymentSourceId), null === s && (s = null != (i = p.Z.ipCountryCode) ? i : null);
+    (null != c && null != c.paymentSourceId && (l = c.paymentSourceId), null === s && (s = null != (i = p.Z.ipCountryCode) ? i : null));
     let f = {};
     if ((null != s && (f.country_code = s), null != l && (f.payment_source_id = l), null != s || null != l)) {
         if (

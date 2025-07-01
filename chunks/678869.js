@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854);
+(n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(423875),
@@ -121,7 +121,7 @@ function x(e) {
     let q = V,
         X = [];
     if (B.media.provider === a.p.SPOTIFY) {
-        (m = () => {
+        ((m = () => {
             (0, c.aG)(G);
         }),
             (T = () => {
@@ -130,7 +130,7 @@ function x(e) {
             (n = () => {
                 var e;
                 null != (e = null == W ? void 0 : W()) || (0, c.aG)(G);
-            });
+            }));
         let e = (e) => {
             (0, c.d$)(G, Z.id, e);
         };
@@ -144,7 +144,7 @@ function x(e) {
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                (0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), k();
+                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), k());
             };
             X.push(
                 (0, r.jsx)(

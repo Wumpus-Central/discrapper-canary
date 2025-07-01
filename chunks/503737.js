@@ -4,14 +4,14 @@ n(73800);
 var i = n(481060),
     l = n(570140),
     o = n(468026),
-    s = n(317770),
-    a = n(981631),
+    a = n(317770),
+    s = n(981631),
     c = n(388032);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -19,7 +19,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -27,8 +27,8 @@ function u(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -36,16 +36,16 @@ let d = 'ActivityInviteManager',
     h = () => {
         l.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
     };
-class p extends s.Z {
+class p extends a.Z {
     _initialize() {
-        l.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), l.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
+        (l.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), l.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose));
     }
     _terminate() {
-        l.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), l.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
+        (l.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), l.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose));
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: l, context: s } = e,
-            p = s === a.IlC.POPOUT ? i.u1M : i.z1l;
+        let { activity: t, isPrivate: l, context: a } = e,
+            p = a === s.IlC.POPOUT ? i.u1M : i.z1l;
         l
             ? (0, i.h7j)(
                   (e) =>

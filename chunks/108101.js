@@ -73,7 +73,7 @@ function ee(e, t, n, C, R, P) {
     P || (P = new r());
     var V = P.get(e);
     if (V) return V;
-    P.set(e, w),
+    (P.set(e, w),
         v(e)
             ? e.forEach(function (r) {
                   w.add(ee(r, t, n, r, e, P));
@@ -81,14 +81,14 @@ function ee(e, t, n, C, R, P) {
             : y(e) &&
               e.forEach(function (r, i) {
                   w.set(i, ee(r, t, n, i, e, P));
-              });
+              }));
     var F = j ? (k ? _ : f) : k ? keysIn : I,
         Z = U ? void 0 : F(e);
     return (
         i(Z || e, function (r, i) {
-            Z && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, P));
+            (Z && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, P)));
         }),
         w
     );
 }
-($[N] = $[C] = $[F] = $[Z] = $[R] = $[P] = $[H] = $[Y] = $[W] = $[K] = $[z] = $[x] = $[k] = $[M] = $[j] = $[U] = $[G] = $[B] = $[q] = $[X] = $[Q] = $[J] = !0), ($[w] = $[D] = $[V] = !1), (e.exports = ee);
+(($[N] = $[C] = $[F] = $[Z] = $[R] = $[P] = $[H] = $[Y] = $[W] = $[K] = $[z] = $[x] = $[k] = $[M] = $[j] = $[U] = $[G] = $[B] = $[q] = $[X] = $[Q] = $[J] = !0), ($[w] = $[D] = $[V] = !1), (e.exports = ee));

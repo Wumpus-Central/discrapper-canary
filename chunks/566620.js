@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $h: () => es,
     G6: () => en,
     Gj: () => eg,
@@ -15,7 +15,7 @@ n.d(t, {
 }),
     n(997841),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(990547),
     i = n(252258),
     a = n(544891),
@@ -83,7 +83,7 @@ function ee(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -91,7 +91,7 @@ function ee(e) {
             )),
             r.forEach(function (t) {
                 $(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -215,12 +215,12 @@ async function ei(e) {
     }
     let b = d.handler !== _.VC.APP_HANDLER;
     if (!(b || X.Yq.includes(t))) {
-        null != r &&
+        (null != r &&
             (await (0, p.FN)({
                 type: 'channel',
                 channelId: r
             })),
-            await (0, p.FN)({ type: 'user' });
+            await (0, p.FN)({ type: 'user' }));
         let e = C.Z.getChannel(r),
             { isAuthorized: n } = await (0, E.L)({
                 applicationId: t,
@@ -279,10 +279,10 @@ async function ei(e) {
                 interactionLifecycleOptionsFactory: () => ({
                     nonce: n,
                     onSuccess: () => {
-                        null == l || l(), e();
+                        (null == l || l(), e());
                     },
                     onFailure: (e, n, a, o) => {
-                        null == l || l(),
+                        (null == l || l(),
                             L.default.track(q.rMx.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
                                 channel_id: r,
                                 guild_id: i,
@@ -306,7 +306,7 @@ async function ei(e) {
                                   )
                                 : null != o && o in v.Z.ReasonCodes
                                   ? c(new v.Z(o))
-                                  : c(new v.Z(v.Z.ReasonCodes.UNKNOWN));
+                                  : c(new v.Z(v.Z.ReasonCodes.UNKNOWN)));
                     }
                 })
             });
@@ -477,7 +477,7 @@ async function es() {
             }),
             t = e.body.applications,
             n = t.map((e) => A.ZP.createFromServer(e));
-        o.Z.dispatch({
+        (o.Z.dispatch({
             type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS',
             applications: n,
             assets: e.body.assets
@@ -485,7 +485,7 @@ async function es() {
             o.Z.dispatch({
                 type: 'APPLICATIONS_FETCH_SUCCESS',
                 applications: t
-            });
+            }));
     } catch (e) {
         o.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL' });
     }
@@ -512,7 +512,7 @@ async function el(e, t, n) {
             r.body.attachment
         );
     } catch (e) {
-        return o.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL' }), new f.Z(e);
+        return (o.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL' }), new f.Z(e));
     }
 }
 let ec = (e, t, n) => {
@@ -529,12 +529,12 @@ async function eu(e) {
             let e,
                 t,
                 n = new Promise((t) => {
-                    (e = ec.bind(null, s, t)), o.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e);
+                    ((e = ec.bind(null, s, t)), o.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e));
                 }),
                 r = new Promise((e) => {
-                    (t = ec.bind(null, s, e)), o.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t);
+                    ((t = ec.bind(null, s, e)), o.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t));
                 });
-            await Promise.race([n, r]), null != e && (o.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)), null != t && (o.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null));
+            (await Promise.race([n, r]), null != e && (o.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)), null != t && (o.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null)));
         }
         return {
             activityConfigs: c,
@@ -618,7 +618,7 @@ async function ef(e) {
         let t,
             n = C.Z.getChannel(e);
         if (null == n) throw Error('Private channel not found');
-        null != a && (t = I.ZP.parse(n, a).content), d.Z.sendInvite(e, o.code, i, null, t);
+        (null != a && (t = I.ZP.parse(n, a).content), d.Z.sendInvite(e, o.code, i, null, t));
     });
 }
 function e_() {
@@ -652,5 +652,5 @@ function em(e) {
     });
 }
 function eg() {
-    eh(z.Ez.ACTIVITY_POPOUT_WINDOW), o.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
+    (eh(z.Ez.ACTIVITY_POPOUT_WINDOW), o.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }));
 }

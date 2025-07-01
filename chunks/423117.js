@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AE: () => O,
     FP: () => g,
     I1: () => v,
@@ -11,7 +11,7 @@ n.d(t, {
     uw: () => E,
     vY: () => b
 }),
-    n(388685);
+    n(388685));
 var r = n(379649),
     i = n(570140),
     a = n(355467),
@@ -38,7 +38,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -46,7 +46,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -120,11 +120,11 @@ async function b(e) {
         r.subscription_plans[0].id === e && (await o.GZ(r.id, void 0, void 0, !0));
 }
 async function y(e, t, n) {
-    await u.es(e, t, n),
+    (await u.es(e, t, n),
         i.Z.dispatch({
             type: 'GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING',
             listingId: n
-        });
+        }));
 }
 async function O(e, t, n) {
     let r = await u.V_(e, t, n);
@@ -203,12 +203,12 @@ async function A(e) {
                 guildId: e
             });
             let { restrictions: r } = await u.j8(e, { signal: t });
-            i.Z.dispatch({
+            (i.Z.dispatch({
                 type: 'GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS',
                 guildId: e,
                 restrictions: null != r ? r : []
             }),
-                (n = !0);
+                (n = !0));
             break;
         } catch (e) {
             await (0, r._v)((a + 1) * c.Z.Millis.SECOND);

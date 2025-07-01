@@ -10,7 +10,7 @@ function o(e) {
     let { onEnableMFAClick: t, onMFAEnabled: n } = e,
         { isUserMFAEnabled: o, isModerationMFAEnabled: c } = (0, s.N)(),
         d = i.useCallback(async () => {
-            await t(), null == n || n();
+            (await t(), null == n || n());
         }, [t, n]),
         u = i.useCallback(
             (e) =>

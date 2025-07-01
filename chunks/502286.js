@@ -6,7 +6,7 @@ function i(e) {
     let i = e.sourcePid;
     if (null != i) {
         let e = r.ZP.getGameForPID(i);
-        (t = null == e ? void 0 : e.name), (n = null == e ? void 0 : e.id);
+        ((t = null == e ? void 0 : e.name), (n = null == e ? void 0 : e.id));
     }
     return {
         soundshare_session: e.soundshareSession,

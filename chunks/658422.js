@@ -1,3 +1,3 @@
 t.exports = function (t, e) {
-    t.setMode('drag'), e.preventDefault();
+    (t.setMode('drag'), e.preventDefault());
 };

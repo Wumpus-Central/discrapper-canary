@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'ashes',
         author: 'jannik siebert (https://github.com/janniks)',
@@ -19,4 +19,4 @@
         base0E: '#C795AE',
         base0F: '#C79595'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

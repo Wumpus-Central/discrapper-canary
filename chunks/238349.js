@@ -1,10 +1,10 @@
 let r;
-n.d(t, {
+(n.d(t, {
     U: () => V,
     Z: () => Q
 }),
     n(388685),
-    n(642613);
+    n(642613));
 var i,
     a = n(392711),
     o = n.n(a),
@@ -72,12 +72,12 @@ function U(e, t) {
     };
 }
 function G() {
-    (C = []), (r = null), (I = null), (T = new Set()), (S = l.z.LATEST_ACTIVITY), (A = s.z.MATCH_SOME), (N = 0), (P = []), (w = o().chain(O)), (D = o().chain(O)), x.clear(), L.clear();
+    ((C = []), (r = null), (I = null), (T = new Set()), (S = l.z.LATEST_ACTIVITY), (A = s.z.MATCH_SOME), (N = 0), (P = []), (w = o().chain(O)), (D = o().chain(O)), x.clear(), L.clear());
 }
 function B() {
     var e;
     let t = m.Z.getChannelId();
-    if (null == t || !(null == (e = p.Z.getChannel(t)) ? void 0 : e.isForumLikeChannel())) return G(), !1;
+    if (null == t || !(null == (e = p.Z.getChannel(t)) ? void 0 : e.isForumLikeChannel())) return (G(), !1);
     F({ refreshThreadIds: !0 });
 }
 function V(e) {
@@ -94,7 +94,7 @@ function V(e) {
 function F(e) {
     let t = p.Z.getChannel(I);
     if (null == t) return;
-    (null == e ? void 0 : e.refreshThreadIds) &&
+    ((null == e ? void 0 : e.refreshThreadIds) &&
         ((P = Object.values(d.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
             let { id: t } = e;
             return t;
@@ -103,7 +103,7 @@ function F(e) {
         (R = !0)),
         0 !== L.size && ((P = P.filter((e) => !L.has(e))), L.clear()),
         0 !== x.size && ((P = Array.from(new Set([...P, ...x]))), x.clear()),
-        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = o().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = o().chain(P).sort(j(l.z.CREATION_DATE))));
+        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = o().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = o().chain(P).sort(j(l.z.CREATION_DATE)))));
     let n = (S === l.z.LATEST_ACTIVITY ? D : w).value(),
         i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => M(e));
     r = null == i ? null : i;
@@ -119,10 +119,10 @@ function H(e) {
     if (null == t.parent_id || t.parent_id !== I) return !1;
     let n = (0, b.yv)(t.id),
         r = x.has(t.id);
-    if (n && !r) x.add(t.id), F({ sortThreadIds: !0 });
+    if (n && !r) (x.add(t.id), F({ sortThreadIds: !0 }));
     else {
         if (n || !r) return !1;
-        x.delete(t.id), F({ sortThreadIds: !0 });
+        (x.delete(t.id), F({ sortThreadIds: !0 }));
     }
 }
 function Y(e) {
@@ -133,7 +133,7 @@ function Y(e) {
 function W(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== I) return !1;
-    L.add(t.id), F({ sortThreadIds: !0 });
+    (L.add(t.id), F({ sortThreadIds: !0 }));
 }
 function K(e) {
     let { channel: t } = e;
@@ -165,14 +165,14 @@ class X extends (i = c.ZP.Store) {
             a = !(0, g.OL)(n, T),
             o = t !== S,
             s = r !== A;
-        return (I = e), (T = n), (S = t), (A = r), i ? F({ refreshThreadIds: !0 }) : o ? F({ sortThreadIds: !0 }) : (a || s) && F(), C;
+        return ((I = e), (T = n), (S = t), (A = r), i ? F({ refreshThreadIds: !0 }) : o ? F({ sortThreadIds: !0 }) : (a || s) && F(), C);
     }
     getCurrentThreadIds() {
         return C;
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
         let e = v;
-        return (v = null), e;
+        return ((v = null), e);
     }
     getFirstNoReplyThreadId() {
         return r;

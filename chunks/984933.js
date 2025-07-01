@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => ec,
     Zb: () => S,
     sH: () => T
 }),
     n(642613),
     n(539854),
-    n(388685);
+    n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -69,7 +69,7 @@ function M(e) {
 }
 function j(e) {
     let t = N[e];
-    return null == t && (t = Y(e)), t;
+    return (null == t && (t = Y(e)), t);
 }
 function U(e, t) {
     let { comparator: n } = e,
@@ -77,7 +77,7 @@ function U(e, t) {
     return n - r;
 }
 function G(e) {
-    e[T].sort(U), e[S].sort(U), e[v.d4z.GUILD_CATEGORY].sort(U);
+    (e[T].sort(U), e[S].sort(U), e[v.d4z.GUILD_CATEGORY].sort(U));
 }
 function B(e) {
     return (0, _.r8)(e) ? T : (0, _.bw)(e) ? S : e;
@@ -116,17 +116,17 @@ function Z(e) {
             let r = n.channel;
             if (((e.count += 1), _.zS.has(r.type) && !b.Z.can(v.Plq.VIEW_CHANNEL, r) && !c.Z.isChannelGated(r.guild_id, r.id) && r.id !== P)) return;
             let i = B(r.type);
-            r.type === v.d4z.GUILD_DIRECTORY && (null == w[t] && (w[t] = []), w[t].push(n)), null != e[i] && e[i].push(n);
+            (r.type === v.d4z.GUILD_DIRECTORY && (null == w[t] && (w[t] = []), w[t].push(n)), null != e[i] && e[i].push(n));
         }),
         e
     );
 }
 function H() {
-    (N = {}), (w = {}), (C = {}), (R = {}), null != A && Y(A);
+    ((N = {}), (w = {}), (C = {}), (R = {}), null != A && Y(A));
 }
 function Y(e) {
     let t = M(e);
-    return (N[e] = t), (w[e] = []), Z(t), G(t), W(t), en(e), t;
+    return ((N[e] = t), (w[e] = []), Z(t), G(t), W(t), en(e), t);
 }
 function W(e) {
     let t = (C[e.id] = {}),
@@ -135,11 +135,11 @@ function W(e) {
         let { channel: r } = e,
             i = (0, u.F6)(r, O.default, y.Z),
             a = Object.prototype.hasOwnProperty.call(n, i) ? n[i] : null;
-        null == a ? (n[i] = 1) : ((n[i] = a + 1), (i += '~'.concat(a))),
+        (null == a ? (n[i] = 1) : ((n[i] = a + 1), (i += '~'.concat(a))),
             (t[r.id] = {
                 id: r.id,
                 name: i
-            });
+            }));
     });
 }
 function K(e) {
@@ -147,18 +147,18 @@ function K(e) {
         guild: { id: t }
     } = e;
     if (null == t) return !1;
-    (N[t] = void 0), A === t && Y(t);
+    ((N[t] = void 0), A === t && Y(t));
 }
 function z(e) {
     let {
         guild: { id: t }
     } = e;
-    return delete N[t], delete C[t], delete R[t], delete w[t], !0;
+    return (delete N[t], delete C[t], delete R[t], delete w[t], !0);
 }
 function q(e) {
     let { guildId: t, user: n } = e;
     if (h.default.getId() !== n.id) return !1;
-    (N[t] = void 0), t === A && Y(t);
+    ((N[t] = void 0), t === A && Y(t));
 }
 function X(e) {
     let t = m.Z.getBasicChannel(e.id);
@@ -169,7 +169,7 @@ function Q(e) {
         channel: { guild_id: t }
     } = e;
     if (null == t) return !1;
-    (N[t] = void 0), t === A && Y(t);
+    ((N[t] = void 0), t === A && Y(t));
 }
 function J(e) {
     let { channels: t } = e,
@@ -182,7 +182,7 @@ function J(e) {
 }
 function $(e) {
     let { guildId: t } = e;
-    (N[t] = void 0), t === A && Y(t);
+    ((N[t] = void 0), t === A && Y(t));
 }
 function ee(e, t) {
     return o.Db(
@@ -212,7 +212,7 @@ function er(e, t) {
     P = t;
     let r = null != (n = null == e ? void 0 : e.getGuildId()) ? n : null;
     if (null == r) return !1;
-    (N[r] = void 0), r === A && Y(r);
+    ((N[r] = void 0), r === A && Y(r));
 }
 function ei(e) {
     let { channelId: t } = e;
@@ -235,7 +235,7 @@ function es() {
 }
 class el extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, g.ZP, m.Z, b.Z, h.default, c.Z, d.Z), this.syncWith([d.Z], es);
+        (this.waitFor(E.Z, g.ZP, m.Z, b.Z, h.default, c.Z, d.Z), this.syncWith([d.Z], es));
     }
     getAllGuilds() {
         return N;

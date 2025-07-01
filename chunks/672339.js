@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     FU: () => O,
     eH: () => v,
     wG: () => y
@@ -14,7 +14,7 @@ n.d(t, {
     n(918970),
     n(121784),
     n(644351),
-    n(146733);
+    n(146733));
 var r = n(512722),
     i = n.n(r),
     a = n(46973),
@@ -31,10 +31,10 @@ var r = n(512722),
 function m(e) {
     return new Promise((t, n) => {
         let r = new Image();
-        (r.crossOrigin = 'anonymous'),
+        ((r.crossOrigin = 'anonymous'),
             (r.onload = () => {
                 let e = document.createElement('canvas');
-                (e.width = p.HE.width), (e.height = p.HE.height);
+                ((e.width = p.HE.width), (e.height = p.HE.height));
                 let n = e.getContext('2d');
                 i()(null != n, 'Canvas context is missing');
                 let a = r.height / r.width,
@@ -52,7 +52,7 @@ function m(e) {
                 });
             }),
             (r.onerror = (e) => n(e)),
-            (r.src = e);
+            (r.src = e));
     });
 }
 async function g(e) {
@@ -78,16 +78,16 @@ async function b(e, t, n) {
     if ('string' == typeof n || 'number' == typeof n) {
         var o;
         let e = (0, f.Z)()[n];
-        (i = null != (o = e.isVideo) && o), (r = e.source);
+        ((i = null != (o = e.isVideo) && o), (r = e.source));
     } else {
         let e = n.asset;
-        (i = (0, s.xR)(e) || (0, s.ay)(e)),
+        ((i = (0, s.xR)(e) || (0, s.ay)(e)),
             (r = (0, s.rI)({
                 userId: n.user_id,
                 assetId: n.id,
                 assetHash: e,
                 size: p.HE.width
-            }));
+            })));
     }
     if (null != r)
         try {
@@ -100,11 +100,11 @@ async function b(e, t, n) {
 }
 async function y(e, t) {
     let { track: n = !0, location: r } = t;
-    await b(a.TO.CAMERA_BACKGROUND_LIVE, { type: a.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
+    (await b(a.TO.CAMERA_BACKGROUND_LIVE, { type: a.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled'));
 }
 async function O(e, t, n) {
     let { track: r = !0, location: i } = n;
-    (0, c.GS)(),
+    ((0, c.GS)(),
         await b(
             a.TO.CAMERA_BACKGROUND_PREVIEW,
             {
@@ -113,7 +113,7 @@ async function O(e, t, n) {
             },
             e
         ),
-        r && (0, d.Bh)(e, i, 'Preview');
+        r && (0, d.Bh)(e, i, 'Preview'));
 }
 function v() {
     let e = o.default.getCurrentUser();

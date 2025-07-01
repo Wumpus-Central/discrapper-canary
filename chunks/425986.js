@@ -24,7 +24,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -40,11 +40,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -60,7 +60,7 @@ function d(e, t) {
     );
 }
 var f = (function (e) {
-    return (e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR'), e;
+    return ((e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR'), e);
 })({});
 let _ = [],
     p = {},
@@ -92,7 +92,7 @@ function O(e) {
             activeState: r
         }),
         a = b(t.map((e) => ((e.application_directory_collection_items = y(e.application_directory_collection_items)), e)));
-    (p = d(c({}, p), { [i]: a })), (h = d(c({}, h), { [i]: 1 }));
+    ((p = d(c({}, p), { [i]: a })), (h = d(c({}, h), { [i]: 1 })));
     let o = Date.now();
     m = d(c({}, m), { [i]: o });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(953529);
+(n.d(t, { Z: () => u }), n(953529));
 var r = n(474936),
     i = n(535396),
     a = n(185923);
@@ -19,7 +19,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -78,7 +78,7 @@ function u(e, t) {
                 T = t.sku.dependent_sku_id;
             for (; null != T; ) {
                 let t = e.find((e) => T === e.sku.id);
-                (o += null != (O = null == t || null == (p = t.sku) || null == (_ = p.powerup_metadata) || null == (f = _.guild_features) ? void 0 : f.additional_emoji_slots) ? O : 0), (l += null != (v = null == t || null == (g = t.sku) || null == (m = g.powerup_metadata) || null == (h = m.guild_features) ? void 0 : h.additional_sound_slots) ? v : 0), (u += null != (I = null == t || null == (y = t.sku) || null == (b = y.powerup_metadata) || null == (E = b.guild_features) ? void 0 : E.additional_sticker_slots) ? I : 0), (T = null == t ? void 0 : t.sku.dependent_sku_id);
+                ((o += null != (O = null == t || null == (p = t.sku) || null == (_ = p.powerup_metadata) || null == (f = _.guild_features) ? void 0 : f.additional_emoji_slots) ? O : 0), (l += null != (v = null == t || null == (g = t.sku) || null == (m = g.powerup_metadata) || null == (h = m.guild_features) ? void 0 : h.additional_sound_slots) ? v : 0), (u += null != (I = null == t || null == (y = t.sku) || null == (b = y.powerup_metadata) || null == (E = b.guild_features) ? void 0 : E.additional_sticker_slots) ? I : 0), (T = null == t ? void 0 : t.sku.dependent_sku_id));
             }
             return s(
                 {

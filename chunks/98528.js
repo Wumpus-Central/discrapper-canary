@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Qs: () => E,
     Uf: () => g,
     VO: () => b,
@@ -8,7 +8,7 @@ n.d(t, {
     yi: () => y
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(73800),
     i = n(392711),
     a = n.n(i),
@@ -34,7 +34,7 @@ let _ = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             }, [n, u, i]),
             r.useEffect(() => {
                 let e = a().debounce(u, 250);
-                return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
+                return (window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
             }, [u]),
             l
         );
@@ -43,7 +43,7 @@ let _ = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
         let { activeCategoryIndex: t, listRef: n, searchQuery: i } = e,
             a = r.useRef(i),
             o = r.useRef(!0);
-        r.useLayoutEffect(() => {
+        (r.useLayoutEffect(() => {
             if ('' === i && '' !== a.current) {
                 var e;
                 null == (e = n.current) || e.scrollToSectionTop(t);
@@ -53,12 +53,12 @@ let _ = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             r.useLayoutEffect(() => {
                 if (o.current) {
                     var e;
-                    null == (e = n.current) || e.scrollToSectionTop(t), (o.current = !1);
+                    (null == (e = n.current) || e.scrollToSectionTop(t), (o.current = !1));
                 }
             }, [t, n]),
             r.useEffect(() => {
                 a.current = i;
-            }, [i]);
+            }, [i]));
     },
     g = (e) => {
         let { listRef: t, searchQuery: n, nitroLockedSectionStates: i, setShowUpsell: a, setUpsellGlowOpacity: o } = e,
@@ -98,18 +98,18 @@ let _ = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                         l = e + 0.85 * o,
                         c = !1,
                         u = !1;
-                    i.forEach((e, t) => {
+                    (i.forEach((e, t) => {
                         if (!e.isNitroLocked) return;
                         let n = r[t];
-                        n.offset.top <= l && n.offset.bottom >= l && (u = !0), n.offset.top <= s && n.offset.bottom >= s && (c = !0);
+                        (n.offset.top <= l && n.offset.bottom >= l && (u = !0), n.offset.top <= s && n.offset.bottom >= s && (c = !0));
                     }),
-                        null == a || a(u && c);
+                        null == a || a(u && c));
                 },
                 [n, t, i, a]
             );
         return r.useCallback(
             (e) => {
-                l(e), s(e);
+                (l(e), s(e));
             },
             [l, s]
         );
@@ -147,7 +147,7 @@ let _ = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             );
         return r.useCallback(
             (e) => {
-                (i.current = !0), d(), _(e);
+                ((i.current = !0), d(), _(e));
             },
             [i, d, _]
         );
@@ -169,7 +169,7 @@ let _ = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                     let r = d(t, n);
                     if (null == r) return;
                     let { visibleRowIndex: i, columnIndex: o } = r;
-                    c(o, i), null != a.current && a.current.scrollRowIntoView(n);
+                    (c(o, i), null != a.current && a.current.scrollRowIntoView(n));
                 },
                 [d, a, c]
             ),
@@ -223,7 +223,7 @@ let _ = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 let e = () => {
                     u.current = !1;
                 };
-                return window.addEventListener('mousemove', e), () => window.removeEventListener('mousemove', e);
+                return (window.addEventListener('mousemove', e), () => window.removeEventListener('mousemove', e));
             }, []),
             {
                 gridDispatch: h,
@@ -262,7 +262,7 @@ function y(e) {
                             visibleRowIndex: _,
                             category: n
                         }));
-                    r || (_++, u.push(s), l.push(s.length)), d++;
+                    (r || (_++, u.push(s), l.push(s.length)), d++);
                 }
                 f++;
             };

@@ -1,4 +1,4 @@
-n.d(t, { t: () => p }), n(415506);
+(n.d(t, { t: () => p }), n(415506));
 var r = n(73800),
     a = n(512722),
     o = n.n(a),
@@ -25,7 +25,7 @@ async function u(e, t, n) {
     try {
         o()(null != h, 'No URL in authorize response');
         let { state: e } = (0, s.xp)(h);
-        o()(null != e, 'Authorize URL state query parameter must be present'), (x = e);
+        (o()(null != e, 'Authorize URL state query parameter must be present'), (x = e));
     } catch (e) {
         throw (await f(n, 2, 'authorize'), Error('error parsing callback params'));
     }
@@ -55,13 +55,13 @@ function p(e, t, n) {
             }
             if (null == r.twoWayLinkCode)
                 try {
-                    await (0, c.tR)(r.userCode, 'granted'), n(r);
+                    (await (0, c.tR)(r.userCode, 'granted'), n(r));
                 } catch (e) {
                     t(r);
                 }
             else
                 try {
-                    await u(r.clientId, r.twoWayLinkCode, r.userCode), n(r);
+                    (await u(r.clientId, r.twoWayLinkCode, r.userCode), n(r));
                 } catch (e) {
                     t(r);
                 }

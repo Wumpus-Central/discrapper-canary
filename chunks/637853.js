@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Ee: () => O,
     L6: () => D,
     V7: () => I,
@@ -17,7 +17,7 @@ n.d(t, {
     n(388685),
     n(539854),
     n(472816),
-    n(794429);
+    n(794429));
 var r = n(442837),
     i = n(902704),
     a = n(447003),
@@ -56,7 +56,7 @@ function b(e, t) {
 }
 function y(e, t, n) {
     let r = new Set();
-    e.forEach((e) => {
+    (e.forEach((e) => {
         e.options.forEach((e) => {
             var t;
             null == e ||
@@ -66,7 +66,7 @@ function y(e, t, n) {
                 });
         });
     }),
-        t.forEach((e) => r.add(e));
+        t.forEach((e) => r.add(e)));
     let i = n.filter((e) => !e.isCategory() && !e.isThread() && !(0, a.Z)(e));
     return [i.filter((e) => r.has(e.id) || (null != e.parent_id && r.has(e.parent_id))), i.filter((e) => !r.has(e.id) && !(null != e.parent_id && r.has(e.parent_id)))];
 }

@@ -9,7 +9,7 @@ function a(e) {
         let t = setTimeout(r, 0),
             n = setInterval(r, 50);
         function r() {
-            clearTimeout(t), clearInterval(n), e();
+            (clearTimeout(t), clearInterval(n), e());
         }
     };
 }

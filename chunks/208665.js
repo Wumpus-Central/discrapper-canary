@@ -16,7 +16,7 @@ let h = !1,
     f = !1,
     S = [];
 function E() {
-    (h = !1), (g = null), (S = []), (f = !1), null != (g = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((N = d.Z.getOnboardingPrompts(g)), (f = d.Z.isAdvancedMode(g)));
+    ((h = !1), (g = null), (S = []), (f = !1), null != (g = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((N = d.Z.getOnboardingPrompts(g)), (f = d.Z.isAdvancedMode(g))));
 }
 class p extends (r = o.ZP.Store) {
     initialize() {
@@ -41,7 +41,7 @@ class p extends (r = o.ZP.Store) {
         return f;
     }
 }
-(i = 'GuildSettingsOnboardingPromptsStore'),
+((i = 'GuildSettingsOnboardingPromptsStore'),
     (l = 'displayName') in p
         ? Object.defineProperty(p, l, {
               value: i,
@@ -49,7 +49,7 @@ class p extends (r = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (p[l] = i);
+        : (p[l] = i));
 let T = new p(c.Z, {
     GUILD_SETTINGS_INIT: E,
     GUILD_SETTINGS_SET_SECTION: E,
@@ -59,14 +59,14 @@ let T = new p(c.Z, {
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: E,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
         var t;
-        (S = null != (t = e.errors) ? t : []), (h = !1);
+        ((S = null != (t = e.errors) ? t : []), (h = !1));
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
         let { prompts: t } = e;
         N = t;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        (h = !0), (S = []);
+        ((h = !0), (S = []));
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
         var t;

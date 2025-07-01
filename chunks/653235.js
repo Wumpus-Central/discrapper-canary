@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -37,7 +37,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -128,7 +128,7 @@ class P extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             T(this, '_masonryRef', i.createRef()),
             T(this, 'state', {
                 favoritesTile: R(this.props.favorites),
@@ -219,7 +219,7 @@ class P extends i.PureComponent {
             T(this, 'getCoordsMap', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getCoordsMap() : {};
-            });
+            }));
     }
 }
 function w(e) {

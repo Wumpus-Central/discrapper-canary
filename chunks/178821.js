@@ -1,4 +1,4 @@
-r.d(t, {
+(r.d(t, {
     MC: () => g,
     Y5: () => v,
     ZF: () => T,
@@ -8,7 +8,7 @@ r.d(t, {
     nU: () => I,
     tO: () => p
 }),
-    r(388685);
+    r(388685));
 var n = r(255367),
     a = r(73800),
     c = r(120356),
@@ -23,7 +23,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -31,7 +31,7 @@ function m(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -39,8 +39,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -77,19 +77,19 @@ function v(e, t) {
         l.current = null != r ? r : window;
     }, [r]);
     let u = a.useCallback(() => {
-            null != n.current && l.current.clearInterval(n.current), null != c.current && l.current.cancelIdleCallback(c.current), null != s.current && l.current.cancelAnimationFrame(s.current);
+            (null != n.current && l.current.clearInterval(n.current), null != c.current && l.current.cancelIdleCallback(c.current), null != s.current && l.current.cancelAnimationFrame(s.current));
         }, []),
         i = a.useCallback(() => {
             n.current = l.current.setTimeout(() => {
-                (c.current = l.current.requestIdleCallback(e)),
+                ((c.current = l.current.requestIdleCallback(e)),
                     (s.current = l.current.requestAnimationFrame(() => {
-                        t(), i();
-                    }));
+                        (t(), i());
+                    })));
             }, 12);
         }, [e, t]);
     return [
         a.useCallback(() => {
-            u(), i();
+            (u(), i());
         }, [u, i]),
         u
     ];
@@ -112,7 +112,7 @@ function T(e) {
             a.useCallback(function () {
                 let e = performance.now(),
                     a = e - r.current;
-                (r.current = e), u.current || ((n.current -= t.current[s.current]), (t.current[s.current] = a), (n.current += a), c.current < j && (c.current += 1), (s.current = (s.current + 1) % j));
+                ((r.current = e), u.current || ((n.current -= t.current[s.current]), (t.current[s.current] = a), (n.current += a), c.current < j && (c.current += 1), (s.current = (s.current + 1) % j)));
             }, []),
             (e, t) => {
                 var r;
@@ -120,7 +120,7 @@ function T(e) {
                 return Math.abs(e * t - (n.current / a) * a) / t;
             },
             () => {
-                (n.current = 0), (c.current = 0), t.current.fill(0), (r.current = performance.now()), (s.current = 0);
+                ((n.current = 0), (c.current = 0), t.current.fill(0), (r.current = performance.now()), (s.current = 0));
             }
         ]
     );
@@ -136,7 +136,7 @@ function k(e, t) {
         o = a.useRef(0),
         d = a.useRef(0),
         x = a.useCallback(() => {
-            n.current.fill(0), (s.current = 0), (l.current = 0), (i.current = 0), (o.current = 0), (c.current = performance.now()), (u.current = 0);
+            (n.current.fill(0), (s.current = 0), (l.current = 0), (i.current = 0), (o.current = 0), (c.current = performance.now()), (u.current = 0));
         }, []),
         m = a.useCallback(
             function () {
@@ -147,7 +147,7 @@ function k(e, t) {
                     let t = 0 === i.current ? p : l.current / i.current,
                         r = Math.min(2 * p, t),
                         n = Math.floor(x / (e ? r : p));
-                    n > 0 && (d.current = performance.now()), (s.current += n);
+                    (n > 0 && (d.current = performance.now()), (s.current += n));
                 }
                 let m = 0 === i.current ? p : l.current / i.current;
                 u.current += x / m;
@@ -195,7 +195,7 @@ function w(e) {
         )
     );
     let P = a.useCallback(() => {
-        f(), I(), F();
+        (f(), I(), F());
     }, [f, I, F]);
     return (0, n.jsxs)('div', {
         className: d.panelGroup,
@@ -350,7 +350,7 @@ function S(e) {
         [t.dispatcher]
     );
     let o = (e) => {
-        t.dispatcher.toggleRequestIdleCallback(e), l(e);
+        (t.dispatcher.toggleRequestIdleCallback(e), l(e));
     };
     return (0, n.jsxs)('div', {
         className: d.panelGroup,
@@ -474,7 +474,7 @@ function O(e) {
         [c, l] = a.useState(r.isTelemetryEnabled),
         [i, o] = a.useState(r.isTelemetryEnabled),
         x = (e) => {
-            o(e), r.toggleTelemetry(e);
+            (o(e), r.toggleTelemetry(e));
         };
     return (0, n.jsxs)('div', {
         className: d.panelGroup,
@@ -499,7 +499,7 @@ function O(e) {
                     onChange: () => {
                         l((e) => {
                             let t = !e;
-                            return t && x(!0), t;
+                            return (t && x(!0), t);
                         });
                     },
                     size: 18,

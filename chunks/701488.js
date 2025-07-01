@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $y: () => x,
     Cr: () => y,
     Ev: () => s,
@@ -26,7 +26,7 @@ n.d(t, {
     wT: () => R,
     xK: () => T
 }),
-    n(388685);
+    n(388685));
 var r = n(911969),
     i = n(981631);
 let a = 160,
@@ -49,21 +49,21 @@ let a = 160,
     b = ['1037680572660727838', '235088799074484224', '1007373802981822582', '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'],
     y = ['1247266306231898122', '1257458870390099989', '1276239071764680926'];
 var O = (function (e) {
-        return (e.ADS = 'ADS'), (e.FAILED_LOAD = 'FAILED_LOAD'), (e.LAGGING = 'LAGGING'), (e.CONFUSING = 'CONFUSING'), (e.NOT_FUN = 'NOT_FUN'), (e.OTHER = 'OTHER'), e;
+        return ((e.ADS = 'ADS'), (e.FAILED_LOAD = 'FAILED_LOAD'), (e.LAGGING = 'LAGGING'), (e.CONFUSING = 'CONFUSING'), (e.NOT_FUN = 'NOT_FUN'), (e.OTHER = 'OTHER'), e);
     })({}),
     v = (function (e) {
-        return (e[(e.PLAY = 0)] = 'PLAY'), (e[(e.SPECTATE = 1)] = 'SPECTATE'), e;
+        return ((e[(e.PLAY = 0)] = 'PLAY'), (e[(e.SPECTATE = 1)] = 'SPECTATE'), e);
     })({}),
     I = (function (e) {
-        return (e.DESKTOP = 'desktop'), (e.MOBILE = 'mobile'), e;
+        return ((e.DESKTOP = 'desktop'), (e.MOBILE = 'mobile'), e);
     })({}),
     T = (function (e) {
-        return (e[(e.UNLOCKED = 1)] = 'UNLOCKED'), (e[(e.PORTRAIT = 2)] = 'PORTRAIT'), (e[(e.LANDSCAPE = 3)] = 'LANDSCAPE'), e;
+        return ((e[(e.UNLOCKED = 1)] = 'UNLOCKED'), (e[(e.PORTRAIT = 2)] = 'PORTRAIT'), (e[(e.LANDSCAPE = 3)] = 'LANDSCAPE'), e);
     })({});
 let S = new Set([c, u, d, f]),
     A = new Set([u, d, f]);
 var N = (function (e) {
-    return (e[(e.FOCUSED = 0)] = 'FOCUSED'), (e[(e.PIP = 1)] = 'PIP'), (e[(e.GRID = 2)] = 'GRID'), e;
+    return ((e[(e.FOCUSED = 0)] = 'FOCUSED'), (e[(e.PIP = 1)] = 'PIP'), (e[(e.GRID = 2)] = 'GRID'), e);
 })({});
 let C = {
         label_type: r.ww.NONE,
@@ -90,6 +90,6 @@ let C = {
     w = [...P, i.d4z.GUILD_VOICE],
     D = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
 var L = (function (e) {
-    return (e.NORMAL = 'normal'), (e.FULL_SCREEN = 'full-screen'), e;
+    return ((e.NORMAL = 'normal'), (e.FULL_SCREEN = 'full-screen'), e);
 })({});
 let x = 21600000;

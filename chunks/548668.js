@@ -370,7 +370,7 @@ class b extends (r = l.PureComponent) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             k(this, 'state', {
                 animateBackground: !1,
                 isMobile: null,
@@ -389,7 +389,7 @@ class b extends (r = l.PureComponent) {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
                                 n = Object.keys(a);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (n = n.concat(
                                     Object.getOwnPropertySymbols(a).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(a, e).enumerable;
@@ -397,7 +397,7 @@ class b extends (r = l.PureComponent) {
                                 )),
                                 n.forEach(function (t) {
                                     k(e, t, a[t]);
-                                });
+                                }));
                         }
                         return e;
                     })(
@@ -407,11 +407,11 @@ class b extends (r = l.PureComponent) {
                         },
                         t
                     )
-                ));
+                )));
     }
 }
-k(b, 'Variants', A),
+(k(b, 'Variants', A),
     k(b, 'defaultProps', {
         variant: A.PRIMARY,
         showWave: !0
-    });
+    }));

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => E }), n(388685), n(35282);
+(n.r(t), n.d(t, { default: () => E }), n(388685), n(35282));
 var r = n(255367),
     a = n(73800),
     o = n(593473),
@@ -37,11 +37,11 @@ function N() {
             };
         }),
         N = (0, i.e7)([f.Z], () => f.Z.hasLoadedExperiments);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         h.default.isAuthenticated() && !N && s.Z.getExperiments();
     }, [N]),
         (0, c.Z)(),
-        (0, x.Y)(n);
+        (0, x.Y)(n));
     let w = a.useCallback(() => {
             d({ type: 'user-code-input' });
         }, [d]),
@@ -75,7 +75,7 @@ function N() {
         I = !0;
     switch (n.type) {
         case 'handoff':
-            (e = (0, r.jsx)(v.c, { code: n.code })), (I = !1);
+            ((e = (0, r.jsx)(v.c, { code: n.code })), (I = !1));
             break;
         case 'user-code-input':
             e = (0, r.jsx)(C.v, {
@@ -84,13 +84,13 @@ function N() {
             });
             break;
         case 'authorization':
-            (e = (0, r.jsx)(m.B, {
+            ((e = (0, r.jsx)(m.B, {
                 data: n.userCodeData,
                 onDenied: w,
                 onError: T,
                 onSuccess: k
             })),
-                (I = !1);
+                (I = !1));
             break;
         case 'success':
             e = (0, r.jsx)(_.u, {

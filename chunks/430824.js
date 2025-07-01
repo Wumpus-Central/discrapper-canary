@@ -1,15 +1,12 @@
-let r;
-n.d(t, { Z: () => w }), n(388685);
-var i,
-    a = n(442837),
-    o = n(570140),
-    s = n(601964),
-    l = n(411198),
-    c = n(709054),
-    u = n(314897),
-    d = n(981631),
-    f = n(647086);
-function _(e, t, n) {
+(n.d(t, { Z: () => _ }), n(388685));
+var r = n(845856),
+    i = n(601964),
+    a = n(411198),
+    o = n(709054),
+    s = n(314897),
+    l = n(981631),
+    c = n(647086);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,135 +19,100 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
+                u(e, t, n[t]);
+            }));
     }
     return e;
 }
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let g = {},
-    E = !1;
-function b(e) {
-    E = !0;
-    let t = g;
-    (g = {}),
-        (r = 0),
-        e.guilds.forEach((e) => {
-            r++, (g[e.id] = l.wD(e, t[e.id]));
-        });
-}
-function y(e) {
-    for (let t of e.guilds) {
-        let e = g[t.id];
-        if (null == e || 'unavailable' === t.data_mode) return;
-        g[t.id] = l.sp(t, e);
-    }
-    r = Object.keys(g).length;
-}
-function O(e) {
-    for (let t of ((g = {}), (r = 0), e)) r++, (g[t.id] = l.cL(t));
-}
-function v(e) {
-    O(e.guilds);
-}
-function I(e) {
-    if (0 === e.guilds.length) return !1;
-    O(e.guilds);
-}
-function T(e) {
-    var t;
-    (g = {}),
-        (r = 0),
-        null == (t = e.guilds) ||
-            t.forEach((e) => {
-                r++, (g[e.id] = new s.ZP(e));
-            });
-}
-function S(e) {
-    let t = l.wD(e.guild, g[e.guild.id]);
-    null == g[t.id] && r++, (g = m(p({}, g), { [t.id]: t }));
-}
-function A(e) {
-    let t = l.di(e.guild, g[e.guild.id]);
-    null == g[t.id] && r++, (g = m(p({}, g), { [t.id]: t }));
-}
-function N(e) {
-    let { guild: t } = e;
-    if (null == g[t.id] || t.unavailable) return !1;
-    (g = p({}, g)), delete g[t.id], r--;
-}
-function C(e) {
-    let { guildId: t, joinedAt: n, user: r } = e,
-        i = u.default.getId(),
-        a = g[t];
-    if (i !== r.id || null == a) return !1;
-    let o = 'string' == typeof n ? new Date(n) : n;
-    if (o === a.joinedAt || null == o) return !1;
-    g = m(p({}, g), { [t]: a.updateJoinedAt(o) });
-}
-function R() {
-    return !0;
-}
-class P extends (i = a.ZP.Store) {
-    getGuild(e) {
-        if (null != e) return e === d.I_8 ? f.g : g[e];
-    }
-    getGuilds() {
-        return g;
-    }
-    getGuildIds() {
-        return c.default.keys(g);
-    }
+class f extends r.fE {
     getGuildCount() {
-        return r;
+        return this.length();
     }
-    isLoaded() {
-        return E;
+    constructor(...e) {
+        (super(...e),
+            u(this, 'getGuild', (e) => {
+                if (null != e) return e === l.I_8 ? c.g : this.get(e);
+            }),
+            u(
+                this,
+                'getGuilds',
+                this.memoized((e) => d({}, e))
+            ),
+            u(
+                this,
+                'getGuildsArray',
+                this.memoized((e) => Object.values(e))
+            ),
+            u(
+                this,
+                'getGuildIds',
+                this.memoized((e) => o.default.keys(e))
+            ));
     }
 }
-_(P, 'displayName', 'GuildStore');
-let w = new P(o.Z, {
-    BACKGROUND_SYNC: y,
-    CONNECTION_OPEN: b,
-    OVERLAY_INITIALIZE: T,
-    CACHE_LOADED: v,
-    CACHE_LOADED_LAZY: I,
-    GUILD_CREATE: S,
-    GUILD_UPDATE: A,
-    GUILD_DELETE: N,
-    GUILD_MEMBER_ADD: C,
-    GUILD_SETTINGS_SUBMIT_SUCCESS: R
+u(f, 'displayName', 'GuildStore');
+let _ = new f({
+    BACKGROUND_SYNC: (e, t) => {
+        let { guilds: n } = e;
+        for (let e of n) {
+            let n = t.get(e.id);
+            null != n && 'unavailable' !== e.data_mode && t.set(e.id, a.sp(e, n));
+        }
+    },
+    CONNECTION_OPEN: (e, t) => {
+        let { guilds: n } = e;
+        t.reset((e, t) => {
+            for (let r of n) e[r.id] = a.wD(r, t[r.id]);
+        });
+    },
+    OVERLAY_INITIALIZE: (e, t) => {
+        let { guilds: n } = e;
+        t.reset((e) => {
+            if (null != n) for (let t of n) e[t.id] = new i.ZP(t);
+        });
+    },
+    CACHE_LOADED: (e, t) => {
+        let { guilds: n } = e;
+        t.reset((e) => {
+            for (let t of n) e[t.id] = a.cL(t);
+        });
+    },
+    CACHE_LOADED_LAZY: (e, t) => {
+        let { guilds: n } = e;
+        0 !== n.length &&
+            t.reset((e) => {
+                for (let t of n) e[t.id] = a.cL(t);
+            });
+    },
+    GUILD_CREATE: (e, t) => {
+        let { guild: n } = e;
+        t.set(n.id, (e) => a.wD(n, e));
+    },
+    GUILD_UPDATE: (e, t) => {
+        let { guild: n } = e;
+        t.set(n.id, (e) => a.di(n, e));
+    },
+    GUILD_DELETE: (e, t) => {
+        let { guild: n } = e;
+        n.unavailable || t.remove(n.id);
+    },
+    GUILD_MEMBER_ADD: (e, t) => {
+        let { guildId: n, joinedAt: r, user: i } = e,
+            a = s.default.getId(),
+            o = t.get(n);
+        if (a !== i.id || null == o) return;
+        let l = 'string' == typeof r ? new Date(r) : r;
+        l !== o.joinedAt && null != l && t.set(n, o.updateJoinedAt(l));
+    }
 });

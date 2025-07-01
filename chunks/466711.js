@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -39,7 +39,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,11 +55,11 @@ function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -96,7 +96,7 @@ function w(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
         a = () => {
             var t;
-            i(), null == (t = e.onClick) || t.call(e);
+            (i(), null == (t = e.onClick) || t.call(e));
         };
     return (0, r.jsx)(
         y.Z,
@@ -170,7 +170,7 @@ function L(e) {
             });
         },
         V = () => {
-            S(!1), M(v.L.TAKE_ACTION), B();
+            (S(!1), M(v.L.TAKE_ACTION), B());
         },
         F =
             void 0 !== R

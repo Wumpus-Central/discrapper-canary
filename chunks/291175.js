@@ -13,5 +13,5 @@ let o = (e) => a.vK[e],
         let n = o(e);
         if (null == n) return null;
         let r = i()(t);
-        return r.add(n.tenureReqNumMonths, 'months'), r.add(1, 'days'), r.toDate();
+        return (r.add(n.tenureReqNumMonths, 'months'), r.add(1, 'days'), r.toDate());
     };

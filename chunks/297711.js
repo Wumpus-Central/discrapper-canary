@@ -1,4 +1,4 @@
-t(864733)(r, '__esModule', { value: !0 }),
+(t(864733)(r, '__esModule', { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -25,4 +25,4 @@ t(864733)(r, '__esModule', { value: !0 }),
         requiredOwnedElements: [['definition'], ['term']],
         requiredProps: {},
         superClass: [['roletype', 'structure', 'section', 'landmark']]
-    });
+    }));

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(953529);
+(n.d(t, { Z: () => g }), n(953529));
 var i = n(255367);
 n(73800);
 var s = n(120356),
@@ -17,7 +17,7 @@ function g(e) {
         'aria-label': u.intl.string(u.t.RscU7O),
         className: l()(h.container, n, { [h.containerActive]: p }),
         onClick: () => {
-            (0, c.Z)(g, m), x(g);
+            ((0, c.Z)(g, m), x(g));
         },
         children: [
             (0, i.jsx)(a.g8d, {

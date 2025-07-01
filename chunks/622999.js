@@ -1,5 +1,5 @@
 let r;
-n.d(t, {
+(n.d(t, {
     XZ: () => p,
     az: () => _,
     d2: () => d,
@@ -8,7 +8,7 @@ n.d(t, {
     rI: () => f
 }),
     n(35282),
-    n(388685);
+    n(388685));
 var i = n(36140),
     a = n(544891),
     o = n(710845),
@@ -20,10 +20,10 @@ let l = new o.Z('StripeUtils'),
         2 !== n.length && t();
         let r = n.map((e) => {
                 let r = parseInt(e);
-                return isNaN(r) && t(''.concat(n, ' is not a number.')), r < 1 && t(''.concat(r, ' is less than one.')), r;
+                return (isNaN(r) && t(''.concat(n, ' is not a number.')), r < 1 && t(''.concat(r, ' is less than one.')), r);
             }),
             [i, a] = r[0] > 12 ? [r[1], r[0]] : [r[0], r[1]];
-        return i > 12 && t('Month must be a number 1-12, not '.concat(i, '.')), a < 100 && (a += 2000), [i, a];
+        return (i > 12 && t('Month must be a number 1-12, not '.concat(i, '.')), a < 100 && (a += 2000), [i, a]);
     },
     u = (e) => {
         let t, n;
@@ -34,7 +34,7 @@ let l = new o.Z('StripeUtils'),
         }
         let r = new Date(n, t),
             i = new Date();
-        return r.setMonth(r.getMonth() - 1), r.setMonth(r.getMonth() + 1, 1), r > i;
+        return (r.setMonth(r.getMonth() - 1), r.setMonth(r.getMonth() + 1, 1), r > i);
     };
 function d() {
     return null != r ? Promise.resolve(r) : (0, i.loadStripe)(s.Ai1.STRIPE.KEY).then((e) => ((r = e), e));

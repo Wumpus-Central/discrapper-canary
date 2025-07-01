@@ -4,8 +4,8 @@ function r(e) {
 function i(e) {
     return null == e ? null : r(e);
 }
-n.d(t, {
+(n.d(t, {
     K: () => i,
     s: () => r
 }),
-    n(35282);
+    n(35282));

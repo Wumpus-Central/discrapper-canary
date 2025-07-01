@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var i,
     a = n(392711),
     o = n.n(a),
@@ -22,10 +22,10 @@ function u(e, t, n) {
 let d = {},
     f = {};
 function _(e, t) {
-    return null == t && (t = 'guild'), ''.concat(e, ':').concat(t);
+    return (null == t && (t = 'guild'), ''.concat(e, ':').concat(t));
 }
 function p(e) {
-    return null != d[e] || (d[e] = {}), d[e];
+    return (null != d[e] || (d[e] = {}), d[e]);
 }
 function h(e) {
     let { guildId: t, channelId: n, webhooks: i, error: a } = e;
@@ -38,7 +38,7 @@ function h(e) {
             .filter((e) => e.channel_id !== n)
             .value());
     let l = (d[t] = {});
-    s.concat(i).forEach((e) => (l[e.id] = e)), delete f[_(t, n)];
+    (s.concat(i).forEach((e) => (l[e.id] = e)), delete f[_(t, n)]);
 }
 function m(e) {
     let { guildId: t, channelId: n } = e;

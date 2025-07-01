@@ -13,7 +13,7 @@ var r = n(684342),
         return (
             (e.connect = function (e, t) {
                 var n = new a.r(e, t);
-                o.C.push(n), s.set(e, n);
+                (o.C.push(n), s.set(e, n));
             }),
             (e.observe = function (e, t, n) {
                 if (s.has(e)) {
@@ -31,7 +31,7 @@ var r = n(684342),
             (e.disconnect = function (e) {
                 if (s.has(e)) {
                     var t = s.get(e);
-                    o.C.splice(o.C.indexOf(t), 1), s.delete(e), (0, r.t)(-t.observationTargets.length);
+                    (o.C.splice(o.C.indexOf(t), 1), s.delete(e), (0, r.t)(-t.observationTargets.length));
                 }
             }),
             e

@@ -1,4 +1,4 @@
-n.d(t, { y: () => _ }), n(388685), n(583741);
+(n.d(t, { y: () => _ }), n(388685), n(583741));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -24,7 +24,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,12 +32,12 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 var f = (function (e) {
-    return (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e;
+    return ((e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e);
 })(f || {});
 function _(e) {
     let { className: t, percents: n, size: i = 'small', foregroundColors: o = [l.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: u = 'var(--background-modifier-active)', animate: f = !0 } = e,

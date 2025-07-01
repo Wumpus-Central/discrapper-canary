@@ -12,11 +12,11 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, {
+(n.d(t, {
     R: () => s,
     y: () => l
 }),
-    n(49124);
+    n(49124));
 try {
     r = window.localStorage;
 } catch (e) {}
@@ -26,7 +26,7 @@ try {
 function a() {
     let e = 'test';
     try {
-        return r.setItem(e, e), r.removeItem(e), !0;
+        return (r.setItem(e, e), r.removeItem(e), !0);
     } catch (e) {
         return !1;
     }
@@ -91,7 +91,7 @@ class s {
         return Promise.resolve(this.get(e));
     }
     constructor() {
-        i(this, 'storage', void 0), (this.storage = {});
+        (i(this, 'storage', void 0), (this.storage = {}));
     }
 }
 let l = a() ? new o() : new s();

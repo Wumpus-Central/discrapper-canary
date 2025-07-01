@@ -11,5 +11,5 @@ function l(e, t) {
     (0, s.k)(!n.begin, 'useDrag::spec.begin was deprecated in v14. Replace spec.begin() with spec.item(). (see more here - https://react-dnd.github.io/react-dnd/docs/api/use-drag)');
     var l = (0, o._)(),
         f = (0, a.Y)(n.options, n.previewOptions);
-    return (0, r.q)(n, l, f), [(0, u.J)(n.collect, l, f), (0, c.u)(f), (0, c.y)(f)];
+    return ((0, r.q)(n, l, f), [(0, u.J)(n.collect, l, f), (0, c.u)(f), (0, c.y)(f)]);
 }

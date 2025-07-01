@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(539854), n(388685);
+(n.d(t, { Z: () => p }), n(539854), n(388685));
 var r = n(147913),
     i = n(579806);
 n(987170);
@@ -20,7 +20,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,7 +46,7 @@ function f() {
 }
 class _ extends r.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, 'actions', {
                 POST_CONNECTION_OPEN: async () => {
                     try {
@@ -57,7 +57,7 @@ class _ extends r.Z {
                         f();
                     } catch (e) {}
                 }
-            });
+            }));
     }
 }
 let p = new _();

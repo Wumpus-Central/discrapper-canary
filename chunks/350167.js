@@ -1,4 +1,4 @@
-n.d(t, { r: () => u }), n(539854), n(388685), n(415506);
+(n.d(t, { r: () => u }), n(539854), n(388685), n(415506));
 var r = n(259443),
     i = n(198584),
     a = n(444675);
@@ -27,22 +27,22 @@ class u {
             this.initialize(),
             new Promise((n, r) => {
                 let i = this.nextId();
-                t(i),
+                (t(i),
                     this.pending.set(i, {
                         id: i,
                         tag: e,
                         started: performance.now(),
                         resolve: n,
                         reject: r
-                    });
+                    }));
             })
         );
     }
     static addCompletionCallback(e) {
-        return this.completionCallbacks.push(e), e;
+        return (this.completionCallbacks.push(e), e);
     }
     static addDatabaseStateCallback(e) {
-        return this.dbStateCallbacks.push(e), e;
+        return (this.dbStateCallbacks.push(e), e);
     }
     static removeCompletionCallback(e) {
         this.completionCallbacks = this.completionCallbacks.filter((t) => t !== e);
@@ -95,4 +95,4 @@ class u {
             (this.initialized = !0));
     }
 }
-o(u, 'counter', 0), o(u, 'pending', new Map()), o(u, 'initialized', !1), o(u, 'dbStateCallbacks', []), o(u, 'completionCallbacks', []);
+(o(u, 'counter', 0), o(u, 'pending', new Map()), o(u, 'initialized', !1), o(u, 'dbStateCallbacks', []), o(u, 'completionCallbacks', []));

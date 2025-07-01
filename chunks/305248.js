@@ -1,10 +1,10 @@
-n.d(t, { Z: () => y }), n(388685), n(642613);
+(n.d(t, { Z: () => y }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
     o = n.n(l),
-    s = n(442837),
-    a = n(570140),
+    a = n(442837),
+    s = n(570140),
     c = n(45114),
     u = n(404616),
     d = n(470623),
@@ -18,7 +18,7 @@ var r = n(255367),
     O = n(572198);
 function y(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
-        y = (0, s.Wu)(
+        y = (0, a.Wu)(
             [h.Z, f.Z],
             () =>
                 o()(h.Z.getThreadsForParent(n.guild_id, n.id))
@@ -46,8 +46,8 @@ function y(e) {
                 t.hasError ||
                 t.collapsed ||
                 0 !== y.length ||
-                a.Z.wait(() => {
-                    (0, c.In)(
+                s.Z.wait(() => {
+                    ((0, c.In)(
                         t.channelId,
                         {
                             section: b.jXE.INBOX,
@@ -56,7 +56,7 @@ function y(e) {
                         },
                         !0
                     ),
-                        l(t.channelId);
+                        l(t.channelId));
                 });
         }),
         (0, r.jsx)('div', {

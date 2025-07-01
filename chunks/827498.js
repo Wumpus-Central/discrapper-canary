@@ -7,7 +7,7 @@ n.d(t, {
     ti: () => s
 });
 var r = (function (e) {
-    return (e.NONE = 'NONE'), (e.TEXT = 'TEXT'), (e.VOICE = 'VOICE'), e;
+    return ((e.NONE = 'NONE'), (e.TEXT = 'TEXT'), (e.VOICE = 'VOICE'), e);
 })({});
 let i = {
         SEARCH: 'search',
@@ -24,11 +24,11 @@ let i = {
         APP_DETAIL: 'app_detail'
     };
 var o = (function (e) {
-        return (e.HOME_EMPTY = 'home_empty'), (e.SEARCH_EMPTY = 'search_empty'), (e.HOME_NO_PERMISSIONS = 'home_no_permissions'), (e.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (e.COMMAND_NOT_FOUND = 'command_not_found'), e;
+        return ((e.HOME_EMPTY = 'home_empty'), (e.SEARCH_EMPTY = 'search_empty'), (e.HOME_NO_PERMISSIONS = 'home_no_permissions'), (e.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (e.COMMAND_NOT_FOUND = 'command_not_found'), e);
     })({}),
     s = (function (e) {
-        return (e[(e.DISMISSED = 0)] = 'DISMISSED'), (e[(e.COMMAND = 1)] = 'COMMAND'), (e[(e.ACTIVITY = 2)] = 'ACTIVITY'), e;
+        return ((e[(e.DISMISSED = 0)] = 'DISMISSED'), (e[(e.COMMAND = 1)] = 'COMMAND'), (e[(e.ACTIVITY = 2)] = 'ACTIVITY'), e);
     })({}),
     l = (function (e) {
-        return (e.OPEN_APP_DM = 'open_app_dm'), (e.USE_APP_COMMAND = 'use_app_command'), e;
+        return ((e.OPEN_APP_DM = 'open_app_dm'), (e.USE_APP_COMMAND = 'use_app_command'), e);
     })({});

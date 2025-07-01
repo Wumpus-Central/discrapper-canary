@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826);
+(n.d(t, { Z: () => Z }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -39,7 +39,7 @@ let Z = function (e) {
     let { initialSection: t } = e,
         n = (0, o.TH)(),
         l = (0, o.k6)();
-    i.useEffect(() => {
+    (i.useEffect(() => {
         'true' === new URLSearchParams(n.search).get('confirm-age') &&
             d.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
@@ -49,15 +49,15 @@ let Z = function (e) {
             });
     }, [l, n]),
         i.useEffect(() => {
-            p.Y(N.Z5c.FRIENDS), (0, O.e)('friends');
-        }, []);
+            (p.Y(N.Z5c.FRIENDS), (0, O.e)('friends'));
+        }, []));
     let _ = (0, c.e7)([y.Z], () => y.Z.theme),
         Z = (0, v.If)(),
         { section: x, rows: L } = (0, c.cj)([I.ZP], () => I.ZP.getState()),
         w = (0, c.e7)([m.Z], () => m.Z.getSuggestionCount()),
         R = i.useMemo(() => L.getRelationshipCounts(), [L]);
     i.useEffect(() => {
-        null != t && h.Z.setInitialSection(t), 0 === R[N.OGo.FRIEND] && 0 === R[N.OGo.PENDING_INCOMING] && 0 === R[N.OGo.PENDING_OUTGOING] && 0 === R[N.OGo.BLOCKED] && h.Z.setSection(N.pJs.ADD_FRIEND);
+        (null != t && h.Z.setInitialSection(t), 0 === R[N.OGo.FRIEND] && 0 === R[N.OGo.PENDING_INCOMING] && 0 === R[N.OGo.PENDING_OUTGOING] && 0 === R[N.OGo.BLOCKED] && h.Z.setSection(N.pJs.ADD_FRIEND));
     }, [t, R]);
     let D = (e) => {
             h.Z.setSection(e);

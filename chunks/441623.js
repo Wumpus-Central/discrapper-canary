@@ -1,4 +1,4 @@
-n.d(t, { Z: () => q }), n(388685), n(539854), n(642613);
+(n.d(t, { Z: () => q }), n(388685), n(539854), n(642613));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -65,7 +65,7 @@ function R(e, t) {
     let i = new Date(r.getTime());
     i.setDate(r.getDate() - y);
     let a = new Date(r.getTime());
-    return a.setDate(r.getDate() + y), n > i && n < a;
+    return (a.setDate(r.getDate() + y), n > i && n < a);
 }
 function P(e) {
     return !R(e, e.getFullYear()) && R(e, new Date().getFullYear());
@@ -84,13 +84,13 @@ function w() {
                 P(n) && (S.push(e), (N[e] = { friendsSince: n }));
             }
         }
-        S.sort((e, t) => {
+        (S.sort((e, t) => {
             let n = d.Z.getUserAffinity(e),
                 r = d.Z.getUserAffinity(t),
                 i = null != n ? n.communicationProbability : 0;
             return (null != r ? r.communicationProbability : 0) - i;
         }),
-            (A = new Set(S.slice(0, E)));
+            (A = new Set(S.slice(0, E))));
     }
 }
 function D(e) {
@@ -100,13 +100,13 @@ function L() {
     return Array.from(A).some((e) => !T.lastShownFriendsListGiftIntents.includes(e));
 }
 function x() {
-    (S.length = 0), A.clear(), (N = {});
+    ((S.length = 0), A.clear(), (N = {}));
 }
 function k() {
     x();
 }
 function M() {
-    (T = I()), x();
+    ((T = I()), x());
 }
 function j() {
     T.lastShownFriendsListGiftIntents = Array.from(A);
@@ -143,7 +143,7 @@ function Y() {
 function W(e) {
     let { total: t } = e;
     if (null == t) {
-        (C = null), w();
+        ((C = null), w());
         return;
     }
     K(t);
@@ -154,20 +154,20 @@ function K(e) {
     if (!t) return;
     C = e;
     let n = _.Z.getFriendIDs().filter((e) => !_.Z.isIgnored(e));
-    a()
+    (a()
         .sampleSize(n, e)
         .forEach((e) => {
             let t = _.Z.getSince(e);
             if (null != t) {
                 let n = new Date(t);
-                S.push(e), (N[e] = { friendsSince: n });
+                (S.push(e), (N[e] = { friendsSince: n }));
             }
         }),
-        (A = new Set(S.slice(0, E)));
+        (A = new Set(S.slice(0, E))));
 }
 class z extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        (T = I()), null != e && ((T.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (T.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (T.messageGiftIntentLastShownMap = g({}, e.messageGiftIntentLastShownMap))), this.syncWith([_.Z, d.Z, f.Z, u.Z], w), F();
+        ((T = I()), null != e && ((T.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (T.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (T.messageGiftIntentLastShownMap = g({}, e.messageGiftIntentLastShownMap))), this.syncWith([_.Z, d.Z, f.Z, u.Z], w), F());
     }
     getState() {
         return T;
@@ -196,7 +196,7 @@ class z extends (r = l.ZP.PersistedStore) {
         return C;
     }
 }
-m(z, 'displayName', 'PremiumGiftingIntentStore'),
+(m(z, 'displayName', 'PremiumGiftingIntentStore'),
     m(z, 'persistKey', 'PremiumGiftingIntentStore'),
     m(z, 'migrations', [
         (e) => {
@@ -209,7 +209,7 @@ m(z, 'displayName', 'PremiumGiftingIntentStore'),
                       messageGiftIntentLastShownMap: {}
                   };
         }
-    ]);
+    ]));
 let q = new z(c.Z, {
     CONNECTION_OPEN: k,
     LOGOUT: M,

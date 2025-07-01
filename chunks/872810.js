@@ -32,7 +32,7 @@ var r = n(512722),
     y = n(70956),
     O = n(557457),
     v = n(573261);
-n(26151), n(493683);
+(n(26151), n(493683));
 var I = n(475179);
 n(287734);
 var T = n(981631),
@@ -54,7 +54,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -62,7 +62,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -91,7 +91,7 @@ function P(e, t) {
 }
 function w(e, t) {
     let n = h.Z.getChannel(t);
-    return i()(null != n, 'Cannot join a null voice channel'), !E.Z.isInChannel(t) && (0, b.rY)(n, E.Z, m.Z);
+    return (i()(null != n, 'Cannot join a null voice channel'), !E.Z.isInChannel(t) && (0, b.rY)(n, E.Z, m.Z));
 }
 function D(e, t) {
     if (null != l.Z.getRemoteSessionId()) return;
@@ -104,12 +104,12 @@ function D(e, t) {
                 let { ownerId: t } = e;
                 return t !== p.default.getId();
             }).length >= C;
-    s.Z.dispatch({
+    (s.Z.dispatch({
         type: 'STREAM_WATCH',
         streamKey: i,
         allowMultiple: a
     }),
-        a || (null != t && t.noFocus) || I.Z.selectParticipant(e.channelId, i);
+        a || (null != t && t.noFocus) || I.Z.selectParticipant(e.channelId, i));
 }
 function L(e, t) {
     s.Z.dispatch({
@@ -128,12 +128,12 @@ function x(e, t) {
 }
 function k(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    M(e, t),
+    (M(e, t),
         s.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
             appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP
-        });
+        }));
 }
 function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -169,12 +169,12 @@ async function j(e, t, n) {
         });
     } catch (t) {
         let e;
-        429 === t.status && (e = t.body.retry_after * y.Z.Millis.SECOND),
+        (429 === t.status && (e = t.body.retry_after * y.Z.Millis.SECOND),
             s.Z.dispatch({
                 type: 'STREAM_PREVIEW_FETCH_FAIL',
                 streamKey: r,
                 retryAfter: e
-            });
+            }));
     }
 }
 async function U(e) {
@@ -188,7 +188,7 @@ async function U(e) {
     } catch (e) {}
 }
 function G(e) {
-    (0, O.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(N({ type: 'STREAM_UPDATE_SETTINGS' }, e));
+    ((0, O.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(N({ type: 'STREAM_UPDATE_SETTINGS' }, e)));
 }
 function B(e, t) {
     o.tn.patch({

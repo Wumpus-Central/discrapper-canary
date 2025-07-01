@@ -36,5 +36,5 @@ e.exports = function (e, t, n, l, c, u) {
             break;
         }
     }
-    return u.delete(e), u.delete(t), m;
+    return (u.delete(e), u.delete(t), m);
 };

@@ -54,5 +54,5 @@ function b(t, e) {
 function g(t) {
     let e = (e) => t().update(d(e)).digest(),
         n = t();
-    return (e.outputLen = n.outputLen), (e.blockLen = n.blockLen), (e.create = () => t()), e;
+    return ((e.outputLen = n.outputLen), (e.blockLen = n.blockLen), (e.create = () => t()), e);
 }

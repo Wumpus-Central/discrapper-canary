@@ -41,7 +41,7 @@ function j() {
 function C() {
     return (
         (0, s.ZP)(() => {
-            (0, r.I)(), (0, a.A)();
+            ((0, r.I)(), (0, a.A)());
         }),
         (0, i.jsxs)(o.N, {
             header: _.intl.string(_.t.OAuOHB),

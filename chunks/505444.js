@@ -123,7 +123,7 @@ function c(e) {
     };
 }
 var u = function () {};
-(u.thatReturns = c),
+((u.thatReturns = c),
     (u.thatReturnsFalse = c(!1)),
     (u.thatReturnsTrue = c(!0)),
     (u.thatReturnsNull = c(null)),
@@ -132,7 +132,7 @@ var u = function () {};
     }),
     (u.thatReturnsArgument = function (e) {
         return e;
-    });
+    }));
 var d = !1;
 if (o.canUseDOM) {
     var f = document.createElement('div').style;

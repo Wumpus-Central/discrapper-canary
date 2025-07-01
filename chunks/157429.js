@@ -1,4 +1,4 @@
-t.d(i, { default: () => _ }), t(388685);
+(t.d(i, { default: () => _ }), t(388685));
 var e = t(255367);
 t(73800);
 var s = t(512722),
@@ -15,7 +15,7 @@ function _(n) {
         _ = (0, c.Dt)(),
         [g, { loading: h, error: m }] = (0, o.Z)(r.oL),
         p = async () => {
-            l()(null != t, 'no guild'), null != (await g(t.id)) && s();
+            (l()(null != t, 'no guild'), null != (await g(t.id)) && s());
         };
     return (0, e.jsxs)(a.Y0X, {
         transitionState: i,

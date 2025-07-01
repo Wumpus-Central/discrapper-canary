@@ -13,5 +13,5 @@ function s(e) {
             channelId: l,
             ownerId: c
         });
-    c === a.default.getId() && r.Z.setGoLiveSource(null), i.g(u, t);
+    (c === a.default.getId() && r.Z.setGoLiveSource(null), i.g(u, t));
 }

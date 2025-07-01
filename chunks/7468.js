@@ -1,5 +1,5 @@
 let t, a, o;
-n(388685), n(539854), n(415506), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
+(n(388685), n(539854), n(415506), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
 var i = n(259443),
     l = n(625612),
     u = n(586021);
@@ -9,7 +9,7 @@ let s = 'uninitialized',
     f = new Map(),
     c = new Map(),
     g = [];
-(self.onmessage = (e) => {
+((self.onmessage = (e) => {
     p(e);
 }),
     (self.onrtctransform = (e) => {
@@ -18,7 +18,7 @@ let s = 'uninitialized',
             readable: e.transformer.readable,
             writable: e.transformer.writable
         });
-    });
+    }));
 let p = (e) => {
         let { data: r } = e;
         if ('initialized' !== s && r.type !== l.u.INITIALIZE) return void g.push(e);
@@ -67,20 +67,20 @@ let p = (e) => {
         if (null == u) {
             if (n === l.Bp.ENCRYPT) {
                 let e = new t.Encryptor();
-                e.SetProtocolVersionChangedCallback(() => {
+                (e.SetProtocolVersionChangedCallback(() => {
                     S(e.GetProtocolVersion());
                 }),
                     S(e.GetProtocolVersion()),
-                    (u = e);
+                    (u = e));
             } else u = new t.Decryptor();
             i.cryptor = u;
         }
         if (n === l.Bp.ENCRYPT) {
             let e = u;
-            e.SetPassthroughMode(!o && a === t.kDisabledVersion), e.SetKeyRatchet(o);
+            (e.SetPassthroughMode(!o && a === t.kDisabledVersion), e.SetKeyRatchet(o));
         } else {
             let e = u;
-            e.TransitionToPassthroughMode(!o && a === t.kDisabledVersion), e.TransitionToKeyRatchet(o);
+            (e.TransitionToPassthroughMode(!o && a === t.kDisabledVersion), e.TransitionToKeyRatchet(o));
         }
     },
     b = (e) => {
@@ -97,11 +97,11 @@ let p = (e) => {
         [o.audioSSRC, ...o.videoSSRCs]))
             a.includes(e) || f.get(e) !== r || f.delete(e);
         for (let e of a) e > 0 && f.set(e, r);
-        (o.audioSSRC = n), (o.videoSSRCs = t);
+        ((o.audioSSRC = n), (o.videoSSRCs = t));
     },
     v = (e) => {
         let { audioCodec: r, videoCodec: n } = e;
-        (a = R(r)), (o = R(n));
+        ((a = R(r)), (o = R(n)));
     },
     E = (e) => {
         let { userId: r } = e,
@@ -153,7 +153,7 @@ let p = (e) => {
             if (0 === o) return null;
             let l = t.HEAPU8.subarray(d, d + o),
                 s = new Uint8Array(o);
-            s.set(l), (e.data = s.buffer);
+            (s.set(l), (e.data = s.buffer));
         } finally {
             t._free(d);
         }
@@ -171,7 +171,7 @@ let p = (e) => {
             if (0 === l) return null;
             let u = t.HEAPU8.subarray(o, o + l),
                 d = new Uint8Array(l);
-            return d.set(u), (e.data = d.buffer), e;
+            return (d.set(u), (e.data = d.buffer), e);
         } finally {
             t._free(o);
         }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => x });
 var l = n(255367);
 n(73800);
 var r = n(442837),
@@ -37,7 +37,7 @@ let d = () =>
             })
         ]
     });
-function m(e) {
+function x(e) {
     let { onClick: t } = e;
     return (0, r.e7)([a.qc], () => !a.qc.hasHotspot(a.v6.STAGE_CHANNEL_UPSELL))
         ? null

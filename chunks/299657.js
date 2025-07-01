@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+(n.d(t, { Z: () => B }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -50,15 +50,15 @@ let B = function (e) {
         K = (0, I.M5)(U, w.p9.TIER_2),
         q = (0, A.n)(),
         X = null == q ? void 0 : q.countryCode,
-        Q = (0, a.e7)([j.Z], () => (null != U ? j.Z.getUserProfile(U.id) : null)),
-        J = (0, a.e7)([N.Z], () => N.Z.hasFetched);
+        J = (0, a.e7)([j.Z], () => (null != U ? j.Z.getUserProfile(U.id) : null)),
+        Q = (0, a.e7)([N.Z], () => N.Z.hasFetched);
     return (r.useEffect(() => {
-        J || d.MH();
-    }, [J]),
+        Q || d.MH();
+    }, [Q]),
     r.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(X, null, k.JjL.DISCOVERY), null != V && K && (0, C.Z)(V)]), (W.current = Date.now() - e), Y(!1);
+            (await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(X, null, k.JjL.DISCOVERY), null != V && K && (0, C.Z)(V)]), (W.current = Date.now() - e), Y(!1));
         });
     }, [X, V, K]),
     r.useEffect(() => {
@@ -76,7 +76,7 @@ let B = function (e) {
         : n
           ? (0, i.jsx)(_.c8, {})
           : t === w.EZ.ApplicationStoreHome && K
-            ? null == Q
+            ? null == J
                 ? (0, i.jsx)('div', {
                       className: l()(L.container, L.loading),
                       children: (0, i.jsx)(o.$jN, {})

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(603592),
     o = n(388032);
-let s = 'DOWNLOAD_APPS';
-function a() {
-    let e = (0, i.s9z)((e) => (0, i.DEQ)(e, s));
+let a = 'DOWNLOAD_APPS';
+function s() {
+    let e = (0, i.s9z)((e) => (0, i.DEQ)(e, a));
     return (0, r.jsx)(l.Z, {
         id: 'app-download-button',
         onClick: () => {
@@ -20,7 +20,7 @@ function a() {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function a() {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -36,14 +36,14 @@ function a() {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({ source: 'Guilds' }, t)
                         );
                 },
-                { modalKey: s }
+                { modalKey: a }
             );
         },
         selected: e,

@@ -9,7 +9,7 @@ t.exports = {
             return t;
         });
         for (var u = n, s = null, c = null, l = 0; l < a.length; l++) {
-            if (t < (o = u + a[l].length) && u < e) null !== s || (s = u), (c = o);
+            if (t < (o = u + a[l].length) && u < e) (null !== s || (s = u), (c = o));
             else if (null !== s) break;
             u = o;
         }

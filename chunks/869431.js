@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'railscasts',
         author: 'ryan bates (http://railscasts.com)',
@@ -19,4 +19,4 @@
         base0E: '#b6b3eb',
         base0F: '#bc9458'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

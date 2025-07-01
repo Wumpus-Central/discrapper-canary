@@ -21,7 +21,7 @@ function a(e) {
 }
 class o {
     getForumChannelSessionId(e) {
-        return null == this.session && (this.session = a(e)), this.session.channelId !== e && (this.session = a(e)), this.session.sessionId;
+        return (null == this.session && (this.session = a(e)), this.session.channelId !== e && (this.session = a(e)), this.session.sessionId);
     }
     constructor() {
         i(this, 'session', void 0);

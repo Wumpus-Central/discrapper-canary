@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(953529);
+(n.d(t, { Z: () => y }), n(953529));
 var r = n(255367),
     s = n(73800),
     o = n(392711),
@@ -15,7 +15,7 @@ function g(e) {
     let { PurchasableComponent: t, item: n, itemId: o, currentPoints: i, onPurchase: a } = e,
         u = (0, l.Tw)(o),
         d = (0, s.useCallback)(() => {
-            (0, c.xD)(o), a();
+            ((0, c.xD)(o), a());
         }, [a, o]);
     return (0, r.jsx)(t, {
         itemId: o,
@@ -33,7 +33,7 @@ function b(e) {
     let { PurchasableComponent: t, upgrade: n, upgradeId: o, currentPoints: i, numAlreadyPurchased: a, onPurchase: u } = e,
         d = (0, l.p9)(o),
         f = (0, s.useCallback)(() => {
-            (0, c.Z_)(o), u();
+            ((0, c.Z_)(o), u());
         }, [u, o]);
     return (0, r.jsx)(t, {
         itemId: n.itemId,

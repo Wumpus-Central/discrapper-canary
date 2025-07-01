@@ -11,7 +11,7 @@ function c(e) {
         { error: m, loaded: g, message: b } = (0, a.a)(t);
     if (null == b && (g || m)) return null;
     let _ = () => {
-        null == p || p(), l.Z.closePrivateChannel(t.id);
+        (null == p || p(), l.Z.closePrivateChannel(t.id));
     };
     return (0, r.jsx)(i.zxk, {
         className: u,
@@ -19,7 +19,7 @@ function c(e) {
         color: c,
         disabled: null == b,
         onClick: (e) => {
-            e.stopPropagation(), null == d || d(), null != b && (0, o.WL)(b, _);
+            (e.stopPropagation(), null == d || d(), null != b && (0, o.WL)(b, _));
         },
         onMouseEnter: h,
         onMouseLeave: f,

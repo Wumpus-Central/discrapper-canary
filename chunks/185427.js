@@ -33,11 +33,11 @@ let o = {
             o = n.offset,
             s = void 0 === o ? [0, 0] : o,
             l = i.Ct.reduce(function (e, n) {
-                return (e[n] = a(n, t.rects, s)), e;
+                return ((e[n] = a(n, t.rects, s)), e);
             }, {}),
             c = l[t.placement],
             u = c.x,
             d = c.y;
-        null != t.modifiersData.popperOffsets && ((t.modifiersData.popperOffsets.x += u), (t.modifiersData.popperOffsets.y += d)), (t.modifiersData[r] = l);
+        (null != t.modifiersData.popperOffsets && ((t.modifiersData.popperOffsets.x += u), (t.modifiersData.popperOffsets.y += d)), (t.modifiersData[r] = l));
     }
 };

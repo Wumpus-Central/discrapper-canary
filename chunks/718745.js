@@ -24,15 +24,15 @@ let l = {},
 function u(e) {
     var t;
     let { integration: n, query: r } = e;
-    (l[n] = null != (t = l[n]) ? t : {}),
+    ((l[n] = null != (t = l[n]) ? t : {}),
         (l[n][r] = {
             loading: !0,
             results: []
-        });
+        }));
 }
 function d(e) {
     let { integration: t, query: n, results: r } = e;
-    (l[t][n] = {
+    ((l[t][n] = {
         loading: !1,
         results: r.map((e) => ({
             type: o.nkL[t].type,
@@ -42,7 +42,7 @@ function d(e) {
         (c = {
             query: n,
             integration: t
-        });
+        }));
 }
 function f(e) {
     let { integration: t, query: n } = e;

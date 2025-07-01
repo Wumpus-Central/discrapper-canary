@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(539854);
+(n.d(t, { Z: () => y }), n(388685), n(539854));
 var r,
     a = n(255367),
     i = n(73800),
@@ -32,7 +32,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 x(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,7 +52,7 @@ class j extends i.Component {
     componentWillEnter(e) {
         let { directionHistory: t } = this.props,
             { translate: n, opacity: r } = this.state;
-        n.setValue(t[t.length - 1]),
+        (n.setValue(t[t.length - 1]),
             r.setValue(0),
             e(),
             d.Z.parallel([
@@ -62,7 +62,7 @@ class j extends i.Component {
                     duration: 200
                 }),
                 d.Z.spring(n, v({ toValue: 0 }, C))
-            ]).start();
+            ]).start());
     }
     componentWillLeave(e) {
         let { directionHistory: t } = this.props,
@@ -101,19 +101,19 @@ class j extends i.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             x(this, 'state', {
                 translate: new d.Z.Value(0),
                 opacity: new d.Z.Value(1)
-            });
+            }));
     }
 }
 class y extends (r = i.Component) {
     componentDidMount() {
-        this.preloadNextImages(), m.Z.disable(), m.Z.enableTemp(p.P), f.S.subscribe(_.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), f.S.subscribe(_.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+        (this.preloadNextImages(), m.Z.disable(), m.Z.enableTemp(p.P), f.S.subscribe(_.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), f.S.subscribe(_.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled));
     }
     componentWillUnmount() {
-        m.Z.disableTemp(), f.S.unsubscribe(_.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), f.S.unsubscribe(_.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+        (m.Z.disableTemp(), f.S.unsubscribe(_.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), f.S.unsubscribe(_.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled));
     }
     preloadNextImages() {
         var e, t;
@@ -121,7 +121,7 @@ class y extends (r = i.Component) {
             { items: r } = this.props,
             a = (((n + 1) % (e = r.length)) + e) % e,
             i = (((n - 1) % (t = r.length)) + t) % t;
-        this.preloadImage(r[a]), this.preloadImage(r[i]);
+        (this.preloadImage(r[a]), this.preloadImage(r[i]));
     }
     preloadImage(e) {
         (0, h.po)(e.src);
@@ -133,13 +133,13 @@ class y extends (r = i.Component) {
     navigateTo(e) {
         var t, n, r;
         let { directionHistory: a, currentIndex: i } = this.state;
-        a.push(e - i),
+        (a.push(e - i),
             (e = ((e % (r = this.props.items.length)) + r) % r),
             this.setState({
                 currentIndex: e,
                 directionHistory: a
             }),
-            null == (t = (n = this.props).onIndexChange) || t.call(n, e);
+            null == (t = (n = this.props).onIndexChange) || t.call(n, e));
     }
     render() {
         var e;
@@ -179,7 +179,7 @@ class y extends (r = i.Component) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             x(this, 'gotoNext', () => {
                 let { currentIndex: e } = this.state;
                 this.navigateTo(e + 1);
@@ -193,7 +193,7 @@ class y extends (r = i.Component) {
             (this.state = {
                 currentIndex: e.startWith,
                 directionHistory: []
-            });
+            }));
     }
 }
 x(y, 'defaultProps', { startWith: 0 });

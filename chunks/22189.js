@@ -51,8 +51,8 @@ var s = n(399606),
     K = n(498730),
     q = n(607762),
     X = n(474106),
-    Q = n(572501),
-    J = n(755590),
+    J = n(572501),
+    Q = n(755590),
     $ = n(909910),
     ee = n(912429),
     et = n(91394),
@@ -218,7 +218,7 @@ let ed = () => {
                       title: D.intl.string(D.t['H+v6eX']),
                       subtitle: D.intl.string(D.t.wmbOAg),
                       description: D.intl.string(D.t.gdA9FB),
-                      perkImage: J,
+                      perkImage: Q,
                       pillText: D.intl.string(D.t.EYxi0t)
                   }
                 : {
@@ -226,7 +226,7 @@ let ed = () => {
                       title: D.intl.string(D.t['H+v6eX']),
                       subtitle: D.intl.string(D.t.wmbOAg),
                       description: D.intl.string(D.t.fiLtJi),
-                      perkImage: J,
+                      perkImage: Q,
                       pillText: D.intl.string(D.t.EYxi0t)
                   },
             serverBoosts: {
@@ -389,7 +389,7 @@ let ed = () => {
                 description: D.intl.format(D.t['2JqTFx'], { helpdeskArticle: C.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: D.intl.string(D.t.JST6jo),
                 isPremiumGetCta: !ed || void 0,
-                perkImage: Q
+                perkImage: J
             },
             serverProfiles: {
                 name: 'serverProfiles',
@@ -409,7 +409,7 @@ let ed = () => {
                 isPremiumGetCta: !em,
                 onCtaClick: em
                     ? () => {
-                          eb || (0, g.EW)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: A.L.TAKE_ACTION }), e_();
+                          (eb || (0, g.EW)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: A.L.TAKE_ACTION }), e_());
                       }
                     : void 0,
                 pillText: eb || !em ? void 0 : D.intl.string(D.t.y2b7CA).toLocaleUpperCase(),

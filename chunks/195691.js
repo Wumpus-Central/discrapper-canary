@@ -7,7 +7,7 @@ t.exports = n.isBrowser('Chrome')
                   a = n === t.commonAncestorContainer;
               a ? e.setStart(t.startContainer, t.startOffset) : e.setStart(e.endContainer, 0);
               var u = Array.from(e.getClientRects());
-              if ((r.push(u), a)) return r.reverse(), (o = []).concat.apply(o, r);
+              if ((r.push(u), a)) return (r.reverse(), (o = []).concat.apply(o, r));
               e.setEndBefore(n);
           }
           i(!1);

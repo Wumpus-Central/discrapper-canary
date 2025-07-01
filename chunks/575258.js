@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(953529);
+(n.d(t, { Z: () => h }), n(953529));
 var r,
     i = n(442837),
     l = n(570140),
@@ -63,10 +63,10 @@ let h = new f(l.Z, {
     WELCOME_SCREEN_FETCH_SUCCESS: p,
     WELCOME_SCREEN_UPDATE: p,
     WELCOME_SCREEN_SETTINGS_RESET: function () {
-        (g = d), (m = !1);
+        ((g = d), (m = !1));
     },
     WELCOME_SCREEN_SETTINGS_CLEAR: function () {
-        (g = c), (d = c);
+        ((g = c), (d = c));
     },
     WELCOME_SCREEN_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
@@ -74,7 +74,7 @@ let h = new f(l.Z, {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -82,7 +82,7 @@ let h = new f(l.Z, {
                     )),
                     r.forEach(function (t) {
                         o(e, t, n[t]);
-                    });
+                    }));
             }
             return e;
         })({}, g, t);
@@ -91,9 +91,9 @@ let h = new f(l.Z, {
         u = !0;
     },
     WELCOME_SCREEN_SUBMIT_SUCCESS: function (e) {
-        p(e), (u = !1);
+        (p(e), (u = !1));
     },
     WELCOME_SCREEN_SUBMIT_FAILURE: function () {
-        (m = !0), (u = !1);
+        ((m = !0), (u = !1));
     }
 });

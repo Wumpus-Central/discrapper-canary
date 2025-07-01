@@ -5,7 +5,7 @@ n.d(t, {
                 ? t
                 : Object.keys(t).reduce((n, i) => {
                       let l = (0, r.camelCase)(i);
-                      return 'object' != typeof t[i] || Array.isArray(t[i]) ? (n[l] = t[i]) : (n[l] = e(t[i])), n;
+                      return ('object' != typeof t[i] || Array.isArray(t[i]) ? (n[l] = t[i]) : (n[l] = e(t[i])), n);
                   }, {});
         },
     X: () =>
@@ -14,7 +14,7 @@ n.d(t, {
                 ? t
                 : Object.keys(t).reduce((n, i) => {
                       let l = (0, r.snakeCase)(i);
-                      return 'object' != typeof t[i] || Array.isArray(t[i]) ? (n[l] = t[i]) : (n[l] = e(t[i])), (n[l] = t[i]), n;
+                      return ('object' != typeof t[i] || Array.isArray(t[i]) ? (n[l] = t[i]) : (n[l] = e(t[i])), (n[l] = t[i]), n);
                   }, {});
         }
 });

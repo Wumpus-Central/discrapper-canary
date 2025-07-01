@@ -9,7 +9,7 @@ var i = e(512722),
 function u(t, n) {
     var e;
     let i = null != (e = t.sessionId) ? e : '';
-    (0, s._)(i), (0, s.s6)();
+    ((0, s._)(i), (0, s.s6)());
     let u = null != n ? n : t.channelId;
-    l()(null != u, 'attempted to transfer to unknown channel'), t.selfMute !== a.Z.isSelfMute() && r.Z.toggleSelfMute(), t.selfDeaf !== a.Z.isSelfDeaf() && r.Z.toggleSelfDeaf(), (0, _.Z)(u, 'discord_client', i), d.default.selectVoiceChannel(u, !1);
+    (l()(null != u, 'attempted to transfer to unknown channel'), t.selfMute !== a.Z.isSelfMute() && r.Z.toggleSelfMute(), t.selfDeaf !== a.Z.isSelfDeaf() && r.Z.toggleSelfDeaf(), (0, _.Z)(u, 'discord_client', i), d.default.selectVoiceChannel(u, !1));
 }

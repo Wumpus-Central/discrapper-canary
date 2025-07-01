@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(539854);
+(n.d(t, { Z: () => M }), n(539854));
 var r,
     i = n(255367),
     l = n(73800),
@@ -36,7 +36,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -77,7 +77,7 @@ let N = (0, g.Un)({
         name: 'UserSettingsV2'
     }),
     P = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('7654'), n.e('49286'), n.e('86915')]).then(n.bind(n, 869779)),
+        createPromise: () => Promise.all([n.e('7654'), n.e('7104'), n.e('86915')]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
@@ -87,7 +87,7 @@ let N = (0, g.Un)({
         name: 'CollectiblesShop'
     }),
     A = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('7654'), n.e('55616'), n.e('44156'), n.e('49286'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('92754'), n.e('95140')]).then(n.bind(n, 994763)),
+        createPromise: () => Promise.all([n.e('71418'), n.e('55616'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('82265'), n.e('95140')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
@@ -104,7 +104,7 @@ let N = (0, g.Un)({
         tension: 100
     };
 function R() {
-    return l.useEffect(() => (f.Z.enable(), f.Z.enableTemp(h.u), () => f.Z.disableTemp()), []), null;
+    return (l.useEffect(() => (f.Z.enable(), f.Z.enableTemp(h.u), () => f.Z.disableTemp()), []), null);
 }
 class D extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
@@ -125,7 +125,7 @@ class D extends (r = l.PureComponent) {
     }
     componentWillEnter(e) {
         let { opacity: t, scale: n } = this.state;
-        n.setValue(1.1), t.setValue(0), e(), this.setState({ animating: !0 }, () => this.animateIn());
+        (n.setValue(1.1), t.setValue(0), e(), this.setState({ animating: !0 }, () => this.animateIn()));
     }
     componentWillLeave(e) {
         this.setState({ animating: !0 }, () => this.animateOut(e));
@@ -138,10 +138,10 @@ class D extends (r = l.PureComponent) {
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        O.S.dispatch(y.CkL.LAYER_POP_START),
+        (O.S.dispatch(y.CkL.LAYER_POP_START),
             s.Z.parallel([s.Z.spring(t, C({ toValue: 0 }, w)), s.Z.spring(n, C({ toValue: 1.1 }, w))]).start(() => {
-                e(), O.S.dispatch(y.CkL.LAYER_POP_COMPLETE);
-            });
+                (e(), O.S.dispatch(y.CkL.LAYER_POP_COMPLETE));
+            }));
     }
     animateUnder() {
         c.ZP.Emitter.pause(500);
@@ -165,12 +165,12 @@ class D extends (r = l.PureComponent) {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(t, ['mode', 'children', 'baseLayer']),
@@ -211,19 +211,19 @@ class D extends (r = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), v(this, 'containerRef', l.createRef());
+        (super(e), v(this, 'containerRef', l.createRef()));
         let t = 1,
             n = 1;
-        e.mode === L && ((t = 0.93), (n = 0)),
+        (e.mode === L && ((t = 0.93), (n = 0)),
             (this.state = {
                 animating: !1,
                 scale: new s.Z.Value(t),
                 opacity: new s.Z.Value(n),
                 mode: e.mode
-            });
+            }));
     }
 }
-v(D, 'defaultProps', { baseLayer: !1 }), v(D, 'contextType', d.Sfi);
+(v(D, 'defaultProps', { baseLayer: !1 }), v(D, 'contextType', d.Sfi));
 class k extends l.PureComponent {
     componentDidMount() {
         O.S.subscribe(y.CkL.LAYER_POP_ESCAPE_KEY, p.xf);

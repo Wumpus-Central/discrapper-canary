@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => f,
     y: () => p
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -45,12 +45,12 @@ class h extends i.PureComponent {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(n, ['storeListings', 'primaryStoreListing', 'skuId', 'onStoreListingSelect', 'currentStoreListingId']),
@@ -63,7 +63,7 @@ class h extends i.PureComponent {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
                               r = Object.keys(n);
-                          'function' == typeof Object.getOwnPropertySymbols &&
+                          ('function' == typeof Object.getOwnPropertySymbols &&
                               (r = r.concat(
                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -71,7 +71,7 @@ class h extends i.PureComponent {
                               )),
                               r.forEach(function (t) {
                                   d(e, t, n[t]);
-                              });
+                              }));
                       }
                       return e;
                   })(
@@ -99,7 +99,7 @@ class h extends i.PureComponent {
               );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'renderContextMenu', () => {
                 let { storeListings: e, onStoreListingSelect: t, currentStoreListingId: n, onMenuSelect: i } = this.props,
                     l = e.map((e) =>
@@ -108,7 +108,7 @@ class h extends i.PureComponent {
                                   id: ''.concat(e.id),
                                   label: e.id,
                                   action: () => {
-                                      o.Zy(), null == t || t(e);
+                                      (o.Zy(), null == t || t(e));
                                   }
                               })
                             : null
@@ -122,8 +122,8 @@ class h extends i.PureComponent {
                 });
             }),
             d(this, 'handleContextMenu', (e) => {
-                e.stopPropagation(), o.vq(e, this.renderContextMenu);
-            });
+                (e.stopPropagation(), o.vq(e, this.renderContextMenu));
+            }));
     }
 }
 let f = l.ZP.connectStores([c.Z], (e) => {

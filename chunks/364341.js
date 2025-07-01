@@ -31,7 +31,7 @@ var r = n(127849),
         a.NATIVE_ARRAY_BUFFER_VIEWS &&
         c(function () {
             var e = new d(2);
-            return e.set(1), e.set('2', 1), 0 !== e[0] || 2 !== e[1];
+            return (e.set(1), e.set('2', 1), 0 !== e[0] || 2 !== e[1]);
         });
 h(
     'set',

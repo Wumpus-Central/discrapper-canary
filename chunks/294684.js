@@ -1,4 +1,4 @@
-r(366843), r(458631);
+(r(366843), r(458631));
 var n = r(98405),
     i = r(127849),
     s = r(242606),
@@ -86,12 +86,12 @@ var n = r(98405),
             var i = Y(t, n);
             if ('%' === i) {
                 if ('%' === Y(t, n + 1) || n + 3 > e) {
-                    (r += '%'), n++;
+                    ((r += '%'), n++);
                     continue;
                 }
                 var s = ta(t, n + 1);
                 if (s != s) {
-                    (r += i), n++;
+                    ((r += i), n++);
                     continue;
                 }
                 n += 2;
@@ -99,7 +99,7 @@ var n = r(98405),
                 if (0 === a) i = K(s);
                 else {
                     if (1 === a || a > 4) {
-                        (r += '\uFFFD'), n++;
+                        ((r += '\uFFFD'), n++);
                         continue;
                     }
                     for (var o = [s], u = 1; u < a && !(++n + 3 > e) && '%' === Y(t, n); ) {
@@ -109,7 +109,7 @@ var n = r(98405),
                             break;
                         }
                         if (h > 191 || h < 128) break;
-                        W(o, h), (n += 2), u++;
+                        (W(o, h), (n += 2), u++);
                     }
                     if (o.length !== a) {
                         r += '\uFFFD';
@@ -119,7 +119,7 @@ var n = r(98405),
                     null === c ? (r += '\uFFFD') : (i = Q(c));
                 }
             }
-            (r += i), n++;
+            ((r += i), n++);
         }
         return r;
     },
@@ -152,7 +152,7 @@ var n = r(98405),
             var t = z(this),
                 e = t.target,
                 r = t.index++;
-            if (!e || r >= e.length) return (t.target = null), I(void 0, !0);
+            if (!e || r >= e.length) return ((t.target = null), I(void 0, !0));
             var n = e[r];
             switch (t.kind) {
                 case 'keys':
@@ -165,12 +165,12 @@ var n = r(98405),
         !0
     ),
     tg = function (t) {
-        (this.entries = []), (this.url = null), void 0 !== t && (R(t) ? this.parseObject(t) : this.parseQuery('string' == typeof t ? ('?' === Y(t, 0) ? tr(t, 1) : t) : k(t)));
+        ((this.entries = []), (this.url = null), void 0 !== t && (R(t) ? this.parseObject(t) : this.parseQuery('string' == typeof t ? ('?' === Y(t, 0) ? tr(t, 1) : t) : k(t))));
     };
 tg.prototype = {
     type: H,
     bindURL: function (t) {
-        (this.url = t), this.update();
+        ((this.url = t), this.update());
     },
     parseObject: function (t) {
         var e,
@@ -212,7 +212,7 @@ tg.prototype = {
         return V(r, '&');
     },
     update: function () {
-        (this.entries.length = 0), this.parseQuery(this.url.query);
+        ((this.entries.length = 0), this.parseQuery(this.url.query));
     },
     updateURL: function () {
         this.url && this.url.update();
@@ -231,13 +231,13 @@ if (
         {
             append: function (t, e) {
                 var r = j(this);
-                A(arguments.length, 2),
+                (A(arguments.length, 2),
                     W(r.entries, {
                         key: k(t),
                         value: k(e)
                     }),
                     !h && this.length++,
-                    r.updateURL();
+                    r.updateURL());
             },
             delete: function (t) {
                 for (var e = j(this), r = A(arguments.length, 1), n = e.entries, i = k(t), s = r < 2 ? void 0 : arguments[1], a = void 0 === s ? s : k(s), o = 0; o < n.length; ) {
@@ -246,7 +246,7 @@ if (
                         if ((tt(n, o, 1), void 0 !== a)) break;
                     } else o++;
                 }
-                h || (this.size = n.length), e.updateURL();
+                (h || (this.size = n.length), e.updateURL());
             },
             get: function (t) {
                 var e = j(this).entries;
@@ -272,20 +272,20 @@ if (
                     n = j(this);
                 A(arguments.length, 1);
                 for (var i = n.entries, s = !1, a = k(t), o = k(e), u = 0; u < i.length; u++) (r = i[u]).key === a && (s ? tt(i, u--, 1) : ((s = !0), (r.value = o)));
-                s ||
+                (s ||
                     W(i, {
                         key: a,
                         value: o
                     }),
                     h || (this.size = i.length),
-                    n.updateURL();
+                    n.updateURL());
             },
             sort: function () {
                 var t = j(this);
-                C(t.entries, function (t, e) {
+                (C(t.entries, function (t, e) {
                     return t.key > e.key ? 1 : -1;
                 }),
-                    t.updateURL();
+                    t.updateURL());
             },
             forEach: function (t) {
                 for (var e, r = j(this).entries, n = w(t, arguments.length > 1 ? arguments[1] : void 0), i = 0; i < r.length; ) n((e = r[i++]).value, e.key, this);
@@ -365,9 +365,9 @@ if (
         y(T))
     ) {
         var tx = function (t) {
-            return m(this, M), new T(t, arguments.length > 1 ? tw(arguments[1]) : {});
+            return (m(this, M), new T(t, arguments.length > 1 ? tw(arguments[1]) : {}));
         };
-        (M.constructor = tx),
+        ((M.constructor = tx),
             (tx.prototype = M),
             n(
                 {
@@ -377,7 +377,7 @@ if (
                     forced: !0
                 },
                 { Request: tx }
-            );
+            ));
     }
 }
 t.exports = {

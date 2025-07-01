@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(981729);
@@ -19,7 +19,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -61,7 +61,7 @@ function u(e, t) {
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -71,7 +71,7 @@ function d(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function f(e) {
@@ -82,10 +82,10 @@ function f(e) {
         f = i.useRef(0),
         [_, p] = i.useState(!1);
     function h() {
-        clearTimeout(f.current), p(!0);
+        (clearTimeout(f.current), p(!0));
     }
     function m() {
-        clearTimeout(f.current), (f.current = setTimeout(() => p(!1), t));
+        (clearTimeout(f.current), (f.current = setTimeout(() => p(!1), t)));
     }
     return (0, r.jsx)('div', {
         className: l,

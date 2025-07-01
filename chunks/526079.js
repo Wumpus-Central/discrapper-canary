@@ -20,7 +20,7 @@ function o(e) {
                           ? l
                           : l.filter((e) => {
                                 let i = o[e];
-                                return r()(null != i, 'guild should not be null'), t(i, c);
+                                return (r()(null != i, 'guild should not be null'), t(i, c));
                             })
                       ).map((e) => {
                           let t = o[e];

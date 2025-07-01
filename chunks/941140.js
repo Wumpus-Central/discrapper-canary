@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(539854);
+(n.d(t, { Z: () => d }), n(539854));
 var r = n(255367);
 n(73800);
 var i = n(998698),
@@ -89,6 +89,6 @@ let d = {
                 options: r
             } = e,
             i = t[n];
-        return r.insertText(u(i)), { type: s.z2.COMMAND_OPTION };
+        return (r.insertText(u(i)), { type: s.z2.COMMAND_OPTION });
     }
 };

@@ -225,7 +225,7 @@ e.exports = function (e) {
                 relevance: 0
             }
         ].concat(s, l);
-    (c.contains = m), (p.contains = m);
+    ((c.contains = m), (p.contains = m));
     let g = [
         {
             begin: /^\s*=>/,

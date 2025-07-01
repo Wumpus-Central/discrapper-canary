@@ -1,4 +1,4 @@
-n.d(e, { Z: () => w }), n(953529), n(35282);
+(n.d(e, { Z: () => w }), n(953529), n(35282));
 var l = n(255367);
 n(73800);
 var r = n(164104),
@@ -49,7 +49,7 @@ function w(t, e, n, r) {
         W = null != (T = c()(null != G ? G : k)) ? T : A,
         L = () => {
             let t = i()();
-            t.createEvent({
+            (t.createEvent({
                 start: A,
                 end: I,
                 summary: N.name,
@@ -57,7 +57,7 @@ function w(t, e, n, r) {
                 location: Z,
                 repeating: M
             }),
-                b.isPlatformEmbedded ? d.Z.fileManager.saveWithDialog(t.toString(), 'discord-event.ics') : window.open(t.toURL(), '_blank');
+                b.isPlatformEmbedded ? d.Z.fileManager.saveWithDialog(t.toString(), 'discord-event.ics') : window.open(t.toURL(), '_blank'));
         };
     return (0, l.jsxs)(s.sNh, {
         id: E.intl.string(E.t.k5pvjo),

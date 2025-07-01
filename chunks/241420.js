@@ -1,24 +1,24 @@
-n.d(t, { default: () => m });
+n.d(t, { default: () => g });
 var a = n(255367);
 n(73800);
 var r = n(481060),
     i = n(546957),
     o = n(190014),
     c = n(301812),
-    l = n(988043),
-    s = n(919539),
+    s = n(988043),
+    l = n(919539),
     u = n(526761),
     d = n(388032),
-    _ = n(671364);
-function p(e) {
+    p = n(671364);
+function _(e) {
     let { guildId: t } = e;
     return (0, a.jsxs)(i.Z, {
         children: [
-            (0, a.jsx)(l.Z, {
+            (0, a.jsx)(s.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
-            (0, a.jsx)(s.Z, {
+            (0, a.jsx)(l.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
@@ -38,7 +38,7 @@ function p(e) {
         ]
     });
 }
-function m(e) {
+function g(e) {
     let { guild: t, transitionState: n, onClose: i } = e,
         o = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
     return (0, a.jsxs)(r.Y0X, {
@@ -54,8 +54,8 @@ function m(e) {
                 })
             }),
             (0, a.jsx)(r.hzk, {
-                className: _.content,
-                children: (0, a.jsx)(p, { guildId: t.id })
+                className: p.content,
+                children: (0, a.jsx)(_, { guildId: t.id })
             }),
             (0, a.jsx)(r.mzw, {
                 children: (0, a.jsx)(r.zxk, {

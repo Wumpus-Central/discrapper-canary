@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => D });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(430824),
     O = n(496675),
     E = n(626135),
-    I = n(431328),
-    S = n(501655),
+    S = n(431328),
+    I = n(501655),
     P = n(200498),
     Z = n(146085),
     N = n(427679),
@@ -33,7 +33,7 @@ var r = n(255367),
     R = n(474936),
     k = n(388032),
     M = n(523335);
-function D(e) {
+function L(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: i } = e,
         { analyticsLocations: l, newestAnalyticsLocation: s } = (0, p.ZP)(d.Z.VOICE_CHANNEL_HEADER),
         { chatOpen: c, participantsListOpen: g } = (0, a.cj)(
@@ -45,7 +45,7 @@ function D(e) {
             [t.id]
         ),
         _ = (0, P.B)(t.id),
-        y = (0, I.Rk)(t.id, S.pV.REQUESTED_TO_SPEAK_ONLY),
+        y = (0, S.Rk)(t.id, I.pV.REQUESTED_TO_SPEAK_ONLY),
         { hasParticipantsPanel: C } = (0, f.Z)({ location: 'StageChannelCallHeader' }),
         j = C && g;
     return (0, r.jsxs)(p.Gt, {
@@ -57,7 +57,7 @@ function D(e) {
                       className: M.button,
                       children: (0, r.jsx)(T.Z, {
                           toggleRequestToSpeakSidebar: () => {
-                              c && u.Z.updateChatOpen(t.id, !1), g && u.Z.toggleParticipantsList(t.id, !1), (0, m.v)(s, m.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
+                              (c && u.Z.updateChatOpen(t.id, !1), g && u.Z.toggleParticipantsList(t.id, !1), (0, m.v)(s, m.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n());
                           },
                           showRequestToSpeakSidebar: i,
                           numRequestToSpeak: y
@@ -71,7 +71,7 @@ function D(e) {
                     {
                         className: o()(M.button, { [M.sidebarOpen]: c }),
                         onClick: () => {
-                            i && n(), u.Z.toggleParticipantsList(t.id, !g);
+                            (i && n(), u.Z.toggleParticipantsList(t.id, !g));
                         }
                     },
                     'participants-list-button'
@@ -89,26 +89,26 @@ function D(e) {
         ]
     });
 }
-function L(e) {
+function D(e) {
     var t;
     let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: d } = e,
         p = (0, g.ZP)(n),
         h = (0, a.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id)),
-        f = (0, I.Io)(n.id),
-        m = (0, I.Rk)(n.id, S.pV.AUDIENCE),
+        f = (0, S.Io)(n.id),
+        m = (0, S.Rk)(n.id, I.pV.AUDIENCE),
         b = (0, a.e7)([j.Z], () => j.Z.getGuild(n.guild_id), [n.guild_id]),
         x = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
         v = (null == b ? void 0 : b.isCommunity()) ? x < w.TU7 : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && x <= w.eez,
         P = (0, A.Z)(n),
         T = (0, a.e7)([O.Z], () => O.Z.can(Z.yP, n)),
-        L = () => {
-            u.Z.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
+        D = () => {
+            (u.Z.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
                 E.default.track(w.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: n.guild_id,
                     type: R.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: T,
                     action: R.T7.DISMISS
-                });
+                }));
         },
         B = {
             canModerate: T,
@@ -117,7 +117,7 @@ function L(e) {
             speakerCount: f
         },
         F = i.useRef(B);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         F.current = B;
     }),
         i.useEffect(() => {
@@ -129,13 +129,13 @@ function L(e) {
                     is_moderator: e,
                     listener_count: r + t
                 });
-        }, [P]);
-    let G = (0, r.jsx)(c.f6W, {
+        }, [P]));
+    let H = (0, r.jsx)(c.f6W, {
         theme: w.BRd.DARK,
         children: (e) => {
             var t;
             return (0, r.jsxs)(y.ZP, {
-                toolbar: (0, r.jsx)(D, {
+                toolbar: (0, r.jsx)(L, {
                     toggleRequestToSpeakSidebar: l,
                     showRequestToSpeakSidebar: d,
                     channel: n
@@ -189,7 +189,7 @@ function L(e) {
     return P
         ? (0, r.jsxs)('div', {
               children: [
-                  G,
+                  H,
                   (0, r.jsxs)('div', {
                       className: M.boostUpsell,
                       children: [
@@ -216,7 +216,7 @@ function L(e) {
                                         children: [
                                             (0, r.jsx)(c.zxk, {
                                                 className: M.notNowButton,
-                                                onClick: L,
+                                                onClick: D,
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
                                                 children: k.intl.string(k.t.L5eIZ2)
@@ -224,7 +224,7 @@ function L(e) {
                                             (0, r.jsx)(c.gtL, {
                                                 size: c.zxk.Sizes.SMALL,
                                                 onClick: () => {
-                                                    (0, _.f)({
+                                                    ((0, _.f)({
                                                         guildId: n.guild_id,
                                                         location: { section: w.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
@@ -233,7 +233,7 @@ function L(e) {
                                                             type: R.cd.VIDEO_STAGE_LIMIT,
                                                             is_moderator: T,
                                                             action: R.T7.BOOST
-                                                        });
+                                                        }));
                                                 },
                                                 className: M.boostButton,
                                                 children: k.intl.string(k.t.Uj0md3)
@@ -242,7 +242,7 @@ function L(e) {
                                     })
                                   : (0, r.jsx)(c.zxk, {
                                         className: M.notNowButton,
-                                        onClick: L,
+                                        onClick: D,
                                         look: c.zxk.Looks.BLANK,
                                         size: c.zxk.Sizes.SMALL,
                                         children: k.intl.string(k.t.WAI6xs)
@@ -252,7 +252,7 @@ function L(e) {
                   })
               ]
           })
-        : G;
+        : H;
 }
 function U() {
     return (0, r.jsxs)('svg', {

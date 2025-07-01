@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     F: () => u,
     default: () => d
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(433517),
@@ -47,7 +47,7 @@ function d(e) {
                     }),
                     (0, r.jsx)(o.zxk, {
                         onClick: () => {
-                            p && l.K.set(u, !0), n(), d();
+                            (p && l.K.set(u, !0), n(), d());
                         },
                         children: s.intl.string(a.default.ctefOz)
                     })

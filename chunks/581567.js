@@ -1,13 +1,13 @@
-n.d(t, {
+(n.d(t, {
     G8: () => s,
     N6: () => o,
     vp: () => l
 }),
-    n(35282);
+    n(35282));
 var r = n(77498),
     i = n(358085);
 function a(e) {
-    return (e = e.toLowerCase()).endsWith('/') && (e = e.slice(0, -1)), e;
+    return ((e = e.toLowerCase()).endsWith('/') && (e = e.slice(0, -1)), e);
 }
 function o(e) {
     return a(e).split('/').slice(-2).join('/');

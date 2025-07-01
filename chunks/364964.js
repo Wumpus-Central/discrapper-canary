@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => _ }), n(388685), n(35282), n(415506), n(704826);
+(n.r(t), n.d(t, { default: () => _ }), n(388685), n(35282), n(415506), n(704826));
 var r = n(466332),
     i = n(392711),
     a = n.n(i),
@@ -28,7 +28,7 @@ let _ = {
                 ignoreIllegals: n,
                 language: e
             });
-            return Date.now(), i;
+            return (Date.now(), i);
         },
         hasLanguage: (e) => null != r.Z.getLanguage(e),
         isKnownLanguage: (e) => d.has(e.toLowerCase()),

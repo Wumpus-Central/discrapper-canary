@@ -24,7 +24,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -40,15 +40,15 @@ function O(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
 function E(e) {
     let { user: t, channel: n, onHide: E } = e,
-        I = (0, m.ZP)(t.id),
-        S = (0, s.ZP)(),
+        S = (0, m.ZP)(t.id),
+        I = (0, s.ZP)(),
         P = (0, o.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: Z } = (0, u.ZP)(P ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
         N = (0, h.ZB)({
@@ -61,15 +61,15 @@ function E(e) {
         value: Z,
         children: (0, r.jsx)(h.Mt, {
             value: N,
-            fetchStartedAt: null == I ? void 0 : I.fetchStartedAt,
-            fetchEndedAt: null == I ? void 0 : I.fetchEndedAt,
-            isLoaded: null == I ? void 0 : I.isLoaded,
+            fetchStartedAt: null == S ? void 0 : S.fetchStartedAt,
+            fetchEndedAt: null == S ? void 0 : S.fetchEndedAt,
+            isLoaded: null == S ? void 0 : S.isLoaded,
             children: (0, r.jsx)(b.Z, {
                 ref: T,
                 user: t,
-                displayProfile: I,
+                displayProfile: S,
                 themeType: C.lY.SIDEBAR,
-                themeOverride: S,
+                themeOverride: I,
                 children: (0, r.jsx)(l.u2, {
                     children: (0, r.jsxs)('div', {
                         className: v.container,
@@ -103,7 +103,7 @@ function E(e) {
                                             (0, r.jsx)(y.Z, {
                                                 isBlocked: P,
                                                 onClick: () => {
-                                                    E(),
+                                                    (E(),
                                                         (0, f.pQ)(
                                                             O(
                                                                 {
@@ -112,13 +112,13 @@ function E(e) {
                                                                 },
                                                                 N
                                                             )
-                                                        );
+                                                        ));
                                                 }
                                             }),
                                             (0, r.jsx)(_.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    E(),
+                                                    (E(),
                                                         (0, f.pQ)(
                                                             O(
                                                                 {
@@ -127,7 +127,7 @@ function E(e) {
                                                                 },
                                                                 N
                                                             )
-                                                        );
+                                                        ));
                                                 }
                                             })
                                         ]

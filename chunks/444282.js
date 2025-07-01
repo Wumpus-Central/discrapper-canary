@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -23,7 +23,7 @@ function E(e) {
         I = (e) => {
             if (e.which === h.yXg.ENTER) {
                 var t;
-                e.preventDefault(), null == (t = E.current) || t.activateUploadDialogue();
+                (e.preventDefault(), null == (t = E.current) || t.activateUploadDialogue());
             }
         },
         T = i.useCallback(() => {
@@ -55,7 +55,7 @@ function E(e) {
         return (
             null == O && (null == e || e.addEventListener('dragover', T, !1), null == e || e.addEventListener('dragleave', S, !1), null == e || e.addEventListener('drop', A, !1)),
             () => {
-                null == e || e.removeEventListener('dragover', T, !1), null == e || e.removeEventListener('dragleave', S, !1), null == e || e.removeEventListener('drop', A, !1);
+                (null == e || e.removeEventListener('dragover', T, !1), null == e || e.removeEventListener('dragleave', S, !1), null == e || e.removeEventListener('drop', A, !1));
             }
         );
     }, [O, T, S, A]);
@@ -67,13 +67,13 @@ function E(e) {
                 file: e.currentTarget.files[0],
                 platform: u.ow.WEB
             };
-            l.Z.setFile({
+            (l.Z.setFile({
                 channelId: t,
                 id: n.name,
                 file: r,
                 draftType: d.d.SlashCommand
             }),
-                (e.currentTarget.value = '');
+                (e.currentTarget.value = ''));
         }
     };
     return null != O

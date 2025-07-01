@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Z: () => y,
     i: () => x
 }),
     n(35282),
     n(388685),
-    n(953529);
+    n(953529));
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -34,7 +34,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -159,7 +159,7 @@ class j extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'state', {
                 collapsed: !0,
                 collapsable: !0
@@ -170,7 +170,7 @@ class j extends a.PureComponent {
             }),
             g(this, 'setContentContainerRef', (e) => {
                 this._container = e;
-            });
+            }));
     }
 }
 let y = j;

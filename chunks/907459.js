@@ -48,7 +48,7 @@ let R = () => {
     P = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(S.L.DISMISS), (0, p.Ll)(), (0, O.O)();
+                (null == t || t(S.L.DISMISS), (0, p.Ll)(), (0, O.O)());
             };
         return (0, r.jsxs)('div', {
             className: C.editorHeader,
@@ -79,7 +79,7 @@ let R = () => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([v.Z], () => v.Z.isUpsellPreview),
             a = () => {
-                null == n || n(S.L.DISMISS), (0, p.Ll)(), (0, O.O)(), t || c.Z.open();
+                (null == n || n(S.L.DISMISS), (0, p.Ll)(), (0, O.O)(), t || c.Z.open());
             };
         return (0, r.jsxs)('div', {
             className: C.editorFooter,

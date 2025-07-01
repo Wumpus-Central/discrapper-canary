@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(415506), n(388685);
+(n.d(t, { Z: () => G }), n(415506), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -43,7 +43,7 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function Z(e) {
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -236,12 +236,12 @@ let L = (0, S.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(e, ['item', 'activeRowKey', 'highlightedApplicationKey', 'onMouseEnter', 'onMouseLeave', 'onContextMenu', 'setRef']);
@@ -410,7 +410,7 @@ class U extends (r = l.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             A(this, '_didUnmount', !1),
             A(this, '_rowRefs', {}),
             A(this, 'state', {
@@ -451,7 +451,7 @@ class U extends (r = l.PureComponent) {
                     },
                     { onClose: this.clearActiveRowKey }
                 );
-            });
+            }));
     }
 }
 function G(e) {

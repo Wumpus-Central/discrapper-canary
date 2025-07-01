@@ -35,7 +35,7 @@ function _(e) {
         }),
         O = (0, i.e7)([s.Z], () => (null != v ? s.Z.getMemberCount(v) : 0)),
         E = null != j && (null != O ? O : 0) >= j,
-        { approveRequest: I, rejectRequest: S, submitting: P } = (0, f.s)(null == C ? void 0 : C.guildId, null == C ? void 0 : C.userId, null == C ? void 0 : C.joinRequestId);
+        { approveRequest: S, rejectRequest: I, submitting: P } = (0, f.s)(null == C ? void 0 : C.guildId, null == C ? void 0 : C.userId, null == C ? void 0 : C.joinRequestId);
     return null != C && C.applicationStatus === h.wB.SUBMITTED && x
         ? (0, r.jsxs)('div', {
               className: b.buttons,
@@ -51,7 +51,7 @@ function _(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -59,7 +59,7 @@ function _(e) {
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              (r = n[t]),
+                                              ((r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
@@ -67,8 +67,8 @@ function _(e) {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
-                                          });
+                                                      : (e[t] = r));
+                                          }));
                                   }
                                   return e;
                               })({}, e)),
@@ -76,7 +76,7 @@ function _(e) {
                                   {
                                       color: l.zxk.Colors.GREEN,
                                       submitting: P,
-                                      onClick: I,
+                                      onClick: S,
                                       size: l.PhG.SMALL,
                                       disabled: E,
                                       children: g.intl.string(g.t.BzjDQE)
@@ -99,7 +99,7 @@ function _(e) {
                   }),
                   (0, r.jsx)(l.zxk, {
                       color: l.zxk.Colors.RED,
-                      onClick: S,
+                      onClick: I,
                       size: l.PhG.SMALL,
                       disabled: P || C.applicationStatus !== h.wB.SUBMITTED,
                       children: g.intl.string(g.t.hDtbs7)

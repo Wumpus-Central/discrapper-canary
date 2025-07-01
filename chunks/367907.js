@@ -55,7 +55,7 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -63,7 +63,7 @@ function L(e) {
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -211,7 +211,7 @@ function Z(e, t, n) {
             .filter((e) => e.channelId === t)
             .filter((e) => e.userId !== c.default.getId())
             .forEach((e) => {
-                r.voice_state_count++, (e.selfVideo || e.selfStream) && r.video_stream_count++;
+                (r.voice_state_count++, (e.selfVideo || e.selfStream) && r.video_stream_count++);
             }),
         r
     );

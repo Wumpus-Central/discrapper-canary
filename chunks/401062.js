@@ -22,7 +22,7 @@ var r = n(392711),
     E = n(981631),
     b = n(710111),
     y = (function (e) {
-        return (e.EMOJI_PICKER = 'emoji_picker'), (e.EFFECT_BAR = 'effect_bar'), e;
+        return ((e.EMOJI_PICKER = 'emoji_picker'), (e.EFFECT_BAR = 'effect_bar'), e);
     })({});
 function O(e) {
     let t = new AbortController(),
@@ -42,7 +42,7 @@ function v(e, t, n) {
             animation_type: l,
             animation_id: (0, m.Iu)(l, m.v)
         };
-    i.tn
+    (i.tn
         .post({
             url: E.ANM.CUSTOM_CALL_SOUNDS(e),
             body: d,
@@ -53,7 +53,7 @@ function v(e, t, n) {
         .then(E.VqG, () => {
             if (a.signal.aborted) return;
         }),
-        (0, u.Z)([o.Z.CHANNEL_CALL], n, t, c.jy.ENTRY);
+        (0, u.Z)([o.Z.CHANNEL_CALL], n, t, c.jy.ENTRY));
 }
 function I(e, t, n, r) {
     var a, o;
@@ -64,7 +64,7 @@ function I(e, t, n, r) {
             emoji_id: t.emojiId,
             emoji_name: null != (o = t.emojiName) ? o : null == s ? void 0 : s.name
         };
-    t.guildId !== b.X8 && (_.source_guild_id = t.guildId),
+    (t.guildId !== b.X8 && (_.source_guild_id = t.guildId),
         i.tn
             .post({
                 url: E.ANM.SEND_SOUNDBOARD_SOUND(e),
@@ -76,7 +76,7 @@ function I(e, t, n, r) {
             .then(E.VqG, () => {
                 if (d.signal.aborted) return;
             }),
-        (0, u.Z)(null != r ? r : [], n, t, c.jy.DEFAULT);
+        (0, u.Z)(null != r ? r : [], n, t, c.jy.DEFAULT));
 }
 let T = async (e) => {
         let { channel: t, emoji: n, location: r, animationType: o, animationId: s, isPremium: l } = e;
@@ -97,13 +97,13 @@ let T = async (e) => {
                           animation_type: c,
                           animation_id: s
                       };
-            await i.tn.post({
+            (await i.tn.post({
                 url: E.ANM.VOICE_CHANNEL_EFFECTS(t.id),
                 body: e,
                 rejectWithError: !1
             }),
                 A(t, n, r, c),
-                a.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_SENT_LOCAL' });
+                a.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_SENT_LOCAL' }));
         } catch (e) {
             if (429 === e.status && null != e.body.retry_after) {
                 let t = e.body.retry_after * f.Z.Millis.SECOND;

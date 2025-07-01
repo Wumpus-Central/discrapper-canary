@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(539854);
+(n.d(t, { Z: () => N }), n(388685), n(539854));
 var r,
     i = n(442837),
     a = n(570140),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -56,14 +56,14 @@ function y() {
         if (i < n) t = e + 1;
         else break;
     }
-    t > 0 && (_.itemImpressions = _.itemImpressions.slice(t)), _.itemImpressions.length > d && (_.itemImpressions = _.itemImpressions.slice(-d));
+    (t > 0 && (_.itemImpressions = _.itemImpressions.slice(t)), _.itemImpressions.length > d && (_.itemImpressions = _.itemImpressions.slice(-d)));
     let r = E ? b : u,
         i = new Set(),
         a = new Set(),
         o = Date.now() - r,
         s = null;
-    for (let [e, t] of _.itemImpressions) t < o ? i.add(e) : null == s && (s = t + r), a.add(e);
-    (p = i), (h = a), (m = null != s ? s : 1 / 0), (g = !0);
+    for (let [e, t] of _.itemImpressions) (t < o ? i.add(e) : null == s && (s = t + r), a.add(e));
+    ((p = i), (h = a), (m = null != s ? s : 1 / 0), (g = !0));
 }
 function O(e) {
     let { itemIds: t } = e;
@@ -71,13 +71,13 @@ function O(e) {
     let n = Date.now(),
         r = !1;
     for (let e of t) h.has(e) || (_.itemImpressions.push([e, n]), (r = !0));
-    return y(r), r;
+    return (y(r), r);
 }
 function v() {
-    (_.itemImpressions = []), y(!0);
+    ((_.itemImpressions = []), y(!0));
 }
 function I() {
-    return console.log('Item impressions:', _.itemImpressions), !1;
+    return (console.log('Item impressions:', _.itemImpressions), !1);
 }
 function T() {
     E = !E;
@@ -93,7 +93,7 @@ class A extends (r = i.ZP.PersistedStore) {
         return _;
     }
     getImpressionCappedItemIds() {
-        return y(), p;
+        return (y(), p);
     }
     getDebugFastImpressionCappingEnabled() {
         return E;
@@ -105,7 +105,7 @@ class A extends (r = i.ZP.PersistedStore) {
         _ = f();
     }
 }
-s(A, 'displayName', 'ContentInventoryPersistedStore'), s(A, 'persistKey', 'ContentInventoryPersistedStore');
+(s(A, 'displayName', 'ContentInventoryPersistedStore'), s(A, 'persistKey', 'ContentInventoryPersistedStore'));
 let N = new A(a.Z, {
     CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: O,
     CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: v,

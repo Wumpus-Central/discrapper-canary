@@ -28,10 +28,10 @@ function E(e) {
             location: S
         }),
         C = i.useCallback(() => {
-            A(), T({ action: b ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
+            (A(), T({ action: b ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' }));
         }, [A, b, T]),
         R = i.useCallback(() => {
-            N(), T({ action: b ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
+            (N(), T({ action: b ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' }));
         }, [N, b, T]),
         P = null != E,
         w = (0, c.q)(E);

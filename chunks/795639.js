@@ -1,4 +1,4 @@
-n.d(t, { _: () => P }), n(781311), n(953529);
+(n.d(t, { _: () => P }), n(781311), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -22,14 +22,14 @@ var r = n(255367),
     y = n(124252),
     O = n(388032),
     w = n(554010);
-let S = [
+let N = [
         {
             name: 'Media Post Thumbnail',
             extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
         }
     ],
-    N = (0, p.hQ)();
-function T(e) {
+    T = (0, p.hQ)();
+function S(e) {
     let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
         a = (0, _.tu)({
             numAttachments: t.length,
@@ -82,17 +82,17 @@ let P = (e) => {
         }, [b]),
         E = i.useCallback(
             (e) => {
-                null != _ && m.Z.remove(a.id, _.id, g.Ie.CREATE_FORUM_POST.drafts.type),
+                (null != _ && m.Z.remove(a.id, _.id, g.Ie.CREATE_FORUM_POST.drafts.type),
                     (0, C.d)(e.currentTarget.files, a, g.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0
                     }),
-                    (e.currentTarget.value = null);
+                    (e.currentTarget.value = null));
             },
             [a, _]
         ),
         R = (e) => {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 (null == _ ? void 0 : _.upload) != null &&
                     (0, u.ZDy)(async () => {
                         let e = _.upload;
@@ -106,7 +106,7 @@ let P = (e) => {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -114,7 +114,7 @@ let P = (e) => {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -122,8 +122,8 @@ let P = (e) => {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({}, n)),
@@ -157,7 +157,7 @@ let P = (e) => {
                                 i)
                             );
                         };
-                    });
+                    }));
         },
         k = (0, r.jsx)(j.Z, {
             color: u.Ttl.CUSTOM,
@@ -166,13 +166,13 @@ let P = (e) => {
             onChange: E,
             multiple: !1,
             'aria-hidden': !0,
-            filters: S,
-            'aria-describedby': N,
+            filters: N,
+            'aria-describedby': T,
             'aria-label': P ? O.intl.string(O.t.MxJI3d) : O.intl.string(O.t.CbiofX),
             children: P
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(T, {
+                          (0, r.jsx)(S, {
                               mediaAttachments: b,
                               containerWidth: I.width,
                               containerHeight: I.height

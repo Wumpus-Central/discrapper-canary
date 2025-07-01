@@ -1,9 +1,9 @@
-n.d(t, { V: () => a }), n(953529);
+(n.d(t, { V: () => a }), n(953529));
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r);
-n(481060), n(937860);
+(n(481060), n(937860));
 var l = n(973792);
 let a = (e) => {
     let { invertTail: t, leftOffset: n, rightOffset: r, tailSpineClassName: a, tailTargetInnerClassName: o } = e;

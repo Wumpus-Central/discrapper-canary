@@ -26,7 +26,7 @@ function h(e) {
         ),
         v = i.useCallback(
             (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     e.stopPropagation(),
                     (0, c.E6)({
                         guild: t,
@@ -34,7 +34,7 @@ function h(e) {
                         analyticsSection: d.jXE.GUILD_BANNER,
                         analyticsObject: d.qAy.UPLOAD_IMAGE,
                         perks: (0, u.XO)()
-                    });
+                    }));
             },
             [j, t]
         ),

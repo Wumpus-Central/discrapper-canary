@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     PM: () => M,
     WG: () => P,
     ZP: () => k
 }),
     n(388685),
-    n(781311);
+    n(781311));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -31,7 +31,7 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function H(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -47,8 +47,8 @@ function H(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -264,7 +264,7 @@ function k(e) {
             [m]
         ),
         G = () => {
-            V(!1), k(!1);
+            (V(!1), k(!1));
         };
     l.useEffect(() => {
         let e = setTimeout(() => {
@@ -275,12 +275,12 @@ function k(e) {
         };
     }, [L, E]);
     let Y = (e, t, n) => {
-            n.stopPropagation(), n.preventDefault(), 2 === t ? V(e) : (1 === t || V(e), k(e));
+            (n.stopPropagation(), n.preventDefault(), 2 === t ? V(e) : (1 === t || V(e), k(e)));
         },
         W = l.useCallback(
             (e) => {
                 let t = H({}, j);
-                I(e) ? (t[e.id] = M(e.record)) : R(e) && (t[e.id] = P(e.record)),
+                (I(e) ? (t[e.id] = M(e.record)) : R(e) && (t[e.id] = P(e.record)),
                     q(t),
                     S(''),
                     G(),
@@ -293,7 +293,7 @@ function k(e) {
                                 top: n.scrollHeight,
                                 behavior: 'smooth'
                             });
-                    }, 16);
+                    }, 16));
             },
             [q, j]
         ),
@@ -306,7 +306,7 @@ function k(e) {
                     {
                         className: i()(_.selectableSearchRow, _.rowHeight),
                         onClick: (e) => {
-                            e.stopPropagation(), W(o);
+                            (e.stopPropagation(), W(o));
                         },
                         children: (0, r.jsx)('div', {
                             className: _.rowContainer,
@@ -322,7 +322,7 @@ function k(e) {
             () =>
                 v.map((e) => {
                     var n;
-                    return (n = j[e]), w(H({}, n.tag), { label: T(n.row, t, _.noIndent) });
+                    return ((n = j[e]), w(H({}, n.tag), { label: T(n.row, t, _.noIndent) }));
                 }),
             [j, v, t]
         );
@@ -341,7 +341,7 @@ function k(e) {
                         onRemoveTag: (e) => {
                             let t = v[e],
                                 { [t]: n } = j;
-                            q(
+                            (q(
                                 (function (e, t) {
                                     if (null == e) return {};
                                     var n,
@@ -352,18 +352,18 @@ function k(e) {
                                                 r,
                                                 l = {},
                                                 o = Object.keys(e);
-                                            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                                            for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                                             return l;
                                         })(e, t);
                                     if (Object.getOwnPropertySymbols) {
                                         var o = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                                        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
                                     }
                                     return l;
                                 })(j, [t].map(N))
                             ),
                                 S(''),
-                                G();
+                                G());
                         },
                         onQueryChange: (e) => {
                             S(e.trim().toLocaleLowerCase());

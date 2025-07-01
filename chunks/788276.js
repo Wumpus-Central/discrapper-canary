@@ -26,7 +26,7 @@ t.exports = function (t) {
     for (var y = d, v = g - 1; ; ) {
         for (var m = y.nodeValue, _ = v; _ >= 0; _--)
             if (!(null != m && _ > 0 && n.isSurrogatePair(m, _ - 1)))
-                if ((t.setStart(y, _), u(o(t), h))) (d = y), (g = _);
+                if ((t.setStart(y, _), u(o(t), h))) ((d = y), (g = _));
                 else break;
         if (-1 === _ || 0 === y.childNodes.length) break;
         v = (function (t) {
@@ -42,5 +42,5 @@ t.exports = function (t) {
             }
         })((y = y.childNodes[_]));
     }
-    return t.setStart(d, g), t;
+    return (t.setStart(d, g), t);
 };

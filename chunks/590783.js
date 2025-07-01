@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(997841);
+(n.d(t, { Z: () => f }), n(997841));
 var r = n(913527),
     i = n.n(r),
     a = n(81825),
@@ -89,6 +89,6 @@ class f extends a.Z {
         return this.code;
     }
     constructor(e) {
-        super(), u(this, 'userId', void 0), u(this, 'code', void 0), u(this, 'skuId', void 0), u(this, 'applicationId', void 0), u(this, 'uses', void 0), u(this, 'maxUses', void 0), u(this, 'expiresAt', void 0), u(this, 'redeemed', void 0), u(this, 'storeListingId', void 0), u(this, 'subscriptionPlanId', void 0), u(this, 'subscriptionPlan', void 0), u(this, 'revoked', void 0), u(this, 'entitlementBranches', void 0), u(this, 'flags', void 0), u(this, 'subscriptionTrial', void 0), u(this, 'promotion', void 0), u(this, 'giftStyle', void 0), (this.userId = e.userId), (this.code = e.code), (this.skuId = e.skuId), (this.applicationId = e.applicationId), (this.uses = e.uses), (this.maxUses = e.maxUses), (this.expiresAt = e.expiresAt), (this.redeemed = e.redeemed), (this.storeListingId = e.storeListingId), (this.subscriptionPlanId = e.subscriptionPlanId), (this.subscriptionPlan = e.subscriptionPlan), (this.revoked = e.revoked), (this.entitlementBranches = e.entitlementBranches), (this.flags = e.flags), (this.subscriptionTrial = e.subscriptionTrial), (this.promotion = e.promotion), (this.giftStyle = e.giftStyle);
+        (super(), u(this, 'userId', void 0), u(this, 'code', void 0), u(this, 'skuId', void 0), u(this, 'applicationId', void 0), u(this, 'uses', void 0), u(this, 'maxUses', void 0), u(this, 'expiresAt', void 0), u(this, 'redeemed', void 0), u(this, 'storeListingId', void 0), u(this, 'subscriptionPlanId', void 0), u(this, 'subscriptionPlan', void 0), u(this, 'revoked', void 0), u(this, 'entitlementBranches', void 0), u(this, 'flags', void 0), u(this, 'subscriptionTrial', void 0), u(this, 'promotion', void 0), u(this, 'giftStyle', void 0), (this.userId = e.userId), (this.code = e.code), (this.skuId = e.skuId), (this.applicationId = e.applicationId), (this.uses = e.uses), (this.maxUses = e.maxUses), (this.expiresAt = e.expiresAt), (this.redeemed = e.redeemed), (this.storeListingId = e.storeListingId), (this.subscriptionPlanId = e.subscriptionPlanId), (this.subscriptionPlan = e.subscriptionPlan), (this.revoked = e.revoked), (this.entitlementBranches = e.entitlementBranches), (this.flags = e.flags), (this.subscriptionTrial = e.subscriptionTrial), (this.promotion = e.promotion), (this.giftStyle = e.giftStyle));
     }
 }

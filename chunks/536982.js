@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -23,7 +23,7 @@ function c(e) {
             let { onClick: t } = e;
             return (0, r.jsx)(l.P3F, {
                 onClick: (e) => {
-                    m(!u), t(e);
+                    (m(!u), t(e));
                 },
                 children: (0, r.jsxs)('div', {
                     className: o.header,

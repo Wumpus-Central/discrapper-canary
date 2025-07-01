@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(953529);
+(n.d(t, { Z: () => S }), n(953529));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(644646),
     b = n(251360),
     j = n(19148),
-    _ = n(69439),
-    v = n(46140),
+    v = n(69439),
+    _ = n(46140),
     y = n(642145),
     C = n(388032),
     O = n(882067);
@@ -39,7 +39,7 @@ function S(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function S(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -55,8 +55,8 @@ function S(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, y.Y)),
@@ -175,7 +175,7 @@ function S(e) {
                                                           quest: T,
                                                           questContent: N,
                                                           className: O.circularQuestRewardTileAsset,
-                                                          location: v.dr.QUEST_HOME_DESKTOP,
+                                                          location: _.dr.QUEST_HOME_DESKTOP,
                                                           autoplay: A,
                                                           onLoadComplete: U,
                                                           sourceQuestContent: q
@@ -189,7 +189,7 @@ function S(e) {
                                           autoplay: A,
                                           questContent: N,
                                           className: O.questRewardTileAsset,
-                                          location: v.dr.QUEST_HOME_DESKTOP,
+                                          location: _.dr.QUEST_HOME_DESKTOP,
                                           onLoadComplete: U,
                                           sourceQuestContent: q
                                       })
@@ -224,7 +224,7 @@ function S(e) {
                         })
                 ]
             }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(v.Z, {
                 quest: T,
                 questContent: N,
                 contentPosition: R,

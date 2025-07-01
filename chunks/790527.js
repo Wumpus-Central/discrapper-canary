@@ -30,7 +30,7 @@ function N(e, t) {
         i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -40,7 +40,7 @@ function C(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function R(e) {
@@ -76,7 +76,7 @@ function P(e) {
             type: P
         },
         ey = i.useRef(eb);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         ey.current = eb;
     }),
         i.useEffect(() => {
@@ -97,7 +97,7 @@ function P(e) {
                       location_stack: t,
                       sku_id: (0, h.Wz)(ee)
                   });
-        }, [ep, ee, et]);
+        }, [ep, ee, et]));
     let eO = (0, s.e7)([m.Z], () => m.Z.affinities),
         ev = eO.length > 1 && R(P),
         eI = (0, s.e7)([m.Z], () => m.Z.hasFetched);
@@ -128,7 +128,7 @@ function P(e) {
                 size: l.zxk.Sizes.SMALL,
                 color: ei || ea ? l.zxk.Colors.CUSTOM : l.zxk.Colors.GREEN,
                 onClick: () => {
-                    null == Y || Y(), H();
+                    (null == Y || Y(), H());
                 },
                 onSubscribeModalClose: W,
                 textOptions: { textOverride: null != X ? X : e }

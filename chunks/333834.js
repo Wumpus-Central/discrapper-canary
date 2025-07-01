@@ -1,10 +1,10 @@
-n.d(t, { Z: () => w }), n(539854), n(583741), n(388685), n(642613);
+(n.d(t, { Z: () => w }), n(539854), n(583741), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(392711),
-    a = n.n(s),
+    a = n(392711),
+    s = n.n(a),
     c = n(91192),
     u = n(481060),
     d = n(724757),
@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(982183),
     C = n(981631),
     j = n(144717),
-    E = n(388032),
-    S = n(709701);
+    S = n(388032),
+    E = n(709701);
 function x(e) {
     e.stopPropagation();
 }
@@ -29,7 +29,7 @@ function I(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(u.P3F, {
         onClick: i,
-        className: o()(S.messagesGroupHeaderWrap, { [S.collapsed]: !n }),
+        className: o()(E.messagesGroupHeaderWrap, { [E.collapsed]: !n }),
         children: (0, r.jsxs)(u.Kqy, {
             gap: 4,
             direction: 'horizontal',
@@ -38,12 +38,12 @@ function I(e) {
                 (0, r.jsx)(u.X6q, {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
-                    className: S.messagesGroupHeader,
-                    children: (0, s.capitalize)(E.intl.string(v.Vv[t]).toLowerCase())
+                    className: E.messagesGroupHeader,
+                    children: (0, a.capitalize)(S.intl.string(v.Vv[t]).toLowerCase())
                 }),
                 (0, r.jsx)(u.CJ0, {
                     size: 'xxs',
-                    className: S.chevron
+                    className: E.chevron
                 })
             ]
         })
@@ -53,7 +53,7 @@ let P = [v.KZ.UNREAD, v.KZ.TODAY, v.KZ.YESTERDAY, v.KZ.OLDER];
 function N() {
     let { analyticsLocations: e } = (0, p.ZP)(h.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)('div', {
-        className: S.emptyStateContainer,
+        className: E.emptyStateContainer,
         children: (0, r.jsxs)(u.Kqy, {
             gap: 24,
             align: 'center',
@@ -72,7 +72,7 @@ function N() {
                             variant: 'text-sm/medium',
                             color: C.tPk.TEXT_MUTED,
                             style: { textAlign: 'center' },
-                            children: E.intl.string(j.default['O+racX'])
+                            children: S.intl.string(j.default['O+racX'])
                         })
                     ]
                 }),
@@ -80,14 +80,14 @@ function N() {
                     onClick: () => (0, O.j4)(e),
                     color: u.zxk.Colors.PRIMARY,
                     style: { fontWeight: 600 },
-                    children: E.intl.string(j.default.klSpfn)
+                    children: S.intl.string(j.default.klSpfn)
                 })
             ]
         })
     });
 }
 function w(e) {
-    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: s, renderLoadingState: h, renderMessageGroup: p, scrollerClassName: j, className: E, listName: w, ignoreGrouping: Z = !1 } = e,
+    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: a, renderLoadingState: h, renderMessageGroup: p, scrollerClassName: j, className: S, listName: w, ignoreGrouping: Z = !1 } = e,
         T = i.useRef(null),
         A = (0, d.Z)(w, T),
         { notificationCenterVariant: R } = m.Lk.useExperiment({ location: 'NotificationsInboxSidebarList' }),
@@ -105,7 +105,7 @@ function w(e) {
             f.S.subscribe(C.CkL.SCROLL_PAGE_DOWN, t),
             f.S.subscribe(C.CkL.SCROLL_PAGE_UP, e),
             () => {
-                f.S.unsubscribe(C.CkL.SCROLL_PAGE_DOWN, t), f.S.unsubscribe(C.CkL.SCROLL_PAGE_UP, e);
+                (f.S.unsubscribe(C.CkL.SCROLL_PAGE_DOWN, t), f.S.unsubscribe(C.CkL.SCROLL_PAGE_UP, e));
             }
         );
     }, []);
@@ -113,8 +113,8 @@ function w(e) {
             var e;
             let t = null == (e = T.current) ? void 0 : e.getScrollerState(),
                 n = (0, O.s)(D);
-            null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && (null == s || s(n));
-        }, [s, D]),
+            null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && (null == a || a(n));
+        }, [a, D]),
         k = (0, O.fW)(null != t ? t : []),
         U = i.useMemo(() => {
             if (null == t || n) return null;
@@ -139,12 +139,12 @@ function w(e) {
             return (
                 null != t &&
                     t.length > 0 &&
-                    (a().each(t, (e) => {
+                    (s().each(t, (e) => {
                         let { message: t, kind: n } = e,
                             l = k(t.id);
                         n === v.fL.MENTION ? r[l].push(t) : t.channel_id in i[l] ? i[l][t.channel_id].push(t) : (i[l][t.channel_id] = [t]);
                     }),
-                    a().each(P, (t) => {
+                    s().each(P, (t) => {
                         [...Object.values(i[t]).map((e) => e.reverse()), ...r[t].map((e) => [e])]
                             .sort((e, t) => g.default.compare(t[0].id, e[0].id))
                             .forEach((n) => {
@@ -169,7 +169,7 @@ function w(e) {
                               })
                           )
                         : null != U &&
-                          a().each(P, (t) => {
+                          s().each(P, (t) => {
                               0 !== U[t].length &&
                                   (e.push(
                                       (0, r.jsx)(I, {
@@ -177,11 +177,11 @@ function w(e) {
                                           isOpen: D[t],
                                           toggleOpenedState: () => {
                                               let e = D[t];
-                                              L(t),
+                                              (L(t),
                                                   (0, b.RZ)({
                                                       section: t,
                                                       enabled: !e
-                                                  });
+                                                  }));
                                           }
                                       })
                                   ),
@@ -192,22 +192,22 @@ function w(e) {
             );
         }, [n, t, h, D, L, U, Z, p, R, k]);
     i.useEffect(() => {
-        var e, t, r, i, l, o, s;
+        var e, t, r, i, l, o, a;
         if (n) return;
-        let a = null != U && 0 === U.UNREAD.length,
-            c = null != (s = null != (o = null != (l = null == (e = U) || null == (t = e.TODAY[0]) ? void 0 : t[0]) ? l : null == e || null == (r = e.YESTERDAY[0]) ? void 0 : r[0]) ? o : null == e || null == (i = e.OLDER[0]) ? void 0 : i[0]) ? s : null;
-        y.Z.setInboxReadState(a, c);
+        let s = null != U && 0 === U.UNREAD.length,
+            c = null != (a = null != (o = null != (l = null == (e = U) || null == (t = e.TODAY[0]) ? void 0 : t[0]) ? l : null == e || null == (r = e.YESTERDAY[0]) ? void 0 : r[0]) ? o : null == e || null == (i = e.OLDER[0]) ? void 0 : i[0]) ? a : null;
+        y.Z.setInboxReadState(s, c);
     }, [U, n]);
     let B = null;
     return (
         null != t &&
             t.length > 0 &&
-            null != s &&
+            null != a &&
             l &&
             (B = (0, r.jsx)(
                 'div',
                 {
-                    className: S.loadingMore,
+                    className: E.loadingMore,
                     children: (0, r.jsx)(u.$jN, {})
                 },
                 'loading-more-after'
@@ -217,10 +217,10 @@ function w(e) {
                 r = i.useRef(!1),
                 l = null != n && n.UNREAD.length > 0,
                 o = null == n || t,
-                { setOpenStateFromUnreads: s } = (0, _.Z)();
+                { setOpenStateFromUnreads: a } = (0, _.Z)();
             i.useEffect(() => {
-                o || r.current || (s(l), (r.current = !0));
-            }, [s, l, o]);
+                o || r.current || (a(l), (r.current = !0));
+            }, [a, l, o]);
         })({
             messagesByCategory: U,
             loadingInitial: n
@@ -231,12 +231,12 @@ function w(e) {
             groupedUnreadMessages: null == U ? void 0 : U.UNREAD
         }),
         (0, r.jsx)('div', {
-            className: o()(E, S.messagesPopoutWrap),
+            className: o()(S, E.messagesPopoutWrap),
             onClick: x,
             onDoubleClick: x,
             'aria-label': e['aria-label'],
             children: (0, r.jsx)(u.Den, {
-                className: o()(S.messagesPopout, j),
+                className: o()(E.messagesPopout, j),
                 onScroll: M,
                 fade: !0,
                 ref: T,
@@ -257,12 +257,12 @@ function w(e) {
                                                 r,
                                                 i = {},
                                                 l = Object.keys(e);
-                                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                             return i;
                                         })(e, t);
                                     if (Object.getOwnPropertySymbols) {
                                         var l = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                     }
                                     return i;
                                 })(e, ['ref']);
@@ -272,7 +272,7 @@ function w(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -280,7 +280,7 @@ function w(e) {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -288,8 +288,8 @@ function w(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })(

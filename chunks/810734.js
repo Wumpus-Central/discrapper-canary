@@ -30,7 +30,7 @@ var r =
             l((r = r.apply(e, t || [])).next());
         });
     };
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.MessageLoader = void 0), (t.loadAllMessagesInLocale = s), (t.waitForAllDefaultIntlMessagesLoaded = l), (t.createLoader = c);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.MessageLoader = void 0), (t.loadAllMessagesInLocale = s), (t.waitForAllDefaultIntlMessagesLoaded = l), (t.createLoader = c));
 let i = n(358294);
 class a {
     constructor(t, n) {
@@ -38,17 +38,17 @@ class a {
             for (let [n, i] of Object.entries(t))
                 e.hot.accept(i, () =>
                     r(this, void 0, void 0, function* () {
-                        yield this._loadLocale(n), (this._parseCache = {});
+                        (yield this._loadLocale(n), (this._parseCache = {}));
                     })
                 );
     }
     withDebugValues(e, t) {
-        (this._debugKeyMap = e), (this._localeFileMap = t);
+        ((this._debugKeyMap = e), (this._localeFileMap = t));
     }
     fallbackWith(e) {
         let t = this;
         for (; null != t; ) if ((t = t._parentLoader) === this) throw Error('Setting `fallbackWith` on MessageLoader created a circular chain that would never resolve');
-        (this.fallbackLoader = e), (e._parentLoader = this);
+        ((this.fallbackLoader = e), (e._parentLoader = this));
     }
     get(e, t) {
         var n;
@@ -62,7 +62,7 @@ class a {
         let o = null != this._debugKeyMap ? `"${this._debugKeyMap[e]}" (${e})` : e,
             s = null != this._localeFileMap ? `${t} (${this._localeFileMap[t]})` : t,
             l = null != this._localeFileMap ? `${this.defaultLocale} (${this._localeFileMap[this.defaultLocale]})` : this.defaultLocale;
-        return console.warn(`Requested message ${o} does not have a value in the requested locale ${s} nor the default locale ${l}`), this.fallbackMessage;
+        return (console.warn(`Requested message ${o} does not have a value in the requested locale ${s} nor the default locale ${l}`), this.fallbackMessage);
     }
     getMessageValue(e, t) {
         var n, r, a;
@@ -75,7 +75,7 @@ class a {
         let s = this.messages[t][e];
         if (null != s) {
             let n = new i.InternalIntlMessage(s, t);
-            return ((null != (r = (a = this._parseCache)[t]) ? r : (a[t] = {}))[e] = n), n;
+            return (((null != (r = (a = this._parseCache)[t]) ? r : (a[t] = {}))[e] = n), n);
         }
     }
     _loadLocale(e) {
@@ -88,7 +88,7 @@ class a {
                 else throw Error(`Requested to load locale ${e}, which should be supported, but no source for translation data was provided.`);
             let a = this.localeImportMap[e](),
                 o = null != (i = null == (r = this._localeLoadingPromises[e]) ? void 0 : r.initialized) && i;
-            (this._localeLoadingPromises[e] = {
+            ((this._localeLoadingPromises[e] = {
                 initialized: o,
                 current: a
             }),
@@ -97,14 +97,14 @@ class a {
                     initialized: !0,
                     current: void 0
                 }),
-                this.emitChange();
+                this.emitChange());
         });
     }
     emitChange() {
         for (let e of this._subscribers.values()) e();
     }
     onChange(e) {
-        return this._subscribers.add(e), () => this._subscribers.delete(e);
+        return (this._subscribers.add(e), () => this._subscribers.delete(e));
     }
     isLocaleLoading(e) {
         var t;
@@ -141,5 +141,5 @@ function l() {
 }
 function c(e, t) {
     let n = new a(e, t);
-    return o.push(n), n;
+    return (o.push(n), n);
 }

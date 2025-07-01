@@ -24,7 +24,7 @@ function b(e) {
         A = i.useCallback(() => {
             v(!0);
         }, [v]);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         v();
     }, [v]),
         i.useEffect(() => {
@@ -32,7 +32,7 @@ function b(e) {
         }, [t, y]),
         i.useEffect(() => {
             null == a || a(null == S ? void 0 : S.current);
-        }, [S, a]);
+        }, [S, a]));
     let N = i.useMemo(
         () =>
             I === f.a.NOT_FETCHED || I === f.a.FETCHING

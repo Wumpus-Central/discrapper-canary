@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Az: () => E,
     IZ: () => b,
     PP: () => g,
@@ -14,7 +14,7 @@ n.d(t, {
     n(953529),
     n(388685),
     n(664751),
-    n(544891);
+    n(544891));
 var r = n(749210),
     i = n(336197),
     a = n(41776),
@@ -41,7 +41,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,11 +57,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -82,7 +82,7 @@ async function m(e, t) {
         m = (0, o.s1)(),
         g = c.Z.getGuild(e),
         E = { state: { analyticsSource: t } };
-    null != g && null != g.joinedAt
+    (null != g && null != g.joinedAt
         ? p &&
           (null == a
               ? (0, s.X)(e, E)
@@ -111,7 +111,7 @@ async function m(e, t) {
                   a,
                   n.messageId
               ))),
-        null == l || l();
+        null == l || l());
 }
 function g(e) {
     return {

@@ -6,4 +6,4 @@ var n = '(?:[a-z0-9]{5,8}|\\d[a-z0-9]{3})',
     s = RegExp('^(?!x).*?-(' + n + ')-(?:\\w{4,8}-(?!x-))*\\1\\b', 'i'),
     l = RegExp('^(?!x).*?-(' + r + ')-(?:\\w+-(?!x-))*\\1\\b', 'i'),
     c = RegExp('-' + i, 'ig');
-(t.expBCP47Syntax = o), (t.expVariantDupes = s), (t.expSingletonDupes = l), (t.expExtSequences = c);
+((t.expBCP47Syntax = o), (t.expVariantDupes = s), (t.expSingletonDupes = l), (t.expExtSequences = c));

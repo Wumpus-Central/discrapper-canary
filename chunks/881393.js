@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(539854);
+(n.d(t, { Z: () => m }), n(388685), n(539854));
 var r = n(496929),
     i = n(16084),
     l = n(558381),
@@ -19,7 +19,7 @@ async function h(e, t) {
             let n = e.subscription_listings;
             if (null == n) return null;
             let r = [];
-            n.forEach((e) => {
+            (n.forEach((e) => {
                 e.subscription_plans.forEach((n) => {
                     var i;
                     let l = null == n ? void 0 : n.price,
@@ -40,7 +40,7 @@ async function h(e, t) {
                     r.push(o);
                 });
             }),
-                r.filter((e) => (null == e ? void 0 : e.price) != null).forEach((e) => i.push(e));
+                r.filter((e) => (null == e ? void 0 : e.price) != null).forEach((e) => i.push(e)));
         }),
         i
     );

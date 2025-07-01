@@ -1,4 +1,4 @@
-n.d(t, { default: () => p }), n(388685);
+(n.d(t, { default: () => p }), n(388685));
 var s = n(255367),
     i = n(73800),
     r = n(442837),
@@ -22,7 +22,7 @@ let p = i.forwardRef(function (e, t) {
             async (e) => {
                 j(!0);
                 try {
-                    d.Z.isPhoneReverification(I, C) ? await a.Z.beginReverifyPhone(e, m) : await a.Z.beginAddPhone(e, m), b(null), g(e);
+                    (d.Z.isPhoneReverification(I, C) ? await a.Z.beginReverifyPhone(e, m) : await a.Z.beginAddPhone(e, m), b(null), g(e));
                 } catch (e) {
                     b(new o.Z(e));
                 }
@@ -36,7 +36,7 @@ let p = i.forwardRef(function (e, t) {
                     j(!0);
                     try {
                         let { token: t } = await a.Z.verifyPhone(f, e);
-                        b(null), _(t);
+                        (b(null), _(t));
                     } catch (e) {
                         b(new o.Z(e));
                     }

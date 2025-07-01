@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(413496), n(433524), n(35282);
+(n.d(t, { Z: () => I }), n(413496), n(433524), n(35282));
 var i,
     r,
     s = n(255367),
@@ -31,7 +31,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function x(e) {
             )),
             i.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -186,9 +186,9 @@ class T extends (r = l.PureComponent) {
         });
     }
 }
-_(T, 'rules', O),
+(_(T, 'rules', O),
     _(T, 'defaultProps', {
         parser: S,
         output: v
-    });
+    }));
 let I = T;

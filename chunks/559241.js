@@ -15,7 +15,7 @@ function i(e, t, n) {
 }
 class a {
     constructor() {
-        i(this, 'filterTagIds', void 0),
+        (i(this, 'filterTagIds', void 0),
             i(this, 'sortOrder', void 0),
             i(this, 'layout', void 0),
             i(this, 'tagSetting', void 0),
@@ -43,7 +43,7 @@ class a {
             i(this, 'getTagSettingAnalytics', (e) => {
                 var t, n;
                 return null != (n = this.tagSetting) ? n : null == (t = r.Z.getChannel(e)) ? void 0 : t.getDefaultTagSetting();
-            });
+            }));
     }
 }
 let o = new a();

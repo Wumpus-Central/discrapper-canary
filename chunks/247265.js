@@ -1,4 +1,4 @@
-t.d(r, { default: () => h }), t(388685);
+(t.d(r, { default: () => h }), t(388685));
 var n = t(255367),
     o = t(73800),
     s = t(512722),
@@ -33,7 +33,7 @@ let h = (e) => {
             transitionState: s,
             children: (0, n.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), g(t);
+                    (e.preventDefault(), g(t));
                 },
                 children: [
                     (0, n.jsx)(d.Z.Error, {

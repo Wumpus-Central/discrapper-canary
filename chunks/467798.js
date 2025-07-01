@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     Z: () => a,
     v: () => i
 }),
     n(413496),
     n(433524),
     n(35282),
-    n(781311);
+    n(781311));
 let r = '@silent',
     i = new RegExp('^'.concat(r, '(\\s|$)'));
 function a(e) {

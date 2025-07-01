@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(570140),
     i = n(224706),
     l = n(710845),
@@ -19,6 +19,6 @@ function c(e) {
 }
 let u = {
     initialize() {
-        r.Z.subscribe('UNVERIFIED_GAME_UPDATE', s), r.Z.subscribe('GAME_ICON_UPDATE', c);
+        (r.Z.subscribe('UNVERIFIED_GAME_UPDATE', s), r.Z.subscribe('GAME_ICON_UPDATE', c));
     }
 };

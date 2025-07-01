@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     B: () => m,
     QuestsRewardModalUnverified: () => h
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -30,7 +30,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,13 +50,13 @@ function h(e) {
         }),
         [p, h] = i.useState({ status: 'unknown' });
     i.useEffect(() => {
-        h({ status: 'loading' }),
+        (h({ status: 'loading' }),
             s.Z.verifyResend().then(
                 () => h({ status: 'success' }),
                 (e) => {
-                    h({ status: 'error' }), (0, c.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
+                    (h({ status: 'error' }), (0, c.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } }));
                 }
-            );
+            ));
     }, []);
     let m = () =>
         (0, r.jsx)(o.mzw, {

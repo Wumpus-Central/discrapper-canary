@@ -25,7 +25,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,7 +55,7 @@ let u = i.createContext(null),
                 let e = Date.now();
                 if ((null == p.current && null != a && (p.current = e - a), !f)) return;
                 let { analyticsLocations: t, value: n } = m.current;
-                (0, s.pQ)(
+                ((0, s.pQ)(
                     c(
                         {
                             action: 'VIEW',
@@ -77,7 +77,7 @@ let u = i.createContext(null),
                             },
                             n
                         )
-                    );
+                    ));
             }, [f]),
             (0, r.jsx)(u.Provider, {
                 value: t,

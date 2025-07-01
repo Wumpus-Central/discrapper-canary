@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(374470);
 function i(e, t, n) {
     return (
@@ -36,7 +36,7 @@ class o {
         null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n));
     }
     constructor(e = a) {
-        i(this, '_observer', void 0),
+        (i(this, '_observer', void 0),
             i(this, '_options', void 0),
             i(this, '_nodes', new WeakMap()),
             i(this, '_components', new WeakMap()),
@@ -52,11 +52,11 @@ class o {
                     let n = this._nodes.get(e.target);
                     if (null != n) {
                         let e = !1;
-                        t ? this._visibleComponents.has(n) || (this._visibleComponents.add(n), (e = !0)) : this._visibleComponents.has(n) && (this._visibleComponents.delete(n), (e = !0)), e && n.forceUpdate();
+                        (t ? this._visibleComponents.has(n) || (this._visibleComponents.add(n), (e = !0)) : this._visibleComponents.has(n) && (this._visibleComponents.delete(n), (e = !0)), e && n.forceUpdate());
                     }
                 });
             }),
             (this._options = e),
-            null != window.IntersectionObserver && (this._observer = new window.IntersectionObserver(this._handleEntries, e));
+            null != window.IntersectionObserver && (this._observer = new window.IntersectionObserver(this._handleEntries, e)));
     }
 }

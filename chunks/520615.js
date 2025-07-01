@@ -32,7 +32,7 @@ function l(t) {
                     type: 'submit',
                     color: r.zxk.Colors.BRAND,
                     onClick: () => {
-                        (0, i.Z)(), s();
+                        ((0, i.Z)(), s());
                     },
                     children: a.intl.string(a.t.BddRzc)
                 })

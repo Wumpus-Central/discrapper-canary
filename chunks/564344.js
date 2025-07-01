@@ -33,14 +33,14 @@ function v() {
     function P(t) {
         if (I !== t) {
             if (n) {
-                b.S.dispatch(E.CkL.SHAKE_APP, {
+                (b.S.dispatch(E.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: a.$x
                 }),
-                    b.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
+                    b.S.dispatch(E.CkL.EMPHASIZE_NOTICE));
                 return;
             }
-            t === j.NB.GUILD && null == e && null != v && (0, c.Fq)(v), N(t);
+            (t === j.NB.GUILD && null == e && null != v && (0, c.Fq)(v), N(t));
         }
     }
     r.useEffect(() => {

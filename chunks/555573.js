@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     GV: () => E,
     Po: () => _,
     Sg: () => p,
@@ -7,7 +7,7 @@ n.d(t, {
     g7: () => h
 }),
     n(467055),
-    n(388685);
+    n(388685));
 var r = n(512722),
     i = n.n(r),
     a = n(544891),
@@ -20,7 +20,7 @@ var r = n(512722),
     f = n(981631);
 function _(e) {
     let { channelId: t, command: n, section: r, location: a, initialValues: s, triggerSection: l, queryLength: c, sectionName: u, query: f, searchResultsPosition: _, source: p, commandOrigin: h } = e;
-    null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'),
+    (null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'),
         o.Z.dispatch({
             type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
             channelId: t,
@@ -35,7 +35,7 @@ function _(e) {
             searchResultsPosition: _,
             source: p,
             commandOrigin: h
-        });
+        }));
 }
 function p(e, t) {
     o.Z.dispatch({

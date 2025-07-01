@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(392711),
     i = n(846519),
     a = n(570140),
@@ -36,7 +36,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,11 +57,11 @@ let S = (0, r.debounce)(o.xc, 1000),
     w = null;
 function D(e) {
     var t;
-    null == (t = A[e]) || t.stop(), delete A[e];
+    (null == (t = A[e]) || t.stop(), delete A[e]);
 }
 function L(e) {
     var t;
-    null == (t = N[e]) || t.stop(), delete N[e];
+    (null == (t = N[e]) || t.stop(), delete N[e]);
 }
 function x(e, t) {
     if (m.Z.getVoiceChannelId() !== e) return !1;
@@ -80,33 +80,33 @@ function M(e, t) {
     var n;
     if (g.Z.getAllActiveStreamKeys().includes(e)) return;
     let r = null != (n = N[e]) ? n : new i.V7();
-    (N[e] = r),
+    ((N[e] = r),
         r.start(t ? P : R, () => {
             a.Z.dispatch({
                 type: 'STREAM_TIMED_OUT',
                 streamKey: e
             });
-        });
+        }));
 }
 class j extends s.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             I(this, 'handleStreamWatch', (e) => {
                 let { streamKey: t, allowMultiple: n } = e,
                     { channelId: r } = (0, y.my)(t),
                     i = _.Z.getChannel(r);
-                M(t, null == i ? void 0 : i.isGuildStageVoice()),
+                (M(t, null == i ? void 0 : i.isGuildStageVoice()),
                     D(t),
                     n ||
                         d.Z.getAllActiveStreams().forEach((e) => {
                             let n = (0, y.V9)(e);
                             e.ownerId !== f.default.getId() && n !== t && (0, o.g)(n, !1);
-                        });
+                        }));
             }),
             I(this, 'handleStreamStart', (e) => {
                 let { channelId: t, streamType: n, guildId: r } = e,
                     i = _.Z.getChannel(t);
-                M(
+                (M(
                     (0, y.V9)({
                         streamType: n,
                         guildId: r,
@@ -115,7 +115,7 @@ class j extends s.Z {
                     }),
                     null == i ? void 0 : i.isGuildStageVoice()
                 ),
-                    this.platformHandleStreamStart(e);
+                    this.platformHandleStreamStart(e));
             }),
             I(this, 'handleStreamCreate', (e) => {
                 var t;
@@ -132,11 +132,11 @@ class j extends s.Z {
             }),
             I(this, 'handleStreamDelete', (e) => {
                 let { reason: t, streamKey: n } = e;
-                L(n), t === v.si2.STREAM_FULL && ((0, l.kr)(T({ type: l.u.STREAM_FULL }, (0, c.rT)(n))), (0, o.aP)(n, !1), this.platformShowStreamFull());
+                (L(n), t === v.si2.STREAM_FULL && ((0, l.kr)(T({ type: l.u.STREAM_FULL }, (0, c.rT)(n))), (0, o.aP)(n, !1), this.platformShowStreamFull()));
             }),
             I(this, 'handleStreamClose', (e) => {
                 let { streamKey: t } = e;
-                D(t), L(t);
+                (D(t), L(t));
             }),
             I(this, 'handleVoiceChannelSelect', (e) => {
                 let { channelId: t } = e;
@@ -158,7 +158,7 @@ class j extends s.Z {
                         if (null != e && e.channelId === n) {
                             if (!a && e.state !== v.jm8.ENDED) {
                                 let t = new i.V7();
-                                t.start(C, () => (0, o.aP)((0, y.V9)(e), !1)), (A[(0, y.V9)(e)] = t);
+                                (t.start(C, () => (0, o.aP)((0, y.V9)(e), !1)), (A[(0, y.V9)(e)] = t));
                             }
                             if (a && e.state === v.jm8.ENDED) {
                                 D((0, y.V9)(e));
@@ -200,6 +200,6 @@ class j extends s.Z {
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
                 MEDIA_ENGINE_VIDEO_STATE_CHANGED: this.handleMediaEngineVideoStateChanged
-            });
+            }));
     }
 }

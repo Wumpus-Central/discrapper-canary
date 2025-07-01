@@ -33,7 +33,7 @@ var r = n(127849),
                 t,
                 n = new h(516),
                 r = Array(516);
-            for (e = 0; e < 516; e++) (t = e % 4), (n[e] = 515 - e), (r[e] = e - 2 * t + 3);
+            for (e = 0; e < 516; e++) ((t = e % 4), (n[e] = 515 - e), (r[e] = e - 2 * t + 3));
             for (
                 m(n, function (e, t) {
                     return ((e / 4) | 0) - ((t / 4) | 0);

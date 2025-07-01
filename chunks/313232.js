@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { r: () => i }), n(388685);
+(n.d(t, { r: () => i }), n(388685));
 class i {
     update(e) {
         for (let t in e.rtp.inbound)
@@ -19,19 +19,19 @@ class i {
                 if ('video' === n.type) {
                     let e = this.getInboundBytesRecevierCalculator(n),
                         t = this.getInboundFrameDecodeRateCalculator(n);
-                    (n.bitrate = e.calculate(n)), (n.frameRateDecode = t.calculate(n));
+                    ((n.bitrate = e.calculate(n)), (n.frameRateDecode = t.calculate(n)));
                 }
         for (let t of e.rtp.outbound)
             if ('video' === t.type) {
                 let e = this.getOutboundBytesSentCalculator(t),
                     n = this.getOutboundEncodeRateCalculator(t);
-                (t.bitrate = e.calculate(t)), (t.frameRateEncode = n.calculate(t));
+                ((t.bitrate = e.calculate(t)), (t.frameRateEncode = n.calculate(t)));
             }
     }
     static getCalculatorOrCreate(e, t, n, r) {
         let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
             a = e[t.ssrc];
-        return null == a && ((a = new s(n, r, i)), (e[t.ssrc] = a)), a;
+        return (null == a && ((a = new s(n, r, i)), (e[t.ssrc] = a)), a);
     }
     getInboundBytesRecevierCalculator(e) {
         return i.getCalculatorOrCreate(this.inboundVideoBitrate, e, 'bytesReceived', 'timestamp', 3);
@@ -46,11 +46,11 @@ class i {
         return i.getCalculatorOrCreate(this.outboundEncodeFps, e, 'framesEncoded', 'timestamp', 5);
     }
     constructor() {
-        r(this, 'inboundVideoBitrate', {}), r(this, 'inboundDecodeFps', {}), r(this, 'outboundVideoBitrate', {}), r(this, 'outboundEncodeFps', {});
+        (r(this, 'inboundVideoBitrate', {}), r(this, 'inboundDecodeFps', {}), r(this, 'outboundVideoBitrate', {}), r(this, 'outboundEncodeFps', {}));
     }
 }
 var a = (function (e) {
-    return (e[(e.NONE = 0)] = 'NONE'), (e[(e.MILLISECONDS_FROM_SECONDS = 1)] = 'MILLISECONDS_FROM_SECONDS'), (e[(e.BYTES_TO_BITS = 2)] = 'BYTES_TO_BITS'), (e[(e.ROUND = 4)] = 'ROUND'), e;
+    return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.MILLISECONDS_FROM_SECONDS = 1)] = 'MILLISECONDS_FROM_SECONDS'), (e[(e.BYTES_TO_BITS = 2)] = 'BYTES_TO_BITS'), (e[(e.ROUND = 4)] = 'ROUND'), e);
 })(a || {});
 let o = {
     0: { multiplier: 1 },

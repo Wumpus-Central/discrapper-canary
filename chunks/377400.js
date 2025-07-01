@@ -4,25 +4,25 @@ n(73800);
 var i = n(481060),
     l = n(570140),
     o = n(317770),
-    s = n(175281),
-    a = n(285371);
+    a = n(175281),
+    s = n(285371);
 class c extends o.Z {
     _initialize() {
-        l.Z.subscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), l.Z.subscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
+        (l.Z.subscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), l.Z.subscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts));
     }
     _terminate() {
-        l.Z.unsubscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), l.Z.unsubscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
+        (l.Z.unsubscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), l.Z.unsubscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts));
     }
     showKeyboardShortcuts() {
         (0, i.h7j)(
             (e) =>
                 (0, r.jsx)(
-                    s.Z,
+                    a.Z,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ class c extends o.Z {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -38,17 +38,17 @@ class c extends o.Z {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)
                 ),
-            { modalKey: a.J }
+            { modalKey: s.J }
         );
     }
     hideKeyboardShortcuts() {
-        (0, i.Mr3)(a.J);
+        (0, i.Mr3)(s.J);
     }
 }
 let u = new c();

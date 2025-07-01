@@ -1,4 +1,4 @@
-n.d(t, { default: () => d }), n(35282);
+(n.d(t, { default: () => d }), n(35282));
 var o = n(255367);
 n(73800);
 var i = n(481060),
@@ -10,10 +10,10 @@ var i = n(481060),
 function d(e) {
     let { guildId: t, channel: d, keybind: u, transitionState: h, onClose: k } = e;
     function b() {
-        (0, r.Kw)(r.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), k();
+        ((0, r.Kw)(r.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), k());
     }
     function y() {
-        b(),
+        (b(),
             (0, i.ZDy)(async () => {
                 let { default: e } = await n.e('5551').then(n.bind(n, 355453));
                 return (t) =>
@@ -23,7 +23,7 @@ function d(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     o = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (o = o.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
                                     )),
                                     o.forEach(function (t) {
                                         var o;
-                                        (o = n[t]),
+                                        ((o = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: o,
@@ -39,13 +39,13 @@ function d(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = o);
-                                    });
+                                                : (e[t] = o));
+                                    }));
                             }
                             return e;
                         })({}, t)
                     );
-            });
+            }));
     }
     return (0, o.jsxs)(i.Y0X, {
         transitionState: h,

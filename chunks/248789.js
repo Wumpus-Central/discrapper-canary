@@ -1,4 +1,4 @@
-n.d(t, { Y: () => _ }), n(388685);
+(n.d(t, { Y: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(286379),
@@ -16,7 +16,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -24,7 +24,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -32,8 +32,8 @@ function g(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -71,7 +71,7 @@ function _(e) {
             [t, _, y]
         );
     i.useEffect(() => {
-        (0, p.KQ)(b(g({}, v), { viewName: p.pb.SAFETY_WARNING_BANNER })), s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
+        ((0, p.KQ)(b(g({}, v), { viewName: p.pb.SAFETY_WARNING_BANNER })), s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
     }, [v]);
     let j = i.useCallback(
             (e) => {
@@ -80,7 +80,7 @@ function _(e) {
             [v]
         ),
         O = i.useCallback(() => {
-            (0, a.ZDy)(
+            ((0, a.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
                     return (n) => {
@@ -97,15 +97,15 @@ function _(e) {
                 },
                 { modalKey: f.X_ }
             ),
-                j(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
+                j(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS));
         }, [t, y, _, j]),
         E = i.useCallback(() => {
-            C(), j(p.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [C, j]),
-        I = i.useCallback(() => {
-            C(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+            (C(), j(p.NM.USER_BANNER_BLOCK_CONFIRM));
         }, [C, j]),
         S = i.useCallback(() => {
+            (C(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM));
+        }, [C, j]),
+        I = i.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
@@ -113,9 +113,9 @@ function _(e) {
                     return (0, r.jsx)(e, {
                         transitionState: i,
                         onBlock: E,
-                        onBlockAndReport: I,
+                        onBlockAndReport: S,
                         onCancel: () => {
-                            null == l || l(), j(p.NM.USER_BANNER_BLOCK_CANCEL);
+                            (null == l || l(), j(p.NM.USER_BANNER_BLOCK_CANCEL));
                         },
                         onClose: l,
                         userId: y,
@@ -123,7 +123,7 @@ function _(e) {
                     });
                 };
             });
-        }, [E, I, y, t, j]);
+        }, [E, S, y, t, j]);
     return (0, r.jsx)(h.Q, {
         channelId: t,
         warningId: _,
@@ -144,7 +144,7 @@ function _(e) {
                       {
                           text: m.intl.string(m.t['7q0bNT']),
                           color: a.zxk.Colors.PRIMARY,
-                          onclick: S
+                          onclick: I
                       }
                   ])
         ]

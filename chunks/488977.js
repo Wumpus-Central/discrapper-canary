@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(997841);
+(n.d(t, { Z: () => L }), n(997841));
 var l = n(255367),
     i = n(73800),
     r = n(120356),
@@ -30,7 +30,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function S(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -46,8 +46,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -110,11 +110,11 @@ function L(e) {
                               referrerId: null == B ? void 0 : B.id
                           })
                         : (0, p.J)(S({ id: r.id }, M));
-                    (0, g.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.intl.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
+                    ((0, g.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.intl.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
                         b.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: r.id,
                             source: k
-                        });
+                        }));
                 },
                 className: a()(_.clickable, R),
                 'aria-label': I.intl.string(I.t.WqhZsr),
@@ -142,7 +142,7 @@ function L(e) {
                                             label: I.intl.string(I.t.kRvlKC),
                                             action: () => {
                                                 (0, s.ZDy)(async () => {
-                                                    let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('53458')]).then(n.bind(n, 7225));
+                                                    let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('14529')]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, l.jsx)(e, {
                                                             transitionState: t.transitionState,
@@ -158,7 +158,7 @@ function L(e) {
                                               id: 'add-app',
                                               label: I.intl.string(I.t.NgXl3N),
                                               action: () => {
-                                                  null == M.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, V),
+                                                  (null == M.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, V),
                                                       (0, N.L)(
                                                           T(S({}, M), {
                                                               oauth2Callback: (e) => {
@@ -167,7 +167,7 @@ function L(e) {
                                                               },
                                                               source: 'app_launcher_app_details'
                                                           })
-                                                      );
+                                                      ));
                                               }
                                           })
                                         : null,

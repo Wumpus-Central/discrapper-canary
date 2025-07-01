@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+(n.d(t, { Z: () => B }), n(388685));
 var a = n(255367),
     r = n(73800),
     o = n(120356),
@@ -38,7 +38,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -46,7 +46,7 @@ function x(e) {
             )),
             a.forEach(function (t) {
                 var a;
-                (a = n[t]),
+                ((a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: a,
@@ -54,8 +54,8 @@ function x(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a);
-            });
+                        : (e[t] = a));
+            }));
     }
     return e;
 }
@@ -92,12 +92,12 @@ let I = r.forwardRef(function (e, t) {
                         a,
                         r = {},
                         o = Object.keys(e);
-                    for (a = 0; a < o.length; a++) (n = o[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (a = 0; a < o.length; a++) ((n = o[a]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < o.length; a++) (n = o[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (a = 0; a < o.length; a++) ((n = o[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['onClick', 'tooltipText', 'selected', 'icon']);
@@ -144,7 +144,7 @@ function D() {
     let { zoomed: e, setZoomed: t } = (0, v.Y)();
     return (0, a.jsx)(I, {
         onClick: () => {
-            (0, S.yg)(e ? S.uG.ZOOM_OUT_BUTTON_PRESSED : S.uG.ZOOM_IN_BUTTON_PRESSED), t(!e);
+            ((0, S.yg)(e ? S.uG.ZOOM_OUT_BUTTON_PRESSED : S.uG.ZOOM_IN_BUTTON_PRESSED), t(!e));
         },
         tooltipText: e ? T.intl.string(T.t.vOFof3) : T.intl.string(T.t.Kt4gZ2),
         icon: e ? l.BlJ : l.OyE
@@ -189,7 +189,7 @@ function L(e) {
         if (((0, S.yg)(S.uG.SAVE_MEDIA_PRESSED), 'VIDEO' === t.type && (0, O.q)({ href: i }), 'IMAGE' === t.type)) {
             o(!0);
             try {
-                await h.ZP.saveImage(i, t.contentType, m.wV), (0, l.showToast)((0, l.createToast)(T.intl.string(T.t.cqpdJS), l.ToastType.SUCCESS));
+                (await h.ZP.saveImage(i, t.contentType, m.wV), (0, l.showToast)((0, l.createToast)(T.intl.string(T.t.cqpdJS), l.ToastType.SUCCESS)));
             } catch (e) {
                 (0, l.showToast)((0, l.createToast)(T.intl.string(T.t['8Ve/S0']), l.ToastType.FAILURE));
             } finally {
@@ -211,7 +211,7 @@ function N(e) {
     let r = (0, m.s$)(null != (t = n.original) ? t : n.url, n.contentType);
     return (0, a.jsx)(I, {
         onClick: () => {
-            (0, S.yg)(S.uG.OPEN_LINK_PRESSED), (0, O.q)({ href: r });
+            ((0, S.yg)(S.uG.OPEN_LINK_PRESSED), (0, O.q)({ href: r }));
         },
         tooltipText: T.intl.string(T.t.q5jLJC),
         icon: l.rgF
@@ -258,7 +258,7 @@ function R(e) {
         (0, S.yg)(S.uG.COPY_IMAGE_PRESSED);
         let e = (0, m.s$)(r.url, r.contentType, m.wV);
         try {
-            await h.ZP.copyImage(e, r.contentType), (0, l.showToast)((0, l.createToast)(T.intl.string(T.t.bhUpvL), l.ToastType.SUCCESS));
+            (await h.ZP.copyImage(e, r.contentType), (0, l.showToast)((0, l.createToast)(T.intl.string(T.t.bhUpvL), l.ToastType.SUCCESS)));
         } catch (e) {
             (0, l.showToast)((0, l.createToast)(T.intl.string(T.t.PTPbj4), l.ToastType.FAILURE));
         }
@@ -362,7 +362,7 @@ function Z(e) {
                       ref: i,
                       tooltipText: T.intl.string(T.t.UKOtz8),
                       onClick: () => {
-                          (0, S.yg)(S.uG.MORE_BUTTON_PRESSED), s(!c);
+                          ((0, S.yg)(S.uG.MORE_BUTTON_PRESSED), s(!c));
                       },
                       selected: c,
                       icon: l.xhG

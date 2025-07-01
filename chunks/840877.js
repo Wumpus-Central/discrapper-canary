@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => f,
     tJ: () => _
 }),
-    n(415506);
+    n(415506));
 var r = n(664751),
     i = n(544891),
     a = n(710845),
@@ -34,20 +34,20 @@ class d {
                     var r;
                     if (((this.query.attempts = (null != (r = this.query.attempts) ? r : 0) + 1), this.query.attempts > u)) return;
                     let a = parseInt(i.headers['retry-after']);
-                    (this.retryDelay = isNaN(a) || 0 === a ? c : a * o.Z.Millis.SECOND), this.retryLater(e, t, n), t(i);
+                    ((this.retryDelay = isNaN(a) || 0 === a ? c : a * o.Z.Millis.SECOND), this.retryLater(e, t, n), t(i));
                 }
             } catch (e) {
-                new a.Z('SearchFetcher').error(e), n(e);
+                (new a.Z('SearchFetcher').error(e), n(e));
             }
     }
     cancel() {
-        (this.isCanceled = !0), null != this.indexingPollId && clearTimeout(this.indexingPollId);
+        ((this.isCanceled = !0), null != this.indexingPollId && clearTimeout(this.indexingPollId));
     }
     retryLater(e, t, n) {
-        null != this.indexingPollId && clearTimeout(this.indexingPollId), (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
+        (null != this.indexingPollId && clearTimeout(this.indexingPollId), (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay)));
     }
     constructor(e, t, n) {
-        l(this, 'indexingPollId', void 0), l(this, 'searchId', void 0), l(this, 'searchType', void 0), l(this, 'query', void 0), l(this, 'retryDelay', void 0), l(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = t), (this.query = n);
+        (l(this, 'indexingPollId', void 0), l(this, 'searchId', void 0), l(this, 'searchType', void 0), l(this, 'query', void 0), l(this, 'retryDelay', void 0), l(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = t), (this.query = n));
     }
 }
 class f extends d {
@@ -107,6 +107,6 @@ class _ extends d {
               });
     }
     constructor(e, t, n, r) {
-        super(e, t, n), l(this, 'payload', void 0), (this.payload = r);
+        (super(e, t, n), l(this, 'payload', void 0), (this.payload = r));
     }
 }

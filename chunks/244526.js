@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(953529);
+(n.d(t, { Z: () => x }), n(953529));
 var i,
     r,
     s,
@@ -150,7 +150,7 @@ class x extends (i = a.PureComponent) {
         });
     }
 }
-(s = {
+((s = {
     isForSubscription: !1,
     isDefault: !1,
     showSubtext: !1,
@@ -164,4 +164,4 @@ class x extends (i = a.PureComponent) {
               configurable: !0,
               writable: !0
           })
-        : (x[r] = s);
+        : (x[r] = s));

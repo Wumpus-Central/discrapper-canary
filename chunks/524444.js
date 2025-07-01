@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     A7: () => ea,
     BO: () => ep,
     DR: () => el,
@@ -17,7 +17,7 @@ n.d(t, {
     wj: () => ee,
     xi: () => er
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -75,7 +75,7 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -83,7 +83,7 @@ function H(e) {
             )),
             r.forEach(function (t) {
                 Z(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -91,11 +91,11 @@ function Y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -117,7 +117,7 @@ function K(e, t) {
         i = z(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -127,7 +127,7 @@ function z(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let q = {
@@ -135,10 +135,10 @@ let q = {
         position: 'top'
     },
     X = (e) => (t) => {
-        null == e || e(t), (0, k.jA)(t);
+        (null == e || e(t), (0, k.jA)(t));
     },
     Q = (e) => (t) => {
-        null == e || e(t), (0, k.Zj)(t);
+        (null == e || e(t), (0, k.Zj)(t));
     };
 function J(e) {
     var { onVolumeChange: t, onMute: n, volume: a, autoMute: o, alt: s, renderAdjacentContent: l, renderOverlayContent: c } = e,
@@ -293,7 +293,7 @@ function ei(e) {
     return (0, r.jsx)(E.Z, H({}, e));
 }
 var ea = (function (e) {
-    return (e[(e.OLD_MESSAGES = 0)] = 'OLD_MESSAGES'), (e[(e.REPLY = 1)] = 'REPLY'), e;
+    return ((e[(e.OLD_MESSAGES = 0)] = 'OLD_MESSAGES'), (e[(e.REPLY = 1)] = 'REPLY'), e);
 })({});
 function eo(e) {
     switch (e) {
@@ -528,13 +528,13 @@ function ed(e) {
         ),
         K = i.useCallback(
             (e) => {
-                W(), Y(e);
+                (W(), Y(e));
             },
             [Y, W]
         ),
         [z, q] = i.useState(!1),
         X = i.useCallback(() => {
-            L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            (L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !z,
                 num_summaries: k.length,
                 message_counts: k.map((e) => e.count),
@@ -545,21 +545,21 @@ function ed(e) {
                 channel_id: s.id,
                 channel_type: s.type
             }),
-                q(!z);
+                q(!z));
         }, [z, k, q, s]),
         Q = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : B.DZ.PILL_DROPDOWN,
                     n = k[e];
                 if (null == n) return;
-                (0, S.wv)(s.id, n.id), (0, S.yK)(s.id, n.id);
+                ((0, S.wv)(s.id, n.id), (0, S.yK)(s.id, n.id));
                 let r = () => {
-                    h.removeScrollCompleteCallback(r),
+                    (h.removeScrollCompleteCallback(r),
                         setTimeout(() => {
                             h.addAutomaticAnchorCallback(K, !1);
-                        }, 100);
+                        }, 100));
                 };
-                h.removeAutomaticAnchorCallback(K),
+                (h.removeAutomaticAnchorCallback(K),
                     h.addScrollCompleteCallback(r),
                     L.default.track(U.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
@@ -575,7 +575,7 @@ function ed(e) {
                         offset: 0,
                         jumpType: m.SR.ANIMATED,
                         context: 'Summary Jump'
-                    });
+                    }));
             },
             [k, s, K, h]
         ),
@@ -611,7 +611,7 @@ function ed(e) {
         },
         [z, k, s, J]
     );
-    i.useEffect(
+    (i.useEffect(
         () => (
             h.addAutomaticAnchorCallback(K),
             () => {
@@ -631,7 +631,7 @@ function ed(e) {
                 }
             ),
             [$]
-        );
+        ));
     let ee = i.useMemo(
             () =>
                 (0, r.jsx)(N.Z, {
@@ -863,13 +863,13 @@ function ep(e) {
         ),
         Y = i.useCallback(
             (e) => {
-                H(), Z(e);
+                (H(), Z(e));
             },
             [Z, H]
         ),
         [W, K] = i.useState(!1),
         z = i.useCallback(() => {
-            L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            (L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !W,
                 num_summaries: C.length,
                 message_counts: C.map((e) => e.count),
@@ -880,21 +880,21 @@ function ep(e) {
                 channel_id: s.id,
                 channel_type: s.type
             }),
-                K(!W);
+                K(!W));
         }, [W, C, K, s]),
         q = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : B.DZ.PILL_DROPDOWN,
                     n = C[e];
                 if (null == n) return;
-                (0, S.wv)(s.id, n.id), (0, S.yK)(s.id, n.id);
+                ((0, S.wv)(s.id, n.id), (0, S.yK)(s.id, n.id));
                 let r = () => {
-                    _.removeScrollCompleteCallback(r),
+                    (_.removeScrollCompleteCallback(r),
                         setTimeout(() => {
                             _.addAutomaticAnchorCallback(Y, !1);
-                        }, 100);
+                        }, 100));
                 };
-                _.removeAutomaticAnchorCallback(Y),
+                (_.removeAutomaticAnchorCallback(Y),
                     _.addScrollCompleteCallback(r),
                     L.default.track(U.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
@@ -910,7 +910,7 @@ function ep(e) {
                         offset: 0,
                         jumpType: m.SR.ANIMATED,
                         context: 'Summary Jump'
-                    });
+                    }));
             },
             [C, s, Y, _]
         ),
@@ -952,7 +952,7 @@ function ep(e) {
         },
         [W, C, s, J]
     );
-    i.useEffect(
+    (i.useEffect(
         () => (
             _.addAutomaticAnchorCallback(Y),
             () => {
@@ -972,7 +972,7 @@ function ep(e) {
                 }
             ),
             [$]
-        );
+        ));
     let ee = i.useMemo(
         () =>
             (0, r.jsx)(N.Z, {

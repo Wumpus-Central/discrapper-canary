@@ -35,21 +35,21 @@ function b(e) {
                   ]
               })
             : g.intl.string(g.t.hvVgAQ);
-        (O.message = g.intl.string(g.t.Bt2N7O)),
+        ((O.message = g.intl.string(g.t.Bt2N7O)),
             (O.subtitle = g.intl.string(g.t['n/Vzk5'])),
             (O.buttonText = e),
             (O.onButtonClick = () => {
                 if (x) {
-                    open(m.D2),
+                    (open(m.D2),
                         d.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',
                             target: m.D2
-                        });
+                        }));
                     return;
                 }
                 open(p.Z.getArticleURL(f.BhN.SYSTEM_DMS));
             }),
-            (O.imageSrc = n(780961));
+            (O.imageSrc = n(780961)));
     } else
         j &&
             ((O.message = g.intl.string(g.t['9T6N5+'])),
@@ -63,7 +63,7 @@ function b(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -71,7 +71,7 @@ function b(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -79,8 +79,8 @@ function b(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })({}, O)),

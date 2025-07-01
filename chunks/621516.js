@@ -22,9 +22,9 @@ var r = n(255367),
     y = n(388032),
     O = n(461238),
     w = n(906739),
-    S = n(965358),
-    N = n(420196),
-    T = n(433075);
+    N = n(965358),
+    T = n(420196),
+    S = n(433075);
 function P(e) {
     let { handleHide: t } = e;
     return (0, r.jsx)(d.P3F, {
@@ -129,18 +129,18 @@ let E = (e) => {
         E = (0, c.wj)(h),
         R = (0, o.e7)([j.Z], () => j.Z.getGuild(a.guild_id)),
         k = (0, o.e7)([m.Z], () => m.Z.useReducedMotion),
-        Z = (0, o.e7)([g.Z], () => g.Z.hasHidden(a.id)),
-        M = (0, p.C)({
+        M = (0, o.e7)([g.Z], () => g.Z.hasHidden(a.id)),
+        Z = (0, p.C)({
             guildId: a.guild_id,
             channelId: a.id
         }),
         { transitions: A, setVisible: L } = (0, _.H)(),
         F = i.useCallback(() => {
-            L(!1), f.Z.hideAdminOnboarding(a.id, !0);
+            (L(!1), f.Z.hideAdminOnboarding(a.id, !0));
         }, [a, L]);
     i.useEffect(() => {
-        (0, x.c)(a.id) || L(!Z);
-    }, [a, L, Z]);
+        (0, x.c)(a.id) || L(!M);
+    }, [a, L, M]);
     let D = i.useMemo(() => [y.intl.string(y.t['8pEGAw']), y.intl.string(y.t.jwfgDQ), y.intl.string(y.t.mPKs29), y.intl.string(y.t.StRbvL)], []),
         z = i.useMemo(() => [y.intl.string(y.t['m/b58P']), y.intl.string(y.t.MuJSKy), y.intl.string(y.t['d/Wqvr']), y.intl.string(y.t.GJklAw)], []),
         B = () => {
@@ -148,8 +148,8 @@ let E = (e) => {
         },
         H = null != (t = null == R ? void 0 : R.hasFeature(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.intl.string(y.t.n0q7sL) : y.intl.string(y.t.QoYdiY),
         U = null != (n = (null == R ? void 0 : R.hasFeature(C.oNc.CREATOR_MONETIZABLE)) || (null == R ? void 0 : R.hasFeature(C.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
-        V = U ? y.intl.string(y.t['G/7ciY']) : y.intl.string(y.t.IFOiio),
-        G = U ? y.intl.string(y.t.GjgQOz) : y.intl.string(y.t.E7AO6u);
+        G = U ? y.intl.string(y.t['G/7ciY']) : y.intl.string(y.t.IFOiio),
+        V = U ? y.intl.string(y.t.GjgQOz) : y.intl.string(y.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {
         children: A((e, t) =>
             t
@@ -222,13 +222,13 @@ let E = (e) => {
                                                   (0, r.jsx)(d.X6q, {
                                                       variant: 'heading-lg/semibold',
                                                       color: 'header-primary',
-                                                      children: V
+                                                      children: G
                                                   }),
                                                   (0, r.jsx)(d.LZC, { size: 8 }),
                                                   (0, r.jsx)(d.Text, {
                                                       variant: 'text-md/normal',
                                                       color: 'text-muted',
-                                                      children: G
+                                                      children: V
                                                   }),
                                                   (0, r.jsx)(d.LZC, { size: 16 }),
                                                   (0, r.jsxs)(d.P3F, {
@@ -277,12 +277,12 @@ let E = (e) => {
                                                       className: O.contentImageContainer,
                                                       children: [
                                                           (0, r.jsx)('img', {
-                                                              src: E ? N : T,
+                                                              src: E ? T : S,
                                                               alt: '',
                                                               className: O.previewEmbedImage
                                                           }),
                                                           (0, r.jsx)('img', {
-                                                              src: E ? w : S,
+                                                              src: E ? w : N,
                                                               alt: '',
                                                               className: O.previewEmbedImage
                                                           })
@@ -334,7 +334,7 @@ let E = (e) => {
                                                           )
                                                       }),
                                                       (0, r.jsx)(d.LZC, { size: 16 }),
-                                                      0 === M.length &&
+                                                      0 === Z.length &&
                                                           (0, r.jsx)(d.gtL, {
                                                               size: d.zxk.Sizes.MEDIUM,
                                                               pauseAnimation: k,

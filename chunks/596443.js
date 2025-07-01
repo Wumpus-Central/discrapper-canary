@@ -1,89 +1,89 @@
-n.d(t, { Z: () => N }), n(953529), n(388685), n(539854);
+(n.d(t, { Z: () => x }), n(953529), n(388685), n(539854));
 var r = n(255367),
-    i = n(73800),
-    l = n(120356),
-    o = n.n(l),
+    l = n(73800),
+    i = n(120356),
+    s = n.n(i),
     a = n(954955),
-    s = n.n(a),
-    c = n(399606),
-    u = n(481060),
+    o = n.n(a),
+    u = n(399606),
+    c = n(481060),
     d = n(605436),
-    p = n(79712),
-    h = n(285173),
-    f = n(434404),
+    E = n(79712),
+    _ = n(285173),
+    A = n(434404),
     m = n(422559),
-    g = n(271383),
-    b = n(485386),
-    _ = n(430824),
-    y = n(496675),
-    C = n(594174),
-    x = n(233608),
-    v = n(370595),
-    j = n(351127),
-    O = n(981631),
-    E = n(388032),
-    I = n(12740),
-    S = n(444021);
-function P(e) {
-    var t, n, l, a;
-    let { permission: s, roleIds: g, guild: _, specMap: C, categoryTitle: x, userId: v } = e,
-        I = (0, c.e7)([b.Z], () => b.Z.getRoles(_.id)),
-        P = O.Plq[s],
-        Z = null != (l = null == (t = C[P.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(P),
-        N = null != (a = null == (n = C[P.toString()]) ? void 0 : n.description) ? a : '',
-        T = j._o.has(P),
-        A = j.Qn.includes(s),
-        w = g.length,
-        R = (0, c.e7)([y.Z], () => y.Z.can(O.Plq.MANAGE_ROLES, _), [_]),
-        k = i.useCallback(
+    T = n(271383),
+    f = n(485386),
+    g = n(430824),
+    I = n(496675),
+    h = n(594174),
+    O = n(233608),
+    N = n(370595),
+    p = n(351127),
+    R = n(981631),
+    S = n(388032),
+    C = n(12740),
+    b = n(444021);
+function v(e) {
+    var t, n, i, a;
+    let { permission: o, roleIds: T, guild: g, specMap: h, categoryTitle: O, userId: N } = e,
+        C = (0, u.e7)([f.Z], () => f.Z.getRoles(g.id)),
+        v = R.Plq[o],
+        D = null != (i = null == (t = h[v.toString()]) ? void 0 : t.title) ? i : (0, m.wt)(v),
+        x = null != (a = null == (n = h[v.toString()]) ? void 0 : n.description) ? a : '',
+        M = p._o.has(v),
+        L = p.Qn.includes(o),
+        U = T.length,
+        P = (0, u.e7)([I.Z], () => I.Z.can(R.Plq.MANAGE_ROLES, g), [g]),
+        j = l.useCallback(
             async (e) => {
-                R && (await f.Z.open(_.id, O.pNK.ROLES), await f.Z.selectRole(e));
+                P && (await A.Z.open(g.id, R.pNK.ROLES), await A.Z.selectRole(e));
             },
-            [R, _.id]
+            [P, g.id]
         );
     return (0, r.jsxs)('div', {
-        className: o()(S.permissionItemContainer, { [S.elevatedPermission]: T }),
+        className: s()(b.permissionItemContainer, { [b.elevatedPermission]: M }),
         children: [
             (0, r.jsxs)('div', {
-                className: S.permissionItemHeader,
+                className: b.permissionItemHeader,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: S.permissionTitle,
+                        className: b.permissionTitle,
                         children: [
-                            (0, r.jsx)(u.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
-                                children: Z
+                                children: D
                             }),
-                            null != x &&
+                            null != O &&
                                 (0, r.jsxs)('div', {
-                                    className: S.permissionItemSubheader,
+                                    className: b.permissionItemSubheader,
                                     children: [
-                                        (0, r.jsx)(u.Text, {
+                                        (0, r.jsx)(c.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-muted',
-                                            children: x
+                                            children: O
                                         }),
-                                        T &&
+                                        M &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
-                                                    (0, r.jsx)(p.Z, {
+                                                    (0, r.jsx)(E.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         'aria-hidden': 'true',
-                                                        color: u.TVs.colors.INTERACTIVE_MUTED.css
+                                                        color: c.TVs.colors.INTERACTIVE_MUTED.css
                                                     }),
-                                                    (0, r.jsx)(u.ua7, {
-                                                        text: E.intl.string(E.t.GZvXuL),
+                                                    (0, r.jsx)(c.ua7, {
+                                                        text: S.intl.string(S.t.GZvXuL),
                                                         children: (e) => {
                                                             var t, n;
                                                             return (0, r.jsxs)(
-                                                                u.P3F,
+                                                                c.P3F,
                                                                 ((t = (function (e) {
                                                                     for (var t = 1; t < arguments.length; t++) {
                                                                         var n = null != arguments[t] ? arguments[t] : {},
                                                                             r = Object.keys(n);
-                                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                                                             (r = r.concat(
                                                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -91,7 +91,7 @@ function P(e) {
                                                                             )),
                                                                             r.forEach(function (t) {
                                                                                 var r;
-                                                                                (r = n[t]),
+                                                                                ((r = n[t]),
                                                                                     t in e
                                                                                         ? Object.defineProperty(e, t, {
                                                                                               value: r,
@@ -99,24 +99,24 @@ function P(e) {
                                                                                               configurable: !0,
                                                                                               writable: !0
                                                                                           })
-                                                                                        : (e[t] = r);
-                                                                            });
+                                                                                        : (e[t] = r));
+                                                                            }));
                                                                     }
                                                                     return e;
-                                                                })({ className: S.elevatedPermissionContainer }, e)),
+                                                                })({ className: b.elevatedPermissionContainer }, e)),
                                                                 (n = n =
                                                                     {
                                                                         children: [
-                                                                            (0, r.jsx)(u.tQf, {
+                                                                            (0, r.jsx)(c.tQf, {
                                                                                 size: 'custom',
                                                                                 width: 12,
                                                                                 height: 12,
-                                                                                color: u.TVs.colors.TEXT_BRAND
+                                                                                color: c.TVs.colors.TEXT_BRAND
                                                                             }),
-                                                                            (0, r.jsx)(u.Text, {
+                                                                            (0, r.jsx)(c.Text, {
                                                                                 variant: 'text-xs/normal',
                                                                                 color: 'text-brand',
-                                                                                children: E.intl.string(E.t.k7Kqj4)
+                                                                                children: S.intl.string(S.t.k7Kqj4)
                                                                             })
                                                                         ]
                                                                     }),
@@ -138,22 +138,22 @@ function P(e) {
                                                     })
                                                 ]
                                             }),
-                                        !T &&
-                                            A &&
+                                        !M &&
+                                            L &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
-                                                    (0, r.jsx)(p.Z, {
+                                                    (0, r.jsx)(E.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         'aria-hidden': 'true',
-                                                        color: u.TVs.colors.INTERACTIVE_MUTED.css
+                                                        color: c.TVs.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, r.jsx)('div', {
-                                                        className: S.elevatedPermissionContainer,
-                                                        children: (0, r.jsx)(u.Text, {
+                                                        className: b.elevatedPermissionContainer,
+                                                        children: (0, r.jsx)(c.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-muted',
-                                                            children: E.intl.string(E.t.IfqUEB)
+                                                            children: S.intl.string(S.t.IfqUEB)
                                                         })
                                                     })
                                                 ]
@@ -162,50 +162,50 @@ function P(e) {
                                 })
                         ]
                     }),
-                    (0, r.jsx)(u.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-default',
-                        children: E.intl.format(E.t.KmJI4O, { roleCount: w })
+                        children: S.intl.format(S.t.KmJI4O, { roleCount: U })
                     })
                 ]
             }),
-            null != N &&
+            null != x &&
                 (0, r.jsx)('div', {
-                    className: S.permissionItemDescription,
-                    children: (0, r.jsx)(u.Text, {
+                    className: b.permissionItemDescription,
+                    children: (0, r.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: N
+                        children: x
                     })
                 }),
             (0, r.jsx)('div', {
-                className: S.permissionItemRoleContainer,
-                children: g.map((e) =>
-                    (0, j.Ov)(e, v)
+                className: b.permissionItemRoleContainer,
+                children: T.map((e) =>
+                    (0, p.Ov)(e, N)
                         ? (0, r.jsx)(
                               'div',
                               {
-                                  className: S.roleTooltipItem,
+                                  className: b.roleTooltipItem,
                                   children: (0, r.jsx)('div', {
-                                      className: S.roleChiplet,
-                                      children: (0, r.jsx)(u.Text, {
+                                      className: b.roleChiplet,
+                                      children: (0, r.jsx)(c.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-default',
-                                          children: E.intl.string(E.t.pclUFB)
+                                          children: S.intl.string(S.t.pclUFB)
                                       })
                                   })
                               },
                               e
                           )
                         : (0, r.jsx)(
-                              u.P3F,
+                              c.P3F,
                               {
-                                  className: o()(S.roleTooltipItem, { [S.editable]: R && !(0, d.pM)(_.id, e) }),
-                                  onClick: () => k(e),
-                                  children: (0, r.jsx)(h.Z, {
-                                      role: I[e],
-                                      guildId: _.id,
-                                      className: S.roleChiplet
+                                  className: s()(b.roleTooltipItem, { [b.editable]: P && !(0, d.pM)(g.id, e) }),
+                                  onClick: () => j(e),
+                                  children: (0, r.jsx)(_.Z, {
+                                      role: C[e],
+                                      guildId: g.id,
+                                      className: b.roleChiplet
                                   })
                               },
                               e
@@ -215,73 +215,73 @@ function P(e) {
         ]
     });
 }
-function Z(e, t) {
+function D(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
-function N(e) {
-    let { userId: t, guildId: n, location: l, className: a, onNavigate: d } = e,
-        p = (0, c.e7)([C.default], () => C.default.getUser(t), [t]),
-        h = (0, c.e7)([_.Z], () => _.Z.getGuild(n), [n]),
-        f = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
-        b = (0, j.B2)(t, n, j.pd),
-        y = Object.keys(b).length,
-        N = i.useMemo(() => (null != h ? x.Z.getGuildPermissionSpecMap(h) : null), [h]),
-        T = i.useMemo(() => (null != h ? x.Z.generateGuildPermissionSpec(h) : null), [h]),
-        [A, w] = i.useState(''),
-        [R, k] = i.useState(''),
-        M = i.useMemo(() => s()(k, 300), []),
-        D = i.useCallback(
+function x(e) {
+    let { userId: t, guildId: n, location: i, className: a, onNavigate: d } = e,
+        E = (0, u.e7)([h.default], () => h.default.getUser(t), [t]),
+        _ = (0, u.e7)([g.Z], () => g.Z.getGuild(n), [n]),
+        A = (0, u.e7)([T.ZP], () => T.ZP.getMember(n, t), [n, t]),
+        f = (0, p.B2)(t, n, p.pd),
+        I = Object.keys(f).length,
+        x = l.useMemo(() => (null != _ ? O.Z.getGuildPermissionSpecMap(_) : null), [_]),
+        M = l.useMemo(() => (null != _ ? O.Z.generateGuildPermissionSpec(_) : null), [_]),
+        [L, U] = l.useState(''),
+        [P, j] = l.useState(''),
+        y = l.useMemo(() => o()(j, 300), []),
+        w = l.useCallback(
             (e) => {
-                w(e), M(e);
+                (U(e), y(e));
             },
-            [M]
+            [y]
         ),
-        L = i.useCallback(() => {
-            w(''), k('');
+        G = l.useCallback(() => {
+            (U(''), j(''));
         }, []),
-        U = i.useMemo(() => {
-            if (null == h || null == N || null == f) return null;
-            if (0 === y)
-                return (0, r.jsx)(u.Text, {
+        k = l.useMemo(() => {
+            if (null == _ || null == x || null == A) return null;
+            if (0 === I)
+                return (0, r.jsx)(c.Text, {
                     variant: 'text-sm/normal',
-                    children: E.intl.string(E.t.DEBGqK)
+                    children: S.intl.string(S.t.DEBGqK)
                 });
             let e = [];
             return (
-                null == T ||
-                    T.forEach((n) => {
-                        n.permissions.forEach((i) => {
-                            let l = i.flag,
-                                o = j.pd.find((e) => O.Plq[e] === l);
-                            if (null == o) return;
-                            let a = b[o];
+                null == M ||
+                    M.forEach((n) => {
+                        n.permissions.forEach((l) => {
+                            let i = l.flag,
+                                s = p.pd.find((e) => R.Plq[e] === i);
+                            if (null == s) return;
+                            let a = f[s];
                             if (null != a) {
-                                if (R.length > 0) {
-                                    var s, c, u, d, p;
-                                    let e = null != (d = null == (s = N[l.toString()]) ? void 0 : s.title) ? d : (0, m.wt)(l),
-                                        t = null != (p = null == (u = N[l.toString()]) || null == (c = u.description) ? void 0 : c.toString()) ? p : '',
+                                if (P.length > 0) {
+                                    var o, u, c, d, E;
+                                    let e = null != (d = null == (o = x[i.toString()]) ? void 0 : o.title) ? d : (0, m.wt)(i),
+                                        t = null != (E = null == (c = x[i.toString()]) || null == (u = c.description) ? void 0 : u.toString()) ? E : '',
                                         r = n.title,
-                                        i = j._o.has(l),
-                                        a = j.Qn.includes(o),
-                                        h = i ? E.intl.string(E.t.k7Kqj4) : a ? E.intl.string(E.t.IfqUEB) : null,
-                                        f = Z(R, e),
-                                        g = Z(R, t),
-                                        b = Z(R, r),
-                                        _ = null != h && Z(R, h);
-                                    if (!f && !g && !b && !_) return;
+                                        l = p._o.has(i),
+                                        a = p.Qn.includes(s),
+                                        _ = l ? S.intl.string(S.t.k7Kqj4) : a ? S.intl.string(S.t.IfqUEB) : null,
+                                        A = D(P, e),
+                                        T = D(P, t),
+                                        f = D(P, r),
+                                        g = null != _ && D(P, _);
+                                    if (!A && !T && !f && !g) return;
                                 }
                                 e.push(
                                     (0, r.jsx)(
-                                        P,
+                                        v,
                                         {
-                                            permission: o,
+                                            permission: s,
                                             roleIds: a,
-                                            guild: h,
-                                            specMap: N,
+                                            guild: _,
+                                            specMap: x,
                                             categoryTitle: n.title,
                                             userId: t
                                         },
-                                        o
+                                        s
                                     )
                                 );
                             }
@@ -289,30 +289,30 @@ function N(e) {
                     }),
                 e
             );
-        }, [h, N, f, y, T, b, R, t]);
-    return null == p || null == f
+        }, [_, x, A, I, M, f, P, t]);
+    return null == E || null == A
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(I.container, a),
+              className: s()(C.container, a),
               children: [
-                  (0, r.jsx)(v.Z, {
+                  (0, r.jsx)(N.Z, {
                       guildId: n,
                       userId: t,
                       onNavigate: d
                   }),
-                  (0, r.jsx)(u.Ttm, {
-                      className: S.permissionsGroupContainer,
-                      children: (0, r.jsx)(u.xJW, {
-                          title: E.intl.string(E.t.BBWnpq),
+                  (0, r.jsx)(c.Ttm, {
+                      className: b.permissionsGroupContainer,
+                      children: (0, r.jsx)(c.xJW, {
+                          title: S.intl.string(S.t.BBWnpq),
                           children: (0, r.jsxs)('div', {
-                              className: S.permissionsItemContainer,
+                              className: b.permissionsItemContainer,
                               children: [
-                                  (0, r.jsx)(u.E1j, {
-                                      className: S.searchBar,
-                                      query: A,
-                                      placeholder: E.intl.string(E.t['yD9+dH']),
-                                      onChange: D,
-                                      onClear: L,
+                                  (0, r.jsx)(c.E1j, {
+                                      className: b.searchBar,
+                                      query: L,
+                                      placeholder: S.intl.string(S.t['yD9+dH']),
+                                      onChange: w,
+                                      onClear: G,
                                       autoComplete: 'off',
                                       inputProps: {
                                           autoCapitalize: 'none',
@@ -320,7 +320,7 @@ function N(e) {
                                           spellCheck: 'false'
                                       }
                                   }),
-                                  U
+                                  k
                               ]
                           })
                       })

@@ -1,4 +1,4 @@
-t.r(e), t.d(e, { default: () => i });
+(t.r(e), t.d(e, { default: () => i }));
 var i = {
     payButton: 'Maksa',
     'payButton.redirecting': 'Uudelleenohjataan...',

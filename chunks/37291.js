@@ -1,8 +1,8 @@
-a.d(t, {
+(a.d(t, {
     Z: () => l,
     p: () => s
 }),
-    a(388685);
+    a(388685));
 var n = a(238675);
 let l = Object.entries(n.sJ)
         .map((e) => {

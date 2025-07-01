@@ -1,4 +1,4 @@
-t.d(n, { default: () => G }), t(415506), t(781311);
+(t.d(n, { default: () => G }), t(415506));
 var i = t(255367),
     l = t(73800),
     a = t(120356),
@@ -145,7 +145,7 @@ function G(e) {
             (0, I.pB)(null != (e = A.approximate_member_count) ? e : 0, A.code, A.guild.id);
         }
     }, [A, null == A ? void 0 : A.approximate_member_count, null == A ? void 0 : A.code, null == A || null == (n = A.guild) ? void 0 : n.id]);
-    let { nickname: G } = (0, I.XW)();
+    let G = (0, I.yr)();
     l.useEffect(() => {
         !__OVERLAY__ && P.isPlatformEmbedded && ((0, P.isWindows)() ? b.ZP.minimize() : b.ZP.restore(), b.ZP.focus());
     }, []);
@@ -161,17 +161,17 @@ function G(e) {
         X = null != w,
         Q = null != A.stage_instance,
         q = null == A.guild && null == A.channel && null != A.inviter;
-    if (null != H) (t = null == w ? void 0 : w.name), (a = j.ZP.createFromServer(H).getCoverImageURL(1024));
+    if (null != H) ((t = null == w ? void 0 : w.name), (a = j.ZP.createFromServer(H).getCoverImageURL(1024)));
     else if (null != w)
-        (t = w.name),
+        ((t = w.name),
             (a = L.ZP.getGuildSplashURL({
                 id: w.id,
                 splash: w.splash
-            }));
+            })));
     else if (((null == (t = K.name) || '' === t) && null != Y && (t = Y.username), null == t)) throw Error('no name for group DM invite');
     let J = (0, v.yU)();
     return (
-        (r = Q ? M.intl.string(M.t['5UKyUl']) : f ? M.intl.format(M.t['9sWQNT'], { usernameHook: () => (0, i.jsx)('span', { children: null != G && '' !== G.trim() ? G : C.globalName }) }) : q ? M.intl.string(M.t['e/6Ogo']) : M.intl.format(M.t.QD7BDA, { guildName: t })),
+        (r = Q ? M.intl.string(M.t['5UKyUl']) : f ? M.intl.format(M.t['9sWQNT'], { usernameHook: () => (0, i.jsx)('span', { children: G }) }) : q ? M.intl.string(M.t['e/6Ogo']) : M.intl.format(M.t.QD7BDA, { guildName: t })),
         (0, i.jsx)(_.Gt, {
             value: W,
             children: (0, i.jsxs)(c.Y0X, {
@@ -278,11 +278,11 @@ function G(e) {
                                                 className: k.noThanksButton,
                                                 onClick: function () {
                                                     var e;
-                                                    T.default.track(z.rMx.INVITE_ACCEPT_DISMISSED, {
+                                                    (T.default.track(z.rMx.INVITE_ACCEPT_DISMISSED, {
                                                         invite_code: null == A ? void 0 : A.code,
                                                         guild_id: null == A || null == (e = A.guild) ? void 0 : e.id
                                                     }),
-                                                        R.Z.close();
+                                                        R.Z.close());
                                                 },
                                                 color: p.zx.Colors.TRANSPARENT,
                                                 children: M.intl.string(M.t.ndsK4e)

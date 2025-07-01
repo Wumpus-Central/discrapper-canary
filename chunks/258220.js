@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     default: () => g,
     r: () => f
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -30,12 +30,12 @@ function g(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['applicationId']);
@@ -47,12 +47,12 @@ function g(e) {
     }, []);
     let I = () => {
         let e = 'temporary';
-        _ && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+        (_ && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(d.rMx.MODAL_DISMISSED, {
                 type: f,
                 dismiss_type: e
             }),
-            b.onClose();
+            b.onClose());
     };
     return (0, r.jsxs)(
         l.Y0X,
@@ -60,7 +60,7 @@ function g(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -68,7 +68,7 @@ function g(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -76,8 +76,8 @@ function g(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })(
@@ -135,7 +135,7 @@ function g(e) {
                             (0, r.jsx)(l.zxk, {
                                 color: l.zxk.Colors.BRAND,
                                 onClick: () => {
-                                    c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: m }), u.ZP.setEnableHardwareAcceleration(!0);
+                                    (c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: m }), u.ZP.setEnableHardwareAcceleration(!0));
                                 },
                                 children: p.intl.string(p.t['/wlDqq'])
                             })

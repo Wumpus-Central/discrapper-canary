@@ -1,4 +1,4 @@
-n.d(e, { Z: () => k }), n(388685);
+(n.d(e, { Z: () => k }), n(388685));
 var l = n(255367),
     r = n(73800),
     a = n(512722),
@@ -40,7 +40,7 @@ function y(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -48,7 +48,7 @@ function y(t) {
             )),
             l.forEach(function (e) {
                 N(t, e, n[e]);
-            });
+            }));
     }
     return t;
 }
@@ -264,7 +264,7 @@ class D extends r.PureComponent {
         );
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             N(this, 'emojiButtonRef', r.createRef()),
             N(this, 'state', {
                 emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
@@ -279,7 +279,7 @@ class D extends r.PureComponent {
                 });
             }),
             N(this, 'handleSubmit', (t) => {
-                t.preventDefault(), this.handleSaveStatus();
+                (t.preventDefault(), this.handleSaveStatus());
             }),
             N(this, 'handleStatusChange', (t) => {
                 this.setState({ text: t });
@@ -310,7 +310,7 @@ class D extends r.PureComponent {
                 let { sourceAnalyticsContext: t, onClose: e } = this.props,
                     { emojiInfo: n, text: l, clearAfter: r, status: a } = this.state,
                     i = h.co.getSetting();
-                i !== a &&
+                (i !== a &&
                     (0, f.Z)({
                         nextStatus: a,
                         prevStatus: i,
@@ -322,7 +322,7 @@ class D extends r.PureComponent {
                         clearAfter: r,
                         analyticsContext: t
                     }),
-                    e();
+                    e());
             }),
             N(this, 'handleKeyPress', (t) => {
                 t.which === C.yXg.ENTER && this.handleSaveStatus();
@@ -334,12 +334,12 @@ class D extends r.PureComponent {
                     closePopout: e,
                     onSelectEmoji: (t) => {
                         let { emoji: n, willClose: l } = t;
-                        this.handleEmojiChange(n), l && e();
+                        (this.handleEmojiChange(n), l && e());
                     },
                     pickerIntention: _.Hz.STATUS,
                     onNavigateAway: n
                 });
-            });
+            }));
     }
 }
 let k = o.ZP.connectStores(

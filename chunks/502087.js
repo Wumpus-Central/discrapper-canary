@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -37,11 +37,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -77,10 +77,10 @@ function m(e) {
 class g extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
-            (_.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (_.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (_.createdAtOverride = new Date(e.createdAtOverride)) : (_.createdAtOverride = s.Zh);
+            ((_.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (_.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (_.createdAtOverride = new Date(e.createdAtOverride)) : (_.createdAtOverride = s.Zh));
             return;
         }
-        (_.premiumTypeOverride = s.F_), (_.createdAtOverride = s.Zh);
+        ((_.premiumTypeOverride = s.F_), (_.createdAtOverride = s.Zh));
     }
     getPremiumTypeOverride() {
         return _.premiumTypeOverride;
@@ -98,13 +98,13 @@ class g extends (r = i.ZP.PersistedStore) {
         return _.premiumTypeOverride;
     }
 }
-l(g, 'displayName', f),
+(l(g, 'displayName', f),
     l(g, 'persistKey', f),
     l(g, 'migrations', [
         (e) => {
             if ((null == e ? void 0 : e.createdAtOverride) == null) return d(c({}, e), { createdAtOverride: s.Zh });
         }
-    ]);
+    ]));
 let E = new g(a.Z, {
     SET_PREMIUM_TYPE_OVERRIDE: p,
     SET_CREATED_AT_OVERRIDE: h,

@@ -1,4 +1,4 @@
-n(267047), n(515152);
+(n(267047), n(515152));
 var r = n(220159),
     o = n(424353),
     a = n(236264),
@@ -86,12 +86,12 @@ var r = n(220159),
             var o = G(e, r);
             if ('%' === o) {
                 if ('%' === G(e, r + 1) || r + 3 > t) {
-                    (n += '%'), r++;
+                    ((n += '%'), r++);
                     continue;
                 }
                 var a = ei(e, r + 1);
                 if (a != a) {
-                    (n += o), r++;
+                    ((n += o), r++);
                     continue;
                 }
                 r += 2;
@@ -99,7 +99,7 @@ var r = n(220159),
                 if (0 === i) o = z(a);
                 else {
                     if (1 === i || i > 4) {
-                        (n += '\uFFFD'), r++;
+                        ((n += '\uFFFD'), r++);
                         continue;
                     }
                     for (var s = [a], c = 1; c < i && !(++r + 3 > t) && '%' === G(e, r); ) {
@@ -109,7 +109,7 @@ var r = n(220159),
                             break;
                         }
                         if (l > 191 || l < 128) break;
-                        Q(s, l), (r += 2), c++;
+                        (Q(s, l), (r += 2), c++);
                     }
                     if (s.length !== i) {
                         n += '\uFFFD';
@@ -119,7 +119,7 @@ var r = n(220159),
                     null === u ? (n += '\uFFFD') : (o = W(u));
                 }
             }
-            (n += o), r++;
+            ((n += o), r++);
         }
         return n;
     },
@@ -152,7 +152,7 @@ var r = n(220159),
             var e = D(this),
                 t = e.target,
                 n = e.index++;
-            if (!t || n >= t.length) return (e.target = null), A(void 0, !0);
+            if (!t || n >= t.length) return ((e.target = null), A(void 0, !0));
             var r = t[n];
             switch (e.kind) {
                 case 'keys':
@@ -165,12 +165,12 @@ var r = n(220159),
         !0
     ),
     em = function (e) {
-        (this.entries = []), (this.url = null), void 0 !== e && (Z(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === G(e, 0) ? en(e, 1) : e) : w(e)));
+        ((this.entries = []), (this.url = null), void 0 !== e && (Z(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === G(e, 0) ? en(e, 1) : e) : w(e))));
     };
 em.prototype = {
     type: I,
     bindURL: function (e) {
-        (this.url = e), this.update();
+        ((this.url = e), this.update());
     },
     parseObject: function (e) {
         var t,
@@ -212,7 +212,7 @@ em.prototype = {
         return $(n, '&');
     },
     update: function () {
-        (this.entries.length = 0), this.parseQuery(this.url.query);
+        ((this.entries.length = 0), this.parseQuery(this.url.query));
     },
     updateURL: function () {
         this.url && this.url.update();
@@ -231,13 +231,13 @@ if (
         {
             append: function (e, t) {
                 var n = T(this);
-                R(arguments.length, 2),
+                (R(arguments.length, 2),
                     Q(n.entries, {
                         key: w(e),
                         value: w(t)
                     }),
                     !l && this.length++,
-                    n.updateURL();
+                    n.updateURL());
             },
             delete: function (e) {
                 for (var t = T(this), n = R(arguments.length, 1), r = t.entries, o = w(e), a = n < 2 ? void 0 : arguments[1], i = void 0 === a ? a : w(a), s = 0; s < r.length; ) {
@@ -246,7 +246,7 @@ if (
                         if ((ee(r, s, 1), void 0 !== i)) break;
                     } else s++;
                 }
-                l || (this.size = r.length), t.updateURL();
+                (l || (this.size = r.length), t.updateURL());
             },
             get: function (e) {
                 var t = T(this).entries;
@@ -272,20 +272,20 @@ if (
                     r = T(this);
                 R(arguments.length, 1);
                 for (var o = r.entries, a = !1, i = w(e), s = w(t), c = 0; c < o.length; c++) (n = o[c]).key === i && (a ? ee(o, c--, 1) : ((a = !0), (n.value = s)));
-                a ||
+                (a ||
                     Q(o, {
                         key: i,
                         value: s
                     }),
                     l || (this.size = o.length),
-                    r.updateURL();
+                    r.updateURL());
             },
             sort: function () {
                 var e = T(this);
-                O(e.entries, function (e, t) {
+                (O(e.entries, function (e, t) {
                     return e.key > t.key ? 1 : -1;
                 }),
-                    e.updateURL();
+                    e.updateURL());
             },
             forEach: function (e) {
                 for (var t, n = T(this).entries, r = _(e, arguments.length > 1 ? arguments[1] : void 0), o = 0; o < n.length; ) r((t = n[o++]).value, t.key, this);
@@ -365,9 +365,9 @@ if (
         g(V))
     ) {
         var ek = function (e) {
-            return v(this, U), new V(e, arguments.length > 1 ? e_(arguments[1]) : {});
+            return (v(this, U), new V(e, arguments.length > 1 ? e_(arguments[1]) : {}));
         };
-        (U.constructor = ek),
+        ((U.constructor = ek),
             (ek.prototype = U),
             r(
                 {
@@ -377,7 +377,7 @@ if (
                     forced: !0
                 },
                 { Request: ek }
-            );
+            ));
     }
 }
 e.exports = {

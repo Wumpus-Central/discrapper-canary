@@ -1,1 +1,1 @@
-i.exports = JSON.parse('{"+utqa2":["送礼背景选项\uFF1A",[1,"giftStyle"]],"B9XqQk":"礼盒","AJ4iio":"蛋糕","P5keo6":"宝箱","w84vER":"咖啡","6dCq/v":"杯子","+HMF8v":"Nitro 万圣节","vd1fu7":"节日礼盒","aubYGR":"节日蛋糕","vjxYqa":"节日宝箱","bHuJLS":"节日咖啡","M6cPwM":"雪晶球","GzPel5":"礼盒"}');
+i.exports = JSON.parse('{"+utqa2":["赠礼背景选项\uFF1A",[1,"giftStyle"]],"B9XqQk":"礼盒","AJ4iio":"蛋糕","P5keo6":"宝箱","w84vER":"咖啡","6dCq/v":"杯子","+HMF8v":"Nitro 万圣节","vd1fu7":"节日礼盒","aubYGR":"节日蛋糕","vjxYqa":"节日宝箱","bHuJLS":"节日咖啡","M6cPwM":"雪晶球","GzPel5":"礼盒"}');

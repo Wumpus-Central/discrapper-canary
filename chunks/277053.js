@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => x }), n(388685);
+(n.d(t, { Z: () => x }), n(388685));
 var l,
     a = n(392711),
     o = n.n(a),
@@ -28,7 +28,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,12 +71,12 @@ let E = new Set(),
 function j(e) {
     let t = e.getGuildId(),
         n = b({}, e.permissionOverwrites);
-    return null != t && null == n[t] && (n[t] = d.we(t)), n;
+    return (null != t && null == n[t] && (n[t] = d.we(t)), n);
 }
 function A() {
     if (((C = p.Z.getChannel()), (S = p.Z.getCategory()), null == C)) return !1;
     let e = C.getGuildId();
-    (v = I = j(C)), null == I[N] && (N = e), (i = null != S), (r = d.o4(C, S)), (T = null), (y = !1), (O = f.QZA.CLOSED), E.clear();
+    ((v = I = j(C)), null == I[N] && (N = e), (i = null != S), (r = d.o4(C, S)), (T = null), (y = !1), (O = f.QZA.CLOSED), E.clear());
 }
 class Z extends (l = s.ZP.Store) {
     initialize() {
@@ -131,7 +131,7 @@ let x = new Z(u.Z, {
         let { id: t, allow: n, deny: i } = e,
             l = null == I ? void 0 : I[t];
         if (null == l || null == C) return !1;
-        (l = _(b({}, l), {
+        ((l = _(b({}, l), {
             allow: n,
             deny: i
         })),
@@ -139,7 +139,7 @@ let x = new Z(u.Z, {
             E.add(t),
             (O = f.QZA.OPEN),
             (y = !o().isEqual(I, v)),
-            (r = d.o4(C, S));
+            (r = d.o4(C, S)));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
@@ -153,7 +153,7 @@ let x = new Z(u.Z, {
         p.Z.getSection() === f.CoT.PERMISSIONS && A();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (O = f.QZA.CLOSED), (I = null), (v = null), (C = null), (S = null), (y = !1), E.clear(), (N = null), (T = null);
+        ((O = f.QZA.CLOSED), (I = null), (v = null), (C = null), (S = null), (y = !1), E.clear(), (N = null), (T = null));
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -189,6 +189,6 @@ let x = new Z(u.Z, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        (P = t), c.K.set(g.kf, t);
+        ((P = t), c.K.set(g.kf, t));
     }
 });

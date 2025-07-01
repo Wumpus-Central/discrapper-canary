@@ -14,14 +14,14 @@ let s = () => a.Z.hasLayers() || (0, r.$sL)(),
         binds: ['right'],
         comboKeysBindGlobal: !0,
         action() {
-            if (!s()) return i.S.dispatch(l.CkL.CAROUSEL_NEXT), !1;
+            if (!s()) return (i.S.dispatch(l.CkL.CAROUSEL_NEXT), !1);
         }
     },
     c = {
         binds: ['left'],
         comboKeysBindGlobal: !0,
         action() {
-            if (!s()) return i.S.dispatch(l.CkL.CAROUSEL_PREV), !1;
+            if (!s()) return (i.S.dispatch(l.CkL.CAROUSEL_PREV), !1);
         }
     },
     d = {
@@ -38,6 +38,6 @@ let s = () => a.Z.hasLayers() || (0, r.$sL)(),
         binds: ['esc'],
         comboKeysBindGlobal: !0,
         action() {
-            if (i.S.hasSubscribers(l.CkL.MODAL_CLOSE)) return i.S.dispatch(l.CkL.MODAL_CLOSE), !1;
+            if (i.S.hasSubscribers(l.CkL.MODAL_CLOSE)) return (i.S.dispatch(l.CkL.MODAL_CLOSE), !1);
         }
     };

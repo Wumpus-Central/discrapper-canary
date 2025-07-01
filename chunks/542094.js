@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     JS: () => h,
     Qv: () => w,
     ZP: () => P,
@@ -7,7 +7,7 @@ n.d(t, {
 }),
     n(997841),
     n(704826),
-    n(35282);
+    n(35282));
 var i,
     r = n(493683),
     l = n(911969),
@@ -88,7 +88,7 @@ function w(e) {
         });
     if (null == c) return r;
     let s = (0, v.p)(null == o ? void 0 : o.location);
-    return null != l && s === l.id && (null == a ? void 0 : a.id) === c.id ? (r = 2) : null != d && (r = 1), r;
+    return (null != l && s === l.id && (null == a ? void 0 : a.id) === c.id ? (r = 2) : null != d && (r = 1), r);
 }
 function A(e) {
     let { applicationId: t, botUserIdForAppDM: n, context: i, locationObject: l, embeddedActivitiesManager: u, onActivityItemSelectedProp: a, launchingComponentId: c, commandOrigin: f, sectionName: v, source: y, fetchesApplication: b = !0, customId: E, referrerId: Z, onConfirmActivityLaunchChecksAlertOpen: O } = e,

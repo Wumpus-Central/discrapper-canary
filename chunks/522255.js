@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'google',
         author: 'seth wright (http://sethawright.com)',
@@ -19,4 +19,4 @@
         base0E: '#A36AC7',
         base0F: '#3971ED'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

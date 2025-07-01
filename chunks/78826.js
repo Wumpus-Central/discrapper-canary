@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Fl: () => p,
     d7: () => h,
     p: () => _
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(374470),
@@ -65,7 +65,7 @@ function _(e) {
         v = i.useCallback((e) => {
             g((t) => {
                 let n = new Set(t);
-                return n.delete(e), n;
+                return (n.delete(e), n);
             });
         }, []),
         I = i.useCallback(
@@ -73,23 +73,23 @@ function _(e) {
                 if ((b(!0), u(e))) return;
                 g((t) => {
                     let n = new Set(t);
-                    return n.add(e), n;
+                    return (n.add(e), n);
                 });
                 let n = d(e);
                 function r() {
-                    v(e), e.removeEventListener(n, r);
+                    (v(e), e.removeEventListener(n, r));
                 }
                 function i(n) {
-                    v(e),
+                    (v(e),
                         O({
                             assetNode: e,
                             nodeId: t,
                             errorPrefix: 'Error loading asset',
                             errorMessage: 'message' in n ? n.message : null
                         }),
-                        e.removeEventListener('error', i);
+                        e.removeEventListener('error', i));
                 }
-                e.addEventListener(n, r), e.addEventListener('error', i);
+                (e.addEventListener(n, r), e.addEventListener('error', i));
             },
             [O, v]
         ),

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     EB: () => I,
     cl: () => O
 }),
-    n(388685);
+    n(388685));
 var r = n(392711),
     i = n.n(r),
     a = n(442837),
@@ -31,7 +31,7 @@ let p = 10,
     h = 5;
 class m {
     get(e) {
-        return this._set.hasOwnProperty(e) || (this._set[e] = this._defaultValueFunc()), this._set[e];
+        return (this._set.hasOwnProperty(e) || (this._set[e] = this._defaultValueFunc()), this._set[e]);
     }
     delete(e) {
         delete this._set[e];
@@ -43,7 +43,7 @@ class m {
         return c.default.keys(this._set)[0];
     }
     constructor(e) {
-        _(this, '_set', void 0), _(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
+        (_(this, '_set', void 0), _(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e));
     }
 }
 class g {
@@ -55,7 +55,7 @@ class g {
     }
     finishRequesting(e, t) {
         let n = this.requested.get(e);
-        t.forEach((e) => n.delete(e)), E.compact(e);
+        (t.forEach((e) => n.delete(e)), E.compact(e));
     }
     getRequested(e) {
         return this.requested.get(e);
@@ -73,7 +73,7 @@ class g {
         0 === this.requested.get(e).size && this.requested.delete(e);
     }
     constructor() {
-        _(this, 'requested', void 0), (this.requested = new m(() => new Set()));
+        (_(this, 'requested', void 0), (this.requested = new m(() => new Set())));
     }
 }
 let E = new g(),
@@ -94,11 +94,11 @@ function O(e) {
 }
 function v(e, t) {
     let n = !1;
-    t.forEach((t) => {
+    (t.forEach((t) => {
         let { loaded: r, firstMessage: i } = d.Z.getMessage(t);
         y(r, i) && (E.request(e.id, t), (n = !0));
     }),
-        n && null == b && (b = setTimeout(S, 0));
+        n && null == b && (b = setTimeout(S, 0)));
 }
 function I(e) {
     v(e, (0, u.U)(e.id).slice(0, p));

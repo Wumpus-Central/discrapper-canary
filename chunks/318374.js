@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -28,7 +28,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -107,7 +107,7 @@ function O(e) {
                             disablePopout: 'function' == typeof N ? N(e.id) : N,
                             onClick: P,
                             onPopoutRequestClose: () => {
-                                L(!1), null == w || w();
+                                (L(!1), null == w || w());
                             },
                             onContextMenu: (t) =>
                                 (0, u.jW)(
@@ -188,7 +188,7 @@ function O(e) {
                             className: o()(p.overflow, x, T),
                             onFocus: R,
                             onClick: (e) => {
-                                null == C || C(e), L(!0);
+                                (null == C || C(e), L(!0));
                             },
                             look: c.zxk.Looks.BLANK,
                             size: c.zxk.Sizes.NONE,

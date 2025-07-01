@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -39,7 +39,7 @@ function b(e) {
         m = (0, u.eV)(t),
         b = m.length >= h.Cn,
         _ = (0, d.$R)(t);
-    if (null == t) return (0, o.Zy)(), null;
+    if (null == t) return ((0, o.Zy)(), null);
     if (!n || __OVERLAY__ || !t.isForumPost() || (null == s ? void 0 : s.length) === 0 || !_ || t.isModeratorReportChannel()) return null;
     let y = (e) => {
             let n = new Set(m);

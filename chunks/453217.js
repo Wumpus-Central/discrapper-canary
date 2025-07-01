@@ -16,8 +16,8 @@ var s = n(120356),
     x = n(192214);
 let h = function (e) {
     var t;
-    let { className: n, expansionSpring: s, isExpanded: h, isExpansionAnimationComplete: b, quest: j, useReducedMotion: _ } = e,
-        v = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
+    let { className: n, expansionSpring: s, isExpanded: h, isExpansionAnimationComplete: b, quest: j, useReducedMotion: v } = e,
+        _ = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
         { percentComplete: y } = (0, l.Rf)(j),
         C = (0, l.Jf)(j),
         O = null != C ? C.percentComplete > 0 : y > 0;
@@ -25,7 +25,7 @@ let h = function (e) {
         'aria-hidden': h && b,
         className: o()(n, x.contentCollapsed, {
             [x.contentCollapsedExpanded]: h,
-            [x.contentCollapsedAccepted]: v
+            [x.contentCollapsedAccepted]: _
         }),
         style: {
             opacity: s.to({
@@ -36,11 +36,11 @@ let h = function (e) {
         children: [
             (0, r.jsx)(m.Z, {
                 quest: j,
-                useReducedMotion: _
+                useReducedMotion: v
             }),
             (0, r.jsx)('div', {
                 className: x.contentCollapsedWrapper,
-                children: v
+                children: _
                     ? (0, r.jsxs)('div', {
                           className: x.questProgressWrapper,
                           children: [

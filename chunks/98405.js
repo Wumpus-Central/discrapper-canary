@@ -20,6 +20,6 @@ e.exports = function (e, t) {
                 if (typeof f == typeof d) continue;
                 l(f, d);
             }
-            (e.sham || (d && d.sham)) && a(f, 'sham', !0), o(n, u, f, e);
+            ((e.sham || (d && d.sham)) && a(f, 'sham', !0), o(n, u, f, e));
         }
 };

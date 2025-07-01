@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(73800),
     i = function () {
-        (this.locks = []), (this.listeners = []);
+        ((this.locks = []), (this.listeners = []));
     };
 function a(e, t, n) {
     void 0 === n && (n = !1);
@@ -18,15 +18,15 @@ function a(e, t, n) {
         })(e),
         i = t.compareDocumentPosition(e),
         a = null;
-    i & Node.DOCUMENT_POSITION_PRECEDING || n ? (a = r.firstChild()) : i & Node.DOCUMENT_POSITION_FOLLOWING && (a = r.lastChild()), (null != a ? a : e).focus();
+    (i & Node.DOCUMENT_POSITION_PRECEDING || n ? (a = r.firstChild()) : i & Node.DOCUMENT_POSITION_FOLLOWING && (a = r.lastChild()), (null != a ? a : e).focus());
 }
-(i.prototype.add = function (e, t) {
+((i.prototype.add = function (e, t) {
     var n = {
         uid: e,
         setEnabled: t,
         enabled: !1
     };
-    this.toggleLayer(this.current(), !1), this.locks.push(n), this.toggleLayer(n, !0), this.emit();
+    (this.toggleLayer(this.current(), !1), this.locks.push(n), this.toggleLayer(n, !0), this.emit());
 }),
     (i.prototype.remove = function (e) {
         var t = this.locks.find(function (t) {
@@ -35,11 +35,11 @@ function a(e, t, n) {
         this.toggleLayer(t, !1);
         var n = this.current(),
             r = null != n && n.uid === e;
-        (this.locks = this.locks.filter(function (t) {
+        ((this.locks = this.locks.filter(function (t) {
             return t.uid !== e;
         })),
             r && this.toggleLayer(this.current(), !0),
-            this.emit();
+            this.emit());
     }),
     (i.prototype.current = function () {
         return this.locks[this.locks.length - 1];
@@ -69,7 +69,7 @@ function a(e, t, n) {
         this.listeners.forEach(function (n) {
             return n(t, e.locks);
         });
-    });
+    }));
 var o = new i(),
     s = 0;
 function l(e) {
@@ -137,7 +137,7 @@ function f(e, t) {
     var s = t.disable,
         l = o instanceof HTMLElement ? o.ownerDocument : o,
         d = u();
-    (0, r.useEffect)(
+    ((0, r.useEffect)(
         function () {
             s && (d.current = !1);
         },
@@ -170,11 +170,11 @@ function f(e, t) {
                     o.addEventListener('focusin', n, { capture: !0 }),
                     o.addEventListener('focusout', r, { capture: !0 }),
                     function () {
-                        o.removeEventListener('focusin', n, { capture: !0 }), o.removeEventListener('focusout', r, { capture: !0 });
+                        (o.removeEventListener('focusin', n, { capture: !0 }), o.removeEventListener('focusout', r, { capture: !0 }));
                     }
                 );
             },
             [o, l, e, d]
         ),
-        c(n, i);
+        c(n, i));
 }

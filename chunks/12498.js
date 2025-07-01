@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(106351),
     a = n(442837),
@@ -26,7 +26,7 @@ function f(e) {
     c.delete(e.guild.id);
 }
 function _(e) {
-    null == u[e.guildId] && (u[e.guildId] = {}), (u[e.guildId][e.id] = e.status);
+    (null == u[e.guildId] && (u[e.guildId] = {}), (u[e.guildId][e.id] = e.status));
 }
 function p(e) {
     for (let { id: t, status: n } of ((u[e.guildId] = {}), e.channels)) u[e.guildId][t] = n;
@@ -34,7 +34,7 @@ function p(e) {
 class h extends (r = a.ZP.Store) {
     getChannelStatus(e) {
         var t;
-        if (null != e && null != e.guild_id && e.type === i.d.GUILD_VOICE) return c.has(e.guild_id) || (c.add(e.guild_id), s.Z.getSocket().requestChannelStatuses(e.guild_id)), null == (t = u[e.guild_id]) ? void 0 : t[e.id];
+        if (null != e && null != e.guild_id && e.type === i.d.GUILD_VOICE) return (c.has(e.guild_id) || (c.add(e.guild_id), s.Z.getSocket().requestChannelStatuses(e.guild_id)), null == (t = u[e.guild_id]) ? void 0 : t[e.id]);
     }
 }
 l(h, 'displayName', 'ChannelStatusStore');

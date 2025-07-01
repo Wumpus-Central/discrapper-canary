@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     H: () => f,
     f: () => h
 }),
-    n(781311);
+    n(781311));
 var r = n(73800),
     i = n(442837),
     l = n(900849),
@@ -78,7 +78,7 @@ function f(e) {
         searchQuery: i,
         onSearchTextChange: s,
         onClearSearch: r.useCallback(() => {
-            l.IZ(t),
+            (l.IZ(t),
                 a.Z.clearSearchResults(),
                 a.Z.resetSearchLayout(),
                 c.Z.setState({
@@ -89,7 +89,7 @@ function f(e) {
                     resultsInitialCategoryId: null,
                     scrollPosition: null
                 }),
-                d.Z.setState({ isSearchVisible: !1 });
+                d.Z.setState({ isSearchVisible: !1 }));
         }, [t]),
         onSearchSubmit: r.useCallback(() => {
             let e = c.Z.getField('query'),
@@ -98,14 +98,14 @@ function f(e) {
             a.Z.clearSearchResults();
             let r = c.Z.getField('languageCode'),
                 i = c.Z.getField('categoryId');
-            c.Z.setState({ resultsInitialCategoryId: i }),
+            (c.Z.setState({ resultsInitialCategoryId: i }),
                 d.Z.setState({ isSearchVisible: !0 }),
                 o.Z.loadCategoryResultsAndCounts({
                     loadId: t,
                     categoryId: i,
                     query: e,
                     languageCode: r
-                });
+                }));
         }, [t]),
         isSearchVisible: n
     };

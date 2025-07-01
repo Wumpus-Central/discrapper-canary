@@ -28,7 +28,7 @@ function v(e) {
         T = (0, l.e7)([d.Z], () => d.Z.isSpam(t.id)),
         P = (0, f.V)(t.id, t.getRecipientId()),
         j = i.useCallback(() => {
-            m.Z.closeChannelSidebar(b.uZ), N && C && (0, g.Kh)(t.id), T && S && (0, g.Kh)(t.id);
+            (m.Z.closeChannelSidebar(b.uZ), N && C && (0, g.Kh)(t.id), T && S && (0, g.Kh)(t.id));
         }, [t.id, T, S, N, C]),
         A = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(O.intl.string(O.t.pIQ3h4), a.ToastType.FAILURE));

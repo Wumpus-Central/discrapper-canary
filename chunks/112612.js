@@ -1,4 +1,4 @@
-e.d(n, { Z: () => s }), e(388685);
+(e.d(n, { Z: () => s }), e(388685));
 var i = e(73800),
     a = e(881052);
 function s(t) {
@@ -7,11 +7,11 @@ function s(t) {
         [o, r] = i.useState(null),
         l = i.useCallback(async () => {
             if (!s) {
-                c(!0), r(null);
+                (c(!0), r(null));
                 try {
-                    await n(), e();
+                    (await n(), e());
                 } catch (t) {
-                    r(new a.Hx(t).getAnyErrorMessage()), c(!1);
+                    (r(new a.Hx(t).getAnyErrorMessage()), c(!1));
                 }
             }
         }, [e, n, s]);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -24,9 +24,9 @@ let y = i.memo(function (e) {
         j = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
         O = i.useCallback(() => (C ? b.intl.string(b.t['16QyDg']) : null != x ? b.intl.string(b.t.kCN9i4) : null), [C, x]),
         E = i.useMemo(() => (C || null != x) && !v && !j, [C, x, v, j]),
-        [I, S] = i.useState(O());
-    i.useEffect(() => {
-        null != x &&
+        [S, I] = i.useState(O());
+    (i.useEffect(() => {
+        (null != x &&
             null != y &&
             (a.uvj.announce(b.intl.string(b.t.acsXuL)),
             setTimeout(() => {
@@ -44,7 +44,7 @@ let y = i.memo(function (e) {
                 (a.uvj.announce(b.intl.string(b.t['1dxCqK'])),
                 setTimeout(() => {
                     (0, c.Ot)(t.id);
-                }, 5000));
+                }, 5000)));
     }, [t, x, y, C]),
         (0, s.ZP)(() => {
             null != y &&
@@ -59,10 +59,10 @@ let y = i.memo(function (e) {
         }),
         i.useEffect(() => {
             let e = O();
-            null != e && S(e);
-        }, [C, x, O]);
+            null != e && I(e);
+        }, [C, x, O]));
     let P = i.useCallback(() => {
-        null != x && (0, c.T)(t.id, [x.id]),
+        (null != x && (0, c.T)(t.id, [x.id]),
             null != y &&
                 ((0, a.ZDy)(
                     async () => {
@@ -88,13 +88,13 @@ let y = i.memo(function (e) {
                     warningType: y.type,
                     cta: h.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
                     isNudgeWarning: null != x
-                }));
+                })));
     }, [x, y, t]);
     return null == y
         ? null
         : (0, r.jsx)(a.ua7, {
               forceOpen: E,
-              text: I,
+              text: S,
               color: a.FGA.BRAND,
               position: 'bottom',
               tooltipClassName: _.tooltip,

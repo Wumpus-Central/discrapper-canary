@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     A: () => I,
     default: () => j
 }),
-    n(388685);
+    n(388685));
 var i = n(255367),
     s = n(73800),
     l = n(442837),
@@ -32,15 +32,15 @@ function j(e) {
     let { transitionState: t, onClose: n, channelId: g } = e,
         j = (0, u.Dt)(),
         b = (0, l.e7)([p.Z], () => p.Z.getChannel(g)),
-        O = (0, l.e7)([m.Z], () => m.Z.getGuild(null == b ? void 0 : b.getGuildId())),
-        [f, v] = s.useState({}),
+        f = (0, l.e7)([m.Z], () => m.Z.getGuild(null == b ? void 0 : b.getGuildId())),
+        [O, v] = s.useState({}),
         [S, A] = s.useState(!1),
-        [_, y] = s.useState(null);
-    if (null == b || null == O) return null;
-    let T = async () => {
+        [_, T] = s.useState(null);
+    if (null == b || null == f) return null;
+    let y = async () => {
         A(!0);
         try {
-            await (function (e, t) {
+            (await (function (e, t) {
                 let n = Object.values(t)
                     .filter((e) => {
                         let { row: t } = e;
@@ -51,11 +51,11 @@ function j(e) {
                         return t.rowType === N.aC.ROLE ? I(t.id, d.BN.ROLE) : I(t.id, d.BN.MEMBER);
                     });
                 return (0, a.hw)(e.id, n, !0);
-            })(b, f),
-                n();
+            })(b, O),
+                n());
         } catch (t) {
             let e = new o.Hx(t);
-            A(!1), y(e);
+            (A(!1), T(e));
         }
     };
     return (0, i.jsxs)(r.Y0X, {
@@ -91,10 +91,10 @@ function j(e) {
                 ]
             }),
             (0, i.jsx)(c.U, {
-                guild: O,
+                guild: f,
                 channel: b,
                 permission: C.yP,
-                pendingAdditions: f,
+                pendingAdditions: O,
                 setPendingAdditions: v
             }),
             null != _
@@ -108,7 +108,7 @@ function j(e) {
             (0, i.jsxs)(r.mzw, {
                 children: [
                     (0, i.jsx)(r.zxk, {
-                        onClick: T,
+                        onClick: y,
                         submitting: S,
                         children: x.intl.string(x.t.OYkgVl)
                     }),

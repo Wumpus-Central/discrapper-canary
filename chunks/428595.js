@@ -1,4 +1,4 @@
-n.d(t, { Z: () => er }), n(35282), n(704826), n(539854), n(804061), n(388685), n(781311), n(413496), n(433524);
+(n.d(t, { Z: () => er }), n(35282), n(704826), n(539854), n(804061), n(388685), n(781311), n(413496), n(433524));
 var r = n(392711),
     i = n.n(r),
     a = n(159635),
@@ -45,7 +45,7 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -53,7 +53,7 @@ function L(e) {
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -61,11 +61,11 @@ function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -130,7 +130,7 @@ let F = (e) => {
                     o = r.replace(a, ''),
                     s = n.inQuote || !1,
                     l = n.inline || !1;
-                (n.inQuote = !0), i || (n.inline = !0);
+                ((n.inQuote = !0), i || (n.inline = !0));
                 let c = t(o, n);
                 return (
                     (n.inQuote = s),
@@ -361,6 +361,16 @@ let F = (e) => {
                 };
             }
         },
+        gameMention: {
+            order: o().defaultRules.text.order,
+            requiredFirstCharacters: ['<'],
+            match: (e, t) => (t.allowGameMentions ? /^<@\$(\d+)>/.exec(e) : null),
+            parse: (e, t, n) => ({
+                type: 'gameMention',
+                applicationId: e[1],
+                channelId: n.channelId
+            })
+        },
         emoji: {
             order: T.ZP.order,
             requiredFirstCharacters: [':'],
@@ -457,8 +467,8 @@ let F = (e) => {
     },
     Y = (0, C.Z)([H, S.Z]),
     W = i().omit(Y, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext', 'soundboard']),
-    K = i().omit(Y, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard']),
-    z = i().omit(Y, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard']),
+    K = i().omit(Y, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard', 'gameMention']),
+    z = i().omit(Y, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard', 'gameMention']),
     q = i().omit(
         (0, C.Z)([
             Y,
@@ -493,7 +503,7 @@ let et = 10,
                     if (-1 === n) return null;
                     let r = !ee(e, n);
                     if (r)
-                        do (n = e.indexOf(t.highlightWord, n + 1)), (r = !ee(e, n));
+                        do ((n = e.indexOf(t.highlightWord, n + 1)), (r = !ee(e, n)));
                         while (r && -1 !== n);
                     if (-1 === n) return null;
                     let i = e.substring(0, n),

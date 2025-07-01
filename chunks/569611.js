@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Hj: () => s,
     Pz: () => u,
     ZH: () => l
@@ -6,7 +6,7 @@ n.d(t, {
     n(539854),
     n(415506),
     n(49124),
-    n(388685);
+    n(388685));
 var r = n(427786),
     i = n.n(r);
 let a = 5000,
@@ -49,7 +49,7 @@ function u(e) {
         .filter((t) => null == e || e.includes(t.category))
         .map((e) => {
             let t = [];
-            return t.push(new Date(e.time).toISOString()), null != e.timing && t.push(e.timing), t.push(e.category, e.message), t.join(' -> ');
+            return (t.push(new Date(e.time).toISOString()), null != e.timing && t.push(e.timing), t.push(e.category, e.message), t.join(' -> '));
         })
         .join('\n');
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(642613);
+(n.d(t, { Z: () => O }), n(388685), n(642613));
 var i,
     r = n(255367),
     s = n(73800),
@@ -32,7 +32,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function E(e) {
             )),
             i.forEach(function (t) {
                 x(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -91,10 +91,10 @@ class j extends (i = s.PureComponent) {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             x(this, 'handleEditClick', () => {
                 this.props.onEditClick(this.props.paymentSource.id);
-            });
+            }));
     }
 }
 x(j, 'defaultProps', {
@@ -192,11 +192,11 @@ class C extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             x(this, 'state', { editingPayment: null }),
             x(this, 'handleEditClick', async (e) => {
                 try {
-                    await c.lO(e), this.setState({ editingPayment: e });
+                    (await c.lO(e), this.setState({ editingPayment: e }));
                 } catch (e) {}
             }),
             x(this, 'handleCancel', () => {
@@ -204,13 +204,13 @@ class C extends s.PureComponent {
             }),
             x(this, 'handleDelete', async (e) => {
                 try {
-                    await c.xt(e), this.setState({ editingPayment: null });
+                    (await c.xt(e), this.setState({ editingPayment: null }));
                 } catch (e) {}
             }),
             x(this, 'handleSubmit', async (e, t) => {
                 if (null != e)
                     try {
-                        await c.LI(e, t), this.setState({ editingPayment: null });
+                        (await c.LI(e, t), this.setState({ editingPayment: null }));
                     } catch (e) {}
             }),
             x(this, 'handlePaymentSourceAdded', async (e) => {
@@ -249,7 +249,7 @@ class C extends s.PureComponent {
                         onCloseRequest: f.dG4
                     }
                 );
-            });
+            }));
     }
 }
 let O = C;

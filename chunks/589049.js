@@ -17,7 +17,7 @@ function p() {
               id: 'voice-and-video-settings',
               label: d.intl.string(d.t.dsXapK),
               action: () => {
-                  (0, s.Z)(), l.Z.open(u.oAB.VOICE, null, { analyticsLocations: t });
+                  ((0, s.Z)(), l.Z.open(u.oAB.VOICE, null, { analyticsLocations: t }));
               },
               icon: i.ewm
           })

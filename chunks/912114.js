@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     B: () => O,
     default: () => E
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -26,7 +26,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -42,8 +42,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -119,21 +119,21 @@ function O(e) {
 }
 let E = function (e) {
     let { channelId: t, onClose: n, transitionState: l, setHasPendingChanges: o, closeOrShowDiscardChangesAlert: h, location: E } = e,
-        I = (0, m.Dt)(),
-        S = (0, a.e7)([g.Z], () => g.Z.getChannel(t)),
-        P = null == S ? void 0 : S.name,
-        Z = (0, f.cO)(S),
+        S = (0, m.Dt)(),
+        I = (0, a.e7)([g.Z], () => g.Z.getChannel(t)),
+        P = null == I ? void 0 : I.name,
+        Z = (0, f.cO)(I),
         [N, T] = i.useState(null != P ? P : ''),
         [A, w] = i.useState(void 0),
         R = void 0 !== A,
         { analyticsLocations: k } = (0, p.ZP)(E, d.Z.GROUP_DM_EDIT_MODAL),
         M = {
             channel_id: t,
-            channel_type: null == S ? void 0 : S.type,
+            channel_type: null == I ? void 0 : I.type,
             location: E,
             location_stack: k,
             old_name_set: '' !== P,
-            old_icon_set: (null == S ? void 0 : S.icon) != null
+            old_icon_set: (null == I ? void 0 : I.icon) != null
         };
     return (i.useEffect(() => {
         o(N !== P || R);
@@ -146,7 +146,7 @@ let E = function (e) {
             }
         )
     ),
-    null == S)
+    null == I)
         ? null
         : (0, r.jsx)(p.Gt, {
               value: k,
@@ -161,7 +161,7 @@ let E = function (e) {
                               j(v({}, M), {
                                   action: 'saved',
                                   new_name_set: '' !== N,
-                                  new_icon_set: (i ? A : null == S ? void 0 : S.icon) != null,
+                                  new_icon_set: (i ? A : null == I ? void 0 : I.icon) != null,
                                   name_changed: r,
                                   icon_changed: i
                               })
@@ -169,13 +169,13 @@ let E = function (e) {
                           r || i)
                       ) {
                           let e = {};
-                          r && (e.name = N), i && (e.icon = A), c.Z.updateChannel(t, e, E).catch(_.g6);
+                          (r && (e.name = N), i && (e.icon = A), c.Z.updateChannel(t, e, E).catch(_.g6));
                       }
                       n();
                   },
                   children: (0, r.jsxs)(s.Y0X, {
                       transitionState: l,
-                      'aria-labelledby': I,
+                      'aria-labelledby': S,
                       className: x.modal,
                       parentComponent: 'GdmEditModal',
                       children: [
@@ -184,7 +184,7 @@ let E = function (e) {
                               className: x.header,
                               children: [
                                   (0, r.jsx)(s.X6q, {
-                                      id: I,
+                                      id: S,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
                                       children: C.intl.string(C.t['5Q9+/P'])
@@ -199,7 +199,7 @@ let E = function (e) {
                               className: x.modalContent,
                               children: [
                                   (0, r.jsx)(O, {
-                                      channel: S,
+                                      channel: I,
                                       previewIcon: A,
                                       onIconChange: (e) => w(e.imageUri),
                                       onIconRemove: () => w(null),

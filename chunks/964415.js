@@ -7,5 +7,5 @@ function a(e) {
         n = (0, r.default)(e),
         a = n.getUTCDay(),
         o = 7 * (a < t) + a - t;
-    return n.setUTCDate(n.getUTCDate() - o), n.setUTCHours(0, 0, 0, 0), n;
+    return (n.setUTCDate(n.getUTCDate() - o), n.setUTCHours(0, 0, 0, 0), n);
 }

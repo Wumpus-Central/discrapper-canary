@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(415506);
+(n.d(t, { Z: () => c }), n(415506));
 var r = n(710845),
     i = n(358085),
     a = n(579806);
@@ -20,7 +20,7 @@ class l {
     setProgress(e, t) {
         if (!(0, i.isDesktop)()) throw Error('cannot set progress from non-native');
         if (null != this.taskID && this.taskID !== e) return void s.warn(''.concat(this.taskID, ' is already running. cannot set ').concat(e));
-        (this.taskID = e), a.Z.window.setProgressBar(t);
+        ((this.taskID = e), a.Z.window.setProgressBar(t));
     }
     clearProgress(e) {
         if (!(0, i.isDesktop)()) throw Error('cannot clear progress from non-native');

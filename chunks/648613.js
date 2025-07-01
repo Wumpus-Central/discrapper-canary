@@ -30,7 +30,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -72,7 +72,7 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -82,7 +82,7 @@ function O(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function v(e) {
@@ -97,7 +97,7 @@ function v(e) {
             var i;
             if ((e.preventDefault(), null == R)) return void (0, u.uL)(h.Z5c.LOGIN, { source: 'premium_subscribe_button' });
             if ((null == t || t(e), (null == P ? void 0 : P.status) === h.O0b.ACCOUNT_HOLD)) {
-                (0, l.A3)(), o.Z.open(h.oAB.PREMIUM), null == O || O(!1);
+                ((0, l.A3)(), o.Z.open(h.oAB.PREMIUM), null == O || O(!1));
                 return;
             }
             if (!R.isClaimed())
@@ -120,7 +120,7 @@ function v(e) {
                 });
             let s = L ? (null == (i = D.subscription_trial) ? void 0 : i.id) : null,
                 d = h.Qqv.BUY;
-            null != s ? (d = h.Qqv.TRIAL) : N && (d = h.Qqv.GIFT),
+            (null != s ? (d = h.Qqv.TRIAL) : N && (d = h.Qqv.GIFT),
                 (0, c.Z)({
                     isGift: N,
                     initialPlanId: null,
@@ -140,7 +140,7 @@ function v(e) {
                     giftMessage: T,
                     confirmationFooter: S,
                     paymentModalBanner: A
-                });
+                }));
         }
     });
 }

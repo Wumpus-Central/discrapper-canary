@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => es,
     b2: () => D
 }),
-    n(388685);
+    n(388685));
 var r = n(952639),
     i = n.n(r),
     a = n(605906),
@@ -51,18 +51,18 @@ function k(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
 function M() {
-    Object.values(x).forEach((e) => {
+    (Object.values(x).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
-        (x = {});
+        (x = {}));
 }
 function j(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = k(e);
     if (null != x[n]) {
         let { timeout: r, setAt: i } = x[n];
-        return U(e, t, i), clearTimeout(r), delete x[n], !0;
+        return (U(e, t, i), clearTimeout(r), delete x[n], !0);
     }
     return !1;
 }
@@ -155,7 +155,7 @@ function Z(e) {
     return (
         e.forEach((e) => {
             var r, i, a, o, s, l, c, u, d, f, _, p;
-            null == t[e.channel_id] &&
+            (null == t[e.channel_id] &&
                 (t[e.channel_id] = {
                     numOfAttachments: 0,
                     numOfAttachmentsPendingScan: 0,
@@ -171,14 +171,14 @@ function Z(e) {
                         numOfEmbeds: 0,
                         numOfGoreEmbeds: 0,
                         numOfExplicitEmbeds: 0
-                    });
+                    }));
             let h = null != (c = null == (r = e.attachments) ? void 0 : r.length) ? c : 0,
                 m = null != (u = null == (i = e.embeds) ? void 0 : i.length) ? u : 0,
                 { attachmentIds: g, embedIds: E } = (0, A.DQ)(e),
                 b = t[e.channel_id];
-            (b.numOfAttachments += h), (b.numOfEmbeds += m), (b.numOfAttachmentsPendingScan += g.length), (b.numOfEmbedsPendingScan += E.length);
+            ((b.numOfAttachments += h), (b.numOfEmbeds += m), (b.numOfAttachmentsPendingScan += g.length), (b.numOfEmbedsPendingScan += E.length));
             let y = n[e.id];
-            (y.numOfAttachments += h),
+            ((y.numOfAttachments += h),
                 (y.numOfEmbeds += m),
                 (y.numOfExplicitAttachments =
                     null !=
@@ -231,7 +231,7 @@ function Z(e) {
                                   })
                               ).length)
                         ? p
-                        : 0);
+                        : 0));
         }),
         {
             channelLookup: t,
@@ -244,13 +244,13 @@ function H(e) {
         return null != e;
     }
     let n = e.filter((e) => {
-            let t = (0, y.O)(e),
+            let t = (0, y.t)(e),
                 n = 0 !== (0, A.rb)(e);
             return t && n;
         }),
         r = e
             .map((e) => {
-                if (null != e && 'referenced_message' in e && null != e.referenced_message && (0, y.O)(e.referenced_message) && 0 !== (0, A.rb)(e.referenced_message)) return e.referenced_message;
+                if (null != e && 'referenced_message' in e && null != e.referenced_message && (0, y.t)(e.referenced_message) && 0 !== (0, A.rb)(e.referenced_message)) return e.referenced_message;
             })
             .filter(t);
     r.length > 0 && (n = [...n, ...r]);
@@ -267,12 +267,12 @@ function Y(e) {
     function t(e) {
         return null != e;
     }
-    let n = e.filter((e) => (0, y.O)(e) && 0 !== (0, A.rb)(e)),
+    let n = e.filter((e) => (0, y.t)(e) && 0 !== (0, A.rb)(e)),
         r = e
             .map((e) => {
                 if (R.OBS.has(e.type) && null != e.messageReference) {
                     let t = f.Z.getMessageByReference(e.messageReference);
-                    if (t.state === f.Y.LOADED && null != t.message && (0, y.O)(t.message) && 0 !== (0, A.rb)(t.message)) return t.message;
+                    if (t.state === f.Y.LOADED && null != t.message && (0, y.t)(t.message) && 0 !== (0, A.rb)(t.message)) return t.message;
                 }
             })
             .filter(t);
@@ -409,7 +409,7 @@ function et(e) {
 }
 function en(e) {
     let { channelId: t } = e;
-    return (0, C.U)(), null != t && t === g.Z.getChannelId() && ea(t);
+    return ((0, C.U)(), null != t && t === g.Z.getChannelId() && ea(t));
 }
 function er(e) {
     let { settings: t, local: n } = e;
@@ -427,7 +427,7 @@ function ea(e) {
 }
 class eo extends c.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             w(this, 'actions', {
                 LOAD_MESSAGES_SUCCESS: X,
                 LOAD_FORUM_POSTS: $,
@@ -443,7 +443,7 @@ class eo extends c.Z {
                 LOAD_PINNED_MESSAGES_SUCCESS: J,
                 USER_SETTINGS_PROTO_UPDATE: er,
                 CHANNEL_RTC_UPDATE_CHAT_OPEN: ei
-            });
+            }));
     }
 }
 let es = new eo();

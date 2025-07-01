@@ -19,7 +19,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,5 +49,5 @@ class d extends (r = i.ZP.PersistedStore) {
         return c;
     }
 }
-o(d, 'displayName', 'ActivityShelfStore'), o(d, 'persistKey', 'ActivityShelfStore');
+(o(d, 'displayName', 'ActivityShelfStore'), o(d, 'persistKey', 'ActivityShelfStore'));
 let f = new d(a.Z, { LOGOUT: u });

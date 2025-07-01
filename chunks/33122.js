@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => R,
     r: () => O
 }),
-    n(388685);
+    n(388685));
 var r,
     a = n(255367),
     i = n(73800),
@@ -39,7 +39,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 j(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -111,11 +111,11 @@ let O = {
             n,
             r,
             { item: i, size: l, onPlay: s, onEnded: o, onClick: d, playable: m, volume: h, isMuted: g, onVolumeChange: f, onMute: _ } = e;
-        if (i.type === v.s9s.YOUTUBE_VIDEO) (t = y({ url: (0, v.n8r)(i.youtubeVideoId) }, S)), (n = y({ url: ''.concat((0, v.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = p.pn.YOUTUBE);
+        if (i.type === v.s9s.YOUTUBE_VIDEO) ((t = y({ url: (0, v.n8r)(i.youtubeVideoId) }, S)), (n = y({ url: ''.concat((0, v.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = p.pn.YOUTUBE));
         else {
             let e = null != i.width ? i.width : 0,
                 r = null != i.height ? i.height : 0;
-            (t = {
+            ((t = {
                 url: i.thumbnailSrc,
                 width: e,
                 height: r
@@ -125,7 +125,7 @@ let O = {
                     proxyURL: i.src,
                     width: e,
                     height: r
-                });
+                }));
         }
         let x = (0, a.jsx)(u.BC, {
             href: null,
@@ -167,10 +167,10 @@ let O = {
         });
 class L extends (r = i.PureComponent) {
     componentDidMount() {
-        x.S.subscribe(v.CkL.CAROUSEL_PREV, this.manualPrevious), x.S.subscribe(v.CkL.CAROUSEL_NEXT, this.manualNext);
+        (x.S.subscribe(v.CkL.CAROUSEL_PREV, this.manualPrevious), x.S.subscribe(v.CkL.CAROUSEL_NEXT, this.manualNext));
     }
     componentWillUnmount() {
-        x.S.unsubscribe(v.CkL.CAROUSEL_PREV, this.manualPrevious), x.S.unsubscribe(v.CkL.CAROUSEL_NEXT, this.manualNext);
+        (x.S.unsubscribe(v.CkL.CAROUSEL_PREV, this.manualPrevious), x.S.unsubscribe(v.CkL.CAROUSEL_NEXT, this.manualNext));
     }
     getStyle(e, t) {
         let n = t.interpolate({
@@ -189,7 +189,7 @@ class L extends (r = i.PureComponent) {
     }
     handleCurrentItemClick(e, t) {
         let { onCurrentItemClick: n } = this.props;
-        null != n && n(e, t), this.setState({ hasInteracted: !0 });
+        (null != n && n(e, t), this.setState({ hasInteracted: !0 }));
     }
     handleEdgeItemMouseEnter(e) {
         let { currentIndex: t } = this.state;
@@ -253,7 +253,7 @@ class L extends (r = i.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             j(this, 'state', {
                 currentIndex: 0,
                 animate: !0,
@@ -267,7 +267,7 @@ class L extends (r = i.PureComponent) {
             j(this, 'getItemSize', () => {
                 let { width: e } = this.props,
                     t = O.MEDIUM;
-                return null != e && e < t.width && (t = O.SMALL), t;
+                return (null != e && e < t.width && (t = O.SMALL), t);
             }),
             j(this, 'setItem', (e, t) => {
                 let {
@@ -277,13 +277,13 @@ class L extends (r = i.PureComponent) {
                     i = (0, g.gN)(a, n.length),
                     l = (0, g.gN)(e, n.length),
                     s = 1 === Math.abs(e - i) || (e === n.length - 1 && 0 === i) || (0 === e && i === n.length - 1);
-                this.setState({
+                (this.setState({
                     playingVideo: !1,
                     currentIndex: l,
                     animate: s,
                     hasInteracted: t
                 }),
-                    t && null != r && r(n[l], i, l);
+                    t && null != r && r(n[l], i, l));
             }),
             j(this, 'autoNext', () => {
                 this.setItem(this.state.currentIndex + 1, !1);
@@ -391,7 +391,7 @@ class L extends (r = i.PureComponent) {
                     },
                     'page-'.concat(t)
                 );
-            });
+            }));
     }
 }
 j(L, 'defaultProps', {

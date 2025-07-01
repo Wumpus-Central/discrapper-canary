@@ -1,4 +1,4 @@
-n.d(t, { W: () => _ }), n(539854), n(388685);
+(n.d(t, { W: () => _ }), n(539854), n(388685));
 var r,
     i = n(73800),
     a = n(830483);
@@ -19,7 +19,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,7 +38,7 @@ function l(e, t) {
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -48,7 +48,7 @@ function c(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function u(e, t) {
@@ -83,7 +83,7 @@ class _ extends (r = i.Component) {
         if (this.props.transitionAppear) for (let t in e) e[t] && this.performAppear(t);
     }
     componentWillUnmount() {
-        (this._isMounted = !1), (this._keyChildMapping = {}), (this.state.children = {});
+        ((this._isMounted = !1), (this._keyChildMapping = {}), (this.state.children = {}));
     }
     componentDidUpdate(e, t) {
         if (e.children !== this.props.children || e.transitionAppear !== this.props.transitionAppear || e.transitionLeave !== this.props.transitionLeave) {
@@ -95,16 +95,16 @@ class _ extends (r = i.Component) {
                 this._enqueueTransitions(n, e, t);
                 let r = (0, a.B)(n, e);
                 for (let e = 0, n = t.length; e < n; e++) delete r[t[e]];
-                this._isMounted && this.setState({ children: r }), this._keysToLeave.length && (this._keysToLeave = []);
+                (this._isMounted && this.setState({ children: r }), this._keysToLeave.length && (this._keysToLeave = []));
             }
         }
         if (this._keysToEnter.length) {
             let e = this._keysToEnter;
-            (this._keysToEnter = []), e.forEach(this.performEnter, this);
+            ((this._keysToEnter = []), e.forEach(this.performEnter, this));
         }
         if (this._keysToLeave.length) {
             let e = this._keysToLeave;
-            (this._keysToLeave = []), e.forEach(this.performLeave, this);
+            ((this._keysToLeave = []), e.forEach(this.performLeave, this));
         }
     }
     _enqueueTransitions(e, t, n) {
@@ -123,7 +123,7 @@ class _ extends (r = i.Component) {
     _handleDonePerform(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = this._keyChildMapping[e];
-        null != r && null != r[t] && r[t](), this._currentlyTransitioningKeys.delete(e);
+        (null != r && null != r[t] && r[t](), this._currentlyTransitioningKeys.delete(e));
         let i = (0, a.n)(this.props.children);
         n
             ? null != i && i.hasOwnProperty(e)
@@ -160,10 +160,10 @@ class _ extends (r = i.Component) {
                 );
         }
         let a = s({}, this.props);
-        return Object.keys(_.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r);
+        return (Object.keys(_.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r));
     }
     constructor(e) {
-        super(e),
+        (super(e),
             o(this, '_currentlyTransitioningKeys', void 0),
             o(this, '_keysToEnter', void 0),
             o(this, '_keysToLeave', void 0),
@@ -179,7 +179,7 @@ class _ extends (r = i.Component) {
             (this._currentlyTransitioningKeys = new Set()),
             (this._keysToEnter = []),
             (this._keysToLeave = []),
-            (this._isMounted = !1);
+            (this._isMounted = !1));
     }
 }
 o(_, 'defaultProps', {

@@ -8,12 +8,12 @@ async function s(e, t, n) {
     let a = null == (i = t.style) ? void 0 : i.getPropertyValue(e);
     if (a) {
         let i = await (0, r.vg)(a, null, n);
-        return t.style.setProperty(e, i, t.style.getPropertyPriority(e)), !0;
+        return (t.style.setProperty(e, i, t.style.getPropertyPriority(e)), !0);
     }
     return !1;
 }
 async function l(e, t) {
-    (await s('background', e, t)) || (await s('background-image', e, t)), (await s('mask', e, t)) || (await s('mask-image', e, t));
+    ((await s('background', e, t)) || (await s('background-image', e, t)), (await s('mask', e, t)) || (await s('mask-image', e, t)));
 }
 async function c(e, t) {
     let n = (0, i.oY)(e, HTMLImageElement);
@@ -21,9 +21,9 @@ async function c(e, t) {
     let r = n ? e.src : e.href.baseVal,
         s = await (0, a.sx)(r, (0, o.b)(r), t);
     await new Promise((t, r) => {
-        (e.onload = t), (e.onerror = r);
+        ((e.onload = t), (e.onerror = r));
         let i = e;
-        i.decode && (i.decode = t), 'lazy' === i.loading && (i.loading = 'eager'), n ? ((e.srcset = ''), (e.src = s)) : (e.href.baseVal = s);
+        (i.decode && (i.decode = t), 'lazy' === i.loading && (i.loading = 'eager'), n ? ((e.srcset = ''), (e.src = s)) : (e.href.baseVal = s));
     });
 }
 async function u(e, t) {

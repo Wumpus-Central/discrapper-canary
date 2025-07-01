@@ -1,11 +1,11 @@
 let r;
-n.d(t, {
+(n.d(t, {
     Z: () => w,
     c: () => C
 }),
     n(415506),
     n(358797),
-    n(457542);
+    n(457542));
 var i = n(990547),
     a = n(213919),
     o = n(544891),
@@ -40,7 +40,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -56,11 +56,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -79,7 +79,7 @@ let S = new d.Z('AuthenticationActionCreators'),
     A = 5000,
     N = null;
 var C = (function (e) {
-    return (e.MFA = 'MFA'), (e.SUCCESS = 'SUCCESS'), e;
+    return ((e.MFA = 'MFA'), (e.SUCCESS = 'SUCCESS'), e);
 })({});
 function R(e) {
     let t = v({ type: 'LOGOUT' }, e);
@@ -93,11 +93,11 @@ function P(e) {
     if ((R(), null == t)) return;
     let n = (0, f.D)();
     if (null == n) return void (0, _.uL)(t, { source: e });
-    E.Z.popAll(),
+    (E.Z.popAll(),
         n.reset({
             index: 0,
             routes: [{ name: 'auth' }]
-        });
+        }));
 }
 let w = {
     startSession(e) {
@@ -146,7 +146,7 @@ let w = {
                     let {
                         body: { mfa: t, sms: n, webauthn: r, ticket: i, token: a, backup: o, user_id: s, required_actions: c, totp: d }
                     } = e;
-                    l.Z.dispatch({
+                    (l.Z.dispatch({
                         type: 'LOGIN_ATTEMPTED',
                         user_id: s,
                         required_actions: c
@@ -165,22 +165,22 @@ let w = {
                               : l.Z.dispatch({
                                     type: 'LOGIN_SUCCESS',
                                     token: a
-                                });
+                                }));
                 },
                 (e) => {
                     var r, i, a;
                     let o = new c.yZ(e);
                     if (null != e.body && (null == (r = e.body) ? void 0 : r.suspended_user_token) != null)
                         throw (
-                            (l.Z.dispatch({
+                            l.Z.dispatch({
                                 type: 'LOGIN_SUSPENDED_USER',
                                 suspendedUserToken: null == (a = e.body) ? void 0 : a.suspended_user_token
                             }),
-                            o)
+                            o
                         );
                     let s = null == (i = e.body) ? void 0 : i.code;
                     throw (
-                        (s === b.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && '' !== n
+                        s === b.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && '' !== n
                             ? l.Z.dispatch({
                                   type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
                                   credentials: {
@@ -208,7 +208,7 @@ let w = {
                                       type: 'LOGIN_FAILURE',
                                       error: o
                                   }),
-                        o)
+                        o
                     );
                 }
             )
@@ -267,11 +267,11 @@ let w = {
                 })
                 .catch((e) => {
                     throw (
-                        (l.Z.dispatch({
+                        l.Z.dispatch({
                             type: 'PASSWORDLESS_FAILURE',
                             error: e
                         }),
-                        e)
+                        e
                     );
                 })
         );
@@ -294,7 +294,7 @@ let w = {
                 let {
                     body: { token: t, user_id: n, required_actions: r }
                 } = e;
-                l.Z.dispatch({
+                (l.Z.dispatch({
                     type: 'LOGIN_ATTEMPTED',
                     user_id: n,
                     required_actions: r
@@ -302,7 +302,7 @@ let w = {
                     l.Z.dispatch({
                         type: 'LOGIN_SUCCESS',
                         token: t
-                    });
+                    }));
             })
             .catch((e) => {
                 if (null != e.body && null != e.body.suspended_user_token)
@@ -311,11 +311,11 @@ let w = {
                         suspendedUserToken: e.body.suspended_user_token
                     });
                 throw (
-                    (l.Z.dispatch({
+                    l.Z.dispatch({
                         type: 'PASSWORDLESS_FAILURE',
                         error: e
                     }),
-                    e)
+                    e
                 );
             });
     },
@@ -325,12 +325,12 @@ let w = {
             l.Z.dispatch({ type: 'LOGIN' }),
             new Promise((n) => {
                 setImmediate(() => {
-                    l.Z.dispatch({
+                    (l.Z.dispatch({
                         type: 'LOGIN_SUCCESS',
                         token: e
                     }),
                         t && this.startSession(e),
-                        n();
+                        n());
                 });
             })
         );
@@ -390,7 +390,7 @@ let w = {
             }),
             this.loginToken(e, !0).then(() => {
                 let t = e === h.default.getToken();
-                return S.log('Switched accounts finished', { isCorrectToken: t }), t;
+                return (S.log('Switched accounts finished', { isCorrectToken: t }), t);
             })
         );
     },
@@ -474,11 +474,11 @@ let w = {
         } catch (t) {
             let e = new c.yZ(t);
             throw (
-                (l.Z.dispatch({
+                l.Z.dispatch({
                     type: 'LOGIN_FAILURE',
                     error: e
                 }),
-                e)
+                e
             );
         }
     },
@@ -532,11 +532,11 @@ let w = {
                     !1
                 );
             throw (
-                (l.Z.dispatch({
+                l.Z.dispatch({
                     type: 'LOGIN_FAILURE',
                     error: t
                 }),
-                t)
+                t
             );
         }
     },
@@ -596,12 +596,12 @@ let w = {
                           }
                       },
                       () => {
-                          clearTimeout(r),
+                          (clearTimeout(r),
                               l.Z.dispatch({
                                   type: 'SET_CONSENT_REQUIRED',
                                   consentRequired: !0
                               }),
-                              (N = null);
+                              (N = null));
                       }
                   ))),
     closeSuspendedUser() {

@@ -6,7 +6,7 @@ var i = s(573736),
 class a {
     constructor(t, e) {
         let s, i;
-        (s = t || new r.s()), (i = e || new r.s()), (this._stack = [{ scope: s }]), (this._isolationScope = i);
+        ((s = t || new r.s()), (i = e || new r.s()), (this._stack = [{ scope: s }]), (this._isolationScope = i));
     }
     withScope(t) {
         let e,

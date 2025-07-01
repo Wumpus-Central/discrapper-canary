@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     d: () => u,
     p: () => c
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(775953),
@@ -43,11 +43,11 @@ function u(e) {
                 let o = async (t) => {
                     try {
                         let r = await (0, a.SE)(t, n);
-                        s()(null != r, 'Unable to generate image'), e(r);
+                        (s()(null != r, 'Unable to generate image'), e(r));
                     } catch (e) {
                         i(e);
                     } finally {
-                        c(!1), r.setComponentToSnapshot(null);
+                        (c(!1), r.setComponentToSnapshot(null));
                     }
                 };
                 r.setComponentToSnapshot(t({ generateImageRef: o }));

@@ -1,4 +1,4 @@
-t.d(n, { default: () => C }), t(953529);
+(t.d(n, { default: () => C }), t(953529));
 var i = t(255367),
     o = t(73800),
     s = t(772848),
@@ -66,7 +66,7 @@ let C = function (e) {
                             className: L.requestContainer,
                             children: m.intl.format(m.t.pJAxgY, {
                                 handleOnRequestHook: () => {
-                                    _.Z.openUrl(N.sQ.APPEALS_LINK), (0, d.x3)(x, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
+                                    (_.Z.openUrl(N.sQ.APPEALS_LINK), (0, d.x3)(x, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST));
                                 }
                             })
                         })
@@ -82,7 +82,7 @@ let C = function (e) {
                             look: r.zxk.Looks.LINK,
                             className: L.learnMoreButton,
                             onClick: () => {
-                                _.Z.openUrl(c.Z.getArticleURL(I.BhN.TIGGER_PAWTECT_LEARN_MORE)), (0, d.x3)(x, d.d_.PRIMARY, d.sU.LEARN_MORE);
+                                (_.Z.openUrl(c.Z.getArticleURL(I.BhN.TIGGER_PAWTECT_LEARN_MORE)), (0, d.x3)(x, d.d_.PRIMARY, d.sU.LEARN_MORE));
                             },
                             children: [
                                 (0, i.jsx)(r.Text, {
@@ -100,7 +100,7 @@ let C = function (e) {
                             innerClassName: L.button,
                             color: r.zxk.Colors.BRAND,
                             onClick: () => {
-                                (0, d.x3)(x, d.d_.PRIMARY, d.sU.GET_STARTED), S();
+                                ((0, d.x3)(x, d.d_.PRIMARY, d.sU.GET_STARTED), S());
                             },
                             submitting: A,
                             children: [

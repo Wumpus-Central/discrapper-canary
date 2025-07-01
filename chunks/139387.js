@@ -59,7 +59,7 @@ let s = {
     },
     async saveApplicationPermissions(e, t, n) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }),
+            (r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }),
                 await a.U3({
                     applicationId: e,
                     commandId: e,
@@ -68,7 +68,7 @@ let s = {
                     guildId: t,
                     permissions: n
                 }),
-                r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+                r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' }));
         } catch (e) {
             r.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
@@ -78,7 +78,7 @@ let s = {
     },
     async saveIntegration(e, t) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await i.Z.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+            (r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await i.Z.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' }));
         } catch (e) {
             r.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
@@ -88,7 +88,7 @@ let s = {
     },
     async saveWebhook(e, t) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await o.Z.update(e, t.id, t), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+            (r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await o.Z.update(e, t.id, t), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' }));
         } catch (e) {
             r.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',

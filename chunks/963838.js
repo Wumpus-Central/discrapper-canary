@@ -51,7 +51,7 @@ let x = {
         (e) =>
             new Promise((t) => {
                 let n = new Image();
-                (n.src = e),
+                ((n.src = e),
                     (n.crossOrigin = 'Anonymous'),
                     (n.onload = () => {
                         let r = D.v * (0, C.x_)();
@@ -59,9 +59,9 @@ let x = {
                         else {
                             var i;
                             let e = document.createElement('canvas');
-                            (e.width = r), (e.height = r), null == (i = e.getContext('2d')) || i.drawImage(n, 0, 0), t(e.toDataURL('image/png'));
+                            ((e.width = r), (e.height = r), null == (i = e.getContext('2d')) || i.drawImage(n, 0, 0), t(e.toDataURL('image/png')));
                         }
-                    });
+                    }));
             })
     ),
     G = (e, t) => {

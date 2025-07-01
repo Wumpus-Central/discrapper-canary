@@ -1,7 +1,7 @@
 t.exports = (function () {
     function t(t) {
         var e, r;
-        (r = void 0),
+        ((r = void 0),
             (e = '_uri') in this
                 ? Object.defineProperty(this, e, {
                       value: r,
@@ -10,7 +10,7 @@ t.exports = (function () {
                       writable: !0
                   })
                 : (this[e] = r),
-            (this._uri = t);
+            (this._uri = t));
     }
     return (
         (t.prototype.toString = function () {

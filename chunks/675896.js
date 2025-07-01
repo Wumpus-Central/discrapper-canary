@@ -17,7 +17,7 @@ function m(e, t) {
 }
 let g = {
     init() {
-        l.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), o.Z.addChangeListener(this.handleUiDensityChanged), d.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(d), f.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(f), p.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(p), h.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(h), _.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(_), s.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
+        (l.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), o.Z.addChangeListener(this.handleUiDensityChanged), d.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(d), f.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(f), p.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(p), h.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(h), _.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(_), s.default.setSystemAccessibilityFeatures(this.getActiveFeatures));
     },
     getActiveFeatures: () => u,
     handlePrefersColorSchemeDarkChanged(e) {
@@ -37,9 +37,9 @@ let g = {
     },
     handleUiDensityChanged() {
         let e = a.YC.getSetting();
-        m(c.E.UI_DENSITY_COMPACT, e === r.Pi.COMPACT), m(c.E.UI_DENSITY_SPACIOUS, e === r.Pi.COZY);
+        (m(c.E.UI_DENSITY_COMPACT, e === r.Pi.COMPACT), m(c.E.UI_DENSITY_SPACIOUS, e === r.Pi.COZY));
     },
     handleAccessibilityStoreChanged() {
-        m(c.E.REDUCED_MOTION, l.Z.useReducedMotion), m(c.E.REDUCED_MOTION_FROM_USER_SETTINGS, 'auto' !== l.Z.rawPrefersReducedMotion), m(c.E.FORCED_COLORS_FROM_USER_SETTINGS, l.Z.syncForcedColors), m(c.E.CHAT_FONT_SCALE_DECREASED, l.Z.isFontScaledDown), m(c.E.CHAT_FONT_SCALE_INCREASED, l.Z.isFontScaledUp), m(c.E.ZOOM_LEVEL_DECREASED, l.Z.isZoomedOut), m(c.E.ZOOM_LEVEL_INCREASED, l.Z.isZoomedIn), m(c.E.MESSAGE_GROUP_SPACING_DECREASED, l.Z.isMessageGroupSpacingDecreased), m(c.E.MESSAGE_GROUP_SPACING_INCREASED, l.Z.isMessageGroupSpacingIncreased), m(c.E.DARK_SIDEBAR, i.Z.darkSidebar), m(c.E.SATURATION_LEVEL_DECREASED, l.Z.saturation < 1), m(c.E.ROLE_STYLE_ADJUSTED, 'username' !== l.Z.roleStyle), m(c.E.SYNC_PROFILE_THEME_WITH_USER_THEME, l.Z.syncProfileThemeWithUserTheme);
+        (m(c.E.REDUCED_MOTION, l.Z.useReducedMotion), m(c.E.REDUCED_MOTION_FROM_USER_SETTINGS, 'auto' !== l.Z.rawPrefersReducedMotion), m(c.E.FORCED_COLORS_FROM_USER_SETTINGS, l.Z.syncForcedColors), m(c.E.CHAT_FONT_SCALE_DECREASED, l.Z.isFontScaledDown), m(c.E.CHAT_FONT_SCALE_INCREASED, l.Z.isFontScaledUp), m(c.E.ZOOM_LEVEL_DECREASED, l.Z.isZoomedOut), m(c.E.ZOOM_LEVEL_INCREASED, l.Z.isZoomedIn), m(c.E.MESSAGE_GROUP_SPACING_DECREASED, l.Z.isMessageGroupSpacingDecreased), m(c.E.MESSAGE_GROUP_SPACING_INCREASED, l.Z.isMessageGroupSpacingIncreased), m(c.E.DARK_SIDEBAR, i.Z.darkSidebar), m(c.E.SATURATION_LEVEL_DECREASED, l.Z.saturation < 1), m(c.E.ROLE_STYLE_ADJUSTED, 'username' !== l.Z.roleStyle), m(c.E.SYNC_PROFILE_THEME_WITH_USER_THEME, l.Z.syncProfileThemeWithUserTheme));
     }
 };

@@ -4,9 +4,9 @@ class i {
     create(e) {
         let t = this.freeTasks,
             n = t.length ? t.pop() : new r.V(this.onError, (e) => (t[t.length] = e));
-        return (n.task = e), n;
+        return ((n.task = e), n);
     }
     constructor(e) {
-        (this.onError = e), (this.freeTasks = []);
+        ((this.onError = e), (this.freeTasks = []));
     }
 }

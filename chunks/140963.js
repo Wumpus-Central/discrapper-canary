@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(781311), n(35282), n(388685), n(704826);
+(n.d(t, { Z: () => I }), n(781311), n(35282), n(388685), n(704826));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -68,7 +68,7 @@ let y = ':',
     O = /(\t|\s)/;
 class v extends i.PureComponent {
     componentDidMount() {
-        this.props.disableAutoFocus ||
+        (this.props.disableAutoFocus ||
             (Promise.resolve().then(() => {
                 var e;
                 let { value: t } = this.props;
@@ -80,7 +80,7 @@ class v extends i.PureComponent {
                     channelId: this.props.channel.id,
                     command: null,
                     section: null
-                });
+                }));
     }
     componentDidUpdate(e, t) {
         this.state.nextSelection !== t.nextSelection && null != this._ref && this._ref.setSelection(this.state.nextSelection, this.state.nextSelection);
@@ -111,7 +111,7 @@ class v extends i.PureComponent {
         null != e && e.blur();
     }
     submit(e) {
-        return e.preventDefault(), this.props.onSubmit(this.props.value);
+        return (e.preventDefault(), this.props.onSubmit(this.props.value));
     }
     insertAutocomplete(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -201,7 +201,7 @@ class v extends i.PureComponent {
         return this.props.value;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, '_ref', void 0),
             m(this, 'state', { nextSelection: -1 }),
             m(this, 'focus', () => {
@@ -212,7 +212,7 @@ class v extends i.PureComponent {
                 this._ref = e;
             }),
             m(this, 'handleKeyPress', (e) => {
-                if (e.which === h.yXg.ENTER && !e.shiftKey && !this.hasOpenCodeBlock() && (!this.props.disableEnterToSubmit || e.ctrlKey)) return e.preventDefault(), this.props.onSubmit(this.props.value);
+                if (e.which === h.yXg.ENTER && !e.shiftKey && !this.hasOpenCodeBlock() && (!this.props.disableEnterToSubmit || e.ctrlKey)) return (e.preventDefault(), this.props.onSubmit(this.props.value));
             }),
             m(this, 'handleKeyDown', (e) => {
                 switch (e.which) {
@@ -252,7 +252,7 @@ class v extends i.PureComponent {
             }),
             m(this, 'handlePaste', (e) => {
                 let t = this.props.onPaste(e);
-                return t && e.preventDefault(), t;
+                return (t && e.preventDefault(), t);
             }),
             m(this, 'handleClick', () => {
                 this.props.maybeShowAutocomplete();
@@ -276,7 +276,7 @@ class v extends i.PureComponent {
                     r = e.currentTarget.value,
                     i = n ? r : r.replace('\n', '');
                 null == t || t(e, i, (0, p.JM)(i));
-            });
+            }));
     }
 }
 let I = v;

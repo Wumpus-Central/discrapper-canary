@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(997841);
+(n.d(t, { Z: () => A }), n(388685), n(997841));
 var r,
     i = n(442837),
     a = n(570140),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -65,7 +65,7 @@ function g(e, t) {
 let E = {};
 function b(e) {
     let { guildId: t, data: n } = e;
-    delete n.roles[u.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = g(h({}, n), { timestamp: Date.now() }));
+    (delete n.roles[u.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = g(h({}, n), { timestamp: Date.now() })));
 }
 function y(e) {
     let { guildId: t } = e;
@@ -101,7 +101,7 @@ function I(e) {
     let o = E[n];
     if (null == o || o.type !== d.z.NEW_MEMBER) return !1;
     let s = null != (t = o.onboardingResponses) ? t : new Set();
-    return null != a && a.length > 0 && a.forEach((e) => s.delete(e)), i ? s.add(r) : s.delete(r), (o.onboardingResponses = s), !0;
+    return (null != a && a.length > 0 && a.forEach((e) => s.delete(e)), i ? s.add(r) : s.delete(r), (o.onboardingResponses = s), !0);
 }
 function T(e) {
     let { guildId: t, roles: n, flags: r } = e;
@@ -112,7 +112,7 @@ function T(e) {
         (null != n &&
             (i.roles = n.reduce((e, n) => {
                 let r = o.Z.getRole(t, n);
-                return null != r && (e[n] = r), e;
+                return (null != r && (e[n] = r), e);
             }, {})),
         null != r && i.type === d.z.NEW_MEMBER && (i.memberOptions.flags = r),
         !0)

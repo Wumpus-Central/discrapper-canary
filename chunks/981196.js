@@ -19,12 +19,12 @@ function l(e) {
                         _ = (0, i.hj)(f) ? new a.O(f).toString() : f.toString();
                         break;
                     case 'BYWEEKDAY':
-                        (d = 'BYDAY'),
+                        ((d = 'BYDAY'),
                             (_ = (0, i.qo)(f)
                                 .map(function (e) {
                                     return e instanceof a.O ? e : (0, i.kJ)(e) ? new a.O(e[0], e[1]) : new a.O(e);
                                 })
-                                .toString());
+                                .toString()));
                         break;
                     case 'DTSTART':
                         n = c(f, e.tzid);

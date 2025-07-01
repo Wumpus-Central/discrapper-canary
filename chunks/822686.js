@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(481060),
@@ -13,7 +13,7 @@ let p = (e) => {
     let { message: t, reportId: n } = e,
         [p, _] = a.useState(!1),
         g = a.useCallback(() => {
-            _(!0), o.ZP.trackWithMetadata(u.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }), l.Z.deleteMessage(t.getChannelId(), t.id);
+            (_(!0), o.ZP.trackWithMetadata(u.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }), l.Z.deleteMessage(t.getChannelId(), t.id));
         }, [t, n]),
         b = a.useMemo(() => {
             let e = c.Z.getChannel(t.getChannelId());

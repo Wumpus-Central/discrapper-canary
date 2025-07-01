@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => d,
     aJ: () => u
 }),
     n(415506),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -23,7 +23,7 @@ function u(e) {
             .fill(null)
             .map(() => {
                 let e = o().random(1, r);
-                return (h += c * u), (h += d * u), (h += (e - 1) * p * u), e;
+                return ((h += c * u), (h += d * u), (h += (e - 1) * p * u), e);
             }),
         m = f.map((e, t) => t),
         g = [];
@@ -32,7 +32,7 @@ function u(e) {
             width: o().random(140, 400),
             height: o().random(100, 320)
         };
-        g.push([m.splice(o().random(0, m.length - 1), 1)[0], e]), (h += e.height + a.M9 * u);
+        (g.push([m.splice(o().random(0, m.length - 1), 1)[0], e]), (h += e.height + a.M9 * u));
     }
     return {
         messages: f,

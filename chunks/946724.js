@@ -1,11 +1,11 @@
 let r, i, l;
-n.d(t, {
+(n.d(t, {
     Z: () => W,
     g: () => y
 }),
     n(388685),
     n(583741),
-    n(953529);
+    n(953529));
 var s,
     a,
     o = n(392711),
@@ -79,7 +79,7 @@ function L(e) {
 }
 function M() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    (r = _.Z.getProps().guild),
+    ((r = _.Z.getProps().guild),
         (E = !1),
         (S = !1),
         (l = void 0),
@@ -106,7 +106,7 @@ function M() {
             (D.clear(),
             Z.forEach((e, t) => {
                 D.set(t, [...e]);
-            }));
+            })));
 }
 function G(e) {
     e.forEach((e) => {
@@ -145,7 +145,7 @@ function G(e) {
 }
 let U = c().debounce(() => {
     let e = !1;
-    S && ((S = A().length > 0) || (e = !0)),
+    (S && ((S = A().length > 0) || (e = !0)),
         [...N].forEach((t) => {
             var n;
             c().isEqual(
@@ -159,7 +159,7 @@ let U = c().debounce(() => {
         }),
         0 === N.size && (E = !1),
         w && c().isEqual(Z, D) && ((e = !0), (w = !1)),
-        e && V.emitChange();
+        e && V.emitChange());
 }, 500);
 function B(e, t) {
     let n = T.indexOf(e);
@@ -168,7 +168,7 @@ function B(e, t) {
         for (var t = 1; t < arguments.length; t++) {
             var n = null != arguments[t] ? arguments[t] : {},
                 r = Object.keys(n);
-            'function' == typeof Object.getOwnPropertySymbols &&
+            ('function' == typeof Object.getOwnPropertySymbols &&
                 (r = r.concat(
                     Object.getOwnPropertySymbols(n).filter(function (e) {
                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -176,11 +176,11 @@ function B(e, t) {
                 )),
                 r.forEach(function (t) {
                     C(e, t, n[t]);
-                });
+                }));
         }
         return e;
     })({}, e, t);
-    (T[n] = r), (T = [...T]), (E = !0), N.add(r.id), U();
+    ((T[n] = r), (T = [...T]), (E = !0), N.add(r.id), U());
 }
 function F(e) {
     return T.find((t) => {
@@ -193,7 +193,7 @@ function z(e) {
     if (null == r || t !== r.id || I === v.QZA.SUBMITTING) return !1;
     r = _.Z.getProps().guild;
     let n = [];
-    null != r &&
+    (null != r &&
         (n = c()(h.Z.getRoles(r.id))
             .values()
             .sortBy((e) => {
@@ -208,14 +208,14 @@ function z(e) {
             null ==
                 n.find((t, n) => {
                     let { id: i } = t;
-                    if (i === e) return (r = n), !0;
+                    if (i === e) return ((r = n), !0);
                 }) || null == t
                 ? N.delete(e)
                 : (n[r] = t);
         }),
-        0 === N.size && (E = !1);
+        0 === N.size && (E = !1));
     let i = new Map();
-    N.forEach((e) => {
+    (N.forEach((e) => {
         let t = k.get(e);
         null != t && i.set(e, t);
     }),
@@ -225,7 +225,7 @@ function z(e) {
             k.set(t, e);
         }),
         (S = !1),
-        (T = [...n]);
+        (T = [...n]));
 }
 class H extends (s = m.ZP.Store) {
     initialize() {
@@ -289,7 +289,7 @@ let V = new H(
                   GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                       let { roles: t } = e;
                       if (null != T && t.length !== T.length) return !1;
-                      (T = t.map((e) => F(e)).filter(b.lm)), (S = !0), U();
+                      ((T = t.map((e) => F(e)).filter(b.lm)), (S = !0), U());
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                       let { id: t, flag: n, allow: r } = e,
@@ -394,7 +394,7 @@ let V = new H(
                       let { role: t, searchQuery: n } = e;
                       if (((i = n), null != t)) {
                           if (null != F(t.id)) return void B(t, t);
-                          (T = [...T, t]), U();
+                          ((T = [...T, t]), U());
                       }
                   },
                   GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE: function (e) {
@@ -423,28 +423,28 @@ let V = new H(
                       if (null == r) return !1;
                       let i = Z.get(r.id);
                       if (c().isEqual(i, n)) return !1;
-                      D.set(r.id, n), Z.set(r.id, n), U();
+                      (D.set(r.id, n), Z.set(r.id, n), U());
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function (e) {
                       let { roleId: t, roleConnectionConfigurations: n } = e,
                           r = F(t);
                       if (null == r) return !1;
-                      (w = !0), R.add(r.id), D.set(r.id, n), U();
+                      ((w = !0), R.add(r.id), D.set(r.id, n), U());
                   },
                   GUILD_SETTINGS_CLOSE: function () {
-                      (r = null), (P = T = []), Z.clear(), N.clear(), k.clear(), D.clear(), (R = new Set()), (E = !1), (S = !1), (w = !1), (I = v.QZA.CLOSED);
+                      ((r = null), (P = T = []), Z.clear(), N.clear(), k.clear(), D.clear(), (R = new Set()), (E = !1), (S = !1), (w = !1), (I = v.QZA.CLOSED));
                   },
                   GUILD_ROLE_CREATE: z,
                   GUILD_ROLE_UPDATE: z,
                   GUILD_ROLE_DELETE: function (e) {
-                      return R.has(e.roleId) && (R.delete(e.roleId), Z.delete(e.roleId), D.delete(e.roleId), (w = !1)), z(e);
+                      return (R.has(e.roleId) && (R.delete(e.roleId), Z.delete(e.roleId), D.delete(e.roleId), (w = !1)), z(e));
                   },
                   GUILD_SETTINGS_ROLES_SUBMITTING: function () {
                       I = v.QZA.SUBMITTING;
                   },
                   GUILD_SETTINGS_ROLES_SAVE_FAIL: function (e) {
                       let { message: t } = e;
-                      (I = v.QZA.OPEN), (l = t);
+                      ((I = v.QZA.OPEN), (l = t));
                   },
                   GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function () {
                       M(!1);

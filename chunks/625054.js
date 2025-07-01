@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(525654),
     i = n.n(r),
     l = n(643191);
-let a = {
+let s = {
     dump(e) {
         let t;
-        null != performance.memory &&
+        (null != performance.memory &&
             (t = {
                 jsHeapSizeLimit: performance.memory.jsHeapSizeLimit,
                 totalJSHeapSize: performance.memory.totalJSHeapSize,
@@ -21,7 +21,7 @@ let a = {
                     version: i().os.version
                 },
                 memory: t
-            });
+            }));
     },
     getTimeSinceNavigationStart: () => Date.now() - l.mb
 };

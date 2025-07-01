@@ -26,7 +26,7 @@ let T = (e) => {
         o = (0, i.Aq)(),
         s = (e) => {
             let { action: t } = e;
-            o.dispatch(y.CkL.POPOUT_CLOSE), (0, _.closeUserProfileModal)(), null == a || a({ action: t });
+            (o.dispatch(y.CkL.POPOUT_CLOSE), (0, _.closeUserProfileModal)(), null == a || a({ action: t }));
         };
     return (0, r.jsx)(p.Z, {
         user: t,

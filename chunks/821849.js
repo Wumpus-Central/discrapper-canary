@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     GZ: () => d,
     Gn: () => f,
     Y2: () => _,
     mE: () => p
 }),
-    n(388685);
+    n(388685));
 var r = n(544891),
     i = n(570140),
     a = n(34756),
@@ -26,7 +26,7 @@ async function d(e, t, n, u, d) {
                 retries: 10
             },
             s = {};
-        null != t && (s.country_code = t), null != n && (s.payment_source_id = n), null != u && (s.include_unpublished = u), null != d && (s.revenue_surface = d), (a.query = s), o.Z.ipCountryCodeLoaded || (await (0, l.GE)());
+        (null != t && (s.country_code = t), null != n && (s.payment_source_id = n), null != u && (s.include_unpublished = u), null != d && (s.revenue_surface = d), (a.query = s), o.Z.ipCountryCodeLoaded || (await (0, l.GE)()));
         let f = await r.tn.get(a);
         i.Z.dispatch({
             type: 'SUBSCRIPTION_PLANS_FETCH_SUCCESS',
@@ -34,11 +34,11 @@ async function d(e, t, n, u, d) {
             subscriptionPlans: f.body
         });
     } catch (n) {
-        i.Z.dispatch({
+        (i.Z.dispatch({
             type: 'SUBSCRIPTION_PLANS_FETCH_FAILURE',
             skuId: e
         }),
-            (0, s.q2)(n);
+            (0, s.q2)(n));
         let t = new a.Z(n);
         throw ((t.message = 'Failed to fetch subscription plans for SKU '.concat(e)), t);
     }

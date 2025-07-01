@@ -4,8 +4,8 @@ n(73800);
 var i = n(780384),
     l = n(481060),
     o = n(410030),
-    s = n(44315),
-    a = n(889901),
+    a = n(44315),
+    s = n(889901),
     c = n(955204),
     u = n(231338),
     d = n(835115);
@@ -13,7 +13,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -21,7 +21,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -29,8 +29,8 @@ function h(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -55,14 +55,14 @@ function g(e) {
         { color: v } = (0, c.F7)(y),
         C = (0, i.wj)(m) ? p : f,
         j = (_.size - _.offset - 2 * _.stroke) * 0.8,
-        E = _.size - _.stroke,
-        S = {
+        S = _.size - _.stroke,
+        E = {
             width: 0.4 * j,
             height: 0.4 * j
         },
         x = {
-            width: S.width + 1,
-            height: S.height + 1,
+            width: E.width + 1,
+            height: E.height + 1,
             right: _.stroke + 1,
             bottom: _.stroke + 1,
             padding: 0
@@ -70,8 +70,8 @@ function g(e) {
     return (0, r.jsxs)('div', {
         className: d.container,
         style: {
-            width: E,
-            height: E,
+            width: S,
+            height: S,
             padding: _.stroke
         },
         'aria-label': ''.concat(null != (t = O()) ? t : ''),
@@ -80,7 +80,7 @@ function g(e) {
                 className: d.trophyIconContainer,
                 children: (0, r.jsx)(l.rm8, {
                     size: 'custom',
-                    color: u ? v : (0, s.Lq)(C.trophy),
+                    color: u ? v : (0, a.Lq)(C.trophy),
                     width: j,
                     height: j
                 })
@@ -94,9 +94,9 @@ function g(e) {
                         h(
                             {
                                 size: 'custom',
-                                color: (0, s.Lq)(C.locked)
+                                color: (0, a.Lq)(C.locked)
                             },
-                            S
+                            E
                         )
                     )
                 }),
@@ -105,7 +105,7 @@ function g(e) {
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
                     style: x,
-                    children: (0, r.jsx)(a.Z, h({ className: d.confettiIcon }, S))
+                    children: (0, r.jsx)(s.Z, h({ className: d.confettiIcon }, E))
                 })
         ]
     });

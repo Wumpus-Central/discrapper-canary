@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+(n.d(t, { Z: () => L }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -30,7 +30,7 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function Z(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -46,8 +46,8 @@ function Z(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -90,13 +90,13 @@ let L = function (e) {
         }, []),
         A = l.useCallback(() => {
             var e;
-            D(!0), null == (e = z.current) || e.delay();
+            (D(!0), null == (e = z.current) || e.delay());
         }, []),
         H = l.useCallback(() => {
             var e, t, n;
             D(!1);
             let r = L.current;
-            null == (e = z.current) || e.cancel(), null != r && (r.pause(), (r.currentTime = null != (n = null == (t = o.editMetadata) ? void 0 : t.start) ? n : 0));
+            (null == (e = z.current) || e.cancel(), null != r && (r.pause(), (r.currentTime = null != (n = null == (t = o.editMetadata) ? void 0 : t.start) ? n : 0)));
         }, [null == (n = o.editMetadata) ? void 0 : n.start]),
         V = l.useCallback(
             (e) => {
@@ -120,7 +120,7 @@ let L = function (e) {
             onClick: d
                 ? void 0
                 : () => {
-                      x(o), v.default.track(w.rMx.CLIP_GALLERY_CARD_CLICKED);
+                      (x(o), v.default.track(w.rMx.CLIP_GALLERY_CARD_CLICKED));
                   },
             className: i()(E.clipItem, { [E.disabled]: d }),
             onBlur: V,
@@ -195,7 +195,7 @@ function I(e) {
             let e = t.length,
                 n = !1,
                 r = null != t.editMetadata ? t.editMetadata.end - t.editMetadata.start : null;
-            return null != r && 1000 * r < t.length && ((e = 1000 * r), (n = !0)), [n, s().duration(e)];
+            return (null != r && 1000 * r < t.length && ((e = 1000 * r), (n = !0)), [n, s().duration(e)]);
         }, [t.length, t.editMetadata]),
         u = ''.concat(c.seconds()).padStart(2, '0');
     return (0, r.jsxs)('div', {
@@ -258,12 +258,12 @@ function T(e) {
         [b, g] = l.useState(null != (t = n.name) ? t : ''),
         [j, y] = l.useState(!1),
         h = async () => {
-            y(!0), await (0, P.Tm)(n.id, { name: '' === b ? void 0 : b }), y(!1), f(!1);
+            (y(!0), await (0, P.Tm)(n.id, { name: '' === b ? void 0 : b }), y(!1), f(!1));
         };
     return (l.useEffect(() => {
         if (s !== n.name) {
             var e;
-            c(n.name), g(null != (e = n.name) ? e : '');
+            (c(n.name), g(null != (e = n.name) ? e : ''));
         }
     }, [n.name, s]),
     m)
@@ -283,7 +283,7 @@ function T(e) {
               className: E.clipTitleInputPlaceholder,
               onFocus: o,
               onClick: (e) => {
-                  e.stopPropagation(), f(!0);
+                  (e.stopPropagation(), f(!0));
               },
               children: [
                   u
@@ -340,19 +340,19 @@ function _(e) {
         d = (0, y.Z)(),
         m = l.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (i(), (0, P.sS)(t.filepath)) : o(t, i), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' });
+                (e.stopPropagation(), e.shiftKey ? (i(), (0, P.sS)(t.filepath)) : o(t, i), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' }));
             },
             [o, i, t]
         ),
         f = l.useCallback(
             (e) => {
-                e.stopPropagation(), s(t), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'edit' });
+                (e.stopPropagation(), s(t), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'edit' }));
             },
             [s, t]
         ),
         b = l.useCallback(
             (e) => {
-                e.stopPropagation(), c(t), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'share' });
+                (e.stopPropagation(), c(t), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'share' }));
             },
             [c, t]
         );
@@ -410,12 +410,12 @@ function _(e) {
                                         r,
                                         l = {},
                                         a = Object.keys(e);
-                                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                                    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                                     return l;
                                 })(e, t);
                             if (Object.getOwnPropertySymbols) {
                                 var a = Object.getOwnPropertySymbols(e);
-                                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                                for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
                             }
                             return l;
                         })(e, ['onBlur']);
@@ -426,7 +426,7 @@ function _(e) {
                             submitting: n,
                             color: p.zxk.Colors.BRAND,
                             onBlur: (e) => {
-                                u(e), null == t || t();
+                                (u(e), null == t || t());
                             },
                             onClick: b,
                             className: E.button,

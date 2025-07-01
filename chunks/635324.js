@@ -20,12 +20,12 @@ __OVERLAY__ &&
                             i,
                             r = {},
                             o = Object.keys(e);
-                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                 }
                 return r;
             })(e.authorizeProps, ['authorizations', 'permissions']);
@@ -53,7 +53,7 @@ __OVERLAY__ &&
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -61,7 +61,7 @@ __OVERLAY__ &&
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        (i = n[t]),
+                                        ((i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
@@ -69,8 +69,8 @@ __OVERLAY__ &&
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = i);
-                                    });
+                                                : (e[t] = i));
+                                    }));
                             }
                             return e;
                         })({}, t, d)),
@@ -99,7 +99,7 @@ __OVERLAY__ &&
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    (0, o.Mr3)(u), h({});
+                    ((0, o.Mr3)(u), h({}));
                 }
             }
         );

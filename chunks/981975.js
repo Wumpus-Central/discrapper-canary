@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(539854), n(472816), n(794429);
+(n.d(t, { Z: () => w }), n(388685), n(539854), n(472816), n(794429));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -27,7 +27,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -43,8 +43,8 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -101,14 +101,14 @@ function w(e) {
     function G(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             r = [...L];
-        r.push({
+        (r.push({
             connectionType: e,
             connectionMetadataField: void 0,
             applicationId: t,
             operator: void 0,
             value: void 0
         }),
-            (0, h.d_)(n.id, T(r, A));
+            (0, h.d_)(n.id, T(r, A)));
     }
     function U() {
         u.Z.dispatch({
@@ -128,7 +128,7 @@ function w(e) {
     else if (L.length > 0) {
         var F;
         let e = null;
-        L.length < 10 &&
+        (L.length < 10 &&
             (e = (0, r.jsx)(d.zxk, {
                 className: s()(N.addVerificationButton, N.addVerificationButtonAppend),
                 size: d.zxk.Sizes.LARGE,
@@ -284,7 +284,7 @@ function w(e) {
                     })(L, (e) => (0, h.d_)(n.id, T(e, A)), l, n.id, o),
                     e
                 ]
-            }));
+            })));
     }
     return (0, r.jsx)(d.yWw, {
         className: N.scroller,

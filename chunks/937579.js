@@ -12,7 +12,7 @@ var r = n(544891),
     u = n(981631);
 let d = () => {
     let e = null;
-    return (0, c.isAndroid)() ? (e = u.gg$.GOOGLE) : (0, c.isIOS)() && (e = u.gg$.APPLE), e;
+    return ((0, c.isAndroid)() ? (e = u.gg$.GOOGLE) : (0, c.isIOS)() && (e = u.gg$.APPLE), e);
 };
 async function f(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];

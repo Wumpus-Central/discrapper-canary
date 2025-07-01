@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(953529);
+(n.d(t, { Z: () => d }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -18,7 +18,7 @@ function d(e) {
     return (0, r.jsxs)(i.P3F, {
         className: c.container,
         onClick: () => {
-            null == u || u.navigateToChannel(), d();
+            (null == u || u.navigateToChannel(), d());
         },
         'aria-label': null == u ? void 0 : u.ariaLabel,
         role: 'link',

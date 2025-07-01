@@ -54,10 +54,10 @@ var n = r(73800),
             )
         );
     };
-(s.defaultProps = {
+((s.defaultProps = {
     width: '316px',
     height: '16px',
     direction: 'horizontal',
     pointer: i.Z
 }),
-    (0, a.t1)(s);
+    (0, a.t1)(s));

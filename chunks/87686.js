@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -34,7 +34,7 @@ let g = {
                         startPositionMs: 0
                     }),
                     () => {
-                        b.pause(), v(!1);
+                        (b.pause(), v(!1));
                     }
                 );
         }, [b]);
@@ -47,17 +47,17 @@ let g = {
             k = a.useCallback(() => {
                 if (null != b) {
                     if (y) return void E();
-                    w >= N ? (b.currentTime = (0, f.my)(C)) : (b.currentTime = (0, f.my)(w)), (b.volume = (0, u.Z)(n)), b.play(), v(!0);
+                    (w >= N ? (b.currentTime = (0, f.my)(C)) : (b.currentTime = (0, f.my)(w)), (b.volume = (0, u.Z)(n)), b.play(), v(!0));
                 }
             }, [b, N, E, w, y, C, n]),
             M = a.useCallback(
                 (e) => {
-                    j(e),
+                    (j(e),
                         null == p ||
                             p({
                                 startMs: e.startPositionMs,
                                 endMs: e.endPositionMs
-                            });
+                            }));
                 },
                 [p]
             ),

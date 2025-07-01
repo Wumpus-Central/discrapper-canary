@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685), n(35282);
+(n.d(t, { Z: () => l }), n(388685), n(35282));
 var r = n(53529),
     i = n(436660),
     a = n(887490),
@@ -6,7 +6,7 @@ var r = n(53529),
 let s = new Set(['line', 'blockQuote']);
 function l(e) {
     let { deleteBackward: t, deleteFragment: n, insertBreak: o, onChange: s } = e;
-    (e.deleteBackward = (n) => {
+    ((e.deleteBackward = (n) => {
         let r = a.bN.getCurrentBlock(e);
         if ((null == r ? void 0 : r[0].type) === 'blockQuote') {
             let t = a.M8.toPoint(e.selection);
@@ -22,7 +22,7 @@ function l(e) {
                     u = [s.path[0]],
                     d = a.C0.equals(l, u) ? null : a.bN.node(e, u);
                 r.T.withSingleEntry(e, () => {
-                    (null == c ? void 0 : c[0].type) === 'blockQuote' && a.Jz.isAtStart(o, c) && i.Q.setNodes(e, { type: 'line' }, { at: l }), (null == d ? void 0 : d[0].type) === 'blockQuote' && a.Jz.isAtEnd(s, d) && i.Q.setNodes(e, { type: 'line' }, { at: u }), n(t);
+                    ((null == c ? void 0 : c[0].type) === 'blockQuote' && a.Jz.isAtStart(o, c) && i.Q.setNodes(e, { type: 'line' }, { at: l }), (null == d ? void 0 : d[0].type) === 'blockQuote' && a.Jz.isAtEnd(s, d) && i.Q.setNodes(e, { type: 'line' }, { at: u }), n(t));
                 });
                 return;
             }
@@ -41,19 +41,19 @@ function l(e) {
                 return;
             }
             o();
-        });
+        }));
     let l = null,
         d = !0;
     return (
         (e.onChange = () => {
             let t = a.bN.richValue(e);
-            (t !== l || e.previewMarkdown !== d) &&
+            ((t !== l || e.previewMarkdown !== d) &&
                 (r.T.withMergedEntry(e, () => {
                     a.bN.withoutNormalizing(e, () => c(e));
                 }),
                 (l = t),
                 (d = e.previewMarkdown)),
-                s();
+                s());
         }),
         e
     );
@@ -80,7 +80,7 @@ function c(e) {
             var n, r;
             let o = null != (r = null != (n = null == p ? void 0 : p[0].length) ? n : null == _ ? void 0 : _[0].length) ? r : 0,
                 s = a.C0.child(u, 0);
-            i.Q.delete(e, {
+            (i.Q.delete(e, {
                 at: {
                     anchor: {
                         path: s,
@@ -92,7 +92,7 @@ function c(e) {
                     }
                 }
             }),
-                (t = null != _);
+                (t = null != _));
         }
     }
 }

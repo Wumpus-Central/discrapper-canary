@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     FL: () => s,
     Ky: () => o
 }),
-    n(415506);
+    n(415506));
 var r = n(81825),
     i = n(981631);
 function a(e, t, n) {
@@ -19,7 +19,7 @@ function a(e, t, n) {
     );
 }
 var o = (function (e) {
-    return (e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME'), (e.APPS_HOME = 'APPS_HOME'), (e.SETTINGS = 'SETTINGS'), e;
+    return ((e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME'), (e.APPS_HOME = 'APPS_HOME'), (e.SETTINGS = 'SETTINGS'), e);
 })(o || {});
 class s extends r.Z {
     static fromType(e, t, n) {
@@ -55,6 +55,6 @@ class s extends r.Z {
         }
     }
     constructor(e) {
-        super(), a(this, 'id', void 0), a(this, 'path', void 0), a(this, 'type', void 0), a(this, 'label', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type), (this.label = e.label);
+        (super(), a(this, 'id', void 0), a(this, 'path', void 0), a(this, 'type', void 0), a(this, 'label', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type), (this.label = e.label));
     }
 }

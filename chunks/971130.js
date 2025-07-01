@@ -1,5 +1,5 @@
 let I;
-n.d(e, {
+(n.d(e, {
     Sz: () => R,
     Vg: () => v,
     ZP: () => C,
@@ -8,7 +8,7 @@ n.d(e, {
     rh: () => y
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var i,
     r = n(317381),
     l = n(592125),
@@ -25,7 +25,7 @@ function o(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             I = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (I = I.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -33,7 +33,7 @@ function o(t) {
             )),
             I.forEach(function (e) {
                 var I;
-                (I = n[e]),
+                ((I = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: I,
@@ -41,8 +41,8 @@ function o(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = I);
-            });
+                        : (t[e] = I));
+            }));
     }
     return t;
 }
@@ -107,13 +107,13 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             let a = l.Z.getChannel(t);
             if (null == a || !a.isPrivate()) continue;
             if (_ && a.type === N.d4z.GROUP_DM) {
-                r.push({
+                (r.push({
                     type: 'GROUP_DM',
                     item: a,
                     isSuggested: !1
                 }),
                     O.numGroupDms++,
-                    S++;
+                    S++);
                 continue;
             }
             if (null == u.ZP.lastMessageId(a.id)) continue;
@@ -121,14 +121,14 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             if (null != E && !e.has(E) && !i.has(E)) {
                 let t = T.default.getUser(E);
                 if (null == t || t.bot || g(I, t.id)) continue;
-                i.add(t.id),
+                (i.add(t.id),
                     r.push({
                         type: 'DM',
                         item: t,
                         isSuggested: !1
                     }),
                     O.numDms++,
-                    S++;
+                    S++);
             }
         }
     },
@@ -156,13 +156,13 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
                 guildId: void 0
             }).forEach((t) => {
                 let { record: e, score: i } = t;
-                n.push({
+                (n.push({
                     type: 'CHANNEL',
                     item: e,
                     isSuggested: !1,
                     score: i
                 }),
-                    I.numChannels++;
+                    I.numChannels++);
             });
     },
     V = (t) => {
@@ -194,13 +194,13 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             fuzzy: !1
         }).forEach((t) => {
             let { record: e, score: i } = t;
-            n.push({
+            (n.push({
                 type: 'GROUP_DM',
                 item: e,
                 isSuggested: !1,
                 score: i
             }),
-                I.numGroupDms++;
+                I.numGroupDms++);
         });
     },
     h = (t) => {
@@ -242,7 +242,7 @@ function U(t) {
             rows: _,
             counts: T
         };
-        n === S.Iq.EMBEDDED_APPLICATION &&
+        (n === S.Iq.EMBEDDED_APPLICATION &&
             (c(
                 P(o({}, t), {
                     includeGroupDms: !1,
@@ -252,14 +252,14 @@ function U(t) {
             d(P(o({}, t), { suggestedChannelIds: r }))),
             m(P(o({}, t), { suggestedUserIds: i })),
             c(P(o({}, t), { includeGroupDms: !0 })),
-            p(t);
+            p(t));
     } else {
         let t = {
             query: e,
             rows: _,
             counts: T
         };
-        n === S.Iq.EMBEDDED_APPLICATION && D(P(o({}, t), { inviteTargetType: n })),
+        (n === S.Iq.EMBEDDED_APPLICATION && D(P(o({}, t), { inviteTargetType: n })),
             V(
                 P(o({}, t), {
                     omitUserIds: I,
@@ -272,7 +272,7 @@ function U(t) {
                     omitUserIds: I,
                     shownUserIds: u
                 })
-            );
+            ));
     }
     return {
         rows: _,

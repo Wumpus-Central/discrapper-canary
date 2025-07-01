@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(846519),
     i = n(570140),
     a = n(147913);
@@ -21,12 +21,12 @@ class l extends a.Z {
         this.clearErrorTimeout.stop();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, 'clearErrorTimeout', new r.V7()),
             o(this, 'actions', { MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError() }),
             o(this, 'handleNoiseCancellationError', () => {
                 this.clearErrorTimeout.start(s, () => i.Z.dispatch({ type: 'MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET' }));
-            });
+            }));
     }
 }
 let c = new l();

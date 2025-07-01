@@ -28,7 +28,7 @@ function c(t, e) {
             return 1 === y(h, v);
         case '~':
         case '~>':
-            return (n = h), (a = (o = v).slice()), (u = o.slice()).length > 1 && u.pop(), (s = u.length - 1), p((c = parseInt(u[s], 10))) && (u[s] = c + 1 + ''), l(n, a) && -1 === y(n, u);
+            return ((n = h), (a = (o = v).slice()), (u = o.slice()).length > 1 && u.pop(), (s = u.length - 1), p((c = parseInt(u[s], 10))) && (u[s] = c + 1 + ''), l(n, a) && -1 === y(n, u));
         default:
             return 0 === y(h, v);
     }
@@ -68,7 +68,7 @@ function y(t, e) {
                     var n = e[r].match(/^[x*]$/i);
                     if (n && ((e[r] = t[r] = '0'), '*' === n[0] && r === e.length - 1)) for (var i = r; i < t.length; i++) t[i] = '0';
                 }
-                return d(e, t.length), [t, e];
+                return (d(e, t.length), [t, e]);
             })(t, e),
             n = r[0],
             i = r[1],
@@ -102,7 +102,7 @@ var v = {
                       if (((r.length > 0 && r.length <= 2) || n(!1), 1 === r.length)) return c(r[0], e);
                       var i = r[0],
                           o = r[1];
-                      return (h(i) && h(o)) || n(!1), c('>=' + i, e) && c('<=' + o, e);
+                      return ((h(i) && h(o)) || n(!1), c('>=' + i, e) && c('<=' + o, e));
                   })((r = u[0].trim()), i)
         );
     }

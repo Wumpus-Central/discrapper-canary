@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     rK: () => E,
     tR: () => y,
     tj: () => p
@@ -9,7 +9,7 @@ n.d(t, {
     n(539854),
     n(642613),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(913527),
     i = n.n(r),
     a = n(55935);
@@ -55,13 +55,13 @@ class y {
         return (0, a.vc)(e.locale(i().locale()), this.labelFormat);
     }
     _generateTimeOptions() {
-        (this.options = []), (this._index = {});
+        ((this.options = []), (this._index = {}));
         let e = i()(h),
             t = i()(e).add(1, 'day'),
             n = i()(e);
         for (; n < t; ) {
             let e = this._createNewOption(n.clone());
-            this.options.push(e), (this._index[e.value.unix()] = e.value), n.add(this.intervalInMinutes, 'minutes');
+            (this.options.push(e), (this._index[e.value.unix()] = e.value), n.add(this.intervalInMinutes, 'minutes'));
         }
     }
     _createNewOption(e) {
@@ -116,6 +116,6 @@ class y {
     }
     constructor({ intervalInMinutes: e = m, labelFormat: t = g } = {}) {
         if ((o(this, 'intervalInMinutes', void 0), o(this, 'labelFormat', void 0), o(this, 'options', []), o(this, '_index', {}), e <= 0)) throw Error('intervalInMinutes should be positive number, got '.concat(e));
-        (this.intervalInMinutes = e), (this.labelFormat = t), this._generateTimeOptions();
+        ((this.intervalInMinutes = e), (this.labelFormat = t), this._generateTimeOptions());
     }
 }

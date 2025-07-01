@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(49124), n(415506);
+(n.d(t, { Z: () => O }), n(49124), n(415506));
 var r,
     i,
     l,
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -73,7 +73,7 @@ var f = (((i = f || {}).DAMAGED = 'http://schema.org/DamagedCondition'), (i.NEW 
 function m(e) {
     return d('Offer', e);
 }
-(m.ItemConditions = f), (m.ItemAvailability = g);
+((m.ItemConditions = f), (m.ItemAvailability = g));
 var b = (((a = b || {}).YEARLY = 'ANN'), (a.MONTHLY = 'MON'), a);
 function _(e) {
     return d('QuantitativeValue', e);
@@ -89,7 +89,7 @@ class E extends (r = s.Component) {
         });
     }
 }
-c(E, 'Thing', p),
+(c(E, 'Thing', p),
     c(E, 'Brand', p),
     c(E, 'Person', function (e) {
         return d('Person', e);
@@ -114,5 +114,5 @@ c(E, 'Thing', p),
     c(E, 'QuantitativeValue', _),
     c(E, 'UnitPriceSpecification', function (e) {
         return d('UnitPriceSpecification', e);
-    });
+    }));
 let O = E;

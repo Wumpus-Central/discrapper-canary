@@ -35,7 +35,7 @@ function m(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function m(e) {
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    (i = n[t]),
+                                    ((i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
@@ -51,8 +51,8 @@ function m(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = i);
-                                });
+                                            : (e[t] = i));
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -95,14 +95,14 @@ function m(e) {
         confirmText: t ? p.intl.string(p.t.TxyTbm) : void 0,
         onConfirmClick: t
             ? () => {
-                  O('unlock'), o.Z.setInputLocked(!1, (0, d.getPID)());
+                  (O('unlock'), o.Z.setInputLocked(!1, (0, d.getPID)()));
               }
             : void 0,
         onNotificationShow: () => {
-            y(), t && (0, l.EW)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
+            (y(), t && (0, l.EW)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX));
         },
         onNotificationClick: (e, t) => {
-            O('unlock'), a.default.isOverlayOOPEnabledForPid((0, d.getPID)()) ? o.Z.setInputLocked(!1, (0, d.getPID)()) : c.default.isInstanceLocked() && o.Z.setInstanceLocked(!1);
+            (O('unlock'), a.default.isOverlayOOPEnabledForPid((0, d.getPID)()) ? o.Z.setInputLocked(!1, (0, d.getPID)()) : c.default.isInstanceLocked() && o.Z.setInstanceLocked(!1));
         },
         onDismissClick: () => {
             O('dismiss');

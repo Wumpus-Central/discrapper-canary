@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => B }), n(388685), n(781311), n(539854), n(642613);
+(n.d(t, { Z: () => B }), n(388685), n(781311), n(539854), n(642613));
 var i,
     l,
     o,
@@ -22,17 +22,17 @@ let x = !1,
     j = 0,
     O = [],
     E = !1,
-    I = new Set(),
-    S = null;
+    S = new Set(),
+    I = null;
 function P() {
-    (v = ''), (j = 0), (O = []), (I = new Set()), (x = !1), (S = null);
+    ((v = ''), (j = 0), (O = []), (S = new Set()), (x = !1), (I = null));
 }
 function Z(e) {
-    (v = e), (j = 0), N();
+    ((v = e), (j = 0), N());
 }
 function N() {
     if (!x) return !1;
-    let e = m.Z.getChannel(S);
+    let e = m.Z.getChannel(I);
     if (0 === v.trim().length)
         return (
             null != r && r.clearQuery(),
@@ -123,25 +123,25 @@ function w(e) {
                 comparator: r
             });
     }
-    (O = n), U.emitChange();
+    ((O = n), U.emitChange());
 }
 function R() {
-    return null != r && (r.destroy(), (r = null)), c.Z.getSearchContext(w, 1000);
+    return (null != r && (r.destroy(), (r = null)), c.Z.getSearchContext(w, 1000));
 }
 function k(e) {
     if (e.key !== C.vTt) return !1;
-    (x = !0), T(), (r = R()), (S = null), Z('');
+    ((x = !0), T(), (r = R()), (I = null), Z(''));
 }
 function M(e) {
     if (e.key !== C.vTt) return !1;
-    D();
+    L();
 }
-function D() {
-    null != r && (r.destroy(), (r = null)), P();
+function L() {
+    (null != r && (r.destroy(), (r = null)), P());
 }
-class L extends (i = a.ZP.Store) {
+class D extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(y.default, m.Z, _.Z, u.Z, g.Z), this.syncWith([y.default, m.Z], N), this.syncWith([_.Z], T);
+        (this.waitFor(y.default, m.Z, _.Z, u.Z, g.Z), this.syncWith([y.default, m.Z], N), this.syncWith([_.Z], T));
     }
     getResults() {
         return O;
@@ -150,7 +150,7 @@ class L extends (i = a.ZP.Store) {
         return E;
     }
     getSelectedUsers() {
-        return I;
+        return S;
     }
     getQuery() {
         return v;
@@ -159,22 +159,22 @@ class L extends (i = a.ZP.Store) {
         return {
             query: v,
             selectedRow: j,
-            selectedUsers: I,
+            selectedUsers: S,
             results: O,
             hasFriends: E
         };
     }
 }
-(o = 'PrivateChannelRecipientsInviteStore'),
-    (l = 'displayName') in L
-        ? Object.defineProperty(L, l, {
+((o = 'PrivateChannelRecipientsInviteStore'),
+    (l = 'displayName') in D
+        ? Object.defineProperty(D, l, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (L[l] = o);
-let U = new L(s.Z, {
+        : (D[l] = o));
+let U = new D(s.Z, {
         CONNECTION_OPEN: function () {
             P();
         },
@@ -182,29 +182,29 @@ let U = new L(s.Z, {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
             let r = x;
-            return P(), (x = r), (S = n), N();
+            return (P(), (x = r), (I = n), N());
         },
         MODAL_PUSH: k,
         SHOW_ACTION_SHEET: k,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (x = !0), T(), (r = R()), (S = e.channelId), Z('');
+            ((x = !0), T(), (r = R()), (I = e.channelId), Z(''));
         },
         MODAL_POP: M,
         HIDE_ACTION_SHEET: M,
-        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: D,
+        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            (S = e.channelId), Z(e.query);
+            ((I = e.channelId), Z(e.query));
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
             j = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
-            I.add(t), (I = new Set(I));
+            (S.add(t), (S = new Set(S)));
         },
         PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function (e) {
             let { userId: t } = e;
-            I.delete(t), (I = new Set(I));
+            (S.delete(t), (S = new Set(S)));
         }
     }),
     B = U;

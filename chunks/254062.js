@@ -6,10 +6,10 @@ e.exports = function (e) {
         var s = Object(t);
         if (!i(t)) {
             var l = r(n, 3);
-            (t = a(t)),
+            ((t = a(t)),
                 (n = function (e) {
                     return l(s[e], e, s);
-                });
+                }));
         }
         var c = e(t, n, o);
         return c > -1 ? s[l ? t[c] : c] : void 0;

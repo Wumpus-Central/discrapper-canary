@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     eR: () => m,
     hW: () => b,
     is: () => p
 }),
-    n(388685);
+    n(388685));
 var i = n(73800),
     r = n(442837),
     s = n(304809),
@@ -39,9 +39,9 @@ function p(e, t) {
         a = (0, r.e7)([l.Z], () => l.Z.volume),
         o = (0, r.e7)([l.Z], () => l.Z.isMuted),
         d = (0, i.useRef)(!0);
-    (0, i.useEffect)(() => {
+    ((0, i.useEffect)(() => {
         (async () => {
-            null != n.current && g(n), !t && null != s.current && ((n.current = await u(e, s.current)), null != n.current && (n.current.loop = !0), d.current || g(n));
+            (null != n.current && g(n), !t && null != s.current && ((n.current = await u(e, s.current)), null != n.current && (n.current.loop = !0), d.current || g(n)));
         })();
     }, [t, e]),
         (0, i.useEffect)(() => {
@@ -49,10 +49,10 @@ function p(e, t) {
         }, [o, a]),
         (0, i.useEffect)(
             () => () => {
-                (d.current = !1), g(n);
+                ((d.current = !1), g(n));
             },
             []
-        );
+        ));
 }
 let h = n(956294),
     f = {

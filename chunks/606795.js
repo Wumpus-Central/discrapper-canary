@@ -52,12 +52,12 @@ function f(e, t, n) {
                 var r = n.next;
                 if (void 0 !== r)
                     for (; void 0 !== r; )
-                        (o = {
+                        ((o = {
                             name: r.name,
                             styles: r.styles,
                             next: o
                         }),
-                            (r = r.next);
+                            (r = r.next));
                 return n.styles + ';';
             }
             return (function (e, t, n) {
@@ -86,7 +86,7 @@ function f(e, t, n) {
             if (void 0 !== e) {
                 var i = o,
                     a = n(e);
-                return (o = i), f(e, t, a);
+                return ((o = i), f(e, t, a));
             }
     }
     if (null == t) return n;
@@ -102,7 +102,7 @@ function v(e, t, n) {
     o = void 0;
     var u = e[0];
     null == u || void 0 === u.raw ? ((a = !1), (s += f(n, t, u))) : (s += u[0]);
-    for (var l = 1; l < e.length; l++) (s += f(n, t, e[l])), a && (s += u[l]);
+    for (var l = 1; l < e.length; l++) ((s += f(n, t, e[l])), a && (s += u[l]));
     h.lastIndex = 0;
     for (var c = ''; null !== (i = h.exec(s)); ) c += '-' + i[1];
     return {

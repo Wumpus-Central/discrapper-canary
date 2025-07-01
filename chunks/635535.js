@@ -1,4 +1,4 @@
-(t.createDateTimeFormat = c), (t.createDateTimeFormats = u);
+((t.createDateTimeFormat = c), (t.createDateTimeFormats = u));
 var n = /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
     r = /[QxXVOvZASjgFDwWIQqH]/,
     i = {
@@ -25,32 +25,32 @@ function c(e) {
                     case 'E':
                     case 'e':
                     case 'c':
-                        return (t.weekday = i.weekday[e.length - 1]), '{weekday}';
+                        return ((t.weekday = i.weekday[e.length - 1]), '{weekday}');
                     case 'G':
-                        return (t.era = i.era[e.length - 1]), '{era}';
+                        return ((t.era = i.era[e.length - 1]), '{era}');
                     case 'y':
                     case 'Y':
                     case 'u':
                     case 'U':
-                        return (t.year = 2 === e.length ? '2-digit' : 'numeric'), '{year}';
+                        return ((t.year = 2 === e.length ? '2-digit' : 'numeric'), '{year}');
                     case 'M':
                     case 'L':
-                        return (t.month = i.month[e.length - 1]), '{month}';
+                        return ((t.month = i.month[e.length - 1]), '{month}');
                     case 'd':
-                        return (t.day = 2 === e.length ? '2-digit' : 'numeric'), '{day}';
+                        return ((t.day = 2 === e.length ? '2-digit' : 'numeric'), '{day}');
                     case 'a':
                         return '{ampm}';
                     case 'h':
                     case 'H':
                     case 'k':
                     case 'K':
-                        return (t.hour = 2 === e.length ? '2-digit' : 'numeric'), '{hour}';
+                        return ((t.hour = 2 === e.length ? '2-digit' : 'numeric'), '{hour}');
                     case 'm':
-                        return (t.minute = 2 === e.length ? '2-digit' : 'numeric'), '{minute}';
+                        return ((t.minute = 2 === e.length ? '2-digit' : 'numeric'), '{minute}');
                     case 's':
-                        return (t.second = 2 === e.length ? '2-digit' : 'numeric'), '{second}';
+                        return ((t.second = 2 === e.length ? '2-digit' : 'numeric'), '{second}');
                     case 'z':
-                        return (t.timeZoneName = e.length < 4 ? 'short' : 'long'), '{timeZoneName}';
+                        return ((t.timeZoneName = e.length < 4 ? 'short' : 'long'), '{timeZoneName}');
                 }
             })),
             (t.pattern = t.pattern.replace(/'([^']*)'/g, function (e, t) {
@@ -77,7 +77,7 @@ function u(e) {
     function m(e, t) {
         var n = Array((e.match(/M/g) || []).length + 1),
             r = Array((e.match(/E/g) || []).length + 1);
-        return n.length > 2 && (t = t.replace(/(M|L)+/, n.join('$1'))), r.length > 2 && (t = t.replace(/([Eec])+/, r.join('$1'))), t;
+        return (n.length > 2 && (t = t.replace(/(M|L)+/, n.join('$1'))), r.length > 2 && (t = t.replace(/([Eec])+/, r.join('$1'))), t);
     }
     for (t in o) o.hasOwnProperty(t) && (r = c((n = m(t, o[t])))) && (_.push(r), s(r) ? h.push(n) : l(r) && p.push(n));
     for (i = 0; i < p.length; i += 1)

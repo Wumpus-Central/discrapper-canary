@@ -9,7 +9,7 @@ r(
     {
         reject: function (e) {
             var t = o.f(this);
-            return (0, t.reject)(e), t.promise;
+            return ((0, t.reject)(e), t.promise);
         }
     }
 );

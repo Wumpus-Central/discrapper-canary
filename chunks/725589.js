@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: 'fr',
     pluralRuleFunction: function (e, t) {
         return t ? (1 == e ? 'one' : 'other') : e >= 0 && e < 2 ? 'one' : 'other';
@@ -183,4 +183,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({
         locale: 'fr-YT',
         parentLocale: 'fr'
-    });
+    }));

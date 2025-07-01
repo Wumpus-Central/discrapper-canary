@@ -1,4 +1,4 @@
-n.d(t, { M: () => x }), n(388685);
+(n.d(t, { M: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(286379),
@@ -20,24 +20,24 @@ function C(e) {
     let { senderId: t, channelId: n, warningId: l } = e,
         { isIgnored: a } = (0, o.cj)([p.Z], () => ({ isIgnored: p.Z.isIgnored(t) }), [t]),
         c = i.useCallback(() => {
-            (0, m.qc)({
+            ((0, m.qc)({
                 channelId: n,
                 warningId: l,
                 senderId: t,
                 warningType: f.pj.STRANGER_DANGER,
                 cta: m.NM.USER_MODAL_IGNORE
             }),
-                s.Z.ignoreUser(t, 'web_stranger_danger_more', n);
+                s.Z.ignoreUser(t, 'web_stranger_danger_more', n));
         }, [n, l, t]),
         u = i.useCallback(() => {
-            (0, m.qc)({
+            ((0, m.qc)({
                 channelId: n,
                 warningId: l,
                 senderId: t,
                 warningType: f.pj.STRANGER_DANGER,
                 cta: m.NM.USER_MODAL_UNIGNORE
             }),
-                s.Z.unignoreUser(t, 'web_stranger_danger_more', n);
+                s.Z.unignoreUser(t, 'web_stranger_danger_more', n));
         }, [n, l, t]);
     return (0, r.jsx)(d.ZP, {
         title: y.intl.string(y.t.avyV7O),
@@ -53,9 +53,9 @@ function x(e) {
             (0, h.T)(t, [x]);
         }, [t, x]),
         E = (0, b.C2)(),
-        I = i.useCallback(
+        S = i.useCallback(
             (e) => () => {
-                s.Z.blockUser(v, { location: b.zr }).then(() => {
+                (s.Z.blockUser(v, { location: b.zr }).then(() => {
                     O();
                 }),
                     (0, m.qc)({
@@ -64,20 +64,20 @@ function x(e) {
                         senderId: v,
                         warningType: f.pj.STRANGER_DANGER,
                         cta: e
-                    });
+                    }));
             },
             [O, t, x, v]
         );
     i.useEffect(() => {
-        (0, m.MC)(_.rMx.SAFETY_WARNING_VIEWED, {
+        ((0, m.MC)(_.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: x,
             senderId: v,
             warningType: f.pj.STRANGER_DANGER
         }),
-            c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
+            c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
     }, [t, x, v]);
-    let S = () => {
+    let I = () => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
@@ -119,7 +119,7 @@ function x(e) {
                                         buttonText: y.intl.string(y.t['5QYPOz']),
                                         buttonColor: a.zxk.Colors.RED,
                                         onButtonPress: () => {
-                                            l(), P(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, S);
+                                            (l(), P(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, I));
                                         }
                                     },
                                     'block-button'
@@ -141,7 +141,7 @@ function x(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -149,7 +149,7 @@ function x(e) {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -157,24 +157,24 @@ function x(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({}, n)),
                         (s = s =
                             {
                                 userId: v,
-                                confirmBlock: I(e),
+                                confirmBlock: S(e),
                                 onCancel: () => {
-                                    null == l || l(),
+                                    (null == l || l(),
                                         (0, m.qc)({
                                             channelId: t,
                                             warningId: x,
                                             senderId: v,
                                             warningType: f.pj.STRANGER_DANGER,
                                             cta: i
-                                        });
+                                        }));
                                 }
                             }),
                         Object.getOwnPropertyDescriptors
@@ -207,14 +207,14 @@ function x(e) {
                 text: y.intl.string(y.t['Qk/c4+']),
                 color: a.zxk.Colors.BRAND,
                 onclick: () => {
-                    S(),
+                    (I(),
                         (0, m.qc)({
                             channelId: t,
                             warningId: x,
                             senderId: v,
                             warningType: f.pj.STRANGER_DANGER,
                             cta: m.NM.OPEN_MORE_TIPS
-                        });
+                        }));
                 }
             },
             ...(j

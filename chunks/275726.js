@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     V: () => i,
     u: () => r
 }),
-    n(388685);
+    n(388685));
 var r = (function (e) {
     return (
         (e[(e.DEFAULT = 0)] = 'DEFAULT'),

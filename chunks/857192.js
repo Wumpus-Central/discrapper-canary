@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => S }), n(997841);
+(n.r(t), n.d(t, { default: () => S }), n(997841));
 var r,
     i = n(261470),
     a = n(213919),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -98,7 +98,7 @@ let m = (() => {
     },
     b = h({}, E);
 function y(e) {
-    (b = h({}, E, b, e)), m.set(b.sourceMapsEnabled), l.K.set(g, b);
+    ((b = h({}, E, b, e)), m.set(b.sourceMapsEnabled), l.K.set(g, b));
 }
 function O(e) {
     let { settings: t } = e;
@@ -111,7 +111,7 @@ function I(e) {
     var t;
     let n = ((null != (t = e.user.flags) ? t : 0) & _.xW$.STAFF) === _.xW$.STAFF,
         r = n || null != e.user.personal_connection_id;
-    n && m.set(b.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() });
+    (n && m.set(b.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() }));
 }
 class T extends (r = o.ZP.Store) {
     initialize() {

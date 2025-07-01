@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(73800);
 let s = (e) => {
     let [t, n] = r.useState(!1);
@@ -6,7 +6,7 @@ let s = (e) => {
         isFocused: t,
         handleFocus: r.useCallback(
             (t) => {
-                e(t), n(!0);
+                (e(t), n(!0));
             },
             [e, n]
         ),

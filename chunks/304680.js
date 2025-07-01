@@ -12,11 +12,11 @@ var r = n(570140),
     a = n(569550),
     o = n(226961);
 function s(e) {
-    r.Z.dispatch({
+    (r.Z.dispatch({
         type: 'RTC_DEBUG_MODAL_OPEN',
         section: e
     }),
-        r.Z.dispatch({ type: 'RTC_DEBUG_POPOUT_WINDOW_OPEN' });
+        r.Z.dispatch({ type: 'RTC_DEBUG_POPOUT_WINDOW_OPEN' }));
 }
 function l() {
     r.Z.dispatch({ type: 'RTC_DEBUG_MODAL_CLOSE' });
@@ -31,11 +31,11 @@ function u(e) {
     });
 }
 function d(e) {
-    (0, a.Z)('connection_replay_log_enabled', e, o.ZP.shouldRecordNextConnection()),
+    ((0, a.Z)('connection_replay_log_enabled', e, o.ZP.shouldRecordNextConnection()),
         r.Z.dispatch({
             type: 'RTC_DEBUG_SET_RECORDING_FLAG',
             value: e
-        });
+        }));
 }
 function f(e, t, n) {
     r.Z.dispatch({

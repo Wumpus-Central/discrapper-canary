@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(73800),
     i = n(268350);
 function l(e) {
@@ -8,7 +8,7 @@ function l(e) {
             let t = !1;
             return (
                 (async () => {
-                    n(!0), await (0, i.pk)(e), t || n(!1);
+                    (n(!0), await (0, i.pk)(e), t || n(!1));
                 })(),
                 () => {
                     t = !0;

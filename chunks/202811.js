@@ -39,9 +39,9 @@ function c(e, t, n = Infinity, r = Infinity, o = (0, i.i)()) {
             break;
         }
         let t = m[e];
-        (p[e] = c(e, t, f - 1, r, o)), h++;
+        ((p[e] = c(e, t, f - 1, r, o)), h++);
     }
-    return l(t), p;
+    return (l(t), p);
 }
 function u(e, t) {
     try {

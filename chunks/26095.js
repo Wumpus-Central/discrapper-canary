@@ -40,7 +40,7 @@ var r = n(165566),
 function c(e) {
     return r.isMemo(e) ? s : l[e.$$typeof] || i;
 }
-(l[r.ForwardRef] = o), (l[r.Memo] = s);
+((l[r.ForwardRef] = o), (l[r.Memo] = s));
 var u = Object.defineProperty,
     d = Object.getOwnPropertyNames,
     f = Object.getOwnPropertySymbols,

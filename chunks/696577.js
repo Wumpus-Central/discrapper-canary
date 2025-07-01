@@ -30,13 +30,13 @@ function I(e) {
         }),
         f = i.useCallback(
             (e) => {
-                e.stopPropagation(), d();
+                (e.stopPropagation(), d());
             },
             [d]
         ),
         b = i.useCallback(
             (e) => {
-                e.stopPropagation(), p();
+                (e.stopPropagation(), p());
             },
             [p]
         );
@@ -77,7 +77,7 @@ function v(e) {
         }),
         c = i.useCallback(
             (e) => {
-                e.stopPropagation(), s();
+                (e.stopPropagation(), s());
             },
             [s]
         );

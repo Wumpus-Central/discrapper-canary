@@ -39,11 +39,11 @@ function h(e, t) {
                 var n = _(t, a[t]);
                 'float' === t ? (t = 'cssFloat') : f.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
             }
-        h.forEach(function (t, n) {
+        (h.forEach(function (t, n) {
             e.setAttribute(t, d[n]);
         }),
             void 0 !== s && (e.scrollTop = s),
-            void 0 !== l && (e.scrollLeft = l);
+            void 0 !== l && (e.scrollLeft = l));
     });
 }
 var m = {
@@ -141,14 +141,14 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                     })),
                 u.each(o, function (e, t) {
                     if ('transform' === t)
-                        s.push([e || '']),
+                        (s.push([e || '']),
                             l.push(function (e) {
                                 return [e, '' === e];
-                            });
+                            }));
                     else if (b.test(t)) {
                         if ((delete o[t], u.is.und(e))) return;
                         var n = y.test(t) ? 'px' : O.test(t) ? 'deg' : '';
-                        s.push(u.toArray(e)),
+                        (s.push(u.toArray(e)),
                             l.push(
                                 'rotate3d' === t
                                     ? function (e) {
@@ -171,19 +171,19 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                                               I(e, +!!t.startsWith('scale'))
                                           ];
                                       }
-                            );
+                            ));
                     }
                 }),
                 s.length && (o.transform = new S(s, l)),
                 e.call(this, o) || this
             );
         }
-        return d(t, e), t;
+        return (d(t, e), t);
     })(c.AnimatedObject),
     S = (function (e) {
         function t(t, n) {
             var r;
-            return ((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r;
+            return (((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r);
         }
         d(t, e);
         var n = t.prototype;
@@ -201,38 +201,38 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                             o = e.transforms[i](u.is.arr(a) ? a : r.map(u.getFluidValue)),
                             s = o[0],
                             l = o[1];
-                        (t += ' ' + s), (n = n && l);
+                        ((t += ' ' + s), (n = n && l));
                     }),
                     n ? 'none' : t
                 );
             }),
             (n.addChild = function (e) {
                 var t = this;
-                this._children.size ||
+                (this._children.size ||
                     u.each(this.inputs, function (e) {
                         return u.each(e, function (e) {
                             var n = u.getFluidConfig(e);
                             n && n.addChild(t);
                         });
                     }),
-                    this._children.add(e);
+                    this._children.add(e));
             }),
             (n.removeChild = function (e) {
                 var t = this;
-                this._children.delete(e),
+                (this._children.delete(e),
                     this._children.size ||
                         u.each(this.inputs, function (e) {
                             return u.each(e, function (e) {
                                 var n = u.getFluidConfig(e);
                                 n && n.removeChild(t);
                             });
-                        });
+                        }));
             }),
             (n.onParentChange = function (e) {
-                'change' == e.type && (this._value = null),
+                ('change' == e.type && (this._value = null),
                     u.each(this._children, function (t) {
                         t.onParentChange(e);
-                    });
+                    }));
             }),
             t
         );
@@ -249,10 +249,10 @@ var N = c.createHost(A, {
         return new T(e);
     },
     getComponentProps: function (e) {
-        return e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']);
+        return (e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']));
     }
 }).animated;
-Object.keys(a).forEach(function (e) {
+(Object.keys(a).forEach(function (e) {
     'default' !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
@@ -262,4 +262,4 @@ Object.keys(a).forEach(function (e) {
         });
 }),
     (t.a = N),
-    (t.animated = N);
+    (t.animated = N));

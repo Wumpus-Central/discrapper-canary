@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(953529), n(388685);
+(n.d(t, { Z: () => v }), n(953529), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -20,7 +20,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -36,8 +36,8 @@ function x(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -154,7 +154,7 @@ function O(e) {
         I = l.useCallback(
             async (e) => {
                 if (null == a || S) return;
-                T(!0), _(null);
+                (T(!0), _(null));
                 let { id: l, storageHash: i, description: s } = e,
                     c = (0, u.fD)({
                         userId: a.id,
@@ -200,7 +200,7 @@ function O(e) {
         L = l.useCallback(
             (e, t, l, a, s) => {
                 let c = t + 1 < i.length ? t + 1 : t - 1;
-                (N.current = c >= 0 ? O.current[c] : v.current),
+                ((N.current = c >= 0 ? O.current[c] : v.current),
                     e.shiftKey
                         ? (0, d.B)(l)
                         : (P(!0),
@@ -218,12 +218,12 @@ function O(e) {
                                                       r,
                                                       l = {},
                                                       a = Object.keys(e);
-                                                  for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                                                  for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                                                   return l;
                                               })(e, t);
                                           if (Object.getOwnPropertySymbols) {
                                               var a = Object.getOwnPropertySymbols(e);
-                                              for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                                              for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
                                           }
                                           return l;
                                       })(t, ['onClose']);
@@ -236,17 +236,17 @@ function O(e) {
                                               avatarDescription: s,
                                               onConfirmDelete: () => (0, d.B)(l),
                                               onClose: async () => {
-                                                  await n(),
+                                                  (await n(),
                                                       requestAnimationFrame(() => {
                                                           P(!1);
-                                                      });
+                                                      }));
                                               }
                                           },
                                           i
                                       )
                                   );
                               };
-                          }));
+                          })));
             },
             [i]
         );

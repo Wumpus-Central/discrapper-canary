@@ -5,7 +5,7 @@ let a = {
         var e,
             t = String(null == n ? void 0 : n.unit),
             a = Number(i);
-        return (e = 'date' === t ? (3 === a || 23 === a ? '-є' : '-е') : 'minute' === t || 'second' === t || 'hour' === t ? '-а' : '-й'), a + e;
+        return ((e = 'date' === t ? (3 === a || 23 === a ? '-є' : '-е') : 'minute' === t || 'second' === t || 'hour' === t ? '-а' : '-й'), a + e);
     },
     era: (0, t.Z)({
         values: {

@@ -24,7 +24,7 @@ let l = 900000,
                     })
                 ).body,
                 a = null != (c = e.wait_ms_until_next_fetch) ? c : l;
-            return null != a && (e.expires_at = Date.now() + a), e;
+            return (null != a && (e.expires_at = Date.now() + a), e);
         } catch (e) {
             throw new a.Hx(e);
         }

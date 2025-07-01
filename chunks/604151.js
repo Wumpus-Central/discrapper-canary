@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -62,7 +62,7 @@ let E = function (e, t) {
                     return (t) => e(t);
                 });
         }
-        m && (0, l.eH)(), (0, c.Z)(I, e, E, m);
+        (m && (0, l.eH)(), (0, c.Z)(I, e, E, m));
     }
     function I() {
         i.Z.dispatch({

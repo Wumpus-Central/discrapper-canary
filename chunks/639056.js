@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -27,7 +27,7 @@ function E(e) {
         j = p.ZP.getDisplayName(r);
     if (null != a) {
         let e;
-        (e = new Date(a.status === b.O0b.PAUSED && null != a.pauseEndsAt ? a.pauseEndsAt : a.currentPeriodEnd)), (t = (0, p.N1)(e, d));
+        ((e = new Date(a.status === b.O0b.PAUSED && null != a.pauseEndsAt ? a.pauseEndsAt : a.currentPeriodEnd)), (t = (0, p.N1)(e, d)));
     }
     return (0, i.jsxs)('div', {
         className: x.accountCreditRow,

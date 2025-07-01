@@ -40,7 +40,7 @@ function g(e) {
             n
         );
     };
-    s()(null != r, 'Expected plan to selected'), s()(null != g, 'Expected selectedSkuId'), s()(null != y, 'Step should be set');
+    (s()(null != r, 'Expected plan to selected'), s()(null != g, 'Expected selectedSkuId'), s()(null != y, 'Step should be set'));
     let b = null == v ? void 0 : v.map((e) => Z(e)),
         I =
             null != S && null != P
@@ -56,13 +56,13 @@ function g(e) {
                 className: L.modalFooter,
                 children: (0, i.jsx)(c.y, {
                     onStepChange: (e) => {
-                        null != P &&
+                        (null != P &&
                             null != S &&
                             p.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: P.id,
                                 reward_sku_id: S.skuId
                             }),
-                            n(e);
+                            n(e));
                     },
                     onBackClick: () => n(f.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,

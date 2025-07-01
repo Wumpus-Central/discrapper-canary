@@ -20,6 +20,6 @@ class s {
         return new s(e);
     }
     constructor(e) {
-        o(this, 'subblocks', void 0), (this.type = i.z.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === r.O.CATEGORY ? a.H.fromServer(e) : e)));
+        (o(this, 'subblocks', void 0), (this.type = i.z.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === r.O.CATEGORY ? a.H.fromServer(e) : e))));
     }
 }

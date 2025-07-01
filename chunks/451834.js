@@ -37,7 +37,7 @@ let g = (e) => {
                             variant: 'text-sm/semibold',
                             children: p.intl.format(p.t.QEW8Mj, {
                                 onClick: () => {
-                                    o({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel({ recipientIds: n });
+                                    (o({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel({ recipientIds: n }));
                                 }
                             })
                         })

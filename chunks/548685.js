@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+(n.d(t, { Z: () => k }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -41,14 +41,14 @@ let k = (e) => {
         Y = l.useRef(null),
         K = l.useCallback(
             (e) => {
-                G({
+                (G({
                     isShuffling: !1,
                     onOutroComplete: () => w(e)
                 }),
                     f.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
-                    });
+                    }));
             },
             [G, w, q]
         );
@@ -80,7 +80,7 @@ let k = (e) => {
                                                       for (var t = 1; t < arguments.length; t++) {
                                                           var n = null != arguments[t] ? arguments[t] : {},
                                                               r = Object.keys(n);
-                                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                                          ('function' == typeof Object.getOwnPropertySymbols &&
                                                               (r = r.concat(
                                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -88,7 +88,7 @@ let k = (e) => {
                                                               )),
                                                               r.forEach(function (t) {
                                                                   var r;
-                                                                  (r = n[t]),
+                                                                  ((r = n[t]),
                                                                       t in e
                                                                           ? Object.defineProperty(e, t, {
                                                                                 value: r,
@@ -96,8 +96,8 @@ let k = (e) => {
                                                                                 configurable: !0,
                                                                                 writable: !0
                                                                             })
-                                                                          : (e[t] = r);
-                                                              });
+                                                                          : (e[t] = r));
+                                                              }));
                                                       }
                                                       return e;
                                                   })({}, e)),
@@ -150,12 +150,12 @@ let k = (e) => {
                                                 color: s.Ttl.PRIMARY,
                                                 buttonRef: Y,
                                                 onClick: () => {
-                                                    G({
+                                                    (G({
                                                         isShuffling: !0,
                                                         onOutroComplete: H,
                                                         returnRef: Y
                                                     }),
-                                                        f.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
+                                                        f.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q }));
                                                 },
                                                 disabled: U !== S.g.MOUNTED && U !== S.g.FINISHED,
                                                 children: j.intl.string(j.t.X3tnc3)

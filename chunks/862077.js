@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -35,7 +35,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -116,7 +116,7 @@ function T(e) {
                                             (0, r.jsx)(g.Z, {
                                                 isBlocked: w,
                                                 onClick: () => {
-                                                    C(),
+                                                    (C(),
                                                         (0, f.pQ)(
                                                             I(
                                                                 {
@@ -125,13 +125,13 @@ function T(e) {
                                                                 },
                                                                 L
                                                             )
-                                                        );
+                                                        ));
                                                 }
                                             }),
                                             (0, r.jsx)(m.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    C(),
+                                                    (C(),
                                                         (0, f.pQ)(
                                                             I(
                                                                 {
@@ -140,7 +140,7 @@ function T(e) {
                                                                 },
                                                                 L
                                                             )
-                                                        );
+                                                        ));
                                                 }
                                             })
                                         ]

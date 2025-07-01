@@ -1,4 +1,4 @@
-a.d(t, { default: () => z }), a(388685), a(539854);
+(a.d(t, { default: () => z }), a(388685), a(539854));
 var n = a(255367),
     l = a(73800),
     i = a(658722),
@@ -87,7 +87,7 @@ function k(e) {
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, f.q)({
+                        ((0, f.q)({
                             href: (null == i ? void 0 : i.name) != null ? ''.concat('https://www.igdb.com/search?utf8=\u2713&q=').concat(encodeURIComponent(i.name)) : 'https://www.igdb.com',
                             trusted: !0
                         }),
@@ -96,7 +96,7 @@ function k(e) {
                                 submitted: !0,
                                 viewId: l
                             }),
-                            a();
+                            a());
                     },
                     children: N.intl.string(N.t.RSATCA)
                 })
@@ -221,7 +221,7 @@ function C(e) {
                                     },
                                     size: c.E1j.Sizes.MEDIUM,
                                     onClear: () => {
-                                        null === S && z(x), C('');
+                                        (null === S && z(x), C(''));
                                     },
                                     placeholder: N.intl.string(N.t.UedRLy)
                                 }),
@@ -247,14 +247,14 @@ function C(e) {
                         fullWidth: !0,
                         onClick: () => {
                             let e = null != S && S.length > 0;
-                            (0, j.MH)({
+                            ((0, j.MH)({
                                 applicationId: x,
                                 suggestedGameApplicationId: e ? S : void 0,
                                 suggestedGameName: e ? void 0 : k,
                                 submitted: !0,
                                 viewId: I
                             }),
-                                f();
+                                f());
                         },
                         disabled: y,
                         children: N.intl.string(N.t.geKm7u)
@@ -298,13 +298,13 @@ function w(e) {
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, j.MH)({
+                        ((0, j.MH)({
                             applicationId: t,
                             submitted: !0,
                             feedback: s,
                             viewId: i
                         }),
-                            a();
+                            a());
                     },
                     disabled: 0 === s.length,
                     children: N.intl.string(N.t.geKm7u)

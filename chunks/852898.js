@@ -46,7 +46,7 @@ function p(e) {
                         t = p.name;
                     [l.b.TWITCH, l.b.YOUTUBE].includes(p.type) && (t = ''.concat(o.Z.get(p.type).name, ' - ').concat(t));
                     let n = () => {
-                        d.Z.setSection(m.pNK.INTEGRATIONS), a.Z.setSection(m.b4C.APPLICATION, e);
+                        (d.Z.setSection(m.pNK.INTEGRATIONS), a.Z.setSection(m.b4C.APPLICATION, e));
                     };
                     return g.intl.format(g.t.FuXsWl, {
                         name: t,

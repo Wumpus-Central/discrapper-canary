@@ -1,4 +1,4 @@
-r.d(t, { default: () => S }), r(388685), r(953529);
+(r.d(t, { default: () => S }), r(388685), r(953529));
 var n = r(255367),
     l = r(73800),
     o = r(990547),
@@ -23,19 +23,19 @@ function S(e) {
         w = l.useRef(null),
         T = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         C = l.useRef(null);
-    l.useEffect(() => {
-        c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE), s.default.track(_.rMx.OPEN_MODAL, { type: 'Claim Age Gate' });
+    (l.useEffect(() => {
+        (c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE), s.default.track(_.rMx.OPEN_MODAL, { type: 'Claim Age Gate' }));
     }, []),
         l.useEffect(() => {
             (null == T ? void 0 : T.nsfwAllowed) != null && r();
-        }, [T, r]);
+        }, [T, r]));
     let h = async (e) => {
             if ((e.preventDefault(), null != S)) {
                 v(!0);
                 try {
                     await p.Av(S, _.jXE.CLAIM_ACCOUNT_MODAL);
                 } catch (e) {
-                    if (null != e.body && null != e.body.date_of_birth) c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE_UNDERAGE), p.wE(d.L0.CLAIM_ACCOUNT), p.hp(d.L0.CLAIM_ACCOUNT), r();
+                    if (null != e.body && null != e.body.date_of_birth) (c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE_UNDERAGE), p.wE(d.L0.CLAIM_ACCOUNT), p.hp(d.L0.CLAIM_ACCOUNT), r());
                     else {
                         var t;
                         (null == e || null == (t = e.body) ? void 0 : t.username) != null ? E(g.intl.string(g.t['TGg/2t'])) : E(null == e ? void 0 : e.body.message);

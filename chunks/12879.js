@@ -11,7 +11,7 @@ var e,
     v = n(253462),
     y = l('iterator'),
     h = !1;
-[].keys && ('next' in (i = [].keys()) ? (o = a(a(i))) !== Object.prototype && (e = o) : (h = !0)),
+([].keys && ('next' in (i = [].keys()) ? (o = a(a(i))) !== Object.prototype && (e = o) : (h = !0)),
     !c(e) ||
     u(function () {
         var t = {};
@@ -26,4 +26,4 @@ var e,
     (t.exports = {
         IteratorPrototype: e,
         BUGGY_SAFARI_ITERATORS: h
-    });
+    }));

@@ -43,7 +43,7 @@ class g extends (a = s.PureComponent) {
               });
     }
 }
-(l = { messageStyle: 'LONG' }),
+((l = { messageStyle: 'LONG' }),
     (i = 'defaultProps') in g
         ? Object.defineProperty(g, i, {
               value: l,
@@ -51,5 +51,5 @@ class g extends (a = s.PureComponent) {
               configurable: !0,
               writable: !0
           })
-        : (g[i] = l);
+        : (g[i] = l));
 let m = c.ZP.connectStores([p.Z], () => ({ purchaseError: p.Z.error }))(g);

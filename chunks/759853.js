@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -17,7 +17,7 @@ var r = n(255367),
 let b = ['#51BC9D'],
     j = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: o, quest: j, progressBarRef: _, isExpanded: v } = e,
+        let { expansionSpring: n, overlayRef: o, quest: j, progressBarRef: v, isExpanded: _ } = e,
             { completionSpring: y, startCompletionAnimation: C } = (0, f.G)(),
             O = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
             E = s.useRef(!1),
@@ -36,7 +36,7 @@ let b = ['#51BC9D'],
             I = (0, i.uR)(N, R),
             q = s.useCallback(() => {
                 if (S) return;
-                let e = _.current,
+                let e = v.current,
                     t = w.current;
                 if (null != t && null != e && I.isReady) {
                     var n, r, s, o, a, i;
@@ -51,7 +51,7 @@ let b = ['#51BC9D'],
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -59,7 +59,7 @@ let b = ['#51BC9D'],
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -67,8 +67,8 @@ let b = ['#51BC9D'],
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({}, g.We)),
@@ -127,17 +127,17 @@ let b = ['#51BC9D'],
                         100
                     );
                 }
-            }, [_, w, I, S]),
-            D = (0, d.Z)(v);
+            }, [v, w, I, S]),
+            D = (0, d.Z)(_);
         return (s.useEffect(() => {
-            O && v && !D && (C(), q());
-        }, [v, O, C, q, D]),
+            O && _ && !D && (C(), q());
+        }, [_, O, C, q, D]),
         s.useEffect(() => {
             O &&
                 !P &&
                 T &&
                 setTimeout(() => {
-                    C(), q();
+                    (C(), q());
                 }, 200);
         }, [O, T, P, C, q]),
         s.useEffect(() => {

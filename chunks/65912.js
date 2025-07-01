@@ -21,7 +21,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -37,8 +37,8 @@ function p(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -56,7 +56,7 @@ let A = Object.freeze({
             let a = t().editingRule,
                 o = null != n && null != a && n.id === a.id,
                 c = l().cloneDeep(n);
-            null != c &&
+            (null != c &&
                 ((r = p({}, c)),
                 (i = i = { actions: c.actions.filter(s.lm) }),
                 Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ let A = Object.freeze({
                         hasChanges: o,
                         errorMessage: null
                     })
-                );
+                ));
         },
         createNewEditingRule: (t, n, r) => {
             let l = p({}, (0, f.ep)(t, n), null != r ? r : {});
@@ -98,10 +98,10 @@ let A = Object.freeze({
             (0, u.j)(() => e(p({}, A)));
         },
         saveRule: async (t, n) => {
-            if (null == t) return (0, u.j)(() => e(p({}, A))), null;
+            if (null == t) return ((0, u.j)(() => e(p({}, A))), null);
             try {
                 var r, l, i;
-                (0, f.DO)(t) && ((t.triggerMetadata.keywordFilter = (0, d.cb)((0, d.Ze)(null != (r = t.triggerMetadata.keywordFilter) ? r : []))), (t.triggerMetadata.allowList = (0, d.cb)((0, d.Ze)(null != (l = t.triggerMetadata.allowList) ? l : [])))), (0, f.Fn)(t) && (t.triggerMetadata.allowList = (0, d.cb)((0, d.Ze)(null != (i = t.triggerMetadata.allowList) ? i : []))), (0, E.yU)(t, n), (0, f.QO)(t);
+                ((0, f.DO)(t) && ((t.triggerMetadata.keywordFilter = (0, d.cb)((0, d.Ze)(null != (r = t.triggerMetadata.keywordFilter) ? r : []))), (t.triggerMetadata.allowList = (0, d.cb)((0, d.Ze)(null != (l = t.triggerMetadata.allowList) ? l : [])))), (0, f.Fn)(t) && (t.triggerMetadata.allowList = (0, d.cb)((0, d.Ze)(null != (i = t.triggerMetadata.allowList) ? i : []))), (0, E.yU)(t, n), (0, f.QO)(t));
             } catch (t) {
                 return (
                     t instanceof c.V6
@@ -132,7 +132,7 @@ let A = Object.freeze({
                     e({ isLoading: !0 });
                 });
                 let n = null;
-                return (n = (0, f.Vb)(t) && !(0, S.U)(t.id) ? await (0, g.Je)(t) : await (0, g.JK)(t)), (0, u.j)(() => e(p({}, A))), n;
+                return ((n = (0, f.Vb)(t) && !(0, S.U)(t.id) ? await (0, g.Je)(t) : await (0, g.JK)(t)), (0, u.j)(() => e(p({}, A))), n);
             } catch (n) {
                 let t = new o.Hx(n);
                 (0, u.j)(() => {
@@ -180,5 +180,5 @@ function R() {
             }),
             i.X
         );
-    return null != e && t.setEditingRule(e), t;
+    return (null != e && t.setEditingRule(e), t);
 }

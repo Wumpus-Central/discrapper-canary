@@ -43,7 +43,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,12 +51,12 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 function p(e, t) {
-    w(l.b.GUILD_DIRECTORY_ENTRY, {
+    (w(l.b.GUILD_DIRECTORY_ENTRY, {
         channel_id: e.channelId,
         guild_id: e.guildId
     }),
@@ -67,10 +67,10 @@ function p(e, t) {
             },
             {},
             { onSubmit: t }
-        );
+        ));
 }
 function h(e, t, n) {
-    w(l.b.MESSAGE, {
+    (w(l.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -81,10 +81,10 @@ function h(e, t, n) {
             },
             {},
             { onSubmit: n }
-        );
+        ));
 }
 function m(e, t, n) {
-    w(l.b.MESSAGE, {
+    (w(l.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -95,10 +95,10 @@ function m(e, t, n) {
             },
             { variant: 'staff' },
             { onSubmit: n }
-        );
+        ));
 }
 function g(e, t, n) {
-    w(l.b.GUILD, { guild_id: e.id }),
+    (w(l.b.GUILD, { guild_id: e.id }),
         (0, u.m)(
             {
                 name: l.b.GUILD,
@@ -106,7 +106,7 @@ function g(e, t, n) {
             },
             { variant: 'staff' },
             { onSubmit: n }
-        );
+        ));
 }
 function E(e, t) {
     let n = i.Z.getStageInstanceByChannel(e.id);
@@ -127,7 +127,7 @@ function E(e, t) {
 }
 function b(e, t) {
     var n;
-    w(l.b.GUILD_SCHEDULED_EVENT, {
+    (w(l.b.GUILD_SCHEDULED_EVENT, {
         guild_scheduled_event_id: e.id,
         guild_id: e.guild_id,
         channel_id: null != (n = e.channel_id) ? n : void 0
@@ -139,10 +139,10 @@ function b(e, t) {
             },
             {},
             { onSubmit: t }
-        );
+        ));
 }
 function y(e, t) {
-    w(l.b.FIRST_DM, {
+    (w(l.b.FIRST_DM, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -156,22 +156,22 @@ function y(e, t) {
                 onSubmit: t,
                 isEligibleForFeedback: !1
             }
-        );
+        ));
 }
 async function O(e, t) {
     try {
-        await (0, c.ox)(
+        (await (0, c.ox)(
             {
                 name: l.b.FIRST_DM,
                 record: e
             },
             { variant: '_first_dm_ham_v1' }
         ),
-            null == t || t();
+            null == t || t());
     } catch (e) {}
 }
 function v(e, t, n, r) {
-    w(l.b.USER, { reported_user_id: e.id }),
+    (w(l.b.USER, { reported_user_id: e.id }),
         (0, u.m)(
             {
                 name: l.b.USER,
@@ -183,10 +183,10 @@ function v(e, t, n, r) {
                 onSubmit: n,
                 appContext: r
             }
-        );
+        ));
 }
 function I(e, t, n, r) {
-    w(l.b.USER, { reported_user_id: e.id }),
+    (w(l.b.USER, { reported_user_id: e.id }),
         (0, u.m)(
             {
                 name: l.b.USER,
@@ -199,11 +199,11 @@ function I(e, t, n, r) {
                 isEligibleForFeedback: !1,
                 appContext: r
             }
-        );
+        ));
 }
 function T(e, t) {
     let n = new s.Z({});
-    w(l.BM.USER, { reported_user_id: n.id }),
+    (w(l.BM.USER, { reported_user_id: n.id }),
         (0, u.m)(
             {
                 name: l.BM.USER,
@@ -216,11 +216,11 @@ function T(e, t) {
                 isAuthenticated: !1,
                 emailToken: e
             }
-        );
+        ));
 }
 function S(e, t) {
     let n = new a.ZP({});
-    w(l.BM.GUILD, { guild_id: n.id }),
+    (w(l.BM.GUILD, { guild_id: n.id }),
         (0, u.m)(
             {
                 name: l.BM.GUILD,
@@ -233,11 +233,11 @@ function S(e, t) {
                 isAuthenticated: !1,
                 emailToken: e
             }
-        );
+        ));
 }
 function A(e, t) {
     let n = new o.ZP({});
-    w(l.BM.MESSAGE, {
+    (w(l.BM.MESSAGE, {
         message_id: void 0,
         channel_id: void 0
     }),
@@ -253,24 +253,24 @@ function A(e, t) {
                 isAuthenticated: !1,
                 emailToken: e
             }
-        );
+        ));
 }
 async function N(e, t, n) {
     try {
-        await (0, c.ox)(
+        (await (0, c.ox)(
             {
                 name: l.b.MESSAGE,
                 record: e
             },
             { variant: 'safety_alerts_headless_v1' }
         ),
-            null == t || t();
+            null == t || t());
     } catch (e) {
         null == n || n();
     }
 }
 function C(e, t) {
-    w(l.b.MESSAGE, {
+    (w(l.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -281,11 +281,11 @@ function C(e, t) {
             },
             { variant: 'safety_alerts_v1' },
             { onSubmit: t }
-        );
+        ));
 }
 function R(e) {
     let { application: t, entrypoint: n, contextualGuildId: i, contextualChannelId: a, onSubmit: o, appContext: s } = e;
-    r.ZP.trackWithMetadata(d.rMx.REPORT_APPLICATION_CLICKED, {
+    (r.ZP.trackWithMetadata(d.rMx.REPORT_APPLICATION_CLICKED, {
         application_id: t.id,
         location: n
     }),
@@ -307,7 +307,7 @@ function R(e) {
                 onSubmit: o,
                 appContext: s
             }
-        );
+        ));
 }
 function P(e, t) {
     (0, u.m)(

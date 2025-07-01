@@ -1,4 +1,4 @@
-s.d(t, { Z: () => T }), s(35282), s(704826);
+(s.d(t, { Z: () => T }), s(35282), s(704826));
 var n,
     r = s(255367),
     o = s(73800),
@@ -40,7 +40,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var s = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(s);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(s).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(s, e).enumerable;
@@ -48,7 +48,7 @@ function N(e) {
             )),
             n.forEach(function (t) {
                 y(e, t, s[t]);
-            });
+            }));
     }
     return e;
 }
@@ -235,7 +235,7 @@ class v extends (n = o.PureComponent) {
                 {
                     resetToken: e,
                     onLoginSuccess: (e) => {
-                        this.setState({ errors: {} }), d.Z.switchAccountToken(e);
+                        (this.setState({ errors: {} }), d.Z.switchAccountToken(e));
                     }
                 },
                 this.props
@@ -281,17 +281,17 @@ class v extends (n = o.PureComponent) {
         }
     }
     constructor(e) {
-        super(e),
+        (super(e),
             y(this, 'loginRef', void 0),
             y(this, 'passwordRef', void 0),
             y(this, 'codeRef', void 0),
             y(this, 'handleAuthToken', async (e) => {
-                this.setState({ errors: {} }), await d.Z.loginToken(e, !1);
+                (this.setState({ errors: {} }), await d.Z.loginToken(e, !1));
             }),
             y(this, 'handleTabOrEnter', (e) => {
                 if ('Tab' === e.key && !e.shiftKey && e.target === this.loginRef) {
                     var t;
-                    null == (t = this.passwordRef) || t.focus(), e.stopPropagation(), e.preventDefault();
+                    (null == (t = this.passwordRef) || t.focus(), e.stopPropagation(), e.preventDefault());
                 }
                 'Enter' === e.key && (e.target === this.loginRef || e.target === this.passwordRef) && (this.handleLogin(), e.stopPropagation(), e.preventDefault());
             }),
@@ -318,7 +318,7 @@ class v extends (n = o.PureComponent) {
             }),
             y(this, 'handleForgotPassword', async (e) => {
                 var t;
-                null == e || e.preventDefault(), null == (t = this.loginRef) || t.focus();
+                (null == e || e.preventDefault(), null == (t = this.loginRef) || t.focus());
                 let s = this.getFullLogin();
                 this.setState({ errors: {} });
                 try {
@@ -364,7 +364,7 @@ class v extends (n = o.PureComponent) {
             }),
             y(this, 'handleLogin', async (e) => {
                 let { password: t, undelete: s } = this.state;
-                null == e || e.preventDefault(), this.setState({ errors: {} });
+                (null == e || e.preventDefault(), this.setState({ errors: {} }));
                 try {
                     await d.Z.login({
                         login: this.getFullLogin(),
@@ -402,7 +402,7 @@ class v extends (n = o.PureComponent) {
                 g.Z.resendCode(this.getFullLogin());
             }),
             y(this, 'handleReset', (e) => {
-                null == e || e.preventDefault(),
+                (null == e || e.preventDefault(),
                     d.Z.loginReset(!0),
                     this.setState({
                         password: '',
@@ -413,7 +413,7 @@ class v extends (n = o.PureComponent) {
                         undelete: !1,
                         resetPasswordPhoneToken: null,
                         errors: {}
-                    });
+                    }));
             }),
             y(this, 'handleCancelAccountDeletion', () => {
                 this.setState({ undelete: !0 }, this.handleLogin);
@@ -428,7 +428,7 @@ class v extends (n = o.PureComponent) {
                 resetPasswordPhoneToken: null,
                 undelete: !1,
                 errors: {}
-            });
+            }));
     }
 }
 function S(e) {

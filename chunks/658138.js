@@ -15,7 +15,7 @@ var r = n(255367),
 function h(e) {
     let { openPickerForChannel: t } = (0, d.B)(),
         n = (0, i.useCallback)(() => {
-            o.default.selectPrivateChannel(e.id), t(e.id), u.default.track(O.rMx.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED, { channel_id: e.id });
+            (o.default.selectPrivateChannel(e.id), t(e.id), u.default.track(O.rMx.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED, { channel_id: e.id }));
         }, [e.id, t]),
         { canAccessPicker: h } = (0, f.m)({
             location: 'useChannelWallpaperItem',

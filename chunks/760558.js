@@ -1,4 +1,4 @@
-l.d(t, { default: () => b }), l(388685);
+(l.d(t, { default: () => b }), l(388685));
 var n = l(255367),
     r = l(73800),
     s = l(512722),
@@ -21,7 +21,7 @@ let b = (e) => {
     var t, l;
     let { guildBoostSlots: s, selectedGuild: b, locationSection: y, transitionState: S, onClose: N } = e,
         P = (0, h.vx)(m.Z.boostSlots);
-    i()(null != s || null != b, 'Must either provide slots or an initial selected guild'), i()(!(null == s ? void 0 : s.some((e) => e.isOnCooldown())), 'If slots are provided, they must not be on cooldown');
+    (i()(null != s || null != b, 'Must either provide slots or an initial selected guild'), i()(!(null == s ? void 0 : s.some((e) => e.isOnCooldown())), 'If slots are provided, they must not be on cooldown'));
     let O = [null == s ? 'UNUSED_QUANTITY_SELECT' : null, null == b ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter((e) => null != e),
         [E, T] = (0, o.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
         [L, Z] = r.useState(''),
@@ -44,11 +44,11 @@ let b = (e) => {
             return (null == U || null == (e = U[0]) ? void 0 : e.premiumGuildSubscription) != null;
         }, [U]),
         F = () => {
-            N('SUCCESS' === w),
+            (N('SUCCESS' === w),
                 x.default.track(j.rMx.MODAL_DISMISSED, {
                     type: j.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                     location_section: y
-                });
+                }));
         },
         _ = {
             UNUSED_QUANTITY_SELECT: {
@@ -114,7 +114,7 @@ let b = (e) => {
                     (0, n.jsx)(g.e, {
                         onClose: F,
                         onSelectGuild: (e) => {
-                            D(e), I('CONFIRM');
+                            (D(e), I('CONFIRM'));
                         },
                         isTransfer: R,
                         selectedSlotGuilds: B,
@@ -162,7 +162,7 @@ let b = (e) => {
                             if (null != G && (null == U ? void 0 : U.length) !== 0) {
                                 i()(!U.some((e) => e.isOnCooldown()), 'Cannot use a premium guild subscription slot while on cooldown');
                                 try {
-                                    await Promise.all(
+                                    (await Promise.all(
                                         U.map((e) => {
                                             let { premiumGuildSubscription: t } = e;
                                             return null != t ? (0, c.dG)(t.guildId, t.id) : Promise.resolve();
@@ -175,7 +175,7 @@ let b = (e) => {
                                                 return t;
                                             })
                                         ),
-                                        I('SUCCESS');
+                                        I('SUCCESS'));
                                 } catch (e) {
                                     M(!0);
                                 }

@@ -15,11 +15,11 @@ function o(e, t) {
 }
 var s = (function () {
     function e() {
-        (this.all = !1), (this.before = []), (this.after = []), (this.between = []);
+        ((this.all = !1), (this.before = []), (this.after = []), (this.between = []));
     }
     return (
         (e.prototype._cacheAdd = function (e, t, n) {
-            t && (t = t instanceof Date ? (0, i.d9)(t) : (0, i.L1)(t)), 'all' === e ? (this.all = t) : ((n._value = t), this[e].push(n));
+            (t && (t = t instanceof Date ? (0, i.d9)(t) : (0, i.L1)(t)), 'all' === e ? (this.all = t) : ((n._value = t), this[e].push(n)));
         }),
         (e.prototype._cacheGet = function (e, t) {
             var n = !1,
@@ -43,7 +43,7 @@ var s = (function () {
                 }
             if (!n && this.all) {
                 for (var f = new r.Z(e, t), u = 0; u < this.all.length && f.accept(this.all[u]); u++);
-                (n = f.getValue()), this._cacheAdd(e, n, t);
+                ((n = f.getValue()), this._cacheAdd(e, n, t));
             }
             return (0, a.kJ)(n) ? (0, i.L1)(n) : n instanceof Date ? (0, i.d9)(n) : n;
         }),

@@ -45,7 +45,7 @@ function _(e) {
                           (0, l.jsx)(o.zxk, {
                               className: f.checkItOut,
                               onClick: () => {
-                                  c.Z.open(n.id, m.pNK.ONBOARDING), (0, s.EW)(x, { dismissAction: h.L.PRIMARY });
+                                  (c.Z.open(n.id, m.pNK.ONBOARDING), (0, s.EW)(x, { dismissAction: h.L.PRIMARY }));
                               },
                               color: o.zxk.Colors.BRAND_INVERTED,
                               children: (0, l.jsx)(o.Text, {

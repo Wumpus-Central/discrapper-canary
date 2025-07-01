@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     Cy: () => D,
     DY: () => U,
     FG: () => S,
     u: () => j
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -39,7 +39,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,11 +55,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -81,7 +81,7 @@ function I(e, t) {
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -91,11 +91,11 @@ function T(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 var S = (function (e) {
-    return (e.PRIMARY = 'primary'), (e.NESTED = 'nested'), (e.BLACK = 'black'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.YELLOW = 'yellow'), (e.RED = 'red'), (e.PREMIUM = 'premium'), e;
+    return ((e.PRIMARY = 'primary'), (e.NESTED = 'nested'), (e.BLACK = 'black'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.YELLOW = 'yellow'), (e.RED = 'red'), (e.PREMIUM = 'premium'), e);
 })({});
 let A = 16,
     N = 10,
@@ -125,7 +125,7 @@ function w(e, t, n) {
         o = r ? 'bottom' : 'right',
         s = '50%',
         l = n;
-    return t === a ? ((s = '0%'), (l += A)) : t === o && ((s = '100%'), (l -= N + N)), { [i]: 'calc('.concat(s, ' + ').concat(l, 'px)') };
+    return (t === a ? ((s = '0%'), (l += A)) : t === o && ((s = '100%'), (l -= N + N)), { [i]: 'calc('.concat(s, ' + ').concat(l, 'px)') });
 }
 let D = (e) => {
         let { targetElementRef: t, align: n = 'center', position: r, color: a, children: o, onNonAccessibleClick: l, tooltipClassName: u, tooltipStyle: d, tooltipContentClassName: f, spacing: _ = C, animationStyle: p, disableTooltipPointerEvents: h = !1, allowOverflow: m = !1, tooltipPointerClassName: b } = e,
@@ -225,11 +225,11 @@ class j extends (r = a.Component) {
                 var t;
                 if (((e = null == (t = this.siblingDomRef.current) ? void 0 : t.previousElementSibling), !(0, d.k)(e))) throw Error('Tooltip cannot find DOM node');
             }
-            (this.domElementRef.current = e), (this.hasDomElement = !0), this.forceUpdate();
+            ((this.domElementRef.current = e), (this.hasDomElement = !0), this.forceUpdate());
         }
     }
     componentWillUnmount() {
-        this.showTimeout.stop(), (this.domElementRef.current = null);
+        (this.showTimeout.stop(), (this.domElementRef.current = null));
     }
     render() {
         let e,
@@ -299,19 +299,19 @@ class j extends (r = a.Component) {
         null != e ? this.showTimeout.start(e, () => this.toggleShow(!0), !1) : this.toggleShow(!0);
     }
     hide() {
-        this.showTimeout.stop(), this.toggleShow(!1);
+        (this.showTimeout.stop(), this.toggleShow(!1));
     }
     toggleShow(e) {
         if (this.state.shouldShowTooltip !== e) {
             var t, n, r, i;
-            e ? null == (t = (n = this.props).onTooltipShow) || t.call(n) : null == (r = (i = this.props).onTooltipHide) || r.call(i),
+            (e ? null == (t = (n = this.props).onTooltipShow) || t.call(n) : null == (r = (i = this.props).onTooltipHide) || r.call(i),
                 l.flushSync(() => {
                     this.setState({ shouldShowTooltip: e });
-                });
+                }));
         }
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'showTimeout', new f.V7()),
             b(this, 'domElementRef', { current: null }),
             b(this, 'hasDomElement', !1),
@@ -335,10 +335,10 @@ class j extends (r = a.Component) {
             }),
             b(this, 'handleContextMenu', () => {
                 this.hide();
-            });
+            }));
     }
 }
-b(j, 'Colors', S),
+(b(j, 'Colors', S),
     b(j, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',
@@ -348,7 +348,7 @@ b(j, 'Colors', S),
         shouldShow: !0,
         allowOverflow: !1,
         overflowOnly: !1
-    });
+    }));
 let U = (e) => {
     var { children: t, className: n, element: r = 'div' } = e,
         o = I(e, ['children', 'className', 'element']);

@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'mocha',
         author: 'chris kempson (http://chriskempson.com)',
@@ -19,4 +19,4 @@
         base0E: '#a89bb9',
         base0F: '#bb9584'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

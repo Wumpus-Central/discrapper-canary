@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'codeschool',
         author: 'brettof86',
@@ -19,4 +19,4 @@
         base0E: '#c59820',
         base0F: '#c98344'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

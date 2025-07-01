@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     X: () => R,
     Z: () => k
 }),
     n(953529),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -35,7 +35,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -51,8 +51,8 @@ function T(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -139,7 +139,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
                     oldFormErrors: !0,
                     rejectWithError: !0
                 });
-                v.Z.close(), (0, p.X)(e.body.id);
+                (v.Z.close(), (0, p.X)(e.body.id));
             } catch (e) {}
         };
         return s && !_
@@ -177,7 +177,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
                           size: d.zxk.Sizes.NONE,
                           className: E.upsellClose,
                           onClick: () => {
-                              c.K.set(w, !0), u(!0);
+                              (c.K.set(w, !0), u(!0));
                           },
                           children: (0, r.jsx)(d.Dio, {
                               size: 'md',
@@ -252,14 +252,14 @@ let w = 'dismissedCommunityFeaturesUpsell',
         let p = () => {
                 if (null == e) return;
                 let t = new Set(e.features);
-                t.delete(N.oNc.COMMUNITY),
+                (t.delete(N.oNc.COMMUNITY),
                     t.delete(N.oNc.DISCOVERABLE),
                     t.delete(N.oNc.PREVIEW_ENABLED),
                     v.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
                         publicUpdatesChannelId: null
-                    });
+                    }));
             },
             h = (e) => {
                 v.Z.updateGuild({ description: e });

@@ -5,7 +5,7 @@ e.exports = function (e) {
         '/./'[e](t);
     } catch (n) {
         try {
-            return (t[r] = !1), '/./'[e](t);
+            return ((t[r] = !1), '/./'[e](t));
         } catch (e) {}
     }
     return !1;

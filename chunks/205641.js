@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r,
     i,
     l = n(255367),
@@ -90,10 +90,10 @@ class x extends (r = s.Component) {
         }
     }
     resetAnimation() {
-        this.y.setValue(0), this.x.setValue(0), this.opacity.setValue(1), this.fireScale.setValue(1);
+        (this.y.setValue(0), this.x.setValue(0), this.opacity.setValue(1), this.fireScale.setValue(1));
     }
     startHoverAnimate() {
-        this.resetAnimation(), this.hoverAnimate(f.HOVERING.Y_VALUE);
+        (this.resetAnimation(), this.hoverAnimate(f.HOVERING.Y_VALUE));
     }
     createFireAnimation(e, t, n, r) {
         return h(this.fireScale, e, t, () => d().random(n, r));
@@ -110,7 +110,7 @@ class x extends (r = s.Component) {
                 duration: f.HOVERING.Y_DURATION,
                 easing: u.Z.Easing.inOut(u.Z.Easing.ease)
             });
-        (this.currentAnimation = u.Z.parallel([s, l])), await (null == (t = this.currentAnimation) ? void 0 : t.start()), this.hoverAnimate(e * f.HOVERING.Y_VALUE_MODIFIER);
+        ((this.currentAnimation = u.Z.parallel([s, l])), await (null == (t = this.currentAnimation) ? void 0 : t.start()), this.hoverAnimate(e * f.HOVERING.Y_VALUE_MODIFIER));
     }
     createShakeAnimation(e, t, n) {
         return h(this.x, e, t, (e) => d().random(1, n) * (e % 2 == 0 ? 1 : -1));
@@ -185,7 +185,7 @@ class x extends (r = s.Component) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -193,7 +193,7 @@ class x extends (r = s.Component) {
                         )),
                         r.forEach(function (t) {
                             g(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
             })({}, t, this.getWumpusStyle()),
@@ -217,7 +217,7 @@ class x extends (r = s.Component) {
         });
     }
     constructor(...e) {
-        super(...e), g(this, 'x', new u.Z.Value(0)), g(this, 'y', new u.Z.Value(0)), g(this, 'opacity', new u.Z.Value(1)), g(this, 'fireScale', new u.Z.Value(1)), g(this, 'currentAnimation', null), g(this, 'isUnmounted', !1);
+        (super(...e), g(this, 'x', new u.Z.Value(0)), g(this, 'y', new u.Z.Value(0)), g(this, 'opacity', new u.Z.Value(1)), g(this, 'fireScale', new u.Z.Value(1)), g(this, 'currentAnimation', null), g(this, 'isUnmounted', !1));
     }
 }
 g(x, 'Stages', p);

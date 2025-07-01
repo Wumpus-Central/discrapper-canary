@@ -3,5 +3,6 @@ e.exports = {
     collapsablePaneHeader: 'collapsablePaneHeader__7ed4d',
     formSection: 'formSection__7ed4d',
     error: 'error__7ed4d',
-    subscriptionTextContainer: 'subscriptionTextContainer__7ed4d'
+    subscriptionTextContainer: 'subscriptionTextContainer__7ed4d',
+    badge: 'badge__7ed4d'
 };

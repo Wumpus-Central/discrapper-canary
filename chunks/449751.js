@@ -1,28 +1,28 @@
 n.d(t, { Z: () => c });
 var i = n(255367);
 n(73800);
-var r = n(481060),
-    l = n(626135),
-    a = n(572004),
-    o = n(981631),
-    s = n(388032);
+var l = n(481060),
+    r = n(626135),
+    s = n(572004),
+    a = n(981631),
+    o = n(388032);
 function c(e, t) {
-    return a.wS && e.type !== o.uaV.GUILD_INVITE_REMINDER
-        ? (0, i.jsx)(r.sNh, {
+    return s.wS
+        ? (0, i.jsx)(l.sNh, {
               id: 'copy-link',
-              label: s.intl.string(s.t.Xrt5Pj),
-              icon: r.xPt,
+              label: o.intl.string(o.t.Xrt5Pj),
+              icon: l.xPt,
               action: () => {
-                  (0, a.JG)(
+                  ((0, s.JG)(
                       ''
                           .concat(location.protocol, '//')
                           .concat(location.host)
-                          .concat(o.Z5c.CHANNEL(t.guild_id, t.id, e.id))
+                          .concat(a.Z5c.CHANNEL(t.guild_id, t.id, e.id))
                   ),
-                      l.default.track(o.rMx.MESSAGE_LINK_COPIED, {
+                      r.default.track(a.rMx.MESSAGE_LINK_COPIED, {
                           message_id: e.id,
                           channel: e.channel_id
-                      });
+                      }));
               }
           })
         : null;

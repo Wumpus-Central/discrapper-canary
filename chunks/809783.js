@@ -1,4 +1,4 @@
-t.r(a), t.d(a, { default: () => r });
+(t.r(a), t.d(a, { default: () => r }));
 var r = {
     payButton: 'Fizetés',
     'payButton.redirecting': 'Átirányítás...',

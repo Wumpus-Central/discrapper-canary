@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(49124);
+(n.d(t, { Z: () => m }), n(388685), n(49124));
 var r = n(255367),
     l = n(73800),
     i = n(849055),
@@ -16,7 +16,7 @@ function m(e) {
         [j, y] = l.useState(null),
         { challenge: x } = t.methods.find((e) => 'webauthn' === e.type),
         S = async () => {
-            b(!0), y(null);
+            (b(!0), y(null));
             let e = a.isPlatformEmbedded && u.ZP.supportsFeature(f.eRX.WEBAUTHN) ? u.ZP.webAuthnAuthenticate(x) : i.U2(JSON.parse(x)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
@@ -32,7 +32,7 @@ function m(e) {
                 let n = await e;
                 await t(n);
             } catch (e) {
-                c.Z.captureException(e), y(h.intl.string(h.t.xSCvBQ));
+                (c.Z.captureException(e), y(h.intl.string(h.t.xSCvBQ)));
             } finally {
                 b(!1);
             }

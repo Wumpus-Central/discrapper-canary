@@ -25,12 +25,12 @@ var r = n(255367),
     j = n(5192),
     O = n(590415),
     E = n(354459),
-    I = n(387147);
-function S(e) {
+    S = n(387147);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -46,8 +46,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -72,30 +72,30 @@ function P(e, t) {
 let Z = i.memo(function (e) {
         let { guildId: t, channelId: n, user: i, isPremium: l, isBlocked: o, isIgnored: a } = e;
         return (0, r.jsxs)('div', {
-            className: I.textContainer,
+            className: S.textContainer,
             children: [
                 o
                     ? (0, r.jsx)(p.t6m, {
                           size: 'lg',
-                          className: I.blockedIcon,
+                          className: S.blockedIcon,
                           color: d.Z.unsafe_rawColors.RED_400.css
                       })
                     : null,
                 a
                     ? (0, r.jsx)(p.kZF, {
                           size: 'lg',
-                          className: I.blockedIcon
+                          className: S.blockedIcon
                       })
                     : null,
                 (0, r.jsx)(p.Text, {
-                    className: I.text,
+                    className: S.text,
                     variant: 'text-sm/normal',
                     color: 'header-primary',
                     children: j.ZP.getName(t, n, i)
                 }),
                 l
                     ? (0, r.jsx)(v.Z, {
-                          className: I.boost,
+                          className: S.boost,
                           color: d.Z.unsafe_rawColors.GUILD_BOOSTING_PINK.css
                       })
                     : null
@@ -111,19 +111,19 @@ let Z = i.memo(function (e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: I.avatarContainer,
+                    className: S.avatarContainer,
                     children: [
                         f &&
                             (0, r.jsx)(p.V9, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: o()(I.icon, { [I.invited]: h })
+                                className: o()(S.icon, { [S.invited]: h })
                             }),
                         (0, r.jsx)('img', {
                             src: null != (t = s.getAvatarURL(l.guild_id, 56, !1)) ? t : void 0,
                             alt: s.username,
                             'aria-label': s.username,
-                            className: o()(I.avatar, { [I.faded]: c || u })
+                            className: o()(S.avatar, { [S.faded]: c || u })
                         })
                     ]
                 }),
@@ -138,7 +138,7 @@ let Z = i.memo(function (e) {
             ]
         });
     }),
-    T = () => (0, r.jsx)('div', { className: I.tileBaseContainer }),
+    T = () => (0, r.jsx)('div', { className: S.tileBaseContainer }),
     A = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: a, blocked: d } = t,
@@ -158,7 +158,7 @@ let Z = i.memo(function (e) {
         s()(null != v, 'Channel cannot be guildless');
         let w = i.useCallback(
             (e) => {
-                (0, b.h)({
+                ((0, b.h)({
                     type: c.ImpressionTypes.MENU,
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
@@ -174,7 +174,7 @@ let Z = i.memo(function (e) {
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    P(S({}, t), {
+                                    P(I({}, t), {
                                         user: a,
                                         guildId: v,
                                         channel: l,
@@ -189,7 +189,7 @@ let Z = i.memo(function (e) {
                                 );
                         },
                         { context: Z }
-                    );
+                    ));
             },
             [a, j, Z, v, l, O]
         );
@@ -203,12 +203,12 @@ let Z = i.memo(function (e) {
                 (0, r.jsx)(
                     p.P3F,
                     P(
-                        S(
+                        I(
                             {
                                 innerRef: A,
-                                className: o()(I.tileContainer, {
-                                    [I.singleIcon]: T || d,
-                                    [I.doubleIcon]: T && d
+                                className: o()(S.tileContainer, {
+                                    [S.singleIcon]: T || d,
+                                    [S.doubleIcon]: T && d
                                 }),
                                 onContextMenu: w
                             },

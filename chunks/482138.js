@@ -99,16 +99,16 @@ var n,
             };
         if (':' === l()) {
             if (':' !== O(t, 1)) return;
-            (f += 2), (c = ++h);
+            ((f += 2), (c = ++h));
         }
         for (; l(); ) {
             if (8 === h) return;
             if (':' === l()) {
                 if (null !== c) return;
-                f++, (c = ++h);
+                (f++, (c = ++h));
                 continue;
             }
-            for (e = r = 0; r < 4 && H(tt, l()); ) (e = 16 * e + A(l(), 16)), f++, r++;
+            for (e = r = 0; r < 4 && H(tt, l()); ) ((e = 16 * e + A(l(), 16)), f++, r++);
             if ('.' === l()) {
                 if (0 === r || ((f -= r), h > 6)) return;
                 for (n = 0; l(); ) {
@@ -125,7 +125,7 @@ var n,
                         if (i > 255) return;
                         f++;
                     }
-                    (u[h] = 256 * u[h] + i), (2 == ++n || 4 === n) && h++;
+                    ((u[h] = 256 * u[h] + i), (2 == ++n || 4 === n) && h++);
                 }
                 if (4 !== n) return;
                 break;
@@ -135,7 +135,7 @@ var n,
             } else if (l()) return;
             u[h++] = e;
         }
-        if (null !== c) for (a = h - c, h = 7; 0 !== h && a > 0; ) (o = u[h]), (u[h--] = u[c + a - 1]), (u[c + --a] = o);
+        if (null !== c) for (a = h - c, h = 7; 0 !== h && a > 0; ) ((o = u[h]), (u[h--] = u[c + a - 1]), (u[c + --a] = o));
         else if (8 !== h) return;
         return u;
     },
@@ -146,7 +146,7 @@ var n,
     th = function (t) {
         var e, r, n, i;
         if ('number' == typeof t) {
-            for (r = 0, e = []; r < 4; r++) D(e, t % 256), (t = q(t / 256));
+            for (r = 0, e = []; r < 4; r++) (D(e, t % 256), (t = q(t / 256)));
             return B(e, '.');
         }
         if ('object' == typeof t) {
@@ -232,7 +232,7 @@ var n,
             this.searchParams = null;
         } else {
             if ((void 0 !== r && (n = new tF(r, !0)), (i = this.parse(a, null, n)))) throw new I(i);
-            (s = L(new U())).bindURL(this), (this.searchParams = s);
+            ((s = L(new U())).bindURL(this), (this.searchParams = s));
         }
     };
 tF.prototype = {
@@ -247,7 +247,7 @@ tF.prototype = {
         for (t = b(t), e || ((this.scheme = ''), (this.username = ''), (this.password = ''), (this.host = null), (this.port = null), (this.path = []), (this.query = null), (this.fragment = null), (this.cannotBeABaseURL = !1), (t = F(t, tn, '')), (t = F(t, ti, '$1'))), c = g((t = F(t, ts, ''))); s <= c.length; ) {
             switch (((f = c[s]), i)) {
                 case ty:
-                    if (f && H(G, f)) (a += _(f)), (i = tb);
+                    if (f && H(G, f)) ((a += _(f)), (i = tb));
                     else {
                         if (e) return J;
                         i = tw;
@@ -262,23 +262,23 @@ tF.prototype = {
                             this.isSpecial() && tg[this.scheme] === this.port && (this.port = null);
                             return;
                         }
-                        (a = ''), 'file' === this.scheme ? (i = tq) : this.isSpecial() && r && r.scheme === this.scheme ? (i = tx) : this.isSpecial() ? (i = tP) : '/' === c[s + 1] ? ((i = tS), s++) : ((this.cannotBeABaseURL = !0), z(this.path, ''), (i = t$));
+                        ((a = ''), 'file' === this.scheme ? (i = tq) : this.isSpecial() && r && r.scheme === this.scheme ? (i = tx) : this.isSpecial() ? (i = tP) : '/' === c[s + 1] ? ((i = tS), s++) : ((this.cannotBeABaseURL = !0), z(this.path, ''), (i = t$)));
                     } else {
                         if (e) return J;
-                        (a = ''), (i = tw), (s = 0);
+                        ((a = ''), (i = tw), (s = 0));
                         continue;
                     }
                     break;
                 case tw:
                     if (!r || (r.cannotBeABaseURL && '#' !== f)) return J;
                     if (r.cannotBeABaseURL && '#' === f) {
-                        (this.scheme = r.scheme), (this.path = d(r.path)), (this.query = r.query), (this.fragment = ''), (this.cannotBeABaseURL = !0), (i = tz);
+                        ((this.scheme = r.scheme), (this.path = d(r.path)), (this.query = r.query), (this.fragment = ''), (this.cannotBeABaseURL = !0), (i = tz));
                         break;
                     }
                     i = 'file' === r.scheme ? tq : tR;
                     continue;
                 case tx:
-                    if ('/' === f && '/' === c[s + 1]) (i = tU), s++;
+                    if ('/' === f && '/' === c[s + 1]) ((i = tU), s++);
                     else {
                         i = tR;
                         continue;
@@ -292,12 +292,12 @@ tF.prototype = {
                     i = tB;
                     continue;
                 case tR:
-                    if (((this.scheme = r.scheme), f === n)) (this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (this.path = d(r.path)), (this.query = r.query);
+                    if (((this.scheme = r.scheme), f === n)) ((this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (this.path = d(r.path)), (this.query = r.query));
                     else if ('/' === f || ('\\' === f && this.isSpecial())) i = tk;
-                    else if ('?' === f) (this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (this.path = d(r.path)), (this.query = ''), (i = tj);
-                    else if ('#' === f) (this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (this.path = d(r.path)), (this.query = r.query), (this.fragment = ''), (i = tz);
+                    else if ('?' === f) ((this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (this.path = d(r.path)), (this.query = ''), (i = tj));
+                    else if ('#' === f) ((this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (this.path = d(r.path)), (this.query = r.query), (this.fragment = ''), (i = tz));
                     else {
-                        (this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (this.path = d(r.path)), this.path.length--, (i = tB);
+                        ((this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (this.path = d(r.path)), this.path.length--, (i = tB));
                         continue;
                     }
                     break;
@@ -305,7 +305,7 @@ tF.prototype = {
                     if (this.isSpecial() && ('/' === f || '\\' === f)) i = tU;
                     else if ('/' === f) i = tL;
                     else {
-                        (this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (i = tB);
+                        ((this.username = r.username), (this.password = r.password), (this.host = r.host), (this.port = r.port), (i = tB));
                         continue;
                     }
                     break;
@@ -321,7 +321,7 @@ tF.prototype = {
                     break;
                 case tL:
                     if ('@' === f) {
-                        o && (a = '%40' + a), (o = !0), (l = g(a));
+                        (o && (a = '%40' + a), (o = !0), (l = g(a)));
                         for (var c, f, l, v, m, y, w = 0; w < l.length; w++) {
                             var x = l[w];
                             if (':' === x && !h) {
@@ -334,7 +334,7 @@ tF.prototype = {
                         a = '';
                     } else if (f === n || '/' === f || '?' === f || '#' === f || ('\\' === f && this.isSpecial())) {
                         if (o && '' === a) return 'Invalid authority';
-                        (s -= g(a).length + 1), (a = ''), (i = tE);
+                        ((s -= g(a).length + 1), (a = ''), (i = tE));
                     } else a += f;
                     break;
                 case tE:
@@ -350,7 +350,7 @@ tF.prototype = {
                             if ((v = this.parseHost(a))) return v;
                             if (((a = ''), (i = tH), e)) return;
                             continue;
-                        } else '[' === f ? (u = !0) : ']' === f && (u = !1), (a += f);
+                        } else ('[' === f ? (u = !0) : ']' === f && (u = !1), (a += f));
                     else {
                         if ('' === a) return K;
                         if ((v = this.parseHost(a))) return v;
@@ -364,7 +364,7 @@ tF.prototype = {
                         if ('' !== a) {
                             var R = A(a, 10);
                             if (R > 65535) return Q;
-                            (this.port = this.isSpecial() && R === tg[this.scheme] ? null : R), (a = '');
+                            ((this.port = this.isSpecial() && R === tg[this.scheme] ? null : R), (a = ''));
                         }
                         if (e) return;
                         i = tH;
@@ -376,16 +376,16 @@ tF.prototype = {
                     else if (r && 'file' === r.scheme)
                         switch (f) {
                             case n:
-                                (this.host = r.host), (this.path = d(r.path)), (this.query = r.query);
+                                ((this.host = r.host), (this.path = d(r.path)), (this.query = r.query));
                                 break;
                             case '?':
-                                (this.host = r.host), (this.path = d(r.path)), (this.query = ''), (i = tj);
+                                ((this.host = r.host), (this.path = d(r.path)), (this.query = ''), (i = tj));
                                 break;
                             case '#':
-                                (this.host = r.host), (this.path = d(r.path)), (this.query = r.query), (this.fragment = ''), (i = tz);
+                                ((this.host = r.host), (this.path = d(r.path)), (this.query = r.query), (this.fragment = ''), (i = tz));
                                 break;
                             default:
-                                tm(B(d(c, s), '')) || ((this.host = r.host), (this.path = d(r.path)), this.shortenPath()), (i = tB);
+                                (tm(B(d(c, s), '')) || ((this.host = r.host), (this.path = d(r.path)), this.shortenPath()), (i = tB));
                                 continue;
                         }
                     else {
@@ -398,7 +398,7 @@ tF.prototype = {
                         i = tO;
                         break;
                     }
-                    r && 'file' === r.scheme && !tm(B(d(c, s), '')) && (td(r.path[0], !0) ? z(this.path, r.path[0]) : (this.host = r.host)), (i = tB);
+                    (r && 'file' === r.scheme && !tm(B(d(c, s), '')) && (td(r.path[0], !0) ? z(this.path, r.path[0]) : (this.host = r.host)), (i = tB));
                     continue;
                 case tO:
                     if (f === n || '/' === f || '\\' === f || '?' === f || '#' === f) {
@@ -409,7 +409,7 @@ tF.prototype = {
                         } else {
                             if ((v = this.parseHost(a))) return v;
                             if (('localhost' === this.host && (this.host = ''), e)) return;
-                            (a = ''), (i = tH);
+                            ((a = ''), (i = tH));
                         }
                         continue;
                     }
@@ -421,8 +421,8 @@ tF.prototype = {
                     } else if (e || '?' !== f)
                         if (e || '#' !== f) {
                             if (f !== n && ((i = tB), '/' !== f)) continue;
-                        } else (this.fragment = ''), (i = tz);
-                    else (this.query = ''), (i = tj);
+                        } else ((this.fragment = ''), (i = tz));
+                    else ((this.query = ''), (i = tj));
                     break;
                 case tB:
                     if (f === n || '/' === f || ('\\' === f && this.isSpecial()) || (!e && ('?' === f || '#' === f))) {
@@ -480,7 +480,7 @@ tF.prototype = {
             a = this.query,
             o = this.fragment,
             u = t + ':';
-        return null !== n ? ((u += '//'), this.includesCredentials() && (u += e + (r ? ':' + r : '') + '@'), (u += th(n)), null !== i && (u += ':' + i)) : 'file' === t && (u += '//'), (u += this.cannotBeABaseURL ? s[0] : s.length ? '/' + B(s, '/') : ''), null !== a && (u += '?' + a), null !== o && (u += '#' + o), u;
+        return (null !== n ? ((u += '//'), this.includesCredentials() && (u += e + (r ? ':' + r : '') + '@'), (u += th(n)), null !== i && (u += ':' + i)) : 'file' === t && (u += '//'), (u += this.cannotBeABaseURL ? s[0] : s.length ? '/' + B(s, '/') : ''), null !== a && (u += '?' + a), null !== o && (u += '#' + o), u);
     },
     setHref: function (t) {
         var e = this.parse(t);
@@ -558,7 +558,7 @@ tF.prototype = {
         return t ? '?' + t : '';
     },
     setSearch: function (t) {
-        '' === (t = b(t)) ? (this.query = null) : ('?' === O(t, 0) && (t = M(t, 1)), (this.query = ''), this.parse(t, tj)), this.searchParams.update();
+        ('' === (t = b(t)) ? (this.query = null) : ('?' === O(t, 0) && (t = M(t, 1)), (this.query = ''), this.parse(t, tj)), this.searchParams.update());
     },
     getSearchParams: function () {
         return this.searchParams.facade;
@@ -572,7 +572,7 @@ tF.prototype = {
             this.fragment = null;
             return;
         }
-        '#' === O(t, 0) && (t = M(t, 1)), (this.fragment = ''), this.parse(t, tz);
+        ('#' === O(t, 0) && (t = M(t, 1)), (this.fragment = ''), this.parse(t, tz));
     },
     update: function () {
         this.query = this.searchParams.serialize() || null;
@@ -621,9 +621,9 @@ if (
 ) {
     var t_ = E.createObjectURL,
         tD = E.revokeObjectURL;
-    t_ && c(tT, 'createObjectURL', u(t_, E)), tD && c(tT, 'revokeObjectURL', u(tD, E));
+    (t_ && c(tT, 'createObjectURL', u(t_, E)), tD && c(tT, 'revokeObjectURL', u(tD, E)));
 }
-w(tT, 'URL'),
+(w(tT, 'URL'),
     i(
         {
             global: !0,
@@ -632,4 +632,4 @@ w(tT, 'URL'),
             sham: !s
         },
         { URL: tT }
-    );
+    ));

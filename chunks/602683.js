@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+(n.d(t, { Z: () => a }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(481060);
@@ -19,7 +19,7 @@ let a = function (e) {
                     children: (0, r.jsx)(o.oil, {
                         value: l,
                         onChange: function (e) {
-                            c(e), a(t, e);
+                            (c(e), a(t, e));
                         }
                     })
                 })

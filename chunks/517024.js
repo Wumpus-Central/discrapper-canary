@@ -32,10 +32,10 @@ function n(e, t) {
         },
         n: function () {
             var e = n.next();
-            return (s = e.done), e;
+            return ((s = e.done), e);
         },
         e: function (e) {
-            (l = !0), (o = e);
+            ((l = !0), (o = e));
         },
         f: function () {
             try {
@@ -59,7 +59,7 @@ function i(e, t) {
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-(t.type = (e) => e.split(/ *; */).shift()),
+((t.type = (e) => e.split(/ *; */).shift()),
     (t.params = (e) => {
         let t = {};
         var r,
@@ -105,4 +105,4 @@ function i(e, t) {
         }),
     (t.mixin = (e, n) => {
         for (let r in n) t.hasOwn(n, r) && (e[r] = n[r]);
-    });
+    }));

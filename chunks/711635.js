@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => s }), r(388685);
+(r.r(t), r.d(t, { default: () => s }), r(388685));
 var u = r(255367),
     n = r(73800),
     d = r(399882);
@@ -7,7 +7,7 @@ let s = n.forwardRef(function (e, t) {
         p = n.useRef(null),
         [m] = n.useState(() => {
             let e = new d.Z.OGVPlayer();
-            return (e.preload = l), (e.controls = !1), e;
+            return ((e.preload = l), (e.controls = !1), e);
         });
     return (
         n.useImperativeHandle(t, () => m, [m]),

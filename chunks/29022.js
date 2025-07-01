@@ -1,4 +1,4 @@
-n.d(t, { default: () => U }), n(388685), n(539854);
+(n.d(t, { default: () => U }), n(388685), n(539854));
 var i = n(255367),
     a = n(73800),
     o = n(149765),
@@ -23,7 +23,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function x(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -39,8 +39,8 @@ function x(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -350,10 +350,10 @@ function U(e) {
             ]);
         },
         C = () => {
-            _.Z.updateGuild({ defaultMessageNotifications: S.bL.ONLY_MENTIONS }), _.Z.saveGuild(t.id, { defaultMessageNotifications: S.bL.ONLY_MENTIONS });
+            (_.Z.updateGuild({ defaultMessageNotifications: S.bL.ONLY_MENTIONS }), _.Z.saveGuild(t.id, { defaultMessageNotifications: S.bL.ONLY_MENTIONS }));
         },
         R = () => {
-            n && y(), s && C();
+            (n && y(), s && C());
         };
     return (0, i.jsxs)(c.Y0X, {
         transitionState: r,
@@ -377,10 +377,10 @@ function U(e) {
             (0, i.jsx)(v, {
                 onConfirm: () => {
                     var e, i;
-                    n || (R(), d(), (0, N.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (e = null == t ? void 0 : t.id) ? e : '', !0, I.L.PRIMARY)), 0 === p ? (m(1), setTimeout(() => m(2), 3000)) : 2 === p && (R(), d(), (0, N.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (i = null == t ? void 0 : t.id) ? i : '', !0, I.L.PRIMARY));
+                    (n || (R(), d(), (0, N.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (e = null == t ? void 0 : t.id) ? e : '', !0, I.L.PRIMARY)), 0 === p ? (m(1), setTimeout(() => m(2), 3000)) : 2 === p && (R(), d(), (0, N.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (i = null == t ? void 0 : t.id) ? i : '', !0, I.L.PRIMARY)));
                 },
                 onDismiss: () => {
-                    d(), (0, N.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, I.L.DISMISS);
+                    (d(), (0, N.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, I.L.DISMISS));
                 },
                 step: p,
                 canEveryoneModerate: n

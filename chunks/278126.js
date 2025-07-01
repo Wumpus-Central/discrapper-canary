@@ -79,4 +79,4 @@ class f extends (r = a.Component) {
         });
     }
 }
-c(f, 'StrokeSizes', u), c(f, 'defaultProps', { strokeSize: u.MEDIUM });
+(c(f, 'StrokeSizes', u), c(f, 'defaultProps', { strokeSize: u.MEDIUM }));

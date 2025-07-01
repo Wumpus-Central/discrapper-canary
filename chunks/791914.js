@@ -4,8 +4,8 @@ n(73800);
 var i = n(399606),
     l = n(524437),
     o = n(481060),
-    s = n(494404),
-    a = n(377171),
+    a = n(494404),
+    s = n(377171),
     c = n(317632),
     u = n(602478),
     d = n(2818),
@@ -19,9 +19,9 @@ function b(e) {
         { enabled: y, inInbox: v } = d.Z.useExperiment({ location: 'RecentsPopout' }),
         C = (0, p.Us)({ location: 'RecentsHeader' }),
         { enabled: j } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        E = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        S = (0, i.e7)([h.Z], () => h.Z.getOverdueMessageReminderCount());
-    return (0, r.jsxs)(s.h4, {
+        S = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        E = (0, i.e7)([h.Z], () => h.Z.getOverdueMessageReminderCount());
+    return (0, r.jsxs)(a.h4, {
         className: m.header,
         children: [
             (0, r.jsxs)('div', {
@@ -61,7 +61,7 @@ function b(e) {
                                 g.intl.string(g.t['En+D+v']),
                                 (null == _ ? void 0 : _.badgeForYou)
                                     ? (0, r.jsx)(o.fWl, {
-                                          color: a.Z.STATUS_DANGER,
+                                          color: s.Z.STATUS_DANGER,
                                           className: m.iconBadge
                                       })
                                     : null
@@ -85,9 +85,9 @@ function b(e) {
                                   className: m.tab,
                                   children: [
                                       g.intl.string(g.t.apq3cX),
-                                      E > 0
+                                      S > 0
                                           ? (0, r.jsx)(o.fWl, {
-                                                color: a.Z.STATUS_DANGER,
+                                                color: s.Z.STATUS_DANGER,
                                                 className: m.iconBadge
                                             })
                                           : null
@@ -99,7 +99,7 @@ function b(e) {
                                   'aria-label': g.intl.string(g.t['2pAkDA']),
                                   id: l.X.BOOKMARKS,
                                   className: m.tab,
-                                  children: 0 === S ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: S })
+                                  children: 0 === E ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: E })
                               })
                             : null,
                         C

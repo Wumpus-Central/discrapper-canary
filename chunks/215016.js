@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     PY: () => G,
     ZP: () => B,
     iR: () => j
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -42,7 +42,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -109,7 +109,7 @@ class j extends i.PureComponent {
         } = this;
         if (e !== u.EO.VIDEO || null == a) return;
         let o = i.getElement();
-        (o.oncanplay = this.handleCanPlay), (o.src = t), (o.width = n), (o.height = r), a.appendChild(o), (this._video = o);
+        ((o.oncanplay = this.handleCanPlay), (o.src = t), (o.width = n), (o.height = r), a.appendChild(o), (this._video = o));
     }
     componentDidUpdate(e) {
         let { width: t, height: n } = this.props.coords;
@@ -119,7 +119,7 @@ class j extends i.PureComponent {
         this._mounted = !1;
         let { _image: e, _video: t } = this,
             { imagePool: n, videoPool: r } = this.props;
-        null != e && ((this._image = null), n.poolElement(e)), null != t && ((this._video = null), r.poolElement(t));
+        (null != e && ((this._image = null), n.poolElement(e)), null != t && ((this._video = null), r.poolElement(t)));
     }
     renderGIF() {
         let {
@@ -153,7 +153,7 @@ class j extends i.PureComponent {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             T(this, 'ref', null),
             T(this, '_video', null),
             T(this, '_image', null),
@@ -164,13 +164,13 @@ class j extends i.PureComponent {
             T(this, 'handleClick', () => {
                 let { onClick: e, item: t, index: n } = this.props;
                 null != e && e(t, n);
-            });
+            }));
         let { format: t, color: n, imagePool: r } = this.props;
-        (this.state = {
+        ((this.state = {
             color: null == n ? l().sample(A) : n,
             loaded: !1
         }),
-            x(t) || ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
+            x(t) || ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src)));
     }
 }
 class U extends i.PureComponent {
@@ -180,7 +180,7 @@ class U extends i.PureComponent {
     }
     selectItem(e, t) {
         let { onSelectGIF: n, resultType: r, data: i, resultQuery: a } = this.props;
-        null != n && n(e),
+        (null != n && n(e),
             (0, _.R7)({
                 type: r,
                 index: t,
@@ -190,7 +190,7 @@ class U extends i.PureComponent {
                 totalResults: this.props.searchTotalResults,
                 query: a,
                 gifId: e.id
-            });
+            }));
     }
     getSectionHeight(e) {
         return 1 === e ? N : 0;
@@ -256,7 +256,7 @@ class U extends i.PureComponent {
               );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             T(this, '_masonryRef', i.createRef()),
             T(this, 'prevResultQuery', null),
             T(this, 'state', { focusedId: null }),
@@ -275,7 +275,7 @@ class U extends i.PureComponent {
                 let t,
                     { data: n } = this.props,
                     r = n.findIndex((t) => P(t) === e);
-                -1 !== r && (t = n[r]), null != t && this.selectItem(t, r);
+                (-1 !== r && (t = n[r]), null != t && this.selectItem(t, r));
             }),
             T(this, 'handleClickItem', (e, t) => {
                 this.selectItem(e, t);
@@ -409,7 +409,7 @@ class U extends i.PureComponent {
             T(this, 'getCoordsMap', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getCoordsMap() : {};
-            });
+            }));
     }
 }
 function G() {
@@ -420,7 +420,7 @@ function G() {
                 new c.w(
                     () => t.createElement('img'),
                     (e) => {
-                        (e.onload = null), (e.src = '');
+                        ((e.onload = null), (e.src = ''));
                     }
                 )
         ),
@@ -429,10 +429,10 @@ function G() {
                 new c.w(
                     () => {
                         let e = t.createElement('video');
-                        return (e.className = I.gif), (e.autoplay = !0), (e.loop = !0), (e.muted = !0), (e.preload = 'auto'), (e.controls = !1), e;
+                        return ((e.className = I.gif), (e.autoplay = !0), (e.loop = !0), (e.muted = !0), (e.preload = 'auto'), (e.controls = !1), e);
                     },
                     (e) => {
-                        (e.src = ''), (e.oncanplay = null);
+                        ((e.src = ''), (e.oncanplay = null));
                         let { parentNode: t } = e;
                         null != t && t.removeChild(e);
                     }

@@ -42,14 +42,14 @@ function m() {
             });
             return;
         }
-        s.Z.dispatch({
+        (s.Z.dispatch({
             type: e === l ? 'CURRENT_USER_UPDATE' : 'USER_UPDATE',
             user: n.body
         }),
             s.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
                 userId: l
-            });
+            }));
     });
 }
 function g(e, t) {

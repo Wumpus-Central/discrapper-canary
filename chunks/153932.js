@@ -18,7 +18,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             s = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (s = s.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function f(e) {
             )),
             s.forEach(function (t) {
                 var s;
-                (s = n[t]),
+                ((s = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: s,
@@ -34,8 +34,8 @@ function f(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = s);
-            });
+                        : (e[t] = s));
+            }));
     }
     return e;
 }
@@ -61,14 +61,14 @@ function j(e) {
     let { user: t, status: n, ignoredUser: o } = e;
     let { analyticsLocations: i } = (0, c.ZP)(),
         a = (e) => {
-            e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Spam requests modal' });
+            (e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Spam requests modal' }));
         },
         b = (e) => {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 l.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Spam requests modal' }
-                });
+                }));
         },
         f = n === h.Skl.OFFLINE ? h.Skl.UNKNOWN : n,
         _ = o ? g.intl.string(g.t.pO68Oz) : g.intl.string(g.t['gp+Yt7']);
@@ -181,7 +181,7 @@ function y(e) {
                         children: (0, s.jsx)(r.zxk, {
                             className: O.clearAllButton,
                             onClick: () => {
-                                l.Z.clearPendingSpamAndIgnored(), n();
+                                (l.Z.clearPendingSpamAndIgnored(), n());
                             },
                             children: g.intl.string(g.t.O8k7Oz)
                         })

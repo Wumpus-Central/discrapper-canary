@@ -19,7 +19,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,13 +27,13 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 function l(e, t, n, r, i) {
     let o;
-    return n || (t += '\n\n'), (o = e(t, s({ inline: n }, r))), (o = (0, a.ge)(r, o)), (o = (0, a.RA)(o)), null != i && (o = i(o, n)), o;
+    return (n || (t += '\n\n'), (o = e(t, s({ inline: n }, r))), (o = (0, a.ge)(r, o)), (o = (0, a.RA)(o)), null != i && (o = i(o, n)), o);
 }
 let c = {
     reactParserFor(e) {

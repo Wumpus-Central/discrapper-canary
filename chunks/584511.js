@@ -25,7 +25,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,12 +33,12 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 var _ = (function (e) {
-    return (e[(e.OUTGOING = 0)] = 'OUTGOING'), (e[(e.INCOMING = 1)] = 'INCOMING'), e;
+    return ((e[(e.OUTGOING = 0)] = 'OUTGOING'), (e[(e.INCOMING = 1)] = 'INCOMING'), e);
 })(_ || {});
 function p(e) {
     let { userId: t, size: n, speaking: i = !1, muted: d = !1, deafen: _ = !1, src: p, disabled: h = !1, ringing: m, ringingType: g = 0, avatarClassName: E, renderIcon: b, style: y, onClick: O, onContextMenu: v, className: I } = e,

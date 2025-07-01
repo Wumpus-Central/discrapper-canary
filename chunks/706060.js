@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(642613), n(539854);
+(n.d(t, { Z: () => m }), n(388685), n(642613), n(539854));
 var i = n(255367),
     r = n(73800),
     s = n(772848),
@@ -108,7 +108,7 @@ function m() {
                 setting: e.setting,
                 children: []
             }));
-        (e.children = t), r.push(...t);
+        ((e.children = t), r.push(...t));
     }
     return (0, i.jsxs)('div', {
         className: c.root,

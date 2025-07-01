@@ -1,4 +1,4 @@
-n.d(e, { default: () => p }), n(704826), n(35282);
+(n.d(e, { default: () => p }), n(704826), n(35282));
 var a = n(255367);
 n(73800);
 var l = n(990547),
@@ -33,18 +33,18 @@ function p(t) {
             onClose: g
         }),
         z = () => {
-            N(),
+            (N(),
                 d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                     is_trust_url_selected: D,
                     action_type: 'confirm'
-                });
+                }));
         },
         I = () => {
-            y(),
+            (y(),
                 d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                     is_trust_url_selected: D,
                     action_type: 'cancel'
-                });
+                }));
         };
     return (
         (0, s.Z)({

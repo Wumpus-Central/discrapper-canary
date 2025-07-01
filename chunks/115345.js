@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     F6: () => U,
     _Y: () => Q,
     cG: () => G,
@@ -8,7 +8,7 @@ n.d(t, {
 }),
     n(388685),
     n(997841),
-    n(415506);
+    n(415506));
 var r = n(73800),
     i = n(392711),
     a = n.n(i),
@@ -57,7 +57,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -65,7 +65,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 x(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -73,11 +73,11 @@ function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -96,7 +96,7 @@ function U(e, t) {
     let [n, i] = r.useState(R.nf),
         [a, s] = r.useState({});
     (0, _.D)();
-    let l = (0, o.Wu)([g.Z], () => Object.values(g.Z.getGuilds())),
+    let l = (0, o.Wu)([g.Z], () => g.Z.getGuildsArray()),
         c = r.useCallback(() => {
             let r = {};
             for (let i of l) r[i.id] = V(i, n, e, t, a[i.id]);
@@ -116,24 +116,24 @@ function U(e, t) {
     );
 }
 function G(e, t) {
-    return Object.values(g.Z.getGuilds()).some((n) => {
+    return g.Z.getGuildsArray().some((n) => {
         let [r] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, N.q)(n, R.nf, e, t, !1) : (0, N.A)(n, e);
         return r === R.AR.UseGreyDot;
     });
 }
 function B() {
-    let e = Object.values(g.Z.getGuilds()),
+    let e = g.Z.getGuildsArray(),
         t = {};
     for (let i of e) {
         var n, r;
         let e = null != (r = (null != (n = b.ZP.getAllSettings().userGuildSettings[i.id]) ? n : {}).flags) ? r : 0;
-        (e = (0, O.mB)(e, D.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, O.mB)(e, D.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
+        ((e = (0, O.mB)(e, D.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, O.mB)(e, D.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e }));
     }
-    W(t),
+    (W(t),
         y.default.track(P.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
             auto_migrated: !0,
             num_unread_guids_after: e.filter((e) => m.default.hasUnread(e.id)).length
-        });
+        }));
 }
 function V(e, t, n, r, i) {
     var a;
@@ -197,7 +197,7 @@ function Z(e) {
                 if (i) throw Error('Already submitted notifications migration');
                 n(!0);
                 try {
-                    await H(t, e), a(!0);
+                    (await H(t, e), a(!0));
                 } finally {
                     n(!1);
                 }
@@ -233,16 +233,16 @@ async function H(e, t) {
         if (a.length > 0) {
             let e = setTimeout(n, 5000);
             (0, d.Z)(a, void 0, () => {
-                l.Z.dispatch({ type: 'RECOMPUTE_READ_STATES' }), clearTimeout(e), n();
+                (l.Z.dispatch({ type: 'RECOMPUTE_READ_STATES' }), clearTimeout(e), n());
             });
         } else n();
     } catch (e) {
-        I.Z.captureException(e),
+        (I.Z.captureException(e),
             c.Z.show({
                 title: L.intl.string(L.t.j2d6Ki),
                 body: L.intl.string(L.t.mCjLAQ),
                 onConfirm: t
-            });
+            }));
     }
 }
 function Y(e) {
@@ -285,13 +285,13 @@ function Y(e) {
     };
 }
 async function W(e) {
-    await K(() => z()), await K(() => u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !0));
+    (await K(() => z()), await K(() => u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !0)));
     let t = await K(() => f.Z.saveUserGuildSettingsBulk(e));
-    l.Z.dispatch({
+    (l.Z.dispatch({
         type: 'USER_GUILD_SETTINGS_FULL_UPDATE',
         userGuildSettings: t
     }),
-        l.Z.dispatch({ type: 'RECOMPUTE_READ_STATES' });
+        l.Z.dispatch({ type: 'RECOMPUTE_READ_STATES' }));
 }
 async function K(e) {
     for (let t = 0; t < 3; t++)
@@ -319,12 +319,12 @@ function q() {
     });
 }
 async function X() {
-    s.K.set('turnedOffNewNotifications', !0), y.default.track(P.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(g.Z.getGuilds()).filter((e) => b.ZP.resolveGuildUnreadSetting(e) === w.i.ONLY_MENTIONS).length });
+    (s.K.set('turnedOffNewNotifications', !0), y.default.track(P.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: g.Z.getGuildsArray().filter((e) => b.ZP.resolveGuildUnreadSetting(e) === w.i.ONLY_MENTIONS).length }));
     let e = await (0, S.Tn)(),
         t = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {
         let e = t[t.length - 1];
-        await new Promise((t) =>
+        (await new Promise((t) =>
             c.Z.show({
                 title: 'Please Confirm',
                 body: 'This will turn off the new notification system and restore your ' + 'notification settings to a backup created on '.concat(new Date(e.recorded_at).toLocaleDateString()),
@@ -334,7 +334,7 @@ async function X() {
             })
         ),
             await (0, S.xx)(e.id),
-            await u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !1);
+            await u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !1));
     } else await u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !1);
 }
 function Q(e) {

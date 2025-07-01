@@ -1,8 +1,8 @@
 var r;
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.astFormatter = t.RichTextNodeType = void 0), (t.formatToAst = s);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.astFormatter = t.RichTextNodeType = void 0), (t.formatToAst = s));
 let i = n(593269);
 !(function (e) {
-    (e.Text = 'text'), (e.Strong = 'strong'), (e.Emphasis = 'em'), (e.Strikethrough = 's'), (e.Code = 'inlineCode'), (e.Link = 'link'), (e.Paragraph = 'paragraph');
+    ((e.Text = 'text'), (e.Strong = 'strong'), (e.Emphasis = 'em'), (e.Strikethrough = 's'), (e.Code = 'inlineCode'), (e.Link = 'link'), (e.Paragraph = 'paragraph'));
 })(r || (t.RichTextNodeType = r = {}));
 let a = {
     $b: (e) => ({
@@ -33,7 +33,7 @@ let a = {
 };
 class o extends i.FormatBuilder {
     constructor() {
-        super(...arguments), (this.result = []);
+        (super(...arguments), (this.result = []));
     }
     pushRichTextTag(e, t, n) {
         if (!(e in a)) throw `${e} is not a known rich text formatting tag`;

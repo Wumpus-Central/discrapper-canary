@@ -43,7 +43,7 @@ let u = (t) => {
                         className: d.button,
                         color: x ? a.zxk.Colors.PRIMARY : a.zxk.Colors.RED,
                         onClick: () => {
-                            o.Z.updateChannelOverrideSettings(null, e, { muted: !x }, x ? r.ZB.Unmuted : r.ZB.Muted), n();
+                            (o.Z.updateChannelOverrideSettings(null, e, { muted: !x }, x ? r.ZB.Unmuted : r.ZB.Muted), n());
                         },
                         children: x ? c.intl.string(c.t.YqAjX1) : c.intl.string(c.t['w4m94+'])
                     })

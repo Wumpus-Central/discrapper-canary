@@ -46,7 +46,7 @@ class h extends (l = s.ZP.Store) {
         return null != e ? p[e] : d;
     }
 }
-(i = 'RegionStore'),
+((i = 'RegionStore'),
     (r = 'displayName') in h
         ? Object.defineProperty(h, r, {
               value: i,
@@ -54,7 +54,7 @@ class h extends (l = s.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (h[r] = i);
+        : (h[r] = i));
 let f = new h(c.Z, {
     LOAD_REGIONS: function (e) {
         let t = a().sortBy(e.regions, (e) => e.name);

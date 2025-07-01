@@ -1,4 +1,4 @@
-r.d(t, { default: () => I }), r(388685);
+(r.d(t, { default: () => I }), r(388685));
 var n = r(255367),
     i = r(73800),
     l = r(442837),
@@ -91,12 +91,12 @@ function w(e) {
         ),
         B = i.useCallback(
             (e) => {
-                f(),
+                (f(),
                     (0, a.mK)({
                         analyticsLocations: g,
                         analyticsSource: s.Z.EDIT_PROFILE_EFFECT_MODAL,
                         initialProductSkuId: e
-                    });
+                    }));
             },
             [g, f]
         );
@@ -140,7 +140,7 @@ function w(e) {
             (0, n.jsx)(C, {
                 user: t,
                 onApply: () => {
-                    (0, h.s6)(v, m, null == r ? void 0 : r.id), f();
+                    ((0, h.s6)(v, m, null == r ? void 0 : r.id), f());
                 },
                 onClose: f,
                 onOpenShop: B,

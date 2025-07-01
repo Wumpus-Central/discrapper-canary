@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     FO: () => ea,
     Sq: () => ee,
     ZP: () => er,
@@ -12,7 +12,7 @@ n.d(t, {
     n(804061),
     n(704826),
     n(388685),
-    n(539854);
+    n(539854));
 var r,
     i,
     a,
@@ -81,7 +81,7 @@ function q(e) {
 }
 let X = (e) => e.replaceAll(J, ' $2 '),
     Q = null == (a = h().defaultRules.link) || null == (i = a.match) || null == (r = i.regex) ? void 0 : r.source;
-_()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1));
+(_()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1)));
 let J = RegExp(Q, 'g');
 function $(e, t) {
     var n, r, i;
@@ -150,7 +150,7 @@ function er(e) {
         };
         if ((null == i ? void 0 : i.match(N)) != null && ('https:' === r.protocol || 'http:' === r.protocol)) {
             let e = (0, b.mb)(i.substring(1), r.search);
-            O.Z.getInvite(e), u(T.g.INVITE, e);
+            (O.Z.getInvite(e), u(T.g.INVITE, e));
         }
         (null == l ? void 0 : l.match(N)) != null && u(T.g.TEMPLATE, l.substring(1));
         let d = null == c ? void 0 : c.match(R);

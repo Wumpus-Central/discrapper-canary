@@ -1,4 +1,4 @@
-r.d(t, { Z: () => a }), r(388685);
+(r.d(t, { Z: () => a }), r(388685));
 var n = r(255367),
     s = r(73800),
     i = r(748780),
@@ -7,21 +7,21 @@ var n = r(255367),
 class a extends s.Component {
     componentWillEnter(e) {
         let { offset: t } = this.state;
-        t.setValue(1),
+        (t.setValue(1),
             i.Z.spring(t, {
                 toValue: 0,
                 duration: 75
-            }).start(e);
+            }).start(e));
     }
     componentWillLeave(e) {
         let { offset: t } = this.state;
-        t.setValue(0),
+        (t.setValue(0),
             this.setState({ isExiting: !0 }, () => {
                 i.Z.spring(t, {
                     toValue: -1,
                     duration: 75
                 }).start(e);
-            });
+            }));
     }
     render() {
         let { isExiting: e, offset: t } = this.state;
@@ -48,7 +48,7 @@ class a extends s.Component {
     }
     constructor(...e) {
         var t, r;
-        super(...e),
+        (super(...e),
             (t = 'state'),
             (r = {
                 isExiting: !1,
@@ -62,6 +62,6 @@ class a extends s.Component {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = r);
+                : (this[t] = r));
     }
 }

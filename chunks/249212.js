@@ -16,11 +16,11 @@ function p(e) {
         { avErrorUIEnabled: E } = (0, l.JN)({ location: 'UserVideoFailed' }),
         b = null == (t = (0, s.hp)(h)) ? void 0 : t.errorCode;
     function y() {
-        (0, o.w)(i.Yn.DEFAULT, n),
+        ((0, o.w)(i.Yn.DEFAULT, n),
             a.Z.setDisableLocalVideo(n, d.ZUi.DISABLED, i.Yn.DEFAULT, !1),
             setTimeout(() => {
                 a.Z.setDisableLocalVideo(n, d.ZUi.MANUAL_ENABLED, i.Yn.DEFAULT, !1);
-            }, 1000);
+            }, 1000));
     }
     return (0, r.jsx)(u.Z, {
         artURL: _,

@@ -173,7 +173,7 @@ var t = (e.exports = {
             names: ['foundation', 'component', 'transport', 'priority', 'ip', 'port', 'type', 'raddr', 'rport', 'tcptype', 'generation', 'network-id', 'network-cost'],
             format: function (e) {
                 var t = 'candidate:%s %d %s %d %s %d typ %s';
-                return (t += (null != e.raddr ? ' raddr %s rport %d' : '%v%v') + (null != e.tcptype ? ' tcptype %s' : '%v')), null != e.generation && (t += ' generation %d'), (t += (null != e['network-id'] ? ' network-id %d' : '%v') + (null != e['network-cost'] ? ' network-cost %d' : '%v'));
+                return ((t += (null != e.raddr ? ' raddr %s rport %d' : '%v%v') + (null != e.tcptype ? ' tcptype %s' : '%v')), null != e.generation && (t += ' generation %d'), (t += (null != e['network-id'] ? ' network-id %d' : '%v') + (null != e['network-cost'] ? ' network-cost %d' : '%v')));
             }
         },
         {
@@ -196,7 +196,7 @@ var t = (e.exports = {
             names: ['id', 'attribute', 'value'],
             format: function (e) {
                 var t = 'ssrc:%d';
-                return null != e.attribute && ((t += ' %s'), null != e.value && (t += ':%s')), t;
+                return (null != e.attribute && ((t += ' %s'), null != e.value && (t += ':%s')), t);
             }
         },
         {
@@ -354,6 +354,6 @@ var t = (e.exports = {
 });
 Object.keys(t).forEach(function (e) {
     t[e].forEach(function (e) {
-        e.reg || (e.reg = /(.*)/), e.format || (e.format = '%s');
+        (e.reg || (e.reg = /(.*)/), e.format || (e.format = '%s'));
     });
 });

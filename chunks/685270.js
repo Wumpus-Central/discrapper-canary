@@ -1,4 +1,4 @@
-n.d(t, { B: () => f }), n(539854), n(953529);
+(n.d(t, { B: () => f }), n(539854), n(953529));
 var r = n(55000),
     i = n(693824),
     a = n(690725),
@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -59,7 +59,7 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                     color: e,
                     stop: t
                 }));
-                e.setSize(
+                (e.setSize(
                     {
                         w: s.nx,
                         h: s.bg
@@ -84,7 +84,7 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                         },
                         8
                     ),
-                    e.setColor('white');
+                    e.setColor('white'));
                 let n = e.drawRoundedImage(
                     'MediaImage',
                     {
@@ -98,7 +98,7 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                     8,
                     { fillMode: i.JU.Contain }
                 );
-                n === i.vP.Failure &&
+                (n === i.vP.Failure &&
                     (n = e.drawRoundedImage(
                         'ApplicationImage',
                         {
@@ -148,7 +148,7 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                             w: s.kC
                         },
                         !0
-                    );
+                    ));
                 let a = d(f, _);
                 (0, o.J)({
                     canvas: e,

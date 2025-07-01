@@ -1,15 +1,15 @@
-n.d(t, {
+(n.d(t, {
     gs: () => l,
     p1: () => c,
     s8: () => s
 }),
-    n(314940);
+    n(314940));
 var r = n(278074),
     i = n(981631),
     a = n(490897),
     o = n(388032),
     s = (function (e) {
-        return (e.ALL_MESSAGES = 'all_messages'), (e.MENTIONS = 'mentions'), (e.NOTHING = 'nothing'), (e.CUSTOM = 'custom'), e;
+        return ((e.ALL_MESSAGES = 'all_messages'), (e.MENTIONS = 'mentions'), (e.NOTHING = 'nothing'), (e.CUSTOM = 'custom'), e);
     })({});
 function l(e, t) {
     return (0, r.EQ)([t, e])

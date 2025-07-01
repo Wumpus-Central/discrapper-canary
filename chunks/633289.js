@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+(n.d(t, { Z: () => P }), n(388685));
 var r,
     i = n(108131),
     a = n.n(i),
@@ -41,11 +41,11 @@ let g = new u.Z('ApexExperimentStore'),
     N = {};
 function C(e) {
     let t = N[e];
-    return null == t && ((t = a().v3(e)), (N[e] = t)), t;
+    return (null == t && ((t = a().v3(e)), (N[e] = t)), t);
 }
 class R extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.default), null != e && 1 === e.version && ((O = e.clientOverrides), (b = e.evaluatedExperiments));
+        (this.waitFor(d.default), null != e && 1 === e.version && ((O = e.clientOverrides), (b = e.evaluatedExperiments)));
         let t = (0, c._S)();
         for (let e in ((v = {}), t)) {
             let n = C(e);
@@ -78,13 +78,13 @@ class R extends (r = o.ZP.PersistedStore) {
                         assignments: {}
                     };
                 for (let [t, r, o, s] of ((i[e] = a), n))
-                    null != o || (o = 0),
+                    (null != o || (o = 0),
                         (a.assignments[t] = {
                             hashedName: t,
                             variantId: r,
                             isOverride: (o & p.V8.IsOverride) != 0,
                             revision: s
-                        });
+                        }));
             }
         }
     }
@@ -99,7 +99,7 @@ class R extends (r = o.ZP.PersistedStore) {
         delete O[e.hashedName];
     }
     handleLogout(e) {
-        e.isSwitchingAccount || this.clearAllServerAssignments(), s.K.remove(I), this.clearAllTrackedExposures();
+        (e.isSwitchingAccount || this.clearAllServerAssignments(), s.K.remove(I), this.clearAllTrackedExposures());
     }
     registerExperiment(e) {
         y[e.name] = e;
@@ -165,7 +165,7 @@ class R extends (r = o.ZP.PersistedStore) {
             n = Date.now(),
             r = !1;
         for (let e in t) n - t[e] > S && (delete t[e], (r = !0));
-        return r && this.saveTrackedExposures(t), t;
+        return (r && this.saveTrackedExposures(t), t);
     }
     saveTrackedExposures(e) {
         try {
@@ -174,11 +174,11 @@ class R extends (r = o.ZP.PersistedStore) {
                 exposures: e
             });
         } catch (e) {
-            g.error('Error saving tracked exposures', e),
+            (g.error('Error saving tracked exposures', e),
                 f.default.track(h.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                     module: 'discord_app',
                     call: 'ApexExperimentStore.saveTrackedExposures'
-                });
+                }));
         }
     }
     clearAllServerAssignments() {
@@ -188,7 +188,7 @@ class R extends (r = o.ZP.PersistedStore) {
         };
     }
     clearAllOverrides() {
-        (O = {}), (v = {});
+        ((O = {}), (v = {}));
     }
     clearAllTrackedExposures() {
         A = {};
@@ -212,5 +212,5 @@ class R extends (r = o.ZP.PersistedStore) {
         );
     }
 }
-m(R, 'displayName', 'ApexExperimentStore'), m(R, 'persistKey', 'ApexExperimentStore');
+(m(R, 'displayName', 'ApexExperimentStore'), m(R, 'persistKey', 'ApexExperimentStore'));
 let P = new R();

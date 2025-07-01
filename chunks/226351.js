@@ -14,11 +14,11 @@ function r(e, t, n) {
 n.d(t, { o: () => i });
 class i {
     constructor() {
-        r(this, 'promise', void 0),
+        (r(this, 'promise', void 0),
             r(this, 'resolve', void 0),
             r(this, 'reject', void 0),
             (this.promise = new Promise((e, t) => {
-                (this.resolve = e), (this.reject = t);
-            }));
+                ((this.resolve = e), (this.reject = t));
+            })));
     }
 }

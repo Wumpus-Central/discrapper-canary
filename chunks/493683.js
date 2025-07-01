@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+(n.d(t, { Z: () => A }), n(388685));
 var r = n(544891),
     i = n(780384),
     a = n(570140),
@@ -35,7 +35,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,11 +51,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -80,7 +80,7 @@ let A = {
         if (1 === l.length) {
             let [e] = l,
                 t = this._openCachedDMChannel(e, o, s);
-            if (null != t) return c(t), Promise.resolve(t.id);
+            if (null != t) return (c(t), Promise.resolve(t.id));
         }
         try {
             let e = await r.tn.post({
@@ -256,7 +256,7 @@ let A = {
                 rejectWithError: !0
             }),
             a = null == n ? void 0 : n.getGuildId();
-        return null == a || (null == n ? void 0 : n.isThread()) || l.Z.checkGuildTemplateDirty(a), i;
+        return (null == a || (null == n ? void 0 : n.isThread()) || l.Z.checkGuildTemplateDirty(a), i);
     },
     async setIcon(e, t, n) {
         let i = p.Z.getChannel(e),
@@ -278,11 +278,11 @@ let A = {
             });
             m.default.track(y.rMx.CHANNEL_ICON_EDIT_PROGRESSED, S(I({}, a), { status: 'success' }));
             let o = null == i ? void 0 : i.getGuildId();
-            return null == o || (null == i ? void 0 : i.isThread()) || l.Z.checkGuildTemplateDirty(o), n;
+            return (null == o || (null == i ? void 0 : i.isThread()) || l.Z.checkGuildTemplateDirty(o), n);
         } catch (e) {
             var o, s;
             throw (
-                (m.default.track(
+                m.default.track(
                     y.rMx.CHANNEL_ICON_EDIT_PROGRESSED,
                     S(I({}, a), {
                         status: 'failed',
@@ -290,7 +290,7 @@ let A = {
                         error_message: null == e || null == (s = e.body) ? void 0 : s.message
                     })
                 ),
-                e)
+                e
             );
         }
     },
@@ -322,7 +322,7 @@ let A = {
                     rejectWithError: !0
                 }),
                 c = null == a ? void 0 : a.getGuildId();
-            return null == c || (null == a ? void 0 : a.isThread()) || l.Z.checkGuildTemplateDirty(c), i && m.default.track(y.rMx.CHANNEL_ICON_EDIT_PROGRESSED, S(I({}, s), { status: 'success' })), o;
+            return (null == c || (null == a ? void 0 : a.isThread()) || l.Z.checkGuildTemplateDirty(c), i && m.default.track(y.rMx.CHANNEL_ICON_EDIT_PROGRESSED, S(I({}, s), { status: 'success' })), o);
         } catch (e) {
             if (i) {
                 var c, u;
@@ -368,14 +368,14 @@ let A = {
             name: t,
             permission_overwrites: []
         };
-        null != n && (a.parent_id = n), null != i && (a.topic = i);
+        (null != n && (a.parent_id = n), null != i && (a.topic = i));
         let o = await r.tn.post({
             url: y.ANM.GUILD_CHANNELS(e),
             body: a,
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return l.Z.checkGuildTemplateDirty(e), o;
+        return (l.Z.checkGuildTemplateDirty(e), o);
     },
     fetchChannel: async (e) =>
         (

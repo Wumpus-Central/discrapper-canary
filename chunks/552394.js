@@ -46,14 +46,14 @@ function c(n) {
                 children: [
                     (0, i.jsx)(s.zxk, {
                         onClick: () => {
-                            a(d.L.USER_DISMISS), (0, s.pTH)();
+                            (a(d.L.USER_DISMISS), (0, s.pTH)());
                         },
                         color: s.Ttl.PRIMARY,
                         children: l.intl.string(l.t.i5lSbW)
                     }),
                     (0, i.jsx)(s.zxk, {
                         onClick: () => {
-                            a(d.L.TAKE_ACTION), (0, e.k)(t, 'HDStreamingPotionUpsellModal');
+                            (a(d.L.TAKE_ACTION), (0, e.k)(t, 'HDStreamingPotionUpsellModal'));
                         },
                         children: l.intl.string(l.t.w1qPc3)
                     })

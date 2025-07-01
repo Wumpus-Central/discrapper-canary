@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(539854);
+(n.d(t, { Z: () => u }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -71,28 +71,28 @@ let u = i.memo(
                 for (let o = 0; o < n; o++) {
                     let n = t ? g[o] : m,
                         s = (null == g ? void 0 : g[o]) !== 0;
-                    (a[o] = {
+                    ((a[o] = {
                         firstRowIndex: e,
                         offset: {
                             top: r,
                             bottom: -1
                         }
                     }),
-                        (r += U(o));
+                        (r += U(o)));
                     for (let t = 0; t < n; t++) {
                         let n = r + (s ? j(o, t, e) : 0),
                             a = {
                                 top: r,
                                 bottom: n
                             };
-                        (i[e] = {
+                        ((i[e] = {
                             sectionIndex: o,
                             offset: a
                         }),
                             (r = n),
-                            e++;
+                            e++);
                     }
-                    (r += G(o) + B(o)), (a[o].offset.bottom = r);
+                    ((r += G(o) + B(o)), (a[o].offset.bottom = r));
                 }
                 return {
                     totalHeight: (r += u[2]),
@@ -100,21 +100,21 @@ let u = i.memo(
                     sectionDescriptors: a
                 };
             }, [j, G, U, B, u, m, g, M]);
-        (V.current = Y), (F.current = H);
+        ((V.current = Y), (F.current = H));
         let W = i.useCallback(() => {
             var e;
             let t = null == (e = L.current) ? void 0 : e.getScrollerNode();
             if (null == t) return;
             let { offsetWidth: n, offsetHeight: r, scrollTop: i } = t;
-            D(r),
+            (D(r),
                 P(i),
                 null == a ||
                     a({
                         width: n,
                         height: r
-                    });
+                    }));
         }, [a]);
-        i.useLayoutEffect(() => {
+        (i.useLayoutEffect(() => {
             -1 === w && W();
         }, [w, W]),
             i.useEffect(() => {
@@ -123,8 +123,8 @@ let u = i.memo(
                     n = null == t ? void 0 : t.ownerDocument.defaultView;
                 if (null == t || null == n) return;
                 let r = new n.ResizeObserver(W);
-                return r.observe(t), () => r.disconnect();
-            }, [W]);
+                return (r.observe(t), () => r.disconnect());
+            }, [W]));
         let K = i.useCallback(() => {
             var e;
             let t = null == (e = L.current) ? void 0 : e.getScrollerNode();
@@ -132,7 +132,7 @@ let u = i.memo(
                 (window.cancelAnimationFrame(k.current),
                 (k.current = window.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    (x.current = e), null == n || n(e), P(e);
+                    ((x.current = e), null == n || n(e), P(e));
                 })));
         }, [n]);
         i.useImperativeHandle(
@@ -255,11 +255,11 @@ let u = i.memo(
                                     })
                                 );
                             else break;
-                            (g += i), E++, n++;
+                            ((g += i), E++, n++);
                         }
                         let O = s + u + g,
                             v = O + h >= e && O <= t;
-                        null != p && v && l.push(p(a)), null != f ? i.push(f(a, l)) : (i = [...i, ...l]);
+                        (null != p && v && l.push(p(a)), null != f ? i.push(f(a, l)) : (i = [...i, ...l]));
                     } else break;
                 }
                 return {

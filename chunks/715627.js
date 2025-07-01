@@ -1,4 +1,4 @@
-n.d(e, { Z: () => u }), n(388685);
+(n.d(e, { Z: () => u }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(505266),
@@ -36,7 +36,7 @@ let o = {
                 return (
                     (t = t.map((n, i) =>
                         setTimeout(() => {
-                            x.createMultipleConfetti(
+                            (x.createMultipleConfetti(
                                 (function (t, e, n, i, r) {
                                     var s, l;
                                     let u = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
@@ -51,7 +51,7 @@ let o = {
                                             for (var e = 1; e < arguments.length; e++) {
                                                 var n = null != arguments[e] ? arguments[e] : {},
                                                     i = Object.keys(n);
-                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                     (i = i.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (t) {
                                                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -59,7 +59,7 @@ let o = {
                                                     )),
                                                     i.forEach(function (e) {
                                                         var i;
-                                                        (i = n[e]),
+                                                        ((i = n[e]),
                                                             e in t
                                                                 ? Object.defineProperty(t, e, {
                                                                       value: i,
@@ -67,8 +67,8 @@ let o = {
                                                                       configurable: !0,
                                                                       writable: !0
                                                                   })
-                                                                : (t[e] = i);
-                                                    });
+                                                                : (t[e] = i));
+                                                    }));
                                             }
                                             return t;
                                         })({}, a.We)),
@@ -123,7 +123,7 @@ let o = {
                                 })(e.getBoundingClientRect(), f, h, m, g, O, b),
                                 null != p ? p : 50
                             ),
-                                i === t.length - 1 && null != j && Z(!0);
+                                i === t.length - 1 && null != j && Z(!0));
                         }, 60 * i)
                     )),
                     () => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(399606),
@@ -13,7 +13,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -21,7 +21,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -29,8 +29,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -136,12 +136,12 @@ function p(e) {
                         hideMaxPage: !0,
                         currentPage: j.currentPage,
                         onPageChange: (e) => {
-                            null == n || n(e),
+                            (null == n || n(e),
                                 requestIdleCallback(() => {
                                     f(() => {
                                         (0, u._o)(t, b(m({}, j), { currentPage: e }));
                                     });
-                                });
+                                }));
                         },
                         maxVisiblePages: a.hW
                     })

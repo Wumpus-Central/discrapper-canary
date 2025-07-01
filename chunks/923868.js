@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => s });
+(n.r(t), n.d(t, { default: () => s }));
 var r = n(528734),
     i = n(217224),
     a = n(951516),
@@ -19,5 +19,5 @@ function s(e, t) {
     var m = (0, r.default)(e),
         g = m.getDay(),
         E = 7 * (g < h) + g - h;
-    return m.setDate(m.getDate() - E), m.setHours(0, 0, 0, 0), m;
+    return (m.setDate(m.getDate() - E), m.setHours(0, 0, 0, 0), m);
 }

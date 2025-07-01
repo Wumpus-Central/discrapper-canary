@@ -105,14 +105,14 @@ var n = r(621796),
                 c = r;
             if (o !== u && 0 === r.getEndOffset()) {
                 var l = a(s.getBlockBefore(u));
-                (u = l.getKey()),
+                ((u = l.getKey()),
                     (c = c.merge({
                         anchorKey: o,
                         anchorOffset: r.getStartOffset(),
                         focusKey: u,
                         focusOffset: l.getLength(),
                         isBackward: !1
-                    }));
+                    })));
             }
             if (
                 s
@@ -144,7 +144,7 @@ var n = r(621796),
                 a = t.getCurrentInlineStyle();
             if (o.isCollapsed()) return i.setInlineStyleOverride(t, a.has(e) ? a.remove(e) : a.add(e));
             var u = t.getCurrentContent();
-            return (r = a.has(e) ? n.removeInlineStyle(u, o, e) : n.applyInlineStyle(u, o, e)), i.push(t, r, 'change-inline-style');
+            return ((r = a.has(e) ? n.removeInlineStyle(u, o, e) : n.applyInlineStyle(u, o, e)), i.push(t, r, 'change-inline-style'));
         },
         toggleLink: function (t, e, r) {
             var o = n.applyEntity(t.getCurrentContent(), e, r);

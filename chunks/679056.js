@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -62,7 +62,7 @@ class s extends (r = l.Component) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -70,7 +70,7 @@ class s extends (r = l.Component) {
                         )),
                         r.forEach(function (t) {
                             o(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
             })({}, a)),
@@ -95,7 +95,7 @@ class s extends (r = l.Component) {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, 'timer', new a.Xp()),
             o(this, 'state', { hovered: !1 }),
             o(this, 'handlePause', () => {
@@ -103,7 +103,7 @@ class s extends (r = l.Component) {
             }),
             o(this, 'handleResume', () => {
                 this.setState({ hovered: !1 });
-            });
+            }));
     }
 }
 o(s, 'defaultProps', {

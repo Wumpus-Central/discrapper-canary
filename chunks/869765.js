@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Y: () => p,
     Z: () => U
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r,
     i = n(31775),
     a = n.n(i),
@@ -28,7 +28,7 @@ function _(e, t, n) {
     );
 }
 var p = (function (e) {
-    return (e[(e.LOADED = 0)] = 'LOADED'), (e[(e.NOT_LOADED = 1)] = 'NOT_LOADED'), (e[(e.DELETED = 2)] = 'DELETED'), e;
+    return ((e[(e.LOADED = 0)] = 'LOADED'), (e[(e.NOT_LOADED = 1)] = 'NOT_LOADED'), (e[(e.DELETED = 2)] = 'DELETED'), e);
 })({});
 let h = Object.freeze({ state: 1 }),
     m = new Set();
@@ -37,7 +37,7 @@ class g {
         this._cachedMessageIds.has(e) && ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.delete(e));
     }
     set(e, t) {
-        this._cachedMessages.set(e, t), this._cachedMessageIds.has(e) || ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.add(e));
+        (this._cachedMessages.set(e, t), this._cachedMessageIds.has(e) || ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.add(e)));
     }
     has(e) {
         return this._cachedMessageIds.has(e);
@@ -49,7 +49,7 @@ class g {
         return this._cachedMessageIds;
     }
     constructor() {
-        _(
+        (_(
             this,
             '_cachedMessages',
             new (a())({
@@ -57,7 +57,7 @@ class g {
                 dispose: (e, t) => this.handleCacheDisposed(e, t)
             })
         ),
-            _(this, '_cachedMessageIds', new Set());
+            _(this, '_cachedMessageIds', new Set()));
     }
 }
 class E {
@@ -71,7 +71,7 @@ class E {
     }
     set(e, t, n) {
         let r = this._channelCaches.get(e);
-        null == r && ((r = new g()), this._channelCaches.set(e, r)), r.set(t, n);
+        (null == r && ((r = new g()), this._channelCaches.set(e, r)), r.set(t, n));
     }
     updateExistingMessageIfCached(e) {
         let t = this._channelCaches.get(e.channel_id);
@@ -223,7 +223,7 @@ class j extends (r = o.ZP.Store) {
     }
     getMessageByReference(e) {
         let t;
-        return null != e && (t = b.get(e.channel_id, e.message_id)), null != t ? t : h;
+        return (null != e && (t = b.get(e.channel_id, e.message_id)), null != t ? t : h);
     }
     getMessage(e, t) {
         var n;
@@ -231,7 +231,7 @@ class j extends (r = o.ZP.Store) {
     }
     getReplyIdsForChannel(e) {
         let t;
-        return null != e && (t = b.getCachedMessageIdsForChannel(e)), null != t ? t : m;
+        return (null != e && (t = b.getCachedMessageIdsForChannel(e)), null != t ? t : m);
     }
 }
 _(j, 'displayName', 'ReferencedMessageStore');

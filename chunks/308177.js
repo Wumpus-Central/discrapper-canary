@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -38,8 +38,8 @@ let O = (0, o.Z)((e) => {
     let { channel: o, width: y, onScroll: O } = e,
         {
             selectedParticipantId: E,
-            largeStream: I,
-            chatOpen: S
+            largeStream: S,
+            chatOpen: I
         } = (0, l.cj)(
             [a.Z],
             () => ({
@@ -56,18 +56,18 @@ let O = (0, o.Z)((e) => {
         A = T.filter(j),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
         R = v(y),
-        k = x(y, S),
+        k = x(y, I),
         M = {
             [u.pV.SPEAKER]: k,
             [u.pV.AUDIENCE]: R,
             [u.pV.SELECTED]: 1
         },
-        D = (0, d.Dx)(o.id),
-        [L, U] = (0, d.aP)(o.id, M, D),
-        B = [Math.max(null != (t = L[0]) ? t : 1, 1), Math.max(null != (n = L[1]) ? n : 1, 1), L[2]],
-        { speakerTileWidth: F, speakerTileHeight: G } = C(y, k),
-        H = I ? y - 32 : Math.min(y - 64, 3 * F + 8),
-        V = (e) => e === L.length - 1 || (0 === Z && 1 === e),
+        L = (0, d.Dx)(o.id),
+        [D, U] = (0, d.aP)(o.id, M, L),
+        B = [Math.max(null != (t = D[0]) ? t : 1, 1), Math.max(null != (n = D[1]) ? n : 1, 1), D[2]],
+        { speakerTileWidth: F, speakerTileHeight: H } = C(y, k),
+        G = S ? y - 32 : Math.min(y - 64, 3 * F + 8),
+        V = (e) => e === D.length - 1 || (0 === Z && 1 === e),
         [z, W] = i.useState(!1),
         [Y, q] = i.useState(!1);
     return (0, r.jsx)(h.Z, {
@@ -123,7 +123,7 @@ let O = (0, o.Z)((e) => {
                             children: (0, r.jsx)(g.Z, {
                                 channel: o,
                                 participant: l[0],
-                                width: H
+                                width: G
                             })
                         },
                         'selected-participant'
@@ -157,7 +157,7 @@ let O = (0, o.Z)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? H / g.Q + 8 : 1 === e ? (z ? 0 : G) : 98 * !Y),
+        rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? G / g.Q + 8 : 1 === e ? (z ? 0 : H) : 98 * !Y),
         renderFooter: (e) => {
             let { section: t } = e;
             return V(t) ? (0, r.jsx)('div', { className: _.spacer }, 'bottom-spacer') : null;

@@ -13,7 +13,7 @@ let N = function (e) {
     let { onClose: t, onComplete: n, onCancel: o, transitionState: N, webviewUrl: A, useV1: L = !1 } = e,
         S = (0, r.GE)(),
         u = l.useCallback(() => {
-            n(), t();
+            (n(), t());
         }, [n, t]),
         T = l.useCallback(() => {
             (0, E.nfh)(a.zJ) && u();

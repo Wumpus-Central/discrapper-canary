@@ -1,4 +1,4 @@
-n.d(t, { T: () => O }), n(388685), n(539854);
+(n.d(t, { T: () => O }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -60,18 +60,18 @@ function O(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['channelId', 'className', 'showingClassName', 'onClick', 'inPopout', 'showRequestToSpeakSidebar', 'toggleRequestToSpeakSidebar']);
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
-        { disabled: I } = O,
-        S = i.useRef(null),
+        { disabled: S } = O,
+        I = i.useRef(null),
         P = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
@@ -87,7 +87,7 @@ function O(e) {
                         o(!1);
                     }, b.z);
                     return () => {
-                        clearTimeout(e), o(!1);
+                        (clearTimeout(e), o(!1));
                     };
                 }, [t]),
                 {
@@ -98,7 +98,7 @@ function O(e) {
             );
         })(n),
         A = i.useCallback(() => {
-            (0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P);
+            ((0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P));
         }, [n, P, h, m, _, E]),
         w = i.useCallback(
             (e) => {
@@ -112,19 +112,19 @@ function O(e) {
         ),
         R = i.useCallback(() => {
             var e;
-            null == (e = S.current) || e.focus();
+            null == (e = I.current) || e.focus();
         }, []);
     (0, g.yp)({
         event: C.CkL.FOCUS_CHAT_BUTTON,
-        handler: I ? null : R
+        handler: S ? null : R
     });
     let [k, M] = i.useState(!1),
-        D = i.useCallback(() => {
+        L = i.useCallback(() => {
             f && M(!0);
         }, [f]);
-    (0, g.yp)({
+    ((0, g.yp)({
         event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: D
+        handler: L
     }),
         i.useEffect(() => {
             let e;
@@ -137,18 +137,18 @@ function O(e) {
                     clearTimeout(e);
                 }
             );
-        }, [k]);
-    let L = [(t = f && I ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
+        }, [k]));
+    let D = [(t = f && S ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
     return (
-        T > 0 && L.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
-        N > 0 && L.push(x.intl.string(x.t.x5zAGR)),
+        T > 0 && D.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
+        N > 0 && D.push(x.intl.string(x.t.x5zAGR)),
         (0, r.jsx)(
             y.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -156,7 +156,7 @@ function O(e) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -164,16 +164,16 @@ function O(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })(
                 {
-                    buttonRef: S,
+                    buttonRef: I,
                     onClick: A,
                     label: t,
-                    'aria-label': L.join(', '),
+                    'aria-label': D.join(', '),
                     iconComponent: w,
                     tooltipPosition: 'bottom',
                     wrapperClassName: o()(l, null != a && { [a]: Z }),

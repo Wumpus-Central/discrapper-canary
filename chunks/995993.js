@@ -1,10 +1,10 @@
-n.d(t, { m: () => E });
+n.d(t, { m: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(399606),
     o = n(704215),
-    s = n(692547),
-    a = n(481060),
+    a = n(692547),
+    s = n(481060),
     c = n(239091),
     u = n(605236),
     d = n(45966),
@@ -20,9 +20,9 @@ var r = n(255367),
     v = n(490897),
     C = n(388032),
     j = n(990252);
-function E(e) {
-    let { guild: t, selected: E } = e,
-        S = (0, h.Z)(t),
+function S(e) {
+    let { guild: t, selected: S } = e,
+        E = (0, h.Z)(t),
         x = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         I = (0, l.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
         P = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, v.W.GUILD_ONBOARDING_QUESTION)),
@@ -35,8 +35,8 @@ function E(e) {
             return null != e && e > r;
         }),
         Z = i.useCallback(() => {
-            (0, f.uL)(O.Z5c.CHANNEL(t.id, S ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
-        }, [t.id, S]),
+            (0, f.uL)(O.Z5c.CHANNEL(t.id, E ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
+        }, [t.id, E]),
         T = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -49,7 +49,7 @@ function E(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,7 +57,7 @@ function E(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -65,8 +65,8 @@ function E(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, n)),
@@ -93,23 +93,23 @@ function E(e) {
         A = null;
     return (
         (x && !P && !N) ||
-            E ||
+            S ||
             w ||
-            (A = (0, r.jsx)(a.IGR, {
-                color: s.Z.colors.BADGE_BRAND_BG.css,
+            (A = (0, r.jsx)(s.IGR, {
+                color: a.Z.colors.BADGE_BRAND_BG.css,
                 text: C.intl.string(C.t.y2b7CA),
                 className: j.newChannel
             })),
         (0, r.jsx)(_.m, {
             id: 'channels-'.concat(t.id),
             renderIcon: (e) =>
-                (0, r.jsx)(a.H$4, {
+                (0, r.jsx)(s.H$4, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
-            text: S ? C.intl.string(C.t.h9mGOD) : C.intl.string(C.t.et6wam),
-            selected: E,
+            text: E ? C.intl.string(C.t.h9mGOD) : C.intl.string(C.t.et6wam),
+            selected: S,
             onClick: Z,
             onContextMenu: T,
             trailing: A

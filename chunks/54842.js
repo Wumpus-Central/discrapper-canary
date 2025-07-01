@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -26,7 +26,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -42,8 +42,8 @@ function I(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -221,12 +221,12 @@ let S = () => [
             O = (0, a.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
             C = null == _ ? void 0 : _.offsetWidth,
             y = null == _ ? void 0 : _.offsetHeight;
-        i.useEffect(() => {
-            null != C && l(C / 2), null != y && o(y / 2);
+        (i.useEffect(() => {
+            (null != C && l(C / 2), null != y && o(y / 2));
         }, [C, y, l, o]),
             i.useEffect(() => {
                 (0, d.Kw)(f.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
-            }, []);
+            }, []));
         let N = () => {
             u.Z.open();
         };

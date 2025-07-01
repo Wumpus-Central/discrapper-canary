@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(846519),
     i = n(147913),
     a = n(246133),
@@ -24,7 +24,7 @@ let d = new r.V7(),
     _ = new r.V7();
 class p extends i.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'actions', {
                 USER_SETTINGS_PROTO_UPDATE: () => this.handleUpdateProto(),
                 POST_CONNECTION_OPEN: () => this.handleUpdateProto()
@@ -79,7 +79,7 @@ class p extends i.Z {
                           )
                         : ((0, o.oW)(!1), f.stop());
                 } else null != f && f.stop();
-            });
+            }));
     }
 }
 let h = new p();

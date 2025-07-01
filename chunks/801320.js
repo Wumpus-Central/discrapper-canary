@@ -12,7 +12,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var o = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(o);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(o).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(o, e).enumerable;
@@ -20,7 +20,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = o[t]),
+                ((r = o[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -28,8 +28,8 @@ function u(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -71,7 +71,7 @@ function d(e) {
             onSubmit: function (e) {
                 var n, i, p, d;
                 let { rating: m, problem: f, dontShowAgain: O, feedback: y } = e;
-                O &&
+                (O &&
                     (0, a.Uv)({
                         feedbackType: b.nw.VIDEO_BACKGROUND,
                         location: 'VideoBackgroundFeedbackModal'
@@ -105,7 +105,7 @@ function d(e) {
                             (0, c.ZDy)(async () => {
                                 let { default: e } = await o.e('14466').then(o.bind(o, 729328));
                                 return (t) => (0, r.jsx)(e, u({ body: s.intl.string(s.t.aHB11d) }, t));
-                            }));
+                            })));
             },
             onClose: m,
             transitionState: d,

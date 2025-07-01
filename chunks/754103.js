@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -65,7 +65,7 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -75,7 +75,7 @@ function h(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 class m extends i.PureComponent {
@@ -83,7 +83,7 @@ class m extends i.PureComponent {
         if (this.props.formError !== e.formError) this.setState({ changedSinceError: new Set() });
         else if (null != this.props.formError) {
             let { changedSinceError: t } = this.state;
-            this.getChangedValues(e).forEach((e) => t.add(e)), this.setState({ changedSinceError: t });
+            (this.getChangedValues(e).forEach((e) => t.add(e)), this.setState({ changedSinceError: t }));
         }
     }
     getChangedValues(e) {
@@ -104,7 +104,7 @@ class m extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'state', { changedSinceError: new Set() }),
             u(this, 'renderFormSection', (e) => {
                 let t = this.props,
@@ -143,7 +143,7 @@ class m extends i.PureComponent {
                     },
                     e.fields.map((e) => e.name).join('')
                 );
-            });
+            }));
     }
 }
 let g = m;

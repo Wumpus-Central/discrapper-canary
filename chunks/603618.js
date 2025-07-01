@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => en,
     lE: () => et,
     lX: () => ee
 }),
     n(388685),
     n(539854),
-    n(997841);
+    n(997841));
 var i = n(255367),
     r = n(73800),
     o = n(512722),
@@ -53,7 +53,7 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -61,7 +61,7 @@ function H(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -69,8 +69,8 @@ function H(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -119,7 +119,7 @@ function Q(e) {
                         var i;
                         let e = await h.Z.getOrEnsurePrivateChannel(a.id),
                             n = null != (i = P.Z.getChannel(e)) ? i : null;
-                        l()(null != n, 'Send channel must be defined'),
+                        (l()(null != n, 'Send channel must be defined'),
                             (0, j.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
                             (0, O.i)(G.IlC.OVERLAY, !0),
                             !0 === t.extra.fake_inventory_item
@@ -133,9 +133,9 @@ function Q(e) {
                                       content: F.intl.string(F.t.DwAcMz),
                                       entry: t,
                                       whenReady: !0
-                                  });
+                                  }));
                     }
-                    m.Z.track(G.rMx.OVERLAY_GAME_INVITE_SENT, {
+                    (m.Z.track(G.rMx.OVERLAY_GAME_INVITE_SENT, {
                         target_user_id: a.id,
                         target_content_entry_id: t.id,
                         target_index: o
@@ -145,7 +145,7 @@ function Q(e) {
                             value: V.bk.INVITE_SENT,
                             userId: a.id
                         }),
-                        c('sent');
+                        c('sent'));
                 } catch (e) {
                     c('unsent');
                 }
@@ -156,14 +156,14 @@ function Q(e) {
             if (null == a) return;
             let t = await h.Z.getOrEnsurePrivateChannel(a.id),
                 n = null != (e = P.Z.getChannel(t)) ? e : null;
-            l()(null != n, 'Send channel must be defined'),
+            (l()(null != n, 'Send channel must be defined'),
                 (0, j.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
                 (0, O.i)(G.IlC.OVERLAY, !0),
                 (0, V.Ws)(G.Odu.ACTIVITY, {
                     type: V.Qu.REDIRECT,
                     value: V.bk.CHAT,
                     userId: a.id
-                });
+                }));
         },
         _ = y ? F.intl.string(F.t['3fRyS0']) : F.intl.string(F.t.XHxDIS),
         I = y
@@ -219,7 +219,7 @@ function K(e) {
             if (null != l && 'unsent' === c) {
                 e.stopPropagation();
                 try {
-                    f('sending'),
+                    (f('sending'),
                         await p.Z.sendActivityInviteUser({
                             type: G.mFx.JOIN_REQUEST,
                             userId: l.id,
@@ -231,7 +231,7 @@ function K(e) {
                             value: V.bk.JOIN_REQUEST_SENT,
                             userId: l.id
                         }),
-                        f('sent');
+                        f('sent'));
                 } catch (e) {
                     f('unsent');
                 }
@@ -500,11 +500,11 @@ function et(e) {
                       ? (0, i.jsx)(d.zxk, {
                             className: B.inviteFriendsButton,
                             onClick: () => {
-                                (0, f.h7)(t, !1, G.IlC.POPOUT),
+                                ((0, f.h7)(t, !1, G.IlC.POPOUT),
                                     (0, V.Ws)(G.Odu.ACTIVITY, {
                                         type: V.Qu.INVITE,
                                         value: V.bk.PANEL_OPENED
-                                    });
+                                    }));
                             },
                             size: d.PhG.SMALL,
                             color: d.Ttl.PRIMARY,

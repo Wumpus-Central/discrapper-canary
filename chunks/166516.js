@@ -29,12 +29,12 @@
                 dataUrl: !1,
                 win: window
             };
-        ((p = {}).ff = 'undefined' != typeof InstallTrigger), (p.chrome = !!window.chrome), (p.opera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0), (p.ie = !1), (p.safari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0), (p.supported = p.chrome || p.ff || p.opera);
+        (((p = {}).ff = 'undefined' != typeof InstallTrigger), (p.chrome = !!window.chrome), (p.opera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0), (p.ie = !1), (p.safari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0), (p.supported = p.chrome || p.ff || p.opera));
         var m = [];
-        (h = function () {}), (c = u = !1);
+        ((h = function () {}), (c = u = !1));
         var x = {};
-        (x.ready = function () {
-            (c = !0), x.reset(), h();
+        ((x.ready = function () {
+            ((c = !0), x.reset(), h());
         }),
             (x.reset = function () {
                 c && ((m = []), (l = !1), (d = !1), a.clearRect(0, 0, o, n), a.drawImage(s, 0, 0, o, n), C.setIcon(i), window.clearTimeout(f), window.clearTimeout(y));
@@ -42,12 +42,12 @@
             (x.start = function () {
                 if (c && !d) {
                     var e = function () {
-                        (l = m[0]), (d = !1), m.length > 0 && (m.shift(), x.start());
+                        ((l = m[0]), (d = !1), m.length > 0 && (m.shift(), x.start()));
                     };
                     if (m.length > 0) {
                         d = !0;
                         var r = function () {
-                            ['type', 'animation', 'bgColor', 'textColor', 'fontFamily', 'fontStyle'].forEach(function (e) {
+                            (['type', 'animation', 'bgColor', 'textColor', 'fontFamily', 'fontStyle'].forEach(function (e) {
                                 e in m[0].options && (t[e] = m[0].options[e]);
                             }),
                                 I.run(
@@ -56,7 +56,7 @@
                                         e();
                                     },
                                     !1
-                                );
+                                ));
                         };
                         l
                             ? I.run(
@@ -69,30 +69,30 @@
                             : r();
                     }
                 }
-            });
+            }));
         var v = {},
             b = function (e) {
-                return (e.n = 'number' == typeof e.n ? Math.abs(0 | e.n) : e.n), (e.x = o * e.x), (e.y = n * e.y), (e.w = o * e.w), (e.h = n * e.h), (e.len = ('' + e.n).length), e;
+                return ((e.n = 'number' == typeof e.n ? Math.abs(0 | e.n) : e.n), (e.x = o * e.x), (e.y = n * e.y), (e.w = o * e.w), (e.h = n * e.h), (e.len = ('' + e.n).length), e);
             };
         function E(e) {
             if (e.paused || e.ended || u) return !1;
             try {
-                a.clearRect(0, 0, o, n), a.drawImage(e, 0, 0, o, n);
+                (a.clearRect(0, 0, o, n), a.drawImage(e, 0, 0, o, n));
             } catch (e) {}
-            (y = setTimeout(function () {
+            ((y = setTimeout(function () {
                 E(e);
             }, I.duration)),
-                C.setIcon(i);
+                C.setIcon(i));
         }
-        (v.circle = function (e) {
+        ((v.circle = function (e) {
             e = b(e);
             var r = !1;
-            2 === e.len ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w), (r = !0)) : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w), (r = !0)), a.clearRect(0, 0, o, n), a.drawImage(s, 0, 0, o, n), a.beginPath(), (a.font = t.fontStyle + ' ' + Math.floor(e.h * (e.n > 99 ? 0.85 : 1)) + 'px ' + t.fontFamily), (a.textAlign = 'center'), r ? (a.moveTo(e.x + e.w / 2, e.y), a.lineTo(e.x + e.w - e.h / 2, e.y), a.quadraticCurveTo(e.x + e.w, e.y, e.x + e.w, e.y + e.h / 2), a.lineTo(e.x + e.w, e.y + e.h - e.h / 2), a.quadraticCurveTo(e.x + e.w, e.y + e.h, e.x + e.w - e.h / 2, e.y + e.h), a.lineTo(e.x + e.h / 2, e.y + e.h), a.quadraticCurveTo(e.x, e.y + e.h, e.x, e.y + e.h - e.h / 2), a.lineTo(e.x, e.y + e.h / 2), a.quadraticCurveTo(e.x, e.y, e.x + e.h / 2, e.y)) : a.arc(e.x + e.w / 2, e.y + e.h / 2, e.h / 2, 0, 2 * Math.PI), (a.fillStyle = 'rgba(' + t.bgColor.r + ',' + t.bgColor.g + ',' + t.bgColor.b + ',' + e.o + ')'), a.fill(), a.closePath(), a.beginPath(), a.stroke(), (a.fillStyle = 'rgba(' + t.textColor.r + ',' + t.textColor.g + ',' + t.textColor.b + ',' + e.o + ')'), 'number' == typeof e.n && e.n > 999 ? a.fillText((e.n > 9999 ? 9 : Math.floor(e.n / 1000)) + 'k+', Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.2 * e.h)) : a.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)), a.closePath();
+            (2 === e.len ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w), (r = !0)) : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w), (r = !0)), a.clearRect(0, 0, o, n), a.drawImage(s, 0, 0, o, n), a.beginPath(), (a.font = t.fontStyle + ' ' + Math.floor(e.h * (e.n > 99 ? 0.85 : 1)) + 'px ' + t.fontFamily), (a.textAlign = 'center'), r ? (a.moveTo(e.x + e.w / 2, e.y), a.lineTo(e.x + e.w - e.h / 2, e.y), a.quadraticCurveTo(e.x + e.w, e.y, e.x + e.w, e.y + e.h / 2), a.lineTo(e.x + e.w, e.y + e.h - e.h / 2), a.quadraticCurveTo(e.x + e.w, e.y + e.h, e.x + e.w - e.h / 2, e.y + e.h), a.lineTo(e.x + e.h / 2, e.y + e.h), a.quadraticCurveTo(e.x, e.y + e.h, e.x, e.y + e.h - e.h / 2), a.lineTo(e.x, e.y + e.h / 2), a.quadraticCurveTo(e.x, e.y, e.x + e.h / 2, e.y)) : a.arc(e.x + e.w / 2, e.y + e.h / 2, e.h / 2, 0, 2 * Math.PI), (a.fillStyle = 'rgba(' + t.bgColor.r + ',' + t.bgColor.g + ',' + t.bgColor.b + ',' + e.o + ')'), a.fill(), a.closePath(), a.beginPath(), a.stroke(), (a.fillStyle = 'rgba(' + t.textColor.r + ',' + t.textColor.g + ',' + t.textColor.b + ',' + e.o + ')'), 'number' == typeof e.n && e.n > 999 ? a.fillText((e.n > 9999 ? 9 : Math.floor(e.n / 1000)) + 'k+', Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.2 * e.h)) : a.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)), a.closePath());
         }),
             (v.rectangle = function (e) {
                 e = b(e);
-                2 === e.len ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w)) : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)), a.clearRect(0, 0, o, n), a.drawImage(s, 0, 0, o, n), a.beginPath(), (a.font = t.fontStyle + ' ' + Math.floor(e.h * (e.n > 99 ? 0.9 : 1)) + 'px ' + t.fontFamily), (a.textAlign = 'center'), (a.fillStyle = 'rgba(' + t.bgColor.r + ',' + t.bgColor.g + ',' + t.bgColor.b + ',' + e.o + ')'), a.fillRect(e.x, e.y, e.w, e.h), (a.fillStyle = 'rgba(' + t.textColor.r + ',' + t.textColor.g + ',' + t.textColor.b + ',' + e.o + ')'), 'number' == typeof e.n && e.n > 999 ? a.fillText((e.n > 9999 ? 9 : Math.floor(e.n / 1000)) + 'k+', Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.2 * e.h)) : a.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)), a.closePath();
-            });
+                (2 === e.len ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w)) : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)), a.clearRect(0, 0, o, n), a.drawImage(s, 0, 0, o, n), a.beginPath(), (a.font = t.fontStyle + ' ' + Math.floor(e.h * (e.n > 99 ? 0.9 : 1)) + 'px ' + t.fontFamily), (a.textAlign = 'center'), (a.fillStyle = 'rgba(' + t.bgColor.r + ',' + t.bgColor.g + ',' + t.bgColor.b + ',' + e.o + ')'), a.fillRect(e.x, e.y, e.w, e.h), (a.fillStyle = 'rgba(' + t.textColor.r + ',' + t.textColor.g + ',' + t.textColor.b + ',' + e.o + ')'), 'number' == typeof e.n && e.n > 999 ? a.fillText((e.n > 9999 ? 9 : Math.floor(e.n / 1000)) + 'k+', Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.2 * e.h)) : a.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)), a.closePath());
+            }));
         var C = {};
         function A(e) {
             e = e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (e, t, r, n) {
@@ -114,7 +114,7 @@
             for (r in t) n[r] = t[r];
             return n;
         }
-        (C.getIcon = function () {
+        ((C.getIcon = function () {
             var e = !1;
             return (
                 t.element
@@ -132,17 +132,17 @@
         }),
             (C.setIcon = function (e) {
                 var n = e.toDataURL('image/png');
-                if ((t.dataUrl && t.dataUrl(n), t.element)) t.element.setAttribute('href', n), t.element.setAttribute('src', n);
+                if ((t.dataUrl && t.dataUrl(n), t.element)) (t.element.setAttribute('href', n), t.element.setAttribute('src', n));
                 else if (t.elementId) {
                     var o = g.getElementById(t.elementId);
-                    o.setAttribute('href', n), o.setAttribute('src', n);
+                    (o.setAttribute('href', n), o.setAttribute('src', n));
                 } else if (p.ff || p.opera) {
                     var i = r;
-                    (r = g.createElement('link')), p.opera && r.setAttribute('rel', 'icon'), r.setAttribute('rel', 'icon'), r.setAttribute('type', 'image/png'), g.getElementsByTagName('head')[0].appendChild(r), r.setAttribute('href', n), i.parentNode && i.parentNode.removeChild(i);
+                    ((r = g.createElement('link')), p.opera && r.setAttribute('rel', 'icon'), r.setAttribute('rel', 'icon'), r.setAttribute('type', 'image/png'), g.getElementsByTagName('head')[0].appendChild(r), r.setAttribute('href', n), i.parentNode && i.parentNode.removeChild(i));
                 } else r.setAttribute('href', n);
-            });
+            }));
         var I = {};
-        (I.duration = 40),
+        ((I.duration = 40),
             (I.types = {}),
             (I.types.fade = [
                 {
@@ -395,23 +395,23 @@
             (I.run = function (e, r, n, o) {
                 var a = I.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? 'none' : t.animation];
                 if (((o = !0 === n ? (void 0 !== o ? o : a.length - 1) : void 0 !== o ? o : 0), (r = r || function () {}), !(o < a.length) || !(o >= 0))) return void r();
-                v[t.type](R(e, a[o])),
+                (v[t.type](R(e, a[o])),
                     (f = setTimeout(function () {
-                        n ? (o -= 1) : (o += 1), I.run(e, r, n, o);
+                        (n ? (o -= 1) : (o += 1), I.run(e, r, n, o));
                     }, I.duration)),
-                    C.setIcon(i);
+                    C.setIcon(i));
             }),
             ((t = R(w, e)).bgColor = A(t.bgColor)),
             (t.textColor = A(t.textColor)),
             (t.position = t.position.toLowerCase()),
             (t.animation = I.types['' + t.animation] ? t.animation : w.animation),
-            (g = t.win.document);
+            (g = t.win.document));
         var T = t.position.indexOf('up') > -1,
             _ = t.position.indexOf('left') > -1;
         if (T || _)
             for (var M = 0; M < I.types['' + t.animation].length; M++) {
                 var U = I.types['' + t.animation][M];
-                T && (U.y < 0.6 ? (U.y = U.y - 0.4) : (U.y = U.y - 2 * U.y + (1 - U.w))), _ && (U.x < 0.6 ? (U.x = U.x - 0.4) : (U.x = U.x - 2 * U.x + (1 - U.h))), (I.types['' + t.animation][M] = U);
+                (T && (U.y < 0.6 ? (U.y = U.y - 0.4) : (U.y = U.y - 2 * U.y + (1 - U.w))), _ && (U.x < 0.6 ? (U.x = U.x - 0.4) : (U.x = U.x - 2 * U.x + (1 - U.h))), (I.types['' + t.animation][M] = U));
             }
         return (
             (t.type = v['' + t.type] ? t.type : w.type),
@@ -421,16 +421,16 @@
             r.hasAttribute('href')
                 ? (s.setAttribute('crossOrigin', 'anonymous'),
                   (s.onload = function () {
-                      (n = s.height > 0 ? s.height : 32), (o = s.width > 0 ? s.width : 32), (i.height = n), (i.width = o), (a = i.getContext('2d')), x.ready();
+                      ((n = s.height > 0 ? s.height : 32), (o = s.width > 0 ? s.width : 32), (i.height = n), (i.width = o), (a = i.getContext('2d')), x.ready());
                   }),
                   s.setAttribute('src', r.getAttribute('href')))
                 : ((s.onload = function () {
-                      (n = 32), (o = 32), (s.height = n), (s.width = o), (i.height = n), (i.width = o), (a = i.getContext('2d')), x.ready();
+                      ((n = 32), (o = 32), (s.height = n), (s.width = o), (i.height = n), (i.width = o), (a = i.getContext('2d')), x.ready());
                   }),
                   s.setAttribute('src', '')),
             {
                 badge: function (e, t) {
-                    (t = ('string' == typeof t ? { animation: t } : t) || {}),
+                    ((t = ('string' == typeof t ? { animation: t } : t) || {}),
                         (h = function () {
                             try {
                                 if ('number' == typeof e ? e > 0 : '' !== e) {
@@ -457,13 +457,13 @@
                                 throw Error('Error setting badge. Message: ' + e.message);
                             }
                         }),
-                        c && h();
+                        c && h());
                 },
                 video: function (e) {
-                    (h = function () {
+                    ((h = function () {
                         try {
                             if ('stop' === e) {
-                                (u = !0), x.reset(), (u = !1);
+                                ((u = !0), x.reset(), (u = !1));
                                 return;
                             }
                             e.addEventListener(
@@ -477,27 +477,27 @@
                             throw Error('Error setting video. Message: ' + e.message);
                         }
                     }),
-                        c && h();
+                        c && h());
                 },
                 image: function (e) {
-                    (h = function () {
+                    ((h = function () {
                         try {
                             var t = e.width,
                                 r = e.height,
                                 s = document.createElement('img'),
                                 c = t / o < r / n ? t / o : r / n;
-                            s.setAttribute('crossOrigin', 'anonymous'),
+                            (s.setAttribute('crossOrigin', 'anonymous'),
                                 (s.onload = function () {
-                                    a.clearRect(0, 0, o, n), a.drawImage(s, 0, 0, o, n), C.setIcon(i);
+                                    (a.clearRect(0, 0, o, n), a.drawImage(s, 0, 0, o, n), C.setIcon(i));
                                 }),
                                 s.setAttribute('src', e.getAttribute('src')),
                                 (s.height = r / c),
-                                (s.width = t / c);
+                                (s.width = t / c));
                         } catch (e) {
                             throw Error('Error setting image. Message: ' + e.message);
                         }
                     }),
-                        c && h();
+                        c && h());
                 },
                 webcam: function (e) {
                     if (
@@ -509,14 +509,14 @@
                         p.supported)
                     ) {
                         var t = !1;
-                        (navigator.getUserMedia = navigator.getUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia),
+                        ((navigator.getUserMedia = navigator.getUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia),
                             (h = function () {
                                 try {
                                     if ('stop' === e) {
-                                        (u = !0), x.reset(), (u = !1);
+                                        ((u = !0), x.reset(), (u = !1));
                                         return;
                                     }
-                                    ((t = document.createElement('video')).width = o),
+                                    (((t = document.createElement('video')).width = o),
                                         (t.height = n),
                                         navigator.getUserMedia(
                                             {
@@ -524,15 +524,15 @@
                                                 audio: !1
                                             },
                                             function (e) {
-                                                (t.src = URL.createObjectURL(e)), t.play(), E(t);
+                                                ((t.src = URL.createObjectURL(e)), t.play(), E(t));
                                             },
                                             function () {}
-                                        );
+                                        ));
                                 } catch (e) {
                                     throw Error('Error setting webcam. Message: ' + e.message);
                                 }
                             }),
-                            c && h();
+                            c && h());
                     }
                 },
                 reset: x.reset,

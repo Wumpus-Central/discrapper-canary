@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+(n.d(t, { Z: () => M }), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(695469),
@@ -48,7 +48,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -56,7 +56,7 @@ function A(e) {
             )),
             i.forEach(function (t) {
                 R(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -93,7 +93,7 @@ class L extends r.PureComponent {
     }
     setAnimatedValueForBanner(e) {
         let { renderBanner: t, communityInfoVisible: n, bannerVisible: i, controller: r } = this.state;
-        ((e >= 54 && i) || (e < 54 && !i)) && (i = !i),
+        (((e >= 54 && i) || (e < 54 && !i)) && (i = !i),
             ((e >= 78 && !t) || (e < 78 && t)) && (t = !t),
             (n = i),
             (t !== this.state.renderBanner || i !== this.state.bannerVisible || n !== this.state.communityInfoVisible) &&
@@ -107,17 +107,17 @@ class L extends r.PureComponent {
                     value: Math.min(1, Math.max(0, 1 - e / 78)),
                     immediate: !0
                 })
-                .start();
+                .start());
     }
     setAnimatedValueForCommunityInfo(e) {
         let { communityInfoVisible: t, controller: n } = this.state;
-        ((e >= 20 && t) || (e < 20 && !t)) && this.setState({ communityInfoVisible: !t }),
+        (((e >= 20 && t) || (e < 20 && !t)) && this.setState({ communityInfoVisible: !t }),
             n
                 .update({
                     value: Math.min(1, Math.max(0, 1 - e / 20)),
                     immediate: !0
                 })
-                .start();
+                .start());
     }
     render() {
         var e, t;
@@ -133,12 +133,12 @@ class L extends r.PureComponent {
                             i,
                             r = {},
                             o = Object.keys(e);
-                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                 }
                 return r;
             })(n, ['onDragStart']),
@@ -217,7 +217,7 @@ class L extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             R(this, 'settingsIconRef', r.createRef()),
             R(this, 'state', {
                 controller: new o.Controller({
@@ -231,7 +231,7 @@ class L extends r.PureComponent {
             R(this, 'handleScroll', (e) => {
                 let { scrollTop: t } = e;
                 this.setAnimatedValue(t);
-            });
+            }));
     }
 }
 function M(e) {

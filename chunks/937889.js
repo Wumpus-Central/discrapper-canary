@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => d,
     k$: () => f,
     p6: () => k,
@@ -8,7 +8,7 @@ n.d(t, {
     n(781311),
     n(704826),
     n(35282),
-    n(865427);
+    n(865427));
 var r = n(830121),
     i = n(202131),
     o = n(454585),
@@ -30,7 +30,7 @@ function g(e, t) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function g(e, t) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -46,8 +46,8 @@ function g(e, t) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })({}, o)),
@@ -80,6 +80,7 @@ function k(e) {
         messageId: n,
         allowLinks: !!r.allowLinks,
         allowDevLinks: !!r.allowDevLinks,
+        allowGameMentions: !!r.allowGameMentions,
         formatInline: !!r.formatInline,
         noStyleAndInteraction: !!r.noStyleAndInteraction,
         allowHeading: !!r.allowHeading,
@@ -182,6 +183,7 @@ function f(e, t, n) {
             noStyleAndInteraction: !1,
             allowHeading: !1,
             allowList: !1,
+            allowGameMentions: !1,
             disableAutoBlockNewlines: !0,
             highlightWord: t,
             disableAnimatedEmoji: !1,

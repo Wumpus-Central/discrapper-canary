@@ -7,7 +7,7 @@ e.d(n, {
 });
 var r = e(282253),
     i = e(73800);
-e(476400), e(539528);
+(e(476400), e(539528));
 var o = e(839544),
     a = e(431803),
     c = e(44837),
@@ -19,7 +19,7 @@ var l = e(791819),
     f = e.n(p),
     v = function (t) {
         var n = (0, o.Z)();
-        return (n.displayName = t), n;
+        return ((n.displayName = t), n);
     },
     h = v('Router-History'),
     m = v('Router'),
@@ -37,7 +37,7 @@ var l = e(791819),
                 e
             );
         }
-        (0, r.Z)(n, t),
+        ((0, r.Z)(n, t),
             (n.computeRootMatch = function (t) {
                 return {
                     path: '/',
@@ -45,18 +45,18 @@ var l = e(791819),
                     params: {},
                     isExact: '/' === t
                 };
-            });
+            }));
         var e = n.prototype;
         return (
             (e.componentDidMount = function () {
                 var t = this;
-                (this._isMounted = !0),
+                ((this._isMounted = !0),
                     this.unlisten && this.unlisten(),
                     this.props.staticContext ||
                         (this.unlisten = this.props.history.listen(function (n) {
                             t._isMounted && t.setState({ location: n });
                         })),
-                    this._pendingLocation && this.setState({ location: this._pendingLocation });
+                    this._pendingLocation && this.setState({ location: this._pendingLocation }));
             }),
             (e.componentWillUnmount = function () {
                 this.unlisten && (this.unlisten(), (this._isMounted = !1), (this._pendingLocation = null));
@@ -81,11 +81,11 @@ var l = e(791819),
             n
         );
     })(i.Component);
-i.Component, i.Component;
+(i.Component, i.Component);
 var y = {},
     C = 0;
 function R(t, n) {
-    void 0 === n && (n = {}), ('string' == typeof n || Array.isArray(n)) && (n = { path: n });
+    (void 0 === n && (n = {}), ('string' == typeof n || Array.isArray(n)) && (n = { path: n }));
     var e = n,
         r = e.path,
         i = e.exact,
@@ -106,7 +106,7 @@ function R(t, n) {
                         regexp: u()(t, i, n),
                         keys: i
                     };
-                return C < 10000 && ((r[t] = o), C++), o;
+                return (C < 10000 && ((r[t] = o), C++), o);
             })(e, {
                 end: o,
                 strict: c,
@@ -126,7 +126,7 @@ function R(t, n) {
                   url: '/' === e && '' === p ? '/' : p,
                   isExact: v,
                   params: a.reduce(function (t, n, e) {
-                      return (t[n.name] = f[e]), t;
+                      return ((t[n.name] = f[e]), t);
                   }, {})
               };
     }, null);
@@ -138,12 +138,12 @@ function g(t) {
             var e = n.wrappedComponentRef,
                 r = (0, l.Z)(n, ['wrappedComponentRef']);
             return i.createElement(m.Consumer, null, function (n) {
-                return n || (0, a.Z)(!1), i.createElement(t, (0, c.Z)({}, r, n, { ref: e }));
+                return (n || (0, a.Z)(!1), i.createElement(t, (0, c.Z)({}, r, n, { ref: e })));
             });
         };
-    return (e.displayName = n), (e.WrappedComponent = t), f()(e, t);
+    return ((e.displayName = n), (e.WrappedComponent = t), f()(e, t));
 }
-i.Component, i.Component;
+(i.Component, i.Component);
 var x = i.useContext;
 function E() {
     return x(h);

@@ -14,7 +14,7 @@ function s(e) {
     a.affinities = t;
 }
 function l() {
-    (a.fetched = !1), (a.affinities = []);
+    ((a.fetched = !1), (a.affinities = []));
 }
 class c extends r.ZP.Store {
     get hasFetched() {

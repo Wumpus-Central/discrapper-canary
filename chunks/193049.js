@@ -1,4 +1,4 @@
-r.d(t, { default: () => P }), r(388685);
+(r.d(t, { default: () => P }), r(388685));
 var n = r(255367),
     i = r(73800),
     o = r(512722),
@@ -29,7 +29,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -37,7 +37,7 @@ function C(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -45,8 +45,8 @@ function C(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -63,15 +63,15 @@ function P(e) {
         H = (0, l.e7)([O.Z], () => O.Z.isCurrentUsernameInvalid()),
         V = (0, l.e7)([f.default], () => {
             let e = f.default.getCurrentUser();
-            return s()(null != e, 'PomeloModal: user cannot be undefined'), e;
+            return (s()(null != e, 'PomeloModal: user cannot be undefined'), e);
         }),
         { usernameSuggestion: K, usernameSuggestionLoading: X } = (0, S.G)(R ? N.en : void 0);
-    i.useEffect(() => {
-        Z === N.Wq.EDIT_USERNAME && q(!0),
+    (i.useEffect(() => {
+        (Z === N.Wq.EDIT_USERNAME && q(!0),
             h.default.track(v.rMx.POMELO_EDIT_STEP_VIEWED, {
                 source: r,
                 step: Z
-            });
+            }));
     }, [Z, r]),
         i.useEffect(() => {
             F ||
@@ -98,13 +98,13 @@ function P(e) {
                         t
                     );
                 });
-        }, [K, F, W]);
+        }, [K, F, W]));
     let [Y, Q] = i.useState({
             username: (0, y.e$)(V),
             globalName: E.ZP.getName(V)
         }),
         $ = (e) => {
-            U(null), null != e.username && z(!0), Q((t) => C({}, t, e));
+            (U(null), null != e.username && z(!0), Q((t) => C({}, t, e)));
         },
         J = i.useMemo(
             () => [
@@ -138,52 +138,52 @@ function P(e) {
                     minNum: 1,
                     maxNum: 32
                 });
-                U(e),
+                (U(e),
                     h.default.track(v.rMx.POMELO_ERRORS, {
                         reason: e,
                         display_name_error: !0,
                         location: 'modal'
-                    });
+                    }));
                 return;
             }
             if (E.ZP.getGlobalName(V) === Y.globalName) return void G(N.Wq.EDIT_USERNAME);
             try {
-                U(null), k(!0), await (0, d.S2)({ global_name: Y.globalName }), G(N.Wq.EDIT_USERNAME);
+                (U(null), k(!0), await (0, d.S2)({ global_name: Y.globalName }), G(N.Wq.EDIT_USERNAME));
             } catch (t) {
                 let e = new m.Z(t).getAnyErrorMessage();
-                h.default.track(v.rMx.POMELO_ERRORS, {
+                (h.default.track(v.rMx.POMELO_ERRORS, {
                     reason: e,
                     display_name_error: !0,
                     location: 'modal'
                 }),
-                    U(e);
+                    U(e));
             } finally {
                 k(!1);
             }
         }, [V, Y]),
         er = i.useCallback(async () => {
             try {
-                U(null), k(!0), await p.Z.createPomelo({ username: (0, y.R_)(Y.username) }, R), await (0, u.In)(V.id), G(N.Wq.PREVIEW);
+                (U(null), k(!0), await p.Z.createPomelo({ username: (0, y.R_)(Y.username) }, R), await (0, u.In)(V.id), G(N.Wq.PREVIEW));
             } catch (r) {
                 let e = new m.Z(r),
                     t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : T.intl.string(T.t.R0RpRU);
-                U(t),
+                (U(t),
                     h.default.track(v.rMx.POMELO_ERRORS, {
                         reason: t,
                         username_error: !0,
                         location: 'modal',
                         one_click_flow: R
-                    });
+                    }));
             } finally {
                 k(!1);
             }
         }, [Y, V.id, R]),
         en = H || (0, y.NX)(V),
         ei = i.useCallback(() => {
-            G(en ? N.Wq.EDIT_USERNAME : N.Wq.EDIT_DISPLAY_NAME), L(J[Math.min(ee - 1, w + 1)].slideId);
+            (G(en ? N.Wq.EDIT_USERNAME : N.Wq.EDIT_DISPLAY_NAME), L(J[Math.min(ee - 1, w + 1)].slideId));
         }, [w, J, ee, en]),
         eo = i.useCallback(() => {
-            U(null), w === j.A.EDIT_SCREEN ? (Z === N.Wq.EDIT_USERNAME ? (en ? (G(N.Wq.NONE), L(J[Math.max(0, w - 1)].slideId)) : G(N.Wq.EDIT_DISPLAY_NAME)) : Z === N.Wq.EDIT_DISPLAY_NAME ? (G(N.Wq.NONE), L(J[Math.max(0, w - 1)].slideId)) : Z === N.Wq.PREVIEW && G(N.Wq.EDIT_USERNAME)) : L(J[Math.max(0, w - 1)].slideId);
+            (U(null), w === j.A.EDIT_SCREEN ? (Z === N.Wq.EDIT_USERNAME ? (en ? (G(N.Wq.NONE), L(J[Math.max(0, w - 1)].slideId)) : G(N.Wq.EDIT_DISPLAY_NAME)) : Z === N.Wq.EDIT_DISPLAY_NAME ? (G(N.Wq.NONE), L(J[Math.max(0, w - 1)].slideId)) : Z === N.Wq.PREVIEW && G(N.Wq.EDIT_USERNAME)) : L(J[Math.max(0, w - 1)].slideId));
         }, [J, w, Z, en]),
         es = i.useCallback(() => {
             L(j.A.FINISH_LATER);

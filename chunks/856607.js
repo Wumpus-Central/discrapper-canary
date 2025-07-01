@@ -30,7 +30,7 @@ function u() {
             (0, i.jsx)(r.zxk, {
                 className: c.topSpacing,
                 onClick: () => {
-                    (0, l.uL)(a.Z5c.GUILD_DISCOVERY), s.xf();
+                    ((0, l.uL)(a.Z5c.GUILD_DISCOVERY), s.xf());
                 },
                 children: o.intl.string(o.t.jQ3pqq)
             })

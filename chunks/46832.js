@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(539854);
+(n.d(t, { Z: () => E }), n(388685), n(539854));
 var r = n(836560),
     i = n(317381),
     l = n(16609),
@@ -49,7 +49,7 @@ class E extends r.EventEmitter {
     }
     constructor(e, t, r, s) {
         var u;
-        super(),
+        (super(),
             (u = this),
             f(this, 'validateSocketClient', void 0),
             f(this, 'logger', void 0),
@@ -59,7 +59,7 @@ class E extends r.EventEmitter {
             f(this, 'disconnectSocket', function (e, t) {
                 var n, r;
                 let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                u.emit('disconnect', e, i ? void 0 : t), e.close(t.code, null != (n = t.message) ? n : 'Unknown');
+                (u.emit('disconnect', e, i ? void 0 : t), e.close(t.code, null != (n = t.message) ? n : 'Unknown'));
                 let [l] =
                     null !=
                     (r = Array.from(m.entries()).find((t) => {
@@ -72,7 +72,7 @@ class E extends r.EventEmitter {
             }),
             f(this, 'handleIFrameMount', (e) => {
                 let { id: t } = e;
-                b.add(t),
+                (b.add(t),
                     (this.handshakeFailureTimeoutId = setTimeout(() => {
                         Array.from(i.ZP.getSelfEmbeddedActivities().entries()).forEach((e) => {
                             let [t, n] = e;
@@ -83,7 +83,7 @@ class E extends r.EventEmitter {
                                 timeout_ms: g
                             });
                         });
-                    }, g));
+                    }, g)));
             }),
             f(this, 'handleIFrameUnmount', (e) => {
                 var t;
@@ -143,7 +143,7 @@ class E extends r.EventEmitter {
                 } catch (e) {
                     throw new c.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Payload not recognized encoding');
                 }
-                null == (r = this.onFrameHandled) || r.call(this, i, this.logger, t), this.emit('request', t, i);
+                (null == (r = this.onFrameHandled) || r.call(this, i, this.logger, t), this.emit('request', t, i));
             }),
             f(this, 'handleHandshake', async (e, t, r) => {
                 let i;
@@ -189,7 +189,7 @@ class E extends r.EventEmitter {
                 this.logger.info('Socket Opened: '.concat(i.id));
                 try {
                     if ((await this.validateSocketClient(i, e, t.client_id), !b.has(o))) throw (this.logger.error('Frame ID '.concat(o, ' no longer exists')), new c.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(o)));
-                    m.set(e, i), b.delete(o), i.authorization.scopes.push(p.b_), this.emit('connect', i), this.logger.info('Socket Validated: '.concat(i.id));
+                    (m.set(e, i), b.delete(o), i.authorization.scopes.push(p.b_), this.emit('connect', i), this.logger.info('Socket Validated: '.concat(i.id)));
                 } catch (e) {
                     throw (this.logger.info('Socket Closed: '.concat(i.id, ', ').concat(e.message)), e);
                 }
@@ -216,6 +216,6 @@ class E extends r.EventEmitter {
             (this.validateSocketClient = e),
             (this.logger = t),
             (this.createPostMessageProxySocket = r),
-            (this.onFrameHandled = s);
+            (this.onFrameHandled = s));
     }
 }

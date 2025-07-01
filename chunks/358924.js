@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ei }), n(388685);
+(n.d(t, { Z: () => ei }), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -245,12 +245,12 @@ let er = (e) => {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['children', 'className']);
@@ -261,7 +261,7 @@ let er = (e) => {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -269,7 +269,7 @@ let er = (e) => {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -277,8 +277,8 @@ let er = (e) => {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })(
@@ -305,7 +305,7 @@ let er = (e) => {
         )
     });
 };
-(er.Header = en),
+((er.Header = en),
     (er.Body = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(T.Z, {
@@ -364,7 +364,7 @@ let er = (e) => {
                     }),
                     (0, i.jsx)(u.P3F, {
                         onClick: () => {
-                            d.default.selectVoiceChannel(a.id), (0, x.Kh)(a.id);
+                            (d.default.selectVoiceChannel(a.id), (0, x.Kh)(a.id));
                         },
                         focusProps: { ringTarget: h },
                         children: (0, i.jsxs)('div', {
@@ -640,13 +640,13 @@ let er = (e) => {
                                     children: (0, i.jsx)(u.zxk, {
                                         size: u.zxk.Sizes.SMALL,
                                         onClick: (e) => {
-                                            e.stopPropagation(),
+                                            (e.stopPropagation(),
                                                 (0, g.Z)({
                                                     applicationId: d,
                                                     activityChannelId: n.id,
                                                     locationObject: f.location,
                                                     analyticsLocations: m
-                                                });
+                                                }));
                                         },
                                         children: z.intl.string(z.t.VJlc0d)
                                     })
@@ -657,5 +657,5 @@ let er = (e) => {
                 })
             ]
         });
-    });
+    }));
 let ei = er;

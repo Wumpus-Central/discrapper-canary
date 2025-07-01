@@ -1,4 +1,4 @@
-n.d(t, { E: () => u }), n(415506), n(704826), n(35282), n(980754), n(388685);
+(n.d(t, { E: () => u }), n(415506), n(704826), n(35282), n(980754), n(388685));
 var r = n(230367),
     i = n(320215),
     a = n(240773),
@@ -9,7 +9,7 @@ class c extends l.C {
     now() {
         let e = this.create(),
             t = Date.now();
-        return (e.seconds = s.M.from(Math.floor(t / 1000)).toString()), (e.nanos = (t % 1000) * 1000000), e;
+        return ((e.seconds = s.M.from(Math.floor(t / 1000)).toString()), (e.nanos = (t % 1000) * 1000000), e);
     }
     toDate(e) {
         return new Date(1000 * s.M.from(e.seconds).toNumber() + Math.ceil(e.nanos / 1000000));
@@ -17,7 +17,7 @@ class c extends l.C {
     fromDate(e) {
         let t = this.create(),
             n = e.getTime();
-        return (t.seconds = s.M.from(Math.floor(n / 1000)).toString()), (t.nanos = (n % 1000) * 1000000), t;
+        return ((t.seconds = s.M.from(Math.floor(n / 1000)).toString()), (t.nanos = (n % 1000) * 1000000), t);
     }
     internalJsonWrite(e, t) {
         let n = 1000 * s.M.from(e.seconds).toNumber();
@@ -37,7 +37,7 @@ class c extends l.C {
         let i = Date.parse(r[1] + '-' + r[2] + '-' + r[3] + 'T' + r[4] + ':' + r[5] + ':' + r[6] + (r[8] ? r[8] : 'Z'));
         if (Number.isNaN(i)) throw Error('Unable to parse Timestamp from JSON. Invalid value.');
         if (i < Date.parse('0001-01-01T00:00:00Z') || i > Date.parse('9999-12-31T23:59:59Z')) throw new globalThis.Error('Unable to parse Timestamp from JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.');
-        return n || (n = this.create()), (n.seconds = s.M.from(i / 1000).toString()), (n.nanos = 0), r[7] && (n.nanos = parseInt('1' + r[7] + '0'.repeat(9 - r[7].length)) - 1000000000), n;
+        return (n || (n = this.create()), (n.seconds = s.M.from(i / 1000).toString()), (n.nanos = 0), r[7] && (n.nanos = parseInt('1' + r[7] + '0'.repeat(9 - r[7].length)) - 1000000000), n);
     }
     create(e) {
         let t = {
@@ -75,9 +75,9 @@ class c extends l.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        '0' !== e.seconds && t.tag(1, r.TD.Varint).int64(e.seconds), 0 !== e.nanos && t.tag(2, r.TD.Varint).int32(e.nanos);
+        ('0' !== e.seconds && t.tag(1, r.TD.Varint).int64(e.seconds), 0 !== e.nanos && t.tag(2, r.TD.Varint).int32(e.nanos));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('google.protobuf.Timestamp', [

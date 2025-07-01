@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: 'es',
     pluralRuleFunction: function (e, t) {
         return t ? 'other' : 1 == e ? 'one' : 'other';
@@ -103,4 +103,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({
         locale: 'es-VE',
         parentLocale: 'es-419'
-    });
+    }));

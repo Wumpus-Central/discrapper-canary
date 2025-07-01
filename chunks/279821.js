@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { d: () => a }), n(415506);
+(n.d(t, { d: () => a }), n(415506));
 class i {
     raise(e) {
         throw e;

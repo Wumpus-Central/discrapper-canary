@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => b }), n(415506);
+(n.d(t, { Z: () => b }), n(415506));
 var a = n(594174),
     o = n(195270);
 function s(e, t, n) {
@@ -19,7 +19,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -35,11 +35,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -61,7 +61,7 @@ function d(e, t) {
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -71,7 +71,7 @@ function f(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let _ = () => {
@@ -79,7 +79,7 @@ let _ = () => {
 };
 {
     let e = n(169480);
-    (r = e.showModal), (_ = e.updateModalProps), (i = n(952265).Mr);
+    ((r = e.showModal), (_ = e.updateModalProps), (i = n(952265).Mr));
 }
 let p = 60008;
 function h() {
@@ -100,10 +100,10 @@ function g(e) {
         null == s || s();
     }
     function f(e) {
-        i(c), n(e);
+        (i(c), n(e));
     }
     function p(e) {
-        i(c), a(e);
+        (i(c), a(e));
     }
     function h(e) {
         return (

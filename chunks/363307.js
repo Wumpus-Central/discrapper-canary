@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(392711),
@@ -18,7 +18,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,8 +34,8 @@ function h(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -101,7 +101,7 @@ function v(e) {
         }),
         N = (e, t) => {
             var n, r;
-            j({
+            (j({
                 x: e.clientX,
                 y: e.clientY
             }),
@@ -122,7 +122,7 @@ function v(e) {
                           }),
                     n)
                 ),
-                (0, l.KH)(m.yN.NAGBAR, t);
+                (0, l.KH)(m.yN.NAGBAR, t));
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -148,7 +148,7 @@ function v(e) {
                                     color: a.zxk.Colors.WHITE,
                                     onClick: (t) => {
                                         var r;
-                                        N(t, c.primaryButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x()));
+                                        (N(t, c.primaryButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x())));
                                     },
                                     children: c.primaryButtonCTA
                                 }),
@@ -159,7 +159,7 @@ function v(e) {
                                     color: a.zxk.Colors.WHITE,
                                     onClick: (t) => {
                                         var r;
-                                        N(t, c.secondaryButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x()));
+                                        (N(t, c.secondaryButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x())));
                                     },
                                     children: c.secondaryButtonCTA
                                 }),
@@ -169,7 +169,7 @@ function v(e) {
                                     focusProps: { offset: 6 },
                                     onClick: (t) => {
                                         var r;
-                                        N(t, c.closeButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x()));
+                                        (N(t, c.closeButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x())));
                                     },
                                     children: (0, r.jsx)(a.Dio, {
                                         size: 'md',
@@ -184,7 +184,7 @@ function v(e) {
                 onRemovePoint: (e) => {
                     v((t) => {
                         let n = h({}, t);
-                        return delete n[e], n;
+                        return (delete n[e], n);
                     });
                 },
                 offset: O,

@@ -1,4 +1,4 @@
 e.exports = {
     layer: 'layer_bc663c',
-    hidden: 'hidden_bc663c'
+    inactive: 'inactive_bc663c'
 };

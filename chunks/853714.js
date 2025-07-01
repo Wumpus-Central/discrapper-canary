@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+(n.d(t, { Z: () => B }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -47,7 +47,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -87,12 +87,12 @@ function L(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -228,13 +228,13 @@ function G(e) {
 M.displayName = 'AuditLogClickWrap';
 class U extends i.PureComponent {
     componentDidMount() {
-        (0, u.bY)(this.props.guildId), document.addEventListener('click', this.handleOutsideClick);
+        ((0, u.bY)(this.props.guildId), document.addEventListener('click', this.handleOutsideClick));
     }
     componentWillUnmount() {
         document.removeEventListener('click', this.handleOutsideClick);
     }
     componentDidUpdate(e, t) {
-        this.state.expandedId !== t.expandedId && this.fixScroll(), !this.props.showLoadMore && this.props.logs.length !== e.logs.length && null != this._scrollerRef && this.isScrollerAtBottom() && (0, u.OY)(this.props.guildId, !0);
+        (this.state.expandedId !== t.expandedId && this.fixScroll(), !this.props.showLoadMore && this.props.logs.length !== e.logs.length && null != this._scrollerRef && this.isScrollerAtBottom() && (0, u.OY)(this.props.guildId, !0));
     }
     isScrollerAtBottom() {
         var e;
@@ -356,7 +356,7 @@ class U extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             D(this, '_clickedInside', !1),
             D(this, '_scrollerRef', null),
             D(this, '_expandedRef', null),
@@ -568,7 +568,7 @@ class U extends i.PureComponent {
                       (this._prevRects = this.getRects()));
             }),
             D(this, 'handleContentClick', (e) => {
-                (this._clickedInside = !0), e.stopPropagation();
+                ((this._clickedInside = !0), e.stopPropagation());
             }),
             D(this, 'handleSetScrollerRef', (e) => {
                 this._scrollerRef = e;
@@ -590,7 +590,7 @@ class U extends i.PureComponent {
             }),
             D(this, 'handleSetLastExpandedRef', (e) => {
                 this._lastExpandedRef = e;
-            });
+            }));
     }
 }
 let B = c.ZP.connectStores([y.Z, N.Z, j.Z, f.Z, _.Z, v.default], () => {

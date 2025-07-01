@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => P }), n(388685);
+(n.r(t), n.d(t, { default: () => P }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -56,7 +56,7 @@ function P(e) {
         [F, L] = l.useState(null != S ? null : 'cover'),
         z = l.useCallback(
             (e) => {
-                L(B), b.Z.setUserOnboardingStep(t, e);
+                (L(B), b.Z.setUserOnboardingStep(t, e));
             },
             [t, B]
         ),

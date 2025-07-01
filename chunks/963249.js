@@ -34,7 +34,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,11 +50,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -76,7 +76,7 @@ function T(e, t) {
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -86,7 +86,7 @@ function S(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function A(e) {
@@ -117,16 +117,16 @@ function A(e) {
                         initialPlanId: t,
                         followupSKUInfo: i,
                         onClose: (e, t) => {
-                            a(),
+                            (a(),
                                 null == y || y(e),
                                 e && (null == S || S(), (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                 l.Z.dispatch({
                                     type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
                                     didSucceed: e
-                                });
+                                }));
                         },
                         onComplete: (e) => {
-                            (W = !0), null == v || v(), (0, _.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
+                            ((W = !0), null == v || v(), (0, _.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0));
                         },
                         onSubscriptionConfirmation: S,
                         analyticsLocations: A,
@@ -151,7 +151,7 @@ function A(e) {
         {
             modalKey: X,
             onCloseCallback: () => {
-                W ||
+                (W ||
                     h.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: K,
                         payment_type: E.Zuq[E.GZQ.SUBSCRIPTION],
@@ -168,7 +168,7 @@ function A(e) {
                     (0, c.fw)(),
                     (0, d.p)(),
                     null == y || y(W),
-                    W && (null == S || S());
+                    W && (null == S || S()));
             }
         }
     );

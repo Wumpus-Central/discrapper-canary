@@ -81,5 +81,5 @@ t.exports = function (t, r, n, u, y, x, E) {
                 },
                 P
             );
-    return (!i || E) && M[S] !== R && v(M, S, R, { name: y }), (h[r] = R), P;
+    return ((!i || E) && M[S] !== R && v(M, S, R, { name: y }), (h[r] = R), P);
 };

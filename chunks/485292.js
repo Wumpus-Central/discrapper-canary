@@ -22,7 +22,7 @@ function v(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -30,7 +30,7 @@ function v(t) {
             )),
             r.forEach(function (e) {
                 var r;
-                (r = n[e]),
+                ((r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
@@ -38,8 +38,8 @@ function v(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
-            });
+                        : (t[e] = r));
+            }));
     }
     return t;
 }

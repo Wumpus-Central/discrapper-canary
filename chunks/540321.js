@@ -5,14 +5,14 @@ function i(e) {
         n = new Set(),
         r = [];
     function i(e) {
-        n.add(e.name),
+        (n.add(e.name),
             [].concat(e.requires || [], e.requiresIfExists || []).forEach(function (e) {
                 if (!n.has(e)) {
                     var r = t.get(e);
                     r && i(r);
                 }
             }),
-            r.push(e);
+            r.push(e));
     }
     return (
         e.forEach(function (e) {

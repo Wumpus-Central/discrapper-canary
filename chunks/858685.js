@@ -10,7 +10,7 @@
     }
     var n = [];
     function r(e) {
-        (this.time = e.time), (this.target = e.target), (this.rootBounds = e.rootBounds), (this.boundingClientRect = e.boundingClientRect), (this.intersectionRect = e.intersectionRect || d()), (this.isIntersecting = !!e.intersectionRect);
+        ((this.time = e.time), (this.target = e.target), (this.rootBounds = e.rootBounds), (this.boundingClientRect = e.boundingClientRect), (this.intersectionRect = e.intersectionRect || d()), (this.isIntersecting = !!e.intersectionRect));
         var t = this.boundingClientRect,
             n = t.width * t.height,
             r = this.intersectionRect,
@@ -21,7 +21,7 @@
         var n = t || {};
         if ('function' != typeof e) throw Error('callback must be a function');
         if (n.root && 1 != n.root.nodeType) throw Error('root must be an Element');
-        (this._checkForIntersections = o(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT)),
+        ((this._checkForIntersections = o(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT)),
             (this._callback = e),
             (this._observationTargets = []),
             (this._queuedEntries = []),
@@ -32,7 +32,7 @@
                 .map(function (e) {
                     return e.value + e.unit;
                 })
-                .join(' '));
+                .join(' ')));
     }
     function a() {
         return e.performance && performance.now && performance.now();
@@ -42,7 +42,7 @@
         return function () {
             n ||
                 (n = setTimeout(function () {
-                    e(), (n = null);
+                    (e(), (n = null));
                 }, t));
         };
     }
@@ -110,7 +110,7 @@
         var t = e.parentNode;
         return t && 11 == t.nodeType && t.host ? t.host : t;
     }
-    (i.prototype.THROTTLE_TIMEOUT = 100),
+    ((i.prototype.THROTTLE_TIMEOUT = 100),
         (i.prototype.POLL_INTERVAL = null),
         (i.prototype.USE_MUTATION_OBSERVER = !0),
         (i.prototype.observe = function (e) {
@@ -120,27 +120,27 @@
                 })
             ) {
                 if (!(e && 1 == e.nodeType)) throw Error('target must be an Element');
-                this._registerInstance(),
+                (this._registerInstance(),
                     this._observationTargets.push({
                         element: e,
                         entry: null
                     }),
                     this._monitorIntersections(),
-                    this._checkForIntersections();
+                    this._checkForIntersections());
             }
         }),
         (i.prototype.unobserve = function (e) {
-            (this._observationTargets = this._observationTargets.filter(function (t) {
+            ((this._observationTargets = this._observationTargets.filter(function (t) {
                 return t.element != e;
             })),
-                this._observationTargets.length || (this._unmonitorIntersections(), this._unregisterInstance());
+                this._observationTargets.length || (this._unmonitorIntersections(), this._unregisterInstance()));
         }),
         (i.prototype.disconnect = function () {
-            (this._observationTargets = []), this._unmonitorIntersections(), this._unregisterInstance();
+            ((this._observationTargets = []), this._unmonitorIntersections(), this._unregisterInstance());
         }),
         (i.prototype.takeRecords = function () {
             var e = this._queuedEntries.slice();
-            return (this._queuedEntries = []), e;
+            return ((this._queuedEntries = []), e);
         }),
         (i.prototype._initThresholds = function (e) {
             var t = e || [0];
@@ -161,7 +161,7 @@
                     unit: t[2]
                 };
             });
-            return (t[1] = t[1] || t[0]), (t[2] = t[2] || t[0]), (t[3] = t[3] || t[1]), t;
+            return ((t[1] = t[1] || t[0]), (t[2] = t[2] || t[0]), (t[3] = t[3] || t[1]), t);
         }),
         (i.prototype._monitorIntersections = function () {
             !this._monitoringIntersections &&
@@ -186,7 +186,7 @@
         (i.prototype._checkForIntersections = function () {
             var e = this._rootIsInDom(),
                 t = e ? this._getRootRect() : d();
-            this._observationTargets.forEach(function (n) {
+            (this._observationTargets.forEach(function (n) {
                 var i = n.element,
                     o = u(i),
                     s = this._rootContainsTarget(i),
@@ -201,7 +201,7 @@
                     }));
                 l ? (e && s ? this._hasCrossedThreshold(l, d) && this._queuedEntries.push(d) : l && l.isIntersecting && this._queuedEntries.push(d)) : this._queuedEntries.push(d);
             }, this),
-                this._queuedEntries.length && this._callback(this.takeRecords(), this);
+                this._queuedEntries.length && this._callback(this.takeRecords(), this));
         }),
         (i.prototype._computeTargetAndRootIntersection = function (n, r) {
             if ('none' != e.getComputedStyle(n).display) {
@@ -242,7 +242,7 @@
                     bottom: e.bottom + t[2],
                     left: e.left - t[3]
                 };
-            return (n.width = n.right - n.left), (n.height = n.bottom - n.top), n;
+            return ((n.width = n.right - n.left), (n.height = n.bottom - n.top), n);
         }),
         (i.prototype._hasCrossedThreshold = function (e, t) {
             var n = e && e.isIntersecting ? e.intersectionRatio || 0 : -1,
@@ -267,5 +267,5 @@
             -1 != e && n.splice(e, 1);
         }),
         (e.IntersectionObserver = i),
-        (e.IntersectionObserverEntry = r);
+        (e.IntersectionObserverEntry = r));
 })(window, document);

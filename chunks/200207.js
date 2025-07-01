@@ -1,4 +1,4 @@
-t.d(n, { I: () => d }), t(953529);
+(t.d(n, { I: () => d }), t(953529));
 var r = t(255367);
 t(73800);
 var i = t(120356),
@@ -61,7 +61,7 @@ function d(e) {
                             }),
                             (0, r.jsx)(m, {
                                 onClick: (e) => {
-                                    e.stopPropagation(), null == p || p();
+                                    (e.stopPropagation(), null == p || p());
                                 }
                             })
                         ]

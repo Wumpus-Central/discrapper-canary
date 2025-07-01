@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eo }), n(953529), n(388685), n(539854), n(997841);
+(n.d(t, { Z: () => eo }), n(953529), n(388685), n(539854), n(997841));
 var i,
     r = n(255367),
     s = n(73800),
@@ -62,7 +62,7 @@ function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -70,11 +70,11 @@ function X(e) {
             )),
             i.forEach(function (t) {
                 q(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
-function Q(e, t) {
+function J(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,7 +92,7 @@ function Q(e, t) {
         e
     );
 }
-let J = (e) => 'https://'.concat(H.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
+let Q = (e) => 'https://'.concat(H.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
     $ = [H.epS.DURABLE_PRIMARY, H.epS.DURABLE, H.epS.CONSUMABLE],
     ee = [H.PyE.FAILED, H.PyE.REVERSED, H.PyE.CANCELED],
     et = [Y.gg.APPLE],
@@ -112,7 +112,7 @@ function ei(e) {
         [o, c] = s.useState(!1),
         d = () => {
             (0, B.JG)(t, () => {
-                c(!0), a(!0);
+                (c(!0), a(!0));
             });
         };
     return (0, r.jsx)(g.ua7, {
@@ -130,23 +130,23 @@ function ei(e) {
                                 i,
                                 r = {},
                                 s = Object.keys(e);
-                            for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                             return r;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var s = Object.getOwnPropertySymbols(e);
-                        for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                        for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                     }
                     return r;
                 })(e, ['onMouseEnter', 'onMouseLeave']);
             return (0, r.jsx)(
                 g.P3F,
-                Q(X({}, s), {
+                J(X({}, s), {
                     onMouseEnter: () => {
-                        l && a(!1), 'function' == typeof n && n();
+                        (l && a(!1), 'function' == typeof n && n());
                     },
                     onMouseLeave: () => {
-                        c(!1), 'function' == typeof i && i();
+                        (c(!1), 'function' == typeof i && i());
                     },
                     onClick: d,
                     children: (0, r.jsx)('div', {
@@ -175,7 +175,7 @@ function es(e) {
         a = (0, m.e7)([D.Z], () => D.Z.getGuild(t)),
         o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? W.intl.string(W.t.H11qcX) : l,
         c = s.useCallback(async () => {
-            (null == a ? void 0 : a.hasFeature(H.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, T.Z)(H.Z5c.GUILD_PRODUCT(t, n)) : await (0, T.Z)(H.Z5c.CHANNEL(t)), (0, p.xf)();
+            ((null == a ? void 0 : a.hasFeature(H.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, T.Z)(H.Z5c.GUILD_PRODUCT(t, n)) : await (0, T.Z)(H.Z5c.CHANNEL(t)), (0, p.xf)());
         }, [a, t, n]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -409,7 +409,7 @@ class ea extends (i = s.PureComponent) {
             i = this.validateRefundRules();
         if (i.includes('PAYMENT_GATEWAY') || i.includes('PAYMENT_STATUS') || i.includes('ALREADY_REFUNDED') || i.includes('SKU_STICKER_PACK') || i.includes('SUBSCRIPTION_TYPE') || i.includes('GUILD_PRODUCT')) return null;
         let l = 0 === i.length,
-            a = J(t),
+            a = Q(t),
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
@@ -491,7 +491,7 @@ class ea extends (i = s.PureComponent) {
                     children: !n.isCollectible && this.renderRefundCriteria(W.intl.string(W.t.H0RNz8), i, W.intl.formatToPlainString(W.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                 }),
                 (0, r.jsx)(g.eee, {
-                    href: J(t),
+                    href: Q(t),
                     children: W.intl.string(W.t.re5nOD)
                 })
             ]
@@ -516,10 +516,10 @@ class ea extends (i = s.PureComponent) {
             else if (p.type === H.NYc.GUILD) {
                 if (null != d) {
                     let e = d.interval === z.rV.YEAR ? W.t.V6UFQE : W.t['6oq129'];
-                    n.push(W.intl.format(e, { planName: d.name })), (s = d.skuId);
+                    (n.push(W.intl.format(e, { planName: d.name })), (s = d.skuId));
                 }
             } else p.type === H.NYc.APPLICATION && (null != d && (s = d.skuId), null != l ? n.push(W.intl.formatToPlainString(W.t['0wL/VF'], { tier: null == m ? void 0 : m.name })) : n.push(W.intl.string(W.t['9czSYm'])));
-            (t = 0 !== n.length ? n.join(', ') : i.description),
+            ((t = 0 !== n.length ? n.join(', ') : i.description),
                 (e = (0, r.jsx)(x.Z, {
                     className: K.descriptionIcon,
                     guildClassName: K.guildDescriptionIcon,
@@ -527,7 +527,7 @@ class ea extends (i = s.PureComponent) {
                     guild: a,
                     size: x.Z.Sizes.XSMALL,
                     skuId: null != s ? s : null == m ? void 0 : m.id
-                }));
+                })));
         } else if (null != m) {
             var f;
             if (((t = i.isGuildProductPurchase && i.isSoftDeletedProduct ? W.intl.string(W.t.O7uLm5) : m.name), null != o)) {
@@ -558,12 +558,12 @@ class ea extends (i = s.PureComponent) {
                               skuId: m.id
                           });
         } else
-            (e = (0, r.jsx)(g.SrA, {
+            ((e = (0, r.jsx)(g.SrA, {
                 size: 'md',
                 color: 'currentColor',
                 className: K.descriptionIcon
             })),
-                (t = i.description);
+                (t = i.description));
         let b = (0, r.jsx)('div', {
                 className: K.date,
                 children: (0, M.vc)(c()(i.createdAt), 'MM/DD/YYYY')
@@ -619,7 +619,7 @@ class ea extends (i = s.PureComponent) {
                                 buttonPosition: v.E.RIGHT,
                                 notice: W.intl.string(W.t['3AvulJ']),
                                 ctaLabel: W.intl.string(W.t.zoztQE),
-                                onClick: () => (0, h.Z)(J(n))
+                                onClick: () => (0, h.Z)(Q(n))
                             })
                           : null != i &&
                             null != e.sku &&
@@ -657,7 +657,7 @@ class ea extends (i = s.PureComponent) {
             children: (e) =>
                 (0, r.jsxs)(
                     g.P3F,
-                    Q(
+                    J(
                         X(
                             {
                                 onClick: this.handleExpandInfo,
@@ -691,7 +691,7 @@ class ea extends (i = s.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             q(this, 'state', { expanded: !1 }),
             q(this, 'refundRules', [
                 {
@@ -762,7 +762,7 @@ class ea extends (i = s.PureComponent) {
             ]),
             q(this, 'handleExpandInfo', () => {
                 this.setState({ expanded: !this.state.expanded });
-            });
+            }));
     }
 }
 function eo(e) {

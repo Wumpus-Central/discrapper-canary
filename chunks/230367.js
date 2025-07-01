@@ -1,10 +1,10 @@
 var r, i;
-n.d(t, {
+(n.d(t, {
     TD: () => i,
     z: () => r
 }),
     (function (e) {
-        (e.symbol = Symbol.for('protobuf-ts/unknown')),
+        ((e.symbol = Symbol.for('protobuf-ts/unknown')),
             (e.onRead = (n, r, i, a, o) => {
                 (t(r) ? r[e.symbol] : (r[e.symbol] = [])).push({
                     no: i,
@@ -22,9 +22,9 @@ n.d(t, {
                 }
                 return [];
             }),
-            (e.last = (t, n) => e.list(t, n).slice(-1)[0]);
+            (e.last = (t, n) => e.list(t, n).slice(-1)[0]));
         let t = (t) => t && Array.isArray(t[e.symbol]);
     })(r || (r = {})),
     !(function (e) {
-        (e[(e.Varint = 0)] = 'Varint'), (e[(e.Bit64 = 1)] = 'Bit64'), (e[(e.LengthDelimited = 2)] = 'LengthDelimited'), (e[(e.StartGroup = 3)] = 'StartGroup'), (e[(e.EndGroup = 4)] = 'EndGroup'), (e[(e.Bit32 = 5)] = 'Bit32');
-    })(i || (i = {}));
+        ((e[(e.Varint = 0)] = 'Varint'), (e[(e.Bit64 = 1)] = 'Bit64'), (e[(e.LengthDelimited = 2)] = 'LengthDelimited'), (e[(e.StartGroup = 3)] = 'StartGroup'), (e[(e.EndGroup = 4)] = 'EndGroup'), (e[(e.Bit32 = 5)] = 'Bit32'));
+    })(i || (i = {})));

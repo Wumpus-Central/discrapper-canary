@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Bx: () => l,
     GV: () => a,
     jl: () => i,
@@ -16,7 +16,7 @@ n.d(t, {
     n(918970),
     n(121784),
     n(644351),
-    n(146733);
+    n(146733));
 let r = 8;
 function i(e, t) {
     if (0 === e.length) return !1;
@@ -29,10 +29,10 @@ function a(e, t) {
         i = t % r;
     if (e.length <= n) {
         let t = new Uint8Array(n + 1);
-        t.set(e, 0), (e = t);
+        (t.set(e, 0), (e = t));
     }
     let a = 1 << i;
-    return (e[n] |= a), e;
+    return ((e[n] |= a), e);
 }
 function o(e, t) {
     if (i(e, t)) {

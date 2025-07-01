@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => U }), n(388685), n(781311);
+(n.r(t), n.d(t, { default: () => U }), n(388685), n(781311));
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -136,10 +136,10 @@ let U = function () {
         en = N.z8.useField('trackedOpenedFromExternalEntrypoint'),
         er = N.z8.useField('sessionId'),
         ea = (0, o.e7)([x.default], () => x.default.getCurrentUser());
-    a.useEffect(() => {
+    (a.useEffect(() => {
         if (!en && null == er) {
             let e = (0, f.PM)();
-            v.default.track(D.rMx.APP_DIRECTORY_OPENED, {
+            (v.default.track(D.rMx.APP_DIRECTORY_OPENED, {
                 source: N.xF.EXTERNAL,
                 session_id: e,
                 user_id: null == ea ? void 0 : ea.id
@@ -149,7 +149,7 @@ let U = function () {
                     sessionId: e,
                     entrypoint: { name: N.xF.EXTERNAL },
                     guildId: null
-                });
+                }));
         }
     }, [er, en, null == ea ? void 0 : ea.id]),
         a.useEffect(() => {
@@ -158,7 +158,7 @@ let U = function () {
         a.useEffect(() => {
             U && C.g5();
         }, [U]),
-        a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]);
+        a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]));
     let { enabled: ei } = d.c.useExperiment({ location: 'GlobalDiscoveryAppsRoot' }, { autoTrackExposure: !0 }),
         el = null != V,
         es = (null == R ? void 0 : R.type) === N.m_.SEARCH,
@@ -176,7 +176,7 @@ let U = function () {
         }),
         ef = a.useCallback(
             (e) => {
-                $(e), es && ed(), y();
+                ($(e), es && ed(), y());
             },
             [es, ed, $, y]
         ),
@@ -195,13 +195,13 @@ let U = function () {
         }, 200),
         eC = a.useCallback(
             (e, t) => {
-                n(e),
+                (n(e),
                     ev({
                         scrollTop: e.currentTarget.scrollTop,
                         offsetHeight: e.currentTarget.offsetHeight,
                         scrollHeight: e.currentTarget.scrollHeight,
                         location: t
-                    });
+                    }));
             },
             [ev, n]
         ),

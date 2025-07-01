@@ -27,7 +27,7 @@ class f extends (a = r.ZP.Store) {
         return !1;
     }
 }
-(l = 'RpcNotificationSettingsStore'),
+((l = 'RpcNotificationSettingsStore'),
     (i = 'displayName') in f
         ? Object.defineProperty(f, i, {
               value: l,
@@ -35,12 +35,12 @@ class f extends (a = r.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (f[i] = l);
+        : (f[i] = l));
 let g = new f(o.Z, {
     RPC_APP_DISCONNECTED: function (t) {
         delete d[t.socketId];
     },
     SET_RPC_NOTIFICATION_SETTINGS: function (t) {
-        delete d[t.socketId], t.suppressNotifications && (d[t.socketId] = t.targetUserId);
+        (delete d[t.socketId], t.suppressNotifications && (d[t.socketId] = t.targetUserId));
     }
 });

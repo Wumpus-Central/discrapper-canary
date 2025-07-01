@@ -40,12 +40,12 @@ let c = (e) => {
                                 r,
                                 i = {},
                                 l = Object.keys(e);
-                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var l = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                     }
                     return i;
                 })(a, ['onClick']);
@@ -55,7 +55,7 @@ let c = (e) => {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -63,7 +63,7 @@ let c = (e) => {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -71,8 +71,8 @@ let c = (e) => {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })(
@@ -81,7 +81,7 @@ let c = (e) => {
                         iconComponent: i.hh5,
                         iconColor: n ? '#eb90f1' : void 0,
                         onClick: (e) => {
-                            (0, o.k)(t, 'ActionBar'), e.stopPropagation(), u(e);
+                            ((0, o.k)(t, 'ActionBar'), e.stopPropagation(), u(e));
                         }
                     },
                     d

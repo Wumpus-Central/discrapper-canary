@@ -30,7 +30,7 @@ function _() {
         value: (0, o.wjy)(t) ? u.BR.DARK : u.BR.LIGHT,
         onChange: (e) => {
             let { value: t } = e;
-            (0, c.HV)(), (0, l.Bv)(t);
+            ((0, c.HV)(), (0, l.Bv)(t));
         },
         look: 'pill'
     });

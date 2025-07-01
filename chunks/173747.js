@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685), n(539854);
+(n.d(t, { Z: () => z }), n(388685), n(539854));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -87,7 +87,7 @@ function U(e) {
             return t;
         }),
         o = i.id;
-    T.delete(n),
+    (T.delete(n),
         (I[n] = {
             id: o,
             applicationId: t,
@@ -95,11 +95,11 @@ function U(e) {
             locale: r,
             manifestIds: a
         }),
-        M(t, n);
+        M(t, n));
 }
 function G(e) {
     let { branchId: t } = e;
-    v.delete(t), T.add(t);
+    (v.delete(t), T.add(t));
 }
 function B(e) {
     let { buildId: t } = e;
@@ -148,7 +148,7 @@ function W(e) {
 }
 class K extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([h.Z], x), this.waitFor(m.Z, h.Z, f.Z, p.Z);
+        (this.syncWith([h.Z], x), this.waitFor(m.Z, h.Z, f.Z, p.Z));
     }
     getTargetBuildId(e, t) {
         return null == I[t] ? null : I[t].id;

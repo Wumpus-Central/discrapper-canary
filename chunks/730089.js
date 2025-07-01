@@ -1,4 +1,4 @@
-n.d(t, { G: () => x }), n(35282);
+(n.d(t, { G: () => x }), n(35282));
 var r = n(36793),
     i = n(481060),
     l = n(668781),
@@ -45,7 +45,7 @@ let f = (e, t, n, r) => (
             }
         }
         try {
-            await (0, s.rS)({
+            (await (0, s.rS)({
                 guildId: d,
                 image: t,
                 name: O,
@@ -56,7 +56,7 @@ let f = (e, t, n, r) => (
                     guild_id: d,
                     upload_id: x
                 }),
-                (0, i.showToast)((0, i.createToast)(g.intl.string(g.t.r0w9m5), i.ToastType.SUCCESS));
+                (0, i.showToast)((0, i.createToast)(g.intl.string(g.t.r0w9m5), i.ToastType.SUCCESS)));
         } catch (s) {
             let e,
                 n,

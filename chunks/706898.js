@@ -1,4 +1,4 @@
-n.d(t, { n: () => R }), n(704826), n(35282), n(415506), n(388685);
+(n.d(t, { n: () => R }), n(704826), n(35282), n(415506), n(388685));
 var r,
     i,
     a = n(255367),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -71,7 +71,7 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -81,7 +81,7 @@ function O(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let v = {
@@ -134,7 +134,7 @@ function A(e) {
 function N(e, t) {
     if (null == e) return;
     let n = {};
-    return 'Selected' === t ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css)) : ('Hover' === t && (n.backgroundColor = (0, u.wK)(e, 0.1)), (n.color = e)), n;
+    return ('Selected' === t ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css)) : ('Hover' === t && (n.backgroundColor = (0, u.wK)(e, 0.1)), (n.color = e)), n);
 }
 class C extends (r = o.Component) {
     getStyle() {
@@ -203,7 +203,7 @@ class C extends (r = o.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'state', {
                 hover: !1,
                 active: !1
@@ -227,7 +227,7 @@ class C extends (r = o.Component) {
                     hover: !1,
                     active: !1
                 });
-            });
+            }));
     }
 }
 m(C, 'defaultProps', {
@@ -250,7 +250,7 @@ class R extends (i = o.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'tabBarRef', o.createRef()),
             m(
                 this,
@@ -296,7 +296,7 @@ class R extends (i = o.Component) {
             m(this, 'handleKeyDown', async (e) => {
                 let t = await this.getNodeForKeydownEvent(e);
                 null != t && (e.preventDefault(), t.focus());
-            });
+            }));
     }
 }
-m(R, 'Header', I), m(R, 'Item', C), m(R, 'Separator', T), m(R, 'Panel', S);
+(m(R, 'Header', I), m(R, 'Item', C), m(R, 'Separator', T), m(R, 'Panel', S));

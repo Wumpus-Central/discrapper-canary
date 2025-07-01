@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $J: () => c,
     $z: () => i,
     Az: () => s,
@@ -8,7 +8,7 @@ n.d(t, {
     gY: () => a,
     lc: () => d
 }),
-    n(388685);
+    n(388685));
 var r = n(957825);
 let i = 'POLL_CREATION_MODAL_KEY',
     a = 1,
@@ -18,6 +18,6 @@ let i = 'POLL_CREATION_MODAL_KEY',
     c = 3,
     u = 50;
 var d = (function (e) {
-    return (e[(e.ONE_HOUR = 1)] = 'ONE_HOUR'), (e[(e.FOUR_HOURS = 4)] = 'FOUR_HOURS'), (e[(e.EIGHT_HOURS = 8)] = 'EIGHT_HOURS'), (e[(e.ONE_DAY = 24)] = 'ONE_DAY'), (e[(e.THREE_DAYS = 72)] = 'THREE_DAYS'), (e[(e.SEVEN_DAYS = 168)] = 'SEVEN_DAYS'), (e[(e.FOURTEEN_DAYS = 336)] = 'FOURTEEN_DAYS'), e;
+    return ((e[(e.ONE_HOUR = 1)] = 'ONE_HOUR'), (e[(e.FOUR_HOURS = 4)] = 'FOUR_HOURS'), (e[(e.EIGHT_HOURS = 8)] = 'EIGHT_HOURS'), (e[(e.ONE_DAY = 24)] = 'ONE_DAY'), (e[(e.THREE_DAYS = 72)] = 'THREE_DAYS'), (e[(e.SEVEN_DAYS = 168)] = 'SEVEN_DAYS'), (e[(e.FOURTEEN_DAYS = 336)] = 'FOURTEEN_DAYS'), e);
 })({});
-r.X1.GIF, r.X1.EMOJI;
+(r.X1.GIF, r.X1.EMOJI);

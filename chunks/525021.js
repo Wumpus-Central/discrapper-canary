@@ -7,7 +7,7 @@ function t(e, t, n, r, i, a, o) {
     }
     s.done ? t(l) : Promise.resolve(l).then(r, i);
 }
-(e.exports = function (e) {
+((e.exports = function (e) {
     return function () {
         var n = this,
             r = arguments;
@@ -24,4 +24,4 @@ function t(e, t, n, r, i, a, o) {
     };
 }),
     (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+    (e.exports.default = e.exports));

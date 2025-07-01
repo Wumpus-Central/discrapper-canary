@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+(n.d(t, { Z: () => a }), n(388685));
 var i = n(73800),
     r = n(817080),
     s = n(579806),
@@ -6,7 +6,7 @@ var i = n(73800),
 class a extends i.Component {
     getFileContents() {
         let { fileContents: e } = this.props;
-        return 'function' == typeof e && (e = e()), e;
+        return ('function' == typeof e && (e = e()), e);
     }
     downloadNative(e, t) {
         s.Z.fileManager.saveWithDialog(e, t);
@@ -22,13 +22,13 @@ class a extends i.Component {
     }
     constructor(...e) {
         var t, n;
-        super(...e),
+        (super(...e),
             (t = 'handleFileDownload'),
             (n = (e) => {
                 e.preventDefault();
                 let t = this.getFileContents(),
                     { fileName: n, onDownload: i } = this.props;
-                l.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), null == i || i();
+                (l.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), null == i || i());
             }),
             t in this
                 ? Object.defineProperty(this, t, {
@@ -37,6 +37,6 @@ class a extends i.Component {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = n);
+                : (this[t] = n));
     }
 }

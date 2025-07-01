@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+(n.d(t, { Z: () => a }), n(388685));
 var r = n(73800);
 let i = !1,
     l = new Set();
@@ -22,7 +22,7 @@ function a() {
         e
     );
 }
-window.addEventListener('keydown', (e) => {
+(window.addEventListener('keydown', (e) => {
     o(e.shiftKey);
 }),
     window.addEventListener('keyup', (e) => {
@@ -33,4 +33,4 @@ window.addEventListener('keydown', (e) => {
     }),
     window.addEventListener('blur', () => {
         o(!1);
-    });
+    }));

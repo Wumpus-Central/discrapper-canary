@@ -1,4 +1,4 @@
-n.d(e, { default: () => j }), n(388685);
+(n.d(e, { default: () => j }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(650557),
@@ -20,7 +20,7 @@ function j(t) {
     let { text: N, editor: P, target: v, onHeightUpdate: L, onSelect: T } = t,
         Z = i.useCallback(() => {
             (0, o.Zy)(() => {
-                r.F3.focus(P), setTimeout(() => g.bN.focus(P), 0);
+                (r.F3.focus(P), setTimeout(() => g.bN.focus(P), 0));
             });
         }, [P]),
         [D, w] = (0, d.Z)({
@@ -66,11 +66,11 @@ function j(t) {
             checked: A,
             action: () => {
                 let t = !A;
-                b.Xk.updateSetting(t),
+                (b.Xk.updateSetting(t),
                     p.default.track(y.rMx.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
                         location: { object: y.qAy.CONTEXT_MENU }
-                    });
+                    }));
             }
         });
     return (0, l.jsxs)(s.v2r, {

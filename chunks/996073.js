@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -58,7 +58,7 @@ let f = Object.freeze({
                 t === u &&
                 setTimeout(() => {
                     let e = requestAnimationFrame(() => {
-                        r.scrollIntoView(d({ behavior: c ? 'auto' : 'smooth' }, n)), a.Z.clearScrollPosition(f[t]);
+                        (r.scrollIntoView(d({ behavior: c ? 'auto' : 'smooth' }, n)), a.Z.clearScrollPosition(f[t]));
                     });
                     return () => cancelAnimationFrame(e);
                 }, l);

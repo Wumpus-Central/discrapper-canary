@@ -3,14 +3,14 @@ var i =
     function (t) {
         return t && t.__esModule ? t : { default: t };
     };
-Object.defineProperty(e, '__esModule', { value: !0 }), (e.foldLines = e.escape = e.formatDateTZ = e.formatDate = e.ICalWeekday = e.ICalEventRepeatingFreq = e.ICalEventTransparency = e.ICalEventBusyStatus = e.ICalEventStatus = e.ICalEvent = e.ICalCategory = e.ICalCalendarMethod = e.ICalCalendar = e.ICalAttendeeStatus = e.ICalAttendeeRole = e.ICalAttendeeType = e.ICalAttendee = e.ICalAlarmType = e.ICalAlarm = void 0);
+(Object.defineProperty(e, '__esModule', { value: !0 }), (e.foldLines = e.escape = e.formatDateTZ = e.formatDate = e.ICalWeekday = e.ICalEventRepeatingFreq = e.ICalEventTransparency = e.ICalEventBusyStatus = e.ICalEventStatus = e.ICalEvent = e.ICalCategory = e.ICalCalendarMethod = e.ICalCalendar = e.ICalAttendeeStatus = e.ICalAttendeeRole = e.ICalAttendeeType = e.ICalAttendee = e.ICalAlarmType = e.ICalAlarm = void 0));
 let r = i(a(653059));
 function n(t) {
     return new r.default(t);
 }
 e.default = n;
 var s = a(972157);
-Object.defineProperty(e, 'ICalAlarm', {
+(Object.defineProperty(e, 'ICalAlarm', {
     enumerable: !0,
     get: function () {
         return i(s).default;
@@ -21,9 +21,9 @@ Object.defineProperty(e, 'ICalAlarm', {
         get: function () {
             return s.ICalAlarmType;
         }
-    });
+    }));
 var o = a(304414);
-Object.defineProperty(e, 'ICalAttendee', {
+(Object.defineProperty(e, 'ICalAttendee', {
     enumerable: !0,
     get: function () {
         return i(o).default;
@@ -46,9 +46,9 @@ Object.defineProperty(e, 'ICalAttendee', {
         get: function () {
             return o.ICalAttendeeStatus;
         }
-    });
+    }));
 var d = a(653059);
-Object.defineProperty(e, 'ICalCalendar', {
+(Object.defineProperty(e, 'ICalCalendar', {
     enumerable: !0,
     get: function () {
         return i(d).default;
@@ -59,7 +59,7 @@ Object.defineProperty(e, 'ICalCalendar', {
         get: function () {
             return d.ICalCalendarMethod;
         }
-    });
+    }));
 var l = a(682317);
 Object.defineProperty(e, 'ICalCategory', {
     enumerable: !0,
@@ -68,7 +68,7 @@ Object.defineProperty(e, 'ICalCategory', {
     }
 });
 var u = a(682568);
-Object.defineProperty(e, 'ICalEvent', {
+(Object.defineProperty(e, 'ICalEvent', {
     enumerable: !0,
     get: function () {
         return i(u).default;
@@ -91,9 +91,9 @@ Object.defineProperty(e, 'ICalEvent', {
         get: function () {
             return u.ICalEventTransparency;
         }
-    });
+    }));
 var h = a(615457);
-Object.defineProperty(e, 'ICalEventRepeatingFreq', {
+(Object.defineProperty(e, 'ICalEventRepeatingFreq', {
     enumerable: !0,
     get: function () {
         return h.ICalEventRepeatingFreq;
@@ -104,9 +104,9 @@ Object.defineProperty(e, 'ICalEventRepeatingFreq', {
         get: function () {
             return h.ICalWeekday;
         }
-    });
+    }));
 var c = a(141716);
-Object.defineProperty(e, 'formatDate', {
+(Object.defineProperty(e, 'formatDate', {
     enumerable: !0,
     get: function () {
         return c.formatDate;
@@ -130,4 +130,4 @@ Object.defineProperty(e, 'formatDate', {
             return c.foldLines;
         }
     }),
-    (t.exports = Object.assign(n, t.exports));
+    (t.exports = Object.assign(n, t.exports)));

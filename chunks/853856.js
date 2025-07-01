@@ -33,7 +33,7 @@ function _(e) {
 }
 function p() {
     var e, t, n;
-    (f = null != (n = null == (e = s.Z.settings.favorites) ? void 0 : e.muted) && n), (d = {});
+    ((f = null != (n = null == (e = s.Z.settings.favorites) ? void 0 : e.muted) && n), (d = {}));
     let r = null == (t = s.Z.settings.favorites) ? void 0 : t.favoriteChannels;
     if (null == r) return !1;
     for (let e in r) {
@@ -49,7 +49,7 @@ function p() {
 }
 class h extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z), p(), this.syncWith([s.Z], p);
+        (this.waitFor(s.Z), p(), this.syncWith([s.Z], p));
     }
     getFavoriteChannels() {
         return d;

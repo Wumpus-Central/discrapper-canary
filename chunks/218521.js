@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     d: () => a,
     m: () => i
 }),
     n(388685),
     n(415506),
-    n(49124);
+    n(49124));
 var r = n(503461);
 function i(e, t) {
     let n = Array.isArray(t) ? [...e, ...t] : [...e, t];

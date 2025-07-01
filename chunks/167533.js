@@ -1,4 +1,4 @@
-r.d(t, { Z: () => I }), r(642613), r(388685), r(583741);
+(r.d(t, { Z: () => I }), r(642613), r(388685), r(583741));
 var n,
     i = r(255367),
     a = r(73800),
@@ -24,7 +24,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -32,7 +32,7 @@ function _(e) {
             )),
             n.forEach(function (t) {
                 u(e, t, r[t]);
-            });
+            }));
     }
     return e;
 }
@@ -140,14 +140,14 @@ class O extends (n = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'handleSort', (e) => {
                 let { sortKey: t, sortDirection: r, onSort: n } = this.props;
                 null != n && n(e, t === e && r === c.sHY.ASCENDING ? c.sHY.DESCENDING : c.sHY.ASCENDING);
-            });
+            }));
     }
 }
-u(O, 'SortDirection', c.sHY),
+(u(O, 'SortDirection', c.sHY),
     u(O, 'defaultProps', {
         initialSortDirection: c.sHY.ASCENDING,
         rowHeaderComponent: E,
@@ -164,5 +164,5 @@ u(O, 'SortDirection', c.sHY),
         hasHeader: !0,
         sortData: !0,
         stickyHeader: !1
-    });
+    }));
 let I = O;

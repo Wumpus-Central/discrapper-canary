@@ -23,7 +23,7 @@ function a(e, t) {
     function n(n) {
         return n in t ? t[n] : e[n];
     }
-    (e = e || {}), (t = t || {});
+    ((e = e || {}), (t = t || {}));
     var r,
         i = Object.create(null),
         a = [];

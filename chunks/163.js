@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h }), t(388685);
+(t.d(n, { Z: () => h }), t(388685));
 var l = t(73800),
     r = t(442837),
     i = t(570140),
@@ -25,7 +25,7 @@ function h(e) {
             onChannelClick: l.useCallback((e, n, t) => {
                 let l = s.ZP.isChannelOptedIn(e, n),
                     r = n === t;
-                !l && o.Z.isCollapsed(t) && null != t && (0, a.mJ)(t), (0, d.hi)(e) ? (r ? (0, d.rz)(e, { include: new Set([n]) }) : (0, d.rz)(e, { exclude: new Set([n]) })) : (0, c.k$)(e, n, !l, { section: u.jXE.CHANNEL_BROWSER });
+                (!l && o.Z.isCollapsed(t) && null != t && (0, a.mJ)(t), (0, d.hi)(e) ? (r ? (0, d.rz)(e, { include: new Set([n]) }) : (0, d.rz)(e, { exclude: new Set([n]) })) : (0, c.k$)(e, n, !l, { section: u.jXE.CHANNEL_BROWSER }));
             }, [])
         }
     );

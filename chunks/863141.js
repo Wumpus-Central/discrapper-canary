@@ -1,4 +1,4 @@
-n.d(t, { Z: () => i }), n(997841);
+(n.d(t, { Z: () => i }), n(997841));
 var r = n(864106);
 function i(e) {
     let { id: t, username: n, discriminator: i, globalName: a, avatar: o, avatarDecoration: s, bot: l, flags: c, premiumType: u } = e;

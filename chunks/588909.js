@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(704215),
@@ -26,7 +26,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function S(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -42,8 +42,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -89,15 +89,15 @@ function N(e, t) {
                     (0, s.Z)(t, b.xjy.JOIN) &&
                     ((E.cancelText = _.intl.string(_.t['6F9ivr'])),
                     (E.onCancelClick = (e, n) => {
-                        u('unlock'), a.Z.updateNotificationStatus(n), a.Z.setInputLocked(!1, (0, f.getPID)()), (0, l.h7)(t, !1, b.IlC.POPOUT);
+                        (u('unlock'), a.Z.updateNotificationStatus(n), a.Z.setInputLocked(!1, (0, f.getPID)()), (0, l.h7)(t, !1, b.IlC.POPOUT));
                     }));
                 break;
             }
             case O.nc.GO_LIVE_VOICE:
             case O.nc.GO_LIVE_NON_VOICE:
-                (E.confirmText = _.intl.string(_.t.U76Ft7)),
+                ((E.confirmText = _.intl.string(_.t.U76Ft7)),
                     (E.onConfirmClick = (e, t) => {
-                        u('unlock'),
+                        (u('unlock'),
                             a.Z.updateNotificationStatus(t),
                             a.Z.setInputLocked(!1, (0, f.getPID)()),
                             (0, o.ZD)(
@@ -116,8 +116,8 @@ function N(e, t) {
                                         );
                                 },
                                 { contextKey: v.u1 }
-                            );
-                    });
+                            ));
+                    }));
                 break;
             case O.nc.CONTENT_INVENTORY:
                 (0, h.Rb)('welcomeNotification').allowActivityWidget &&
@@ -156,7 +156,7 @@ function N(e, t) {
                 onConfirmClick: N
                     ? void 0
                     : () => {
-                          u('unlock'), a.Z.setInputLocked(!1, (0, f.getPID)()), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX);
+                          (u('unlock'), a.Z.setInputLocked(!1, (0, f.getPID)()), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX));
                       }
             },
             E
@@ -164,15 +164,15 @@ function N(e, t) {
         {
             onNotificationShow: (e) => {
                 var t;
-                c(), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (t = E.onNotificationShow) || t.call(E, e);
+                (c(), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (t = E.onNotificationShow) || t.call(E, e));
             },
             onNotificationClick: (e, t) => {
                 var n;
-                u('unlock'), a.Z.setInputLocked(!1, (0, f.getPID)()), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (n = E.onNotificationClick) || n.call(E, e, t);
+                (u('unlock'), a.Z.setInputLocked(!1, (0, f.getPID)()), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (n = E.onNotificationClick) || n.call(E, e, t));
             },
             onDismissClick: (e, t) => {
                 var n;
-                u('dismiss'), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (n = E.onDismissClick) || n.call(E, e, t);
+                (u('dismiss'), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (n = E.onDismissClick) || n.call(E, e, t));
             }
         }
     );

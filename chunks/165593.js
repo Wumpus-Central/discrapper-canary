@@ -22,5 +22,5 @@ e.exports = function (e) {
             }
         }
     };
-    return r.set(t, '[[Iterator]]', e), t;
+    return (r.set(t, '[[Iterator]]', e), t);
 };

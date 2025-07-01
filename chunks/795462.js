@@ -10,7 +10,7 @@ var e = n(324474),
     l = n(272763),
     v = TypeError,
     y = function (t, r) {
-        (this.stopped = t), (this.result = r);
+        ((this.stopped = t), (this.result = r));
     },
     h = y.prototype;
 t.exports = function (t, r, n) {
@@ -28,7 +28,7 @@ t.exports = function (t, r, n) {
         T = !!(n && n.INTERRUPTED),
         P = e(r, O),
         k = function (t) {
-            return x && l(x, 'normal', t), new y(!0, t);
+            return (x && l(x, 'normal', t), new y(!0, t));
         },
         I = function (t) {
             return j ? (i(t), T ? P(t[0], t[1], k) : P(t[0], t[1])) : T ? P(t, k) : P(t);

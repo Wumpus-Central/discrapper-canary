@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $s: () => C,
     A0: () => R,
     Sg: () => S,
@@ -7,7 +7,7 @@ n.d(t, {
     t$: () => N,
     tM: () => v
 }),
-    n(388685);
+    n(388685));
 var r = n(544891),
     i = n(570140),
     a = n(904245),
@@ -40,7 +40,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -62,7 +62,7 @@ let v = async (e) => {
     let { componentType: t, messageId: n, messageFlags: i, customId: a, componentId: s, applicationId: l, channelId: p, guildId: h, localState: g } = e,
         E = d.default.fromTimestamp(Date.now());
     if (!_.ZP.canQueueInteraction(n, E)) return;
-    await c.Z.unarchiveThreadIfNecessary(p),
+    (await c.Z.unarchiveThreadIfNecessary(p),
         (0, f.kz)(E, {
             messageId: n,
             data: {
@@ -73,7 +73,7 @@ let v = async (e) => {
             },
             onFailure: (e, t) => T(p, e, t)
         }),
-        null != g && (0, f.B0)(n, E, g, s);
+        null != g && (0, f.B0)(n, E, g, s));
     let y = {
         type: o.B8.MESSAGE_COMPONENT,
         nonce: E,
@@ -122,7 +122,7 @@ let T = (e, t, n) => {
                     if (t.body.code !== m.evJ.INVALID_FORM_BODY || !t.body.errors) return void (0, f.yr)(e, t.body.code, t.body.message, t.status);
                     else {
                         let o = (0, h.e)(t.body.errors);
-                        null != o &&
+                        (null != o &&
                             ('INTERACTION_APPLICATION_COMMAND_INVALID_VERSION' === o.code || 'INTERACTION_APPLICATION_COMMAND_INVALID' === o.code) &&
                             i.Z.dispatch({
                                 type: 'APPLICATION_COMMAND_EXECUTE_BAD_VERSION',
@@ -130,7 +130,7 @@ let T = (e, t, n) => {
                                 channelId: r,
                                 guildId: null != a ? a : null
                             }),
-                            (0, f.yr)(e, void 0, null == o ? void 0 : o.message);
+                            (0, f.yr)(e, void 0, null == o ? void 0 : o.message));
                         return;
                     }
                 else {
@@ -142,7 +142,7 @@ let T = (e, t, n) => {
         }
     };
 var A = (function (e) {
-    return (e[(e.SENDING = 0)] = 'SENDING'), (e[(e.CREATED = 1)] = 'CREATED'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.TIMED_OUT = 3)] = 'TIMED_OUT'), (e[(e.EPHEMERAL_SUCCESS = 4)] = 'EPHEMERAL_SUCCESS'), e;
+    return ((e[(e.SENDING = 0)] = 'SENDING'), (e[(e.CREATED = 1)] = 'CREATED'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.TIMED_OUT = 3)] = 'TIMED_OUT'), (e[(e.EPHEMERAL_SUCCESS = 4)] = 'EPHEMERAL_SUCCESS'), e);
 })({});
 let N = (e, t) => {
     let n = null == t ? void 0 : t.state,

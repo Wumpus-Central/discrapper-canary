@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -67,7 +67,7 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -77,7 +77,7 @@ function g(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let E = '\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n',
@@ -85,7 +85,7 @@ let E = '\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-i
 class y extends (i = o.PureComponent) {
     componentDidMount() {
         var e, t;
-        null == (e = (t = this.props).onResize) || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize());
+        (null == (e = (t = this.props).onResize) || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize()));
     }
     componentDidUpdate(e, t) {
         if (this.state.height !== t.height) {
@@ -103,9 +103,9 @@ class y extends (i = o.PureComponent) {
         if (null != n && -1 === a.indexOf('\n') && a.length * n < 0.8 * t.offsetWidth) return void this.setState({ height: void 0 });
         null == r && null != document.body && ((r = document.createElement('textarea')), document.body.appendChild(r));
         let { paddingSize: o, borderSize: s, boxSizing: l, sizingStyle: c } = this.calculateNodeStyling(t);
-        r.setAttribute('style', c + ';' + E), (r.value = a), null != i ? r.setAttribute('rows', ''.concat(i)) : r.removeAttribute('rows');
+        (r.setAttribute('style', c + ';' + E), (r.value = a), null != i ? r.setAttribute('rows', ''.concat(i)) : r.removeAttribute('rows'));
         let u = r.scrollHeight;
-        'border-box' === l ? (u += s) : 'content-box' === l && (u -= o), this.setState({ height: u });
+        ('border-box' === l ? (u += s) : 'content-box' === l && (u -= o), this.setState({ height: u }));
     }
     calculateNodeStyling(e) {
         let t = window.getComputedStyle(e),
@@ -120,7 +120,7 @@ class y extends (i = o.PureComponent) {
         };
     }
     clear() {
-        null != this._textArea && (this._textArea.value = ''), this.calculateSize();
+        (null != this._textArea && (this._textArea.value = ''), this.calculateSize());
     }
     blur() {
         let { _textArea: e } = this;
@@ -164,16 +164,16 @@ class y extends (i = o.PureComponent) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             f(this, '_textArea', void 0),
             f(this, 'handleSetRef', (e) => {
                 this._textArea = e;
             }),
             f(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
-                null == t || t(e), this.calculateSize();
+                (null == t || t(e), this.calculateSize());
             }),
-            (this.state = { height: void 0 });
+            (this.state = { height: void 0 }));
     }
 }
 f(y, 'defaultProps', {

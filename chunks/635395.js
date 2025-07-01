@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(73800),
     i = n(442837),
     l = n(846027),
@@ -30,7 +30,7 @@ class E extends r.PureComponent {
     }
     constructor(...e) {
         var t, n;
-        super(...e),
+        (super(...e),
             (t = 'getIcon'),
             (n = () => {
                 let { deafened: e, muted: t, speaking: n, connected: r, unread: i } = this.props,
@@ -44,7 +44,7 @@ class E extends r.PureComponent {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = n);
+                : (this[t] = n));
     }
 }
 let O = () => null;

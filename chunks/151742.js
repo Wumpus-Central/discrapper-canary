@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(358797), n(388685);
+(n.d(t, { Z: () => l }), n(358797), n(388685));
 var r = n(147913),
     i = n(695346);
 function a(e, t, n) {
@@ -27,14 +27,14 @@ class s extends r.Z {
         i.rN.getSetting() !== e && setImmediate(() => i.rN.updateSetting(e));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             a(this, 'actions', {
                 POST_CONNECTION_OPEN: () => {
-                    this.setVerifyTimezone(), this.maybeShowChangeLanguageToast();
+                    (this.setVerifyTimezone(), this.maybeShowChangeLanguageToast());
                 },
                 OVERLAY_INITIALIZE: this.setVerifyTimezone,
                 USER_SETTINGS_PROTO_UPDATE: this.ensureTimezoneUpdated
-            });
+            }));
     }
 }
 let l = new s();

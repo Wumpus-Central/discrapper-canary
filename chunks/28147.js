@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(392711),
@@ -31,7 +31,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function T(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -47,8 +47,8 @@ function T(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -201,7 +201,7 @@ function M(e) {
                             searchResultsPosition: t,
                             onClick: () => {
                                 let e = v.Z.entrypoint();
-                                h.yT(y.ti.DISMISSED),
+                                (h.yT(y.ti.DISMISSED),
                                     (0, p.Mo)({
                                         command: n,
                                         location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
@@ -220,7 +220,7 @@ function M(e) {
                                             searchResultsPosition: t,
                                             source: e
                                         }),
-                                        f.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.channel.id }));
+                                        f.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.channel.id })));
                             }
                         },
                         n.id

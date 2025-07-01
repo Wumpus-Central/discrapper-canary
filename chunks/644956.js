@@ -47,7 +47,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 x(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -63,11 +63,11 @@ function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -165,14 +165,14 @@ function G(e) {
 function B(e) {
     let { popoutProps: t, roleId: n, guildId: a, channelId: s } = e,
         d = i.useRef(null);
-    (0, _.ZP)(() => {
+    ((0, _.ZP)(() => {
         var e;
         null == (e = t.setPopoutRef) || e.call(t, d.current);
     }),
         (0, _.zq)(() => {
             var e;
             null == (e = t.setPopoutRef) || e.call(t, null);
-        });
+        }));
     let f = (0, b.Z)(a),
         p = (0, l.e7)(
             [C.Z],

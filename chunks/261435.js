@@ -1,4 +1,4 @@
-n.d(t, { Z: () => el }), n(388685), n(539854);
+(n.d(t, { Z: () => el }), n(388685), n(539854));
 var i,
     r = n(512722),
     o = n.n(r),
@@ -58,7 +58,7 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -66,7 +66,7 @@ function H(e) {
             )),
             i.forEach(function (t) {
                 F(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -108,7 +108,7 @@ function ee(e) {
     let n = q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
     let i = q[n];
-    clearTimeout(i.timerId), (q = [...q]), t === U._1z.DISMISSED ? q.splice(n, 1) : (q[n] = Y(H({}, i), { status: t }));
+    (clearTimeout(i.timerId), (q = [...q]), t === U._1z.DISMISSED ? q.splice(n, 1) : (q[n] = Y(H({}, i), { status: t })));
 }
 function et(e) {
     let t = q.length;
@@ -132,7 +132,7 @@ function ei(e, t) {
             n
         ),
         o = (q = [...q]).findIndex((e) => e.priority <= n.priority);
-    return -1 === o ? q.push(r) : q.splice(o, 0, r), q.length > 10 && clearTimeout(q.pop().timerId), i;
+    return (-1 === o ? q.push(r) : q.splice(o, 0, r), q.length > 10 && clearTimeout(q.pop().timerId), i);
 }
 function er(e) {
     let { channelId: t, ringing: n } = e,
@@ -153,13 +153,13 @@ function er(e) {
     )
         return !1;
     let o = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === U.uaV.CALL);
-    null != o && ee(o.id),
+    (null != o && ee(o.id),
         ei((0, p.Z)(r), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
             channelId: r.id
-        });
+        }));
 }
 class eo extends (i = s.ZP.Store) {
     initialize() {
@@ -232,7 +232,7 @@ let el = new eo(a.Z, {
                     expirationExternallyManaged: !0,
                     channelId: e.id
                 });
-                return null != s && $(s, !1, J), !0;
+                return (null != s && $(s, !1, J), !0);
             })(s, l, a);
             if (!1 !== e) return e;
         }

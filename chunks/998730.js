@@ -1,4 +1,4 @@
-n.d(t, { N: () => o }), n(388685);
+(n.d(t, { N: () => o }), n(388685));
 var r = n(73800),
     i = n(302221),
     l = n(956664);
@@ -6,14 +6,14 @@ async function a(e) {
     return (
         await new Promise((t, n) => {
             let r = new Image();
-            (r.crossOrigin = 'Anonymous'),
+            ((r.crossOrigin = 'Anonymous'),
                 (r.onerror = (e) => {
-                    n(e), null != r && ((r.onerror = null), (r.onload = null)), (r = null);
+                    (n(e), null != r && ((r.onerror = null), (r.onload = null)), (r = null));
                 }),
                 (r.onload = () => {
                     null != r ? (t((0, l.XN)(r, 2, 10)), (r.onerror = null), (r.onload = null), (r = null)) : n('image is null');
                 }),
-                (r.src = e);
+                (r.src = e));
         })
     ).map((e) => {
         let [t, n, r] = e;

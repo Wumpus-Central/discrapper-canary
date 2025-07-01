@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(539854);
+(n.d(t, { Z: () => p }), n(388685), n(539854));
 var s,
     i,
     r = n(255367),
@@ -42,7 +42,7 @@ class d extends (s = l.PureComponent) {
         null == (e = this._codeBlockRef) || e.blur();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, '_codeBlockRef', void 0),
             u(this, 'setCodeBlockRef', (e) => {
                 this._codeBlockRef = e;
@@ -57,7 +57,7 @@ class d extends (s = l.PureComponent) {
             u(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e.currentTarget.value);
-            });
+            }));
     }
 }
 u(d, 'defaultProps', { autoFocus: !1 });
@@ -67,7 +67,7 @@ class E extends (i = l.PureComponent) {
             { codes: n } = this.state,
             s = [];
         for (let e = 0; e < n.length; e++)
-            e === n.length / 2 && s.push((0, r.jsx)('div', { className: h.spacer }, 'spacer')),
+            (e === n.length / 2 && s.push((0, r.jsx)('div', { className: h.spacer }, 'spacer')),
                 s.push(
                     (0, r.jsx)(
                         d,
@@ -81,7 +81,7 @@ class E extends (i = l.PureComponent) {
                         },
                         e
                     )
-                );
+                ));
         return (0, r.jsx)(c.Z, {
             align: c.Z.Align.CENTER,
             justify: c.Z.Justify.CENTER,
@@ -124,7 +124,7 @@ class E extends (i = l.PureComponent) {
         null == t || t(e);
     }
     constructor(e) {
-        super(e), u(this, '_codeBlockRefs', Array(this.props.count)), (this.state = { codes: Array(e.count) });
+        (super(e), u(this, '_codeBlockRefs', Array(this.props.count)), (this.state = { codes: Array(e.count) }));
     }
 }
 u(E, 'defaultProps', { count: 6 });

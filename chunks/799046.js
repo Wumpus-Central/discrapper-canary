@@ -33,7 +33,7 @@ t.exports = function (t, r, n) {
                 })))
     ) {
         var E = (d = r(function (r, n) {
-                g(f(r, E), {
+                (g(f(r, E), {
                     type: t,
                     collection: new O()
                 }),
@@ -41,10 +41,10 @@ t.exports = function (t, r, n) {
                         c(n, r[w], {
                             that: r,
                             AS_ENTRIES: m
-                        });
+                        }));
             })).prototype,
             T = b(t);
-        h(['add', 'clear', 'delete', 'forEach', 'get', 'has', 'set', 'keys', 'values', 'entries'], function (t) {
+        (h(['add', 'clear', 'delete', 'forEach', 'get', 'has', 'set', 'keys', 'values', 'entries'], function (t) {
             var r = 'add' === t || 'set' === t;
             t in j &&
                 !(S && 'clear' === t) &&
@@ -61,8 +61,8 @@ t.exports = function (t, r, n) {
                     get: function () {
                         return T(this).collection.size;
                     }
-                });
-    } else (d = n.getConstructor(r, t, m, w)), i.enable();
+                }));
+    } else ((d = n.getConstructor(r, t, m, w)), i.enable());
     return (
         v(d, t, !1, !0),
         (A[t] = d),

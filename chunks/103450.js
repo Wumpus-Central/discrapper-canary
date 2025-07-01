@@ -1,4 +1,4 @@
-n.d(t, { e: () => U }), n(388685);
+(n.d(t, { e: () => U }), n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(278323),
@@ -145,7 +145,7 @@ function U(e) {
             let e = !1;
             async function t() {
                 let e;
-                K(!0),
+                (K(!0),
                     null != G &&
                         (e = await a.Z.sendActivityInviteUser({
                             type: k.mFx.JOIN_REQUEST,
@@ -153,7 +153,7 @@ function U(e) {
                             activity: G,
                             location: k.Sbl.USER_ACTIVITY_ACTIONS
                         })),
-                    null != e && s.default.selectPrivateChannel(e.id);
+                    null != e && s.default.selectPrivateChannel(e.id));
             }
             if (q) {
                 if (null == z) return;
@@ -172,7 +172,7 @@ function U(e) {
             }
             if (!e) {
                 if (ei) {
-                    null == F || F(), ed(V, G);
+                    (null == F || F(), ed(V, G));
                     return;
                 }
                 await t();

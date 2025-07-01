@@ -34,7 +34,7 @@ function u() {
             (0, i.jsx)(r.zxk, {
                 color: r.zxk.Colors.PRIMARY,
                 onClick: () => {
-                    (0, l.uL)(a.Z5c.GUILD_DISCOVERY), (0, s.xf)();
+                    ((0, l.uL)(a.Z5c.GUILD_DISCOVERY), (0, s.xf)());
                 },
                 size: r.zxk.Sizes.LARGE,
                 children: o.intl.string(o.t.JFlifn)

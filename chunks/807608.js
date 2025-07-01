@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(539854);
+(n.d(t, { Z: () => u }), n(388685), n(539854));
 var r = n(485589),
     a = n(424706),
     l = n(14160),
@@ -9,7 +9,7 @@ let u = {
         Array.from(r.roles.entries())
             .reduce((e, t) => {
                 let [n, r] = t;
-                return !0 === r.childrenPresentational && e.push('[role="'.concat(n, '"]')), e;
+                return (!0 === r.childrenPresentational && e.push('[role="'.concat(n, '"]')), e);
             }, [])
             .join(', ')
     ),

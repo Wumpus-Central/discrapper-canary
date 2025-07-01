@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(539854);
+(n.d(t, { Z: () => x }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -39,7 +39,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,11 +55,11 @@ function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -134,7 +134,7 @@ function x(e) {
             className: S.card,
             onClose: C
         };
-    null != M &&
+    (null != M &&
         et.push(
             (0, r.jsx)(
                 y.Z,
@@ -164,7 +164,7 @@ function x(e) {
                 )
             );
         }),
-        F && et.push((0, r.jsx)(O.Z, N({ voiceChannel: j }, en), 'voice'));
+        F && et.push((0, r.jsx)(O.Z, N({ voiceChannel: j }, en), 'voice')));
     let [er, ...ei] = et,
         ea = ei.length > 0,
         eo =
@@ -175,11 +175,11 @@ function x(e) {
                       color: l.zxk.Colors.TRANSPARENT,
                       className: o()(S.viewAllButton, ee && S.isShown),
                       onClick: () => {
-                          x({
+                          (x({
                               action: 'PRESS_VIEW_PROFILE',
                               analyticsLocations: R
                           }),
-                              A({ section: v.oh.ACTIVITY });
+                              A({ section: v.oh.ACTIVITY }));
                       },
                       children: (0, r.jsx)(l.Text, {
                           variant: 'text-xs/medium',
@@ -196,24 +196,24 @@ function x(e) {
             });
             let e = Y.current.getBoundingClientRect().height,
                 t = K.current.getBoundingClientRect().height;
-            X({
+            (X({
                 type: 'MEASUREMENT_COMPLETE',
                 height: e
             }),
                 requestAnimationFrame(() => {
-                    X({
+                    (X({
                         type: 'START_EXPAND_ANIMATION',
                         height: e + t - w
                     }),
                         (z.current = setTimeout(() => {
                             var e;
-                            X({
+                            (X({
                                 type: 'ANIMATION_COMPLETE',
                                 height: 'auto'
                             }),
-                                null == (e = W.current) || e.focus();
-                        }, P));
-                });
+                                null == (e = W.current) || e.focus());
+                        }, P)));
+                }));
         }, [R, x]);
     return ((0, c.zq)(() => {
         null != z.current && window.clearTimeout(z.current);

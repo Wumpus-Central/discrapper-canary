@@ -13,19 +13,19 @@ var n = r(497727),
     g = null,
     y = {
         onCompositionStart: function (t) {
-            (d = !0), g || (g = new n(c(t))).start();
+            ((d = !0), g || (g = new n(c(t))).start());
         },
         onCompositionEnd: function (t) {
-            (h = !1),
+            ((h = !1),
                 (d = !1),
                 setTimeout(function () {
                     h || y.resolveComposition(t);
-                }, 20);
+                }, 20));
         },
         onSelect: s,
         onKeyDown: function (t, e) {
             if (!d) {
-                y.resolveComposition(t), t._onKeyDown(e);
+                (y.resolveComposition(t), t._onKeyDown(e));
                 return;
             }
             (e.which === u.RIGHT || e.which === u.LEFT) && e.preventDefault();
@@ -36,7 +36,7 @@ var n = r(497727),
         resolveComposition: function (t) {
             if (!d) {
                 var e = p(g).stopAndFlushMutations();
-                (g = null), (h = !0);
+                ((g = null), (h = !0));
                 var r = a.set(t._latestEditorState, { inCompositionMode: !1 });
                 if ((t.exitCurrentMode(), !e.size)) return void t.update(r);
                 var n = r.getCurrentContent();
@@ -57,7 +57,7 @@ var n = r(497727),
                         }),
                         y = f(n, g),
                         v = n.getBlockForKey(s).getInlineStyleAt(h);
-                    (n = i.replaceText(n, g, t, v, y)), (r = a.set(r, { currentContent: n }));
+                    ((n = i.replaceText(n, g, t, v, y)), (r = a.set(r, { currentContent: n })));
                 });
                 var u = l(r, c(t)).selectionState;
                 t.restoreEditorDOM();

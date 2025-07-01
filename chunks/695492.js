@@ -19,7 +19,7 @@ function d(e) {
             onCTAClick: () =>
                 (0, i.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                        let { default: e } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
                         return (n) => {
                             var i, l;
                             return (0, r.jsx)(
@@ -28,7 +28,7 @@ function d(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function d(e) {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -44,8 +44,8 @@ function d(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({}, n)),

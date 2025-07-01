@@ -3,7 +3,7 @@ var r = n(836560);
 let i = 160,
     a = 500;
 var o = (function (e) {
-    return (e.VERTICAL = 'vertical'), (e.HORIZONTAL = 'horizontal'), e;
+    return ((e.VERTICAL = 'vertical'), (e.HORIZONTAL = 'horizontal'), e);
 })(o || {});
 let s = {
     open: !1,
@@ -36,14 +36,14 @@ class u extends r.EventEmitter {
             n = e ? 'vertical' : 'horizontal';
         if (!(t && e) && (e || t)) {
             let e = s.open;
-            (s = {
+            ((s = {
                 open: !0,
                 orientation: n
             }),
-                (e && s.orientation === n) || this.emit('changed', s);
+                (e && s.orientation === n) || this.emit('changed', s));
         } else s.open && ((s.open = !1), this.emit('changed', s));
     }
     constructor() {
-        super(), setInterval(() => this.check(), a);
+        (super(), setInterval(() => this.check(), a));
     }
 }

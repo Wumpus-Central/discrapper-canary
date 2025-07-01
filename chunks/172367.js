@@ -35,7 +35,7 @@ var i = r(968514),
         undoStack: f()
     }),
     h = (function () {
-        (e.createEmpty = function (t) {
+        ((e.createEmpty = function (t) {
             return e.createWithContent(o.createFromText(''), t);
         }),
             (e.createWithContent = function (t, r) {
@@ -58,7 +58,7 @@ var i = r(968514),
                             for (var e = 1; e < arguments.length; e++) {
                                 var r = null != arguments[e] ? arguments[e] : {},
                                     i = Object.keys(r);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(r).filter(function (t) {
                                             return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -66,7 +66,7 @@ var i = r(968514),
                                     )),
                                     i.forEach(function (e) {
                                         n(t, e, r[e]);
-                                    });
+                                    }));
                             }
                             return t;
                         })({}, t, {
@@ -97,7 +97,7 @@ var i = r(968514),
                                 m,
                                 _,
                                 b = e.get('treeMap');
-                            (_ =
+                            ((_ =
                                 f && l
                                     ? ((h = p),
                                       (d = p.getBlockMap()),
@@ -119,10 +119,10 @@ var i = r(968514),
                                     decorator: f,
                                     treeMap: _,
                                     nativelyRenderedContent: null
-                                });
+                                }));
                             return;
                         }
-                        p !== t.getCurrentContent() &&
+                        (p !== t.getCurrentContent() &&
                             e.set(
                                 'treeMap',
                                 ((n = t),
@@ -144,13 +144,13 @@ var i = r(968514),
                                             })
                                     ))
                             ),
-                            e.merge(r);
+                            e.merge(r));
                     })
                 );
-            });
+            }));
         var t = e.prototype;
         function e(t) {
-            n(this, '_immutable', void 0), (this._immutable = t);
+            (n(this, '_immutable', void 0), (this._immutable = t));
         }
         return (
             (t.toJS = function () {
@@ -228,7 +228,7 @@ var i = r(968514),
                 return d(t, e, !1);
             }),
             (e.forceSelection = function (t, e) {
-                return e.getHasFocus() || (e = e.set('hasFocus', !0)), d(t, e, !0);
+                return (e.getHasFocus() || (e = e.set('hasFocus', !0)), d(t, e, !0));
             }),
             (e.moveSelectionToEnd = function (t) {
                 var r = t.getCurrentContent().getLastBlock(),

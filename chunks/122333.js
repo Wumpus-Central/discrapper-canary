@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => L }), n(388685), n(583741);
+(n.d(t, { Z: () => L }), n(388685), n(583741));
 var i = n(255367);
 n(73800);
 var l = n(481060),
@@ -30,7 +30,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function j(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -46,8 +46,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -74,10 +74,10 @@ function Z() {
 }
 class x extends o.Z {
     _initialize() {
-        a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', Z);
+        (a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', Z));
     }
     _terminate() {
-        a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('LOGOUT', Z);
+        (a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('LOGOUT', Z));
     }
     handleConnectionOpen() {
         var e;
@@ -102,7 +102,7 @@ class x extends o.Z {
         }
         let x = () => 0 === m.Z.totalGuilds && !y.isPlatformEmbedded,
             L = s.bN();
-        (e = [
+        ((e = [
             {
                 key: 'Unified NUF Modal',
                 open: async function (e) {
@@ -184,7 +184,7 @@ class x extends o.Z {
             }
         ]),
             (t = () => {
-                I.H(), h.Z.flowStep(P.MK.ANY, P.EW.NUF_COMPLETE, !0);
+                (I.H(), h.Z.flowStep(P.MK.ANY, P.EW.NUF_COMPLETE, !0));
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;
@@ -192,7 +192,7 @@ class x extends o.Z {
                     e.predicate() ? e.open(n) : n();
                 };
             }),
-            t();
+            t());
     }
 }
 let L = new x();

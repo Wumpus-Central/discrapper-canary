@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(544891),
@@ -19,7 +19,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -35,8 +35,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -84,13 +84,13 @@ let O = 10 * h.Z.Millis.SECOND,
                     ]);
                 } catch (e) {
                     throw (
-                        (e.code === b.lTL.INVALID_ENTITLEMENT &&
+                        e.code === b.lTL.INVALID_ENTITLEMENT &&
                             (f.ZP.focus(null, !0),
                             (0, a.ZDy)(async () => {
                                 let { default: e } = await n.e('48748').then(n.bind(n, 52004));
                                 return (t) => (0, r.jsx)(e, E(_({}, t), { applicationId: i }));
                             })),
-                        e)
+                        e
                     );
                 }
             }
@@ -115,12 +115,12 @@ let O = 10 * h.Z.Millis.SECOND,
                     })
                     .catch((e) => {
                         throw (
-                            (f.ZP.focus(null, !0),
+                            f.ZP.focus(null, !0),
                             (0, a.ZDy)(async () => {
                                 let { default: e } = await n.e('48748').then(n.bind(n, 52004));
                                 return (t) => (0, r.jsx)(e, E(_({}, t), { applicationId: l }));
                             }),
-                            e)
+                            e
                         );
                     });
             }

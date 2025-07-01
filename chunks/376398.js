@@ -8,7 +8,7 @@ var r = n(39383),
 let a = {};
 function o(e) {
     let t = i()('VideoStream');
-    return (a[t] = e), t;
+    return ((a[t] = e), t);
 }
 function s(e) {
     delete a[e];

@@ -29,7 +29,7 @@ class c extends (i = r.ZP.PersistedStore) {
         return null != (t = o.lastSeenInfos[e]) ? t : null;
     }
 }
-l(c, 'displayName', 'GuildTagChangedCoachmarkStore'), l(c, 'persistKey', 'GuildTagChangedCoachmarkStore');
+(l(c, 'displayName', 'GuildTagChangedCoachmarkStore'), l(c, 'persistKey', 'GuildTagChangedCoachmarkStore'));
 let d = new c(s.Z, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;

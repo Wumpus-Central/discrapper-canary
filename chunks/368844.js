@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Ah: () => O,
     CB: () => w,
     aU: () => N,
@@ -11,7 +11,7 @@ n.d(t, {
     n(997841),
     n(388685),
     n(361932),
-    n(187205);
+    n(187205));
 var r = n(73800),
     i = n(911969),
     a = n(292419),
@@ -39,7 +39,7 @@ function y(e) {
     return E(e) || b(e);
 }
 var O = (function (e) {
-    return (e.EMBED = 'embed'), (e.ATTACHMENT = 'attachment'), (e.COMPONENT = 'component'), e;
+    return ((e.EMBED = 'embed'), (e.ATTACHMENT = 'attachment'), (e.COMPONENT = 'component'), e);
 })({});
 function v(e) {
     var t, n;
@@ -60,7 +60,7 @@ function v(e) {
                   if (p) {
                       let e = m.Z.toURLSafe(r);
                       if (null == e) return null;
-                      e.searchParams.append('format', 'webp'), (E = e.toString());
+                      (e.searchParams.append('format', 'webp'), (E = e.toString()));
                   }
                   return {
                       type: 'attachment',

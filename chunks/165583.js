@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => V,
     dz: () => j
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -111,7 +111,7 @@ function M(e) {
             f(!0);
         },
         onSubscribeModalClose: (e) => {
-            f(!1), e && (null == o || o());
+            (f(!1), e && (null == o || o()));
         },
         textOptions: { textOverride: _ }
     });
@@ -354,7 +354,7 @@ function V(e) {
                         planName: (0, v.jP)(u),
                         premiumMaxSize: u === R.Si.TIER_0 ? w.intl.string(w.t['C/Rhb2']) : C,
                         onClick: () => {
-                            (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s();
+                            ((0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s());
                         }
                     });
                     break;
@@ -362,14 +362,14 @@ function V(e) {
                     j = w.intl.format(w.t.poib9P, {
                         planName: (0, v.jP)(u),
                         onClick: () => {
-                            (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s();
+                            ((0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s());
                         }
                     });
                     break;
                 case R.cd.STREAM_QUALITY_UPSELL:
                     j = w.intl.format(w.t.WspKp6, {
                         onClick: () => {
-                            (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)();
+                            ((0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)());
                         }
                     });
                     break;
@@ -377,7 +377,7 @@ function V(e) {
                     j = w.intl.format(w.t.GUHtEx, {
                         premiumMaxMessageLength: P.en1,
                         onClick: () => {
-                            (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s();
+                            ((0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s());
                         }
                     });
             }
@@ -442,7 +442,7 @@ function V(e) {
                     discountOffer: S,
                     children: w.intl.format(w.t['5KMAnJ'], {
                         onClick: () => {
-                            (0, E.uL)(P.Z5c.APPLICATION_STORE), (0, g.C)();
+                            ((0, E.uL)(P.Z5c.APPLICATION_STORE), (0, g.C)());
                         }
                     })
                 })
@@ -471,7 +471,7 @@ function V(e) {
                         children: w.intl.format(w.t.GUHtEx, {
                             premiumMaxMessageLength: P.en1,
                             onClick: () => {
-                                (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s();
+                                ((0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s());
                             }
                         })
                     }),

@@ -1,10 +1,10 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         baseRules: () => j,
         customRules: () => P
     }),
     n(35282),
-    n(388685);
+    n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -23,7 +23,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -39,8 +39,8 @@ function h(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -67,14 +67,14 @@ let O = a().defaultRules.link,
                     (o =
                         s || a
                             ? (e) => {
-                                  g.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: y }), s ? d.Z.open(f.oAB.PREMIUM) : a && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(b.Xd), e.preventDefault();
+                                  (g.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: y }), s ? d.Z.open(f.oAB.PREMIUM) : a && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(b.Xd), e.preventDefault());
                               }
                             : p
                               ? (e) => {
-                                    (0, m.uL)(i), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, h({}, g.default.getCampaignParams(i))), (0, u.Ou)(), (0, c.Mr3)(b.Xd), e.preventDefault();
+                                    ((0, m.uL)(i), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, h({}, g.default.getCampaignParams(i))), (0, u.Ou)(), (0, c.Mr3)(b.Xd), e.preventDefault());
                                 }
                               : () => {
-                                    n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
+                                    (n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
                                         n.changeLog.track(
                                             f.rMx.CHANGE_LOG_CTA_CLICKED,
                                             h(
@@ -84,7 +84,7 @@ let O = a().defaultRules.link,
                                                 },
                                                 g.default.getCampaignParams(i)
                                             )
-                                        );
+                                        ));
                                 }),
                     (r = h({}, O.parse(e, t, n))),
                     (l = l = { callToAction: o }),

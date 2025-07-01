@@ -18,7 +18,7 @@ var n = r(73800),
         });
         return n.createElement('div', { style: t.picker });
     };
-(l.propTypes = {
+((l.propTypes = {
     hsl: i().shape({
         h: i().number,
         s: i().number,
@@ -33,5 +33,5 @@ var n = r(73800),
             l: 0.2,
             s: 0.5
         }
-    });
+    }));
 let s = l;

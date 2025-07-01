@@ -1,4 +1,4 @@
-n.d(t, { N: () => C }), n(388685);
+(n.d(t, { N: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -48,7 +48,7 @@ let _ = (e) => {
             content: g.intl.string(g.t.qIZICA),
             buttonCTA: g.intl.string(g.t.hvVgAQ),
             onClick: () => {
-                (0, s.Z)(p.Z.getArticleURL(f.BhN.GUILD_LEADERBOARD)), n(m.L.USER_DISMISS);
+                ((0, s.Z)(p.Z.getArticleURL(f.BhN.GUILD_LEADERBOARD)), n(m.L.USER_DISMISS));
             },
             markAsDismissed: n,
             caretPosition: u.DF.RIGHT_TOP,

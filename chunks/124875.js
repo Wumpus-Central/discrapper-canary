@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'atelier lakeside',
         author: 'bram de haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/)',
@@ -19,4 +19,4 @@
         base0E: '#5d5db1',
         base0F: '#b72dd2'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

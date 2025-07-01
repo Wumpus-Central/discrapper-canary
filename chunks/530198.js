@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(953529);
+(n.d(t, { Z: () => P }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,7 +18,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,8 +34,8 @@ function b(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -44,12 +44,12 @@ function j(e) {
     let i,
         { theme: l, platform: a, integration: m, onRemove: g, locked: p } = e;
     if ((null == m ? void 0 : m.application) != null)
-        o()(null != m.application.bot, 'bot is null'),
+        (o()(null != m.application.bot, 'bot is null'),
             (i = (0, r.jsx)(u.Z, {
                 size: d.EFr.SIZE_24,
                 user: m.application.bot,
                 className: x.verifiedIcon
-            }));
+            })));
     else if (null != a) {
         let e = (0, c.ap)(l) ? a.icon.lightSVG : a.icon.darkSVG;
         i = (0, r.jsx)('img', {
@@ -135,7 +135,7 @@ function _(e) {
                         onChange: (e) => {
                             var t, n;
                             let r = null;
-                            e &&
+                            (e &&
                                 (r = {
                                     connectionType: null != (t = null == a ? void 0 : a.type) ? t : f.Kt,
                                     applicationId: o,
@@ -143,7 +143,7 @@ function _(e) {
                                     operator: f.iO.EQUAL,
                                     value: '1'
                                 }),
-                                c(r, null != (n = null == s ? void 0 : s.index) ? n : -1);
+                                c(r, null != (n = null == s ? void 0 : s.index) ? n : -1));
                         },
                         disabled: u
                     })
@@ -161,7 +161,7 @@ function v(e) {
         [v, O] = (function (e, t) {
             let n = null != t ? t : f.iO.GREATER_THAN,
                 r = Math.round(Number(null != e ? e : 0));
-            return n === f.iO.GREATER_THAN ? (r = Math.max(1, r + 1)) : n === f.iO.LESS_THAN && (r = Math.max(0, r - 1)), [r.toString(), n];
+            return (n === f.iO.GREATER_THAN ? (r = Math.max(1, r + 1)) : n === f.iO.LESS_THAN && (r = Math.max(0, r - 1)), [r.toString(), n]);
         })(null == c || null == (t = c.configuration) ? void 0 : t.value, b),
         [C, y] = i.useState(v),
         N =
@@ -218,7 +218,7 @@ function v(e) {
                             let [t, n] = (function (e, t) {
                                 let n = null != t ? t : f.iO.GREATER_THAN,
                                     r = Math.round(Number(null != e ? e : 0));
-                                return n === f.iO.GREATER_THAN ? (r = Math.max(0, r - 1)) : n === f.iO.LESS_THAN && (r = Math.max(1, r + 1)), [r.toString(), n];
+                                return (n === f.iO.GREATER_THAN ? (r = Math.max(0, r - 1)) : n === f.iO.LESS_THAN && (r = Math.max(1, r + 1)), [r.toString(), n]);
                             })(e, b);
                             if ('' !== e) {
                                 var r;
@@ -244,7 +244,7 @@ function v(e) {
                         onChange: (e) => {
                             var t, n;
                             let r = null;
-                            e &&
+                            (e &&
                                 (r = {
                                     connectionType: null != (t = null == u ? void 0 : u.type) ? t : f.Kt,
                                     applicationId: m,
@@ -252,7 +252,7 @@ function v(e) {
                                     operator: O,
                                     value: C
                                 }),
-                                g(r, null != (n = null == c ? void 0 : c.index) ? n : -1);
+                                g(r, null != (n = null == c ? void 0 : c.index) ? n : -1));
                         },
                         disabled: p
                     })

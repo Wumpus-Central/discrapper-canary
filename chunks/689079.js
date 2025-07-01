@@ -29,7 +29,7 @@ let a = 'True',
         }
     ];
 var l = (function (e) {
-    return (e.BUILT_IN = '-1'), (e.FRECENCY = '-2'), e;
+    return ((e.BUILT_IN = '-1'), (e.FRECENCY = '-2'), e);
 })({});
 let c = 10,
     u = 5,
@@ -59,4 +59,4 @@ function m(e) {
             return i.intl.string(i.t.EkDo1t);
     }
 }
-Object.freeze([]), Object.freeze([]);
+(Object.freeze([]), Object.freeze([]));

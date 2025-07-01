@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => _,
     c7: () => f
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(399606),
     a = n(634894),
@@ -27,11 +27,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -39,14 +39,14 @@ function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = 'useFetchPurchases';
-    (0, a.j)({
+    ((0, a.j)({
         location: n + ' auto on',
         autoTrackExposure: !0
     }),
         (0, a.j)({
             location: n + ' auto off',
             autoTrackExposure: !1
-        });
+        }));
     let c = (0, l.hv)('useFetchPurchases'),
         [u, d, f, _, p, h] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.isClaiming, s.Z.fetchError, s.Z.claimError, s.Z.purchases, s.Z.hasPreviouslyFetched]),
         m = (0, r.useRef)(s.Z.hasPreviouslyFetched);
@@ -78,14 +78,14 @@ function f() {
 function _(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         r = 'useFetchCollectiblesCategoriesAndPurchases';
-    (0, a.j)({
+    ((0, a.j)({
         location: r + ' auto on',
         autoTrackExposure: !0
     }),
         (0, a.j)({
             location: r + ' auto off',
             autoTrackExposure: !1
-        });
+        }));
     let {
             isFetching: i,
             categories: o,

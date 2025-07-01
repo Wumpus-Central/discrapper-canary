@@ -1,4 +1,4 @@
-n.r(e),
+(n.r(e),
     n.d(e, {
         INVITE_OPTIONS_100_TIMES: () => a,
         INVITE_OPTIONS_10_TIMES: () => u,
@@ -17,7 +17,7 @@ n.r(e),
         INVITE_OPTIONS_UNLIMITED: () => r,
         MAX_AGE_OPTIONS: () => d,
         MAX_USES_OPTIONS: () => s
-    });
+    }));
 var I = n(388032);
 function i(t, e) {
     return {

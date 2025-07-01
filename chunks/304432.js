@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     F: () => u,
     W: () => c
 }),
     n(642613),
-    n(388685);
+    n(388685));
 var i,
     r = n(73800),
     s = n(442837),
@@ -51,13 +51,13 @@ function u() {
         sortOrder: n,
         searchQuery: e,
         setSortOrder: (e) => {
-            x(d[e](m, g)), i(e);
+            (x(d[e](m, g)), i(e));
         },
         setSearchQuery: t,
         onToggleActivityRestrictedGuild: (e) => {
             let { checked: t, guildId: n } = e,
                 i = new Set(p);
-            t ? i.delete(n) : i.add(n), f([...i]);
+            (t ? i.delete(n) : i.add(n), f([...i]));
         },
         isActivityRestricted: (e) => p.includes(e),
         hasActivityRestrictedGuilds: b,

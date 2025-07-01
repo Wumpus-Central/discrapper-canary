@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(918701),
     b = n(667105),
     j = n(585857),
-    _ = n(795057),
-    v = n(388032),
+    v = n(795057),
+    _ = n(388032),
     y = n(22559);
 function C(e) {
     return (0, r.jsx)(c.Text, {
@@ -33,7 +33,7 @@ function O(e) {
         l = (0, b.k3)(t.id, x.jn.QUEST_BAR_V2, x.jn.QUEST_BAR_V2),
         u = (0, b.g2)({ useReducedMotion: n }),
         j = (0, p.O5)(),
-        _ = (0, m.aM)(),
+        v = (0, m.aM)(),
         {
             errorHints: O,
             startingConsoleQuest: E,
@@ -41,13 +41,13 @@ function O(e) {
         } = (0, g.GI)({
             questId: t.id,
             beforeRequest: () => {
-                j({
+                (j({
                     questId: t.id,
                     questContent: x.jn.QUEST_BAR_V2,
                     questContentCTA: p.jZ.DEFIBRILLATOR,
                     sourceQuestContent: x.jn.QUEST_BAR_V2
                 }),
-                    u.startAnimation();
+                    u.startAnimation());
             },
             afterRequest: u.stopAnimation
         }),
@@ -55,7 +55,7 @@ function O(e) {
             let e = O.length > 0,
                 n = t.config.messages.gameTitle;
             return {
-                header: e ? v.intl.formatToPlainString(v.t['28Ql29'], { gameTitle: n }) : v.intl.formatToPlainString(v.t.gX0Qc3, { gameTitle: n }),
+                header: e ? _.intl.formatToPlainString(_.t['28Ql29'], { gameTitle: n }) : _.intl.formatToPlainString(_.t.gX0Qc3, { gameTitle: n }),
                 renderBody: e
                     ? () =>
                           (0, r.jsx)(r.Fragment, {
@@ -67,7 +67,7 @@ function O(e) {
                                       return (0, r.jsx)(
                                           C,
                                           {
-                                              children: v.intl.format(o, {
+                                              children: _.intl.format(o, {
                                                   account_name: null == s ? void 0 : s.name,
                                                   onClick: () => {
                                                       (0, h.fY)(
@@ -78,7 +78,7 @@ function O(e) {
                                                           {
                                                               content: x.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
-                                                              impressionId: _,
+                                                              impressionId: v,
                                                               sourceQuestContent: x.jn.QUEST_BAR_V2
                                                           }
                                                       );
@@ -96,10 +96,10 @@ function O(e) {
                               className: y.microphoneUnitBodyText,
                               color: 'text-muted',
                               variant: 'text-xxs/normal',
-                              children: v.intl.format(v.t.GXqvCw, { gameTitle: n })
+                              children: _.intl.format(_.t.GXqvCw, { gameTitle: n })
                           })
             };
-        }, [O, t, o, _]);
+        }, [O, t, o, v]);
     return (0, r.jsxs)('div', {
         className: y.microphoneUnit,
         children: [
@@ -158,7 +158,7 @@ let E = function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -166,7 +166,7 @@ let E = function (e) {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -174,8 +174,8 @@ let E = function (e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({}, a)),
@@ -202,11 +202,11 @@ let E = function (e) {
                         isComplete: s || o || c
                     },
                     {
-                        renderContent: () => (0, r.jsx)(_.y3, { children: v.intl.formatToPlainString(v.t['+8JB6e'], { gameTitle: l }) }),
+                        renderContent: () => (0, r.jsx)(v.y3, { children: _.intl.formatToPlainString(_.t['+8JB6e'], { gameTitle: l }) }),
                         isComplete: o || c
                     },
                     {
-                        renderContent: () => (0, r.jsx)(_.y3, { children: v.intl.formatToPlainString(v.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
+                        renderContent: () => (0, r.jsx)(v.y3, { children: _.intl.formatToPlainString(_.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
                         isComplete: c
                     }
                 ],
@@ -215,8 +215,8 @@ let E = function (e) {
                 isQuestComplete: c
             };
         }, [a, i.length, t, n.targetMinutes]);
-    return (0, r.jsx)(_.ZP, {
-        heading: v.intl.string(v.t.UPWlJi),
+    return (0, r.jsx)(v.ZP, {
+        heading: _.intl.string(_.t.UPWlJi),
         steps: c,
         children:
             d &&

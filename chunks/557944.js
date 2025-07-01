@@ -1,4 +1,4 @@
-n.d(t, { default: () => j }), n(35282), n(388685);
+(n.d(t, { default: () => j }), n(35282), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -41,7 +41,7 @@ function j(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function j(e) {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -57,8 +57,8 @@ function j(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({}, n);
@@ -78,12 +78,12 @@ function j(e) {
             [S, T]
         ),
         X = l.useCallback(() => {
-            t(M, []), j();
+            (t(M, []), j());
         }, [t, j, M]);
     l.useEffect(() => () => clearTimeout(O), [O]);
     let q = l.useCallback(
             (e) => {
-                z(e),
+                (z(e),
                     i &&
                         I((t) =>
                             (clearTimeout(t), 0 === e.length)
@@ -91,7 +91,7 @@ function j(e) {
                                 : setTimeout(() => {
                                       u.Z.requestMembers(n, e, 200, !1);
                                   }, 500)
-                        );
+                        ));
             },
             [n, i, z, I]
         ),

@@ -28,7 +28,7 @@ let u = function () {
                     }),
                     (0, i.jsx)(r.zx, {
                         onClick: () => {
-                            e(), t(), (0, l.xf)(), (0, a.uL)(d.Z5c.APP);
+                            (e(), t(), (0, l.xf)(), (0, a.uL)(d.Z5c.APP));
                         },
                         children: 'Reset Onboarding State'
                     }),

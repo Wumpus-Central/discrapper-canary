@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(953529), n(388685), n(539854);
+(n.d(t, { Z: () => F }), n(953529), n(388685), n(539854));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -49,7 +49,7 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,7 +57,7 @@ function L(e) {
             )),
             i.forEach(function (t) {
                 k(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -183,7 +183,7 @@ class V extends r.PureComponent {
         return e === A.kg4.SWITCH_TO_VOICE_CHANNEL ? (0, i.jsx)(y.Z, { keybind: this.props.keybind }) : void 0;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             k(this, 'handleActionChanged', (e) => {
                 m.Z.setKeybind(B(L({}, this.props.keybind), { action: e }));
             }),
@@ -196,7 +196,7 @@ class V extends r.PureComponent {
             k(this, 'handleEnableDisable', () => {
                 let { keybind: e } = this.props;
                 m.Z.setKeybind(B(L({}, this.props.keybind), { enabled: !e.enabled }));
-            });
+            }));
     }
 }
 class G extends r.PureComponent {
@@ -322,7 +322,7 @@ class G extends r.PureComponent {
                 [A.kg4.TOGGLE_VOICE_MODE]: R.intl.string(R.t.snm5YW),
                 [A.kg4.TOGGLE_STREAMER_MODE]: R.intl.string(R.t.YszLLy)
             };
-        return j.Z.getCurrentConfig({ location: 'UserSettingsKeybinds' }, { autoTrackExposure: !1 }).separateKeybind && (i[A.kg4.VAD_PRIORITY] = R.intl.string(R.t.rSe8IS)), (0, C.l)() && (i[A.kg4.TOGGLE_CAMERA] = R.intl.string(R.t.v1JBtL)), e && (i[A.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = R.intl.string(R.t.IoP5vb)), t && (0, I.isWindows)() && (i[A.kg4.TOGGLE_GO_LIVE_STREAMING] = R.intl.string(R.t.s4C239)), (0, I.isDesktop)() && ((i[A.kg4.NAVIGATE_BACK] = R.intl.string(R.t.nKDlEh)), (i[A.kg4.NAVIGATE_FORWARD] = R.intl.string(R.t.DK0FFh)), (i[A.kg4.SOUNDBOARD] = (0, I.isWindows)() ? R.intl.string(R.t['5wJefH']) : R.intl.string(R.t.gzjsSE)), (i[A.kg4.SOUNDBOARD_HOLD] = (0, I.isWindows)() ? R.intl.string(R.t.RRkZc3) : R.intl.string(R.t.laNlTk)), n && (i[A.kg4.SAVE_CLIP] = R.intl.string(R.t.z3Wbam))), i;
+        return (j.Z.getCurrentConfig({ location: 'UserSettingsKeybinds' }, { autoTrackExposure: !1 }).separateKeybind && (i[A.kg4.VAD_PRIORITY] = R.intl.string(R.t.rSe8IS)), (0, C.l)() && (i[A.kg4.TOGGLE_CAMERA] = R.intl.string(R.t.v1JBtL)), e && (i[A.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = R.intl.string(R.t.IoP5vb)), t && (0, I.isWindows)() && (i[A.kg4.TOGGLE_GO_LIVE_STREAMING] = R.intl.string(R.t.s4C239)), (0, I.isDesktop)() && ((i[A.kg4.NAVIGATE_BACK] = R.intl.string(R.t.nKDlEh)), (i[A.kg4.NAVIGATE_FORWARD] = R.intl.string(R.t.DK0FFh)), (i[A.kg4.SOUNDBOARD] = (0, I.isWindows)() ? R.intl.string(R.t['5wJefH']) : R.intl.string(R.t.gzjsSE)), (i[A.kg4.SOUNDBOARD_HOLD] = (0, I.isWindows)() ? R.intl.string(R.t.RRkZc3) : R.intl.string(R.t.laNlTk)), n && (i[A.kg4.SAVE_CLIP] = R.intl.string(R.t.z3Wbam))), i);
     }
     renderKeybinds(e) {
         return e.map((e) =>
@@ -484,10 +484,10 @@ class G extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             k(this, 'handleAddKeybind', () => {
                 m.Z.addKeybind();
-            });
+            }));
     }
 }
 function F() {

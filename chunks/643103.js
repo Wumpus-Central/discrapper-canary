@@ -1,4 +1,4 @@
-a.d(t, { p: () => N }), a(642613), a(388685);
+(a.d(t, { p: () => N }), a(642613), a(388685));
 var n = a(255367),
     r = a(73800),
     s = a(120356),
@@ -92,7 +92,7 @@ class N extends r.PureComponent {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'state', {
                 languages: d.Z.getLanguages().filter((e) => e.enabled),
                 current: d.Z.getLocaleInfo(),
@@ -114,6 +114,6 @@ class N extends r.PureComponent {
             _(this, 'toggle', () => {
                 let { isOpen: e } = this.state;
                 this.setState({ isOpen: !e });
-            });
+            }));
     }
 }

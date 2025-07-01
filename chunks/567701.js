@@ -32,10 +32,10 @@
         B = 'Sharp',
         L = 'Sony',
         R = 'Xiaomi',
-        F = 'Zebra',
-        N = 'Facebook',
-        P = 'Chromium OS',
-        z = 'Mac OS',
+        N = 'Zebra',
+        F = 'Facebook',
+        z = 'Chromium OS',
+        P = 'Mac OS',
         j = ' Browser',
         U = function (t, e) {
             var r = {};
@@ -53,13 +53,13 @@
             return t.toLowerCase();
         },
         V = function (t, e) {
-            if (typeof t === u) return (t = t.replace(/^\s\s*/, '')), typeof e === o ? t : t.substring(0, 500);
+            if (typeof t === u) return ((t = t.replace(/^\s\s*/, '')), typeof e === o ? t : t.substring(0, 500));
         },
         G = function (t, e) {
             for (var r, o, u, s, c, l, f = 0; f < e.length && !c; ) {
                 var p = e[f],
                     h = e[f + 1];
-                for (r = o = 0; r < p.length && !c && p[r]; ) if ((c = p[r++].exec(t))) for (u = 0; u < h.length; u++) (l = c[++o]), typeof (s = h[u]) === a && s.length > 0 ? (2 === s.length ? (typeof s[1] == i ? (this[s[0]] = s[1].call(this, l)) : (this[s[0]] = s[1])) : 3 === s.length ? (typeof s[1] !== i || (s[1].exec && s[1].test) ? (this[s[0]] = l ? l.replace(s[1], s[2]) : void 0) : (this[s[0]] = l ? s[1].call(this, l, s[2]) : void 0)) : 4 === s.length && (this[s[0]] = l ? s[3].call(this, l.replace(s[1], s[2])) : n)) : (this[s] = l || n);
+                for (r = o = 0; r < p.length && !c && p[r]; ) if ((c = p[r++].exec(t))) for (u = 0; u < h.length; u++) ((l = c[++o]), typeof (s = h[u]) === a && s.length > 0 ? (2 === s.length ? (typeof s[1] == i ? (this[s[0]] = s[1].call(this, l)) : (this[s[0]] = s[1])) : 3 === s.length ? (typeof s[1] !== i || (s[1].exec && s[1].test) ? (this[s[0]] = l ? l.replace(s[1], s[2]) : void 0) : (this[s[0]] = l ? s[1].call(this, l, s[2]) : void 0)) : 4 === s.length && (this[s[0]] = l ? s[3].call(this, l.replace(s[1], s[2])) : n)) : (this[s] = l || n));
                 f += 2;
             }
         },
@@ -154,7 +154,7 @@
                 [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
                 [h, l],
                 [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-                [[l, N], h],
+                [[l, F], h],
                 [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
                 [l, h],
                 [/\bgsa\/([\w\.]+) .*safari\//i],
@@ -384,9 +384,9 @@
                     [f, y]
                 ],
                 [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-                [c, [p, F], [f, v]],
+                [c, [p, N], [f, v]],
                 [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-                [c, [p, F], [f, y]],
+                [c, [p, N], [f, y]],
                 [/smart-tv.+(samsung)/i],
                 [p, [f, m]],
                 [/hbbtv.+maple;(\d+)/i],
@@ -443,13 +443,13 @@
                 [/droid.+; (glass) \d/i],
                 [c, [p, O], [f, _]],
                 [/droid.+; (wt63?0{2,3})\)/i],
-                [c, [p, F], [f, _]],
+                [c, [p, N], [f, _]],
                 [/droid.+; (glass) \d/i],
                 [c, [p, O], [f, _]],
                 [/(pico) (4|neo3(?: link|pro)?)/i],
                 [p, c, [f, _]],
                 [/; (quest( \d| pro)?)/i],
-                [c, [p, N], [f, _]],
+                [c, [p, F], [f, _]],
                 [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
                 [p, [f, b]],
                 [/(aeobc)\b/i],
@@ -483,7 +483,7 @@
                 ],
                 [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
                 [
-                    [l, z],
+                    [l, P],
                     [h, /_/g, '.']
                 ],
                 [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
@@ -503,7 +503,7 @@
                 [/crkey\/([\d\.]+)/i],
                 [h, [l, E + 'cast']],
                 [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
-                [[l, P], h],
+                [[l, z], h],
                 [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux) ?([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
                 [l, h],
                 [/(sunos) ?([\w\.\d]*)/i],
@@ -512,8 +512,8 @@
                 [l, h]
             ]
         },
-        Z = function (t, e) {
-            if ((typeof t === a && ((e = t), (t = n)), !(this instanceof Z))) return new Z(t, e).getResult();
+        $ = function (t, e) {
+            if ((typeof t === a && ((e = t), (t = n)), !(this instanceof $))) return new $(t, e).getResult();
             var g = typeof r !== o && r.navigator ? r.navigator : n,
                 m = t || (g && g.userAgent ? g.userAgent : ''),
                 _ = g && g.userAgentData ? g.userAgentData : n,
@@ -523,23 +523,23 @@
                 (this.getBrowser = function () {
                     var t,
                         e = {};
-                    return (e[l] = n), (e[h] = n), G.call(e, m, b.browser), (e[s] = typeof (t = e[h]) === u ? t.replace(/[^\d\.]/g, '').split('.')[0] : n), S && g && g.brave && typeof g.brave.isBrave == i && (e[l] = 'Brave'), e;
+                    return ((e[l] = n), (e[h] = n), G.call(e, m, b.browser), (e[s] = typeof (t = e[h]) === u ? t.replace(/[^\d\.]/g, '').split('.')[0] : n), S && g && g.brave && typeof g.brave.isBrave == i && (e[l] = 'Brave'), e);
                 }),
                 (this.getCPU = function () {
                     var t = {};
-                    return (t[d] = n), G.call(t, m, b.cpu), t;
+                    return ((t[d] = n), G.call(t, m, b.cpu), t);
                 }),
                 (this.getDevice = function () {
                     var t = {};
-                    return (t[p] = n), (t[c] = n), (t[f] = n), G.call(t, m, b.device), S && !t[f] && _ && _.mobile && (t[f] = y), S && 'Macintosh' == t[c] && g && typeof g.standalone !== o && g.maxTouchPoints && g.maxTouchPoints > 2 && ((t[c] = 'iPad'), (t[f] = v)), t;
+                    return ((t[p] = n), (t[c] = n), (t[f] = n), G.call(t, m, b.device), S && !t[f] && _ && _.mobile && (t[f] = y), S && 'Macintosh' == t[c] && g && typeof g.standalone !== o && g.maxTouchPoints && g.maxTouchPoints > 2 && ((t[c] = 'iPad'), (t[f] = v)), t);
                 }),
                 (this.getEngine = function () {
                     var t = {};
-                    return (t[l] = n), (t[h] = n), G.call(t, m, b.engine), t;
+                    return ((t[l] = n), (t[h] = n), G.call(t, m, b.engine), t);
                 }),
                 (this.getOS = function () {
                     var t = {};
-                    return (t[l] = n), (t[h] = n), G.call(t, m, b.os), S && !t[l] && _ && _.platform && 'Unknown' != _.platform && (t[l] = _.platform.replace(/chrome os/i, P).replace(/macos/i, z)), t;
+                    return ((t[l] = n), (t[h] = n), G.call(t, m, b.os), S && !t[l] && _ && _.platform && 'Unknown' != _.platform && (t[l] = _.platform.replace(/chrome os/i, z).replace(/macos/i, P)), t);
                 }),
                 (this.getResult = function () {
                     return {
@@ -555,35 +555,35 @@
                     return m;
                 }),
                 (this.setUA = function (t) {
-                    return (m = typeof t === u && t.length > 500 ? V(t, 500) : t), this;
+                    return ((m = typeof t === u && t.length > 500 ? V(t, 500) : t), this);
                 }),
                 this.setUA(m),
                 this
             );
         };
-    (Z.VERSION = '0.7.40'),
-        (Z.BROWSER = q([l, h, s])),
-        (Z.CPU = q([d])),
-        (Z.DEVICE = q([c, p, f, g, y, m, v, _, b])),
-        (Z.ENGINE = Z.OS = q([l, h])),
+    (($.VERSION = '0.7.40'),
+        ($.BROWSER = q([l, h, s])),
+        ($.CPU = q([d])),
+        ($.DEVICE = q([c, p, f, g, y, m, v, _, b])),
+        ($.ENGINE = $.OS = q([l, h])),
         typeof e !== o
-            ? (t.exports && (e = t.exports = Z), (e.UAParser = Z))
+            ? (t.exports && (e = t.exports = $), (e.UAParser = $))
             : typeof define === i && define.amd
               ? define(function () {
-                    return Z;
+                    return $;
                 })
-              : typeof r !== o && (r.UAParser = Z);
-    var $ = typeof r !== o && (r.jQuery || r.Zepto);
-    if ($ && !$.ua) {
-        var Q = new Z();
-        ($.ua = Q.getResult()),
-            ($.ua.get = function () {
+              : typeof r !== o && (r.UAParser = $));
+    var Z = typeof r !== o && (r.jQuery || r.Zepto);
+    if (Z && !Z.ua) {
+        var Q = new $();
+        ((Z.ua = Q.getResult()),
+            (Z.ua.get = function () {
                 return Q.getUA();
             }),
-            ($.ua.set = function (t) {
+            (Z.ua.set = function (t) {
                 Q.setUA(t);
                 var e = Q.getResult();
-                for (var r in e) $.ua[r] = e[r];
-            });
+                for (var r in e) Z.ua[r] = e[r];
+            }));
     }
 })('object' == typeof window ? window : this);

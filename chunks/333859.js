@@ -17,7 +17,7 @@ var r = n(442837),
     b = n(388032),
     _ = n(614467);
 let x = () => {
-        (0, m.XO)(m.wh.APP_ICON), (0, l.xf)();
+        ((0, m.XO)(m.wh.APP_ICON), (0, l.xf)());
     },
     E = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),

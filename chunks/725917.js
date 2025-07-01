@@ -29,7 +29,7 @@ function c(e, t) {
         try {
             for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
         } catch (e) {
-            (i = !0), (a = e);
+            ((i = !0), (a = e));
         } finally {
             try {
                 r || null == s.return || s.return();

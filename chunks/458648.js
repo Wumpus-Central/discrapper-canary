@@ -2,11 +2,11 @@ var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
         }
     }
     return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+        return (n && e(t.prototype, n), r && e(t, r), t);
     };
 })();
 function i(e, t) {
@@ -18,7 +18,7 @@ function a(e, t) {
 }
 function o(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
+    ((e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -26,7 +26,7 @@ function o(e, t) {
             configurable: !0
         }
     })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
 }
 var s = n(914747),
     l = n(703931),
@@ -40,16 +40,16 @@ function _(e) {
     function n(e) {
         'function' == typeof e.update ? t.add(e) : e.__getChildren().forEach(n);
     }
-    n(e),
+    (n(e),
         t.forEach(function (e) {
             return e.update();
-        });
+        }));
 }
 e.exports = (function (e) {
     function t(e) {
         i(this, t);
         var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (n._value = e), (n._offset = 0), (n._animation = null), (n._listeners = {}), n;
+        return ((n._value = e), (n._offset = 0), (n._animation = null), (n._listeners = {}), n);
     }
     return (
         o(t, e),
@@ -69,7 +69,7 @@ e.exports = (function (e) {
             {
                 key: 'setValue',
                 value: function (e) {
-                    this._animation && (this._animation.stop(), (this._animation = null)), this._updateValue(e);
+                    (this._animation && (this._animation.stop(), (this._animation = null)), this._updateValue(e));
                 }
             },
             {
@@ -81,14 +81,14 @@ e.exports = (function (e) {
             {
                 key: 'flattenOffset',
                 value: function () {
-                    (this._value += this._offset), (this._offset = 0);
+                    ((this._value += this._offset), (this._offset = 0));
                 }
             },
             {
                 key: 'addListener',
                 value: function (e) {
                     var t = d();
-                    return (this._listeners[t] = e), t;
+                    return ((this._listeners[t] = e), t);
                 }
             },
             {
@@ -106,7 +106,7 @@ e.exports = (function (e) {
             {
                 key: 'stopAnimation',
                 value: function (e) {
-                    this.stopTracking(), this._animation && this._animation.stop(), (this._animation = null), e && e(this.__getValue());
+                    (this.stopTracking(), this._animation && this._animation.stop(), (this._animation = null), e && e(this.__getValue()));
                 }
             },
             {
@@ -122,7 +122,7 @@ e.exports = (function (e) {
                         r = null;
                     e.__isInteraction && (r = l.current.createInteractionHandle());
                     var i = this._animation;
-                    this._animation && this._animation.stop(),
+                    (this._animation && this._animation.stop(),
                         (this._animation = e),
                         e.start(
                             this._value,
@@ -130,22 +130,22 @@ e.exports = (function (e) {
                                 n._updateValue(e);
                             },
                             function (e) {
-                                (n._animation = null), null !== r && l.current.clearInteractionHandle(r), t && t(e);
+                                ((n._animation = null), null !== r && l.current.clearInteractionHandle(r), t && t(e));
                             },
                             i
-                        );
+                        ));
                 }
             },
             {
                 key: 'stopTracking',
                 value: function () {
-                    this._tracking && this._tracking.__detach(), (this._tracking = null);
+                    (this._tracking && this._tracking.__detach(), (this._tracking = null));
                 }
             },
             {
                 key: 'track',
                 value: function (e) {
-                    this.stopTracking(), (this._tracking = e);
+                    (this.stopTracking(), (this._tracking = e));
                 }
             },
             {

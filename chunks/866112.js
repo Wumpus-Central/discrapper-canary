@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(539854);
+(n.d(t, { Z: () => f }), n(539854));
 var r,
     i = n(442837),
     l = n(570140),
@@ -20,7 +20,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -86,7 +86,7 @@ let f = new h(l.Z, {
         let { channelId: t, query: n, results: r } = e;
         d[t] = c(s({}, d[t]), { fetching: !1 });
         let i = [];
-        r.forEach((e) => {
+        (r.forEach((e) => {
             let t = (0, o.MQ)(e);
             i.push(t);
         }),
@@ -95,7 +95,7 @@ let f = new h(l.Z, {
                     results: (0, o.Th)(i),
                     lastSearchedAt: Date.now()
                 }
-            }));
+            })));
     },
     GUILD_DIRECTORY_SEARCH_FAILURE: function (e) {
         let { channelId: t } = e;

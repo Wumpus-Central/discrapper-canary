@@ -19,7 +19,7 @@ let n = 'collectibles shop product details modal',
                             for (var t = 1; t < arguments.length; t++) {
                                 var i = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(i);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(i).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(i, e).enumerable;
@@ -27,7 +27,7 @@ let n = 'collectibles shop product details modal',
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = i[t]),
+                                        ((r = i[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -35,8 +35,8 @@ let n = 'collectibles shop product details modal',
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({}, i)),

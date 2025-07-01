@@ -1,9 +1,9 @@
 function t() {}
 function n(e) {
-    (this._tree = e), (this._ancestors = []), (this._cursor = null);
+    ((this._tree = e), (this._ancestors = []), (this._cursor = null));
 }
-(t.prototype.clear = function () {
-    (this._root = null), (this.size = 0);
+((t.prototype.clear = function () {
+    ((this._root = null), (this.size = 0));
 }),
     (t.prototype.find = function (e) {
         for (var t = this._root; null !== t; ) {
@@ -16,19 +16,19 @@ function n(e) {
     (t.prototype.findIter = function (e) {
         for (var t = this._root, n = this.iterator(); null !== t; ) {
             var r = this._comparator(e, t.data);
-            if (0 === r) return (n._cursor = t), n;
-            n._ancestors.push(t), (t = t.get_child(r > 0));
+            if (0 === r) return ((n._cursor = t), n);
+            (n._ancestors.push(t), (t = t.get_child(r > 0)));
         }
         return null;
     }),
     (t.prototype.lowerBound = function (e) {
         for (var t = this._root, n = this.iterator(), r = this._comparator; null !== t; ) {
             var i = r(e, t.data);
-            if (0 === i) return (n._cursor = t), n;
-            n._ancestors.push(t), (t = t.get_child(i > 0));
+            if (0 === i) return ((n._cursor = t), n);
+            (n._ancestors.push(t), (t = t.get_child(i > 0)));
         }
-        for (var a = n._ancestors.length - 1; a >= 0; --a) if (0 > r(e, (t = n._ancestors[a]).data)) return (n._cursor = t), (n._ancestors.length = a), n;
-        return (n._ancestors.length = 0), n;
+        for (var a = n._ancestors.length - 1; a >= 0; --a) if (0 > r(e, (t = n._ancestors[a]).data)) return ((n._cursor = t), (n._ancestors.length = a), n);
+        return ((n._ancestors.length = 0), n);
     }),
     (t.prototype.upperBound = function (e) {
         for (var t = this.lowerBound(e), n = this._comparator; null !== t.data() && 0 === n(t.data(), e); ) t.next();
@@ -71,7 +71,7 @@ function n(e) {
                     break;
                 }
             while (this._cursor.right === e);
-        else this._ancestors.push(this._cursor), this._minNode(this._cursor.right);
+        else (this._ancestors.push(this._cursor), this._minNode(this._cursor.right));
         return null !== this._cursor ? this._cursor.data : null;
     }),
     (n.prototype.prev = function () {
@@ -87,15 +87,15 @@ function n(e) {
                     break;
                 }
             while (this._cursor.left === e);
-        else this._ancestors.push(this._cursor), this._maxNode(this._cursor.left);
+        else (this._ancestors.push(this._cursor), this._maxNode(this._cursor.left));
         return null !== this._cursor ? this._cursor.data : null;
     }),
     (n.prototype._minNode = function (e) {
-        for (; null !== e.left; ) this._ancestors.push(e), (e = e.left);
+        for (; null !== e.left; ) (this._ancestors.push(e), (e = e.left));
         this._cursor = e;
     }),
     (n.prototype._maxNode = function (e) {
-        for (; null !== e.right; ) this._ancestors.push(e), (e = e.right);
+        for (; null !== e.right; ) (this._ancestors.push(e), (e = e.right));
         this._cursor = e;
     }),
-    (e.exports = t);
+    (e.exports = t));

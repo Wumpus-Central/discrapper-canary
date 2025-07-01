@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     KH: () => a,
     TD: () => d,
     YM: () => h,
@@ -9,7 +9,7 @@ n.d(t, {
     xD: () => o,
     yW: () => m
 }),
-    n(35282);
+    n(35282));
 var i = n(544891),
     r = n(570140),
     s = n(120421),
@@ -65,12 +65,12 @@ function p(e) {
 async function h(e) {
     r.Z.dispatch({ type: 'CLICKER_GAME_REDEEM_PRIZE_START' });
     try {
-        await i.tn.post({
+        (await i.tn.post({
             url: l.ANM.HOLIDAY_REDEEM_PRIZE,
             body: { prize_hash: e.id.split('').reduce((e, t) => e + Number.parseInt(t), 0) },
             rejectWithError: !0
         }),
-            r.Z.dispatch({ type: 'CLICKER_GAME_REDEEM_PRIZE_SUCCESS' });
+            r.Z.dispatch({ type: 'CLICKER_GAME_REDEEM_PRIZE_SUCCESS' }));
     } catch (e) {
         r.Z.dispatch({ type: 'CLICKER_GAME_REDEEM_PRIZE_FAIL' });
     }

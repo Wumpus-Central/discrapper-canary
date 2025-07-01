@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(953529);
+(n.d(t, { Z: () => E }), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -26,7 +26,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -122,10 +122,10 @@ function E(e) {
                 g,
                 m(p({}, e), {
                     onComplete: () => {
-                        t(), a(u.L.USER_DISMISS);
+                        (t(), a(u.L.USER_DISMISS));
                     },
                     onCheckItOutClick: () => {
-                        n(), t(), a(u.L.TAKE_ACTION);
+                        (n(), t(), a(u.L.TAKE_ACTION));
                     },
                     config: o
                 })

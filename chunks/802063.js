@@ -14,12 +14,12 @@ function a(e) {
     r.useEffect(() => {
         c && null == d.current
             ? (d.current = setTimeout(() => {
-                  o(),
+                  (o(),
                       (0, s.lg)({
                           userId: n,
                           channelId: t,
                           nickname: a
-                      });
+                      }));
               }, 1000))
             : (clearTimeout(d.current), (d.current = null));
         let e = d.current;

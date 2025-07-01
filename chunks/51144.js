@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     EO: () => T,
     Fc: () => I,
     Ft: () => N,
@@ -8,7 +8,7 @@ n.d(t, {
     oY: () => g,
     u5: () => O
 }),
-    n(415506);
+    n(415506));
 var r = n(442837),
     i = n(246946),
     a = n(594174),
@@ -31,7 +31,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -64,14 +64,14 @@ function g(e) {
     if (null == e) return;
     let n = i.Z.hidePersonalInformation,
         r = m(e);
-    return n && r.toLocaleLowerCase() === (null == (t = e.username) ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = f(r)), r;
+    return (n && r.toLocaleLowerCase() === (null == (t = e.username) ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = f(r)), r);
 }
 function E(e) {
     var t;
     let n = (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation);
     if (null == e) return;
     let a = m(e);
-    return n && a.toLocaleLowerCase() === (null == (t = e.username) ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (a = f(a)), a;
+    return (n && a.toLocaleLowerCase() === (null == (t = e.username) ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (a = f(a)), a);
 }
 function b(e) {
     if (null != e)

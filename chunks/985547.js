@@ -5,7 +5,7 @@ var r = n(970661),
 function s(e, t, n) {
     var r = 'string' == typeof e ? s.__parse(e) : e;
     if (!(r && 'messageFormatPattern' === r.type)) throw TypeError('A message must be provided as a String or AST.');
-    (n = this._mergeFormats(s.formats, n)), i.defineProperty(this, '_locale', { value: this._resolveLocale(t) });
+    ((n = this._mergeFormats(s.formats, n)), i.defineProperty(this, '_locale', { value: this._resolveLocale(t) }));
     var a = this._findPluralRuleFunction(this._locale),
         o = this._compilePattern(r, t, n, a),
         l = this;
@@ -13,7 +13,7 @@ function s(e, t, n) {
         return l._format(o, e);
     };
 }
-(t.default = s),
+((t.default = s),
     i.defineProperty(s, 'formats', {
         enumerable: !0,
         value: {
@@ -108,7 +108,7 @@ function s(e, t, n) {
                 continue;
             }
             if (((o = a.id), !(t && r.hop.call(t, o)))) throw Error('A value must be provided for: ' + o);
-            (s = t[o]), a.options ? (l += this._format(a.getOption(s), t)) : (l += a.format(s));
+            ((s = t[o]), a.options ? (l += this._format(a.getOption(s), t)) : (l += a.format(s)));
         }
         return l;
     }),
@@ -120,7 +120,7 @@ function s(e, t, n) {
         return o;
     }),
     (s.prototype._resolveLocale = function (e) {
-        'string' == typeof e && (e = [e]), (e = (e || []).concat(s.defaultLocale));
+        ('string' == typeof e && (e = [e]), (e = (e || []).concat(s.defaultLocale)));
         var t,
             n,
             r,
@@ -133,4 +133,4 @@ function s(e, t, n) {
             }
         var o = e.pop();
         throw Error('No locale data has been added to IntlMessageFormat for: ' + e.join(', ') + ', or the default locale: ' + o);
-    });
+    }));

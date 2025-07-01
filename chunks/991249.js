@@ -13,7 +13,7 @@ function a(e, t) {
             checked: t,
             id: 'widget-layout-type',
             action: () => {
-                (0, c.zG)(e, { horizontal: !t }), (0, i.Zy)();
+                ((0, c.zG)(e, { horizontal: !t }), (0, i.Zy)());
             }
         },
         'widget-layout-type'

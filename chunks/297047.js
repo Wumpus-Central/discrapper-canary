@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => f,
     q: () => g
 }),
-    n(388685);
+    n(388685));
 var r = n(255367);
 n(73800);
 var l = n(442837),
@@ -18,11 +18,11 @@ var l = n(442837),
 function g(e, t) {
     let { id: n } = e,
         r = '@'.concat(d.ZP.getUserTag(e, { decoration: 'never' }));
-    u.S.dispatchToLastSubscribed(p.CkL.INSERT_TEXT, {
+    (u.S.dispatchToLastSubscribed(p.CkL.INSERT_TEXT, {
         plainText: r,
         rawText: '<@'.concat(n, '>')
     }),
-        null != t && i.Z.startTyping(t);
+        null != t && i.Z.startTyping(t));
 }
 function f(e, t, n) {
     let [i, u] = (0, l.Wu)(

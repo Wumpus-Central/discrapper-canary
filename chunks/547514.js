@@ -10,12 +10,12 @@ try {
                 i = !0;
             }
         };
-    (o[r] = function () {
+    ((o[r] = function () {
         return this;
     }),
         Array.from(o, function () {
             throw 2;
-        });
+        }));
 } catch (e) {}
 e.exports = function (e, t) {
     try {
@@ -26,14 +26,14 @@ e.exports = function (e, t) {
     var n = !1;
     try {
         var a = {};
-        (a[r] = function () {
+        ((a[r] = function () {
             return {
                 next: function () {
                     return { done: (n = !0) };
                 }
             };
         }),
-            e(a);
+            e(a));
     } catch (e) {}
     return n;
 };

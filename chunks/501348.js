@@ -1,4 +1,4 @@
-n.d(t, { Z: () => en }), n(388685);
+(n.d(t, { Z: () => en }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -56,7 +56,7 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -64,7 +64,7 @@ function H(e) {
             )),
             i.forEach(function (t) {
                 F(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -94,7 +94,7 @@ let Y = {
     K = (0, C.hQ)(),
     q = (0, C.hQ)(),
     X = '1337',
-    Q = (e) => {
+    J = (e) => {
         let t = 0;
         return [
             (0, S.e5)(
@@ -174,7 +174,7 @@ let Y = {
             )
         ];
     },
-    J = () =>
+    Q = () =>
         (0, i.jsxs)('div', {
             className: V.themeTitle,
             children: [
@@ -354,7 +354,7 @@ class $ extends r.Component {
                           children: U.intl.string(U.t.Ksh3io)
                       }),
                       (0, i.jsx)(u.xJW, {
-                          title: (0, i.jsx)(J, {}),
+                          title: (0, i.jsx)(Q, {}),
                           children: (0, i.jsx)(Z.i, {})
                       })
                   ]
@@ -528,9 +528,9 @@ class $ extends r.Component {
         (0, f.cq)(e);
     }
     constructor(...e) {
-        super(...e),
-            F(this, 'darkMessages', Q(L.BRd.DARK)),
-            F(this, 'lightMessages', Q(L.BRd.LIGHT)),
+        (super(...e),
+            F(this, 'darkMessages', J(L.BRd.DARK)),
+            F(this, 'lightMessages', J(L.BRd.LIGHT)),
             F(this, 'handleDisplayCompactAvatarsChanged', (e) => {
                 m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
@@ -539,12 +539,12 @@ class $ extends r.Component {
             }),
             F(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: t } = e;
-                D.jU.updateSetting(t === Y.COMPACT), (0, f.ZZ)();
+                (D.jU.updateSetting(t === Y.COMPACT), (0, f.ZZ)());
             }),
             F(this, 'handleUIDensityChange', (e) => {
                 let { value: t } = e;
                 t !== c.Pi.UNSET_UI_DENSITY && D.YC.updateSetting(t);
-            });
+            }));
     }
 }
 class ee extends $ {
@@ -704,12 +704,12 @@ function en() {
         l = D.hg.useSetting(),
         c = D.YC.useSetting(),
         d = E.M.useExperiment({ location: 'UserSettingsAppearance' }).enabled;
-    (0, p.ZP)(() => {
-        et(o.z.CLIENT_THEMES_SETTINGS_BADGE), et(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), et(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+    ((0, p.ZP)(() => {
+        (et(o.z.CLIENT_THEMES_SETTINGS_BADGE), et(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), et(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK));
     }),
         r.useEffect(() => {
             d && et(o.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE);
-        }, [d]);
+        }, [d]));
     let u = (0, a.cj)([P.Z, R.ZP, b.Z, y.default, x.Z], () => {
         var e, t;
         return {

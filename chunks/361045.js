@@ -48,7 +48,7 @@ function c(e) {
                         look: r.zxk.Looks.FILLED,
                         fullWidth: !0,
                         onClick: () => {
-                            t(l.L.TAKE_ACTION), c();
+                            (t(l.L.TAKE_ACTION), c());
                         },
                         children: a.intl.string(a.t['9WdoBw'])
                     })

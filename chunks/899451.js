@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'pop',
         author: 'chris kempson (http://chriskempson.com)',
@@ -19,4 +19,4 @@
         base0E: '#b31e8d',
         base0F: '#7a2d00'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

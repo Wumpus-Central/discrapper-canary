@@ -1,4 +1,4 @@
-n(539854),
+(n(539854),
     n(415506),
     !(function (e) {
         var t = Date.now ? Date.now() : +new Date(),
@@ -12,7 +12,7 @@ n(539854),
             o = function (e, t) {
                 for (var n, i = r.length; i--; ) (n = r[i]).entryType == e && (void 0 === t || n.name == t) && r.splice(i, 1);
             };
-        n.now ||
+        (n.now ||
             (n.now =
                 n.webkitNow ||
                 n.mozNow ||
@@ -30,7 +30,7 @@ n(539854),
                             startTime: n.now(),
                             duration: 0
                         };
-                        r.push(t), (i[e] = t);
+                        (r.push(t), (i[e] = t));
                     }),
             n.measure ||
                 (n.measure =
@@ -39,14 +39,14 @@ n(539854),
                         var o, s;
                         if (void 0 !== a && void 0 === i[a]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + a + "' does not exist.");
                         if (void 0 !== t && void 0 === i[t]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.");
-                        (o = i[t] ? i[t].startTime : 0),
+                        ((o = i[t] ? i[t].startTime : 0),
                             (s = i[a] ? i[a].startTime : n.now()),
                             r.push({
                                 name: e,
                                 entryType: 'measure',
                                 startTime: o,
                                 duration: s - o
-                            });
+                            }));
                     }),
             n.getEntriesByType ||
                 (n.getEntriesByType =
@@ -77,5 +77,5 @@ n(539854),
                 (define.amd || define.ajs) &&
                 define('performance', [], function () {
                     return n;
-                });
-    })(n.g);
+                }));
+    })(n.g));

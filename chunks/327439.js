@@ -1,7 +1,7 @@
 n.d(t, { T: () => I });
 var r = n(313694);
 function i(e, t, n) {
-    a(e, t), t.set(e, n);
+    (a(e, t), t.set(e, n));
 }
 function a(e, t) {
     if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
@@ -28,7 +28,7 @@ function l(e, t) {
 }
 function c(e, t, n) {
     var r = u(e, t, 'set');
-    return d(e, r, n), n;
+    return (d(e, r, n), n);
 }
 function u(e, t, n) {
     if (!t.has(e)) throw TypeError('attempted to ' + n + ' private field on non-instance');
@@ -98,7 +98,7 @@ class I {
             o(this, 'setup', () => {
                 if ('undefined' != typeof window) {
                     if (I.isSetUp) throw Error('Cannot have two MultiBackends at the same time.');
-                    (I.isSetUp = !0), s(this, E).call(this, window), s(this, p)[s(this, f)].instance.setup();
+                    ((I.isSetUp = !0), s(this, E).call(this, window), s(this, p)[s(this, f)].instance.setup());
                 }
             }),
             o(this, 'teardown', () => {
@@ -133,12 +133,12 @@ class I {
                     let t = s(this, f);
                     if ((s(this, h).some((t) => !!(t.id !== s(this, f) && t.transition && t.transition.check(e)) && (c(this, f, t.id), !0)), s(this, f) !== t)) {
                         var n;
-                        s(this, p)[t].instance.teardown(),
+                        (s(this, p)[t].instance.teardown(),
                             Object.keys(s(this, m)).forEach((e) => {
                                 let t = s(this, m)[e];
-                                t.unsubscribe(), (t.unsubscribe = s(this, O).call(this, t.func, ...t.args));
+                                (t.unsubscribe(), (t.unsubscribe = s(this, O).call(this, t.func, ...t.args)));
                             }),
-                            s(this, _).backendChanged(this);
+                            s(this, _).backendChanged(this));
                         let r = s(this, p)[s(this, f)];
                         if ((r.instance.setup(), r.skipDispatchOnTransition)) return;
                         let i = new e.constructor(e.type, e);
@@ -162,7 +162,7 @@ class I {
                             unsubscribe: a
                         }),
                         () => {
-                            s(this, m)[i].unsubscribe(), delete s(this, m)[i];
+                            (s(this, m)[i].unsubscribe(), delete s(this, m)[i]);
                         }
                     );
                 }
@@ -170,15 +170,15 @@ class I {
             !n || !n.backends || n.backends.length < 1)
         )
             throw Error("You must specify at least one Backend, if you are coming from 2.x.x (or don't understand this error)\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-2xx");
-        c(this, _, new r.J()),
+        (c(this, _, new r.J()),
             c(this, p, {}),
             c(this, h, []),
             n.backends.forEach((n) => {
                 let r = s(this, g).call(this, e, t, n);
-                (s(this, p)[r.id] = r), s(this, h).push(r);
+                ((s(this, p)[r.id] = r), s(this, h).push(r));
             }),
             c(this, f, s(this, h)[0].id),
-            c(this, m, {});
+            c(this, m, {}));
     }
 }
 o(I, 'isSetUp', !1);

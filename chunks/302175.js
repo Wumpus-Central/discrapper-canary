@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(953529);
+(n.d(t, { Z: () => j }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -44,7 +44,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -52,7 +52,7 @@ function D(e) {
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -60,11 +60,11 @@ function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -101,7 +101,7 @@ function k(e) {
                 });
         }, [t, l]),
         k = i.useCallback(() => {
-            a(), (0, T.Z)(t, f.Z.GUILD_POWERUPS_MARKETING, n.skuId);
+            (a(), (0, T.Z)(t, f.Z.GUILD_POWERUPS_MARKETING, n.skuId));
         }, [t, n.skuId, a]),
         M = {
             tension: 400,

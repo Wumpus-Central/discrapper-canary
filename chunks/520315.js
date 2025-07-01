@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(607070);
@@ -29,7 +29,7 @@ function o(e) {
             var e, r, i;
             if (null == d) return;
             let { height: a } = d.getBoundingClientRect();
-            !n && (null == h.current || a < h.current) && (h.current = a), n && (null == m.current || a > m.current) && (m.current = a);
+            (!n && (null == h.current || a < h.current) && (h.current = a), n && (null == m.current || a > m.current) && (m.current = a));
             let o = null != (e = b.current) ? e : h.current,
                 s = null != (r = y.current) ? r : m.current,
                 l = g.current !== t;
@@ -38,11 +38,11 @@ function o(e) {
                 u = n ? o : c,
                 f = n ? c : o;
             if (u === f) return;
-            I(!0), (d.style.height = ''.concat(u, 'px')), (d.style.transition = '');
+            (I(!0), (d.style.height = ''.concat(u, 'px')), (d.style.transition = ''));
             let _ = null;
             return (
                 (_ = requestAnimationFrame(() => {
-                    (_ = null), (d.style.height = ''.concat(f, 'px')), (d.style.transition = 'height '.concat(E.current, 'ms ease-in-out'));
+                    ((_ = null), (d.style.height = ''.concat(f, 'px')), (d.style.transition = 'height '.concat(E.current, 'ms ease-in-out')));
                 })),
                 () => (null != _ ? cancelAnimationFrame(_) : void 0)
             );

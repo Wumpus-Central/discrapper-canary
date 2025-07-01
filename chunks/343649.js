@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     P: () => el,
     default: () => ea
 }),
     n(388685),
-    n(49124);
+    n(49124));
 var l,
     r = n(255367),
     i = n(73800),
@@ -60,7 +60,7 @@ function et(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -68,7 +68,7 @@ function et(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -76,8 +76,8 @@ function et(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -177,7 +177,7 @@ function ec(e) {
         eJ = i.useMemo(() => Date.now(), [eq]),
         eQ = i.useCallback(
             (e, t) => {
-                e$(e), ek(null);
+                (e$(e), ek(null));
                 let n = Date.now();
                 F.default.track(
                     q.rMx.PAYMENT_FLOW_STEP,
@@ -204,7 +204,7 @@ function ec(e) {
             setPurchaseError: ek
         },
         e8 = i.useRef(e0);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         e8.current = e0;
     }),
         i.useEffect(() => {
@@ -213,9 +213,9 @@ function ec(e) {
                 if (!0 === eW)
                     try {
                         if (null == w.Z.redirectedPaymentId) return;
-                        await (0, P.OP)(w.Z.redirectedPaymentId), l(M.h8.CONFIRM), e7(L.A.COMPLETED), null != n && (await eo(n, 0 !== eP)), null == r || r();
+                        (await (0, P.OP)(w.Z.redirectedPaymentId), l(M.h8.CONFIRM), e7(L.A.COMPLETED), null != n && (await eo(n, 0 !== eP)), null == r || r());
                     } catch (n) {
-                        e7(L.A.FAIL),
+                        (e7(L.A.FAIL),
                             o(n),
                             F.default.track(
                                 q.rMx.PAYMENT_FLOW_FAILED,
@@ -225,14 +225,14 @@ function ec(e) {
                                     payment_source_id: i,
                                     duration_ms: Date.now() - t
                                 })
-                            );
+                            ));
                     } finally {
-                        s(!1), (0, P.K2)();
+                        (s(!1), (0, P.K2)());
                     }
             })();
         }, [eW, eP]),
         (0, S.ZP)(() => {
-            z.ZP.hasFetchedSubscriptions() || (0, P.jg)(),
+            (z.ZP.hasFetchedSubscriptions() || (0, P.jg)(),
                 (0, b.U)(
                     en(et({}, eK), {
                         guild_id: ec,
@@ -244,8 +244,8 @@ function ec(e) {
                     F.default.track(q.rMx.PREMIUM_GUILD_PENDING_MODAL, {
                         location: m,
                         guild_id: ec
-                    });
-        });
+                    }));
+        }));
     let [e3, e1] = i.useState(ei),
         [e2, e7] = i.useState(L.A.WAITING),
         [e4, e6] = i.useState(!0),
@@ -253,11 +253,11 @@ function ec(e) {
             l(e2 === L.A.COMPLETED);
         },
         e9 = null != em && em.isPurchasedExternally;
-    i.useEffect(() => {
-        eC !== C.wr.PENDING && eq !== M.h8.CONFIRM && null != ef && (e3 !== ei && e1(ei), ei.includes(eq) || eq === M.h8.PREMIUM_UPSELL || eQ(M.h8.REVIEW)), eq === M.h8.ADD_PAYMENT_STEPS && e3 !== es && e1(es), e9 && eq !== M.h8.PLAN_SELECT && e$(M.h8.PLAN_SELECT);
+    (i.useEffect(() => {
+        (eC !== C.wr.PENDING && eq !== M.h8.CONFIRM && null != ef && (e3 !== ei && e1(ei), ei.includes(eq) || eq === M.h8.PREMIUM_UPSELL || eQ(M.h8.REVIEW)), eq === M.h8.ADD_PAYMENT_STEPS && e3 !== es && e1(es), e9 && eq !== M.h8.PLAN_SELECT && e$(M.h8.PLAN_SELECT));
     }, [eq, eQ, e9, eC, em, ef, e3]),
         (0, C.bp)(eq, eC, eQ, e7),
-        (0, M.dZ)(eq, e2, e7);
+        (0, M.dZ)(eq, e2, e7));
     let te = i.useRef(null),
         [tt, tn] = (0, y.Z)(!1, 500),
         [tl, tr] = i.useState(null),
@@ -313,7 +313,7 @@ function ec(e) {
                 })
             });
         else if (eq === M.h8.PREMIUM_UPSELL) {
-            a()(null != eg, 'Missing nextPremiumSubscriptionPlan'), a()(tl, 'Currency not defined');
+            (a()(null != eg, 'Missing nextPremiumSubscriptionPlan'), a()(tl, 'Currency not defined'));
             let e =
                 null != eT
                     ? {
@@ -343,7 +343,7 @@ function ec(e) {
                     : { currency: tl };
             switch (eq) {
                 case M.h8.PLAN_SELECT:
-                    a()(null != ec, 'Missing guildId'),
+                    (a()(null != ec, 'Missing guildId'),
                         a()(null != eg, 'Missing nextPremiumSubscriptionPlan'),
                         (e = (0, r.jsx)(X.CP, {
                             premiumSubscriptionPlan: eg,
@@ -357,7 +357,7 @@ function ec(e) {
                                     window.location.href = 'discord://app/settings/nitro';
                                     return;
                                 }
-                                e5(), null != s && s(), (0, T.z)();
+                                (e5(), null != s && s(), (0, T.z)());
                             },
                             guildId: ec,
                             priceOptions: o
@@ -388,7 +388,7 @@ function ec(e) {
                                 eQ(null != ef || ew ? M.h8.REVIEW : M.h8.ADD_PAYMENT_STEPS);
                             },
                             children: Q.intl.string(Q.t['3PatS0'])
-                        }));
+                        })));
                     break;
                 case M.h8.ADD_PAYMENT_STEPS:
                     break;
@@ -396,7 +396,7 @@ function ec(e) {
                     e = (0, r.jsx)(h.F, { className: ee.__invalid_body });
                     break;
                 case M.h8.REVIEW:
-                    a()(null != eg, 'Missing nextPremiumSubscriptionPlan'),
+                    (a()(null != eg, 'Missing nextPremiumSubscriptionPlan'),
                         (e = (0, r.jsx)(X.Gq, {
                             paymentSources: eL,
                             priceOptions: o,
@@ -406,7 +406,7 @@ function ec(e) {
                             newAdditionalPlans: eB,
                             onPaymentSourceChange: (e) => eA(null != e ? e.id : null),
                             onPaymentSourceAdd: () => {
-                                eQ(M.h8.ADD_PAYMENT_STEPS), eA(null);
+                                (eQ(M.h8.ADD_PAYMENT_STEPS), eA(null));
                             },
                             onPurchaseTermsChange: eF,
                             legalTermsNodeRef: te,
@@ -423,7 +423,7 @@ function ec(e) {
                                       let e = (0, k.m)(eL, eT);
                                       ek(null);
                                       try {
-                                          e7(L.A.PURCHASING), ej(!0), a()(null != eT, 'Missing paymentSourceId'), a()(null != eS, 'Missing invoicePreview');
+                                          (e7(L.A.PURCHASING), ej(!0), a()(null != eT, 'Missing paymentSourceId'), a()(null != eS, 'Missing invoicePreview'));
                                           let t = {
                                                   amount: eS.total,
                                                   currency: eS.currency
@@ -453,13 +453,13 @@ function ec(e) {
                                               if (l.redirectConfirmation) return void tc(null != l.redirectURL);
                                           } else {
                                               let l = { items: (0, Y.MY)(em, eB) };
-                                              (l.currency = em.currency), null == l.currency && (l.currency = o.currency), (l.paymentSource = null != ef ? eL[ef] : void 0), null == l.paymentSource && (a()(null != e, 'Missing paymentSource'), (l.paymentSource = e), (l.currency = o.currency));
+                                              ((l.currency = em.currency), null == l.currency && (l.currency = o.currency), (l.paymentSource = null != ef ? eL[ef] : void 0), null == l.paymentSource && (a()(null != e, 'Missing paymentSource'), (l.paymentSource = e), (l.currency = o.currency)));
                                               let r = await (0, P.Mg)(em, l, t, n, eX);
                                               if (r.redirectConfirmation) return void tc(null != r.redirectURL);
                                           }
-                                          0 === eP && eQ(M.h8.CONFIRM), e7(L.A.COMPLETED), null != ec && (await eo(ec, 0 !== eP)), 0 !== eP && e5(), null == ea || ea();
+                                          (0 === eP && eQ(M.h8.CONFIRM), e7(L.A.COMPLETED), null != ec && (await eo(ec, 0 !== eP)), 0 !== eP && e5(), null == ea || ea());
                                       } catch (t) {
-                                          e7(L.A.FAIL),
+                                          (e7(L.A.FAIL),
                                               ek(t),
                                               F.default.track(
                                                   q.rMx.PAYMENT_FLOW_FAILED,
@@ -469,7 +469,7 @@ function ec(e) {
                                                       payment_source_id: eT,
                                                       duration_ms: Date.now() - eV
                                                   })
-                                              );
+                                              ));
                                       } finally {
                                           to || ej(!1);
                                       }
@@ -490,7 +490,7 @@ function ec(e) {
                                               children: Q.intl.string(Q.t.eUEeCg)
                                           })
                                       )
-                              }));
+                              })));
                     break;
                 case M.h8.CONFIRM:
                     let c = Z.Z.getGuild(ec),

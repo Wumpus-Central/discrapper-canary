@@ -1,8 +1,8 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         closeUserProfileModal: () => g,
         openUserProfileModal: () => m
-    });
+    }));
 var r = n(259443),
     i = n(481060),
     a = n(570140),
@@ -26,24 +26,24 @@ let _ = (0, i.pxk)(i.EFr.SIZE_120),
             }
     };
 async function m(e) {
-    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: p, subsection: m, showGuildProfile: g, hideRestrictedProfile: E, sourceAnalyticsLocations: b, appContext: y, customStatusPrompt: O = null } = e,
-        v = c.default.getUser(t);
+    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: p, subsection: m, showGuildProfile: g, hideRestrictedProfile: E, sourceAnalyticsLocations: b, appContext: y, customStatusPrompt: O = null, disableActionsForPreview: v = !1 } = e,
+        I = c.default.getUser(t);
     h(t);
-    let { withMutualFriendsCount: I } = (0, d.R)({ location: 'openUserProfileModal' });
-    null == v
+    let { withMutualFriendsCount: T } = (0, d.R)({ location: 'openUserProfileModal' });
+    (null == I
         ? await (0, o.In)(t, {
               type: 'modal',
               guildId: g && null != n ? n : void 0,
-              withMutualFriendsCount: I,
-              withMutualFriends: !I,
+              withMutualFriendsCount: T,
+              withMutualFriends: !T,
               withMutualGuilds: !0,
               joinRequestId: u
           })
-        : (0, f.Z)(v.id, v.getAvatarURL(void 0, _), {
+        : (0, f.Z)(I.id, I.getAvatarURL(void 0, _), {
               type: 'modal',
               guildId: g && null != n ? n : void 0,
-              withMutualFriendsCount: !v.bot && I,
-              withMutualFriends: !v.bot && !I,
+              withMutualFriendsCount: !I.bot && T,
+              withMutualFriends: !I.bot && !T,
               withMutualGuilds: !0,
               joinRequestId: u
           }),
@@ -62,8 +62,9 @@ async function m(e) {
             showGuildProfile: g,
             hideRestrictedProfile: E,
             sourceAnalyticsLocations: b,
-            appContext: y
-        });
+            appContext: y,
+            disableActionsForPreview: v
+        }));
 }
 function g() {
     a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });

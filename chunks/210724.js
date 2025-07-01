@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     P: () => B,
     Z: () => I
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -20,8 +20,8 @@ var r = n(255367),
     h = n(918701),
     b = n(192023),
     j = n(977156),
-    _ = n(5881),
-    v = n(602667),
+    v = n(5881),
+    _ = n(602667),
     y = n(78826),
     C = n(667105),
     O = n(341907),
@@ -35,7 +35,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -51,8 +51,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -89,7 +89,7 @@ function k(e) {
 function B(e) {
     var t, n;
     let { quest: o } = e,
-        f = (0, _.T)({
+        f = (0, v.T)({
             quest: o,
             location: P.dr.QUESTS_BAR
         }),
@@ -120,23 +120,23 @@ function B(e) {
         [ei, el] = s.useState(Y.preEnrollmentExpandedHeight),
         ec = s.useRef(null),
         eu = s.useCallback((e) => {
-            es(!1), en(e);
+            (es(!1), en(e));
         }, []),
         ed = s.useCallback(() => {
             var e, t;
             el((null != (t = null == (e = ec.current) ? void 0 : e.offsetHeight) ? t : 84) + 2 * Y.paddingVertical);
         }, [Y.paddingVertical]),
         ep = s.useCallback(() => {
-            ed(), eu(!0);
+            (ed(), eu(!0));
         }, [ed, eu]),
         em = s.useCallback(() => {
             ee(!0);
         }, []),
         ef = s.useCallback(() => {
-            ee(!1), J.current || U || eu(!1);
+            (ee(!1), J.current || U || eu(!1));
         }, [U, eu]),
         eg = s.useCallback(() => {
-            ee(!1), U || eu(!1), (J.current = !1);
+            (ee(!1), U || eu(!1), (J.current = !1));
         }, [U, eu]),
         ex = s.useCallback(
             function () {
@@ -151,11 +151,11 @@ function B(e) {
             ex();
         }, [ex]),
         eb = s.useCallback(() => {
-            window.clearTimeout(G.current), Y.canCollapseOnBlur && !$ && (J.current || eu(!1));
+            (window.clearTimeout(G.current), Y.canCollapseOnBlur && !$ && (J.current || eu(!1)));
         }, [$, Y, eu]),
         ej = s.useCallback(() => {
             var e;
-            (0, m.dA)({
+            ((0, m.dA)({
                 questId: o.id,
                 event: T.rMx.QUEST_HOVER,
                 properties: R(A({}, (0, m.mH)(x.jn.QUEST_BAR)), { impression_id: null == (e = L.current) ? void 0 : e.getId() }),
@@ -163,20 +163,20 @@ function B(e) {
                 sourceQuestContent: Y.trackingCtx.content
             }),
                 (J.current = !0),
-                ex({ withDelay: !0 });
+                ex({ withDelay: !0 }));
         }, [ex, o, Y.trackingCtx.content]),
-        e_ = s.useCallback(() => {
+        ev = s.useCallback(() => {
             var e;
-            (0, m.dA)({
+            ((0, m.dA)({
                 questId: o.id,
                 event: T.rMx.QUEST_HOVER_OFF,
                 properties: R(A({}, (0, m.mH)(x.jn.QUEST_BAR)), { impression_id: null == (e = L.current) ? void 0 : e.getId() }),
                 sourceQuestContent: Y.trackingCtx.content
             }),
                 (J.current = !1),
-                eb();
+                eb());
         }, [eb, o, Y.trackingCtx.content]);
-    s.useLayoutEffect(() => {
+    (s.useLayoutEffect(() => {
         U && Y.shouldExpandOnQuestComplete && ep();
     }, [ep, U, Y.shouldExpandOnQuestComplete]),
         s.useLayoutEffect(() => {
@@ -186,12 +186,12 @@ function B(e) {
             U || !W || Z || J.current || eu(!1);
         }, [W, U, Z, eu]),
         s.useLayoutEffect(() => {
-            X !== K.current && ea(!1), (K.current = X);
-        }, [X]);
-    let ev = W ? P.XZ : P.R4,
+            (X !== K.current && ea(!1), (K.current = X));
+        }, [X]));
+    let e_ = W ? P.XZ : P.R4,
         [{ expansionSpring: ey }, eC] = (0, c.q_F)(() => ({
             from: { expansionSpring: 0 },
-            config: ev,
+            config: e_,
             onRest: () => {
                 es(!0);
             },
@@ -220,7 +220,7 @@ function B(e) {
             ea(!1);
         }
     });
-    s.useEffect(() => {
+    (s.useEffect(() => {
         M && (0, O.loadVideoQuestModal)();
     }, [M]),
         s.useLayoutEffect(() => {
@@ -228,7 +228,7 @@ function B(e) {
         }, [U, ep, Y.canCollapseOnBlur, ed, H]),
         s.useEffect(() => {
             var e, t;
-            z &&
+            (z &&
                 (0, m.dA)({
                     questId: o.id,
                     event: T.rMx.QUEST_CONTENT_RENDERING_FAILURE,
@@ -247,7 +247,7 @@ function B(e) {
                             impression_id: null == (t = L.current) ? void 0 : t.getId()
                         }),
                         sourceQuestContent: Y.trackingCtx.content
-                    });
+                    }));
         }, [z, B, o.id, Y.trackingCtx.content]),
         s.useEffect(() => {
             if (!X && eo && !F) {
@@ -262,13 +262,13 @@ function B(e) {
                     sourceQuestContent: Y.trackingCtx.content
                 });
             }
-        }, [X, eo, F, o.id, D, Y.trackingCtx.content]);
+        }, [X, eo, F, o.id, D, Y.trackingCtx.content]));
     let eE = (0, b.h)({
         location: P.dr.QUESTS_BAR,
         questConfig: o.config
     });
     return B && (X || !eo || F) && !z
-        ? (0, r.jsx)(v.A, {
+        ? (0, r.jsx)(_.A, {
               questOrQuests: o,
               questContent: Y.trackingCtx.content,
               overrideVisibility: !V && X,
@@ -287,7 +287,7 @@ function B(e) {
                                   }),
                               (0, r.jsx)(i.animated.div, {
                                   'aria-hidden': !X,
-                                  onMouseLeave: e_,
+                                  onMouseLeave: ev,
                                   onMouseEnter: ej,
                                   onFocus: eh,
                                   onBlur: eb,
@@ -313,7 +313,7 @@ function B(e) {
                                           backgroundImage: W && !eE ? Y.postEnrollmentBackgroundImage : void 0
                                       },
                                       children: (0, r.jsx)(E.t, {
-                                          springConfig: ev,
+                                          springConfig: e_,
                                           isExpanded: et,
                                           children: (0, r.jsx)(n, {
                                               expandedContentRef: ec,

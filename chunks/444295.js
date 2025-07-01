@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AE: () => c,
     JS: () => p,
     Qu: () => h,
@@ -8,7 +8,7 @@ n.d(t, {
     ou: () => d,
     zi: () => _
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(615287),
     a = n(77498),
@@ -16,7 +16,7 @@ var r = n(73800),
     s = n(626135),
     l = n(981631),
     c = (function (e) {
-        return (e.OOP = 'oop'), (e.OOP_GAME = 'oop game'), (e.LEGACY = 'legacy'), (e.LEGACY_GAME = 'legacy game'), e;
+        return ((e.OOP = 'oop'), (e.OOP_GAME = 'oop game'), (e.LEGACY = 'legacy'), (e.LEGACY_GAME = 'legacy game'), e);
     })({});
 function u(e) {
     switch (e) {
@@ -85,10 +85,10 @@ function p(e, t) {
     });
 }
 var h = (function (e) {
-        return (e.SCREEN_SHARE = 'screen share'), (e.CAMERA = 'camera'), (e.MICROPHONE = 'microphone'), (e.AUDIO = 'audio'), (e.VOICE = 'voice'), (e.CALL_BUTTON = 'call button'), (e.SOUNDBOARD = 'soundboard'), (e.GO_LIVE = 'go live'), (e.INVITE = 'invite'), (e.REDIRECT = 'redirect'), (e.FRIEND_LIST = 'friend list'), (e.FRIEND_REQUEST = 'friend request'), e;
+        return ((e.SCREEN_SHARE = 'screen share'), (e.CAMERA = 'camera'), (e.MICROPHONE = 'microphone'), (e.AUDIO = 'audio'), (e.VOICE = 'voice'), (e.CALL_BUTTON = 'call button'), (e.SOUNDBOARD = 'soundboard'), (e.GO_LIVE = 'go live'), (e.INVITE = 'invite'), (e.REDIRECT = 'redirect'), (e.FRIEND_LIST = 'friend list'), (e.FRIEND_REQUEST = 'friend request'), e);
     })({}),
     m = (function (e) {
-        return (e.ENABLED = 'enabled'), (e.DISABLED = 'disabled'), (e.SETTINGS_OPENED = 'settings opened'), (e.PANEL_OPENED = 'panel opened'), (e.STREAM_PREVIEWED = 'stream previewed'), (e.INVITE_SENT = 'invite sent'), (e.JOIN_REQUEST_SENT = 'join request sent'), (e.PROFILE_OPENED = 'profile opened'), (e.GUILD_PROFILE_OPENED = 'guild profile opened'), (e.CHAT = 'chat'), (e.ACCEPT_REQUEST = 'accept request'), (e.DECLINE_REQUEST = 'decline request'), (e.CANCEL_REQUEST = 'cancel request'), (e.SEND_REQUEST = 'send request'), (e.SEARCH = 'search'), e;
+        return ((e.ENABLED = 'enabled'), (e.DISABLED = 'disabled'), (e.SETTINGS_OPENED = 'settings opened'), (e.PANEL_OPENED = 'panel opened'), (e.STREAM_PREVIEWED = 'stream previewed'), (e.INVITE_SENT = 'invite sent'), (e.JOIN_REQUEST_SENT = 'join request sent'), (e.PROFILE_OPENED = 'profile opened'), (e.GUILD_PROFILE_OPENED = 'guild profile opened'), (e.CHAT = 'chat'), (e.ACCEPT_REQUEST = 'accept request'), (e.DECLINE_REQUEST = 'decline request'), (e.CANCEL_REQUEST = 'cancel request'), (e.SEND_REQUEST = 'send request'), (e.SEARCH = 'search'), e);
     })({});
 function g(e, t) {
     let { type: n, value: r, userId: i } = t;

@@ -23,7 +23,7 @@ var n = r(879154),
                 for (var e = 1; e < arguments.length; e++) {
                     var r = null != arguments[e] ? arguments[e] : {},
                         n = Object.keys(r);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (n = n.concat(
                             Object.getOwnPropertySymbols(r).filter(function (t) {
                                 return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -31,7 +31,7 @@ var n = r(879154),
                         )),
                         n.forEach(function (e) {
                             var n, i, o;
-                            (n = t),
+                            ((n = t),
                                 (i = e),
                                 (o = r[e]),
                                 i in n
@@ -41,8 +41,8 @@ var n = r(879154),
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (n[i] = o);
-                        });
+                                    : (n[i] = o));
+                        }));
                 }
                 return t;
             })({}, c(t, e), { children: [] }));
@@ -57,7 +57,7 @@ var n = r(879154),
             u = 0;
         return (
             t.getBlockMap().forEach(function (t) {
-                t.findEntityRanges(
+                (t.findEntityRanges(
                     function (t) {
                         return null !== t.getEntity();
                     },
@@ -67,7 +67,7 @@ var n = r(879154),
                         !a[i] && ((a[i] = n), (r[i] = ''.concat(u)), u++);
                     }
                 ),
-                    l(t, r, n, i);
+                    l(t, r, n, i));
             }),
             {
                 blocks: n,
@@ -99,5 +99,5 @@ t.exports = function (t) {
         entityMap: {},
         blocks: []
     };
-    return (e = f(t, e)), (e = p(t, e));
+    return ((e = f(t, e)), (e = p(t, e)));
 };

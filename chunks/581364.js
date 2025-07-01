@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $z: () => R,
     BH: () => N,
     BO: () => w,
@@ -21,7 +21,7 @@ n.d(t, {
     n(361932),
     n(187205),
     n(35282),
-    n(781311);
+    n(781311));
 var r = n(654861),
     i = n.n(r),
     a = n(512722),
@@ -55,7 +55,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -63,7 +63,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,11 +71,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }

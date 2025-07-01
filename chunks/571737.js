@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(539854);
+(n.d(t, { Z: () => m }), n(539854));
 var r = n(255367),
     a = n(73800),
     i = n(622535),
@@ -23,7 +23,7 @@ let m = function (e) {
         ),
         g = a.useMemo(() => {
             let e = [];
-            return (0, s.vJ)(t) && e.push(u.intl.string(u.t.LO4f0N)), (0, s.Cb)(t) && (0 !== e.length && e.push('\u2022'), e.push(u.intl.string(u.t['8z5B2d']))), (0, s.Hu)(t) && (0 !== e.length && e.push('\u2022'), e.push(u.intl.string(u.t['5khEk5']))), e;
+            return ((0, s.vJ)(t) && e.push(u.intl.string(u.t.LO4f0N)), (0, s.Cb)(t) && (0 !== e.length && e.push('\u2022'), e.push(u.intl.string(u.t['8z5B2d']))), (0, s.Hu)(t) && (0 !== e.length && e.push('\u2022'), e.push(u.intl.string(u.t['5khEk5']))), e);
         }, [t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [

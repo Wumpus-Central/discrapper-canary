@@ -14,7 +14,7 @@ function d(e, t) {
               id: 'open-chat',
               label: u.intl.string(u.t.ZXxLQk),
               action: () => {
-                  o.Z.updateChatOpen(e.id, !0), (0, c.XU)(t.id, e.id);
+                  (o.Z.updateChatOpen(e.id, !0), (0, c.XU)(t.id, e.id));
               }
           })
         : null;

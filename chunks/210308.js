@@ -57,10 +57,10 @@ function S(e) {
         o = b.Qh.indexOf(n),
         d = (0, f.J)(b.Qh[o > 0 ? o - 1 : o], { ambient: !0 }),
         u = (0, r.useCallback)(() => {
-            s(x.L.TAKE_ACTION), l(), c.Z.setState({ shouldRenderTenureLevelUp: !0 }), m.S.dispatch(_.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+            (s(x.L.TAKE_ACTION), l(), c.Z.setState({ shouldRenderTenureLevelUp: !0 }), m.S.dispatch(_.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {}));
         }, [s, l]),
         p = (0, r.useCallback)(() => {
-            s(x.L.USER_DISMISS), l();
+            (s(x.L.USER_DISMISS), l());
         }, [s, l]),
         h = b.vK[n];
     return (0, i.jsxs)('div', {

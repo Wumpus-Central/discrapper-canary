@@ -21,7 +21,7 @@ function m(e) {
     let b = () => (g === _.lY.MODAL || g === _.lY.MODAL_V2 ? h.intl.string(h.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? h.intl.string(h.t['7hwn2N']) : t.isGuildStageVoice() ? h.intl.string(h.t.Acqcoq) : h.intl.string(h.t.BXxdl5)),
         y = () => (g === _.lY.MODAL || g === _.lY.MODAL_V2 ? h.intl.string(h.t.VJlc0d) : t.isDM() || t.isGroupDM() ? h.intl.string(h.t.ozoE2N) : t.isGuildStageVoice() ? h.intl.string(h.t['7vb2cX']) : h.intl.string(h.t['96ANUF'])),
         O = (e) => {
-            e.stopPropagation(), null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), t.isGuildStageVoice() ? (0, l.Cq)(t) : (o.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)), null == m || m();
+            (e.stopPropagation(), null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), t.isGuildStageVoice() ? (0, l.Cq)(t) : (o.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)), null == m || m());
         };
     return g === _.lY.MODAL_V2
         ? (0, r.jsx)(f.tG, {

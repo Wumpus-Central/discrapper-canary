@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(415506), n(49124);
+(n.d(t, { Z: () => v }), n(388685), n(415506), n(49124));
 var r = n(413135),
     i = n(836560),
     l = n(392711),
@@ -45,24 +45,24 @@ function E(e) {
             try {
                 r.read(t);
             } catch (t) {
-                e.end(
+                (e.end(
                     O(m.CLOSE, {
                         code: 1003,
                         message: t.message
                     })
                 ),
-                    e.destroy();
+                    e.destroy());
             }
         });
         let i = () => {
                 try {
-                    e.end(
+                    (e.end(
                         O(m.CLOSE, {
                             code: p.$VG.CLOSE_NORMAL,
                             message: 'test client going away'
                         })
                     ),
-                        e.destroy();
+                        e.destroy());
                 } catch (e) {}
             },
             l = Promise.race([
@@ -81,39 +81,39 @@ function E(e) {
                     throw (i(), e);
                 }
             );
-        return e.write(O(m.PING, a().uniqueId())), l.then(t, n);
+        return (e.write(O(m.PING, a().uniqueId())), l.then(t, n));
     });
 }
 function O(e, t) {
     t = JSON.stringify(t);
     let n = r.Buffer.byteLength(t),
         i = r.Buffer.alloc(8 + n);
-    return i.writeInt32LE(e, 0), i.writeInt32LE(n, 4), i.write(t, 8, n), i.buffer.slice(i.byteOffset, i.byteOffset + i.byteLength);
+    return (i.writeInt32LE(e, 0), i.writeInt32LE(n, 4), i.write(t, 8, n), i.buffer.slice(i.byteOffset, i.byteOffset + i.byteLength));
 }
 class y extends u.Z {
     copyBuffer(e, t, n) {
         let i = r.Buffer.allocUnsafe(n - t);
-        return e.copy(i, 0, t, n), i;
+        return (e.copy(i, 0, t, n), i);
     }
     send(e) {
-        g.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(O(m.FRAME, e));
+        (g.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(O(m.FRAME, e)));
     }
     close(e, t) {
-        this.socket.end(
+        (this.socket.end(
             O(m.CLOSE, {
                 code: e,
                 message: t
             })
         ),
-            this.socket.destroy();
+            this.socket.destroy());
     }
     read(e) {
         if (this.messageBuffer.byteLength + e.byteLength > this.MAX_BUFFER_SIZE) throw Error('total buffer size exceeded');
-        (this.messageBuffer = (function (e, t) {
+        ((this.messageBuffer = (function (e, t) {
             let n = r.Buffer.alloc(e.byteLength + t.byteLength);
-            return n.set(e), n.set(t, e.byteLength), n;
+            return (n.set(e), n.set(t, e.byteLength), n);
         })(this.messageBuffer, e)),
-            this.processMessages();
+            this.processMessages());
     }
     processMessages() {
         for (; this.messageBuffer.byteLength >= 8; ) {
@@ -131,47 +131,47 @@ class y extends u.Z {
             }
             if (this.messageBuffer.byteLength >= this.currentHeader.size) {
                 let e = JSON.parse(this.copyBuffer(this.messageBuffer, 0, this.currentHeader.size).toString());
-                this.dispatchMessage(this.socket, this.currentHeader.opcode, e), (this.messageBuffer = this.copyBuffer(this.messageBuffer, this.currentHeader.size, this.messageBuffer.byteLength)), (this.currentHeader = null);
+                (this.dispatchMessage(this.socket, this.currentHeader.opcode, e), (this.messageBuffer = this.copyBuffer(this.messageBuffer, this.currentHeader.size, this.messageBuffer.byteLength)), (this.currentHeader = null));
             } else break;
         }
     }
     dispatchMessage(e, t, n) {
         switch (t) {
             case m.PING:
-                e.emit('ping', n), e.write(O(m.PONG, n));
+                (e.emit('ping', n), e.write(O(m.PONG, n)));
                 break;
             case m.PONG:
                 e.emit('pong', n);
                 break;
             case m.HANDSHAKE:
-                this.handleHandshake(e, n), e.emit('handshake', n);
+                (this.handleHandshake(e, n), e.emit('handshake', n));
                 break;
             case m.FRAME:
                 if (!_(e)) throw Error('did not handshake');
                 e.emit('request', n);
                 break;
             case m.CLOSE:
-                e.end(
+                (e.end(
                     O(m.CLOSE, {
                         code: p.$VG.CLOSE_NORMAL,
                         message: 'client disconnect'
                     })
                 ),
-                    e.destroy();
+                    e.destroy());
         }
     }
     handleHandshake(e, t) {
         if (_(e)) throw Error('already did handshake');
-        (this.clientId = t.client_id), this.checkRpcVersion(+t.v), b(e, !0);
+        ((this.clientId = t.client_id), this.checkRpcVersion(+t.v), b(e, !0));
     }
     constructor(e, t) {
-        super('ipc', p.X6Q, t), h(this, 'messageBuffer', r.Buffer.alloc(0)), h(this, 'currentHeader', null), h(this, 'MAX_BUFFER_SIZE', 5242880), h(this, 'socket', void 0), h(this, 'clientId', null), (this.socket = e), b(e, !1);
+        (super('ipc', p.X6Q, t), h(this, 'messageBuffer', r.Buffer.alloc(0)), h(this, 'currentHeader', null), h(this, 'MAX_BUFFER_SIZE', 5242880), h(this, 'socket', void 0), h(this, 'clientId', null), (this.socket = e), b(e, !1));
     }
 }
 class I extends i.EventEmitter {
     handleConnection(e) {
         let t = new y(e, 'json');
-        e.on('readable', () => {
+        (e.on('readable', () => {
             let n = e.read();
             null != n && t.read(r.Buffer.from(n));
         }),
@@ -179,45 +179,45 @@ class I extends i.EventEmitter {
                 try {
                     t.read(r.Buffer.from(n));
                 } catch (t) {
-                    g.error('Socket Error: '.concat(t.message)),
+                    (g.error('Socket Error: '.concat(t.message)),
                         e.end(
                             O(m.CLOSE, {
                                 code: p.$VG.CLOSE_UNSUPPORTED,
                                 message: t.message
                             })
                         ),
-                        e.destroy();
+                        e.destroy());
                 }
             }),
             e.once('handshake', () => {
                 let n = t.clientId;
-                g.info('Socket Opened: '.concat(t.id)),
+                (g.info('Socket Opened: '.concat(t.id)),
                     e.on('error', (e) => g.error('Socket Error: '.concat(e.message))),
                     e.on('close', () => {
-                        g.info('Socket Close: '.concat(t.id)), this.emit('disconnect', t);
+                        (g.info('Socket Close: '.concat(t.id)), this.emit('disconnect', t));
                     }),
                     (0, d.em)(t, null, n)
                         .then(() => {
-                            e.on('request', (e) => {
-                                g.info('Socket Message: '.concat(t.id), (0, c.Z)(e)), this.emit('request', t, e);
+                            (e.on('request', (e) => {
+                                (g.info('Socket Message: '.concat(t.id), (0, c.Z)(e)), this.emit('request', t, e));
                             }),
-                                this.emit('connect', t);
+                                this.emit('connect', t));
                         })
                         .catch((e) => {
                             let { code: n, message: r } = e;
                             t.close(n, r);
-                        });
-            });
+                        }));
+            }));
     }
     constructor() {
         super();
         let e = f.net.createServer((e) => this.handleConnection(e));
-        e.on('error', (e) => g.error('Error: '.concat(e.message))),
+        (e.on('error', (e) => g.error('Error: '.concat(e.message))),
             f.getAvailableSocket(E).then((t) => {
                 e.listen(t, () => {
                     ('function' == typeof e.listening ? e.listening() : e.listening) && g.info('Starting on '.concat(e.address()));
                 });
-            });
+            }));
     }
 }
 let v = new I();

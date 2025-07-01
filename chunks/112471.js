@@ -1,4 +1,4 @@
-n.d(t, { q: () => c }), n(388685), n(539854), n(290780);
+(n.d(t, { q: () => c }), n(388685), n(539854), n(290780));
 var r = n(73800),
     i = n(442837),
     l = n(537883),
@@ -32,8 +32,8 @@ function c() {
         if (null == t) return d;
         let e = [],
             n = new Set();
-        for (let [t, r] of d) n.add(t), e.push([t, r]);
+        for (let [t, r] of d) (n.add(t), e.push([t, r]));
         let r = !1;
-        return n.has(s.Hk) || (n.add(s.Hk), e.unshift([s.Hk, u]), (r = !0)), n.has(t) || (n.add(t), e.push([t, c]), (r = !0)), r ? e : d;
+        return (n.has(s.Hk) || (n.add(s.Hk), e.unshift([s.Hk, u]), (r = !0)), n.has(t) || (n.add(t), e.push([t, c]), (r = !0)), r ? e : d);
     }, [d, t, u, c]);
 }

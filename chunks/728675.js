@@ -15,7 +15,7 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -23,7 +23,7 @@ function i(e) {
             )),
             i.forEach(function (t) {
                 r(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -31,11 +31,11 @@ function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -70,25 +70,25 @@ function s(e, t) {
     }
     function d(e) {
         let { channelId: t, messages: n } = e;
-        a.add(t), null == r || r(), n.forEach((e) => s(e));
+        (a.add(t), null == r || r(), n.forEach((e) => s(e)));
     }
     function f(e) {
         let { messages: n } = e;
-        null == r || r(), n.forEach((e) => t(e));
+        (null == r || r(), n.forEach((e) => t(e)));
     }
     function _(e) {
         let { pins: n } = e;
-        null == r || r(),
+        (null == r || r(),
             n.forEach((e) => {
                 let { message: n } = e;
                 return t(n);
-            });
+            }));
     }
     function p(e) {
-        null == r || r(),
+        (null == r || r(),
             e.messages.forEach((e) => {
                 e.forEach((e) => t(e));
-            });
+            }));
     }
     e.actions = o(i({}, e.actions), {
         POST_CONNECTION_OPEN: l,
@@ -109,4 +109,4 @@ function s(e, t) {
         }
     });
 }
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));

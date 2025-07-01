@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, {
+(n.d(t, {
     At: () => T,
     DB: () => C,
     DR: () => S,
@@ -23,7 +23,7 @@ n.d(t, {
     n(388685),
     n(35282),
     n(49124),
-    n(704826);
+    n(704826));
 var o = n(539528),
     s = n(710845),
     l = n(585483),
@@ -46,7 +46,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -54,7 +54,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -91,10 +91,10 @@ function b(e, t) {
             )
         );
     }
-    (i = n), (a = o);
+    ((i = n), (a = o));
 }
 function y(e, t, n, r) {
-    _.log(
+    (_.log(
         'transitionToGuild - Transitioning to '.concat(
             JSON.stringify({
                 guildId: e,
@@ -103,7 +103,7 @@ function y(e, t, n, r) {
             })
         )
     ),
-        b(u.Z5c.CHANNEL(e, t, n), r);
+        b(u.Z5c.CHANNEL(e, t, n), r));
 }
 function O() {
     return null != i && c.H.has(i);

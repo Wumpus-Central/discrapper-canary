@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
+(n.d(t, { Z: () => x }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -38,7 +38,7 @@ let f = "Make sure you're only uploading text files!",
                             color: c.Ttl.RED,
                             look: c.iLD.LINK,
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), o(s.id);
+                                (e.preventDefault(), e.stopPropagation(), o(s.id));
                             },
                             children: 'Delete'
                         })
@@ -74,7 +74,7 @@ function x() {
                 let [i, r] = n.split(',');
                 if (!i.includes('text/plain')) return (0, u.Eo)(f);
                 let s = JSON.parse(atob(r));
-                (s.id = (0, a.Z)()), t(s), (0, u.XA)('Profile Effect (maybe??) imported!');
+                ((s.id = (0, a.Z)()), t(s), (0, u.XA)('Profile Effect (maybe??) imported!'));
             },
             [t]
         ),

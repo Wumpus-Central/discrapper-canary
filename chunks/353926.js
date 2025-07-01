@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     V: () => ep,
     Z: () => eE
 }),
@@ -8,7 +8,7 @@ n.d(t, {
     n(953529),
     n(35282),
     n(704826),
-    n(49124);
+    n(49124));
 var r = n(392711),
     i = n.n(r),
     a = n(108131),
@@ -40,7 +40,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -56,11 +56,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -101,7 +101,7 @@ function G(e) {
     if (void 0 !== t) return t;
     {
         let t = o().v3(e);
-        return (U[e] = t), t;
+        return ((U[e] = t), t);
     }
 }
 let B = h.qO.map((e) => G(e)),
@@ -116,8 +116,8 @@ function Z(e) {
 function H(e, t, n, r) {
     let i = ''.concat(t.type, '|').concat(e),
         a = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
-    if (t.type === h.xY.USER) return a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
-    if (t.type === h.xY.GUILD) return (i += '|'.concat(t.guildId)), a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
+    if (t.type === h.xY.USER) return (a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i);
+    if (t.type === h.xY.GUILD) return ((i += '|'.concat(t.guildId)), a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i);
     throw Error();
 }
 function Y(e) {
@@ -266,7 +266,7 @@ function $(e) {
 }
 function ee(e) {
     var t;
-    !j && 'CONNECTION_OPEN' === e.type && Z(e.user) && (j = !0),
+    (!j && 'CONNECTION_OPEN' === e.type && Z(e.user) && (j = !0),
         'EXPERIMENTS_FETCH_SUCCESS' === e.type &&
             N &&
             'ready_payload' === w.source &&
@@ -278,13 +278,13 @@ function ee(e) {
             }),
         (D = {}),
         (L = {}),
-        (x = {});
+        (x = {}));
     let r = 'CONNECTION_OPEN' === e.type || null == e.fingerprint || e.fingerprint === d.default.getFingerprint(),
         { experiments: i, guildExperiments: a } = e,
         o = 'CONNECTION_OPEN' === e.type ? 'ready_payload' : 'logged_out_api',
         s = 'sessionId' in e ? e.sessionId : null != (t = d.default.getSessionId()) ? t : '',
         l = d.default.getFingerprint();
-    r &&
+    (r &&
         et(
             {
                 rawUserExperiments: i,
@@ -296,12 +296,12 @@ function ee(e) {
             !1
         ),
         n(598984).Vx.trackExposure(),
-        (N = !0);
+        (N = !0));
 }
 function et(e) {
     let { rawUserExperiments: t, rawGuildExperiments: n, source: r, sessionId: i, fingerprint: a } = e,
         o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    (w = {
+    ((w = {
         rawUserExperiments: t,
         rawGuildExperiments: null != n ? n : [],
         source: r,
@@ -346,7 +346,7 @@ function et(e) {
                     loadedFromCache: o,
                     fingerprint: a
                 };
-            });
+            }));
 }
 function en(e, t, n) {
     let r = null;
@@ -450,7 +450,7 @@ function ea(e) {
 }
 function eo(e) {
     let { serializedExperimentStore: t, user: n } = e;
-    !j && Z(n) && (j = !0),
+    (!j && Z(n) && (j = !0),
         (N = t.hasLoadedExperiments),
         (C = t.trackedExposureExperiments),
         (D = t.loadedUserExperiments),
@@ -462,17 +462,17 @@ function eo(e) {
             fingerprint: t.assignmentFingerprint
         })),
         (L = ea(t.loadedGuildExperiments)),
-        (x = {});
+        (x = {}));
 }
 function es() {
     N = !0;
 }
 function el(e) {
     let { isSwitchingAccount: t } = e;
-    s.K.remove(O), t || (s.K.remove(v), s.K.remove(I), s.K.remove(T), (k = {}), (M = {})), (D = {}), (w = y(E({}, w), { rawUserExperiments: [] })), (C = {}), (N = !1);
+    (s.K.remove(O), t || (s.K.remove(v), s.K.remove(I), s.K.remove(T), (k = {}), (M = {})), (D = {}), (w = y(E({}, w), { rawUserExperiments: [] })), (C = {}), (N = !1));
 }
 function ec() {
-    (N = !1), (C = {}), (L = {}), s.K.remove(O);
+    ((N = !1), (C = {}), (L = {}), s.K.remove(O));
 }
 function eu() {
     let e = s.K.get(O);
@@ -481,12 +481,12 @@ function eu() {
         n = Date.now(),
         r = !1;
     for (let e in t) n - t[e].time > V && (delete t[e], (r = !0));
-    return r && e_(t), t;
+    return (r && e_(t), t);
 }
 function ed() {
     var e, t, n;
     let r = [null != (e = s.K.get(v)) ? e : {}, null != (t = s.K.get(I)) ? t : {}, null != (n = s.K.get(T)) ? n : {}];
-    (k = {}), (M = {});
+    ((k = {}), (M = {}));
     let a = !i().isEmpty(r[0]);
     for (let e of r)
         for (let t in e) {
@@ -495,7 +495,7 @@ function ed() {
         }
     let o = (0, c._S)();
     for (let e in o)
-        (k[e] = {
+        ((k[e] = {
             type: h.xY.USER,
             revision: 1,
             population: 0,
@@ -512,27 +512,27 @@ function ed() {
                 assignmentSource: 'override',
                 bucket: o[e]
             }),
-            (a = !0);
+            (a = !0));
     a && ef();
 }
 function ef() {
     try {
         s.K.set(I, k);
     } catch (e) {
-        A.error('Error saving user experiment overrides, unsaved data will be lost', e),
+        (A.error('Error saving user experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
-            });
+            }));
     }
     try {
         s.K.set(T, M);
     } catch (e) {
-        A.error('Error saving guild experiment overrides, unsaved data will be lost', e),
+        (A.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
-            });
+            }));
     }
 }
 function e_(e) {
@@ -542,11 +542,11 @@ function e_(e) {
             e: e
         });
     } catch (e) {
-        A.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
+        (A.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveTrackedExposureExperiments'
-            });
+            }));
     }
 }
 function ep(e) {
@@ -599,7 +599,7 @@ function em(e) {
 }
 class eg extends f.Z {
     initialize() {
-        (C = eu()), ed(), this.waitFor(d.default), this.loadCache();
+        ((C = eu()), ed(), this.waitFor(d.default), this.loadCache());
     }
     loadCache() {
         let e = this.readSnapshot(eg.LATEST_SNAPSHOT_VERSION);
@@ -632,7 +632,7 @@ class eg extends f.Z {
         let i = ''.concat(n, ':').concat(e);
         if (i in x) return x[i];
         let a = ei(n, e);
-        return (x[i] = a), a;
+        return ((x[i] = a), a);
     }
     getUserExperimentBucket(e) {
         let t = this.getUserExperimentDescriptor(e);
@@ -711,7 +711,7 @@ class eg extends f.Z {
         return z(H(e, t, n, r), Y(t));
     }
     constructor() {
-        super(
+        (super(
             {
                 LOGOUT: el,
                 LOGIN_SUCCESS: ec,
@@ -725,8 +725,8 @@ class eg extends f.Z {
             },
             l.c.Early
         ),
-            g(this, 'trackExposure', X);
+            g(this, 'trackExposure', X));
     }
 }
-g(eg, 'displayName', 'ExperimentStore'), g(eg, 'LATEST_SNAPSHOT_VERSION', 1);
+(g(eg, 'displayName', 'ExperimentStore'), g(eg, 'LATEST_SNAPSHOT_VERSION', 1));
 let eE = new eg();

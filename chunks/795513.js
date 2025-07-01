@@ -38,18 +38,18 @@ class l {
         this.hasSuccessfullyConnected = !0;
     }
     handleWrite(e) {
-        (this.hasSuccessfullyConnected = !0), i.Z.cacheTransaction(e).put(a.DQ, '\uD83D\uDC4B'), i.Z.cacheTransaction(e).put(a.aQ, a.Wj), i.Z.forceResyncVersionTransaction(e).put(a.LH, { version: a.pL });
+        ((this.hasSuccessfullyConnected = !0), i.Z.cacheTransaction(e).put(a.DQ, '\uD83D\uDC4B'), i.Z.cacheTransaction(e).put(a.aQ, a.Wj), i.Z.forceResyncVersionTransaction(e).put(a.LH, { version: a.pL }));
     }
     resetInMemoryState() {
         this.hasSuccessfullyConnected = !1;
     }
     constructor() {
-        o(this, 'hasSuccessfullyConnected', !1),
+        (o(this, 'hasSuccessfullyConnected', !1),
             o(this, 'actions', {
                 BACKGROUND_SYNC: (e, t) => this.handleWrite(t),
                 CONNECTION_OPEN: () => this.handleConnectionOpen(),
                 WRITE_CACHES: (e, t) => this.handleWrite(t)
-            });
+            }));
     }
 }
 let c = new l();

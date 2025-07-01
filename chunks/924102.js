@@ -19,7 +19,7 @@ let s = function (e, t, r) {
     function x(t) {
         var r = s,
             n = u;
-        return (s = u = void 0), (h = t), (p = e.apply(n, r));
+        return ((s = u = void 0), (h = t), (p = e.apply(n, r)));
     }
     function y(e) {
         var r = e - d,
@@ -42,16 +42,16 @@ let s = function (e, t, r) {
             r = (0, o.Z)(),
             n = y(r);
         if (((s = arguments), (u = this), (d = r), n)) {
-            if (void 0 === f) return (h = e = d), (f = setTimeout(m, t)), b ? x(e) : p;
-            if (v) return clearTimeout(f), (f = setTimeout(m, t)), x(d);
+            if (void 0 === f) return ((h = e = d), (f = setTimeout(m, t)), b ? x(e) : p);
+            if (v) return (clearTimeout(f), (f = setTimeout(m, t)), x(d));
         }
-        return void 0 === f && (f = setTimeout(m, t)), p;
+        return (void 0 === f && (f = setTimeout(m, t)), p);
     }
     return (
         (t = (0, a.Z)(t) || 0),
         (0, n.Z)(r) && ((b = !!r.leading), (c = (v = 'maxWait' in r) ? i((0, a.Z)(r.maxWait) || 0, t) : c), (g = 'trailing' in r ? !!r.trailing : g)),
         (Z.cancel = function () {
-            void 0 !== f && clearTimeout(f), (h = 0), (s = d = u = f = void 0);
+            (void 0 !== f && clearTimeout(f), (h = 0), (s = d = u = f = void 0));
         }),
         (Z.flush = function () {
             return void 0 === f ? p : w((0, o.Z)());

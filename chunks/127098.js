@@ -8,7 +8,7 @@ var r = n(764908),
     u = function (e) {
         return function (t) {
             var n = a(o(t));
-            return 1 & e && (n = s(n, c, '')), 2 & e && (n = s(n, l, '$1')), n;
+            return (1 & e && (n = s(n, c, '')), 2 & e && (n = s(n, l, '$1')), n);
         };
     };
 e.exports = {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+(n.d(t, { Z: () => Z }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -33,7 +33,7 @@ function A(e) {
     let { guild: n } = e,
         [u, h] = i.useState(null != (t = o.K.get(N.Iv)) ? t : 0),
         g = (e) => {
-            o.K.set(N.Iv, e), h(e);
+            (o.K.set(N.Iv, e), h(e));
         },
         m = (0, b.Ek)(n.id, 'ChannelNoticesGuard'),
         _ = (0, l.Wu)(
@@ -51,7 +51,7 @@ function A(e) {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = () => {
-                    g(Date.now()), i(T.L.UNKNOWN);
+                    (g(Date.now()), i(T.L.UNKNOWN));
                 },
                 o = (() => {
                     switch (t) {

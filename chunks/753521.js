@@ -1,4 +1,4 @@
-n.d(t, { default: () => g }), n(388685);
+(n.d(t, { default: () => g }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -132,7 +132,7 @@ function g(e) {
                                     : v === d.O.Customize
                                       ? (0, i.jsxs)(s.zxk, {
                                             onClick: () => {
-                                                _(d.O.Tips), y(O);
+                                                (_(d.O.Tips), y(O));
                                             },
                                             children: [
                                                 h.intl.string(h.t['1Qm829']),

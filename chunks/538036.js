@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(539854);
+(n.d(t, { Z: () => f }), n(539854));
 var r = n(981631);
 let i = [],
     a = !1;
@@ -29,7 +29,7 @@ function c() {
     i.forEach((t) => t(e));
 }
 function u(e) {
-    i.push(e), s();
+    (i.push(e), s());
 }
 function d(e) {
     let t = i.indexOf(e);

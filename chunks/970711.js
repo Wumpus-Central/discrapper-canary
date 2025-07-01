@@ -2,7 +2,7 @@ let r;
 function i(e) {
     r = e;
 }
-n.d(t, {
+(n.d(t, {
     $R: () => A,
     A$: () => er,
     AM: () => z,
@@ -114,7 +114,7 @@ n.d(t, {
     n(539854),
     n(980754),
     n(824928),
-    n(563775);
+    n(563775));
 let a = new ('undefined' == typeof TextDecoder ? (0, module.require)('util').TextDecoder : TextDecoder)('utf-8', {
     ignoreBOM: !0,
     fatal: !0
@@ -122,14 +122,14 @@ let a = new ('undefined' == typeof TextDecoder ? (0, module.require)('util').Tex
 a.decode();
 let o = null;
 function s() {
-    return (null === o || 0 === o.byteLength) && (o = new Uint8Array(r.memory.buffer)), o;
+    return ((null === o || 0 === o.byteLength) && (o = new Uint8Array(r.memory.buffer)), o);
 }
 function l(e, t) {
-    return (e >>>= 0), a.decode(s().subarray(e, e + t));
+    return ((e >>>= 0), a.decode(s().subarray(e, e + t)));
 }
 function c(e) {
     let t = r.__externref_table_alloc();
-    return r.__wbindgen_export_2.set(t, e), t;
+    return (r.__wbindgen_export_2.set(t, e), t);
 }
 function u(e, t) {
     try {
@@ -140,7 +140,7 @@ function u(e, t) {
     }
 }
 function d(e, t) {
-    return (e >>>= 0), s().subarray(e / 1, e / 1 + t);
+    return ((e >>>= 0), s().subarray(e / 1, e / 1 + t));
 }
 function f(e) {
     return null == e;
@@ -184,15 +184,15 @@ function m(e, t, n) {
         a[i + o] = t;
     }
     if (o !== r) {
-        0 !== o && (e = e.slice(o)), (i = n(i, r, (r = o + 3 * e.length), 1) >>> 0);
+        (0 !== o && (e = e.slice(o)), (i = n(i, r, (r = o + 3 * e.length), 1) >>> 0));
         let t = h(e, s().subarray(i + o, i + r));
-        (o += t.written), (i = n(i, r, o, 1) >>> 0);
+        ((o += t.written), (i = n(i, r, o, 1) >>> 0));
     }
-    return (_ = o), i;
+    return ((_ = o), i);
 }
 let g = null;
 function E() {
-    return (null === g || !0 === g.buffer.detached || (void 0 === g.buffer.detached && g.buffer !== r.memory.buffer)) && (g = new DataView(r.memory.buffer)), g;
+    return ((null === g || !0 === g.buffer.detached || (void 0 === g.buffer.detached && g.buffer !== r.memory.buffer)) && (g = new DataView(r.memory.buffer)), g);
 }
 let b =
     'undefined' == typeof FinalizationRegistry
@@ -221,7 +221,7 @@ function y(e, t, n, i) {
                 0 == --a.cnt ? (r.__wbindgen_export_5.get(a.dtor)(o, a.b), b.unregister(a)) : (a.a = o);
             }
         };
-    return (o.original = a), b.register(o, a, a), o;
+    return ((o.original = a), b.register(o, a, a), o);
 }
 function O(e) {
     let t,
@@ -264,7 +264,7 @@ function T(e, t) {
     let n = E(),
         i = [];
     for (let a = e; a < e + 4 * t; a += 4) i.push(r.__wbindgen_export_2.get(n.getUint32(a, !0)));
-    return r.__externref_drop_slice(e, t), i;
+    return (r.__externref_drop_slice(e, t), i);
 }
 function S(e, t) {
     let n = t(4 * e.length, 4) >>> 0;
@@ -272,7 +272,7 @@ function S(e, t) {
         let r = c(e[t]);
         E().setUint32(n + 4 * t, r, !0);
     }
-    return (_ = e.length), n;
+    return ((_ = e.length), n);
 }
 function A() {
     r.crash();
@@ -281,7 +281,7 @@ function N(e) {
     let t, n;
     try {
         let i = r.generateLaunchSignature(e);
-        return (t = i[0]), (n = i[1]), l(i[0], i[1]);
+        return ((t = i[0]), (n = i[1]), l(i[0], i[1]));
     } finally {
         r.__wbindgen_free(t, n, 1);
     }
@@ -313,7 +313,7 @@ let L = ['omit', 'same-origin', 'include'],
 class M {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), k.unregister(this), e;
+        return ((this.__wbg_ptr = 0), k.unregister(this), e);
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -324,7 +324,7 @@ class M {
             n = m(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
             i = _,
             a = r.blockeddomainsstore_isBlockedDomain(n, i);
-        return 0 !== a[0] && ((t = l(a[0], a[1]).slice()), r.__wbindgen_free(a[0], +a[1], 1)), t;
+        return (0 !== a[0] && ((t = l(a[0], a[1]).slice()), r.__wbindgen_free(a[0], +a[1], 1)), t);
     }
     static startFetchingBlockedDomains(e) {
         let t = m(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
@@ -342,7 +342,7 @@ let j =
 class U {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), j.unregister(this), e;
+        return ((this.__wbg_ptr = 0), j.unregister(this), e);
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -356,7 +356,7 @@ class U {
     static getEnabledExperimentIds() {
         let e = r.experimentcacher_getEnabledExperimentIds();
         var t = T(e[0], e[1]).slice();
-        return r.__wbindgen_free(e[0], 4 * e[1], 4), t;
+        return (r.__wbindgen_free(e[0], 4 * e[1], 4), t);
     }
     static flushToCache(e) {
         let t = S(e, r.__wbindgen_malloc),
@@ -374,7 +374,7 @@ let G =
 class B {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), G.unregister(this), e;
+        return ((this.__wbg_ptr = 0), G.unregister(this), e);
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -662,7 +662,7 @@ function eX(e, t, n) {
 function eQ(e, t) {
     let n = m(t.url, r.__wbindgen_malloc, r.__wbindgen_realloc),
         i = _;
-    E().setInt32(e + 4, i, !0), E().setInt32(e + 0, n, !0);
+    (E().setInt32(e + 4, i, !0), E().setInt32(e + 0, n, !0));
 }
 function eJ(e) {
     return e.value;
@@ -686,12 +686,12 @@ function e3(e, t, n) {
 function e4(e, t) {
     let n = m(O(t), r.__wbindgen_malloc, r.__wbindgen_realloc),
         i = _;
-    E().setInt32(e + 4, i, !0), E().setInt32(e + 0, n, !0);
+    (E().setInt32(e + 4, i, !0), E().setInt32(e + 0, n, !0));
 }
 function e5() {
     let e = r.__wbindgen_export_2,
         t = e.grow(4);
-    e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1);
+    (e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1));
 }
 function e6(e) {
     return 'function' == typeof e;
@@ -714,7 +714,7 @@ function tt(e, t) {
         i = 'string' == typeof n ? n : void 0;
     var a = f(i) ? 0 : m(i, r.__wbindgen_malloc, r.__wbindgen_realloc),
         o = _;
-    E().setInt32(e + 4, o, !0), E().setInt32(e + 0, a, !0);
+    (E().setInt32(e + 4, o, !0), E().setInt32(e + 0, a, !0));
 }
 function tn(e, t) {
     return l(e, t);

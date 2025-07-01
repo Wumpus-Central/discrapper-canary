@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
+(n.d(t, { Z: () => w }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,19 +17,19 @@ var r = n(255367),
     x = n(485386),
     j = n(246946),
     O = n(259580),
-    y = n(531087),
-    v = n(768581),
+    v = n(531087),
+    y = n(768581),
     _ = n(709054),
     C = n(486199),
     N = n(981631),
     I = n(388032),
     S = n(796920),
     E = n(20493);
-function w(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -45,19 +45,19 @@ function w(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function P(e) {
+function w(e) {
     let t,
-        { guild: n, integration: l, editedIntegration: a, isExpanded: P, onToggleExpand: T, onDisable: Z, onEnable: k } = e,
+        { guild: n, integration: l, editedIntegration: a, isExpanded: w, onToggleExpand: P, onDisable: Z, onEnable: k } = e,
         A = (0, d.e7)([x.Z], () => x.Z.getRoles(n.id)),
-        [R, D] = i.useState(!1),
+        [D, R] = i.useState(!1),
         L = (0, d.e7)([j.Z], () => j.Z.hidePersonalInformation),
         M = i.useCallback(() => {
-            D(!0), k(l);
+            (R(!0), k(l));
         }, [l, k]),
         B = i.useCallback(() => {
             l.syncing ||
@@ -66,7 +66,7 @@ function P(e) {
                     let i = 0 === l.expire_behavior ? I.intl.string(I.t['6kpw4u']) : I.intl.string(I.t.fQUQIC);
                     return (0, r.jsx)(
                         u.ConfirmModal,
-                        ((t = w({}, e)),
+                        ((t = T({}, e)),
                         (n = n =
                             {
                                 header: I.intl.string(I.t.emx3lJ),
@@ -171,7 +171,7 @@ function P(e) {
         }, [n.id, A, l.enable_emoticons, l.id, l.role_id]);
     if (
         (i.useEffect(() => {
-            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && D(!1);
+            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && R(!1);
         }, [a, l.id]),
         l.enabled && null != l.user)
     )
@@ -213,7 +213,7 @@ function P(e) {
                           grow: 0,
                           children: (0, r.jsx)(O.Z, {
                               className: S.expandIcon,
-                              expanded: P && !R,
+                              expanded: w && !D,
                               'aria-hidden': !0
                           })
                       })
@@ -224,9 +224,9 @@ function P(e) {
                               size: u.zxk.Sizes.SMALL,
                               color: u.zxk.Colors.PRIMARY,
                               onClick: M,
-                              disabled: R,
-                              children: R
-                                  ? (0, r.jsx)(y.Z, {
+                              disabled: D,
+                              children: D
+                                  ? (0, r.jsx)(v.Z, {
                                         width: 24,
                                         height: 24
                                     })
@@ -237,8 +237,8 @@ function P(e) {
         }),
         $ = null;
     return (
-        P &&
-            !R &&
+        w &&
+            !D &&
             null != a &&
             ($ = (0, r.jsxs)(b.Z, {
                 className: S.body,
@@ -296,7 +296,7 @@ function P(e) {
                                                     disabled: t.syncing || t.revoked,
                                                     onClick: a,
                                                     children: t.syncing
-                                                        ? (0, r.jsx)(y.Z, {
+                                                        ? (0, r.jsx)(v.Z, {
                                                               width: 24,
                                                               height: 24
                                                           })
@@ -406,12 +406,12 @@ function P(e) {
                                                       children: (t) =>
                                                           (0, r.jsx)(
                                                               'img',
-                                                              w(
+                                                              T(
                                                                   {
                                                                       alt: I.intl.formatToPlainString(I.t.n6ZZn5, { name: e.name }),
                                                                       draggable: !1,
                                                                       className: o()(S.emoji, 'emoji', 'jumboable'),
-                                                                      src: v.ZP.getEmojiURL({
+                                                                      src: y.ZP.getEmojiURL({
                                                                           id: e.id,
                                                                           animated: e.animated,
                                                                           size: 28
@@ -458,8 +458,8 @@ function P(e) {
                     l.enabled
                         ? (0, r.jsx)(u.P3F, {
                               className: S.expandableHeader,
-                              'aria-expanded': P && !R,
-                              onClick: T,
+                              'aria-expanded': w && !D,
+                              onClick: P,
                               children: X
                           })
                         : X,

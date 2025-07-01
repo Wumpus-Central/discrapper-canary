@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $J: () => P,
     Bn: () => I,
     EW: () => k,
@@ -17,7 +17,7 @@ n.d(t, {
     wx: () => O,
     z2: () => T
 }),
-    n(388685);
+    n(388685));
 var r = n(442837),
     i = n(704215),
     a = n(570140),
@@ -158,7 +158,7 @@ function D(e, t, n) {
                 onAdded: () => {
                     var n;
                     let [r, a] = (0, h.Aq)();
-                    (0, _.cm)(e),
+                    ((0, _.cm)(e),
                         l.default.track(y.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: i.z[e],
                             content_count: r,
@@ -168,13 +168,13 @@ function D(e, t, n) {
                             guild_id: null == t ? void 0 : t.guildId,
                             version: null == t ? void 0 : t.version
                         }),
-                        null == t || null == (n = t.onShown) || n.call(t);
+                        null == t || null == (n = t.onShown) || n.call(t));
                 }
             })));
 }
 function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    ((0, h.cI)(e) || t.forceTrack) && B(e, t), (0, _.Vr)(e);
+    (((0, h.cI)(e) || t.forceTrack) && B(e, t), (0, _.Vr)(e));
 }
 function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -198,14 +198,14 @@ async function M(e) {
 }
 async function j(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    L(e, n), await I(e, t), x(e, n);
+    (L(e, n), await I(e, t), x(e, n));
 }
 async function U(e, t, n) {
-    L(e, n), await S(e, t), x(e, n);
+    (L(e, n), await S(e, t), x(e, n));
 }
 async function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    L(e, t), await T(e), x(e, t);
+    (L(e, t), await T(e), x(e, t));
 }
 function B(e, t) {
     var n;

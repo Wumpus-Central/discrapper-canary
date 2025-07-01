@@ -1,13 +1,13 @@
-n.d(t, { Z: () => d }), n(35282);
+(n.d(t, { Z: () => d }), n(35282));
 var r = n(255367),
     i = n(73800),
     l = n(114858),
-    a = n(215569);
-function o(e) {
+    s = n(215569);
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -15,7 +15,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -23,12 +23,12 @@ function o(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function s(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,12 +56,12 @@ function c(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -70,27 +70,27 @@ class u extends i.Component {
         let e = this.props,
             { children: t, location: n, history: u, staticContext: d, match: h } = e,
             p = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
-            m = null,
-            g = null;
+            g = null,
+            m = null;
         return (
             i.Children.forEach(t, (e) => {
-                if (null == m && i.isValidElement(e)) {
+                if (null == g && i.isValidElement(e)) {
                     let t = e.props,
-                        { component: r, render: a } = t,
+                        { component: r, render: s } = t,
                         h = c(t, ['component', 'render']),
                         p = h.path || h.from;
-                    null != (m = null != p ? (0, l.LX)(n.pathname, s(o({}, h), { path: p })) : null) &&
-                        ((h = s(o({}, h), {
+                    null != (g = null != p ? (0, l.LX)(n.pathname, o(a({}, h), { path: p })) : null) &&
+                        ((h = o(a({}, h), {
                             key: p,
                             location: n,
-                            match: m,
+                            match: g,
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (g = i.createElement(r, h)) : null != a && (g = a(h)));
+                        null != r ? (m = i.createElement(r, h)) : null != s && (m = s(h)));
                 }
             }),
-            (0, r.jsx)(a.W, s(o({}, p), { children: g }))
+            (0, r.jsx)(s.W, o(a({}, p), { children: m }))
         );
     }
 }

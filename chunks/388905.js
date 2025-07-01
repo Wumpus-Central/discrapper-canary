@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     DK: () => I,
     Dx: () => v,
     EJ: () => L,
@@ -17,7 +17,7 @@ n.d(t, {
 }),
     n(953529),
     n(472816),
-    n(794429);
+    n(794429));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -50,7 +50,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -58,7 +58,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -69,7 +69,7 @@ function b(e, t) {
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -79,7 +79,7 @@ function y(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let O = o.qEK;
@@ -130,7 +130,7 @@ let v = (e) => {
             )
         );
     };
-(S.Looks = o.zxk.Looks), (S.Colors = o.zxk.Colors), (S.Sizes = o.zxk.Sizes);
+((S.Looks = o.zxk.Looks), (S.Colors = o.zxk.Colors), (S.Sizes = o.zxk.Sizes));
 let A = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(O, {

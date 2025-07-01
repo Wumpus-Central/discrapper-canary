@@ -1,4 +1,4 @@
-n.d(i, { Z: () => N }), n(388685);
+(n.d(i, { Z: () => N }), n(388685));
 var E,
     l = n(255367),
     r = n(73800),
@@ -24,7 +24,7 @@ class _ extends (E = r.PureComponent) {
     componentDidMount() {
         let { intervalDuration: t, onInterval: i } = this.props;
         this._interval = setInterval(() => {
-            this.forceUpdate(), null == i || i();
+            (this.forceUpdate(), null == i || i());
         }, t);
     }
     componentWillUnmount() {
@@ -70,7 +70,7 @@ class _ extends (E = r.PureComponent) {
         return null != i ? i(r, this.defaultRender.bind(this, r)) : this.defaultRender(r);
     }
     constructor(...t) {
-        super(...t), A(this, '_interval', void 0);
+        (super(...t), A(this, '_interval', void 0));
     }
 }
 A(_, 'defaultProps', {

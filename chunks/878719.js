@@ -1,7 +1,7 @@
 a.d(e, {
     GJ: () => s,
-    ME: () => R,
-    aB: () => d,
+    ME: () => d,
+    aB: () => R,
     dr: () => I
 });
 var r = a(263449),
@@ -19,7 +19,7 @@ function s(t, e) {
                 return e ? (e.error && 'string' == typeof e.error.message ? e.error.message : e) : 'No error message';
             })(e)
         };
-    return a.length && (r.stacktrace = { frames: a }), void 0 === r.type && '' === r.value && (r.value = 'Unrecoverable error caught'), r;
+    return (a.length && (r.stacktrace = { frames: a }), void 0 === r.type && '' === r.value && (r.value = 'Unrecoverable error caught'), r);
 }
 function E(t, e) {
     return { exception: { values: [s(t, e)] } };
@@ -36,14 +36,14 @@ function l(t, e) {
 }
 let u = /Minified React error #\d+;/i;
 function I(t, e, a, r) {
-    let _ = R(t, e, (a && a.syntheticException) || void 0, r);
-    return (0, o.EG)(_), (_.level = 'error'), a && a.event_id && (_.event_id = a.event_id), (0, i.WD)(_);
+    let _ = d(t, e, (a && a.syntheticException) || void 0, r);
+    return ((0, o.EG)(_), (_.level = 'error'), a && a.event_id && (_.event_id = a.event_id), (0, i.WD)(_));
 }
-function d(t, e, a = 'info', r, _) {
+function R(t, e, a = 'info', r, _) {
     let n = N(t, e, (r && r.syntheticException) || void 0, _);
-    return (n.level = a), r && r.event_id && (n.event_id = r.event_id), (0, i.WD)(n);
+    return ((n.level = a), r && r.event_id && (n.event_id = r.event_id), (0, i.WD)(n));
 }
-function R(t, e, a, i, u) {
+function d(t, e, a, i, u) {
     let I;
     if ((0, n.VW)(e) && e.error) return E(t, e.error);
     if ((0, n.TX)(e) || (0, n.fm)(e)) {
@@ -51,7 +51,7 @@ function R(t, e, a, i, u) {
         else {
             let r = e.name || ((0, n.TX)(e) ? 'DOMError' : 'DOMException'),
                 _ = e.message ? `${r}: ${e.message}` : r;
-            (I = N(t, _, a, i)), (0, o.Db)(I, _);
+            ((I = N(t, _, a, i)), (0, o.Db)(I, _));
         }
         return (
             'code' in e &&
@@ -81,7 +81,7 @@ function R(t, e, a, i, u) {
                             exception: { values: [s(t, u)] },
                             extra: I
                         };
-                    let d = {
+                    let R = {
                         exception: {
                             values: [
                                 {
@@ -108,9 +108,9 @@ function R(t, e, a, i, u) {
                     };
                     if (a) {
                         let e = l(t, a);
-                        e.length && (d.exception.values[0].stacktrace = { frames: e });
+                        e.length && (R.exception.values[0].stacktrace = { frames: e });
                     }
-                    return d;
+                    return R;
                 })(t, e, a, u))
               : ((I = N(t, e, a, i)), (0, o.Db)(I, `${e}`, void 0)),
           (0, o.EG)(I, { synthetic: !0 }),
@@ -140,5 +140,5 @@ function N(t, e, a, r) {
             _
         );
     }
-    return (_.message = e), _;
+    return ((_.message = e), _);
 }

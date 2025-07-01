@@ -25,7 +25,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -41,8 +41,8 @@ function C(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -82,11 +82,11 @@ let S = (e) => {
     let N = (0, l.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
         E = (0, p.Z)(N),
         Z = E ? P.intl.formatToPlainString(P.t.t0928f, { name: S }) : P.intl.formatToPlainString(P.t.UDDkGx, { name: S }),
-        T = w(C({}, t), {
+        R = w(C({}, t), {
             src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40
         }),
-        R = E
+        T = E
             ? () => {
                   (0, m.uL)(v.Z5c.CHANNEL(n.id, j.oC.ROLE_SUBSCRIPTIONS));
               }
@@ -108,7 +108,7 @@ let S = (e) => {
                                 className: x.roleIconContainer,
                                 children: (0, r.jsx)(
                                     c.Z,
-                                    w(C({}, T), {
+                                    w(C({}, R), {
                                         enableTooltip: !1,
                                         className: x.__invalid_roleIcon,
                                         enableHeight: !1
@@ -137,7 +137,7 @@ let S = (e) => {
                         className: x.ctaButton,
                         innerClassName: x.ctaButtonContent,
                         fullWidth: !0,
-                        onClick: R,
+                        onClick: T,
                         autoFocus: !0,
                         children: [
                             (0, r.jsx)(h.Z, {

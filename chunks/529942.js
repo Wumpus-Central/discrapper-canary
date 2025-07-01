@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(392711),
@@ -51,16 +51,16 @@ function d(e) {
                         });
                     }
                     if (!e) {
-                        (w.current = i().random(f, p)), (P.current = i().random(y, h));
+                        ((w.current = i().random(f, p)), (P.current = i().random(y, h)));
                         let e = null != (n = i().sample(u)) ? n : u[0],
                             t = 'right' === e ? -d : o + d;
-                        await I({
+                        (await I({
                             x: t,
                             y: 0,
                             rotateZ: 0,
                             immediate: !0
                         }),
-                            _(e);
+                            _(e));
                     }
                     j(O + 1);
                 })(),

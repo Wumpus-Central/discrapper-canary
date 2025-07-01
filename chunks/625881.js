@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -24,14 +24,14 @@ let C = function (e) {
         [T, I] = r.useState(!1),
         N = async (e) => {
             try {
-                I(!0),
+                (I(!0),
                     v(!1),
                     await a.tn.post({
                         url: b.ANM.USER_OFFER_REDEEM,
                         body: { user_discount_offer_id: e },
                         rejectWithError: !0
                     }),
-                    C();
+                    C());
             } catch (e) {
                 v(!0);
             }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(953529);
+(n.d(t, { Z: () => m }), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(345074),
@@ -13,7 +13,7 @@ function m(e) {
         m = t.id,
         g = i.useCallback(
             (e) => {
-                o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(m, { description: e });
+                (o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(m, { description: e }));
             },
             [m]
         ),

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     KV: () => p,
     PY: () => _,
     Wo: () => h,
@@ -7,7 +7,7 @@ n.d(t, {
 }),
     n(415506),
     n(358797),
-    n(388685);
+    n(388685));
 var r = n(763472),
     i = n(726542),
     a = n(594190),
@@ -38,7 +38,7 @@ function p() {
     }
     return new Promise((e, n) => {
         let r = setTimeout(() => {
-                c.Z.removeChangeListener(i), n(Error('timeout launching spotify'));
+                (c.Z.removeChangeListener(i), n(Error('timeout launching spotify')));
             }, f),
             i = () => {
                 for (let { socket: n, device: a } of c.Z.getPlayableComputerDevices())
@@ -46,14 +46,14 @@ function p() {
                         (clearTimeout(r),
                         c.Z.removeChangeListener(i),
                         setImmediate(() => {
-                            (0, s.Tu)(n.accountId, a.id),
+                            ((0, s.Tu)(n.accountId, a.id),
                                 e({
                                     socket: n,
                                     device: a
-                                });
+                                }));
                         }));
             };
-        c.Z.addChangeListener(i), window.open(''.concat(u.M5, ':'));
+        (c.Z.addChangeListener(i), window.open(''.concat(u.M5, ':')));
     });
 }
 function h() {

@@ -1,10 +1,10 @@
-l.d(t, {
+(l.d(t, {
     default: () => v,
     e: () => C,
     g: () => j
 }),
     l(539854),
-    l(388685);
+    l(388685));
 var n = l(255367),
     r = l(73800),
     s = l(658722),
@@ -48,11 +48,11 @@ function C(e) {
         v = (0, o.Wu)([m.Z], () =>
             C.reduce((e, t) => {
                 let n = m.Z.getGuild(t);
-                return null == n || (null != l && l.some((e) => e.id === t)) || ((j.length <= 0 || i()(j.toLowerCase(), null == n ? void 0 : n.name.toLowerCase())) && e.push(n)), e;
+                return (null == n || (null != l && l.some((e) => e.id === t)) || ((j.length <= 0 || i()(j.toLowerCase(), null == n ? void 0 : n.name.toLowerCase())) && e.push(n)), e);
             }, [])
         );
     function b() {
-        r(), (0, c.xf)(), (0, u.uL)(p.Z5c.GUILD_DISCOVERY);
+        (r(), (0, c.xf)(), (0, u.uL)(p.Z5c.GUILD_DISCOVERY));
     }
     return (0, n.jsxs)(n.Fragment, {
         children: [

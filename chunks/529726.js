@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(539854);
+(n.d(t, { Z: () => m }), n(388685), n(539854));
 var r = n(31775),
     i = n.n(r),
     a = n(147913),
@@ -30,7 +30,7 @@ class h extends a.Z {
         let n = this.recentViewTimes.get(t);
         if (null != n && Date.now() - n < u) return;
         let r = setTimeout(() => {
-            delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e);
+            (delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e));
         }, d);
         this.currentlyVisibleMessageTimers[t] = r;
     }
@@ -45,7 +45,7 @@ class h extends a.Z {
     }
     handleChannelSelect() {
         for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
-        (this.currentlyVisibleMessageTimers = {}), this.viewsInCurrentChannel.clear(), this.drainBuffer();
+        ((this.currentlyVisibleMessageTimers = {}), this.viewsInCurrentChannel.clear(), this.drainBuffer());
     }
     drainBuffer() {
         for (let e of this.batchBuffer)
@@ -56,13 +56,13 @@ class h extends a.Z {
                 source_channel_id: e.sourceChannelId,
                 source_guild_id: e.sourceGuildId
             });
-        (this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
+        ((this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null)));
     }
     bufferViewTrack(e) {
-        this.batchBuffer.length >= f && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), _));
+        (this.batchBuffer.length >= f && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), _)));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'currentlyVisibleMessageTimers', {}),
             c(this, 'viewsInCurrentChannel', new Set()),
             c(
@@ -75,7 +75,7 @@ class h extends a.Z {
             ),
             c(this, 'batchBuffer', []),
             c(this, 'batchTimerId', null),
-            c(this, 'actions', { CHANNEL_SELECT: () => this.handleChannelSelect() });
+            c(this, 'actions', { CHANNEL_SELECT: () => this.handleChannelSelect() }));
     }
 }
 let m = new h();

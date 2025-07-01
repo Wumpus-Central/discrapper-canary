@@ -9,15 +9,15 @@ function s(e, t) {
 function l(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+        ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
     }
 }
 function c(e, t, n) {
-    return t && l(e.prototype, t), n && l(e, n), e;
+    return (t && l(e.prototype, t), n && l(e, n), e);
 }
 var u = (function () {
     function e(t, n) {
-        s(this, e), (this.store = t), (this.registry = n);
+        (s(this, e), (this.store = t), (this.registry = n));
     }
     return (
         c(e, [
@@ -27,7 +27,7 @@ var u = (function () {
                     var t = this,
                         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
                         i = n.handlerIds;
-                    (0, r.k)('function' == typeof e, 'listener must be a function.'), (0, r.k)(void 0 === i || Array.isArray(i), 'handlerIds, when specified, must be an array of strings.');
+                    ((0, r.k)('function' == typeof e, 'listener must be a function.'), (0, r.k)(void 0 === i || Array.isArray(i), 'handlerIds, when specified, must be an array of strings.'));
                     var a = this.store.getState().stateId,
                         s = function () {
                             var n = t.store.getState(),
@@ -59,7 +59,7 @@ var u = (function () {
                 value: function (e) {
                     if (!e) return !1;
                     var t = this.registry.getSource(e);
-                    return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !this.isDragging() && t.canDrag(this, e);
+                    return ((0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !this.isDragging() && t.canDrag(this, e));
                 }
             },
             {
@@ -84,7 +84,7 @@ var u = (function () {
                 value: function (e) {
                     if (!e) return !1;
                     var t = this.registry.getSource(e, !0);
-                    return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !!this.isDragging() && !!this.isSourcePublic() && this.registry.getSourceType(e) === this.getItemType() && t.isDragging(this, e);
+                    return ((0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !!this.isDragging() && !!this.isSourcePublic() && this.registry.getSourceType(e) === this.getItemType() && t.isDragging(this, e));
                 }
             },
             {

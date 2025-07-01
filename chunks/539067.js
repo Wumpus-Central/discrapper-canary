@@ -1,4 +1,4 @@
-n.d(t, { y: () => a }), n(388685);
+(n.d(t, { y: () => a }), n(388685));
 var r = n(73800),
     l = n(442837),
     i = n(19780),
@@ -16,9 +16,9 @@ function a(e) {
                 let n = s.GB,
                     r = await (0, u.uX)(n),
                     l = await (0, u.J6)(e, t, n);
-                d(r), E(l);
+                (d(r), E(l));
             } catch (e) {
-                d(!1), E(!1);
+                (d(!1), E(!1));
             } finally {
                 o(!1);
             }

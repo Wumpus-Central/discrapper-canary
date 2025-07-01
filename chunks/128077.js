@@ -1,4 +1,4 @@
-r.d(t, { f: () => i }), r(388685);
+(r.d(t, { f: () => i }), r(388685));
 var n = r(73800),
     a = r(751648),
     l = r(388032);
@@ -45,13 +45,13 @@ function i() {
                     skuId: e,
                     loadId: t,
                     onRedeemStart: () => {
-                        s(!0), u(null);
+                        (s(!0), u(null));
                     },
                     onRedeemSucceed: (e) => {
-                        i(e), s(!1), null == r || r(e);
+                        (i(e), s(!1), null == r || r(e));
                     },
                     onRedeemFail: (e) => {
-                        u(e), s(!1);
+                        (u(e), s(!1));
                     }
                 });
             }

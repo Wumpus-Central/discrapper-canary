@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685), n(35282);
+(n.d(t, { Z: () => o }), n(388685), n(35282));
 var r = n(818083);
 let i = 'bandwidth_estimation',
     a = (0, r.B)({
@@ -70,7 +70,7 @@ let i = 'bandwidth_estimation',
     o = {
         getConfig(e, t) {
             let n = a.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
-            return this.supportsBandwidthEstimationExperimentFullname(n.fullname, t) || (n.enabled = !1), n;
+            return (this.supportsBandwidthEstimationExperimentFullname(n.fullname, t) || (n.enabled = !1), n);
         },
         supportsBandwidthEstimationExperimentFullname(e, t) {
             let n = this.getMediaEngineExperiments(e);

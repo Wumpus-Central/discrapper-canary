@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     E9: () => y,
     fu: () => E
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -29,7 +29,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,7 +48,7 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -58,7 +58,7 @@ function h(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let m = (e, t) => (void 0 !== t && t > e ? t : e),
@@ -121,10 +121,10 @@ function E(e) {
                 (null != E.current && clearInterval(E.current),
                 (E.current = setInterval(() => {
                     if (b.current >= 10) {
-                        clearInterval(E.current), (E.current = null), (b.current = 0);
+                        (clearInterval(E.current), (E.current = null), (b.current = 0));
                         return;
                     }
-                    p(), b.current++;
+                    (p(), b.current++);
                 }, 200)));
         }, [p]);
     return (
@@ -161,7 +161,7 @@ function b(e) {
                             width: i
                         })
                     );
-                    return void 0 !== c.top && (c.top = m(o.top + c.top, null == a ? void 0 : a.top)), void 0 !== c.left && (c.left = m(o.left + c.left, null == a ? void 0 : a.left)), void 0 !== c.right && (c.right = m(window.innerWidth - o.right + c.right, null == a ? void 0 : a.right)), void 0 !== c.bottom && (c.bottom = m(window.innerHeight - o.bottom + c.bottom, null == a ? void 0 : a.bottom)), l(o), (0, s.isEqual)(c, u) || d(c), c;
+                    return (void 0 !== c.top && (c.top = m(o.top + c.top, null == a ? void 0 : a.top)), void 0 !== c.left && (c.left = m(o.left + c.left, null == a ? void 0 : a.left)), void 0 !== c.right && (c.right = m(window.innerWidth - o.right + c.right, null == a ? void 0 : a.right)), void 0 !== c.bottom && (c.bottom = m(window.innerHeight - o.bottom + c.bottom, null == a ? void 0 : a.bottom)), l(o), (0, s.isEqual)(c, u) || d(c), c);
                 },
                 [u, n, r, a, l]
             ),

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     default: () => X,
     m: () => Q
 }),
     n(457542),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -58,7 +58,7 @@ function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -66,7 +66,7 @@ function V(e) {
             )),
             r.forEach(function (t) {
                 B(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -74,11 +74,11 @@ function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -130,7 +130,7 @@ function K(e) {
                 .catch(() => R('error'));
     }, [l, d, S, m]);
     let P = () => {
-            R('applying'), h().finally(a);
+            (R('applying'), h().finally(a));
         },
         w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
         D = null == p && !0 !== m,
@@ -269,7 +269,7 @@ function q(e) {
                                 className: G.upsell,
                                 upsellText: U.intl.format(U.t.VHXn7O, {
                                     onNitroClick: () => {
-                                        Y(), o();
+                                        (Y(), o());
                                     }
                                 }),
                                 buttonAnalyticsObject: { section: k.jXE.PERMADECOS_MARKETING_UPSELL }

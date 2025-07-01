@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var l = n(255367),
     a = n(73800),
     r = n(120356),
@@ -83,7 +83,7 @@ function T(e) {
                             ? (0, l.jsx)(u.olH, {
                                   className: p.modalCloseButton,
                                   onClick: function () {
-                                      Z(!0), k();
+                                      (Z(!0), k());
                                   }
                               })
                             : null
@@ -100,7 +100,7 @@ function T(e) {
                                       options: M,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          B(t), Object.keys(y).includes(t) || k();
+                                          (B(t), Object.keys(y).includes(t) || k());
                                       }
                                   })
                               }),
@@ -134,7 +134,7 @@ function T(e) {
                                             look: u.zxk.Looks.LINK,
                                             color: u.zxk.Colors.PRIMARY,
                                             onClick: () => {
-                                                B(null), w('');
+                                                (B(null), w(''));
                                             },
                                             children: m.intl.string(m.t['13/7kZ'])
                                         }),

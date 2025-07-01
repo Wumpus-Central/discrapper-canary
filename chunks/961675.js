@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r,
     i = n(442837),
     l = n(570140);
@@ -27,7 +27,7 @@ class s extends (r = i.ZP.PersistedStore) {
         return a;
     }
 }
-o(s, 'displayName', 'ForumChannelAdminOnboardingGuideStore'), o(s, 'persistKey', 'ForumChannelAdminOnboardingGuideStore');
+(o(s, 'displayName', 'ForumChannelAdminOnboardingGuideStore'), o(s, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'));
 let c = new s(l.Z, {
     ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
         let { channelId: t, hide: n } = e;

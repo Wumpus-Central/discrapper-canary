@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Eb: () => w,
     Fx: () => x,
     IM: () => D,
@@ -7,7 +7,7 @@ n.d(t, {
 }),
     n(539854),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(512722),
     i = n.n(r),
     a = n(392711),
@@ -42,7 +42,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -58,11 +58,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -84,7 +84,7 @@ function T(e, t) {
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -94,7 +94,7 @@ function S(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let A = new _.Z('ReadyPayloadUtils'),
@@ -160,7 +160,7 @@ function D(e, t, n) {
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
-            null != t && (e.recipients = t.map((e) => (i()(null != R[e], 'Missing user in compressed ready payload'), R[e]))), delete e.recipient_ids;
+            (null != t && (e.recipients = t.map((e) => (i()(null != R[e], 'Missing user in compressed ready payload'), R[e]))), delete e.recipient_ids);
         });
     let _ = null != (r = null == u ? void 0 : u.map((e, t) => (!0 === e.unavailable ? e : ((e.members = k(R, null == c ? void 0 : c[t])), U(e))))) ? r : [],
         p = L(t, u, (e) => U(e));
@@ -207,18 +207,18 @@ function k(e, t) {
             t.forEach((t) => {
                 if (null == t) return;
                 let r = t.user_id;
-                null != r && (i()(null != e[r], 'Missing user['.concat(r, '] in compressed ready payload')), (t.user = e[r])), delete t.user_id, n.push(t);
+                (null != r && (i()(null != e[r], 'Missing user['.concat(r, '] in compressed ready payload')), (t.user = e[r])), delete t.user_id, n.push(t));
             }),
         n
     );
 }
 function M(e) {
     let t = N[e];
-    return delete N[e], t;
+    return (delete N[e], t);
 }
 function j(e) {
-    null != s.Z.database() && !1 === e.databaseOk && d.Z.replaceDisableAllDatabases('ReadyPayloadUtils: database was not ok'), (N = {});
-    let t = Object.values(E.Z.getGuilds()),
+    (null != s.Z.database() && !1 === e.databaseOk && d.Z.replaceDisableAllDatabases('ReadyPayloadUtils: database was not ok'), (N = {}));
+    let t = E.Z.getGuildsArray(),
         n = p.ZP.getGuilds(),
         r = h.Z.getRawStickersByGuild();
     for (let s of t) {

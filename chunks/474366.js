@@ -1,4 +1,4 @@
-n.d(t, { q: () => S });
+n.d(t, { q: () => N });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -28,11 +28,11 @@ function O(e) {
             soundName: null == n ? void 0 : n.name
         }),
         h = i.useCallback(() => {
-            x.default.track(b.rMx.MODERATOR_QUEUE_ACTION, {
+            (x.default.track(b.rMx.MODERATOR_QUEUE_ACTION, {
                 guild_id: f.Z.getGuildId(),
                 action: 'airhorn'
             }),
-                null != a && a();
+                null != a && a());
         }, [a]);
     return (0, r.jsxs)(o.P3F, {
         'aria-label': m,
@@ -104,7 +104,7 @@ function w(e) {
               text: n
           });
 }
-function S() {
+function N() {
     let e = i.useRef(null);
     return (0, r.jsxs)(o.Kqy, {
         className: y.container,

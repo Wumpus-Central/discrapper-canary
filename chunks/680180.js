@@ -16,11 +16,11 @@ function d(e) {
             [h]
         ),
         _ = a.useCallback(() => {
-            u(),
+            (u(),
                 setTimeout(() => {
                     var e;
                     return null == (e = g.current) ? void 0 : e.focus();
-                });
+                }));
         }, [u]);
     return t === o.GlobalDiscoverySearchBarState.COLLAPSED
         ? (0, r.jsx)(s.P3F, {

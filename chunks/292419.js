@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     SD: () => p,
     kS: () => m,
     np: () => b,
     uZ: () => y
 }),
     n(388685),
-    n(953529);
+    n(953529));
 var r = n(866442),
     i = n(911969),
     a = n(622449),
@@ -69,7 +69,7 @@ function g(e, t) {
             t.components.forEach((t) => g(e, t));
             break;
         case i.re.SECTION:
-            t.components.forEach((t) => g(e, t)), g(e, t.accessory);
+            (t.components.forEach((t) => g(e, t)), g(e, t.accessory));
             break;
         case i.re.CONTAINER:
             t.components.forEach((t) => g(e, t));

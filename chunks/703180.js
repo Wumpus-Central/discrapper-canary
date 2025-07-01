@@ -14,7 +14,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -30,8 +30,8 @@ function d(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -50,11 +50,11 @@ let p = (e) => {
                         label: u.intl.string(u.t.pWLGnJ),
                         icon: o.d3s,
                         action: () => {
-                            (0, o.ZDy)(async () => {
+                            ((0, o.ZDy)(async () => {
                                 let { default: e } = await n.e('71517').then(n.bind(n, 549505));
                                 return (t) => (0, r.jsx)(e, d({}, t));
                             }),
-                                null == t || t();
+                                null == t || t());
                         }
                     }),
                     (0, r.jsx)(o.S89, {
@@ -62,7 +62,7 @@ let p = (e) => {
                         label: u.intl.string(u.t.AhNYub),
                         checked: i,
                         action: () => {
-                            (0, a.lY)(), null == t || t();
+                            ((0, a.lY)(), null == t || t());
                         }
                     })
                 ]
@@ -89,7 +89,7 @@ let p = (e) => {
                         {
                             innerRef: e,
                             onClick: (e) => {
-                                e.stopPropagation(), t.onClick(e);
+                                (e.stopPropagation(), t.onClick(e));
                             },
                             style: {
                                 width: '12px',

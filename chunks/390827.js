@@ -30,7 +30,7 @@ f(function () {
 var R = function (e) {
         if (d(N, e)) {
             var t = N[e];
-            delete N[e], t();
+            (delete N[e], t());
         }
     },
     P = function (e) {
@@ -44,7 +44,7 @@ var R = function (e) {
     D = function (e) {
         s.postMessage(S(e), r.protocol + '//' + r.host);
     };
-(b && y) ||
+((b && y) ||
     ((b = function (e) {
         m(arguments.length, 1);
         var t = u(e) ? e : I(e),
@@ -76,7 +76,7 @@ var R = function (e) {
                     C in h('script')
                         ? function (e) {
                               _.appendChild(h('script'))[C] = function () {
-                                  _.removeChild(this), R(e);
+                                  (_.removeChild(this), R(e));
                               };
                           }
                         : function (e) {
@@ -85,4 +85,4 @@ var R = function (e) {
     (e.exports = {
         set: b,
         clear: y
-    });
+    }));

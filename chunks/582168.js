@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(376398),
@@ -46,7 +46,7 @@ function c(e) {
             return () => {
                 e.then((e) => {
                     let { stream: t, streamId: n } = e;
-                    s(t), null != n && (0, a.jC)(n);
+                    (s(t), null != n && (0, a.jC)(n));
                 });
             };
         }, [t, n, c, u]),

@@ -32,7 +32,7 @@ function c(e, t, n, c, u) {
         confirmText: s.intl.string(s.t.VJlc0d),
         onConfirmClick: (o, l) => {
             var a;
-            i.Z.join({
+            (i.Z.join({
                 userId: n.id,
                 sessionId: p,
                 applicationId: null != (a = c.altId) ? a : c.id,
@@ -40,7 +40,7 @@ function c(e, t, n, c, u) {
                 messageId: t.id
             }),
                 r.Z.updateNotificationStatus(l),
-                y('join');
+                y('join'));
         },
         onDismissClick: () => {
             y('dismiss');

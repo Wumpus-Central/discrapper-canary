@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     U4: () => u,
     hm: () => m,
     py: () => h
 }),
-    n(388685);
+    n(388685));
 var r = n(512722),
     i = n.n(r),
     a = n(53529),
@@ -104,7 +104,7 @@ function p(e, t) {
     return n;
 }
 function h(e, t) {
-    a.T.withSingleEntry(e, () => {
+    (a.T.withSingleEntry(e, () => {
         s.bN.withoutNormalizing(e, () => {
             i()(null != e.selection, 'Editor has no selection');
             let [n, r] = s.M8.edges(e.selection),
@@ -124,17 +124,17 @@ function h(e, t) {
                         path: r.path,
                         offset: d.location
                     };
-                o.Q.delete(e, {
+                (o.Q.delete(e, {
                     at: i,
                     distance: d.chars.length
                 }),
                     o.Q.delete(e, {
                         at: t,
                         distance: l.chars.length
-                    });
+                    }));
                 let a = n.offset,
                     c = r.offset;
-                s.Jz.isBefore(n, t) || (a -= l.chars.length),
+                (s.Jz.isBefore(n, t) || (a -= l.chars.length),
                     p && !s.Jz.isBefore(r, t) && (c -= l.chars.length),
                     s.Jz.isAfter(r, i) && (c -= d.chars.length),
                     o.Q.select(e, {
@@ -146,10 +146,10 @@ function h(e, t) {
                             path: r.path,
                             offset: Math.max(0, c)
                         }
-                    });
+                    }));
             } else {
                 let i = c[t];
-                o.Q.insertText(e, i, { at: r }), o.Q.insertText(e, i, { at: n });
+                (o.Q.insertText(e, i, { at: r }), o.Q.insertText(e, i, { at: n }));
                 let a = f[0].text.length + i.length,
                     s = _[0].text.length + (p ? 2 * i.length : i.length);
                 o.Q.select(e, {
@@ -165,15 +165,15 @@ function h(e, t) {
             }
         });
     }),
-        s.bN.focus(e);
+        s.bN.focus(e));
 }
 function m(e, t) {
     let n = e.selection;
     if (null == n) return;
     let r = !0;
     for (let [i, a] of s.bN.blocks(e)) ('line' === i.type || i.type === t) && s.M8.includes(n, a) && (r = r && i.type === t);
-    s.bN.withoutNormalizing(e, () => {
+    (s.bN.withoutNormalizing(e, () => {
         for (let [i, a] of s.bN.blocks(e)) s.M8.includes(n, a) && (r || 'line' !== i.type ? r && i.type === t && o.Q.setNodes(e, { type: 'line' }, { at: a }) : o.Q.setNodes(e, { type: t }, { at: a }));
     }),
-        s.bN.focus(e);
+        s.bN.focus(e));
 }

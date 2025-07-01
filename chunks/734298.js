@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(539854), n(388685);
+(n.d(t, { Z: () => a }), n(539854), n(388685));
 var r = n(46973),
     i = n(198274);
 function a(e) {
@@ -22,7 +22,7 @@ function a(e) {
                     stats: t
                 });
         }
-        e.emit(r.aB.ConnectionStats, o), setTimeout(n, i.T);
+        (e.emit(r.aB.ConnectionStats, o), setTimeout(n, i.T));
     };
     setTimeout(n, i.T);
 }

@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     FW: () => p,
-    Pk: () => s,
-    Rq: () => g,
-    W_: () => a,
-    dK: () => o,
-    qd: () => m
+    Pk: () => o,
+    Rq: () => m,
+    W_: () => s,
+    dK: () => a,
+    qd: () => g
 }),
     n(410992),
     n(227481),
@@ -25,11 +25,11 @@ n.d(t, {
     n(704826),
     n(35282),
     n(608445),
-    n(415506);
+    n(415506));
 var r = n(512722),
     i = n.n(r),
     l = n(598077);
-function a() {
+function s() {
     return window.crypto.subtle.generateKey(
         {
             name: 'RSA-OAEP',
@@ -41,11 +41,11 @@ function a() {
         ['decrypt']
     );
 }
-async function o(e) {
-    return i()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))));
+async function a(e) {
+    return (i()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey)))));
 }
-async function s(e) {
-    return i()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey));
+async function o(e) {
+    return (i()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey)));
 }
 function c(e) {
     return btoa(String.fromCharCode(...new Uint8Array(e)))
@@ -77,17 +77,17 @@ async function p(e, t) {
         r = await h(e, u(t));
     return n.decode(r);
 }
-async function m(e, t) {
+async function g(e, t) {
     return c(await h(e, u(t)));
 }
-async function g(e, t) {
+async function m(e, t) {
     let n = (t = await p(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
-    let [, r, i, a, o] = n;
+    let [, r, i, s, a] = n;
     return new l.Z({
         id: r,
         discriminator: i,
-        avatar: '0' === a ? null : a,
-        username: o
+        avatar: '0' === s ? null : s,
+        username: a
     });
 }

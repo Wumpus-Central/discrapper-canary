@@ -1,4 +1,4 @@
-n.d(t, { default: () => R }), n(388685);
+(n.d(t, { default: () => R }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -47,19 +47,19 @@ function C(e) {
         U = (0, _.Z)(l),
         G = (0, O.sr)(D, void 0 === R ? w : R),
         B = (e) => {
-            L(e), null != e && U(e);
+            (L(e), null != e && U(e));
         },
         V = () => {
-            P(D), f();
+            (P(D), f());
         },
         F = i.useCallback(
             (e) => {
-                f(),
+                (f(),
                     (0, c.mK)({
                         analyticsLocations: l,
                         analyticsSource: s.Z.EDIT_AVATAR_DECORATION_MODAL,
                         initialProductSkuId: e
-                    });
+                    }));
             },
             [l, f]
         ),
@@ -146,7 +146,7 @@ function R(e) {
         { categories: y, purchases: O, isFetchingCategories: v, isFetchingPurchases: I } = (0, f.ZP)({ location: 'AvatarDecorationModal' }),
         S = v || (I && 0 === O.size),
         A = () => {
-            u(), null == c || c();
+            (u(), null == c || c());
         };
     return (
         i.useEffect(() => {

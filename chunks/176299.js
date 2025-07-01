@@ -1,4 +1,4 @@
-n.d(t, { Z: () => e0 }), n(35282), n(388685);
+(n.d(t, { Z: () => e0 }), n(35282), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -81,7 +81,7 @@ function eT(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -89,7 +89,7 @@ function eT(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -97,8 +97,8 @@ function eT(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -349,15 +349,15 @@ function e$(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: l, hideChannelList: o, isSidebarOpen: s, isOnFullScreenCollectiblesShopRoute: c } = e;
     (0, b.t)(!0);
     let u = 'app view user trigger debugging';
-    m.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), m.R6.trackExposure({ location: u });
+    (m.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), m.R6.trackExposure({ location: u }));
     let g = (0, p.e7)([v.Z], () => v.Z.isFullscreenInContext()),
         E = (0, A.T)('ChannelSidebar'),
         O = (0, T.useAppSidebarState)((e) => !e.isOpen) && E;
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         if (E) {
             var e;
             let t = parseInt(null != (e = h.K.get(e_.nT)) ? e : '');
-            Number.isNaN(t) && (t = e_.qO), (t = Math.min(Math.max(t, e_.li), e_.zx)), !E && t <= e_.p8 && (t = e_.qO), eJ(t);
+            (Number.isNaN(t) && (t = e_.qO), (t = Math.min(Math.max(t, e_.li), e_.zx)), !E && t <= e_.p8 && (t = e_.qO), eJ(t));
             let n = (e) => {
                 e.metaKey && 'b' === e.key && T.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -374,18 +374,18 @@ function e$(e) {
             else {
                 var e;
                 let t = parseInt(null != (e = h.K.get(e_.nT)) ? e : '');
-                Number.isNaN(t) && (t = e_.qO), eJ(t);
+                (Number.isNaN(t) && (t = e_.qO), eJ(t));
             }
-        }, [O]);
+        }, [O]));
     let y = i.useRef(null),
         I = i.useCallback(
             (e, t) => {
                 var n;
                 eJ(e);
                 let r = t < e_.li / 3;
-                t <= e_.li ? document.body.classList.add(eN.draggingMin) : document.body.classList.remove(eN.draggingMin), t >= e_.zx ? document.body.classList.add(eN.draggingMax) : document.body.classList.remove(eN.draggingMax);
+                (t <= e_.li ? document.body.classList.add(eN.draggingMin) : document.body.classList.remove(eN.draggingMin), t >= e_.zx ? document.body.classList.add(eN.draggingMax) : document.body.classList.remove(eN.draggingMax));
                 let i = t - e;
-                null == (n = y.current) || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(i / e_.p8), 0.25))), E && (T.useAppSidebarState.setState({ isOpen: !r }), r && eJ(e_.p8));
+                (null == (n = y.current) || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(i / e_.p8), 0.25))), E && (T.useAppSidebarState.setState({ isOpen: !r }), r && eJ(e_.p8)));
             },
             [E]
         ),
@@ -394,7 +394,7 @@ function e$(e) {
         }, []),
         S = i.useCallback((e) => {
             var t;
-            document.body.classList.remove(eN.dragging), document.body.classList.remove(eN.draggingMin), document.body.classList.remove(eN.draggingMax), document.body.classList.remove(eN.collapsing), null == (t = y.current) || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(e_.nT, e), ed.default.track(ey.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
+            (document.body.classList.remove(eN.dragging), document.body.classList.remove(eN.draggingMin), document.body.classList.remove(eN.draggingMax), document.body.classList.remove(eN.collapsing), null == (t = y.current) || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(e_.nT, e), ed.default.track(ey.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e }));
         }, []),
         N = (0, _.Z)({
             minDimension: e_.li,

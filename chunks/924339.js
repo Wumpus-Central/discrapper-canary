@@ -1,4 +1,4 @@
-t.r(r), t.d(r, { default: () => A }), t(415506), t(35282);
+(t.r(r), t.d(r, { default: () => A }), t(415506), t(35282));
 var n = t(255367);
 t(73800);
 var o = t(512722),
@@ -32,7 +32,7 @@ async function j(e, r, t, n) {
     try {
         a()(null != d, 'No URL in authorize response');
         let { state: e } = (0, b.xp)(d);
-        a()(null != e, 'Authorize URL state query parameter must be present'), (f = e);
+        (a()(null != e, 'Authorize URL state query parameter must be present'), (f = e));
     } catch (e) {
         throw Error('error at authorize parsing callback params');
     }
@@ -62,7 +62,7 @@ function m(e) {
                     g.error('Error Creating Discord link', null == t ? void 0 : t.message);
                     let e = w.Z.toURLSafe(r);
                     if (null == e) return;
-                    e.searchParams.delete('code'), e.searchParams.set('error', 'two_way_link_error'), e.searchParams.set('error_description', null != (a = null == t ? void 0 : t.message) ? a : 'unknown_error'), (r = e.toString());
+                    (e.searchParams.delete('code'), e.searchParams.set('error', 'two_way_link_error'), e.searchParams.set('error_description', null != (a = null == t ? void 0 : t.message) ? a : 'unknown_error'), (r = e.toString()));
                 }
             window.location = null == n || n === c.b.OAUTH_REDIRECT ? r : n;
         };
@@ -74,7 +74,7 @@ function m(e) {
                 for (var r = 1; r < arguments.length; r++) {
                     var t = null != arguments[r] ? arguments[r] : {},
                         n = Object.keys(t);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (n = n.concat(
                             Object.getOwnPropertySymbols(t).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -82,7 +82,7 @@ function m(e) {
                         )),
                         n.forEach(function (r) {
                             var n;
-                            (n = t[r]),
+                            ((n = t[r]),
                                 r in e
                                     ? Object.defineProperty(e, r, {
                                           value: n,
@@ -90,8 +90,8 @@ function m(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[r] = n);
-                        });
+                                    : (e[r] = n));
+                        }));
                 }
                 return e;
             })({ transitionState: P.Dv.ENTERED }, a)),

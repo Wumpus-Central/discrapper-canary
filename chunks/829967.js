@@ -41,7 +41,7 @@ let a = {
                     var a = t.elements[e],
                         o = t.attributes[e] || {},
                         s = Object.keys(t.styles.hasOwnProperty(e) ? t.styles[e] : n[e]).reduce(function (e, t) {
-                            return (e[t] = ''), e;
+                            return ((e[t] = ''), e);
                         }, {});
                     (0, i.Re)(a) &&
                         (0, r.Z)(a) &&

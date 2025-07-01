@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $l: () => w,
     G1: () => O,
     JR: () => A,
@@ -8,7 +8,7 @@ n.d(t, {
     wv: () => T,
     yK: () => v
 }),
-    n(35282);
+    n(35282));
 var r = n(73800),
     i = n(392711),
     a = n.n(i),
@@ -73,7 +73,7 @@ async function O(e) {
         r = new c.Hx(e);
     }
     let u = (null == i || null == (t = i.body) ? void 0 : t.summaries) instanceof Array ? i.body.summaries : null != (n = null == i ? void 0 : i.body) ? n : [];
-    (u = a().takeRight(u, m)),
+    ((u = a().takeRight(u, m)),
         l.Z.dispatch({
             type: 'RECEIVE_CHANNEL_SUMMARIES',
             channelId: e,
@@ -81,7 +81,7 @@ async function O(e) {
             error: null != r ? r : void 0,
             requestedAt: o,
             receivedAt: Date.now()
-        });
+        }));
 }
 function v(e, t) {
     l.Z.dispatch({
@@ -94,12 +94,12 @@ function I() {
     l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
 function T(e, t) {
-    null != e && null != t && y(e, t),
+    (null != e && null != t && y(e, t),
         l.Z.dispatch({
             type: 'SET_SELECTED_SUMMARY',
             channelId: e,
             summaryId: null != t ? t : null
-        });
+        }));
 }
 function S(e, t) {
     l.Z.dispatch({
@@ -217,14 +217,14 @@ function P() {
 }
 async function w(e) {
     try {
-        await s.tn.del({
+        (await s.tn.del({
             url: h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id),
             rejectWithError: !1
         }),
             l.Z.dispatch({
                 type: 'DELETE_SUMMARY',
                 summary: e
-            });
+            }));
     } catch (e) {
         throw new c.Hx(e);
     }
@@ -239,7 +239,7 @@ let D = {
     fetchSummariesBulk: R,
     useChannelSummaries: function (e) {
         let { channelIds: t = [] } = e;
-        return P(t), (0, o.Wu)([p.Z], () => p.Z.topSummaries(), []);
+        return (P(t), (0, o.Wu)([p.Z], () => p.Z.topSummaries(), []));
     },
     deleteSummary: w
 };

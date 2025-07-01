@@ -1,4 +1,4 @@
-n.d(t, { f: () => C }), n(388685), n(49124);
+(n.d(t, { f: () => C }), n(388685), n(49124));
 var i = n(255367),
     r = n(73800),
     s = n(245364),
@@ -20,7 +20,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function E(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -36,8 +36,8 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -373,7 +373,7 @@ function Z() {
                     try {
                         let t = JSON.parse(e),
                             n = JSON.parse(a);
-                        b(null),
+                        (b(null),
                             b(
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
@@ -397,9 +397,9 @@ function Z() {
                             ),
                             l(t),
                             m(n),
-                            p(null);
+                            p(null));
                     } catch (e) {
-                        console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), p('Error parsing JSON. Check console for more information.');
+                        (console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), p('Error parsing JSON. Check console for more information.'));
                     }
                 },
                 children: 'Apply Changes'

@@ -146,7 +146,7 @@ function Y(e) {
         }),
         l = x.eo.useSetting(),
         c = i.useCallback((e, t) => {
-            x.eo.updateSetting(t), O.default.track(B.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: t });
+            (x.eo.updateSetting(t), O.default.track(B.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: t }));
         }, []);
     return n >= 2 && n <= D.tB
         ? (0, r.jsx)(a.xJW, {
@@ -265,7 +265,7 @@ function K(e) {
                     className: W.hardwareWarning,
                     children: U.intl.format(U.t.zCLXws, {
                         onClick: () => {
-                            j(), c.Z.open(B.oAB.VOICE, G.gP, { scrollPosition: G.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
+                            (j(), c.Z.open(B.oAB.VOICE, G.gP, { scrollPosition: G.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }));
                         }
                     })
                 }),

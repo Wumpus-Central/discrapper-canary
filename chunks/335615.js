@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ec }), n(388685);
+(n.d(t, { Z: () => ec }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(493324),
     O = n(611064),
     E = n(677432),
-    I = n(178762),
-    S = n(868671),
+    S = n(178762),
+    I = n(868671),
     P = n(82295),
     Z = n(91218),
     N = n(313201),
@@ -33,13 +33,13 @@ var r = n(255367),
     R = n(850020),
     k = n(155409),
     M = n(670188),
-    D = n(706454),
-    L = n(662594),
+    L = n(706454),
+    D = n(662594),
     U = n(485386),
     B = n(944486),
     F = n(111583),
-    G = n(594174),
-    H = n(979651),
+    H = n(594174),
+    G = n(979651),
     V = n(585483),
     z = n(823379),
     W = n(51144),
@@ -64,7 +64,7 @@ function J(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -72,7 +72,7 @@ function J(e) {
             )),
             r.forEach(function (t) {
                 Q(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -104,12 +104,12 @@ function ee(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -129,14 +129,14 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
     er = i.memo(function (e) {
         let { colorString: t, colorStrings: l, colorRoleName: o, colorRoleId: a, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: y, guildId: C, isTyping: x, isMobileOnline: v, premiumSince: j, nameplate: O } = e,
             E = ee(e, ['colorString', 'colorStrings', 'colorRoleName', 'colorRoleId', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate']),
-            I = i.useRef(null),
-            [S, P] = i.useState(!1),
+            S = i.useRef(null),
+            [I, P] = i.useState(!1),
             Z = null != j ? new Date(j) : null,
             N = i.useCallback(
                 (e) => {
                     (0, m.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387)),
-                            t = H.Z.isInChannel(B.Z.getVoiceChannelId(), u.id);
+                            t = G.Z.isInChannel(B.Z.getVoiceChannelId(), u.id);
                         return (n) =>
                             (0, r.jsx)(
                                 e,
@@ -154,12 +154,12 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             A = i.useCallback(() => {
                 let e = '@'.concat(W.ZP.getUserTag(u, { decoration: 'never' })),
                     t = '<@'.concat(u.id, '>');
-                V.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: y.id }),
+                (V.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: y.id }),
                     V.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: t
                     }),
-                    b.Z.startTyping(y.id);
+                    b.Z.startTyping(y.id));
             }, [u, y.id]),
             w = i.useCallback(
                 (e) => {
@@ -176,7 +176,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 [C]
             );
         return (0, r.jsx)(M.Z, {
-            targetElementRef: I,
+            targetElementRef: S,
             user: u,
             guildId: C,
             channelId: y.id,
@@ -184,7 +184,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
             onShiftClick: A,
-            shouldShow: S,
+            shouldShow: I,
             onRequestClose: () => {
                 P(!1);
             },
@@ -195,7 +195,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                     _.Z,
                     J(
                         {
-                            ref: I,
+                            ref: S,
                             className: X.member,
                             onContextMenu: N,
                             shouldAnimateStatus: et,
@@ -215,14 +215,14 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                             guildId: C,
                             isMobile: v,
                             onClickPremiumGuildIcon: w,
-                            selected: S,
+                            selected: I,
                             itemProps: E,
                             nameplate: O,
                             onClick: (e) => {
                                 e.shiftKey ? null == A || A() : P((e) => !e);
                             },
                             onMouseDown: (e) => {
-                                S ? e.stopPropagation() : null == i || i(e);
+                                I ? e.stopPropagation() : null == i || i(e);
                             }
                         },
                         a
@@ -237,7 +237,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             { channel: i, user: l, index: o } = e,
             a = (0, c.JA)(''.concat(o)),
             s = (0, h.e7)([F.Z], () => F.Z.isTyping(i.id, l.id)),
-            u = (0, h.e7)([G.default], () => G.default.getCurrentUser()),
+            u = (0, h.e7)([H.default], () => H.default.getCurrentUser()),
             d = (0, h.e7)(
                 [U.Z],
                 () => {
@@ -264,7 +264,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 guildId: l,
                 size: 16
             }),
-            a = (0, h.e7)([D.default], () => new Intl.NumberFormat(D.default.locale).format(i), [i]);
+            a = (0, h.e7)([L.default], () => new Intl.NumberFormat(L.default.locale).format(i), [i]);
         return t === q.Skl.UNKNOWN
             ? (0, r.jsx)('div', {
                   className: X.membersGroup,
@@ -296,10 +296,10 @@ class ea extends i.Component {
         return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
     }
     componentDidMount() {
-        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, j.$)('ChannelMembers'));
+        (this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, j.$)('ChannelMembers')));
     }
     componentDidUpdate(e) {
-        e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
+        (e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen());
     }
     getContentFeedAdjustedDimensions(e) {
         let { height: t, rowHeight: n, y: r } = e,
@@ -359,7 +359,7 @@ class ea extends i.Component {
                                                     innerAriaLabel: K.intl.string(K.t['9Oq93t']),
                                                     ref: (e) => {
                                                         var t;
-                                                        (this._list = e), (this.props.listRef.current = e), (a.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                                                        ((this._list = e), (this.props.listRef.current = e), (a.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                                                     },
                                                     className: o()(X.members, { [X.fullWidth]: d.tq }),
                                                     paddingTop: 0,
@@ -385,12 +385,12 @@ class ea extends i.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             Q(this, '_list', null),
             Q(this, '_areActivitiesExperimentallyHidden', !1),
             Q(this, 'lastReportedAnalyticsChannel', void 0),
             Q(this, 'setList', (e) => {
-                (this._list = e), (this.props.listRef.current = e);
+                ((this._list = e), (this.props.listRef.current = e));
             }),
             Q(this, 'renderSection', (e) => {
                 let { section: t } = e,
@@ -436,7 +436,7 @@ class ea extends i.Component {
                     { channel: l } = this.props,
                     o = this.getRowProps(e);
                 if (null != o) {
-                    if (o.type === L.so.MEMBER && 'user' in o) {
+                    if (o.type === D.so.MEMBER && 'user' in o) {
                         let { colorString: e, colorStrings: t, colorRoleId: n, user: a, status: s, isOwner: c, isMobileOnline: u, nick: d, activities: p, applicationStream: h, premiumSince: f } = o;
                         return (0, r.jsx)(
                             ei,
@@ -459,11 +459,11 @@ class ea extends i.Component {
                             'member-'.concat(o.user.id)
                         );
                     }
-                    if (o.type === L.so.CONTENT_INVENTORY) {
+                    if (o.type === D.so.CONTENT_INVENTORY) {
                         let e = 'content-inventory-'.concat(o.entry.id);
                         null != o.entry.original_id && (e += '-'.concat(o.entry.original_id));
                         let t = (0, r.jsx)(
-                            I.ZP,
+                            S.ZP,
                             $(J({}, o), {
                                 channel: this.props.channel,
                                 index: i
@@ -472,12 +472,12 @@ class ea extends i.Component {
                         );
                         return o.entry.content_type === p.s.LEADERBOARD ? (0, r.jsx)(w.N, { children: t }, e) : t;
                     }
-                    if (o.type === L.so.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(E.Z, {}, 'content-inventory-hidden-entry');
+                    if (o.type === D.so.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(E.Z, {}, 'content-inventory-hidden-entry');
                 }
                 return (0, r.jsx)(eo, { index: i }, 'placeholder-'.concat(t, ':').concat(n));
             }),
             Q(this, 'handleScroll', () => {
-                this.updateSubscription(), this.updateMaxContentFeedRowSeen();
+                (this.updateSubscription(), this.updateMaxContentFeedRowSeen());
             }),
             Q(
                 this,
@@ -491,7 +491,7 @@ class ea extends i.Component {
                 }, 50)
             ),
             Q(this, 'getContentFeedGroup', () => {
-                let e = this.props.groups[S.T];
+                let e = this.props.groups[I.T];
                 if ((0, O.R)(e)) return e;
             }),
             Q(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
@@ -502,9 +502,9 @@ class ea extends i.Component {
                     let { rows: n } = this.props,
                         r = e.index;
                     return function (e, i) {
-                        if (e === S.T) {
+                        if (e === I.T) {
                             let e = n[r + 1 + i];
-                            return (0, I.iZ)(e);
+                            return (0, S.iZ)(e);
                         }
                         return t;
                     };
@@ -537,7 +537,7 @@ class ea extends i.Component {
                 let t = null == (e = this._list) ? void 0 : e.getItems(),
                     { rowsVisible: n } = this.getDimensions();
                 if (void 0 === n || 0 === n || null == t) return;
-                this.hasContentFeed() && (t = t.filter((e) => e.section !== S.T));
+                this.hasContentFeed() && (t = t.filter((e) => e.section !== I.T));
                 let r = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
@@ -546,7 +546,7 @@ class ea extends i.Component {
                 let i = r.reduce(
                     (e, t) => {
                         var n;
-                        return t.type !== L.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === q.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, (null == (n = t.user.collectibles) ? void 0 : n.nameplate) != null && e.num_users_visible_with_nameplate++), e;
+                        return (t.type !== D.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === q.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, (null == (n = t.user.collectibles) ? void 0 : n.nameplate) != null && e.num_users_visible_with_nameplate++), e);
                     },
                     {
                         num_users_visible: 0,
@@ -557,21 +557,21 @@ class ea extends i.Component {
                         num_users_visible_with_nameplate: 0
                     }
                 );
-                (this.lastReportedAnalyticsChannel = this.props.channel.id), x.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, J({}, i));
-            });
+                ((this.lastReportedAnalyticsChannel = this.props.channel.id), x.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, J({}, i)));
+            }));
     }
 }
 function es(e) {
     let { channel: t, className: n } = e,
         { analyticsLocations: l } = (0, v.ZP)(C.Z.MEMBER_LIST),
         a = (0, h.e7)([y.Z], () => y.Z.keyboardModeEnabled),
-        s = (0, h.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
+        s = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,
             groups: p,
             version: m,
             updateMaxRowSeen: g
-        } = (0, S.H)({
+        } = (0, I.H)({
             memberStoreProps: s,
             channelId: t.id,
             guildId: t.guild_id

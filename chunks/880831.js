@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => T,
     z: () => Z
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -26,8 +26,8 @@ var r = n(255367),
     j = n(768581),
     O = n(70956),
     E = n(823379),
-    I = n(981631),
-    S = n(217702),
+    S = n(981631),
+    I = n(217702),
     P = n(955525);
 let Z = 10 * O.Z.Millis.SECOND;
 function N(e) {
@@ -45,7 +45,7 @@ function N(e) {
         d = i.useContext(f.Z),
         [x, O] = i.useState(!1),
         E = (0, m.p)(),
-        I = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 'A' !== e.target.nodeName &&
                     (p.Z.updateChatOpen(n.channel_id, !0),
@@ -72,7 +72,7 @@ function N(e) {
         } = (0, _.f)(n, Z, l, a, P.messageContent, {
             trailingIconClass: P.messageContentTrailingIcon,
             leadingIconClass: P.messageContentLeadingIcon,
-            iconSize: S.WW
+            iconSize: I.WW
         }),
         R = (0, y.cv)(n),
         k =
@@ -98,7 +98,7 @@ function N(e) {
         onMouseLeave: () => {
             O(!1);
         },
-        onClick: I,
+        onClick: S,
         children: [
             (0, r.jsxs)('div', {
                 className: o()(P.messageContentWrapper, { [P.mentioned]: n.mentioned }),
@@ -130,12 +130,12 @@ function T(e) {
                 h = i.useRef(null),
                 f = i.useRef(void 0),
                 m = i.useCallback(() => {
-                    s([]), p(!0);
+                    (s([]), p(!0));
                 }, []);
-            i.useEffect(() => {
+            (i.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: r, optimistic: i } = e;
-                    t !== n || r.type === I.uaV.STAGE_START || r.type === I.uaV.STAGE_END || r.type === I.uaV.STAGE_TOPIC || r.type === I.uaV.STAGE_SPEAKER || r.type === I.uaV.STAGE_RAISE_HAND || i || (clearTimeout(f.current), (f.current = setTimeout(m, o)), s((e) => [...e, r.id]));
+                    t !== n || r.type === S.uaV.STAGE_START || r.type === S.uaV.STAGE_END || r.type === S.uaV.STAGE_TOPIC || r.type === S.uaV.STAGE_SPEAKER || r.type === S.uaV.STAGE_RAISE_HAND || i || (clearTimeout(f.current), (f.current = setTimeout(m, o)), s((e) => [...e, r.id]));
                 }
                 return (
                     d.Z.subscribe('MESSAGE_CREATE', e),
@@ -157,7 +157,7 @@ function T(e) {
                             return [...e.slice(t)];
                         });
                 }, [a]),
-                r && null == h.current ? (h.current = a) : r || null == h.current || (h.current = null);
+                r && null == h.current ? (h.current = a) : r || null == h.current || (h.current = null));
             let g = null != (t = h.current) ? t : a;
             return {
                 toastsHidden: u,
@@ -175,7 +175,7 @@ function T(e) {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
         y = i.useRef(g);
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         y.current = g;
     }),
         i.useLayoutEffect(() => {
@@ -184,10 +184,10 @@ function T(e) {
             for (let r of f) {
                 var n;
                 let i = null != (n = m.current[r.id]) ? n : 0;
-                (e[r.id] = t), (t += i + 8);
+                ((e[r.id] = t), (t += i + 8));
             }
             (0, a.isEqual)(e, y.current) || b(e);
-        }, [f]);
+        }, [f]));
     let C = f.map((e) => ({
             message: e,
             height: m.current[e.id],
@@ -217,7 +217,7 @@ function T(e) {
             }
         });
     return (0, r.jsx)(u.f6W, {
-        theme: I.BRd.DARK,
+        theme: S.BRd.DARK,
         children: (e) =>
             (0, r.jsx)('div', {
                 className: o()(n, e),

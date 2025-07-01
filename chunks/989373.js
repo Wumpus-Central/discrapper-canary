@@ -1,9 +1,9 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         default: () => S,
-        useOverlayInitialFocus: () => I
+        useOverlayInitialFocus: () => y
     }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -23,8 +23,8 @@ var b = n(554370),
     v = n(371651),
     h = n(610394),
     g = n(757744),
-    y = n(981631);
-function I(e, t) {
+    I = n(981631);
+function y(e, t) {
     let n = (0, o.e7)([u.Z], () => {
             var t;
             return null != (t = u.Z.getWindow(e)) ? t : window;
@@ -53,7 +53,7 @@ function I(e, t) {
     let g = i.useCallback(() => {
         n.requestAnimationFrame(() => {
             try {
-                a.Z.successfullyShown((0, m.getPID)()), p.ZP.showInactive(e);
+                (a.Z.successfullyShown((0, m.getPID)()), p.ZP.showInactive(e));
             } catch (t) {
                 t.message.includes('IPC') &&
                     setTimeout(() => {
@@ -71,9 +71,9 @@ function I(e, t) {
             d && g();
             let n = null != (e = h.ZP.getFocusedPID()) ? e : (0, m.getPID)(),
                 r = null != _.Z.getVoiceChannelId();
-            a.Z.track(y.rMx.OVERLAY_INITIALIZED, {
+            a.Z.track(I.rMx.OVERLAY_INITIALIZED, {
                 voice_widget_connected: r,
-                text_widget_connected: h.ZP.isPinned(y.Odu.TEXT),
+                text_widget_connected: h.ZP.isPinned(I.Odu.TEXT),
                 overlay_render_method: l.gl[v.default.getOverlayMethod(n)],
                 unpinned_widget_types: s.Z.getAllUnpinnedPinnedWidgets(t)
             });
@@ -83,7 +83,7 @@ function I(e, t) {
 }
 function S(e) {
     let { withTitleBar: t, windowKey: n } = e;
-    return I(n, g.$S)
+    return y(n, g.$S)
         ? (0, r.jsx)(d.Z, {
               withTitleBar: t,
               windowKey: n,

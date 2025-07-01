@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(781311);
+(n.d(t, { Z: () => O }), n(388685), n(781311));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -24,8 +24,8 @@ let O = (e) => {
     var t;
     let { channel: O, guild: E } = e,
         {
-            currentCategoryId: I,
-            directoryEntries: S,
+            currentCategoryId: S,
+            directoryEntries: I,
             categoryCounts: P,
             allEntriesCount: Z,
             isLoading: N
@@ -60,7 +60,7 @@ let O = (e) => {
         },
         [O.id]
     );
-    let T = i.useMemo(() => (null != S ? (0, y.v)(Object.values(S), I) : null), [S, I]),
+    let T = i.useMemo(() => (null != I ? (0, y.v)(Object.values(I), S) : null), [I, S]),
         {
             mostRecentQuery: A,
             searchFetching: w,
@@ -74,8 +74,8 @@ let O = (e) => {
             };
         }),
         [k, M] = i.useState(A),
-        D = '' !== A,
-        { showHubEventsList: L } = c.Z.useExperiment(
+        L = '' !== A,
+        { showHubEventsList: D } = c.Z.useExperiment(
             {
                 guildId: null != (t = E.id) ? t : '',
                 location: '6f7fb0_1'
@@ -84,23 +84,23 @@ let O = (e) => {
         ),
         U = {
             mostRecentQuery: A,
-            showHubEventsList: L
+            showHubEventsList: D
         },
         B = i.useRef(U);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         B.current = U;
     }),
         i.useEffect(() => {
             let { mostRecentQuery: e, showHubEventsList: t } = B.current;
-            h.c$(O.id), h.YZ(O.id), t && p.c(O.id), M(e);
+            (h.c$(O.id), h.YZ(O.id), t && p.c(O.id), M(e));
         }, [O.id]),
         i.useEffect(() => {
             d.default.track(v.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: O.id,
                 directory_guild_id: E.id,
-                primary_category_id: I
+                primary_category_id: S
             });
-        }, [O.id, E.id, I]);
+        }, [O.id, E.id, S]));
     let F = (0, g.G)(O)
             ? () => {
                   (0, o.ZDy)(async () => {
@@ -113,7 +113,7 @@ let O = (e) => {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -121,7 +121,7 @@ let O = (e) => {
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              (r = n[t]),
+                                              ((r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
@@ -129,8 +129,8 @@ let O = (e) => {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
-                                          });
+                                                      : (e[t] = r));
+                                          }));
                                   }
                                   return e;
                               })({}, t)),
@@ -139,7 +139,7 @@ let O = (e) => {
                                       directoryGuildName: E.name,
                                       directoryGuildId: E.id,
                                       directoryChannelId: O.id,
-                                      currentCategoryId: I === x.AR.ALL ? null : I
+                                      currentCategoryId: S === x.AR.ALL ? null : S
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -159,7 +159,7 @@ let O = (e) => {
                   });
               }
             : void 0,
-        G = (e) => {
+        H = (e) => {
             0 !== k.trim().length &&
                 e.charCode === v.yXg.ENTER &&
                 (h.Rq(O.id, k),
@@ -168,26 +168,26 @@ let O = (e) => {
                     directory_guild_id: E.id
                 }));
         },
-        H = () => {
-            M(''), h.So(O.id);
+        G = () => {
+            (M(''), h.So(O.id));
         };
-    return D
+    return L
         ? (0, r.jsx)(C.Z, {
               searchQuery: k,
               setSearchQuery: M,
               mostRecentQuery: A,
-              handleSearchKeyPress: G,
-              handleClearSearch: H,
+              handleSearchKeyPress: H,
+              handleClearSearch: G,
               handleCreateOrAddGuild: F,
               searchResults: R,
               searchFetching: w
           })
-        : null == T && null == I
+        : null == T && null == S
           ? (0, r.jsx)('div', {
                 className: j.pageContainer,
                 children: (0, r.jsx)(o.$jN, { className: j.spinner })
             })
-          : (null == T ? void 0 : T.length) === 0 && null == I
+          : (null == T ? void 0 : T.length) === 0 && null == S
             ? (0, r.jsx)('div', {
                   className: j.pageContainer,
                   children: (0, r.jsx)(b.Z, {
@@ -199,10 +199,10 @@ let O = (e) => {
                   channel: O,
                   searchQuery: k,
                   setSearchQuery: M,
-                  handleSearchKeyPress: G,
-                  handleClearSearch: H,
+                  handleSearchKeyPress: H,
+                  handleClearSearch: G,
                   handleCreateOrAddGuild: F,
-                  currentCategoryId: I,
+                  currentCategoryId: S,
                   handleSelectCategory: (e) => {
                       h.Su(O.id, e);
                   },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(953529);
+(n.d(t, { Z: () => T }), n(388685), n(953529));
 var i = n(255367),
     s = n(73800),
     l = n(120356),
@@ -37,12 +37,12 @@ function T(e) {
         [G, D] = s.useState(!1),
         U = (0, E.LB)(),
         k = s.useCallback(() => {
-            clearTimeout(w.current),
+            (clearTimeout(w.current),
                 (R.current += 1),
                 R.current > 10 && (D(!0), h.K.set(E.CZ, !0)),
                 (w.current = setTimeout(() => {
                     R.current = 0;
-                }, 1000));
+                }, 1000)));
         }, []),
         [X, V] = o().partition(U, (e) => !e.requirePremium || (e.requirePremium && P)),
         W = X.map((e) => {
@@ -139,7 +139,7 @@ function T(e) {
                                   className: r()({ [_.options]: z }),
                                   value: null != A ? A : E.YC.CLASSIC,
                                   onChange: (e) => {
-                                      L(e.value), P && (0, f.t)(t, A, e.value, 'notificationSettings');
+                                      (L(e.value), P && (0, f.t)(t, A, e.value, 'notificationSettings'));
                                   },
                                   options: W,
                                   radioItemClassName: _.option

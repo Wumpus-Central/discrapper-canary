@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
+(n.d(t, {
     $o: () => _,
     NE: () => d,
     P1: () => c,
@@ -23,7 +23,7 @@ n.d(t, {
     x3: () => l
 }),
     n(35282),
-    n(388685);
+    n(388685));
 let i = 'data-list-item-id',
     a = 'data-list-id',
     o = '___';
@@ -53,12 +53,12 @@ function f(e, t) {
 class _ {
     get(e) {
         let t = this.handlers.get(e);
-        return null == t && ((t = this.makeHandler(e)), this.handlers.set(e, t)), t;
+        return (null == t && ((t = this.makeHandler(e)), this.handlers.set(e, t)), t);
     }
     clean() {
-        delete this.handlers, (this.handlers = new Map());
+        (delete this.handlers, (this.handlers = new Map()));
     }
     constructor(e) {
-        r(this, 'makeHandler', void 0), r(this, 'handlers', void 0), (this.makeHandler = e), (this.handlers = new Map()), (this.makeHandler = e);
+        (r(this, 'makeHandler', void 0), r(this, 'handlers', void 0), (this.makeHandler = e), (this.handlers = new Map()), (this.makeHandler = e));
     }
 }

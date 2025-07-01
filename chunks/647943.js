@@ -14,7 +14,7 @@ function s(e) {
 }
 class l {
     constructor(e, t) {
-        (this.varint64 = a.sg),
+        ((this.varint64 = a.sg),
             (this.uint32 = a.jI),
             (this.buf = e),
             (this.len = e.length),
@@ -26,7 +26,7 @@ class l {
                     : new TextDecoder('utf-8', {
                           fatal: !0,
                           ignoreBOM: !0
-                      }));
+                      })));
     }
     tag() {
         let e = this.uint32(),
@@ -57,7 +57,7 @@ class l {
             default:
                 throw Error('cant skip wire type ' + e);
         }
-        return this.assertBounds(), this.buf.subarray(t, this.pos);
+        return (this.assertBounds(), this.buf.subarray(t, this.pos));
     }
     assertBounds() {
         if (this.pos > this.len) throw RangeError('premature EOF');
@@ -78,7 +78,7 @@ class l {
     sint64() {
         let [e, t] = this.varint64(),
             n = -(1 & e);
-        return (e = ((e >>> 1) | ((1 & t) << 31)) ^ n), (t = (t >>> 1) ^ n), new i.M(e, t);
+        return ((e = ((e >>> 1) | ((1 & t) << 31)) ^ n), (t = (t >>> 1) ^ n), new i.M(e, t));
     }
     bool() {
         let [e, t] = this.varint64();
@@ -105,7 +105,7 @@ class l {
     bytes() {
         let e = this.uint32(),
             t = this.pos;
-        return (this.pos += e), this.assertBounds(), this.buf.subarray(t, t + e);
+        return ((this.pos += e), this.assertBounds(), this.buf.subarray(t, t + e));
     }
     string() {
         return this.textDecoder.decode(this.bytes());

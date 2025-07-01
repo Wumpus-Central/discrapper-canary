@@ -22,12 +22,12 @@ function f(e) {
                         n,
                         o = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
             }
             return o;
         })(e, ['header', 'children', 'sku_id', 'sku_name', 'guild_id', 'cancelLabel', 'confirmLabel', 'transitionState', 'onClose']);
@@ -38,7 +38,7 @@ function f(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -46,7 +46,7 @@ function f(e) {
                     )),
                     n.forEach(function (t) {
                         var n;
-                        (n = r[t]),
+                        ((n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
@@ -54,8 +54,8 @@ function f(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
-                    });
+                                : (e[t] = n));
+                    }));
             }
             return e;
         })(
@@ -64,7 +64,7 @@ function f(e) {
                 cancelText: null != d ? d : s.intl.string(s.t['ETE/oK']),
                 confirmText: null != g ? g : s.intl.string(s.t['+78Pfn']),
                 onConfirm: () => {
-                    a.default.track(u.rMx.TNS_SKU_REPORT_SUBMITTED, {
+                    (a.default.track(u.rMx.TNS_SKU_REPORT_SUBMITTED, {
                         sku_id: O,
                         guild_id: y,
                         user_id: null == P ? void 0 : P.id
@@ -72,7 +72,7 @@ function f(e) {
                         l.Z.show({
                             title: s.intl.string(s.t.sUvCKS),
                             body: s.intl.format(s.t['7KJnk5'], { skuName: p })
-                        });
+                        }));
                 },
                 transitionState: m,
                 onClose: j

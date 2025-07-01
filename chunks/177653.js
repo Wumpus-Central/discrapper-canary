@@ -25,7 +25,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -62,7 +62,7 @@ function f(e, t) {
 }
 let _ = 20;
 var p = (function (e) {
-    return (e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR'), e;
+    return ((e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR'), e);
 })({});
 function h(e) {
     let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: s, minUserInstallCommandCount: l, excludeAppsWithCustomInstallUrl: c, excludeNonEmbeddedApps: u, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d, source: f = o.F.APP_DIRECTORY } = e;
@@ -102,7 +102,7 @@ function b(e) {
             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: _,
             source: p
         });
-    m.set(E, u({ lastFetchTimeMs: Date.now() }, o)), (g = f(u({}, g), { [E]: 1 }));
+    (m.set(E, u({ lastFetchTimeMs: Date.now() }, o)), (g = f(u({}, g), { [E]: 1 })));
 }
 function y(e) {
     let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: o, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: l, excludeNonEmbeddedApps: c, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d, source: _ } = e,

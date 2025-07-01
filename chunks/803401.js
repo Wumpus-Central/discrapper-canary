@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'colors',
         author: 'mrmrs (http://clrs.cc)',
@@ -19,4 +19,4 @@
         base0E: '#b10dc9',
         base0F: '#85144b'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

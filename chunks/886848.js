@@ -19,22 +19,22 @@ function o(e, t, n) {
     );
 }
 var s = (function (e) {
-    return (e.Stream = 'stream'), (e.Video = 'video'), (e.Mute = 'mute'), (e.VoiceActivity = 'voiceactivity'), (e.DesktopSourceEnd = 'desktopsourceend'), (e.Speaking = 'speaking'), (e.AudioPermission = 'audio-permission'), (e.VideoPermission = 'video-permission'), (e.AddVideoTrack = 'add-video-track'), e;
+    return ((e.Stream = 'stream'), (e.Video = 'video'), (e.Mute = 'mute'), (e.VoiceActivity = 'voiceactivity'), (e.DesktopSourceEnd = 'desktopsourceend'), (e.Speaking = 'speaking'), (e.AudioPermission = 'audio-permission'), (e.VideoPermission = 'video-permission'), (e.AddVideoTrack = 'add-video-track'), e);
 })({});
 class l extends r.Z {
     destroy() {
-        this.removeAllListeners(), this.destroyStreams();
+        (this.removeAllListeners(), this.destroyStreams());
     }
     destroyStreams() {
         var e;
-        this.audio.destroy(), this.video.destroy(), null == (e = this.desktop) || e.destroy();
+        (this.audio.destroy(), this.video.destroy(), null == (e = this.desktop) || e.destroy());
     }
     setDesktop(e) {
-        this.destroyStreams(), null == e || e.addListener('desktopsourceend', this.handleDesktopSourceEnd), null == e || e.addListener('speaking', this.handleSpeaking), (this.desktop = e), this.mergeStreams();
+        (this.destroyStreams(), null == e || e.addListener('desktopsourceend', this.handleDesktopSourceEnd), null == e || e.addListener('speaking', this.handleSpeaking), (this.desktop = e), this.mergeStreams());
     }
     reset() {
         var e;
-        this.audio.reset(), null == (e = this.desktop) || e.reset();
+        (this.audio.reset(), null == (e = this.desktop) || e.reset());
     }
     getVideoStream() {
         return null != this.desktop ? this.desktop.stream : this.video.stream;
@@ -49,7 +49,7 @@ class l extends r.Z {
         this.audio.setMode(e, t);
     }
     setMute(e) {
-        (this.audio.mute = e), this.emit('mute', e);
+        ((this.audio.mute = e), this.emit('mute', e));
     }
     setEchoCancellation(e) {
         this.audio.echoCancellation = e;
@@ -88,7 +88,7 @@ class l extends r.Z {
         return null != this.desktop;
     }
     constructor(e) {
-        super(),
+        (super(),
             o(this, 'audio', void 0),
             o(this, 'video', new a.Z()),
             o(this, 'desktop', null),
@@ -96,7 +96,7 @@ class l extends r.Z {
             o(this, 'mergeStreams', () => {
                 var e, t, n;
                 let r = new MediaStream();
-                return null != this.desktop ? (null == (e = this.desktop.stream) || e.getTracks().forEach((e) => r.addTrack(e)), this.desktop.refreshSpeaking()) : (null == (t = this.audio.stream) || t.getAudioTracks().forEach((e) => r.addTrack(e)), null == (n = this.video.stream) || n.getVideoTracks().forEach((e) => r.addTrack(e))), (this.stream = r), this.emit('stream', r), this.emit('video', this.getVideoStreamId()), r;
+                return (null != this.desktop ? (null == (e = this.desktop.stream) || e.getTracks().forEach((e) => r.addTrack(e)), this.desktop.refreshSpeaking()) : (null == (t = this.audio.stream) || t.getAudioTracks().forEach((e) => r.addTrack(e)), null == (n = this.video.stream) || n.getVideoTracks().forEach((e) => r.addTrack(e))), (this.stream = r), this.emit('stream', r), this.emit('video', this.getVideoStreamId()), r);
             }),
             o(this, 'handleVoiceActivity', (e) => {
                 this.emit('voiceactivity', e);
@@ -120,6 +120,6 @@ class l extends r.Z {
             this.audio.addListener('permission', this.handleAudioPermission),
             this.video.addListener('stream', this.mergeStreams),
             this.video.addListener('permission', this.handleVideoPermission),
-            this.video.addListener('add-video-track', (e) => this.emit('add-video-track', e));
+            this.video.addListener('add-video-track', (e) => this.emit('add-video-track', e)));
     }
 }

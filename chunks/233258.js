@@ -57,7 +57,7 @@ var e = n(220159),
     ti = !X || !X[B] || !X[B].findChild,
     tu = function (t, r, n) {
         var e = Z(V, r);
-        e && delete V[r], $(t, r, n), e && t !== V && $(V, r, e);
+        (e && delete V[r], $(t, r, n), e && t !== V && $(V, r, e));
     },
     ts =
         c &&
@@ -88,7 +88,7 @@ var e = n(220159),
         );
     },
     tf = function (t, r, n) {
-        t === V && tf(te, r, n), v(t);
+        (t === V && tf(te, r, n), v(t));
         var e = h(r);
         return (v(n), p(tn, e)) ? (n.enumerable ? (p(t, G) && t[G][e] && (t[G][e] = !1), (n = g(n, { enumerable: d(0, !1) }))) : (p(t, G) || $(t, G, d(1, g(null))), (t[G][e] = !0)), ts(t, e, n)) : $(t, e, n);
     },
@@ -112,7 +112,7 @@ var e = n(220159),
             e = h(r);
         if (!(n === V && p(tn, e)) || p(te, e)) {
             var o = Z(n, e);
-            return o && p(tn, e) && !(p(n, G) && n[G][e]) && (o.enumerable = !0), o;
+            return (o && p(tn, e) && !(p(n, G) && n[G][e]) && (o.enumerable = !0), o);
         }
     },
     tv = function (t) {
@@ -136,7 +136,7 @@ var e = n(220159),
             e
         );
     };
-!f &&
+(!f &&
     (T(
         (H = (K = function () {
             if (l(H, this)) throw new q('Symbol is not a constructor');
@@ -144,7 +144,7 @@ var e = n(220159),
                 r = D(t),
                 n = function (t) {
                     var e = void 0 === this ? o : this;
-                    e === V && i(n, te, t), p(e, G) && p(e[G], r) && (e[G][r] = !1);
+                    (e === V && i(n, te, t), p(e, G) && p(e[G], r) && (e[G][r] = !1));
                     var u = d(1, t);
                     try {
                         ts(e, r, u);
@@ -242,4 +242,4 @@ var e = n(220159),
     ),
     C(),
     N(K, U),
-    (F[G] = !0);
+    (F[G] = !0));

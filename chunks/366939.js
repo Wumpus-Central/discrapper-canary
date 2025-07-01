@@ -43,11 +43,11 @@ async function c(e) {
         );
     } catch (e) {
         throw (
-            (a.Z.dispatch({
+            a.Z.dispatch({
                 type: 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL',
                 error: e
             }),
-            e)
+            e
         );
     }
 }
@@ -57,7 +57,7 @@ async function u(e, t, n, r, c, u) {
         i()(d, 'Expected existing premium plan');
         let f = (0, o.XK)(e, d.planId),
             _ = void 0 !== n ? n.toLowerCase() : e.currency;
-        await s.Mg(
+        (await s.Mg(
             e,
             {
                 status: l.O0b.ACTIVE,
@@ -74,14 +74,14 @@ async function u(e, t, n, r, c, u) {
             c,
             u
         ),
-            a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
+            a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' }));
     } catch (e) {
         throw (
-            (a.Z.dispatch({
+            a.Z.dispatch({
                 type: 'PREMIUM_PAYMENT_UPDATE_FAIL',
                 error: e
             }),
-            e)
+            e
         );
     }
 }
@@ -104,27 +104,27 @@ async function d(e, t, n) {
 }
 async function f(e, t, n, r, i) {
     try {
-        await s.fG(e, t, n, r, i), a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
+        (await s.fG(e, t, n, r, i), a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' }));
     } catch (e) {
         throw (
-            (a.Z.dispatch({
+            a.Z.dispatch({
                 type: 'PREMIUM_PAYMENT_UPDATE_FAIL',
                 error: e
             }),
-            e)
+            e
         );
     }
 }
 async function _(e, t, n, r, i, o) {
     try {
-        await s.tq(e, t, n, r, i, o), a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
+        (await s.tq(e, t, n, r, i, o), a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' }));
     } catch (e) {
         throw (
-            (a.Z.dispatch({
+            a.Z.dispatch({
                 type: 'PREMIUM_PAYMENT_UPDATE_FAIL',
                 error: e
             }),
-            e)
+            e
         );
     }
 }

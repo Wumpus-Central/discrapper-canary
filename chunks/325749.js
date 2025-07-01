@@ -1,4 +1,4 @@
-t.d(n, { Z: () => J }), t(388685);
+(t.d(n, { Z: () => J }), t(388685));
 var r = t(255367),
     o = t(73800),
     i = t(120356),
@@ -236,12 +236,12 @@ function J(e) {
                                                   popoutOpen: !0,
                                                   onOpenPopout: () => {},
                                                   onClosePopout: () => {
-                                                      (0, s.yw)(z.rMx.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
+                                                      ((0, s.yw)(z.rMx.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
                                                           (0, B.Z)({
                                                               onConfirm: () => {
                                                                   R.Z.popInActivity();
                                                               }
-                                                          });
+                                                          }));
                                                   }
                                               })
                                             : null,
@@ -274,7 +274,7 @@ function J(e) {
                                                             for (var n = 1; n < arguments.length; n++) {
                                                                 var t = null != arguments[n] ? arguments[n] : {},
                                                                     r = Object.keys(t);
-                                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                                     (r = r.concat(
                                                                         Object.getOwnPropertySymbols(t).filter(function (e) {
                                                                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -282,7 +282,7 @@ function J(e) {
                                                                     )),
                                                                     r.forEach(function (n) {
                                                                         var r;
-                                                                        (r = t[n]),
+                                                                        ((r = t[n]),
                                                                             n in e
                                                                                 ? Object.defineProperty(e, n, {
                                                                                       value: r,
@@ -290,8 +290,8 @@ function J(e) {
                                                                                       configurable: !0,
                                                                                       writable: !0
                                                                                   })
-                                                                                : (e[n] = r);
-                                                                    });
+                                                                                : (e[n] = r));
+                                                                    }));
                                                             }
                                                             return e;
                                                         })({}, e)),

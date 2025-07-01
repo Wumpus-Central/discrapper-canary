@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ }), n(415506), n(388685), n(539854);
+(n.d(t, { Z: () => $ }), n(415506), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -387,7 +387,7 @@ class z extends i.PureComponent {
         return null;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             k(this, 'renderProgressPatchingBody', (e, t) => {
                 let {
                     item: { state: n }
@@ -411,7 +411,7 @@ class z extends i.PureComponent {
                     percents: [s, c],
                     message: p
                 });
-            });
+            }));
     }
 }
 let W = () =>
@@ -509,14 +509,14 @@ class Q extends i.PureComponent {
     }
     componentWillUnmount() {
         let { applications: e } = this.props;
-        e.forEach((e) => {
+        (e.forEach((e) => {
             e.finished &&
                 h.Z.wait(() => {
                     g.wi(e.applicationId, e.branchId);
                 });
         }),
             window.removeEventListener('resize', this.throttledUpdateHeight),
-            (this.isUnmounted = !0);
+            (this.isUnmounted = !0));
     }
     render() {
         let { applications: e, paused: t, isFocused: i, theme: l, analyticsContext: o } = this.props;
@@ -568,7 +568,7 @@ class Q extends i.PureComponent {
                                                   for (var t = 1; t < arguments.length; t++) {
                                                       var n = null != arguments[t] ? arguments[t] : {},
                                                           r = Object.keys(n);
-                                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                                           (r = r.concat(
                                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -576,7 +576,7 @@ class Q extends i.PureComponent {
                                                           )),
                                                           r.forEach(function (t) {
                                                               k(e, t, n[t]);
-                                                          });
+                                                          }));
                                                   }
                                                   return e;
                                               })({}, n)),
@@ -610,7 +610,7 @@ class Q extends i.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             k(this, 'isUnmounted', !1),
             k(this, 'isTallerThanHalfViewport', !1),
             k(
@@ -622,7 +622,7 @@ class Q extends i.PureComponent {
                         n = e > window.innerHeight / 2;
                     this.isTallerThanHalfViewport !== n && ((this.isTallerThanHalfViewport = n), t(n));
                 }, 1000)
-            );
+            ));
     }
 }
 function J(e, t, n, r) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -24,7 +24,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -97,14 +97,14 @@ class h extends (r = a.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, '_textInputRef', a.createRef()),
             d(this, '_containerRef', a.createRef()),
             d(this, 'handleClear', () => {
                 let { onClear: e, forwardedRef: t } = this.props,
                     { current: n } = null != t ? t : this._textInputRef;
-                null != n && n.focus(), null != e && e();
-            });
+                (null != n && n.focus(), null != e && e());
+            }));
     }
 }
 d(h, 'defaultProps', { autoComplete: !1 });

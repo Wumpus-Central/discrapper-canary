@@ -1,4 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.active = void 0);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.active = void 0));
 var n,
     o =
         Object.assign ||

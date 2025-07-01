@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     K: () => _,
     Z: () => v
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -62,7 +62,7 @@ function v(e) {
                         value: c,
                         className: g.__invalid_marginaTop8,
                         onChange: (e) => {
-                            v(e), l(e);
+                            (v(e), l(e));
                         },
                         options: a.map((e) => {
                             let { id: t, name: n } = e;

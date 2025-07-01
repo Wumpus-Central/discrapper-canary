@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     $j: () => u,
     Ty: () => f,
     lW: () => p,
     sr: () => _,
     zP: () => d
 }),
-    n(415506);
+    n(415506));
 var r = n(536285),
     i = n(996106),
     a = n(812967),
@@ -25,7 +25,7 @@ function f(e, t) {
 }
 function _(e, t) {
     if (__OVERLAY__) throw new i.Z({ errorCode: l.lTL.UNKNOWN_ERROR }, 'called from wrong app context');
-    a.Z.setCommandHandler(l.Etm.OVERLAY, {
+    (a.Z.setCommandHandler(l.Etm.OVERLAY, {
         scope: c.cE,
         handler(n) {
             let { args: r } = n;
@@ -39,7 +39,7 @@ function _(e, t) {
                 let { args: n } = e;
                 if (!t(n.token)) throw new i.Z({ errorCode: l.lTL.INVALID_TOKEN }, 'Invalid RPC auth token provided');
             }
-        });
+        }));
 }
 function p(e) {
     if (__OVERLAY__) r.default.request(l.Etm.OVERLAY, (0, s.G)(e));
@@ -52,14 +52,14 @@ function p(e) {
             t === l.BmY.DISPATCH && (n = e.payloads.map((e) => e.type));
             let r = Error('Error dispatching overlay RPC: '.concat(i.message));
             throw (
-                (i.stack && (r.stack = i.stack),
+                i.stack && (r.stack = i.stack),
                 o.Z.captureException(r, {
                     extra: {
                         eventType: t,
                         payloadTypes: n
                     }
                 }),
-                r)
+                r
             );
         }
 }

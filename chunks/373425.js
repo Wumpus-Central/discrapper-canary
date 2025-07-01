@@ -20,12 +20,12 @@ var u = (function () {
     function t(e) {
         var n = this;
         if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
-        a(
+        (a(
             this,
             'hooks',
             (0, i.p)({
                 dropTarget: function (e, t) {
-                    n.clearDropTarget(), (n.dropTargetOptions = t), (0, o.d)(e) ? (n.dropTargetRef = e) : (n.dropTargetNode = e), n.reconnect();
+                    (n.clearDropTarget(), (n.dropTargetOptions = t), (0, o.d)(e) ? (n.dropTargetRef = e) : (n.dropTargetNode = e), n.reconnect());
                 }
             })
         ),
@@ -38,7 +38,7 @@ var u = (function () {
             a(this, 'lastConnectedDropTarget', null),
             a(this, 'lastConnectedDropTargetOptions', null),
             a(this, 'backend', void 0),
-            (this.backend = e);
+            (this.backend = e));
     }
     return (
         (e = [
@@ -111,14 +111,14 @@ var u = (function () {
             {
                 key: 'clearDropTarget',
                 value: function () {
-                    (this.dropTargetRef = null), (this.dropTargetNode = null);
+                    ((this.dropTargetRef = null), (this.dropTargetNode = null));
                 }
             }
         ]),
         (function (e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+                ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
             }
         })(t.prototype, e),
         t

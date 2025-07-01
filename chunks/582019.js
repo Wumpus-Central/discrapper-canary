@@ -1,4 +1,4 @@
-n.d(t, { j: () => u });
+n.d(t, { j: () => o });
 var r = n(255367),
     l = n(73800),
     i = n(709014);
@@ -9,26 +9,26 @@ let a = {
             duration: 66
         }
     },
-    u = () => {
+    o = () => {
         let e = l.useRef(null),
             t = l.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
-            u = l.useCallback(() => {
+            o = l.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
-            o = l.useCallback(() => {
+            u = l.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying('all');
             }, []),
             s = l.useCallback((t) => {
-                var l, u;
+                var l, o;
                 return (0, r.jsx)(
                     i.L,
                     ((l = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ let a = {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -44,19 +44,19 @@ let a = {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, t)),
-                    (u = u =
+                    (o = o =
                         {
                             src: () => n.e('66944').then(n.t.bind(n, 166174, 19)),
                             ref: e,
                             markers: a
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(u))
+                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -64,8 +64,8 @@ let a = {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(u)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(u, e));
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                           }),
                     l)
                 );
@@ -73,8 +73,8 @@ let a = {
         return {
             events: {
                 onClick: t,
-                onMouseEnter: u,
-                onMouseLeave: o
+                onMouseEnter: o,
+                onMouseLeave: u
             },
             play: t,
             getDuration: l.useCallback(() => {

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Z: () => y,
     r: () => N
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(695469),
@@ -30,7 +30,7 @@ function S(e) {
         u = r.useMemo(() => {
             if (o) {
                 let e = c.currentPeriodEnd;
-                return c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), C.intl.format(C.t.Z4ULRE, { date: e });
+                return (c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), C.intl.format(C.t.Z4ULRE, { date: e }));
             }
             let e = null != n.premiumGuildSubscription ? f.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
             return C.intl.formatToPlainString(C.t.lY2Bur, { date: new Date(e) });
@@ -53,7 +53,7 @@ function S(e) {
                         C.intl.string(C.t.LDyX3t),
                         C.intl.string(C.t.YtGlPT)
                     ];
-                    e >= E.Eu4.TIER_2 && (t.push(C.intl.string(C.t.SztbtL)), t.push(C.intl.string(C.t['3GK91t']))), e >= E.Eu4.TIER_3 && t.push(C.intl.string(C.t.XUUJd3));
+                    (e >= E.Eu4.TIER_2 && (t.push(C.intl.string(C.t.SztbtL)), t.push(C.intl.string(C.t['3GK91t']))), e >= E.Eu4.TIER_3 && t.push(C.intl.string(C.t.XUUJd3)));
                     let n = t[Math.floor(Math.random() * t.length)];
                     return C.intl.format(C.t['/dOAmZ'], { perk: n });
                 })(t),
@@ -149,7 +149,7 @@ function v(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             i = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (i = i.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -157,7 +157,7 @@ function v(e) {
                                             )),
                                             i.forEach(function (t) {
                                                 var i;
-                                                (i = n[t]),
+                                                ((i = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: i,
@@ -165,8 +165,8 @@ function v(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = i);
-                                            });
+                                                        : (e[t] = i));
+                                            }));
                                     }
                                     return e;
                                 })({}, e)),
@@ -284,7 +284,7 @@ function N(e) {
             return (
                 t.forEach((t) => {
                     let n = t.guildId;
-                    n in e || (e[n] = []), e[n].push(t);
+                    (n in e || (e[n] = []), e[n].push(t));
                 }),
                 e
             );
@@ -335,7 +335,7 @@ function y(e) {
                 let r = t[i];
                 if ((!(0, p.tl)(r) && e++, null != r.premiumGuildSubscription)) {
                     let e = r.premiumGuildSubscription.guildId;
-                    e in n || (n[e] = []), n[e].push(r);
+                    (e in n || (n[e] = []), n[e].push(r));
                 }
             }),
             {

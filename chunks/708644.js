@@ -1,7 +1,7 @@
 function r(e) {
     var t = null;
     return function () {
-        return null == t && (t = e()), t;
+        return (null == t && (t = e()), t);
     };
 }
 function i(e, t) {
@@ -14,7 +14,7 @@ function a(e, t) {
         r = function (e) {
             return n.add(e);
         };
-    e.forEach(r), t.forEach(r);
+    (e.forEach(r), t.forEach(r));
     var i = [];
     return (
         n.forEach(function (e) {

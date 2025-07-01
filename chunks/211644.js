@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Aq: () => R,
     Kl: () => w,
     ZP: () => D,
@@ -9,7 +9,7 @@ n.d(t, {
     mc: () => P
 }),
     n(388685),
-    n(290780);
+    n(290780));
 var r = n(362383),
     i = n(731965),
     a = n(261376);
@@ -30,7 +30,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -87,14 +87,14 @@ let u = new (n(499303).I)(),
         }),
     m = (e, t) => {
         var n;
-        return null == t || (null != t.content && e.currentlyShown.delete(t.content), null != t.groupName && e.currentlyShownGroup.delete(t.groupName), (null == (n = e.shownFatigableCandidate) ? void 0 : n.content) === t.content && (e.shownFatigableCandidate = null)), e;
+        return (null == t || (null != t.content && e.currentlyShown.delete(t.content), null != t.groupName && e.currentlyShownGroup.delete(t.groupName), (null == (n = e.shownFatigableCandidate) ? void 0 : n.content) === t.content && (e.shownFatigableCandidate = null)), e);
     },
     g = (e, t) => {
         var n, r;
         if (null == t) return e;
         e.currentlyShown.add(t.content);
         let i = e.recentlyShown.filter((e) => e !== t.content);
-        return i.unshift(t.content), i.splice(5), (e.recentlyShown = i), null != t.groupName && e.currentlyShownGroup.add(t.groupName), a.O.has(t.content) || ((e.shownFatigableCandidate = t), (null == (r = e.prevFatigableCandidate) ? void 0 : r.content) !== t.content && ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))), null == (n = t.onAdded) || n.call(t), e;
+        return (i.unshift(t.content), i.splice(5), (e.recentlyShown = i), null != t.groupName && e.currentlyShownGroup.add(t.groupName), a.O.has(t.content) || ((e.shownFatigableCandidate = t), (null == (r = e.prevFatigableCandidate) ? void 0 : r.content) !== t.content && ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))), null == (n = t.onAdded) || n.call(t), e);
     },
     E = (e, t) => (e.candidates.set(t.content, t), e),
     b = (e, t) => (e.candidates.delete(t.content), e),
@@ -117,7 +117,7 @@ let u = new (n(499303).I)(),
     T = (e) => {
         if (0 === e.candidates.size) return e;
         let t = new Date().getTime() - e.lastWinnerTime > d;
-        if (I(e) && !t) return u.unschedule(), y(e, O(e));
+        if (I(e) && !t) return (u.unschedule(), y(e, O(e)));
         if ((null != e.shownFatigableCandidate && !t) || u.scheduled()) return e;
         let n = new Date().getTime();
         return (
@@ -157,13 +157,13 @@ let u = new (n(499303).I)(),
         return [p.getState().currentlyShown.size, e];
     },
     P = () => {
-        (0, i.j)(() => {
+        ((0, i.j)(() => {
             p.setState(() => {
                 let e = _();
-                return (e.postConnectionOpen = !0), e;
+                return ((e.postConnectionOpen = !0), e);
             });
         }),
-            u.unschedule();
+            u.unschedule());
     },
     w = () => p.getState().postConnectionOpen;
 function D(e, t) {

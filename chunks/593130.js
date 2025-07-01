@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     a = n(73800),
     l = n(120356),
@@ -21,11 +21,11 @@ function p(e) {
         p = (0, i.e7)([c.Z], () => c.Z.can(j.Plq.READ_MESSAGE_HISTORY, t)),
         N = (0, u.cD)(t),
         T = () => {
-            l(), (0, f.R6)(t, void 0, 'Thread Browser Empty State');
+            (l(), (0, f.R6)(t, void 0, 'Thread Browser Empty State'));
         },
         y = a.useCallback(
             (e, t) => {
-                l(), (0, f.ok)(e, !t, x.on.BROWSER);
+                (l(), (0, f.ok)(e, !t, x.on.BROWSER));
             },
             [l]
         ),
@@ -39,7 +39,7 @@ function p(e) {
                         s(!0);
                         try {
                             let r = await d.Z.searchThreads(e, t, n);
-                            o(!0), u(r);
+                            (o(!0), u(r));
                         } finally {
                             s(!1);
                         }
@@ -48,7 +48,7 @@ function p(e) {
             return {
                 query: n,
                 setQuery: (e) => {
-                    r(e), 0 === e.length && o(!1);
+                    (r(e), 0 === e.length && o(!1));
                 },
                 isLoading: l,
                 hasResults: i,
@@ -86,7 +86,7 @@ function p(e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
                                                       r = Object.keys(n);
-                                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                                  ('function' == typeof Object.getOwnPropertySymbols &&
                                                       (r = r.concat(
                                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -94,7 +94,7 @@ function p(e) {
                                                       )),
                                                       r.forEach(function (t) {
                                                           var r;
-                                                          (r = n[t]),
+                                                          ((r = n[t]),
                                                               t in e
                                                                   ? Object.defineProperty(e, t, {
                                                                         value: r,
@@ -102,8 +102,8 @@ function p(e) {
                                                                         configurable: !0,
                                                                         writable: !0
                                                                     })
-                                                                  : (e[t] = r);
-                                                      });
+                                                                  : (e[t] = r));
+                                                      }));
                                               }
                                               return e;
                                           })({}, P)
@@ -117,7 +117,7 @@ function p(e) {
                                   size: o.zxk.Sizes.TINY,
                                   className: Z.createButton,
                                   onClick: () => {
-                                      l(), (0, f.R6)(t, void 0, 'Thread Browser Toolbar');
+                                      (l(), (0, f.R6)(t, void 0, 'Thread Browser Toolbar'));
                                   },
                                   children: v.intl.string(v.t.CumH4u)
                               })

@@ -26,7 +26,7 @@ let o = (e) => {
                     });
                 } catch (e) {
                 } finally {
-                    null == u || u(), n(null);
+                    (null == u || u(), n(null));
                 }
             },
             [t, o, n]

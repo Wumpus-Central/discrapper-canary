@@ -1,4 +1,4 @@
-n.d(t, { f: () => y }), n(388685);
+(n.d(t, { f: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(496675),
     m = n(594174),
     f = n(838440),
-    h = n(779139),
-    g = n(981631),
-    _ = n(388032),
+    g = n(779139),
+    _ = n(981631),
+    h = n(388032),
     b = n(429495);
-let x = (e) => {
+let E = (e) => {
         let { channel: t, message: n } = e,
             [l, c] = i.useState(!1),
-            u = (0, h.y6)(n.id),
+            u = (0, g.y6)(n.id),
             d = i.useCallback(() => {
                 (0, f.v)({
                     type: o.Ie.FORM,
@@ -26,7 +26,7 @@ let x = (e) => {
                     channel: t
                 }).then((e) => {
                     let { valid: r } = e;
-                    r && (0, h.TZ)(t, n, u.id);
+                    r && (0, g.TZ)(t, n, u.id);
                 });
             }, [t, n, u]);
         return (0, r.jsx)('div', {
@@ -45,7 +45,7 @@ let x = (e) => {
                         sticker: u,
                         size: 28
                     }),
-                    _.intl.string(_.t['7Tj6HR'])
+                    h.intl.string(h.t['7Tj6HR'])
                 ]
             })
         });
@@ -57,15 +57,15 @@ let x = (e) => {
                 var e;
                 let r = m.default.getCurrentUser(),
                     l = (0, c.xl)(n),
-                    a = p.Z.can(g.Plq.SEND_MESSAGES, n),
+                    a = p.Z.can(_.Plq.SEND_MESSAGES, n),
                     o = null != i && null != r && (null == (e = u.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
                     s = t.author.bot,
                     f = d.Z.getGuild(i),
-                    h = null != f && (f.systemChannelFlags & g.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return a && !l && !o && !s && h;
+                    g = null != f && (f.systemChannelFlags & _.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                return a && !l && !o && !s && g;
             });
         return null != i && a
-            ? (0, r.jsx)(x, {
+            ? (0, r.jsx)(E, {
                   message: t,
                   channel: n
               })

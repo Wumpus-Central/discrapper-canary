@@ -19,7 +19,7 @@ function c(e) {
             u = s.u.BOT;
         if (null != t) {
             let { banner: e } = t;
-            (r = (0, o.aN)({
+            ((r = (0, o.aN)({
                 id: t.id,
                 banner: e,
                 size: 512,
@@ -32,7 +32,7 @@ function c(e) {
                         banner: e,
                         size: 512,
                         canAnimate: !0
-                    }));
+                    })));
         }
         if (n) {
             let t = (0, a.yJ)(e);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => K }), n(388685), n(642613), n(539854);
+(n.d(t, { Z: () => K }), n(388685), n(642613), n(539854));
 var r,
     i = n(442837),
     a = n(570140),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -71,7 +71,7 @@ function b(e) {
     delete m[e.id];
 }
 function y() {
-    (f = {}), (_ = {}), (p = {}), (h = {}), (m = {});
+    ((f = {}), (_ = {}), (p = {}), (h = {}), (m = {}));
 }
 function O(e) {
     let { applications: t } = e;
@@ -80,7 +80,7 @@ function O(e) {
 function v(e) {
     let { applicationId: t } = e,
         n = m[t];
-    return (m[t] = !0), !0 !== n;
+    return ((m[t] = !0), !0 !== n);
 }
 function I(e) {
     let { application: t } = e;
@@ -117,14 +117,14 @@ function A(e) {
 function N(e) {
     let { applicationId: t } = e,
         n = m[t];
-    return (m[t] = !1), !1 !== n;
+    return ((m[t] = !1), !1 !== n);
 }
 function C(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
         let t = m[e];
-        (m[e] = !0), (n = !0 !== t);
+        ((m[e] = !0), (n = !0 !== t));
     }
     return n;
 }
@@ -164,7 +164,7 @@ function x(e) {
         n = !1;
     for (let e of t) {
         let t = m[e];
-        (m[e] = !1), (n = !1 !== t);
+        ((m[e] = !1), (n = !1 !== t));
     }
     return n;
 }
@@ -177,7 +177,7 @@ function k(e) {
 function M(e) {
     let { guildId: t, applications: n } = e,
         r = [];
-    for (let e of n) r.push(e.id), b(o.ZP.createFromServer(e));
+    for (let e of n) (r.push(e.id), b(o.ZP.createFromServer(e)));
     _[t] = r;
 }
 function j(e) {
@@ -299,7 +299,7 @@ class W extends (r = i.ZP.PersistedStore) {
         if (null != e) return null == (t = g.botUserIdToAppUsage[e]) ? void 0 : t.applicationId;
     }
 }
-s(W, 'displayName', 'ApplicationStore'), s(W, 'persistKey', 'ApplicationStore');
+(s(W, 'displayName', 'ApplicationStore'), s(W, 'persistKey', 'ApplicationStore'));
 let K = new W(a.Z, {
     LOGOUT: y,
     OVERLAY_INITIALIZE: O,

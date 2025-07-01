@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685), n(457542);
+(n.d(t, { Z: () => c }), n(388685), n(457542));
 var r = n(255367),
     l = n(73800),
     i = n(658550),
@@ -20,7 +20,7 @@ function c(e) {
         }, [d]),
         (0, r.jsxs)('form', {
             onSubmit: (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     h(!0),
                     p(null),
                     n({
@@ -33,7 +33,7 @@ function c(e) {
                         })
                         .finally(() => {
                             h(!1);
-                        });
+                        }));
             },
             children: [
                 (0, r.jsx)(o.Z.SlideHeader, { onClose: u }),

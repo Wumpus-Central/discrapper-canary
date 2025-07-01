@@ -17,7 +17,7 @@ var n = r(214788),
                         if (((r[a] = f), u && (t.get(u) ? t.setIn([u, 'prevSibling'], f) : t.setIn([a, 'nextSibling'], null)), s && (t.get(s) ? t.setIn([s, 'nextSibling'], f) : t.setIn([a, 'prevSibling'], null)), l && t.get(l))) {
                             var p = t.get(l).getChildKeys();
                             t.setIn([l, 'children'], p.set(p.indexOf(n.getKey()), f));
-                        } else t.setIn([a, 'parent'], null), e && (t.setIn([e.getKey(), 'nextSibling'], f), t.setIn([a, 'prevSibling'], r[e.getKey()])), (e = t.get(a));
+                        } else (t.setIn([a, 'parent'], null), e && (t.setIn([e.getKey(), 'nextSibling'], f), t.setIn([a, 'prevSibling'], r[e.getKey()])), (e = t.get(a)));
                         c.forEach(function (e) {
                             t.get(e)
                                 ? t.setIn([e, 'parent'], f)

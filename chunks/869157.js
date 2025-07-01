@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685), n(642613);
+(n.d(t, { Z: () => D }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -17,23 +17,23 @@ var r = n(255367),
     x = n(314897),
     j = n(485386),
     O = n(430824),
-    y = n(594174),
-    v = n(626135),
+    v = n(594174),
+    y = n(626135),
     _ = n(5192),
     C = n(709054),
     N = n(360606),
     I = n(905753),
     S = n(399860),
     E = n(335049),
-    w = n(617012),
-    P = n(981631),
-    T = n(388032),
+    T = n(617012),
+    w = n(981631),
+    P = n(388032),
     Z = n(981263);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -49,8 +49,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -72,13 +72,13 @@ function A(e, t) {
         e
     );
 }
-function R(e) {
+function D(e) {
     let { commandId: t, editPermissions: n, guildId: l, noneSelectedText: a, overwrites: p, hasAccessToMutatePermissions: g } = e,
         h = (0, c.e7)([O.Z], () => O.Z.getGuild(l));
     o()(null != h, '');
     let x = (0, c.e7)([j.Z], () => j.Z.getRoles(l)),
-        [v, E] = i.useState(new Set()),
-        w = i.useMemo(() => {
+        [y, E] = i.useState(new Set()),
+        T = i.useMemo(() => {
             let e = (0, b.bD)(l),
                 t = s()(x)
                     .sortBy((e) => e.position)
@@ -93,8 +93,8 @@ function R(e) {
                             return (function (e, t, n) {
                                 let r = Number(e.canWrite) - Number(t.canWrite);
                                 if (0 !== r) return r;
-                                let i = y.default.getUser(e.id),
-                                    l = y.default.getUser(t.id);
+                                let i = v.default.getUser(e.id),
+                                    l = v.default.getUser(t.id);
                                 if (null != i && null != l) {
                                     let e = _.ZP.getName(n, void 0, i),
                                         t = _.ZP.getName(n, void 0, l);
@@ -114,13 +114,13 @@ function R(e) {
                     }
                 });
         }, [l, p, x]),
-        P = i.useCallback(
+        w = i.useCallback(
             (e, t) => {
                 n({}, [(0, S.rE)(e, t)]);
             },
             [n]
         ),
-        T = i.useCallback(
+        P = i.useCallback(
             (e, t, r) => {
                 let i = (0, S.rE)(e, t);
                 null != p[i] &&
@@ -139,10 +139,10 @@ function R(e) {
         );
     i.useEffect(() => {
         let e = Object.values(p)
-            .filter((e) => e.type === m.Kw.USER && !e.canRead && !v.has(e.id))
+            .filter((e) => e.type === m.Kw.USER && !e.canRead && !y.has(e.id))
             .map((e) => e.id);
         0 !== e.length && (u.Z.requestMembersById(l, e, !1), E((t) => new Set([...t, ...e])));
-    }, [l, p, v, E]);
+    }, [l, p, y, E]);
     let k = (0, c.e7)([I.Z], () => I.Z.getApplicationId()),
         A = (0, c.e7)([N.default], () =>
             null == k
@@ -152,19 +152,19 @@ function R(e) {
                       return (null == (t = e.application) ? void 0 : t.id) === k;
                   })
         ),
-        R = (0, c.e7)([f.Z], () => void 0 !== A && f.Z.canShowToggleTooltip(A.id));
-    return w.length > 0
-        ? w.map((e) =>
+        D = (0, c.e7)([f.Z], () => void 0 !== A && f.Z.canShowToggleTooltip(A.id));
+    return T.length > 0
+        ? T.map((e) =>
               (0, r.jsx)(
-                  D,
+                  R,
                   {
                       guild: h,
                       commandId: t,
-                      onChange: (t) => T(e.id, e.type, t),
-                      onRemove: () => P(e.id, e.type),
+                      onChange: (t) => P(e.id, e.type, t),
+                      onRemove: () => w(e.id, e.type),
                       overwrite: e,
                       integration: A,
-                      canShowMigrationTooltip: R,
+                      canShowMigrationTooltip: D,
                       hasAccessToMutatePermissions: g
                   },
                   e.id
@@ -179,21 +179,21 @@ function R(e) {
               })
           });
 }
-function D(e) {
+function R(e) {
     var t, n, l;
     let o,
-        { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: O, hasAccessToMutatePermissions: y } = e,
+        { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: O, hasAccessToMutatePermissions: v } = e,
         _ = f.id === a.id || f.id === (0, b.bD)(a.id),
         C = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
-        N = !f.canWrite || !y,
+        N = !f.canWrite || !v,
         I = x.default.getId();
-    y ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? T.intl.string(T.t['1VF/09']) : T.intl.string(T.t.P1GnER)) : f.type === m.Kw.ROLE && (o = T.intl.string(T.t.mcAijY))) : (o = null != s ? T.intl.string(T.t.tybdam) : T.intl.string(T.t.z2hjk5));
+    v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? P.intl.string(P.t['1VF/09']) : P.intl.string(P.t.P1GnER)) : f.type === m.Kw.ROLE && (o = P.intl.string(P.t.mcAijY))) : (o = null != s ? P.intl.string(P.t.tybdam) : P.intl.string(P.t.z2hjk5));
     let S = O && null != j && f.id === a.id && void 0 !== C && !f.permission;
     i.useEffect(() => {
         if (S) {
             var e;
-            v.default.track(
-                P.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+            y.default.track(
+                w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 A(k({}, (0, p.hH)(a.id)), {
                     application_id: null == j || null == (e = j.application) ? void 0 : e.id,
                     location: 'toggle'
@@ -201,8 +201,8 @@ function D(e) {
             );
         }
     }, [a.id, null == j || null == (l = j.application) ? void 0 : l.id, S]);
-    let R = i.useRef(null),
-        D = (0, r.jsx)(d.ua7, {
+    let D = i.useRef(null),
+        R = (0, r.jsx)(d.ua7, {
             tooltipClassName: Z.tooltip,
             text: o,
             shouldShow: N,
@@ -212,13 +212,13 @@ function D(e) {
                 (0, r.jsx)(
                     'div',
                     A(k({}, e), {
-                        ref: R,
-                        children: (0, r.jsx)(w.Z, {
+                        ref: D,
+                        children: (0, r.jsx)(T.Z, {
                             isDisabled: N,
                             currentValue: f.permission,
                             onChange: S
                                 ? (e) => {
-                                      g.Z.dismissToggleTooltip(a.id, j), c(e);
+                                      (g.Z.dismissToggleTooltip(a.id, j), c(e));
                                   }
                                 : c
                         })
@@ -226,15 +226,15 @@ function D(e) {
                 )
         }),
         M = (0, r.jsx)(d.yRy, {
-            targetElementRef: R,
+            targetElementRef: D,
             renderPopout: () =>
                 (0, r.jsx)(d.P3F, {
                     onClick: (e) => {
-                        e.stopPropagation(), g.Z.dismissToggleTooltip(a.id, j);
+                        (e.stopPropagation(), g.Z.dismissToggleTooltip(a.id, j));
                     },
                     children: (0, r.jsx)(h.ZP, {
                         className: Z.tooltip,
-                        content: T.intl.format(T.t.pW4Cr6, {
+                        content: P.intl.format(P.t.pW4Cr6, {
                             botName: C,
                             link: 'https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/'
                         }),
@@ -247,7 +247,7 @@ function D(e) {
             onRequestClose: () => g.Z.dismissToggleTooltip(a.id, j),
             shouldShow: S,
             closeOnScroll: !0,
-            children: () => D
+            children: () => R
         });
     return (0, r.jsxs)(
         'div',
@@ -270,7 +270,7 @@ function D(e) {
                         (0, r.jsx)(L, {
                             commandId: s,
                             isSentinel: _,
-                            isDisabled: !y,
+                            isDisabled: !v,
                             onRemove: u
                         }),
                         M
@@ -291,7 +291,7 @@ function L(e) {
                 className: Z.removeActions,
                 children: (0, r.jsx)(d.P3F, {
                     className: Z.removeContainer,
-                    'aria-label': T.intl.string(T.t.mT0CQE),
+                    'aria-label': P.intl.string(P.t.mT0CQE),
                     onClick: l,
                     children: (0, r.jsx)(d.XHJ, {
                         size: 'md',

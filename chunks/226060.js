@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(512722),
@@ -12,16 +12,16 @@ var i = n(512722),
     p = n(240864),
     m = n(57949),
     f = n(400916),
-    h = n(388032);
-function g(e) {
+    g = n(388032);
+function _(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
-        g = (0, a.e7)([p.Z], () => p.Z.getGuildProduct(n)),
-        _ = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        _ = (0, a.e7)([p.Z], () => p.Z.getGuildProduct(n)),
+        h = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         b = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        x = (0, u.n)();
-    return (l()(null != _, 'guild cannot be null'), l()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_))
+        E = (0, u.n)();
+    return (l()(null != h, 'guild cannot be null'), l()(null != _, 'guildProductListing cannot be null'), (0, d.SO)(h))
         ? (0, r.jsx)(o.ua7, {
-              text: h.intl.string(h.t.sAJr9f),
+              text: g.intl.string(g.t.sAJr9f),
               children: (e) => {
                   var t, n;
                   return (0, r.jsx)(
@@ -30,7 +30,7 @@ function g(e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   r = Object.keys(n);
-                              'function' == typeof Object.getOwnPropertySymbols &&
+                              ('function' == typeof Object.getOwnPropertySymbols &&
                                   (r = r.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function g(e) {
                                   )),
                                   r.forEach(function (t) {
                                       var r;
-                                      (r = n[t]),
+                                      ((r = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: r,
@@ -46,8 +46,8 @@ function g(e) {
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = r);
-                                  });
+                                              : (e[t] = r));
+                                  }));
                           }
                           return e;
                       })({}, e)),
@@ -55,7 +55,7 @@ function g(e) {
                           {
                               color: o.zxk.Colors.BRAND,
                               disabled: !0,
-                              children: h.intl.string(h.t.xUi3BA)
+                              children: g.intl.string(g.t.xUi3BA)
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -73,26 +73,26 @@ function g(e) {
                   );
               }
           })
-        : g.has_entitlement
-          ? null != g.attachments
+        : _.has_entitlement
+          ? null != _.attachments
               ? (0, r.jsx)(f.Z, {
-                    guildId: _.id,
-                    productId: g.id
+                    guildId: h.id,
+                    productId: _.id
                 })
               : (0, r.jsx)(o.zxk, {
                     color: o.zxk.Colors.PRIMARY,
                     disabled: !0,
-                    children: h.intl.string(h.t.RcTOGB)
+                    children: g.intl.string(g.t.RcTOGB)
                 })
           : (0, r.jsx)(o.gtL, {
                 shineSize: o.gtL.ShineSizes.SMALL,
-                pauseAnimation: b || !x,
+                pauseAnimation: b || !E,
                 onClick: () =>
                     (0, m.z)({
-                        guildProductListing: g,
-                        guildId: _.id,
+                        guildProductListing: _,
+                        guildId: h.id,
                         sourceAnalyticsLocations: i
                     }),
-                children: h.intl.string(h.t.xUi3BA)
+                children: g.intl.string(g.t.xUi3BA)
             });
 }

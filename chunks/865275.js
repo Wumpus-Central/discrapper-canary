@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(415506), n(49124);
+(n.d(t, { Z: () => b }), n(388685), n(415506), n(49124));
 var r = n(836560),
     i = n(392711),
     a = n.n(i),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -87,7 +87,7 @@ class b extends r.EventEmitter {
             t = this.files.some((e) => e.isImage),
             n = this.files.some((e) => e.isVideo),
             r = this._fileSize();
-        E.log('setUploadingTextForUI - total content: '.concat(r, ' bytes and ').concat(this.files.length, ' attachments for ').concat(this.id)),
+        (E.log('setUploadingTextForUI - total content: '.concat(r, ' bytes and ').concat(this.files.length, ' attachments for ').concat(this.id)),
             (this._file = g(h({}, this._file), {
                 totalPostCompressionSize: r,
                 currentSize: r,
@@ -96,7 +96,7 @@ class b extends r.EventEmitter {
                 hasImage: t,
                 attachmentsCount: this.files.length,
                 items: this.files
-            }));
+            })));
     }
     _recomputeProgress() {
         let { loaded: e, total: t } = this._recomputeProgressTotal(),
@@ -132,18 +132,18 @@ class b extends r.EventEmitter {
     }
     cancel() {
         var e, t;
-        E.log('cancel() for '.concat(this.id)), this._aborted || ((this._aborted = !0), null == (e = (t = this)._cancel) || e.call(t), this.files.forEach((e) => e.cancel()), this._handleComplete());
+        (E.log('cancel() for '.concat(this.id)), this._aborted || ((this._aborted = !0), null == (e = (t = this)._cancel) || e.call(t), this.files.forEach((e) => e.cancel()), this._handleComplete()));
     }
     async cancelItem(e) {
         E.log('Cancel called for '.concat(this.id, ' for item ').concat(e));
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.status === l.m.CANCELED) return;
         let n = this.files.indexOf(t);
-        (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]), (this._file = g(h({}, this._file), { items: this.files })), await (0, s.V)(t), t.cancel(), this.emit('cancel-upload-item', this._file), 0 === this.files.length && this.cancel();
+        ((this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]), (this._file = g(h({}, this._file), { items: this.files })), await (0, s.V)(t), t.cancel(), this.emit('cancel-upload-item', this._file), 0 === this.files.length && this.cancel());
     }
     upload(e, t) {
         if (null != this._cancel) throw Error('Uploader.upload(...): An upload is already in progress.');
-        (this._lastUpdate = Date.now()),
+        ((this._lastUpdate = Date.now()),
             (this._loaded = 0),
             (this._file = {
                 id: this.id,
@@ -157,10 +157,10 @@ class b extends r.EventEmitter {
                 hasVideo: !1,
                 attachmentsCount: 0,
                 items: t
-            });
+            }));
     }
     constructor() {
-        super(),
+        (super(),
             p(this, 'id', void 0),
             p(this, '_file', void 0),
             p(this, '_aborted', !1),
@@ -172,7 +172,7 @@ class b extends r.EventEmitter {
             p(this, 'alreadyStarted', !1),
             p(this, '_cancel', void 0),
             p(this, '_handleStart', (e) => {
-                (this._cancel = e), this.alreadyStarted || this.emit('start', this._file), (this.alreadyStarted = !0);
+                ((this._cancel = e), this.alreadyStarted || this.emit('start', this._file), (this.alreadyStarted = !0));
             }),
             p(this, '_handleProgress', (e, t, n) => {
                 let r = Date.now(),
@@ -185,14 +185,14 @@ class b extends r.EventEmitter {
                             e.item.progress = n[e.id];
                         });
                 }
-                (this._lastUpdate = r),
+                ((this._lastUpdate = r),
                     (this._loaded = e),
                     (this._file = g(h({}, this._file), {
                         currentSize: t,
                         progress: i,
                         rate: a
                     })),
-                    this.emit('progress', this._file);
+                    this.emit('progress', this._file));
             }),
             p(this, '_handleException', (e) => {
                 this._handleError({
@@ -207,10 +207,10 @@ class b extends r.EventEmitter {
             }),
             p(this, '_handleError', (e) => {
                 let { code: t, reason: n, body: r } = e;
-                this.clearProcessingMessageInterval(), this._aborted || ((this._errored = !0), E.log('_handleError: '.concat(t, ' (').concat(JSON.stringify(n), ') for ').concat(this.id)), this.emit('error', this._file, t, r, n), this.removeAllListeners());
+                (this.clearProcessingMessageInterval(), this._aborted || ((this._errored = !0), E.log('_handleError: '.concat(t, ' (').concat(JSON.stringify(n), ') for ').concat(this.id)), this.emit('error', this._file, t, r, n), this.removeAllListeners()));
             }),
             p(this, '_handleComplete', (e) => {
-                this.clearProcessingMessageInterval(), E.log('_handleComplete for '.concat(this.id)), this.emit('complete', this._file, e), this.removeAllListeners();
+                (this.clearProcessingMessageInterval(), E.log('_handleComplete for '.concat(this.id)), this.emit('complete', this._file, e), this.removeAllListeners());
             }),
             (this.id = a().uniqueId('Uploader')),
             (this._file = {
@@ -225,6 +225,6 @@ class b extends r.EventEmitter {
                 hasVideo: !1,
                 attachmentsCount: 0,
                 items: void 0
-            });
+            }));
     }
 }

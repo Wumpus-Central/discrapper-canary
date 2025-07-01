@@ -21,4 +21,4 @@ var r = n(538315),
         i && (a = o.call(a, Object.getOwnPropertySymbols(t)));
         for (var s = 0; s < a.length; s += 1) u(e, a[s], t[a[s]], n[a[s]]);
     };
-(d.supportsDescriptors = !!c), (e.exports = d);
+((d.supportsDescriptors = !!c), (e.exports = d));

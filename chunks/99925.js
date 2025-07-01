@@ -52,16 +52,16 @@ function i(e) {
                 case 'B':
                     throw RangeError('`b/B` (period) patterns are not supported, use `a` instead');
                 case 'h':
-                    (t.hourCycle = 'h12'), (t.hour = ['numeric', '2-digit'][n - 1]);
+                    ((t.hourCycle = 'h12'), (t.hour = ['numeric', '2-digit'][n - 1]));
                     break;
                 case 'H':
-                    (t.hourCycle = 'h23'), (t.hour = ['numeric', '2-digit'][n - 1]);
+                    ((t.hourCycle = 'h23'), (t.hour = ['numeric', '2-digit'][n - 1]));
                     break;
                 case 'K':
-                    (t.hourCycle = 'h11'), (t.hour = ['numeric', '2-digit'][n - 1]);
+                    ((t.hourCycle = 'h11'), (t.hour = ['numeric', '2-digit'][n - 1]));
                     break;
                 case 'k':
-                    (t.hourCycle = 'h24'), (t.hour = ['numeric', '2-digit'][n - 1]);
+                    ((t.hourCycle = 'h24'), (t.hour = ['numeric', '2-digit'][n - 1]));
                     break;
                 case 'j':
                 case 'J':

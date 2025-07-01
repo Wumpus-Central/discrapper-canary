@@ -19,7 +19,7 @@ function g(e) {
             className: m.marginBottom20,
             note: u.intl.string(u.t.YCCMkJ),
             onChange: (e) => {
-                (0, c.Z)('switch_channel_warning_enabled', e, !n), l.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !e });
+                ((0, c.Z)('switch_channel_warning_enabled', e, !n), l.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !e }));
             },
             value: !n,
             hideBorder: t,

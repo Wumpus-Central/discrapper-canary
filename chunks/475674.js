@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(642613);
+(n.d(t, { Z: () => o }), n(388685), n(642613));
 var r = n(442837),
     l = n(458725),
     i = n(915525);
@@ -10,7 +10,7 @@ let a = {
     [l.u.STREAM_VIEW_LOW_FPS]: 2,
     [l.u.STREAM_BAD_NETWORK_QUALITY]: 3
 };
-function u(e) {
+function o(e) {
     let t = e.id;
     return (0, r.e7)(
         [i.Z],

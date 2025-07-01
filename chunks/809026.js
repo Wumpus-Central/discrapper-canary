@@ -30,8 +30,8 @@ function r(e) {
         }
     if (null != n.name) {
         var r;
-        (n.animated = null != (r = n.animated) && r), (t.victorEmoji = n);
+        ((n.animated = null != (r = n.animated) && r), (t.victorEmoji = n));
     }
     return t;
 }
-n.d(t, { Z: () => r }), n(388685);
+(n.d(t, { Z: () => r }), n(388685));

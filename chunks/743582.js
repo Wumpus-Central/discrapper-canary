@@ -1,4 +1,4 @@
-i.d(t, { default: () => p }), i(388685);
+(i.d(t, { default: () => p }), i(388685));
 var l = i(255367),
     e = i(73800),
     s = i(512722),
@@ -30,13 +30,13 @@ function p(n) {
         f = (null == p || null == (i = p.team) ? void 0 : i.id) !== j,
         [k, { loading: N, error: w }] = (0, o.Z)(c.ZP.transferApplication),
         z = async () => {
-            a()(null != p, 'no application'),
+            (a()(null != p, 'no application'),
                 a()(null != j, 'no team selected'),
                 null !=
                     (await k({
                         applicationId: p.id,
                         teamId: j
-                    })) && h();
+                    })) && h());
         },
         R = (null == p ? void 0 : p.team) != null;
     return (0, l.jsxs)(r.Y0X, {

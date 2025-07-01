@@ -12,5 +12,5 @@ function s(e) {
         this.set(n[0], n[1]);
     }
 }
-(s.prototype.clear = n.Z), (s.prototype.delete = o.Z), (s.prototype.get = a.Z), (s.prototype.has = i.Z), (s.prototype.set = l.Z);
+((s.prototype.clear = n.Z), (s.prototype.delete = o.Z), (s.prototype.get = a.Z), (s.prototype.has = i.Z), (s.prototype.set = l.Z));
 let u = s;

@@ -74,7 +74,7 @@ function et(e, t, n, R, P, w) {
     w || (w = new r());
     var F = w.get(e);
     if (F) return F;
-    w.set(e, D),
+    (w.set(e, D),
         v(e)
             ? e.forEach(function (r) {
                   D.add(et(r, t, n, r, e, w));
@@ -82,14 +82,14 @@ function et(e, t, n, R, P, w) {
             : y(e) &&
               e.forEach(function (r, i) {
                   D.set(i, et(r, t, n, i, e, w));
-              });
+              }));
     var Z = U ? (M ? _ : f) : M ? T : I,
         H = G ? void 0 : Z(e);
     return (
         i(H || e, function (r, i) {
-            H && (r = e[(i = r)]), a(D, i, et(r, t, n, i, e, w));
+            (H && (r = e[(i = r)]), a(D, i, et(r, t, n, i, e, w)));
         }),
         D
     );
 }
-(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[k] = ee[M] = ee[j] = ee[U] = ee[G] = ee[B] = ee[V] = ee[X] = ee[Q] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[F] = !1), (e.exports = et);
+((ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[k] = ee[M] = ee[j] = ee[U] = ee[G] = ee[B] = ee[V] = ee[X] = ee[Q] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[F] = !1), (e.exports = et));

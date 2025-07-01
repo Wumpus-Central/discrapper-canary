@@ -32,7 +32,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -48,8 +48,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -234,14 +234,14 @@ function U(e) {
         J = l.useCallback(
             (e) => {
                 let { assetOrigin: t = h.q.NEW_ASSET, imageUri: n, file: r, originalAsset: l, isFromTenor: s = !1 } = e;
-                a(),
+                (a(),
                     i({
                         assetOrigin: t,
                         imageUri: n,
                         file: r,
                         originalAsset: l,
                         isFromTenor: s
-                    });
+                    }));
             },
             [a, i]
         ),
@@ -308,7 +308,7 @@ function U(e) {
             );
         }, [null == E ? void 0 : E.page, z, J, j, d]);
     l.useEffect(() => {
-        G &&
+        (G &&
             C.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: S.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location_stack: Y
@@ -318,7 +318,7 @@ function U(e) {
                 location: E,
                 location_stack: Y,
                 upload_type: d
-            });
+            }));
     }, [G, E, Y, d]);
     let ee = j && q,
         et = d === T.pC.AVATAR && W;

@@ -18,7 +18,7 @@ class p extends (l = a.ZP.Store) {
         return u;
     }
 }
-(i = 'GlobalDiscoveryServersSearchLayoutStore'),
+((i = 'GlobalDiscoveryServersSearchLayoutStore'),
     (r = 'displayName') in p
         ? Object.defineProperty(p, r, {
               value: i,
@@ -26,7 +26,7 @@ class p extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (p[r] = i);
+        : (p[r] = i));
 let h = new p(o.Z, {
     CONNECTION_OPEN: d,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: d,

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     C: () => ed,
     Z: () => em
 }),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -51,8 +51,8 @@ var i = n(255367),
     K = n(823188),
     q = n(504865),
     X = n(179984),
-    Q = n(386733),
-    J = n(474936),
+    J = n(386733),
+    Q = n(474936),
     $ = n(981631),
     ee = n(388032),
     et = n(133525),
@@ -65,10 +65,10 @@ let er = 'to_premium_home_button',
 function eo(e) {
     let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: r, theme: s } = e,
         l = t.hasActiveTrial,
-        a = t.planIdFromItems === J.Xh.PREMIUM_YEAR_TIER_2,
+        a = t.planIdFromItems === Q.Xh.PREMIUM_YEAR_TIER_2,
         c = n || l,
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        g = J.GP[t.planIdFromItems],
+        g = Q.GP[t.planIdFromItems],
         p = k.ZP.formatPriceString(k.ZP.getDefaultPrice(g.id), g.interval);
     if (c) {
         var h, f, b;
@@ -92,13 +92,13 @@ function eo(e) {
                           })
                         : a
                           ? ee.intl.format(ee.t['+qqh6u'], {
-                                percent: null != (h = null == r ? void 0 : r.percentage) ? h : J.Bo,
+                                percent: null != (h = null == r ? void 0 : r.percentage) ? h : Q.Bo,
                                 regularPrice: p
                             })
                           : ee.intl.formatToPlainString(ee.t['3Ziutb'], {
-                                percent: null != (f = null == r ? void 0 : r.percentage) ? f : J.M_,
+                                percent: null != (f = null == r ? void 0 : r.percentage) ? f : Q.M_,
                                 regularPrice: p,
-                                numMonths: null != (b = null == r ? void 0 : r.duration) ? b : J.rt
+                                numMonths: null != (b = null == r ? void 0 : r.duration) ? b : Q.rt
                             })
                 })
             ]
@@ -106,7 +106,7 @@ function eo(e) {
     }
     return (0, i.jsx)(q.Z, {
         variant: void 0,
-        subscriptionTier: J.Si.TIER_2,
+        subscriptionTier: Q.Si.TIER_2,
         interval: g.interval
     });
 }
@@ -188,12 +188,12 @@ function ec() {
                                       look: m.zxk.Looks.OUTLINED,
                                       color: m.zxk.Colors.WHITE,
                                       onClick: () => {
-                                          Z.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                          (Z.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: er,
                                               target: es
                                           }),
                                               (0, h.xf)(),
-                                              (0, y.uL)($.Z5c.APPLICATION_STORE);
+                                              (0, y.uL)($.Z5c.APPLICATION_STORE));
                                       },
                                       children: (0, i.jsx)(m.Text, {
                                           className: et.__invalid_managePlanButtonCTA,
@@ -210,12 +210,12 @@ function ec() {
                                       className: et.tierCardButton,
                                       color: m.zxk.Colors.WHITE,
                                       onClick: () => {
-                                          Z.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                          (Z.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: er,
                                               target: es
                                           }),
                                               (0, h.xf)(),
-                                              (0, y.uL)($.Z5c.APPLICATION_STORE);
+                                              (0, y.uL)($.Z5c.APPLICATION_STORE));
                                       },
                                       children: (0, i.jsx)(m.Text, {
                                           className: et.tierCardButtonCTA,
@@ -228,11 +228,11 @@ function ec() {
                                       look: m.zxk.Looks.OUTLINED,
                                       color: m.zxk.Colors.WHITE,
                                       onClick: () => {
-                                          Z.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                          (Z.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: 'to_subscriptions_button',
                                               target: 'subscriptions settings'
                                           }),
-                                              b.Z.open($.oAB.SUBSCRIPTIONS);
+                                              b.Z.open($.oAB.SUBSCRIPTIONS));
                                       },
                                       children: (0, i.jsx)(m.Text, {
                                           className: et.__invalid_managePlanButtonCTA,
@@ -378,7 +378,7 @@ let em = function () {
         E = (0, c.e7)([A.Z], () => A.Z.enabled),
         j = r.useRef(null),
         y = 'PremiumManagementSettings';
-    (0, x.j)({
+    ((0, x.j)({
         location: y + ' auto on',
         autoTrackExposure: !0
     }),
@@ -386,11 +386,11 @@ let em = function () {
             location: y + ' auto off',
             autoTrackExposure: !1
         }),
-        (0, H.B)(y);
+        (0, H.B)(y));
     let P = (0, F.b)(y);
     r.useEffect(() => {
         g.Z.wait(async () => {
-            E || e || (await Promise.all([p.jg(), p.tZ(), (0, f.Y2)(b, null, $.JjL.DISCOVERY)])), o(!1);
+            (E || e || (await Promise.all([p.jg(), p.tZ(), (0, f.Y2)(b, null, $.JjL.DISCOVERY)])), o(!1));
         });
     }, [b, E, e]);
     let [D, w] = r.useState(!1);
@@ -413,7 +413,7 @@ let em = function () {
                     className: et.__invalid_container,
                     children: [
                         (0, i.jsx)(ec, {}),
-                        P && (0, i.jsx)(Q.Z, { isInSettings: !0 }),
+                        P && (0, i.jsx)(J.Z, { isInSettings: !0 }),
                         (0, i.jsx)(eu, {}),
                         (0, i.jsx)(X.Z, {
                             className: et.__invalid_planComparisonTable,
@@ -421,7 +421,7 @@ let em = function () {
                             headingOverride: ee.intl.string(ee.t.dnVvQU),
                             hidePill: !B,
                             selectedPlanColumnClassName: et.tier2PlanComparisonTableBackground,
-                            selectedPlanTier: J.p9.TIER_2
+                            selectedPlanTier: Q.p9.TIER_2
                         })
                     ]
                 }),

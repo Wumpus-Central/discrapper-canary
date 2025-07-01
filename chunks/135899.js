@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $X: () => c,
     IO: () => _,
     M_: () => o,
@@ -9,7 +9,7 @@ n.d(t, {
     tA: () => f,
     zs: () => a
 }),
-    n(388685);
+    n(388685));
 var r = n(149765),
     i = n(981631);
 let a = 'publicSuccessModalSeen',
@@ -21,5 +21,5 @@ let a = 'publicSuccessModalSeen',
     d = 1000,
     f = 'Enable Community Modal';
 var _ = (function (e) {
-    return (e.SAFETY_CHECK = 'safety_check'), (e.BASICS = 'basics'), (e.FINISH = 'finish'), e;
+    return ((e.SAFETY_CHECK = 'safety_check'), (e.BASICS = 'basics'), (e.FINISH = 'finish'), e);
 })({});

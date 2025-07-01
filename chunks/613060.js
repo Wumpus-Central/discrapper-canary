@@ -15,25 +15,25 @@ function o(e, t, n) {
         e
     );
 }
-let s = {};
-class a extends (r = i.ZP.PersistedStore) {
+let a = {};
+class s extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e &&
             Object.keys(e).forEach((t) => {
-                'number' == typeof e[t] && (s[t] = e[t]);
+                'number' == typeof e[t] && (a[t] = e[t]);
             });
     }
     getState() {
-        return s;
+        return a;
     }
     hasViewed(e) {
-        return null != s[e];
+        return null != a[e];
     }
 }
-o(a, 'displayName', 'ViewHistoryStore'), o(a, 'persistKey', 'ViewHistoryStore');
-let c = new a(l.Z, {
+(o(s, 'displayName', 'ViewHistoryStore'), o(s, 'persistKey', 'ViewHistoryStore'));
+let c = new s(l.Z, {
     VIEW_HISTORY_MARK_VIEW: function (e) {
         let { key: t } = e;
-        s[t] = Date.now();
+        a[t] = Date.now();
     }
 });

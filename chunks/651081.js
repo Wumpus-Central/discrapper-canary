@@ -1,4 +1,4 @@
-n.d(t, { default: () => V }), n(388685), n(539854), n(415506);
+(n.d(t, { default: () => V }), n(388685), n(539854), n(415506));
 var l = n(255367),
     a = n(73800),
     s = n(120356),
@@ -190,7 +190,7 @@ function L(e) {
                 after: e,
                 type: P
             });
-            (d.current = l[l.length - 1].id), h(!1);
+            ((d.current = l[l.length - 1].id), h(!1));
         }, [s.id, t.id, n.emoji]);
     (0, u.ZP)(() => {
         _();
@@ -236,7 +236,7 @@ function L(e) {
         ),
         f = a.useMemo(() => {
             let e = [];
-            return 0 === r.length && m ? e.push(0) : (e.push(r.length), i && e.push(1)), e;
+            return (0 === r.length && m ? e.push(0) : (e.push(r.length), i && e.push(1)), e);
         }, [i, m, r.length]);
     return (0, l.jsx)('div', {
         className: b.votersListContainer,

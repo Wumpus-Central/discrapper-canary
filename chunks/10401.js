@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var r,
     i = n(873546),
     l = n(442837),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -67,7 +67,7 @@ function _() {
 }
 class y extends (r = l.ZP.Store) {
     initialize() {
-        _(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(a.Z);
+        (_(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(a.Z));
     }
     shouldShow(e) {
         return !(!b || m || c.a || (i.tq && ['writing-messages', 'organize-by-topic'].includes(e))) && (g[e] || !1);
@@ -90,19 +90,19 @@ u(y, 'displayName', 'TutorialIndicatorStore');
 let C = new y(o.Z, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
-        (b = !0), (m = !0), (h = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))), _();
+        ((b = !0), (m = !0), (h = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))), _());
     },
     CONNECTION_CLOSED: function () {
         b = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        (h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], _();
+        ((h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], _());
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
         f = p(d({}, f), { [e.tutorialId]: e.renderData });
     },
     TUTORIAL_INDICATOR_HIDE: function (e) {
-        (f = d({}, f)), delete f[e.tutorialId];
+        ((f = d({}, f)), delete f[e.tutorialId]);
     },
     TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
         m = !0;

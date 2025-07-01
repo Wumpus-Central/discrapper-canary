@@ -10,7 +10,7 @@ function s(e, t, r) {
         s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1 / 0;
     if ('Object' === e) {
         var o = Object.getOwnPropertyNames(t);
-        r && o.sort(!0 === r ? void 0 : r),
+        (r && o.sort(!0 === r ? void 0 : r),
             (i = {
                 entries: (o = o.slice(a, s + 1)).map(function (e) {
                     return {
@@ -18,7 +18,7 @@ function s(e, t, r) {
                         value: t[e]
                     };
                 })
-            });
+            }));
     } else if ('Array' === e)
         i = {
             entries: t.slice(a, s + 1).map(function (e, t) {
@@ -79,10 +79,10 @@ function s(e, t, r) {
                     },
                     n: function () {
                         var e = r.next();
-                        return (i = e.done), e;
+                        return ((i = e.done), e);
                     },
                     e: function (e) {
-                        (c = !0), (o = e);
+                        ((c = !0), (o = e));
                     },
                     f: function () {
                         try {
@@ -100,7 +100,7 @@ function s(e, t, r) {
                     f = !1;
                     break;
                 }
-                a <= l &&
+                (a <= l &&
                     (b && Array.isArray(h)
                         ? 'string' == typeof h[0] || 'number' == typeof h[0]
                             ? u.push({
@@ -118,7 +118,7 @@ function s(e, t, r) {
                               key: l,
                               value: h
                           })),
-                    l++;
+                    l++);
             }
         } catch (e) {
             d.e(e);

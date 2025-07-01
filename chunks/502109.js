@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Ch: () => N,
     Tr: () => A
 }),
     n(642613),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -35,7 +35,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,11 +51,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -77,7 +77,7 @@ function O(e, t) {
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -87,7 +87,7 @@ function v(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let I = new l.Z('PaymentRequest'),
@@ -101,10 +101,10 @@ class S extends i.Component {
     componentDidMount() {
         if (!(0, f.isDesktop)()) {
             if (!this.isBrowserCompatible()) return void this.onPaymentRequestFailure();
-            (this.disableWallets = T.filter((e) => e !== this.paymentRequestWallet).sort()),
+            ((this.disableWallets = T.filter((e) => e !== this.paymentRequestWallet).sort()),
                 (0, _.d2)().then((e) => {
                     this.initPaymentRequest(e);
-                });
+                }));
         }
     }
     validatePaymentRequest() {
@@ -153,7 +153,7 @@ class S extends i.Component {
         u.default.track(e, i);
     }
     onValidPaymentRequest() {
-        this.trackAnalyticsEvent(p.rMx.PAYMENT_REQUEST_LOADED), void 0 !== this.props.onValidPaymentRequest && this.props.onValidPaymentRequest();
+        (this.trackAnalyticsEvent(p.rMx.PAYMENT_REQUEST_LOADED), void 0 !== this.props.onValidPaymentRequest && this.props.onValidPaymentRequest());
     }
     renderLoadingState() {
         var e, t;
@@ -233,7 +233,7 @@ class S extends i.Component {
         return e ? this.renderMain() : null;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'initialState', {
                 submitting: !0,
                 paymentRequest: null,
@@ -261,13 +261,13 @@ class S extends i.Component {
                 });
                 null != this.props.paymentRequestRef && (this.props.paymentRequestRef.current = t);
                 let { onStripePaymentMethodReceived: n } = this.props;
-                t.on('paymentmethod', (e) => {
+                (t.on('paymentmethod', (e) => {
                     let { complete: t, paymentMethod: r } = e;
-                    n(r), this.trackAnalyticsEvent(p.rMx.PAYMENT_REQUEST_COMPLETED), t('success');
+                    (n(r), this.trackAnalyticsEvent(p.rMx.PAYMENT_REQUEST_COMPLETED), t('success'));
                 }),
                     t.on('cancel', () => {
                         n(null);
-                    });
+                    }));
                 let r = await t.canMakePayment();
                 return (
                     I.info('PaymentRequest availablity check', r),
@@ -290,7 +290,7 @@ class S extends i.Component {
                 if (!e) return void this.onPaymentRequestFailure();
                 let { paymentRequest: t } = this.state;
                 e && null != t && (t.show(), this.props.onChooseType(p.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet));
-            });
+            }));
     }
 }
 class A extends S {
@@ -361,7 +361,7 @@ class A extends S {
               });
     }
     constructor(...e) {
-        super(...e), g(this, 'state', E({}, this.initialState)), g(this, 'paymentRequestWallet', 'googlePay');
+        (super(...e), g(this, 'state', E({}, this.initialState)), g(this, 'paymentRequestWallet', 'googlePay'));
     }
 }
 class N extends S {
@@ -432,6 +432,6 @@ class N extends S {
               });
     }
     constructor(...e) {
-        super(...e), g(this, 'state', E({}, this.initialState)), g(this, 'paymentRequestWallet', 'applePay');
+        (super(...e), g(this, 'state', E({}, this.initialState)), g(this, 'paymentRequestWallet', 'applePay'));
     }
 }

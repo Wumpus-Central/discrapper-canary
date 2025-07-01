@@ -1,5 +1,5 @@
 let r, i;
-n.r(t),
+(n.r(t),
     n.d(t, {
         AnalyticsActionHandlers: () => b.X,
         Impression: () => y.Impression,
@@ -26,7 +26,7 @@ n.r(t),
     n(704826),
     n(413496),
     n(433524),
-    n(388685);
+    n(388685));
 var a,
     o = n(348327),
     s = n.n(o),
@@ -62,7 +62,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -70,7 +70,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -78,11 +78,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -141,7 +141,7 @@ if (null != P) {
         'linux' === n)
     ) {
         let e = P.crashReporter.getMetadata();
-        (r.window_manager = e.wm), (r.distro = e.distro);
+        ((r.window_manager = e.wm), (r.distro = e.distro));
     } else 'darwin' === n ? (r.os_sdk_version = null == i ? void 0 : i.split('.')[0]) : 'win32' === n && (r.os_sdk_version = null == i ? void 0 : i.split('.')[2]);
 }
 let w = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ');
@@ -219,7 +219,7 @@ function G() {
 }
 function B() {
     let e = {};
-    return (e.os = j()), (e.browser = M()), (e.device = U()), (e.system_locale = (0, _.qf)()), (e.has_client_mods = (0, f.e)()), e;
+    return ((e.os = j()), (e.browser = M()), (e.device = U()), (e.system_locale = (0, _.qf)()), (e.has_client_mods = (0, f.e)()), e);
 }
 function V() {
     var e, t;
@@ -236,11 +236,11 @@ function V() {
 }
 function F() {
     let e = {};
-    return (e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), k()));
+    return ((e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), k())));
 }
 function Z(e, t) {
     let n = {};
-    return Object.keys(e).map((r) => (n[''.concat(r).concat(t)] = e[r])), n;
+    return (Object.keys(e).map((r) => (n[''.concat(r).concat(t)] = e[r])), n);
 }
 function H() {
     let e = p.K.get(A);
@@ -248,7 +248,7 @@ function H() {
     let t = p.K.get(N);
     null == t && ((t = F()), p.K.set(N, t));
     let n = h.x.get(N);
-    return null == n && ((n = Z(F(), '_current')), h.x.set(N, n)), I({}, e, V(), t, n);
+    return (null == n && ((n = Z(F(), '_current')), h.x.set(N, n)), I({}, e, V(), t, n));
 }
 function Y() {
     try {
@@ -261,10 +261,10 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || '' === n.release_channel) && (n.release_channel = r.split('-')[0]);
-    let i = parseInt('414077', 10);
+    let i = parseInt('414640', 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
-    return isNaN(a) || (n.native_build_number = a), (n.client_event_source = Y()), (n.has_client_mods = (0, f.e)()), (n.client_launch_id = g.s), n;
+    return (isNaN(a) || (n.native_build_number = a), (n.client_event_source = Y()), (n.has_client_mods = (0, f.e)()), (n.client_launch_id = g.s), n);
 }
 function K(e) {
     return null != C[e] && C[e] > Date.now();
@@ -276,7 +276,7 @@ if (null == r)
         r = {};
     }
 function z(e) {
-    (r = I({}, r, e)), (i = (0, E.Z)(r));
+    ((r = I({}, r, e)), (i = (0, E.Z)(r)));
 }
 z(W());
 let q = (e) => {

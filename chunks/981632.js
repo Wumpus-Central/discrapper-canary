@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(415506);
+(n.d(t, { Z: () => u }), n(388685), n(415506));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -15,10 +15,10 @@ function u(e) {
         [b, y] = i.useState(!1),
         [O, v] = i.useState(-1),
         I = () => {
-            (m.current = (0, l._)(t, p)), v((e) => e + 1);
+            ((m.current = (0, l._)(t, p)), v((e) => e + 1));
         },
         T = () => {
-            E(!1), y(!0), v(-1), h(d);
+            (E(!1), y(!0), v(-1), h(d));
         };
     i.useEffect(() => {
         null == f && h(d);
@@ -31,7 +31,7 @@ function u(e) {
             versionKey: O
         },
         A = i.useRef(S);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         A.current = S;
     }),
         i.useEffect(() => {
@@ -46,7 +46,7 @@ function u(e) {
         i.useEffect(() => {
             let { applyAnimation: e, idleAnimationState: t } = A.current;
             b && (E(null == t), y(!1), e());
-        }, [b]);
+        }, [b]));
     let N = () => {
         null != f && (h(f), E(!0));
     };

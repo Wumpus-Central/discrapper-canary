@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     default: () => j,
     h: () => M,
     j: () => k
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -217,7 +217,7 @@ function M(e) {
         a = (0, p.Z)({ forceFetch: !0 }),
         s = (0, f.ZP)(),
         l = i.useCallback(() => {
-            u.Z.open(S.oAB.SUBSCRIPTIONS, null, {}), n();
+            (u.Z.open(S.oAB.SUBSCRIPTIONS, null, {}), n());
         }, [n]);
     if (!a.fetched)
         return (0, r.jsx)('div', {

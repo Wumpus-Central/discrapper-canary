@@ -1,14 +1,14 @@
-n.d(t, { default: () => a });
+n.d(t, { default: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(933557),
     o = n(388032),
-    s = n(331884);
-function a(e) {
+    a = n(331884);
+function s(e) {
     var t,
         n,
-        { channel: a, category: c } = e,
+        { channel: s, category: c } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -19,16 +19,16 @@ function a(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['channel', 'category']);
-    let d = (0, l.ZP)(a, !0),
+    let d = (0, l.ZP)(s, !0),
         h = (0, l.ZP)(c);
     return (0, r.jsx)(
         i.ConfirmModal,
@@ -36,7 +36,7 @@ function a(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function a(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -52,8 +52,8 @@ function a(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })(
@@ -69,7 +69,7 @@ function a(e) {
             {
                 children: (0, r.jsx)(i.Text, {
                     variant: 'text-md/normal',
-                    className: s.message,
+                    className: a.message,
                     selectable: !1,
                     children: o.intl.format(o.t['iKW+jY'], {
                         channelName: d,

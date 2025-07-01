@@ -21,7 +21,7 @@ class a extends r.Z {
         });
     }
     constructor(e) {
-        super(), i(this, 'id', void 0), i(this, 'path', void 0), (this.id = e.id), (this.path = e.path);
+        (super(), i(this, 'id', void 0), i(this, 'path', void 0), (this.id = e.id), (this.path = e.path));
     }
 }
 let o = a;

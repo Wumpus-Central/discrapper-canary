@@ -16,7 +16,7 @@ var r = n(175730),
         return parseFloat(e || '0');
     },
     p = function (e, t, n) {
-        return void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === n && (n = !1), new i.D((n ? t : e) || 0, (n ? e : t) || 0);
+        return (void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === n && (n = !1), new i.D((n ? t : e) || 0, (n ? e : t) || 0));
     },
     h = (0, s.v)({
         devicePixelContentBoxSize: p(),
@@ -26,7 +26,7 @@ var r = n(175730),
     }),
     m = function (e, t) {
         if ((void 0 === t && (t = !1), c.has(e) && !t)) return c.get(e);
-        if ((0, o.xj)(e)) return c.set(e, h), h;
+        if ((0, o.xj)(e)) return (c.set(e, h), h);
         var n = getComputedStyle(e),
             r = (0, o.zd)(e) && e.ownerSVGElement && e.getBBox(),
             i = !f && 'border-box' === n.boxSizing,
@@ -59,7 +59,7 @@ var r = n(175730),
                 contentBoxSize: p(x, k, l),
                 contentRect: new a.N(O, E, x, k)
             });
-        return c.set(e, U), U;
+        return (c.set(e, U), U);
     },
     g = function (e, t, n) {
         var i = m(e, n),

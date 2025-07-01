@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(704215),
@@ -23,8 +23,8 @@ function v(e) {
         { analyticsLocations: j } = (0, a.ZP)(o.Z.VOICE_CONTROL_TRAY),
         O = (0, h.Ou)(t),
         E = i.useRef(null),
-        I = (0, u.Z)(),
-        { isSharedCanvasEnabled: S } = f.Z.useExperiment({
+        S = (0, u.Z)(),
+        { isSharedCanvasEnabled: I } = f.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
@@ -33,9 +33,9 @@ function v(e) {
         N = (0, h.Zm)(t, 'VoiceEffectsActionBar') ? [l.z.CONSUMABLE_HD_POTION_UPSELL] : [],
         [T, A] = (0, c.US)(N, void 0, !0),
         w = T === l.z.CONSUMABLE_HD_POTION_UPSELL;
-    if (null == t || null != I) return null;
+    if (null == t || null != S) return null;
     let R = P && Z,
-        k = S && n;
+        k = I && n;
     return (0, r.jsxs)(a.Gt, {
         value: j,
         children: [

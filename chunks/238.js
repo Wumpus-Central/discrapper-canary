@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     N: () => f,
     Z: () => E
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -25,7 +25,7 @@ function c(e, t, n) {
 let u = new Map(),
     d = new Map();
 var f = (function (e) {
-    return (e[(e.NONE = 0)] = 'NONE'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED'), e;
+    return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED'), e);
 })({});
 let _ = new o.Z({
     subscriptions: [],
@@ -33,7 +33,7 @@ let _ = new o.Z({
 });
 function p(e) {
     let { applicationId: t, layout: n } = e;
-    u.set(t, o.Z.createFromServer(n)), d.delete(t);
+    (u.set(t, o.Z.createFromServer(n)), d.delete(t));
 }
 function h(e) {
     let { applicationId: t } = e;

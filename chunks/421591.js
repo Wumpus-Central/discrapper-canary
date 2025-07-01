@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(482853);
+(n.d(t, { Z: () => b }), n(388685), n(482853));
 var l = n(255367),
     i = n(73800),
     r = n(481060),
@@ -71,7 +71,7 @@ function g(e) {
         }, []),
         f = i.useCallback(() => {
             let e = null;
-            a((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
+            (a((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
                 s((t) => {
                     var n, l;
                     return null == e
@@ -80,7 +80,7 @@ function g(e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
                                       l = Object.keys(n);
-                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                  ('function' == typeof Object.getOwnPropertySymbols &&
                                       (l = l.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -88,7 +88,7 @@ function g(e) {
                                       )),
                                       l.forEach(function (t) {
                                           var l;
-                                          (l = n[t]),
+                                          ((l = n[t]),
                                               t in e
                                                   ? Object.defineProperty(e, t, {
                                                         value: l,
@@ -96,8 +96,8 @@ function g(e) {
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[t] = l);
-                                      });
+                                                  : (e[t] = l));
+                                      }));
                               }
                               return e;
                           })({}, t)),
@@ -115,7 +115,7 @@ function g(e) {
                                     Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                 }),
                           n);
-                });
+                }));
         }, []),
         h = i.useCallback(
             (e) => {

@@ -15,7 +15,7 @@ function a(e, t) {
         })
         .then((e) => {
             let n = [];
-            e.body.length > 0 &&
+            (e.body.length > 0 &&
                 (n = e.body.map((e) =>
                     e.map((e) => ({
                         connectionType: e.connection_type,
@@ -29,7 +29,7 @@ function a(e, t) {
                     type: 'GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS',
                     roleId: t,
                     roleConnectionConfigurations: n
-                });
+                }));
         })
         .catch(() => {});
 }
@@ -67,7 +67,7 @@ async function s(e, t, n) {
                 );
             }),
         c = await (0, l.H)(e, t, !1);
-    null != c &&
+    (null != c &&
         i.Z.dispatch({
             type: 'GUILD_ROLE_MEMBER_COUNT_UPDATE',
             guildId: e,
@@ -78,7 +78,7 @@ async function s(e, t, n) {
             type: 'GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS',
             roleId: t,
             roleConnectionConfigurations: s
-        });
+        }));
 }
 async function c() {
     return (

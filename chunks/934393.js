@@ -20,11 +20,11 @@ function h(e) {
     let E = (e) => {
         e.stopPropagation();
         let n = t === _.ABu.XBOX;
-        null == h || h({ action: n ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
+        (null == h || h({ action: n ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
             (0, l.Z)({
                 platformType: t,
                 location: m
-            });
+            }));
     };
     return g === f.lY.MODAL_V2
         ? (0, r.jsx)(d.tG, {

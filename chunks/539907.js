@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     j: () => D,
     t: () => I
 }),
     n(388685),
-    n(415506);
+    n(415506));
 var r,
     i = n(255367),
     a = n(73800),
@@ -36,7 +36,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -91,16 +91,16 @@ function S(e) {
 function A(e, t, n, r) {
     switch (e) {
         case 'top':
-            return c()(null != t.bottom, 'Missing bottom'), r.offsetHeight - (t.bottom + n.offsetHeight);
+            return (c()(null != t.bottom, 'Missing bottom'), r.offsetHeight - (t.bottom + n.offsetHeight));
         case 'bottom':
-            return c()(null != t.top, 'Missing top'), r.offsetHeight - (t.top + n.offsetHeight);
+            return (c()(null != t.top, 'Missing top'), r.offsetHeight - (t.top + n.offsetHeight));
         case 'left':
-            return c()(null != t.right, 'Missing right'), r.offsetWidth - (t.right + n.offsetWidth);
+            return (c()(null != t.right, 'Missing right'), r.offsetWidth - (t.right + n.offsetWidth));
         case 'right':
-            return c()(null != t.left, 'Missing left'), r.offsetWidth - (t.left + n.offsetWidth);
+            return (c()(null != t.left, 'Missing left'), r.offsetWidth - (t.left + n.offsetWidth));
         case 'center':
         case 'window_center':
-            return c()(null != t.left, 'Missing left'), r.offsetWidth - (t.left + n.offsetWidth / 2);
+            return (c()(null != t.left, 'Missing left'), r.offsetWidth - (t.left + n.offsetWidth / 2));
         default:
             throw Error('Unexpected position: '.concat(e));
     }
@@ -291,7 +291,7 @@ class D extends (r = a.Component) {
         if (t && s < 0) {
             let t = C(e),
                 i = this.calculatePositionStyle(t, n, r);
-            (u = i.style), (d = i.nudge);
+            ((u = i.style), (d = i.nudge));
             let a = A(t, u, n, r);
             if (
                 (a > s &&
@@ -319,7 +319,7 @@ class D extends (r = a.Component) {
         let { targetRef: n, onMount: r } = this.props;
         this.setState(b({ isPositioned: !0 }, this.calculateState()));
         let i = this.elementRef.current;
-        c()(null != i, 'Missing elementRef'), null != n.current && v.set(i, n.current), _.S.subscribe(m.CkL.LAYER_POP_START, this.handleLayerPopStart), _.S.subscribe(m.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null == (t = i.ownerDocument) || null == (e = t.defaultView) || e.addEventListener('resize', this.handleLayerPopComplete), null == r || r();
+        (c()(null != i, 'Missing elementRef'), null != n.current && v.set(i, n.current), _.S.subscribe(m.CkL.LAYER_POP_START, this.handleLayerPopStart), _.S.subscribe(m.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null == (t = i.ownerDocument) || null == (e = t.defaultView) || e.addEventListener('resize', this.handleLayerPopComplete), null == r || r());
     }
     componentDidUpdate(e, t) {
         if (((S(e) === S(this.props) && w(e, this.props)) || this.updatePosition(), t.position !== this.state.position)) {
@@ -330,7 +330,7 @@ class D extends (r = a.Component) {
     componentWillUnmount() {
         var e, t, n, r;
         let i = this.elementRef.current;
-        c()(null != i, 'Missing elementRef'), v.delete(i), _.S.unsubscribe(m.CkL.LAYER_POP_START, this.handleLayerPopStart), _.S.unsubscribe(m.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null == (t = i.ownerDocument) || null == (e = t.defaultView) || e.removeEventListener('resize', this.handleLayerPopComplete), null == (n = (r = this.props).onUnmount) || n.call(r);
+        (c()(null != i, 'Missing elementRef'), v.delete(i), _.S.unsubscribe(m.CkL.LAYER_POP_START, this.handleLayerPopStart), _.S.unsubscribe(m.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null == (t = i.ownerDocument) || null == (e = t.defaultView) || e.removeEventListener('resize', this.handleLayerPopComplete), null == (n = (r = this.props).onUnmount) || n.call(r));
     }
     render() {
         let { id: e, className: t, children: n, fixed: r, disablePointerEvents: a, clickTrap: o = !1 } = this.props,
@@ -370,7 +370,7 @@ class D extends (r = a.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             E(this, 'elementRef', a.createRef()),
             E(this, 'state', {
                 style: Object.freeze({}),
@@ -388,7 +388,7 @@ class D extends (r = a.Component) {
             }),
             E(this, 'updatePosition', () => {
                 this.setState(this.calculateState());
-            });
+            }));
     }
 }
 E(D, 'defaultProps', {

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => T }), t(642613), t(388685);
+(t.d(n, { Z: () => T }), t(642613), t(388685));
 var l = t(255367),
     r = t(73800),
     i = t(772848),
@@ -23,7 +23,7 @@ function Z(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -31,7 +31,7 @@ function Z(e) {
             )),
             l.forEach(function (n) {
                 var l;
-                (l = t[n]),
+                ((l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
@@ -39,8 +39,8 @@ function Z(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
-            });
+                        : (e[n] = l));
+            }));
     }
     return e;
 }
@@ -72,12 +72,12 @@ function P(e, n) {
                 l,
                 r = {},
                 i = Object.keys(e);
-            for (l = 0; l < i.length; l++) (t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+            for (l = 0; l < i.length; l++) ((t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]));
             return r;
         })(e, n);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        for (l = 0; l < i.length; l++) (t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+        for (l = 0; l < i.length; l++) ((t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
     }
     return r;
 }
@@ -182,7 +182,7 @@ function T(e) {
             (e) => {
                 s({ action: 'ADD_ROLE' });
                 let t = null != T ? T : [];
-                -1 === t.indexOf(e) && (t = t.concat([e])), u.Z.updateMemberRoles(i, n.id, t, [e], []);
+                (-1 === t.indexOf(e) && (t = t.concat([e])), u.Z.updateMemberRoles(i, n.id, t, [e], []));
             },
             [T, i, n.id, s]
         );

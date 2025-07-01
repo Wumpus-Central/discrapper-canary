@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     Hu: () => Y,
     oA: () => z,
     se: () => V
 }),
     n(388685),
     n(642613),
-    n(539854);
+    n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -48,7 +48,7 @@ function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -56,7 +56,7 @@ function U(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -64,8 +64,8 @@ function U(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -118,7 +118,7 @@ function z(e) {
                 height: 99
             }).then((e) => {
                 let { screenSources: t, windowSources: n, cameraSources: r } = e;
-                m(t), y(n), w(r);
+                (m(t), y(n), w(r));
             }),
             e.start(1000, async () => {
                 let {
@@ -129,7 +129,7 @@ function z(e) {
                     width: 176,
                     height: 99
                 });
-                m(e), y(t), w(n);
+                (m(e), y(t), w(n));
             }),
             () => {
                 e.stop();
@@ -314,7 +314,7 @@ function V(e) {
                     let [t, n] = e;
                     return !n.disabled;
                 });
-                l(e),
+                (l(e),
                     c(
                         U(
                             {},
@@ -340,7 +340,7 @@ function V(e) {
                                 );
                             }, {})
                         )
-                    );
+                    ));
             };
         return (
             t(),

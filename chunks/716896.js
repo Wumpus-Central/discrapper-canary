@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(147913),
     i = n(592125),
     a = n(109590),
@@ -24,7 +24,7 @@ class l extends r.Z {
         null != n && n.isForumLikeChannel() && (0, a.EB)(n);
     }
     constructor(...e) {
-        super(...e), s(this, 'actions', { CHANNEL_PRELOAD: this.handleChannelPreload });
+        (super(...e), s(this, 'actions', { CHANNEL_PRELOAD: this.handleChannelPreload }));
     }
 }
 let c = new l();

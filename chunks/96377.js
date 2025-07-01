@@ -95,7 +95,7 @@ let p = {
                     es = H + en - eo - ea,
                     el = H + er - eo,
                     ec = (0, s.u)(T ? (0, _.VV)(Y, es) : Y, H, T ? (0, _.Fp)(W, el) : W);
-                (L[w] = ec), (G[w] = ec - H);
+                ((L[w] = ec), (G[w] = ec - H));
             }
             if (E) {
                 var eu,
@@ -110,7 +110,7 @@ let p = {
                     eb = eg ? eh : e_ - x[ep] - k[ep] - eE + j.altAxis,
                     ey = eg ? e_ + x[ep] + k[ep] - eE - j.altAxis : em,
                     eO = T && eg ? (0, s.q)(eb, e_, ey) : (0, s.u)(T ? eb : eh, e_, T ? ey : em);
-                (L[D] = eO), (G[D] = eO - e_);
+                ((L[D] = eO), (G[D] = eO - e_));
             }
             t.modifiersData[p] = G;
         }

@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: 'pt',
     pluralRuleFunction: function (e, t) {
         var n = Number(String(e).split('.')[0]) == e;
@@ -40,4 +40,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({
         locale: 'pt-TL',
         parentLocale: 'pt-PT'
-    });
+    }));

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(953529);
+(n.d(t, { Z: () => B }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -49,7 +49,7 @@ function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,7 +57,7 @@ function M(e) {
             )),
             r.forEach(function (t) {
                 k(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -65,11 +65,11 @@ function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -143,19 +143,19 @@ function B(e) {
                             }),
                             Y)
                         ) {
-                            (null == E ? void 0 : E.userId) === (null == H ? void 0 : H.id)
+                            ((null == E ? void 0 : E.userId) === (null == H ? void 0 : H.id)
                                 ? (0, m.uL)(R.Z5c.NITRO_HOME)
                                 : (0, _.k)({
                                       analyticsLocations: V,
                                       displayProfile: E
                                   }),
-                                null == k || k();
+                                null == k || k());
                             return;
                         }
                         if ((null == E ? void 0 : E.userId) === (null == H ? void 0 : H.id)) {
                             let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: V }) : null;
                             if (null == n) return;
-                            return null == k || k(), n(t);
+                            return (null == k || k(), n(t));
                         }
                         return (
                             (0, _.k)({
@@ -166,7 +166,7 @@ function B(e) {
                         );
                     }
                     let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: V }) : null;
-                    if (null != n) return null == k || k(), n(t);
+                    if (null != n) return (null == k || k(), n(t));
                 },
                 T = () => {
                     if (e.id === A.i) {
@@ -179,7 +179,7 @@ function B(e) {
                             })
                         );
                     }
-                    Z({ action: 'HOVER_BADGE' }),
+                    (Z({ action: 'HOVER_BADGE' }),
                         (0, S.Qf)(
                             M(
                                 {
@@ -188,7 +188,7 @@ function B(e) {
                                 },
                                 F
                             )
-                        );
+                        ));
                 },
                 N = G({
                     badge: e,

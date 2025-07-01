@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => E }), n(388685), n(804061), n(704826), n(35282);
+(n.d(t, { ZP: () => E }), n(388685), n(804061), n(704826), n(35282));
 var r = n(348326),
     i = n(710845),
     a = n(38618),
@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,7 +43,7 @@ class h {
         (0, d.Z)(e);
         let t = new Map(),
             n = new Map();
-        for (let r of e) this.addIntoMap(t, r.users, (e) => e.id), this.addIntoMap(n, r.members, (e) => e.userId);
+        for (let r of e) (this.addIntoMap(t, r.users, (e) => e.id), this.addIntoMap(n, r.members, (e) => e.userId));
         return [Array.from(t.values()), Array.from(n.values())];
     }
     static addIntoMap(e, t, n) {
@@ -58,7 +58,7 @@ class h {
             var t;
             let n = null == (t = e[0]) ? void 0 : t.connectionId,
                 [r, i] = h.computeUsersAndMembers(e);
-            e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n), (this.users = r), (this.members = i), (this.messages = e.map((e) => e.message));
+            (e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n), (this.users = r), (this.members = i), (this.messages = e.map((e) => e.message)));
         }
     }
 }
@@ -109,7 +109,7 @@ class m {
     upsertOne(e, t, n, i) {
         let o = s.Z.messagesTransaction(i),
             u = a.Z.lastTimeConnectedChanged();
-        o.put(e, t, l.a.fromMessage(e, t, n, u), r.Sn.Replace), o.trimChannel(e, t, c.ZP.saveLimit(t));
+        (o.put(e, t, l.a.fromMessage(e, t, n, u), r.Sn.Replace), o.trimChannel(e, t, c.ZP.saveLimit(t)));
     }
     upsertMany(e, t, n, r) {
         let i = s.Z.messagesTransaction(r),
@@ -122,7 +122,7 @@ class m {
             o = a.Z.lastTimeConnectedChanged(),
             u = c.ZP.saveLimit(t),
             d = (n.length > u ? n.slice(n.length - u) : n).map((n) => l.a.fromMessage(e, t, n, o));
-        i.replaceAll(e, t, d), i.trimChannel(e, t, c.ZP.saveLimit(t));
+        (i.replaceAll(e, t, d), i.trimChannel(e, t, c.ZP.saveLimit(t)));
     }
     async updateOne(e, t, n, r) {
         if (null == n.id) return void p.warn('updateOne: message.id is null; cannot update a message if we do not know its id.');

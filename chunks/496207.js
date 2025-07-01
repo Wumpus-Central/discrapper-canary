@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(147913),
     i = n(914010),
     a = n(558217),
@@ -25,7 +25,7 @@ class l extends r.Z {
         }
     }
     constructor(...e) {
-        super(...e), s(this, 'actions', { EMOJI_INTERACTION_INITIATED: this.handleInteraction });
+        (super(...e), s(this, 'actions', { EMOJI_INTERACTION_INITIATED: this.handleInteraction }));
     }
 }
 let c = new l();

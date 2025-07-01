@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(472816), n(794429);
+(n.d(t, { Z: () => E }), n(388685), n(472816), n(794429));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,17 +11,17 @@ var r = n(255367),
     p = n(419922),
     m = n(626135),
     f = n(585483),
-    h = n(115610),
-    g = n(981631),
-    _ = n(388032),
+    g = n(115610),
+    _ = n(981631),
+    h = n(388032),
     b = n(711643);
-function x(e) {
-    let { message: t, channel: l, compact: x } = e,
+function E(e) {
+    let { message: t, channel: l, compact: E } = e,
         y = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [E, v] = i.useState(null);
+        [C, x] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            y.length > 0 && v(y[Math.floor(Math.random() * y.length)]);
+            y.length > 0 && x(y[Math.floor(Math.random() * y.length)]);
         }, 500);
         return () => clearInterval(e);
     }, [y]),
@@ -30,14 +30,14 @@ function x(e) {
         : (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)(c.Z, {
-                      className: a()(b.mainContainer, { [b.compact]: x }),
+                      className: a()(b.mainContainer, { [b.compact]: E }),
                       icon: n(570111),
-                      compact: x,
+                      compact: E,
                       children: (0, r.jsx)('div', {
-                          className: a()(b.__invalid_content, { [b.compact]: x }),
+                          className: a()(b.__invalid_content, { [b.compact]: E }),
                           children: (0, r.jsx)('div', {
-                              className: a()(b.__invalid_messageContent, { [b.compact]: x }),
-                              children: '' !== t.content ? t.content : _.intl.string(_.t.wnn1DQ)
+                              className: a()(b.__invalid_messageContent, { [b.compact]: E }),
+                              children: '' !== t.content ? t.content : h.intl.string(h.t.wnn1DQ)
                           })
                       })
                   }),
@@ -45,22 +45,22 @@ function x(e) {
                       className: b.actions,
                       children: [
                           (0, r.jsx)(s.DY3, {
-                              text: _.intl.string(_.t.ASZTf3),
+                              text: h.intl.string(h.t.ASZTf3),
                               children: (0, r.jsx)(s.zxk, {
                                   color: s.zxk.Colors.PRIMARY,
                                   onClick: () => {
-                                      m.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      (m.default.track(_.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          f.S.dispatch(g.CkL.UPLOAD_FILE),
+                                          f.S.dispatch(_.CkL.UPLOAD_FILE),
                                           (0, u.fE)({
                                               message: t,
                                               channel: l,
                                               shouldMention: !0
-                                          });
+                                          }));
                                   },
                                   children: (0, r.jsx)(s.FmF, {
                                       size: 'md',
@@ -69,23 +69,23 @@ function x(e) {
                               })
                           }),
                           (0, r.jsx)(s.DY3, {
-                              text: _.intl.string(_.t.gbrrAw),
+                              text: h.intl.string(h.t.gbrrAw),
                               children: (0, r.jsx)(s.zxk, {
                                   color: s.zxk.Colors.PRIMARY,
                                   onClick: () => {
-                                      m.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      (m.default.track(_.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,
                                           action_type: 'sticker'
                                       }),
-                                          (0, h.O)(t.id, l);
+                                          (0, g.O)(t.id, l));
                                   },
                                   children:
-                                      null != E
+                                      null != C
                                           ? (0, r.jsx)(p.Z, {
                                                 size: 32,
-                                                sticker: E
+                                                sticker: C
                                             })
                                           : (0, r.jsx)(s.EO4, {
                                                 size: 'md',

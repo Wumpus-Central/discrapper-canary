@@ -39,7 +39,7 @@ function T() {
             Z(t.map((e) => e.channel.id));
         }, [t, Z]);
     (0, d.ZP)(() => {
-        g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
+        (g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW }));
     });
     let L = i.useCallback(
             (e) => {
@@ -118,12 +118,12 @@ function T() {
                                           r,
                                           i = {},
                                           l = Object.keys(e);
-                                      for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                      for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                       return i;
                                   })(e, t);
                               if (Object.getOwnPropertySymbols) {
                                   var l = Object.getOwnPropertySymbols(e);
-                                  for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                  for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                               }
                               return i;
                           })(n, ['ref', 'role']);
@@ -133,7 +133,7 @@ function T() {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
                                       r = Object.keys(n);
-                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                  ('function' == typeof Object.getOwnPropertySymbols &&
                                       (r = r.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -141,7 +141,7 @@ function T() {
                                       )),
                                       r.forEach(function (t) {
                                           var r;
-                                          (r = n[t]),
+                                          ((r = n[t]),
                                               t in e
                                                   ? Object.defineProperty(e, t, {
                                                         value: r,
@@ -149,8 +149,8 @@ function T() {
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[t] = r);
-                                      });
+                                                  : (e[t] = r));
+                                      }));
                               }
                               return e;
                           })(
@@ -160,7 +160,7 @@ function T() {
                                   innerAriaLabel: S.intl.string(S.t.e7GWjY),
                                   ref: (t) => {
                                       var n;
-                                      (e.current = t), (i.current = null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null);
+                                      ((e.current = t), (i.current = null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null));
                                   },
                                   paddingTop: 24,
                                   paddingBottom: 24,

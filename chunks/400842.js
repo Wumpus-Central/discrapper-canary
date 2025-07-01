@@ -1,4 +1,4 @@
-t.d(i, { d: () => d }), t(953529);
+(t.d(i, { d: () => d }), t(953529));
 var n = t(255367);
 t(73800);
 var r = t(120356),
@@ -9,7 +9,7 @@ t(651711);
 var a = t(551556);
 t(388032);
 var s = t(719677);
-t(347157), t(177266);
+(t(347157), t(177266));
 let d = (e) => {
     let { name: i, description: t, checked: r, actionLabel: d, actionHandler: b } = e,
         u = null;

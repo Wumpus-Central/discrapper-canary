@@ -17,7 +17,7 @@ function h(e) {
         m = r.useRef(f ? Date.now() : null),
         g = (0, i.e7)([a.ZP], () => a.ZP.getUnreadCount(e), [e]),
         b = r.useRef(g);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         b.current = g;
     }),
         r.useEffect(() => {
@@ -47,5 +47,5 @@ function h(e) {
                     }),
                     (m.current = 0));
             };
-        }, [f, h]);
+        }, [f, h]));
 }

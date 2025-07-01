@@ -14,20 +14,20 @@ let s = [0.1, 0.25],
                     c = 0,
                     E = [],
                     l = (t) => {
-                        t.forEach((t) => {
+                        (t.forEach((t) => {
                             if (!t.hadRecentInput) {
                                 let e = E[0],
                                     a = E[E.length - 1];
                                 c && e && a && t.startTime - a.startTime < 1000 && t.startTime - e.startTime < 5000 ? ((c += t.value), E.push(t)) : ((c = t.value), (E = [t]));
                             }
                         }),
-                            c > i.value && ((i.value = c), (i.entries = E), a());
+                            c > i.value && ((i.value = c), (i.entries = E), a()));
                     },
                     u = (0, n.N)('layout-shift', l);
                 u &&
                     ((a = (0, r._)(t, i, s, e.reportAllChanges)),
                     (0, o.u)(() => {
-                        l(u.takeRecords()), a(!0);
+                        (l(u.takeRecords()), a(!0));
                     }),
                     setTimeout(a, 0));
             })

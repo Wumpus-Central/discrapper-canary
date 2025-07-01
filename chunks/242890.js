@@ -21,7 +21,7 @@ r(
             var i = l(n, e);
             if (!i && r < 3) throw new s('Updating absent value');
             var d = i ? c(n, e) : o(r > 2 ? arguments[2] : void 0)(e, n);
-            return u(n, e, t(d, e, n)), n;
+            return (u(n, e, t(d, e, n)), n);
         }
     }
 );

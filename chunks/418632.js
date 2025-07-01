@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var i,
     r = n(255367),
     s = n(73800),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             i.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ class f extends (i = s.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'state', { isSendingVerificationEmail: !1 }),
             p(this, 'handleResendVerification', () => {
                 let { currentUser: e, onClick: t } = this.props;
-                null == t || t(),
+                (null == t || t(),
                     this.setState({ isSendingVerificationEmail: !0 }, () => {
                         d.Z.verifyResend()
                             .then(() =>
@@ -98,7 +98,7 @@ class f extends (i = s.Component) {
                             .catch((e) => {
                                 let { body: t } = e,
                                     n = g.intl.string(g.t.XcrQNz);
-                                null != t && t.email && (n = t.email),
+                                (null != t && t.email && (n = t.email),
                                     (0, c.h7j)((e) =>
                                         (0, r.jsx)(
                                             u.default,
@@ -110,11 +110,11 @@ class f extends (i = s.Component) {
                                                 e
                                             )
                                         )
-                                    );
+                                    ));
                             })
                             .then(() => this.setState({ isSendingVerificationEmail: !1 }));
-                    });
-            });
+                    }));
+            }));
     }
 }
 p(f, 'defaultProps', {
@@ -123,5 +123,5 @@ p(f, 'defaultProps', {
 });
 let b = o.ZP.connectStores([m.default], () => {
     let e = m.default.getCurrentUser();
-    return a()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
+    return (a()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e });
 })(f);

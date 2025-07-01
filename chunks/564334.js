@@ -68,7 +68,7 @@ function o(e) {
         alpha: i
     };
 }
-n.d(t, { Z: () => c }), n(35282), n(704826), n(388685), n(781311);
+(n.d(t, { Z: () => c }), n(35282), n(704826), n(388685), n(781311));
 let s = /^#[0-9a-f]{3,8}$/i,
     l = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
 class c {
@@ -88,7 +88,7 @@ class c {
         if (!(null == e.match(s) || [6, 8].includes(e.length))) {
             if ((e = e.replace('#', '')).length < 6) {
                 let [t, n, r, i] = e;
-                (e = t + t + n + n + r + r), null != i && (e += i + i);
+                ((e = t + t + n + n + r + r), null != i && (e += i + i));
             }
             var t = e.match(/.{1,2}/g);
             if (null != t) return new c(parseInt(t[0], 16), parseInt(t[1], 16), parseInt(t[2], 16), null != t[3] ? parseInt(t[3], 16) / 255 : 1);
@@ -129,6 +129,6 @@ class c {
         return 0.2126 * (e <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)) + 0.7152 * (t <= 0.03928 ? t / 12.92 : Math.pow((t + 0.055) / 1.055, 2.4)) + 0.0722 * (n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4));
     }
     constructor(e, t, n, i) {
-        r(this, 'red', void 0), r(this, 'green', void 0), r(this, 'blue', void 0), r(this, 'alpha', void 0), (this.red = e), (this.green = t), (this.blue = n), (this.alpha = i);
+        (r(this, 'red', void 0), r(this, 'green', void 0), r(this, 'blue', void 0), r(this, 'alpha', void 0), (this.red = e), (this.green = t), (this.blue = n), (this.alpha = i));
     }
 }

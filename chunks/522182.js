@@ -18,12 +18,12 @@ function s(e) {
                         o,
                         r = {},
                         i = Object.keys(e);
-                    for (o = 0; o < i.length; o++) (n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (o = 0; o < i.length; o++) ((n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (o = 0; o < i.length; o++) ((n = i[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['onClose']);
@@ -34,7 +34,7 @@ function s(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     o = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (o = o.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function s(e) {
                     )),
                     o.forEach(function (t) {
                         var o;
-                        (o = n[t]),
+                        ((o = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: o,
@@ -50,8 +50,8 @@ function s(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = o);
-                    });
+                                : (e[t] = o));
+                    }));
             }
             return e;
         })(
@@ -61,12 +61,12 @@ function s(e) {
                 tooltipText: a.intl.string(a.t.b2d0Nz),
                 themeColor: 'secondary',
                 onClick: () => {
-                    (0, c.mK)({
+                    ((0, c.mK)({
                         analyticsLocations: s,
                         openInLayer: !1,
                         analyticsSource: d
                     }),
-                        null == t || t();
+                        null == t || t());
                 }
             },
             n

@@ -1,4 +1,4 @@
-n.d(t, { default: () => S }), n(388685);
+(n.d(t, { default: () => S }), n(388685));
 var i = n(255367),
     r = n(73800),
     l = n(512722),
@@ -44,17 +44,17 @@ function S(e) {
     function K() {
         if (l === y.L0.NSFW_SERVER_INVITE_EMBED) return void (0, C.qV)(l);
         let e = null == S ? void 0 : S.getGuildId();
-        f.Z.nsfwReturnToSafety(e), (0, C.qV)(l);
+        (f.Z.nsfwReturnToSafety(e), (0, C.qV)(l));
     }
     async function O() {
         s()(null != T, 'Cannot submit null birthday.');
         try {
-            return M(null), w(!0), await (0, A.Av)(T, l);
+            return (M(null), w(!0), await (0, A.Av)(T, l));
         } catch (t) {
             if (null != t.body && null != t.body.date_of_birth) (0, C.C8)(l, t.body.date_of_birth);
             else {
                 var e;
-                (null == t || null == (e = t.body) ? void 0 : e.username) != null ? M(z.intl.string(z.t['TGg/2t'])) : M(null == t ? void 0 : t.body.message), w(!1);
+                ((null == t || null == (e = t.body) ? void 0 : e.username) != null ? M(z.intl.string(z.t['TGg/2t'])) : M(null == t ? void 0 : t.body.message), w(!1));
             }
         }
     }
@@ -63,12 +63,12 @@ function S(e) {
         await O();
     }
     async function Q(e) {
-        e.preventDefault(), I || null == T || (await X());
+        (e.preventDefault(), I || null == T || (await X()));
     }
     async function J() {
         null == (await O()) && Y(0);
     }
-    r.useEffect(() => {
+    (r.useEffect(() => {
         null == a || null == a.nsfwAllowed || U || (0, C.qq)(l);
     }),
         r.useEffect(() => {
@@ -76,7 +76,7 @@ function S(e) {
                 source: l,
                 action: y.Al.AGE_GATE_OPEN
             });
-        }, [l]);
+        }, [l]));
     let H = r.useCallback(
             (e) => {
                 v(e);

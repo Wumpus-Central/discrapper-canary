@@ -24,7 +24,7 @@ t.exports = function (t) {
     w && (S = e(S, m > 2 ? arguments[2] : void 0));
     var O = l(g),
         j = 0;
-    if (O && !(this === v && s(O))) for (n = b ? new this() : [], x = (h = p(g, O)).next; !(y = o(x, h)).done; j++) (d = w ? u(h, S, [y.value, j], !0) : y.value), a(n, j, d);
-    else for (r = f(g), n = b ? new this(r) : v(r); r > j; j++) (d = w ? S(g[j], j) : g[j]), a(n, j, d);
-    return (n.length = j), n;
+    if (O && !(this === v && s(O))) for (n = b ? new this() : [], x = (h = p(g, O)).next; !(y = o(x, h)).done; j++) ((d = w ? u(h, S, [y.value, j], !0) : y.value), a(n, j, d));
+    else for (r = f(g), n = b ? new this(r) : v(r); r > j; j++) ((d = w ? S(g[j], j) : g[j]), a(n, j, d));
+    return ((n.length = j), n);
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(953529), n(388685);
+(n.d(t, { Z: () => z }), n(953529), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(392711),
@@ -24,7 +24,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function S(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -40,8 +40,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -150,7 +150,7 @@ function w(e) {
         value: t,
         note: C.intl.string(C.t.KuYbWF),
         onChange: (e) => {
-            e || (0, p.T)(h.hn.DISABLE_POGGERMODE),
+            (e || (0, p.T)(h.hn.DISABLE_POGGERMODE),
                 e && (!n || s)
                     ? (0, o.h7j)((e) =>
                           (0, i.jsx)(
@@ -182,7 +182,7 @@ function w(e) {
                               )
                           )
                       )
-                    : r({ enabled: e });
+                    : r({ enabled: e }));
         },
         children: C.intl.string(C.t.vuiXm5)
     });
@@ -303,7 +303,7 @@ function B(e) {
         c = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         u = !t || !n || c,
         m = (e, t) => {
-            null != e.shakeIntensity && e.shakeIntensity > r && (0, p.T)(h.hn.MORE), a(e, t);
+            (null != e.shakeIntensity && e.shakeIntensity > r && (0, p.T)(h.hn.MORE), a(e, t));
         };
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
@@ -361,11 +361,11 @@ function M(e) {
                     className: O.hideButton,
                     size: o.zxk.Sizes.SMALL,
                     onClick: () => {
-                        t({
+                        (t({
                             enabled: !1,
                             settingsVisible: !1
                         }),
-                            (0, c.xf)();
+                            (0, c.xf)());
                     },
                     children: C.intl.string(C.t.qz65yc)
                 })
@@ -437,12 +437,12 @@ function G(e) {
     let p = (e) => {
             if (e.enabled && !1 === s.enabled) {
                 var t;
-                n(!0),
+                (n(!0),
                     (0, m.GN)('poggermode_enabled'),
                     g.S.dispatch(j.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null != (t = e.shakeIntensity) ? t : s.shakeIntensity
-                    });
+                    }));
             }
         },
         h = (e, t) => {

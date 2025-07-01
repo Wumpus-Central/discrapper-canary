@@ -24,7 +24,7 @@ function g(e) {
         T = (0, i.e7)([d.Z], () => null != I && d.Z.can(l.gl, I), [I]);
     if (!(0, c.dS)(t) || !T || null == O || null == y) return null;
     let S = (e) => {
-        e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), s.AC(O, y), (0, o.Kh)(y), null == g || g();
+        (e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), s.AC(O, y), (0, o.Kh)(y), null == g || g());
     };
     return E === h.lY.MODAL_V2
         ? (0, r.jsx)(p.tG, {

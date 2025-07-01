@@ -38,7 +38,7 @@ function h() {
     l = null;
 }
 function m(e) {
-    (c = e.giftCode), (u = e.skuId);
+    ((c = e.giftCode), (u = e.skuId));
 }
 function g(e) {
     let { giftCode: t } = e;

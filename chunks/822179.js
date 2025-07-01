@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(539854);
+(n.d(t, { Z: () => A }), n(539854));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -26,7 +26,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -68,7 +68,7 @@ let E = 20,
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
-            return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
+            return (e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t);
         },
         lookupKey: (e) => d.Z.getStickerById(e),
         afterCompute: () => {},
@@ -79,15 +79,15 @@ let E = 20,
     },
     O = (e) => {
         let { stickerIds: t } = e;
-        null == t ||
+        (null == t ||
             t.forEach((e) => {
-                b.track(e),
+                (b.track(e),
                     g.pendingUsages.push({
                         key: e,
                         timestamp: Date.now()
-                    });
+                    }));
             }),
-            y();
+            y());
     },
     v = () => {
         y();
@@ -111,7 +111,7 @@ function T(e) {
 }
 class S extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && (g = e), this.syncWith([d.Z], v), this.syncWith([c.Z], I);
+        (this.waitFor(d.Z), null != e && (g = e), this.syncWith([d.Z], v), this.syncWith([c.Z], I));
     }
     getState() {
         return g;
@@ -123,7 +123,7 @@ class S extends (r = o.ZP.PersistedStore) {
         return b;
     }
 }
-_(S, 'displayName', 'StickersPersistedStore'), _(S, 'persistKey', 'StickersPersistedStoreV2');
+(_(S, 'displayName', 'StickersPersistedStore'), _(S, 'persistKey', 'StickersPersistedStoreV2'));
 let A = new S(s.Z, {
     STICKER_TRACK_USAGE: O,
     USER_SETTINGS_PROTO_UPDATE: T

@@ -28,7 +28,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function v(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -44,8 +44,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -77,12 +77,12 @@ function I(e, t) {
                 i,
                 r = {},
                 s = Object.keys(e);
-            for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
             return r;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var s = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+        for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
     }
     return r;
 }
@@ -213,7 +213,7 @@ let N = {
             { skuId: b, onRedeemVirtualCurrency: _, isRedeeming: O, orbRedemptionError: S, orbProductContext: v } = (0, j.C)(),
             T = (0, x.cR)(),
             I = (0, r.useRef)(T);
-        (0, l.ZP)(() => {
+        ((0, l.ZP)(() => {
             p(C.rMx.PAYMENT_FLOW_LOADED);
         }),
             (0, r.useEffect)(() => {
@@ -221,13 +221,13 @@ let N = {
             }, [c, n]),
             (0, r.useEffect)(() => {
                 null != S && null !== I.current && (p(C.rMx.PAYMENT_FLOW_FAILED, S), (I.current = null));
-            }, [S, p]);
+            }, [S, p]));
         let N = (0, r.useCallback)(() => {
-            (I.current = T),
+            ((I.current = T),
                 p(C.rMx.PAYMENT_FLOW_COMPLETED),
                 _(() => {
-                    u(m.A.COMPLETED), p(C.rMx.PAYMENT_FLOW_SUCCEEDED);
-                });
+                    (u(m.A.COMPLETED), p(C.rMx.PAYMENT_FLOW_SUCCEEDED));
+                }));
         }, [_, u, T, p]);
         if (null == a || null == g) return (0, i.jsx)(s.$jN, { type: s.$jN.Type.WANDERING_CUBES });
         let y = null != (t = I.current) ? t : T,
@@ -289,7 +289,7 @@ let N = {
             }, [l]),
             c = (0, r.useCallback)(
                 async (e) => {
-                    e || a(C.rMx.PAYMENT_FLOW_CANCELED), await s.onClose();
+                    (e || a(C.rMx.PAYMENT_FLOW_CANCELED), await s.onClose());
                 },
                 [s, a]
             );

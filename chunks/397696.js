@@ -1,4 +1,4 @@
-n.d(t, { L: () => l }), n(980754), n(388685), n(415506);
+(n.d(t, { L: () => l }), n(980754), n(388685), n(415506));
 var r = n(230367),
     i = n(320215),
     a = n(240773),
@@ -44,9 +44,9 @@ class s extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.clientVersion && t.tag(1, r.TD.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && t.tag(2, r.TD.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && t.tag(3, r.TD.Varint).uint32(e.dataVersion);
+        (0 !== e.clientVersion && t.tag(1, r.TD.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && t.tag(2, r.TD.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && t.tag(3, r.TD.Varint).uint32(e.dataVersion));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.Versions', [

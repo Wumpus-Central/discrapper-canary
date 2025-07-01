@@ -1,5 +1,5 @@
 var a = t(705723);
-t(864733)(r, '__esModule', { value: !0 }),
+(t(864733)(r, '__esModule', { value: !0 }),
     (r.default = void 0),
     (r.default = new (a(t(485749)).default)([
         ['a', { reserved: !1 }],
@@ -131,4 +131,4 @@ t(864733)(r, '__esModule', { value: !0 }),
         ['video', { reserved: !1 }],
         ['wbr', { reserved: !1 }],
         ['xmp', { reserved: !1 }]
-    ]));
+    ])));

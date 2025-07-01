@@ -11,7 +11,7 @@ n(
     },
     {
         reverse: function () {
-            return s(this) && (this.length = this.length), a(this);
+            return (s(this) && (this.length = this.length), a(this));
         }
     }
 );

@@ -23,11 +23,11 @@ let a = {
                 }),
             c && u.addEventListener('resize', n.update, i),
             function () {
-                s &&
+                (s &&
                     d.forEach(function (e) {
                         e.removeEventListener('scroll', n.update, i);
                     }),
-                    c && u.removeEventListener('resize', n.update, i);
+                    c && u.removeEventListener('resize', n.update, i));
             }
         );
     },

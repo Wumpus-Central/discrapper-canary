@@ -1,4 +1,4 @@
-n.d(e, { default: () => $ }), n(388685), n(415506);
+(n.d(e, { default: () => $ }), n(388685), n(415506));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -86,13 +86,13 @@ class J extends r.Component {
         let s = null != n || null != i.giftStyle,
             l = (0, O.mO)(i),
             a = null != r ? k.ZP.getURL(r) : void 0;
-        this.setState({
+        (this.setState({
             isCustomGift: s,
             isCollectiblesGift: l,
             emojiURL: a,
             opened: l
         }),
-            this.trackStepAnalytics();
+            this.trackStepAnalytics());
     }
     get step() {
         let { libraryApplication: t, accepting: e, giftCode: n } = this.props,
@@ -300,7 +300,7 @@ class J extends r.Component {
                                 (0, i.jsx)(u.zxk, {
                                     submitting: e,
                                     onClick: () => {
-                                        this.trackStepAnalytics(), this.handleClick();
+                                        (this.trackStepAnalytics(), this.handleClick());
                                     },
                                     children: this.buttonText
                                 })
@@ -332,7 +332,7 @@ class J extends r.Component {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             q(this, 'state', {
                 error: null,
                 accepted: !1,
@@ -350,24 +350,24 @@ class J extends r.Component {
                 let { giftCode: t, channelContext: e, onAccept: n } = this.props;
                 if (null == t) throw Error('GiftCode is null at acceptance.');
                 try {
-                    await d.Z.redeemGiftCode({
+                    (await d.Z.redeemGiftCode({
                         code: t.code,
                         options: { channelId: e }
                     }),
                         this.setState({ accepted: !0 }),
-                        null == n || n();
+                        null == n || n());
                 } catch (t) {
                     this.setState({ error: t });
                 }
             }),
             q(this, 'handleGoToLibrary', () => {
                 let { onClose: t, libraryApplication: e } = this.props;
-                (0, w.uL)(H.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
+                ((0, w.uL)(H.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t());
             }),
             q(this, 'getDefaultAnimationStatus', () => (this.step === H.wZ8.OPEN ? G.SR.IDLE : G.SR.ACTION)),
             q(this, 'getIdleAnimationStatus', () => {
                 if (this.step !== H.wZ8.OPEN) return G.SR.LOOP;
-            });
+            }));
     }
 }
 let Q = o.ZP.connectStores([A.Z, R.Z, y.Z, T.Z, E.Z, f.Z], (t) => {
@@ -399,12 +399,12 @@ let Q = o.ZP.connectStores([A.Z, R.Z, y.Z, T.Z, E.Z, f.Z], (t) => {
                             i,
                             r = {},
                             s = Object.keys(t);
-                        for (i = 0; i < s.length; i++) (n = s[i]), e.indexOf(n) >= 0 || (r[n] = t[n]);
+                        for (i = 0; i < s.length; i++) ((n = s[i]), e.indexOf(n) >= 0 || (r[n] = t[n]));
                         return r;
                     })(t, e);
                 if (Object.getOwnPropertySymbols) {
                     var s = Object.getOwnPropertySymbols(t);
-                    for (i = 0; i < s.length; i++) (n = s[i]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]);
+                    for (i = 0; i < s.length; i++) ((n = s[i]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]));
                 }
                 return r;
             })(t, ['channelContext', 'code', 'customGiftMessage', 'emojiName', 'soundId', 'onClose']);
@@ -421,7 +421,7 @@ let Q = o.ZP.connectStores([A.Z, R.Z, y.Z, T.Z, E.Z, f.Z], (t) => {
                       for (var e = 1; e < arguments.length; e++) {
                           var n = null != arguments[e] ? arguments[e] : {},
                               i = Object.keys(n);
-                          'function' == typeof Object.getOwnPropertySymbols &&
+                          ('function' == typeof Object.getOwnPropertySymbols &&
                               (i = i.concat(
                                   Object.getOwnPropertySymbols(n).filter(function (t) {
                                       return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -429,7 +429,7 @@ let Q = o.ZP.connectStores([A.Z, R.Z, y.Z, T.Z, E.Z, f.Z], (t) => {
                               )),
                               i.forEach(function (e) {
                                   q(t, e, n[e]);
-                              });
+                              }));
                       }
                       return t;
                   })({}, g)),
@@ -448,12 +448,12 @@ let Q = o.ZP.connectStores([A.Z, R.Z, y.Z, T.Z, E.Z, f.Z], (t) => {
                           onAccept:
                               null != x
                                   ? () => {
-                                        f(),
+                                        (f(),
                                             (0, S.Z)({
                                                 product: x,
                                                 analyticsLocations: P,
                                                 purchaseType: z.o8.GIFT
-                                            });
+                                            }));
                                     }
                                   : void 0
                       }),

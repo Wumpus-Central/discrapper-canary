@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AN: () => h,
     Aq: () => O,
     GB: () => E,
@@ -10,7 +10,7 @@ n.d(t, {
     bp: () => y,
     g0: () => g
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(374470),
@@ -52,7 +52,7 @@ function _(e, t) {
             let e = () => {
                 f.delete(n);
             };
-            return t.addEventListener('unload', e), () => t.removeEventListener('unload', e);
+            return (t.addEventListener('unload', e), () => t.removeEventListener('unload', e));
         }, [l, t, n]),
         l
     );

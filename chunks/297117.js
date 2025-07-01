@@ -3,7 +3,7 @@ a.d(e, {
     $Q: () => l,
     Dt: () => T,
     HH: () => f,
-    NP: () => R,
+    NP: () => d,
     R2: () => I,
     d8: () => A
 });
@@ -14,7 +14,7 @@ function _(t, e, a, _) {
         function: '<anonymous>' === e ? r.Fi : e,
         in_app: !0
     };
-    return void 0 !== a && (n.lineno = a), void 0 !== _ && (n.colno = _), n;
+    return (void 0 !== a && (n.lineno = a), void 0 !== _ && (n.colno = _), n);
 }
 let n = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
     o = /^\s*at (?:(.+?\)(?: \[.+\])?|.*?) ?\((?:address at )?)?(?:async )?((?:<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
@@ -51,7 +51,7 @@ let n = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
                 }
                 let t = e[3],
                     a = e[1] || r.Fi;
-                return ([a, t] = p(a, t)), _(t, a, e[4] ? +e[4] : void 0, e[5] ? +e[5] : void 0);
+                return (([a, t] = p(a, t)), _(t, a, e[4] ? +e[4] : void 0, e[5] ? +e[5] : void 0));
             }
         }
     ],
@@ -63,11 +63,11 @@ let n = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
             return e ? _(e[2], e[1] || r.Fi, +e[3], e[4] ? +e[4] : void 0) : void 0;
         }
     ],
-    d = / line (\d+).*script (?:in )?(\S+)(?:: in function (\S+))?$/i,
-    R = [
+    R = / line (\d+).*script (?:in )?(\S+)(?:: in function (\S+))?$/i,
+    d = [
         10,
         (t) => {
-            let e = d.exec(t);
+            let e = R.exec(t);
             return e ? _(e[2], e[3] || r.Fi, +e[1]) : void 0;
         }
     ],

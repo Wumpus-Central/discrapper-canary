@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(467055);
+(n.d(t, { Z: () => _ }), n(467055));
 var r = n(392711),
     i = n.n(r),
     a = n(768433),
@@ -28,7 +28,7 @@ class f {
             let t = (await e.getMany()).map((e) => [e.id, 'version' in e ? e.version : e.versionString]);
             return Object.fromEntries(null != t ? t : []);
         } catch (e) {
-            return d.warn("couldn't load guild versions", e), {};
+            return (d.warn("couldn't load guild versions", e), {});
         }
     }
     handleConnectionOpen(e, t) {

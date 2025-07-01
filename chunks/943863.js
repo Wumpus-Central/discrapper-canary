@@ -6,11 +6,11 @@ var r = n(638934),
     l = n(378044),
     c = r(s()),
     u = function (e) {
-        return a(e), c(e);
+        return (a(e), c(e));
     };
-i(u, {
+(i(u, {
     getPolyfill: s,
     implementation: o,
     shim: l
 }),
-    (e.exports = u);
+    (e.exports = u));

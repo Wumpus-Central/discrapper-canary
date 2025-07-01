@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: 'da',
     pluralRuleFunction: function (e, t) {
         var n = String(e).split('.'),
@@ -10,4 +10,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({
         locale: 'da-GL',
         parentLocale: 'da'
-    });
+    }));

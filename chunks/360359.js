@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(654861),
     i = n.n(r),
     a = n(108131),
@@ -11,7 +11,7 @@ var r = n(654861),
 function f(e, t, n) {
     let r, a, o;
     try {
-        (r = i()(e)), (a = null != t ? i()(t) : null), (o = null != n ? i()(n) : null);
+        ((r = i()(e)), (a = null != t ? i()(t) : null), (o = null != n ? i()(n) : null));
     } catch (e) {
         return !1;
     }

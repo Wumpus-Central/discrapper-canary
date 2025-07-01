@@ -30,7 +30,7 @@ class u extends (i = s.PureComponent) {
         });
     }
 }
-d(u, 'Header', (e) => {
+(d(u, 'Header', (e) => {
     let { children: t, className: n, splashArtURL: i } = e;
     return (0, r.jsxs)(o.Z, {
         className: a()(c.header, n),
@@ -50,5 +50,5 @@ d(u, 'Header', (e) => {
             className: a()(c.body, n),
             children: t
         });
-    });
+    }));
 let m = u;

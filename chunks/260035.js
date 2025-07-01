@@ -1,4 +1,4 @@
-n.d(t, { m: () => d }), n(388685);
+(n.d(t, { m: () => d }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(505266),
@@ -15,7 +15,7 @@ function d(e) {
         [h, m] = i.useState(!1),
         g = (0, o.e7)([s.Z], () => s.Z.getCurrentlySelectedChannelId()),
         E = i.useCallback((e) => {
-            p.current.delete(e), m(p.current.size > 0);
+            (p.current.delete(e), m(p.current.size > 0));
         }, []),
         b = i.useCallback((e) => (p.current.add(e), m(!0), () => E(e)), [E]),
         y = i.useCallback((e, t) => {

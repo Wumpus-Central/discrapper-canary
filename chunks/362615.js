@@ -1,4 +1,4 @@
-n.d(t, { c: () => h }), n(539854);
+(n.d(t, { c: () => h }), n(539854));
 var r = n(358221),
     i = n(569545),
     a = n(199902),
@@ -26,7 +26,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,7 +50,7 @@ let h = {
                   let h = r.Z.getParticipant(t.channelId, (0, i.V9)(t));
                   if (null == h) return e;
                   let m = (0, l.Wc)(h);
-                  return null == m || ((_.short.frameRate < (0, d.dj)(m.maxFrameRate) || _.long.frameRate < (0, d.dj)(m.maxFrameRate)) && e.push(p({ type: c.u.STREAM_VIEW_LOW_FPS }, (0, u.rT)((0, i.V9)(t))))), e;
+                  return (null == m || ((_.short.frameRate < (0, d.dj)(m.maxFrameRate) || _.long.frameRate < (0, d.dj)(m.maxFrameRate)) && e.push(p({ type: c.u.STREAM_VIEW_LOW_FPS }, (0, u.rT)((0, i.V9)(t))))), e);
               }, [])
             : null,
     makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)

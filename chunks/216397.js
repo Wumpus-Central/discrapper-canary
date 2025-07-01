@@ -58,7 +58,7 @@ let o = [, , ,].fill('<percentage> | <number>[0, 255]'),
                     );
                 },
                 serialize: (e, t, { collapse: r = !0 } = {}) => {
-                    t < 1 && e.push(t), (e = e.map((e) => Math.round(255 * e)));
+                    (t < 1 && e.push(t), (e = e.map((e) => Math.round(255 * e))));
                     let a = r && e.every((e) => e % 17 == 0);
                     return '#' + e.map((e) => (a ? (e / 17).toString(16) : e.toString(16).padStart(2, '0'))).join('');
                 }

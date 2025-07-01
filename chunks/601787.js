@@ -17,12 +17,12 @@ function i(e) {
                         n,
                         o = {},
                         c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    for (n = 0; n < c.length; n++) ((r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                for (n = 0; n < c.length; n++) ((r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
             }
             return o;
         })(e, ['ruleName', 'keyword']);
@@ -33,7 +33,7 @@ function i(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -41,7 +41,7 @@ function i(e) {
                     )),
                     n.forEach(function (t) {
                         var n;
-                        (n = r[t]),
+                        ((n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
@@ -49,8 +49,8 @@ function i(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
-                    });
+                                : (e[t] = n));
+                    }));
             }
             return e;
         })({}, a)),

@@ -4,8 +4,8 @@ n(73800);
 var i = n(442837),
     l = n(704215),
     o = n(481060),
-    s = n(239091),
-    a = n(605236),
+    a = n(239091),
+    s = n(605236),
     c = n(554747),
     u = n(306680),
     d = n(9156),
@@ -17,7 +17,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -25,7 +25,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -33,8 +33,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -68,14 +68,14 @@ function _(e) {
         ),
         v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function C() {
-        await (0, o.ZDy)(async () => {
+        (await (0, o.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
-            (0, a.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
+            (0, s.EW)(l.z.GUILD_HEADER_EVENT_UPSELL));
     }
     let j = (0, c.ZP)(t.id),
-        E = j.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: j.length }) : f.intl.string(f.t.tlopTE);
+        S = j.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: j.length }) : f.intl.string(f.t.tlopTE);
     return (0, r.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
@@ -84,11 +84,11 @@ function _(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: E,
+        text: S,
         selected: _,
         onClick: C,
         onContextMenu: (e) => {
-            (0, s.jW)(e, async () => {
+            (0, a.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });

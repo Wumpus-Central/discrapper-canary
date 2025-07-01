@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Go: () => R,
     LZ: () => D,
     Pq: () => v,
@@ -12,7 +12,7 @@ n.d(t, {
 }),
     n(539854),
     n(388685),
-    n(290780);
+    n(290780));
 var r = n(73800),
     i = n(442837),
     a = n(357156),
@@ -79,7 +79,7 @@ let v = (e) => {
                                 visibleRowIndex: y,
                                 category: n
                             }));
-                        g > v &&
+                        (g > v &&
                             g > u &&
                             null != i &&
                             I > t.length &&
@@ -93,12 +93,12 @@ let v = (e) => {
                                 visibleRowIndex: y
                             }),
                             r || (y++, h.push(l), _.push(l.length)),
-                            m++;
+                            m++);
                     }
                     g++;
                 };
                 if (null == n) for (let e of d) e.stickers.length > 0 ? (m++, r(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === E.Ih.EMPTY_GUILD_UPSELL && ((p[g] = 0), g++);
-                else n.sendable.length > 0 && r(n.sendable, E.Ih.SEARCH_RESULTS), n.sendableWithPremium.length > 0 && r(n.sendableWithPremium, E.Ih.SEARCH_RESULTS);
+                else (n.sendable.length > 0 && r(n.sendable, E.Ih.SEARCH_RESULTS), n.sendableWithPremium.length > 0 && r(n.sendableWithPremium, E.Ih.SEARCH_RESULTS));
             }
             return {
                 rowCount: m,
@@ -160,7 +160,7 @@ let v = (e) => {
                 let t = l.Z.getGuild(e.getGuildId()),
                     { canManageAllExpressions: n } = (0, a.Gw)(t),
                     i = r.findIndex((t) => t.id === e.getGuildId());
-                i >= 1
+                (i >= 1
                     ? r.unshift(r.splice(i, 1)[0])
                     : -1 === i &&
                       null != t &&
@@ -177,7 +177,7 @@ let v = (e) => {
                             user: o,
                             context: e
                         }) ||
-                        (r = r.filter((t) => t.id === e.getGuildId()));
+                        (r = r.filter((t) => t.id === e.getGuildId())));
             }
             return r;
         }, [t, n, o, e]);
@@ -195,7 +195,7 @@ function w() {
     var e, t;
     let n = (0, s.D)(),
         r = C;
-    return (null == n || null == (e = n.stickerFrecency) ? void 0 : e.stickers) != null && (r = Object.keys(null == n || null == (t = n.stickerFrecency) ? void 0 : t.stickers)), r;
+    return ((null == n || null == (e = n.stickerFrecency) ? void 0 : e.stickers) != null && (r = Object.keys(null == n || null == (t = n.stickerFrecency) ? void 0 : t.stickers)), r);
 }
 function D() {
     let e = w();

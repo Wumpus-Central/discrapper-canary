@@ -1,4 +1,4 @@
-n.d(e, { default: () => b }), n(388685);
+(n.d(e, { default: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(399606),
@@ -21,16 +21,16 @@ function f(t) {
             s.default.track(d.rMx.VIBING_WUMPUS_VIEWED, { source: f }),
             (0, l.JO)(),
             () => {
-                s.default.track(d.rMx.VIBING_WUMPUS_CLOSED, {
+                (s.default.track(d.rMx.VIBING_WUMPUS_CLOSED, {
                     duration_open_ms: new Date().getTime() - t.getTime(),
                     source: f
                 }),
-                    (0, l.zu)();
+                    (0, l.zu)());
             }
         );
     }, [f]);
     let x = () => {
-        N ? ((0, l.JO)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PLAY })) : ((0, l.hW)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PAUSE })), I(!N);
+        (N ? ((0, l.JO)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PLAY })) : ((0, l.hW)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PAUSE })), I(!N));
     };
     async function h() {
         let { default: t } = await n.e('29641').then(n.t.bind(n, 937359, 19));
@@ -64,7 +64,7 @@ function f(t) {
                             for (var e = 1; e < arguments.length; e++) {
                                 var n = null != arguments[e] ? arguments[e] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (t) {
                                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -72,7 +72,7 @@ function f(t) {
                                     )),
                                     r.forEach(function (e) {
                                         var r;
-                                        (r = n[e]),
+                                        ((r = n[e]),
                                             e in t
                                                 ? Object.defineProperty(t, e, {
                                                       value: r,
@@ -80,8 +80,8 @@ function f(t) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (t[e] = r);
-                                    });
+                                                : (t[e] = r));
+                                    }));
                             }
                             return t;
                         })({}, t)),
@@ -143,7 +143,7 @@ function f(t) {
                         color: c.zxk.Colors.BRAND,
                         size: c.zxk.Sizes.MEDIUM,
                         onClick: () => {
-                            e(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.BACK_TO_CONVERSATION });
+                            (e(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.BACK_TO_CONVERSATION }));
                         },
                         children: p.intl.string(p.t['8eKkaW'])
                     })

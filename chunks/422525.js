@@ -16,7 +16,7 @@ function p(e) {
         n = (0, c.Z)(e);
     if (__OVERLAY__ || !n) return null;
     let p = (n) => {
-        a.Z.open(e.id, n), t.dispatch(d.CkL.POPOUT_CLOSE), (0, r.pTH)();
+        (a.Z.open(e.id, n), t.dispatch(d.CkL.POPOUT_CLOSE), (0, r.pTH)());
     };
     return (0, i.jsx)(r.sNh, {
         id: 'guild-settings',

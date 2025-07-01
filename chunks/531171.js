@@ -20,7 +20,7 @@ var d = (function (e) {
     function t(t) {
         void 0 === t && (t = !1);
         var n = e.call(this, {}, t) || this;
-        return (n.dtstart = u.apply(n, ['dtstart'])), (n.tzid = u.apply(n, ['tzid'])), (n._rrule = []), (n._rdate = []), (n._exrule = []), (n._exdate = []), n;
+        return ((n.dtstart = u.apply(n, ['dtstart'])), (n.tzid = u.apply(n, ['tzid'])), (n._rrule = []), (n._rdate = []), (n._exrule = []), (n._exdate = []), n);
     }
     return (
         (0, r.ZT)(t, e),

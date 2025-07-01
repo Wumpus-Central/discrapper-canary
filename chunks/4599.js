@@ -1,4 +1,4 @@
-t.d(n, { Z: () => j }), t(388685), t(953529);
+(t.d(n, { Z: () => j }), t(388685), t(953529));
 var o = t(255367);
 t(73800);
 var c = t(442837),
@@ -24,7 +24,7 @@ function g(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             o = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (o = o.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -32,7 +32,7 @@ function g(e) {
             )),
             o.forEach(function (n) {
                 var o;
-                (o = t[n]),
+                ((o = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: o,
@@ -40,8 +40,8 @@ function g(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = o);
-            });
+                        : (e[n] = o));
+            }));
     }
     return e;
 }
@@ -143,7 +143,7 @@ function j(e) {
                                                 size: i.PhG.MEDIUM,
                                                 isBlocked: E,
                                                 onClick: () => {
-                                                    P(),
+                                                    (P(),
                                                         (0, _.pQ)(
                                                             g(
                                                                 {
@@ -152,13 +152,13 @@ function j(e) {
                                                                 },
                                                                 L
                                                             )
-                                                        );
+                                                        ));
                                                 }
                                             }),
                                             (0, o.jsx)(I.Z, {
                                                 userId: n.id,
                                                 onClick: () => {
-                                                    P(),
+                                                    (P(),
                                                         (0, _.pQ)(
                                                             g(
                                                                 {
@@ -167,7 +167,7 @@ function j(e) {
                                                                 },
                                                                 L
                                                             )
-                                                        );
+                                                        ));
                                                 }
                                             })
                                         ]

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+(n.d(t, { Z: () => A }), n(388685));
 var r,
     i = n(392711),
     a = n(442837),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -44,26 +44,26 @@ function m() {
 }
 function g(e) {
     let { wallpapers: t } = e;
-    (f = 2),
+    ((f = 2),
         t.forEach((e) => {
             d[e.id] = e;
-        });
+        }));
 }
 function E() {
     f = 3;
 }
 function b() {
-    (d = {}), (f = 0);
+    ((d = {}), (f = 0));
 }
 function y(e) {
     let { channelId: t } = e,
         n = new Set(_);
-    n.add(t), (_ = n);
+    (n.add(t), (_ = n));
 }
 function O(e) {
     let { channelId: t } = e,
         n = new Set(_);
-    n.delete(t), (_ = n);
+    (n.delete(t), (_ = n));
 }
 function v(e) {
     var t, n;
@@ -71,7 +71,7 @@ function v(e) {
     if (null == d[r] || null == a) return void delete h[r];
     null == h[r] && (h[r] = (0, i.cloneDeep)(d[r]));
     let o = h[r];
-    (o.default = u({}, o.default, a)), (null == o || null == (t = o.variants) ? void 0 : t.dark) != null && (o.variants.dark = u({}, o.variants.dark, a)), (null == o || null == (n = o.variants) ? void 0 : n.light) != null && (o.variants.light = u({}, o.variants.light, a));
+    ((o.default = u({}, o.default, a)), (null == o || null == (t = o.variants) ? void 0 : t.dark) != null && (o.variants.dark = u({}, o.variants.dark, a)), (null == o || null == (n = o.variants) ? void 0 : n.light) != null && (o.variants.light = u({}, o.variants.light, a)));
 }
 function I(e) {
     let { channelId: t, message: n } = e;

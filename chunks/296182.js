@@ -25,5 +25,5 @@ function _(e, t, n) {
     let r = a.Z.toURLSafe(e);
     if (null == r || r.host === c) return e;
     let i = (0, o.mD)(e, t);
-    return r.origin === l && ((r.host = c), r.searchParams.delete('size')), r.searchParams.delete('width'), r.searchParams.delete('height'), r.searchParams.delete('quality'), r.searchParams.delete('format'), null == i && null != n && r.searchParams.append('format', n), r.toString();
+    return (r.origin === l && ((r.host = c), r.searchParams.delete('size')), r.searchParams.delete('width'), r.searchParams.delete('height'), r.searchParams.delete('quality'), r.searchParams.delete('format'), null == i && null != n && r.searchParams.append('format', n), r.toString());
 }

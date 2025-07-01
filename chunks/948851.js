@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var l = n(255367);
 n(73800);
 var i = n(533800),
@@ -9,11 +9,11 @@ var i = n(533800),
     u = n(842515);
 let d = a.ZP.getMaxAgeOptions,
     c = a.ZP.getMaxUsesOptions;
-function g(e) {
+function h(e) {
     var t;
-    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: g, temporary: h, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: I, inviteFlags: f, onSetInviteFlags: j } = e,
+    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: I, isGuestInviteCreationToggleEnabled: x, inviteFlags: f, onSetInviteFlags: j } = e,
         N = d.find((e) => e.value === a),
-        _ = c.find((e) => e.value === g);
+        _ = c.find((e) => e.value === h);
     return (0, l.jsx)('div', {
         className: u.settingsContent,
         children: (0, l.jsxs)('form', {
@@ -33,14 +33,14 @@ function g(e) {
                     children: (0, l.jsx)(r.VcW, {
                         options: c,
                         value: null == _ ? void 0 : _.value,
-                        onChange: x
+                        onChange: I
                     })
                 }),
                 !n &&
                     (0, l.jsx)(r.xJW, {
                         children: (0, l.jsx)(r.j7V, {
                             className: u.switch,
-                            value: h,
+                            value: g,
                             onChange: (e) => p(e),
                             note: o.intl.string(o.t.UN5IRU),
                             hideBorder: !0,
@@ -50,7 +50,7 @@ function g(e) {
                             })
                         })
                     }),
-                I &&
+                x &&
                     (0, l.jsx)(r.xJW, {
                         children: (0, l.jsx)(r.j7V, {
                             className: u.switch,

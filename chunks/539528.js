@@ -46,7 +46,7 @@ function _(e) {
         n = e.search,
         r = e.hash,
         i = t || '/';
-    return n && '?' !== n && (i += '?' === n.charAt(0) ? n : '?' + n), r && '#' !== r && (i += '#' === r.charAt(0) ? r : '#' + r), i;
+    return (n && '?' !== n && (i += '?' === n.charAt(0) ? n : '?' + n), r && '#' !== r && (i += '#' === r.charAt(0) ? r : '#' + r), i);
 }
 function p(e, t, n, a) {
     var o;
@@ -57,7 +57,7 @@ function p(e, t, n, a) {
         if (e instanceof URIError) throw URIError('Pathname "' + o.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.');
         throw e;
     }
-    return n && (o.key = n), a ? (o.pathname ? '/' !== o.pathname.charAt(0) && (o.pathname = (0, i.Z)(o.pathname, a.pathname)) : (o.pathname = a.pathname)) : o.pathname || (o.pathname = '/'), o;
+    return (n && (o.key = n), a ? (o.pathname ? '/' !== o.pathname.charAt(0) && (o.pathname = (0, i.Z)(o.pathname, a.pathname)) : (o.pathname = a.pathname)) : o.pathname || (o.pathname = '/'), o);
 }
 function h(e, t) {
     return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash && e.key === t.key && (0, a.Z)(e.state, t.state);
@@ -88,10 +88,10 @@ function m() {
             return (
                 t.push(r),
                 function () {
-                    (n = !1),
+                    ((n = !1),
                         (t = t.filter(function (e) {
                             return e !== r;
-                        }));
+                        })));
                 }
             );
         },
@@ -130,7 +130,7 @@ function S() {
     }
 }
 function A(e) {
-    void 0 === e && (e = {}), g || (0, o.Z)(!1);
+    (void 0 === e && (e = {}), g || (0, o.Z)(!1));
     var t = window.history,
         n = b(),
         i = !y(),
@@ -148,14 +148,14 @@ function A(e) {
             r = t.state,
             i = window.location,
             a = i.pathname + i.search + i.hash;
-        return N && (a = u(a, N)), p(a, r, n);
+        return (N && (a = u(a, N)), p(a, r, n));
     }
     function R() {
         return Math.random().toString(36).substr(2, A);
     }
     var P = m();
     function w(e) {
-        (0, r.Z)(X, e), (X.length = t.length), P.notifyListeners(X.location, X.action);
+        ((0, r.Z)(X, e), (X.length = t.length), P.notifyListeners(X.location, X.action));
     }
     function D(e) {
         v(e) || k(C(e.state));
@@ -165,7 +165,7 @@ function A(e) {
     }
     var x = !1;
     function k(e) {
-        if (x) (x = !1), w();
+        if (x) ((x = !1), w());
         else {
             var t = 'POP';
             P.confirmTransitionTo(e, t, h, function (n) {
@@ -216,12 +216,12 @@ function A(e) {
                     else {
                         var l = U.indexOf(X.location.key),
                             u = U.slice(0, l + 1);
-                        u.push(a.key),
+                        (u.push(a.key),
                             (U = u),
                             w({
                                 action: i,
                                 location: a
-                            });
+                            }));
                     }
                 else window.location.href = r;
             }
@@ -250,11 +250,11 @@ function A(e) {
                         window.location.replace(r);
                     else {
                         var l = U.indexOf(X.location.key);
-                        -1 !== l && (U[l] = a.key),
+                        (-1 !== l && (U[l] = a.key),
                             w({
                                 action: i,
                                 location: a
-                            });
+                            }));
                     }
                 else window.location.replace(r);
             }
@@ -280,7 +280,7 @@ function A(e) {
         return (
             K || (W(1), (K = !0)),
             function () {
-                return K && ((K = !1), W(-1)), t();
+                return (K && ((K = !1), W(-1)), t());
             }
         );
     }
@@ -289,7 +289,7 @@ function A(e) {
         return (
             W(1),
             function () {
-                W(-1), t();
+                (W(-1), t());
             }
         );
     }
@@ -343,7 +343,7 @@ function D(e) {
     window.location.replace(R(window.location.href) + '#' + e);
 }
 function L(e) {
-    void 0 === e && (e = {}), g || (0, o.Z)(!1);
+    (void 0 === e && (e = {}), g || (0, o.Z)(!1));
     var t = window.history;
     O();
     var n = e,
@@ -357,11 +357,11 @@ function L(e) {
         y = h.decodePath;
     function v() {
         var e = y(P());
-        return f && (e = u(e, f)), p(e);
+        return (f && (e = u(e, f)), p(e));
     }
     var I = m();
     function T(e) {
-        (0, r.Z)(J, e), (J.length = t.length), I.notifyListeners(J.location, J.action);
+        ((0, r.Z)(J, e), (J.length = t.length), I.notifyListeners(J.location, J.action));
     }
     var S = !1,
         A = null;
@@ -376,11 +376,11 @@ function L(e) {
             var n = v(),
                 r = J.location;
             if ((!S && L(r, n)) || A === _(n)) return;
-            (A = null), k(n);
+            ((A = null), k(n));
         }
     }
     function k(e) {
-        if (S) (S = !1), T();
+        if (S) ((S = !1), T());
         else {
             var t = 'POP';
             I.confirmTransitionTo(e, t, a, function (n) {
@@ -410,7 +410,7 @@ function L(e) {
     function V(e) {
         var t = document.querySelector('base'),
             n = '';
-        return t && t.getAttribute('href') && (n = R(window.location.href)), n + '#' + b(f + _(e));
+        return (t && t.getAttribute('href') && (n = R(window.location.href)), n + '#' + b(f + _(e)));
     }
     function F(e, t) {
         var n = 'PUSH',
@@ -421,15 +421,15 @@ function L(e) {
                     i = b(f + t),
                     a = P() !== i;
                 if (a) {
-                    (A = t), w(i);
+                    ((A = t), w(i));
                     var o = B.lastIndexOf(_(J.location)),
                         s = B.slice(0, o + 1);
-                    s.push(t),
+                    (s.push(t),
                         (B = s),
                         T({
                             action: n,
                             location: r
-                        });
+                        }));
                 } else T();
             }
         });
@@ -444,11 +444,11 @@ function L(e) {
                     a = P() !== i;
                 a && ((A = t), D(i));
                 var o = B.indexOf(_(J.location));
-                -1 !== o && (B[o] = t),
+                (-1 !== o && (B[o] = t),
                     T({
                         action: n,
                         location: r
-                    });
+                    }));
             }
         });
     }
@@ -472,7 +472,7 @@ function L(e) {
         return (
             q || (z(1), (q = !0)),
             function () {
-                return q && ((q = !1), z(-1)), t();
+                return (q && ((q = !1), z(-1)), t());
             }
         );
     }
@@ -481,7 +481,7 @@ function L(e) {
         return (
             z(1),
             function () {
-                z(-1), t();
+                (z(-1), t());
             }
         );
     }
@@ -515,7 +515,7 @@ function k(e) {
         c = void 0 === l ? 6 : l,
         u = m();
     function d(e) {
-        (0, r.Z)(N, e), (N.length = N.entries.length), u.notifyListeners(N.location, N.action);
+        ((0, r.Z)(N, e), (N.length = N.entries.length), u.notifyListeners(N.location, N.action));
     }
     function f() {
         return Math.random().toString(36).substr(2, c);
@@ -533,13 +533,13 @@ function k(e) {
                 var t = N.index,
                     n = t + 1,
                     a = N.entries.slice(0);
-                a.length > n ? a.splice(n, a.length - n, i) : a.push(i),
+                (a.length > n ? a.splice(n, a.length - n, i) : a.push(i),
                     d({
                         action: r,
                         location: i,
                         index: n,
                         entries: a
-                    });
+                    }));
             }
         });
     }
@@ -580,7 +580,7 @@ function k(e) {
         return t >= 0 && t < N.entries.length;
     }
     function S(e) {
-        return void 0 === e && (e = !1), u.setPrompt(e);
+        return (void 0 === e && (e = !1), u.setPrompt(e));
     }
     function A(e) {
         return u.appendListener(e);

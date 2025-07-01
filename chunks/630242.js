@@ -1,4 +1,4 @@
-n.d(t, { R: () => m }), n(388685);
+(n.d(t, { R: () => m }), n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(704215),
@@ -59,7 +59,7 @@ function m(e) {
                 pickerType: e,
                 markDismissed: L
                     ? (e) => {
-                          P(e), O === d.FN.TOOLBAR && N(h.L.INDIRECT_ACTION);
+                          (P(e), O === d.FN.TOOLBAR && N(h.L.INDIRECT_ACTION));
                       }
                     : void 0
             }

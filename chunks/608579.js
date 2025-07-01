@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+(n.d(t, { Z: () => k }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -44,7 +44,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -52,7 +52,7 @@ function D(e) {
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -60,11 +60,11 @@ function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -99,16 +99,16 @@ function k(e) {
         J = null != (t = Q[0]) ? t : null,
         $ = null != M && p.Rm.has(M),
         ee = i.useCallback(() => {
-            z(!0), null == a || a();
+            (z(!0), null == a || a());
         }, [a]),
         et = i.useCallback(
             (e) => {
-                z(!1),
+                (z(!1),
                     n(e),
                     c.Z.dispatch({
                         type: 'SKU_PURCHASE_MODAL_CLOSE',
                         error: null
-                    });
+                    }));
             },
             [n]
         ),

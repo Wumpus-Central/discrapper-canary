@@ -41,7 +41,7 @@ function x(t) {
                 children: [
                     (0, n.jsx)(e.zxk, {
                         onClick: function () {
-                            (0, o.KK)(), s();
+                            ((0, o.KK)(), s());
                         },
                         children: c.intl.string(c.t.n8U5jY)
                     }),

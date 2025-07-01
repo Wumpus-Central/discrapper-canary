@@ -70,7 +70,7 @@ function h(e) {
                     className: p.roleTip,
                     children: g.intl.format(g.t['K+DH2t'], {
                         onClick: () => {
-                            o.Z.open(n, d.pNK.ROLES), t();
+                            (o.Z.open(n, d.pNK.ROLES), t());
                         }
                     })
                 })

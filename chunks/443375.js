@@ -57,7 +57,7 @@ function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -65,7 +65,7 @@ function Y(e) {
             )),
             r.forEach(function (t) {
                 H(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -123,7 +123,7 @@ function W(e) {
                       className: Z.clickableImage,
                       aspectRatio: e,
                       onClick: (e) => {
-                          e.stopPropagation(), eo({ action: 'PRESS_IMAGE' }), ef(e);
+                          (e.stopPropagation(), eo({ action: 'PRESS_IMAGE' }), ef(e));
                       }
                   });
         },
@@ -163,7 +163,7 @@ function W(e) {
                     variant: 'text-xs/normal',
                     text: F.intl.formatToPlainString(F.t['hq/Qzc'], { guildName: K.name }),
                     onClick: () => {
-                        (0, E.X)(K.id), eo({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
+                        ((0, E.X)(K.id), eo({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q());
                     }
                 });
             if ((0, u.Z)(H))
@@ -264,7 +264,7 @@ function W(e) {
                 : (0, r.jsxs)(s.P3F, {
                       className: Z.clickableText,
                       onClick: (e) => {
-                          e.stopPropagation(), eo({ action: 'PRESS_TEXT' }), ef(e);
+                          (e.stopPropagation(), eo({ action: 'PRESS_TEXT' }), ef(e));
                       },
                       children: [ep(), eh(), em()]
                   }),

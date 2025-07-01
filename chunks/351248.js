@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854), n(388685);
+(n.d(t, { Z: () => j }), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -47,11 +47,11 @@ class v extends i.PureComponent {
     }
     componentDidAppear() {
         let { scaleAnimation: e, widthAnimation: t } = this;
-        e.setValue(1), t.setValue(1);
+        (e.setValue(1), t.setValue(1));
     }
     componentWillEnter(e) {
         let { scaleAnimation: t, widthAnimation: n } = this;
-        t.setValue(0),
+        (t.setValue(0),
             n.setValue(0),
             a.Z.parallel([
                 a.Z.timing(t, {
@@ -63,11 +63,11 @@ class v extends i.PureComponent {
                     toValue: 1,
                     duration: 200
                 })
-            ]).start(e);
+            ]).start(e));
     }
     componentWillLeave(e) {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: r, widthAnimation: i } = this;
-        r.setValue(1), n.setValue(0);
+        (r.setValue(1), n.setValue(0));
         let l = [];
         for (let e = 0; e < C.STEPS; e++)
             l.push(
@@ -144,7 +144,7 @@ class v extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), y(this, 'scaleAnimation', new a.Z.Value(0)), y(this, 'spriteAnimation', new a.Z.Value(0)), y(this, 'spriteOpacity', new a.Z.Value(0)), y(this, 'widthAnimation', new a.Z.Value(0));
+        (super(...e), y(this, 'scaleAnimation', new a.Z.Value(0)), y(this, 'spriteAnimation', new a.Z.Value(0)), y(this, 'spriteOpacity', new a.Z.Value(0)), y(this, 'widthAnimation', new a.Z.Value(0)));
     }
 }
 function j(e) {

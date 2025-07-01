@@ -36,7 +36,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -123,14 +123,14 @@ function R(e) {
         w =
             null != N && null != S
                 ? () => {
-                      _.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
+                      (_.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
                           leaderboard_id: p,
                           guild_id: t
                       }),
                           (0, h._7)({
                               riotConnectionId: S.id,
                               lolConnectionId: N.id
-                          });
+                          }));
                   }
                 : y.dG4,
         D = null == S || P ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
@@ -162,7 +162,7 @@ function R(e) {
                   return (0, r.jsx)(s.v2r, {
                       navId: 'leaderboard-popout-context-menu',
                       onClose: () => {
-                          (0, l.Zy)(), i();
+                          ((0, l.Zy)(), i());
                       },
                       'aria-label': O.intl.string(O.t.BjCuf3),
                       onSelect: void 0,
@@ -181,7 +181,7 @@ function R(e) {
                                   id: 'leaderboard-modal',
                                   label: D,
                                   action: () => {
-                                      (0, s.ZDy)(async () => {
+                                      ((0, s.ZDy)(async () => {
                                           let { default: e } = await n.e('73217').then(n.bind(n, 139964));
                                           return (n) =>
                                               (0, r.jsx)(
@@ -192,7 +192,7 @@ function R(e) {
                                                   })
                                               );
                                       }),
-                                          null == i || i();
+                                          null == i || i());
                                   }
                               }),
                               j
@@ -200,7 +200,7 @@ function R(e) {
                                         id: 'leaderboard-settings-modal',
                                         label: O.intl.string(O.t['QV4/6u']),
                                         action: () => {
-                                            (0, s.ZDy)(async () => {
+                                            ((0, s.ZDy)(async () => {
                                                 let { default: e } = await n.e('25526').then(n.bind(n, 262918));
                                                 return (n) =>
                                                     (0, r.jsx)(
@@ -211,7 +211,7 @@ function R(e) {
                                                         })
                                                     );
                                             }),
-                                                null == i || i();
+                                                null == i || i());
                                         }
                                     })
                                   : null

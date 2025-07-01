@@ -54,7 +54,7 @@ var r = n(98405),
             P)
         ) {
             var i = new T(t);
-            (i.name = v), c(this, 'stack', l(1, E(i.stack, 1)));
+            ((i.name = v), c(this, 'stack', l(1, E(i.stack, 1))));
         }
     },
     L = (D.prototype = s(N)),
@@ -70,7 +70,7 @@ var r = n(98405),
             return R(this)[e];
         });
     };
-y && (d(L, 'code', k('code')), d(L, 'message', k('message')), d(L, 'name', k('name'))), c(L, 'constructor', l(1, D));
+(y && (d(L, 'code', k('code')), d(L, 'message', k('message')), d(L, 'name', k('name'))), c(L, 'constructor', l(1, D)));
 var M = o(function () {
         return !(new S() instanceof T);
     }),
@@ -112,5 +112,5 @@ g))
         var H = g[Z],
             Y = H.s,
             W = l(6, H.c);
-        f(V, Y) || c(V, Y, W), f(F, Y) || c(F, Y, W);
+        (f(V, Y) || c(V, Y, W), f(F, Y) || c(F, Y, W));
     }

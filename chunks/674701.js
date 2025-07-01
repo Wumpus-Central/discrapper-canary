@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => R,
-    Z: () => k
+    Z: () => L
 });
 var r,
     i = n(255367),
@@ -14,19 +14,19 @@ var r,
     p = n(493683),
     m = n(529103),
     f = n(700582),
-    h = n(906732),
-    g = n(213609),
-    _ = n(541716),
+    g = n(906732),
+    _ = n(213609),
+    h = n(541716),
     b = n(28546),
-    x = n(963249),
+    E = n(963249),
     y = n(703656),
-    E = n(594174),
-    v = n(626135),
-    C = n(51144),
+    C = n(594174),
+    x = n(626135),
+    v = n(51144),
     O = n(479446),
     j = n(795448),
-    S = n(441623),
-    I = n(317271),
+    I = n(441623),
+    S = n(317271),
     T = n(474936),
     N = n(981631),
     P = n(182294),
@@ -34,19 +34,19 @@ var r,
     w = n(388032),
     Z = n(587862),
     R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
-function k(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: L, analyticsSection: D, glow: M, giftIntentSecondaryAction: U } = e,
-        F = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
-        { analyticsLocations: B } = (0, h.ZP)(),
-        G = (0, c.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(r.id));
+function L(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: L, analyticsPage: k, analyticsSection: D, glow: M, giftIntentSecondaryAction: U } = e,
+        F = (0, c.e7)([C.default], () => C.default.getCurrentUser()),
+        { analyticsLocations: B } = (0, g.ZP)(),
+        G = (0, c.e7)([I.Z], () => I.Z.getFriendAnniversaryYears(r.id));
     l.useEffect(() => {
-        (0, g.h)({
+        (0, _.h)({
             name: s.ImpressionNames.GIFT_INTENT_CARD,
             type: s.ImpressionTypes.VIEW,
             properties: {
                 gift_intent_type: t,
                 type: n,
-                num_friend_anniversaries: S.Z.getFriendAnniversaries().length
+                num_friend_anniversaries: I.Z.getFriendAnniversaries().length
             }
         });
     }, [t, n]);
@@ -99,7 +99,7 @@ function k(e) {
                                     variant: 'text-md/medium',
                                     color: V ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
-                                    children: t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: C.ZP.getName(r) }) : (0, O.Ou)(t)
+                                    children: t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: v.ZP.getName(r) }) : (0, O.Ou)(t)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     className: Y,
@@ -117,8 +117,8 @@ function k(e) {
                             (0, i.jsx)(d.zxk, {
                                 className: o()(Z.button, J),
                                 onClick: (e) => {
-                                    e.stopPropagation(),
-                                        v.default.track(N.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                    (e.stopPropagation(),
+                                        x.default.track(N.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: t,
                                             cta_type: U
                                         }),
@@ -128,12 +128,12 @@ function k(e) {
                                               ((0, j.PV)(r.id),
                                               p.Z.openPrivateChannel({ recipientIds: r.id }).then(() => {
                                                   setTimeout(() => {
-                                                      (0, b.PG)(A.X1.GIF, _.Ie.NORMAL),
+                                                      ((0, b.PG)(A.X1.GIF, h.Ie.NORMAL),
                                                           setTimeout(() => {
                                                               (0, b.ql)(w.intl.string(w.t.jrtJi4), !0);
-                                                          }, 50);
+                                                          }, 50));
                                                   }, 100);
-                                              }));
+                                              })));
                                 },
                                 size: d.zxk.Sizes.MEDIUM,
                                 color: d.zxk.Colors.CUSTOM,
@@ -160,15 +160,15 @@ function k(e) {
                             className: Z.button,
                             onClick: (e) => {
                                 e.stopPropagation();
-                                let i = (0, I.F)(t);
-                                (0, x.Z)({
+                                let i = (0, S.F)(t);
+                                (0, E.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
                                     giftRecipient: r,
                                     analyticsLocation: 'system_message' === n ? i.chat : i.actionButtonCoachmark,
                                     analyticsLocations: B,
                                     analyticsObject: {
-                                        page: L,
+                                        page: k,
                                         section: D,
                                         object: N.qAy.BUTTON_CTA,
                                         objectType: N.Qqv.GIFT
@@ -197,11 +197,11 @@ function k(e) {
                         })
                     ]
                 }),
-                null != k &&
+                null != L &&
                     (0, i.jsx)('div', {
                         className: o()(Z.connector, {
-                            [Z.leftPopoutConnector]: 'left' === k,
-                            [Z.rightPopoutConnector]: 'right' === k
+                            [Z.leftPopoutConnector]: 'left' === L,
+                            [Z.rightPopoutConnector]: 'right' === L
                         })
                     })
             ]

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Z: () => e_,
     l: () => ey
 }),
@@ -7,7 +7,7 @@ n.d(t, {
     n(539854),
     n(388685),
     n(35282),
-    n(49124);
+    n(49124));
 var r,
     i = n(255367),
     l = n(73800),
@@ -31,8 +31,8 @@ var r,
     j = n(493773),
     O = n(40851),
     E = n(100527),
-    I = n(367907),
-    S = n(906732),
+    S = n(367907),
+    I = n(906732),
     P = n(43267),
     Z = n(933557),
     N = n(600164),
@@ -42,13 +42,13 @@ var r,
     R = n(366980),
     k = n(703656),
     M = n(93127),
-    D = n(752048),
-    L = n(131704),
+    L = n(752048),
+    D = n(131704),
     U = n(592125),
     B = n(341165),
     F = n(544610),
-    G = n(19780),
-    H = n(306680),
+    H = n(19780),
+    G = n(306680),
     V = n(699516),
     z = n(246946),
     W = n(594174),
@@ -82,7 +82,7 @@ function ea(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -90,7 +90,7 @@ function ea(e) {
             )),
             r.forEach(function (t) {
                 eo(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -122,12 +122,12 @@ function ec(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -147,13 +147,13 @@ let eh = (e) => {
         var t;
         let { channel: n, onClose: r } = e,
             l = null != (t = (0, Z.ZP)(n)) ? t : '',
-            o = (0, p.e7)([H.ZP], () => {
+            o = (0, p.e7)([G.ZP], () => {
                 var e;
-                return null != (e = H.ZP.lastMessageId(n.id)) ? e : n.id;
+                return null != (e = G.ZP.lastMessageId(n.id)) ? e : n.id;
             });
         return (0, i.jsx)(h.P3F, {
             onClick: () => {
-                (0, k.XU)(en.ME, n.id), r();
+                ((0, k.XU)(en.ME, n.id), r());
             },
             children: (0, i.jsxs)('div', {
                 className: ei.confirmChannelItemContainer,
@@ -250,8 +250,8 @@ class em extends (r = l.PureComponent) {
     componentDidMount() {
         let { channel: e } = this.props;
         f.Z.wait(() => y.Z.open(null == e ? void 0 : e.id));
-        let t = (0, I.v_)(e);
-        Y.default.track(
+        let t = (0, S.v_)(e);
+        (Y.default.track(
             en.rMx.OPEN_POPOUT,
             es(ea({}, t), {
                 type: this._getAnalyticsEntryPoint().entryPointType,
@@ -260,10 +260,10 @@ class em extends (r = l.PureComponent) {
             })
         ),
             K.S.subscribe(en.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            K.S.subscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
+            K.S.subscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown));
     }
     componentWillUnmount() {
-        K.S.unsubscribe(en.CkL.SCROLL_PAGE_UP, this.scrollPageUp), K.S.unsubscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), f.Z.wait(() => y.Z.close());
+        (K.S.unsubscribe(en.CkL.SCROLL_PAGE_UP, this.scrollPageUp), K.S.unsubscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), f.Z.wait(() => y.Z.close()));
     }
     isNotFriends() {
         let { channel: e } = this.props;
@@ -544,23 +544,23 @@ class em extends (r = l.PureComponent) {
         });
     }
     handleAddFriend(e) {
-        this.props.onClose(),
+        (this.props.onClose(),
             C.Z.sendRequest({
                 discordTag: J.ZP.getUserTag(e, { identifiable: 'always' }),
                 context: { location: 'Group DM' }
-            });
+            }));
     }
     _getUserAffinities(e) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = D.Z.getUserAffinity(e);
+                let n = L.Z.getUserAffinity(e);
                 return null != (t = null == n ? void 0 : n.communicationProbability) ? t : -1;
             })
         };
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             eo(this, 'state', {
                 separator: !1,
                 copied: !1,
@@ -651,11 +651,11 @@ class em extends (r = l.PureComponent) {
             }),
             eo(this, 'handleQueryChange', (e) => {
                 let { channel: t } = this.props,
-                    n = (0, I.v_)(t);
-                y.Z.search(e, null == t ? void 0 : t.id),
+                    n = (0, S.v_)(t);
+                (y.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
-                        Y.default.track(
+                        (Y.default.track(
                             en.rMx.SEARCH_USER_LIST_STARTED,
                             es(ea({}, n), {
                                 entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
@@ -663,19 +663,19 @@ class em extends (r = l.PureComponent) {
                                 search_query_length: e.length
                             })
                         ),
-                            this._searchCounter++;
-                    }, 500));
+                            this._searchCounter++);
+                    }, 500)));
             }),
             eo(this, 'handleRemoveUser', (e) => {
                 let t = Array.from(this.props.selectedUsers);
-                y.Z.removeUser(t[e]), this.forceFocus();
+                (y.Z.removeUser(t[e]), this.forceFocus());
             }),
             eo(this, 'handleClick', (e) => {
                 let { selectedUsers: t, query: n, channel: r } = this.props;
-                t.has(e) ? y.Z.removeUser(e) : (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
+                (t.has(e) ? y.Z.removeUser(e) : (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)), this.forceFocus());
             }),
             eo(this, 'handleAddFriendNavigation', () => {
-                (0, k.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
+                ((0, k.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose());
             }),
             eo(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;
@@ -694,9 +694,9 @@ class em extends (r = l.PureComponent) {
             eo(this, 'createNewDM', (e) => {
                 let t = this._searchCounter,
                     { channel: n } = this.props,
-                    r = (0, I.v_)(n),
+                    r = (0, S.v_)(n),
                     i = !0;
-                1 === e.length && (i = null == g.Z._openCachedDMChannel(e[0])),
+                (1 === e.length && (i = null == g.Z._openCachedDMChannel(e[0])),
                     Y.default.track(
                         en.rMx.CREATE_DM_USER_LIST_CLICKED,
                         es(ea({}, r), {
@@ -715,7 +715,7 @@ class em extends (r = l.PureComponent) {
                         location: 'New Group DM'
                     }).then((e) => {
                         let t = {};
-                        '' !== this.state.newChannelName && (t.name = this.state.newChannelName),
+                        ('' !== this.state.newChannelName && (t.name = this.state.newChannelName),
                             null != this.state.previewIcon && (t.icon = this.state.previewIcon),
                             (null != t.name || null != t.icon) && g.Z.updateChannel(e, t, E.Z.NEW_GROUP_DM_INVITE_MODAL),
                             Y.default.track(en.rMx.GDM_EDIT_INTERACTED, {
@@ -724,14 +724,14 @@ class em extends (r = l.PureComponent) {
                                 location: E.Z.NEW_GROUP_DM_INVITE_MODAL,
                                 new_name_set: '' !== this.state.newChannelName,
                                 new_icon_set: null != this.state.previewIcon
-                            });
-                    });
+                            }));
+                    }));
             }),
             eo(this, 'pushToExistingDM', (e, t) => {
                 let n = this._searchCounter,
-                    r = (0, I.v_)(e),
-                    i = G.Z.getChannelId() === e.id;
-                g.Z.addRecipients(e.id, t, en.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
+                    r = (0, S.v_)(e),
+                    i = H.Z.getChannelId() === e.id;
+                (g.Z.addRecipients(e.id, t, en.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
                         if (e.isDM() && n !== e.id) return void m.Z.call(n, !1, !0);
                         m.Z.ring(n, t, 'dm_invite');
@@ -747,7 +747,7 @@ class em extends (r = l.PureComponent) {
                             num_searches: n,
                             affinity_score: this._getUserAffinities(t).affinities
                         })
-                    );
+                    ));
             }),
             eo(this, 'handleInviteUsers', () => {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
@@ -789,7 +789,7 @@ class em extends (r = l.PureComponent) {
             }),
             eo(this, 'handleCopyInvite', (e) => {
                 let { channel: t, invite: n } = this.props;
-                null != n && (0, q.JG)(e),
+                (null != n && (0, q.JG)(e),
                     null != this.copyTimeout && clearTimeout(this.copyTimeout),
                     this.setState({ copied: !0 }),
                     (this.copyTimeout = setTimeout(() => {
@@ -801,19 +801,19 @@ class em extends (r = l.PureComponent) {
                         channel_type: null != t ? t.type : null,
                         location: en.Sbl.ADD_FRIENDS_TO_DM,
                         code: null != n ? n.code : null
-                    });
+                    }));
             }),
             eo(this, 'scrollToCounterSearchBarHeightChange', (e) => {
                 var t, n;
                 if (!this.props.inBornThisNamedExperiment) return;
                 let r = null == (n = this.scrollerRef.current) || null == (t = n.getScrollerNode) ? void 0 : t.call(n);
                 null != r && (r.scrollTop = Math.max(0, r.scrollTop + e));
-            });
+            }));
     }
 }
 function eg(e) {
     let { selectedUsers: t, channelName: n, previewIcon: r, onIconChange: l, onIconRemove: o, onChange: a } = e,
-        { analyticsLocations: s } = (0, S.ZP)(E.Z.NEW_GROUP_DM_INVITE_MODAL);
+        { analyticsLocations: s } = (0, I.ZP)(E.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, A.a)(E.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
     let c = (0, Z.pT)(Array.from(t), W.default, V.Z);
     return (0, i.jsxs)('div', {
@@ -887,21 +887,21 @@ function e_(e) {
         ),
         v = l.useRef(null),
         [O, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
-        I = l.useCallback(() => (_ ? (C ? (0, h.Mr3)(y) : x()) : E((e) => !e)), [_, C, y, x]);
+        S = l.useCallback(() => (_ ? (C ? (0, h.Mr3)(y) : x()) : E((e) => !e)), [_, C, y, x]);
     l.useEffect(
         () => (
-            m && K.S.subscribe(en.CkL.TOGGLE_DM_CREATE, I),
+            m && K.S.subscribe(en.CkL.TOGGLE_DM_CREATE, S),
             () => {
-                K.S.unsubscribe(en.CkL.TOGGLE_DM_CREATE, I);
+                K.S.unsubscribe(en.CkL.TOGGLE_DM_CREATE, S);
             }
         ),
-        [m, I, _]
+        [m, S, _]
     );
-    let S = (0, p.e7)([W.default], () => W.default.getUser(null == r ? void 0 : r.getRecipientId()));
+    let I = (0, p.e7)([W.default], () => W.default.getUser(null == r ? void 0 : r.getRecipientId()));
     return ((0, j.ZP)(() => {
         (0, M._)();
     }),
-    (null != (t = null == S ? void 0 : S.bot) && t) || (null != (n = null == S ? void 0 : S.isProvisional) && n))
+    (null != (t = null == I ? void 0 : I.bot) && t) || (null != (n = null == I ? void 0 : I.isProvisional) && n))
         ? null
         : _
           ? (0, i.jsx)(ee.ZP.Icon, {
@@ -938,7 +938,7 @@ function e_(e) {
                         ee.ZP.Icon,
                         es(ea({}, e), {
                             ref: v,
-                            onClick: I,
+                            onClick: S,
                             icon: b,
                             className: a,
                             iconClassName: o,
@@ -1020,7 +1020,7 @@ function eC(e) {
     return new Set(
         (0, s.chain)(U.Z.getMutablePrivateChannels())
             .values()
-            .filter((e) => (0, L.bc)(e.type))
+            .filter((e) => (0, D.bc)(e.type))
             .filter((e) => ex(e.recipients) === t)
             .map((e) => e.id)
             .value()

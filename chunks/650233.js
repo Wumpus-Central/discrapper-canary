@@ -17,7 +17,7 @@ function h(e) {
     let { transitionState: t, onClose: n, isNUXFlow: h } = e;
     return (
         i.useEffect(() => {
-            o.Z.hideHubUpsell(), h && a.Z.flowStep(u.MK.ORGANIC, u.EW.HUB_CONNECTION);
+            (o.Z.hideHubUpsell(), h && a.Z.flowStep(u.MK.ORGANIC, u.EW.HUB_CONNECTION));
         }, [h]),
         (0, l.jsx)(s.Y0X, {
             className: x.modalRoot,

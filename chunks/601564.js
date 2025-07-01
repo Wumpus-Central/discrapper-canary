@@ -1,10 +1,10 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         default: () => A,
         getPageSize: () => P
     }),
     n(388685),
-    n(35282);
+    n(35282));
 var r = n(255367),
     i = n(73800),
     l = n(593473),
@@ -51,7 +51,7 @@ function P(e) {
 o.ZP.initialize();
 class j extends i.PureComponent {
     componentDidMount() {
-        (0, s.Y)(this.props.location),
+        ((0, s.Y)(this.props.location),
             (this.stopListeningToHistory = (0, _.s1)().listen((e) => {
                 e.pathname.startsWith(v.Z5c.APPLICATION_STORE) && (0, s.Y)(e);
             })),
@@ -59,10 +59,10 @@ class j extends i.PureComponent {
             g.Z.disable(),
             g.Z.setLayout(h.r),
             g.Z.enable(),
-            (0, E.e)('application_store');
+            (0, E.e)('application_store'));
     }
     componentWillUnmount() {
-        null != this.stopListeningToHistory && this.stopListeningToHistory(), g.Z.disable(), g.Z.setLayout(f.oT), g.Z.enable();
+        (null != this.stopListeningToHistory && this.stopListeningToHistory(), g.Z.disable(), g.Z.setLayout(f.oT), g.Z.enable());
     }
     renderCustomErrorMessage() {
         return (0, r.jsxs)('div', {
@@ -87,7 +87,7 @@ class j extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             N(this, 'stopListeningToHistory', void 0),
             N(this, 'renderStoreListing', (e) => {
                 let {
@@ -143,7 +143,7 @@ class j extends i.PureComponent {
                         (0, r.jsx)(a.l_, { to: v.Z5c.APP })
                     ]
                 })
-            );
+            ));
     }
 }
 let A = (0, a.EN)((0, d.Z)((0, p.Z)(j)));

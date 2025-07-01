@@ -1,4 +1,4 @@
-n.d(t, { i: () => d }), n(388685);
+(n.d(t, { i: () => d }), n(388685));
 var r = n(73800),
     i = n(399606),
     a = n(430824),
@@ -48,7 +48,7 @@ let u = (e, t, n) => {
                             case l.w6.GUILD:
                                 O(n.guild);
                         }
-                    m(!1), null == (e = T.current) || e.call(T);
+                    (m(!1), null == (e = T.current) || e.call(T));
                 };
                 if (p) return void r();
                 null == (n = T.current) || n.call(T);

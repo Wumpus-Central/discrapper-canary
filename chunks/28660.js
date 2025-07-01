@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(73800),
     i = n(695346),
     a = n(768581);
@@ -12,7 +12,7 @@ function o(e) {
             if (null == c || 'SHOULD_LOAD' !== u) return;
             d('LOADING');
             let e = new Image();
-            (e.src = c), (e.onload = () => d('COMPLETE'));
+            ((e.src = c), (e.onload = () => d('COMPLETE')));
         }, [c, u]),
         (0, r.useEffect)(() => {
             if (l) return;

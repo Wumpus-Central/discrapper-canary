@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     DI: () => I,
     x3: () => N
 }),
     n(388685),
-    n(953529);
+    n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -26,7 +26,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -42,8 +42,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -80,7 +80,7 @@ function C(e) {
                     onNavigateAway: t,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: r } = e;
-                        null != n &&
+                        (null != n &&
                             s(
                                 null != n.id
                                     ? {
@@ -92,7 +92,7 @@ function C(e) {
                                           name: n.optionallyDiverseSequence
                                       }
                             ),
-                            r && t();
+                            r && t());
                     }
                 });
             },
@@ -169,14 +169,14 @@ function y(e) {
         I = c && '' !== v && (null != y.id || null != y.name);
     return (0, r.jsx)('form', {
         onSubmit: function (e) {
-            e.preventDefault(),
+            (e.preventDefault(),
                 I &&
                     (m({
                         description: v,
                         emojiId: y.id,
                         emojiName: y.name
                     }),
-                    f());
+                    f()));
         },
         children: (0, r.jsxs)(o.Y0X, {
             transitionState: p,
@@ -243,7 +243,7 @@ function y(e) {
                                         size: o.zxk.Sizes.ICON,
                                         className: _.deleteButton,
                                         onClick: () => {
-                                            g(), f();
+                                            (g(), f());
                                         },
                                         children: (0, r.jsx)(o.XHJ, {
                                             size: 'md',
@@ -300,7 +300,7 @@ function N(e) {
         descriptionPlaceholder: j.intl.string(j.t.J8O1Li),
         canSubmit: null != g,
         onSave: function (e) {
-            s()(null != g, 'Cannot submit null channel'), a(O(v({}, e), { channelId: g }));
+            (s()(null != g, 'Cannot submit null channel'), a(O(v({}, e), { channelId: g })));
         },
         transitionState: d,
         onClose: m,
@@ -332,7 +332,7 @@ function I(e) {
         descriptionPlaceholder: j.intl.string(j.t.ucP4Tk),
         canSubmit: '' !== g,
         onSave: function (e) {
-            s()('' !== g, 'Cannot submit empty name'), l(O(v({}, e), { name: g }));
+            (s()('' !== g, 'Cannot submit empty name'), l(O(v({}, e), { name: g })));
         },
         transitionState: a,
         onClose: c,

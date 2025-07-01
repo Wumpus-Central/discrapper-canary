@@ -16,7 +16,7 @@ function o(t) {
         u = [`op: ${a}`, `name: ${e}`, `ID: ${i}`];
     if ((o && u.push(`parent ID: ${o}`), !E)) {
         let { op: t, description: e } = (0, n.XU)(s);
-        u.push(`root ID: ${s.spanContext().spanId}`), t && u.push(`root op: ${t}`), e && u.push(`root description: ${e}`);
+        (u.push(`root ID: ${s.spanContext().spanId}`), t && u.push(`root op: ${t}`), e && u.push(`root description: ${e}`));
     }
     r.kg.log(`${l}
   ${u.join('\n  ')}`);

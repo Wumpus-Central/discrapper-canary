@@ -13,7 +13,7 @@ class p extends (l = a.ZP.Store) {
         return c;
     }
 }
-(i = 'DispatchApplicationErrorStore'),
+((i = 'DispatchApplicationErrorStore'),
     (r = 'displayName') in p
         ? Object.defineProperty(p, r, {
               value: i,
@@ -21,7 +21,7 @@ class p extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (p[r] = i);
+        : (p[r] = i));
 let m = new p(o.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
         null != c && null != c.code && u.includes(c.code) && (c = null);

@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(678738),
     O = n(502762),
     E = n(530),
-    I = n(679332),
-    S = n(544989),
+    S = n(679332),
+    I = n(544989),
     P = n(228168),
     Z = n(388032),
     N = n(638414),
@@ -32,7 +32,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -48,8 +48,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -59,8 +59,8 @@ function w(e) {
         R = (0, g.ZP)(t.id),
         k = (0, s.ZP)(),
         M = i.useRef(Date.now()),
-        { analyticsLocations: D } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
-        L = (0, f.ZB)({
+        { analyticsLocations: L } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
+        D = (0, f.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
             channelId: n.id
@@ -71,18 +71,18 @@ function w(e) {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: D,
+                        sourceAnalyticsLocations: L,
                         hideRestrictedProfile: !0
                     },
-                    L,
+                    D,
                     e
                 )
             );
         };
     return (0, r.jsx)(u.Gt, {
-        value: D,
+        value: L,
         children: (0, r.jsx)(f.Mt, {
-            value: L,
+            value: D,
             openedAt: M.current,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
@@ -96,7 +96,7 @@ function w(e) {
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
-                            (0, r.jsx)(S.Z, { children: (0, r.jsx)(I.Z, { user: t }) }),
+                            (0, r.jsx)(I.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
                             (0, r.jsxs)('header', {
                                 className: N.header,
                                 children: [
@@ -161,16 +161,16 @@ function w(e) {
                                 look: o.zxk.Looks.BLANK,
                                 color: N.footerButtonColor,
                                 onClick: () => {
-                                    F(),
+                                    (F(),
                                         (0, m.pQ)(
                                             A(
                                                 {
                                                     action: 'PRESS_VIEW_PROFILE',
-                                                    analyticsLocations: D
+                                                    analyticsLocations: L
                                                 },
-                                                L
+                                                D
                                             )
-                                        );
+                                        ));
                                 },
                                 children: Z.intl.string(Z.t['+Xp3ho'])
                             })

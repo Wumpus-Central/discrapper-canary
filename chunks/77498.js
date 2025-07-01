@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => D }), n(388685), n(35282);
+(n.d(t, { Z: () => D }), n(388685), n(35282));
 var i,
     a,
     o = n(442837),
@@ -33,7 +33,7 @@ let h = 'GameStoreReportedGames',
     v = '',
     I = null;
 function T(e) {
-    var t, n, r, i, a, o, s;
+    var t, n, r, i, a, o, s, l;
     return {
         id: e.id,
         name: e.name,
@@ -44,7 +44,8 @@ function T(e) {
         hook: null == (a = e.hook) || a,
         aliases: null != (o = e.aliases) ? o : [],
         supportsOutOfProcessOverlay: d.ZP.supportsOutOfProcessOverlay(e.overlay_methods),
-        themes: null != (s = e.themes) ? s : []
+        themes: null != (s = e.themes) ? s : [],
+        icon: null != (l = e.icon_hash) ? l : void 0
     };
 }
 function S(e) {
@@ -58,7 +59,8 @@ function S(e) {
         hook: e.hook,
         aliases: e.aliases,
         supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay,
-        themes: []
+        themes: [],
+        icon: e.icon
     };
 }
 function A(e) {
@@ -79,7 +81,7 @@ function R() {
 function P(e) {
     let { games: t, etag: n } = e;
     for (let e of (null != n && v !== n && (v = n), t)) A(T(e));
-    (r = void 0), (I = Date.now());
+    ((r = void 0), (I = Date.now()));
 }
 class w extends (a = o.ZP.PersistedStore) {
     initialize(e) {
@@ -149,10 +151,10 @@ class w extends (a = o.ZP.PersistedStore) {
         return u.G6.getSetting() && !r && !(t || n);
     }
     markGameReported(e) {
-        (O[e] = !0), s.K.set(h, O);
+        ((O[e] = !0), s.K.set(h, O));
     }
 }
-p(w, 'displayName', 'GameStore'),
+(p(w, 'displayName', 'GameStore'),
     p(w, 'persistKey', 'GameStore'),
     p(w, 'migrations', [
         (e) => {
@@ -174,7 +176,7 @@ p(w, 'displayName', 'GameStore'),
                       detectableGamesEtag: '',
                       detectableGames: []
                   }
-    ]);
+    ]));
 let D = new w(l.Z, {
     OVERLAY_INITIALIZE: N,
     GAMES_DATABASE_FETCH: C,

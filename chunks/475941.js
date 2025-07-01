@@ -1,4 +1,4 @@
-u.r(t), u.d(t, { default: () => l });
+(u.r(t), u.d(t, { default: () => l }));
 var r = u(749210),
     s = u(430824),
     d = u(594174),

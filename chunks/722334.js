@@ -1,4 +1,4 @@
-n.d(t, { W: () => x });
+n.d(t, { W: () => E });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -12,25 +12,25 @@ var i = n(120356),
     p = n(341907),
     m = n(46140),
     f = n(981631),
-    h = n(388032),
-    g = n(355060),
-    _ = n(87181);
+    g = n(388032),
+    _ = n(355060),
+    h = n(87181);
 function b(e) {
     let { questId: t } = e;
     return (0, r.jsx)('div', {
-        className: g.buttonContainer,
+        className: _.buttonContainer,
         children: (0, r.jsx)(o.zxk, {
-            className: g.button,
+            className: _.button,
             color: o.Ttl.BRAND,
             onClick: () => {
-                (0, p.navigateToQuestHome)({ fromContent: u.jn.EXCLUDED_QUEST_EMBED }),
+                ((0, p.navigateToQuestHome)({ fromContent: u.jn.EXCLUDED_QUEST_EMBED }),
                     s.default.track(
                         f.rMx.QUEST_CONTENT_CLICKED,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function b(e) {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -46,8 +46,8 @@ function b(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })(
@@ -59,13 +59,13 @@ function b(e) {
                             },
                             (0, c.mH)(u.jn.EXCLUDED_QUEST_EMBED)
                         )
-                    );
+                    ));
             },
-            children: h.intl.string(h.t.GURBQk)
+            children: g.intl.string(g.t.GURBQk)
         })
     });
 }
-function x(e) {
+function E(e) {
     let { questId: t } = e,
         { containerRef: n, size: i } = (0, d.h)();
     return (
@@ -74,34 +74,34 @@ function x(e) {
             ref: (e) => {
                 n.current = e;
             },
-            className: l()(g.container, {
-                [g.wide]: 'lg' === i,
-                [g.tall]: 'lg' !== i
+            className: l()(_.container, {
+                [_.wide]: 'lg' === i,
+                [_.tall]: 'lg' !== i
             }),
             children: [
                 (0, r.jsxs)('div', {
-                    className: g.contentContainer,
+                    className: _.contentContainer,
                     children: [
                         (0, r.jsx)(o.X6q, {
                             variant: 'lg' === i ? 'heading-xl/bold' : 'heading-lg/bold',
                             color: 'header-primary',
-                            children: h.intl.string(h.t.vnP31d)
+                            children: g.intl.string(g.t.vnP31d)
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
                             color: 'text-default',
-                            className: g.__invalid_mobileWebCopy,
-                            children: h.intl.string(h.t.nuWSYW)
+                            className: _.__invalid_mobileWebCopy,
+                            children: g.intl.string(g.t.nuWSYW)
                         }),
                         (0, r.jsx)(b, { questId: t })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: g.imgContainer,
+                    className: _.imgContainer,
                     children: (0, r.jsx)('img', {
-                        src: _,
+                        src: h,
                         alt: '',
-                        className: g.missingQuestImage
+                        className: _.missingQuestImage
                     })
                 })
             ]

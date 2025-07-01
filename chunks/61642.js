@@ -4,19 +4,19 @@ n(73800);
 var i = n(239091),
     l = n(396828),
     o = n(703656),
-    s = n(434479),
-    a = n(981631),
+    a = n(434479),
+    s = n(981631),
     c = n(176505),
     u = n(388032);
 function d(e) {
     let { guild: t, selected: d } = e;
-    return (0, r.jsx)(s.m, {
+    return (0, r.jsx)(a.m, {
         id: 'subscriptions-'.concat(t.id),
         renderIcon: (e) => (0, r.jsx)(l.Z, { className: e }),
         text: u.intl.string(u.t['KzCF//']),
         selected: d,
         onClick: () => {
-            (0, o.uL)(a.Z5c.CHANNEL(t.id, c.oC.ROLE_SUBSCRIPTIONS));
+            (0, o.uL)(s.Z5c.CHANNEL(t.id, c.oC.ROLE_SUBSCRIPTIONS));
         },
         onContextMenu: (e) => {
             null != t &&
@@ -30,7 +30,7 @@ function d(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function d(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -46,8 +46,8 @@ function d(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, n)),

@@ -15,6 +15,6 @@ function l(e) {
         case i.z.GIFTING_PROMOTION_REMINDER:
             return s.D_;
         default:
-            return (0, a.UT)(e, { andFail: !1 }), 0;
+            return ((0, a.UT)(e, { andFail: !1 }), 0);
     }
 }

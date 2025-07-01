@@ -1,11 +1,11 @@
-r.d(t, {
+(r.d(t, {
     al: () => b,
     ck: () => j
 }),
     r(388685),
     r(539854),
     r(784620),
-    r(973216);
+    r(973216));
 var n = r(255367),
     a = r(73800),
     i = r(112456),
@@ -210,7 +210,7 @@ let b = {
         bytesSent: m,
         codec: function (e) {
             let { id: t, name: r } = e;
-            return (r = null != (r = '' === r ? 'unknown' : r) ? r : 'unknown'), ''.concat(r[0].toUpperCase()).concat(r.slice(1), ' (').concat(t, ')');
+            return ((r = null != (r = '' === r ? 'unknown' : r) ? r : 'unknown'), ''.concat(r[0].toUpperCase()).concat(r.slice(1), ' (').concat(t, ')'));
         },
         cpuLimitedResolution: f,
         currentSampleRate: function (e) {

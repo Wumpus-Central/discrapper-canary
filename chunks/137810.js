@@ -14,7 +14,7 @@ function d(e) {
         id: 'video-settings',
         label: u.intl.string(u.t.LKzQSE),
         action: () => {
-            a.Z.open(l.oAB.VOICE, c.gP, { analyticsLocations: t }), (0, o.i)(e);
+            (a.Z.open(l.oAB.VOICE, c.gP, { analyticsLocations: t }), (0, o.i)(e));
         },
         icon: i.ewm
     });

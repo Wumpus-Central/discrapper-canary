@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -39,7 +39,7 @@ function C() {
                 onMouseEnter: () => n(!0),
                 onMouseLeave: () => n(!1),
                 onClick: () => {
-                    h(b.L.PRIMARY), d.Z.open(f.oAB.CLICKER_GAME, null, { analyticsLocations: s });
+                    (h(b.L.PRIMARY), d.Z.open(f.oAB.CLICKER_GAME, null, { analyticsLocations: s }));
                 },
                 children: [
                     (0, i.jsxs)('div', {
@@ -48,7 +48,7 @@ function C() {
                             (0, i.jsxs)(c.P3F, {
                                 className: E.dismiss,
                                 onClick: (e) => {
-                                    e.stopPropagation(), h(b.L.USER_DISMISS);
+                                    (e.stopPropagation(), h(b.L.USER_DISMISS));
                                 },
                                 children: [
                                     (0, i.jsx)(c.P$X, {

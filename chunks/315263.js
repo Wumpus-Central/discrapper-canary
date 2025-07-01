@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => B }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
+(n.r(t), n.d(t, { default: () => B }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282));
 var r = n(873546),
     i = n(636977),
     a = n(570140),
@@ -199,7 +199,7 @@ function B(e) {
             if ((null == t || t.preventDefault(), i)) {
                 var l, c, u;
                 let e = new URLSearchParams(V);
-                (r = null != (l = e.get('q')) ? l : void 0), (o = null != (c = e.get('category_id')) ? c : void 0), (s = null != (u = e.get('page')) ? u : void 0);
+                ((r = null != (l = e.get('q')) ? l : void 0), (o = null != (c = e.get('category_id')) ? c : void 0), (s = null != (u = e.get('page')) ? u : void 0));
             } else a && (o = e[4]);
             return (
                 n
@@ -224,7 +224,7 @@ function B(e) {
             navigationReplace: !1,
             openChannel: !0
         };
-        return null != V && (e.search = V), null != F && (e.hash = F), (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0);
+        return (null != V && (e.search = V), null != F && (e.hash = F), (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0));
     }
     if (null != B && Z) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
@@ -238,7 +238,7 @@ function B(e) {
             let t = P.Z.getGuildId();
             null != H.guildId && '' !== H.guildId && H.guildId !== t && (0, I.Z)(k.Z5c.CHANNEL(H.guildId));
             let n = y.ZP.getGuildScheduledEvent(H.guildEventId);
-            return null != n && (0, b.bO)({ eventId: n.id }), !0;
+            return (null != n && (0, b.bO)({ eventId: n.id }), !0);
         };
     if (Z && (null == B ? void 0 : B.startsWith('/settings/'))) {
         let { default: e } = n(722589),

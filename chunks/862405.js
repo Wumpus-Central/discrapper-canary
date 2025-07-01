@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(695469),
@@ -53,7 +53,7 @@ function P(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -61,7 +61,7 @@ function P(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -69,8 +69,8 @@ function P(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({ mask: 'url(#'.concat(n, ')') }, s),
@@ -102,7 +102,7 @@ function w() {
         A = (0, g.eR)(O);
     (0, p.Z)(j, C);
     let R = (0, s.useCallback)(() => {
-        a({ lastLevelClaimed: k }), (0, l.KH)(y.yN.LEVELING, M), A();
+        (a({ lastLevelClaimed: k }), (0, l.KH)(y.yN.LEVELING, M), A());
     }, [k, M, A, a]);
     return (
         (0, s.useEffect)(() => {

@@ -1,12 +1,12 @@
 let r, i;
-n.d(t, {
+(n.d(t, {
     FC: () => m,
     _H: () => f,
     yR: () => h
 }),
     n(388685),
     n(35282),
-    n(704826);
+    n(704826));
 var a = n(400053),
     o = n.n(a),
     s = n(159635),
@@ -50,7 +50,7 @@ class f {
         return [t, r];
     }
     constructor(e, t, n) {
-        d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(u.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (o())(this.message, t));
+        (d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(u.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (o())(this.message, t)));
     }
 }
 function _(e, t) {
@@ -80,11 +80,11 @@ function p(e) {
         });
 }
 function h(e) {
-    (r = _(c.j, e)), (i = p(c.j));
+    ((r = _(c.j, e)), (i = p(c.j)));
 }
 function m(e, t) {
     if (null == e) return '';
-    null == r && h(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
+    (null == r && h(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, '')));
     let i = u.aT.test(e),
         a = u.b9.test(e);
     return i || a ? new f(e, t, a) : e;

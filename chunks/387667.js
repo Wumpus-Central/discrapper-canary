@@ -1,16 +1,16 @@
 n.d(t, {
-    Pw: () => u,
+    Pw: () => d,
     ZP: () => A,
-    ms: () => _,
+    ms: () => E,
     p5: () => c
 });
 var r = n(913527),
     l = n.n(r),
-    s = n(81825),
-    i = n(960048),
+    i = n(81825),
+    s = n(960048),
     a = n(709054),
     o = n(981631);
-function E(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,9 +55,9 @@ function c(e) {
     else if (e <= o.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION;
     else if (e <= o.rsA.GUILD_MEMBER_VERIFICATION_UPDATE) return o.KFR.GUILD_MEMBER_VERIFICATION;
     else if (e <= o.rsA.GUILD_PROFILE_UPDATE) return o.KFR.GUILD_PROFILE;
-    return i.Z.captureMessage('Unknown target type for: '.concat(e)), o.KFR.UNKNOWN;
+    return (s.Z.captureMessage('Unknown target type for: '.concat(e)), o.KFR.UNKNOWN);
 }
-function u(e) {
+function d(e) {
     switch (e) {
         case o.rsA.CHANNEL_CREATE:
         case o.rsA.CHANNEL_OVERWRITE_CREATE:
@@ -141,15 +141,15 @@ function u(e) {
     }
     return o.vB8.ALL;
 }
-class _ {
+class E {
     constructor(e, t, n) {
-        E(this, 'key', void 0), E(this, 'oldValue', void 0), E(this, 'newValue', void 0), E(this, 'subtarget', void 0), (this.key = e), (this.oldValue = t), (this.newValue = n);
+        (u(this, 'key', void 0), u(this, 'oldValue', void 0), u(this, 'newValue', void 0), u(this, 'subtarget', void 0), (this.key = e), (this.oldValue = t), (this.newValue = n));
     }
 }
-class d extends s.Z {
+class _ extends i.Z {
     constructor(e) {
-        var t, n, r, s, i, o;
-        super(), E(this, 'id', void 0), E(this, 'actionType', void 0), E(this, 'action', void 0), E(this, 'targetType', void 0), E(this, 'targetId', void 0), E(this, 'target', void 0), E(this, 'userId', void 0), E(this, 'changes', void 0), E(this, 'timestampStart', void 0), E(this, 'timestampEnd', void 0), E(this, 'user', void 0), E(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = u(this.action)), (this.targetId = e.targetId), (this.timestampStart = null != (t = e.timestampStart) ? t : l()(a.default.extractTimestamp(this.id))), (this.timestampEnd = null != (n = e.timestampEnd) ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null != (r = e.changes) ? r : []), (this.targetType = c(this.action)), (this.options = null != (s = e.options) ? s : {}), (this.target = null != (i = e.target) ? i : e.id), (this.user = null != (o = e.user) ? o : null);
+        var t, n, r, i, s, o;
+        (super(), u(this, 'id', void 0), u(this, 'actionType', void 0), u(this, 'action', void 0), u(this, 'targetType', void 0), u(this, 'targetId', void 0), u(this, 'target', void 0), u(this, 'userId', void 0), u(this, 'changes', void 0), u(this, 'timestampStart', void 0), u(this, 'timestampEnd', void 0), u(this, 'user', void 0), u(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = d(this.action)), (this.targetId = e.targetId), (this.timestampStart = null != (t = e.timestampStart) ? t : l()(a.default.extractTimestamp(this.id))), (this.timestampEnd = null != (n = e.timestampEnd) ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null != (r = e.changes) ? r : []), (this.targetType = c(this.action)), (this.options = null != (i = e.options) ? i : {}), (this.target = null != (s = e.target) ? s : e.id), (this.user = null != (o = e.user) ? o : null));
     }
 }
-let A = d;
+let A = _;

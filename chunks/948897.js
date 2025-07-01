@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(147913),
     i = n(998502);
 function a(e, t, n) {
@@ -16,13 +16,13 @@ function a(e, t, n) {
 }
 class o extends r.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             a(this, 'ownedLocks', new Set()),
             a(this, 'acquireLock', (e) => {
                 if (this.ownedLocks.has(e)) return !0;
                 let t = 'discord-overlay-global-owner-lock-'.concat(e);
                 return !1 !== i.ZP.AcquireGlobalLock(t) && (this.ownedLocks.add(e), !0);
-            });
+            }));
     }
 }
 let s = new o();

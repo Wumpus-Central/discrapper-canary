@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eo }), n(388685);
+(n.d(t, { Z: () => eo }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -62,7 +62,7 @@ function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -70,7 +70,7 @@ function X(e) {
             )),
             r.forEach(function (t) {
                 q(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -78,11 +78,11 @@ function Q(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -157,7 +157,7 @@ function ea(e) {
                 label: Y.intl.string(Y.t.WAI6xs),
                 className: K.actionButton,
                 onClick: () => {
-                    (0, B.v)(s, B.d.DISCONNECT),
+                    ((0, B.v)(s, B.d.DISCONNECT),
                         k.default.track(
                             Z.rMx.RING_CALL_DECLINED,
                             X(
@@ -168,7 +168,7 @@ function ea(e) {
                                 (0, h.v_)(n)
                             )
                         ),
-                        u.Z.stopRinging(n.id);
+                        u.Z.stopRinging(n.id));
                 }
             }),
             t &&
@@ -202,7 +202,7 @@ function ea(e) {
                             onCameraUnavailable: A.Z,
                             onChange: () => {
                                 var e;
-                                (0, B.v)(s, B.d.JOIN_VIDEO_CALL),
+                                ((0, B.v)(s, B.d.JOIN_VIDEO_CALL),
                                     k.default.track(
                                         Z.rMx.RING_CALL_ACCEPTED,
                                         X(
@@ -214,7 +214,7 @@ function ea(e) {
                                         )
                                     ),
                                     f.default.selectVoiceChannel(n.id, !0),
-                                    (0, y.XU)(null != (e = n.guild_id) ? e : Z.ME, n.id);
+                                    (0, y.XU)(null != (e = n.guild_id) ? e : Z.ME, n.id));
                             }
                         });
                     }
@@ -273,7 +273,7 @@ function eo(e) {
         let e = (e) => {
             e.keyCode === Z.yXg.ESCAPE && u.Z.stopRinging(h.id);
         };
-        return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
+        return (window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e));
     }, [h]);
     let V = k === Z.WtW.VIDEO && N && C > 0,
         { enabled: F } = P.Z.useExperiment({

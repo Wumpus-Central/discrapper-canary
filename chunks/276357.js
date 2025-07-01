@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(924826),
@@ -24,7 +24,7 @@ function b(e) {
         C = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
         y = i.useCallback(
             (e) => {
-                (0, m.e7)({
+                ((0, m.e7)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     tagId: e,
@@ -36,12 +36,12 @@ function b(e) {
                         object: g.qAy.CHANNEL_TAG
                     }
                 }),
-                    _.getState().toggleTagFilter(t.id, e);
+                    _.getState().toggleTagFilter(t.id, e));
             },
             [t, v, _]
         ),
         O = i.useCallback(() => {
-            _.getState().setTagFilter(t.id, new Set()), C || n();
+            (_.getState().setTagFilter(t.id, new Set()), C || n());
         }, [_, t.id, C, n]),
         w = (0, a.ZP)({
             id: ''.concat(t.id, '-all-tags-dropdown-navigator'),
@@ -50,12 +50,12 @@ function b(e) {
             scrollToStart: p,
             scrollToEnd: p
         }),
-        S = i.useRef(null);
+        N = i.useRef(null);
     return (
         i.useEffect(() => {
             requestAnimationFrame(() => {
-                if (null != S.current) {
-                    let e = S.current.querySelector('.'.concat(x.tag));
+                if (null != N.current) {
+                    let e = N.current.querySelector('.'.concat(x.tag));
                     null != e && e.focus();
                 }
             });
@@ -108,12 +108,12 @@ function b(e) {
                                                 r,
                                                 i = {},
                                                 a = Object.keys(e);
-                                            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                            for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                             return i;
                                         })(e, t);
                                     if (Object.getOwnPropertySymbols) {
                                         var a = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                     }
                                     return i;
                                 })(e, ['ref']);
@@ -123,7 +123,7 @@ function b(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -131,7 +131,7 @@ function b(e) {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -139,14 +139,14 @@ function b(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })(
                                     {
                                         ref: (e) => {
-                                            (i.current = e), (S.current = e);
+                                            ((i.current = e), (N.current = e));
                                         }
                                     },
                                     a

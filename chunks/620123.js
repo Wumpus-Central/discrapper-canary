@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var i = n(255367),
     s = n(73800),
     l = n(442837),
@@ -35,7 +35,7 @@ class c extends s.Component {
     }
     constructor(...e) {
         var t, n;
-        super(...e),
+        (super(...e),
             (t = 'handleChange'),
             (n = (e) => {
                 this.props.onChange(e);
@@ -47,7 +47,7 @@ class c extends s.Component {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = n);
+                : (this[t] = n));
     }
 }
 let h = l.ZP.connectStores([o.Z], (e) => {

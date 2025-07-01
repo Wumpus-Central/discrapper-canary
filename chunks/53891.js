@@ -17,12 +17,12 @@ let f = new o.Z('GuildTagCoachmark');
 function b(e) {
     function t(t) {
         var n;
-        a.Z.dispatch({
+        (a.Z.dispatch({
             type: 'GUILD_TAG_CHANGED_COACHMARK_SEEN',
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag }
         }),
-            null == (n = e.onDismiss) || n.call(e, t);
+            null == (n = e.onDismiss) || n.call(e, t));
     }
     return (0, i.jsx)(l.yRy, {
         targetElementRef: e.targetElementRef,
@@ -44,13 +44,13 @@ function b(e) {
 function _(e) {
     function t(t) {
         var n;
-        a.Z.dispatch({
+        (a.Z.dispatch({
             type: 'GUILD_TAG_CHANGED_COACHMARK_SEEN',
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag }
         }),
             (0, c.Qd)(s.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, p.L.DISMISS),
-            null == (n = e.onDismiss) || n.call(e, t);
+            null == (n = e.onDismiss) || n.call(e, t));
     }
     return (0, i.jsx)(l.yRy, {
         targetElementRef: e.targetElementRef,

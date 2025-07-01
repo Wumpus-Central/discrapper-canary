@@ -1,4 +1,4 @@
-t.d(n, { default: () => T }), t(388685), t(953529), t(539854);
+(t.d(n, { default: () => T }), t(388685), t(953529), t(539854));
 var l = t(255367),
     i = t(73800),
     o = t(442837),
@@ -61,7 +61,7 @@ let T = (e) => {
             });
     });
     let J = () => {
-            U(!1), B();
+            (U(!1), B());
         },
         Q = i.useCallback((e) => H(e), []),
         ee = (e) => {
@@ -80,7 +80,7 @@ let T = (e) => {
             );
         },
         en = i.useCallback(() => {
-            r.K.set(O.S, !0), U(!1);
+            (r.K.set(O.S, !0), U(!1));
         }, []);
     return (0, l.jsx)(c.Z, {
         page: y.ZY5.CHANNEL_WELCOME_CREATE_MODAL,
@@ -179,7 +179,7 @@ let T = (e) => {
                                                     closePopout: n,
                                                     onSelectEmoji: (e) => {
                                                         let { emoji: t, willClose: l } = e;
-                                                        ee(t), l && (n(), null == t && J());
+                                                        (ee(t), l && (n(), null == t && J()));
                                                     },
                                                     pickerIntention: E.Hz.COMMUNITY_CONTENT,
                                                     onNavigateAway: J,
@@ -204,7 +204,7 @@ let T = (e) => {
                                                             for (var n = 1; n < arguments.length; n++) {
                                                                 var t = null != arguments[n] ? arguments[n] : {},
                                                                     l = Object.keys(t);
-                                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                                     (l = l.concat(
                                                                         Object.getOwnPropertySymbols(t).filter(function (e) {
                                                                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -212,7 +212,7 @@ let T = (e) => {
                                                                     )),
                                                                     l.forEach(function (n) {
                                                                         var l;
-                                                                        (l = t[n]),
+                                                                        ((l = t[n]),
                                                                             n in e
                                                                                 ? Object.defineProperty(e, n, {
                                                                                       value: l,
@@ -220,8 +220,8 @@ let T = (e) => {
                                                                                       configurable: !0,
                                                                                       writable: !0
                                                                                   })
-                                                                                : (e[n] = l);
-                                                                    });
+                                                                                : (e[n] = l));
+                                                                    }));
                                                             }
                                                             return e;
                                                         })({}, e)),
@@ -230,7 +230,7 @@ let T = (e) => {
                                                                 ref: I,
                                                                 onClick: (n) => {
                                                                     var t;
-                                                                    en(), null == (t = e.onClick) || t.call(e, n);
+                                                                    (en(), null == (t = e.onClick) || t.call(e, n));
                                                                 },
                                                                 active: o,
                                                                 className: P.emojiButton,
@@ -286,7 +286,7 @@ let T = (e) => {
                                 }),
                                 (0, l.jsx)(a.zxk, {
                                     onClick: () => {
-                                        null != L &&
+                                        (null != L &&
                                             A.length > 0 &&
                                             z({
                                                 channel_id: L,
@@ -294,7 +294,7 @@ let T = (e) => {
                                                 emoji_id: null == M ? void 0 : M.id,
                                                 emoji_name: null == M ? void 0 : M.name
                                             }),
-                                            J();
+                                            J());
                                     },
                                     disabled: null == L || 0 === A.length,
                                     children: S.intl.string(S.t.R3BPHx)
@@ -316,7 +316,7 @@ let T = (e) => {
                 K &&
                     (0, l.jsx)(k.Z, {
                         onConfirm: () => {
-                            z(), J();
+                            (z(), J());
                         },
                         onCancel: () => Y(!1),
                         channelId: L

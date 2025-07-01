@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     BP: () => Q,
     DK: () => H,
     G3: () => p,
@@ -20,7 +20,7 @@ n.d(t, {
     zi: () => X
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n(913527),
     a = n.n(i),
@@ -98,7 +98,7 @@ function C(e) {
 let R = () => {
         let e = a()().add(1, 'hour'),
             t = e.hour();
-        return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
+        return (e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0));
     },
     P = (e, t) => (0, l.vc)(e, e.get('years') === t.get('years') ? m : g),
     w = (e, t) => {

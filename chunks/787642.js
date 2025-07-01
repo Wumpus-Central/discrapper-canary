@@ -46,9 +46,9 @@ function _(e, t, n) {
     );
 }
 function E() {
-    let e = Object.values(c.Z.getGuilds()).filter((e) => e.hasFeature(h.oNc.HUB)),
+    let e = c.Z.getGuildsArray().filter((e) => e.hasFeature(h.oNc.HUB)),
         t = (e) => {
-            u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, s.X)(e);
+            (u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, s.X)(e));
         };
     return (0, r.jsxs)(i.Fragment, {
         children: [
@@ -88,7 +88,7 @@ function E() {
                         )
                     ),
                     _(l.Jmo, f.intl.string(f.t.AhKnz8), () => {
-                        u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, o.uL)(h.Z5c.GUILD_DISCOVERY);
+                        (u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, o.uL)(h.Z5c.GUILD_DISCOVERY));
                     })
                 ]
             })

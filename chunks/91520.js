@@ -29,7 +29,7 @@ if (!O) {
                 }
             e && e.enter();
         };
-    _ || m || h || !g || !E
+    (_ || m || h || !g || !E
         ? !p && y && y.resolve
             ? (((o = y.resolve(void 0)).constructor = y),
               (s = u(o.then, o)),
@@ -51,7 +51,7 @@ if (!O) {
               a.data = i = !i;
           })),
         (O = function (e) {
-            v.head || r(), v.add(e);
-        });
+            (v.head || r(), v.add(e));
+        }));
 }
 e.exports = O;

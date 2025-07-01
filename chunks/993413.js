@@ -1,67 +1,96 @@
-n.d(t, { Z: () => p }), n(704826), n(35282), n(953529);
+(n.d(t, { Z: () => E }), n(704826), n(35282), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    l = n(403182),
-    c = n(587446),
-    u = n(504983),
-    d = n(396032);
-function f(e) {
+    s = n(442837),
+    l = n(481060),
+    c = n(892001),
+    u = n(594174),
+    d = n(403182),
+    f = n(587446),
+    _ = n(504983),
+    p = n(388032),
+    h = n(396032);
+function m(e) {
     return e.replace(/[0-9.,]+ ?kb/g, (e) => {
         let t = 1024 * parseInt(e, 10);
-        return isNaN(t) ? e : (0, l.Ng)(t);
+        return isNaN(t) ? e : (0, d.Ng)(t);
     });
 }
-function _(e) {
+function g(e) {
     let { errors: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e, t) =>
             (0, r.jsx)(
-                s.Text,
+                l.Text,
                 {
                     variant: 'text-xs/normal',
                     color: 'text-danger',
-                    className: d.errorMessage,
-                    children: f(e)
+                    className: h.errorMessage,
+                    children: m(e)
                 },
                 t
             )
         )
     });
 }
-let p = i.forwardRef(function (e, t) {
-    let { title: n, titleIcon: i, titleId: a, description: l, children: f, className: p, errors: h, disabled: m = !1, hideDivider: g = !1, showBorder: E = !1, borderType: b, hasBackground: y = !1, forcedDivider: O = !1, showPremiumIcon: v = !1 } = e;
+let E = i.forwardRef(function (e, t) {
+    let { title: n, titleIcon: i, titleId: a, description: d, children: m, className: E, errors: b, disabled: y = !1, hideDivider: O = !1, showBorder: v = !1, borderType: I, hasBackground: T = !1, forcedDivider: S = !1, showPremiumIcon: A = !1, showViewFullProfileButton: N = !1 } = e,
+        C = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        R = () => {
+            null != C &&
+                (0, c.openUserProfileModal)({
+                    userId: C.id,
+                    disableActionsForPreview: !0
+                });
+        };
     return (0, r.jsx)('div', {
-        className: o()(d.customizationSection, p, {
-            [d.disabled]: m,
-            [d.hideDivider]: g,
-            [d.showBorder]: E,
-            [d.withDivider]: O
+        className: o()(h.customizationSection, E, {
+            [h.disabled]: y,
+            [h.hideDivider]: O,
+            [h.showBorder]: v,
+            [h.withDivider]: S
         }),
         ref: t,
-        children: (0, r.jsxs)(u.Z, {
-            className: d.customizationSectionBorder,
-            backgroundClassName: d.customizationSectionBackground,
-            isShown: E,
-            type: b,
-            hasBackground: y,
+        children: (0, r.jsxs)(_.Z, {
+            className: h.customizationSectionBorder,
+            backgroundClassName: h.customizationSectionBackground,
+            isShown: v,
+            type: I,
+            hasBackground: T,
             children: [
-                (0, r.jsxs)(s.vwX, {
-                    className: d.title,
+                (0, r.jsxs)(l.vwX, {
+                    className: h.title,
                     id: a,
-                    children: [n, v && (0, r.jsx)(c.Z, {}), i]
+                    children: [
+                        n,
+                        A && (0, r.jsx)(f.Z, {}),
+                        i,
+                        N &&
+                            null != C &&
+                            (0, r.jsx)(l.zxk, {
+                                look: l.zxk.Looks.LINK,
+                                color: l.zxk.Colors.TRANSPARENT,
+                                size: l.zxk.Sizes.TINY,
+                                className: h.viewFullProfileButton,
+                                onClick: R,
+                                children: (0, r.jsx)(l.Text, {
+                                    variant: 'text-xs/normal',
+                                    children: p.intl.string(p.t['+Xp3ho'])
+                                })
+                            })
+                    ]
                 }),
-                null != l
-                    ? (0, r.jsx)(s.R94, {
-                          type: s.R94.Types.DESCRIPTION,
-                          className: d.sectionDescription,
-                          children: l
+                null != d
+                    ? (0, r.jsx)(l.R94, {
+                          type: l.R94.Types.DESCRIPTION,
+                          className: h.sectionDescription,
+                          children: d
                       })
                     : null,
-                f,
-                null != h && (0, r.jsx)(_, { errors: h })
+                m,
+                null != b && (0, r.jsx)(g, { errors: b })
             ]
         })
     });

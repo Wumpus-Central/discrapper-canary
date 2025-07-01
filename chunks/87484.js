@@ -1,117 +1,117 @@
-n.d(t, { Z: () => c });
-var r = n(255367);
+n.d(e, { Z: () => c });
+var i = n(255367);
 n(73800);
-var l = n(772848),
-    i = n(481060),
+var r = n(772848),
+    l = n(481060),
     o = n(159351),
     a = n(667),
-    u = n(626135),
-    s = n(981631);
-function c(e) {
-    let { applicationId: t, skuId: c, onClose: d, onComplete: p, analyticsLocations: f, analyticsLocationObject: b, contextKey: O } = e,
-        y = !1,
-        m = (0, l.Z)();
-    (0, i.ZDy)(
+    s = n(626135),
+    u = n(981631);
+function c(t) {
+    let { applicationId: e, skuId: c, onClose: d, onComplete: p, analyticsLocations: f, analyticsLocationObject: S, contextKey: O } = t,
+        I = !1,
+        b = (0, r.Z)();
+    (0, l.ZDy)(
         async () => {
-            let { default: e } = await n.e('61670').then(n.bind(n, 409600));
+            let { default: t } = await n.e('61670').then(n.bind(n, 409600));
             return (n) => {
-                var l,
-                    i,
+                var r,
+                    l,
                     { onClose: o } = n,
-                    a = (function (e, t) {
-                        if (null == e) return {};
+                    a = (function (t, e) {
+                        if (null == t) return {};
                         var n,
-                            r,
-                            l = (function (e, t) {
-                                if (null == e) return {};
+                            i,
+                            r = (function (t, e) {
+                                if (null == t) return {};
                                 var n,
-                                    r,
-                                    l = {},
-                                    i = Object.keys(e);
-                                for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                                return l;
-                            })(e, t);
+                                    i,
+                                    r = {},
+                                    l = Object.keys(t);
+                                for (i = 0; i < l.length; i++) ((n = l[i]), e.indexOf(n) >= 0 || (r[n] = t[n]));
+                                return r;
+                            })(t, e);
                         if (Object.getOwnPropertySymbols) {
-                            var i = Object.getOwnPropertySymbols(e);
-                            for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                            var l = Object.getOwnPropertySymbols(t);
+                            for (i = 0; i < l.length; i++) ((n = l[i]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]));
                         }
-                        return l;
+                        return r;
                     })(n, ['onClose']);
-                return (0, r.jsx)(
-                    e,
-                    ((l = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                return (0, i.jsx)(
+                    t,
+                    ((r = (function (t) {
+                        for (var e = 1; e < arguments.length; e++) {
+                            var n = null != arguments[e] ? arguments[e] : {},
+                                i = Object.keys(n);
+                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                (i = i.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (t) {
+                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                     })
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                i.forEach(function (e) {
+                                    var i;
+                                    ((i = n[e]),
+                                        e in t
+                                            ? Object.defineProperty(t, e, {
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (t[e] = i));
+                                }));
                         }
-                        return e;
+                        return t;
                     })({}, a)),
-                    (i = i =
+                    (l = l =
                         {
-                            loadId: m,
-                            applicationId: t,
+                            loadId: b,
+                            applicationId: e,
                             skuId: c,
                             analyticsLocations: f,
-                            analyticsLocationObject: b,
-                            onClose: (e) => {
-                                o(), null == d || d(e);
+                            analyticsLocationObject: S,
+                            onClose: (t) => {
+                                (o(), null == d || d(t));
                             },
-                            onComplete: (e) => {
-                                (y = !0), null == p || p(e);
+                            onComplete: (t) => {
+                                ((I = !0), null == p || p(t));
                             }
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                        : (function (t, e) {
+                              var n = Object.keys(t);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var i = Object.getOwnPropertySymbols(t);
+                                  n.push.apply(n, i);
                               }
                               return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                          })(Object(l)).forEach(function (t) {
+                              Object.defineProperty(r, t, Object.getOwnPropertyDescriptor(l, t));
                           }),
-                    l)
+                    r)
                 );
             };
         },
         {
             contextKey: O,
             onCloseCallback: () => {
-                y ||
-                    u.default.track(s.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: m,
-                        payment_type: s.Zuq[s.GZQ.ONE_TIME],
-                        location: b,
+                (I ||
+                    s.default.track(u.rMx.PAYMENT_FLOW_CANCELED, {
+                        load_id: b,
+                        payment_type: u.Zuq[u.GZQ.ONE_TIME],
+                        location: S,
                         is_gift: !1,
                         sku_id: c,
-                        application_id: t,
+                        application_id: e,
                         location_stack: f
                     }),
                     (0, o.fw)(),
                     (0, a.p)(),
-                    null == d || d(y);
+                    null == d || d(I));
             },
-            onCloseRequest: s.dG4
+            onCloseRequest: u.dG4
         }
     );
 }

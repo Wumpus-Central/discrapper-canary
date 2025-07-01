@@ -74,7 +74,7 @@ var n = r(73800),
             )
         );
     };
-(f.propTypes = {
+((f.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     height: a().oneOfType([a().string, a().number]),
     colors: a().arrayOf(a().arrayOf(a().string)),
@@ -106,4 +106,4 @@ var n = r(73800),
         ],
         styles: {}
     }),
-    (0, c.t1)(f);
+    (0, c.t1)(f));

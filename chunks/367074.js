@@ -120,7 +120,7 @@ async function x() {
         { enabled: _ } = E.Z.getCurrentConfig({ location: '153d31_4' }, { autoTrackExposure: !1 }),
         p = !a.tq || c;
     if (r || i || !o || (t && !_) || !p || (f.Z.shouldFetchOffer() && !(0, h.I5)(n) && (await (0, g.T)('BogoPromotionUtils')), f.Z.hasFetchedOffer() && (f.Z.hasAnyUnexpiredOffer() || f.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
-    !d.ZP.hasFetchedMostRecentPremiumTypeSubscription() && (null == (e = u.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(C.in.PREMIUM_TIER_2)) && (await (0, s.ou)()), d.ZP.hasFetchedSubscriptions() || (await (0, s.jg)());
+    (!d.ZP.hasFetchedMostRecentPremiumTypeSubscription() && (null == (e = u.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(C.in.PREMIUM_TIER_2)) && (await (0, s.ou)()), d.ZP.hasFetchedSubscriptions() || (await (0, s.jg)()));
     let m = d.ZP.getMostRecentPremiumTypeSubscription();
     return w({
         experimentEnabled: o,

@@ -29,7 +29,7 @@ let a = new Map(),
     o = (e) => {
         var t;
         let { canvasId: i } = e;
-        null == (t = a.get(i)) || t.drop(), a.delete(i);
+        (null == (t = a.get(i)) || t.drop(), a.delete(i));
     },
     h = (e) => {
         var t;

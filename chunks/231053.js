@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Fi: () => p,
     JO: () => h,
     w6: () => _
 }),
     n(953529),
-    n(388685);
+    n(388685));
 var r = n(544891),
     i = n(81825),
     a = n(601964),
@@ -28,7 +28,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -44,11 +44,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -64,7 +64,7 @@ function f(e, t) {
     );
 }
 var _ = (function (e) {
-    return (e.GUILD = 'GUILD'), (e.APPLICATION = 'APPLICATION'), e;
+    return ((e.GUILD = 'GUILD'), (e.APPLICATION = 'APPLICATION'), e);
 })({});
 let p = async (e) => {
     let t = null;
@@ -171,7 +171,7 @@ class h extends i.Z {
         return e instanceof h ? e : e instanceof a.ZP ? h.createFromGuildRecord(e) : h.createFromDiscoverableGuild(e);
     }
     constructor(e) {
-        super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'features', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'presenceCount', void 0), c(this, 'memberCount', void 0), c(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis);
+        (super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'features', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'presenceCount', void 0), c(this, 'memberCount', void 0), c(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis));
     }
 }
 class m extends i.Z {
@@ -182,6 +182,6 @@ class m extends i.Z {
         });
     }
     constructor(e) {
-        super(), c(this, 'id', void 0), c(this, 'name', void 0), (this.id = e.id), (this.name = e.name);
+        (super(), c(this, 'id', void 0), c(this, 'name', void 0), (this.id = e.id), (this.name = e.name));
     }
 }

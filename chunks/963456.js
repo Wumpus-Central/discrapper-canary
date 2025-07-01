@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     a: () => p,
     j: () => m
 }),
-    n(539854);
+    n(539854));
 var r = n(544891),
     i = n(570140),
     a = n(626135),
@@ -63,7 +63,7 @@ async function p(e, t) {
                     (n) => {
                         var r;
                         if (t.signal.aborted) {
-                            m.push(f), b({ error: !0 });
+                            (m.push(f), b({ error: !0 }));
                             return;
                         }
                         return 429 === n.status

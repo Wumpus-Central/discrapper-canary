@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(570140),
     i = n(147913),
     a = n(70956),
@@ -27,11 +27,11 @@ function u() {
 class d extends i.Z {
     _initialize() {}
     _terminate() {
-        clearTimeout(this.rolloverTimeout), clearTimeout(this.refreshTimeout);
+        (clearTimeout(this.rolloverTimeout), clearTimeout(this.refreshTimeout));
     }
     handleVoiceFilterCatalogUpdate(e) {
         let {} = e;
-        this._scheduleNextRollover(), this._scheduleRefresh();
+        (this._scheduleNextRollover(), this._scheduleRefresh());
     }
     handlePostConnectionOpen() {
         u() && (0, l.wV)();
@@ -44,7 +44,7 @@ class d extends i.Z {
             n = new Date(e.next_set_end).getTime() - new Date().getTime();
         t > 0
             ? (this.rolloverTimeout = setTimeout(() => {
-                  r.Z.dispatch({ type: 'VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES' }), this._scheduleNextRollover();
+                  (r.Z.dispatch({ type: 'VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES' }), this._scheduleNextRollover());
               }, t))
             : n > 0 &&
               (this.rolloverTimeout = setTimeout(() => {
@@ -52,20 +52,20 @@ class d extends i.Z {
               }, n));
     }
     _scheduleRefresh() {
-        clearTimeout(this.refreshTimeout),
+        (clearTimeout(this.refreshTimeout),
             (this.refreshTimeout = setTimeout(() => {
                 (0, l.wV)();
-            }, a.Z.Millis.DAY));
+            }, a.Z.Millis.DAY)));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'actions', {
                 VOICE_FILTER_CATALOG_FETCH_SUCCESS: (e) => this.handleVoiceFilterCatalogUpdate(e),
                 VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: (e) => this.handleVoiceFilterCatalogUpdate(e),
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
             }),
             c(this, 'rolloverTimeout', null),
-            c(this, 'refreshTimeout', null);
+            c(this, 'refreshTimeout', null));
     }
 }
 let f = new d();

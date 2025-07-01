@@ -13,7 +13,7 @@ function l(e, t) {
     return (
         null != s &&
             (o.validation = function (e) {
-                return null == c && (c = (0, i.C5)(e.object(s(e)))), c;
+                return (null == c && (c = (0, i.C5)(e.object(s(e)))), c);
             }),
         o
     );

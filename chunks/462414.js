@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(243814),
     i = n(846027),
     l = n(131951),
@@ -33,7 +33,7 @@ let h = {
                     args: { input_mode: n, self_mute: r, self_deaf: o }
                 } = e,
                 s = p(t);
-            null != n && i.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, s), null != r && r !== l.Z.isSelfMute(s) && i.Z.toggleSelfMute({ context: s }), null != o && o !== l.Z.isSelfDeaf(s) && i.Z.toggleSelfDeaf({ context: s });
+            (null != n && i.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, s), null != r && r !== l.Z.isSelfMute(s) && i.Z.toggleSelfMute({ context: s }), null != o && o !== l.Z.isSelfDeaf(s) && i.Z.toggleSelfDeaf({ context: s }));
         }
     },
     [u.Etm.SET_USER_VOICE_SETTINGS_2]: {
@@ -52,7 +52,7 @@ let h = {
                     args: { user_id: n, mute: r, volume: a }
                 } = e,
                 o = p(t);
-            null != r && r !== l.Z.isLocalMute(n, o) && i.Z.toggleLocalMute(n, o), null != a && i.Z.setLocalVolume(n, a, o);
+            (null != r && r !== l.Z.isLocalMute(n, o) && i.Z.toggleLocalMute(n, o), null != a && i.Z.setLocalVolume(n, a, o));
         }
     },
     [u.Etm.PUSH_TO_TALK]: {

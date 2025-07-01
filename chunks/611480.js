@@ -20,5 +20,5 @@ let r = 'sticker-picker-tab-panel',
     u = 524288,
     d = 1572864;
 var f = (function (e) {
-    return (e[(e.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (e[(e.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (e[(e.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE'), e;
+    return ((e[(e.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (e[(e.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (e[(e.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE'), e);
 })({});

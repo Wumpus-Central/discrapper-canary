@@ -17,14 +17,14 @@ var r = n(512722),
 let p = {};
 function h(e) {
     var t;
-    null == (t = p[e]) || t.call(p), (p[e] = null);
+    (null == (t = p[e]) || t.call(p), (p[e] = null));
 }
 function m(e) {
     p[e] = null;
 }
 async function g(e) {
     let { guildId: t, returnChannelId: n, isPreview: r = !1 } = e;
-    (0, a.pTH)(), i()(null == p[t], 'should not double-join guilds');
+    ((0, a.pTH)(), i()(null == p[t], 'should not double-join guilds'));
     let l = await (0, o.V)(t);
     if (l.hasFeature(f.oNc.COMMUNITY)) {
         if (r) (0, c.I1)(t);
@@ -37,11 +37,11 @@ async function g(e) {
 }
 function E(e) {
     return new Promise((t) => {
-        (p[e] = t),
+        ((p[e] = t),
             (0, d.x)(e).then(() => {
-                h(e), l.Z.finishOnboarding(e);
+                (h(e), l.Z.finishOnboarding(e));
             }),
-            (0, s.uL)(f.Z5c.CHANNEL(e, _.oC.GUILD_ONBOARDING));
+            (0, s.uL)(f.Z5c.CHANNEL(e, _.oC.GUILD_ONBOARDING)));
     });
 }
 function b(e) {

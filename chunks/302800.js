@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     M7: () => m,
     R9: () => I,
     UY: () => b,
     k2: () => h,
     v: () => y
 }),
-    n(73800);
+    n(73800));
 var r = n(691324),
     i = n(180650),
     a = n(44315),
@@ -31,7 +31,7 @@ function p(e, t, n) {
     );
 }
 var h = (function (e) {
-    return (e[(e.NONE = 0)] = 'NONE'), (e[(e.TOOLTIP = 1)] = 'TOOLTIP'), (e[(e.COACHTIP = 2)] = 'COACHTIP'), (e[(e.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (e[(e.BADGE = 4)] = 'BADGE'), (e[(e.COACHMARK = 5)] = 'COACHMARK'), e;
+    return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.TOOLTIP = 1)] = 'TOOLTIP'), (e[(e.COACHTIP = 2)] = 'COACHTIP'), (e[(e.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (e[(e.BADGE = 4)] = 'BADGE'), (e[(e.COACHMARK = 5)] = 'COACHMARK'), e);
 })({});
 let m = (e) =>
     e === i.T.TIDE
@@ -48,7 +48,7 @@ let m = (e) =>
 class g {
     constructor({ src: e, style: t, animated: n }) {
         var r = this;
-        p(this, 'src', void 0),
+        (p(this, 'src', void 0),
             p(this, 'style', void 0),
             p(this, 'animated', void 0),
             p(this, 'getSrc', function () {
@@ -57,7 +57,7 @@ class g {
             }),
             (this.src = e),
             (this.style = t),
-            (this.animated = n);
+            (this.animated = n));
     }
 }
 let E = {
@@ -146,5 +146,5 @@ let E = {
     },
     I = (e, t) => {
         let n = O[e];
-        return null == n && t && (n = v[e]), null != n ? n : null;
+        return (null == n && t && (n = v[e]), null != n ? n : null);
     };

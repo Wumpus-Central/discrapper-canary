@@ -5,7 +5,7 @@ function r(e) {
 }
 function i(e) {
     let [t, i, a, o, s] = e;
-    for (let e in a) r(a[e]), (a[e] = { value: a[e] });
+    for (let e in a) (r(a[e]), (a[e] = { value: a[e] }));
     return t === n.Plural
         ? {
               type: t,
@@ -97,12 +97,12 @@ function s(e) {
 function l(e) {
     return 'string' == typeof e || (!!Array.isArray(e) && (Array.isArray(e[0]) || 'string' == typeof e[0]));
 }
-Object.defineProperty(t, '__esModule', { value: !0 }),
+(Object.defineProperty(t, '__esModule', { value: !0 }),
     (t.FORMAT_JS_POUND = t.FormatJsNodeType = void 0),
     (t.hydrateFormatJsAst = o),
     (t.compressFormatJsToAst = s),
     (t.isCompressedAst = l),
     (function (e) {
-        (e[(e.Literal = 0)] = 'Literal'), (e[(e.Argument = 1)] = 'Argument'), (e[(e.Number = 2)] = 'Number'), (e[(e.Date = 3)] = 'Date'), (e[(e.Time = 4)] = 'Time'), (e[(e.Select = 5)] = 'Select'), (e[(e.Plural = 6)] = 'Plural'), (e[(e.Pound = 7)] = 'Pound'), (e[(e.Tag = 8)] = 'Tag');
+        ((e[(e.Literal = 0)] = 'Literal'), (e[(e.Argument = 1)] = 'Argument'), (e[(e.Number = 2)] = 'Number'), (e[(e.Date = 3)] = 'Date'), (e[(e.Time = 4)] = 'Time'), (e[(e.Select = 5)] = 'Select'), (e[(e.Plural = 6)] = 'Plural'), (e[(e.Pound = 7)] = 'Pound'), (e[(e.Tag = 8)] = 'Tag'));
     })(n || (t.FormatJsNodeType = n = {})),
-    (t.FORMAT_JS_POUND = Object.freeze({ type: 7 }));
+    (t.FORMAT_JS_POUND = Object.freeze({ type: 7 })));

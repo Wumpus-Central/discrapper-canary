@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(73800),
     i = n(442837),
     l = n(479531),
@@ -24,7 +24,7 @@ function d(e, t) {
         loading: m,
         submitAcceptTermsRequest: r.useCallback(async () => {
             if (null != e && (p || null != t)) {
-                g(!0), u(void 0);
+                (g(!0), u(void 0));
                 try {
                     null != t ? await o.wE(e, t) : await o.zo(e);
                 } catch (e) {

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Mq: () => m,
     Su: () => f,
     bU: () => b,
@@ -12,7 +12,7 @@ n.d(t, {
 }),
     n(388685),
     n(539854),
-    n(467055);
+    n(467055));
 var r = n(379649),
     i = n(909766),
     a = n(179654);
@@ -34,13 +34,13 @@ let s = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 600000
     c = [720, 480, 360],
     u = ['framesCodec', 'framesNetwork', 'packets', 'packetsLost', 'framesDropped', 'framesCodecError', 'bytes', 'nackCount', 'pliCount', 'qpSum', 'freezeCount', 'pauseCount', 'totalFreezesDuration', 'totalPausesDuration', 'totalFramesDuration', 'keyframes', 'passthroughCount', 'cryptorSuccessCount', 'cryptorFailureCount', 'cryptorDuration', 'cryptorAttempts', 'cryptorMissingKeyCount', 'cryptorInvalidNonceCount', 'qualityDecodeErrors', 'qualityDecoderReboots', 'qualityScoreErrors', 'qualityFrameDrops', 'qualitySizeMismatches'];
 var d = (function (e) {
-        return (e.H264 = 'H264'), (e.H265 = 'H265'), (e.VP8 = 'VP8'), (e.VP9 = 'VP9'), (e.AV1 = 'AV1'), (e.UNKNOWN = 'UNKNOWN'), e;
+        return ((e.H264 = 'H264'), (e.H265 = 'H265'), (e.VP8 = 'VP8'), (e.VP9 = 'VP9'), (e.AV1 = 'AV1'), (e.UNKNOWN = 'UNKNOWN'), e);
     })({}),
     f = (function (e) {
-        return (e.NVIDIA_CUDA = 'nvidia_cuda'), (e.NVIDIA_DIRECT_3D = 'nvidia_direct_3d'), (e.OPENH264 = 'openh264'), (e.VIDEOTOOLBOX = 'videotoolbox'), (e.AMD_DIRECT_3D = 'amd_direct_3d'), (e.INTEL = 'intel'), (e.INTEL_DIRECT_3D = 'intel_direct_3d'), (e.VP8_LIBVPX = 'vp8_libvpx'), (e.EXYNOS = 'exynos'), (e.UNCATEGORIZED = 'uncategorized'), (e.UNKNOWN = 'unknown'), e;
+        return ((e.NVIDIA_CUDA = 'nvidia_cuda'), (e.NVIDIA_DIRECT_3D = 'nvidia_direct_3d'), (e.OPENH264 = 'openh264'), (e.VIDEOTOOLBOX = 'videotoolbox'), (e.AMD_DIRECT_3D = 'amd_direct_3d'), (e.INTEL = 'intel'), (e.INTEL_DIRECT_3D = 'intel_direct_3d'), (e.VP8_LIBVPX = 'vp8_libvpx'), (e.EXYNOS = 'exynos'), (e.UNCATEGORIZED = 'uncategorized'), (e.UNKNOWN = 'unknown'), e);
     })({}),
     _ = (function (e) {
-        return (e.VIDEOTOOLBOX = 'videotoolbox'), (e.VP8_LIBVPX = 'vp8_libvpx'), (e.ELECTRON = 'electron'), (e.FFMPEG = 'ffmpeg'), (e.DAV1D = 'dav1d'), (e.WEBRTC = 'WebRTC'), (e.EXYNOS = 'exynos'), (e.UNCATEGORIZED = 'uncategorized'), (e.UNKNOWN = 'unknown'), e;
+        return ((e.VIDEOTOOLBOX = 'videotoolbox'), (e.VP8_LIBVPX = 'vp8_libvpx'), (e.ELECTRON = 'electron'), (e.FFMPEG = 'ffmpeg'), (e.DAV1D = 'dav1d'), (e.WEBRTC = 'WebRTC'), (e.EXYNOS = 'exynos'), (e.UNCATEGORIZED = 'uncategorized'), (e.UNKNOWN = 'unknown'), e);
     })({});
 let p = Object.freeze({
         'nvidia: cuda': 'nvidia_cuda',
@@ -63,7 +63,7 @@ let p = Object.freeze({
         'c2.exynos': 'exynos'
     });
 var m = (function (e) {
-    return (e[(e.None = 0)] = 'None'), (e[(e.ClientSideDisableVideo = 1)] = 'ClientSideDisableVideo'), (e[(e.SenderStopped = 2)] = 'SenderStopped'), e;
+    return ((e[(e.None = 0)] = 'None'), (e[(e.ClientSideDisableVideo = 1)] = 'ClientSideDisableVideo'), (e[(e.SenderStopped = 2)] = 'SenderStopped'), e);
 })({});
 function g(e) {
     if (null == e) return 'unknown';
@@ -88,7 +88,7 @@ class y {
     static parseInboundStats(e, t) {
         var n, r, i, a, o, s, l, c, u, d;
         let f = new y();
-        return null == e || ((f.bytes = e.bytesReceived), (f.framesCodec = e.framesDecoded), (f.framesCodecError = null != (n = e.framesDecodeErrors) ? n : null), (f.framesNetwork = e.framesReceived), (f.packets = e.packetsReceived), (f.packetsLost = e.packetsLost), (f.framesDropped = e.framesDropped), (f.resolution = null != e.resolution ? e.resolution.height : 0), (f.minorResolution = null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0), (f.majorResolution = null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0), (f.timestamp = t), (f.nackCount = e.nackCount), (f.pliCount = e.pliCount), (f.decoder = E(e.decoderImplementationName)), (f.codecType = b(e.codec.name)), (f.qpSum = 0), (f.freezeCount = e.freezeCount), (f.pauseCount = e.pauseCount), (f.totalFreezesDuration = e.totalFreezesDuration), (f.totalPausesDuration = e.totalPausesDuration), (f.totalFramesDuration = e.totalFramesDuration), (f.keyframes = null != (r = e.keyFramesDecoded) ? r : null), (f.passthroughCount = null != (i = e.passthroughCount) ? i : 0), (f.cryptorSuccessCount = null != (a = e.decryptSuccessCount) ? a : 0), (f.cryptorFailureCount = null != (o = e.decryptFailureCount) ? o : 0), (f.cryptorDuration = null != (s = e.decryptDuration) ? s : 0), (f.cryptorAttempts = null != (l = e.decryptAttempts) ? l : 0), (f.cryptorMissingKeyCount = null != (c = e.decryptMissingKeyCount) ? c : 0), (f.cryptorInvalidNonceCount = null != (u = e.decryptInvalidNonceCount) ? u : 0), (f.localWant = null != (d = e.sinkWantLocalAsInt) ? d : 0)), f;
+        return (null == e || ((f.bytes = e.bytesReceived), (f.framesCodec = e.framesDecoded), (f.framesCodecError = null != (n = e.framesDecodeErrors) ? n : null), (f.framesNetwork = e.framesReceived), (f.packets = e.packetsReceived), (f.packetsLost = e.packetsLost), (f.framesDropped = e.framesDropped), (f.resolution = null != e.resolution ? e.resolution.height : 0), (f.minorResolution = null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0), (f.majorResolution = null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0), (f.timestamp = t), (f.nackCount = e.nackCount), (f.pliCount = e.pliCount), (f.decoder = E(e.decoderImplementationName)), (f.codecType = b(e.codec.name)), (f.qpSum = 0), (f.freezeCount = e.freezeCount), (f.pauseCount = e.pauseCount), (f.totalFreezesDuration = e.totalFreezesDuration), (f.totalPausesDuration = e.totalPausesDuration), (f.totalFramesDuration = e.totalFramesDuration), (f.keyframes = null != (r = e.keyFramesDecoded) ? r : null), (f.passthroughCount = null != (i = e.passthroughCount) ? i : 0), (f.cryptorSuccessCount = null != (a = e.decryptSuccessCount) ? a : 0), (f.cryptorFailureCount = null != (o = e.decryptFailureCount) ? o : 0), (f.cryptorDuration = null != (s = e.decryptDuration) ? s : 0), (f.cryptorAttempts = null != (l = e.decryptAttempts) ? l : 0), (f.cryptorMissingKeyCount = null != (c = e.decryptMissingKeyCount) ? c : 0), (f.cryptorInvalidNonceCount = null != (u = e.decryptInvalidNonceCount) ? u : 0), (f.localWant = null != (d = e.sinkWantLocalAsInt) ? d : 0)), f);
     }
     static parseOutboundStats(e, t) {
         var n, r, i, a, o, s, l, c, u, d, f, _, p, h, m, E, O, v, I, T, S, A, N, C, R;
@@ -143,7 +143,7 @@ class y {
               };
     }
     constructor() {
-        o(this, 'bytes', 0), o(this, 'framesCodec', 0), o(this, 'framesCodecError', null), o(this, 'framesNetwork', 0), o(this, 'resolution', 0), o(this, 'minorResolution', 0), o(this, 'majorResolution', 0), o(this, 'timestamp', 0), o(this, 'packets', 0), o(this, 'packetsLost', 0), o(this, 'framesDropped', 0), o(this, 'nackCount', 0), o(this, 'pliCount', 0), o(this, 'encoder', null), o(this, 'decoder', null), o(this, 'codecType', null), o(this, 'qpSum', 0), o(this, 'freezeCount', 0), o(this, 'pauseCount', 0), o(this, 'totalFreezesDuration', 0), o(this, 'totalPausesDuration', 0), o(this, 'totalFramesDuration', 0), o(this, 'vmafScore', null), o(this, 'psnrDb', null), o(this, 'outboundSinkWant', null), o(this, 'keyframes', null), o(this, 'framesDroppedRateLimiter', null), o(this, 'framesDroppedEncoderQueue', null), o(this, 'framesDroppedCongestionWindow', null), o(this, 'framesDroppedEncoder', null), o(this, 'passthroughCount', 0), o(this, 'cryptorSuccessCount', 0), o(this, 'cryptorFailureCount', 0), o(this, 'cryptorDuration', 0), o(this, 'cryptorAttempts', 0), o(this, 'cryptorMaxAttempts', 0), o(this, 'cryptorMissingKeyCount', 0), o(this, 'cryptorInvalidNonceCount', 0), o(this, 'qualityDecodeErrors', 0), o(this, 'qualityDecoderReboots', 0), o(this, 'qualityScoreErrors', 0), o(this, 'qualityFrameDrops', 0), o(this, 'qualitySizeMismatches', 0), o(this, 'localWant', 0);
+        (o(this, 'bytes', 0), o(this, 'framesCodec', 0), o(this, 'framesCodecError', null), o(this, 'framesNetwork', 0), o(this, 'resolution', 0), o(this, 'minorResolution', 0), o(this, 'majorResolution', 0), o(this, 'timestamp', 0), o(this, 'packets', 0), o(this, 'packetsLost', 0), o(this, 'framesDropped', 0), o(this, 'nackCount', 0), o(this, 'pliCount', 0), o(this, 'encoder', null), o(this, 'decoder', null), o(this, 'codecType', null), o(this, 'qpSum', 0), o(this, 'freezeCount', 0), o(this, 'pauseCount', 0), o(this, 'totalFreezesDuration', 0), o(this, 'totalPausesDuration', 0), o(this, 'totalFramesDuration', 0), o(this, 'vmafScore', null), o(this, 'psnrDb', null), o(this, 'outboundSinkWant', null), o(this, 'keyframes', null), o(this, 'framesDroppedRateLimiter', null), o(this, 'framesDroppedEncoderQueue', null), o(this, 'framesDroppedCongestionWindow', null), o(this, 'framesDroppedEncoder', null), o(this, 'passthroughCount', 0), o(this, 'cryptorSuccessCount', 0), o(this, 'cryptorFailureCount', 0), o(this, 'cryptorDuration', 0), o(this, 'cryptorAttempts', 0), o(this, 'cryptorMaxAttempts', 0), o(this, 'cryptorMissingKeyCount', 0), o(this, 'cryptorInvalidNonceCount', 0), o(this, 'qualityDecodeErrors', 0), o(this, 'qualityDecoderReboots', 0), o(this, 'qualityScoreErrors', 0), o(this, 'qualityFrameDrops', 0), o(this, 'qualitySizeMismatches', 0), o(this, 'localWant', 0));
     }
 }
 class O {
@@ -165,10 +165,10 @@ class O {
     }
     setVideoStopped(e, t) {
         if (e) {
-            (this.videoStoppedReason |= t), this.videoStoppedWatch.start();
+            ((this.videoStoppedReason |= t), this.videoStoppedWatch.start());
             return;
         }
-        (this.videoStoppedReason &= ~t), 0 === this.videoStoppedReason && (this.statsWindow.splice(0), this.videoStoppedWatch.stop());
+        ((this.videoStoppedReason &= ~t), 0 === this.videoStoppedReason && (this.statsWindow.splice(0), this.videoStoppedWatch.stop()));
     }
     appendAndIncrementStats(e) {
         if (this.isVideoStopped || (this.statsWindow.push(e), this.statsWindow.length < 2)) return;
@@ -180,11 +180,11 @@ class O {
             g = (a - m) / 1000;
         if (((this.intervalTotal += g), (this.resolutionTotal += o * g), (this.minorResolutionTotal += u * g), (this.majorResolutionTotal += d * g), (this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts)), null != f && null != p && 'encoderBuckets' in this)) {
             let n = this;
-            (n.encoderBuckets[f] += g), (n.codecBuckets[p] += g), null != t.codecType && 'UNKNOWN' !== t.codecType && (n.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && ((n.vmafScoreNum += 1), (n.vmafScoreSum += e.vmafScore), n.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && e.psnrDb >= 0 && ((n.psnrDbNum += 1), (n.psnrDbSum += e.psnrDb), n.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && ((n.outboundSinkWantNum += 1), (n.outboundSinkWantSum += e.outboundSinkWant));
+            ((n.encoderBuckets[f] += g), (n.codecBuckets[p] += g), null != t.codecType && 'UNKNOWN' !== t.codecType && (n.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && ((n.vmafScoreNum += 1), (n.vmafScoreSum += e.vmafScore), n.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && e.psnrDb >= 0 && ((n.psnrDbNum += 1), (n.psnrDbSum += e.psnrDb), n.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && ((n.outboundSinkWantNum += 1), (n.outboundSinkWantSum += e.outboundSinkWant)));
         }
         if (null != _ && null != p && 'decoderBuckets' in this) {
             let e = this;
-            (e.decoderBuckets[_] += g), (e.codecBuckets[p] += g), null != t.codecType && 'UNKNOWN' !== t.codecType && (e.decoderCodec = t.codecType);
+            ((e.decoderBuckets[_] += g), (e.codecBuckets[p] += g), null != t.codecType && 'UNKNOWN' !== t.codecType && (e.decoderCodec = t.codecType));
         }
         if (this.statsWindow.length < 6) return;
         let { bytes: E, framesCodec: b, timestamp: y } = this.statsWindow[this.statsWindow.length - 3];
@@ -194,7 +194,7 @@ class O {
         let O = (a - y) / 1000,
             v = ((r - E) * 8) / O,
             I = (i - b) / O;
-        s.forEach((e) => {
+        (s.forEach((e) => {
             v <= e && (this.bitrateBuckets[e] += g);
         }),
             l.forEach((e) => {
@@ -204,7 +204,7 @@ class O {
             this.bitrateHistogram.addSample(v),
             this.fpsHistogram.addSample(I),
             this.localWantHistogram.addSample(h),
-            this.statsWindow.shift();
+            this.statsWindow.shift());
     }
     addSystemResources() {
         this.systemResources.takeSample();
@@ -218,7 +218,7 @@ class O {
         return e;
     }
     constructor(e) {
-        o(this, 'decoderBuckets', Object.fromEntries(Object.values(_).map((e) => [e, 0]))),
+        (o(this, 'decoderBuckets', Object.fromEntries(Object.values(_).map((e) => [e, 0]))),
             o(this, 'codecBuckets', {
                 H264: 0,
                 H265: 0,
@@ -288,17 +288,17 @@ class O {
             }),
             c.forEach((e) => {
                 this.resolutionBuckets[e] = 0;
-            });
+            }));
     }
 }
 class v extends O {
     appendTargetRates(e, t, n, r) {
         if (this.statsWindow.length < 2) return;
-        (e = null != e ? e : 0), (t = null != t ? t : 0), (n = null != n ? n : 0), (r = null != r ? r : 0);
+        ((e = null != e ? e : 0), (t = null != t ? t : 0), (n = null != n ? n : 0), (r = null != r ? r : 0));
         let i = (this.statsWindow[this.statsWindow.length - 1].timestamp - this.statsWindow[this.statsWindow.length - 2].timestamp) / 1000;
-        (this.targetFrames = this.targetFrames + e * i), (this.targetBytesNetwork = this.targetBytesNetwork + (t / 8) * i), (this.targetBytesMax = this.targetBytesMax + (n / 8) * i), (this.outboundBytesAvailable = this.outboundBytesAvailable + (r / 8) * i), this.targetBitrateHistogram.addSample(t), this.outboundBandwidthSurplus.addSample(r - t);
+        ((this.targetFrames = this.targetFrames + e * i), (this.targetBytesNetwork = this.targetBytesNetwork + (t / 8) * i), (this.targetBytesMax = this.targetBytesMax + (n / 8) * i), (this.outboundBytesAvailable = this.outboundBytesAvailable + (r / 8) * i), this.targetBitrateHistogram.addSample(t), this.outboundBandwidthSurplus.addSample(r - t));
     }
     constructor(...e) {
-        super(...e), o(this, 'encoderBuckets', Object.fromEntries(Object.values(f).map((e) => [e, 0]))), o(this, 'encoderCodec', 'UNKNOWN'), o(this, 'targetFrames', 0), o(this, 'targetBytesMax', 0), o(this, 'targetBytesNetwork', 0), o(this, 'targetBitrateHistogram', new i.b()), o(this, 'outboundBytesAvailable', 0), o(this, 'outboundBandwidthSurplus', new i.b()), o(this, 'averageEncodeTime', 0), o(this, 'vmafScoreSum', 0), o(this, 'vmafScoreNum', 0), o(this, 'vmafHistogram', new i.b()), o(this, 'psnrDbSum', 0), o(this, 'psnrDbNum', 0), o(this, 'psnrHistogram', new i.b()), o(this, 'qualityDecodeErrors', 0), o(this, 'qualityDecoderReboots', 0), o(this, 'qualityScoreErrors', 0), o(this, 'qualityFrameDrops', 0), o(this, 'qualitySizeMismatches', 0), o(this, 'outboundSinkWantSum', 0), o(this, 'outboundSinkWantNum', 0), o(this, 'framesDroppedRateLimiter', null), o(this, 'framesDroppedEncoderQueue', null), o(this, 'framesDroppedCongestionWindow', null), o(this, 'framesDroppedEncoder', null);
+        (super(...e), o(this, 'encoderBuckets', Object.fromEntries(Object.values(f).map((e) => [e, 0]))), o(this, 'encoderCodec', 'UNKNOWN'), o(this, 'targetFrames', 0), o(this, 'targetBytesMax', 0), o(this, 'targetBytesNetwork', 0), o(this, 'targetBitrateHistogram', new i.b()), o(this, 'outboundBytesAvailable', 0), o(this, 'outboundBandwidthSurplus', new i.b()), o(this, 'averageEncodeTime', 0), o(this, 'vmafScoreSum', 0), o(this, 'vmafScoreNum', 0), o(this, 'vmafHistogram', new i.b()), o(this, 'psnrDbSum', 0), o(this, 'psnrDbNum', 0), o(this, 'psnrHistogram', new i.b()), o(this, 'qualityDecodeErrors', 0), o(this, 'qualityDecoderReboots', 0), o(this, 'qualityScoreErrors', 0), o(this, 'qualityFrameDrops', 0), o(this, 'qualitySizeMismatches', 0), o(this, 'outboundSinkWantSum', 0), o(this, 'outboundSinkWantNum', 0), o(this, 'framesDroppedRateLimiter', null), o(this, 'framesDroppedEncoderQueue', null), o(this, 'framesDroppedCongestionWindow', null), o(this, 'framesDroppedEncoder', null));
     }
 }

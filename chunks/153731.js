@@ -1,4 +1,4 @@
-r.d(t, { Z: () => B }), r(539854), r(388685), r(361932), r(187205), r(290780);
+(r.d(t, { Z: () => B }), r(539854), r(388685), r(361932), r(187205), r(290780));
 var n = r(255367),
     a = r(73800),
     i = r(392711),
@@ -108,7 +108,7 @@ function k(e, t, r, n, a) {
         null != o && !l().isEmpty(o))
     ) {
         let t = [];
-        Object.keys(o).forEach((i) => {
+        (Object.keys(o).forEach((i) => {
             let l = v.default.getUser(i),
                 s = y.ZP.getNick(a, i),
                 d = (0, g.J$)(e, i, r);
@@ -134,7 +134,7 @@ function k(e, t, r, n, a) {
                     section: u.ID.HEADER,
                     label: x.intl.string(x.t.SJmZam)
                 }),
-                i.push(...t));
+                i.push(...t)));
     }
     return i;
 }

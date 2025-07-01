@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     cp: () => g,
     eI: () => _
 }),
-    n(415506);
+    n(415506));
 var r = n(544891),
     i = n(570140),
     a = n(355467),
@@ -31,18 +31,18 @@ async function _() {
                 analytics: { enabled: !1 },
                 paymentMethodsResponse: t.body
             });
-        i.Z.dispatch({
+        (i.Z.dispatch({
             type: 'ADYEN_CREATE_CLIENT_SUCCESS',
             client: a
         }),
-            p(a);
+            p(a));
     } catch (e) {
-        (0, l.q2)(e), i.Z.dispatch({ type: 'ADYEN_CREATE_CLIENT_FAIL' });
+        ((0, l.q2)(e), i.Z.dispatch({ type: 'ADYEN_CREATE_CLIENT_FAIL' }));
     }
 }
 function p(e) {
     if (null != c.Z.cashAppPayComponent) {
-        m(), h();
+        (m(), h());
         return;
     }
     let t = e
@@ -69,7 +69,7 @@ function p(e) {
                             n = !1;
                             break;
                         case 'Something went wrong during customerRequest creation':
-                            (n = !1), (t = d.intl.string(d.t.TJ8dDA));
+                            ((n = !1), (t = d.intl.string(d.t.TJ8dDA)));
                     }
                     (0, a.SQ)(e.message, n, t);
                 }

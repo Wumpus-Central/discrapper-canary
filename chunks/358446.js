@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     K: () => f,
     Z: () => g
 }),
-    n(388685);
+    n(388685));
 var i = n(255367);
 n(73800);
 var r = n(704215),
@@ -50,10 +50,10 @@ function g(e) {
             ]
         }),
         onDismissClick: (e, n) => {
-            r('dismiss'), t(u.L.DISMISS), l.Z.updateNotificationStatus(n);
+            (r('dismiss'), t(u.L.DISMISS), l.Z.updateNotificationStatus(n));
         },
         onNotificationShow: () => {
-            t(u.L.AUTO_DISMISS), n();
+            (t(u.L.AUTO_DISMISS), n());
         }
     };
 }

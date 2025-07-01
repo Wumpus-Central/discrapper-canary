@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(358797);
+(n.d(t, { Z: () => h }), n(388685), n(358797));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -48,7 +48,7 @@ let f = i.forwardRef(function (e, t) {
                 resizableNode: c,
                 onResize: m,
                 onResizeEnd: (e) => {
-                    m(e), null == l || l();
+                    (m(e), null == l || l());
                 }
             })
         ]
@@ -84,18 +84,18 @@ function h(e) {
         [L, M] = i.useState(!1),
         G = i.useCallback(() => {
             var e;
-            M(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 });
+            (M(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 }));
         }, [P]);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         A !== Z && l(Z);
     }, [l, A, Z]),
         i.useEffect(() => {
             L || c(R);
-        }, [c, R, L]);
+        }, [c, R, L]));
     let U = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                e && G(), M(!1);
+                (e && G(), M(!1));
             },
             [G]
         ),
@@ -104,19 +104,19 @@ function h(e) {
                 if (t) {
                     var n;
                     let t = D.includes(Z[e]);
-                    null == (n = b.current) || n.focus(),
+                    (null == (n = b.current) || n.focus(),
                         t
                             ? T(e)
                             : (S(e),
                               setImmediate(() => {
                                   var e;
-                                  null == (e = b.current) || e.blur(),
+                                  (null == (e = b.current) || e.blur(),
                                       setTimeout(() => {
                                           var e;
                                           return null == (e = j.current) ? void 0 : e.focus();
-                                      }, 16);
-                              }));
-                } else T(e, !0), M(!0);
+                                      }, 16));
+                              })));
+                } else (T(e, !0), M(!0));
             },
             [S, T, D, Z]
         );

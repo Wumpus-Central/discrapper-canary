@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685), n(539854);
+(n.d(t, { Z: () => a }), n(388685), n(539854));
 var r = n(570140);
 function i(e, t, n) {
     return (
@@ -19,17 +19,17 @@ class a {
     }
     flush() {
         let { action: e } = this;
-        (this.action = null),
+        ((this.action = null),
             null != e &&
                 r.Z.dispatch(e).catch((t) =>
                     this.socket.resetSocketOnError({
                         error: t,
                         action: e.type
                     })
-                );
+                ));
     }
     constructor(e, t, n) {
-        i(this, 'socket', void 0),
+        (i(this, 'socket', void 0),
             i(this, 'action', void 0),
             i(this, 'add', void 0),
             i(this, 'shouldFlush', void 0),
@@ -39,7 +39,7 @@ class a {
             (this.add = (e) => {
                 this.action = t(this.action, e);
             }),
-            a.batchers.push(this);
+            a.batchers.push(this));
     }
 }
 i(a, 'batchers', []);

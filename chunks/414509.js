@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     B: () => m,
     Z: () => b
 }),
-    n(388685);
+    n(388685));
 var r = n(147913),
     i = n(592125),
     a = n(19780),
@@ -60,11 +60,11 @@ class E extends r.Z {
         e === n && null != i.Z.getChannel(e) && (m(e) || (0, u.H)(n, t));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'actions', {
                 CHANNEL_SELECT: p,
                 APP_STATE_UPDATE: h
-            });
+            }));
     }
 }
 let b = new E();

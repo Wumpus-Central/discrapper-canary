@@ -12,7 +12,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -20,7 +20,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -28,8 +28,8 @@ function p(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -66,7 +66,7 @@ function f(e) {
         c.kx(t.channelId, t.guildId);
     };
     function v() {
-        (0, o.Zy)(), null == m || m();
+        ((0, o.Zy)(), null == m || m());
     }
     return (0, r.jsxs)(l.v2r, {
         navId: 'guild-entry-context',
@@ -81,11 +81,11 @@ function f(e) {
                               id: 'update-entry',
                               label: d.intl.string(d.t.XnuOvL),
                               action: function () {
-                                  (0, l.ZDy)(async () => {
+                                  ((0, l.ZDy)(async () => {
                                       let { default: e } = await n.e('34191').then(n.bind(n, 303647));
                                       return (n) => (0, r.jsx)(e, h(p({}, n), { entry: t }));
                                   }),
-                                      v();
+                                      v());
                               }
                           })
                         : null,
@@ -94,7 +94,7 @@ function f(e) {
                               id: 'remove-from-hub',
                               label: d.intl.string(d.t.KUxYWF),
                               action: function () {
-                                  (0, l.h7j)((e) =>
+                                  ((0, l.h7j)((e) =>
                                       (0, r.jsx)(
                                           l.ConfirmModal,
                                           h(
@@ -116,7 +116,7 @@ function f(e) {
                                           )
                                       )
                                   ),
-                                      v();
+                                      v());
                               },
                               color: 'danger'
                           })

@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: 'ru',
     pluralRuleFunction: function (e, t) {
         var n = String(e).split('.'),
@@ -28,4 +28,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({
         locale: 'ru-UA',
         parentLocale: 'ru'
-    });
+    }));

@@ -2,7 +2,7 @@ var r,
     i = n(264344),
     a = n.n(i),
     o = n(345546);
-(window.AudioContext = null != (r = window.AudioContext) ? r : window.webkitAudioContext),
+((window.AudioContext = null != (r = window.AudioContext) ? r : window.webkitAudioContext),
     null != window.RTCPeerConnection &&
         'Chrome' === a().name &&
         52 > (0, o.n)() &&
@@ -27,4 +27,4 @@ var r,
                 }
                 return t.apply(this, n);
             };
-        });
+        }));

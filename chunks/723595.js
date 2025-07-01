@@ -25,7 +25,7 @@ r(
                 n = s(e),
                 r = t < 2 || void 0 === arguments[1] ? void 0 : s(arguments[1]);
             try {
-                return new l(n, r), !0;
+                return (new l(n, r), !0);
             } catch (e) {
                 return !1;
             }

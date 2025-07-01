@@ -26,7 +26,7 @@ function f(e) {
         y = (0, r.useCallback)((e) => (0, s.Jw)(e, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]),
         O = (0, r.useCallback)(
             (e) => {
-                (0, s.PO)(f, e), null != e && m(e);
+                ((0, s.PO)(f, e), null != e && m(e));
             },
             [m, f]
         );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685);
+(n.d(t, { Z: () => X }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -30,7 +30,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -71,11 +71,11 @@ let O = new Set(),
 function T(e) {
     v = a().omitBy(v, (t) => {
         let n = t.guildId === e;
-        return n && delete I[t.parentId], n;
+        return (n && delete I[t.parentId], n);
     });
 }
 function S(e) {
-    (v = a().omitBy(v, (t) => t.parentId === e)), delete I[e];
+    ((v = a().omitBy(v, (t) => t.parentId === e)), delete I[e]);
 }
 function A(e, t) {
     c.AW.has(e.type) && N(R(e), t);
@@ -83,7 +83,7 @@ function A(e, t) {
 function N(e, t) {
     var n;
     let r = (null != (n = I[e.parentId]) ? n : 0) + 1;
-    (I[e.parentId] = r), t(e);
+    ((I[e.parentId] = r), t(e));
 }
 function C(e) {
     var t;
@@ -113,12 +113,12 @@ function P(e) {
 function w(e) {
     if (null != e && !(e.id in v)) {
         let t = f.Z.getChannel(e.id);
-        if (null != t) return P(t), !0;
+        if (null != t) return (P(t), !0);
     }
     return !1;
 }
 function D(e) {
-    (I = {}), O.clear(), e.guilds.forEach(C);
+    ((I = {}), O.clear(), e.guilds.forEach(C));
 }
 function L(e) {
     let { threadMessages: t } = e;
@@ -141,16 +141,16 @@ function M(e) {
 }
 function j(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach(P),
+    (t.forEach(P),
         null == n ||
             n.forEach((e) => {
                 let t = f.Z.getChannel(e.channel_id);
                 null != t &&
                     e.type !== m.uaV.THREAD_STARTER_MESSAGE &&
                     A(t, (t) => {
-                        (t.mostRecentRawMessage = e), (t.mostRecentMessage = null);
+                        ((t.mostRecentRawMessage = e), (t.mostRecentMessage = null));
                     });
-            });
+            }));
 }
 function U(e) {
     let { threads: t } = e;
@@ -175,7 +175,7 @@ function F(e) {
     let a = f.Z.getChannel(t.channel_id);
     if (null == a || !c.Ec.has(a.type) || !Z(a, t)) return !1;
     A(a, (e) => {
-        (e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
+        ((e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null));
     });
 }
 function Z(e, t) {
@@ -188,7 +188,7 @@ function H(e) {
         i = null != (t = null == r ? void 0 : r.mostRecentRawMessage) ? t : null == r ? void 0 : r.mostRecentMessage;
     if (null == r || null == i || i.id !== n.id) return !1;
     N(r, (e) => {
-        null != e.mostRecentMessage && (e.mostRecentMessage = (0, l.wi)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, l.gx)(e.mostRecentRawMessage, n));
+        (null != e.mostRecentMessage && (e.mostRecentMessage = (0, l.wi)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, l.gx)(e.mostRecentRawMessage, n)));
     });
 }
 function Y(e) {
@@ -200,7 +200,7 @@ function Y(e) {
     N(r, (e) => {
         var n;
         let r = null != (n = e.mostRecentRawMessage) ? n : e.mostRecentMessage;
-        null != r && r.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count = i && a ? Math.max(e.count - 1, 0) : e.count), O.add(t);
+        (null != r && r.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count = i && a ? Math.max(e.count - 1, 0) : e.count), O.add(t));
     });
 }
 function W(e) {
@@ -216,7 +216,7 @@ function W(e) {
         N(r, (e) => {
             var n;
             let r = null != (n = e.mostRecentRawMessage) ? n : e.mostRecentMessage;
-            null != r && t.includes(r.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count -= i), t.forEach((e) => O.add(e));
+            (null != r && t.includes(r.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count -= i), t.forEach((e) => O.add(e)));
         });
 }
 function K(e) {
@@ -226,11 +226,11 @@ function K(e) {
     let n = f.Z.getChannel(e.channelId);
     if (null == n || !c.Ec.has(n.type)) return t;
     A(n, (t) => {
-        if (0 === e.messages.length) (t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0);
+        if (0 === e.messages.length) ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0));
         else {
             var n;
             let r = null != (n = e.messages[0]) ? n : null;
-            (t.count = e.messages.length >= h.M3 ? h.M3 : t.count), (null == r ? void 0 : r.type) !== m.uaV.THREAD_STARTER_MESSAGE && ((t.mostRecentRawMessage = r), (t.mostRecentMessage = null));
+            ((t.count = e.messages.length >= h.M3 ? h.M3 : t.count), (null == r ? void 0 : r.type) !== m.uaV.THREAD_STARTER_MESSAGE && ((t.mostRecentRawMessage = r), (t.mostRecentMessage = null)));
         }
     });
 }

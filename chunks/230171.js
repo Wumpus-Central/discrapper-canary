@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     O: () => R,
     U: () => T.Un
 }),
@@ -6,7 +6,7 @@ n.d(t, {
     n(784620),
     n(973216),
     n(953529),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(373793),
@@ -19,19 +19,19 @@ var r = n(255367),
     p = n(906732),
     m = n(915346),
     f = n(783097),
-    h = n(812236),
-    g = n(561308),
-    _ = n(567409),
+    g = n(812236),
+    _ = n(561308),
+    h = n(567409),
     b = n(706454),
-    x = n(314897),
+    E = n(314897),
     y = n(699516),
-    E = n(914010),
-    v = n(594174),
-    C = n(768581),
+    C = n(914010),
+    x = n(594174),
+    v = n(768581),
     O = n(433534),
     j = n(506895),
-    S = n(758199),
-    I = n(943762),
+    I = n(758199),
+    S = n(943762),
     T = n(914498),
     N = n(172109),
     P = n(880251),
@@ -39,27 +39,27 @@ var r = n(255367),
     w = n(388032),
     Z = n(758364);
 function R(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: g } = e,
-        { name: _, bot: b } = (t = (0, N.O)(t)),
+    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: _ } = e,
+        { name: h, bot: b } = (t = (0, N.O)(t)),
         y = null == b ? void 0 : b.id,
-        E = (0, f.ye)(t),
-        v = C.ZP.getApplicationIconURL({
+        C = (0, f.ye)(t),
+        x = v.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: b
         }),
-        { staticBannerSrc: O, videoBannerSrc: I, bannerAspectRatio: Z } = (0, P.E)(t),
-        R = (0, o.e7)([x.default], () => (null != s ? s : x.default.getId()), [s]),
+        { staticBannerSrc: O, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
+        R = (0, o.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
         { analyticsLocations: D } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: M, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
         G = (0, u.Z)(),
-        H = (0, h.ms)({
+        H = (0, g.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id
         }),
-        V = null != y && E && H,
-        z = B && E,
+        V = null != y && C && H,
+        z = B && C,
         W = (0, A.z)(t),
         K = i.useMemo(() => {
             let e = [];
@@ -100,13 +100,13 @@ function R(e) {
                 e
             );
         }, [z, V, W, U, F, M, t.id, G, a, R, D, y]),
-        Y = E ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(k, { app: t });
-    return (0, r.jsx)(S.W, {
-        title: _,
+        Y = C ? (0, r.jsx)(k, { app: t }) : (0, r.jsx)(L, { app: t });
+    return (0, r.jsx)(I.W, {
+        title: h,
         staticBannerSrc: O,
-        videoBannerSrc: I,
+        videoBannerSrc: S,
         bannerAspectRatio: Z,
-        iconSrc: v,
+        iconSrc: x,
         embedUrl: n,
         info: Y,
         actions: K,
@@ -115,11 +115,11 @@ function R(e) {
             linkType: l,
             referrerId: R,
             activityCustomId: a,
-            onView: g
+            onView: _
         }
     });
 }
-function k(e) {
+function L(e) {
     var t, n, a;
     let { app: c } = e,
         u =
@@ -168,25 +168,25 @@ function k(e) {
         ]
     });
 }
-function L(e) {
+function k(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l } = t,
         c = (0, o.e7)(
-            [E.Z],
+            [C.Z],
             () => {
                 var e;
-                return null != (e = E.Z.getGuildId()) ? e : void 0;
+                return null != (e = C.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
-        u = (0, _.N)(t.id),
+        u = (0, h.N)(t.id),
         d = (0, o.Wu)(
-            [v.default, y.Z],
+            [x.default, y.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
-                    let r = v.default.getUser(n.author_id),
+                    let r = x.default.getUser(n.author_id),
                         i = y.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }
@@ -196,12 +196,12 @@ function L(e) {
         ),
         p = i.useMemo(() => {
             if (d.length > 0)
-                return (0, r.jsx)(I.K, {
+                return (0, r.jsx)(S.K, {
                     activityUsers: d,
                     guildId: c,
                     activityText: w.intl.string(w.t['IJa+4+'])
                 });
-            if (u.some((e) => (0, g.ig)(e) === a.o.GLOBAL))
+            if (u.some((e) => (0, _.ig)(e) === a.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.YqE, {

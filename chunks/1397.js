@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+(n.d(t, { Z: () => V }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(657352),
     O = n(33154),
     E = n(144114),
-    I = n(703656),
-    S = n(210887),
+    S = n(703656),
+    I = n(210887),
     P = n(606956),
     Z = n(271383),
     N = n(430824),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(700785),
     k = n(862679),
     M = n(981631),
-    D = n(815660),
-    L = n(388032),
+    L = n(815660),
+    D = n(388032),
     U = n(628829);
 function B(e, t, n) {
     return (
@@ -53,7 +53,7 @@ function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -61,11 +61,11 @@ function F(e) {
             )),
             r.forEach(function (t) {
                 B(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
-function G(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function G(e, t) {
         e
     );
 }
-class H extends i.PureComponent {
+class G extends i.PureComponent {
     componentDidMount() {
         let { isFollowable: e, channelFollowingUsersSeen: t, channel: n } = this.props;
         e && null == t && u.Z.fetchChannelFollowerStats(n.id);
@@ -100,24 +100,24 @@ class H extends i.PureComponent {
                 useReducedMotion: _
             };
         if (e && !h) {
-            if (((j.message = L.intl.string(L.t.Hl0Mqq)), null != f && f >= 1000)) {
+            if (((j.message = D.intl.string(D.t.Hl0Mqq)), null != f && f >= 1000)) {
                 let e = 1000 * Math.floor(f / 1000);
-                j.subtitle = L.intl.formatToPlainString(L.t.C5bgrK, { count: e.toLocaleString() });
+                j.subtitle = D.intl.formatToPlainString(D.t.C5bgrK, { count: e.toLocaleString() });
             }
-            (j.buttonText = L.intl.string(L.t['3aOv+v'])), (j.onButtonClick = this.handleFollowAnnouncement), t && ((j.onSecondaryButtonClick = this.handleJoinServer), (j.secondaryButtonText = L.intl.string(L.t['RLch7+'])));
-        } else if (n) (j.message = L.intl.string(L.t['Eg3/c3'])), (j.buttonText = L.intl.string(L.t.fiNVio)), (j.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount);
+            ((j.buttonText = D.intl.string(D.t['3aOv+v'])), (j.onButtonClick = this.handleFollowAnnouncement), t && ((j.onSecondaryButtonClick = this.handleJoinServer), (j.secondaryButtonText = D.intl.string(D.t['RLch7+']))));
+        } else if (n) ((j.message = D.intl.string(D.t['Eg3/c3'])), (j.buttonText = D.intl.string(D.t.fiNVio)), (j.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount));
         else if (g)
             switch (null == C ? void 0 : C.applicationStatus) {
                 case b.wB.SUBMITTED:
-                    (j.message = L.intl.string(L.t['5iLvS0'])), (j.subtitle = L.intl.string(L.t.FdsK4u)), (j.buttonText = L.intl.string(L.t.mqtdmZ)), (j.onButtonClick = this.handleCancelApplication);
+                    ((j.message = D.intl.string(D.t['5iLvS0'])), (j.subtitle = D.intl.string(D.t.FdsK4u)), (j.buttonText = D.intl.string(D.t.mqtdmZ)), (j.onButtonClick = this.handleCancelApplication));
                     break;
                 case b.wB.REJECTED:
-                    (j.message = L.intl.string(L.t.lk30cX)), (j.buttonText = L.intl.string(L.t['8RrsHh'])), (j.onButtonClick = this.handleViewApplicationRejection);
+                    ((j.message = D.intl.string(D.t.lk30cX)), (j.buttonText = D.intl.string(D.t['8RrsHh'])), (j.onButtonClick = this.handleViewApplicationRejection));
                     break;
                 default:
-                    (j.message = L.intl.string(L.t.rEBKvr)), (j.buttonText = L.intl.string(L.t['r8/DT0'])), (j.buttonColor = s.Ttl.BRAND), (j.onButtonClick = this.handleShowMemberVerification);
+                    ((j.message = D.intl.string(D.t.rEBKvr)), (j.buttonText = D.intl.string(D.t['r8/DT0'])), (j.buttonColor = s.Ttl.BRAND), (j.onButtonClick = this.handleShowMemberVerification));
             }
-        else i && !y ? ((j.message = L.intl.string(L.t['2dThMD'])), (j.buttonText = L.intl.string(L.t['50gfOj'])), (j.onButtonClick = this.handleVerifyPhone)) : l ? ((j.message = L.intl.string(L.t.FkGPS0)), (j.buttonText = L.intl.string(L.t.lm1UKi)), (j.onButtonClick = this.handleResendVerification)) : o ? ((j.message = L.intl.formatToPlainString(L.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (j.countdown = a)) : c && ((j.message = L.intl.formatToPlainString(L.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (j.countdown = u));
+        else i && !y ? ((j.message = D.intl.string(D.t['2dThMD'])), (j.buttonText = D.intl.string(D.t['50gfOj'])), (j.onButtonClick = this.handleVerifyPhone)) : l ? ((j.message = D.intl.string(D.t.FkGPS0)), (j.buttonText = D.intl.string(D.t.lm1UKi)), (j.onButtonClick = this.handleResendVerification)) : o ? ((j.message = D.intl.formatToPlainString(D.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (j.countdown = a)) : c && ((j.message = D.intl.formatToPlainString(D.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (j.countdown = u));
         return (0, r.jsx)(s.yRy, {
             targetElementRef: this.textAreaContainerRef,
             position: 'top',
@@ -128,7 +128,7 @@ class H extends i.PureComponent {
             children: (e) =>
                 (0, r.jsx)(
                     k.Z,
-                    G(F({}, j), {
+                    H(F({}, j), {
                         children: (0, r.jsxs)('div', {
                             ref: this.textAreaContainerRef,
                             children: [
@@ -142,7 +142,7 @@ class H extends i.PureComponent {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   s.P3F,
-                                                  G(F({ innerRef: this.upsellTargetRef }, e), {
+                                                  H(F({ innerRef: this.upsellTargetRef }, e), {
                                                       className: U.clickableChannelTextArea,
                                                       onClick: this.handleTextAreaClick,
                                                       children: p
@@ -157,7 +157,7 @@ class H extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             B(this, 'state', {
                 submitting: !1,
                 shouldShowLurkerModeUpsellPopout: !1,
@@ -182,12 +182,12 @@ class H extends i.PureComponent {
                     (0, s.h7j)((t) =>
                         (0, r.jsx)(
                             s.ConfirmModal,
-                            G(
+                            H(
                                 F(
                                     {
-                                        header: L.intl.string(L.t.aIz1oa),
-                                        confirmText: L.intl.string(L.t['cY+Ooa']),
-                                        cancelText: L.intl.string(L.t['ETE/oK']),
+                                        header: D.intl.string(D.t.aIz1oa),
+                                        confirmText: D.intl.string(D.t['cY+Ooa']),
+                                        cancelText: D.intl.string(D.t['ETE/oK']),
                                         onConfirm: () => f.Z.removeGuildJoinRequest(e.id),
                                         confirmButtonColor: s.zxk.Colors.BRAND
                                     },
@@ -196,7 +196,7 @@ class H extends i.PureComponent {
                                 {
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-md/normal',
-                                        children: L.intl.string(L.t['13tjTU'])
+                                        children: D.intl.string(D.t['13tjTU'])
                                     })
                                 }
                             )
@@ -224,7 +224,7 @@ class H extends i.PureComponent {
                         let { default: e } = await Promise.all([n.e('76540'), n.e('84575')]).then(n.bind(n, 607018));
                         return (t) => (0, r.jsx)(e, F({ reason: E.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: D.M }
+                    { modalKey: L.M }
                 );
             }),
             B(this, 'handleResendVerification', () => {
@@ -235,13 +235,13 @@ class H extends i.PureComponent {
                     (0, s.h7j)((e) =>
                         (0, r.jsx)(
                             s.ConfirmModal,
-                            G(F({}, e), {
-                                header: L.intl.string(L.t.LykQYm),
-                                confirmText: L.intl.string(L.t.BddRzc),
+                            H(F({}, e), {
+                                header: D.intl.string(D.t.LykQYm),
+                                confirmText: D.intl.string(D.t.BddRzc),
                                 confirmButtonColor: s.zxk.Colors.BRAND,
                                 children: (0, r.jsx)(s.Text, {
                                     variant: 'text-md/normal',
-                                    children: L.intl.format(L.t.azKEPz, { email: t })
+                                    children: D.intl.format(D.t.azKEPz, { email: t })
                                 })
                             })
                         )
@@ -261,7 +261,7 @@ class H extends i.PureComponent {
                 }
             }),
             B(this, 'handleGoBack', () => {
-                this.setState({ submitting: !0 }), (0, I.s1)().goBack();
+                (this.setState({ submitting: !0 }), (0, S.s1)().goBack());
             }),
             B(this, 'handleFollowAnnouncement', () => {
                 let { channel: e } = this.props;
@@ -295,14 +295,14 @@ class H extends i.PureComponent {
                     renderModal: (t) =>
                         (0, r.jsx)(
                             C.Z,
-                            G(F({}, t), {
+                            H(F({}, t), {
                                 onAccept: i,
                                 guildName: e.name
                             })
                         ),
                     onCloseRequest: i
                 });
-            });
+            }));
     }
 }
 function V(e) {
@@ -324,13 +324,13 @@ function V(e) {
         j = (0, a.e7)([x.Z], () => x.Z.shouldShowPopout(o)),
         O = (0, a.e7)([A.Z], () => A.Z.can(M.Plq.SEND_MESSAGES, i)),
         E = (0, a.e7)([y.Z], () => y.Z.getRequest(o)),
-        I = G(F({}, c), {
+        S = H(F({}, c), {
             guild: s,
             isLurking: h,
             isFollowable: u,
             shouldShowLurkerModeSuccessPopout: j,
             showLurkerModeUpsellPopout: h && null != s && R.Uu(M.Plq.SEND_MESSAGES, i),
-            theme: S.Z.theme,
+            theme: I.Z.theme,
             canSendMessages: O,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: C,
@@ -341,8 +341,8 @@ function V(e) {
             isStaff: m
         });
     return (0, r.jsx)(
-        H,
-        G(F({}, I), {
+        G,
+        H(F({}, S), {
             channel: i,
             children: l
         })

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     PF: () => F,
     R7: () => M,
     Tg: () => U,
@@ -13,7 +13,7 @@ n.d(t, {
     yC: () => L
 }),
     n(704826),
-    n(35282);
+    n(35282));
 var r = n(392711),
     i = n.n(r),
     a = n(772848),
@@ -49,7 +49,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,7 +57,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -65,11 +65,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -91,7 +91,7 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -101,7 +101,7 @@ function A(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let N = 250,
@@ -130,7 +130,7 @@ function P(e, t) {
 }
 function w(e, t, n) {
     let r = Date.now();
-    R(t),
+    (R(t),
         o.tn
             .get({
                 url: E.ANM.GIFS_SEARCH,
@@ -147,7 +147,7 @@ function w(e, t, n) {
             .then(
                 (i) => {
                     let a = i.body;
-                    P(a, t, {
+                    (P(a, t, {
                         startTime: r,
                         limit: n
                     }),
@@ -155,14 +155,14 @@ function w(e, t, n) {
                             type: 'GIF_PICKER_QUERY_SUCCESS',
                             query: e,
                             items: a
-                        });
+                        }));
                 },
                 () =>
                     l.Z.dispatch({
                         type: 'GIF_PICKER_QUERY_FAILURE',
                         query: e
                     })
-            );
+            ));
 }
 let D = i().debounce(w, N);
 function L(e, t) {
@@ -214,7 +214,7 @@ function M(e) {
             results: a,
             totalResults: s
         });
-    c.ZP.trackWithMetadata(
+    (c.ZP.trackWithMetadata(
         E.rMx.SEARCH_RESULT_SELECTED,
         T(v({}, d), {
             index_num: n,
@@ -231,11 +231,11 @@ function M(e) {
                 },
                 oldFormErrors: !0,
                 rejectWithError: !0
-            });
+            }));
 }
 function j() {
     let e = (0, a.Z)().replace(C, '');
-    c.ZP.trackWithMetadata(E.rMx.SEARCH_OPENED, {
+    (c.ZP.trackWithMetadata(E.rMx.SEARCH_OPENED, {
         search_type: E.aib.GIF,
         load_id: e
     }),
@@ -244,7 +244,7 @@ function j() {
                 type: 'GIF_PICKER_INITIALIZE',
                 analyticsID: e
             });
-        });
+        }));
 }
 function U() {
     o.tn
@@ -270,7 +270,7 @@ function U() {
 }
 function G(e) {
     let t = Date.now();
-    R(E.wI2.TRENDING_GIFS),
+    (R(E.wI2.TRENDING_GIFS),
         o.tn
             .get({
                 url: E.ANM.GIFS_TRENDING_GIFS,
@@ -286,19 +286,19 @@ function G(e) {
             .then(
                 (n) => {
                     let { body: r } = n;
-                    P(r, E.wI2.TRENDING_GIFS, {
+                    (P(r, E.wI2.TRENDING_GIFS, {
                         startTime: t,
                         limit: e
                     }),
                         l.Z.dispatch({
                             type: 'GIF_PICKER_QUERY_SUCCESS',
                             items: r
-                        });
+                        }));
                 },
                 () => {
                     l.Z.dispatch({ type: 'GIF_PICKER_QUERY_FAILURE' });
                 }
-            );
+            ));
 }
 function B(e) {
     let t = m.Z.toURLSafe(e);
@@ -319,7 +319,7 @@ function V(e) {
                     !1
                 );
             let a = i().size(t.gifs);
-            a > 2 && (t.hideTooltip = !0), p.default.track(E.rMx.GIF_FAVORITED, { total_num_favorited: a });
+            (a > 2 && (t.hideTooltip = !0), p.default.track(E.rMx.GIF_FAVORITED, { total_num_favorited: a }));
         },
         b.fy.INFREQUENT_USER_ACTION
     );
@@ -328,7 +328,7 @@ function F(e) {
     f.DZ.updateAsync(
         'favoriteGifs',
         (t) => {
-            e in t.gifs ? delete t.gifs[e] : delete t.gifs[B(e)], p.default.track(E.rMx.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) });
+            (e in t.gifs ? delete t.gifs[e] : delete t.gifs[B(e)], p.default.track(E.rMx.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) }));
         },
         b.fy.INFREQUENT_USER_ACTION
     );

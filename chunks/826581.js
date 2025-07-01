@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685), n(539854);
+(n.d(t, { Z: () => X }), n(388685), n(539854));
 var r,
     i = n(913527),
     a = n.n(i),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -69,7 +69,7 @@ function O(e) {
     return y[e];
 }
 function v(e, t) {
-    (y[e] = t), b.set(e, a()());
+    ((y[e] = t), b.set(e, a()()));
 }
 function I(e, t, n) {
     if (t !== n && null != t) {
@@ -93,11 +93,11 @@ function A() {
 }
 function N(e) {
     let { status: t, requests: n, total: r, guildId: i } = e;
-    (S = !1),
+    ((S = !1),
         t === f.wB.SUBMITTED && v(i, r),
         n.forEach((e) => {
             j(e);
-        });
+        }));
 }
 function C() {
     S = !1;
@@ -106,7 +106,7 @@ let R = (e) => 'guild-join-request='.concat(e),
     P = (e, t) => 'guild-'.concat(e, '-').concat(t);
 function w(e) {
     let t = [];
-    return t.push(R(e.joinRequestId)), t.push(P(e.guildId, e.applicationStatus)), t;
+    return (t.push(R(e.joinRequestId)), t.push(P(e.guildId, e.applicationStatus)), t);
 }
 let D = new s.h(w, (e) => ''.concat(e.joinRequestId)),
     L = new s.h(w, (e) => ''.concat(e.joinRequestId)),
@@ -115,10 +115,10 @@ function k(e) {
     return D.get(e);
 }
 function M(e) {
-    delete K[e], D.delete(e), L.delete(e), x.delete(e);
+    (delete K[e], D.delete(e), L.delete(e), x.delete(e));
 }
 function j(e) {
-    (K[e.joinRequestId] = e), D.set(e.joinRequestId, e), (0, d.Nd)(e.applicationStatus) && (x.delete(e.joinRequestId), L.set(e.joinRequestId, e)), (0, d.bk)(e.applicationStatus) && (L.delete(e.joinRequestId), x.set(e.joinRequestId, e));
+    ((K[e.joinRequestId] = e), D.set(e.joinRequestId, e), (0, d.Nd)(e.applicationStatus) && (x.delete(e.joinRequestId), L.set(e.joinRequestId, e)), (0, d.bk)(e.applicationStatus) && (L.delete(e.joinRequestId), x.set(e.joinRequestId, e)));
 }
 function U(e) {
     var t;
@@ -127,7 +127,7 @@ function U(e) {
         a = c.default.getCurrentUser();
     if (null == a || i.userId === a.id) return !1;
     let o = null == (t = k(i.joinRequestId)) ? void 0 : t.applicationStatus;
-    return I(n, i.applicationStatus, o), j(i), !0;
+    return (I(n, i.applicationStatus, o), j(i), !0);
 }
 function G(e) {
     let { id: t, guildId: n } = e,
@@ -136,10 +136,10 @@ function G(e) {
 }
 function B(e) {
     let { guildId: t, action: n } = e;
-    D.values(P(t, f.wB.SUBMITTED)).forEach((e) => {
+    (D.values(P(t, f.wB.SUBMITTED)).forEach((e) => {
         j(g(h({}, e), { applicationStatus: n }));
     }),
-        v(t, 0);
+        v(t, 0));
 }
 let V = {};
 function F(e) {

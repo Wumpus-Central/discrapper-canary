@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(470167),
     i = n(147913),
     a = n(681678),
@@ -30,7 +30,7 @@ function d(e) {
 }
 class f extends i.Z {
     constructor(...e) {
-        super(...e), u(this, 'actions', { MESSAGE_CREATE: d });
+        (super(...e), u(this, 'actions', { MESSAGE_CREATE: d }));
     }
 }
 let _ = new f();

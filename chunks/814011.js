@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(327432),
     i = n(772096),
     a = n(925994),
@@ -31,15 +31,15 @@ function l(e) {
                     let [t, n] = s.M8.edges(e.selection);
                     return (
                         s.bN.withoutNormalizing(e, () => {
-                            o.Q.select(e, t), e.insertText('['), o.Q.select(e, n), 0 === s.C0.compare(t.path, n.path) && o.Q.move(e, { distance: 1 }), e.insertText(']('.concat(a.target, ')'));
+                            (o.Q.select(e, t), e.insertText('['), o.Q.select(e, n), 0 === s.C0.compare(t.path, n.path) && o.Q.move(e, { distance: 1 }), e.insertText(']('.concat(a.target, ')')));
                         }),
                         !0
                     );
                 }
-                if (null != a && null != l) return o.Q.delete(e, { at: e.selection }), e.insertText(a.target), !0;
+                if (null != a && null != l) return (o.Q.delete(e, { at: e.selection }), e.insertText(a.target), !0);
                 o.Q.delete(e, { at: e.selection });
             }
-            return e.insertText(n), !0;
+            return (e.insertText(n), !0);
         }),
         e
     );

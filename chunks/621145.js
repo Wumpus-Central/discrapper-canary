@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(997841), n(388685), n(457542);
+(n.d(t, { Z: () => U }), n(997841), n(388685), n(457542));
 var i = n(255367),
     a = n(73800),
     l = n(392711),
@@ -32,7 +32,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function k(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -48,8 +48,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -128,7 +128,7 @@ let L = (e, t, n, i) => {
                         maxWidth: T.Sv,
                         maxHeight: T.EY
                     });
-                    (a = (0, l.clamp)(Math.round(t.width * e), 0, T.Sv)), (r = (0, l.clamp)(Math.round(t.height * e), 0, T.EY));
+                    ((a = (0, l.clamp)(Math.round(t.width * e), 0, T.Sv)), (r = (0, l.clamp)(Math.round(t.height * e), 0, T.EY)));
                 }
                 return (0, i.jsx)('div', {
                     style: {
@@ -236,16 +236,16 @@ function U(e) {
                     new Promise((t, n) => {
                         if ((0, c.CO)(e.filename)) {
                             let i = new Image();
-                            (i.src = e.url),
+                            ((i.src = e.url),
                                 (i.onload = () => {
                                     t(i);
                                 }),
                                 (i.onerror = () => {
                                     n();
-                                });
+                                }));
                         } else if ((0, c.NU)(e.filename)) {
                             let i = document.createElement('video');
-                            (i.src = e.url),
+                            ((i.src = e.url),
                                 (i.onloadedmetadata = () => {
                                     t({
                                         width: i.videoWidth,
@@ -254,7 +254,7 @@ function U(e) {
                                 }),
                                 (i.onerror = () => {
                                     n();
-                                });
+                                }));
                         } else
                             t({
                                 width: 0,

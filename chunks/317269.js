@@ -1,10 +1,10 @@
-n.d(e, {
+(n.d(e, {
     TB: () => p,
     VY: () => R,
     ZP: () => _
 }),
     n(388685),
-    n(415506);
+    n(415506));
 var i = n(255367),
     l = n(73800),
     s = n(512722),
@@ -34,16 +34,16 @@ function E(t) {
     if ((C()(null != a && null != L, 'Missing startingPlan or newPlan'), x.Y1.indexOf(l) < x.Y1.indexOf(n)))
         switch (n) {
             case x.Xh.PREMIUM_MONTH_TIER_1:
-                (e = f.intl.string(f.t.knvOV1)), T.X7u.has(null != s ? s : T.HeQ.UNKNOWN) && (e = f.intl.format(f.t.o6hBiY, {}));
+                ((e = f.intl.string(f.t.knvOV1)), T.X7u.has(null != s ? s : T.HeQ.UNKNOWN) && (e = f.intl.format(f.t.o6hBiY, {})));
                 break;
             case x.Xh.PREMIUM_MONTH_TIER_2:
-                (e = f.intl.string(f.t.f8Dqur)), T.X7u.has(null != s ? s : T.HeQ.UNKNOWN) && (e = f.intl.format(f.t.A4THYm, {}));
+                ((e = f.intl.string(f.t.f8Dqur)), T.X7u.has(null != s ? s : T.HeQ.UNKNOWN) && (e = f.intl.format(f.t.A4THYm, {})));
                 break;
             case x.Xh.PREMIUM_YEAR_TIER_1:
-                (e = f.intl.string(f.t.YZd5r6)), T.X7u.has(null != s ? s : T.HeQ.UNKNOWN) && (e = f.intl.format(f.t.MHAxpK, {}));
+                ((e = f.intl.string(f.t.YZd5r6)), T.X7u.has(null != s ? s : T.HeQ.UNKNOWN) && (e = f.intl.format(f.t.MHAxpK, {})));
                 break;
             case x.Xh.PREMIUM_YEAR_TIER_2:
-                (e = f.intl.formatToPlainString(f.t['M/Lknp'], { numFreeGuildSubscriptions: x.cb })), T.X7u.has(null != s ? s : T.HeQ.UNKNOWN) && (e = f.intl.format(f.t.mULxLS, { numFreeGuildSubscriptions: x.cb }));
+                ((e = f.intl.formatToPlainString(f.t['M/Lknp'], { numFreeGuildSubscriptions: x.cb })), T.X7u.has(null != s ? s : T.HeQ.UNKNOWN) && (e = f.intl.format(f.t.mULxLS, { numFreeGuildSubscriptions: x.cb })));
                 break;
             case x.Xh.PREMIUM_3_MONTH_TIER_2:
             case x.Xh.PREMIUM_6_MONTH_TIER_2:
@@ -97,7 +97,7 @@ function _(t) {
         });
     else if (b && !p) {
         let t = d.Z.get(s);
-        C()(null != t, 'Missing plan'),
+        (C()(null != t, 'Missing plan'),
             t.skuId === x.Si.TIER_0
                 ? (e = (0, i.jsxs)('div', {
                       className: I.text,
@@ -107,7 +107,7 @@ function _(t) {
                   (e = (0, i.jsxs)('div', {
                       className: I.text,
                       children: [(0, i.jsx)('p', { children: f.intl.string(f.t.UPpbPz) }), (0, i.jsx)('p', { children: f.intl.format(f.t.EoDFuL, { helpCenterLink: h.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT) }) })]
-                  }));
+                  })));
     } else if (null != u)
         e = (0, i.jsx)(E, {
             planId: s,
@@ -115,7 +115,7 @@ function _(t) {
         });
     else if (null != j) {
         let t = d.Z.get(s);
-        C()(null != t, 'Missing plan'),
+        (C()(null != t, 'Missing plan'),
             (e = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {
@@ -127,17 +127,17 @@ function _(t) {
                         children: f.intl.format(f.t['6aZ0NT'], { guildName: j.name })
                     })
                 ]
-            }));
+            })));
     } else {
         let t = d.Z.get(s);
-        C()(null != t, 'Missing plan'),
+        (C()(null != t, 'Missing plan'),
             (e = (0, i.jsx)('div', {
                 className: I.text,
                 children: A(t)
-            }));
+            })));
     }
     let O = Z.ZP.getPremiumType(s);
-    C()(null != O, 'premium type should not be null in purchase confirmation'), (n = null != w ? f.intl.formatToPlainString(f.t['1qGgm5'], { skuName: w.name }) : p ? f.intl.string(f.t.QJ9EyM) : null != j ? f.intl.string(f.t.ta3cXV) : f.intl.string(f.t.TkTvBw));
+    (C()(null != O, 'premium type should not be null in purchase confirmation'), (n = null != w ? f.intl.formatToPlainString(f.t['1qGgm5'], { skuName: w.name }) : p ? f.intl.string(f.t.QJ9EyM) : null != j ? f.intl.string(f.t.ta3cXV) : f.intl.string(f.t.TkTvBw)));
     let S = () => (T.X7u.has(null != k ? k : T.HeQ.UNKNOWN) ? N.ZP.Types.PREMIUM_PAYMENT_STARTED : null != u ? N.ZP.Types.PREMIUM_UPDATED : N.ZP.Types.PREMIUM_ACTIVATED);
     return (0, i.jsxs)('div', {
         className: I.confirmation,

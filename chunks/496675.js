@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ }), n(388685);
+(n.d(t, { Z: () => $ }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -112,7 +112,7 @@ function G(e) {
             context: n
         });
     if (N[n.id] === i) return !1;
-    (N[n.id] = i), (R += 1), L(n.getGuildId());
+    ((N[n.id] = i), (R += 1), L(n.getGuildId()));
 }
 function B(e) {
     let { channels: t } = e,
@@ -149,17 +149,17 @@ function Y(e) {
 }
 function W(e) {
     let { channel: t } = e;
-    return delete N[t.id], (R += 1), L(t.guild_id), !1;
+    return (delete N[t.id], (R += 1), L(t.guild_id), !1);
 }
 function K(e) {
     let { guildId: t } = e;
     delete A[t];
     let n = b.Z.getMutableBasicGuildChannelsForGuild(t);
-    a().forEach(n, (e) => {
+    (a().forEach(n, (e) => {
         delete N[e.id];
     }),
         (R += 1),
-        L(t);
+        L(t));
 }
 function z(e) {
     let { instance: t } = e,
@@ -171,17 +171,17 @@ function z(e) {
             context: n
         });
     if (i === N[n.id]) return !1;
-    (N[n.id] = i), (R += 1);
+    ((N[n.id] = i), (R += 1));
 }
 function q(e) {
     let { guildId: t } = e;
     delete A[t];
     let n = b.Z.getMutableBasicGuildChannelsForGuild(t);
-    a().forEach(n, (e) => {
+    (a().forEach(n, (e) => {
         delete N[e.id];
     }),
         (R += 1),
-        L(t);
+        L(t));
 }
 function X(e, t, n, r) {
     let i = E.Hn;
@@ -288,7 +288,7 @@ class Q extends (r = s.ZP.Store) {
     }
 }
 function J() {
-    (N = {}), (A = {}), (C = {}), (R = 0);
+    ((N = {}), (A = {}), (C = {}), (R = 0));
 }
 S(Q, 'displayName', 'PermissionStore');
 let $ = new Q(l.Z, {

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     O: () => _,
     Z: () => T
 }),
-    n(997841);
+    n(997841));
 var r,
     i = n(442837),
     a = n(570140),
@@ -26,7 +26,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,12 +48,12 @@ function d() {
 }
 let f = d();
 var _ = (function (e) {
-    return (e.INITIALIZED = 'INITIALIZED'), (e.LOADING = 'LOADING'), (e.LOADED = 'LOADED'), (e.ERROR = 'ERROR'), e;
+    return ((e.INITIALIZED = 'INITIALIZED'), (e.LOADING = 'LOADING'), (e.LOADED = 'LOADED'), (e.ERROR = 'ERROR'), e);
 })({});
 let p = 'INITIALIZED',
     h = [];
 function m() {
-    (f = d()), (p = 'INITIALIZED'), (h = []);
+    ((f = d()), (p = 'INITIALIZED'), (h = []));
 }
 function g() {
     f.useActivityUrlOverride = !f.useActivityUrlOverride;
@@ -69,7 +69,7 @@ function b(e) {
 }
 function y(e) {
     let { applications: t } = e;
-    (p = 'LOADED'), (h = t.filter((e) => null != e.flags && (0, s.yE)(e.flags, l.udG.EMBEDDED)));
+    ((p = 'LOADED'), (h = t.filter((e) => null != e.flags && (0, s.yE)(e.flags, l.udG.EMBEDDED))));
 }
 function O(e) {
     let { type: t } = e;
@@ -111,7 +111,7 @@ class I extends (r = i.ZP.PersistedStore) {
         return this.getIsEnabled() && null != h.find((t) => t.id === e);
     }
 }
-c(I, 'displayName', 'DeveloperActivityShelfStore'), c(I, 'persistKey', 'DeveloperActivityShelfStore'), c(I, 'migrations', [(e) => (delete e.isEnabled, u({}, e))]);
+(c(I, 'displayName', 'DeveloperActivityShelfStore'), c(I, 'persistKey', 'DeveloperActivityShelfStore'), c(I, 'migrations', [(e) => (delete e.isEnabled, u({}, e))]));
 let T = new I(a.Z, {
     LOGOUT: m,
     DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: g,

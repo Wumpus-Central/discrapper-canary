@@ -29,7 +29,7 @@ function u(e) {
                     className: c.button,
                     innerClassName: c.buttonInner,
                     onClick: () => {
-                        (0, o.Z)(t.guild_id, t.id, a.ic.UNREADS_ONLY_MENTIONS), n();
+                        ((0, o.Z)(t.guild_id, t.id, a.ic.UNREADS_ONLY_MENTIONS), n());
                     },
                     children: [
                         s.intl.string(s.t.KyUKhY),

@@ -1,4 +1,4 @@
-n(388685), n(539854), n(953529);
+(n(388685), n(539854), n(953529));
 var r,
     i = n(442837),
     l = n(570140),
@@ -27,13 +27,13 @@ function h(e, t) {
 }
 class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(a.default, s.Z),
+        (this.waitFor(a.default, s.Z),
             (p = {}),
             null != e &&
                 c.default.keys(e).forEach((t) => {
                     let n = e[t];
                     null != n && 'function' == typeof n[Symbol.iterator] && (p[t] = new Set(n));
-                });
+                }));
     }
     getProgress(e) {
         return p[e];
@@ -46,19 +46,19 @@ class f extends (r = i.ZP.PersistedStore) {
         return p;
     }
 }
-d(f, 'displayName', 'GuildProgressStore'),
+(d(f, 'displayName', 'GuildProgressStore'),
     d(f, 'persistKey', 'GuildProgressStore'),
     new f(l.Z, {
         CONNECTION_OPEN: function () {
             let e = [];
-            c.default.keys(p).forEach((t) => {
+            (c.default.keys(p).forEach((t) => {
                 p[t].has(u.Rg.COMPLETED) && e.push(t);
             }),
-                e.forEach((e) => h(e, u.Rg.DISMISSED));
+                e.forEach((e) => h(e, u.Rg.DISMISSED)));
         },
         GUILD_PROGRESS_INITIALIZE: function (e) {
             let { guildId: t } = e;
-            null == p[t] && (p[t] = new Set()), p[t].has(u.Rg.COMPLETED) || p[t].delete(u.Rg.DISMISSED);
+            (null == p[t] && (p[t] = new Set()), p[t].has(u.Rg.COMPLETED) || p[t].delete(u.Rg.DISMISSED));
         },
         GUILD_PROGRESS_COMPLETED_SEEN: function (e) {
             let { guildId: t } = e;
@@ -101,4 +101,4 @@ d(f, 'displayName', 'GuildProgressStore'),
             let { guildId: t, memberCount: n } = e;
             return null != p[t] && n > 1 && h(t, u.Rg.INVITE);
         }
-    });
+    }));

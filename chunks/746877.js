@@ -1,4 +1,4 @@
-n.d(t, { S: () => _ }), n(388685);
+(n.d(t, { S: () => _ }), n(388685));
 var r = n(73800),
     i = n(392711),
     a = n.n(i),
@@ -33,7 +33,7 @@ function _(e, t, n) {
             return (
                 e.addListener('text-changed', u),
                 () => {
-                    e.removeListener('text-changed', u), u.cancel();
+                    (e.removeListener('text-changed', u), u.cancel());
                 }
             );
     }, [o, u, e, t, n]);

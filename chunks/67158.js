@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -13,7 +13,7 @@ let m = i.memo(
         let { disabled: n, type: a, className: m, onClick: h } = e,
             [g, f] = (0, c.Iu)((e) => [e.activeView, e.activeViewType], s.X),
             x = i.useCallback(() => {
-                (0, c.j9)(a), null == h || h();
+                ((0, c.j9)(a), null == h || h());
             }, [a, h]);
         return n
             ? null

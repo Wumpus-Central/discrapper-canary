@@ -58,6 +58,6 @@ let _ = {
                 options: r
             } = e,
             i = t[n];
-        return r.sendMessage(f(i)), { type: s.z2.REACTION };
+        return (r.sendMessage(f(i)), { type: s.z2.REACTION });
     }
 };

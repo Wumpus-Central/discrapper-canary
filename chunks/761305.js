@@ -1,17 +1,17 @@
-n.d(t, { Z: () => E }), n(35282), n(388685);
+(n.d(t, { Z: () => b }), n(35282), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
-    a = n(593473),
-    o = n(442837),
-    s = n(544891),
+    s = n(593473),
+    a = n(442837),
+    o = n(544891),
     c = n(108427),
     u = n(601964),
     d = n(896797),
     h = n(129293),
     p = n(388905),
-    m = n(981631),
-    g = n(388032),
+    g = n(981631),
+    m = n(388032),
     f = n(20493);
 function _(e, t, n) {
     return (
@@ -26,14 +26,14 @@ function _(e, t, n) {
         e
     );
 }
-o.ZP.initialize();
+a.ZP.initialize();
 class x extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, h.Z)(this.props.location),
-            t = (0, a.parse)(this.props.location.search);
-        s.tn
+            t = (0, s.parse)(this.props.location.search);
+        (o.tn
             .post({
-                url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                url: g.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -60,7 +60,7 @@ class x extends (r = l.PureComponent) {
                         busy: !1
                     })
             ),
-            (0, c.e)('disable_server_highlight_notifications');
+            (0, c.e)('disable_server_highlight_notifications'));
     }
     renderBusy() {
         return (0, i.jsx)(p.ZP, { children: (0, i.jsx)(p.Hh, {}) });
@@ -72,22 +72,22 @@ class x extends (r = l.PureComponent) {
             children: [
                 (0, i.jsx)(p.Dx, {
                     className: f.marginBottom8,
-                    children: g.intl.string(g.t.Z33eiI)
+                    children: m.intl.string(m.t.Z33eiI)
                 }),
-                (0, i.jsx)(p.DK, { children: g.intl.format(g.t.NRWtfH, { guildName: n.name }) }),
+                (0, i.jsx)(p.DK, { children: m.intl.format(m.t.NRWtfH, { guildName: n.name }) }),
                 (0, i.jsx)(p.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
-                    children: g.intl.string(g.t.fIv16O)
+                    children: m.intl.string(m.t.fIv16O)
                 }),
                 (0, i.jsx)(p.zx, {
                     className: f.marginTop8,
                     color: p.zx.Colors.LINK,
                     look: p.zx.Looks.LINK,
                     onClick: () => {
-                        t(m.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
+                        t(g.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: g.intl.string(g.t['cGmT/P'])
+                    children: m.intl.string(m.t['cGmT/P'])
                 })
             ]
         });
@@ -102,13 +102,13 @@ class x extends (r = l.PureComponent) {
                 }),
                 (0, i.jsx)(p.Dx, {
                     className: f.marginBottom8,
-                    children: g.intl.string(g.t.ox9hIS)
+                    children: m.intl.string(m.t.ox9hIS)
                 }),
-                (0, i.jsx)(p.DK, { children: g.intl.string(g.t['/dcuR0']) }),
+                (0, i.jsx)(p.DK, { children: m.intl.string(m.t['/dcuR0']) }),
                 (0, i.jsx)(p.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
-                    children: g.intl.string(g.t.fIv16O)
+                    children: m.intl.string(m.t.fIv16O)
                 })
             ]
         });
@@ -118,13 +118,13 @@ class x extends (r = l.PureComponent) {
         return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'state', {
                 busy: !0,
                 success: !1,
                 guild: null
-            });
+            }));
     }
 }
 _(x, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let E = o.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(x);
+let b = a.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(x);

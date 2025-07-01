@@ -1,4 +1,4 @@
-n.r(i), n.d(i, { default: () => d });
+(n.r(i), n.d(i, { default: () => d }));
 var o = n(449921),
     t = n(686666),
     a = n(920658),

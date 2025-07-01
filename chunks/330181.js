@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -14,7 +14,7 @@ let g = (e) => {
         [i, s] = r.useState(null);
     return {
         resetRenewalMutation: async (t) => {
-            n(!0), s(null);
+            (n(!0), s(null));
             try {
                 await (0, a.qu)(t, e);
             } catch (e) {

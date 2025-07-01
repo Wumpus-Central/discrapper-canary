@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(73800),
     i = n(442837),
     l = n(881052),
@@ -11,7 +11,7 @@ function o(e, t) {
         [m, g] = r.useState(!1),
         p = r.useCallback(async () => {
             if (null == n && null != e) {
-                g(!0), c(!0);
+                (g(!0), c(!0));
                 try {
                     await s.ZP.getApplicationsForGuild(e, {
                         type: t,

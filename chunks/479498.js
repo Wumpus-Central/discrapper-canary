@@ -1,4 +1,4 @@
-n.d(t, { k: () => b }), n(388685);
+(n.d(t, { k: () => b }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -67,7 +67,7 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -77,7 +77,7 @@ function g(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 class E extends (r = a.PureComponent) {
@@ -100,12 +100,12 @@ class E extends (r = a.PureComponent) {
             ((r && !a) || i || o) && this.animation.pause());
     }
     componentWillUnmount() {
-        (this.isUnmounted = !0), null != this.animation && (this.animation.destroy(), (this.animation = void 0));
+        ((this.isUnmounted = !0), null != this.animation && (this.animation.destroy(), (this.animation = void 0)));
     }
     componentDidUpdate(e) {
         var t, n, r;
         let { nextScene: i, pauseWhileUnfocused: a, pause: o, isWindowFocused: s, useReducedMotion: l } = this.props;
-        i !== this.currentScene && this.shouldForcePlayAfter() && !o && this.playScene(i), null != this.animation && (a && !e.isWindowFocused && s && !l && !0 !== o ? this.animation.play() : (l || (a && e.isWindowFocused && !s)) && this.animation.pause()), !e.pause && o ? null == (t = this.animation) || t.pause() : !e.pause || o || l || null == (n = this.animation) || n.play(), e.nextScene !== i && o && (this.playScene(i), null == (r = this.animation) || r.pause());
+        (i !== this.currentScene && this.shouldForcePlayAfter() && !o && this.playScene(i), null != this.animation && (a && !e.isWindowFocused && s && !l && !0 !== o ? this.animation.play() : (l || (a && e.isWindowFocused && !s)) && this.animation.pause()), !e.pause && o ? null == (t = this.animation) || t.pause() : !e.pause || o || l || null == (n = this.animation) || n.play(), e.nextScene !== i && o && (this.playScene(i), null == (r = this.animation) || r.pause()));
     }
     shouldForcePlayAfter() {
         let { sceneSegments: e } = this.props;
@@ -128,14 +128,14 @@ class E extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'animationRef', null),
             f(this, 'animation', void 0),
             f(this, 'currentScene', this.props.nextScene),
             f(this, 'isUnmounted', !1),
             f(this, 'handleLoopComplete', () => {
                 let { onSceneComplete: e, nextScene: t } = this.props;
-                null != e && e(this.currentScene), this.playScene(t);
+                (null != e && e(this.currentScene), this.playScene(t));
             }),
             f(this, 'handleComplete', () => {
                 let { onSceneComplete: e } = this.props;
@@ -149,7 +149,7 @@ class E extends (r = a.PureComponent) {
                 this.animationRef = e;
                 let { animationRef: t } = this.props;
                 null != t && t(e);
-            });
+            }));
     }
 }
 f(E, 'defaultProps', {

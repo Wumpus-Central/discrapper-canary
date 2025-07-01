@@ -32,4 +32,4 @@ function c(e, t) {
     var n;
     return null != (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) ? n : o.AX;
 }
-a.Z.Minutes.HOUR, a.Z.Minutes.DAY, a.Z.Minutes.DAY, a.Z.Minutes.WEEK, i()(() => l().map((e) => e.value));
+(a.Z.Minutes.HOUR, a.Z.Minutes.DAY, a.Z.Minutes.DAY, a.Z.Minutes.WEEK, i()(() => l().map((e) => e.value)));

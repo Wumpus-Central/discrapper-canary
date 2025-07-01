@@ -132,7 +132,7 @@ function _(e) {
                             body: O.intl.string(O.t['827i8P']),
                             selected: i === f.y.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                o(f.y.GUILD_PRODUCTS_PREVIEW), s.K.set(h.Hr, 'true');
+                                (o(f.y.GUILD_PRODUCTS_PREVIEW), s.K.set(h.Hr, 'true'));
                             },
                             onPreviewDismiss: w,
                             isNew: P

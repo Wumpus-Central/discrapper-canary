@@ -6,13 +6,13 @@ let a = new (class {
             return;
         }
         (Array.isArray(e) ? e : [e]).forEach(function (e) {
-            (this[e] = this[e] || []), t && this[e][r ? 'unshift' : 'push'](t);
+            ((this[e] = this[e] || []), t && this[e][r ? 'unshift' : 'push'](t));
         }, this);
     }
     run(e, t) {
-        (this[e] = this[e] || []),
+        ((this[e] = this[e] || []),
             this[e].forEach(function (e) {
                 e.call(t && t.context ? t.context : t, t);
-            });
+            }));
     }
 })();

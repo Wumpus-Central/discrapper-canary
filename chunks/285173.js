@@ -1,25 +1,25 @@
 n.d(t, { Z: () => o });
 var r = n(255367),
     l = n(73800),
-    s = n(481060),
-    i = n(412899),
+    i = n(481060),
+    s = n(412899),
     a = n(231338);
 function o(e) {
     var t;
-    let { guildId: n, role: o, className: E, canRemove: c = !1, onRemove: u = a.dG } = e,
-        _ = (0, s.dQu)(s.TVs.unsafe_rawColors.PRIMARY_300).hex(),
-        d = null != (t = null == o ? void 0 : o.colorString) ? t : _,
-        A = l.useMemo(() => ({ backgroundColor: ''.concat(d, '27') }), [d]);
+    let { guildId: n, role: o, className: u, canRemove: c = !1, onRemove: d = a.dG } = e,
+        E = (0, i.dQu)(i.TVs.unsafe_rawColors.PRIMARY_300).hex(),
+        _ = null != (t = null == o ? void 0 : o.colorString) ? t : E,
+        A = l.useMemo(() => ({ backgroundColor: ''.concat(_, '27') }), [_]);
     return null == o
         ? null
-        : (0, r.jsx)(s.P3F, {
-              children: (0, r.jsx)(i.UB, {
-                  className: E,
+        : (0, r.jsx)(i.P3F, {
+              children: (0, r.jsx)(s.UB, {
+                  className: u,
                   style: A,
                   role: o,
                   guildId: n,
                   canRemove: c,
-                  onRemove: u
+                  onRemove: d
               })
           });
 }

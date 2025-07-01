@@ -29,7 +29,7 @@ function I(e) {
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, p.k)(e), (0, f.V)(e), (0, a.le)(), (0, a.aC)(e);
+                        (await (0, p.k)(e), (0, f.V)(e), (0, a.le)(), (0, a.aC)(e));
                     } finally {
                         n.current = !0;
                     }

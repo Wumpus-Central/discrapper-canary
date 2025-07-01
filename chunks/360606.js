@@ -1,5 +1,5 @@
 let r, i;
-n.r(t), n.d(t, { default: () => Q }), n(539854), n(388685);
+(n.r(t), n.d(t, { default: () => Q }), n(539854), n(388685));
 var a,
     o = n(392711),
     s = n.n(o),
@@ -27,7 +27,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,17 +55,17 @@ function C(e) {
     if (t !== p.pNK.INTEGRATIONS) return !1;
     if (null == r) {
         let e = _.Z.getGuildId();
-        null != e && (u.Z.fetchForGuild(e), (v = !0)), P(!1);
+        (null != e && (u.Z.fetchForGuild(e), (v = !0)), P(!1));
     }
 }
 function R(e) {
     let { section: t, sectionId: n } = e;
-    (i = t), (N = n);
+    ((i = t), (N = n));
 }
 function P(e) {
     if (null != (r = _.Z.getProps().guild) && d.Z.can(p.Plq.MANAGE_GUILD, r)) {
         let e = _.Z.getProps().integrations;
-        null == e && (I = !0), (g = null != e ? e : []);
+        (null == e && (I = !0), (g = null != e ? e : []));
     } else g = [];
     if (((E = null != r && d.Z.can(p.Plq.MANAGE_WEBHOOKS, r) ? f.Z.getWebhooksForGuild(r.id) : []), !e && null != y)) {
         let e = K(y.id);
@@ -75,10 +75,10 @@ function P(e) {
         let e = z(O.id);
         null != e && (O = e);
     }
-    (b = null), (T = p.QZA.OPEN), (S = {}), (A = !1);
+    ((b = null), (T = p.QZA.OPEN), (S = {}), (A = !1));
 }
 function w() {
-    (r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (T = p.QZA.CLOSED), (A = !1);
+    ((r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (T = p.QZA.CLOSED), (A = !1));
 }
 let D = s().debounce(() => {
     A && (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1), A || X.emitChange());
@@ -86,20 +86,20 @@ let D = s().debounce(() => {
 function L(e) {
     let { settings: t } = e;
     if (null == y) return !1;
-    (y = m({}, y)), null != t.enableEmoticons && y.enable_emoticons !== t.enableEmoticons && ((y.enable_emoticons = t.enableEmoticons), (A = !0)), null != t.expireBehavior && y.expire_behavior !== t.expireBehavior && ((y.expire_behavior = t.expireBehavior), (A = !0)), null != t.expireGracePeriod && y.expire_grace_period !== t.expireGracePeriod && ((y.expire_grace_period = t.expireGracePeriod), (A = !0)), A && D();
+    ((y = m({}, y)), null != t.enableEmoticons && y.enable_emoticons !== t.enableEmoticons && ((y.enable_emoticons = t.enableEmoticons), (A = !0)), null != t.expireBehavior && y.expire_behavior !== t.expireBehavior && ((y.expire_behavior = t.expireBehavior), (A = !0)), null != t.expireGracePeriod && y.expire_grace_period !== t.expireGracePeriod && ((y.expire_grace_period = t.expireGracePeriod), (A = !0)), A && D());
 }
 function x(e) {
     let { settings: t } = e;
     if (null == O) return !1;
-    (O = m({}, O)), null != t.name && O.name !== t.name && ((O.name = t.name), (A = !0)), void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (A = !0)), null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (A = !0)), A && D();
+    ((O = m({}, O)), null != t.name && O.name !== t.name && ((O.name = t.name), (A = !0)), void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (A = !0)), null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (A = !0)), A && D());
 }
 function k() {
-    (T = p.QZA.SUBMITTING), (S = {});
+    ((T = p.QZA.SUBMITTING), (S = {}));
 }
 function M(e) {
     var t;
     if (T !== p.QZA.SUBMITTING) return !1;
-    (T = p.QZA.OPEN), (S = null != (t = e.errors) ? t : {});
+    ((T = p.QZA.OPEN), (S = null != (t = e.errors) ? t : {}));
 }
 function j(e) {
     let { guildId: t, integrations: n } = e;
@@ -113,7 +113,7 @@ function j(e) {
             })
         ) {
             var i, a;
-            g.push(e), e.type === (null == y ? void 0 : y.type) && (null == (i = e.account) ? void 0 : i.id) === (null == (a = y.account) ? void 0 : a.id) && (y = e);
+            (g.push(e), e.type === (null == y ? void 0 : y.type) && (null == (i = e.account) ? void 0 : i.id) === (null == (a = y.account) ? void 0 : a.id) && (y = e));
         }
     for (let e = g.length - 1; e >= 0; e--) {
         let t = g[e],
@@ -123,10 +123,10 @@ function j(e) {
             });
         if (null != r) {
             let n = m({}, t, r);
-            (null == y ? void 0 : y.id) === n.id && (!1 === n.enabled ? (y = null) : A || (y = n)), (g[e] = n);
-        } else (null == y ? void 0 : y.id) === t.id && (y = null), g.splice(e, 1);
+            ((null == y ? void 0 : y.id) === n.id && (!1 === n.enabled ? (y = null) : A || (y = n)), (g[e] = n));
+        } else ((null == y ? void 0 : y.id) === t.id && (y = null), g.splice(e, 1));
     }
-    (g = [...g]), D();
+    ((g = [...g]), D());
 }
 function U(e) {
     let { guildId: t, channelId: n, webhooks: i } = e;
@@ -140,8 +140,8 @@ function U(e) {
             });
             if (null != r) {
                 let n = m({}, t, r);
-                (E[e] = n), A || (null == O ? void 0 : O.id) !== n.id || (O = n);
-            } else (null == O ? void 0 : O.id) === t.id && (O = null), E.splice(e, 1);
+                ((E[e] = n), A || (null == O ? void 0 : O.id) !== n.id || (O = n));
+            } else ((null == O ? void 0 : O.id) === t.id && (O = null), E.splice(e, 1));
         }
         for (let e of i)
             null ==
@@ -149,35 +149,35 @@ function U(e) {
                     let { id: n } = t;
                     if (n === e.id) return !0;
                 }) && E.push(e);
-        (E = [...E]), D();
+        ((E = [...E]), D());
     }
 }
 function G(e) {
     let { commandId: t } = e;
-    (b = t), (y = null), (O = null), (S = {}), (A = !0);
+    ((b = t), (y = null), (O = null), (S = {}), (A = !0));
 }
 function B(e) {
     let { commandId: t } = e;
     if (null == b || b !== t) return !1;
-    (b = null), (S = {}), (A = !1);
+    ((b = null), (S = {}), (A = !1));
 }
 function V(e) {
     let { integrationId: t } = e,
         n = K(t);
     if (null == n) return !1;
-    (y = n), (b = null), (O = null), (S = {}), (A = !1);
+    ((y = n), (b = null), (O = null), (S = {}), (A = !1));
 }
 function F() {
-    (y = null), (S = {}), (A = !1);
+    ((y = null), (S = {}), (A = !1));
 }
 function Z(e) {
     let { webhookId: t } = e,
         n = z(t);
     if (null == n) return !1;
-    (O = n), (b = null), (y = null), (S = {}), (A = !1);
+    ((O = n), (b = null), (y = null), (S = {}), (A = !1));
 }
 function H() {
-    (O = null), (S = {}), (A = !1);
+    ((O = null), (S = {}), (A = !1));
 }
 function Y() {
     return P(!1);

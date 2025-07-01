@@ -4,7 +4,7 @@ var r = n(882159),
     a = n(49691),
     o = n(436857);
 function s(e, t, n) {
-    void 0 === t && (t = !1), void 0 === n && (n = !1);
+    (void 0 === t && (t = !1), void 0 === n && (n = !1));
     var s = e.getBoundingClientRect(),
         l = 1,
         c = 1;

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => P,
-    _: () => N
+    _: () => T
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(512722),
@@ -35,11 +35,11 @@ let y = {
         scale: 1,
         opacity: 1
     },
-    S = {
+    N = {
         tension: 2400,
         friction: 52
     };
-function N(e) {
+function T(e) {
     let { channelId: t, onClick: n, onClose: a, onMouseEnter: s } = e,
         u = i.useRef(null),
         m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
@@ -49,12 +49,12 @@ function N(e) {
             className: C.uploadInput,
             onMouseEnter: s,
             onClick: () => {
-                (0, v.N3)({ isMobile: !1 }), null == n || n();
+                ((0, v.N3)({ isMobile: !1 }), null == n || n());
             },
             onKeyPress: (e) => {
                 if ('Enter' === e.key) {
                     var t;
-                    null == (t = u.current) || t.activateUploadDialogue(), (0, v.N3)({ isMobile: !1 });
+                    (null == (t = u.current) || t.activateUploadDialogue(), (0, v.N3)({ isMobile: !1 }));
                 }
             },
             children: [
@@ -62,7 +62,7 @@ function N(e) {
                     className: C.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        null == a || a(), (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(_.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
+                        (null == a || a(), (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(_.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null));
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,
@@ -79,7 +79,7 @@ function N(e) {
         })
     );
 }
-function T(e) {
+function S(e) {
     let { channelId: t, closePopout: n } = e,
         [a, l] = i.useState(!1),
         { reducedMotion: d } = i.useContext(c.Sfi),
@@ -87,7 +87,7 @@ function T(e) {
             {
                 from: d.enabled ? O : y,
                 to: w,
-                config: S
+                config: N
             },
             'animate-always'
         ),
@@ -105,13 +105,13 @@ function T(e) {
             paddingFix: !1,
             fade: !0,
             children: [
-                (0, r.jsx)(N, {
+                (0, r.jsx)(T, {
                     channelId: t,
                     onClick: () => {
                         l(!0);
                     },
                     onClose: () => {
-                        l(!1), n();
+                        (l(!1), n());
                     }
                 }),
                 (0, r.jsx)('div', {
@@ -165,12 +165,12 @@ function P(e) {
                               })
                       ]
                   })
-                : (0, r.jsx)(N, {
+                : (0, r.jsx)(T, {
                       onMouseEnter: d,
                       channelId: t
                   }),
             n &&
-                (0, r.jsx)(T, {
+                (0, r.jsx)(S, {
                     channelId: t,
                     closePopout: () => {
                         a(!1);

@@ -17,7 +17,7 @@ function a(e) {
 }
 function o(e, t) {
     let n = null;
-    return e === i.WX.EXTERNAL && null != t && 'location' in t && (n = t.location), n;
+    return (e === i.WX.EXTERNAL && null != t && 'location' in t && (n = t.location), n);
 }
 function s(e) {
     let { entity_type: t, entity_metadata: n } = e;

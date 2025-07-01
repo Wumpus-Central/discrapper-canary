@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(997841);
+(n.d(t, { Z: () => f }), n(997841));
 var r = n(913527),
     i = n.n(r),
     a = n(81825),
@@ -106,6 +106,6 @@ class f extends a.Z {
         };
     }
     constructor(e) {
-        super(), u(this, 'id', void 0), u(this, 'branchId', void 0), u(this, 'flags', void 0), u(this, 'createdAt', void 0), u(this, 'entitlements', void 0), u(this, 'branch', void 0), u(this, 'sku', void 0), u(this, 'isTestMode', void 0), (this.id = e.id), (this.createdAt = e.createdAt), (this.flags = e.flags), (this.branchId = e.branchId), (this.entitlements = e.entitlements), (this.branch = e.branch), (this.sku = e.sku), (this.isTestMode = e.isTestMode || !1);
+        (super(), u(this, 'id', void 0), u(this, 'branchId', void 0), u(this, 'flags', void 0), u(this, 'createdAt', void 0), u(this, 'entitlements', void 0), u(this, 'branch', void 0), u(this, 'sku', void 0), u(this, 'isTestMode', void 0), (this.id = e.id), (this.createdAt = e.createdAt), (this.flags = e.flags), (this.branchId = e.branchId), (this.entitlements = e.entitlements), (this.branch = e.branch), (this.sku = e.sku), (this.isTestMode = e.isTestMode || !1));
     }
 }

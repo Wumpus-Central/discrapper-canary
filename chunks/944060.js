@@ -34,7 +34,7 @@ function f(e, t) {
         try {
             for (i = i.call(e); !(o = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); o = !0);
         } catch (e) {
-            (s = !0), (r = e);
+            ((s = !0), (r = e));
         } finally {
             try {
                 o || null == i.return || i.return();
@@ -55,7 +55,7 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -65,7 +65,7 @@ function h(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 var m = 0,
@@ -98,7 +98,7 @@ function y(e) {
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = t;
-    return i[g] || (i[g] = { dragDropManager: (0, a.i)(e, t, n, r) }), i[g];
+    return (i[g] || (i[g] = { dragDropManager: (0, a.i)(e, t, n, r) }), i[g]);
 }
 function O() {
     return void 0 !== n.g ? n.g : window;

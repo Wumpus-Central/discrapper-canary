@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var r,
     i = n(442837),
     a = n(902704),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -59,10 +59,10 @@ function f(e, t) {
 }
 let _ = {};
 function p(e) {
-    (_ = {}),
+    ((_ = {}),
         e.guilds.forEach((e) => {
             _[e.id] = e.roles instanceof Array ? l.C5(e.id, e.roles) : e.roles;
-        });
+        }));
 }
 function h(e) {
     for (let n of e.guilds) {
@@ -104,13 +104,13 @@ function I(e) {
         i = l.CL(n),
         o = null == r ? void 0 : r[i.id];
     if (null != o && (0, a.Z)(i, o)) return !1;
-    (r = f(u({}, r), { [n.id]: l.CL(n) })), (r = l.iw(t, Object.values(r))), (_[t] = r);
+    ((r = f(u({}, r), { [n.id]: l.CL(n) })), (r = l.iw(t, Object.values(r))), (_[t] = r));
 }
 function T(e) {
     let { guildId: t, roleId: n } = e,
         r = _[t];
     if (null == r) return !1;
-    (r = u({}, r)), delete r[n], (_[t] = r);
+    ((r = u({}, r)), delete r[n], (_[t] = r));
 }
 let S = Object.freeze({});
 class A extends (r = i.ZP.Store) {

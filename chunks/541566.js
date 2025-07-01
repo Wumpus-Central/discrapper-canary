@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -70,7 +70,7 @@ class p extends (r = i.ZP.PersistedStore) {
         return d;
     }
 }
-s(p, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
+(s(p, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
     s(p, 'persistKey', 'PremiumGuildGracePeriodNoticeStore'),
     s(p, 'migrations', [
         (e) =>
@@ -78,7 +78,7 @@ s(p, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
                 lastDismissedGracePeriods: null != e ? c({}, e.lastDismissedGracePeriods) : {},
                 isVisible: {}
             })
-    ]);
+    ]));
 let h = new p(l.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: n } = e,

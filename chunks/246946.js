@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -53,7 +53,7 @@ let f = {
     p = u({}, f);
 function h(e) {
     let t = _[e];
-    return null == t && (t = _[e] = u({}, f)), t;
+    return (null == t && (t = _[e] = u({}, f)), t);
 }
 function m(e) {
     e.isSwitchingAccount || (_ = {});
@@ -90,16 +90,16 @@ function b(e) {
     if (!p.autoToggle) return !1;
     {
         let t = e.count > 0;
-        return (p.enabled = t), d(t, !0), !0;
+        return ((p.enabled = t), d(t, !0), !0);
     }
 }
 class y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        Object.assign(_, e),
+        (Object.assign(_, e),
             this.syncWith([s.default], () => {
                 let e = s.default.getId();
                 p = null != e ? h(e) : u({}, f);
-            });
+            }));
     }
     getState() {
         return _;
@@ -129,14 +129,14 @@ class y extends (r = i.ZP.PersistedStore) {
         return this.enabled && p.enableContentProtection;
     }
 }
-c(y, 'displayName', 'StreamerModeStore'),
+(c(y, 'displayName', 'StreamerModeStore'),
     c(y, 'persistKey', 'StreamerModeStore'),
     c(y, 'migrations', [
         (e) => {
             let t = s.default.getId();
             return null == e || null == t ? {} : { [t]: u({}, e) };
         }
-    ]);
+    ]));
 let O = new y(a.Z, {
     LOGOUT: m,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: g,

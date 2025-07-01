@@ -1,10 +1,10 @@
 let r;
-n.d(t, {
+(n.d(t, {
     H: () => m,
     Z: () => N
 }),
     n(388685),
-    n(290780);
+    n(290780));
 var i,
     a = n(392711),
     o = n(442837),
@@ -53,7 +53,7 @@ let _ = [],
     },
     v = (0, a.debounce)(() => {
         let e = (0, u.cX)(h);
-        s.uv.announce(e, 'polite'), (h = []);
+        (s.uv.announce(e, 'polite'), (h = []));
     }, 500),
     I = (e) => {
         let { emoji: t, userId: n, animationType: r } = e;

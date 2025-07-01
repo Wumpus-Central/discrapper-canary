@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(780384),
     i = n(147913),
     a = n(844070),
@@ -24,15 +24,15 @@ function c(e) {
 }
 function u(e) {
     let { user: t } = e;
-    r.uv.announce(s.intl.formatToPlainString(s.t['/+7xk5'], { username: t.username })), a.z(t);
+    (r.uv.announce(s.intl.formatToPlainString(s.t['/+7xk5'], { username: t.username })), a.z(t));
 }
 class d extends i.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             l(this, 'actions', {
                 RELATIONSHIP_ADD: c,
                 FRIEND_REQUEST_ACCEPTED: u
-            });
+            }));
     }
 }
 let f = new d();

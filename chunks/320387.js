@@ -4,7 +4,7 @@ var t,
     i = 'object' == typeof Reflect && null !== Reflect && Reflect.apply;
 if ('function' == typeof i && 'function' == typeof Object.defineProperty)
     try {
-        (t = Object.defineProperty({}, 'length', {
+        ((t = Object.defineProperty({}, 'length', {
             get: function () {
                 throw n;
             }
@@ -16,7 +16,7 @@ if ('function' == typeof i && 'function' == typeof Object.defineProperty)
                 },
                 null,
                 t
-            );
+            ));
     } catch (e) {
         e !== n && (i = null);
     }
@@ -33,7 +33,7 @@ var a = /^\s*class\b/,
     s = function (e) {
         try {
             if (o(e)) return !1;
-            return r.call(e), !0;
+            return (r.call(e), !0);
         } catch (e) {
             return !1;
         }

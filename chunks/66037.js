@@ -1,4 +1,4 @@
-a.d(t, { Z: () => c }), a(415506), a(35282), a(388685);
+(a.d(t, { Z: () => c }), a(415506), a(35282), a(388685));
 var n = a(255367),
     r = a(73800),
     s = a(539528),
@@ -41,7 +41,7 @@ class o extends r.Component {
     }
     constructor(...e) {
         var t, a;
-        super(...e),
+        (super(...e),
             (t = 'handleOnClick'),
             (a = () => {
                 let { to: e, avoidRouter: t, onClick: a, history: n } = this.props;
@@ -59,7 +59,7 @@ class o extends r.Component {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = a);
+                : (this[t] = a));
     }
 }
 let c = (0, i.EN)(o);

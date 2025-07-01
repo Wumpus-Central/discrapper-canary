@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => K,
     hU: () => Z
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -49,7 +49,7 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,7 +57,7 @@ function L(e) {
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -65,11 +65,11 @@ function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -91,7 +91,7 @@ function M(e, t) {
         i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -101,7 +101,7 @@ function j(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let U = '1',
@@ -130,7 +130,7 @@ function Z(e) {
 function H(e) {
     let { sound: t, previewSound: n, disabled: i = !1, tooltipPosition: a = 'top' } = e;
     function o(e) {
-        e.stopPropagation(), e.currentTarget.blur(), n();
+        (e.stopPropagation(), e.currentTarget.blur(), n());
     }
     return (0, r.jsx)(Z, {
         tooltipPosition: a,
@@ -153,7 +153,7 @@ function Y(e) {
         s = (0, l.e7)([v.Z], () => v.Z.isFavoriteSound(t.soundId), [t.soundId]),
         c = i.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     e.currentTarget.blur(),
                     s
                         ? (0, O.hs)(t.soundId)
@@ -161,7 +161,7 @@ function Y(e) {
                               sound: t,
                               location: k(L({}, a), { object: N.qAy.SOUNDBOARD_SOUND })
                           }),
-                          (0, O.TB)(t.soundId));
+                          (0, O.TB)(t.soundId)));
             },
             [s, t, a]
         );
@@ -389,7 +389,7 @@ let K = i.forwardRef(function (e, t) {
                             {
                                 onClick: (t) => {
                                     var n;
-                                    null == e || null == (n = e.onClick) || n.call(e), null == ej || ej(t);
+                                    (null == e || null == (n = e.onClick) || n.call(e), null == ej || ej(t));
                                 },
                                 onContextMenu: q && !eR ? eh : void 0,
                                 onMouseOver: () => {

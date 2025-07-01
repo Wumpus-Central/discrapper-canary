@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Zm: () => I,
     aq: () => R,
     iD: () => v,
@@ -6,7 +6,7 @@ n.d(t, {
     og: () => C,
     zS: () => N
 }),
-    n(388685);
+    n(388685));
 var r = n(570140),
     i = n(367907),
     a = n(703656),
@@ -39,7 +39,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,11 +55,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -75,13 +75,13 @@ function O(e, t) {
     );
 }
 function v(e, t) {
-    _.default.track(m.rMx.VIEW_AS_ROLES_SELECTED, O(b({ num_roles: Object.keys(t.roles).length }, (0, i.hH)(e)), { is_viewing_as_member: t.type === h.z.NEW_MEMBER })),
+    (_.default.track(m.rMx.VIEW_AS_ROLES_SELECTED, O(b({ num_roles: Object.keys(t.roles).length }, (0, i.hH)(e)), { is_viewing_as_member: t.type === h.z.NEW_MEMBER })),
         r.Z.dispatch({
             type: 'IMPERSONATE_UPDATE',
             guildId: e,
             data: t
         }),
-        S(e);
+        S(e));
 }
 function I(e, t) {
     let n = p.Z.getData(e);
@@ -117,27 +117,27 @@ function A(e, t) {
         if (null == t) return !1;
         if (r.some((e) => !t.roles.includes(e))) return !0;
         let i = [...s.ZP.getSelectableChannelIds(e), ...s.ZP.getVocalChannelIds(e)].filter((e) => !n.includes(e));
-        return i.length > 0 && N(e, i, []), !1;
+        return (i.length > 0 && N(e, i, []), !1);
     });
 }
 function N(e, t, n) {
     let r = new Set(f.ZP.getOptedInChannels(e));
-    t.forEach((e) => r.add(e)),
+    (t.forEach((e) => r.add(e)),
         n.forEach((e) => r.delete(e)),
         I(e, {
             type: h.z.NEW_MEMBER,
             optInChannels: r
-        });
+        }));
 }
 function C(e, t) {
     let n = c.Z.getRoles(e);
     A(e, t);
     let r = {};
-    t.forEach((e) => (r[e] = n[e])),
+    (t.forEach((e) => (r[e] = n[e])),
         I(e, {
             type: h.z.NEW_MEMBER,
             roles: r
-        });
+        }));
 }
 function R(e, t) {
     I(e, b({ type: h.z.NEW_MEMBER }, t));

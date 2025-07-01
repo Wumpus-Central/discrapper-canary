@@ -5,11 +5,11 @@
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
             var r = Object.getOwnPropertySymbols(e);
-            t &&
+            (t &&
                 (r = r.filter(function (t) {
                     return Object.getOwnPropertyDescriptor(e, t).enumerable;
                 })),
-                n.push.apply(n, r);
+                n.push.apply(n, r));
         }
         return n;
     }
@@ -57,7 +57,7 @@
             r,
             i = {},
             a = Object.keys(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
         return i;
     }
     function s(e, t) {
@@ -67,7 +67,7 @@
             i = o(e, t);
         if (Object.getOwnPropertySymbols) {
             var a = Object.getOwnPropertySymbols(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
         }
         return i;
     }
@@ -88,7 +88,7 @@
             try {
                 for (i = i.call(e); !(o = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); o = !0);
             } catch (e) {
-                (s = !0), (r = e);
+                ((s = !0), (r = e));
             } finally {
                 try {
                     o || null == i.return || i.return();
@@ -167,7 +167,7 @@
                     checkPropTypes: n,
                     resetWarningCache: t
                 };
-                return (a.PropTypes = a), a;
+                return ((a.PropTypes = a), a);
             })
         );
     })()();
@@ -175,7 +175,7 @@
         v = function (e, n, r) {
             var i = !!r,
                 a = t.useRef(r);
-            t.useEffect(
+            (t.useEffect(
                 function () {
                     a.current = r;
                 },
@@ -195,7 +195,7 @@
                         );
                     },
                     [i, n, e, a]
-                );
+                ));
         },
         I = function (e) {
             var n = t.useRef(e);
@@ -390,7 +390,7 @@
     Z.displayName = 'CheckoutContext';
     var H = function (e, t) {
             if (!e) return null;
-            e.on, e.session;
+            (e.on, e.session);
             var n = s(e, B);
             return t ? Object.assign(t, n) : Object.assign(e.session(), n);
         },
@@ -467,7 +467,7 @@
             );
             var m = I(r),
                 g = I(d.checkoutSdk);
-            t.useEffect(
+            (t.useEffect(
                 function () {
                     if (d.checkoutSdk) {
                         var e,
@@ -486,7 +486,7 @@
                         L(d.stripe);
                     },
                     [d.stripe]
-                );
+                ));
             var E = t.useMemo(
                 function () {
                     return H(d.checkoutSdk, s);
@@ -550,7 +550,7 @@
                         D = P[1],
                         L = t.useRef(null),
                         x = t.useRef(null);
-                    v(w, 'blur', d),
+                    (v(w, 'blur', d),
                         v(w, 'focus', f),
                         v(w, 'escape', h),
                         v(w, 'click', m),
@@ -598,11 +598,11 @@
                                                 throw Error('Invalid Element type '.concat(r, ". You must use either the <PaymentElement />, <AddressElement options={{mode: 'shipping'}} />, <AddressElement options={{mode: 'billing'}} />, or <ExpressCheckoutElement />."));
                                         }
                                     else N && (t = N.create(e, u));
-                                    (L.current = t), D(t), t && t.mount(x.current);
+                                    ((L.current = t), D(t), t && t.mount(x.current));
                                 }
                             },
                             [N, C, u]
-                        );
+                        ));
                     var k = I(u);
                     return (
                         t.useEffect(
@@ -618,7 +618,7 @@
                             return function () {
                                 if (L.current && 'function' == typeof L.current.destroy)
                                     try {
-                                        L.current.destroy(), (L.current = null);
+                                        (L.current.destroy(), (L.current = null));
                                     } catch (e) {}
                             };
                         }, []),
@@ -687,7 +687,7 @@
                 c = l(t.useState({ embeddedCheckout: null }), 2),
                 u = c[0],
                 d = c[1];
-            t.useEffect(
+            (t.useEffect(
                 function () {
                     if (!s.current && !o.current) {
                         var e = function (e) {
@@ -714,7 +714,7 @@
                                 ? ((o.current = null), u.embeddedCheckout.destroy())
                                 : o.current &&
                                   o.current.then(function () {
-                                      (o.current = null), u.embeddedCheckout && u.embeddedCheckout.destroy();
+                                      ((o.current = null), u.embeddedCheckout && u.embeddedCheckout.destroy());
                                   });
                         };
                     },
@@ -725,7 +725,7 @@
                         L(s);
                     },
                     [s]
-                );
+                ));
             var f = I(n);
             t.useEffect(
                 function () {
@@ -739,7 +739,7 @@
                     function () {
                         if (null != _) {
                             if (null == r) return void console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.');
-                            void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != _.clientSecret && r.clientSecret !== _.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.fetchClientSecret && r.fetchClientSecret !== _.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.onComplete && r.onComplete !== _.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.'), null != _.onShippingDetailsChange && r.onShippingDetailsChange !== _.onShippingDetailsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.'), null != _.onLineItemsChange && r.onLineItemsChange !== _.onLineItemsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.');
+                            (void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != _.clientSecret && r.clientSecret !== _.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.fetchClientSecret && r.fetchClientSecret !== _.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.onComplete && r.onComplete !== _.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.'), null != _.onShippingDetailsChange && r.onShippingDetailsChange !== _.onShippingDetailsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.'), null != _.onLineItemsChange && r.onLineItemsChange !== _.onLineItemsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.'));
                         }
                     },
                     [_, r]
@@ -761,7 +761,7 @@
                             function () {
                                 if (a.current && i)
                                     try {
-                                        i.unmount(), (a.current = !1);
+                                        (i.unmount(), (a.current = !1));
                                     } catch (e) {}
                             }
                         );
@@ -810,5 +810,5 @@
         eS = J('paymentMethodMessaging', $),
         eA = J('affirmMessage', $),
         eN = J('afterpayClearpayMessage', $);
-    (e.AddressElement = eI), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = ef), (e.CardElement = ec), (e.CardExpiryElement = ed), (e.CardNumberElement = eu), (e.CheckoutProvider = W), (e.CurrencySelectorElement = ey), (e.Elements = M), (e.ElementsConsumer = G), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = er), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = eb), (e.FpxBankElement = e_), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = ev), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = eO), (e.ShippingAddressElement = eT), (e.useCheckout = q), (e.useElements = U), (e.useStripe = es);
+    ((e.AddressElement = eI), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = ef), (e.CardElement = ec), (e.CardExpiryElement = ed), (e.CardNumberElement = eu), (e.CheckoutProvider = W), (e.CurrencySelectorElement = ey), (e.Elements = M), (e.ElementsConsumer = G), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = er), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = eb), (e.FpxBankElement = e_), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = ev), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = eO), (e.ShippingAddressElement = eT), (e.useCheckout = q), (e.useElements = U), (e.useStripe = es));
 });

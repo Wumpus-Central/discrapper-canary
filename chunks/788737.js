@@ -14,7 +14,7 @@ function o(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -22,7 +22,7 @@ function o(t) {
             )),
             n.forEach(function (e) {
                 u(t, e, r[e]);
-            });
+            }));
     }
     return t;
 }
@@ -44,7 +44,7 @@ function u(t, e, r) {
     );
 }
 function s(t, e) {
-    (t.prototype = Object.create(e.prototype)), (t.prototype.constructor = t), (t.__proto__ = e);
+    ((t.prototype = Object.create(e.prototype)), (t.prototype.constructor = t), (t.__proto__ = e));
 }
 var c = r(687655),
     l = r(101166),
@@ -96,7 +96,7 @@ var c = r(687655),
             }),
             (r._update = function () {
                 var t = this.props.editor;
-                (t._latestEditorState = this.props.editorState), (t._blockSelectEvents = !0);
+                ((t._latestEditorState = this.props.editorState), (t._blockSelectEvents = !0));
             }),
             e
         );
@@ -149,7 +149,7 @@ var c = r(687655),
                 u(a(r), 'onDragEnter', void 0),
                 u(a(r), 'onDragLeave', void 0),
                 u(a(r), '_handleEditorContainerRef', function (t) {
-                    (r.editorContainer = t), (r.editor = null !== t ? t.firstChild : null);
+                    ((r.editorContainer = t), (r.editor = null !== t ? t.firstChild : null));
                 }),
                 u(a(r), 'focus', function (t) {
                     var e = r.props.editorState,
@@ -160,7 +160,7 @@ var c = r(687655),
                             a = t || E(o),
                             u = a.x,
                             s = a.y;
-                        K(i) || O(!1), i.focus(), o === window ? window.scrollTo(u, s) : b.setTop(o, s), n || r.update(m.forceSelection(e, e.getSelection()));
+                        (K(i) || O(!1), i.focus(), o === window ? window.scrollTo(u, s) : b.setTop(o, s), n || r.update(m.forceSelection(e, e.getSelection())));
                     }
                 }),
                 u(a(r), 'blur', function () {
@@ -173,7 +173,7 @@ var c = r(687655),
                         i = e.onCut,
                         a = e.onCopy,
                         u = o({}, I.edit);
-                    n && (u.onPaste = n), i && (u.onCut = i), a && (u.onCopy = a), (r._handler = o({}, I, { edit: u })[t]);
+                    (n && (u.onPaste = n), i && (u.onCut = i), a && (u.onCopy = a), (r._handler = o({}, I, { edit: u })[t]));
                 }),
                 u(a(r), 'exitCurrentMode', function () {
                     r.setMode('edit');
@@ -190,13 +190,13 @@ var c = r(687655),
                     return r._clipboard;
                 }),
                 u(a(r), 'update', function (t) {
-                    (r._latestEditorState = t), r.props.onChange(t);
+                    ((r._latestEditorState = t), r.props.onChange(t));
                 }),
                 u(a(r), 'onDragEnter', function () {
                     r._dragCount++;
                 }),
                 u(a(r), 'onDragLeave', function () {
-                    r._dragCount--, 0 === r._dragCount && r.exitCurrentMode();
+                    (r._dragCount--, 0 === r._dragCount && r.exitCurrentMode());
                 }),
                 (r._blockSelectEvents = !1),
                 (r._clipboard = null),
@@ -370,15 +370,15 @@ var c = r(687655),
                 );
             }),
             (n.componentDidMount = function () {
-                (this._blockSelectEvents = !1), !B && D('draft_ods_enabled') && ((B = !0), v.initODS()), this.setMode('edit'), M && (this.editor ? this.editor.ownerDocument.execCommand('AutoUrlDetect', !1, !1) : r.g.execCommand('AutoUrlDetect', !1, !1));
+                ((this._blockSelectEvents = !1), !B && D('draft_ods_enabled') && ((B = !0), v.initODS()), this.setMode('edit'), M && (this.editor ? this.editor.ownerDocument.execCommand('AutoUrlDetect', !1, !1) : r.g.execCommand('AutoUrlDetect', !1, !1)));
             }),
             (n.componentDidUpdate = function () {
-                (this._blockSelectEvents = !1), (this._latestEditorState = this.props.editorState), (this._latestCommittedEditorState = this.props.editorState);
+                ((this._blockSelectEvents = !1), (this._latestEditorState = this.props.editorState), (this._latestCommittedEditorState = this.props.editorState));
             }),
             e
         );
     })(_.Component);
-u(R, 'defaultProps', {
+(u(R, 'defaultProps', {
     blockRenderMap: c,
     blockRendererFn: function () {
         return null;
@@ -391,4 +391,4 @@ u(R, 'defaultProps', {
     spellCheck: !1,
     stripPastedStyles: !1
 }),
-    (t.exports = R);
+    (t.exports = R));

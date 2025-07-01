@@ -13,7 +13,7 @@ function a(e, t) {
               id: 'report-raid',
               label: u.intl.string(u.t.cswId3),
               action: () => {
-                  (0, i.xf)(), (0, c.J)(e);
+                  ((0, i.xf)(), (0, c.J)(e));
               }
           });
 }

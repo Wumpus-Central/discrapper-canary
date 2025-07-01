@@ -2,11 +2,11 @@ var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
         }
     }
     return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+        return (n && e(t.prototype, n), r && e(t, r), t);
     };
 })();
 function i(e, t) {
@@ -18,7 +18,7 @@ function a(e, t) {
 }
 function o(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
+    ((e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -26,7 +26,7 @@ function o(e, t) {
             configurable: !0
         }
     })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
 }
 n(805962);
 var s = n(458648),
@@ -41,7 +41,7 @@ e.exports = (function (e) {
                 x: 0,
                 y: 0
             };
-        return 'number' == typeof r.x && 'number' == typeof r.y ? ((n.x = new s(r.x)), (n.y = new s(r.y))) : (c(r.x instanceof s && r.y instanceof s, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), (n.x = r.x), (n.y = r.y)), (n._listeners = {}), n;
+        return ('number' == typeof r.x && 'number' == typeof r.y ? ((n.x = new s(r.x)), (n.y = new s(r.y))) : (c(r.x instanceof s && r.y instanceof s, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), (n.x = r.x), (n.y = r.y)), (n._listeners = {}), n);
     }
     return (
         o(t, e),
@@ -49,19 +49,19 @@ e.exports = (function (e) {
             {
                 key: 'setValue',
                 value: function (e) {
-                    this.x.setValue(e.x), this.y.setValue(e.y);
+                    (this.x.setValue(e.x), this.y.setValue(e.y));
                 }
             },
             {
                 key: 'setOffset',
                 value: function (e) {
-                    this.x.setOffset(e.x), this.y.setOffset(e.y);
+                    (this.x.setOffset(e.x), this.y.setOffset(e.y));
                 }
             },
             {
                 key: 'flattenOffset',
                 value: function () {
-                    this.x.flattenOffset(), this.y.flattenOffset();
+                    (this.x.flattenOffset(), this.y.flattenOffset());
                 }
             },
             {
@@ -76,7 +76,7 @@ e.exports = (function (e) {
             {
                 key: 'stopAnimation',
                 value: function (e) {
-                    this.x.stopAnimation(), this.y.stopAnimation(), e && e(this.__getValue());
+                    (this.x.stopAnimation(), this.y.stopAnimation(), e && e(this.__getValue()));
                 }
             },
             {
@@ -85,7 +85,7 @@ e.exports = (function (e) {
                     var t = this,
                         n = u(),
                         r = function (n) {
-                            n.value, e(t.__getValue());
+                            (n.value, e(t.__getValue()));
                         };
                     return (
                         (this._listeners[n] = {
@@ -99,7 +99,7 @@ e.exports = (function (e) {
             {
                 key: 'removeListener',
                 value: function (e) {
-                    this.x.removeListener(this._listeners[e].x), this.y.removeListener(this._listeners[e].y), delete this._listeners[e];
+                    (this.x.removeListener(this._listeners[e].x), this.y.removeListener(this._listeners[e].y), delete this._listeners[e]);
                 }
             },
             {

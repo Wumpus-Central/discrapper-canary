@@ -15,12 +15,12 @@ let d = (e) => {
         shineSize: r.rHe.SMALL,
         className: c.seeAllPerksButton,
         onClick: () => {
-            t(!0),
+            (t(!0),
                 s.default.track(a.rMx.NITRO_HOME_NAVIGATION, {
                     current_component: n,
                     next_component: l.MQ.SEE_ALL,
                     interaction_component: 'See All Button'
-                });
+                }));
         },
         children: (0, i.jsxs)('div', {
             className: c.seeAllPerksButtonContent,

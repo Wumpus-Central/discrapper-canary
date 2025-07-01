@@ -8,5 +8,5 @@ var r = n(288138),
 let c = new a.E([o.NR, o.ZI, o.Ob, o.uc, o.m1, r.Z], s.$P.PAYMENT_FLOW_STARTED, { location: 'payment flow started' });
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    i.default.track(l.rMx.PAYMENT_FLOW_STARTED, e, t), c.trigger();
+    (i.default.track(l.rMx.PAYMENT_FLOW_STARTED, e, t), c.trigger());
 }

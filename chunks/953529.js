@@ -15,16 +15,16 @@ if (i && u(p) && (!('description' in v) || void 0 !== p().description)) {
         d = function () {
             var t = arguments.length < 1 || void 0 === arguments[0] ? void 0 : c(arguments[0]),
                 e = h(v, this) ? new p(t) : void 0 === t ? p() : p(t);
-            return '' === t && (g[e] = !0), e;
+            return ('' === t && (g[e] = !0), e);
         };
-    l(d, p), (d.prototype = v), (v.constructor = d);
+    (l(d, p), (d.prototype = v), (v.constructor = d));
     var m = 'Symbol(description detection)' === String(p('description detection')),
         y = a(v.valueOf),
         b = a(v.toString),
         w = /^Symbol\((.*)\)[^)]+$/,
         x = a(''.replace),
         S = a(''.slice);
-    f(v, 'description', {
+    (f(v, 'description', {
         configurable: !0,
         get: function () {
             var t = y(this);
@@ -41,5 +41,5 @@ if (i && u(p) && (!('description' in v) || void 0 !== p().description)) {
                 forced: !0
             },
             { Symbol: d }
-        );
+        ));
 }

@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     C5: () => u,
     CL: () => l,
     cf: () => s,
     iw: () => c
 }),
     n(997841),
-    n(642613);
+    n(642613));
 var r = n(149765),
     i = n(866442),
     a = n(606318),
@@ -47,7 +47,7 @@ function c(e, t) {
                 return a === s ? o.default.compare(t.id, n.id) : a < s ? -1 : +(a !== s);
             })
             .forEach((e, t) => {
-                (e.position = n - t), (r[e.id] = e);
+                ((e.position = n - t), (r[e.id] = e));
             }),
         r
     );

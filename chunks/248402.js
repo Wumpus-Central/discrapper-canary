@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var a,
     o = n(392711),
     s = n.n(o),
@@ -60,14 +60,14 @@ function E() {
 }
 let b = s().debounce(E, 300);
 function y() {
-    return b(), !1;
+    return (b(), !1);
 }
 class O extends (a = l.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z, _.default, h.Z, f.Z, p.Z), this.syncWith([u.Z, f.Z], y);
+        (this.waitFor(u.Z, _.default, h.Z, f.Z, p.Z), this.syncWith([u.Z, f.Z], y));
     }
     getSpeaker(e) {
-        return r !== e && ((r = e), E(!1)), null != i ? i : _.default.getId();
+        return (r !== e && ((r = e), E(!1)), null != i ? i : _.default.getId());
     }
 }
 g(O, 'displayName', 'VideoSpeakerStore');

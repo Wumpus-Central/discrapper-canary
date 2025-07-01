@@ -22,8 +22,8 @@ class s {
             if (r.oneof) {
                 let t = e[r.oneof];
                 if (t.oneofKind !== c) continue;
-                (o = t[c]), (s = !0);
-            } else (o = e[c]), (s = !1);
+                ((o = t[c]), (s = !0));
+            } else ((o = e[c]), (s = !1));
             switch (r.kind) {
                 case 'scalar':
                 case 'enum':
@@ -45,7 +45,7 @@ class s {
         !1 !== o && (!0 === o ? r.z.onWrite : o)(this.info.typeName, e, t);
     }
     mapEntry(e, t, n, o, s) {
-        e.tag(n.no, r.TD.LengthDelimited), e.fork();
+        (e.tag(n.no, r.TD.LengthDelimited), e.fork());
         let l = o;
         switch (n.K) {
             case i.wx.INT32:
@@ -56,7 +56,7 @@ class s {
                 l = Number.parseInt(o);
                 break;
             case i.wx.BOOL:
-                (0, a.hu)('true' == o || 'false' == o), (l = 'true' == o);
+                ((0, a.hu)('true' == o || 'false' == o), (l = 'true' == o));
         }
         switch ((this.scalar(e, n.K, 1, l, !0), n.V.kind)) {
             case 'scalar':
@@ -79,7 +79,7 @@ class s {
     }
     packed(e, t, n, o) {
         if (!o.length) return;
-        (0, a.hu)(t !== i.wx.BYTES && t !== i.wx.STRING), e.tag(n, r.TD.LengthDelimited), e.fork();
+        ((0, a.hu)(t !== i.wx.BYTES && t !== i.wx.STRING), e.tag(n, r.TD.LengthDelimited), e.fork());
         let [, s] = this.scalarInfo(t);
         for (let t = 0; t < o.length; t++) e[s](o[t]);
         e.join();
@@ -94,46 +94,46 @@ class s {
                 n = 'int32';
                 break;
             case i.wx.STRING:
-                (l = s || !t.length), (a = r.TD.LengthDelimited), (n = 'string');
+                ((l = s || !t.length), (a = r.TD.LengthDelimited), (n = 'string'));
                 break;
             case i.wx.BOOL:
-                (l = !1 === t), (n = 'bool');
+                ((l = !1 === t), (n = 'bool'));
                 break;
             case i.wx.UINT32:
                 n = 'uint32';
                 break;
             case i.wx.DOUBLE:
-                (a = r.TD.Bit64), (n = 'double');
+                ((a = r.TD.Bit64), (n = 'double'));
                 break;
             case i.wx.FLOAT:
-                (a = r.TD.Bit32), (n = 'float');
+                ((a = r.TD.Bit32), (n = 'float'));
                 break;
             case i.wx.INT64:
-                (l = s || o.M.from(t).isZero()), (n = 'int64');
+                ((l = s || o.M.from(t).isZero()), (n = 'int64'));
                 break;
             case i.wx.UINT64:
-                (l = s || o.p.from(t).isZero()), (n = 'uint64');
+                ((l = s || o.p.from(t).isZero()), (n = 'uint64'));
                 break;
             case i.wx.FIXED64:
-                (l = s || o.p.from(t).isZero()), (a = r.TD.Bit64), (n = 'fixed64');
+                ((l = s || o.p.from(t).isZero()), (a = r.TD.Bit64), (n = 'fixed64'));
                 break;
             case i.wx.BYTES:
-                (l = s || !t.byteLength), (a = r.TD.LengthDelimited), (n = 'bytes');
+                ((l = s || !t.byteLength), (a = r.TD.LengthDelimited), (n = 'bytes'));
                 break;
             case i.wx.FIXED32:
-                (a = r.TD.Bit32), (n = 'fixed32');
+                ((a = r.TD.Bit32), (n = 'fixed32'));
                 break;
             case i.wx.SFIXED32:
-                (a = r.TD.Bit32), (n = 'sfixed32');
+                ((a = r.TD.Bit32), (n = 'sfixed32'));
                 break;
             case i.wx.SFIXED64:
-                (l = s || o.M.from(t).isZero()), (a = r.TD.Bit64), (n = 'sfixed64');
+                ((l = s || o.M.from(t).isZero()), (a = r.TD.Bit64), (n = 'sfixed64'));
                 break;
             case i.wx.SINT32:
                 n = 'sint32';
                 break;
             case i.wx.SINT64:
-                (l = s || o.M.from(t).isZero()), (n = 'sint64');
+                ((l = s || o.M.from(t).isZero()), (n = 'sint64'));
         }
         return [a, n, s || l];
     }

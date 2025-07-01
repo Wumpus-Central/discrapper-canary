@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'apathy',
         author: 'jannik siebert (https://github.com/janniks)',
@@ -19,4 +19,4 @@
         base0E: '#4C963E',
         base0F: '#3E965B'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i,
     l,
@@ -15,7 +15,7 @@ class f extends (r = o.ZP.Store) {
         return h.has(e);
     }
 }
-(l = 'MediaPostSharePromptStore'),
+((l = 'MediaPostSharePromptStore'),
     (i = 'displayName') in f
         ? Object.defineProperty(f, i, {
               value: l,
@@ -23,7 +23,7 @@ class f extends (r = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (f[i] = l);
+        : (f[i] = l));
 let m = new f(a.Z, {
     CONNECTION_OPEN: function () {
         h = new Set();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(415506);
+(n.d(t, { Z: () => P }), n(388685), n(415506));
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -91,12 +91,12 @@ class y extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             N(this, '_copyModeTimeout', new o.V7()),
             N(this, 'state', { copyMode: c.uA3.DEFAULT }),
             N(this, 'handleCopy', (e) => {
                 let { giftCode: t, sku: n } = this.props;
-                (0, O.dM)(t, n),
+                ((0, O.dM)(t, n),
                     (0, C.JG)(
                         e,
                         () => this.setState({ copyMode: c.uA3.SUCCESS }),
@@ -104,8 +104,8 @@ class y extends r.PureComponent {
                     ),
                     this._copyModeTimeout.start(1000, () => {
                         this.setState({ copyMode: c.uA3.DEFAULT });
-                    });
-            });
+                    }));
+            }));
     }
 }
 class A extends r.PureComponent {
@@ -235,7 +235,7 @@ class A extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             N(this, '_loadedAt', null),
             N(this, 'state', {
                 isOpen: !1,
@@ -245,18 +245,18 @@ class A extends r.PureComponent {
             N(this, 'handleGenerateGiftCode', async (e) => {
                 e.stopPropagation();
                 let { skuId: t, subscriptionPlanId: n, giftStyle: i } = this.props;
-                this.setState({ isCreating: !0 }),
+                (this.setState({ isCreating: !0 }),
                     await d.Z.createGiftCode(t, n, i),
                     this.setState({
                         isCreating: !1,
                         isOpen: !0
-                    });
+                    }));
             }),
             N(this, 'handleToggleOpen', () => {
                 let { skuId: e, subscriptionPlanId: t, loadedAt: n } = this.props,
                     i = !this.state.isOpen;
-                (null == n || null == this._loadedAt || n < this._loadedAt) && i && d.Z.fetchUserGiftCodesForSKU(e, t), this.setState({ isOpen: !this.state.isOpen });
-            });
+                ((null == n || null == this._loadedAt || n < this._loadedAt) && i && d.Z.fetchUserGiftCodesForSKU(e, t), this.setState({ isOpen: !this.state.isOpen }));
+            }));
     }
 }
 let P = a.ZP.connectStores([E.Z, _.Z, b.Z, m.Z, x.Z, f.default], (e) => {

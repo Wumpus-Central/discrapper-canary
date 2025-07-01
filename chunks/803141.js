@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(539854);
+(n.d(t, { Z: () => b }), n(388685), n(539854));
 var r = n(750041),
     i = n(594174),
     o = n(131681),
@@ -37,7 +37,7 @@ function d() {
 function f(e) {
     let { local: t, settings: n } = e;
     if (!t || n.type !== s.yP.PRELOADED_USER_SETTINGS) return !1;
-    null != l && l.clear(), g();
+    (null != l && l.clear(), g());
 }
 class h extends r.Z {
     loadCache() {
@@ -57,7 +57,7 @@ class h extends r.Z {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         !(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-            null == l && (l = new a.B()), l.addWords(e);
+            (null == l && (l = new a.B()), l.addWords(e));
         })(e);
     }
     constructor() {
@@ -70,5 +70,5 @@ class h extends r.Z {
         });
     }
 }
-u(h, 'displayName', 'KeywordFilterStore'), u(h, 'LATEST_SNAPSHOT_VERSION', 2);
+(u(h, 'displayName', 'KeywordFilterStore'), u(h, 'LATEST_SNAPSHOT_VERSION', 2));
 let b = new h();

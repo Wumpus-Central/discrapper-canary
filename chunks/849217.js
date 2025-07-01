@@ -7,11 +7,11 @@ var r = n(73800),
 let s = () => {
     let { dismissShopButtonDC: e } = (0, i.Z)();
     r.useEffect(() => {
-        e(),
+        (e(),
             (0, a.un)(l.z.COLLECTIBLES_GIFTING_COACHMARK) ||
                 (0, a.EW)(l.z.COLLECTIBLES_GIFTING_COACHMARK, {
                     dismissAction: o.L.AUTO_DISMISS,
                     forceTrack: !0
-                });
+                }));
     }, [e]);
 };

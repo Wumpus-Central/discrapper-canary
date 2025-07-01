@@ -1,4 +1,4 @@
-t.d(n, { Z: () => H }), t(388685), t(539854), t(472816), t(794429);
+(t.d(n, { Z: () => H }), t(388685), t(539854), t(472816), t(794429));
 var l = t(255367),
     r = t(73800),
     i = t(120356),
@@ -32,7 +32,7 @@ function T(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -40,7 +40,7 @@ function T(e) {
             )),
             l.forEach(function (n) {
                 var l;
-                (l = t[n]),
+                ((l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
@@ -48,8 +48,8 @@ function T(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
-            });
+                        : (e[n] = l));
+            }));
     }
     return e;
 }
@@ -150,7 +150,7 @@ let D = r.memo(function () {
             G = (0, o.e7)([v.Z], () => v.Z.getActiveThreadCount(i.id, n.id)),
             W = (0, o.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(i.id, n.id)),
             F = (e) => {
-                if (!H) return e.stopPropagation(), O(i.id, n.id, r.id), !0;
+                if (!H) return (e.stopPropagation(), O(i.id, n.id, r.id), !0);
             },
             z = (e) => {
                 n.isGuildVocal()

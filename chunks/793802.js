@@ -50,7 +50,7 @@ function O(e) {
 function v(e) {
     return O(e) === d;
 }
-(t.AsyncMode = u),
+((t.AsyncMode = u),
     (t.ConcurrentMode = d),
     (t.ContextConsumer = c),
     (t.ContextProvider = l),
@@ -103,4 +103,4 @@ function v(e) {
     (t.isValidElementType = function (e) {
         return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === s || e === o || e === _ || e === p || ('object' == typeof e && null !== e && (e.$$typeof === m || e.$$typeof === h || e.$$typeof === l || e.$$typeof === c || e.$$typeof === f || e.$$typeof === E || e.$$typeof === b || e.$$typeof === y || e.$$typeof === g));
     }),
-    (t.typeOf = O);
+    (t.typeOf = O));

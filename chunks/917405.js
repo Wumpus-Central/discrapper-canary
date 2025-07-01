@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -28,7 +28,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -79,7 +79,7 @@ class v extends l.PureComponent {
                 look: a.zxk.Looks.BLANK,
                 size: a.zxk.Sizes.NONE,
                 onClick: (e) => {
-                    (0, u.v)(s.Z.RTC_PANEL, u.d.CONNECTION_STATUS), null == t || t(e);
+                    ((0, u.v)(s.Z.RTC_PANEL, u.d.CONNECTION_STATUS), null == t || t(e));
                 },
                 children: (0, r.jsx)(f.Z, {
                     text: i,
@@ -131,7 +131,7 @@ class v extends l.PureComponent {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'statusButtonRef', l.createRef()),
             g(this, 'renderPopout', (e) => (t) => {
                 var n, l;
@@ -153,7 +153,7 @@ class v extends l.PureComponent {
                           }),
                     n)
                 );
-            });
+            }));
     }
 }
 function m(e) {
@@ -168,12 +168,12 @@ function m(e) {
                         r,
                         l = {},
                         i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
             return l;
         })(e, ['quality', 'smallPing', 'largePing']);

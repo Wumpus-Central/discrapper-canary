@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(990547),
@@ -22,13 +22,13 @@ function f(e) {
             installParams: l.installParams,
             integrationTypesConfig: l.integrationTypesConfig
         }))
-        ? (0, r.jsx)(h, {
+        ? (0, r.jsx)(g, {
               application: l,
               embedUrl: n
           })
         : null;
 }
-function h(e) {
+function g(e) {
     let { application: t, embedUrl: n } = e,
         a = i.useCallback(() => {
             (0, c.h)({

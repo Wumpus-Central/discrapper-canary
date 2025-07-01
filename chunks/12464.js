@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(245364),
@@ -25,33 +25,33 @@ let p = function (e) {
                     case 'cardNumber': {
                         let e = N.getElement(a.CardNumberElement);
                         if (null == e) return;
-                        e.off('change'), e.off('focus'), e.off('blur');
+                        (e.off('change'), e.off('focus'), e.off('blur'));
                         break;
                     }
                     case 'cardExpiry': {
                         let e = N.getElement(a.CardExpiryElement);
                         if (null == e) return;
-                        e.off('change'), e.off('focus'), e.off('blur');
+                        (e.off('change'), e.off('focus'), e.off('blur'));
                         break;
                     }
                     case 'cardCvc': {
                         let e = N.getElement(a.CardCvcElement);
                         if (null == e) return;
-                        e.off('change'), e.off('focus'), e.off('blur');
+                        (e.off('change'), e.off('focus'), e.off('blur'));
                     }
                 }
         }, [N, n]),
         R = i.useCallback(
             (e) => {
-                O || e.empty || v(!0), null != p && p(e.complete), null != e.error && y(!1);
+                (O || e.empty || v(!0), null != p && p(e.complete), null != e.error && y(!1));
             },
             [O, p]
         ),
         P = i.useCallback(() => {
-            y(!0), null == h || h();
+            (y(!0), null == h || h());
         }, [h]),
         w = i.useCallback(() => {
-            y(!1), null == m || m();
+            (y(!1), null == m || m());
         }, [m]),
         D = i.useCallback(() => {
             if (null != N)
@@ -59,31 +59,31 @@ let p = function (e) {
                     case 'cardNumber': {
                         let e = N.getElement(a.CardNumberElement);
                         if (null == e) return;
-                        e.on('change', (e) => {
-                            g !== e.brand && E(e.brand), e.empty && O ? T(d.intl.string(d.t.eOIfu7)) : null != e.error ? T(d.intl.string(d.t.x4pWtL)) : T(null), R(e);
+                        (e.on('change', (e) => {
+                            (g !== e.brand && E(e.brand), e.empty && O ? T(d.intl.string(d.t.eOIfu7)) : null != e.error ? T(d.intl.string(d.t.x4pWtL)) : T(null), R(e));
                         }),
                             e.on('focus', P),
-                            e.on('blur', w);
+                            e.on('blur', w));
                         break;
                     }
                     case 'cardExpiry': {
                         let e = N.getElement(a.CardExpiryElement);
                         if (null == e) return;
-                        e.on('change', (e) => {
-                            null != e.error || (e.empty && O) ? T(d.intl.string(d.t['9/zZdn'])) : T(null), R(e);
+                        (e.on('change', (e) => {
+                            (null != e.error || (e.empty && O) ? T(d.intl.string(d.t['9/zZdn'])) : T(null), R(e));
                         }),
                             e.on('focus', P),
-                            e.on('blur', w);
+                            e.on('blur', w));
                         break;
                     }
                     case 'cardCvc': {
                         let e = N.getElement(a.CardCvcElement);
                         if (null == e) return;
-                        e.on('change', (e) => {
-                            null != e.error || (e.empty && O) ? T(d.intl.string(d.t.ro4isb)) : T(null), R(e);
+                        (e.on('change', (e) => {
+                            (null != e.error || (e.empty && O) ? T(d.intl.string(d.t.ro4isb)) : T(null), R(e));
                         }),
                             e.on('focus', P),
-                            e.on('blur', w);
+                            e.on('blur', w));
                     }
                 }
         }, [w, R, P, g, N, O, n]);

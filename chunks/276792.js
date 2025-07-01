@@ -18,7 +18,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,8 +34,8 @@ function b(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -68,7 +68,7 @@ function E(e) {
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
             y = () => {
-                (0, s.uL)(h.Z5c.APPLICATION_STORE), P();
+                ((0, s.uL)(h.Z5c.APPLICATION_STORE), P());
             };
             break;
         case l.Wc.OPEN_TIER_1_PAYMENT_MODAL:
@@ -119,7 +119,7 @@ function E(e) {
             type: 'video',
             src: N ? I.heroArtVideoLinkLightTheme : I.videoLink
         };
-    null != I.heroArtVideoSubtitles &&
+    (null != I.heroArtVideoSubtitles &&
         (x.subtitles = I.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
@@ -129,7 +129,7 @@ function E(e) {
             (x = {
                 type: 'image',
                 src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme
-            });
+            }));
     let L =
         '' !== I.modalTopPill
             ? () =>
@@ -161,13 +161,13 @@ function E(e) {
                 wrapperClassName: g.tier2Gradient,
                 size: a.zxk.Sizes.SMALL,
                 onClick: () => {
-                    c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
+                    (c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: T,
                         cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: T
                     }),
-                        y();
+                        y());
                 },
                 children: [
                     (0, r.jsx)('img', {

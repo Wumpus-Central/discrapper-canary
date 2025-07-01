@@ -14,15 +14,15 @@ function r(e, t, n) {
 function i(e) {
     return 'row' === e.type;
 }
-n.d(t, {
+(n.d(t, {
     Z: () => o,
     o: () => i
 }),
-    n(539854);
+    n(539854));
 class a {
     mergeProps(e) {
         let { sectionHeight: t, rowHeight: n, footerHeight: r, listHeaderHeight: i, paddingTop: a, paddingBottom: o, sections: s, getAnchorId: l } = e;
-        (this.sections = s), (this.sectionHeight = t), (this.rowHeight = n), (this.footerHeight = r), (this.listHeaderHeight = i), (this.uniform = 'number' == typeof n), (this.paddingTop = a), (this.paddingBottom = o), (this.getAnchorId = null != l ? l : this.getAnchorId);
+        ((this.sections = s), (this.sectionHeight = t), (this.rowHeight = n), (this.footerHeight = r), (this.listHeaderHeight = i), (this.uniform = 'number' == typeof n), (this.paddingTop = a), (this.paddingBottom = o), (this.getAnchorId = null != l ? l : this.getAnchorId));
     }
     getHeight() {
         let e = this.paddingTop + this.getListHeaderHeight(),
@@ -81,7 +81,7 @@ class a {
                 ) {
                     let n = this.getHeightForRow(e, 0);
                     for (let r = 0; r < t; r++)
-                        l(n) &&
+                        (l(n) &&
                             s.push({
                                 type: 'row',
                                 section: e,
@@ -92,10 +92,10 @@ class a {
                                 anchorId: this.getAnchorId(e, r)
                             }),
                             (a += 1),
-                            (o += 1);
+                            (o += 1));
                 } else
                     for (let n = 0; n < t; n++)
-                        l(this.getHeightForRow(e, n)) &&
+                        (l(this.getHeightForRow(e, n)) &&
                             s.push({
                                 type: 'row',
                                 section: e,
@@ -106,7 +106,7 @@ class a {
                                 anchorId: this.getAnchorId(e, n)
                             }),
                             (a += 1),
-                            (o += 1);
+                            (o += 1));
                 l(this.getHeightForFooter(e)) &&
                     s.push({
                         type: 'footer',
@@ -146,12 +146,12 @@ class a {
                         a = !0;
                         break;
                     }
-            a || (r += this.getHeightForFooter(i)), (i += 1);
+            (a || (r += this.getHeightForFooter(i)), (i += 1));
         }
         return [r, null != t ? this.getHeightForRow(e, t) : this.getHeightForSection(i)];
     }
     constructor() {
-        r(this, 'sectionHeight', 0), r(this, 'rowHeight', 0), r(this, 'footerHeight', 0), r(this, 'listHeaderHeight', 0), r(this, 'uniform', !1), r(this, 'paddingBottom', 0), r(this, 'paddingTop', 0), r(this, 'sections', []), r(this, 'getAnchorId', () => void 0);
+        (r(this, 'sectionHeight', 0), r(this, 'rowHeight', 0), r(this, 'footerHeight', 0), r(this, 'listHeaderHeight', 0), r(this, 'uniform', !1), r(this, 'paddingBottom', 0), r(this, 'paddingTop', 0), r(this, 'sections', []), r(this, 'getAnchorId', () => void 0));
     }
 }
 let o = a;

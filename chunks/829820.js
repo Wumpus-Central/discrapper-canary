@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Fe: () => O,
     Ih: () => y,
     Lz: () => v
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(846519),
@@ -28,10 +28,10 @@ function E(e) {
         s && (t !== u || n || i) && (l(!1), c.stop());
     }, [t, u, n, i, s, c]);
     let d = r.useCallback(() => {
-            l(!0), c.start(g, () => l(!1));
+            (l(!0), c.start(g, () => l(!1)));
         }, [c]),
         f = r.useCallback(() => {
-            l(!1), c.stop();
+            (l(!1), c.stop());
         }, [c]);
     return (
         r.useEffect(() => () => c.stop(), [c]),
@@ -50,7 +50,7 @@ function y(e, t, n) {
         { notPlayable: a, isCurrentUser: o, playingSameTrack: s } = i,
         { loading: l, startLoading: c, clearLoading: u } = E(i),
         _ = r.useCallback(() => {
-            c(), (0, h.Z)(i, m.kG.USER_ACTIVITY_PLAY, n).catch(u);
+            (c(), (0, h.Z)(i, m.kG.USER_ACTIVITY_PLAY, n).catch(u));
         }, [i, n, c, u]);
     return {
         label: (0, d.Z)(i, m.kG.USER_ACTIVITY_PLAY),
@@ -67,7 +67,7 @@ function O(e, t, n, i) {
         { notPlayable: s, syncingWithUser: l, syncingWithParty: u, isCurrentUser: _ } = o,
         { loading: h, startLoading: g, clearLoading: y } = E(o),
         O = r.useCallback(() => {
-            g(), (0, p.Z)(o, m.kG.USER_ACTIVITY_SYNC, n).catch(y);
+            (g(), (0, p.Z)(o, m.kG.USER_ACTIVITY_SYNC, n).catch(y));
         }, [o, n, g, y]);
     return {
         label: (0, d.Z)(o, m.kG.USER_ACTIVITY_SYNC),
@@ -83,7 +83,7 @@ function v(e, t, n) {
         { notPlayable: a, syncingWithUser: o, syncingWithParty: s, isCurrentUser: l } = i,
         { loading: c, startLoading: u, clearLoading: _ } = E(i),
         h = r.useCallback(() => {
-            u(), (0, p.Z)(i, m.kG.EMBED_SYNC, n).catch(_);
+            (u(), (0, p.Z)(i, m.kG.EMBED_SYNC, n).catch(_));
         }, [i, n, u, _]);
     return {
         label: (0, d.Z)(i, m.kG.EMBED_SYNC),

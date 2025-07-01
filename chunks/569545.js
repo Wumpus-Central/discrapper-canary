@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     DB: () => i,
     V9: () => o,
     my: () => a
 }),
     n(35282),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(70722);
 function i(e) {
     return null != e && (e.startsWith(r.lo.GUILD) || e.startsWith(r.lo.CALL));

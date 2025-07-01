@@ -21,7 +21,7 @@ class g extends (s = I.ZP.Store) {
         return e !== l ? null : i;
     }
 }
-(c = 'InteractionModalStore'),
+((c = 'InteractionModalStore'),
     (d = 'displayName') in g
         ? Object.defineProperty(g, d, {
               value: c,
@@ -29,24 +29,24 @@ class g extends (s = I.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (g[d] = c);
+        : (g[d] = c));
 let N = new g(p.Z, {
     LOGOUT: function () {
-        return (l = null), (i = null), (u = null), (a = null), (r = null), !0;
+        return ((l = null), (i = null), (u = null), (a = null), (r = null), !0);
     },
     INTERACTION_MODAL_CREATE: function (e) {
         let { nonce: t } = e;
-        return t === r && (m.Z.deleteMessage(a, u, !0), (u = null), (a = null), (r = null)), !1;
+        return (t === r && (m.Z.deleteMessage(a, u, !0), (u = null), (a = null), (r = null)), !1);
     },
     INTERACTION_IFRAME_MODAL_CREATE: function (e) {
         let { nonce: t } = e;
-        return t === r && (m.Z.deleteMessage(a, u, !0), (u = null), (a = null), (r = null)), !1;
+        return (t === r && (m.Z.deleteMessage(a, u, !0), (u = null), (a = null), (r = null)), !1);
     },
     INTERACTION_QUEUE: function (e) {
         let { messageId: t, nonce: n, data: o } = e;
         switch (o.interactionType) {
             case f.B8.APPLICATION_COMMAND:
-                return (u = t), (a = o.channelId), (r = n), !1;
+                return ((u = t), (a = o.channelId), (r = n), !1);
             case f.B8.MODAL_SUBMIT:
                 return (
                     T()(null == l || 1 === i || 2 === i, 'cannot submit multiple modals at once'),

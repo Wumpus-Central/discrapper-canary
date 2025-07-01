@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -12,20 +12,20 @@ var i = n(120356),
     p = n(674563),
     m = n(388032),
     f = n(126759);
-function h(e) {
+function g(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        h = (0, s.ZP)(t),
-        g = i(h),
+        g = (0, s.ZP)(t),
+        _ = i(g),
         {
-            avatarSrc: _,
-            eventHandlers: { onMouseEnter: b, onMouseLeave: x }
+            avatarSrc: h,
+            eventHandlers: { onMouseEnter: b, onMouseLeave: E }
         } = (0, u.m)(!0);
     return (0, r.jsx)('div', {
         onMouseEnter: b,
-        onMouseLeave: x,
+        onMouseLeave: E,
         children: (0, r.jsx)(d.Z, {
             className: l()(f.mainContainer, { [f.compact]: n }),
-            iconNode: n ? null : (0, r.jsx)(u.S, { src: _ }),
+            iconNode: n ? null : (0, r.jsx)(u.S, { src: h }),
             iconContainerClassName: f.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {
@@ -57,8 +57,8 @@ function h(e) {
                     (0, r.jsx)('div', {
                         className: l()(f.__invalid_messageContent, { [f.compact]: n }),
                         children: m.intl.format(m.t.qntXNT, {
-                            username: h.nick,
-                            usernameHook: g
+                            username: g.nick,
+                            usernameHook: _
                         })
                     })
                 ]

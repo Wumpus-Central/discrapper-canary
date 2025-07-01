@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(415506);
+(n.d(t, { Z: () => f }), n(388685), n(415506));
 var r = n(464847),
     i = n(289182),
     a = n(358085),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -81,11 +81,11 @@ let f = {
             email: n,
             staff: r
         };
-        null == (i = window.DiscordSentry) || i.getCurrentScope().setUser(a), d(a);
+        (null == (i = window.DiscordSentry) || i.getCurrentScope().setUser(a), d(a));
     },
     clearUser() {
         var e;
-        null == (e = window.DiscordSentry) || e.getCurrentScope().setUser(null), d();
+        (null == (e = window.DiscordSentry) || e.getCurrentScope().setUser(null), d());
     },
     setTags(e) {
         var t;
@@ -101,7 +101,7 @@ let f = {
         null == (n = window.DiscordSentry) ||
             n.withScope((t) => {
                 var n;
-                null != r.tags && t.setTags(r.tags), t.setExtras(r.extra), null == (n = window.DiscordSentry) || n.captureException(e);
+                (null != r.tags && t.setTags(r.tags), t.setExtras(r.extra), null == (n = window.DiscordSentry) || n.captureException(e));
             });
     },
     captureCrash(e, t) {
@@ -112,15 +112,15 @@ let f = {
             null == (n = window.DiscordSentry) ||
                 n.withScope((t) => {
                     var n;
-                    t.setExtras(a.extra),
+                    (t.setExtras(a.extra),
                         t.setTag('crash', 'true'),
                         t.setLevel('fatal'),
                         t.addEventProcessor((e) => {
                             var t, n;
                             let r = null == (n = e.exception) || null == (t = n.values) ? void 0 : t[0];
-                            return null != r && (r.mechanism = u(l({}, r.mechanism), { handled: !1 })), e;
+                            return (null != r && (r.mechanism = u(l({}, r.mechanism), { handled: !1 })), e);
                         }),
-                        (r = null == (n = window.DiscordSentry) ? void 0 : n.captureException(e));
+                        (r = null == (n = window.DiscordSentry) ? void 0 : n.captureException(e)));
                 }),
             r
         );
@@ -131,7 +131,7 @@ let f = {
         null == (n = window.DiscordSentry) ||
             n.withScope((t) => {
                 var n;
-                null != r.tags && t.setTags(r.tags), t.setExtras(r.extra), null == (n = window.DiscordSentry) || n.captureMessage(e);
+                (null != r.tags && t.setTags(r.tags), t.setExtras(r.extra), null == (n = window.DiscordSentry) || n.captureMessage(e));
             });
     },
     addBreadcrumb(e) {

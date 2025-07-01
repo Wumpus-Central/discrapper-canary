@@ -54,7 +54,7 @@ function N(e) {
                           innerClassName: S.viewPremiumPerksButtonInner,
                           buttonShineClassName: S.viewPremiumPerksButtonShine,
                           onClick: () => {
-                              s({ action: y.yM.VIEW_PREMIUM_PERKS }), (0, h.uL)(O.Z5c.APPLICATION_STORE), null == i || i();
+                              (s({ action: y.yM.VIEW_PREMIUM_PERKS }), (0, h.uL)(O.Z5c.APPLICATION_STORE), null == i || i());
                           },
                           children: [
                               (0, r.jsx)(c.SrA, {
@@ -66,7 +66,7 @@ function N(e) {
                       })
                     : (0, r.jsx)(p.Z, {
                           onClick: () => {
-                              s({ action: y.yM.GET_PREMIUM }), null == i || i();
+                              (s({ action: y.yM.GET_PREMIUM }), null == i || i());
                           },
                           textOptions: { textOverride: T.intl.string(T.t.x6rkDg) },
                           subscriptionTier: I.Si.TIER_2,
@@ -90,12 +90,12 @@ function N(e) {
                     size: t ? c.zxk.Sizes.TINY : c.zxk.Sizes.SMALL,
                     className: S.upsellButton,
                     onClick: () => {
-                        (0, d.mK)({
+                        ((0, d.mK)({
                             analyticsLocations: a,
                             openInLayer: !1,
                             analyticsSource: o
                         }),
-                            null == i || i();
+                            null == i || i());
                     }
                 })
             })

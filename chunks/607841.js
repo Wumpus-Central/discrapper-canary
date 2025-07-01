@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(539854), n(388685);
+(n.d(t, { Z: () => R }), n(539854), n(388685));
 var r = n(147913),
     i = n(43267),
     a = n(933557),
@@ -69,7 +69,7 @@ function O(e, t) {
     if (null != p) {
         let e = (0, a.F6)(p, d.default, c.Z, !0),
             t = (0, a.F6)(p, d.default, c.Z, !1);
-        _.push(e), _.push(t), u.push(e);
+        (_.push(e), _.push(t), u.push(e));
     }
     null != t && (_.push(t.name), u.push(t.name));
     let m = s + (u.length > 0 ? ' ('.concat(u.join(', '), ')') : ''),
@@ -146,20 +146,18 @@ function T(e) {
 }
 function S() {
     if (!g()) return;
-    let e = [],
-        t = s.Z.getGuilds();
-    for (let n in t) e.push(I(t[n]));
-    let n = [],
-        r = o.Z.getMutablePrivateChannels();
-    for (let e in r) {
-        let t = r[e];
-        n.push(O(t));
+    let e = s.Z.getGuildsArray().map((e) => I(e)),
+        t = [],
+        n = o.Z.getMutablePrivateChannels();
+    for (let e in n) {
+        let r = n[e];
+        t.push(O(r));
     }
-    e.push({
+    (e.push({
         id: h.ME,
-        items: n
+        items: t
     }),
-        _.Z.indexDomains(e);
+        _.Z.indexDomains(e));
 }
 function A(e) {
     let t = o.Z.getDMChannelFromUserId(e);
@@ -181,19 +179,19 @@ function N(e) {
             else {
                 let i = v(e),
                     a = [o];
-                t.push({
+                (t.push({
                     id: n,
                     items: a,
                     defaultThumbnailURL: i
                 }),
-                    (r[n] = a);
+                    (r[n] = a));
             }
         } else n.push(a.id);
-    t.length > 0 && _.Z.indexDomains(t), n.length > 0 && _.Z.deleteSearchItems(n);
+    (t.length > 0 && _.Z.indexDomains(t), n.length > 0 && _.Z.deleteSearchItems(n));
 }
 class C extends r.Z {
     handleInit() {
-        T(u.Z.getCurrentlySelectedChannelId()), E() && _.Z.clearSearchIndex(), g() && S();
+        (T(u.Z.getCurrentlySelectedChannelId()), E() && _.Z.clearSearchIndex(), g() && S());
     }
     handleLogout() {
         E() && _.Z.clearSearchIndex();
@@ -249,7 +247,7 @@ class C extends r.Z {
         A(t.id);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'actions', {
                 POST_CONNECTION_OPEN: this.handleInit,
                 LOGOUT: this.handleLogout,
@@ -267,7 +265,7 @@ class C extends r.Z {
                 THREAD_DELETE: this.handleChannelDelete,
                 THREAD_UPDATE: this.handleThreadUpdate,
                 USER_UPDATE: this.handleUserUpdate
-            });
+            }));
     }
 }
 let R = new C();

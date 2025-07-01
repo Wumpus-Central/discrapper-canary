@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(73800),
     i = n(392711),
     a = n(442837),
@@ -21,7 +21,7 @@ function f(e, t) {
         h = (0, s.Aq)();
     return (
         r.useEffect(() => {
-            if (t) return n.addEventListener('blur', e), () => n.removeEventListener('blur', e);
+            if (t) return (n.addEventListener('blur', e), () => n.removeEventListener('blur', e));
             function e() {
                 f && (h.dispatch(u.CkL.POPOUT_CLOSE), c.S.dispatch(u.CkL.CONTEXT_MENU_CLOSE));
             }
@@ -41,7 +41,7 @@ function f(e, t) {
                 null == a || a.addEventListener('focusout', s),
                 (null == (r = n.document.activeElement) ? void 0 : r.tagName) === 'IFRAME' || o || null == a || a.focus(),
                 () => {
-                    null == a || a.removeEventListener('focusout', s), (o = !0);
+                    (null == a || a.removeEventListener('focusout', s), (o = !0));
                 }
             );
         }, [t, _, i, e, n, f]),

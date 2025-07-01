@@ -198,12 +198,12 @@ async function T(e) {
         });
     } catch (e) {
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL',
                 guildId: t,
                 errors: e.body
             }),
-            e)
+            e
         );
     }
 }

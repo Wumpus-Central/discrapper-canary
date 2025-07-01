@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(268146),
@@ -48,14 +48,14 @@ function f(e) {
                         color: o.zxk.Colors.CUSTOM,
                         size: o.zxk.Sizes.ICON,
                         onClick: () => {
-                            f({
+                            (f({
                                 type: 'set_selected_source',
                                 source: null
                             }),
                                 f({
                                     type: 'set_step',
                                     step: 'source_select'
-                                });
+                                }));
                         },
                         className: u.backButton,
                         children: (0, r.jsx)(o.j9r, {

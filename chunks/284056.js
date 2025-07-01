@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Z: () => C,
     _: () => g._
 }),
     n(953529),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(392711),
@@ -39,12 +39,12 @@ class j extends r.PureComponent {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
     componentWillUnmount() {
-        this._initTimeout.stop(), this._silenceTimeout.stop(), this._micTestStop(), p.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, this.handleVoiceActivity);
+        (this._initTimeout.stop(), this._silenceTimeout.stop(), this._micTestStop(), p.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, this.handleVoiceActivity));
     }
     _micTestStart() {
         let { isVoiceConnected: e, inputDeviceName: t, inputVolume: n, outputDeviceName: i, outputVolume: r, inputMode: s, vadAutoThreshold: l, vadThreshold: a, location: o, isDeafened: c } = this.props,
             d = !1;
-        e && !c && (u.Z.toggleSelfDeaf(), (d = !0)),
+        (e && !c && (u.Z.toggleSelfDeaf(), (d = !0)),
             u.Z.setLoopback('mic_test', !0),
             (this._micTestStartTime = Date.now()),
             this.setState({
@@ -61,7 +61,7 @@ class j extends r.PureComponent {
                 input_sensitivity_is_automatic: l,
                 input_sensitivity_threshold: Math.round(a),
                 location: o
-            });
+            }));
     }
     _micTestStop() {
         let { didDeafenUser: e, isMicTesting: t } = this.state,
@@ -150,7 +150,7 @@ class j extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             E(this, '_initTimeout', new c.V7()),
             E(this, '_silenceTimeout', new c.V7()),
             E(this, '_messageTimeout', new c.V7()),
@@ -167,22 +167,22 @@ class j extends r.PureComponent {
             E(this, 'handleVoiceActivity', (e) => {
                 let { isMicTesting: t } = this.state;
                 if (t && e <= -100) {
-                    this._silenceTimeout.isStarted() ||
+                    (this._silenceTimeout.isStarted() ||
                         this._silenceTimeout.start(2000, () => {
                             this.setState({ isDetectingInput: !1 });
                         }),
-                        this.setState({ volume: -100 });
+                        this.setState({ volume: -100 }));
                     return;
                 }
-                this._silenceTimeout.stop(),
+                (this._silenceTimeout.stop(),
                     this.setState({
                         volume: e,
                         isDetectingInput: !0
-                    });
+                    }));
             }),
             E(this, 'handleToggleMicTest', () => {
                 this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
-            });
+            }));
     }
 }
 function C(e) {
@@ -231,7 +231,7 @@ function C(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     i = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -239,7 +239,7 @@ function C(e) {
                     )),
                     i.forEach(function (t) {
                         E(e, t, n[t]);
-                    });
+                    }));
             }
             return e;
         })(

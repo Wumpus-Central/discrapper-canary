@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     MM: () => F,
     Yn: () => Y,
     ZP: () => W,
     eS: () => z
 }),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -45,7 +45,7 @@ function B(e) {
         { subscription: n, renewalInvoicePreview: r, fractionalPremiumInfo: s, fromStandaloneBillingPage: a = !0, className: c } = e,
         d = (0, u.e7)([O.default], () => {
             let e = O.default.getCurrentUser();
-            return o()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
+            return (o()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e);
         });
     if (0 === (0, T.uV)(n.additionalPlans)) return null;
     let { status: m } = n,

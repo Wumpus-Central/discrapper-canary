@@ -19,7 +19,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function v(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -35,8 +35,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -68,15 +68,15 @@ function j(e) {
         k = a.useRef(null),
         M = (0, d.Z)(k),
         Z = () => {
-            O(void 0), S(void 0);
+            (O(void 0), S(void 0));
         },
         I = (e) => (t) => {
             let { emoji: n, willClose: l } = t,
                 a = (null == n ? void 0 : n.id) == null;
-            Z(), a ? O(null == n ? void 0 : n.optionallyDiverseSequence) : (C && O(null == n ? void 0 : n.name), S(null == n ? void 0 : n.id)), l && e();
+            (Z(), a ? O(null == n ? void 0 : n.optionallyDiverseSequence) : (C && O(null == n ? void 0 : n.name), S(null == n ? void 0 : n.id)), l && e());
         },
         T = (e) => {
-            e.stopPropagation(), Z();
+            (e.stopPropagation(), Z());
         },
         R = a.useMemo(() => {
             let e = null != j && '' !== j,

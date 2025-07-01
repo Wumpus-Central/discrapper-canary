@@ -23,7 +23,7 @@ function u(e, t, n) {
     );
 }
 var d = (function (e) {
-    return (e.WindowVisibilityChanged = 'window-visibility-changed'), (e.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed'), e;
+    return ((e.WindowVisibilityChanged = 'window-visibility-changed'), (e.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed'), e);
 })({});
 class f extends r.Z {
     isIncomingVideoEnabled() {
@@ -34,10 +34,10 @@ class f extends r.Z {
     }
     setIncomingVideoEnabled(e) {
         let t = this.incomingVideoEnabled !== e;
-        (this.incomingVideoEnabled = e), t && (this.logger.info('Incoming video enabled changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)), (this.lastEnabledChange = performance.now()), this.emit('incoming-video-enabled-changed', this.incomingVideoEnabled));
+        ((this.incomingVideoEnabled = e), t && (this.logger.info('Incoming video enabled changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)), (this.lastEnabledChange = performance.now()), this.emit('incoming-video-enabled-changed', this.incomingVideoEnabled)));
     }
     constructor() {
-        super(),
+        (super(),
             u(this, 'disableVideoTimer', new i.V7()),
             u(this, 'discordVisible', !0),
             u(this, 'incomingVideoEnabled', !0),
@@ -56,7 +56,7 @@ class f extends r.Z {
             }),
             a.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.update),
             a.Z.subscribe('APP_STATE_UPDATE', this.update),
-            s.Z.addOnPipModeChangedListener(this.update);
+            s.Z.addOnPipModeChangedListener(this.update));
     }
 }
 let _ = new f();

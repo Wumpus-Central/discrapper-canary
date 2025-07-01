@@ -18,12 +18,12 @@ function c(e) {
                         a,
                         r = {},
                         i = Object.keys(e);
-                    for (a = 0; a < i.length; a++) (t = i[a]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+                    for (a = 0; a < i.length; a++) ((t = i[a]), n.indexOf(t) >= 0 || (r[t] = e[t]));
                     return r;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < i.length; a++) (t = i[a]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+                for (a = 0; a < i.length; a++) ((t = i[a]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
             }
             return r;
         })(e, ['application', 'onCancel', 'onClose', 'onConfirm']);
@@ -65,14 +65,14 @@ function c(e) {
                             (0, a.jsx)(r.zxk, {
                                 size: r.zxk.Sizes.LARGE,
                                 onClick: () => {
-                                    d(), c();
+                                    (d(), c());
                                 },
                                 children: o.intl.string(o.t['3PatS0'])
                             }),
                             (0, a.jsx)(r.zxk, {
                                 size: r.zxk.Sizes.LARGE,
                                 onClick: () => {
-                                    t(), c();
+                                    (t(), c());
                                 },
                                 color: r.zxk.Colors.PRIMARY,
                                 children: o.intl.string(o.t['ETE/oK'])

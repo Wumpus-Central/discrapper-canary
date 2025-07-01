@@ -22,7 +22,7 @@ function b(e) {
         v = () => {
             if (!O) return y;
             let e = (e) => {
-                e.stopPropagation(), t.isGuildStageVoice() ? (0, f.Cq)(t) : (l.default.selectVoiceChannel(t.id), (0, u.Kh)(t.id)), null == i || i({ action: 'OPEN_VOICE_CHANNEL' }), null == b || b();
+                (e.stopPropagation(), t.isGuildStageVoice() ? (0, f.Cq)(t) : (l.default.selectVoiceChannel(t.id), (0, u.Kh)(t.id)), null == i || i({ action: 'OPEN_VOICE_CHANNEL' }), null == b || b());
             };
             return (0, r.jsx)(s.P3F, {
                 className: a()(E.clickableText, E.inline),
@@ -33,7 +33,7 @@ function b(e) {
         I = () => {
             if (null == n) return null;
             let e = (e) => {
-                e.stopPropagation(), (0, d.X)(n.id), null == i || i({ action: 'OPEN_VOICE_GUILD' }), null == b || b();
+                (e.stopPropagation(), (0, d.X)(n.id), null == i || i({ action: 'OPEN_VOICE_GUILD' }), null == b || b());
             };
             return (0, r.jsx)(p.Z, {
                 variant: 'text-xs/normal',

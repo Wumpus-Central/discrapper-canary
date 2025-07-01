@@ -16,7 +16,7 @@ class c extends (l = a.ZP.Store) {
 function u(e) {
     s = e.requiredAction;
 }
-(i = 'UserRequiredActionStore'),
+((i = 'UserRequiredActionStore'),
     (r = 'displayName') in c
         ? Object.defineProperty(c, r, {
               value: i,
@@ -24,7 +24,7 @@ function u(e) {
               configurable: !0,
               writable: !0
           })
-        : (c[r] = i);
+        : (c[r] = i));
 let d = new c(o.Z, {
     CONNECTION_OPEN: u,
     USER_REQUIRED_ACTION_UPDATE: u

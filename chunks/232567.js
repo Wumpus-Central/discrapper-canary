@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     In: () => b,
     Lr: () => m,
     PR: () => E,
@@ -6,7 +6,7 @@ n.d(t, {
     k: () => h,
     mB: () => g
 }),
-    n(997841);
+    n(997841));
 var r = n(512722),
     i = n.n(r),
     a = n(525769),
@@ -113,7 +113,7 @@ async function b(e) {
             signal: d,
             rejectWithError: !0
         });
-        null == f || f(c.body, a),
+        (null == f || f(c.body, a),
             l.Z.dispatch({
                 type: 'USER_UPDATE',
                 user: c.body.user
@@ -129,10 +129,10 @@ async function b(e) {
                     type: 'GUILD_MEMBER_PROFILE_UPDATE',
                     guildId: a,
                     guildMember: c.body.guild_member
-                });
+                }));
     } catch (t) {
         throw (
-            (null != t && (null == t ? void 0 : t.body) != null && p.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
+            null != t && (null == t ? void 0 : t.body) != null && p.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
             l.Z.dispatch({
                 type: 'USER_PROFILE_FETCH_FAILURE',
                 apiError: new c.Hx(t),
@@ -140,7 +140,7 @@ async function b(e) {
                 userId: e,
                 guildId: a
             }),
-            t)
+            t
         );
     }
 }
@@ -163,12 +163,12 @@ async function y(e, t) {
         });
     } catch (t) {
         throw (
-            ((null == t ? void 0 : t.body) != null && p.warn('fetchMutualFriends error: '.concat(t.body.code, ' - ').concat(t.body.message)),
+            (null == t ? void 0 : t.body) != null && p.warn('fetchMutualFriends error: '.concat(t.body.code, ' - ').concat(t.body.message)),
             l.Z.dispatch({
                 type: 'MUTUAL_FRIENDS_FETCH_FAILURE',
                 userId: e
             }),
-            t)
+            t
         );
     }
 }

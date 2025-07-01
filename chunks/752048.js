@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,17 +49,17 @@ function m() {
 }
 function g(e) {
     let { affineUsers: t } = e;
-    (p.lastFetched = Date.now()), (f = !1), (p.userAffinities = t), h();
+    ((p.lastFetched = Date.now()), (f = !1), (p.userAffinities = t), h());
 }
 function E() {
     f = !1;
 }
 function b() {
-    (p = c({}, _)), (d = new Map()), (f = !1);
+    ((p = c({}, _)), (d = new Map()), (f = !1));
 }
 class y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(o.Z), null != e && ((p.userAffinities = e.userAffinities), (p.lastFetched = e.lastFetched), h()), this.syncWith([o.Z], h);
+        (this.waitFor(o.Z), null != e && ((p.userAffinities = e.userAffinities), (p.lastFetched = e.lastFetched), h()), this.syncWith([o.Z], h));
     }
     shouldFetch() {
         if (!f) return Date.now() - p.lastFetched > s.K;
@@ -88,7 +88,7 @@ class y extends (r = i.ZP.PersistedStore) {
         return (null != (n = null == (t = d.get(e)) ? void 0 : t.vcProbability) ? n : 0) > u;
     }
 }
-l(y, 'displayName', 'UserAffinitiesV2Store'), l(y, 'persistKey', 'UserAffinitiesStoreV2');
+(l(y, 'displayName', 'UserAffinitiesV2Store'), l(y, 'persistKey', 'UserAffinitiesStoreV2'));
 let O = new y(a.Z, {
     LOAD_USER_AFFINITIES_V2: m,
     LOAD_USER_AFFINITIES_V2_SUCCESS: g,

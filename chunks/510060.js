@@ -42,7 +42,7 @@ class o {
         };
     }
     constructor({ minWidth: e, maxWidth: t, gap: n }) {
-        a(this, 'minWidth', void 0), a(this, 'maxWidth', void 0), a(this, 'gap', void 0), i()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
+        (a(this, 'minWidth', void 0), a(this, 'maxWidth', void 0), a(this, 'gap', void 0), i()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n));
     }
 }
 let c = {

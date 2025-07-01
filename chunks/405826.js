@@ -1,4 +1,4 @@
-n.d(t, { N: () => v }), n(704826), n(35282), n(388685);
+(n.d(t, { N: () => v }), n(704826), n(35282), n(388685));
 var r = n(623279),
     i = n(392711),
     a = n.n(i),
@@ -77,11 +77,11 @@ class E {
         m.replaceMisspelling(e);
     }
     constructor(e) {
-        _(this, 'languageDetector', void 0), _(this, 'regionPreference', void 0), _(this, '_enabled', !0), _(this, 'misspelledWord', ''), _(this, 'corrections', []);
+        (_(this, 'languageDetector', void 0), _(this, 'regionPreference', void 0), _(this, '_enabled', !0), _(this, 'misspelledWord', ''), _(this, 'corrections', []));
         let [t, n] = c.default.locale.split('-');
         this.regionPreference = n;
         let r = this.getAvailableLanguages(e);
-        (this.languageDetector = new d.Z(t, (n) => {
+        ((this.languageDetector = new d.Z(t, (n) => {
             let i = ''.concat(n, '-').concat(this.regionPreference);
             if (-1 !== e.indexOf(i)) this.setLocale(i);
             else {
@@ -91,8 +91,8 @@ class E {
             }
         })),
             m.on('spellcheck-result', (e, t) => {
-                (this.misspelledWord = null != e ? e : ''), (this.corrections = null != t ? t : []);
-            });
+                ((this.misspelledWord = null != e ? e : ''), (this.corrections = null != t ? t : []));
+            }));
     }
 }
 let b = a().debounce((e, t) => {
@@ -108,5 +108,5 @@ function O(e) {
 async function v() {
     var e;
     let t = new E((null != (e = await m.getAvailableDictionaries()) ? e : []).map(g).filter(u.lm));
-    return y(t), t;
+    return (y(t), t);
 }

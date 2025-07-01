@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(73800),
     i = n(881052),
     l = n(53365);
@@ -7,7 +7,7 @@ function s(e) {
         [s, a] = r.useState(),
         [o, c] = r.useState(),
         d = r.useCallback(async (e) => {
-            n(!0), a(void 0);
+            (n(!0), a(void 0));
             try {
                 let t = await l.wZ(e);
                 c(t);

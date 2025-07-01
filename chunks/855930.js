@@ -39,7 +39,7 @@ let s = new a.Z({
             }
             o *= 60;
         }
-        return i < 0 && ((o += 180), (i = Math.abs(i))), o >= 360 && (o -= 360), [o, 100 * i, 100 * c];
+        return (i < 0 && ((o += 180), (i = Math.abs(i))), o >= 360 && (o -= 360), [o, 100 * i, 100 * c]);
     },
     toBase: (e) => {
         let [t, r, a] = e;
@@ -48,7 +48,7 @@ let s = new a.Z({
                 s = r * Math.min(a, 1 - a);
             return a - s * Math.max(-1, Math.min(n - 3, 9 - n, 1));
         }
-        return (t %= 360) < 0 && (t += 360), (r /= 100), (a /= 100), [n(0), n(8), n(4)];
+        return ((t %= 360) < 0 && (t += 360), (r /= 100), (a /= 100), [n(0), n(8), n(4)]);
     },
     formats: {
         hsl: {

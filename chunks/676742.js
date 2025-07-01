@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(73800),
     i = n(846519),
     a = n(864106),
@@ -16,7 +16,7 @@ function l(e) {
                 let c = 1000 * e.expiresAt + o.Cm - Date.now();
                 if (!r && c > 0) {
                     let e = new i.V7();
-                    e.start(Math.min(s, c), () => t()), (l.current = e);
+                    (e.start(Math.min(s, c), () => t()), (l.current = e));
                 }
             };
             return (

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Yk: () => I,
     ZP: () => S
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -34,7 +34,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,11 +50,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -76,7 +76,7 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -86,7 +86,7 @@ function O(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let v = Object.freeze({
@@ -104,7 +104,7 @@ let v = Object.freeze({
     FLASH_DURATION_PERCENT: 0.08
 });
 var I = (function (e) {
-    return (e.PREMIUM_ACTIVATED = 'PREMIUM_ACTIVATED'), (e.PREMIUM_UPDATED = 'PREMIUM_UPDATED'), (e.PREMIUM_UPGRADED = 'PREMIUM_UPGRADED'), (e.GUILD_BOOST_APPLIED = 'GUILD_BOOST_APPLIED'), (e.PREMIUM_PAYMENT_STARTED = 'PREMIUM_PAYMENT_STARTED'), e;
+    return ((e.PREMIUM_ACTIVATED = 'PREMIUM_ACTIVATED'), (e.PREMIUM_UPDATED = 'PREMIUM_UPDATED'), (e.PREMIUM_UPGRADED = 'PREMIUM_UPGRADED'), (e.GUILD_BOOST_APPLIED = 'GUILD_BOOST_APPLIED'), (e.PREMIUM_PAYMENT_STARTED = 'PREMIUM_PAYMENT_STARTED'), e);
 })({});
 class T extends (r = a.PureComponent) {
     componentDidMount() {
@@ -332,7 +332,7 @@ class T extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e), m(this, 'animation', new l.Z.Value(0));
+        (super(...e), m(this, 'animation', new l.Z.Value(0)));
     }
 }
 function S(e) {
@@ -349,4 +349,4 @@ function S(e) {
         })
     );
 }
-m(T, 'Types', I), (S.Types = I);
+(m(T, 'Types', I), (S.Types = I));

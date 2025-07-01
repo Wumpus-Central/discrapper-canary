@@ -1,4 +1,4 @@
-n.d(t, { default: () => N }), n(388685);
+(n.d(t, { default: () => N }), n(388685));
 var r = n(255367),
     o = n(73800),
     l = n(481060),
@@ -20,17 +20,17 @@ function g(e) {
         [b, v] = o.useState(!1);
     o.useEffect(() => a.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT), []);
     let O = async (e) => {
-        e.preventDefault(), v(!0), S(''), C('');
+        (e.preventDefault(), v(!0), S(''), C(''));
         try {
-            await (0, i.S2)({
+            (await (0, i.S2)({
                 email: t,
                 password: N
             }),
                 v(!1),
-                m();
+                m());
         } catch (e) {
             var n, r;
-            (null == e || null == (n = e.body) ? void 0 : n.email) && S(e.body.email), (null == e || null == (r = e.body) ? void 0 : r.password) && C(e.body.password), v(!1);
+            ((null == e || null == (n = e.body) ? void 0 : n.email) && S(e.body.email), (null == e || null == (r = e.body) ? void 0 : r.password) && C(e.body.password), v(!1));
         }
     };
     return (0, r.jsxs)('div', {
@@ -98,7 +98,7 @@ function g(e) {
                                 look: l.zxk.Looks.LINK,
                                 size: l.zxk.Sizes.NONE,
                                 onClick: () => {
-                                    s.Z.logout('claim_account_modal'), f();
+                                    (s.Z.logout('claim_account_modal'), f());
                                 },
                                 children: p.intl.string(p.t['2jxGen'])
                             })
@@ -151,7 +151,7 @@ function S(e) {
                               color: l.zxk.Colors.BRAND,
                               size: l.zxk.Sizes.LARGE,
                               onClick: function () {
-                                  window.open((0, m.t3)(), '_blank'),
+                                  (window.open((0, m.t3)(), '_blank'),
                                       u.default.track(f.rMx.DOWNLOAD_APP, {
                                           platform: (0, m.DW)(),
                                           ptb: !1,
@@ -159,7 +159,7 @@ function S(e) {
                                           has_e_mail: !0,
                                           referring_location: 'Claim Modal',
                                           qr_code: !1
-                                      });
+                                      }));
                               },
                               children: p.intl.string(p.t.ygArIS)
                           })

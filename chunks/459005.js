@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     JV: () => s,
     aA: () => l,
     mA: () => _,
     ug: () => o
 }),
-    n(388685);
+    n(388685));
 var r = n(392711);
 function i(e, t, n) {
     return (
@@ -23,7 +23,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,18 +31,18 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 var o = (function (e) {
-        return (e.LONGER_DISPATCH = 'longer_dispatch'), (e.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = 'exceeded_max_consecutive_flushes'), (e.FIRED_DUE_TO_MAX_TIMEOUT = 'fired_due_to_max_timeout'), (e.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED = 'skip_idle_callback_due_to_backgrounded'), e;
+        return ((e.LONGER_DISPATCH = 'longer_dispatch'), (e.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = 'exceeded_max_consecutive_flushes'), (e.FIRED_DUE_TO_MAX_TIMEOUT = 'fired_due_to_max_timeout'), (e.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED = 'skip_idle_callback_due_to_backgrounded'), e);
     })({}),
     s = (function (e) {
-        return (e.TIME_TO_FIRE_IDLE_CALLBACK = 'time_to_fire_idle_callback'), (e.TIME_TO_QUEUE_EMPTY = 'time_to_flush_all_work'), (e.TIME_OVER_DEADLINE = 'time_over_deadline'), (e.DEADLINE_INITIAL_TIME_REMAINING = 'initial_time_of_deadline'), e;
+        return ((e.TIME_TO_FIRE_IDLE_CALLBACK = 'time_to_fire_idle_callback'), (e.TIME_TO_QUEUE_EMPTY = 'time_to_flush_all_work'), (e.TIME_OVER_DEADLINE = 'time_over_deadline'), (e.DEADLINE_INITIAL_TIME_REMAINING = 'initial_time_of_deadline'), e);
     })({}),
     l = (function (e) {
-        return (e.COUNT_DISPATCHES_LEFT_AFTER_YIELD = 'count_dispatches_left_after_yield'), (e.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = 'count_flush_before_queue_empty'), (e.COUNT_INITIAL_DISPATCHS_LENGTH = 'count_initial_dispatches_length'), e;
+        return ((e.COUNT_DISPATCHES_LEFT_AFTER_YIELD = 'count_dispatches_left_after_yield'), (e.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = 'count_flush_before_queue_empty'), (e.COUNT_INITIAL_DISPATCHS_LENGTH = 'count_initial_dispatches_length'), e);
     })({});
 let c = Object.freeze({
         time_to_fire_idle_callback: null,
@@ -69,7 +69,7 @@ let c = Object.freeze({
     });
 class _ {
     reset() {
-        (this._timeTracking = (0, r.cloneDeep)(c)), (this._timingStats = (0, r.cloneDeep)(u)), (this._measurements = (0, r.cloneDeep)(d)), (this._eventCounts = (0, r.cloneDeep)(f));
+        ((this._timeTracking = (0, r.cloneDeep)(c)), (this._timingStats = (0, r.cloneDeep)(u)), (this._measurements = (0, r.cloneDeep)(d)), (this._eventCounts = (0, r.cloneDeep)(f)));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -86,7 +86,7 @@ class _ {
         let t = this._timeTracking[e];
         if (null == t) return;
         let n = performance.now() - t;
-        this._storeTimeValue(e, n), (this._timeTracking[e] = null);
+        (this._storeTimeValue(e, n), (this._timeTracking[e] = null));
     }
     timeTrack(e, t) {
         this._enabled && this._storeTimeValue(e, t);
@@ -108,23 +108,23 @@ class _ {
     generateTelemetry() {
         let e = Object.entries(this._timingStats).reduce((e, t) => {
                 let [n, [r]] = t;
-                return (e['avg_'.concat(n)] = ''.concat(r.toFixed(2), 'ms')), e;
+                return ((e['avg_'.concat(n)] = ''.concat(r.toFixed(2), 'ms')), e);
             }, {}),
             t = Object.entries(this._measurements).reduce((e, t) => {
                 let [n, [r]] = t;
-                return (e['avg_'.concat(n)] = ''.concat(r.toFixed(2))), e;
+                return ((e['avg_'.concat(n)] = ''.concat(r.toFixed(2))), e);
             }, {});
         return a(
             {},
             Object.entries(this._eventCounts).reduce((e, t) => {
                 let [n, r] = t;
-                return (e['count_'.concat(n)] = ''.concat(r)), e;
+                return ((e['count_'.concat(n)] = ''.concat(r)), e);
             }, {}),
             e,
             t
         );
     }
     constructor() {
-        i(this, '_timeTracking', (0, r.cloneDeep)(c)), i(this, '_timingStats', (0, r.cloneDeep)(u)), i(this, '_measurements', (0, r.cloneDeep)(d)), i(this, '_eventCounts', (0, r.cloneDeep)(f)), i(this, '_enabled', !1);
+        (i(this, '_timeTracking', (0, r.cloneDeep)(c)), i(this, '_timingStats', (0, r.cloneDeep)(u)), i(this, '_measurements', (0, r.cloneDeep)(d)), i(this, '_eventCounts', (0, r.cloneDeep)(f)), i(this, '_enabled', !1));
     }
 }

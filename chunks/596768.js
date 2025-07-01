@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(642613);
+(n.d(t, { Z: () => T }), n(388685), n(642613));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -9,19 +9,19 @@ var a = n(255367),
     d = n.n(c),
     u = n(442837),
     m = n(481060),
-    p = n(570140),
+    x = n(570140),
     h = n(665149),
-    x = n(55935),
+    p = n(55935),
     b = n(120816),
     f = n(31336),
     v = n(257785),
-    _ = n(484036),
+    j = n(484036),
     g = n(681619),
-    j = n(621060),
+    _ = n(621060),
     y = n(388032),
     C = n(459100),
-    N = n(616257);
-let O = [
+    O = n(616257);
+let N = [
         {
             key: 'id',
             cellClassName: C.eventColumn,
@@ -51,7 +51,7 @@ let O = [
         {
             id: 'details',
             name: 'Details',
-            group: j.v0.NONE,
+            group: _.v0.NONE,
             render: (e) => {
                 let {
                         loggedTrigger: { experimentId: t, descriptor: n, exposureType: r, excluded: l, timestamp: s, location: o, previouslyTracked: c }
@@ -60,7 +60,7 @@ let O = [
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(h.ZP, {
-                            className: i()(N.headerBar, C.subPanelHeaderBar),
+                            className: i()(O.headerBar, C.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(h.ZP.Icon, {
                                     icon: m.IeX,
@@ -76,8 +76,8 @@ let O = [
                                     name: 'Timestamp (local)',
                                     children: (0, a.jsx)('time', {
                                         dateTime: s.toISOString(),
-                                        title: (0, x.vc)(u, 'LLLL'),
-                                        children: (0, x.Y4)(u)
+                                        title: (0, p.vc)(u, 'LLLL'),
+                                        children: (0, p.Y4)(u)
                                     })
                                 }),
                                 'guild' === n.type &&
@@ -127,17 +127,17 @@ function T() {
         s = r.useMemo(() => l.filter((t) => 0 === e.length || o()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = r.useState(void 0),
         h = s.find((e) => e.key === c),
-        { TabBar: x, renderSelectedTab: v } = (0, j.ZP)({ tabs: E }, []),
+        { TabBar: p, renderSelectedTab: v } = (0, _.ZP)({ tabs: E }, []),
         T = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
         S = r.useCallback((e) => {
-            p.Z.dispatch({
+            x.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
             });
         }, []);
     return (0, a.jsxs)('div', {
         ref: n,
-        className: i()(N.panel, C.panel),
+        className: i()(O.panel, C.panel),
         children: [
             (0, a.jsxs)('div', {
                 className: C.toolbar,
@@ -175,17 +175,17 @@ function T() {
                 ]
             }),
             (0, a.jsx)(g.Z, {
-                columns: O,
+                columns: N,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)
             }),
             null != h &&
-                (0, a.jsxs)(_.Z, {
+                (0, a.jsxs)(j.Z, {
                     className: C.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
-                    children: [(0, a.jsx)(x, {}), v({ loggedTrigger: h })]
+                    children: [(0, a.jsx)(p, {}), v({ loggedTrigger: h })]
                 })
         ]
     });

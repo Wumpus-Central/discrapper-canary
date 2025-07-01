@@ -15,7 +15,7 @@ function r(e) {
         (0, i.O)((e) => {
             if ((null == o.current || e || !1 !== a.current || (clearTimeout(o.current), (o.current = null)), !e || !0 === a.current)) return;
             let n = () => {
-                t(), (a.current = !0), (o.current = null);
+                (t(), (a.current = !0), (o.current = null));
             };
             null != r ? (o.current = setTimeout(n, r)) : n();
         }, n)

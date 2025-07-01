@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+(n.d(t, { Z: () => V }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -23,8 +23,8 @@ var i = n(120356),
     j = n(134483),
     O = n(210975),
     E = n(809244),
-    I = n(618158),
-    S = n(358221),
+    S = n(618158),
+    I = n(358221),
     P = n(362721),
     Z = n(887012),
     N = n(613548),
@@ -34,13 +34,13 @@ var i = n(120356),
     R = n(981631),
     k = n(231338),
     M = n(388032),
-    D = n(610633),
-    L = n(73433);
+    L = n(610633),
+    D = n(73433);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function U(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -56,8 +56,8 @@ function U(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -82,10 +82,10 @@ function B(e, t) {
 function F(e) {
     let { focusedParticipant: t, channel: n } = e,
         i = (0, c.bp)(),
-        l = (0, o.e7)([S.Z], () => S.Z.getLayout(n.id, i));
-    return (0, r.jsx)(I.Z, {
+        l = (0, o.e7)([I.Z], () => I.Z.getLayout(n.id, i));
+    return (0, r.jsx)(S.Z, {
         children: (0, r.jsx)(T.Z, {
-            className: D.participants,
+            className: L.participants,
             participant: t,
             maxVisibleUsers: 5,
             guildId: n.getGuildId(),
@@ -94,7 +94,7 @@ function F(e) {
         })
     });
 }
-function G(e) {
+function H(e) {
     let { user: t, channel: n, stream: i, color: l } = e,
         o = (0, E.Z)(n, t, i);
     return null == t || null == i
@@ -102,13 +102,13 @@ function G(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(s.Z, {
-                      className: D.avatar,
+                      className: L.avatar,
                       size: a.EFr.SIZE_24,
                       user: t,
                       animate: !1
                   }),
                   (0, r.jsx)(a.Text, {
-                      className: D.playingText,
+                      className: L.playingText,
                       variant: 'text-md/medium',
                       color: l,
                       children: o
@@ -116,7 +116,7 @@ function G(e) {
               ]
           });
 }
-function H(e) {
+function G(e) {
     let t,
         { focusedApplication: n, focusedParticipant: i, channel: l } = e,
         o = (0, Z.Z)(l, !0),
@@ -127,13 +127,13 @@ function H(e) {
         null != n &&
             (t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(y.ZP.Divider, { className: D.divider }),
+                    (0, r.jsx)(y.ZP.Divider, { className: L.divider }),
                     (0, r.jsx)(m.Z, {
                         game: n,
-                        className: D.activityIcon
+                        className: L.activityIcon
                     }),
                     (0, r.jsx)(a.Text, {
-                        className: D.playingText,
+                        className: L.playingText,
                         variant: 'text-md/normal',
                         color: 'none',
                         children: (0, u.Z)(n.name)
@@ -150,8 +150,8 @@ function H(e) {
             n = i.stream;
         t = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(y.ZP.Divider, { className: D.divider }),
-                (0, r.jsx)(G, {
+                (0, r.jsx)(y.ZP.Divider, { className: L.divider }),
+                (0, r.jsx)(H, {
                     user: e,
                     channel: l,
                     stream: n,
@@ -171,25 +171,25 @@ function H(e) {
                 recurrenceId: c
             }));
     return (0, r.jsx)('div', {
-        className: D.container,
+        className: L.container,
         children: t
     });
 }
 function V(e) {
     let { channel: t, guild: i, appContext: s, inCall: c, isChatOpen: u, exitFullScreen: m } = e,
         { focusedParticipant: g } = (0, o.cj)(
-            [S.Z],
+            [I.Z],
             () => ({
-                focusedParticipant: S.Z.getSelectedParticipant(t.id),
-                participantsOpen: S.Z.getParticipantsOpen(t.id)
+                focusedParticipant: I.Z.getSelectedParticipant(t.id),
+                participantsOpen: I.Z.getParticipantsOpen(t.id)
             }),
             [t.id]
         ),
         b = (0, h.ZP)(t),
         _ = (0, f.KS)(t),
         [E] = (0, d.Z)((null == g ? void 0 : g.type) === w.fO.ACTIVITY ? [g.applicationId] : []),
-        I = M.intl.string(M.t.BVZqJi);
-    t.isDM() ? (I = M.intl.string(M.t.jN2DfX)) : t.isGroupDM() && (I = M.intl.string(M.t['e5y+go']));
+        S = M.intl.string(M.t.BVZqJi);
+    t.isDM() ? (S = M.intl.string(M.t.jN2DfX)) : t.isGroupDM() && (S = M.intl.string(M.t['e5y+go']));
     let Z = (0, o.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         T = t.isGuildVoice() && c && null != Z && Z.length > 0,
         R = (0, P.ZP)(t),
@@ -203,19 +203,19 @@ function V(e) {
                       (0, r.jsxs)(
                           a.P3F,
                           B(U({}, e), {
-                              className: l()(D.channelStatusClickable, { [D.hoverable]: R }),
-                              onClick: R ? G : void 0,
+                              className: l()(L.channelStatusClickable, { [L.hoverable]: R }),
+                              onClick: R ? H : void 0,
                               children: [
                                   (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
-                                      className: l()(D.channelStatus, L.markup, { [D.hoverable]: R }),
+                                      className: l()(L.channelStatus, D.markup, { [L.hoverable]: R }),
                                       children: v.Z.parseVoiceChannelStatus(Z, !0, { channelId: t.id })
                                   }),
                                   R &&
                                       (0, r.jsx)(a.vdY, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: l()(D.pencilIcon, D.hoverable),
+                                          className: l()(L.pencilIcon, L.hoverable),
                                           width: 14,
                                           height: 14
                                       })
@@ -224,7 +224,7 @@ function V(e) {
                       )
               })
             : null;
-    function G() {
+    function H() {
         (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 339340));
@@ -235,7 +235,7 @@ function V(e) {
     }
     let V = (0, O.m$)({ channelId: t.id });
     return (0, r.jsxs)('div', {
-        className: D.subtitleContainer,
+        className: L.subtitleContainer,
         children: [
             (0, r.jsx)(a.f6W, {
                 theme: k.BR.DARK,
@@ -257,7 +257,7 @@ function V(e) {
                                 ? (0, r.jsx)(y.ZP.Icon, {
                                       icon: _,
                                       disabled: !0,
-                                      'aria-label': I
+                                      'aria-label': S
                                   })
                                 : null,
                             (0, r.jsx)(y.ZP.Title, {
@@ -274,7 +274,7 @@ function V(e) {
                                                             size: 'xs',
                                                             'aria-label': M.intl.string(M.t.VHXh8f),
                                                             color: a.TVs.colors.INTERACTIVE_NORMAL,
-                                                            className: D.secureFramesIcon
+                                                            className: L.secureFramesIcon
                                                         })
                                                     )
                                             })
@@ -285,7 +285,7 @@ function V(e) {
                                 channel: t,
                                 guild: i
                             }),
-                            (0, r.jsx)(H, {
+                            (0, r.jsx)(G, {
                                 focusedApplication: E,
                                 focusedParticipant: g,
                                 channel: t

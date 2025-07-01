@@ -6,10 +6,10 @@ class r {
         } catch (e) {
             this.onError(e);
         } finally {
-            (this.task = null), this.release(this);
+            ((this.task = null), this.release(this));
         }
     }
     constructor(e, t) {
-        (this.onError = e), (this.release = t), (this.task = null);
+        ((this.onError = e), (this.release = t), (this.task = null));
     }
 }

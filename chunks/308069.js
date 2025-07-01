@@ -16,7 +16,7 @@ var r = n(255367),
     h = n(388032),
     b = n(74783);
 let j = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: o, onCtxMenuOpen: j, onCtxMenuClose: _, useReducedMotion: v, isExpanded: y, isExpansionAnimationComplete: C } = e,
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: o, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: _, isExpanded: y, isExpansionAnimationComplete: C } = e,
         O = (0, u.aM)(),
         E = s.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
@@ -71,7 +71,7 @@ let j = (e) => {
                 expansionSpring: n,
                 isFullyExpanded: w,
                 partnerBranding: P,
-                useReducedMotion: v
+                useReducedMotion: _
             }),
             (0, r.jsxs)(i.animated.div, {
                 className: b.promotedBadgeWrapper,
@@ -99,7 +99,7 @@ let j = (e) => {
                     }),
                     (0, r.jsx)(f.r, {
                         onOpen: j,
-                        onClose: _,
+                        onClose: v,
                         onSelect: o,
                         questContent: d.jn.QUEST_BAR_V2,
                         quest: t,
@@ -114,7 +114,7 @@ let j = (e) => {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -122,7 +122,7 @@ let j = (e) => {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -130,8 +130,8 @@ let j = (e) => {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({}, e)),

@@ -133,12 +133,12 @@ function _() {
                                 value: e,
                                 note: f.intl.string(f.t['/eVrj4']),
                                 onChange: (e) => {
-                                    m.default.track(h.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
+                                    (m.default.track(h.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                         enabled: e,
                                         location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES },
                                         location_stack: T
                                     }),
-                                        g.fq.updateSetting(e);
+                                        g.fq.updateSetting(e));
                                 },
                                 children: f.intl.string(f.t['29xPVV'])
                             })
@@ -163,11 +163,11 @@ function _() {
                                     value: t,
                                     note: f.intl.string(f.t.hrSIhI),
                                     onChange: (e) => {
-                                        m.default.track(h.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
+                                        (m.default.track(h.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
                                             checked: e,
                                             location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES }
                                         }),
-                                            g.eR.updateSetting(e);
+                                            g.eR.updateSetting(e));
                                     },
                                     children: f.intl.string(f.t['CtYr+f'])
                                 })
@@ -190,11 +190,11 @@ function _() {
                                 className: s()(b.marginTop8, b.marginBottom40),
                                 value: r,
                                 onChange: (e) => {
-                                    m.default.track(h.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                                    (m.default.track(h.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                                         enabled: e,
                                         location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES }
                                     }),
-                                        g.R$.updateSetting(e);
+                                        g.R$.updateSetting(e));
                                 },
                                 children: f.intl.string(f.t.AqGrEB)
                             })

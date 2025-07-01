@@ -19,7 +19,7 @@ function p(e) {
             let o = i.Z.getChannel(r),
                 d = null == o ? void 0 : o.guild_id;
             setTimeout(() => {
-                (0, u.Z)(d, n), null == t || t();
+                ((0, u.Z)(d, n), null == t || t());
             }, 0);
         }
         return (

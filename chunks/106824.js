@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     P: () => _,
     Z: () => p
 }),
-    n(388685);
+    n(388685));
 var r = n(836560),
     i = n(555573),
     a = n(376918),
@@ -26,7 +26,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -42,11 +42,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -74,7 +74,7 @@ class p extends r.EventEmitter {
         let t = this.props.focused !== e.focused,
             n = this.props.channel.id !== e.channel.id || this.props.activeCommandOption !== e.activeCommandOption,
             r = !this.state.didInitialQuery || this.props.currentWord !== e.currentWord || this.props.currentWordIsAtStart !== e.currentWordIsAtStart || this.props.textValue !== e.textValue || this.props.optionText !== e.optionText;
-        if (((this.props = e), n || r)) this.updateResults(r, n), this.state.didInitialQuery || (this.state = f(u({}, this.state), { didInitialQuery: !0 }));
+        if (((this.props = e), n || r)) (this.updateResults(r, n), this.state.didInitialQuery || (this.state = f(u({}, this.state), { didInitialQuery: !0 })));
         else if (t) {
             let e = this.state.query;
             this.setState({ isVisible: null != e && this.shouldShow(e.resultCount, e.isLoading, e.typeInfo) });
@@ -108,7 +108,7 @@ class p extends r.EventEmitter {
         null != this.state.query && this.setState({ isVisible: !1 });
     }
     onResultHover(e) {
-        this.props.navigator.setFocus(null), this.setSelectedIndex(null);
+        (this.props.navigator.setFocus(null), this.setSelectedIndex(null));
     }
     onResultClick(e) {
         this.selectResult(e, !0);
@@ -156,7 +156,7 @@ class p extends r.EventEmitter {
         let y = !0 === g.isLoading,
             O = this.shouldShow(b, y, f),
             v = this.state.selectedIndex;
-        !O || y ? (v = null) : null != v && v >= b && (v = b - 1),
+        (!O || y ? (v = null) : null != v && v >= b && (v = b - 1),
             O && !this.state.isVisible && (0, a.a7)(d, this.props.channel, E),
             this.setState({
                 query: {
@@ -170,7 +170,7 @@ class p extends r.EventEmitter {
                 },
                 isVisible: O,
                 selectedIndex: v
-            });
+            }));
     }
     shouldShow(e, t, n) {
         return this.props.focused && null == this.props.expressionPickerView && (e > 0 || t || n.showEmpty);
@@ -193,16 +193,16 @@ class p extends r.EventEmitter {
                       tabOrEnter: n,
                       queryText: null == (r = this.state.query) ? void 0 : r.queryText
                   });
-        return null != _ && (0, a.Qt)(l, null != (o = _.type) ? o : null, this.props.channel, _.metadata), !0;
+        return (null != _ && (0, a.Qt)(l, null != (o = _.type) ? o : null, this.props.channel, _.metadata), !0);
     }
     setState(e) {
         for (let t in e)
             if (e[t] !== this.state[t]) {
-                (this.state = u({}, this.state, e)), this.emit('change', this.state);
+                ((this.state = u({}, this.state, e)), this.emit('change', this.state));
                 return;
             }
     }
     constructor(e) {
-        super(), c(this, 'props', void 0), c(this, 'state', void 0), (this.props = e), (this.state = _());
+        (super(), c(this, 'props', void 0), c(this, 'state', void 0), (this.props = e), (this.state = _()));
     }
 }

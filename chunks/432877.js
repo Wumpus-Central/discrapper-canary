@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => f,
     zU: () => s
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(442837),
     a = n(570140);
@@ -20,7 +20,7 @@ function o(e, t, n) {
     );
 }
 var s = (function (e) {
-    return (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING'), (e[(e.APP_COLLECTIONS = 4)] = 'APP_COLLECTIONS'), (e[(e.SHOP = 5)] = 'SHOP'), e;
+    return ((e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING'), (e[(e.APP_COLLECTIONS = 4)] = 'APP_COLLECTIONS'), (e[(e.SHOP = 5)] = 'SHOP'), e);
 })({});
 let l = {
         visual_effect_view_overrides: {
@@ -92,7 +92,7 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
         return null != (t = c[e]) && t;
     }
     set(e, t) {
-        return (c[e] = t), t;
+        return ((c[e] = t), t);
     }
     all() {
         return c;
@@ -109,5 +109,5 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
             });
     }
 }
-o(d, 'displayName', 'DevToolsDevSettingsStore'), o(d, 'persistKey', 'DevToolsDevSettingsStore');
+(o(d, 'displayName', 'DevToolsDevSettingsStore'), o(d, 'persistKey', 'DevToolsDevSettingsStore'));
 let f = new d(a.Z, { DEV_TOOLS_DEV_SETTING_SET: u });

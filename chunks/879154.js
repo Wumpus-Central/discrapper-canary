@@ -19,7 +19,7 @@ var n = r(359282),
         if (!t) return t;
         var e = t.characterList,
             r = t.text;
-        return r && !e && (t.characterList = a(l(n.EMPTY, r.length))), t;
+        return (r && !e && (t.characterList = a(l(n.EMPTY, r.length))), t);
     };
 function d(t, e) {
     return t.getStyle() === e.getStyle();
@@ -31,7 +31,7 @@ t.exports = (function (t) {
     function e(e) {
         return t.call(this, h(e)) || this;
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r.getKey = function () {

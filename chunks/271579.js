@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     WS: () => p,
     ZP: () => m,
     zS: () => h
@@ -12,7 +12,7 @@ n.d(t, {
     n(111804),
     n(490233),
     n(97749),
-    n(388685);
+    n(388685));
 var r = n(264344),
     i = n.n(r),
     a = n(772848),
@@ -24,7 +24,7 @@ function s(e, t) {
         i = l(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -34,7 +34,7 @@ function l(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let c = 'com.discord',
@@ -82,5 +82,5 @@ function m(e, t) {
         g = null != r ? encodeURIComponent(r) : null,
         E = null != i ? encodeURIComponent(i) : null,
         b = ''.concat(f, '/?link=').concat(p, '&utm_source=').concat(n, '&apn=').concat(c, '&isi=').concat(u, '&ibi=').concat(d, '&sd=').concat(h, '&efr=').concat(m);
-    return null != g && (b += '&afl='.concat(g)), null != E && (b += '&ifl='.concat(E)), b;
+    return (null != g && (b += '&afl='.concat(g)), null != E && (b += '&ifl='.concat(E)), b);
 }

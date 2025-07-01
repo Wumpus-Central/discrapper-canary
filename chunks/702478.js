@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(772848),
@@ -25,7 +25,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -41,8 +41,8 @@ function N(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -81,7 +81,7 @@ let I = function (e, t, n) {
         return (0, r.jsx)(c.zxk, {
             className: y.developerPortalCta,
             onClick: () => {
-                t(!0),
+                (t(!0),
                     (function (e) {
                         x.default.track(v.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
                         let t = null == e ? v.E07.DEVELOPER_PORTAL : v.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
@@ -104,7 +104,7 @@ let I = function (e, t, n) {
                             );
                     })(n).then(() => {
                         t(!1);
-                    });
+                    }));
             },
             submitting: e,
             children: C.intl.string(C.t.Uskgx8)
@@ -121,12 +121,12 @@ let I = function (e, t, n) {
             })),
             x = (0, a.e7)([h.Z], () => h.Z.getSettings().enabled),
             T = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(v.oNc.PARTNERED) && !n.hasFeature(v.oNc.VERIFIED));
-        i.useEffect(() => {
+        (i.useEffect(() => {
             null == e || T || ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));
         }, [e, T]),
             i.useEffect(() => {
                 (0, m.Kw)(O.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
-            }, []);
+            }, []));
         let P =
             null != s
                 ? (0, r.jsx)('div', {

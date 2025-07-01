@@ -5,7 +5,7 @@ n.d(t, {
 var r = n(97519),
     i = n(731965),
     a = (function (e) {
-        return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.COACHMARK = 1)] = 'COACHMARK'), e;
+        return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.COACHMARK = 1)] = 'COACHMARK'), e);
     })({});
 let o = (0, r.U)((e) => ({
     activePickerChannelId: void 0,

@@ -1,4 +1,4 @@
-r.d(t, { Z: () => j }), r(997841);
+(r.d(t, { Z: () => j }), r(997841));
 var n = r(255367);
 r(73800);
 var l = r(442837),
@@ -75,7 +75,7 @@ function j(e) {
                 proxyURL: n.proxyUrl,
                 url: n.url
             });
-        return a in S && ((o.onClick = S[a]), (o.handlePreloadImage = w[a])), o;
+        return (a in S && ((o.onClick = S[a]), (o.handlePreloadImage = w[a])), o);
     });
     return (0, n.jsx)('div', {
         children: (0, n.jsx)(d.Z, {

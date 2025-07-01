@@ -15,7 +15,7 @@ r(
                 t = a(this),
                 n = o(t),
                 r = l(t, 0);
-            return (r.length = i(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r;
+            return ((r.length = i(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r);
         }
     }
 );

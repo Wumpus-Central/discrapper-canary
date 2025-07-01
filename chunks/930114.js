@@ -11,10 +11,10 @@ var i = n(481060),
     d = n(981631);
 function p(e) {
     let { processedCode: t, channelContext: p, customGiftMessage: m, giftInfo: f } = e,
-        h = !1,
-        g = null,
-        _ = l.default.getCurrentUser(),
-        b = (0, s.yd)(null == _ ? void 0 : _.premiumType, u.p9.TIER_0);
+        g = !1,
+        _ = null,
+        h = l.default.getCurrentUser(),
+        b = (0, s.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('92446'), n.e('47016')]).then(n.bind(n, 409858));
@@ -26,7 +26,7 @@ function p(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function p(e) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -42,8 +42,8 @@ function p(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })(
@@ -54,7 +54,7 @@ function p(e) {
                             emojiName: null == f || null == (i = f.emoji) ? void 0 : i.name,
                             soundId: null == f || null == (l = f.sound) ? void 0 : l.id,
                             onComplete: (e, t) => {
-                                (g = e), t && ((h = t), e.isSubscription && null == a.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
+                                ((_ = e), t && ((g = t), e.isSubscription && null == a.ZP.getPremiumSubscription(!1) && (0, c.H)(!0)));
                             }
                         },
                         n
@@ -65,7 +65,7 @@ function p(e) {
         {
             onCloseCallback: () => {
                 var e;
-                h && null != g && !b && g.isSubscription && (null == g || null == (e = g.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                g && null != _ && !b && _.isSubscription && (null == _ || null == (e = _.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             }
         }
     );

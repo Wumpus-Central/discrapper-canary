@@ -102,7 +102,7 @@ function D(e) {
                                             var t, n;
                                             u.Z.setEnabled(e, r);
                                             let i = null != (n = null == (t = p.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? n : null;
-                                            (0, f.ou)(e, f.AE.LEGACY, i), !e && l && (0, j.l)(f.AE.LEGACY, i);
+                                            ((0, f.ou)(e, f.AE.LEGACY, i), !e && l && (0, j.l)(f.AE.LEGACY, i));
                                         },
                                         children: N.intl.string(N.t.vSP6c3)
                                     })
@@ -115,13 +115,13 @@ function D(e) {
                                         defaultValue: null != L ? L.shortcut : [],
                                         onChange: function (e) {
                                             var t, n;
-                                            s()(null != L, 'Keybind should never be undefined'),
+                                            (s()(null != L, 'Keybind should never be undefined'),
                                                 d.Z.setKeybind(
                                                     ((t = (function (e) {
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
                                                                 i = Object.keys(n);
-                                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                                 (i = i.concat(
                                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -129,7 +129,7 @@ function D(e) {
                                                                 )),
                                                                 i.forEach(function (t) {
                                                                     var i;
-                                                                    (i = n[t]),
+                                                                    ((i = n[t]),
                                                                         t in e
                                                                             ? Object.defineProperty(e, t, {
                                                                                   value: i,
@@ -137,8 +137,8 @@ function D(e) {
                                                                                   configurable: !0,
                                                                                   writable: !0
                                                                               })
-                                                                            : (e[t] = i);
-                                                                });
+                                                                            : (e[t] = i));
+                                                                }));
                                                         }
                                                         return e;
                                                     })({}, L)),
@@ -156,7 +156,7 @@ function D(e) {
                                                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                                           }),
                                                     t)
-                                                );
+                                                ));
                                         }
                                     })
                                 })

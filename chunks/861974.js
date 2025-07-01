@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(777207),
     l = n(172204),
     c = (function (e) {
-        return (e.WARNING = 'warn'), (e.INFO = 'info'), (e.ERROR = 'danger'), (e.POSITIVE = 'positive'), (e.PREVIEW = 'preview'), e;
+        return ((e.WARNING = 'warn'), (e.INFO = 'info'), (e.ERROR = 'danger'), (e.POSITIVE = 'positive'), (e.PREVIEW = 'preview'), e);
     })({});
 function u(e) {
     switch (e) {

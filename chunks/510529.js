@@ -29,7 +29,7 @@ function i(t, e) {
             if ('user' === t) {
                 let t = e.user;
                 if (!t) continue;
-                t.name && (o += `&name=${encodeURIComponent(t.name)}`), t.email && (o += `&email=${encodeURIComponent(t.email)}`);
+                (t.name && (o += `&name=${encodeURIComponent(t.name)}`), t.email && (o += `&email=${encodeURIComponent(t.email)}`));
             } else o += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`;
     return `${r}?${o}`;
 }

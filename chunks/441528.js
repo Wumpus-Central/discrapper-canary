@@ -11,12 +11,12 @@ var a = r(44837),
             i = e.onClick;
         return n.createElement('div', (0, a.Z)({}, t('arrowContainer', r), { onClick: i }), n.createElement('div', t(['arrow', 'arrowSign'], o, s, r), '\u25B6', 'double' === r && n.createElement('div', t(['arrowSign', 'arrowSignInner']), '\u25B6')));
     };
-(i.propTypes = {
+((i.propTypes = {
     styling: o().func.isRequired,
     arrowStyle: o().oneOf(['single', 'double']),
     expanded: o().bool.isRequired,
     nodeType: o().string.isRequired,
     onClick: o().func.isRequired
 }),
-    (i.defaultProps = { arrowStyle: 'single' });
+    (i.defaultProps = { arrowStyle: 'single' }));
 let c = i;

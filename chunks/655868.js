@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685), n(704826), n(35282);
+(n.d(t, { Z: () => d }), n(388685), n(704826), n(35282));
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -30,7 +30,7 @@ class c extends r.PureComponent {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ class c extends r.PureComponent {
                         )),
                         i.forEach(function (t) {
                             a(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
             })({}, this.props)),
@@ -64,12 +64,12 @@ class c extends r.PureComponent {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             a(this, '_inputRef', void 0),
             a(this, 'selectionStart', 0),
             a(this, 'setRef', (e) => {
                 let { inputRef: t } = this.props;
-                (this._inputRef = e), null != t && t(e);
+                ((this._inputRef = e), null != t && t(e));
             }),
             a(this, 'handleChange', (e, t) => {
                 let { value: n, onChange: i } = this.props,
@@ -77,8 +77,8 @@ class c extends r.PureComponent {
                 if (e === n || null == r || null == n) return;
                 let s = (0, l.M)(e),
                     a = r.selectionStart;
-                s === n && s.length <= 3 && n.includes('/') && !e.includes('/') ? (s = s.replace(o, '')) : s === n && e.includes('/') && !n.includes('/') && (s += '/'), s.length > e.length && (a += s.length - e.length), (this.selectionStart = a), null != i && i(s, t);
-            });
+                (s === n && s.length <= 3 && n.includes('/') && !e.includes('/') ? (s = s.replace(o, '')) : s === n && e.includes('/') && !n.includes('/') && (s += '/'), s.length > e.length && (a += s.length - e.length), (this.selectionStart = a), null != i && i(s, t));
+            }));
     }
 }
 let d = c;

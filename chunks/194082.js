@@ -13,7 +13,7 @@ var i = n(120356),
     l = n(388032),
     c = n(760858),
     u = (function (e) {
-        return (e.RED = 'RED'), (e.GRAY = 'GRAY'), e;
+        return ((e.RED = 'RED'), (e.GRAY = 'GRAY'), e);
     })({});
 let d = {
         LARGE: c.liveLarge,
@@ -43,5 +43,5 @@ function _(e) {
               style: n
           });
 }
-(_.Looks = u), (_.Sizes = d);
+((_.Looks = u), (_.Sizes = d));
 let p = _;

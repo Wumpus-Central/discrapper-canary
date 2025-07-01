@@ -7,5 +7,5 @@ let o = (e) => {
         n = (0, i.u)();
     if (!n.display) return null;
     let { display: o, ...s } = n;
-    return (t = 'children' in e ? ('function' == typeof e.children ? e.children(s) : e.children) : e.generator(s)), r.createElement(a._.Provider, { value: s }, t);
+    return ((t = 'children' in e ? ('function' == typeof e.children ? e.children(s) : e.children) : e.generator(s)), r.createElement(a._.Provider, { value: s }, t));
 };

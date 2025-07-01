@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(997841), n(539854);
+(n.d(t, { Z: () => C }), n(388685), n(997841), n(539854));
 var r,
     i = n(442837),
     a = n(570140),
@@ -35,7 +35,7 @@ let h = {
     g = {};
 function E(e) {
     let t;
-    b(e), m.add(e);
+    (b(e), m.add(e));
     let n = u.Z.getGuild(e),
         r = d.default.getCurrentUser();
     if (null == n || n.verificationLevel === f.sFg.NONE || null == r || n.isOwner(r) || r.isPhoneVerified()) return;
@@ -61,7 +61,7 @@ function E(e) {
         I = !1;
     r.isPhoneVerified() || r.isStaff() || ((y = n.verificationLevel >= f.sFg.LOW && !r.verified), (O = n.verificationLevel >= f.sFg.VERY_HIGH), (v = n.verificationLevel >= f.sFg.MEDIUM && p > 0), (I = n.verificationLevel >= f.sFg.HIGH && h > 0));
     let T = [];
-    I && T.push(h),
+    (I && T.push(h),
         v && T.push(p),
         T.length > 0 &&
             (t = setTimeout(
@@ -82,11 +82,11 @@ function E(e) {
             accountDeadline: new Date(Date.now() + p),
             memberDeadline: new Date(Date.now() + h),
             timeoutRef: t
-        });
+        }));
 }
 function b(e) {
     let t = g[e];
-    null != t && clearTimeout(t.timeoutRef), delete g[e];
+    (null != t && clearTimeout(t.timeoutRef), delete g[e]);
 }
 function y() {
     for (let e in (m.clear(), g)) b(e);
@@ -95,7 +95,7 @@ function O() {
     s.default.keys(g).forEach(b);
 }
 function v(e) {
-    m.delete(e.guild.id), E(e.guild.id);
+    (m.delete(e.guild.id), E(e.guild.id));
 }
 function I(e) {
     let { guild: t } = e;

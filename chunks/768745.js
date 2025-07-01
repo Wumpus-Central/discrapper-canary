@@ -150,7 +150,7 @@ var n = r(73800),
             )
         );
     };
-(f.propTypes = {
+((f.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     disableAlpha: a().bool,
     styles: a().object,
@@ -161,4 +161,4 @@ var n = r(73800),
         disableAlpha: !1,
         styles: {}
     }),
-    (0, s.t1)(f);
+    (0, s.t1)(f));

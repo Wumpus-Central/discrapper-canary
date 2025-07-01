@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+(n.d(t, { Z: () => a }), n(388685));
 let r = [
         ['position', 'absolute'],
         ['top', '-100px'],
@@ -17,10 +17,10 @@ function a() {
         n = document.createElement('div');
     for (let [e, n] of r) t.style[e] = n;
     for (let [e, t] of i) n.style[e] = t;
-    t.appendChild(n), document.body.appendChild(t), (t.className = e);
+    (t.appendChild(n), document.body.appendChild(t), (t.className = e));
     let a = {
         width: t.offsetWidth - t.clientWidth,
         height: t.offsetHeight - t.clientHeight
     };
-    return document.body.removeChild(t), a;
+    return (document.body.removeChild(t), a);
 }

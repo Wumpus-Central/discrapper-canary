@@ -1,21 +1,21 @@
 function n(e, t, n) {
-    (this.locales = e), (this.formats = t), (this.pluralFn = n);
+    ((this.locales = e), (this.formats = t), (this.pluralFn = n));
 }
 function r(e) {
     this.id = e;
 }
 function i(e, t, n, r, i) {
-    (this.id = e), (this.useOrdinal = t), (this.offset = n), (this.options = r), (this.pluralFn = i);
+    ((this.id = e), (this.useOrdinal = t), (this.offset = n), (this.options = r), (this.pluralFn = i));
 }
 function a(e, t, n, r) {
-    (this.id = e), (this.offset = t), (this.numberFormat = n), (this.string = r);
+    ((this.id = e), (this.offset = t), (this.numberFormat = n), (this.string = r));
 }
 function o(e, t) {
-    (this.id = e), (this.options = t);
+    ((this.id = e), (this.options = t));
 }
-(t.default = n),
+((t.default = n),
     (n.prototype.compile = function (e) {
-        return (this.pluralStack = []), (this.currentPlural = null), (this.pluralNumberFormat = null), this.compileMessage(e);
+        return ((this.pluralStack = []), (this.currentPlural = null), (this.pluralNumberFormat = null), this.compileMessage(e));
     }),
     (n.prototype.compileMessage = function (e) {
         if (!(e && 'messageFormatPattern' === e.type)) throw Error('Message AST is not of type: "messageFormatPattern"');
@@ -73,9 +73,9 @@ function o(e, t) {
                     }
                 );
             case 'pluralFormat':
-                return (n = this.compileOptions(e)), new i(e.id, t.ordinal, t.offset, n, l);
+                return ((n = this.compileOptions(e)), new i(e.id, t.ordinal, t.offset, n, l));
             case 'selectFormat':
-                return (n = this.compileOptions(e)), new o(e.id, n);
+                return ((n = this.compileOptions(e)), new o(e.id, n));
             default:
                 throw Error('Message element does not have a valid format type');
         }
@@ -88,7 +88,7 @@ function o(e, t) {
             a = i.options,
             o = {};
         for (this.pluralStack.push(this.currentPlural), this.currentPlural = 'pluralFormat' === i.type ? e : null, t = 0, n = a.length; t < n; t += 1) o[(r = a[t]).selector] = this.compileMessage(r.value);
-        return (this.currentPlural = this.pluralStack.pop()), o;
+        return ((this.currentPlural = this.pluralStack.pop()), o);
     }),
     (r.prototype.format = function (e) {
         return e ? ('string' == typeof e ? e : String(e)) : '';
@@ -104,4 +104,4 @@ function o(e, t) {
     (o.prototype.getOption = function (e) {
         var t = this.options;
         return t[e] || t.other;
-    });
+    }));

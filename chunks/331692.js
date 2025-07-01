@@ -18,7 +18,7 @@ let s = {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ let s = {
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        (i = n[t]),
+                                        ((i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
@@ -34,8 +34,8 @@ let s = {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = i);
-                                    });
+                                                : (e[t] = i));
+                                    }));
                             }
                             return e;
                         })({ classificationId: e }, n)
@@ -51,6 +51,6 @@ let s = {
         l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS' });
     },
     start_verification_check() {
-        l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL' }), setTimeout(() => (0, r._w)(), o.TX);
+        (l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL' }), setTimeout(() => (0, r._w)(), o.TX));
     }
 };

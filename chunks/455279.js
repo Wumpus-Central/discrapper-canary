@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => j,
     c: () => _
 }),
-    n(388685);
+    n(388685));
 var i,
     r = n(255367),
     s = n(73800),
@@ -46,7 +46,7 @@ class E extends s.PureComponent {
         let { _inputRef: i } = this;
         if (null == i.current) return;
         let { activeElement: r } = document;
-        'DEFAULT' === t && i.current === r && i.current.blur(), 'RECORDING' === t && i.current !== r && i.current.focus();
+        ('DEFAULT' === t && i.current === r && i.current.blur(), 'RECORDING' === t && i.current !== r && i.current.focus());
     }
     render() {
         let e,
@@ -88,7 +88,7 @@ class E extends s.PureComponent {
                                 className: f.addKeybindButton,
                                 disabled: i,
                                 onClick: (e) => {
-                                    e.stopPropagation(), e.preventDefault(), this.handleClick(e);
+                                    (e.stopPropagation(), e.preventDefault(), this.handleClick(e));
                                 },
                                 size: m.zxk.Sizes.MIN,
                                 color: m.Ttl.PRIMARY,
@@ -107,7 +107,7 @@ class E extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, '_inputId', u().uniqueId('key-recorder-')),
             b(this, '_unregisterNativeRecorder', null),
             b(this, '_mousedownMode', null),
@@ -126,13 +126,13 @@ class E extends s.PureComponent {
                     else null != i && (new (c())(e).handleKey = i);
             }),
             b(this, 'handleClick', (e) => {
-                e.stopPropagation(), e.preventDefault();
+                (e.stopPropagation(), e.preventDefault());
                 let { onClick: t, disableOnClickWhileRecording: n } = this.props;
                 (n && 'RECORDING' === this._mousedownMode) || t();
             }),
             b(this, 'handleMouseDown', () => {
                 this._mousedownMode = this.props.mode;
-            });
+            }));
     }
 }
 let j = E;

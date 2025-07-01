@@ -12,5 +12,5 @@ t.exports = function (t, e) {
     var a = e.getStartKey(),
         u = e.getStartOffset(),
         s = t.getBlockForKey(a);
-    return (r = u === s.getLength() ? null : s.getEntityAt(u)), i(t.getEntityMap(), r);
+    return ((r = u === s.getLength() ? null : s.getEntityAt(u)), i(t.getEntityMap(), r));
 };

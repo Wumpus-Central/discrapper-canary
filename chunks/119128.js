@@ -13,14 +13,14 @@ function c() {
               if (i.m9.document.hidden && e) {
                   let t = 'cancelled',
                       { op: a, status: i } = (0, r.XU)(e);
-                  o.X && n.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${a}`),
+                  (o.X && n.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${a}`),
                       i ||
                           e.setStatus({
                               code: _.jt,
                               message: t
                           }),
                       e.setAttribute('sentry.cancellation_reason', 'document.hidden'),
-                      e.end();
+                      e.end());
               }
           })
         : o.X && n.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');

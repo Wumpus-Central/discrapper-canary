@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => s }), n(290780), n(539854);
+(n.d(t, { Z: () => s }), n(290780), n(539854));
 let i = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
     a = 'undefined' != typeof performance;
 class o {
@@ -22,10 +22,10 @@ class o {
         return this.endTime_;
     }
     set endTime(e) {
-        (this.endTime_ = e), (this.isTracing_ = !0);
+        ((this.endTime_ = e), (this.isTracing_ = !0));
     }
     resumeTracing() {
-        this.isTracing ||
+        (this.isTracing ||
             (this.logGroups.unshift({
                 index: this.logGroups.length,
                 timestamp: Date.now(),
@@ -33,7 +33,7 @@ class o {
                 nativeLogs: []
             }),
             (this.logs = this.logGroups[0].logs)),
-            (this.endTime = Date.now() + 10000);
+            (this.endTime = Date.now() + 10000));
     }
     mark(e, t, n) {
         this.isTracing &&
@@ -47,7 +47,7 @@ class o {
             this.addImportLogDetail());
     }
     markAndLog(e, t, n, r) {
-        e.log(n),
+        (e.log(n),
             this.isTracing &&
                 (this.logs.push({
                     emoji: t,
@@ -56,7 +56,7 @@ class o {
                     delta: r,
                     timestamp: Date.now()
                 }),
-                this.addImportLogDetail());
+                this.addImportLogDetail()));
     }
     addImportLogDetail() {
         let e = i();
@@ -92,11 +92,11 @@ class o {
     time(e, t, n) {
         if (!this.isTracing) return n();
         let r = this.prefix;
-        this.mark(e, 'Start '.concat(t)), (this.prefix += '| ');
+        (this.mark(e, 'Start '.concat(t)), (this.prefix += '| '));
         let i = Date.now(),
             a = n(),
             o = Date.now() - i;
-        return (this.prefix = r), this.mark(e, 'Finish '.concat(t), o), a;
+        return ((this.prefix = r), this.mark(e, 'Finish '.concat(t), o), a);
     }
     async timeAsync(e, t, n) {
         if (!this.isTracing) return n();
@@ -104,13 +104,13 @@ class o {
         let r = Date.now(),
             i = await n(),
             a = Date.now() - r;
-        return this.mark(e, 'Finish '.concat(t), a), i;
+        return (this.mark(e, 'Finish '.concat(t), a), i);
     }
     setServerTrace(e) {
         this.logGroups[0].serverTrace = e;
     }
     constructor() {
-        r(this, 'isTracing_', !0),
+        (r(this, 'isTracing_', !0),
             r(this, 'endTime_', Date.now() + 15000),
             r(this, 'lastImportDuration', 0),
             r(this, 'logGroups', [
@@ -122,7 +122,7 @@ class o {
                 }
             ]),
             r(this, 'logs', this.logGroups[0].logs),
-            r(this, 'prefix', '');
+            r(this, 'prefix', ''));
     }
 }
 let s = new o();

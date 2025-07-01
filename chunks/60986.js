@@ -10,7 +10,7 @@ var r = n(255367),
     u = n(544627);
 function m(e) {
     let t = i.useCallback(() => {
-        (0, a.transitionToGlobalDiscovery)({
+        ((0, a.transitionToGlobalDiscovery)({
             tab: c.GlobalDiscoveryTab.APPS,
             newSessionState: {
                 guildId: e.guildId,
@@ -20,7 +20,7 @@ function m(e) {
                 }
             }
         }),
-            (0, s.xf)();
+            (0, s.xf)());
     }, [e.guildId, e.section]);
     return (0, r.jsxs)(l.P3F, {
         onClick: t,

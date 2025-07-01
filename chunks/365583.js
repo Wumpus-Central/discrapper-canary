@@ -62,7 +62,7 @@ function v(e) {
               id: 'manage-privacy',
               label: g.intl.string(g.t.anfNPT),
               action: () => {
-                  null == l || l({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), f(), (0, s.i)(u), null == c || c();
+                  (null == l || l({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), f(), (0, s.i)(u), null == c || c());
               }
           });
 }

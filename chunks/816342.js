@@ -18,13 +18,13 @@ let b = (e) => {
         f = (0, i.e7)([u.Z], () => u.Z.getChannel(n), [n]),
         v = a.useMemo(() => p.ZP.getName(null == f ? void 0 : f.guild_id, null == f ? void 0 : f.id, t), [f, t]),
         j = a.useCallback(() => {
-            s.ZP.trackWithMetadata(_.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
+            (s.ZP.trackWithMetadata(_.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
                 report_id: b
             }),
                 o.Z.blockUser(t.id, { location: 'ReportMenuBlockUser-iOS' }).then(() => {
                     c.Z.showBlockSuccessToast(t.id, n);
-                });
+                }));
         }, [t, b, n]);
     return (0, r.jsx)(d.ZP, {
         title: g.intl.formatToPlainString(g.t['Q1o/f3'], { username: v }),

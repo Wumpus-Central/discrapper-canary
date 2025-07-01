@@ -1,4 +1,4 @@
-n.d(t, { default: () => Y }), n(388685), n(539854);
+(n.d(t, { default: () => Y }), n(388685), n(539854));
 var i = n(255367),
     s = n(73800),
     l = n(392711),
@@ -53,7 +53,7 @@ function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -61,7 +61,7 @@ function X(e) {
             )),
             i.forEach(function (t) {
                 k(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -93,12 +93,12 @@ function W(e, t) {
                 i,
                 s = {},
                 l = Object.keys(e);
-            for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+            for (i = 0; i < l.length; i++) ((n = l[i]), t.indexOf(n) >= 0 || (s[n] = e[n]));
             return s;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < l.length; i++) (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+        for (i = 0; i < l.length; i++) ((n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
     }
     return s;
 }
@@ -121,19 +121,19 @@ class B extends s.PureComponent {
             let e = i.contentDomRef.current;
             if (null != this._scroller && (0, d.k)(e, HTMLElement)) {
                 var s;
-                null == (s = this._scroller) ||
+                (null == (s = this._scroller) ||
                     s.scrollIntoViewNode({
                         node: e,
                         animate: !0,
                         padding: 20,
                         callback: () => this.setState({ lastSelected: null })
                     }),
-                    i.highlight();
+                    i.highlight());
             }
         }
         if (this.props.channelOverrides !== e.channelOverrides) {
             let { overrides: e } = this.state;
-            (e = new Set(e)), (0, S.OD)(this.props.channelOverrides).forEach((t) => e.add(t)), this.setState({ overrides: e });
+            ((e = new Set(e)), (0, S.OD)(this.props.channelOverrides).forEach((t) => e.add(t)), this.setState({ overrides: e }));
         }
     }
     handleCheckboxChange(e, t, n) {
@@ -459,7 +459,7 @@ class B extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             k(this, '_scroller', null),
             k(this, '_channelRefs', {}),
             k(this, 'state', {
@@ -473,11 +473,11 @@ class B extends s.PureComponent {
             k(this, 'handleSelectChange', (e) => {
                 if (null == e) return;
                 let { overrides: t } = this.state;
-                (t = new Set(t)).add(e),
+                ((t = new Set(t)).add(e),
                     this.setState({
                         overrides: t,
                         lastSelected: e
-                    });
+                    }));
             }),
             k(this, 'handleSelectMuteTime', (e) => {
                 let t = e > 0 ? o()().add(e, 'second').toISOString() : null;
@@ -495,7 +495,7 @@ class B extends s.PureComponent {
             }),
             k(this, 'handleDeleteOverride', (e) => {
                 let { overrides: t } = this.state;
-                (t = new Set(t)).delete(e), this.setState({ overrides: t });
+                ((t = new Set(t)).delete(e), this.setState({ overrides: t }));
             }),
             k(this, 'renderOptionLabel', (e) => {
                 let t = Z.Z.getChannel(e.value);
@@ -507,7 +507,7 @@ class B extends s.PureComponent {
                     title: e.label,
                     subtitle: s
                 });
-            });
+            }));
     }
 }
 function J(e) {

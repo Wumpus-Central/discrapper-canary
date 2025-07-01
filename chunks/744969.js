@@ -1,4 +1,4 @@
-r.d(t, { s: () => h }), r(997841);
+(r.d(t, { s: () => h }), r(997841));
 var n = r(255367),
     l = r(73800),
     i = r(442837),
@@ -39,7 +39,7 @@ let g = (0, i.Kb)([d.Z, u.Z, p.Z], {
                 rejectWithError: !1
             },
             { body: n } = await o.tn.get(r);
-        c.Z.dispatch({
+        (c.Z.dispatch({
             type: 'STORE_LISTINGS_FETCH_SUCCESS',
             storeListings: n.store_listings
         }),
@@ -55,7 +55,7 @@ let g = (0, i.Kb)([d.Z, u.Z, p.Z], {
                         type: 'SKU_FETCH_SUCCESS',
                         sku: e
                     });
-                });
+                }));
     },
     useStateHook: i.cj
 });

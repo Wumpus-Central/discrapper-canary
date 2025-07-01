@@ -1,4 +1,4 @@
-n.d(t, { M: () => l }), n(388685);
+(n.d(t, { M: () => l }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(921349),
@@ -17,7 +17,7 @@ function l(e) {
             let e = (0, o.tj)(t, f);
             if (null != e) {
                 var n;
-                p(e), null == (n = u.current) || n.close();
+                (p(e), null == (n = u.current) || n.close());
             }
         }
     }

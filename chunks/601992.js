@@ -41,7 +41,7 @@ function g() {
 function E(e) {
     let { guildId: t, mentioned: n, roleMentioned: r, everyoneMentioned: i } = e,
         a = Date.now();
-    (c = a), null != t && (_[t] = a), n && ((u = a), null != t && (p[t] = a)), r && ((d = a), null != t && (m[t] = a)), i && ((f = a), null != t && (h[t] = a));
+    ((c = a), null != t && (_[t] = a), n && ((u = a), null != t && (p[t] = a)), r && ((d = a), null != t && (m[t] = a)), i && ((f = a), null != t && (h[t] = a)));
 }
 class b extends r.ZP.Store {
     getGlobalStats() {

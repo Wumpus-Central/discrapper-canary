@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(668826),
@@ -26,15 +26,15 @@ function x(e) {
         P = (0, a.eR)(y),
         w = (e) => {
             var t;
-            null == (t = v.current) || t.removeDrop(e), (_.current = h()), N(!1), clearTimeout(O.current);
+            (null == (t = v.current) || t.removeDrop(e), (_.current = h()), N(!1), clearTimeout(O.current));
         },
         C = (e) => {
-            N(!0),
+            (N(!0),
                 P(),
                 (0, o.KH)(u.yN.LOOTBOXES, _.current),
                 (O.current = setTimeout(() => {
                     w(e);
-                }, 1000));
+                }, 1000)));
         };
     (0, s.useEffect)(() => () => clearTimeout(O.current), []);
     let Z = (e) =>

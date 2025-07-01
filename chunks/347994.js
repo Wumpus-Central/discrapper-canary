@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var i = n(392711),
     r = n.n(i),
     s = n(710845),
@@ -32,7 +32,7 @@ let u = new s.Z('UserSettingsProto'),
         }
         resetInMemoryState() {}
         constructor() {
-            d(this, 'actions', {
+            (d(this, 'actions', {
                 CONNECTION_OPEN: () => this.throttledOnChange(),
                 USER_SETTINGS_PROTO_UPDATE: () => this.throttledOnChange(),
                 USER_SETTINGS_PROTO_ENQUEUE_UPDATE: () => this.throttledOnChange(),
@@ -58,6 +58,6 @@ let u = new s.Z('UserSettingsProto'),
                             });
                         }, 'handleUserSettingsProtoChange');
                 }),
-                d(this, 'throttledOnChange', r().debounce(this.handleUserSettingsProtoChange, 0));
+                d(this, 'throttledOnChange', r().debounce(this.handleUserSettingsProtoChange, 0)));
         }
     })();

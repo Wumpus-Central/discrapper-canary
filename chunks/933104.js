@@ -1,15 +1,15 @@
 n.d(t, {
-    $h: () => E,
+    $h: () => S,
     jG: () => j,
-    yI: () => S
+    yI: () => E
 });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(793030),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     c = n(100527),
     u = n(623624),
     d = n(970731),
@@ -35,7 +35,7 @@ function j(e) {
         markAsDismissed: i
     });
 }
-function E(e) {
+function S(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, p.Z)(t);
     return (0, r.jsx)(x, {
@@ -58,15 +58,15 @@ function E(e) {
         caretPosition: i ? d.DF.LEFT_TOP : d.DF.TOP_CENTER
     });
 }
-function S(e) {
+function E(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
-        l = (0, s.e7)([h.Z], () => {
+        l = (0, a.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getGuild(t)) ? void 0 : e.name;
         }),
         { onActivate: o } = (0, m.ZP)(t, n[0]);
     if (0 === n.length) return;
-    let a = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
+    let s = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
         u = 1 === n.length;
     return (0, r.jsx)(x, {
         asset:
@@ -77,14 +77,14 @@ function S(e) {
                   })
                 : (0, r.jsx)(g.g, { className: v.image }),
         header: y.intl.formatToPlainString(O.default.LmpChI, { guildName: l }),
-        content: n.length > 1 ? y.intl.formatToPlainString(O.default.wcQOqK, { perks: a }) : y.intl.formatToPlainString(O.default.ZF8NT0, { perk: a }),
+        content: n.length > 1 ? y.intl.formatToPlainString(O.default.wcQOqK, { perks: s }) : y.intl.formatToPlainString(O.default.ZF8NT0, { perk: s }),
         buttonCTA: u ? y.intl.string(O.default.gSxlHR) : y.intl.string(y.t.RzWDqa),
         onClick: (e) => (u ? o(e) : (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i
     });
 }
 function x(e) {
-    var { asset: t, header: n, content: i, caretPosition: s, markAsDismissed: c } = e,
+    var { asset: t, header: n, content: i, caretPosition: a, markAsDismissed: c } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -95,16 +95,16 @@ function x(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['asset', 'header', 'content', 'caretPosition', 'markAsDismissed']);
-    let h = null != s ? s : d.DF.LEFT_TOP,
+    let h = null != a ? a : d.DF.LEFT_TOP,
         p = h === d.DF.TOP_CENTER || h === d.DF.LEFT_TOP ? v[h] : '';
     return (0, r.jsx)(
         d.ZP,
@@ -112,7 +112,7 @@ function x(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -120,7 +120,7 @@ function x(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -128,8 +128,8 @@ function x(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })(
@@ -138,7 +138,7 @@ function x(e) {
                     className: v.imageContainer,
                     children: [
                         t,
-                        (0, r.jsx)(a.olH, {
+                        (0, r.jsx)(s.olH, {
                             className: v.close,
                             onClick: () => (null == c ? void 0 : c(_.L.USER_DISMISS))
                         })

@@ -36,7 +36,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -92,7 +92,7 @@ function N(e) {
         { onInteraction: D, onInteractionPopoutTargetRefChange: L } = (0, p.Xo)();
     if (t.bot || R || !P) return null;
     let x = () => {
-            L(I),
+            (L(I),
                 n === m.n_.AVATAR ? T({ action: 'PRESS_REACT_AVATAR' }) : n === m.n_.STATUS ? T({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : T({ action: 'PRESS_REACT_ACTIVITY' }),
                 null == D ||
                     D({
@@ -100,10 +100,10 @@ function N(e) {
                         interactionSource: n,
                         interactionSourceId: O
                     }),
-                w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
         },
         k = () => {
-            L(I),
+            (L(I),
                 n === m.n_.AVATAR ? T({ action: 'PRESS_REPLY_AVATAR' }) : n === m.n_.STATUS ? T({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : T({ action: 'PRESS_REPLY_ACTIVITY' }),
                 null == D ||
                     D({
@@ -111,7 +111,7 @@ function N(e) {
                         interactionSource: n,
                         interactionSourceId: O
                     }),
-                w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
         };
     return (0, r.jsxs)(u.ZP, {
         className: o()(E.popover, {
@@ -161,7 +161,7 @@ function N(e) {
                 : N((e) => {
                       let t = () => {
                           var t;
-                          L(C), null == (t = e.onClick) || t.call(e);
+                          (L(C), null == (t = e.onClick) || t.call(e));
                       };
                       return (0, r.jsx)(c.DY3, {
                           text: g.intl.string(g.t.UKOtz8),

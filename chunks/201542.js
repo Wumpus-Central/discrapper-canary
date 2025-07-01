@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(704826), n(35282);
+(n.d(t, { Z: () => C }), n(388685), n(704826), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -83,7 +83,7 @@ let C = i.memo(function (e) {
         [$, ee] = i.useState(() => ('function' == typeof a ? a() : a)),
         et = i.useRef(void 0),
         en = i.useCallback(() => {
-            W((e) => !e), X(!0);
+            (W((e) => !e), X(!0));
         }, []),
         er = i.useCallback(() => {
             J('metadata');
@@ -99,11 +99,11 @@ let C = i.memo(function (e) {
             [L, y]
         ),
         eo = i.useCallback(() => {
-            W(!1),
+            (W(!1),
                 null == et.current &&
                     (et.current = setTimeout(() => {
-                        U(!1), X(!1), (et.current = void 0);
-                    }, 500));
+                        (U(!1), X(!1), (et.current = void 0));
+                    }, 500)));
         }, []),
         es = i.useCallback(() => {
             K || (ea(0), eo());
@@ -121,18 +121,18 @@ let C = i.memo(function (e) {
         eu = i.useCallback(
             (e) => {
                 let t = (0, g.A)(e, 1);
-                H(0 === t), ee(t), null == _ || _(t);
+                (H(0 === t), ee(t), null == _ || _(t));
             },
             [_]
         ),
         ed = i.useCallback(() => {
-            H(!Z), null == h || h(!Z);
+            (H(!Z), null == h || h(!Z));
         }, [Z, h]),
         ef = i.useCallback(() => {
             z(!0);
         }, []),
         e_ = i.useCallback(() => {
-            z(!1), G === V && eo(), ea(G);
+            (z(!1), G === V && eo(), ea(G));
         }, [G, V, eo, ea]),
         ep = i.useCallback(
             (e) => {
@@ -152,7 +152,7 @@ let C = i.memo(function (e) {
             onPlay: P
         },
         eg = i.useRef(em);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         eg.current = em;
     }),
         i.useEffect(() => {
@@ -177,16 +177,16 @@ let C = i.memo(function (e) {
             if (e || Y)
                 if (Y) {
                     var i, a;
-                    (eh.current = performance.now()), null == r || r(!1, t, (null != (a = null == (i = x.current) ? void 0 : i.duration) ? a : 0) * m.Z.Millis.SECOND);
+                    ((eh.current = performance.now()), null == r || r(!1, t, (null != (a = null == (i = x.current) ? void 0 : i.duration) ? a : 0) * m.Z.Millis.SECOND));
                 } else {
                     let e = performance.now(),
                         r = eh.current,
                         i = null != r ? (e - r) / 1000 : 0;
-                    null == n || n(t, i), ea(t), (eh.current = null);
+                    (null == n || n(t, i), ea(t), (eh.current = null));
                 }
         }, [Y, n, V, ea]),
         A(x, Y, B),
-        N(n, Y, W);
+        N(n, Y, W));
     let eE = Y ? l.fpf : l.o1U,
         eb = Y ? O.intl.string(O.t.ZcgDJS) : O.intl.string(O.t.RscU7O),
         ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: M }),

@@ -9,7 +9,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -17,7 +17,7 @@ function c(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -25,8 +25,8 @@ function c(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -60,12 +60,12 @@ function d(e) {
                         n,
                         i = {},
                         o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
             }
             return i;
         })(e, ['width', 'height', 'color']);

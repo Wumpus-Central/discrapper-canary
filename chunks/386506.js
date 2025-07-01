@@ -25,7 +25,7 @@ async function d(e) {
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return await r(n), n;
+        return (await r(n), n);
     } catch (e) {
         return e;
     }
@@ -42,7 +42,7 @@ async function f(e) {
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return await r(t), t;
+        return (await r(t), t);
     } catch (e) {
         return e;
     }
@@ -53,7 +53,7 @@ async function _() {
         oldFormErrors: !0,
         rejectWithError: !1
     });
-    return await r(e), e;
+    return (await r(e), e);
 }
 function p(e) {
     var t;

@@ -27,7 +27,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -62,7 +62,7 @@ function _(e) {
                 size: s.zx.Sizes.MEDIUM,
                 disabled: O,
                 onClick: () => {
-                    null == m || m(), g();
+                    (null == m || m(), g());
                 },
                 autoFocus: I,
                 children: _
@@ -76,7 +76,7 @@ function _(e) {
                 submitting: O,
                 onClick: async () => {
                     try {
-                        await (null == h ? void 0 : h()), g();
+                        (await (null == h ? void 0 : h()), g());
                     } catch (e) {
                         throw e;
                     }

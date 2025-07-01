@@ -14,7 +14,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -30,8 +30,8 @@ function f(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -74,14 +74,14 @@ function g(e) {
                     innerClassName: h.chatHeaderBarButtonInner,
                     color: a.zxk.Colors.BRAND,
                     onClick: () => {
-                        c.default.track(
+                        (c.default.track(
                             d.rMx.CHANNEL_BANNER_CTA_CLICKED,
                             m(f({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
                                 banner_type: 'channel_opt_in',
                                 cta_type: 'add channel'
                             })
                         ),
-                            (0, u.XQ)(t.guild_id, t.id, !0, { section: d.jXE.CHANNEL });
+                            (0, u.XQ)(t.guild_id, t.id, !0, { section: d.jXE.CHANNEL }));
                     },
                     children: [
                         (0, r.jsx)(a.qJs, {

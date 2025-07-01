@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     BT: () => Z,
     Hn: () => I,
     Hu: () => V,
@@ -15,7 +15,7 @@ n.d(t, {
     we: () => F,
     ym: () => P
 }),
-    n(388685);
+    n(388685));
 var r = n(392711),
     i = n.n(r),
     a = n(149765),
@@ -51,7 +51,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -59,7 +59,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -88,11 +88,11 @@ function D(e, t, n, r) {
             let o = r[t.roles[n]];
             null != o && ((e = a.IH(e, o.allow)), (i = a.IH(i, o.deny)));
         }
-        (n = a.Od(n, i)), (n = a.IH(n, e));
+        ((n = a.Od(n, i)), (n = a.IH(n, e)));
         let o = r[t.userId];
         null != o && ((n = a.Od(n, o.deny)), (n = a.IH(n, o.allow)));
         let c = a.e$(n, y.Plq.ADMINISTRATOR);
-        (0, s.EY)(t) && !c && (n = a.hX(n, R)), (0, l.b)(t) && !c && (n = a.hX(n, C));
+        ((0, s.EY)(t) && !c && (n = a.hX(n, R)), (0, l.b)(t) && !c && (n = a.hX(n, C)));
     }
     return n;
 }
@@ -106,7 +106,7 @@ function L(e) {
             let t = o[n.roles[e]];
             void 0 !== t && (f = a.IH(f, t.permissions));
         }
-    return (f = a.e$(f, y.Plq.ADMINISTRATOR) ? T : D(r.id, n, f, i)), (u.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, c)), h.ZP.isCurrentUserGuest(r.id) && (f = a.hX(f, N)), w(f, r, t, s);
+    return ((f = a.e$(f, y.Plq.ADMINISTRATOR) ? T : D(r.id, n, f, i)), (u.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, c)), h.ZP.isCurrentUserGuest(r.id) && (f = a.hX(f, N)), w(f, r, t, s));
 }
 function x(e) {
     let t,
@@ -132,10 +132,10 @@ function x(e) {
                       !1
                   );
         }
-        (l = null != (c = r.computeLurkerPermissionsAllowList()) ? c : l), (i = null != i ? v({}, r.permissionOverwrites, i) : r.permissionOverwrites);
+        ((l = null != (c = r.computeLurkerPermissionsAllowList()) ? c : l), (i = null != i ? v({}, r.permissionOverwrites, i) : r.permissionOverwrites));
         let e = r.getGuildId();
         t = null != e ? g.Z.getGuild(e) : null;
-    } else (i = null != i ? i : {}), (t = r);
+    } else ((i = null != i ? i : {}), (t = r));
     if (null == t) return I;
     let u = {
         userId: y.lds,
@@ -188,10 +188,10 @@ function k(e) {
                 t
             );
         }
-        (b = null != (r = o.computeLurkerPermissionsAllowList()) ? r : b), (s = null != s ? v({}, o.permissionOverwrites, s) : o.permissionOverwrites);
+        ((b = null != (r = o.computeLurkerPermissionsAllowList()) ? r : b), (s = null != s ? v({}, o.permissionOverwrites, s) : o.permissionOverwrites));
         let e = o.getGuildId();
         i = null != e ? g.Z.getGuild(e) : null;
-    } else (s = null != s ? s : {}), (i = o);
+    } else ((s = null != s ? s : {}), (i = o));
     if (null == i) return I;
     if (!(m === (null == (t = E.default.getCurrentUser()) ? void 0 : t.id) && c.Z.isViewingRoles(i.id)) && i.isOwner(m)) return w(T, i, m, u);
     let y = h.ZP.getMember(i.id, m);
@@ -286,7 +286,7 @@ function H(e, t) {
     if (null == i) return !1;
     let o = i.permissions,
         s = r[n.id];
-    return null != s && ((o = a.Od(o, s.deny)), (o = a.IH(o, s.allow))), a.e$(o, e);
+    return (null != s && ((o = a.Od(o, s.deny)), (o = a.IH(o, s.allow))), a.e$(o, e));
 }
 function Y(e, t) {
     let n,

@@ -11,7 +11,7 @@ function d(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -19,7 +19,7 @@ function d(e) {
             )),
             l.forEach(function (n) {
                 var l;
-                (l = t[n]),
+                ((l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
@@ -27,8 +27,8 @@ function d(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
-            });
+                        : (e[n] = l));
+            }));
     }
     return e;
 }
@@ -63,7 +63,7 @@ function p(e) {
                 label: u.intl.string(u.t.GISTtb),
                 subtext: u.intl.formatToPlainString(u.t['mn/nW1'], { displayName: o.ZP.getName(void 0, void 0, n) }),
                 action: () => {
-                    null == v || v(),
+                    (null == v || v(),
                         (0, a.openUserProfileModal)(
                             f(d({}, m), {
                                 showGuildProfile: !1,
@@ -78,7 +78,7 @@ function p(e) {
                                 },
                                 m
                             )
-                        );
+                        ));
                 }
             })
           : (0, l.jsx)(r.sNh, {
@@ -86,7 +86,7 @@ function p(e) {
                 label: u.intl.string(u.t.DisZzM),
                 subtext: u.intl.formatToPlainString(u.t['mn/nW1'], { displayName: o.ZP.getName(t, p, n) }),
                 action: () => {
-                    null == v || v(),
+                    (null == v || v(),
                         (0, a.openUserProfileModal)(
                             f(d({}, m), {
                                 showGuildProfile: !0,
@@ -101,7 +101,7 @@ function p(e) {
                                 },
                                 m
                             )
-                        );
+                        ));
                 }
             });
 }

@@ -23,11 +23,11 @@ let a = class {
         window.removeEventListener('mousemove', this.handleMouseMove);
     }
     update() {
-        this.x !== this.px && this.y !== this.py && ((this.forceX += n(this.x, this.px)), (this.forceY += n(this.y, this.py)), (this.px = this.x), (this.py = this.y)), 0 !== this.forceX && (this.forceX = this.forceX * this.resistance), 0 !== this.forceY && (this.forceY = this.forceY * this.resistance);
+        (this.x !== this.px && this.y !== this.py && ((this.forceX += n(this.x, this.px)), (this.forceY += n(this.y, this.py)), (this.px = this.x), (this.py = this.y)), 0 !== this.forceX && (this.forceX = this.forceX * this.resistance), 0 !== this.forceY && (this.forceY = this.forceY * this.resistance));
     }
     render() {}
     constructor() {
-        s(this, 'resistance', 0.98),
+        (s(this, 'resistance', 0.98),
             s(this, 'px', 0),
             s(this, 'py', 0),
             s(this, 'x', 0),
@@ -36,7 +36,7 @@ let a = class {
             s(this, 'forceY', 0),
             s(this, 'handleMouseMove', (t) => {
                 let { clientX: e, clientY: i } = t;
-                (this.x = e), (this.y = i);
-            });
+                ((this.x = e), (this.y = i));
+            }));
     }
 };

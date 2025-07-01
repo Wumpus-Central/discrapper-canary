@@ -1,4 +1,4 @@
-t.d(n, { Z: () => ei }), t(388685);
+(t.d(n, { Z: () => ei }), t(388685));
 var l = t(255367),
     r = t(73800),
     i = t(120356),
@@ -53,7 +53,7 @@ function $(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -61,7 +61,7 @@ function $(e) {
             )),
             l.forEach(function (n) {
                 var l;
-                (l = t[n]),
+                ((l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
@@ -69,8 +69,8 @@ function $(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
-            });
+                        : (e[n] = l));
+            }));
     }
     return e;
 }
@@ -266,16 +266,16 @@ function el(e) {
                 onChange: (e) => {
                     let n = e.find((e) => !g.includes(e.id)),
                         l = e.map((e) => e.id);
-                    if (null != n) j(t, n, !0), t.singleSelect && t.options.forEach((e) => c.delete(e.id)), c.add(n.id);
+                    if (null != n) (j(t, n, !0), t.singleSelect && t.options.forEach((e) => c.delete(e.id)), c.add(n.id));
                     else {
                         let e = g.filter((e) => !l.includes(e)),
                             n = t.options.filter((n) => e.includes(n.id));
                         if (g.length <= n.length && t.required) return void s({ type: en });
                         n.forEach((e) => {
-                            j(t, e, !1), c.delete(e.id);
+                            (j(t, e, !1), c.delete(e.id));
                         });
                     }
-                    u(new Set(c)), s(null);
+                    (u(new Set(c)), s(null));
                 },
                 canBeNew: !t.isNew
             }),
@@ -316,7 +316,7 @@ function er(e) {
         { handleSelectOption: j } = (0, M.Z)(i.id),
         b = (e, n) => {
             if (!n && 1 === g.length && t.required) return void s({ type: en });
-            j(t, e, null != n && n), t.singleSelect && n && t.options.forEach((e) => c.delete(e.id)), n ? c.add(e.id) : c.delete(e.id), u(new Set(c)), s(null);
+            (j(t, e, null != n && n), t.singleSelect && n && t.options.forEach((e) => c.delete(e.id)), n ? c.add(e.id) : c.delete(e.id), u(new Set(c)), s(null));
         };
     return (0, l.jsxs)('div', {
         className: Y.prompt,
@@ -375,19 +375,19 @@ function ei(e) {
         s = (0, d.e7)([S.default], () => S.default.getCurrentUser()),
         c = (0, p.Z)('(min-width: 1344px)') && null != s,
         f = r.useCallback(() => {
-            (0, y.uL)(q.Z5c.CHANNEL(n, X.oC.CHANNEL_BROWSER)), null == t || t();
+            ((0, y.uL)(q.Z5c.CHANNEL(n, X.oC.CHANNEL_BROWSER)), null == t || t());
         }, [n, t]),
         x = (0, d.e7)([E.ZP], () => E.ZP.hasUnread(n, V.W.GUILD_ONBOARDING_QUESTION)),
         { onboardingPromptsRaw: _, newOnboardingPrompts: b, onboardingPromptsWithNewAnswers: v, newAnswersCount: O, onboardingPrompts: I } = (0, U.Z)(n);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         (null == o ? void 0 : o.id) != null && !j.Z.isFullServerPreview(o.id) && (D.Z.shouldFetchPrompts(o.id) || x) && (0, R.eM)(o.id);
     }, [null == o ? void 0 : o.id, x]),
         r.useEffect(() => {
             if ((null == o ? void 0 : o.id) != null && !j.Z.isFullServerPreview(o.id))
                 return () => {
-                    (0, h.Ju)(o.id, V.W.GUILD_ONBOARDING_QUESTION, D.Z.ackIdForGuild(o.id)), A.Z.updateOnboardingResponses(o.id);
+                    ((0, h.Ju)(o.id, V.W.GUILD_ONBOARDING_QUESTION, D.Z.ackIdForGuild(o.id)), A.Z.updateOnboardingResponses(o.id));
                 };
-        }, [null == o ? void 0 : o.id]);
+        }, [null == o ? void 0 : o.id]));
     let N = r.useCallback(
         (e) => {
             if (null == o) return null;

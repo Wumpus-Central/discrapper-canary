@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(539854);
+(n.d(t, { Z: () => p }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -13,7 +13,7 @@ function p(e) {
         f = (0, l.e7)([c.Z], () => c.Z.hasCurrentUserSentMessageSinceAppStart()),
         m = i.useMemo(() => {
             let e = [];
-            return f && e.push(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING), e;
+            return (f && e.push(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING), e);
         }, [f]),
         g = () => {
             setTimeout(() => (0, a.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: d.L.AUTO_DISMISS }), 10000);

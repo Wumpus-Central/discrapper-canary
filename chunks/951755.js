@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(147913),
     i = n(716364),
     a = n(474873),
@@ -26,7 +26,7 @@ class f extends r.Z {
     }
     _terminate() {
         var e, t;
-        null == (e = (t = this).subscription) || e.call(t), (this.subscription = void 0);
+        (null == (e = (t = this).subscription) || e.call(t), (this.subscription = void 0));
     }
     updateSoundpack() {
         let e = a.Z.getSoundpack(),
@@ -42,12 +42,12 @@ class f extends r.Z {
         } else (0, c._)('call_ringing', 'call_ringing.mp3');
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'actions', { NOTIFICATIONS_SET_DISABLED_SOUNDS: this.updateRingtone }),
             d(this, 'subscription', void 0),
             d(this, 'handleExperimentUpdated', () => {
-                this.updateSoundpack(), this.updateRingtone();
-            });
+                (this.updateSoundpack(), this.updateRingtone());
+            }));
     }
 }
 let _ = new f();

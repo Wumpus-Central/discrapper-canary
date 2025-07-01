@@ -35,7 +35,7 @@ function f(t) {
         onSubmit: function (t) {
             var e;
             let { rating: o, problem: c, dontShowAgain: _, feedback: s } = t;
-            _ &&
+            (_ &&
                 (r.default.track(u.rMx.ACTIVITY_REPORT_DONT_SHOW, {
                     application_id: v.id,
                     rating: o
@@ -65,7 +65,7 @@ function f(t) {
                                         for (var e = 1; e < arguments.length; e++) {
                                             var n = null != arguments[e] ? arguments[e] : {},
                                                 i = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                 (i = i.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (t) {
                                                         return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -73,7 +73,7 @@ function f(t) {
                                                 )),
                                                 i.forEach(function (e) {
                                                     var i;
-                                                    (i = n[e]),
+                                                    ((i = n[e]),
                                                         e in t
                                                             ? Object.defineProperty(t, e, {
                                                                   value: i,
@@ -81,13 +81,13 @@ function f(t) {
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (t[e] = i);
-                                                });
+                                                            : (t[e] = i));
+                                                }));
                                         }
                                         return t;
                                     })({ body: p.intl.string(p.t['zuHR+/']) }, e)
                                 );
-                        }));
+                        })));
         },
         onClose: y,
         transitionState: h,

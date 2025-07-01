@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => m }), n(388685), n(35282);
+(n.d(t, { ZP: () => m }), n(388685), n(35282));
 var r = n(73800),
     i = n(808629),
     a = n(536895),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -103,18 +103,18 @@ function m(e) {
         [S, A] = r.useState(!1),
         [{ onItemFocusMemoizer: N, onItemMouseEnterMemoizer: C }] = r.useState(() => ({
             onItemFocusMemoizer: new o.$o((e) => () => {
-                T(!0),
+                (T(!0),
                     y({
                         type: i.B.SET_FOCUS_PATH,
                         path: e.split(d)
-                    });
+                    }));
             }),
             onItemMouseEnterMemoizer: new o.$o((e) => () => {
-                A(!1),
+                (A(!1),
                     y({
                         type: i.B.SET_FOCUS_PATH,
                         path: e.split(d)
-                    });
+                    }));
             })
         })),
         R = r.useCallback(
@@ -127,7 +127,7 @@ function m(e) {
                     case a.Us.NAVIGATE_DOWN:
                     case a.Us.NAVIGATE_IN:
                     case a.Us.NAVIGATE_OUT:
-                        e.preventDefault(), e.stopPropagation(), A(!0), O({ type: n });
+                        (e.preventDefault(), e.stopPropagation(), A(!0), O({ type: n }));
                         return;
                     case a.Us.SELECT_FOCUSED_ITEM:
                         var r;
@@ -149,11 +149,11 @@ function m(e) {
             [I]
         ),
         D = r.useCallback(() => {
-            y({
+            (y({
                 type: i.B.SET_FOCUS_PATH,
                 path: []
             }),
-                T(!1);
+                T(!1));
         }, []),
         L = r.useCallback((e) => e.every((e, t) => v[t] === e), [v]),
         x = r.useCallback(

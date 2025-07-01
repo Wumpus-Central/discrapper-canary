@@ -31,7 +31,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function A(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -47,8 +47,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -75,7 +75,7 @@ function R(e) {
     let { guild: D } = e,
         Z = (0, l.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
-            return s()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
+            return (s()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e);
         }),
         {
             pendingAvatar: w,
@@ -111,8 +111,8 @@ function R(e) {
         K = j.ZP.canUsePremiumProfileCustomization(Z),
         q = (0, c.gd)(w, null == Y ? void 0 : Y.avatar),
         X = (0, c.f$)(L, null == W ? void 0 : W.banner),
-        Q = (0, v.p)(U, null == W ? void 0 : W.themeColors),
-        J = null != (t = null == W ? void 0 : W.bio) ? t : '',
+        J = (0, v.p)(U, null == W ? void 0 : W.themeColors),
+        Q = null != (t = null == W ? void 0 : W.bio) ? t : '',
         $ = null != (n = null == W ? void 0 : W.pronouns) ? n : '',
         ee = (e, t, n) => {
             n(null != e ? e : null != t ? null : void 0);
@@ -260,7 +260,7 @@ function R(e) {
                             (0, v.ce)(e, null == W ? void 0 : W.themeColors);
                         },
                         guildId: null == H ? void 0 : H.id,
-                        showResetThemeButton: Q
+                        showResetThemeButton: J
                     }),
                     (0, i.jsx)(
                         d.Z,
@@ -288,10 +288,10 @@ function R(e) {
                                     })
                                 ]
                             }),
-                            onBioChange: (e) => (0, v.qN)(e, J),
+                            onBioChange: (e) => (0, v.qN)(e, Q),
                             errors: null != (R = null == V ? void 0 : V.bio) ? R : null == z ? void 0 : z.bio,
                             pendingBio: B,
-                            currentBio: J,
+                            currentBio: Q,
                             disabled: !K
                         },
                         'about'

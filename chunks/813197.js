@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Fq: () => f,
     ZP: () => p,
     Zj: () => u
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -34,24 +34,24 @@ function u() {
 function d(e, t) {
     if (null != e) {
         let n = new FileReader();
-        (n.onload = (n) => {
+        ((n.onload = (n) => {
             var r;
             'string' == typeof (null == (r = n.target) ? void 0 : r.result) && t(n.target.result, e);
         }),
-            n.readAsDataURL(e);
+            n.readAsDataURL(e));
     }
 }
 function f(e, t, n) {
     d(e, (r) => {
         if (e.type === s.m.MP4) return t(r, e);
         let i = new Image();
-        (i.src = r),
+        ((i.src = r),
             (i.onload = () => {
                 t(r, e);
             }),
             (i.onerror = () => {
                 n();
-            });
+            }));
     });
 }
 class _ extends (r = a.PureComponent) {
@@ -77,7 +77,7 @@ class _ extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, '_ref', a.createRef()),
             c(this, '_isMounted', !1),
             c(this, 'handleFileChange', (e) => {
@@ -102,7 +102,7 @@ class _ extends (r = a.PureComponent) {
                     title: l.intl.string(l.t['0egKg4']),
                     help: l.intl.string(l.t['7PnXqq'])
                 });
-            });
+            }));
     }
 }
 c(_, 'defaultProps', {

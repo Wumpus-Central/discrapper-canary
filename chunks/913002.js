@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -86,10 +86,10 @@ function v(e) {
         [v, I] = (0, s.Wu)([c.Z], () => [c.Z.useReducedMotion, c.Z.keyboardModeEnabled]),
         T = !n || v || I ? 0 : y,
         S = () => {
-            g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), O(m), null == a || a();
+            (g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), O(m), null == a || a());
         },
         A = () => {
-            g({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), f.Ok.updateSetting(void 0);
+            (g({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), f.Ok.updateSetting(void 0));
         };
     return (0, r.jsxs)(d.ZP, {
         className: o()(h.popover, {

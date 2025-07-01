@@ -12,5 +12,5 @@ let s = function (e) {
         var n = !0;
     } catch (e) {}
     var o = i.call(e);
-    return n && (t ? (e[l] = r) : delete e[l]), o;
+    return (n && (t ? (e[l] = r) : delete e[l]), o);
 };

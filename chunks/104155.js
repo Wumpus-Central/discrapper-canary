@@ -1,9 +1,9 @@
-t.d(n, {
+(t.d(n, {
     I: () => b,
     Z: () => v
 }),
     t(388685),
-    t(35282);
+    t(35282));
 var l = t(255367),
     r = t(73800),
     i = t(442837),
@@ -54,7 +54,7 @@ function v(e) {
                             for (var n = 1; n < arguments.length; n++) {
                                 var t = null != arguments[n] ? arguments[n] : {},
                                     l = Object.keys(t);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (l = l.concat(
                                         Object.getOwnPropertySymbols(t).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -62,7 +62,7 @@ function v(e) {
                                     )),
                                     l.forEach(function (n) {
                                         var l;
-                                        (l = t[n]),
+                                        ((l = t[n]),
                                             n in e
                                                 ? Object.defineProperty(e, n, {
                                                       value: l,
@@ -70,8 +70,8 @@ function v(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[n] = l);
-                                    });
+                                                : (e[n] = l));
+                                    }));
                             }
                             return e;
                         })({}, t)),
@@ -110,7 +110,7 @@ function v(e) {
                               size: a.E1j.Sizes.MEDIUM,
                               query: o,
                               onChange: (e) => {
-                                  '' === o && '' !== e && p.default.track(x.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), s(e.toLowerCase());
+                                  ('' === o && '' !== e && p.default.track(x.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), s(e.toLowerCase()));
                               },
                               onClear: Z,
                               placeholder: C.intl.string(C.t.s5MnmJ)

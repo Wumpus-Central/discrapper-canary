@@ -28,7 +28,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -47,7 +47,7 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -57,7 +57,7 @@ function p(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let h = null;
@@ -66,12 +66,12 @@ function m(e, t) {
 }
 async function g(e) {
     var t,
-        { userId: a, section: o, subsection: d, guildId: p, channelId: g, showGuildProfile: E = !0, appContext: b, customStatusPrompt: y } = e,
-        O = _(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
-    let v = l.default.getUser(a);
-    if (null == v) return;
-    let I = l.default.getCurrentUser();
-    null != I &&
+        { userId: a, section: o, subsection: d, guildId: p, channelId: g, showGuildProfile: E = !0, appContext: b, customStatusPrompt: y, disableActionsForPreview: O = !1 } = e,
+        v = _(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'showGuildProfile', 'appContext', 'customStatusPrompt', 'disableActionsForPreview']);
+    let I = l.default.getUser(a);
+    if (null == I) return;
+    let T = l.default.getCurrentUser();
+    null != T &&
         (h = await (0, i.ZDy)(
             async () => {
                 let { default: e } = (0, c.q)({ location: 'UserProfileModalManager' }) ? await Promise.all([n.e('1268'), n.e('82412'), n.e('62880'), n.e('37048'), n.e('43473')]).then(n.bind(n, 866035)) : await Promise.all([n.e('1268'), n.e('82412'), n.e('62880'), n.e('37048'), n.e('11678')]).then(n.bind(n, 678780));
@@ -80,17 +80,18 @@ async function g(e) {
                         e,
                         f(
                             {
-                                user: v,
-                                currentUser: I,
+                                user: I,
+                                currentUser: T,
                                 guildId: p,
                                 initialSection: o,
                                 initialSubsection: d,
                                 channelId: g,
                                 showGuildProfile: E,
-                                customStatusPrompt: y
+                                customStatusPrompt: y,
+                                disableActionsForPreview: O
                             },
                             t,
-                            O
+                            v
                         )
                     );
             },
@@ -101,14 +102,14 @@ async function g(e) {
         ));
 }
 function E() {
-    null != h && (0, i.Mr3)(h), (h = null);
+    (null != h && (0, i.Mr3)(h), (h = null));
 }
 class b extends o.Z {
     _initialize() {
-        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', E);
+        (a.Z.subscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', E));
     }
     _terminate() {
-        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', E);
+        (a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', E));
     }
 }
 let y = new b();

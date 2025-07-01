@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r,
     a,
     i = n(255367),
@@ -37,10 +37,10 @@ let j = {
 };
 class y extends (r = l.PureComponent) {
     componentDidMount() {
-        _.S.subscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), _.S.subscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
+        (_.S.subscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), _.S.subscribe(b.CkL.CAROUSEL_NEXT, this.handleNext));
     }
     componentWillUnmount() {
-        _.S.unsubscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), _.S.unsubscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
+        (_.S.unsubscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), _.S.unsubscribe(b.CkL.CAROUSEL_NEXT, this.handleNext));
     }
     render() {
         let { current: e, count: t, includeHitboxPadding: n, arrowClassName: r, paginationDotClassName: a, paginationDotSelectedClassName: l, paginationArrowIconType: s = 'arrow' } = this.props,
@@ -100,10 +100,10 @@ class y extends (r = l.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             C(this, 'handleDotClick', (e) => {
                 let { onSetItem: t, onIntentionalChange: n, current: r } = this.props;
-                null == n || n(r, e, j.JUMP), t(e);
+                (null == n || n(r, e, j.JUMP), t(e));
             }),
             C(this, 'handleNext', () => {
                 let { onIntentionalChange: e, current: t, onChangePage: n } = this.props,
@@ -114,16 +114,16 @@ class y extends (r = l.PureComponent) {
                 let { onIntentionalChange: e, current: t, onChangePage: n } = this.props,
                     r = n(-1);
                 null == e || e(t, r, j.PREVIOUS);
-            });
+            }));
     }
 }
 C(y, 'defaultProps', { includeHitboxPadding: !0 });
 class I extends (a = l.PureComponent) {
     componentDidMount() {
-        m.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocusChange), this.props.initialPaused || this.state.paused || this.startTimer();
+        (m.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocusChange), this.props.initialPaused || this.state.paused || this.startTimer());
     }
     componentWillUnmount() {
-        this.stopTimer(), m.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocusChange);
+        (this.stopTimer(), m.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocusChange));
     }
     componentDidUpdate(e, t) {
         let n = (e, t) => !e.initialPaused && !t.paused,
@@ -202,7 +202,7 @@ class I extends (a = l.PureComponent) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             C(this, 'timer', new u.Xp()),
             C(this, 'handleWindowFocusChange', (e) => {
                 let { focused: t } = e;
@@ -236,7 +236,7 @@ class I extends (a = l.PureComponent) {
                 visibleIndex: !0 === e.randomize ? d().random(0, e.items.length - 1) : 0,
                 direction: h.n.LEFT,
                 paused: !1
-            });
+            }));
     }
 }
 C(I, 'defaultProps', { aspectRatio: 16 / 9 });

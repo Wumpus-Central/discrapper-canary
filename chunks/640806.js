@@ -17,7 +17,7 @@ function u(e) {
         dismissibleContent: r.z.SOUNDBOARD_VOLUME_EDUCATION,
         artClassName: d.art,
         onTryFeature: () => {
-            s.Z.open(a.oAB.VOICE), t(o.L.UNKNOWN);
+            (s.Z.open(a.oAB.VOICE), t(o.L.UNKNOWN));
         },
         onClose: () => t(o.L.UNKNOWN),
         shouldUseHorizontalButtons: !0,

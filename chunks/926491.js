@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685), n(781311), n(35282), n(539854);
+(n.d(t, { Z: () => Q }), n(388685), n(781311), n(35282), n(539854));
 var r,
     i = n(956067),
     a = n(442837),
@@ -30,7 +30,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -101,7 +101,7 @@ function D(e) {
 let L = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        I.set(e.id, e), t && x(e, n);
+        (I.set(e.id, e), t && x(e, n));
     },
     x = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -120,12 +120,12 @@ let L = function (e) {
                         value: e.trim().toLocaleLowerCase()
                     }))
                 ];
-            null != t &&
+            (null != t &&
                 i.push({
                     type: h.MO.PACK_NAME,
                     value: t.name
                 }),
-                T.set(e.id, i);
+                T.set(e.id, i));
         } else if ((0, m.J8)(e) && null != n) {
             let i = u.ZP.getByName(n),
                 a = [
@@ -145,7 +145,7 @@ let L = function (e) {
                     });
             }
             if (null == i) return void T.set(e.id, a);
-            a.push({
+            (a.push({
                 type: h.MO.CORRELATED_EMOJI,
                 value: i.surrogates
             }),
@@ -155,7 +155,7 @@ let L = function (e) {
                         value: e.surrogates
                     })
                 ),
-                T.set(e.id, a);
+                T.set(e.id, a));
         }
     },
     k = (e, t, n) => {
@@ -163,25 +163,25 @@ let L = function (e) {
         let r = [...S];
         if (t) {
             let t = r.findIndex((t) => t.id === e.id);
-            -1 !== t ? (r[t] = e) : r.push(e), (S = r);
+            (-1 !== t ? (r[t] = e) : r.push(e), (S = r));
         }
         (t || n) && e.stickers.forEach((e) => L(e));
     },
     M = () => {
-        C.forEach((e, t) => {
+        (C.forEach((e, t) => {
             let n = _.Z.getGuild(t);
             null != n && e.forEach((e) => x(e, n));
         }),
             S.forEach((e) => {
                 e.stickers.forEach((e) => x(e));
-            });
+            }));
     },
     j = (e) => {
         let { guilds: t } = e;
-        (T = null), (I = new Map()), (C = new Map()), t.forEach(G), (O = +!!t.every((e) => null != e.stickers));
+        ((T = null), (I = new Map()), (C = new Map()), t.forEach(G), (O = +!!t.every((e) => null != e.stickers)));
     },
     U = () => {
-        (T = null), (I = new Map()), (C = new Map()), (O = 0);
+        ((T = null), (I = new Map()), (C = new Map()), (O = 0));
     };
 function G(e) {
     let t = _.Z.getGuild(e.id);
@@ -194,21 +194,21 @@ function B(e) {
 function V(e) {
     var t;
     let { guild: n } = e;
-    (null != (t = C.get(n.id)) ? t : []).forEach((e) => {
-        null != T && T.delete(e.id), I.delete(e.id);
+    ((null != (t = C.get(n.id)) ? t : []).forEach((e) => {
+        (null != T && T.delete(e.id), I.delete(e.id));
     }),
         C.delete(n.id),
-        (C = new Map(C));
+        (C = new Map(C)));
 }
 let F = () => {
-        (O = 0), (S = []), I.clear(), v.clear(), (T = null), C.clear(), (C = new Map(C)), (N = !1), (A = null);
+        ((O = 0), (S = []), I.clear(), v.clear(), (T = null), C.clear(), (C = new Map(C)), (N = !1), (A = null));
     },
     Z = () => {
         N = !0;
     },
     H = (e) => {
         let { packs: t } = e;
-        t.forEach((e) => k(e, !0)), (A = Date.now()), (N = !1);
+        (t.forEach((e) => k(e, !0)), (A = Date.now()), (N = !1));
     },
     Y = (e) => {
         let { pack: t, ingestStickers: n } = e;
@@ -216,13 +216,13 @@ let F = () => {
     },
     W = (e) => {
         let { guildId: t, stickers: n } = e;
-        n.forEach((e) => L(e)), R(t, n);
+        (n.forEach((e) => L(e)), R(t, n));
     },
     K = (e) => {
         var t, n;
         let { guildId: r, sticker: i } = e,
             a = null != (t = C.get(r)) ? t : [];
-        R(r, [...(null != (n = a.filter((e) => e.id !== i.id)) ? n : []), i]), L(i);
+        (R(r, [...(null != (n = a.filter((e) => e.id !== i.id)) ? n : []), i]), L(i));
     },
     z = (e) => {
         let { sticker: t } = e;
@@ -234,15 +234,15 @@ let F = () => {
             i = (e) => {
                 let t,
                     n = I.get(e.id);
-                return null != n && (0, m.J8)(n) && (t = null != n.user ? n.user : void 0), y(E({}, e), { user: t });
+                return (null != n && (0, m.J8)(n) && (t = null != n.user ? n.user : void 0), y(E({}, e), { user: t }));
             };
         (null != (t = C.get(n)) ? t : [])
             .filter((e) => null == r.find((t) => t.id === e.id))
             .forEach((e) => {
-                I.delete(e.id), null != T && T.delete(e.id);
+                (I.delete(e.id), null != T && T.delete(e.id));
             });
         let a = r.map((e) => i(e));
-        a.forEach((e) => L(e)), R(n, a);
+        (a.forEach((e) => L(e)), R(n, a));
     };
 class X extends (r = a.ZP.Store) {
     initialize() {
@@ -255,7 +255,7 @@ class X extends (r = a.ZP.Store) {
         return O;
     }
     get stickerMetadata() {
-        return w(), null == T && ((T = new Map()), M()), T;
+        return (w(), null == T && ((T = new Map()), M()), T);
     }
     get hasLoadedStickerPacks() {
         return null != A && A + P > Date.now();
@@ -264,7 +264,7 @@ class X extends (r = a.ZP.Store) {
         return N;
     }
     getStickerById(e) {
-        return I.has(e) || w(), I.get(e);
+        return (I.has(e) || w(), I.get(e));
     }
     getStickerPack(e) {
         return v.get(e);
@@ -279,13 +279,13 @@ class X extends (r = a.ZP.Store) {
         return C;
     }
     getAllStickersIterator() {
-        return w(), I.values();
+        return (w(), I.values());
     }
     getAllGuildStickers() {
-        return w(), C;
+        return (w(), C);
     }
     getStickersByGuildId(e) {
-        return w(), C.get(e);
+        return (w(), C.get(e));
     }
 }
 g(X, 'displayName', 'StickersStore');

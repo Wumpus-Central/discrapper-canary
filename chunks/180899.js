@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(73800),
     i = n(512722),
     l = n.n(i),
@@ -26,7 +26,7 @@ function c(e) {
                 c(e);
             },
             handleDelayedSave: function () {
-                l()(null != u, 'Must have some saved options.'), c(u);
+                (l()(null != u, 'Must have some saved options.'), c(u));
             }
         }
     );

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     TO: () => m,
     dm: () => p,
     uB: () => I,
@@ -6,7 +6,7 @@ n.d(t, {
     zH: () => v
 }),
     n(539854),
-    n(49124);
+    n(49124));
 var r = n(956067);
 n(17089);
 var i = n(218543),
@@ -30,7 +30,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -72,7 +72,7 @@ function f(e, t) {
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -82,13 +82,13 @@ function _(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function p(e, t, n, a, l) {
     var u, f, _;
     let p = h(t);
-    null != a && r.Z.addDetail('payload_size(kb)', Math.round(a.uncompressed_byte_size / 1024)), r.Z.addDetail('server_time(ms)', null != (u = p.identify_total_server_duration_ms) ? u : 0);
+    (null != a && r.Z.addDetail('payload_size(kb)', Math.round(a.uncompressed_byte_size / 1024)), r.Z.addDetail('server_time(ms)', null != (u = p.identify_total_server_duration_ms) ? u : 0));
     let m = d(c({}, a, p, y(t), l), {
         duration_ms_since_identify_start: n - e.identifyStartTime,
         duration_ms_since_connection_start: n - e.connectionStartTime,
@@ -101,17 +101,17 @@ function p(e, t, n, a, l) {
         had_cache_at_startup: null != (f = e.analytics.hadCacheAtStartup) && f,
         used_cache_at_startup: null != (_ = e.analytics.usedCacheAtStartup) && _
     });
-    i.Z.attachReadyPayloadProperties(m), o.default.track(s.rMx.READY_PAYLOAD_RECEIVED, m, { logEventProperties: !0 });
+    (i.Z.attachReadyPayloadProperties(m), o.default.track(s.rMx.READY_PAYLOAD_RECEIVED, m, { logEventProperties: !0 }));
 }
 function h(e) {
     let { _trace: t } = e,
         n = {};
     try {
         let e = JSON.parse(t);
-        null != e[0] && '' !== e[0] && e[0].startsWith('gateway-') && (n.identify_total_server_duration_ms = Math.floor(e[1].micros / 1000)),
+        (null != e[0] && '' !== e[0] && e[0].startsWith('gateway-') && (n.identify_total_server_duration_ms = Math.floor(e[1].micros / 1000)),
             b(e, (e, t) => {
                 'start_session' === e ? (n.identify_api_duration_ms = Math.floor(t / 1000)) : 'guilds_connect' === e && (n.identify_guilds_duration_ms = Math.floor(t / 1000));
-            });
+            }));
     } catch (e) {}
     return n;
 }
@@ -130,11 +130,11 @@ function E(e, t) {
     if (null == e) return '';
     let n = '';
     for (let r = 0; r < e.length; r += 2)
-        (n += '\n'
+        ((n += '\n'
             .concat(t)
             .concat(e[r], ': ')
             .concat(e[r + 1].micros / 1000)),
-            (n += E(e[r + 1].calls, t + '|  '));
+            (n += E(e[r + 1].calls, t + '|  ')));
     return n;
 }
 function b(e, t) {
@@ -142,7 +142,7 @@ function b(e, t) {
         for (let n = 0; n < e.length; n += 2) {
             let r = e[n],
                 i = e[n + 1];
-            t(r, i.micros), b(i.calls, t);
+            (t(r, i.micros), b(i.calls, t));
         }
 }
 function y(e) {
@@ -156,7 +156,7 @@ function y(e) {
             null != t &&
                 null != t.forEach &&
                 t.forEach((e) => {
-                    r++, e.type === s.d4z.GUILD_CATEGORY && n++;
+                    (r++, e.type === s.d4z.GUILD_CATEGORY && n++);
                 });
         }),
         {
@@ -188,7 +188,7 @@ function O(e) {
                 i = f(n, ['features']),
                 { threads: a, guild_scheduled_events: o } = e,
                 s = f(e, ['threads', 'guild_scheduled_events']);
-            E.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), b.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), y.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), O.push(a), v.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), I.push(r), T.push(o), S.push(s, i);
+            (E.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), b.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), y.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), O.push(a), v.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), I.push(r), T.push(o), S.push(s, i));
         }),
         {
             presences_size: JSON.stringify(null != (t = null == a ? void 0 : a.friends) ? t : []).length,

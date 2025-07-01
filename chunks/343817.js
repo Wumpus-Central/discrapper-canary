@@ -11,17 +11,17 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
+(n.d(t, {
     Hx: () => u,
     f$: () => i,
     hP: () => o
 }),
     n(388685),
-    n(415506);
+    n(415506));
 let i = 50035,
     a = '__root_errors';
 var o = (function (e) {
-    return (e.HCAPTCHA = 'hcaptcha'), (e.RECAPTCHA = 'recaptcha'), (e.RECAPTCHA_ENTERPRISE = 'recaptcha_enterprise'), e;
+    return ((e.HCAPTCHA = 'hcaptcha'), (e.RECAPTCHA = 'recaptcha'), (e.RECAPTCHA_ENTERPRISE = 'recaptcha_enterprise'), e);
 })({});
 function s(e) {
     return e.map((e) => ({
@@ -37,7 +37,7 @@ function l(e) {
             continue;
         }
         let e = {};
-        (e._errors = s(r)), (t[n] = e);
+        ((e._errors = s(r)), (t[n] = e));
     }
     return t;
 }
@@ -77,7 +77,7 @@ class u extends Error {
     getFieldErrors(e) {
         'string' == typeof e && (e = [e]);
         let t = this.errors;
-        for (; e.length > 0 && null != t; ) (t = t[e[0]]), (e = e.splice(1));
+        for (; e.length > 0 && null != t; ) ((t = t[e[0]]), (e = e.splice(1)));
         return null == t ? void 0 : t._errors;
     }
     getAllFieldErrors() {
@@ -117,12 +117,12 @@ class u extends Error {
                     fieldName: t,
                     error: e._errors[0].message
                 };
-            (t = Object.keys(e)[0]), (e = e[t]);
+            ((t = Object.keys(e)[0]), (e = e[t]));
         }
         return null;
     }
     constructor(e, t, n = 'An unexpected error occurred.') {
         let { message: i, code: a, retryAfter: o, errors: s, status: l, captchaFields: u } = c(e, t);
-        super(null != i ? i : n), r(this, 'code', void 0), r(this, 'retryAfter', void 0), r(this, 'errors', void 0), r(this, 'status', void 0), r(this, 'captchaFields', void 0), (this.code = null != a ? a : -1), (this.retryAfter = o), (this.errors = s), (this.status = l), (this.captchaFields = null != u ? u : {}), (this.cause = e);
+        (super(null != i ? i : n), r(this, 'code', void 0), r(this, 'retryAfter', void 0), r(this, 'errors', void 0), r(this, 'status', void 0), r(this, 'captchaFields', void 0), (this.code = null != a ? a : -1), (this.retryAfter = o), (this.errors = s), (this.status = l), (this.captchaFields = null != u ? u : {}), (this.cause = e));
     }
 }

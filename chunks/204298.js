@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     M: () => l,
     Z: () => b
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,7 +21,7 @@ function s(e, t, n) {
     );
 }
 var l = (function (e) {
-    return (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.ERROR = 3)] = 'ERROR'), e;
+    return ((e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.ERROR = 3)] = 'ERROR'), e);
 })({});
 let c = {
     applicationIdToGuildIds: {},
@@ -30,14 +30,14 @@ let c = {
     fetchState: 0
 };
 function u() {
-    (c.applicationIdToGuildIds = {}), (c.lastFetchTimeMs = null), (c.nextFetchRetryTimeMs = null), (c.fetchState = 0);
+    ((c.applicationIdToGuildIds = {}), (c.lastFetchTimeMs = null), (c.nextFetchRetryTimeMs = null), (c.fetchState = 0));
 }
 function d() {
     c.fetchState = 1;
 }
 function f(e) {
     let { applicationId: t, guildId: n } = e;
-    null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()), c.applicationIdToGuildIds[t].add(n), (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
+    (null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()), c.applicationIdToGuildIds[t].add(n), (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t])));
 }
 function _(e) {
     let { applicationId: t, guildId: n } = e;
@@ -95,7 +95,7 @@ class E extends (r = i.ZP.PersistedStore) {
         return c.fetchState;
     }
 }
-s(E, 'displayName', 'MyGuildApplicationsStore'), s(E, 'persistKey', 'MyGuildApplicationsStore');
+(s(E, 'displayName', 'MyGuildApplicationsStore'), s(E, 'persistKey', 'MyGuildApplicationsStore'));
 let b = new E(a.Z, {
     LOGOUT: u,
     FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: d,

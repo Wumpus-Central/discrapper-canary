@@ -1,13 +1,13 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.Hue = void 0);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.Hue = void 0));
 var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     o = r(73800),
@@ -17,7 +17,7 @@ var n = (function () {
         if (e && e.__esModule) return e;
         var t = {};
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
-        return (t.default = e), t;
+        return ((t.default = e), t);
     })(r(198917));
 function s(e) {
     return e && e.__esModule ? e : { default: e };
@@ -38,7 +38,7 @@ var c = (t.Hue = (function (e) {
                 t && 'function' == typeof n.props.onChange && n.props.onChange(t, e);
             }),
             (n.handleMouseDown = function (e) {
-                n.handleChange(e), window.addEventListener('mousemove', n.handleChange), window.addEventListener('mouseup', n.handleMouseUp);
+                (n.handleChange(e), window.addEventListener('mousemove', n.handleChange), window.addEventListener('mouseup', n.handleMouseUp));
             }),
             (n.handleMouseUp = function () {
                 n.unbindEventListeners();
@@ -66,7 +66,7 @@ var c = (t.Hue = (function (e) {
             {
                 key: 'unbindEventListeners',
                 value: function () {
-                    window.removeEventListener('mousemove', this.handleChange), window.removeEventListener('mouseup', this.handleMouseUp);
+                    (window.removeEventListener('mousemove', this.handleChange), window.removeEventListener('mouseup', this.handleMouseUp));
                 }
             },
             {

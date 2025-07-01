@@ -50,7 +50,7 @@ function E(e) {
         let e = (0, s.countBy)(b, (e) => (0, d.aw)(e, !0)),
             t = null != (T = e.IMAGE) ? T : 0,
             n = null != (N = e.VIDEO) ? N : 0;
-        t > 0 && n > 0
+        (t > 0 && n > 0
             ? ((v = m.intl.formatToPlainString(m.t.Lr0Toq, {
                   image_count: t,
                   video_count: n
@@ -95,7 +95,7 @@ function E(e) {
                             width: 56,
                             height: 56
                         })
-                    }));
+                    })));
     }
     return (
         A > 1 &&

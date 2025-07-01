@@ -11,11 +11,11 @@ var r =
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+                ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
             }
         }
         return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+            return (n && e(t.prototype, n), r && e(t, r), t);
         };
     })();
 function a(e, t) {
@@ -39,7 +39,7 @@ var o = n(161796),
                         var t = e.outputRange;
                         g('outputRange', t);
                         var n = e.inputRange;
-                        g('inputRange', n), m(n), s(n.length === t.length, 'inputRange (' + n.length + ') and outputRange (' + t.length + ') must have the same length');
+                        (g('inputRange', n), m(n), s(n.length === t.length, 'inputRange (' + n.length + ') and outputRange (' + t.length + ') must have the same length'));
                         var r = e.easing || l,
                             i = 'extend';
                         void 0 !== e.extrapolateLeft ? (i = e.extrapolateLeft) : void 0 !== e.extrapolate && (i = e.extrapolate);
@@ -75,7 +75,7 @@ function d(e) {
 var f = /[0-9\.-]+/g;
 function _(e) {
     var t = e.outputRange;
-    s(t.length >= 2, 'Bad output range'), p((t = t.map(d)));
+    (s(t.length >= 2, 'Bad output range'), p((t = t.map(d))));
     var n = t[0].match(f).map(function () {
         return [];
     });
@@ -108,6 +108,6 @@ function m(e) {
     for (var t = 1; t < e.length; ++t) s(e[t] >= e[t - 1], 'inputRange must be monotonically increasing ' + e);
 }
 function g(e, t) {
-    s(t.length >= 2, e + ' must have at least 2 elements'), s(2 !== t.length || t[0] !== -1 / 0 || t[1] !== 1 / 0, e + 'cannot be ]-infinity;+infinity[ ' + t);
+    (s(t.length >= 2, e + ' must have at least 2 elements'), s(2 !== t.length || t[0] !== -1 / 0 || t[1] !== 1 / 0, e + 'cannot be ]-infinity;+infinity[ ' + t));
 }
 e.exports = c;

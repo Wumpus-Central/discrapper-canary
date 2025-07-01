@@ -19,7 +19,7 @@ let s = !1,
     l = !1;
 function c(e) {
     let { muted: t } = e;
-    (s = t), (l = !1);
+    ((s = t), (l = !1));
 }
 function u(e) {
     let { play: t } = e;
@@ -42,7 +42,7 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
         return s;
     }
 }
-o(f, 'displayName', 'StageMusicStore'), o(f, 'persistKey', 'StageMusicStore');
+(o(f, 'displayName', 'StageMusicStore'), o(f, 'persistKey', 'StageMusicStore'));
 let _ = new f(a.Z, {
     STAGE_MUSIC_MUTE: c,
     STAGE_MUSIC_PLAY: u,

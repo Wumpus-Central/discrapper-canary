@@ -8,7 +8,7 @@ var r = n(98405),
     u = Array,
     d = Math.max,
     f = Math.min;
-r(
+(r(
     {
         target: 'Array',
         proto: !0
@@ -31,4 +31,4 @@ r(
         }
     }
 ),
-    i('toSpliced');
+    i('toSpliced'));

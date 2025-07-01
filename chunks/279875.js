@@ -1,4 +1,4 @@
-t.d(n, { GuildSubscriptionSelectionModal: () => x }), t(388685), t(290780), t(539854);
+(t.d(n, { GuildSubscriptionSelectionModal: () => x }), t(388685), t(290780), t(539854));
 var i = t(255367),
     l = t(73800),
     s = t(481060),

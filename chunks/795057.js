@@ -7,7 +7,7 @@ n(73800);
 var s = n(120356),
     o = n.n(s),
     a = n(481060);
-n(918701), n(373370), n(566078), n(388032);
+(n(918701), n(373370), n(566078), n(388032));
 var i = n(141572);
 function l(e) {
     let { children: t, isComplete: n, hasNextStep: s } = e;

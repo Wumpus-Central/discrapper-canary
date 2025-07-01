@@ -1,4 +1,4 @@
-n.d(t, { w: () => E }), n(388685), n(781311), n(953529);
+(n.d(t, { w: () => E }), n(388685), n(781311), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -24,7 +24,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -40,8 +40,8 @@ function y(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -72,11 +72,11 @@ function I(e) {
         D = I.hasFeature(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         k = null != (t = (0, g.A)({ guildId: I.id })) ? t : 0,
         A = i.useCallback(() => {
-            Z(null), f.Z.init(T, v.pNK.ACCESS);
+            (Z(null), f.Z.init(T, v.pNK.ACCESS));
         }, [T]),
         L = i.useCallback(async (e) => {
             try {
-                w(!0), await e(), Z(null);
+                (w(!0), await e(), Z(null));
             } finally {
                 w(!1);
             }
@@ -133,7 +133,7 @@ function I(e) {
                     L(async () => {
                         if (I.hasFeature(v.oNc.DISCOVERABLE)) {
                             let e = new Set(I.features);
-                            e.delete(v.oNc.DISCOVERABLE), await M({ features: e });
+                            (e.delete(v.oNc.DISCOVERABLE), await M({ features: e }));
                         }
                         h.verificationDirty && (await U(t, r, e));
                     });
@@ -143,9 +143,9 @@ function I(e) {
                     L(async () => {
                         if (I.hasFeature(v.oNc.DISCOVERABLE)) {
                             let e = new Set(I.features);
-                            e.delete(v.oNc.DISCOVERABLE), await M({ features: e });
+                            (e.delete(v.oNc.DISCOVERABLE), await M({ features: e }));
                         }
-                        h.verificationDirty && (await G([...t], !0, e)), h.profileDirty && null != S && (await (0, p.pV)(I.id, { visibility: S.visibility }));
+                        (h.verificationDirty && (await G([...t], !0, e)), h.profileDirty && null != S && (await (0, p.pV)(I.id, { visibility: S.visibility })));
                     });
                 } else if (l.joinType === j.A.DISCOVERABLE) {
                     let { requireTerms: t, termRules: n = [] } = l,
@@ -154,14 +154,14 @@ function I(e) {
                         if ((h.verificationDirty && (await U(t, r, e)), h.guildDirty)) {
                             (0, x.UA)(I, b);
                             let e = new Set(I.features);
-                            e.add(v.oNc.DISCOVERABLE),
+                            (e.add(v.oNc.DISCOVERABLE),
                                 e.delete(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
                                 await M({
                                     features: e,
                                     discoverySplash: I.discoverySplash,
                                     description: I.description,
                                     preferredLocale: I.preferredLocale
-                                });
+                                }));
                             try {
                                 await (0, c.Vv)(y({ guildId: I.id }, E));
                             } catch (e) {

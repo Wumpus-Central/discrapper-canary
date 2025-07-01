@@ -34,7 +34,7 @@ function v(e) {
     if (!C) return null;
     let P = () => {
             let e = (e) => {
-                e.stopPropagation(), (0, f.X)(n.id), null == I || I({ action: 'OPEN_VOICE_GUILD' }), null == T || T();
+                (e.stopPropagation(), (0, f.X)(n.id), null == I || I({ action: 'OPEN_VOICE_GUILD' }), null == T || T());
             };
             return (0, r.jsx)(a.DY3, {
                 text: n.name,
@@ -56,7 +56,7 @@ function v(e) {
                     children: (0, r.jsx)(l.Z, { children: N })
                 });
             let e = (e) => {
-                e.stopPropagation(), o.default.selectVoiceChannel(v.id), (0, d.Kh)(v.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == T || T();
+                (e.stopPropagation(), o.default.selectVoiceChannel(v.id), (0, d.Kh)(v.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == T || T());
             };
             return (0, r.jsx)(a.P3F, {
                 onClick: e,
@@ -102,7 +102,7 @@ function v(e) {
                         overflowCountColor: 'text-secondary',
                         overflowCountClassName: y.voiceChannelOverflowCount,
                         onClick: (e) => {
-                            e.stopPropagation(), null == I || I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
+                            (e.stopPropagation(), null == I || I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
                         },
                         onUserClick: (e) => e.stopPropagation(),
                         disableUserPopout: !!D || ((e) => e === t.id)

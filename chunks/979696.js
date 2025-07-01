@@ -29,7 +29,7 @@ class c extends (r = i.ZP.PersistedStore) {
         return s;
     }
 }
-o(c, 'displayName', 'CallChatToastsStore'), o(c, 'persistKey', 'CallChatToasts');
+(o(c, 'displayName', 'CallChatToastsStore'), o(c, 'persistKey', 'CallChatToasts'));
 let u = new c(l.Z, {
     CALL_CHAT_TOASTS_SET_ENABLED: function (e) {
         let { channelId: t, toastsEnabled: n } = e;

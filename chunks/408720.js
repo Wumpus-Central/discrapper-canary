@@ -10,8 +10,8 @@ var r = a(469359),
     l = a(394798),
     u = a(622916),
     I = a(467510),
-    d = a(954211),
-    R = a(886115),
+    R = a(954211),
+    d = a(886115),
     N = a(873567),
     f = a(454463),
     A = a(163162);
@@ -29,7 +29,7 @@ let T = (0, o._I)((t = {}) => {
         name: 'Breadcrumbs',
         setup(t) {
             var a, o, T, p, L, h, O;
-            e.console &&
+            (e.console &&
                 (0, s.e)(
                     ((a = t),
                     function (t) {
@@ -40,12 +40,12 @@ let T = (0, o._I)((t = {}) => {
                                 arguments: t.args,
                                 logger: 'console'
                             },
-                            level: (0, d.V)(t.level),
-                            message: (0, R.nK)(t.args, ' ')
+                            level: (0, R.V)(t.level),
+                            message: (0, d.nK)(t.args, ' ')
                         };
                         if ('assert' === t.level)
                             if (!1 !== t.args[0]) return;
-                            else (e.message = `Assertion failed: ${(0, R.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1));
+                            else ((e.message = `Assertion failed: ${(0, d.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1)));
                         (0, c.n)(e, {
                             input: t.args,
                             level: t.level
@@ -61,16 +61,16 @@ let T = (0, o._I)((t = {}) => {
                             if ((0, i.s3)() !== o) return;
                             let r = 'object' == typeof T ? T.serializeAttribute : void 0,
                                 _ = 'object' == typeof T && 'number' == typeof T.maxStringLength ? T.maxStringLength : void 0;
-                            _ && _ > 1024 && (f.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${_} was configured. Sentry will use 1024 instead.`), (_ = 1024)), 'string' == typeof r && (r = [r]);
+                            (_ && _ > 1024 && (f.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${_} was configured. Sentry will use 1024 instead.`), (_ = 1024)), 'string' == typeof r && (r = [r]));
                             try {
                                 var n;
                                 let o = t.event,
                                     i = (n = o) && n.target ? o.target : o;
-                                (e = (0, I.Rt)(i, {
+                                ((e = (0, I.Rt)(i, {
                                     keyAttrs: r,
                                     maxStringLength: _
                                 })),
-                                    (a = (0, I.iY)(i));
+                                    (a = (0, I.iY)(i)));
                             } catch (t) {
                                 e = '<unknown>';
                             }
@@ -79,12 +79,12 @@ let T = (0, o._I)((t = {}) => {
                                 category: `ui.${t.name}`,
                                 message: e
                             };
-                            a && (s.data = { 'ui.component_name': a }),
+                            (a && (s.data = { 'ui.component_name': a }),
                                 (0, c.n)(s, {
                                     event: t.event,
                                     name: t.name,
                                     global: t.global
-                                });
+                                }));
                         })
                     ),
                 e.xhr &&
@@ -173,7 +173,7 @@ let T = (0, o._I)((t = {}) => {
                                 r = (0, N.en)(A.m9.location.href),
                                 _ = e ? (0, N.en)(e) : void 0,
                                 n = (0, N.en)(a);
-                            (_ && _.path) || (_ = r),
+                            ((_ && _.path) || (_ = r),
                                 r.protocol === n.protocol && r.host === n.host && (a = n.relative),
                                 r.protocol === _.protocol && r.host === _.host && (e = _.relative),
                                 (0, c.n)({
@@ -182,7 +182,7 @@ let T = (0, o._I)((t = {}) => {
                                         from: e,
                                         to: a
                                     }
-                                });
+                                }));
                         })
                     ),
                 e.sentry &&
@@ -201,7 +201,7 @@ let T = (0, o._I)((t = {}) => {
                                     { event: t }
                                 );
                         })
-                    );
+                    ));
         }
     };
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => em }), n(388685);
+(n.d(t, { Z: () => em }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(94171),
@@ -55,7 +55,7 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -63,7 +63,7 @@ function Z(e) {
             )),
             r.forEach(function (t) {
                 F(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,11 +71,11 @@ function H(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -140,7 +140,7 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         return {
             handleStickerInspect: i.useCallback((e) => {
                 let { visibleRowIndex: t, columnIndex: n, gridSectionIndex: r } = e;
-                h.ZN.setActiveCategoryIndex(r), h.ZN.setInspectedExpressionPosition(n, t, g.u.MOUSE_EVENT), e.type === P.al.STICKER && h.ZN.setSearchPlaceholder(e.sticker.name);
+                (h.ZN.setActiveCategoryIndex(r), h.ZN.setInspectedExpressionPosition(n, t, g.u.MOUSE_EVENT), e.type === P.al.STICKER && h.ZN.setSearchPlaceholder(e.sticker.name));
             }, []),
             handleSelect: i.useCallback(
                 (e, i) => {
@@ -162,7 +162,7 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 analyticsLocations: o
                             }));
                         let t = (0, w.J8)(c);
-                        (0, A.cO)(c, r, n) === A.eb.SENDABLE_WITH_PREMIUM && (0, S.f)(!0), t && A.eb.SENDABLE_WITH_BOOSTED_GUILD;
+                        ((0, A.cO)(c, r, n) === A.eb.SENDABLE_WITH_PREMIUM && (0, S.f)(!0), t && A.eb.SENDABLE_WITH_BOOSTED_GUILD);
                         return;
                     }
                     if (i)
@@ -229,14 +229,14 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { isStickerPack: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         r = new Set(t),
                         i = t.has(e);
-                    i ? r.delete(e) : r.add(e),
+                    (i ? r.delete(e) : r.add(e),
                         I.default.track(j.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: null == A ? void 0 : A.location,
                             tab: U.X1.STICKER,
                             collapsed: !i,
                             sticker_pack_id: n ? e : null
                         }),
-                        F(r);
+                        F(r));
                 },
                 [A, t, F]
             ),

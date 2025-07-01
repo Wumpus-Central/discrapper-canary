@@ -1,4 +1,4 @@
-r.d(t, { Z: () => _ }), r(388685);
+(r.d(t, { Z: () => _ }), r(388685));
 var n = r(255367),
     a = r(73800),
     l = r(120356),
@@ -36,11 +36,11 @@ let O = new s.Z('BalanceCounter'),
                 return;
             }
             let e = null !== h.current ? l - h.current : l;
-            0 !== e && null !== h.current && c(e),
+            (0 !== e && null !== h.current && c(e),
                 (C.current = {
                     lastChangedAt: Date.now(),
                     totalDelta: Math.abs(e)
-                });
+                }));
         }, [l, c]);
         let g = null != l ? l : 0,
             _ = null != (t = h.current) ? t : g,
@@ -66,7 +66,7 @@ let O = new s.Z('BalanceCounter'),
                             delta: g - h.current
                         });
                     }
-                    i(p(g)), (h.current = g);
+                    (i(p(g)), (h.current = g));
                 }
             }),
             v = p(Math.max(null != l ? l : 0, j.get()));
@@ -88,12 +88,12 @@ let O = new s.Z('BalanceCounter'),
                             n,
                             a = {},
                             l = Object.keys(e);
-                        for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                        for (n = 0; n < l.length; n++) ((r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
                         return a;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                    for (n = 0; n < l.length; n++) ((r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
                 }
                 return a;
             })(e, ['value', 'className']);
@@ -117,7 +117,7 @@ let O = new s.Z('BalanceCounter'),
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
                                   n = Object.keys(r);
-                              'function' == typeof Object.getOwnPropertySymbols &&
+                              ('function' == typeof Object.getOwnPropertySymbols &&
                                   (n = n.concat(
                                       Object.getOwnPropertySymbols(r).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -125,7 +125,7 @@ let O = new s.Z('BalanceCounter'),
                                   )),
                                   n.forEach(function (t) {
                                       var n;
-                                      (n = r[t]),
+                                      ((n = r[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: n,
@@ -133,8 +133,8 @@ let O = new s.Z('BalanceCounter'),
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = n);
-                                  });
+                                              : (e[t] = n));
+                                  }));
                           }
                           return e;
                       })(

@@ -11,7 +11,7 @@ function s(e) {
 }
 class l extends r.Z {
     constructor() {
-        super(), (0, a.Z)(this, s);
+        (super(), (0, a.Z)(this, s));
     }
 }
 let c = new l();

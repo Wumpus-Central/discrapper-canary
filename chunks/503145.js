@@ -1,4 +1,4 @@
-n.d(t, { U: () => u }), n(388685);
+(n.d(t, { U: () => u }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -29,7 +29,7 @@ class u extends (r = a.Component) {
         e ? this.startShaking() : this.stopShaking();
     }
     startShaking() {
-        (this.shouldRenderFrame = !0), (this.animationFrame = requestAnimationFrame(this.animate));
+        ((this.shouldRenderFrame = !0), (this.animationFrame = requestAnimationFrame(this.animate)));
     }
     stopShaking() {
         null != this.animationFrame && cancelAnimationFrame(this.animationFrame);
@@ -45,7 +45,7 @@ class u extends (r = a.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'ref', a.createRef()),
             c(this, 'animationFrame', void 0),
             c(this, 'shouldRenderFrame', !0),
@@ -58,8 +58,8 @@ class u extends (r = a.Component) {
                         r = s().random(-e, e, !0);
                     n.style.transform = l.Z.useReducedMotion ? '' : 'translate3d('.concat(t, 'px,').concat(r, 'px,0px)');
                 }
-                (this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate));
-            });
+                ((this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate)));
+            }));
     }
 }
 c(u, 'defaultProps', {

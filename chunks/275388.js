@@ -6,9 +6,9 @@ var r = n(255367),
     i = n(772848),
     l = n(481060),
     o = n(396639),
-    s = n(981631);
-let a = 'orb-checkout-payment-modal-key',
-    c = () => (0, l.VXO)(a),
+    a = n(981631);
+let s = 'orb-checkout-payment-modal-key',
+    c = () => (0, l.VXO)(s),
     u = (e) => {
         var { skuId: t, analyticsLocations: c = [], analyticsSourceLocation: u, onCloseCallback: d, onCheckoutSuccess: h } = e,
             p = (function (e, t) {
@@ -21,12 +21,12 @@ let a = 'orb-checkout-payment-modal-key',
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(e, ['skuId', 'analyticsLocations', 'analyticsSourceLocation', 'onCloseCallback', 'onCheckoutSuccess']);
@@ -43,7 +43,7 @@ let a = 'orb-checkout-payment-modal-key',
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ let a = 'orb-checkout-payment-modal-key',
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -59,8 +59,8 @@ let a = 'orb-checkout-payment-modal-key',
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })(
@@ -69,7 +69,7 @@ let a = 'orb-checkout-payment-modal-key',
                                 analyticsLocations: c,
                                 analyticsSourceLocation: u,
                                 onCheckoutSuccess: (e) => {
-                                    (f = !0), h(e);
+                                    ((f = !0), h(e));
                                 }
                             },
                             p,
@@ -95,16 +95,16 @@ let a = 'orb-checkout-payment-modal-key',
             {
                 onCloseCallback: d,
                 onCloseRequest() {
-                    f ||
-                        (0, o._Y)(s.rMx.PAYMENT_FLOW_CANCELED, {
+                    (f ||
+                        (0, o._Y)(a.rMx.PAYMENT_FLOW_CANCELED, {
                             loadId: g,
                             skuId: t,
                             analyticsLocations: c,
                             analyticsSourceLocation: u
                         }),
-                        (0, l.Mr3)(a);
+                        (0, l.Mr3)(s));
                 },
-                modalKey: a
+                modalKey: s
             }
         );
     };

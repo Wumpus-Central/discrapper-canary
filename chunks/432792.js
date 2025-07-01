@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     M: () => O,
     M4: () => v,
     WS: () => T,
     t4: () => j
 }),
     n(388685),
-    n(953529);
+    n(953529));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -155,7 +155,7 @@ function T(e) {
                 if ((O(i), r && j(String(Date.now())), u)) return;
                 let e = i.top < window.innerHeight / 2;
                 if (e === f) return;
-                b(e), j(String(Date.now()));
+                (b(e), j(String(Date.now())));
             }
         },
         [f, O, m, u]

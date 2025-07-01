@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(317770),
     i = n(626135),
     a = n(358085),
@@ -35,13 +35,13 @@ class u extends r.Z {
     _handleHistoryResponse(e) {
         if (null == e) return;
         let t = 0 === Math.floor(500 * Math.random());
-        e.forEach((e) => {
+        (e.forEach((e) => {
             'analytics' === e.type ? (e.name === l.rMx.UPDATER_METRICS_DOWNLOAD || e.name === l.rMx.UPDATER_METRICS_INSTALL || e.name === l.rMx.UPDATER_METRICS_COMBINED || e.name === l.rMx.UPDATER_METRICS_TRANSITION_STATUS ? t && i.default.track(e.name, e.data) : console.warn('Unknown updater analytic event '.concat(e.name))) : this._tracker.trackEvent(e);
         }),
-            this._tracker.submissionReady() && (i.default.track(l.rMx.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset());
+            this._tracker.submissionReady() && (i.default.track(l.rMx.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset()));
     }
     constructor(...e) {
-        super(...e), c(this, '_tracker', new s.Z());
+        (super(...e), c(this, '_tracker', new s.Z()));
     }
 }
 let d = new u();

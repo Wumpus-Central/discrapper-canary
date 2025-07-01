@@ -93,12 +93,12 @@ async function p(e, t, n) {
         trackedActionData: { event: r.a.WEBAUTHN_REGISTER },
         rejectWithError: !1
     });
-    a.Z.dispatch({
+    (a.Z.dispatch({
         type: 'AUTHENTICATOR_CREATE',
         credential: i.body
     }),
         a.Z.dispatch({
             type: 'MFA_ENABLE_SUCCESS',
             codes: i.body.backup_codes
-        });
+        }));
 }

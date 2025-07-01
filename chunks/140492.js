@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(290780);
+(n.d(t, { Z: () => b }), n(388685), n(290780));
 var i = n(358230),
     r = n(931261),
     s = n(355298),
@@ -31,7 +31,7 @@ function b() {
                   var c, m;
                   let e = d.Z.getCurrentRoute();
                   o === p.Z5c.APPLICATION_STORE && null != e ? (0, g.z)(e) : (0, g.z)(o);
-              } else (m = p.ME), (0, g.K)(m, o);
+              } else ((m = p.ME), (0, g.K)(m, o));
           })(e)
         : (function (e, t) {
               var n, s, l;
@@ -39,6 +39,6 @@ function b() {
                   c = (0, i.Z)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id);
               (0, r.s)(t) && c.unshift(h.oC.GUILD_HOME);
               let d = ((n = (null != o ? c.indexOf(o) : -1) + e), (s = c.length), n < 0 ? s - 1 : n >= s ? 0 : n);
-              (l = c[d]), (0, g.K)(t, l);
+              ((l = c[d]), (0, g.K)(t, l));
           })(e, t);
 }

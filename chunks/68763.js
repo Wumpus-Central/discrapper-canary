@@ -122,7 +122,7 @@ e.exports = function (e) {
         };
     h.contains = [i, o, e.inherit(e.APOS_STRING_MODE, { className: '' }), h, s, p, _, e.QUOTE_STRING_MODE, a, l, c, u, d, f];
     let m = [i, o, h, s, p, _, e.QUOTE_STRING_MODE, a, l, c, u, d, f];
-    (s.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m);
+    ((s.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m));
     let g = ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-moduledoc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec', '-on_load', '-nifs'],
         E = {
             className: 'params',

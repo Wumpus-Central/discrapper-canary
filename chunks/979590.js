@@ -10,7 +10,7 @@
         if (((t = t || {}), (e = e || '') instanceof c)) return e;
         if (!(this instanceof c)) return new c(e, t);
         var n = u(e);
-        (this._originalInput = e), (this._r = n.r), (this._g = n.g), (this._b = n.b), (this._a = n.a), (this._roundA = a(100 * this._a) / 100), (this._format = t.format || n.format), (this._gradientType = t.gradientType), this._r < 1 && (this._r = a(this._r)), this._g < 1 && (this._g = a(this._g)), this._b < 1 && (this._b = a(this._b)), (this._ok = n.ok), (this._tc_id = i++);
+        ((this._originalInput = e), (this._r = n.r), (this._g = n.g), (this._b = n.b), (this._a = n.a), (this._roundA = a(100 * this._a) / 100), (this._format = t.format || n.format), (this._gradientType = t.gradientType), this._r < 1 && (this._r = a(this._r)), this._g < 1 && (this._g = a(this._g)), this._b < 1 && (this._b = a(this._b)), (this._ok = n.ok), (this._tc_id = i++));
     }
     function u(e) {
         var t = {
@@ -82,7 +82,7 @@
         else {
             var s = n < 0.5 ? n * (1 + t) : n + t - n * t,
                 l = 2 * n - s;
-            (r = o(l, s, e + 1 / 3)), (i = o(l, s, e)), (a = o(l, s, e - 1 / 3));
+            ((r = o(l, s, e + 1 / 3)), (i = o(l, s, e)), (a = o(l, s, e - 1 / 3)));
         }
         return {
             r: 255 * r,
@@ -119,7 +119,7 @@
         };
     }
     function h(e, n, r) {
-        (e = 6 * M(e, 360)), (n = M(n, 100)), (r = M(r, 100));
+        ((e = 6 * M(e, 360)), (n = M(n, 100)), (r = M(r, 100)));
         var i = t.floor(e),
             a = e - i,
             o = r * (1 - n),
@@ -146,12 +146,12 @@
     function b(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toHsl();
-        return (n.s -= t / 100), (n.s = j(n.s)), c(n);
+        return ((n.s -= t / 100), (n.s = j(n.s)), c(n));
     }
     function y(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toHsl();
-        return (n.s += t / 100), (n.s = j(n.s)), c(n);
+        return ((n.s += t / 100), (n.s = j(n.s)), c(n));
     }
     function O(e) {
         return c(e).desaturate(100);
@@ -159,26 +159,26 @@
     function v(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toHsl();
-        return (n.l += t / 100), (n.l = j(n.l)), c(n);
+        return ((n.l += t / 100), (n.l = j(n.l)), c(n));
     }
     function I(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toRgb();
-        return (n.r = s(0, o(255, n.r - a(-((t / 100) * 255))))), (n.g = s(0, o(255, n.g - a(-((t / 100) * 255))))), (n.b = s(0, o(255, n.b - a(-((t / 100) * 255))))), c(n);
+        return ((n.r = s(0, o(255, n.r - a(-((t / 100) * 255))))), (n.g = s(0, o(255, n.g - a(-((t / 100) * 255))))), (n.b = s(0, o(255, n.b - a(-((t / 100) * 255))))), c(n));
     }
     function T(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toHsl();
-        return (n.l -= t / 100), (n.l = j(n.l)), c(n);
+        return ((n.l -= t / 100), (n.l = j(n.l)), c(n));
     }
     function S(e, t) {
         var n = c(e).toHsl(),
             r = (n.h + t) % 360;
-        return (n.h = r < 0 ? 360 + r : r), c(n);
+        return ((n.h = r < 0 ? 360 + r : r), c(n));
     }
     function A(e) {
         var t = c(e).toHsl();
-        return (t.h = (t.h + 180) % 360), c(t);
+        return ((t.h = (t.h + 180) % 360), c(t));
     }
     function N(e) {
         var t = c(e).toHsl(),
@@ -237,27 +237,27 @@
         ];
     }
     function P(e, t, n) {
-        (t = t || 6), (n = n || 30);
+        ((t = t || 6), (n = n || 30));
         var r = c(e).toHsl(),
             i = 360 / n,
             a = [c(e)];
-        for (r.h = (r.h - ((i * t) >> 1) + 720) % 360; --t; ) (r.h = (r.h + i) % 360), a.push(c(r));
+        for (r.h = (r.h - ((i * t) >> 1) + 720) % 360; --t; ) ((r.h = (r.h + i) % 360), a.push(c(r)));
         return a;
     }
     function w(e, t) {
         t = t || 6;
         for (var n = c(e).toHsv(), r = n.h, i = n.s, a = n.v, o = [], s = 1 / t; t--; )
-            o.push(
+            (o.push(
                 c({
                     h: r,
                     s: i,
                     v: a
                 })
             ),
-                (a = (a + s) % 1);
+                (a = (a + s) % 1));
         return o;
     }
-    (c.prototype = {
+    ((c.prototype = {
         isDark: function () {
             return 128 > this.getBrightness();
         },
@@ -287,10 +287,10 @@
                 i,
                 a,
                 o = this.toRgb();
-            return (e = o.r / 255), (n = o.g / 255), (r = o.b / 255), (i = e <= 0.03928 ? e / 12.92 : t.pow((e + 0.055) / 1.055, 2.4)), 0.2126 * i + 0.7152 * (n <= 0.03928 ? n / 12.92 : t.pow((n + 0.055) / 1.055, 2.4)) + 0.0722 * (a = r <= 0.03928 ? r / 12.92 : t.pow((r + 0.055) / 1.055, 2.4));
+            return ((e = o.r / 255), (n = o.g / 255), (r = o.b / 255), (i = e <= 0.03928 ? e / 12.92 : t.pow((e + 0.055) / 1.055, 2.4)), 0.2126 * i + 0.7152 * (n <= 0.03928 ? n / 12.92 : t.pow((n + 0.055) / 1.055, 2.4)) + 0.0722 * (a = r <= 0.03928 ? r / 12.92 : t.pow((r + 0.055) / 1.055, 2.4)));
         },
         setAlpha: function (e) {
-            return (this._a = k(e)), (this._roundA = a(100 * this._a) / 100), this;
+            return ((this._a = k(e)), (this._roundA = a(100 * this._a) / 100), this);
         },
         toHsv: function () {
             var e = p(this._r, this._g, this._b);
@@ -383,7 +383,7 @@
         },
         _applyModification: function (e, t) {
             var n = e.apply(null, [this].concat([].slice.call(t)));
-            return (this._r = n._r), (this._g = n._g), (this._b = n._b), this.setAlpha(n._a), this;
+            return ((this._r = n._r), (this._g = n._g), (this._b = n._b), this.setAlpha(n._a), this);
         },
         lighten: function () {
             return this._applyModification(v, arguments);
@@ -487,7 +487,7 @@
                 o,
                 s = null,
                 l = 0;
-            (i = (n = n || {}).includeFallbackColors), (a = n.level), (o = n.size);
+            ((i = (n = n || {}).includeFallbackColors), (a = n.level), (o = n.size));
             for (var u = 0; u < t.length; u++) (r = c.readability(e, t[u])) > l && ((l = r), (s = c(t[u])));
             return c.isReadable(e, s, {
                 level: a,
@@ -495,7 +495,7 @@
             }) || !i
                 ? s
                 : ((n.includeFallbackColors = !1), c.mostReadable(e, ['#fff', '#000'], n));
-        });
+        }));
     var D = (c.names = {
             aliceblue: 'f0f8ff',
             antiquewhite: 'faebd7',
@@ -654,7 +654,7 @@
         return t;
     }
     function k(e) {
-        return (isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e;
+        return ((isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e);
     }
     function M(e, n) {
         G(e) && (e = '100%');
@@ -677,7 +677,7 @@
         return 1 == e.length ? '0' + e : '' + e;
     }
     function F(e) {
-        return e <= 1 && (e = 100 * e + '%'), e;
+        return (e <= 1 && (e = 100 * e + '%'), e);
     }
     function Z(e) {
         return t.round(255 * parseFloat(e)).toString(16);
@@ -710,7 +710,7 @@
         e = e.replace(n, '').replace(r, '').toLowerCase();
         var t,
             i = !1;
-        if (D[e]) (e = D[e]), (i = !0);
+        if (D[e]) ((e = D[e]), (i = !0));
         else if ('transparent' == e)
             return {
                 r: 0,

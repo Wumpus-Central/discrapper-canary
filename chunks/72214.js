@@ -1,4 +1,4 @@
-n.d(t, { s: () => _ }), n(388685), n(35282);
+(n.d(t, { s: () => _ }), n(388685), n(35282));
 var l = n(73800),
     r = n(442837),
     i = n(38618),
@@ -42,8 +42,8 @@ function _(e) {
         O = l.useRef(null),
         A = l.useRef(n),
         v = p !== O.current ? n : A.current;
-    l.useEffect(() => {
-        p !== O.current && (A.current = n), (O.current = p);
+    (l.useEffect(() => {
+        (p !== O.current && (A.current = n), (O.current = p));
     }, [p, n]),
         l.useLayoutEffect(() => {
             let { query: e, resultTypes: t } = b;
@@ -52,7 +52,7 @@ function _(e) {
                 resultTypes: t
             });
         }, [m, b]),
-        (0, s.D)();
+        (0, s.D)());
     let C = (0, r.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
         x = (0, r.e7)([i.Z], () => i.Z.isConnected()),
         P = '' !== p;

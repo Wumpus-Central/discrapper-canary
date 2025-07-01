@@ -1,33 +1,33 @@
-n.d(t, {
+(n.d(t, {
     M: () => p,
-    Z: () => h
+    Z: () => x
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r,
     i,
     l,
-    o,
-    a = n(442837),
-    u = n(759174),
+    a,
+    o = n(442837),
+    s = n(759174),
     c = n(570140),
-    s = n(70956),
+    u = n(70956),
     d = n(709054),
     p = (((i = {})[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED'), i);
-let f = {},
-    E = {},
-    O = {},
-    _ = 10 * s.Z.Millis.MINUTE;
-function S(e) {
+let m = {},
+    f = {},
+    g = {},
+    _ = 10 * u.Z.Millis.MINUTE;
+function h(e) {
     return 'guild:'.concat(e);
 }
-function g(e) {
+function b(e) {
     return 'guild:'.concat(e, ':published');
 }
-let I = new u.h(
+let E = new s.h(
         (e) => {
-            let t = [S(e.guild_id)];
-            return e.published && t.push(g(e.guild_id)), t;
+            let t = [h(e.guild_id)];
+            return (e.published && t.push(b(e.guild_id)), t);
         },
         (e) =>
             (function (e) {
@@ -35,82 +35,82 @@ let I = new u.h(
                 return e.published ? -t : -t + 1000000000000;
             })(e)
     ),
-    b = [];
-class T extends (r = a.ZP.Store) {
+    y = [];
+class C extends (r = o.ZP.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
-        return null != (t = f[e]) ? t : 0;
+        return null != (t = m[e]) ? t : 0;
     }
     getGuildProduct(e) {
-        return I.get(e);
+        return E.get(e);
     }
     getGuildProductsForGuild(e, t) {
         let { publishedOnly: n } = t;
-        return null == e ? b : I.values(n ? g(e) : S(e));
+        return null == e ? y : E.values(n ? b(e) : h(e));
     }
     getGuildProductFetchState(e) {
         var t;
-        return null != (t = E[e]) ? t : 0;
+        return null != (t = f[e]) ? t : 0;
     }
     isGuildProductsCacheExpired(e) {
         var t;
-        return Date.now() - (null != (t = O[e]) ? t : 0) > _;
+        return Date.now() - (null != (t = g[e]) ? t : 0) > _;
     }
 }
-(o = 'GuildProductsStore'),
-    (l = 'displayName') in T
-        ? Object.defineProperty(T, l, {
-              value: o,
+((a = 'GuildProductsStore'),
+    (l = 'displayName') in C
+        ? Object.defineProperty(C, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (T[l] = o);
-let h = new T(c.Z, {
+        : (C[l] = a));
+let x = new C(c.Z, {
     CONNECTION_OPEN: function () {
-        I.clear(), (f = {}), (E = {}), (O = {});
+        (E.clear(), (m = {}), (f = {}), (g = {}));
     },
     GUILD_PRODUCTS_FETCH: function (e) {
         let { guildId: t } = e;
-        (f[t] = 1),
-            [...I.values(S(t))].forEach((e) => {
-                I.delete(e.id);
-            });
+        ((m[t] = 1),
+            [...E.values(h(t))].forEach((e) => {
+                E.delete(e.id);
+            }));
     },
     GUILD_PRODUCTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, products: n } = e;
-        (f[t] = 2),
-            (O[t] = Date.now()),
+        ((m[t] = 2),
+            (g[t] = Date.now()),
             n.forEach((e) => {
-                I.set(e.id, e), (E[e.id] = 2);
-            });
+                (E.set(e.id, e), (f[e.id] = 2));
+            }));
     },
     GUILD_PRODUCTS_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;
-        f[t] = 2;
+        m[t] = 2;
     },
     GUILD_PRODUCT_CREATE: function (e) {
         let { product: t } = e;
-        I.set(t.id, t);
+        E.set(t.id, t);
     },
     GUILD_PRODUCT_UPDATE: function (e) {
         let { product: t } = e;
-        I.set(t.id, t);
+        E.set(t.id, t);
     },
     GUILD_PRODUCT_DELETE: function (e) {
         let { productId: t } = e;
-        I.delete(t);
+        E.delete(t);
     },
     GUILD_PRODUCT_FETCH: function (e) {
         let { productId: t } = e;
-        E[t] = 1;
+        f[t] = 1;
     },
     GUILD_PRODUCT_FETCH_SUCCESS: function (e) {
         let { product: t } = e;
-        (E[t.id] = 2), I.set(t.id, t);
+        ((f[t.id] = 2), E.set(t.id, t));
     },
     GUILD_PRODUCT_FETCH_FAILURE: function (e) {
         let { productId: t, error: n } = e;
-        (E[t] = 2), 404 === n.status && I.delete(t);
+        ((f[t] = 2), 404 === n.status && E.delete(t));
     }
 });

@@ -34,17 +34,17 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
         let { state: t, permissionType: n } = e,
             r = u.permissionStates,
             i = r[n];
-        (r[n] = t),
+        ((r[n] = t),
             i !== t &&
                 o.default.track(l.rMx.PERMISSIONS_ACKED, {
                     type: n,
                     action: t,
                     previous_action: null != i ? i : s.PQ.NONE
-                });
+                }));
     }
     constructor() {
         super(a.Z, { SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e) });
     }
 }
-c(d, 'displayName', 'NativePermissionStore'), c(d, 'persistKey', 'NativePermissionsStore');
+(c(d, 'displayName', 'NativePermissionStore'), c(d, 'persistKey', 'NativePermissionsStore'));
 let f = d;

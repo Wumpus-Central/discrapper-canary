@@ -69,7 +69,7 @@ var n = r(512972),
         for (e.get(r) && i.push(r); n && n.getNextSiblingKey(); ) {
             var o = n.getNextSiblingKey();
             if (!o) break;
-            i.push(o), (n = e.get(o));
+            (i.push(o), (n = e.get(o)));
         }
         return i;
     },
@@ -86,11 +86,11 @@ var n = r(512972),
             S = l && (!y.getChildKeys().isEmpty() || !v.getChildKeys().isEmpty());
         r.forEach(function (t, e) {
             if (e !== a) return void d.push(t);
-            S ? d.push(t) : d.push(f(t, u, o)),
+            (S ? d.push(t) : d.push(f(t, u, o)),
                 o.slice(+!S, g - 1).forEach(function (t) {
                     return d.push(t);
                 }),
-                d.push(p(t, u, o));
+                d.push(p(t, u, o)));
         });
         var w = n.createFromArray(d);
         return (
@@ -114,7 +114,7 @@ var n = r(512972),
                         var u = s.get(i).getChildKeys(),
                             l = u.indexOf(e),
                             f = u.toArray();
-                        f.splice.apply(f, [l + 1, 0].concat(o)), t.setIn([i, 'children'], c(f));
+                        (f.splice.apply(f, [l + 1, 0].concat(o)), t.setIn([i, 'children'], c(f)));
                     }
                 })),
             t.merge({

@@ -1,4 +1,4 @@
-n.d(t, { v: () => u }), n(388685);
+(n.d(t, { v: () => u }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(854568),
@@ -25,7 +25,7 @@ let u = i.forwardRef(function (e, t) {
                 alignment: null != f ? c.E[f] : o.Alignment.Center
             })
         });
-    i.useImperativeHandle(
+    (i.useImperativeHandle(
         t,
         () => ({
             play: () => (null == v ? void 0 : v.play()),
@@ -50,7 +50,7 @@ let u = i.forwardRef(function (e, t) {
                     v.on(o.EventType.Pause, t),
                     v.on(o.EventType.Stop, t),
                     () => {
-                        v.off(o.EventType.Play, e), v.off(o.EventType.Pause, t), v.off(o.EventType.Stop, t);
+                        (v.off(o.EventType.Play, e), v.off(o.EventType.Pause, t), v.off(o.EventType.Stop, t));
                     }
                 );
             }
@@ -74,7 +74,7 @@ let u = i.forwardRef(function (e, t) {
                     autoBind: !0
                 }),
                 v.setupRiveListeners());
-        }, [v, a, b, h]);
+        }, [v, a, b, h]));
     let T = i.useRef(0);
     i.useEffect(() => {
         if (null == v) return;
@@ -117,7 +117,7 @@ function d() {
                 e.addEventListener('focus', t),
                 e.addEventListener('blur', r),
                 () => {
-                    e.removeEventListener('focus', t), e.removeEventListener('blur', r);
+                    (e.removeEventListener('focus', t), e.removeEventListener('blur', r));
                 }
             );
         }, [e]),

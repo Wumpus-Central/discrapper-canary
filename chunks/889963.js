@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     W: () => c,
     s: () => l
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r,
     i = n(73800),
     a = n(392711),
@@ -22,7 +22,7 @@ function s(e, t, n) {
     );
 }
 var l = (function (e) {
-    return (e.PAGE = 'PAGE'), (e.GAP = 'GAP'), (e.BACK = 'BACK'), (e.NEXT = 'NEXT'), e;
+    return ((e.PAGE = 'PAGE'), (e.GAP = 'GAP'), (e.BACK = 'BACK'), (e.NEXT = 'NEXT'), e);
 })({});
 class c extends (r = i.PureComponent) {
     getNeighborBounds() {
@@ -108,7 +108,7 @@ class c extends (r = i.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             s(this, 'changePageTo', (e) => {
                 let { selectedPage: t, onPageChange: n } = this.props;
                 t !== e && null != n && n(e);
@@ -121,7 +121,7 @@ class c extends (r = i.PureComponent) {
             }),
             s(this, 'handleJump', (e) => {
                 this.changePageTo(e);
-            });
+            }));
     }
 }
 s(c, 'defaultProps', {

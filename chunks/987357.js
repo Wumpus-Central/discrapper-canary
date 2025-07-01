@@ -20,15 +20,15 @@ function o(e) {
             if (null == r || 'auto' === n || !t) return;
             let i = null == (e = r.ownerDocument) ? void 0 : e.defaultView;
             if (null == i) return;
-            (r.style.paddingTop = ''), (r.style.paddingBottom = ''), (r.style.paddingLeft = ''), (r.style.paddingRight = '');
+            ((r.style.paddingTop = ''), (r.style.paddingBottom = ''), (r.style.paddingLeft = ''), (r.style.paddingRight = ''));
             let a = i.getComputedStyle(r);
             if ('vertical' === n) {
                 if ('rtl' === o) {
                     let e = parseInt(a.getPropertyValue('padding-left'), 10);
-                    (r.style.paddingLeft = ''.concat(Math.max(0, e - c.width), 'px')), (r.style.paddingRight = '');
+                    ((r.style.paddingLeft = ''.concat(Math.max(0, e - c.width), 'px')), (r.style.paddingRight = ''));
                 } else {
                     let e = parseInt(a.getPropertyValue('padding-right'), 10);
-                    (r.style.paddingRight = ''.concat(Math.max(0, e - c.width), 'px')), (r.style.paddingLeft = '');
+                    ((r.style.paddingRight = ''.concat(Math.max(0, e - c.width), 'px')), (r.style.paddingLeft = ''));
                 }
                 let { current: e } = u;
                 null != e && (e.style.height = a.getPropertyValue('padding-bottom'));

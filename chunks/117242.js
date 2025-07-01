@@ -1,10 +1,10 @@
-n.d(t, { Z: () => i }), n(388685);
+(n.d(t, { Z: () => i }), n(388685));
 var r = n(73800);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -12,7 +12,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -20,8 +20,8 @@ function l(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -67,13 +67,13 @@ function i(e) {
             let e = t();
             if (null != e && i && a) {
                 let t = Date.now();
-                m({
+                (m({
                     startTime: t,
                     endTime: t,
                     segmentStartSec: e,
                     segmentEndSec: e
                 }),
-                    (v.current = !0);
+                    (v.current = !0));
             }
         }, [t, i, a]),
         E = (0, r.useCallback)(() => {
@@ -102,10 +102,10 @@ function i(e) {
         }, [i, a]),
         (0, r.useEffect)(() => {
             if (n && i && a)
-                v.current || b(),
+                (v.current || b(),
                     (f.current = window.setInterval(() => {
                         E();
-                    }, 200));
+                    }, 200)));
             else {
                 let e = t();
                 if (null != d && null != e) {
@@ -118,7 +118,7 @@ function i(e) {
                             })
                         );
                 }
-                m(null), (v.current = !1), null != f.current && (clearInterval(f.current), (f.current = null));
+                (m(null), (v.current = !1), null != f.current && (clearInterval(f.current), (f.current = null)));
             }
             return () => {
                 null != f.current && (clearInterval(f.current), (f.current = null));
@@ -129,7 +129,7 @@ function i(e) {
                 let e = t();
                 if (null != d && null != e) {
                     let t = Date.now();
-                    e - d.segmentStartSec > 0.2 &&
+                    (e - d.segmentStartSec > 0.2 &&
                         g(
                             o(l({}, d), {
                                 endTime: t,
@@ -137,7 +137,7 @@ function i(e) {
                             })
                         ),
                         m(null),
-                        (v.current = !1);
+                        (v.current = !1));
                 }
             }, [d, g, t]),
             isInitialized: v.current

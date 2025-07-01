@@ -1,4 +1,4 @@
-e.d(n, { default: () => m }), e(388685);
+(e.d(n, { default: () => m }), e(388685));
 var a = e(255367),
     o = e(73800),
     l = e(120356),
@@ -14,7 +14,7 @@ function m(t) {
         [p, b] = o.useState(!0),
         C = (0, r.Dt)(),
         k = () => {
-            m(), l();
+            (m(), l());
         };
     return (0, a.jsxs)(i.Y0X, {
         transitionState: n,

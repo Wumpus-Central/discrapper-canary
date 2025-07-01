@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -44,7 +44,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -52,7 +52,7 @@ function T(e) {
             )),
             i.forEach(function (t) {
                 N(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -86,7 +86,7 @@ class D extends r.PureComponent {
         return (0, i.jsx)(s.rU, {
             to: Z.Z5c.CHANNEL(o),
             onClick: (t) => {
-                t.stopPropagation(), u.Z.channelListScrollTo(o, e.id);
+                (t.stopPropagation(), u.Z.channelListScrollTo(o, e.id));
             },
             children: (0, i.jsx)(y.Z, {
                 className: w.channel,
@@ -155,7 +155,7 @@ class D extends r.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             N(this, 'rtcConnectionStatusRef', r.createRef()),
             N(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
@@ -178,7 +178,7 @@ class D extends r.PureComponent {
                     lobbyId: t,
                     isOverlay: !0
                 });
-            });
+            }));
     }
 }
 function R(e) {
@@ -193,12 +193,12 @@ function R(e) {
                         i,
                         r = {},
                         o = Object.keys(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['context', 'lobbyId', 'channel']);

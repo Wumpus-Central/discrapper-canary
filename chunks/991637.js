@@ -9,9 +9,9 @@ var c = r(s()),
     u = function (e) {
         return c(void 0 === this ? Promise : this, e);
     };
-i(u, {
+(i(u, {
     getPolyfill: s,
     implementation: o,
     shim: l
 }),
-    (e.exports = u);
+    (e.exports = u));

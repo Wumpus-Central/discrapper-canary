@@ -24,7 +24,7 @@ class g extends (l = s.ZP.Store) {
         return u[e];
     }
 }
-(i = 'GuildSettingsEmojiStore'),
+((i = 'GuildSettingsEmojiStore'),
     (r = 'displayName') in g
         ? Object.defineProperty(g, r, {
               value: i,
@@ -32,7 +32,7 @@ class g extends (l = s.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (g[r] = i);
+        : (g[r] = i));
 let p = new g(a.Z, {
     EMOJI_DELETE: function (e) {
         let { guildId: t, emojiId: n } = e;

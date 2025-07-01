@@ -4,18 +4,18 @@ n.d(t, {
 });
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    s = n.n(i),
-    o = n(481060),
-    l = n(956542);
+var s = n(120356),
+    i = n.n(s),
+    l = n(481060),
+    o = n(956542);
 let a = {
-    RED: l.redMessageBlock,
-    YELLOW: l.yellowMessageBlock,
-    BROWN: l.brownMessageBlock
+    RED: o.redMessageBlock,
+    YELLOW: o.yellowMessageBlock,
+    BROWN: o.brownMessageBlock
 };
 function c(e) {
-    let { color: t, icon: n, children: i, className: a } = e;
-    return (0, r.jsx)(o.kzN, {
+    let { color: t, icon: n, children: s, className: a } = e;
+    return (0, r.jsx)(l.kzN, {
         icon: (e) =>
             (0, r.jsx)(
                 n,
@@ -23,7 +23,7 @@ function c(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function c(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -39,8 +39,8 @@ function c(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })(
@@ -51,8 +51,8 @@ function c(e) {
                     e
                 )
             ),
-        iconClassName: l.messageBlockIcon,
-        className: s()(t, a),
-        children: i
+        iconClassName: o.messageBlockIcon,
+        className: i()(t, a),
+        children: s
     });
 }

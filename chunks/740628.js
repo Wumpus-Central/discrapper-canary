@@ -1,4 +1,4 @@
-t.d(n, { Z: () => O }), t(388685);
+(t.d(n, { Z: () => O }), t(388685));
 var l = t(255367),
     r = t(73800),
     i = t(442837),
@@ -88,14 +88,14 @@ function O(e) {
     }, [v, E]);
     let N = r.useCallback(
         (e) => {
-            I({
+            (I({
                 action: 'PRESS_SECTION',
                 section: e
             }),
                 S({
                     section: e,
                     subsection: void 0
-                });
+                }));
         },
         [I, S]
     );

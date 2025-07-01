@@ -58,9 +58,9 @@ function h(e) {
 }
 function m(e) {
     let { guildId: t, scrollTop: n, scrollTo: r } = e;
-    null == c[t] && (c[t] = d(t)), void 0 !== n && (c[t].scrollTop = n);
+    (null == c[t] && (c[t] = d(t)), void 0 !== n && (c[t].scrollTop = n));
     let i = !1;
-    return void 0 !== r && ((i = c[t].scrollTo !== r), (c[t].scrollTo = r)), null != r || i;
+    return (void 0 !== r && ((i = c[t].scrollTo !== r), (c[t].scrollTo = r)), null != r || i);
 }
 class g extends (r = i.ZP.Store) {
     percentageScrolled(e) {

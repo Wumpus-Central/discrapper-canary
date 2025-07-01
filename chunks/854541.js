@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     AG: () => D,
     Z$: () => k,
     jH: () => L,
     zH: () => M
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -40,7 +40,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -56,11 +56,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -82,7 +82,7 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -92,7 +92,7 @@ function A(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let N = i.lazy(() => Promise.all([n.e('21153'), n.e('28102')]).then(n.bind(n, 534828))),
@@ -216,7 +216,7 @@ function x(e) {
             },
             input: w
         });
-    i.useEffect(() => {
+    (i.useEffect(() => {
         if (null == A || A === L.current) return;
         let e = (0, c.Rf)(A),
             t = (0, c.O)(A);
@@ -229,13 +229,13 @@ function x(e) {
             input: e
         });
     }, [A, L]),
-        i.useEffect(() => s, [s]);
+        i.useEffect(() => s, [s]));
     let k = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);
             if (!(0, c.FX)(t)) return void x((e) => T(v({}, e), { input: t }));
             let n = (0, c._i)(t),
                 r = (0, c.O)(n);
-            x({
+            (x({
                 current: n,
                 pending: {
                     hex: t,
@@ -243,7 +243,7 @@ function x(e) {
                 },
                 input: t
             }),
-                a(n);
+                a(n));
         },
         M = async () => {
             if (null != S)
@@ -254,13 +254,13 @@ function x(e) {
         },
         j = i.useCallback(
             (e) => {
-                x((t) =>
+                (x((t) =>
                     T(v({}, t), {
                         pending: e,
                         input: e.hex
                     })
                 ),
-                    n && a((0, c._i)(e.hex));
+                    n && a((0, c._i)(e.hex)));
             },
             [n, a]
         ),

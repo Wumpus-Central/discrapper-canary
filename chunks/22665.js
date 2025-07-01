@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,35 +11,35 @@ var r = n(255367),
     p = n(223021),
     m = n(942951),
     f = n(594174),
-    h = n(55935),
-    g = n(130883),
-    _ = n(388032),
+    g = n(55935),
+    _ = n(130883),
+    h = n(388032),
     b = n(537670),
-    x = n(848697),
+    E = n(848697),
     y = n(328756);
-let E = (e) => {
-    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: E, reportedTimestamp: v } = e,
-        C = f.default.getUser(t),
-        O = i.useMemo(() => (l ? (0, p.Z)((0, h.vc)(s()(), 'LT')) : null), [l]),
+let C = (e) => {
+    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: C, reportedTimestamp: x } = e,
+        v = f.default.getUser(t),
+        O = i.useMemo(() => (l ? (0, p.Z)((0, g.vc)(s()(), 'LT')) : null), [l]),
         j = (0, m.l)({
-            user: C,
+            user: v,
             channelId: o.id,
             guildId: n,
-            messageId: E
-        })((0, u.JZ)(C, o)),
-        S = null != C ? C.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : y,
-        I =
-            null != C
-                ? _.intl.format(g.default['+zqXZm'], {
-                      username: C.username,
+            messageId: C
+        })((0, u.JZ)(v, o)),
+        I = null != v ? v.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : y,
+        S =
+            null != v
+                ? h.intl.format(_.default['+zqXZm'], {
+                      username: v.username,
                       onUserClick: j
                   })
-                : _.intl.string(g.default.xpRjfX);
+                : h.intl.string(_.default.xpRjfX);
     return (0, r.jsxs)('div', {
-        className: a()(x.messageSpine, x.repliedMessage, O),
+        className: a()(E.messageSpine, E.repliedMessage, O),
         children: [
             (0, r.jsx)(c.qEK, {
-                src: S,
+                src: I,
                 size: c.EFr.SIZE_16,
                 className: b.avatar,
                 'aria-label': ''
@@ -48,7 +48,7 @@ let E = (e) => {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
                 className: b.username,
-                children: I
+                children: S
             }),
             (0, r.jsxs)(c.Text, {
                 variant: 'text-sm/medium',
@@ -59,7 +59,7 @@ let E = (e) => {
                         children: '\u2022'
                     }),
                     (0, r.jsx)(d.Z, {
-                        timestamp: v,
+                        timestamp: x,
                         className: b.timestamp
                     })
                 ]

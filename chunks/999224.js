@@ -58,7 +58,7 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -66,7 +66,7 @@ function Z(e) {
             )),
             r.forEach(function (t) {
                 F(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -74,11 +74,11 @@ function H(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -228,4 +228,4 @@ let W = {
 function z(e) {
     return ''.concat(e, '.onnx');
 }
-(W['robot-synthetic'] = K(W.robot, { name: A.default['Ur/62N'] })), (W['chords-2part'] = K(W.tunes, { name: A.default.TYbrfH })), (W['chords-choir'] = K(W.tunes, { name: A.default.OnZ6g4 })), (W['chords-dev'] = K(W.tunes, { name: A.default['2XH8tr'] })), (W['robot-dev'] = K(W.robot, { name: A.default.XhhSOj })), (W['ghost-dev'] = K(W.ghost, { name: A.default.KmHwvL })), (W['wobble-dev'] = K(W.ghost, { name: A.default['6PDpsb'] })), (W['fan-dev'] = K(W.robot, { name: A.default['87aX+/'] })), (W['autotune-dev'] = K(W.tunes, { name: A.default.EYDrR0 }));
+((W['robot-synthetic'] = K(W.robot, { name: A.default['Ur/62N'] })), (W['chords-2part'] = K(W.tunes, { name: A.default.TYbrfH })), (W['chords-choir'] = K(W.tunes, { name: A.default.OnZ6g4 })), (W['chords-dev'] = K(W.tunes, { name: A.default['2XH8tr'] })), (W['robot-dev'] = K(W.robot, { name: A.default.XhhSOj })), (W['ghost-dev'] = K(W.ghost, { name: A.default.KmHwvL })), (W['wobble-dev'] = K(W.ghost, { name: A.default['6PDpsb'] })), (W['fan-dev'] = K(W.robot, { name: A.default['87aX+/'] })), (W['autotune-dev'] = K(W.tunes, { name: A.default.EYDrR0 })));

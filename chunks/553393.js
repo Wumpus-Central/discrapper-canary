@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+(n.d(t, { Z: () => Z }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(695469),
@@ -49,7 +49,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,7 +57,7 @@ function j(e) {
             )),
             r.forEach(function (t) {
                 M(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -91,7 +91,7 @@ function F(e) {
         eo = (0, _.Aq)(),
         es = (0, o.eg)(),
         el = (0, S.up)(w.dr.MEMBERS_LIST);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         let e = es.current;
         return (
             null == e || e.addEventListener('scroll', Z),
@@ -114,7 +114,7 @@ function F(e) {
                     n.disconnect();
                 }
             );
-        }, [N, es, H]);
+        }, [N, es, H]));
     let ec = (0, c.q_F)({
             from: { height: 0 },
             height: null != er ? er : 0,
@@ -140,7 +140,7 @@ function F(e) {
         ef = 'top' === F ? ''.concat(U, ' ').concat(U, ' 0 0') : '0 0 '.concat(U, ' ').concat(U);
     if (null == O || q || (X && !V(M, K))) return null;
     let e_ = () => {
-            (0, v._3)({
+            ((0, v._3)({
                 questId: O.id,
                 questContent: T.jn.MEMBERS_LIST,
                 questContentCTA: v.jZ.OPEN_DISCLOSURE,
@@ -151,10 +151,10 @@ function F(e) {
                     content: T.jn.MEMBERS_LIST,
                     ctaContent: v.jZ.OPEN_DISCLOSURE,
                     sourceQuestContent: T.jn.MEMBERS_LIST
-                });
+                }));
         },
         ep = () => {
-            (0, v._3)({
+            ((0, v._3)({
                 questId: O.id,
                 questContent: T.jn.MEMBERS_LIST,
                 questContentCTA: v.jZ.LEARN_MORE,
@@ -164,10 +164,10 @@ function F(e) {
                 (0, P.navigateToQuestHome)({
                     fromContent: T.jn.MEMBERS_LIST,
                     questId: O.id
-                });
+                }));
         },
         eh = (e) => {
-            e.stopPropagation(), e_();
+            (e.stopPropagation(), e_());
         },
         em = () => {
             V(M, K) && null != K
@@ -264,7 +264,7 @@ function F(e) {
                                 (0, r.jsxs)(c.P3F, {
                                     className: k.help,
                                     onClick: (e) => {
-                                        ed(), eh(e);
+                                        (ed(), eh(e));
                                     },
                                     children: [
                                         (0, r.jsx)(c.Text, {
@@ -323,7 +323,7 @@ function F(e) {
                 }),
                 (0, r.jsx)(c.zxk, {
                     onClick: () => {
-                        ed(), eg.handleClickCta();
+                        (ed(), eg.handleClickCta());
                     },
                     color: c.zxk.Colors.CUSTOM,
                     className: k.ctaButton,

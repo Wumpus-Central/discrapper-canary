@@ -1,4 +1,4 @@
-n.d(t, { q: () => y }), n(49124), n(388685);
+(n.d(t, { q: () => y }), n(49124), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -71,17 +71,17 @@ async function m() {
         for (let { name: n, hash: r, data: i } of t) {
             var e;
             let t = _(d({}, i), { gpus: null == (e = i.gpus) ? void 0 : e.map((e) => JSON.stringify(e)) });
-            s.default.track(n, t), ((p = { hashes: d({}, p.hashes) }).hashes[n] = r);
+            (s.default.track(n, t), ((p = { hashes: d({}, p.hashes) }).hashes[n] = r));
         }
         t.length > 0 && b.emitChange();
     } catch (e) {}
 }
 function g() {
-    return m(), !1;
+    return (m(), !1);
 }
 class E extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (p = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(o.Z);
+        ((p = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(o.Z));
     }
     getState() {
         return p;
@@ -94,7 +94,7 @@ class E extends (r = i.ZP.PersistedStore) {
         } catch (e) {}
     }
 }
-u(E, 'displayName', 'SystemAnalyticsStore'), u(E, 'persistKey', 'SystemAnalyticsStore');
+(u(E, 'displayName', 'SystemAnalyticsStore'), u(E, 'persistKey', 'SystemAnalyticsStore'));
 let b = new E(a.Z, { START_SESSION: g });
 function y() {
     return b.info();

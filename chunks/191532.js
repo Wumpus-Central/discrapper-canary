@@ -45,7 +45,7 @@ function s(e, t, n) {
         l = (e) => {
             let { start: n, end: i, shouldScrollToStart: o = !1, padding: l = 0, animate: c, callback: u } = e,
                 { scrollPosition: d, offsetSize: f } = a(t(), r);
-            (n -= l),
+            ((n -= l),
                 (i += l),
                 n >= d && i <= d + f
                     ? null != u && u()
@@ -59,7 +59,7 @@ function s(e, t, n) {
                             to: i - f,
                             animate: c,
                             callback: u
-                        });
+                        }));
         };
     return {
         spring: n,

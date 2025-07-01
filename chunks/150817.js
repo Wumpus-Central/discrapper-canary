@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'harmonic16',
         author: 'jannik siebert (https://github.com/janniks)',
@@ -19,4 +19,4 @@
         base0E: '#bf568b',
         base0F: '#bf5656'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

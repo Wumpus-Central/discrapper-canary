@@ -24,9 +24,9 @@ var i = n(120356),
     T = n(388032),
     S = n(997926);
 function A(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: h, pendingBio: m, pendingPronouns: T, pendingAvatar: A, pendingAvatarDecoration: C, pendingNickname: R, pendingGlobalName: P, pendingThemeColors: w, pendingProfileEffectId: D, pendingLegacyUsernameDisabled: L, avatarClassName: x, containerClassName: k, isTryItOutFlow: M = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, pendingBadges: F, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
-        Y = (0, u.ZP)(t.id, null == n ? void 0 : n.id),
-        { avatarSrc: W, avatarDecorationSrc: K } = (0, f.Z)({
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: h, pendingBio: m, pendingPronouns: T, pendingAvatar: A, pendingAvatarDecoration: C, pendingNickname: R, pendingGlobalName: P, pendingThemeColors: w, pendingProfileEffectId: D, pendingLegacyUsernameDisabled: L, avatarClassName: x, containerClassName: k, isTryItOutFlow: M = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, showViewFullProfileButton: F = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
+        W = (0, u.ZP)(t.id, null == n ? void 0 : n.id),
+        { avatarSrc: K, avatarDecorationSrc: z } = (0, f.Z)({
             user: t,
             guildId: null == n ? void 0 : n.id,
             avatarDecorationOverride: C,
@@ -34,13 +34,13 @@ function A(e) {
             size: s.EFr.SIZE_80,
             showPending: !0
         }),
-        z = (0, g.ZT)({
+        q = (0, g.ZT)({
             pendingProfileEffectId: D,
-            displayProfile: Y
+            displayProfile: W
         }),
-        { theme: q, primaryColor: X } = (0, d.Z)({
+        { theme: X, primaryColor: Q } = (0, d.Z)({
             user: t,
-            displayProfile: Y,
+            displayProfile: W,
             pendingThemeColors: w,
             isPreview: i
         });
@@ -49,7 +49,7 @@ function A(e) {
         children: [
             (0, r.jsxs)(_.Z, {
                 user: t,
-                displayProfile: Y,
+                displayProfile: W,
                 themeType: I.lY.POPOUT,
                 pendingThemeColors: w,
                 className: a()(S.container, k),
@@ -60,7 +60,7 @@ function A(e) {
                         children: [
                             (0, r.jsx)(b.Z, {
                                 user: t,
-                                displayProfile: Y,
+                                displayProfile: W,
                                 guildId: null == n ? void 0 : n.id,
                                 canUsePremiumCustomization: i,
                                 pendingBanner: l,
@@ -72,12 +72,12 @@ function A(e) {
                             (0, r.jsx)(E.Z, {
                                 user: t,
                                 guild: n,
-                                displayProfile: Y,
+                                displayProfile: W,
                                 canUsePremiumCustomization: i,
-                                previewAvatar: W,
-                                previewAvatarDecoration: K,
-                                previewTheme: q,
-                                previewPrimaryColor: X,
+                                previewAvatar: K,
+                                previewAvatarDecoration: z,
+                                previewTheme: X,
+                                previewPrimaryColor: Q,
                                 className: x,
                                 disabledInputs: j,
                                 isTryItOutFlow: M,
@@ -94,7 +94,7 @@ function A(e) {
                     }),
                     (0, r.jsx)(y.Z, {
                         user: t,
-                        displayProfile: Y,
+                        displayProfile: W,
                         guild: n,
                         pendingAvatar: A,
                         pendingNickname: R,
@@ -104,18 +104,19 @@ function A(e) {
                         pendingLegacyUsernameDisabled: L,
                         isTryItOutFlow: M,
                         hideBioSection: G,
-                        pendingBadges: F,
-                        shouldOpenBadgeTooltip: Z
+                        pendingBadges: Z,
+                        shouldOpenBadgeTooltip: H
                     }),
                     (0, r.jsx)(O.Z, {
                         user: t,
                         hideMessageInput: B,
-                        hideExampleButton: V
+                        hideExampleButton: V,
+                        showViewFullProfileButton: F
                     }),
-                    null != z && (0, r.jsx)(c.Z, { profileEffectId: z })
+                    null != q && (0, r.jsx)(c.Z, { profileEffectId: q })
                 ]
             }),
-            H && (0, r.jsx)(N, { pendingGlobalName: P })
+            Y && (0, r.jsx)(N, { pendingGlobalName: P })
         ]
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685);
+(n.d(t, { Z: () => z }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -43,7 +43,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 P(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -59,11 +59,11 @@ function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -108,13 +108,13 @@ function K(e) {
                     [R.categoryItemRecentEmoji]: l.type === S.En.RECENT
                 }),
                 onClick: () => {
-                    null != E &&
+                    (null != E &&
                         b.default.track(A.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: null == a ? void 0 : a.location,
                             tab: N.X1.EMOJI,
                             guild_id: E.id
                         }),
-                        u(n);
+                        u(n));
                 },
                 children: [
                     null != E
@@ -236,7 +236,7 @@ let z = (e) => {
         ee = i.useCallback(
             (e) => {
                 var t;
-                e(z), null == (t = N.current) || t.scrollTo(q);
+                (e(z), null == (t = N.current) || t.scrollTo(q));
             },
             [q, z]
         ),

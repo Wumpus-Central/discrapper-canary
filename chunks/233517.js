@@ -9,8 +9,8 @@ a.d(e, {
     eN: () => u,
     eW: () => T,
     mG: () => N,
-    rJ: () => d,
-    sU: () => R,
+    rJ: () => R,
+    sU: () => d,
     uT: () => l,
     v: () => I,
     xv: () => L,
@@ -38,10 +38,10 @@ function u(t, e) {
 function I(t, e) {
     (0, o.aF)().setContext(t, e);
 }
-function d(t) {
+function R(t) {
     (0, o.aF)().setExtras(t);
 }
-function R(t, e) {
+function d(t, e) {
     (0, o.aF)().setExtra(t, e);
 }
 function N(t) {
@@ -84,13 +84,13 @@ function P(t) {
             ...t
         }),
         u = a.getSession();
-    return u && 'ok' === u.status && (0, c.CT)(u, { status: 'exited' }), g(), a.setSession(l), r.setSession(l), l;
+    return (u && 'ok' === u.status && (0, c.CT)(u, { status: 'exited' }), g(), a.setSession(l), r.setSession(l), l);
 }
 function g() {
     let t = (0, o.aF)(),
         e = (0, o.nZ)(),
         a = e.getSession() || t.getSession();
-    a && (0, c.RJ)(a), D(), t.setSession(), e.setSession();
+    (a && (0, c.RJ)(a), D(), t.setSession(), e.setSession());
 }
 function D() {
     let t = (0, o.aF)(),

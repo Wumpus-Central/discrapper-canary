@@ -1,4 +1,4 @@
-n.d(t, { W: () => d }), n(388685);
+(n.d(t, { W: () => d }), n(388685));
 var r = n(73800),
     i = n(979554),
     a = n(809206),
@@ -30,13 +30,13 @@ let u = 6000,
                     }
                     {
                         let { ToastPosition: e, ToastType: t, createToast: r, popToast: i, showToast: a } = await Promise.resolve().then(n.bind(n, 481060));
-                        i(),
+                        (i(),
                             a(
                                 r(g, t.MESSAGE, {
                                     duration: u,
                                     position: e.TOP
                                 })
-                            );
+                            ));
                     }
                     null == d || d();
                 } catch (e) {

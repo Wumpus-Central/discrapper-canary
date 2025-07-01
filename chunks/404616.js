@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Lp: () => ea,
     NN: () => eu,
     TJ: () => ei,
@@ -8,7 +8,7 @@ n.d(t, {
     m9: () => eh,
     og: () => ep
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     s = n(73800),
     l = n(120356),
@@ -69,7 +69,7 @@ function el(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -77,7 +77,7 @@ function el(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -85,8 +85,8 @@ function el(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -123,12 +123,12 @@ let ea = 72,
             }),
             { ref: y, height: P } = (0, p.ZP)(),
             N = (0, X.xH)((e) => e.setCardHeight, d.X);
-        s.useEffect(() => {
+        (s.useEffect(() => {
             null != P && N(t, P);
         }, [P, N, t]),
             s.useEffect(() => {
                 null == l || l(y.current, t);
-            }, [y, l, t]);
+            }, [y, l, t]));
         let C = s.useRef(null),
             { handleLeftClick: w, handleRightClick: Z } = (0, $.Z)({
                 facepileRef: C,
@@ -147,12 +147,12 @@ let ea = 72,
                             r,
                             s = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
                         return s;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
                 }
                 return s;
             })(S, ['role', 'onFocus']),
@@ -613,7 +613,7 @@ function ex(e) {
         children: (0, r.jsxs)('div', {
             className: er.bodyMedia,
             onClick: function (e) {
-                e.stopPropagation(), a && (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), v.Z.showAgeVerificationGetStartedModal(O.cU.FORUM_POST_MEDIA_PREVIEW));
+                (e.stopPropagation(), a && (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), v.Z.showAgeVerificationGetStartedModal(O.cU.FORUM_POST_MEDIA_PREVIEW)));
             },
             children: [
                 (0, r.jsx)(ej, {

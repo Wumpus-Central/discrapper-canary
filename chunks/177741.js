@@ -1,5 +1,5 @@
 let n;
-a.r(t),
+(a.r(t),
     a.d(t, {
         WowMomentTypes: () => U,
         default: () => O
@@ -10,7 +10,7 @@ a.r(t),
     a(111804),
     a(490233),
     a(97749),
-    a(388685);
+    a(388685));
 var i,
     c = a(255367),
     o = a(73800),
@@ -49,13 +49,13 @@ async function C(e, t) {
                 rejectWithError: !0
             }),
             i = window.URL.createObjectURL(n.body);
-        t(i),
+        (t(i),
             l.Z.dispatch({
                 type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS',
                 wumpusMedia: i
-            });
+            }));
     } catch (e) {
-        f.Z.captureException(e), l.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
+        (f.Z.captureException(e), l.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' }));
     }
 }
 function H() {
@@ -71,7 +71,7 @@ function H() {
         b = f > 52 || -1 === f || g,
         P = g ? 'video/mp4' : 'video/webm',
         Z = b && !e && s && null === t && !1 === i;
-    o.useEffect(() => {
+    (o.useEffect(() => {
         Z && C(g, a);
     }, [Z, g, a]),
         o.useEffect(() => {
@@ -80,7 +80,7 @@ function H() {
                     T.Z.canPlayWowMoment &&
                     (l(!0),
                     (n = setTimeout(() => {
-                        l(!1), F(!0), w.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1);
+                        (l(!1), F(!0), w.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1));
                     }, 2000)));
             }
             return (
@@ -89,7 +89,7 @@ function H() {
                     h.S.unsubscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
                 }
             );
-        }, [e, b]);
+        }, [e, b]));
     let [y, F] = o.useState(!1),
         [U, H] = o.useState(!1),
         O = (0, u.q_F)({
@@ -103,7 +103,7 @@ function H() {
             },
             U ? 'respect-motion-settings' : 'animate-never'
         );
-    o.useEffect(() => {
+    (o.useEffect(() => {
         let e = -1;
         return (
             y &&
@@ -120,13 +120,13 @@ function H() {
             return (
                 U &&
                     (e = window.setTimeout(() => {
-                        H(!1), F(!1);
+                        (H(!1), F(!1));
                     }, 1000)),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [U]);
+        }, [U]));
     let v = M && null !== t,
         R = v || y;
     return (0, c.jsxs)('div', {
@@ -140,10 +140,10 @@ function H() {
                     autoPlay: !0,
                     className: S.videoWrapper,
                     onPlay: () => {
-                        clearTimeout(n), w.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' });
+                        (clearTimeout(n), w.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' }));
                     },
                     onEnded: () => {
-                        l(!1), (0, W.H)(!1), window.URL.revokeObjectURL(t), a(null);
+                        (l(!1), (0, W.H)(!1), window.URL.revokeObjectURL(t), a(null));
                     },
                     children: (0, c.jsx)('source', {
                         src: t,

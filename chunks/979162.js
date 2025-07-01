@@ -30,8 +30,8 @@ function c(t, e, r) {
             for (; t.lastChild && ((u(t.lastChild) && 'true' === t.lastChild.getAttribute('data-blocks')) || i(t.lastChild)); ) t = t.lastChild;
             return t;
         })(h);
-        (d = s(i(y))), (g = l(y));
-    } else (d = s(c)), (g = l(h));
+        ((d = s(i(y))), (g = l(y)));
+    } else ((d = s(c)), (g = l(h)));
     return {
         key: d,
         offset: g

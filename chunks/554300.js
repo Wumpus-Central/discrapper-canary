@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -67,7 +67,7 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -77,20 +77,20 @@ function g(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let E = function (e) {
     var t,
         { ref: n, avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: T, avatarClassName: S, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
         w = m(e, ['ref', 'avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
-    (w.className = o()(w.className, d.container, {
+    ((w.className = o()(w.className, d.container, {
         [d.selected]: v,
         [d.highlighted]: R,
         [null != A ? A : '']: v,
         [d.clickable]: !v && (null != T || null != y)
     })),
-        (w['aria-selected'] = null != (t = w['aria-selected']) ? t : v);
+        (w['aria-selected'] = null != (t = w['aria-selected']) ? t : v));
     let D = i.useRef(null),
         L = (0, r.jsxs)('div', {
             className: o()(d.childContainer, { [d.nameplated]: null != p }),

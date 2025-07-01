@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -64,7 +64,7 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -74,7 +74,7 @@ function p(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 class h extends i.Component {
@@ -92,7 +92,7 @@ class h extends i.Component {
         this._animationCleanup();
     }
     shake(e, t) {
-        (this.animProps = this.getDefaultAnimProps(e, t)), this.state.shaking || this.setState({ shaking: !0 }, this._animate);
+        ((this.animProps = this.getDefaultAnimProps(e, t)), this.state.shaking || this.setState({ shaking: !0 }, this._animate));
     }
     stop() {
         this.state.shaking && this.setState({ shaking: !1 });
@@ -113,7 +113,7 @@ class h extends i.Component {
         );
     }
     constructor(e) {
-        super(e),
+        (super(e),
             c(this, 'animProps', void 0),
             c(this, '_animationFrame', void 0),
             c(this, 'ref', i.createRef()),
@@ -125,13 +125,13 @@ class h extends i.Component {
                     let t = e.lastDirection * e.intensity,
                         n = l().random(-e.intensity, e.intensity, !0),
                         r = Math.max(0, Math.cbrt(e.duration - e.progress / 1000));
-                    (e.intensity *= Math.min(1, r)), (e.lastDirection *= -1), o()(null != this.ref.current, 'Shakeable style set when not mounted'), (this.ref.current.style.transform = 'translate3d('.concat(t, 'px,').concat(n, 'px,0px)'));
+                    ((e.intensity *= Math.min(1, r)), (e.lastDirection *= -1), o()(null != this.ref.current, 'Shakeable style set when not mounted'), (this.ref.current.style.transform = 'translate3d('.concat(t, 'px,').concat(n, 'px,0px)')));
                 }
-                (e.frameCount += 1), (this._animationFrame = requestAnimationFrame(this._animate));
+                ((e.frameCount += 1), (this._animationFrame = requestAnimationFrame(this._animate)));
             }),
             c(this, '_animationCleanup', () => {
-                null != this.ref.current && (this.ref.current.style.transform = ''), cancelAnimationFrame(this._animationFrame);
+                (null != this.ref.current && (this.ref.current.style.transform = ''), cancelAnimationFrame(this._animationFrame));
             }),
-            (this.state = { shaking: !1 });
+            (this.state = { shaking: !1 }));
     }
 }

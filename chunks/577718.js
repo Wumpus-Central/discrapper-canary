@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+(n.d(t, { Z: () => k }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(704215),
@@ -215,7 +215,7 @@ let k = i.memo(function (e) {
                                 className: j.fullWidthImage
                             }),
                             onClick: () => {
-                                h.Z.open(i.id, v.pNK.ROLES), h.Z.selectRole(i.getEveryoneRoleId(), T.intl.string(T.t.Bco7ND));
+                                (h.Z.open(i.id, v.pNK.ROLES), h.Z.selectRole(i.getEveryoneRoleId(), T.intl.string(T.t.Bco7ND)));
                             },
                             markAsDismissed: G
                         }),

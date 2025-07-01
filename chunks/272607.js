@@ -19,28 +19,28 @@ function l(e, t) {
 function c(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+        ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
     }
 }
 function u(e, t, n) {
-    return t && c(e.prototype, t), n && c(e, n), e;
+    return (t && c(e.prototype, t), n && c(e, n), e);
 }
 function d(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
-    (e.prototype = Object.create(t && t.prototype, {
+    ((e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             writable: !0,
             configurable: !0
         }
     })),
-        t && f(e, t);
+        t && f(e, t));
 }
 function f(e, t) {
     return (f =
         Object.setPrototypeOf ||
         function (e, t) {
-            return (e.__proto__ = t), e;
+            return ((e.__proto__ = t), e);
         })(e, t);
 }
 function _(e) {
@@ -48,7 +48,7 @@ function _(e) {
     return function () {
         var n,
             r = g(e);
-        return (n = t ? Reflect.construct(r, arguments, g(this).constructor) : r.apply(this, arguments)), p(this, n);
+        return ((n = t ? Reflect.construct(r, arguments, g(this).constructor) : r.apply(this, arguments)), p(this, n));
     };
 }
 function p(e, t) {
@@ -62,7 +62,7 @@ function m() {
     if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {
-        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+        return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
     } catch (e) {
         return !1;
     }
@@ -94,7 +94,7 @@ var b = (function (e) {
         var e;
         l(this, n);
         for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
-        return E(h((e = t.call.apply(t, [this].concat(i)))), 'priority', 130), E(h(e), 'incompatibleTokens', ['y', 'R', 'u', 'Q', 'q', 'M', 'L', 'I', 'd', 'D', 'i', 't', 'T']), e;
+        return (E(h((e = t.call.apply(t, [this].concat(i)))), 'priority', 130), E(h(e), 'incompatibleTokens', ['y', 'R', 'u', 'Q', 'q', 'M', 'L', 'I', 'd', 'D', 'i', 't', 'T']), e);
     }
     return (
         u(n, [
@@ -129,10 +129,10 @@ var b = (function (e) {
                     var s = (0, a.Z)(e, r);
                     if (n.isTwoDigitYear) {
                         var l = (0, i.WG)(n.year, s);
-                        return e.setUTCFullYear(l, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.Z)(e, r);
+                        return (e.setUTCFullYear(l, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.Z)(e, r));
                     }
                     var c = 'era' in t && 1 !== t.era ? 1 - n.year : n.year;
-                    return e.setUTCFullYear(c, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.Z)(e, r);
+                    return (e.setUTCFullYear(c, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.Z)(e, r));
                 }
             }
         ]),

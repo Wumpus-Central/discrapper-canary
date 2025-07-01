@@ -24,7 +24,7 @@ let c = async (e) => {
                     })
                 ).body,
                 a = e.wait_ms_until_next_fetch;
-            return null != a && (e.expired_at = new Date(Date.now() + a).toISOString()), e;
+            return (null != a && (e.expired_at = new Date(Date.now() + a).toISOString()), e);
         } catch (e) {
             throw new a.Hx(e);
         }
@@ -52,17 +52,17 @@ let c = async (e) => {
             );
         } catch (t) {
             throw (
-                (i.Z.dispatch({
+                i.Z.dispatch({
                     type: 'CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE',
                     userId: e
                 }),
-                new a.Hx(t))
+                new a.Hx(t)
             );
         }
     },
     d = async (e, t, n) => {
         try {
-            i.Z.dispatch({ type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START' }),
+            (i.Z.dispatch({ type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START' }),
                 await r.tn.del({
                     url: s.ANM.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(e.id),
                     rejectWithError: !1
@@ -72,7 +72,7 @@ let c = async (e) => {
                     userId: t,
                     entry: e
                 }),
-                null == n || n();
+                null == n || n());
         } catch (t) {
             var a, o;
             let e = null != (o = null == t || null == (a = t.body) ? void 0 : a.message) ? o : l.intl.string(l.t.FMbL3t);

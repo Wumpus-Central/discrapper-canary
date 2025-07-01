@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(781311), n(290780);
+(n.d(t, { Z: () => H }), n(781311), n(290780));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -80,7 +80,7 @@ function C(e) {
     let d = i,
         p = (0, u.g)(i),
         m = new c.ZP(d, p, o);
-    (s.searchFetcher = m),
+    ((s.searchFetcher = m),
         (s.isSearching = !0),
         (s.rawResults = null),
         (s.analyticsId = null),
@@ -92,7 +92,7 @@ function C(e) {
             type: 'SEARCH_ADD_HISTORY',
             searchId: i,
             query: r
-        });
+        }));
     let g = i === h.I_8 ? (null == (t = _.Z.getChannel(d)) ? void 0 : t.guild_id) : p === h.aib.GUILD ? i : null;
     m.fetch(
         (e) => {
@@ -140,27 +140,27 @@ function R(e) {
     if ('string' != typeof r || '' === (r = r.trim())) return;
     let i = (T[n] = null != (t = T[n]) ? t : []),
         a = i.indexOf(r);
-    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), s.K.set(O, { history: T });
+    (-1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), s.K.set(O, { history: T }));
 }
 function P(e) {
     let { searchId: t } = e,
         n = b(t);
-    (n.isIndexing = !0), (n.isHistoricalIndexing = !0), (n.isSearching = !1);
+    ((n.isIndexing = !0), (n.isHistoricalIndexing = !0), (n.isSearching = !1));
 }
 function w(e) {
     let { searchId: t } = e,
         n = b(t);
-    (n.isSearching = !1), (n.isIndexing = !1), (n.isHistoricalIndexing = e.doingHistoricalIndex || !1), (n.searchFetcher = null), (n.totalResults = e.totalResults), (n.hasError = e.hasError), (n.analyticsId = e.analyticsId), (n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0), (n.showNoResultsAlt = Math.random() < g), (n.rawResults = e.messages), null == n.query && (n.hasError = !0);
+    ((n.isSearching = !1), (n.isIndexing = !1), (n.isHistoricalIndexing = e.doingHistoricalIndex || !1), (n.searchFetcher = null), (n.totalResults = e.totalResults), (n.hasError = e.hasError), (n.analyticsId = e.analyticsId), (n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0), (n.showNoResultsAlt = Math.random() < g), (n.rawResults = e.messages), null == n.query && (n.hasError = !0));
 }
 function D(e) {
     let { searchId: t } = e,
         n = E[t];
     if (null == n) return !1;
-    null != n.searchFetcher && n.searchFetcher.cancel(), delete E[t];
+    (null != n.searchFetcher && n.searchFetcher.cancel(), delete E[t]);
 }
 function L(e) {
     if (e === S) return !1;
-    null != e && null == E[e] && b(e), (S = e);
+    (null != e && null == E[e] && b(e), (S = e));
 }
 function x(e) {
     let { guildId: t, channelId: n } = e;
@@ -181,7 +181,7 @@ function j(e) {
 function U(e) {
     return (
         Object.keys(e).forEach((t) => {
-            Array.isArray(e[t]) && (e[t] = e[t].filter((e) => 'string' == typeof e && e.trim())), (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t];
+            (Array.isArray(e[t]) && (e[t] = e[t].filter((e) => 'string' == typeof e && e.trim())), (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t]);
         }),
         e
     );
@@ -191,7 +191,7 @@ function G(e) {
     b(t).showBlockedResults = n;
 }
 function B() {
-    s.K.remove(O), (T = {});
+    (s.K.remove(O), (T = {}));
 }
 function V() {
     return null != S && D({ searchId: S });
@@ -199,13 +199,13 @@ function V() {
 function F(e) {
     let { searchId: t, queryString: n, query: r } = e,
         i = b(t);
-    (i.searchResultsQueryString = n), (i.query = r);
+    ((i.searchResultsQueryString = n), (i.query = r));
 }
 class Z extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, _.Z);
         let e = s.K.get(O);
-        (null == e ? void 0 : e.history) != null && (T = U(e.history)), (I = !!s.K.get(v));
+        ((null == e ? void 0 : e.history) != null && (T = U(e.history)), (I = !!s.K.get(v)));
     }
     getCurrentSearchId() {
         return S;

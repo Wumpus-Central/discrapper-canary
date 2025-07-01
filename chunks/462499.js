@@ -1,4 +1,4 @@
-l.d(n, { default: () => N }), l(388685), l(953529);
+(l.d(n, { default: () => N }), l(388685), l(953529));
 var a = l(255367),
     r = l(73800),
     t = l(658722),
@@ -57,7 +57,7 @@ function N(e) {
             null == R || Z.length <= 0 || (b(I(R, Z, y, X)), N());
         }, [b, N, Z, R, X, y]),
         w = r.useCallback(() => {
-            null == z || z(), N();
+            (null == z || z(), N());
         }, [z, N]),
         H = r.useCallback(
             (e) => {

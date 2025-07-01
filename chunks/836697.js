@@ -1,10 +1,10 @@
-n.d(t, { Z: () => y }), n(388685), n(539854);
+(n.d(t, { Z: () => y }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(110924),
-    a = n(693546),
+    a = n(110924),
+    s = n(693546),
     c = n(863249),
     u = n(937111),
     d = n(914010),
@@ -17,18 +17,18 @@ var r = n(255367),
     _ = n(315268);
 function O(e) {
     let { onActivate: t, children: n } = e,
-        a = i.useRef(null),
+        s = i.useRef(null),
         d = (0, l.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
         h = i.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
-        p = (0, s.Z)(d),
+        p = (0, a.Z)(d),
         f = i.useRef(null);
     return (
         i.useEffect(() => {
             if (d && d !== p) {
                 var e, n, r, i, l;
-                t(), null == (l = f.current) || null == (i = l.ref) || null == (r = i.current) || null == (n = r.layerRef) || null == (e = n.current) || e.updatePosition();
+                (t(), null == (l = f.current) || null == (i = l.ref) || null == (r = i.current) || null == (n = r.layerRef) || null == (e = n.current) || e.updatePosition());
             }
         }, [f, d, p, t]),
         (0, r.jsxs)('div', {
@@ -36,7 +36,7 @@ function O(e) {
             children: [
                 (0, r.jsx)(o.yRy, {
                     ref: f,
-                    targetElementRef: a,
+                    targetElementRef: s,
                     shouldShow: d,
                     renderPopout: () =>
                         (0, r.jsxs)('div', {
@@ -83,7 +83,7 @@ function O(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -91,7 +91,7 @@ function O(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -99,15 +99,15 @@ function O(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, e)),
                             (n = n =
                                 {
                                     className: _.popoutAnchor,
-                                    ref: a
+                                    ref: s
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -136,8 +136,8 @@ function y(e) {
         v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         C = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         j = (0, f.Z)(),
-        E = (0, s.Z)(v),
-        S = i.useMemo(() => {
+        S = (0, a.Z)(v),
+        E = i.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: b.intl.string(b.t['scsU+v']),
@@ -148,24 +148,24 @@ function y(e) {
             return e;
         }, [j, n]);
     i.useEffect(() => {
-        n && !C && a.Z.fetchRequestToJoinGuilds();
+        n && !C && s.Z.fetchRequestToJoinGuilds();
     }, [n, C]);
     let x = null != v && j.includes(v);
     return (i.useEffect(() => {
-        !n && x && E !== v && y(!0);
-    }, [n, x, E, v]),
+        !n && x && S !== v && y(!0);
+    }, [n, x, S, v]),
     0 === j.length)
         ? null
         : (0, r.jsx)(O, {
               onActivate: t,
               children: (0, r.jsx)(g.Z, {
-                  folderNode: S,
+                  folderNode: E,
                   expanded: n,
                   selected: x,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      y(!n), c.ZP.clearCoachmark();
+                      (y(!n), c.ZP.clearCoachmark());
                   },
                   folderButtonSize: 'icon',
                   folderButtonContent: (0, r.jsx)('div', {

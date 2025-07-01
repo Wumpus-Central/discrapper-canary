@@ -10,7 +10,7 @@ let n = a(899517).n;
 function o() {
     if (!('fetch' in n)) return !1;
     try {
-        return new Headers(), new Request('http://www.example.com'), new Response(), !0;
+        return (new Headers(), new Request('http://www.example.com'), new Response(), !0);
     } catch (t) {
         return !1;
     }
@@ -27,7 +27,7 @@ function c() {
     if (e && 'function' == typeof e.createElement)
         try {
             let a = e.createElement('iframe');
-            (a.hidden = !0), e.head.appendChild(a), a.contentWindow && a.contentWindow.fetch && (t = i(a.contentWindow.fetch)), e.head.removeChild(a);
+            ((a.hidden = !0), e.head.appendChild(a), a.contentWindow && a.contentWindow.fetch && (t = i(a.contentWindow.fetch)), e.head.removeChild(a));
         } catch (t) {
             r.X && _.kg.warn('Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ', t);
         }

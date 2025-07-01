@@ -39,7 +39,7 @@ function T(e) {
         R = (0, E.Z)();
     return (
         r.useEffect(() => {
-            L.forEach((e) => x.Z.getGuildEventUserCounts(T, e.id, [])), x.Z.getGuildEventsForCurrentUser(T);
+            (L.forEach((e) => x.Z.getGuildEventUserCounts(T, e.id, [])), x.Z.getGuildEventsForCurrentUser(T));
         }, [L, T]),
         r.useEffect(() => {
             let e = v.Z.getGuild(T);
@@ -101,7 +101,7 @@ function T(e) {
                                         size: a.zxk.Sizes.MIN,
                                         onClick: () => {
                                             (0, a.ZDy)(async () => {
-                                                let { default: e } = await Promise.all([t.e('49049'), t.e('82758'), t.e('58023'), t.e('76010')]).then(t.bind(t, 779250));
+                                                let { default: e } = await Promise.all([t.e('71418'), t.e('49049'), t.e('82758'), t.e('61'), t.e('76010')]).then(t.bind(t, 779250));
                                                 return (n) => {
                                                     var t, r;
                                                     return (0, i.jsx)(
@@ -110,7 +110,7 @@ function T(e) {
                                                             for (var n = 1; n < arguments.length; n++) {
                                                                 var t = null != arguments[n] ? arguments[n] : {},
                                                                     i = Object.keys(t);
-                                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                                     (i = i.concat(
                                                                         Object.getOwnPropertySymbols(t).filter(function (e) {
                                                                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -118,7 +118,7 @@ function T(e) {
                                                                     )),
                                                                     i.forEach(function (n) {
                                                                         var i;
-                                                                        (i = t[n]),
+                                                                        ((i = t[n]),
                                                                             n in e
                                                                                 ? Object.defineProperty(e, n, {
                                                                                       value: i,
@@ -126,8 +126,8 @@ function T(e) {
                                                                                       configurable: !0,
                                                                                       writable: !0
                                                                                   })
-                                                                                : (e[n] = i);
-                                                                    });
+                                                                                : (e[n] = i));
+                                                                    }));
                                                             }
                                                             return e;
                                                         })({}, n)),

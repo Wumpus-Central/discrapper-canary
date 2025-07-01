@@ -1,5 +1,5 @@
 let r;
-n.d(t, {
+(n.d(t, {
     Cq: () => eL,
     ZP: () => ez,
     gF: () => ec,
@@ -14,7 +14,7 @@ n.d(t, {
     n(642613),
     n(290780),
     n(704826),
-    n(583741);
+    n(583741));
 var i = n(658722),
     a = n.n(i),
     o = n(392711),
@@ -86,7 +86,7 @@ function ea(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -94,7 +94,7 @@ function ea(e) {
             )),
             r.forEach(function (t) {
                 ei(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -102,11 +102,11 @@ function eo(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -271,7 +271,7 @@ function eU(e) {
         }
         m += 1;
     }
-    return _.sort(d.Z), _.length < r && (p.sort(d.Z), (_ = _.concat(p.slice(0, Math.max(0, r - _.length))))), _.length > r && (_.length = r), _;
+    return (_.sort(d.Z), _.length < r && (p.sort(d.Z), (_ = _.concat(p.slice(0, Math.max(0, r - _.length))))), _.length > r && (_.length = r), _);
 }
 function eG(e) {
     switch (e) {
@@ -326,7 +326,7 @@ function eZ(e, t, n) {
         let t = eM(e, a, n);
         t > r && ((r = t), (i = a));
     }
-    return null != i && (i.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(i), 1)), r;
+    return (null != i && (i.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(i), 1)), r);
 }
 function eH(e, t) {
     if (null == e.guild_id) return;
@@ -453,7 +453,7 @@ let eK = (0, W.oH)((e, t, n) => {
                     let e = eW(l.id, i);
                     if (e.length > 0) return e;
                 }
-                (t = k.ZP.getMembers(u.guild_id).filter(ej)), a && z.Z.requestMembers(u.guild_id, r, i);
+                ((t = k.ZP.getMembers(u.guild_id).filter(ej)), a && z.Z.requestMembers(u.guild_id, r, i));
             }
             return eU({
                 query: r,
@@ -546,23 +546,23 @@ let eK = (0, W.oH)((e, t, n) => {
                         }));
                 }
             }
-            return g.sort(d.Z), null != i && g.length > i && (g.length = i), g;
+            return (g.sort(d.Z), null != i && g.length > i && (g.length = i), g);
         },
         queryGuilds(e) {
             let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = eA, boosters: a = {} } = e,
                 o = '' === t ? '' : t.toLocaleLowerCase(),
-                l = {
+                s = {
                     exactQuery: RegExp('^'.concat(X.Z.escape(o)), 'i'),
                     containQuery: RegExp(X.Z.escape(o), 'i'),
                     queryLower: o
                 },
-                c = [];
-            for (let e of s()(j.Z.getGuilds()).values().value()) {
+                l = [];
+            for (let e of j.Z.getGuildsArray()) {
                 if (!i(e)) continue;
                 let t = e.name.toLocaleLowerCase(),
-                    n = eM(t, l, r);
+                    n = eM(t, s, r);
                 n > 0 &&
-                    c.push({
+                    l.push({
                         type: et.h8.GUILD,
                         record: e,
                         score: eD(n, a[e.id]),
@@ -570,7 +570,7 @@ let eK = (0, W.oH)((e, t, n) => {
                         sortable: t
                     });
             }
-            return c.sort(d.Z), c.length > n && (c.length = n), c;
+            return (l.sort(d.Z), l.length > n && (l.length = n), l);
         },
         queryDMChannels(e) {
             let { query: t, limit: n = 10, boosters: r = {} } = e,
@@ -627,7 +627,7 @@ let eK = (0, W.oH)((e, t, n) => {
                         sortable: n
                     });
             }
-            return u.sort(d.Z), u.length > n && (u.length = n), u;
+            return (u.sort(d.Z), u.length > n && (u.length = n), u);
         },
         queryApplications(e) {
             let { query: t, limit: n = 10, fuzzy: r = !0, filter: i = eA } = e,
@@ -652,7 +652,7 @@ let eK = (0, W.oH)((e, t, n) => {
                         sortable: t
                     });
             }
-            return l.sort(d.Z), l.length > n && (l.length = n), l;
+            return (l.sort(d.Z), l.length > n && (l.length = n), l);
         },
         queryInAppNavigations(e) {
             let { query: t, limit: n = 10, fuzzy: r = !0 } = e,
@@ -728,7 +728,7 @@ let eK = (0, W.oH)((e, t, n) => {
                             sortable: t
                         });
                 }
-            return c.sort(d.Z), c.length > n && (c.length = n), c;
+            return (c.sort(d.Z), c.length > n && (c.length = n), c);
         },
         getRecentlyTalked: eW,
         queryMentionResults(e) {
@@ -774,7 +774,7 @@ let eK = (0, W.oH)((e, t, n) => {
                             return (n || r || d) && (a()(E, i.toLowerCase()) || (h && E === o)) && o !== Q.default.castGuildIdAsEveryoneGuildRoleId(e);
                         })
                         .value();
-                    (b = (0, l.Lu)(n, t, { keys: ['name'] }).slice(0, _ - g)), (g += b.length);
+                    ((b = (0, l.Lu)(n, t, { keys: ['name'] }).slice(0, _ - g)), (g += b.length));
                 }
             }
             let y = [];
@@ -848,7 +848,7 @@ let eK = (0, W.oH)((e, t, n) => {
                     })
                     .filter(K.lm)
                     .sortBy((e) => -1 * e.score);
-            return null !== r && (c = c.take(r)), c.value();
+            return (null !== r && (c = c.take(r)), c.value());
         },
         queryStaticRouteChannels(e) {
             let { query: t, guild: n } = e,
@@ -909,7 +909,7 @@ let eK = (0, W.oH)((e, t, n) => {
             let { query: t, channel: n, channelTypes: r, limit: i = ee.rnv, allowSnowflake: a } = e;
             if (null == n.guild_id) {
                 let e = [];
-                return (null == r || r.includes(n.type)) && e.push(n), { channels: e };
+                return ((null == r || r.includes(n.type)) && e.push(n), { channels: e });
             }
             let o = [];
             for (let e of ex)
@@ -984,10 +984,10 @@ let eK = (0, W.oH)((e, t, n) => {
                         let { type: r, value: i } = n,
                             a = eG(r),
                             o = 0;
-                        t ? (i === e ? (o = ed * a) : u.test(i) ? (o = ef * a) : (r === A.MO.GUILD_NAME || r === A.MO.PACK_NAME || r === A.MO.STICKER_NAME) && d.test(i) && (o = e_ * a)) : i === e && ((o = ed * a), (f = i)), o > c && ((c = o), (f = i));
+                        (t ? (i === e ? (o = ed * a) : u.test(i) ? (o = ef * a) : (r === A.MO.GUILD_NAME || r === A.MO.PACK_NAME || r === A.MO.STICKER_NAME) && d.test(i) && (o = e_ * a)) : i === e && ((o = ed * a), (f = i)), o > c && ((c = o), (f = i)));
                     }
                     let p = T.Z.stickerFrecencyWithoutFetchingLatest.getScore(s);
-                    null != p && (c *= p / 100),
+                    (null != p && (c *= p / 100),
                         c > 0 &&
                             null != f &&
                             !o.has(_.id) &&
@@ -996,7 +996,7 @@ let eK = (0, W.oH)((e, t, n) => {
                                 sticker: _,
                                 comparator: f,
                                 score: c
-                            }));
+                            })));
                 });
             }
             return (
@@ -1009,7 +1009,7 @@ let eK = (0, W.oH)((e, t, n) => {
         },
         querySoundmoji(e, t) {
             let n = H.default.getCurrentUser();
-            O.Z.isFetching() || O.Z.hasFetchedAllSounds() || (0, y.w)(), C.DZ.loadIfNecessary();
+            (O.Z.isFetching() || O.Z.hasFetchedAllSounds() || (0, y.w)(), C.DZ.loadIfNecessary());
             let r = Array.from(O.Z.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {

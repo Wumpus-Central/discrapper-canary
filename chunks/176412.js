@@ -33,7 +33,7 @@ let I =
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     i = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ let I =
                     )),
                     i.forEach(function (t) {
                         var i;
-                        (i = n[t]),
+                        ((i = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: i,
@@ -49,8 +49,8 @@ let I =
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = i);
-                    });
+                                : (e[t] = i));
+                    }));
             }
             return e;
         })({}, E.Z.RULES.commandMention)),
@@ -102,14 +102,14 @@ function M(e) {
             locationObject: O.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                u && g.yT(P.ti.ACTIVITY),
+                (u && g.yT(P.ti.ACTIVITY),
                     (0, v.yw)(w.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
                         section_name: r,
                         action: S,
                         source: j
-                    });
+                    }));
             },
             launchingComponentId: c,
             commandOrigin: b.bB.APPLICATION_LAUNCHER,

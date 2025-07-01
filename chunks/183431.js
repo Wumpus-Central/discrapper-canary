@@ -11,7 +11,7 @@ function u(e) {
         n = (0, s.l6)(),
         u = (0, s.L5)(),
         d = i.useCallback(() => {
-            a.Z.showAgeVerificationGetStartedModal(o.cU.SYSTEM_DM_RETRY_BUTTON), (0, o.Z7)(o.io.RETRY, t);
+            (a.Z.showAgeVerificationGetStartedModal(o.cU.SYSTEM_DM_RETRY_BUTTON), (0, o.Z7)(o.io.RETRY, t));
         }, [t]);
     return (0, r.jsx)(l.zxk, {
         size: l.zxk.Sizes.MEDIUM,

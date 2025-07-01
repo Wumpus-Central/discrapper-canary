@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(539854), n(314940);
+(n.d(t, { Z: () => w }), n(539854), n(314940));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -30,7 +30,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function A(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -46,8 +46,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -186,7 +186,7 @@ let w = function (e) {
                 r = !0;
             return (
                 s.forEach((s) => {
-                    !(0, E.tl)(s) && n++, s.isOnCooldown() ? (i = !0) : (r = !1), null != s.premiumGuildSubscription ? e.push(s) : t.push(s);
+                    (!(0, E.tl)(s) && n++, s.isOnCooldown() ? (i = !0) : (r = !1), null != s.premiumGuildSubscription ? e.push(s) : t.push(s));
                 }),
                 {
                     appliedGuildBoostSlots: e,
@@ -219,8 +219,8 @@ let w = function (e) {
         }, [K, v]),
         X = r.useMemo(() => U.find((e) => e.isAvailable()), [U]);
     if (0 === U.length) return null;
-    let Q = U.length;
-    if (((t = W ? N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t['/u15QU'], { numUnappliedGuildBoostSlots: Q }) : N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t.BPadnJ, { numUnappliedGuildBoostSlots: Q })), C.ZP.isPremium(w))) {
+    let J = U.length;
+    if (((t = W ? N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t['/u15QU'], { numUnappliedGuildBoostSlots: J }) : N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t.BPadnJ, { numUnappliedGuildBoostSlots: J })), C.ZP.isPremium(w))) {
         let e = (e, t) =>
             (0, i.jsx)(
                 c.P3F,
@@ -237,11 +237,11 @@ let w = function (e) {
         n = F
             ? N.intl.format(N.t.omcpSE, { learnMoreHook: e })
             : N.intl.format(N.t['5mAkVl'], {
-                  numUnappliedGuildBoostSlots: Q,
+                  numUnappliedGuildBoostSlots: J,
                   learnMoreHook: e
               });
-    } else n = F ? N.intl.string(N.t['8pcUZm']) : N.intl.formatToPlainString(N.t.Kaw82t, { numUnappliedGuildBoostSlots: Q });
-    let J = (0, a.EQ)({
+    } else n = F ? N.intl.string(N.t['8pcUZm']) : N.intl.formatToPlainString(N.t.Kaw82t, { numUnappliedGuildBoostSlots: J });
+    let Q = (0, a.EQ)({
         subscriptionIsPausedOrPausePending: h,
         fractionalPremiumBlocksBoosting: L
     })
@@ -297,8 +297,8 @@ let w = function (e) {
                             className: y.headerContentSecondary,
                             children: (0, i.jsx)(m.Z, {
                                 shouldShow: null == X || B,
-                                text: J,
-                                'aria-label': J.toString(),
+                                text: Q,
+                                'aria-label': Q.toString(),
                                 children: (e) =>
                                     (0, i.jsx)(
                                         c.zxk,

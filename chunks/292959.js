@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -106,14 +106,14 @@ class y extends (r = i.ZP.DeviceSettingsStore) {
         return d.disableAllSounds || -1 !== d.disabledSounds.indexOf(e);
     }
 }
-l(y, 'displayName', 'NotificationSettingsStore'),
+(l(y, 'displayName', 'NotificationSettingsStore'),
     l(y, 'persistKey', 'notifications'),
     l(y, 'migrations', [
         (e) => {
             let t = c({}, e);
-            return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || s.PrB.NEVER), null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? s.qrD.ALL : s.qrD.NEVER), t;
+            return ((t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || s.PrB.NEVER), null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? s.qrD.ALL : s.qrD.NEVER), t);
         }
-    ]);
+    ]));
 let O = new y(a.Z, {
     NOTIFICATIONS_SET_DESKTOP_TYPE: f,
     NOTIFICATIONS_SET_TTS_TYPE: h,

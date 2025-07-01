@@ -1,4 +1,4 @@
-t.d(n, { Z: () => N }), t(953529);
+(t.d(n, { Z: () => N }), t(953529));
 var r = t(255367),
     i = t(73800),
     o = t(120356),
@@ -23,10 +23,10 @@ var r = t(255367),
 let Z = [h.Us.LEVEL, h.Us.PERK];
 function N(e) {
     let { guildId: n, powerupSkuId: t } = e;
-    i.useEffect(() => {
-        (0, d.Sn)(n), (0, d.Fm)(n);
+    (i.useEffect(() => {
+        ((0, d.Sn)(n), (0, d.Fm)(n));
     }, [n]),
-        (0, g.Wj)(n);
+        (0, g.Wj)(n));
     let o = (0, s.e7)([u.Z], () => u.Z.getStateForGuild(n)),
         N = (0, p.Z)(n),
         I = i.useRef(!1);

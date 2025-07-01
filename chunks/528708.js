@@ -1,8 +1,8 @@
-r.d(e, { T: () => u });
-var n = r(944296),
-    i = r(73800),
-    o = r(440717);
-let a = {
+n.d(t, { T: () => a });
+var r = n(944296),
+    i = n(73800),
+    o = n(440717);
+let u = {
     border: 0,
     clip: 'rect(0 0 0 0)',
     clipPath: 'inset(50%)',
@@ -14,33 +14,33 @@ let a = {
     width: '1px',
     whiteSpace: 'nowrap'
 };
-function u(t) {
-    let { children: e, elementType: r = 'div', isFocusable: u, style: s, ...c } = t,
-        { visuallyHiddenProps: l } = (function (t = {}) {
-            let { style: e, isFocusable: r } = t,
-                [n, u] = (0, i.useState)(!1),
+function a(e) {
+    let { children: t, elementType: n = 'div', isFocusable: a, style: s, ...l } = e,
+        { visuallyHiddenProps: c } = (function (e = {}) {
+            let { style: t, isFocusable: n } = e,
+                [r, a] = (0, i.useState)(!1),
                 { focusWithinProps: s } = (0, o.L)({
-                    isDisabled: !r,
-                    onFocusWithinChange: (t) => u(t)
+                    isDisabled: !n,
+                    onFocusWithinChange: (e) => a(e)
                 }),
-                c = (0, i.useMemo)(
+                l = (0, i.useMemo)(
                     () =>
-                        n
-                            ? e
-                            : e
+                        r
+                            ? t
+                            : t
                               ? {
-                                    ...a,
-                                    ...e
+                                    ...u,
+                                    ...t
                                 }
-                              : a,
-                    [n]
+                              : u,
+                    [r]
                 );
             return {
                 visuallyHiddenProps: {
                     ...s,
-                    style: c
+                    style: l
                 }
             };
-        })(t);
-    return i.createElement(r, (0, n.d)(c, l), e);
+        })(e);
+    return i.createElement(n, (0, r.d)(l, c), t);
 }

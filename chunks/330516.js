@@ -58,6 +58,6 @@ class s {
         }
     }
     constructor(e) {
-        o(this, 'raw', void 0), o(this, 'context', void 0), o(this, 'code', void 0), o(this, 'uuid', void 0), o(this, 'applicationId', void 0), o(this, 'branchId', void 0), (this.raw = e), null != e.code && (this.code = e.code), null != e.uuid && (this.uuid = e.uuid), null != e.application_id && (this.applicationId = e.application_id), null != e.branch_id && (this.branchId = e.branch_id), null != e.context ? (this.context = e.context) : (this.context = {});
+        (o(this, 'raw', void 0), o(this, 'context', void 0), o(this, 'code', void 0), o(this, 'uuid', void 0), o(this, 'applicationId', void 0), o(this, 'branchId', void 0), (this.raw = e), null != e.code && (this.code = e.code), null != e.uuid && (this.uuid = e.uuid), null != e.application_id && (this.applicationId = e.application_id), null != e.branch_id && (this.branchId = e.branch_id), null != e.context ? (this.context = e.context) : (this.context = {}));
     }
 }

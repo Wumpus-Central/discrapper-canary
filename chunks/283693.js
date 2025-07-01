@@ -11,10 +11,10 @@ function a(e) {
 function o(e) {
     return e.length > 0;
 }
-n.d(t, {
+(n.d(t, {
     UT: () => a,
     dZ: () => o,
     gh: () => i,
     iG: () => r
 }),
-    n(415506);
+    n(415506));

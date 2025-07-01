@@ -1,4 +1,4 @@
-n.d(t, { default: () => eh }), n(388685), n(539854), n(35282);
+(n.d(t, { default: () => eh }), n(388685), n(539854), n(35282));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -64,7 +64,7 @@ function ed(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -72,7 +72,7 @@ function ed(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -80,8 +80,8 @@ function ed(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -130,7 +130,7 @@ function em(e) {
         eO = (0, f.e7)([T.ZP, G.Z], () => ((0, z.isWindows)() ? (0, K.Z)(T.ZP, G.Z) : null)),
         eZ = (0, f.e7)([B.default], () => {
             let e = B.default.getCurrentUser();
-            return a()(null != e, 'GoLiveModal: user cannot be undefined'), e;
+            return (a()(null != e, 'GoLiveModal: user cannot be undefined'), e);
         }),
         eI = null != (t = null == ey ? void 0 : ey.getGuildId()) ? t : em,
         ew = (0, f.e7)([M.Z], () => {
@@ -145,7 +145,7 @@ function em(e) {
         ek = [];
     ex === v.Dvm.ENTERED && eP && (0, z.isMac)() && ek.push(m.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
     let [eA, eM] = (0, N.US)(ek, void 0, !0);
-    e_ !== er.tI.PRESET_CUSTOM && ((ev = eN), (ej = eT)), (0, V.Z)(e_, ev, ej, eZ, ew) || ((ev = eN), (ej = eT));
+    (e_ !== er.tI.PRESET_CUSTOM && ((ev = eN), (ej = eT)), (0, V.Z)(e_, ev, ej, eZ, ew) || ((ev = eN), (ej = eT)));
     let eL = (0, I.Dt)(),
         [eD, eB] = i.useState(((W = et && !eR), H ? 0 : W ? 2 : 3)),
         [eG, eU] = i.useState(eR),
@@ -179,21 +179,21 @@ function em(e) {
         let l = eX,
             s = eK,
             o = eQ;
-        (0, V.Z)(l, s, o, eZ, ew, r) || ((l = er.tI.PRESET_VIDEO), (s = er.LY.RESOLUTION_720), (o = er.ws.FPS_30)),
+        ((0, V.Z)(l, s, o, eZ, ew, r) || ((l = er.tI.PRESET_VIDEO), (s = er.LY.RESOLUTION_720), (o = er.ws.FPS_30)),
             (0, b.Rc)({
                 preset: l,
                 resolution: s,
                 frameRate: o,
                 soundshareEnabled: e1
-            });
+            }));
         let c = {};
         if (null == eF ? void 0 : eF.id.startsWith('prepicked:')) c = J.ZP.getStreamStartOptions();
         else {
             let e = (0, ee.Z)(eO, eF, T.ZP.getRunningGames()),
                 t = !(0, z.isWindows)() || null == e || (null == eF ? void 0 : eF.id.startsWith('camera:'));
-            (c.pid = t || null == e ? void 0 : e.pid), null == c.pid && null != eF && ((c.sourceId = eF.id), (c.sourceName = eF.name));
+            ((c.pid = t || null == e ? void 0 : e.pid), null == c.pid && null != eF && ((c.sourceId = eF.id), (c.sourceName = eF.name)));
         }
-        (0, b.WH)(
+        ((0, b.WH)(
             i,
             n,
             eu(ed({}, c), {
@@ -212,10 +212,10 @@ function em(e) {
                             title: eo.intl.string(eo.t['X+mXen']),
                             body: eo.intl.string(eo.t.MIJCzs)
                         });
-                })();
+                })());
     }
     function te() {
-        e9(), ep();
+        (e9(), ep());
     }
     i.useEffect(() => {
         let e = (0, z.isWindows)() ? (0, K.Z)(T.ZP, G.Z) : null,
@@ -239,15 +239,15 @@ function em(e) {
                 let c = A.Z.getChannel(o);
                 if (!(0, V.Z)(e, t, n, eZ, ew, c)) {
                     let [e, r] = (0, Y.Z)(er.tI.PRESET_VIDEO, eZ, ew);
-                    (t = e), (n = r);
+                    ((t = e), (n = r));
                 }
-                n !== eQ && e$(n), t !== eK && eq(t), l !== t || s !== n ? eJ(er.tI.PRESET_CUSTOM) : e !== eX && eJ(e);
+                (n !== eQ && e$(n), t !== eK && eq(t), l !== t || s !== n ? eJ(er.tI.PRESET_CUSTOM) : e !== eX && eJ(e));
             },
             [ey, eW, eZ, ew, eQ, eK, eX]
         ),
         tn = i.useCallback(
             (e) => {
-                (0, X.t)(), (0, X.T)(null != e ? e : e8);
+                ((0, X.t)(), (0, X.T)(null != e ? e : e8));
             },
             [e8]
         );
@@ -274,7 +274,7 @@ function em(e) {
     }
     let ti = i.useCallback(
             (e) => {
-                eH(e), null != e && (eP && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e6(e.id.split(':')[1]) : e6(void 0), eB(3), eU(!0));
+                (eH(e), null != e && (eP && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e6(e.id.split(':')[1]) : e6(void 0), eB(3), eU(!0)));
             },
             [eP]
         ),
@@ -325,7 +325,7 @@ function em(e) {
             })
         }),
         tc = i.useCallback(() => {
-            eP && (0, X.t)(), eB(2);
+            (eP && (0, X.t)(), eB(2));
         }, [eP]),
         td = (function (e, t, n, r) {
             switch (e) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(539854), n(388685);
+(n.d(t, { Z: () => M }), n(539854), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -49,11 +49,11 @@ function y(e) {
     return (
         t[f.d4z.GUILD_CATEGORY].forEach((e) => {
             let { channel: t } = e;
-            n._categories.push({
+            (n._categories.push({
                 channel: t,
                 index: -1
             }),
-                (n[t.id] = []);
+                (n[t.id] = []));
         }),
         t[u.sH].forEach(r),
         t[u.Zb].forEach(r),
@@ -63,13 +63,13 @@ function y(e) {
     );
 }
 function O() {
-    (h = {}), null != p && y(p);
+    ((h = {}), null != p && y(p));
 }
 function v(e) {
     let {
         guild: { id: t }
     } = e;
-    (h[t] = void 0), p === t && y(t);
+    ((h[t] = void 0), p === t && y(t));
 }
 function I(e) {
     let {
@@ -82,7 +82,7 @@ function T(e) {
         channel: { guild_id: t }
     } = e;
     if (null == t) return !1;
-    (h[t] = void 0), p === t && y(t);
+    ((h[t] = void 0), p === t && y(t));
 }
 function S(e) {
     let { channels: t } = e,
@@ -93,7 +93,7 @@ function S(e) {
 function A(e) {
     let { guildId: t, user: n } = e;
     if (l.default.getId() !== n.id) return !1;
-    (h[t] = void 0), t === p && y(t);
+    ((h[t] = void 0), t === p && y(t));
 }
 function N() {
     if (null == p) return !1;
@@ -101,7 +101,7 @@ function N() {
 }
 function C(e) {
     let { guildId: t } = e;
-    (h[t] = void 0), t === p && y(t);
+    ((h[t] = void 0), t === p && y(t));
 }
 function R(e, t) {
     if (((m = t), null == e || null == e.getGuildId())) return !1;
@@ -133,7 +133,7 @@ function x(e) {
 }
 class k extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L);
+        (this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L));
     }
     getCategories(e) {
         return null != e ? x(e) : E;

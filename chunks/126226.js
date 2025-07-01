@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     K: () => N,
     Z: () => P
 }),
     n(413496),
     n(433524),
     n(35282),
-    n(781311);
+    n(781311));
 var r = n(255367);
 n(73800);
 var i = n(693789),
@@ -46,7 +46,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -54,7 +54,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 S(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -195,14 +195,14 @@ let P = {
         if (i.commands === y.L8.OLD_BUILT_INS) i.insertText(R(c));
         else {
             let e = o;
-            null == e && (e = l ? _.Vh.QUERY : _.Vh.DISCOVERY),
+            (null == e && (e = l ? _.Vh.QUERY : _.Vh.DISCOVERY),
                 s.Po({
                     channelId: a.id,
                     command: c,
                     section: null != u ? u : null,
                     location: e,
                     queryLength: null == r ? void 0 : r.length
-                });
+                }));
         }
         return { type: y.z2.COMMAND };
     }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(570140),
     i = n(457330),
     l = n(726542),
@@ -43,18 +43,18 @@ let m = new Set([f.Fu, f.JT]),
                             null != r && (e({ access_token: r.access_token }), m());
                         }
                         function p() {
-                            t(new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'OAuth2 setup for "'.concat(n, '" failed'))), m();
+                            (t(new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'OAuth2 setup for "'.concat(n, '" failed'))), m());
                         }
                         function m() {
-                            r.Z.unsubscribe('USER_CONNECTIONS_UPDATE', u), s.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, p);
+                            (r.Z.unsubscribe('USER_CONNECTIONS_UPDATE', u), s.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, p));
                         }
-                        r.Z.subscribe('USER_CONNECTIONS_UPDATE', u),
+                        (r.Z.subscribe('USER_CONNECTIONS_UPDATE', u),
                             s.S.subscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, p),
                             (0, a.Z)({
                                 platformType: f.type,
                                 location: h.Sbl.ACTIVITY_RPC,
                                 successRedirect: d
-                            });
+                            }));
                     } else
                         try {
                             let t = await i.Z.refreshAccessToken(f.type, l.id);

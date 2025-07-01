@@ -1,4 +1,4 @@
-i.d(t, { default: () => u }), i(388685);
+(i.d(t, { default: () => u }), i(388685));
 var o = i(255367),
     n = i(73800),
     l = i(481060),
@@ -33,9 +33,9 @@ let u = (e) => {
         },
         w = async () => {
             if (k) {
-                f(!0), N(!1);
+                (f(!0), N(!1));
                 try {
-                    await (0, r.wk)(j.id, { defaultReactionEmoji: h }), b();
+                    (await (0, r.wk)(j.id, { defaultReactionEmoji: h }), b());
                 } catch (e) {
                     N(!0);
                 } finally {
@@ -76,7 +76,7 @@ let u = (e) => {
                                         closePopout: t,
                                         onSelectEmoji: (e) => {
                                             let { emoji: i, willClose: o } = e;
-                                            O(i), o && t();
+                                            (O(i), o && t());
                                         },
                                         pickerIntention: c.Hz.COMMUNITY_CONTENT,
                                         channel: j
@@ -93,7 +93,7 @@ let u = (e) => {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var i = null != arguments[t] ? arguments[t] : {},
                                                     o = Object.keys(i);
-                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                     (o = o.concat(
                                                         Object.getOwnPropertySymbols(i).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(i, e).enumerable;
@@ -101,7 +101,7 @@ let u = (e) => {
                                                     )),
                                                     o.forEach(function (t) {
                                                         var o;
-                                                        (o = i[t]),
+                                                        ((o = i[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: o,
@@ -109,8 +109,8 @@ let u = (e) => {
                                                                       configurable: !0,
                                                                       writable: !0
                                                                   })
-                                                                : (e[t] = o);
-                                                    });
+                                                                : (e[t] = o));
+                                                    }));
                                             }
                                             return e;
                                         })({}, e)),

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $d: () => T,
     AA: () => S,
     Db: () => L,
@@ -13,7 +13,7 @@ n.d(t, {
     xz: () => D
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(544891),
@@ -48,7 +48,7 @@ let E = async () => {
     b = (e) =>
         new Promise((t) => {
             let n = () => {
-                o.Z.unsubscribe(e, n), setTimeout(t, 0);
+                (o.Z.unsubscribe(e, n), setTimeout(t, 0));
             };
             o.Z.subscribe(e, n);
         }),
@@ -56,7 +56,7 @@ let E = async () => {
         if (!d.Z.shouldFetchDefaultSounds()) return Promise.resolve();
         o.Z.dispatch({ type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS' });
         let e = b('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
-        return E(), e;
+        return (E(), e);
     },
     O = () => {
         let e = (0, _.D)();

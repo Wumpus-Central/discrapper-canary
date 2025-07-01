@@ -17,9 +17,9 @@ function o(e) {
         isMessageSnapshot: p,
         renderThreadAccessory: m,
         renderSuppressEmbeds: f,
-        renderReactions: h,
-        forceAddReactions: g,
-        disableComponentInteractivity: _,
+        renderReactions: g,
+        forceAddReactions: _,
+        disableComponentInteractivity: h,
         className: b
     } = e;
     return d
@@ -36,10 +36,10 @@ function o(e) {
                   isMessageSnapshot: p,
                   onMediaItemContextMenu: c,
                   renderThreadAccessory: m,
-                  disableComponentInteractivity: _,
+                  disableComponentInteractivity: h,
                   renderSuppressEmbeds: f,
-                  forceAddReactions: g || t.type === i.u.EMOJI_ADDED,
-                  renderReactions: h
+                  forceAddReactions: _ || t.type === i.u.EMOJI_ADDED,
+                  renderReactions: g
               })
           });
 }

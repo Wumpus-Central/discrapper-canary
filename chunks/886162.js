@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(990547),
@@ -17,7 +17,7 @@ function g(e) {
         [m, b] = i.useState(!1),
         _ = (0, u.Dt)();
     async function E() {
-        return b(!0), g === p.c2C.AGREEMENTS && b(await (0, s.Lr)()), null;
+        return (b(!0), g === p.c2C.AGREEMENTS && b(await (0, s.Lr)()), null);
     }
     return (
         (0, c.Z)(

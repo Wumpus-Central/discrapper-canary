@@ -18,15 +18,15 @@ function m(e) {
         var e;
         if (null != o && null != g.current) {
             if (!(null == (e = o.asset) ? void 0 : e.isAnimated) || h) {
-                (g.current.currentTime = 0), g.current.pause();
+                ((g.current.currentTime = 0), g.current.pause());
                 return;
             }
-            t && !x.current ? g.current.play() : !t && x.current && ((g.current.currentTime = 0), g.current.pause()), (x.current = t);
+            (t && !x.current ? g.current.play() : !t && x.current && ((g.current.currentTime = 0), g.current.pause()), (x.current = t));
         }
     }, [t, o, h]);
     let b = null != n && !n.asset.isAnimated,
         j = null != o && o.asset.isAnimated,
-        _ = null != m ? (0, u.nK)(m.width, m.height) : null;
+        v = null != m ? (0, u.nK)(m.width, m.height) : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             b &&
@@ -39,8 +39,8 @@ function m(e) {
                             className: a()(n.className, { [p.hidden]: t && j }),
                             src: (0, u.sN)(n.asset.url, {
                                 format: 'webp',
-                                width: null == _ ? void 0 : _.width,
-                                height: null == _ ? void 0 : _.height
+                                width: null == v ? void 0 : v.width,
+                                height: null == v ? void 0 : v.height
                             }),
                             onLoad: f
                         })
@@ -52,7 +52,7 @@ function m(e) {
                         var s, i, l, u;
                         return (0, r.jsx)(c.Z, {
                             ref: (t) => {
-                                (e.current = t), (g.current = t);
+                                ((e.current = t), (g.current = t));
                             },
                             autoPlay: !h && t,
                             loop: !0,

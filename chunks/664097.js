@@ -1,4 +1,4 @@
-n.d(t, { o: () => o }), n(642613);
+(n.d(t, { o: () => o }), n(642613));
 var l = n(73800),
     i = n(442837),
     r = n(115130),
@@ -26,7 +26,7 @@ let o = () => {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
                                               l = Object.keys(n);
-                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                          ('function' == typeof Object.getOwnPropertySymbols &&
                                               (l = l.concat(
                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ let o = () => {
                                               )),
                                               l.forEach(function (t) {
                                                   var l;
-                                                  (l = n[t]),
+                                                  ((l = n[t]),
                                                       t in e
                                                           ? Object.defineProperty(e, t, {
                                                                 value: l,
@@ -42,8 +42,8 @@ let o = () => {
                                                                 configurable: !0,
                                                                 writable: !0
                                                             })
-                                                          : (e[t] = l);
-                                              });
+                                                          : (e[t] = l));
+                                              }));
                                       }
                                       return e;
                                   })({}, a.wT, e.embeddedActivityConfig)),

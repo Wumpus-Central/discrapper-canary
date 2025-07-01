@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(415506);
+(n.d(t, { Z: () => E }), n(388685), n(415506));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -29,7 +29,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function b(e) {
             )),
             i.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -109,7 +109,7 @@ class x extends r.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'state', {
                 codeInput: '',
                 submitting: !1,
@@ -132,18 +132,18 @@ class x extends r.Component {
                 try {
                     let e = await a.Z.resolveGiftCode(n);
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
-                    u.default.track(g.rMx.OPEN_MODAL, {
+                    (u.default.track(g.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
                         location: _(b({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA })
                     }),
                         (0, c.V)({ processedCode: n }),
-                        this.setState({ codeInput: '' });
+                        this.setState({ codeInput: '' }));
                 } catch (e) {
                     this.setState({ hasError: !0 });
                 } finally {
                     this.setState({ submitting: !1 });
                 }
-            });
+            }));
     }
 }
 function E() {

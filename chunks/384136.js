@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(415506);
+(n.d(t, { Z: () => c }), n(415506));
 var r = n(836560),
     i = n(376398);
 function a(e, t, n) {
@@ -18,7 +18,7 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -34,11 +34,11 @@ function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -68,7 +68,7 @@ class c extends r.EventEmitter {
         throw Error('UNKNOWN');
     }
     destroy() {
-        this.removeAllListeners(), (0, i.jC)(this.streamId), this.stream.getTracks().forEach((e) => e.stop());
+        (this.removeAllListeners(), (0, i.jC)(this.streamId), this.stream.getTracks().forEach((e) => e.stop()));
     }
     reset() {
         this.refreshSpeaking();
@@ -83,7 +83,7 @@ class c extends r.EventEmitter {
         );
     }
     constructor(e) {
-        super(),
+        (super(),
             a(this, 'id', void 0),
             a(this, 'stream', void 0),
             a(this, 'streamId', void 0),
@@ -94,6 +94,6 @@ class c extends r.EventEmitter {
             }),
             (this.id = e.getVideoTracks()[0].label),
             (this.stream = e),
-            (this.streamId = (0, i.N7)(e));
+            (this.streamId = (0, i.N7)(e)));
     }
 }

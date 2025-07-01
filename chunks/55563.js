@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => L }), n(388685), n(467055);
+(n.d(t, { Z: () => L }), n(388685), n(467055));
 var i,
     a = n(442837),
     o = n(570140),
@@ -27,7 +27,7 @@ let d = new Map(),
     m = new Map();
 function g(e) {
     var t;
-    p.set(e.id, l.Z.createFromServer(e)),
+    (p.set(e.id, l.Z.createFromServer(e)),
         f.delete(e.id),
         _.delete(e.id),
         null == (t = e.bundled_sku_ids) ||
@@ -35,7 +35,7 @@ function g(e) {
                 d.set(t, e.id);
             }),
         h.has(e.application_id) || h.set(e.application_id, new Set()),
-        h.get(e.application_id).add(e.id);
+        h.get(e.application_id).add(e.id));
 }
 function E(e) {
     g(e);
@@ -50,11 +50,11 @@ function y(e) {
 }
 function O(e) {
     let { skuId: t } = e;
-    f.delete(t), _.add(t);
+    (f.delete(t), _.add(t));
 }
 function v(e) {
     let { skuId: t } = e;
-    f.delete(t), _.add(t);
+    (f.delete(t), _.add(t));
 }
 function I(e) {
     let { giftCode: t } = e;
@@ -71,7 +71,7 @@ function S(e) {
     null != t && m.set(t, new Set(n.map((e) => e.id)));
 }
 function A(e) {
-    g(e.sku), null != e.child_skus && e.child_skus.forEach((e) => g(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => g(e));
+    (g(e.sku), null != e.child_skus && e.child_skus.forEach((e) => g(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => g(e)));
 }
 function N(e) {
     let { storeListings: t } = e;
@@ -86,15 +86,15 @@ function R(e) {
     for (let e of t) null != e.sku && g(e.sku);
 }
 function P() {
-    (d = new Map()), (f = new Set()), (_ = new Set()), (p = new Map()), (h = new Map()), (m = new Map());
+    ((d = new Map()), (f = new Set()), (_ = new Set()), (p = new Map()), (h = new Map()), (m = new Map()));
 }
 function w() {
     if (r === s.default.locale) return !1;
-    (r = s.default.locale), P();
+    ((r = s.default.locale), P());
 }
 class D extends (i = a.yh) {
     initialize() {
-        this.waitFor(s.default, c.Z), this.syncWith([s.default], w), (r = s.default.locale);
+        (this.waitFor(s.default, c.Z), this.syncWith([s.default], w), (r = s.default.locale));
     }
     get(e) {
         return p.get(e);

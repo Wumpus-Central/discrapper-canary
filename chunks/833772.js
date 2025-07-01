@@ -14,13 +14,13 @@ class l extends r.W {
                 ...t
             },
             a = s.m9.SENTRY_SDK_SOURCE || (0, n.S)();
-        (0, _.V)(e, 'browser', ['browser'], a),
+        ((0, _.V)(e, 'browser', ['browser'], a),
             super(e),
             e.sendClientReports &&
                 s.m9.document &&
                 s.m9.document.addEventListener('visibilitychange', () => {
                     'hidden' === s.m9.document.visibilityState && this._flushOutcomes();
-                });
+                }));
     }
     eventFromException(t, e) {
         return (0, c.dr)(this._options.stackParser, t, e, this._options.attachStacktrace);
@@ -41,6 +41,6 @@ class l extends r.W {
         this.sendEnvelope(e);
     }
     _prepareEvent(t, e, a) {
-        return (t.platform = t.platform || 'javascript'), super._prepareEvent(t, e, a);
+        return ((t.platform = t.platform || 'javascript'), super._prepareEvent(t, e, a));
     }
 }

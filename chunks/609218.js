@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => P,
     p: () => R
 }),
-    n(953529);
+    n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -30,22 +30,22 @@ var r = n(255367),
     N = n(229191),
     C = n(308362),
     R = (function (e) {
-        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
+        return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e);
     })({});
 function P(e) {
     let { containerContext: t, image: n, title: a, description: R, enableSocialProof: P, analyticsLocationSection: w, upsellViewedTrackingData: D, onClose: L, onDisplay: x, onLearnMore: k, isEmojiPickerOverlay: M = !1 } = e,
         j = (0, s.e7)([g.Z], () => g.Z.affinities),
         U = (0, s.e7)([g.Z], () => g.Z.hasFetched);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         !U && P && u.MH();
     }, [U, P]),
         i.useEffect(() => {
-            h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, D), null == x || x();
-        }, [x, D]);
+            (h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, D), null == x || x());
+        }, [x, D]));
     let G = j.length > 1 && P,
         B = () => (2 === t ? N.hasTabParentContainer : 1 === t ? N.hasParentContainer : N.noParentContainer),
         V = () => {
-            h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
+            (h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: w,
                 location_object: T.qAy.NAVIGATION_LINK
             }),
@@ -53,7 +53,7 @@ function P(e) {
                 (0, _.Z)(),
                 L(),
                 (0, d.xf)(),
-                (0, p.uL)(T.Z5c.APPLICATION_STORE);
+                (0, p.uL)(T.Z5c.APPLICATION_STORE));
         },
         F = (0, b.N)(),
         Z = i.useCallback(() => {

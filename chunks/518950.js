@@ -38,10 +38,10 @@ function l(e) {
         isAnimating: h,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => {
-                m.onMouseEnter(), b.onMouseEnter();
+                (m.onMouseEnter(), b.onMouseEnter());
             }, [m, b]),
             onMouseLeave: r.useCallback(() => {
-                m.onMouseLeave(), b.onMouseLeave();
+                (m.onMouseLeave(), b.onMouseLeave());
             }, [m, b])
         }
     };

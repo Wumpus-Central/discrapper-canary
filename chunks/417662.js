@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     E: () => _,
     Z: () => p
 }),
-    n(388685);
+    n(388685));
 var r = n(653603),
     i = n.n(r),
     a = n(512722),
@@ -31,7 +31,7 @@ function p(e) {
                             cmd: h
                         })
                     )
-                        return (0, l.py)(e, 'bold'), !0;
+                        return ((0, l.py)(e, 'bold'), !0);
                     break;
                 case d.yXg.I:
                     if (
@@ -41,7 +41,7 @@ function p(e) {
                             cmd: h
                         })
                     )
-                        return (0, l.py)(e, 'italics'), !0;
+                        return ((0, l.py)(e, 'italics'), !0);
                     break;
                 case d.yXg.U:
                     if (
@@ -51,7 +51,7 @@ function p(e) {
                             cmd: h
                         })
                     )
-                        return (0, l.py)(e, 'underline'), !0;
+                        return ((0, l.py)(e, 'underline'), !0);
                     break;
                 case d.yXg.S:
                     if (
@@ -62,7 +62,7 @@ function p(e) {
                             shift: !0
                         })
                     )
-                        return (0, l.py)(e, 'strikethrough'), !0;
+                        return ((0, l.py)(e, 'strikethrough'), !0);
                     break;
                 case d.yXg.TAB:
                     if (null != e.selection && _(t, { shift: null })) {
@@ -75,7 +75,7 @@ function p(e) {
                                 break;
                             }
                         if (o) {
-                            if (!t.shiftKey && u.M8.isCollapsed(e.selection)) return c.Q.insertText(e, f), !0;
+                            if (!t.shiftKey && u.M8.isCollapsed(e.selection)) return (c.Q.insertText(e, f), !0);
                             let n = !t.shiftKey;
                             return (
                                 s.T.withSingleEntry(e, () => {
@@ -91,7 +91,7 @@ function p(e) {
                                                 offset: 0
                                             };
                                         if (n)
-                                            c.Q.insertText(e, f, { at: o }),
+                                            (c.Q.insertText(e, f, { at: o }),
                                                 u.C0.equals(s.path, a) &&
                                                     0 !== s.offset &&
                                                     (s = {
@@ -103,13 +103,13 @@ function p(e) {
                                                     (l = {
                                                         path: a,
                                                         offset: l.offset + f.length
-                                                    });
+                                                    }));
                                         else if (i.text.startsWith(f)) {
                                             let t = {
                                                 path: u.C0.child(r, 0),
                                                 offset: f.length
                                             };
-                                            c.Q.delete(e, {
+                                            (c.Q.delete(e, {
                                                 at: {
                                                     anchor: o,
                                                     focus: t
@@ -124,7 +124,7 @@ function p(e) {
                                                     (l = {
                                                         path: a,
                                                         offset: Math.max(0, l.offset - f.length)
-                                                    });
+                                                    }));
                                         }
                                     }
                                     c.Q.select(e, {
@@ -228,7 +228,7 @@ function p(e) {
                     ) {
                         let [t, n] = u.M8.edges(e.selection),
                             [r, i] = u.bN.node(e, [m ? t.path[0] : n.path[0]]);
-                        if ((o()(u.q.isElement(r) && u.bN.isBlock(e, r), 'Top-most node of selection is not a block'), (m && !u.Jz.isAtStart(t, [r, i])) || (!m && !u.Jz.isAtEnd(n, [r, i])))) return m ? e.deleteBackward('line') : e.deleteForward('line'), !0;
+                        if ((o()(u.q.isElement(r) && u.bN.isBlock(e, r), 'Top-most node of selection is not a block'), (m && !u.Jz.isAtStart(t, [r, i])) || (!m && !u.Jz.isAtEnd(n, [r, i])))) return (m ? e.deleteBackward('line') : e.deleteForward('line'), !0);
                     }
             }
             return !1;

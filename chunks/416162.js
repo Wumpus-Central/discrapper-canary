@@ -1,4 +1,4 @@
-i.d(t, { Z: () => m }), i(388685);
+(i.d(t, { Z: () => m }), i(388685));
 var s = i(255367),
     n = i(73800),
     l = i(120356),
@@ -39,7 +39,7 @@ let u = (e) => {
             L = w === l.length - 1,
             M = null != f ? f : c.intl.string(c.t.i4jeWV),
             P = n.useCallback(() => {
-                null == b || b(), O(w - 1);
+                (null == b || b(), O(w - 1));
             }, [b, w, O]);
         return (0, s.jsxs)(r.Y0X, {
             size: r.CgR.MEDIUM,

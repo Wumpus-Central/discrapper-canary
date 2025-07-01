@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(997841);
+(n.d(t, { Z: () => E }), n(388685), n(997841));
 var i = n(255367),
     r = n(73800),
     l = n(442837),
@@ -33,7 +33,7 @@ function E(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function E(e) {
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        (i = n[t]),
+                                        ((i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
@@ -49,8 +49,8 @@ function E(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = i);
-                                    });
+                                                : (e[t] = i));
+                                    }));
                             }
                             return e;
                         })({}, n)),
@@ -82,7 +82,7 @@ function E(e) {
                     _ = (t) => {
                         E(!1);
                         let n = { message_notifications: t };
-                        t === p.bL.ALL_MESSAGES && h !== f.i.ALL_MESSAGES && (n.flags = (0, a.Q4)(g.ZP.getGuildFlags(e), S.vc.UNREADS_ALL_MESSAGES)), o.Z.updateGuildNotificationSettings(e, n, b.UE.notifications(t));
+                        (t === p.bL.ALL_MESSAGES && h !== f.i.ALL_MESSAGES && (n.flags = (0, a.Q4)(g.ZP.getGuildFlags(e), S.vc.UNREADS_ALL_MESSAGES)), o.Z.updateGuildNotificationSettings(e, n, b.UE.notifications(t)));
                     },
                     N = (t) => {
                         E(!1);

@@ -1,4 +1,4 @@
-n.d(t, { j: () => l }), n(388685);
+(n.d(t, { j: () => l }), n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(607070),
@@ -11,7 +11,7 @@ let s = 1000,
             d = r.useRef(null);
         return (
             r.useEffect(() => {
-                clearTimeout(d.current), (d.current = null);
+                (clearTimeout(d.current), (d.current = null));
                 let r = !n && !t,
                     i = l && (e || r);
                 i && n

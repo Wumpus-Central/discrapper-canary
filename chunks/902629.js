@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(147913),
     i = n(313261),
     a = n(38618);
@@ -21,14 +21,14 @@ class s extends r.Z {
         a.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, 'actions', {
                 EXPERIMENT_OVERRIDE_BUCKET: this.handleCheckExperiments,
                 LOGIN_SUCCESS: this.handleCheckExperiments,
                 EXPERIMENTS_FETCH_SUCCESS: this.handleCheckExperiments,
                 POST_CONNECTION_OPEN: this.handleCheckExperiments,
                 CACHE_LOADED: this.handleCheckExperiments
-            });
+            }));
     }
 }
 let l = new s();

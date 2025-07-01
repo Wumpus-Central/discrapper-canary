@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     GI: () => u,
     Jt: () => a.Jt,
     Un: () => c,
     wE: () => a.wE
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(252117);
@@ -25,7 +25,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -62,7 +62,7 @@ function c(e) {
                 fallback: null != o ? o() : l()(),
                 children: (0, r.jsx)(d, s({}, e))
             });
-    return u && (f = i.memo(f)), (f.displayName = 'Suspense('.concat(c || 'Unknown', ')')), f;
+    return (u && (f = i.memo(f)), (f.displayName = 'Suspense('.concat(c || 'Unknown', ')')), f);
 }
 function u(e) {
     let { createPromise: t, webpackId: n, render: o, renderFallback: s } = e,

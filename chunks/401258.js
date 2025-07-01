@@ -7,7 +7,7 @@ function i(e) {
         l = (0, r.useRef)(Date.now()),
         u = (0, r.useCallback)(() => {
             let e = ((Date.now() - l.current) * n) / i;
-            (0, s.KH)(a, e), null == c || c(), (l.current = Date.now());
+            ((0, s.KH)(a, e), null == c || c(), (l.current = Date.now()));
         }, [n, i, a, c]),
         d = (0, r.useCallback)(() => {
             l.current = Date.now();

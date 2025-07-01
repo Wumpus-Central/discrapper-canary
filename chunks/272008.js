@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AH: () => D,
     Ag: () => F,
     CS: () => N,
@@ -21,7 +21,7 @@ n.d(t, {
     w: () => H,
     xw: () => P
 }),
-    n(415506);
+    n(415506));
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -58,7 +58,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -66,7 +66,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -74,11 +74,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -153,7 +153,7 @@ async function R() {
 }
 async function P() {
     if (!p.Z.isFetchingCurrentQuests) {
-        a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), _.Z.recordQuestRequestAttempt(y.ANM.QUESTS_CURRENT_QUESTS);
+        (a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), _.Z.recordQuestRequestAttempt(y.ANM.QUESTS_CURRENT_QUESTS));
         try {
             let e = await i.tn.get({
                     url: y.ANM.QUESTS_CURRENT_QUESTS,
@@ -166,19 +166,19 @@ async function P() {
                     return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null || b.r.build(e.config).rewardPlatforms.length > 0;
                 }),
                 o = e.body.excluded_quests;
-            a.Z.dispatch({
+            (a.Z.dispatch({
                 type: 'QUESTS_FETCH_CURRENT_QUESTS_SUCCESS',
                 quests: r,
                 excludedQuests: o,
                 questEnrollmentBlockedUntil: n
             }),
-                _.Z.recordQuestRequestApiResponse(y.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !0 });
+                _.Z.recordQuestRequestApiResponse(y.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !0 }));
         } catch (e) {
-            a.Z.dispatch({
+            (a.Z.dispatch({
                 type: 'QUESTS_FETCH_CURRENT_QUESTS_FAILURE',
                 error: new o.Z(e)
             }),
-                _.Z.recordQuestRequestApiResponse(y.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !1 });
+                _.Z.recordQuestRequestApiResponse(y.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !1 }));
         }
     }
 }
@@ -286,12 +286,12 @@ async function L(e, t, n) {
             );
         } catch (t) {
             throw (
-                (a.Z.dispatch({
+                a.Z.dispatch({
                     type: 'QUESTS_CLAIM_REWARD_FAILURE',
                     error: new o.Z(t),
                     questId: e
                 }),
-                t)
+                t
             );
         }
     }
@@ -314,12 +314,12 @@ async function x(e) {
             });
         } catch (t) {
             throw (
-                (a.Z.dispatch({
+                a.Z.dispatch({
                     type: 'QUESTS_FETCH_REWARD_CODE_FAILURE',
                     error: new o.Z(t),
                     questId: e
                 }),
-                t)
+                t
             );
         }
     }
@@ -462,11 +462,11 @@ function Z(e, t, n) {
 }
 async function H(e) {
     var t, n, r, d, f, p, h;
-    a.Z.dispatch({
+    (a.Z.dispatch({
         type: 'QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN',
         placement: e
     }),
-        _.Z.recordQuestRequestAttempt('/quests/decision');
+        _.Z.recordQuestRequestAttempt('/quests/decision'));
     try {
         let o = await (0, l.Gg)(),
             h = await (0, s.Gy)(),
@@ -476,7 +476,7 @@ async function H(e) {
                     rejectWithError: !1
                 })
             ).body;
-        a.Z.dispatch({
+        (a.Z.dispatch({
             type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
             quest: (0, m.q6)(g.quest),
             adDecisionData: {
@@ -492,9 +492,9 @@ async function H(e) {
             placement: e
         }),
             _.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !0 }),
-            u.default.track(y.rMx.QUEST_DECISION_RECEIVED, S(I({}, (0, c.Z)()), { quest_id: g.quest.id }));
+            u.default.track(y.rMx.QUEST_DECISION_RECEIVED, S(I({}, (0, c.Z)()), { quest_id: g.quest.id })));
     } catch (t) {
-        _.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !1 }),
+        (_.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !1 }),
             u.default.track(
                 y.rMx.QUEST_DECISION_ROUNDTRIP_ERROR,
                 S(I({}, (0, c.Z)()), {
@@ -506,7 +506,7 @@ async function H(e) {
                 type: 'QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE',
                 error: new o.Z(t),
                 placement: e
-            });
+            }));
     }
 }
 async function Y(e, t) {

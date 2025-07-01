@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(539854);
+(n.d(t, { Z: () => h }), n(539854));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -36,12 +36,12 @@ function h() {
                 disabled: j,
                 checked: h === y.KW.ON ? 'system' === e : e === n,
                 action: () => {
-                    (0, d.Yk)({
+                    ((0, d.Yk)({
                         isPersisted: !0,
                         analyticsLocations: t,
                         themeName: 'default '.concat(e)
                     }),
-                        (0, o.ZI)({ theme: e });
+                        (0, o.ZI)({ theme: e }));
                 }
             }),
         S = E(O.BRd.DARK, f.intl.string(f.t.SMPT1t)),
@@ -107,7 +107,7 @@ function h() {
                             label: f.intl.string(f.t.Jqj4cX),
                             checked: !e,
                             action: () => {
-                                b.jU.updateSetting(!1), (0, c.ZZ)();
+                                (b.jU.updateSetting(!1), (0, c.ZZ)());
                             }
                         }),
                         (0, r.jsx)(a.k5B, {
@@ -116,7 +116,7 @@ function h() {
                             label: f.intl.string(f.t['1JNcPT']),
                             checked: e,
                             action: () => {
-                                b.jU.updateSetting(!0), (0, c.ZZ)();
+                                (b.jU.updateSetting(!0), (0, c.ZZ)());
                             }
                         })
                     ]

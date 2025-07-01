@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(73800),
     i = n(166516),
     l = n.n(i),
@@ -23,7 +23,7 @@ else if (O.has(o().layout)) {
     let e = new (l())({ animation: 'none' });
     y = (t) => {
         try {
-            (0, b.PR)(t), e.badge(-1 === t ? '\u2022' : t);
+            ((0, b.PR)(t), e.badge(-1 === t ? '\u2022' : t));
         } catch (e) {}
     };
 }
@@ -35,9 +35,9 @@ function I() {
                 n = d.default.hasAnyUnread(),
                 r = p.Z.getDisableUnreadBadge(),
                 i = e + t;
-            return 0 === i && n && !r && (i = -1), i;
+            return (0 === i && n && !r && (i = -1), i);
         });
-    r.useEffect(() => {
+    (r.useEffect(() => {
         if (!e) return;
         let t = m.ZP.bounceDock('critical'),
             n = (0, b.EM)({
@@ -45,11 +45,11 @@ function I() {
                 count: 50
             });
         return () => {
-            null == t || t(), n();
+            (null == t || t(), n());
         };
     }, [e]),
         r.useEffect(() => {
             y(t);
         }, [t]),
-        r.useEffect(() => () => y(0), []);
+        r.useEffect(() => () => y(0), []));
 }

@@ -12,7 +12,7 @@ class u extends (s = l.ZP.Store) {
         return d;
     }
 }
-(r = 'HypeSquadStore'),
+((r = 'HypeSquadStore'),
     (i = 'displayName') in u
         ? Object.defineProperty(u, i, {
               value: r,
@@ -20,7 +20,7 @@ class u extends (s = l.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (u[i] = r);
+        : (u[i] = r));
 let m = new u(a.Z, {
     CONNECTION_OPEN: function () {
         let e = o.default.getCurrentUser();

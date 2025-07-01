@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(695469);
@@ -57,7 +57,7 @@ function h(e) {
                 onMouseLeave: b,
                 children: (0, r.jsxs)('div', {
                     ref: (t) => {
-                        (e.current = t), (y.current = t);
+                        ((e.current = t), (y.current = t));
                     },
                     children: [
                         (0, r.jsx)(d.Z, {

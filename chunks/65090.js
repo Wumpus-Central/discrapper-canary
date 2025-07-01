@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(953529);
+(n.d(t, { Z: () => E }), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(588468),
@@ -141,6 +141,6 @@ let E = {
             s = t[i],
             l = n[i - t.length],
             c = r[i - t.length - n.length];
-        return null != s ? a.insertText(_(s.user, o, a.hidePersonalInformation), p(s.user)) : null != l ? a.insertText(h(l)) : null != c && a.insertText(m(c), g(c)), { type: u.z2.MENTION };
+        return (null != s ? a.insertText(_(s.user, o, a.hidePersonalInformation), p(s.user)) : null != l ? a.insertText(h(l)) : null != c && a.insertText(m(c), g(c)), { type: u.z2.MENTION });
     }
 };

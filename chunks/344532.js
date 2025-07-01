@@ -60,7 +60,7 @@ class m extends (r = i.ZP.PersistedStore) {
         return s;
     }
 }
-o(m, 'displayName', 'LoginRequiredActionStore'), o(m, 'persistKey', 'LoginRequiredActionStore');
+(o(m, 'displayName', 'LoginRequiredActionStore'), o(m, 'persistKey', 'LoginRequiredActionStore'));
 let g = new m(a.Z, {
     LOGIN_ATTEMPTED: d,
     CONNECTION_OPEN: f,

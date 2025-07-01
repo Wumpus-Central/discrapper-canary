@@ -29,7 +29,7 @@ let u = (0, l.B)({
             config: {
                 notificationCenterVariant: 'popout',
                 entrypoint: 'server-rail-top',
-                filterStyle: 'tabs'
+                filterStyle: 'dropdown'
             }
         },
         {

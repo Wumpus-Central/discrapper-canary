@@ -27,9 +27,9 @@ class a extends (n = r.ZP.PersistedStore) {
         return !0 !== l[t];
     }
 }
-o(a, 'displayName', 'ActivityInviteEducationStore'), o(a, 'persistKey', 'ActivityInviteEducationExperimentStore');
+(o(a, 'displayName', 'ActivityInviteEducationStore'), o(a, 'persistKey', 'ActivityInviteEducationExperimentStore'));
 let d = new a(s.Z, {
     ACTIVITY_INVITE_EDUCATION_DISMISS: function (t) {
-        return (l[t.key] = t.value), !0;
+        return ((l[t.key] = t.value), !0);
     }
 });

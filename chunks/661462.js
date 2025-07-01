@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var o = n(255367),
     r = n(73800),
     i = n(481060),
@@ -36,14 +36,14 @@ function f(e) {
 }
 function p(e) {
     var t, n, l;
-    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: y, initialSubsection: _, onClose: x } = e,
+    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: x, onClose: y } = e,
         { trackUserProfileAction: h } = (0, c.KZ)(),
         [{ section: g, subsection: j, text: I }, v] = r.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         o = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (o = o.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function p(e) {
                         )),
                         o.forEach(function (t) {
                             var o;
-                            (o = n[t]),
+                            ((o = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: o,
@@ -59,8 +59,8 @@ function p(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = o);
-                        });
+                                    : (e[t] = o));
+                        }));
                 }
                 return e;
             })(
@@ -68,12 +68,12 @@ function p(e) {
                 null !=
                     (t = b.find((e) => {
                         let { section: t } = e;
-                        return t === y;
+                        return t === _;
                     }))
                     ? t
                     : b[0]
             )),
-            (l = l = { subsection: _ }),
+            (l = l = { subsection: x }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                 : (function (e, t) {
@@ -101,14 +101,14 @@ function p(e) {
                     look: 'custom',
                     selectedItem: g,
                     onItemSelect: (e) => {
-                        h({
+                        (h({
                             action: 'PRESS_SECTION',
                             section: e
                         }),
                             v((t) => {
                                 var n;
                                 return null != (n = b.find((t) => t.section === e)) ? n : t;
-                            });
+                            }));
                     },
                     children: b.map((e) =>
                         (0, o.jsx)(
@@ -136,7 +136,7 @@ function p(e) {
                     channelId: m,
                     section: g,
                     subsection: j,
-                    onClose: x
+                    onClose: y
                 })
             })
         ]

@@ -1,6 +1,6 @@
 var a = t(406557),
     o = t(259466);
-(e.exports = function (e, r, t) {
+((e.exports = function (e, r, t) {
     return (
         (r = o(r)) in e
             ? a(e, r, {
@@ -14,4 +14,4 @@ var a = t(406557),
     );
 }),
     (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+    (e.exports.default = e.exports));

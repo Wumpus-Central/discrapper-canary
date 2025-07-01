@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(781311), n(35282);
+(n.d(t, { Z: () => N }), n(388685), n(781311), n(35282));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,7 +18,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,8 +34,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -97,7 +97,7 @@ function N(e) {
         }, [N, n]),
         (0, r.jsxs)('form', {
             onSubmit: (e) => {
-                e.preventDefault(), s()(null != n.current, 'Input is submitted when not mounted');
+                (e.preventDefault(), s()(null != n.current, 'Input is submitted when not mounted'));
                 let t = n.current.value.trim();
                 !t.includes('#') && t.startsWith('@') && (t = t.substring(1));
                 let r = (0, p.Zy)(t);
@@ -175,11 +175,11 @@ function N(e) {
                                     if (e.length <= 0) return void d({ type: 'RESET' });
                                     let t = '',
                                         [, n] = e.split('#');
-                                    null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)),
+                                    (null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)),
                                         d({
                                             type: 'HINT',
                                             text: t
-                                        });
+                                        }));
                                 },
                                 maxLength: 37,
                                 autoFocus: !0,

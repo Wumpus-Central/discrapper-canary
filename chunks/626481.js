@@ -28,7 +28,7 @@ r(
                 r = l(function () {
                     return a(c(e), void 0, t);
                 });
-            return (r.error ? n.reject : n.resolve)(r.value), n.promise;
+            return ((r.error ? n.reject : n.resolve)(r.value), n.promise);
         }
     }
 );

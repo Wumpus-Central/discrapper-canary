@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(415506), n(388685);
+(n.d(t, { Z: () => a }), n(415506), n(388685));
 var r = n(141795),
     i = n(981631);
 async function a(e) {
@@ -20,7 +20,7 @@ async function a(e) {
                         case r.m.CANCELED:
                             o(Error('Upload is canceled'));
                     }
-                    e.on('complete', () => {
+                    (e.on('complete', () => {
                         a('complete');
                     }),
                         e.on('error', () => {
@@ -28,7 +28,7 @@ async function a(e) {
                         }),
                         e.on('progress', (e, t) => {
                             null == n || n(e, t);
-                        });
+                        }));
                 })
         );
     await Promise.all(a);

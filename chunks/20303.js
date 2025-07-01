@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(704826), n(35282);
+(n.d(t, { Z: () => O }), n(388685), n(704826), n(35282));
 var r,
     i,
     a = n(442837),
@@ -45,29 +45,29 @@ function g(e) {
 function E(e) {
     let { url: t } = e;
     if (m(t)) return !1;
-    _.add((0, c.F)(t)),
+    (_.add((0, c.F)(t)),
         o.K.set(f, {
             trustedDomains: _,
             trustedProtocols: p
-        });
+        }));
 }
 function b(e) {
     let { url: t } = e;
     if (g(t)) return !1;
-    p.add((0, c.E)(t)),
+    (p.add((0, c.E)(t)),
         o.K.set(f, {
             trustedDomains: _,
             trustedProtocols: p
-        });
+        }));
 }
 class y extends (i = a.ZP.Store) {
     initialize() {
         var e;
         let t = null != (e = o.K.get(f)) ? e : {};
-        if (Array.isArray(t)) (_ = new Set(null != t ? Array.from(t) : null)), (p = new Set());
+        if (Array.isArray(t)) ((_ = new Set(null != t ? Array.from(t) : null)), (p = new Set()));
         else {
             let { trustedDomains: e, trustedProtocols: n } = t;
-            (_ = new Set(null != e ? Array.from(e) : null)), (p = new Set(null != n ? Array.from(n) : null));
+            ((_ = new Set(null != e ? Array.from(e) : null)), (p = new Set(null != n ? Array.from(n) : null)));
         }
     }
     isTrustedDomain(e) {

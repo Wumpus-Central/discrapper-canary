@@ -45,7 +45,7 @@ function h(e) {
     return e.length;
 }
 function v(e, t) {
-    return t.push(e), e;
+    return (t.push(e), e);
 }
 function m(e, t) {
     return e.map(t).join('');

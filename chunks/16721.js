@@ -20,7 +20,7 @@ var n,
     S = ((i = /b*/g), s(d, (n = /a/), 'a'), s(d, i, 'a'), 0 !== n.lastIndex || 0 !== i.lastIndex),
     R = h.BROKEN_CARET,
     k = void 0 !== /()??/.exec('')[1];
-(S || k || R || p || v) &&
+((S || k || R || p || v) &&
     (m = function (t) {
         var e,
             r,
@@ -32,7 +32,7 @@ var n,
             p = l(this),
             v = o(t),
             P = p.raw;
-        if (P) return (P.lastIndex = this.lastIndex), (e = s(m, P, v)), (this.lastIndex = P.lastIndex), e;
+        if (P) return ((P.lastIndex = this.lastIndex), (e = s(m, P, v)), (this.lastIndex = P.lastIndex), e);
         var U = p.groups,
             L = R && this.sticky,
             E = s(u, this),
@@ -56,4 +56,4 @@ var n,
             for (a = 0, i.groups = h = f(null); a < U.length; a++) h[(c = U[a])[0]] = i[c[1]];
         return i;
     }),
-    (t.exports = m);
+    (t.exports = m));

@@ -29,7 +29,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,7 +52,7 @@ function h() {
         var l, c;
         n = o.desktopSource.soundshareSession;
         let e = null != o.desktopSource.sourcePid ? i.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
-        (r = null != (l = null == e ? void 0 : e.name) ? l : null), (a = null != (c = null == e ? void 0 : e.id) ? c : null);
+        ((r = null != (l = null == e ? void 0 : e.name) ? l : null), (a = null != (c = null == e ? void 0 : e.id) ? c : null));
     }
     return {
         video_input_resolution: e,

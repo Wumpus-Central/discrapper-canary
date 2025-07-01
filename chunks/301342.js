@@ -9,8 +9,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(91192),
-    a = n(442837),
+    a = n(91192),
+    s = n(442837),
     c = n(481060),
     u = n(211739),
     d = n(239091),
@@ -26,11 +26,11 @@ var r = n(255367),
     v = n(981631),
     C = n(388032),
     j = n(585523);
-function E(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -46,12 +46,12 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function S(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,9 +75,9 @@ function x(e) {
 let I = i.memo(function (e) {
         let t,
             { channel: l, connectChannelDragSource: h, connectChannelDropTarget: O, disableManageChannels: y, position: I, sortingPosition: P, hideIcon: N, children: w } = e,
-            Z = (0, a.e7)([_.ZP], () => _.ZP.isChannelMuted(l.getGuildId(), l.id)),
-            T = (0, a.e7)([g.Z], () => g.Z.isCollapsed(l.id)),
-            A = (0, a.e7)([b.Z], () => b.Z.can(v.Plq.MANAGE_CHANNELS, l));
+            Z = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            T = (0, s.e7)([g.Z], () => g.Z.isCollapsed(l.id)),
+            A = (0, s.e7)([b.Z], () => b.Z.can(v.Plq.MANAGE_CHANNELS, l));
         t = null != P ? (I > P ? j.containerDragAfter : j.containerDragBefore) : j.containerDefault;
         let R = i.useCallback(() => {
                 T ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);
@@ -92,7 +92,7 @@ let I = i.memo(function (e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        S(E({}, n), {
+                                        E(S({}, n), {
                                             channel: l,
                                             guild: t
                                         })
@@ -107,11 +107,11 @@ let I = i.memo(function (e) {
                     t = l.getGuildId();
                 null != t &&
                     (0, c.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e('45094'), n.e('63228')]).then(n.bind(n, 218613));
+                        let { default: i } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
-                                S(E({}, n), {
+                                E(S({}, n), {
                                     channelType: e,
                                     guildId: t,
                                     categoryId: 'null' !== l.id ? l.id : null
@@ -119,7 +119,7 @@ let I = i.memo(function (e) {
                             );
                     });
             }, [l]),
-            M = (0, s.JA)(l.id),
+            M = (0, a.JA)(l.id),
             { role: k, tabIndex: U } = M,
             G = (function (e, t) {
                 if (null == e) return {};
@@ -131,12 +131,12 @@ let I = i.memo(function (e) {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(M, ['role', 'tabIndex']),
@@ -164,8 +164,8 @@ let I = i.memo(function (e) {
                             children: [
                                 (0, r.jsxs)(
                                     c.P3F,
-                                    S(
-                                        E(
+                                    E(
+                                        S(
                                             {
                                                 innerRef: B,
                                                 className: j.mainContent,
@@ -274,7 +274,7 @@ let I = i.memo(function (e) {
     }),
     w = i.memo(function (e) {
         let { category: t } = e,
-            n = (0, a.e7)([O.Z], () => O.Z.isVoiceCategoryCollapsed(t.guild.id)),
+            n = (0, s.e7)([O.Z], () => O.Z.isVoiceCategoryCollapsed(t.guild.id)),
             l = i.useCallback(() => {
                 n ? (0, y.s)(t.guild.id) : (0, y.M)(t.guild.id);
             }, [t.guild.id, n]);
@@ -299,7 +299,7 @@ let I = i.memo(function (e) {
     }),
     Z = i.memo(function (e) {
         let { category: t, channel: n } = e,
-            i = (0, a.e7)([O.Z], () => O.Z.isVoiceCategoryCollapsed(t.guild.id));
+            i = (0, s.e7)([O.Z], () => O.Z.isVoiceCategoryCollapsed(t.guild.id));
         return i || null == n || n.record.type === v.d4z.GUILD_CATEGORY
             ? i
                 ? (0, r.jsx)('li', {

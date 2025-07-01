@@ -1,11 +1,11 @@
-r.d(t, {
+(r.d(t, {
     ZO: () => s,
     df: () => d,
     hF: () => b,
     j2: () => f,
     qD: () => h
 }),
-    r(415506);
+    r(415506));
 var n = r(544891),
     a = r(570140),
     l = r(881052),
@@ -40,13 +40,13 @@ async function s() {
 }
 async function d(e) {
     let { skuId: t, loadId: r, onRedeemStart: i, onRedeemSucceed: d, onRedeemFail: b, shouldRefetchBalance: f = !0 } = e;
-    a.Z.wait(() => {
+    (a.Z.wait(() => {
         a.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_START',
             skuId: t
         });
     }),
-        null == i || i();
+        null == i || i());
     try {
         let e = (
             await n.tn.post({
@@ -72,13 +72,13 @@ async function d(e) {
         );
     } catch (r) {
         let e = r instanceof l.HF ? r : new l.HF(r);
-        a.Z.dispatch({
+        (a.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_FAIL',
             skuId: t,
             error: e
         }),
             f && s(),
-            null == b || b(e);
+            null == b || b(e));
     }
 }
 function b(e) {

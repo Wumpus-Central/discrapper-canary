@@ -1,4 +1,4 @@
-n.d(t, { D: () => r }), n(415506);
+(n.d(t, { D: () => r }), n(415506));
 function r(e, t, n) {
     if (e.byteLength < t) throw Error('data.byteLength must be greater than or equal to desiredLength');
     if (t % n != 0) throw Error('desiredLength must be a multiple of groupSize');
@@ -12,7 +12,7 @@ function r(e, t, n) {
             if (void 0 === i) throw Error('Out of bounds access from data array');
             t = (t << 8n) | BigInt(i);
         }
-        (t %= r), (i += t.toString().padStart(n, '0'));
+        ((t %= r), (i += t.toString().padStart(n, '0')));
     }
     return i;
 }

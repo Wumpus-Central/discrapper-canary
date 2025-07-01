@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     KT: () => b,
     ZP: () => h,
     nX: () => p
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(25441),
@@ -50,13 +50,13 @@ function h(e) {
                 c.current = e;
                 let n = (0, s.P1)(e, o),
                     r = (0, s.x3)(e);
-                p(n, r), (0, a.h)(t, r, !0);
+                (p(n, r), (0, a.h)(t, r, !0));
             },
             [t, p]
         ),
         [v, _] = i.useState(!1),
         C = i.useRef(v);
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         C.current = v;
     }, [v]),
         i.useLayoutEffect(() => {
@@ -68,7 +68,7 @@ function h(e) {
                     e.addEventListener('focus', i),
                     e.addEventListener('scroll', a, { passive: !0 }),
                     () => {
-                        e.removeEventListener('focusin', n), e.removeEventListener('focusout', r), e.removeEventListener('focus', i), e.removeEventListener('scroll', a);
+                        (e.removeEventListener('focusin', n), e.removeEventListener('focusout', r), e.removeEventListener('focus', i), e.removeEventListener('scroll', a));
                     }
                 );
             function n() {
@@ -89,7 +89,7 @@ function h(e) {
             function a() {
                 h.current = !0;
             }
-        }, [t, p, b, j, x]);
+        }, [t, p, b, j, x]));
     let y = i.useCallback(
             (e) => {
                 var t, n;

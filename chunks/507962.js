@@ -25,43 +25,43 @@ var r = n(73800),
     u = n(474936);
 let d = 'manual',
     f = () => {
-        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'hex_input' });
+        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'hex_input' }));
     },
     _ = () => {
-        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_picker' });
+        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_picker' }));
     },
     p = () => {
         l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'eye_dropper' });
     },
     h = () => {
-        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'add_color' });
+        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'add_color' }));
     },
     m = () => {
-        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'remove_color' });
+        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'remove_color' }));
     },
     g = () => {
         l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_selected' });
     },
     E = () => {
-        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'gradient_direction' });
+        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'gradient_direction' }));
     },
     b = () => {
-        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_intensity' });
+        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_intensity' }));
     },
     y = () => {
-        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'base_theme' });
+        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'base_theme' }));
     },
     O = () => {
-        (d = 'surprise_me'), l.default.track(c.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
+        ((d = 'surprise_me'), l.default.track(c.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {}));
     },
     v = () => {
-        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {}));
     },
     I = () => {
         l.default.track(c.rMx.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
     },
     T = (e, t, n, r, i) => {
-        l.default.track(c.rMx.CUSTOM_THEMES_UPDATED, {
+        (l.default.track(c.rMx.CUSTOM_THEMES_UPDATED, {
             colors: e,
             color_intensity: t,
             gradient_angle: n,
@@ -69,7 +69,7 @@ let d = 'manual',
             location_stack: i,
             creation_method: d
         }),
-            (d = 'manual');
+            (d = 'manual'));
     },
     S = (e, t) => {
         let { analyticsLocations: n } = (0, a.ZP)(t);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(243814),
     i = n(846027),
     l = n(131951),
@@ -93,7 +93,7 @@ let p = {
             if ((t && (null != t.device_id && i.Z.setInputDevice(t.device_id), null != t.volume && i.Z.setInputVolume(t.volume)), n && (null != n.device_id && i.Z.setOutputDevice(n.device_id), null != n.volume && i.Z.setOutputVolume(n.volume)), r)) {
                 let e = l.Z.getMode(),
                     t = l.Z.getModeOptions();
-                null != r.type && (e = r.type), null != r.auto_threshold && (t.autoThreshold = r.auto_threshold), null != r.threshold && (t.threshold = r.threshold), null != r.shortcut && (t.shortcut = r.shortcut.map((e) => [e.type, e.code])), null != r.delay && (t.delay = r.delay), i.Z.setMode(e, t);
+                (null != r.type && (e = r.type), null != r.auto_threshold && (t.autoThreshold = r.auto_threshold), null != r.threshold && (t.threshold = r.threshold), null != r.shortcut && (t.shortcut = r.shortcut.map((e) => [e.type, e.code])), null != r.delay && (t.delay = r.delay), i.Z.setMode(e, t));
             }
             if ((null != a && i.Z.setAutomaticGainControl(a), null != o && i.Z.setEchoCancellation(o), null != s && i.Z.setNoiseSuppression(s), null != u && i.Z.setQoS(u), null != d && i.Z.setSilenceWarning(d), null != p)) {
                 let e = l.Z.isSelfDeaf();

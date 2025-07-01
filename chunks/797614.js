@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(539854);
+(n.d(t, { Z: () => b }), n(388685), n(539854));
 var r = n(404097),
     i = n(544891),
     a = n(358085),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -86,17 +86,17 @@ class E {
         let a = p();
         null != a && i.tags.push('platform:'.concat(a));
         let o = h();
-        return null != o && i.tags.push('release_channel:'.concat(o)), i;
+        return (null != o && i.tags.push('release_channel:'.concat(o)), i);
     }
     increment(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this._getMetricWithDefaults(e, 'count');
-        this._metrics.push(n), (t || this._metrics.length >= g) && this._flush();
+        (this._metrics.push(n), (t || this._metrics.length >= g) && this._flush());
     }
     distribution(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = f(u({}, this._getMetricWithDefaults(e, 'distribution')), { value: t });
-        this._metrics.push(r), (n || this._metrics.length >= g) && this._flush();
+        (this._metrics.push(r), (n || this._metrics.length >= g) && this._flush());
     }
     _flush() {
         if (this._metrics.length > 0) {
@@ -107,8 +107,8 @@ class E {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1751067155554',
-                            build_number: '414077'
+                            built_at: '1751387167965',
+                            build_number: '414640'
                         }
                     },
                     retries: 1,
@@ -121,12 +121,12 @@ class E {
         this._metrics = [];
     }
     constructor() {
-        c(this, '_metrics', void 0),
+        (c(this, '_metrics', void 0),
             c(this, '_intervalId', void 0),
             (this._metrics = []),
             (this._intervalId = setInterval(() => {
                 this._flush();
-            }, m));
+            }, m)));
     }
 }
 let b = new E();

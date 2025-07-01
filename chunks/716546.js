@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(668781),
     i = n(998502),
     a = n(58406),
@@ -51,7 +51,7 @@ class l extends a.g {
         });
     }
     constructor(...e) {
-        super(...e), s(this, 'nativeUtils', i.ZP.getDiscordUtils());
+        (super(...e), s(this, 'nativeUtils', i.ZP.getDiscordUtils()));
     }
 }
 s(l, 'requestTypeLookup', {

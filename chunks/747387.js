@@ -1,4 +1,4 @@
-r.d(t, { Z: () => v }), r(388685);
+(r.d(t, { Z: () => v }), r(388685));
 var n = r(255367),
     a = r(73800),
     i = r(927919),
@@ -15,7 +15,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -23,7 +23,7 @@ function y(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -31,8 +31,8 @@ function y(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -66,12 +66,12 @@ let v = (e) => {
                         n,
                         a = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
             }
             return a;
         })(e, ['captchaService', 'sitekey', 'rqdata', 'onRender', 'onVerify', 'onError', 'onOpen', 'onClose', 'onChalExpired', 'size', 'userflow']);
@@ -101,38 +101,38 @@ let v = (e) => {
         D = a.useCallback(() => {
             if (t === l.hP.HCAPTCHA) {
                 var e, r;
-                null != v && '' !== v && null != x.current && (null == (e = x.current) || e.setData({ rqdata: v })), 'invisible' === w && null != x.current && (null == (r = x.current) || r.execute());
+                (null != v && '' !== v && null != x.current && (null == (e = x.current) || e.setData({ rqdata: v })), 'invisible' === w && null != x.current && (null == (r = x.current) || r.execute()));
             }
         }, [v, x, w, t]),
         N = a.useCallback(() => {
-            S || (A('initial-load'), I('initial-load'), k(!0)), D();
+            (S || (A('initial-load'), I('initial-load'), k(!0)), D());
         }, [I, S, A, D]);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         D();
     }, [D]),
         a.useEffect(() => {
             N();
-        }, [N]);
+        }, [N]));
     let L = a.useCallback(() => {
-            A('error'), I('error'), D(), null == g || g();
+            (A('error'), I('error'), D(), null == g || g());
         }, [A, I, D, g]),
         T = a.useCallback(
             (e) => {
-                A('verify'), I('verify'), O(e);
+                (A('verify'), I('verify'), O(e));
             },
             [I, O, A]
         ),
         V = a.useCallback(() => {
-            A('render'), (0, u.emitCaptchaDistributionMetric)(_), null == m || m();
+            (A('render'), (0, u.emitCaptchaDistributionMetric)(_), null == m || m());
         }, [m, A, _]),
         Z = a.useCallback(() => {
-            A('open'), I('open'), (0, u.emitCaptchaDistributionMetric)(_), null == C || C();
+            (A('open'), I('open'), (0, u.emitCaptchaDistributionMetric)(_), null == C || C());
         }, [I, C, A, _]),
         M = a.useCallback(() => {
-            A('close'), null == E || E(), D();
+            (A('close'), null == E || E(), D());
         }, [E, A, D]),
         q = a.useCallback(() => {
-            A('chal-expire'), null == j || j();
+            (A('chal-expire'), null == j || j());
         }, [j, A]);
     return ((null == r || '' === r) && (r = f.OL7), t === l.hP.RECAPTCHA)
         ? (0, n.jsx)(

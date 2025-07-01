@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var i,
     l = n(255367),
     r = n(73800),
@@ -29,7 +29,7 @@ let u = {
         DEFAULT: 'default',
         STATIC: 'static'
     };
-class g extends (i = r.PureComponent) {
+class m extends (i = r.PureComponent) {
     render() {
         let e = this.props,
             { size: t, src: n, srcHover: i, className: r } = e,
@@ -43,12 +43,12 @@ class g extends (i = r.PureComponent) {
                             i,
                             l = {},
                             r = Object.keys(e);
-                        for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        for (i = 0; i < r.length; i++) ((n = r[i]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                         return l;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var r = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < r.length; i++) (n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                    for (i = 0; i < r.length; i++) ((n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
                 }
                 return l;
             })(e, ['size', 'src', 'srcHover', 'className']),
@@ -60,7 +60,7 @@ class g extends (i = r.PureComponent) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -68,7 +68,7 @@ class g extends (i = r.PureComponent) {
                         )),
                         i.forEach(function (t) {
                             d(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
             })(
@@ -85,22 +85,22 @@ class g extends (i = r.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'state', { hovered: !1 }),
             d(this, 'getMode', () => (null != this.props.srcHover ? h.STATIC : h.DEFAULT)),
             d(this, 'handleHover', (e) => {
                 let { onMouseEnter: t } = this.props;
-                null == t || t(e), this.state.hovered || this.setState({ hovered: !0 });
+                (null == t || t(e), this.state.hovered || this.setState({ hovered: !0 }));
             }),
             d(this, 'handleBlur', (e) => {
                 let { onMouseLeave: t } = this.props;
-                null == t || t(e), this.state.hovered && this.setState({ hovered: !1 });
-            });
+                (null == t || t(e), this.state.hovered && this.setState({ hovered: !1 }));
+            }));
     }
 }
-d(g, 'Sizes', u),
-    d(g, 'defaultProps', {
+(d(m, 'Sizes', u),
+    d(m, 'defaultProps', {
         size: u.MEDIUM,
         disabled: !1
-    });
-let m = g;
+    }));
+let g = m;

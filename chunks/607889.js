@@ -23,21 +23,21 @@ class s {
         return e > t ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? r.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : r.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
     }
     animateTo(e) {
-        (this.isReset = !1),
+        ((this.isReset = !1),
             this.value !== e &&
                 ((this.animationDetails = {
                     lastValue: this.value,
                     animationStart: performance.now()
                 }),
-                (this.value = e));
+                (this.value = e)));
     }
     isAnimating() {
         return null != this.animationDetails;
     }
     reset() {
-        this.animateTo(0), (this.isReset = !0);
+        (this.animateTo(0), (this.isReset = !0));
     }
     constructor(e) {
-        i(this, 'value', void 0), i(this, 'animationDetails', void 0), i(this, 'isReset', void 0), (this.value = e), (this.animationDetails = null), (this.isReset = !1);
+        (i(this, 'value', void 0), i(this, 'animationDetails', void 0), i(this, 'isReset', void 0), (this.value = e), (this.animationDetails = null), (this.isReset = !1));
     }
 }

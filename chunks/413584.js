@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(388685), n(953529), n(781311), n(539854);
+(n.d(t, { Z: () => U }), n(388685), n(953529), n(781311), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -36,7 +36,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -52,8 +52,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -111,7 +111,7 @@ let M = 'WELCOME_CHANNEL',
                 () => (
                     B(F(y)),
                     () => {
-                        B(null), F(null);
+                        (B(null), F(null));
                     }
                 ),
                 [B, F]
@@ -231,20 +231,20 @@ let M = 'WELCOME_CHANNEL',
             F = (e) => {
                 if (null == e) return;
                 let t = [...(null != I ? I : []), e];
-                (0, C.VP)({ channels: t }), U(t);
+                ((0, C.VP)({ channels: t }), U(t));
             },
             z = (e) => (t) => {
                 let n = [...(null != I ? I : [])];
-                null == t ? n.splice(e, 1) : (n[e] = t), (0, C.VP)({ channels: n }), U(n), 0 === n.length && T && ((0, C.VP)({ enabled: !1 }), B(!1));
+                (null == t ? n.splice(e, 1) : (n[e] = t), (0, C.VP)({ channels: n }), U(n), 0 === n.length && T && ((0, C.VP)({ enabled: !1 }), B(!1)));
             },
             H = (e, t, n) => {
                 if (null == I) return;
                 let r = I.indexOf(e),
                     i = [...I];
-                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, C.VP)({ channels: i })), n ? (U(i), g(null)) : g(t);
+                (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, C.VP)({ channels: i })), n ? (U(i), g(null)) : g(t));
             },
             V = i.useRef(!1);
-        (0, f.ZP)(
+        ((0, f.ZP)(
             () => (
                 null != t &&
                     l &&
@@ -273,9 +273,9 @@ let M = 'WELCOME_CHANNEL',
                         let e = [],
                             n = [],
                             r = !1;
-                        null == I ||
+                        (null == I ||
                             I.forEach((t) => {
-                                e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (r = !0);
+                                (e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (r = !0));
                             }),
                             S.default.track(R.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
                                 guild_id: null == t ? void 0 : t.id,
@@ -284,12 +284,12 @@ let M = 'WELCOME_CHANNEL',
                                 guild_description: N,
                                 has_custom_emojis: r,
                                 is_enabled: T
-                            });
+                            }));
                     }
                 },
                 [p, I, N, T, t, V]
             ),
-            i.useEffect(() => () => (0, C.sm)(), []);
+            i.useEffect(() => () => (0, C.sm)(), []));
         let W = i.useCallback(() => {
             null != t && P.Z.open(t.id, R.pNK.ONBOARDING);
         }, [t]);

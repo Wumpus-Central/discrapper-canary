@@ -1,12 +1,12 @@
 let r, i, a;
-n.d(t, {
+(n.d(t, {
     X: () => W,
     l: () => X
 }),
     n(358797),
     n(290780),
     n(388685),
-    n(539854);
+    n(539854));
 var o,
     s = n(772848);
 n(17089);
@@ -32,7 +32,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,11 +48,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -93,7 +93,7 @@ let g = 'x-science-test',
     B = null,
     V = null;
 function F() {
-    (R = 0), (P = 0), (w = 0), (x = 0), (k = Number.MAX_SAFE_INTEGER), (M = 0), (j = 0), (L = Date.now()), (D = N);
+    ((R = 0), (P = 0), (w = 0), (x = 0), (k = Number.MAX_SAFE_INTEGER), (M = 0), (j = 0), (L = Date.now()), (D = N));
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -129,21 +129,21 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
         function et() {
             if (((z = null), !$())) return Promise.resolve();
             let e = K.slice();
-            (K = []), (x = Z(x));
+            ((K = []), (x = Z(x)));
             let t = e.length;
-            (k = Math.min(k, t)), (M = Math.max(M, t)), (j = Z(j, t));
+            ((k = Math.min(k, t)), (M = Math.max(M, t)), (j = Z(j, t)));
             let n = en(e);
             return (
                 n.then(
                     () => {
-                        e.forEach((e) => {
+                        (e.forEach((e) => {
                             var t;
                             null == (t = e.resolve) || t.call(e);
                         }),
-                            (P = Z(P));
+                            (P = Z(P)));
                     },
                     (t) => {
-                        K.unshift(...e), (w = Z(w));
+                        (K.unshift(...e), (w = Z(w)));
                         let { message: n } = t.body || t;
                         console.warn('[AnalyticsTrackingStore] Track:', n);
                     }
@@ -200,7 +200,7 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                     launch_signature: Q()
                 }
             };
-            return F(), en([e], f.tx.CLIENT_TELEMETRY);
+            return (F(), en([e], f.tx.CLIENT_TELEMETRY));
         }
         function ei() {
             if (null == U) return !1;
@@ -214,7 +214,7 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                 default:
                     U.type;
             }
-            return (U = null), !0;
+            return ((U = null), !0);
         }
         function ea() {
             if (null != U) return;
@@ -224,7 +224,7 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                     type: 'timeout',
                     id: setTimeout(
                         () => {
-                            er(), e();
+                            (er(), e());
                         },
                         Math.max(I + (Math.floor(Math.random() * t * 2) - t), T)
                     )
@@ -234,7 +234,7 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                 type: 'timeout',
                 id: setTimeout(
                     () => {
-                        er(), e();
+                        (er(), e());
                     },
                     Math.floor(Math.random() * (S - T) + T)
                 )
@@ -243,16 +243,16 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
         function eo() {
             if (!ei()) return;
         }
-        (A = null != O ? O : E),
+        ((A = null != O ? O : E),
             (W.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
-                return null != t && (i = t), null != n.id && (a = n.id), ea(), ee({ shouldFlushOnNextTick: !1 }), !1;
+                return (null != t && (i = t), null != n.id && (a = n.id), ea(), ee({ shouldFlushOnNextTick: !1 }), !1);
             }),
             (W.handleConnectionClosed = function () {
-                return et(), eo(), (i = null), (a = null), !1;
+                return (et(), eo(), (i = null), (a = null), !1);
             }),
             (W.handleFingerprint = function () {
-                return et(), !1;
+                return (et(), !1);
             }),
             (W.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: a, resolve: o } = e;
@@ -276,20 +276,20 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                             c = J(l);
                         if ((null != c && (l.properties.client_uuid = Y.generate(c)), K.push(l), K.length > b)) {
                             let e = K.length - b;
-                            (R = Z(R, e)), (K = K.slice(-b));
+                            ((R = Z(R, e)), (K = K.slice(-b)));
                         }
                         i ? ee({ shouldFlushOnNextTick: !0 }) : ee({ shouldFlushOnNextTick: !1 });
                     }),
                     !1
                 );
-            });
+            }));
         class es extends (t = c.ZP.Store) {
             initialize() {
                 null != v && this.waitFor(...v);
             }
             constructor(...e) {
-                super(...e), _(this, 'submitEventsImmediately', en);
+                (super(...e), _(this, 'submitEventsImmediately', en));
             }
         }
-        return _(es, 'displayName', 'AnalyticsTrackingStore'), new es(n, o);
+        return (_(es, 'displayName', 'AnalyticsTrackingStore'), new es(n, o));
     };

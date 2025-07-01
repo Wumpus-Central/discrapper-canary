@@ -26,7 +26,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -42,8 +42,8 @@ function w(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -75,12 +75,12 @@ function S(e, t) {
                 r,
                 l = {},
                 o = Object.keys(e);
-            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+            for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
             return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
     }
     return l;
 }
@@ -347,13 +347,13 @@ function Z(e) {
                                     'aria-label': y.intl.string(y.t['2cRO3d']),
                                     onFilter: (n) => {
                                         var r, l;
-                                        null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e);
+                                        (null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e));
                                     },
                                     isFiltered: T,
                                     className: H.smallCol,
                                     onMouseEnter: () => {
                                         var n, r;
-                                        null == (n = e.onMouseEnter) || n.call(e), null == (r = t.onMouseEnter) || r.call(t);
+                                        (null == (n = e.onMouseEnter) || n.call(e), null == (r = t.onMouseEnter) || r.call(t));
                                     },
                                     onMouseDown: t.onMouseDown,
                                     onMouseLeave: e.onMouseLeave,

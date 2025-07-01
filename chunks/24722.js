@@ -1,4 +1,4 @@
-r.d(t, { default: () => w }), r(388685), r(781311);
+(r.d(t, { default: () => w }), r(388685), r(781311));
 var o = r(255367),
     n = r(73800),
     a = r(866442),
@@ -52,7 +52,7 @@ function C(e) {
             let e = Object.values(P).map((e) => e.row.id);
             I(!0);
             try {
-                await f.Z.bulkAddMemberRoles(C, j, e), (0, _.H)(C, j, !1), r();
+                (await f.Z.bulkAddMemberRoles(C, j, e), (0, _.H)(C, j, !1), r());
             } catch (e) {
                 I(!1);
             }
@@ -63,7 +63,7 @@ function C(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
                                 o = Object.keys(r);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (o = o.concat(
                                     Object.getOwnPropertySymbols(r).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -71,7 +71,7 @@ function C(e) {
                                 )),
                                 o.forEach(function (t) {
                                     var o;
-                                    (o = r[t]),
+                                    ((o = r[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: o,
@@ -79,8 +79,8 @@ function C(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = o);
-                                });
+                                            : (e[t] = o));
+                                }));
                         }
                         return e;
                     })({}, t),
@@ -113,12 +113,12 @@ function C(e) {
                                 o,
                                 n = {},
                                 a = Object.keys(e);
-                            for (o = 0; o < a.length; o++) (r = a[o]), t.indexOf(r) >= 0 || (n[r] = e[r]);
+                            for (o = 0; o < a.length; o++) ((r = a[o]), t.indexOf(r) >= 0 || (n[r] = e[r]));
                             return n;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var a = Object.getOwnPropertySymbols(e);
-                        for (o = 0; o < a.length; o++) (r = a[o]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (n[r] = e[r]);
+                        for (o = 0; o < a.length; o++) ((r = a[o]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (n[r] = e[r]));
                     }
                     return n;
                 })(t, [e].map(R));

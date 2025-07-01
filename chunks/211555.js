@@ -40,7 +40,7 @@ var c = r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
 function u(e, t) {
     return 'font' === e ? '' : 'string' == typeof t ? ('use-credentials' === t ? t : '') : void 0;
 }
-(t.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = o),
+((t.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = o),
     (t.createPortal = function (e, t) {
         var n = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : null;
         if (!t || (1 !== t.nodeType && 9 !== t.nodeType && 11 !== t.nodeType)) throw Error(i(299));
@@ -52,7 +52,7 @@ function u(e, t) {
         try {
             if (((c.T = null), (o.p = 2), e)) return e();
         } finally {
-            (c.T = t), (o.p = n), o.d.f();
+            ((c.T = t), (o.p = n), o.d.f());
         }
     }),
     (t.preconnect = function (e, t) {
@@ -135,4 +135,4 @@ function u(e, t) {
     (t.useFormStatus = function () {
         return c.H.useHostTransitionStatus();
     }),
-    (t.version = '19.0.0');
+    (t.version = '19.0.0'));

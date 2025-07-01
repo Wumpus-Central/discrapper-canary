@@ -112,7 +112,7 @@ function f(e, t) {
     var n = 0,
         r = 0;
     function i(e, t, r) {
-        for (var i = r, a = t.length; i < a; i++) if (t[i] === e) return (n += 1), i + 1;
+        for (var i = r, a = t.length; i < a; i++) if (t[i] === e) return ((n += 1), i + 1);
         return -1;
     }
     function a(e) {
@@ -136,7 +136,7 @@ function _(e, t, n) {
     return a !== s ? (a > s ? r : i) : o === l ? n(e, t) : o < l ? r : i;
 }
 function p(e, t) {
-    return (e = '' + e), t.keepDiacritics || (e = a()(e)), e;
+    return ((e = '' + e), t.keepDiacritics || (e = a()(e)), e);
 }
 function h(e, t) {
     var n;

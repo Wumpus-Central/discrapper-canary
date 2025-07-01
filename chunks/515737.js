@@ -16,7 +16,7 @@ let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 
         return {
             name: 'BrowserApiErrors',
             setupOnce() {
-                e.setTimeout && (0, _.hl)(o.m9, 'setTimeout', s), e.setInterval && (0, _.hl)(o.m9, 'setInterval', s), e.requestAnimationFrame && (0, _.hl)(o.m9, 'requestAnimationFrame', E), e.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, _.hl)(XMLHttpRequest.prototype, 'send', l);
+                (e.setTimeout && (0, _.hl)(o.m9, 'setTimeout', s), e.setInterval && (0, _.hl)(o.m9, 'setInterval', s), e.requestAnimationFrame && (0, _.hl)(o.m9, 'requestAnimationFrame', E), e.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, _.hl)(XMLHttpRequest.prototype, 'send', l));
                 let t = e.eventTarget;
                 t && (Array.isArray(t) ? t : i).forEach(u);
             }
@@ -72,7 +72,7 @@ function l(t) {
                                 }
                             },
                             r = (0, _.HK)(e);
-                        return r && (a.mechanism.data.handler = (0, n.$P)(r)), (0, o.re)(e, a);
+                        return (r && (a.mechanism.data.handler = (0, n.$P)(r)), (0, o.re)(e, a));
                     });
             }),
             t.apply(this, e)

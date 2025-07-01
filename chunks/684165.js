@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => a });
+(n.r(t), n.d(t, { default: () => a }));
 var r = n(951516);
 function i(e) {
     return (i =
@@ -11,5 +11,5 @@ function i(e) {
               })(e);
 }
 function a(e) {
-    return (0, r.Z)(1, arguments), e instanceof Date || ('object' === i(e) && '[object Date]' === Object.prototype.toString.call(e));
+    return ((0, r.Z)(1, arguments), e instanceof Date || ('object' === i(e) && '[object Date]' === Object.prototype.toString.call(e)));
 }

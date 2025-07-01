@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(539854);
+(n.d(t, { Z: () => f }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -52,7 +52,7 @@ function f(e) {
               type: d.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: h,
               onClick: () => {
-                  g(), s.Z.open(n.id, d.pNK.INTEGRATIONS);
+                  (g(), s.Z.open(n.id, d.pNK.INTEGRATIONS));
               },
               imageMarginTop: 6,
               imageMarginX: 46,

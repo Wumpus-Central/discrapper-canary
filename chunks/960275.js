@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(570140),
     i = n(317770),
     l = n(314897),
@@ -23,16 +23,16 @@ function d(e, t, n) {
 let p = new Set();
 class h extends i.Z {
     _initialize() {
-        r.Z.subscribe('MESSAGE_CREATE', this.handleMessageCreate), r.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
+        (r.Z.subscribe('MESSAGE_CREATE', this.handleMessageCreate), r.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate));
     }
     _terminate() {
-        r.Z.unsubscribe('MESSAGE_CREATE', this.handleMessageCreate), r.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
+        (r.Z.unsubscribe('MESSAGE_CREATE', this.handleMessageCreate), r.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'handleSettingsUpdate', (e) => {
                 let { settings: t } = e;
-                t.enabled ? (0, a.T)(s.hn.ENABLE_POGGERMODE) : !1 === t.enabled && (0, a.T)(s.hn.DISABLE_POGGERMODE), Object.keys(t).some((e) => e.startsWith('confetti')) && (0, a.T)(s.hn.CUSTOMIZE_CONFETTI);
+                (t.enabled ? (0, a.T)(s.hn.ENABLE_POGGERMODE) : !1 === t.enabled && (0, a.T)(s.hn.DISABLE_POGGERMODE), Object.keys(t).some((e) => e.startsWith('confetti')) && (0, a.T)(s.hn.CUSTOMIZE_CONFETTI));
             }),
             d(this, 'handleMessageCreate', (e) => {
                 var t;
@@ -52,7 +52,7 @@ class h extends i.Z {
                         n = null == t ? void 0 : t.checkUnlock;
                     null != n && !1 !== n(g) && (0, a.T)(e);
                 });
-            });
+            }));
     }
 }
 let f = new h();

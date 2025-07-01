@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(539854);
+(n.d(t, { Z: () => D }), n(388685), n(539854));
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -33,7 +33,7 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function R(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -49,8 +49,8 @@ function R(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -95,7 +95,7 @@ function D(e) {
                                       innerRef: E,
                                       onClick: t,
                                       onMouseEnter: () => {
-                                          g(!0), f.onMouseEnter();
+                                          (g(!0), f.onMouseEnter());
                                       },
                                       onMouseLeave: f.onMouseLeave,
                                       'aria-label': A.intl.string(A.t.emnnEB),
@@ -133,23 +133,23 @@ function x(e) {
         F = (0, E.g)(o),
         G = (0, p.PL)(!0, !0),
         L = (0, p.LD)(o.guild_id, !0);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         (U === N.M.ERROR || (U === N.M.FETCHED && 0 === k.length)) && n();
     }, [U, k.length, n]),
         l.useEffect(() => {
             var e, t;
             if (Z || 0 === k.length) return;
             let n = [];
-            k.forEach((e) => {
-                n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id));
+            (k.forEach((e) => {
+                (n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id)));
             }),
                 M.default.track(I.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
                     guild_id: null != (e = null == o ? void 0 : o.guild_id) ? e : '',
                     channel_id: null != (t = null == o ? void 0 : o.id) ? t : '',
                     application_ids: [...k.map((e) => Number(e.command.applicationId))],
                     command_ids: n
-                });
-        }, [k, o, Z]);
+                }));
+        }, [k, o, Z]));
     let B = l.useCallback(
             async (e) => {
                 let t = await fetch(j),
@@ -176,7 +176,7 @@ function x(e) {
                 let a = e.applicationId,
                     c = (null == (l = G.result) ? void 0 : l.sections[a]) != null,
                     s = (null == (i = L.result) ? void 0 : i.sections[a]) != null;
-                await B(r),
+                (await B(r),
                     null != f.Z.getActiveCommand(o.id) &&
                         m.Po({
                             channelId: o.id,
@@ -204,7 +204,7 @@ function x(e) {
                         location: n,
                         sectionName: t.name
                     }),
-                    _.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: o.id });
+                    _.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: o.id }));
             },
             [o.id, B, F, G, L]
         ),
@@ -225,7 +225,7 @@ function x(e) {
                         sectionName: void 0
                     }
                 });
-                (0, O.qJ)({
+                ((0, O.qJ)({
                     command: e,
                     location: t,
                     source: d._b.TEXT
@@ -247,7 +247,7 @@ function x(e) {
                                 guild: x
                             },
                             commandOrigin: t === b.Vh.IMAGE_RECS_SUBMENU ? b.bB.IMAGE_RECS_SUBMENU : b.bB.IMAGE_RECS_MENU
-                        }));
+                        })));
             },
             [o, x, G, L, B]
         );

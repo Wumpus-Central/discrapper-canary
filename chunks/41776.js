@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+(n.d(t, { Z: () => A }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -30,7 +30,7 @@ function h(e) {
     let t = d.indexOf(e);
     if (t > -1) {
         let n = [...d];
-        return n.splice(t, 1), (d = n), delete f[e], !0;
+        return (n.splice(t, 1), (d = n), delete f[e], !0);
     }
     return !1;
 }
@@ -78,14 +78,16 @@ function O(e) {
 function v(e) {
     let { ignoredGuildIds: t } = e,
         n = p(t);
-    return n && (_ = null), n;
+    return (n && (_ = null), n);
 }
 function I(e) {
     let { lurkingGuildId: t, lurkingSource: n } = e;
-    return m(t), (_ = n), !0;
+    return (m(t), (_ = n), !0);
 }
 function T() {
-    d = Object.values(s.Z.getGuilds()).reduce((e, t) => (t.isLurker() ? [...e, t.id] : e), []);
+    d = s.Z.getGuildsArray()
+        .filter((e) => e.isLurker())
+        .map((e) => e.id);
 }
 class S extends (r = i.ZP.Store) {
     initialize() {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(73800),
     i = n(981631);
 function a(e, t, n) {
@@ -56,12 +56,12 @@ class s extends r.Component {
     getNext(e, t, n, r) {
         let i, a, o, s;
         if (null == t || null == n)
-            (a = 0),
+            ((a = 0),
                 (o = 0),
                 (i = {
                     column: 0,
                     row: 0
-                });
+                }));
         else
             switch (((a = t), (o = n), r)) {
                 case 'ARROW_UP':
@@ -108,7 +108,7 @@ class s extends r.Component {
             let a = this.props.getCoordsMap()[t[e]];
             if (null == a) continue;
             let o = Math.abs(a.top - r.top);
-            if (o < i) (i = o), (n = e);
+            if (o < i) ((i = o), (n = e));
             else break;
         }
         return n;
@@ -123,7 +123,7 @@ class s extends r.Component {
         return this.props.children;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             a(this, 'state', {
                 focusedColumn: null,
                 focusedRow: null
@@ -156,6 +156,6 @@ class s extends r.Component {
                         row: s + l
                     }
                 );
-            });
+            }));
     }
 }

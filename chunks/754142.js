@@ -1,4 +1,4 @@
-n.d(t, { b: () => D }), n(388685);
+(n.d(t, { b: () => D }), n(388685));
 var r = n(392711),
     i = n.n(r),
     a = n(674466),
@@ -100,7 +100,7 @@ function D(e, t) {
         ec = null != Q ? Q.ownerId : X,
         eu = null != J ? (null == J ? void 0 : J.getVoiceParticipantType()) : es ? 'sender' : 'receiver',
         ed = null != (r = null == $ ? void 0 : $.getMediaEngineConnectionId()) ? r : null;
-    (L = null != j && null != Q ? (es ? (null == $ || null == (c = $.getOutboundStats()) ? void 0 : c.find((e) => e.quality === I.y7)) : null == $ ? void 0 : $.getInboundStats(Q.ownerId)) : es ? (null != (D = i().maxBy(null != (h = null == $ ? void 0 : $.getOutboundStats()) ? h : [], (e) => e.num_frames)) ? D : null) : null != ec ? (null == $ ? void 0 : $.getInboundStats(ec)) : null),
+    ((L = null != j && null != Q ? (es ? (null == $ || null == (c = $.getOutboundStats()) ? void 0 : c.find((e) => e.quality === I.y7)) : null == $ ? void 0 : $.getInboundStats(Q.ownerId)) : es ? (null != (D = i().maxBy(null != (h = null == $ ? void 0 : $.getOutboundStats()) ? h : [], (e) => e.num_frames)) ? D : null) : null != ec ? (null == $ ? void 0 : $.getInboundStats(ec)) : null),
         (0, g.q)().then((t) => {
             var n, r, i, s, l, c, u, d, h, m, g, O, P, D, j, X, ee, ef, e_, ep, eh, em, eg, eE, eb, ey, eO, ev, eI, eT, eS, eA, eN, eC, eR, eP, ew, eD, eL, ex, ek, eM, ej, eU, eG, eB, eV, eF, eZ;
             let eH = {
@@ -184,5 +184,5 @@ function D(e, t) {
                 app_hardware_acceleration_enabled: b.Z.getAppHardwareAccelerationEnabled()
             };
             E.default.track(v.rMx.AV_ERROR_REPORTED, eH);
-        });
+        }));
 }

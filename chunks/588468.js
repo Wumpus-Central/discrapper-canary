@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     DJ: () => B,
     ZP: () => ea,
     rp: () => V
 }),
     n(415506),
     n(953529),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -54,7 +54,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -62,7 +62,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 x(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -70,11 +70,11 @@ function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -96,7 +96,7 @@ function U(e, t) {
         i = G(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -106,7 +106,7 @@ function G(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function B(e) {
@@ -138,7 +138,7 @@ class Z extends a.PureComponent {
                 onClick: l ? this.handleClick : void 0,
                 onMouseMove: l
                     ? () => {
-                          this.setState({ hovered: !0 }), this.handleMouseEnter();
+                          (this.setState({ hovered: !0 }), this.handleMouseEnter());
                       }
                     : void 0,
                 onMouseLeave: l ? () => this.setState({ hovered: !1 }) : void 0,
@@ -162,7 +162,7 @@ class Z extends a.PureComponent {
             : this.renderClickable();
     }
     constructor(e) {
-        super(e),
+        (super(e),
             x(this, 'selectable', !0),
             x(this, 'layoutClass', L.autocompleteRowVertical),
             x(this, 'handleMouseEnter', () => {
@@ -173,7 +173,7 @@ class Z extends a.PureComponent {
                 let { onClick: t, index: n } = this.props;
                 null != t && 'number' == typeof n && t(n, e);
             }),
-            (this.state = { hovered: !1 });
+            (this.state = { hovered: !1 }));
     }
 }
 class H extends Z {
@@ -220,7 +220,7 @@ class K extends Z {
         return (0, i.jsx)('div', { className: s()(e, L.divider) });
     }
     constructor(...e) {
-        super(...e), x(this, 'layoutClass', L.dividerContainer), x(this, 'selectable', !1);
+        (super(...e), x(this, 'layoutClass', L.dividerContainer), x(this, 'selectable', !1));
     }
 }
 class z extends Z {
@@ -384,7 +384,7 @@ class $ extends Z {
         });
     }
     constructor(...e) {
-        super(...e), x(this, 'layoutClass', s()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
+        (super(...e), x(this, 'layoutClass', s()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall)));
     }
 }
 class ee extends Z {
@@ -407,7 +407,7 @@ class ee extends Z {
         );
     }
     constructor(...e) {
-        super(...e), x(this, 'layoutClass', s()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
+        (super(...e), x(this, 'layoutClass', s()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall)));
     }
 }
 class et extends Z {
@@ -421,7 +421,7 @@ class et extends Z {
         });
     }
     constructor(...e) {
-        super(...e), x(this, 'layoutClass', L.autocompleteRowHorizontal);
+        (super(...e), x(this, 'layoutClass', L.autocompleteRowHorizontal));
     }
 }
 class en extends Z {
@@ -450,5 +450,5 @@ class ei extends (r = a.PureComponent) {
             : null;
     }
 }
-x(ei, 'Generic', H), x(ei, 'Loading', Y), x(ei, 'Title', W), x(ei, 'Divider', K), x(ei, 'User', z), x(ei, 'Role', q), x(ei, 'Channel', X), x(ei, 'Command', Q), x(ei, 'NewCommand', J), x(ei, 'Emoji', $), x(ei, 'GIFIntegration', et), x(ei, 'Sticker', ee), x(ei, 'EmojiUpsell', en), x(ei, 'Soundmoji', er);
+(x(ei, 'Generic', H), x(ei, 'Loading', Y), x(ei, 'Title', W), x(ei, 'Divider', K), x(ei, 'User', z), x(ei, 'Role', q), x(ei, 'Channel', X), x(ei, 'Command', Q), x(ei, 'NewCommand', J), x(ei, 'Emoji', $), x(ei, 'GIFIntegration', et), x(ei, 'Sticker', ee), x(ei, 'EmojiUpsell', en), x(ei, 'Soundmoji', er));
 let ea = ei;

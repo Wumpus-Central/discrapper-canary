@@ -4,7 +4,7 @@ function e(t) {
     };
 }
 var r = function () {};
-(r.thatReturns = e),
+((r.thatReturns = e),
     (r.thatReturnsFalse = e(!1)),
     (r.thatReturnsTrue = e(!0)),
     (r.thatReturnsNull = e(null)),
@@ -14,4 +14,4 @@ var r = function () {};
     (r.thatReturnsArgument = function (t) {
         return t;
     }),
-    (t.exports = r);
+    (t.exports = r));

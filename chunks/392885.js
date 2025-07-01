@@ -34,7 +34,7 @@ class p extends (l = s.ZP.Store) {
         return u;
     }
 }
-(i = 'GuildSettingsSafetyStore'),
+((i = 'GuildSettingsSafetyStore'),
     (r = 'displayName') in p
         ? Object.defineProperty(p, r, {
               value: i,
@@ -42,7 +42,7 @@ class p extends (l = s.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (p[r] = i);
+        : (p[r] = i));
 let f = new p(a.Z, {
     GUILD_SETTINGS_INIT: function () {
         if (o.Z.getGuildId() === m) return !1;

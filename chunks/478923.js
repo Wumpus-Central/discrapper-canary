@@ -21,7 +21,7 @@ function h(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -29,7 +29,7 @@ function h(t) {
             )),
             r.forEach(function (e) {
                 var r;
-                (r = n[e]),
+                ((r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
@@ -37,8 +37,8 @@ function h(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
-            });
+                        : (t[e] = r));
+            }));
     }
     return t;
 }
@@ -115,7 +115,7 @@ function y(t) {
                                   buttonText: b.intl.string(b.t.mxJOd3),
                                   buttonColor: c.Ttl.PRIMARY,
                                   onButtonPress: () => {
-                                      O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                                      (O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
                                           action: x.l.GOTO_IGNORE,
                                           location: o
                                       }),
@@ -132,7 +132,7 @@ function y(t) {
                                                       location: o
                                                   })
                                               )
-                                          );
+                                          ));
                                   }
                               })
                           }),
@@ -158,12 +158,12 @@ function N(t) {
                         r,
                         i = {},
                         o = Object.keys(t);
-                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]));
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]));
             }
             return i;
         })(t, ['user', 'onBlock', 'onCancel', 'onIgnore', 'location', 'disallowIgnore', 'guildId', 'channelId']);
@@ -185,17 +185,17 @@ function N(t) {
                         confirmText: b.intl.string(b.t.l4EmaW),
                         cancelText: b.intl.string(b.t['ETE/oK']),
                         onCancel: () => {
-                            O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                            (O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
                                 action: x.l.CANCEL_BLOCK,
                                 location: u
                             }),
-                                null == l || l();
+                                null == l || l());
                         },
                         onConfirm: () => {
-                            null == n || n(),
+                            (null == n || n(),
                                 s.Z.blockUser(e.id, { location: u }).then(() => {
-                                    O.default.track(g.rMx.BLOCK_USER_CONFIRMED), d.Z.showBlockSuccessToast(e.id, null != j ? j : void 0);
-                                });
+                                    (O.default.track(g.rMx.BLOCK_USER_CONFIRMED), d.Z.showBlockSuccessToast(e.id, null != j ? j : void 0));
+                                }));
                         },
                         impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION }
                     },

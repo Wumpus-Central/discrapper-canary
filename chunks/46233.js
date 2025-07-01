@@ -1,4 +1,4 @@
-i.r(n), i.d(n, { default: () => g });
+(i.r(n), i.d(n, { default: () => g }));
 var e = i(468292),
     a = i(520356),
     h = i(455160),

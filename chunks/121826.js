@@ -10,7 +10,7 @@ let o = {
             let { socket: t } = e;
             (0, l.bu)(t.transport);
             let n = t.application.id;
-            if (null != n) return (0, r.Z)(n), { enabled: i.ZP.getEnableHardwareAcceleration() };
+            if (null != n) return ((0, r.Z)(n), { enabled: i.ZP.getEnableHardwareAcceleration() });
         }
     }
 };

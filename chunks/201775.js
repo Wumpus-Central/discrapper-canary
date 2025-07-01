@@ -1,4 +1,4 @@
-i.r(a), i.d(a, { default: () => r });
+(i.r(a), i.d(a, { default: () => r }));
 var r = {
     payButton: 'Platiti',
     'payButton.redirecting': 'Preusmjeravanje...',

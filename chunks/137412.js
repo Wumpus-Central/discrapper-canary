@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(213919),
     i = n(570140),
     a = n(317770),
@@ -24,10 +24,10 @@ class l extends a.Z {
         i.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             s(this, 'handleConnectionOpen', (e) => {
                 ((0, o.isWindows)() || (0, o.isMac)()) && r.encryptAndStoreTokens();
-            });
+            }));
     }
 }
 let c = new l();

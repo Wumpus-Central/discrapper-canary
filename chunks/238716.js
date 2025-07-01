@@ -1,4 +1,4 @@
-t.d(n, { default: () => m }), t(388685), t(953529);
+(t.d(n, { default: () => m }), t(388685), t(953529));
 var s = t(255367),
     i = t(73800),
     l = t(442837),
@@ -20,7 +20,7 @@ function m(e) {
         [v, b] = i.useState(null != g ? g : '');
     return (0, s.jsx)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), (0, u.UT)(n, v), t();
+            (e.preventDefault(), (0, u.UT)(n, v), t());
         },
         children: (0, s.jsxs)(o.Y0X, {
             transitionState: m,
@@ -58,7 +58,7 @@ function m(e) {
                                   color: o.zxk.Colors.LINK,
                                   size: o.zxk.Sizes.NONE,
                                   onClick: function () {
-                                      (0, u.UT)(n, null), t();
+                                      ((0, u.UT)(n, null), t());
                                   },
                                   className: k.reset,
                                   children: h.intl.string(h.t.aE02R0)

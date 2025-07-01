@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => ts }), n(35282), n(388685);
+(n.r(t), n.d(t, { default: () => ts }), n(35282), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(593473),
@@ -126,7 +126,7 @@ function e7(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -134,13 +134,13 @@ function e7(e) {
             )),
             r.forEach(function (t) {
                 e4(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
-n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(606206);
+(n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(606206));
 let e2 = !1;
-(0, S.DL)(),
+((0, S.DL)(),
     o.ZP.initialize(),
     eI.Z.loadServer(),
     eJ.isPlatformEmbedded &&
@@ -157,7 +157,7 @@ let e2 = !1;
                     }
                 }
             });
-        }));
+        })));
 let e6 = (0, m.l)((e) => {
         let { location: t } = e,
             n = (0, eD.default)(t.pathname);
@@ -289,7 +289,7 @@ let ti = [
     {
         path: [e1.Z5c.GUILD_CREATE],
         render: function () {
-            return (0, q.h)(() => D.Z.openCreateGuildModal({ location: 'External link' })), (0, r.jsx)(a.l_, { to: eV.Z.defaultRoute });
+            return ((0, q.h)(() => D.Z.openCreateGuildModal({ location: 'External link' })), (0, r.jsx)(a.l_, { to: eV.Z.defaultRoute }));
         }
     },
     {
@@ -356,7 +356,7 @@ let ti = [
     {
         path: [e1.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
-            return (0, q.h)(() => f.Z.open(e1.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eV.Z.defaultRoute });
+            return ((0, q.h)(() => f.Z.open(e1.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eV.Z.defaultRoute }));
         },
         isSessionRequired: !0
     },
@@ -428,7 +428,7 @@ function ta(e) {
 }
 class to extends i.PureComponent {
     componentDidMount() {
-        e$.ZP.setZoomFactor(b.Z.zoom),
+        (e$.ZP.setZoomFactor(b.Z.zoom),
             eI.Z.init(),
             P.Z.initialize(),
             ef.Z.initialize(),
@@ -487,14 +487,14 @@ class to extends i.PureComponent {
             Z.Z.initialize(),
             C.Z.initialize(),
             (this.rewriterUnlisten = eE.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
-            (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
+            (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange)));
     }
     componentWillUnmount() {
-        eI.Z.terminate(), eM.Z.terminate(), em.Z.terminate(), ef.Z.terminate(), P.Z.terminate(), I.ZP.terminate(), ek.Z.terminate(), y.Z.terminate(), eb.Z.terminate(), eh.Z.terminate(), eL.Z.terminate(), O.Z.terminate(), G.Z.terminate(), el.Z.terminate(), E.Z.terminate(), e_.Z.terminate(), ev.Z.terminate(), eN.Z.terminate(), ed.Z.terminate(), eu.Z.terminate(), ep.Z.terminate(), L.Z.terminate(), w.Z.terminate(), eg.Z.terminate(), k.Z.terminate(), V.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), C.Z.terminate(), H.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        (eI.Z.terminate(), eM.Z.terminate(), em.Z.terminate(), ef.Z.terminate(), P.Z.terminate(), I.ZP.terminate(), ek.Z.terminate(), y.Z.terminate(), eb.Z.terminate(), eh.Z.terminate(), eL.Z.terminate(), O.Z.terminate(), G.Z.terminate(), el.Z.terminate(), E.Z.terminate(), e_.Z.terminate(), ev.Z.terminate(), eN.Z.terminate(), ed.Z.terminate(), eu.Z.terminate(), ep.Z.terminate(), L.Z.terminate(), w.Z.terminate(), eg.Z.terminate(), k.Z.terminate(), V.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), C.Z.terminate(), H.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten());
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
-        !(function (e) {
+        (!(function (e) {
             if (K.Z.isConnected() || K.Z.isTryingToConnect()) return;
             let t = eU.default.getToken();
             null != t &&
@@ -522,12 +522,12 @@ class to extends i.PureComponent {
                     let n = eW.Z.getChannelId(f),
                         a = n !== i;
                     if (!e2 || g || a || null != o) {
-                        (e2 = !0),
+                        ((e2 = !0),
                             p.default.selectChannel({
                                 guildId: r,
                                 channelId: i,
                                 messageId: o
-                            });
+                            }));
                         let { summaryId: e } = (0, l.parse)(t);
                         null != e && ej.ZP.setSelectedSummary(i, e);
                     }
@@ -538,13 +538,13 @@ class to extends i.PureComponent {
                             if (t) (0, ey.dL)(e1.Z5c.CHANNEL(r, s, o));
                             else {
                                 let e = { type: eS.Ff.THREAD };
-                                null != o && (e.initialMessageId = o),
+                                (null != o && (e.initialMessageId = o),
                                     eC.Z.openThreadAsSidebar({
                                         guildId: r,
                                         baseChannelId: i,
                                         channelId: s,
                                         details: e
-                                    });
+                                    }));
                             }
                     } else null == i || a || eC.Z.closeChannelSidebar(i);
                     let c = eo.Z.getIsOpen();
@@ -559,7 +559,7 @@ class to extends i.PureComponent {
                         var n;
                         return (null == (n = (0, a.LX)(e, t)) ? void 0 : n.isExact) === !0;
                     }) || (0, ey.dL)(eV.Z.fallbackRoute);
-            })(t, n);
+            })(t, n));
     }
     ensureChannelMatchesGuild(e) {
         if (!K.Z.isConnected()) return null;
@@ -635,7 +635,7 @@ class to extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), e4(this, 'historyUnlisten', () => {}), e4(this, 'rewriterUnlisten', () => {});
+        (super(...e), e4(this, 'historyUnlisten', () => {}), e4(this, 'rewriterUnlisten', () => {}));
     }
 }
 let ts = to;

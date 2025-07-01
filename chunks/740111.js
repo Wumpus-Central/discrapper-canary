@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     Wc: () => s,
     xY: () => _
 }),
     n(980754),
     n(388685),
     n(415506),
-    n(539854);
+    n(539854));
 var r,
     i = n(230367),
     l = n(320215),
@@ -61,9 +61,9 @@ class c extends o.C {
         return l;
     }
     internalBinaryWrite(e, t, n) {
-        '' !== e.header && t.tag(1, i.TD.LengthDelimited).string(e.header), '' !== e.pill && t.tag(2, i.TD.LengthDelimited).string(e.pill), '' !== e.body && t.tag(3, i.TD.LengthDelimited).string(e.body), '' !== e.imageLink && t.tag(4, i.TD.LengthDelimited).string(e.imageLink), '' !== e.imageLinkLightTheme && t.tag(5, i.TD.LengthDelimited).string(e.imageLinkLightTheme);
+        ('' !== e.header && t.tag(1, i.TD.LengthDelimited).string(e.header), '' !== e.pill && t.tag(2, i.TD.LengthDelimited).string(e.pill), '' !== e.body && t.tag(3, i.TD.LengthDelimited).string(e.body), '' !== e.imageLink && t.tag(4, i.TD.LengthDelimited).string(e.imageLink), '' !== e.imageLinkLightTheme && t.tag(5, i.TD.LengthDelimited).string(e.imageLinkLightTheme));
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.premium_marketing.v1.FeatureCard', [
@@ -138,9 +138,9 @@ class d extends o.C {
         return l;
     }
     internalBinaryWrite(e, t, n) {
-        '' !== e.copy && t.tag(1, i.TD.LengthDelimited).string(e.copy), 0 !== e.buttonAction && t.tag(2, i.TD.Varint).int32(e.buttonAction);
+        ('' !== e.copy && t.tag(1, i.TD.LengthDelimited).string(e.copy), 0 !== e.buttonAction && t.tag(2, i.TD.Varint).int32(e.buttonAction));
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.premium_marketing.v1.SubscriptionButton', [
@@ -265,7 +265,7 @@ class h extends o.C {
         for (let n of Object.keys(e.heroArtLocalizedVideoLinksLightTheme)) t.tag(2, i.TD.LengthDelimited).fork().tag(1, i.TD.LengthDelimited).string(n).tag(2, i.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksLightTheme[n]).join();
         for (let n of Object.keys(e.heroArtVideoSubtitleLinks)) t.tag(3, i.TD.LengthDelimited).fork().tag(1, i.TD.LengthDelimited).string(n).tag(2, i.TD.LengthDelimited).string(e.heroArtVideoSubtitleLinks[n]).join();
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.premium_marketing.v1.Variant1Storage', [
@@ -344,9 +344,9 @@ class g extends o.C {
         return l;
     }
     internalBinaryWrite(e, t, n) {
-        '' !== e.link && t.tag(1, i.TD.LengthDelimited).string(e.link), '' !== e.locale && t.tag(2, i.TD.LengthDelimited).string(e.locale), !1 !== e.isDefault && t.tag(3, i.TD.Varint).bool(e.isDefault);
+        ('' !== e.link && t.tag(1, i.TD.LengthDelimited).string(e.link), '' !== e.locale && t.tag(2, i.TD.LengthDelimited).string(e.locale), !1 !== e.isDefault && t.tag(3, i.TD.Varint).bool(e.isDefault));
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.premium_marketing.v1.Subtitle', [
@@ -455,13 +455,13 @@ class b extends o.C {
         return l;
     }
     internalBinaryWrite(e, t, n) {
-        '' !== e.header && t.tag(1, i.TD.LengthDelimited).string(e.header), '' !== e.subheader && t.tag(2, i.TD.LengthDelimited).string(e.subheader), '' !== e.videoLink && t.tag(3, i.TD.LengthDelimited).string(e.videoLink), '' !== e.helpArticleId && t.tag(4, i.TD.LengthDelimited).string(e.helpArticleId);
+        ('' !== e.header && t.tag(1, i.TD.LengthDelimited).string(e.header), '' !== e.subheader && t.tag(2, i.TD.LengthDelimited).string(e.subheader), '' !== e.videoLink && t.tag(3, i.TD.LengthDelimited).string(e.videoLink), '' !== e.helpArticleId && t.tag(4, i.TD.LengthDelimited).string(e.helpArticleId));
         for (let r = 0; r < e.featureCards.length; r++) u.internalBinaryWrite(e.featureCards[r], t.tag(5, i.TD.LengthDelimited).fork(), n).join();
-        e.button && p.internalBinaryWrite(e.button, t.tag(6, i.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, i.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, i.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, i.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, i.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, i.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, i.TD.LengthDelimited).string(e.body);
+        (e.button && p.internalBinaryWrite(e.button, t.tag(6, i.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, i.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, i.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, i.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, i.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, i.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, i.TD.LengthDelimited).string(e.body));
         for (let r = 0; r < e.heroArtVideoSubtitles.length; r++) m.internalBinaryWrite(e.heroArtVideoSubtitles[r], t.tag(13, i.TD.LengthDelimited).fork(), n).join();
         e.storage && f.internalBinaryWrite(e.storage, t.tag(14, i.TD.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.premium_marketing.v1.AnnouncementModalVariant1Properties', [

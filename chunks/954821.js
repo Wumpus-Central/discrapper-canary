@@ -1,4 +1,4 @@
-n.d(t, { h: () => E }), n(388685), n(953529);
+(n.d(t, { h: () => E }), n(388685), n(953529));
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -20,7 +20,7 @@ let _ = (e) => {
         return {
             cancelSubscription: async (t) => {
                 try {
-                    return n(!0), await o.EO(t, e), !0;
+                    return (n(!0), await o.EO(t, e), !0);
                 } catch (e) {
                     s(e);
                 } finally {
@@ -121,7 +121,7 @@ let _ = (e) => {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -129,7 +129,7 @@ let _ = (e) => {
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                (i = n[t]),
+                                ((i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
@@ -137,8 +137,8 @@ let _ = (e) => {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = i);
-                            });
+                                        : (e[t] = i));
+                            }));
                     }
                     return e;
                 })({}, t, e)

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Pz: () => g,
     ZP: () => f,
     am: () => h
 }),
-    n(388685);
+    n(388685));
 var r,
     a = n(255367),
     i = n(73800),
@@ -53,7 +53,7 @@ class m extends (r = i.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, '_scrollerRef', null),
             u(this, '_paginationItemRefs', []),
             u(this, 'handleSetScrollerRef', (e) => {
@@ -73,10 +73,10 @@ class m extends (r = i.PureComponent) {
             u(this, 'handlePageClick', (e) => {
                 let { onSetItem: t } = this.props;
                 t(e);
-            });
+            }));
     }
 }
-u(m, 'Align', p),
+(u(m, 'Align', p),
     u(m, 'defaultProps', {
         scrollToPadding: {
             top: 0,
@@ -85,7 +85,7 @@ u(m, 'Align', p),
             right: 0
         },
         align: p.CENTER
-    });
+    }));
 class h extends i.PureComponent {
     render() {
         let { className: e } = this.props;
@@ -101,12 +101,12 @@ class h extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'handlePrevClick', (e) => {
-                e.stopPropagation(), e.preventDefault();
+                (e.stopPropagation(), e.preventDefault());
                 let { onClick: t } = this.props;
                 null == t || t(e);
-            });
+            }));
     }
 }
 class g extends i.PureComponent {
@@ -124,12 +124,12 @@ class g extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'handleNextClick', (e) => {
-                e.stopPropagation(), e.preventDefault();
+                (e.stopPropagation(), e.preventDefault());
                 let { onClick: t } = this.props;
                 null == t || t(e);
-            });
+            }));
     }
 }
 let f = m;

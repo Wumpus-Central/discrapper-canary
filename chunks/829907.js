@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     DH: () => N,
     H8: () => S,
     HD: () => d,
@@ -11,7 +11,7 @@ n.d(t, {
     sS: () => m,
     tY: () => _
 }),
-    n(388685);
+    n(388685));
 var r = n(615287),
     i = n(593472),
     a = n(710845),
@@ -30,7 +30,7 @@ function p(e) {
         return null == n ? c.ZP.GetWindowFullscreenTypeByPid(e) : c.ZP.GetWindowFullscreenTypeByPid(n.pid, n.name, n.fullscreenType);
     } catch (t) {
         var r;
-        return u.error('Error getting overlay fullscreen type for pid '.concat(e, ': ').concat(t)), null != (r = null == n ? void 0 : n.fullscreenType) ? r : i.Jx.UNKNOWN;
+        return (u.error('Error getting overlay fullscreen type for pid '.concat(e, ': ').concat(t)), null != (r = null == n ? void 0 : n.fullscreenType) ? r : i.Jx.UNKNOWN);
     }
 }
 function h(e) {
@@ -72,7 +72,7 @@ function g(e) {
 }
 function E(e, t) {
     let { quns: n } = c.ZP.GetWindowFullscreenTypeExtraByPid(e, t.name);
-    return u.info('QUNS for '.concat(t.name, ': ').concat(n)), n === i.Ng.QUNS_RUNNING_D3D_FULL_SCREEN;
+    return (u.info('QUNS for '.concat(t.name, ': ').concat(n)), n === i.Ng.QUNS_RUNNING_D3D_FULL_SCREEN);
 }
 let b = { '1314682894106497096': (e, t, n) => (E(e, t) ? i.Jx.FULLSCREEN : n) },
     y = new Set(['762434991303950386', '367827983903490050', '1124351860376096858']),

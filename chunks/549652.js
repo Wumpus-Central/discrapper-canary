@@ -1,4 +1,4 @@
-n.r(e), n.d(e, { default: () => E }), n(35282);
+(n.r(e), n.d(e, { default: () => E }), n(35282));
 var s = n(255367),
     r = n(73800),
     i = n(593473),
@@ -143,16 +143,16 @@ class E extends r.PureComponent {
     }
     constructor(t) {
         var e;
-        super(t),
+        (super(t),
             D(this, 'done', () => {
-                N(), this.setState({ stage: x.DONE });
+                (N(), this.setState({ stage: x.DONE }));
             }),
             D(this, 'failed', () => {
-                this.setState({ stage: x.FAILED }), N();
+                (this.setState({ stage: x.FAILED }), N());
             }),
             D(this, 'handleOpenApp', () => {
                 (0, h.uL)(u.Z5c.ME);
-            });
+            }));
         let { search: n } = t.location,
             s = null != n && '' !== n ? (0, i.parse)(n) : {};
         this.state = {

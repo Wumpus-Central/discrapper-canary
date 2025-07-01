@@ -1,4 +1,4 @@
-i.d(t, { default: () => I }), i(388685);
+(i.d(t, { default: () => I }), i(388685));
 var n = i(255367),
     a = i(73800),
     s = i(481060),
@@ -20,7 +20,7 @@ let S = (e) => {
     return {
         cancelSubscription: async (t) => {
             try {
-                return i(!0), await l.EO(t, e), !0;
+                return (i(!0), await l.EO(t, e), !0);
             } catch (e) {
                 s(e);
             } finally {

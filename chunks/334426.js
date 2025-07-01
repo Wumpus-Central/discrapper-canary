@@ -3,17 +3,17 @@ var r,
     i,
     l,
     o = n(442837),
-    s = n(570140);
-let a = null,
+    a = n(570140);
+let s = null,
     c = null,
     u = !1;
 class d extends (l = o.ZP.Store) {
     get shouldHide() {
-        return (null != c && null != a && c <= a) || !u;
+        return (null != c && null != s && c <= s) || !u;
     }
     dismiss() {
         let e = Date.now();
-        e !== a && ((a = e), this.emitChange());
+        e !== s && ((s = e), this.emitChange());
     }
     setInboxReadState(e, t) {
         var n;
@@ -21,7 +21,7 @@ class d extends (l = o.ZP.Store) {
         (e !== u || r !== c) && ((u = e), (c = r), this.emitChange());
     }
 }
-(i = 'NotificationsInboxCaughtUpBannerStore'),
+((i = 'NotificationsInboxCaughtUpBannerStore'),
     (r = 'displayName') in d
         ? Object.defineProperty(d, r, {
               value: i,
@@ -29,5 +29,5 @@ class d extends (l = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (d[r] = i);
-let h = new d(s.Z, {});
+        : (d[r] = i));
+let h = new d(a.Z, {});

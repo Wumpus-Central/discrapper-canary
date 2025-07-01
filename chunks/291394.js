@@ -61,7 +61,7 @@ var n = r(73800),
             })
         );
     };
-(f.propTypes = {
+((f.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     circleSize: a().number,
     circleSpacing: a().number,
@@ -74,4 +74,4 @@ var n = r(73800),
         colors: [u.Q6['500'], u.iQ['500'], u.jk['500'], u.vq['500'], u.QN['500'], u.iN['500'], u.f7['500'], u.sl['500'], u.$C['500'], u.ek['500'], u.ZE['500'], u.LR['500'], u.er['500'], u.Dz['500'], u.$y['500'], u.bK['500'], u.P_['500'], u.BU['500']],
         styles: {}
     }),
-    (0, c.t1)(f);
+    (0, c.t1)(f));

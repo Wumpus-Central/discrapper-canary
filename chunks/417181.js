@@ -166,9 +166,9 @@ function L(e, t, r, a, n, s, o, i, c, l) {
 }
 function F(e, t, r, a, n, s, o, i, c, l) {
     var u = 8 & t;
-    (t |= u ? 32 : 64), 4 & (t &= ~(u ? 64 : 32)) || (t &= -4);
+    ((t |= u ? 32 : 64), 4 & (t &= ~(u ? 64 : 32)) || (t &= -4));
     var f = r(e, t, n, u ? s : void 0, u ? o : void 0, u ? void 0 : s, u ? void 0 : o, i, c, l);
-    return (f.placeholder = a), $(f, e, t);
+    return ((f.placeholder = a), $(f, e, t));
 }
 function q(e) {
     return e.placeholder;
@@ -313,7 +313,7 @@ function U(e, t, r) {
                     });
         return $(x, e, t);
     })(e, 8, void 0, void 0, void 0, void 0, void 0, (t = r ? void 0 : t));
-    return (a.placeholder = U.placeholder), a;
+    return ((a.placeholder = U.placeholder), a);
 }
 function W(e) {
     var t = typeof e;
@@ -345,4 +345,4 @@ function G(e) {
         a = r % 1;
     return r == r ? (a ? r - a : r) : 0;
 }
-(U.placeholder = {}), (e.exports = U);
+((U.placeholder = {}), (e.exports = U));

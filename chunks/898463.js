@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Z: () => D,
     r: () => w
 }),
@@ -9,7 +9,7 @@ n.d(t, {
     n(111804),
     n(490233),
     n(97749),
-    n(953529);
+    n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -47,7 +47,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -63,11 +63,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -150,12 +150,12 @@ function R(e) {
             }),
             (n.src = e),
             () => {
-                d(void 0),
+                (d(void 0),
                     _({
                         width: 0,
                         height: 0
                     }),
-                    URL.revokeObjectURL(e);
+                    URL.revokeObjectURL(e));
             }
         );
     }, [t]);
@@ -217,7 +217,7 @@ function P(e) {
             return (
                 d(e),
                 () => {
-                    d(void 0), URL.revokeObjectURL(e);
+                    (d(void 0), URL.revokeObjectURL(e));
                 }
             );
         }, [t]),
@@ -292,7 +292,7 @@ function D(e) {
             return null == (e = m.Z.getChannel(t)) ? void 0 : e.guild_id;
         }),
         P = (e) => {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
                         u.default,
@@ -310,7 +310,7 @@ function D(e) {
                             }
                         })
                     )
-                );
+                ));
         };
     return (0, r.jsxs)(y.Z, {
         actions: (0, r.jsxs)(i.Fragment, {

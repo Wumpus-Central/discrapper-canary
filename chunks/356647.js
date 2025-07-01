@@ -1,4 +1,4 @@
-n.d(t, { f: () => p }), n(388685), n(997841);
+(n.d(t, { f: () => p }), n(388685), n(997841));
 var r = n(602715),
     i = n(258732),
     l = n(314897),
@@ -17,7 +17,7 @@ function d(e, t) {
             state: c.yb.SENT
         }),
         r = (0, a.e5)(n);
-    return (r.applicationId = e.applicationId), (r.timestamp = e.timestamp), r;
+    return ((r.applicationId = e.applicationId), (r.timestamp = e.timestamp), r);
 }
 function p(e, t) {
     let n = (function (e, t) {
@@ -27,7 +27,7 @@ function p(e, t) {
         let s = d(e, t.id);
         u.set(t.id, e.id);
         let p = (0, o.mB)(null != (a = t.recipientFlags) ? a : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
-        return i.Z.updatePrivateChannelRecipientFlags(t.id, p), s;
+        return (i.Z.updatePrivateChannelRecipientFlags(t.id, p), s);
     })(e, t);
     return null != n ? n : null;
 }

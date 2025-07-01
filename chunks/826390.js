@@ -15,12 +15,12 @@ let m = function (t) {
         f = (0, o.Dt)(),
         C = s.useCallback(
             (t) => {
-                m(), z(t);
+                (m(), z(t));
             },
             [m, z]
         ),
         b = s.useCallback(() => {
-            m(), a.Z.close(), (0, l.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_SAFETY));
+            (m(), a.Z.close(), (0, l.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_SAFETY)));
         }, [n, m]),
         T = i > 200;
     return (0, e.jsxs)(c.Y0X, {

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => i }), n(388685);
+(n.d(t, { Z: () => i }), n(388685));
 class l extends Map {
     set(e, t) {
-        return this.size >= this.maxSize && this.delete(this.keys().next().value), super.set(e, t);
+        return (this.size >= this.maxSize && this.delete(this.keys().next().value), super.set(e, t));
     }
     constructor(e) {
         var t, n;
-        super(),
+        (super(),
             (n = void 0),
             (t = 'maxSize') in this
                 ? Object.defineProperty(this, t, {
@@ -15,7 +15,7 @@ class l extends Map {
                       writable: !0
                   })
                 : (this[t] = n),
-            (this.maxSize = e);
+            (this.maxSize = e));
     }
 }
 let i = l;

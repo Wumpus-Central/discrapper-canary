@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     EM: () => b,
     PR: () => g,
     Tt: () => v,
     ZD: () => A,
     yY: () => I
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(94171),
     a = n(362383),
@@ -27,7 +27,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -78,7 +78,7 @@ function h(e) {
     let t, n, r;
     for (let i of e.titles) {
         if (null != t && null != n) break;
-        (t = null != t ? t : i.base), (n = null != n ? n : i.location), (r = null != r ? r : i.subsection);
+        ((t = null != t ? t : i.base), (n = null != n ? n : i.location), (r = null != r ? r : i.subsection));
     }
     return [t, r, n];
 }
@@ -121,7 +121,7 @@ function v(e) {
     r.useEffect(() => E(e), [...Object.values(e)]);
 }
 function I(e) {
-    return v(e), null;
+    return (v(e), null);
 }
 function T() {
     let [e, t] = p((e) => {
@@ -138,16 +138,16 @@ function T() {
     return (
         r.useEffect(() => {
             if (null == t) {
-                (o.current = 0), a(!1);
+                ((o.current = 0), a(!1));
                 return;
             }
             if (document.hasFocus() && t.onlyWhenBlurred) {
-                y(t.id), a(!1);
+                (y(t.id), a(!1));
                 return;
             }
             let e = setInterval(() => {
                 if (o.current >= t.count) {
-                    y(t.id), a(!1);
+                    (y(t.id), a(!1));
                     return;
                 }
                 a((e) => !e || ((o.current += 1), !1));
@@ -162,7 +162,7 @@ function S() {
         function e() {
             O();
         }
-        return document.addEventListener('focusin', e, { capture: !0 }), () => document.removeEventListener('focusin', e, { capture: !0 });
+        return (document.addEventListener('focusin', e, { capture: !0 }), () => document.removeEventListener('focusin', e, { capture: !0 }));
     }, []);
 }
 function A() {

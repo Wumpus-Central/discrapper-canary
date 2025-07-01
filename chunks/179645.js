@@ -17,11 +17,11 @@ function o(e, t, n) {
 }
 let s = null;
 function l() {
-    (s = null), d.persist();
+    ((s = null), d.persist());
 }
 function c(e) {
     let { newUserType: t } = e;
-    (s = t), d.persist();
+    ((s = t), d.persist());
 }
 class u extends (r = i.ZP.PersistedStore) {
     initialize(e) {
@@ -35,7 +35,7 @@ class u extends (r = i.ZP.PersistedStore) {
         return { type: s };
     }
 }
-o(u, 'displayName', 'NewUserStore'), o(u, 'persistKey', 'nuf');
+(o(u, 'displayName', 'NewUserStore'), o(u, 'persistKey', 'nuf'));
 let d = new u(a.Z, {
         NUF_NEW_USER: c,
         NUF_COMPLETE: l

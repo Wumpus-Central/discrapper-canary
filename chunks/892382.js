@@ -1,4 +1,4 @@
-n.d(t, { default: () => T }), n(388685);
+(n.d(t, { default: () => T }), n(388685));
 var r = n(255367),
     s = n(73800),
     i = n(120356),
@@ -43,7 +43,7 @@ function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function P(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -135,17 +135,17 @@ class S extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'handleRevokeInvite', () => {
                 let { onRevoke: e, invite: t } = this.props;
                 null != e && e(t);
-            });
+            }));
     }
 }
 class D extends s.PureComponent {
     componentDidMount() {
         let { channelId: e } = this.props;
-        d.tn
+        (d.tn
             .get({
                 url: f.ANM.INSTANT_INVITES(e),
                 retries: 3,
@@ -174,7 +174,7 @@ class D extends s.PureComponent {
                     type: 'Group DM Invites',
                     source: 'Group DM Menu'
                 })
-            );
+            ));
     }
     renderContent() {
         let { loading: e, invites: t } = this.state;
@@ -289,18 +289,18 @@ class D extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'state', {
                 loading: !0,
                 invites: null
             }),
             _(this, 'handleRevoke', (e) => {
-                u.ZP.revokeInvite(e), this.setState({ invites: this.state.invites.filter((t) => t !== e) });
+                (u.ZP.revokeInvite(e), this.setState({ invites: this.state.invites.filter((t) => t !== e) }));
             }),
             _(this, 'handleClose', () => {
                 let { onClose: e } = this.props;
                 null == e || e();
-            });
+            }));
     }
 }
 let T = c.ZP.connectStores([y.Z, b.Z], () => ({

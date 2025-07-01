@@ -3,13 +3,13 @@ var r = n(525654),
     i = n.n(r),
     a = n(444675);
 function o(e, t) {
-    if (!e.startsWith('discord:')) return (location.href = e), a.nextTick(() => t(!0));
+    if (!e.startsWith('discord:')) return ((location.href = e), a.nextTick(() => t(!0)));
     let { body: n } = document;
     if (null == n) return a.nextTick(() => t(!1));
     let r = document.createElement('iframe');
     n.appendChild(r);
     try {
-        null != r.contentWindow && (r.contentWindow.location.href = e), a.nextTick(() => t(!0));
+        (null != r.contentWindow && (r.contentWindow.location.href = e), a.nextTick(() => t(!0)));
     } catch (e) {
         'NS_ERROR_UNKNOWN_PROTOCOL' === e.name && a.nextTick(() => t(!1));
     }
@@ -23,17 +23,17 @@ function s(e, t) {
     function r() {
         n = !0;
     }
-    window.addEventListener('blur', r),
+    (window.addEventListener('blur', r),
         (location.href = e),
         setTimeout(() => {
-            window.removeEventListener('blur', r), t(n);
-        }, 1000);
+            (window.removeEventListener('blur', r), t(n));
+        }, 1000));
 }
 function l(e, t) {
     t(!1);
 }
 function c(e, t) {
-    (location.href = e), a.nextTick(() => t(!0));
+    ((location.href = e), a.nextTick(() => t(!0)));
 }
 let u = {
     launch: (function () {

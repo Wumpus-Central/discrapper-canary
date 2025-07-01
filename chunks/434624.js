@@ -1,4 +1,4 @@
-n.d(t, { l: () => _ }), n(388685);
+(n.d(t, { l: () => h }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,33 +11,33 @@ var r = n(255367),
     p = n(566006),
     m = n(287151),
     f = n(92254),
-    h = n(588429);
-let g = i.memo(function (e) {
+    g = n(588429);
+let _ = i.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: _, me: b, me_burst: x, burst_count: y, burst_colors: E, readOnly: v, isLurking: C, isGuest: O, isPendingMember: j, type: S, emojiSize: I } = e,
-            T = S === p.O.BURST,
-            N = (0, m.y4)(b, x, S),
-            P = (0, d.v)(T && null != E ? E : []),
-            A = i ? h : f,
-            w = T ? y : _,
+            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: _, count: h, me: b, me_burst: E, burst_count: y, burst_colors: C, readOnly: x, isLurking: v, isGuest: O, isPendingMember: j, type: I, emojiSize: S } = e,
+            T = I === p.O.BURST,
+            N = (0, m.y4)(b, E, I),
+            P = (0, d.v)(T && null != C ? C : []),
+            A = i ? g : f,
+            w = T ? y : h,
             Z = (0, u.y)(w, m.aO),
             R = {};
         if (T && null != P) {
-            var k;
+            var L;
             let { accentColor: e, backgroundColor: r, opacity: i } = P,
-                l = null != (k = (0, o.wK)(null != r ? r : '', i)) ? k : '';
-            N && (R.borderColor = r), (R.background = l), (t = e), (n = e);
+                l = null != (L = (0, o.wK)(null != r ? r : '', i)) ? L : '';
+            (N && (R.borderColor = r), (R.background = l), (t = e), (n = e));
         }
-        let L = {
+        let k = {
             minWidth: Z,
             color: t,
             borderColor: n
         };
         return (0, r.jsxs)('div', {
-            className: a()(A.reaction, A.reactionInner, g, {
+            className: a()(A.reaction, A.reactionInner, _, {
                 [A.reactionMe]: N,
-                [A.reactionReadOnly]: v && !C && !j && !O
+                [A.reactionReadOnly]: x && !v && !j && !O
             }),
             style: R,
             children: [
@@ -45,18 +45,18 @@ let g = i.memo(function (e) {
                     className: a()({ [A.hideEmoji]: l }),
                     emojiId: c.id,
                     emojiName: c.name,
-                    size: I,
+                    size: S,
                     animated: T && c.animated
                 }),
                 (0, r.jsx)('div', {
                     className: A.reactionCount,
-                    style: L,
+                    style: k,
                     children: w
                 })
             ]
         });
     }),
-    _ = i.memo(function (e) {
+    h = i.memo(function (e) {
         var { showImmediate: t, reactions: n } = e,
             l = (function (e, t) {
                 if (null == e) return {};
@@ -68,12 +68,12 @@ let g = i.memo(function (e) {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(e, ['showImmediate', 'reactions']);
@@ -91,19 +91,19 @@ let g = i.memo(function (e) {
                 [a, s]
             ),
             f = (0, c.O)(d),
-            h = (a && !s) || t ? m.le : g;
+            g = (a && !s) || t ? m.le : _;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', { ref: f }),
                 n.map((e) => {
                     var t, n, i;
                     return (0, r.jsx)(
-                        h,
+                        g,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -111,7 +111,7 @@ let g = i.memo(function (e) {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -119,8 +119,8 @@ let g = i.memo(function (e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({}, l, e)),

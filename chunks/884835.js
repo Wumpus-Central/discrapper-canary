@@ -1,7 +1,7 @@
 var a = r(311596);
 function n() {}
 function s() {}
-(s.resetWarningCache = n),
+((s.resetWarningCache = n),
     (e.exports = function () {
         function e(e, t, r, n, s, o) {
             if (o !== a) {
@@ -36,5 +36,5 @@ function s() {}
             checkPropTypes: s,
             resetWarningCache: n
         };
-        return (r.PropTypes = r), r;
-    });
+        return ((r.PropTypes = r), r);
+    }));

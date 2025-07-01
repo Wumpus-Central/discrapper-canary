@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -36,7 +36,7 @@ function O(e, t, n) {
 class E {
     updateData(e) {
         let { userId: t, user: n, channelId: r, analyticsLocations: i } = e;
-        (this.userId = t), (this.user = n), (this.channelId = r), (this.analyticsLocations = i);
+        ((this.userId = t), (this.user = n), (this.channelId = r), (this.analyticsLocations = i));
     }
     getNicknameGuildPairs() {
         return this.generateNicknameGuildPairs(this.user);
@@ -68,7 +68,7 @@ class E {
         });
     }
     constructor({ userId: e, user: t, channelId: n, analyticsLocations: i }) {
-        O(this, 'userId', void 0),
+        (O(this, 'userId', void 0),
             O(this, 'user', void 0),
             O(this, 'channelId', void 0),
             O(this, 'analyticsLocations', void 0),
@@ -128,10 +128,10 @@ class E {
             (this.userId = e),
             (this.user = t),
             (this.channelId = n),
-            (this.analyticsLocations = i);
+            (this.analyticsLocations = i));
     }
 }
-function I(e) {
+function S(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         l = (0, h.gc)(n),

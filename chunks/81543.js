@@ -27,7 +27,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,12 +48,12 @@ let p = {
 class f extends l.PureComponent {
     componentWillEnter(e) {
         var t, n;
-        null == (t = (n = this.props).onAnimationStart) || t.call(n),
+        (null == (t = (n = this.props).onAnimationStart) || t.call(n),
             this._animated.setValue(-this.props.direction),
             o.Z.spring(this._animated, m({ toValue: 0 }, p)).start(() => {
                 var t, n;
-                e(), null == (t = (n = this.props).onAnimationEnd) || t.call(n);
-            });
+                (e(), null == (t = (n = this.props).onAnimationEnd) || t.call(n));
+            }));
     }
     componentDidAppear() {
         this._animated.setValue(0);
@@ -81,7 +81,7 @@ class f extends l.PureComponent {
         });
     }
     constructor(e) {
-        super(e), u(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction));
+        (super(e), u(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction)));
     }
 }
 let h = (e) => {

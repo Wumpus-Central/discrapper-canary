@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -24,7 +24,7 @@ let m = i.memo(function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ let m = i.memo(function (e) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -40,8 +40,8 @@ let m = i.memo(function (e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, a.config.stiff)),
@@ -70,7 +70,7 @@ let m = i.memo(function (e) {
         );
     return (
         i.useLayoutEffect(() => {
-            v(!1), E(g);
+            (v(!1), E(g));
         }, [g]),
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {

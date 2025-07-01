@@ -20,7 +20,7 @@ function f() {
     return !1;
 }
 var _ = (function (e) {
-    return (e.RESET_BUTTON = 'reset_button'), (e.EDITOR_CLOSE = 'editor_close'), e;
+    return ((e.RESET_BUTTON = 'reset_button'), (e.EDITOR_CLOSE = 'editor_close'), e);
 })({});
 function p(e) {
     return (0, i.wj)(e) ? d.BR.DARK : d.BR.LIGHT;
@@ -28,7 +28,7 @@ function p(e) {
 function h(e) {
     let t = s.L1.getSetting(),
         n = null != t.backgroundGradientPresetId && t.backgroundGradientPresetId in u.qt && u.qt[t.backgroundGradientPresetId].theme !== e;
-    (0, a.y)(e), n && (0, c.kj)();
+    ((0, a.y)(e), n && (0, c.kj)());
 }
 function m() {
     let e = r.useRef(null);
@@ -39,12 +39,12 @@ function m() {
         r.useCallback((t) => {
             var n, r, i, u;
             let d = s.L1.getSetting().customUserThemeSettings;
-            l.Ig.getState().setAll({
+            (l.Ig.getState().setAll({
                 colors: null != (n = null == d ? void 0 : d.colors) ? n : 'reset_button' === t ? [l.Dp] : [],
                 gradientAngle: null != (r = null == d ? void 0 : d.gradientAngle) ? r : 0,
                 chassisMixAmount: null != (i = null == d ? void 0 : d.baseMix) ? i : l.BH
             }),
-                'reset_button' === t ? h(p(null != (u = e.current) ? u : o.Z.theme)) : (0, a.UD)();
+                'reset_button' === t ? h(p(null != (u = e.current) ? u : o.Z.theme)) : (0, a.UD)());
             let f = s.L1.getSetting().backgroundGradientPresetId;
             null != f && (0, c.zO)(f);
         }, [])
@@ -55,5 +55,5 @@ function g() {
     e !== o.Z.theme && h(e);
 }
 function E(e, t, n) {
-    0 === e.length && n([t]), g();
+    (0 === e.length && n([t]), g());
 }

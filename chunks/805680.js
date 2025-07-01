@@ -1,4 +1,4 @@
-n.d(t, { Z: () => en }), n(388685);
+(n.d(t, { Z: () => en }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -59,7 +59,7 @@ function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -67,7 +67,7 @@ function K(e) {
             )),
             r.forEach(function (t) {
                 W(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -75,11 +75,11 @@ function z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -101,7 +101,7 @@ function X(e, t) {
         i = Q(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -111,7 +111,7 @@ function Q(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let J = U.Om + V.Su.MEDIUM,
@@ -131,11 +131,11 @@ let J = U.Om + V.Su.MEDIUM,
                 ),
                 {
                     onClick: () => {
-                        O.ZP.trackWithMetadata(G.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
+                        (O.ZP.trackWithMetadata(G.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
                             tab: i,
                             badged: !1
                         }),
-                            (0, j.hr)(i);
+                            (0, j.hr)(i));
                     },
                     'aria-current': t ? 'page' : void 0,
                     className: o()(n, Y.navButton, Y.navItem, { [Y.navButtonActive]: t }),
@@ -163,7 +163,7 @@ let J = U.Om + V.Su.MEDIUM,
             _ = i.useCallback(
                 (e) => {
                     let t = e >= o ? U._j.MAX : e <= U.Om ? U._j.MIN : e;
-                    null == t && null != n.current && (n.current.style.width = ''), g.ZP.updatedUnsyncedSettings({ expressionPickerWidth: t }), u(t);
+                    (null == t && null != n.current && (n.current.style.width = ''), g.ZP.updatedUnsyncedSettings({ expressionPickerWidth: t }), u(t));
                 },
                 [n, o]
             ),
@@ -194,7 +194,7 @@ let J = U.Om + V.Su.MEDIUM,
                 drawerWidth: d,
                 handleDrawerResizeHandleMouseDown: i.useCallback(
                     (e) => {
-                        e.stopPropagation(), null != t.current && s(t.current.offsetWidth), p(e);
+                        (e.stopPropagation(), null != t.current && s(t.current.offsetWidth), p(e));
                     },
                     [t, p]
                 )
@@ -244,7 +244,7 @@ function et(e) {
         eI = i.useCallback(() => {
             (0, j._Q)();
         }, []);
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         let e = () => {
             ef === U.X1.GIF && (0, j._Q)();
         };
@@ -254,14 +254,14 @@ function et(e) {
             eh.subscribe(G.CkL.POPOUT_CLOSE, eI),
             k.S.subscribe(G.CkL.CLOSE_GIF_PICKER, e),
             () => {
-                ep.removeEventListener('mousedown', ev), ep.removeEventListener('contextmenu', ev), eh.unsubscribe(G.CkL.POPOUT_CLOSE, eI), k.S.unsubscribe(G.CkL.CLOSE_GIF_PICKER, e);
+                (ep.removeEventListener('mousedown', ev), ep.removeEventListener('contextmenu', ev), eh.unsubscribe(G.CkL.POPOUT_CLOSE, eI), k.S.unsubscribe(G.CkL.CLOSE_GIF_PICKER, e));
             }
         );
     }, [ef, eI, ev, ep, eh]),
-        (0, m.Tbt)(eo);
+        (0, m.Tbt)(eo));
     let [eT, eS] = (0, v.US)(eg ? [_.z.SOUNDMOJI_BADGE] : [], void 0, !1),
         [eA, eN] = i.useState(!1);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         ef === U.X1.SOUNDBOARD && eN(!0);
     }, [ef]),
         i.useEffect(
@@ -290,7 +290,7 @@ function et(e) {
                         }),
                         (es.current = !0));
             }
-        });
+        }));
     let eC = (null == (t = Q.gifs) ? void 0 : t.allowSending) && !c.tq && null != W,
         eR = (null == (n = Q.stickers) ? void 0 : n.allowSending) && null != z,
         eP = i.useCallback((e, t) => (null == q ? void 0 : q(e, 'emoji_picker', t)), [q]),

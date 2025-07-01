@@ -1,5 +1,5 @@
 let r;
-n.r(t), n.d(t, { default: () => eS }), n(388685), n(415506);
+(n.r(t), n.d(t, { default: () => eS }), n(388685), n(415506));
 var i,
     a = n(442837),
     o = n(433517),
@@ -37,7 +37,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -79,7 +79,7 @@ function C(e, t) {
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -89,7 +89,7 @@ function R(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let P = Object.freeze({
@@ -120,7 +120,7 @@ let P = Object.freeze({
     B = new u.Z('OverlayStore');
 function V(e) {
     let t = D[e];
-    return null == t && (t = D[e] = S({}, P)), t;
+    return (null == t && (t = D[e] = S({}, P)), t);
 }
 let F = S({}, P),
     Z = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_DISABLE_CLICKABLE_REGIONS', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_GAME_INVITE_NOTIFICATION', 'OVERLAY_SET_INVITE_MESSAGE', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
@@ -151,7 +151,7 @@ function W(e) {
                 });
                 break;
             case 'CONNECTION_OPEN_SUPPLEMENTAL':
-                (e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) => (0, f.kt)(e))), s.Z.dispatch(e);
+                ((e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) => (0, f.kt)(e))), s.Z.dispatch(e));
                 break;
             case 'THREAD_LIST_SYNC':
                 s.Z.dispatch(N(S({}, e), { threads: e.threads.map((e) => (0, f.kt)(e)) }));
@@ -159,13 +159,13 @@ function W(e) {
             case 'GUILD_CREATE':
                 let l = (e) => (0, f.kt)(e),
                     c = e.guild;
-                (c.channels = null != (i = null == (n = c.channels) ? void 0 : n.map(l)) ? i : null),
+                ((c.channels = null != (i = null == (n = c.channels) ? void 0 : n.map(l)) ? i : null),
                     (c.threads = null == (r = c.threads) ? void 0 : r.map(l)),
                     null != c.channelUpdates && (c.channelUpdates.writes = null == (a = c.channelUpdates.writes) ? void 0 : a.map(l)),
                     s.Z.dispatch({
                         type: 'GUILD_CREATE',
                         guild: c
-                    });
+                    }));
                 break;
             case 'USER_SETTINGS_PROTO_UPDATE':
                 s.Z.dispatch(
@@ -202,7 +202,7 @@ function Q() {
         let n = h.ZP.getDefaultChannel(e);
         null != n && (t = n.id);
     }
-    (F.selectedGuildId = e), (F.selectedChannelId = t);
+    ((F.selectedGuildId = e), (F.selectedChannelId = t));
 }
 function J() {
     if (!__OVERLAY__) return !1;
@@ -213,7 +213,7 @@ function J() {
 function $() {}
 function ee(e) {
     let { locked: t, pid: n } = e;
-    t ? x.delete(n) : x.add(n), en(), J(), (G = !1);
+    (t ? x.delete(n) : x.add(n), en(), J(), (G = !1));
 }
 function et(e) {
     let { region: t } = e;
@@ -226,11 +226,11 @@ function en() {
 }
 function er(e) {
     let { pid: t } = e;
-    (w = t), J();
+    ((w = t), J());
 }
 function ei(e) {
     let { guildId: t, channelId: n } = e;
-    (F.selectedGuildId = t), (F.selectedChannelId = n);
+    ((F.selectedGuildId = t), (F.selectedChannelId = n));
 }
 function ea(e) {
     let { callId: t } = e;
@@ -275,17 +275,17 @@ function ep(e) {
 function eh(e) {
     let { message: t } = e,
         n = F.customInviteMessage !== t;
-    return (F.customInviteMessage = t), n;
+    return ((F.customInviteMessage = t), n);
 }
 function em(e) {
     let { opacity: t } = e,
         n = F.textWidgetOpacity !== t;
-    return (F.textWidgetOpacity = t), n;
+    return ((F.textWidgetOpacity = t), n);
 }
 function eg(e) {
     let { shouldShow: t } = e,
         n = F.showGameInviteNotification !== t;
-    return (F.showGameInviteNotification = t), n;
+    return ((F.showGameInviteNotification = t), n);
 }
 function eE() {
     F.disableExternalLinkAlert = !0;
@@ -344,14 +344,14 @@ function eO(e) {
         }
 }
 function ev() {
-    ey(),
+    (ey(),
         (0, c.Ty)(eO, (0, b.getRPCAuthToken)()),
         (0, c.$j)(),
         (0, c.lW)({
             type: v.BmY.CONNECT,
             pid: (0, b.getPID)(),
             token: (0, b.getRPCAuthToken)()
-        });
+        }));
 }
 function eI(e) {
     x.delete(e.previousAssociatedGamePID);
@@ -368,7 +368,7 @@ class eT extends (i = a.ZP.PersistedStore) {
         ) {
             if (E.isPlatformEmbedded) {
                 let e = (0, y.M)();
-                null == e && B.error('Overlay module failed loaded'), (r = e);
+                (null == e && B.error('Overlay module failed loaded'), (r = e));
             }
             x.delete((0, b.getPID)());
         }
@@ -462,7 +462,7 @@ class eT extends (i = a.ZP.PersistedStore) {
         return G;
     }
 }
-T(eT, 'displayName', 'OverlayStore'),
+(T(eT, 'displayName', 'OverlayStore'),
     T(eT, 'persistKey', 'OverlayStoreV2'),
     T(eT, 'migrations', [
         () => {
@@ -475,7 +475,7 @@ T(eT, 'displayName', 'OverlayStore'),
             let t = _.default.getId();
             return null == e || null == t ? {} : { [t]: S({}, e) };
         }
-    ]);
+    ]));
 let eS = new eT(s.Z, {
     LOGOUT: K,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: z,

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Mg: () => _,
     eD: () => u,
     g8: () => f,
@@ -6,7 +6,7 @@ n.d(t, {
 }),
     n(388685),
     n(472816),
-    n(794429);
+    n(794429));
 var r = n(512722),
     i = n.n(r),
     a = n(392711);
@@ -27,7 +27,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -63,7 +63,7 @@ function c(e, t) {
     );
 }
 var u = (function (e) {
-    return (e.ROOT = 'root'), (e.FOLDER = 'folder'), (e.GUILD = 'guild'), e;
+    return ((e.ROOT = 'root'), (e.FOLDER = 'folder'), (e.GUILD = 'guild'), e);
 })({});
 function d() {
     return Math.floor(4294967296 * Math.random());
@@ -86,38 +86,38 @@ class f {
     loadSnapshot(e) {
         for (let t in ((this.nodes = e.nodes), this.nodes)) {
             let e = this.nodes[t];
-            (e.children = e.childrenIds.map((e) => this.nodes[e])), delete e.childrenIds;
+            ((e.children = e.childrenIds.map((e) => this.nodes[e])), delete e.childrenIds);
         }
-        (this.root.children = e.rootChildrenIds.map((e) => this.nodes[e])), this.version++;
+        ((this.root.children = e.rootChildrenIds.map((e) => this.nodes[e])), this.version++);
     }
     moveNextTo(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         this._pluckNode(e);
         let r = null != t.parentId ? this.nodes[t.parentId] : this.root,
             a = r.children.indexOf(t);
-        i()('folder' !== e.type || 'folder' !== r.type, '[GUILDS TREE] Tried moving a folder ('.concat(e.id, ') inside of another folder (').concat(r.id, ')')), i()(a >= 0, '[GUILDS TREE] target node ('.concat(t.id, ') did not exist within its specified parent (').concat(t.parentId, ')'));
+        (i()('folder' !== e.type || 'folder' !== r.type, '[GUILDS TREE] Tried moving a folder ('.concat(e.id, ') inside of another folder (').concat(r.id, ')')), i()(a >= 0, '[GUILDS TREE] target node ('.concat(t.id, ') did not exist within its specified parent (').concat(t.parentId, ')')));
         let o = +!!n;
-        return (r.children = [...r.children]), r.children.splice(a + o, 0, e), (e.parentId = r.id), this.version++, this;
+        return ((r.children = [...r.children]), r.children.splice(a + o, 0, e), (e.parentId = r.id), this.version++, this);
     }
     moveInto(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         this._pluckNode(e);
         let r = n ? t.children.length : 0;
-        return (t.children = [...t.children]), t.children.splice(r, 0, e), (e.parentId = t.id), this.version++, this;
+        return ((t.children = [...t.children]), t.children.splice(r, 0, e), (e.parentId = t.id), this.version++, this);
     }
     addNode(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.root,
             n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        return i()('root' !== e.type, '[GUILDS TREE] Tried adding another root node into the tree'), i()(null != e.id, '[GUILDS TREE] Tried adding a node without an id'), i()(null == this.nodes[e.id], '[GUILDS TREE] Tried adding a node that already exists ('.concat(e.id, ')')), (this.nodes[e.id] = e), this.version++, this.moveInto(e, t, n);
+        return (i()('root' !== e.type, '[GUILDS TREE] Tried adding another root node into the tree'), i()(null != e.id, '[GUILDS TREE] Tried adding a node without an id'), i()(null == this.nodes[e.id], '[GUILDS TREE] Tried adding a node that already exists ('.concat(e.id, ')')), (this.nodes[e.id] = e), this.version++, this.moveInto(e, t, n));
     }
     removeNode(e) {
-        return i()(e !== this.root, '[GUILDS TREE] Tried removing the root node from the tree'), i()(null != e.id, '[GUILDS TREE] Tried removing a node without an id'), this._pluckNode(e), (e.parentId = void 0), delete this.nodes[e.id], this.version++, this;
+        return (i()(e !== this.root, '[GUILDS TREE] Tried removing the root node from the tree'), i()(null != e.id, '[GUILDS TREE] Tried removing a node without an id'), this._pluckNode(e), (e.parentId = void 0), delete this.nodes[e.id], this.version++, this);
     }
     replaceNode(e, t) {
-        i()(null != e.id, '[GUILDS TREE] Tried replacing a node without an id'), i()(null != t.id, '[GUILDS TREE] Tried replacing a node with one that does not have an id');
+        (i()(null != e.id, '[GUILDS TREE] Tried replacing a node without an id'), i()(null != t.id, '[GUILDS TREE] Tried replacing a node with one that does not have an id'));
         let n = null != e.parentId ? this.nodes[e.parentId] : this.root,
             r = n.children.indexOf(e);
-        return i()(r >= 0, '[GUILDS TREE] existing node ('.concat(e.id, ') did not exist within its specified parent (').concat(e.parentId, ')')), (n.children = [...n.children]), n.children.splice(r, 1, t), (t.parentId = n.id), (e.parentId = void 0), delete this.nodes[e.id], (this.nodes[t.id] = t), this.version++, this;
+        return (i()(r >= 0, '[GUILDS TREE] existing node ('.concat(e.id, ') did not exist within its specified parent (').concat(e.parentId, ')')), (n.children = [...n.children]), n.children.splice(r, 1, t), (t.parentId = n.id), (e.parentId = void 0), delete this.nodes[e.id], (this.nodes[t.id] = t), this.version++, this);
     }
     cloneNode(e) {
         return (0, a.clone)(e);
@@ -131,7 +131,7 @@ class f {
             expanded: !1,
             children: []
         };
-        return this.replaceNode(e, n), this.removeNode(e), this.addNode(e, n, !1), this.version++, n;
+        return (this.replaceNode(e, n), this.removeNode(e), this.addNode(e, n, !1), this.version++, n);
     }
     allNodes() {
         return Object.values(this.nodes);
@@ -155,10 +155,10 @@ class f {
         let t = null != e.parentId ? this.nodes[e.parentId] : this.root;
         i()(null != t, '[GUILDS TREE] source node ('.concat(e.id, ') had a parent id (').concat(e.parentId, ") which doesn't exist in the tree"));
         let n = t.children;
-        i()(null != n, '[GUILDS TREE] source node ('.concat(e.id, ') had a parent id (').concat(e.parentId, ') which contains no children')), (t.children = n.filter((t) => t !== e)), (e.parentId = void 0), this.version++;
+        (i()(null != n, '[GUILDS TREE] source node ('.concat(e.id, ') had a parent id (').concat(e.parentId, ') which contains no children')), (t.children = n.filter((t) => t !== e)), (e.parentId = void 0), this.version++);
     }
     constructor() {
-        o(this, 'root', void 0),
+        (o(this, 'root', void 0),
             o(this, 'nodes', void 0),
             o(this, 'version', void 0),
             (this.root = {
@@ -166,7 +166,7 @@ class f {
                 children: []
             }),
             (this.nodes = {}),
-            (this.version = 0);
+            (this.version = 0));
     }
 }
 function _(e, t) {

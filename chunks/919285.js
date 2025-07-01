@@ -18,7 +18,7 @@ function u(e) {
         type: o.vID.COMMANDS_MIGRATION,
         image: c,
         onClick: () => {
-            n(), l.Z.open(t.id, o.pNK.INTEGRATIONS);
+            (n(), l.Z.open(t.id, o.pNK.INTEGRATIONS));
         },
         imageMarginTop: 15,
         imageMarginX: 22

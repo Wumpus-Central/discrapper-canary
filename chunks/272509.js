@@ -103,7 +103,7 @@ function C(t) {
                     children: [
                         (0, s.jsx)(l.zxk, {
                             onClick: () => {
-                                j(),
+                                (j(),
                                     (0, r.EW)(N, {
                                         forceTrack: !0,
                                         dismissAction: u.L.PRIMARY,
@@ -115,19 +115,19 @@ function C(t) {
                                             guildId: e,
                                             entrypoint: { name: m.xF.APPLICATION_DIRECTORY_UPSELL_MODAL }
                                         }
-                                    });
+                                    }));
                             },
                             children: I.intl.string(I.t['5e8Mrq'])
                         }),
                         (0, s.jsx)(l.zxk, {
                             look: l.zxk.Looks.LINK,
                             onClick: () => {
-                                j(),
+                                (j(),
                                     (0, r.EW)(N, {
                                         forceTrack: !0,
                                         dismissAction: u.L.SECONDARY,
                                         guildId: e
-                                    });
+                                    }));
                             },
                             color: l.zxk.Colors.PRIMARY,
                             children: I.intl.string(I.t.L5eIZ2)

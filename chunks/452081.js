@@ -7,7 +7,7 @@ var r = n(73800),
 function s() {
     let e = a.Z.useField('tab'),
         t = r.useCallback((e) => {
-            (0, i.dL)('#'), a.Z.setState({ tab: e });
+            ((0, i.dL)('#'), a.Z.setState({ tab: e }));
         }, []);
     return {
         tabs: r.useMemo(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -136,7 +136,7 @@ class S extends r.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'state', {
                 lastLayoutUpdate: null,
                 dragging: !1
@@ -149,12 +149,12 @@ class S extends r.PureComponent {
                 if (!(0, f.validResolution)(o)) return;
                 let a = (0, p.jL)(n, o),
                     u = (0, p.Ox)(i, o);
-                (0, l.Os)(t),
+                ((0, l.Os)(t),
                     (0, l.nv)({
                         widgetId: t,
                         anchor: a,
                         size: u
-                    });
+                    }));
                 let h = e === c.B.MOVE,
                     g = (0, p.PY)(n, o.width, o.height, r.width, r.height);
                 this.setState({
@@ -182,7 +182,7 @@ class S extends r.PureComponent {
             b(this, 'handleDragEnd', () => {
                 let { widget: e } = this.props;
                 null != e && (e.pinned && s.Z.setPreviewInGameMode(!1), this.setState({ dragging: !1 }));
-            });
+            }));
     }
 }
 let x = o.ZP.connectStores([d.Z, u.default], (e) => {

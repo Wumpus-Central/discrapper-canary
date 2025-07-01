@@ -1,16 +1,16 @@
-r.d(e, { d: () => a });
-var n = r(406954),
-    i = r(9250),
-    o = r(90620);
-function a(...t) {
-    let e = { ...t[0] };
-    for (let r = 1; r < t.length; r++) {
-        let a = t[r];
-        for (let t in a) {
-            let r = e[t],
-                u = a[t];
-            'function' == typeof r && 'function' == typeof u && 'o' === t[0] && 'n' === t[1] && t.charCodeAt(2) >= 65 && 90 >= t.charCodeAt(2) ? (e[t] = (0, n.t)(r, u)) : ('className' === t || 'UNSAFE_className' === t) && 'string' == typeof r && 'string' == typeof u ? (e[t] = (0, o.Z)(r, u)) : 'id' === t && r && u ? (e.id = (0, i.ur)(r, u)) : (e[t] = void 0 !== u ? u : r);
+n.d(t, { d: () => u });
+var r = n(406954),
+    i = n(9250),
+    o = n(90620);
+function u(...e) {
+    let t = { ...e[0] };
+    for (let n = 1; n < e.length; n++) {
+        let u = e[n];
+        for (let e in u) {
+            let n = t[e],
+                a = u[e];
+            'function' == typeof n && 'function' == typeof a && 'o' === e[0] && 'n' === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2) ? (t[e] = (0, r.t)(n, a)) : ('className' === e || 'UNSAFE_className' === e) && 'string' == typeof n && 'string' == typeof a ? (t[e] = (0, o.Z)(n, a)) : 'id' === e && n && a ? (t.id = (0, i.ur)(n, a)) : (t[e] = void 0 !== a ? a : n);
         }
     }
-    return e;
+    return t;
 }

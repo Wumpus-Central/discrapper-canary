@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -25,7 +25,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -41,12 +41,12 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function I(e, t) {
         e
     );
 }
-function S(e) {
+function I(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
         o = i.useRef(null);
@@ -81,13 +81,13 @@ function S(e) {
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(P, I(E({}, e), { channel: t }));
+            return (0, r.jsx)(P, S(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
                 C.ZP.Icon,
-                I(E({}, e), {
+                S(E({}, e), {
                     ref: o,
                     onClick: a,
                     tooltip: n ? null : c,
@@ -104,8 +104,8 @@ function P(e) {
         l = (0, c.Z)(t),
         C = (0, f.Z)(t),
         E = (0, b.Z)(t.id),
-        I = (0, g.Z)(t),
-        S = (0, y.Z)({
+        S = (0, g.Z)(t),
+        I = (0, y.Z)({
             id: t.id,
             label: O.intl.string(O.t.DQ797u)
         }),
@@ -128,7 +128,7 @@ function P(e) {
             }),
             (0, r.jsxs)(s.kSQ, {
                 children: [
-                    I,
+                    S,
                     T,
                     E,
                     R && !k
@@ -146,7 +146,7 @@ function P(e) {
                 children: [w, l, C, Z]
             }),
             (0, r.jsxs)(s.kSQ, {
-                children: [P, S]
+                children: [P, I]
             })
         ]
     });

@@ -3,33 +3,33 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    o = n(5192),
+    o = n(481060),
+    a = n(5192),
     s = n(829820),
     c = n(862863);
 function u(e) {
-    let { activity: t, user: n, channelId: i, guildId: u, source: d, size: f, look: p, color: m, className: g, onAction: _ } = e,
-        { tooltip: b, loading: h, disabled: v, onClick: y } = (0, s.Fe)(t, n, d, o.ZP.getNickname(u, i, n)),
+    let { activity: t, user: n, channelId: i, guildId: u, source: d, size: p, look: f, color: m, className: g, onAction: b } = e,
+        { tooltip: _, loading: v, disabled: h, onClick: y } = (0, s.Fe)(t, n, d, a.ZP.getNickname(u, i, n)),
         O = () => {
-            null == _ || _(), y();
+            (null == b || b(), y());
         };
-    return (0, r.jsx)(a.ua7, {
-        text: b,
+    return (0, r.jsx)(o.ua7, {
+        text: _,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: i } = e;
-            return (0, r.jsx)(a.zxk, {
-                size: f,
+            return (0, r.jsx)(o.zxk, {
+                size: p,
                 className: l()(c.syncButton, g),
                 innerClassName: c.syncButtonInner,
-                look: p,
+                look: f,
                 color: m,
                 onClick: O,
                 onMouseEnter: n,
                 onMouseLeave: i,
-                disabled: v,
-                submitting: h,
-                'aria-label': null != b ? b : t.name,
-                children: (0, r.jsx)(a.iOO, {
+                disabled: h,
+                submitting: v,
+                'aria-label': null != _ ? _ : t.name,
+                children: (0, r.jsx)(o.iOO, {
                     size: 'xs',
                     color: 'currentColor'
                 })

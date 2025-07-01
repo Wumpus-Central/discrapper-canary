@@ -16,12 +16,12 @@ function a(t, e, i) {
 }
 let h = class {
     initialize() {
-        (this.img = new Image()),
+        ((this.img = new Image()),
             (this.img.onload = () => {
                 this.loaded = !0;
             }),
             (this.img.src = n),
-            this.bind();
+            this.bind());
     }
     bind() {
         window.addEventListener('mousemove', this.handleMouseMove, !1);
@@ -30,7 +30,7 @@ let h = class {
         window.removeEventListener('mousemove', this.handleMouseMove, !1);
     }
     terminate() {
-        (this.img = null), (this.loaded = !1), (this.isFilled = !1), (this.alpha = 0), this.unbind();
+        ((this.img = null), (this.loaded = !1), (this.isFilled = !1), (this.alpha = 0), this.unbind());
     }
     update(t) {
         this.loaded && (!this.isFilled && this.alpha < 1 ? (this.alpha = Math.min(1, this.alpha + t)) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * t)), (this.velX += (0, s.B)(this.targetX, this.x, this.velX, this.spring) * t), (this.velY += (0, s.B)(this.targetY, this.y, this.velY, this.spring) * t), (this.x += this.velX * t), (this.y += this.velY * t));
@@ -43,7 +43,7 @@ let h = class {
         this.isFilled = !0;
     }
     constructor() {
-        a(this, 'img', null),
+        (a(this, 'img', null),
             a(this, 'loaded', !1),
             a(this, 'isFilled', !1),
             a(this, 'alpha', 0),
@@ -61,7 +61,7 @@ let h = class {
             }),
             a(this, 'handleMouseMove', (t) => {
                 let { clientX: e, clientY: i } = t;
-                (this.targetX = (e / window.innerWidth) * 20 + 20), (this.targetY = (i / window.innerWidth) * 20 + 20);
-            });
+                ((this.targetX = (e / window.innerWidth) * 20 + 20), (this.targetY = (i / window.innerWidth) * 20 + 20));
+            }));
     }
 };

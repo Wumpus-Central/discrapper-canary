@@ -47,7 +47,7 @@ t.exports = (function (t) {
             e
         );
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r.shouldComponentUpdate = function (t) {
@@ -66,7 +66,7 @@ t.exports = (function (t) {
                         if (i === window) {
                             var a = h(n);
                             (t = a.y + a.height - g().height) > 0 && window.scrollTo(o.x, o.y + t + 10);
-                        } else v(n) || y(!1), (t = n.offsetHeight + n.offsetTop - (i.offsetTop + i.offsetHeight + o.y)) > 0 && s.setTop(i, s.getTop(i) + t + 10);
+                        } else (v(n) || y(!1), (t = n.offsetHeight + n.offsetTop - (i.offsetTop + i.offsetHeight + o.y)) > 0 && s.setTop(i, s.getTop(i) + t + 10));
                     }
                 }
             }

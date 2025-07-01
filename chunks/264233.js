@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
     o = n.n(l),
-    s = n(442837),
-    a = n(524437),
+    a = n(442837),
+    s = n(524437),
     c = n(481060),
     u = n(317632),
     d = n(174767),
@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(175646);
 function b(e) {
     let { setTab: t, badgeState: l, closePopout: b } = e,
-        O = (0, s.Wu)([u.Z], () => u.Z.getInvites()),
-        y = (0, s.e7)([u.Z], () => u.Z.getInviteStatuses()),
+        O = (0, a.Wu)([u.Z], () => u.Z.getInvites()),
+        y = (0, a.e7)([u.Z], () => u.Z.getInviteStatuses()),
         [v, C] = i.useMemo(
             () =>
                 o().partition(O, (e) => {
@@ -33,7 +33,7 @@ function b(e) {
               className: m.container,
               children: [
                   (0, r.jsx)(p.Z, {
-                      tab: a.X.GAME_INVITES,
+                      tab: s.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
                       closePopout: b
@@ -52,7 +52,7 @@ function b(e) {
               className: m.container,
               children: [
                   (0, r.jsx)(p.Z, {
-                      tab: a.X.GAME_INVITES,
+                      tab: s.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
                       closePopout: b,
@@ -72,7 +72,7 @@ function b(e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
                                                       r = Object.keys(n);
-                                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                                  ('function' == typeof Object.getOwnPropertySymbols &&
                                                       (r = r.concat(
                                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -80,7 +80,7 @@ function b(e) {
                                                       )),
                                                       r.forEach(function (t) {
                                                           var r;
-                                                          (r = n[t]),
+                                                          ((r = n[t]),
                                                               t in e
                                                                   ? Object.defineProperty(e, t, {
                                                                         value: r,
@@ -88,8 +88,8 @@ function b(e) {
                                                                         configurable: !0,
                                                                         writable: !0
                                                                     })
-                                                                  : (e[t] = r);
-                                                      });
+                                                                  : (e[t] = r));
+                                                      }));
                                               }
                                               return e;
                                           })({}, t)),

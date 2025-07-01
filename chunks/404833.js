@@ -1,4 +1,4 @@
-r.r(a), r.d(a, { default: () => i });
+(r.r(a), r.d(a, { default: () => i }));
 var i = {
     payButton: 'Plătiți',
     'payButton.redirecting': 'Se redirecționează...',

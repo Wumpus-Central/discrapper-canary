@@ -1,4 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.Raised = void 0);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.Raised = void 0));
 var n = l(r(73800)),
     o = l(r(476400)),
     a = l(r(9196)),
@@ -43,7 +43,7 @@ var s = (t.Raised = function (e) {
         );
     return n.default.createElement('div', { style: u.wrap }, n.default.createElement('div', { style: u.bg }), n.default.createElement('div', { style: u.content }, l));
 });
-(s.propTypes = {
+((s.propTypes = {
     background: o.default.string,
     zDepth: o.default.oneOf([0, 1, 2, 3, 4, 5]),
     radius: o.default.number,
@@ -55,4 +55,4 @@ var s = (t.Raised = function (e) {
         radius: 2,
         styles: {}
     }),
-    (t.default = s);
+    (t.default = s));

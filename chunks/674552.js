@@ -1,17 +1,17 @@
-n.d(t, {
+(n.d(t, {
     Ne: () => f,
     Ny: () => g,
     Or: () => b,
     jt: () => _
 }),
-    n(388685);
+    n(388685));
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
-    s = n(456100),
-    a = n(44315),
+    a = n(456100),
+    s = n(44315),
     c = n(246364),
     u = n(460562),
     d = n(981631),
@@ -20,7 +20,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -36,8 +36,8 @@ function p(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -56,15 +56,15 @@ function g() {
     });
 }
 function m(e) {
-    let { enabled: t } = s.c.useExperiment({ location: 'renderMediaBadge' }, { autoTrackExposure: !0 }),
+    let { enabled: t } = a.c.useExperiment({ location: 'renderMediaBadge' }, { autoTrackExposure: !0 }),
         n = t ? o.iWm : o.nG3;
     return (0, r.jsx)(n, p({}, e));
 }
 function b(e) {
     let t,
-        { audio: n, video: r, screenshare: i, isCurrentUserConnected: l, liveStage: s, activeEvent: a, activity: c } = e;
-    if (a) t = o.Que;
-    else if (s) t = o.ewx;
+        { audio: n, video: r, screenshare: i, isCurrentUserConnected: l, liveStage: a, activeEvent: s, activity: c } = e;
+    if (s) t = o.Que;
+    else if (a) t = o.ewx;
     else if (c) t = m;
     else if (i) t = o.pzj;
     else if (r) t = o.Odl;
@@ -98,7 +98,7 @@ function _(e) {
 }
 function O(e) {
     let { icon: t, color: n, isCurrentUserConnected: i } = e,
-        s = null == n ? { disableColor: !0 } : { color: (0, a.Lq)(n) };
+        a = null == n ? { disableColor: !0 } : { color: (0, s.Lq)(n) };
     return (0, r.jsx)(
         o.G2e,
         p(
@@ -106,7 +106,7 @@ function O(e) {
                 icon: t,
                 className: l()(h.iconBadge, { [h.isCurrentUserConnected]: i })
             },
-            s
+            a
         )
     );
 }

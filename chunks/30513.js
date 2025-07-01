@@ -57,13 +57,13 @@ let u = () => ({
             a = 0;
         switch (e) {
             case l.Eu4.TIER_1:
-                (n = 15), (a = 100);
+                ((n = 15), (a = 100));
                 break;
             case l.Eu4.TIER_2:
-                (n = 30), (a = 150);
+                ((n = 30), (a = 150));
                 break;
             case l.Eu4.TIER_3:
-                (n = 60), (a = 250);
+                ((n = 60), (a = 250));
         }
         return {
             color: t,

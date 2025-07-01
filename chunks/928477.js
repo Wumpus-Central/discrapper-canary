@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     JA: () => M,
     Jw: () => w,
     Od: () => k,
@@ -10,7 +10,7 @@ n.d(t, {
     n(35282),
     n(704826),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(544891),
     a = n(570140),
@@ -40,7 +40,7 @@ var r = n(73800),
     R = n(981631),
     P = n(388032),
     w = (function (e) {
-        return (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), (e[(e.PrivateOnly = 3)] = 'PrivateOnly'), e;
+        return ((e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), (e[(e.PrivateOnly = 3)] = 'PrivateOnly'), e);
     })({});
 function D(e) {
     let t = (0, A.NE)(e);
@@ -71,7 +71,7 @@ function k(e, t) {
                 r.push(n);
                 break;
             }
-            r.push(n.substring(0, e.index)), r.push(e[0]), (n = n.substring(e.index + e[0].length));
+            (r.push(n.substring(0, e.index)), r.push(e[0]), (n = n.substring(e.index + e[0].length)));
         }
         let i = r[0];
         for (let e = 1; e < r.length; e++) {
@@ -109,7 +109,7 @@ function M(e) {
                         rejectWithError: !1
                     });
                 });
-            v !== O && (s.Z.clearDraft(t.id, E.d.ThreadSettings), s.Z.clearDraft(t.id, E.d.FirstThreadMessage), null == u || u(v), (h || e.length > 0 || (null != r && r.length > 0) || (null != _ && _.length > 0)) && G(v, e, r, _, f)), c.Z.clearAll(t.id, E.d.FirstThreadMessage);
+            (v !== O && (s.Z.clearDraft(t.id, E.d.ThreadSettings), s.Z.clearDraft(t.id, E.d.FirstThreadMessage), null == u || u(v), (h || e.length > 0 || (null != r && r.length > 0) || (null != _ && _.length > 0)) && G(v, e, r, _, f)), c.Z.clearAll(t.id, E.d.FirstThreadMessage));
         },
         [t, n, a, u, o, l, d, f]
     );
@@ -151,18 +151,18 @@ function U(e) {
             if (null != d && d.length > 0)
                 try {
                     let e = await u(d);
-                    (p = e.uploaderFile), (I.message.attachments = e.files.map((e, t) => (0, T.B)(e, t)));
+                    ((p = e.uploaderFile), (I.message.attachments = e.files.map((e, t) => (0, T.B)(e, t))));
                 } catch (i) {
                     let { file: e, code: n, reason: r } = i;
                     throw (
-                        ((0, _.A)({
+                        (0, _.A)({
                             file: e,
                             guildId: t.getGuildId(),
                             analyticsLocations: null != o ? o : [],
                             code: n,
                             reason: r
                         }),
-                        i)
+                        i
                     );
                 }
             let A = await B(t, o, p, () =>
@@ -197,7 +197,7 @@ async function B(e, t, n, r) {
     let i,
         s = e.isForumLikeChannel();
     try {
-        (i = await r()),
+        ((i = await r()),
             null == i.body
                 ? o.Z.show({
                       title: P.intl.string(P.t.j2d6Ki),
@@ -211,7 +211,7 @@ async function B(e, t, n, r) {
                   a.Z.dispatch({
                       type: 'THREAD_CREATE_LOCAL',
                       channelId: i.body.id
-                  }));
+                  })));
     } catch (r) {
         var c, f, p, m, E, b, v, I, T;
         if ((null == (c = r.body) ? void 0 : c.code) === R.evJ.TOO_MANY_THREADS)
@@ -261,7 +261,7 @@ async function B(e, t, n, r) {
                         reason: null == (T = r.body) ? void 0 : T.reason
                     });
             return new Promise((e, t) => {
-                null == r.body && t(),
+                (null == r.body && t(),
                     u.Z.addConditionalChangeListener(() => {
                         let n = u.Z.getAndDeleteMostRecentUserCreatedThreadId();
                         if (null != n) {
@@ -273,7 +273,7 @@ async function B(e, t, n, r) {
                                 !1
                             );
                         }
-                    });
+                    }));
             });
         } else
             o.Z.show({
@@ -282,7 +282,7 @@ async function B(e, t, n, r) {
             });
     }
     let S = await new Promise((e, t) => {
-        null == i.body && t(),
+        (null == i.body && t(),
             g.Z.addConditionalChangeListener(() => {
                 let t = g.Z.getChannel(i.body.id);
                 if (null != t)
@@ -292,7 +292,7 @@ async function B(e, t, n, r) {
                         }),
                         !1
                     );
-            });
+            }));
     });
     try {
         await l.Z.fetchMessages({

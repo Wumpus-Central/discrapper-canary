@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     C: () => s,
     H: () => a
 }),
-    n(642613);
+    n(642613));
 var r = n(73800),
     i = n(392711);
 let a = (e) =>
@@ -20,13 +20,13 @@ let a = (e) =>
                     t.effects.reduce((e, t) => {
                         var n;
                         let r = null == (n = t.randomizedSources) ? void 0 : n.length;
-                        return r > 0 && (e = 0 === e ? r : Math.min(e, r)), e;
+                        return (r > 0 && (e = 0 === e ? r : Math.min(e, r)), e);
                     }, 0) - 1
                 );
             return (
                 (t.effects = t.effects.map((e) => {
                     var t;
-                    return (null == (t = e.randomizedSources) ? void 0 : t.length) > 0 && (e.src = e.randomizedSources[n].src), e;
+                    return ((null == (t = e.randomizedSources) ? void 0 : t.length) > 0 && (e.src = e.randomizedSources[n].src), e);
                 })),
                 t
             );

@@ -19,5 +19,5 @@ function s(e, t, n) {
     var g = (0, r.default)(e),
         E = (0, a.Z)(t),
         b = 7 * (((E % 7) + 7) % 7 < m) + E - g.getUTCDay();
-    return g.setUTCDate(g.getUTCDate() + b), g;
+    return (g.setUTCDate(g.getUTCDate() + b), g);
 }

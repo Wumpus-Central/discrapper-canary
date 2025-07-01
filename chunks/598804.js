@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(361932), n(187205), n(539854), n(388685);
+(n.d(t, { Z: () => v }), n(361932), n(187205), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(392711),
@@ -35,7 +35,7 @@ function O(e) {
             let t = null == (s = u.Z.getSoundsForGuild(null == e ? void 0 : e.guild_id)) ? void 0 : s.filter((e) => e.available);
             i.push(...o().sampleSize(t, y));
         }
-        return i.length < y && i.push(...o().sampleSize(null != n ? n : [], y - i.length)), i;
+        return (i.length < y && i.push(...o().sampleSize(null != n ? n : [], y - i.length)), i);
     }, [a, null == e ? void 0 : e.guild_id, n, r, t]);
 }
 let v = i.memo(function (e) {

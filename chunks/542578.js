@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -32,7 +32,7 @@ class _ {
         return (f[a] = null != (i = f[a]) ? i : new _());
     }
     constructor() {
-        d(this, 'users', void 0), d(this, 'fetched', void 0), (this.fetched = !1), (this.users = new Map());
+        (d(this, 'users', void 0), d(this, 'fetched', void 0), (this.fetched = !1), (this.users = new Map()));
     }
 }
 function p() {
@@ -58,14 +58,14 @@ class g extends (r = i.ZP.Store) {
             let l = c.Z.getChannel(e),
                 u = null != l ? l.getGuildId() : null;
             if (null != u && o.Z.isLurking(u)) return;
-            s.U0({
+            (s.U0({
                 channelId: e,
                 messageId: t,
                 emoji: n,
                 limit: r,
                 type: i
             }),
-                (a.fetched = !0);
+                (a.fetched = !0));
         }
         return a.users;
     }

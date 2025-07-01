@@ -123,7 +123,7 @@ let m = /^#[0-9a-f]{3,8}$/i,
     g = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
 class E {
     constructor(e, t, n, r) {
-        (this.red = e), (this.green = t), (this.blue = n), (this.alpha = r);
+        ((this.red = e), (this.green = t), (this.blue = n), (this.alpha = r));
     }
     toHexString() {
         let e = Math.round(this.red).toString(16),
@@ -141,7 +141,7 @@ class E {
         if (!e.match(m) || [6, 8].includes(e.length)) return;
         if ((e = e.replace('#', '')).length < 6) {
             let [t, n, r, i] = e.split('');
-            (e = t + t + n + n + r + r), i && (e += i + i);
+            ((e = t + t + n + n + r + r), i && (e += i + i));
         }
         let t = e.match(/.{1,2}/g);
         if (null != t) return new E(parseInt(t[0], 16), parseInt(t[1], 16), parseInt(t[2], 16), null != t[3] ? parseInt(t[3], 16) / 255 : 1);
@@ -202,7 +202,7 @@ function O(e) {
             t.push(e);
         }
     }
-    return t.push(new E(255, 255, 255, 1)), t.reduce(b);
+    return (t.push(new E(255, 255, 255, 1)), t.reduce(b));
 }
 let v = '--__adaptive-focus-ring-color',
     I = '--__adaptive-focus-ring-radius';
@@ -214,7 +214,7 @@ function S(e) {
 }
 class A {
     constructor() {
-        c(this, 'targetElement'), c(this, 'targetAncestry'), c(this, 'boundingBox'), c(this, 'className'), c(this, 'offset', 0), c(this, 'zIndex'), c(this, 'container', null), c(this, 'themeOptions'), c(this, 'invalidate', () => null);
+        (c(this, 'targetElement'), c(this, 'targetAncestry'), c(this, 'boundingBox'), c(this, 'className'), c(this, 'offset', 0), c(this, 'zIndex'), c(this, 'container', null), c(this, 'themeOptions'), c(this, 'invalidate', () => null));
     }
     setContainer(e) {
         this.container = e;
@@ -224,10 +224,10 @@ class A {
     }
     showElement(e, t = {}) {
         var n;
-        (this.targetElement = e), (this.targetAncestry = this.getElementAncestors(this.targetElement)), (this.boundingBox = void 0), (this.className = t.className), (this.offset = null != (n = t.offset) ? n : 0), (this.zIndex = t.zIndex), T(this), this.invalidate();
+        ((this.targetElement = e), (this.targetAncestry = this.getElementAncestors(this.targetElement)), (this.boundingBox = void 0), (this.className = t.className), (this.offset = null != (n = t.offset) ? n : 0), (this.zIndex = t.zIndex), T(this), this.invalidate());
     }
     hide() {
-        (this.targetElement = void 0), (this.targetAncestry = void 0), (this.boundingBox = void 0), (this.className = void 0), (this.offset = 0), (this.zIndex = void 0), this.invalidate();
+        ((this.targetElement = void 0), (this.targetAncestry = void 0), (this.boundingBox = void 0), (this.className = void 0), (this.offset = 0), (this.zIndex = void 0), this.invalidate());
     }
     get visible() {
         return null != this.targetElement || null != this.boundingBox;
@@ -241,7 +241,7 @@ class A {
         let t = [],
             n = [],
             r = e;
-        for (; null != r; ) t.push(r), 'u' > typeof window && n.push(window.getComputedStyle(r)), (r = r.parentElement);
+        for (; null != r; ) (t.push(r), 'u' > typeof window && n.push(window.getComputedStyle(r)), (r = r.parentElement));
         return {
             elements: t,
             styles: n
@@ -330,7 +330,7 @@ let P = !1,
 function L() {
     if (!P) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()), (w = requestAnimationFrame(L));
+    (null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()), (w = requestAnimationFrame(L)));
 }
 let x = !1,
     k = {
@@ -338,13 +338,13 @@ let x = !1,
             return x;
         },
         setRingsEnabled(e) {
-            (x = e), null == r || r.invalidate();
+            ((x = e), null == r || r.invalidate());
         },
         enableAnimationTracking() {
-            (P = !0), (w = requestAnimationFrame(L));
+            ((P = !0), (w = requestAnimationFrame(L)));
         },
         disableAnimationTracking() {
-            (P = !1), null != w && cancelAnimationFrame(w);
+            ((P = !1), null != w && cancelAnimationFrame(w));
         }
     };
 function M(e) {
@@ -352,7 +352,7 @@ function M(e) {
         i = a.useRef(new A());
     return (
         a.useEffect(() => {
-            i.current.setContainer(t.current), i.current.setThemeOptions(r);
+            (i.current.setContainer(t.current), i.current.setThemeOptions(r));
         }, [t.current]),
         (0, o.jsxs)(C.Provider, {
             value: i.current,
@@ -384,7 +384,7 @@ function j() {
 let U = 'u' > typeof window && (null == (i = window.document) ? void 0 : i.createElement) != null ? a.useLayoutEffect : a.useEffect;
 function G(e) {
     let { within: t = !1, enabled: n = !0, focused: r, offset: i = 0, focusTarget: o, ringTarget: s, ringClassName: l, focusClassName: c, focusWithinClassName: u, children: _ } = e;
-    null != o && f(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && f(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.');
+    (null != o && f(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && f(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.'));
     let p = a.useRef(!1),
         [h, m] = a.useState(!1),
         g = a.useContext(C),
@@ -397,7 +397,7 @@ function G(e) {
             }),
             [l, i]
         );
-    U(() => {
+    (U(() => {
         n && g.invalidate();
     }),
         a.useEffect(() => {
@@ -422,32 +422,32 @@ function G(e) {
                     e.addEventListener('focusin', i, !0),
                     e.addEventListener('focusout', a, !0),
                     () => {
-                        e.removeEventListener('focusin', i, !0), e.removeEventListener('focusout', a, !0);
+                        (e.removeEventListener('focusin', i, !0), e.removeEventListener('focusout', a, !0));
                     }
                 );
             function i(e) {
                 if (null != n) {
                     if (e.currentTarget === e.target) {
-                        (p.current = !0), g.showElement(n, v);
+                        ((p.current = !0), g.showElement(n, v));
                         return;
                     }
-                    m(!0), t && g.showElement(n, v);
+                    (m(!0), t && g.showElement(n, v));
                 }
             }
             function a() {
-                g.hide(), (p.current = !1), m(!1);
+                (g.hide(), (p.current = !1), m(!1));
             }
-        }, [t, v, r, g, o, s]);
+        }, [t, v, r, g, o, s]));
     let I = a.useCallback(
             (e) => {
-                g.hide(), (p.current = !1), m(!1), null == b || b(e);
+                (g.hide(), (p.current = !1), m(!1), null == b || b(e));
             },
             [b, g]
         ),
         T = a.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
-                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, v)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, v)), null == y || y(e);
+                (e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, v)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, v)), null == y || y(e));
             },
             [s, t, y, g, v]
         );

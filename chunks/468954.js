@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -123,7 +123,7 @@ function p(e) {
             var e;
             return null == T ? void 0 : T(null == K || null == (e = K[Y.rowIndex]) ? void 0 : e[Y.columnIndex]);
         }, [K, Y.columnIndex, Y.rowIndex, T]);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         h(H);
     }, [h, H]),
         i.useEffect(() => {
@@ -134,7 +134,7 @@ function p(e) {
         i.useLayoutEffect(() => {
             var e;
             null == (e = F.current) || e.focus();
-        }, []);
+        }, []));
     let el = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.Z, {

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     MN: () => s,
     XG: () => d,
     ao: () => i,
@@ -14,7 +14,7 @@ n.d(t, {
     n(111804),
     n(490233),
     n(97749),
-    n(388685);
+    n(388685));
 var l = n(943351),
     a = n(388032);
 let i = (e, t, n) => (-1 === e ? 0 : e - (t * e) / n);
@@ -36,9 +36,9 @@ async function c(e) {
     return (
         await new Promise((e) => {
             let n = () => {
-                e(), t.removeEventListener('canplaythrough', n);
+                (e(), t.removeEventListener('canplaythrough', n));
             };
-            t.addEventListener('canplaythrough', n), t.load();
+            (t.addEventListener('canplaythrough', n), t.load());
         }),
         t
     );

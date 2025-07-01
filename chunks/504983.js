@@ -8,7 +8,7 @@ var r = n(255367),
     o = n.n(a),
     s = n(933282),
     l = (function (e) {
-        return (e.PREMIUM = 'premium'), (e.LIMITED = 'limited'), e;
+        return ((e.PREMIUM = 'premium'), (e.LIMITED = 'limited'), e);
     })({});
 let c = {
         premium: {

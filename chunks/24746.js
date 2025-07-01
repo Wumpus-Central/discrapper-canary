@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(953529), n(388685);
+(n.d(t, { Z: () => b }), n(953529), n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -22,7 +22,7 @@ function f(e) {
             var e, t, n, r;
             s((null != (n = null == (e = o.current) ? void 0 : e.scrollHeight) ? n : 0) - (null != (r = null == (t = o.current) ? void 0 : t.clientHeight) ? r : 0) > 1);
         });
-        return e.observe(o.current), () => e.disconnect();
+        return (e.observe(o.current), () => e.disconnect());
     }, []);
     let [u, p] = a.useState(!1),
         f = a.useCallback(() => {

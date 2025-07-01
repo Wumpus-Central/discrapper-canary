@@ -14,7 +14,7 @@ class u extends (a = l.ZP.Store) {
         return c[e];
     }
 }
-(i = 'GameProfileStore'),
+((i = 'GameProfileStore'),
     (n = 'displayName') in u
         ? Object.defineProperty(u, n, {
               value: i,
@@ -22,7 +22,7 @@ class u extends (a = l.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (u[n] = i);
+        : (u[n] = i));
 let d = new u(s.Z, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
         let { applicationId: t, games: r } = e;

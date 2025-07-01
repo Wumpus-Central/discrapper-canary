@@ -1,4 +1,4 @@
-n.d(t, { BO: () => d }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311);
+(n.d(t, { BO: () => d }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311));
 var r = n(73800),
     i = n(348327),
     o = n.n(i),
@@ -67,7 +67,7 @@ function d(e, t, n, i) {
                                 } = t;
                                 o === n && (r(a.map((t) => e[t]).filter(l.lm)), null == u || u.removeEventListener('message', i));
                             };
-                            null == u || u.addEventListener('message', i),
+                            (null == u || u.addEventListener('message', i),
                                 null == u ||
                                     u.postMessage({
                                         id: o,
@@ -76,7 +76,7 @@ function d(e, t, n, i) {
                                         searchType: d,
                                         sortType: s,
                                         jaroWinklerSearchThreshold: _
-                                    });
+                                    }));
                         });
                     })(
                         t,
@@ -86,7 +86,7 @@ function d(e, t, n, i) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -94,7 +94,7 @@ function d(e, t, n, i) {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -102,8 +102,8 @@ function d(e, t, n, i) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({ promiseUuid: s.current }, i)
@@ -125,7 +125,7 @@ function d(e, t, n, i) {
         }, [v, e, b, m, ...d]),
         r.useEffect(
             () => () => {
-                null != _.current && _.current.cancel(), (_.current = null), (s.current = null);
+                (null != _.current && _.current.cancel(), (_.current = null), (s.current = null));
             },
             [m, n, i]
         ),

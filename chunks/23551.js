@@ -36,7 +36,7 @@ let h = (e) => {
                                 : () =>
                                       (function (e) {
                                           let t = c.Z.get(e);
-                                          (0, u.Z)({
+                                          ((0, u.Z)({
                                               platformType: t.type,
                                               location: 'Friends List'
                                           }),
@@ -44,7 +44,7 @@ let h = (e) => {
                                                   previous_step: 'desktop connections',
                                                   current_step: 'desktop oauth',
                                                   platform_type: t.type
-                                              });
+                                              }));
                                       })(n),
                         'aria-label': _.name
                     })

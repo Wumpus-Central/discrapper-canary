@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(729357),
     i = n.n(r),
     a = n(147913),
@@ -30,14 +30,14 @@ function h(e, t) {
     (n > 0 && a >= r) || (n < 0 && a <= r) ? (clearInterval(p), 0 === r && null != t && t()) : ((a += n), (f = a / 100), (d.volume = i()(f, 0, c)));
 }
 function m(e) {
-    null != p && clearInterval(p), (_ = 0);
+    (null != p && clearInterval(p), (_ = 0));
     let t = y();
     p = setInterval(() => {
         h(t, e);
     }, l);
 }
 function g() {
-    null != p && clearInterval(p), d.loop(), (_ = c);
+    (null != p && clearInterval(p), d.loop(), (_ = c));
     let e = y();
     p = setInterval(() => h(e), l);
 }
@@ -52,12 +52,12 @@ function y() {
 }
 class O extends a.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             s(this, 'actions', {
                 VIBING_WUMPUS_PLAY_MUSIC: g,
                 VIBING_WUMPUS_STOP_MUSIC: b,
                 VIBING_WUMPUS_PAUSE_MUSIC: E
-            });
+            }));
     }
 }
 let v = new O();

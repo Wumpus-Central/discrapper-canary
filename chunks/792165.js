@@ -61,7 +61,7 @@ function b(e) {
             y
                 ? (0, r.jsx)(l.zx, {
                       onClick: function () {
-                          o.Z.open(p.oAB.VOICE, g.GA), null == n || n(), null == b || b(f.L.PRIMARY);
+                          (o.Z.open(p.oAB.VOICE, g.GA), null == n || n(), null == b || b(f.L.PRIMARY));
                       },
                       children: C.intl.string(C.t.RzWDqa)
                   })

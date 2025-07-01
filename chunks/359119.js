@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => C,
     ny: () => f,
     pj: () => d
 }),
-    n(388685);
+    n(388685));
 var r = n(442837),
     i = n(570140),
     a = n(592125);
@@ -24,7 +24,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -40,11 +40,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -61,10 +61,10 @@ function c(e, t) {
 }
 let u = 5 * n(70956).Z.Millis.SECOND;
 var d = (function (e) {
-        return (e[(e.STRANGER_DANGER = 1)] = 'STRANGER_DANGER'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = 'INAPPROPRIATE_CONVERSATION_TIER_1'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = 'INAPPROPRIATE_CONVERSATION_TIER_2'), (e[(e.LIKELY_ATO = 4)] = 'LIKELY_ATO'), e;
+        return ((e[(e.STRANGER_DANGER = 1)] = 'STRANGER_DANGER'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = 'INAPPROPRIATE_CONVERSATION_TIER_1'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = 'INAPPROPRIATE_CONVERSATION_TIER_2'), (e[(e.LIKELY_ATO = 4)] = 'LIKELY_ATO'), e);
     })({}),
     f = (function (e) {
-        return (e[(e.UPVOTE = 0)] = 'UPVOTE'), (e[(e.DOWNVOTE = 1)] = 'DOWNVOTE'), e;
+        return ((e[(e.UPVOTE = 0)] = 'UPVOTE'), (e[(e.DOWNVOTE = 1)] = 'DOWNVOTE'), e);
     })({});
 let _ = [],
     p = {},
@@ -74,7 +74,7 @@ function m(e) {
 }
 function g(e) {
     let { safetyWarnings: t } = e;
-    null != t && ((p[e.id] = t), t.some((e) => m(e) && null != e.dismiss_timestamp && !A(e.dismiss_timestamp)) ? h.add(e.id) : h.delete(e.id)), null == t && (null != p[e.id] && delete p[e.id], h.delete(e.id));
+    (null != t && ((p[e.id] = t), t.some((e) => m(e) && null != e.dismiss_timestamp && !A(e.dismiss_timestamp)) ? h.add(e.id) : h.delete(e.id)), null == t && (null != p[e.id] && delete p[e.id], h.delete(e.id)));
 }
 function E(e) {
     g(e.channel);
@@ -86,7 +86,7 @@ function b(e) {
 }
 function y(e) {
     let { channel: t } = e;
-    null != p[t.id] && delete p[t.id], h.delete(t.id);
+    (null != p[t.id] && delete p[t.id], h.delete(t.id));
 }
 function O(e) {
     let { channelId: t, warningId: n, feedbackType: r } = e,
@@ -96,7 +96,7 @@ function O(e) {
 function v(e) {
     let { channelId: t } = e,
         n = p[t];
-    h.delete(t), null != n && (p[t] = n.map((e) => c(s({}, e), { dismiss_timestamp: void 0 })));
+    (h.delete(t), null != n && (p[t] = n.map((e) => c(s({}, e), { dismiss_timestamp: void 0 }))));
 }
 function I(e) {
     let { channelId: t, warningIds: n } = e,
@@ -110,10 +110,10 @@ function T(e) {
     h.add(t);
 }
 function S() {
-    (p = {}),
+    ((p = {}),
         Object.values(a.Z.getMutablePrivateChannels()).forEach((e) => {
             g(e);
-        });
+        }));
 }
 function A(e) {
     return new Date(e).getTime() > Date.now() - u;

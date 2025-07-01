@@ -6,4 +6,4 @@ function r() {
             console.error(e);
         }
 }
-r(), (e.exports = n(609890));
+(r(), (e.exports = n(609890)));

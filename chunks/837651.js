@@ -1,4 +1,4 @@
-r.d(t, { default: () => _ }), r(388685);
+(r.d(t, { default: () => _ }), r(388685));
 var n = r(255367),
     i = r(73800),
     s = r(481060),
@@ -174,7 +174,7 @@ class f extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'state', {
                 code: '',
                 totpSecret: (0, d.bV)(),
@@ -187,7 +187,7 @@ class f extends i.PureComponent {
             p(this, 'handleActivate', (e) => {
                 e.preventDefault();
                 let { totpSecret: t, code: r } = this.state;
-                this.setState({ isVerifying: !0 }),
+                (this.setState({ isVerifying: !0 }),
                     o.Z.enable({
                         code: r,
                         secret: (0, d.Qe)(t)
@@ -196,12 +196,12 @@ class f extends i.PureComponent {
                             error: e.body.message,
                             isVerifying: !1
                         })
-                    );
+                    ));
             }),
             p(this, 'handleActivateSuccess', () => {
                 let { onClose: e, handleEnableMFASuccess: t } = this.props;
-                this.setState({ isVerifying: !1 }), t(), null == e || e();
-            });
+                (this.setState({ isVerifying: !1 }), t(), null == e || e());
+            }));
     }
 }
 let _ = f;

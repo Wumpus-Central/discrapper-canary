@@ -1,4 +1,4 @@
-n.d(t, { $: () => l }), n(388685);
+(n.d(t, { $: () => l }), n(388685));
 var r = n(73800),
     i = n(881052);
 function l(e) {
@@ -9,7 +9,7 @@ function l(e) {
             if (!a) {
                 o(!0);
                 try {
-                    await l(), null == n || n();
+                    (await l(), null == n || n());
                 } catch (n) {
                     let e = new i.Hx(n);
                     null == t || t(e);

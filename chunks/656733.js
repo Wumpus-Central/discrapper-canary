@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(704826), n(35282), n(388685);
+(n.d(t, { Z: () => x }), n(704826), n(35282), n(388685));
 var r,
     i = n(442837),
     a = n(377108),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -112,7 +112,7 @@ function N(e) {
 }
 function C(e) {
     if (null != e.query && g === E) return !1;
-    null != e.query && (E = e.query),
+    (null != e.query && (E = e.query),
         (b = e.items.map((e) => {
             let { width: t, height: n, src: r, gif_src: i, url: o, id: s } = e;
             return {
@@ -124,12 +124,12 @@ function C(e) {
                 id: s,
                 format: A(O) ? a.EO.VIDEO : a.EO.IMAGE
             };
-        }));
+        })));
 }
 function R(e) {
     let { query: t } = e;
     if (null == t) return !1;
-    (E = t), (b = []);
+    ((E = t), (b = []));
 }
 function P(e) {
     let t = e.trendingCategories;

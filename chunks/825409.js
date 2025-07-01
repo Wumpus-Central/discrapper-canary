@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     m: () => _,
     q: () => c
 }),
     n(388685),
     n(642613),
     n(35282),
-    n(415506);
+    n(415506));
 var r = n(836560),
     i = n(400053),
     a = n.n(i),
@@ -23,7 +23,7 @@ function s(e, t, n) {
         e
     );
 }
-(n.g.IntlMessageFormat = a()), n(770801), n(177486), n(144062), n(750854), n(198823), n(551576), n(682422), n(760388), n(725589), n(338770), n(99783), n(740635), n(523332), n(307163), n(636681), n(209012), n(651811), n(740191), n(407837), n(372097), n(894996), n(829028), n(750879), n(952874), n(185851), n(962066), n(519708), n(180583), delete n.g.IntlMessageFormat, 'undefined' == typeof Intl && n(211604);
+((n.g.IntlMessageFormat = a()), n(770801), n(177486), n(144062), n(750854), n(198823), n(551576), n(682422), n(760388), n(725589), n(338770), n(99783), n(740635), n(523332), n(307163), n(636681), n(209012), n(651811), n(740191), n(407837), n(372097), n(894996), n(829028), n(750879), n(952874), n(185851), n(962066), n(519708), n(180583), delete n.g.IntlMessageFormat, 'undefined' == typeof Intl && n(211604));
 let l = 'en-US';
 function c() {
     let e;
@@ -34,23 +34,23 @@ class u {
         return this._parsedMessages;
     }
     constructor(e) {
-        s(this, '_context', {
+        (s(this, '_context', {
             messages: {},
             defaultMessages: {},
             locale: l
         }),
             s(this, '_parsedMessages', {}),
             s(this, '_getParsedMessages', void 0),
-            (this._getParsedMessages = e);
+            (this._getParsedMessages = e));
     }
 }
 class d extends u {
     refresh(e) {
-        (this._context = e), this._refresh(e, this._parsedMessages);
+        ((this._context = e), this._refresh(e, this._parsedMessages));
     }
     constructor(...e) {
         var t;
-        super(...e),
+        (super(...e),
             (t = this),
             s(this, '_refresh', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -63,25 +63,25 @@ class d extends u {
                     }),
                     n
                 );
-            });
+            }));
     }
 }
 class f extends u {
     refresh(e) {
-        Object.assign(this._context, e),
+        (Object.assign(this._context, e),
             Object.keys(this._parsedMessages).forEach((e) => {
                 delete this._parsedMessages[e];
-            });
+            }));
     }
     constructor(e) {
         var t;
-        super(e),
+        (super(e),
             (t = this),
             s(this, '_createProxy', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t._context;
                 return new Proxy({}, { get: (n, r) => n[r] || (n[r] = t._getParsedMessages(e, r, t._createProxy)) });
             }),
-            (this._parsedMessages = this._createProxy(this._context));
+            (this._parsedMessages = this._createProxy(this._context)));
     }
 }
 class _ extends r.EventEmitter {
@@ -97,7 +97,7 @@ class _ extends r.EventEmitter {
         if (this._chosenLocale === e) return;
         this._requestedLocale = e;
         let t = this._chosenLocale;
-        (this._chosenLocale = e), (this.loadPromise = this._loadMessagesForLocale(e)), this.emit('locale', this._chosenLocale, t);
+        ((this._chosenLocale = e), (this.loadPromise = this._loadMessagesForLocale(e)), this.emit('locale', this._chosenLocale, t));
     }
     setUpdateRules(e) {
         (0, o.yR)(e);
@@ -182,7 +182,7 @@ class _ extends r.EventEmitter {
         }
     }
     constructor({ initialLocale: e, getMessages: t, getLanguages: r }) {
-        super(),
+        (super(),
             s(this, 'Messages', void 0),
             s(this, 'loadPromise', Promise.resolve()),
             s(this, 'initialLanguageLoad', void 0),
@@ -218,9 +218,9 @@ class _ extends r.EventEmitter {
             (this._languages = r()),
             (this._provider = null != window.Proxy ? new f(this._getParsedMessages) : new d(this._getParsedMessages)),
             (this.Messages = this._provider.getMessages()),
-            (this._getMessages = t);
+            (this._getMessages = t));
         try {
-            new Intl.NumberFormat(e, {}), this.setLocale(e || this.getDefaultLocale());
+            (new Intl.NumberFormat(e, {}), this.setLocale(e || this.getDefaultLocale()));
         } catch (e) {
             this.setLocale(this.getDefaultLocale());
         }

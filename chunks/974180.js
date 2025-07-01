@@ -1,9 +1,9 @@
-n.d(e, {
+(n.d(e, {
     Ay: () => tf,
     yk: () => tg
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var i,
     l = n(392711),
     a = n(149765),
@@ -82,7 +82,7 @@ function tc(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -90,7 +90,7 @@ function tc(t) {
             )),
             i.forEach(function (e) {
                 td(t, e, n[e]);
-            });
+            }));
     }
     return t;
 }
@@ -126,7 +126,7 @@ let tf = 'message1',
                 (delete this._channels[t],
                 e.forEach((t) => {
                     let { notification: e, trackingProps: n } = t;
-                    e.close(), te.default.track(to.rMx.NOTIFICATION_ACTION, tc({ action: 'ACK' }, n));
+                    (e.close(), te.default.track(to.rMx.NOTIFICATION_ACTION, tc({ action: 'ACK' }, n)));
                 }));
         }
         constructor() {
@@ -142,7 +142,7 @@ function tC(t, e) {
             return null == (e = t.metadata) || !e.distributor || t.metadata.distributor !== to.GQo.STEAM;
         }));
     let a = l.filter((t) => t.type === to.IIU.PLAYING && null != t.application_id).map((t) => t.application_id);
-    return n === o.Tv.ONLY_GAMES_PLAYED && (a = a.filter((t) => p.Z.currentUserApplicationIds.has(t))), a;
+    return (n === o.Tv.ONLY_GAMES_PLAYED && (a = a.filter((t) => p.Z.currentUserApplicationIds.has(t))), a);
 }
 async function tZ(t) {
     let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -151,7 +151,7 @@ async function tZ(t) {
         a = (0, Z.X)(t);
     if (e) {
         let t = new Set();
-        a.forEach((e) => {
+        (a.forEach((e) => {
             let { activities: l, user: a } = e;
             if (0 === l.length || j.Z.isIgnored(a.id)) return;
             let r = tC(l, {
@@ -160,7 +160,7 @@ async function tZ(t) {
             });
             0 !== r.length && (t = new Set([...t, ...r]));
         }),
-            await S.ZP.fetchApplications([...t], !1);
+            await S.ZP.fetchApplications([...t], !1));
     }
     a.forEach((t) => {
         let { activities: a, user: r, guildId: o } = t;
@@ -171,7 +171,7 @@ async function tZ(t) {
                 var n;
                 return null != t && (null == (n = tN[e]) ? void 0 : n[t]) == null;
             });
-            (0, l.difference)(a, t)
+            ((0, l.difference)(a, t)
                 .filter((t) => {
                     var n;
                     return null != t && (null == (n = tN[e]) ? void 0 : n[t]) === i;
@@ -205,7 +205,7 @@ async function tZ(t) {
                             }));
                     }
                 }),
-                0 === tA(e).length && delete tN[e];
+                0 === tA(e).length && delete tN[e]);
         })(
             tC(a, {
                 gameActivityNotificationType: n,
@@ -232,7 +232,7 @@ class ty extends (i = r.ZP.Store) {
         this.waitFor($.default, x.Z, q.Z, Y.Z, F.Z, j.Z, X.Z, tt.Z, P.Z);
     }
 }
-td(ty, 'displayName', 'NotificationStore'),
+(td(ty, 'displayName', 'NotificationStore'),
     new ty(
         s.Z,
         __OVERLAY__
@@ -304,7 +304,7 @@ td(ty, 'displayName', 'NotificationStore'),
                           (0, U.R)(u, f.guild_id),
                           q.Z.getDesktopType() === to.qrD.NEVER)
                       )
-                          return S && tr.Z.playNotificationSound(tf, tg, C), !1;
+                          return (S && tr.Z.playNotificationSound(tf, tg, C), !1);
                       let M = null != (r = z.Z.getMessage(o, u.id)) ? r : (0, O.e5)(u);
                       tr.Z.showNotification(
                           m,
@@ -327,7 +327,7 @@ td(ty, 'displayName', 'NotificationStore'),
                               soundpack: C,
                               volume: tg,
                               onClick() {
-                                  (0, G.Kh)(f.id), (f.type === to.d4z.GUILD_VOICE || f.type === to.d4z.GUILD_STAGE_VOICE) && c.Z.updateChatOpen(f.id, !0), g.default.clickedNotification();
+                                  ((0, G.Kh)(f.id), (f.type === to.d4z.GUILD_VOICE || f.type === to.d4z.GUILD_STAGE_VOICE) && c.Z.updateChatOpen(f.id, !0), g.default.clickedNotification());
                               },
                               isUserAvatar: !0,
                               messageRecord: M
@@ -338,11 +338,11 @@ td(ty, 'displayName', 'NotificationStore'),
                   },
                   CHANNEL_SELECT: function (t) {
                       let { channelId: e } = t;
-                      return null != e && th.clearChannel(e), !1;
+                      return (null != e && th.clearChannel(e), !1);
                   },
                   MESSAGE_ACK: function (t) {
                       let { channelId: e } = t;
-                      return th.clearChannel(e), !1;
+                      return (th.clearChannel(e), !1);
                   },
                   ACTIVITY_START: function (t) {
                       let { userId: e, activity: n } = t;
@@ -417,7 +417,7 @@ td(ty, 'displayName', 'NotificationStore'),
                           l = x.Z.getChannel(e.channel_id),
                           r = $.default.getUser(e.host_id);
                       if (null == n || null == l || null == i || null == r || !(0, D.LL)(n, r, l) || !X.Z.can(a.$e(to.Plq.CONNECT, to.Plq.VIEW_CHANNEL), l) || tS.has(e.id)) return !1;
-                      tS.add(e.id),
+                      (tS.add(e.id),
                           tr.Z.showNotification(
                               i.getIconURL(128),
                               ts.intl.formatToPlainString(ts.t.bZ4OkZ, { guildName: i.name }),
@@ -436,7 +436,7 @@ td(ty, 'displayName', 'NotificationStore'),
                                   },
                                   isUserAvatar: !1
                               }
-                          );
+                          ));
                   },
                   STAGE_INSTANCE_DELETE: function (t) {
                       let { instance: e } = t;
@@ -470,7 +470,7 @@ td(ty, 'displayName', 'NotificationStore'),
                                             },
                                             {
                                                 onClick() {
-                                                    t.entity_type === tu.WX.STAGE_INSTANCE && (0, V.Cq)(l), t.entity_type === tu.WX.VOICE && E.default.selectVoiceChannel(l.id);
+                                                    (t.entity_type === tu.WX.STAGE_INSTANCE && (0, V.Cq)(l), t.entity_type === tu.WX.VOICE && E.default.selectVoiceChannel(l.id));
                                                 },
                                                 isUserAvatar: !1
                                             }
@@ -492,7 +492,7 @@ td(ty, 'displayName', 'NotificationStore'),
                                             },
                                             {
                                                 onClick() {
-                                                    f.Z.transitionToGuildSync(t.guild_id), (0, v.bO)({ eventId: t.id });
+                                                    (f.Z.transitionToGuildSync(t.guild_id), (0, v.bO)({ eventId: t.id }));
                                                 },
                                                 isUserAvatar: !1
                                             }
@@ -596,11 +596,11 @@ td(ty, 'displayName', 'NotificationStore'),
                       );
                   },
                   LOGOUT: function () {
-                      return u.K.remove(t_), !1;
+                      return (u.K.remove(t_), !1);
                   },
                   CONNECTION_OPEN: function (t) {
                       let { countryCode: e, guilds: n, presences: i } = t;
-                      (tp = e), tS.clear(), n.forEach((t) => t.stage_instances.forEach((t) => tS.add(t.id))), (0, Z.uw)('NotificationStore') && (0, A.MH)() !== o.Tv.ACTIVITY_NOTIFICATIONS_DISABLED && tZ(i, !1);
+                      ((tp = e), tS.clear(), n.forEach((t) => t.stage_instances.forEach((t) => tS.add(t.id))), (0, Z.uw)('NotificationStore') && (0, A.MH)() !== o.Tv.ACTIVITY_NOTIFICATIONS_DISABLED && tZ(i, !1));
                   },
                   MESSAGE_REMINDER_DUE: function (t) {
                       let { savedMessage: e } = t;
@@ -628,4 +628,4 @@ td(ty, 'displayName', 'NotificationStore'),
                       (0, Z.uw)('handlePresenceUpdates') && (0, A.MH)() !== o.Tv.ACTIVITY_NOTIFICATIONS_DISABLED && tZ(e);
                   }
               }
-    );
+    ));

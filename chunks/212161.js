@@ -21,7 +21,7 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,6 +39,6 @@ class l extends i.Z {
         return new l(o({}, super.fromServer(e), e));
     }
     constructor(e) {
-        super(e), (this.type = r.Z.PROFILE_EFFECT);
+        (super(e), (this.type = r.Z.PROFILE_EFFECT));
     }
 }

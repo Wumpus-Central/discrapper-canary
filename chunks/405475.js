@@ -1,4 +1,4 @@
-n.d(t, { j: () => c }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506), n(49124);
+(n.d(t, { j: () => c }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506), n(49124));
 var r = n(259443),
     i = n(47770),
     a = n(46973),
@@ -19,14 +19,14 @@ function l(e, t, n) {
 }
 class c extends i.Z {
     createUser(e) {
-        this.recognizedUserIds.add(e), this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, o.Bp.DECRYPT);
+        (this.recognizedUserIds.add(e), this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, o.Bp.DECRYPT));
     }
     destroyUser(e) {
-        this.recognizedUserIds.delete(e),
+        (this.recognizedUserIds.delete(e),
             this.encryptionWorker.postMessage({
                 type: o.u.DESTROY_USER,
                 userId: e
-            });
+            }));
     }
     updateLocalUserCodecs(e, t) {
         this.encryptionWorker.postMessage({
@@ -44,21 +44,21 @@ class c extends i.Z {
         });
     }
     setupEncodedTransformsForTransceiver(e) {
-        this.setupEncodedTransforms(e.sender), this.setupEncodedTransforms(e.receiver);
+        (this.setupEncodedTransforms(e.sender), this.setupEncodedTransforms(e.receiver));
     }
     prepareSecureFramesTransition(e, t, n) {
-        this.prepareSecureFramesRatchets(e, t), n();
+        (this.prepareSecureFramesRatchets(e, t), n());
     }
     prepareSecureFramesEpoch(e, t, n) {
         if ('1' === e) {
             let e = null;
-            null != this.transientKeys && (e = this.transientKeys.GetTransientPrivateKey(t)), this.mlsSession.Init(t, BigInt(n), this.userId, e), this.onSecureFramesStateChanged();
+            (null != this.transientKeys && (e = this.transientKeys.GetTransientPrivateKey(t)), this.mlsSession.Init(t, BigInt(n), this.userId, e), this.onSecureFramesStateChanged());
         } else this.mlsSession.SetProtocolVersion(t);
     }
     executeSecureFramesTransition(e) {
         if (!this.secureFramesTransitions.has(e)) return void this.logger.warn('[TAG] Transition ID ' + e + ' not found, ignoring.');
         let t = this.secureFramesTransitions.get(e);
-        this.secureFramesTransitions.delete(e), t === this.dave.kDisabledVersion && this.mlsSession.Reset(), this.setupKeyRatchetForUser(this.userId, t, o.Bp.ENCRYPT), this.onSecureFramesStateChanged();
+        (this.secureFramesTransitions.delete(e), t === this.dave.kDisabledVersion && this.mlsSession.Reset(), this.setupKeyRatchetForUser(this.userId, t, o.Bp.ENCRYPT), this.onSecureFramesStateChanged());
     }
     getMLSKeyPackage(e) {
         e(this.mlsSession.GetMarshalledKeyPackage());
@@ -73,12 +73,12 @@ class c extends i.Z {
     prepareMLSCommitTransition(e, t, n) {
         let r = this.mlsSession.ProcessCommit(t),
             i = null != r.rosterUpdate;
-        i && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()), r.ignored || n(i, this.mlsSession.GetProtocolVersion(), r.rosterUpdate);
+        (i && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()), r.ignored || n(i, this.mlsSession.GetProtocolVersion(), r.rosterUpdate));
     }
     processMLSWelcome(e, t, n) {
         let r = this.mlsSession.ProcessWelcome(t, this.getRecognizedUserIDs()),
             i = null != r;
-        r && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()), n(i, this.mlsSession.GetProtocolVersion(), r);
+        (r && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()), n(i, this.mlsSession.GetProtocolVersion(), r));
     }
     setupEncryptionWorker() {
         let e = new Worker(new URL('/assets/' + n.u('53061'), n.b), Object.assign({}, { name: 'encryption-worker' }, { type: void 0 }));
@@ -129,7 +129,7 @@ class c extends i.Z {
     }
     prepareSecureFramesRatchets(e, t) {
         for (let e of this.getRecognizedUserIDs()) e !== this.userId && this.setupKeyRatchetForUser(e, t, o.Bp.DECRYPT);
-        e === this.dave.kInitTransitionId ? (this.setupKeyRatchetForUser(this.userId, t, o.Bp.ENCRYPT), this.onSecureFramesStateChanged()) : this.secureFramesTransitions.set(e, t), (this.latestPreparedTransitionVersion = t);
+        (e === this.dave.kInitTransitionId ? (this.setupKeyRatchetForUser(this.userId, t, o.Bp.ENCRYPT), this.onSecureFramesStateChanged()) : this.secureFramesTransitions.set(e, t), (this.latestPreparedTransitionVersion = t));
     }
     onSecureFramesStateChanged() {
         var e;
@@ -144,12 +144,12 @@ class c extends i.Z {
         (null == this.lastSecureFramesStateUpdate || this.lastSecureFramesStateUpdate.version !== t.version || this.lastSecureFramesStateUpdate.epochAuthenticator !== t.epochAuthenticator) && (this.logger.info('DAVE protocol state update: '.concat(JSON.stringify(t))), this.emit(a.Sh.SecureFramesUpdate, t), (this.lastSecureFramesStateUpdate = t));
     }
     constructor(e, t, n) {
-        super(), l(this, 'logger', void 0), l(this, 'dave', void 0), l(this, 'transientKeys', void 0), l(this, 'mlsSession', void 0), l(this, 'encryptionWorker', void 0), l(this, 'userId', void 0), l(this, 'currentEncryptorProtocolVersion', 0), l(this, 'recognizedUserIds', new Set()), l(this, 'secureFramesTransitions', new Map()), l(this, 'latestPreparedTransitionVersion', 0), l(this, 'lastSecureFramesStateUpdate', null), (this.logger = new r.Yd('DaveSessionManager')), (this.dave = e), (this.transientKeys = t), (this.userId = n);
+        (super(), l(this, 'logger', void 0), l(this, 'dave', void 0), l(this, 'transientKeys', void 0), l(this, 'mlsSession', void 0), l(this, 'encryptionWorker', void 0), l(this, 'userId', void 0), l(this, 'currentEncryptorProtocolVersion', 0), l(this, 'recognizedUserIds', new Set()), l(this, 'secureFramesTransitions', new Map()), l(this, 'latestPreparedTransitionVersion', 0), l(this, 'lastSecureFramesStateUpdate', null), (this.logger = new r.Yd('DaveSessionManager')), (this.dave = e), (this.transientKeys = t), (this.userId = n));
         let i = '',
             o = '';
-        (this.mlsSession = new e.Session(i, o, (e, t) => {
-            this.logger.error('[TAG] MLS failure', e, t), this.emit(a.Sh.MLSFailure, e, t);
+        ((this.mlsSession = new e.Session(i, o, (e, t) => {
+            (this.logger.error('[TAG] MLS failure', e, t), this.emit(a.Sh.MLSFailure, e, t));
         })),
-            (this.encryptionWorker = this.setupEncryptionWorker());
+            (this.encryptionWorker = this.setupEncryptionWorker()));
     }
 }

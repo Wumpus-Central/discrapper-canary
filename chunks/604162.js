@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     G6: () => d,
     JC: () => c,
     qP: () => m,
     yv: () => u
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     l = n(447543),
     o = n(960904),
@@ -31,11 +31,11 @@ function d(e, t) {
         [
             l,
             () => {
-                o(t),
+                (o(t),
                     null != i.current && clearTimeout(i.current),
                     (i.current = setTimeout(() => {
                         o(e);
-                    }, n));
+                    }, n)));
             }
         ]
     );

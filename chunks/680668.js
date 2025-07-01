@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(997841), n(388685);
+(n.d(t, { Z: () => C }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(533800),
@@ -11,39 +11,39 @@ var r = n(255367),
     p = n(955415),
     m = n(131704),
     f = n(630388),
-    h = n(411198),
-    g = n(277707),
-    _ = n(358595),
+    g = n(411198),
+    _ = n(277707),
+    h = n(358595),
     b = n(981631),
-    x = n(388032),
+    E = n(388032),
     y = n(273254);
-function E(e) {
-    var t, E, v;
-    let C,
+function C(e) {
+    var t, C, x;
+    let v,
         O,
         j,
-        { onTransitionToInviteChannel: S, onAcceptInstantInvite: I, guild: T, invite: N, message: P, currentUserId: A } = e,
+        { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
         w = A === P.author.id,
-        { channel: Z, approximate_member_count: R, approximate_presence_count: k } = N,
-        L = N.state === b.r2o.ACCEPTING,
+        { channel: Z, approximate_member_count: R, approximate_presence_count: L } = N,
+        k = N.state === b.r2o.ACCEPTING,
         D = null != Z ? (0, m.jD)(Z) : null,
         M = null != T,
         U = null != D,
         F = null != D && D.isGuildVocal(),
         B = null != D && D.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = N.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        H = null != (E = null == T ? void 0 : T.hasFeature(b.oNc.HUB)) && E,
+        H = null != (C = null == T ? void 0 : T.hasFeature(b.oNc.HUB)) && C,
         V = null == T ? void 0 : T.id,
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, K] = i.useState(!1),
         Y = i.useCallback(() => K(!1), []),
         X = i.useRef(null),
         q = i.useCallback(() => {
-            K(!0), (0, o.CB)(V, 'show profile', z);
+            (K(!0), (0, o.CB)(V, 'show profile', z));
         }, [V, z]),
         Q = i.useCallback(() => {
             let e = 'noop';
-            M ? (S(), (e = 'transition')) : (I(), (e = 'accept')),
+            (M ? (I(), (e = 'transition')) : (S(), (e = 'accept')),
                 (0, o.r$)(
                     {
                         invite: N,
@@ -52,13 +52,13 @@ function E(e) {
                         invite_message_id: P.id
                     },
                     z
-                );
-        }, [N, P, z, M, S, I]);
+                ));
+        }, [N, P, z, M, I, S]);
     if (null == T) {
-        if (null == N.guild) return (0, r.jsx)(_.Z, {});
-        (T = h.Qs(N.guild)).premiumTier = null != (v = N.guild.premium_tier) ? v : b.Eu4.NONE;
+        if (null == N.guild) return (0, r.jsx)(h.Z, {});
+        (T = g.Qs(N.guild)).premiumTier = null != (x = N.guild.premium_tier) ? x : b.Eu4.NONE;
     }
-    let J = (0, g.e)({
+    let J = (0, _.e)({
         isVoiceChannel: F,
         isOwnInvite: w,
         isGuest: G,
@@ -95,7 +95,7 @@ function E(e) {
         G &&
             (j = (0, r.jsx)(a.DY3, {
                 className: y.tooltipContainer,
-                text: x.intl.string(x.t['/FeTKy']),
+                text: E.intl.string(E.t['/FeTKy']),
                 children: (0, r.jsx)(a.d3s, {
                     size: 'md',
                     color: 'currentColor',
@@ -104,10 +104,10 @@ function E(e) {
             })),
         F
             ? ((O = (0, r.jsx)(p.Z.Channel, { channel: D })),
-              (C = (0, r.jsxs)('span', {
+              (v = (0, r.jsxs)('span', {
                   className: y.infoTitle,
                   children: [
-                      x.intl.format(x.t['2wimj4'], { guildName: T.name }),
+                      E.intl.format(E.t['2wimj4'], { guildName: T.name }),
                       (0, r.jsx)('span', {
                           className: y.infoBadge,
                           children: (0, r.jsx)(d.Z, {
@@ -117,13 +117,13 @@ function E(e) {
                       })
                   ]
               })))
-            : (null != R && R >= 5) || (null != k && k > 0)
-              ? (C = (0, r.jsx)(p.Z.Data, {
+            : (null != R && R >= 5) || (null != L && L > 0)
+              ? (v = (0, r.jsx)(p.Z.Data, {
                     members: R,
-                    membersOnline: k
+                    membersOnline: L
                 }))
               : U &&
-                (C = (0, r.jsx)(p.Z.Channel, {
+                (v = (0, r.jsx)(p.Z.Channel, {
                     channel: D,
                     guild: T
                 })),
@@ -143,15 +143,15 @@ function E(e) {
                                 (0, r.jsx)(p.Z.Info, {
                                     title: O,
                                     onClick: q,
-                                    children: C
+                                    children: v
                                 })
                             ]
                         }),
                         (0, r.jsx)(p.Z.Button, {
                             onClick: Q,
-                            submitting: L,
+                            submitting: k,
                             color: p.Z.Button.Colors.GREEN,
-                            children: F ? (B ? x.intl.string(x.t['7vb2cX']) : x.intl.string(x.t.gpqgam)) : M ? x.intl.string(x.t.cEnaW1) : x.intl.string(x.t.XpeFYm)
+                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
                         })
                     ]
                 }),
@@ -162,7 +162,7 @@ function E(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: x.intl.format(x.t['/o1IfH'], {
+                                children: E.intl.format(E.t['/o1IfH'], {
                                     onClick: () =>
                                         (0, a.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e('95468'), n.e('46343')]).then(n.bind(n, 650233));
@@ -173,7 +173,7 @@ function E(e) {
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
                                                                 r = Object.keys(n);
-                                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                                 (r = r.concat(
                                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -181,7 +181,7 @@ function E(e) {
                                                                 )),
                                                                 r.forEach(function (t) {
                                                                     var r;
-                                                                    (r = n[t]),
+                                                                    ((r = n[t]),
                                                                         t in e
                                                                             ? Object.defineProperty(e, t, {
                                                                                   value: r,
@@ -189,8 +189,8 @@ function E(e) {
                                                                                   configurable: !0,
                                                                                   writable: !0
                                                                               })
-                                                                            : (e[t] = r);
-                                                                });
+                                                                            : (e[t] = r));
+                                                                }));
                                                         }
                                                         return e;
                                                     })({}, t)

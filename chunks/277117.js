@@ -23,8 +23,8 @@ var i = n(657707),
     j = n(944043),
     O = n(678738),
     E = n(638970),
-    I = n(502762),
-    S = n(530),
+    S = n(502762),
+    I = n(530),
     P = n(827313),
     Z = n(228168),
     N = n(981631),
@@ -32,22 +32,22 @@ var i = n(657707),
     A = n(283189);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: k, onOpenProfile: M } = e,
-        { relationshipType: D, originApplicationId: L } = (0, l.cj)([u.Z], () => ({
+        { relationshipType: L, originApplicationId: D } = (0, l.cj)([u.Z], () => ({
             relationshipType: u.Z.getRelationshipType(t.id),
             originApplicationId: u.Z.getOriginApplicationId(t.id)
         })),
         U = (0, a.vh)(t.id),
         B = (0, s.Y)({ userId: t.id }),
         F = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        G = (0, l.e7)([h.Z], () => {
+        H = (0, l.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        H = (0, f.b)({ location: 'UserProfileSidebarBody' });
+        G = (0, f.b)({ location: 'UserProfileSidebarBody' });
     return (0, r.jsxs)('div', {
         className: A.body,
         children: [
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(I.Z, {
                 user: t,
                 nickname: p.ZP.getName(null, R.id, t),
                 pronouns: null == w ? void 0 : w.pronouns,
@@ -68,17 +68,17 @@ function w(e) {
                     ]
                 })
             }),
-            D === N.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(I.Z.Overlay, {
+            L === N.OGo.PENDING_INCOMING &&
+                (0, r.jsx)(S.Z.Overlay, {
                     children: (0, r.jsx)(x.Z, {
                         user: t,
                         channelId: R.id,
-                        applicationId: L
+                        applicationId: D
                     })
                 }),
             U.map((e) =>
                 (0, r.jsx)(
-                    I.Z.Overlay,
+                    S.Z.Overlay,
                     {
                         children: (0, r.jsx)(x.Z, {
                             user: t,
@@ -95,7 +95,7 @@ function w(e) {
                 className: A.card
             }),
             t.isProvisional &&
-                (0, r.jsx)(I.Z.Overlay, {
+                (0, r.jsx)(S.Z.Overlay, {
                     className: A.card,
                     children: (0, r.jsx)(O.Z, {
                         heading: T.intl.string(T.t.Iyka0d),
@@ -107,7 +107,7 @@ function w(e) {
                         children: (0, r.jsx)(c.n, { userId: t.id })
                     })
                 }),
-            H
+            G
                 ? (0, r.jsx)(E.Z, {
                       user: t,
                       currentUser: n,
@@ -120,7 +120,7 @@ function w(e) {
                       displayProfile: w,
                       className: A.card
                   }),
-            (0, r.jsxs)(I.Z.Overlay, {
+            (0, r.jsxs)(S.Z.Overlay, {
                 className: A.overlay,
                 children: [
                     !F &&
@@ -136,10 +136,10 @@ function w(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == G ? void 0 : G.popularApplicationCommandIds) != null &&
+                    (null == H ? void 0 : H.popularApplicationCommandIds) != null &&
                         (0, r.jsx)(m.Z, {
-                            applicationId: G.id,
-                            commandIds: G.popularApplicationCommandIds,
+                            applicationId: H.id,
+                            commandIds: H.popularApplicationCommandIds,
                             channel: R
                         }),
                     B.length > 0 &&

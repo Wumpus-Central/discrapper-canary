@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(393903),
-    a = n(448986),
+    a = n(393903),
+    s = n(448986),
     c = n(731722),
     u = n(172751),
     d = n(842747);
@@ -22,28 +22,28 @@ let h = i.memo(function (e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['children', 'isOverlay', 'contextGuildId']);
     let [g, m] = i.useState({ maskImage: 'none' }),
         b = i.useRef(null),
-        _ = (0, a.Z)(() => {
+        _ = (0, s.Z)(() => {
             var e, t, n, r;
             let i = null != (n = null == (e = O.current) ? void 0 : e.getBoundingClientRect()) ? n : null,
                 l = null != (r = null == (t = b.current) ? void 0 : t.getBoundingClientRect()) ? r : null;
             if (h || null == i || null == l) return void m({ maskImage: 'none' });
             let o = l.right - i.right,
-                s = l.width - o;
-            if (s > l.width) return void m({ maskImage: 'none' });
-            m({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(s, 'px)') });
+                a = l.width - o;
+            if (a > l.width) return void m({ maskImage: 'none' });
+            m({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(a, 'px)') });
         }),
-        O = (0, s.y)(_),
+        O = (0, a.y)(_),
         y = (0, c.yF)(f.userId, p);
     return (0, r.jsxs)('div', {
         className: o()(d.container, h && d.isOverlayContainer),
@@ -65,7 +65,7 @@ let h = i.memo(function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -73,7 +73,7 @@ let h = i.memo(function (e) {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -81,8 +81,8 @@ let h = i.memo(function (e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({}, f)),

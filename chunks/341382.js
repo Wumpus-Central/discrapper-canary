@@ -6,4 +6,4 @@ function i(e) {
         shouldContinue: e
     });
 }
-n(78839), n(355467);
+(n(78839), n(355467));

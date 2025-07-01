@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(361932), n(187205);
+(n.d(t, { Z: () => f }), n(361932), n(187205));
 var s = n(255367),
     i = n(73800),
     r = n(120356),
@@ -71,7 +71,7 @@ class f extends i.PureComponent {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     s = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (s = s.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -79,7 +79,7 @@ class f extends i.PureComponent {
                                     )),
                                     s.forEach(function (t) {
                                         C(e, t, n[t]);
-                                    });
+                                    }));
                             }
                             return e;
                         })({}, e)),
@@ -129,7 +129,7 @@ class f extends i.PureComponent {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             C(this, 'onChangeQuery', (e) => {
                 this.setState({ query: e });
             }),
@@ -140,6 +140,6 @@ class f extends i.PureComponent {
                 var t, n;
                 null == (t = (n = this.props).onClick) || t.call(n, e);
             }),
-            (this.state = { query: '' });
+            (this.state = { query: '' }));
     }
 }

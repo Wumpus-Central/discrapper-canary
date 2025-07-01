@@ -43,22 +43,22 @@ function v(e, t) {
 }
 function Z(e, t, r, a, o) {
     let i = {};
-    (i.discounting = o), (i.refWhite = e), (i.surround = a);
+    ((i.discounting = o), (i.refWhite = e), (i.surround = a));
     let c = e.map((e) => 100 * e);
-    (i.la = t), (i.yb = r);
+    ((i.la = t), (i.yb = r));
     let l = c[1],
         f = (0, s.Z)(u, c),
         b = (a = d[i.surround])[0];
-    (i.c = a[1]), (i.nc = a[2]);
+    ((i.c = a[1]), (i.nc = a[2]));
     let h = (1 / (5 * i.la + 1)) ** 4;
-    (i.fl = h * i.la + 0.1 * (1 - h) * (1 - h) * Math.cbrt(5 * i.la)), (i.flRoot = i.fl ** 0.25), (i.n = i.yb / l), (i.z = 1.48 + Math.sqrt(i.n)), (i.nbb = 0.725 * i.n ** -0.2), (i.ncb = i.nbb);
+    ((i.fl = h * i.la + 0.1 * (1 - h) * (1 - h) * Math.cbrt(5 * i.la)), (i.flRoot = i.fl ** 0.25), (i.n = i.yb / l), (i.z = 1.48 + Math.sqrt(i.n)), (i.nbb = 0.725 * i.n ** -0.2), (i.ncb = i.nbb));
     let p = o ? 1 : Math.max(Math.min(b * (1 - (1 / 3.6) * Math.exp((-i.la - 42) / 92)), 1), 0);
-    (i.dRgb = f.map((e) => (0, n.sX)(1, l / e, p))), (i.dRgbInv = i.dRgb.map((e) => 1 / e));
+    ((i.dRgb = f.map((e) => (0, n.sX)(1, l / e, p))), (i.dRgbInv = i.dRgb.map((e) => 1 / e)));
     let m = v(
         f.map((e, t) => e * i.dRgb[t]),
         i.fl
     );
-    return (i.aW = i.nbb * (2 * m[0] + m[1] + 0.05 * m[2])), i;
+    return ((i.aW = i.nbb * (2 * m[0] + m[1] + 0.05 * m[2])), i);
 }
 let w = Z(c, (64 / Math.PI) * 0.2, 20, 'average', !1);
 function M(e, t) {

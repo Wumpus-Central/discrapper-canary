@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     C: () => N,
     default: () => S
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -36,7 +36,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -82,7 +82,7 @@ function S(e) {
             config: { duration: I }
         })),
         R = (e) => {
-            f(),
+            (f(),
                 O(1),
                 null != p &&
                     d.default.track(
@@ -91,7 +91,7 @@ function S(e) {
                             choice: e.text,
                             choice_id: e.key
                         })
-                    );
+                    ));
         },
         P = async (e) => {
             1 === e && (await N({ width: '100%' }), o());

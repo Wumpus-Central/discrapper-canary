@@ -26,7 +26,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -91,10 +91,10 @@ function y() {
 }
 function O(e) {
     let { callStoreInternalState: t } = e;
-    (g = p({}, t.calls)), (E = p({}, t.enqueuedRings));
+    ((g = p({}, t.calls)), (E = p({}, t.enqueuedRings)));
 }
 function v() {
-    (g = {}), (E = {});
+    ((g = {}), (E = {}));
 }
 function I() {
     return b(!0);
@@ -122,14 +122,14 @@ function A(e) {
         null != E[t])
     ) {
         let e = E[t];
-        delete E[t],
+        (delete E[t],
             1 !== e.indexOf('all') && (e = null),
             s.tn.post({
                 url: f.ANM.CALL_RING(t),
                 body: { recipients: e },
                 oldFormErrors: !0,
                 rejectWithError: !0
-            });
+            }));
     }
 }
 function N(e) {
@@ -151,7 +151,7 @@ function C(e) {
 function R(e) {
     let { channelId: t, unavailable: n } = e,
         r = g[t];
-    !0 === n && null != r
+    (!0 === n && null != r
         ? (g[t] = m(p({}, r), { unavailable: n }))
         : (g[t] = {
               channelId: t,
@@ -161,7 +161,7 @@ function R(e) {
               regionUpdated: !1,
               unavailable: n
           }),
-        null != E[t] && delete E[t];
+        null != E[t] && delete E[t]);
 }
 function P(e) {
     let { channelId: t } = e;

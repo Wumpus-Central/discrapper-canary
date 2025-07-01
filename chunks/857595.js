@@ -45,10 +45,10 @@ function f(e) {
     });
 }
 function _() {
-    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
+    (r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 }));
 }
 function p() {
-    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
+    (r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 }));
 }
 function h() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_DESATURATE_ROLES_TOGGLE' });
@@ -120,11 +120,11 @@ function T(e) {
     });
 }
 function S(e) {
-    r.Z.dispatch({
+    (r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ROLE_STYLE',
         roleStyle: e
     }),
-        a.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
+        a.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e }));
 }
 function A() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE' });

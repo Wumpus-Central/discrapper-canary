@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -12,7 +12,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -20,7 +20,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -28,8 +28,8 @@ function p(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -77,8 +77,8 @@ let g = function (e) {
             isSystemMessage: N,
             hasReply: E,
             author: Z,
-            onMouseEnter: T,
-            onMouseLeave: R
+            onMouseEnter: R,
+            onMouseLeave: T
         } = e,
         _ = (function (e, t) {
             if (null == e) return {};
@@ -90,12 +90,12 @@ let g = function (e) {
                         r,
                         l = {},
                         o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
             return l;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'author', 'onMouseEnter', 'onMouseLeave']);
@@ -103,15 +103,15 @@ let g = function (e) {
         [I, M] = l.useState(!1),
         D = l.useCallback(
             (e) => {
-                M(!0), null == T || T(e);
+                (M(!0), null == R || R(e));
             },
-            [T]
+            [R]
         ),
         A = l.useCallback(
             (e) => {
-                M(!1), null == R || R(e);
+                (M(!1), null == T || T(e));
             },
-            [R]
+            [T]
         ),
         L = (0, r.jsx)(s.d.Provider, {
             value: {

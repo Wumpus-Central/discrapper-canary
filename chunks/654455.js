@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     LU: () => y,
     ZP: () => A
 }),
     n(388685),
     n(35282),
-    n(539854);
+    n(539854));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -33,7 +33,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,11 +49,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -102,12 +102,12 @@ function I(e) {
     let { command: t, context: n } = e;
     if (!g.includes(t.type)) return !1;
     let r = O(n, t);
-    E.pendingUsages.push({
+    (E.pendingUsages.push({
         key: r,
         timestamp: Date.now()
     }),
         b.track(r),
-        b.compute();
+        b.compute());
 }
 function T() {
     var e, t;
@@ -119,7 +119,7 @@ function T() {
 }
 class S extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (E = e), this.syncWith([u.Z], T);
+        (null != e && (E = e), this.syncWith([u.Z], T));
     }
     getState() {
         return E;
@@ -138,7 +138,7 @@ class S extends (r = o.ZP.PersistedStore) {
         return b.frequently;
     }
 }
-_(S, 'displayName', 'ApplicationCommandFrecencyStore'), _(S, 'persistKey', 'ApplicationCommandFrecencyV2');
+(_(S, 'displayName', 'ApplicationCommandFrecencyStore'), _(S, 'persistKey', 'ApplicationCommandFrecencyV2'));
 let A = new S(s.Z, {
     APPLICATION_COMMAND_USED: I,
     USER_SETTINGS_PROTO_UPDATE: v

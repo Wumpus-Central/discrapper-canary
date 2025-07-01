@@ -33,10 +33,10 @@ function i(e, t) {
         },
         n: function () {
             var e = n.next();
-            return (s = e.done), e;
+            return ((s = e.done), e);
         },
         e: function (e) {
-            (l = !0), (o = e);
+            ((l = !0), (o = e));
         },
         f: function () {
             try {
@@ -76,11 +76,11 @@ e.exports = function (e, n) {
     return 'function' == typeof n ? new t.Request('GET', e).end(n) : 1 == arguments.length ? new t.Request('GET', e) : new t.Request(e, n);
 };
 let E = (t = e.exports);
-(t.Request = A),
+((t.Request = A),
     (E.getXHR = () => {
         if (r.XMLHttpRequest) return new r.XMLHttpRequest();
         throw Error('Browser-only version of superagent could not find XHR');
-    });
+    }));
 let b = ''.trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, '');
 function y(e) {
     if (!f(e)) return e;
@@ -130,13 +130,13 @@ function T(e) {
     return /[/+]json($|[^-\w])/i.test(e);
 }
 function S(e) {
-    (this.req = e), (this.xhr = this.req.xhr), (this.text = ('HEAD' !== this.req.method && ('' === this.xhr.responseType || 'text' === this.xhr.responseType)) || void 0 === this.xhr.responseType ? this.xhr.responseText : null), (this.statusText = this.req.xhr.statusText);
+    ((this.req = e), (this.xhr = this.req.xhr), (this.text = ('HEAD' !== this.req.method && ('' === this.xhr.responseType || 'text' === this.xhr.responseType)) || void 0 === this.xhr.responseType ? this.xhr.responseText : null), (this.statusText = this.req.xhr.statusText));
     let t = this.xhr.status;
-    1223 === t && (t = 204), this._setStatusProperties(t), (this.headers = I(this.xhr.getAllResponseHeaders())), (this.header = this.headers), (this.header['content-type'] = this.xhr.getResponseHeader('content-type')), this._setHeaderProperties(this.header), null === this.text && e._responseType ? (this.body = this.xhr.response) : (this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
+    (1223 === t && (t = 204), this._setStatusProperties(t), (this.headers = I(this.xhr.getAllResponseHeaders())), (this.header = this.headers), (this.header['content-type'] = this.xhr.getResponseHeader('content-type')), this._setHeaderProperties(this.header), null === this.text && e._responseType ? (this.body = this.xhr.response) : (this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response)));
 }
 function A(e, t) {
     let n = this;
-    (this._query = this._query || []),
+    ((this._query = this._query || []),
         (this.method = e),
         (this.url = t),
         (this.header = {}),
@@ -148,7 +148,7 @@ function A(e, t) {
             try {
                 r = new S(n);
             } catch (e) {
-                return ((t = Error('Parser is unable to parse the response')).parse = !0), (t.original = e), n.xhr ? ((t.rawResponse = void 0 === n.xhr.responseType ? n.xhr.responseText : n.xhr.response), (t.status = n.xhr.status ? n.xhr.status : null), (t.statusCode = t.status)) : ((t.rawResponse = null), (t.status = null)), n.callback(t);
+                return (((t = Error('Parser is unable to parse the response')).parse = !0), (t.original = e), n.xhr ? ((t.rawResponse = void 0 === n.xhr.responseType ? n.xhr.responseText : n.xhr.response), (t.status = n.xhr.status ? n.xhr.status : null), (t.statusCode = t.status)) : ((t.rawResponse = null), (t.status = null)), n.callback(t));
             }
             n.emit('response', r);
             try {
@@ -157,9 +157,9 @@ function A(e, t) {
                 e = t;
             }
             e ? ((e.original = t), (e.response = r), (e.status = e.status || r.status), n.callback(e, r)) : n.callback(null, r);
-        });
+        }));
 }
-(E.serializeObject = y),
+((E.serializeObject = y),
     (E.parseString = v),
     (E.types = {
         html: 'text/html',
@@ -187,19 +187,19 @@ function A(e, t) {
             t = e.method,
             n = e.url,
             r = Error(`cannot ${t} ${n} (${this.status})`);
-        return (r.status = this.status), (r.method = t), (r.url = n), r;
+        return ((r.status = this.status), (r.method = t), (r.url = n), r);
     }),
     (E.Response = S),
     s(A.prototype),
     _(A.prototype, u.prototype),
     (A.prototype.type = function (e) {
-        return this.set('Content-Type', E.types[e] || e), this;
+        return (this.set('Content-Type', E.types[e] || e), this);
     }),
     (A.prototype.accept = function (e) {
-        return this.set('Accept', E.types[e] || e), this;
+        return (this.set('Accept', E.types[e] || e), this);
     }),
     (A.prototype.auth = function (e, t, n) {
-        1 == arguments.length && (t = ''), 'object' == typeof t && null !== t && ((n = t), (t = '')), n || (n = { type: 'function' == typeof btoa ? 'basic' : 'auto' });
+        (1 == arguments.length && (t = ''), 'object' == typeof t && null !== t && ((n = t), (t = '')), n || (n = { type: 'function' == typeof btoa ? 'basic' : 'auto' }));
         let r = n.encoder
             ? n.encoder
             : (e) => {
@@ -209,7 +209,7 @@ function A(e, t) {
         return this._auth(e, t, n, r);
     }),
     (A.prototype.query = function (e) {
-        return 'string' != typeof e && (e = y(e)), e && this._query.push(e), this;
+        return ('string' != typeof e && (e = y(e)), e && this._query.push(e), this);
     }),
     (A.prototype.attach = function (e, t, n) {
         if (t) {
@@ -219,19 +219,19 @@ function A(e, t) {
         return this;
     }),
     (A.prototype._getFormData = function () {
-        return this._formData || (this._formData = new r.FormData()), this._formData;
+        return (this._formData || (this._formData = new r.FormData()), this._formData);
     }),
     (A.prototype.callback = function (e, t) {
         if (this._shouldRetry(e, t)) return this._retry();
         let n = this._callback;
-        this.clearTimeout(), e && (this._maxRetries && (e.retries = this._retries - 1), this.emit('error', e)), n(e, t);
+        (this.clearTimeout(), e && (this._maxRetries && (e.retries = this._retries - 1), this.emit('error', e)), n(e, t));
     }),
     (A.prototype.crossDomainError = function () {
         let e = Error('Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.');
-        (e.crossDomain = !0), (e.status = this.status), (e.method = this.method), (e.url = this.url), this.callback(e);
+        ((e.crossDomain = !0), (e.status = this.status), (e.method = this.method), (e.url = this.url), this.callback(e));
     }),
     (A.prototype.agent = function () {
-        return console.warn('This is not supported in browser version of superagent'), this;
+        return (console.warn('This is not supported in browser version of superagent'), this);
     }),
     (A.prototype.ca = A.prototype.agent),
     (A.prototype.buffer = A.prototype.ca),
@@ -243,7 +243,7 @@ function A(e, t) {
         return e && 'object' == typeof e && !Array.isArray(e) && '[object Object]' !== Object.prototype.toString.call(e);
     }),
     (A.prototype.end = function (e) {
-        this._endCalled && console.warn('Warning: .end() was called twice. This is not supported in superagent'), (this._endCalled = !0), (this._callback = e || g), this._finalizeQueryString(), this._end();
+        (this._endCalled && console.warn('Warning: .end() was called twice. This is not supported in superagent'), (this._endCalled = !0), (this._callback = e || g), this._finalizeQueryString(), this._end());
     }),
     (A.prototype._setUploadTimeout = function () {
         let e = this;
@@ -259,7 +259,7 @@ function A(e, t) {
         this.xhr = E.getXHR();
         let t = this.xhr,
             n = this._formData || this._data;
-        this._setTimeouts(),
+        (this._setTimeouts(),
             t.addEventListener('readystatechange', () => {
                 let n,
                     r = t.readyState;
@@ -275,13 +275,13 @@ function A(e, t) {
                     }
                     e.emit('end');
                 }
-            });
+            }));
         let r = (t, n) => {
-            n.total > 0 && ((n.percent = (n.loaded / n.total) * 100), 100 === n.percent && clearTimeout(e._uploadTimeoutTimer)), (n.direction = t), e.emit('progress', n);
+            (n.total > 0 && ((n.percent = (n.loaded / n.total) * 100), 100 === n.percent && clearTimeout(e._uploadTimeoutTimer)), (n.direction = t), e.emit('progress', n));
         };
         if (this.hasListeners('progress'))
             try {
-                t.addEventListener('progress', r.bind(null, 'download')), t.upload && t.upload.addEventListener('progress', r.bind(null, 'upload'));
+                (t.addEventListener('progress', r.bind(null, 'download')), t.upload && t.upload.addEventListener('progress', r.bind(null, 'upload')));
             } catch (e) {}
         t.upload && this._setUploadTimeout();
         try {
@@ -292,47 +292,47 @@ function A(e, t) {
         if ((this._withCredentials && (t.withCredentials = !0), !this._formData && 'GET' !== this.method && 'HEAD' !== this.method && 'string' != typeof n && !this._isHost(n))) {
             let e = this._header['content-type'],
                 t = this._serializer || E.serialize[e ? e.split(';')[0] : ''];
-            !t && T(e) && (t = E.serialize['application/json']), t && (n = t(n));
+            (!t && T(e) && (t = E.serialize['application/json']), t && (n = t(n)));
         }
         for (let e in this.header) null !== this.header[e] && p(this.header, e) && t.setRequestHeader(e, this.header[e]);
-        this._responseType && (t.responseType = this._responseType), this.emit('request', this), t.send(void 0 === n ? null : n);
+        (this._responseType && (t.responseType = this._responseType), this.emit('request', this), t.send(void 0 === n ? null : n));
     }),
-    (E.agent = () => new m());
+    (E.agent = () => new m()));
 for (var N = 0, C = ['GET', 'POST', 'OPTIONS', 'PATCH', 'PUT', 'DELETE']; N < C.length; N++) {
     let e = C[N];
     m.prototype[e.toLowerCase()] = function (t, n) {
         let r = new E.Request(e, t);
-        return this._setDefaults(r), n && r.end(n), r;
+        return (this._setDefaults(r), n && r.end(n), r);
     };
 }
 function R(e, t, n) {
     let r = E('DELETE', e);
-    return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+    return ('function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r);
 }
-(m.prototype.del = m.prototype.delete),
+((m.prototype.del = m.prototype.delete),
     (E.get = (e, t, n) => {
         let r = E('GET', e);
-        return 'function' == typeof t && ((n = t), (t = null)), t && r.query(t), n && r.end(n), r;
+        return ('function' == typeof t && ((n = t), (t = null)), t && r.query(t), n && r.end(n), r);
     }),
     (E.head = (e, t, n) => {
         let r = E('HEAD', e);
-        return 'function' == typeof t && ((n = t), (t = null)), t && r.query(t), n && r.end(n), r;
+        return ('function' == typeof t && ((n = t), (t = null)), t && r.query(t), n && r.end(n), r);
     }),
     (E.options = (e, t, n) => {
         let r = E('OPTIONS', e);
-        return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+        return ('function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r);
     }),
     (E.del = R),
     (E.delete = R),
     (E.patch = (e, t, n) => {
         let r = E('PATCH', e);
-        return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+        return ('function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r);
     }),
     (E.post = (e, t, n) => {
         let r = E('POST', e);
-        return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+        return ('function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r);
     }),
     (E.put = (e, t, n) => {
         let r = E('PUT', e);
-        return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
-    });
+        return ('function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r);
+    }));

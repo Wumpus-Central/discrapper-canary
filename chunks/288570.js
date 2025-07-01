@@ -17,7 +17,7 @@ let s = [800, 1800],
             if (t) {
                 let e = t.responseStart;
                 if (e <= 0 || e > performance.now()) return;
-                (a.value = Math.max(e - (0, n.A)(), 0)), (a.entries = [t]), r(!0);
+                ((a.value = Math.max(e - (0, n.A)(), 0)), (a.entries = [t]), r(!0));
             }
         });
     };

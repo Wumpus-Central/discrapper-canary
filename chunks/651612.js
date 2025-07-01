@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854);
+(n.d(t, { Z: () => y }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -27,12 +27,12 @@ function y(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['channelId', 'className']);
@@ -66,9 +66,9 @@ function y(e) {
         event: g.CkL.FOCUS_CHAT_BUTTON,
         handler: E
     });
-    let I = x ? b.intl.string(b.t['5MstTk']) : b.intl.string(b.t.kkKapK),
-        S = [I];
-    O > 0 && S.push(b.intl.formatToPlainString(b.t['3l1GOz'], { mentionCount: O })), j > 0 && S.push(b.intl.string(b.t.x5zAGR));
+    let S = x ? b.intl.string(b.t['5MstTk']) : b.intl.string(b.t.kkKapK),
+        I = [S];
+    (O > 0 && I.push(b.intl.formatToPlainString(b.t['3l1GOz'], { mentionCount: O })), j > 0 && I.push(b.intl.string(b.t.x5zAGR)));
     let P = (0, o.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
         Z = O > 0 ? O : j,
         N = Z > 0;
@@ -81,7 +81,7 @@ function y(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -89,7 +89,7 @@ function y(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -97,8 +97,8 @@ function y(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })(
@@ -106,8 +106,8 @@ function y(e) {
                         isTrayButton: !0,
                         buttonRef: C,
                         onClick: v,
-                        label: I,
-                        'aria-label': S.join(', '),
+                        label: S,
+                        'aria-label': I.join(', '),
                         tooltipPosition: 'top',
                         iconComponent: P === m.MI.NO_CHAT ? a.sXD : a.hic,
                         themeable: !0,

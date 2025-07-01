@@ -4,7 +4,7 @@ var r = a(617726),
     n = a(510529);
 function o(t, e) {
     let a;
-    return (0, r.gv)(t, (t, r) => (e.includes(r) && (a = Array.isArray(t) ? t[1] : void 0), !!a)), a;
+    return ((0, r.gv)(t, (t, r) => (e.includes(r) && (a = Array.isArray(t) ? t[1] : void 0), !!a)), a);
 }
 function i(t, e) {
     return (a) => {
@@ -17,14 +17,14 @@ function i(t, e) {
                 let E = (0, _.U4)(e);
                 if (!E) return;
                 let l = (0, n.U)(E, a.tunnel);
-                (s = r
+                ((s = r
                     ? ((e) => {
                           let a = t(e);
                           return {
                               ...a,
                               send: async (t) => {
                                   let e = o(t, ['event', 'transaction', 'profile', 'replay_event']);
-                                  return e && (e.release = r), a.send(t);
+                                  return (e && (e.release = r), a.send(t));
                               }
                           };
                       })({
@@ -35,7 +35,7 @@ function i(t, e) {
                           ...a,
                           url: l
                       })),
-                    c.set(i, s);
+                    c.set(i, s));
             }
             return [e, s];
         }

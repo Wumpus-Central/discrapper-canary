@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(73800),
     i = n(40851),
     a = n(590921);
@@ -28,7 +28,7 @@ function o(e) {
             }
             if (null == _) return;
             let h = d.document.createRange();
-            h.setStart(_, p), h.setEnd(_, p);
+            (h.setStart(_, p), h.setEnd(_, p));
             let m = h.getBoundingClientRect();
             (null == m ? void 0 : m.height) !== 0 && l(null != m ? m : null);
         }, [d.document, o, u, c, n]);

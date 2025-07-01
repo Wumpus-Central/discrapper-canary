@@ -27,7 +27,7 @@ var r = n(239189),
                 _ = function () {
                     if (!t)
                         try {
-                            m(), e(_);
+                            (m(), e(_));
                         } catch (e) {
                             console.error(e);
                         }
@@ -52,7 +52,7 @@ var r = n(239189),
                         handler: e,
                         cancel: i
                     };
-                return h.splice(a, 0, s), p(), s;
+                return (h.splice(a, 0, s), p(), s);
             };
             var m = (this.advance = function () {
                 var e = r.now();
@@ -70,12 +70,12 @@ var r = n(239189),
                     e > a)
                 ) {
                     var t = Math.min(64, e - a);
-                    (a = e),
+                    ((a = e),
                         r.batchedUpdates(function () {
-                            s.length &&
+                            (s.length &&
                                 (r.willAdvance(s),
                                 (s = s.filter(function (e) {
-                                    return (l = e.priority), e.idle || e.advance(t), !e.idle;
+                                    return ((l = e.priority), e.idle || e.advance(t), !e.idle);
                                 })),
                                 (l = 0)),
                                 u.size &&
@@ -89,19 +89,19 @@ var r = n(239189),
                                         return t(e);
                                     }),
                                     d.clear(),
-                                    (n = !1));
-                        });
+                                    (n = !1)));
+                        }));
                 }
             });
-            (this.start = function (e) {
+            ((this.start = function (e) {
                 l > e.priority ? c.add(e) : (f(e), p());
             }),
                 (this.onFrame = function (e) {
-                    u.add(e), p();
+                    (u.add(e), p());
                 }),
                 (this.onWrite = function (e) {
                     n ? e(a) : d.add(e);
-                });
+                }));
         };
     })();
 function o(e, t) {

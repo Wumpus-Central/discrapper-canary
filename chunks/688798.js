@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(570140),
     i = n(661111),
     a = n(147913),
@@ -28,7 +28,7 @@ function f(e, t) {
 }
 class _ extends a.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
             d(this, 'handleConnectionOpen', async (e) => {
                 try {
@@ -56,7 +56,7 @@ class _ extends a.Z {
                 } finally {
                     r.Z.dispatch({ type: 'CHANGE_LOG_RESOLVED' });
                 }
-            });
+            }));
     }
 }
 let p = new _();

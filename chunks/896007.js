@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => f,
     vE: () => p
 }),
-    n(539854);
+    n(539854));
 var r = n(223892),
     i = n(738774),
     l = n(676317),
@@ -36,7 +36,7 @@ function p(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function p(e) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -52,8 +52,8 @@ function p(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({}, e)),
@@ -72,7 +72,7 @@ function p(e) {
                   }),
             t),
         N = [];
-    N.push({
+    (N.push({
         section: g.HEADER,
         label: '' !== c.toString() ? c.toString() : u.intl.string(u.t['154/bG'])
     }),
@@ -105,7 +105,7 @@ function p(e) {
             label: u.intl.string(u.t.wF3KJy)
         }),
         N.push(m(d.pNK.INTEGRATIONS, y)),
-        N.push(m(d.pNK.APP_DIRECTORY, y));
+        N.push(m(d.pNK.APP_DIRECTORY, y)));
     let I = !c.hasFeature(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
     (p || f || x || I) &&
         (N.push({ section: g.DIVIDER }),
@@ -120,6 +120,6 @@ function p(e) {
         N.push(m(d.pNK.GUILD_AUTOMOD, y)));
     let E = c.hasFeature(d.oNc.COMMUNITY) && j,
         S = C();
-    return (p || E || S) && (N.push({ section: g.DIVIDER }), N.push(m(d.pNK.COMMUNITY, y)), N.push(m(d.pNK.ONBOARDING, y)), N.push(m(d.pNK.ANALYTICS, y)), N.push(m(d.pNK.COMMUNITY_WELCOME, y)), N.push(m(d.pNK.DISCOVERY_LANDING_PAGE, y)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS, y)), N.push(m(d.pNK.GUILD_PRODUCTS, y)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, y))), N.push({ section: g.DIVIDER }), N.push(m(d.pNK.GUILD_PREMIUM, y)), N.push(m(d.pNK.GUILD_TEMPLATES, y)), N.push(m(d.pNK.DELETE, y)), N.filter(o.lm);
+    return ((p || E || S) && (N.push({ section: g.DIVIDER }), N.push(m(d.pNK.COMMUNITY, y)), N.push(m(d.pNK.ONBOARDING, y)), N.push(m(d.pNK.ANALYTICS, y)), N.push(m(d.pNK.COMMUNITY_WELCOME, y)), N.push(m(d.pNK.DISCOVERY_LANDING_PAGE, y)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS, y)), N.push(m(d.pNK.GUILD_PRODUCTS, y)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, y))), N.push({ section: g.DIVIDER }), N.push(m(d.pNK.GUILD_PREMIUM, y)), N.push(m(d.pNK.GUILD_TEMPLATES, y)), N.push(m(d.pNK.DELETE, y)), N.filter(o.lm));
 }
 let f = { generateSections: p };

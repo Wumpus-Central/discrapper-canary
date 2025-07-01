@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r,
     i = n(149765),
     a = n(442837),
@@ -45,19 +45,19 @@ function O(e) {
             f = l.Z.getRoles(n.id);
         for (let t in f) {
             let n = f[t];
-            (0, d.Z)(n) && (r.add(t), (0, d.h)(n) && (i.add(t), u.has(t) && a.add(t))), u.has(t) && y(n) && E.set(e, !0);
+            ((0, d.Z)(n) && (r.add(t), (0, d.h)(n) && (i.add(t), u.has(t) && a.add(t))), u.has(t) && y(n) && E.set(e, !0));
         }
     }
-    return h.set(e, r), g.set(e, a), m.set(e, i), !0;
+    return (h.set(e, r), g.set(e, a), m.set(e, i), !0);
 }
 function v() {
-    let e = c.Z.getGuilds(),
+    let e = c.Z.getGuildsArray(),
         t = new Set();
-    for (let n in e) e[n].hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n);
-    return (b = t), t;
+    for (let n of e) n.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n.id);
+    return ((b = t), t);
 }
 function I() {
-    h.clear(), g.clear(), m.clear(), E.clear(), (b = null);
+    (h.clear(), g.clear(), m.clear(), E.clear(), (b = null));
 }
 function T(e) {
     let {
@@ -65,7 +65,7 @@ function T(e) {
     } = e;
     if ((null == b ? void 0 : b.has(t)) !== !0) return !1;
     let n = new Set(b);
-    n.delete(t), (b = n);
+    (n.delete(t), (b = n));
 }
 function S(e) {
     let {
@@ -77,11 +77,11 @@ function S(e) {
     let r = n.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
     if (r && !b.has(t)) {
         let e = new Set(b);
-        return e.add(t), (b = e), !0;
+        return (e.add(t), (b = e), !0);
     }
     if (!r && b.has(t)) {
         let e = new Set(b);
-        return e.delete(t), (b = e), !0;
+        return (e.delete(t), (b = e), !0);
     }
     return !1;
 }
@@ -106,19 +106,19 @@ class C extends (r = a.ZP.Store) {
     }
     getSubscriptionRoles(e) {
         var t;
-        return this.buildRoles(e), null != (t = h.get(e)) ? t : p;
+        return (this.buildRoles(e), null != (t = h.get(e)) ? t : p);
     }
     getPurchasableSubscriptionRoles(e) {
         var t;
-        return this.buildRoles(e), null != (t = m.get(e)) ? t : p;
+        return (this.buildRoles(e), null != (t = m.get(e)) ? t : p);
     }
     getUserSubscriptionRoles(e) {
         var t;
-        return this.buildRoles(e), null != (t = g.get(e)) ? t : p;
+        return (this.buildRoles(e), null != (t = g.get(e)) ? t : p);
     }
     getUserIsAdmin(e) {
         var t;
-        return this.buildRoles(e), null != (t = E.get(e)) && t;
+        return (this.buildRoles(e), null != (t = E.get(e)) && t);
     }
 }
 _(C, 'displayName', 'SubscriptionRoleStore');

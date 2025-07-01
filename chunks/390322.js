@@ -4,5 +4,5 @@ var r = n(73800),
 function o(e) {
     let { children: t } = e,
         { preventIdle: n, allowIdle: o } = (0, s.Y)('popup');
-    return r.useEffect(() => (n(), () => o()), [o, n]), t;
+    return (r.useEffect(() => (n(), () => o()), [o, n]), t);
 }

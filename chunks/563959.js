@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => f,
-    e: () => h
+    e: () => g
 });
 var r = n(255367),
     i = n(73800),
@@ -43,7 +43,7 @@ function m(e, t) {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
                                               r = Object.keys(n);
-                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                          ('function' == typeof Object.getOwnPropertySymbols &&
                                               (r = r.concat(
                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function m(e, t) {
                                               )),
                                               r.forEach(function (t) {
                                                   var r;
-                                                  (r = n[t]),
+                                                  ((r = n[t]),
                                                       t in e
                                                           ? Object.defineProperty(e, t, {
                                                                 value: r,
@@ -59,8 +59,8 @@ function m(e, t) {
                                                                 configurable: !0,
                                                                 writable: !0
                                                             })
-                                                          : (e[t] = r);
-                                              });
+                                                          : (e[t] = r));
+                                              }));
                                       }
                                       return e;
                                   })({}, e)),
@@ -101,7 +101,7 @@ function f(e) {
             guildId: i.guild_id,
             messageId: t.id
         }),
-        h = m(i, t);
+        g = m(i, t);
     return (0, r.jsx)(s.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
@@ -110,11 +110,11 @@ function f(e) {
             application: u,
             username: c.nick,
             usernameHook: f(c),
-            applicationNameHook: null != u ? h(u) : p.dG4
+            applicationNameHook: null != u ? g(u) : p.dG4
         })
     });
 }
-function h(e) {
+function g(e) {
     let { message: t, channel: i, compact: l } = e,
         c = (0, a.ZP)(t),
         u = t.application,
@@ -124,7 +124,7 @@ function h(e) {
             guildId: i.guild_id,
             messageId: t.id
         }),
-        h = m(i, t);
+        g = m(i, t);
     return (0, r.jsx)(s.Z, {
         icon: n(474019),
         timestamp: t.timestamp,
@@ -133,7 +133,7 @@ function h(e) {
             application: u,
             username: c.nick,
             usernameHook: f(c),
-            applicationNameHook: null != u ? h(u) : p.dG4
+            applicationNameHook: null != u ? g(u) : p.dG4
         })
     });
 }

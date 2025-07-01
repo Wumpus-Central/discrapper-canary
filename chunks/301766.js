@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Q0: () => c,
     ZP: () => u,
     kH: () => l
 }),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(81825),
     i = n(981631),
     a = n(474936);
@@ -36,7 +36,7 @@ class s extends r.Z {
                         },
                         paymentSourcePrices: Object.entries(r.payment_source_prices).reduce((t, n) => {
                             let [r, i] = n;
-                            return (t[r] = i.map((t) => l(t, e.tax_inclusive))), t;
+                            return ((t[r] = i.map((t) => l(t, e.tax_inclusive))), t);
                         }, {})
                     }),
                     t
@@ -120,7 +120,7 @@ class s extends r.Z {
         );
     }
     constructor(e) {
-        super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'interval', void 0), o(this, 'intervalCount', void 0), o(this, 'taxInclusive', void 0), o(this, 'skuId', void 0), o(this, 'currency', void 0), o(this, 'price', void 0), o(this, 'prices', void 0), o(this, 'premiumUserPrice', void 0), o(this, 'fallbackPrice', void 0), o(this, 'fallbackCurrency', void 0), (this.id = e.id), (this.name = e.name), (this.interval = e.interval), (this.intervalCount = e.intervalCount), (this.taxInclusive = e.taxInclusive), (this.skuId = e.skuId), (this.currency = e.currency), (this.price = e.price), (this.premiumUserPrice = e.premiumUserPrice), (this.prices = e.prices), e.fallbackPrice && ((this.fallbackPrice = e.fallbackPrice), (this.fallbackCurrency = e.fallbackCurrency));
+        (super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'interval', void 0), o(this, 'intervalCount', void 0), o(this, 'taxInclusive', void 0), o(this, 'skuId', void 0), o(this, 'currency', void 0), o(this, 'price', void 0), o(this, 'prices', void 0), o(this, 'premiumUserPrice', void 0), o(this, 'fallbackPrice', void 0), o(this, 'fallbackCurrency', void 0), (this.id = e.id), (this.name = e.name), (this.interval = e.interval), (this.intervalCount = e.intervalCount), (this.taxInclusive = e.taxInclusive), (this.skuId = e.skuId), (this.currency = e.currency), (this.price = e.price), (this.premiumUserPrice = e.premiumUserPrice), (this.prices = e.prices), e.fallbackPrice && ((this.fallbackPrice = e.fallbackPrice), (this.fallbackCurrency = e.fallbackCurrency)));
     }
 }
 function l(e, t) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(953529);
+(n.d(t, { Z: () => E }), n(388685), n(953529));
 var l = n(255367),
     i = n(73800),
     r = n(120356),
@@ -15,8 +15,8 @@ var l = n(255367),
     g = n(888592),
     f = n(388032),
     N = n(593673),
-    v = n(216019);
-function p(e) {
+    p = n(216019);
+function v(e) {
     var t;
     let { guildInfo: n, onClick: i, submitting: r } = e,
         s =
@@ -53,7 +53,7 @@ function p(e) {
                 : (0, l.jsx)('img', {
                       className: N.__invalid_arrow,
                       alt: '',
-                      src: v
+                      src: p
                   })
         ]
     });
@@ -61,12 +61,12 @@ function p(e) {
 let E = (e) => {
     let { setStep: t, email: n, guildsInfo: r, setGuildId: a, forceGuildScrollHeight: m } = e,
         [x, h] = i.useState(null),
-        [_, v] = i.useState(void 0),
+        [_, p] = i.useState(void 0),
         [E, S] = i.useState(null),
         I = (e) => async () => {
-            h(null), a(e), S(e);
+            (h(null), a(e), S(e));
             try {
-                await d.Z.sendVerificationEmail(n, !0, e), t(g.tF.VERIFY_PIN);
+                (await d.Z.sendVerificationEmail(n, !0, e), t(g.tF.VERIFY_PIN));
             } catch (e) {
                 h(new u.Hx(e));
             } finally {
@@ -107,12 +107,12 @@ let E = (e) => {
                                     searchIconClassName: N.searchBoxIcon,
                                     closeIconClassName: N.searchBoxIcon,
                                     onChange: (e) => {
-                                        v(e);
+                                        p(e);
                                     },
                                     label: f.intl.string(f.t['5h0QOD']),
                                     searchTerm: _,
                                     onClear: () => {
-                                        v(void 0);
+                                        p(void 0);
                                     }
                                 }),
                                 (0, l.jsx)(c.Text, {
@@ -129,7 +129,7 @@ let E = (e) => {
                                       void 0 === e
                                           ? null
                                           : (0, l.jsx)(
-                                                p,
+                                                v,
                                                 {
                                                     guildInfo: e,
                                                     onClick: I(e.id),

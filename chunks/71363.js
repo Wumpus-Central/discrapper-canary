@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -29,7 +29,7 @@ let v = (e) => {
         N = r.useRef(null),
         y = Object.entries((0, _.Z)()).reduce((e, t) => {
             let [n, i] = t;
-            return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
+            return (!1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e);
         }, {}),
         { analyticsLocations: A } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [P, R] = r.useState(!1),
@@ -53,12 +53,12 @@ let v = (e) => {
                         (0, i.jsx)(f.Z, {
                             className: O.heroHeading,
                             onBackClick: () => {
-                                v(!1),
+                                (v(!1),
                                     p.default.track(j.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: x.MQ.SEE_ALL,
                                         next_component: T,
                                         interaction_component: 'Back Button'
-                                    });
+                                    }));
                             }
                         }),
                         (0, i.jsxs)('div', {

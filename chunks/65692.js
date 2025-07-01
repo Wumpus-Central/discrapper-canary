@@ -1,4 +1,4 @@
-n.d(t, { q: () => g }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
+(n.d(t, { q: () => g }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
 var r = n(73800),
     l = n(250683),
     i = n(512722),
@@ -19,7 +19,7 @@ function g(e) {
         m = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(t)),
         S = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(n)),
         h = r.useCallback((e) => {
-            g(l.fromByteArray(e)), y(!1);
+            (g(l.fromByteArray(e)), y(!1));
         }, []),
         p = r.useCallback(
             async (e, t, n, r) => {

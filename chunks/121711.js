@@ -85,7 +85,7 @@ let Y = function () {
         g = (0, A._)({ location: M.dr.QUEST_HOME_DESKTOP }) ? L.Z : L.j,
         T = (0, w.z)((e) => e.registerAssetLoad),
         H = i.useRef(u);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         H.current = u;
     }),
         i.useEffect(() => {
@@ -101,7 +101,7 @@ let Y = function () {
                     tab: e
                 }
             });
-        }, [e]);
+        }, [e]));
     let { enabled: F } = (0, S.WX)({ location: M.dr.QUEST_HOME_DESKTOP }),
         z = i.useCallback(() => {
             if (F) return void window.open(U.EYA.PAID_TERMS_ORBS);
@@ -132,7 +132,7 @@ let Y = function () {
                                       cardAlignment: N.ek.END,
                                       ctaText: B.intl.string(B.t['J+vlIS']),
                                       ctaOnClick: () => {
-                                          (0, C.Y)({
+                                          ((0, C.Y)({
                                               pageType: U.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                               sectionType: U.jXE.ORBS_BALANCE_MENU,
                                               ctaObject: U.qAy.CTA_TO_ORBS_SHOP
@@ -142,7 +142,7 @@ let Y = function () {
                                                   tab: G.AW.ORBS,
                                                   analyticsLocations: [],
                                                   analyticsSource: d.Z.ORBS_BALANCE_MENU
-                                              });
+                                              }));
                                       }
                                   })
                               }),

@@ -64,7 +64,7 @@ function m(e) {
                                       className: u.createConfirmButton,
                                       color: r.zxk.Colors.BRAND,
                                       onClick: () => {
-                                          (0, c.XU)(n.id), null == m || m();
+                                          ((0, c.XU)(n.id), null == m || m());
                                       },
                                       children: d.intl.string(d.t.DymAQk)
                                   })

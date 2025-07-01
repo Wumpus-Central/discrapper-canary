@@ -1,4 +1,4 @@
-t(388685), t(413496), t(433524), t(35282), t(539854), t(642613), t(415506);
+(t(388685), t(413496), t(433524), t(35282), t(539854), t(642613), t(415506));
 var n = t(658722),
     o = t.n(n),
     l = t(954955),
@@ -10,7 +10,7 @@ function s(e) {
     for (var r = 1; r < arguments.length; r++) {
         var t = null != arguments[r] ? arguments[r] : {},
             n = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -18,7 +18,7 @@ function s(e) {
             )),
             n.forEach(function (r) {
                 var n;
-                (n = t[r]),
+                ((n = t[r]),
                     r in e
                         ? Object.defineProperty(e, r, {
                               value: n,
@@ -26,8 +26,8 @@ function s(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[r] = n);
-            });
+                        : (e[r] = n));
+            }));
     }
     return e;
 }
@@ -73,7 +73,7 @@ function m(e, r) {
     if ('' === l) return S(l, j, e);
     let P = l.toLocaleLowerCase(),
         R = (0, c.Fv)(P);
-    p.forEach((e, r) => {
+    (p.forEach((e, r) => {
         let t;
         if (
             !(function (e, r, t, n, o) {
@@ -88,7 +88,7 @@ function m(e, r) {
         )
             return;
         let { username: n } = e;
-        r === l
+        (r === l
             ? (t = {
                   id: r,
                   username: n,
@@ -101,7 +101,7 @@ function m(e, r) {
                       f = e[l];
                   if ('boolean' == typeof f || null == f || (null != g && l !== v && l !== y && l !== O && g !== l)) return;
                   let p = (0, c._I)(f.toLocaleLowerCase());
-                  m.test(f)
+                  (m.test(f)
                       ? (u = {
                             comparator: f,
                             score: h(10, E[r])
@@ -141,13 +141,13 @@ function m(e, r) {
                                 })(Object(i)).forEach(function (e) {
                                     Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
                                 }),
-                          (t = a));
+                          (t = a)));
               }),
-            null != t && j.push(t);
+            null != t && j.push(t));
     }),
         j.sort(u.Z),
         j.length > a && (j.length = a),
-        S(l, j, e);
+        S(l, j, e));
 }
 function S(e, r, t) {
     let n = {
@@ -169,7 +169,7 @@ self.addEventListener('message', (e) => {
                 let { payload: r } = e,
                     t = !1,
                     n = new Set();
-                r.forEach((e) => {
+                (r.forEach((e) => {
                     var r,
                         { id: o } = e,
                         l = (function (e, r) {
@@ -182,39 +182,39 @@ self.addEventListener('message', (e) => {
                                         n,
                                         o = {},
                                         l = Object.keys(e);
-                                    for (n = 0; n < l.length; n++) (t = l[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
+                                    for (n = 0; n < l.length; n++) ((t = l[n]), r.indexOf(t) >= 0 || (o[t] = e[t]));
                                     return o;
                                 })(e, r);
                             if (Object.getOwnPropertySymbols) {
                                 var l = Object.getOwnPropertySymbols(e);
-                                for (n = 0; n < l.length; n++) (t = l[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                                for (n = 0; n < l.length; n++) ((t = l[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]));
                             }
                             return o;
                         })(e, ['id']);
                     let a = null != (r = p.get(o)) ? r : null,
                         i = s({}, a, l);
-                    p.set(o, i),
+                    (p.set(o, i),
                         d.size > 0 &&
                             ((i.isFriend !== (null == a ? void 0 : a.isFriend) || i.friendNickname !== (null == a ? void 0 : a.friendNickname) || i.isStaff !== (null == a ? void 0 : a.isStaff)) && (t = !0),
                             Object.keys(i).forEach((e) => {
                                 g.has(e) || n.add(e);
-                            }));
+                            })));
                 }),
                     d.forEach((e, r) => {
                         let { filters: o } = e;
                         (null == o || o.friends === t || o.staff === t || n.has(o.guild)) && b.add(r);
                     }),
-                    E();
+                    E());
             })(r);
         case f.QUERY_SET:
             return (function (e) {
                 let { uuid: r, payload: t } = e;
-                d.set(r, t), m(r, t);
+                (d.set(r, t), m(r, t));
             })(r);
         case f.QUERY_CLEAR:
             return (function (e) {
                 let { uuid: r } = e;
-                d.delete(r), b.delete(r), 0 === b.size && E.cancel();
+                (d.delete(r), b.delete(r), 0 === b.size && E.cancel());
             })(r);
     }
 });

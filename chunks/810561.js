@@ -42,7 +42,7 @@ function p(e) {
                         (0, r.jsx)(s.zxk, {
                             grow: !1,
                             onClick: (e) => {
-                                e.stopPropagation(), j();
+                                (e.stopPropagation(), j());
                             },
                             look: s.zxk.Looks.LINK,
                             size: s.zxk.Sizes.MIN,

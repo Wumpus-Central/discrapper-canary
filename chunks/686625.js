@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,13 +20,13 @@ function u(e) {
                 'aria-controls': h,
                 'aria-expanded': f,
                 onClick: () => {
-                    m(!f),
+                    (m(!f),
                         f ||
                             (p({
                                 action: 'PRESS_SECTION',
                                 section: t
                             }),
-                            null == d || d());
+                            null == d || d()));
                 },
                 children: [
                     (0, r.jsxs)(a.X6q, {

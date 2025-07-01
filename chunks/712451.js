@@ -1,4 +1,4 @@
-r.d(t, { default: () => M }), r(388685), r(415506);
+(r.d(t, { default: () => M }), r(388685), r(415506));
 var n = r(255367),
     i = r(73800),
     a = r(120356),
@@ -25,7 +25,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -33,7 +33,7 @@ function y(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -41,8 +41,8 @@ function y(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -213,7 +213,7 @@ function M(e) {
         [Q, ee] = i.useState(0),
         { analyticsLocations: et, newestAnalyticsLocation: er } = (0, d.ZP)(u.Z.IMAGE_CROPPING_MODAL),
         en = 'image/gif' === t.type;
-    i.useEffect(() => {
+    (i.useEffect(() => {
         (0, A.Z)();
     }, []),
         i.useEffect(() => {
@@ -225,10 +225,10 @@ function M(e) {
                     location_stack: et,
                     upload_type: M
                 });
-        }, [S, v, en, et, M]);
+        }, [S, v, en, et, M]));
     let ei = i.useCallback(
             (e, t, r, n) => {
-                (j.current = (0, f.U$)(e, t, r)), null != B.current && (B.current.style.transform = 'translate3d('.concat(j.current.x, 'px, ').concat(j.current.y, 'px, 0) rotate(').concat(n, 'deg)'));
+                ((j.current = (0, f.U$)(e, t, r)), null != B.current && (B.current.style.transform = 'translate3d('.concat(j.current.x, 'px, ').concat(j.current.y, 'px, 0) rotate(').concat(n, 'deg)')));
             },
             [B]
         ),
@@ -276,13 +276,13 @@ function M(e) {
                 let { width: t, height: r } = H,
                     n = (0, f.kH)(t * e, r * e, U),
                     { x: i, y: a } = j.current;
-                ((0, s.inRange)(i, n.right, n.left) && (0, s.inRange)(a, n.top, n.bottom)) || ei(i, a, n, F),
+                (((0, s.inRange)(i, n.right, n.left) && (0, s.inRange)(a, n.top, n.bottom)) || ei(i, a, n, F),
                     L({
                         type: 'SET_IMAGE_ZOOM_RATIO',
                         zoomRatio: e,
                         dragBoundaries: n,
                         imageTransformCoordinates: j.current
-                    });
+                    }));
             },
             [U, H, F, ei]
         ),
@@ -315,7 +315,7 @@ function M(e) {
                     });
             if (H.width !== H.height) {
                 let { newImageDimensions: e, newCropDimensions: i, newDragBoundaries: a } = eu(H, X);
-                ei(r, n, a, t),
+                (ei(r, n, a, t),
                     L({
                         type: 'ROTATE_IMAGE',
                         imageTransformCoordinates: j.current,
@@ -323,33 +323,33 @@ function M(e) {
                         imageDimensions: e,
                         cropDimensions: i,
                         dragBoundaries: a
-                    });
+                    }));
             } else
-                ei(r, n, V, t),
+                (ei(r, n, V, t),
                     L({
                         type: 'ROTATE_IMAGE',
                         imageTransformCoordinates: j.current,
                         imageRotation: t
-                    });
+                    }));
         }, [V, eu, H, F, ei, X]),
         em = i.useCallback(() => {
             if (null != B.current && null != H) {
                 if (H.width !== H.height && (F - 0) % 180 != 0) {
                     let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: r } = eu(H, 1);
-                    L({
+                    (L({
                         type: 'RESET',
                         imageDimensions: e,
                         cropDimensions: t,
                         dragBoundaries: r
                     }),
-                        ei(0, 0, r, 0);
+                        ei(0, 0, r, 0));
                 } else {
                     let e = (0, f.kH)(+H.width, +H.height, U);
-                    L({
+                    (L({
                         type: 'RESET',
                         dragBoundaries: e
                     }),
-                        ei(0, 0, e, 0);
+                        ei(0, 0, e, 0));
                 }
                 ee((e) => e + 1);
             }
@@ -386,7 +386,7 @@ function M(e) {
                         maxDimensions: n,
                         imageRotation: F
                     });
-                    (P.current = a), (e = await i), (P.current = null);
+                    ((P.current = a), (e = await i), (P.current = null));
                 } catch (e) {
                     var i;
                     throw (null == (i = P.current) || i.call(P), (P.current = null), Error('Error cropping GIF: '.concat(e instanceof Error ? e.toString() : String(e))));
@@ -399,7 +399,7 @@ function M(e) {
                     maxDimensions: n,
                     imageRotation: F
                 });
-            await D({
+            (await D({
                 assetOrigin: (function (e) {
                     let { hasImageEdits: t, hasOriginalAsset: r } = e;
                     return r ? (t ? p.q.EDITED_ARCHIVED_ASSET : p.q.ARCHIVED_ASSET) : p.q.NEW_ASSET;
@@ -412,27 +412,27 @@ function M(e) {
                 originalAsset: a
             }),
                 J(!1),
-                x();
+                x());
         }, [U, t, Z, F, en, x, D, a, M]),
         eE = i.useCallback(() => {
             if (null != P.current) {
-                P.current(), (P.current = null), J(!1);
+                (P.current(), (P.current = null), J(!1));
                 return;
             }
             x();
         }, [x]);
-    i.useEffect(
+    (i.useEffect(
         () => (
             window.addEventListener('mouseup', el),
             window.addEventListener('resize', ea),
             () => {
-                window.removeEventListener('mouseup', el), window.removeEventListener('resize', ea);
+                (window.removeEventListener('mouseup', el), window.removeEventListener('resize', ea));
             }
         ),
         [ea, el]
     ),
         i.useEffect(() => {
-            if (Y) return window.addEventListener('mousemove', es), () => window.removeEventListener('mousemove', es);
+            if (Y) return (window.addEventListener('mousemove', es), () => window.removeEventListener('mousemove', es));
         }, [es, Y]),
         i.useEffect(() => {
             if (null != P.current)
@@ -440,7 +440,7 @@ function M(e) {
                     var e;
                     return null == (e = P.current) ? void 0 : e.call(P);
                 };
-        }, []);
+        }, []));
     let eC = M === R.pC.AVATAR || M === R.pC.BANNER,
         ef = (0, g.M)(!eC);
     return (0, n.jsx)(d.Gt, {
@@ -587,12 +587,12 @@ function M(e) {
                                                             n,
                                                             i = {},
                                                             a = Object.keys(e);
-                                                        for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                                                        for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
                                                         return i;
                                                     })(e, t);
                                                 if (Object.getOwnPropertySymbols) {
                                                     var a = Object.getOwnPropertySymbols(e);
-                                                    for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                                                    for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
                                                 }
                                                 return i;
                                             })(e, ['onClick']);

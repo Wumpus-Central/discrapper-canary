@@ -22,7 +22,7 @@ async function l(e, t) {
     return Promise.all(
         (n.match(/url\([^)]+\)/g) || []).map(async (a) => {
             let o = a.replace(r, '$1');
-            return o.startsWith('https://') || (o = new URL(o, e.url).href), (0, i.cd)(o, t.fetchRequestInit, ({ result: e }) => ((n = n.replace(a, `url(${e})`)), [a, e]));
+            return (o.startsWith('https://') || (o = new URL(o, e.url).href), (0, i.cd)(o, t.fetchRequestInit, ({ result: e }) => ((n = n.replace(a, `url(${e})`)), [a, e])));
         })
     ).then(() => n);
 }
@@ -83,7 +83,7 @@ async function u(e, t) {
                     });
                 } catch (a) {
                     let r = e.find((e) => null == e.href) || document.styleSheets[0];
-                    null != n.href &&
+                    (null != n.href &&
                         i.push(
                             s(n.href)
                                 .then((e) => l(e, t))
@@ -96,7 +96,7 @@ async function u(e, t) {
                                     console.error('Error loading remote stylesheet', e);
                                 })
                         ),
-                        console.error('Error inlining remote css file', a);
+                        console.error('Error inlining remote css file', a));
                 }
         }),
         Promise.all(i).then(
@@ -140,6 +140,6 @@ async function p(e, t) {
     if (n) {
         let t = document.createElement('style'),
             r = document.createTextNode(n);
-        t.appendChild(r), e.firstChild ? e.insertBefore(t, e.firstChild) : e.appendChild(t);
+        (t.appendChild(r), e.firstChild ? e.insertBefore(t, e.firstChild) : e.appendChild(t));
     }
 }

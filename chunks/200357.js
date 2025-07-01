@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(35282);
+(n.d(t, { Z: () => C }), n(388685), n(35282));
 var s = n(255367),
     i = n(73800),
     r = n(120356),
@@ -86,12 +86,12 @@ class I extends i.PureComponent {
         this.state.open && this.setState({ open: !1 });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             m(this, 'handleChange', (e) => {
-                this.closePopout(), this.setState({ phone: e.currentTarget.value });
+                (this.closePopout(), this.setState({ phone: e.currentTarget.value }));
             }),
             m(this, 'handleKeyPress', (e) => {
-                this.closePopout(), 13 === e.which && (e.preventDefault(), this.handleSubmit());
+                (this.closePopout(), 13 === e.which && (e.preventDefault(), this.handleSubmit()));
             }),
             m(this, 'handleSubmit', () => {
                 let { onSubmit: e, submitting: t } = this.props,
@@ -108,7 +108,7 @@ class I extends i.PureComponent {
                     countryCode: t,
                     phone: null != n ? n : ''
                 });
-            });
+            }));
         let [t, n] = o.Z.find((e) => 'United States' === e.name).phoneCountryCode.split(' ');
         this.state = {
             countryCode: t,

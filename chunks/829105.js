@@ -3,7 +3,7 @@ var r = n(695170),
     i = (function () {
         function e(e, t) {
             if (isNaN(e.getTime())) throw RangeError('Invalid date passed to DateWithZone');
-            (this.date = e), (this.tzid = t);
+            ((this.date = e), (this.tzid = t));
         }
         return (
             Object.defineProperty(e.prototype, 'isUTC', {

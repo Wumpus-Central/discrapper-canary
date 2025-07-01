@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+(n.d(t, { Z: () => a }), n(388685));
 var r = n(695469);
 function i(e, t, n) {
     return (
@@ -15,10 +15,10 @@ function i(e, t, n) {
 }
 class a extends r.FrameLoop {
     setRAF(e, t) {
-        0 !== this.id && (this._cancelAnimationFrame(this.id), (this.id = 0)), (this._requestAnimationFrame = e), (this._cancelAnimationFrame = t), this.loop();
+        (0 !== this.id && (this._cancelAnimationFrame(this.id), (this.id = 0)), (this._requestAnimationFrame = e), (this._cancelAnimationFrame = t), this.loop());
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             i(this, '_requestAnimationFrame', (e) => requestAnimationFrame(e)),
             i(this, '_cancelAnimationFrame', (e) => cancelAnimationFrame(e)),
             i(this, 'writing', !1),
@@ -59,10 +59,10 @@ class a extends r.FrameLoop {
                     e > this.lastTime)
                 ) {
                     let t = Math.min(64, e - this.lastTime);
-                    (this.lastTime = e),
+                    ((this.lastTime = e),
                         r.Globals.batchedUpdates(() => {
-                            this.animations.length > 0 && (r.Globals.willAdvance(this.animations), (this.animations = this.animations.filter((e) => ((this.priority = e.priority), e.idle || e.advance(t), !e.idle))), (this.priority = 0)), this.frameQueue.size > 0 && (this.frameQueue.forEach((t) => t(e)), this.frameQueue.clear()), this.writeQueue.size > 0 && ((this.writing = !0), this.writeQueue.forEach((t) => t(e)), this.writeQueue.clear(), (this.writing = !1));
-                        });
+                            (this.animations.length > 0 && (r.Globals.willAdvance(this.animations), (this.animations = this.animations.filter((e) => ((this.priority = e.priority), e.idle || e.advance(t), !e.idle))), (this.priority = 0)), this.frameQueue.size > 0 && (this.frameQueue.forEach((t) => t(e)), this.frameQueue.clear()), this.writeQueue.size > 0 && ((this.writing = !0), this.writeQueue.forEach((t) => t(e)), this.writeQueue.clear(), (this.writing = !1)));
+                        }));
                 }
             }),
             i(this, 'start', (e) => {
@@ -80,14 +80,14 @@ class a extends r.FrameLoop {
                         handler: e,
                         cancel: i
                     };
-                return this.timeoutQueue.splice(a, 0, s), this.startLoop(), s;
+                return (this.timeoutQueue.splice(a, 0, s), this.startLoop(), s);
             }),
             i(this, 'onFrame', (e) => {
-                this.frameQueue.add(e), this.startLoop();
+                (this.frameQueue.add(e), this.startLoop());
             }),
             i(this, 'onWrite', (e) => {
                 this.writing ? e(this.lastTime) : this.writeQueue.add(e);
-            });
+            }));
     }
 }
 function o(e, t) {

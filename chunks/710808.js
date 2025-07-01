@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -25,7 +25,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function v(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -41,8 +41,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -107,7 +107,7 @@ function y(e) {
     async function D() {
         d(!0);
         try {
-            await f.Z.getMediaEngine().writeAudioDebugState(), await _.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, m.E)(j.GU0.RTC);
+            (await f.Z.getMediaEngine().writeAudioDebugState(), await _.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, m.E)(j.GU0.RTC));
             let e = O.intl.string(O.t['fKBB8/']),
                 t = O.intl.string(O.t.BvyxEx);
             (0, l.h7j)((n) =>
@@ -184,7 +184,7 @@ function y(e) {
                 children: (0, i.jsx)(l.j7V, {
                     value: P,
                     onChange: (e) => {
-                        (0, x.Z)('stream_info_overlay_enabled', e, P), (0, o.y)({ isStreamInfoOverlayEnabled: e });
+                        ((0, x.Z)('stream_info_overlay_enabled', e, P), (0, o.y)({ isStreamInfoOverlayEnabled: e }));
                     },
                     note: O.intl.string(O.t.kBXuW1),
                     hideBorder: t,

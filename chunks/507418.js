@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(35282);
+(n.d(t, { Z: () => m }), n(35282));
 var r = n(255367);
 n(73800);
 var i = n(512722),
@@ -24,20 +24,20 @@ function m(e, t) {
             });
     }
     if (null != t.interaction && 'SENDING' === t.state) return (0, r.jsx)(r.Fragment, {});
-    let h = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
-    l()(null != h, 'renderUserGuildPopout: user should never be null');
-    let g = d.default.getCurrentUser();
-    l()(null != g, 'renderUserGuildPopout: currentUser should never be null');
-    let _ = u.Z.getChannel(t.channel_id);
+    let g = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
+    l()(null != g, 'renderUserGuildPopout: user should never be null');
+    let _ = d.default.getCurrentUser();
+    l()(null != _, 'renderUserGuildPopout: currentUser should never be null');
+    let h = u.Z.getChannel(t.channel_id);
     return (
-        l()(null != _, 'renderUserGuildPopout: channel should never be null'),
+        l()(null != h, 'renderUserGuildPopout: channel should never be null'),
         (0, r.jsx)(
             c.Z,
             ((m = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function m(e, t) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -53,16 +53,16 @@ function m(e, t) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({}, e)),
             (f = f =
                 {
-                    user: h,
-                    currentUser: g,
-                    guildId: _.guild_id,
+                    user: g,
+                    currentUser: _,
+                    guildId: h.guild_id,
                     channelId: t.channel_id,
                     messageId: t.id
                 }),

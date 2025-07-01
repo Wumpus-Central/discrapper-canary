@@ -14,8 +14,8 @@ var c = a(622916),
     l = a(795927),
     u = a(661129),
     I = a(231550),
-    d = a(428983),
-    R = a(622574),
+    R = a(428983),
+    d = a(622574),
     N = a(288570);
 let f = {},
     A = {};
@@ -40,14 +40,14 @@ function P(t, e) {
         A[t] ||
             ((function (t) {
                 let e = {};
-                'event' === t && (e.durationThreshold = 0),
-                    (0, R.N)(
+                ('event' === t && (e.durationThreshold = 0),
+                    (0, d.N)(
                         t,
                         (e) => {
                             g(t, { entries: e });
                         },
                         e
-                    );
+                    ));
             })(t),
             (A[t] = !0)),
         b(t, e)
@@ -73,40 +73,40 @@ Error:`,
 function D() {
     return (0, l.m)(
         (t) => {
-            g('cls', { metric: t }), (r = t);
+            (g('cls', { metric: t }), (r = t));
         },
         { reportAllChanges: !0 }
     );
 }
 function C() {
     return (0, u.F)((t) => {
-        g('fid', { metric: t }), (_ = t);
+        (g('fid', { metric: t }), (_ = t));
     });
 }
 function v() {
-    return (0, d.N)(
+    return (0, R.N)(
         (t) => {
-            g('lcp', { metric: t }), (n = t);
+            (g('lcp', { metric: t }), (n = t));
         },
         { reportAllChanges: !0 }
     );
 }
 function m() {
     return (0, N.m)((t) => {
-        g('ttfb', { metric: t }), (o = t);
+        (g('ttfb', { metric: t }), (o = t));
     });
 }
 function y() {
     return (0, I.Y)((t) => {
-        g('inp', { metric: t }), (i = t);
+        (g('inp', { metric: t }), (i = t));
     });
 }
 function S(t, e, a, r, _ = !1) {
     let n;
-    return U(t, e), A[t] || ((n = a()), (A[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0);
+    return (U(t, e), A[t] || ((n = a()), (A[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0));
 }
 function U(t, e) {
-    (f[t] = f[t] || []), f[t].push(e);
+    ((f[t] = f[t] || []), f[t].push(e));
 }
 function b(t, e, a) {
     return () => {

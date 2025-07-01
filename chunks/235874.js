@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     K: () => O,
     y: () => y
 }),
     n(415506),
     n(388685),
-    n(49124);
+    n(49124));
 var r,
     i = n(255367),
     a = n(73800),
@@ -30,7 +30,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -72,7 +72,7 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -82,11 +82,11 @@ function m(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 var g = (function (e) {
-    return (e.NONE = '1'), (e.TRANSLATE = '2'), (e.SCALE = '3'), (e.FADE = '4'), e;
+    return ((e.NONE = '1'), (e.TRANSLATE = '2'), (e.SCALE = '3'), (e.FADE = '4'), e);
 })(g || {});
 let E = Object.freeze({
     2: c.l.Types.TRANSLATE,
@@ -138,7 +138,7 @@ class y extends (r = a.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'ref', a.createRef()),
             d(this, 'renderPopout', (e) => {
                 let { renderPopout: t, animation: n = '2', animationPosition: r } = this.props;
@@ -155,7 +155,7 @@ class y extends (r = a.Component) {
                         return t(e);
                 }
                 throw Error('Unsupported animation config: '.concat(JSON.stringify(n)));
-            });
+            }));
     }
 }
 function O(e) {
@@ -164,9 +164,9 @@ function O(e) {
     let r = a.useRef(null),
         [l, c] = a.useState(0);
     function d() {
-        return m(), (0, i.jsx)(i.Fragment, {});
+        return (m(), (0, i.jsx)(i.Fragment, {}));
     }
-    a.useLayoutEffect(() => {
+    (a.useLayoutEffect(() => {
         if (l > 0) {
             var e, t, n, i, a;
             null == (a = r.current) || null == (i = a.ref) || null == (n = i.current) || null == (t = n.layerRef) || null == (e = t.current) || e.updatePosition();
@@ -175,16 +175,16 @@ function O(e) {
         (0, s.ZP)(() => {
             let e = setTimeout(t, 20 + 20 * Math.random());
             return () => clearTimeout(e);
-        });
+        }));
     let _ = a.useRef(!1);
     async function m() {
         if (!_.current) {
             _.current = !0;
             let e = setTimeout(() => {
-                    b(() => g), c((e) => e + 1);
+                    (b(() => g), c((e) => e + 1));
                 }, 300),
                 n = await t();
-            b(() => n), c((e) => e + 1), clearTimeout(e);
+            (b(() => n), c((e) => e + 1), clearTimeout(e));
         }
     }
     function g() {
@@ -206,11 +206,11 @@ function O(e) {
         a.useEffect(() => {
             _.current
                 ? t().then((e) => {
-                      b(() => e), c((e) => e + 1);
+                      (b(() => e), c((e) => e + 1));
                   })
                 : b(() => O.current);
         }, [t]),
         (0, i.jsx)(y, p(f({ ref: r }, n), { renderPopout: E }))
     );
 }
-d(y, 'Animation', g), (O.Animation = g);
+(d(y, 'Animation', g), (O.Animation = g));

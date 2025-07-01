@@ -13,7 +13,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -21,7 +21,7 @@ function g(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -29,8 +29,8 @@ function g(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -73,7 +73,7 @@ function h(e) {
         };
     switch (b.status) {
         case c.O0b.PAST_DUE:
-            (j.cancel.disabled = !0), (j.cancel.subtext = u.intl.string(u.t.WnL6DQ)), (j.uncancel.disabled = !0);
+            ((j.cancel.disabled = !0), (j.cancel.subtext = u.intl.string(u.t.WnL6DQ)), (j.uncancel.disabled = !0));
             break;
         case c.O0b.PAUSE_PENDING:
         case c.O0b.PAUSED:

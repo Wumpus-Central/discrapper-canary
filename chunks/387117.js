@@ -1,4 +1,4 @@
-n.d(t, { V: () => r }), n(388685);
+(n.d(t, { V: () => r }), n(388685));
 let r = {
     Modules: {
         channels: {

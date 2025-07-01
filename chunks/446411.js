@@ -1,11 +1,11 @@
-t.d(l, {
+(t.d(l, {
     BC: () => z,
     ZP: () => q
 }),
     t(388685),
     t(539854),
     t(953529),
-    t(35282);
+    t(35282));
 var n,
     r = t(255367),
     i = t(73800),
@@ -63,7 +63,7 @@ function G(e) {
     for (var l = 1; l < arguments.length; l++) {
         var t = null != arguments[l] ? arguments[l] : {},
             n = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -71,7 +71,7 @@ function G(e) {
             )),
             n.forEach(function (l) {
                 Z(e, l, t[l]);
-            });
+            }));
     }
     return e;
 }
@@ -100,7 +100,7 @@ function z(e) {
         F = null != c && null == c.proxyURL,
         Z = i.useCallback(() => _(!1), [_]),
         G = (e) => {
-            e.preventDefault(), e.stopPropagation(), null == I || I(!1), _(!0), F && (N.S.dispatch(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED), N.S.subscribeOnce(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED, Z));
+            (e.preventDefault(), e.stopPropagation(), null == I || I(!1), _(!0), F && (N.S.dispatch(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED), N.S.subscribeOnce(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED, Z)));
         };
     i.useEffect(
         () => () => {
@@ -116,7 +116,7 @@ function z(e) {
         maxWidth: o,
         maxHeight: u
     });
-    (U = Math.max(Y.width, 150)), (z = Math.max(Y.height, 144));
+    ((U = Math.max(Y.width, 150)), (z = Math.max(Y.height, 144)));
     let q = (0, E.q)(d);
     if (null != c && null != c.proxyURL)
         return (0, r.jsx)('div', {
@@ -158,7 +158,7 @@ function z(e) {
             };
         if (p) {
             let l = 0 !== U ? z / U : 1;
-            (t = {
+            ((t = {
                 maxWidth: o,
                 maxHeight: u,
                 width: void 0,
@@ -174,7 +174,7 @@ function z(e) {
                     left: 0,
                     maxWidth: U,
                     maxHeight: z
-                });
+                }));
         }
         return (0, r.jsx)('div', {
             className: n,
@@ -401,7 +401,7 @@ class q extends (n = i.PureComponent) {
         return (
             l.forEach((l) => {
                 let { rawName: r, rawValue: i, inline: s } = l;
-                s || null == n || (t.push(n), (n = null)), null == n && (n = []), n.push([this.props.renderTitle(e, r), this.props.renderDescription(e, i, !0)]), (3 !== n.length && s) || (t.push(n), (n = null));
+                (s || null == n || (t.push(n), (n = null)), null == n && (n = []), n.push([this.props.renderTitle(e, r), this.props.renderDescription(e, i, !0)]), (3 !== n.length && s) || (t.push(n), (n = null)));
             }),
             null != n && t.push(n),
             (0, r.jsx)('div', {
@@ -495,7 +495,7 @@ class q extends (n = i.PureComponent) {
                 var n, r;
                 this.setState({ isImageHovered: !0 });
                 let e = C.Z.getChannel(null == (n = this.props.message) ? void 0 : n.channel_id);
-                this.props.showImageRecs &&
+                (this.props.showImageRecs &&
                     (0, c.a)({
                         channelId: null != (r = null == e ? void 0 : e.id) ? r : '',
                         location: o.I.CONTEXTUAL_IMAGE,
@@ -505,7 +505,7 @@ class q extends (n = i.PureComponent) {
                         guild_id: null == e ? void 0 : e.guild_id,
                         channel_id: null == e ? void 0 : e.id,
                         image_recommendations_shown: this.props.showImageRecs
-                    });
+                    }));
             } else !e && this.state.isImageHovered && this.setState({ isImageHovered: !1 });
     }
     renderImage() {
@@ -911,7 +911,7 @@ class q extends (n = i.PureComponent) {
     }
     constructor(...e) {
         var l;
-        super(...e),
+        (super(...e),
             (l = this),
             Z(
                 this,
@@ -982,7 +982,7 @@ class q extends (n = i.PureComponent) {
                         })
                     })
                 });
-            });
+            }));
     }
 }
 Z(q, 'defaultProps', {

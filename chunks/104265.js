@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ }), t(388685), t(953529);
+(t.d(n, { Z: () => _ }), t(388685), t(953529));
 var l = t(255367),
     r = t(73800),
     i = t(120356),
@@ -69,7 +69,7 @@ function _(e) {
         if (O)
             return (
                 (I.current = setTimeout(() => {
-                    y(!1), (I.current = null);
+                    (y(!1), (I.current = null));
                 }, 3000)),
                 () => {
                     null != I.current && clearTimeout(I.current);
@@ -87,7 +87,7 @@ function _(e) {
         children: (0, l.jsxs)(u.P3F, {
             className: x.optionButton,
             onClick: () => {
-                y(!i), _(!i);
+                (y(!i), _(!i));
             },
             onMouseDown: () => D(!0),
             onMouseUp: () => D(!1),

@@ -1,4 +1,4 @@
-i.d(t, { Z: () => v }), i(388685);
+(i.d(t, { Z: () => v }), i(388685));
 var n,
     s = i(255367),
     a = i(73800),
@@ -38,7 +38,7 @@ class C extends (n = a.PureComponent) {
             }));
     }
     componentWillUnmount() {
-        this._timeout.stop(), null != this._animItem && (this._animItem.destroy(), (this._animItem = void 0));
+        (this._timeout.stop(), null != this._animItem && (this._animItem.destroy(), (this._animItem = void 0)));
     }
     renderInputs() {
         let { emailError: e, passwordError: t, submitting: i } = this.props,
@@ -136,7 +136,7 @@ class C extends (n = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, '_lottieRef', void 0),
             f(this, '_animItem', null),
             f(this, '_timeout', new h.V7()),
@@ -156,7 +156,7 @@ class C extends (n = a.PureComponent) {
             }),
             f(this, 'handleResendEmail', () => {
                 let { onResend: e, onClose: t } = this.props;
-                e(),
+                (e(),
                     this.state.resent ||
                         (this.setState({
                             resent: !0,
@@ -164,15 +164,15 @@ class C extends (n = a.PureComponent) {
                         }),
                         this._timeout.start(3000, () => {
                             this.state.shouldClose && t();
-                        }));
+                        })));
             }),
             f(this, 'handleChangeEmailClick', () => {
                 let { onChangeEmailClick: e } = this.props;
-                this.setState({
+                (this.setState({
                     resent: !1,
                     shouldClose: !1
                 }),
-                    e();
+                    e());
             }),
             f(this, 'handleEmailChange', (e) => {
                 this.setState({ email: e });
@@ -183,7 +183,7 @@ class C extends (n = a.PureComponent) {
             f(this, 'handleKeyPress', (e) => {
                 let { email: t, password: i } = this.state;
                 13 === e.which && t.length > 0 && i.length > 0 && (e.preventDefault(), this.handleVerify());
-            });
+            }));
     }
 }
 f(C, 'defaultProps', {

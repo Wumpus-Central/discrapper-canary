@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     BB: () => j,
     C$: () => A,
     H9: () => S,
@@ -11,7 +11,7 @@ n.d(t, {
     n(35282),
     n(415506),
     n(539854),
-    n(781311);
+    n(781311));
 var r = n(921738),
     i = n.n(r),
     a = n(392711),
@@ -38,7 +38,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -46,7 +46,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -54,11 +54,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -75,10 +75,10 @@ function h(e, t) {
 }
 let m = __OVERLAY__ ? d.iC$ : (0, c.isLinux)() ? d.HsE : (0, c.isMac)() ? d.REU : (0, c.isWindows)() ? d.iC$ : {},
     g = o().invert(d.HsE);
-(g['223'] = '`'), Object.freeze(g);
+((g['223'] = '`'), Object.freeze(g));
 let E = Object.freeze(o().invert(d.REU)),
     b = o().invert(d.iC$);
-(b['223'] = '`'), Object.freeze(b);
+((b['223'] = '`'), Object.freeze(b));
 let y = o().invert(null != m ? m : {});
 function O(e) {
     return '+' === e ? 'plus' : e;
@@ -174,7 +174,7 @@ function C(e) {
     }
     return null != t ? t : null;
 }
-(0, c.isMac)() || (y['223'] = '`'), Object.freeze(y);
+((0, c.isMac)() || (y['223'] = '`'), Object.freeze(y));
 let R = [
         ['META', '\u2318'],
         ['RIGHT META', 'RIGHT \u2318'],
@@ -229,11 +229,11 @@ function k(e) {
         : e.reduce((e, n) => {
               let r = S(n),
                   i = _({}, t);
-              if (null == r) return e.push(h(_({}, i), { combo: n })), e;
-              if (D.test(r) && L(r)) return (t[x(r)] = !0), e.map((e) => ((e[x(r)] = !0), e));
+              if (null == r) return (e.push(h(_({}, i), { combo: n })), e);
+              if (D.test(r) && L(r)) return ((t[x(r)] = !0), e.map((e) => ((e[x(r)] = !0), e)));
               {
                   let t = A(r, d.CgE.BROWSER);
-                  return null != t && (i.keyCode = t), e.push(i), e;
+                  return (null != t && (i.keyCode = t), e.push(i), e);
               }
           }, []);
 }
@@ -248,7 +248,7 @@ function M(e) {
         .map((e) => e.trim().replace('plus', '+'))
         .reduce((e, r) => {
             let i = A(w(r), t, n);
-            return null != i && e.push([n, i, t]), e;
+            return (null != i && e.push([n, i, t]), e);
         }, []);
 }
 function j(e) {

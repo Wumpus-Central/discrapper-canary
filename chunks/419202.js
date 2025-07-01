@@ -11,15 +11,15 @@ function l(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => i }), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(415506), n(388685), n(259475), n(539854);
+(n.d(t, { Z: () => i }), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(415506), n(388685), n(259475), n(539854));
 class a {
     appendBytes(e) {
         if (this._offset + e.length > this._buffer.length) {
             let t = this._offset + e.length,
                 n = new Uint8Array(Math.pow(2, Math.ceil(Math.log2(Math.max(2 * this._buffer.length, t)))));
-            n.set(this._buffer.subarray(0, this._offset)), (this._buffer = n);
+            (n.set(this._buffer.subarray(0, this._offset)), (this._buffer = n));
         }
-        this._buffer.set(e, this._offset), (this._offset += e.length);
+        (this._buffer.set(e, this._offset), (this._offset += e.length));
     }
     addPage(e) {
         if (e.segments.length > 255) throw Error('Too many segments: '.concat(e.segments.length, ' exceeds limit of ').concat(255));
@@ -43,7 +43,7 @@ class a {
         let i = this._offset;
         for (let t of (this.appendBytes([0, 0, 0, 0, e.segments.length]), this.appendBytes(e.segments.map((e) => e.length)), e.segments)) this.appendBytes(t);
         let s = this._buffer.subarray(l, this._offset).reduce((e, t) => ((e << 8) >>> 0) ^ r[(e >>> 24) ^ t], 0) >>> 0;
-        this._buffer.set([255 & s, (s >> 8) & 255, (s >> 16) & 255, (s >> 24) & 255], i), this._pageSequenceNumber++;
+        (this._buffer.set([255 & s, (s >> 8) & 255, (s >> 16) & 255, (s >> 24) & 255], i), this._pageSequenceNumber++);
     }
     finalize(e) {
         this.addPage({
@@ -53,10 +53,10 @@ class a {
         });
         let t = this._buffer,
             n = this._offset;
-        return (this._buffer = new Uint8Array(4096)), (this._offset = 0), (this._pageSequenceNumber = 0), t.subarray(0, n);
+        return ((this._buffer = new Uint8Array(4096)), (this._offset = 0), (this._pageSequenceNumber = 0), t.subarray(0, n));
     }
     constructor() {
-        l(this, '_buffer', new Uint8Array(4096)), l(this, '_pageSequenceNumber', 0), l(this, '_offset', 0);
+        (l(this, '_buffer', new Uint8Array(4096)), l(this, '_pageSequenceNumber', 0), l(this, '_offset', 0));
     }
 }
 function i(e, t) {
@@ -85,12 +85,12 @@ function i(e, t) {
             }
             return n;
         })(t.buffer);
-        (r += t.numSamples),
+        ((r += t.numSamples),
             i.addPage({
                 pageType: 0,
                 granulePosition: r,
                 segments: e
-            });
+            }));
     }
     return i.finalize(r);
 }

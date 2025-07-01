@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854);
+(n.d(t, { Z: () => y }), n(539854));
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -86,7 +86,7 @@ function N(e) {
                 (0, i.jsx)(o.FXm, {
                     options: g,
                     onChange: (e) => {
-                        c.Z.setNoiseCancellation(2 === e.value, T), c.Z.setNoiseSuppression(1 === e.value, T);
+                        (c.Z.setNoiseCancellation(2 === e.value, T), c.Z.setNoiseSuppression(1 === e.value, T));
                     },
                     value: r ? 2 : +!!s
                 }),

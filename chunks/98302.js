@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(846519),
     i = n(147913),
     a = n(603113),
@@ -28,7 +28,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,7 +46,7 @@ class E extends i.Z {
         __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(u.Z, () => this._handleSpeakingStoreChanged()).set(l.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
     }
     _reset() {
-        (this._currentUserSpeaking = !1), (this._anyoneElseSpeaking = !1), null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null));
+        ((this._currentUserSpeaking = !1), (this._anyoneElseSpeaking = !1), null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null)));
     }
     _trackStartSpeaking() {
         if (this._currentUserSpeaking) {
@@ -95,7 +95,7 @@ class E extends i.Z {
         );
     }
     _terminate() {
-        this._reset(), u.Z.removeChangeListener(this._handleSpeakingStoreChanged), l.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
+        (this._reset(), u.Z.removeChangeListener(this._handleSpeakingStoreChanged), l.Z.removeChangeListener(this._handleRTCConnectionStoreChanged));
     }
     getGameMetadata() {
         let e = c.Z.findActivity((e) => e.type === p.IIU.PLAYING),
@@ -108,7 +108,7 @@ class E extends i.Z {
         };
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             h(this, '_currentUserSpeaking', !1),
             h(this, '_anyoneElseSpeaking', !1),
             h(this, '_voiceChannelId', void 0),
@@ -120,7 +120,7 @@ class E extends i.Z {
                     null == this._reportInterval &&
                         ((this._reportInterval = new r.Xp()),
                         this._reportInterval.start(g, () => {
-                            this._trackStartSpeaking(), this._trackStartListening();
+                            (this._trackStartSpeaking(), this._trackStartListening());
                         }));
                 }
             }),
@@ -129,7 +129,7 @@ class E extends i.Z {
                 this._currentUserSpeaking !== e && ((this._currentUserSpeaking = e), this._trackStartSpeaking());
                 let t = u.Z.isAnyoneElseSpeaking();
                 this._anyoneElseSpeaking !== t && ((this._anyoneElseSpeaking = t), this._trackStartListening());
-            });
+            }));
     }
 }
 let b = new E();

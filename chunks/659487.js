@@ -1,4 +1,4 @@
-n.d(t, { w: () => d }), n(388685);
+(n.d(t, { w: () => d }), n(388685));
 var r = n(356659);
 function i(e, t, n) {
     return (
@@ -17,7 +17,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -25,7 +25,7 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -33,11 +33,11 @@ function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -59,7 +59,7 @@ let l = [
                 applicationName: e.gameName,
                 applicationId: void 0
             });
-            return delete t.gameName, t;
+            return (delete t.gameName, t);
         },
         (e) =>
             s(a({}, e), {
@@ -115,7 +115,7 @@ async function d(e) {
     try {
         t.assert(e, r);
         let n = e;
-        return null == n.version && (n.version = 0), l.slice(n.version).reduce((e, t) => t(e), n);
+        return (null == n.version && (n.version = 0), l.slice(n.version).reduce((e, t) => t(e), n));
     } catch (e) {
         return null;
     }

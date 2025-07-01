@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(539854), n(953529);
+(n.d(t, { Z: () => P }), n(388685), n(539854), n(953529));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -35,12 +35,12 @@ function E(e) {
 }
 function b(e, t, n) {
     let r = E(e);
-    r.set(t, n), h.set(e, r);
+    (r.set(t, n), h.set(e, r));
 }
 function y(e) {
     let { channelId: t } = e,
         n = [...g(t, d.d.ChannelMessage)];
-    n.shift(), b(t, d.d.ChannelMessage, n);
+    (n.shift(), b(t, d.d.ChannelMessage, n));
 }
 let O = (e) => {
     let { files: t, channelId: n, showLargeMessageDialog: r, draftType: i } = e,
@@ -50,11 +50,11 @@ let O = (e) => {
             title: _.intl.string(_.t.wOr6hI),
             body: _.intl.formatToPlainString(_.t['qqyp/f'], { limit: f.dN1 })
         });
-    a().forEach(t, (e) => {
+    (a().forEach(t, (e) => {
         let t = new c.n(e, n, r, o.length);
-        t.upload(), o.push(t);
+        (t.upload(), o.push(t));
     }),
-        b(n, i, o);
+        b(n, i, o));
 };
 function v(e) {
     let { channelId: t, id: n, draftType: r } = e,
@@ -73,11 +73,11 @@ function v(e) {
 function I(e) {
     let { channelId: t, attachmentIds: n, draftType: r } = e,
         i = [...g(t, r)];
-    n.forEach((e) => {
+    (n.forEach((e) => {
         let t = i.findIndex((t) => e === t.id);
         t > -1 && i.splice(t, 1)[0].cancel();
     }),
-        b(t, r, i);
+        b(t, r, i));
 }
 function T(e) {
     let { channelId: t, id: n, filename: r, description: i, spoiler: a, thumbnail: o, draftType: s } = e,
@@ -88,7 +88,7 @@ function S(e) {
     let { channelId: t, id: n, file: r, draftType: i } = e,
         a = [...g(t, i)].filter((e) => e.id !== n),
         o = new c.n(r, t);
-    o.upload(), a.push(o), b(t, i, a);
+    (o.upload(), a.push(o), b(t, i, a));
 }
 function A(e) {
     let { channelId: t, uploads: n, draftType: r } = e;

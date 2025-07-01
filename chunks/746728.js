@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     I: () => f,
     Z: () => m
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,13 +16,13 @@ var r = n(255367),
     h = n(384506);
 function f(e) {
     let { categoryId: t, loadId: n } = e;
-    u.Z.setState({ categoryId: t }),
+    (u.Z.setState({ categoryId: t }),
         c.Z.loadCategoryResults({
             loadId: n,
             categoryId: t,
             query: u.Z.getField('fetchedQuery'),
             languageCode: u.Z.getField('languageCode')
-        });
+        }));
 }
 function g(e) {
     let { loadId: t, categoryId: n, count: l } = e,

@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: 'de',
     pluralRuleFunction: function (e, t) {
         var n = !String(e).split('.')[1];
@@ -24,4 +24,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({
         locale: 'de-LU',
         parentLocale: 'de'
-    });
+    }));

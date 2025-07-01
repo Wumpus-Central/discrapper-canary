@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r = n(73800),
     i = n(836560),
     a = n(327432),
@@ -39,7 +39,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 S(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,11 +55,11 @@ function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -102,7 +102,7 @@ function R(e) {
                 l.Z.addChangeListener(e),
                 s.ZP.addChangeListener(e),
                 () => {
-                    l.Z.removeChangeListener(e), s.ZP.removeChangeListener(e);
+                    (l.Z.removeChangeListener(e), s.ZP.removeChangeListener(e));
                 }
             );
         }, [i]),
@@ -117,14 +117,14 @@ function P(e) {
     let { editor: a, chatInputType: o, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: T, forTests: S, onChangeStart: A, onChangeEnd: N, updateState: C } = e,
         R = a,
         { onChange: P } = R;
-    (R.chatInputType = o),
+    ((R.chatInputType = o),
         (R.windowContext = u),
         (R.previewMarkdown = T),
         (R.composition = null),
         (R.events = new i.EventEmitter()),
         (R.isMac = 'MacIntel' === navigator.platform),
         (R.onChange = () => {
-            R.events.emit('onChange'), P();
+            (R.events.emit('onChange'), P());
         }),
         (R = (0, y.B)(R, !0 === S)),
         (R = (0, b.Z)(R)),
@@ -144,5 +144,5 @@ function P(e) {
                 value: t,
                 selection: n
             });
-        }));
+        })));
 }

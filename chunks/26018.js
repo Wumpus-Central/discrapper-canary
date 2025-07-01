@@ -47,7 +47,7 @@ function o(e) {
 e.exports = function (e) {
     if ('string' != typeof e) throw TypeError('Expected `encodedURI` to be of type `string`, got `' + typeof e + '`');
     try {
-        return (e = e.replace(/\+/g, ' ')), decodeURIComponent(e);
+        return ((e = e.replace(/\+/g, ' ')), decodeURIComponent(e));
     } catch (t) {
         return o(e);
     }

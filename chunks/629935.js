@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     LN: () => a,
     Po: () => s,
     W4: () => m,
@@ -10,7 +10,7 @@ n.d(t, {
     ld: () => o,
     uv: () => l
 }),
-    n(388685);
+    n(388685));
 var r = n(688619),
     i = n.n(r);
 let a = '--theme-base-color-amount',

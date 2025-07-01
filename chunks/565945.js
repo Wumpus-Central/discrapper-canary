@@ -39,31 +39,31 @@ var o = n(898061),
                     var r = t.resolveArguments(e, n),
                         i = r[0],
                         a = r[1];
-                    t.removeClasses(i, 'exit'), t.addClass(i, a ? 'appear' : 'enter', 'base'), t.props.onEnter && t.props.onEnter(e, n);
+                    (t.removeClasses(i, 'exit'), t.addClass(i, a ? 'appear' : 'enter', 'base'), t.props.onEnter && t.props.onEnter(e, n));
                 }),
                 (t.onEntering = function (e, n) {
                     var r = t.resolveArguments(e, n),
                         i = r[0],
                         a = r[1] ? 'appear' : 'enter';
-                    t.addClass(i, a, 'active'), t.props.onEntering && t.props.onEntering(e, n);
+                    (t.addClass(i, a, 'active'), t.props.onEntering && t.props.onEntering(e, n));
                 }),
                 (t.onEntered = function (e, n) {
                     var r = t.resolveArguments(e, n),
                         i = r[0],
                         a = r[1] ? 'appear' : 'enter';
-                    t.removeClasses(i, a), t.addClass(i, a, 'done'), t.props.onEntered && t.props.onEntered(e, n);
+                    (t.removeClasses(i, a), t.addClass(i, a, 'done'), t.props.onEntered && t.props.onEntered(e, n));
                 }),
                 (t.onExit = function (e) {
                     var n = t.resolveArguments(e)[0];
-                    t.removeClasses(n, 'appear'), t.removeClasses(n, 'enter'), t.addClass(n, 'exit', 'base'), t.props.onExit && t.props.onExit(e);
+                    (t.removeClasses(n, 'appear'), t.removeClasses(n, 'enter'), t.addClass(n, 'exit', 'base'), t.props.onExit && t.props.onExit(e));
                 }),
                 (t.onExiting = function (e) {
                     var n = t.resolveArguments(e)[0];
-                    t.addClass(n, 'exit', 'active'), t.props.onExiting && t.props.onExiting(e);
+                    (t.addClass(n, 'exit', 'active'), t.props.onExiting && t.props.onExiting(e));
                 }),
                 (t.onExited = function (e) {
                     var n = t.resolveArguments(e)[0];
-                    t.removeClasses(n, 'exit'), t.addClass(n, 'exit', 'done'), t.props.onExited && t.props.onExited(e);
+                    (t.removeClasses(n, 'exit'), t.addClass(n, 'exit', 'done'), t.props.onExited && t.props.onExited(e));
                 }),
                 (t.resolveArguments = function (e, n) {
                     return t.props.nodeRef ? [t.props.nodeRef.current, e] : [e, n];
@@ -90,14 +90,14 @@ var o = n(898061),
             (n.addClass = function (e, t, n) {
                 var r = this.getClassNames(t)[n + 'ClassName'],
                     i = this.getClassNames('enter').doneClassName;
-                'appear' === t && 'done' === n && i && (r += ' ' + i), 'active' === n && e && (0, u.Q)(e), r && ((this.appliedClasses[t][n] = r), d(e, r));
+                ('appear' === t && 'done' === n && i && (r += ' ' + i), 'active' === n && e && (0, u.Q)(e), r && ((this.appliedClasses[t][n] = r), d(e, r)));
             }),
             (n.removeClasses = function (e, t) {
                 var n = this.appliedClasses[t],
                     r = n.base,
                     i = n.active,
                     a = n.done;
-                (this.appliedClasses[t] = {}), r && f(e, r), i && f(e, i), a && f(e, a);
+                ((this.appliedClasses[t] = {}), r && f(e, r), i && f(e, i), a && f(e, a));
             }),
             (n.render = function () {
                 var e = this.props,
@@ -117,5 +117,5 @@ var o = n(898061),
             t
         );
     })(l.Component);
-(_.defaultProps = { classNames: '' }), (_.propTypes = {});
+((_.defaultProps = { classNames: '' }), (_.propTypes = {}));
 let p = _;

@@ -10,7 +10,7 @@ r(
     },
     {
         deleteAll: function () {
-            for (var e, t = o(this), n = !0, r = 0, i = arguments.length; r < i; r++) (e = a(t, arguments[r])), (n = n && e);
+            for (var e, t = o(this), n = !0, r = 0, i = arguments.length; r < i; r++) ((e = a(t, arguments[r])), (n = n && e));
             return !!n;
         }
     }

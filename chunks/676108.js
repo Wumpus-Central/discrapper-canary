@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -69,13 +69,13 @@ function m(e) {
             (e) => {
                 let { emoji: t, willClose: r } = e,
                     i = n.current;
-                null != t &&
+                (null != t &&
                     null != i &&
                     i.insertEmoji({
                         emoji: t,
                         willClose: r
                     }),
-                    r && (0, l._Q)();
+                    r && (0, l._Q)());
             },
             [n]
         ),
@@ -87,11 +87,11 @@ function m(e) {
                 closePopout: t,
                 onSelectEmoji: (e) => {
                     let { emoji: n, willClose: r } = e;
-                    E({
+                    (E({
                         emoji: n,
                         willClose: r
                     }),
-                        r && t();
+                        r && t());
                 },
                 pickerIntention: u.Hz.COMMUNITY_CONTENT
             });

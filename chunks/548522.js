@@ -1,4 +1,4 @@
-n.d(t, { y: () => f }), n(388685);
+(n.d(t, { y: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(793030),
@@ -22,7 +22,7 @@ function f(e) {
         O = i.useMemo(() => f.length === m.nx, [f]),
         C = i.useCallback(
             (e) => {
-                u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && _(null);
+                (u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && _(null));
             },
             [j, n.id]
         ),
@@ -42,7 +42,7 @@ function f(e) {
             (e, t) => {
                 if (f[e] === t) return;
                 let n = [...f];
-                (n[e] = t), C(n);
+                ((n[e] = t), C(n));
             },
             [f, C]
         ),
@@ -50,7 +50,7 @@ function f(e) {
             (e, t, n) => {
                 let r = f.indexOf(e),
                     i = [...f];
-                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (C(i), null !== j && _(null)) : j !== t && _(t);
+                (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (C(i), null !== j && _(null)) : j !== t && _(t));
             },
             [j, f, C]
         );

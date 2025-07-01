@@ -19,7 +19,7 @@ let s = [],
     l = null;
 function c(e) {
     let { categories: t } = e;
-    (s = t), (l = Date.now());
+    ((s = t), (l = Date.now()));
 }
 class u extends (r = i.ZP.Store) {
     getLastFetchTimeMs() {

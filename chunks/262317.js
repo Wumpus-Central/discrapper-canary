@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     XX: () => R,
     ZP: () => M,
     ul: () => k
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -27,8 +27,8 @@ var r = n(255367),
     j = n(314897),
     O = n(430824),
     E = n(496675),
-    I = n(594174),
-    S = n(979651),
+    S = n(594174),
+    I = n(979651),
     P = n(927923),
     Z = n(70722),
     N = n(388032),
@@ -37,7 +37,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -53,8 +53,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -111,7 +111,7 @@ function k(e) {
 }
 let M = (0, p.$)(function (e) {
     var t;
-    let { collapsed: l, user: p, channel: R, mute: k, localMute: M, localVideoDisabled: D, deaf: L, video: U, embeddedApplication: B, serverMute: F, serverDeaf: G, nick: H, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: eo, location: ea, isSelf: es, application: ec } = e,
+    let { collapsed: l, user: p, channel: R, mute: k, localMute: M, localVideoDisabled: L, deaf: D, video: U, embeddedApplication: B, serverMute: F, serverDeaf: H, nick: G, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: eo, location: ea, isSelf: es, application: ec } = e,
         eu = i.useRef(null),
         [ed, ep] = i.useState(!1),
         eh = () => {
@@ -120,7 +120,7 @@ let M = (0, p.$)(function (e) {
         ef = () => {
             K && (null == ee || ee(p.id));
         },
-        em = () => K && (0, _.p9)(R, S.Z, O.Z, E.Z, m.Z)[0],
+        em = () => K && (0, _.p9)(R, I.Z, O.Z, E.Z, m.Z)[0],
         eg = () => {
             if (!em()) return;
             let e = {
@@ -129,7 +129,7 @@ let M = (0, p.$)(function (e) {
                 channelId: R.id,
                 guildId: R.guild_id
             };
-            j.default.getId() !== p.id && u.default.selectVoiceChannel(R.id), X ? ((0, y.Z)(e), s.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, d.iV)(e), null == ee || ee(p.id);
+            (j.default.getId() !== p.id && u.default.selectVoiceChannel(R.id), X ? ((0, y.Z)(e), s.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, d.iV)(e), null == ee || ee(p.id));
         },
         eb = (e) => {
             (0, c.jW)(e, async () => {
@@ -164,18 +164,18 @@ let M = (0, p.$)(function (e) {
                     disconnected: W,
                     mute: k,
                     localMute: M,
-                    localVideoDisabled: D,
+                    localVideoDisabled: L,
                     isStreaming: K,
                     isGuest: Q,
                     video: U,
                     priority: J,
                     ringing: V,
-                    deaf: L,
-                    nick: H,
+                    deaf: D,
+                    nick: G,
                     collapsed: l,
                     overlap: l,
                     serverMute: F,
-                    serverDeaf: G,
+                    serverDeaf: H,
                     tabIndex: eo,
                     otherClientSessionType: er,
                     voicePlatform: ei,
@@ -207,12 +207,12 @@ let M = (0, p.$)(function (e) {
                                             r,
                                             i = {},
                                             l = Object.keys(e);
-                                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                         return i;
                                     })(e, t);
                                 if (Object.getOwnPropertySymbols) {
                                     var l = Object.getOwnPropertySymbols(e);
-                                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                 }
                                 return i;
                             })(e, ['onClick', 'onContextMenu']);
@@ -248,7 +248,7 @@ let M = (0, p.$)(function (e) {
                   },
             onMouseLeave: el ? void 0 : ef,
             children: (0, r.jsx)(x.Z, {
-                clickTrap: (null == p ? void 0 : p.id) === (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) && ed,
+                clickTrap: (null == p ? void 0 : p.id) === (null == (t = S.default.getCurrentUser()) ? void 0 : t.id) && ed,
                 targetElementRef: eu,
                 user: p,
                 guildId: R.guild_id,

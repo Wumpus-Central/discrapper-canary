@@ -1,6 +1,6 @@
 a.d(e, {
     D: () => f,
-    N: () => R
+    N: () => d
 });
 var r = a(263449),
     _ = a(696486),
@@ -13,8 +13,8 @@ var r = a(263449),
     l = a(501684),
     u = a(108185);
 let I = [],
-    d = new Map();
-function R() {
+    R = new Map();
+function d() {
     if ((0, u.QV)() && i.Z1) {
         let t = (0, l.YF)(({ metric: t }) => {
             let e,
@@ -23,14 +23,14 @@ function R() {
             let l = t.entries.find((e) => e.duration === t.value && N[e.name]);
             if (!l) return;
             let { interactionId: I } = l,
-                R = N[l.name],
+                d = N[l.name],
                 f = a.getOptions(),
                 A = (0, u.XL)(i.Z1 + l.startTime),
                 T = (0, u.XL)(t.value),
                 p = (0, r.nZ)(),
                 L = (0, _.HN)(),
                 h = L ? (0, _.Gx)(L) : void 0,
-                O = (null != I ? d.get(I) : void 0) || h,
+                O = (null != I ? R.get(I) : void 0) || h,
                 P = O ? (0, _.XU)(O).description : p.getScopeData().transactionName,
                 g = p.getUser(),
                 D = a.getIntegrationByName('Replay'),
@@ -53,16 +53,16 @@ function R() {
                 }),
                 S = (0, o.qp)({
                     name: m,
-                    op: `ui.interaction.${R}`,
+                    op: `ui.interaction.${d}`,
                     attributes: y,
                     startTime: A,
                     experimental: { standalone: !0 }
                 });
-            S.addEvent('inp', {
+            (S.addEvent('inp', {
                 [n.E1]: 'millisecond',
                 [n.Wb]: t.value
             }),
-                S.end(A + T);
+                S.end(A + T));
         });
         return () => {
             t();
@@ -105,14 +105,14 @@ function f(t) {
         t.forEach((t) => {
             if (!(0, l.cN)(t) || !a) return;
             let e = t.interactionId;
-            if (null != e && !d.has(e)) {
+            if (null != e && !R.has(e)) {
                 if (I.length > 10) {
                     let t = I.shift();
-                    d.delete(t);
+                    R.delete(t);
                 }
-                I.push(e), d.set(e, a);
+                (I.push(e), R.set(e, a));
             }
         });
     };
-    (0, l._j)('event', e), (0, l._j)('first-input', e);
+    ((0, l._j)('event', e), (0, l._j)('first-input', e));
 }

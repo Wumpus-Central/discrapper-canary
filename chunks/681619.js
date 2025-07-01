@@ -7,14 +7,14 @@ var a = n(255367),
     o = n(616257);
 function c(e) {
     let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
-        p = r.useMemo(
+        x = r.useMemo(
             () =>
                 t.map((e) =>
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 a = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (a = a.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ function c(e) {
                                 )),
                                 a.forEach(function (t) {
                                     var a;
-                                    (a = n[t]),
+                                    ((a = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: a,
@@ -30,8 +30,8 @@ function c(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = a);
-                                });
+                                            : (e[t] = a));
+                                }));
                         }
                         return e;
                     })(
@@ -62,7 +62,7 @@ function c(e) {
                     'div',
                     {
                         className: r,
-                        children: p.map((e) => {
+                        children: x.map((e) => {
                             var r, l;
                             let i = e.cellClassName,
                                 s = { width: 'calc('.concat(null != (l = e.cellWidth) ? l : '1fr', ' - ').concat(16, 'px)') };
@@ -94,7 +94,7 @@ function c(e) {
                     {
                         className: h,
                         onClick: () => (null == d ? void 0 : d(r)),
-                        children: p.map((e) => {
+                        children: x.map((e) => {
                             var n, l;
                             let i = e.cellClassName,
                                 s = {

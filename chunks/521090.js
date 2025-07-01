@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(290780), n(388685);
+(n.d(t, { Z: () => g }), n(290780), n(388685));
 var r = n(106351),
     i = n(212819),
     a = n(588468),
@@ -100,6 +100,6 @@ let g = {
                 options: r
             } = e,
             i = t[n];
-        return r.insertText(h(i), m(i)), { type: d.z2.CHANNEL };
+        return (r.insertText(h(i), m(i)), { type: d.z2.CHANNEL });
     }
 };

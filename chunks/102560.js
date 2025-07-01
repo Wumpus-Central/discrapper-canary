@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(392711),
@@ -17,7 +17,7 @@ let p = (e) => {
         [h, j] = l.useState(null),
         [g, x] = l.useState([]),
         v = l.useCallback(async () => {
-            j(null), j(await c.Z.updateEstimate(t.id, p, g));
+            (j(null), j(await c.Z.updateEstimate(t.id, p, g)));
         }, [p, t.id, g]);
     l.useEffect(() => {
         v();
@@ -109,7 +109,7 @@ let p = (e) => {
                 children: [
                     (0, r.jsx)(s.zxk, {
                         onClick: () => {
-                            c.Z.prune(t.id, p, g), o();
+                            (c.Z.prune(t.id, p, g), o());
                         },
                         children: m.intl.string(m.t['2mIlKS'])
                     }),

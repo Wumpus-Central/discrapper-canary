@@ -8,7 +8,7 @@ function o(e, t, n) {
             let r = 0,
                 o = 0,
                 i = 0;
-            e.forEach((e) => {
+            (e.forEach((e) => {
                 let t = e.image;
                 null != t && (null != t.emoji ? (o += 1) : null != t.stickerId ? (i += 1) : null != t.mediaAttachmentState && (r += 1));
             }),
@@ -19,7 +19,7 @@ function o(e, t, n) {
                     stickers_count: i,
                     allow_multiselect: t,
                     layout_type: n
-                });
+                }));
         }, [e, t, n])
     };
 }

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => p,
     i: () => _
 }),
-    n(953529);
+    n(953529));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -15,7 +15,7 @@ var i = n(442837),
     d = n(982240),
     f = n(533854),
     _ = (function (e) {
-        return (e[(e.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (e[(e.GIFT_MODAL = 1)] = 'GIFT_MODAL'), e;
+        return ((e[(e.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (e[(e.GIFT_MODAL = 1)] = 'GIFT_MODAL'), e);
     })({});
 let p = (e) => {
     let { onRetry: t, errorOrigin: n, errorMessage: _ } = e,

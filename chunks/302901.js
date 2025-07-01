@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Xv: () => O,
     mh: () => y,
     wL: () => E
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -31,7 +31,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,7 +57,7 @@ class m extends i.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'state', { layerContainerElement: null }),
             _(this, 'setLayerContainerElement', (e) => {
                 this.setState({ layerContainerElement: e });
@@ -66,7 +66,7 @@ class m extends i.Component {
                 this,
                 'getContextValue',
                 (0, u.oH)((e) => [e, this.setLayerContainerElement])
-            );
+            ));
     }
 }
 let g = (e) => {
@@ -85,7 +85,7 @@ let g = (e) => {
 };
 function E(e) {
     let t = (0, d.Z)(e, f.layerContainer);
-    return l()(null != t, 'Unexpected missing parent container'), t;
+    return (l()(null != t, 'Unexpected missing parent container'), t);
 }
 function b(e, t) {
     let [n] = e;
@@ -103,5 +103,5 @@ function O(e) {
             Layer: (e) => (0, r.jsx)(y, p({ layerContext: t }, e)),
             layerContext: t
         };
-    return (n.LayerProvider.displayName = ''.concat(e, 'LayerProvider')), (n.LayerContainer.displayName = ''.concat(e, 'LayerContainer')), (n.Layer.displayName = ''.concat(e, 'Layer')), n;
+    return ((n.LayerProvider.displayName = ''.concat(e, 'LayerProvider')), (n.LayerContainer.displayName = ''.concat(e, 'LayerContainer')), (n.Layer.displayName = ''.concat(e, 'Layer')), n);
 }

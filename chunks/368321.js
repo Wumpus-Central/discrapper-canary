@@ -22,10 +22,10 @@ let c = new a.Z('FileSystemStore'),
     d = 10 * o.Z.Millis.MINUTE;
 class f extends r.ZP.Store {
     handlePostConnectionOpen() {
-        return this.refresh(), !1;
+        return (this.refresh(), !1);
     }
     handleAppStateUpdate(e) {
-        return 'active' !== e.state && this.refresh(), !1;
+        return ('active' !== e.state && this.refresh(), !1);
     }
     async refresh() {
         var e, t;
@@ -38,14 +38,14 @@ class f extends r.ZP.Store {
         }
     }
     constructor() {
-        super(i.Z, {
+        (super(i.Z, {
             APP_STATE_UPDATE: (e) => this.handleAppStateUpdate(e),
             POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
         }),
             l(this, 'isLowDisk', !1),
             this.refresh(),
             this.waitFor(s.Z),
-            setInterval(() => this.refresh(), d);
+            setInterval(() => this.refresh(), d));
     }
 }
 let _ = new f();

@@ -1,7 +1,7 @@
 var i, r, n, s, o, d;
-Object.defineProperty(e, '__esModule', { value: !0 }), (e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0);
+(Object.defineProperty(e, '__esModule', { value: !0 }), (e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0));
 let l = a(141716);
-((s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = 'CHAIR'), (s.REQ = 'REQ-PARTICIPANT'), (s.OPT = 'OPT-PARTICIPANT'), (s.NON = 'NON-PARTICIPANT'), ((o = r = e.ICalAttendeeStatus || (e.ICalAttendeeStatus = {})).ACCEPTED = 'ACCEPTED'), (o.TENTATIVE = 'TENTATIVE'), (o.DECLINED = 'DECLINED'), (o.DELEGATED = 'DELEGATED'), (o.NEEDSACTION = 'NEEDS-ACTION'), ((d = n = e.ICalAttendeeType || (e.ICalAttendeeType = {})).INDIVIDUAL = 'INDIVIDUAL'), (d.GROUP = 'GROUP'), (d.RESOURCE = 'RESOURCE'), (d.ROOM = 'ROOM'), (d.UNKNOWN = 'UNKNOWN');
+(((s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = 'CHAIR'), (s.REQ = 'REQ-PARTICIPANT'), (s.OPT = 'OPT-PARTICIPANT'), (s.NON = 'NON-PARTICIPANT'), ((o = r = e.ICalAttendeeStatus || (e.ICalAttendeeStatus = {})).ACCEPTED = 'ACCEPTED'), (o.TENTATIVE = 'TENTATIVE'), (o.DECLINED = 'DECLINED'), (o.DELEGATED = 'DELEGATED'), (o.NEEDSACTION = 'NEEDS-ACTION'), ((d = n = e.ICalAttendeeType || (e.ICalAttendeeType = {})).INDIVIDUAL = 'INDIVIDUAL'), (d.GROUP = 'GROUP'), (d.RESOURCE = 'RESOURCE'), (d.ROOM = 'ROOM'), (d.UNKNOWN = 'UNKNOWN'));
 class u {
     constructor(t, e) {
         if (
@@ -21,7 +21,7 @@ class u {
             !this.event)
         )
             throw Error('`event` option required!');
-        void 0 !== t.name && this.name(t.name), void 0 !== t.email && this.email(t.email), void 0 !== t.mailto && this.mailto(t.mailto), void 0 !== t.status && this.status(t.status), void 0 !== t.role && this.role(t.role), void 0 !== t.rsvp && this.rsvp(t.rsvp), void 0 !== t.type && this.type(t.type), void 0 !== t.delegatedTo && this.delegatedTo(t.delegatedTo), void 0 !== t.delegatedFrom && this.delegatedFrom(t.delegatedFrom), t.delegatesTo && this.delegatesTo(t.delegatesTo), t.delegatesFrom && this.delegatesFrom(t.delegatesFrom), void 0 !== t.x && this.x(t.x);
+        (void 0 !== t.name && this.name(t.name), void 0 !== t.email && this.email(t.email), void 0 !== t.mailto && this.mailto(t.mailto), void 0 !== t.status && this.status(t.status), void 0 !== t.role && this.role(t.role), void 0 !== t.rsvp && this.rsvp(t.rsvp), void 0 !== t.type && this.type(t.type), void 0 !== t.delegatedTo && this.delegatedTo(t.delegatedTo), void 0 !== t.delegatedFrom && this.delegatedFrom(t.delegatedFrom), t.delegatesTo && this.delegatesTo(t.delegatesTo), t.delegatesFrom && this.delegatesFrom(t.delegatesFrom), void 0 !== t.x && this.x(t.x));
     }
     name(t) {
         return void 0 === t ? this.data.name : ((this.data.name = t || null), this);
@@ -52,11 +52,11 @@ class u {
     }
     delegatesTo(t) {
         let e = t instanceof u ? t : this.event.createAttendee(t);
-        return this.delegatedTo(e), e.delegatedFrom(this), e;
+        return (this.delegatedTo(e), e.delegatedFrom(this), e);
     }
     delegatesFrom(t) {
         let e = t instanceof u ? t : this.event.createAttendee(t);
-        return this.delegatedFrom(e), e.delegatedTo(this), e;
+        return (this.delegatedFrom(e), e.delegatedTo(this), e);
     }
     x(t, e) {
         if (void 0 === t) return (0, l.addOrGetCustomAttributes)(this.data);
@@ -76,7 +76,7 @@ class u {
     toString() {
         let t = 'ATTENDEE';
         if (!this.data.email) throw Error('No value for `email` in ICalAttendee given!');
-        return (t += ';ROLE=' + this.data.role), this.data.type && (t += ';CUTYPE=' + this.data.type), this.data.status && (t += ';PARTSTAT=' + this.data.status), this.data.rsvp && (t += ';RSVP=' + this.data.rsvp.toString().toUpperCase()), this.data.delegatedTo && (t += ';DELEGATED-TO="' + this.data.delegatedTo.email() + '"'), this.data.delegatedFrom && (t += ';DELEGATED-FROM="' + this.data.delegatedFrom.email() + '"'), this.data.name && (t += ';CN="' + (0, l.escape)(this.data.name) + '"'), this.data.email && this.data.mailto && (t += ';EMAIL=' + (0, l.escape)(this.data.email)), this.data.x.length && (t += ';' + this.data.x.map(([t, e]) => t.toUpperCase() + '=' + (0, l.escape)(e)).join(';')), (t += ':MAILTO:' + (0, l.escape)(this.data.mailto || this.data.email) + '\r\n');
+        return ((t += ';ROLE=' + this.data.role), this.data.type && (t += ';CUTYPE=' + this.data.type), this.data.status && (t += ';PARTSTAT=' + this.data.status), this.data.rsvp && (t += ';RSVP=' + this.data.rsvp.toString().toUpperCase()), this.data.delegatedTo && (t += ';DELEGATED-TO="' + this.data.delegatedTo.email() + '"'), this.data.delegatedFrom && (t += ';DELEGATED-FROM="' + this.data.delegatedFrom.email() + '"'), this.data.name && (t += ';CN="' + (0, l.escape)(this.data.name) + '"'), this.data.email && this.data.mailto && (t += ';EMAIL=' + (0, l.escape)(this.data.email)), this.data.x.length && (t += ';' + this.data.x.map(([t, e]) => t.toUpperCase() + '=' + (0, l.escape)(e)).join(';')), (t += ':MAILTO:' + (0, l.escape)(this.data.mailto || this.data.email) + '\r\n'));
     }
 }
 e.default = u;

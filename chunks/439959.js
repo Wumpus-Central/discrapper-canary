@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     $0: () => d,
     Tm: () => f,
     ZP: () => p,
     oT: () => _
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(73800),
     i = n(399606),
     a = n(597688),
@@ -15,7 +15,7 @@ var r = n(73800),
     c = n(74538),
     u = n(388032),
     d = (function (e) {
-        return (e.PURCHASE = 'purchase'), (e.PREMIUM_PURCHASE = 'premium_purchase'), (e.PREVIEW = 'preview'), (e.PREMIUM_PREVIEW = 'premium_preview'), e;
+        return ((e.PURCHASE = 'purchase'), (e.PREMIUM_PURCHASE = 'premium_purchase'), (e.PREVIEW = 'preview'), (e.PREMIUM_PREVIEW = 'premium_preview'), e);
     })({});
 let f = { id: 'None' },
     _ = { id: 'Shop' },
@@ -29,7 +29,7 @@ let f = { id: 'None' },
                 (e, r) => {
                     let i = n.get(r.skuId),
                         a = (0, s.qS)(i);
-                    return (a && 0 === e.premium_purchase.length && ((e.premium_purchase = e.premium_preview), (e.premium_preview = [])), a) ? e.premium_purchase.push(r) : null != i ? e.purchase.push(r) : !t && (0, s.G1)(p.get(r.skuId)) ? (e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview).push(r) : e.preview.push(r), e;
+                    return ((a && 0 === e.premium_purchase.length && ((e.premium_purchase = e.premium_preview), (e.premium_preview = [])), a) ? e.premium_purchase.push(r) : null != i ? e.purchase.push(r) : !t && (0, s.G1)(p.get(r.skuId)) ? (e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview).push(r) : e.preview.push(r), e);
                 },
                 {
                     purchase: [],

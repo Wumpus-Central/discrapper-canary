@@ -1,4 +1,4 @@
-r.d(t, { Z: () => o }), r(388685);
+(r.d(t, { Z: () => o }), r(388685));
 var n = r(73800),
     a = r(570140),
     i = r(4646),
@@ -11,7 +11,7 @@ let o = (e) => {
         h = n.useMemo(() => new i.ZP(), []),
         p = n.useCallback(
             (e) => {
-                (e.assetMap = h), r(e);
+                ((e.assetMap = h), r(e));
             },
             [h, r]
         ),
@@ -34,7 +34,7 @@ let o = (e) => {
                                   size: 64,
                                   forcePNG: !0
                               });
-                await h.loadRemoteImage(i, l),
+                (await h.loadRemoteImage(i, l),
                     o(i, n),
                     w(!0),
                     null != x.current && clearTimeout(x.current),
@@ -46,10 +46,10 @@ let o = (e) => {
                                 type: 'POTIONS_SET_CONFETTI_MODE',
                                 enabled: !1
                             });
-                    }, 2500));
+                    }, 2500)));
             }
             let t = E.current;
-            return null != t && ((E.current = void 0), e(t)), a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
+            return (null != t && ((E.current = void 0), e(t)), a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e));
         }, [h, o]),
         n.useEffect(
             () => () => {

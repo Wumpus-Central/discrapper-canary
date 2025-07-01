@@ -13,7 +13,7 @@ async function o(e, t, n) {
     let i = await r.blob();
     return new Promise((e, t) => {
         let a = new FileReader();
-        (a.onerror = t),
+        ((a.onerror = t),
             (a.onloadend = () => {
                 try {
                     e(
@@ -26,7 +26,7 @@ async function o(e, t, n) {
                     t(e);
                 }
             }),
-            a.readAsDataURL(i);
+            a.readAsDataURL(i));
     });
 }
 n.d(t, {
@@ -38,7 +38,7 @@ n.d(t, {
 let s = {};
 function l(e, t, n) {
     let r = e.replace(/\?.*/, '');
-    return n && (r = e), /ttf|otf|eot|woff2?/i.test(r) && (r = r.replace(/.*\//, '')), t ? `[${t}]${r}` : r;
+    return (n && (r = e), /ttf|otf|eot|woff2?/i.test(r) && (r = r.replace(/.*\//, '')), t ? `[${t}]${r}` : r);
 }
 async function c(e, t, n) {
     let i,
@@ -51,7 +51,7 @@ async function c(e, t, n) {
     } catch (r) {
         i = n.imagePlaceholder || '';
         let t = `Failed to fetch resource: ${e}`;
-        r && (t = 'string' == typeof r ? r : r.message), t && console.warn(t);
+        (r && (t = 'string' == typeof r ? r : r.message), t && console.warn(t));
     }
-    return (s[c] = i), i;
+    return ((s[c] = i), i);
 }

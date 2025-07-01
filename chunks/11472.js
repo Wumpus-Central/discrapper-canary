@@ -46,7 +46,7 @@ function a(e) {
                             case 125:
                                 S = 0;
                             case 59 + y:
-                                -1 == M && (P = (0, r.gx)(P, /\f/g, '')), x > 0 && (0, r.to)(P) - O && (0, r.R3)(x > 32 ? u(P + ';', l, a, O - 1) : u((0, r.gx)(P, ' ', '') + ';', l, a, O - 2), h);
+                                (-1 == M && (P = (0, r.gx)(P, /\f/g, '')), x > 0 && (0, r.to)(P) - O && (0, r.R3)(x > 32 ? u(P + ';', l, a, O - 1) : u((0, r.gx)(P, ' ', '') + ';', l, a, O - 2), h));
                                 break;
                             case 59:
                                 P += ';';
@@ -65,10 +65,10 @@ function a(e) {
                                                 e(P, R, R, R, [''], V, 0, f, V);
                                         }
                         }
-                        (b = y = x = 0), (C = M = 1), (E = P = ''), (O = p);
+                        ((b = y = x = 0), (C = M = 1), (E = P = ''), (O = p));
                         break;
                     case 58:
-                        (O = 1 + (0, r.to)(P)), (x = Z);
+                        ((O = 1 + (0, r.to)(P)), (x = Z));
                     default:
                         if (C < 1) {
                             if (123 == I) --C;
@@ -79,10 +79,10 @@ function a(e) {
                                 M = y > 0 ? 1 : ((P += '\f'), -1);
                                 break;
                             case 44:
-                                (f[b++] = ((0, r.to)(P) - 1) * M), (M = 1);
+                                ((f[b++] = ((0, r.to)(P) - 1) * M), (M = 1));
                                 break;
                             case 64:
-                                45 === (0, i.fj)() && (P += (0, i.iF)((0, i.lp)())), (w = (0, i.fj)()), (y = O = (0, r.to)((E = P += (0, i.QU)((0, i.Ud)())))), I++;
+                                (45 === (0, i.fj)() && (P += (0, i.iF)((0, i.lp)())), (w = (0, i.fj)()), (y = O = (0, r.to)((E = P += (0, i.QU)((0, i.Ud)())))), I++);
                                 break;
                             case 45:
                                 45 === Z && 2 == (0, r.to)(P) && (C = 0);

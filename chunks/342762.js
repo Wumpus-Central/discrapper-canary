@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'summerfruit',
         author: 'christopher corley (http://cscorley.github.io/)',
@@ -19,4 +19,4 @@
         base0E: '#AD00A1',
         base0F: '#cc6633'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

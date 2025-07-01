@@ -25,10 +25,10 @@ function h(e, t, n) {
                 'aria-label': f.intl.string(f.t['78fJND']),
                 className: o()(_.iconContainer, _.iconClickable),
                 onClick: (e) => {
-                    e.stopPropagation(), n('');
+                    (e.stopPropagation(), n(''));
                 },
                 onMouseDown: (e) => {
-                    e.preventDefault(), e.stopPropagation();
+                    (e.preventDefault(), e.stopPropagation());
                 },
                 focusProps: {
                     offset: {
@@ -80,7 +80,7 @@ let m = i.forwardRef(function (e, t) {
     );
     let E = h(n, o, a),
         b = (e) => {
-            a(e.currentTarget.value), null == p || p(c.U.SEARCH);
+            (a(e.currentTarget.value), null == p || p(c.U.SEARCH));
         };
     return (0, r.jsx)(l.t, {
         focusTarget: g,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(415506), n(388685);
+(n.d(t, { Z: () => L }), n(415506), n(388685));
 var r = n(274616),
     i = n(710845),
     a = n(893988),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -117,7 +117,7 @@ async function P(e) {
         let e = O[t.id];
         if (null != e) return e;
         let r = await new Promise((e) => n.findLaunchable(t, e));
-        if (null != r) return (O[t.id] = r), r;
+        if (null != r) return ((O[t.id] = r), r);
     }
     throw Error('could not find launchable');
 }

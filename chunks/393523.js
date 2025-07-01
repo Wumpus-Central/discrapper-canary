@@ -6,7 +6,7 @@ var _ = a(578346),
     i = a(395848);
 function c(t) {
     let e = 'history';
-    (0, _.Hj)(e, t), (0, _.D2)(e, s);
+    ((0, _.Hj)(e, t), (0, _.D2)(e, s));
 }
 function s() {
     if (!(0, n.B)()) return;
@@ -17,16 +17,16 @@ function s() {
             if (a) {
                 let t = r,
                     e = String(a);
-                (r = e),
+                ((r = e),
                     (0, _.rK)('history', {
                         from: t,
                         to: e
-                    });
+                    }));
             }
             return t.apply(this, e);
         };
     }
-    (i.m.onpopstate = function (...e) {
+    ((i.m.onpopstate = function (...e) {
         let a = i.m.location.href,
             n = r;
         if (
@@ -42,5 +42,5 @@ function s() {
             } catch (t) {}
     }),
         (0, o.hl)(i.m.history, 'pushState', e),
-        (0, o.hl)(i.m.history, 'replaceState', e);
+        (0, o.hl)(i.m.history, 'replaceState', e));
 }

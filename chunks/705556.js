@@ -28,7 +28,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,7 +57,7 @@ function g(e) {
                   autoFocus: !0,
                   fullWidth: h,
                   onClick: () => {
-                      null == E || E(), v(), (0, s.i)(g);
+                      (null == E || E(), v(), (0, s.i)(g));
                   }
               })
             : (0, r.jsx)(o.yRy, {
@@ -69,7 +69,7 @@ function g(e) {
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
                           onClose: () => {
-                              t(), null == E || E();
+                              (t(), null == E || E());
                           },
                           'aria-label': _.intl.string(_.t.AXIHpa),
                           children: [
@@ -78,7 +78,7 @@ function g(e) {
                                   label: _.intl.string(_.t['PKQB/P']),
                                   subtext: _.intl.string(_.t.VYHWKC),
                                   action: () => {
-                                      I({ action: 'EDIT_GUILD_PROFILE' }), O(), (0, s.i)(g);
+                                      (I({ action: 'EDIT_GUILD_PROFILE' }), O(), (0, s.i)(g));
                                   }
                               }),
                               (0, r.jsx)(o.sNh, {
@@ -86,7 +86,7 @@ function g(e) {
                                   label: _.intl.string(_.t.HmFaFB),
                                   subtext: _.intl.string(_.t['+EERMj']),
                                   action: () => {
-                                      I({ action: 'EDIT_PROFILE' }), v(), (0, s.i)(g);
+                                      (I({ action: 'EDIT_PROFILE' }), v(), (0, s.i)(g));
                                   }
                               })
                           ]

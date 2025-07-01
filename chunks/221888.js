@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(415506), n(388685);
+(n.d(t, { Z: () => L }), n(415506), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -37,7 +37,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -180,14 +180,14 @@ function L(e) {
         R && (k.current.cancel(), x(!1));
     }, [R]);
     let j = i.useCallback(() => {
-            k.current.cancel(), x(!0);
+            (k.current.cancel(), x(!0));
         }, []),
         U = i.useCallback(() => {
             k.current.delay();
         }, []),
         G = i.useCallback(
             (e, t) => {
-                j(),
+                (j(),
                     (0, f.jW)(
                         e,
                         async () => {
@@ -195,7 +195,7 @@ function L(e) {
                             return (n) => (0, r.jsx)(e, N(S({}, n), { user: t }));
                         },
                         { onClose: U }
-                    );
+                    ));
             },
             [U, j]
         );

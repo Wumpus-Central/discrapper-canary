@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(539854);
+(n.d(t, { Z: () => x }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,7 +20,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -36,8 +36,8 @@ function C(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -48,7 +48,7 @@ function x(e) {
         [h, _] = (0, i.useState)(!1),
         y = (0, g.bK)(),
         [x, j] = (0, i.useState)(!1);
-    (0, u.ZP)(() => {
+    ((0, u.ZP)(() => {
         t.isHDStreamSplashed && j(!0);
     }),
         (0, g.Uu)(t),
@@ -74,13 +74,13 @@ function x(e) {
                             );
                     });
             }, [o, u, e]);
-        })(t);
+        })(t));
     let O = () => {
         d(!1);
     };
     (0, g.J)(t, () => {
         if (y) {
-            _(!0), O();
+            (_(!0), O());
             return;
         }
         d(!0);
@@ -90,7 +90,7 @@ function x(e) {
         return () => clearTimeout(e);
     });
     let E = x ? [s.z.HD_STREAMING_POTION_BANNER] : [],
-        [I, S] = (0, p.US)(E);
+        [S, I] = (0, p.US)(E);
     return null == l
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -100,13 +100,13 @@ function x(e) {
                           buyer: l,
                           onEnd: O
                       }),
-                  (h || I === s.z.HD_STREAMING_POTION_BANNER) &&
+                  (h || S === s.z.HD_STREAMING_POTION_BANNER) &&
                       (0, r.jsx)(m.Z, {
                           channel: t,
                           buyer: l,
                           streaming: !0,
                           onClose: () => {
-                              _(!1), x && S(b.L.DISMISS);
+                              (_(!1), x && I(b.L.DISMISS));
                           }
                       })
               ]

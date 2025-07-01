@@ -19,7 +19,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -35,13 +35,13 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
 function y(e) {
-    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isRichPresenceInvite: E = !1, iconClassName: I, look: S, size: P, buttonText: Z, color: N } = e,
+    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isRichPresenceInvite: E = !1, iconClassName: S, look: I, size: P, buttonText: Z, color: N } = e,
         T = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -52,12 +52,12 @@ function y(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['applicationId', 'stream', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'guildScheduledEvent', 'shouldPrioritizeGroupPlusIcon', 'isRichPresenceInvite', 'iconClassName', 'look', 'size', 'buttonText', 'color']);
@@ -66,17 +66,17 @@ function y(e) {
         R = null == y ? void 0 : y.getGuildId(),
         k = (0, o.e7)([p.Z], () => (null != R ? p.Z.getGuild(R) : null), [R]),
         M = (0, o.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
-        D = null == t || O ? a.ejJ : a.gQj,
-        L = null != t ? b.intl.string(b.t['OzOM/v']) : b.intl.string(b.t['6F9ivr']);
+        L = null == t || O ? a.ejJ : a.gQj,
+        D = null != t ? b.intl.string(b.t['OzOM/v']) : b.intl.string(b.t['6F9ivr']);
     return null != M && E
         ? (0, r.jsx)(m.Z, {
               onClick: () => {
-                  null != w && (0, d.v)(w, d.d.INVITE), s.h7(M, !1, A);
+                  (null != w && (0, d.v)(w, d.d.INVITE), s.h7(M, !1, A));
               },
-              iconComponent: D,
-              label: L,
-              iconClassName: I,
-              look: S,
+              iconComponent: L,
+              label: D,
+              iconClassName: S,
+              look: I,
               size: P,
               buttonText: Z,
               color: null != N ? N : void 0
@@ -87,15 +87,15 @@ function y(e) {
                 _(
                     {
                         onClick: () => {
-                            l()(null != k, 'guild cannot be null'),
+                            (l()(null != k, 'guild cannot be null'),
                                 l()(null != y, 'channel cannot be null'),
                                 null != w && (0, d.v)(w, d.d.INVITE),
                                 (function (e) {
                                     let { guild: t, channel: i, streamUserId: l, applicationId: o, appContext: s, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
-                                    null == c || c(),
+                                    (null == c || c(),
                                         (0, a.ZDy)(
                                             async () => {
-                                                let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                                                let { default: e } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
                                                 return (n) => {
                                                     var a, s;
                                                     return (0, r.jsx)(
@@ -131,7 +131,7 @@ function y(e) {
                                                 modalKey: 'stream-invite-modal',
                                                 contextKey: s === g.IlC.POPOUT ? a.u1M : a.z1l
                                             }
-                                        );
+                                        ));
                                 })({
                                     guild: k,
                                     channel: y,
@@ -141,12 +141,12 @@ function y(e) {
                                     exitFullScreen: C,
                                     analyticsLocation: v,
                                     guildScheduledEvent: j
-                                });
+                                }));
                         },
-                        iconComponent: D,
-                        label: L,
-                        iconClassName: I,
-                        look: S,
+                        iconComponent: L,
+                        label: D,
+                        iconClassName: S,
+                        look: I,
                         size: P,
                         color: N,
                         buttonText: Z

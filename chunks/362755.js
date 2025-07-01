@@ -19,14 +19,14 @@ function o(e, t, n) {
     );
 }
 var s = (function (e) {
-    return (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.DONE = 2)] = 'DONE'), e;
+    return ((e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.DONE = 2)] = 'DONE'), e);
 })({});
 let l = 0,
     c = null,
     u = null,
     d = null;
 function f(e) {
-    (l = 1), (c = e.loadId);
+    ((l = 1), (c = e.loadId));
 }
 function _(e) {
     var t, n;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -64,13 +64,13 @@ class P extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             A(this, 'handleWindowMove', (e, t) => {
                 o.Ao(e, t);
             }),
             A(this, 'handleWindowResize', (e) => {
                 o.d7(e, S.cL.VIDEO);
-            });
+            }));
     }
 }
 let w = a.ZP.connectStores([p.Z, s.ZP, O.Z, h.Z, E.Z, y.Z, b.Z, f.Z, m.ZP], (e) => {

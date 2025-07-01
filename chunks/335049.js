@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,8 +17,8 @@ var r = n(255367),
     x = n(592125),
     j = n(271383),
     O = n(485386),
-    y = n(246946),
-    v = n(594174),
+    v = n(246946),
+    y = n(594174),
     _ = n(51144),
     C = n(981631),
     N = n(388032),
@@ -27,7 +27,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -43,8 +43,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -66,7 +66,7 @@ function E(e, t) {
         e
     );
 }
-function w(e) {
+function T(e) {
     let { guild: t, id: l, type: o, isLocked: a, lockTooltipText: c } = e,
         d = !a || null != c;
     s()(d, 'No lockTooltipText provided while isLocked=true');
@@ -88,7 +88,7 @@ function w(e) {
     );
     switch (o) {
         case m.Kw.CHANNEL:
-            return (0, r.jsx)(P, {
+            return (0, r.jsx)(w, {
                 guild: t,
                 id: l,
                 isLocked: a,
@@ -96,7 +96,7 @@ function w(e) {
                 openEntryContextMenu: u
             });
         case m.Kw.ROLE:
-            return (0, r.jsx)(T, {
+            return (0, r.jsx)(P, {
                 guild: t,
                 id: l,
                 isLocked: a,
@@ -113,7 +113,7 @@ function w(e) {
             });
     }
 }
-function P(e) {
+function w(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: a, openEntryContextMenu: s } = e,
         c = (0, b.bD)(t.id),
         {
@@ -174,7 +174,7 @@ function P(e) {
               ]
           });
 }
-function T(e) {
+function P(e) {
     var t;
     let { guild: l, id: a, isLocked: s, lockTooltipText: m } = e,
         b = (0, d.e7)([O.Z], () => O.Z.getRole(l.id, a)),
@@ -228,7 +228,7 @@ function T(e) {
 }
 function Z(e) {
     let { guild: t, id: n, isLocked: i, lockTooltipText: l, openEntryContextMenu: o } = e,
-        a = (0, d.e7)([v.default], () => v.default.getUser(n)),
+        a = (0, d.e7)([y.default], () => y.default.getUser(n)),
         s = (0, d.e7)(
             [j.ZP],
             () => {
@@ -237,7 +237,7 @@ function Z(e) {
             },
             [t.id, n]
         ),
-        c = (0, d.e7)([y.Z], () => y.Z.hidePersonalInformation);
+        c = (0, d.e7)([v.Z], () => v.Z.hidePersonalInformation);
     return null == a
         ? null
         : (0, r.jsxs)('div', {

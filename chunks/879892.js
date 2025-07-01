@@ -1,4 +1,4 @@
-n.d(t, { u: () => v }), n(539854), n(993155), n(388685);
+(n.d(t, { u: () => v }), n(539854), n(993155), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -29,7 +29,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -71,7 +71,7 @@ function b(e, t) {
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -81,7 +81,7 @@ function y(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let O = 'apply-guild-boost-modal';
@@ -103,23 +103,23 @@ async function v(e) {
             { contextKey: D }
         );
     let x = [];
-    u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(a.jg()), x.push((0, o.X8)())), x.length > 0 && (await Promise.allSettled(x));
+    (u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(a.jg()), x.push((0, o.X8)())), x.length > 0 && (await Promise.allSettled(x)));
     let k = (0, f.vx)(c.Z.boostSlots),
         M = k.length,
         j = (e) => {
-            null == v || v(), null == N || N(e);
+            (null == v || v(), null == N || N(e));
         },
         U = () => {
-            null == v || v(),
+            (null == v || v(),
                 null == I || I(),
                 d.default.track(p.rMx.MODAL_DISMISSED, {
                     type: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_section: h.section
-                });
+                }));
         };
     if (M > 0 && (null == y || M >= y)) {
         let e;
-        1 === M ? (e = k.slice(0, 1)) : null != y && (e = k.slice(0, y)),
+        (1 === M ? (e = k.slice(0, 1)) : null != y && (e = k.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
                     let { default: t } = await Promise.all([n.e('22646'), n.e('30419'), n.e('49027')]).then(n.bind(n, 760558));
@@ -130,7 +130,7 @@ async function v(e) {
                             t,
                             E(m({}, a), {
                                 onClose: (e) => {
-                                    i(), j(e);
+                                    (i(), j(e));
                                 },
                                 selectedGuild: A,
                                 locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -142,11 +142,11 @@ async function v(e) {
                 {
                     modalKey: O,
                     onCloseRequest: () => {
-                        (0, i.Mr3)(O), j(!1);
+                        ((0, i.Mr3)(O), j(!1));
                     },
                     contextKey: D
                 }
-            );
+            ));
     } else
         (0, _.Z)({
             analyticsLocations: t,

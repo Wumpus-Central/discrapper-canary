@@ -8,7 +8,7 @@ var r = n(73800),
     c = n(853872);
 function u() {
     let e = (0, i.e7)([c.Z], () => c.Z.getDefaultBillingCountryCode()),
-        t = (0, i.e7)([l.Z], () => l.Z.ipCountryCode),
+        t = (0, i.e7)([l.Z], () => l.Z.ipLocation),
         n = (0, i.e7)([s.default], () => s.default.isAuthenticated());
     return (
         r.useEffect(() => {
@@ -17,11 +17,12 @@ function u() {
             });
         }, [n]),
         r.useEffect(() => {
-            n && !l.Z.ipCountryCodeLoaded && o.GE();
+            n && !l.Z.ipLocationLoaded && o.lC();
         }, [t, n]),
         {
             defaultBillingCountryCode: e,
-            ipCountryCode: t
+            ipCountryCode: null == t ? void 0 : t.countryCode,
+            ipSubdivisionCode: null == t ? void 0 : t.subdivisionCode
         }
     );
 }

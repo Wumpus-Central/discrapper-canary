@@ -20,15 +20,15 @@ var n = r(455412),
             var i = e.apihost || 'https://js.hcaptcha.com';
             delete e.apihost;
             var l = r.document.createElement('script');
-            (l.id = o),
+            ((l.id = o),
                 (l.src = i + '/1/api.js?render=explicit&onload=' + s),
                 (l.async = void 0 === e.loadAsync || e.loadAsync),
                 delete e.loadAsync,
                 (l.onerror = function (e) {
                     return a('script-error');
-                });
+                }));
             var p = (0, c.Ku)(e);
-            (l.src += '' !== p ? '&' + p : ''), t.appendChild(l);
+            ((l.src += '' !== p ? '&' + p : ''), t.appendChild(l));
         });
         return (
             l.push({
@@ -104,7 +104,7 @@ let d = (function (e) {
                     n = e.endpoint,
                     a = e.host,
                     i = e.imghost;
-                p({
+                (p({
                     apihost: t,
                     assethost: r,
                     endpoint: n,
@@ -120,7 +120,7 @@ let d = (function (e) {
                 })
                     .then(this.handleOnLoad)
                     .catch(this.handleError),
-                    (this.apiScriptRequested = !0);
+                    (this.apiScriptRequested = !0));
             }
         }),
         (r.renderCaptcha = function (e) {
@@ -162,18 +162,18 @@ let d = (function (e) {
                 r = this._hcaptcha;
             this.isReady() &&
                 this.setState({ isRemoved: !0 }, function () {
-                    r.remove(t), e && e();
+                    (r.remove(t), e && e());
                 });
         }),
         (r.handleOnLoad = function () {
             var e = this;
             this.setState({ isApiReady: !0 }, function () {
                 var t = (0, c.as)(e.props.scriptLocation);
-                (e._hcaptcha = (0, c.$h)(t).window.hcaptcha),
+                ((e._hcaptcha = (0, c.$h)(t).window.hcaptcha),
                     e.renderCaptcha(function () {
                         var t = e.props.onLoad;
                         t && t();
-                    });
+                    }));
             });
         }),
         (r.handleSubmit = function (e) {
@@ -198,7 +198,7 @@ let d = (function (e) {
             var t = this.props.onError,
                 r = this.state.captchaId,
                 n = this._hcaptcha;
-            this.isReady() && n.reset(r), t && t(e);
+            (this.isReady() && n.reset(r), t && t(e));
         }),
         (r.isReady = function () {
             var e = this.state,
@@ -219,7 +219,7 @@ let d = (function (e) {
             void 0 === e && (e = null);
             var t = this.state.captchaId,
                 r = this._hcaptcha;
-            if (this.isReady()) return e && 'object' != typeof e && (e = null), r.execute(t, e);
+            if (this.isReady()) return (e && 'object' != typeof e && (e = null), r.execute(t, e));
         }),
         (r.setData = function (e) {
             var t = this.state.captchaId,

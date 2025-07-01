@@ -14,7 +14,7 @@ function u(e) {
         guild: t,
         onDismissed: () => n(o.L.UNKNOWN),
         onClick: () => {
-            open(l.Z.getArticleURL(a.BhN.CONNECTION_DETAILS)), n(o.L.UNKNOWN);
+            (open(l.Z.getArticleURL(a.BhN.CONNECTION_DETAILS)), n(o.L.UNKNOWN));
         },
         title: s.intl.string(s.t.YMgaJi),
         message: s.intl.string(s.t['AV/9eX']),

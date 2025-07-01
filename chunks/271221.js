@@ -8,9 +8,9 @@ var e = n(691593),
     a = TypeError,
     p = Math.max,
     l = function (t, r) {
-        (this.set = t), (this.size = p(r, 0)), (this.has = e(t.has)), (this.keys = e(t.keys));
+        ((this.set = t), (this.size = p(r, 0)), (this.has = e(t.has)), (this.keys = e(t.keys)));
     };
-(l.prototype = {
+((l.prototype = {
     getIterator: function () {
         return s(o(i(this.keys, this.set)));
     },
@@ -25,4 +25,4 @@ var e = n(691593),
         var n = u(r);
         if (n < 0) throw new f(c);
         return new l(t, n);
-    });
+    }));

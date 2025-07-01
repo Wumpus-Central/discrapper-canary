@@ -1,8 +1,8 @@
-r.d(t, {
+(r.d(t, {
     A4: () => h,
     b6: () => u.b
 }),
-    r(388685);
+    r(388685));
 var n = r(255367),
     a = r(73800),
     l = r(120356),
@@ -27,7 +27,7 @@ let b = () =>
             [P, S] = (0, a.useState)(!1),
             [A, w] = (0, a.useState)(0.9 * s.D2),
             L = null === l;
-        (0, a.useEffect)(() => {
+        ((0, a.useEffect)(() => {
             L &&
                 !j &&
                 (v(!0),
@@ -37,13 +37,13 @@ let b = () =>
         }, [L, v, j]),
             (0, a.useEffect)(() => {
                 P && !L && v(!1);
-            }, [L, P]);
+            }, [L, P]));
         let k = L || j,
             D = j ? null : l,
             [N, U] = (0, a.useState)(null),
             I = (0, a.useRef)(null),
             T = (0, a.useCallback)(() => {
-                (I.current = null), U(null);
+                ((I.current = null), U(null));
             }, []),
             V = (0, a.useCallback)(
                 (e) => {
@@ -75,7 +75,7 @@ let b = () =>
                                 for (var t = 1; t < arguments.length; t++) {
                                     var r = null != arguments[t] ? arguments[t] : {},
                                         n = Object.keys(r);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (n = n.concat(
                                             Object.getOwnPropertySymbols(r).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -83,7 +83,7 @@ let b = () =>
                                         )),
                                         n.forEach(function (t) {
                                             var n;
-                                            (n = r[t]),
+                                            ((n = r[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: n,
@@ -91,8 +91,8 @@ let b = () =>
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = n);
-                                        });
+                                                    : (e[t] = n));
+                                        }));
                                 }
                                 return e;
                             })(

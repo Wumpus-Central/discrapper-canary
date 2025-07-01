@@ -1,11 +1,11 @@
-n.r(e),
+(n.r(e),
     n.d(e, {
         installApplication: () => p,
         performDefaultLibraryApplicationAction: () => y,
         playApplication: () => r.a,
         repairApplication: () => f,
         updateApplication: () => h
-    });
+    }));
 var i = n(51025),
     r = n(696748),
     l = n(812206),

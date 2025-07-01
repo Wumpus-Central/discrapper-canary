@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(49124);
+(n.d(t, { Z: () => v }), n(388685), n(49124));
 var r = n(570140),
     i = n(147913),
     a = n(710845),
@@ -30,7 +30,7 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -40,7 +40,7 @@ function m(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let g = new a.Z('AVErrorManager');
@@ -105,7 +105,7 @@ class O extends i.Z {
         __OVERLAY__ || (0, u.b)(t, n);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'actions', {
                 MEDIA_ENGINE_SET_AUDIO_ENABLED: this.updateActiveErrors,
                 AUDIO_INPUT_DETECTED: this.updateActiveErrors,
@@ -130,7 +130,7 @@ class O extends i.Z {
                 VIDEO_STREAM_READY_TIMEOUT: this.updateActiveErrors,
                 CLEAR_VIDEO_STREAM_READY_TIMEOUT: this.updateActiveErrors,
                 REPORT_AV_ERROR: this.handleReportAVError
-            });
+            }));
     }
 }
 let v = new O();

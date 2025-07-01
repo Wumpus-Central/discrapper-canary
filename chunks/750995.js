@@ -31,7 +31,7 @@ class m extends o.Z {
     handleChannelSelect(e) {
         let { guildId: t } = e;
         if (null == t || !g(t)) return;
-        (0, p.qz)(), (0, s.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
+        ((0, p.qz)(), (0, s.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL));
         let a = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.L.DISMISS;
             (0, s.EW)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
@@ -47,7 +47,7 @@ class m extends o.Z {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ class m extends o.Z {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -63,15 +63,15 @@ class m extends o.Z {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({}, n)),
                         (l = l =
                             {
                                 onClose: (e) => {
-                                    a(e), n.onClose();
+                                    (a(e), n.onClose());
                                 },
                                 guildId: t,
                                 shouldUpsellCreation: !0

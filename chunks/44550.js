@@ -35,7 +35,7 @@ class g extends (l = s.ZP.Store) {
         return m;
     }
 }
-(i = 'GuildSettingsVanityURLStore'),
+((i = 'GuildSettingsVanityURLStore'),
     (r = 'displayName') in g
         ? Object.defineProperty(g, r, {
               value: i,
@@ -43,20 +43,20 @@ class g extends (l = s.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (g[r] = i);
+        : (g[r] = i));
 let p = new g(a.Z, {
     GUILD_SETTINGS_SET_VANITY_URL: function (e) {
         var t, n;
-        (d = o = null != (t = e.code) ? t : ''), (c = e.uses), (u = null != (n = e.error) ? n : null), (m = !0);
+        ((d = o = null != (t = e.code) ? t : ''), (c = e.uses), (u = null != (n = e.error) ? n : null), (m = !0));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (d = o = null), (c = 0), (u = null), (m = !1);
+        ((d = o = null), (c = 0), (u = null), (m = !1));
     },
     GUILD_SETTINGS_VANITY_URL_RESET: function () {
-        (o = d), (c = 0), (u = null);
+        ((o = d), (c = 0), (u = null));
     },
     GUILD_SETTINGS_VANITY_URL_SET: function (e) {
-        (o = e.code), (c = 0);
+        ((o = e.code), (c = 0));
     },
     GUILD_SETTINGS_VANITY_URL_ERROR: function (e) {
         u = e.error;

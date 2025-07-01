@@ -1,4 +1,4 @@
-n.d(t, { v: () => o }), n(953529);
+(n.d(t, { v: () => o }), n(953529));
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -28,7 +28,7 @@ function o(e) {
                     size: r.zxk.Sizes.SMALL,
                     fullWidth: !0,
                     onClick: () => {
-                        t(s.L.TAKE_ACTION), n();
+                        (t(s.L.TAKE_ACTION), n());
                     },
                     children: l.intl.string(l.t.TYo739)
                 })

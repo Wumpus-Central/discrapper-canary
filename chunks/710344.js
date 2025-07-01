@@ -1,4 +1,4 @@
-n.d(t, { Z: () => i }), n(388685);
+(n.d(t, { Z: () => i }), n(388685));
 var r = n(73800);
 function i(e, t) {
     let [n, i] = r.useState(null),
@@ -24,7 +24,7 @@ function i(e, t) {
                     s = a.indexOf(i),
                     c = a.indexOf(l),
                     d = +(c - s > 0);
-                a.splice(s, 1), (c = a.indexOf(l)), a.splice(c + d, 0, i), t(a);
+                (a.splice(s, 1), (c = a.indexOf(l)), a.splice(c + d, 0, i), t(a));
             },
             [e, n, o, t]
         );

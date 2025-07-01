@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(179360),
     i = n(147913),
     a = n(430824),
@@ -51,13 +51,13 @@ class h extends i.Z {
         t && !0 === n && ((0, l.Fm)(e), (0, r.C0)(e));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'stores', new Map().set(s.Z, this.handleSelectedGuildChange)),
             p(this, 'actions', {
                 GUILD_POWERUP_ENTITLEMENTS_CREATE: this.handleEntitlementUpdate.bind(this),
                 GUILD_POWERUP_ENTITLEMENTS_DELETE: this.handleEntitlementUpdate.bind(this),
                 GUILD_APPLIED_BOOSTS_UPDATE: this.handleAppliedBoostUpdate.bind(this)
-            });
+            }));
     }
 }
 let m = new h();

@@ -45,7 +45,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -53,7 +53,7 @@ function D(e) {
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -90,13 +90,13 @@ function k(e) {
         W = H && k === N.Wt.DM_CHANNEL,
         K = Y === _.u.POPULAR ? C.intl.string(C.t.Kwgrrq) : C.intl.string(C.t.r1huYW),
         z = async (e, t) => {
-            j(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t['4kgVqa'])), j(!1);
+            (j(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t['4kgVqa'])), j(!1));
         };
     (0, o.ZP)(() => {
         null != U && null != D && (y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: U }), z(D, U));
     });
     let q = (e) => {
-            y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != D && z(D, e), G(e);
+            (y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != D && z(D, e), G(e));
         },
         X = (e) => {
             let t = F[e],
@@ -210,13 +210,13 @@ function M(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     function i() {
-        t(),
+        (t(),
             (0, a.pTH)(),
             (0, c.mK)({
                 openInLayer: !1,
                 analyticsLocations: n,
                 analyticsSource: s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL
-            });
+            }));
     }
     return (0, r.jsx)(a.P3F, {
         onClick: i,

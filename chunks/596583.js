@@ -1,4 +1,4 @@
-r.d(t, { Z: () => Z }), r(388685);
+(r.d(t, { Z: () => Z }), r(388685));
 var a = r(255367);
 r(73800);
 var i = r(120356),
@@ -24,7 +24,7 @@ var i = r(120356),
     S = r(388032),
     w = r(974149);
 let b = (e, t) => {
-        u.Z.hasLayers() && (0, x.xf)(), c.Z.openPrivateChannel({ recipientIds: e }), t();
+        (u.Z.hasLayers() && (0, x.xf)(), c.Z.openPrivateChannel({ recipientIds: e }), t());
     },
     N = (e) => {
         let { user: t, trialCreationResult: r, onClose: i } = e,
@@ -44,7 +44,7 @@ let b = (e, t) => {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
                                 a = Object.keys(r);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (a = a.concat(
                                     Object.getOwnPropertySymbols(r).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -52,7 +52,7 @@ let b = (e, t) => {
                                 )),
                                 a.forEach(function (t) {
                                     var a;
-                                    (a = r[t]),
+                                    ((a = r[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: a,
@@ -60,8 +60,8 @@ let b = (e, t) => {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = a);
-                                });
+                                            : (e[t] = a));
+                                }));
                         }
                         return e;
                     })(

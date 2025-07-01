@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(539854);
+(n.d(t, { Z: () => f }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -36,7 +36,7 @@ let m = (e) => {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ let m = (e) => {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -52,8 +52,8 @@ let m = (e) => {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({}, e)),
@@ -102,8 +102,8 @@ let m = (e) => {
             )
             .value();
         for (let e = 0; e < s && f.length < l; e++) f.push((0, r.jsx)(m, { guildId: o }, 'unknown-member-'.concat(e)));
-        let h = c - u - s;
-        for (let e = 0; e < h && f.length < l; e++)
+        let g = c - u - s;
+        for (let e = 0; e < g && f.length < l; e++)
             f.push(
                 (0, r.jsx)(
                     m,
@@ -114,8 +114,8 @@ let m = (e) => {
                     'empty-member-'.concat(e)
                 )
             );
-        let g = Math.max(Math.min(c - f.length, 99), 0);
-        if (1 === g) {
+        let _ = Math.max(Math.min(c - f.length, 99), 0);
+        if (1 === _) {
             let e = n[l];
             f.push(
                 (0, r.jsx)(
@@ -134,10 +134,10 @@ let m = (e) => {
                 className: p.partyMembers,
                 children: [
                     f,
-                    g > 1
+                    _ > 1
                         ? (0, r.jsxs)('div', {
                               className: p.partyMemberOverflow,
-                              children: ['+', g]
+                              children: ['+', _]
                           })
                         : null
                 ]

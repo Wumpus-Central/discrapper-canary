@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(392711),
     s = n.n(r),
     o = n(570140),
@@ -23,19 +23,19 @@ function f(e, t, n) {
 }
 class p extends i.Z {
     _initialize() {
-        (this.loaded = !0), (this.startingTime = Date.now()), a.Z.addChangeListener(this._onStoreChange);
+        ((this.loaded = !0), (this.startingTime = Date.now()), a.Z.addChangeListener(this._onStoreChange));
     }
     _terminate() {
-        (this.loaded = !1),
+        ((this.loaded = !1),
             a.Z.removeChangeListener(this._onStoreChange),
             o.Z.dispatch({
                 type: 'LOCAL_ACTIVITY_UPDATE',
                 socketId: 'clicker-game',
                 activity: void 0
-            });
+            }));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'startingTime', 0),
             f(this, 'loaded', !1),
             f(
@@ -71,7 +71,7 @@ class p extends i.Z {
                     5000,
                     { maxWait: 5000 }
                 )
-            );
+            ));
     }
 }
 let m = new p();

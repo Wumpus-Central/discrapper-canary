@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     default: () => ey,
     e: () => eh
 }),
     n(388685),
-    n(314940);
+    n(314940));
 var r = n(255367),
     i = n(73800),
     a = n(505266),
@@ -78,7 +78,7 @@ function es(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -86,7 +86,7 @@ function es(e) {
             )),
             r.forEach(function (t) {
                 eo(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -94,11 +94,11 @@ function el(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -121,7 +121,7 @@ let eu = 880,
             a = null == n ? void 0 : n.items[0],
             o = (0, f.e7)([R.default], () => {
                 let e = R.default.getCurrentUser();
-                return s()(null != e, 'User cannot be undefined'), e;
+                return (s()(null != e, 'User cannot be undefined'), e);
             });
         return (0, c.EQ)(t.type)
             .with(u.Z.PROFILE_EFFECT, () =>
@@ -430,20 +430,20 @@ let eu = 880,
                                   (0, r.jsx)(_.zxk, {
                                       color: _.Ttl.BRAND,
                                       onClick: () => {
-                                          o(), w.S.dispatch(et.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                                          (o(), w.S.dispatch(et.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {}));
                                       },
                                       children: ei.intl.string(er.default.yfwZu7)
                                   }),
                                   (0, r.jsx)(_.zxk, {
                                       color: _.Ttl.PRIMARY,
                                       onClick: () => {
-                                          o(),
+                                          (o(),
                                               (0, C.Y)({
                                                   pageType: et.ZY5.SHOP_ORBS_TAB,
                                                   sectionType: et.jXE.ORBS_BADGE_REDEMPTION_MODAL,
                                                   ctaObject: et.qAy.CTA_TO_QUEST_HOME
                                               }),
-                                              (0, A.navigateToQuestHome)();
+                                              (0, A.navigateToQuestHome)());
                                       },
                                       children: ei.intl.string(ei.t['H57f4+'])
                                   })
@@ -502,7 +502,7 @@ let eu = 880,
             o = (0, j.hv)('CollectiblesShopGiftButton'),
             s = i.useCallback(
                 (e) => {
-                    e.stopPropagation(),
+                    (e.stopPropagation(),
                         (0, b.Z)({
                             skuId: n.skuId,
                             isGift: !0,
@@ -512,7 +512,7 @@ let eu = 880,
                             onClose: (e) => {
                                 e && t();
                             }
-                        });
+                        }));
                 },
                 [n.skuId, a, o, t]
             );
@@ -535,11 +535,11 @@ let eu = 880,
             [d] = t.items,
             f = i.useCallback(() => {
                 if ((n(), (0, p.xf)(), c(), t.type === u.Z.AVATAR_DECORATION)) {
-                    s()(d.type === u.Z.AVATAR_DECORATION, 'product type and item type are the same'),
+                    (s()(d.type === u.Z.AVATAR_DECORATION, 'product type and item type are the same'),
                         (0, E.ps)({
                             initialSelectedDecoration: d,
                             analyticsLocations: o
-                        });
+                        }));
                     return;
                 }
                 t.type === u.Z.PROFILE_EFFECT &&

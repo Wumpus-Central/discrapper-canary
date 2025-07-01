@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -26,7 +26,7 @@ function _() {
 }
 class p extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.default, s.Z),
+        (this.waitFor(l.default, s.Z),
             Object.defineProperties(this, {
                 isDeveloper: {
                     configurable: !1,
@@ -35,7 +35,7 @@ class p extends (r = i.ZP.Store) {
                 }
             }),
             _(),
-            setTimeout(() => Object.freeze(this));
+            setTimeout(() => Object.freeze(this)));
     }
     getExperimentDescriptor() {
         return f
@@ -49,7 +49,7 @@ class p extends (r = i.ZP.Store) {
             : null;
     }
     constructor(...e) {
-        super(...e), d(this, 'isDeveloper', !1);
+        (super(...e), d(this, 'isDeveloper', !1));
     }
 }
 d(p, 'displayName', 'DeveloperExperimentStore');

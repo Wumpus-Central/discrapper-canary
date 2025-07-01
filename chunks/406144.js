@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => a });
+(r.r(t), r.d(t, { default: () => a }));
 var a = {
     payButton: 'Betala',
     'payButton.redirecting': 'Omdirigerar\u2026',

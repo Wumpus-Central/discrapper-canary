@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(539854);
+(n.d(t, { Z: () => g }), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -56,7 +56,7 @@ function g(e) {
         L = i.useCallback(() => {
             l.Z.open(h.oAB.AUTHORIZED_APPS);
             let e = '';
-            null != E ? (e = E.name) : null != g && (e = g.username), '' !== e && d.J.setState({ searchQuery: e }), null == O || O();
+            (null != E ? (e = E.name) : null != g && (e = g.username), '' !== e && d.J.setState({ searchQuery: e }), null == O || O());
         }, [E, O, g]);
     if (y === h.IlC.POPOUT) return null;
     let x = [];

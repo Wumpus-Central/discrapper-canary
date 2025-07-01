@@ -1,4 +1,4 @@
-l.d(t, { default: () => L }), l(388685), l(953529), l(35282);
+(l.d(t, { default: () => L }), l(388685), l(953529), l(35282));
 var n = l(255367),
     i = l(73800),
     s = l(120356),
@@ -100,7 +100,7 @@ let _ = (e) => {
 async function B(e) {
     let t = await (0, N.fD)(e),
         l = new Image();
-    (l.src = t), await l.decode();
+    ((l.src = t), await l.decode());
     let n = (0, o.Ae)(l, 320, 320);
     return (0, N.Bo)(n, e.name, 'image/png');
 }
@@ -147,14 +147,14 @@ function L(e) {
                 });
             }
             if (n.size > q) {
-                eo({
+                (eo({
                     message: C.intl.formatToPlainString(C.t['3eK7Rk'], { maxSize: (0, b.IC)(q, { useKibibytes: !0 }) }),
                     isBlocking: null == J.file
                 }),
                     h.default.track(w.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
                         size: n.size,
                         filetype: n.type
-                    });
+                    }));
                 return;
             }
             let i = (0, O.Zv)(n.type);
@@ -165,23 +165,23 @@ function L(e) {
                         isBlocking: !0
                     });
                 let e = new FileReader();
-                e.addEventListener('load', () => {
-                    W({
+                (e.addEventListener('load', () => {
+                    (W({
                         id: (0, r.Z)(),
                         formatType: i,
                         content: e.result
                     }),
-                        eo(null);
+                        eo(null));
                 }),
-                    e.readAsText(n);
+                    e.readAsText(n));
             } else {
                 let e = await (0, N.fD)(n);
-                W({
+                (W({
                     id: (0, r.Z)(),
                     formatType: i,
                     content: e
                 }),
-                    eo(null);
+                    eo(null));
             }
             Q({
                 file: n,
@@ -201,7 +201,7 @@ function L(e) {
                     });
                 else {
                     let e = new FormData();
-                    e.append('name', X),
+                    (e.append('name', X),
                         e.append('tags', r),
                         e.append('description', en),
                         (null == J ? void 0 : J.file) != null && e.append('file', J.file),
@@ -213,15 +213,15 @@ function L(e) {
                             platform: 'web'
                         }),
                         z(!0),
-                        (0, d.showToast)((0, d.createToast)(C.intl.string(C.t.QR85gY), d.ToastType.SUCCESS));
+                        (0, d.showToast)((0, d.createToast)(C.intl.string(C.t.QR85gY), d.ToastType.SUCCESS)));
                 }
                 K();
             } catch (e) {
-                eo({
+                (eo({
                     message: e.body.message,
                     isBlocking: !1
                 }),
-                    z(!1, e.body.message);
+                    z(!1, e.body.message));
             } finally {
                 ea(!1);
             }
@@ -332,7 +332,7 @@ function L(e) {
                                                             for (var t = 1; t < arguments.length; t++) {
                                                                 var l = null != arguments[t] ? arguments[t] : {},
                                                                     n = Object.keys(l);
-                                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                                     (n = n.concat(
                                                                         Object.getOwnPropertySymbols(l).filter(function (e) {
                                                                             return Object.getOwnPropertyDescriptor(l, e).enumerable;
@@ -340,7 +340,7 @@ function L(e) {
                                                                     )),
                                                                     n.forEach(function (t) {
                                                                         var n;
-                                                                        (n = l[t]),
+                                                                        ((n = l[t]),
                                                                             t in e
                                                                                 ? Object.defineProperty(e, t, {
                                                                                       value: n,
@@ -348,8 +348,8 @@ function L(e) {
                                                                                       configurable: !0,
                                                                                       writable: !0
                                                                                   })
-                                                                                : (e[t] = n);
-                                                                    });
+                                                                                : (e[t] = n));
+                                                                    }));
                                                             }
                                                             return e;
                                                         })(

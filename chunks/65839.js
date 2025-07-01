@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(642613);
+(n.d(t, { Z: () => j }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -68,14 +68,14 @@ function v(e) {
     let { guild: t, directoryEntries: n, handleCreateOrAddGuild: i, isLoading: l } = e,
         c = (0, a.e7)([d.Z], () => d.Z.can(m.Plq.ADMINISTRATOR, t)),
         u = [];
-    null != n &&
+    (null != n &&
         n.forEach((e) => {
             u = u.concat(e.entries);
         }),
         u.sort((e, t) => {
             var n, r;
             return (null != (n = t.approximateMemberCount) ? n : 0) - (null != (r = e.approximateMemberCount) ? r : 0);
-        });
+        }));
     let f = p.ZP.getGuildSplashURL({
         id: t.id,
         splash: t.splash
@@ -121,10 +121,10 @@ function v(e) {
 }
 let j = (e) => {
     let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: o, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: y, handleSelectCategory: C, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
-        I = (0, a.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
-    return null != I && I.hasFeature(m.oNc.SHARD)
+        S = (0, a.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
+    return null != S && S.hasFeature(m.oNc.SHARD)
         ? (0, r.jsx)(v, {
-              guild: I,
+              guild: S,
               directoryEntries: n,
               handleCreateOrAddGuild: l,
               isLoading: E

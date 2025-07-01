@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     o = n(73800),
     i = n(120356),
@@ -180,7 +180,7 @@ class v extends o.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             k(this, 'scrollerRef', o.createRef()),
             k(this, 'handleScroll', () => {
                 let { current: e } = this.scrollerRef;
@@ -216,7 +216,7 @@ class v extends o.PureComponent {
                         })
                     ]
                 });
-            });
+            }));
     }
 }
 let E = v;

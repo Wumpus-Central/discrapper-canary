@@ -143,6 +143,7 @@ var r = (function (e) {
         (e.USER_MENTION = 'user mention'),
         (e.ROLE_MENTION = 'role mention'),
         (e.CONNECTIONS_ROLE_POPOUT = 'connections role popout'),
+        (e.GAME_MENU = 'game menu'),
         (e.GUILD_PROFILE = 'guild profile'),
         (e.EDIT_AVATAR = 'edit avatar'),
         (e.EDIT_BANNER = 'edit banner'),

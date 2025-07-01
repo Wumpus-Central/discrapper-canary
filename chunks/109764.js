@@ -17,12 +17,12 @@ function f(e, t, n) {
               id: 'channel-copy-link',
               label: c.intl.string(c.t.WqhZsr),
               action: () => {
-                  e.isForumPost() &&
+                  (e.isForumPost() &&
                       (0, a.B)({
                           postId: e.id,
                           location: { section: u.jXE.CONTEXT_MENU }
                       }),
-                      (0, d.JG)((0, s.EO)(e, f, t, n));
+                      (0, d.JG)((0, s.EO)(e, f, t, n)));
               }
           });
 }

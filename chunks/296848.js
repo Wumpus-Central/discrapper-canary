@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AT: () => E,
     GY: () => m,
     R4: () => h,
@@ -8,7 +8,7 @@ n.d(t, {
 }),
     n(388685),
     n(539854),
-    n(73800);
+    n(73800));
 var r = n(512722),
     i = n.n(r),
     a = n(913527),
@@ -23,7 +23,7 @@ var l = n(821849),
 function _(e) {
     return e.items.map((e) => {
         let t = c.Z.get(e.planId);
-        return i()(null != t, 'Unable to fetch plan'), t;
+        return (i()(null != t, 'Unable to fetch plan'), t);
     });
 }
 function p(e) {

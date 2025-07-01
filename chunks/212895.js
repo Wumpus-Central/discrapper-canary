@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     DE: () => g,
     gr: () => b,
     i1: () => m,
     tD: () => E
 }),
     n(388685),
-    n(49124);
+    n(49124));
 var r = n(73800),
     i = n(512722),
     a = n.n(i),
@@ -33,7 +33,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -53,7 +53,7 @@ function m(e) {
         : new Promise((e, n) => {
               o.Z.wait(async () => {
                   try {
-                      await (0, s.Gn)(t), e();
+                      (await (0, s.Gn)(t), e());
                   } catch (e) {
                       n(e);
                   }
@@ -65,11 +65,11 @@ function g(e, t, n) {
         i = [],
         o = [],
         s = { purchaseType: n ? d.tuJ.GIFT : d.tuJ.DEFAULT };
-    return (r = 'string' == typeof e ? c.Z.get(e) : e), a()(r, 'subscription plan not loaded'), null != t && c.Z.hasPaymentSourceForSKUId(t, r.skuId) && (s.paymentSourceId = t), (i = (o = (0, u.T4)(r.id, s)).map((e) => e.currency)).length < 1 && (i = [d.pKx.USD]), i;
+    return ((r = 'string' == typeof e ? c.Z.get(e) : e), a()(r, 'subscription plan not loaded'), null != t && c.Z.hasPaymentSourceForSKUId(t, r.skuId) && (s.paymentSourceId = t), (i = (o = (0, u.T4)(r.id, s)).map((e) => e.currency)).length < 1 && (i = [d.pKx.USD]), i);
 }
 function E(e, t, n) {
     let r = c.Z.get(e);
-    return a()(null != r, 'plan is undefined'), g(r, n, !1).includes(t);
+    return (a()(null != r, 'plan is undefined'), g(r, n, !1).includes(t));
 }
 function b(e) {
     let { initialCurrency: t, subscriptionPlanId: n, paymentSourceId: i, isGift: a, skuIDs: o, excludeSubscriptionPlansBySKU: s } = e,
@@ -89,7 +89,7 @@ function b(e) {
         f = (0, l.V)(o),
         _ = JSON.stringify(o),
         E = r.useRef(o);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         E.current = o;
     }),
         r.useEffect(() => {
@@ -101,7 +101,7 @@ function b(e) {
                     if (e.code !== h) throw e;
                 }
                 let t = [];
-                null != n && null != c.Z.get(n) && (t = g(n, i, a)),
+                (null != n && null != c.Z.get(n) && (t = g(n, i, a)),
                     t.length > 0
                         ? d({
                               paymentSourceId: i,
@@ -111,9 +111,9 @@ function b(e) {
                         : d({
                               paymentSourceId: i,
                               loaded: !1
-                          });
+                          }));
             })();
-        }, [i, _, n, a, f, s]);
+        }, [i, _, n, a, f, s]));
     let b = u.paymentSourceId !== i || null == n || !f || !0 !== u.loaded;
     return {
         hasFetchedSubscriptionPlans: f,

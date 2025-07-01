@@ -1,4 +1,4 @@
-n.d(t, { U: () => R }), n(388685);
+(n.d(t, { U: () => R }), n(388685), n(781311));
 var r = n(255367),
     i = n(73800),
     a = n(688619),
@@ -33,7 +33,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -129,46 +129,51 @@ function R(e) {
         v >= o.length && A(0);
     }, [v, o, n]);
     let w = (e) => {
-            if ((P(e), (0, c.FX)(e) && ((0, m.zW)(), n(e), o.length > 0))) {
-                let t = [...o];
-                (t[v] = e), s(t);
+            let t = e.trim();
+            return t.startsWith('#') ? t : t.length > 0 ? '#'.concat(t) : t;
+        },
+        D = (e) => {
+            let t = w(e);
+            if ((P(t), (0, c.FX)(t) && ((0, m.zW)(), n(t), o.length > 0))) {
+                let e = [...o];
+                ((e[v] = t), s(e));
             }
         },
-        D = i.useCallback((e) => {
+        L = i.useCallback((e) => {
             P(e.hex);
         }, []),
-        L = (e) => {
+        x = (e) => {
             if (((0, m.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
-                (t[v] = e.hex), s(t);
+                ((t[v] = e.hex), s(t));
             }
         },
-        x = async () => {
+        k = async () => {
             if (null != y)
                 try {
                     let { sRGBHex: e } = await y.open();
-                    (0, m.J4)(), w(e);
+                    ((0, m.J4)(), D(e));
                 } catch (e) {}
         },
-        k = () => {
+        M = () => {
             if (o.length === S) return;
-            0 === o.length && (0, h.ft)(), (0, m.gG)();
+            (0 === o.length && (0, h.ft)(), (0, m.gG)());
             let e = o.length > 0 ? o[o.length - 1] : R,
                 t = o.length > 0 ? C(e) : e,
                 n = [...o, t];
-            s(n), A(n.length - 1);
+            (s(n), A(n.length - 1));
         },
-        M = (e) => {
+        j = (e) => {
             if (o.length > 1) {
                 (0, m.JL)();
                 let t = o.filter((t, n) => n !== e);
-                s(t), v >= t.length ? A(t.length - 1) : v > e && A(v - 1);
+                (s(t), v >= t.length ? A(t.length - 1) : v > e && A(v - 1));
             }
         },
-        j = (e) => {
-            A(e), (0, m.w8)();
+        U = (e) => {
+            (A(e), (0, m.w8)());
         },
-        U = o.length > 1;
+        G = o.length > 1;
     return (0, r.jsxs)('div', {
         className: l()(b.container, a),
         children: [
@@ -189,7 +194,7 @@ function R(e) {
                                     size: f.zxk.Sizes.ICON,
                                     look: f.zxk.Looks.BLANK,
                                     disabled: o.length === S,
-                                    onClick: k,
+                                    onClick: M,
                                     children: (0, r.jsx)(f.Text, {
                                         variant: 'text-sm/medium',
                                         className: b.addColorButtonText,
@@ -200,17 +205,17 @@ function R(e) {
                     })
                 ]
             }),
-            U &&
+            G &&
                 (0, r.jsx)(N, {
                     colors: o,
                     selectedIndex: v,
-                    onColorSelect: j
+                    onColorSelect: U
                 }),
             (0, r.jsx)(i.Suspense, {
                 fallback: null,
                 children: (0, r.jsx)(T, {
-                    onChange: D,
-                    onChangeComplete: L,
+                    onChange: L,
+                    onChangeComplete: x,
                     color: R
                 })
             }),
@@ -220,7 +225,7 @@ function R(e) {
                     (0, r.jsx)('input', {
                         className: b.hexInput,
                         value: R.toUpperCase(),
-                        onChange: (e) => w(e.target.value),
+                        onChange: (e) => D(e.target.value),
                         maxLength: 7,
                         placeholder: p.Dp,
                         type: 'text'
@@ -244,7 +249,7 @@ function R(e) {
                                                     e
                                                 ),
                                                 {
-                                                    onClick: x,
+                                                    onClick: k,
                                                     className: b.iconButton,
                                                     children: (0, r.jsx)(u.i, {
                                                         size: 'xs',
@@ -255,7 +260,7 @@ function R(e) {
                                             )
                                         )
                                 }),
-                            U &&
+                            G &&
                                 (0, r.jsx)(f.ua7, {
                                     text: E.intl.string(g.default['rTik5+']),
                                     children: (e) =>
@@ -264,7 +269,7 @@ function R(e) {
                                             I(O({}, e), {
                                                 size: f.zxk.Sizes.ICON,
                                                 look: f.zxk.Looks.BLANK,
-                                                onClick: () => M(v),
+                                                onClick: () => j(v),
                                                 className: b.iconButton,
                                                 children: (0, r.jsx)(d.X, {
                                                     size: 'xs',

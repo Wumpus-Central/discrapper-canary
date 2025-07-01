@@ -1,4 +1,4 @@
-n.d(t, { default: () => L }), n(388685);
+(n.d(t, { default: () => L }), n(388685));
 var a = n(255367),
     r = n(73800),
     s = n(948789),
@@ -41,7 +41,7 @@ function L(e) {
             footerClassName: b.footer,
             headerClassName: b.header,
             onSecondaryClick: function () {
-                T(_.L.TAKE_ACTION), n(), (0, s.uL)(d.Z5c.APPLICATION_STORE);
+                (T(_.L.TAKE_ACTION), n(), (0, s.uL)(d.Z5c.APPLICATION_STORE));
             },
             subscribeButtonText: C.intl.string(C.t.J61px8),
             subscribeButtonClassname: b.subscribeButton,

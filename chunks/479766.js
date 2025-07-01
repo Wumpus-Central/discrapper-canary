@@ -1,4 +1,4 @@
-r.d(t, { Z: () => u }), r(539854);
+(r.d(t, { Z: () => u }), r(539854));
 var n,
     a = r(442837),
     l = r(570140);
@@ -57,15 +57,15 @@ class o extends (n = a.ZP.Store) {
     }
     handleBalanceFetch(e) {
         let {} = e;
-        (this._isFetchingBalance = !0), (this._fetchBalanceError = null);
+        ((this._isFetchingBalance = !0), (this._fetchBalanceError = null));
     }
     handleBalanceFetchSuccess(e) {
         let { balance: t } = e;
-        (this._isFetchingBalance = !1), (this._balance = t);
+        ((this._isFetchingBalance = !1), (this._balance = t));
     }
     handleBalanceFetchFail(e) {
         let { error: t } = e;
-        (this._isFetchingBalance = !1), (this._fetchBalanceError = t);
+        ((this._isFetchingBalance = !1), (this._fetchBalanceError = t));
     }
     handleBalanceUpdate(e) {
         let { balance: t } = e;
@@ -73,15 +73,15 @@ class o extends (n = a.ZP.Store) {
     }
     handleRedeemVirtualCurrencyStart(e) {
         let { skuId: t } = e;
-        (this._entitlements = null), (this._redeemingSkuId = t), (this._redeemVirtualCurrencyError = null), (this._isRedeemingVirtualCurrency = !0);
+        ((this._entitlements = null), (this._redeemingSkuId = t), (this._redeemVirtualCurrencyError = null), (this._isRedeemingVirtualCurrency = !0));
     }
     handleRedeemVirtualCurrencySuccess(e) {
         let { entitlements: t } = e;
-        (this._entitlements = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
+        ((this._entitlements = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1));
     }
     handleRedeemVirtualCurrencyFail(e) {
         let { error: t } = e;
-        (this._entitlements = null), (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
+        ((this._entitlements = null), (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1));
     }
     handleOnboardingModalOpen(e) {
         let {} = e;
@@ -89,7 +89,7 @@ class o extends (n = a.ZP.Store) {
     }
     handleOnboardingModalReset(e) {
         let {} = e;
-        (this._onboardingModalOpenedPrior = !1), (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkDedupeKeys = []), (this._earnedOrbsCoachmarkQuantity = 0);
+        ((this._onboardingModalOpenedPrior = !1), (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkDedupeKeys = []), (this._earnedOrbsCoachmarkQuantity = 0));
     }
     handleEarnedOrbsCoachmarkOpen(e) {
         let { earnedOrbsQuantity: t, dedupeKey: r } = e;
@@ -97,10 +97,10 @@ class o extends (n = a.ZP.Store) {
     }
     handleEarnedOrbsCoachmarkClose(e) {
         let {} = e;
-        (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkQuantity = 0);
+        ((this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkQuantity = 0));
     }
     constructor() {
-        super(l.Z, {
+        (super(l.Z, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
@@ -127,7 +127,7 @@ class o extends (n = a.ZP.Store) {
             i(this, '_earnedOrbsCoachmarkOpen', !1),
             i(this, '_earnedOrbsCoachmarkDedupeKeys', []),
             i(this, '_earnedOrbsCoachmarkQuantity', 0),
-            i(this, '_balancePillOverlay', !1);
+            i(this, '_balancePillOverlay', !1));
     }
 }
 i(o, 'displayName', 'VirtualCurrencyStore');

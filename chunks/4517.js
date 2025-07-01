@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685);
+(n.d(t, { Z: () => H }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -46,7 +46,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -54,7 +54,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 L(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -62,11 +62,11 @@ function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -88,7 +88,7 @@ function j(e, t) {
         i = U(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -98,7 +98,7 @@ function U(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function G(e) {
@@ -119,7 +119,7 @@ let B = i.forwardRef(function (e, t) {
             { analyticsLocations: s } = (0, p.ZP)(),
             { trackUserProfileAction: l } = (0, v.KZ)(),
             c = () => {
-                l({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
+                (l({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
                     null == i || i(),
                     (0, u.ZDy)(async () => {
                         let { default: e } = await n.e('31649').then(n.bind(n, 475613));
@@ -132,7 +132,7 @@ let B = i.forwardRef(function (e, t) {
                                     prompt: a
                                 })
                             );
-                    });
+                    }));
             },
             d = null != a ? a.label() : w.intl.string(w.t.evw0o6),
             f = (0, r.jsxs)('div', {
@@ -211,10 +211,10 @@ let B = i.forwardRef(function (e, t) {
             $ = S && K,
             ee = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
             [et] = i.useState(() => new c.V7());
-        i.useEffect(() => () => et.stop(), [et]),
+        (i.useEffect(() => () => et.stop(), [et]),
             i.useEffect(() => {
                 null == A || A.onInteractionPopoutTargetRefChange(B);
-            }, [A]);
+            }, [A]));
         let [en, er] = (0, u.q_F)(() => ({
             maxHeight: ''.concat(Z.current, 'px'),
             config: {
@@ -226,7 +226,7 @@ let B = i.forwardRef(function (e, t) {
             if ((z(!0), null == V.current || null == F.current || !$)) return;
             let e = V.current.getBoundingClientRect().height,
                 t = F.current.getBoundingClientRect().height;
-            J(t > e), (Z.current = e), (H.current = t), er({ maxHeight: ''.concat(Math.min(q ? Z.current : H.current, q ? j : U), 'px') });
+            (J(t > e), (Z.current = e), (H.current = t), er({ maxHeight: ''.concat(Math.min(q ? Z.current : H.current, q ? j : U), 'px') }));
         }, [$, p, _, I, er, q, j, U]);
         let ei = (e) => {
                 Q &&
@@ -327,7 +327,7 @@ let B = i.forwardRef(function (e, t) {
                                   status: p
                               }),
                               onMouseEnter: () => {
-                                  N({ action: 'HOVER_CUSTOM_STATUS' }), ei(!0);
+                                  (N({ action: 'HOVER_CUSTOM_STATUS' }), ei(!0));
                               },
                               onMouseLeave: () => {
                                   ei(!1);
@@ -354,17 +354,17 @@ let B = i.forwardRef(function (e, t) {
                                   status: p
                               }),
                               onFocus: () => {
-                                  y(!0), ei(!0);
+                                  (y(!0), ei(!0));
                               },
                               onBlur: (e) => {
                                   var t;
                                   (null == (t = B.current) ? void 0 : t.contains(e.relatedTarget)) || (y(!1), ei(!1));
                               },
                               onMouseEnter: () => {
-                                  N({ action: 'HOVER_CUSTOM_STATUS' }), y(!0), ei(!0);
+                                  (N({ action: 'HOVER_CUSTOM_STATUS' }), y(!0), ei(!0));
                               },
                               onMouseLeave: () => {
-                                  y(!1), ei(!1);
+                                  (y(!1), ei(!1));
                               },
                               children: [ef, null == E ? void 0 : E(Q)]
                           })

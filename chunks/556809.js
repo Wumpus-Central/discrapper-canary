@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(147913),
     i = n(710845),
     a = n(522474),
@@ -42,7 +42,7 @@ class p extends r.Z {
         window.requestAnimationFrame = f;
     }
     constructor(...e) {
-        super(...e), u(this, 'actions', { OVERLAY_UPDATE_OVERLAY_STATE: this.handlePatchOverlayWindowRaf });
+        (super(...e), u(this, 'actions', { OVERLAY_UPDATE_OVERLAY_STATE: this.handlePatchOverlayWindowRaf }));
     }
 }
 let h = new p();

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $6: () => P,
     MP: () => S,
     Mg: () => O,
@@ -18,7 +18,7 @@ n.d(t, {
     n(433524),
     n(35282),
     n(482853),
-    n(781311);
+    n(781311));
 var r = n(403644),
     i = n.n(r),
     a = n(565925),
@@ -48,7 +48,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -56,14 +56,14 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 let g = 4,
     E = new f.Yd('SDP');
 var b = (function (e) {
-    return (e.SENDRECV = 'sendrecv'), (e.SENDONLY = 'sendonly'), (e.RECVONLY = 'recvonly'), (e.INACTIVE = 'inactive'), e;
+    return ((e.SENDRECV = 'sendrecv'), (e.SENDONLY = 'sendonly'), (e.RECVONLY = 'recvonly'), (e.INACTIVE = 'inactive'), e);
 })({});
 let y = 'UDP/TLS/RTP/SAVPF';
 function O(e) {
@@ -190,7 +190,7 @@ function T(e) {
     ) {
         let e = f.find((e) => 'msid' === e.attribute);
         if (null == e) throw Error('msid missing');
-        (v.msid = e.value), (v.ssrcs = v.ssrcs.filter((e) => 'cname' === e.attribute));
+        ((v.msid = e.value), (v.ssrcs = v.ssrcs.filter((e) => 'cname' === e.attribute)));
     }
     switch (n) {
         case 'audio':
@@ -212,7 +212,7 @@ function T(e) {
                         payload: l
                     });
             }
-            v.rtp.push({
+            (v.rtp.push({
                 codec: s,
                 encoding: 2,
                 payload: l,
@@ -223,17 +223,17 @@ function T(e) {
                         config: 'minptime=10;useinbandfec=1;usedtx='.concat(b ? '0' : '1'),
                         payload: l
                     }),
-                (v.maxptime = 60);
+                (v.maxptime = 60));
             break;
         case 'video':
-            (v.ext = h.filter((e) => 'urn:ietf:params:rtp-hdrext:toffset' === e.uri || 'http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time' === e.uri || 'urn:3gpp:video-orientation' === e.uri || 'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01' === e.uri || 'http://www.webrtc.org/experiments/rtp-hdrext/playout-delay' === e.uri)),
+            ((v.ext = h.filter((e) => 'urn:ietf:params:rtp-hdrext:toffset' === e.uri || 'http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time' === e.uri || 'urn:3gpp:video-orientation' === e.uri || 'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01' === e.uri || 'http://www.webrtc.org/experiments/rtp-hdrext/playout-delay' === e.uri)),
                 v.rtp.push({
                     codec: s,
                     payload: l,
                     rate: 90000
-                });
+                }));
             let T = 'x-google-max-bitrate='.concat(c);
-            s === _.ad.H264 && (T += ';level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f'),
+            (s === _.ad.H264 && (T += ';level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f'),
                 v.fmtp.push({
                     config: T,
                     payload: l
@@ -272,7 +272,7 @@ function T(e) {
                         config: 'apt='.concat(l),
                         payload: E
                     }),
-                    (v.payloads = ''.concat(v.payloads, ' ').concat(E)));
+                    (v.payloads = ''.concat(v.payloads, ' ').concat(E))));
     }
     return v;
 }
@@ -429,18 +429,18 @@ function C(e) {
                 r)
             ) {
                 case 'audio':
-                    [_.ad.OPUS].forEach((t, n) => {
+                    ([_.ad.OPUS].forEach((t, n) => {
                         let a = N(i, o, r, t, n);
                         null != a && e.codecs.push(a);
                     }),
-                        'sendrecv' === s && null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.audioSSRC = n.id);
+                        'sendrecv' === s && null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.audioSSRC = n.id));
                     break;
                 case 'video':
-                    [_.ad.H264, _.ad.VP8, _.ad.VP9].forEach((t, n) => {
+                    ([_.ad.H264, _.ad.VP8, _.ad.VP9].forEach((t, n) => {
                         let a = N(i, o, r, t, n);
                         null != a && e.codecs.push(a);
                     }),
-                        'sendrecv' === s && (null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == a ? void 0 : a.findLast((e) => 'cname' === e.attribute)) && (n.id === e.videoSSRC && E.warn('Unable to find a unique rtx SSRC!'), (e.rtxSSRC = n.id)));
+                        'sendrecv' === s && (null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == a ? void 0 : a.findLast((e) => 'cname' === e.attribute)) && (n.id === e.videoSSRC && E.warn('Unable to find a unique rtx SSRC!'), (e.rtxSSRC = n.id))));
             }
             return e;
         },
@@ -452,7 +452,7 @@ function C(e) {
             rtxSSRC: 0
         }
     );
-    return (t.codecs = l()(t.codecs, o())), t;
+    return ((t.codecs = l()(t.codecs, o())), t);
 }
 function R(e) {
     var t;
@@ -465,11 +465,11 @@ function R(e) {
     };
 }
 function P(e) {
-    if (!e.includes('a=fingerprint')) return E.error('Remote SDP does not include fingerprint!'), !1;
-    if (!e.includes('a=ice-ufrag')) return E.error('Remote SDP does not include ICE user name!'), !1;
-    if (!e.includes('a=ice-pwd')) return E.error('Remote SDP does not include ICE password!'), !1;
-    if (!e.includes('a=candidate')) return E.error('Remote SDP does not include ICE candidate!'), !1;
-    if (!e.includes('c=')) return E.error('Remote SDP does not include c-line!'), !1;
+    if (!e.includes('a=fingerprint')) return (E.error('Remote SDP does not include fingerprint!'), !1);
+    if (!e.includes('a=ice-ufrag')) return (E.error('Remote SDP does not include ICE user name!'), !1);
+    if (!e.includes('a=ice-pwd')) return (E.error('Remote SDP does not include ICE password!'), !1);
+    if (!e.includes('a=candidate')) return (E.error('Remote SDP does not include ICE candidate!'), !1);
+    if (!e.includes('c=')) return (E.error('Remote SDP does not include c-line!'), !1);
     let t = e
         .split('\n')
         .filter((e) => e.startsWith('c='))

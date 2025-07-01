@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(413496), n(433524), n(35282), n(539854), n(388685);
+(n.d(t, { Z: () => A }), n(413496), n(433524), n(35282), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(831209),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(752305),
     O = n(951211),
     E = n(981631),
-    I = n(921944),
-    S = n(489887),
+    S = n(921944),
+    I = n(489887),
     P = n(388032),
     Z = n(725776);
 let N = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
@@ -35,7 +35,7 @@ function T() {
     return (
         i.useEffect(
             () => () => {
-                n === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.EW)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: I.L.TAKE_ACTION });
+                n === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.EW)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -56,18 +56,18 @@ function T() {
 function A(e) {
     let { channel: t, options: o, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: k } = e,
         { analyticsLocations: M } = (0, p.ZP)(),
-        D = (0, g.Dt)({ channel: t });
-    function L() {
+        L = (0, g.Dt)({ channel: t });
+    function D() {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
     function U() {
-        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
+        (y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/')));
     }
     function B() {
         k();
     }
     function F() {
-        (0, h.EW)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
+        ((0, h.EW)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -79,7 +79,7 @@ function A(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -87,7 +87,7 @@ function A(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -95,8 +95,8 @@ function A(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, n)),
@@ -117,11 +117,11 @@ function A(e) {
                         );
                     };
                 },
-                { modalKey: S.$z }
-            );
+                { modalKey: I.$z }
+            ));
     }
-    function G() {
-        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    function H() {
+        (y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -131,14 +131,14 @@ function A(e) {
                 openInPopout: !1,
                 analyticsLocations: M
             }),
-            (0, u.w1)({ guildId: t.guild_id });
+            (0, u.w1)({ guildId: t.guild_id }));
     }
-    function H() {
+    function G() {
         let e = w,
             n = 'txt',
             r = '',
             i = w.match(N);
-        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, x.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), C.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && C.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
+        (null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, x.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), C.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && C.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r }));
     }
     return (
         i.useEffect(() => {
@@ -194,7 +194,7 @@ function A(e) {
                             {
                                 id: 'upload-text-as-file',
                                 label: i,
-                                action: H
+                                action: G
                             },
                             'upload-text-as-file'
                         );
@@ -287,7 +287,7 @@ function A(e) {
                             {
                                 id: 'THREAD',
                                 label: i,
-                                action: L
+                                action: D
                             },
                             'THREAD'
                         );
@@ -307,7 +307,7 @@ function A(e) {
                             {
                                 id: 'activity',
                                 label: i,
-                                action: G,
+                                action: H,
                                 hint: (0, r.jsx)(T, {})
                             },
                             'activity'
@@ -319,7 +319,7 @@ function A(e) {
                                 id: 'scheduled_message',
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: D
+                                children: L
                             },
                             'scheduled_message'
                         );

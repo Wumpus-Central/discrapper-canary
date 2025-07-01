@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(539854);
+(n.d(t, { Z: () => y }), n(388685), n(539854));
 var r = n(544891),
     i = n(433517),
     a = n(570140),
@@ -38,29 +38,29 @@ class b extends o.Z {
         this.updateAvailable && (this.nativeUpdateAvailable ? (null != this._bootstrapper ? this._bootstrapper.finishBootstrap() : f.ZP.send('QUIT_AND_INSTALL')) : location.reload(!0));
     }
     handlePostConnectionOpen() {
-        (this.nativeUpdateCountThreshold = 3), this.checkForUpdates(), (this._checkInterval = setInterval(this.checkForUpdates, p));
+        ((this.nativeUpdateCountThreshold = 3), this.checkForUpdates(), (this._checkInterval = setInterval(this.checkForUpdates, p)));
     }
     async _requestNewUpdaterBootstrap() {
         let e;
         E.log('Bootstrapping new updater host...');
         try {
-            await f.ZP.ensureModule('discord_updater_bootstrap'), (e = f.ZP.requireModule('discord_updater_bootstrap')), (this._bootstrapper = e);
+            (await f.ZP.ensureModule('discord_updater_bootstrap'), (e = f.ZP.requireModule('discord_updater_bootstrap')), (this._bootstrapper = e));
         } catch (e) {
             this._handleNativeUpdateNotAvailable();
             return;
         }
         try {
-            this._handleCheckingForUpdates(), await e.bootstrap(f.ZP.releaseChannel, 'win'), (this.updateAvailable = !0), (this.nativeUpdateAvailable = !0), this._handleUpdateDownloaded(!0);
+            (this._handleCheckingForUpdates(), await e.bootstrap(f.ZP.releaseChannel, 'win'), (this.updateAvailable = !0), (this.nativeUpdateAvailable = !0), this._handleUpdateDownloaded(!0));
         } catch (e) {
-            E.log('Failed to bootstrap new updater:', e), this._handleNativeUpdateNotAvailable(), d.Z.captureException(e);
+            (E.log('Failed to bootstrap new updater:', e), this._handleNativeUpdateNotAvailable(), d.Z.captureException(e));
         }
     }
     _emitCallbacks() {
-        this._callbacks.forEach((e) => e(this.updateAvailable)), (this._callbacks = []);
+        (this._callbacks.forEach((e) => e(this.updateAvailable)), (this._callbacks = []));
     }
     constructor(...e) {
         var t;
-        super(...e),
+        (super(...e),
             (t = this),
             _(this, '_checkInterval', null),
             _(this, '_callbacks', []),
@@ -88,7 +88,7 @@ class b extends o.Z {
                 a.Z.dispatch({ type: 'CHECKING_FOR_UPDATES' });
             }),
             _(this, '_handleNativeUpdateNotAvailable', () => {
-                this._handleCheckingForUpdates(),
+                (this._handleCheckingForUpdates(),
                     r.tn
                         .get({
                             url: ''.concat(location.protocol, '//').concat(location.host).concat('/assets/', 'version.').concat(window.GLOBAL_ENV.RELEASE_CHANNEL, '.json'),
@@ -98,32 +98,32 @@ class b extends o.Z {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || 'b643dbdc90ae7c7de911e228dc7692c4f009ff43' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || '2574871c0a2027d0b2c431f46f17edbae3da8492' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, s.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : m;
-                                if (Date.now() - g > t) return i.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
+                                if (Date.now() - g > t) return (i.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1));
                             },
                             () => this._handleUpdateError()
-                        );
+                        ));
             }),
             _(this, '_handleUpdateNotAvailable', () => {
-                a.Z.dispatch({ type: 'UPDATE_NOT_AVAILABLE' }), this._emitCallbacks();
+                (a.Z.dispatch({ type: 'UPDATE_NOT_AVAILABLE' }), this._emitCallbacks());
             }),
             _(this, '_handleUpdateAvailable', (e) => {
-                (this.updateAvailable = !0), (this.nativeUpdateAvailable = e), a.Z.dispatch({ type: 'UPDATE_AVAILABLE' });
+                ((this.updateAvailable = !0), (this.nativeUpdateAvailable = e), a.Z.dispatch({ type: 'UPDATE_AVAILABLE' }));
             }),
             _(this, '_handleUpdateManually', () => {
-                (this.updateAvailable = !0), (this.nativeUpdateAvailable = !0), a.Z.dispatch({ type: 'UPDATE_MANUALLY' });
+                ((this.updateAvailable = !0), (this.nativeUpdateAvailable = !0), a.Z.dispatch({ type: 'UPDATE_MANUALLY' }));
             }),
             _(this, '_handleUpdateError', (e) => {
-                (this.updateAvailable = !1),
+                ((this.updateAvailable = !1),
                     a.Z.dispatch({
                         type: 'UPDATE_ERROR',
                         message: e
-                    });
+                    }));
             }),
             _(this, '_handleUpdateDownloaded', (e, t, n, r, i) => {
-                e && (this.nativeUpdatesDownloaded += 1),
+                (e && (this.nativeUpdatesDownloaded += 1),
                     this._handleUpdateAvailable(e),
                     a.Z.dispatch({
                         type: 'UPDATE_DOWNLOADED',
@@ -132,8 +132,8 @@ class b extends o.Z {
                         releaseDate: r,
                         updateURL: i
                     }),
-                    this._emitCallbacks();
-            });
+                    this._emitCallbacks());
+            }));
     }
 }
 let y = new b();

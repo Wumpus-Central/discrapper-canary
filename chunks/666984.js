@@ -20,10 +20,10 @@ function h(e) {
         v = (0, s.Fe)(E, g);
     if (!(0, o.Z)(E) || (!(0, a.Z)(E, f.xjy.PLAY) && !(0, a.Z)(E, f.xjy.SYNC))) return null;
     let I = (e) => {
-            null == e || e.stopPropagation(), null == b || b({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), O.onClick();
+            (null == e || e.stopPropagation(), null == b || b({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), O.onClick());
         },
         T = (e) => {
-            e.stopPropagation(), null == b || b({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), v.onClick();
+            (e.stopPropagation(), null == b || b({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), v.onClick());
         };
     return y === d.lY.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {

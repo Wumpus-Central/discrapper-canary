@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     O5: () => K,
     V6: () => W,
     ZP: () => ek
@@ -6,7 +6,7 @@ n.d(t, {
     n(35282),
     n(388685),
     n(997841),
-    n(539854);
+    n(539854));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -46,7 +46,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -54,7 +54,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 S(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -62,11 +62,11 @@ function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -104,7 +104,7 @@ function V(e, t) {
 function F(e, t) {
     if (null != t) {
         let n = Y(e, t);
-        null != x[n] && Z(n), H(Y(e, t));
+        (null != x[n] && Z(n), H(Y(e, t)));
     } else
         for (let t in x) {
             let n = t;
@@ -112,14 +112,14 @@ function F(e, t) {
         }
 }
 function Z(e) {
-    (M += 1), (U[e] = M);
+    ((M += 1), (U[e] = M));
 }
 function H(e) {
-    W(e) === y.default.getId() && (0, p.l)(K(e)), delete x[e];
+    (W(e) === y.default.getId() && (0, p.l)(K(e)), delete x[e]);
 }
 function Y(e, t) {
     let n = [];
-    return (n[0] = e), (n[1] = t), n.join('-');
+    return ((n[0] = e), (n[1] = t), n.join('-'));
 }
 function W(e) {
     return e.split('-')[1];
@@ -144,7 +144,7 @@ function z(e, t) {
     }
     if (null != i) {
         var c, u;
-        null == i.colorString && i.color > 0 && (i.colorString = (0, o.Rf)(i.color)), (n = null != (c = i.colorString) ? c : void 0), null == i.colorStrings && null != i.colors && (i.colorStrings = (0, m.DX)(i.colors)), (r = null != (u = i.colorStrings) ? u : void 0);
+        (null == i.colorString && i.color > 0 && (i.colorString = (0, o.Rf)(i.color)), (n = null != (c = i.colorString) ? c : void 0), null == i.colorStrings && null != i.colors && (i.colorStrings = (0, m.DX)(i.colors)), (r = null != (u = i.colorStrings) ? u : void 0));
     }
     return {
         colorString: n,
@@ -189,20 +189,20 @@ function q(e) {
     return w;
 }
 function X(e) {
-    k ? (k = !1) : ((P = {}), (w = {})), (x = {}), J(e);
+    (k ? (k = !1) : ((P = {}), (w = {})), (x = {}), J(e));
 }
 function Q(e) {
     e.guilds.forEach((e) => {
         var t;
         let n = e.id;
-        ev({
+        (ev({
             id: n,
             members: e.members
         }),
             null == (t = e.activity_instances) ||
                 t.forEach((e) => {
                     eO(n, e.participants);
-                });
+                }));
     });
 }
 function J(e) {
@@ -212,11 +212,11 @@ function J(e) {
 }
 function $(e) {
     let { guildMembers: t } = e;
-    (P = A({}, t)), (w = {});
+    ((P = A({}, t)), (w = {}));
 }
 function ee(e) {
     let { guildMembers: t, guilds: n } = e;
-    (k = !0), (P = A({}, t)), (w = {}), (L = {}), en(n);
+    ((k = !0), (P = A({}, t)), (w = {}), (L = {}), en(n));
 }
 function et(e) {
     let { guilds: t } = e;
@@ -232,7 +232,7 @@ function en(e) {
 function er(e) {
     var t, n;
     if (null == e.guildId || null == I.Z.getGuild(e.guildId)) return !1;
-    (k = !0), (P[e.guildId] = null != (t = P[e.guildId]) ? t : {});
+    ((k = !0), (P[e.guildId] = null != (t = P[e.guildId]) ? t : {}));
     let r = !1;
     for (let t of ((k = !0), (P[e.guildId] = null != (n = P[e.guildId]) ? n : {}), e.members)) null == P[e.guildId][t.userId] && ((r = !0), (P[e.guildId][t.userId] = t));
     return r;
@@ -243,8 +243,8 @@ function ei(e) {
         h = P[n];
     if (null == h) return !1;
     let m = I.Z.getGuild(n);
-    if (null == m) return R.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-    (h[r.id] = q({
+    if (null == m) return (R.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1);
+    ((h[r.id] = q({
         userId: r.id,
         nick: i,
         guildId: n,
@@ -260,39 +260,39 @@ function ei(e) {
         fullProfileLoadedTimestamp: null == (t = h[r.id]) ? void 0 : t.fullProfileLoadedTimestamp,
         flags: p
     })),
-        V(n, h[r.id]);
+        V(n, h[r.id]));
 }
 function ea(e) {
     let { guildId: t, userId: n, roleId: r } = e,
         i = P[t];
     if (null == i) return !1;
     let a = I.Z.getGuild(t);
-    if (null == a) return R.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+    if (null == a) return (R.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1);
     let o = i[n];
     if (null == o || o.roles.includes(r)) return !1;
     o.roles = [...o.roles, r];
     let s = z(v.Z.getRoles(a.id), o.roles);
-    return (i[n] = A({}, o, s)), !0;
+    return ((i[n] = A({}, o, s)), !0);
 }
 function eo(e) {
     let { guildId: t, userId: n, roleId: r } = e,
         i = P[t];
     if (null == i) return !1;
     let a = I.Z.getGuild(t);
-    if (null == a) return R.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+    if (null == a) return (R.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1);
     let o = i[n];
     if (null == o || !o.roles.includes(r)) return !1;
     o.roles = o.roles.filter((e) => e !== r);
     let s = z(v.Z.getRoles(a.id), o.roles);
-    return (i[n] = A({}, o, s)), !0;
+    return ((i[n] = A({}, o, s)), !0);
 }
 function es(e) {
     let { guildMember: t, guildId: n } = e,
         r = P[n];
     if (null == r) return !1;
     let i = I.Z.getGuild(n);
-    if (null == i) return R.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-    (r[t.user.id] = q({
+    if (null == i) return (R.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1);
+    ((r[t.user.id] = q({
         userId: t.user.id,
         nick: t.nick,
         guildId: n,
@@ -308,7 +308,7 @@ function es(e) {
         flags: t.flags,
         fullProfileLoadedTimestamp: Date.now()
     })),
-        V(n, r[t.user.id]);
+        V(n, r[t.user.id]));
 }
 function el(e) {
     let t = !1;
@@ -334,7 +334,7 @@ function ef(e) {
             var n, r, i;
             if ((null != t.owner && e.push(t.owner), (null == t || null == (n = t.first_message) ? void 0 : n.message_snapshots) != null)) {
                 let n = t.first_message.message_snapshots[0];
-                (null == (r = n.moderator_report) ? void 0 : r.reported_member) != null && e.push(n.moderator_report.reported_member), (null == (i = n.moderator_report) ? void 0 : i.reporting_member) != null && e.push(n.moderator_report.reporting_member);
+                ((null == (r = n.moderator_report) ? void 0 : r.reported_member) != null && e.push(n.moderator_report.reported_member), (null == (i = n.moderator_report) ? void 0 : i.reporting_member) != null && e.push(n.moderator_report.reporting_member));
             }
             return e;
         }, [])
@@ -353,7 +353,7 @@ function ep(e, t) {
         : (t.forEach((t) => {
               var i;
               let a = n[t.user.id];
-              (n[t.user.id] = q({
+              ((n[t.user.id] = q({
                   userId: t.user.id,
                   nick: t.nick,
                   guildId: e,
@@ -369,7 +369,7 @@ function ep(e, t) {
                   fullProfileLoadedTimestamp: null == a ? void 0 : a.fullProfileLoadedTimestamp,
                   unusualDMActivityUntil: null != (i = t.unusual_dm_activity_until) ? i : null == a ? void 0 : a.unusualDMActivityUntil
               })),
-                  V(e, n[t.user.id]);
+                  V(e, n[t.user.id]));
           }),
           j++,
           !0);
@@ -398,7 +398,7 @@ function eE(e) {
 function eb(e, t) {
     let n = P[e];
     if (null == n || null == n[t]) return !1;
-    delete n[t], F(e, t), j++;
+    (delete n[t], F(e, t), j++);
 }
 function ey(e) {
     let { guild: t } = e;
@@ -436,25 +436,25 @@ function ev(e) {
                 flags: a.flags,
                 unusualDMActivityUntil: null != (i = a.unusual_dm_activity_until) ? i : null == s ? void 0 : s.unusualDMActivityUntil
             });
-        (r[o] = l), V(t, l);
+        ((r[o] = l), V(t, l));
     }
     return !0;
 }
 function eI(e) {
     let { guild: t } = e;
-    delete P[t.id], delete w[t.id], F(t.id);
+    (delete P[t.id], delete w[t.id], F(t.id));
 }
 function eT(e) {
     let t = P[e.guildId];
     if (null == t) return !1;
     let n = I.Z.getGuild(e.guildId);
-    if (null == n) return R.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1;
+    if (null == n) return (R.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1);
     let r = y.default.getId();
     for (let i of b.default.keys(t)) {
         let a = t[i];
         if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
             let o = i === r && 'GUILD_ROLE_DELETE' === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
-            (t[i] = q({
+            ((t[i] = q({
                 userId: i,
                 nick: a.nick,
                 guildId: e.guildId,
@@ -468,7 +468,7 @@ function eT(e) {
                 flags: a.flags,
                 fullProfileLoadedTimestamp: null == a ? void 0 : a.fullProfileLoadedTimestamp
             })),
-                V(e.guildId, t[i]);
+                V(e.guildId, t[i]));
         }
     }
 }
@@ -482,7 +482,7 @@ function eS(e) {
     let _ = I.Z.getGuild(i);
     if (null == _) return !1;
     let p = null != (t = G[i]) ? t : {};
-    (G[i] = {
+    ((G[i] = {
         added: a().difference(a().union(null != (n = p.added) ? n : [], s), null != l ? l : []),
         removed: a().difference(a().union(null != (r = p.removed) ? r : [], l), null != s ? s : [])
     }),
@@ -499,7 +499,7 @@ function eS(e) {
             joinedAt: f.joinedAt,
             flags: null != c ? c : f.flags,
             fullProfileLoadedTimestamp: f.fullProfileLoadedTimestamp
-        }));
+        })));
 }
 function eA(e) {
     let { guildId: t } = e;
@@ -511,7 +511,7 @@ function eN(e) {
         n = P[t];
     if (null == n) return !1;
     let r = I.Z.getGuild(t);
-    if (null == r) return R.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1;
+    if (null == r) return (R.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1);
     let i = y.default.getId(),
         a = n[i];
     n[i] = q({
@@ -667,7 +667,7 @@ class ex extends (r = s.ZP.Store) {
         let n = this.getSelfMember(e);
         if (null == n || null == n.joinedAt) return null;
         let r = new Date(n.joinedAt);
-        return (w[e] = r), r;
+        return ((w[e] = r), r);
     }
     getCachedSelfMember(e) {
         var t;

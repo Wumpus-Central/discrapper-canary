@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
@@ -93,7 +93,7 @@ let I = {
                 socket: n,
                 args: { channel_id: r, timeout: i = 0, force: l = !1, navigate: a = !1 }
             } = e;
-            if (!r) return o.default.selectVoiceChannel(null), null;
+            if (!r) return (o.default.selectVoiceChannel(null), null);
             let _ = h.Z.getVoiceChannelId();
             if (null != _ && _ !== r && !1 === l) throw new m.Z({ errorCode: y.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
             return t
@@ -112,7 +112,7 @@ let I = {
                         if ((0, g.rY)(t, f.Z, d.Z)) throw new m.Z({ errorCode: y.lTL.INVALID_CHANNEL }, 'Channel is full');
                         if (!p.Z.can(y.Plq.CONNECT, t)) throw new m.Z({ errorCode: y.lTL.INVALID_PERMISSIONS }, 'Connect permission required to join channel');
                     }
-                    return o.default.selectVoiceChannel(t.id), a && (0, s.dL)(y.Z5c.CHANNEL(t.guild_id, t.id)), n;
+                    return (o.default.selectVoiceChannel(t.id), a && (0, s.dL)(y.Z5c.CHANNEL(t.guild_id, t.id)), n);
                 });
         }
     },
@@ -156,7 +156,7 @@ let I = {
                       .then((e) => {
                           let [t, n] = e;
                           if (n.guild_id && !p.Z.can(y.Plq.VIEW_CHANNEL, t)) throw new m.Z({ errorCode: y.lTL.INVALID_CHANNEL }, 'No permission to see channel');
-                          return n.guild_id ? (0, s.dL)(y.Z5c.CHANNEL(n.guild_id, t.id)) : o.default.selectPrivateChannel(t.id), n;
+                          return (n.guild_id ? (0, s.dL)(y.Z5c.CHANNEL(n.guild_id, t.id)) : o.default.selectPrivateChannel(t.id), n);
                       })
                 : ((0, s.uL)(y.Z5c.ME), null);
         }
@@ -177,12 +177,12 @@ let I = {
                                 r,
                                 i = {},
                                 l = Object.keys(e);
-                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var l = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                     }
                     return i;
                 })(e.args, ['channel_id']);

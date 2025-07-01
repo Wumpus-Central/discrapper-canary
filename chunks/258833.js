@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+(n.d(t, { Z: () => S }), n(388685));
 var r = n(147913),
     i = n(460181),
     a = n(474873),
@@ -32,11 +32,11 @@ function E(e, t) {
     return h(e, n);
 }
 function b(e, t, n) {
-    p(e, t), t.set(e, n);
+    (p(e, t), t.set(e, n));
 }
 function y(e, t, n) {
     var r = g(e, t, 'set');
-    return m(e, r, n), n;
+    return (m(e, r, n), n);
 }
 function O(e, t, n) {
     return (
@@ -58,7 +58,7 @@ class T extends r.Z {
         this.stores = new Map().set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(_.Z, this.handleChannelRTCStoreChange).set(a.Z, this.handleSoundpackUpdate);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, I, {
                 writable: !0,
                 value: new Set()
@@ -73,7 +73,7 @@ class T extends r.Z {
                 null == n || r || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? v.stop() : v.loop();
             }),
             O(this, 'handleSoundpackUpdate', () => {
-                v.stop(), (v = (0, i.uk)('call_calling', a.Z.getSoundpack()));
+                (v.stop(), (v = (0, i.uk)('call_calling', a.Z.getSoundpack())));
             }),
             O(this, 'handleRingUpdate', () => {
                 var e, t;
@@ -84,24 +84,24 @@ class T extends r.Z {
             }),
             O(this, 'handleGuildRingStart', (e) => {
                 let { ringing: t, guildId: n } = e;
-                t.forEach((e) => {
+                (t.forEach((e) => {
                     E(this, I).add(e);
                 }),
-                    this._handleRing(E(this, I).size > 0, n);
+                    this._handleRing(E(this, I).size > 0, n));
             }),
             O(this, 'handleGuildRingStop', (e) => {
                 let { ringing: t, guildId: n } = e;
-                t.forEach((e) => {
+                (t.forEach((e) => {
                     E(this, I).delete(e);
                 }),
-                    this._handleRing(E(this, I).size > 0, n);
+                    this._handleRing(E(this, I).size > 0, n));
             }),
             O(this, 'handleChannelRTCStoreChange', () => {
                 let e = c.Z.getVoiceChannelId(),
                     t = E(this, I).size > 0;
                 if (!t) return;
                 if (null == e && t) {
-                    y(this, I, new Set()), this._handleRing(E(this, I).size > 0, null);
+                    (y(this, I, new Set()), this._handleRing(E(this, I).size > 0, null));
                     return;
                 }
                 if (null == e) return;
@@ -112,7 +112,7 @@ class T extends r.Z {
                         E(this, I).delete(e);
                     }),
                     this._handleRing(E(this, I).size > 0, null));
-            });
+            }));
     }
 }
 let S = new T();

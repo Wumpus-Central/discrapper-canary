@@ -24,7 +24,7 @@ class d {
         return new d(e);
     }
     constructor(e) {
-        u(this, 'shopBlocks', void 0),
+        (u(this, 'shopBlocks', void 0),
             u(this, 'categories', void 0),
             (this.shopBlocks = e.shop_blocks
                 .map((e) => {
@@ -44,6 +44,6 @@ class d {
                     }
                 })
                 .filter((e) => void 0 !== e)),
-            (this.categories = e.categories.map((e) => i.Z.fromServer(e)));
+            (this.categories = e.categories.map((e) => i.Z.fromServer(e))));
     }
 }

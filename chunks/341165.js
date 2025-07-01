@@ -32,11 +32,11 @@ let m = {},
     O = !1,
     v = !1;
 function I() {
-    (m = {}), (g = {}), (E = {}), (b = {}), (r = null), (O = !1), (v = !1), (y = !1);
+    ((m = {}), (g = {}), (E = {}), (b = {}), (r = null), (O = !1), (v = !1), (y = !1));
 }
 function T(e) {
     let { channel: t } = e;
-    delete m[t.id], delete g[t.id], delete E[t.id];
+    (delete m[t.id], delete g[t.id], delete E[t.id]);
 }
 function S(e) {
     let { channelId: t, invite: n } = e,
@@ -53,19 +53,19 @@ function N(e) {
 }
 function C(e) {
     var t;
-    (b[e.invite.code] = _.Z.createFromServer(e.invite)), (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null), (v = !1);
+    ((b[e.invite.code] = _.Z.createFromServer(e.invite)), (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null), (v = !1));
 }
 function R() {
     v = !1;
 }
 function P(e) {
     var t;
-    null != e.invites &&
+    (null != e.invites &&
         e.invites.forEach((e) => {
             null != b[e.code] && delete b[e.code];
         }),
         (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
-        (O = !1);
+        (O = !1));
 }
 function w() {
     O = !0;
@@ -78,12 +78,12 @@ function L() {
 }
 function x(e) {
     var t;
-    (b = {}),
+    ((b = {}),
         e.invites.forEach((e) => {
             b[e.code] = _.Z.createFromServer(e);
         }),
         (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
-        (y = !1);
+        (y = !1));
 }
 function k(e) {
     delete m[e.channelId];

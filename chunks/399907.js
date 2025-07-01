@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(668757),
     i = n(147913);
 function a(e, t, n) {
@@ -23,7 +23,7 @@ class o extends i.Z {
         }
     }
     constructor(...e) {
-        super(...e), a(this, 'intervalID', void 0);
+        (super(...e), a(this, 'intervalID', void 0));
     }
 }
 let s = new o();

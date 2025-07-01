@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(35282);
+(n.d(t, { Z: () => D }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(35282));
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -50,7 +50,7 @@ function Z(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -58,7 +58,7 @@ function Z(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -66,8 +66,8 @@ function Z(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })(
@@ -128,7 +128,7 @@ function k(e) {
                     if (t && 'true' === e.searchParams.get(L)) {
                         e.searchParams.delete(L);
                         let t = e.pathname + e.search;
-                        (0, v.dL)(t), n();
+                        ((0, v.dL)(t), n());
                     }
                 }, [t, n]),
                 {
@@ -145,14 +145,14 @@ function k(e) {
                         if (t) n();
                         else {
                             let t = P.z8.getField('guildId');
-                            y.default.track(N.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+                            (y.default.track(N.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                                 application_id: e.id,
                                 guild_id: t,
                                 auth_type: null != e.custom_install_url ? 'custom_url' : 'in_app',
                                 source: 'product_page',
                                 device_platform: s.tq ? 'mobile_web' : 'desktop_web'
                             }),
-                                (0, S.rf)({ [L]: 'true' });
+                                (0, S.rf)({ [L]: 'true' }));
                         }
                     }, [e, n, t]),
                     canInstall: a.useMemo(
@@ -221,7 +221,7 @@ let D = a.forwardRef(function (e, t) {
         _ = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(N.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
         { analyticsLocations: y } = (0, m.ZP)(),
         O = a.useCallback(() => {
-            (0, S.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, I.JG)(_(n.id), () => (0, c.showToast)((0, c.createToast)(T.intl.string(T.t['L/PwZW']), c.ToastType.SUCCESS)));
+            ((0, S.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, I.JG)(_(n.id), () => (0, c.showToast)((0, c.createToast)(T.intl.string(T.t['L/PwZW']), c.ToastType.SUCCESS))));
         }, [n.id]),
         P = (0, o.e7)([C.default], () => C.default.locale),
         L = a.useCallback(() => {
@@ -310,7 +310,7 @@ let D = a.forwardRef(function (e, t) {
                 if (d && l && n && null != i && null != m) {
                     e.searchParams.delete(R);
                     let n = e.pathname + e.search;
-                    (0, v.dL)(n), _(i, r, t);
+                    ((0, v.dL)(n), _(i, r, t));
                 }
             }, [d, l, i, r, t, m, _]);
             let b = a.useCallback(async () => {

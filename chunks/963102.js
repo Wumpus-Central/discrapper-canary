@@ -1,4 +1,4 @@
-n.d(t, { I: () => I }), n(388685), n(539854);
+(n.d(t, { I: () => I }), n(388685), n(539854));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -41,13 +41,13 @@ function L(e) {
         [d, p] = l.useState(0),
         h = l.useRef(!1),
         b = (e) => {
-            clearTimeout(d),
+            (clearTimeout(d),
                 p(
                     setTimeout(() => {
                         s(e);
                     }, 100)
                 ),
-                e && (h.current = g.Z.keyboardModeEnabled);
+                e && (h.current = g.Z.keyboardModeEnabled));
         };
     return (0, r.jsx)('div', {
         className: k.tabWithMenuContainer,
@@ -61,7 +61,7 @@ function L(e) {
             onRequestOpen: () => b(!0),
             onRequestClose: () => {
                 var e;
-                h.current && !g.Z.keyboardModeEnabled && (0, f.Qj)(), b(!1), null == (e = u.current) || e.focus();
+                (h.current && !g.Z.keyboardModeEnabled && (0, f.Qj)(), b(!1), null == (e = u.current) || e.focus());
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
@@ -127,13 +127,13 @@ function I(e) {
     let Z = n ? S.DR : a,
         R = f === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
         H = l.useCallback(() => {
-            t && (Z(), (0, u.Ou)()),
+            (t && (Z(), (0, u.Ou)()),
                 (0, m.Y)({
                     pageType: R,
                     sectionType: j.jXE.ORBS_BALANCE_MENU,
                     ctaObject: j.qAy.CTA_TO_QUEST_HOME
                 }),
-                (0, b.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
+                (0, b.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU }));
         }, [Z, t, R]);
     return (0, r.jsx)(c.f6W, {
         theme: E,

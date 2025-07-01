@@ -1,4 +1,4 @@
-n.d(t, { default: () => k }), n(415506), n(388685);
+(n.d(t, { default: () => k }), n(415506), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(392711),
@@ -90,7 +90,7 @@ async function D(e, t, n, i) {
               })();
     if (null == r) throw Error('No slot to cancel');
     let s = (0, v.MY)(e, t);
-    await (0, d.pD)(r),
+    (await (0, d.pD)(r),
         await (0, c.Mg)(
             e,
             { items: s },
@@ -100,7 +100,7 @@ async function D(e, t, n, i) {
             },
             (0, v.UX)(s, e.currency, e.paymentSourceId),
             n
-        );
+        ));
 }
 function Z(e) {
     var t, n, s;
@@ -115,12 +115,12 @@ function Z(e) {
             }
         }, [l]),
         k = r.useRef(j);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         k.current = j;
     }),
         r.useEffect(() => {
             w && k.current();
-        }, [w]);
+        }, [w]));
     let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, a.cj)([C.Z], () => {
             let e = C.Z.get(l.planId);
             return {
@@ -213,9 +213,9 @@ function Z(e) {
                             disabled: O,
                             onClick: async () => {
                                 try {
-                                    S(!0), R(null), await D(l, Z, M, c), _();
+                                    (S(!0), R(null), await D(l, Z, M, c), _());
                                 } catch (e) {
-                                    R(A.intl.string(A.t['5mlOCQ'])), S(!1);
+                                    (R(A.intl.string(A.t['5mlOCQ'])), S(!1));
                                 }
                             },
                             children: A.intl.string(A.t['/AS/gI'])

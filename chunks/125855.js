@@ -17,7 +17,7 @@ function d(e) {
         channel: d,
         user: p,
         onClick: (e) => {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 i.Z.openPrivateChannelAsSidebar({
                     channelId: d.id,
                     baseChannelId: l.uZ,
@@ -30,7 +30,7 @@ function d(e) {
                 }),
                 setTimeout(() => {
                     o.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: d.id });
-                }, 0);
+                }, 0));
         },
         children: (e) =>
             (0, r.jsx)(c.Z, {

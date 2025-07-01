@@ -32,5 +32,5 @@ t.f = r
                   return c(e, t, n);
               } catch (e) {}
           if ('get' in n || 'set' in n) throw new l('Accessors not supported');
-          return 'value' in n && (e[t] = n.value), e;
+          return ('value' in n && (e[t] = n.value), e);
       };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -41,7 +41,7 @@ class m extends i.PureComponent {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ class m extends i.PureComponent {
                             )),
                             r.forEach(function (t) {
                                 g(e, t, n[t]);
-                            });
+                            }));
                     }
                     return e;
                 })({ source: 'Links' }, e)
@@ -81,7 +81,7 @@ class m extends i.PureComponent {
         }
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'state', {
                 memoizedMode: this.props.mode,
                 clicked: !1
@@ -100,7 +100,7 @@ class m extends i.PureComponent {
             }),
             g(this, 'doUpdate', () => {
                 this.state.clicked || (this.setState({ clicked: !0 }), (0, s.Q)());
-            });
+            }));
     }
 }
 let b = l.ZP.connectStores([u.Z], () => ({ mode: u.Z.getState() }))(m);

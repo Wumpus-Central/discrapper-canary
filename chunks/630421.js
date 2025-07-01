@@ -49,7 +49,7 @@ function _(e) {
                       x: O,
                       y: I
                   };
-    (O = T.x), (I = T.y);
+    ((O = T.x), (I = T.y));
     var S = p.hasOwnProperty('x'),
         A = p.hasOwnProperty('y'),
         N = r.t$,
@@ -59,7 +59,7 @@ function _(e) {
         var P = (0, i.Z)(l),
             w = 'clientHeight',
             D = 'clientWidth';
-        P === (0, a.Z)(l) && ((P = (0, o.Z)(l)), 'static' !== (0, s.Z)(P).position && 'absolute' === h && ((w = 'scrollHeight'), (D = 'scrollWidth'))), (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) && ((C = r.I), (I -= (b && P === R && R.visualViewport ? R.visualViewport.height : P[w]) - c.height), (I *= m ? 1 : -1)), (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) && ((N = r.F2), (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[D]) - c.width), (O *= m ? 1 : -1));
+        (P === (0, a.Z)(l) && ((P = (0, o.Z)(l)), 'static' !== (0, s.Z)(P).position && 'absolute' === h && ((w = 'scrollHeight'), (D = 'scrollWidth'))), (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) && ((C = r.I), (I -= (b && P === R && R.visualViewport ? R.visualViewport.height : P[w]) - c.height), (I *= m ? 1 : -1)), (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) && ((N = r.F2), (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[D]) - c.width), (O *= m ? 1 : -1)));
     }
     var L = Object.assign({ position: h }, g && d),
         x =
@@ -98,7 +98,7 @@ let p = {
                 gpuAcceleration: i,
                 isFixed: 'fixed' === t.options.strategy
             };
-        null != t.modifiersData.popperOffsets &&
+        (null != t.modifiersData.popperOffsets &&
             (t.styles.popper = Object.assign(
                 {},
                 t.styles.popper,
@@ -124,7 +124,7 @@ let p = {
                         })
                     )
                 )),
-            (t.attributes.popper = Object.assign({}, t.attributes.popper, { 'data-popper-placement': t.placement }));
+            (t.attributes.popper = Object.assign({}, t.attributes.popper, { 'data-popper-placement': t.placement })));
     },
     data: {}
 };

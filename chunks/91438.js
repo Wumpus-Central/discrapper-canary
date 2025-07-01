@@ -47,7 +47,7 @@ e.exports = (function e(t, n, r) {
                             i.setAttribute('data-'.concat(e), ''.concat(o[e]));
                         }),
                         (t = new Promise(function (t, n) {
-                            i.addEventListener('load', function () {
+                            (i.addEventListener('load', function () {
                                 t(i);
                             }),
                                 i.addEventListener('error', function () {
@@ -56,16 +56,16 @@ e.exports = (function e(t, n, r) {
                                 i.addEventListener('abort', function () {
                                     n(Error(''.concat(e.src, ' has aborted.')));
                                 }),
-                                a.appendChild(i);
+                                a.appendChild(i));
                         })),
                         (r[n] = t),
                         t
                     );
                 }
-                (i.clearCache = function () {
+                ((i.clearCache = function () {
                     r = {};
                 }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             {}
         ],
@@ -78,7 +78,7 @@ e.exports = (function e(t, n, r) {
         3: [
             function (e, t, n) {
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /Android/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /Android/i.test(e));
                 };
             },
             {}
@@ -86,7 +86,7 @@ e.exports = (function e(t, n, r) {
         4: [
             function (e, t, n) {
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /CrOS/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /CrOS/i.test(e));
                 };
             },
             {}
@@ -129,7 +129,7 @@ e.exports = (function e(t, n, r) {
         8: [
             function (e, t, n) {
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /Firefox/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /Firefox/i.test(e));
                 };
             },
             {}
@@ -137,7 +137,7 @@ e.exports = (function e(t, n, r) {
         9: [
             function (e, t, n) {
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /FxiOS/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /FxiOS/i.test(e));
                 };
             },
             {}
@@ -184,7 +184,7 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e('./is-ios-webview');
                 t.exports = function (e, t) {
-                    return (t = void 0 !== t ? t : window.statusbar.visible), r(e) && t;
+                    return ((t = void 0 !== t ? t : window.statusbar.visible), r(e) && t);
                 };
             },
             { './is-ios-webview': 12 }
@@ -193,7 +193,7 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e('./is-ipados');
                 t.exports = function (e, t, n) {
-                    void 0 === t && (t = !0), (e = e || window.navigator.userAgent);
+                    (void 0 === t && (t = !0), (e = e || window.navigator.userAgent));
                     var i = /iPhone|iPod|iPad/i.test(e);
                     return t ? i || r(e, n) : i;
                 };
@@ -203,7 +203,7 @@ e.exports = (function e(t, n, r) {
         15: [
             function (e, t, n) {
                 t.exports = function (e, t) {
-                    return (e = e || window.navigator.userAgent), (t = t || window.document), /Mac|iPad/i.test(e) && 'ontouchend' in t;
+                    return ((e = e || window.navigator.userAgent), (t = t || window.document), /Mac|iPad/i.test(e) && 'ontouchend' in t);
                 };
             },
             {}
@@ -219,7 +219,7 @@ e.exports = (function e(t, n, r) {
         17: [
             function (e, t, n) {
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /SamsungBrowser/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /SamsungBrowser/i.test(e));
                 };
             },
             {}
@@ -365,14 +365,14 @@ e.exports = (function e(t, n, r) {
                             this._promise = new e.Promise(t);
                             return;
                         }
-                        (this._promise = new e.Promise(function (e, t) {
-                            (n._resolveFunction = e), (n._rejectFunction = t);
+                        ((this._promise = new e.Promise(function (e, t) {
+                            ((n._resolveFunction = e), (n._rejectFunction = t));
                         })),
                             (t = t || {}),
                             (this._onResolve = t.onResolve || e.defaultOnResolve),
                             (this._onReject = t.onReject || e.defaultOnReject),
                             e.shouldCatchExceptions(t) && this._promise.catch(function () {}),
-                            this._resetState();
+                            this._resetState());
                     }
                     return (
                         (e.defaultOnResolve = function (t) {
@@ -423,7 +423,7 @@ e.exports = (function e(t, n, r) {
                                             n._resolveFunction(e);
                                         })
                                         .catch(function (e) {
-                                            n._resetState(), n.reject(e);
+                                            (n._resetState(), n.reject(e));
                                         })),
                                 this
                             );
@@ -438,7 +438,7 @@ e.exports = (function e(t, n, r) {
                                             return n._onReject(t);
                                         })
                                         .then(function (e) {
-                                            n._setResolved(), n._resolveFunction(e);
+                                            (n._setResolved(), n._resolveFunction(e));
                                         })
                                         .catch(function (e) {
                                             return n._rejectFunction(e);
@@ -447,13 +447,13 @@ e.exports = (function e(t, n, r) {
                             );
                         }),
                         (e.prototype._resetState = function () {
-                            (this.isFulfilled = !1), (this.isResolved = !1), (this.isRejected = !1);
+                            ((this.isFulfilled = !1), (this.isResolved = !1), (this.isRejected = !1));
                         }),
                         (e.prototype._setResolved = function () {
-                            (this.isFulfilled = !0), (this.isResolved = !0), (this.isRejected = !1);
+                            ((this.isFulfilled = !0), (this.isResolved = !0), (this.isRejected = !1));
                         }),
                         (e.prototype._setRejected = function () {
-                            (this.isFulfilled = !0), (this.isResolved = !1), (this.isRejected = !0);
+                            ((this.isFulfilled = !0), (this.isResolved = !1), (this.isRejected = !0));
                         }),
                         (e.Promise = r),
                         e
@@ -471,7 +471,7 @@ e.exports = (function e(t, n, r) {
                     void 0 === e && (e = {});
                     var t = document.createElement('iframe'),
                         n = (0, o.assign)({}, i.defaultAttributes, e);
-                    return n.style && 'string' != typeof n.style && ((0, o.assign)(t.style, n.style), delete n.style), (0, r.setAttributes)(t, n), t.getAttribute('id') || (t.id = t.name), t;
+                    return (n.style && 'string' != typeof n.style && ((0, o.assign)(t.style, n.style), delete n.style), (0, r.setAttributes)(t, n), t.getAttribute('id') || (t.id = t.name), t);
                 };
             },
             {
@@ -482,7 +482,7 @@ e.exports = (function e(t, n, r) {
         ],
         33: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.assign = void 0),
                     (n.assign = function (e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
@@ -495,26 +495,26 @@ e.exports = (function e(t, n, r) {
                             }),
                             e
                         );
-                    });
+                    }));
             },
             {}
         ],
         34: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.defaultAttributes = void 0),
                     (n.defaultAttributes = {
                         src: 'about:blank',
                         frameBorder: 0,
                         allowtransparency: !0,
                         scrolling: 'no'
-                    });
+                    }));
             },
             {}
         ],
         35: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.setAttributes = void 0),
                     (n.setAttributes = function (e, t) {
                         for (var n in t)
@@ -522,7 +522,7 @@ e.exports = (function e(t, n, r) {
                                 var r = t[n];
                                 null == r ? e.removeAttribute(n) : e.setAttribute(n, r);
                             }
-                    });
+                    }));
             },
             {}
         ],
@@ -539,7 +539,7 @@ e.exports = (function e(t, n, r) {
         ],
         37: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.deferred = function (e) {
                         return function () {
                             for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
@@ -547,30 +547,30 @@ e.exports = (function e(t, n, r) {
                                 try {
                                     e.apply(void 0, t);
                                 } catch (e) {
-                                    console.log('Error in callback function'), console.log(e);
+                                    (console.log('Error in callback function'), console.log(e));
                                 }
                             }, 1);
                         };
-                    });
+                    }));
             },
             {}
         ],
         38: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.once = function (e) {
                         var t = !1;
                         return function () {
                             for (var n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
                             t || ((t = !0), e.apply(void 0, n));
                         };
-                    });
+                    }));
             },
             {}
         ],
         39: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.promiseOrCallback = function (e, t) {
                         if (!t) return e;
                         e.then(function (e) {
@@ -578,7 +578,7 @@ e.exports = (function e(t, n, r) {
                         }).catch(function (e) {
                             return t(e);
                         });
-                    });
+                    }));
             },
             {}
         ],
@@ -590,10 +590,10 @@ e.exports = (function e(t, n, r) {
                 function a(e) {
                     return function () {
                         for (var t, n = [], a = 0; a < arguments.length; a++) n[a] = arguments[a];
-                        return 'function' == typeof n[n.length - 1] && ((t = n.pop()), (t = i.once(r.deferred(t)))), o.promiseOrCallback(e.apply(this, n), t);
+                        return ('function' == typeof n[n.length - 1] && ((t = n.pop()), (t = i.once(r.deferred(t)))), o.promiseOrCallback(e.apply(this, n), t));
                     };
                 }
-                (a.wrapPrototype = function (e, t) {
+                ((a.wrapPrototype = function (e, t) {
                     void 0 === t && (t = {});
                     var n = t.ignoreMethods || [],
                         r = !0 === t.transformPrivateMethods;
@@ -603,7 +603,7 @@ e.exports = (function e(t, n, r) {
                                 var i,
                                     o = 'constructor' !== t && 'function' == typeof e.prototype[t],
                                     a = -1 === n.indexOf(t);
-                                return (i = !!r || '_' !== t.charAt(0)), o && i && a;
+                                return ((i = !!r || '_' !== t.charAt(0)), o && i && a);
                             })
                             .forEach(function (t) {
                                 var n = e.prototype[t];
@@ -612,7 +612,7 @@ e.exports = (function e(t, n, r) {
                         e
                     );
                 }),
-                    (t.exports = a);
+                    (t.exports = a));
             },
             {
                 './lib/deferred': 37,
@@ -623,7 +623,7 @@ e.exports = (function e(t, n, r) {
         41: [
             function (e, n, r) {
                 var i, o;
-                (i = this),
+                ((i = this),
                     (o = function (e) {
                         function t(e, t, n, r) {
                             return new (n || (n = Promise))(function (i, o) {
@@ -702,10 +702,10 @@ e.exports = (function e(t, n, r) {
                                                         }
                                                     );
                                                 case 5:
-                                                    a.label++, (r = c[1]), (c = [0]);
+                                                    (a.label++, (r = c[1]), (c = [0]));
                                                     continue;
                                                 case 7:
-                                                    (c = a.ops.pop()), a.trys.pop();
+                                                    ((c = a.ops.pop()), a.trys.pop());
                                                     continue;
                                                 default:
                                                     if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === c[0] || 2 === c[0])) {
@@ -717,19 +717,19 @@ e.exports = (function e(t, n, r) {
                                                         break;
                                                     }
                                                     if (6 === c[0] && a.label < i[1]) {
-                                                        (a.label = i[1]), (i = c);
+                                                        ((a.label = i[1]), (i = c));
                                                         break;
                                                     }
                                                     if (i && a.label < i[2]) {
-                                                        (a.label = i[2]), a.ops.push(c);
+                                                        ((a.label = i[2]), a.ops.push(c));
                                                         break;
                                                     }
-                                                    i[2] && a.ops.pop(), a.trys.pop();
+                                                    (i[2] && a.ops.pop(), a.trys.pop());
                                                     continue;
                                             }
                                             c = t.call(e, a);
                                         } catch (e) {
-                                            (c = [6, e]), (r = 0);
+                                            ((c = [6, e]), (r = 0));
                                         } finally {
                                             n = i = 0;
                                         }
@@ -762,7 +762,7 @@ e.exports = (function e(t, n, r) {
                                     r.setAttribute('data-'.concat(e), ''.concat(i[e]));
                                 }),
                                 (t = new Promise(function (t, n) {
-                                    r.addEventListener('load', function () {
+                                    (r.addEventListener('load', function () {
                                         t(r);
                                     }),
                                         r.addEventListener('error', function () {
@@ -771,24 +771,24 @@ e.exports = (function e(t, n, r) {
                                         r.addEventListener('abort', function () {
                                             n(Error(''.concat(e.src, ' has aborted.')));
                                         }),
-                                        o.appendChild(r);
+                                        o.appendChild(r));
                                 })),
                                 (a[n] = t),
                                 t
                             );
                         }
-                        (s.clearCache = function () {
+                        ((s.clearCache = function () {
                             a = {};
                         }),
                             Object.defineProperty(o, '__esModule', { value: !0 }),
-                            (o.loadStylesheet = c = o.loadScript = void 0);
+                            (o.loadStylesheet = c = o.loadScript = void 0));
                         var c = (o.loadScript = s);
                         o.loadStylesheet = function (e) {
                             var t = document.querySelector('link[href="'.concat(e.href, '"]'));
                             if (t) return Promise.resolve(t);
                             t = document.createElement('link');
                             var n = e.container || document.head;
-                            return t.setAttribute('rel', 'stylesheet'), t.setAttribute('type', 'text/css'), t.setAttribute('href', e.href), t.setAttribute('id', e.id), n.firstChild ? n.insertBefore(t, n.firstChild) : n.appendChild(t), Promise.resolve(t);
+                            return (t.setAttribute('rel', 'stylesheet'), t.setAttribute('type', 'text/css'), t.setAttribute('href', e.href), t.setAttribute('id', e.id), n.firstChild ? n.insertBefore(t, n.firstChild) : n.appendChild(t), Promise.resolve(t));
                         };
                         var d = 'fastlane',
                             l = 'connect-boba',
@@ -889,7 +889,7 @@ e.exports = (function e(t, n, r) {
                                 n = e.bundleId;
                             return n ? 'https://cdn-'.concat(n, '.static.engineering.dev.paypalinc.com/').concat(t) : ''.concat(u.CDNX_PROD, '/').concat(t);
                         }
-                        (e.constants = u),
+                        ((e.constants = u),
                             (e.loadAxo = function (e) {
                                 return t(this, void 0, void 0, function () {
                                     var t, r, i, o;
@@ -917,7 +917,7 @@ e.exports = (function e(t, n, r) {
                                                 return [4, Promise.all([E(A.hostedFields, t, r), T(i, r)])];
                                             case 1:
                                             case 3:
-                                                return n.sent(), [3, 5];
+                                                return (n.sent(), [3, 5]);
                                             case 2:
                                                 if (e.platform !== p.PPCP) return [3, 4];
                                                 return [4, Promise.all([E(A.client, t, r), E(A.hostedFields, t, r), T(i, r)])];
@@ -928,9 +928,9 @@ e.exports = (function e(t, n, r) {
                                         }
                                     });
                                 });
-                            });
+                            }));
                     }),
-                    'object' == typeof r && void 0 !== n ? o(r) : 'function' == typeof t && t.amd ? t(['exports'], o) : o(((i = 'undefined' != typeof globalThis ? globalThis : i || self).loadAxo = {}));
+                    'object' == typeof r && void 0 !== n ? o(r) : 'function' == typeof t && t.amd ? t(['exports'], o) : o(((i = 'undefined' != typeof globalThis ? globalThis : i || self).loadAxo = {})));
             },
             {}
         ],
@@ -991,7 +991,7 @@ e.exports = (function e(t, n, r) {
                     var n = (0, s.findBestMatch)(t);
                     return n ? [n] : t;
                 }
-                (h.getTypeInfo = function (e) {
+                ((h.getTypeInfo = function (e) {
                     return (0, c.clone)(_(e));
                 }),
                     (h.removeCard = function (e) {
@@ -1000,7 +1000,7 @@ e.exports = (function e(t, n, r) {
                     }),
                     (h.addCard = function (e) {
                         var t = E(e.type, !0);
-                        (d[e.type] = e), -1 === t && p.push(e.type);
+                        ((d[e.type] = e), -1 === t && p.push(e.type));
                     }),
                     (h.updateCard = function (e, t) {
                         var n = d[e] || i[e];
@@ -1011,13 +1011,13 @@ e.exports = (function e(t, n, r) {
                     }),
                     (h.changeOrder = function (e, t) {
                         var n = E(e);
-                        p.splice(n, 1), p.splice(t, 0, e);
+                        (p.splice(n, 1), p.splice(t, 0, e));
                     }),
                     (h.resetModifications = function () {
-                        (p = (0, c.clone)(u)), (d = {});
+                        ((p = (0, c.clone)(u)), (d = {}));
                     }),
                     (h.types = l),
-                    (t.exports = h);
+                    (t.exports = h));
             },
             {
                 './lib/add-matching-cards-to-results': 43,
@@ -1029,7 +1029,7 @@ e.exports = (function e(t, n, r) {
         ],
         43: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.addMatchingCardsToResults = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.addMatchingCardsToResults = void 0));
                 var r = e('./clone'),
                     i = e('./matches');
                 n.addMatchingCardsToResults = function (e, t, n) {
@@ -1038,7 +1038,7 @@ e.exports = (function e(t, n, r) {
                         var s = t.patterns[o];
                         if ((0, i.matches)(e, s)) {
                             var c = (0, r.clone)(t);
-                            (a = Array.isArray(s) ? String(s[0]).length : String(s).length), e.length >= a && (c.matchStrength = a), n.push(c);
+                            ((a = Array.isArray(s) ? String(s[0]).length : String(s).length), e.length >= a && (c.matchStrength = a), n.push(c));
                             break;
                         }
                     }
@@ -1190,17 +1190,17 @@ e.exports = (function e(t, n, r) {
         ],
         45: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.clone = void 0),
                     (n.clone = function (e) {
                         return e ? JSON.parse(JSON.stringify(e)) : null;
-                    });
+                    }));
             },
             {}
         ],
         46: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.findBestMatch = void 0),
                     (n.findBestMatch = function (e) {
                         var t;
@@ -1211,39 +1211,39 @@ e.exports = (function e(t, n, r) {
                                   return !e || Number(e.matchStrength) < Number(t.matchStrength) ? t : e;
                               })
                             : null;
-                    });
+                    }));
             },
             {}
         ],
         47: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.isValidInputType = void 0),
                     (n.isValidInputType = function (e) {
                         return 'string' == typeof e || e instanceof String;
-                    });
+                    }));
             },
             {}
         ],
         48: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.matches = void 0),
                     (n.matches = function (e, t) {
                         var n, r, i, o, a, s;
                         return Array.isArray(t) ? ((n = t[0]), (r = t[1]), (i = String(n).length), (a = parseInt((o = e.substr(0, i)), 10)), (n = parseInt(String(n).substr(0, o.length), 10)), (r = parseInt(String(r).substr(0, o.length), 10)), a >= n && a <= r) : (s = String((s = t))).substring(0, e.length) === e.substring(0, s.length);
-                    });
+                    }));
             },
             {}
         ],
         49: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.Framebus = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.Framebus = void 0));
                 var r = e('./lib'),
                     i = 'undefined' != typeof window && window.Promise;
                 n.Framebus = (function () {
                     function e(e) {
-                        void 0 === e && (e = {}), (this.origin = e.origin || '*'), (this.channel = e.channel || ''), (this.verifyDomain = e.verifyDomain), (this.targetFrames = e.targetFrames || []), (this.limitBroadcastToFramesArray = !!e.targetFrames), (this.isDestroyed = !1), (this.listeners = []), (this.hasAdditionalChecksForOnListeners = !!(this.verifyDomain || this.limitBroadcastToFramesArray));
+                        (void 0 === e && (e = {}), (this.origin = e.origin || '*'), (this.channel = e.channel || ''), (this.verifyDomain = e.verifyDomain), (this.targetFrames = e.targetFrames || []), (this.limitBroadcastToFramesArray = !!e.targetFrames), (this.isDestroyed = !1), (this.listeners = []), (this.hasAdditionalChecksForOnListeners = !!(this.verifyDomain || this.limitBroadcastToFramesArray)));
                     }
                     return (
                         (e.setPromise = function (t) {
@@ -1325,7 +1325,7 @@ e.exports = (function e(t, n, r) {
                             if ((0, r.subscriptionArgsInvalid)(e, n, a)) return !1;
                             var s = r.subscribers[a] && r.subscribers[a][e];
                             if (!s) return !1;
-                            for (var i = 0; i < s.length; i++) if (s[i] === n) return s.splice(i, 1), !0;
+                            for (var i = 0; i < s.length; i++) if (s[i] === n) return (s.splice(i, 1), !0);
                             return !1;
                         }),
                         (e.prototype.teardown = function () {
@@ -1363,7 +1363,7 @@ e.exports = (function e(t, n, r) {
                         (e.prototype.checkOrigin = function (e) {
                             var t,
                                 n = document.createElement('a');
-                            return (n.href = location.href), (t = 'https:' === n.protocol ? n.host.replace(/:443$/, '') : 'http:' === n.protocol ? n.host.replace(/:80$/, '') : n.host), n.protocol + '//' + t === e || !this.verifyDomain || this.verifyDomain(e);
+                            return ((n.href = location.href), (t = 'https:' === n.protocol ? n.host.replace(/:443$/, '') : 'http:' === n.protocol ? n.host.replace(/:80$/, '') : n.host), n.protocol + '//' + t === e || !this.verifyDomain || this.verifyDomain(e));
                         }),
                         (e.prototype.namespaceEvent = function (e) {
                             return this.channel ? ''.concat(this.channel, ':').concat(e) : e;
@@ -1379,7 +1379,7 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e('./lib'),
                     i = e('./framebus');
-                (0, r.attach)(), (t.exports = i.Framebus);
+                ((0, r.attach)(), (t.exports = i.Framebus));
             },
             {
                 './framebus': 49,
@@ -1388,21 +1388,21 @@ e.exports = (function e(t, n, r) {
         ],
         51: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.detach = n.attach = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.detach = n.attach = void 0));
                 var r = e('./'),
                     i = !1;
-                (n.attach = function () {
+                ((n.attach = function () {
                     i || 'undefined' == typeof window || ((i = !0), window.addEventListener('message', r.onMessage, !1));
                 }),
                     (n.detach = function () {
-                        (i = !1), window.removeEventListener('message', r.onMessage, !1);
-                    });
+                        ((i = !1), window.removeEventListener('message', r.onMessage, !1));
+                    }));
             },
             { './': 57 }
         ],
         52: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.broadcastToChildWindows = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.broadcastToChildWindows = void 0));
                 var r = e('./');
                 n.broadcastToChildWindows = function (e, t, n) {
                     for (var i = r.childWindows.length - 1; i >= 0; i--) {
@@ -1421,7 +1421,7 @@ e.exports = (function e(t, n, r) {
         ],
         53: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.broadcast = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.broadcast = void 0));
                 var r = e('./');
                 n.broadcast = function e(t, n) {
                     var i,
@@ -1440,11 +1440,11 @@ e.exports = (function e(t, n, r) {
                             (i = s.frames[o]);
 
                         )
-                            e(t, {
+                            (e(t, {
                                 origin: a,
                                 frame: i
                             }),
-                                o++;
+                                o++);
                     } catch (e) {}
                 };
             },
@@ -1452,18 +1452,18 @@ e.exports = (function e(t, n, r) {
         ],
         54: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.subscribers = n.childWindows = n.prefix = void 0), (n.prefix = '/*framebus*/'), (n.childWindows = []), (n.subscribers = {});
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.subscribers = n.childWindows = n.prefix = void 0), (n.prefix = '/*framebus*/'), (n.childWindows = []), (n.subscribers = {}));
             },
             {}
         ],
         55: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.dispatch = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.dispatch = void 0));
                 var r = e('./');
                 n.dispatch = function (e, t, n, i, o) {
                     if (r.subscribers[e] && r.subscribers[e][t]) {
                         var a = [];
-                        n && a.push(n), i && a.push(i);
+                        (n && a.push(n), i && a.push(i));
                         for (var s = 0; s < r.subscribers[e][t].length; s++) r.subscribers[e][t][s].apply(o, a);
                     }
                 };
@@ -1472,11 +1472,11 @@ e.exports = (function e(t, n, r) {
         ],
         56: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.hasOpener = void 0),
                     (n.hasOpener = function (e) {
                         return e.top === e && null != e.opener && e.opener !== e && !0 !== e.opener.closed;
-                    });
+                    }));
             },
             {}
         ],
@@ -1488,24 +1488,24 @@ e.exports = (function e(t, n, r) {
                             ? function (e, t, n, r) {
                                   void 0 === r && (r = n);
                                   var i = Object.getOwnPropertyDescriptor(t, n);
-                                  (!i || ('get' in i ? !t.__esModule : i.writable || i.configurable)) &&
+                                  ((!i || ('get' in i ? !t.__esModule : i.writable || i.configurable)) &&
                                       (i = {
                                           enumerable: !0,
                                           get: function () {
                                               return t[n];
                                           }
                                       }),
-                                      Object.defineProperty(e, r, i);
+                                      Object.defineProperty(e, r, i));
                               }
                             : function (e, t, n, r) {
-                                  void 0 === r && (r = n), (e[r] = t[n]);
+                                  (void 0 === r && (r = n), (e[r] = t[n]));
                               }),
                     i =
                         (this && this.__exportStar) ||
                         function (e, t) {
                             for (var n in e) 'default' === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
                         };
-                Object.defineProperty(n, '__esModule', { value: !0 }), i(e('./attach'), n), i(e('./broadcast-to-child-windows'), n), i(e('./broadcast'), n), i(e('./constants'), n), i(e('./dispatch'), n), i(e('./has-opener'), n), i(e('./is-not-string'), n), i(e('./message'), n), i(e('./package-payload'), n), i(e('./send-message'), n), i(e('./subscribe-replier'), n), i(e('./subscription-args-invalid'), n), i(e('./types'), n), i(e('./unpack-payload'), n);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), i(e('./attach'), n), i(e('./broadcast-to-child-windows'), n), i(e('./broadcast'), n), i(e('./constants'), n), i(e('./dispatch'), n), i(e('./has-opener'), n), i(e('./is-not-string'), n), i(e('./message'), n), i(e('./package-payload'), n), i(e('./send-message'), n), i(e('./subscribe-replier'), n), i(e('./subscription-args-invalid'), n), i(e('./types'), n), i(e('./unpack-payload'), n));
             },
             {
                 './attach': 51,
@@ -1526,17 +1526,17 @@ e.exports = (function e(t, n, r) {
         ],
         58: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.isntString = void 0),
                     (n.isntString = function (e) {
                         return 'string' != typeof e;
-                    });
+                    }));
             },
             {}
         ],
         59: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.onMessage = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.onMessage = void 0));
                 var r = e('./');
                 n.onMessage = function (e) {
                     if (!(0, r.isntString)(e.data)) {
@@ -1544,7 +1544,7 @@ e.exports = (function e(t, n, r) {
                         if (t) {
                             var n = t.eventData,
                                 i = t.reply;
-                            (0, r.dispatch)('*', t.event, n, i, e), (0, r.dispatch)(e.origin, t.event, n, i, e), (0, r.broadcastToChildWindows)(e.data, t.origin, e.source);
+                            ((0, r.dispatch)('*', t.event, n, i, e), (0, r.dispatch)(e.origin, t.event, n, i, e), (0, r.broadcastToChildWindows)(e.data, t.origin, e.source));
                         }
                     }
                 };
@@ -1553,7 +1553,7 @@ e.exports = (function e(t, n, r) {
         ],
         60: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.packagePayload = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.packagePayload = void 0));
                 var r = e('./');
                 n.packagePayload = function (e, t, n, i) {
                     var o,
@@ -1561,7 +1561,7 @@ e.exports = (function e(t, n, r) {
                             event: e,
                             origin: t
                         };
-                    'function' == typeof i && (a.reply = (0, r.subscribeReplier)(i, t)), (a.eventData = n);
+                    ('function' == typeof i && (a.reply = (0, r.subscribeReplier)(i, t)), (a.eventData = n));
                     try {
                         o = r.prefix + JSON.stringify(a);
                     } catch (e) {
@@ -1574,13 +1574,13 @@ e.exports = (function e(t, n, r) {
         ],
         61: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }),
+                (Object.defineProperty(n, '__esModule', { value: !0 }),
                     (n.sendMessage = void 0),
                     (n.sendMessage = function (e, t, n) {
                         try {
                             e.postMessage(t, n);
                         } catch (e) {}
-                    });
+                    }));
             },
             {}
         ],
@@ -1591,14 +1591,14 @@ e.exports = (function e(t, n, r) {
                     function (e) {
                         return e && e.__esModule ? e : { default: e };
                     };
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.subscribeReplier = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.subscribeReplier = void 0));
                 var i = e('../framebus'),
                     o = r(e('@braintree/uuid'));
                 n.subscribeReplier = function (e, t) {
                     var n = (0, o.default)();
                     return (
                         i.Framebus.target({ origin: t }).on(n, function r(o, a) {
-                            e(o, a), i.Framebus.target({ origin: t }).off(n, r);
+                            (e(o, a), i.Framebus.target({ origin: t }).off(n, r));
                         }),
                         n
                     );
@@ -1611,7 +1611,7 @@ e.exports = (function e(t, n, r) {
         ],
         63: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.subscriptionArgsInvalid = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.subscriptionArgsInvalid = void 0));
                 var r = e('./');
                 n.subscriptionArgsInvalid = function (e, t, n) {
                     return !!(0, r.isntString)(e) || 'function' != typeof t || (0, r.isntString)(n);
@@ -1627,7 +1627,7 @@ e.exports = (function e(t, n, r) {
         ],
         65: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.unpackPayload = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.unpackPayload = void 0));
                 var r = e('./');
                 n.unpackPayload = function (e) {
                     var t;
@@ -1666,23 +1666,23 @@ e.exports = (function e(t, n, r) {
         ],
         67: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.isIos = n.isIE9 = n.isSamsungBrowser = n.isAndroidChrome = n.isKitKatWebview = void 0);
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.isIos = n.isIE9 = n.isSamsungBrowser = n.isAndroidChrome = n.isKitKatWebview = void 0));
                 var r = 'undefined' != typeof window && window.navigator && window.navigator.userAgent,
                     i = e('@braintree/browser-detection/is-android'),
                     o = e('@braintree/browser-detection/is-chrome-os'),
                     a = e('@braintree/browser-detection/is-chrome');
-                (n.isIos = e('@braintree/browser-detection/is-ios')), (n.isIE9 = e('@braintree/browser-detection/is-ie9'));
+                ((n.isIos = e('@braintree/browser-detection/is-ios')), (n.isIE9 = e('@braintree/browser-detection/is-ie9')));
                 var s = /Version\/\d\.\d* Chrome\/\d*\.0\.0\.0/;
-                (n.isKitKatWebview = function (e) {
-                    return void 0 === e && (e = r), i(e) && s.test(e);
+                ((n.isKitKatWebview = function (e) {
+                    return (void 0 === e && (e = r), i(e) && s.test(e));
                 }),
                     (n.isAndroidChrome = function (e) {
-                        return void 0 === e && (e = r), (i(e) || o(e)) && a(e);
+                        return (void 0 === e && (e = r), (i(e) || o(e)) && a(e));
                     }),
                     (n.isSamsungBrowser = function (e) {
                         var t;
-                        return void 0 === e && (e = r), /SamsungBrowser/.test(e) || (!a((t = e)) && t.indexOf('Samsung') > -1);
-                    });
+                        return (void 0 === e && (e = r), /SamsungBrowser/.test(e) || (!a((t = e)) && t.indexOf('Samsung') > -1));
+                    }));
             },
             {
                 '@braintree/browser-detection/is-android': 80,
@@ -1838,7 +1838,7 @@ e.exports = (function e(t, n, r) {
                 function d(e) {
                     this._client = e.client;
                 }
-                (d.prototype.getRewardsBalance = function (e) {
+                ((d.prototype.getRewardsBalance = function (e) {
                     var t,
                         n = e.nonce;
                     return n
@@ -1904,9 +1904,9 @@ e.exports = (function e(t, n, r) {
                               );
                     }),
                     (d.prototype.teardown = function () {
-                        return s(this, a(d.prototype)), Promise.resolve();
+                        return (s(this, a(d.prototype)), Promise.resolve());
                     }),
-                    (t.exports = c.wrapPrototype(d));
+                    (t.exports = c.wrapPrototype(d)));
             },
             {
                 '../lib/assign': 140,
@@ -1958,7 +1958,7 @@ e.exports = (function e(t, n, r) {
                                 });
                             })
                             .then(function (t) {
-                                return (e.client = t), new r(e);
+                                return ((e.client = t), new r(e));
                             });
                     }),
                     VERSION: '3.112.1'
@@ -1981,14 +1981,14 @@ e.exports = (function e(t, n, r) {
                     s = e('../lib/convert-methods-to-error'),
                     c = e('@braintree/wrap-promise');
                 function d(e) {
-                    (this._instantiatedWithClient = !e.useDeferredClient), (this._client = e.client), (this._createPromise = e.createPromise), this._client && this._setMerchantIdentifier();
+                    ((this._instantiatedWithClient = !e.useDeferredClient), (this._client = e.client), (this._createPromise = e.createPromise), this._client && this._setMerchantIdentifier());
                 }
-                (d.prototype._waitForClient = function () {
+                ((d.prototype._waitForClient = function () {
                     return this._client
                         ? Promise.resolve()
                         : this._createPromise.then(
                               function (e) {
-                                  (this._client = e), this._setMerchantIdentifier();
+                                  ((this._client = e), this._setMerchantIdentifier());
                               }.bind(this)
                           );
                 }),
@@ -2048,7 +2048,7 @@ e.exports = (function e(t, n, r) {
                                       );
                                   })
                                   .then(function (e) {
-                                      return i.sendEvent(t._client, 'applepay.performValidation.succeeded'), Promise.resolve(e);
+                                      return (i.sendEvent(t._client, 'applepay.performValidation.succeeded'), Promise.resolve(e));
                                   })
                                   .catch(function (e) {
                                       return (i.sendEvent(t._client, 'applepay.performValidation.failed'), 'CLIENT_REQUEST_ERROR' === e.code)
@@ -2086,7 +2086,7 @@ e.exports = (function e(t, n, r) {
                                       });
                                   })
                                   .then(function (e) {
-                                      return i.sendEvent(t._client, 'applepay.tokenize.succeeded'), Promise.resolve(e.applePayCards[0]);
+                                      return (i.sendEvent(t._client, 'applepay.tokenize.succeeded'), Promise.resolve(e.applePayCards[0]));
                                   })
                                   .catch(function (e) {
                                       return (
@@ -2104,9 +2104,9 @@ e.exports = (function e(t, n, r) {
                             : Promise.reject(new r(o.APPLE_PAY_PAYMENT_TOKEN_REQUIRED));
                     }),
                     (d.prototype.teardown = function () {
-                        return s(this, a(d.prototype)), Promise.resolve();
+                        return (s(this, a(d.prototype)), Promise.resolve());
                     }),
-                    (t.exports = c.wrapPrototype(d));
+                    (t.exports = c.wrapPrototype(d)));
             },
             {
                 '../lib/analytics': 138,
@@ -2189,7 +2189,7 @@ e.exports = (function e(t, n, r) {
                                 return ((e.createPromise = a), (n = new r(e)), e.useDeferredClient)
                                     ? n
                                     : a.then(function (e) {
-                                          return (n._client = e), n;
+                                          return ((n._client = e), n);
                                       });
                             });
                     }),
@@ -2262,11 +2262,11 @@ e.exports = (function e(t, n, r) {
                         this._graphQL = new i({ graphQL: n.graphQL });
                     }
                 }
-                (v.initialize = function (e) {
+                ((v.initialize = function (e) {
                     var t,
                         n,
                         r = b[e.authorization];
-                    if (r) return m.sendEvent(r, 'custom.client.load.cached'), r;
+                    if (r) return (m.sendEvent(r, 'custom.client.load.cached'), r);
                     try {
                         n = l(e.authorization);
                     } catch (e) {
@@ -2274,16 +2274,16 @@ e.exports = (function e(t, n, r) {
                     }
                     return (
                         (r = d(n, e.sessionId).then(function (n) {
-                            return e.debug && (n.isDebug = !0), (n.authorization = e.authorization), (t = new v(n));
+                            return (e.debug && (n.isDebug = !0), (n.authorization = e.authorization), (t = new v(n)));
                         })),
                         (b[e.authorization] = r),
                         m.sendEvent(r, 'custom.client.load.initialized'),
                         r
                             .then(function (e) {
-                                return m.sendEvent(t, 'custom.client.load.succeeded'), e;
+                                return (m.sendEvent(t, 'custom.client.load.succeeded'), e);
                             })
                             .catch(function (t) {
-                                return delete b[e.authorization], Promise.reject(t);
+                                return (delete b[e.authorization], Promise.reject(t));
                             })
                     );
                 }),
@@ -2296,7 +2296,7 @@ e.exports = (function e(t, n, r) {
                             r,
                             i,
                             o = document.querySelector('script[fncls="' + O + '"]');
-                        o || (((o = document.body.appendChild(document.createElement('script'))).type = 'application/json'), o.setAttribute('fncls', O)),
+                        (o || (((o = document.body.appendChild(document.createElement('script'))).type = 'application/json'), o.setAttribute('fncls', O)),
                             (n = {
                                 rda_tenant: 'bt_card',
                                 mid: (t = this.getConfiguration()).gatewayConfiguration.merchantId
@@ -2312,7 +2312,7 @@ e.exports = (function e(t, n, r) {
                                 bu: !1,
                                 s: g
                             }),
-                            (o.text = JSON.stringify(i));
+                            (o.text = JSON.stringify(i)));
                     }),
                     (v.prototype.request = function (e, t) {
                         var n = this,
@@ -2339,9 +2339,9 @@ e.exports = (function e(t, n, r) {
                                     }),
                                     'clientApi' === d)
                                 )
-                                    (l = n._clientApiBaseUrl), (p.data = u.addMetadata(n._configuration, e.data));
+                                    ((l = n._clientApiBaseUrl), (p.data = u.addMetadata(n._configuration, e.data)));
                                 else if ('graphQLApi' === d) {
-                                    (l = A[n._configuration.gatewayConfiguration.environment]),
+                                    ((l = A[n._configuration.gatewayConfiguration.environment]),
                                         (e.endpoint = ''),
                                         (p.method = 'post'),
                                         (p.data = h(
@@ -2359,14 +2359,14 @@ e.exports = (function e(t, n, r) {
                                         (p.headers = {
                                             Authorization: 'Bearer ' + ((o = n._configuration).authorizationFingerprint || o.authorization),
                                             'Braintree-Version': r
-                                        });
+                                        }));
                                 } else
                                     throw new s({
                                         type: f.CLIENT_OPTION_INVALID.type,
                                         code: f.CLIENT_OPTION_INVALID.code,
                                         message: 'options.api is invalid.'
                                     });
-                                (p.url = l + e.endpoint),
+                                ((p.url = l + e.endpoint),
                                     (p.sendAnalyticsEvent = function (e) {
                                         m.sendEvent(n, e);
                                     }),
@@ -2393,7 +2393,7 @@ e.exports = (function e(t, n, r) {
                                                               })),
                                                 n)
                                             )
-                                                return (n.details = n.details || {}), (n.details.httpStatus = e), n;
+                                                return ((n.details = n.details || {}), (n.details.httpStatus = e), n);
                                         })(o, e))
                                             ? void i(l)
                                             : 'graphQLApi' === d && r.errors
@@ -2414,10 +2414,10 @@ e.exports = (function e(t, n, r) {
                                                         forceScriptReload: !0
                                                     })),
                                                 t(a));
-                                    });
+                                    }));
                             });
                         if ('function' == typeof t) {
-                            (t = _(E(t))),
+                            ((t = _(E(t))),
                                 i
                                     .then(function (e) {
                                         t(null, e, e._httpStatus);
@@ -2425,7 +2425,7 @@ e.exports = (function e(t, n, r) {
                                     .catch(function (e) {
                                         var n = e && e.details && e.details.httpStatus;
                                         t(e, null, n);
-                                    });
+                                    }));
                             return;
                         }
                         return i;
@@ -2437,9 +2437,9 @@ e.exports = (function e(t, n, r) {
                         return y;
                     }),
                     (v.prototype.teardown = p(function () {
-                        return delete b[this.getConfiguration().authorization], I(this, T(v.prototype)), Promise.resolve();
+                        return (delete b[this.getConfiguration().authorization], I(this, T(v.prototype)), Promise.resolve());
                     })),
-                    (t.exports = v);
+                    (t.exports = v));
             },
             {
                 '../lib/add-metadata': 137,
@@ -2562,7 +2562,7 @@ e.exports = (function e(t, n, r) {
                                     integrationType: s.INTEGRATION,
                                     sessionId: m
                                 };
-                            (_ = e.attrs),
+                            ((_ = e.attrs),
                                 (E = e.configUrl),
                                 (_._meta = f),
                                 (_.braintreeLibraryVersion = s.BRAINTREE_LIBRARY_VERSION),
@@ -2606,7 +2606,7 @@ e.exports = (function e(t, n, r) {
                                         analyticsMetadata: f,
                                         gatewayConfiguration: t
                                     });
-                                });
+                                }));
                         });
                     })
                 };
@@ -2676,7 +2676,7 @@ e.exports = (function e(t, n, r) {
                                 I = t.timeout,
                                 N = s.getRequestObject(),
                                 O = !!(T && T.isGraphQLRequest(A, t.data));
-                            (t.headers = i({ 'Content-Type': 'application/json' }, t.headers)),
+                            ((t.headers = i({ 'Content-Type': 'application/json' }, t.headers)),
                                 (A = (E = O ? new d(t) : new l(t)).getUrl()),
                                 (h = E.getBody()),
                                 (m = E.getMethod()),
@@ -2686,13 +2686,13 @@ e.exports = (function e(t, n, r) {
                                     ? (N.onreadystatechange = function () {
                                           if (4 === N.readyState) {
                                               if (0 === N.status && O) {
-                                                  delete t.graphQL, e(t, n, u);
+                                                  (delete t.graphQL, e(t, n, u));
                                                   return;
                                               }
                                               if (((y = a(N.responseText)), (_ = E.adaptResponseBody(y)), (p = E.determineStatus(N.status, y)) >= 400 || p < 200)) {
                                                   var r;
                                                   if (O && ('UNKNOWN' === (r = !y.data && y.errors && y.errors[0] && y.errors[0].extensions && y.errors[0].extensions.errorClass) || 'INTERNAL' === r)) {
-                                                      delete t.graphQL, e(t, n, u);
+                                                      (delete t.graphQL, e(t, n, u));
                                                       return;
                                                   }
                                                   if (n < 1 && (!p || 408 === p)) return void e(t, ++n, u);
@@ -2710,19 +2710,19 @@ e.exports = (function e(t, n, r) {
                                       (N.onprogress = function () {}),
                                       (N.ontimeout = function () {
                                           u('timeout', null, -1);
-                                      }));
+                                      })));
                             try {
                                 N.open(m, A, !0);
                             } catch (r) {
                                 if (!O) throw r;
-                                delete t.graphQL, e(t, n, u);
+                                (delete t.graphQL, e(t, n, u));
                                 return;
                             }
-                            (N.timeout = I),
+                            ((N.timeout = I),
                                 c &&
                                     Object.keys(f).forEach(function (e) {
                                         N.setRequestHeader(e, f[e]);
-                                    });
+                                    }));
                             try {
                                 N.send(o(m, h));
                             } catch (e) {}
@@ -2743,9 +2743,9 @@ e.exports = (function e(t, n, r) {
         98: [
             function (e, t, n) {
                 function r(e) {
-                    (this._url = e.url), (this._data = e.data), (this._method = e.method), (this._headers = e.headers);
+                    ((this._url = e.url), (this._data = e.data), (this._method = e.method), (this._headers = e.headers));
                 }
-                (r.prototype.getUrl = function () {
+                ((r.prototype.getUrl = function () {
                     return this._url;
                 }),
                     (r.prototype.getBody = function () {
@@ -2763,7 +2763,7 @@ e.exports = (function e(t, n, r) {
                     (r.prototype.determineStatus = function (e) {
                         return e;
                     }),
-                    (t.exports = r);
+                    (t.exports = r));
             },
             {}
         ],
@@ -3055,7 +3055,7 @@ e.exports = (function e(t, n, r) {
                                                   field: a,
                                                   message: n.message
                                               });
-                                          r.forEach(function (e) {
+                                          (r.forEach(function (e) {
                                               e.field === a && (i = e);
                                           }),
                                               i ||
@@ -3064,7 +3064,7 @@ e.exports = (function e(t, n, r) {
                                                       fieldErrors: []
                                                   }),
                                                   r.push(i)),
-                                              e(t.slice(1), n, i.fieldErrors);
+                                              e(t.slice(1), n, i.fieldErrors));
                                       })(e.extensions.inputPath.slice(1), e, r);
                               }),
                               r)).length
@@ -3233,7 +3233,7 @@ e.exports = (function e(t, n, r) {
                 function o(e) {
                     this._config = e.graphQL;
                 }
-                (o.prototype.getGraphQLEndpoint = function () {
+                ((o.prototype.getGraphQLEndpoint = function () {
                     return this._config.url;
                 }),
                     (o.prototype.isGraphQLRequest = function (e, t) {
@@ -3260,12 +3260,12 @@ e.exports = (function e(t, n, r) {
                     (o.prototype.getClientApiPath = function (e) {
                         var t,
                             n = e.split('/client_api/v1/');
-                        return n.length > 1 && (t = n[1].split('?')[0]), t;
+                        return (n.length > 1 && (t = n[1].split('?')[0]), t);
                     }),
                     (o.prototype._isGraphQLEnabled = function () {
                         return !!this._config;
                     }),
-                    (t.exports = o);
+                    (t.exports = o));
             },
             {}
         ],
@@ -3295,7 +3295,7 @@ e.exports = (function e(t, n, r) {
                     };
                 function h(e) {
                     var t = e.graphQL.getClientApiPath(e.url);
-                    (this._graphQL = e.graphQL),
+                    ((this._graphQL = e.graphQL),
                         (this._data = e.data),
                         (this._method = e.method),
                         (this._headers = e.headers),
@@ -3307,9 +3307,9 @@ e.exports = (function e(t, n, r) {
                         (this._sendAnalyticsEvent = e.sendAnalyticsEvent || Function.prototype),
                         (this._generator = _[t]),
                         (this._adapter = E[t]),
-                        this._sendAnalyticsEvent('graphql.init');
+                        this._sendAnalyticsEvent('graphql.init'));
                 }
-                (h.prototype.getUrl = function () {
+                ((h.prototype.getUrl = function () {
                     return this._graphQL.getGraphQLEndpoint();
                 }),
                     (h.prototype.getBody = function () {
@@ -3345,9 +3345,9 @@ e.exports = (function e(t, n, r) {
                     }),
                     (h.prototype.determineStatus = function (e, t) {
                         var n, r, i, o;
-                        return 200 === e ? ((r = t.errors && t.errors[0] && t.errors[0].extensions && t.errors[0].extensions.errorClass), (n = t.data && !t.errors ? 200 : 'VALIDATION' === r ? 422 : 'AUTHORIZATION' === r ? 403 : 'AUTHENTICATION' === r ? 401 : ((i = r), (o = t), !i && o.errors[0].message) ? 403 : 500)) : (n = e || 500), this._sendAnalyticsEvent('graphql.status.' + e), this._sendAnalyticsEvent('graphql.determinedStatus.' + n), n;
+                        return (200 === e ? ((r = t.errors && t.errors[0] && t.errors[0].extensions && t.errors[0].extensions.errorClass), (n = t.data && !t.errors ? 200 : 'VALIDATION' === r ? 422 : 'AUTHORIZATION' === r ? 403 : 'AUTHENTICATION' === r ? 401 : ((i = r), (o = t), !i && o.errors[0].message) ? 403 : 500)) : (n = e || 500), this._sendAnalyticsEvent('graphql.status.' + e), this._sendAnalyticsEvent('graphql.determinedStatus.' + n), n);
                     }),
-                    (t.exports = h);
+                    (t.exports = h));
             },
             {
                 '../../../lib/assign': 140,
@@ -3367,7 +3367,7 @@ e.exports = (function e(t, n, r) {
                 var r = e('../../lib/once'),
                     i = e('./ajax-driver');
                 t.exports = function (e, t) {
-                    (t = r(t || Function.prototype)), (e.method = (e.method || 'GET').toUpperCase()), (e.timeout = null == e.timeout ? 60000 : e.timeout), (e.data = e.data || {}), i.request(e, t);
+                    ((t = r(t || Function.prototype)), (e.method = (e.method || 'GET').toUpperCase()), (e.timeout = null == e.timeout ? 60000 : e.timeout), (e.data = e.data || {}), i.request(e, t));
                 };
             },
             {
@@ -3390,7 +3390,7 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 t.exports = function (e, t) {
                     if ('string' != typeof e) throw Error('Method must be a string');
-                    return 'get' !== e.toLowerCase() && null != t && (t = 'string' == typeof t ? t : JSON.stringify(t)), t;
+                    return ('get' !== e.toLowerCase() && null != t && (t = 'string' == typeof t ? t : JSON.stringify(t)), t);
                 };
             },
             {}
@@ -3440,7 +3440,7 @@ e.exports = (function e(t, n, r) {
                 function d(e) {
                     e && e.parentNode && e.parentNode.removeChild(e);
                 }
-                (c.prototype.initialize = function (e) {
+                ((c.prototype.initialize = function (e) {
                     var t,
                         n,
                         c,
@@ -3470,7 +3470,7 @@ e.exports = (function e(t, n, r) {
                             d)),
                         s({ src: a })
                             .then(function (e) {
-                                return (p._thirdPartyBlock = e), p;
+                                return ((p._thirdPartyBlock = e), p);
                             })
                             .catch(function () {
                                 return null;
@@ -3478,7 +3478,7 @@ e.exports = (function e(t, n, r) {
                     );
                 }),
                     (c.prototype.teardown = function () {
-                        d(document.querySelector('iframe[title="ppfniframe"]')), d(document.querySelector('iframe[title="pbf"]')), d(this._parameterBlock), d(this._thirdPartyBlock);
+                        (d(document.querySelector('iframe[title="ppfniframe"]')), d(document.querySelector('iframe[title="pbf"]')), d(this._parameterBlock), d(this._thirdPartyBlock));
                     }),
                     (t.exports = {
                         setup: function (e) {
@@ -3488,7 +3488,7 @@ e.exports = (function e(t, n, r) {
                         clearSessionIdCache: function () {
                             r = null;
                         }
-                    });
+                    }));
             },
             {
                 '../lib/assets': 139,
@@ -3547,7 +3547,7 @@ e.exports = (function e(t, n, r) {
                                                     })
                                                 );
                                             }
-                                            (t = i.deviceData), _._instances.push(i);
+                                            ((t = i.deviceData), _._instances.push(i));
                                         } else t = {};
                                         return Promise.resolve(n);
                                     })
@@ -3569,10 +3569,10 @@ e.exports = (function e(t, n, r) {
                                 (a = _),
                                 (_.teardown = u(function () {
                                     return a._createPromise.then(function () {
-                                        a._instances.forEach(function (e) {
+                                        (a._instances.forEach(function (e) {
                                             e && e.teardown();
                                         }),
-                                            l(a, d(a));
+                                            l(a, d(a)));
                                     });
                                 })),
                                 (E = _),
@@ -3620,12 +3620,12 @@ e.exports = (function e(t, n, r) {
                 function c(e) {
                     var t = c.getCachedDeviceData(e.merchantId);
                     if (t) {
-                        (this.deviceData = t), (this._isCached = !0);
+                        ((this.deviceData = t), (this._isCached = !0));
                         return;
                     }
-                    (this._currentEnvironment = this._initializeEnvironment(e)), r.random.startCollectors(), (this._deviceSessionId = this._generateDeviceSessionId()), (this.deviceData = this._getDeviceData()), c.setCachedDeviceData(e.merchantId, this.deviceData), (this._iframe = this._setupIFrame());
+                    ((this._currentEnvironment = this._initializeEnvironment(e)), r.random.startCollectors(), (this._deviceSessionId = this._generateDeviceSessionId()), (this.deviceData = this._getDeviceData()), c.setCachedDeviceData(e.merchantId, this.deviceData), (this._iframe = this._setupIFrame()));
                 }
-                (c.getCachedDeviceData = function (e) {
+                ((c.getCachedDeviceData = function (e) {
                     return s[e];
                 }),
                     (c.setCachedDeviceData = function (e, t) {
@@ -3645,7 +3645,7 @@ e.exports = (function e(t, n, r) {
                     }),
                     (c.prototype._generateDeviceSessionId = function () {
                         var e;
-                        return (e = r.random.randomWords(4, 0)), r.codec.hex.fromBits(e);
+                        return ((e = r.random.randomWords(4, 0)), r.codec.hex.fromBits(e));
                     }),
                     (c.prototype._setupIFrame = function () {
                         var e,
@@ -3665,7 +3665,7 @@ e.exports = (function e(t, n, r) {
                             t.setAttribute('aria-hidden', 'true'),
                             document.body.appendChild(t),
                             setTimeout(function () {
-                                (t.src = n._currentEnvironment.url + '/logo.htm' + e), (t.innerHTML = '<img src="' + n._currentEnvironment.url + '/logo.gif' + e + '" alt="" />');
+                                ((t.src = n._currentEnvironment.url + '/logo.htm' + e), (t.innerHTML = '<img src="' + n._currentEnvironment.url + '/logo.gif' + e + '" alt="" />'));
                             }, 10),
                             t
                         );
@@ -3685,7 +3685,7 @@ e.exports = (function e(t, n, r) {
                         },
                         Kount: c,
                         environmentUrls: a
-                    });
+                    }));
             },
             {
                 '../lib/camel-case-to-snake-case': 144,
@@ -3708,28 +3708,28 @@ e.exports = (function e(t, n, r) {
                         codec: {},
                         exception: {
                             corrupt: function (e) {
-                                (this.toString = function () {
+                                ((this.toString = function () {
                                     return 'CORRUPT: ' + this.message;
                                 }),
-                                    (this.message = e);
+                                    (this.message = e));
                             },
                             invalid: function (e) {
-                                (this.toString = function () {
+                                ((this.toString = function () {
                                     return 'INVALID: ' + this.message;
                                 }),
-                                    (this.message = e);
+                                    (this.message = e));
                             },
                             bug: function (e) {
-                                (this.toString = function () {
+                                ((this.toString = function () {
                                     return 'BUG: ' + this.message;
                                 }),
-                                    (this.message = e);
+                                    (this.message = e));
                             },
                             notReady: function (e) {
-                                (this.toString = function () {
+                                ((this.toString = function () {
                                     return 'NOT READY: ' + this.message;
                                 }),
-                                    (this.message = e);
+                                    (this.message = e));
                             }
                         }
                     };
@@ -3752,8 +3752,8 @@ e.exports = (function e(t, n, r) {
                         m = s[2],
                         f = s[3],
                         y = s[4];
-                    for (u = 0; u < p; u++) (s = e[i >>> 24] ^ h[(o >> 16) & 255] ^ m[(a >> 8) & 255] ^ f[255 & t] ^ r[_]), (c = e[o >>> 24] ^ h[(a >> 16) & 255] ^ m[(t >> 8) & 255] ^ f[255 & i] ^ r[_ + 1]), (l = e[a >>> 24] ^ h[(t >> 16) & 255] ^ m[(i >> 8) & 255] ^ f[255 & o] ^ r[_ + 2]), (t = e[t >>> 24] ^ h[(i >> 16) & 255] ^ m[(o >> 8) & 255] ^ f[255 & a] ^ r[_ + 3]), (_ += 4), (i = s), (o = c), (a = l);
-                    for (u = 0; 4 > u; u++) (E[n ? 3 & -u : u] = (y[i >>> 24] << 24) ^ (y[(o >> 16) & 255] << 16) ^ (y[(a >> 8) & 255] << 8) ^ y[255 & t] ^ r[_++]), (s = i), (i = o), (o = a), (a = t), (t = s);
+                    for (u = 0; u < p; u++) ((s = e[i >>> 24] ^ h[(o >> 16) & 255] ^ m[(a >> 8) & 255] ^ f[255 & t] ^ r[_]), (c = e[o >>> 24] ^ h[(a >> 16) & 255] ^ m[(t >> 8) & 255] ^ f[255 & i] ^ r[_ + 1]), (l = e[a >>> 24] ^ h[(t >> 16) & 255] ^ m[(i >> 8) & 255] ^ f[255 & o] ^ r[_ + 2]), (t = e[t >>> 24] ^ h[(i >> 16) & 255] ^ m[(o >> 8) & 255] ^ f[255 & a] ^ r[_ + 3]), (_ += 4), (i = s), (o = c), (a = l));
+                    for (u = 0; 4 > u; u++) ((E[n ? 3 & -u : u] = (y[i >>> 24] << 24) ^ (y[(o >> 16) & 255] << 16) ^ (y[(a >> 8) & 255] << 8) ^ y[255 & t] ^ r[_++]), (s = i), (i = o), (o = a), (a = t), (t = s));
                     return E;
                 }
                 function u(e, t) {
@@ -3770,8 +3770,8 @@ e.exports = (function e(t, n, r) {
                         p = o[5],
                         _ = o[6],
                         E = o[7];
-                    for (n = 0; 64 > n; n++) 16 > n ? (r = t[n]) : ((r = t[(n + 1) & 15]), (i = t[(n + 14) & 15]), (r = t[15 & n] = (((r >>> 7) ^ (r >>> 18) ^ (r >>> 3) ^ (r << 25) ^ (r << 14)) + ((i >>> 17) ^ (i >>> 19) ^ (i >>> 10) ^ (i << 15) ^ (i << 13)) + t[15 & n] + t[(n + 9) & 15]) | 0)), (r = r + E + ((u >>> 6) ^ (u >>> 11) ^ (u >>> 25) ^ (u << 26) ^ (u << 21) ^ (u << 7)) + (_ ^ (u & (p ^ _))) + a[n]), (E = _), (_ = p), (p = u), (u = (l + r) | 0), (l = d), (d = c), (s = (r + (((c = s) & d) ^ (l & (c ^ d))) + ((c >>> 2) ^ (c >>> 13) ^ (c >>> 22) ^ (c << 30) ^ (c << 19) ^ (c << 10))) | 0);
-                    (o[0] = (o[0] + s) | 0), (o[1] = (o[1] + c) | 0), (o[2] = (o[2] + d) | 0), (o[3] = (o[3] + l) | 0), (o[4] = (o[4] + u) | 0), (o[5] = (o[5] + p) | 0), (o[6] = (o[6] + _) | 0), (o[7] = (o[7] + E) | 0);
+                    for (n = 0; 64 > n; n++) (16 > n ? (r = t[n]) : ((r = t[(n + 1) & 15]), (i = t[(n + 14) & 15]), (r = t[15 & n] = (((r >>> 7) ^ (r >>> 18) ^ (r >>> 3) ^ (r << 25) ^ (r << 14)) + ((i >>> 17) ^ (i >>> 19) ^ (i >>> 10) ^ (i << 15) ^ (i << 13)) + t[15 & n] + t[(n + 9) & 15]) | 0)), (r = r + E + ((u >>> 6) ^ (u >>> 11) ^ (u >>> 25) ^ (u << 26) ^ (u << 21) ^ (u << 7)) + (_ ^ (u & (p ^ _))) + a[n]), (E = _), (_ = p), (p = u), (u = (l + r) | 0), (l = d), (d = c), (s = (r + (((c = s) & d) ^ (l & (c ^ d))) + ((c >>> 2) ^ (c >>> 13) ^ (c >>> 22) ^ (c << 30) ^ (c << 19) ^ (c << 10))) | 0));
+                    ((o[0] = (o[0] + s) | 0), (o[1] = (o[1] + c) | 0), (o[2] = (o[2] + d) | 0), (o[3] = (o[3] + l) | 0), (o[4] = (o[4] + u) | 0), (o[5] = (o[5] + p) | 0), (o[6] = (o[6] + _) | 0), (o[7] = (o[7] + E) | 0));
                 }
                 function p(e, t) {
                     var n,
@@ -3784,7 +3784,7 @@ e.exports = (function e(t, n, r) {
                     'undefined' != typeof window && window.performance && 'function' == typeof window.performance.now ? e.addEntropy(window.performance.now(), t, 'loadtime') : e.addEntropy(new Date().valueOf(), t, 'loadtime');
                 }
                 function E(e) {
-                    (e.b = h(e).concat(h(e))), (e.C = new d.cipher.aes(e.b));
+                    ((e.b = h(e).concat(h(e))), (e.C = new d.cipher.aes(e.b)));
                 }
                 function h(e) {
                     for (var t = 0; 4 > t && ((e.g[t] = (e.g[t] + 1) | 0), !e.g[t]); t++);
@@ -3795,7 +3795,7 @@ e.exports = (function e(t, n, r) {
                         t.apply(e, arguments);
                     };
                 }
-                (d.cipher.aes = function (e) {
+                ((d.cipher.aes = function (e) {
                     this.l[0][0][0] || this.G();
                     var t,
                         n,
@@ -3806,8 +3806,8 @@ e.exports = (function e(t, n, r) {
                     t = e.length;
                     var s = 1;
                     if (4 !== t && 6 !== t && 8 !== t) throw new d.exception.invalid('invalid aes key size');
-                    for (this.b = [(r = e.slice(0)), (i = [])], e = t; e < 4 * t + 28; e++) (n = r[e - 1]), (0 == e % t || (8 === t && 4 == e % t)) && ((n = (o[n >>> 24] << 24) ^ (o[(n >> 16) & 255] << 16) ^ (o[(n >> 8) & 255] << 8) ^ o[255 & n]), 0 == e % t && ((n = (n << 8) ^ (n >>> 24) ^ (s << 24)), (s = (s << 1) ^ (283 * (s >> 7))))), (r[e] = r[e - t] ^ n);
-                    for (t = 0; e; t++, e--) (n = r[3 & t ? e : e - 4]), (i[t] = 4 >= e || 4 > t ? n : a[0][o[n >>> 24]] ^ a[1][o[(n >> 16) & 255]] ^ a[2][o[(n >> 8) & 255]] ^ a[3][o[255 & n]]);
+                    for (this.b = [(r = e.slice(0)), (i = [])], e = t; e < 4 * t + 28; e++) ((n = r[e - 1]), (0 == e % t || (8 === t && 4 == e % t)) && ((n = (o[n >>> 24] << 24) ^ (o[(n >> 16) & 255] << 16) ^ (o[(n >> 8) & 255] << 8) ^ o[255 & n]), 0 == e % t && ((n = (n << 8) ^ (n >>> 24) ^ (s << 24)), (s = (s << 1) ^ (283 * (s >> 7))))), (r[e] = r[e - t] ^ n));
+                    for (t = 0; e; t++, e--) ((n = r[3 & t ? e : e - 4]), (i[t] = 4 >= e || 4 > t ? n : a[0][o[n >>> 24]] ^ a[1][o[(n >> 16) & 255]] ^ a[2][o[(n >> 8) & 255]] ^ a[3][o[255 & n]]));
                 }),
                     (d.cipher.aes.prototype = {
                         encrypt: function (e) {
@@ -3835,13 +3835,13 @@ e.exports = (function e(t, n, r) {
                                 u = [],
                                 p = [];
                             for (e = 0; 256 > e; e++) p[(u[e] = (e << 1) ^ (283 * (e >> 7))) ^ e] = e;
-                            for (t = n = 0; !d[t]; t ^= r || 1, n = p[n] || 1) for (o = ((o = n ^ (n << 1) ^ (n << 2) ^ (n << 3) ^ (n << 4)) >> 8) ^ (255 & o) ^ 99, d[t] = o, l[o] = t, a = (16843009 * (i = u[(e = u[(r = u[t])])])) ^ (65537 * e) ^ (257 * r) ^ (16843008 * t), i = (257 * u[o]) ^ (16843008 * o), e = 0; 4 > e; e++) (s[e][t] = i = (i << 24) ^ (i >>> 8)), (c[e][o] = a = (a << 24) ^ (a >>> 8));
-                            for (e = 0; 5 > e; e++) (s[e] = s[e].slice(0)), (c[e] = c[e].slice(0));
+                            for (t = n = 0; !d[t]; t ^= r || 1, n = p[n] || 1) for (o = ((o = n ^ (n << 1) ^ (n << 2) ^ (n << 3) ^ (n << 4)) >> 8) ^ (255 & o) ^ 99, d[t] = o, l[o] = t, a = (16843009 * (i = u[(e = u[(r = u[t])])])) ^ (65537 * e) ^ (257 * r) ^ (16843008 * t), i = (257 * u[o]) ^ (16843008 * o), e = 0; 4 > e; e++) ((s[e][t] = i = (i << 24) ^ (i >>> 8)), (c[e][o] = a = (a << 24) ^ (a >>> 8)));
+                            for (e = 0; 5 > e; e++) ((s[e] = s[e].slice(0)), (c[e] = c[e].slice(0)));
                         }
                     }),
                     (d.bitArray = {
                         bitSlice: function (e, t, n) {
-                            return (e = d.bitArray.M(e.slice(t / 32), 32 - (31 & t)).slice(1)), void 0 === n ? e : d.bitArray.clamp(e, n - t);
+                            return ((e = d.bitArray.M(e.slice(t / 32), 32 - (31 & t)).slice(1)), void 0 === n ? e : d.bitArray.clamp(e, n - t));
                         },
                         extract: function (e, t, n) {
                             var r = Math.floor((-t - n) & 31);
@@ -3860,7 +3860,7 @@ e.exports = (function e(t, n, r) {
                         clamp: function (e, t) {
                             if (32 * e.length < t) return e;
                             var n = (e = e.slice(0, Math.ceil(t / 32))).length;
-                            return (t &= 31), 0 < n && t && (e[n - 1] = d.bitArray.partial(t, e[n - 1] & (2147483648 >> (t - 1)), 1)), e;
+                            return ((t &= 31), 0 < n && t && (e[n - 1] = d.bitArray.partial(t, e[n - 1] & (2147483648 >> (t - 1)), 1)), e);
                         },
                         partial: function (e, t, n) {
                             return 32 === e ? t : (n ? 0 | t : t << (32 - e)) + 1099511627776 * e;
@@ -3877,17 +3877,17 @@ e.exports = (function e(t, n, r) {
                         },
                         M: function (e, t, n, r) {
                             var i;
-                            for (i = 0, void 0 === r && (r = []); 32 <= t; t -= 32) r.push(n), (n = 0);
+                            for (i = 0, void 0 === r && (r = []); 32 <= t; t -= 32) (r.push(n), (n = 0));
                             if (0 === t) return r.concat(e);
-                            for (i = 0; i < e.length; i++) r.push(n | (e[i] >>> t)), (n = e[i] << (32 - t));
-                            return (i = e.length ? e[e.length - 1] : 0), (e = d.bitArray.getPartial(i)), r.push(d.bitArray.partial((t + e) & 31, 32 < t + e ? n : r.pop(), 1)), r;
+                            for (i = 0; i < e.length; i++) (r.push(n | (e[i] >>> t)), (n = e[i] << (32 - t)));
+                            return ((i = e.length ? e[e.length - 1] : 0), (e = d.bitArray.getPartial(i)), r.push(d.bitArray.partial((t + e) & 31, 32 < t + e ? n : r.pop(), 1)), r);
                         },
                         Y: function (e, t) {
                             return [e[0] ^ t[0], e[1] ^ t[1], e[2] ^ t[2], e[3] ^ t[3]];
                         },
                         byteswapM: function (e) {
                             var t, n;
-                            for (t = 0; t < e.length; ++t) (n = e[t]), (e[t] = (n >>> 24) | ((n >>> 8) & 65280) | ((65280 & n) << 8) | (n << 24));
+                            for (t = 0; t < e.length; ++t) ((n = e[t]), (e[t] = (n >>> 24) | ((n >>> 8) & 65280) | ((65280 & n) << 8) | (n << 24)));
                             return e;
                         }
                     }),
@@ -3897,7 +3897,7 @@ e.exports = (function e(t, n, r) {
                                 n,
                                 r = '',
                                 i = d.bitArray.bitLength(e);
-                            for (t = 0; t < i / 8; t++) 0 == (3 & t) && (n = e[t / 4]), (r += String.fromCharCode(((n >>> 8) >>> 8) >>> 8)), (n <<= 8);
+                            for (t = 0; t < i / 8; t++) (0 == (3 & t) && (n = e[t / 4]), (r += String.fromCharCode(((n >>> 8) >>> 8) >>> 8)), (n <<= 8));
                             return decodeURIComponent(escape(r));
                         },
                         toBits: function (e) {
@@ -3905,8 +3905,8 @@ e.exports = (function e(t, n, r) {
                             var t,
                                 n = [],
                                 r = 0;
-                            for (t = 0; t < e.length; t++) (r = (r << 8) | e.charCodeAt(t)), 3 == (3 & t) && (n.push(r), (r = 0));
-                            return 3 & t && n.push(d.bitArray.partial(8 * (3 & t), r)), n;
+                            for (t = 0; t < e.length; t++) ((r = (r << 8) | e.charCodeAt(t)), 3 == (3 & t) && (n.push(r), (r = 0)));
+                            return (3 & t && n.push(d.bitArray.partial(8 * (3 & t), r)), n);
                         }
                     }),
                     (d.codec.hex = {
@@ -3925,7 +3925,7 @@ e.exports = (function e(t, n, r) {
                         }
                     }),
                     (d.hash.sha256 = function (e) {
-                        this.b[0] || this.G(), e ? ((this.u = e.u.slice(0)), (this.o = e.o.slice(0)), (this.h = e.h)) : this.reset();
+                        (this.b[0] || this.G(), e ? ((this.u = e.u.slice(0)), (this.o = e.o.slice(0)), (this.h = e.h)) : this.reset());
                     }),
                     (d.hash.sha256.hash = function (e) {
                         return new d.hash.sha256().update(e).finalize();
@@ -3933,7 +3933,7 @@ e.exports = (function e(t, n, r) {
                     (d.hash.sha256.prototype = {
                         blockSize: 512,
                         reset: function () {
-                            return (this.u = this.K.slice(0)), (this.o = []), (this.h = 0), this;
+                            return ((this.u = this.K.slice(0)), (this.o = []), (this.h = 0), this);
                         },
                         update: function (e) {
                             'string' == typeof e && (e = d.codec.utf8String.toBits(e));
@@ -3943,7 +3943,7 @@ e.exports = (function e(t, n, r) {
                             if ('undefined' != typeof Uint32Array) {
                                 var r = new Uint32Array(n),
                                     i = 0;
-                                for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512) u(this, r.subarray(16 * i, 16 * (i + 1))), (i += 1);
+                                for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512) (u(this, r.subarray(16 * i, 16 * (i + 1))), (i += 1));
                                 n.splice(0, 16 * i);
                             } else for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512) u(this, n.splice(0, 16));
                             return this;
@@ -3955,7 +3955,7 @@ e.exports = (function e(t, n, r) {
                                 t = d.bitArray.concat(t, [d.bitArray.partial(1, 1)]);
                             for (e = t.length + 2; 15 & e; e++) t.push(0);
                             for (t.push(Math.floor(this.h / 4294967296)), t.push(0 | this.h); t.length; ) u(this, t.splice(0, 16));
-                            return this.reset(), n;
+                            return (this.reset(), n);
                         },
                         K: [],
                         b: [],
@@ -3974,7 +3974,7 @@ e.exports = (function e(t, n, r) {
                         }
                     }),
                     (d.prng = function (e) {
-                        (this.c = [new d.hash.sha256()]),
+                        ((this.c = [new d.hash.sha256()]),
                             (this.i = [0]),
                             (this.H = 0),
                             (this.v = {}),
@@ -3996,7 +3996,7 @@ e.exports = (function e(t, n, r) {
                             (this.O = 65536),
                             (this.I = [0, 48, 64, 96, 128, 192, 256, 384, 512, 768, 1024]),
                             (this.P = 30000),
-                            (this.N = 80);
+                            (this.N = 80));
                     }),
                     (d.prng.prototype = {
                         randomWords: function (e, t) {
@@ -4012,8 +4012,8 @@ e.exports = (function e(t, n, r) {
                                 for (i = 0; i < this.c.length && ((o = o.concat(this.c[i].finalize())), (a += this.i[i]), (this.i[i] = 0), n || !(this.H & (1 << i))); i++);
                                 for (this.H >= 1 << this.c.length && (this.c.push(new d.hash.sha256()), this.i.push(0)), this.f -= a, a > this.j && (this.j = a), this.H++, this.b = d.hash.sha256.hash(this.b.concat(o)), this.C = new d.cipher.aes(this.b), n = 0; 4 > n && ((this.g[n] = (this.g[n] + 1) | 0), !this.g[n]); n++);
                             }
-                            for (n = 0; n < e; n += 4) 0 == (n + 1) % this.O && E(this), r.push((o = h(this))[0], o[1], o[2], o[3]);
-                            return E(this), r.slice(0, e);
+                            for (n = 0; n < e; n += 4) (0 == (n + 1) % this.O && E(this), r.push((o = h(this))[0], o[1], o[2], o[3]));
+                            return (E(this), r.slice(0, e));
                         },
                         setDefaultParanoia: function (e, t) {
                             if (0 === e && 'Setting paranoia=0 will ruin your security; use it only for testing' !== t) throw new d.exception.invalid('Setting paranoia=0 will ruin your security; use it only for testing');
@@ -4029,7 +4029,7 @@ e.exports = (function e(t, n, r) {
                                 c = 0;
                             switch ((void 0 === (r = this.J[n]) && (r = this.J[n] = this.T++), void 0 === a && (a = this.v[n] = 0), (this.v[n] = (this.v[n] + 1) % this.c.length), typeof e)) {
                                 case 'number':
-                                    void 0 === t && (t = 1), this.c[a].update([r, this.F++, 1, t, o, 1, 0 | e]);
+                                    (void 0 === t && (t = 1), this.c[a].update([r, this.F++, 1, t, o, 1, 0 | e]));
                                     break;
                                 case 'object':
                                     if ('[object Uint32Array]' === (n = Object.prototype.toString.call(e))) {
@@ -4037,24 +4037,24 @@ e.exports = (function e(t, n, r) {
                                         e = i;
                                     } else for ('[object Array]' !== n && (c = 1), n = 0; n < e.length && !c; n++) 'number' != typeof e[n] && (c = 1);
                                     if (!c) {
-                                        if (void 0 === t) for (n = t = 0; n < e.length; n++) for (i = e[n]; 0 < i; ) t++, (i >>>= 1);
+                                        if (void 0 === t) for (n = t = 0; n < e.length; n++) for (i = e[n]; 0 < i; ) (t++, (i >>>= 1));
                                         this.c[a].update([r, this.F++, 2, t, o, e.length].concat(e));
                                     }
                                     break;
                                 case 'string':
-                                    void 0 === t && (t = e.length), this.c[a].update([r, this.F++, 3, t, o, e.length]), this.c[a].update(e);
+                                    (void 0 === t && (t = e.length), this.c[a].update([r, this.F++, 3, t, o, e.length]), this.c[a].update(e));
                                     break;
                                 default:
                                     c = 1;
                             }
                             if (c) throw new d.exception.bug('random: addEntropy only supports number, array of numbers or string');
-                            (this.i[a] += t), (this.f += t), s === this.m && (this.isReady() !== this.m && p('seeded', Math.max(this.j, this.f)), p('progress', this.getProgress()));
+                            ((this.i[a] += t), (this.f += t), s === this.m && (this.isReady() !== this.m && p('seeded', Math.max(this.j, this.f)), p('progress', this.getProgress())));
                         },
                         isReady: function (e) {
-                            return (e = this.I[void 0 !== e ? e : this.D]), this.j && this.j >= e ? (this.i[0] > this.N && new Date().valueOf() > this.L ? this.A | this.w : this.w) : this.f >= e ? this.A | this.m : this.m;
+                            return ((e = this.I[void 0 !== e ? e : this.D]), this.j && this.j >= e ? (this.i[0] > this.N && new Date().valueOf() > this.L ? this.A | this.w : this.w) : this.f >= e ? this.A | this.m : this.m);
                         },
                         getProgress: function (e) {
-                            return (e = this.I[e || this.D]), this.j >= e || this.f > e ? 1 : this.f / e;
+                            return ((e = this.I[e || this.D]), this.j >= e || this.f > e ? 1 : this.f / e);
                         },
                         startCollectors: function () {
                             if (!this.s) {
@@ -4068,8 +4068,8 @@ e.exports = (function e(t, n, r) {
                                     }),
                                     window.addEventListener)
                                 )
-                                    window.addEventListener('load', this.a.loadTimeCollector, !1), window.addEventListener('mousemove', this.a.mouseCollector, !1), window.addEventListener('keypress', this.a.keyboardCollector, !1), window.addEventListener('devicemotion', this.a.accelerometerCollector, !1), window.addEventListener('touchmove', this.a.touchCollector, !1);
-                                else if (document.attachEvent) document.attachEvent('onload', this.a.loadTimeCollector), document.attachEvent('onmousemove', this.a.mouseCollector), document.attachEvent('keypress', this.a.keyboardCollector);
+                                    (window.addEventListener('load', this.a.loadTimeCollector, !1), window.addEventListener('mousemove', this.a.mouseCollector, !1), window.addEventListener('keypress', this.a.keyboardCollector, !1), window.addEventListener('devicemotion', this.a.accelerometerCollector, !1), window.addEventListener('touchmove', this.a.touchCollector, !1));
+                                else if (document.attachEvent) (document.attachEvent('onload', this.a.loadTimeCollector), document.attachEvent('onmousemove', this.a.mouseCollector), document.attachEvent('keypress', this.a.keyboardCollector));
                                 else throw new d.exception.bug("can't attach event");
                                 this.s = !0;
                             }
@@ -4086,7 +4086,7 @@ e.exports = (function e(t, n, r) {
                                 i = this.B[e],
                                 o = [];
                             for (r in i) i.hasOwnProperty(r) && i[r] === t && o.push(r);
-                            for (n = 0; n < o.length; n++) (r = o[n]), delete i[r];
+                            for (n = 0; n < o.length; n++) ((r = o[n]), delete i[r]);
                         },
                         U: function () {
                             _(this, 1);
@@ -4094,14 +4094,14 @@ e.exports = (function e(t, n, r) {
                         W: function (e) {
                             var t, n;
                             try {
-                                (t = e.x || e.clientX || e.offsetX || 0), (n = e.y || e.clientY || e.offsetY || 0);
+                                ((t = e.x || e.clientX || e.offsetX || 0), (n = e.y || e.clientY || e.offsetY || 0));
                             } catch (e) {
                                 n = t = 0;
                             }
-                            0 != t && 0 != n && this.addEntropy([t, n], 2, 'mouse'), _(this, 0);
+                            (0 != t && 0 != n && this.addEntropy([t, n], 2, 'mouse'), _(this, 0));
                         },
                         X: function (e) {
-                            (e = e.touches[0] || e.changedTouches[0]), this.addEntropy([e.pageX || e.clientX, e.pageY || e.clientY], 1, 'touch'), _(this, 0);
+                            ((e = e.touches[0] || e.changedTouches[0]), this.addEntropy([e.pageX || e.clientX, e.pageY || e.clientY], 1, 'touch'), _(this, 0));
                         },
                         V: function () {
                             _(this, 2);
@@ -4111,10 +4111,10 @@ e.exports = (function e(t, n, r) {
                                 var t = window.orientation;
                                 'number' == typeof t && this.addEntropy(t, 1, 'accelerometer');
                             }
-                            e && this.addEntropy(e, 2, 'accelerometer'), _(this, 0);
+                            (e && this.addEntropy(e, 2, 'accelerometer'), _(this, 0));
                         }
                     }),
-                    (d.random = new d.prng(6));
+                    (d.random = new d.prng(6)));
                 e: try {
                     if ((s = void 0 !== n && n.exports)) {
                         try {
@@ -4124,7 +4124,7 @@ e.exports = (function e(t, n, r) {
                         }
                         s = o = c;
                     }
-                    if (s && o.randomBytes) (i = o.randomBytes(128)), (i = new Uint32Array(new Uint8Array(i).buffer)), d.random.addEntropy(i, 1024, "crypto['randomBytes']");
+                    if (s && o.randomBytes) ((i = o.randomBytes(128)), (i = new Uint32Array(new Uint8Array(i).buffer)), d.random.addEntropy(i, 1024, "crypto['randomBytes']"));
                     else if ('undefined' != typeof window && 'undefined' != typeof Uint32Array) {
                         if (((a = new Uint32Array(32)), window.crypto && window.crypto.getRandomValues)) window.crypto.getRandomValues(a);
                         else if (window.msCrypto && window.msCrypto.getRandomValues) window.msCrypto.getRandomValues(a);
@@ -4134,11 +4134,11 @@ e.exports = (function e(t, n, r) {
                 } catch (e) {
                     'undefined' != typeof window && window.console && (console.log('There was an error collecting entropy from the browser:'), console.log(e));
                 }
-                void 0 !== n && n.exports && (n.exports = d),
+                (void 0 !== n && n.exports && (n.exports = d),
                     'function' == typeof t &&
                         t([], function () {
                             return d;
-                        });
+                        }));
             },
             { crypto: void 0 }
         ],
@@ -4184,7 +4184,7 @@ e.exports = (function e(t, n, r) {
                                     client: e.client,
                                     deviceData: e.deviceData
                                 };
-                                return delete e.authorization, delete e.client, delete e.deviceData, delete e.minified, delete e.btSdkVersion, window.braintree.fastlane.create(s({ platformOptions: n }, e, t.metadata));
+                                return (delete e.authorization, delete e.client, delete e.deviceData, delete e.minified, delete e.btSdkVersion, window.braintree.fastlane.create(s({ platformOptions: n }, e, t.metadata)));
                             })
                             .catch(function (e) {
                                 return Promise.reject(
@@ -4300,7 +4300,7 @@ e.exports = (function e(t, n, r) {
                             type: d.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.type
                         });
                 }
-                (_.prototype._waitForClient = function () {
+                ((_.prototype._waitForClient = function () {
                     return this._client
                         ? Promise.resolve()
                         : this._createPromise.then(
@@ -4313,13 +4313,13 @@ e.exports = (function e(t, n, r) {
                         return !(this._googlePayVersion in p);
                     }),
                     (_.prototype._getDefaultConfig = function () {
-                        return this._defaultConfig || (this._defaultConfig = s(this._client.getConfiguration(), this._googlePayVersion, this._googleMerchantId)), this._defaultConfig;
+                        return (this._defaultConfig || (this._defaultConfig = s(this._client.getConfiguration(), this._googlePayVersion, this._googleMerchantId)), this._defaultConfig);
                     }),
                     (_.prototype._createV1PaymentDataRequest = function (e) {
                         var t = this._getDefaultConfig(),
                             n = e.cardRequirements && e.cardRequirements.allowedCardNetworks,
                             r = t.cardRequirements.allowedCardNetworks;
-                        return ((e = i({}, t, e)).cardRequirements.allowedCardNetworks = n || r), e;
+                        return (((e = i({}, t, e)).cardRequirements.allowedCardNetworks = n || r), e);
                     }),
                     (_.prototype._createV2PaymentDataRequest = function (e) {
                         var t = this._getDefaultConfig();
@@ -4351,7 +4351,7 @@ e.exports = (function e(t, n, r) {
                         var t = i({}, e),
                             n = this._googlePayVersion,
                             o = p[n];
-                        return t.transactionInfo && t.transactionInfo.totalPrice && (t.transactionInfo.totalPrice = t.transactionInfo.totalPrice.toString()), r.sendEvent(this._createPromise, 'google-payment.v' + n + '.createPaymentDataRequest'), this[o](t);
+                        return (t.transactionInfo && t.transactionInfo.totalPrice && (t.transactionInfo.totalPrice = t.transactionInfo.totalPrice.toString()), r.sendEvent(this._createPromise, 'google-payment.v' + n + '.createPaymentDataRequest'), this[o](t));
                     }),
                     (_.prototype.parseResponse = function (e) {
                         var t = this;
@@ -4401,9 +4401,9 @@ e.exports = (function e(t, n, r) {
                             });
                     }),
                     (_.prototype.teardown = function () {
-                        return o(this, l(_.prototype)), Promise.resolve();
+                        return (o(this, l(_.prototype)), Promise.resolve());
                     }),
-                    (t.exports = u.wrapPrototype(_));
+                    (t.exports = u.wrapPrototype(_)));
             },
             {
                 '../lib/analytics': 138,
@@ -4454,7 +4454,7 @@ e.exports = (function e(t, n, r) {
                                 e.useDeferredClient)
                                     ? s
                                     : n.then(function (e) {
-                                          return (s._client = e), s;
+                                          return ((s._client = e), s);
                                       });
                             });
                     }),
@@ -4547,7 +4547,7 @@ e.exports = (function e(t, n, r) {
                                 u = document.getElementById('bt-' + n.field + '-' + n.direction + '-' + e);
                             if (u) {
                                 if (((c = a(u, 'form')[0]), document.forms.length < 1 || !c)) return void t.onRemoveFocusIntercepts();
-                                (i = (c = [].slice.call(c.elements)).indexOf(u)),
+                                ((i = (c = [].slice.call(c.elements)).indexOf(u)),
                                     (l = (function (e, t) {
                                         switch (e) {
                                             case r.BACK:
@@ -4566,7 +4566,7 @@ e.exports = (function e(t, n, r) {
                                                 };
                                         }
                                         return {};
-                                    })(n.direction, c.length));
+                                    })(n.direction, c.length)));
                                 do {
                                     if (((i += l.indexChange), l.checkIndexBounds(i))) return;
                                     s = c[i];
@@ -4675,7 +4675,7 @@ e.exports = (function e(t, n, r) {
                             code: C.INSTANTIATION_OPTION_REQUIRED.code,
                             message: 'options.fields is required when instantiating Hosted Fields.'
                         });
-                    T.call(this),
+                    (T.call(this),
                         (this._injectedNodes = []),
                         (this._destructor = new a()),
                         (this._fields = S),
@@ -4738,7 +4738,7 @@ e.exports = (function e(t, n, r) {
                                         message: 'The value for minlength must be a number.',
                                         details: { fieldKey: t }
                                     });
-                                (o = s({
+                                ((o = s({
                                     type: t,
                                     name: 'braintree-hosted-field-' + t,
                                     style: _.defaultIFrameStyle,
@@ -4769,7 +4769,7 @@ e.exports = (function e(t, n, r) {
                                     }),
                                     setTimeout(function () {
                                         o.src = O;
-                                    }, 0);
+                                    }, 0));
                             }.bind(this)
                         ),
                         this._merchantConfigurationOptions.styles &&
@@ -4803,21 +4803,21 @@ e.exports = (function e(t, n, r) {
                             b._emit('binAvailable', { bin: e });
                         }),
                         (t = setTimeout(function () {
-                            N.sendEvent(b._clientPromise, 'custom.hosted-fields.load.timed-out'), b._emit('timeout');
+                            (N.sendEvent(b._clientPromise, 'custom.hosted-fields.load.timed-out'), b._emit('timeout'));
                         }, h)),
                         Promise.all(U).then(function (e) {
                             var n,
                                 i = e[0];
-                            clearTimeout(t),
+                            (clearTimeout(t),
                                 i(
                                     (((n = r({}, b._merchantConfigurationOptions)).fields = r({}, n.fields)),
                                     Object.keys(n.fields).forEach(function (e) {
-                                        (n.fields[e] = r({}, n.fields[e])), delete n.fields[e].container;
+                                        ((n.fields[e] = r({}, n.fields[e])), delete n.fields[e].container);
                                     }),
                                     n)
                                 ),
                                 b._cleanUpFocusIntercepts(),
-                                b._emit('ready');
+                                b._emit('ready'));
                         }),
                         this._bus.on(A.FRAME_READY, function (e, t) {
                             D[e.field](t);
@@ -4829,7 +4829,7 @@ e.exports = (function e(t, n, r) {
                                     n = e.merchantPayload,
                                     r = n.emittedBy,
                                     i = S[r].containerElement;
-                                Object.keys(n.fields).forEach(function (e) {
+                                (Object.keys(n.fields).forEach(function (e) {
                                     n.fields[e].container = S[e].containerElement;
                                 }),
                                     (t = n.fields[r]),
@@ -4840,21 +4840,21 @@ e.exports = (function e(t, n, r) {
                                         cards: n.cards,
                                         fields: n.fields
                                     }),
-                                    this._emit(e.type, n);
+                                    this._emit(e.type, n));
                             }.bind(this)
                         ),
                         this._destructor.registerFunctionForTeardown(function () {
                             var e, t, n;
-                            for (e = 0; e < b._injectedNodes.length; e++) (n = (t = b._injectedNodes[e]).parentNode).removeChild(t), n.classList.remove(_.externalClasses.FOCUSED, _.externalClasses.INVALID, _.externalClasses.VALID);
+                            for (e = 0; e < b._injectedNodes.length; e++) ((n = (t = b._injectedNodes[e]).parentNode).removeChild(t), n.classList.remove(_.externalClasses.FOCUSED, _.externalClasses.INVALID, _.externalClasses.VALID));
                         }),
                         this._destructor.registerFunctionForTeardown(function () {
                             L();
                         }),
                         this._destructor.registerFunctionForTeardown(function () {
                             v(b, g(M.prototype).concat(g(T.prototype)));
-                        });
+                        }));
                 }
-                T.createChild(M),
+                (T.createChild(M),
                     (M.prototype._setupLabelFocus = function (e, t) {
                         var n,
                             r,
@@ -4926,7 +4926,7 @@ e.exports = (function e(t, n, r) {
                         var e = this;
                         return new Promise(function (t, n) {
                             e._destructor.teardown(function (r) {
-                                N.sendEvent(e._clientPromise, 'custom.hosted-fields.teardown-completed'), r ? n(r) : t();
+                                (N.sendEvent(e._clientPromise, 'custom.hosted-fields.teardown-completed'), r ? n(r) : t());
                             });
                         });
                     }),
@@ -5094,7 +5094,7 @@ e.exports = (function e(t, n, r) {
                                   y.isIos() &&
                                       setTimeout(function () {
                                           var e, t, r;
-                                          (t = Math.floor((e = n.containerElement.getBoundingClientRect()).height / 2)), (r = Math.floor(e.width / 2)), (e.top < (window.innerHeight - t || document.documentElement.clientHeight - t) && e.right > r && e.bottom > t && e.left < (window.innerWidth - r || document.documentElement.clientWidth - r)) || n.containerElement.scrollIntoView();
+                                          ((t = Math.floor((e = n.containerElement.getBoundingClientRect()).height / 2)), (r = Math.floor(e.width / 2)), (e.top < (window.innerHeight - t || document.documentElement.clientHeight - t) && e.right > r && e.bottom > t && e.left < (window.innerWidth - r || document.documentElement.clientWidth - r)) || n.containerElement.scrollIntoView());
                                       }, 5))
                                 : (t = new l({
                                       type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
@@ -5113,7 +5113,7 @@ e.exports = (function e(t, n, r) {
                     (M.prototype.getState = function () {
                         return this._state;
                     }),
-                    (t.exports = D.wrapPrototype(M));
+                    (t.exports = D.wrapPrototype(M)));
             },
             {
                 '../../lib/analytics': 138,
@@ -5157,7 +5157,7 @@ e.exports = (function e(t, n, r) {
                         c = document.createDocumentFragment(),
                         d = r.generate(e, a, i.BACK, o),
                         l = r.generate(e, a, i.FORWARD, o);
-                    return (s.style.clear = 'both'), c.appendChild(d), c.appendChild(t), c.appendChild(l), c.appendChild(s), n.appendChild(c), [t, s];
+                    return ((s.style.clear = 'both'), c.appendChild(d), c.appendChild(t), c.appendChild(l), c.appendChild(s), n.appendChild(c), [t, s]);
                 };
             },
             {
@@ -5185,12 +5185,12 @@ e.exports = (function e(t, n, r) {
                             .then(function () {
                                 var t = new r(e);
                                 return new Promise(function (e, n) {
-                                    t.on('ready', function () {
+                                    (t.on('ready', function () {
                                         e(t);
                                     }),
                                         t.on('timeout', function () {
                                             n(new c(o.HOSTED_FIELDS_TIMEOUT));
-                                        });
+                                        }));
                                 });
                             });
                     }),
@@ -5326,7 +5326,7 @@ e.exports = (function e(t, n, r) {
                             'postal-code': 'billing postal-code'
                         }
                     };
-                (o.events = r(['ADD_CLASS', 'AUTOFILL_DATA_AVAILABLE', 'BIN_AVAILABLE', 'CARD_FORM_ENTRY_HAS_BEGUN', 'CLEAR_FIELD', 'CONFIGURATION', 'FRAME_READY', 'INPUT_EVENT', 'READY_FOR_CLIENT', 'REMOVE_ATTRIBUTE', 'REMOVE_CLASS', 'REMOVE_FOCUS_INTERCEPTS', 'SET_ATTRIBUTE', 'SET_MESSAGE', 'SET_MONTH_OPTIONS', 'TOKENIZATION_REQUEST', 'TRIGGER_FOCUS_CHANGE', 'TRIGGER_INPUT_FOCUS', 'VALIDATE_STRICT'], 'hosted-fields:')), (t.exports = o);
+                ((o.events = r(['ADD_CLASS', 'AUTOFILL_DATA_AVAILABLE', 'BIN_AVAILABLE', 'CARD_FORM_ENTRY_HAS_BEGUN', 'CLEAR_FIELD', 'CONFIGURATION', 'FRAME_READY', 'INPUT_EVENT', 'READY_FOR_CLIENT', 'REMOVE_ATTRIBUTE', 'REMOVE_CLASS', 'REMOVE_FOCUS_INTERCEPTS', 'SET_ATTRIBUTE', 'SET_MESSAGE', 'SET_MONTH_OPTIONS', 'TOKENIZATION_REQUEST', 'TRIGGER_FOCUS_CHANGE', 'TRIGGER_INPUT_FOCUS', 'VALIDATE_STRICT'], 'hosted-fields:')), (t.exports = o));
             },
             {
                 '../../lib/enumerate': 153,
@@ -5413,7 +5413,7 @@ e.exports = (function e(t, n, r) {
         133: [
             function (e, t, n) {
                 t.exports = function (e, t) {
-                    for (var n = e.parentNode, r = []; null != n; ) null != n.tagName && n.tagName.toLowerCase() === t && r.push(n), (n = n.parentNode);
+                    for (var n = e.parentNode, r = []; null != n; ) (null != n.tagName && n.tagName.toLowerCase() === t && r.push(n), (n = n.parentNode));
                     return r;
                 };
             },
@@ -5451,17 +5451,17 @@ e.exports = (function e(t, n, r) {
                                   ),
                                   o.classList.add('focus-intercept'),
                                   o.addEventListener('focus', function (e) {
-                                      i(e), r.hasSoftwareKeyboard() || o.blur();
+                                      (i(e), r.hasSoftwareKeyboard() || o.blur());
                                   }),
                                   o)
                                 : document.createDocumentFragment();
                         },
                         destroy: function (e) {
                             var t;
-                            e ? (t = [document.getElementById(e)]) : ((t = document.querySelectorAll('[data-braintree-direction]')), (t = [].slice.call(t))),
+                            (e ? (t = [document.getElementById(e)]) : ((t = document.querySelectorAll('[data-braintree-direction]')), (t = [].slice.call(t))),
                                 t.forEach(function (e) {
                                     e && 1 === e.nodeType && s.matchFocusElement(e.getAttribute('id')) && e.parentNode.removeChild(e);
-                                });
+                                }));
                         },
                         matchFocusElement: function (e) {
                             var t, n, r, i;
@@ -5564,7 +5564,7 @@ e.exports = (function e(t, n, r) {
                             s = r(e.authorization).attrs,
                             c = i(e.analyticsMetadata);
                         for (n in ((a.braintreeLibraryVersion = o.BRAINTREE_LIBRARY_VERSION), a._meta)) a._meta.hasOwnProperty(n) && (c[n] = a._meta[n]);
-                        return (a._meta = c), s.tokenizationKey ? (a.tokenizationKey = s.tokenizationKey) : (a.authorizationFingerprint = s.authorizationFingerprint), a;
+                        return ((a._meta = c), s.tokenizationKey ? (a.tokenizationKey = s.tokenizationKey) : (a.authorizationFingerprint = s.authorizationFingerprint), a);
                     },
                     addEventMetadata: function (e) {
                         var t = e.getConfiguration(),
@@ -5584,7 +5584,7 @@ e.exports = (function e(t, n, r) {
                                 client_session_id: t.analyticsMetadata.sessionId,
                                 tenant_name: 'braintree'
                             };
-                        return n.tokenizationKey ? (a.tokenization_key = n.tokenizationKey) : (a.auth_fingerprint = n.authorizationFingerprint), a;
+                        return (n.tokenizationKey ? (a.tokenization_key = n.tokenizationKey) : (a.auth_fingerprint = n.authorizationFingerprint), a);
                     }
                 };
             },
@@ -5729,7 +5729,7 @@ e.exports = (function e(t, n, r) {
                         if (e) return void s(e);
                         0 == (a -= 1) && s(null);
                     }
-                    for (i = 0; i < o; i++) (n = e[i]), 0 === n.length ? (n(), c(null)) : n(c);
+                    for (i = 0; i < o; i++) ((n = e[i]), 0 === n.length ? (n(), c(null)) : n(c));
                 };
             },
             { './once': 176 }
@@ -5741,15 +5741,15 @@ e.exports = (function e(t, n, r) {
                     if (!i.types.hasOwnProperty(e.type)) throw Error(e.type + ' is not a valid type.');
                     if (!e.code) throw Error('Error code required.');
                     if (!e.message) throw Error('Error message required.');
-                    (this.name = 'BraintreeError'), (this.code = e.code), (this.message = e.message), (this.type = e.type), (this.details = e.details);
+                    ((this.name = 'BraintreeError'), (this.code = e.code), (this.message = e.message), (this.type = e.type), (this.details = e.details));
                 }
-                (i.prototype = Object.create(Error.prototype)),
+                ((i.prototype = Object.create(Error.prototype)),
                     (i.prototype.constructor = i),
                     (i.types = r(['CUSTOMER', 'MERCHANT', 'NETWORK', 'INTERNAL', 'UNKNOWN'])),
                     (i.findRootError = function (e) {
                         return e instanceof i && e.details && e.details.originalError ? i.findRootError(e.details.originalError) : e;
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { './enumerate': 153 }
         ],
@@ -5772,7 +5772,7 @@ e.exports = (function e(t, n, r) {
                                                   .replace(/([a-z\d])([A-Z])/g, '$1_$2')
                                                   .replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1_$2')
                                                   .toLowerCase();
-                                              return 'object' == typeof t[r] ? (n[i] = e(t[r])) : (n[i] = t[r]), n;
+                                              return ('object' == typeof t[r] ? (n[i] = e(t[r])) : (n[i] = t[r]), n);
                                           }, {})
                                         : t),
                         n
@@ -5956,22 +5956,22 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e('./batch-execute-functions');
                 function i() {
-                    (this._teardownRegistry = []), (this._isTearingDown = !1);
+                    ((this._teardownRegistry = []), (this._isTearingDown = !1));
                 }
-                (i.prototype.registerFunctionForTeardown = function (e) {
+                ((i.prototype.registerFunctionForTeardown = function (e) {
                     'function' == typeof e && this._teardownRegistry.push(e);
                 }),
                     (i.prototype.teardown = function (e) {
                         if (this._isTearingDown) return void e(Error('Destructor is already tearing down'));
-                        (this._isTearingDown = !0),
+                        ((this._isTearingDown = !0),
                             r(
                                 this._teardownRegistry,
                                 function (t) {
-                                    (this._teardownRegistry = []), (this._isTearingDown = !1), 'function' == typeof e && e(t);
+                                    ((this._teardownRegistry = []), (this._isTearingDown = !1), 'function' == typeof e && e(t));
                                 }.bind(this)
-                            );
+                            ));
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { './batch-execute-functions': 142 }
         ],
@@ -5981,7 +5981,7 @@ e.exports = (function e(t, n, r) {
                     return (
                         (t = null == t ? '' : t),
                         e.reduce(function (e, n) {
-                            return (e[n] = t + n), e;
+                            return ((e[n] = t + n), e);
                         }, {})
                     );
                 };
@@ -6062,7 +6062,7 @@ e.exports = (function e(t, n, r) {
                         !/^[\w_]+$/.test(e.name))
                     )
                         throw Error('A valid frame name must be provided');
-                    (this._serviceId = l().replace(/-/g, '')),
+                    ((this._serviceId = l().replace(/-/g, '')),
                         (this._options = {
                             name: e.name + '_' + this._serviceId,
                             dispatchFrameUrl: e.dispatchFrameUrl,
@@ -6074,18 +6074,18 @@ e.exports = (function e(t, n, r) {
                         }),
                         (this.state = e.state || {}),
                         (this._bus = new a({ channel: this._serviceId })),
-                        this._setBusEvents();
+                        this._setBusEvents());
                 }
-                (y.prototype.initialize = function (e) {
+                ((y.prototype.initialize = function (e) {
                     var t = function () {
-                        e(), this._bus.off(s.DISPATCH_FRAME_READY, t);
+                        (e(), this._bus.off(s.DISPATCH_FRAME_READY, t));
                     }.bind(this);
-                    this._bus.on(s.DISPATCH_FRAME_READY, t), this._writeDispatchFrame();
+                    (this._bus.on(s.DISPATCH_FRAME_READY, t), this._writeDispatchFrame());
                 }),
                     (y.prototype._writeDispatchFrame = function () {
                         var e = d.DISPATCH_FRAME_NAME + '_' + this._serviceId,
                             t = this._options.dispatchFrameUrl;
-                        (this._dispatchFrame = u({
+                        ((this._dispatchFrame = u({
                             'aria-hidden': !0,
                             name: e,
                             title: e,
@@ -6098,13 +6098,13 @@ e.exports = (function e(t, n, r) {
                                 left: '-9999px'
                             }
                         })),
-                            document.body.appendChild(this._dispatchFrame);
+                            document.body.appendChild(this._dispatchFrame));
                     }),
                     (y.prototype._setBusEvents = function () {
-                        this._bus.on(
+                        (this._bus.on(
                             s.DISPATCH_FRAME_REPORT,
                             function (e, t) {
-                                this._onCompleteCallback && this._onCompleteCallback.call(null, e.err, e.payload), this._frame.close(), (this._onCompleteCallback = null), t && t();
+                                (this._onCompleteCallback && this._onCompleteCallback.call(null, e.err, e.payload), this._frame.close(), (this._onCompleteCallback = null), t && t());
                             }.bind(this)
                         ),
                             this._bus.on(
@@ -6112,12 +6112,12 @@ e.exports = (function e(t, n, r) {
                                 function (e) {
                                     e(this.state);
                                 }.bind(this)
-                            );
+                            ));
                     }),
                     (y.prototype.open = function (e, t) {
                         if (((e = e || {}), (this._frame = this._getFrameForEnvironment(e)), this._frame.initialize(t), !(this._frame instanceof i))) {
                             if ((E(this.state, e.state), (this._onCompleteCallback = t), this._frame.open(), this.isFrameClosed())) {
-                                this._cleanupFrame(), t && t(new p(c.FRAME_SERVICE_FRAME_OPEN_FAILED));
+                                (this._cleanupFrame(), t && t(new p(c.FRAME_SERVICE_FRAME_OPEN_FAILED)));
                                 return;
                             }
                             this._pollForPopupClose();
@@ -6137,10 +6137,10 @@ e.exports = (function e(t, n, r) {
                             (e = e || {}),
                             {
                                 close: function () {
-                                    e.beforeClose && e.beforeClose(), this.close();
+                                    (e.beforeClose && e.beforeClose(), this.close());
                                 }.bind(this),
                                 focus: function () {
-                                    e.beforeFocus && e.beforeFocus(), this.focus();
+                                    (e.beforeFocus && e.beforeFocus(), this.focus());
                                 }.bind(this)
                             }
                         );
@@ -6152,13 +6152,13 @@ e.exports = (function e(t, n, r) {
                         };
                     }),
                     (y.prototype.teardown = function () {
-                        this.close(), this._dispatchFrame.parentNode.removeChild(this._dispatchFrame), (this._dispatchFrame = null), this._cleanupFrame();
+                        (this.close(), this._dispatchFrame.parentNode.removeChild(this._dispatchFrame), (this._dispatchFrame = null), this._cleanupFrame());
                     }),
                     (y.prototype.isFrameClosed = function () {
                         return null == this._frame || this._frame.isClosed();
                     }),
                     (y.prototype._cleanupFrame = function () {
-                        (this._frame = null), clearInterval(this._popupInterval), (this._popupInterval = null);
+                        ((this._frame = null), clearInterval(this._popupInterval), (this._popupInterval = null));
                     }),
                     (y.prototype._pollForPopupClose = function () {
                         return (
@@ -6177,7 +6177,7 @@ e.exports = (function e(t, n, r) {
                             a = E({}, this._options, e);
                         return n ? new i(a) : t ? new r(a) : new o(a);
                     }),
-                    (t.exports = y);
+                    (t.exports = y));
             },
             {
                 '../../braintree-error': 143,
@@ -6228,9 +6228,9 @@ e.exports = (function e(t, n, r) {
                     };
                 function s() {}
                 function c(e) {
-                    (this._closed = null), (this._frame = null), (this._options = e || {}), (this._container = this._options.container || document.body);
+                    ((this._closed = null), (this._frame = null), (this._options = e || {}), (this._container = this._options.container || document.body));
                 }
-                (c.prototype.initialize = s),
+                ((c.prototype.initialize = s),
                     (c.prototype.open = function () {
                         var e = {
                             src: this._options.openFrameUrl,
@@ -6241,7 +6241,7 @@ e.exports = (function e(t, n, r) {
                             style: i({}, a),
                             title: 'Lightbox Frame'
                         };
-                        o.isIos()
+                        (o.isIos()
                             ? (o.isIosWKWebview() && (this._lockScrolling(), (e.style = {})),
                               (this._el = document.createElement('div')),
                               i(this._el.style, a, {
@@ -6254,11 +6254,11 @@ e.exports = (function e(t, n, r) {
                               this._el.appendChild(this._frame))
                             : (this._el = this._frame = r(e)),
                             (this._closed = !1),
-                            this._container.appendChild(this._el);
+                            this._container.appendChild(this._el));
                     }),
                     (c.prototype.focus = s),
                     (c.prototype.close = function () {
-                        this._container.removeChild(this._el), (this._frame = null), (this._closed = !0), o.isIosWKWebview() && this._unlockScrolling();
+                        (this._container.removeChild(this._el), (this._frame = null), (this._closed = !0), o.isIosWKWebview() && this._unlockScrolling());
                     }),
                     (c.prototype.isClosed = function () {
                         return !!this._closed;
@@ -6267,11 +6267,11 @@ e.exports = (function e(t, n, r) {
                         this._frame.src = e;
                     }),
                     (c.prototype._unlockScrolling = function () {
-                        (document.body.style.overflow = this._savedBodyProperties.overflowStyle), (document.body.style.position = this._savedBodyProperties.positionStyle), window.scrollTo(this._savedBodyProperties.left, this._savedBodyProperties.top), delete this._savedBodyProperties;
+                        ((document.body.style.overflow = this._savedBodyProperties.overflowStyle), (document.body.style.position = this._savedBodyProperties.positionStyle), window.scrollTo(this._savedBodyProperties.left, this._savedBodyProperties.top), delete this._savedBodyProperties);
                     }),
                     (c.prototype._lockScrolling = function () {
                         var e = document.documentElement;
-                        (this._savedBodyProperties = {
+                        ((this._savedBodyProperties = {
                             left: (window.pageXOffset || e.scrollLeft) - (e.clientLeft || 0),
                             top: (window.pageYOffset || e.scrollTop) - (e.clientTop || 0),
                             overflowStyle: document.body.style.overflow,
@@ -6279,9 +6279,9 @@ e.exports = (function e(t, n, r) {
                         }),
                             (document.body.style.overflow = 'hidden'),
                             (document.body.style.position = 'fixed'),
-                            window.scrollTo(0, 0);
+                            window.scrollTo(0, 0));
                     }),
-                    (t.exports = c);
+                    (t.exports = c));
             },
             {
                 '../../../assign': 140,
@@ -6295,9 +6295,9 @@ e.exports = (function e(t, n, r) {
                     i = e('../../shared/errors');
                 function o() {}
                 function a(e) {
-                    (this._closed = null), (this._options = e);
+                    ((this._closed = null), (this._options = e));
                 }
-                (a.prototype.initialize = function (e) {
+                ((a.prototype.initialize = function (e) {
                     var t = this;
                     window.popupBridge.onComplete = function (n, o) {
                         var a = !o && !n;
@@ -6307,7 +6307,7 @@ e.exports = (function e(t, n, r) {
                 }),
                     (a.prototype.open = function (e) {
                         var t;
-                        (t = (e = e || {}).openFrameUrl || this._options.openFrameUrl), (this._closed = !1), window.popupBridge.open(t);
+                        ((t = (e = e || {}).openFrameUrl || this._options.openFrameUrl), (this._closed = !1), window.popupBridge.open(t));
                     }),
                     (a.prototype.focus = o),
                     (a.prototype.close = o),
@@ -6317,7 +6317,7 @@ e.exports = (function e(t, n, r) {
                     (a.prototype.redirect = function (e) {
                         this.open({ openFrameUrl: e });
                     }),
-                    (t.exports = a);
+                    (t.exports = a));
             },
             {
                 '../../../braintree-error': 143,
@@ -6348,9 +6348,9 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e('./compose-options');
                 function i(e) {
-                    (this._frame = null), (this._options = e || {});
+                    ((this._frame = null), (this._options = e || {}));
                 }
-                (i.prototype.initialize = function () {}),
+                ((i.prototype.initialize = function () {}),
                     (i.prototype.open = function () {
                         this._frame = window.open(this._options.openFrameUrl, this._options.name, r(this._options));
                     }),
@@ -6366,7 +6366,7 @@ e.exports = (function e(t, n, r) {
                     (i.prototype.redirect = function (e) {
                         this._frame.location.href = e;
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { './compose-options': 161 }
         ],
@@ -6375,11 +6375,11 @@ e.exports = (function e(t, n, r) {
                 t.exports = {
                     top: function (e) {
                         var t;
-                        return (t = window.outerHeight || document.documentElement.clientHeight), (t - e) / 2 + (null == window.screenY ? window.screenTop : window.screenY);
+                        return ((t = window.outerHeight || document.documentElement.clientHeight), (t - e) / 2 + (null == window.screenY ? window.screenTop : window.screenY));
                     },
                     left: function (e) {
                         var t;
-                        return (t = window.outerWidth || document.documentElement.clientWidth), (t - e) / 2 + (null == window.screenX ? window.screenLeft : window.screenX);
+                        return ((t = window.outerWidth || document.documentElement.clientWidth), (t - e) / 2 + (null == window.screenX ? window.screenLeft : window.screenX));
                     },
                     center: function (e, t, n) {
                         return (e - t) / 2 + n;
@@ -6587,7 +6587,7 @@ e.exports = (function e(t, n, r) {
                     };
                 t.exports = function (e) {
                     var t;
-                    return (e = e.toLowerCase()), !!/^https:/.test(e) && (((r = r || document.createElement('a')).href = e), (t = r.hostname.split('.').slice(-2).join('.')), i.hasOwnProperty(t));
+                    return ((e = e.toLowerCase()), !!/^https:/.test(e) && (((r = r || document.createElement('a')).href = e), (t = r.hostname.split('.').slice(-2).join('.')), i.hasOwnProperty(t)));
                 };
             },
             {}
@@ -6624,7 +6624,7 @@ e.exports = (function e(t, n, r) {
         177: [
             function (e, t, n) {
                 function r(e) {
-                    return (e = e || window.location.href), /\?/.test(e);
+                    return ((e = e || window.location.href), /\?/.test(e));
                 }
                 function i(e, t) {
                     var n,
@@ -6645,7 +6645,7 @@ e.exports = (function e(t, n, r) {
                                       var n = t.split('='),
                                           r = decodeURIComponent(n[0]),
                                           i = decodeURIComponent(n[1]);
-                                      return (e[r] = i), e;
+                                      return ((e[r] = i), e);
                                   }, {})
                             : {};
                     },
@@ -6745,7 +6745,7 @@ e.exports = (function e(t, n, r) {
                         u = '';
                     if (!d.test(e)) throw Error('Non base64 encoded input passed to window.atob polyfill');
                     c = 0;
-                    do (i = l.indexOf(e.charAt(c++))), (o = l.indexOf(e.charAt(c++))), (a = l.indexOf(e.charAt(c++))), (s = l.indexOf(e.charAt(c++))), (t = ((63 & i) << 2) | ((o >> 4) & 3)), (n = ((15 & o) << 4) | ((a >> 2) & 15)), (r = ((3 & a) << 6) | (63 & s)), (u += String.fromCharCode(t) + (n ? String.fromCharCode(n) : '') + (r ? String.fromCharCode(r) : ''));
+                    do ((i = l.indexOf(e.charAt(c++))), (o = l.indexOf(e.charAt(c++))), (a = l.indexOf(e.charAt(c++))), (s = l.indexOf(e.charAt(c++))), (t = ((63 & i) << 2) | ((o >> 4) & 3)), (n = ((15 & o) << 4) | ((a >> 2) & 15)), (r = ((3 & a) << 6) | (63 & s)), (u += String.fromCharCode(t) + (n ? String.fromCharCode(n) : '') + (r ? String.fromCharCode(r) : '')));
                     while (c < e.length);
                     return u;
                 }
@@ -6790,14 +6790,14 @@ e.exports = (function e(t, n, r) {
                     h = e('../shared/errors'),
                     m = e('../../lib/assign').assign;
                 function f(e) {
-                    (this._client = e.client), (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = e.client.getConfiguration().isDebug), (this._loadingFrameUrl = this._assetsUrl + '/html/local-payment-landing-frame' + o(this._isDebug) + '.html'), (this._authorizationInProgress = !1), (this._paymentType = 'unknown'), (this._merchantAccountId = e.merchantAccountId), e.redirectUrl && ((this._redirectUrl = e.redirectUrl), (this._isRedirectFlow = !0));
+                    ((this._client = e.client), (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = e.client.getConfiguration().isDebug), (this._loadingFrameUrl = this._assetsUrl + '/html/local-payment-landing-frame' + o(this._isDebug) + '.html'), (this._authorizationInProgress = !1), (this._paymentType = 'unknown'), (this._merchantAccountId = e.merchantAccountId), e.redirectUrl && ((this._redirectUrl = e.redirectUrl), (this._isRedirectFlow = !0)));
                 }
                 function y(e) {
                     var t = e.blikOptions || {},
                         n = 'string' == typeof e.paymentType ? e.paymentType.toLowerCase() : e.paymentType;
                     return 'blik' === n ? t.hasOwnProperty('level_0') || t.hasOwnProperty('oneClick') : ['pay_upon_invoice', 'mbway', 'bancomatpay'].includes(n);
                 }
-                (u.suppressUnhandledPromiseMessage = !0),
+                ((u.suppressUnhandledPromiseMessage = !0),
                     (f.prototype._initialize = function () {
                         var e = this,
                             t = this._client,
@@ -6812,7 +6812,7 @@ e.exports = (function e(t, n, r) {
                                     openFrameUrl: e._loadingFrameUrl
                                 },
                                 function (r) {
-                                    (e._frameService = r), clearTimeout(n), s.sendEvent(t, 'local-payment.load.succeeded'), i(e);
+                                    ((e._frameService = r), clearTimeout(n), s.sendEvent(t, 'local-payment.load.succeeded'), i(e));
                                 }
                             );
                         });
@@ -6977,7 +6977,7 @@ e.exports = (function e(t, n, r) {
                                     })
                                     .then(function (t) {
                                         var n = t.paymentResource.redirectUrl;
-                                        O._isRedirectFlow ? s.sendEvent(O._client, O._paymentType + '.local-payment.start-payment.redirected') : s.sendEvent(O._client, O._paymentType + '.local-payment.start-payment.opened'),
+                                        (O._isRedirectFlow ? s.sendEvent(O._client, O._paymentType + '.local-payment.start-payment.redirected') : s.sendEvent(O._client, O._paymentType + '.local-payment.start-payment.opened'),
                                             (O._startPaymentOptions = e),
                                             y(e)
                                                 ? ((O._authorizationInProgress = !1),
@@ -6992,7 +6992,7 @@ e.exports = (function e(t, n, r) {
                                                   ? (window.location.href = t.paymentResource.redirectUrl)
                                                   : e.onPaymentStart({ paymentId: t.paymentResource.paymentToken }, function () {
                                                         O._frameService.redirect(t.paymentResource.redirectUrl);
-                                                    });
+                                                    }));
                                     })
                                     .catch(function (e) {
                                         var t = e.details && e.details.httpStatus;
@@ -7054,7 +7054,7 @@ e.exports = (function e(t, n, r) {
                                     })
                                     .then(function (e) {
                                         var r = t._formatTokenizePayload(e);
-                                        return window.popupBridge ? s.sendEvent(n, t._paymentType + '.local-payment.tokenization.success-popupbridge') : s.sendEvent(n, t._paymentType + '.local-payment.tokenization.success'), r;
+                                        return (window.popupBridge ? s.sendEvent(n, t._paymentType + '.local-payment.tokenization.success-popupbridge') : s.sendEvent(n, t._paymentType + '.local-payment.tokenization.success'), r);
                                     })
                                     .catch(function (e) {
                                         return (
@@ -7070,7 +7070,7 @@ e.exports = (function e(t, n, r) {
                                     });
                     }),
                     (f.prototype.closeWindow = function () {
-                        this._authoriztionInProgress && s.sendEvent(this._client, this._paymentType + '.local-payment.start-payment.closed.by-merchant'), this._frameService.close();
+                        (this._authoriztionInProgress && s.sendEvent(this._client, this._paymentType + '.local-payment.start-payment.closed.by-merchant'), this._frameService.close());
                     }),
                     (f.prototype.focusWindow = function () {
                         this._frameService.focus();
@@ -7082,10 +7082,10 @@ e.exports = (function e(t, n, r) {
                             if (((n._authorizationInProgress = !1), o))
                                 if ('FRAME_SERVICE_FRAME_CLOSED' === o.code) {
                                     if (a && 'processing_error' === a.errorcode) {
-                                        s.sendEvent(r, n._paymentType + '.local-payment.failed-in-window'), t(new i(h.LOCAL_PAYMENT_START_PAYMENT_FAILED));
+                                        (s.sendEvent(r, n._paymentType + '.local-payment.failed-in-window'), t(new i(h.LOCAL_PAYMENT_START_PAYMENT_FAILED)));
                                         return;
                                     }
-                                    s.sendEvent(r, n._paymentType + '.local-payment.tokenization.closed.by-user'), t(new i(h.LOCAL_PAYMENT_WINDOW_CLOSED));
+                                    (s.sendEvent(r, n._paymentType + '.local-payment.tokenization.closed.by-user'), t(new i(h.LOCAL_PAYMENT_WINDOW_CLOSED)));
                                 } else
                                     o.code &&
                                         o.code.indexOf('FRAME_SERVICE_FRAME_OPEN_FAILED') > -1 &&
@@ -7141,9 +7141,9 @@ e.exports = (function e(t, n, r) {
                         };
                     }),
                     (f.prototype.teardown = function () {
-                        return this._isRedirectFlow || this._frameService.teardown(), d(this, c(f.prototype)), s.sendEvent(this._client, 'local-payment.teardown-completed'), Promise.resolve();
+                        return (this._isRedirectFlow || this._frameService.teardown(), d(this, c(f.prototype)), s.sendEvent(this._client, 'local-payment.teardown-completed'), Promise.resolve());
                     }),
-                    (t.exports = _.wrapPrototype(f));
+                    (t.exports = _.wrapPrototype(f)));
             },
             {
                 '../../lib/analytics': 138,
@@ -7202,10 +7202,10 @@ e.exports = (function e(t, n, r) {
                                           ? n
                                                 .tokenize(i)
                                                 .then(function (e) {
-                                                    return (n.tokenizePayload = e), n;
+                                                    return ((n.tokenizePayload = e), n);
                                                 })
                                                 .catch(function (e) {
-                                                    return console.log('Error while tokenizing: ', e), n;
+                                                    return (console.log('Error while tokenizing: ', e), n);
                                                 })
                                           : n
                                       : n._initialize();
@@ -7298,9 +7298,9 @@ e.exports = (function e(t, n, r) {
                     p = e('../../lib/constants').INTEGRATION_TIMEOUT_MS;
                 function _(e) {
                     var t = e.client.getConfiguration();
-                    (this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = t.isDebug), (this._authInProgress = !1), window.popupBridge && 'function' == typeof window.popupBridge.getReturnUrlPrefix ? (this._callbackUrl = window.popupBridge.getReturnUrlPrefix() + 'return') : (this._callbackUrl = this._assetsUrl + '/html/redirect-frame' + (this._isDebug ? '' : '.min') + '.html');
+                    ((this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = t.isDebug), (this._authInProgress = !1), window.popupBridge && 'function' == typeof window.popupBridge.getReturnUrlPrefix ? (this._callbackUrl = window.popupBridge.getReturnUrlPrefix() + 'return') : (this._callbackUrl = this._assetsUrl + '/html/redirect-frame' + (this._isDebug ? '' : '.min') + '.html'));
                 }
-                (_.prototype._initialize = function () {
+                ((_.prototype._initialize = function () {
                     var e = this;
                     return new Promise(function (t) {
                         var n = setTimeout(function () {
@@ -7315,7 +7315,7 @@ e.exports = (function e(t, n, r) {
                                 openFrameUrl: e._assetsUrl + '/html/masterpass-landing-frame' + (e._isDebug ? '' : '.min') + '.html'
                             },
                             function (r) {
-                                (e._frameService = r), clearTimeout(n), c.sendEvent(e._client, 'masterpass.load.succeeded'), t(e);
+                                ((e._frameService = r), clearTimeout(n), c.sendEvent(e._client, 'masterpass.load.succeeded'), t(e));
                             }
                         );
                     });
@@ -7332,7 +7332,7 @@ e.exports = (function e(t, n, r) {
                             : t._authInProgress
                               ? Promise.reject(new i(o.MASTERPASS_TOKENIZATION_ALREADY_IN_PROGRESS))
                               : new Promise(function (n, r) {
-                                    t._navigateFrameToLoadingPage(e).catch(r), t._frameService.open(e.frameOptions, t._createFrameOpenHandler(n, r));
+                                    (t._navigateFrameToLoadingPage(e).catch(r), t._frameService.open(e.frameOptions, t._createFrameOpenHandler(n, r)));
                                 });
                     }),
                     (_.prototype._navigateFrameToLoadingPage = function (e) {
@@ -7357,7 +7357,7 @@ e.exports = (function e(t, n, r) {
                                         i = t._assetsUrl + '/html/masterpass-loading-frame' + (t._isDebug ? '' : '.min') + '.html?',
                                         o = t._client.getConfiguration().gatewayConfiguration,
                                         a = e.config || {};
-                                    (r = {
+                                    ((r = {
                                         environment: o.environment,
                                         requestToken: n.requestToken,
                                         callbackUrl: t._callbackUrl,
@@ -7373,7 +7373,7 @@ e.exports = (function e(t, n, r) {
                                                 return e + '=' + r[e];
                                             })
                                             .join('&')),
-                                        t._frameService.redirect(i);
+                                        t._frameService.redirect(i));
                                 })
                                 .catch(function (e) {
                                     var n = e.details && e.details.httpStatus;
@@ -7386,11 +7386,11 @@ e.exports = (function e(t, n, r) {
                         return window.popupBridge
                             ? function (r, a) {
                                   if (((n._authInProgress = !1), r)) {
-                                      c.sendEvent(n._client, 'masterpass.tokenization.closed-popupbridge.by-user'), t(l(r, o.MASTERPASS_POPUP_CLOSED));
+                                      (c.sendEvent(n._client, 'masterpass.tokenization.closed-popupbridge.by-user'), t(l(r, o.MASTERPASS_POPUP_CLOSED)));
                                       return;
                                   }
                                   if (!a.queryItems) {
-                                      c.sendEvent(n._client, 'masterpass.tokenization.failed-popupbridge'), t(new i(o.MASTERPASS_FLOW_FAILED));
+                                      (c.sendEvent(n._client, 'masterpass.tokenization.failed-popupbridge'), t(new i(o.MASTERPASS_FLOW_FAILED)));
                                       return;
                                   }
                                   n._tokenizeMasterpass(a.queryItems).then(e).catch(t);
@@ -7398,11 +7398,11 @@ e.exports = (function e(t, n, r) {
                             : function (r, a) {
                                   if (r) {
                                       if (((n._authInProgress = !1), 'FRAME_SERVICE_FRAME_CLOSED' === r.code)) {
-                                          c.sendEvent(n._client, 'masterpass.tokenization.closed.by-user'), t(new i(o.MASTERPASS_POPUP_CLOSED));
+                                          (c.sendEvent(n._client, 'masterpass.tokenization.closed.by-user'), t(new i(o.MASTERPASS_POPUP_CLOSED)));
                                           return;
                                       }
                                       if (r.code && r.code.indexOf('FRAME_SERVICE_FRAME_OPEN_FAILED') > -1) {
-                                          c.sendEvent(n._client, 'masterpass.tokenization.failed.to-open'),
+                                          (c.sendEvent(n._client, 'masterpass.tokenization.failed.to-open'),
                                               t(
                                                   new i({
                                                       code: o.MASTERPASS_POPUP_OPEN_FAILED.code,
@@ -7410,10 +7410,10 @@ e.exports = (function e(t, n, r) {
                                                       message: o.MASTERPASS_POPUP_OPEN_FAILED.message,
                                                       details: { originalError: r }
                                                   })
-                                              );
+                                              ));
                                           return;
                                       }
-                                      c.sendEvent(n._client, 'masterpass.tokenization.failed'), n._closeWindow(), t(l(r, o.MASTERPASS_FLOW_FAILED));
+                                      (c.sendEvent(n._client, 'masterpass.tokenization.failed'), n._closeWindow(), t(l(r, o.MASTERPASS_FLOW_FAILED)));
                                       return;
                                   }
                                   n._tokenizeMasterpass(a).then(e).catch(t);
@@ -7441,22 +7441,22 @@ e.exports = (function e(t, n, r) {
                                         }
                                     })
                                     .then(function (e) {
-                                        return n._closeWindow(), window.popupBridge ? c.sendEvent(n._client, 'masterpass.tokenization.success-popupbridge') : c.sendEvent(n._client, 'masterpass.tokenization.success'), e.masterpassCards[0];
+                                        return (n._closeWindow(), window.popupBridge ? c.sendEvent(n._client, 'masterpass.tokenization.success-popupbridge') : c.sendEvent(n._client, 'masterpass.tokenization.success'), e.masterpassCards[0]);
                                     })
                                     .catch(function (e) {
-                                        return n._closeWindow(), window.popupBridge ? c.sendEvent(n._client, 'masterpass.tokenization.failed-popupbridge') : c.sendEvent(n._client, 'masterpass.tokenization.failed'), Promise.reject(l(e, o.MASTERPASS_ACCOUNT_TOKENIZATION_FAILED));
+                                        return (n._closeWindow(), window.popupBridge ? c.sendEvent(n._client, 'masterpass.tokenization.failed-popupbridge') : c.sendEvent(n._client, 'masterpass.tokenization.failed'), Promise.reject(l(e, o.MASTERPASS_ACCOUNT_TOKENIZATION_FAILED)));
                                     });
                     }),
                     (_.prototype._closeWindow = function () {
-                        (this._authInProgress = !1), this._frameService.close();
+                        ((this._authInProgress = !1), this._frameService.close());
                     }),
                     (_.prototype.teardown = function () {
                         var e = this;
                         return new Promise(function (t) {
-                            e._frameService.teardown(), d(e, a(_.prototype)), c.sendEvent(e._client, 'masterpass.teardown-completed'), t();
+                            (e._frameService.teardown(), d(e, a(_.prototype)), c.sendEvent(e._client, 'masterpass.teardown-completed'), t());
                         });
                     }),
-                    (t.exports = s.wrapPrototype(_));
+                    (t.exports = s.wrapPrototype(_)));
             },
             {
                 '../../lib/analytics': 138,
@@ -7628,7 +7628,7 @@ e.exports = (function e(t, n, r) {
                     };
                 function A(e) {
                     var t = e.enabledPaymentMethods || {};
-                    p.call(this),
+                    (p.call(this),
                         (this._componentId = d()),
                         (this._client = e.client),
                         (this._enabledPaymentMethods = {
@@ -7643,9 +7643,9 @@ e.exports = (function e(t, n, r) {
                                 return this._supportedPaymentMethods[e];
                             }.bind(this)
                         )),
-                        (this._bus = new o({ channel: this._componentId }));
+                        (this._bus = new o({ channel: this._componentId })));
                 }
-                p.createChild(A),
+                (p.createChild(A),
                     (A.prototype._constructDefaultSupportedPaymentMethods = function () {
                         var e = this._client.getConfiguration(),
                             t = e.gatewayConfiguration.androidPay,
@@ -7659,7 +7659,7 @@ e.exports = (function e(t, n, r) {
                                     supportedMethods: 'basic-card',
                                     data: {
                                         supportedNetworks: n.supportedCardTypes.reduce(function (e, t) {
-                                            return t in y && e.push(y[t]), e;
+                                            return (t in y && e.push(y[t]), e);
                                         }, [])
                                     }
                                 }),
@@ -7692,11 +7692,11 @@ e.exports = (function e(t, n, r) {
                             ? Promise.reject(new _(m.PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS))
                             : new Promise(function (n) {
                                   var i, o;
-                                  t._bus.on(h.FRAME_READY, function (e) {
+                                  (t._bus.on(h.FRAME_READY, function (e) {
                                       e(t._client);
                                   }),
                                       t._bus.on(h.FRAME_CAN_MAKE_REQUESTS, function () {
-                                          r.sendEvent(t._client, 'payment-request.initialized'),
+                                          (r.sendEvent(t._client, 'payment-request.initialized'),
                                               t._bus.on(h.SHIPPING_ADDRESS_CHANGE, function (e) {
                                                   var n = {
                                                       target: { shippingAddress: e },
@@ -7704,7 +7704,7 @@ e.exports = (function e(t, n, r) {
                                                           t._bus.emit(h.UPDATE_SHIPPING_ADDRESS, e);
                                                       }
                                                   };
-                                                  t._emit('shippingAddressChange', n), t._emit('shippingaddresschange', n);
+                                                  (t._emit('shippingAddressChange', n), t._emit('shippingaddresschange', n));
                                               }),
                                               t._bus.on(h.SHIPPING_OPTION_CHANGE, function (e) {
                                                   var n = {
@@ -7713,19 +7713,19 @@ e.exports = (function e(t, n, r) {
                                                           t._bus.emit(h.UPDATE_SHIPPING_OPTION, e);
                                                       }
                                                   };
-                                                  t._emit('shippingOptionChange', n), t._emit('shippingoptionchange', n);
+                                                  (t._emit('shippingOptionChange', n), t._emit('shippingoptionchange', n));
                                               }),
-                                              n(t);
+                                              n(t));
                                       }),
                                       (t._frame.src = ((i = e.gatewayConfiguration.assetsUrl), (o = t._componentId), i + '/web/3.112.1/html/payment-request-frame' + l(e.isDebug) + '.html#' + o)),
-                                      document.body.appendChild(t._frame);
+                                      document.body.appendChild(t._frame));
                               });
                     }),
                     (A.prototype.createSupportedPaymentMethodsConfiguration = function (e, t) {
                         var n;
                         if (!e) throw new _(m.PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_MUST_INCLUDE_TYPE);
                         if (!this._enabledPaymentMethods[e]) throw new _(m.PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_TYPE_NOT_ENABLED);
-                        return ((n = i({}, this._supportedPaymentMethods[e])).data = i({}, n.data, t)), n;
+                        return (((n = i({}, this._supportedPaymentMethods[e])).data = i({}, n.data, t)), n);
                     }),
                     (A.prototype.tokenize = function (e) {
                         var t = this;
@@ -7741,7 +7741,7 @@ e.exports = (function e(t, n, r) {
                                     var o = e[0],
                                         a = e[1];
                                     if (o) return void i(t._formatTokenizationError(o));
-                                    r.sendEvent(t._client, 'payment-request.tokenize.succeeded'),
+                                    (r.sendEvent(t._client, 'payment-request.tokenize.succeeded'),
                                         n({
                                             nonce: a.nonce,
                                             type: a.type,
@@ -7753,7 +7753,7 @@ e.exports = (function e(t, n, r) {
                                                 lastTwo: a.details.lastTwo
                                             },
                                             binData: a.binData
-                                        });
+                                        }));
                                 }
                             );
                         });
@@ -7787,14 +7787,14 @@ e.exports = (function e(t, n, r) {
                                               var o = e[0],
                                                   a = e[1];
                                               if (o) return void i(n._formatCanMakePaymentError(o));
-                                              r.sendEvent(n._client, 'payment-request.can-make-payment.' + a), t(a);
+                                              (r.sendEvent(n._client, 'payment-request.can-make-payment.' + a), t(a));
                                           }
                                       );
                                   })
                             : (r.sendEvent(n._client, 'payment-request.can-make-payment.not-available'), Promise.resolve(!1));
                     }),
                     (A.prototype.teardown = function () {
-                        return this._bus.teardown(), this._frame.parentNode.removeChild(this._frame), a(this, u(A.prototype)), r.sendEvent(this._client, 'payment-request.teardown-completed'), Promise.resolve();
+                        return (this._bus.teardown(), this._frame.parentNode.removeChild(this._frame), a(this, u(A.prototype)), r.sendEvent(this._client, 'payment-request.teardown-completed'), Promise.resolve());
                     }),
                     (A.prototype._formatTokenizationError = function (e) {
                         var t;
@@ -7842,7 +7842,7 @@ e.exports = (function e(t, n, r) {
                                     details: { originalError: e }
                                 });
                         }
-                        return r.sendEvent(this._client, 'payment-request.tokenize.failed'), t;
+                        return (r.sendEvent(this._client, 'payment-request.tokenize.failed'), t);
                     }),
                     (A.prototype._formatCanMakePaymentError = function (e) {
                         var t;
@@ -7871,9 +7871,9 @@ e.exports = (function e(t, n, r) {
                                     details: { originalError: e }
                                 });
                         }
-                        return r.sendEvent(this._client, 'payment-request.can-make-payment.failed'), t;
+                        return (r.sendEvent(this._client, 'payment-request.can-make-payment.failed'), t);
                     }),
-                    (t.exports = f.wrapPrototype(A));
+                    (t.exports = f.wrapPrototype(A)));
             },
             {
                 '../../lib/analytics': 138,
@@ -7916,7 +7916,7 @@ e.exports = (function e(t, n, r) {
                                 });
                             })
                             .then(function (t) {
-                                return (e.client = t), new r(e).initialize();
+                                return ((e.client = t), new r(e).initialize());
                             });
                     }),
                     VERSION: '3.112.1'
@@ -7935,13 +7935,13 @@ e.exports = (function e(t, n, r) {
                 var r = e('../../lib/enumerate'),
                     i = e('./errors'),
                     o = {};
-                (o.events = r(['CAN_MAKE_PAYMENT', 'FRAME_READY', 'FRAME_CAN_MAKE_REQUESTS', 'PAYMENT_REQUEST_INITIALIZED', 'SHIPPING_ADDRESS_CHANGE', 'UPDATE_SHIPPING_ADDRESS', 'SHIPPING_OPTION_CHANGE', 'UPDATE_SHIPPING_OPTION'], 'payment-request:')),
+                ((o.events = r(['CAN_MAKE_PAYMENT', 'FRAME_READY', 'FRAME_CAN_MAKE_REQUESTS', 'PAYMENT_REQUEST_INITIALIZED', 'SHIPPING_ADDRESS_CHANGE', 'UPDATE_SHIPPING_ADDRESS', 'SHIPPING_OPTION_CHANGE', 'UPDATE_SHIPPING_OPTION'], 'payment-request:')),
                     (o.errors = i),
                     (o.SUPPORTED_METHODS = {
                         'basic-card': !0,
                         'https://google.com/pay': !0
                     }),
-                    (t.exports = o);
+                    (t.exports = o));
             },
             {
                 '../../lib/enumerate': 153,
@@ -8127,9 +8127,9 @@ e.exports = (function e(t, n, r) {
                     T = e('../lib/constants').INTEGRATION_TIMEOUT_MS,
                     I = ['amount', 'currency', 'vaultInitiatedCheckoutPaymentMethodToken'];
                 function N(e) {
-                    (this._merchantAccountId = e.merchantAccountId), (this._autoSetDataUserIdToken = !!e.autoSetDataUserIdToken);
+                    ((this._merchantAccountId = e.merchantAccountId), (this._autoSetDataUserIdToken = !!e.autoSetDataUserIdToken));
                 }
-                (s.suppressUnhandledPromiseMessage = !0),
+                ((s.suppressUnhandledPromiseMessage = !0),
                     (N.prototype._initialize = function (e) {
                         var t;
                         return (e.client
@@ -8168,7 +8168,7 @@ e.exports = (function e(t, n, r) {
                         var t = new s(),
                             n = e.getConfiguration(),
                             i = setTimeout(function () {
-                                r.sendEvent(e, 'paypal-checkout.frame-service.timed-out'), t.reject(new d(u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED));
+                                (r.sendEvent(e, 'paypal-checkout.frame-service.timed-out'), t.reject(new d(u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED)));
                             }, T);
                         return (
                             (this._assetsUrl = n.gatewayConfiguration.paypal.assetsUrl + '/web/3.112.1'),
@@ -8181,7 +8181,7 @@ e.exports = (function e(t, n, r) {
                                     openFrameUrl: this._loadingFrameUrl
                                 },
                                 function (e) {
-                                    (this._frameService = e), clearTimeout(i), t.resolve();
+                                    ((this._frameService = e), clearTimeout(i), t.resolve());
                                 }.bind(this)
                             ),
                             t
@@ -8213,7 +8213,7 @@ e.exports = (function e(t, n, r) {
                                             data: n._formatPaymentResourceData(e, t)
                                         })
                                         .then(function (t) {
-                                            return (n.intentFromCreatePayment = e.intent), t;
+                                            return ((n.intentFromCreatePayment = e.intent), t);
                                         });
                                 })
                                 .catch(function (e) {
@@ -8312,9 +8312,9 @@ e.exports = (function e(t, n, r) {
                                                 })
                                                 .then(function (e) {
                                                     var r = e.paymentResource.redirectUrl;
-                                                    return n._frameService.redirect(r), t;
+                                                    return (n._frameService.redirect(r), t);
                                                 });
-                                        return n._frameService.open({}, n._createFrameServiceCallback(t)), r;
+                                        return (n._frameService.open({}, n._createFrameServiceCallback(t)), r);
                                     })
                                     .catch(function (e) {
                                         return ((n._vaultInitiatedCheckoutInProgress = !1), n._removeModalBackdrop(), 'FRAME_SERVICE_FRAME_CLOSED' === e.code)
@@ -8332,7 +8332,7 @@ e.exports = (function e(t, n, r) {
                                               : Promise.reject(e);
                                     })
                                     .then(function (e) {
-                                        return n._frameService.close(), (n._vaultInitiatedCheckoutInProgress = !1), n._removeModalBackdrop(), r.sendEvent(n._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.succeeded'), Promise.resolve(e);
+                                        return (n._frameService.close(), (n._vaultInitiatedCheckoutInProgress = !1), n._removeModalBackdrop(), r.sendEvent(n._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.succeeded'), Promise.resolve(e));
                                     }));
                     }),
                     (N.prototype._addModalBackdrop = function (e) {
@@ -8437,7 +8437,7 @@ e.exports = (function e(t, n, r) {
                                     });
                                 })
                                 .then(function (e) {
-                                    return (t = n._formatTokenizePayload(e)), r.sendEvent(n._clientPromise, 'paypal-checkout.tokenization.success'), t.creditFinancingOffered && r.sendEvent(n._clientPromise, 'paypal-checkout.credit.accepted'), t;
+                                    return ((t = n._formatTokenizePayload(e)), r.sendEvent(n._clientPromise, 'paypal-checkout.tokenization.success'), t.creditFinancingOffered && r.sendEvent(n._clientPromise, 'paypal-checkout.credit.accepted'), t);
                                 })
                                 .catch(function (e) {
                                     return n._setupError
@@ -8480,7 +8480,7 @@ e.exports = (function e(t, n, r) {
                             ),
                             (e['client-id'] ? Promise.resolve(e['client-id']) : this.getClientId()).then(
                                 function (t) {
-                                    (e['client-id'] = t),
+                                    ((e['client-id'] = t),
                                         this._autoSetDataUserIdToken &&
                                             o &&
                                             (this._paypalScript.setAttribute('data-user-id-token', o),
@@ -8492,7 +8492,7 @@ e.exports = (function e(t, n, r) {
                                                 merchantId: e['merchant-id']
                                             })),
                                         (this._paypalScript.src = y.queryify('https://www.paypal.com/sdk/js?', e)),
-                                        document.head.insertBefore(this._paypalScript, document.head.firstElementChild);
+                                        document.head.insertBefore(this._paypalScript, document.head.firstElementChild));
                                 }.bind(this)
                             ),
                             n.then(
@@ -8512,7 +8512,7 @@ e.exports = (function e(t, n, r) {
                                 'client-id': n,
                                 'user-id-token': r
                             };
-                        e.amount && (a.amount = e.amount), e.currency && (a.currency = e.currency), e.merchantId && (a['merchant-id'] = e.merchantId), (t = new XMLHttpRequest()).open('GET', y.queryify(o, a)), t.send();
+                        (e.amount && (a.amount = e.amount), e.currency && (a.currency = e.currency), e.merchantId && (a['merchant-id'] = e.merchantId), (t = new XMLHttpRequest()).open('GET', y.queryify(o, a)), t.send());
                     }),
                     (N.prototype._formatPaymentResourceData = function (e, t) {
                         var n,
@@ -8536,8 +8536,8 @@ e.exports = (function e(t, n, r) {
                         if ('checkout' === e.flow) {
                             for (n in ((o.amount = e.amount), (o.currencyIsoCode = e.currency), (o.requestBillingAgreement = e.requestBillingAgreement), i && ('capture' === i && (i = 'sale'), (o.intent = i)), e.hasOwnProperty('lineItems') && (o.lineItems = e.lineItems), e.hasOwnProperty('vaultInitiatedCheckoutPaymentMethodToken') && (o.vaultInitiatedCheckoutPaymentMethodToken = e.vaultInitiatedCheckoutPaymentMethodToken), e.hasOwnProperty('shippingOptions') && (o.shippingOptions = e.shippingOptions), e.shippingAddressOverride)) e.shippingAddressOverride.hasOwnProperty(n) && (o[n] = e.shippingAddressOverride[n]);
                             e.hasOwnProperty('billingAgreementDetails') && (o.billingAgreementDetails = e.billingAgreementDetails);
-                        } else (o.shippingAddress = e.shippingAddressOverride), e.billingAgreementDescription && (o.description = e.billingAgreementDescription), e.planType && ((o.plan_type = e.planType), e.planMetadata && (o.plan_metadata = A(e.planMetadata)));
-                        return (this._riskCorrelationId = e.riskCorrelationId), e.riskCorrelationId && (o.correlationId = this._riskCorrelationId), o;
+                        } else ((o.shippingAddress = e.shippingAddressOverride), e.billingAgreementDescription && (o.description = e.billingAgreementDescription), e.planType && ((o.plan_type = e.planType), e.planMetadata && (o.plan_metadata = A(e.planMetadata))));
+                        return ((this._riskCorrelationId = e.riskCorrelationId), e.riskCorrelationId && (o.correlationId = this._riskCorrelationId), o);
                     }),
                     (N.prototype._verifyConsistentCurrency = function (e) {
                         return (
@@ -8559,7 +8559,7 @@ e.exports = (function e(t, n, r) {
                             paymentId: e.paymentId || e.orderId,
                             currencyIsoCode: e.currency
                         };
-                        return e.hasOwnProperty('amount') && (t.amount = e.amount), e.hasOwnProperty('lineItems') && (t.lineItems = e.lineItems), e.hasOwnProperty('shippingOptions') && (t.shippingOptions = e.shippingOptions), e.hasOwnProperty('amountBreakdown') && (t.amountBreakdown = e.amountBreakdown), e.hasOwnProperty('shippingAddress') && (r.sendEvent(this._clientPromise, 'paypal-checkout.updatePayment.shippingAddress.provided.by-the-merchant'), (t.line1 = e.shippingAddress.line1), e.shippingAddress.hasOwnProperty('line2') && (t.line2 = e.shippingAddress.line2), (t.city = e.shippingAddress.city), (t.state = e.shippingAddress.state), (t.postalCode = e.shippingAddress.postalCode), (t.countryCode = e.shippingAddress.countryCode), e.shippingAddress.hasOwnProperty('phone') && (t.phone = e.shippingAddress.phone), e.shippingAddress.hasOwnProperty('recipientName') && (t.recipientName = e.shippingAddress.recipientName)), t;
+                        return (e.hasOwnProperty('amount') && (t.amount = e.amount), e.hasOwnProperty('lineItems') && (t.lineItems = e.lineItems), e.hasOwnProperty('shippingOptions') && (t.shippingOptions = e.shippingOptions), e.hasOwnProperty('amountBreakdown') && (t.amountBreakdown = e.amountBreakdown), e.hasOwnProperty('shippingAddress') && (r.sendEvent(this._clientPromise, 'paypal-checkout.updatePayment.shippingAddress.provided.by-the-merchant'), (t.line1 = e.shippingAddress.line1), e.shippingAddress.hasOwnProperty('line2') && (t.line2 = e.shippingAddress.line2), (t.city = e.shippingAddress.city), (t.state = e.shippingAddress.state), (t.postalCode = e.shippingAddress.postalCode), (t.countryCode = e.shippingAddress.countryCode), e.shippingAddress.hasOwnProperty('phone') && (t.phone = e.shippingAddress.phone), e.shippingAddress.hasOwnProperty('recipientName') && (t.recipientName = e.shippingAddress.recipientName)), t);
                     }),
                     (N.prototype._formatTokenizeData = function (e, t) {
                         var n = this._configuration,
@@ -8572,7 +8572,7 @@ e.exports = (function e(t, n, r) {
                                     options: { validate: o && !i && e.vault }
                                 }
                             };
-                        return o ? (a.paypalAccount.billingAgreementToken = t.billingToken) : ((a.paypalAccount.paymentToken = t.paymentId || t.orderId), (a.paypalAccount.payerId = t.payerId), (a.paypalAccount.unilateral = r.paypal.unvettedMerchant), e.intent && (a.paypalAccount.intent = e.intent)), this._merchantAccountId && (a.merchantAccountId = this._merchantAccountId), a;
+                        return (o ? (a.paypalAccount.billingAgreementToken = t.billingToken) : ((a.paypalAccount.paymentToken = t.paymentId || t.orderId), (a.paypalAccount.payerId = t.payerId), (a.paypalAccount.unilateral = r.paypal.unvettedMerchant), e.intent && (a.paypalAccount.intent = e.intent)), this._merchantAccountId && (a.merchantAccountId = this._merchantAccountId), a);
                     }),
                     (N.prototype._formatTokenizePayload = function (e) {
                         var t,
@@ -8603,7 +8603,7 @@ e.exports = (function e(t, n, r) {
                                 })
                         );
                     }),
-                    (t.exports = c.wrapPrototype(N));
+                    (t.exports = c.wrapPrototype(N)));
             },
             {
                 '../lib/analytics': 138,
@@ -8644,9 +8644,9 @@ e.exports = (function e(t, n, r) {
                     m = e('../../lib/querystring'),
                     f = e('@braintree/wrap-promise');
                 function y(e) {
-                    (this._client = e.client), (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.paypal.assetsUrl + '/web/' + c), (this._isDebug = e.client.getConfiguration().isDebug), (this._loadingFrameUrl = this._assetsUrl + '/html/paypal-landing-frame' + a(this._isDebug) + '.html'), (this._authorizationInProgress = !1);
+                    ((this._client = e.client), (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.paypal.assetsUrl + '/web/' + c), (this._isDebug = e.client.getConfiguration().isDebug), (this._loadingFrameUrl = this._assetsUrl + '/html/paypal-landing-frame' + a(this._isDebug) + '.html'), (this._authorizationInProgress = !1));
                 }
-                (y.prototype._initialize = function () {
+                ((y.prototype._initialize = function () {
                     var e = this,
                         t = this._client,
                         n = setTimeout(function () {
@@ -8660,7 +8660,7 @@ e.exports = (function e(t, n, r) {
                                 openFrameUrl: e._loadingFrameUrl
                             },
                             function (r) {
-                                (e._frameService = r), clearTimeout(n), u.sendEvent(t, 'paypal.load.succeeded'), i(e);
+                                ((e._frameService = r), clearTimeout(n), u.sendEvent(t, 'paypal.load.succeeded'), i(e));
                             }
                         );
                     });
@@ -8696,10 +8696,10 @@ e.exports = (function e(t, n, r) {
                         return window.popupBridge
                             ? function (a, s) {
                                   var c = s && s.path && '/cancel' === s.path.substring(0, 7);
-                                  (r._authorizationInProgress = !1), a || c ? (u.sendEvent(o, 'paypal.tokenization.closed-popupbridge.by-user'), n(new i(E.PAYPAL_POPUP_CLOSED))) : s && r._tokenizePayPal(e, s.queryItems).then(t).catch(n);
+                                  ((r._authorizationInProgress = !1), a || c ? (u.sendEvent(o, 'paypal.tokenization.closed-popupbridge.by-user'), n(new i(E.PAYPAL_POPUP_CLOSED))) : s && r._tokenizePayPal(e, s.queryItems).then(t).catch(n));
                               }
                             : function (a, s) {
-                                  (r._authorizationInProgress = !1),
+                                  ((r._authorizationInProgress = !1),
                                       a
                                           ? 'FRAME_SERVICE_FRAME_CLOSED' === a.code
                                               ? (u.sendEvent(o, 'paypal.tokenization.closed.by-user'), n(new i(E.PAYPAL_POPUP_CLOSED)))
@@ -8713,7 +8713,7 @@ e.exports = (function e(t, n, r) {
                                                         details: { originalError: a }
                                                     })
                                                 )
-                                          : s && r._tokenizePayPal(e, s).then(t).catch(n);
+                                          : s && r._tokenizePayPal(e, s).then(t).catch(n));
                               };
                     }),
                     (y.prototype._tokenizePayPal = function (e, t) {
@@ -8729,7 +8729,7 @@ e.exports = (function e(t, n, r) {
                                 })
                                 .then(function (e) {
                                     var t = n._formatTokenizePayload(e);
-                                    return window.popupBridge ? u.sendEvent(r, 'paypal.tokenization.success-popupbridge') : u.sendEvent(r, 'paypal.tokenization.success'), t.creditFinancingOffered && u.sendEvent(r, 'paypal.credit.accepted'), n._frameService.close(), t;
+                                    return (window.popupBridge ? u.sendEvent(r, 'paypal.tokenization.success-popupbridge') : u.sendEvent(r, 'paypal.tokenization.success'), t.creditFinancingOffered && u.sendEvent(r, 'paypal.credit.accepted'), n._frameService.close(), t);
                                 })
                                 .catch(function (e) {
                                     return (
@@ -8771,7 +8771,7 @@ e.exports = (function e(t, n, r) {
                                     options: { validate: 'vault' === e.flow && !i }
                                 }
                             };
-                        return t.ba_token ? (o.paypalAccount.billingAgreementToken = t.ba_token) : ((o.paypalAccount.paymentToken = t.paymentId), (o.paypalAccount.payerId = t.PayerID), (o.paypalAccount.unilateral = r.paypal.unvettedMerchant), e.hasOwnProperty('intent') && (o.paypalAccount.intent = e.intent)), o;
+                        return (t.ba_token ? (o.paypalAccount.billingAgreementToken = t.ba_token) : ((o.paypalAccount.paymentToken = t.paymentId), (o.paypalAccount.payerId = t.PayerID), (o.paypalAccount.unilateral = r.paypal.unvettedMerchant), e.hasOwnProperty('intent') && (o.paypalAccount.intent = e.intent)), o);
                     }),
                     (y.prototype._navigateFrameToAuth = function (e) {
                         var t = this,
@@ -8785,7 +8785,7 @@ e.exports = (function e(t, n, r) {
                             })
                             .then(function (r) {
                                 var i;
-                                (i = 'checkout' === e.flow ? r.paymentResource.redirectUrl : r.agreementSetup.approvalUrl), 'commit' === e.useraction && (i = m.queryify(i, { useraction: 'commit' })), window.popupBridge && u.sendEvent(n, 'paypal.tokenization.opened-popupbridge'), t._frameService.redirect(i);
+                                ((i = 'checkout' === e.flow ? r.paymentResource.redirectUrl : r.agreementSetup.approvalUrl), 'commit' === e.useraction && (i = m.queryify(i, { useraction: 'commit' })), window.popupBridge && u.sendEvent(n, 'paypal.tokenization.opened-popupbridge'), t._frameService.redirect(i));
                             })
                             .catch(function (e) {
                                 var n = e.details && e.details.httpStatus;
@@ -8825,19 +8825,19 @@ e.exports = (function e(t, n, r) {
                                 }
                             };
                         if ((window.popupBridge && 'function' == typeof window.popupBridge.getReturnUrlPrefix && ((i.returnUrl = window.popupBridge.getReturnUrlPrefix() + 'return'), (i.cancelUrl = window.popupBridge.getReturnUrlPrefix() + 'cancel')), 'checkout' === e.flow)) for (t in ((i.amount = e.amount), (i.currencyIsoCode = e.currency), e.hasOwnProperty('intent') && (i.intent = e.intent), e.shippingAddressOverride)) e.shippingAddressOverride.hasOwnProperty(t) && (i[t] = e.shippingAddressOverride[t]);
-                        else (i.shippingAddress = e.shippingAddressOverride), e.billingAgreementDescription && (i.description = e.billingAgreementDescription);
+                        else ((i.shippingAddress = e.shippingAddressOverride), e.billingAgreementDescription && (i.description = e.billingAgreementDescription));
                         return i;
                     }),
                     (y.prototype.closeWindow = function () {
-                        this._authorizationInProgress && u.sendEvent(this._client, 'paypal.tokenize.closed.by-merchant'), this._frameService.close();
+                        (this._authorizationInProgress && u.sendEvent(this._client, 'paypal.tokenize.closed.by-merchant'), this._frameService.close());
                     }),
                     (y.prototype.focusWindow = function () {
                         this._frameService.focus();
                     }),
                     (y.prototype.teardown = f(function () {
-                        return this._frameService.teardown(), h(this, p(y.prototype)), u.sendEvent(this._client, 'paypal.teardown-completed'), Promise.resolve();
+                        return (this._frameService.teardown(), h(this, p(y.prototype)), u.sendEvent(this._client, 'paypal.teardown-completed'), Promise.resolve());
                     })),
-                    (t.exports = y);
+                    (t.exports = y));
             },
             {
                 '../../lib/analytics': 138,
@@ -8999,7 +8999,7 @@ e.exports = (function e(t, n, r) {
                     o = e('../lib/create-assets-url'),
                     a = e('../lib/create-deferred-client');
                 function s() {}
-                (s.prototype.initialize = function (e) {
+                ((s.prototype.initialize = function (e) {
                     var t = this;
                     return (
                         (this._clientPromise = a
@@ -9011,7 +9011,7 @@ e.exports = (function e(t, n, r) {
                                 name: 'PreferredPaymentMethods'
                             })
                             .catch(function (e) {
-                                return (t._setupError = e), Promise.reject(e);
+                                return ((t._setupError = e), Promise.reject(e));
                             })),
                         i.sendEvent(this._clientPromise, 'preferred-payment-methods.initialized'),
                         Promise.resolve(this)
@@ -9049,7 +9049,7 @@ e.exports = (function e(t, n, r) {
                                       });
                             });
                     }),
-                    (t.exports = r.wrapPrototype(s));
+                    (t.exports = r.wrapPrototype(s)));
             },
             {
                 '../lib/analytics': 138,
@@ -9159,12 +9159,12 @@ e.exports = (function e(t, n, r) {
                                     width: 400
                                 },
                                 function (n) {
-                                    a.sendEvent(e, 'sepa.popup.initialized'),
+                                    (a.sendEvent(e, 'sepa.popup.initialized'),
                                         n.open({}, function (e, t) {
                                             var o, a, s;
                                             return (o = t) && o.success ? (n.close(), d()) : ((a = t), (s = e), (a && a.cancel) || (s && 'FRAME_SERVICE_FRAME_CLOSED' === s.code)) ? (n.close(), l(new r(i.SEPA_CUSTOMER_CANCELED))) : (n.close(), l(new r(i.SEPA_TOKENIZATION_FAILED)));
                                         }),
-                                        n.redirect(t.approvalUrl);
+                                        n.redirect(t.approvalUrl));
                                 }
                             );
                         });
@@ -9196,7 +9196,7 @@ e.exports = (function e(t, n, r) {
                                 );
                             })
                             .then(function (t) {
-                                return a.sendEvent(e, 'sepa.redirect.tokenization.success'), t;
+                                return (a.sendEvent(e, 'sepa.redirect.tokenization.success'), t);
                             })
                             .catch(function () {
                                 throw (a.sendEvent(e, 'sepa.redirect.handle-approval.failed'), new r(i.SEPA_TRANSACTION_FAILED));
@@ -9227,9 +9227,9 @@ e.exports = (function e(t, n, r) {
                     l = e('../../lib/assign').assign;
                 function u(e) {
                     var t = e.client.getConfiguration();
-                    (this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = t.isDebug), e.redirectUrl ? ((this._returnUrl = e.redirectUrl), (this._cancelUrl = e.redirectUrl + '?cancel=1'), (this._isRedirectFlow = !0)) : ((this._returnUrl = this._assetsUrl + '/html/redirect-frame.html?success=1'), (this._cancelUrl = this._assetsUrl + '/html/redirect-frame.html?cancel=1')), e.tokenizePayload && (this.tokenizePayload = e.tokenizePayload), d.sendEvent(this._client, 'sepa.component.initialized');
+                    ((this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = t.isDebug), e.redirectUrl ? ((this._returnUrl = e.redirectUrl), (this._cancelUrl = e.redirectUrl + '?cancel=1'), (this._isRedirectFlow = !0)) : ((this._returnUrl = this._assetsUrl + '/html/redirect-frame.html?success=1'), (this._cancelUrl = this._assetsUrl + '/html/redirect-frame.html?cancel=1')), e.tokenizePayload && (this.tokenizePayload = e.tokenizePayload), d.sendEvent(this._client, 'sepa.component.initialized'));
                 }
-                (u.prototype.tokenize = function (e) {
+                ((u.prototype.tokenize = function (e) {
                     var t,
                         n = this,
                         r = l(
@@ -9268,14 +9268,14 @@ e.exports = (function e(t, n, r) {
                                         );
                                     })
                                     .then(function (e) {
-                                        return d.sendEvent(n._client, 'sepa.tokenization.success'), Promise.resolve(e);
+                                        return (d.sendEvent(n._client, 'sepa.tokenization.success'), Promise.resolve(e));
                                     })
                                     .catch(function (e) {
-                                        return d.sendEvent(n._client, 'sepa.' + e.details + '.failed'), Promise.reject(e);
+                                        return (d.sendEvent(n._client, 'sepa.' + e.details + '.failed'), Promise.reject(e));
                                     })
                           : (d.sendEvent(n._client, 'sepa.input-validation.invalid-mandate'), Promise.reject(new i(o.SEPA_INVALID_MANDATE_TYPE)));
                 }),
-                    (t.exports = r.wrapPrototype(u));
+                    (t.exports = r.wrapPrototype(u)));
             },
             {
                 '../../lib/analytics': 138,
@@ -9319,7 +9319,7 @@ e.exports = (function e(t, n, r) {
                                 });
                             })
                             .then(function (t) {
-                                return (e.client = t), r.sendEvent(t, 'sepa.client.initialized'), new i(e);
+                                return ((e.client = t), r.sendEvent(t, 'sepa.client.initialized'), new i(e));
                             })
                             .then(function (t) {
                                 return n.success && 'true' === n.success && n.cart_id
@@ -9327,7 +9327,7 @@ e.exports = (function e(t, n, r) {
                                       u
                                           .handleApprovalForFullPageRedirect(e.client, e)
                                           .then(function (e) {
-                                              return (t.tokenizePayload = e), t;
+                                              return ((t.tokenizePayload = e), t);
                                           })
                                           .catch(function (e) {
                                               console.error('Problem while finishing tokenizing: ', e);
@@ -9430,9 +9430,9 @@ e.exports = (function e(t, n, r) {
                     m = e('../../../lib/constants').BUS_CONFIGURATION_REQUEST_EVENT,
                     f = '3.112.1';
                 function y(e) {
-                    c.call(this), (this._client = e.client), (this._createPromise = e.createPromise), (this._createOptions = e), this._client ? ((this._isDebug = this._client.getConfiguration().isDebug), (this._assetsUrl = this._client.getConfiguration().gatewayConfiguration.assetsUrl)) : ((this._isDebug = !!e.isDebug), (this._assetsUrl = e.assetsUrl)), (this._assetsUrl = this._assetsUrl + '/web/' + f);
+                    (c.call(this), (this._client = e.client), (this._createPromise = e.createPromise), (this._createOptions = e), this._client ? ((this._isDebug = this._client.getConfiguration().isDebug), (this._assetsUrl = this._client.getConfiguration().gatewayConfiguration.assetsUrl)) : ((this._isDebug = !!e.isDebug), (this._assetsUrl = e.assetsUrl)), (this._assetsUrl = this._assetsUrl + '/web/' + f));
                 }
-                (s.suppressUnhandledPromiseMessage = !0),
+                ((s.suppressUnhandledPromiseMessage = !0),
                     c.createChild(y),
                     (y.prototype._waitForClient = function () {
                         return this._client
@@ -9456,19 +9456,19 @@ e.exports = (function e(t, n, r) {
                               (n = this._formatVerifyCardOptions(e)),
                               this._formatLookupData(n)
                                   .then(function (e) {
-                                      return i.sendEvent(o._createPromise, 'three-d-secure.verification-flow.started'), o._performLookup(n.nonce, e);
+                                      return (i.sendEvent(o._createPromise, 'three-d-secure.verification-flow.started'), o._performLookup(n.nonce, e));
                                   })
                                   .then(function (e) {
-                                      return i.sendEvent(o._createPromise, 'three-d-secure.verification-flow.3ds-version.' + e.lookup.threeDSecureVersion), o._onLookupComplete(e, n);
+                                      return (i.sendEvent(o._createPromise, 'three-d-secure.verification-flow.3ds-version.' + e.lookup.threeDSecureVersion), o._onLookupComplete(e, n));
                                   })
                                   .then(function (e) {
                                       return o.initializeChallengeWithLookupResponse(e, n);
                                   })
                                   .then(function (e) {
-                                      return o._resetVerificationState(), i.sendEvent(o._createPromise, 'three-d-secure.verification-flow.completed'), e;
+                                      return (o._resetVerificationState(), i.sendEvent(o._createPromise, 'three-d-secure.verification-flow.completed'), e);
                                   })
                                   .catch(function (e) {
-                                      return o._resetVerificationState(), i.sendEvent(o._createPromise, 'three-d-secure.verification-flow.failed'), Promise.reject(e);
+                                      return (o._resetVerificationState(), i.sendEvent(o._createPromise, 'three-d-secure.verification-flow.failed'), Promise.reject(e));
                                   }));
                     }),
                     (y.prototype._checkForFrameworkSpecificVerifyCardErrors = function () {
@@ -9481,7 +9481,7 @@ e.exports = (function e(t, n, r) {
                         throw new o(d.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
                     }),
                     (y.prototype._resetVerificationState = function () {
-                        (this._verifyCardInProgress = !1), (this._verifyCardPromisePlus = null), 'function' == typeof this._reloadThreeDSecure && this._reloadThreeDSecure();
+                        ((this._verifyCardInProgress = !1), (this._verifyCardPromisePlus = null), 'function' == typeof this._reloadThreeDSecure && this._reloadThreeDSecure());
                     }),
                     (y.prototype._performLookup = function (e, t) {
                         var n = this,
@@ -9535,17 +9535,17 @@ e.exports = (function e(t, n, r) {
                             (n._verifyCardPromisePlus = n._verifyCardPromisePlus || new s()),
                             n._handleLookupResponse(e, t),
                             n._verifyCardPromisePlus.then(function (e) {
-                                return i.sendEvent(n._createPromise, 'three-d-secure.verification-flow.liability-shifted.' + String(e.liabilityShifted)), i.sendEvent(n._createPromise, 'three-d-secure.verification-flow.liability-shift-possible.' + String(e.liabilityShiftPossible)), e;
+                                return (i.sendEvent(n._createPromise, 'three-d-secure.verification-flow.liability-shifted.' + String(e.liabilityShifted)), i.sendEvent(n._createPromise, 'three-d-secure.verification-flow.liability-shift-possible.' + String(e.liabilityShiftPossible)), e);
                             })
                         );
                     }),
                     (y.prototype._handleLookupResponse = function (e, t) {
                         var n,
                             r = !!(e.lookup && e.lookup.acsUrl);
-                        i.sendEvent(this._createPromise, 'three-d-secure.verification-flow.challenge-presented.' + String(r)), r ? this._presentChallenge(e, t) : (((n = this._formatAuthResponse(e.paymentMethod, e.threeDSecureInfo)).verificationDetails = e.threeDSecureInfo), this._verifyCardPromisePlus.resolve(n));
+                        (i.sendEvent(this._createPromise, 'three-d-secure.verification-flow.challenge-presented.' + String(r)), r ? this._presentChallenge(e, t) : (((n = this._formatAuthResponse(e.paymentMethod, e.threeDSecureInfo)).verificationDetails = e.threeDSecureInfo), this._verifyCardPromisePlus.resolve(n)));
                     }),
                     (y.prototype._onLookupComplete = function (e) {
-                        return (this._lookupPaymentMethod = e.paymentMethod), (this._verifyCardPromisePlus = new s()), Promise.resolve(e);
+                        return ((this._lookupPaymentMethod = e.paymentMethod), (this._verifyCardPromisePlus = new s()), Promise.resolve(e));
                     }),
                     (y.prototype._formatAuthResponse = function (e, t) {
                         return {
@@ -9564,7 +9564,7 @@ e.exports = (function e(t, n, r) {
                     }),
                     (y.prototype._formatLookupData = function (e) {
                         var t = { amount: e.amount };
-                        return !0 === e.collectDeviceData && ((t.browserColorDepth = window.screen.colorDepth), (t.browserJavaEnabled = window.navigator.javaEnabled()), (t.browserJavascriptEnabled = !0), (t.browserLanguage = window.navigator.language), (t.browserScreenHeight = window.screen.height), (t.browserScreenWidth = window.screen.width), (t.browserTimeZone = new Date().getTimezoneOffset()), (t.deviceChannel = 'Browser')), Promise.resolve(t);
+                        return (!0 === e.collectDeviceData && ((t.browserColorDepth = window.screen.colorDepth), (t.browserJavaEnabled = window.navigator.javaEnabled()), (t.browserJavascriptEnabled = !0), (t.browserLanguage = window.navigator.language), (t.browserScreenHeight = window.screen.height), (t.browserScreenWidth = window.screen.width), (t.browserTimeZone = new Date().getTimezoneOffset()), (t.deviceChannel = 'Browser')), Promise.resolve(t));
                     }),
                     (y.prototype._handleV1AuthResponse = function (e) {
                         var t = JSON.parse(e.auth_response);
@@ -9629,15 +9629,15 @@ e.exports = (function e(t, n, r) {
                         });
                     }),
                     (y.prototype._setupV1Elements = function (e) {
-                        (this._v1Bus = this._setupV1Bus(e)), (this._v1Iframe = this._setupV1Iframe(e));
+                        ((this._v1Bus = this._setupV1Bus(e)), (this._v1Iframe = this._setupV1Iframe(e)));
                     }),
                     (y.prototype._teardownV1Elements = function () {
-                        this._v1Bus && (this._v1Bus.teardown(), (this._v1Bus = null)), this._v1Iframe && this._v1Iframe.parentNode && (this._v1Iframe.parentNode.removeChild(this._v1Iframe), (this._v1Iframe = null)), this._onV1Keyup && (document.removeEventListener('keyup', this._onV1Keyup), (this._onV1Keyup = null));
+                        (this._v1Bus && (this._v1Bus.teardown(), (this._v1Bus = null)), this._v1Iframe && this._v1Iframe.parentNode && (this._v1Iframe.parentNode.removeChild(this._v1Iframe), (this._v1Iframe = null)), this._onV1Keyup && (document.removeEventListener('keyup', this._onV1Keyup), (this._onV1Keyup = null)));
                     }),
                     (y.prototype.teardown = function () {
-                        return i.sendEvent(this._createPromise, 'three-d-secure.teardown-completed'), this._teardownV1Elements(), Promise.resolve();
+                        return (i.sendEvent(this._createPromise, 'three-d-secure.teardown-completed'), this._teardownV1Elements(), Promise.resolve());
                     }),
-                    (t.exports = y);
+                    (t.exports = y));
             },
             {
                 '../../../lib/analytics': 138,
@@ -9662,16 +9662,16 @@ e.exports = (function e(t, n, r) {
                 function i(e) {
                     r.call(this, e);
                 }
-                (i.prototype = Object.create(r.prototype, { constructor: r })),
+                ((i.prototype = Object.create(r.prototype, { constructor: r })),
                     (i.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement('div');
-                        return (t.innerHTML = '<div class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="CCAFrameModal-label" aria-hidden="true" style="display: block;"><div class="modal-dialog" style="width:440px;z-index:999999;"><div class="modal-content"><div class="modal-body" data-braintree-v1-fallback-iframe-container><button type="button" data-braintree-v1-fallback-close-button class="close" data-dismiss="modal" aria-hidden="true">\xD7</button></div></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;cursor: pointer;z-index: 999998;top: 0;left: 0;width: 100%;height: 100%;"></div></div>'), t.querySelector('[data-braintree-v1-fallback-iframe-container]').appendChild(e), t;
+                        return ((t.innerHTML = '<div class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="CCAFrameModal-label" aria-hidden="true" style="display: block;"><div class="modal-dialog" style="width:440px;z-index:999999;"><div class="modal-content"><div class="modal-body" data-braintree-v1-fallback-iframe-container><button type="button" data-braintree-v1-fallback-close-button class="close" data-dismiss="modal" aria-hidden="true">\xD7</button></div></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;cursor: pointer;z-index: 999998;top: 0;left: 0;width: 100%;height: 100%;"></div></div>'), t.querySelector('[data-braintree-v1-fallback-iframe-container]').appendChild(e), t);
                     }),
                     (i.prototype._createCardinalConfigurationOptions = function (e) {
                         var t = r.prototype._createCardinalConfigurationOptions.call(this, e);
-                        return (t.payment.framework = 'bootstrap3'), t;
+                        return ((t.payment.framework = 'bootstrap3'), t);
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { './songbird': 217 }
         ],
@@ -9681,13 +9681,13 @@ e.exports = (function e(t, n, r) {
                 function i(e) {
                     r.call(this, e);
                 }
-                (i.prototype = Object.create(r.prototype, { constructor: r })),
+                ((i.prototype = Object.create(r.prototype, { constructor: r })),
                     (i.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement('div'),
                             n = !!(this._createOptions && this._createOptions.cardinalSDKConfig && this._createOptions.cardinalSDKConfig.payment && this._createOptions.cardinalSDKConfig.payment.displayExitButton);
-                        return (t.innerHTML = '<div style="position: fixed;z-index: 999999;top: 50%;left: 50%;padding: 24px 20px;transform: translate(-50%,-50%);border-radius: 2px;background: #fff;max-width: 100%;overflow: auto;"><div><button data-braintree-v1-fallback-close-button style="font-family: Helvetica,Arial,sans-serif;font-size: 25px;line-height: 12px;position: absolute;top: 2px;right: 0px;cursor: pointer;color: #999;border: 0;outline: none;background: none;" onMouseOver="this.style.color=\'#000\'" onMouseOut="this.style.color=\'#999\'">\xD7</button></div><div data-braintree-v1-fallback-iframe-container style="height: 400px;"></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;z-index: 999998;cursor: pointer;top: 0;left: 0;width: 100%;height: 100%;transition: opacity 1ms ease;background: rgba(0,0,0,.6);"></div>'), n || (t.querySelector('[data-braintree-v1-fallback-close-button]').style.display = 'none'), t.querySelector('[data-braintree-v1-fallback-iframe-container]').appendChild(e), t;
+                        return ((t.innerHTML = '<div style="position: fixed;z-index: 999999;top: 50%;left: 50%;padding: 24px 20px;transform: translate(-50%,-50%);border-radius: 2px;background: #fff;max-width: 100%;overflow: auto;"><div><button data-braintree-v1-fallback-close-button style="font-family: Helvetica,Arial,sans-serif;font-size: 25px;line-height: 12px;position: absolute;top: 2px;right: 0px;cursor: pointer;color: #999;border: 0;outline: none;background: none;" onMouseOver="this.style.color=\'#000\'" onMouseOut="this.style.color=\'#999\'">\xD7</button></div><div data-braintree-v1-fallback-iframe-container style="height: 400px;"></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;z-index: 999998;cursor: pointer;top: 0;left: 0;width: 100%;height: 100%;transition: opacity 1ms ease;background: rgba(0,0,0,.6);"></div>'), n || (t.querySelector('[data-braintree-v1-fallback-close-button]').style.display = 'none'), t.querySelector('[data-braintree-v1-fallback-iframe-container]').appendChild(e), t);
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { './songbird': 217 }
         ],
@@ -9716,17 +9716,17 @@ e.exports = (function e(t, n, r) {
                 function s(e) {
                     r.call(this, e);
                 }
-                (s.prototype = Object.create(r.prototype, { constructor: r })),
+                ((s.prototype = Object.create(r.prototype, { constructor: r })),
                     (s.events = a(['AUTHENTICATION_IFRAME_AVAILABLE'], 'inline-iframe-framework:')),
                     (s.prototype.setUpEventListeners = function (e) {
-                        r.prototype.setUpEventListeners.call(this, e),
+                        (r.prototype.setUpEventListeners.call(this, e),
                             this.on(s.events.AUTHENTICATION_IFRAME_AVAILABLE, function (t, n) {
                                 e('authentication-iframe-available', t, n);
-                            });
+                            }));
                     }),
                     (s.prototype._createCardinalConfigurationOptions = function (e) {
                         var t = r.prototype._createCardinalConfigurationOptions.call(this, e);
-                        return (t.payment.framework = 'inline'), t;
+                        return ((t.payment.framework = 'inline'), t);
                     }),
                     (s.prototype._addV1IframeToPage = function () {
                         this._emit(s.events.AUTHENTICATION_IFRAME_AVAILABLE, { element: this._v1Modal }, function () {});
@@ -9737,15 +9737,15 @@ e.exports = (function e(t, n, r) {
                     (s.prototype._onInlineSetup = function (e, t, n, r) {
                         var a, c;
                         if ((e && t ? ('CCA' !== t.paymentType ? (c = !0) : 'suppress' !== t.data.mode && 'static' !== t.data.mode && (c = !0)) : (c = !0), c)) return void r(new i(o.THREEDS_INLINE_IFRAME_DETAILS_INCORRECT));
-                        ((a = document.createElement('div')).innerHTML = e),
+                        (((a = document.createElement('div')).innerHTML = e),
                             'suppress' === t.data.mode
                                 ? ((a.style.display = 'none'), document.body.appendChild(a), n())
                                 : 'static' === t.data.mode &&
                                   this._emit(s.events.AUTHENTICATION_IFRAME_AVAILABLE, { element: a }, function () {
                                       n();
-                                  });
+                                  }));
                     }),
-                    (t.exports = s);
+                    (t.exports = s));
             },
             {
                 '../../../lib/braintree-error': 143,
@@ -9761,10 +9761,10 @@ e.exports = (function e(t, n, r) {
                 function o(e) {
                     r.call(this, e);
                 }
-                (o.prototype = Object.create(r.prototype, { constructor: o })),
+                ((o.prototype = Object.create(r.prototype, { constructor: o })),
                     (o.prototype.setUpEventListeners = function () {}),
                     (o.prototype.transformV1CustomerBillingAddress = function (e) {
-                        return (e.billingAddress.line1 = e.billingAddress.streetAddress), (e.billingAddress.line2 = e.billingAddress.extendedAddress), (e.billingAddress.city = e.billingAddress.locality), (e.billingAddress.state = e.billingAddress.region), (e.billingAddress.countryCode = e.billingAddress.countryCodeAlpha2), delete e.billingAddress.streetAddress, delete e.billingAddress.extendedAddress, delete e.billingAddress.locality, delete e.billingAddress.region, delete e.billingAddress.countryCodeAlpha2, e;
+                        return ((e.billingAddress.line1 = e.billingAddress.streetAddress), (e.billingAddress.line2 = e.billingAddress.extendedAddress), (e.billingAddress.city = e.billingAddress.locality), (e.billingAddress.state = e.billingAddress.region), (e.billingAddress.countryCode = e.billingAddress.countryCodeAlpha2), delete e.billingAddress.streetAddress, delete e.billingAddress.extendedAddress, delete e.billingAddress.locality, delete e.billingAddress.region, delete e.billingAddress.countryCodeAlpha2, e);
                     }),
                     (o.prototype._createIframe = function (e) {
                         var t = this;
@@ -9781,26 +9781,26 @@ e.exports = (function e(t, n, r) {
                         );
                     }),
                     (o.prototype._handleAuthResponse = function (e, t) {
-                        this._v1Bus.teardown(),
+                        (this._v1Bus.teardown(),
                             t.removeFrame(),
                             i(
                                 function () {
                                     this._handleV1AuthResponse(e);
                                 }.bind(this)
-                            )();
+                            )());
                     }),
                     (o.prototype._checkForFrameworkSpecificVerifyCardErrors = function (e) {
                         var t;
-                        return 'function' != typeof e.addFrame ? (t = 'an addFrame function') : 'function' != typeof e.removeFrame && (t = 'a removeFrame function'), t;
+                        return ('function' != typeof e.addFrame ? (t = 'an addFrame function') : 'function' != typeof e.removeFrame && (t = 'a removeFrame function'), t);
                     }),
                     (o.prototype._formatVerifyCardOptions = function (e) {
                         var t = r.prototype._formatVerifyCardOptions.call(this, e);
-                        return (t.addFrame = i(e.addFrame)), (t.removeFrame = i(e.removeFrame)), (t.showLoader = !1 !== e.showLoader), t;
+                        return ((t.addFrame = i(e.addFrame)), (t.removeFrame = i(e.removeFrame)), (t.showLoader = !1 !== e.showLoader), t);
                     }),
                     (o.prototype._formatLookupData = function (e) {
                         var t = this;
                         return r.prototype._formatLookupData.call(this, e).then(function (n) {
-                            return e.customer && e.customer.billingAddress && (n.customer = t.transformV1CustomerBillingAddress(e.customer)), n;
+                            return (e.customer && e.customer.billingAddress && (n.customer = t.transformV1CustomerBillingAddress(e.customer)), n);
                         });
                     }),
                     (o.prototype._presentChallenge = function (e, t) {
@@ -9814,7 +9814,7 @@ e.exports = (function e(t, n, r) {
                             })
                         );
                     }),
-                    (t.exports = o);
+                    (t.exports = o));
             },
             {
                 '../../../lib/deferred': 151,
@@ -9840,7 +9840,7 @@ e.exports = (function e(t, n, r) {
                     f = ['ui.close', 'ui.render', 'ui.renderHidden', 'ui.loading.close', 'ui.loading.render'],
                     y = ['low_value', 'transaction_risk_analysis'];
                 function A(e) {
-                    r.call(this, e),
+                    (r.call(this, e),
                         (this._songbirdInitFailed = !1),
                         (this._clientMetadata = {
                             requestedThreeDSecureVersion: '2',
@@ -9849,16 +9849,16 @@ e.exports = (function e(t, n, r) {
                         (this.originalSetupOptions = e),
                         (this._getDfReferenceIdPromisePlus = new _()),
                         this.setupSongbird(e),
-                        (this._cardinalEvents = []);
+                        (this._cardinalEvents = []));
                 }
                 function T(e, t, n) {
-                    (t[n + 'Line1'] = e.streetAddress), (t[n + 'Line2'] = e.extendedAddress), (t[n + 'Line3'] = e.line3), (t[n + 'City'] = e.locality), (t[n + 'State'] = e.region), (t[n + 'PostalCode'] = e.postalCode), (t[n + 'CountryCode'] = e.countryCodeAlpha2);
+                    ((t[n + 'Line1'] = e.streetAddress), (t[n + 'Line2'] = e.extendedAddress), (t[n + 'Line3'] = e.line3), (t[n + 'City'] = e.locality), (t[n + 'State'] = e.region), (t[n + 'PostalCode'] = e.postalCode), (t[n + 'CountryCode'] = e.countryCodeAlpha2));
                 }
-                (_.suppressUnhandledPromiseMessage = !0),
+                ((_.suppressUnhandledPromiseMessage = !0),
                     (A.prototype = Object.create(r.prototype, { constructor: A })),
                     (A.events = u(['LOOKUP_COMPLETE', 'CUSTOMER_CANCELED', 'UI.CLOSE', 'UI.RENDER', 'UI.RENDERHIDDEN', 'UI.LOADING.CLOSE', 'UI.LOADING.RENDER'], 'songbird-framework:')),
                     (A.prototype.setUpEventListeners = function (e) {
-                        this.on(A.events.LOOKUP_COMPLETE, function (t, n) {
+                        (this.on(A.events.LOOKUP_COMPLETE, function (t, n) {
                             e('lookup-complete', t, n);
                         }),
                             this.on(A.events.CUSTOMER_CANCELED, function () {
@@ -9878,7 +9878,7 @@ e.exports = (function e(t, n, r) {
                             }),
                             this.on(A.events['UI.LOADING.RENDER'], function () {
                                 e('authentication-modal-loader-render');
-                            });
+                            }));
                     }),
                     (A.prototype.prepareLookup = function (e) {
                         var t = i({}, e),
@@ -9895,7 +9895,7 @@ e.exports = (function e(t, n, r) {
                                 return n._waitForClient();
                             })
                             .then(function () {
-                                return (t.clientMetadata = n._clientMetadata), (t.authorizationFingerprint = n._client.getConfiguration().authorizationFingerprint), (t.braintreeLibraryVersion = 'braintree/web/' + m), t;
+                                return ((t.clientMetadata = n._clientMetadata), (t.authorizationFingerprint = n._client.getConfiguration().authorizationFingerprint), (t.braintreeLibraryVersion = 'braintree/web/' + m), t);
                             });
                     }),
                     (A.prototype.initializeChallengeWithLookupResponse = function (e, t) {
@@ -9906,25 +9906,25 @@ e.exports = (function e(t, n, r) {
                         );
                     }),
                     (A.prototype.handleSongbirdError = function (e) {
-                        (this._songbirdInitFailed = !0), this._removeSongbirdListeners(), c.sendEvent(this._createPromise, 'three-d-secure.cardinal-sdk.songbird-error.' + e), this._songbirdPromise && this._songbirdPromise.resolve();
+                        ((this._songbirdInitFailed = !0), this._removeSongbirdListeners(), c.sendEvent(this._createPromise, 'three-d-secure.cardinal-sdk.songbird-error.' + e), this._songbirdPromise && this._songbirdPromise.resolve());
                     }),
                     (A.prototype._triggerCardinalBinProcess = function (e) {
                         var t = this,
                             n = Date.now();
                         return window.Cardinal.trigger('bin.process', e).then(function (e) {
-                            (t._clientMetadata.issuerDeviceDataCollectionTimeElapsed = Date.now() - n), (t._clientMetadata.issuerDeviceDataCollectionResult = e && e.Status);
+                            ((t._clientMetadata.issuerDeviceDataCollectionTimeElapsed = Date.now() - n), (t._clientMetadata.issuerDeviceDataCollectionResult = e && e.Status));
                         });
                     }),
                     (A.prototype.transformBillingAddress = function (e, t) {
-                        return t && (T(t, e, 'billing'), (e.billingPhoneNumber = t.phoneNumber), (e.billingGivenName = t.givenName), (e.billingSurname = t.surname)), e;
+                        return (t && (T(t, e, 'billing'), (e.billingPhoneNumber = t.phoneNumber), (e.billingGivenName = t.givenName), (e.billingSurname = t.surname)), e);
                     }),
                     (A.prototype.transformShippingAddress = function (e) {
                         var t = e.shippingAddress;
-                        return t && (T(t, e, 'shipping'), delete e.shippingAddress), e;
+                        return (t && (T(t, e, 'shipping'), delete e.shippingAddress), e);
                     }),
                     (A.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement('div');
-                        return (t.innerHTML = '<div data-braintree-v1-fallback-iframe-container="true" style="height: 400px;"></div>'), t.querySelector('[data-braintree-v1-fallback-iframe-container="true"]').appendChild(e), t;
+                        return ((t.innerHTML = '<div data-braintree-v1-fallback-iframe-container="true" style="height: 400px;"></div>'), t.querySelector('[data-braintree-v1-fallback-iframe-container="true"]').appendChild(e), t);
                     }),
                     (A.prototype._createV1IframeModal = function (e) {
                         var t = this._createV1IframeModalElement(e),
@@ -9932,7 +9932,7 @@ e.exports = (function e(t, n, r) {
                             r = t.querySelector('[data-braintree-v1-fallback-backdrop]'),
                             i = this;
                         function o() {
-                            t.parentNode.removeChild(t), i.cancelVerifyCard(l.THREEDS_CARDINAL_SDK_CANCELED), document.removeEventListener('keyup', i._onV1Keyup), (i._onV1Keyup = null);
+                            (t.parentNode.removeChild(t), i.cancelVerifyCard(l.THREEDS_CARDINAL_SDK_CANCELED), document.removeEventListener('keyup', i._onV1Keyup), (i._onV1Keyup = null));
                         }
                         return (
                             (this._onV1Keyup = function (e) {
@@ -9971,7 +9971,7 @@ e.exports = (function e(t, n, r) {
                                             code: l.THREEDS_CARDINAL_SDK_SETUP_FAILED.code,
                                             message: l.THREEDS_CARDINAL_SDK_SETUP_FAILED.message
                                         });
-                                        t._getDfReferenceIdPromisePlus.reject(n), window.clearTimeout(t._songbirdSetupTimeoutReference), c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-failed'), t.handleSongbirdError('cardinal-sdk-setup-failed.' + t._v2SetupFailureReason);
+                                        (t._getDfReferenceIdPromisePlus.reject(n), window.clearTimeout(t._songbirdSetupTimeoutReference), c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-failed'), t.handleSongbirdError('cardinal-sdk-setup-failed.' + t._v2SetupFailureReason));
                                     })),
                             this._songbirdPromise
                         );
@@ -9987,7 +9987,7 @@ e.exports = (function e(t, n, r) {
                                     i = e.setupOptions,
                                     o = e.setupStartTime,
                                     a = t._createCardinalConfigurationOptions(i);
-                                f.forEach(function (e) {
+                                (f.forEach(function (e) {
                                     t.setCardinalListener(e, function () {
                                         t._emit(A.events[e.toUpperCase()]);
                                     });
@@ -9997,20 +9997,20 @@ e.exports = (function e(t, n, r) {
                                     window.Cardinal.configure(a),
                                     window.Cardinal.setup('init', { jwt: r }),
                                     (t._clientMetadata.cardinalDeviceDataCollectionTimeElapsed = Date.now() - o),
-                                    t.setCardinalListener('payments.validated', t._createPaymentsValidatedCallback());
+                                    t.setCardinalListener('payments.validated', t._createPaymentsValidatedCallback()));
                             })
                             .catch(function (e) {
-                                return (t._v2SetupFailureReason = 'cardinal-configuration-threw-error'), Promise.reject(e);
+                                return ((t._v2SetupFailureReason = 'cardinal-configuration-threw-error'), Promise.reject(e));
                             });
                     }),
                     (A.prototype.setCardinalListener = function (e, t) {
-                        this._cardinalEvents.push(e), window.Cardinal.on(e, t);
+                        (this._cardinalEvents.push(e), window.Cardinal.on(e, t));
                     }),
                     (A.prototype._setupFrameworkSpecificListeners = function () {}),
                     (A.prototype._createCardinalConfigurationOptions = function (e) {
                         var t = e.cardinalSDKConfig || {},
                             n = t.payment || {};
-                        return !t.logging && e.loggingEnabled && (t.logging = { level: 'verbose' }), (t.payment = {}), n.hasOwnProperty('displayLoading') && (t.payment.displayLoading = n.displayLoading), n.hasOwnProperty('displayExitButton') && (t.payment.displayExitButton = n.displayExitButton), t;
+                        return (!t.logging && e.loggingEnabled && (t.logging = { level: 'verbose' }), (t.payment = {}), n.hasOwnProperty('displayLoading') && (t.payment.displayLoading = n.displayLoading), n.hasOwnProperty('displayExitButton') && (t.payment.displayExitButton = n.displayExitButton), t);
                     }),
                     (A.prototype._loadCardinalScript = function (e) {
                         var t = this;
@@ -10019,13 +10019,13 @@ e.exports = (function e(t, n, r) {
                                 var n = t._getCardinalScriptSource();
                                 return (
                                     (t._songbirdSetupTimeoutReference = window.setTimeout(function () {
-                                        c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-timeout'), t.handleSongbirdError('cardinal-sdk-setup-timeout');
+                                        (c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-timeout'), t.handleSongbirdError('cardinal-sdk-setup-timeout'));
                                     }, e.timeout || E)),
                                     d.loadScript({ src: n })
                                 );
                             })
                             .catch(function (e) {
-                                return (t._v2SetupFailureReason = 'songbird-js-failed-to-load'), Promise.reject(s(e, l.THREEDS_CARDINAL_SDK_SCRIPT_LOAD_FAILED));
+                                return ((t._v2SetupFailureReason = 'songbird-js-failed-to-load'), Promise.reject(s(e, l.THREEDS_CARDINAL_SDK_SCRIPT_LOAD_FAILED)));
                             });
                     }),
                     (A.prototype._getCardinalScriptSource = function () {
@@ -10035,7 +10035,7 @@ e.exports = (function e(t, n, r) {
                     (A.prototype._createPaymentsSetupCompleteCallback = function () {
                         var e = this;
                         return function (t) {
-                            e._getDfReferenceIdPromisePlus.resolve(t.sessionId), window.clearTimeout(e._songbirdSetupTimeoutReference), c.sendEvent(e._createPromise, 'three-d-secure.cardinal-sdk.init.setup-completed'), e._songbirdPromise.resolve();
+                            (e._getDfReferenceIdPromisePlus.resolve(t.sessionId), window.clearTimeout(e._songbirdSetupTimeoutReference), c.sendEvent(e._createPromise, 'three-d-secure.cardinal-sdk.init.setup-completed'), e._songbirdPromise.resolve());
                         };
                     }),
                     (A.prototype.getDfReferenceId = function () {
@@ -10063,7 +10063,7 @@ e.exports = (function e(t, n, r) {
                                 .then(function (t) {
                                     var r = t.paymentMethod || n._lookupPaymentMethod,
                                         i = n._formatAuthResponse(r, t.threeDSecureInfo);
-                                    return (i.rawCardinalSDKVerificationData = e), c.sendEvent(n._client, 'three-d-secure.verification-flow.upgrade-payment-method.succeeded'), Promise.resolve(i);
+                                    return ((i.rawCardinalSDKVerificationData = e), c.sendEvent(n._client, 'three-d-secure.verification-flow.upgrade-payment-method.succeeded'), Promise.resolve(i));
                                 })
                                 .catch(function (e) {
                                     var t = new a({
@@ -10072,7 +10072,7 @@ e.exports = (function e(t, n, r) {
                                         message: l.THREEDS_JWT_AUTHENTICATION_FAILED.message,
                                         details: { originalError: e }
                                     });
-                                    return c.sendEvent(n._client, 'three-d-secure.verification-flow.upgrade-payment-method.errored'), Promise.reject(t);
+                                    return (c.sendEvent(n._client, 'three-d-secure.verification-flow.upgrade-payment-method.errored'), Promise.reject(t));
                                 })
                         );
                     }),
@@ -10113,18 +10113,18 @@ e.exports = (function e(t, n, r) {
                                             r = new a(l.THREEDS_CARDINAL_SDK_BAD_JWT);
                                             break;
                                         case 10011:
-                                            c.sendEvent(e._createPromise, 'three-d-secure.verification-flow.canceled'), (r = new a(l.THREEDS_CARDINAL_SDK_CANCELED));
+                                            (c.sendEvent(e._createPromise, 'three-d-secure.verification-flow.canceled'), (r = new a(l.THREEDS_CARDINAL_SDK_CANCELED)));
                                             break;
                                         default:
                                             r = new a(l.THREEDS_CARDINAL_SDK_ERROR);
                                     }
-                                    (r.details = {
+                                    ((r.details = {
                                         originalError: {
                                             code: t.ErrorNumber,
                                             description: t.ErrorDescription
                                         }
                                     }),
-                                        e._verifyCardPromisePlus.reject(r);
+                                        e._verifyCardPromisePlus.reject(r));
                             }
                         };
                     }),
@@ -10139,12 +10139,12 @@ e.exports = (function e(t, n, r) {
                     }),
                     (A.prototype._checkForFrameworkSpecificVerifyCardErrors = function (e, t) {
                         var n;
-                        return 'function' == typeof e.onLookupComplete || t.ignoreOnLookupCompleteRequirement || (n = 'an onLookupComplete function'), n;
+                        return ('function' == typeof e.onLookupComplete || t.ignoreOnLookupCompleteRequirement || (n = 'an onLookupComplete function'), n);
                     }),
                     (A.prototype._formatVerifyCardOptions = function (e) {
                         var t = r.prototype._formatVerifyCardOptions.call(this, e),
                             n = t.additionalInformation || {};
-                        return (n = this.transformBillingAddress(n, e.billingAddress)), (n = this.transformShippingAddress(n)), e.onLookupComplete && (t.onLookupComplete = o(e.onLookupComplete)), e.email && (n.email = e.email), e.mobilePhoneNumber && (n.mobilePhoneNumber = e.mobilePhoneNumber), (t.additionalInformation = n), t;
+                        return ((n = this.transformBillingAddress(n, e.billingAddress)), (n = this.transformShippingAddress(n)), e.onLookupComplete && (t.onLookupComplete = o(e.onLookupComplete)), e.email && (n.email = e.email), e.mobilePhoneNumber && (n.mobilePhoneNumber = e.mobilePhoneNumber), (t.additionalInformation = n), t);
                     }),
                     (A.prototype._onLookupComplete = function (e, t) {
                         var n = this;
@@ -10153,7 +10153,7 @@ e.exports = (function e(t, n, r) {
                                 function o() {
                                     r(e);
                                 }
-                                (e.requiresUserAuthentication = !!(e.lookup && e.lookup.acsUrl)), n._verifyCardPromisePlus.catch(i), t.onLookupComplete ? t.onLookupComplete(e, o) : n._emit(A.events.LOOKUP_COMPLETE, e, o);
+                                ((e.requiresUserAuthentication = !!(e.lookup && e.lookup.acsUrl)), n._verifyCardPromisePlus.catch(i), t.onLookupComplete ? t.onLookupComplete(e, o) : n._emit(A.events.LOOKUP_COMPLETE, e, o));
                             });
                         });
                     }),
@@ -10181,23 +10181,23 @@ e.exports = (function e(t, n, r) {
                                     });
                                 n.requestedExemptionType = e.requestedExemptionType;
                             }
-                            return e.customFields && (n.customFields = e.customFields), e.dataOnlyRequested && (n.dataOnlyRequested = e.dataOnlyRequested), e.exemptionRequested && (n.exemptionRequested = e.exemptionRequested), e.requestVisaDAF && (n.requestVisaDAF = e.requestVisaDAF), e.bin && (n.bin = e.bin), null != e.cardAdd && (n.cardAdd = e.cardAdd), null != e.cardAddChallengeRequested && (n.cardAdd = e.cardAddChallengeRequested), e.merchantName && (n.merchantName = e.merchantName), t.prepareLookup(n);
+                            return (e.customFields && (n.customFields = e.customFields), e.dataOnlyRequested && (n.dataOnlyRequested = e.dataOnlyRequested), e.exemptionRequested && (n.exemptionRequested = e.exemptionRequested), e.requestVisaDAF && (n.requestVisaDAF = e.requestVisaDAF), e.bin && (n.bin = e.bin), null != e.cardAdd && (n.cardAdd = e.cardAdd), null != e.cardAddChallengeRequested && (n.cardAdd = e.cardAddChallengeRequested), e.merchantName && (n.merchantName = e.merchantName), t.prepareLookup(n));
                         });
                     }),
                     (A.prototype.cancelVerifyCard = function (e) {
                         var t = this;
                         return r.prototype.cancelVerifyCard.call(this).then(function (n) {
-                            return t._verifyCardPromisePlus && ((e = e || new a(l.THREEDS_VERIFY_CARD_CANCELED_BY_MERCHANT)), t._verifyCardPromisePlus.reject(e)), n;
+                            return (t._verifyCardPromisePlus && ((e = e || new a(l.THREEDS_VERIFY_CARD_CANCELED_BY_MERCHANT)), t._verifyCardPromisePlus.reject(e)), n);
                         });
                     }),
                     (A.prototype._removeSongbirdListeners = function () {
-                        this._cardinalEvents.forEach(function (e) {
+                        (this._cardinalEvents.forEach(function (e) {
                             window.Cardinal.off(e);
                         }),
-                            (this._cardinalEvents = []);
+                            (this._cardinalEvents = []));
                     }),
                     (A.prototype.teardown = function () {
-                        return window.Cardinal && this._removeSongbirdListeners(), r.prototype.teardown.call(this);
+                        return (window.Cardinal && this._removeSongbirdListeners(), r.prototype.teardown.call(this));
                     }),
                     (A.prototype._reloadThreeDSecure = function () {
                         var e = this,
@@ -10209,7 +10209,7 @@ e.exports = (function e(t, n, r) {
                             });
                         });
                     }),
-                    (t.exports = A);
+                    (t.exports = A));
             },
             {
                 '../../../lib/analytics': 138,
@@ -10236,19 +10236,19 @@ e.exports = (function e(t, n, r) {
                 function c(e) {
                     var t = this,
                         n = s[e.framework];
-                    a.call(this),
+                    (a.call(this),
                         (this._framework = new n(e)),
                         this._framework.setUpEventListeners(function () {
                             t._emit.apply(t, arguments);
-                        });
+                        }));
                 }
-                a.createChild(c),
+                (a.createChild(c),
                     (c.prototype.verifyCard = function (e) {
                         var t;
-                        return this.hasListener('lookup-complete') && (t = { ignoreOnLookupCompleteRequirement: !0 }), this._framework.verifyCard(e, t);
+                        return (this.hasListener('lookup-complete') && (t = { ignoreOnLookupCompleteRequirement: !0 }), this._framework.verifyCard(e, t));
                     }),
                     (c.prototype.initializeChallengeWithLookupResponse = function (e) {
-                        return 'string' == typeof e && (e = JSON.parse(e)), this._framework.initializeChallengeWithLookupResponse(e);
+                        return ('string' == typeof e && (e = JSON.parse(e)), this._framework.initializeChallengeWithLookupResponse(e));
                     }),
                     (c.prototype.prepareLookup = function (e) {
                         return this._framework.prepareLookup(e).then(function (e) {
@@ -10259,9 +10259,9 @@ e.exports = (function e(t, n, r) {
                         return this._framework.cancelVerifyCard();
                     }),
                     (c.prototype.teardown = function () {
-                        return o(this, i(c.prototype).concat(i(a.prototype))), this._framework.teardown();
+                        return (o(this, i(c.prototype).concat(i(a.prototype))), this._framework.teardown());
                     }),
-                    (t.exports = r.wrapPrototype(c));
+                    (t.exports = r.wrapPrototype(c)));
             },
             {
                 '../../lib/convert-methods-to-error': 146,
@@ -10656,7 +10656,7 @@ e.exports = (function e(t, n, r) {
                 function f(e) {
                     this._options = e;
                 }
-                (f.prototype.fetchCapabilities = function (e) {
+                ((f.prototype.fetchCapabilities = function (e) {
                     var t = this,
                         n = this._options.client,
                         o = e.card ? e.card.number : null,
@@ -10674,7 +10674,7 @@ e.exports = (function e(t, n, r) {
                                     }
                                 })
                                 .then(function (e) {
-                                    return r.sendEvent(n, 'unionpay.capabilities-received'), e;
+                                    return (r.sendEvent(n, 'unionpay.capabilities-received'), e);
                                 })
                                 .catch(function (e) {
                                     var t = e.details && e.details.httpStatus;
@@ -10745,7 +10745,7 @@ e.exports = (function e(t, n, r) {
                                 t.unionPayEnrollment.expirationDate = a.expirationDate;
                             else if (a.expirationMonth || a.expirationYear)
                                 if (!a.expirationMonth || !a.expirationYear) return Promise.reject(new i(l.UNIONPAY_EXPIRATION_DATE_INCOMPLETE));
-                                else (t.unionPayEnrollment.expirationYear = a.expirationYear), (t.unionPayEnrollment.expirationMonth = a.expirationMonth);
+                                else ((t.unionPayEnrollment.expirationYear = a.expirationYear), (t.unionPayEnrollment.expirationMonth = a.expirationMonth));
                             return o
                                 .request({
                                     method: 'post',
@@ -10764,7 +10764,7 @@ e.exports = (function e(t, n, r) {
                                 .catch(function (e) {
                                     var t,
                                         n = e.details && e.details.httpStatus;
-                                    return 403 === n ? (t = e) : n < 500 ? ((t = new i(l.UNIONPAY_ENROLLMENT_CUSTOMER_INPUT_INVALID)).details = { originalError: e }) : ((t = new i(l.UNIONPAY_ENROLLMENT_NETWORK_ERROR)).details = { originalError: e }), r.sendEvent(o, 'unionpay.enrollment-failed'), Promise.reject(t);
+                                    return (403 === n ? (t = e) : n < 500 ? ((t = new i(l.UNIONPAY_ENROLLMENT_CUSTOMER_INPUT_INVALID)).details = { originalError: e }) : ((t = new i(l.UNIONPAY_ENROLLMENT_NETWORK_ERROR)).details = { originalError: e }), r.sendEvent(o, 'unionpay.enrollment-failed'), Promise.reject(t));
                                 });
                         }
                         return Promise.reject(new i(l.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED));
@@ -10796,12 +10796,12 @@ e.exports = (function e(t, n, r) {
                                     })
                                     .then(function (e) {
                                         var t = e.creditCards[0];
-                                        return delete t.consumed, delete t.threeDSecureInfo, r.sendEvent(o, 'unionpay.nonce-received'), t;
+                                        return (delete t.consumed, delete t.threeDSecureInfo, r.sendEvent(o, 'unionpay.nonce-received'), t);
                                     })
                                     .catch(function (e) {
                                         var t,
                                             n = e.details && e.details.httpStatus;
-                                        return r.sendEvent(o, 'unionpay.nonce-failed'), 403 === n ? (t = e) : n < 500 ? ((t = new i(l.UNIONPAY_FAILED_TOKENIZATION)).details = { originalError: e }) : ((t = new i(l.UNIONPAY_TOKENIZATION_NETWORK_ERROR)).details = { originalError: e }), Promise.reject(t);
+                                        return (r.sendEvent(o, 'unionpay.nonce-failed'), 403 === n ? (t = e) : n < 500 ? ((t = new i(l.UNIONPAY_FAILED_TOKENIZATION)).details = { originalError: e }) : ((t = new i(l.UNIONPAY_TOKENIZATION_NETWORK_ERROR)).details = { originalError: e }), Promise.reject(t));
                                     }))
                               : s
                                 ? s._bus
@@ -10817,7 +10817,7 @@ e.exports = (function e(t, n, r) {
                                 : Promise.reject(new i(l.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED));
                     }),
                     (f.prototype.teardown = function () {
-                        return this._bus && (this._hostedFieldsFrame.parentNode.removeChild(this._hostedFieldsFrame), this._bus.teardown()), d(this, _(f.prototype)), Promise.resolve();
+                        return (this._bus && (this._hostedFieldsFrame.parentNode.removeChild(this._hostedFieldsFrame), this._bus.teardown()), d(this, _(f.prototype)), Promise.resolve());
                     }),
                     (f.prototype._initializeHostedFields = function () {
                         var e,
@@ -10827,7 +10827,7 @@ e.exports = (function e(t, n, r) {
                         return (
                             this._hostedFieldsInitializePromise ||
                                 (this._hostedFieldsInitializePromise = new Promise(function (i) {
-                                    (e = r._options.client.getConfiguration().gatewayConfiguration.assetsUrl),
+                                    ((e = r._options.client.getConfiguration().gatewayConfiguration.assetsUrl),
                                         (t = r._options.client.getConfiguration().isDebug),
                                         (r._bus = new o({
                                             channel: n,
@@ -10840,14 +10840,14 @@ e.exports = (function e(t, n, r) {
                                             width: 0
                                         })),
                                         r._bus.on(m, function (e) {
-                                            e(r._options.client), i();
+                                            (e(r._options.client), i());
                                         }),
-                                        document.body.appendChild(r._hostedFieldsFrame);
+                                        document.body.appendChild(r._hostedFieldsFrame));
                                 })),
                             this._hostedFieldsInitializePromise
                         );
                     }),
-                    (t.exports = h.wrapPrototype(f));
+                    (t.exports = h.wrapPrototype(f)));
             },
             {
                 '../../lib/analytics': 138,
@@ -10979,12 +10979,12 @@ e.exports = (function e(t, n, r) {
                     p = T('UsBankAccount'),
                     _ = T('UsBankLogin');
                 function E(e) {
-                    (this._client = e.client), (this._isTokenizingBankLogin = !1), s.sendEvent(this._client, 'usbankaccount.initialized');
+                    ((this._client = e.client), (this._isTokenizingBankLogin = !1), s.sendEvent(this._client, 'usbankaccount.initialized'));
                 }
                 function h(e) {
                     var t,
                         n = e.details && e.details.httpStatus;
-                    return ((t = new r(401 === n ? a.BRAINTREE_API_ACCESS_RESTRICTED : n < 500 ? o.US_BANK_ACCOUNT_FAILED_TOKENIZATION : o.US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR)).details = { originalError: e }), t;
+                    return (((t = new r(401 === n ? a.BRAINTREE_API_ACCESS_RESTRICTED : n < 500 ? o.US_BANK_ACCOUNT_FAILED_TOKENIZATION : o.US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR)).details = { originalError: e }), t);
                 }
                 function m(e, t) {
                     var n = e.data[t].paymentMethod,
@@ -11002,9 +11002,9 @@ e.exports = (function e(t, n, r) {
                         (r && 'loaded' !== r && 'complete' !== r) || (e.removeEventListener('error', i), e.removeEventListener('load', n), e.removeEventListener('readystatechange', n), t(null, window.Plaid));
                     }
                     function i() {
-                        e.parentNode.removeChild(e), t(new r(o.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED));
+                        (e.parentNode.removeChild(e), t(new r(o.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED)));
                     }
-                    e.addEventListener('error', i), e.addEventListener('load', n), e.addEventListener('readystatechange', n);
+                    (e.addEventListener('error', i), e.addEventListener('load', n), e.addEventListener('readystatechange', n));
                 }
                 function y(e) {
                     return {
@@ -11026,7 +11026,7 @@ e.exports = (function e(t, n, r) {
                 function T(e) {
                     return 'mutation Tokenize' + e + '($input: Tokenize' + e + 'Input!) {  tokenize' + e + '(input: $input) {    paymentMethod {      id      details {        ... on UsBankAccountDetails {          last4        }      }    }  }}';
                 }
-                (E.prototype.tokenize = function (e) {
+                ((E.prototype.tokenize = function (e) {
                     return (e = e || {}).mandateText
                         ? e.bankDetails && e.bankLogin
                             ? Promise.reject(
@@ -11076,11 +11076,11 @@ e.exports = (function e(t, n, r) {
                                     }
                                 })
                                 .then(function (e) {
-                                    return s.sendEvent(t, 'usbankaccount.bankdetails.tokenization.succeeded'), Promise.resolve(m(e, 'tokenizeUsBankAccount'));
+                                    return (s.sendEvent(t, 'usbankaccount.bankdetails.tokenization.succeeded'), Promise.resolve(m(e, 'tokenizeUsBankAccount')));
                                 })
                                 .catch(function (e) {
                                     var n = h(e);
-                                    return s.sendEvent(t, 'usbankaccount.bankdetails.tokenization.failed'), Promise.reject(n);
+                                    return (s.sendEvent(t, 'usbankaccount.bankdetails.tokenization.failed'), Promise.reject(n));
                                 })
                         );
                     }),
@@ -11098,7 +11098,7 @@ e.exports = (function e(t, n, r) {
                                       new Promise(function (i, d) {
                                           t._loadPlaid(function (l, u) {
                                               if (l) return void d(l);
-                                              u
+                                              (u
                                                   .create({
                                                       clientName: e.bankLogin.displayName,
                                                       apiVersion: 'v2',
@@ -11107,7 +11107,7 @@ e.exports = (function e(t, n, r) {
                                                       product: 'auth',
                                                       selectAccount: !0,
                                                       onExit: function () {
-                                                          (t._isTokenizingBankLogin = !1), s.sendEvent(n, 'usbankaccount.banklogin.tokenization.closed.by-user'), d(new r(o.US_BANK_ACCOUNT_LOGIN_CLOSED));
+                                                          ((t._isTokenizingBankLogin = !1), s.sendEvent(n, 'usbankaccount.banklogin.tokenization.closed.by-user'), d(new r(o.US_BANK_ACCOUNT_LOGIN_CLOSED)));
                                                       },
                                                       onSuccess: function (r, o) {
                                                           var c = e.bankLogin,
@@ -11118,7 +11118,7 @@ e.exports = (function e(t, n, r) {
                                                                   achMandate: e.mandateText,
                                                                   billingAddress: y(c.billingAddress || {})
                                                               };
-                                                          A(l, c),
+                                                          (A(l, c),
                                                               n
                                                                   .request({
                                                                       api: 'graphQLApi',
@@ -11128,16 +11128,16 @@ e.exports = (function e(t, n, r) {
                                                                       }
                                                                   })
                                                                   .then(function (e) {
-                                                                      (t._isTokenizingBankLogin = !1), s.sendEvent(n, 'usbankaccount.banklogin.tokenization.succeeded'), i(m(e, 'tokenizeUsBankLogin'));
+                                                                      ((t._isTokenizingBankLogin = !1), s.sendEvent(n, 'usbankaccount.banklogin.tokenization.succeeded'), i(m(e, 'tokenizeUsBankLogin')));
                                                                   })
                                                                   .catch(function (e) {
                                                                       var r;
-                                                                      (t._isTokenizingBankLogin = !1), (r = h(e)), s.sendEvent(n, 'usbankaccount.banklogin.tokenization.failed'), d(r);
-                                                                  });
+                                                                      ((t._isTokenizingBankLogin = !1), (r = h(e)), s.sendEvent(n, 'usbankaccount.banklogin.tokenization.failed'), d(r));
+                                                                  }));
                                                       }
                                                   })
                                                   .open(),
-                                                  s.sendEvent(n, 'usbankaccount.banklogin.tokenization.started');
+                                                  s.sendEvent(n, 'usbankaccount.banklogin.tokenization.started'));
                                           });
                                       }))
                                 : Promise.reject(new r(o.US_BANK_ACCOUNT_BANK_LOGIN_NOT_ENABLED))
@@ -11155,9 +11155,9 @@ e.exports = (function e(t, n, r) {
                         (t = document.querySelector('script[src="' + i.PLAID_LINK_JS + '"]')) ? f(t, e) : (((n = document.createElement('script')).src = i.PLAID_LINK_JS), (n.async = !0), f(n, e), document.body.appendChild(n), (this._plaidScript = n));
                     }),
                     (E.prototype.teardown = function () {
-                        return this._plaidScript && document.body.removeChild(this._plaidScript), d(this, l(E.prototype)), Promise.resolve();
+                        return (this._plaidScript && document.body.removeChild(this._plaidScript), d(this, l(E.prototype)), Promise.resolve());
                     }),
-                    (t.exports = u.wrapPrototype(E));
+                    (t.exports = u.wrapPrototype(E)));
             },
             {
                 '../lib/analytics': 138,
@@ -11249,9 +11249,9 @@ e.exports = (function e(t, n, r) {
                         hasSubscription: e.hasSubscription,
                         type: e.type
                     };
-                    return e.description && (t.description = e.description), e.binData && (t.binData = e.binData), t;
+                    return (e.description && (t.description = e.description), e.binData && (t.binData = e.binData), t);
                 }
-                (d.prototype.fetchPaymentMethods = function (e) {
+                ((d.prototype.fetchPaymentMethods = function (e) {
                     var t;
                     return (
                         (t = +(!0 === (e = e || {}).defaultFirst)),
@@ -11265,7 +11265,7 @@ e.exports = (function e(t, n, r) {
                             })
                             .then(
                                 function (e) {
-                                    return r.sendEvent(this._createPromise, 'vault-manager.fetch-payment-methods.succeeded'), e.paymentMethods.map(l);
+                                    return (r.sendEvent(this._createPromise, 'vault-manager.fetch-payment-methods.succeeded'), e.paymentMethods.map(l));
                                 }.bind(this)
                             )
                     );
@@ -11312,9 +11312,9 @@ e.exports = (function e(t, n, r) {
                         });
                     }),
                     (d.prototype.teardown = function () {
-                        return a(this, s(d.prototype)), Promise.resolve();
+                        return (a(this, s(d.prototype)), Promise.resolve());
                     }),
-                    (t.exports = c.wrapPrototype(d));
+                    (t.exports = c.wrapPrototype(d)));
             },
             {
                 '../lib/analytics': 138,
@@ -11341,7 +11341,7 @@ e.exports = (function e(t, n, r) {
         ],
         235: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY = n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY = n.UPDATE_PAYMENT_CONTEXT_QUERY = n.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY = n.CREATE_PAYMENT_CONTEXT_QUERY = n.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY = void 0), (n.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY = 'mutation CreateVenmoQRCodePaymentContext($input: CreateVenmoQRCodePaymentContextInput!) {\n  createVenmoQRCodePaymentContext(input: $input) {\n    clientMutationId\n    venmoQRCodePaymentContext {\n      id\n      merchantId\n      createdAt\n      expiresAt\n    }\n  }\n}'), (n.CREATE_PAYMENT_CONTEXT_QUERY = 'mutation CreateVenmoPaymentContext($input: CreateVenmoPaymentContextInput!) {\n  createVenmoPaymentContext(input: $input) {\n    clientMutationId\n    venmoPaymentContext {\n      id\n      merchantId\n      createdAt\n      expiresAt\n    }\n  }\n}'), (n.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY = 'mutation UpdateVenmoQRCodePaymentContext($input: UpdateVenmoQRCodePaymentContextInput!) {\n  updateVenmoQRCodePaymentContext(input: $input) {\n    clientMutationId\n  }\n}'), (n.UPDATE_PAYMENT_CONTEXT_QUERY = 'mutation UpdateVenmoPaymentContextStatus($input: UpdateVenmoPaymentContextStatusInput!) {\n  updateVenmoPaymentContextStatus(input: $input) {\n    clientMutationId\n  }\n}'), (n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY = 'query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoQRCodePaymentContext {\n      status\n      paymentMethodId\n      userName\n    }\n  }\n}'), (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY = 'query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoPaymentContext {\n      status\n      paymentMethodId\n      userName\n      payerInfo {\n        firstName\n        lastName\n        phoneNumber\n        email\n        externalId\n        userName\n        billingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n        shippingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n      }\n    }\n  }\n}');
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY = n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY = n.UPDATE_PAYMENT_CONTEXT_QUERY = n.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY = n.CREATE_PAYMENT_CONTEXT_QUERY = n.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY = void 0), (n.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY = 'mutation CreateVenmoQRCodePaymentContext($input: CreateVenmoQRCodePaymentContextInput!) {\n  createVenmoQRCodePaymentContext(input: $input) {\n    clientMutationId\n    venmoQRCodePaymentContext {\n      id\n      merchantId\n      createdAt\n      expiresAt\n    }\n  }\n}'), (n.CREATE_PAYMENT_CONTEXT_QUERY = 'mutation CreateVenmoPaymentContext($input: CreateVenmoPaymentContextInput!) {\n  createVenmoPaymentContext(input: $input) {\n    clientMutationId\n    venmoPaymentContext {\n      id\n      merchantId\n      createdAt\n      expiresAt\n    }\n  }\n}'), (n.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY = 'mutation UpdateVenmoQRCodePaymentContext($input: UpdateVenmoQRCodePaymentContextInput!) {\n  updateVenmoQRCodePaymentContext(input: $input) {\n    clientMutationId\n  }\n}'), (n.UPDATE_PAYMENT_CONTEXT_QUERY = 'mutation UpdateVenmoPaymentContextStatus($input: UpdateVenmoPaymentContextStatusInput!) {\n  updateVenmoPaymentContextStatus(input: $input) {\n    clientMutationId\n  }\n}'), (n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY = 'query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoQRCodePaymentContext {\n      status\n      paymentMethodId\n      userName\n    }\n  }\n}'), (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY = 'query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoPaymentContext {\n      status\n      paymentMethodId\n      userName\n      payerInfo {\n        firstName\n        lastName\n        phoneNumber\n        email\n        externalId\n        userName\n        billingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n        shippingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n      }\n    }\n  }\n}'));
             },
             {}
         ],
@@ -11370,9 +11370,9 @@ e.exports = (function e(t, n, r) {
                     d = e('./queries');
                 n.default = (function () {
                     function e(e) {
-                        (this.isHidden = !0), (this.env = e.environment), (this.id = s.default()), (this.profileId = e.profileId), (this.displayName = e.displayName), (this.paymentMethodUsage = e.paymentMethodUsage), (this.shouldUseLegacyQRCodeMutation = !this.paymentMethodUsage);
+                        ((this.isHidden = !0), (this.env = e.environment), (this.id = s.default()), (this.profileId = e.profileId), (this.displayName = e.displayName), (this.paymentMethodUsage = e.paymentMethodUsage), (this.shouldUseLegacyQRCodeMutation = !this.paymentMethodUsage));
                         var t = e.url + '#' + this.env + '_' + this.id;
-                        (this.bus = new o.default({
+                        ((this.bus = new o.default({
                             channel: this.id,
                             verifyDomain: e.verifyDomain,
                             targetFrames: []
@@ -11405,20 +11405,20 @@ e.exports = (function e(t, n, r) {
                                 },
                                 title: 'Venmo Desktop'
                             })),
-                            this.bus.addTargetFrame(this.iframe);
+                            this.bus.addTargetFrame(this.iframe));
                     }
                     return (
                         (e.prototype.initialize = function () {
                             var e = this;
                             return new this.Promise(function (t) {
-                                e.bus.on(c.VENMO_DESKTOP_IFRAME_READY, function () {
+                                (e.bus.on(c.VENMO_DESKTOP_IFRAME_READY, function () {
                                     t(e);
                                 }),
                                     e.bus.on(c.VENMO_DESKTOP_REQUEST_NEW_QR_CODE, function () {
-                                        e.sendEvent('venmo.tokenize.desktop.restarted-from-error-view'), e.startPolling();
+                                        (e.sendEvent('venmo.tokenize.desktop.restarted-from-error-view'), e.startPolling());
                                     }),
                                     document.body.appendChild(e.iframe),
-                                    document.body.appendChild(e.alertBox);
+                                    document.body.appendChild(e.alertBox));
                             });
                         }),
                         (e.prototype.launchDesktopFlow = function () {
@@ -11427,31 +11427,31 @@ e.exports = (function e(t, n, r) {
                             var t = new this.Promise(function (t, n) {
                                 e.launchDesktopPromiseRejectFunction = n;
                                 var r = function () {
-                                        e.bus.off(c.VENMO_DESKTOP_CUSTOMER_CANCELED, o), e.bus.off(c.VENMO_DESKTOP_UNKNOWN_ERROR, i);
+                                        (e.bus.off(c.VENMO_DESKTOP_CUSTOMER_CANCELED, o), e.bus.off(c.VENMO_DESKTOP_UNKNOWN_ERROR, i));
                                     },
                                     i = function (t) {
-                                        r(),
+                                        (r(),
                                             e.sendEvent('venmo.tokenize.desktop.unknown-error'),
                                             n({
                                                 allowUIToHandleError: !1,
                                                 reason: 'UNKNOWN_ERROR',
                                                 err: t
-                                            });
+                                            }));
                                     },
                                     o = function () {
-                                        r(),
+                                        (r(),
                                             e.updateVenmoDesktopPaymentContext('CANCELED'),
                                             e.sendEvent('venmo.tokenize.desktop.status-change.canceled-from-modal'),
                                             n({
                                                 allowUIToHandleError: !1,
                                                 reason: 'CUSTOMER_CANCELED'
-                                            });
+                                            }));
                                     };
-                                (e.completedHandler = function (e) {
-                                    r(), t(e);
+                                ((e.completedHandler = function (e) {
+                                    (r(), t(e));
                                 }),
                                     e.bus.on(c.VENMO_DESKTOP_CUSTOMER_CANCELED, o),
-                                    e.bus.on(c.VENMO_DESKTOP_UNKNOWN_ERROR, i);
+                                    e.bus.on(c.VENMO_DESKTOP_UNKNOWN_ERROR, i));
                             });
                             return (
                                 (this.iframe.style.display = 'block'),
@@ -11460,10 +11460,10 @@ e.exports = (function e(t, n, r) {
                                 this.startPolling(),
                                 t
                                     .then(function (t) {
-                                        return delete e.venmoContextId, delete e.launchDesktopPromiseRejectFunction, t;
+                                        return (delete e.venmoContextId, delete e.launchDesktopPromiseRejectFunction, t);
                                     })
                                     .catch(function (t) {
-                                        return delete e.venmoContextId, delete e.launchDesktopPromiseRejectFunction, e.Promise.reject(t);
+                                        return (delete e.venmoContextId, delete e.launchDesktopPromiseRejectFunction, e.Promise.reject(t));
                                     })
                             );
                         }),
@@ -11471,14 +11471,14 @@ e.exports = (function e(t, n, r) {
                             var t = this;
                             this.isHidden ||
                                 setTimeout(function () {
-                                    t.completedHandler && t.completedHandler(e), delete t.completedHandler;
+                                    (t.completedHandler && t.completedHandler(e), delete t.completedHandler);
                                 }, 2000);
                         }),
                         (e.prototype.triggerRejected = function (e) {
                             this.launchDesktopPromiseRejectFunction && this.launchDesktopPromiseRejectFunction(e);
                         }),
                         (e.prototype.hideDesktopFlow = function () {
-                            this.setAlert(''), (this.iframe.style.display = 'none'), this.bus.emit(c.VENMO_DESKTOP_CLOSED_FROM_PARENT), (this.isHidden = !0);
+                            (this.setAlert(''), (this.iframe.style.display = 'none'), this.bus.emit(c.VENMO_DESKTOP_CLOSED_FROM_PARENT), (this.isHidden = !0));
                         }),
                         (e.prototype.displayError = function (e) {
                             this.isHidden || (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, { message: e }), this.setAlert(e));
@@ -11503,18 +11503,18 @@ e.exports = (function e(t, n, r) {
                                 .then(function (t) {
                                     var n = new Date(t.expiresAt).getTime() - new Date(t.createdAt).getTime(),
                                         r = Date.now() + n;
-                                    return e.displayQRCode(t.id, t.merchantId), e.pollForStatusChange(t.status, r);
+                                    return (e.displayQRCode(t.id, t.merchantId), e.pollForStatusChange(t.status, r));
                                 })
                                 .then(function (t) {
                                     if (t) {
                                         var n = t.userName || '';
-                                        (n = '@' + n.replace('@', '')),
+                                        ((n = '@' + n.replace('@', '')),
                                             e.triggerCompleted({
                                                 paymentMethodNonce: t.paymentMethodId,
                                                 username: n,
                                                 payerInfo: t.payerInfo,
                                                 id: e.venmoContextId || ''
-                                            });
+                                            }));
                                     }
                                 })
                                 .catch(function (t) {
@@ -11557,7 +11557,7 @@ e.exports = (function e(t, n, r) {
                                                       n.authorizing();
                                                       break;
                                                   case 'APPROVED':
-                                                      return n.authorize(), n.Promise.resolve(r);
+                                                      return (n.authorize(), n.Promise.resolve(r));
                                               }
                                           return new n.Promise(function (r, i) {
                                               setTimeout(function () {
@@ -11568,10 +11568,10 @@ e.exports = (function e(t, n, r) {
                                 : this.Promise.resolve();
                         }),
                         (e.prototype.teardown = function () {
-                            this.bus.teardown(), this.iframe.parentNode && this.iframe.parentNode.removeChild(this.iframe), this.alertBox.parentNode && this.alertBox.parentNode.removeChild(this.alertBox);
+                            (this.bus.teardown(), this.iframe.parentNode && this.iframe.parentNode.removeChild(this.iframe), this.alertBox.parentNode && this.alertBox.parentNode.removeChild(this.alertBox));
                         }),
                         (e.prototype.setAlert = function (e) {
-                            (this.alertBox.style.display = e ? 'block' : 'none'), (this.alertBox.textContent = e);
+                            ((this.alertBox.style.display = e ? 'block' : 'none'), (this.alertBox.textContent = e));
                         }),
                         (e.prototype.createPaymentContextFromGraphqlLegacyQRCodeMutation = function (e) {
                             return this.apiRequest(d.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY, {
@@ -11873,7 +11873,7 @@ e.exports = (function e(t, n, r) {
         ],
         241: [
             function (e, t, n) {
-                Object.defineProperty(n, '__esModule', { value: !0 }), (n.VENMO_DESKTOP_UNKNOWN_ERROR = n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE = n.VENMO_DESKTOP_CLOSED_FROM_PARENT = n.VENMO_DESKTOP_IFRAME_READY = n.VENMO_DESKTOP_DISPLAY_QR_CODE = n.VENMO_DESKTOP_DISPLAY_ERROR = n.VENMO_DESKTOP_CUSTOMER_CANCELED = n.VENMO_DESKTOP_AUTHORIZING = n.VENMO_DESKTOP_AUTHORIZE = n.VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT = void 0), (n.VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT = 'VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT'), (n.VENMO_DESKTOP_AUTHORIZE = 'VENMO_DESKTOP_AUTHORIZE'), (n.VENMO_DESKTOP_AUTHORIZING = 'VENMO_DESKTOP_AUTHORIZING'), (n.VENMO_DESKTOP_CUSTOMER_CANCELED = 'VENMO_DESKTOP_CUSTOMER_CANCELED'), (n.VENMO_DESKTOP_DISPLAY_ERROR = 'VENMO_DESKTOP_DISPLAY_ERROR'), (n.VENMO_DESKTOP_DISPLAY_QR_CODE = 'VENMO_DESKTOP_DISPLAY_QR_CODE'), (n.VENMO_DESKTOP_IFRAME_READY = 'VENMO_DESKTOP_IFRAME_READY'), (n.VENMO_DESKTOP_CLOSED_FROM_PARENT = 'VENMO_DESKTOP_CLOSED_FROM_PARENT'), (n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE = 'VENMO_DESKTOP_REQUEST_NEW_QR_CODE'), (n.VENMO_DESKTOP_UNKNOWN_ERROR = 'VENMO_DESKTOP_UNKNOWN_ERROR');
+                (Object.defineProperty(n, '__esModule', { value: !0 }), (n.VENMO_DESKTOP_UNKNOWN_ERROR = n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE = n.VENMO_DESKTOP_CLOSED_FROM_PARENT = n.VENMO_DESKTOP_IFRAME_READY = n.VENMO_DESKTOP_DISPLAY_QR_CODE = n.VENMO_DESKTOP_DISPLAY_ERROR = n.VENMO_DESKTOP_CUSTOMER_CANCELED = n.VENMO_DESKTOP_AUTHORIZING = n.VENMO_DESKTOP_AUTHORIZE = n.VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT = void 0), (n.VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT = 'VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT'), (n.VENMO_DESKTOP_AUTHORIZE = 'VENMO_DESKTOP_AUTHORIZE'), (n.VENMO_DESKTOP_AUTHORIZING = 'VENMO_DESKTOP_AUTHORIZING'), (n.VENMO_DESKTOP_CUSTOMER_CANCELED = 'VENMO_DESKTOP_CUSTOMER_CANCELED'), (n.VENMO_DESKTOP_DISPLAY_ERROR = 'VENMO_DESKTOP_DISPLAY_ERROR'), (n.VENMO_DESKTOP_DISPLAY_QR_CODE = 'VENMO_DESKTOP_DISPLAY_QR_CODE'), (n.VENMO_DESKTOP_IFRAME_READY = 'VENMO_DESKTOP_IFRAME_READY'), (n.VENMO_DESKTOP_CLOSED_FROM_PARENT = 'VENMO_DESKTOP_CLOSED_FROM_PARENT'), (n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE = 'VENMO_DESKTOP_REQUEST_NEW_QR_CODE'), (n.VENMO_DESKTOP_UNKNOWN_ERROR = 'VENMO_DESKTOP_UNKNOWN_ERROR'));
             },
             {}
         ],
@@ -11899,7 +11899,7 @@ e.exports = (function e(t, n, r) {
                             s = a || r.isIos(),
                             c = a && r.isChrome(),
                             d = r.isIosSafari() || c;
-                        return (t = !0 === ((e = e || {}).allowDesktopWebLogin || e.allowDesktop)), (n = !e.hasOwnProperty('allowNewBrowserTab') || e.allowNewBrowserTab), (o = !e.hasOwnProperty('allowWebviews') || e.allowWebviews), !((!(n && !i()) && r.isIosChrome()) || r.isFacebookOwnedBrowserOnAndroid() || r.isSamsung() || (!o && (r.isAndroidWebview() || r.isIosWebview()))) && (s ? (n ? s : d) : t);
+                        return ((t = !0 === ((e = e || {}).allowDesktopWebLogin || e.allowDesktop)), (n = !e.hasOwnProperty('allowNewBrowserTab') || e.allowNewBrowserTab), (o = !e.hasOwnProperty('allowWebviews') || e.allowWebviews), !((!(n && !i()) && r.isIosChrome()) || r.isFacebookOwnedBrowserOnAndroid() || r.isSamsung() || (!o && (r.isAndroidWebview() || r.isIosWebview()))) && (s ? (n ? s : d) : t));
                     }
                 };
             },
@@ -11937,10 +11937,10 @@ e.exports = (function e(t, n, r) {
                             t.focus();
                         }),
                         document.getElementById(c.cancelButton).addEventListener('click', function () {
-                            t.close(), i(), l();
+                            (t.close(), i(), l());
                         }),
                         t.open({}, function (e) {
-                            e
+                            (e
                                 ? u.reject(e)
                                 : r(1)
                                       .then(function (e) {
@@ -11952,7 +11952,7 @@ e.exports = (function e(t, n, r) {
                                           });
                                       }),
                                 t.close(),
-                                l();
+                                l());
                         }),
                         t.redirect(n),
                         u
@@ -11961,7 +11961,7 @@ e.exports = (function e(t, n, r) {
                 function l() {
                     document.getElementById('venmo-desktop-web-backdrop').classList.add('hidden');
                 }
-                (o.suppressUnhandledPromiseMessage = !0),
+                ((o.suppressUnhandledPromiseMessage = !0),
                     (t.exports = {
                         runWebLogin: function (e) {
                             return (
@@ -11976,7 +11976,7 @@ e.exports = (function e(t, n, r) {
                                         s,
                                         d = document.getElementById(c.backdrop);
                                     if (d) return d.classList.remove('hidden');
-                                    (e = document.createElement('style')),
+                                    ((e = document.createElement('style')),
                                         (t = document.createElement('div')),
                                         (n = document.createElement('div')),
                                         (r = document.createElement('div')),
@@ -12008,7 +12008,7 @@ e.exports = (function e(t, n, r) {
                                         document.body.appendChild(t),
                                         t.addEventListener('click', function (e) {
                                             e.stopPropagation();
-                                        });
+                                        }));
                                 })(),
                                 d(e)
                             );
@@ -12043,7 +12043,7 @@ e.exports = (function e(t, n, r) {
                         },
                         POPUP_WIDTH: 400,
                         POPUP_HEIGHT: 570
-                    });
+                    }));
             },
             {
                 '../../lib/braintree-error': 143,
@@ -12077,7 +12077,7 @@ e.exports = (function e(t, n, r) {
                     N = '3.112.1';
                 function O(e) {
                     var t = this;
-                    (this._allowDesktopWebLogin = e.allowDesktopWebLogin || !1),
+                    ((this._allowDesktopWebLogin = e.allowDesktopWebLogin || !1),
                         (this._mobileWebFallBack = e.mobileWebFallBack || !1),
                         (this._createPromise = e.createPromise),
                         (this._allowNewBrowserTab = !1 !== e.allowNewBrowserTab),
@@ -12138,10 +12138,10 @@ e.exports = (function e(t, n, r) {
                                         verifyDomain: d
                                     })
                                         .then(function (n) {
-                                            return (t._venmoDesktopInstance = n), r.sendEvent(t._createPromise, 'venmo.desktop-flow.presented'), e;
+                                            return ((t._venmoDesktopInstance = n), r.sendEvent(t._createPromise, 'venmo.desktop-flow.presented'), e);
                                         })
                                         .catch(function () {
-                                            return r.sendEvent(t._createPromise, 'venmo.desktop-flow.setup-failed'), (t._useDesktopQRFlow = !1), e;
+                                            return (r.sendEvent(t._createPromise, 'venmo.desktop-flow.setup-failed'), (t._useDesktopQRFlow = !1), e);
                                         });
                                 }))
                               : this._shouldCreateVenmoPaymentContext &&
@@ -12168,7 +12168,7 @@ e.exports = (function e(t, n, r) {
                                         (n = t
                                             ._createVenmoPaymentContext(e)
                                             .then(function () {
-                                                return r.sendEvent(t._createPromise, 'venmo.' + o + '.presented'), e;
+                                                return (r.sendEvent(t._createPromise, 'venmo.' + o + '.presented'), e);
                                             })
                                             .catch(function (e) {
                                                 var n;
@@ -12193,25 +12193,25 @@ e.exports = (function e(t, n, r) {
                                                 return Promise.reject(e);
                                             })
                                     );
-                                })));
+                                }))));
                 }
                 function g(e) {
                     var t = (e || window.location.hash.substring(1)).split('&').reduce(function (e, t) {
                         var n = t.split('='),
                             r = y(decodeURIComponent(n[0]).replace(/\W/g, '')),
                             i = decodeURIComponent(n[1]);
-                        return (e[r] = i), e;
+                        return ((e[r] = i), e);
                     }, {});
-                    return t.resourceId && (t.id = t.resourceId), t;
+                    return (t.resourceId && (t.id = t.resourceId), t);
                 }
                 function P(e) {
                     return '@' + (e = e || '').replace('@', '');
                 }
                 function b() {
                     var e;
-                    return void 0 !== window.document.hidden ? (e = 'visibilitychange') : void 0 !== window.document.msHidden ? (e = 'msvisibilitychange') : void 0 !== window.document.webkitHidden && (e = 'webkitvisibilitychange'), e;
+                    return (void 0 !== window.document.hidden ? (e = 'visibilitychange') : void 0 !== window.document.msHidden ? (e = 'msvisibilitychange') : void 0 !== window.document.webkitHidden && (e = 'webkitvisibilitychange'), e);
                 }
-                (h.suppressUnhandledPromiseMessage = !0),
+                ((h.suppressUnhandledPromiseMessage = !0),
                     (O.prototype._createVenmoPaymentContext = function (e, t) {
                         var n,
                             r,
@@ -12239,7 +12239,7 @@ e.exports = (function e(t, n, r) {
                                 });
                         else {
                             if ((this._collectCustomerBillingAddress || this._collectCustomerShippingAddress) && !o.enrichedCustomerDataEnabled) return Promise.reject(new _(s.VENMO_ECD_DISABLED));
-                            this._lineItems &&
+                            (this._lineItems &&
                                 this._lineItems.forEach(function (e) {
                                     e.unitTaxAmount = e.unitTaxAmount || '0';
                                 }),
@@ -12278,15 +12278,15 @@ e.exports = (function e(t, n, r) {
                                     })
                                     .then(function (e) {
                                         return e.data.createVenmoPaymentContext.venmoPaymentContext;
-                                    }));
+                                    })));
                         }
                         return n.then(function (n) {
                             var r = new Date(n.expiresAt) - new Date(n.createdAt);
-                            clearTimeout(i._refreshPaymentContextTimeout),
+                            (clearTimeout(i._refreshPaymentContextTimeout),
                                 (i._refreshPaymentContextTimeout = setTimeout(function () {
                                     i._tokenizationInProgress || i._createVenmoPaymentContext(e, !0);
                                 }, 0.6666 * r)),
-                                (t && i._tokenizationInProgress) || ((i._venmoPaymentContextStatus = n.status), (i._venmoPaymentContextId = n.id));
+                                (t && i._tokenizationInProgress) || ((i._venmoPaymentContextStatus = n.status), (i._venmoPaymentContextId = n.id)));
                         });
                     }),
                     (O.prototype.appSwitch = function (e) {
@@ -12345,7 +12345,7 @@ e.exports = (function e(t, n, r) {
                     (O.prototype._hasTokenizationResult = function (e) {
                         var t = g(e),
                             n = A.getUrlParams();
-                        return n.resource_id && (this._venmoPaymentContextId = n.resource_id), void 0 !== (t.venmoSuccess || t.venmoError || t.venmoCancel);
+                        return (n.resource_id && (this._venmoPaymentContextId = n.resource_id), void 0 !== (t.venmoSuccess || t.venmoError || t.venmoCancel));
                     }),
                     (O.prototype._shouldIncludeReturnUrls = function () {
                         return !!this._deepLinkReturnUrl || !this._cannotHaveReturnUrls;
@@ -12388,7 +12388,7 @@ e.exports = (function e(t, n, r) {
                                               return n._createVenmoPaymentContext(e);
                                           })
                                           .then(function () {
-                                              return (n._tokenizationInProgress = !1), Promise.reject(e);
+                                              return ((n._tokenizationInProgress = !1), Promise.reject(e));
                                           });
                                   }));
                     }),
@@ -12412,16 +12412,16 @@ e.exports = (function e(t, n, r) {
                                             checkPaymentContextStatus: e._checkPaymentContextStatus.bind(e)
                                         })
                                         .then(function (t) {
-                                            r.sendEvent(e._createPromise, 'venmo.tokenize.web-login.success'),
+                                            (r.sendEvent(e._createPromise, 'venmo.tokenize.web-login.success'),
                                                 e._tokenizePromise.resolve({
                                                     paymentMethodNonce: t.paymentMethodId,
                                                     username: t.userName,
                                                     payerInfo: t.payerInfo,
                                                     id: e._venmoPaymentContextId
-                                                });
+                                                }));
                                         })
                                         .catch(function (t) {
-                                            r.sendEvent(e._createPromise, 'venmo.tokenize.web-login.failure'), e._tokenizePromise.reject(t);
+                                            (r.sendEvent(e._createPromise, 'venmo.tokenize.web-login.failure'), e._tokenizePromise.reject(t));
                                         }),
                                     e._tokenizePromise
                                 );
@@ -12520,19 +12520,19 @@ e.exports = (function e(t, n, r) {
                             (this._tokenizePromise = new h()),
                             this._pollForStatusChange()
                                 .then(function (t) {
-                                    r.sendEvent(e._createPromise, 'venmo.tokenize.manual-return.success'),
+                                    (r.sendEvent(e._createPromise, 'venmo.tokenize.manual-return.success'),
                                         e._tokenizePromise.resolve({
                                             paymentMethodNonce: t.paymentMethodId,
                                             username: t.userName,
                                             payerInfo: t.payerInfo,
                                             id: e._venmoPaymentContextId
-                                        });
+                                        }));
                                 })
                                 .catch(function (t) {
-                                    r.sendEvent(e._createPromise, 'venmo.tokenize.manual-return.failure'), e._tokenizePromise.reject(t);
+                                    (r.sendEvent(e._createPromise, 'venmo.tokenize.manual-return.failure'), e._tokenizePromise.reject(t));
                                 }),
                             this.getUrl().then(function (t) {
-                                return e.appSwitch(t), e._tokenizePromise;
+                                return (e.appSwitch(t), e._tokenizePromise);
                             })
                         );
                     }),
@@ -12551,7 +12551,7 @@ e.exports = (function e(t, n, r) {
                                     t = e;
                                 })
                                 .then(function (e) {
-                                    i._ignoreHistoryChanges || window.location.hash === i._previousHash || (window.location.hash = i._previousHash), i._removeVisibilityEventListener(), t ? i._tokenizePromise.reject(t) : i._tokenizePromise.resolve(e), delete i._tokenizePromise;
+                                    (i._ignoreHistoryChanges || window.location.hash === i._previousHash || (window.location.hash = i._previousHash), i._removeVisibilityEventListener(), t ? i._tokenizePromise.reject(t) : i._tokenizePromise.resolve(e), delete i._tokenizePromise);
                                 });
                         }
                         return (
@@ -12588,7 +12588,7 @@ e.exports = (function e(t, n, r) {
                                     return e._venmoDesktopInstance.launchDesktopFlow();
                                 })
                                 .then(function (t) {
-                                    e._venmoDesktopInstance.hideDesktopFlow(), r.sendEvent(e._createPromise, 'venmo.tokenize.desktop.success'), e._tokenizePromise.resolve(t);
+                                    (e._venmoDesktopInstance.hideDesktopFlow(), r.sendEvent(e._createPromise, 'venmo.tokenize.desktop.success'), e._tokenizePromise.resolve(t));
                                 })
                                 .catch(function (t) {
                                     if ((r.sendEvent(e._createPromise, 'venmo.tokenize.desktop.failure'), e._venmoDesktopInstance && e._venmoDesktopInstance.hideDesktopFlow(), t && 'CUSTOMER_CANCELED' === t.reason)) return void e._tokenizePromise.reject(new _(s.VENMO_DESKTOP_CANCELED));
@@ -12628,7 +12628,7 @@ e.exports = (function e(t, n, r) {
                     (O.prototype._cancelVenmoDesktopContext = function () {
                         var e = this;
                         return this._createPromise.then(function () {
-                            return e._venmoDesktopInstance && e._venmoDesktopInstance.updateVenmoDesktopPaymentContext('CANCELED'), Promise.resolve();
+                            return (e._venmoDesktopInstance && e._venmoDesktopInstance.updateVenmoDesktopPaymentContext('CANCELED'), Promise.resolve());
                         });
                     }),
                     (O.prototype.teardown = function () {
@@ -12637,19 +12637,19 @@ e.exports = (function e(t, n, r) {
                             this._removeVisibilityEventListener(),
                             this._createPromise.then(
                                 function () {
-                                    e._venmoDesktopInstance && e._venmoDesktopInstance.teardown(), clearTimeout(e._refreshPaymentContextTimeout), e._cancelMobilePaymentContext(), u(this, l(O.prototype));
+                                    (e._venmoDesktopInstance && e._venmoDesktopInstance.teardown(), clearTimeout(e._refreshPaymentContextTimeout), e._cancelMobilePaymentContext(), u(this, l(O.prototype)));
                                 }.bind(this)
                             )
                         );
                     }),
                     (O.prototype._removeVisibilityEventListener = function () {
-                        window.removeEventListener('hashchange', this._onHashChangeListener), window.document.removeEventListener(b(), this._visibilityChangeListener), delete this._visibilityChangeListener, delete this._onHashChangeListener;
+                        (window.removeEventListener('hashchange', this._onHashChangeListener), window.document.removeEventListener(b(), this._visibilityChangeListener), delete this._visibilityChangeListener, delete this._onHashChangeListener);
                     }),
                     (O.prototype.processHashChangeFlowResults = function (e) {
                         var t = this,
                             n = g(e);
                         return new Promise(function (e, i) {
-                            t._shouldUseLegacyFlow
+                            (t._shouldUseLegacyFlow
                                 ? n.venmoSuccess
                                     ? (r.sendEvent(t._createPromise, 'venmo.appswitch.handle.success'), e(n))
                                     : n.venmoError
@@ -12684,15 +12684,15 @@ e.exports = (function e(t, n, r) {
                                           );
                                       })
                                       .catch(function (o) {
-                                          o.type === s.VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED.type && i(o), r.sendEvent(t._createPromise, 'venmo.process-results.payment-context-status-query-failed'), e(n);
+                                          (o.type === s.VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED.type && i(o), r.sendEvent(t._createPromise, 'venmo.process-results.payment-context-status-query-failed'), e(n));
                                       }),
-                                t._clearFragmentParameters();
+                                t._clearFragmentParameters());
                         });
                     }),
                     (O.prototype._clearFragmentParameters = function () {
                         !this._ignoreHistoryChanges && 'function' == typeof window.history.replaceState && window.location.hash && history.pushState({}, '', window.location.href.slice(0, window.location.href.indexOf('#')));
                     }),
-                    (t.exports = p.wrapPrototype(O));
+                    (t.exports = p.wrapPrototype(O)));
             },
             {
                 '../lib/analytics': 138,
@@ -12807,7 +12807,7 @@ e.exports = (function e(t, n, r) {
                 function u(e) {
                     this._client = e.client;
                 }
-                (u.prototype.createInitOptions = function (e) {
+                ((u.prototype.createInitOptions = function (e) {
                     var t,
                         n = this._client.getConfiguration().gatewayConfiguration,
                         i = n.visaCheckout;
@@ -12843,7 +12843,7 @@ e.exports = (function e(t, n, r) {
                                       }
                                   })
                                   .then(function (e) {
-                                      return i.sendEvent(t._client, 'visacheckout.tokenize.succeeded'), e.visaCheckoutCards[0];
+                                      return (i.sendEvent(t._client, 'visacheckout.tokenize.succeeded'), e.visaCheckoutCards[0]);
                                   })
                                   .catch(function (e) {
                                       return (
@@ -12861,9 +12861,9 @@ e.exports = (function e(t, n, r) {
                             : Promise.reject(new r(o.VISA_CHECKOUT_PAYMENT_REQUIRED));
                     }),
                     (u.prototype.teardown = function () {
-                        return c(this, s(u.prototype)), Promise.resolve();
+                        return (c(this, s(u.prototype)), Promise.resolve());
                     }),
-                    (t.exports = d.wrapPrototype(u));
+                    (t.exports = d.wrapPrototype(u)));
             },
             {
                 '../lib/analytics': 138,

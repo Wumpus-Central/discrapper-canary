@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     K: () => u,
     Z: () => f
 }),
-    n(388685);
+    n(388685));
 var r = n(147913),
     i = n(626135),
     a = n(358085),
@@ -33,7 +33,7 @@ class d extends r.Z {
         i.default.track(l.rMx.NOTIFICATION_PERMISSION_STATUS, { os_enabled: e });
     }
     constructor(...e) {
-        super(...e), c(this, 'actions', { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });
+        (super(...e), c(this, 'actions', { POST_CONNECTION_OPEN: this.handlePostConnectionOpen }));
     }
 }
 let f = new d();

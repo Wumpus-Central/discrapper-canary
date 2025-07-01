@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     AS: () => o,
     S4: () => s,
     X4: () => u
 }),
-    n(388685);
+    n(388685));
 var i = n(73800),
     r = n(481060);
 function l(e, t, n) {
@@ -23,7 +23,7 @@ class o {
     updateState(e, t) {
         this.items = e;
         let n = this.locked !== t;
-        (this.locked = t), this.computeLayout(n);
+        ((this.locked = t), this.computeLayout(n));
     }
     initialize(e) {
         if (null == this.resizeObserver) {
@@ -36,7 +36,7 @@ class o {
     }
     cleanUp() {
         var e;
-        null == (e = this.resizeObserver) || e.disconnect(), (this.resizeObserver = void 0), this.listeners.clear();
+        (null == (e = this.resizeObserver) || e.disconnect(), (this.resizeObserver = void 0), this.listeners.clear());
     }
     queueCompute() {
         this.queuedCompute || ((this.queuedCompute = !0), Promise.resolve().then(() => this.computeLayout()));
@@ -50,7 +50,7 @@ class o {
             let r = this.listeners.get(i.notification.id);
             if (null == r) continue;
             let { offsetHeight: l } = r.element;
-            (r.top !== t || r.height !== l || r.index !== n) && (e = !0), (r.top = t), (r.height = l), (r.index = n), 0 === t && (this.matchHeight !== l && (e = !0), (this.matchHeight = l)), (t += l + 8), n++;
+            ((r.top !== t || r.height !== l || r.index !== n) && (e = !0), (r.top = t), (r.height = l), (r.index = n), 0 === t && (this.matchHeight !== l && (e = !0), (this.matchHeight = l)), (t += l + 8), n++);
         }
         e && this.broadcastLayoutUpdates();
     }
@@ -69,7 +69,7 @@ class o {
     }
     subscribe(e, t, n) {
         var i;
-        this.listeners.set(e, {
+        (this.listeners.set(e, {
             notificationId: e,
             callback: n,
             element: t,
@@ -78,7 +78,7 @@ class o {
             index: 0
         }),
             null == (i = this.resizeObserver) || i.observe(t),
-            this.queueCompute();
+            this.queueCompute());
     }
     unsubscribe(e) {
         var t;
@@ -89,7 +89,7 @@ class o {
         return this.listeners.get(e);
     }
     constructor(e) {
-        l(this, 'resizeObserver', void 0),
+        (l(this, 'resizeObserver', void 0),
             l(this, 'listeners', new Map()),
             l(this, 'queuedCompute', !1),
             l(this, 'items', []),
@@ -98,7 +98,7 @@ class o {
             l(this, 'handleResize', (e) => {
                 this.computeLayout();
             }),
-            (this.locked = e);
+            (this.locked = e));
     }
 }
 let s = i.createContext(new o(!0));
@@ -141,7 +141,7 @@ function u(e, t, n) {
                                   contentOpacity: n && o > 0 ? 0 : 1,
                                   height: n ? i : r
                               };
-                          s({
+                          (s({
                               from: t
                                   ? void 0
                                   : {
@@ -154,7 +154,7 @@ function u(e, t, n) {
                               to: d,
                               config: a
                           }),
-                              (t = !0);
+                              (t = !0));
                       });
             };
         }, [e, d]);
@@ -163,7 +163,7 @@ function u(e, t, n) {
             if (t === r.pJH.YEETED) {
                 let t = d.getLayoutSpecs(e);
                 if (null == t) return void n();
-                u.current({
+                (u.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
@@ -171,7 +171,7 @@ function u(e, t, n) {
                     },
                     config: a
                 }),
-                    setTimeout(n, 300);
+                    setTimeout(n, 300));
             }
         }, [t, n, e, d]),
         {

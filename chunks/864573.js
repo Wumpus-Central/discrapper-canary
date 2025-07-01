@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(539854);
+(n.d(t, { Z: () => w }), n(388685), n(539854));
 var r = n(255367),
     s = n(73800),
     o = n(392711),
@@ -45,13 +45,13 @@ function w(e) {
         F = (w / 1080) * T,
         [D, U] = (0, p.Z)(b.yN.BOUNCING_LOGO),
         W = (0, s.useRef)(null != (n = D.count) ? n : 0);
-    (0, s.useEffect)(() => {
+    ((0, s.useEffect)(() => {
         var e;
         W.current = null != (e = D.count) ? e : 0;
     }, [D.count]),
         (0, m.Z)(j, W.current),
         (0, s.useEffect)(() => {
-            (v.onload = () => {
+            ((v.onload = () => {
                 k.current = O.map((e) =>
                     (function (e, t) {
                         let n = (0, c.oo)(t),
@@ -60,12 +60,12 @@ function w(e) {
                         if (null == s) return r;
                         s.drawImage(e, 0, 0, 71, 53);
                         let o = s.getImageData(0, 0, 71, 53);
-                        for (let e = 0; e < o.data.length; e += 4) (o.data[e] *= n.r / 255), (o.data[e + 1] *= n.g / 255), (o.data[e + 2] *= n.b / 255);
-                        return s.putImageData(o, 0, 0), r;
+                        for (let e = 0; e < o.data.length; e += 4) ((o.data[e] *= n.r / 255), (o.data[e + 1] *= n.g / 255), (o.data[e + 2] *= n.b / 255));
+                        return (s.putImageData(o, 0, 0), r);
                     })(v, e)
                 );
             }),
-                (v.src = h);
+                (v.src = h));
         }, []),
         (0, s.useEffect)(() => {
             if (!(i < 71) && !(w < 53))
@@ -80,18 +80,18 @@ function w(e) {
         }, [B, w, M, i]),
         (0, s.useEffect)(() => {
             I.current.forEach((e) => {
-                (e.x = N(i - 71)), (e.y = N(w - 53));
+                ((e.x = N(i - 71)), (e.y = N(w - 53)));
             });
-        }, [w, i]);
+        }, [w, i]));
     let G = (0, s.useCallback)(
             (e) => {
                 I.current.forEach((t) => {
-                    (t.x += t.directionX * L * e), (t.y += t.directionY * F * e);
+                    ((t.x += t.directionX * L * e), (t.y += t.directionY * F * e));
                     let n = t.x <= 0,
                         r = t.x >= i - 71,
                         s = t.y <= 0,
                         o = t.y >= w - 53;
-                    n ? (t.directionX = 1) : r && (t.directionX = -1), s ? (t.directionY = 1) : o && (t.directionY = -1), (n || r || s || o) && (U({ count: W.current + 1 }), B && (t.color = P()));
+                    (n ? (t.directionX = 1) : r && (t.directionX = -1), s ? (t.directionY = 1) : o && (t.directionY = -1), (n || r || s || o) && (U({ count: W.current + 1 }), B && (t.color = P())));
                 });
             },
             [B, w, U, L, F, i]
@@ -115,7 +115,7 @@ function w(e) {
         }, [w, i]),
         H = (0, s.useCallback)(
             (e) => {
-                G(e), K(), V();
+                (G(e), K(), V());
             },
             [V, K, G]
         );

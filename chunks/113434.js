@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     B4: () => ev,
     B6: () => Q,
     Bd: () => eE,
@@ -38,7 +38,7 @@ n.d(t, {
     n(642613),
     n(539854),
     n(953529),
-    n(314940);
+    n(314940));
 var r = n(73800),
     i = n(512722),
     a = n.n(i),
@@ -117,7 +117,7 @@ function Z(e) {
         if (0 === e.length) return [];
         if (t.current.length > 0 && t.current.length === e.length) return t.current;
         let n = V(e).map((e) => e.id);
-        return (t.current = n), n;
+        return ((t.current = n), n);
     }, [e]);
 }
 function H(e) {
@@ -142,11 +142,11 @@ function H(e) {
                 return i !== ((null == (r = t.userStatus) ? void 0 : r.claimedAt) == null) ? (i ? U : G) : F(L.r.build(e.config).rewardsExpireAt, L.r.build(t.config).rewardsExpireAt, 0);
             })
             .map((e) => e.id);
-        return (n.current = e), e;
+        return ((n.current = e), e);
     }, [t]);
 }
 var Y = (function (e) {
-    return (e.ALL = 'all'), (e.CLAIMED = 'claimed'), e;
+    return ((e.ALL = 'all'), (e.CLAIMED = 'claimed'), e);
 })({});
 function W(e) {
     let { quests: t, isFetchingCurrentQuests: n } = B({ fetchPolicy: 'cache-and-network' }),
@@ -222,7 +222,7 @@ let en = 1,
                     a();
                 }, b.Z.Millis.SECOND * en);
                 return () => {
-                    clearInterval(i), a();
+                    (clearInterval(i), a());
                 };
             }, [e, o, a]),
             n
@@ -385,13 +385,13 @@ let ef = (e) => {
             {
                 startConsoleQuest: r.useCallback(async () => {
                     if (c) return;
-                    null == i || i(), d(!0);
+                    (null == i || i(), d(!0));
                     let e = null;
                     try {
-                        (e = await (0, A.CS)(t, n)), s(e.errorHints);
+                        ((e = await (0, A.CS)(t, n)), s(e.errorHints));
                     } finally {
                         var r;
-                        d(!1), null == a || a(null != (r = null == e ? void 0 : e.errorHints) ? r : []);
+                        (d(!1), null == a || a(null != (r = null == e ? void 0 : e.errorHints) ? r : []));
                     }
                 }, [c, i, a, n, t]),
                 startingConsoleQuest: c,
@@ -425,7 +425,7 @@ let ef = (e) => {
         };
     };
 var eh = (function (e) {
-    return (e[(e.UNACCEPTED = 0)] = 'UNACCEPTED'), (e[(e.ACCEPTED = 1)] = 'ACCEPTED'), (e[(e.IN_PROGRESS = 2)] = 'IN_PROGRESS'), (e[(e.COMPLETED = 3)] = 'COMPLETED'), (e[(e.CLAIMED = 4)] = 'CLAIMED'), e;
+    return ((e[(e.UNACCEPTED = 0)] = 'UNACCEPTED'), (e[(e.ACCEPTED = 1)] = 'ACCEPTED'), (e[(e.IN_PROGRESS = 2)] = 'IN_PROGRESS'), (e[(e.COMPLETED = 3)] = 'COMPLETED'), (e[(e.CLAIMED = 4)] = 'CLAIMED'), e);
 })({});
 function em(e) {
     var t, n, r;
@@ -561,7 +561,7 @@ function eO(e) {
         p = (0, v.isWeb)() && _ && !(0, R.Gd)(e),
         h = (0, v.isMac)() && i.taskType === s.X.STREAM_ON_DESKTOP && _,
         m = [];
-    return h && m.push(j.intl.string(j.t.MFGxFB)), p && m.push(j.intl.string(j.t.BV6xDg)), m;
+    return (h && m.push(j.intl.string(j.t.MFGxFB)), p && m.push(j.intl.string(j.t.BV6xDg)), m);
 }
 function ev(e) {
     var t;
@@ -569,12 +569,12 @@ function ev(e) {
 }
 function eI(e) {
     let t = (0, u.e7)([N.Z], () => N.Z.getQuest(e), [e]);
-    return a()(null != t, 'Unknown quest ID '.concat(e)), t;
+    return (a()(null != t, 'Unknown quest ID '.concat(e)), t);
 }
 function eT(e) {
     let { mode: t, questContent: n, sourceQuestContent: i, questId: a } = e,
         o = r.useRef(null);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         null != a &&
             o.current !== t &&
             ((0, T.Ic)({
@@ -597,7 +597,7 @@ function eT(e) {
                         sourceQuestContent: i
                     });
                 };
-        }, [a, n, i]);
+        }, [a, n, i]));
 }
 function eS(e) {
     var t, n;

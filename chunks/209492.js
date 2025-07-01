@@ -1,9 +1,9 @@
 let i;
-n.d(e, {
+(n.d(e, {
     S: () => f,
     j: () => y
 }),
-    n(415506);
+    n(415506));
 var r = n(544891),
     l = n(570140),
     o = n(710845),
@@ -17,13 +17,13 @@ var r = n(544891),
 async function f() {
     if (null == i) {
         if (!(u.isPlatformEmbedded && ((0, u.isMac)() || ((0, u.isWindows)() && 'arm64' !== p.ZP.architecture)))) return void new o.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
-        await p.ZP.ensureModule('discord_cloudsync'),
+        (await p.ZP.ensureModule('discord_cloudsync'),
             (i = new (p.ZP.getCloudSync())()).on('state', (t) =>
                 l.Z.dispatch({
                     type: 'GAME_CLOUD_SYNC_UPDATE',
                     state: t
                 })
-            );
+            ));
     }
 }
 function y(t, e) {

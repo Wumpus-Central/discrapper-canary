@@ -100,11 +100,11 @@ async function S(t) {
 function s(t) {
     if (null != t.flagged_content && t.flagged_content.length > 0) {
         let e = t.flagged_content[0];
-        (e.attachments = e.attachments.filter((t) => {
+        ((e.attachments = e.attachments.filter((t) => {
             let { filename: e } = t;
             return (0, _.CO)(e) || (0, _.NU)(e);
         })),
-            (t.flagged_content = (0, a.Vt)(e) ? [] : [e]);
+            (t.flagged_content = (0, a.Vt)(e) ? [] : [e]));
     }
 }
 async function T(t, e, n) {
@@ -129,7 +129,7 @@ async function T(t, e, n) {
                       },
                       rejectWithError: !1
                   });
-    E.Z.dispatch({ type: 'SAFETY_HUB_REQUEST_REVIEW_START' }),
+    (E.Z.dispatch({ type: 'SAFETY_HUB_REQUEST_REVIEW_START' }),
         await a
             .then(() => {
                 E.Z.dispatch({
@@ -140,13 +140,13 @@ async function T(t, e, n) {
             .catch((t) => {
                 var e, n;
                 throw (
-                    (E.Z.dispatch({
+                    E.Z.dispatch({
                         type: 'SAFETY_HUB_REQUEST_REVIEW_FAILURE',
                         error: null != (n = null == t || null == (e = t.body) ? void 0 : e.message) ? n : 'Unknown error'
                     }),
-                    t)
+                    t
                 );
-            });
+            }));
 }
 async function c(t) {
     E.Z.dispatch({ type: 'SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START' });
@@ -189,11 +189,11 @@ async function U() {
     await _.then((t) => {
         let { body: n } = t,
             { success: i } = n;
-        !i && e < r.o6 && setTimeout(() => U(), r.Cp),
+        (!i && e < r.o6 && setTimeout(() => U(), r.Cp),
             E.Z.dispatch({
                 type: 'SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS',
                 success: i
-            });
+            }));
     }).catch((t) => {
         var e, n;
         E.Z.dispatch({

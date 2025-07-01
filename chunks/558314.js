@@ -10,7 +10,7 @@ class c extends (l = a.ZP.Store) {
         return s.matureAgree;
     }
 }
-(i = 'ApplicationStoreSettingsStore'),
+((i = 'ApplicationStoreSettingsStore'),
     (r = 'displayName') in c
         ? Object.defineProperty(c, r, {
               value: i,
@@ -18,7 +18,7 @@ class c extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (c[r] = i);
+        : (c[r] = i));
 let u = new c(o.Z, {
     APPLICATION_STORE_MATURE_AGREE: function () {
         s.matureAgree = !0;

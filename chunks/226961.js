@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     J$: () => A,
     Pz: () => E,
     ZP: () => H,
@@ -6,7 +6,7 @@ n.d(t, {
 }),
     n(388685),
     n(35282),
-    n(539854);
+    n(539854));
 var r,
     i = n(442837),
     a = n(46973),
@@ -33,7 +33,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -87,7 +87,7 @@ class v {
     put(e, t, n, r) {
         if ('' === r) {
             let r = _({}, this.state);
-            return delete r[y(e, t, n)], new v(r);
+            return (delete r[y(e, t, n)], new v(r));
         }
         return new v(_({ [y(e, t, n)]: r }, this.state));
     }
@@ -96,7 +96,7 @@ class v {
         return null != r ? r : null;
     }
     constructor(e) {
-        f(this, 'state', void 0), (this.state = e);
+        (f(this, 'state', void 0), (this.state = e));
     }
 }
 let I = v.empty(),
@@ -160,11 +160,11 @@ function k(e) {
             r[i] = k(a, t, n);
         } else if (i in E && 'number' == typeof a) {
             let t = (r[i] = Array.isArray(e) ? e : []);
-            t.push({
+            (t.push({
                 value: a,
                 time: n
             }),
-                t.length > b && t.shift();
+                t.length > b && t.shift());
         } else r[i] = a;
     }
     return r;

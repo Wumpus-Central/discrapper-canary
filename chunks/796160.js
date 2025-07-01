@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'twilight',
         author: 'david hart (http://hart-dev.com)',
@@ -19,4 +19,4 @@
         base0E: '#9b859d',
         base0F: '#9b703f'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

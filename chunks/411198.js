@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $5: () => E,
     EO: () => O,
     Qs: () => g,
@@ -10,7 +10,7 @@ n.d(t, {
     wD: () => d
 }),
     n(953529),
-    n(388685);
+    n(388685));
 var r = n(512722),
     i = n.n(r),
     a = n(283693),
@@ -34,7 +34,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -277,7 +277,7 @@ function b(e) {
 }
 function y(e) {
     var t;
-    return null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null != (t = e.features) ? t : [])), (0, a.gh)(e, o.ZP);
+    return (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null != (t = e.features) ? t : [])), (0, a.gh)(e, o.ZP));
 }
 function O(e, t, n, r) {
     let i = (null != r && r.length > 0) || (null != n && n.length > 0);

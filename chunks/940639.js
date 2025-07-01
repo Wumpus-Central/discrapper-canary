@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854), n(388685), n(413496), n(433524), n(35282), n(781311);
+(n.d(t, { Z: () => j }), n(539854), n(388685), n(413496), n(433524), n(35282), n(781311));
 var i,
     l = n(255367),
     r = n(73800),
@@ -9,8 +9,8 @@ var i,
     d = n(607070),
     u = n(251625),
     h = n(226951),
-    g = n(981631),
-    m = n(388032),
+    m = n(981631),
+    g = n(388032),
     p = n(92304);
 function f(e, t, n) {
     return (
@@ -87,7 +87,7 @@ class x extends (i = r.Component) {
         null != this.inputRef.current && this.inputRef.current.focus();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'inputRef', r.createRef()),
             f(this, 'state', {
                 query: null,
@@ -111,12 +111,12 @@ class x extends (i = r.Component) {
             f(this, 'handleChange', (e) => {
                 var t, n;
                 let i = e.target.value;
-                null == (t = (n = this.props).onQueryChange) || t.call(n, i),
+                (null == (t = (n = this.props).onQueryChange) || t.call(n, i),
                     this.setState({
                         query: i,
                         selectedSection: null,
                         selectedRow: 0
-                    });
+                    }));
             }),
             f(this, 'handleMouseEnter', (e, t) => {
                 this.setState({
@@ -126,7 +126,7 @@ class x extends (i = r.Component) {
             }),
             f(this, 'handleClick', (e, t) => {
                 let n = this.getRows();
-                this.props.onSelect(n[e][t], e), this.props.onClose();
+                (this.props.onSelect(n[e][t], e), this.props.onClose());
             }),
             f(this, 'handleKeyDown', (e) => {
                 let { keyboardModeEnabled: t } = this.props,
@@ -134,29 +134,29 @@ class x extends (i = r.Component) {
                     i = this.getRows(),
                     l = this.getSelectedSection(i);
                 switch (e.keyCode) {
-                    case g.yXg.TAB:
+                    case m.yXg.TAB:
                         if (t) break;
-                    case g.yXg.ARROW_DOWN:
-                        e.preventDefault(),
+                    case m.yXg.ARROW_DOWN:
+                        (e.preventDefault(),
                             this.props.sections.length > l && ++n >= i[l].length && (++l >= this.props.sections.length && (l = 0), (n = 0)),
                             this.setState({
                                 selectedSection: l,
                                 selectedRow: n
-                            });
+                            }));
                         break;
-                    case g.yXg.ARROW_UP:
-                        e.preventDefault(),
+                    case m.yXg.ARROW_UP:
+                        (e.preventDefault(),
                             --n < 0 && (--l < 0 && (l = this.props.sections.length - 1), (n = i[l].length - 1)),
                             this.setState({
                                 selectedSection: l,
                                 selectedRow: n
-                            });
+                            }));
                         break;
-                    case g.yXg.ENTER:
-                        e.preventDefault(), this.props.sections.length > l && i[l].length > n && (this.props.onSelect(i[l][n], l), this.props.onClose());
+                    case m.yXg.ENTER:
+                        (e.preventDefault(), this.props.sections.length > l && i[l].length > n && (this.props.onSelect(i[l][n], l), this.props.onClose()));
                         break;
-                    case g.yXg.ESCAPE:
-                        e.preventDefault(), this.props.onSelect(null, null), this.props.onClose();
+                    case m.yXg.ESCAPE:
+                        (e.preventDefault(), this.props.onSelect(null, null), this.props.onClose());
                 }
             }),
             f(this, 'isEmpty', () => 0 === this.getRows().reduce((e, t) => e + t.length, 0)),
@@ -190,9 +190,9 @@ class x extends (i = r.Component) {
                             children: [
                                 (0, l.jsx)('p', {
                                     className: p.noResultsHeader,
-                                    children: m.intl.string(m.t['4o4z3d'])
+                                    children: g.intl.string(g.t['4o4z3d'])
                                 }),
-                                (0, l.jsx)('p', { children: m.intl.string(m.t.QwSXv7) })
+                                (0, l.jsx)('p', { children: g.intl.string(g.t.QwSXv7) })
                             ]
                         },
                         'empty'
@@ -213,7 +213,7 @@ class x extends (i = r.Component) {
                     },
                     ''.concat(n, '-').concat(i)
                 );
-            });
+            }));
     }
 }
 f(x, 'defaultProps', { sections: [null] });

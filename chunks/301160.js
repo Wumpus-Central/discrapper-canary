@@ -1,4 +1,4 @@
-o.d(i, { EmojiAddModal: () => j }), o(388685);
+(o.d(i, { EmojiAddModal: () => j }), o(388685));
 var t = o(255367),
     a = o(73800),
     n = o(481060),
@@ -49,7 +49,7 @@ function j(e) {
         p = (0, s.Dt)();
     return (0, t.jsx)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), l(_), x();
+            (e.preventDefault(), l(_), x());
         },
         children: (0, t.jsxs)(n.Y0X, {
             transitionState: h,
@@ -95,7 +95,7 @@ function j(e) {
                                                           (i = e.id),
                                                           void f((e) => {
                                                               let o = new Set(e);
-                                                              return _.has(i) ? o.delete(i) : o.add(i), o;
+                                                              return (_.has(i) ? o.delete(i) : o.add(i), o);
                                                           })
                                                       );
                                                   },

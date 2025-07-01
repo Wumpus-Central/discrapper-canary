@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J }), n(388685);
+(n.d(t, { Z: () => J }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -50,7 +50,7 @@ function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -58,7 +58,7 @@ function U(e) {
             )),
             r.forEach(function (t) {
                 j(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -66,11 +66,11 @@ function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -106,7 +106,7 @@ function Y(e) {
                         (0, r.jsx)(d.olH, {
                             className: M.coachmarkCloseIcon,
                             onClick: () => {
-                                I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'coachmark_header' }), t();
+                                (I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'coachmark_header' }), t());
                             }
                         })
                     ]
@@ -151,7 +151,7 @@ function W(e) {
             (0, r.jsx)(d.olH, {
                 className: M.closeContainer,
                 onClick: () => {
-                    I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'header' }), n();
+                    (I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'header' }), n());
                 }
             })
         ]
@@ -206,7 +206,7 @@ function K(e) {
             return (
                 n.observe(e),
                 () => {
-                    n.disconnect(), t.cancel();
+                    (n.disconnect(), t.cancel());
                 }
             );
         }, []),
@@ -241,15 +241,15 @@ function z(e) {
             var n;
             let t = !1,
                 r = (0, m.I)(null != (n = null == o ? void 0 : o.asset) ? n : '');
-            (0, g.p)(r, () => {
-                u(!1), (t = !0);
+            ((0, g.p)(r, () => {
+                (u(!1), (t = !0));
             }),
                 (e = setTimeout(() => {
                     t || u(!0);
-                }, H));
+                }, H)));
         } else u(!1);
         return () => {
-            clearTimeout(e), u(!1);
+            (clearTimeout(e), u(!1));
         };
     }, [t, o]),
     null == o)
@@ -302,7 +302,7 @@ function X(e) {
                 type: d.XZJ.Types.INVERTED,
                 value: i,
                 onChange: (e, t) => {
-                    I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), a(t);
+                    (I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), a(t));
                 },
                 children: k.intl.string(k.t['3nPvdH'])
             }),
@@ -316,7 +316,7 @@ function X(e) {
                         size: d.zxk.Sizes.MEDIUM,
                         color: d.zxk.Colors.PRIMARY,
                         onClick: () => {
-                            I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), o();
+                            (I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), o());
                         },
                         disabled: n,
                         children: k.intl.string(k.t['ETE/oK'])
@@ -345,7 +345,7 @@ function Q() {
                 className: M.nonTier2FooterText,
                 children: k.intl.format(k.t['0Tapv7'], {
                     onClickNitro: () => {
-                        I.default.track(D.rMx.CHAT_WALLPAPER_NITRO_LINK_CLICKED), (0, y.uL)(D.Z5c.NITRO_HOME);
+                        (I.default.track(D.rMx.CHAT_WALLPAPER_NITRO_LINK_CLICKED), (0, y.uL)(D.Z5c.NITRO_HOME));
                     }
                 })
             }),
@@ -378,13 +378,13 @@ let J = function (e) {
         V = (0, u.e7)([S.Z], () => S.Z.getWallpaperById(null == g ? void 0 : g.wallpaperId)),
         F = i.useRef(null),
         Z = i.useRef(null);
-    (0, d.Tbt)(Z),
+    ((0, d.Tbt)(Z),
         i.useEffect(() => {
             Z.current = F.current;
         }, [F]),
         i.useEffect(() => {
             null != V && P(V.isBlurred && E);
-        }, [V, E]);
+        }, [V, E]));
     let H = i.useCallback(() => {
             h();
         }, [h]),
@@ -395,7 +395,7 @@ let J = function (e) {
         $ = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : L.L.USER_DISMISS;
-                (null == s ? void 0 : s.markDismissed) != null && s.markDismissed(e), h();
+                ((null == s ? void 0 : s.markDismissed) != null && s.markDismissed(e), h());
             },
             [h, s]
         );
@@ -405,7 +405,7 @@ let J = function (e) {
     let ee = i.useCallback(() => {
             if (null == c || null == g || void 0 === g.wallpaperId) return;
             let e = v.Z.getChannel(c);
-            I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_APPLY_CLICKED, {
+            (I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_APPLY_CLICKED, {
                 wallpaper_id: g.wallpaperId,
                 is_blur_enabled: y,
                 channel_id: c,
@@ -413,7 +413,7 @@ let J = function (e) {
             }),
                 J(c, g.wallpaperId, () => {
                     (0, d.showToast)((0, d.createToast)(k.intl.string(k.t.F8FvU1), d.ToastType.FAILURE));
-                });
+                }));
         }, [c, g, J, y]),
         et = i.useCallback(
             (e) => {
@@ -492,11 +492,11 @@ let J = function (e) {
                                     (0, r.jsx)(q, {
                                         isSelected: null == g || null === g.wallpaperId,
                                         onSelect: () => {
-                                            I.default.track(D.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
+                                            (I.default.track(D.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
                                                 wallpaper_id: null,
                                                 is_blurred: !1
                                             }),
-                                                m(null);
+                                                m(null));
                                         }
                                     }),
                                     j.map((e) =>

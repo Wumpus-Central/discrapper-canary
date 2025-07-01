@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -62,13 +62,13 @@ let _ = {},
     h = {};
 function m(e) {
     let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: a } = e;
-    (_[t.id] = {
+    ((_[t.id] = {
         channel: t,
         message: n,
         shouldMention: r,
         showMentionToggle: i
     }),
-        (h[t.id] = a);
+        (h[t.id] = a));
 }
 function g(e) {
     let { channel: t, messageId: n, shouldMention: r = !0, showMentionToggle: i = !0 } = e;
@@ -81,19 +81,19 @@ function g(e) {
 }
 function E(e) {
     let { channelId: t, shouldMention: n } = e;
-    t in _ && (_[t] = f(u({}, _[t]), { shouldMention: n })), t in p && (p[t] = f(u({}, p[t]), { shouldMention: n }));
+    (t in _ && (_[t] = f(u({}, _[t]), { shouldMention: n })), t in p && (p[t] = f(u({}, p[t]), { shouldMention: n })));
 }
 function b(e) {
     let { channelId: t } = e;
-    delete _[t], delete p[t];
+    (delete _[t], delete p[t]);
 }
 function y(e) {
     var t, n, r;
     let { id: i, channelId: a } = e;
-    if ((null == (n = _[a]) || null == (t = n.message) ? void 0 : t.id) === i) delete _[a], delete h[a];
+    if ((null == (n = _[a]) || null == (t = n.message) ? void 0 : t.id) === i) (delete _[a], delete h[a]);
     else {
         if ((null == (r = p[a]) ? void 0 : r.messageId) !== i) return !1;
-        delete p[a], delete h[a];
+        (delete p[a], delete h[a]);
     }
 }
 function O(e) {
@@ -103,13 +103,13 @@ function O(e) {
     let n = s.Z.getMessage(e, t.messageId),
         r = o.Z.getChannel(t.channelId);
     if (null == n || null == r) return !1;
-    (_[e] = {
+    ((_[e] = {
         channel: r,
         message: n,
         shouldMention: t.shouldMention,
         showMentionToggle: t.showMentionToggle
     }),
-        delete p[e];
+        delete p[e]);
 }
 function v(e) {
     let { channelId: t } = e;
@@ -125,7 +125,7 @@ function T() {
     });
 }
 function S() {
-    (_ = {}), (p = {}), (h = {});
+    ((_ = {}), (p = {}), (h = {}));
 }
 class A extends (r = i.ZP.PersistedStore) {
     getState() {
@@ -140,7 +140,7 @@ class A extends (r = i.ZP.PersistedStore) {
         return u({}, p, e);
     }
     initialize(e) {
-        this.waitFor(s.Z, o.Z), (p = null != e ? e : {});
+        (this.waitFor(s.Z, o.Z), (p = null != e ? e : {}));
     }
     getPendingReply(e) {
         return _[e];
@@ -149,7 +149,7 @@ class A extends (r = i.ZP.PersistedStore) {
         return h[e];
     }
 }
-c(A, 'displayName', 'PendingReplyStore'), c(A, 'persistKey', 'PendingReplyStore'), c(A, 'migrations', [(e) => (null != e ? e : {})]);
+(c(A, 'displayName', 'PendingReplyStore'), c(A, 'persistKey', 'PendingReplyStore'), c(A, 'migrations', [(e) => (null != e ? e : {})]));
 let N = new A(a.Z, {
     CREATE_PENDING_REPLY: m,
     CREATE_SHALLOW_PENDING_REPLY: g,

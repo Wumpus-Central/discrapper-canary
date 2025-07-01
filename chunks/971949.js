@@ -35,12 +35,12 @@ function O(t) {
                         r,
                         o = {},
                         a = Object.keys(t);
-                    for (r = 0; r < a.length; r++) (e = a[r]), n.indexOf(e) >= 0 || (o[e] = t[e]);
+                    for (r = 0; r < a.length; r++) ((e = a[r]), n.indexOf(e) >= 0 || (o[e] = t[e]));
                     return o;
                 })(t, n);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < a.length; r++) (e = a[r]), !(n.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(t, e) && (o[e] = t[e]);
+                for (r = 0; r < a.length; r++) ((e = a[r]), !(n.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(t, e) && (o[e] = t[e]));
             }
             return o;
         })(t, ['guildCount', 'onClose', 'analyticsLocations']);
@@ -51,7 +51,7 @@ function O(t) {
                     className: d.learnMoreLink,
                     tag: 'span',
                     onClick: () => {
-                        e(), (0, i.z)();
+                        (e(), (0, i.z)());
                     },
                     children: t
                 },
@@ -67,7 +67,7 @@ function O(t) {
                 for (var n = 1; n < arguments.length; n++) {
                     var e = null != arguments[n] ? arguments[n] : {},
                         r = Object.keys(e);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(e).filter(function (t) {
                                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
@@ -75,7 +75,7 @@ function O(t) {
                         )),
                         r.forEach(function (n) {
                             var r;
-                            (r = e[n]),
+                            ((r = e[n]),
                                 n in t
                                     ? Object.defineProperty(t, n, {
                                           value: r,
@@ -83,8 +83,8 @@ function O(t) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (t[n] = r);
-                        });
+                                    : (t[n] = r));
+                        }));
                 }
                 return t;
             })(

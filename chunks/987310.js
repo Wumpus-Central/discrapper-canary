@@ -8,5 +8,5 @@ let s = function (e, t) {
     if (t) return e.slice();
     var r = e.length,
         n = l ? l(r) : new e.constructor(r);
-    return e.copy(n), n;
+    return (e.copy(n), n);
 };

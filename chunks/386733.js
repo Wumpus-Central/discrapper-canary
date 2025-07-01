@@ -26,7 +26,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function T(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -42,8 +42,8 @@ function T(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -146,11 +146,11 @@ let N = (e) => {
     },
     P = (e) => {
         let { analyticsLocations: t } = e;
-        g.default.track(C.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
+        (g.default.track(C.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                 return (n) => (0, i.jsx)(e, I(T({}, n), { sourceAnalyticsLocations: t }));
-            });
+            }));
     },
     R = (e) => {
         let { isInSettings: t = !1 } = e,
@@ -165,7 +165,7 @@ let N = (e) => {
                 sent: n.size
             };
         n.forEach((e) => {
-            e === h.Fe.REDEEMED && I.redeemed++, e === h.Fe.CONVERTED && (I.redeemed++, I.converted++);
+            (e === h.Fe.REDEEMED && I.redeemed++, e === h.Fe.CONVERTED && (I.redeemed++, I.converted++));
         });
         let N = I.sent === _.Q,
             y = p.Z.getArticleURL(C.BhN.REFERRAL_PROGRAM),

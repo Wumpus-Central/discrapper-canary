@@ -10,6 +10,6 @@ e.exports = r
     : i ||
       (a
           ? function (e, t) {
-                return a(e, t), e;
+                return (a(e, t), e);
             }
           : null);

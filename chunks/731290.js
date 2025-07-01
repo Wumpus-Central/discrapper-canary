@@ -20,7 +20,7 @@ let l = 'GuildNSFWAgreeStore',
     c = {};
 function u(e) {
     let { guildId: t } = e;
-    (c[t] = !0), a.K.set(l, c);
+    ((c[t] = !0), a.K.set(l, c));
 }
 class d extends (r = i.ZP.Store) {
     initialize() {

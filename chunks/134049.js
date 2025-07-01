@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     i: () => d,
     l: () => f
 }),
-    n(388685);
+    n(388685));
 var r = n(94171),
     i = n(362383),
     a = n(842022),
@@ -17,7 +17,7 @@ let u = (0, a.M)((e, t) => ({
     notificationDismissedInGuilds: c(),
     dismissNotification: (n) => {
         let r = t().notificationDismissedInGuilds;
-        r.add(n), s.K.set(l.hL, r), (0, o.j)(() => e({ notificationDismissedInGuilds: r }));
+        (r.add(n), s.K.set(l.hL, r), (0, o.j)(() => e({ notificationDismissedInGuilds: r })));
     },
     resetNotification: (n) => {
         let r = t().notificationDismissedInGuilds;

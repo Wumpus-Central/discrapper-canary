@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => h,
     m: () => p
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(695469),
@@ -42,24 +42,24 @@ function p(e) {
               children: (0, r.jsx)(s.P3F, {
                   className: u.confettiTrigger,
                   onMouseDown: () => {
-                      m(1),
+                      (m(1),
                           f(!0),
                           c((e) => Math.min(e + 2, _)),
                           window.clearTimeout(g.current),
                           (g.current = window.setTimeout(() => {
                               E.current && c(0);
-                          }, d));
+                          }, d)));
                   },
                   onMouseUp: () => {
-                      m(0), f(!1);
+                      (m(0), f(!1));
                   },
                   onMouseEnter: () => {
                       var e;
-                      m(2), null == p || null == (e = p.onMouseEnter) || e.call(p);
+                      (m(2), null == p || null == (e = p.onMouseEnter) || e.call(p));
                   },
                   onMouseLeave: () => {
                       var e;
-                      m(0), null == p || null == (e = p.onMouseLeave) || e.call(p);
+                      (m(0), null == p || null == (e = p.onMouseLeave) || e.call(p));
                   },
                   innerRef: n,
                   children: t

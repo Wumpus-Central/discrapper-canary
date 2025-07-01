@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(642613);
+(n.d(t, { Z: () => S }), n(388685), n(642613));
 var l,
     i,
     r,
@@ -13,7 +13,7 @@ let I = !1,
     h = null,
     g = new Set();
 function N() {
-    (I = !1), (h = null), null != (h = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && (g = new Set(d.Z.getDefaultChannelIds(h)));
+    ((I = !1), (h = null), null != (h = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && (g = new Set(d.Z.getDefaultChannelIds(h))));
 }
 class f extends (l = o.ZP.Store) {
     initialize() {
@@ -35,7 +35,7 @@ class f extends (l = o.ZP.Store) {
         return g;
     }
 }
-(r = 'GuildSettingsDefaultChannelsStore'),
+((r = 'GuildSettingsDefaultChannelsStore'),
     (i = 'displayName') in f
         ? Object.defineProperty(f, i, {
               value: r,
@@ -43,7 +43,7 @@ class f extends (l = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (f[i] = r);
+        : (f[i] = r));
 let S = new f(c.Z, {
     GUILD_SETTINGS_INIT: N,
     GUILD_SETTINGS_SET_SECTION: N,

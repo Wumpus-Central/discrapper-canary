@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Z: () => F,
     d: () => H
 }),
@@ -10,7 +10,7 @@ n.d(t, {
     n(187205),
     n(804061),
     n(704826),
-    n(35282);
+    n(35282));
 var r = n(512722),
     i = n.n(r),
     a = n(570140),
@@ -63,7 +63,7 @@ function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -71,7 +71,7 @@ function G(e) {
             )),
             r.forEach(function (t) {
                 U(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -79,11 +79,11 @@ function B(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -104,14 +104,14 @@ async function F(e) {
     if (null == M.channel) return;
     let H = null != (r = D.Z.getSource(M.channel.id)) ? r : F,
         W = null != (o = D.Z.getCommandOrigin(M.channel.id)) ? o : G;
-    null == M.autocomplete &&
+    (null == M.autocomplete &&
         a.Z.dispatch({
             type: 'APPLICATION_COMMAND_USED',
             context: M,
             command: N,
             commandOrigin: W
         }),
-        await y.Z.unarchiveThreadIfNecessary(M.channel.id);
+        await y.Z.unarchiveThreadIfNecessary(M.channel.id));
     let q = [],
         X = [],
         Q = (0, x.D7)(W);
@@ -123,13 +123,13 @@ async function F(e) {
             if (e.type === c.jw.STRING) {
                 let r = null != (d = null == (u = P.li(w, e.name)) ? void 0 : u.trim()) ? d : '';
                 if ((null != e.choices ? (t = (0, R.cT)(e.choices, r)) : e.autocomplete && (t = null != M.autocomplete && n ? M.autocomplete.query : (0, R.Wv)(M.channel.id, e.name, r)), null == t && (t = r), '' === t && null != M.autocomplete && !n)) continue;
-                i()(null != M.autocomplete || null != t, 'Option "'.concat(e.name, '" expects a value')),
+                (i()(null != M.autocomplete || null != t, 'Option "'.concat(e.name, '" expects a value')),
                     q.push({
                         type: e.type,
                         name: e.name,
                         value: t,
                         focused: n
-                    });
+                    }));
                 continue;
             }
             if (e.type === c.jw.ATTACHMENT) {
@@ -137,13 +137,13 @@ async function F(e) {
                 let t = I.Z.getUpload(M.channel.id, e.name, Q);
                 if (null == t) continue;
                 let r = X.length;
-                X.push(t),
+                (X.push(t),
                     q.push({
                         type: e.type,
                         name: e.name,
                         value: r,
                         focused: n
-                    });
+                    }));
                 continue;
             }
             let r = P.OU(w[e.name]);
@@ -162,7 +162,7 @@ async function F(e) {
                         if ((0, x.BH)(a.text)) t = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null == (h = M.guild) ? void 0 : h.id, M.channel.id);
-                            i()((null == e ? void 0 : e.type) === 'channelMention', 'Failed to resolve '.concat(a.text)), (t = e.channelId);
+                            (i()((null == e ? void 0 : e.type) === 'channelMention', 'Failed to resolve '.concat(a.text)), (t = e.channelId));
                         }
                     break;
                 case c.jw.ROLE:
@@ -171,7 +171,7 @@ async function F(e) {
                         if ((0, x.BH)(a.text)) t = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null == (m = M.guild) ? void 0 : m.id, M.channel.id, { allowUsers: !1 });
-                            i()((null == e ? void 0 : e.type) === 'roleMention', 'Failed to resolve '.concat(a.text)), (t = e.roleId);
+                            (i()((null == e ? void 0 : e.type) === 'roleMention', 'Failed to resolve '.concat(a.text)), (t = e.roleId));
                         }
                     else 'textMention' === a.type && '@everyone' === a.text && (t = null == (g = M.guild) ? void 0 : g.id);
                     break;
@@ -181,7 +181,7 @@ async function F(e) {
                         if ((0, x.BH)(a.text)) t = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null == (E = M.guild) ? void 0 : E.id, M.channel.id, { allowRoles: !1 });
-                            i()((null == e ? void 0 : e.type) === 'userMention', 'Failed to resolve '.concat(a.text)), (t = e.userId);
+                            (i()((null == e ? void 0 : e.type) === 'userMention', 'Failed to resolve '.concat(a.text)), (t = e.userId));
                         }
                     break;
                 case c.jw.MENTIONABLE:
@@ -201,13 +201,13 @@ async function F(e) {
                 case c.jw.INTEGER:
                     if ('text' === a.type) {
                         let r = a.text.trim();
-                        null != e.choices ? (t = (0, R.l1)(e.choices, r)) : e.autocomplete && (t = null != M.autocomplete && n ? M.autocomplete.query : (0, R.xg)(M.channel.id, e.name, r)), null == t && (t = Number(P.AS(O.default.locale, r)));
+                        (null != e.choices ? (t = (0, R.l1)(e.choices, r)) : e.autocomplete && (t = null != M.autocomplete && n ? M.autocomplete.query : (0, R.xg)(M.channel.id, e.name, r)), null == t && (t = Number(P.AS(O.default.locale, r))));
                     }
                     break;
                 case c.jw.NUMBER:
                     if ('text' === a.type) {
                         let r = a.text.trim();
-                        null != e.choices ? (t = (0, R.l1)(e.choices, r)) : e.autocomplete && (t = null != M.autocomplete && n ? M.autocomplete.query : (0, R.xg)(M.channel.id, e.name, r)), null == t && (t = Number(P.AS(O.default.locale, r)));
+                        (null != e.choices ? (t = (0, R.l1)(e.choices, r)) : e.autocomplete && (t = null != M.autocomplete && n ? M.autocomplete.query : (0, R.xg)(M.channel.id, e.name, r)), null == t && (t = Number(P.AS(O.default.locale, r))));
                     }
                     break;
                 default:
@@ -258,7 +258,7 @@ async function F(e) {
         $ = () => {
             Z(w);
         };
-    null != j && (J.target_id = j),
+    (null != j && (J.target_id = j),
         null != M.autocomplete
             ? (0, C.GV)(N, M, J)
             : (s.Z.clearAll(M.channel.id, Q),
@@ -273,7 +273,7 @@ async function F(e) {
                   sectionName: B,
                   source: H,
                   interactionLifecycleOptions: await V(N, M, J)
-              }));
+              })));
 }
 let Z = (e) => {
         let t = Object.values(e).flatMap((e) =>
@@ -330,7 +330,7 @@ let Z = (e) => {
                 sectionName: u,
                 source: d
             };
-        m.kz(E.nonce, {
+        (m.kz(E.nonce, {
             messageId: f.messageId,
             onCreate: f.onCreate,
             onSuccess: f.onSuccess,
@@ -345,7 +345,7 @@ let Z = (e) => {
                 ? X(a, E.nonce, g, o).then((e) => {
                       e && W(E, s);
                   })
-                : W(E, s);
+                : W(E, s));
     };
 function W(e, t) {
     u.ZP.enqueue(
@@ -355,7 +355,7 @@ function W(e, t) {
         },
         (n) => {
             var r;
-            (0, g.Sg)(e.nonce, n, e.applicationId, e.channelId, null != (r = e.guildId) ? r : null), n.ok && null != t && t();
+            ((0, g.Sg)(e.nonce, n, e.applicationId, e.channelId, null != (r = e.guildId) ? r : null), n.ok && null != t && t());
         }
     );
 }
@@ -427,13 +427,13 @@ async function K(e, t, n) {
                 if (null == t.channel) return;
                 null == r && null != n && o.Z.sendClydeError(t.channel.id, n);
                 let l = r;
-                null == l && null != s && (l = (0, g.A0)(s, e.applicationId)),
+                (null == l && null != s && (l = (0, g.A0)(s, e.applicationId)),
                     a.Z.dispatch({
                         type: 'MESSAGE_SEND_FAILED',
                         messageId: u.id,
                         channelId: t.channel.id,
                         reason: l
-                    });
+                    }));
             }
         }
     );
@@ -468,7 +468,7 @@ async function q(e, t) {
     for (let a of e) {
         var i;
         let e = t ? (null != (i = a.currentSize) ? i : 0) : await a.getSize();
-        e > r && (r = e), (n += e);
+        (e > r && (r = e), (n += e));
     }
     return {
         totalSize: n,
@@ -478,14 +478,14 @@ async function q(e, t) {
 async function X(e, t, n, r) {
     let i = (0, S.dg)(n),
         a = (e) => {
-            null == r || r(i, e), m.yr(t, k.evJ.ENTITY_TOO_LARGE, j.intl.formatToPlainString(j.t.fxEKdX, { maxSize: (0, S.Ng)(i) }));
+            (null == r || r(i, e), m.yr(t, k.evJ.ENTITY_TOO_LARGE, j.intl.formatToPlainString(j.t.fxEKdX, { maxSize: (0, S.Ng)(i) })));
         },
         { totalSize: o, largestUploadedFileSize: s } = await q(e, !1);
-    if (s > Math.max(i, M.Y1) || o > N.zz) return a(s), !1;
+    if (s > Math.max(i, M.Y1) || o > N.zz) return (a(s), !1);
     try {
         await (0, d.Z)(e);
     } catch (n) {
         m.yr(t, void 0, j.intl.formatToPlainString(j.t['9h1/1t'], { count: e.length }));
     }
-    return ({ totalSize: o, largestUploadedFileSize: s } = await q(e, !0)), (!e.some((e) => e.error === k.evJ.ENTITY_TOO_LARGE) && !(o > N.zz)) || (a(s), !1);
+    return (({ totalSize: o, largestUploadedFileSize: s } = await q(e, !0)), (!e.some((e) => e.error === k.evJ.ENTITY_TOO_LARGE) && !(o > N.zz)) || (a(s), !1));
 }

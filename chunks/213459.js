@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     FN: () => et,
     If: () => eG,
     JK: () => ev,
@@ -16,7 +16,7 @@ n.d(t, {
     n(35282),
     n(361932),
     n(187205),
-    n(997841);
+    n(997841));
 var r,
     i = n(73800),
     a = n(512722),
@@ -64,7 +64,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -72,7 +72,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 L(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -80,11 +80,11 @@ function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -164,7 +164,7 @@ function q(e, t) {
 function X(e) {
     let t = z(e),
         n = ep.indices[t];
-    (null == n ? void 0 : n.fetchState.fetching) && n.fetchState.abort.abort(), delete ep.indices[t];
+    ((null == n ? void 0 : n.fetchState.fetching) && n.fetchState.abort.abort(), delete ep.indices[t]);
 }
 function Q() {
     for (let e of Object.values(ep.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
@@ -176,7 +176,7 @@ function J() {
 }
 function $() {
     for (let e of Object.values(ep.indices)) e.serverVersion = G;
-    J(), (W = !0);
+    (J(), (W = !0));
 }
 function ee(e) {
     var t;
@@ -191,16 +191,16 @@ async function et(e) {
     if (!eC(a)) {
         if (a.fetchState.fetching) {
             let e = a.fetchState.promise;
-            return await e, null != (n = ep.indices[i]) ? n : Z;
+            return (await e, null != (n = ep.indices[i]) ? n : Z);
         }
         return a;
     }
-    return await en(e), null != (r = ep.indices[i]) ? r : Z;
+    return (await en(e), null != (r = ep.indices[i]) ? r : Z);
 }
 async function en(e) {
     let t = new AbortController(),
         n = new O.o();
-    q(
+    (q(
         e,
         {
             fetchState: {
@@ -211,14 +211,14 @@ async function en(e) {
         },
         !0
     ),
-        await (0, S.a)(e, t).then(n.resolve).catch(n.reject);
+        await (0, S.a)(e, t).then(n.resolve).catch(n.reject));
 }
 function er(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { target: i, index: a } = e,
         o = null == (t = b.default.getCurrentUser()) ? void 0 : t.id;
-    if (null == o) return W || K.push(e), !1;
+    if (null == o) return (W || K.push(e), !1);
     let s = {},
         l = {},
         c = new Set();
@@ -313,16 +313,16 @@ function eo(e, t) {
             let n = i.sectionIdsByBotId[t.id];
             if (null == n) return;
             let r = i.sections[n];
-            o()(null != r, 'Bot has no matching index section'), o()(null != r.descriptor.application, "Bot's index section has no application info");
+            (o()(null != r, 'Bot has no matching index section'), o()(null != r.descriptor.application, "Bot's index section has no application info"));
             let s = (0, C.X0)(M(x({}, r.descriptor.application), { bot: t }));
-            (r.descriptor = x({}, r.descriptor, s)), (a = !0);
+            ((r.descriptor = x({}, r.descriptor, s)), (a = !0));
         }),
         a
     );
 }
 function es(e) {
     let { applicationId: t, channelId: n, guildId: r } = e;
-    ep.hasContextStateApplication({
+    (ep.hasContextStateApplication({
         applicationId: t,
         channelId: n,
         guildId: r
@@ -347,7 +347,7 @@ function es(e) {
                     applicationId: t
                 },
                 { serverVersion: G }
-            );
+            ));
 }
 function el(e) {
     let { channel: t } = e;
@@ -387,11 +387,11 @@ function ef() {
 }
 class e_ extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(p.default),
+        (this.waitFor(p.default),
             this.waitFor(m.default),
             this.syncWith([p.default], () => {
                 ef();
-            });
+            }));
     }
     getContextState(e) {
         var t, n;
@@ -480,7 +480,7 @@ class e_ extends (r = l.ZP.Store) {
             singleApplicationId: n.applicationId,
             installOnDemand: n.installOnDemand
         });
-        return (f.loading = f.loading || d), f;
+        return ((f.loading = f.loading || d), f);
     }
     queryInstallOnDemandApp(e, t) {
         let n = g.Z.getChannel(t);
@@ -502,7 +502,7 @@ class e_ extends (r = l.ZP.Store) {
             );
     }
     constructor(...e) {
-        super(...e), L(this, 'indices', {}), L(this, 'applicationIndices', new Map()), L(this, 'applicationIndicesVersion', 0), L(this, 'oldLocale', p.default.locale), L(this, 'collator', new Intl.Collator(p.default.locale, Y));
+        (super(...e), L(this, 'indices', {}), L(this, 'applicationIndices', new Map()), L(this, 'applicationIndicesVersion', 0), L(this, 'oldLocale', p.default.locale), L(this, 'collator', new Intl.Collator(p.default.locale, Y)));
     }
 }
 L(e_, 'displayName', 'ApplicationCommandIndexStore');
@@ -531,7 +531,7 @@ function em(e, t, n) {
                     n && eC(o) && (0, S.j)({ type: 'user' });
                     return;
                 }
-                n &&
+                (n &&
                     t &&
                     eN(e.channel) &&
                     (y.default.track(D.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
@@ -548,7 +548,7 @@ function em(e, t, n) {
                                   type: 'channel',
                                   channelId: e.channel.id
                               }))),
-                    a(!1);
+                    a(!1));
             }
         }, [o, n, e, t, r]),
         o
@@ -734,7 +734,7 @@ function eS(e) {
     for (let [e, t] of _)
         if (null == b || e === b) {
             let e = null == (s = t.result) ? void 0 : s.sections;
-            if (null != e) for (let t of Object.keys(e)) G.add(t), B.set(t, e[t]);
+            if (null != e) for (let t of Object.keys(e)) (G.add(t), B.set(t, e[t]));
         }
     for (let e of Array.from(G)) {
         let t,
@@ -755,7 +755,7 @@ function eS(e) {
                     n.push(t);
                 }
         } else null != r ? ((t = r.descriptor), (n = Object.values(r.commands))) : null != i ? ((t = i.descriptor), (n = Object.values(i.commands))) : null != a && ((t = a.descriptor), (n = Object.values(a.commands)));
-        o()(null != t, 'Failed to select application descriptor'), o()(null != n, 'Failed to select list of application commands');
+        (o()(null != t, 'Failed to select application descriptor'), o()(null != n, 'Failed to select list of application commands'));
         let c = eA(t, n, s, l, k);
         null != c && L.push(c);
     }
@@ -867,7 +867,7 @@ function ew(e, t) {
         options: null != (o = null == (n = e.options) ? void 0 : n.map(eD)) ? o : [],
         permissions: null != e.permissions ? ex(e.permissions, t) : void 0
     });
-    return e.description !== e.description_default && (s.description_localized = e.description), e.name !== e.name_default && (s.name_localized = e.name), s;
+    return (e.description !== e.description_default && (s.description_localized = e.description), e.name !== e.name_default && (s.name_localized = e.name), s);
 }
 function eD(e) {
     var t, n, r, i;
@@ -877,12 +877,12 @@ function eD(e) {
         name: null != (i = e.name_default) ? i : e.name,
         options: null == (n = e.options) ? void 0 : n.map(eD)
     });
-    return e.description !== e.description_default && (a.description_localized = e.description), e.name !== e.name_default && (a.name_localized = e.name), a;
+    return (e.description !== e.description_default && (a.description_localized = e.description), e.name !== e.name_default && (a.name_localized = e.name), a);
 }
 function eL(e) {
     var t;
     let n = M(x({}, e), { name: null != (t = e.name_default) ? t : e.name });
-    return e.name !== e.name_default && (n.name_localized = e.name), n;
+    return (e.name !== e.name_default && (n.name_localized = e.name), n);
 }
 function ex(e, t) {
     let n = [];
@@ -927,7 +927,7 @@ function ek(e, t, n, r, i) {
         u = t.slice(1).join(' ');
     for (let t of n) {
         let n;
-        (i === A.p.COMMAND_ONLY || i === A.p.COMMAND_OR_APPLICATION) && (n = eM(t, e, c, u)), (void 0 === n || (void 0 !== a && a < n)) && (n = a), void 0 !== n && o.push(M(x({}, t), { score: n }));
+        ((i === A.p.COMMAND_ONLY || i === A.p.COMMAND_OR_APPLICATION) && (n = eM(t, e, c, u)), (void 0 === n || (void 0 !== a && a < n)) && (n = a), void 0 !== n && o.push(M(x({}, t), { score: n })));
     }
     return o;
 }

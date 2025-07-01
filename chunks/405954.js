@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(704215),
@@ -24,12 +24,12 @@ let b = function (e) {
         v = y && C === a.FN.TOOLBAR && x,
         [j, O] = (0, d.US)(v ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
         E = j === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
-        I = i.useCallback(() => {
-            E && O(m.L.TAKE_ACTION), n === t.id ? (_(), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'close' })) : (b(t.id), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'open' }));
+        S = i.useCallback(() => {
+            (E && O(m.L.TAKE_ACTION), n === t.id ? (_(), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'close' })) : (b(t.id), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'open' })));
         }, [n, t.id, _, b, E, O]);
     return v
         ? (0, r.jsx)(h.JO, {
-              onClick: I,
+              onClick: S,
               tooltip: g.intl.string(g.t.GixvUl),
               icon: o.XBm,
               iconSize: 20,

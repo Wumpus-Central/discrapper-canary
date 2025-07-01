@@ -1,4 +1,4 @@
-n.d(t, { e: () => a }), n(388685);
+(n.d(t, { e: () => a }), n(388685));
 var l = n(73800),
     i = n(957115),
     r = n(257126);
@@ -12,7 +12,7 @@ function a(e) {
         [s, o] = l.useState(''),
         [b, c] = l.useState(!1),
         d = l.useCallback((e) => {
-            c(!0), u(e);
+            (c(!0), u(e));
         }, []),
         f = l.useCallback((e) => {
             o(e);

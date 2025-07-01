@@ -8,6 +8,6 @@ e.exports = function (e) {
             r.ignoreNextKeyup = !1;
             return;
         }
-        (t = n(287901)), r.handleKey(i, t(e), e);
+        ((t = n(287901)), r.handleKey(i, t(e), e));
     }
 };

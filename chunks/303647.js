@@ -1,4 +1,4 @@
-a.d(t, { default: () => h }), a(388685), a(953529);
+(a.d(t, { default: () => h }), a(388685), a(953529));
 var n = a(255367),
     i = a(73800),
     l = a(481060),
@@ -19,9 +19,9 @@ function h(e) {
             if ((N(null), x !== p.description || g !== p.primaryCategoryId)) {
                 k(!0);
                 try {
-                    await (0, c.Dr)(p.channelId, p.guildId, x, g), k(!1), m();
+                    (await (0, c.Dr)(p.channelId, p.guildId, x, g), k(!1), m());
                 } catch (e) {
-                    k(!1), N(new s.Z(e));
+                    (k(!1), N(new s.Z(e)));
                 }
             }
         };

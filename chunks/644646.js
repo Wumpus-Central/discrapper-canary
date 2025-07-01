@@ -28,7 +28,7 @@ let v = function (e) {
         R = i.useCallback(
             (t) => {
                 var n;
-                (0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
+                ((0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
                     S({
                         questId: a.id,
                         questContent: e.questContent,
@@ -40,7 +40,7 @@ let v = function (e) {
                         fromContent: e.questContent,
                         questId: a.id
                     }),
-                    null == (n = e.onClick) || n.call(e, t);
+                    null == (n = e.onClick) || n.call(e, t));
             },
             [S, a.id, e, T]
         ),
@@ -51,10 +51,10 @@ let v = function (e) {
         i.useEffect(() => {
             if (null != P.current) {
                 if (!C.isAnimated || N) {
-                    (P.current.currentTime = 0), P.current.pause();
+                    ((P.current.currentTime = 0), P.current.pause());
                     return;
                 }
-                v && !w.current ? P.current.play() : !v && w.current && ((P.current.currentTime = 0), P.current.pause()), (w.current = v);
+                (v && !w.current ? P.current.play() : !v && w.current && ((P.current.currentTime = 0), P.current.pause()), (w.current = v));
             }
         }, [v, C, N]),
         (t = D
@@ -73,7 +73,7 @@ let v = function (e) {
                         var n;
                         return (0, r.jsx)(d.Z, {
                             ref: (e) => {
-                                (t.current = e), (P.current = e);
+                                ((t.current = e), (P.current = e));
                             },
                             autoPlay: !N && v,
                             loop: !0,

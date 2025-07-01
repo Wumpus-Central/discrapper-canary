@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => S,
     wB: () => m
 }),
-    n(415506);
+    n(415506));
 var i,
     r = n(255367),
     o = n(73800),
@@ -46,12 +46,12 @@ let g = u.t_t.DEFAULT,
                             i,
                             r = {},
                             o = Object.keys(e);
-                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                 }
                 return r;
             })(e, ['children', 'className']);
@@ -67,7 +67,7 @@ let g = u.t_t.DEFAULT,
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -75,7 +75,7 @@ let g = u.t_t.DEFAULT,
                                         )),
                                         i.forEach(function (t) {
                                             f(e, t, n[t]);
-                                        });
+                                        }));
                                 }
                                 return e;
                             })(
@@ -159,7 +159,7 @@ let b = (e) => {
                 })
         });
     };
-(b.Background = (e) => {
+((b.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
     let i = [v, _, E];
@@ -218,5 +218,5 @@ let b = (e) => {
             }
         });
     }),
-    (b.Bar = v);
+    (b.Bar = v));
 let S = b;

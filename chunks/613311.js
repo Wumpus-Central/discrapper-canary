@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ep }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
+(n.d(t, { Z: () => ep }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -75,7 +75,7 @@ function ec(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -83,7 +83,7 @@ function ec(e) {
             )),
             r.forEach(function (t) {
                 es(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -113,9 +113,9 @@ class ed extends i.PureComponent {
         let { sku: e, storeListing: t, isFetchingEntitlements: n, shouldFetchStatistics: r, didFetchEntitlements: i, location: l, fetchStoreListing: a } = this.props;
         if (null != l.state) {
             let { analyticsSource: e, analyticsProperties: t } = l.state;
-            (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
+            ((this._analyticsSource = e), (this._extraAnalyticsProperties = t));
         } else this._analyticsSource = ei.SaU;
-        (null == t || t.isSlimDirectoryVersion()) && a(), null != e && (n || i || (0, h.yD)(e.applicationId), r && d.Z.wait(() => (0, p.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
+        ((null == t || t.isSlimDirectoryVersion()) && a(), null != e && (n || i || (0, h.yD)(e.applicationId), r && d.Z.wait(() => (0, p.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug());
     }
     componentDidUpdate(e) {
         let { locale: t, sku: n, shouldFetchStatistics: r, skuId: i, storeListingId: l, slug: a, storeListing: o, fetchStoreListing: s } = this.props;
@@ -132,7 +132,7 @@ class ed extends i.PureComponent {
             if (null == n) throw Error('Unexpected missing sku');
             d.Z.wait(() => (0, p.$)(n.applicationId));
         }
-        (i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug();
+        ((i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug());
     }
     componentWillUnmount() {
         this.showCopyLinkTextTimeout.stop();
@@ -153,7 +153,7 @@ class ed extends i.PureComponent {
             images: 0,
             videos: 0
         });
-        U.default.track(
+        (U.default.track(
             ei.rMx.STORE_LISTING_VIEWED,
             ec(
                 eu(ec({}, this._extraAnalyticsProperties), {
@@ -168,7 +168,7 @@ class ed extends i.PureComponent {
                 (0, S.Z)(e, !0)
             )
         ),
-            (this._trackedViewed = !0);
+            (this._trackedViewed = !0));
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
@@ -327,7 +327,7 @@ class ed extends i.PureComponent {
         if (null == e || null == t || null == n) return null;
         let i = [],
             l = n.getSplashURL(1024);
-        null != l && i.push(l), null != t.headerLogoLightTheme && i.unshift((0, H._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
+        (null != l && i.push(l), null != t.headerLogoLightTheme && i.unshift((0, H._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg')));
         let a = v.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
@@ -421,7 +421,7 @@ class ed extends i.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             es(this, 'showCopyLinkTextTimeout', new s.V7()),
             es(this, '_trackedViewed', !1),
             es(this, '_analyticsSource', null),
@@ -458,7 +458,7 @@ class ed extends i.PureComponent {
                 null != e &&
                     null != t &&
                     (0, u.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                        let { default: i } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -595,7 +595,7 @@ class ed extends i.PureComponent {
                     : i === er.b.SMALL
                       ? this.renderSmall(e, t, n)
                       : this.renderLarge(e, t, n);
-            });
+            }));
     }
 }
 let ep = (0, b.Z)(
@@ -607,10 +607,10 @@ let ep = (0, b.Z)(
                 { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: o, channel: s } = e;
             if (null == l) {
                 if (null == i) throw Error('Needs applicationId or skuId');
-                (t = i), null != (l = null != (n = R.Z.get(i)) ? n.applicationId : null) && (r = O.Z.getApplication(l));
+                ((t = i), null != (l = null != (n = R.Z.get(i)) ? n.applicationId : null) && (r = O.Z.getApplication(l)));
             } else if (null == i) {
                 if (null == l) throw Error('Needs applicationId or skuId');
-                null != (r = O.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null);
+                (null != (r = O.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null));
             }
             (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
             let c = null != l && (k.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));

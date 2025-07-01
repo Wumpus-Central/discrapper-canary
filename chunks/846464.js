@@ -45,7 +45,7 @@ function g(e) {
                         selectedSkuId: t,
                         startedPaymentFlowWithPaymentSources: o
                     });
-                C !== h.h8.WHAT_YOU_LOSE && p && ((C = h.h8.REVIEW), a((0, f.nA)(t, n))), l(C, { analyticsDataOverride: { sku_id: t } });
+                (C !== h.h8.WHAT_YOU_LOSE && p && ((C = h.h8.REVIEW), a((0, f.nA)(t, n))), l(C, { analyticsDataOverride: { sku_id: t } }));
             })({
                 activeSubscription: s,
                 newSkuId: e,

@@ -11,19 +11,19 @@ var r = n(255367),
     p = n(442837),
     m = n(692547),
     f = n(481060),
-    h = n(256638),
-    g = n(385499),
-    _ = n(528011),
+    g = n(256638),
+    _ = n(385499),
+    h = n(528011),
     b = n(533244),
-    x = n(825829),
+    E = n(825829),
     y = n(226192),
-    E = n(36459),
-    v = n(434404),
-    C = n(518950),
+    C = n(36459),
+    x = n(434404),
+    v = n(518950),
     O = n(670188),
     j = n(592125),
-    S = n(271383),
-    I = n(594174),
+    I = n(271383),
+    S = n(594174),
     T = n(464891),
     N = n(348238),
     P = n(605568),
@@ -31,12 +31,12 @@ var r = n(255367),
     w = n(981631),
     Z = n(674563),
     R = n(388032),
-    k = n(126759);
-function L(e) {
+    L = n(126759);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function L(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -52,8 +52,8 @@ function L(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -76,13 +76,13 @@ function D(e, t) {
     );
 }
 function M() {
-    return (0, r.jsx)('div', { className: k.dot });
+    return (0, r.jsx)('div', { className: L.dot });
 }
 function U(e) {
     let { message: t, compact: n } = e,
-        { notificationType: i } = (0, x.FL)(t);
+        { notificationType: i } = (0, E.FL)(t);
     switch (i) {
-        case x.nj:
+        case E.nj:
         case u.p.RAID:
             return (0, r.jsx)(H, {
                 message: t,
@@ -155,19 +155,19 @@ function B(e) {
 function G(e) {
     var t;
     let { message: n, compact: l } = e,
-        a = I.default.getUser((0, x.Sw)(n)),
+        a = S.default.getUser((0, E.Sw)(n)),
         o = null == (t = j.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
-        c = null != o && null != a ? S.ZP.getMember(o, a.id) : null,
+        c = null != o && null != a ? I.ZP.getMember(o, a.id) : null,
         {
             avatarSrc: u,
             avatarDecorationSrc: d,
             eventHandlers: p
-        } = (0, C.Z)({
+        } = (0, v.Z)({
             user: a,
             guildId: o,
             size: 12
         }),
-        h = i.useRef(null);
+        g = i.useRef(null);
     return (0, r.jsx)(z, {
         compact: l,
         header: (0, r.jsxs)(i.Fragment, {
@@ -184,10 +184,10 @@ function G(e) {
             ]
         }),
         subheader: (0, r.jsxs)('div', {
-            className: k.dotSeparatedRow,
+            className: L.dotSeparatedRow,
             children: [
                 (0, r.jsx)('div', {
-                    className: k.alertsEnabledSubHeader,
+                    className: L.alertsEnabledSubHeader,
                     children:
                         null != c &&
                         null != a &&
@@ -199,7 +199,7 @@ function G(e) {
                                     children: R.intl.string(R.t.qlFrXV)
                                 }),
                                 (0, r.jsx)(O.Z, {
-                                    targetElementRef: h,
+                                    targetElementRef: g,
                                     user: a,
                                     guildId: o,
                                     channelId: n.channel_id,
@@ -208,10 +208,10 @@ function G(e) {
                                         (0, r.jsxs)(
                                             f.P3F,
                                             D(
-                                                L(
+                                                k(
                                                     {
-                                                        innerRef: h,
-                                                        className: k.alertsEnabledSubHeaderAvatarUsername
+                                                        innerRef: g,
+                                                        className: L.alertsEnabledSubHeaderAvatarUsername
                                                     },
                                                     e
                                                 ),
@@ -219,7 +219,7 @@ function G(e) {
                                                     children: [
                                                         (0, r.jsx)(
                                                             'div',
-                                                            D(L({}, p), {
+                                                            D(k({}, p), {
                                                                 children: (0, r.jsx)(f.qEK, {
                                                                     src: u,
                                                                     avatarDecoration: d,
@@ -259,17 +259,17 @@ function G(e) {
 function H(e) {
     var t;
     let { message: n, compact: l } = e,
-        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: h, resolvedReason: g } = (0, x.FL)(n),
-        E = (0, p.e7)([j.Z], () => j.Z.getChannel(n.channel_id), [n.channel_id]),
-        v = null != (t = null == E ? void 0 : E.guild_id) ? t : null,
-        { shouldShowIncidentActions: C } = (0, _.mI)(v),
+        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: g, resolvedReason: _ } = (0, E.FL)(n),
+        C = (0, p.e7)([j.Z], () => j.Z.getChannel(n.channel_id), [n.channel_id]),
+        x = null != (t = null == C ? void 0 : C.guild_id) ? t : null,
+        { shouldShowIncidentActions: v } = (0, h.mI)(x),
         O = (0, N.sR)(n.author.id, n.channel_id),
-        S = i.useCallback(() => {
-            let e = null == E ? void 0 : E.guild_id;
+        I = i.useCallback(() => {
+            let e = null == C ? void 0 : C.guild_id;
             null != e && (0, y.kW)(n.id, e);
-        }, [n.id, E]),
-        I = h === d.$.DM_RAID,
-        T = I ? f.P4T : f.b6m;
+        }, [n.id, C]),
+        S = g === d.$.DM_RAID,
+        T = S ? f.P4T : f.b6m;
     return (0, r.jsx)(z, {
         compact: l,
         header: (0, r.jsxs)(i.Fragment, {
@@ -281,12 +281,12 @@ function H(e) {
                 (0, r.jsx)(f.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-danger',
-                    children: I ? R.intl.string(R.t['8+lHUV']) : R.intl.string(R.t.xMwcwc)
+                    children: S ? R.intl.string(R.t['8+lHUV']) : R.intl.string(R.t.xMwcwc)
                 })
             ]
         }),
         subheader: (0, r.jsxs)('div', {
-            className: k.dotSeparatedRow,
+            className: L.dotSeparatedRow,
             children: [
                 null != a &&
                     (0, r.jsx)(f.Text, {
@@ -321,9 +321,9 @@ function H(e) {
                       children: R.intl.format(R.t['4QIIZm'], { dateTime: o.toLocaleString(R.intl.currentLocale, b.pQ) })
                   })
                 : null,
-        footerButtons: C
+        footerButtons: v
             ? (0, r.jsxs)('div', {
-                  className: k.dotSeparatedRow,
+                  className: L.dotSeparatedRow,
                   children: [
                       (0, r.jsx)(f.zxk, {
                           onClick: (e) => {
@@ -332,14 +332,14 @@ function H(e) {
                           color: f.zxk.Colors.LINK,
                           look: f.zxk.Looks.LINK,
                           size: f.zxk.Sizes.SMALL,
-                          className: k.buttonStyle,
+                          className: L.buttonStyle,
                           children: (0, r.jsxs)('div', {
-                              className: k.footerAction,
+                              className: L.footerAction,
                               children: [
                                   (0, r.jsx)(f.b7C, {
                                       size: 'xs',
                                       color: c.Z.BLUE_345,
-                                      className: k.footerIcon
+                                      className: L.footerIcon
                                   }),
                                   (0, r.jsx)(f.Text, {
                                       variant: 'text-xs/medium',
@@ -351,17 +351,17 @@ function H(e) {
                       }),
                       (0, r.jsx)(M, {}),
                       (0, r.jsx)(f.zxk, {
-                          onClick: S,
+                          onClick: I,
                           color: f.zxk.Colors.LINK,
                           look: f.zxk.Looks.LINK,
                           size: f.zxk.Sizes.SMALL,
-                          className: k.buttonStyle,
+                          className: L.buttonStyle,
                           children: (0, r.jsx)('div', {
-                              className: k.footerAction,
+                              className: L.footerAction,
                               children: (0, r.jsx)(f.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-link',
-                                  children: (0, x.ge)(g)
+                                  children: (0, E.ge)(_)
                               })
                           })
                       })
@@ -374,7 +374,7 @@ function V(e) {
     var t;
     let { message: n, compact: l } = e,
         a = null == (t = j.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
-        { raidDatetime: o, decisionId: c, suspiciousMentionActivityUntil: u } = (0, x.FL)(n);
+        { raidDatetime: o, decisionId: c, suspiciousMentionActivityUntil: u } = (0, E.FL)(n);
     return (0, r.jsx)(z, {
         compact: l,
         header: (0, r.jsxs)(i.Fragment, {
@@ -391,7 +391,7 @@ function V(e) {
             ]
         }),
         subheader: (0, r.jsx)('div', {
-            className: k.dotSeparatedRow,
+            className: L.dotSeparatedRow,
             children:
                 null != o &&
                 (0, r.jsx)(f.Text, {
@@ -406,22 +406,22 @@ function V(e) {
             children: R.intl.string(R.t.SWIWER)
         }),
         footerButtons: (0, r.jsxs)('div', {
-            className: k.dotSeparatedRow,
+            className: L.dotSeparatedRow,
             children: [
                 (0, r.jsx)(f.zxk, {
                     onClick: function () {
                         null != a &&
                             null != c &&
-                            (0, E.UE)(a, c, () => {
-                                (0, h.c)(u), (0, E.T9)(a);
+                            (0, C.UE)(a, c, () => {
+                                ((0, g.c)(u), (0, C.T9)(a));
                             });
                     },
                     color: f.zxk.Colors.LINK,
                     look: f.zxk.Looks.LINK,
                     size: f.zxk.Sizes.SMALL,
-                    className: k.buttonStyle,
+                    className: L.buttonStyle,
                     children: (0, r.jsx)('div', {
-                        className: k.footerAction,
+                        className: L.footerAction,
                         children: (0, r.jsx)(f.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-link',
@@ -432,14 +432,14 @@ function V(e) {
                 (0, r.jsx)(M, {}),
                 (0, r.jsx)(f.zxk, {
                     onClick: function () {
-                        null != a && v.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
+                        null != a && x.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: f.zxk.Colors.LINK,
                     look: f.zxk.Looks.LINK,
                     size: f.zxk.Sizes.SMALL,
-                    className: k.buttonStyle,
+                    className: L.buttonStyle,
                     children: (0, r.jsx)('div', {
-                        className: k.footerAction,
+                        className: L.footerAction,
                         children: (0, r.jsx)(f.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-link',
@@ -454,21 +454,21 @@ function V(e) {
 function z(e) {
     let { compact: t, header: n, subheader: i, content: l, footerButtons: o } = e;
     return (0, r.jsxs)('div', {
-        className: a()(k.embedCard, { [k.compact]: t }),
+        className: a()(L.embedCard, { [L.compact]: t }),
         children: [
             (0, r.jsxs)('div', {
-                className: k.cardContent,
+                className: L.cardContent,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: k.cardHeaderContianer,
+                        className: L.cardHeaderContianer,
                         children: [
                             (0, r.jsx)('div', {
-                                className: k.cardHeader,
+                                className: L.cardHeader,
                                 children: n
                             }),
                             null != i &&
                                 (0, r.jsx)('div', {
-                                    className: k.subheader,
+                                    className: L.subheader,
                                     children: i
                                 })
                         ]
@@ -478,7 +478,7 @@ function z(e) {
             }),
             null != o &&
                 (0, r.jsx)('div', {
-                    className: a()(k.centeredRowContainer, k.cardFooter, { [k.compact]: t }),
+                    className: a()(L.centeredRowContainer, L.cardFooter, { [L.compact]: t }),
                     children: o
                 })
         ]
@@ -490,43 +490,43 @@ function W(e) {
             avatarSrc: o,
             eventHandlers: { onMouseEnter: s, onMouseLeave: c }
         } = (0, P.m)(!0),
-        { notificationType: d } = (0, x.FL)(i),
+        { notificationType: d } = (0, E.FL)(i),
         p = null == d || d === u.p.RAID;
     return (0, r.jsx)('div', {
         onMouseEnter: s,
         onMouseLeave: c,
         children: (0, r.jsx)(A.Z, {
-            className: a()(k.mainContainer, { [k.compact]: n }),
+            className: a()(L.mainContainer, { [L.compact]: n }),
             iconNode: n ? null : (0, r.jsx)(P.S, { src: o }),
-            iconContainerClassName: k.iconContainer,
+            iconContainerClassName: L.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {
-                className: a()(k.content, { [k.compact]: n }),
+                className: a()(L.content, { [L.compact]: n }),
                 children: [
                     (0, r.jsx)(T.nD, {
                         message: i,
-                        messageClassname: k.spanCorrection,
-                        className: a()(k.usernameContainer, k.spanCorrection, { [k.compact]: n }),
+                        messageClassname: L.spanCorrection,
+                        className: a()(L.usernameContainer, L.spanCorrection, { [L.compact]: n }),
                         username: (0, r.jsxs)('div', {
-                            className: k.spanCorrection,
+                            className: L.spanCorrection,
                             children: [
                                 (0, r.jsx)(f.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: k.username,
+                                    className: L.username,
                                     children: R.intl.string(R.t.hG1StL)
                                 }),
-                                (0, r.jsx)(g.Z, {
+                                (0, r.jsx)(_.Z, {
                                     type: Z.Hb.SYSTEM_DM,
-                                    className: k.systemTag
+                                    className: L.systemTag
                                 }),
                                 p &&
                                     (0, r.jsx)(f.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-primary',
                                         tag: 'span',
-                                        className: k.spanCorrection,
+                                        className: L.spanCorrection,
                                         children: R.intl.string(R.t.ufawc3)
                                     })
                             ]
@@ -534,7 +534,7 @@ function W(e) {
                         compact: n,
                         showTimestamp: !0
                     }),
-                    (0, r.jsx)('div', { className: k.flexLineBreak }),
+                    (0, r.jsx)('div', { className: L.flexLineBreak }),
                     (0, r.jsx)(U, {
                         message: i,
                         compact: n

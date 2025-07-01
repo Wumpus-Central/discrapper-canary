@@ -34,7 +34,7 @@ var r,
         n.src = ''.concat(s).concat(t);
         var r = document.head || document.body;
         if (!r) throw Error('Expected document.body not to be null. Stripe.js requires a <body> element.');
-        return r.appendChild(n), n;
+        return (r.appendChild(n), n);
     },
     p = function (e, t) {
         e &&
@@ -67,13 +67,13 @@ var r,
                   try {
                       var r,
                           i = f();
-                      i && e ? console.warn(u) : i ? i && null !== g && null !== m && (i.removeEventListener('load', g), i.removeEventListener('error', m), null == (r = i.parentNode) || r.removeChild(i), (i = _(e))) : (i = _(e)), (g = b(t, n)), (m = E(n)), i.addEventListener('load', g), i.addEventListener('error', m);
+                      (i && e ? console.warn(u) : i ? i && null !== g && null !== m && (i.removeEventListener('load', g), i.removeEventListener('error', m), null == (r = i.parentNode) || r.removeChild(i), (i = _(e))) : (i = _(e)), (g = b(t, n)), (m = E(n)), i.addEventListener('load', g), i.addEventListener('error', m));
                   } catch (e) {
                       n(e);
                       return;
                   }
               })).catch(function (e) {
-                  return (h = null), Promise.reject(e);
+                  return ((h = null), Promise.reject(e));
               });
     },
     O = function (e, t, n) {
@@ -83,7 +83,7 @@ var r,
             s = i;
         r && o !== s && console.warn('Stripe.js@'.concat(o, ' was loaded on the page, but @stripe/stripe-js@').concat('7.3.1', ' expected Stripe.js@').concat(s, '. This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning'));
         var l = e.apply(void 0, t);
-        return p(l, n), l;
+        return (p(l, n), l);
     },
     v = function (e) {
         var t = 'invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    '.concat(JSON.stringify(e), '\n');
@@ -100,7 +100,7 @@ var r,
             return O(e, t, i);
         });
     };
-(T.setLoadParameters = function (e) {
+((T.setLoadParameters = function (e) {
     if (
         !(
             I &&
@@ -115,4 +115,4 @@ var r,
         r = v(e);
     }
 }),
-    (t.loadStripe = T);
+    (t.loadStripe = T));

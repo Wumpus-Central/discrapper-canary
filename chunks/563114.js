@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     T: () => l,
     Z: () => p
 }),
     n(388685),
     n(704826),
-    n(35282);
+    n(35282));
 var r = n(336317),
     i = n(768581),
     a = n(302221),
@@ -17,7 +17,7 @@ function c(e) {
         let t = 0 > e.indexOf('‍') ? e.replace('️', '') : e;
         return n(723080)('./'.concat(r.Z.convert.toCodePoint(t), '.svg'));
     } catch (t) {
-        return console.warn(t, 'no emoji for', e), '';
+        return (console.warn(t, 'no emoji for', e), '');
     }
 }
 function u(e) {

@@ -15,6 +15,6 @@
           if (t) {
               e.super_ = t;
               var n = function () {};
-              (n.prototype = t.prototype), (e.prototype = new n()), (e.prototype.constructor = e);
+              ((n.prototype = t.prototype), (e.prototype = new n()), (e.prototype.constructor = e));
           }
       });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(953529);
+(n.d(t, { Z: () => A }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -31,7 +31,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -47,8 +47,8 @@ function w(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -147,7 +147,7 @@ function A(e) {
         K = (0, x.Dt)(),
         X = (0, x.Dt)();
     function q(e, t) {
-        o()(null != e, 'Null value not allowed'), null != t && W(t.name), A(e);
+        (o()(null != e, 'Null value not allowed'), null != t && W(t.name), A(e));
     }
     let Q = i.useMemo(() => {
             var e;
@@ -205,7 +205,7 @@ function A(e) {
                                   (0, r.jsx)(k, {
                                       value: m,
                                       onChange: (e) => {
-                                          s !== e &&
+                                          (s !== e &&
                                               e === E.e3.ALL_CHANNELS &&
                                               (0, g.h7j)((e) =>
                                                   (0, r.jsx)(
@@ -221,7 +221,7 @@ function A(e) {
                                                       })
                                                   )
                                               ),
-                                              f(e);
+                                              f(e));
                                       },
                                       'aria-labelledby': Y,
                                       disabled: $
@@ -344,12 +344,12 @@ function A(e) {
                             disabled: !J,
                             onReset: () => {
                                 var e;
-                                f(s), v(null != (e = null == a ? void 0 : a.description) ? e : ''), A(c), M(null == a ? void 0 : a.store_page_guild_products_default_sort), U(null == a ? void 0 : a.server_shop_tab_order);
+                                (f(s), v(null != (e = null == a ? void 0 : a.description) ? e : ''), A(c), M(null == a ? void 0 : a.store_page_guild_products_default_sort), U(null == a ? void 0 : a.server_shop_tab_order));
                             },
                             onSave: () => {
                                 o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                h !== a.description && (e.description = h), null != D && D.startsWith('data:') && (e.cover_image = D), m !== s && (e.full_server_gate = m === E.e3.ALL_CHANNELS), L !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = L), G !== a.server_shop_tab_order && (e.server_shop_tab_order = G), d().isEmpty(e) || z(n.id, e);
+                                (h !== a.description && (e.description = h), null != D && D.startsWith('data:') && (e.cover_image = D), m !== s && (e.full_server_gate = m === E.e3.ALL_CHANNELS), L !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = L), G !== a.server_shop_tab_order && (e.server_shop_tab_order = G), d().isEmpty(e) || z(n.id, e));
                             },
                             saveButtonTooltip: J ? void 0 : T.intl.string(T.t['6HRvio'])
                         })

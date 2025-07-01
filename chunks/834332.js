@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(275726),
     i = n(904245),
     a = n(147913),
@@ -40,7 +40,7 @@ class m extends a.Z {
         });
     }
     constructor(...e) {
-        super(...e), h(this, 'actions', { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates });
+        (super(...e), h(this, 'actions', { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates }));
     }
 }
 let g = new m();

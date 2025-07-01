@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -35,7 +35,7 @@ let b = i.memo(function (e) {
         setTimeout(a, 350);
     }, [j, a]);
     let [O, w] = i.useState(!j),
-        S = (0, c.q_F)({
+        N = (0, c.q_F)({
             opacity: +!!j,
             maxHeight: 500 * !!j,
             config: { duration: 300 },
@@ -43,7 +43,7 @@ let b = i.memo(function (e) {
         });
     return null != t.topic && t.topic.length > 0
         ? (0, r.jsx)(s.animated.div, {
-              style: S,
+              style: N,
               className: O ? x.hiddenVisually : void 0,
               children: (0, r.jsxs)('div', {
                   className: x.container,
@@ -127,7 +127,7 @@ let b = i.memo(function (e) {
                                                                       for (var t = 1; t < arguments.length; t++) {
                                                                           var n = null != arguments[t] ? arguments[t] : {},
                                                                               r = Object.keys(n);
-                                                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                                                          ('function' == typeof Object.getOwnPropertySymbols &&
                                                                               (r = r.concat(
                                                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -135,7 +135,7 @@ let b = i.memo(function (e) {
                                                                               )),
                                                                               r.forEach(function (t) {
                                                                                   var r;
-                                                                                  (r = n[t]),
+                                                                                  ((r = n[t]),
                                                                                       t in e
                                                                                           ? Object.defineProperty(e, t, {
                                                                                                 value: r,
@@ -143,8 +143,8 @@ let b = i.memo(function (e) {
                                                                                                 configurable: !0,
                                                                                                 writable: !0
                                                                                             })
-                                                                                          : (e[t] = r);
-                                                                              });
+                                                                                          : (e[t] = r));
+                                                                              }));
                                                                       }
                                                                       return e;
                                                                   })({}, n)),

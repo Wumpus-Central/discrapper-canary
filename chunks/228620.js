@@ -33,7 +33,7 @@ let b = (0, c.Z)(
                                   id: 'jump-to-channel',
                                   label: h.intl.string(h.t['bQIM4+']),
                                   action: () => {
-                                      (0, u.XU)(e.guild_id, e.id), (0, l.xf)();
+                                      ((0, u.XU)(e.guild_id, e.id), (0, l.xf)());
                                   }
                               })
                     ]

@@ -1,4 +1,4 @@
-r.d(t, { Z: () => d }), r(388685);
+(r.d(t, { Z: () => d }), r(388685));
 var n = r(255367),
     i = r(73800),
     a = r(481060),
@@ -59,13 +59,13 @@ function d(e) {
                                               ringClassName: u.gameArtworkFocusRing
                                           },
                                           onClick: () => {
-                                              r(s.as.ClickImage),
+                                              (r(s.as.ClickImage),
                                                   (0, l.K)({
                                                       items: m,
                                                       startingIndex: t,
                                                       shouldHideMediaOptions: !0,
                                                       location: 'GameProfileMedia'
-                                                  });
+                                                  }));
                                           },
                                           children: (0, n.jsx)('img', {
                                               src: e.url,

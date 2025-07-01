@@ -20,7 +20,7 @@ let g = {
                 if ((0, s.Z)()) return;
                 let e = d.default.getCurrentUser(),
                     l = null != e && 7 > i()().diff(i()(m.default.extractTimestamp(e.id)), 'days'),
-                    o = null != Object.values(c.Z.getGuilds()).find((e) => e.hasFeature(h.oNc.HUB)),
+                    o = null != c.Z.getGuildsArray().find((e) => e.hasFeature(h.oNc.HUB)),
                     u = !(0, a.un)(r.z.HUB_BACK_TO_SCHOOL_UPSELL);
                 !(l || t() || o || !u) && (0, x.b)() && (x.Z.trackExposure({ location: '8b792a_1' }), n(), (0, a.kk)(r.z.HUB_BACK_TO_SCHOOL_UPSELL));
             });

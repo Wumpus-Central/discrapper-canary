@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+(n.d(t, { Z: () => _ }), n(539854));
 var r = n(255367),
     s = n(73800),
     o = n(392711),
@@ -95,12 +95,12 @@ function _(e) {
                                     };
                             }
                         })(m.current[n], r);
-                    (m.current[n].direction = r), (m.current[n].x = s.x), (m.current[n].y = s.y);
-                } else (m.current[n].direction = m.current[n - 1].direction), (m.current[n].x = m.current[n - 1].x), (m.current[n].y = m.current[n - 1].y);
+                    ((m.current[n].direction = r), (m.current[n].x = s.x), (m.current[n].y = s.y));
+                } else ((m.current[n].direction = m.current[n - 1].direction), (m.current[n].x = m.current[n - 1].x), (m.current[n].y = m.current[n - 1].y));
             for (let e = 1; e < m.current.length - 1; e++) m.current[e].type = m.current[e - 1].direction !== m.current[e].direction ? 3 : 1;
         }, []),
         P = (0, s.useCallback)((e) => {
-            (e.fillStyle = '#7f986a'), e.fillRect(0, 0, 422.4, 278.4), e.drawImage(N, 0, 0, 422.4, 278.4);
+            ((e.fillStyle = '#7f986a'), e.fillRect(0, 0, 422.4, 278.4), e.drawImage(N, 0, 0, 422.4, 278.4));
         }, []),
         w = (0, s.useCallback)((e) => {
             m.current.forEach((t, n) => {
@@ -133,7 +133,7 @@ function _(e) {
                 },
                 t = g.current.filter((t) => t.x !== e.x || t.y !== e.y),
                 n = g.current.length - t.length;
-            (g.current = t), n > 0 && (p(), (0, a.KH)(d.yN.SNEK, o.getPoints(n)));
+            ((g.current = t), n > 0 && (p(), (0, a.KH)(d.yN.SNEK, o.getPoints(n))));
         }, [p, o]),
         S = (0, s.useCallback)(() => {
             var e;

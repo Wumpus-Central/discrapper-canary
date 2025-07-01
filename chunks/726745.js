@@ -1,9 +1,9 @@
 let r, i;
-n.d(t, {
+(n.d(t, {
     Z: () => R,
     q: () => m
 }),
-    n(539854);
+    n(539854));
 var a,
     o = n(213919),
     s = n(442837),
@@ -28,7 +28,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -44,11 +44,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -64,19 +64,19 @@ function h(e, t) {
     );
 }
 var m = (function (e) {
-    return (e[(e.INVALID = 0)] = 'INVALID'), (e[(e.VALIDATING = 1)] = 'VALIDATING'), (e[(e.VALID = 2)] = 'VALID'), e;
+    return ((e[(e.INVALID = 0)] = 'INVALID'), (e[(e.VALIDATING = 1)] = 'VALIDATING'), (e[(e.VALID = 2)] = 'VALID'), e);
 })({});
 let g = [],
     E = !1;
 function b(e) {
     let { user: t } = e;
-    (r = t.id), (E = !1);
+    ((r = t.id), (E = !1));
     let n = g.slice(),
         i = n.findIndex((e) => {
             let { id: n } = e;
             return n === t.id;
         });
-    i > -1
+    (i > -1
         ? ((g[i].avatar = t.avatar), (g[i].username = t.username), (g[i].discriminator = t.discriminator), (g[i].tokenStatus = 2))
         : n.push({
               id: t.id,
@@ -90,23 +90,23 @@ function b(e) {
             g.splice(d.$H).forEach((e) => {
                 let { id: t } = e;
                 O(t);
-            });
+            }));
 }
 function y(e) {
-    (E = !!e.isSwitchingAccount),
+    ((E = !!e.isSwitchingAccount),
         e.isSwitchingAccount ||
             (g = g.filter((e) => {
                 let { id: t } = e;
                 return t !== r;
             })),
-        (r = null);
+        (r = null));
 }
 function O(e) {
-    (g = g.filter((t) => {
+    ((g = g.filter((t) => {
         let { id: n } = t;
         return n !== e;
     })),
-        o.removeToken(e);
+        o.removeToken(e));
 }
 function v(e) {
     let { user: t } = e,
@@ -145,7 +145,7 @@ class C extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t;
-            (g = null != (t = e.users) ? t : []), (i = e.canUseMultiAccountMobile);
+            ((g = null != (t = e.users) ? t : []), (i = e.canUseMultiAccountMobile));
         }
     }
     getCanUseMultiAccountMobile() {
@@ -182,7 +182,7 @@ class C extends (a = s.ZP.PersistedStore) {
         return E;
     }
 }
-f(C, 'displayName', 'MultiAccountStore'),
+(f(C, 'displayName', 'MultiAccountStore'),
     f(C, 'persistKey', 'MultiAccountStore'),
     f(C, 'migrations', [
         (e) => {
@@ -198,7 +198,7 @@ f(C, 'displayName', 'MultiAccountStore'),
                 canUseMultiAccountMobile: !1
             };
         }
-    ]);
+    ]));
 let R = new C(l.Z, {
     CONNECTION_OPEN: b,
     LOGOUT: y,

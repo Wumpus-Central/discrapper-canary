@@ -26,11 +26,11 @@ async function o(e) {
         );
     } catch (t) {
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL',
                 applicationId: e
             }),
-            new l.Z(t))
+            new l.Z(t)
         );
     }
 }

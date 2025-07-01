@@ -1,22 +1,22 @@
-d.r(e), d.d(e, { default: () => s });
-var n = d(367907),
-    a = d(592125),
-    i = d(888369),
-    u = d(430824),
-    c = d(9156),
-    l = d(981631);
-function s(t, e) {
-    let d = a.Z.getChannel(t);
+(e.r(d), e.d(d, { default: () => r }));
+var n = e(367907),
+    a = e(592125),
+    i = e(888369),
+    u = e(430824),
+    c = e(9156),
+    l = e(981631);
+function r(t, d) {
+    let e = a.Z.getChannel(t);
     (0, n.yw)(l.rMx.ACK_MESSAGES, {
         channel_id: t,
-        guild_id: null == d ? void 0 : d.getGuildId(),
-        location: e,
-        guild_unread_statuses: Object.values(u.Z.getGuilds()).map((t) => {
-            let e = i.default.hasUnread(t.id),
-                d = i.default.getMentionCount(t.id),
+        guild_id: null == e ? void 0 : e.getGuildId(),
+        location: d,
+        guild_unread_statuses: u.Z.getGuildsArray().map((t) => {
+            let d = i.default.hasUnread(t.id),
+                e = i.default.getMentionCount(t.id),
                 n = c.ZP.isMuted(t.id),
                 a = c.ZP.resolveGuildUnreadSetting(t);
-            return ''.concat(t.id, ',').concat(e, ',').concat(d, ',').concat(n, ',').concat(a);
+            return ''.concat(t.id, ',').concat(d, ',').concat(e, ',').concat(n, ',').concat(a);
         })
     });
 }

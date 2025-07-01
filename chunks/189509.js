@@ -5,6 +5,6 @@ var i = n(607070),
 let l = {
     binds: ['return'],
     action() {
-        if (!i.Z.keyboardModeEnabled && r.S.hasSubscribers(s.CkL.MODAL_SUBMIT)) return r.S.dispatch(s.CkL.MODAL_SUBMIT), !1;
+        if (!i.Z.keyboardModeEnabled && r.S.hasSubscribers(s.CkL.MODAL_SUBMIT)) return (r.S.dispatch(s.CkL.MODAL_SUBMIT), !1);
     }
 };

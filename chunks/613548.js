@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(539854);
+(n.d(t, { Z: () => M }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(616286),
     O = n(975146),
     E = n(597998),
-    I = n(606304),
-    S = n(358221),
+    S = n(606304),
+    I = n(358221),
     P = n(355827),
     Z = n(185935),
     N = n(354459),
@@ -33,7 +33,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -49,8 +49,8 @@ function w(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -74,12 +74,12 @@ function R(e, t) {
 }
 function k(e) {
     let { channelId: t, guildId: n } = e,
-        i = (0, c.Wu)([I.Z, S.Z], () => {
+        i = (0, c.Wu)([S.Z, I.Z], () => {
             let e = Date.now();
-            return s()(I.Z.getSpeakers())
-                .map((e) => S.Z.getParticipant(t, e))
+            return s()(S.Z.getSpeakers())
+                .map((e) => I.Z.getParticipant(t, e))
                 .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, y.ZP)(e))
-                .sortBy((t) => -I.Z.getSpeakingDuration(t.user.id, e))
+                .sortBy((t) => -S.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
         });
@@ -118,21 +118,21 @@ function M(e) {
         {
             voiceParticipantsHidden: y,
             selectedParticipant: E,
-            userParticipantCount: I,
+            userParticipantCount: S,
             participantsListOpen: T
         } = (0, c.cj)(
-            [S.Z],
+            [I.Z],
             () => ({
-                selectedParticipant: S.Z.getSelectedParticipant(s),
-                voiceParticipantsHidden: S.Z.getVoiceParticipantsHidden(s),
-                userParticipantCount: S.Z.getUserParticipantCount(s),
-                participantsListOpen: S.Z.getParticipantsListOpen(s)
+                selectedParticipant: I.Z.getSelectedParticipant(s),
+                voiceParticipantsHidden: I.Z.getVoiceParticipantsHidden(s),
+                userParticipantCount: I.Z.getUserParticipantCount(s),
+                participantsListOpen: I.Z.getParticipantsListOpen(s)
             }),
             [s]
         ),
         M = t.isGuildVoice() && !n,
-        { hasParticipantsPanel: D } = (0, Z.Z)({ location: 'ChannelCallHeaderToolbar' }),
-        L = !T && D && (t.isGuildVoice() || t.isGroupDM()),
+        { hasParticipantsPanel: L } = (0, Z.Z)({ location: 'ChannelCallHeaderToolbar' }),
+        D = !T && L && (t.isGuildVoice() || t.isGroupDM()),
         { enabled: U, inInbox: B } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         F = [];
     return (
@@ -193,7 +193,7 @@ function M(e) {
                 )
             ),
         y &&
-            !D &&
+            !L &&
             F.push(
                 (0, r.jsx)(
                     u.yRy,
@@ -208,7 +208,7 @@ function M(e) {
                                 R(w({}, e), {
                                     buttonRef: l,
                                     isActive: n,
-                                    count: I,
+                                    count: S,
                                     key: 'call-members',
                                     className: A.button
                                 })
@@ -219,7 +219,7 @@ function M(e) {
                 )
             ),
         U && !B && F.push((0, r.jsx)(_.Z, { className: A.button }, 'for-later')),
-        L &&
+        D &&
             F.push(
                 (0, r.jsx)(
                     O.Z,

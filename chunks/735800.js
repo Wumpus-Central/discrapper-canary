@@ -32,9 +32,9 @@ function a(e) {
     }
     return r[e];
 }
-(i.keys = function () {
+((i.keys = function () {
     return Object.keys(r);
 }),
     (i.resolve = a),
     (e.exports = i),
-    (i.id = 735800);
+    (i.id = 735800));

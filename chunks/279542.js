@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => L,
     fp: () => R,
     k0: () => w
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -33,7 +33,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -49,8 +49,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -79,7 +79,7 @@ function P(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await _.Z.saveGuild(t.id, { verificationLevel: n }), _.Z.updateGuild({ verificationLevel: n });
+                    (await _.Z.saveGuild(t.id, { verificationLevel: n }), _.Z.updateGuild({ verificationLevel: n }));
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(N.intl.string(N.t['46Rs3t']), c.ToastType.FAILURE));
                 }
@@ -127,7 +127,7 @@ function w(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await _.Z.saveGuild(t.id, { explicitContentFilter: n }), _.Z.updateGuild({ explicitContentFilter: n });
+                    (await _.Z.saveGuild(t.id, { explicitContentFilter: n }), _.Z.updateGuild({ explicitContentFilter: n }));
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(N.intl.string(N.t['46Rs3t']), c.ToastType.FAILURE));
                 }
@@ -175,7 +175,7 @@ function w(e) {
 async function R(e, t) {
     if (e.hasFeature(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
     let n = e.features;
-    return t ? n.add(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await _.Z.saveGuild(e.id, { features: n });
+    return (t ? n.add(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await _.Z.saveGuild(e.id, { features: n }));
 }
 async function Z(e, t) {
     return await _.Z.saveGuild(e.id, { moderatorReportingEnabled: t });
@@ -188,7 +188,7 @@ function D(e) {
         [a, d] = i.useState(t.hasFeature(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         u = i.useCallback(
             async (e) => {
-                d(e), await R(t, e);
+                (d(e), await R(t, e));
             },
             [t]
         );
@@ -311,7 +311,7 @@ function A(e) {
         [s, a] = i.useState(t.getModeratorReportingEnabled() && l),
         d = i.useCallback(
             async (e) => {
-                a(e), await Z(t, e);
+                (a(e), await Z(t, e));
             },
             [t]
         );

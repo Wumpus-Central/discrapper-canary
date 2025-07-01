@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     En: () => P,
     dY: () => S,
     eC: () => R,
@@ -20,7 +20,7 @@ n.d(t, {
     n(490233),
     n(97749),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(913527),
@@ -44,7 +44,7 @@ function b(e) {
 function y(e, t, n) {
     if ((null != t && f.test(t.name)) || _.test(n.url)) return !1;
     let r = null != n.proxy_url || /^https:/i.test(n.url);
-    return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r;
+    return (null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r);
 }
 function O(e) {
     let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: o, description: s, flags: c, content_type: d } = e;
@@ -148,7 +148,7 @@ function T(e) {
             if (null == e.url) return void n.push(e);
             let r = t.get(e.url);
             if (null == r) {
-                n.push(e), t.set(e.url, e);
+                (n.push(e), t.set(e.url, e));
                 return;
             }
             null != e.image && (null == r.images && ((r.images = []), null != r.image && r.images.push(r.image)), r.images.push(e.image));

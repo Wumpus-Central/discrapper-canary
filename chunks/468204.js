@@ -12,7 +12,7 @@ function l(e) {
         l = new o.S(a, new s.V(a)),
         u = new r.f(a, l),
         d = e(u, t, n);
-    return u.receiveBackend(d), u;
+    return (u.receiveBackend(d), u);
 }
 function c(e) {
     var t = 'undefined' != typeof window && window.__REDUX_DEVTOOLS_EXTENSION__;

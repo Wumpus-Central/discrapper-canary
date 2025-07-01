@@ -20,7 +20,7 @@ var r = n(46015),
         }),
     b = String(String).split('String'),
     y = (e.exports = function (e, t, n) {
-        'Symbol(' === h(_(t), 0, 7) && (t = '[' + m(_(t), /^Symbol\(([^)]*)\).*$/, '$1') + ']'),
+        ('Symbol(' === h(_(t), 0, 7) && (t = '[' + m(_(t), /^Symbol\(([^)]*)\).*$/, '$1') + ']'),
             n && n.getter && (t = 'get ' + t),
             n && n.setter && (t = 'set ' + t),
             (!o(e, 'name') || (l && e.name !== t)) &&
@@ -30,12 +30,12 @@ var r = n(46015),
                           configurable: !0
                       })
                     : (e.name = t)),
-            E && n && o(n, 'arity') && e.length !== n.arity && p(e, 'length', { value: n.arity });
+            E && n && o(n, 'arity') && e.length !== n.arity && p(e, 'length', { value: n.arity }));
         try {
             n && o(n, 'constructor') && n.constructor ? s && p(e, 'prototype', { writable: !1 }) : e.prototype && (e.prototype = void 0);
         } catch (e) {}
         var r = d(e);
-        return o(r, 'source') || (r.source = g(b, 'string' == typeof t ? t : '')), e;
+        return (o(r, 'source') || (r.source = g(b, 'string' == typeof t ? t : '')), e);
     });
 Function.prototype.toString = y(function () {
     return (a(this) && f(this).source) || c(this);

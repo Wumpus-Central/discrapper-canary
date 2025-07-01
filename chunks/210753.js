@@ -1,4 +1,9 @@
-n.d(t, { $: () => p }), n(539854), n(388685);
+(n.d(t, {
+    $: () => h,
+    M: () => p
+}),
+    n(539854),
+    n(388685));
 var r = n(73800),
     i = n(392711),
     a = n.n(i),
@@ -26,25 +31,28 @@ class f {
     }
     _flush() {
         let e = [];
-        this._pending.forEach((t) => {
-            this._fetched.add(t), e.push(t);
+        (this._pending.forEach((t) => {
+            (this._fetched.add(t), e.push(t));
         }),
             this._pending.clear(),
             a()
                 .chunk(e, d)
                 .forEach((e) => {
                     l.Z.getDetectableGamesSupplemental(e);
-                });
+                }));
     }
     constructor() {
-        u(this, '_fetched', new Set()), u(this, '_pending', new Set()), u(this, '_flushHandler', new s.sW(0, () => this._flush()));
+        (u(this, '_fetched', new Set()), u(this, '_pending', new Set()), u(this, '_flushHandler', new s.sW(32, () => this._flush())));
     }
 }
 let _ = new f();
-function p(e, t) {
+function p(e) {
     r.useEffect(() => {
         null != e && _.request(e);
     }, [e]);
+}
+function h(e, t) {
+    p(e);
     let n = r.useMemo(
         () =>
             null != t

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685), n(539854), n(642613);
+(n.d(t, { Z: () => z }), n(388685), n(539854), n(642613));
 var r,
     i = n(442837),
     a = n(570140),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -105,7 +105,7 @@ function T() {
     y.loading = !0;
 }
 function S() {
-    (y.loading = !1), (y.initialized = !0), (y.errored = !0);
+    ((y.loading = !1), (y.initialized = !0), (y.errored = !0));
 }
 function A(e) {
     return b(g({}, e), {
@@ -124,7 +124,7 @@ function C(e) {
     v();
     let t = [],
         n = new Set();
-    e.relationships.forEach((e) => {
+    (e.relationships.forEach((e) => {
         let { type: r, user: i, since: a, is_spam_request: o, user_ignored: s, origin_application_id: l } = e;
         if (null == i || (s && n.add(i.id), r !== h.OGo.PENDING_INCOMING || o || s || null == a)) return null;
         let c = d.default.getUser(i.id);
@@ -142,7 +142,7 @@ function C(e) {
                 Y(e);
             });
         }),
-        (y.notifCenterLocalItems = t);
+        (y.notifCenterLocalItems = t));
 }
 function R(e) {
     let { items: t, hasMore: n, cursor: r } = e;
@@ -151,12 +151,12 @@ function R(e) {
 function P(e) {
     let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? A(e.item) : e.item;
     if (!y.initialized || !O(t) || y.notifCenterIds.has(t.id)) return !1;
-    y.notifCenterIds.add(t.id), (y.notifCenterItems = [t, ...y.notifCenterItems]), y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id));
+    (y.notifCenterIds.add(t.id), (y.notifCenterItems = [t, ...y.notifCenterItems]), y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id)));
 }
 function w(e) {
     let { id: t } = e;
     if (!y.notifCenterIds.has(t)) return !1;
-    y.notifCenterIds.delete(t), (y.notifCenterItems = y.notifCenterItems.filter((e) => e.id !== t));
+    (y.notifCenterIds.delete(t), (y.notifCenterItems = y.notifCenterItems.filter((e) => e.id !== t)));
 }
 function D(e, t) {
     y.notifCenterItems = y.notifCenterItems.map((n) => (e.includes(n.id) ? b(g({}, n), { acked: t }) : n)).filter(O);
@@ -194,7 +194,7 @@ function G(e) {
             null != e && (y.notifCenterLocalItems = [...y.notifCenterLocalItems, (0, p.mH)(e, s, l)]);
         }
     }
-    r !== h.OGo.FRIEND ||
+    (r !== h.OGo.FRIEND ||
         null == t.user ||
         a ||
         (y.notifCenterLocalItems = y.notifCenterLocalItems.map((e) =>
@@ -207,7 +207,7 @@ function G(e) {
                   })
                 : e
         )),
-        (r === h.OGo.BLOCKED || a) && (y.notifCenterLocalItems = y.notifCenterLocalItems.filter((e) => !j(e, _.O7.INCOMING_FRIEND_REQUESTS, n) && !j(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n) && !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS, n) && !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n)));
+        (r === h.OGo.BLOCKED || a) && (y.notifCenterLocalItems = y.notifCenterLocalItems.filter((e) => !j(e, _.O7.INCOMING_FRIEND_REQUESTS, n) && !j(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n) && !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS, n) && !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n))));
 }
 function B(e) {
     y.notifCenterLocalItems = y.notifCenterLocalItems.filter((t) => !j(t, _.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !j(t, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
@@ -313,7 +313,7 @@ class K extends (r = i.ZP.PersistedStore) {
         return y.notifCenterTabFocused;
     }
 }
-m(K, 'displayName', 'NotificationCenterItemsStore'), m(K, 'persistKey', 'NotificationCenterItemsStore_v2');
+(m(K, 'displayName', 'NotificationCenterItemsStore'), m(K, 'persistKey', 'NotificationCenterItemsStore_v2'));
 let z = new K(a.Z, {
     CONNECTION_OPEN: C,
     LOGOUT: () => v(),

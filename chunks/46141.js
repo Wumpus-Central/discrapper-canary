@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $z: () => R,
     D0: () => E,
     JC: () => A,
@@ -19,7 +19,7 @@ n.d(t, {
     z: () => I
 }),
     n(997841),
-    n(415506);
+    n(415506));
 var r = n(81825),
     i = n(770555),
     a = n(630388),
@@ -42,7 +42,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -58,11 +58,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -202,14 +202,14 @@ class f extends r.Z {
     constructor(e) {
         var t, n, r, i;
         if ((super(), l(this, 'id', void 0), l(this, 'type', void 0), l(this, 'paymentGateway', void 0), l(this, 'billingAddress', void 0), l(this, 'country', void 0), l(this, 'invalid', void 0), l(this, 'isDefault', void 0), l(this, 'flags', void 0), l(this, 'email', void 0), l(this, 'brand', void 0), l(this, 'bank', void 0), l(this, 'username', void 0), !Object.values(s.HeQ).includes(e.type))) throw Error('Unrecognized payment source type '.concat(e.type));
-        (this.id = e.id), (this.type = e.type), (this.paymentGateway = e.paymentGateway), (this.invalid = null != (t = e.invalid) && t), (this.billingAddress = null != (n = e.billingAddress) ? n : {}), (this.isDefault = e.isDefault), (this.flags = null != (r = e.flags) ? r : 0), (this.country = null != (i = e.country) ? i : '');
+        ((this.id = e.id), (this.type = e.type), (this.paymentGateway = e.paymentGateway), (this.invalid = null != (t = e.invalid) && t), (this.billingAddress = null != (n = e.billingAddress) ? n : {}), (this.isDefault = e.isDefault), (this.flags = null != (r = e.flags) ? r : 0), (this.country = null != (i = e.country) ? i : ''));
     }
 }
 class _ extends f {
     constructor(e) {
         var t, n, r, i;
         if ((super(e), l(this, 'brand', void 0), l(this, 'last4', void 0), l(this, 'expiresMonth', void 0), l(this, 'expiresYear', void 0), e.type !== s.HeQ.CARD)) throw Error('Cannot instantiate CreditCardSourceRecord with type: '.concat(e.type, ', must be ').concat(s.HeQ.CARD));
-        (this.brand = null != (t = e.brand) ? t : ''), (this.last4 = null != (n = e.last4) ? n : ''), (this.expiresMonth = null != (r = e.expiresMonth) ? r : 0), (this.expiresYear = null != (i = e.expiresYear) ? i : 0);
+        ((this.brand = null != (t = e.brand) ? t : ''), (this.last4 = null != (n = e.last4) ? n : ''), (this.expiresMonth = null != (r = e.expiresMonth) ? r : 0), (this.expiresYear = null != (i = e.expiresYear) ? i : 0));
     }
 }
 class p extends f {
@@ -232,7 +232,7 @@ class m extends f {
 class g extends f {
     constructor(e) {
         if ((super(e), e.type !== s.HeQ.PRZELEWY24)) throw Error('Cannot instantiate Przelewy24SourceRecord with type: '.concat(e.type, ', must be ').concat(s.HeQ.PRZELEWY24));
-        (this.email = e.email || ''), (this.bank = e.bank);
+        ((this.email = e.email || ''), (this.bank = e.bank));
     }
 }
 class E extends f {

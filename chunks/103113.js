@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -40,7 +40,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -70,7 +70,7 @@ function R(e) {
         null == D || D(null == B ? void 0 : B.current);
     }, [B, D]);
     let F = () => {
-            null == L || L(),
+            (null == L || L(),
                 (0, h.openUserProfileModal)(
                     C(
                         {
@@ -79,7 +79,7 @@ function R(e) {
                         },
                         G
                     )
-                );
+                ));
         },
         Z = !x && (0, c.Z)(t.id),
         H = () =>
@@ -88,7 +88,7 @@ function R(e) {
                       id: 'view-profile',
                       label: S.intl.string(S.t['+Xp3ho']),
                       action: () => {
-                          F(),
+                          (F(),
                               (0, _.pQ)(
                                   C(
                                       {
@@ -97,7 +97,7 @@ function R(e) {
                                       },
                                       G
                                   )
-                              );
+                              ));
                       }
                   })
                 : null,

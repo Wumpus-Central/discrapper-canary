@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(953529);
+(n.d(t, { Z: () => _ }), n(953529));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -107,7 +107,7 @@ let _ = (e) => {
                             color: Z,
                             className: l()(b.bentoBoxButton, D ? b.bentoBoxButtonWhite : b.bentoBoxButtonBrand),
                             onClick: () => {
-                                w(), v();
+                                (w(), v());
                             },
                             children: _
                         })

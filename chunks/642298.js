@@ -1,4 +1,4 @@
-n.d(t, { default: () => k }), n(388685);
+(n.d(t, { default: () => k }), n(388685));
 var s = n(255367),
     r = n(73800),
     l = n(990547),
@@ -93,7 +93,7 @@ function k(e) {
                         impressionProperties: K,
                         children: (0, s.jsx)(N.Z, {
                             onNext: () => {
-                                x.default.track(h.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: G }), v(A.Ax.EMAIL_AND_PASSWORD);
+                                (x.default.track(h.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: G }), v(A.Ax.EMAIL_AND_PASSWORD));
                             },
                             onClose: g
                         })
@@ -106,7 +106,7 @@ function k(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         s = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (s = s.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -114,7 +114,7 @@ function k(e) {
                                         )),
                                         s.forEach(function (t) {
                                             var s;
-                                            (s = n[t]),
+                                            ((s = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: s,
@@ -122,8 +122,8 @@ function k(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = s);
-                                        });
+                                                    : (e[t] = s));
+                                        }));
                                 }
                                 return e;
                             })({}, K)),
@@ -146,12 +146,12 @@ function k(e) {
                             isSlideReady: b === A.Ax.EMAIL_AND_PASSWORD,
                             onBack: O ? () => v(null != G && C.Mr.has(G) ? A.Ax.CHANGE_EMAIL_WARNING : A.Ax.CHANGE_EMAIL_REASONS) : null,
                             onNext: (e) => {
-                                x.default.track(h.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, {
+                                (x.default.track(h.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, {
                                     change_email_reason_enum: G,
                                     free_text_response: Z
                                 }),
                                     P(e),
-                                    v(A.Ax.COMPLETE);
+                                    v(A.Ax.COMPLETE));
                             },
                             onClose: g
                         })

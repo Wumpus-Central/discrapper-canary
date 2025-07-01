@@ -25,6 +25,6 @@ class a extends r.Z {
         });
     }
     constructor(e) {
-        super(), i(this, 'planId', void 0), i(this, 'countryCode', void 0), i(this, 'amount', void 0), i(this, 'currency', void 0), i(this, 'paymentSourceTypes', void 0), (this.planId = e.planId), (this.countryCode = e.countryCode), (this.amount = e.amount), (this.currency = e.currency), (this.paymentSourceTypes = e.paymentSourceTypes);
+        (super(), i(this, 'planId', void 0), i(this, 'countryCode', void 0), i(this, 'amount', void 0), i(this, 'currency', void 0), i(this, 'paymentSourceTypes', void 0), (this.planId = e.planId), (this.countryCode = e.countryCode), (this.amount = e.amount), (this.currency = e.currency), (this.paymentSourceTypes = e.paymentSourceTypes));
     }
 }

@@ -18,7 +18,7 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -37,7 +37,7 @@ function s(e, t) {
         i = l(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -47,7 +47,7 @@ function l(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function c(e, t, n) {
@@ -61,12 +61,12 @@ function c(e, t, n) {
         e(a)
             .then((e) => {
                 let n = r.properties;
-                'function' == typeof r.properties && (n = r.properties(e)), (0, i.trackNetworkAction)(r.event, o({ status_code: e.status }, l, n)), t(e);
+                ('function' == typeof r.properties && (n = r.properties(e)), (0, i.trackNetworkAction)(r.event, o({ status_code: e.status }, l, n)), t(e));
             })
             .catch((e) => {
                 var t, a;
                 let s = r.properties;
-                'function' == typeof r.properties && (s = r.properties(e)),
+                ('function' == typeof r.properties && (s = r.properties(e)),
                     (0, i.trackNetworkAction)(
                         r.event,
                         o(
@@ -79,7 +79,7 @@ function c(e, t, n) {
                             s
                         )
                     ),
-                    n(e);
+                    n(e));
             });
     });
 }

@@ -27,7 +27,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -43,8 +43,8 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -156,7 +156,7 @@ let P = i.forwardRef((e, t) => {
                                                         S(E({}, e), {
                                                             ref: L,
                                                             onClick: (t) => {
-                                                                t.stopPropagation(), e.onClick(t);
+                                                                (t.stopPropagation(), e.onClick(t));
                                                             },
                                                             className: I.avatar,
                                                             src: l.action === y.rsA.AUTO_MODERATION_BLOCK_MESSAGE || l.action === y.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || l.action === y.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || l.action === y.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, v.j)() : null == (t = l.user) ? void 0 : t.getAvatarURL(_, 40),

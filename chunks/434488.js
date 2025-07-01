@@ -22,12 +22,12 @@ var r = n(255367),
     j = n(981631),
     O = n(388032),
     E = n(413384),
-    I = n(359165);
-function S(e) {
+    S = n(359165);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -43,8 +43,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -124,21 +124,21 @@ function N(e) {
                                             r,
                                             i = {},
                                             l = Object.keys(e);
-                                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                         return i;
                                     })(e, t);
                                 if (Object.getOwnPropertySymbols) {
                                     var l = Object.getOwnPropertySymbols(e);
-                                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                 }
                                 return i;
                             })(e, ['onClick']);
                         return (0, r.jsx)(
                             c.P3F,
-                            P(S({}, n), {
+                            P(I({}, n), {
                                 className: E.clickableTile,
                                 onClick: () => {
-                                    null == t || t(), p();
+                                    (null == t || t(), p());
                                 },
                                 children: (0, r.jsx)('div', {
                                     className: E.iconContainer,
@@ -185,11 +185,11 @@ function T(e) {
     function h() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        P(S({}, n), {
+                        P(I({}, n), {
                             guild: l,
                             channel: t,
                             source: j.t4x.ACTIVITY_ENTRY_POINT_TILE
@@ -218,7 +218,7 @@ function T(e) {
                     className: o()(E.root, E.singleUserRoot, e),
                     children: [
                         (0, r.jsx)('img', {
-                            src: I,
+                            src: S,
                             className: E.art,
                             alt: ''
                         }),
@@ -268,7 +268,7 @@ function A(e) {
     });
     let f = (0, p.Z)({ guildId: n.id }).slice(0, 3),
         { analyticsLocations: y } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION),
-        I = i.useMemo(
+        S = i.useMemo(
             () => ({
                 channel: t,
                 type: 'channel'
@@ -293,7 +293,7 @@ function A(e) {
                         (0, r.jsx)(
                             h.Y,
                             {
-                                context: I,
+                                context: S,
                                 activityItem: e,
                                 aspectRatio: h.Y.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: E.activitySuggestion,
@@ -306,12 +306,12 @@ function A(e) {
                 (0, r.jsxs)(c.P3F, {
                     className: E.checkboxContainer,
                     onClick: function () {
-                        x.default.track(j.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        (x.default.track(j.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: 'activity suggestion',
                             close_type: 'permanent',
                             n_participants: d
                         }),
-                            (0, _.EW)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, _.EW)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT));
                     },
                     children: [
                         (0, r.jsx)(C.Z, {}),
@@ -324,12 +324,12 @@ function A(e) {
                 (0, r.jsx)(c.P3F, {
                     className: E.closeButtonContainer,
                     onClick: function () {
-                        x.default.track(j.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        (x.default.track(j.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: 'activity suggestion',
                             close_type: 'temporary',
                             n_participants: d
                         }),
-                            l();
+                            l());
                     },
                     children: (0, r.jsx)(c.Dio, {
                         size: 'md',

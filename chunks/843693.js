@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => M,
     wU: () => D
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(442837),
     a = n(759174),
@@ -32,7 +32,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,11 +48,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -74,7 +74,7 @@ function b(e, t) {
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -84,7 +84,7 @@ function y(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let O = 7,
@@ -134,7 +134,7 @@ function C(e) {
             multiplier: Math.min(null != (i = null != (r = e.multiplier) ? r : null == c ? void 0 : c.multiplier) ? i : 1, O),
             decayInterval: null != (a = null == c ? void 0 : c.decayInterval) ? a : new o.Xp()
         });
-    T.set(N(e), u),
+    (T.set(N(e), u),
         l &&
             (null == (s = u.decayInterval) ||
                 s.start(v, () => {
@@ -143,7 +143,7 @@ function C(e) {
                         let n = u.multiplier !== e.multiplier && u.value !== e.value;
                         if (e.value <= 0 || n) {
                             var t;
-                            null == (t = e.decayInterval) || t.stop(),
+                            (null == (t = e.decayInterval) || t.stop(),
                                 e.value <= 0 &&
                                     (C(
                                         E(m({}, e), {
@@ -151,10 +151,10 @@ function C(e) {
                                             multiplier: 1
                                         })
                                     ),
-                                    k.emitChange());
-                        } else C(E(m({}, e), { value: e.value - 1 })), k.emitChange();
+                                    k.emitChange()));
+                        } else (C(E(m({}, e), { value: e.value - 1 })), k.emitChange());
                     }
-                }));
+                })));
 }
 function R(e) {
     A.set(e.messageId, e);

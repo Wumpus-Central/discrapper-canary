@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     P: () => f,
     Z: () => h
 }),
-    n(388685);
+    n(388685));
 var l = n(255367),
     i = n(481060),
     r = n(239091),
@@ -22,7 +22,7 @@ function f(e) {
         application: n,
         guildId: l,
         onItemClick: () => {
-            (0, i.Mr3)(p.e9), (0, u.yT)(d.ti.DISMISSED);
+            ((0, i.Mr3)(p.e9), (0, u.yT)(d.ti.DISMISSED));
         }
     });
 }

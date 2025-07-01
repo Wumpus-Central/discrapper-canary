@@ -1,30 +1,30 @@
-n.d(t, {
-    Es: () => b,
-    Eu: () => v,
-    bt: () => h
+(n.d(t, {
+    Es: () => _,
+    Eu: () => h,
+    bt: () => v
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(73800),
     i = n(392711),
     l = n(442837),
-    a = n(413523),
-    o = n(358221),
+    o = n(413523),
+    a = n(358221),
     s = n(189786),
     c = n(314897),
     u = n(592125),
     d = n(271383),
-    f = n(878884),
-    p = n(19780),
+    p = n(878884),
+    f = n(19780),
     m = n(594174),
     g = n(979651),
-    _ = n(823379);
-function b(e, t) {
-    let n = (0, l.e7)([f.Z, p.Z], () => (e === p.Z.getChannelId() ? f.Z.getDesyncedVoiceStates() : null)),
-        a = (0, l.Wu)([o.Z], () => (null == e ? [] : [...o.Z.getGuildRingingUsers(e)])),
-        c = (0, l.Wu)([m.default], () => a.map((e) => m.default.getUser(e)).filter(_.lm)),
+    b = n(823379);
+function _(e, t) {
+    let n = (0, l.e7)([p.Z, f.Z], () => (e === f.Z.getChannelId() ? p.Z.getDesyncedVoiceStates() : null)),
+        o = (0, l.Wu)([a.Z], () => (null == e ? [] : [...a.Z.getGuildRingingUsers(e)])),
+        c = (0, l.Wu)([m.default], () => o.map((e) => m.default.getUser(e)).filter(b.lm)),
         g = (0, l.e7)([u.Z], () => u.Z.getBasicChannel(e)),
-        b = r.useMemo(
+        _ = r.useMemo(
             () =>
                 c.map((e) => ({
                     voiceState: new s.Z(e.id),
@@ -42,7 +42,7 @@ function b(e, t) {
                 if ((null == e || 0 === e.length) && 0 === n.length) return t;
                 let r = [],
                     l = new Set();
-                for (let e of t) r.push(e), l.add(e.user.id);
+                for (let e of t) (r.push(e), l.add(e.user.id));
                 return (
                     null == e ||
                         e.forEach((e) => {
@@ -69,12 +69,12 @@ function b(e, t) {
                         }),
                     r
                 );
-            })(n, t, b),
-        [n, t, b]
+            })(n, t, _),
+        [n, t, _]
     );
 }
-function h(e, t) {
-    let n = (0, l.e7)([f.Z, p.Z], () => (e === p.Z.getChannelId() ? f.Z.getDesyncedParticipants() : null));
+function v(e, t) {
+    let n = (0, l.e7)([p.Z, f.Z], () => (e === f.Z.getChannelId() ? p.Z.getDesyncedParticipants() : null));
     return r.useMemo(
         () =>
             (function (e, t) {
@@ -83,7 +83,7 @@ function h(e, t) {
                 return (
                     e.forEach((e) => {
                         n.splice(
-                            (0, i.sortedIndexBy)(n, e, (e) => (0, a.Yr)(e)),
+                            (0, i.sortedIndexBy)(n, e, (e) => (0, o.Yr)(e)),
                             0,
                             e
                         );
@@ -94,34 +94,34 @@ function h(e, t) {
         [n, t]
     );
 }
-function v(e, t) {
+function h(e, t) {
     let n = (0, l.e7)([c.default], () => c.default.getId() === t),
-        i = (0, l.e7)([p.Z], () => p.Z.getChannelId()),
-        a = r.useRef(null),
-        [o, s] = r.useState(!1),
+        i = (0, l.e7)([f.Z], () => f.Z.getChannelId()),
+        o = r.useRef(null),
+        [a, s] = r.useState(!1),
         [u, d] = r.useState(!1),
-        f = (0, l.e7)([p.Z, g.Z], () => null != t && null != e && p.Z.getChannelId() === e && null != g.Z.isInChannel(e, t) && p.Z.isUserConnected(t)),
-        m = (0, l.e7)([p.Z, g.Z], () => null != t && null != e && p.Z.getChannelId() === e && null != g.Z.isInChannel(e, t) && !p.Z.isUserConnected(t));
+        p = (0, l.e7)([f.Z, g.Z], () => null != t && null != e && f.Z.getChannelId() === e && null != g.Z.isInChannel(e, t) && f.Z.isUserConnected(t)),
+        m = (0, l.e7)([f.Z, g.Z], () => null != t && null != e && f.Z.getChannelId() === e && null != g.Z.isInChannel(e, t) && !f.Z.isUserConnected(t));
     return (
         r.useEffect(() => {
-            f && d(!0);
-        }, [f]),
+            p && d(!0);
+        }, [p]),
         r.useEffect(() => {
             i !== e && d(!1);
         }, [e, i]),
         r.useEffect(
             () => (
-                m && null == a.current
-                    ? (a.current = setTimeout(() => {
-                          (a.current = null), s(!0);
+                m && null == o.current
+                    ? (o.current = setTimeout(() => {
+                          ((o.current = null), s(!0));
                       }, 250))
-                    : (clearTimeout(a.current), (a.current = null), s(!1)),
+                    : (clearTimeout(o.current), (o.current = null), s(!1)),
                 () => {
-                    clearTimeout(a.current), (a.current = null);
+                    (clearTimeout(o.current), (o.current = null));
                 }
             ),
             [m]
         ),
-        !n && u && o
+        !n && u && a
     );
 }

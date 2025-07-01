@@ -8,6 +8,6 @@ let a = (function () {
         if (o) return o(t);
         e.prototype = t;
         var r = new e();
-        return (e.prototype = void 0), r;
+        return ((e.prototype = void 0), r);
     };
 })();

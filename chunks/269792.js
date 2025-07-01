@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => h }), a(388685);
+(a.r(t), a.d(t, { default: () => h }), a(388685));
 var n = a(255367),
     d = a(73800),
     r = a(120356),
@@ -27,12 +27,12 @@ function h(e) {
         { currentBadge: B, prevBadge: R, levelUpVideoSrc: U } = a,
         j = d.useCallback(() => {
             let e = 700 * (B.id !== g.VU.PREMIUM_TENURE_1_MONTH);
-            (y.current.currentTime = 0),
+            ((y.current.currentTime = 0),
                 setTimeout(() => {
-                    N(!0), y.current.play();
-                }, e);
+                    (N(!0), y.current.play());
+                }, e));
         }, [B.id]);
-    d.useEffect(() => {
+    (d.useEffect(() => {
         r && j();
     }, [r, j]),
         (0, o.Z)(
@@ -45,9 +45,9 @@ function h(e) {
         ),
         d.useEffect(() => {
             null != y.current && y.current.load();
-        }, []);
+        }, []));
     let k = d.useCallback(() => {
-            b(!1), N(!1), j(), (w.current.style.display = 'none'), w.current.offsetWidth, (w.current.style.display = ''), m.default.track(T.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: B.id });
+            (b(!1), N(!1), j(), (w.current.style.display = 'none'), w.current.offsetWidth, (w.current.style.display = ''), m.default.track(T.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: B.id }));
         }, [B.id, j]),
         I = {
             '--custom-old-badge-color': 'linear-gradient(to right, '.concat(null != (t = a.prevBadgeTextGradient) ? t : 'transparent', ')'),

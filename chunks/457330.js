@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(65234), n(111804), n(490233), n(97749), n(388685);
+(n.d(t, { Z: () => y }), n(65234), n(111804), n(490233), n(97749), n(388685));
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -109,7 +109,7 @@ let y = {
         });
         let h = _.ANM.CONNECTIONS_AUTHORIZE(e),
             m = new URLSearchParams();
-        null != a && m.append('two_way_user_code', a), null != f && m.append('success_redirect', f), null != r ? (m.append('two_way_link_type', r), m.append('two_way_link', 'true')) : null != l && m.append('two_way_link', String(l)), null != p && m.append('handle', p);
+        (null != a && m.append('two_way_user_code', a), null != f && m.append('success_redirect', f), null != r ? (m.append('two_way_link_type', r), m.append('two_way_link', 'true')) : null != l && m.append('two_way_link', String(l)), null != p && m.append('handle', p));
         let { enabled: g } = s.g.getCurrentConfig({ location: 'ConnectedAcountsActionCreators.authorize' }, { autoTrackExposure: !0 });
         if (g) {
             let e = c.default.getSessionId();
@@ -122,7 +122,7 @@ let y = {
                 rejectWithError: !1
             }),
             { state: b } = (0, o.xp)(null != (t = E.body.url) ? t : '');
-        return null == b || s.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled || u.Z.addPendingAuthorizedState(b), E;
+        return (null == b || s.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled || u.Z.addPendingAuthorizedState(b), E);
     },
     callback: b,
     connect(e, t, n, i, a) {
@@ -181,7 +181,7 @@ let y = {
             rejectWithError: !1
         }),
     joinServer(e, t) {
-        a.Z.dispatch({
+        (a.Z.dispatch({
             type: 'USER_CONNECTIONS_INTEGRATION_JOINING',
             integrationId: e,
             joining: !0
@@ -193,7 +193,7 @@ let y = {
                     rejectWithError: !1
                 },
                 (n) => {
-                    a.Z.dispatch({
+                    (a.Z.dispatch({
                         type: 'USER_CONNECTIONS_INTEGRATION_JOINING',
                         integrationId: e,
                         joining: !1
@@ -204,9 +204,9 @@ let y = {
                                 integrationId: e,
                                 error: n.hasErr ? void 0 : n.body.message
                             }),
-                            null == t || t());
+                            null == t || t()));
                 }
-            );
+            ));
     },
     async refreshAccessToken(e, t) {
         try {
@@ -228,14 +228,14 @@ let y = {
             );
         } catch (n) {
             throw (
-                (n.body.code === _.evJ.CONNECTION_REVOKED &&
+                n.body.code === _.evJ.CONNECTION_REVOKED &&
                     a.Z.dispatch({
                         type: 'USER_CONNECTION_UPDATE',
                         platformType: e,
                         id: t,
                         revoked: !0
                     }),
-                n)
+                n
             );
         }
     },

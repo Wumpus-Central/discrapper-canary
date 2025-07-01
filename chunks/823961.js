@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var i,
     a = n(442837),
     o = n(570140),
@@ -30,10 +30,10 @@ let u = new Map(),
         d.add(e.skuId);
     },
     b = (e) => {
-        u.set(e.skuId, e.price), d.delete(e.skuId);
+        (u.set(e.skuId, e.price), d.delete(e.skuId));
     },
     y = (e) => {
-        d.delete(e.skuId), _.add(e.skuId);
+        (d.delete(e.skuId), _.add(e.skuId));
     },
     O = (e) => {
         _.delete(e.skuId);
@@ -44,10 +44,10 @@ let u = new Map(),
         l.Rm.has(t.sku_id) && p.set(e.skuId, s.Z.createFromServer(t));
     },
     I = (e) => {
-        f.delete(e.skuId), p.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions);
+        (f.delete(e.skuId), p.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions));
     },
     T = (e) => {
-        _.add(e.skuId), f.delete(e.skuId);
+        (_.add(e.skuId), f.delete(e.skuId));
     },
     S = (e) => {
         f.add(e.skuId);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(539854), n(415506), n(388685);
+(n.d(t, { Z: () => d }), n(539854), n(415506), n(388685));
 var r = n(836560),
     i = n(264344),
     a = n.n(i),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -58,7 +58,7 @@ function u(e, t) {
 class d extends r.EventEmitter {
     addStream(e, t, n) {
         let r = !1;
-        this.streams.some((e) => e.ssrc === t) ||
+        (this.streams.some((e) => e.ssrc === t) ||
             this.streams.push({
                 ssrc: t,
                 cname: e,
@@ -75,11 +75,11 @@ class d extends r.EventEmitter {
                           }),
                       this.activeVideoSSRCs[e] !== n && ((this.activeVideoSSRCs = u(l({}, this.activeVideoSSRCs), { [e]: n })), (r = !0)))
                     : null != this.activeVideoSSRCs[e] && ((r = !0), (this.activeVideoSSRCs = l({}, this.activeVideoSSRCs)), delete this.activeVideoSSRCs[e])),
-            r && this.negotiationNeeded();
+            r && this.negotiationNeeded());
     }
     removeStream(e) {
         let t = !1;
-        null != this.activeAudioSSRCs[e] && ((t = !0), (this.activeAudioSSRCs = l({}, this.activeAudioSSRCs)), delete this.activeAudioSSRCs[e]), null != this.activeVideoSSRCs[e] && ((t = !0), (this.activeVideoSSRCs = l({}, this.activeVideoSSRCs)), delete this.activeVideoSSRCs[e]), t && this.negotiationNeeded();
+        (null != this.activeAudioSSRCs[e] && ((t = !0), (this.activeAudioSSRCs = l({}, this.activeAudioSSRCs)), delete this.activeAudioSSRCs[e]), null != this.activeVideoSSRCs[e] && ((t = !0), (this.activeVideoSSRCs = l({}, this.activeVideoSSRCs)), delete this.activeVideoSSRCs[e]), t && this.negotiationNeeded());
     }
     get sdp() {
         if (null == this._sdp) throw Error('sdp is not set');
@@ -87,7 +87,7 @@ class d extends r.EventEmitter {
     }
     set sdp(e) {
         if (!(0, o.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
-        (this._sdp = e), this.createAnswer(), (this.connected = !0), this._negotiationNeeded && this.negotiationNeeded();
+        ((this._sdp = e), this.createAnswer(), (this.connected = !0), this._negotiationNeeded && this.negotiationNeeded());
     }
     negotiationNeeded() {
         if (this.negotiating) {
@@ -97,7 +97,7 @@ class d extends r.EventEmitter {
         null != this._sdp ? ((this.negotiating = !0), (this._negotiationNeeded = !1), this.generateSessionDescription('offer')) : (this._negotiationNeeded = !0);
     }
     setRemoteDescription(e) {
-        return (this.negotiating = !1), this._negotiationNeeded && this.negotiationNeeded(), Promise.resolve();
+        return ((this.negotiating = !1), this._negotiationNeeded && this.negotiationNeeded(), Promise.resolve());
     }
     createAnswer() {
         return this.generateSessionDescription('answer');
@@ -156,9 +156,9 @@ class d extends r.EventEmitter {
             ssrcs: this.getSSRCs(e),
             extensions: this.extensions
         });
-        return this.emit(e, l), Promise.resolve(l);
+        return (this.emit(e, l), Promise.resolve(l));
     }
     constructor(...e) {
-        super(...e), s(this, 'audioCodec', null), s(this, 'audioPayloadType', null), s(this, 'videoCodec', null), s(this, 'videoPayloadType', null), s(this, 'rtxPayloadType', null), s(this, 'direction', null), s(this, 'outboundStreams', []), s(this, 'extensions', []), s(this, 'streams', []), s(this, 'activeAudioSSRCs', {}), s(this, 'activeVideoSSRCs', {}), s(this, '_sdp', null), s(this, 'connected', !1), s(this, 'negotiating', !1), s(this, '_negotiationNeeded', !1);
+        (super(...e), s(this, 'audioCodec', null), s(this, 'audioPayloadType', null), s(this, 'videoCodec', null), s(this, 'videoPayloadType', null), s(this, 'rtxPayloadType', null), s(this, 'direction', null), s(this, 'outboundStreams', []), s(this, 'extensions', []), s(this, 'streams', []), s(this, 'activeAudioSSRCs', {}), s(this, 'activeVideoSSRCs', {}), s(this, '_sdp', null), s(this, 'connected', !1), s(this, 'negotiating', !1), s(this, '_negotiationNeeded', !1));
     }
 }

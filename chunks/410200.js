@@ -6,7 +6,7 @@ e.exports = function (e, t, n, a) {
     for (var s = -1, l = t.length; ++s < l; ) {
         var c = t[s],
             u = a ? a(n[c], e[c], c, n, e) : void 0;
-        void 0 === u && (u = e[c]), o ? i(n, c, u) : r(n, c, u);
+        (void 0 === u && (u = e[c]), o ? i(n, c, u) : r(n, c, u));
     }
     return n;
 };

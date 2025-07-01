@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(16084),
@@ -9,7 +9,7 @@ var r = n(255367),
 function u() {
     let [e, t] = i.useState(!1),
         n = async () => {
-            t(!0), await (0, a.xA)();
+            (t(!0), await (0, a.xA)());
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [

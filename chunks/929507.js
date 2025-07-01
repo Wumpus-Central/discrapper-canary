@@ -1,4 +1,4 @@
-r.d(t, { Z: () => T }), r(388685);
+(r.d(t, { Z: () => T }), r(388685));
 var n = r(73800),
     i = r(399606),
     a = r(544891),
@@ -14,7 +14,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -22,7 +22,7 @@ function E(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -30,8 +30,8 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -100,7 +100,7 @@ let I = +u.Z.Millis.DAY,
         },
         dismissOverviewTooltip(e, t) {
             var r;
-            o.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED',
                 guildId: e,
                 integrationId: t.id
@@ -111,7 +111,7 @@ let I = +u.Z.Millis.DAY,
                         application_id: null == (r = t.application) ? void 0 : r.id,
                         location: 'overview'
                     })
-                );
+                ));
         },
         dismissToggleTooltip(e, t) {
             var r;

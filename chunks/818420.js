@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(704215),
@@ -21,7 +21,7 @@ function f(e) {
         [E, j] = (0, o.US)(x),
         C = E === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         O = r.useCallback(() => {
-            j(g.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n });
+            (j(g.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n }));
         }, [n, j]),
         S = r.useCallback(() => {
             (0, u.Wh)(null);

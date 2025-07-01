@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+(n.d(t, { Z: () => P }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(873546),
@@ -38,13 +38,13 @@ function S(e, t, n) {
 let N = 'PremiumServerDriveAnnouncementModal';
 class T extends s.Z {
     _initialize() {
-        o.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+        (o.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview));
     }
     _terminate() {
-        o.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+        (o.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             S(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
                 let i = (0, v.r)({
                     content: e,
@@ -93,7 +93,7 @@ class T extends s.Z {
                 if ((!t || n || (0, a.$sL)() || (0, p.I5)(r) || ((await (0, m.G)(e.userTrialOffer)) && (0, I.Z)({ upsellType: C.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })), (null == r || r.verified) && !(0, a.$sL)() && b.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !i.tq)) {
                     for (let t of await (0, O.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
-            });
+            }));
     }
 }
 let P = new T();

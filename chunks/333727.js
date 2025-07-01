@@ -31,17 +31,17 @@ function p(e, t, n, p) {
             g();
         },
         onConfirmClick: (t, n) => {
-            i.Z.sendActivityInvite({
+            (i.Z.sendActivityInvite({
                 channelId: e.id,
                 type: u.mFx.JOIN,
                 activity: p,
                 location: l.default.isLocked((0, a.getPID)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY
             }),
                 y('join'),
-                r.Z.updateNotificationStatus(n);
+                r.Z.updateNotificationStatus(n));
         },
         onCancelClick: (t, n) => {
-            (0, o.In)(
+            ((0, o.In)(
                 e.id,
                 {
                     section: u.jXE.OVERLAY,
@@ -52,7 +52,7 @@ function p(e, t, n, p) {
                 !0
             ),
                 r.Z.updateNotificationStatus(n),
-                y('decline');
+                y('decline'));
         },
         onDismissClick: () => {
             y('dismiss');

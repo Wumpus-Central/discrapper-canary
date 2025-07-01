@@ -7,7 +7,7 @@ e.exports = function (e, t, r) {
             for (var a = arguments, i = -1, l = o(a.length - t, 0), s = Array(l); ++i < l; ) s[i] = a[t + i];
             i = -1;
             for (var u = Array(t + 1); ++i < t; ) u[i] = a[i];
-            return (u[t] = r(s)), n(e, this, u);
+            return ((u[t] = r(s)), n(e, this, u));
         }
     );
 };

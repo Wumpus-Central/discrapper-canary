@@ -5,7 +5,7 @@ var r = a(622916),
     o = a(578346);
 function i(t) {
     let e = 'console';
-    (0, o.Hj)(e, t), (0, o.D2)(e, c);
+    ((0, o.Hj)(e, t), (0, o.D2)(e, c));
 }
 function c() {
     'console' in n.n &&

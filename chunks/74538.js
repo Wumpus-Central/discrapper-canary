@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Af: () => F,
     Ap: () => eP,
     BK: () => z,
@@ -64,7 +64,7 @@ n.d(t, {
     n(49124),
     n(388685),
     n(290780),
-    n(539854);
+    n(539854));
 var r = n(512722),
     i = n.n(r),
     a = n(913527),
@@ -111,7 +111,7 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -119,7 +119,7 @@ function L(e) {
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -127,11 +127,11 @@ function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -170,7 +170,7 @@ let M = {
     },
     B = 2592000000;
 var V = (function (e) {
-    return (e.MID = 'mid'), (e.HIGH = 'high'), e;
+    return ((e.MID = 'mid'), (e.HIGH = 'high'), e);
 })({});
 function F(e) {
     return e.items.find((e) => R.dJ.has(e.planId));
@@ -206,7 +206,7 @@ function H(e) {
         if (null == o) {
             let t = Error("Couldn't find price");
             throw (
-                ((0, b.q2)(t, {
+                (0, b.q2)(t, {
                     extra: { paymentSourceId: i },
                     tags: {
                         purchaseType: r.toString(),
@@ -214,21 +214,21 @@ function H(e) {
                         currency: null != a ? a : 'unknown'
                     }
                 }),
-                t)
+                t
             );
         }
         return o;
     }
     let o = Error('Plan not found');
     throw (
-        ((0, b.q2)(o, {
+        (0, b.q2)(o, {
             tags: {
                 planId: e,
                 currency: null != a ? a : 'unknown'
             },
             extra: k(L({}, r), { isGift: n })
         }),
-        o)
+        o
     );
 }
 function Y(e, t) {
@@ -236,13 +236,13 @@ function Y(e, t) {
     if (null == n) {
         let n = Error('Plan not found');
         throw (
-            ((0, b.q2)(n, {
+            (0, b.q2)(n, {
                 tags: {
                     planId: e,
                     purchaseType: t.toString()
                 }
             }),
-            n)
+            n
         );
     }
     if (null == n.prices) throw Error('No prices returned for '.concat(e, ', is your user in the experiment?'));
@@ -256,7 +256,7 @@ function W(e) {
     if (null != t) {
         let i = r.paymentSourcePrices[t];
         if (null == i) {
-            U.info('Payment sources IDs: '.concat(JSON.stringify(Object.keys(r.paymentSourcePrices)))), U.info('prices: '.concat(i));
+            (U.info('Payment sources IDs: '.concat(JSON.stringify(Object.keys(r.paymentSourcePrices)))), U.info('prices: '.concat(i)));
             let a = Error('Missing prices for payment source on subscription plan');
             (0, b.q2)(a, {
                 extra: { paymentSourceId: t },
@@ -271,13 +271,13 @@ function W(e) {
         U.info('countryPrices: '.concat(JSON.stringify(r.countryPrices)));
         let t = Error('Missing prices for country');
         throw (
-            ((0, b.q2)(t, {
+            (0, b.q2)(t, {
                 tags: {
                     countryCode: r.countryPrices.countryCode,
                     planId: e
                 }
             }),
-            t)
+            t
         );
     }
     return r.countryPrices.prices;
@@ -312,7 +312,7 @@ function q(e, t, n) {
         l = (0, S.yd)(r, R.p9.TIER_2);
     for (let r of e) {
         let e;
-        (i = R.Z1.has(r.planId) ? l : !R.dJ.has(r.planId) && s),
+        ((i = R.Z1.has(r.planId) ? l : !R.dJ.has(r.planId) && s),
             (e =
                 void 0 === n
                     ? Z(r.planId, i, !1, t)
@@ -320,13 +320,13 @@ function q(e, t, n) {
                           paymentSourceId: n,
                           currency: t
                       })),
-            (a.amount += e.amount * r.quantity);
+            (a.amount += e.amount * r.quantity));
     }
     return z(a);
 }
 function X(e, t, n, r) {
     let a;
-    return null === t && (i()(null !== e, "Subscription can't be null"), (t = [])), q((a = null !== e ? eQ(e, t) : eJ(t)), n, r);
+    return (null === t && (i()(null !== e, "Subscription can't be null"), (t = [])), q((a = null !== e ? eQ(e, t) : eJ(t)), n, r));
 }
 function Q(e) {
     let t = R.GP[e];
@@ -723,7 +723,7 @@ function ef(e) {
     }
     if (void 0 !== o) {
         let e = s.indexOf(o);
-        s.splice(e, 1), s.unshift(o);
+        (s.splice(e, 1), s.unshift(o));
     }
     return s;
 }
@@ -953,7 +953,7 @@ function eN(e) {
 }
 function eC(e) {
     let t = null;
-    return null != e.renewalMutations && (t = e.renewalMutations.planId !== e.planId ? w.intl.string(w.t['0rzJ4O']) : w.intl.string(w.t['9dLQ09'])), null != e.trialEndsAt && (t = w.intl.string(w.t.a9Mdb2)), t;
+    return (null != e.renewalMutations && (t = e.renewalMutations.planId !== e.planId ? w.intl.string(w.t['0rzJ4O']) : w.intl.string(w.t['9dLQ09'])), null != e.trialEndsAt && (t = w.intl.string(w.t.a9Mdb2)), t);
 }
 function eR(e) {
     return null != e.paymentSourceId && eP(e.paymentSourceId);
@@ -1037,7 +1037,7 @@ function ex(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = null != t ? H(e.id, !1, r, t) : Z(e.id, !1, r),
         a = (0, A.T4)(i.amount, i.currency);
-    return e.currency !== P.pK.USD && !0 === n && (a = a.concat('*')), a;
+    return (e.currency !== P.pK.USD && !0 === n && (a = a.concat('*')), a);
 }
 function ek(e, t, n) {
     let r = ex(e, t, n);
@@ -1061,7 +1061,7 @@ function ej(e, t) {
         let { subscriptionPlanId: t } = e;
         return eb(t);
     });
-    return (null == r || (0, _.Q0)(r.subscriptionPlanId)) && (n = N.O0b.CANCELED), n;
+    return ((null == r || (0, _.Q0)(r.subscriptionPlanId)) && (n = N.O0b.CANCELED), n);
 }
 function eU(e) {
     let { status: t, renewalMutations: n } = e;
@@ -1274,7 +1274,7 @@ function e$(e, t, n, r) {
                 quantity: n
             },
             i = e.items.find((e) => e.planId === t);
-        null != i && (r.id = i.id), l.push(r);
+        (null != i && (r.id = i.id), l.push(r));
     }
     return l.filter((e) => 0 !== e.quantity);
 }
@@ -1289,14 +1289,14 @@ function e2(e) {
     let n = null != (t = e.find((e) => !('id' in e))) ? t : e.find((e) => R.dJ.has(e.planId));
     if (null != n) {
         let t = g.Z.get(n.planId);
-        i()(null != t, 'Missing plan'),
+        (i()(null != t, 'Missing plan'),
             (e = e.map((e) => {
                 if (e === n) return e;
                 let r = g.Z.get(e.planId);
                 i()(null != r, 'Missing plan');
                 let a = g.Z.getForSkuAndInterval(r.skuId, t.interval, t.intervalCount);
-                return i()(null != a, 'Missing planForInterval'), k(L({}, e), { planId: a.id });
-            }));
+                return (i()(null != a, 'Missing planForInterval'), k(L({}, e), { planId: a.id }));
+            })));
     }
     return e;
 }

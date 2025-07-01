@@ -33,14 +33,14 @@ function p(e) {
         p = t.id,
         g = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(p), [p]),
         v = (0, d.$j)(p),
-        C = (0, d.M3)(p),
-        _ = l.useCallback(
+        _ = (0, d.M3)(p),
+        C = l.useCallback(
             (e) => {
                 null != e && (null == s || s(e));
             },
             [s]
         ),
-        T = (0, m.xb)(C, v, g),
+        T = (0, m.xb)(_, v, g),
         N = l.useRef(null),
         E = l.useRef(null),
         S = l.useCallback(() => {
@@ -61,7 +61,7 @@ function p(e) {
                 (0, r.jsx)(f, { guild: t }),
                 (0, r.jsx)(x.Z, {
                     guild: t,
-                    onSelectRow: _,
+                    onSelectRow: C,
                     searchState: T,
                     onResetForNewMembers: S
                 }),

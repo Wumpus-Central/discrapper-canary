@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+(n.d(t, { Z: () => L }), n(388685));
 var i,
     r = n(255367),
     s = n(73800),
@@ -44,7 +44,7 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -52,7 +52,7 @@ function R(e) {
             )),
             i.forEach(function (t) {
                 P(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -108,12 +108,12 @@ function Z(e) {
                                     i,
                                     r = {},
                                     s = Object.keys(e);
-                                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                                for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                                 return r;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
                             var s = Object.getOwnPropertySymbols(e);
-                            for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                            for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                         }
                         return r;
                     })(e, ['ref']);
@@ -161,7 +161,7 @@ class w extends (i = s.PureComponent) {
     }
     componentDidMount() {
         g.Z.wait(() => {
-            (0, h.N)(), (0, p.cQ)(30);
+            ((0, h.N)(), (0, p.cQ)(30));
         });
     }
     renderPremiumExternalSubscription(e) {
@@ -233,7 +233,7 @@ class w extends (i = s.PureComponent) {
             : null;
     }
     constructor(...e) {
-        super(...e), P(this, 'scrollerRef', s.createRef());
+        (super(...e), P(this, 'scrollerRef', s.createRef()));
     }
 }
 function k(e) {

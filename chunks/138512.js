@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => s });
+(n.r(t), n.d(t, { default: () => s }));
 var r = n(217224),
     i = n(528734),
     a = n(984181),
@@ -10,7 +10,7 @@ function s(e, t) {
         l = n.getFullYear(),
         c = n.getDate(),
         u = new Date(0);
-    u.setFullYear(l, s, 15), u.setHours(0, 0, 0, 0);
+    (u.setFullYear(l, s, 15), u.setHours(0, 0, 0, 0));
     var d = (0, a.Z)(u);
-    return n.setMonth(s, Math.min(c, d)), n;
+    return (n.setMonth(s, Math.min(c, d)), n);
 }

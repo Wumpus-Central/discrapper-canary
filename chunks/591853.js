@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Ll: () => eT,
     St: () => eg,
     WT: () => eE,
@@ -6,7 +6,7 @@ n.d(t, {
     wG: () => ev,
     yR: () => eh
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -85,7 +85,7 @@ function eu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -93,7 +93,7 @@ function eu(e) {
             )),
             r.forEach(function (t) {
                 ec(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -101,11 +101,11 @@ function ed(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -127,7 +127,7 @@ function e_(e, t) {
         i = ep(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -137,7 +137,7 @@ function ep(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function eh(e) {
@@ -207,7 +207,7 @@ function eE(e) {
                     A(!1),
                     m)
                 )
-                    l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t);
+                    (l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t));
                 else {
                     var o;
                     let e = await _.Z.getOrEnsurePrivateChannel(n.id);
@@ -219,10 +219,10 @@ function eE(e) {
                         reply: ':'.concat(i.name, ':'),
                         sendToChannel: r,
                         onComplete: (e, t) => {
-                            A(!0),
+                            (A(!0),
                                 setTimeout(() => {
-                                    T(!1), a(e, t);
-                                }, 600);
+                                    (T(!1), a(e, t));
+                                }, 600));
                         },
                         interactionType: ea.xP.REACTION_EMOJI_REACT_SENT,
                         requiresChannelReadiness: !1
@@ -232,11 +232,11 @@ function eE(e) {
         },
         F = async (e) => {
             let r;
-            if (((0, v.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m)) l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t);
+            if (((0, v.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m)) (l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t));
             else {
                 let e = await _.Z.openPrivateChannel({ recipientIds: n.id }),
                     t = M.Z.getChannel(e);
-                l()(null != t, 'DM channel must be defined'), (r = t);
+                (l()(null != t, 'DM channel must be defined'), (r = t));
             }
             let i = r.type === eo.d4z.DM ? ea.xP.DM_REACTION_MESSAGE_SENT : ea.xP.CHANNEL_REACTION_MESSAGE_SENT;
             return Z({
@@ -249,21 +249,21 @@ function eE(e) {
         },
         Z = async (e) => {
             let { reply: t, sendToChannel: n, onComplete: r, interactionType: i, requiresChannelReadiness: a } = e;
-            null == E || E.focus(),
+            (null == E || E.focus(),
                 await (0, Q.p)({
                     channel: n,
                     content: t,
                     entry: o,
                     whenReady: a
                 }),
-                null == r || r(i, n);
+                null == r || r(i, n));
         },
         Y = null != p ? p : null != N ? N : null != P ? P : void 0,
         K = () => {
-            g((e) => !e), x && (null == E || E.focus());
+            (g((e) => !e), x && (null == E || E.focus()));
         },
         z = (e) => {
-            k(e), e && (null == E || E.focus());
+            (k(e), e && (null == E || E.focus()));
         };
     return (0, r.jsxs)('div', {
         style: { pointerEvents: I ? 'none' : 'all' },
@@ -621,7 +621,7 @@ function eI(e) {
                     (0, r.jsx)(eO, {
                         onClick: b
                             ? () => {
-                                  h.default.selectVoiceChannel(s.channelId), (0, m.iV)(s);
+                                  (h.default.selectVoiceChannel(s.channelId), (0, m.iV)(s));
                               }
                             : void 0,
                         children: (0, r.jsxs)('div', {
@@ -797,7 +797,7 @@ function eA(e) {
         };
     let g = null != o,
         E = () => {
-            p.Z.updateChatOpen(s.id, !0), (0, D.Kh)(s.id), null == a || a(s);
+            (p.Z.updateChatOpen(s.id, !0), (0, D.Kh)(s.id), null == a || a(s));
         },
         b = () => {
             y.Z.handleVoiceConnect({

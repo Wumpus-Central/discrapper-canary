@@ -1,4 +1,4 @@
-n.d(t, { v: () => d }), n(415506), n(539854), n(388685);
+(n.d(t, { v: () => d }), n(415506), n(539854), n(388685));
 var r = n(956067),
     i = n(930145),
     a = n(350167),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -67,7 +67,7 @@ class d {
     }
     close() {
         var e;
-        (this.lastState = o.hi.Closed), null == (e = this.raw) || e.close(), (this.raw = null), a.r.removeCompletionCallback(this.databaseStateCallback);
+        ((this.lastState = o.hi.Closed), null == (e = this.raw) || e.close(), (this.raw = null), a.r.removeCompletionCallback(this.databaseStateCallback));
     }
     disable(e) {
         return null == this.raw
@@ -137,7 +137,7 @@ class d {
         );
     }
     constructor(e) {
-        s(this, 'name', void 0),
+        (s(this, 'name', void 0),
             s(this, 'handle', void 0),
             s(this, 'raw', void 0),
             s(this, 'lastState', void 0),
@@ -148,7 +148,7 @@ class d {
             (this.handle = e.handle),
             (this.databaseStateCallback = a.r.addDatabaseStateCallback((e, t) => {
                 this.handle === e && (this.lastState = t);
-            }));
+            })));
     }
 }
 class f {
@@ -163,6 +163,6 @@ class f {
         return '[DatabaseTransaction '.concat(this.database.handle, ': ').concat(this.operations.length, ' ops]');
     }
     constructor(e) {
-        s(this, 'database', void 0), s(this, 'operations', void 0), (this.database = e), (this.operations = []);
+        (s(this, 'database', void 0), s(this, 'operations', void 0), (this.database = e), (this.operations = []));
     }
 }

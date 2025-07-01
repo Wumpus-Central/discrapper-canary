@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     E3: () => g,
     ZP: () => S,
     tH: () => C
 }),
-    n(539854);
+    n(539854));
 var c = n(255367);
 n(73800);
 var r = n(120356),
@@ -33,7 +33,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             c = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (c = c.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function x(e) {
             )),
             c.forEach(function (t) {
                 var c;
-                (c = n[t]),
+                ((c = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: c,
@@ -49,8 +49,8 @@ function x(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = c);
-            });
+                        : (e[t] = c));
+            }));
     }
     return e;
 }
@@ -94,7 +94,7 @@ function g(e) {
             case N.ABu.BLUESKY:
             case N.ABu.MASTODON:
             case N.ABu.TWITTER:
-                (r = (0, m.rJ)(D)), '1' === D[h.PC.TWITTER_VERIFIED] && ((s = R), (w = v.intl.string(v.t.Jebrw8)));
+                ((r = (0, m.rJ)(D)), '1' === D[h.PC.TWITTER_VERIFIED] && ((s = R), (w = v.intl.string(v.t.Jebrw8))));
                 break;
             case N.ABu.PAYPAL:
                 r = (0, m.li)(D);
@@ -119,7 +119,7 @@ function g(e) {
               'aria-label': (null == U ? void 0 : U.name) != null ? ''.concat(U.name, ', ').concat(b.name, ', ').concat(v.intl.string(v.t.q5jLJC)) : ''.concat(b.name, ', ').concat(v.intl.string(v.t.q5jLJC)),
               onClick: (e) => {
                   var t;
-                  (t = b.type),
+                  ((t = b.type),
                       (0, d.yw)(N.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: t,
                           other_user_id: P
@@ -130,7 +130,7 @@ function g(e) {
                               trusted: (null == U ? void 0 : U.type) !== N.ABu.DOMAIN
                           },
                           e
-                      );
+                      ));
               },
               children: (0, c.jsx)(_.Z, {
                   className: I.connectedAccountOpenIcon,
@@ -219,7 +219,7 @@ function C(e) {
     let { applicationRoleConnection: t, className: n, locale: r, onApplicationClicked: l, selectedGuildId: o } = e,
         u = (0, m.rm)(t, void 0, r),
         d = () => {
-            null == l || l(),
+            (null == l || l(),
                 (0, E.transitionToGlobalDiscovery)({
                     tab: P.GlobalDiscoveryTab.APPS,
                     applicationId: t.application.id,
@@ -227,7 +227,7 @@ function C(e) {
                         entrypoint: { name: b.xF.APPLICATION_DIRECTORY_URL },
                         guildId: o
                     }
-                });
+                }));
         };
     return (0, c.jsxs)('li', {
         className: a()(I.connectedAccountContainer, null != u && u.length > 0 ? I.connectedAccountContainerWithMetadata : null, n),

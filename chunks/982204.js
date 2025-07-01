@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     B: () => P,
     E: () => R
 }),
-    n(953529);
+    n(953529));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -102,7 +102,7 @@ let O = (e, t, n) => (null != n && e.productLine === E.POd.COLLECTIBLES && n.typ
     };
 function P(e) {
     let { sku: t, skuPricePreview: n } = e;
-    s()(null != n.amount, 'SKU must have a price set.'), s()(null != n.invoice_items && 1 === n.invoice_items.length, 'SKU preview must have single line item');
+    (s()(null != n.amount, 'SKU must have a price set.'), s()(null != n.invoice_items && 1 === n.invoice_items.length, 'SKU preview must have single line item'));
     let i = (0, f.ed)('SKUInvoicePreview'),
         a = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
         o = O(t, i, a),

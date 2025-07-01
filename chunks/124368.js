@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AX: () => a,
     M3: () => s,
     RN: () => p,
@@ -11,7 +11,7 @@ n.d(t, {
     yX: () => l,
     zb: () => f
 }),
-    n(388685);
+    n(388685));
 var r = n(981631),
     i = n(388032);
 let a = 4320,
@@ -26,7 +26,7 @@ let a = 4320,
         NO_MESSAGES: 8
     };
 var d = (function (e) {
-    return (e.EMBED = 'Embed'), (e.BROWSER = 'Thread Browser'), (e.POPOUT = 'Active Threads Popout'), (e.CHANNEL_LIST = 'Channel List'), (e.GUILD_ACTIVE_THREADS_MODAL = 'Guild Active Threads Modal'), (e.INBOX = 'Inbox'), (e.FORUM = 'Forum'), (e.VOICE_AUTO_OPEN = 'Voice Auto Open'), e;
+    return ((e.EMBED = 'Embed'), (e.BROWSER = 'Thread Browser'), (e.POPOUT = 'Active Threads Popout'), (e.CHANNEL_LIST = 'Channel List'), (e.GUILD_ACTIVE_THREADS_MODAL = 'Guild Active Threads Modal'), (e.INBOX = 'Inbox'), (e.FORUM = 'Forum'), (e.VOICE_AUTO_OPEN = 'Voice Auto Open'), e);
 })({});
 function f() {
     return [
@@ -45,7 +45,7 @@ function f() {
     ];
 }
 var _ = (function (e) {
-    return (e.LATEST_ACTIVITY = 'Last Message'), (e.CREATION_DATE = 'Creation'), e;
+    return ((e.LATEST_ACTIVITY = 'Last Message'), (e.CREATION_DATE = 'Creation'), e);
 })({});
 let p = new Set([r.evJ.TOO_MANY_ATTACHMENTS, r.evJ.EXPLICIT_CONTENT, r.evJ.ENTITY_TOO_LARGE, r.evJ.EXPLICIT_CONTENT]),
     h = new Set([r.evJ.AUTOMOD_MESSAGE_BLOCKED, r.evJ.AUTOMOD_TITLE_BLOCKED]);

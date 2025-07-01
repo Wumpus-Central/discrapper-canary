@@ -1,26 +1,26 @@
-n.d(t, {
-    Mn: () => s,
-    WM: () => u,
-    _2: () => c
+(n.d(t, {
+    Mn: () => o,
+    WM: () => c,
+    _2: () => u
 }),
-    n(953529);
+    n(953529));
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    l = n.n(i),
-    o = n(481060),
+var l = n(120356),
+    i = n.n(l),
+    s = n(481060),
     a = n(44946);
-let s = 16;
-function c(e) {
-    let { description: t, name: n, icon: i, onNavigate: c, className: u, missingNavIcon: d } = e;
-    return (0, r.jsxs)(o.P3F, {
-        onClick: c,
-        className: l()(a.modInfoItem, null != c && a.modInfoAction, u),
+let o = 16;
+function u(e) {
+    let { description: t, name: n, icon: l, onNavigate: u, className: c, missingNavIcon: d } = e;
+    return (0, r.jsxs)(s.P3F, {
+        onClick: u,
+        className: i()(a.modInfoItem, null != u && a.modInfoAction, c),
         children: [
-            null != i &&
+            null != l &&
                 (0, r.jsx)('div', {
                     className: a.modInfoItemIcon,
-                    children: i
+                    children: l
                 }),
             null != n &&
                 (0, r.jsx)('div', {
@@ -31,16 +31,16 @@ function c(e) {
                 className: a.modInfoItemDescription,
                 children: t
             }),
-            null != c &&
+            null != u &&
                 (0, r.jsx)('div', {
                     className: a.modInfoItemActionIcon,
-                    children: (0, r.jsx)(o.LJT, {
+                    children: (0, r.jsx)(s.LJT, {
                         size: 'custom',
-                        width: s,
-                        height: s
+                        width: o,
+                        height: o
                     })
                 }),
-            null == c &&
+            null == u &&
                 null != d &&
                 (0, r.jsx)('div', {
                     className: a.modInfoItemActionIcon,
@@ -49,7 +49,7 @@ function c(e) {
         ]
     });
 }
-function u(e) {
+function c(e) {
     let { children: t } = e;
     return (0, r.jsx)('div', {
         className: a.modInfoItemContainer,

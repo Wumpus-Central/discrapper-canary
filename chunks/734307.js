@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y }), n(388685);
+(n.d(t, { Z: () => Y }), n(388685));
 var i,
     r,
     s,
@@ -32,7 +32,7 @@ let A = null,
 function D() {
     let e = S.Z.getChannelId(),
         t = S.Z.getVoiceChannelId();
-    return (A = e), (P = t), R.clear();
+    return ((A = e), (P = t), R.clear());
 }
 function Z(e) {
     let {
@@ -119,7 +119,7 @@ class z extends (i = o.ZP.Store) {
         return t.getCategoryFromSection(t.recentsSectionNumber).getShownChannelIds().length;
     }
 }
-(s = 'ChannelListStore'),
+((s = 'ChannelListStore'),
     (r = 'displayName') in z
         ? Object.defineProperty(z, r, {
               value: s,
@@ -127,7 +127,7 @@ class z extends (i = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (z[r] = s);
+        : (z[r] = s));
 let Y = new z(c.Z, {
     APPLICATION_FETCH_FAIL: F,
     APPLICATION_FETCH_SUCCESS: F,
@@ -305,7 +305,7 @@ let Y = new z(c.Z, {
         let { voiceStates: t } = e,
             n = U(),
             i = new Set();
-        for (let { channelId: e, oldChannelId: r } of t) null == r || i.has(r) || (R.nonPositionalChannelIdUpdate(r) && (n = !0), i.add(r)), null == e || i.has(e) || (R.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
+        for (let { channelId: e, oldChannelId: r } of t) (null == r || i.has(r) || (R.nonPositionalChannelIdUpdate(r) && (n = !0), i.add(r)), null == e || i.has(e) || (R.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e)));
         return n;
     },
     WINDOW_FOCUS: function () {

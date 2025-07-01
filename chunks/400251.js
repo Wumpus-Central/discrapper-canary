@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Z: () => T,
     m: () => Z
 }),
     n(388685),
-    n(953529);
+    n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -27,11 +27,11 @@ var r = n(255367),
     j = n(388032),
     O = n(901593),
     E = n(883760);
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -47,12 +47,12 @@ function I(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function S(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,12 +80,12 @@ function P(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -126,13 +126,13 @@ function N(e) {
                                   l = P(e, ['onClick']);
                               return (0, r.jsx)(
                                   p.zx,
-                                  S(I({}, l), {
+                                  I(S({}, l), {
                                       onClick: () => {
-                                          null == i || i(),
+                                          (null == i || i(),
                                               (0, s.ZDy)(async () => {
                                                   let { default: e } = await n.e('34191').then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, S(I({}, n), { entry: t }));
-                                              });
+                                                  return (n) => (0, r.jsx)(e, I(S({}, n), { entry: t }));
+                                              }));
                                       },
                                       'aria-label': j.intl.string(j.t.XnuOvL),
                                       children: (0, r.jsx)(s.vdY, {
@@ -162,10 +162,10 @@ function N(e) {
                                     l = P(e, ['onClick']);
                                 return (0, r.jsx)(
                                     p.zx,
-                                    S(I({}, n, l), {
+                                    I(S({}, n, l), {
                                         ref: c,
                                         onClick: (e) => {
-                                            null == i || i(), t(e);
+                                            (null == i || i(), t(e));
                                         },
                                         'aria-label': j.intl.string(j.t.UKOtz8),
                                         children: (0, r.jsx)(s.xhG, {
@@ -218,7 +218,7 @@ let T = (e) => {
             onContextMenu: (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, S(I({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, I(S({}, t), { entry: l }));
                 });
             },
             children: [

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     P: () => Z,
     l: () => v
 }),
-    n(388685);
+    n(388685));
 var i = n(255367);
 n(73800);
 var r = n(392711),
@@ -26,7 +26,7 @@ function v(e) {
     if (!(0, c.li)(e)) return null;
     let [[d], g] = l().partition(t, (e) => 'null' === e.channel.id);
     function v(t) {
-        r(), (0, u.kj)(e.id, t);
+        (r(), (0, u.kj)(e.id, t));
     }
     return 0 === g.length
         ? (0, i.jsx)(o.sNh, {
@@ -87,7 +87,7 @@ function Z(e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 i = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                 (i = i.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -95,7 +95,7 @@ function Z(e) {
                                                 )),
                                                 i.forEach(function (t) {
                                                     var i;
-                                                    (i = n[t]),
+                                                    ((i = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: i,
@@ -103,15 +103,15 @@ function Z(e) {
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[t] = i);
-                                                });
+                                                            : (e[t] = i));
+                                                }));
                                         }
                                         return e;
                                     })({}, n)),
                                     (l = l =
                                         {
                                             onConfirm: () => {
-                                                n.onClose(), (0, u.oC)(e.id);
+                                                (n.onClose(), (0, u.oC)(e.id));
                                             },
                                             channel: e
                                         }),

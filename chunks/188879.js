@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(953529);
+(n.d(t, { Z: () => D }), n(953529));
 var i = n(255367),
     a = n(73800),
     l = n(286379),
@@ -25,7 +25,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function A(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -41,8 +41,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -287,7 +287,7 @@ let P = (e) => {
                             appealComponent: (0, i.jsx)(I, {
                                 hasBeenAppealed: null != E.appeal_status,
                                 onLetUsKnowClick: () => {
-                                    u.default.track(O.rMx.SAFETY_HUB_ACTION, {
+                                    (u.default.track(O.rMx.SAFETY_HUB_ACTION, {
                                         action: b.n0.ClickLetUsKnow,
                                         account_standing: k.state,
                                         classification_ids: [Number(n)],
@@ -296,7 +296,7 @@ let P = (e) => {
                                         is_dsa_eligible: C,
                                         violation_type: S
                                     }),
-                                        Z ? m.Z.open(n, d) : w && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), j.Z.open(n));
+                                        Z ? m.Z.open(n, d) : w && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), j.Z.open(n)));
                                 },
                                 isAppealEligible: w || Z
                             })

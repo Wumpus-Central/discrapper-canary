@@ -8,22 +8,22 @@ function s(t, e) {
 }
 var c = {
     getLastCreatedEntityKey: function () {
-        return s('DraftEntity.getLastCreatedEntityKey', 'contentState.getLastCreatedEntityKey'), c.__getLastCreatedEntityKey();
+        return (s('DraftEntity.getLastCreatedEntityKey', 'contentState.getLastCreatedEntityKey'), c.__getLastCreatedEntityKey());
     },
     create: function (t, e, r) {
-        return s('DraftEntity.create', 'contentState.createEntity'), c.__create(t, e, r);
+        return (s('DraftEntity.create', 'contentState.createEntity'), c.__create(t, e, r));
     },
     add: function (t) {
-        return s('DraftEntity.add', 'contentState.addEntity'), c.__add(t);
+        return (s('DraftEntity.add', 'contentState.addEntity'), c.__add(t));
     },
     get: function (t) {
-        return s('DraftEntity.get', 'contentState.getEntity'), c.__get(t);
+        return (s('DraftEntity.get', 'contentState.getEntity'), c.__get(t));
     },
     mergeData: function (t, e) {
-        return s('DraftEntity.mergeData', 'contentState.mergeEntityData'), c.__mergeData(t, e);
+        return (s('DraftEntity.mergeData', 'contentState.mergeEntityData'), c.__mergeData(t, e));
     },
     replaceData: function (t, e) {
-        return s('DraftEntity.replaceData', 'contentState.replaceEntityData'), c.__replaceData(t, e);
+        return (s('DraftEntity.replaceData', 'contentState.replaceEntityData'), c.__replaceData(t, e));
     },
     __getLastCreatedEntityKey: function () {
         return '' + u;
@@ -39,11 +39,11 @@ var c = {
     },
     __add: function (t) {
         var e = '' + ++u;
-        return (a = a.set(e, t)), e;
+        return ((a = a.set(e, t)), e);
     },
     __get: function (t) {
         var e = a.get(t);
-        return e || o(!1), e;
+        return (e || o(!1), e);
     },
     __mergeData: function (t, e) {
         var r = c.__get(t),
@@ -51,7 +51,7 @@ var c = {
                 for (var e = 1; e < arguments.length; e++) {
                     var r = null != arguments[e] ? arguments[e] : {},
                         n = Object.keys(r);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (n = n.concat(
                             Object.getOwnPropertySymbols(r).filter(function (t) {
                                 return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -59,7 +59,7 @@ var c = {
                         )),
                         n.forEach(function (e) {
                             var n, i, o;
-                            (n = t),
+                            ((n = t),
                                 (i = e),
                                 (o = r[e]),
                                 i in n
@@ -69,17 +69,17 @@ var c = {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (n[i] = o);
-                        });
+                                    : (n[i] = o));
+                        }));
                 }
                 return t;
             })({}, r.getData(), e),
             i = r.set('data', n);
-        return (a = a.set(t, i)), i;
+        return ((a = a.set(t, i)), i);
     },
     __replaceData: function (t, e) {
         var r = c.__get(t).set('data', e);
-        return (a = a.set(t, r)), r;
+        return ((a = a.set(t, r)), r);
     }
 };
 t.exports = c;

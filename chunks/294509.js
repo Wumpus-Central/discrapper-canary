@@ -12,10 +12,10 @@ var r = n(768494),
     c = n(925513),
     u = n(981631),
     d = (function (e) {
-        return (e.EXPLICIT = 'explicit'), (e.GORE = 'gore'), e;
+        return ((e.EXPLICIT = 'explicit'), (e.GORE = 'gore'), e);
     })({}),
     f = (function (e) {
-        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.EXPLICIT = 1)] = 'EXPLICIT'), (e[(e.GORE = 2)] = 'GORE'), (e[(e.ALL = 3)] = 'ALL'), e;
+        return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.EXPLICIT = 1)] = 'EXPLICIT'), (e[(e.GORE = 2)] = 'GORE'), (e[(e.ALL = 3)] = 'ALL'), e);
     })({});
 let _ = {
     explicit: {

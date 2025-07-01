@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(570140),
     i = n(846027),
     l = n(872810),
@@ -30,7 +30,7 @@ class f extends a.Z {
         r.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             h(this, 'handleVoiceStateUpdates', (e) => {
                 let { voiceStates: t } = e,
                     n = c.default.getId();
@@ -45,7 +45,7 @@ class f extends a.Z {
             }),
             h(this, 'handleStopUserVideo', () => {
                 d.Z.isVideoEnabled() && i.Z.setVideoEnabled(!1);
-            });
+            }));
     }
 }
 let g = new f();

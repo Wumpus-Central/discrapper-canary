@@ -50,7 +50,7 @@ function g(e) {
             })
             .catch(() => {
                 var t;
-                (p[e] = { type: 'NOT_FOUND' }),
+                ((p[e] = { type: 'NOT_FOUND' }),
                     a.Z.dispatch({
                         type: 'CHANNEL_DELETE',
                         channel: {
@@ -58,7 +58,7 @@ function g(e) {
                             guild_id: null == n || null == (t = n.params) ? void 0 : t.guildId,
                             parent_id: void 0
                         }
-                    });
+                    }));
             });
     return (
         (p[e] = {

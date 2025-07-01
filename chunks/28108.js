@@ -198,5 +198,5 @@ e.exports = function (e) {
         a = ['DIGITAL_MESSAGE', 'FIRMATA_STRING', 'ANALOG_MESSAGE', 'REPORT_DIGITAL', 'REPORT_ANALOG', 'INPUT_PULLUP', 'SET_PIN_MODE', 'INTERNAL2V56', 'SYSTEM_RESET', 'LED_BUILTIN', 'INTERNAL1V1', 'SYSEX_START', 'INTERNAL', 'EXTERNAL', 'DEFAULT', 'OUTPUT', 'INPUT', 'HIGH', 'LOW'],
         o = t(e),
         s = o.keywords;
-    return (s.type = [...s.type, ...n]), (s.literal = [...s.literal, ...a]), (s.built_in = [...s.built_in, ...r]), (s._hints = i), (o.name = 'Arduino'), (o.aliases = ['ino']), (o.supersetOf = 'cpp'), o;
+    return ((s.type = [...s.type, ...n]), (s.literal = [...s.literal, ...a]), (s.built_in = [...s.built_in, ...r]), (s._hints = i), (o.name = 'Arduino'), (o.aliases = ['ino']), (o.supersetOf = 'cpp'), o);
 };

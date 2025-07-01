@@ -1,4 +1,4 @@
-a.d(e, { l: () => d });
+a.d(e, { l: () => R });
 var r = a(157079),
     _ = a(151122),
     n = a(233517),
@@ -10,7 +10,7 @@ var r = a(157079),
     l = a(899517),
     u = a(394798),
     I = a(454463);
-let d = (0, _._I)((t = {}) => {
+let R = (0, _._I)((t = {}) => {
     let e = {
         failedRequestStatusCodes: [[500, 599]],
         failedRequestTargets: [/.*/],
@@ -20,7 +20,7 @@ let d = (0, _._I)((t = {}) => {
         name: 'HttpClient',
         setup(t) {
             var a, _, i, u;
-            (a = t),
+            ((a = t),
                 (_ = e),
                 (0, s.t$)() &&
                     (0, E.Uf)((t) => {
@@ -36,7 +36,7 @@ let d = (0, _._I)((t = {}) => {
                                         c,
                                         s,
                                         E = ((_ = e), (!(o = r) && _ instanceof Request) || (_ instanceof Request && _.bodyUsed) ? _ : new Request(_, o));
-                                    T() && (([t, c] = R('Cookie', E)), ([i, s] = R('Set-Cookie', a)));
+                                    T() && (([t, c] = d('Cookie', E)), ([i, s] = d('Set-Cookie', a)));
                                     let l = A({
                                         url: E.url,
                                         method: E.method,
@@ -76,7 +76,7 @@ let d = (0, _._I)((t = {}) => {
                                                 return e
                                                     ? e.split('\r\n').reduce((t, e) => {
                                                           let [a, r] = e.split(': ');
-                                                          return a && r && (t[a] = r), t;
+                                                          return (a && r && (t[a] = r), t);
                                                       }, {})
                                                     : {};
                                             })(e);
@@ -99,11 +99,11 @@ let d = (0, _._I)((t = {}) => {
                         } catch (t) {
                             I.X && c.kg.warn('Error while extracting response event form XHR response', t);
                         }
-                    });
+                    }));
         }
     };
 });
-function R(t, e) {
+function d(t, e) {
     let a,
         r = (function (t) {
             let e = {};
@@ -125,12 +125,12 @@ function R(t, e) {
 function N(t) {
     return t.split('; ').reduce((t, e) => {
         let [a, r] = e.split('=');
-        return a && r && (t[a] = r), t;
+        return (a && r && (t[a] = r), t);
     }, {});
 }
 function f(t, e, a) {
     var r, _;
-    return (r = t.failedRequestStatusCodes), r.some((t) => ('number' == typeof t ? t === e : e >= t[0] && e <= t[1])) && ((_ = t.failedRequestTargets), _.some((t) => ('string' == typeof t ? a.includes(t) : t.test(a)))) && !(0, i.W)(a, (0, o.s3)());
+    return ((r = t.failedRequestStatusCodes), r.some((t) => ('number' == typeof t ? t === e : e >= t[0] && e <= t[1])) && ((_ = t.failedRequestTargets), _.some((t) => ('string' == typeof t ? a.includes(t) : t.test(a)))) && !(0, i.W)(a, (0, o.s3)()));
 }
 function A(t) {
     let e = `HTTP Client Error with status code: ${t.status}`,

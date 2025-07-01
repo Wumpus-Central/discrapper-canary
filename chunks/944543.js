@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(704826), n(35282), n(388685);
+(n.d(t, { Z: () => y }), n(704826), n(35282), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -82,7 +82,7 @@ class _ extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'renderOption', (e, t) =>
                 (0, r.jsx)(
                     b,
@@ -119,7 +119,7 @@ class _ extends i.PureComponent {
                 let { value: t } = e,
                     { channelId: n } = this.props.call;
                 c.Z.changeCallRegion(n, t.id);
-            });
+            }));
     }
 }
 let y = a.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(_);

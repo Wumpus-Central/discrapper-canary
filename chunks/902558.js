@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(268146),
     i = n(46973),
     a = n(147913),
@@ -39,10 +39,10 @@ function p(e) {
     let n = (null != (t = e.channelId) ? t : 'unknown') + e.context;
     switch (e.state) {
         case l.hes.RTC_CONNECTED:
-            u.add(n), s.ZP.setCrashInformation(r.X4.HasRTCConnection, 1);
+            (u.add(n), s.ZP.setCrashInformation(r.X4.HasRTCConnection, 1));
             break;
         case l.hes.DISCONNECTED:
-            s.ZP.setCrashInformation(f(e.context), null), u.delete(n), 0 === u.size && d();
+            (s.ZP.setCrashInformation(f(e.context), null), u.delete(n), 0 === u.size && d());
     }
 }
 function h(e) {
@@ -60,12 +60,12 @@ function h(e) {
 }
 class m extends a.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'actions', {
                 RTC_CONNECTION_STATE: p,
                 RTC_CONNECTION_VIDEO: h,
                 MEDIA_SESSION_JOINED: _
-            });
+            }));
     }
 }
 let g = new m();

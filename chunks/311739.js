@@ -39,7 +39,7 @@ function p(e) {
             let o = i.noStyleAndInteraction
                 ? void 0
                 : (n) => {
-                      e.shouldStopPropagation && (null == n || n.stopPropagation()), c.default.track(u.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: t.skuId }), (0, a.Z)(t.shopLink);
+                      (e.shouldStopPropagation && (null == n || n.stopPropagation()), c.default.track(u.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: t.skuId }), (0, a.Z)(t.shopLink));
                   };
             return (0, r.jsx)(_, {
                 shopLink: t.shopLink,

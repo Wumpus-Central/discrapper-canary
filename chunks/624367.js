@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(100527),
@@ -11,18 +11,18 @@ var i = n(100527),
 function d(e) {
     let { applicationId: t, customId: n, referrerId: d, embedUrl: p, linkId: m } = e,
         { analyticsLocations: f } = (0, l.ZP)(i.Z.ACTIVITY_BOOKMARK),
-        [h] = (0, s.Z)([t]),
-        g = null != h && (0, a.ye)(h),
-        { data: _, error: b } = (0, c.h)(null == h ? void 0 : h.id, m);
-    return null == h || !1 === g
+        [g] = (0, s.Z)([t]),
+        _ = null != g && (0, a.ye)(g),
+        { data: h, error: b } = (0, c.h)(null == g ? void 0 : g.id, m);
+    return null == g || !1 === _
         ? null
-        : null != m && null == b && null != _
+        : null != m && null == b && null != h
           ? (0, r.jsx)(l.Gt, {
                 value: f,
                 children: (0, r.jsx)(u.b, {
-                    application: h,
+                    application: g,
                     customId: n,
-                    customLink: _,
+                    customLink: h,
                     embedUrl: p,
                     referrerId: d
                 })
@@ -30,7 +30,7 @@ function d(e) {
           : (0, r.jsx)(l.Gt, {
                 value: f,
                 children: (0, r.jsx)(o.O, {
-                    app: h,
+                    app: g,
                     embedUrl: p,
                     linkType: o.U.ACTIVITY,
                     activityCustomId: n,

@@ -16,7 +16,7 @@ async function a(e) {
             rejectWithError: !0
         });
         if (e.ok) return e.body;
-        return i.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
+        return (i.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), []);
     } catch (e) {
         return [];
     }

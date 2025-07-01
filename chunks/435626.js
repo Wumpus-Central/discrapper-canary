@@ -51,11 +51,11 @@ function v(t) {
                                 }),
                                 (0, a.jsx)(r.olH, {
                                     onClick: () => {
-                                        y.default.track(m.rMx.MODAL_DISMISSED, {
+                                        (y.default.track(m.rMx.MODAL_DISMISSED, {
                                             type: m.jXE.GIFT_CATEGORY_SELECT_MODAL,
                                             location_object: m.qAy.BUTTON_CTA
                                         }),
-                                            o();
+                                            o());
                                     },
                                     className: b.cursorPointer
                                 })
@@ -88,7 +88,7 @@ function N(t) {
         g = (t) => {
             var a, o;
             let i = m.Qqv.NITRO_SKU_SELECTION;
-            t === x.Si.TIER_2 ? (i = m.Qqv.NITRO_STANDARD) : t === x.Si.TIER_0 && (i = m.Qqv.NITRO_BASIC),
+            (t === x.Si.TIER_2 ? (i = m.Qqv.NITRO_STANDARD) : t === x.Si.TIER_0 && (i = m.Qqv.NITRO_BASIC),
                 (0, h.Z)({
                     isGift: !0,
                     giftRecipient: e,
@@ -101,7 +101,7 @@ function N(t) {
                             for (var e = 1; e < arguments.length; e++) {
                                 var n = null != arguments[e] ? arguments[e] : {},
                                     a = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (a = a.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (t) {
                                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -109,7 +109,7 @@ function N(t) {
                                     )),
                                     a.forEach(function (e) {
                                         var a;
-                                        (a = n[e]),
+                                        ((a = n[e]),
                                             e in t
                                                 ? Object.defineProperty(t, e, {
                                                       value: a,
@@ -117,8 +117,8 @@ function N(t) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (t[e] = a);
-                                    });
+                                                : (t[e] = a));
+                                    }));
                             }
                             return t;
                         })({}, n)),
@@ -142,7 +142,7 @@ function N(t) {
                               }),
                         a),
                     onClose: p
-                });
+                }));
         };
     return (0, a.jsxs)(a.Fragment, {
         children: [

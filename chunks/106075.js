@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(781311);
+(n.d(t, { Z: () => C }), n(781311));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -42,7 +42,7 @@ function C() {
         G = d.Z.useField('fetchedQuery'),
         B = i.useCallback(
             (e) => {
-                T(e), w && x();
+                (T(e), w && x());
             },
             [w, x, T]
         ),

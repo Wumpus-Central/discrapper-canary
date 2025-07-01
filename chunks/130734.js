@@ -20,7 +20,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -73,7 +73,7 @@ let g = new f(a.Z, {
         d = c(s({}, d), { [t.source_guild_id]: t.is_dirty || !1 });
     },
     GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE: function () {
-        l.K.set(u, !0), (p = !0);
+        (l.K.set(u, !0), (p = !0));
     },
     GUILD_TEMPLATE_SYNC_SUCCESS: function (e) {
         d = c(s({}, d), { [e.guildTemplate.source_guild_id]: !1 });

@@ -21,9 +21,9 @@ class o {
     export(e) {
         i()(null != this.exporter, 'DiscordCanvas: Exporting the canvas requires a valid DiscordCanvasExporter to be initialized.');
         let t = this.canvas.getCanvasForExport();
-        return i()(null != t, "DiscordCanvas: Couldn't get a canvas for export."), this.exporter.exportCanvas(t, e);
+        return (i()(null != t, "DiscordCanvas: Couldn't get a canvas for export."), this.exporter.exportCanvas(t, e));
     }
     constructor(e, t) {
-        a(this, 'canvas', void 0), a(this, 'exporter', void 0), (this.canvas = e), (this.exporter = t);
+        (a(this, 'canvas', void 0), a(this, 'exporter', void 0), (this.canvas = e), (this.exporter = t));
     }
 }

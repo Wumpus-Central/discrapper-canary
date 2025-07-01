@@ -5,17 +5,17 @@ var r = n(73800),
 function o(e, t) {
     let n = (0, r.useRef)(e),
         i = (0, r.useRef)(null);
-    (0, r.useEffect)(() => {
+    ((0, r.useEffect)(() => {
         n.current = e;
     }, [e]),
         (0, r.useEffect)(() => {
             function e() {
-                a()(null != n.current, 'Missing callback'), n.current();
+                (a()(null != n.current, 'Missing callback'), n.current());
             }
             if (null === t) {
                 null !== i.current && (clearInterval(i.current), (i.current = null));
                 return;
             }
-            return (i.current = setInterval(e, t)), () => clearInterval(i.current);
-        }, [t]);
+            return ((i.current = setInterval(e, t)), () => clearInterval(i.current));
+        }, [t]));
 }

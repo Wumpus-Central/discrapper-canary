@@ -16,7 +16,7 @@ let c = (e) => {
     },
     u = (e, t, n) => {
         var a;
-        r.Z.sendGreetMessage(
+        (r.Z.sendGreetMessage(
             e.id,
             n,
             r.Z.getSendMessageOptionsForReply({
@@ -31,5 +31,5 @@ let c = (e) => {
                 sticker_id: n,
                 target_user: t.author.id,
                 sender: null == (a = i.default.getCurrentUser()) ? void 0 : a.id
-            });
+            }));
     };

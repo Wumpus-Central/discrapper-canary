@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
     o = n(120356),
-    s = n.n(o),
-    a = n(748780),
+    a = n.n(o),
+    s = n(748780),
     c = n(846519),
     u = n(481060),
     d = n(585483),
@@ -30,10 +30,10 @@ let m = {
 };
 class b extends (r = l.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        (this.setState({ shown: !0 }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus));
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), d.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        (this.focusTimeout.stop(), d.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus));
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -42,13 +42,13 @@ class b extends (r = l.PureComponent) {
     springTo(e) {
         let { reducedMotion: t } = this.context;
         !0 !== t.enabled &&
-            a.Z.spring(
+            s.Z.spring(
                 this.state.translateY,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -56,7 +56,7 @@ class b extends (r = l.PureComponent) {
                             )),
                             r.forEach(function (t) {
                                 g(e, t, n[t]);
-                            });
+                            }));
                     }
                     return e;
                 })({ toValue: Math.min(e, 250) }, m)
@@ -64,10 +64,10 @@ class b extends (r = l.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)('div', {
-            className: s()(f.arrowGroup, e),
+            className: a()(f.arrowGroup, e),
             children: [
-                (0, i.jsx)(a.Z.div, {
-                    className: s()(f.arrowContainer, f.horizontal),
+                (0, i.jsx)(s.Z.div, {
+                    className: a()(f.arrowContainer, f.horizontal),
                     style: this.getStyle(),
                     children: (0, i.jsx)('img', {
                         alt: '',
@@ -76,7 +76,7 @@ class b extends (r = l.PureComponent) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(f.arrowContainer, f.diag1),
+                    className: a()(f.arrowContainer, f.diag1),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(536404),
@@ -84,7 +84,7 @@ class b extends (r = l.PureComponent) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(f.arrowContainer, f.diag2),
+                    className: a()(f.arrowContainer, f.diag2),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(569347),
@@ -114,7 +114,7 @@ class b extends (r = l.PureComponent) {
             { shown: t } = this.state;
         return (0, i.jsxs)('div', {
             ref: this.rootRef,
-            className: s()(f.tutorial, {
+            className: a()(f.tutorial, {
                 [f.shown]: t,
                 [f.hasQuery]: e
             }),
@@ -139,10 +139,10 @@ class b extends (r = l.PureComponent) {
               };
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'state', {
                 shown: !1,
-                translateY: new a.Z.Value(0)
+                translateY: new s.Z.Value(0)
             }),
             g(this, 'rootRef', l.createRef()),
             g(this, 'focusTimeout', new c.V7()),
@@ -156,7 +156,7 @@ class b extends (r = l.PureComponent) {
                         this.springTo(r - 118 + 9);
                     } else this.springTo(0);
                 });
-            });
+            }));
     }
 }
 g(b, 'contextType', u.Sfi);

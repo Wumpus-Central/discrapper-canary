@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,11 +51,11 @@ function p(e) {
 class h extends (r = a.Component) {
     componentDidMount() {
         let { previewWidth: e, animatedProgress: t } = this.state;
-        (this._previewId = e.addListener(this.handlePreviewChange)), (this._progressId = t.addListener(this.handleAnimatedChange));
+        ((this._previewId = e.addListener(this.handlePreviewChange)), (this._progressId = t.addListener(this.handleAnimatedChange)));
     }
     componentWillUnmount() {
         let { previewWidth: e, animatedProgress: t } = this.state;
-        e.removeListener(this._previewId), t.removeListener(this._progressId), window.removeEventListener('mouseup', this.handleDragEnd, !1), window.removeEventListener('mousemove', this.handleDragMove, !1);
+        (e.removeListener(this._previewId), t.removeListener(this._progressId), window.removeEventListener('mouseup', this.handleDragEnd, !1), window.removeEventListener('mousemove', this.handleDragMove, !1));
     }
     componentDidUpdate(e, t) {
         let { dragging: n, previewWidth: r, animatedProgress: i } = this.state;
@@ -146,7 +146,7 @@ class h extends (r = a.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'state', {
                 animatedProgress: new l.Z.Value(0),
                 dragging: !1,
@@ -197,18 +197,18 @@ class h extends (r = a.Component) {
                         offsetWidth: l
                     },
                     () => {
-                        t(r), n(this.calculatePercentage(a, o), r), i.removeEventListener('mouseup', this.handleDragEnd, !1), i.removeEventListener('mousemove', this.handleDragMove, !1), i.addEventListener('mouseup', this.handleDragEnd, !1), i.addEventListener('mousemove', this.handleDragMove, !1);
+                        (t(r), n(this.calculatePercentage(a, o), r), i.removeEventListener('mouseup', this.handleDragEnd, !1), i.removeEventListener('mousemove', this.handleDragMove, !1), i.addEventListener('mouseup', this.handleDragEnd, !1), i.addEventListener('mousemove', this.handleDragMove, !1));
                     }
                 );
             }),
             u(this, 'handleDragEnd', () => {
                 let { onDragEnd: e, currentWindow: t } = this.props;
-                e(), t.removeEventListener('mouseup', this.handleDragEnd, !1), t.removeEventListener('mousemove', this.handleDragMove, !1), this.setState({ dragging: !1 });
+                (e(), t.removeEventListener('mouseup', this.handleDragEnd, !1), t.removeEventListener('mousemove', this.handleDragMove, !1), this.setState({ dragging: !1 }));
             }),
             u(this, 'setBubbleRef', (e) => {
                 null == e ? (this.bubble = null) : null != e.componentRef ? (this.bubble = e.componentRef) : null != e.refs && (this.bubble = e.refs.node);
-            });
+            }));
     }
 }
-u(h, 'Types', _), u(h, 'defaultProps', { currentWindow: window });
+(u(h, 'Types', _), u(h, 'defaultProps', { currentWindow: window }));
 let m = h;

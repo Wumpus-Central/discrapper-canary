@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685);
+(n.d(t, { Z: () => Q }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -116,7 +116,7 @@ function Q(e) {
         { sourceType: eC } = ea,
         ey = i.useCallback(
             async (e) => {
-                S.eo.updateSetting(ea.notifyFriends), S.I0.updateSetting(ea.hidePreview);
+                (S.eo.updateSetting(ea.notifyFriends), S.I0.updateSetting(ea.hidePreview));
                 let [t, r] = await (0, P.Z)(e.hasOwnProperty('pid') ? e.pid : e, {
                     preset: ea.preset,
                     fps: ea.fps,
@@ -127,25 +127,25 @@ function Q(e) {
                     audioSourceId: ea.audioSourceId
                 });
                 if (t) return n();
-                'no permission' === r &&
+                ('no permission' === r &&
                     p.Z.show({
                         title: J.intl.string(J.t['X+mXen']),
                         body: J.intl.string(J.t.MIJCzs)
                     }),
-                    n();
+                    n());
             },
             [n, ea]
         );
     async function eO(e) {
         if ((0, I.isWindows)() && ee && 'source_select' === ea.modalStep) {
-            ec({
+            (ec({
                 type: 'set_step',
                 step: 'confirm'
             }),
                 ec({
                     type: 'set_selected_channel',
                     channelId: e
-                });
+                }));
             return;
         }
         (await (0, g.Z)({ channelId: e })) && null != a && ey(a);
@@ -175,7 +175,7 @@ function Q(e) {
                                     (0, r.jsx)(A.Z, {
                                         mainCTADisabled: !eh && '' === ea.nativeSourceType,
                                         mainCTAOnClick: () => {
-                                            (0, T.t)(), (0, T.T)(ea.nativeSourceType);
+                                            ((0, T.t)(), (0, T.T)(ea.nativeSourceType));
                                         },
                                         align: 'right',
                                         ctaText: J.intl.string(J.t.FiBjwc),
@@ -275,7 +275,7 @@ function Q(e) {
                                                           });
                                                       }
                                                       if (ee && (0, I.isWindows)()) {
-                                                          t(),
+                                                          (t(),
                                                               ec({
                                                                   type: 'set_selected_source',
                                                                   source: e
@@ -283,15 +283,15 @@ function Q(e) {
                                                               ec({
                                                                   type: 'set_step',
                                                                   step: 'confirm'
-                                                              });
+                                                              }));
                                                           return;
                                                       }
                                                       if (!$) return ey(e);
-                                                      t(),
+                                                      (t(),
                                                           ec({
                                                               type: 'set_selected_source',
                                                               source: e
-                                                          });
+                                                          }));
                                                   }
                                               })
                                 })

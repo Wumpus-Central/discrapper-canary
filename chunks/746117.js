@@ -18,7 +18,7 @@ function f(t, e) {
     return r === n.NEUTRAL ? e : r;
 }
 function p(t, e) {
-    return e || (e = n.getGlobalDir()), n.isStrong(e) || i(!1), f(t, e);
+    return (e || (e = n.getGlobalDir()), n.isStrong(e) || i(!1), f(t, e));
 }
 t.exports = {
     firstStrongChar: c,

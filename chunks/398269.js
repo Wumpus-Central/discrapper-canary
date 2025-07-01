@@ -1,4 +1,4 @@
-n.d(t, { f: () => f }), n(415506);
+(n.d(t, { f: () => f }), n(415506));
 var r = n(255367);
 n(73800);
 var i = n(608787),
@@ -21,16 +21,16 @@ async function f() {
         p = (e) => null;
     if (f || _) {
         let e = (0, i.Un)({
-            createPromise: () => Promise.all([n.e('14006'), n.e('35535'), n.e('25292'), n.e('80417'), n.e('90508'), n.e('86350'), n.e('70205'), n.e('88712'), n.e('3589'), n.e('94357'), n.e('55697'), n.e('92922'), n.e('89298'), n.e('29709'), n.e('82510'), n.e('13368')]).then(n.bind(n, 989373)),
+            createPromise: () => Promise.all([n.e('14006'), n.e('35535'), n.e('25292'), n.e('80417'), n.e('90508'), n.e('7839'), n.e('81872'), n.e('70205'), n.e('88712'), n.e('3589'), n.e('83976'), n.e('55697'), n.e('92922'), n.e('89298'), n.e('29709'), n.e('82510'), n.e('13368')]).then(n.bind(n, 989373)),
             webpackId: 989373,
             name: 'AppOverlay'
         });
-        (p = (t) =>
+        ((p = (t) =>
             (0, r.jsx)(e, {
                 withTitleBar: !1,
                 windowKey: t
             })),
-            (0, a.te)(u.$S, l.Z.getDefaultLayout(u.$S, u.HN), u.HN);
+            (0, a.te)(u.$S, l.Z.getDefaultLayout(u.$S, u.HN), u.HN));
     } else throw Error('OverlayV3Utils: No overlay rendering mode found');
     await s.bA(d.$J, p, t);
 }

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     MS: () => y,
     Ph: () => O,
     _2: () => I,
@@ -7,7 +7,7 @@ n.d(t, {
     nf: () => g
 }),
     n(35282),
-    n(539854);
+    n(539854));
 var r = n(544891),
     i = n(780384),
     a = n(410030),
@@ -40,7 +40,7 @@ function g(e, t) {
     t.forEach((t) => m(e, t, 3));
 }
 var E = (function (e) {
-    return (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION'), e;
+    return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION'), e);
 })({});
 let b = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
@@ -100,7 +100,7 @@ async function I(e, t) {
             body: { user_ids: i },
             rejectWithError: !0
         });
-        if (!Array.isArray(t.body)) return h(n, 0), [];
+        if (!Array.isArray(t.body)) return (h(n, 0), []);
         let a = t.body.map(v),
             o = [];
         a.forEach((e) => {
@@ -110,7 +110,7 @@ async function I(e, t) {
         let s = f(e, o),
             c = i.filter((e) => !o.includes(e)),
             u = f(e, c);
-        return h(s, 3), h(u, 0), a;
+        return (h(s, 3), h(u, 0), a);
     } catch (e) {
         h(n, 0);
     }

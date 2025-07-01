@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(704826), n(35282), n(290780);
+(n.d(t, { Z: () => W }), n(704826), n(35282), n(290780));
 var r = n(913527),
     i = n.n(r),
     l = n(570140),
@@ -92,7 +92,7 @@ function G(e) {
     M(t, n, r, i, l);
 }
 function B() {
-    return null !== x && x.removeEventListener('end', N.NB), o.M9(), (x = null), !0;
+    return (null !== x && x.removeEventListener('end', N.NB), o.M9(), (x = null), !0);
 }
 function V(e) {
     var t, n, r;
@@ -102,7 +102,7 @@ function V(e) {
         s = null != o ? (null != (n = m.ZP.getNick(l.guild_id, null == o ? void 0 : o.id)) ? n : S.ZP.getName(o)) : null,
         c = l.getGuildId(),
         d = null != (r = m.ZP.getNick(c, i.author.id)) ? r : S.ZP.getName(i.author);
-    return U(D(i.content, d, c, s), !0, l.id, i.id), !0;
+    return (U(D(i.content, d, c, s), !0, l.id, i.id), !0);
 }
 function H(e) {
     var t, n, r, i, l, a;
@@ -138,6 +138,6 @@ function z() {
 }
 let W = {
     init() {
-        l.Z.subscribe('SPEAK_TEXT', G), l.Z.subscribe('SPEAK_MESSAGE', V), l.Z.subscribe('STOP_SPEAKING', B), l.Z.subscribe('MESSAGE_CREATE', H), l.Z.subscribe('MESSAGE_DELETE', F), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', z), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', k), (0, a.Ql)(k);
+        (l.Z.subscribe('SPEAK_TEXT', G), l.Z.subscribe('SPEAK_MESSAGE', V), l.Z.subscribe('STOP_SPEAKING', B), l.Z.subscribe('MESSAGE_CREATE', H), l.Z.subscribe('MESSAGE_DELETE', F), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', z), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', k), (0, a.Ql)(k));
     }
 };

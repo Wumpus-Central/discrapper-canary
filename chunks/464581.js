@@ -7,7 +7,7 @@ function a(e, t, n) {
                 if (t) return !0;
                 if (!0 === e.defaultPrevented) return !1;
                 let r = n(e);
-                return r && (e.preventDefault(), e.stopPropagation()), r;
+                return (r && (e.preventDefault(), e.stopPropagation()), r);
             },
             [t, n]
         ),

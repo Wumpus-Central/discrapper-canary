@@ -9,7 +9,7 @@ function l(e) {
     let { channelId: t, warningId: l, senderId: c, warningType: u } = e;
     if (!(0, s.mG)({ location: 'takeover-modal' })) return;
     let d = () => {
-        (0, a.T)(t, [l]),
+        ((0, a.T)(t, [l]),
             (0, o.qc)({
                 channelId: t,
                 senderId: c,
@@ -17,7 +17,7 @@ function l(e) {
                 warningType: u,
                 cta: o.NM.USER_TAKEOVER_MODAL_DISMISS,
                 isNudgeWarning: !1
-            });
+            }));
     };
     (0, i.ZDy)(
         async () => {

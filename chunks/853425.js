@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(415506);
+(n.d(t, { Z: () => p }), n(415506));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -16,7 +16,7 @@ async function f(e) {
     window.location.reload(!0);
 }
 async function _() {
-    await (0, o.bF)(), window.location.reload(!0);
+    (await (0, o.bF)(), window.location.reload(!0));
 }
 let p = i.memo(function (e) {
     let { url: t } = e,

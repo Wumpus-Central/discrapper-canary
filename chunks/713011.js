@@ -7,7 +7,7 @@ function a(e) {
             n = e.getRegistry();
         o(t);
         var r = t.getSourceId();
-        return null != r && (n.getSource(r, !0).endDrag(t, r), n.unpinSource()), { type: i.Bs };
+        return (null != r && (n.getSource(r, !0).endDrag(t, r), n.unpinSource()), { type: i.Bs });
     };
 }
 function o(e) {

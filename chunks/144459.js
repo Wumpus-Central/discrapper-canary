@@ -26,7 +26,7 @@ function s(e, t) {
         r = function (e) {
             n.set(e, n.has(e) ? n.get(e) + 1 : 1);
         };
-    e.forEach(r), t.forEach(r);
+    (e.forEach(r), t.forEach(r));
     var i = [];
     return (
         n.forEach(function (e, t) {

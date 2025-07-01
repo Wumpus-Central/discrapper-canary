@@ -1,12 +1,12 @@
-n.d(t, { c: () => l });
+n.d(t, { c: () => o });
 var r = n(544891),
-    i = n(570140),
-    s = n(594174),
-    o = n(981631);
-async function l(e, t) {
+    s = n(570140),
+    i = n(594174),
+    l = n(981631);
+async function o(e, t) {
     try {
         let n = await r.tn.put({
-            url: o.ANM.USER_SET_GUILD_IDENTITY,
+            url: l.ANM.USER_SET_GUILD_IDENTITY,
             body: {
                 identity_guild_id: e,
                 identity_enabled: t
@@ -15,13 +15,13 @@ async function l(e, t) {
         });
         return (
             n.ok &&
-                i.Z.dispatch({
+                s.Z.dispatch({
                     type: 'CURRENT_USER_UPDATE',
                     user: (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ async function l(e, t) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -37,11 +37,11 @@ async function l(e, t) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
-                    })({}, s.default.getCurrentUser(), n.body)
+                    })({}, i.default.getCurrentUser(), n.body)
                 }),
             n
         );

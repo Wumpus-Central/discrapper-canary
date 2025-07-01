@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(415506);
+(n.d(t, { Z: () => I }), n(415506));
 var r,
     i = n(442837),
     a = n(570140),
@@ -26,12 +26,12 @@ let p = !1,
     h = null,
     m = null;
 function g() {
-    (p = !1), (m = null), (h = null);
+    ((p = !1), (m = null), (h = null));
 }
 function E(e) {
     let { error: t } = e,
         { code: n, paymentId: r } = t;
-    if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (p = !1), !1;
+    if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return ((p = !1), !1);
     p || ((p = !0), (h = r), n === l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && b(r));
 }
 async function b(e) {
@@ -44,7 +44,7 @@ async function b(e) {
 }
 function y(e) {
     let { error: t } = e;
-    (m = t), (p = !1);
+    ((m = t), (p = !1));
 }
 function O(e) {
     let { payment: t } = e,
@@ -53,8 +53,8 @@ function O(e) {
     if (((p = !1), (h = null), t.status === d.PyE.FAILED)) {
         var r;
         let e = null;
-        (null == (r = t.metadata) ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS && (e = l.SM.BILLING_INSUFFICIENT_FUNDS), (m = new l.ZP(f.intl.string(f.t.khEaRE), e));
-    } else (m = null), a.Z.wait(o.fw), a.Z.wait(s.pB);
+        ((null == (r = t.metadata) ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS && (e = l.SM.BILLING_INSUFFICIENT_FUNDS), (m = new l.ZP(f.intl.string(f.t.khEaRE), e)));
+    } else ((m = null), a.Z.wait(o.fw), a.Z.wait(s.pB));
 }
 class v extends (r = i.ZP.Store) {
     get isAwaitingAuthentication() {

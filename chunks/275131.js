@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(664751),
     i = n(975641),
     a = n(544891),
@@ -24,15 +24,15 @@ function _(e, t, n) {
 }
 class p extends s.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
             _(this, 'queue', new Set()),
             _(this, 'isFetchEnabled', !1),
             _(this, 'handleConnectionOpen', () => {
-                (this.isFetchEnabled = !0),
+                ((this.isFetchEnabled = !0),
                     this.queue.forEach((e) => {
                         e === d.Hk ? this.fetchFeaturedGuilds() : this.fetchCategoryFeaturedGuilds({ categoryId: e });
-                    });
+                    }));
             }),
             _(this, 'fetchFeaturedGuilds', async (e) => {
                 var t;
@@ -64,12 +64,12 @@ class p extends s.Z {
                             total: t
                         });
                     } catch (e) {
-                        o.Z.dispatch({
+                        (o.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE',
                             categoryId: d.Hk,
                             error: e
                         }),
-                            l.rC({ categoryId: d.Hk });
+                            l.rC({ categoryId: d.Hk }));
                     }
                 }
             }),
@@ -99,15 +99,15 @@ class p extends s.Z {
                             total: n
                         });
                     } catch (e) {
-                        o.Z.dispatch({
+                        (o.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE',
                             categoryId: t,
                             error: e
                         }),
-                            l.rC({ categoryId: t });
+                            l.rC({ categoryId: t }));
                     }
                 }
-            });
+            }));
     }
 }
 let h = new p();

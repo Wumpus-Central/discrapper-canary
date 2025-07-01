@@ -1,4 +1,4 @@
-n.d(r, { D5: () => l }), n(415506);
+(n.d(r, { D5: () => l }), n(415506));
 var t = n(259443);
 n(436620);
 let a = new t.Yd('LibDaveManager'),
@@ -18,14 +18,14 @@ function l() {
                       let { DaveModuleFactory: t } = n;
                       t(i)
                           .then((r) => {
-                              a.info('Successfully initialized DAVE'), e(r);
+                              (a.info('Successfully initialized DAVE'), e(r));
                           })
                           .catch((e) => {
-                              a.error('Failed to initialize DAVE', e), r(e);
+                              (a.error('Failed to initialize DAVE', e), r(e));
                           });
                   })
                   .catch((e) => {
-                      a.error('Failed to load DAVE module', e), r(e);
+                      (a.error('Failed to load DAVE module', e), r(e));
                   });
           }));
 }

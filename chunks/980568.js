@@ -4,7 +4,7 @@ var n = i(570140),
     s = i(981631);
 let o = {
     dismissForApplicationId(t) {
-        n.Z.dispatch({
+        (n.Z.dispatch({
             type: 'ACTIVITY_INVITE_EDUCATION_DISMISS',
             key: t,
             value: !0
@@ -13,6 +13,6 @@ let o = {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: t,
                 acknowledged: !0
-            });
+            }));
     }
 };

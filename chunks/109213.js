@@ -5,7 +5,7 @@ n.d(t, {
 var r = n(818083),
     i = n(987338),
     a = (function (e) {
-        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.POPULAR = 1)] = 'POPULAR'), (e[(e.RECENT = 2)] = 'RECENT'), e;
+        return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.POPULAR = 1)] = 'POPULAR'), (e[(e.RECENT = 2)] = 'RECENT'), e);
     })({});
 let o = (0, r.B)({
     kind: 'user',

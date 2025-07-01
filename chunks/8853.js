@@ -1,4 +1,4 @@
-n.d(t, { t: () => c }), n(980754), n(388685), n(415506);
+(n.d(t, { t: () => c }), n(980754), n(388685), n(415506));
 var r = n(230367),
     i = n(320215),
     l = n(240773),
@@ -50,9 +50,9 @@ class s extends a.C {
         return l;
     }
     internalBinaryWrite(e, t, n) {
-        'placeholder' === e.properties.oneofKind && t.tag(1, r.TD.LengthDelimited).string(e.properties.placeholder), 'announcementModalVariant1' === e.properties.oneofKind && o.xY.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), '' !== e.contentIdentifier && t.tag(3, r.TD.LengthDelimited).string(e.contentIdentifier);
+        ('placeholder' === e.properties.oneofKind && t.tag(1, r.TD.LengthDelimited).string(e.properties.placeholder), 'announcementModalVariant1' === e.properties.oneofKind && o.xY.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), '' !== e.contentIdentifier && t.tag(3, r.TD.LengthDelimited).string(e.contentIdentifier));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties', [

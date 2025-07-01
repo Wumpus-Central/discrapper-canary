@@ -19,7 +19,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -35,8 +35,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -54,7 +54,7 @@ function h(e) {
     N === t && (E = v.status);
     let w = (null == v ? void 0 : v.scheduled_start_time) != null ? (0, b.lh)(y, S, new Date(null == v ? void 0 : v.scheduled_start_time)) : null,
         L = (e) => {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 null != z &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('34261'), n.e('42743'), n.e('27434'), n.e('62318')]).then(n.bind(n, 215269));
@@ -72,7 +72,7 @@ function h(e) {
                                     n
                                 )
                             );
-                    });
+                    }));
         };
     return (0, r.jsxs)(o.kL8, {
         className: i()(j.container, {
@@ -81,7 +81,7 @@ function h(e) {
             [j.active]: k
         }),
         onClick: (e) => {
-            e.stopPropagation(), P || null == O || O(t);
+            (e.stopPropagation(), P || null == O || O(t));
         },
         onContextMenu: L,
         'aria-label': '',

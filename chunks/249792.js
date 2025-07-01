@@ -4,19 +4,19 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(695469),
-    s = n(692547),
-    a = n(481060),
+    a = n(692547),
+    s = n(481060),
     c = n(565138),
     u = n(728492);
 function d(e) {
     let { guild: t, show: n, active: i, onAnimationStart: d, onAnimationRest: h } = e,
         p = {},
         f = {};
-    (p.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (f.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
-    let g = (0, a.dQu)(s.Z.unsafe_rawColors.BRAND_500).hex(),
-        m = (0, a.dQu)(s.Z.unsafe_rawColors.PRIMARY_630).hex();
+    ((p.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (f.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)'));
+    let g = (0, s.dQu)(a.Z.unsafe_rawColors.BRAND_500).hex(),
+        m = (0, s.dQu)(a.Z.unsafe_rawColors.PRIMARY_630).hex();
     i && null == t.icon && ((p.backgroundColor = g), (f.backgroundColor = m));
-    let b = (0, a.Yzy)(n, {
+    let b = (0, s.Yzy)(n, {
         from: p,
         enter: f,
         leave: p,

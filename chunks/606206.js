@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => P }), n(388685), n(539854), n(781311), n(35282);
+(n.d(t, { Z: () => P }), n(388685), n(539854), n(781311), n(35282));
 var l,
     i = n(442837),
     o = n(570140),
@@ -33,7 +33,7 @@ let N = [s.h8.TEXT_CHANNEL, s.h8.GROUP_DM, s.h8.USER],
     x = [],
     E = [];
 function C(e) {
-    (x = [...x, e]),
+    ((x = [...x, e]),
         (E = E.map((e) => {
             var t, n;
             return (
@@ -41,7 +41,7 @@ function C(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function C(e) {
                             )),
                             r.forEach(function (t) {
                                 b(e, t, n[t]);
-                            });
+                            }));
                     }
                     return e;
                 })({}, e)),
@@ -69,10 +69,10 @@ function C(e) {
                 t
             );
         })),
-        S.emitChange();
+        S.emitChange());
 }
 function I() {
-    (v = null), null != r && (r.destroy(), (r = null)), null != m && m();
+    ((v = null), null != r && (r.destroy(), (r = null)), null != m && m());
 }
 function T() {
     let e = null != v && null != v.application_id ? f.Z.getApplicationActivity(v.application_id) : null;
@@ -96,13 +96,13 @@ class j extends (l = i.ZP.Store) {
 b(j, 'displayName', 'ActivityInviteModalStore');
 let S = new j(o.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            (v = e.activity),
+            ((v = e.activity),
                 (m = e.resolve),
                 (x = []),
                 null == r &&
                     (r = new s.ZP(
                         (e, t) => {
-                            (E = (
+                            ((E = (
                                 '' === t.trim()
                                     ? (function () {
                                           let e = [];
@@ -168,12 +168,12 @@ let S = new j(o.Z, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                S.emitChange();
+                                S.emitChange());
                         },
                         N,
                         100
                     )),
-                r.search('');
+                r.search(''));
         },
         ACTIVITY_INVITE_MODAL_QUERY: function (e) {
             let { query: t } = e;

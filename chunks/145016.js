@@ -43,7 +43,7 @@ function h(e) {
 }
 class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z), (null == e ? void 0 : e.inputDeviceFrecency) != null && u.overwriteHistory(e.inputDeviceFrecency), (null == e ? void 0 : e.outputDeviceFrecency) != null && d.overwriteHistory(e.outputDeviceFrecency), (null == e ? void 0 : e.videoDeviceFrecency) != null && f.overwriteHistory(e.videoDeviceFrecency);
+        (this.waitFor(s.Z), (null == e ? void 0 : e.inputDeviceFrecency) != null && u.overwriteHistory(e.inputDeviceFrecency), (null == e ? void 0 : e.outputDeviceFrecency) != null && d.overwriteHistory(e.outputDeviceFrecency), (null == e ? void 0 : e.videoDeviceFrecency) != null && f.overwriteHistory(e.videoDeviceFrecency));
     }
     getState() {
         return {
@@ -62,7 +62,7 @@ class m extends (r = i.ZP.PersistedStore) {
         return f.frequently;
     }
 }
-l(m, 'displayName', 'DeviceFrecencyStore'), l(m, 'persistKey', 'DeviceFrecencyStore');
+(l(m, 'displayName', 'DeviceFrecencyStore'), l(m, 'persistKey', 'DeviceFrecencyStore'));
 let g = new m(a.Z, {
     AUDIO_SET_INPUT_DEVICE: _,
     AUDIO_SET_OUTPUT_DEVICE: p,

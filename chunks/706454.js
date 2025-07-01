@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => p });
+(n.r(t), n.d(t, { default: () => p }));
 var r,
     i = n(442837),
     a = n(570140),
@@ -25,11 +25,11 @@ function d() {
     return null != n && '' !== n && n !== u && ((u = n), (0, o._2)(u), !0);
 }
 function f(e) {
-    (u = e.locale), (0, o._2)(u);
+    ((u = e.locale), (0, o._2)(u));
 }
 class _ extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z), d(), (0, o._2)(u);
+        (this.waitFor(s.Z), d(), (0, o._2)(u));
     }
     get locale() {
         return u;

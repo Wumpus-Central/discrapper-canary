@@ -32,12 +32,12 @@ var r = n(895829),
     s = ['v', 'o', 's', 'i', 'u', 'e', 'p', 'c', 'b', 't', 'r', 'z', 'a'],
     l = ['i', 'c', 'b', 'a'];
 e.exports = function (e, t) {
-    (t = t || {}),
+    ((t = t || {}),
         null == e.version && (e.version = 0),
         null == e.name && (e.name = ' '),
         e.media.forEach(function (e) {
             null == e.payloads && (e.payloads = '');
-        });
+        }));
     var n = t.outerOrder || s,
         i = t.innerOrder || l,
         a = [];
@@ -54,7 +54,7 @@ e.exports = function (e, t) {
             });
         }),
         e.media.forEach(function (e) {
-            a.push(o('m', r.m[0], e)),
+            (a.push(o('m', r.m[0], e)),
                 i.forEach(function (t) {
                     r[t].forEach(function (n) {
                         n.name in e && null != e[n.name]
@@ -65,7 +65,7 @@ e.exports = function (e, t) {
                                   a.push(o(t, n, e));
                               });
                     });
-                });
+                }));
         }),
         a.join('\r\n') + '\r\n'
     );

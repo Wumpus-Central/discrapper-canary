@@ -1,4 +1,4 @@
-l.d(n, { default: () => w }), l(539854), l(388685), l(472816), l(794429);
+(l.d(n, { default: () => w }), l(539854), l(388685), l(472816), l(794429));
 var t = l(255367),
     i = l(73800),
     a = l(658722),
@@ -28,7 +28,7 @@ function _(e) {
     for (var n = 1; n < arguments.length; n++) {
         var l = null != arguments[n] ? arguments[n] : {},
             t = Object.keys(l);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (t = t.concat(
                 Object.getOwnPropertySymbols(l).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(l, e).enumerable;
@@ -36,7 +36,7 @@ function _(e) {
             )),
             t.forEach(function (n) {
                 var t;
-                (t = l[n]),
+                ((t = l[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: t,
@@ -44,8 +44,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = t);
-            });
+                        : (e[n] = t));
+            }));
     }
     return e;
 }
@@ -151,7 +151,7 @@ function w(e) {
             let e = C.Z.getSettings();
             if (null == e.newMemberActions) return new Set();
             let n = new Set(e.newMemberActions.map((e) => e.channelId));
-            return null != B && n.delete(B.value), n;
+            return (null != B && n.delete(B.value), n);
         }),
         [$, ee] = i.useState(null == L ? null : null != (y = W.find((e) => e.value === L.actionType)) ? y : null),
         [en, el] = i.useState(null != (l = null == L ? void 0 : L.emoji) ? l : null),
@@ -182,14 +182,14 @@ function w(e) {
                     icon: null != et ? et : null
                 },
                 n = ei !== er || en !== eo;
-            A(e, null != ei ? ei : null, n), M();
+            (A(e, null != ei ? ei : null, n), M());
         }, [A, M, K, $, H, en, et, ei, er, eo]),
         ed = i.useCallback(() => {
-            null == D || D(), M();
+            (null == D || D(), M());
         }, [D, M]),
         em = i.useCallback(
             (e) => {
-                Q(e),
+                (Q(e),
                     V(
                         z({
                             channelId: null == H ? void 0 : H.value,
@@ -198,13 +198,13 @@ function w(e) {
                             actionType: null == $ ? void 0 : $.value,
                             emoji: null != en ? en : void 0
                         })
-                    );
+                    ));
             },
             [Q, V, H, $, en]
         ),
         eh = i.useCallback(
             (e) => {
-                F(e),
+                (F(e),
                     V(
                         z({
                             channelId: null == e ? void 0 : e.value,
@@ -213,13 +213,13 @@ function w(e) {
                             actionType: null == $ ? void 0 : $.value,
                             emoji: null != en ? en : void 0
                         })
-                    );
+                    ));
             },
             [F, V, K, $, en]
         ),
         ep = i.useCallback(
             (e) => {
-                ee(e),
+                (ee(e),
                     V(
                         z({
                             channelId: null == H ? void 0 : H.value,
@@ -228,7 +228,7 @@ function w(e) {
                             actionType: null == e ? void 0 : e.value,
                             emoji: null != en ? en : void 0
                         })
-                    );
+                    ));
             },
             [ee, V, H, K, en]
         ),
@@ -263,7 +263,7 @@ function w(e) {
         ),
         eg = i.useCallback(function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            el(n), ea(e);
+            (el(n), ea(e));
         }, []),
         ej = i.useCallback(() => (null != ei ? ei : null), [ei, en])(),
         ef = i.useCallback(
@@ -277,7 +277,7 @@ function w(e) {
             let { emoji: i, willClose: a } = n;
             if (null == i) return;
             let r = null;
-            eg(
+            (eg(
                 null,
                 null == i.id
                     ? {
@@ -291,7 +291,7 @@ function w(e) {
                           animated: i.animated
                       }
             ),
-                a && e();
+                a && e());
         },
         ey = null;
     return (
@@ -416,7 +416,7 @@ function w(e) {
                                                     children: [
                                                         (0, t.jsx)(v.ZP, {
                                                             onChange: (e) => {
-                                                                ef(e), n();
+                                                                (ef(e), n());
                                                             },
                                                             tabIndex: 0
                                                         }),
@@ -434,10 +434,10 @@ function w(e) {
                                                         let { closePopout: l } = e;
                                                         return (0, t.jsx)(h.Z, {
                                                             closePopout: () => {
-                                                                l(), n();
+                                                                (l(), n());
                                                             },
                                                             onSelectEmoji: eb(() => {
-                                                                l(), n();
+                                                                (l(), n());
                                                             }),
                                                             pickerIntention: I.Hz.COMMUNITY_CONTENT,
                                                             channel: X

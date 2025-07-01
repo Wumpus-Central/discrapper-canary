@@ -19,7 +19,7 @@ function g(e) {
         { analyticsLocations: P } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
     return (
         i.useEffect(() => {
-            _.w(), f.DZ.loadIfNecessary(), T || (0, d.ql)('');
+            (_.w(), f.DZ.loadIfNecessary(), T || (0, d.ql)(''));
         }, [T]),
         (0, r.jsx)(u.Gt, {
             value: P,

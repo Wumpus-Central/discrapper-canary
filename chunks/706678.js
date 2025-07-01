@@ -1,5 +1,5 @@
 let r;
-n(388685), n(415506), n(35282), n(781311);
+(n(388685), n(415506), n(35282), n(781311));
 var i = n(259443);
 n(433517);
 let a = new i.Yd('useStateFromStores'),
@@ -36,7 +36,7 @@ function m() {
     return !1;
 }
 function g() {
-    for (let [e, t] of (m() || '' !== f ? E() : a.log('No violators found'), p)) (t.warned = !1), (t.execTime = 0), (t.execCount = 0);
+    for (let [e, t] of (m() || '' !== f ? E() : a.log('No violators found'), p)) ((t.warned = !1), (t.execTime = 0), (t.execCount = 0));
 }
 let E = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 34,

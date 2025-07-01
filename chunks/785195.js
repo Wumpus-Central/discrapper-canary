@@ -1,12 +1,12 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => i });
 var r = n(255367);
 n(73800);
 var l = n(325767);
-function s(e) {
+function i(e) {
     var t,
         n,
-        { width: s = 24, height: i = 24, color: a = 'currentColor', foreground: o } = e,
-        E = (function (e, t) {
+        { width: i = 24, height: s = 24, color: a = 'currentColor', foreground: o } = e,
+        u = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -15,13 +15,13 @@ function s(e) {
                     var n,
                         r,
                         l = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
             return l;
         })(e, ['width', 'height', 'color', 'foreground']);
@@ -31,7 +31,7 @@ function s(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function s(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -47,15 +47,15 @@ function s(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
-        })({}, (0, l.Z)(E))),
+        })({}, (0, l.Z)(u))),
         (n = n =
             {
-                width: s,
-                height: i,
+                width: i,
+                height: s,
                 viewBox: '0 0 24 24',
                 children: [
                     (0, r.jsx)('path', {

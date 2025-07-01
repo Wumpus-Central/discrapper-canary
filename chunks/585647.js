@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(35282);
+(n.d(t, { Z: () => u }), n(388685), n(35282));
 var r = n(485589),
     a = n(14160),
     l = n(247123),
@@ -21,7 +21,7 @@ let u = {
                         case 'string':
                             return l.w;
                         case 'id':
-                            return (u = k), (o = i), null == document.getElementById(o) ? ''.concat(u, ' references #').concat(o, ' which does not exist') : l.w;
+                            return ((u = k), (o = i), null == document.getElementById(o) ? ''.concat(u, ' references #').concat(o, ' which does not exist') : l.w);
                         case 'idlist':
                             var t = k,
                                 n = i,
@@ -30,11 +30,11 @@ let u = {
                             for (let e of n.split(' ')) if (null == document.getElementById(e)) return ''.concat(t, ' references #').concat(n, ' which does not exist');
                             return l.w;
                         case 'integer':
-                            return (c = k), String(parseInt((s = i), 10)) !== s ? ''.concat(c, ' requires an integer but got ').concat(s) : l.w;
+                            return ((c = k), String(parseInt((s = i), 10)) !== s ? ''.concat(c, ' requires an integer but got ').concat(s) : l.w);
                         case 'number':
-                            return (d = k), isFinite((f = i)) ? l.w : ''.concat(d, ' requires a numeric value but got ').concat(f);
+                            return ((d = k), isFinite((f = i)) ? l.w : ''.concat(d, ' requires a numeric value but got ').concat(f));
                         case 'boolean':
-                            return (h = k), (b = i), (m = I), 'true' === b || 'false' === b || ('' === b && !0 === m.allowundefined) ? l.w : ''.concat(h, ' must be either "true" or "false"');
+                            return ((h = k), (b = i), (m = I), 'true' === b || 'false' === b || ('' === b && !0 === m.allowundefined) ? l.w : ''.concat(h, ' must be either "true" or "false"'));
                         case 'token':
                             return (function (e, t, n) {
                                 var r, a;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685), n(35282);
+(n.d(t, { Z: () => R }), n(388685), n(35282));
 var r = n(392711),
     i = n.n(r),
     a = n(846519),
@@ -48,10 +48,10 @@ function S(e) {
 function A(e) {
     let { completingUserId: t, waitingUserId: n, channelId: r } = e,
         i = b(''.concat(t).concat(n), r, !0);
-    (v[i] = new a.sW(m, () => {
-        delete v[i], (0, u.hu)(t, n, r);
+    ((v[i] = new a.sW(m, () => {
+        (delete v[i], (0, u.hu)(t, n, r));
     })),
-        v[i].delay();
+        v[i].delay());
 }
 function N(e, t, n) {
     var r;
@@ -65,25 +65,25 @@ function N(e, t, n) {
         }))
             ? r
             : [];
-    if (null != o && null != s) s.cancel(), T.play(), delete v[o], (0, u.Ym)(o.split(':')[0], t, n, e);
+    if (null != o && null != s) (s.cancel(), T.play(), delete v[o], (0, u.Ym)(o.split(':')[0], t, n, e));
     else {
-        (0, u._g)(e, t, n), I.play();
+        ((0, u._g)(e, t, n), I.play());
         let r = new a.sW(h, () => {
-            delete v[t], (0, u.Gd)(t, n);
+            (delete v[t], (0, u.Gd)(t, n));
         });
-        (v[t] = r), r.delay();
+        ((v[t] = r), r.delay());
     }
 }
 class C extends o.Z {
     _terminate() {
-        Object.values(v).forEach((e) => e.cancel()), (v = {});
+        (Object.values(v).forEach((e) => e.cancel()), (v = {}));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'actions', {
                 VOICE_CHANNEL_EFFECT_SEND: S,
                 HIGH_FIVE_COMPLETE: A
-            });
+            }));
     }
 }
 let R = new C();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i,
     l = n(748780);
@@ -19,7 +19,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,7 +43,7 @@ class o {
         this.animation.stop();
     }
     constructor(e) {
-        s(this, 'animation', void 0), (this.animation = e);
+        (s(this, 'animation', void 0), (this.animation = e));
     }
 }
 class c {
@@ -57,7 +57,7 @@ class c {
         this._map((e) => e.stop());
     }
     constructor(e) {
-        s(this, 'animations', void 0), (this.animations = e);
+        (s(this, 'animations', void 0), (this.animations = e));
     }
 }
 class d {
@@ -68,10 +68,10 @@ class d {
         }
     }
     stop() {
-        (this.stopped = !0), this.animations.map((e) => e.stop());
+        ((this.stopped = !0), this.animations.map((e) => e.stop()));
     }
     constructor(e) {
-        s(this, 'animations', void 0), s(this, 'stopped', !1), (this.animations = e);
+        (s(this, 'animations', void 0), s(this, 'stopped', !1), (this.animations = e));
     }
 }
 function u(e, t, n) {

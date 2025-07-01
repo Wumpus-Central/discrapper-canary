@@ -23,19 +23,19 @@ let u = {
         });
     },
     markChangelogAsSeen(e, t) {
-        i.Z.dispatch({
+        (i.Z.dispatch({
             type: 'CHANGE_LOG_MARK_SEEN',
             changelogId: e,
             changelogDate: t
         }),
-            o.l4.updateSetting(e);
+            o.l4.updateSetting(e));
     },
     setChangelogOverride(e) {
-        i.Z.dispatch({
+        (i.Z.dispatch({
             type: 'CHANGE_LOG_SET_OVERRIDE',
             id: e
         }),
-            null != e && this.sendChangelogMessage(e);
+            null != e && this.sendChangelogMessage(e));
     },
     sendChangelogMessage(e) {
         r.tn.post({

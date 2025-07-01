@@ -33,7 +33,7 @@ function b(e) {
             return null !== C ? (null == (e = d.Z.getUserProfile(null == C ? void 0 : C.id)) ? void 0 : e.application) : void 0;
         }),
         E = null != j ? j : null == O ? void 0 : O.id;
-    r.useEffect(() => {
+    (r.useEffect(() => {
         if (null == E) {
             var e;
             (0, p.Z)(null != (e = null == C ? void 0 : C.id) ? e : m.lds, void 0, { withMutualGuilds: !0 });
@@ -45,8 +45,8 @@ function b(e) {
                     type: 'APP_DM_OPEN',
                     botUserId: C.id
                 });
-        }, [null == C ? void 0 : C.id]);
-    let I = (0, s.v1)(
+        }, [null == C ? void 0 : C.id]));
+    let S = (0, s.v1)(
             {
                 channel: y,
                 type: 'channel'
@@ -58,12 +58,12 @@ function b(e) {
                 allowApplicationState: !0
             }
         ),
-        S = I.commands.filter((e) => e.type === o.yU.PRIMARY_ENTRY_POINT && e.applicationId === E)[0],
-        P = I.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
-        Z = I.loading,
+        I = S.commands.filter((e) => e.type === o.yU.PRIMARY_ENTRY_POINT && e.applicationId === E)[0],
+        P = S.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        Z = S.loading,
         N =
             null ==
-            (t = I.descriptors.find((e) => {
+            (t = S.descriptors.find((e) => {
                 var t;
                 return (null == (t = e.application) ? void 0 : t.id) === E;
             }))
@@ -77,7 +77,7 @@ function b(e) {
         application: w,
         isInitialLoading: R,
         isAppDM: null != (b = null == C ? void 0 : C.bot) && b,
-        primaryEntryPointCommand: S,
+        primaryEntryPointCommand: I,
         isProfileFetching: x,
         wasProfileFetching: null != v ? v : null,
         applicationId: E,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(558381),
@@ -38,13 +38,13 @@ class d extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'handleDisagree', () => {
                 (0, l.M9)();
             }),
             u(this, 'handleAgree', () => {
                 (0, l.cj)();
-            });
+            }));
     }
 }
 let p = d;

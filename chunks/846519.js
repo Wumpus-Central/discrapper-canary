@@ -23,7 +23,7 @@ class i {
         (!this.isStarted() || n) &&
             (this.stop(),
             (this._ref = window.setTimeout(() => {
-                (this._ref = null), t();
+                ((this._ref = null), t());
             }, e)));
     }
     stop() {
@@ -38,7 +38,7 @@ class i {
 }
 class a {
     set(e) {
-        return (this._delay = e), this;
+        return ((this._delay = e), this);
     }
     delay() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -51,12 +51,12 @@ class a {
         return this._timeout.isStarted();
     }
     constructor(e, t) {
-        r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new i());
+        (r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new i()));
     }
 }
 class o {
     start(e, t) {
-        this.stop(), (this._ref = window.setInterval(t, e));
+        (this.stop(), (this._ref = window.setInterval(t, e)));
     }
     stop() {
         null != this._ref && (clearInterval(this._ref), (this._ref = null));

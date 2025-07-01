@@ -1,10 +1,10 @@
-r.d(t, {
+(r.d(t, {
     $Y: () => c,
     am: () => o,
     e4: () => s
 }),
     r(388685),
-    r(415506);
+    r(415506));
 var n = r(255367),
     l = r(73800);
 let i = l.createContext(null),
@@ -69,9 +69,9 @@ function s() {
             let r = new ResizeObserver(() => {
                 let r = t.current.getBoundingClientRect().width,
                     l = getComputedStyle(t.current);
-                n(r + (parseFloat(l.marginLeft) + parseFloat(l.marginRight))), e && o(r - (parseFloat(l.paddingLeft) + parseFloat(l.paddingRight) + parseFloat(l.borderLeftWidth) + parseFloat(l.borderRightWidth)));
+                (n(r + (parseFloat(l.marginLeft) + parseFloat(l.marginRight))), e && o(r - (parseFloat(l.paddingLeft) + parseFloat(l.paddingRight) + parseFloat(l.borderLeftWidth) + parseFloat(l.borderRightWidth))));
             });
-            return r.observe(t.current), () => r.disconnect();
+            return (r.observe(t.current), () => r.disconnect());
         }, [e]),
         [t, r, i]
     );

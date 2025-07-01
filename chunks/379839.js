@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     A: () => p,
     p: () => h
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(410030),
     a = n(359135),
@@ -59,7 +59,7 @@ function h(e, t, n, o, s) {
                     maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .3) '.concat(n, 'px, rgba(0, 0, 0, 1) ').concat(r, 'px)')
                 });
             });
-            return t.observe(e.current), () => t.disconnect();
+            return (t.observe(e.current), () => t.disconnect());
         }, [e, c, f]),
         u
     );

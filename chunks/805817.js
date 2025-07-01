@@ -120,7 +120,7 @@ let u = (function () {
         (e.prototype.ddayset = function (e, t, n) {
             var i = (0, r.rx)(null, this.yearlen),
                 a = (0, c.fv)((0, c.t2)(e, t, n)) - this.yearordinal;
-            return (i[a] = a), [i, a, a + 1];
+            return ((i[a] = a), [i, a, a + 1]);
         }),
         (e.prototype.htimeset = function (e, t, n, r) {
             var i = this,
@@ -137,7 +137,7 @@ let u = (function () {
             var i = this.options.bysecond.map(function (n) {
                 return new l.q(e, t, n, r);
             });
-            return (0, c.DY)(i), i;
+            return ((0, c.DY)(i), i);
         }),
         (e.prototype.stimeset = function (e, t, n, r) {
             return [new l.q(e, t, n, r)];

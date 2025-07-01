@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     I6: () => f,
     V9: () => S,
     Z6: () => j,
@@ -10,7 +10,7 @@ n.d(t, {
 }),
     n(388685),
     n(997841),
-    n(415506);
+    n(415506));
 var r,
     l,
     i = n(73800),
@@ -107,7 +107,7 @@ function j(e) {
             Object.keys(g).reduce(
                 (e, n) => {
                     let r = g[n].filter((e) => e.type !== o.fX.SERVER_POLICY && (e.type !== o.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map((e) => e.type);
-                    return (e[n] = r), e;
+                    return ((e[n] = r), e);
                 },
                 {
                     members: [],

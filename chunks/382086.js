@@ -23,11 +23,11 @@ function p(t) {
             children: o.intl.string(o.t['13/7kZ'])
         });
     function L(t) {
-        a.default.track(c.rMx.GUILD_CREATION_INTENT_SELECTED, {
+        (a.default.track(c.rMx.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
             is_community: t === d.lr.COMMUNITY
         }),
-            p(t);
+            p(t));
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {

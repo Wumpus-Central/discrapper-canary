@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => B }), n(259475), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(415506), n(457542);
+(n.d(t, { Z: () => B }), n(259475), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(415506), n(457542));
 var i = n(512722),
     a = n.n(i),
     o = n(392711),
@@ -28,10 +28,10 @@ let T = 300000,
     R = window.document.createElement('canvas'),
     P = 512,
     w = 288;
-(R.width = 512), (R.height = w);
+((R.width = 512), (R.height = w));
 let D = R.getContext('2d');
 function L() {
-    N.stop(), null != r && (u.Z.removeSink(r, A), (r = null));
+    (N.stop(), null != r && (u.Z.removeSink(r, A), (r = null)));
 }
 let x = s().debounce((e, t, n, r) => {
     M(
@@ -48,15 +48,15 @@ function k(e) {
     let t = Math.min(P / e.width, w / e.height),
         n = e.width * t,
         r = e.height * t;
-    (R.width = n), (R.height = r);
+    ((R.width = n), (R.height = r));
     let i = window.document.createElement('canvas'),
         a = i.getContext('2d');
-    (i.width = e.width), (i.height = e.height);
+    ((i.width = e.width), (i.height = e.height));
     let o = new ImageData(e.data, e.width, e.height);
     return (
         null == a || a.putImageData(o, 0, 0),
         new Promise((t) => {
-            null == D || D.drawImage(i, 0, 0, e.width, e.height, 0, 0, n, r), t();
+            (null == D || D.drawImage(i, 0, 0, e.width, e.height, 0, 0, n, r), t());
         })
     );
 }
@@ -77,7 +77,7 @@ async function M(e, t) {
                 E.isPlatformEmbedded)
             ) {
                 let e = g.default.getToken();
-                a()(null != e, 'Auth token was null while sending screenshot.'),
+                (a()(null != e, 'Auth token was null while sending screenshot.'),
                     await b.ZP.makeChunkedRequest(
                         v.ANM.STREAM_PREVIEW(t),
                         { thumbnail: r },
@@ -85,7 +85,7 @@ async function M(e, t) {
                             method: 'POST',
                             token: e
                         }
-                    );
+                    ));
             } else
                 await l.tn.post({
                     url: v.ANM.STREAM_PREVIEW(t),
@@ -94,7 +94,7 @@ async function M(e, t) {
                     rejectWithError: !1
                 });
         } catch (t) {
-            new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(S, n);
+            (new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(S, n));
             return;
         }
     r === e && (C ? N.start(S, n) : N.start(T, n));
@@ -113,7 +113,7 @@ function U(e, t) {
     let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
         a = document.createElement('video'),
         o = document.createElement('canvas');
-    (a.width = o.width = null != r ? r : P), (a.height = o.height = null != i ? i : w), (a.srcObject = n), a.play();
+    ((a.width = o.width = null != r ? r : P), (a.height = o.height = null != i ? i : w), (a.srcObject = n), a.play());
     let s = o.getContext('2d');
     return new Promise((e, n) => {
         a.ontimeupdate = () => {
@@ -126,7 +126,7 @@ function U(e, t) {
             }
         };
     }).finally(() => {
-        (a.ontimeupdate = null), a.removeAttribute('srcObject'), a.load();
+        ((a.ontimeupdate = null), a.removeAttribute('srcObject'), a.load());
     });
 }
 function G(e, t) {
@@ -151,7 +151,7 @@ function G(e, t) {
 }
 let B = {
     init() {
-        _.Z.subscribe('CONNECTION_OPEN', L),
+        (_.Z.subscribe('CONNECTION_OPEN', L),
             _.Z.subscribe('LOGOUT', L),
             _.Z.subscribe('STREAM_DELETE', L),
             _.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
@@ -161,6 +161,6 @@ let B = {
             _.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;
                 C = t === v.FQ1.PAUSED;
-            });
+            }));
     }
 };

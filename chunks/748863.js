@@ -49,7 +49,7 @@ e.exports = function (e) {
             illegal: /\n/,
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, d]
         });
-    (u.contains = [_, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.C_BLOCK_COMMENT_MODE]), (d.contains = [p, f, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
+    ((u.contains = [_, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.C_BLOCK_COMMENT_MODE]), (d.contains = [p, f, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]));
     let h = {
             variants: [s, _, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
         },

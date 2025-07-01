@@ -1,4 +1,4 @@
-o.d(i, { default: () => j }), o(388685);
+(o.d(i, { default: () => j }), o(388685));
 var s = o(255367),
     a = o(73800),
     n = o(392711),
@@ -29,7 +29,7 @@ function j(e) {
                         for (var i = 1; i < arguments.length; i++) {
                             var o = null != arguments[i] ? arguments[i] : {},
                                 s = Object.keys(o);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (s = s.concat(
                                     Object.getOwnPropertySymbols(o).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(o, e).enumerable;
@@ -37,7 +37,7 @@ function j(e) {
                                 )),
                                 s.forEach(function (i) {
                                     var s;
-                                    (s = o[i]),
+                                    ((s = o[i]),
                                         i in e
                                             ? Object.defineProperty(e, i, {
                                                   value: s,
@@ -45,8 +45,8 @@ function j(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[i] = s);
-                                });
+                                            : (e[i] = s));
+                                }));
                         }
                         return e;
                     })({}, O),
@@ -62,9 +62,9 @@ function j(e) {
                     permission: e.permission,
                     type: e.type
                 }));
-            C(null), w(!0);
+            (C(null), w(!0));
             try {
-                await p.U3({
+                (await p.U3({
                     defaultEveryoneValue: f,
                     defaultEverywhereValue: k,
                     applicationId: o,
@@ -73,7 +73,7 @@ function j(e) {
                     permissions: g
                 }),
                     w(!1),
-                    E();
+                    E());
             } catch (e) {
                 C(new d.Z(e));
             }
@@ -81,7 +81,7 @@ function j(e) {
         }, [o, z, u.id, u.permissions, j, R, E, O, C, w]);
     a.useEffect(
         () => () => {
-            p.Ui(u.id), l.Z.stopEditingCommandPermissions(u.id);
+            (p.Ui(u.id), l.Z.stopEditingCommandPermissions(u.id));
         },
         [u.id]
     );

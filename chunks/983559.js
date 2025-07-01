@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(544989),
     O = n(481932),
     E = n(664794),
-    I = n(4517),
-    S = n(277117),
+    S = n(4517),
+    I = n(277117),
     P = n(52639),
     Z = n(228168),
     N = n(388032),
@@ -32,7 +32,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -48,8 +48,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -58,8 +58,8 @@ function w(e) {
         R = __OVERLAY__,
         k = (0, m.ZP)(t.id),
         M = (0, c.ZP)(),
-        D = i.useRef(Date.now()),
-        { analyticsLocations: L } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
+        L = i.useRef(Date.now()),
+        { analyticsLocations: D } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
         U = (0, h.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
@@ -67,16 +67,16 @@ function w(e) {
         }),
         B = i.useRef(null),
         F = (0, s.Z)(B),
-        G = (0, g.$m)(),
-        H = (0, a.q_F)({
-            opacity: +(null != G.interactionType),
+        H = (0, g.$m)(),
+        G = (0, a.q_F)({
+            opacity: +(null != H.interactionType),
             config: { duration: 150 }
         }),
         V = (e) => {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: L,
+                        sourceAnalyticsLocations: D,
                         hideRestrictedProfile: !0
                     },
                     U,
@@ -85,15 +85,15 @@ function w(e) {
             );
         };
     return (0, r.jsx)(d.Gt, {
-        value: L,
+        value: D,
         children: (0, r.jsx)(h.Mt, {
             value: U,
-            openedAt: D.current,
+            openedAt: L.current,
             fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
             fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
             isLoaded: null == k ? void 0 : k.isLoaded,
             children: (0, r.jsx)(g.NJ, {
-                value: G,
+                value: H,
                 children: (0, r.jsxs)(x.Z, {
                     ref: B,
                     user: t,
@@ -101,9 +101,9 @@ function w(e) {
                     themeType: Z.lY.SIDEBAR,
                     themeOverride: M,
                     children: [
-                        null != G.interactionType &&
+                        null != H.interactionType &&
                             (0, r.jsx)(l.animated.div, {
-                                style: H,
+                                style: G,
                                 className: T.backdrop
                             }),
                         (0, r.jsxs)(o.u2, {
@@ -113,7 +113,7 @@ function w(e) {
                                         (0, r.jsx)(O.Z, {
                                             user: t,
                                             themeType: Z.lY.SIDEBAR,
-                                            shouldShowTooltip: null === G.interactionType
+                                            shouldShowTooltip: null === H.interactionType
                                         }),
                                         t.bot
                                             ? (0, r.jsx)(v.Z, { user: t })
@@ -145,7 +145,7 @@ function w(e) {
                                             themeType: Z.lY.SIDEBAR,
                                             onOpenProfile: R ? void 0 : V
                                         }),
-                                        (0, r.jsx)(I.Z, {
+                                        (0, r.jsx)(S.Z, {
                                             location: 'UserProfileSiebar',
                                             user: t,
                                             channelId: w.id,
@@ -154,12 +154,12 @@ function w(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(S.Z, {
+                                (0, r.jsx)(I.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: k,
                                     channel: w,
-                                    isHovering: null == G.interactionType && F,
+                                    isHovering: null == H.interactionType && F,
                                     onOpenProfile: R ? void 0 : V
                                 }),
                                 (0, r.jsx)(P.Z, {
@@ -177,16 +177,16 @@ function w(e) {
                                     look: a.zxk.Looks.BLANK,
                                     color: T.footerButtonColor,
                                     onClick: () => {
-                                        V(),
+                                        (V(),
                                             (0, f.pQ)(
                                                 A(
                                                     {
                                                         action: 'PRESS_VIEW_PROFILE',
-                                                        analyticsLocations: L
+                                                        analyticsLocations: D
                                                     },
                                                     U
                                                 )
-                                            );
+                                            ));
                                     },
                                     children: N.intl.string(N.t['+Xp3ho'])
                                 })

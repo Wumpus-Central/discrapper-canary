@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $j: () => _,
     Xv: () => s,
     cq: () => l,
@@ -28,7 +28,7 @@ n.d(t, {
     n(918970),
     n(121784),
     n(644351),
-    n(146733);
+    n(146733));
 var r = n(605387),
     i = n.n(r);
 let a = (e) => i().decode(e),
@@ -53,7 +53,7 @@ let a = (e) => i().decode(e),
         };
     };
 var l = (function (e) {
-    return (e.THUMBNAIL = 'Thumbnail'), (e.STATIC = 'Static'), (e.REDUCED_MOTION = 'Reduced Motion'), e;
+    return ((e.THUMBNAIL = 'Thumbnail'), (e.STATIC = 'Static'), (e.REDUCED_MOTION = 'Reduced Motion'), e);
 })({});
 let c = (e, t) => ({
         name: t.name,
@@ -63,10 +63,10 @@ let c = (e, t) => ({
     u = (e, t) => {
         if (null == e) return;
         let n = new FileReader();
-        (n.onload = (e) => {
+        ((n.onload = (e) => {
             null != e.target && 'string' == typeof e.target.result && (null == t || t(e.target.result));
         }),
-            n.readAsDataURL(e);
+            n.readAsDataURL(e));
     },
     d = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'python',

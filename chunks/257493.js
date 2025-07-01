@@ -41,11 +41,11 @@ let m = (0, r.createContext)({
             j = (0, r.useCallback)(
                 (e) => {
                     _(t, n, (n) => {
-                        g({
+                        (g({
                             entitlements: n,
                             skuId: t
                         }),
-                            e();
+                            e());
                     });
                 },
                 [t, n, _, g]

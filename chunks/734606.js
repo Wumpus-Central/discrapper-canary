@@ -1,4 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.makeDataFormatters = a);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.makeDataFormatters = a));
 let r = n(180660),
     i = n(912913);
 function a(e, t, n = !1) {

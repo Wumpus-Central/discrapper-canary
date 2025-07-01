@@ -30,20 +30,20 @@ function T(e, t, n) {
     c.UI.dispatch(v.CkL.POPOUT_CLOSE);
     let r = !o().isEmpty(b.Z.getVoiceStatesForChannel(e.id));
     if (t || !m.vF.getSetting() || __OVERLAY__ || r) {
-        s.Z.dispatch({
+        (s.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
             baseChannelId: e.parent_id
         }),
-            null != n ? (0, h.ad)(e, { source: n }) : (0, h.Kh)(e.id);
+            null != n ? (0, h.ad)(e, { source: n }) : (0, h.Kh)(e.id));
         return;
     }
     i()(null != e.parent_id, 'all threads must have parents');
     let a = E.Z.getChannelId();
-    e.parent_id === a || (0, I.ME)(a) || (0, h.Kh)(e.parent_id),
+    (e.parent_id === a || (0, I.ME)(a) || (0, h.Kh)(e.parent_id),
         (0, p.uL)(v.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, I.ME)(a) ? I.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: O.on.FORUM } : void 0),
         setTimeout(() => {
             y.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
-        }, 0);
+        }, 0));
 }
 function S(e, t, n) {
     if (
@@ -59,7 +59,7 @@ function S(e, t, n) {
         '' === g.Z.getDraft(e.id, g.d.FirstThreadMessage))
     ) {
         let t = g.Z.getDraft(e.id, g.d.ChannelMessage);
-        l.Z.saveDraft(e.id, '', g.d.ChannelMessage), l.Z.saveDraft(e.id, t, g.d.FirstThreadMessage);
+        (l.Z.saveDraft(e.id, '', g.d.ChannelMessage), l.Z.saveDraft(e.id, t, g.d.FirstThreadMessage));
     }
     setTimeout(() => {
         s.Z.dispatch({
@@ -71,14 +71,14 @@ function S(e, t, n) {
     }, 0);
 }
 function A(e, t) {
-    (0, p.uL)(v.Z5c.CHANNEL(e, (0, I.ME)(t) ? I.oC.GUILD_HOME : t)),
+    ((0, p.uL)(v.Z5c.CHANNEL(e, (0, I.ME)(t) ? I.oC.GUILD_HOME : t)),
         s.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
             baseChannelId: t
-        });
+        }));
 }
 function N(e) {
-    s.Z.dispatch({
+    (s.Z.dispatch({
         type: 'SIDEBAR_CLOSE',
         baseChannelId: e
     }),
@@ -91,5 +91,5 @@ function N(e) {
             type: 'DRAFT_CLEAR',
             channelId: e,
             draftType: g.d.ThreadSettings
-        });
+        }));
 }

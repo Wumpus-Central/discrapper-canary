@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     N2: () => j,
     Ol: () => v,
     ZP: () => O
 }),
-    n(388685);
+    n(388685));
 var r,
     l = n(255367),
     o = n(73800),
@@ -21,7 +21,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -37,8 +37,8 @@ function f(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -127,7 +127,7 @@ function O(e) {
         [N, S] = o.useState(!1),
         D = 7 !== s ? null : null != t && null != n ? ''.concat(t, ' - ').concat(n) : null != t ? b.intl.formatToPlainString(b.t.ClmSzc, { date: t }) : null != n ? b.intl.formatToPlainString(b.t.YvNhsb, { date: n }) : null,
         Z = o.useCallback(() => {
-            S(!0), y();
+            (S(!0), y());
         }, [y]),
         L = o.useCallback(
             (e) => {
@@ -142,7 +142,7 @@ function O(e) {
             [H]
         ),
         I = o.useCallback(() => {
-            null == i && null == r && O(0, null), S(!1);
+            (null == i && null == r && O(0, null), S(!1));
         }, [r, i, O]);
     return (0, l.jsx)(d.v2r, {
         navId: 'member-safety-guild-member-'.concat(j, '-menu'),

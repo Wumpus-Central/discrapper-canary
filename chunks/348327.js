@@ -2,7 +2,7 @@ var r = Array.prototype.slice,
     i = n(775569),
     a = n(35262),
     o = (e.exports = function (e, t, n) {
-        return n || (n = {}), e === t || (e instanceof Date && t instanceof Date ? e.getTime() === t.getTime() : e && t && ('object' == typeof e || 'object' == typeof t) ? c(e, t, n) : n.strict ? e === t : e == t);
+        return (n || (n = {}), e === t || (e instanceof Date && t instanceof Date ? e.getTime() === t.getTime() : e && t && ('object' == typeof e || 'object' == typeof t) ? c(e, t, n) : n.strict ? e === t : e == t));
     });
 function s(e) {
     return null == e;

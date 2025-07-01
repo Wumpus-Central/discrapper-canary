@@ -1,4 +1,4 @@
-n.d(t, { default: () => f }), n(388685);
+(n.d(t, { default: () => f }), n(388685));
 var i = n(255367),
     s = n(73800),
     l = n(990547),
@@ -59,10 +59,10 @@ function f(e) {
                                 directoryChannelId: t,
                                 directoryGuildName: _,
                                 onGuildChosen: (e) => {
-                                    U(!0), I(g.VX.CUSTOMIZE_EXISTING_GUILD), M(e);
+                                    (U(!0), I(g.VX.CUSTOMIZE_EXISTING_GUILD), M(e));
                                 },
                                 handleChooseCreate: () => {
-                                    U(!1), I(g.VX.GUILD_TEMPLATES);
+                                    (U(!1), I(g.VX.GUILD_TEMPLATES));
                                 },
                                 onClose: j,
                                 availableGuilds: A,
@@ -77,7 +77,7 @@ function f(e) {
                             children: (0, i.jsx)(h.Z, {
                                 directoryGuildName: _,
                                 onChooseTemplate: (e) => {
-                                    U(!1), I(g.VX.CUSTOMIZE_NEW_GUILD), S(e);
+                                    (U(!1), I(g.VX.CUSTOMIZE_NEW_GUILD), S(e));
                                 },
                                 onClose: j,
                                 onBack: () => I(g.VX.CHOOSE_GUILD)
@@ -90,7 +90,7 @@ function f(e) {
                             children: (0, i.jsx)(o.Z, {
                                 guildTemplate: Z,
                                 onHubGuildInfoSet: (e, t) => {
-                                    T(e), O(t), I(g.VX.CUSTOMIZE_EXISTING_GUILD);
+                                    (T(e), O(t), I(g.VX.CUSTOMIZE_EXISTING_GUILD));
                                 },
                                 onClose: j,
                                 onBack: () => I(g.VX.GUILD_TEMPLATES),

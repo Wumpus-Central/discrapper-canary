@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,7 +22,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -38,8 +38,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -68,8 +68,8 @@ function O(e) {
         { analyticsLocations: C } = (0, d.ZP)(u.Z.USERNAME),
         O = (0, a.e7)([g.default], () => g.default.getUser(p)),
         E = (0, a.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
-        I = (0, h.X7)(_.guild_id, null != p ? p : void 0, null == E ? void 0 : E.colorStrings);
-    function S(e) {
+        S = (0, h.X7)(_.guild_id, null != p ? p : void 0, null == E ? void 0 : E.colorStrings);
+    function I(e) {
         if (null == O) return null;
         (0, c.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
@@ -107,11 +107,11 @@ function O(e) {
                               innerRef: y,
                               tag: 'span',
                               className: x.threadCreatorName,
-                              onContextMenu: S,
+                              onContextMenu: I,
                               children: (0, r.jsx)(s.PUh, {
                                   name: P,
                                   color: null != Z ? Z : void 0,
-                                  roleColors: I
+                                  roleColors: S
                               })
                           })
                       )
@@ -153,7 +153,7 @@ function E(e) {
               ]
           });
 }
-function I(e) {
+function S(e) {
     var t;
     let { channel: n } = e,
         i = null != (t = (0, p.KS)(n)) ? t : s.or_;

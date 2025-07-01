@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     RY: () => l,
     Tb: () => o,
     ec: () => s,
     iD: () => a
 }),
-    n(388685);
+    n(388685));
 var r = n(570140),
     i = n(830168);
 function l(e) {
@@ -40,12 +40,12 @@ function s(e) {
         null != l &&
             'string' == typeof l &&
             i.Z.queryDirectory(l, (i, a) => {
-                ++n,
+                (++n,
                     null == i && null != a && (t[l] = a),
                     n === e.length &&
                         r.Z.dispatch({
                             type: 'INSTALLATION_LOCATION_FETCH_METADATA',
                             metadataPayload: t
-                        });
+                        }));
             });
 }

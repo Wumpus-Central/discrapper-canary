@@ -1,4 +1,4 @@
-n.d(t, { u: () => o }), n(539854);
+(n.d(t, { u: () => o }), n(539854));
 var r = n(73800),
     i = n(442837),
     a = n(411149);
@@ -8,7 +8,7 @@ function o() {
         () =>
             e.reduce((e, t) => {
                 var n, r, i;
-                return null != (i = (n = e)[(r = t.designGroupId)]) || (n[r] = []), e[t.designGroupId].push(t), e;
+                return (null != (i = (n = e)[(r = t.designGroupId)]) || (n[r] = []), e[t.designGroupId].push(t), e);
             }, {}),
         [e]
     );

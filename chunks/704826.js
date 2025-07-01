@@ -52,7 +52,7 @@ a(
                     var j = C.groups;
                     if (v) {
                         var z = S([O], B, H, o);
-                        void 0 !== j && R(z, j), (q = p(n(i, void 0, z)));
+                        (void 0 !== j && R(z, j), (q = p(n(i, void 0, z))));
                     } else q = m(O, o, H, B, j, i);
                     H >= L && ((U += P(o, L, H) + q), (L = H + O.length));
                 }
@@ -65,7 +65,7 @@ a(
         return (
             (t.exec = function () {
                 var t = [];
-                return (t.groups = { a: '7' }), t;
+                return ((t.groups = { a: '7' }), t);
             }),
             '7' !== ''.replace(t, '$<a>')
         );

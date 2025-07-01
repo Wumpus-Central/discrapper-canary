@@ -1,15 +1,15 @@
 n.d(t, {
-    I: () => u,
+    I: () => s,
     n: () => c
 });
 var r,
     i = n(97519),
     l = n(731965);
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -17,7 +17,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -25,12 +25,12 @@ function o(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function a(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -48,13 +48,13 @@ function a(e, t) {
         e
     );
 }
-var u = (((r = {})[(r.ALL_CHANNELS_ACCESS = 0)] = 'ALL_CHANNELS_ACCESS'), (r[(r.SOME_CHANNELS_ACCESS = 1)] = 'SOME_CHANNELS_ACCESS'), r);
+var s = (((r = {})[(r.ALL_CHANNELS_ACCESS = 0)] = 'ALL_CHANNELS_ACCESS'), (r[(r.SOME_CHANNELS_ACCESS = 1)] = 'SOME_CHANNELS_ACCESS'), r);
 let c = (0, i.U)((e) => ({
     listings: {},
-    setListing: (t, n) => (0, l.j)(() => e((e) => ({ listings: a(o({}, e.listings), { [t]: n(e.listings[t]) }) }))),
+    setListing: (t, n) => (0, l.j)(() => e((e) => ({ listings: o(a({}, e.listings), { [t]: n(e.listings[t]) }) }))),
     editStateIdsForGroup: {},
     setEditStateIdsForGroup: (t, n) =>
         (0, l.j)(() => {
-            e((e) => ({ editStateIdsForGroup: a(o({}, e.editStateIdsForGroup), { [t]: n(e.editStateIdsForGroup[t]) }) }));
+            e((e) => ({ editStateIdsForGroup: o(a({}, e.editStateIdsForGroup), { [t]: n(e.editStateIdsForGroup[t]) }) }));
         })
 }));

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(953529), n(472816), n(794429), n(388685);
+(n.d(t, { Z: () => G }), n(953529), n(472816), n(794429), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(512722),
@@ -26,8 +26,8 @@ var r = n(255367),
     N = n(134433),
     E = n(753194),
     Z = n(458034),
-    T = n(856651),
-    R = n(981631),
+    R = n(856651),
+    T = n(981631),
     _ = n(228168),
     k = n(388032),
     I = n(933466);
@@ -35,7 +35,7 @@ function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function M(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -51,8 +51,8 @@ function M(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -61,13 +61,13 @@ function D(e) {
         { connectionType: n, connectionMetadataField: l, operator: o, value: i, description: s } = e;
     if (null != s)
         switch (o) {
-            case T.iO.LESS_THAN:
+            case R.iO.LESS_THAN:
                 t = k.intl.format(k.t['2p7dAw'], {
                     description: s,
                     count: Math.max(0, Number(i) - 1)
                 });
                 break;
-            case T.iO.GREATER_THAN:
+            case R.iO.GREATER_THAN:
                 t = k.intl.format(k.t['2p7dAw'], {
                     description: s,
                     count: Math.max(0, Number(i) + 1)
@@ -190,7 +190,7 @@ function L(e) {
         { onGetRolesClicked: n, onOpenProfile: o, eligibilityStates: i, userId: s, roleId: a, channelId: u, guildId: d } = e;
     l.useEffect(() => {
         x.default.track(
-            R.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
+            T.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
             M(
                 {
                     other_user_id: s,
@@ -258,7 +258,7 @@ function G(e) {
         b = l.useRef(null);
     if (null == u) return null;
     async function h() {
-        i()(null != u, 'visibleConnectionsRole is null'), g && null == d && (await m.Z.fetchGuildRoleConnectionsEligibility(o.id, u.id), f(!1));
+        (i()(null != u, 'visibleConnectionsRole is null'), g && null == d && (await m.Z.fetchGuildRoleConnectionsEligibility(o.id, u.id), f(!1)));
     }
     return (0, r.jsx)(p.KeG, {
         targetElementRef: b,
@@ -279,7 +279,7 @@ function G(e) {
                               (0, Z.Am)(o.id);
                           },
                           onOpenProfile: () => {
-                              (0, v.openUserProfileModal)({
+                              ((0, v.openUserProfileModal)({
                                   userId: t,
                                   messageId: n,
                                   guildId: o.id,
@@ -288,7 +288,7 @@ function G(e) {
                                   subsection: _.Tb.CONNECTIONS,
                                   sourceAnalyticsLocations: a
                               }),
-                                  l();
+                                  l());
                           }
                       }));
             });

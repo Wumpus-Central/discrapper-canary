@@ -11,11 +11,11 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => o }), n(539854);
+(n.d(t, { Z: () => o }), n(539854));
 let i = 5;
 class a {
     recordStartHeadlessTask(e) {
-        this.headlessTasks.length >= i && this.headlessTasks.shift(), this.headlessTasks.push(e), (this.latestHeadlessTaskRunOn = Date.now());
+        (this.headlessTasks.length >= i && this.headlessTasks.shift(), this.headlessTasks.push(e), (this.latestHeadlessTaskRunOn = Date.now()));
     }
     getLatestTaskRunOn() {
         return this.latestHeadlessTaskRunOn;
@@ -24,10 +24,10 @@ class a {
         return this.headlessTasks;
     }
     clear() {
-        (this.headlessTasks = []), (this.latestHeadlessTaskRunOn = null);
+        ((this.headlessTasks = []), (this.latestHeadlessTaskRunOn = null));
     }
     constructor() {
-        r(this, 'headlessTasks', []), r(this, 'latestHeadlessTaskRunOn', null);
+        (r(this, 'headlessTasks', []), r(this, 'latestHeadlessTaskRunOn', null));
     }
 }
 let o = new a();

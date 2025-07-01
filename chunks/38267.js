@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(73800),
     i = n(585483),
     l = n(981631);
@@ -16,7 +16,7 @@ function o(e, t) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -24,7 +24,7 @@ function o(e, t) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -32,13 +32,13 @@ function o(e, t) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, t, e),
                     r = a(n);
-                return r !== u.current && ((u.current = r), null != d.current && (cancelAnimationFrame(d.current), (d.current = null)), r ? c(!0) : (d.current = requestAnimationFrame(() => c(!1)))), n;
+                return (r !== u.current && ((u.current = r), null != d.current && (cancelAnimationFrame(d.current), (d.current = null)), r ? c(!0) : (d.current = requestAnimationFrame(() => c(!1)))), n);
             });
         }, []);
     return (
@@ -50,7 +50,7 @@ function o(e, t) {
                     emojiBurstPicker: n
                 });
             };
-            return i.S.subscribeKeyed(l.LPv.TOGGLE_REACTION_POPOUT, e, t), () => void i.S.unsubscribeKeyed(l.LPv.TOGGLE_REACTION_POPOUT, e, t);
+            return (i.S.subscribeKeyed(l.LPv.TOGGLE_REACTION_POPOUT, e, t), () => void i.S.unsubscribeKeyed(l.LPv.TOGGLE_REACTION_POPOUT, e, t));
         }, [e, p]),
         {
             popouts: n,

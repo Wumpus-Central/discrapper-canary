@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     V: () => j,
     Z: () => O
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -37,7 +37,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -104,7 +104,7 @@ class j extends i.PureComponent {
             default:
                 l.offsetY = -i;
         }
-        (l.offsetX += null != (e = this.props.offset.x) ? e : 0), (l.offsetY += null != (t = this.props.offset.y) ? t : 0), this.setState(l);
+        ((l.offsetX += null != (e = this.props.offset.x) ? e : 0), (l.offsetY += null != (t = this.props.offset.y) ? t : 0), this.setState(l));
     }
     handleSkipTips() {
         p.Z.suppressAll();
@@ -193,7 +193,7 @@ class j extends i.PureComponent {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             C(this, 'state', {
                 offsetX: null,
                 offsetY: null
@@ -201,7 +201,7 @@ class j extends i.PureComponent {
             C(this, 'contentRef', i.createRef()),
             C(this, 'handleDismiss', () => {
                 p.Z.dismiss(this.props.tutorialId);
-            });
+            }));
     }
 }
 let O =

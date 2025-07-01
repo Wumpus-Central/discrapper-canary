@@ -11,13 +11,13 @@ function a(e) {
         { selectedSkuPricePreview: a } = (0, l.JL)();
     return (
         (0, c.ZP)(() => {
-            o()(null != a, 'selectedSkuPricePreview cannot be null'),
+            (o()(null != a, 'selectedSkuPricePreview cannot be null'),
                 (0, i.u)({
                     guildId: n,
                     guildProductListingId: r.id,
                     skuPricePreview: a
                 }),
-                t();
+                t());
         }),
         null
     );

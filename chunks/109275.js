@@ -157,7 +157,7 @@ var n = r(73800),
             )
         );
     };
-(p.propTypes = {
+((p.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     triangle: a().oneOf(['hide', 'top-left', 'top-right']),
     colors: a().arrayOf(a().string),
@@ -169,4 +169,4 @@ var n = r(73800),
         triangle: 'top-left',
         styles: {}
     }),
-    (0, c.t1)(p);
+    (0, c.t1)(p));

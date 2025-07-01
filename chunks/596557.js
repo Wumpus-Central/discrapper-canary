@@ -26,7 +26,7 @@ function g(e) {
     i.useEffect(() => {
         if (E && !y.current) {
             var t;
-            (0, a.ZDy)(
+            ((0, a.ZDy)(
                 async () => {
                     let { default: t } = await n.e('54597').then(n.bind(n, 29022));
                     return (n) =>
@@ -36,7 +36,7 @@ function g(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function g(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -52,8 +52,8 @@ function g(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })(
@@ -72,7 +72,7 @@ function g(e) {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: null != (t = null == e ? void 0 : e.id) ? t : d.lds
                 }),
-                (y.current = !0);
+                (y.current = !0));
         }
     }, [m, e, O, b, E]);
 }

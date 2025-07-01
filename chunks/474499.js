@@ -11,7 +11,7 @@ r(
     },
     {
         reverse: function () {
-            return a(this) && (this.length = this.length), i(this);
+            return (a(this) && (this.length = this.length), i(this));
         }
     }
 );

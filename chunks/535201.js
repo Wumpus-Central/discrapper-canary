@@ -1,4 +1,4 @@
-n.d(t, { p: () => s }), n(388685);
+(n.d(t, { p: () => s }), n(388685));
 var r = n(73800),
     i = n(913527),
     a = n.n(i),
@@ -17,7 +17,7 @@ function s(e) {
                             t.isBefore(Date.now()) ? i(!1) : r();
                         });
                 };
-            return r(), () => e.stop();
+            return (r(), () => e.stop());
         }, [n, t]),
         n
     );

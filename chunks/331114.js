@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r,
     i = n(442837),
     l = n(570140),
@@ -19,22 +19,22 @@ function o(e, t, n) {
 let s = new Map();
 class c {
     handleSearchCountStart() {
-        (this.error = null), (this.isFetching = !0);
+        ((this.error = null), (this.isFetching = !0));
     }
     handleSearchCountSuccess(e) {
-        (this.counts = e), (this.isFetching = !1), (this.isInitialFetchComplete = !0);
+        ((this.counts = e), (this.isFetching = !1), (this.isInitialFetchComplete = !0));
     }
     handleSearchCountFailure(e) {
-        (this.error = new a.Hx(e)), (this.isFetching = !1);
+        ((this.error = new a.Hx(e)), (this.isFetching = !1));
     }
     constructor() {
-        o(this, 'isInitialFetchComplete', !1), o(this, 'isFetching', !1), o(this, 'error', null), o(this, 'counts', null);
+        (o(this, 'isInitialFetchComplete', !1), o(this, 'isFetching', !1), o(this, 'error', null), o(this, 'counts', null));
     }
 }
 function u(e) {
     var t;
     let n = null != (t = s.get(e)) ? t : new c();
-    return s.set(e, n), n;
+    return (s.set(e, n), n);
 }
 function d(e, t) {
     let n = s.get(e);

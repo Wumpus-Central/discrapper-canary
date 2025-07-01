@@ -1,15 +1,15 @@
-n.d(t, {
+(n.d(t, {
     Sr: () => j,
-    Xq: () => E,
-    Zg: () => S
+    Xq: () => S,
+    Zg: () => E
 }),
-    n(415506);
+    n(415506));
 var r = n(186070),
     i = n(185514),
     l = n(360038),
     o = n(175724),
-    s = n(705371),
-    a = n(138976),
+    a = n(705371),
+    s = n(138976),
     c = n(167042),
     u = n(239748),
     d = n(337482),
@@ -47,7 +47,7 @@ let j = {
         [y.EkH.SUBMIT]: f.z,
         [y.EkH.TEXTAREA_FOCUS]: g.U,
         [y.EkH.MARK_CHANNEL_READ]: o.f,
-        [y.EkH.MARK_SERVER_READ]: s.l,
+        [y.EkH.MARK_SERVER_READ]: a.l,
         [y.EkH.TOGGLE_MUTE]: m.iN,
         [y.EkH.TOGGLE_DEAFEN]: m.oV,
         [y.EkH.TOGGLE_CATEGORY_COLLAPSED]: b.u,
@@ -55,14 +55,14 @@ let j = {
         [y.EkH.SCROLL_DOWN]: d.gN,
         [y.EkH.SEARCH_EMOJIS]: h.S,
         [y.EkH.TOGGLE_HOTKEYS]: _._,
-        [y.EkH.JUMP_TO_FIRST_UNREAD]: a.O,
+        [y.EkH.JUMP_TO_FIRST_UNREAD]: s.O,
         [y.EkH.RETURN_TO_AUDIO_CHANNEL]: u.F,
         [y.EkH.CALL_ACCEPT]: r.IL,
         [y.EkH.CALL_START]: r.FI,
         [y.EkH.QUICKSWITCHER_SHOW]: c.$
     },
-    E = { [y.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function S() {
+    S = { [y.EkH.QUICKSWITCHER_SHOW]: c.$ };
+function E() {
     return [
         {
             description: v.intl.string(v.t.bx4Uy8),

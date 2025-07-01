@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $s: () => N,
     Ay: () => w,
     DE: () => D,
@@ -20,7 +20,7 @@ n.d(t, {
     n(415506),
     n(388685),
     n(784620),
-    n(973216);
+    n(973216));
 var r = n(97613),
     i = n.n(r),
     a = n(97519),
@@ -45,7 +45,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -53,7 +53,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -61,11 +61,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -87,7 +87,7 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -97,7 +97,7 @@ function h(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let m = n(338305).Z,
@@ -128,16 +128,16 @@ async function O(e) {
         a = null != t.modalKey ? t.modalKey : i()(),
         o = !1,
         s = setTimeout(() => {
-            (o = !0), v(m, _(d({}, r), { modalKey: a }), n);
+            ((o = !0), v(m, _(d({}, r), { modalKey: a }), n));
         }, 300),
         l = await e();
-    return clearTimeout(s), o ? L(a, n) && S(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n), a;
+    return (clearTimeout(s), o ? L(a, n) && S(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n), a);
 }
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E(),
-        { modalKey: r, instant: a, Layer: s, onCloseRequest: l, onCloseCallback: c, backdropStyle: u } = t,
-        f = null != r ? r : i()();
+        { modalKey: r, instant: a, Layer: s, onCloseRequest: l, onCloseCallback: c, backdropStyle: u, stackingBehavior: f = 'replace' } = t,
+        p = null != r ? r : i()();
     return (
         (0, o.j)(() => {
             y.setState((t) => {
@@ -145,26 +145,27 @@ function v(e) {
                 return void 0 !== r &&
                     r.some((e) => {
                         let { key: t } = e;
-                        return t === f;
+                        return t === p;
                     })
                     ? t
                     : _(d({}, t), {
                           [n]: [
                               ...r,
                               {
-                                  key: f,
+                                  key: p,
                                   Layer: s,
                                   render: e,
-                                  onCloseRequest: null != l ? l : () => I(f, n),
+                                  onCloseRequest: null != l ? l : () => I(p, n),
                                   onCloseCallback: c,
                                   instant: a,
-                                  backdropStyle: u
+                                  backdropStyle: u,
+                                  stackingBehavior: f
                               }
                           ]
                       });
             });
         }),
-        f
+        p
     );
 }
 function I(e) {
@@ -177,7 +178,7 @@ function I(e) {
                       return n === e;
                   })
                 : null;
-    (0, o.j)(() => {
+    ((0, o.j)(() => {
         y.setState((n) =>
             void 0 === n[t]
                 ? n
@@ -189,7 +190,7 @@ function I(e) {
                   })
         );
     }),
-        null != r && null != r.onCloseCallback && r.onCloseCallback();
+        null != r && null != r.onCloseCallback && r.onCloseCallback());
 }
 function T(e) {
     let t = y.getState(),

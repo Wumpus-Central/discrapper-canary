@@ -29,18 +29,18 @@ var i = r(169774),
 t.exports = (function () {
     function t(t) {
         var e = this;
-        n(this, 'observer', void 0), n(this, 'container', void 0), n(this, 'mutations', void 0), n(this, 'onCharData', void 0), (this.container = t), (this.mutations = l());
+        (n(this, 'observer', void 0), n(this, 'container', void 0), n(this, 'mutations', void 0), n(this, 'onCharData', void 0), (this.container = t), (this.mutations = l()));
         var r = a(t);
         r.MutationObserver && !p
             ? (this.observer = new r.MutationObserver(function (t) {
                   return e.registerMutations(t);
               }))
             : (this.onCharData = function (t) {
-                  t.target instanceof Node || s(!1),
+                  (t.target instanceof Node || s(!1),
                       e.registerMutation({
                           type: 'characterData',
                           target: t.target
-                      });
+                      }));
               });
     }
     var e = t.prototype;
@@ -52,7 +52,7 @@ t.exports = (function () {
             var t = this.observer;
             t ? (this.registerMutations(t.takeRecords()), t.disconnect()) : this.container.removeEventListener('DOMCharacterDataModified', this.onCharData);
             var e = this.mutations;
-            return (this.mutations = l()), e;
+            return ((this.mutations = l()), e);
         }),
         (e.registerMutations = function (t) {
             for (var e = 0; e < t.length; e++) this.registerMutation(t[e]);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+(n.d(t, { Z: () => x }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(626135),
@@ -20,13 +20,13 @@ function _(e) {
         g = r.useCallback(
             (e) => {
                 let i = (0, a.rr)();
-                e ? i.delete(n) : i.add(n),
+                (e ? i.delete(n) : i.add(n),
                     o.iH.updateSetting([...i]),
                     s.default.track(f.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: m.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
                         ingress: t,
                         guild_id: n
-                    });
+                    }));
             },
             [t, n]
         );

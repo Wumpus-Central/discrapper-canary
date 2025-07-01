@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     sg: () => O,
     sk: () => b
 }),
     n(388685),
     n(539854),
     n(704826),
-    n(35282);
+    n(35282));
 var r = n(512722),
     i = n.n(r),
     a = n(933557),
@@ -35,7 +35,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,11 +51,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -217,5 +217,5 @@ function O(e, t) {
 function v(e, t) {
     var n, r;
     let { start: a, end: o } = null != t ? t : {};
-    return i()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'), i()(null == o || 0 === o.path.length, 'Invalid end provided to serializeText'), e.substring(null != (n = null == a ? void 0 : a.offset) ? n : 0, null != (r = null == o ? void 0 : o.offset) ? r : e.length);
+    return (i()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'), i()(null == o || 0 === o.path.length, 'Invalid end provided to serializeText'), e.substring(null != (n = null == a ? void 0 : a.offset) ? n : 0, null != (r = null == o ? void 0 : o.offset) ? r : e.length));
 }

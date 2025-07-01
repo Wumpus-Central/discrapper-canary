@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(997841);
+(n.d(t, { Z: () => T }), n(997841));
 var r = n(697988),
     i = n(544891),
     a = n(570140),
@@ -53,7 +53,7 @@ function I(e, t) {
 let T = {
     archiveThread(e, t) {
         let n = { archived: !0 };
-        return t && (n.locked = !0), v(e, n);
+        return (t && (n.locked = !0), v(e, n));
     },
     async lockThread(e) {
         let t = e.isArchivedThread();
@@ -84,7 +84,7 @@ let T = {
         } catch (e) {
             var i, a;
             throw (
-                ((null == (i = e.body) ? void 0 : i.code) === b.evJ.TOO_MANY_THREADS
+                (null == (i = e.body) ? void 0 : i.code) === b.evJ.TOO_MANY_THREADS
                     ? o.Z.show({
                           title: r ? O.intl.string(O.t.kwyWNT) : O.intl.string(O.t['PeIE/v']),
                           body: r ? O.intl.string(O.t.KGaiEB) : O.intl.string(O.t.P0wT5e)
@@ -103,7 +103,7 @@ let T = {
                               title: O.intl.string(O.t.j2d6Ki),
                               body: O.intl.string(O.t.fEptJC)
                           }),
-                e)
+                e
             );
         }
     },
@@ -212,7 +212,7 @@ let T = {
     async replacePin(e, t) {
         let n = e.merge({ flags: e.flags & ~y.zZ.PINNED }),
             r = t.merge({ flags: t.flags | y.zZ.PINNED });
-        a.Z.dispatch({
+        (a.Z.dispatch({
             type: 'THREAD_UPDATE',
             channel: n
         }),
@@ -221,7 +221,7 @@ let T = {
                 channel: r
             }),
             await this.unarchiveThreadIfNecessary(e.id),
-            await this.unarchiveThreadIfNecessary(t.id);
+            await this.unarchiveThreadIfNecessary(t.id));
         try {
             await i.tn.patch({
                 url: b.ANM.CHANNEL(e.id),
@@ -229,14 +229,14 @@ let T = {
                 rejectWithError: !0
             });
         } catch (n) {
-            a.Z.dispatch({
+            (a.Z.dispatch({
                 type: 'THREAD_UPDATE',
                 channel: e
             }),
                 a.Z.dispatch({
                     type: 'THREAD_UPDATE',
                     channel: t
-                });
+                }));
             return;
         }
         try {
@@ -253,7 +253,7 @@ let T = {
         }
     },
     openThreadCreationForMobile(e, t, n) {
-        (0, l.yw)(b.rMx.THREAD_CREATION_STARTED, {
+        ((0, l.yw)(b.rMx.THREAD_CREATION_STARTED, {
             location: n,
             channel_id: e.id,
             guild_id: e.guild_id
@@ -268,7 +268,7 @@ let T = {
                     channelId: e.id,
                     command: null,
                     section: null
-                });
+                }));
     },
     async setNotificationSettings(e, t) {
         return (

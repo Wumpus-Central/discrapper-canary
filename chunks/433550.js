@@ -1,4 +1,4 @@
-r.d(t, { default: () => D }), r(539854), r(388685);
+(r.d(t, { default: () => D }), r(539854), r(388685));
 var n = r(255367),
     o = r(73800),
     i = r(120356),
@@ -33,7 +33,7 @@ let v = (0, h.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
     },
     W = (e) => {
         let { visibleRowIndex: t, columnIndex: r } = e;
-        w.cancel(), (0, j.Mf)(r, t, d.u.MOUSE_EVENT);
+        (w.cancel(), (0, j.Mf)(r, t, d.u.MOUSE_EVENT));
     },
     R = (e) => {
         let { stickerPack: t, width: r, hasHeaderImage: i, isScrolling: c, onInspect: a } = e,
@@ -114,7 +114,7 @@ let v = (0, h.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                         type: 'submit',
                         innerClassName: I.premiumButtonInner,
                         onClick: () => {
-                            t(), (0, S.Z)({ section: _.jXE.STICKER_PACK_VIEW_ALL });
+                            (t(), (0, S.Z)({ section: _.jXE.STICKER_PACK_VIEW_ALL }));
                         },
                         children: [
                             (0, n.jsx)(f.SrA, {
@@ -162,12 +162,12 @@ function D(e) {
                         n,
                         o = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
             }
             return o;
         })(e, ['onClose', 'stickerPack']);
@@ -189,7 +189,7 @@ function D(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(r).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -197,7 +197,7 @@ function D(e) {
                             )),
                             n.forEach(function (t) {
                                 var n;
-                                (n = r[t]),
+                                ((n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: n,
@@ -205,8 +205,8 @@ function D(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = n);
-                            });
+                                        : (e[t] = n));
+                            }));
                     }
                     return e;
                 })({}, c)),

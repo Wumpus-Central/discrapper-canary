@@ -1,4 +1,4 @@
-a.d(t, { t: () => k }), a(415506);
+(a.d(t, { t: () => k }), a(415506));
 var l = a(255367),
     r = a(73800),
     s = a(512722),
@@ -21,11 +21,11 @@ function k(e) {
             try {
                 if (((e = await (0, x.H)(t, { twoWayLinkType: o.g.DESKTOP })), null == e)) throw Error('missing authorizeURL');
             } catch (e) {
-                j.error('Error opening provider authorize page', e), v();
+                (j.error('Error opening provider authorize page', e), v());
                 return;
             }
             let { state: a } = (0, d.xp)(e);
-            n()(null != a, 'Authorize URL state query parameter must be present'), null == s || s(a);
+            (n()(null != a, 'Authorize URL state query parameter must be present'), null == s || s(a));
         }, [t, v, s]),
         O = r.useCallback(
             (e) => {

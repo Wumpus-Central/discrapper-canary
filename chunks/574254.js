@@ -21,7 +21,7 @@ let c = null,
     u = 0;
 function d(e) {
     let { contextMenu: t } = e;
-    u++, (c = t);
+    (u++, (c = t));
 }
 function f() {
     c = null;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(415506), n(388685);
+(n.d(t, { Z: () => R }), n(415506), n(388685));
 var r,
     i,
     l = n(255367),
@@ -11,19 +11,19 @@ var r,
     p = n(710845),
     m = n(703656),
     f = n(173747),
-    h = n(7956),
-    g = n(293245),
-    _ = n(417363),
+    g = n(7956),
+    _ = n(293245),
+    h = n(417363),
     b = n(941128),
-    x = n(780570),
+    E = n(780570),
     y = n(358085),
-    E = n(814225),
-    v = n(346329),
-    C = n(701560),
+    C = n(814225),
+    x = n(346329),
+    v = n(701560),
     O = n(981631),
     j = n(388032),
-    S = n(207178);
-function I(e, t, n) {
+    I = n(207178);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,15 +40,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
-            });
+                S(e, t, n[t]);
+            }));
     }
     return e;
 }
@@ -97,7 +97,7 @@ class Z extends (r = a.Component) {
                 return j.intl.string(j.t['nIj+a2']);
             case 'uninstalling':
                 let t = w();
-                return null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex];
+                return (null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex]);
             case 'queued':
                 return j.intl.string(j.t.TiJg5u);
             case 'downloading':
@@ -119,7 +119,7 @@ class Z extends (r = a.Component) {
     }
     renderPlayButton() {
         let { libraryApplication: e, fullWidth: t, size: n, color: r, customDisabledColor: i, isPlayShiny: a, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: u } = this.props;
-        return (0, l.jsx)(C.Z, {
+        return (0, l.jsx)(v.Z, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,
@@ -136,20 +136,20 @@ class Z extends (r = a.Component) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: r, size: i, customDisabledColor: a, tooltipPosition: o } = this.props;
         return (0, l.jsxs)('div', {
-            className: S.disabledButtonWrapper,
+            className: I.disabledButtonWrapper,
             children: [
                 (0, l.jsxs)(c.zxk, {
                     className: n,
                     fullWidth: r,
                     size: i,
-                    color: null != a ? a : S.disabledButtonColor,
+                    color: null != a ? a : I.disabledButtonColor,
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()]
                 }),
                 (0, l.jsx)(c.ua7, {
                     text: t,
                     position: o,
-                    children: (e) => (0, l.jsx)('div', T({ className: S.disabledButtonOverlay }, e))
+                    children: (e) => (0, l.jsx)('div', T({ className: I.disabledButtonOverlay }, e))
                 })
             ]
         });
@@ -157,15 +157,15 @@ class Z extends (r = a.Component) {
     renderProgressBar() {
         let { hideProgress: e, dispatchState: t } = this.props;
         if (e) return null;
-        let n = x.KJ(t);
+        let n = E.KJ(t);
         if (null == n) return null;
-        let r = n.type === O.vxO.UNINSTALLING ? c.Exd.INDETERMINATE : x.xI(Number(n.progress), Number(n.total));
+        let r = n.type === O.vxO.UNINSTALLING ? c.Exd.INDETERMINATE : E.xI(Number(n.progress), Number(n.total));
         return (0, l.jsx)(c.Exd, {
             percent: r,
             size: c.Exd.Sizes.XSMALL,
             foregroundColor: n.paused ? s.Z.unsafe_rawColors.PRIMARY_500.css : s.Z.unsafe_rawColors.GREEN_360.css,
             backgroundColor: s.Z.unsafe_rawColors.TRANSPARENT.css,
-            className: S.progress
+            className: I.progress
         });
     }
     renderActionButton(e, t) {
@@ -188,7 +188,7 @@ class Z extends (r = a.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = E.en(e.sku);
+                    let t = C.en(e.sku);
                     return null != t ? j.intl.formatToPlainString(j.t.Aqe2ZG, { date: t }) : null;
                 })(t)
             );
@@ -198,40 +198,40 @@ class Z extends (r = a.Component) {
         return null == r ? this.renderDisabledButton(n) : this.renderActionButton(n, r);
     }
     constructor(...e) {
-        super(...e),
-            I(this, '_uninstallStringIndex', null),
-            I(this, 'handleAddToLibrary', async () => {
+        (super(...e),
+            S(this, '_uninstallStringIndex', null),
+            S(this, 'handleAddToLibrary', async () => {
                 try {
                     let { libraryApplication: e } = this.props;
-                    await u.h(e.id, e.branchId, e.getFlags() & ~O.eHb.HIDDEN), (0, m.uL)(O.Z5c.APPLICATION_LIBRARY);
+                    (await u.h(e.id, e.branchId, e.getFlags() & ~O.eHb.HIDDEN), (0, m.uL)(O.Z5c.APPLICATION_LIBRARY));
                 } catch (e) {
                     new p.Z('LibraryApplicationButton').error(e);
                 }
             }),
-            I(this, 'handleInstall', () => {
+            S(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
-                v.installApplication(e.id, e.branchId, t);
+                x.installApplication(e.id, e.branchId, t);
             }),
-            I(this, 'handleUpdate', () => {
+            S(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
-                v.updateApplication(e.id, e.branchId);
+                x.updateApplication(e.id, e.branchId);
             }),
-            I(this, 'onClickHandlers', {
+            S(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,
                 install: this.handleInstall,
                 update: this.handleUpdate
             }),
-            I(this, 'handleClick', (e, t) => {
+            S(this, 'handleClick', (e, t) => {
                 let { onClick: n } = this.props;
-                null == n || n(e), t(e);
-            });
+                (null == n || n(e), t(e));
+            }));
     }
 }
 function R(e) {
     let { libraryApplication: t } = e,
         n = (0, d.O)(),
-        [r, i] = (0, o.Wu)([_.Z, b.Z], () => [(0, h.i)(t, _.Z, b.Z), _.Z.getState(t.id, t.branchId)], [t]),
-        a = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
+        [r, i] = (0, o.Wu)([h.Z, b.Z], () => [(0, g.i)(t, h.Z, b.Z), h.Z.getState(t.id, t.branchId)], [t]),
+        a = (0, o.e7)([_.Z], () => _.Z.isSyncing(t.id, t.branchId), [t]),
         s = (0, o.e7)([f.Z], () => f.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, l.jsx)(
         Z,
@@ -244,11 +244,11 @@ function R(e) {
         })
     );
 }
-I(Z, 'defaultProps', {
+(S(Z, 'defaultProps', {
     fullWidth: !1,
     size: c.zxk.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: 'top'
 }),
-    I(Z, 'ButtonStates', P);
+    S(Z, 'ButtonStates', P));

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     B1: () => j,
     DR: () => R,
     F$: () => L,
@@ -14,7 +14,7 @@ n.d(t, {
     p8: () => V,
     qg: () => x
 }),
-    n(49124);
+    n(49124));
 var r = n(561842),
     i = n(664081),
     a = n(311570),
@@ -53,7 +53,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -61,7 +61,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -72,7 +72,7 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -82,19 +82,19 @@ function A(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-n(597688), n(328347), n(874703), n(52030);
+(n(597688), n(328347), n(874703), n(52030));
 let N = (e) => {
         s.Z.dispatch(T({ type: 'COLLECTIBLES_SHOP_OPEN' }, e));
     },
     C = (e) => {
         var { openInLayer: t = !0, tab: n } = e;
-        N(S(e, ['openInLayer', 'tab'])), t ? (0, l.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, d.uL)(n ? v.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : v.Z5c.COLLECTIBLES_SHOP);
+        (N(S(e, ['openInLayer', 'tab'])), t ? (0, l.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, d.uL)(n ? v.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : v.Z5c.COLLECTIBLES_SHOP));
     },
     R = () => {
-        s.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, l.xf)();
+        (s.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, l.xf)());
     },
     P = (e) => {
         s.Z.dispatch({
@@ -111,7 +111,7 @@ let N = (e) => {
         });
         let r = (0, y.nW)(e),
             i = u.ZP.get('shop_show_debug_overlay');
-        (null == e ? void 0 : e.logPerf) &&
+        ((null == e ? void 0 : e.logPerf) &&
             (0, b.n)({
                 sessionId: null == n ? void 0 : n.sessionId,
                 checkpoint: b.a.CATEGORIES_FETCH_STARTED,
@@ -120,14 +120,14 @@ let N = (e) => {
                 unpublishedCategoriesShown: null == e ? void 0 : e.includeUnpublished,
                 cacheDisabled: null == e ? void 0 : e.noCache
             }),
-            i && (0, f.v)('fetchCollectiblesCategories started: '.concat(JSON.stringify(r, null, 2)));
+            i && (0, f.v)('fetchCollectiblesCategories started: '.concat(JSON.stringify(r, null, 2))));
         try {
             let a = await o.tn.get({
                 url: v.ANM.COLLECTIBLES_CATEGORIES,
                 query: r,
                 rejectWithError: !0
             });
-            (null == e ? void 0 : e.logPerf) &&
+            ((null == e ? void 0 : e.logPerf) &&
                 (0, b.n)({
                     sessionId: null == n ? void 0 : n.sessionId,
                     checkpoint: b.a.CATEGORIES_FETCH_COMPLETED,
@@ -141,15 +141,15 @@ let N = (e) => {
                     type: 'COLLECTIBLES_CATEGORIES_FETCH_SUCCESS',
                     categories: a.body.map(p.Z.fromServer),
                     noOp: t
-                });
+                }));
         } catch (t) {
             let e = new c.Hx(t);
-            (0, O.G)(e),
+            ((0, O.G)(e),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_CATEGORIES_FETCH_FAILURE',
                     error: e
                 }),
-                i && (0, f.v)('fetchCollectiblesCategories failed: '.concat(e.message));
+                i && (0, f.v)('fetchCollectiblesCategories failed: '.concat(e.message)));
         }
     },
     x = async (e) => {
@@ -162,23 +162,23 @@ let N = (e) => {
                 url: v.ANM.COLLECTIBLES_PURCHASES,
                 rejectWithError: !0
             };
-            (null == e ? void 0 : e.variantsReturnStyle) === a.v.VARIANTS_GROUP && (n.query = { variants_return_style: a.v.VARIANTS_GROUP }), t && (0, f.v)('fetchCollectiblesPurchases request: '.concat(JSON.stringify(n, null, 2)));
+            ((null == e ? void 0 : e.variantsReturnStyle) === a.v.VARIANTS_GROUP && (n.query = { variants_return_style: a.v.VARIANTS_GROUP }), t && (0, f.v)('fetchCollectiblesPurchases request: '.concat(JSON.stringify(n, null, 2))));
             let r = await o.tn.get(n);
-            t && (0, f.v)('fetchCollectiblesPurchases completed with '.concat(r.body.length, ' purchases')),
+            (t && (0, f.v)('fetchCollectiblesPurchases completed with '.concat(r.body.length, ' purchases')),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_PURCHASES_FETCH_SUCCESS',
                     purchases: r.body.map(g.Z.fromServer)
-                });
+                }));
         } catch (n) {
             let e = new c.Hx(n);
             throw (
-                ((0, O.G)(e),
+                (0, O.G)(e),
                 t && (0, f.v)('fetchCollectiblesPurchases failed: '.concat(e.message)),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_PURCHASES_FETCH_FAILURE',
                     error: e
                 }),
-                e)
+                e
             );
         }
     },
@@ -189,7 +189,7 @@ let N = (e) => {
         });
         try {
             let n = {};
-            (null == t ? void 0 : t.countryCode) !== null && (n.country_code = null == t ? void 0 : t.countryCode), (null == t ? void 0 : t.paymentGateway) !== null && (n.payment_gateway = null == t ? void 0 : t.paymentGateway);
+            ((null == t ? void 0 : t.countryCode) !== null && (n.country_code = null == t ? void 0 : t.countryCode), (null == t ? void 0 : t.paymentGateway) !== null && (n.payment_gateway = null == t ? void 0 : t.paymentGateway));
             let r = await o.tn.get({
                 url: v.ANM.COLLECTIBLES_PRODUCTS(e),
                 query: n,
@@ -202,12 +202,12 @@ let N = (e) => {
             });
         } catch (n) {
             let t = new c.Hx(n);
-            (0, O.G)(t),
+            ((0, O.G)(t),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_PRODUCT_FETCH_FAILURE',
                     skuId: e,
                     error: t
-                });
+                }));
         }
     },
     M = async (e) => {
@@ -230,12 +230,12 @@ let N = (e) => {
         } catch (n) {
             let t = new c.Hx(n);
             throw (
-                (s.Z.dispatch({
+                s.Z.dispatch({
                     type: 'COLLECTIBLES_CLAIM_FAILURE',
                     skuId: e,
                     error: t
                 }),
-                t)
+                t
             );
         }
     },
@@ -252,7 +252,7 @@ let N = (e) => {
                 })
             ).body.valid;
         } catch (e) {
-            return (0, O.G)(new c.Hx(e)), !1;
+            return ((0, O.G)(new c.Hx(e)), !1);
         }
     },
     U = async (e) => {
@@ -271,7 +271,7 @@ let N = (e) => {
                 marketings: h.s.fromServer(e.body)
             });
         } catch (e) {
-            (0, O.G)(new c.Hx(e)), s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' });
+            ((0, O.G)(new c.Hx(e)), s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' }));
         }
     },
     G = async (e, t, n) => {
@@ -296,7 +296,7 @@ let N = (e) => {
                 query: r,
                 rejectWithError: !0
             });
-            (null == t ? void 0 : t.logPerf) &&
+            ((null == t ? void 0 : t.logPerf) &&
                 (0, b.n)({
                     sessionId: null == n ? void 0 : n.sessionId,
                     checkpoint: b.a.SHOP_HOME_FETCH_COMPLETED,
@@ -309,15 +309,15 @@ let N = (e) => {
                     type: 'COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS',
                     tab: e,
                     shopHome: E.Y.fromServer(i.body)
-                });
+                }));
         } catch (n) {
             let t = new c.Hx(n);
-            (0, O.G)(t),
+            ((0, O.G)(t),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_SHOP_HOME_FETCH_FAILURE',
                     tab: e,
                     error: t
-                });
+                }));
         }
     },
     B = (e) => {

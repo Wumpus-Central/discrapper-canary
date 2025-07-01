@@ -1,4 +1,4 @@
-n.d(t, { G: () => c }), n(388685);
+(n.d(t, { G: () => c }), n(388685));
 var r = n(960048),
     i = n(981631);
 let a = [i.evJ.UNAUTHORIZED, i.evJ.EMAIL_VERIFICATION_REQUIRED, i.evJ.USER_BANNED],

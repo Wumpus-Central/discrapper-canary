@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => es }), n(388685);
+(n.d(t, { ZP: () => es }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -49,7 +49,7 @@ function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,7 +57,7 @@ function X(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -65,8 +65,8 @@ function X(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -90,7 +90,7 @@ function J(e) {
                 value: l,
                 maxLength: U.VKK,
                 onChange: function (e) {
-                    s(e), Q(t.id, e);
+                    (s(e), Q(t.id, e));
                 },
                 disabled: n
             })
@@ -222,7 +222,7 @@ function ee(e) {
                             innerClassName: H.roleStyleUpsellButtonContents,
                             shineSize: g.gtL.ShineSizes.SMALL,
                             onClick: function () {
-                                (0, E.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
+                                ((0, E.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)());
                             },
                             look: g.zxk.Looks.FILLED,
                             color: g.zxk.Colors.CUSTOM,
@@ -277,7 +277,7 @@ function en(e) {
                 disabled: l,
                 onChange: (e) => {
                     var t;
-                    return (t = e), void (i.color !== t && (t !== U.p6O || 0 !== i.color) && (t === U.p6O && (t = 0), (0, R.OW)(i.id, t)));
+                    return ((t = e), void (i.color !== t && (t !== U.p6O || 0 !== i.color) && (t === U.p6O && (t = 0), (0, R.OW)(i.id, t))));
                 },
                 secondaryValue: s === Z.g.GRADIENT && a && (null == (t = i.colors) ? void 0 : t.secondary_color) != null ? (null == (n = i.colors) ? void 0 : n.secondary_color) : void 0,
                 onChangeGradientColors: (e) => {

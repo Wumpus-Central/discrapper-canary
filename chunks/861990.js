@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     B: () => l,
     Fm: () => d,
     Lc: () => u,
@@ -8,7 +8,7 @@ n.d(t, {
 }),
     n(953529),
     n(415506),
-    n(35282);
+    n(35282));
 var r = n(830496),
     i = n(959517);
 let a = [
@@ -85,12 +85,12 @@ function l(e) {
         a = { id: null != (t = null == n ? void 0 : n.toString()) ? t : e.id };
     null != e.description && (a.description = e.description);
     let o = s({ spoiler: e.spoiler });
-    return (a.filename = ''.concat(o).concat(null != i ? i : e.filename)), (a.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (a.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (a.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((a.is_clip = !0), (a.title = e.clip.name), (a.application_id = e.clip.applicationId), (a.clip_created_at = (0, r.U)(e.clip.id)), (a.clip_participant_ids = (0, r.Z)(e.clip.users))), a;
+    return ((a.filename = ''.concat(o).concat(null != i ? i : e.filename)), (a.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (a.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (a.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((a.is_clip = !0), (a.title = e.clip.name), (a.application_id = e.clip.applicationId), (a.clip_created_at = (0, r.U)(e.clip.id)), (a.clip_participant_ids = (0, r.Z)(e.clip.users))), a);
 }
 function c(e, t, n) {
     let r = new XMLHttpRequest();
     return new Promise((i, a) => {
-        r.open('GET', e, !0),
+        (r.open('GET', e, !0),
             (r.responseType = 'blob'),
             r.setRequestHeader('Range', 'bytes='.concat(t, '-').concat(n)),
             (r.onabort = (e) => a(e)),
@@ -99,13 +99,13 @@ function c(e, t, n) {
             (r.onload = () => {
                 206 === r.status ? i(r.response) : a(Error('Range request failed'));
             }),
-            r.send();
+            r.send());
     });
 }
 function u(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, r) => {
-        t.open('GET', e, !0),
+        (t.open('GET', e, !0),
             (t.responseType = 'blob'),
             (t.onabort = (e) => r(e)),
             (t.onerror = (e) => r(e)),
@@ -114,13 +114,13 @@ function u(e) {
                 var e;
                 return n(null == t || null == (e = t.response) ? void 0 : e.data);
             }),
-            t.send();
+            t.send());
     });
 }
 function d(e) {
     return new Promise((t, n) => {
         let r = new XMLHttpRequest();
-        r.open('HEAD', e, !0),
+        (r.open('HEAD', e, !0),
             (r.onload = () => {
                 if (r.status >= 200 && r.status < 300) {
                     let e = r.getResponseHeader('Content-Length');
@@ -130,7 +130,7 @@ function d(e) {
             (r.onerror = n),
             (r.onabort = n),
             (r.ontimeout = n),
-            r.send();
+            r.send());
     });
 }
 function f(e) {

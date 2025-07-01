@@ -32,7 +32,7 @@ t.exports = function (t, e, r, f) {
                         (r.flags = ''),
                         (r[l] = /./[l])),
                     (r.exec = function () {
-                        return (e = !0), null;
+                        return ((e = !0), null);
                     }),
                     r[l](''),
                     !e
@@ -54,7 +54,7 @@ t.exports = function (t, e, r, f) {
                           }
                     : { done: !1 };
             });
-        i(String.prototype, t, d[0]), i(c, l, d[1]);
+        (i(String.prototype, t, d[0]), i(c, l, d[1]));
     }
     f && u(c[l], 'sham', !0);
 };

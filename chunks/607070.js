@@ -26,7 +26,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -68,7 +68,7 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -78,7 +78,7 @@ function E(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let b = {
@@ -124,13 +124,13 @@ function I(e) {
 }
 function T(e) {
     if (e.zoom < d.yqN.ZOOM_MIN || e.zoom > d.yqN.ZOOM_MAX || y.zoom === e.zoom) return !1;
-    ((y = p({}, y)).zoom = e.zoom), u.Z.setZoomFactor(y.zoom);
+    (((y = p({}, y)).zoom = e.zoom), u.Z.setZoomFactor(y.zoom));
 }
 function S() {
     let e = y.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
         t = y.zoom !== d.yqN.ZOOM_DEFAULT;
     if (!e && !t) return !1;
-    (y = p({}, y)).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (y.fontSize = d.yqN.FONT_SIZE_DEFAULT), y.zoom !== d.yqN.ZOOM_DEFAULT && ((y.zoom = d.yqN.ZOOM_DEFAULT), u.Z.setZoomFactor(y.zoom));
+    ((y = p({}, y)).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (y.fontSize = d.yqN.FONT_SIZE_DEFAULT), y.zoom !== d.yqN.ZOOM_DEFAULT && ((y.zoom = d.yqN.ZOOM_DEFAULT), u.Z.setZoomFactor(y.zoom)));
 }
 function A() {
     if (y.keyboardModeEnabled) return !1;
@@ -185,7 +185,7 @@ function B(e) {
 }
 function V(e) {
     var t;
-    return (y = m(p({}, y), { systemForcedColors: null != (t = e.systemForcedColors) ? t : 'none' })), !0;
+    return ((y = m(p({}, y), { systemForcedColors: null != (t = e.systemForcedColors) ? t : 'none' })), !0);
 }
 function F() {
     y.forcedColorsModalSeen = !0;
@@ -203,7 +203,7 @@ function Y(e) {
 }
 class W extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(c.Z), isNaN((y = p({}, b, null != e ? e : null)).fontSize) && (y.fontSize = d.yqN.FONT_SIZE_DEFAULT), 0 > f.fP.indexOf(null != y.messageGroupSpacing ? y.messageGroupSpacing : -1) && (y.messageGroupSpacing = null);
+        (this.waitFor(c.Z), isNaN((y = p({}, b, null != e ? e : null)).fontSize) && (y.fontSize = d.yqN.FONT_SIZE_DEFAULT), 0 > f.fP.indexOf(null != y.messageGroupSpacing ? y.messageGroupSpacing : -1) && (y.messageGroupSpacing = null));
     }
     get fontScale() {
         return (y.fontSize / d.yqN.FONT_SIZE_DEFAULT) * 100;
@@ -313,7 +313,7 @@ class W extends (r = i.ZP.DeviceSettingsStore) {
         return y;
     }
 }
-_(W, 'displayName', 'AccessibilityStore'),
+(_(W, 'displayName', 'AccessibilityStore'),
     _(W, 'persistKey', 'AccessibilityStore'),
     _(W, 'migrations', [
         () => {
@@ -381,7 +381,7 @@ _(W, 'displayName', 'AccessibilityStore'),
             } catch (e) {}
             return e;
         }
-    ]);
+    ]));
 let K = new W(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: I,
     ACCESSIBILITY_SET_ZOOM: T,

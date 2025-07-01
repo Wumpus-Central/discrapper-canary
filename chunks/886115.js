@@ -16,7 +16,7 @@ function n(t, e) {
     let _ = Math.max(e - 60, 0);
     _ < 5 && (_ = 0);
     let n = Math.min(_ + 140, r);
-    return n > r - 5 && (n = r), n === r && (_ = Math.max(n - 140, 0)), (a = a.slice(_, n)), _ > 0 && (a = `'{snip} ${a}`), n < r && (a += ' {snip}'), a;
+    return (n > r - 5 && (n = r), n === r && (_ = Math.max(n - 140, 0)), (a = a.slice(_, n)), _ > 0 && (a = `'{snip} ${a}`), n < r && (a += ' {snip}'), a);
 }
 function o(t, e) {
     if (!Array.isArray(t)) return '';

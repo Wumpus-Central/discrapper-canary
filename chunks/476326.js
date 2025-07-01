@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => f,
     ow: () => u,
     rG: () => d
 }),
-    n(953529);
+    n(953529));
 var r = n(836560),
     i = n(392711),
     a = n.n(i),
@@ -24,7 +24,7 @@ function c(e, t, n) {
     );
 }
 var u = (function (e) {
-    return (e[(e.REACT_NATIVE = 0)] = 'REACT_NATIVE'), (e[(e.WEB = 1)] = 'WEB'), e;
+    return ((e[(e.REACT_NATIVE = 0)] = 'REACT_NATIVE'), (e[(e.WEB = 1)] = 'WEB'), e);
 })({});
 function d(e) {
     return void 0 !== e.isVideo && void 0 !== e.isImage;
@@ -43,8 +43,8 @@ class f extends r.EventEmitter {
                 overrideFilename: e.filename,
                 overrideType: e.mimeType
             });
-            (this.filename = t.filename), (this.isImage = t.isImage), (this.isVideo = t.isVideo), (this.mimeType = t.type), (this.origin = e.origin), (this.durationSecs = e.durationSecs), (this.waveform = e.waveform), (this.isRemix = e.isRemix);
-        } else (this.id = null != (r = e.id) ? r : a().uniqueId('upload')), (this.classification = s.f3(e.file)), (this.isImage = 'image' === this.classification), (this.isVideo = 'video' === this.classification), (this.filename = e.file.name), (this.mimeType = e.file.type);
-        (this.isThumbnail = e.isThumbnail), (this.clip = e.clip), (this.uniqueId = (0, o.Z)()), (this.showLargeMessageDialog = t), (this.spoiler = !1), (this.description = null);
+            ((this.filename = t.filename), (this.isImage = t.isImage), (this.isVideo = t.isVideo), (this.mimeType = t.type), (this.origin = e.origin), (this.durationSecs = e.durationSecs), (this.waveform = e.waveform), (this.isRemix = e.isRemix));
+        } else ((this.id = null != (r = e.id) ? r : a().uniqueId('upload')), (this.classification = s.f3(e.file)), (this.isImage = 'image' === this.classification), (this.isVideo = 'video' === this.classification), (this.filename = e.file.name), (this.mimeType = e.file.type));
+        ((this.isThumbnail = e.isThumbnail), (this.clip = e.clip), (this.uniqueId = (0, o.Z)()), (this.showLargeMessageDialog = t), (this.spoiler = !1), (this.description = null));
     }
 }

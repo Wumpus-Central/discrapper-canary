@@ -79,7 +79,7 @@ function _(t) {
             [o.ZP],
             () => {
                 let n = u.bL.NULL;
-                return null != t.parent_id && (n = o.ZP.getChannelMessageNotifications(e, t.parent_id)), n !== u.bL.NULL ? n : o.ZP.getMessageNotifications(e);
+                return (null != t.parent_id && (n = o.ZP.getChannelMessageNotifications(e, t.parent_id)), n !== u.bL.NULL ? n : o.ZP.getMessageNotifications(e));
             },
             [e, t.parent_id]
         ),

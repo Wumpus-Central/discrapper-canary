@@ -1,4 +1,4 @@
-r.d(t, { Z: () => N }), r(388685), r(704826), r(35282);
+(r.d(t, { Z: () => N }), r(388685), r(704826), r(35282));
 var n = r(255367),
     i = r(73800),
     o = r(120356),
@@ -50,7 +50,7 @@ let x = i.forwardRef(function (e, t) {
                 opacity: 0,
                 y: 5
             }));
-        i.useEffect(() => {
+        (i.useEffect(() => {
             Z({
                 y: 0,
                 opacity: 1,
@@ -65,15 +65,15 @@ let x = i.forwardRef(function (e, t) {
                 () => ({
                     focusDisplayName: () => {
                         var e, t, r;
-                        null == (t = k.current) || t.setSelection(0, null == (e = k.current) ? void 0 : e.value.length), null == (r = k.current) || r.focus();
+                        (null == (t = k.current) || t.setSelection(0, null == (e = k.current) ? void 0 : e.value.length), null == (r = k.current) || r.focus());
                     },
                     focusUsername: () => {
                         var e, t, r;
-                        null == (t = M.current) || t.setSelection(0, null == (e = M.current) ? void 0 : e.value.length), null == (r = M.current) || r.focus();
+                        (null == (t = M.current) || t.setSelection(0, null == (e = M.current) ? void 0 : e.value.length), null == (r = M.current) || r.focus());
                     }
                 }),
                 []
-            );
+            ));
         let G = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
             { createMultipleConfettiAt: W } = i.useContext(d.h),
             z = null == j ? void 0 : j.getLegacyUsername();
@@ -151,7 +151,7 @@ let x = i.forwardRef(function (e, t) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var r = null != arguments[t] ? arguments[t] : {},
                                                             n = Object.keys(r);
-                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                                             (n = n.concat(
                                                                 Object.getOwnPropertySymbols(r).filter(function (e) {
                                                                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -159,7 +159,7 @@ let x = i.forwardRef(function (e, t) {
                                                             )),
                                                             n.forEach(function (t) {
                                                                 var n;
-                                                                (n = r[t]),
+                                                                ((n = r[t]),
                                                                     t in e
                                                                         ? Object.defineProperty(e, t, {
                                                                               value: n,
@@ -167,8 +167,8 @@ let x = i.forwardRef(function (e, t) {
                                                                               configurable: !0,
                                                                               writable: !0
                                                                           })
-                                                                        : (e[t] = n);
-                                                            });
+                                                                        : (e[t] = n));
+                                                            }));
                                                     }
                                                     return e;
                                                 })({}, e)),

@@ -26,7 +26,7 @@ let m = (e) => {
               buttonCTA: d.intl.string(d.t['NX+WJC']),
               className: u.__invalid_coachmark,
               onClick: (e) => {
-                  e.stopPropagation(), t(c.L.UNKNOWN);
+                  (e.stopPropagation(), t(c.L.UNKNOWN));
               },
               markAsDismissed: t,
               caretPosition: a.DF.BOTTOM_CENTER,

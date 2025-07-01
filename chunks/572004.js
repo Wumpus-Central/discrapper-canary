@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     JG: () => d,
     wS: () => u
 }),
-    n(415506);
+    n(415506));
 var r,
     i,
     a = n(358085),
@@ -17,8 +17,8 @@ async function d(e, t, n) {
         return;
     }
     try {
-        l ? s.ZP.copy(e) : await window.navigator.clipboard.writeText(e), null == t || t();
+        (l ? s.ZP.copy(e) : await window.navigator.clipboard.writeText(e), null == t || t());
     } catch (e) {
-        null == n || n(e), o.Z.captureException(e);
+        (null == n || n(e), o.Z.captureException(e));
     }
 }

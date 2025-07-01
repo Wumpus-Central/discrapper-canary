@@ -18,4 +18,4 @@ let t = '[a-fA-F\\d:]',
         .replace(/\n/g, '')
         .trim(),
     o = (e) => (e && e.exact ? RegExp(`(?:^${r}$)|(?:^${a}$)`) : RegExp(`(?:${n(e)}${r}${n(e)})|(?:${n(e)}${a}${n(e)})`, 'g'));
-(o.v4 = (e) => (e && e.exact ? RegExp(`^${r}$`) : RegExp(`${n(e)}${r}${n(e)}`, 'g'))), (o.v6 = (e) => (e && e.exact ? RegExp(`^${a}$`) : RegExp(`${n(e)}${a}${n(e)}`, 'g'))), (e.exports = o);
+((o.v4 = (e) => (e && e.exact ? RegExp(`^${r}$`) : RegExp(`${n(e)}${r}${n(e)}`, 'g'))), (o.v6 = (e) => (e && e.exact ? RegExp(`^${a}$`) : RegExp(`${n(e)}${a}${n(e)}`, 'g'))), (e.exports = o));

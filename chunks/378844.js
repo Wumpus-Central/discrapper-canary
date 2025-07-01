@@ -7,8 +7,8 @@ var r,
 n(73800);
 var l = n(442837),
     o = n(481060),
-    s = n(893776),
-    a = n(391650),
+    a = n(893776),
+    s = n(391650),
     c = n(313201),
     u = n(144114),
     d = n(607744),
@@ -21,7 +21,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -37,8 +37,8 @@ function b(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ var _ = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
 let O = (e) => {
     let { type: t, guildId: r, closePopout: _ } = e,
         O = (0, c.Dt)(),
-        { notClaimed: y, notEmailVerified: v, notPhoneVerified: C, newAccount: j, newMember: E } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
-        S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
+        { notClaimed: y, notEmailVerified: v, notPhoneVerified: C, newAccount: j, newMember: S } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
+        E = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         x = null,
         I = null;
-    return (0 === t && (y ? ((x = g.intl.string(g.t.IRxUlJ)), (I = g.intl.string(g.t.fiNVio))) : C ? ((x = g.intl.string(g.t.vW8iUF)), (I = g.intl.string(g.t['50gfOj']))) : v ? ((x = g.intl.string(g.t.vdSOp6)), (I = g.intl.string(g.t.lm1UKi))) : E ? ((x = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (I = g.intl.string(g.t.BddRzc))) : j && ((x = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (I = g.intl.string(g.t.BddRzc)))), null == S || null == x)
+    return (0 === t && (y ? ((x = g.intl.string(g.t.IRxUlJ)), (I = g.intl.string(g.t.fiNVio))) : C ? ((x = g.intl.string(g.t.vW8iUF)), (I = g.intl.string(g.t['50gfOj']))) : v ? ((x = g.intl.string(g.t.vdSOp6)), (I = g.intl.string(g.t.lm1UKi))) : S ? ((x = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (I = g.intl.string(g.t.BddRzc))) : j && ((x = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (I = g.intl.string(g.t.BddRzc)))), null == E || null == x)
         ? null
         : (0, i.jsxs)(o.VqE, {
               className: m.container,
@@ -67,7 +67,7 @@ let O = (e) => {
                           (0, i.jsx)(o.X6q, {
                               variant: 'heading-md/semibold',
                               id: O,
-                              children: S
+                              children: E
                           }),
                           (0, i.jsx)(o.Text, {
                               color: 'header-secondary',
@@ -80,8 +80,8 @@ let O = (e) => {
                                   null != I
                                       ? (0, i.jsx)(o.zxk, {
                                             onClick: () => {
-                                                y
-                                                    ? a.j()
+                                                (y
+                                                    ? s.j()
                                                     : C
                                                       ? (0, o.ZDy)(
                                                             async () => {
@@ -91,7 +91,7 @@ let O = (e) => {
                                                             { modalKey: f.M }
                                                         )
                                                       : v &&
-                                                        (s.Z.verifyResend(),
+                                                        (a.Z.verifyResend(),
                                                         (0, o.h7j)((e) => {
                                                             var t, n, r;
                                                             return (0, i.jsx)(
@@ -126,7 +126,7 @@ let O = (e) => {
                                                                 n)
                                                             );
                                                         })),
-                                                    _();
+                                                    _());
                                             },
                                             className: m.primaryButton,
                                             children: I

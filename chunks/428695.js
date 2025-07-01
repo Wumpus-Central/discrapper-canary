@@ -27,13 +27,13 @@ let f = (0, o.debounce)(c.ZP.trackWithMetadata, 500),
                   className: h.button,
                   size: s.zxk.Sizes.SMALL,
                   onClick: () => {
-                      null != g &&
+                      (null != g &&
                           u.default.track(d.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: E,
                               guild_id: t.id,
                               notice_type: g
                           }),
-                          null == I || I();
+                          null == I || I());
                   },
                   fullWidth: !0,
                   color: C,
@@ -67,7 +67,7 @@ let f = (0, o.debounce)(c.ZP.trackWithMetadata, 500),
                     ? null
                     : (0, r.jsx)(s.P3F, {
                           onClick: () => {
-                              c.ZP.trackWithMetadata(d.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == y || y();
+                              (c.ZP.trackWithMetadata(d.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == y || y());
                           },
                           className: h.close,
                           'aria-label': p.intl.string(p.t.WAI6xs),

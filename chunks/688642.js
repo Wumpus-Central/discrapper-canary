@@ -13,7 +13,7 @@ var s = n(44837),
     u = (function (e) {
         function t() {
             for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-            return ((t = e.call.apply(e, [this].concat(r)) || this).history = (0, o.lX)(t.props)), t;
+            return (((t = e.call.apply(e, [this].concat(r)) || this).history = (0, o.lX)(t.props)), t);
         }
         return (
             (0, i.Z)(t, e),
@@ -57,7 +57,7 @@ var m = p(function (e, t) {
                     e.defaultPrevented || 0 !== e.button || (c && '_self' !== c) || h(e) || (e.preventDefault(), r());
                 }
             });
-        return _ !== p ? (u.ref = t || n) : (u.ref = n), a.createElement('a', u);
+        return (_ !== p ? (u.ref = t || n) : (u.ref = n), a.createElement('a', u));
     }),
     g = p(function (e, t) {
         var n = e.component,
@@ -78,7 +78,7 @@ var m = p(function (e, t) {
                         (o ? n.replace : n.push)(t);
                     }
                 });
-            return _ !== p ? (m.ref = t || h) : (m.innerRef = h), a.createElement(i, m);
+            return (_ !== p ? (m.ref = t || h) : (m.innerRef = h), a.createElement(i, m));
         });
     }),
     E = function (e) {
@@ -93,7 +93,7 @@ function y() {
         })
         .join(' ');
 }
-void 0 === b && (b = E),
+(void 0 === b && (b = E),
     b(function (e, t) {
         var n = e['aria-current'],
             i = void 0 === n ? 'page' : n,
@@ -136,6 +136,6 @@ void 0 === b && (b = E),
                     },
                     N
                 );
-            return E !== b ? (L.ref = t || A) : (L.innerRef = A), a.createElement(g, L);
+            return (E !== b ? (L.ref = t || A) : (L.innerRef = A), a.createElement(g, L));
         });
-    });
+    }));

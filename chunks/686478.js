@@ -6,7 +6,7 @@ n.d(t, {
 });
 var r = n(786761),
     i = (function (e) {
-        return (e.ALL = 'ALL'), (e.REMINDER = 'REMINDER'), (e.BOOKMARK = 'BOOKMARK'), e;
+        return ((e.ALL = 'ALL'), (e.REMINDER = 'REMINDER'), (e.BOOKMARK = 'BOOKMARK'), e);
     })({});
 function a(e) {
     return {

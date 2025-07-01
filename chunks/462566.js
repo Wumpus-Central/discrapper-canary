@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -90,7 +90,7 @@ let y = function (e) {
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return (e || T.name) && '' === v.name && (t.name = _.intl.string(_.t.lIkVsr)), t;
+            return ((e || T.name) && '' === v.name && (t.name = _.intl.string(_.t.lIkVsr)), t);
         },
         [T, v]
     );
@@ -140,7 +140,7 @@ let y = function (e) {
                             stripeType: 'cardCvc',
                             updateCompleted: (e) => P('cardCvc', e),
                             onFocus: () => {
-                                R(), E(!0);
+                                (R(), E(!0));
                             },
                             onBlur: () => {
                                 E(!1);
@@ -168,7 +168,7 @@ let y = function (e) {
         let n = g({}, v),
             r = g({}, T),
             i = { name: A.name };
-        T[t] || '' === e || (r[t] = !0), (n[t] = e), r[t] && '' === e ? 'name' === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t], I(n), S(r), N(i);
+        (T[t] || '' === e || (r[t] = !0), (n[t] = e), r[t] && '' === e ? 'name' === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t], I(n), S(r), N(i));
     }
     function k() {
         var e;

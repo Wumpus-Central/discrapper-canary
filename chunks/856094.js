@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(1266).findLastIndex,
     a = n(967333);
-r(
+(r(
     {
         target: 'Array',
         proto: !0
@@ -12,4 +12,4 @@ r(
         }
     }
 ),
-    a('findLastIndex');
+    a('findLastIndex'));

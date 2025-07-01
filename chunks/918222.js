@@ -1,4 +1,4 @@
-n.d(t, { R: () => l }), n(388685);
+(n.d(t, { R: () => l }), n(388685));
 var i = n(73800),
     r = n(433517),
     s = n(493773);
@@ -15,7 +15,7 @@ function l(e, t) {
             n,
             i.useCallback(
                 (t) => {
-                    l(t), r.K.set(e, t);
+                    (l(t), r.K.set(e, t));
                 },
                 [e]
             )

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     H: () => v,
     T: () => x
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(442837),
     l = n(570140),
@@ -29,24 +29,24 @@ function v(e) {
             guildId: j
         } = e,
         [O, E] = r.useState(!1),
-        { requestId: I, entries: S, impressionCappedEntryIds: P, hasLeaderboardEntry: Z } = (0, m.Z)(v),
+        { requestId: S, entries: I, impressionCappedEntryIds: P, hasLeaderboardEntry: Z } = (0, m.Z)(v),
         N = (0, i.e7)([p.Z], () => p.Z.hidden),
         T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
         A = (0, i.e7)([a.Z], () => a.Z.getChannel(v)),
         w = (0, i.e7)([s.Z], () => s.Z.getGuild(j), [j]),
         R = (0, h.E)(w),
         k = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
-        [M, D, L, U] = r.useMemo(() => {
+        [M, L, D, U] = r.useMemo(() => {
             let e;
-            if (null == S || 0 === S.length || null == I || !k) return [t, n, x];
-            let r = O ? S.length : Z ? 4 : 3,
-                i = S.slice(0, r);
+            if (null == I || 0 === I.length || null == S || !k) return [t, n, x];
+            let r = O ? I.length : Z ? 4 : 3,
+                i = I.slice(0, r);
             e = N
                 ? [{ type: o.so.HIDDEN_CONTENT_INVENTORY }]
                 : i.map((e) => ({
                       type: o.so.CONTENT_INVENTORY,
                       entry: e,
-                      requestId: I
+                      requestId: S
                   }));
             let l = {
                 id: _.G,
@@ -69,15 +69,15 @@ function v(e) {
                     });
                 },
                 expanded: O,
-                expandedCount: S.length,
+                expandedCount: I.length,
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, S, O, t, j, I, n, x, N, k, Z]),
+        }, [v, I, O, t, j, S, n, x, N, k, Z]),
         B = r.useRef(0),
-        F = r.useRef(S),
-        G = r.useRef(void 0),
-        H = r.useRef({ impressionCappedEntryIds: P }),
+        F = r.useRef(I),
+        H = r.useRef(void 0),
+        G = r.useRef({ impressionCappedEntryIds: P }),
         V = r.useCallback(
             (e) => {
                 var t;
@@ -89,32 +89,32 @@ function v(e) {
         );
     return (
         r.useEffect(() => {
-            F.current = S;
-        }, [S]),
+            F.current = I;
+        }, [I]),
         r.useEffect(() => {
-            H.current = { impressionCappedEntryIds: P };
+            G.current = { impressionCappedEntryIds: P };
         }, [P]),
         r.useEffect(
             () => (
                 (B.current = 0),
-                (G.current = Date.now()),
+                (H.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == I || null == G.current || Date.now() - G.current < 3000) return;
+                    if (null == S || null == H.current || Date.now() - H.current < 3000) return;
                     let n = null != (t = null == (e = F.current) ? void 0 : e.map((e) => e.id)) ? t : [],
                         r = n.slice(0, B.current);
                     !N &&
                         T &&
                         k &&
                         ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
-                            request_id: I,
-                            first_shown_at: G.current,
+                            request_id: S,
+                            first_shown_at: H.current,
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
                             channel_id: v,
                             guild_id: j,
                             all_item_ids: n,
-                            impression_capped_item_ids: [...H.current.impressionCappedEntryIds]
+                            impression_capped_item_ids: [...G.current.impressionCappedEntryIds]
                         }),
                         (0, d.wm)('useInjectContentInventoryFeed') &&
                             l.Z.dispatch({
@@ -123,12 +123,12 @@ function v(e) {
                             }));
                 }
             ),
-            [I, v, j, N, T, k]
+            [S, v, j, N, T, k]
         ),
         {
             groups: M,
-            rows: D,
-            version: L,
+            rows: L,
+            version: D,
             updateMaxRowSeen: V
         }
     );

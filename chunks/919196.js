@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(539854), n(953529);
+(n.d(t, { Z: () => N }), n(388685), n(539854), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,13 +17,13 @@ var r = n(255367),
     x = n(125657),
     j = n(725875),
     O = n(981631),
-    y = n(388032),
-    v = n(704526);
+    v = n(388032),
+    y = n(704526);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -39,8 +39,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -58,12 +58,12 @@ function C(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['application', 'guild', 'integration']);
@@ -72,20 +72,20 @@ function C(e) {
         ((t = _({}, d)),
         (n = n =
             {
-                header: y.intl.formatToPlainString(y.t['rL9d//'], { applicationName: i.name }),
-                confirmText: y.intl.string(y.t.ebGf4u),
-                cancelText: y.intl.string(y.t['ETE/oK']),
+                header: v.intl.formatToPlainString(v.t['rL9d//'], { applicationName: i.name }),
+                confirmText: v.intl.string(v.t.ebGf4u),
+                cancelText: v.intl.string(v.t['ETE/oK']),
                 onConfirm: () => {
                     c.Z.disableIntegration(l.id, s.id).catch(() => {
                         a.Z.show({
-                            title: y.intl.string(y.t.wYqMmJ),
-                            body: y.intl.string(y.t.A4Mnsr)
+                            title: v.intl.string(v.t.wYqMmJ),
+                            body: v.intl.string(v.t.A4Mnsr)
                         });
                     });
                 },
                 children: (0, r.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: y.intl.format(y.t.FGE8yc, { applicationName: i.name })
+                    children: v.intl.format(v.t.FGE8yc, { applicationName: i.name })
                 })
             }),
         Object.getOwnPropertyDescriptors
@@ -106,8 +106,8 @@ function C(e) {
 function N(e) {
     var t;
     let { guild: n, applicationIntegration: a, selectableWebhookChannels: c, editedWebhook: N, errors: I, canNavigate: S } = e,
-        { application: E, integration: w, webhooks: P } = a,
-        [T, Z] = (0, l.Wu)([p.Z], () => [p.Z.can(O.Plq.MANAGE_ROLES, n), null == E.bot || p.Z.canManageUser(O.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
+        { application: E, integration: T, webhooks: w } = a,
+        [P, Z] = (0, l.Wu)([p.Z], () => [p.Z.can(O.Plq.MANAGE_ROLES, n), null == E.bot || p.Z.canManageUser(O.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
         k = (0, l.e7)([p.Z], () => p.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
         A = i.useCallback(() => {
             S() &&
@@ -118,30 +118,30 @@ function N(e) {
                             {
                                 guild: n,
                                 application: E,
-                                integration: w
+                                integration: T
                             },
                             e
                         )
                     )
                 );
-        }, [E, S, n, w]),
-        R = i.useMemo(() => {
+        }, [E, S, n, T]),
+        D = i.useMemo(() => {
             let e = [
                 {
                     icon: o.T39,
-                    text: y.intl.formatToPlainString(y.t.gcdJ8P, { timestamp: b.default.extractTimestamp(w.id) })
+                    text: v.intl.formatToPlainString(v.t.gcdJ8P, { timestamp: b.default.extractTimestamp(T.id) })
                 }
             ];
             return (
-                null != w.user &&
+                null != T.user &&
                     e.push({
                         icon: o.tBG,
-                        text: y.intl.formatToPlainString(y.t.qE7oqq, { user: g.ZP.getUserTag(w.user) })
+                        text: v.intl.formatToPlainString(v.t.qE7oqq, { user: g.ZP.getUserTag(T.user) })
                     }),
                 e
             );
-        }, [w.id, w.user]),
-        D = i.useMemo(
+        }, [T.id, T.user]),
+        R = i.useMemo(
             () =>
                 null != E.bot
                     ? (0, r.jsx)(x.Z, {
@@ -149,12 +149,12 @@ function N(e) {
                           applicationIntegration: a
                       })
                     : (0, r.jsx)(o.Zbd, {
-                          className: v.emptyCard,
+                          className: y.emptyCard,
                           editable: !0,
                           children: (0, r.jsx)(o.Text, {
                               color: 'text-muted',
                               variant: 'text-sm/normal',
-                              children: y.intl.string(y.t.pfLnzc)
+                              children: v.intl.string(v.t.pfLnzc)
                           })
                       }),
             [E.bot, a, n]
@@ -164,77 +164,77 @@ function N(e) {
             (0, r.jsx)(f.Z, {
                 name: E.name,
                 imageSrc: null != (t = E.getIconURL(32)) ? t : m.pK['0'],
-                details: R,
+                details: D,
                 isHeader: !0
             }),
             (null == E ? void 0 : E.description) != null
                 ? (0, r.jsx)(u.Z, {
                       userBio: E.description,
-                      className: v.headerDescription
+                      className: y.headerDescription
                   })
                 : null,
-            T
+            P
                 ? (0, r.jsx)(d.Z, {
                       application: E,
                       canNavigate: S,
                       guildId: n.id
                   })
                 : null,
-            (0, r.jsx)(o.$i$, { className: v.headerDivider }),
+            (0, r.jsx)(o.$i$, { className: y.headerDivider }),
             null != E.bot
                 ? (0, r.jsxs)('div', {
-                      className: v.section,
+                      className: y.section,
                       children: [
                           (0, r.jsx)(h.Z, {
                               icon: (0, r.jsx)(o.wGt, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              title: y.intl.string(y.t.AOdOYm)
+                              title: v.intl.string(v.t.AOdOYm)
                           }),
-                          D
+                          R
                       ]
                   })
                 : null,
             (0, r.jsxs)('div', {
-                className: v.section,
+                className: y.section,
                 children: [
                     (0, r.jsx)(h.Z, {
                         icon: (0, r.jsx)(o.tYf, {
                             size: 'md',
                             color: 'currentColor'
                         }),
-                        title: y.intl.string(y.t['t9ZX/P'])
+                        title: v.intl.string(v.t['t9ZX/P'])
                     }),
-                    P.length > 0
+                    w.length > 0
                         ? (0, r.jsx)(j.Z, {
-                              webhooks: P,
+                              webhooks: w,
                               editedWebhook: N,
                               selectableWebhookChannels: c,
                               errors: I,
                               canNavigate: S
                           })
                         : (0, r.jsx)(o.Zbd, {
-                              className: v.emptyCard,
+                              className: y.emptyCard,
                               editable: !0,
                               children: (0, r.jsx)(o.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: k ? y.intl.string(y.t.ahPd2d) : y.intl.string(y.t.axqYMj)
+                                  children: k ? v.intl.string(v.t.ahPd2d) : v.intl.string(v.t.axqYMj)
                               })
                           })
                 ]
             }),
-            (0, r.jsx)(o.$i$, { className: v.headerDivider }),
+            (0, r.jsx)(o.$i$, { className: y.headerDivider }),
             (0, r.jsxs)(s.Z, {
-                className: v.section,
+                className: y.section,
                 justify: s.Z.Justify.BETWEEN,
                 align: s.Z.Align.CENTER,
                 children: [
                     (0, r.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: Z ? y.intl.string(y.t.hdneLy) : y.intl.string(y.t.xRCMq6)
+                        children: Z ? v.intl.string(v.t.hdneLy) : v.intl.string(v.t.xRCMq6)
                     }),
                     (0, r.jsx)(s.Z.Child, {
                         grow: 0,
@@ -245,7 +245,7 @@ function N(e) {
                             look: o.zxk.Looks.FILLED,
                             disabled: !Z,
                             onClick: A,
-                            children: y.intl.string(y.t.ebGf4u)
+                            children: v.intl.string(v.t.ebGf4u)
                         })
                     })
                 ]

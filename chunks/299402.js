@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -23,36 +23,36 @@ function E(e) {
         [h, A] = i.useState(null),
         [x, v] = i.useState(null),
         [w, U] = i.useState(!1);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         b(n);
     }, [b, n]),
         i.useEffect(() => {
             O !== g && S(O);
-        }, [S, O, g]);
+        }, [S, O, g]));
     let y = i.useCallback((e) => {
-            b(I._m.CREATION_INTENT),
+            (b(I._m.CREATION_INTENT),
                 A(e),
                 u.default.track(N.rMx.GUILD_TEMPLATE_SELECTED, {
                     template_name: e.id,
                     template_code: e.code
-                });
+                }));
         }, []),
         G = i.useCallback((e) => {
-            U(e === I.lr.COMMUNITY), b(I._m.CUSTOMIZE_GUILD);
+            (U(e === I.lr.COMMUNITY), b(I._m.CUSTOMIZE_GUILD));
         }, []),
         j = i.useCallback(() => b(I._m.JOIN_GUILD), [b]),
         P = i.useCallback(() => {
             if (O === I._m.CUSTOMIZE_GUILD) return void b(I._m.CREATION_INTENT);
-            b(I._m.GUILD_TEMPLATES), A(null);
+            (b(I._m.GUILD_TEMPLATES), A(null));
         }, [O]),
         M = i.useCallback(
             (e) => {
-                v(e), l(e);
+                (v(e), l(e));
             },
             [l, v]
         ),
         k = i.useCallback(() => {
-            o()(null != x, 'handleSuccess called before onGuildCreated'), l(x);
+            (o()(null != x, 'handleSuccess called before onGuildCreated'), l(x));
         }, [l, x]),
         R = { impression_group: a.ImpressionGroups.GUILD_ADD_FLOW },
         Z = (0, s.dQu)(s.TVs.modules.modal.WIDTH_SMALL);

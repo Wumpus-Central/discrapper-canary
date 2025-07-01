@@ -12,23 +12,23 @@ var i = n(120356),
     p = n(723774),
     m = n(144140),
     f = n(91159),
-    h = n(576799),
-    g = n(488131),
-    _ = n(981631),
+    g = n(576799),
+    _ = n(488131),
+    h = n(981631),
     b = n(388032),
-    x = n(955344);
+    E = n(955344);
 function y(e) {
     let { message: t, compact: n } = e,
         i = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
         ? null
-        : (0, r.jsx)(E, {
+        : (0, r.jsx)(C, {
               channel: i,
               compact: n,
               isSystemMessage: (0, c.Z)(t)
           });
 }
-function E(e) {
+function C(e) {
     let { channel: t, compact: i, isSystemMessage: c } = e,
         u = (0, a.e7)([m.Z], () => m.Z.getCount(t.id)),
         d = (function (e) {
@@ -45,19 +45,19 @@ function E(e) {
                           children: [
                               (0, r.jsx)('span', { children: b.intl.string(b.t.ZTo4HR) }),
                               (0, r.jsx)('span', {
-                                  className: x.timestamp,
+                                  className: E.timestamp,
                                   children: (0, f.Ye)(l)
                               })
                           ]
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(h.Z, {
+                              (0, r.jsx)(g.Z, {
                                   message: n,
                                   channel: e
                               }),
                               (0, r.jsx)('span', {
-                                  className: x.timestamp,
+                                  className: E.timestamp,
                                   children: (0, f.Ye)(l)
                               })
                           ]
@@ -67,20 +67,20 @@ function E(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: l()(x.spine, {
-                    [x.cozy]: !i,
-                    [x.systemMessageSpine]: c
+                className: l()(E.spine, {
+                    [E.cozy]: !i,
+                    [E.systemMessageSpine]: c
                 })
             }),
             (0, r.jsx)(o.P3F, {
                 onClick: function (e) {
-                    e.stopPropagation(), (0, g.ok)(t, e.shiftKey);
+                    (e.stopPropagation(), (0, _.ok)(t, e.shiftKey));
                 },
                 onKeyDown: function (e) {
                     e.stopPropagation();
                     let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         r = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                    (e.which === _.yXg.SPACE || e.which === _.yXg.ENTER) && (e.preventDefault(), (n || r) && (0, g.ok)(t, r));
+                    (e.which === h.yXg.SPACE || e.which === h.yXg.ENTER) && (e.preventDefault(), (n || r) && (0, _.ok)(t, r));
                 },
                 onContextMenu: function (e) {
                     (0, s.jW)(e, async () => {
@@ -92,7 +92,7 @@ function E(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -100,7 +100,7 @@ function E(e) {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -108,8 +108,8 @@ function E(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({ channel: t }, n)
@@ -117,19 +117,19 @@ function E(e) {
                     });
                 },
                 'aria-roledescription': b.intl.string(b.t['8ipxiY']),
-                className: l()(x.container, { [x.systemMessageContainer]: c }),
+                className: l()(E.container, { [E.systemMessageContainer]: c }),
                 children: (0, r.jsxs)(o.nuw, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: x.topLine,
+                            className: E.topLine,
                             children: [
                                 (0, r.jsx)(o.nn4, { children: b.intl.string(b.t['7Xm5QE']) }),
                                 (0, r.jsx)('span', {
-                                    className: x.name,
+                                    className: E.name,
                                     children: t.name
                                 }),
                                 (0, r.jsx)('span', {
-                                    className: x.cta,
+                                    className: E.cta,
                                     'aria-hidden': !y,
                                     children: (0, p.WE)(u, t.id)
                                 })
@@ -140,7 +140,7 @@ function E(e) {
                             'aria-hidden': !0,
                             lineClamp: 1,
                             color: 'header-secondary',
-                            className: x.bottomLine,
+                            className: E.bottomLine,
                             children: d
                         })
                     ]

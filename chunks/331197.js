@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -21,8 +21,8 @@ var r = n(255367),
     v = n(127379),
     j = n(388032);
 function O(e) {
-    let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: I } = e,
-        { parentAnalyticsLocation: S } = (0, u.ZP)(),
+    let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
+        { parentAnalyticsLocation: I } = (0, u.ZP)(),
         {
             Component: P,
             play: Z,
@@ -32,10 +32,10 @@ function O(e) {
         { mute: w, suppress: R } = (0, _.Z)(t),
         k = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
         M = w || R || k,
-        D = (0, m.sR)({ isSoundboardButtonDisabled: M }),
-        [L, U] = (0, h.cv)(D),
+        L = (0, m.sR)({ isSoundboardButtonDisabled: M }),
+        [D, U] = (0, h.cv)(L),
         { analyticsLocations: B } = (0, u.ZP)(),
-        { isHovered: F, setIsHovered: G, onMouseEnter: H, onMouseLeave: V } = (0, f.Z)(200, 300);
+        { isHovered: F, setIsHovered: H, onMouseEnter: G, onMouseLeave: V } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -48,7 +48,7 @@ function O(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -56,7 +56,7 @@ function O(e) {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -64,8 +64,8 @@ function O(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })(
@@ -75,7 +75,7 @@ function O(e) {
                             },
                             t
                         )),
-                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', S) }),
+                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', I) }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -94,7 +94,7 @@ function O(e) {
             });
     }
     function W() {
-        (0, d.v)(S, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == I || I(void 0), V()) : (null != E ? (Z(), H()) : Z(), null == I || I(v.D.SOUNDBOARD));
+        ((0, d.v)(I, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == S || S(void 0), V()) : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD)));
     }
     let Y = i.useRef(null);
     return (0, r.jsx)(s.y, {
@@ -106,7 +106,7 @@ function O(e) {
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            G(!1), null == I || I(void 0);
+            (H(!1), null == S || S(void 0));
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -114,14 +114,14 @@ function O(e) {
                 ? null
                 : (0, r.jsx)(C.Z, {
                       children: (0, r.jsx)('div', {
-                          onMouseEnter: H,
+                          onMouseEnter: G,
                           onMouseLeave: V,
                           children: (0, r.jsx)(b.Z, {
                               guildId: A,
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  L === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  D === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, r.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U
@@ -142,7 +142,7 @@ function O(e) {
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    H(), N();
+                    (G(), N());
                 },
                 onMouseLeave: () => {
                     null == E && (V(), T());

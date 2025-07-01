@@ -53,11 +53,11 @@ function E(e, t, n, E) {
                   })
                 : null,
         onNotificationShow: () => {
-            E && (0, c.GN)(u.Ay, u.yk), j();
+            (E && (0, c.GN)(u.Ay, u.yk), j());
         },
         onNotificationClick: () => {
             let n = (0, f.getPID)();
-            (0, o.In)(
+            ((0, o.In)(
                 e.id,
                 {
                     section: b.jXE.OVERLAY,
@@ -68,7 +68,7 @@ function E(e, t, n, E) {
                 !0,
                 t.id
             ),
-                h.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(b.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus());
+                h.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(b.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus()));
         },
         onDismissClick: () => {
             C('dismiss');

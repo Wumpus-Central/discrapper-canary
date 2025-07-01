@@ -33,12 +33,12 @@ let C = ['#ffb84b', '#ffe361', '#f0f0f0'],
                             B,
                             t = {},
                             f = Object.keys(A);
-                        for (B = 0; B < f.length; B++) (g = f[B]), v.indexOf(g) >= 0 || (t[g] = A[g]);
+                        for (B = 0; B < f.length; B++) ((g = f[B]), v.indexOf(g) >= 0 || (t[g] = A[g]));
                         return t;
                     })(A, v);
                 if (Object.getOwnPropertySymbols) {
                     var f = Object.getOwnPropertySymbols(A);
-                    for (B = 0; B < f.length; B++) (g = f[B]), !(v.indexOf(g) >= 0) && Object.prototype.propertyIsEnumerable.call(A, g) && (t[g] = A[g]);
+                    for (B = 0; B < f.length; B++) ((g = f[B]), !(v.indexOf(g) >= 0) && Object.prototype.propertyIsEnumerable.call(A, g) && (t[g] = A[g]));
                 }
                 return t;
             })(A, ['width', 'height', 'primaryTintColor']);
@@ -54,7 +54,7 @@ let C = ['#ffb84b', '#ffe361', '#f0f0f0'],
                 for (var v = 1; v < arguments.length; v++) {
                     var g = null != arguments[v] ? arguments[v] : {},
                         B = Object.keys(g);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (B = B.concat(
                             Object.getOwnPropertySymbols(g).filter(function (A) {
                                 return Object.getOwnPropertyDescriptor(g, A).enumerable;
@@ -62,7 +62,7 @@ let C = ['#ffb84b', '#ffe361', '#f0f0f0'],
                         )),
                         B.forEach(function (v) {
                             var B;
-                            (B = g[v]),
+                            ((B = g[v]),
                                 v in A
                                     ? Object.defineProperty(A, v, {
                                           value: B,
@@ -70,8 +70,8 @@ let C = ['#ffb84b', '#ffe361', '#f0f0f0'],
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (A[v] = B);
-                        });
+                                    : (A[v] = B));
+                        }));
                 }
                 return A;
             })({}, (0, t.Z)(n))),

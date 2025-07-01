@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(539854), n(35282);
+(n.d(t, { Z: () => M }), n(388685), n(539854), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -44,7 +44,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -52,7 +52,7 @@ function D(e) {
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -60,11 +60,11 @@ function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -85,18 +85,18 @@ let k = function () {
 };
 class M extends i.Component {
     componentDidMount() {
-        this.props.focused && requestAnimationFrame(() => this.focus()), document.addEventListener('selectionchange', this.handleSelectionChange), window.addEventListener('beforeunload', this.handleBeforeUnload);
+        (this.props.focused && requestAnimationFrame(() => this.focus()), document.addEventListener('selectionchange', this.handleSelectionChange), window.addEventListener('beforeunload', this.handleBeforeUnload));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, N.sk)(this.props.richValue, { mode: 'plain' })), null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e));
+            ((e = this.props.useSlate ? this.props.textValue : (0, N.sk)(this.props.richValue, { mode: 'plain' })), null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e)));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
         var e, t;
-        this.saveCurrentText(), null == (e = (t = this)._unsubscribe) || e.call(t), window.removeEventListener('beforeunload', this.handleBeforeUnload), document.removeEventListener('selectionchange', this.handleSelectionChange), (this._focusBlurQueue = null), (this._unsubscribe = null);
+        (this.saveCurrentText(), null == (e = (t = this)._unsubscribe) || e.call(t), window.removeEventListener('beforeunload', this.handleBeforeUnload), document.removeEventListener('selectionchange', this.handleSelectionChange), (this._focusBlurQueue = null), (this._unsubscribe = null));
     }
     blur() {
         let e = this.ref.current;
@@ -132,11 +132,11 @@ class M extends i.Component {
     }
     clearValue() {
         let { channel: e, type: t } = this.props;
-        this.setState({
+        (this.setState({
             focused: !0,
             submitting: !1
         }),
-            _.Z.saveDraft(e.id, '', t.drafts.type);
+            _.Z.saveDraft(e.id, '', t.drafts.type));
     }
     getCurrentWord() {
         var e;
@@ -265,7 +265,7 @@ class M extends i.Component {
     }
     constructor(e) {
         var t;
-        super(e),
+        (super(e),
             (t = this),
             w(this, 'ref', i.createRef()),
             w(this, '_focusBlurQueue', Promise.resolve()),
@@ -327,12 +327,12 @@ class M extends i.Component {
             w(this, 'handleFocus', (e) => {
                 let { onFocus: t } = this.props,
                     { focused: n } = this.state;
-                null == t || t(e), n || this.setState({ focused: !0 });
+                (null == t || t(e), n || this.setState({ focused: !0 }));
             }),
             w(this, 'handleBlur', (e) => {
                 let { onBlur: t } = this.props,
                     { focused: n } = this.state;
-                null == t || t(e), n && this.setState({ focused: !1 });
+                (null == t || t(e), n && this.setState({ focused: !1 }));
             }),
             w(this, 'handlePaste', (e) => {
                 let { channel: t, canPasteFiles: n, uploadPromptCharacterCount: r, promptToUpload: i, maxCharacterCount: a, type: o } = this.props;
@@ -402,7 +402,7 @@ class M extends i.Component {
                 focused: !1,
                 submitting: !1,
                 popup: T.p8.getState()
-            });
+            }));
     }
 }
 function j(e, t) {

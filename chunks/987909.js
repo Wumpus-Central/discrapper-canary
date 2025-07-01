@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -11,38 +11,38 @@ var r = n(255367),
     p = n(496675),
     m = n(594174),
     f = n(626135),
-    h = n(709054),
-    g = n(838440),
-    _ = n(981631),
+    g = n(709054),
+    _ = n(838440),
+    h = n(981631),
     b = n(18485);
-function x(e) {
+function E(e) {
     let { assets: t, currentUser: n, message: r } = e,
-        i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
+        i = (g.default.extractTimestamp(n.id) + g.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
 function y(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: p, eventProperties: m } = e,
-        [h, _] = i.useState(!1),
+        [g, h] = i.useState(!1),
         y = i.useMemo(
             () =>
-                x({
+                E({
                     assets: d,
                     currentUser: t,
                     message: l
                 }),
             [d, t, l]
         ),
-        E = i.useMemo(
+        C = i.useMemo(
             () =>
-                x({
+                E({
                     assets: u,
                     currentUser: t,
                     message: l
                 }),
             [u, t, l]
         ),
-        v = i.useCallback(async () => {
-            let { valid: e } = await (0, g.v)({
+        x = i.useCallback(async () => {
+            let { valid: e } = await (0, _.v)({
                 type: s.Ie.FORM,
                 content: '',
                 channel: n
@@ -75,7 +75,7 @@ function y(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -83,7 +83,7 @@ function y(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -91,8 +91,8 @@ function y(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, l)),
@@ -121,21 +121,21 @@ function y(e) {
         className: b.CTAMessageButtonOuter,
         innerClassName: b.CTAMessageButton,
         color: a.Ttl.PRIMARY,
-        onMouseEnter: () => _(!0),
-        onMouseLeave: () => _(!1),
-        onClick: v,
+        onMouseEnter: () => h(!0),
+        onMouseLeave: () => h(!1),
+        onClick: x,
         children: [
             (0, r.jsx)(c.Z, {
                 className: b.CTAMessageSticker,
-                isInteracting: h,
+                isInteracting: g,
                 sticker: y,
                 size: 28
             }),
-            E
+            C
         ]
     });
 }
-function E(e) {
+function C(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {
@@ -145,7 +145,7 @@ function E(e) {
                 let i = t.guild_id;
                 if (null == r || null == i) return !1;
                 let l = (0, u.xl)(t),
-                    a = p.Z.can(_.Plq.SEND_MESSAGES, t),
+                    a = p.Z.can(h.Plq.SEND_MESSAGES, t),
                     o = null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending,
                     s = n.author.bot;
                 return a && !l && !o && !s;

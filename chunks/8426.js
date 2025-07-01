@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Hr: () => b,
     Hz: () => C,
     To: () => E,
@@ -16,7 +16,7 @@ n.d(t, {
     vR: () => h
 }),
     n(361932),
-    n(187205);
+    n(187205));
 var r = n(392711),
     i = n.n(r),
     l = n(544891),
@@ -174,7 +174,7 @@ function E(e, t) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
                           r = Object.keys(n);
-                      'function' == typeof Object.getOwnPropertySymbols &&
+                      ('function' == typeof Object.getOwnPropertySymbols &&
                           (r = r.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -182,7 +182,7 @@ function E(e, t) {
                           )),
                           r.forEach(function (t) {
                               var r;
-                              (r = n[t]),
+                              ((r = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
                                             value: r,
@@ -190,8 +190,8 @@ function E(e, t) {
                                             configurable: !0,
                                             writable: !0
                                         })
-                                      : (e[t] = r);
-                          });
+                                      : (e[t] = r));
+                          }));
                   }
                   return e;
               })({}, i)),
@@ -241,11 +241,11 @@ async function S(e, t) {
         );
     } catch (t) {
         let e = i().flatMap(null != (b = t.body) ? b : {}, (e) => e);
-        s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_FAIL' }),
+        (s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_FAIL' }),
             a.Z.show({
                 title: p.intl.string(p.t['6nCZyM']),
                 body: p.intl.format(p.t.dYCPDw, { errorMessage: e.join(', ') })
-            });
+            }));
     }
 }
 function T(e, t) {

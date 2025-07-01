@@ -7,15 +7,15 @@ var r = n(98405),
     c = n(967333),
     d = Array,
     u = i(a('Array', 'sort'));
-r(
+(r(
     {
         target: 'Array',
         proto: !0
     },
     {
         toSorted: function (e) {
-            return void 0 !== e && l(e), u(o(d, s(this)), e);
+            return (void 0 !== e && l(e), u(o(d, s(this)), e));
         }
     }
 ),
-    c('toSorted');
+    c('toSorted'));

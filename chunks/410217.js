@@ -1,4 +1,4 @@
-t.r(e), t.d(e, { default: () => l });
+(t.r(e), t.d(e, { default: () => l }));
 var i = t(998985),
     n = t(717982),
     u = t(127012),

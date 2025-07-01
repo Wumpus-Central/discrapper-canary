@@ -14,7 +14,7 @@ function u(e) {
         label: c.intl.string(c.t.ONG3Y2),
         action: () => {
             var n;
-            return (n = { mute_scheduled_events: !t }), void s.Z.updateGuildNotificationSettings(e, n, a.UE.mutedEvents(n.mute_scheduled_events));
+            return ((n = { mute_scheduled_events: !t }), void s.Z.updateGuildNotificationSettings(e, n, a.UE.mutedEvents(n.mute_scheduled_events)));
         },
         checked: t
     });

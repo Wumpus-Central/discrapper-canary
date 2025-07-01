@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => S });
+(n.r(t), n.d(t, { default: () => S }));
 var r = n(393655),
     i = n(465735),
     a = n(528734),
@@ -55,10 +55,10 @@ function m(e, t) {
         },
         n: function () {
             var e = i.next();
-            return (o = e.done), e;
+            return ((o = e.done), e);
         },
         e: function (e) {
-            (s = !0), (a = e);
+            ((s = !0), (a = e));
         },
         f: function () {
             try {
@@ -139,7 +139,7 @@ function S(e, t, n, g) {
     try {
         var $ = function () {
             var t = K.value;
-            !(null != g && g.useAdditionalWeekYearTokens) && (0, c.Do)(t) && (0, c.qp)(t, O, e), !(null != g && g.useAdditionalDayOfYearTokens) && (0, c.Iu)(t) && (0, c.qp)(t, O, e);
+            (!(null != g && g.useAdditionalWeekYearTokens) && (0, c.Do)(t) && (0, c.qp)(t, O, e), !(null != g && g.useAdditionalDayOfYearTokens) && (0, c.Iu)(t) && (0, c.qp)(t, O, e));
             var n = t[0],
                 r = _.f[n];
             if (r) {
@@ -156,7 +156,7 @@ function S(e, t, n, g) {
                 });
                 var o = r.run(E, t, S.match, z);
                 if (!o) return { v: new Date(NaN) };
-                q.push(o.setter), (E = o.rest);
+                (q.push(o.setter), (E = o.rest));
             } else {
                 if (n.match(T)) throw RangeError('Format string contains an unescaped latin alphabet character `' + n + '`');
                 if (("''" === t ? (t = "'") : "'" === n && (t = A(t)), 0 !== E.indexOf(t))) return { v: new Date(NaN) };

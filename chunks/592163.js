@@ -20,19 +20,19 @@ function f(t) {
                         r,
                         o = {},
                         c = Object.keys(t);
-                    for (r = 0; r < c.length; r++) (n = c[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                    for (r = 0; r < c.length; r++) ((n = c[r]), e.indexOf(n) >= 0 || (o[n] = t[n]));
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < c.length; r++) (n = c[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
+                for (r = 0; r < c.length; r++) ((n = c[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]));
             }
             return o;
         })(t, ['onClose', 'analyticsSource', 'onLearnMore']);
     let p = a.Si.TIER_2,
         d = l.intl.format(l.t.hDMlqK, {
             onLearnMore: function () {
-                null == f || f(), e(), (0, o.z)();
+                (null == f || f(), e(), (0, o.z)());
             }
         });
     return (0, r.jsx)(
@@ -41,7 +41,7 @@ function f(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -49,7 +49,7 @@ function f(t) {
                     )),
                     r.forEach(function (e) {
                         var r;
-                        (r = n[e]),
+                        ((r = n[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: r,
@@ -57,8 +57,8 @@ function f(t) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (t[e] = r);
-                    });
+                                : (t[e] = r));
+                    }));
             }
             return t;
         })(

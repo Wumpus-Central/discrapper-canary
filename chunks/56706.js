@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => x }), n(388685));
 var a = n(255367),
     r = n(73800),
     l = n(481060),
@@ -9,7 +9,7 @@ var a = n(255367),
     d = n(981631),
     u = n(616257),
     m = n(493733);
-function p() {
+function x() {
     let [e, t] = r.useState(30),
         n = () => {
             i.Z.dispatch({
@@ -17,7 +17,7 @@ function p() {
                 timeInSeconds: e
             });
         },
-        p = r.useCallback(() => {
+        x = r.useCallback(() => {
             i.Z.dispatch({
                 type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                 state: s.O.LOADING
@@ -78,7 +78,7 @@ function p() {
                         }),
                         (0, a.jsx)(l.zxk, {
                             size: l.zxk.Sizes.SMALL,
-                            onClick: p,
+                            onClick: x,
                             children: 'Pretend'
                         })
                     ]

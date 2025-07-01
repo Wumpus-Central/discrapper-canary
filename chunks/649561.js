@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(358797);
+(n.d(t, { Z: () => D }), n(388685), n(358797));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -56,7 +56,7 @@ function w() {
 }
 class N extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, P)), p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: x.n0.OverlayCrashed });
+        ((this.notificationTimer = setTimeout(this.hideNotification, P)), p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: x.n0.OverlayCrashed }));
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -114,7 +114,7 @@ class N extends r.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             I(this, 'state', {
                 showTrace: !1,
                 busy: !1
@@ -124,10 +124,10 @@ class N extends r.PureComponent {
             I(this, 'hideNotification', () => {
                 w();
                 let { notificationTimer: e } = this;
-                null != e && clearTimeout(e), (this.notificationTimer = null);
+                (null != e && clearTimeout(e), (this.notificationTimer = null));
             }),
             I(this, 'handleReload', (e) => {
-                this.setState({ busy: !0 }),
+                (this.setState({ busy: !0 }),
                     w(),
                     p.Z.track(
                         C.rMx.NOTIFICATION_CLICKED,
@@ -138,13 +138,13 @@ class N extends r.PureComponent {
                         !0
                     ),
                     e.stopPropagation(),
-                    setTimeout(() => location.reload(!0), 200);
+                    setTimeout(() => location.reload(!0), 200));
             }),
             I(this, 'handleNotificationClick', (e) => {
                 e.stopPropagation();
                 let { notificationTimer: t } = this;
-                null != t && clearTimeout(t), e.shiftKey && this.setState({ showTrace: !0 });
-            });
+                (null != t && clearTimeout(t), e.shiftKey && this.setState({ showTrace: !0 }));
+            }));
     }
 }
 let T = a().throttle(
@@ -169,7 +169,7 @@ class k extends r.PureComponent {
         });
         let i = (0, b.getPID)(),
             r = (0, b.getRPCAuthToken)();
-        (0, f.lW)({
+        ((0, f.lW)({
             type: C.BmY.DISPATCH,
             pid: (0, b.getPID)(),
             token: r,
@@ -186,9 +186,9 @@ class k extends r.PureComponent {
                 }
             ]
         }),
-            setImmediate(() => window.addEventListener('click', w));
+            setImmediate(() => window.addEventListener('click', w)));
         let o = _.Z.captureCrash(e, { extra: t });
-        p.Z.track(C.rMx.APP_CRASHED, {
+        (p.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -196,7 +196,7 @@ class k extends r.PureComponent {
             sentry_issue_id: o,
             error_level: 'fatal'
         }),
-            T();
+            T());
     }
     render() {
         let { children: e, className: t } = this.props,
@@ -212,11 +212,11 @@ class k extends r.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             I(this, 'state', {
                 error: null,
                 info: null
-            });
+            }));
     }
 }
 let D = k;

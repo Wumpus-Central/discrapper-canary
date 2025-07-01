@@ -13,7 +13,7 @@ function a(e, t) {
               id: 'nav-server-settings',
               label: u.intl.string(u.t['154/bG']),
               action: () => {
-                  (0, i.xf)(), c.Z.open(e, l.pNK.MODERATION);
+                  ((0, i.xf)(), c.Z.open(e, l.pNK.MODERATION));
               }
           });
 }

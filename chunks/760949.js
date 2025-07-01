@@ -1,4 +1,4 @@
-n.d(e, { default: () => p }), n(388685);
+(n.d(e, { default: () => p }), n(388685));
 var a = n(255367),
     i = n(73800),
     r = n(120356),
@@ -18,9 +18,9 @@ function p(t) {
         [r, p] = i.useState(!1),
         [k, C] = i.useState(null),
         f = async () => {
-            C(null), p(!0);
+            (C(null), p(!0));
             try {
-                await u.Ex.updateSetting(!1), (0, c.uL)(x.Z5c.FRIENDS), (0, o.xf)(), n();
+                (await u.Ex.updateSetting(!1), (0, c.uL)(x.Z5c.FRIENDS), (0, o.xf)(), n());
             } catch (t) {
                 C(new d.Z(t).getAnyErrorMessage());
             } finally {
@@ -28,7 +28,7 @@ function p(t) {
             }
         },
         j = () => {
-            (0, c.uL)(x.Z5c.SETTINGS('family-center')), n();
+            ((0, c.uL)(x.Z5c.SETTINGS('family-center')), n());
         };
     return (0, a.jsxs)(l.Y0X, {
         className: b.root,

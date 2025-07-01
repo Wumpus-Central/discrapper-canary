@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Yy: () => O,
     ZP: () => C,
     ai: () => N
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(47770),
@@ -42,7 +42,7 @@ let b = 100,
     S = 120 * _.Z.Millis.SECOND,
     A = -1 !== (0, f.hY)();
 var N = (function (e) {
-    return (e.UserSSRCUpdate = 'user-ssrc-update'), (e.Update = 'update'), e;
+    return ((e.UserSSRCUpdate = 'user-ssrc-update'), (e.Update = 'update'), e);
 })({});
 class C extends a.Z {
     getWantsLevel() {
@@ -57,7 +57,7 @@ class C extends a.Z {
         return 1 === this.otherUsers.size;
     }
     updateCallUserIds(e) {
-        (this.otherUsers = new Set(e)), this.otherUsers.delete(d.default.getId()), this.update();
+        ((this.otherUsers = new Set(e)), this.otherUsers.delete(d.default.getId()), this.update());
     }
     shouldReceiveFromUser(e) {
         var t, n;
@@ -70,10 +70,10 @@ class C extends a.Z {
     setConnection(e) {
         var t, n, r, i, a, s;
         let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        null == (t = this.connection) || t.removeListener(o.Sh.LocalVideoDisabled, this.handleLocalVideoDisabled), null == (n = this.connection) || n.removeListener(o.Sh.LocalMute, this.handleLocalMute), null == (r = this.connection) || r.removeListener(o.Sh.ActiveSinksChange, this.delayedUpdate), (this.connection = e), null == (i = this.connection) || i.addListener(o.Sh.LocalVideoDisabled, this.handleLocalVideoDisabled), null == (a = this.connection) || a.addListener(o.Sh.LocalMute, this.handleLocalMute), null == (s = this.connection) || s.addListener(o.Sh.ActiveSinksChange, this.delayedUpdate), l && this.update();
+        (null == (t = this.connection) || t.removeListener(o.Sh.LocalVideoDisabled, this.handleLocalVideoDisabled), null == (n = this.connection) || n.removeListener(o.Sh.LocalMute, this.handleLocalMute), null == (r = this.connection) || r.removeListener(o.Sh.ActiveSinksChange, this.delayedUpdate), (this.connection = e), null == (i = this.connection) || i.addListener(o.Sh.LocalVideoDisabled, this.handleLocalVideoDisabled), null == (a = this.connection) || a.addListener(o.Sh.LocalMute, this.handleLocalMute), null == (s = this.connection) || s.addListener(o.Sh.ActiveSinksChange, this.delayedUpdate), l && this.update());
     }
     setAudioSSRC(e, t) {
-        return t > 0 ? (this.audioSsrcs[e] = t) : delete this.audioSsrcs[e], this.update();
+        return (t > 0 ? (this.audioSsrcs[e] = t) : delete this.audioSsrcs[e], this.update());
     }
     setVideoSSRCs(e, t) {
         let n = t
@@ -88,32 +88,32 @@ class C extends a.Z {
                     ssrc: e.ssrc
                 };
             });
-        if (n.length > 0) (this.videoSsrcs[e] = n), this.participants.add(e);
+        if (n.length > 0) ((this.videoSsrcs[e] = n), this.participants.add(e));
         else {
             if (void 0 !== this.videoSsrcs[e]) for (let { ssrc: t } of this.videoSsrcs[e]) delete this.framesReceived[t];
-            delete this.remoteVideoSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), this.emit('user-ssrc-update', e, this.audioSsrcs[e], []);
+            (delete this.remoteVideoSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), this.emit('user-ssrc-update', e, this.audioSsrcs[e], []));
         }
         return this.update(Array.from(this.participants));
     }
     setFirstFrameReceived(e) {
-        return (this.framesReceived[e] = !0), this.update();
+        return ((this.framesReceived[e] = !0), this.update());
     }
     setStreamId(e, t) {
-        return null != t ? (this.streamIds[e] = t) : (e in this.streamIds && delete this.streamPixelCounts[this.streamIds[e]], delete this.streamIds[e]), this.update();
+        return (null != t ? (this.streamIds[e] = t) : (e in this.streamIds && delete this.streamPixelCounts[this.streamIds[e]], delete this.streamIds[e]), this.update());
     }
     destroyUser(e) {
-        return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamPixelCounts[this.streamIds[e]], delete this.streamIds[e], this.update(Array.from(this.participants));
+        return (delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamPixelCounts[this.streamIds[e]], delete this.streamIds[e], this.update(Array.from(this.participants)));
     }
     reset() {
-        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.streamPixelCounts = {}), (this.latestWants = O), h.w.off(h.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
+        (this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.streamPixelCounts = {}), (this.latestWants = O), h.w.off(h.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
     }
     setSelectedParticipant(e) {
         if (e === this.selectedParticipantId) return this.latestWants;
         let t = [];
         if ((null != this.selectedParticipantId && this.selectedParticipantId !== this.userId && t.push(this.selectedParticipantId), null != e))
-            if (this.participants.has(e)) (this.selectedParticipantId = e), t.push(e);
+            if (this.participants.has(e)) ((this.selectedParticipantId = e), t.push(e));
             else {
-                if (this.userId !== e) return console.warn('Participant not found: '.concat(e)), this.latestWants;
+                if (this.userId !== e) return (console.warn('Participant not found: '.concat(e)), this.latestWants);
                 this.selectedParticipantId = e;
             }
         else this.selectedParticipantId = null;
@@ -131,10 +131,10 @@ class C extends a.Z {
         return this.offscreenDisabledUsers;
     }
     setSimulcastDebugOverride(e, t) {
-        this.simulcastDebugOverrides.set(e, t), this.update();
+        (this.simulcastDebugOverrides.set(e, t), this.update());
     }
     setVideoSize(e, t) {
-        t > 0 ? (this.streamPixelCounts[e] = t) : delete this.streamPixelCounts[e], this.delayedUpdate();
+        (t > 0 ? (this.streamPixelCounts[e] = t) : delete this.streamPixelCounts[e], this.delayedUpdate());
     }
     getVideoParticipantCount() {
         let e = 0;
@@ -152,7 +152,7 @@ class C extends a.Z {
     }
     constructor(e, t, n, r = new s.x()) {
         var a;
-        super(),
+        (super(),
             (a = this),
             E(this, 'userId', void 0),
             E(this, 'isStageChannel', void 0),
@@ -215,7 +215,7 @@ class C extends a.Z {
                         o = t - this.offscreenUsers[a];
                     o > r && ((r = o), (i = e));
                 }
-                (this.offscreenDisabledUsers[n[i]] = !0), n.splice(i, 1);
+                ((this.offscreenDisabledUsers[n[i]] = !0), n.splice(i, 1));
             }),
             (this.updateOffscreenUsers = () => {
                 var e, t;
@@ -268,6 +268,6 @@ class C extends a.Z {
             }),
             (this.delayedCall = new c.sW(v, this.update)),
             (this.offscreenTimeout = new c.V7()),
-            h.w.on(h.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
+            h.w.on(h.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
     }
 }

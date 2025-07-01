@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     L: () => P,
     Z: () => N
 }),
@@ -9,7 +9,7 @@ n.d(t, {
     n(35282),
     n(290780),
     n(583741),
-    n(125548);
+    n(125548));
 var r = n(373793),
     i = n(911969),
     a = n(555573),
@@ -36,7 +36,7 @@ let T = new Set(['applicationCommandOption']),
     A = new Set(['line', 'applicationCommand']);
 function N(e, t, n, r) {
     let { insertData: i, isInline: d, isVoid: f, onChange: _, deleteBackward: p, deleteForward: h, deleteFragment: m } = e;
-    (e.insertData = (n) => {
+    ((e.insertData = (n) => {
         if (null != t && y.bN.isEditorEmpty(e) && n.types.includes('application/x-discord-interaction-data')) {
             let e = JSON.parse(n.getData('application/x-discord-interaction-data')),
                 { commandKey: i, interactionOptions: d } = (0, u.XA)(e),
@@ -83,7 +83,7 @@ function N(e, t, n, r) {
         }),
         (e.deleteFragment = (t) => {
             k(e, () => m(t));
-        });
+        }));
     let E = null,
         b = null,
         O = null,
@@ -112,9 +112,9 @@ function N(e, t, n, r) {
                     });
                     if (null != o) {
                         let t = g.T.currentEntry(e);
-                        null != t && (t.commandId = o.commandId), (v = o.optionValues);
+                        (null != t && (t.commandId = o.commandId), (v = o.optionValues));
                     } else v = null;
-                    (E = y.bN.richValue(e)), (b = e.selection), (O = i.activeCommand), (I = a);
+                    ((E = y.bN.richValue(e)), (b = e.selection), (O = i.activeCommand), (I = a));
                 }
             }
             _();
@@ -127,11 +127,11 @@ function C(e) {
     let { editor: i, storeCommandState: o, channel: s, canUseCommands: l, canOnlyUseTextCommands: u, commandChanged: d, previousOptionValues: f } = e,
         { command: _, commandText: p } = x(i),
         h = o.activeCommand;
-    if ((!l && (null == h || null == (t = h.integration_types) ? void 0 : t.includes(r.Y.GUILD_INSTALL))) || (u && (null == h ? void 0 : h.inputType) !== c.iw.BUILT_IN_TEXT && (null == h ? void 0 : h.inputType) !== c.iw.BUILT_IN_INTEGRATION)) return null != _ && P(i, s.id, h, !0), null;
+    if ((!l && (null == h || null == (t = h.integration_types) ? void 0 : t.includes(r.Y.GUILD_INSTALL))) || (u && (null == h ? void 0 : h.inputType) !== c.iw.BUILT_IN_TEXT && (null == h ? void 0 : h.inputType) !== c.iw.BUILT_IN_INTEGRATION)) return (null != _ && P(i, s.id, h, !0), null);
     if (null != _) {
-        if (y.bN.isEditorEmpty(i) || null == h) return P(i, s.id, h, !1), null;
+        if (y.bN.isEditorEmpty(i) || null == h) return (P(i, s.id, h, !1), null);
         let e = ''.concat(I.GI).concat(_.displayName);
-        if (null == p || !p.startsWith(e) || (0 === m.cu(i).length && (p.length < e.length + 1 || ' ' !== p[e.length]))) return P(i, s.id, h, !0), null;
+        if (null == p || !p.startsWith(e) || (0 === m.cu(i).length && (p.length < e.length + 1 || ' ' !== p[e.length]))) return (P(i, s.id, h, !0), null);
     } else {
         if (null != h && d) {
             let e = R(i, s, o),
@@ -238,7 +238,7 @@ function R(e, t, n) {
                         optionType: r.type,
                         children: [{ text: i }]
                     };
-                v.push(a), 0 === r.text.length && null == T && (T = a);
+                (v.push(a), 0 === r.text.length && null == T && (T = a));
             }
         for (let r of u.options)
             if (!e.has(r.name) && (r.required || null != c[r.name])) {
@@ -251,10 +251,10 @@ function R(e, t, n) {
                     optionType: r.type,
                     children: [{ text: e }]
                 };
-                v.push(a), 0 === e.length && null == T && (T = a), null == i && (A = a);
+                (v.push(a), 0 === e.length && null == T && (T = a), null == i && (A = a));
             }
     }
-    (l = _.length > 0 ? ''.concat(I.GI).concat(u.displayName, ' ').concat(_.replace(/\r|\n/g, ' ')) : 0 === v.length ? ''.concat(I.GI).concat(u.displayName, ' ') : ''.concat(I.GI).concat(u.displayName)), v.unshift({ text: l });
+    ((l = _.length > 0 ? ''.concat(I.GI).concat(u.displayName, ' ').concat(_.replace(/\r|\n/g, ' ')) : 0 === v.length ? ''.concat(I.GI).concat(u.displayName, ' ') : ''.concat(I.GI).concat(u.displayName)), v.unshift({ text: l }));
     let N = {
         type: 'applicationCommand',
         children: v,
@@ -273,7 +273,7 @@ function R(e, t, n) {
                 });
     });
     let C = null;
-    return null != T ? (b.Q.selectCommandOption(e, T.optionName), (C = T.optionName)) : null != A ? (b.Q.selectCommandOption(e, A.optionName, !1), (C = A.optionName)) : b.Q.resetSelectionToEditorEnd(e), null == A && D(e, u), C;
+    return (null != T ? (b.Q.selectCommandOption(e, T.optionName), (C = T.optionName)) : null != A ? (b.Q.selectCommandOption(e, A.optionName, !1), (C = A.optionName)) : b.Q.resetSelectionToEditorEnd(e), null == A && D(e, u), C);
 }
 function P(e, t, n, r) {
     let [i] = y.bN.blocks(e)[0],

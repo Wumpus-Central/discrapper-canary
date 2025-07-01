@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -114,7 +114,7 @@ function I(e) {
     let u = l.default.getCurrentUser(),
         f = null != u && u.id === i;
     if (o && !f) return !1;
-    (p[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (p[n].firstMessage = c.firstMessage.addReaction(a, f, e.colors, s)) : (p[n].firstMessage = c.firstMessage.removeReaction(a, f, s));
+    ((p[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (p[n].firstMessage = c.firstMessage.addReaction(a, f, e.colors, s)) : (p[n].firstMessage = c.firstMessage.removeReaction(a, f, s)));
 }
 function T(e) {
     let { channelId: t, messageId: n, reactions: r } = e,

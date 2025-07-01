@@ -2,7 +2,7 @@ var n = r(65183).List;
 t.exports = (function () {
     function t(t) {
         var e, r;
-        (r = void 0),
+        ((r = void 0),
             (e = '_decorators') in this
                 ? Object.defineProperty(this, e, {
                       value: r,
@@ -11,7 +11,7 @@ t.exports = (function () {
                       writable: !0
                   })
                 : (this[e] = r),
-            (this._decorators = t.slice());
+            (this._decorators = t.slice()));
     }
     var e = t.prototype;
     return (

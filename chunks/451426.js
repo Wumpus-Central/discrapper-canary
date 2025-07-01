@@ -1,4 +1,4 @@
-t.d(n, { Z: () => p }), t(953529), t(388685);
+(t.d(n, { Z: () => p }), t(953529), t(388685));
 var i = t(255367),
     s = t(73800),
     l = t(442837),
@@ -32,7 +32,7 @@ function p(e) {
         P = s.useCallback(async () => {
             if (null !== j)
                 try {
-                    L(''), await c.uR(j, T, f), null == N || N();
+                    (L(''), await c.uR(j, T, f), null == N || N());
                 } catch (n) {
                     var e;
                     L((0, x.Zs)(null == (e = n.body) ? void 0 : e.code));

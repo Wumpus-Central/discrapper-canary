@@ -37,7 +37,7 @@ let l = (0, a(151122)._I)((t = {}) => {
                                 ) {
                                     if (!t[0]) {
                                         let e = `Assertion failed: ${(0, c.nK)(t.slice(1), ' ') || 'console.assert'}`;
-                                        r.setExtra('arguments', t.slice(1)), (0, E.uT)(e, a);
+                                        (r.setExtra('arguments', t.slice(1)), (0, E.uT)(e, a));
                                     }
                                     return;
                                 }

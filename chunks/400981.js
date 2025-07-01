@@ -38,13 +38,13 @@ function f(e) {
                           }),
                           (0, i.jsx)(r.zxk, {
                               onClick: () => {
-                                  n(),
+                                  (n(),
                                       (0, C.Z)({
                                           product: t,
                                           shouldShowPromotionalExperience: !0,
                                           analyticsLocations: _,
                                           purchaseType: x.o8.PROMOTIONAL
-                                      });
+                                      }));
                               },
                               children: E.collectRewardButtonText()
                           })

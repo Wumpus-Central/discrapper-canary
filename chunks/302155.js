@@ -23,13 +23,13 @@ function f(e, t, n) {
 let _ = !1;
 class p extends s.Z {
     _initialize() {
-        o.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
+        (o.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen());
     }
     _terminate() {
         o.Z.unsubscribe('CONNECTION_OPEN', () => this.handleConnectionOpen());
     }
     constructor({ onSwitchStart: e, onSwitchSuccess: t, onSwitchError: n, onTokenSet: o }) {
-        super(),
+        (super(),
             f(this, 'onSwitchStart', void 0),
             f(this, 'onSwitchSuccess', void 0),
             f(this, 'onSwitchError', void 0),
@@ -45,28 +45,28 @@ class p extends s.Z {
                             let { id: t } = e;
                             return t;
                         });
-                        c.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
+                        (c.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
                             from_user_id: i,
                             linked_user_ids: e
                         }),
-                            null == (n = (o = this).onSwitchSuccess) || n.call(o, p, _);
-                    } else c.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null == (s = (f = this).onSwitchError) || s.call(f, p);
+                            null == (n = (o = this).onSwitchSuccess) || n.call(o, p, _));
+                    } else (c.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null == (s = (f = this).onSwitchError) || s.call(f, p));
                     i = null;
                 }
                 r = p.id;
                 let h = a.getToken();
-                null != h && '' !== h && a.setToken(h, p.id), null == (e = (t = this).onTokenSet) || e.call(t, p);
+                (null != h && '' !== h && a.setToken(h, p.id), null == (e = (t = this).onTokenSet) || e.call(t, p));
             }),
             f(this, 'handleLogout', (e) => {
                 if (e.isSwitchingAccount) {
                     var t, n;
-                    (i = r), null == (t = (n = this).onSwitchStart) || t.call(n), (_ = !!e.goHomeAfterSwitching);
-                } else (_ = !1), a.removeToken(r);
+                    ((i = r), null == (t = (n = this).onSwitchStart) || t.call(n), (_ = !!e.goHomeAfterSwitching));
+                } else ((_ = !1), a.removeToken(r));
                 r = null;
             }),
             (this.onSwitchStart = e),
             (this.onSwitchSuccess = t),
             (this.onSwitchError = n),
-            (this.onTokenSet = o);
+            (this.onTokenSet = o));
     }
 }

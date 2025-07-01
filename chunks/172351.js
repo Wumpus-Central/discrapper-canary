@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -62,7 +62,7 @@ function m(e) {
         );
     if (null == O || 0 === O.length) return null;
     let v = (e) => {
-        null == g || g(),
+        (null == g || g(),
             E({ action: 'PRESS_APP_COMMAND' }),
             l.default.track(
                 d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED,
@@ -74,7 +74,7 @@ function m(e) {
                     },
                     (0, a.JS)(m.id)
                 )
-            );
+            ));
     };
     return (0, r.jsx)(u.Z, {
         heading: f.intl.string(f.t['0hKkS0']),

@@ -14,7 +14,7 @@ n.d(t, {
 });
 var r = n(214627),
     i = (function (e) {
-        return (e.BLACK_SCREEN = 'BLACK_SCREEN'), (e.BLURRY = 'BLURRY'), (e.LAGGING = 'LAGGING'), (e.OUT_OF_SYNC = 'OUT_OF_SYNC'), (e.AUDIO_MISSING = 'AUDIO_MISSING'), (e.AUDIO_POOR = 'AUDIO_POOR'), (e.GAME_ISSUE = 'GAME_ISSUE'), (e.STREAM_STOPPED = 'STREAM_STOPPED'), (e.NO_ISSUE = 'NO_ISSUE'), (e.OTHER = 'OTHER'), (e.VIBES_OFF = 'VIBES_OFF'), e;
+        return ((e.BLACK_SCREEN = 'BLACK_SCREEN'), (e.BLURRY = 'BLURRY'), (e.LAGGING = 'LAGGING'), (e.OUT_OF_SYNC = 'OUT_OF_SYNC'), (e.AUDIO_MISSING = 'AUDIO_MISSING'), (e.AUDIO_POOR = 'AUDIO_POOR'), (e.GAME_ISSUE = 'GAME_ISSUE'), (e.STREAM_STOPPED = 'STREAM_STOPPED'), (e.NO_ISSUE = 'NO_ISSUE'), (e.OTHER = 'OTHER'), (e.VIBES_OFF = 'VIBES_OFF'), e);
     })({});
 let a = '>=19.0.0',
     o = '>=22.0.0',
@@ -26,6 +26,6 @@ let a = '>=19.0.0',
     f = '>=10.0.22000',
     _ = 22000;
 var p = (function (e) {
-    return (e.GUILD = 'guild'), (e.CALL = 'call'), e;
+    return ((e.GUILD = 'guild'), (e.CALL = 'call'), e);
 })({});
 let h = r.T.StreamNotificationsGuildMaxSize;

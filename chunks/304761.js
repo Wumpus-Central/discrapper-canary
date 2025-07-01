@@ -23,7 +23,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -59,7 +59,7 @@ function u(e, t) {
     );
 }
 var d = (function (e) {
-    return (e[(e.NotResolved = 0)] = 'NotResolved'), (e[(e.Resolving = 1)] = 'Resolving'), (e[(e.Resolved = 2)] = 'Resolved'), (e[(e.Invalid = 3)] = 'Invalid'), e;
+    return ((e[(e.NotResolved = 0)] = 'NotResolved'), (e[(e.Resolving = 1)] = 'Resolving'), (e[(e.Resolved = 2)] = 'Resolved'), (e[(e.Invalid = 3)] = 'Invalid'), e);
 })({});
 let f = 0,
     _ = null,
@@ -76,7 +76,7 @@ function h() {
 }
 function m(e) {
     let { overrides: t } = e;
-    (f = 2), (_ = t);
+    ((f = 2), (_ = t));
 }
 function g(e) {
     if (e in p) return;
@@ -90,7 +90,7 @@ function g(e) {
         });
         return;
     }
-    (p = u(l({}, p), {
+    ((p = u(l({}, p), {
         [e]: {
             url: e,
             validatedURL: t.url,
@@ -104,7 +104,7 @@ function g(e) {
                 url: e,
                 override: t
             });
-        });
+        }));
 }
 function E(e) {
     let { url: t, override: n } = e,
@@ -127,7 +127,7 @@ class b extends (r = i.ZP.Store) {
         );
     }
     getBuildOverride(e) {
-        return g(e), p[e];
+        return (g(e), p[e]);
     }
     getBuildOverrides() {
         return p;

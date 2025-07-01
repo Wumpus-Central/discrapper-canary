@@ -29,25 +29,25 @@ function c(e) {
                         break;
                     case l.yXg.TAB:
                         if ((0, s.E)(e, {}) && (null == f ? void 0 : f())) {
-                            e.preventDefault(), e.stopPropagation();
+                            (e.preventDefault(), e.stopPropagation());
                             return;
                         }
                         if (null != i.Z.getActiveCommand(n.id)) {
-                            e.preventDefault(), e.stopPropagation(), e.shiftKey ? a.Q.selectPreviousCommandOption(t) : a.Q.selectNextCommandOption(t);
+                            (e.preventDefault(), e.stopPropagation(), e.shiftKey ? a.Q.selectPreviousCommandOption(t) : a.Q.selectNextCommandOption(t));
                             return;
                         }
                         break;
                     case l.yXg.ENTER:
                         if ((0, s.E)(e, {}) && (null == _ ? void 0 : _(e))) {
-                            e.preventDefault(), e.stopPropagation();
+                            (e.preventDefault(), e.stopPropagation());
                             return;
                         }
                 }
                 if ((null == (r = t.onKeyDown) ? void 0 : r.call(t, e)) === !0) {
-                    e.preventDefault(), e.stopPropagation();
+                    (e.preventDefault(), e.stopPropagation());
                     return;
                 }
-                e.which !== l.yXg.ENTER || ((e.altKey || e.shiftKey || (c && !e.ctrlKey) || (0, o.L6)(t)) && p) || (e.preventDefault(), e.stopPropagation(), h()), null == u || u(e);
+                (e.which !== l.yXg.ENTER || ((e.altKey || e.shiftKey || (c && !e.ctrlKey) || (0, o.L6)(t)) && p) || (e.preventDefault(), e.stopPropagation(), h()), null == u || u(e));
             },
             [p, n.id, c, t, m, g, _, u, f, h]
         ),

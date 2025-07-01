@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -21,7 +21,7 @@ function d(e, t, n) {
     );
 }
 var f = (function (e) {
-    return (e.SINGLE_AVATAR = '1'), (e.MULTIPLE_AVATAR = '2'), e;
+    return ((e.SINGLE_AVATAR = '1'), (e.MULTIPLE_AVATAR = '2'), e);
 })(f || {});
 let _ = {
     [l.EFr.SIZE_32]: u.avatarSmall,
@@ -57,8 +57,8 @@ class p extends (r = a.Component) {
               });
     }
     constructor(...e) {
-        super(...e), d(this, 'placeholderMaxWidth', ''.concat(Math.floor(40 * Math.random()) + 40, '%'));
+        (super(...e), d(this, 'placeholderMaxWidth', ''.concat(Math.floor(40 * Math.random()) + 40, '%')));
     }
 }
-d(p, 'defaultProps', { type: '1' }), d(p, 'Types', f);
+(d(p, 'defaultProps', { type: '1' }), d(p, 'Types', f));
 let h = p;

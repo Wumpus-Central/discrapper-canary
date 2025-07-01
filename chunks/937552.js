@@ -15,7 +15,7 @@ var r = n(691593),
             if (l < 2)
                 for (;;) {
                     if (f in p) {
-                        (u = p[f]), (f += m);
+                        ((u = p[f]), (f += m));
                         break;
                     }
                     if (((f += m), e ? f < 0 : h <= f)) throw new s(c);

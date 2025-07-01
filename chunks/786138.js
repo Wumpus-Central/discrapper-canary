@@ -46,7 +46,7 @@ function b(e) {
                     },
                     context: g.Yn.STREAM
                 };
-            null != I &&
+            (null != I &&
                 (r.desktopSettings = {
                     sourceId: I,
                     sound: !T
@@ -57,7 +57,7 @@ function b(e) {
                     frameRate: n,
                     soundshareEnabled: !T
                 }),
-                s.Z.setGoLiveSource(r);
+                s.Z.setGoLiveSource(r));
         }, [I, T]);
     if (null == t)
         return (0, r.jsx)(o.sNh, {

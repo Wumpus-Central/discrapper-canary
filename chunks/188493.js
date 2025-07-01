@@ -19,13 +19,13 @@ function f(e) {
             (e) => {
                 u.Z.setState({ languageCode: e });
                 let n = u.Z.getField('fetchedQuery');
-                s.Z.clearSearchResults({ ignoreQueries: [n] }),
+                (s.Z.clearSearchResults({ ignoreQueries: [n] }),
                     c.Z.loadCategoryResults({
                         loadId: t,
                         categoryId: u.Z.getField('categoryId'),
                         query: n,
                         languageCode: e
-                    });
+                    }));
             },
             [t]
         ),

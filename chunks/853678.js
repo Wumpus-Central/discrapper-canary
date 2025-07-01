@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841);
+(n.d(t, { Z: () => N }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841));
 var r = n(45792),
     i = n(230711),
     l = n(782568),
@@ -67,14 +67,14 @@ let v = new Set([y.Fu, y.JT]),
                     let i = d.Z.getApplication(null == r ? void 0 : r.applicationId),
                         o = (0, u.p)(null == r ? void 0 : r.location),
                         c = (null == i ? void 0 : i.id) !== void 0 ? S.get(i.id) : void 0;
-                    if (void 0 !== c && c.trustedUntilEpochMs >= Date.now() && c.trustedHosts.has(e.host)) return (0, l.Z)(t), Promise.resolve({ opened: !0 });
+                    if (void 0 !== c && c.trustedUntilEpochMs >= Date.now() && c.trustedHosts.has(e.host)) return ((0, l.Z)(t), Promise.resolve({ opened: !0 }));
                     return new Promise((e) =>
                         (0, f.q)(
                             {
                                 href: t,
                                 shouldConfirm: !0,
                                 onConfirm: () => {
-                                    (0, l.Z)(t), e({ opened: !0 });
+                                    ((0, l.Z)(t), e({ opened: !0 }));
                                 },
                                 onCancel: () => {
                                     e({ opened: !1 });

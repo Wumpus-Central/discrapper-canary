@@ -8,10 +8,10 @@ t.exports = function (t) {
     if (e.length) {
         if (e.length > 1 && 0 === e[0].width) {
             var u = e[1];
-            (r = u.top), (i = u.right), (o = u.bottom), (a = u.left);
+            ((r = u.top), (i = u.right), (o = u.bottom), (a = u.left));
         } else {
             var s = e[0];
-            (r = s.top), (i = s.right), (o = s.bottom), (a = s.left);
+            ((r = s.top), (i = s.right), (o = s.bottom), (a = s.left));
         }
         for (var c = 1; c < e.length; c++) {
             var l = e[c];

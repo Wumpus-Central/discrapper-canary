@@ -1,4 +1,4 @@
-n.d(t, { m: () => U }), n(997841), n(953529);
+(n.d(t, { m: () => U }), n(997841), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(216780),
     O = n(390322),
     E = n(857192),
-    I = n(626135),
-    S = n(456100),
+    S = n(626135),
+    I = n(456100),
     P = n(566620),
     Z = n(127255),
     N = n(5200),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(388032),
     k = n(210408);
 let M = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    D = 'vc-activities-'.concat((0, a.Z)());
-function L(e) {
+    L = 'vc-activities-'.concat((0, a.Z)());
+function D(e) {
     var t;
     let n,
         { channel: l, openInPopout: o, onClick: a } = e,
@@ -89,7 +89,7 @@ function L(e) {
               className: k.clickableBanner,
               innerRef: C,
               onClick: () => {
-                  a(),
+                  (a(),
                       (0, y.Z)({
                           context: {
                               type: 'channel',
@@ -98,7 +98,7 @@ function L(e) {
                           openInPopout: o,
                           analyticsLocation: m.Z.APP_LAUNCHER_IN_VOICE_BANNER,
                           initialState: { applicationId: g.application.id }
-                      });
+                      }));
               },
               children: [
                   (0, r.jsx)('img', {
@@ -115,15 +115,15 @@ let U = i.forwardRef(function (e, t) {
     let { channel: l, isHovered: a, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: _ } = e,
         y = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
         { id: x, guild_id: v } = l;
-    i.useEffect(() => {
-        I.default.track(w.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+    (i.useEffect(() => {
+        S.default.track(w.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
             channel_id: x,
             guild_id: v
         });
     }, [x, v]),
         i.useEffect(() => {
             a || s();
-        }, [s, a]);
+        }, [s, a]));
     let j = (0, h.bp)(),
         { analyticsLocations: E } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
         M = j === w.IlC.POPOUT,
@@ -132,47 +132,47 @@ let U = i.forwardRef(function (e, t) {
         let e = setTimeout(() => P.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: B } = S.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
+    let { enabled: B } = I.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
         F = i.useCallback(() => {
-            (0, A.Z)({
+            ((0, A.Z)({
                 channel: l,
                 openInPopout: M,
                 analyticsLocations: E
             }),
                 u(),
-                b();
+                b());
         }, [E, l, b, u, M]),
-        G = i.useCallback(
+        H = i.useCallback(
             (e) => {
-                c(),
-                    I.default.track(w.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                (c(),
+                    S.default.track(w.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                         channel_id: l.id,
                         guild_id: l.getGuildId()
-                    });
+                    }));
             },
             [c, l]
         ),
-        H = B ? p.iWm : p.nG3;
+        G = B ? p.iWm : p.nG3;
     return (0, r.jsx)(g.Gt, {
         value: E,
         children: (0, r.jsx)(O.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                'aria-labelledby': D,
+                'aria-labelledby': L,
                 className: _,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: D,
+                                id: L,
                                 children: R.intl.string(R.t['2lnYtL'])
                             })
                         })
                     }),
                     (0, r.jsxs)('div', {
                         className: k.container,
-                        onMouseEnter: G,
+                        onMouseEnter: H,
                         onMouseLeave: u,
                         children: [
                             (0, r.jsxs)('div', {
@@ -181,7 +181,7 @@ let U = i.forwardRef(function (e, t) {
                                     (0, r.jsxs)('div', {
                                         className: k.titleLeft,
                                         children: [
-                                            (0, r.jsx)(H, {
+                                            (0, r.jsx)(G, {
                                                 size: 'md',
                                                 className: k.titleLeftIcon,
                                                 color: 'var(--interactive-active)'
@@ -211,11 +211,11 @@ let U = i.forwardRef(function (e, t) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(L, {
+                            (0, r.jsx)(D, {
                                 openInPopout: M,
                                 channel: l,
                                 onClick: () => {
-                                    b(), s();
+                                    (b(), s());
                                 }
                             }),
                             (0, r.jsxs)('div', {
@@ -231,7 +231,7 @@ let U = i.forwardRef(function (e, t) {
                                                 },
                                                 activityItem: e,
                                                 onClick: () => {
-                                                    s(), b();
+                                                    (s(), b());
                                                 },
                                                 aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: k.activitySuggestion,

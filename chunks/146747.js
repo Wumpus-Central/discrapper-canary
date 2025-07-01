@@ -1,4 +1,4 @@
-t.d(r, { default: () => P }), t(953529);
+(t.d(r, { default: () => P }), t(953529));
 var n = t(255367),
     o = t(73800),
     s = t(481060),
@@ -18,7 +18,7 @@ function f(e) {
     for (var r = 1; r < arguments.length; r++) {
         var t = null != arguments[r] ? arguments[r] : {},
             n = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -26,7 +26,7 @@ function f(e) {
             )),
             n.forEach(function (r) {
                 var n;
-                (n = t[r]),
+                ((n = t[r]),
                     r in e
                         ? Object.defineProperty(e, r, {
                               value: n,
@@ -34,8 +34,8 @@ function f(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[r] = n);
-            });
+                        : (e[r] = n));
+            }));
     }
     return e;
 }
@@ -159,12 +159,12 @@ function P(e) {
                         n,
                         o = {},
                         s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) (t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
+                    for (n = 0; n < s.length; n++) ((t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]));
                     return o;
                 })(e, r);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++) (t = s[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                for (n = 0; n < s.length; n++) ((t = s[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]));
             }
             return o;
         })(e, ['analyticsSourceLocation', 'guild', 'targetBoostedGuildTier', 'perks', 'perkIntro', 'headerProps', 'onClose']);

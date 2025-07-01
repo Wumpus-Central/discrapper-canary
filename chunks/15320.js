@@ -23,7 +23,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -39,8 +39,8 @@ function C(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -413,7 +413,7 @@ function y(e) {
             );
     }, [t.id, N, x]);
     let O = (e) => {
-            !x &&
+            (!x &&
                 (m.default.track(
                     _.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                     E(C({}, (0, s.hH)(t.id)), {
@@ -433,10 +433,10 @@ function y(e) {
                             required: n[i + 1].required
                         })
                     )),
-                i + 1 < n.length ? h(i + 1) : I(t, g) && h('rules');
+                i + 1 < n.length ? h(i + 1) : I(t, g) && h('rules'));
         },
         y = (e) => {
-            !x &&
+            (!x &&
                 (m.default.track(
                     _.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                     E(C({}, (0, s.hH)(t.id)), {
@@ -456,7 +456,7 @@ function y(e) {
                             required: n[i - 1].required
                         })
                     )),
-                h(Math.max(0, i - 1));
+                h(Math.max(0, i - 1)));
         };
     if (null == j) return null;
     switch (j.type) {

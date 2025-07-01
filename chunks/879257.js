@@ -14,5 +14,5 @@ t.exports = function (t, r) {
         if ((void 0 === r && (r = 'default'), !o((n = e(c, t, r))) || i(n))) return n;
         throw new f("Can't convert object to primitive value");
     }
-    return void 0 === r && (r = 'number'), s(t, r);
+    return (void 0 === r && (r = 'number'), s(t, r));
 };

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => N }), n(388685), n(361932), n(187205), n(539854);
+(n.d(t, { Z: () => N }), n(388685), n(361932), n(187205), n(539854));
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(392711),
-    s = n.n(o),
-    a = n(442837),
+    a = n.n(o),
+    s = n(442837),
     c = n(481060),
     u = n(456100),
     d = n(317381),
@@ -21,16 +21,16 @@ var i = n(120356),
     v = n(853856),
     C = n(981631),
     j = n(388032),
-    E = n(714509),
-    S = n(375613);
+    S = n(714509),
+    E = n(375613);
 function x(e, t) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: E.row,
+              className: S.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: E.activityIcon,
+                      className: S.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, r.jsx)(h.Z, {
@@ -42,7 +42,7 @@ function x(e, t) {
           });
 }
 function I() {
-    let e = (0, a.Wu)([v.Z, m.Z], () =>
+    let e = (0, s.Wu)([v.Z, m.Z], () =>
             y.default
                 .keys(v.Z.getFavoriteChannels())
                 .map((e) => m.Z.getChannel(e))
@@ -51,10 +51,10 @@ function I() {
         t = e.map((e) => e.id),
         n = e.filter((e) => e.type === C.d4z.GUILD_VOICE),
         i = e.filter((e) => e.type === C.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
-        l = (0, a.Wu)(
+        l = (0, s.Wu)(
             [_.ZP],
             () =>
-                s().flatMap(n, (e) =>
+                a().flatMap(n, (e) =>
                     _.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
@@ -62,8 +62,8 @@ function I() {
                 ),
             [n]
         ),
-        o = (0, a.Wu)([p.Z], () =>
-            s().flatMap(i, (e) =>
+        o = (0, s.Wu)([p.Z], () =>
+            a().flatMap(i, (e) =>
                 p.Z.getMutableParticipants(e, f.pV.SPEAKER)
                     .filter((e) => e.type === f.Ui.VOICE)
                     .map((e) => {
@@ -72,12 +72,12 @@ function I() {
                     })
             )
         ),
-        j = (0, a.e7)([p.Z], () => {
+        j = (0, s.e7)([p.Z], () => {
             let e = 0;
             for (let t of i) e += p.Z.getParticipantCount(t, f.pV.AUDIENCE);
             return e;
         }),
-        S = (0, a.Wu)(
+        E = (0, s.Wu)(
             [g.Z],
             () =>
                 g.Z.getAllApplicationStreams()
@@ -85,7 +85,7 @@ function I() {
                     .map((e) => e.ownerId),
             [t]
         ),
-        I = (0, a.Wu)(
+        I = (0, s.Wu)(
             [d.ZP],
             () => {
                 let e = d.ZP.getEmbeddedActivitiesByChannel(),
@@ -98,22 +98,22 @@ function I() {
             },
             [t]
         ),
-        P = (0, a.Wu)([b.default], () => I.map((e) => b.default.getUser(e)), [I]),
-        N = (0, a.Wu)([b.default], () => S.map((e) => b.default.getUser(e)), [S]),
+        P = (0, s.Wu)([b.default], () => I.map((e) => b.default.getUser(e)), [I]),
+        N = (0, s.Wu)([b.default], () => E.map((e) => b.default.getUser(e)), [E]),
         w = x(
             c.gj8,
-            l.filter((e) => !S.includes(e.id) && !I.includes(e.id))
+            l.filter((e) => !E.includes(e.id) && !I.includes(e.id))
         ),
         Z =
             0 === o.length
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: E.row,
+                      className: S.row,
                       children: [
                           (0, r.jsx)(c.ewx, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: E.activityIcon
+                              className: S.activityIcon
                           }),
                           (0, r.jsx)(h.Z, {
                               guildId: void 0,
@@ -121,14 +121,14 @@ function I() {
                               max: 3
                           }),
                           (0, r.jsxs)('div', {
-                              className: E.stageListenerPill,
+                              className: S.stageListenerPill,
                               children: [
                                   (0, r.jsx)(c.VWR, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, r.jsx)(c.Text, {
-                                      className: E.stageListenerCount,
+                                      className: S.stageListenerCount,
                                       color: 'text-default',
                                       variant: 'text-xs/medium',
                                       children: j
@@ -151,9 +151,9 @@ function P() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: l()(E.row, E.rowGuildName),
+                className: l()(S.row, S.rowGuildName),
                 children: (0, r.jsx)('span', {
-                    className: l()(E.guildNameText, E.guildNameTextLimitedSize),
+                    className: l()(S.guildNameText, S.guildNameTextLimitedSize),
                     children: j.intl.string(j.t.wMWycn)
                 })
             }),
@@ -169,7 +169,7 @@ function N(e) {
         position: 'right',
         text: (0, r.jsx)(P, {}),
         'aria-label': t,
-        tooltipClassName: S.listItemTooltip,
+        tooltipClassName: E.listItemTooltip,
         onTooltipShow: n,
         children: (e) => {
             var t, n;
@@ -179,7 +179,7 @@ function N(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -187,7 +187,7 @@ function N(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -195,8 +195,8 @@ function N(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, e)),

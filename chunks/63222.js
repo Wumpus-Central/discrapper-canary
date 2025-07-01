@@ -20,15 +20,15 @@ var u = (function () {
     function t(e) {
         var n = this;
         if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
-        a(
+        (a(
             this,
             'hooks',
             (0, r.p)({
                 dragSource: function (e, t) {
-                    n.clearDragSource(), (n.dragSourceOptions = t || null), (0, i.d)(e) ? (n.dragSourceRef = e) : (n.dragSourceNode = e), n.reconnectDragSource();
+                    (n.clearDragSource(), (n.dragSourceOptions = t || null), (0, i.d)(e) ? (n.dragSourceRef = e) : (n.dragSourceNode = e), n.reconnectDragSource());
                 },
                 dragPreview: function (e, t) {
-                    n.clearDragPreview(), (n.dragPreviewOptions = t || null), (0, i.d)(e) ? (n.dragPreviewRef = e) : (n.dragPreviewNode = e), n.reconnectDragPreview();
+                    (n.clearDragPreview(), (n.dragPreviewOptions = t || null), (0, i.d)(e) ? (n.dragPreviewRef = e) : (n.dragPreviewNode = e), n.reconnectDragPreview());
                 }
             })
         ),
@@ -47,7 +47,7 @@ var u = (function () {
             a(this, 'lastConnectedDragPreview', null),
             a(this, 'lastConnectedDragPreviewOptions', null),
             a(this, 'backend', void 0),
-            (this.backend = e);
+            (this.backend = e));
     }
     return (
         (e = [
@@ -84,7 +84,7 @@ var u = (function () {
             {
                 key: 'reconnect',
                 value: function () {
-                    this.reconnectDragSource(), this.reconnectDragPreview();
+                    (this.reconnectDragSource(), this.reconnectDragPreview());
                 }
             },
             {
@@ -172,20 +172,20 @@ var u = (function () {
             {
                 key: 'clearDragSource',
                 value: function () {
-                    (this.dragSourceNode = null), (this.dragSourceRef = null);
+                    ((this.dragSourceNode = null), (this.dragSourceRef = null));
                 }
             },
             {
                 key: 'clearDragPreview',
                 value: function () {
-                    (this.dragPreviewNode = null), (this.dragPreviewRef = null);
+                    ((this.dragPreviewNode = null), (this.dragPreviewRef = null));
                 }
             }
         ]),
         (function (e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+                ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
             }
         })(t.prototype, e),
         t

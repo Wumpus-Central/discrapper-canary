@@ -14,7 +14,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (o = o.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ function d(e) {
             )),
             o.forEach(function (t) {
                 var o;
-                (o = n[t]),
+                ((o = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: o,
@@ -30,8 +30,8 @@ function d(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = o);
-            });
+                        : (e[t] = o));
+            }));
     }
     return e;
 }
@@ -48,12 +48,12 @@ function m(e) {
                         o,
                         r = {},
                         c = Object.keys(e);
-                    for (o = 0; o < c.length; o++) (n = c[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (o = 0; o < c.length; o++) ((n = c[o]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < c.length; o++) (n = c[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (o = 0; o < c.length; o++) ((n = c[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['reportId', 'reportType']);
@@ -77,7 +77,7 @@ function m(e) {
                     onSubmit: function (e) {
                         var r;
                         let { rating: a, problem: i, dontShowAgain: _, feedback: b } = e;
-                        _ &&
+                        (_ &&
                             (0, l.Uv)({
                                 feedbackType: s.nw.IN_APP_REPORTS,
                                 location: 'InAppReportsFeedbackModal'
@@ -95,7 +95,7 @@ function m(e) {
                                 (0, c.ZDy)(async () => {
                                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                                     return (t) => (0, o.jsx)(e, d({ body: p.intl.string(p.t['d9+vQ0']) }, t));
-                                });
+                                }));
                     },
                     otherKey: _.f.OTHER
                 },

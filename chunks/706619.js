@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(311308),
@@ -12,15 +12,15 @@ function s(e) {
         d = (0, a.dQu)(o.Z.colors.TEXT_DEFAULT).hsl(),
         f = (0, a.dQu)(o.Z.colors.BACKGROUND_ACCENT).hsl(),
         h = (0, a.dQu)(o.Z.unsafe_rawColors.BRAND_500).hsl();
-    (0, l.useEffect)(() => {
+    ((0, l.useEffect)(() => {
         var e;
         let n = t.current;
         if (null == n) return;
         let r = new i.TimelineGraphView(n, null != (e = window.devicePixelRatio) ? e : 1);
-        (r.backgroundColor = c), (r.textColor = d), (r.gridColor = f), (r.timeOptions = { timeStyle: 'short' }), (r.fontFamily = 'gg sans'), (r.fontSize = 11), u.setColor(h), r.addDataSeries(u), r.updateEndDate(), s(r);
+        ((r.backgroundColor = c), (r.textColor = d), (r.gridColor = f), (r.timeOptions = { timeStyle: 'short' }), (r.fontFamily = 'gg sans'), (r.fontSize = 11), u.setColor(h), r.addDataSeries(u), r.updateEndDate(), s(r));
     }, [t, c, h, f, d, u]),
         u.setPoints(e.dataPoints),
-        null == n || n.updateEndDate();
+        null == n || n.updateEndDate());
     let p = {
         width: e.width,
         height: e.height

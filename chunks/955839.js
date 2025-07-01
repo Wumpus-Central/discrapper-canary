@@ -1,4 +1,4 @@
-r.d(t, { q: () => d }), r(388685), r(539854);
+(r.d(t, { q: () => d }), r(388685), r(539854));
 var a = r(73800),
     i = r(512722),
     s = r.n(i),
@@ -27,7 +27,7 @@ let d = (e) => {
                             i.push(t);
                         }
                     let s = await (0, o.iF)(e, t, a);
-                    u((t) => {
+                    (u((t) => {
                         let a = s.users.filter((e) => !r.has(e.id));
                         return ((i = i.filter((e) => !r.has(e.id))), 0 === e) ? [...r.values(), ...i.values(), ...a] : [...t, ...a];
                     }),
@@ -36,7 +36,7 @@ let d = (e) => {
                             for (let e of i) t.set(e.id, e);
                             return t;
                         }),
-                        f(s.nextIndex);
+                        f(s.nextIndex));
                 } catch (e) {
                     _(!0);
                 } finally {
@@ -53,7 +53,7 @@ let d = (e) => {
                         let r = await (0, l.PR)(t);
                         e.set(r.id, r);
                     }
-                L(e), u(Array.from(e.values()));
+                (L(e), u(Array.from(e.values())));
             }
         },
         S = a.useRef(v);

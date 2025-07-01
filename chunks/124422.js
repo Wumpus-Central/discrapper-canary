@@ -32,7 +32,7 @@ function d(t, e, d) {
                                       for (var e = 1; e < arguments.length; e++) {
                                           var n = null != arguments[e] ? arguments[e] : {},
                                               l = Object.keys(n);
-                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                          ('function' == typeof Object.getOwnPropertySymbols &&
                                               (l = l.concat(
                                                   Object.getOwnPropertySymbols(n).filter(function (t) {
                                                       return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -40,7 +40,7 @@ function d(t, e, d) {
                                               )),
                                               l.forEach(function (e) {
                                                   var l;
-                                                  (l = n[e]),
+                                                  ((l = n[e]),
                                                       e in t
                                                           ? Object.defineProperty(t, e, {
                                                                 value: l,
@@ -48,8 +48,8 @@ function d(t, e, d) {
                                                                 configurable: !0,
                                                                 writable: !0
                                                             })
-                                                          : (t[e] = l);
-                                              });
+                                                          : (t[e] = l));
+                                              }));
                                       }
                                       return t;
                                   })({}, e)),

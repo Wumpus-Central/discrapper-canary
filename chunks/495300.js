@@ -88,7 +88,7 @@ function T(e) {
                         look: c.zxk.Looks.BLANK,
                         size: c.zxk.Sizes.MIN,
                         onClick: () => {
-                            (0, f.NB)(), (0, g.BG)(), (0, p.$K)(b.PG.LANDING);
+                            ((0, f.NB)(), (0, g.BG)(), (0, p.$K)(b.PG.LANDING));
                         },
                         children: [
                             (0, r.jsx)(u.Z, {

@@ -1,4 +1,4 @@
-n.d(t, { u: () => o }), n(804061), n(704826), n(35282);
+(n.d(t, { u: () => o }), n(804061), n(704826), n(35282));
 var r = n(503461),
     i = n(190313);
 function a(e, t, n) {
@@ -64,7 +64,7 @@ class o {
         return new s(this.table.upgradeTransaction(e));
     }
     constructor(e, t, n, r = !0) {
-        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
+        (a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r)));
     }
 }
 class s {
@@ -112,7 +112,7 @@ class s {
         this.transaction.messages.trimChannelsNotIn(e, t);
     }
     constructor(e) {
-        a(this, 'transaction', void 0), (this.transaction = e);
+        (a(this, 'transaction', void 0), (this.transaction = e));
     }
 }
 function l(e, t, n) {

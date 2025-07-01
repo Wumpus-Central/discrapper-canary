@@ -1,4 +1,4 @@
-t.d(n, { default: () => $ }), t(953529), t(388685), t(642613), t(472816), t(794429);
+(t.d(n, { default: () => $ }), t(953529), t(388685), t(642613), t(472816), t(794429));
 var c = t(255367),
     o = t(73800),
     a = t(120356),
@@ -46,7 +46,7 @@ function K(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             c = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (c = c.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -54,7 +54,7 @@ function K(e) {
             )),
             c.forEach(function (n) {
                 var c;
-                (c = t[n]),
+                ((c = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: c,
@@ -62,8 +62,8 @@ function K(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = c);
-            });
+                        : (e[n] = c));
+            }));
     }
     return e;
 }
@@ -136,7 +136,7 @@ function X(e) {
         let e;
         switch (a) {
             case D.iO.EQUAL:
-                (e = H.t['0BlpbG']), t === F.ABu.PAYPAL && o === D.PC.PAYPAL_VERIFIED && (e = H.t.dcSDhY);
+                ((e = H.t['0BlpbG']), t === F.ABu.PAYPAL && o === D.PC.PAYPAL_VERIFIED && (e = H.t.dcSDhY));
                 break;
             case D.iO.NOT_EQUAL:
                 e = H.t.otcpTE;
@@ -181,12 +181,12 @@ function Q(e) {
         [f, b] = o.useState(null),
         _ = o.useMemo(() => d().flatten(n), [n]),
         v = o.useMemo(() => d().groupBy(_, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : '')), [_]);
-    o.useEffect(() => m(Date.now()), [_]),
+    (o.useEffect(() => m(Date.now()), [_]),
         o.useEffect(() => {
             if (null == p) return;
             let e = v[''.concat(p).concat(null != f ? ':'.concat(f.id) : '')];
             null != e && e.every((e) => e.result) && a(p, f);
-        }, [v, p, f, a]);
+        }, [v, p, f, a]));
     let A = (0, C.dQu)(h.Z.unsafe_rawColors.GREEN_330).hex();
     return (0, c.jsx)(c.Fragment, {
         children: Object.keys(v)
@@ -357,7 +357,7 @@ function J(e) {
         [m, x] = o.useState(1 === l.metadataVisibility),
         [f, N] = o.useState(1 === l.visibility);
     (0, b.ZP)(() => {
-        i(!f), r(m);
+        (i(!f), r(m));
     });
     let _ = j.Z.get(l.type);
     return (
@@ -367,7 +367,7 @@ function J(e) {
                 hideBorder: !0,
                 value: s,
                 onChange: (e) => {
-                    d(e), p.Z.setFriendSync(l.type, l.id, e);
+                    (d(e), p.Z.setFriendSync(l.type, l.id, e));
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
@@ -380,7 +380,7 @@ function J(e) {
                 hideBorder: !0,
                 value: u,
                 onChange: (e) => {
-                    h(e), p.Z.setShowActivity(l.type, l.id, e);
+                    (h(e), p.Z.setShowActivity(l.type, l.id, e));
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
@@ -394,7 +394,7 @@ function J(e) {
                 value: m,
                 disabled: !f,
                 onChange: (e) => {
-                    r(e), x(e), p.Z.setMetadataVisibility(l.type, l.id, +!!e);
+                    (r(e), x(e), p.Z.setMetadataVisibility(l.type, l.id, +!!e));
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
@@ -409,7 +409,7 @@ function J(e) {
                     hideBorder: !0,
                     value: f,
                     onChange: (e) => {
-                        i(!e), N(e), p.Z.setVisibility(l.type, l.id, +!!e);
+                        (i(!e), N(e), p.Z.setVisibility(l.type, l.id, +!!e));
                     },
                     children: (0, c.jsx)(C.Text, {
                         variant: 'text-sm/semibold',
@@ -443,23 +443,23 @@ function $(e) {
         ea = Object.values((0, u.e7)([S.Z], () => S.Z.getMutableGuildChannelsForGuild(a))).filter((e) => P.Z.can(F.Plq.VIEW_CHANNEL, e) && P.Z.can(F.Plq.SEND_MESSAGES, e) && (0, A.Z)(e).includes(l));
     function el() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        null == t || t(), e && (0, C.Mr3)(z.s$, C.z1l);
+        (null == t || t(), e && (0, C.Mr3)(z.s$, C.z1l));
     }
     function ei() {
-        el(!0), f.Z.open(F.oAB.AUTHORIZED_APPS);
+        (el(!0), f.Z.open(F.oAB.AUTHORIZED_APPS));
     }
     function er() {
-        el(!0), f.Z.open(F.oAB.CONNECTIONS);
+        (el(!0), f.Z.open(F.oAB.CONNECTIONS));
     }
     async function es() {
-        g(!0), await x.Z.assignGuildRoleConnection(a, l.id);
+        (g(!0), await x.Z.assignGuildRoleConnection(a, l.id));
     }
     function ed() {
         R.default.track(F.rMx.PASSPORT_CHALLENGE_STARTED, K({ role_id: l.id }, (0, v.hH)(a)));
     }
     function eu(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        q(e),
+        (q(e),
             $(n),
             s(1),
             null != n &&
@@ -467,12 +467,12 @@ function $(e) {
                     .then((e) => {
                         en(e);
                     })
-                    .catch(() => {});
+                    .catch(() => {}));
     }
     return (
         o.useEffect(() => {
             x.Z.fetchGuildRoleConnectionsEligibility(a, l.id).then((e) => {
-                h(e), p(e.some((e) => e.every((e) => e.result))), b(!1);
+                (h(e), p(e.some((e) => e.every((e) => e.result))), b(!1));
             });
         }, [a, l.id, V]),
         o.useEffect(() => {

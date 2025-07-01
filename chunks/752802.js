@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685);
+(n.d(t, { Z: () => z }), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -32,7 +32,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function T(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -48,8 +48,8 @@ function T(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -81,12 +81,12 @@ function D(e, t) {
                 i,
                 r = {},
                 o = Object.keys(e);
-            for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
             return r;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+        for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
     }
     return r;
 }
@@ -117,14 +117,14 @@ function A(e) {
                 k(T({}, r), {
                     className: P.controlAction,
                     onClick: (e) => {
-                        e.stopPropagation(),
+                        (e.stopPropagation(),
                             (0, C.Ws)(w.Odu.GO_LIVE, {
                                 type: C.Qu.AUDIO,
                                 value: p ? C.bk.ENABLED : C.bk.DISABLED,
                                 userId: t.user.id
                             }),
                             null == n || n(),
-                            f();
+                            f());
                     },
                     children: p
                         ? (0, i.jsx)(c.OyP, {
@@ -142,7 +142,7 @@ function A(e) {
 }
 function R(e, t, r) {
     return (o) => {
-        (0, C.Ws)(w.Odu.GO_LIVE, {
+        ((0, C.Ws)(w.Odu.GO_LIVE, {
             type: C.Qu.GO_LIVE,
             value: C.bk.SETTINGS_OPENED,
             userId: e.user.id
@@ -160,7 +160,7 @@ function R(e, t, r) {
                             appContext: t
                         })
                     );
-            });
+            }));
     };
 }
 function L(e) {
@@ -191,7 +191,7 @@ function L(e) {
                                     className: P.watchButton,
                                     onClick: () => {
                                         var t;
-                                        null == (t = e.onClick) || t.call(e),
+                                        (null == (t = e.onClick) || t.call(e),
                                             (0, f.rn)(n.stream, {
                                                 forceMultiple: !0,
                                                 noFocus: !0
@@ -201,7 +201,7 @@ function L(e) {
                                                 type: C.Qu.GO_LIVE,
                                                 value: C.bk.ENABLED,
                                                 userId: n.user.id
-                                            });
+                                            }));
                                     },
                                     children: [
                                         (0, i.jsx)(c.Text, {

@@ -18,19 +18,19 @@ class c {
     _internalAdd(e, t, n) {
         let r = e.charAt(0),
             i = this.suffix[r];
-        null == i && ((i = new c()), (this.suffix[r] = i), null != n ? (i.value = n.slice(0, n.length - e.length + 1)) : (i.value = r)), e.length > 1 && '*' !== e.charAt(1) ? i._internalAdd(e.substring(1), t, null != n ? n : e) : ((i.strategy = o(t)), (i.isWord = !0));
+        (null == i && ((i = new c()), (this.suffix[r] = i), null != n ? (i.value = n.slice(0, n.length - e.length + 1)) : (i.value = r)), e.length > 1 && '*' !== e.charAt(1) ? i._internalAdd(e.substring(1), t, null != n ? n : e) : ((i.strategy = o(t)), (i.isWord = !0)));
     }
     add(e) {
         this._internalAdd(e, e);
     }
     constructor() {
-        i(this, 'isWord', void 0), i(this, 'value', void 0), i(this, 'suffix', {}), i(this, 'strategy', void 0), (this.isWord = null), (this.value = null), (this.suffix = {}), (this.strategy = r.dQ.ExactMatch);
+        (i(this, 'isWord', void 0), i(this, 'value', void 0), i(this, 'suffix', {}), i(this, 'strategy', void 0), (this.isWord = null), (this.value = null), (this.suffix = {}), (this.strategy = r.dQ.ExactMatch));
     }
 }
 class a {
     static fromSnapshot(e) {
         let t = new a();
-        return (t.trie = e.trie), t;
+        return ((t.trie = e.trie), t);
     }
     search(e) {
         let t = this.trie,
@@ -51,7 +51,7 @@ class a {
         return o;
     }
     addWord(e) {
-        null == this.trie && (this.trie = new c()), this.trie.add(e);
+        (null == this.trie && (this.trie = new c()), this.trie.add(e));
     }
     addWords(e) {
         e.forEach((e) => this.addWord(e));
@@ -60,6 +60,6 @@ class a {
         this.trie = new c();
     }
     constructor() {
-        i(this, 'trie', void 0), (this.trie = new c());
+        (i(this, 'trie', void 0), (this.trie = new c()));
     }
 }

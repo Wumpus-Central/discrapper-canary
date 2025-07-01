@@ -24,7 +24,7 @@ function g(e) {
                 attachmentsToUpload: t,
                 onAttachmentUploadError: (r, i, o, c) => {
                     var u;
-                    (0, s.openUploadError)({
+                    ((0, s.openUploadError)({
                         title: m.intl.string(m.t.B3vFdX),
                         help: null != (u = null == c ? void 0 : c.message) ? u : m.intl.string(m.t.zMEjJi)
                     }),
@@ -34,7 +34,7 @@ function g(e) {
                                 channelId: e.id,
                                 uploads: t,
                                 draftType: p.d.FirstThreadMessage
-                            });
+                            }));
                 }
             });
         }, []);

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => C,
     Zm: () => N
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -172,7 +172,7 @@ function y(e) {
         return null;
     let C = async () => {
         try {
-            await (0, p.rS)(t), await (0, g.di)(t.id);
+            (await (0, p.rS)(t), await (0, g.di)(t.id));
         } catch (e) {}
     };
     return (0, r.jsxs)(r.Fragment, {

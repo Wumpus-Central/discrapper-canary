@@ -7,9 +7,9 @@ var n = r(255367),
     c = r(401251),
     u = r(528302),
     d = r(26095),
-    l = r.n(d);
-function p(e) {
-    return (p =
+    p = r.n(d);
+function f(e) {
+    return (f =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -18,7 +18,7 @@ function p(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function f(e, t) {
+function l(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
@@ -27,7 +27,7 @@ function h(e, t) {
     return (h =
         Object.setPrototypeOf ||
         function (e, t) {
-            return (e.__proto__ = t), e;
+            return ((e.__proto__ = t), e);
         })(e, t);
 }
 function v(e) {
@@ -62,28 +62,28 @@ function b(e) {
         m = e.registerHandler,
         D = e.containerDisplayName,
         k = e.getType,
-        x = e.collect,
-        w = e.options.arePropsEqual,
-        j = void 0 === w ? i.w : w,
+        w = e.collect,
+        j = e.options.arePropsEqual,
+        x = void 0 === j ? i.w : j,
         C = t.displayName || t.name || 'Component',
         O = (function (e) {
             if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function');
-            (O.prototype = Object.create(e && e.prototype, {
+            ((O.prototype = Object.create(e && e.prototype, {
                 constructor: {
                     value: O,
                     writable: !0,
                     configurable: !0
                 }
             })),
-                e && h(O, e);
-            var l,
+                e && h(O, e));
+            var p,
                 D,
-                w =
-                    ((l = (function () {
+                j =
+                    ((p = (function () {
                         if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                         if ('function' == typeof Proxy) return !0;
                         try {
-                            return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                            return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
                         } catch (e) {
                             return !1;
                         }
@@ -92,9 +92,9 @@ function b(e) {
                         var e,
                             t = y(O);
                         return (
-                            (e = l ? Reflect.construct(t, arguments, y(this).constructor) : t.apply(this, arguments)),
+                            (e = p ? Reflect.construct(t, arguments, y(this).constructor) : t.apply(this, arguments)),
                             (function (e, t) {
-                                if (t && ('object' === p(t) || 'function' == typeof t)) return t;
+                                if (t && ('object' === f(t) || 'function' == typeof t)) return t;
                                 if (void 0 !== t) throw TypeError('Derived constructors may only return object or undefined');
                                 return v(e);
                             })(this, e)
@@ -104,7 +104,7 @@ function b(e) {
                 var t;
                 if (!(this instanceof O)) throw TypeError('Cannot call a class as a function');
                 return (
-                    g(v((t = w.call(this, e))), 'decoratedRef', (0, o.createRef)()),
+                    g(v((t = j.call(this, e))), 'decoratedRef', (0, o.createRef)()),
                     g(v(t), 'handlerId', void 0),
                     g(v(t), 'manager', void 0),
                     g(v(t), 'handlerMonitor', void 0),
@@ -133,25 +133,25 @@ function b(e) {
                     {
                         key: 'getDecoratedComponentInstance',
                         value: function () {
-                            return (0, a.k)(this.decoratedRef.current, 'In order to access an instance of the decorated component, it must either be a class component or use React.forwardRef()'), this.decoratedRef.current;
+                            return ((0, a.k)(this.decoratedRef.current, 'In order to access an instance of the decorated component, it must either be a class component or use React.forwardRef()'), this.decoratedRef.current);
                         }
                     },
                     {
                         key: 'shouldComponentUpdate',
                         value: function (e, t) {
-                            return !j(e, this.props) || !(0, i.w)(t, this.state);
+                            return !x(e, this.props) || !(0, i.w)(t, this.state);
                         }
                     },
                     {
                         key: 'componentDidMount',
                         value: function () {
-                            (this.disposable = new c.M$()), (this.currentType = void 0), this.receiveProps(this.props), this.handleChange();
+                            ((this.disposable = new c.M$()), (this.currentType = void 0), this.receiveProps(this.props), this.handleChange());
                         }
                     },
                     {
                         key: 'componentDidUpdate',
                         value: function (e) {
-                            j(this.props, e) || (this.receiveProps(this.props), this.handleChange());
+                            x(this.props, e) || (this.receiveProps(this.props), this.handleChange());
                         }
                     },
                     {
@@ -187,7 +187,7 @@ function b(e) {
                                                 try {
                                                     for (o = o.call(e); !(a = (r = o.next()).done) && (i.push(r.value), i.length !== t); a = !0);
                                                 } catch (e) {
-                                                    (s = !0), (n = e);
+                                                    ((s = !0), (n = e));
                                                 } finally {
                                                     try {
                                                         a || null == o.return || o.return();
@@ -200,10 +200,10 @@ function b(e) {
                                         })(t, 2) ||
                                         (function (e, t) {
                                             if (e) {
-                                                if ('string' == typeof e) return f(e, 2);
+                                                if ('string' == typeof e) return l(e, 2);
                                                 var r = Object.prototype.toString.call(e).slice(8, -1);
                                                 if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
-                                                if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return f(e, t);
+                                                if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return l(e, t);
                                             }
                                         })(t, 2) ||
                                         (function () {
@@ -211,7 +211,7 @@ function b(e) {
                                         })(),
                                     n = r[0],
                                     o = r[1];
-                                (this.handlerId = n), this.handlerMonitor.receiveHandlerId(n), this.handlerConnector.receiveHandlerId(n);
+                                ((this.handlerId = n), this.handlerMonitor.receiveHandlerId(n), this.handlerConnector.receiveHandlerId(n));
                                 var i = this.manager.getMonitor().subscribeToStateChange(this.handleChange, { handlerIds: [n] });
                                 this.disposable.setDisposable(new c.Xz(new c.JT(i), new c.JT(o)));
                             }
@@ -220,13 +220,13 @@ function b(e) {
                     {
                         key: 'dispose',
                         value: function () {
-                            this.disposable.dispose(), this.handlerConnector && this.handlerConnector.receiveHandlerId(null);
+                            (this.disposable.dispose(), this.handlerConnector && this.handlerConnector.receiveHandlerId(null));
                         }
                     },
                     {
                         key: 'getCurrentState',
                         value: function () {
-                            return this.handlerConnector ? x(this.handlerConnector.hooks, this.handlerMonitor, this.props) : {};
+                            return this.handlerConnector ? w(this.handlerConnector.hooks, this.handlerMonitor, this.props) : {};
                         }
                     },
                     {
@@ -263,11 +263,11 @@ function b(e) {
                 (function (e, t) {
                     for (var r = 0; r < t.length; r++) {
                         var n = t[r];
-                        (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                        ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
                     }
                 })(O.prototype, D),
                 O
             );
         })(o.Component);
-    return g(O, 'DecoratedComponent', t), g(O, 'displayName', ''.concat(D, '(').concat(C, ')')), l()(O, t);
+    return (g(O, 'DecoratedComponent', t), g(O, 'displayName', ''.concat(D, '(').concat(C, ')')), p()(O, t));
 }

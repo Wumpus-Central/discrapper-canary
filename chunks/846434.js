@@ -23,9 +23,9 @@ var o = r(73800),
 t.exports = (function (t) {
     function e(e) {
         var r;
-        return i(n((r = t.call(this, e) || this)), '_forceFlag', void 0), i(n(r), '_node', void 0), (r._forceFlag = !1), r;
+        return (i(n((r = t.call(this, e) || this)), '_forceFlag', void 0), i(n(r), '_node', void 0), (r._forceFlag = !1), r);
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r.shouldComponentUpdate = function (t) {

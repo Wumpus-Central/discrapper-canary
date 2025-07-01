@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(415506), n(49124);
+(n.d(t, { Z: () => d }), n(415506), n(49124));
 var r = n(626135),
     i = n(981631);
 function a(e, t, n) {
@@ -20,7 +20,7 @@ let o = 'mp4a.40.2',
     c = 2500000;
 class u {
     static getInstance() {
-        return (null === u.instance || void 0 === u.instance) && (u.instance = new u()), u.instance;
+        return ((null === u.instance || void 0 === u.instance) && (u.instance = new u()), u.instance);
     }
     async checkCodecCapability(e, t, n, r, i) {
         try {
@@ -420,7 +420,7 @@ class u {
         return null != (n = null == r ? void 0 : r.capability.supported) && n;
     }
     constructor() {
-        a(this, 'capabilities', null), a(this, 'isDetecting', !1), a(this, 'detectionPromise', null), a(this, 'hasAttemptedDetection', !1);
+        (a(this, 'capabilities', null), a(this, 'isDetecting', !1), a(this, 'detectionPromise', null), a(this, 'hasAttemptedDetection', !1));
     }
 }
 a(u, 'instance', void 0);

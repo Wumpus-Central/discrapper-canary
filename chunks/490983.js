@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ }), n(388685), n(642613), n(583741);
+(n.d(t, { Z: () => $ }), n(388685), n(642613), n(583741));
 var r,
     i = n(658722),
     a = n.n(i),
@@ -168,7 +168,7 @@ function Q() {
 }
 class J extends (r = u.ZP.Store) {
     initialize() {
-        this.syncWith([f.Z, g.Z, p.Z, _.ZP, v.Z, I.Z, E.Z, y.Z, b.Z, m.Z], Q, 200), this.syncWith([O.Z, h.default], () => !0);
+        (this.syncWith([f.Z, g.Z, p.Z, _.ZP, v.Z, I.Z, E.Z, y.Z, b.Z, m.Z], Q, 200), this.syncWith([O.Z, h.default], () => !0));
     }
     get applicationFilterQuery() {
         return j;

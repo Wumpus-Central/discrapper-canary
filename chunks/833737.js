@@ -88,7 +88,7 @@ let I = (0, c.Z)(
             return (0, r.jsxs)(a.v2r, {
                 navId: 'user-context',
                 onClose: () => {
-                    (0, o.Zy)(), null == C || C();
+                    ((0, o.Zy)(), null == C || C());
                 },
                 'aria-label': N.intl.string(N.t.liqwPD),
                 onSelect: I,

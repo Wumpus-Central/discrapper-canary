@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     E: () => a,
     Z: () => i
 }),
-    n(539854);
+    n(539854));
 let r = {};
 function i(e, t, n) {
     let { shouldWarnLargeObjects: i, logCallback: a } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r;

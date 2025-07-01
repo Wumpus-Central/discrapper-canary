@@ -9,7 +9,7 @@ var r = a(370336),
 function i(t, e) {
     var a, i, c, s;
     let { fingerprint: E, span: l, breadcrumbs: u, sdkProcessingMetadata: I } = e;
-    (function (t, e) {
+    ((function (t, e) {
         let { extra: a, tags: _, user: n, contexts: o, level: i, transactionName: c } = e,
             s = (0, r.Jr)(a);
         s &&
@@ -33,25 +33,25 @@ function i(t, e) {
                 ...t.user
             });
         let u = (0, r.Jr)(o);
-        u &&
+        (u &&
             Object.keys(u).length &&
             (t.contexts = {
                 ...u,
                 ...t.contexts
             }),
             i && (t.level = i),
-            c && 'transaction' !== t.type && (t.transaction = c);
+            c && 'transaction' !== t.type && (t.transaction = c));
     })(t, e),
         l &&
             (function (t, e) {
-                (t.contexts = {
+                ((t.contexts = {
                     trace: (0, o.wy)(e),
                     ...t.contexts
                 }),
                     (t.sdkProcessingMetadata = {
                         dynamicSamplingContext: (0, n.jC)(e),
                         ...t.sdkProcessingMetadata
-                    });
+                    }));
                 let a = (0, o.Gx)(e),
                     r = (0, o.XU)(a).description;
                 r && !t.transaction && 'transaction' === t.type && (t.transaction = r);
@@ -70,18 +70,18 @@ function i(t, e) {
         (c.sdkProcessingMetadata = {
             ...c.sdkProcessingMetadata,
             ...s
-        });
+        }));
 }
 function c(t, e) {
-    let { extra: a, tags: r, user: _, contexts: n, level: o, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: E, eventProcessors: l, attachments: u, propagationContext: I, transactionName: d, span: R } = e;
-    s(t, 'extra', a),
+    let { extra: a, tags: r, user: _, contexts: n, level: o, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: E, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: d } = e;
+    (s(t, 'extra', a),
         s(t, 'tags', r),
         s(t, 'user', _),
         s(t, 'contexts', n),
         s(t, 'sdkProcessingMetadata', i),
         o && (t.level = o),
-        d && (t.transactionName = d),
-        R && (t.span = R),
+        R && (t.transactionName = R),
+        d && (t.span = d),
         c.length && (t.breadcrumbs = [...t.breadcrumbs, ...c]),
         E.length && (t.fingerprint = [...t.fingerprint, ...E]),
         l.length && (t.eventProcessors = [...t.eventProcessors, ...l]),
@@ -89,7 +89,7 @@ function c(t, e) {
         (t.propagationContext = {
             ...t.propagationContext,
             ...I
-        });
+        }));
 }
 function s(t, e, a) {
     if (a && Object.keys(a).length) for (let r in ((t[e] = { ...t[e] }), a)) Object.prototype.hasOwnProperty.call(a, r) && (t[e][r] = a[r]);

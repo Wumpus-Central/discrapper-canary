@@ -22,8 +22,8 @@ let h = i.memo(function (e) {
         ),
         O = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
         E = (0, d.wq)(null == (t = h.interaction) ? void 0 : t.user.id, f.id),
-        I = (0, d.Nk)(h.interaction, f, g, x),
-        S = (0, d.NU)(b, x),
+        S = (0, d.Nk)(h.interaction, f, g, x),
+        I = (0, d.NU)(b, x),
         P = (0, a.t0)(h),
         Z = (null == P ? void 0 : P.type) === o.B8.APPLICATION_COMMAND ? (null == (n = P.target_user) ? void 0 : n.id) : void 0,
         N = (0, d.wq)(Z, f.id),
@@ -66,8 +66,8 @@ let h = i.memo(function (e) {
         showDataPopout: _,
         showTargetAvatarPopout: C,
         showTargetUsernamePopout: y,
-        onClickAvatar: S,
-        onClickUsername: I,
+        onClickAvatar: I,
+        onClickUsername: S,
         onClickCommand: w,
         onUserContextMenu: E,
         onClickTargetAvatar: A,
@@ -86,7 +86,7 @@ function f(e, t, n) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
                           r = Object.keys(n);
-                      'function' == typeof Object.getOwnPropertySymbols &&
+                      ('function' == typeof Object.getOwnPropertySymbols &&
                           (r = r.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -94,7 +94,7 @@ function f(e, t, n) {
                           )),
                           r.forEach(function (t) {
                               var r;
-                              (r = n[t]),
+                              ((r = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
                                             value: r,
@@ -102,8 +102,8 @@ function f(e, t, n) {
                                             configurable: !0,
                                             writable: !0
                                         })
-                                      : (e[t] = r);
-                          });
+                                      : (e[t] = r));
+                          }));
                   }
                   return e;
               })(

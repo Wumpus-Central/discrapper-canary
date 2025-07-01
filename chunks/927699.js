@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -40,7 +40,7 @@ function E(e) {
         i.useEffect(() => {
             if (void 0 === f) {
                 let e = (0, c.JM)(E);
-                T(E), A(e);
+                (T(E), A(e));
             }
         }, [f, E]),
         (0, r.jsx)('div', {

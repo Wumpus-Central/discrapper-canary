@@ -27,12 +27,12 @@ let g = function (e) {
                         o,
                         r = {},
                         i = Object.keys(e);
-                    for (o = 0; o < i.length; o++) (n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (o = 0; o < i.length; o++) ((n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (o = 0; o < i.length; o++) ((n = i[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['guildId', 'transitionState']);
@@ -51,7 +51,7 @@ let g = function (e) {
                 } catch (e) {
                     throw e;
                 }
-                h.onClose(), (0, d.hk)(g);
+                (h.onClose(), (0, d.hk)(g));
             } else u.Z.resetGuildJoinRequest(g);
         };
     return (0, o.jsx)(i.Y0X, {
@@ -65,7 +65,7 @@ let g = function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         o = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (o = o.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -73,7 +73,7 @@ let g = function (e) {
                         )),
                         o.forEach(function (t) {
                             var o;
-                            (o = n[t]),
+                            ((o = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: o,
@@ -81,8 +81,8 @@ let g = function (e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = o);
-                        });
+                                    : (e[t] = o));
+                        }));
                 }
                 return e;
             })({}, h)),
@@ -93,7 +93,7 @@ let g = function (e) {
                     onReapply: C,
                     confirmText: b.intl.string(b.t.BddRzc),
                     onWithdrawApplication: () => {
-                        h.onClose(), null == P && (0, p.Z)();
+                        (h.onClose(), null == P && (0, p.Z)());
                     },
                     rejectionReason: null == x ? void 0 : x.rejectionReason,
                     guild: O

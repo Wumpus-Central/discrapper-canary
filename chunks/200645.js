@@ -69,24 +69,24 @@ class g extends r.PureComponent {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             m(this, 'handleToggleOpenOnStartup', () => {
                 let e = !this.state.openOnStartup;
-                this.setState({ openOnStartup: e }), c.ZP.send('TOGGLE_OPEN_ON_STARTUP', e);
+                (this.setState({ openOnStartup: e }), c.ZP.send('TOGGLE_OPEN_ON_STARTUP', e));
             }),
             m(this, 'handleToggleStartMinimized', () => {
                 let e = !this.state.startMinimized;
-                this.setState({ startMinimized: e }), c.ZP.send('TOGGLE_START_MINIMIZED', e);
+                (this.setState({ startMinimized: e }), c.ZP.send('TOGGLE_START_MINIMIZED', e));
             }),
             m(this, 'handleToggleMinimizeToTray', () => {
                 let e = !this.state.minimizeToTray;
-                this.setState({ minimizeToTray: e }), c.ZP.send('TOGGLE_MINIMIZE_TO_TRAY', e);
+                (this.setState({ minimizeToTray: e }), c.ZP.send('TOGGLE_MINIMIZE_TO_TRAY', e));
             }),
             (this.state = {
                 openOnStartup: !0,
                 startMinimized: !1,
                 minimizeToTray: !0
-            });
+            }));
     }
 }
 let p = g;

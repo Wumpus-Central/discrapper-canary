@@ -18,7 +18,7 @@ function _(e) {
         C = (0, l.wj)(g) ? x : m,
         { rules: p, rulesAccepted: y } = (0, d.V)(t),
         E = i.useCallback(() => {
-            _(), k();
+            (_(), k());
         }, [_, k]);
     return (0, c.jsxs)(o.Y0X, {
         transitionState: n,

@@ -31,12 +31,12 @@ function f(t) {
                         r,
                         o = {},
                         c = Object.keys(t);
-                    for (r = 0; r < c.length; r++) (n = c[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                    for (r = 0; r < c.length; r++) ((n = c[r]), e.indexOf(n) >= 0 || (o[n] = t[n]));
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < c.length; r++) (n = c[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
+                for (r = 0; r < c.length; r++) ((n = c[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]));
             }
             return o;
         })(t, ['onClose', 'source']);
@@ -46,7 +46,7 @@ function f(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -54,7 +54,7 @@ function f(t) {
                     )),
                     r.forEach(function (e) {
                         var r;
-                        (r = n[e]),
+                        ((r = n[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: r,
@@ -62,8 +62,8 @@ function f(t) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (t[e] = r);
-                    });
+                                : (t[e] = r));
+                    }));
             }
             return t;
         })(
@@ -75,12 +75,12 @@ function f(t) {
                 glowUp: l.intl.string(l.t.F6u3Ex),
                 secondaryCTA: l.intl.string(l.t.PcTCBw),
                 onSecondaryClick: function () {
-                    c.default.track(s.rMx.PREMIUM_PROMOTION_OPENED, {
+                    (c.default.track(s.rMx.PREMIUM_PROMOTION_OPENED, {
                         location_section: s.jXE.PREMIUM_FOR_LATER_UPSELL_MODAL,
                         location_object: s.qAy.NAVIGATION_LINK
                     }),
                         e(),
-                        (0, o.uL)(s.Z5c.APPLICATION_STORE);
+                        (0, o.uL)(s.Z5c.APPLICATION_STORE));
                 },
                 showEnhancedUpsell: !0,
                 analyticsSource: n,

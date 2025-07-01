@@ -1,4 +1,4 @@
-n.d(t, { default: () => V }), n(388685);
+(n.d(t, { default: () => V }), n(388685));
 var i = n(255367),
     r = n(73800),
     l = n(512722),
@@ -47,7 +47,7 @@ function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function q(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -63,8 +63,8 @@ function q(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -89,10 +89,10 @@ function z(e, t) {
 let V = r.memo(function (e) {
     let { guild: t, onClose: l, onSelect: V } = e,
         J = (0, o.e7)([L.default], () => L.default.getCurrentUser());
-    a()(null != J, 'GuildHeaderPopout: user cannot be undefined'),
+    (a()(null != J, 'GuildHeaderPopout: user cannot be undefined'),
         r.useEffect(() => {
             M.default.track(B.rMx.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: t.id });
-        });
+        }));
     let K = (0, o.e7)([U.ZP], () => U.ZP.isGuildCollapsed(t.id), [t.id]),
         {
             canAccessSettings: X,
@@ -352,7 +352,7 @@ let V = r.memo(function (e) {
                                                   icon: d.oFk,
                                                   action: () =>
                                                       (0, d.ZDy)(async () => {
-                                                          let { default: e } = await Promise.all([n.e('45094'), n.e('63228')]).then(n.bind(n, 218613));
+                                                          let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
                                                           return (n) =>
                                                               (0, i.jsx)(
                                                                   e,
@@ -369,7 +369,7 @@ let V = r.memo(function (e) {
                                                   icon: d.f1I,
                                                   action: () =>
                                                       (0, d.ZDy)(async () => {
-                                                          let { default: e } = await Promise.all([n.e('45094'), n.e('63228')]).then(n.bind(n, 218613));
+                                                          let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
                                                           return (n) =>
                                                               (0, i.jsx)(
                                                                   e,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -44,7 +44,7 @@ function _(e) {
                         intangibleBenefits: C,
                         subscriptionListings: N,
                         onImport: function (e, t) {
-                            O((t) => t.concat(e)), y((e) => e.concat(t));
+                            (O((t) => t.concat(e)), y((e) => e.concat(t)));
                         }
                     }),
                     (0, r.jsx)(l.LZC, { size: 8 }),

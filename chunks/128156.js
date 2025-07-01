@@ -13,9 +13,9 @@ var r = n(442837),
     p = n(369566),
     m = n(29899),
     b = n(151545),
-    y = n(744802),
-    _ = n(493043),
-    x = n(864141),
+    _ = n(744802),
+    x = n(493043),
+    y = n(864141),
     h = n(264481),
     g = n(693408),
     j = n(228168),
@@ -23,8 +23,8 @@ var r = n(442837),
     v = n(388032),
     O = n(514656);
 function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guildId: N, channelId: A, subsection: T, onClose: Z } = e,
-        { voiceActivityStatusEnabled: C } = (0, c.U)({ location: 'UserProfileModalV2Activity' }),
+    let { user: t, currentUser: n, displayProfile: P, guildId: N, channelId: A, subsection: T, onClose: C } = e,
+        { voiceActivityStatusEnabled: Z } = (0, c.U)({ location: 'UserProfileModalV2Activity' }),
         w = (0, f.b)({ location: 'UserProfileModalV2Activity' }),
         { live: S, recent: E, stream: B } = (0, p.Z)(t.id),
         { voiceChannel: L, voiceActivity: D } = (0, m.Z)({
@@ -38,7 +38,7 @@ function P(e) {
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         R = S.length > 0 || null != B,
-        G = C && null == B && null == D && null != L,
+        G = Z && null == B && null == D && null != L,
         V = !M && (R || G),
         F = E.length > 0;
     if (!V && !F && U)
@@ -67,12 +67,12 @@ function P(e) {
     if (!V && !F && !U) {
         var Y;
         return k
-            ? (0, o.jsx)(h.Uf, { onClose: Z })
+            ? (0, o.jsx)(h.Uf, { onClose: C })
             : (0, o.jsx)(h.P9, {
                   user: t,
                   guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
                   channelId: A,
-                  onClose: Z
+                  onClose: C
               });
     }
     return (0, o.jsxs)(i.Ttm, {
@@ -88,21 +88,21 @@ function P(e) {
                               !w &&
                                   G &&
                                   (0, o.jsx)('li', {
-                                      children: (0, o.jsx)(x.Z, {
+                                      children: (0, o.jsx)(y.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: L,
-                                          onClose: Z
+                                          onClose: C
                                       })
                                   }),
                               null != B &&
                                   (0, o.jsx)('li', {
-                                      children: (0, o.jsx)(_.Z, {
+                                      children: (0, o.jsx)(x.Z, {
                                           location: 'UserProfileModalV2Activity',
                                           user: t,
                                           currentUser: n,
                                           stream: B,
-                                          onClose: Z,
+                                          onClose: C,
                                           profileGuildId: null == P ? void 0 : P.guildId
                                       })
                                   }),
@@ -114,7 +114,7 @@ function P(e) {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
-                                              onClose: Z,
+                                              onClose: C,
                                               profileGuildId: null == P ? void 0 : P.guildId
                                           })
                                       },
@@ -124,11 +124,11 @@ function P(e) {
                               w &&
                                   G &&
                                   (0, o.jsx)('li', {
-                                      children: (0, o.jsx)(x.Z, {
+                                      children: (0, o.jsx)(y.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: L,
-                                          onClose: Z
+                                          onClose: C
                                       })
                                   })
                           ]
@@ -158,13 +158,13 @@ function P(e) {
                               (0, o.jsx)(
                                   'li',
                                   {
-                                      children: (0, o.jsx)(y.Z, {
+                                      children: (0, o.jsx)(_.Z, {
                                           location: 'UserProfileModalV2Activity',
                                           user: t,
                                           currentUser: n,
                                           entry: e,
                                           profileGuildId: null == P ? void 0 : P.guildId,
-                                          onClose: Z
+                                          onClose: C
                                       })
                                   },
                                   e.id

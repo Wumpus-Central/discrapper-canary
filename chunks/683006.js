@@ -1,7 +1,7 @@
 var r = n(896859);
 function i() {}
 function a() {}
-(a.resetWarningCache = i),
+((a.resetWarningCache = i),
     (e.exports = function () {
         function e(e, t, n, i, a, o) {
             if (o !== r) {
@@ -35,5 +35,5 @@ function a() {}
             checkPropTypes: a,
             resetWarningCache: i
         };
-        return (n.PropTypes = n), n;
-    });
+        return ((n.PropTypes = n), n);
+    }));

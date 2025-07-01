@@ -1,31 +1,31 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => i });
 var r = n(255367),
-    i = n(481060),
+    s = n(481060),
     l = n(575016),
     a = n(294117);
-function o(e) {
+function i(e) {
     let { reminder: t, throttledNow: n } = e,
-        { dueInText: o, isOverdue: s } = (0, l.AT)({
+        { dueInText: i, isOverdue: o } = (0, l.AT)({
             dueAt: null == t ? void 0 : t.saveData.dueAt,
             now: n,
             type: l.hQ.SHORT
         });
     if (null == t.saveData.dueAt) return null;
-    let c = s ? 'text-danger' : 'text-default';
+    let c = o ? 'text-danger' : 'text-default';
     return (0, r.jsxs)('div', {
         className: a.container,
         children: [
             (0, r.jsx)('div', {
                 className: a.icon,
-                children: (0, r.jsx)(i.T39, {
+                children: (0, r.jsx)(s.T39, {
                     size: 'xxs',
-                    color: 'text-danger' === c ? i.TVs.colors.TEXT_DANGER : i.TVs.colors.INTERACTIVE_ACTIVE
+                    color: 'text-danger' === c ? s.TVs.colors.TEXT_DANGER : s.TVs.colors.INTERACTIVE_ACTIVE
                 })
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(s.X6q, {
                 variant: 'text-md/semibold',
                 color: c,
-                children: o
+                children: i
             })
         ]
     });

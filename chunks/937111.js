@@ -43,17 +43,17 @@ function h(e) {
     };
 }
 function m(e) {
-    delete d[e], u === e && (u = null);
+    (delete d[e], u === e && (u = null));
 }
 function g(e) {
     let { guildJoinRequests: t } = e;
-    (f = !1),
+    ((f = !1),
         (_ = {}),
         (d = {}),
         t.forEach((e) => {
             let { guild_id: t } = e;
             null != t && (d[t] = h(e));
-        });
+        }));
 }
 function E(e) {
     let { request: t, guildId: n } = e;
@@ -95,7 +95,7 @@ function v(e) {
 }
 function I(e) {
     let { guilds: t } = e;
-    (f = !0),
+    ((f = !0),
         t.forEach((e) => {
             let { id: t, name: n, features: r, icon: i, splash: a } = e;
             _[t] = {
@@ -105,7 +105,7 @@ function I(e) {
                 icon: i,
                 splash: a
             };
-        });
+        }));
 }
 function T(e) {
     let { guildId: t, cooldown: n } = e;

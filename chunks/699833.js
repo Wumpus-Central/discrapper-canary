@@ -13,11 +13,11 @@ function p(e) {
     var t, i, l, p, m;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
     let f = e.message.embeds[0],
-        h = null != (l = null == (t = f.fields) ? void 0 : t.find((e) => e.rawName === s.Cg.CLASSIFICATION_ID)) ? l : void 0,
-        g = null != (p = null == h ? void 0 : h.rawValue) ? p : void 0,
-        _ = null != (m = null == (i = f.fields) ? void 0 : i.find((e) => e.rawName === s.Cg.INCIDENT_TIMESTAMP)) ? m : void 0,
-        b = null == _ || null == _.rawValue ? void 0 : parseFloat(_.rawValue);
-    return null == g || null == b
+        g = null != (l = null == (t = f.fields) ? void 0 : t.find((e) => e.rawName === s.Cg.CLASSIFICATION_ID)) ? l : void 0,
+        _ = null != (p = null == g ? void 0 : g.rawValue) ? p : void 0,
+        h = null != (m = null == (i = f.fields) ? void 0 : i.find((e) => e.rawName === s.Cg.INCIDENT_TIMESTAMP)) ? m : void 0,
+        b = null == h || null == h.rawValue ? void 0 : parseFloat(h.rawValue);
+    return null == _ || null == b
         ? null
         : (0, r.jsxs)(o.P3F, {
               onClick: () => {
@@ -25,7 +25,7 @@ function p(e) {
                       let { default: e } = await Promise.all([n.e('25183'), n.e('3940'), n.e('18831'), n.e('68464')]).then(n.bind(n, 41164));
                       return (t) =>
                           (0, r.jsx)(e, {
-                              classificationId: g,
+                              classificationId: _,
                               source: s.s.SystemDM,
                               transitionState: t.transitionState,
                               onClose: t.onClose

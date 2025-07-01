@@ -18,7 +18,7 @@ function u(n, t) {
                       id: i.id,
                       label: i.name,
                       action: (a) => {
-                          i.id !== u && d.ul(n.id, n.branchId, i.id), null == t || t(a);
+                          (i.id !== u && d.ul(n.id, n.branchId, i.id), null == t || t(a));
                       }
                   },
                   i.id

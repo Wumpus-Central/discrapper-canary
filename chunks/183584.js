@@ -1,16 +1,16 @@
-n.d(t, {
+(n.d(t, {
     IN: () => s,
     oZ: () => u
 }),
     n(255367),
-    n(73800);
+    n(73800));
 var r = n(570140),
     l = n(610394);
-n(238246), n(788983), n(592125), n(19780);
+(n(238246), n(788983), n(592125), n(19780));
 var i = n(237997);
-n(998502), n(487029);
+(n(998502), n(487029));
 var o = n(710111);
-n(981631), n(388032);
+(n(981631), n(388032));
 let a = {
     width: o.FW.width,
     height: o.FW.height,
@@ -28,7 +28,7 @@ let a = {
 function s(e, t) {
     let n = l.ZP.isOverlayV3EnabledForPID(t),
         o = i.default.disableClickableRegions;
-    n ||
+    (n ||
         o ||
         r.Z.dispatch({
             type: 'OVERLAY_SET_INPUT_LOCKED',
@@ -40,7 +40,7 @@ function s(e, t) {
             pid: t,
             enabled: !0,
             keepOpen: e
-        });
+        }));
 }
 function u(e) {
     r.Z.dispatch({
@@ -59,4 +59,4 @@ function u(e) {
             pid: e
         });
 }
-o.FW.padding, a.width, a.height;
+(o.FW.padding, a.width, a.height);

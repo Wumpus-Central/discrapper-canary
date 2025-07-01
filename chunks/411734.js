@@ -1,4 +1,4 @@
-n.d(t, { R: () => u }), n(388685);
+(n.d(t, { R: () => u }), n(388685));
 var r = n(255367),
     i = n(73800);
 let a = 'data-focus-blocked',
@@ -21,7 +21,7 @@ function c(e, t) {
                 for (; null !== n; ) {
                     let t = n,
                         i = t.tabIndex;
-                    (t.tabIndex = -1), t.setAttribute(r, String(i)), (n = e.nextNode());
+                    ((t.tabIndex = -1), t.setAttribute(r, String(i)), (n = e.nextNode()));
                 }
                 return () => {
                     t.querySelectorAll('['.concat(r, ']')).forEach((e) => {

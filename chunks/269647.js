@@ -37,12 +37,12 @@ function g() {
         e = l.Z.getMode() !== f.pM4.VOICE_ACTIVITY || null == n || n.isPrivate() || n.isGuildStageVoice() || c.Z.can(f.Plq.USE_VAD, n) || m(r);
     }
     if (p === e) return !1;
-    (h = e),
+    ((h = e),
         (p = e),
         a.Z.dispatch({
             type: 'SET_VAD_PERMISSION',
             hasPermission: p
-        });
+        }));
 }
 function E(e) {
     let { voiceStates: t } = e;

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Yn: () => o,
     ZP: () => c
 }),
-    n(415506);
+    n(415506));
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -11,7 +11,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -19,7 +19,7 @@ function l(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -27,8 +27,8 @@ function l(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -55,7 +55,7 @@ function o() {
     return new Promise((t) => {
         (0, r.ZDy)(
             async () => {
-                let { default: t } = await Promise.all([n.e('76540'), n.e('69422')]).then(n.bind(n, 628908));
+                let { default: t } = await Promise.all([n.e('76540'), n.e('35305')]).then(n.bind(n, 628908));
                 return (n) => (0, i.jsx)(t, a(l({}, n), { isTotp: e }));
             },
             {
@@ -67,12 +67,12 @@ function o() {
 }
 let c = {
     enableMFA: async function () {
-        await new Promise((e) => {
+        (await new Promise((e) => {
             (0, r.ZDy)(async () => {
                 let { default: t } = await Promise.all([n.e('1717'), n.e('23746')]).then(n.bind(n, 837651));
                 return (n) => (0, i.jsx)(t, a(l({}, n), { handleEnableMFASuccess: e }));
             });
         }),
-            await o();
+            await o());
     }
 };

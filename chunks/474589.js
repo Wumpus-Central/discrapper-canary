@@ -4,7 +4,7 @@ e.exports = function (e) {
         r = !1;
     if ('function' == typeof e) {
         try {
-            e.call('f', function (e, n, r) {
+            (e.call('f', function (e, n, r) {
                 'object' != typeof r && (t = !1);
             }),
                 e.call(
@@ -13,7 +13,7 @@ e.exports = function (e) {
                         n = 'string' == typeof this;
                     },
                     'x'
-                );
+                ));
         } catch (e) {
             r = !0;
         }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(525654),
@@ -27,7 +27,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -47,7 +47,7 @@ class h extends c.Z {
         s.Z.unsubscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'handlePermission', (e) => {
                 let { kind: t, granted: n } = e,
                     i = 'Firefox' === a().name ? d.BhN.ENABLE_MIC_FIREFOX : d.BhN.ENABLE_MIC_CHROME;
@@ -68,7 +68,7 @@ class h extends c.Z {
                         )
                     );
                 }
-            });
+            }));
     }
 }
 let m = new h();

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Cd: () => p,
     YR: () => b
 }),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(255367),
     l = n(73800),
     i = n(481060),
@@ -18,7 +18,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,8 +34,8 @@ function h(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -64,12 +64,12 @@ function p(e) {
         [S, v] = l.useState(y),
         C = async (e) => {
             let { mfaType: t, data: n } = e;
-            await p({
+            (await p({
                 mfaType: t,
                 data: n,
                 ticket: f.ticket
             }),
-                null != b && b();
+                null != b && b());
         },
         O = {
             mfaChallenge: f,

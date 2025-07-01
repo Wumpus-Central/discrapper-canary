@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => S,
     w: () => T
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -50,7 +50,7 @@ function I(e) {
                     (0, d.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, e);
                 }
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(y.intl.string(y.t['46Rs3t']), c.ToastType.FAILURE)), j(!x);
+                ((0, c.showToast)((0, c.createToast)(y.intl.string(y.t['46Rs3t']), c.ToastType.FAILURE)), j(!x));
             }
         };
     return (0, r.jsxs)('div', {
@@ -131,7 +131,7 @@ function E(e) {
                     (0, d.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, t);
                 }
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(y.intl.string(y.t['46Rs3t']), c.ToastType.FAILURE)), l(g);
+                ((0, c.showToast)((0, c.createToast)(y.intl.string(y.t['46Rs3t']), c.ToastType.FAILURE)), l(g));
             }
         };
     return (0, r.jsx)('div', {

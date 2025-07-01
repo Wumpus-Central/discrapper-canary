@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(472816), n(794429), n(953529);
+(n.d(t, { Z: () => y }), n(388685), n(472816), n(794429), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -45,13 +45,13 @@ function y(e) {
             setEditingRule: E
         },
         L = i.useRef(A);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         L.current = A;
     }),
         i.useEffect(() => {
             let { isInEditMode: e, setEditingRule: t } = L.current;
             e && t(null);
-        }, [P]);
+        }, [P]));
     let M = i.useCallback(
             (e, t) => {
                 if (null != e) {

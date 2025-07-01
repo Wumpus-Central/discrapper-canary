@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r,
     i = n(442837),
     l = n(570140),
     o = n(430824),
-    s = n(905128),
-    a = n(19394);
+    a = n(905128),
+    s = n(19394);
 function c(e, t, n) {
     return (
         t in e
@@ -30,7 +30,7 @@ class d extends (r = i.ZP.PersistedStore) {
         return u[e];
     }
 }
-c(d, 'displayName', 'GuildPowerupsNotificationStore'),
+(c(d, 'displayName', 'GuildPowerupsNotificationStore'),
     c(d, 'persistKey', 'GuildPowerupsNotificationStore'),
     c(d, 'migrations', [
         (e) => (
@@ -40,19 +40,19 @@ c(d, 'displayName', 'GuildPowerupsNotificationStore'),
             }),
             e
         )
-    ]);
+    ]));
 let h = new d(l.Z, {
     GUILD_POWERUPS_ACK_NOTIFICATION: function (e) {
         var t, n, r, i, l, d;
         let { guildId: h } = e,
             p = null != (n = null == (t = o.Z.getGuild(h)) ? void 0 : t.premiumSubscriberCount) ? n : 0,
-            f = s.Z.getStateForGuild(h),
-            g = (0, a.h)(null != (r = null == f ? void 0 : f.unlockedPowerups) ? r : {});
-        (l = (function (e) {
+            f = a.Z.getStateForGuild(h),
+            g = (0, s.h)(null != (r = null == f ? void 0 : f.unlockedPowerups) ? r : {});
+        ((l = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -60,7 +60,7 @@ let h = new d(l.Z, {
                     )),
                     r.forEach(function (t) {
                         c(e, t, n[t]);
-                    });
+                    }));
             }
             return e;
         })({}, u)),
@@ -83,7 +83,7 @@ let h = new d(l.Z, {
                   })(Object(d)).forEach(function (e) {
                       Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(d, e));
                   }),
-            (u = l);
+            (u = l));
     },
     GUILD_POWERUPS_RESET_NOTIFICATIONS: function () {
         u = {};

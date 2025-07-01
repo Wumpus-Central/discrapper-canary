@@ -16,7 +16,7 @@ function u(e) {
         { analyticsLocations: g } = (0, l.ZP)(),
         p = i.useCallback(
             (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     e.stopPropagation(),
                     (0, a.E6)({
                         guild: t,
@@ -25,7 +25,7 @@ function u(e) {
                         analyticsObject: c,
                         perks: u(),
                         targetPremiumGuildTier: m
-                    });
+                    }));
             },
             [g, c, o, t, u, m]
         );

@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Qw: () => u,
     ZP: () => _,
     mX: () => o,
     oC: () => l
 }),
-    n(415506);
+    n(415506));
 var r = n(252117);
 function i(e) {
     console.warn('[libdiscore] '.concat(e));
@@ -21,7 +21,7 @@ async function a() {
         } catch (e) {
             if (e instanceof ReferenceError || e instanceof WebAssembly.CompileError) throw (s(!0), i('Unsupported browser, skipping libdiscore, error: ['.concat(e.name, '] ').concat(e.message)), e);
             if (((a = e), delete n.c[842321], 0 == --o)) throw a;
-            i('Failed to import libdiscore-wasm, retrying... ('.concat(o, ' attempts left), ').concat(a.name, ': ').concat(a.message)), await (0, r.o2)(t);
+            (i('Failed to import libdiscore-wasm, retrying... ('.concat(o, ' attempts left), ').concat(a.name, ': ').concat(a.message)), await (0, r.o2)(t));
         }
 }
 function o() {
@@ -29,15 +29,15 @@ function o() {
     if (null != e) return e;
     {
         let e = (async () => {
-            await a(),
+            (await a(),
                 c(
                     await (0, r.wE)({
                         createPromise: () => n.e('18639').then(n.bind(n, 718493)),
                         webpackId: 718493
                     })
-                );
+                ));
         })();
-        return f(e), e;
+        return (f(e), e);
     }
 }
 function s(e) {

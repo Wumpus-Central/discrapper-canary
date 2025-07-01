@@ -7,7 +7,7 @@ let n = (0, u.createContext)(null),
     };
 class f extends u.Component {
     constructor(t) {
-        super(t), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = o);
+        (super(t), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = o));
     }
     static getDerivedStateFromError(t) {
         return {
@@ -19,12 +19,12 @@ class f extends u.Component {
         let { error: t } = this.state;
         if (null !== t) {
             for (var r, e, u = arguments.length, n = Array(u), f = 0; f < u; f++) n[f] = arguments[f];
-            null == (r = (e = this.props).onReset) ||
+            (null == (r = (e = this.props).onReset) ||
                 r.call(e, {
                     args: n,
                     reason: 'imperative-api'
                 }),
-                this.setState(o);
+                this.setState(o));
         }
     }
     componentDidCatch(t, r) {
@@ -44,13 +44,13 @@ class f extends u.Component {
             })(t.resetKeys, u)
         ) {
             var n, f;
-            null == (n = (f = this.props).onReset) ||
+            (null == (n = (f = this.props).onReset) ||
                 n.call(f, {
                     next: u,
                     prev: t.resetKeys,
                     reason: 'keys'
                 }),
-                this.setState(o);
+                this.setState(o));
         }
     }
     render() {

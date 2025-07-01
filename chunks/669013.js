@@ -5,7 +5,7 @@ function n(t, e) {
     this.num = Array(t.length - r + e);
     for (var o = 0; o < t.length - r; o++) this.num[o] = t[o + r];
 }
-(n.prototype = {
+((n.prototype = {
     get: function (t) {
         return this.num[t];
     },
@@ -23,4 +23,4 @@ function n(t, e) {
         return new n(r, 0).mod(t);
     }
 }),
-    (t.exports = n);
+    (t.exports = n));

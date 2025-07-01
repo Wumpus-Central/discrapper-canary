@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     B6: () => T,
     ZP: () => I,
     qc: () => S,
@@ -7,7 +7,7 @@ n.d(t, {
     n(388685),
     n(704826),
     n(35282),
-    n(539854);
+    n(539854));
 var r = n(738774),
     i = n(906411),
     a = n(889564),
@@ -96,7 +96,7 @@ let I = {
                 o.push(e);
                 continue;
             }
-            E.has(t) || o.push(e), g.has(t) && (null != e.id && a.add(e.id), m.has(t) && (l || t !== p.Z5.PREMIUM_LOCKED || (l = !0), s++));
+            (E.has(t) || o.push(e), g.has(t) && (null != e.id && a.add(e.id), m.has(t) && (l || t !== p.Z5.PREMIUM_LOCKED || (l = !0), s++)));
         }
         return {
             emojisDisabled: a,

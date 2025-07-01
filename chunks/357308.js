@@ -19,11 +19,11 @@ function v(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (a = a.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, a);
+            r.push.apply(r, a));
     }
     return r;
 }
@@ -53,7 +53,7 @@ var M = (function (e) {
                 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -61,7 +61,7 @@ var M = (function (e) {
             function () {
                 var e,
                     r = (0, c.Z)(d);
-                return (e = t ? Reflect.construct(r, arguments, (0, c.Z)(this).constructor) : r.apply(this, arguments)), (0, i.Z)(this, e);
+                return ((e = t ? Reflect.construct(r, arguments, (0, c.Z)(this).constructor) : r.apply(this, arguments)), (0, i.Z)(this, e));
             });
     function d(e) {
         var t;
@@ -185,7 +185,7 @@ var M = (function (e) {
         d
     );
 })(b.Component);
-(0, l.Z)(M, 'propTypes', {
+((0, l.Z)(M, 'propTypes', {
     getItemString: h().func.isRequired,
     nodeTypeIndicator: h().any,
     nodeType: h().string.isRequired,
@@ -207,4 +207,4 @@ var M = (function (e) {
         circularCache: [],
         level: 0,
         expandable: !0
-    });
+    }));

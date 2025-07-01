@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     A: () => k,
     Z: () => M
 }),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(46973),
@@ -45,7 +45,7 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -53,7 +53,7 @@ function R(e) {
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -61,11 +61,11 @@ function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -88,7 +88,7 @@ class k {
         this.actionContext = e;
     }
     trackViewerCount(e) {
-        (this.maxViewers = Math.max(e, this.maxViewers)), (this.numViewers = e);
+        ((this.maxViewers = Math.max(e, this.maxViewers)), (this.numViewers = e));
     }
     setNativePickerStyleUsed(e) {
         this.nativePickerStyleUsed = e;
@@ -106,7 +106,7 @@ class k {
         return (null != (e = this.endTime) ? e : t) - this.startTime;
     }
     constructor({ streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: r, numViewers: i, goLiveModalDurationMs: a }) {
-        C(this, 'streamRegion', void 0), C(this, 'streamApplication', void 0), C(this, 'streamSourceType', void 0), C(this, 'actionContext', void 0), C(this, 'maxViewers', void 0), C(this, 'nativePickerStyleUsed', void 0), C(this, 'startTime', void 0), C(this, 'endTime', void 0), C(this, 'goLiveModalDurationMs', void 0), C(this, 'numViewers', void 0), (this.streamRegion = e), (this.streamApplication = t), (this.streamSourceType = n), (this.actionContext = r), (this.maxViewers = i), (this.goLiveModalDurationMs = a), (this.numViewers = i);
+        (C(this, 'streamRegion', void 0), C(this, 'streamApplication', void 0), C(this, 'streamSourceType', void 0), C(this, 'actionContext', void 0), C(this, 'maxViewers', void 0), C(this, 'nativePickerStyleUsed', void 0), C(this, 'startTime', void 0), C(this, 'endTime', void 0), C(this, 'goLiveModalDurationMs', void 0), C(this, 'numViewers', void 0), (this.streamRegion = e), (this.streamApplication = t), (this.streamSourceType = n), (this.actionContext = r), (this.maxViewers = i), (this.goLiveModalDurationMs = a), (this.numViewers = i));
     }
 }
 class M extends s.Z {
@@ -115,7 +115,7 @@ class M extends s.Z {
         return p.default.getId() === e;
     }
     destroy(e) {
-        this._videoStreamStats.stop(), this._trackVideoEndStats(e), this._updateVideoStreamId.cancel(), this._updateVideoStreamId(null, null), this._updateVideoStreamId.flush(), super.destroy();
+        (this._videoStreamStats.stop(), this._trackVideoEndStats(e), this._updateVideoStreamId.cancel(), this._updateVideoStreamId(null, null), this._updateVideoStreamId.flush(), super.destroy());
     }
     streamUpdate(e) {
         let t = this._videoQuality;
@@ -178,7 +178,7 @@ class M extends s.Z {
     }
     _initializeEvents() {
         let e = !1;
-        this.on(l.z.State, (e, t, n) => {
+        (this.on(l.z.State, (e, t, n) => {
             if (
                 (o.Z.wait(() =>
                     o.Z.dispatch(
@@ -264,7 +264,7 @@ class M extends s.Z {
             }),
             this.on(l.z.VideoSourceQualityChanged, (e, t, n, r, i, a) => {
                 var s;
-                n === (null == (s = this._goLiveQualityManager) ? void 0 : s.getUserID()) && (this._goliveCurrentMaxResolution = r),
+                (n === (null == (s = this._goLiveQualityManager) ? void 0 : s.getUserID()) && (this._goliveCurrentMaxResolution = r),
                     o.Z.wait(() =>
                         o.Z.dispatch({
                             type: 'MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED',
@@ -275,7 +275,7 @@ class M extends s.Z {
                             maxFrameRate: i,
                             context: a
                         })
-                    );
+                    ));
             }),
             this.on(l.z.SecureFramesUpdate, () => {
                 o.Z.wait(() => {
@@ -289,7 +289,7 @@ class M extends s.Z {
                         userIds: e
                     });
                 });
-            });
+            }));
     }
     _getStreamAnalyticsProperties() {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: r } = this.analyticsContext,
@@ -338,7 +338,7 @@ class M extends s.Z {
             a = null,
             o = this._videoQuality;
         if (null == o) return;
-        (i = o.getNetworkStats()), (a = this.isOwner ? o.getCodecUsageStats('streamer', this.userId) : o.getCodecUsageStats('receiver', r));
+        ((i = o.getNetworkStats()), (a = this.isOwner ? o.getCodecUsageStats('streamer', this.userId) : o.getCodecUsageStats('receiver', r)));
         let s = null,
             l = (0, c.ln)(),
             f = u.Z.getSettings(),
@@ -349,7 +349,7 @@ class M extends s.Z {
                   }
                 : {},
             p = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
-        o.getOutboundStats().forEach((t) => {
+        (o.getOutboundStats().forEach((t) => {
             var r;
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 O.default.track(
@@ -381,7 +381,7 @@ class M extends s.Z {
                             device_performance_class: this.isOwner ? (0, d.Z)() : null
                         })
                     );
-            });
+            }));
     }
     _getExtraConnectionOptions() {
         return { streamUserId: (0, T.my)(this._streamKey).ownerId };
@@ -389,7 +389,7 @@ class M extends s.Z {
     constructor({ sessionId: e, streamKey: t, serverId: n, initialLayout: r, analyticsContext: a, isStreamer: s, parentMediaSessionId: l }) {
         let c = (0, T.my)(t),
             { guildId: u, channelId: d } = c;
-        super({
+        (super({
             userId: p.default.getId(),
             sessionId: e,
             guildId: u,
@@ -427,6 +427,6 @@ class M extends s.Z {
                 );
             }, 200)),
             this._videoStreamStats.start(),
-            this._initializeEvents();
+            this._initializeEvents());
     }
 }

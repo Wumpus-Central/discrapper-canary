@@ -17,7 +17,7 @@ function i(e, t, n) {
     );
 }
 var a = (function (e) {
-    return (e[(e.GENERAL = 0)] = 'GENERAL'), (e[(e.NO_FILE = 1)] = 'NO_FILE'), (e[(e.PROGRESS = 2)] = 'PROGRESS'), (e[(e.UPLOAD = 3)] = 'UPLOAD'), (e[(e.READ = 4)] = 'READ'), e;
+    return ((e[(e.GENERAL = 0)] = 'GENERAL'), (e[(e.NO_FILE = 1)] = 'NO_FILE'), (e[(e.PROGRESS = 2)] = 'PROGRESS'), (e[(e.UPLOAD = 3)] = 'UPLOAD'), (e[(e.READ = 4)] = 'READ'), e);
 })({});
 class o {
     get displayMessage() {
@@ -35,7 +35,7 @@ class o {
         }
     }
     constructor(e) {
-        i(this, 'code', void 0), (this.code = e);
+        (i(this, 'code', void 0), (this.code = e));
     }
 }
 let s = o;

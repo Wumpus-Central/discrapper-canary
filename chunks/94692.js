@@ -1,4 +1,4 @@
-s.d(e, { Z: () => g }), s(539854), s(388685);
+(s.d(e, { Z: () => g }), s(539854), s(388685));
 var l = s(255367),
     n = s(73800),
     a = s(442837),
@@ -37,7 +37,7 @@ class m extends n.PureComponent {
         this.fetchAllDirectoryMetadata();
     }
     componentDidUpdate(t) {
-        this.fetchAllDirectoryMetadata(), (this.props.requiredDiskKB !== t.requiredDiskKB || this.props.installationPathsMetadata !== t.installationPathsMetadata) && this.sendChange(this.props.value);
+        (this.fetchAllDirectoryMetadata(), (this.props.requiredDiskKB !== t.requiredDiskKB || this.props.installationPathsMetadata !== t.installationPathsMetadata) && this.sendChange(this.props.value));
     }
     getOptions() {
         let { installationPaths: t } = this.props,
@@ -116,7 +116,7 @@ class m extends n.PureComponent {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             p(this, 'state', { newInstallationPath: null }),
             p(this, 'fetchedMetadataPaths', new Set()),
             p(this, 'handleChange', (t) => {
@@ -124,7 +124,7 @@ class m extends n.PureComponent {
                     ? d.ZP.showOpenDialog(['openDirectory']).then((t) => {
                           if (null != t && t.length > 0) {
                               let e = t[0];
-                              this.setState({
+                              (this.setState({
                                   newInstallationPath:
                                       null !=
                                       this.props.installationPaths.find((t) => {
@@ -134,11 +134,11 @@ class m extends n.PureComponent {
                                           ? null
                                           : e
                               }),
-                                  this.sendChange(e);
+                                  this.sendChange(e));
                           }
                       })
                     : this.sendChange(t);
-            });
+            }));
     }
 }
 let g = a.ZP.connectStores([h.Z], () => ({

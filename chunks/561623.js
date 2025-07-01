@@ -1,4 +1,4 @@
-r.d(o, { default: () => x }), r(388685), r(415506);
+(r.d(o, { default: () => x }), r(388685), r(415506));
 var t = r(255367),
     n = r(73800),
     i = r(442837),
@@ -44,12 +44,12 @@ let x = (e) => {
                         t,
                         n = {},
                         i = Object.keys(e);
-                    for (t = 0; t < i.length; t++) (r = i[t]), o.indexOf(r) >= 0 || (n[r] = e[r]);
+                    for (t = 0; t < i.length; t++) ((r = i[t]), o.indexOf(r) >= 0 || (n[r] = e[r]));
                     return n;
                 })(e, o);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (t = 0; t < i.length; t++) (r = i[t]), !(o.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (n[r] = e[r]);
+                for (t = 0; t < i.length; t++) ((r = i[t]), !(o.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (n[r] = e[r]));
             }
             return n;
         })(e, ['daysLeft', 'premiumType', 'premiumSubscription', 'analyticsSource']);
@@ -100,7 +100,7 @@ let x = (e) => {
                 for (var o = 1; o < arguments.length; o++) {
                     var r = null != arguments[o] ? arguments[o] : {},
                         t = Object.keys(r);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (t = t.concat(
                             Object.getOwnPropertySymbols(r).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -108,7 +108,7 @@ let x = (e) => {
                         )),
                         t.forEach(function (o) {
                             var t;
-                            (t = r[o]),
+                            ((t = r[o]),
                                 o in e
                                     ? Object.defineProperty(e, o, {
                                           value: t,
@@ -116,8 +116,8 @@ let x = (e) => {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[o] = t);
-                        });
+                                    : (e[o] = t));
+                        }));
                 }
                 return e;
             })({}, M)),

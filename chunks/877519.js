@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(147913),
     i = n(70956),
     a = n(272008),
@@ -30,7 +30,7 @@ class g extends r.Z {
         (0, c.cB)({ location: u.dr.QUESTS_MANAGER }) && !o.Z.isFetchingCurrentQuests && ((0, a.xw)(), (0, a.w)(s.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'instantiatedAt', Date.now()),
             d(this, 'initialFetchTimerId', null),
             d(this, 'recurringFetchTimerId', null),
@@ -41,11 +41,11 @@ class g extends r.Z {
             }),
             d(this, 'handlePostConnectionOpen', () => {
                 let e = (0, l.G)({ location: u.dr.QUESTS_MANAGER });
-                window.clearTimeout(this.initialFetchTimerId),
+                (window.clearTimeout(this.initialFetchTimerId),
                     window.clearTimeout(this.recurringFetchTimerId),
                     (this.recurringFetchTimerId = window.setInterval(() => {
                         Date.now() - this.lastFetchAttemptedAt > f && this._fetch();
-                    }, _));
+                    }, _)));
                 let t = Math.floor(Math.random() * p);
                 this.initialFetchTimerId = window.setTimeout(() => {
                     !(Date.now() - t < o.Z.lastFetchedCurrentQuests) && (e || 0 === o.Z.lastFetchedCurrentQuests) && this._fetch();
@@ -59,7 +59,7 @@ class g extends r.Z {
                 !('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= h || ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch());
             }),
             d(this, 'handleLogout', () => {
-                window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), (this.lastFetchAttemptedAt = 0), (this.lastFetchedQuestForLocaleChangeAt = 0);
+                (window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), (this.lastFetchAttemptedAt = 0), (this.lastFetchedQuestForLocaleChangeAt = 0));
             }),
             d(this, 'actions', {
                 QUESTS_FETCH_CURRENT_QUESTS_BEGIN: this.handleQuestsFetchCurrentQuestsBegin,
@@ -67,7 +67,7 @@ class g extends r.Z {
                 RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
                 USER_SETTINGS_PROTO_UPDATE: this.handleUserSettingsProtoUpdate,
                 LOGOUT: this.handleLogout
-            });
+            }));
     }
 }
 let E = new g();

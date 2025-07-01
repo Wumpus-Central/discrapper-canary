@@ -24,7 +24,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -40,8 +40,8 @@ function C(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -100,28 +100,28 @@ function N(e) {
                         ));
         },
         f = () => {
-            m.default.track(
+            (m.default.track(
                 _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
                 y(C({}, (0, a.hH)(t)), {
                     action_taken: x.W$[x.W$.PREVIEW],
                     location: c
                 })
             ),
-                (0, g.di)(t);
+                (0, g.di)(t));
         },
         b = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(j.ku, {
                     guildId: t,
                     onEdit: () => {
-                        m.default.track(
+                        (m.default.track(
                             _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
                             y(C({}, (0, a.hH)(t)), {
                                 action_taken: x.W$[x.W$.EDIT_DEFAULT_CHANNELS],
                                 location: c
                             })
                         ),
-                            (0, g.$K)(x.PG.DEFAULT_CHANNELS);
+                            (0, g.$K)(x.PG.DEFAULT_CHANNELS));
                     },
                     disableGoodStatus: n
                 }),
@@ -129,14 +129,14 @@ function N(e) {
                 (0, r.jsx)(j.ap, {
                     guildId: t,
                     onEdit: () => {
-                        m.default.track(
+                        (m.default.track(
                             _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
                             y(C({}, (0, a.hH)(t)), {
                                 action_taken: x.W$[x.W$.EDIT_CUSTOMIZATION_QUESTIONS],
                                 location: c
                             })
                         ),
-                            (0, g.$K)(x.PG.CUSTOMIZATION_QUESTIONS);
+                            (0, g.$K)(x.PG.CUSTOMIZATION_QUESTIONS));
                     },
                     disableGoodStatus: n
                 }),
@@ -144,14 +144,14 @@ function N(e) {
                 (0, r.jsx)(j.P_, {
                     guildId: t,
                     onEdit: () => {
-                        m.default.track(
+                        (m.default.track(
                             _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
                             y(C({}, (0, a.hH)(t)), {
                                 action_taken: x.W$[x.W$.EDIT_HOME_SETTINGS],
                                 location: c
                             })
                         ),
-                            (0, g.$K)(x.PG.HOME_SETTINGS);
+                            (0, g.$K)(x.PG.HOME_SETTINGS));
                     },
                     disableGoodStatus: n
                 })

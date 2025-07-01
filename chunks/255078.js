@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Q: () => b,
     Z: () => y
 }),
-    n(388685);
+    n(388685));
 var r = n(512722),
     i = n.n(r),
     a = n(81825),
@@ -31,7 +31,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -47,11 +47,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -128,7 +128,7 @@ class b extends a.Z {
     }
     get planIdForCurrencies() {
         let e;
-        return this.isPremium ? (i()(this.planIdFromItems, 'Premium subscription has no planId for currencies'), (e = this.planIdFromItems)) : (e = this.planId), e;
+        return (this.isPremium ? (i()(this.planIdFromItems, 'Premium subscription has no planId for currencies'), (e = this.planIdFromItems)) : (e = this.planId), e);
     }
     get planIdFromItems() {
         return this.getCurrentSubscriptionPlanIdForGroup(Object.values(_.Xh));
@@ -205,7 +205,7 @@ class b extends a.Z {
         );
     }
     constructor(e) {
-        super(), p(this, 'id', void 0), p(this, 'type', void 0), p(this, 'items', void 0), p(this, 'createdAt', void 0), p(this, 'canceledAt', void 0), p(this, 'currentPeriodStart', void 0), p(this, 'currentPeriodEnd', void 0), p(this, 'status', void 0), p(this, 'paymentSourceId', void 0), p(this, 'paymentGateway', void 0), p(this, 'paymentGatewayPlanId', void 0), p(this, 'paymentGatewaySubscriptionId', void 0), p(this, 'trialId', void 0), p(this, 'trialEndsAt', void 0), p(this, 'renewalMutations', void 0), p(this, 'streakStartedAt', void 0), p(this, 'currency', void 0), p(this, 'pauseEndsAt', void 0), p(this, 'pauseReason', void 0), p(this, 'planId', void 0), p(this, 'additionalPlans', void 0), p(this, 'metadata', void 0), p(this, 'latestInvoice', void 0), p(this, 'useStorekitResubscribe', void 0), p(this, 'price', void 0), p(this, 'userId', void 0), p(this, 'eligiblePaymentGateways', void 0), p(this, 'priceChange', void 0), (this.id = e.id), (this.type = e.type), (this.items = e.items), (this.createdAt = e.createdAt), (this.canceledAt = e.canceledAt), (this.currentPeriodStart = e.currentPeriodStart), (this.currentPeriodEnd = e.currentPeriodEnd), (this.status = e.status), (this.paymentSourceId = e.paymentSourceId), (this.paymentGateway = e.paymentGateway), (this.paymentGatewayPlanId = e.paymentGatewayPlanId), (this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId), (this.trialId = e.trialId), (this.trialEndsAt = e.trialEndsAt), (this.renewalMutations = e.renewalMutations), (this.currency = e.currency), (this.pauseEndsAt = e.pauseEndsAt), (this.pauseReason = e.pauseReason), (this.metadata = e.metadata), (this.latestInvoice = e.latestInvoice), (this.useStorekitResubscribe = e.useStorekitResubscribe), (this.price = e.price), (this.userId = e.userId), (this.streakStartedAt = e.streakStartedAt), (this.eligiblePaymentGateways = e.eligiblePaymentGateways), (this.priceChange = e.priceChange);
+        (super(), p(this, 'id', void 0), p(this, 'type', void 0), p(this, 'items', void 0), p(this, 'createdAt', void 0), p(this, 'canceledAt', void 0), p(this, 'currentPeriodStart', void 0), p(this, 'currentPeriodEnd', void 0), p(this, 'status', void 0), p(this, 'paymentSourceId', void 0), p(this, 'paymentGateway', void 0), p(this, 'paymentGatewayPlanId', void 0), p(this, 'paymentGatewaySubscriptionId', void 0), p(this, 'trialId', void 0), p(this, 'trialEndsAt', void 0), p(this, 'renewalMutations', void 0), p(this, 'streakStartedAt', void 0), p(this, 'currency', void 0), p(this, 'pauseEndsAt', void 0), p(this, 'pauseReason', void 0), p(this, 'planId', void 0), p(this, 'additionalPlans', void 0), p(this, 'metadata', void 0), p(this, 'latestInvoice', void 0), p(this, 'useStorekitResubscribe', void 0), p(this, 'price', void 0), p(this, 'userId', void 0), p(this, 'eligiblePaymentGateways', void 0), p(this, 'priceChange', void 0), (this.id = e.id), (this.type = e.type), (this.items = e.items), (this.createdAt = e.createdAt), (this.canceledAt = e.canceledAt), (this.currentPeriodStart = e.currentPeriodStart), (this.currentPeriodEnd = e.currentPeriodEnd), (this.status = e.status), (this.paymentSourceId = e.paymentSourceId), (this.paymentGateway = e.paymentGateway), (this.paymentGatewayPlanId = e.paymentGatewayPlanId), (this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId), (this.trialId = e.trialId), (this.trialEndsAt = e.trialEndsAt), (this.renewalMutations = e.renewalMutations), (this.currency = e.currency), (this.pauseEndsAt = e.pauseEndsAt), (this.pauseReason = e.pauseReason), (this.metadata = e.metadata), (this.latestInvoice = e.latestInvoice), (this.useStorekitResubscribe = e.useStorekitResubscribe), (this.price = e.price), (this.userId = e.userId), (this.streakStartedAt = e.streakStartedAt), (this.eligiblePaymentGateways = e.eligiblePaymentGateways), (this.priceChange = e.priceChange));
         let t = this.renewalMutations,
             n = e.items[0].planId,
             r = null;
@@ -213,9 +213,9 @@ class b extends a.Z {
             let i = _.GP[e.items[0].planId],
                 a = i.interval,
                 s = i.intervalCount;
-            (n = (0, o.Xr)(e.items, a, s)), null != t && (r = (0, o.Xr)(t.items, a, s));
+            ((n = (0, o.Xr)(e.items, a, s)), null != t && (r = (0, o.Xr)(t.items, a, s)));
         } else null != t && t.items.length > 0 && (r = t.items[0].planId);
-        (this.planId = n), (this.additionalPlans = e.items.filter((e) => e.planId !== n)), null != t && null != r && ((t.planId = r), (t.additionalPlans = t.items.filter((e) => e.planId !== r)));
+        ((this.planId = n), (this.additionalPlans = e.items.filter((e) => e.planId !== n)), null != t && null != r && ((t.planId = r), (t.additionalPlans = t.items.filter((e) => e.planId !== r))));
     }
 }
 let y = b;

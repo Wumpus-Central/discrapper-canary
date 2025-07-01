@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     C: () => _,
     u: () => h
 }),
-    n(388685);
+    n(388685));
 var r = n(149765),
     i = n(668781),
     a = n(434404),
@@ -54,7 +54,7 @@ async function h(e, t, n) {
                 title: f.intl.string(f.t.ut7sq6),
                 body: f.intl.format(f.t['Zaz+ur'], {
                     onClick: () => {
-                        i.Z.close(), a.Z.open(o, d.pNK.ONBOARDING);
+                        (i.Z.close(), a.Z.open(o, d.pNK.ONBOARDING));
                     }
                 })
             }),

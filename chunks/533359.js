@@ -4,7 +4,7 @@ var r = n(22520),
     a = n(302885);
 function i(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
-    (e.prototype = r(t && t.prototype, {
+    ((e.prototype = r(t && t.prototype, {
         constructor: {
             value: e,
             writable: !0,
@@ -12,5 +12,5 @@ function i(e, t) {
         }
     })),
         o(e, 'prototype', { writable: !1 }),
-        t && (0, a.Z)(e, t);
+        t && (0, a.Z)(e, t));
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -9,7 +9,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -17,7 +17,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -25,8 +25,8 @@ function c(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -55,16 +55,16 @@ function u(e) {
                 n = null;
             switch (e) {
                 case s.Ux.PROFANITY:
-                    (t = a.intl.string(a.t['I+BDrK'])), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.hISCmp) }));
+                    ((t = a.intl.string(a.t['I+BDrK'])), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.hISCmp) })));
                     break;
                 case s.Ux.SEXUAL_CONTENT:
-                    (t = a.intl.string(a.t.URSMen)), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.oRQDBg) }));
+                    ((t = a.intl.string(a.t.URSMen)), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.oRQDBg) })));
                     break;
                 case s.Ux.SLURS:
-                    (t = a.intl.string(a.t.xjK2Mz)), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.oJYXBA) }));
+                    ((t = a.intl.string(a.t.xjK2Mz)), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.oJYXBA) })));
                     break;
                 default:
-                    (t = 'Error'), (n = 'Unrecognized list');
+                    ((t = 'Error'), (n = 'Unrecognized list'));
             }
             return {
                 headerText: t,
@@ -109,7 +109,7 @@ function m(e) {
         ),
         g = (e) => {
             let t = new Set(a);
-            t.has(e) ? t.delete(e) : t.add(e), o(t), m(Array.from(t));
+            (t.has(e) ? t.delete(e) : t.add(e), o(t), m(Array.from(t)));
         };
     return (0, r.jsxs)('div', {
         children: [

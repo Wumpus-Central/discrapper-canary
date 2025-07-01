@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(642613), n(388685);
+(n.d(t, { Z: () => h }), n(642613), n(388685));
 var a = n(255367),
     r = n(73800),
     l = n(481060),
@@ -12,7 +12,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -20,7 +20,7 @@ function m(e) {
             )),
             a.forEach(function (t) {
                 var a;
-                (a = n[t]),
+                ((a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: a,
@@ -28,12 +28,12 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a);
-            });
+                        : (e[t] = a));
+            }));
     }
     return e;
 }
-let p = {
+let x = {
     PremiumSubscriptionAprilMarketingDecoModal: async () => {
         let { default: e } = await n.e('18327').then(n.bind(n, 731433));
         return (t) => (0, a.jsx)(e, m({}, t));
@@ -46,7 +46,7 @@ let p = {
 function h() {
     let e = r.useMemo(
             () =>
-                Object.keys(p)
+                Object.keys(x)
                     .map((e) => ({
                         label: e,
                         value: e
@@ -79,7 +79,7 @@ function h() {
                                     popoutLayerContext: o.O$
                                 }),
                                 (0, a.jsx)(l.zxk, {
-                                    onClick: () => (0, l.ZDy)(p[t]),
+                                    onClick: () => (0, l.ZDy)(x[t]),
                                     children: 'Open'
                                 })
                             ]
@@ -97,7 +97,7 @@ function h() {
                             className: u.inputRow,
                             children: (0, a.jsx)(l.zxk, {
                                 onClick: () => {
-                                    (0, i.H)(!0), s.S.dispatch(c.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                                    ((0, i.H)(!0), s.S.dispatch(c.CkL.PREMIUM_SUBSCRIPTION_CREATED));
                                 },
                                 children: 'Open'
                             })

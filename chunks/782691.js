@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(704826), n(35282), n(539854), n(49124), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+(n.d(t, { Z: () => S }), n(388685), n(704826), n(35282), n(539854), n(49124), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -20,7 +20,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function E(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -36,8 +36,8 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -127,14 +127,14 @@ let C = {
             F = (e) => {
                 Z((t) => j(E({}, t), { [e]: null }));
             };
-        r.useEffect(() => {
+        (r.useEffect(() => {
             let e = t.config.effects;
             e.length > 0 &&
                 R(
                     [...e].map((e) => {
                         if (null != e.base64) {
                             let t = (0, h.$j)(e.base64);
-                            (e.src = t), w.current.push(t);
+                            ((e.src = t), w.current.push(t));
                         }
                         return e;
                     })
@@ -147,10 +147,10 @@ let C = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, h.$j)(n.base64);
-                            (n.src = e), w.current.push(e), Z((e) => j(E({}, e), { [t]: n }));
+                            ((n.src = e), w.current.push(e), Z((e) => j(E({}, e), { [t]: n })));
                         }
                     });
-            }, [t.config.stillFrames]);
+            }, [t.config.stillFrames]));
         let H = {
                 effect: t,
                 upsertConfig: n
@@ -173,10 +173,10 @@ let C = {
         }, [P, D, k]),
         r.useEffect(
             () => () => {
-                w.current.forEach((e) => {
+                (w.current.forEach((e) => {
                     URL.revokeObjectURL(e);
                 }),
-                    (w.current = []);
+                    (w.current = []));
             },
             []
         ),
@@ -329,7 +329,7 @@ let C = {
                                           children: (0, i.jsx)(c.zxk, {
                                               color: c.Ttl.BRAND,
                                               onClick: () => {
-                                                  v(!1), setTimeout(() => v(!0), 100);
+                                                  (v(!1), setTimeout(() => v(!0), 100));
                                               },
                                               children: 'Replay Animation'
                                           })
@@ -468,7 +468,7 @@ let C = {
                                           color: c.Ttl.RED,
                                           look: c.iLD.OUTLINED,
                                           onClick: () => {
-                                              R([]), Z(C);
+                                              (R([]), Z(C));
                                           },
                                           children: 'Clear Assets'
                                       })
@@ -541,7 +541,7 @@ let C = {
                                                                           R((n) => {
                                                                               let i = [...n],
                                                                                   r = n[t];
-                                                                              return (r.start = +e.target.value), (i[t] = r), i;
+                                                                              return ((r.start = +e.target.value), (i[t] = r), i);
                                                                           });
                                                                       },
                                                                       contentEditable: !0
@@ -563,7 +563,7 @@ let C = {
                                                                           R((n) => {
                                                                               let i = [...n],
                                                                                   r = n[t];
-                                                                              return (r.duration = +e.target.value), (i[t] = r), i;
+                                                                              return ((r.duration = +e.target.value), (i[t] = r), i);
                                                                           });
                                                                       },
                                                                       contentEditable: !0
@@ -590,7 +590,7 @@ let C = {
                                                                           R((n) => {
                                                                               let i = [...n],
                                                                                   r = n[t];
-                                                                              return (r.loop = e.target.checked), (i[t] = r), i;
+                                                                              return ((r.loop = e.target.checked), (i[t] = r), i);
                                                                           });
                                                                       }
                                                                   })
@@ -614,7 +614,7 @@ let C = {
                                                                                   R((n) => {
                                                                                       let i = [...n],
                                                                                           r = n[t];
-                                                                                      return (r.loopDelay = +e.target.value), (i[t] = r), i;
+                                                                                      return ((r.loopDelay = +e.target.value), (i[t] = r), i);
                                                                                   });
                                                                               },
                                                                               contentEditable: !0

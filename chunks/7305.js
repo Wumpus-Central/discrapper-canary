@@ -1,9 +1,9 @@
-t.d(n, {
+(t.d(n, {
     STEPS: () => U,
     default: () => B
 }),
     t(415506),
-    t(388685);
+    t(388685));
 var i = t(255367),
     l = t(73800),
     r = t(442837),
@@ -39,7 +39,7 @@ function A(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -47,7 +47,7 @@ function A(e) {
             )),
             i.forEach(function (n) {
                 var i;
-                (i = t[n]),
+                ((i = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: i,
@@ -55,8 +55,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = i);
-            });
+                        : (e[n] = i));
+            }));
     }
     return e;
 }
@@ -125,7 +125,7 @@ function k(e) {
                 onReturn: () => {
                     let e = Object.values(a),
                         n = e.length < 1 && null == l ? f.h8.PLAN_SELECT : f.h8.REVIEW;
-                    j && (n = f.h8.REVIEW), m && e.length < 1 && (n = f.h8.SELECT_FREE_SKU), r(n, { trackedFromStep: f.h8.PAYMENT_TYPE });
+                    (j && (n = f.h8.REVIEW), m && e.length < 1 && (n = f.h8.SELECT_FREE_SKU), r(n, { trackedFromStep: f.h8.PAYMENT_TYPE }));
                 }
             }),
         Object.getOwnPropertyDescriptors

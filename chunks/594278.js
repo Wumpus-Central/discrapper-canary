@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,7 +20,7 @@ let g = function (e) {
             (e, t) => {
                 j((n) => {
                     let r = n + t;
-                    return r < 0 ? (r = e.length - 1) : r > e.length - 1 && (r = 0), r;
+                    return (r < 0 ? (r = e.length - 1) : r > e.length - 1 && (r = 0), r);
                 });
             },
             [j]

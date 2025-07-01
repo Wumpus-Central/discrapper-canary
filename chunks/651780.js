@@ -80,7 +80,7 @@ let P = (e) => {
 function w() {
     i.useEffect(() => {
         a.Z.wait(() => {
-            (0, o.tZ)(), (0, d.Y2)();
+            ((0, o.tZ)(), (0, d.Y2)());
         });
     }, []);
     let e = (0, l.e7)([y.Z], () => y.Z.getGuild()),

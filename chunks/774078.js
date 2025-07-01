@@ -13,5 +13,5 @@ function s(e) {
             let t = (0, a.TD)(Date.now(), e);
             (0 === t.days && 0 === t.hours && 0 === t.minutes && 0 === t.seconds) || s || (c(), null == n || n());
         }, [e, s, c, n]);
-    return (0, o.Z)(u, s ? null : t), l;
+    return ((0, o.Z)(u, s ? null : t), l);
 }

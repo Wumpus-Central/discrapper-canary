@@ -5,34 +5,34 @@ n.d(t, {
 var r,
     i = n(255367),
     l = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(873546),
+    s = n(120356),
+    a = n.n(s),
+    o = n(873546),
     c = n(442837),
     u = n(573385),
     d = n(865672),
     h = n(481060),
     p = n(607070),
-    m = n(100527),
-    g = n(906732),
+    g = n(100527),
+    m = n(906732),
     f = n(385499),
     _ = n(372900),
     x = n(172751),
-    E = n(606318),
-    b = n(402235),
-    I = n(477734),
-    v = n(670188),
-    O = n(768581),
-    N = n(585483),
-    j = n(463396),
+    b = n(606318),
+    E = n(402235),
+    v = n(477734),
+    I = n(670188),
+    j = n(768581),
+    O = n(585483),
+    y = n(463396),
     S = n(935910),
-    y = n(981631),
+    N = n(981631),
     C = n(848697);
-function T(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -48,12 +48,12 @@ function T(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function A(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,39 +82,39 @@ function Z(e) {
 }
 function R(e) {
     var t;
-    let { author: n, message: r, channel: a, userOverride: f, compact: P = !1, withMentionPrefix: R = !1, showPopout: w = !1, hideGuildTag: L = !1, hideSystemTag: D = !1, className: k, onClick: M, onContextMenu: B, onPopoutRequestClose: G, renderPopout: U, renderRemixTag: F = !1, decorations: z, previewGuildId: V, subscribeToGroupId: H } = e,
-        K = l.useRef(null),
+    let { author: n, message: r, channel: s, userOverride: f, compact: P = !1, withMentionPrefix: R = !1, showPopout: w = !1, hideGuildTag: L = !1, hideSystemTag: D = !1, className: k, onClick: M, onContextMenu: B, onPopoutRequestClose: G, renderPopout: F, renderRemixTag: U = !1, decorations: z, previewGuildId: V, subscribeToGroupId: K } = e,
+        H = l.useRef(null),
         W = l.useContext(_.Z),
-        q = null != (t = null == a ? void 0 : a.guild_id) ? t : W,
-        { analyticsLocations: Y } = (0, g.ZP)(m.Z.USERNAME),
+        q = null != (t = null == s ? void 0 : s.guild_id) ? t : W,
+        { analyticsLocations: Y } = (0, m.ZP)(g.Z.USERNAME),
         J = R ? '@' : '',
         { nick: X, colorString: Q, colorStrings: $, colorRoleName: ee } = n,
         et = (0, c.e7)([p.Z], () => p.Z.roleStyle),
         en = 'username' === et,
-        er = (0, I.X$)(),
-        ei = (0, b.ZP)(null != V ? V : q, n.authorId),
+        er = (0, v.X$)(),
+        ei = (0, E.ZP)(null != V ? V : q, n.authorId),
         el = (0, S.Z)(r),
-        ea = l.useContext(u.d),
-        eo = ei && (0, E.S2)(n),
-        es = en && eo;
+        es = l.useContext(u.d),
+        ea = ei && (0, b.S2)(n),
+        eo = en && ea;
     l.useEffect(() => {
-        if (null == H || !es || null == ea) return;
-        let { setAnimate: e } = ea;
-        return N.S.subscribeKeyed(y.LPv.ANIMATE_CHAT_AVATAR, ''.concat(H, ':').concat(r.author.id), e), () => void N.S.unsubscribeKeyed(y.LPv.ANIMATE_CHAT_AVATAR, ''.concat(H, ':').concat(r.author.id), e);
-    }, [r.author.id, H, es, ea]);
+        if (null == K || !eo || null == es) return;
+        let { setAnimate: e } = es;
+        return (O.S.subscribeKeyed(N.LPv.ANIMATE_CHAT_AVATAR, ''.concat(K, ':').concat(r.author.id), e), () => void O.S.unsubscribeKeyed(N.LPv.ANIMATE_CHAT_AVATAR, ''.concat(K, ':').concat(r.author.id), e));
+    }, [r.author.id, K, eo, es]);
     let { gradientStyle: ec, gradientClassname: eu } = (0, h.Icv)({
             primaryColor: null == $ ? void 0 : $.primaryColor,
             secondaryColor: null == $ ? void 0 : $.secondaryColor,
             tertiaryColor: null == $ ? void 0 : $.tertiaryColor,
             roleStyle: 'username',
             includeConvenienceGlow: !0,
-            animateGradient: null == ea ? void 0 : ea.animate
+            animateGradient: null == es ? void 0 : es.animate
         }),
         ed = (0, d.EJ)(J + X),
         eh = {
-            className: o()([C.username, es && eu]),
+            className: a()([C.username, eo && eu]),
             style: (() => {
-                if (en) return es && null != $ ? A(T({}, ec), { textDecorationColor: null == $ ? void 0 : $.primaryColor }) : null != Q ? { color: Q } : void 0;
+                if (en) return eo && null != $ ? T(A({}, ec), { textDecorationColor: null == $ ? void 0 : $.primaryColor }) : null != Q ? { color: Q } : void 0;
             })(),
             onClick: M,
             onContextMenu: B,
@@ -133,21 +133,21 @@ function R(e) {
                     : null,
             [P, n.primaryGuild, q, r.author.id, L]
         ),
-        em = null != f ? f : r.author,
-        eg =
-            null != U && null != w
-                ? (0, i.jsx)(v.Z, {
-                      targetElementRef: K,
-                      user: em,
-                      renderPopout: U,
+        eg = null != f ? f : r.author,
+        em =
+            null != F && null != w
+                ? (0, i.jsx)(I.Z, {
+                      targetElementRef: H,
+                      user: eg,
+                      renderPopout: F,
                       shouldShow: w,
                       shouldPreload: el,
-                      position: s.tq ? 'window_center' : 'right',
+                      position: o.tq ? 'window_center' : 'right',
                       avatarUrl:
                           null != n.guildMemberAvatar && null != q
-                              ? (0, O.JM)({
+                              ? (0, j.JM)({
                                     guildId: q,
-                                    userId: em.id,
+                                    userId: eg.id,
                                     avatar: n.guildMemberAvatar,
                                     size: 80
                                 })
@@ -166,12 +166,12 @@ function R(e) {
                                               r,
                                               i = {},
                                               l = Object.keys(e);
-                                          for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                          for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                           return i;
                                       })(e, t);
                                   if (Object.getOwnPropertySymbols) {
                                       var l = Object.getOwnPropertySymbols(e);
-                                      for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                      for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                   }
                                   return i;
                               })(e, ['onClick']);
@@ -179,16 +179,16 @@ function R(e) {
                               children: [
                                   (0, i.jsx)(
                                       h.P3F,
-                                      A(
-                                          T(
+                                      T(
+                                          A(
                                               {
                                                   tag: 'span',
-                                                  innerRef: K
+                                                  innerRef: H
                                               },
                                               n,
                                               eh
                                           ),
-                                          { className: o()(eh.className, C.clickable, k) }
+                                          { className: a()(eh.className, C.clickable, k) }
                                       )
                                   ),
                                   ep
@@ -197,11 +197,11 @@ function R(e) {
                       }
                   })
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(h.P3F, A(T({}, eh), { className: o()(eh.className, k) })), ep]
+                      children: [(0, i.jsx)(h.P3F, T(A({}, eh), { className: a()(eh.className, k) })), ep]
                   }),
         ef = null != z ? z[0] : null,
         e_ = null != z ? z[1] : null;
-    return (0, i.jsxs)(g.Gt, {
+    return (0, i.jsxs)(m.Gt, {
         value: Y,
         children: [
             null != ef && !D && P
@@ -212,13 +212,13 @@ function R(e) {
             'dot' === et
                 ? (0, i.jsx)(h.FhE, {
                       color: Q,
-                      colors: eo ? $ : null,
+                      colors: ea ? $ : null,
                       name: ee,
                       className: C.roleDot,
-                      hoverOverride: null == ea ? void 0 : ea.animate
+                      hoverOverride: null == es ? void 0 : es.animate
                   })
                 : null,
-            eg,
+            em,
             !P &&
                 !L &&
                 (0, i.jsx)(x.ZP, {
@@ -229,7 +229,7 @@ function R(e) {
                 }),
             null != e_ ? e_ : null,
             null == ef || D || P ? null : ef,
-            null != r && (0, j.f)(r) && er && F ? (0, i.jsx)(Z, {}) : null
+            null != r && (0, y.f)(r) && er && U ? (0, i.jsx)(Z, {}) : null
         ]
     });
 }

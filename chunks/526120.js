@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     C3: () => E,
     Fg: () => g,
     Oh: () => y,
     cP: () => m,
     gp: () => b
 }),
-    n(388685);
+    n(388685));
 var r = n(544891),
     i = n(570140),
     a = n(904245),
@@ -88,7 +88,7 @@ let m = async (e) => {
             return;
         let r = c.Z.getChannel(t),
             _ = f.Z.getResourceForChannel(e, t);
-        null == e ||
+        (null == e ||
             s.Z.isFullServerPreview(e) ||
             null == r ||
             null == _ ||
@@ -104,7 +104,7 @@ let m = async (e) => {
                 messageId: d.default.castChannelIdAsMessageId(t),
                 flash: !1,
                 jumpType: o.SR.INSTANT
-            });
+            }));
     },
     b = (e, t) => {
         i.Z.dispatch({
@@ -114,7 +114,7 @@ let m = async (e) => {
         });
         let n = c.Z.getChannel(t),
             r = f.Z.getActionForChannel(e, t);
-        null == e ||
+        (null == e ||
             s.Z.isFullServerPreview(e) ||
             null == n ||
             null == r ||
@@ -124,7 +124,7 @@ let m = async (e) => {
                 server_guide_channel_type: 'member action',
                 channel_action_type: r.actionType
             }),
-            (0, l.Kh)(t);
+            (0, l.Kh)(t));
     },
     y = (e, t) => {
         if (

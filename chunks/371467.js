@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ey }), n(539854), n(388685), n(642613), n(290780);
+(n.d(t, { Z: () => ey }), n(539854), n(388685), n(642613), n(290780));
 var i,
     r = n(512722),
     o = n.n(r),
@@ -61,7 +61,7 @@ function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -69,7 +69,7 @@ function K(e) {
             )),
             i.forEach(function (t) {
                 Q(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -107,7 +107,7 @@ let J = 5 * N.Z.Millis.SECOND,
     er = [],
     eo = {};
 function el(e, t, n) {
-    null == eo[e] && (eo[e] = {}), (eo[e][t] = n);
+    (null == eo[e] && (eo[e] = {}), (eo[e][t] = n));
 }
 let ea = 30 * N.Z.Millis.MINUTE,
     es = 2 * N.Z.Millis.MINUTE;
@@ -130,10 +130,10 @@ function ed(e) {
     let i = en[n];
     if ((i.timer.stop(), (en = [...en]), t === H._1z.FOCUSED)) {
         let [e] = en.splice(n, 1);
-        (e = X(K({}, e), { status: t })), en.unshift(e), (ei = !0);
+        ((e = X(K({}, e), { status: t })), en.unshift(e), (ei = !0));
         return;
     }
-    t === H._1z.DISMISSED ? en.splice(n, 1) : (en[n] = X(K({}, i), { status: t })), ec();
+    (t === H._1z.DISMISSED ? en.splice(n, 1) : (en[n] = X(K({}, i), { status: t })), ec());
 }
 function ep(e) {
     let t = en.find((t) => t.type === R.kL.INCOMING_CALL && t.channelId === e);
@@ -158,7 +158,7 @@ function ef(e, t) {
                             -1 === i && (i = setTimeout(() => c.Z.updateNotificationStatus(e, o), null != n ? n : J));
                         },
                         stop() {
-                            clearTimeout(i), (i = -1);
+                            (clearTimeout(i), (i = -1));
                         }
                     };
                 })(i, n.expirationExternallyManaged, n.duration),
@@ -177,7 +177,7 @@ function ef(e, t) {
         let e = a.pop();
         ei || e.timer.stop();
     }
-    return ei || ((en = a), o.timer.start()), i;
+    return (ei || ((en = a), o.timer.start()), i);
 }
 function eh() {
     if (!(0, T.Yo)('OverlayNotificationStore') || D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.NOW_PLAYING)) return !1;
@@ -190,7 +190,7 @@ function eh() {
         })(),
         i = !1;
     for (let [n, r] of Object.entries(e))
-        (i =
+        ((i =
             i ||
             (function (e, t) {
                 var n, i;
@@ -243,7 +243,7 @@ function eh() {
                     !0
                 );
             })(n, r)),
-            t.add(n);
+            t.add(n));
     let r = new Set();
     for (let e of n) t.has(e) || r.add(e);
     let o = A.ZP.isOverlayV3EnabledForPID((0, Z.getPID)()) || null != A.ZP.getFocusedPID();
@@ -284,17 +284,17 @@ function em(e) {
     )
         return !1;
     let o = en.find((e) => e.type === R.kL.TEXT && e.channelId === t && e.messageType === H.uaV.CALL);
-    null != o && ed(o.id),
+    (null != o && ed(o.id),
         ef((0, V.Z)(r), {
             priority: R.Tu.HIGH,
             expirationExternallyManaged: !0,
             type: R.kL.INCOMING_CALL,
             channelId: r.id
-        });
+        }));
 }
 class eg extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, S.default, b.Z, D.Z), this.syncWith([b.Z], eh);
+        (this.waitFor(g.Z, S.default, b.Z, D.Z), this.syncWith([b.Z], eh));
     }
     getNotifications() {
         return en;
@@ -372,13 +372,13 @@ let ey = new eg(s.Z, {
         if (D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.TEXT_CHAT) || I.Z.disableNotifications || !(0, p.eF)(a, l)) return !1;
         let u = !O.Z.isSoundDisabled(C.Ay),
             f = null != (r = y.Z.getMessage(l, a.id)) ? r : (0, d.e5)(a);
-        ef((0, F.Z)(s, f, c, u), {
+        (ef((0, F.Z)(s, f, c, u), {
             type: R.kL.TEXT,
             channelId: s.id,
             expirationExternallyManaged: !0,
             messageType: a.type
         }),
-            eu();
+            eu());
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -387,7 +387,7 @@ let ey = new eg(s.Z, {
             (function (e) {
                 let t = en.length,
                     n = (en = en.filter((t) => t.type !== R.kL.TEXT || t.channelId !== e)).length !== t;
-                return n && ec(), n;
+                return (n && ec(), n);
             })(t)
         );
     },

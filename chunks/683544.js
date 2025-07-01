@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(35282);
+(n.d(t, { Z: () => C }), n(388685), n(35282));
 var r = n(255367),
     a = n(73800),
     i = n(209173),
@@ -57,7 +57,7 @@ let v = {
             R = a.useMemo(() => (null == T ? void 0 : T.filter((e) => e.type === i.s.APPLICATION)), [T]),
             Z = a.useCallback((e) => {
                 let { page: t, activeCategoryId: n, onSuccessCallback: r, guildId: a, fetchCounts: i } = e;
-                i &&
+                (i &&
                     c.yC({
                         query: _.EMPTY_QUERY,
                         guildId: a
@@ -71,25 +71,25 @@ let v = {
                             categoryId: n
                         },
                         onSuccessCallback: r
-                    });
+                    }));
             }, []);
         a.useEffect(() => {
-            j(),
+            (j(),
                 Z({
                     page: y,
                     activeCategoryId: n,
                     onSuccessCallback: () => {}
-                });
+                }));
         }, [n, j, Z, y]);
         let k = a.useCallback(
             (e, t) => {
-                (0, p.zZ)(b.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                ((0, p.zZ)(b.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: f.m_.SEARCH,
                     application_id: e,
                     load_id: L,
                     position: t
                 }),
-                    C(e);
+                    C(e));
             },
             [L, C]
         );

@@ -8,7 +8,7 @@ var r = n(481060),
 let c = new a.Z({
     onSwitchSuccess(e, t) {
         setTimeout(() => {
-            t && (0, i.uL)(s.Z5c.ME), (0, r.showToast)((0, r.createToast)(l.intl.formatToPlainString(l.t.wx7O3N, { username: e.username }), r.ToastType.SUCCESS));
+            (t && (0, i.uL)(s.Z5c.ME), (0, r.showToast)((0, r.createToast)(l.intl.formatToPlainString(l.t.wx7O3N, { username: e.username }), r.ToastType.SUCCESS)));
         }, 100);
     },
     onSwitchError() {

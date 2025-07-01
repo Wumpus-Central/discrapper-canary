@@ -24,10 +24,10 @@ let f = 'hideSuppressWarning',
     p = !0,
     h = !1;
 function m(e) {
-    (r = e.sessionId), (_ = !1);
+    ((r = e.sessionId), (_ = !1));
 }
 function g() {
-    (r = null), (i = null), (p = !0);
+    ((r = null), (i = null), (p = !0));
 }
 function E(e) {
     let { voiceStates: t } = e;
@@ -35,7 +35,7 @@ function E(e) {
 }
 function b(e) {
     let { forever: t } = e;
-    (p = !0), t && ((h = !0), s.K.set(f, h));
+    ((p = !0), t && ((h = !0), s.K.set(f, h)));
 }
 class y extends (a = o.ZP.Store) {
     initialize() {

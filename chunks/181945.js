@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(361932), n(187205), n(388685), n(539854);
+(n.d(t, { Z: () => p }), n(361932), n(187205), n(388685), n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(45114),
@@ -30,7 +30,7 @@ function p(e, t, n) {
         }));
     return (
         e.forEach((e) => {
-            r.push({
+            (r.push({
                 channelId: d.default.cast(e),
                 readStateType: _.W.GUILD_EVENT,
                 messageId: c.ZP.lastMessageId(e, _.W.GUILD_EVENT)
@@ -39,7 +39,7 @@ function p(e, t, n) {
                     channelId: d.default.cast(e),
                     readStateType: _.W.GUILD_ONBOARDING_QUESTION,
                     messageId: o.Z.ackIdForGuild(e)
-                });
+                }));
         }),
         u.default.track(f.rMx.MARK_AS_READ, {
             source: t,

@@ -1,4 +1,4 @@
-n.d(t, { B: () => u }), n(388685);
+(n.d(t, { B: () => u }), n(388685));
 var r = n(786761),
     i = n(23750),
     l = n(306680),
@@ -20,7 +20,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -66,7 +66,7 @@ class u {
     messageRecord(e) {
         var t;
         let n = this.messages.get(e);
-        return null == n || null == n.message || n.message instanceof i.ZP || (n.message = (0, r.e5)(n.message)), null != (t = null == n ? void 0 : n.message) ? t : null;
+        return (null == n || null == n.message || n.message instanceof i.ZP || (n.message = (0, r.e5)(n.message)), null != (t = null == n ? void 0 : n.message) ? t : null);
     }
     has(e) {
         return this.messages.has(e);
@@ -98,6 +98,6 @@ class u {
         this.messages.delete(e);
     }
     constructor() {
-        o(this, 'localNeeded', !0), o(this, 'messages', new Map());
+        (o(this, 'localNeeded', !0), o(this, 'messages', new Map()));
     }
 }

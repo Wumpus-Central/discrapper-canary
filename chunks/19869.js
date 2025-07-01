@@ -1,4 +1,4 @@
-n.d(t, { O: () => T }), n(388685);
+(n.d(t, { O: () => T }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(693789),
@@ -82,7 +82,7 @@ function I() {
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
-                            (0, a.xf)(),
+                            ((0, a.xf)(),
                                 (0, u.s1)().location.pathname.includes(O.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
@@ -92,7 +92,7 @@ function I() {
                                 e({
                                     forceOpen: !0,
                                     delayMS: 200
-                                });
+                                }));
                         },
                         children: 'Open Balance Widget Coachmark'
                     })
@@ -162,10 +162,10 @@ function I() {
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
-                            p(null),
+                            (p(null),
                                 setTimeout(() => {
                                     p(t);
-                                }, x);
+                                }, x));
                         },
                         children: 'Simulate Loading State'
                     }),
@@ -264,12 +264,12 @@ function y() {
                                                     i,
                                                     r = {},
                                                     s = Object.keys(e);
-                                                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                                                for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                                                 return r;
                                             })(e, t);
                                         if (Object.getOwnPropertySymbols) {
                                             var s = Object.getOwnPropertySymbols(e);
-                                            for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                                            for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                                         }
                                         return r;
                                     })(t, ['onClose']);
@@ -279,7 +279,7 @@ function y() {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 i = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                 (i = i.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -287,7 +287,7 @@ function y() {
                                                 )),
                                                 i.forEach(function (t) {
                                                     var i;
-                                                    (i = n[t]),
+                                                    ((i = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: i,
@@ -295,8 +295,8 @@ function y() {
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[t] = i);
-                                                });
+                                                            : (e[t] = i));
+                                                }));
                                         }
                                         return e;
                                     })({}, l)),

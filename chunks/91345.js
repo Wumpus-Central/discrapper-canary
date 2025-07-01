@@ -11,7 +11,7 @@ e.exports = !r(function () {
     return (
         (e.pathname = 'c%20d'),
         t.forEach(function (e, n) {
-            t.delete('b'), (r += n + e);
+            (t.delete('b'), (r += n + e));
         }),
         n.delete('a', 2),
         n.delete('b', void 0),

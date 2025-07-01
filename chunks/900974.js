@@ -12,7 +12,7 @@ let a = !1,
                 if (null != t && t.length > 0) {
                     var l;
                     if (o === t[0] || null == (o = t[0])) return;
-                    (l = o),
+                    ((l = o),
                         a ||
                             ((a = !0),
                             (0, i.ZDy)(async () => {
@@ -25,7 +25,7 @@ let a = !1,
                                         onClose: () => ((a = !1), i())
                                     });
                                 };
-                            }));
+                            })));
                 }
             });
         }

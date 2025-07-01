@@ -1,4 +1,4 @@
-n.d(t, { default: () => P }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
+(n.d(t, { default: () => P }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -34,7 +34,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,11 +50,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -78,13 +78,13 @@ function N(e) {
         [d, f] = i.useState(!1),
         [_, p] = i.useState({}),
         h = i.useRef(null);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         if ((null != h.current && f(!1), null == s)) return;
         let e = URL.createObjectURL(s);
         return (
             u(e),
             () => {
-                u(void 0), URL.revokeObjectURL(e);
+                (u(void 0), URL.revokeObjectURL(e));
             }
         );
     }, [s]),
@@ -93,7 +93,7 @@ function N(e) {
             null != e &&
                 (e.onload = () => {
                     let t = Math.max(0.66, Math.min(e.naturalWidth / e.naturalHeight, 4));
-                    1 === t
+                    (1 === t
                         ? p({
                               width: S,
                               height: S
@@ -107,9 +107,9 @@ function N(e) {
                                 width: void 0,
                                 height: S / t
                             }),
-                        f(!0);
+                        f(!0));
                 });
-        }, []);
+        }, []));
     let m = (0, c.Z)(h),
         g = Math.max(16, (A + S - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
     return (0, r.jsx)('img', {
@@ -136,13 +136,13 @@ class C extends i.Component {
 class R extends i.Component {
     componentDidMount() {
         var e;
-        (null == (e = this.props.upload) ? void 0 : e.showLargeMessageDialog) &&
+        ((null == (e = this.props.upload) ? void 0 : e.showLargeMessageDialog) &&
             this.props.upload.item.platform === u.ow.WEB &&
             p.default.track(g.rMx.OPEN_MODAL, {
                 type: 'Upload Large Message',
                 message_content_length: this.props.upload.item.file.size
             }),
-            h.isPlatformEmbedded && m.ZP.focus();
+            h.isPlatformEmbedded && m.ZP.focus());
     }
     shouldComponentUpdate(e) {
         return null != e.upload;
@@ -258,9 +258,9 @@ class R extends i.Component {
     }
     constructor(e) {
         var t, n, r, i, a, o;
-        super(e),
+        (super(e),
             O(this, 'cancelAll', () => {
-                l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose();
+                (l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose());
             }),
             O(this, 'cancel', () => {
                 this.props.onClose();
@@ -274,14 +274,14 @@ class R extends i.Component {
             O(this, 'handleSubmit', () => {
                 let { upload: e, onClose: t, onSubmit: n } = this.props,
                     { filename: r, description: i, hasSpoiler: a } = this.state;
-                n({
+                (n({
                     upload: e,
                     name: r,
                     description: i,
                     spoiler: a
                 }),
-                    t();
-            });
+                    t());
+            }));
         let s = e.ignoreDraft ? '' : _.Z.getDraft(this.props.channelId, e.draftType);
         this.state = T(v({}, (0, d.eK)(s)), {
             textFocused: !0,

@@ -65,11 +65,11 @@ t.exports = function (t, e) {
             (w = w.withMutations(function (t) {
                 var e = m.getKey(),
                     r = _.getKey();
-                l(m.getParentKey(), t, function (t) {
+                (l(m.getParentKey(), t, function (t) {
                     var n = t.getChildKeys(),
                         i = n.indexOf(e) + 1,
                         o = n.toArray();
-                    return o.splice(i, 0, r), t.merge({ children: s(o) });
+                    return (o.splice(i, 0, r), t.merge({ children: s(o) }));
                 }),
                     l(m.getNextSiblingKey(), t, function (t) {
                         return t.merge({ prevSibling: r });
@@ -79,7 +79,7 @@ t.exports = function (t, e) {
                     }),
                     l(r, t, function (t) {
                         return t.merge({ prevSibling: e });
-                    });
+                    }));
             }))),
         t.merge({
             blockMap: w,

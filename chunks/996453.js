@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     G: () => g,
     Z: () => p
 }),
-    n(388685);
+    n(388685));
 var i = n(255367),
     s = n(73800),
     l = n(481060),
@@ -34,12 +34,12 @@ function g(e) {
     let D = s.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != n)) {
-                    S(!0), T(null);
+                    (S(!0), T(null));
                     try {
                         if (null != f) f(N, y);
                         else {
                             let e = await m.Z.createGuildFromTemplate(N, y, n, L, O);
-                            r.Z.transitionToGuildSync(e.id), null == j || j(e.id);
+                            (r.Z.transitionToGuildSync(e.id), null == j || j(e.id));
                         }
                     } catch (e) {
                         T(e);

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     A: () => i,
     Z: () => a
 }),
-    n(388685);
+    n(388685));
 let r = Object.freeze({
         DARK: 'dark',
         LIGHT: 'light',

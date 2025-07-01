@@ -53,7 +53,7 @@ function u(e, t, n, a, s) {
         b = g.dragPreviewHeight,
         y = function () {
             var e = new i.I([0, 0.5, 1], [f.y, (f.y / p) * b, f.y + b - p]).interpolate(m);
-            return (0, r.G)() && u && (e += (window.devicePixelRatio - 1) * b), e;
+            return ((0, r.G)() && u && (e += (window.devicePixelRatio - 1) * b), e);
         },
         O = function () {
             return new i.I([0, 0.5, 1], [f.x, (f.x / _) * E, f.x + E - _]).interpolate(h);

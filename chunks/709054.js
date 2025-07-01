@@ -1,9 +1,9 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         DISCORD_EPOCH: () => a.cj,
         SnowflakeSequence: () => a.Tk,
         default: () => s
-    });
+    }));
 var r = n(392711),
     i = n.n(r),
     a = n(67423);

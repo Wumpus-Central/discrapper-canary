@@ -3,19 +3,19 @@ var r = n(255367);
 n(73800);
 var i = n(710845),
     l = n(620662),
-    a = n(915863),
-    o = n(981631),
+    o = n(915863),
+    a = n(981631),
     s = n(388032);
 function c(e) {
     let { activity: t, user: n, look: c, color: u, onAction: d } = e;
-    return (0, l.Z)(t, o.xjy.INSTANCE)
+    return (0, l.Z)(t, a.xjy.INSTANCE)
         ? (0, r.jsx)(
-              a.Z,
+              o.Z,
               {
                   look: c,
                   color: u,
                   onClick: () => {
-                      null == d || d(), new i.Z('UserActivityActions').log('notify', n.id, t);
+                      (null == d || d(), new i.Z('UserActivityActions').log('notify', n.id, t));
                   },
                   fullWidth: !0,
                   children: s.intl.string(s.t.vwl1PD)

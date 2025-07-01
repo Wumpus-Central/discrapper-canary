@@ -1,8 +1,8 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         transitionToGlobalDiscovery: () =>
             function e(t) {
-                var n, x, b;
+                var n, p, b;
                 let f = t.tab;
                 switch ((d.Z.setState({ selectedTab: f }), f)) {
                     case u.GlobalDiscoveryTab.SERVERS:
@@ -13,7 +13,7 @@ n.r(t),
                                       selectedTab: v,
                                       entrypoint: null != (n = t.entrypoint) ? n : h.Qq.UNKNOWN
                                   })
-                                : l.Z.setState({ entrypoint: null != (x = t.entrypoint) ? x : h.Qq.UNKNOWN }),
+                                : l.Z.setState({ entrypoint: null != (p = t.entrypoint) ? p : h.Qq.UNKNOWN }),
                             (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
                         );
                     case u.GlobalDiscoveryTab.APPS:
@@ -65,14 +65,14 @@ n.r(t),
                                 );
                         }
                         if (null != t.applicationId) {
-                            if (t.section === p.GlobalDiscoveryAppsSections.STORE)
+                            if (t.section === x.GlobalDiscoveryAppsSections.STORE)
                                 if (null != t.skuId) return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId));
-                                else return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, p.GlobalDiscoveryAppsSections.STORE));
+                                else return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, x.GlobalDiscoveryAppsSections.STORE));
                             return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
                         }
                         if (null != t.query) {
                             let e = new URLSearchParams();
-                            return '' !== t.query && e.set('q', t.query), null != t.categoryId && e.set('category_id', t.categoryId.toString()), null != t.page && e.set('page', t.page.toString()), (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() });
+                            return ('' !== t.query && e.set('q', t.query), null != t.categoryId && e.set('category_id', t.categoryId.toString()), null != t.page && e.set('page', t.page.toString()), (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() }));
                         }
                         if (null != t.categoryId) return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
                         else return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS);
@@ -91,7 +91,7 @@ n.r(t),
     n(490233),
     n(97749),
     n(388685),
-    n(415506);
+    n(415506));
 var a = n(258971),
     r = n(726115),
     l = n(859921),
@@ -102,5 +102,5 @@ var a = n(258971),
     d = n(836768),
     u = n(49898),
     m = n(981631),
-    p = n(979007),
+    x = n(979007),
     h = n(128449);

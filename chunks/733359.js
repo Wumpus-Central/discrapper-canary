@@ -45,7 +45,7 @@ t.exports = {
         return e;
     },
     substring: function (t, e, r) {
-        (e = e || 0) < 0 && (e = 0), (r = void 0 === r ? 1 / 0 : r || 0) < 0 && (r = 0);
+        ((e = e || 0) < 0 && (e = 0), (r = void 0 === r ? 1 / 0 : r || 0) < 0 && (r = 0));
         var n = Math.abs(r - e);
         return s(t, (e = e < r ? e : r), n);
     },

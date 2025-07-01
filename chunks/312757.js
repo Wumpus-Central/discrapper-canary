@@ -15,7 +15,7 @@ function c(t) {
         E = (0, s.qY)(n.id);
     if (null == E) return null;
     let T = () => {
-        l.default.selectVoiceChannel(null), c();
+        (l.default.selectVoiceChannel(null), c());
     };
     return (0, e.jsxs)(d.Y0X, {
         transitionState: i,
@@ -58,7 +58,7 @@ function c(t) {
                     (0, e.jsx)(d.zxk, {
                         color: d.zxk.Colors.RED,
                         onClick: () => {
-                            _.Z.endEvent(E.id, E.guild_id), T();
+                            (_.Z.endEvent(E.id, E.guild_id), T());
                         },
                         children: p.intl.string(p.t.mjB9pa)
                     }),

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     g: () => c,
     mM: () => d,
     tr: () => u
 }),
-    n(442837);
+    n(442837));
 var r = n(430824),
     i = n(914010),
     a = n(369274),
@@ -24,13 +24,13 @@ function d(e) {
     return new Promise((t, n) => {
         if (i.Z.getGuildId() === e) return void t();
         let r = setTimeout(() => {
-                o(), n();
+                (o(), n());
             }, s),
             a = () => {
                 i.Z.getGuildId() === e && (o(), t());
             },
             o = () => {
-                i.Z.removeChangeListener(a), clearTimeout(r);
+                (i.Z.removeChangeListener(a), clearTimeout(r));
             };
         i.Z.addChangeListener(a);
     });

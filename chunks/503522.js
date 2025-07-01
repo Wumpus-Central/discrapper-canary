@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(147913),
     i = n(579806),
     a = n(710845),
@@ -21,22 +21,22 @@ let c = new a.Z('OverlayContentProtectionManagerV3');
 class u extends r.Z {
     constructor(...e) {
         var t;
-        super(...e),
+        (super(...e),
             (t = this),
             l(this, 'shouldEnable', !1),
             l(this, 'enabled', !1),
             l(this, 'setContentProtection', (e) => {
-                (this.shouldEnable = e), this.flushContentProtection();
+                ((this.shouldEnable = e), this.flushContentProtection());
             }),
             l(this, 'resetWindowState', function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                (t.enabled = !1), e && t.flushContentProtection();
+                ((t.enabled = !1), e && t.flushContentProtection());
             }),
             l(this, 'flushContentProtection', () => {
                 try {
                     var e, t;
                     if (this.enabled === this.shouldEnable) return;
-                    null === i.Z || void 0 === i.Z || null == (e = (t = i.Z.window).setWindowContentProtection) || e.call(t, s.$J, this.shouldEnable), (this.enabled = this.shouldEnable);
+                    (null === i.Z || void 0 === i.Z || null == (e = (t = i.Z.window).setWindowContentProtection) || e.call(t, s.$J, this.shouldEnable), (this.enabled = this.shouldEnable));
                 } catch (e) {
                     c.error('Error setting content protection:', e);
                 }
@@ -50,7 +50,7 @@ class u extends r.Z {
                 STREAM_STOP: () => {
                     null == o.Z.getCurrentUserActiveStream() && this.setContentProtection(!1);
                 }
-            });
+            }));
     }
 }
 let d = new u();

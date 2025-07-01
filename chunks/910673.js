@@ -34,7 +34,7 @@ let A = (e) => {
             [t, A]
         ),
         N = r.useCallback(() => {
-            v(),
+            (v(),
                 T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
                 (0, i.ZDy)(async () => {
                     let { default: e } = await n(788679);
@@ -45,7 +45,7 @@ let A = (e) => {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         l = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (l = l.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -53,7 +53,7 @@ let A = (e) => {
                                         )),
                                         l.forEach(function (t) {
                                             var l;
-                                            (l = n[t]),
+                                            ((l = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: l,
@@ -61,8 +61,8 @@ let A = (e) => {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = l);
-                                        });
+                                                    : (e[t] = l));
+                                        }));
                                 }
                                 return e;
                             })(
@@ -73,7 +73,7 @@ let A = (e) => {
                                 n
                             )
                         );
-                });
+                }));
         }, [t, A, v, T]);
     r.useEffect(() => {
         (0, _.aP)({
@@ -87,14 +87,14 @@ let A = (e) => {
             M
                 ? m.intl.format(m.t['TGqx+v'], {
                       handleOnHelpUrlHook: () => {
-                          s.Z.openUrl(E.Z.getArticleURL(f.BhN.TIGGER_PAWTECT_LEARN_MORE)), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                          (s.Z.openUrl(E.Z.getArticleURL(f.BhN.TIGGER_PAWTECT_LEARN_MORE)), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE));
                       }
                   })
                 : b
                   ? null
                   : m.intl.format(m.t.Ge0HUl, {
                         handleFalsePositiveHook: () => {
-                            N(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
+                            (N(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE));
                         }
                     }),
         [M, b, N, T]
@@ -138,7 +138,7 @@ let A = (e) => {
                                 ? (0, l.jsx)(i.zxk, {
                                       color: i.zxk.Colors.BRAND,
                                       onClick: function () {
-                                          v(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE);
+                                          (v(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE));
                                       },
                                       fullWidth: !0,
                                       children: m.intl.string(m.t.KPGVWl)
@@ -147,7 +147,7 @@ let A = (e) => {
                                   ? (0, l.jsx)(i.zxk, {
                                         color: i.zxk.Colors.BRAND,
                                         onClick: function () {
-                                            T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), o.Z.open(f.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: C.FY.EXPLICIT_MEDIA_REDACTION_V2 }), v();
+                                            (T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), o.Z.open(f.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: C.FY.EXPLICIT_MEDIA_REDACTION_V2 }), v());
                                         },
                                         fullWidth: !0,
                                         children: m.intl.string(m.t['9D+zGR'])
@@ -163,7 +163,7 @@ let A = (e) => {
                             (0, l.jsx)(i.zxk, {
                                 color: i.zxk.Colors.PRIMARY,
                                 onClick: function () {
-                                    v(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
+                                    (v(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS));
                                 },
                                 fullWidth: !0,
                                 children: m.intl.string(m.t.bmbHPD)

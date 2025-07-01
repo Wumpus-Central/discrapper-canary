@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     ZM: () => g,
     gx: () => u,
     mN: () => h,
     re: () => p
 }),
-    n(539854);
+    n(539854));
 var i = n(442837),
     r = n(780384),
     s = n(594174),
@@ -21,7 +21,7 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 t.length < 3 && t.push(n);
             },
             s = f();
-        return r(i ? { card: n.voiceFilters } : { card: n.nameplates }), null != n.tenureBadge && r({ card: n.tenureBadge }), r({ card: n.permadecos }), s ? 0 === t.length && r({ card: n.specialShopPerks }) : r({ card: n.referralProgram }), r({ card: n.newAppStylesUpdateJune2024 }), r({ card: n.serverProfiles }), r({ card: n.earlyAccess }), r({ card: n.unlimitedSuperReactions }), t;
+        return (r(i ? { card: n.voiceFilters } : { card: n.nameplates }), null != n.tenureBadge && r({ card: n.tenureBadge }), r({ card: n.permadecos }), s ? 0 === t.length && r({ card: n.specialShopPerks }) : r({ card: n.referralProgram }), r({ card: n.newAppStylesUpdateJune2024 }), r({ card: n.serverProfiles }), r({ card: n.earlyAccess }), r({ card: n.unlimitedSuperReactions }), t);
     },
     g = (e) => {
         let { perksCards: t, variant: n, hideCardsOnNarrowScreen: i, isPremiumSubscriber: r, fractionalState: s, isInReverseTrial: l, showVoiceFiltersCard: a } = e,
@@ -46,7 +46,7 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
             case o.gM.CARD_CAROUSEL_THIRD_ROW:
                 d = s === c.a$.FP_ONLY ? (l ? [t.entranceSoundsSeeAllVariation] : [t.entranceSoundsSeeAllVariation, t.greyBadge]) : [t.entranceSoundsSeeAllVariation, t.badge];
         }
-        return i && (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
+        return (i && (d = d.filter((e) => !e.hideOnNarrowScreen)), d);
     },
     p = (e) => {
         let t = (0, i.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),

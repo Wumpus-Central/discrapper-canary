@@ -1,4 +1,4 @@
-n.d(t, { default: () => h }), n(388685);
+(n.d(t, { default: () => h }), n(388685));
 var r = n(255367),
     o = n(73800),
     i = n(481060),
@@ -27,7 +27,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,13 +35,13 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 class g extends o.PureComponent {
     componentDidMount() {
-        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0);
+        ((this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0));
     }
     componentWillUnmount() {
         this.track(d.rMx.CHANGE_LOG_CLOSED);
@@ -74,7 +74,7 @@ class g extends o.PureComponent {
     }
     constructor(...e) {
         var t;
-        super(...e),
+        (super(...e),
             (t = this),
             _(this, 'maxScrolledPercentage', 0),
             _(this, 'mountedAt', 0),
@@ -91,7 +91,7 @@ class g extends o.PureComponent {
                     { changeLog: o } = t.props,
                     { date: i, revision: a } = o,
                     s = b({ change_log_id: ''.concat(i, ':').concat(a) }, n);
-                r ||
+                (r ||
                     (s = b(
                         {
                             seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
@@ -99,8 +99,8 @@ class g extends o.PureComponent {
                         },
                         s
                     )),
-                    l.default.track(e, s);
-            });
+                    l.default.track(e, s));
+            }));
     }
 }
 function h(e) {

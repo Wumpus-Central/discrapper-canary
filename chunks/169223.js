@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(392711),
@@ -33,7 +33,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,11 +49,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -70,7 +70,7 @@ function v(e, t) {
 }
 class I extends m.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'actions', {
                 VOICE_CHANNEL_SHOW_FEEDBACK: (e) => this.handleVoiceChannelFeedback(e),
                 STREAM_CLOSE: (e) => this.handleStreamClose(e),
@@ -82,7 +82,7 @@ class I extends m.Z {
             }),
             b(this, 'handleVoiceChannelFeedback', (e) => {
                 let { analyticsData: t } = e;
-                (0, i.sum)(t.duration_speaking_voice_filter_ms) >= 5000 &&
+                ((0, i.sum)(t.duration_speaking_voice_filter_ms) >= 5000 &&
                     this.possiblyShowFeedbackModal(g.nw.VOICE_FILTER, () => {
                         (0, a.ZDy)(async () => {
                             let { VoiceFilterFeedbackModal: e } = await Promise.all([n.e('60137'), n.e('7287')]).then(n.bind(n, 193543));
@@ -94,7 +94,7 @@ class I extends m.Z {
                             let { default: e } = await Promise.all([n.e('60137'), n.e('58703')]).then(n.bind(n, 988645));
                             return (n) => (0, r.jsx)(e, v(y({}, n), { analyticsData: t }));
                         });
-                    });
+                    }));
             }),
             b(this, 'handleStreamClose', (e) => {
                 var t, i;
@@ -206,7 +206,7 @@ class I extends m.Z {
                         return (t) => (0, r.jsx)(e, y({}, t));
                     });
                 });
-            });
+            }));
     }
 }
 let T = new I();

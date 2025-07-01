@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+(n.d(t, { Z: () => F }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -53,7 +53,7 @@ let G = (e) => {
             [z, Y] = r.useState(!1),
             [W, K] = r.useState(!1),
             [q, X] = r.useState(!1),
-            [Q, J] = r.useState(!1),
+            [J, Q] = r.useState(!1),
             $ = (0, a.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
             ee = null != $ ? (0, x.Af)($) : null,
             et = null != ee ? x.ZP.getSkuIdForPlan(ee.planId) : null,
@@ -68,7 +68,7 @@ let G = (e) => {
             ed = null == (t = (0, C.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
             { analyticsLocations: eu } = (0, p.ZP)(g.Z.PREMIUM_MARKETING),
             em = 'PremiumMarketingHome';
-        (0, u.j)({
+        ((0, u.j)({
             location: em + ' auto on',
             autoTrackExposure: !0
         }),
@@ -77,8 +77,8 @@ let G = (e) => {
                 autoTrackExposure: !1
             }),
             r.useEffect(() => {
-                J(!0);
-            }, []);
+                Q(!0);
+            }, []));
         let eg = (0, i.jsx)('div', {
             className: U.premiumTierCardsContainerSettings,
             children: (0, i.jsx)(o.$, {
@@ -171,7 +171,7 @@ let G = (e) => {
                 }),
                 (0, i.jsx)('div', { className: U.footerSpacing }),
                 (0, i.jsx)(Z.Z, {
-                    isVisible: !z && !W && Q,
+                    isVisible: !z && !W && J,
                     subscriptionTier: en,
                     isApplicationHome: !1,
                     isEligibleForBogoPromotion: eo

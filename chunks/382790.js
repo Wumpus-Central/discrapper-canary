@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var i,
     r = n(255367),
     o = n(73800),
@@ -65,11 +65,11 @@ class b extends (i = o.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             v(this, 'onDragStart', (e) => {
                 let { dragStart: t } = this.props;
                 t(c.B.MOVE, e.clientX, e.clientY);
-            });
+            }));
     }
 }
 v(b, 'defaultProps', { contained: !1 });

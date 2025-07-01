@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     lb: () => E,
     mr: () => b,
     n6: () => g
@@ -10,7 +10,7 @@ n.d(t, {
     n(490233),
     n(97749),
     n(388685),
-    n(539854);
+    n(539854));
 var r,
     i = n(73800),
     a = n(94171),
@@ -35,7 +35,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,11 +51,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -81,14 +81,14 @@ let p = '__DEBUG_PROFILE_EFFECTS_STORE',
                 (0, s.j)(() => {
                     e((e) => {
                         let n = d({}, e);
-                        return (n.profileEffects[t.id] = t), m(n), n;
+                        return ((n.profileEffects[t.id] = t), m(n), n);
                     });
                 }),
             deleteConfig: (t) =>
                 (0, s.j)(() => {
                     e((e) => {
                         let n = d({}, e);
-                        return delete n.profileEffects[t], m(n), n;
+                        return (delete n.profileEffects[t], m(n), n);
                     });
                 })
         })
@@ -104,10 +104,10 @@ let p = '__DEBUG_PROFILE_EFFECTS_STORE',
         return (
             i.useEffect(
                 () => () => {
-                    n.current.forEach((e) => {
+                    (n.current.forEach((e) => {
                         URL.revokeObjectURL(e);
                     }),
-                        (n.current = []);
+                        (n.current = []));
                 },
                 []
             ),
@@ -115,7 +115,7 @@ let p = '__DEBUG_PROFILE_EFFECTS_STORE',
                 if (null == t) return null;
                 let e = (e) => {
                         let t = (0, c.$j)(e);
-                        return n.current.push(t), t;
+                        return (n.current.push(t), t);
                     },
                     r = t.config.effects.map((t) => _(d({}, t), { src: e(t.base64) })),
                     i = t.config.stillFrames,

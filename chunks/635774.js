@@ -29,7 +29,7 @@ function c(e) {
                 variant: 'text-md/medium',
                 children: a.intl.format(a.t.bWE0ZG, {
                     onClick: () => {
-                        t(), o.Z.open(s.oAB.ACCOUNT);
+                        (t(), o.Z.open(s.oAB.ACCOUNT));
                     }
                 })
             }),

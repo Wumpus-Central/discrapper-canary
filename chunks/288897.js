@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(704826), n(35282);
+(n.d(t, { Z: () => w }), n(388685), n(704826), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -37,7 +37,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -79,7 +79,7 @@ function C(e, t) {
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -89,7 +89,7 @@ function R(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 class P extends i.PureComponent {
@@ -103,7 +103,7 @@ class P extends i.PureComponent {
         this.props.editor.events.removeListener('onChange', this.handleOnChange);
     }
     componentDidCatch(e, t) {
-        d.Z.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] });
+        (d.Z.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] }));
     }
     decorate(e) {
         var t;
@@ -137,7 +137,7 @@ class P extends i.PureComponent {
     handleKeyDown(e) {
         var t, n;
         if (null != this.props.editor.composition) {
-            e.preventDefault(), e.stopPropagation();
+            (e.preventDefault(), e.stopPropagation());
             return;
         }
         null == (t = (n = this.props).onKeyDown) || t.call(n, e);
@@ -145,7 +145,7 @@ class P extends i.PureComponent {
     handleKeyUp(e) {
         var t, n;
         if (null != this.props.editor.composition) {
-            e.preventDefault(), e.stopPropagation();
+            (e.preventDefault(), e.stopPropagation());
             return;
         }
         null == (t = (n = this.props).onKeyUp) || t.call(n, e);
@@ -166,7 +166,7 @@ class P extends i.PureComponent {
                     null != e.data &&
                     (m.M8.isExpanded(t)
                         ? _.T.withSingleEntry(n, () => {
-                              (n.selection = t), n.deleteFragment(), n.insertText(e.data), e.preventDefault();
+                              ((n.selection = t), n.deleteFragment(), n.insertText(e.data), e.preventDefault());
                           })
                         : (n.insertText(e.data), e.preventDefault()));
             }
@@ -203,7 +203,7 @@ class P extends i.PureComponent {
                     : null) && (r.startedInsideInline = !0),
             m.bN.isEditorEmpty(n))
         ) {
-            h.Q.insertNodes(n, { text: '\uFEFF' }, { select: !0 }), (r.insertedPrefix = !0), (n.composition = r);
+            (h.Q.insertNodes(n, { text: '\uFEFF' }, { select: !0 }), (r.insertedPrefix = !0), (n.composition = r));
             return;
         }
         let a = s.F3.findDocumentOrShadowRoot(this.props.editor).getSelection(),
@@ -222,7 +222,7 @@ class P extends i.PureComponent {
                 exactMatch: !1,
                 suppressThrow: !0
             });
-            (n.selection = null), null != e ? h.Q.select(n, e) : h.Q.select(n, null != (t = n.selection) ? t : m.bN.end(n, []));
+            ((n.selection = null), null != e ? h.Q.select(n, e) : h.Q.select(n, null != (t = n.selection) ? t : m.bN.end(n, [])));
         }
         n.composition = r;
     }
@@ -235,12 +235,12 @@ class P extends i.PureComponent {
                 n = m.aj.leaf(t, e);
             m.bN.withoutNormalizing(t, () => {
                 let e = n.text.replace(/^\uFEFF/, '');
-                h.Q.delete(t, {
+                (h.Q.delete(t, {
                     unit: 'offset',
                     distance: n.text.length,
                     reverse: !0
                 }),
-                    m.bN.insertText(t, e);
+                    m.bN.insertText(t, e));
             });
         }
         t.composition = null;
@@ -332,7 +332,7 @@ class P extends i.PureComponent {
     }
     handlePasteCapture(e) {
         let { editor: t, onPaste: n, readOnly: r } = this.props;
-        null == n || n(e), e.isDefaultPrevented() || e.isPropagationStopped() || r || (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation());
+        (null == n || n(e), e.isDefaultPrevented() || e.isPropagationStopped() || r || (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation()));
     }
     render() {
         let e = this.props,
@@ -380,7 +380,7 @@ class P extends i.PureComponent {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             T(this, 'containerRef', i.createRef()),
             T(this, 'state', void 0),
             (this.decorate = this.decorate.bind(this)),
@@ -404,7 +404,7 @@ class P extends i.PureComponent {
                 : (this.state = {
                       initialValue: m.bN.richValue(e.editor),
                       showPlaceholder: !1
-                  });
+                  }));
     }
 }
 let w = P;

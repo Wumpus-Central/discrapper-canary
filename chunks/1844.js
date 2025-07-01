@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -35,27 +35,27 @@ function g() {
     d = !0;
 }
 function E() {
-    (u = null), (d = !1);
+    ((u = null), (d = !1));
 }
 function b(e) {
     let { activePromotion: t } = e;
-    (u = {
+    ((u = {
         id: t.id,
         startDate: t.startDate.toISOString(),
         endDate: t.endDate.toISOString()
     }),
         (f = Date.now()),
-        (d = !1);
+        (d = !1));
 }
 function y(e) {
     let { activeOutboundPromotions: t, consumedInboundPromotionId: n } = e;
-    (h = t), (p = Date.now()), (_ = !1), c.hasFetchedConsumedInboundPromotionId || ((c.hasFetchedConsumedInboundPromotionId = !0), (c.consumedInboundPromotionId = n));
+    ((h = t), (p = Date.now()), (_ = !1), c.hasFetchedConsumedInboundPromotionId || ((c.hasFetchedConsumedInboundPromotionId = !0), (c.consumedInboundPromotionId = n)));
 }
 function O() {
     _ = !0;
 }
 function v() {
-    (h = []), (_ = !1);
+    ((h = []), (_ = !1));
 }
 function I() {
     var e;
@@ -74,7 +74,7 @@ function S() {
     null != e && ((m = e), (c.lastSeenOutboundPromotionStartDate = e));
 }
 function A() {
-    (c = l()), (_ = !1), (p = null), (d = !1), (f = null), (h = []), (u = null);
+    ((c = l()), (_ = !1), (p = null), (d = !1), (f = null), (h = []), (u = null));
 }
 function N() {
     var e, t, n;
@@ -82,7 +82,7 @@ function N() {
 }
 class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (c = e), this.waitFor(o.Z), this.syncWith([o.Z], N);
+        (null != e && (c = e), this.waitFor(o.Z), this.syncWith([o.Z], N));
     }
     get outboundPromotions() {
         return h;
@@ -118,7 +118,7 @@ class C extends (r = i.ZP.PersistedStore) {
         return c;
     }
 }
-s(C, 'displayName', 'PromotionsStore'),
+(s(C, 'displayName', 'PromotionsStore'),
     s(C, 'persistKey', 'PromotionsPersistedStore'),
     s(C, 'migrations', [
         (e) => {
@@ -127,7 +127,7 @@ s(C, 'displayName', 'PromotionsStore'),
             } catch (e) {}
             return e;
         }
-    ]);
+    ]));
 let R = new C(a.Z, {
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: y,
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH: O,

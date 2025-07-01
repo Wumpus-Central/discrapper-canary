@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -50,27 +50,27 @@ let w = {
                 [I, P] = l.useState(!1),
                 [M, V] = l.useState(!1),
                 E = !_ && I && M;
-            l.useEffect(() => {
+            (l.useEffect(() => {
                 R || (P(!1), V(!1));
             }, [R]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            Z(e) && P(!0), L(e) && V(!0);
+                            (Z(e) && P(!0), L(e) && V(!0));
                         },
                         t = (e) => {
-                            Z(e) && P(!1), L(e) && V(!1);
+                            (Z(e) && P(!1), L(e) && V(!1));
                         };
                     return (
                         window.addEventListener('keydown', e),
                         window.addEventListener('keyup', t),
                         () => {
-                            window.removeEventListener('keydown', e), window.removeEventListener('keyup', t);
+                            (window.removeEventListener('keydown', e), window.removeEventListener('keyup', t));
                         }
                     );
                 }, []),
                 l.useEffect(() => {
                     (0, j.nb)(n.id, t);
-                }, [n.id, t]);
+                }, [n.id, t]));
             let T = t.length > 30,
                 k = (0, d.Yzy)(t, {
                     key: (e) => e,

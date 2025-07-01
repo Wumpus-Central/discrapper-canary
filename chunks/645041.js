@@ -21,7 +21,7 @@ function g(e, t) {
     return (0, i.e7)([l.Z], () => m(e, t));
 }
 function p(e, t, n, i, l) {
-    (0, s.PS)(
+    ((0, s.PS)(
         n,
         (i) => {
             let r = m(t, n);
@@ -35,7 +35,7 @@ function p(e, t, n, i, l) {
                 type: r.C[t],
                 guild_id: n,
                 action: null != l ? l : d.L.UNKNOWN
-            });
+            }));
 }
 function h(e, t, n, i) {
     p(!0, e, t, n, i);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -63,23 +63,23 @@ function p() {
 }
 function h(e) {
     let { guildBoostSlots: t } = e;
-    (_ = {}),
+    ((_ = {}),
         t.forEach((e) => {
             _[e.id] = e;
         }),
         (f = !1),
-        (d = !0);
+        (d = !0));
 }
 function m(e) {
     let { guildBoostSlot: t } = e;
     _ = u(l({}, _), { [t.id]: t });
 }
 function g() {
-    (_ = {}), (d = !1), (f = !1);
+    ((_ = {}), (d = !1), (f = !1));
 }
 function E() {
     let e = {};
-    for (let t of Object.values(_)) (e[t.id] = t), (t.subscription = o.ZP.getSubscriptionById(t.subscriptionId));
+    for (let t of Object.values(_)) ((e[t.id] = t), (t.subscription = o.ZP.getSubscriptionById(t.subscriptionId)));
     _ = e;
 }
 class b extends (r = i.ZP.Store) {

@@ -1,40 +1,40 @@
 n.d(t, {
     Bo: () => a,
-    Ct: () => o,
-    LA: () => l,
-    NB: () => s,
-    cP: () => i
+    Ct: () => s,
+    LA: () => i,
+    NB: () => o,
+    cP: () => r
 });
-var r = n(570140);
-function i(e, t, n, i, l) {
-    r.Z.dispatch({
+var l = n(570140);
+function r(e, t, n, r, i) {
+    l.Z.dispatch({
         type: 'SPEAK_TEXT',
         text: e,
         interrupt: t,
         maxLength: n,
-        onStart: i,
-        onEnd: l
+        onStart: r,
+        onEnd: i
     });
 }
-function l(e, t) {
-    r.Z.dispatch({
+function i(e, t) {
+    l.Z.dispatch({
         type: 'SPEAK_MESSAGE',
         channel: e,
         message: t
     });
 }
 function a(e, t) {
-    r.Z.dispatch({
+    l.Z.dispatch({
         type: 'SPEAKING_MESSAGE',
         channelId: e,
         messageId: t
     });
 }
-function s() {
-    r.Z.dispatch({ type: 'STOP_SPEAKING' });
+function o() {
+    l.Z.dispatch({ type: 'STOP_SPEAKING' });
 }
-function o(e) {
-    r.Z.dispatch({
+function s(e) {
+    l.Z.dispatch({
         type: 'SET_TTS_SPEECH_RATE',
         speechRate: e
     });

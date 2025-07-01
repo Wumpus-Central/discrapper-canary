@@ -1,4 +1,4 @@
-n.d(t, { k: () => S }), n(388685);
+(n.d(t, { k: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -24,7 +24,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -40,8 +40,8 @@ function y(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -101,7 +101,7 @@ function E(e) {
                 w(E),
                 R(Z(N)),
                 () => {
-                    w(null), Z(null);
+                    (w(null), Z(null));
                 }
             ),
             [w, Z, R]
@@ -132,13 +132,13 @@ function E(e) {
                         focused: b,
                         onChange: (e, t, n) => {
                             let r = t;
-                            r.length > _.fn && (r = r.slice(0, _.fn)),
+                            (r.length > _.fn && (r = r.slice(0, _.fn)),
                                 t !== r && ((t = r), (n = (0, p.JM)(r))),
                                 a(t),
                                 P({
                                     textValue: t,
                                     richValue: n
-                                });
+                                }));
                         },
                         onKeyDown: o,
                         canMentionChannels: v,
@@ -191,16 +191,16 @@ function S(e) {
                 if (t.length !== _.X2)
                     if (null != e && '' === t[t.length - 1].value) {
                         let r = [...t];
-                        (r[t.length - 1] = N(y({}, r[t.length - 1]), { value: e })), n(r), I(r.length - 1);
+                        ((r[t.length - 1] = N(y({}, r[t.length - 1]), { value: e })), n(r), I(r.length - 1));
                     } else
-                        n([
+                        (n([
                             ...t,
                             {
                                 id: o()(),
                                 value: null != e ? e : ''
                             }
                         ]),
-                            I(t.length);
+                            I(t.length));
             },
             [t, n]
         ),
@@ -209,7 +209,7 @@ function S(e) {
         }, [S]),
         P = (e, r) => {
             let i = [...t];
-            (i[r] = N(y({}, i[r]), { value: e })), n(i);
+            ((i[r] = N(y({}, i[r]), { value: e })), n(i));
         },
         w = (e) => {
             let r = [...t.slice(0, e), ...t.slice(e + 1)];
@@ -230,7 +230,7 @@ function S(e) {
                 let l = t.indexOf(e);
                 if (null != r && r !== l) {
                     let i = [...t];
-                    i.splice(l, 1), i.splice(r, 0, e), n(i);
+                    (i.splice(l, 1), i.splice(r, 0, e), n(i));
                 }
                 i ? null !== g && p(null) : r !== g && p(r);
             },

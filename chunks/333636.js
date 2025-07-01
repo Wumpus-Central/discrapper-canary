@@ -1,4 +1,4 @@
-a.d(t, { default: () => c }), a(388685);
+(a.d(t, { default: () => c }), a(388685));
 var n = a(255367),
     l = a(73800),
     s = a(481060),
@@ -45,7 +45,7 @@ let c = function (e) {
                         value: c,
                         options: i.p,
                         onChange: (e) => {
-                            e !== r.fw.HCAPTCHA_RQDATA && e !== r.fw.SMITE_RQDATA && C(null), e !== r.fw.HCAPTCHA_RQDATA && u(null), A(e), p('');
+                            (e !== r.fw.HCAPTCHA_RQDATA && e !== r.fw.SMITE_RQDATA && C(null), e !== r.fw.HCAPTCHA_RQDATA && u(null), A(e), p(''));
                         }
                     }),
                     c === r.fw.HCAPTCHA_RQDATA &&

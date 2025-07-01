@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(539854);
+(n.d(t, { Z: () => T }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -17,8 +17,8 @@ var r = n(255367),
     x = n(63063),
     j = n(919196),
     O = n(731072),
-    y = n(494118),
-    v = n(37607),
+    v = n(494118),
+    y = n(37607),
     _ = n(351644),
     C = n(108053),
     N = n(981631),
@@ -45,8 +45,8 @@ function E(e, t) {
             return '';
     }
 }
-let w = i.memo(function (e) {
-    let { section: t, sectionId: n, guild: l, channel: w, integrations: P, editedIntegration: T, webhooks: Z, editedWebhook: k, isFetchingWebhooks: A, refToScroller: R, errors: D, hasChanges: L } = e,
+let T = i.memo(function (e) {
+    let { section: t, sectionId: n, guild: l, channel: T, integrations: w, editedIntegration: P, webhooks: Z, editedWebhook: k, isFetchingWebhooks: A, refToScroller: D, errors: R, hasChanges: L } = e,
         M = (0, a.e7)([g.ZP], () => (null != l ? g.ZP.getDefaultChannel(l.id) : null)),
         B = (0, a.cj)([g.ZP], () => g.ZP.getChannels(null == l ? void 0 : l.id)),
         U = (0, a.cj)([f.Z], () =>
@@ -61,7 +61,7 @@ let w = i.memo(function (e) {
                 'id'
             )
         ),
-        z = null != w ? w : M,
+        z = null != T ? T : M,
         H = t === N.b4C.APPLICATION ? n : null,
         [G, F] = i.useState(d.$x),
         V = i.useCallback(
@@ -90,19 +90,19 @@ let w = i.memo(function (e) {
                 n = {},
                 r = [],
                 i = [];
-            if (null != P)
-                for (let r of P)
+            if (null != w)
+                for (let r of w)
                     if ('discord' === r.type) {
                         if (null != r.application) {
                             var l;
-                            (e[r.application.id] = {
+                            ((e[r.application.id] = {
                                 application: r.application,
                                 integration: r,
                                 webhooks: []
                             }),
-                                (null == (l = r.application.bot) ? void 0 : l.id) !== void 0 && (t[r.application.bot.id] = r.application.id);
+                                (null == (l = r.application.bot) ? void 0 : l.id) !== void 0 && (t[r.application.bot.id] = r.application.id));
                         }
-                    } else r.type in n || (n[r.type] = []), n[r.type].push(r);
+                    } else (r.type in n || (n[r.type] = []), n[r.type].push(r));
             for (let t of Z) (t.channel_id in U || t.channel_id in W) && (null != t.application_id && t.application_id in e ? e[t.application_id].webhooks.push(t) : t.type === N.ylB.CHANNEL_FOLLOWER ? i.push(t) : r.push(t));
             return {
                 applicationIntegrations: e,
@@ -111,8 +111,8 @@ let w = i.memo(function (e) {
                 customWebhooks: r,
                 followedChannelWebhooks: i
             };
-        }, [P, U, W, Z]);
-    i.useEffect(() => {
+        }, [w, U, W, Z]);
+    (i.useEffect(() => {
         if (!A)
             switch (t) {
                 case N.b4C.TWITCH:
@@ -133,7 +133,7 @@ let w = i.memo(function (e) {
                 c.Z.setSection(N.b4C.OVERVIEW, null);
             },
             []
-        );
+        ));
     let Q = null;
     switch (t) {
         case N.b4C.TWITCH:
@@ -141,7 +141,7 @@ let w = i.memo(function (e) {
                 (Q = (0, r.jsx)(O.Z, {
                     guild: l,
                     integrations: X[N.ABu.TWITCH],
-                    editedIntegration: T,
+                    editedIntegration: P,
                     labelText: I.intl.string(I.t.q4pBGx),
                     platformType: N.ABu.TWITCH,
                     descriptionText: I.intl.string(I.t.V9kNqq),
@@ -161,7 +161,7 @@ let w = i.memo(function (e) {
                 (Q = (0, r.jsx)(O.Z, {
                     guild: l,
                     integrations: X[N.ABu.YOUTUBE],
-                    editedIntegration: T,
+                    editedIntegration: P,
                     labelText: I.intl.string(I.t.aS6cKy),
                     platformType: N.ABu.YOUTUBE,
                     descriptionText: I.intl.string(I.t['7Tv7JC']),
@@ -181,30 +181,30 @@ let w = i.memo(function (e) {
                     applicationIntegration: et,
                     editedWebhook: k,
                     selectableWebhookChannels: U,
-                    errors: D,
+                    errors: R,
                     canNavigate: V
                 }));
             break;
         case N.b4C.CHANNEL_FOLLOWING:
-            Q = (0, r.jsx)(y.Z, {
+            Q = (0, r.jsx)(v.Z, {
                 followedChannelWebhooks: J,
                 editedWebhook: k,
                 selectableWebhookChannels: U,
                 canNavigate: V,
-                errors: D
+                errors: R
             });
             break;
         case N.b4C.WEBHOOKS:
             Q = (0, r.jsx)(C.Z, {
                 guild: l,
-                channel: w,
+                channel: T,
                 customWebhooks: $,
                 editedWebhook: k,
                 selectableWebhookChannels: (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -212,7 +212,7 @@ let w = i.memo(function (e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -220,23 +220,23 @@ let w = i.memo(function (e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, U, W),
                 canNavigate: V,
-                refToScroller: R,
-                errors: D
+                refToScroller: D,
+                errors: R
             });
             break;
         case N.b4C.LOBBIES_LINKED:
-            Q = (0, r.jsx)(v.Z, { guild: l });
+            Q = (0, r.jsx)(y.Z, { guild: l });
             break;
         default:
             Q = (0, r.jsx)(_.Z, {
                 guild: l,
-                channel: w,
+                channel: T,
                 applicationIntegrations: q,
                 builtInIntegrations: X,
                 customWebhooks: $,

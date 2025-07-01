@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     J: () => a,
     l: () => o
 }),
-    n(388685);
+    n(388685));
 var r = n(693824),
     i = n(169040);
 function a(e) {
@@ -17,7 +17,7 @@ function a(e) {
     a)) {
         let r = null != t ? t.w + t.x + i.PW : o,
             a = null != t ? t.w + t.x + i.PW + i.NC : o + i.NC;
-        n.drawPath(
+        (n.drawPath(
             e,
             {
                 x: r,
@@ -34,7 +34,7 @@ function a(e) {
                     w: s
                 },
                 !0
-            ));
+            )));
     }
 }
 function o(e) {
@@ -45,7 +45,7 @@ function o(e) {
         avatarImageSize: o
     } = e;
     for (let e = 0; e < n.length; e++)
-        e < n.length - 1 &&
+        (e < n.length - 1 &&
             t.clipRoundedRect(
                 {
                     x: i + (e + 1) * (o - 8) - 2,
@@ -69,5 +69,5 @@ function o(e) {
                 50,
                 { fillMode: r.JU.Cover }
             ),
-            t.restoreContext();
+            t.restoreContext());
 }

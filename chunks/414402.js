@@ -13,7 +13,7 @@ function d(e) {
         { themeType: f } = (0, o.z)();
     if (!(0, i.Z)(n, c.xjy.INSTANCE)) return null;
     let _ = (e) => {
-        e.stopPropagation(), null == d || d({ action: 'PRESS_NOTIFY_BUTTON' }), new a.Z('UserActivityActions').log('notify', t.id, n);
+        (e.stopPropagation(), null == d || d({ action: 'PRESS_NOTIFY_BUTTON' }), new a.Z('UserActivityActions').log('notify', t.id, n));
     };
     return f === l.lY.MODAL_V2
         ? (0, r.jsx)(s.tG, {

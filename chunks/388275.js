@@ -1,4 +1,4 @@
-n.d(t, { n: () => b }), n(388685);
+(n.d(t, { n: () => b }), n(388685));
 var l = n(255367),
     r = n(73800),
     i = n(442837),
@@ -29,17 +29,17 @@ function b(e) {
         R = r.useCallback(() => w(!1), []),
         k = r.useCallback(
             (e, n, l) => {
-                T({
+                (T({
                     textValue: n,
                     richValue: l
                 }),
                     s.Z.saveDraft(t.channel_id, n, f.d.ForwardContextMessage),
-                    x(t.channel_id, t.id);
+                    x(t.channel_id, t.id));
             },
             [x, t]
         ),
         F = r.useCallback(() => {
-            s.Z.clearDraft(t.channel_id, f.d.ForwardContextMessage), O(N);
+            (s.Z.clearDraft(t.channel_id, f.d.ForwardContextMessage), O(N));
         }, [t.channel_id, O, N]),
         M = r.useCallback(
             () => (

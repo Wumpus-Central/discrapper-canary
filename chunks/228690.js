@@ -5,5 +5,5 @@ var r = n(88996),
     s = Array;
 e.exports = function (e) {
     var t;
-    return r(e) && (i((t = e.constructor)) && (t === s || r(t.prototype)) ? (t = void 0) : a(t) && null === (t = t[o]) && (t = void 0)), void 0 === t ? s : t;
+    return (r(e) && (i((t = e.constructor)) && (t === s || r(t.prototype)) ? (t = void 0) : a(t) && null === (t = t[o]) && (t = void 0)), void 0 === t ? s : t);
 };

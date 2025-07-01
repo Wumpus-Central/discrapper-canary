@@ -22,7 +22,7 @@ function c(e, t, n) {
     );
 }
 var u = (function (e) {
-    return (e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED'), e;
+    return ((e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED'), e);
 })({});
 let d = null,
     f = null,
@@ -32,7 +32,7 @@ function p() {
 }
 function h(e) {
     var t;
-    (_ = 'FETCHED'), (f = null != (t = null == (d = e.apps) ? void 0 : d.filter((e) => null == e.application.parent_id)) ? t : null);
+    ((_ = 'FETCHED'), (f = null != (t = null == (d = e.apps) ? void 0 : d.filter((e) => null == e.application.parent_id)) ? t : null));
 }
 class m extends (r = i.ZP.Store) {
     initialize() {

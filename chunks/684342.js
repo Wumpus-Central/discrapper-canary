@@ -21,10 +21,10 @@ var r = n(468343),
     f = new ((function () {
         function e() {
             var e = this;
-            (this.stopped = !0),
+            ((this.stopped = !0),
                 (this.listener = function () {
                     return e.schedule();
-                });
+                }));
         }
         return (
             (e.prototype.run = function (e) {
@@ -42,7 +42,7 @@ var r = n(468343),
                     }));
             }),
             (e.prototype.schedule = function () {
-                this.stop(), this.run(l);
+                (this.stop(), this.run(l));
             }),
             (e.prototype.observe = function () {
                 var e = this,
@@ -74,5 +74,5 @@ var r = n(468343),
         );
     })())(),
     _ = function (e) {
-        !o && e > 0 && f.start(), (o += e) || f.stop();
+        (!o && e > 0 && f.start(), (o += e) || f.stop());
     };

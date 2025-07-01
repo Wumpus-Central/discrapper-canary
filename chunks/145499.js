@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(539854);
+(n.d(t, { Z: () => A }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -30,7 +30,7 @@ function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function P(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -46,8 +46,8 @@ function P(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -98,11 +98,11 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
             size: o.zxk.Sizes.SMALL,
             color: o.zxk.Colors.BRAND,
             onClick: () => {
-                j.default.track(I.rMx.OPEN_MODAL, {
+                (j.default.track(I.rMx.OPEN_MODAL, {
                     type: I.jXE.CREATE_STICKER_MODAL,
                     location: n
                 }),
-                    Z({ guildId: t.id });
+                    Z({ guildId: t.id }));
             },
             disabled: !i,
             children: S.intl.string(S.t.O1REe3)
@@ -134,7 +134,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
             return (0, r.jsx)(o.$jN, {});
         let G = (e, n) => {
                 let r = null;
-                n === I.Eu4.TIER_1 ? (r = I.Qqv.TIER_1) : n === I.Eu4.TIER_2 ? (r = I.Qqv.TIER_2) : n === I.Eu4.TIER_3 && (r = I.Qqv.TIER_3),
+                (n === I.Eu4.TIER_1 ? (r = I.Qqv.TIER_1) : n === I.Eu4.TIER_2 ? (r = I.Qqv.TIER_2) : n === I.Eu4.TIER_3 && (r = I.Qqv.TIER_3),
                     (0, g.Z)({
                         analyticsLocations: d,
                         analyticsLocation: {
@@ -145,7 +145,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                         },
                         guildId: t.id,
                         totalNumberOfSlotsToAssign: e
-                    });
+                    }));
             },
             U = [
                 {

@@ -16,7 +16,7 @@ function h(e) {
     let { onClose: t, onSelect: n, minimal: i = !1, appContext: h, onInteraction: m } = e,
         g = (0, o.e7)([c.default], () => {
             let e = c.default.getCurrentUser();
-            return a()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
+            return (a()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e);
         }),
         E = (0, u.Z)(i),
         b = (0, d.Z)(g.id, h),

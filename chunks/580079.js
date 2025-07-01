@@ -1,4 +1,4 @@
-n(539854), n(388685);
+(n(539854), n(388685));
 var r,
     i,
     l,
@@ -30,16 +30,16 @@ function _(e) {
 function E(e, t, n, r) {
     f[e].add(t);
     let i = m[t];
-    (null == i || i + 300000 > Date.now()) && _(t),
+    ((null == i || i + 300000 > Date.now()) && _(t),
         null == g[t] && (g[t] = []),
         g[t].push({
             id: n,
             userId: r
-        });
+        }));
 }
 function O(e) {
     let { channel: t } = e;
-    delete g[t.id], delete m[t.id];
+    (delete g[t.id], delete m[t.id]);
 }
 class y extends (a = c.ZP.Store) {
     getActiveChannelsFetchStatus(e) {
@@ -56,7 +56,7 @@ class y extends (a = c.ZP.Store) {
         return null == f[e] && !(null == (t = b[e]) ? void 0 : t.loading);
     }
 }
-(l = 'ActiveChannelsStore'),
+((l = 'ActiveChannelsStore'),
     (i = 'displayName') in (r = y)
         ? Object.defineProperty(r, i, {
               value: l,
@@ -73,7 +73,7 @@ class y extends (a = c.ZP.Store) {
             if (null == r) return !1;
             r.forEach((e) => {
                 var t;
-                _(e), (null == (t = g[e]) ? void 0 : t.length) === 0 && delete g[e];
+                (_(e), (null == (t = g[e]) ? void 0 : t.length) === 0 && delete g[e]);
             });
             let i = s()
                 .chain(Array.from(r))
@@ -111,7 +111,7 @@ class y extends (a = c.ZP.Store) {
         },
         ACTIVE_CHANNELS_FETCH_SUCCESS: function (e) {
             let { guildId: t, channels: n } = e;
-            (b[t] = {
+            ((b[t] = {
                 loading: !1,
                 error: null,
                 fetchedAt: Date.now()
@@ -122,7 +122,7 @@ class y extends (a = c.ZP.Store) {
                     r.forEach((e) => {
                         E(t, n, e.message_id, e.user_id);
                     });
-                });
+                }));
         },
         ACTIVE_CHANNELS_FETCH_FAILURE: function (e) {
             let { guildId: t, error: n } = e;
@@ -133,4 +133,4 @@ class y extends (a = c.ZP.Store) {
             };
         },
         CONNECTION_OPEN: function () {}
-    });
+    }));

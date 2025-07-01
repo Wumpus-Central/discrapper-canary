@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+(n.d(t, { Z: () => Z }), n(388685));
 var r = n(392711),
     i = n(126313),
     a = n(570140),
@@ -70,7 +70,7 @@ function L() {
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == N) return;
     let r = (null == n ? void 0 : n.expired_at) == null ? 0 : new Date(n.expired_at).getTime() - Date.now(),
         a = Math.max(0, null == N ? 0 : new Date(N).getTime() - Date.now(), r) + (t > 0 ? R() : 0);
-    P(v, {
+    (P(v, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + a)
     }),
@@ -84,20 +84,20 @@ function L() {
                     }),
                 a
             )
-        );
+        ));
 }
 async function x(e) {
     let { feedId: t, feature: n, force: r = !1 } = e;
     if (w(t) || r)
         try {
             let e = m.Z.getFeed(t);
-            S.add(t), P(t, { loading: !0 });
+            (S.add(t), P(t, { loading: !0 }));
             let r = await (0, p.mt)({
                 token: null == e ? void 0 : e.refresh_token,
                 feedId: t,
                 feature: n
             });
-            a.Z.dispatch({
+            (a.Z.dispatch({
                 type: 'CONTENT_INVENTORY_SET_FEED',
                 feedId: t,
                 feed: r
@@ -105,13 +105,13 @@ async function x(e) {
                 A.set(t, 0),
                 S.delete(t),
                 P(t, { loading: !1 }),
-                t === v && ((N = null), L());
+                t === v && ((N = null), L()));
         } catch (o) {
             var i;
             let e = null != (i = A.get(t)) ? i : 0;
             if (e < y) {
                 let i = f.Z.Millis.MINUTE * Math.pow(2, e) + R(e);
-                T.set(
+                (T.set(
                     t,
                     setTimeout(
                         () =>
@@ -123,7 +123,7 @@ async function x(e) {
                         i
                     )
                 ),
-                    A.set(t, e + 1);
+                    A.set(t, e + 1));
             } else
                 a.Z.dispatch({
                     type: 'CONTENT_INVENTORY_CLEAR_FEED',
@@ -143,12 +143,12 @@ function j() {
 }
 function U(e) {
     let { feedId: t, feature: n } = e;
-    D(t),
+    (D(t),
         x({
             feedId: t,
             feature: n,
             force: !0
-        });
+        }));
 }
 function G(e) {
     let { refreshAfterMs: t } = e,
@@ -168,7 +168,7 @@ function V() {
 }
 class F extends o.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'actions', {
                 POST_CONNECTION_OPEN: M,
                 CONNECTION_CLOSED: j,
@@ -179,7 +179,7 @@ class F extends o.Z {
                 CONTENT_INVENTORY_INBOX_STALE: G,
                 SPOTIFY_NEW_TRACK: B,
                 GAME_PROFILE_OPEN: V
-            });
+            }));
     }
 }
 let Z = new F();

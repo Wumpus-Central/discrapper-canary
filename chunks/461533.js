@@ -1,4 +1,4 @@
-t.d(e, { default: () => d }), t(388685);
+(t.d(e, { default: () => d }), t(388685));
 var r = t(255367),
     i = t(73800),
     s = t(481060),
@@ -10,7 +10,7 @@ function d(n) {
     let { guildId: e, transitionState: t, onClose: d } = n,
         [x, h] = i.useState([]),
         k = i.useCallback(() => {
-            (0, o.KK)(e, x), (0, o.C4)(e), d();
+            ((0, o.KK)(e, x), (0, o.C4)(e), d());
         }, [e, d, x]),
         u = i.useCallback(
             (n) => () => {

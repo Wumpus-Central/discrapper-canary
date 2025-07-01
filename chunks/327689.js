@@ -8,13 +8,13 @@ var r,
     c = n(981631);
 class u extends (l = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z), this.syncWith([s.Z], c.dG4);
+        (this.waitFor(s.Z), this.syncWith([s.Z], c.dG4));
     }
     channelNoticePredicate(e, t) {
         return !e.hasFeature(c.oNc.BANNER) && Date.now() - t >= c.Hqc;
     }
 }
-(i = 'GuildBoostingNoticeStore'),
+((i = 'GuildBoostingNoticeStore'),
     (r = 'displayName') in u
         ? Object.defineProperty(u, r, {
               value: i,
@@ -22,5 +22,5 @@ class u extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (u[r] = i);
+        : (u[r] = i));
 let d = new u(o.Z);

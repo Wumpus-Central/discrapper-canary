@@ -16,7 +16,7 @@ let g = (e) => {
                 className: m.tier0Button,
                 color: l.zxk.Colors.BRAND_INVERTED,
                 onClick: () => {
-                    (0, s.z)(), null != t && t();
+                    ((0, s.z)(), null != t && t());
                 },
                 children: u.intl.string(u.t.hvVgAQ)
             });

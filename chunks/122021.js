@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Xj: () => g,
     fq: () => E,
     rR: () => b
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(392711),
     a = n.n(i),
@@ -32,7 +32,7 @@ function E() {
         t = g({ forUserProfile: !1 }),
         n = r.useMemo(() => {
             let t = new Set();
-            return e.forEach((e) => t.add(e.type)), t;
+            return (e.forEach((e) => t.add(e.type)), t);
         }, [e]);
     return r.useMemo(
         () =>
@@ -64,7 +64,7 @@ function b(e) {
             window.addEventListener('keydown', i),
             window.addEventListener('keyup', a),
             () => {
-                window.removeEventListener('keydown', i), window.removeEventListener('keyup', a);
+                (window.removeEventListener('keydown', i), window.removeEventListener('keyup', a));
             }
         ),
         []
@@ -73,4 +73,4 @@ function b(e) {
         ? f.ABu.TWITTER_LEGACY
         : e;
 }
-f.ABu.PLAYSTATION, f.ABu.XBOX, f.ABu.SPOTIFY, f.ABu.STEAM, f.ABu.TWITCH;
+(f.ABu.PLAYSTATION, f.ABu.XBOX, f.ABu.SPOTIFY, f.ABu.STEAM, f.ABu.TWITCH);

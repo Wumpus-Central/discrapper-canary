@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'bespin',
         author: 'jan t. sott',
@@ -19,4 +19,4 @@
         base0E: '#9b859d',
         base0F: '#937121'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

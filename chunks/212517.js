@@ -1,16 +1,16 @@
-n.d(t, {
+(n.d(t, {
     Ix: () => o,
     S5: () => s
 }),
-    n(997841);
+    n(997841));
 var r = n(433517),
     i = n(695346);
-n(630388), n(841784);
+(n(630388), n(841784));
 var a = n(981631);
 function o(e) {
     let t = i.cP.getSetting(),
         n = i.Ou.getSetting();
-    return t ? (e |= a.xjy.PARTY_PRIVACY_FRIENDS) : (e &= ~a.xjy.PARTY_PRIVACY_FRIENDS), n ? (e |= a.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (e &= ~a.xjy.PARTY_PRIVACY_VOICE_CHANNEL), e;
+    return (t ? (e |= a.xjy.PARTY_PRIVACY_FRIENDS) : (e &= ~a.xjy.PARTY_PRIVACY_FRIENDS), n ? (e |= a.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (e &= ~a.xjy.PARTY_PRIVACY_VOICE_CHANNEL), e);
 }
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

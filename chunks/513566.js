@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var r = n(348327),
     i = n.n(r),
     a = n(392711),
@@ -42,7 +42,7 @@ class I extends u.Z {
         i()(this.prevButtons, e) || ((this.prevButtons = e), b.ZP.setThumbarButtons(e));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             v(this, 'callbackActions', {
                 [b.tS.VIDEO]: () => {
                     m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), y.IlC.APP);
@@ -109,7 +109,7 @@ class I extends u.Z {
                         }
                     ]);
                 }, 100)
-            );
+            ));
     }
 }
 let T = new I();

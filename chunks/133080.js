@@ -28,7 +28,7 @@ function c(e) {
 }
 function u() {
     let e = l(s);
-    return i()(e, 'Default country code cannot be missing.'), e;
+    return (i()(e, 'Default country code cannot be missing.'), e);
 }
 let d = {
     AF: () => o.intl.string(o.t['Jafq//']),

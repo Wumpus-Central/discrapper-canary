@@ -3,14 +3,14 @@ var r = n(255367),
     i = n(73800),
     l = n(481060),
     o = n(110255),
-    s = n(64247),
-    a = n(981631),
+    a = n(64247),
+    s = n(981631),
     c = n(388032);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -18,7 +18,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -26,8 +26,8 @@ function u(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -60,7 +60,7 @@ function h(e) {
         renderPopout: (e) =>
             t.isThread()
                 ? (0, r.jsx)(
-                      s.Z,
+                      a.Z,
                       d(u({}, e), {
                           channel: t,
                           navId: 'recents-thread-notifications',
@@ -73,7 +73,7 @@ function h(e) {
                           channel: t,
                           navId: 'recents-notifications',
                           label: c.intl.string(c.t.ljs3OT),
-                          location: { section: a.jXE.INBOX },
+                          location: { section: s.jXE.INBOX },
                           includeGuildMute: !0
                       })
                   ),

@@ -1,4 +1,4 @@
-n.d(t, { l: () => x }), n(388685), n(415506);
+(n.d(t, { l: () => x }), n(388685), n(415506));
 var r = n(255367),
     i = n(73800),
     a = n(512722),
@@ -51,14 +51,14 @@ function x(e) {
     }, [$]);
     let ew = i.useCallback(
             (e, t) => {
-                K(e),
+                (K(e),
                     null != t && e_(t),
                     x(E.h8.CONFIRM, {
                         fulfillment: {
                             subscription: e,
                             entitlements: t
                         }
-                    });
+                    }));
             },
             [x, K, e_]
         ),

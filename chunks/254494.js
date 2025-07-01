@@ -21,12 +21,12 @@ let d = (e) => {
                         if (null == n.current) return;
                         let i = t > (null != (e = o.current) ? e : -1),
                             s = null != r ? r(t, i) : 0;
-                        n.current.scrollRowIntoView(t, {
+                        (n.current.scrollRowIntoView(t, {
                             animate: !0,
                             offset: s
                         }),
                             (a.current = c.xAR),
-                            (o.current = t);
+                            (o.current = t));
                     })));
             }, [t, n, r]),
             { categoryListRef: n }

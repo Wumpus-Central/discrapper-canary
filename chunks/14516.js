@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(147913),
     i = n(19780),
     a = n(358221);
@@ -26,7 +26,7 @@ class s extends r.Z {
         }
     }
     constructor(...e) {
-        super(...e), o(this, 'stores', new Map().set(a.Z, this.handleFocusParticipant));
+        (super(...e), o(this, 'stores', new Map().set(a.Z, this.handleFocusParticipant)));
     }
 }
 let l = new s();

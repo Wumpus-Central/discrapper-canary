@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(953529), n(539854);
+(n.d(t, { Z: () => f }), n(388685), n(953529), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(481060);
@@ -14,7 +14,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -30,8 +30,8 @@ function g(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -68,7 +68,7 @@ function f() {
                 ref_type: u.Qs.CHANNEL,
                 ref_id: r
             };
-        null != t ? (a[t] = o) : a.push(o), f(a);
+        (null != t ? (a[t] = o) : a.push(o), f(a));
     }
     let b = (0, s.mY)();
     return (0, r.jsxs)(r.Fragment, {
@@ -87,7 +87,7 @@ function f() {
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
-                                        t.splice(e, 1), f(t);
+                                        (t.splice(e, 1), f(t));
                                     })(e)
                             })
                         )
@@ -96,7 +96,7 @@ function f() {
                 onMove: function (e, t) {
                     let r = [...n],
                         [i] = r.splice(e, 1);
-                    r.splice(t, 0, i), f(r);
+                    (r.splice(t, 0, i), f(r));
                 },
                 guildId: t
             }),

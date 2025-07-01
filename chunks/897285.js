@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(147913),
     i = n(914010),
     a = n(924301),
@@ -23,7 +23,7 @@ let l = {},
     f = async (e) => {
         if (!(0 === a.ZP.getGuildScheduledEventsForGuild(e).length || c.has(e)) && !u.has(e))
             try {
-                c.add(e), await o.Z.getGuildEventsForCurrentUser(e), u.add(e);
+                (c.add(e), await o.Z.getGuildEventsForCurrentUser(e), u.add(e));
             } catch (t) {
                 c.delete(e);
             }
@@ -32,7 +32,7 @@ class _ extends r.Z {
     async getGuildEventUserCounts(e, t, n) {
         let r = n.filter((n) => null == l[''.concat(e, '-').concat(t, '-').concat(n)] || Date.now() - l[''.concat(e, '-').concat(t, '-').concat(n)] > d);
         if (!(Date.now() - l[''.concat(e, '-').concat(t)] < d) || 0 !== r.length) {
-            (l[''.concat(e, '-').concat(t)] = Date.now()), r.forEach((n) => (l[''.concat(e, '-').concat(t, '-').concat(n)] = Date.now()));
+            ((l[''.concat(e, '-').concat(t)] = Date.now()), r.forEach((n) => (l[''.concat(e, '-').concat(t, '-').concat(n)] = Date.now())));
             try {
                 await o.Z.fetchGuildEventUserCounts(e, t, r);
             } catch (e) {}
@@ -45,16 +45,16 @@ class _ extends r.Z {
         return f(e);
     }
     async handleConnectionOpen() {
-        c.clear(), u.clear(), (l = {}), i.Z.getLastSelectedGuildId();
+        (c.clear(), u.clear(), (l = {}), i.Z.getLastSelectedGuildId());
     }
     handleGuildUnavailable(e) {
         let { guildId: t } = e;
-        c.delete(t), u.delete(t), delete l[t];
+        (c.delete(t), u.delete(t), delete l[t]);
     }
     handleGuildDelete(e) {
         let { guild: t } = e,
             n = t.id;
-        c.delete(n), u.delete(n), delete l[n];
+        (c.delete(n), u.delete(n), delete l[n]);
     }
     handleInviteResolveSuccess(e) {
         var t;
@@ -74,14 +74,14 @@ class _ extends r.Z {
                 }
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             s(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e),
                 GUILD_UNAVAILABLE: (e) => this.handleGuildUnavailable(e),
                 INVITE_RESOLVE_SUCCESS: (e) => this.handleInviteResolveSuccess(e),
                 CHANNEL_SELECT: (e) => this.handleChannelSelect(e)
-            });
+            }));
     }
 }
 let p = new _();

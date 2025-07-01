@@ -1,4 +1,4 @@
-n.d(t, { Z: () => e_ }), n(388685);
+(n.d(t, { Z: () => e_ }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(188597),
     O = n(41776),
     E = n(980463),
-    I = n(328908),
-    S = n(992970),
+    S = n(328908),
+    I = n(992970),
     P = n(135793),
     Z = n(576645),
     N = n(84040),
@@ -33,13 +33,13 @@ var r = n(255367),
     R = n(280845),
     k = n(2818),
     M = n(768943),
-    D = n(665906),
-    L = n(695346),
+    L = n(665906),
+    D = n(695346),
     U = n(314897),
     B = n(323873),
     F = n(271383),
-    G = n(430824),
-    H = n(607744),
+    H = n(430824),
+    G = n(607744),
     V = n(496675),
     z = n(626135),
     W = n(572004),
@@ -63,7 +63,7 @@ function ec(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -71,7 +71,7 @@ function ec(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -79,8 +79,8 @@ function ec(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -194,18 +194,17 @@ function ef(e) {
             isMessageBookmark: en,
             setPopout: eo,
             hasDeveloperMode: es,
-            isGuildInviteReminder: eu,
-            isFocused: ed
+            isFocused: eu
         } = (function (e) {
             let { channel: t, message: n, showEmojiPicker: r, showEmojiBurstPicker: i, showMoreUtilities: l, setPopout: o, isFocused: a } = e,
                 { author: s } = n,
-                u = (0, c.e7)([G.Z], () => G.Z.getGuild(t.guild_id), [t.guild_id]),
+                u = (0, c.e7)([H.Z], () => H.Z.getGuild(t.guild_id), [t.guild_id]),
                 d = (0, c.e7)([U.default], () => U.default.getId()),
-                p = (0, D.$R)(t),
-                m = (0, D.Gu)(t),
-                g = L.nc.useSetting(),
-                b = L.Sb.useSetting(),
-                _ = (0, c.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
+                p = (0, L.$R)(t),
+                m = (0, L.Gu)(t),
+                g = D.nc.useSetting(),
+                b = D.Sb.useSetting(),
+                _ = (0, c.e7)([G.Z], () => null == t.guild_id || G.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: y, canAddNewReactions: x } = (0, c.cj)(
                     [V.Z],
                     () => ({
@@ -215,10 +214,10 @@ function ef(e) {
                     [t, _]
                 ),
                 v = (0, R.U)(t, n),
-                j = (0, D.NE)(t, n),
-                E = (0, D.Ek)(n),
-                I = (0, c.e7)([O.Z], () => null != t.guild_id && O.Z.isLurking(t.guild_id), [t]),
-                S = (0, c.e7)([F.ZP], () => null != t.guild_id && F.ZP.isCurrentUserGuest(t.guild_id), [t]),
+                j = (0, L.NE)(t, n),
+                E = (0, L.Ek)(n),
+                S = (0, c.e7)([O.Z], () => null != t.guild_id && O.Z.isLurking(t.guild_id), [t]),
+                I = (0, c.e7)([F.ZP], () => null != t.guild_id && F.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 P = s.id === d,
                 Z = (y || n.canDeleteOwnMessage(d)) && p && !ei.V$x.UNDELETABLE.has(n.type);
             n.type === ei.uaV.AUTO_MODERATION_ACTION && (Z = Z && y);
@@ -230,13 +229,13 @@ function ef(e) {
                     canChat: _,
                     renderReactions: g,
                     canAddNewReactions: x,
-                    isLurking: I,
-                    isGuest: S,
+                    isLurking: S,
+                    isGuest: I,
                     isActiveChannelOrUnarchivableThread: p
                 }),
                 B = t.type === ei.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(ei.oNc.NEWS) && (P || y) && (0, f.Z)(n),
                 z = t.getGuildId(),
-                Y = null != z && (n.type === ei.uaV.USER_JOIN || n.type === ei.uaV.GUILD_INVITE_REMINDER) && V.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: z }),
+                Y = null != z && n.type === ei.uaV.USER_JOIN && V.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: z }),
                 q = (0, C.a)(n),
                 { enabled: $ } = k.Z.useExperiment({ location: 'message_utilities' }),
                 ee = (0, c.e7)([M.Z], () => null != M.Z.getSavedMessage(t.id, n.id)),
@@ -265,45 +264,44 @@ function ef(e) {
                 showMessageBookmarksActions: $,
                 isMessageBookmark: ee,
                 setPopout: o,
-                isFocused: a,
-                isGuildInviteReminder: n.type === ei.uaV.GUILD_INVITE_REMINDER
+                isFocused: a
             };
         })(e),
-        ef = i.useRef(null),
-        em = i.useCallback(() => {
-            B ||
+        ed = i.useRef(null),
+        ef = i.useCallback(() => {
+            (B ||
                 z.default.track(ei.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
                     channel: n.channel_id
                 }),
-                eo({ moreUtilities: !B });
+                eo({ moreUtilities: !B }));
         }, [B, eo, n]),
-        eg = i.useCallback(() => {
+        em = i.useCallback(() => {
             eo({ emojiPicker: !Y });
         }, [Y, eo]),
-        e_ = (0, D.$R)(t),
-        ey = n.hasFlag(ei.iLy.CROSSPOSTED),
-        [eC, ex] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        ev = eC === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-        [ej, eO] = i.useState(!1),
-        eE = i.useCallback(() => {
-            eO(!0);
+        eg = (0, L.$R)(t),
+        e_ = n.hasFlag(ei.iLy.CROSSPOSTED),
+        [ey, eC] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        ex = ey === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [ev, ej] = i.useState(!1),
+        eO = i.useCallback(() => {
+            ej(!0);
         }, []),
-        eI = i.useCallback(() => {
-            eO(!1);
+        eE = i.useCallback(() => {
+            ej(!1);
         }, []),
         eS = i.useCallback(
             (e, t) => {
-                ex(el.L.TAKE_ACTION), (0, ee.ts)(e, t);
+                (eC(el.L.TAKE_ACTION), (0, ee.ts)(e, t));
             },
-            [ex]
+            [eC]
         ),
-        { canShowReactionsOnMessageHover: eP } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: eI } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     b.Xb.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
-    let eZ = (0, N.Z)(t, n),
-        eN = (0, Z.Nt)(),
-        eT = eZ && eN && !n.hasPotions(),
-        eA = i.useCallback(
+    let eP = (0, N.Z)(t),
+        eZ = (0, Z.Nt)(),
+        eN = eP && eZ && !n.hasPotions(),
+        eT = i.useCallback(
             (e) => {
                 try {
                     (0, E.qc)(t.id, n.id, e);
@@ -329,7 +327,7 @@ function ef(e) {
                                     'copy-id'
                                 )
                               : null,
-                          l && !eu
+                          l
                               ? (0, r.jsx)(
                                     $.sF,
                                     {
@@ -351,7 +349,7 @@ function ef(e) {
                                     'configure'
                                 )
                               : null,
-                          e_
+                          eg
                               ? (0, r.jsx)(
                                     $.sF,
                                     {
@@ -409,10 +407,10 @@ function ef(e) {
                       ]
                   })
                 : null,
-            _ && !eu
+            _
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          eP && !w
+                          eI && !w
                               ? (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(eh, {
@@ -424,28 +422,28 @@ function ef(e) {
                                 })
                               : null,
                           (0, r.jsx)(et.Z, {
-                              togglePopout: eg,
+                              togglePopout: em,
                               renderEmojiPicker: eb,
                               shouldShow: Y,
-                              isFocused: ed,
+                              isFocused: eu,
                               channel: t,
                               message: n
                           }),
-                          eT
+                          eN
                               ? (0, r.jsx)(
                                     $.sF,
                                     {
                                         label: ea.intl.string(ea.t.icaJW1),
                                         icon: d.l22,
                                         onClick: () => {
-                                            z.default.track(ei.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: S.MG.MessageExpandingButtons }),
+                                            (z.default.track(ei.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: I.MG.MessageExpandingButtons }),
                                                 (0, P.s)({
                                                     channelId: t.id,
                                                     message: n,
-                                                    onRedeem: eA,
-                                                    onClose: I.Qy,
-                                                    source: S.YD.MessageExpandingButtons
-                                                });
+                                                    onRedeem: eT,
+                                                    onClose: S.Qy,
+                                                    source: I.YD.MessageExpandingButtons
+                                                }));
                                         }
                                     },
                                     'add-confetti-potion'
@@ -483,9 +481,9 @@ function ef(e) {
                           label: ea.intl.string(ea.t.I3ltXF),
                           icon: x.Z,
                           onClick: () => eS(t, n),
-                          onTooltipShow: eE,
-                          onTooltipHide: eI,
-                          showNewBadge: !ej && ev
+                          onTooltipShow: eO,
+                          onTooltipHide: eE,
+                          showNewBadge: !ev && ex
                       },
                       'forward'
                   )
@@ -516,15 +514,15 @@ function ef(e) {
                 ? (0, r.jsx)(
                       $.sF,
                       {
-                          label: ey ? ea.intl.string(ea.t['1kWJAg']) : ea.intl.string(ea.t['MFGE5+']),
+                          label: e_ ? ea.intl.string(ea.t['1kWJAg']) : ea.intl.string(ea.t['MFGE5+']),
                           icon: d.MqZ,
                           onClick: () => (0, ee.Xl)(t, n),
-                          disabled: ey
+                          disabled: e_
                       },
                       'publish'
                   )
                 : null,
-            a && (eu || w)
+            a && w
                 ? (0, r.jsx)(
                       $.sF,
                       {
@@ -540,7 +538,7 @@ function ef(e) {
             w && a
                 ? null
                 : (0, r.jsx)(d.yRy, {
-                      targetElementRef: ef,
+                      targetElementRef: ed,
                       renderPopout: (e) => {
                           let { updatePosition: i, closePopout: l } = e;
                           return (0, r.jsx)(ep, {
@@ -552,7 +550,7 @@ function ef(e) {
                           });
                       },
                       shouldShow: B,
-                      onRequestClose: em,
+                      onRequestClose: ef,
                       position: 'left',
                       align: 'top',
                       animation: d.yRy.Animation.NONE,
@@ -568,12 +566,12 @@ function ef(e) {
                                               r,
                                               i = {},
                                               l = Object.keys(e);
-                                          for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                          for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                           return i;
                                       })(e, t);
                                   if (Object.getOwnPropertySymbols) {
                                       var l = Object.getOwnPropertySymbols(e);
-                                      for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                      for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                   }
                                   return i;
                               })(e, ['onClick']),
@@ -582,11 +580,11 @@ function ef(e) {
                               $.sF,
                               ec(
                                   {
-                                      ref: ef,
+                                      ref: ed,
                                       label: ea.intl.string(ea.t.UKOtz8),
                                       icon: d.xhG,
                                       selected: l,
-                                      onClick: em
+                                      onClick: ef
                                   },
                                   i
                               ),
@@ -656,7 +654,7 @@ function eb(e, t, n) {
         closePopout: n,
         onSelectEmoji: (r) => {
             let { emoji: i, willClose: l, isBurst: o } = r;
-            eg({
+            (eg({
                 type: 'add',
                 emoji: i,
                 channel: e,
@@ -664,7 +662,7 @@ function eb(e, t, n) {
                 location: T.TW.MESSAGE_REACTION_PICKER,
                 isBurst: o
             }),
-                l && (o ? s()(n, 150)() : n());
+                l && (o ? s()(n, 150)() : n()));
         },
         analyticsOverride: l,
         messageId: t.id

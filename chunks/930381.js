@@ -18,7 +18,7 @@ function c(t) {
             id: 'reset',
             label: u.intl.string(u.t['hW+EMj']),
             action: (t) => {
-                t.stopPropagation(), r.Z.resetDefaultLayout(e, null != c ? c : o.bv);
+                (t.stopPropagation(), r.Z.resetDefaultLayout(e, null != c ? c : o.bv));
             }
         })
     });

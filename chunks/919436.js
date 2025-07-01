@@ -1,10 +1,10 @@
-n.d(t, { Z: () => D }), n(415506), n(388685);
+(n.d(t, { Z: () => D }), n(415506), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
     o = n(695469),
-    s = n(91192),
-    a = n(442837),
+    a = n(91192),
+    s = n(442837),
     c = n(481060),
     u = n(239091),
     d = n(358221),
@@ -20,8 +20,8 @@ var r,
     v = n(451478),
     C = n(276952),
     j = n(682662),
-    E = n(662146),
-    S = n(674552),
+    S = n(662146),
+    E = n(674552),
     x = n(981631),
     I = n(388032),
     P = n(223203);
@@ -42,7 +42,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -90,7 +90,7 @@ function A(e) {
 class R extends (r = l.PureComponent) {
     componentWillEnter(e) {
         let { controller: t } = this.state;
-        e(),
+        (e(),
             t
                 .update({
                     immediate: !v.Z.isFocused(),
@@ -100,7 +100,7 @@ class R extends (r = l.PureComponent) {
                     config: A
                 })
                 .start()
-                .then(() => this.setState({ animating: !1 }));
+                .then(() => this.setState({ animating: !1 })));
     }
     componentWillAppear(e) {
         let { controller: t } = this.state;
@@ -148,7 +148,7 @@ class R extends (r = l.PureComponent) {
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
-        let { channel: e, channelName: t, selected: n, badge: r, audio: l, video: s, stream: a, isCurrentUserInThisDMCall: u, unread: d, isGDMFacepileEnabled: h, treeItemProps: p } = this.props,
+        let { channel: e, channelName: t, selected: n, badge: r, audio: l, video: a, stream: s, isCurrentUserInThisDMCall: u, unread: d, isGDMFacepileEnabled: h, treeItemProps: p } = this.props,
             { hovered: f, animating: m } = this.state,
             b = e.isMultiUserDM() && null == e.icon && h;
         return (0, i.jsx)(o.animated.div, {
@@ -161,17 +161,17 @@ class R extends (r = l.PureComponent) {
                         unread: !m && d,
                         className: P.pill
                     }),
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(S.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: r > 0 ? (0, S.Ne)(r, void 0, !0) : null,
-                            upperBadge: (0, S.Or)({
+                            lowerBadge: r > 0 ? (0, E.Ne)(r, void 0, !0) : null,
+                            upperBadge: (0, E.Or)({
                                 audio: l,
-                                video: s,
-                                screenshare: a,
+                                video: a,
+                                screenshare: s,
                                 isCurrentUserConnected: u
                             }),
                             lowerBadgeSize: { width: (0, c.OVM)(r) },
@@ -213,7 +213,7 @@ class R extends (r = l.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             N(this, 'state', {
                 hovered: !1,
                 animating: !0,
@@ -250,7 +250,7 @@ class R extends (r = l.PureComponent) {
                                   })
                               );
                       });
-            });
+            }));
     }
 }
 N(R, 'defaultProps', {
@@ -262,18 +262,18 @@ N(R, 'defaultProps', {
 let D = l.forwardRef(function (e, t) {
     let n = e.channel.id,
         r = (0, p.ZP)(e.channel),
-        l = (0, s.Ie)(n, 2),
-        o = (0, a.e7)([b.Z], () => b.Z.getChannelId(), []),
-        u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : x.WtW.VOICE), [o]),
-        h = (0, a.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        g = (0, a.e7)([O.Z], () => O.Z.getChannelId(), []),
-        y = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
+        l = (0, a.Ie)(n, 2),
+        o = (0, s.e7)([b.Z], () => b.Z.getChannelId(), []),
+        u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : x.WtW.VOICE), [o]),
+        h = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
+        g = (0, s.e7)([O.Z], () => O.Z.getChannelId(), []),
+        y = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: v } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         C = o === n,
         j = !1,
-        E = !1;
-    C && ((j = u === x.WtW.VOICE), (E = u === x.WtW.VIDEO));
-    let S = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
+        S = !1;
+    C && ((j = u === x.WtW.VOICE), (S = u === x.WtW.VIDEO));
+    let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         R,
         Z(w({}, e), {
@@ -283,11 +283,11 @@ let D = l.forwardRef(function (e, t) {
             selected: g === n,
             badge: y,
             audio: j,
-            video: E,
+            video: S,
             stream: h,
             isCurrentUserInThisDMCall: C,
             isGDMFacepileEnabled: v,
-            size: S,
+            size: E,
             treeItemProps: l
         })
     );

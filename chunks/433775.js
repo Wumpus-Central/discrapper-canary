@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var l = n(73800),
     r = n(442837),
     i = n(951539),
@@ -8,22 +8,22 @@ var l = n(73800),
     c = n(981631);
 let u = { can_broadcast: !1 };
 function d(e, t, n) {
-    let [d, m] = l.useState(u),
-        [x, g] = l.useState(!1),
+    let [d, x] = l.useState(u),
+        [m, g] = l.useState(!1),
         h = l.useRef(!1),
         v = null == e ? void 0 : e.id,
         f = null == e ? void 0 : e.hasFeature(c.oNc.HAS_DIRECTORY_ENTRY);
-    l.useEffect(() => {
-        if (!f) return void m(u);
+    (l.useEffect(() => {
+        if (!f) return void x(u);
         h.current ||
             null == v ||
             (async () => {
                 h.current = !0;
                 try {
                     let e = await (0, s.X)(v, o.C2.GUILD_SCHEDULED_EVENT, t);
-                    m(e);
+                    x(e);
                 } catch (e) {
-                    m(u);
+                    x(u);
                 }
                 h.current = !1;
             })();
@@ -32,11 +32,11 @@ function d(e, t, n) {
             var e;
             if (!d.can_broadcast) return void g(!1);
             g(null == (e = d.has_broadcast) || e);
-        }, [d]);
+        }, [d]));
     let p = (0, r.e7)([a.Z], () => (0, i.wg)(n, [a.Z]));
     return {
         broadcastInfo: d,
-        broadcastToDirectoryChannels: p && x,
+        broadcastToDirectoryChannels: p && m,
         setBroadcastToDirectoryChannels: g,
         canEveryoneRoleViewEvent: p
     };

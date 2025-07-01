@@ -1,4 +1,4 @@
-n.d(t, { Y: () => A }), n(388685);
+(n.d(t, { Y: () => A }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -31,7 +31,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -47,11 +47,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -73,7 +73,7 @@ function v(e, t) {
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -83,7 +83,7 @@ function I(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let T = {
@@ -126,7 +126,7 @@ function A(e) {
         H = (0, _.a)((0, p.ZP)()),
         Y = i.useRef(!1);
     i.useEffect(() => {
-        !0 === D && ((Y.current = !0), s.u.announce(null != L ? L : h.intl.string(h.t.A11Y_LOADING_STARTED))), !1 === D && !0 === Y.current && (s.u.announce(null != x ? x : h.intl.string(h.t.A11Y_LOADING_FINISHED)), (Y.current = !1));
+        (!0 === D && ((Y.current = !0), s.u.announce(null != L ? L : h.intl.string(h.t.A11Y_LOADING_STARTED))), !1 === D && !0 === Y.current && (s.u.announce(null != x ? x : h.intl.string(h.t.A11Y_LOADING_FINISHED)), (Y.current = !1)));
     }, [D, L, x]);
     let W = (0, r.jsxs)('div', {
             className: o()(g.buttonChildren, { [g.loading]: D }),
@@ -187,7 +187,7 @@ function A(e) {
         );
     return F
         ? (0, r.jsx)('div', {
-              className: g.expressiveWrapper,
+              className: o()(g.expressiveWrapper, { [g.fullWidth]: U }),
               children: K
           })
         : K;
@@ -250,14 +250,14 @@ function C(e) {
                     null == e || e.addEventListener('mouseenter', t, !0),
                     null == e || e.addEventListener('mouseleave', r, !0),
                     () => {
-                        null == e || e.removeEventListener('mouseenter', t, !0), null == e || e.removeEventListener('mouseleave', r, !0);
+                        (null == e || e.removeEventListener('mouseenter', t, !0), null == e || e.removeEventListener('mouseleave', r, !0));
                     }
                 );
             }
         }, [t, n]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(u.QD, {
+                (0, r.jsx)(u.GlowButtonRive, {
                     className: o()(g.expressiveRive, g.expressiveBackground),
                     eventTargetRef: n,
                     fit: 'layout',
@@ -266,7 +266,7 @@ function C(e) {
                     withReducedMotion: 'short-loop'
                 }),
                 !t &&
-                    (0, r.jsx)(u.QD, {
+                    (0, r.jsx)(u.GlowButtonRive, {
                         className: o()(g.expressiveRive, g.expressiveHoverContainer),
                         fit: 'layout',
                         artboard: a ? 'HoverLightmode' : 'HoverDarkmode'

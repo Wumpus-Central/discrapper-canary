@@ -31,19 +31,19 @@ function O() {
     null != r && null != i && (window.open(''.concat(r, '&key=').concat(i)), p.Z.focus(null, !0));
 }
 function v() {
-    (i = null), y.stop(), (b = !1), c.K.set(E, b);
+    ((i = null), y.stop(), (b = !1), c.K.set(E, b));
 }
 function I(e) {
-    (r = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), O();
+    ((r = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), O());
 }
 function T(e) {
     if (null != i) return !1;
-    (i = (0, s.Z)()), y.start(e.timeout, () => (0, f.lx)()), O();
+    ((i = (0, s.Z)()), y.start(e.timeout, () => (0, f.lx)()), O());
 }
 function S(e) {
     let { handoffKey: t, handoffToken: n, timeout: r } = e;
     if (null == t || null == n) return !1;
-    (b = !0), y.start(r, () => (0, f.lx)());
+    ((b = !0), y.start(r, () => (0, f.lx)()));
 }
 function A(e) {
     a = new _.Z(e.user);

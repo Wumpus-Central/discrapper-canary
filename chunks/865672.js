@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     De: () => p,
     EJ: () => h,
     Ic: () => _,
@@ -7,7 +7,7 @@ n.d(t, {
     n(413496),
     n(433524),
     n(35282),
-    n(539854);
+    n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -92,14 +92,14 @@ function h(e) {
             i = [],
             a = 0;
         for (; null !== (t = n.exec(e)); )
-            t.index > a && i.push(e.slice(a, t.index)),
+            (t.index > a && i.push(e.slice(a, t.index)),
                 i.push(
                     (0, r.jsx)('span', {
                         className: u.emoji,
                         children: t[0]
                     })
                 ),
-                (a = n.lastIndex);
-        return a < e.length && i.push(e.slice(a)), i;
+                (a = n.lastIndex));
+        return (a < e.length && i.push(e.slice(a)), i);
     }, [e]);
 }

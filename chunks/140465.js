@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     B4: () => O,
     Nx: () => h,
     UV: () => y,
@@ -6,7 +6,7 @@ n.d(t, {
     lr: () => g,
     t7: () => m
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(913527),
     a = n.n(i),
@@ -95,7 +95,7 @@ let m = () => {
                 isFetchingChurnDiscountOffer: i
             };
         let l = () => {
-            n(!0), a(!1);
+            (n(!0), a(!1));
         };
         return (
             i ||
@@ -103,7 +103,7 @@ let m = () => {
                 (a(!0),
                 E()
                     .then((e) => {
-                        s(e), l();
+                        (s(e), l());
                     })
                     .catch((e) => {
                         l();

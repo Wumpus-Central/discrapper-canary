@@ -21,7 +21,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function E(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -37,8 +37,8 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -133,7 +133,7 @@ let x = {
                         onClick: (e) => {
                             (0, r.jW)(e, async () => {
                                 let { default: e } = await n.e('32382').then(n.bind(n, 955280));
-                                return t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) }));
+                                return (t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) })));
                             });
                         }
                     }),
@@ -161,7 +161,7 @@ let x = {
                         onClick: (e) => {
                             (0, r.jW)(e, async () => {
                                 let { default: e } = await n.e('38813').then(n.bind(n, 541501));
-                                return t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) }));
+                                return (t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) })));
                             });
                         }
                     }),
@@ -274,7 +274,7 @@ let x = {
                         onClick: (e) => {
                             (0, r.jW)(e, async () => {
                                 let { default: e } = await n.e('94706').then(n.bind(n, 168133));
-                                return t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) }));
+                                return (t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) })));
                             });
                         }
                     }),

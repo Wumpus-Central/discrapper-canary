@@ -14,6 +14,6 @@ function r(e, t, n) {
 n.d(t, { Z: () => i });
 class i {
     constructor(e, t) {
-        r(this, 'skuId', void 0), r(this, 'skuFeatures', void 0), (this.skuId = e), (this.skuFeatures = t);
+        (r(this, 'skuId', void 0), r(this, 'skuFeatures', void 0), (this.skuId = e), (this.skuFeatures = t));
     }
 }

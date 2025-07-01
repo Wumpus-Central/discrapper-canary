@@ -98,21 +98,21 @@ function T(e) {
                         i,
                         r = {},
                         s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
         }
     })(e, ['backgroundElementRef', 'onClickPill', 'onClose', 'onCloseCallback']);
     let { balance: a } = (0, m.A)(),
         o = r.useCallback(async () => {
-            await (0, u.j2)(), await s(), l();
+            (await (0, u.j2)(), await s(), l());
         }, [s, l]),
         c = r.useCallback(async () => {
-            await o(), n();
+            (await o(), n());
         }, [n, o]);
     return (0, i.jsxs)(h.E9, {
         className: j.coachmarkModalContainer,

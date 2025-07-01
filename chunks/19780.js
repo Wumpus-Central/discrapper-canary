@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => z }), n(415506), n(388685);
+(n.d(t, { Z: () => z }), n(415506), n(388685));
 var a,
     o = n(442837),
     s = n(570140),
@@ -28,7 +28,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -179,20 +179,20 @@ function A(e, t) {
 }
 function N() {
     if (null == r) return !1;
-    (v = r.getDuration()),
+    ((v = r.getDuration()),
         s.Z.dispatch({
             type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
             mediaEngineConnectionId: r.getMediaEngineConnectionId()
         }),
         r.destroy(),
         (r = null),
-        (O = null);
+        (O = null));
 }
 function C(e) {
-    return (i = e.sessionId), (b = null), (y = null), N(), !1;
+    return ((i = e.sessionId), (b = null), (y = null), N(), !1);
 }
 function R() {
-    (i = null), (b = null), (y = null), N();
+    ((i = null), (b = null), (y = null), N());
 }
 function P(e) {
     let { voiceStates: t } = e;
@@ -202,7 +202,7 @@ function P(e) {
         if (null != r) t.sessionId === i ? ((null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId) ? (null == t.channelId ? N() : (r.channelId = t.channelId)) : ((t.guildId !== r.guildId && null == t.channelId) || N(), null != t.channelId && ((b = null), (y = null), (r = A(t.guildId, t.channelId)), (I = (null != (a = null == O ? void 0 : O.getStats().max_voice_state_count) ? a : 0) > 1)))) : t.guildId === r.guildId && ((null == u.Z.getAwaitingRemoteSessionInfo() || null == u.Z.getRemoteSessionId()) && (b = r.channelId), N());
         else {
             if (t.sessionId !== i || null == t.channelId) return e;
-            (b = null), (y = null), (r = A(t.guildId, t.channelId)), (I = (null != (o = null == O ? void 0 : O.getStats().max_voice_state_count) ? o : 0) > 1);
+            ((b = null), (y = null), (r = A(t.guildId, t.channelId)), (I = (null != (o = null == O ? void 0 : O.getStats().max_voice_state_count) ? o : 0) > 1));
         }
         return !0;
     }, !1);
@@ -238,10 +238,10 @@ function j(e) {
     N();
 }
 function U(e) {
-    return e.state === p.$7l.ACTIVE && null != r && r.resetBackoff('App state is active'), !1;
+    return (e.state === p.$7l.ACTIVE && null != r && r.resetBackoff('App state is active'), !1);
 }
 function G(e) {
-    return e.state === p.hes.RTC_CONNECTED && (T = !0), !0;
+    return (e.state === p.hes.RTC_CONNECTED && (T = !0), !0);
 }
 function B(e) {
     null == r || r.setNoiseCancellationEnabled(e.enabled);
@@ -274,7 +274,7 @@ function Y(e) {
 }
 class W extends (a = o.ZP.Store) {
     initialize() {
-        this.waitFor(_.ZP), (0, d.r)(this.getRTCConnectionId, this.getMediaSessionId);
+        (this.waitFor(_.ZP), (0, d.r)(this.getRTCConnectionId, this.getMediaSessionId));
     }
     getRTCConnection() {
         return r;

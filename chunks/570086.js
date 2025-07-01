@@ -21,7 +21,7 @@ var r = n(98405),
             n = d(e < 2 ? void 0 : arguments[1], 'Error'),
             r = new E(t, n),
             i = new g(t);
-        return (i.name = m), s(r, 'stack', o(1, _(i.stack, 1))), u(r, this, b), r;
+        return ((i.name = m), s(r, 'stack', o(1, _(i.stack, 1))), u(r, this, b), r);
     },
     y = (b.prototype = E.prototype),
     O = 'stack' in new g(m),

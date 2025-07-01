@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Yr: () => C,
     ZP: () => P,
     gN: () => N,
@@ -6,7 +6,7 @@ n.d(t, {
 }),
     n(35282),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n(759174),
     a = n(586902),
@@ -43,7 +43,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -59,11 +59,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -93,11 +93,11 @@ function C(e) {
         case b.fO.USER:
             var t, n;
             let r = '\x05';
-            return (null == (t = e.voiceState) ? void 0 : t.selfVideo) ? (r = '\x03') : (null == (n = e.voiceState) ? void 0 : n.selfStream) && (r = '\x04'), ''.concat(r).concat((0, E.Z)(e.userNick, e.user));
+            return ((null == (t = e.voiceState) ? void 0 : t.selfVideo) ? (r = '\x03') : (null == (n = e.voiceState) ? void 0 : n.selfStream) && (r = '\x04'), ''.concat(r).concat((0, E.Z)(e.userNick, e.user)));
     }
 }
 var R = (function (e) {
-    return (e.VIDEO = 'VIDEO'), (e.STREAM = 'STREAM'), (e.FILTERED = 'FILTERED'), (e.SPEAKING = 'SPEAKING'), (e.ACTIVITY = 'ACTIVITY'), e;
+    return ((e.VIDEO = 'VIDEO'), (e.STREAM = 'STREAM'), (e.FILTERED = 'FILTERED'), (e.SPEAKING = 'SPEAKING'), (e.ACTIVITY = 'ACTIVITY'), e);
 })({});
 class P {
     get version() {
@@ -272,7 +272,7 @@ class P {
                               maxFrameRate: n.maxFrameRate
                           }
                         : null;
-            (y = S(I({}, h.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId(), O.Yn.STREAM), i), {
+            ((y = S(I({}, h.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId(), O.Yn.STREAM), i), {
                 type: r ? b.fO.HIDDEN_STREAM : b.fO.STREAM,
                 id: t,
                 userVideo: null != (u = null == A ? void 0 : A.selfVideo) && u,
@@ -280,12 +280,12 @@ class P {
                 userNick: g.ZP.getName(null == C ? void 0 : C.getGuildId(), this.channelId, T),
                 stream: P
             })),
-                v.push(y);
+                v.push(y));
         }
         return v;
     }
     constructor(e) {
-        v(this, 'channelId', void 0),
+        (v(this, 'channelId', void 0),
             v(this, 'call', void 0),
             v(this, 'participants', {}),
             v(this, 'lastSpoke', {}),
@@ -296,9 +296,9 @@ class P {
                 new i.h((e) => {
                     var t;
                     let n = [];
-                    return e.type === b.fO.USER && e.speaking && n.push('SPEAKING'), e.type === b.fO.USER && (null == (t = e.voiceState) ? void 0 : t.selfVideo) ? (n.push('VIDEO'), e.localVideoDisabled || n.push('FILTERED')) : (0, b._5)(e) && (n.push('STREAM'), e.type !== b.fO.HIDDEN_STREAM && null != e.streamId && n.push('FILTERED')), e.type === b.fO.ACTIVITY && (n.push('ACTIVITY'), n.push('FILTERED')), n;
+                    return (e.type === b.fO.USER && e.speaking && n.push('SPEAKING'), e.type === b.fO.USER && (null == (t = e.voiceState) ? void 0 : t.selfVideo) ? (n.push('VIDEO'), e.localVideoDisabled || n.push('FILTERED')) : (0, b._5)(e) && (n.push('STREAM'), e.type !== b.fO.HIDDEN_STREAM && null != e.streamId && n.push('FILTERED')), e.type === b.fO.ACTIVITY && (n.push('ACTIVITY'), n.push('FILTERED')), n);
                 }, C)
             ),
-            (this.channelId = e);
+            (this.channelId = e));
     }
 }

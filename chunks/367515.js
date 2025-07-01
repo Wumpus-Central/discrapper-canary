@@ -18,7 +18,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function _(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -34,8 +34,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -63,7 +63,7 @@ function E(e) {
         E = (0, u.VM)(),
         j = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         C = r.useCallback(() => {
-            l()(void 0 !== j, 'User must be logged in to accept a link request'),
+            (l()(void 0 !== j, 'User must be logged in to accept a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('59716').then(n.bind(n, 275370));
                     return (n) =>
@@ -74,10 +74,10 @@ function E(e) {
                                 otherUser: t
                             })
                         );
-                });
+                }));
         }, [j, t]),
         O = r.useCallback(() => {
-            l()(void 0 !== j, 'User must be logged in to decline a link request'),
+            (l()(void 0 !== j, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
                     return (n) =>
@@ -88,10 +88,10 @@ function E(e) {
                                 otherUser: t
                             })
                         );
-                });
+                }));
         }, [j, t]),
         S = r.useCallback(() => {
-            l()(void 0 !== j, 'User must be logged in to decline a link request'),
+            (l()(void 0 !== j, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('69015').then(n.bind(n, 247265));
                     return (n) =>
@@ -102,7 +102,7 @@ function E(e) {
                                 otherUser: t
                             })
                         );
-                });
+                }));
         }, [j, t]);
     return (0, i.jsxs)('div', {
         className: b.container,

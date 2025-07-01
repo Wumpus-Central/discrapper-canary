@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => T }), n(415506);
+(n.d(t, { Z: () => T }), n(415506));
 var a,
     o = n(442837),
     s = n(544891),
@@ -61,7 +61,7 @@ function O() {
             return (0, s.K0)() + u.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.gg$.BRAINTREE, r);
         },
         open: (e) => {
-            (i = e), window.open(e), I.emitChange();
+            ((i = e), window.open(e), I.emitChange());
         }
     });
 class v extends (a = o.ZP.Store) {

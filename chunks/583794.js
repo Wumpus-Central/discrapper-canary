@@ -15,7 +15,7 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -23,7 +23,7 @@ function i(e) {
             )),
             i.forEach(function (t) {
                 r(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -31,11 +31,11 @@ function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -50,19 +50,19 @@ function o(e, t) {
         e
     );
 }
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 class s {
     traceEvent(e, t) {
         let n,
             r = this._report,
             i = ['detached', 'waiting', 'attached', 'started', 'playing', 'silence'];
-        void 0 !== r[(n = 'soundshare_state_transition' === t.type ? 'soundshare_state_transition_'.concat(i[t.newState], '_count') : ''.concat(t.type, '_count'))] ? r[n] < 32767 && r[n]++ : r.soundshare_unknown_event_count++, 'pid' in t && (0 === r.soundshare_first_pid && (r.soundshare_first_pid = t.pid), (r.soundshare_last_pid = t.pid), this._pids.add(t.pid)), null != e && (null == r.soundshare_first_session && (r.soundshare_first_session = e), (r.soundshare_last_session = e));
+        (void 0 !== r[(n = 'soundshare_state_transition' === t.type ? 'soundshare_state_transition_'.concat(i[t.newState], '_count') : ''.concat(t.type, '_count'))] ? r[n] < 32767 && r[n]++ : r.soundshare_unknown_event_count++, 'pid' in t && (0 === r.soundshare_first_pid && (r.soundshare_first_pid = t.pid), (r.soundshare_last_pid = t.pid), this._pids.add(t.pid)), null != e && (null == r.soundshare_first_session && (r.soundshare_first_session = e), (r.soundshare_last_session = e)));
     }
     getStats() {
         return o(i({}, this._report), { soundshare_unique_pids: this._pids.size });
     }
     constructor() {
-        r(this, '_report', void 0),
+        (r(this, '_report', void 0),
             r(this, '_pids', void 0),
             (this._report = {
                 soundshare_attach_requested_count: 0,
@@ -93,6 +93,6 @@ class s {
                 soundshare_first_session: null,
                 soundshare_last_session: null
             }),
-            (this._pids = new Set());
+            (this._pids = new Set()));
     }
 }

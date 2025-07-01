@@ -16,7 +16,7 @@ let f = (e) => {
         { giftRecipient: h, setGiftRecipient: m } = (0, s.wD)();
     if (null == t) return null;
     let g = (e) => {
-        n(e, t), m(e);
+        (n(e, t), m(e));
     };
     return (0, r.jsxs)('div', {
         className: f,

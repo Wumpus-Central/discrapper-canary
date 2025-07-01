@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     E: () => c,
     i: () => l
 }),
-    n(415506);
+    n(415506));
 var r = n(503461),
     i = n(218521);
 function a(e, t, n) {
@@ -136,7 +136,7 @@ class l {
     }
     replaceAll(e) {
         return this.transaction((t) => {
-            t.delete(), t.putAll(e);
+            (t.delete(), t.putAll(e));
         }, this.defaultDebugTag);
     }
     delete() {
@@ -203,7 +203,7 @@ class l {
         });
     }
     constructor(e, t, n, r) {
-        a(this, 'prefix', void 0),
+        (a(this, 'prefix', void 0),
             a(this, 'tableId', void 0),
             a(this, 'database', void 0),
             a(this, 'defaultDebugTag', void 0),
@@ -221,7 +221,7 @@ class l {
             (this.prefix = e),
             (this.tableId = t),
             (this.database = n),
-            (this.defaultDebugTag = r ? void 0 : null);
+            (this.defaultDebugTag = r ? void 0 : null));
     }
 }
 class c {
@@ -247,7 +247,7 @@ class c {
         });
     }
     replaceAll(e) {
-        this.delete(), this.putAll(e);
+        (this.delete(), this.putAll(e));
     }
     delete() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
@@ -279,7 +279,7 @@ class c {
         });
     }
     constructor(e, t, n) {
-        a(this, 'prefix', void 0),
+        (a(this, 'prefix', void 0),
             a(this, 'tableId', void 0),
             a(this, 'transaction', void 0),
             a(this, 'messages', {
@@ -323,6 +323,6 @@ class c {
             }),
             (this.prefix = e),
             (this.tableId = t),
-            (this.transaction = n);
+            (this.transaction = n));
     }
 }

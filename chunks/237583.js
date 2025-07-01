@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(539854), n(388685);
+(n.d(t, { Z: () => h }), n(539854), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -39,7 +39,7 @@ class p extends (r = a.PureComponent) {
             o = 0;
         for (; o < a && o < e.length; ) {
             let t = o === e.length - 1;
-            i.push(n(e[o] || null, t ? null : u.avatarMasked, 'user-'.concat(o), t)), o++;
+            (i.push(n(e[o] || null, t ? null : u.avatarMasked, 'user-'.concat(o), t)), o++);
         }
         if (o < e.length) {
             let t = Math.min(e.length - o, 99);
@@ -71,7 +71,7 @@ class p extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, '_ref', void 0),
             f(this, 'defaultRenderUser', (e, t, n, r) => {
                 let { onClick: a, size: o, guildId: f } = this.props,
@@ -90,7 +90,7 @@ class p extends (r = a.PureComponent) {
                           },
                           _.id
                       );
-            });
+            }));
     }
 }
 f(p, 'defaultProps', {

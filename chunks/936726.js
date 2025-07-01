@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(35282), n(388685), n(539854);
+(n.d(t, { Z: () => T }), n(35282), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,15 +17,15 @@ var r = n(255367),
     x = n(572004),
     j = n(709054),
     O = n(51144),
-    y = n(486199),
-    v = n(981631),
+    v = n(486199),
+    y = n(981631),
     _ = n(388032),
     C = n(368938);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -41,8 +41,8 @@ function N(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -75,20 +75,20 @@ function E(e, t) {
         : (0, h.ov)({
               id: e.id,
               avatar: t,
-              discriminator: v.fo$
+              discriminator: y.fo$
           });
 }
-function w(e) {
-    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: O, errors: w, onToggleExpand: P } = e,
-        [T, Z] = i.useState(!1),
+function T(e) {
+    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: O, errors: T, onToggleExpand: w } = e,
+        [P, Z] = i.useState(!1),
         [k] = i.useState(new s.V7());
     i.useEffect(() => () => k.stop(), [k]);
     let A = i.useMemo(() => E(n, n.avatar), [n]),
-        R = i.useCallback(() => {
-            let e = ''.concat((0, a.K0)(!1)).concat(v.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
+        D = i.useCallback(() => {
+            let e = ''.concat((0, a.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
         }, [n]),
-        D = i.useCallback(() => {
+        R = i.useCallback(() => {
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
                     c.ConfirmModal,
@@ -157,11 +157,11 @@ function w(e) {
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0
                                         }),
-                                        null != w.avatar && '' !== w.avatar
+                                        null != T.avatar && '' !== T.avatar
                                             ? (0, r.jsx)(c.Text, {
                                                   color: 'text-danger',
                                                   variant: 'text-sm/normal',
-                                                  children: w.avatar
+                                                  children: T.avatar
                                               })
                                             : null
                                     ]
@@ -182,7 +182,7 @@ function w(e) {
                                                             u.Z.updateWebhook({ name: e });
                                                         },
                                                         maxLength: 80,
-                                                        error: w.name
+                                                        error: T.name
                                                     })
                                                 })
                                             }),
@@ -207,7 +207,7 @@ function w(e) {
                                         children: [
                                             (0, r.jsx)(c.ua7, {
                                                 text: _.intl.string(_.t.wwdb3t),
-                                                forceOpen: T,
+                                                forceOpen: P,
                                                 color: c.FGA.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
@@ -222,12 +222,12 @@ function w(e) {
                                                                         r,
                                                                         i = {},
                                                                         l = Object.keys(e);
-                                                                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                                                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                                                     return i;
                                                                 })(e, t);
                                                             if (Object.getOwnPropertySymbols) {
                                                                 var l = Object.getOwnPropertySymbols(e);
-                                                                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                                                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                                             }
                                                             return i;
                                                         })(e, ['onClick', 'onMouseEnter', 'onMouseLeave', 'onBlur', 'onFocus']);
@@ -236,7 +236,7 @@ function w(e) {
                                                         I(N({}, s), {
                                                             'aria-label': '',
                                                             onClick: () => {
-                                                                null == t || t(), Z(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), k.start(1000, () => Z(!1)), R();
+                                                                (null == t || t(), Z(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), k.start(1000, () => Z(!1)), D());
                                                             },
                                                             size: c.zxk.Sizes.SMALL,
                                                             color: c.zxk.Colors.PRIMARY,
@@ -249,7 +249,7 @@ function w(e) {
                                                 }
                                             }),
                                             (0, r.jsx)(c.zxk, {
-                                                onClick: D,
+                                                onClick: R,
                                                 size: c.zxk.Sizes.SMALL,
                                                 color: c.zxk.Colors.RED,
                                                 look: c.zxk.Looks.LINK,
@@ -273,11 +273,11 @@ function w(e) {
                     (0, r.jsx)(c.P3F, {
                         className: C.header,
                         'aria-expanded': h,
-                        onClick: P,
+                        onClick: w,
                         children: (0, r.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [
-                                (0, r.jsx)(y.Z, {
+                                (0, r.jsx)(v.Z, {
                                     name: n.name,
                                     imageSrc: A,
                                     details: L

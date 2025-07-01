@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -59,14 +59,14 @@ class h extends (r = i.ZP.PersistedStore) {
         };
     }
 }
-l(h, 'displayName', 'HotspotStore'),
+(l(h, 'displayName', 'HotspotStore'),
     l(h, 'persistKey', 'hotspots'),
     l(h, 'migrations', [
         (e) => ({
             hiddenHotspots: null != e ? e : [],
             hotspotOverrides: {}
         })
-    ]);
+    ]));
 let m = new h(a.Z, {
     OVERLAY_INITIALIZE: p,
     HOTSPOT_HIDE: d,

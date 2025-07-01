@@ -25,13 +25,13 @@ function b(e) {
     return b.isModeratorReportChannel() && null != j
         ? (0, r.jsx)(u.ZP.Icon, {
               onClick: () => {
-                  (0, d.Kh)(b.id),
+                  ((0, d.Kh)(b.id),
                       (0, a.i)(),
                       (0, c.r)(b.guild_id, j, b.id, {
                           modViewPanel: f.k.INFO,
                           sourceLocation: null != location ? location : _.location
                       }),
-                      y.dispatch(h.CkL.POPOUT_CLOSE);
+                      y.dispatch(h.CkL.POPOUT_CLOSE));
               },
               tooltip: C,
               icon: l.HI3,

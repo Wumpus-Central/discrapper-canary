@@ -1,10 +1,11 @@
-n.d(t, {
-    n: () => A,
-    v: () => T
+(n.d(t, {
+    n: () => P,
+    v: () => N
 }),
     n(388685),
+    n(290780),
     n(415506),
-    n(482853);
+    n(482853));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -36,14 +37,53 @@ function O(e, t, n) {
         e
     );
 }
-let v = [p.ZP, h.ZP];
-class I extends i.PureComponent {
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                O(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function I(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function T(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : I(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let S = [p.ZP, h.ZP];
+class A extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
             a = i ? E.Dv.ENTERED : this.state.transitionState;
         return (0, r.jsx)(t, {
             children: (0, r.jsx)('div', {
-                className: o()(y.layer, !n && y.hidden),
+                className: o()(y.layer, !n && y.inactive),
                 children: e({
                     transitionState: a,
                     onClose: this.close
@@ -52,35 +92,35 @@ class I extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             O(this, 'state', { transitionState: null }),
             O(this, 'componentWillAppear', (e) => {
                 this.componentWillEnter(e);
             }),
             O(this, 'componentWillEnter', (e) => {
                 let { instant: t } = this.props;
-                this.setState({ transitionState: E.Dv.ENTERING }),
+                (this.setState({ transitionState: E.Dv.ENTERING }),
                     setTimeout(
                         () => {
-                            this.setState({ transitionState: E.Dv.ENTERED }), null == e || e();
+                            (this.setState({ transitionState: E.Dv.ENTERED }), null == e || e());
                         },
                         t ? 0 : E.CT
-                    );
+                    ));
             }),
             O(this, 'componentWillLeave', (e) => {
                 let { instant: t } = this.props;
-                this.setState({ transitionState: E.Dv.EXITING }),
+                (this.setState({ transitionState: E.Dv.EXITING }),
                     setTimeout(
                         () => {
-                            this.setState({ transitionState: E.Dv.EXITED }), e();
+                            (this.setState({ transitionState: E.Dv.EXITED }), e());
                         },
                         t ? 0 : E.CT
-                    );
+                    ));
             }),
             O(this, 'componentDidUpdate', (e) => {
-                if (e.isTopModal !== this.props.isTopModal) {
+                if (e.isVisible !== this.props.isVisible) {
                     let { transitionState: e } = this.state;
-                    e === E.Dv.HIDDEN && this.props.isTopModal && this.componentWillEnter(), this.props.isTopModal || (e !== E.Dv.ENTERING && e !== E.Dv.ENTERED) || this.setState({ transitionState: E.Dv.HIDDEN });
+                    (e === E.Dv.HIDDEN && this.props.isVisible && this.componentWillEnter(), this.props.isVisible || (e !== E.Dv.ENTERING && e !== E.Dv.ENTERED) || this.setState({ transitionState: E.Dv.HIDDEN }));
                 }
             }),
             O(
@@ -88,28 +128,41 @@ class I extends i.PureComponent {
                 'close',
                 () =>
                     new Promise((e) => {
-                        this.props.closeModal(this.props.modalKey), setTimeout(() => e(), E.CT);
+                        (this.props.closeModal(this.props.modalKey), setTimeout(() => e(), E.CT));
                     })
-            );
+            ));
     }
 }
-function T() {
+function N() {
     return (0, g.Vn)((0, f.bp)());
 }
-let S = [];
-function A() {
-    let e = T(),
-        t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : S)),
-        n = (0, _.q)('Modals'),
-        a = i.useRef(void 0);
+function C(e) {
+    let t = [],
+        n = !1;
+    for (let i = e.length - 1; i >= 0; i--) {
+        var r;
+        let a = e[i],
+            o = null == (r = e[i + 1]) ? void 0 : r.stackingBehavior,
+            s = n || 'replace' === o;
+        (t.unshift(T(v({}, a), { isVisible: !s })), 'replaceAll' === a.stackingBehavior && (n = !0));
+    }
+    return t;
+}
+let R = [];
+function P() {
+    let e = N(),
+        t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : R)),
+        n = i.useMemo(() => C(t), [t]),
+        a = (0, _.q)('Modals'),
+        o = i.useRef(void 0);
     i.useLayoutEffect(() => {
-        a.current = t[t.length - 1];
+        o.current = t[t.length - 1];
     }, [t]);
-    let o = t.length > 0;
+    let s = t.length > 0;
     i.useLayoutEffect(() => {
-        if (!o) return;
+        if (!s) return;
         let e = () => {
-            let e = a.current;
+            let e = o.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         };
         return (
@@ -118,60 +171,61 @@ function A() {
                 m.S.unsubscribe(b.CkL.MODAL_CLOSE, e);
             }
         );
-    }, [o]);
-    let s = i.useCallback(() => {
-            let e = a.current;
+    }, [s]);
+    let f = i.useCallback(() => {
+            let e = o.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         }, []),
-        f = i.useCallback(
+        h = i.useCallback(
             (t) => {
                 (0, g.Mr)(t, e);
             },
             [e]
         ),
-        h = v.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === p.ZP)));
+        E = S.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === p.ZP)));
     return (0, r.jsxs)(c.W, {
         component: i.Fragment,
         children: [
-            v.map((e, i) => {
-                var a;
+            S.map((e, n) => {
+                var i;
                 let o = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === p.ZP)),
-                    c = null != (a = null == o ? void 0 : o.backdropStyle) ? a : d.fCB.DARK;
-                return n && (0, d.OLG)(c)
+                    s = null != (i = null == o ? void 0 : o.backdropStyle) ? i : d.fCB.DARK;
+                return a && (0, d.OLG)(s)
                     ? (0, r.jsx)(
                           e,
                           {
                               children: (0, r.jsx)(d.ZMr, {
-                                  variant: c === d.fCB.LIGHTBOX || c === d.fCB.IMMERSIVE ? 'lightbox' : 'default',
+                                  variant: s === d.fCB.LIGHTBOX || s === d.fCB.IMMERSIVE ? 'lightbox' : 'default',
                                   animationVariant: (null == o ? void 0 : o.instant) ? 'instant' : 'default',
-                                  isVisible: h[i],
-                                  onClick: s
+                                  isVisible: E[n],
+                                  onClick: f
                               })
                           },
-                          'layer-'.concat(i)
+                          'layer-'.concat(n)
                       )
                     : (0, r.jsx)(
                           u.Z,
                           {
-                              isVisible: h[i],
-                              backdropStyle: c,
-                              onClose: s,
+                              isVisible: E[n],
+                              backdropStyle: s,
+                              onClose: f,
                               LayerComponent: e,
                               backdropInstant: null == o ? void 0 : o.instant
                           },
-                          'layer-'.concat(i)
+                          'layer-'.concat(n)
                       );
             }),
-            t.map((e, n) => {
-                let { key: i, Layer: a, render: o, instant: s } = e;
+            n.map((e, t) => {
+                let { key: i, Layer: a, render: o, instant: s, isVisible: l } = e;
                 return (0, r.jsx)(
-                    I,
+                    A,
                     {
                         modalKey: i,
                         LayerComponent: null != a ? a : p.ZP,
-                        isTopModal: n === t.length - 1,
+                        isVisible: l,
+                        isTopModal: t === n.length - 1,
                         render: o,
-                        closeModal: f,
+                        closeModal: h,
                         instant: s
                     },
                     i

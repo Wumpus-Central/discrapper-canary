@@ -1,8 +1,8 @@
-n.d(t, { P: () => o });
+n.d(t, { P: () => a });
 var r = n(255367),
     i = n(73800),
     l = n(709014);
-let a = {
+let o = {
         mute: {
             name: 'mute',
             start: 0,
@@ -39,10 +39,10 @@ let a = {
             duration: 40
         }
     },
-    o = (e) => {
+    a = (e) => {
         let t = i.useRef(null),
-            o = i.useRef(e);
-        o.current = e;
+            a = i.useRef(e);
+        a.current = e;
         let s = i.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
@@ -67,7 +67,7 @@ let a = {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -75,7 +75,7 @@ let a = {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -83,8 +83,8 @@ let a = {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -92,8 +92,8 @@ let a = {
                         {
                             src: () => n.e('30261').then(n.t.bind(n, 414787, 19)),
                             ref: t,
-                            initialAnimation: o.current,
-                            markers: a
+                            initialAnimation: a.current,
+                            markers: o
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))

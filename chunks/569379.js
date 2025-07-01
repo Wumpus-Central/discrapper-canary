@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     E: () => l,
     G: () => i
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     s = n(481060),
     o = n(410030),
@@ -12,11 +12,11 @@ function i() {
     return {
         completionSpring: e,
         startCompletionAnimation: r.useCallback(() => {
-            t({ spring: 1 }),
+            (t({ spring: 1 }),
                 t({
                     spring: 0,
                     delay: 2000
-                });
+                }));
         }, [t])
     };
 }

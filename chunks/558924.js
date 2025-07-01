@@ -1,4 +1,4 @@
-t.d(n, { Z: () => y }), t(388685), t(539854);
+(t.d(n, { Z: () => y }), t(388685), t(539854));
 var l = t(255367);
 t(73800);
 var i = t(120356),
@@ -65,7 +65,7 @@ function y(e, n) {
                     : v.intl.string(v.t.bHa9kJ),
                 subtext: I ? (0, l.jsx)(N, { channel: o }) : null,
                 action: () => {
-                    w && R(x.L.TAKE_ACTION), d.Z.ring(n, [e.id], 'user_context_menu'), I && null != n && (0, m.Kh)(n);
+                    (w && R(x.L.TAKE_ACTION), d.Z.ring(n, [e.id], 'user_context_menu'), I && null != n && (0, m.Kh)(n));
                 },
                 className: _.menuItem
             })
@@ -84,7 +84,7 @@ function y(e, n) {
                         })
                       : null,
                   action: () => {
-                      w && R(x.L.TAKE_ACTION), d.Z.stopRinging(n, [e.id]);
+                      (w && R(x.L.TAKE_ACTION), d.Z.stopRinging(n, [e.id]));
                   },
                   className: _.menuItem
               })

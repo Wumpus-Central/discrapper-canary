@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685), n(539854);
+(n.d(t, { Z: () => c }), n(388685), n(539854));
 var r = n(341702),
     i = n(887490);
 function a(e, t, n) {
@@ -18,7 +18,7 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -61,7 +61,7 @@ function c(e, t, n) {
                     anchor: i.bN.start(e, n),
                     focus: i.bN.end(e, n)
                 };
-                i.Jz.isBefore(t.anchor, l.anchor) && (t.anchor = l.anchor), i.Jz.isAfter(t.focus, l.focus) && (t.focus = l.focus), f.push(o({}, p, t));
+                (i.Jz.isBefore(t.anchor, l.anchor) && (t.anchor = l.anchor), i.Jz.isAfter(t.focus, l.focus) && (t.focus = l.focus), f.push(o({}, p, t)));
             }
         }
     }

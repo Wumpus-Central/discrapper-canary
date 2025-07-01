@@ -1,4 +1,4 @@
-n.d(t, { default: () => _ }), n(388685);
+(n.d(t, { default: () => _ }), n(388685));
 var a = n(255367),
     r = n(73800),
     o = n(120356),
@@ -27,19 +27,19 @@ function _(e) {
                         a,
                         r = {},
                         o = Object.keys(e);
-                    for (a = 0; a < o.length; a++) (n = o[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (a = 0; a < o.length; a++) ((n = o[a]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < o.length; a++) (n = o[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (a = 0; a < o.length; a++) ((n = o[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['onClose', 'items', 'startingIndex', 'enabledContentHarmTypeFlags', 'shouldHideMediaOptions', 'transitionState']);
     let [j, C] = r.useState(null != o ? o : 0),
         [T, E] = r.useState(!1),
         P = r.useRef(null);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         if (null != t)
             return (
                 p.S.subscribe(f.CkL.MEDIA_MODAL_CLOSE, t),
@@ -50,9 +50,9 @@ function _(e) {
     }, [t]),
         r.useEffect(() => {
             var e, t;
-            S === l.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)), S === l.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v));
+            (S === l.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)), S === l.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v)));
             let n = () => {
-                    u.Z.disable(), u.Z.enableTemp(s.P);
+                    (u.Z.disable(), u.Z.enableTemp(s.P));
                 },
                 a = () => {
                     u.Z.disableTemp();
@@ -62,12 +62,12 @@ function _(e) {
                 null == r || r.addEventListener('focus', n),
                 null == r || r.addEventListener('blur', a),
                 () => {
-                    null == r || r.removeEventListener('focus', n), null == r || r.removeEventListener('blur', a), u.Z.disableTemp();
+                    (null == r || r.removeEventListener('focus', n), null == r || r.removeEventListener('blur', a), u.Z.disableTemp());
                 }
             );
-        }, [S]);
+        }, [S]));
     let x = r.useCallback((e) => {
-            C(e), (0, d.yg)(d.uG.SELECTED_ITEM_CHANGE);
+            (C(e), (0, d.yg)(d.uG.SELECTED_ITEM_CHANGE));
         }, []),
         M = r.useMemo(
             () => ({
@@ -88,7 +88,7 @@ function _(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             a = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (a = a.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -96,7 +96,7 @@ function _(e) {
                             )),
                             a.forEach(function (t) {
                                 var a;
-                                (a = n[t]),
+                                ((a = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: a,
@@ -104,8 +104,8 @@ function _(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = a);
-                            });
+                                        : (e[t] = a));
+                            }));
                     }
                     return e;
                 })(

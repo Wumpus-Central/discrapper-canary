@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => f,
     aj: () => u,
     eB: () => d
 }),
-    n(415506);
+    n(415506));
 var r = n(774078),
     i = n(55935),
     a = n(960048),
@@ -25,7 +25,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,13 +33,13 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 let c = 60000;
 var u = (function (e) {
-    return (e[(e.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (e[(e.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (e[(e.ENDS_IN = 2)] = 'ENDS_IN'), (e[(e.SHORT_TIME = 3)] = 'SHORT_TIME'), (e[(e.CREDITS_ENDS_IN = 4)] = 'CREDITS_ENDS_IN'), e;
+    return ((e[(e.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (e[(e.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (e[(e.ENDS_IN = 2)] = 'ENDS_IN'), (e[(e.SHORT_TIME = 3)] = 'SHORT_TIME'), (e[(e.CREDITS_ENDS_IN = 4)] = 'CREDITS_ENDS_IN'), e);
 })({});
 function d(e) {
     let t = l({}, e);

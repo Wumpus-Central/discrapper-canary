@@ -66,26 +66,26 @@ let O = i.memo(function (e) {
         var t, n;
         let { className: l, compact: a, message: u, children: f, content: m, onUpdate: y } = e,
             E = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
-            I = i.useRef(!1),
-            S = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
+            S = i.useRef(!1),
+            I = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
             P = i.useCallback(() => {
-                (null == S ? void 0 : S.isBlockedEdit) ? (0, p.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
-            }, [u, S]);
+                (null == I ? void 0 : I.isBlockedEdit) ? (0, p.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
+            }, [u, I]);
         return (
             i.useLayoutEffect(() => {
-                I.current ? null != y && y() : (I.current = !0);
+                S.current ? null != y && y() : (S.current = !0);
             }, [y, u.content, m, E, f]),
             (0, r.jsxs)('div', {
                 id: (0, g.ut)(u),
                 className: o()(l, j.markup, {
                     [v.messageContent]: !0,
                     [v.markupRtl]: 'rtl' === s()(u.content),
-                    [x.blockedEdit]: null == S ? void 0 : S.isBlockedEdit,
-                    [x.blockedSend]: !(null == S ? void 0 : S.isBlockedEdit)
+                    [x.blockedEdit]: null == I ? void 0 : I.isBlockedEdit,
+                    [x.blockedSend]: !(null == I ? void 0 : I.isBlockedEdit)
                 }),
                 children: [
                     null != f ? f : (0, b.L5)(u, m),
-                    (null == S ? void 0 : S.isBlockedEdit) &&
+                    (null == I ? void 0 : I.isBlockedEdit) &&
                         null != u.timestamp &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -102,7 +102,7 @@ let O = i.memo(function (e) {
                             ]
                         }),
                     (0, r.jsx)(O, {
-                        notice: null != (n = null == S ? void 0 : S.errorMessage) ? n : C.intl.string(C.t.zQ69pq),
+                        notice: null != (n = null == I ? void 0 : I.errorMessage) ? n : C.intl.string(C.t.zQ69pq),
                         message: u,
                         compact: a,
                         onDismiss: P

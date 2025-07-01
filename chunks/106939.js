@@ -159,13 +159,13 @@ function W() {
         E = null != e,
         O = s && null != f && !E;
     (0, g.ZP)(() => {
-        (0, C.e)('family-center'),
+        ((0, C.e)('family-center'),
             I.ZP.initialPageLoad(),
             n ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
                     forceTrack: !0
-                });
+                }));
     });
     let S = {
             isConsideredAdult: e,
@@ -180,14 +180,14 @@ function W() {
     r.useEffect(() => {
         if (s && E) {
             let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = D.current;
-            T.default.track(L.rMx.FAMILY_CENTER_VIEWED, {
+            (T.default.track(L.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: i,
                 initial_page: k.QH[n],
                 source: k._6[k.Mu.SIDENAV]
             }),
-                j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
+                j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
         }
     }, [s, E]),
     r.useEffect(() => {
@@ -229,14 +229,14 @@ function K() {
         W = null != t,
         K = a && null != z && !W;
     (0, g.ZP)(() => {
-        m.Y(L.Z5c.FAMILY_CENTER),
+        (m.Y(L.Z5c.FAMILY_CENTER),
             (0, C.e)('family-center'),
             !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
             s ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
                     forceTrack: !0
-                });
+                }));
     });
     let q = {
             isConsideredAdult: t,
@@ -252,14 +252,14 @@ function K() {
         r.useEffect(() => {
             if (a && W) {
                 let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = X.current;
-                T.default.track(L.rMx.FAMILY_CENTER_VIEWED, {
+                (T.default.track(L.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
                     num_of_accepted_links: t,
                     selected_teen_id: i,
                     initial_page: k.QH[n],
                     source: k._6[k.Mu.SIDENAV]
                 }),
-                    j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
+                    j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
             }
         }, [a, W]),
         r.useEffect(() => {
@@ -272,8 +272,8 @@ function K() {
         K)
     )
         return null;
-    let Q = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
-        J = H[Q];
+    let J = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
+        Q = H[J];
     return (0, i.jsx)(f.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -283,19 +283,19 @@ function K() {
                 (0, i.jsx)(b.yY, { location: V.intl.string(U.default.RZqaJi) }),
                 (0, i.jsx)(Y, {
                     theme: D,
-                    section: Q,
+                    section: J,
                     handleItemSelect: (e) => {
                         w(e);
                     }
                 }),
                 (0, i.jsx)(u.njP.Panel, {
-                    id: Q,
+                    id: J,
                     'aria-labelledby': F,
                     className: G.contentPanel,
                     children: (0, i.jsx)(u.Ttm, {
                         children: (0, i.jsx)('div', {
                             className: G.sideNavContent,
-                            children: J()
+                            children: Q()
                         })
                     })
                 })

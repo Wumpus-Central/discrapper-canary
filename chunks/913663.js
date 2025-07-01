@@ -28,7 +28,7 @@ function d(e) {
     null != r[t] && delete r[t];
 }
 function f() {
-    (l = {}), (c = {});
+    ((l = {}), (c = {}));
 }
 class _ extends (r = i.ZP.Store) {
     getStickerPreview(e, t) {

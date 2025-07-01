@@ -10,7 +10,7 @@ let r = Symbol.for('@ts-pattern/matcher'),
     l = (e, t, n) => {
         if (s(e)) {
             let { matched: i, selections: a } = e[r]().match(t);
-            return i && a && Object.keys(a).forEach((e) => n(e, a[e])), i;
+            return (i && a && Object.keys(a).forEach((e) => n(e, a[e])), i);
         }
         if (o(e)) {
             if (!o(t)) return !1;
@@ -422,7 +422,7 @@ function $(e) {
 }
 class ee {
     constructor(e, t) {
-        (this.input = void 0), (this.state = void 0), (this.input = e), (this.state = t);
+        ((this.input = void 0), (this.state = void 0), (this.input = e), (this.state = t));
     }
     with(...e) {
         let t;
@@ -433,7 +433,7 @@ class ee {
         let i = !1,
             o = {},
             s = (e, t) => {
-                (i = !0), (o[e] = t);
+                ((i = !0), (o[e] = t));
             },
             c =
                 r.some((e) => l(e, this.input, s)) && (!t || t(this.input))

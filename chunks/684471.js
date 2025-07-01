@@ -30,7 +30,7 @@ function _(t) {
                     size: s.zxk.Sizes.LARGE,
                     className: E.button,
                     onClick: () => {
-                        _(l.x.TAKE_ACTION), n(a.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
+                        (_(l.x.TAKE_ACTION), n(a.NM.USER_TAKEOVER_MODAL_TAKE_ACTION));
                     },
                     children: d.intl.string(d.t['+o4Q7e'])
                 }),
@@ -39,7 +39,7 @@ function _(t) {
                     size: s.zxk.Sizes.LARGE,
                     className: E.button,
                     onClick: () => {
-                        _(l.x.SAFETY_TIPS), n(a.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+                        (_(l.x.SAFETY_TIPS), n(a.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS));
                     },
                     children: d.intl.string(d.t.xLkGzM)
                 })

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $d: () => w,
     BQ: () => P,
     Cb: () => V,
@@ -26,7 +26,7 @@ n.d(t, {
     n(704826),
     n(35282),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(912370),
     i = n(668781),
     a = n(904245),
@@ -64,7 +64,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -72,7 +72,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -80,11 +80,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -106,7 +106,7 @@ function N(e, t) {
         i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -116,7 +116,7 @@ function C(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let R = { id: O.bi.BUILT_IN };
@@ -181,17 +181,17 @@ function G(e) {
                 if (t.inputType === c.iw.BUILT_IN_TEXT && null != i && null != r.channel) {
                     var e;
                     let t = _.ZP.parse(f, i.content);
-                    (t.tts = null != (e = i.tts) && e), a.Z.sendMessage(r.channel.id, t);
+                    ((t.tts = null != (e = i.tts) && e), a.Z.sendMessage(r.channel.id, t));
                 }
             } catch (e) {
                 throw (
-                    (i.Z.show({
+                    i.Z.show({
                         title: v.intl.string(v.t['aHO//v']),
                         body: v.intl.string(v.t.kuzKHB),
                         confirmText: v.intl.string(v.t['5911LS']),
                         onConfirm: () => p()
                     }),
-                    e)
+                    e
                 );
             }
         };

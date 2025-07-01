@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, {
+(n.d(t, {
     AS: () => f,
     Dw: () => _,
     KF: () => u,
@@ -12,7 +12,7 @@ n.d(t, {
     n(388685),
     n(413496),
     n(433524),
-    n(512722);
+    n(512722));
 var o = n(911969),
     s = n(702813),
     l = n(226951);
@@ -57,7 +57,7 @@ function f(e, t) {
         var n;
         a = e;
         let { group: t, decimal: o } = null != (n = s.L[e]) ? n : s.L['en-US'];
-        (r = RegExp(l.Z.escape(t), 'g')), (i = RegExp(l.Z.escape(o), 'g'));
+        ((r = RegExp(l.Z.escape(t), 'g')), (i = RegExp(l.Z.escape(o), 'g')));
     }
     return t.replace(r, '').replace(i, '.');
 }

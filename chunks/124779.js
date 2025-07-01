@@ -12,7 +12,7 @@ function u(t) {
     let { channel: n, transitionState: e, onClose: u } = t,
         _ = (0, a.Dt)();
     function h() {
-        l.default.disconnect(), u();
+        (l.default.disconnect(), u());
     }
     return (0, i.jsxs)(r.Y0X, {
         transitionState: e,
@@ -54,7 +54,7 @@ function u(t) {
                     (0, i.jsx)(r.zxk, {
                         color: r.zxk.Colors.RED,
                         onClick: function () {
-                            (0, c.NZ)(n), h();
+                            ((0, c.NZ)(n), h());
                         },
                         children: s.intl.string(s.t['sBP/1t'])
                     }),

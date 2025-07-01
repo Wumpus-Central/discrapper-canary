@@ -19,7 +19,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -58,7 +58,7 @@ async function u(e) {
     let { channelId: t, message: n, items: o, shouldUploadFailureSendNotification: l } = e,
         u = new i.Z(),
         d = (0, a.e5)(c(s({}, n), { id: u._file.id }));
-    u.on('start', (e) => {
+    (u.on('start', (e) => {
         r.Z.dispatch({
             type: 'UPLOAD_START',
             channelId: t,
@@ -91,7 +91,7 @@ async function u(e) {
                     file: e,
                     aborted: !0
                 });
-        });
+        }));
     let f = await u.uploadFiles(o);
     if (!u._aborted)
         return {

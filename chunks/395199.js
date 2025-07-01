@@ -1,4 +1,4 @@
-l.d(t, { Z: () => N }), l(539854), l(388685);
+(l.d(t, { Z: () => N }), l(539854), l(388685));
 var n,
     r = l(255367),
     s = l(73800),
@@ -164,7 +164,7 @@ class S extends (n = s.PureComponent) {
         });
     }
 }
-f(S, 'Header', j),
+(f(S, 'Header', j),
     f(S, 'ApplyBody', b),
     f(S, 'TransferBody', function (e) {
         var t, l;
@@ -216,5 +216,5 @@ f(S, 'Header', j),
             ]
         });
     }),
-    f(S, 'Footer', y);
+    f(S, 'Footer', y));
 let N = S;

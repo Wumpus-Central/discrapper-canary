@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(539854);
+(n.d(t, { Z: () => D }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -45,13 +45,13 @@ let D = i.forwardRef(function (e, t) {
                 if (void 0 !== i && i !== o) {
                     if (((e.children = i), 'parent' === t && !e.previewMarkdown && e.chatInputType === _.Ie.EDIT)) {
                         try {
-                            (e.previewMarkdown = !0), (0, N.KH)(e, D.guild_id, D.id);
+                            ((e.previewMarkdown = !0), (0, N.KH)(e, D.guild_id, D.id));
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        (0, N.KH)(e, D.guild_id, D.id), (a = void 0);
+                        ((0, N.KH)(e, D.guild_id, D.id), (a = void 0));
                     }
-                    'undo' !== t && void 0 !== i && i !== o && h.T.insertEntry(e, 'other', !1, o, s), (l = !0);
+                    ('undo' !== t && void 0 !== i && i !== o && h.T.insertEntry(e, 'other', !1, o, s), (l = !0));
                 }
                 if ((null == a || b.Ew.isValid(e, a) || (a = void 0), (l || !b.Ew.isValid(e, s)) && void 0 === a)) {
                     let t = b.bN.end(e, []);
@@ -64,7 +64,7 @@ let D = i.forwardRef(function (e, t) {
                 if ((l && !en && b.bN.focus(e), null != a && u)) {
                     e.selection = a;
                     let t = h.T.currentEntry(e);
-                    null != t && (t.selection = a), (l = !0);
+                    (null != t && (t.selection = a), (l = !0));
                 }
                 let d = p.cr(e);
                 if (
@@ -77,7 +77,7 @@ let D = i.forwardRef(function (e, t) {
                 )
                     if ('parent' === t)
                         try {
-                            (eg.current = !1), e.onChange();
+                            ((eg.current = !1), e.onChange());
                         } finally {
                             eg.current = !0;
                         }
@@ -128,7 +128,7 @@ let D = i.forwardRef(function (e, t) {
                 if (a.length > 0) {
                     var n, r;
                     let e = a[0];
-                    E.Q.selectCommandOption(ev, e.name),
+                    (E.Q.selectCommandOption(ev, e.name),
                         f.S.dispatch(P.CkL.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
@@ -138,7 +138,7 @@ let D = i.forwardRef(function (e, t) {
                             command_id: null == t || null == (n = t.rootCommand) ? void 0 : n.id,
                             argument_type: s.jw[null != (r = null == e ? void 0 : e.type) ? r : 3],
                             is_required: null == e ? void 0 : e.required
-                        });
+                        }));
                     return;
                 }
             }
@@ -152,7 +152,7 @@ let D = i.forwardRef(function (e, t) {
                     e
                 );
         }, [D.id, ev, q, eI, ee]);
-    (0, v.Z)(t, ev, D, eT), (0, S.Z)(ev, ep, F);
+    ((0, v.Z)(t, ev, D, eT), (0, S.Z)(ev, ep, F));
     let { handleKeyDown: eS, handleKeyUp: eA } = (0, I.Z)({
             editor: ev,
             channel: D,
@@ -179,7 +179,7 @@ let D = i.forwardRef(function (e, t) {
             },
             [X, B]
         );
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         em.current && ((eh.current = n), eb(ev, 'parent', { value: n }));
     }, [ev, n, eb]),
         i.useEffect(() => {
@@ -188,8 +188,8 @@ let D = i.forwardRef(function (e, t) {
                 let t = null != (e = c.Z.getActiveCommand(D.id)) ? e : null;
                 null !== t && null != t.options && eI(t, !0);
             };
-            return u.Z.addChangeListener(e), () => u.Z.removeChangeListener(e);
-        }, [D, ev, eI]);
+            return (u.Z.addChangeListener(e), () => u.Z.removeChangeListener(e));
+        }, [D, ev, eI]));
     let ew = i.useCallback((e, t) => (0, y.Z)(e, t), []),
         eD = i.useCallback((e) => (0, C.Z)(ev, e, D.id), [D.id, ev]),
         eL = i.useCallback((e) => (0, R.Z)(e), []);

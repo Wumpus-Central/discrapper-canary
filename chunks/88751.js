@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => k }), n(388685);
+(n.d(t, { ZP: () => k }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -60,7 +60,7 @@ function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null == E[t] && (E[t] = {});
     let r = v(e, t, n);
-    return (E[t][e] = r), r;
+    return ((E[t][e] = r), r);
 }
 function T(e, t) {
     var n;

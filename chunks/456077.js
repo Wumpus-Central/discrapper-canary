@@ -1,4 +1,4 @@
 function r(e, t) {
-    return t && (e = e.trim()), e;
+    return (t && (e = e.trim()), e);
 }
-n.d(t, { Z: () => r }), n(781311);
+(n.d(t, { Z: () => r }), n(781311));

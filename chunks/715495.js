@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+(n.d(t, { Z: () => O }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -21,7 +21,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function j(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -37,8 +37,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -71,7 +71,7 @@ function O() {
         A = (0, r.useCallback)(
             (e) => {
                 let t = m[e];
-                null != t &&
+                (null != t &&
                     c({
                         src: t.url,
                         palette: t.palette,
@@ -88,7 +88,7 @@ function O() {
                                   src: e,
                                   preview: !0
                               })
-                    );
+                    ));
             },
             [m]
         ),
@@ -120,7 +120,7 @@ function O() {
                                 className: E.toggleButton,
                                 size: o.PhG.SMALL,
                                 onClick: () => {
-                                    l(!1), n((e) => !e);
+                                    (l(!1), n((e) => !e));
                                 },
                                 color: o.Ttl.PRIMARY,
                                 children: 'Toggle Themes'
@@ -129,7 +129,7 @@ function O() {
                                 className: E.toggleButton,
                                 size: o.PhG.SMALL,
                                 onClick: () => {
-                                    n(!1), l((e) => !e);
+                                    (n(!1), l((e) => !e));
                                 },
                                 color: o.Ttl.PRIMARY,
                                 children: 'Toggle Gradients'
@@ -145,7 +145,7 @@ function O() {
                                 (0, i.jsx)(b.Z, {
                                     selected: null == a || null == (e = a.palette) ? void 0 : e.name,
                                     onSelect: (e) => {
-                                        (null == a ? void 0 : a.src) != null && f(a.src, a.src, e), P(e);
+                                        ((null == a ? void 0 : a.src) != null && f(a.src, a.src, e), P(e));
                                     }
                                 })
                         ]
@@ -190,7 +190,7 @@ function O() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         i = await n.arrayBuffer();
-                                    O(t, t, (0, h.xh)(i)), f(t, t, p.jD);
+                                    (O(t, t, (0, h.xh)(i)), f(t, t, p.jD));
                                 }
                             }),
                             (0, i.jsx)('div', {

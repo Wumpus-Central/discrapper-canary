@@ -2,7 +2,7 @@ var r = n(220159),
     o = n(674554).includes,
     a = n(779688),
     i = n(855802);
-r(
+(r(
     {
         target: 'Array',
         proto: !0,
@@ -16,4 +16,4 @@ r(
         }
     }
 ),
-    i('includes');
+    i('includes'));

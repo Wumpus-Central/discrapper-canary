@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     PV: () => u,
     _e: () => p,
     gD: () => d,
@@ -7,7 +7,7 @@ n.d(t, {
 }),
     n(415506),
     n(388685),
-    n(997841);
+    n(997841));
 var r = n(544891),
     i = n(570140),
     a = n(9874),
@@ -60,12 +60,12 @@ async function u(e) {
         s.GO.error('Failed to create scheduled message', n);
         let e = null != (f = null == (d = n.body) ? void 0 : d.message) ? f : n.message;
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'SCHEDULED_MESSAGES_CREATE_FAILURE',
                 channelId: t,
                 errorMsg: e
             }),
-            Error(e))
+            Error(e)
         );
     }
 }
@@ -93,12 +93,12 @@ async function d(e) {
         s.GO.error('Failed to cancel scheduled message', a);
         let r = null != (n = null == (t = a.body) ? void 0 : t.message) ? n : a.message;
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'SCHEDULED_MESSAGES_DELETE_FAILURE',
                 scheduledMessageId: e,
                 errorMsg: r
             }),
-            Error(r))
+            Error(r)
         );
     }
 }
@@ -114,17 +114,17 @@ async function _() {
     i.Z.dispatch({ type: 'FETCH_SCHEDULED_MESSAGES' });
     try {
         let e = await f();
-        s.GO.info('Fetched scheduled messages', e),
+        (s.GO.info('Fetched scheduled messages', e),
             i.Z.dispatch({
                 type: 'FETCH_SCHEDULED_MESSAGES_SUCCESS',
                 messages: e
-            });
+            }));
     } catch (e) {
-        s.GO.error('Failed to fetch scheduled messages', e),
+        (s.GO.error('Failed to fetch scheduled messages', e),
             i.Z.dispatch({
                 type: 'FETCH_SCHEDULED_MESSAGES_FAILURE',
                 error: e
-            });
+            }));
     }
 }
 function p(e) {

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     I: () => $,
     PaymentModal: () => J
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -63,7 +63,7 @@ function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -71,7 +71,7 @@ function K(e) {
             )),
             r.forEach(function (t) {
                 W(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -79,11 +79,11 @@ function z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -132,7 +132,7 @@ function J(e) {
             )
         ),
         eQ = (0, U.m)(eM, ek);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         eX((e) => {
             let n = null != eI ? (0, P.aS)(eI.id, !1, eF, eL) : void 0;
             return K(
@@ -161,7 +161,7 @@ function J(e) {
                 var e;
                 ev(null == (e = A.Z.get(M)) ? void 0 : e.skuId);
             }
-        }, [eT, ev, M, ec, eU, eg]);
+        }, [eT, ev, M, ec, eU, eg]));
     let eJ = i.useCallback(() => {
             let e = (0, R.MY)(eZ) === R.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
@@ -187,7 +187,7 @@ function J(e) {
                     { trackedFromStep: n, analyticsDataOverride: r, fulfillment: i, emitPaymentFlowLoadedEvent: a } = t,
                     o = Date.now();
                 if (e === L.h8.CONFIRM && (eJ(), null == m || m(i), em)) return void e$();
-                eA(e), null == eu || eu(e), eN(null), eS(null), e === L.h8.ADD_PAYMENT_STEPS && (u.Z.wait(f.fw), u.Z.wait(_.pB));
+                (eA(e), null == eu || eu(e), eN(null), eS(null), e === L.h8.ADD_PAYMENT_STEPS && (u.Z.wait(f.fw), u.Z.wait(_.pB)));
                 let s = null != n ? n : eR;
                 if (null === s || a)
                     return void C.default.track(
@@ -210,7 +210,7 @@ function J(e) {
             },
             [eA, eu, eN, eS, eR, eg, eq, e0, eP.startTime, eJ, m, em, e$, ex]
         );
-    (0, I.bp)(eR, eC, e1, ey), (0, L.dZ)(eR, eb, ey), (0, T.p)(eR, ew, e1), (0, E.Z)(e$), (0, S.w)(eD, () => B(!1), eF), (0, I.D6)(eC);
+    ((0, I.bp)(eR, eC, e1, ey), (0, L.dZ)(eR, eb, ey), (0, T.p)(eR, ew, e1), (0, E.Z)(e$), (0, S.w)(eD, () => B(!1), eF), (0, I.D6)(eC));
     let e2 = {
             initialPlanId: M,
             subscriptionTier: j,

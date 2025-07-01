@@ -1,5 +1,5 @@
 let r, i, a, o;
-n.d(t, { Z: () => Z }), n(472816), n(794429), n(642613), n(388685), n(539854), n(583741);
+(n.d(t, { Z: () => Z }), n(472816), n(794429), n(642613), n(388685), n(539854), n(583741));
 var s,
     l = n(392711),
     c = n.n(l),
@@ -36,7 +36,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -96,7 +96,7 @@ class V extends (s = u.ZP.PersistedStore) {
     }
     initialize(e) {
         var t;
-        (r = null == (t = null == e ? void 0 : e.shouldShowTopicsBar) || t), this.waitFor(m.Z, O.default, b.Z, g.Z, p.Z), this.syncWith([h.Z], B);
+        ((r = null == (t = null == e ? void 0 : e.shouldShowTopicsBar) || t), this.waitFor(m.Z, O.default, b.Z, g.Z, p.Z), this.syncWith([h.Z], B));
     }
     allSummaries() {
         return P;
@@ -198,7 +198,7 @@ let Z = new V(d.Z, {
             let e = (0, T.b)(r, i),
                 n = [...(null != (t = P[i]) ? t : [])],
                 a = n.findIndex((t) => t.id === (null == e ? void 0 : e.id));
-            a > -1 ? (n[a] = e) : n.push(e), (P[i] = n);
+            (a > -1 ? (n[a] = e) : n.push(e), (P[i] = n));
         }
         let s = R(N({}, null != (n = w[i]) ? n : { fetching: !1 }), {
             summaryId: void 0,
@@ -229,7 +229,7 @@ let Z = new V(d.Z, {
             error: void 0,
             lastReceivedAt: i
         });
-        null != r && (c.error = r), (w[n] = c);
+        (null != r && (c.error = r), (w[n] = c));
     },
     REQUEST_CHANNEL_SUMMARIES(e) {
         var t;
@@ -293,20 +293,20 @@ let Z = new V(d.Z, {
         var t;
         let { affinities: n, error: r } = e;
         if (null != r) {
-            (L = []),
+            ((L = []),
                 (x = {}),
                 (k = R(N({}, k), {
                     status: 'error',
                     lastResponse: Date.now()
-                }));
+                })));
             return;
         }
-        (L = null != n ? n : []),
+        ((L = null != n ? n : []),
             (x = null != (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) ? t : {}),
             (k = R(N({}, k), {
                 status: 'ok',
                 lastResponse: Date.now()
-            }));
+            })));
     },
     REQUEST_CHANNEL_SUMMARIES_BULK(e) {
         let { channelIds: t, requestedAt: n } = e,
@@ -342,7 +342,7 @@ let Z = new V(d.Z, {
                             .reverse()
                             .filter((e) => Object.keys(e).length > 0)
                             .value();
-                    return (e[n] = i), e;
+                    return ((e[n] = i), e);
                 }, {}),
             o = i.reduce(
                 (e, t) => {
@@ -364,7 +364,7 @@ let Z = new V(d.Z, {
                     summaryFetchStatusByChannel: {}
                 }
             );
-        (P = N({}, P, o.summariesByChannel)), (w = N({}, w, o.summaryFetchStatusByChannel));
+        ((P = N({}, P, o.summariesByChannel)), (w = N({}, w, o.summaryFetchStatusByChannel)));
     },
     CONVERSATION_SUMMARY_UPDATE(e) {
         var t, n, r;
@@ -386,15 +386,15 @@ let Z = new V(d.Z, {
                 .uniqBy('id')
                 .reverse()
                 .value();
-        (P[i] = d),
+        ((P[i] = d),
             (w[i] = R(N({}, w[i]), {
                 error: void 0,
                 fetching: null != (r = null == (t = w[i]) ? void 0 : t.fetching) && r,
                 lastReceivedAt: s
-            }));
+            })));
     },
     CLEAR_CONVERSATION_SUMMARIES() {
-        (P = {}), (w = {});
+        ((P = {}), (w = {}));
     },
     DELETE_SUMMARY(e) {
         var t;

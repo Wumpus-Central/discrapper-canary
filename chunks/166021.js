@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -13,7 +13,7 @@ let u = (e) => {
         [m, g] = r.useState(0),
         [p, h] = r.useState(u()),
         f = t.length;
-    r.useEffect(() => {
+    (r.useEffect(() => {
         let e = () => {
             h(u());
         };
@@ -26,7 +26,7 @@ let u = (e) => {
     }, []),
         r.useEffect(() => {
             g((e) => (f > p && e > f - p ? f - p : f <= p ? 0 : e));
-        }, [f, p]);
+        }, [f, p]));
     let b = m > 0,
         _ = r.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
         [x, E] = (0, o.bYB)(t.length, _);
@@ -71,7 +71,7 @@ let u = (e) => {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     i = Object.keys(n);
-                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                     (i = i.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -79,7 +79,7 @@ let u = (e) => {
                                                     )),
                                                     i.forEach(function (t) {
                                                         var i;
-                                                        (i = n[t]),
+                                                        ((i = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: i,
@@ -87,8 +87,8 @@ let u = (e) => {
                                                                       configurable: !0,
                                                                       writable: !0
                                                                   })
-                                                                : (e[t] = i);
-                                                    });
+                                                                : (e[t] = i));
+                                                    }));
                                             }
                                             return e;
                                         })({}, t[n])),

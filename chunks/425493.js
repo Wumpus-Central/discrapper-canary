@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(388032),
     c = n(594619),
     u = (function (e) {
-        return (e.DEFAULT = ''), (e.BOLD = 'Bold'), (e.SOLID = 'Solid'), e;
+        return ((e.DEFAULT = ''), (e.BOLD = 'Bold'), (e.SOLID = 'Solid'), e);
     })(u || {});
 function d(e) {
     let { closeAction: t, variant: n = '', keybind: i, className: u } = e;

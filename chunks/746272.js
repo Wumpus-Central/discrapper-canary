@@ -25,7 +25,7 @@ var o = r(338091),
             return (t << 12) | e;
         },
         getBCHDigit: function (t) {
-            for (var e = 0; 0 != t; ) e++, (t >>>= 1);
+            for (var e = 0; 0 != t; ) (e++, (t >>>= 1));
             return e;
         },
         getPatternPosition: function (t) {
@@ -107,7 +107,7 @@ var o = r(338091),
             for (var o = 0; o < e - 1; o++)
                 for (var n = 0; n < e - 1; n++) {
                     var l = 0;
-                    t.isDark(o, n) && l++, t.isDark(o + 1, n) && l++, t.isDark(o, n + 1) && l++, t.isDark(o + 1, n + 1) && l++, (0 == l || 4 == l) && (r += 3);
+                    (t.isDark(o, n) && l++, t.isDark(o + 1, n) && l++, t.isDark(o, n + 1) && l++, t.isDark(o + 1, n + 1) && l++, (0 == l || 4 == l) && (r += 3));
                 }
             for (var o = 0; o < e; o++) for (var n = 0; n < e - 6; n++) t.isDark(o, n) && !t.isDark(o, n + 1) && t.isDark(o, n + 2) && t.isDark(o, n + 3) && t.isDark(o, n + 4) && !t.isDark(o, n + 5) && t.isDark(o, n + 6) && (r += 40);
             for (var n = 0; n < e; n++) for (var o = 0; o < e - 6; o++) t.isDark(o, n) && !t.isDark(o + 1, n) && t.isDark(o + 2, n) && t.isDark(o + 3, n) && t.isDark(o + 4, n) && !t.isDark(o + 5, n) && t.isDark(o + 6, n) && (r += 40);

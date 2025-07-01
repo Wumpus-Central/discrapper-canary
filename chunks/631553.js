@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => eS }), n(539854);
+(n.d(t, { Z: () => eS }), n(539854));
 var r = n(255367),
     o = n(73800),
     l = n(120356),
@@ -80,7 +80,7 @@ function em(e, t, n) {
         e
     );
 }
-(f.ZP.PersistedStore.disableWrites = __OVERLAY__), f.ZP.initialize();
+((f.ZP.PersistedStore.disableWrites = __OVERLAY__), f.ZP.initialize());
 let ey = null;
 function eO(e) {
     e.preventDefault();
@@ -96,7 +96,7 @@ function ev(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -104,7 +104,7 @@ function ev(e) {
                             )),
                             i.forEach(function (t) {
                                 em(e, t, n[t]);
-                            });
+                            }));
                     }
                     return e;
                 })({}, t)),
@@ -171,7 +171,7 @@ class eE extends o.Component {
         v.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        v.Z.startSession(), T.Z.initialize(), x.Z.initialize(), k.Z.initialize();
+        (v.Z.startSession(), T.Z.initialize(), x.Z.initialize(), k.Z.initialize());
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -180,22 +180,22 @@ class eE extends o.Component {
             if (!e.locked && this.props.locked) {
                 if ((window.addEventListener('contextmenu', eO, !1), null != ey)) {
                     let e = Date.now() - ey;
-                    v.Z.track(ep.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (ey = null);
+                    (v.Z.track(ep.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (ey = null));
                 }
-                S.Z.disable(), (this.activeKeyEventShapes = []), Y.default.isPinned(ep.Odu.TEXT) && (S.Z.setLayout(E.Xq), S.Z.enable());
+                (S.Z.disable(), (this.activeKeyEventShapes = []), Y.default.isPinned(ep.Odu.TEXT) && (S.Z.setLayout(E.Xq), S.Z.enable()));
             } else e.locked && !this.props.locked && (window.removeEventListener('contextmenu', eO, !1), null == ey && ((ey = Date.now()), v.Z.track(ep.rMx.OVERLAY_UNLOCKED)), S.Z.disable(), (this.activeKeyEventShapes = []), S.Z.setLayout(E.Sr), S.Z.enable());
             e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, $.d2)(this.props.keybindKeyCodes));
         }
     }
     initialSetup() {
         let { connectedToVoice: e, locked: t, canGoLive: n, isStreaming: i, voiceGuild: r, voiceChannelId: o, game: l, showKeybindNotification: s, dismissKeybindNotification: a } = this.props;
-        v.Z.track(ep.rMx.OVERLAY_INITIALIZED, {
+        (v.Z.track(ep.rMx.OVERLAY_INITIALIZED, {
             voice_widget_connected: e,
             text_widget_connected: Y.default.isPinned(ep.Odu.TEXT),
             overlay_render_method: b.gl[b.gl.Hook],
             unpinned_widget_types: M.Z.getAllUnpinnedPinnedWidgets(ee.OVERLAY_LAYOUT_ID)
         }),
-            et.Z.trackExposure({ location: 'Overlay' });
+            et.Z.trackExposure({ location: 'Overlay' }));
         let c = n && !i && null != l,
             d = e && null != r && null != o,
             u = (0, I.un)(g.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX),
@@ -226,7 +226,7 @@ class eE extends o.Component {
                           game: l
                       }),
             setTimeout(async () => {
-                await (0, q.s5)(), v.Z.overlayMounted(p);
+                (await (0, q.s5)(), v.Z.overlayMounted(p));
             }, 128),
             window.addEventListener('resize', this.handleWindowResize),
             t && window.addEventListener('contextmenu', eO, !1),
@@ -236,14 +236,14 @@ class eE extends o.Component {
             if (null == e) return;
             if (void 0 !== e.setPerfInfoCallback) {
                 var f;
-                e.setPerfInfoCallback((e) => {
+                (e.setPerfInfoCallback((e) => {
                     v.Z.track(ep.rMx.OVERLAY_PERF_INFO, e);
                 }),
                     null == (f = e.broadcastCommand) ||
                         f.call(e, {
                             message: 'set_perf_report_interval',
                             interval: 15 * X.Z.Millis.MINUTE
-                        });
+                        }));
             }
             Q.ZP.on('REQUEST_OPEN_EXTERNAL_URL', (e, t) => {
                 Y.default.getDisableExternalLinkAlert() || t === W.Z.getLastURL()
@@ -261,10 +261,10 @@ class eE extends o.Component {
                       });
             });
         }
-        window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0);
+        (window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0));
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eO, !1), T.Z.terminate(), x.Z.terminate(), k.Z.terminate();
+        (window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eO, !1), T.Z.terminate(), x.Z.terminate(), k.Z.terminate());
     }
     renderInvalidSizeMessage() {
         return (0, r.jsx)(Z.Z, {
@@ -328,7 +328,7 @@ class eE extends o.Component {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             em(this, 'handleWindowResize', () => {
                 F.default.isFocusedPidOutOfProcess()
                     ? this.forceUpdate()
@@ -343,7 +343,7 @@ class eE extends o.Component {
                 let t = eb(e),
                     n = this.getActiveKeyEventIndex(t) > -1,
                     i = [16, 17, 18, 91].includes(e.keyCode);
-                n || i || this.activeKeyEventShapes.push(t), this.activeKeyEventShapes.length === this.lockEventShape.length && this.lockEventShape.every((e) => this.activeKeyEventShapes.some((t) => p()(e, t))) && (e.preventDefault(), e.stopPropagation());
+                (n || i || this.activeKeyEventShapes.push(t), this.activeKeyEventShapes.length === this.lockEventShape.length && this.lockEventShape.every((e) => this.activeKeyEventShapes.some((t) => p()(e, t))) && (e.preventDefault(), e.stopPropagation()));
                 let { locked: r, activeRegions: o } = this.props;
                 t.keyCode === c().codes.esc && r && o.has(ep.O0n.TEXT_WIDGET) && v.Z.deactivateAllRegions();
             }),
@@ -351,9 +351,9 @@ class eE extends o.Component {
                 let t = eb(e),
                     n = this.getActiveKeyEventIndex(t);
                 n > -1 && this.activeKeyEventShapes.splice(n, 1);
-            });
+            }));
         let t = e.locked && Y.default.isPinned(ep.Odu.TEXT);
-        S.Z.setLayout(t ? E.Xq : E.Sr), t && S.Z.enable();
+        (S.Z.setLayout(t ? E.Xq : E.Sr), t && S.Z.enable());
     }
 }
 function eS() {

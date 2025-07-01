@@ -1,11 +1,11 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         getOrParseBioAST: () => g,
         parseBioReact: () => h,
         parseBioReactWithCachedAST: () => E,
         parseBioReactWithoutScrolling: () => y
     }),
-    n(781311);
+    n(781311));
 var r = n(392711),
     i = n.n(r),
     a = n(31775),
@@ -29,7 +29,7 @@ let _ = (0, f.Z)([
     m = void 0;
 function g(e) {
     let t = p.get(e);
-    return null != t || ((t = m(e, !0)), p.set(e, t)), t;
+    return (null != t || ((t = m(e, !0)), p.set(e, t)), t);
 }
 function E(e) {
     if (0 === e.trim().length) return null;

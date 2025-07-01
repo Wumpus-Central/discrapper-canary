@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Bg: () => V,
     Ni: () => Z,
     YH: () => B,
@@ -6,7 +6,7 @@ n.d(t, {
     rf: () => F
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(73800),
     i = n(392711),
     a = n.n(i),
@@ -55,7 +55,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -63,7 +63,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 x(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,11 +71,11 @@ function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -91,7 +91,7 @@ function j(e, t) {
     );
 }
 var U = (function (e) {
-    return (e[(e.EMOJI = 0)] = 'EMOJI'), (e[(e.CREATE_EMOJI = 1)] = 'CREATE_EMOJI'), (e[(e.EXPAND_OR_COLLAPSE_EMOJIS = 2)] = 'EXPAND_OR_COLLAPSE_EMOJIS'), (e[(e.SOUNDMOJI = 3)] = 'SOUNDMOJI'), e;
+    return ((e[(e.EMOJI = 0)] = 'EMOJI'), (e[(e.CREATE_EMOJI = 1)] = 'CREATE_EMOJI'), (e[(e.EXPAND_OR_COLLAPSE_EMOJIS = 2)] = 'EXPAND_OR_COLLAPSE_EMOJIS'), (e[(e.SOUNDMOJI = 3)] = 'SOUNDMOJI'), e);
 })({});
 let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
     B = (e) => {
@@ -152,7 +152,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                     channel: t,
                                     intention: l
                                 });
-                                return p.set(e, n), !n;
+                                return (p.set(e, n), !n);
                             }),
                             b = g.concat(E),
                             y = _.guild,
@@ -234,16 +234,16 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                         sectionCollapsedToThreeRows: U
                                     });
                                 }
-                                c.push(i.length), s.push(i), u++;
+                                (c.push(i.length), s.push(i), u++);
                             }
                             d++;
                         }
                         let F = h ? 0 : B,
                             Z = j(k({}, _), { count: o.length });
-                        r.push(Z), e.push(F);
+                        (r.push(Z), e.push(F));
                     };
                 if (null != p)
-                    0 !== p.unlocked.length &&
+                    (0 !== p.unlocked.length &&
                         g(p.unlocked, {
                             type: w.En.SEARCH_RESULTS,
                             sectionId: w.En.SEARCH_RESULTS,
@@ -257,7 +257,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                 sectionId: w.En.PREMIUM_UPSELL,
                                 count: p.locked.length,
                                 isNitroLocked: !er
-                            });
+                            }));
                 else {
                     if (eu && U) {
                         let t = [
@@ -276,7 +276,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                             isNitroLocked: !1
                         });
                         let i = n.has(w.UX.SOUNDMOJI);
-                        !i && (c.push(t.length), s.push(t), u++), e.push(+!i), d++;
+                        (!i && (c.push(t.length), s.push(t), u++), e.push(+!i), d++);
                     }
                     for (let e of F)
                         if (e === w.UX.CUSTOM) {
@@ -384,7 +384,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
         }, [Y, h, M, x, p, n, el, ec, es, i, et, ee, t, l, Q, J, er, F, Z, $, q, X, z, K, W, ei, eu, U]);
     };
 var V = (function (e) {
-    return (e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.ROLE_SUBSCRIPTION = 1)] = 'ROLE_SUBSCRIPTION'), e;
+    return ((e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.ROLE_SUBSCRIPTION = 1)] = 'ROLE_SUBSCRIPTION'), e);
 })({});
 let F = (e) => {
         let { pickerIntention: t, selectedChannel: n, onSelectEmoji: i, setUpsellConfigs: a, emojiSelectAnalytics: o, trackEmojiFavorited: d } = e,
@@ -420,12 +420,12 @@ let F = (e) => {
                                 emojiId: s.id
                             });
                         if (c === D.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
-                        null == o || o(e),
+                        (null == o || o(e),
                             i({
                                 emoji: s,
                                 willClose: r.isFinalSelection,
                                 isBurst: r.isBurst
-                            });
+                            }));
                     }
                 }
             },

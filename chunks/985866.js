@@ -1,4 +1,4 @@
-r.d(t, { default: () => z }), r(388685), r(704826), r(35282);
+(r.d(t, { default: () => z }), r(388685), r(704826), r(35282));
 var n = r(255367),
     o = r(73800),
     a = r(120356),
@@ -147,7 +147,7 @@ function z(e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
                                   n = Object.keys(r);
-                              'function' == typeof Object.getOwnPropertySymbols &&
+                              ('function' == typeof Object.getOwnPropertySymbols &&
                                   (n = n.concat(
                                       Object.getOwnPropertySymbols(r).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -155,7 +155,7 @@ function z(e) {
                                   )),
                                   n.forEach(function (t) {
                                       var n;
-                                      (n = r[t]),
+                                      ((n = r[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: n,
@@ -163,8 +163,8 @@ function z(e) {
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = n);
-                                  });
+                                              : (e[t] = n));
+                                  }));
                           }
                           return e;
                       })({}, e)),
@@ -306,7 +306,7 @@ function Q(e) {
                     placeholder: M.intl.string(M.t.EMrUHR),
                     options: eu,
                     select: (e) => {
-                        es(!1), z(e);
+                        (es(!1), z(e));
                     },
                     isSelected: (e) => e === L,
                     serialize: (e) => (0, R.t2)(e),
@@ -347,14 +347,14 @@ function Q(e) {
                   delay: 1000,
                   buttonColor: u.zxk.Colors.BRAND,
                   onCopy: () => {
-                      V && (0, x.JG)(et.code),
+                      (V && (0, x.JG)(et.code),
                           K({
                               questId: s.id,
                               questContent: d,
                               questContentPosition: c,
                               questContentCTA: j.jZ.COPY_REWARD_CODE,
                               sourceQuestContent: I
-                          });
+                          }));
                   }
               })
           }))
@@ -412,7 +412,7 @@ function Q(e) {
             }),
             (0, n.jsx)('div', {
                 ref: (e) => {
-                    (F.current = e), (C.current = e);
+                    ((F.current = e), (C.current = e));
                 },
                 children: (0, n.jsxs)(u.Y0X, {
                     transitionState: r,

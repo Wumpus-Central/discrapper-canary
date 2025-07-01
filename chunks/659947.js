@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(539854), n(388685);
+(n.d(t, { Z: () => I }), n(539854), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -18,7 +18,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function _(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -34,8 +34,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -60,7 +60,7 @@ function x(e, t) {
 function E() {}
 let j = [h.h8.VOICE_CHANNEL];
 function C(e) {
-    e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
+    (e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0));
 }
 function O(e) {
     let { height: t } = e;
@@ -98,7 +98,7 @@ function I(e) {
                         N,
                         x(_({}, e), {
                             onSelect: (e) => {
-                                u(e), a.Z.setKeybind(x(_({}, o.current), { params: { channelId: e } }));
+                                (u(e), a.Z.setKeybind(x(_({}, o.current), { params: { channelId: e } })));
                             }
                         })
                     )
@@ -235,7 +235,7 @@ function N(e) {
                                             let e = y[P];
                                             if ((null == e ? void 0 : e.type) === h.h8.VOICE_CHANNEL) return e.record;
                                         })();
-                                        null == e ? a(void 0) : a(e.id), n();
+                                        (null == e ? a(void 0) : a(e.id), n());
                                         break;
                                     }
                                     case 'arrowup':
@@ -281,7 +281,7 @@ function N(e) {
                                     focused: P === t,
                                     onMouseEnter: () => x.current && R(t),
                                     onClick: () => {
-                                        a(r.id), n();
+                                        (a(r.id), n());
                                     },
                                     onFocus: () => R(t),
                                     children:

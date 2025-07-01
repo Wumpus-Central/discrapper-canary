@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Q2: () => A,
     pe: () => O
 }),
@@ -6,7 +6,7 @@ n.d(t, {
     n(539854),
     n(35282),
     n(472816),
-    n(794429);
+    n(794429));
 var l = n(73800),
     i = n(392711),
     r = n.n(i),
@@ -62,10 +62,10 @@ function O(e) {
                 for (let e of d) {
                     let t = (0, p.If)(i, e),
                         n = null != (a = t.sectionCommands) ? a : [];
-                    m.push(...n),
+                    (m.push(...n),
                         n.forEach((e) => {
                             null != t.descriptor && (f[e.id] = t.descriptor);
-                        });
+                        }));
                 }
                 return {
                     commands: m,
@@ -226,7 +226,7 @@ function O(e) {
                         return t;
                     })
                 );
-                u.push(...O),
+                (u.push(...O),
                     u.push(
                         ...A.filter((t) => {
                             let {
@@ -237,7 +237,7 @@ function O(e) {
                             let { application: t } = e;
                             return t;
                         })
-                    );
+                    ));
             } else s && (u = O);
             return (0, x.N)(u, {
                 limit: a,

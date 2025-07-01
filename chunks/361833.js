@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var s = n(255367),
     r = n(73800),
     l = n(442837),
@@ -17,7 +17,7 @@ function m(e) {
         k = (0, l.e7)([o.Z], () => o.Z.getErrors()),
         f = r.useRef(null);
     async function g(e) {
-        e.preventDefault(), S(!0);
+        (e.preventDefault(), S(!0));
         let t = await (0, a.Mn)({
             email: A,
             emailToken: m,

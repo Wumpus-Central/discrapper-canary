@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Ai: () => el,
     DL: () => eo,
     Gg: () => es
 }),
     n(415506),
-    n(539854);
+    n(539854));
 var r = n(772848),
     i = n(923452),
     a = n(259443),
@@ -41,7 +41,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -68,18 +68,18 @@ let T = 24,
     M = (0, E.H)(),
     j = d.default.getToken();
 function U() {
-    Z(),
+    (Z(),
         (P = {
             type: 'interval',
             id: setInterval(() => {
                 Z();
             }, S)
-        });
+        }));
 }
 function G() {
     if (null != P) return;
     let e = 0 === L ? 0 : S - (performance.now() - L);
-    m.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(e / 1000, ' seconds. Scheduling Heartbeat') }),
+    (m.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(e / 1000, ' seconds. Scheduling Heartbeat') }),
         0 === e
             ? U()
             : (P = {
@@ -87,7 +87,7 @@ function G() {
                   id: setTimeout(() => {
                       U();
                   }, e)
-              });
+              }));
 }
 function B() {
     if (null == P) return !1;
@@ -101,7 +101,7 @@ function B() {
         default:
             P.type;
     }
-    return (P = null), !0;
+    return ((P = null), !0);
 }
 function V() {
     B() &&
@@ -140,7 +140,7 @@ async function Z() {
         (0, g.O)(),
         F()
     );
-    p.default.track(O.rMx.CLIENT_HEARTBEAT, r), (L = performance.now()), (0, c.Z)();
+    (p.default.track(O.rMx.CLIENT_HEARTBEAT, r), (L = performance.now()), (0, c.Z)());
 }
 function H() {
     if (!(null != j && (0, y.y)()) || performance.now() - L <= S) return;
@@ -163,7 +163,7 @@ function K() {
     return W().active;
 }
 function z() {
-    K() ? G() : V(), $();
+    (K() ? G() : V(), $());
 }
 function q() {
     null == w &&
@@ -178,7 +178,7 @@ function X(e) {
     let t = performance.now();
     if (!(t - D < A))
         try {
-            s.K.set(N, e), (D = t);
+            (s.K.set(N, e), (D = t));
         } catch (e) {
             m.Z.captureException(e);
         }
@@ -187,13 +187,13 @@ function Q(e) {
     return null == e ? null : e.version !== b.EI ? (R.warn('Throwing away client session with invalid version: '.concat(e.version, ', expected ').concat(b.EI)), null) : e;
 }
 function J() {
-    s.K.remove(N),
+    (s.K.remove(N),
         (x = {
             state: 'loaded',
             session: null
         }),
         V(),
-        (L = 0);
+        (L = 0));
 }
 function $() {
     var e;
@@ -208,24 +208,24 @@ async function ee() {
 }
 function et() {
     let e = d.default.getToken();
-    j !== e && ((j = e), J()), z();
+    (j !== e && ((j = e), J()), z());
 }
 function en() {
-    (k = _.Z.getState()), z();
+    ((k = _.Z.getState()), z());
 }
 function er(e) {
     let { focused: t } = e;
-    (M = t), z();
+    ((M = t), z());
 }
 function ei(e) {
     let { state: t } = e;
-    (M = t === O.$7l.ACTIVE), z();
+    ((M = t === O.$7l.ACTIVE), z());
 }
 function ea() {
-    (k = _.Z.getState()), (M = (0, E.H)()), et();
+    ((k = _.Z.getState()), (M = (0, E.H)()), et());
 }
 function eo() {
-    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), _.Z.addChangeListener(en), d.default.addChangeListener(et), l.Z.subscribe('WINDOW_FOCUS', er), l.Z.subscribe('APP_STATE_UPDATE', ei), l.Z.subscribe('CONNECTION_OPEN', ee), z(), q(), o.ZP.initialized.then(ea);
+    (m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), _.Z.addChangeListener(en), d.default.addChangeListener(et), l.Z.subscribe('WINDOW_FOCUS', er), l.Z.subscribe('APP_STATE_UPDATE', ei), l.Z.subscribe('CONNECTION_OPEN', ee), z(), q(), o.ZP.initialized.then(ea));
 }
 async function es() {
     var e;

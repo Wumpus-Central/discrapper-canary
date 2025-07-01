@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(642613), n(539854);
+(n.d(t, { Z: () => x }), n(388685), n(642613), n(539854));
 var r = n(255367),
     l = n(73800),
     i = n(990547),
@@ -32,7 +32,7 @@ function x(e) {
                             ((e && l) || (!e && !l)) && a.available && r.push(a);
                         }
                     };
-                return l.forEach((e) => i(e, !0)), l.forEach((e) => i(e, !1)), r;
+                return (l.forEach((e) => i(e, !0)), l.forEach((e) => i(e, !1)), r);
             }, [t, n, e]);
         })((0, O.h)(n, !0)),
         P = (0, y.j)(),
@@ -42,12 +42,12 @@ function x(e) {
         { analyticsLocations: R } = (0, s.ZP)(a.Z.SOUNDBOARD_WHEEL),
         D = l.useCallback(
             (e) => {
-                (0, g.GN)(e, n.id, R), j();
+                ((0, g.GN)(e, n.id, R), j());
             },
             [R, n.id, j]
         );
-    l.useEffect(() => {
-        h.w(), c.DZ.loadIfNecessary();
+    (l.useEffect(() => {
+        (h.w(), c.DZ.loadIfNecessary());
     }, []),
         l.useEffect(() => {
             0 === S.length && 0 === P.length && j();
@@ -70,9 +70,9 @@ function x(e) {
                 }
             },
             { disableTrack: !I }
-        );
+        ));
     let U = l.useCallback((e) => {
-            (_.current = e), A(null == e ? void 0 : e.soundId);
+            ((_.current = e), A(null == e ? void 0 : e.soundId));
         }, []),
         k = l.useCallback(
             (e) => {

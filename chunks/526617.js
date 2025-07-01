@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     O: () => es,
     Z: () => eu
 }),
     n(388685),
     n(856094),
     n(472816),
-    n(794429);
+    n(794429));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -69,7 +69,7 @@ function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -77,7 +77,7 @@ function X(e) {
             )),
             r.forEach(function (t) {
                 q(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -85,11 +85,11 @@ function Q(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -243,7 +243,7 @@ function eu(e) {
         eW = D.ZP.canUseCustomCallSounds(eI),
         eK = i.useCallback(
             (e) => {
-                eH.has(e) ? eH.delete(e) : eH.add(e), A.T4.updateSetting(Array.from(eH));
+                (eH.has(e) ? eH.delete(e) : eH.add(e), A.T4.updateSetting(Array.from(eH)));
             },
             [eH]
         ),
@@ -254,14 +254,14 @@ function eu(e) {
                 if (null != I && P && r) I(e, n);
                 else if (!q && r && (0, M.C0)(a)) {
                     var i;
-                    (0, M.GN)(e, null != (i = null == a ? void 0 : a.id) ? i : Y.lds, t),
+                    ((0, M.GN)(e, null != (i = null == a ? void 0 : a.id) ? i : Y.lds, t),
                         eC &&
                             w.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: Y.aib.SOUNDBOARD,
                                 channel_id: null == a ? void 0 : a.id,
                                 query: eN,
                                 location_stack: t
-                            });
+                            }));
                 } else {
                     if ((0, M.Nq)(eI, e, a)) return;
                     Q && ev(e);
@@ -275,7 +275,7 @@ function eu(e) {
                     case k.vB.SOUND:
                         return ez(e.item.sound, eg, (null == t ? void 0 : t.shiftKey) !== !0);
                     case k.vB.ADD_SOUND:
-                        return g(), (0, H.Z)(e.item.guild.id);
+                        return (g(), (0, H.Z)(e.item.guild.id));
                 }
             },
             [eg, ez, g]
@@ -460,7 +460,7 @@ function eu(e) {
             var e;
             let t = x.Z.getSoundById(eo),
                 n = new Audio((0, j.Z)(eo));
-            null != em.current && em.current.pause(), (em.current = n), (n.currentTime = 0), (n.volume = (0, U.Z)(null != (e = null == t ? void 0 : t.volume) ? e : 1)), n.play();
+            (null != em.current && em.current.pause(), (em.current = n), (n.currentTime = 0), (n.volume = (0, U.Z)(null != (e = null == t ? void 0 : t.volume) ? e : 1)), n.play());
         }, [em]),
         tn = (0, l.e7)([N.Z], () => N.Z.getMediaSessionId());
     return (

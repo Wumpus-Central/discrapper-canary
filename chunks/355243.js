@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -23,7 +23,7 @@ function v(e) {
         [T, P] = l.useState(!1),
         N = l.useRef(null),
         k = (e) => {
-            (N.current = e), j(e);
+            ((N.current = e), j(e));
         };
     l.useEffect(() => {
         null != S && (null == E ? D(null) : D(p(E, b, S)));
@@ -32,15 +32,15 @@ function v(e) {
             k(e.contentRect);
         }),
         w = (0, s.y)(I);
-    l.useLayoutEffect(() => {
+    (l.useLayoutEffect(() => {
         null != w.current && k(w.current.getBoundingClientRect());
     }, [w]),
         l.useEffect(() => {
             let e = () => {
                 null != w.current && k(w.current.getBoundingClientRect());
             };
-            return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-        }, [w]);
+            return (window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
+        }, [w]));
     let A = (e) => {
             _(e.clientX);
         },

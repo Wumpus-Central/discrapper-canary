@@ -6,7 +6,7 @@ var r = a(617726),
 let i = (0, n._I)((t) => ({
         name: 'ThirdPartyErrorsFilter',
         setup(t) {
-            t.on('beforeEnvelope', (t) => {
+            (t.on('beforeEnvelope', (t) => {
                 (0, r.gv)(t, (t, e) => {
                     if ('event' === e) {
                         let e = Array.isArray(t) ? t[1] : void 0;
@@ -18,7 +18,7 @@ let i = (0, n._I)((t) => ({
                     if (e.type) return;
                     let a = t.getOptions().stackParser;
                     (0, o.GY)(a, e);
-                });
+                }));
         },
         processEvent(e) {
             let a = (function (t) {

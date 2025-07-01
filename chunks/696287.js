@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(846519),
     i = n(147913),
     a = n(77498),
@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,13 +46,13 @@ class h extends i.Z {
         this.heartbeatInterval.isStarted() || (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(p, this.logRunningGameHeartbeats));
     }
     stopHeartbeat() {
-        this.heartbeatInterval.stop(), this.runningGameKeys.clear();
+        (this.heartbeatInterval.stop(), this.runningGameKeys.clear());
     }
     handlePostConnectionOpen() {
         u.ZP.getRunningGames().length > 0 && this.maybeStartHeartbeat();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'heartbeatInterval', new r.Xp()),
             f(this, 'runningGameKeys', new Set()),
             f(this, 'actions', {
@@ -73,12 +73,12 @@ class h extends i.Z {
                         media_session_id: o.Z.getMediaSessionId()
                     },
                     n = new Set();
-                e.forEach((e) => {
+                (e.forEach((e) => {
                     var r, i;
                     let o = (0, u.rH)(e),
                         l = !this.runningGameKeys.has(o),
                         f = null != (i = e.id) ? i : null == (r = a.Z.getGameByName(e.name)) ? void 0 : r.id;
-                    s.default.track(
+                    (s.default.track(
                         d.rMx.RUNNING_GAME_HEARTBEAT,
                         _(
                             {
@@ -92,10 +92,10 @@ class h extends i.Z {
                             t
                         )
                     ),
-                        n.add((0, u.rH)(e));
+                        n.add((0, u.rH)(e)));
                 }),
-                    (this.runningGameKeys = n);
-            });
+                    (this.runningGameKeys = n));
+            }));
     }
 }
 let m = new h();

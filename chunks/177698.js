@@ -26,7 +26,7 @@ let f = (0, d.Z)(
                     (null == i || i === n) && ((T = !0), null != location ? e(l) : t(new u.Z({ errorCode: h.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock());
                 },
                 A = i.z1l;
-            null != P &&
+            (null != P &&
             null !=
                 (0, l.ZP)({
                     application: P,
@@ -43,7 +43,7 @@ let f = (0, d.Z)(
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ let f = (0, d.Z)(
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -59,8 +59,8 @@ let f = (0, d.Z)(
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({}, e)),
@@ -108,7 +108,7 @@ let f = (0, d.Z)(
                         }
                     },
                     A
-                );
+                ));
         });
     },
     function (e, t, n) {
@@ -117,6 +117,6 @@ let f = (0, d.Z)(
             application: e,
             channelId: t
         });
-        (0, s.isWindows)() ? c.ZP.minimize(r) : c.ZP.restore(r), c.ZP.focus(r);
+        ((0, s.isWindows)() ? c.ZP.minimize(r) : c.ZP.restore(r), c.ZP.focus(r));
     }
 );

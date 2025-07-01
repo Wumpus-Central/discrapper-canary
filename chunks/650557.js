@@ -38,7 +38,7 @@ function m(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function g(e, t) {
@@ -48,7 +48,7 @@ function g(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -118,14 +118,14 @@ var y = new WeakMap(),
     $ = (e, t, n) => {
         for (var { childNodes: r } = e, i = r[t], a = t, o = !1, s = !1; (Y(i) || (W(i) && 0 === i.childNodes.length) || (W(i) && 'false' === i.getAttribute('contenteditable'))) && (!o || !s); ) {
             if (a >= r.length) {
-                (o = !0), (a = t - 1), (n = 'backward');
+                ((o = !0), (a = t - 1), (n = 'backward'));
                 continue;
             }
             if (a < 0) {
-                (s = !0), (a = t + 1), (n = 'forward');
+                ((s = !0), (a = t + 1), (n = 'forward'));
                 continue;
             }
-            (i = r[a]), (t = a), (a += 'forward' === n ? 1 : -1);
+            ((i = r[a]), (t = a), (a += 'forward' === n ? 1 : -1));
         }
         return [i, t];
     },
@@ -184,7 +184,7 @@ var y = new WeakMap(),
         },
         findKey(e, t) {
             var n = N.get(t);
-            return n || ((n = new b()), N.set(t, n)), n;
+            return (n || ((n = new b()), N.set(t, n)), n);
         },
         findPath(e, t) {
             for (var n = [], r = t; ; ) {
@@ -194,7 +194,7 @@ var y = new WeakMap(),
                     else break;
                 var a = y.get(r);
                 if (null == a) break;
-                n.unshift(a), (r = i);
+                (n.unshift(a), (r = i));
             }
             throw Error('Unable to find the path for Slate node: '.concat(d.o4.stringify(t)));
         },
@@ -208,17 +208,17 @@ var y = new WeakMap(),
         blur(e) {
             var t = ey.toDOMNode(e, e),
                 n = ey.findDocumentOrShadowRoot(e);
-            P.set(e, !1), n.activeElement === t && t.blur();
+            (P.set(e, !1), n.activeElement === t && t.blur());
         },
         focus(e) {
             var t = ey.toDOMNode(e, e),
                 n = ey.findDocumentOrShadowRoot(e);
-            P.set(e, !0), n.activeElement !== t && t.focus({ preventScroll: !0 });
+            (P.set(e, !0), n.activeElement !== t && t.focus({ preventScroll: !0 }));
         },
         deselect(e) {
             var { selection: t } = e,
                 n = ey.findDocumentOrShadowRoot(e).getSelection();
-            n && n.rangeCount > 0 && n.removeAllRanges(), t && d.YR.deselect(e);
+            (n && n.rangeCount > 0 && n.removeAllRanges(), t && d.YR.deselect(e));
         },
         hasDOMNode(e, t) {
             var n,
@@ -290,7 +290,7 @@ var y = new WeakMap(),
                 [u, f] = i ? a : o,
                 _ = !!(W(l) ? l : l.parentElement).getAttribute('data-slate-zero-width'),
                 p = !!(W(u) ? u : u.parentElement).getAttribute('data-slate-zero-width');
-            return s.setStart(l, _ ? 1 : c), s.setEnd(u, p ? 1 : f), s;
+            return (s.setStart(l, _ ? 1 : c), s.setEnd(u, p ? 1 : f), s);
         },
         toSlateNode(e, t) {
             var n = W(t) ? t : t.parentElement;
@@ -342,9 +342,9 @@ var y = new WeakMap(),
                 if (m) {
                     if ((l = m.closest('[data-slate-node="text"]'))) {
                         var E = ey.getWindow(e).document.createRange();
-                        E.setStart(l, 0), E.setEnd(a, o);
+                        (E.setStart(l, 0), E.setEnd(a, o));
                         var b = E.cloneContents();
-                        [...Array.prototype.slice.call(b.querySelectorAll('[data-slate-zero-width]')), ...Array.prototype.slice.call(b.querySelectorAll('[contenteditable=false]'))].forEach((e) => {
+                        ([...Array.prototype.slice.call(b.querySelectorAll('[data-slate-zero-width]')), ...Array.prototype.slice.call(b.querySelectorAll('[contenteditable=false]'))].forEach((e) => {
                             if (el && !r && e.hasAttribute('data-slate-zero-width') && e.textContent.length > 0 && '\uFEFF' !== e.textContext) {
                                 e.textContent.startsWith('\uFEFF') && (e.textContent = e.textContent.slice(1));
                                 return;
@@ -352,7 +352,7 @@ var y = new WeakMap(),
                             e.parentNode.removeChild(e);
                         }),
                             (c = b.textContent.length),
-                            (g = l);
+                            (g = l));
                     }
                 } else if (h) {
                     for (var y = h.querySelectorAll('[data-slate-leaf]'), O = 0; O < y.length; O++) {
@@ -421,7 +421,7 @@ var y = new WeakMap(),
             if (ec && !s && r !== a) {
                 var p = d.ML.isEnd(e, f, f.path),
                     h = d.ML.isStart(e, _, _.path);
-                p && (f = d.ML.after(e, f) || f), h && (_ = d.ML.before(e, _) || _);
+                (p && (f = d.ML.after(e, f) || f), h && (_ = d.ML.before(e, _) || _));
             }
             var m = {
                 anchor: f,
@@ -537,7 +537,7 @@ var y = new WeakMap(),
                 'data-slate-zero-width': n ? 'n' : 'z',
                 'data-slate-length': t
             };
-        return r && (i['data-slate-mark-placeholder'] = !0), c.createElement('span', Object.assign({}, i), el && n ? null : '\uFEFF', n ? c.createElement('br', null) : null);
+        return (r && (i['data-slate-mark-placeholder'] = !0), c.createElement('span', Object.assign({}, i), el && n ? null : '\uFEFF', n ? c.createElement('br', null) : null));
     },
     eD = (0, c.createContext)(null),
     eL = () => {
@@ -551,7 +551,7 @@ var y = new WeakMap(),
             l = (0, c.useRef)(null),
             u = eL(),
             d = (0, c.useRef)(null);
-        (0, c.useEffect)(
+        ((0, c.useEffect)(
             () => () => {
                 d.current && d.current.disconnect();
             },
@@ -580,7 +580,7 @@ var y = new WeakMap(),
                         T.delete(u);
                     }
                 );
-            }, [l, t]);
+            }, [l, t]));
         var _ = c.createElement(eC, {
             isLast: n,
             leaf: t,
@@ -638,7 +638,7 @@ var y = new WeakMap(),
         var m = (0, c.useCallback)(
             (e) => {
                 var t = C.get(s);
-                e ? (null == t || t.set(f, e), A.set(o, e), S.set(e, o)) : (null == t || t.delete(f), A.delete(o), l.current && S.delete(l.current)), (l.current = e);
+                (e ? (null == t || t.set(f, e), A.set(o, e), S.set(e, o)) : (null == t || t.delete(f), A.delete(o), l.current && S.delete(l.current)), (l.current = e));
             },
             [l, s, f, o]
         );
@@ -683,10 +683,10 @@ var y = new WeakMap(),
             'rtl' === E && (m.dir = E);
         }
         if (d.ML.isVoid(l, n)) {
-            (m['data-slate-void'] = !0), !u && f && (m.contentEditable = !1);
+            ((m['data-slate-void'] = !0), !u && f && (m.contentEditable = !1));
             var b = f ? 'span' : 'div',
                 [[v]] = d.NB.texts(n);
-            (h = c.createElement(
+            ((h = c.createElement(
                 b,
                 {
                     'data-slate-spacer': !0,
@@ -706,7 +706,7 @@ var y = new WeakMap(),
                 })
             )),
                 y.set(v, 0),
-                O.set(v, n);
+                O.set(v, n));
         }
         return r({
             attributes: m,
@@ -737,7 +737,7 @@ var y = new WeakMap(),
                 var T = d.e6.intersection(I, E);
                 T && v.push(T);
             }
-            d.W_.isElement(m)
+            (d.W_.isElement(m)
                 ? f.push(
                       c.createElement(
                           eH.Provider,
@@ -768,7 +768,7 @@ var y = new WeakMap(),
                       })
                   ),
                 y.set(m, p),
-                O.set(m, n);
+                O.set(m, n));
         }
         return f;
     },
@@ -890,7 +890,7 @@ var y = new WeakMap(),
     };
 class e5 extends c.Component {
     constructor() {
-        super(...arguments), (this.context = null), (this.manager = null), (this.mutationObserver = null);
+        (super(...arguments), (this.context = null), (this.manager = null), (this.mutationObserver = null));
     }
     observe() {
         var e,
@@ -901,7 +901,7 @@ class e5 extends c.Component {
     componentDidMount() {
         var { receivedUserInput: e } = this.props,
             t = this.context;
-        (this.manager = e3(t, e)), (this.mutationObserver = new MutationObserver(this.manager.registerMutations)), this.observe();
+        ((this.manager = e3(t, e)), (this.mutationObserver = new MutationObserver(this.manager.registerMutations)), this.observe());
     }
     getSnapshotBeforeUpdate() {
         var e,
@@ -909,11 +909,11 @@ class e5 extends c.Component {
             n,
             r,
             i = null == (e = this.mutationObserver) ? void 0 : e.takeRecords();
-        return null != i && i.length && (null == (r = this.manager) || r.registerMutations(i)), null == (t = this.mutationObserver) || t.disconnect(), null == (n = this.manager) || n.restoreDOM(), null;
+        return (null != i && i.length && (null == (r = this.manager) || r.registerMutations(i)), null == (t = this.mutationObserver) || t.disconnect(), null == (n = this.manager) || n.restoreDOM(), null);
     }
     componentDidUpdate() {
         var e;
-        null == (e = this.manager) || e.clear(), this.observe();
+        (null == (e = this.manager) || e.clear(), this.observe());
     }
     componentWillUnmount() {
         var e;
@@ -1007,7 +1007,7 @@ function ti(e, t) {
             match: d.xv.isText
         });
         if (!o || !d.y$.isDescendant(o[1], a[1])) return null;
-        (r -= i.text.length), (i = o[0]), (n = o[1]);
+        ((r -= i.text.length), (i = o[0]), (n = o[1]));
     }
     return {
         path: n,
@@ -1185,11 +1185,11 @@ function tc(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1242,17 +1242,17 @@ function th(e) {
         },
         _ = () => {
             if ((o && (clearTimeout(o), (o = null)), s && (clearTimeout(s), (s = null)), !y() && !b())) return void u();
-            i || ((i = !0), setTimeout(() => (i = !1))), b() && (i = 'action');
+            (i || ((i = !0), setTimeout(() => (i = !1))), b() && (i = 'action'));
             var e = t.selection && d.ML.rangeRef(t, t.selection, { affinity: 'forward' });
-            M.set(t, t.marks), t_('flush', U.get(t), j.get(t));
+            (M.set(t, t.marks), t_('flush', U.get(t), j.get(t)));
             for (var a = y(); (l = null == (_ = j.get(t)) ? void 0 : _[0]); ) {
                 var l,
                     _,
                     p,
                     h = k.get(t);
-                void 0 !== h && (k.delete(t), (t.marks = h)), h && !1 === c && (c = null);
+                (void 0 !== h && (k.delete(t), (t.marks = h)), h && !1 === c && (c = null));
                 var m = tr(l);
-                (t.selection && d.e6.equals(t.selection, m)) || d.YR.select(t, m),
+                ((t.selection && d.e6.equals(t.selection, m)) || d.YR.select(t, m),
                     l.diff.text ? d.ML.insertText(t, l.diff.text) : d.ML.deleteFragment(t),
                     j.set(
                         t,
@@ -1263,19 +1263,19 @@ function th(e) {
                                   return t !== l.id;
                               })
                     ),
-                    e8(t, l) || ((a = !1), U.delete(t), M.delete(t), (i = 'action'), G.delete(t), n.cancel(), r.cancel(), null == e || e.unref());
+                    e8(t, l) || ((a = !1), U.delete(t), M.delete(t), (i = 'action'), G.delete(t), n.cancel(), r.cancel(), null == e || e.unref()));
             }
             var g = null == e ? void 0 : e.unref();
             if ((!g || G.get(t) || (t.selection && d.e6.equals(g, t.selection)) || d.YR.select(t, g), b())) return void f();
-            a && n(), n.flush(), r.flush(), u();
+            (a && n(), n.flush(), r.flush(), u());
             var E = M.get(t);
-            M.delete(t), void 0 !== E && ((t.marks = E), t.onChange());
+            (M.delete(t), void 0 !== E && ((t.marks = E), t.onChange()));
         },
         p = (e) => {
-            a && clearTimeout(a),
+            (a && clearTimeout(a),
                 (a = setTimeout(() => {
-                    w.set(t, !1), _();
-                }, td));
+                    (w.set(t, !1), _());
+                }, td)));
         },
         h = function () {
             var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -1295,25 +1295,25 @@ function th(e) {
             var a = d.NB.leaf(t, e),
                 o = i.findIndex((t) => d.y$.equals(t.path, e));
             if (o < 0) {
-                tt(a.text, n) &&
+                (tt(a.text, n) &&
                     i.push({
                         path: e,
                         diff: n,
                         id: l++
                     }),
-                    h();
+                    h());
                 return;
             }
             var s = tn(a.text, i[o].diff, n);
             if (!s) {
-                i.splice(o, 1), h();
+                (i.splice(o, 1), h());
                 return;
             }
             i[o] = tu(tu({}, i[o]), {}, { diff: s });
         },
         g = function (e) {
             var { at: i } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            (c = !1),
+            ((c = !1),
                 G.delete(t),
                 n.cancel(),
                 r.cancel(),
@@ -1322,7 +1322,7 @@ function th(e) {
                     at: i,
                     run: e
                 }),
-                (s = setTimeout(_));
+                (s = setTimeout(_)));
         },
         E = (e) => {
             o && (clearTimeout(o), (o = null));
@@ -1426,7 +1426,7 @@ function th(e) {
                     case 'deleteEntireSoftLine':
                         return g(
                             () => {
-                                d.ML.deleteBackward(t, { unit: 'line' }), d.ML.deleteForward(t, { unit: 'line' });
+                                (d.ML.deleteBackward(t, { unit: 'line' }), d.ML.deleteForward(t, { unit: 'line' }));
                             },
                             { at: r }
                         );
@@ -1461,7 +1461,7 @@ function th(e) {
                                 () => {
                                     var e = x.split('\n');
                                     e.forEach((n, r) => {
-                                        n && d.ML.insertText(t, n), r !== e.length - 1 && d.ML.insertSoftBreak(t);
+                                        (n && d.ML.insertText(t, n), r !== e.length - 1 && d.ML.insertSoftBreak(t));
                                     });
                                 },
                                 { at: r }
@@ -1490,12 +1490,12 @@ function th(e) {
         },
         O = () => b() || y(),
         v = (e) => {
-            G.set(t, e), o && (clearTimeout(o), (o = null));
+            (G.set(t, e), o && (clearTimeout(o), (o = null)));
             var { selection: n } = t;
             if (e) {
                 var r = !n || !d.y$.equals(n.anchor.path, e.anchor.path),
                     i = !n || !d.y$.equals(n.anchor.path.slice(0, -1), e.anchor.path.slice(0, -1));
-                ((r && c) || i) && (c = !1), (r || y()) && (o = setTimeout(_, tf));
+                (((r && c) || i) && (c = !1), (r || y()) && (o = setTimeout(_, tf)));
             }
         },
         I = () => {
@@ -1523,7 +1523,7 @@ function th(e) {
         handleUserSelect: v,
         handleCompositionEnd: p,
         handleCompositionStart: (e) => {
-            w.set(t, !0), a && (clearTimeout(a), (a = null));
+            (w.set(t, !0), a && (clearTimeout(a), (a = null)));
         },
         handleDOMBeforeInput: E,
         handleKeyDown: S,
@@ -1548,24 +1548,24 @@ function tm() {
 }
 function tg(e, t, n) {
     var [r] = (0, c.useState)(() => new MutationObserver(t));
-    eN(() => {
+    (eN(() => {
         r.takeRecords();
     }),
         (0, c.useEffect)(() => {
             if (!e.current) throw Error('Failed to attach MutationObserver, `node` is undefined');
-            return r.observe(e.current, n), () => r.disconnect();
-        }, []);
+            return (r.observe(e.current, n), () => r.disconnect());
+        }, []));
 }
 var tE = ['node'];
 function tb(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1596,7 +1596,7 @@ function tv(e) {
     var r = eL(),
         i = tm(),
         [a] = (0, c.useState)(() => th(ty({ editor: r }, n)));
-    return tg(t, a.handleDomMutations, tO), x.set(r, a.scheduleFlush), i && a.flush(), a;
+    return (tg(t, a.handleDomMutations, tO), x.set(r, a.scheduleFlush), i && a.flush(), a);
 }
 function tI() {
     var e = eL(),
@@ -1606,10 +1606,10 @@ function tI() {
             if (!t.current) {
                 t.current = !0;
                 var r = ey.getWindow(e);
-                r.cancelAnimationFrame(n.current),
+                (r.cancelAnimationFrame(n.current),
                     (n.current = r.requestAnimationFrame(() => {
                         t.current = !1;
-                    }));
+                    })));
             }
         }, []);
     return (
@@ -1626,11 +1626,11 @@ function tA(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1662,7 +1662,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
             U = (0, c.useRef)([]),
             { onUserInput: G, receivedUserInput: Z } = tI(),
             [, Y] = (0, c.useReducer)((e) => e + 1, 0);
-        B.set(C, Y), R.set(C, _);
+        (B.set(C, Y), R.set(C, _));
         var z = (0, c.useMemo)(
             () => ({
                 isDraggingInternally: !1,
@@ -1672,7 +1672,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
             }),
             []
         );
-        (0, c.useLayoutEffect)(
+        ((0, c.useLayoutEffect)(
             () => () => {
                 null != z && null != z.latestElement && (z.latestElement.remove(), (z.latestElement = null));
             },
@@ -1680,7 +1680,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
         ),
             (0, c.useEffect)(() => {
                 j.current && a && j.current.focus();
-            }, [a]);
+            }, [a]));
         var q = (0, c.useCallback)(
                 l()(() => {
                     if ((el || !ey.isComposing(C)) && (!z.isUpdatingSelection || (null != J && J.isFlushing())) && !z.isDraggingInternally) {
@@ -1742,31 +1742,31 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                             }
                             z.isUpdatingSelection = !0;
                             var c = t && ey.toDOMRange(C, t);
-                            return c ? (d.e6.isBackward(t) ? n.setBaseAndExtent(c.endContainer, c.endOffset, c.startContainer, c.startOffset) : n.setBaseAndExtent(c.startContainer, c.startOffset, c.endContainer, c.endOffset), E(C, c)) : n.removeAllRanges(), c;
+                            return (c ? (d.e6.isBackward(t) ? n.setBaseAndExtent(c.endContainer, c.endOffset, c.startContainer, c.startOffset) : n.setBaseAndExtent(c.startContainer, c.startOffset, c.endContainer, c.endOffset), E(C, c)) : n.removeAllRanges(), c);
                         }
                     },
                     i = r(),
                     a = (null == J ? void 0 : J.isFlushing()) === 'action';
                 if (!el || !a)
                     return void setTimeout(() => {
-                        i && ec && ey.toDOMNode(C, C).focus(), (z.isUpdatingSelection = !1);
+                        (i && ec && ey.toDOMNode(C, C).focus(), (z.isUpdatingSelection = !1));
                     });
                 var o = null,
                     s = requestAnimationFrame(() => {
                         if (a) {
                             var e = (e) => {
                                 try {
-                                    ey.toDOMNode(C, C).focus(), r(e);
+                                    (ey.toDOMNode(C, C).focus(), r(e));
                                 } catch (e) {}
                             };
-                            e(),
+                            (e(),
                                 (o = setTimeout(() => {
-                                    e(!0), (z.isUpdatingSelection = !1);
-                                }));
+                                    (e(!0), (z.isUpdatingSelection = !1));
+                                })));
                         }
                     });
                 return () => {
-                    cancelAnimationFrame(s), o && clearTimeout(o);
+                    (cancelAnimationFrame(s), o && clearTimeout(o));
                 };
             }
         });
@@ -1774,7 +1774,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                 (e) => {
                     if ((G(), !_ && ey.hasEditableTarget(C, e.target) && !tx(e, u))) {
                         if (J) return J.handleDOMBeforeInput(e);
-                        Q.flush(), q.flush();
+                        (Q.flush(), q.flush());
                         var { selection: t } = C,
                             { inputType: n } = e,
                             r = e.dataTransfer || e.data || void 0,
@@ -1782,7 +1782,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                         if (!(i && ey.isComposing(C))) {
                             var a = !1;
                             if ('insertText' === n && t && d.e6.isCollapsed(t) && e.data && 1 === e.data.length && /[a-z ]/i.test(e.data) && 0 !== t.anchor.offset) {
-                                (a = !0), C.marks && (a = !1);
+                                ((a = !0), C.marks && (a = !1));
                                 var { anchor: o } = t,
                                     [s, l] = ey.toDOMPoint(C, o),
                                     c = null == (h = s.parentElement) ? void 0 : h.closest('a'),
@@ -1813,7 +1813,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                     if (!t || !d.e6.equals(t, O)) {
                                         a = !1;
                                         var v = !i && C.selection && d.ML.rangeRef(C, C.selection);
-                                        d.YR.select(C, O), v && D.set(C, v);
+                                        (d.YR.select(C, O), v && D.set(C, v));
                                     }
                                 }
                             }
@@ -1837,7 +1837,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                         d.ML.deleteBackward(C);
                                         break;
                                     case 'deleteEntireSoftLine':
-                                        d.ML.deleteBackward(C, { unit: 'line' }), d.ML.deleteForward(C, { unit: 'line' });
+                                        (d.ML.deleteBackward(C, { unit: 'line' }), d.ML.deleteForward(C, { unit: 'line' }));
                                         break;
                                     case 'deleteHardLineBackward':
                                         d.ML.deleteBackward(C, { unit: 'block' });
@@ -1869,10 +1869,10 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                     case 'insertFromYank':
                                     case 'insertReplacementText':
                                     case 'insertText':
-                                        'insertFromComposition' === n && ey.isComposing(C) && (x(!1), w.set(C, !1)), (null == r ? void 0 : r.constructor.name) === 'DataTransfer' ? ey.insertData(C, r) : 'string' == typeof r && (a ? U.current.push(() => d.ML.insertText(C, r)) : d.ML.insertText(C, r));
+                                        ('insertFromComposition' === n && ey.isComposing(C) && (x(!1), w.set(C, !1)), (null == r ? void 0 : r.constructor.name) === 'DataTransfer' ? ey.insertData(C, r) : 'string' == typeof r && (a ? U.current.push(() => d.ML.insertText(C, r)) : d.ML.insertText(C, r)));
                                 }
                                 var T = null == (p = D.get(C)) ? void 0 : p.unref();
-                                D.delete(C), !T || (C.selection && d.e6.equals(C.selection, T)) || d.YR.select(C, T);
+                                (D.delete(C), !T || (C.selection && d.e6.equals(C.selection, T)) || d.YR.select(C, T));
                             }
                         }
                     }
@@ -1881,7 +1881,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
             ),
             ee = (0, c.useCallback)(
                 (e) => {
-                    null == e ? (q.cancel(), Q.cancel(), I.delete(C), A.delete(C), j.current && eb && j.current.removeEventListener('beforeinput', $)) : eb && e.addEventListener('beforeinput', $), (j.current = e);
+                    (null == e ? (q.cancel(), Q.cancel(), I.delete(C), A.delete(C), j.current && eb && j.current.removeEventListener('beforeinput', $)) : eb && e.addEventListener('beforeinput', $), (j.current = e));
                 },
                 [j, $, q, Q]
             );
@@ -2059,9 +2059,9 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                     (e) => {
                                         if (ey.hasSelectableTarget(C, e.target) && (ey.isComposing(C) && (x(!1), w.set(C, !1)), null == J || J.handleCompositionEnd(e), !tL(e, N.onCompositionEnd) && !el && !eu && !eh && !eo && !eg && !em) && e.data) {
                                             var t = k.get(C);
-                                            k.delete(C), void 0 !== t && (M.set(C, C.marks), (C.marks = t)), d.ML.insertText(C, e.data);
+                                            (k.delete(C), void 0 !== t && (M.set(C, C.marks), (C.marks = t)), d.ML.insertText(C, e.data));
                                             var n = M.get(C);
-                                            M.delete(C), void 0 !== n && (C.marks = n);
+                                            (M.delete(C), void 0 !== n && (C.marks = n));
                                         }
                                     },
                                     [N.onCompositionEnd]
@@ -2107,7 +2107,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 onCut: (0, c.useCallback)(
                                     (e) => {
                                         if (!_ && ey.hasSelectableTarget(C, e.target) && !tL(e, N.onCut)) {
-                                            e.preventDefault(), ey.setFragmentData(C, e.clipboardData, 'cut');
+                                            (e.preventDefault(), ey.setFragmentData(C, e.clipboardData, 'cut'));
                                             var { selection: t } = C;
                                             if (t)
                                                 if (d.e6.isExpanded(t)) d.ML.deleteFragment(C);
@@ -2143,7 +2143,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                 var r = d.ML.range(C, n);
                                                 d.YR.select(C, r);
                                             }
-                                            (z.isDraggingInternally = !0), ey.setFragmentData(C, e.dataTransfer, 'drag');
+                                            ((z.isDraggingInternally = !0), ey.setFragmentData(C, e.dataTransfer, 'drag'));
                                         }
                                     },
                                     [_, N.onDragStart]
@@ -2155,7 +2155,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                             var t = C.selection,
                                                 n = ey.findEventRange(C, e),
                                                 r = e.dataTransfer;
-                                            d.YR.select(C, n),
+                                            (d.YR.select(C, n),
                                                 z.isDraggingInternally &&
                                                     t &&
                                                     !d.e6.equals(t, n) &&
@@ -2165,7 +2165,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                     }) &&
                                                     d.YR.delete(C, { at: t }),
                                                 ey.insertData(C, r),
-                                                ey.isFocused(C) || ey.focus(C);
+                                                ey.isFocused(C) || ey.focus(C));
                                         }
                                         z.isDraggingInternally = !1;
                                     },
@@ -2173,7 +2173,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 ),
                                 onDragEnd: (0, c.useCallback)(
                                     (e) => {
-                                        !_ && z.isDraggingInternally && N.onDragEnd && ey.hasTarget(C, e.target) && N.onDragEnd(e), (z.isDraggingInternally = !1);
+                                        (!_ && z.isDraggingInternally && N.onDragEnd && ey.hasTarget(C, e.target) && N.onDragEnd(e), (z.isDraggingInternally = !1));
                                     },
                                     [_, N.onDragEnd]
                                 ),
@@ -2209,100 +2209,100 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                     return;
                                                 }
                                                 if (e2.isMoveLineBackward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         d.YR.move(C, {
                                                             unit: 'line',
                                                             reverse: !0
-                                                        });
+                                                        }));
                                                     return;
                                                 }
                                                 if (e2.isMoveLineForward(t)) {
-                                                    e.preventDefault(), d.YR.move(C, { unit: 'line' });
+                                                    (e.preventDefault(), d.YR.move(C, { unit: 'line' }));
                                                     return;
                                                 }
                                                 if (e2.isExtendLineBackward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         d.YR.move(C, {
                                                             unit: 'line',
                                                             edge: 'focus',
                                                             reverse: !0
-                                                        });
+                                                        }));
                                                     return;
                                                 }
                                                 if (e2.isExtendLineForward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         d.YR.move(C, {
                                                             unit: 'line',
                                                             edge: 'focus'
-                                                        });
+                                                        }));
                                                     return;
                                                 }
                                                 if (e2.isMoveBackward(t)) {
-                                                    e.preventDefault(), n && d.e6.isCollapsed(n) ? d.YR.move(C, { reverse: !a }) : d.YR.collapse(C, { edge: 'start' });
+                                                    (e.preventDefault(), n && d.e6.isCollapsed(n) ? d.YR.move(C, { reverse: !a }) : d.YR.collapse(C, { edge: 'start' }));
                                                     return;
                                                 }
                                                 if (e2.isMoveForward(t)) {
-                                                    e.preventDefault(), n && d.e6.isCollapsed(n) ? d.YR.move(C, { reverse: a }) : d.YR.collapse(C, { edge: 'end' });
+                                                    (e.preventDefault(), n && d.e6.isCollapsed(n) ? d.YR.move(C, { reverse: a }) : d.YR.collapse(C, { edge: 'end' }));
                                                     return;
                                                 }
                                                 if (e2.isMoveWordBackward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         n && d.e6.isExpanded(n) && d.YR.collapse(C, { edge: 'focus' }),
                                                         d.YR.move(C, {
                                                             unit: 'word',
                                                             reverse: !a
-                                                        });
+                                                        }));
                                                     return;
                                                 }
                                                 if (e2.isMoveWordForward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         n && d.e6.isExpanded(n) && d.YR.collapse(C, { edge: 'focus' }),
                                                         d.YR.move(C, {
                                                             unit: 'word',
                                                             reverse: a
-                                                        });
+                                                        }));
                                                     return;
                                                 }
                                                 if (eb) {
                                                     if ((ef || eu) && n && (e2.isDeleteBackward(t) || e2.isDeleteForward(t)) && d.e6.isCollapsed(n)) {
                                                         var l = d.NB.parent(C, n.anchor.path);
                                                         if (d.W_.isElement(l) && d.ML.isVoid(C, l) && (d.ML.isInline(C, l) || d.ML.isBlock(C, l))) {
-                                                            e.preventDefault(), d.ML.deleteBackward(C, { unit: 'block' });
+                                                            (e.preventDefault(), d.ML.deleteBackward(C, { unit: 'block' }));
                                                             return;
                                                         }
                                                     }
                                                 } else {
                                                     if (e2.isBold(t) || e2.isItalic(t) || e2.isTransposeCharacter(t)) return void e.preventDefault();
                                                     if (e2.isSoftBreak(t)) {
-                                                        e.preventDefault(), d.ML.insertSoftBreak(C);
+                                                        (e.preventDefault(), d.ML.insertSoftBreak(C));
                                                         return;
                                                     }
                                                     if (e2.isSplitBlock(t)) {
-                                                        e.preventDefault(), d.ML.insertBreak(C);
+                                                        (e.preventDefault(), d.ML.insertBreak(C));
                                                         return;
                                                     }
                                                     if (e2.isDeleteBackward(t)) {
-                                                        e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'backward' }) : d.ML.deleteBackward(C);
+                                                        (e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'backward' }) : d.ML.deleteBackward(C));
                                                         return;
                                                     }
                                                     if (e2.isDeleteForward(t)) {
-                                                        e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'forward' }) : d.ML.deleteForward(C);
+                                                        (e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'forward' }) : d.ML.deleteForward(C));
                                                         return;
                                                     }
                                                     if (e2.isDeleteLineBackward(t)) {
-                                                        e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'backward' }) : d.ML.deleteBackward(C, { unit: 'line' });
+                                                        (e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'backward' }) : d.ML.deleteBackward(C, { unit: 'line' }));
                                                         return;
                                                     }
                                                     if (e2.isDeleteLineForward(t)) {
-                                                        e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'forward' }) : d.ML.deleteForward(C, { unit: 'line' });
+                                                        (e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'forward' }) : d.ML.deleteForward(C, { unit: 'line' }));
                                                         return;
                                                     }
                                                     if (e2.isDeleteWordBackward(t)) {
-                                                        e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'backward' }) : d.ML.deleteBackward(C, { unit: 'word' });
+                                                        (e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'backward' }) : d.ML.deleteBackward(C, { unit: 'word' }));
                                                         return;
                                                     }
                                                     if (e2.isDeleteWordForward(t)) {
-                                                        e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'forward' }) : d.ML.deleteForward(C, { unit: 'word' });
+                                                        (e.preventDefault(), n && d.e6.isExpanded(n) ? d.ML.deleteFragment(C, { direction: 'forward' }) : d.ML.deleteForward(C, { unit: 'word' }));
                                                         return;
                                                     }
                                                 }
@@ -2340,7 +2340,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
     tD = (e, t) => {
         if (t.getBoundingClientRect && (!e.selection || (e.selection && d.e6.isCollapsed(e.selection)))) {
             var n = t.startContainer.parentElement;
-            (n.getBoundingClientRect = t.getBoundingClientRect.bind(t)), (0, u.Z)(n, { scrollMode: 'if-needed' }), delete n.getBoundingClientRect;
+            ((n.getBoundingClientRect = t.getBoundingClientRect.bind(t)), (0, u.Z)(n, { scrollMode: 'if-needed' }), delete n.getBoundingClientRect);
         }
     },
     tL = (e, t) => {
@@ -2364,7 +2364,7 @@ function tB(e) {
     var t = (0, c.useRef)([]).current,
         n = (0, c.useRef)({ editor: e }).current,
         r = (0, c.useCallback)((e) => {
-            (n.editor = e), t.forEach((t) => t(e));
+            ((n.editor = e), t.forEach((t) => t(e)));
         }, []);
     return {
         selectorContext: (0, c.useMemo)(
@@ -2401,18 +2401,18 @@ var tV = ['editor', 'children', 'onChange', 'value'],
             }),
             { selectorContext: u, onChange: f } = tB(t),
             _ = (0, c.useCallback)(() => {
-                r && r(t.children),
+                (r && r(t.children),
                     l((e) => ({
                         v: e.v + 1,
                         editor: t
                     })),
-                    f(t);
+                    f(t));
             }, [r]);
         (0, c.useEffect)(
             () => (
                 L.set(t, _),
                 () => {
-                    L.set(t, () => {}), (o.current = !0);
+                    (L.set(t, () => {}), (o.current = !0));
                 }
             ),
             [_]
@@ -2428,12 +2428,12 @@ var tV = ['editor', 'children', 'onChange', 'value'],
                     ? (document.addEventListener('focusin', e),
                       document.addEventListener('focusout', e),
                       () => {
-                          document.removeEventListener('focusin', e), document.removeEventListener('focusout', e);
+                          (document.removeEventListener('focusin', e), document.removeEventListener('focusout', e));
                       })
                     : (document.addEventListener('focus', e, !0),
                       document.addEventListener('blur', e, !0),
                       () => {
-                          document.removeEventListener('focus', e, !0), document.removeEventListener('blur', e, !0);
+                          (document.removeEventListener('focus', e, !0), document.removeEventListener('blur', e, !0));
                       });
             }, []),
             c.createElement(tU.Provider, { value: u }, c.createElement(eq.Provider, { value: s }, c.createElement(eD.Provider, { value: s.editor }, c.createElement(tk.Provider, { value: p }, n))))
@@ -2456,18 +2456,18 @@ var tV = ['editor', 'children', 'onChange', 'value'],
             o = Math.floor(a / 2);
         if (tH(e, d.ML.range(e, r[i]), n)) return d.ML.range(e, r[i], n);
         if (r.length < 2) return d.ML.range(e, r[r.length - 1], n);
-        for (; o !== r.length && o !== i; ) tH(e, d.ML.range(e, r[o]), n) ? (a = o) : (i = o), (o = Math.floor((i + a) / 2));
+        for (; o !== r.length && o !== i; ) (tH(e, d.ML.range(e, r[o]), n) ? (a = o) : (i = o), (o = Math.floor((i + a) / 2)));
         return d.ML.range(e, r[a], n);
     };
 function tW(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2494,11 +2494,11 @@ var tz = function (e) {
             C.set(n, new WeakMap()),
             (n.addMark = (e, t) => {
                 var r, i;
-                null == (r = x.get(n)) || r(), !k.get(n) && null != (i = j.get(n)) && i.length && k.set(n, null), M.delete(n), o(e, t);
+                (null == (r = x.get(n)) || r(), !k.get(n) && null != (i = j.get(n)) && i.length && k.set(n, null), M.delete(n), o(e, t));
             }),
             (n.removeMark = (e) => {
                 var t;
-                !k.get(n) && null != (t = j.get(n)) && t.length && k.set(n, null), M.delete(n), s(e);
+                (!k.get(n) && null != (t = j.get(n)) && t.length && k.set(n, null), M.delete(n), s(e));
             }),
             (n.deleteBackward = (e) => {
                 if ('line' !== e) return a(e);
@@ -2538,7 +2538,7 @@ var tz = function (e) {
                         i.push(...tq(n, e.path));
                         break;
                     case 'set_selection':
-                        null == (t = D.get(n)) || t.unref(), D.delete(n);
+                        (null == (t = D.get(n)) || t.unref(), D.delete(n));
                         break;
                     case 'insert_node':
                     case 'remove_node':
@@ -2574,7 +2574,7 @@ var tz = function (e) {
                             var [f] = s,
                                 _ = l.cloneRange(),
                                 p = ey.toDOMNode(n, f);
-                            _.setEndAfter(p), (c = _.cloneContents());
+                            (_.setEndAfter(p), (c = _.cloneContents()));
                         }
                         if (
                             (o && (u = c.querySelector('[data-slate-spacer]')),
@@ -2585,14 +2585,14 @@ var tz = function (e) {
                             q(u))
                         ) {
                             var h = u.ownerDocument.createElement('span');
-                            (h.style.whiteSpace = 'pre'), h.appendChild(u), c.appendChild(h), (u = h);
+                            ((h.style.whiteSpace = 'pre'), h.appendChild(u), c.appendChild(h), (u = h));
                         }
                         var m = n.getFragment(),
                             g = JSON.stringify(m),
                             E = window.btoa(encodeURIComponent(g));
-                        u.setAttribute('data-slate-fragment', E), e.setData('application/'.concat(t), E);
+                        (u.setAttribute('data-slate-fragment', E), e.setData('application/'.concat(t), E));
                         var b = c.ownerDocument.createElement('div');
-                        return b.appendChild(c), b.setAttribute('hidden', 'true'), c.ownerDocument.body.appendChild(b), e.setData('text/html', b.innerHTML), e.setData('text/plain', et(b)), c.ownerDocument.body.removeChild(b), e;
+                        return (b.appendChild(c), b.setAttribute('hidden', 'true'), c.ownerDocument.body.appendChild(b), e.setData('text/html', b.innerHTML), e.setData('text/plain', et(b)), c.ownerDocument.body.removeChild(b), e);
                     }
                 }
             }),
@@ -2603,7 +2603,7 @@ var tz = function (e) {
                 var r = e.getData('application/'.concat(t)) || er(e);
                 if (r) {
                     var i = JSON.parse(decodeURIComponent(window.atob(r)));
-                    return n.insertFragment(i), !0;
+                    return (n.insertFragment(i), !0);
                 }
                 return !1;
             }),
@@ -2612,7 +2612,7 @@ var tz = function (e) {
                 if (t) {
                     var r = t.split(/\r\n|\r|\n/),
                         i = !1;
-                    for (var a of r) i && d.YR.splitNodes(n, { always: !0 }), n.insertText(a), (i = !0);
+                    for (var a of r) (i && d.YR.splitNodes(n, { always: !0 }), n.insertText(a), (i = !0));
                     return !0;
                 }
                 return !1;
@@ -2620,7 +2620,7 @@ var tz = function (e) {
             (n.onChange = (e) => {
                 p.unstable_batchedUpdates(() => {
                     var t = L.get(n);
-                    t && t(), i(e);
+                    (t && t(), i(e));
                 });
             }),
             n

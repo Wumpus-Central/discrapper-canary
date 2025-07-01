@@ -1,47 +1,47 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => g });
 var r = n(255367),
     l = n(73800),
     i = n(512722),
     a = n.n(i),
-    u = n(399606),
-    o = n(618158),
+    o = n(399606),
+    u = n(618158),
     s = n(594174),
     c = n(822183),
     d = n(364125),
     f = n(90753),
-    m = n(613050);
-function p(e) {
+    p = n(613050);
+function m(e) {
     let { focused: t, channelId: n, streamerId: i, stream: c } = e,
-        p = l.useRef(null),
-        E = (0, u.e7)([s.default], () => s.default.getCurrentUser());
-    a()(null != E, 'user cannot be null'), (0, f.Z)(p, E, i, n);
+        m = l.useRef(null),
+        g = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+    (a()(null != g, 'user cannot be null'), (0, f.Z)(m, g, i, n));
     let {
-        handleClick: g,
+        handleClick: E,
         handleMouseDown: h,
-        handleMouseEnter: S,
-        handleMouseMove: O,
-        handleMouseUp: v
+        handleMouseEnter: v,
+        handleMouseMove: S,
+        handleMouseUp: b
     } = (0, d.Z)({
-        user: E,
+        user: g,
         channelId: n,
         streamerId: i,
         stream: c,
         focused: t,
-        canvas: p.current
+        canvas: m.current
     });
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(u.Z, {
         children: (0, r.jsx)('canvas', {
-            ref: p,
-            onClick: g,
+            ref: m,
+            onClick: E,
             onMouseDown: h,
-            onMouseEnter: S,
-            onMouseMove: O,
-            onMouseUp: v,
-            className: m.sharedCanvas
+            onMouseEnter: v,
+            onMouseMove: S,
+            onMouseUp: b,
+            className: p.sharedCanvas
         })
     });
 }
-function E(e) {
+function g(e) {
     let { isSharedCanvasEnabled: t } = c.Z.useExperiment(
         {
             guildId: e.guildId,
@@ -52,12 +52,12 @@ function E(e) {
     return !t || e.hasScreenMessage
         ? null
         : (0, r.jsx)(
-              p,
+              m,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
                           r = Object.keys(n);
-                      'function' == typeof Object.getOwnPropertySymbols &&
+                      ('function' == typeof Object.getOwnPropertySymbols &&
                           (r = r.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -65,7 +65,7 @@ function E(e) {
                           )),
                           r.forEach(function (t) {
                               var r;
-                              (r = n[t]),
+                              ((r = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
                                             value: r,
@@ -73,8 +73,8 @@ function E(e) {
                                             configurable: !0,
                                             writable: !0
                                         })
-                                      : (e[t] = r);
-                          });
+                                      : (e[t] = r));
+                          }));
                   }
                   return e;
               })({}, e)

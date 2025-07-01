@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(415506);
+(n.d(t, { Z: () => j }), n(388685), n(415506));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -66,13 +66,13 @@ function j(e) {
                 let n = t.width;
                 n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
                 let r = 1;
-                for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
-                r !== G.current && ((G.current = r), U(r)), V(t);
+                for (n -= 450 * !!R, n -= 280; n > 0; ) ((n -= 264), (r += 1));
+                (r !== G.current && ((G.current = r), U(r)), V(t));
             },
             [R, V]
         ),
         F = (0, u.y)(H, [R, V]);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         w((0, m.PM)());
     }, [v]),
         i.useEffect(() => {
@@ -84,7 +84,7 @@ function j(e) {
                 analyticsContext: x,
                 categoryId: A
             });
-        }, [x, s, t, A, L, v]);
+        }, [x, s, t, A, L, v]));
     let z = i.useCallback((e) => n(e, A), [n, A]),
         W = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
         Y = i.useCallback(
@@ -183,7 +183,7 @@ function j(e) {
             },
             [s, Q, z, A]
         );
-    i.useEffect(() => {
+    (i.useEffect(() => {
         let e = B.current;
         return () => {
             var t;
@@ -205,7 +205,7 @@ function j(e) {
                             }
                         });
                 });
-        }, []);
+        }, []));
     let $ = i.useMemo(
             () =>
                 (0, o.debounce)(

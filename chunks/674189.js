@@ -1,4 +1,4 @@
-i.d(t, { default: () => b }), i(953529), i(388685);
+(i.d(t, { default: () => b }), i(953529), i(388685));
 var n = i(255367),
     l = i(73800),
     r = i(512722),
@@ -34,13 +34,13 @@ function b(e) {
             let e = await new Promise((e) => {
                 d.Z.openCreateGuildModal({ onSuccess: e });
             });
-            await new Promise((t) => {
+            (await new Promise((t) => {
                 c.Z.addChangeListener(function i() {
                     null != c.Z.getGuild(e) && (c.Z.removeChangeListener(i), t());
                 });
             }),
                 o.Z.open(e, g, void 0, G),
-                null == i || i();
+                null == i || i());
         };
     return (0, n.jsxs)(u.Y0X, {
         transitionState: t,
@@ -83,7 +83,7 @@ function b(e) {
                                     }),
                                     (0, n.jsx)(u.zxk, {
                                         onClick: () => {
-                                            a()(null != O, 'Guild ID must not be null on click'), o.Z.open(O, g, void 0, G), null == i || i();
+                                            (a()(null != O, 'Guild ID must not be null on click'), o.Z.open(O, g, void 0, G), null == i || i());
                                         },
                                         disabled: null == O,
                                         children: f

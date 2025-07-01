@@ -1,29 +1,27 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
     o = n(481060),
-    s = n(118012),
-    l = n(362560);
-function c(e) {
+    s = n(362560);
+function l(e) {
     var t;
-    let { name: n, className: i, state: c, isInline: u, onClick: d } = e,
-        f = n + (u ? ':' : ''),
-        _ = null,
-        p = s.Z.Colors.HEADER_PRIMARY;
-    (null == c ? void 0 : c.isActive) && !u ? (_ = l.active) : (null == c || null == (t = c.lastValidationResult) ? void 0 : t.success) === !1 ? (_ = l.error) : (null == c ? void 0 : c.hasValue) && !u && (_ = l.set);
-    let h = (0, r.jsx)(s.Z, {
-        size: u ? s.Z.Sizes.SIZE_16 : s.Z.Sizes.SIZE_14,
-        color: p,
-        className: a()(l.option, { [l.inline]: u }, _, i),
-        children: f
+    let { name: n, className: i, state: l, isInline: c, onClick: u } = e,
+        d = n + (c ? ':' : ''),
+        f = null;
+    (null == l ? void 0 : l.isActive) && !c ? (f = s.active) : (null == l || null == (t = l.lastValidationResult) ? void 0 : t.success) === !1 ? (f = s.error) : (null == l ? void 0 : l.hasValue) && !c && (f = s.set);
+    let _ = (0, r.jsx)(o.Text, {
+        variant: c ? 'text-md/normal' : 'text-sm/normal',
+        color: 'text-primary',
+        className: a()(s.option, { [s.inline]: c }, f, i),
+        children: d
     });
-    return null == d
-        ? h
+    return null == u
+        ? _
         : (0, r.jsx)(o.P3F, {
-              className: l.clickable,
-              onClick: () => d(n),
-              children: h
+              className: s.clickable,
+              onClick: () => u(n),
+              children: _
           });
 }

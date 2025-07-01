@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J }), n(388685);
+(n.d(t, { Z: () => J }), n(388685));
 var i,
     r = n(255367),
     l = n(73800),
@@ -57,7 +57,7 @@ function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -65,7 +65,7 @@ function q(e) {
             )),
             i.forEach(function (t) {
                 K(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -91,16 +91,16 @@ class H extends (i = l.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateClientTheme(), (0, W.O)(e), e.addEventListener('blur', this.handleBlur), L.isPlatformEmbedded ? t.addEventListener('contextmenu', R.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', R.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload), this.registerPopoutGlobalKeybinds();
+        (null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateClientTheme(), (0, W.O)(e), e.addEventListener('blur', this.handleBlur), L.isPlatformEmbedded ? t.addEventListener('contextmenu', R.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', R.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload), this.registerPopoutGlobalKeybinds());
     }
     componentDidUpdate(e) {
         let { title: t, clientThemesCSS: n } = this.props;
-        e.title !== t && this.updateTitle(), e.clientThemesCSS !== n && this.updateClientTheme();
+        (e.title !== t && this.updateTitle(), e.clientThemesCSS !== n && this.updateClientTheme());
     }
     componentWillUnmount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        this.unregisterPopoutGlobalKeybinds(), e.removeEventListener('blur', this.handleBlur), L.isPlatformEmbedded ? t.removeEventListener('contextmenu', R.contextMenuCallbackNative) : t.removeEventListener('contextmenu', R.contextMenuCallbackWeb), (0, h.j)(() => m.s9z.setState((e) => B(q({}, e), { [m.u1M]: [] }))), e.removeEventListener('beforeunload', this.beforeUnload);
+        (this.unregisterPopoutGlobalKeybinds(), e.removeEventListener('blur', this.handleBlur), L.isPlatformEmbedded ? t.removeEventListener('contextmenu', R.contextMenuCallbackNative) : t.removeEventListener('contextmenu', R.contextMenuCallbackWeb), (0, h.j)(() => m.s9z.setState((e) => B(q({}, e), { [m.u1M]: [] }))), e.removeEventListener('beforeunload', this.beforeUnload));
     }
     updateTitle() {
         let { title: e, guestWindow: t } = this.props,
@@ -118,7 +118,7 @@ class H extends (i = l.Component) {
             return;
         }
         let l = n.createElement('style');
-        l.setAttribute(w.PQ, 'true'), (l.textContent = e), i.appendChild(l);
+        (l.setAttribute(w.PQ, 'true'), (l.textContent = e), i.appendChild(l));
     }
     registerPopoutGlobalKeybinds() {
         let { guestWindow: e } = this.props,
@@ -189,14 +189,14 @@ class H extends (i = l.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             K(this, 'rootRef', l.createRef()),
             K(this, '_cleanupWindowActionCreators', void 0),
             K(this, '_combokeys', null),
             K(this, 'beforeUnload', (e) => {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
-                        _.Z.unmountWindow(this.props.windowKey), L.isPlatformEmbedded && I.ZP.close(this.props.windowKey);
+                        (_.Z.unmountWindow(this.props.windowKey), L.isPlatformEmbedded && I.ZP.close(this.props.windowKey));
                     };
                 null != t
                     ? t({
@@ -208,7 +208,7 @@ class H extends (i = l.Component) {
             K(this, 'handleBlur', () => {
                 var e, t;
                 null == (e = (t = this.props).onBlur) || e.call(t);
-            });
+            }));
     }
 }
 K(H, 'defaultProps', { withTitleBar: !0 });
@@ -218,11 +218,11 @@ let G = l.forwardRef(function (e, t) {
         return (
             l.useEffect(() => {
                 let e = n.document.documentElement;
-                u()(null != e, 'Window document element was null'), e.setAttribute('style', a);
+                (u()(null != e, 'Window document element was null'), e.setAttribute('style', a));
             }, [n, a]),
             l.useEffect(() => {
                 let e = n.document.documentElement;
-                u()(null != e, 'Window document element was null'), e.setAttribute('lang', c);
+                (u()(null != e, 'Window document element was null'), e.setAttribute('lang', c));
             }, [n, c]),
             (0, r.jsx)('div', {
                 'data-popout-root': !0,

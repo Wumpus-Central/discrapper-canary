@@ -1,4 +1,4 @@
-n.d(t, { K: () => T }), n(539854);
+(n.d(t, { K: () => T }), n(539854));
 var r,
     i = n(255367),
     a = n(73800),
@@ -37,7 +37,7 @@ class T extends (r = a.Component) {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return v;
         let n = ''.concat(e).length;
-        return t && (n += ''.concat(e, ' / ').length), I * n + v;
+        return (t && (n += ''.concat(e, ' / ').length), I * n + v);
     }
     getCharsLeftLength() {
         let { maxLength: e, value: t } = this.props;
@@ -158,17 +158,17 @@ class T extends (r = a.Component) {
     }
     constructor(e) {
         var t;
-        super(e),
+        (super(e),
             E(this, 'getAriaDescribedBy', () => {
                 var e;
                 let { maxLength: t, minLength: n, error: r } = this.props,
                     i = [],
                     a = null == (e = this.context) ? void 0 : e.errorId;
-                return null != a && i.push(a), null != r ? i.push(b) : (null != t && i.push(O), null != n && i.push(y)), i.length > 0 ? i.join(' ') : void 0;
+                return (null != a && i.push(a), null != r ? i.push(b) : (null != t && i.push(O), null != n && i.push(y)), i.length > 0 ? i.join(' ') : void 0);
             }),
             E(this, 'onChange', (e) => {
                 let { onChange: t, name: n } = this.props;
-                null == t || t(e.currentTarget.value, n), this.setState({ dirty: !0 });
+                (null == t || t(e.currentTarget.value, n), this.setState({ dirty: !0 }));
             }),
             E(this, 'onFocus', (e) => {
                 let { onFocus: t, name: n } = this.props;
@@ -182,10 +182,10 @@ class T extends (r = a.Component) {
                 let { onKeyDown: t } = this.props;
                 null == t || t(e);
             }),
-            (this.state = { dirty: null != (t = e.defaultDirty) && t });
+            (this.state = { dirty: null != (t = e.defaultDirty) && t }));
     }
 }
-E(T, 'contextType', u.q3),
+(E(T, 'contextType', u.q3),
     E(T, 'defaultProps', {
         name: '',
         disabled: !1,
@@ -196,4 +196,4 @@ E(T, 'contextType', u.q3),
         autosize: !1,
         rows: 3,
         allowOverflow: !1
-    });
+    }));

@@ -12,7 +12,7 @@ n.d(t, {
     u$: () => _
 });
 var r = (function (e) {
-    return (e[(e.POPULAR = 0)] = 'POPULAR'), (e[(e.ALPHABETICAL = 1)] = 'ALPHABETICAL'), e;
+    return ((e[(e.POPULAR = 0)] = 'POPULAR'), (e[(e.ALPHABETICAL = 1)] = 'ALPHABETICAL'), e);
 })({});
 let i = 'app-launcher-element',
     a = 'app-launcher-modal',

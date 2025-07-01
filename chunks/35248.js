@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     M: () => I,
     a: () => T
 }),
@@ -9,7 +9,7 @@ n.d(t, {
     n(490233),
     n(97749),
     n(388685),
-    n(953529);
+    n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(772848),
@@ -45,7 +45,7 @@ function v(e, t, n, r, i) {
             })
             .then(
                 (e) => {
-                    l.searchParams.append('handoff_token', e.body.handoff_token), window.open(l.href);
+                    (l.searchParams.append('handoff_token', e.body.handoff_token), window.open(l.href));
                 },
                 () => {
                     r();
@@ -75,7 +75,7 @@ let I = (e) => {
                 return () => clearTimeout(e);
             }, [u, C, N, o, P, R, t]),
             i.useEffect(() => {
-                null !== S && (E.YQ.includes(S) && ((0, c.GZ)(S), (0, l.jg)()), f(S)), null !== A && d(A), T === N.loadId && I === m.Y.DONE && a();
+                (null !== S && (E.YQ.includes(S) && ((0, c.GZ)(S), (0, l.jg)()), f(S)), null !== A && d(A), T === N.loadId && I === m.Y.DONE && a());
             }, [f, d, I, T, S, A, N, a]),
             (0, r.jsxs)('div', {
                 className: y.body,

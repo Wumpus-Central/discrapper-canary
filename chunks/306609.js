@@ -1,29 +1,29 @@
-n.d(t, { l: () => B }), n(388685);
+(n.d(t, { l: () => B }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(695469),
+    o = n.n(l),
+    a = n(695469),
     s = n(442837),
     c = n(481060),
     u = n(493773),
     d = n(347469),
-    f = n(40851),
-    p = n(100527),
+    p = n(40851),
+    f = n(100527),
     m = n(906732),
     g = n(659580),
-    _ = n(795318),
-    b = n(53691),
-    h = n(457165),
-    v = n(594174),
+    b = n(795318),
+    _ = n(53691),
+    v = n(457165),
+    h = n(594174),
     y = n(626135),
     O = n(111361),
     j = n(74538),
     S = n(743498),
     x = n(967021),
     I = n(709706),
-    C = n(378441),
-    P = n(799143),
+    P = n(378441),
+    C = n(799143),
     E = n(358820),
     w = n(448697),
     T = n(946196),
@@ -31,8 +31,8 @@ var r = n(255367),
     Z = n(639539),
     A = n(627325),
     D = n(981631),
-    L = n(354459),
-    k = n(474936),
+    k = n(354459),
+    L = n(474936),
     M = n(48500),
     R = n(388032),
     F = n(130802);
@@ -40,7 +40,7 @@ function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function U(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -56,8 +56,8 @@ function U(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -81,25 +81,25 @@ function V(e, t) {
 }
 function B(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: l = !1, showSearchBar: B = !0 } = e,
-        [Y, W] = i.useState(''),
-        { analyticsLocations: z, newestAnalyticsLocation: G } = (0, m.ZP)(p.Z.VOICE_FILTER_POPOUT),
-        H = i.useRef(null),
+        [Y, z] = i.useState(''),
+        { analyticsLocations: W, newestAnalyticsLocation: H } = (0, m.ZP)(f.Z.VOICE_FILTER_POPOUT),
+        G = i.useRef(null),
         J = (0, d.Z)({
             minDimension: 400,
             maxDimension: 600,
-            resizableDomNodeRef: H,
+            resizableDomNodeRef: G,
             onElementResize: (e, t) => {},
             onElementResizeEnd: (e) => {},
             orientation: d.y.VERTICAL_TOP
         });
     (0, R.useSyncMessages)(M.messagesLoader);
-    let X = (0, s.e7)([v.default], () => (0, O.I5)(v.default.getCurrentUser())),
+    let X = (0, s.e7)([h.default], () => (0, O.I5)(h.default.getCurrentUser())),
         q = (0, s.e7)([I.Z], () => I.Z.getCatalogUpdateTime()),
         [K, Q] = i.useState(!1),
         [$, ee] = i.useState(!1),
-        { activeVoice: et } = (0, C.o)(),
+        { activeVoice: et } = (0, P.o)(),
         en = (0, x.HM)({
-            location: z[0],
+            location: W[0],
             autoTrackExposure: !0
         }),
         er = (0, c.q_F)({
@@ -131,18 +131,18 @@ function B(e) {
                 duration: 200
             }
         }),
-        ea = i.useRef(null);
+        eo = i.useRef(null);
     (0, u.ZP)(() => {
-        (0, E.r5)(), en && (0, S.jG)(), y.default.track(D.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != et ? et : null });
+        ((0, E.r5)(), en && (0, S.jG)(), y.default.track(D.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != et ? et : null }));
     });
-    let eo = i.useCallback(() => W(''), [W]),
+    let ea = i.useCallback(() => z(''), [z]),
         es = i.useRef(null),
-        ec = (0, f.bp)() !== D.IlC.OVERLAY;
+        ec = (0, p.bp)() !== D.IlC.OVERLAY;
     return (0, r.jsx)(m.Gt, {
-        value: z,
+        value: W,
         children: (0, r.jsxs)('div', {
-            ref: H,
-            className: a()(F.voiceFiltersPopout, {
+            ref: G,
+            className: o()(F.voiceFiltersPopout, {
                 [F.wide]: n,
                 [F.notResizable]: !ec
             }),
@@ -160,28 +160,28 @@ function B(e) {
                         placeholder: R.intl.string(R.t.hHCZJS),
                         className: F.voiceFiltersHeader,
                         autoFocus: !0,
-                        onChange: W,
+                        onChange: z,
                         query: Y,
-                        onClear: eo
+                        onClear: ea
                     }),
                 (0, r.jsx)(A.w, {
                     query: Y,
                     columns: n ? 5 : 4,
                     handleScroll: (e) => {
-                        let t = ea.current;
+                        let t = eo.current;
                         if (null == t || (Q(e > 0), $)) return;
                         let { height: n, totalHeight: r } = t.getListDimensions();
                         e < r - n || (ee(!0), y.default.track(D.rMx.VOICE_FILTER_PICKER_SCROLLED));
                     },
-                    voiceListRef: ea
+                    voiceListRef: eo
                 }),
                 !X &&
-                    (0, r.jsxs)(o.animated.div, {
+                    (0, r.jsxs)(a.animated.div, {
                         style: V(U({}, el), { display: el.opacity.to((e) => (0 === e ? 'none' : 'block')) }),
                         className: F.upsellCountdownContainer,
                         children: [
                             null != q &&
-                                (0, r.jsx)(o.animated.div, {
+                                (0, r.jsx)(a.animated.div, {
                                     style: er,
                                     children: (0, r.jsx)(Z.J, {
                                         catalogUpdateTime: q,
@@ -190,16 +190,16 @@ function B(e) {
                                 }),
                             (0, r.jsx)('div', {
                                 className: F.upsellContainer,
-                                children: (0, r.jsx)(o.animated.div, {
+                                children: (0, r.jsx)(a.animated.div, {
                                     style: {
                                         y: ei.y,
                                         opacity: ei.y.to((e) => +(50 !== e))
                                     },
-                                    children: (0, r.jsx)(b.p, {
+                                    children: (0, r.jsx)(_.p, {
                                         showUpsell: !0,
                                         text: R.intl.format(R.t['XMDm8/'], {
-                                            nitroTierName: (0, j.Px)(k.p9.TIER_2),
-                                            onClick: () => (0, h.i)()
+                                            nitroTierName: (0, j.Px)(L.p9.TIER_2),
+                                            onClick: () => (0, v.i)()
                                         }),
                                         button: R.intl.string(R.t.cRCCJy),
                                         buttonAnalyticsObject: { section: D.jXE.VOICE_FILTERS_FLOATING_UPSELL },
@@ -218,10 +218,10 @@ function B(e) {
                 (0, r.jsx)(w.R, {}),
                 (0, r.jsx)(N.y, {}),
                 (0, r.jsxs)('div', {
-                    className: a()(F.voiceFiltersFooter, { [F.hasActiveVoice]: null != et }),
+                    className: o()(F.voiceFiltersFooter, { [F.hasActiveVoice]: null != et }),
                     children: [
-                        (0, r.jsx)(P.Y, {}),
-                        l && (0, r.jsx)(P.a, {}),
+                        (0, r.jsx)(C.Y, {}),
+                        l && (0, r.jsx)(C.a, {}),
                         (0, r.jsx)(c.yRy, {
                             targetElementRef: es,
                             position: 'top',
@@ -234,7 +234,7 @@ function B(e) {
                                     renderOutputDevices: l,
                                     renderOutputVolume: l,
                                     onClose: t,
-                                    onInteraction: (0, _.u)('AudioDeviceMenu', G, { entrypoint: L.A5.THREE_DOT }),
+                                    onInteraction: (0, b.u)('AudioDeviceMenu', H, { entrypoint: k.A5.THREE_DOT }),
                                     minimal: !0
                                 }),
                             children: (e) =>
@@ -249,7 +249,7 @@ function B(e) {
                                         innerClassName: F.voiceFiltersFooterButtonInner,
                                         onClick: (t) => {
                                             var n;
-                                            y.default.track(D.rMx.VOICE_FILTER_VOICE_SETTINGS_CLICKED, { active_voice_filter_id: null != et ? et : null }), null == (n = e.onClick) || n.call(e, t);
+                                            (y.default.track(D.rMx.VOICE_FILTER_VOICE_SETTINGS_CLICKED, { active_voice_filter_id: null != et ? et : null }), null == (n = e.onClick) || n.call(e, t));
                                         },
                                         children: (0, r.jsx)(c.Huf, {
                                             size: 'custom',

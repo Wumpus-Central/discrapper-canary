@@ -1,4 +1,4 @@
-n.d(t, { h: () => d }), n(388685);
+(n.d(t, { h: () => d }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,16 +15,16 @@ function d(e) {
         C = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
         x = i.useRef(null),
         v = i.useRef(0);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         let e = t.current;
-        if (null != e) return e.addEventListener('click', d), () => e.removeEventListener('click', d);
+        if (null != e) return (e.addEventListener('click', d), () => e.removeEventListener('click', d));
     }),
         i.useEffect(() => {
             if (!f) {
                 var e, t;
-                b(String(v.current)), y(void 0 !== C && C < (null != (t = null == (e = x.current) ? void 0 : e.clientHeight) ? t : 300) + 24), (v.current += 1);
+                (b(String(v.current)), y(void 0 !== C && C < (null != (t = null == (e = x.current) ? void 0 : e.clientHeight) ? t : 300) + 24), (v.current += 1));
             }
-        }, [C, x, f]);
+        }, [C, x, f]));
     let { preventIdle: j, allowIdle: O } = (0, u.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null

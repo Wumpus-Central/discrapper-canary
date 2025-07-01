@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Ew: () => y,
     Iv: () => v,
     Mf: () => m,
@@ -15,13 +15,13 @@ n.d(t, {
     n(953529),
     n(388685),
     n(704826),
-    n(35282);
+    n(35282));
 var r = n(772848),
     i = n(706454),
     a = n(626135),
     o = n(823379),
     s = n(900849);
-n(275131), n(356164);
+(n(275131), n(356164));
 var l = n(128449),
     c = n(981631),
     u = n(388032);
@@ -42,7 +42,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -58,11 +58,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -221,14 +221,14 @@ function I() {
 async function T(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: o, options: l } = e,
         u = p(f({}, l), { loadId: t });
-    await s.Ub(n, o, u),
+    (await s.Ub(n, o, u),
         a.default.track(c.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,
             load_id: t,
             card_index: r,
             category_id: i,
             location: o
-        });
+        }));
 }
 function S() {
     return (0, r.Z)().replace(/-/g, '');

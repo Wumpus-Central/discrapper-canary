@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(415506), n(388685);
+(n.d(t, { Z: () => E }), n(415506), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -23,7 +23,7 @@ let l = (e, t) => {
     },
     c = 9;
 var u = (function (e) {
-    return (e[(e.DISABLED = 0)] = 'DISABLED'), (e[(e.DEFAULT = 1)] = 'DEFAULT'), (e[(e.OFFSET = 2)] = 'OFFSET'), e;
+    return ((e[(e.DISABLED = 0)] = 'DISABLED'), (e[(e.DEFAULT = 1)] = 'DEFAULT'), (e[(e.OFFSET = 2)] = 'OFFSET'), e);
 })(u || {});
 function d(e, t, n, r, i) {
     let { top: a, bottom: o, left: s, right: l } = e;
@@ -93,7 +93,7 @@ function g(e) {
 }
 class E extends (r = a.PureComponent) {
     componentDidMount() {
-        this.checkBounds(), this.setDOMPositions(this.position);
+        (this.checkBounds(), this.setDOMPositions(this.position));
     }
     componentDidUpdate(e, t) {
         let {
@@ -103,20 +103,20 @@ class E extends (r = a.PureComponent) {
         (e.maxX !== a || e.maxY !== o || e.onRelocated !== s || e.snapOrientation !== l || t.verticalOrientation !== n || t.horizontalOrientation !== r || t.atTopEdge !== i) && this.checkBounds();
     }
     componentWillUnmount() {
-        window.removeEventListener('mousemove', this.handleMouseMove), window.removeEventListener('mouseup', this.handleMouseUp);
+        (window.removeEventListener('mousemove', this.handleMouseMove), window.removeEventListener('mouseup', this.handleMouseUp));
     }
     setDOMPositions(e) {
         let { top: t, left: n, bottom: r, right: i } = e,
             {
                 draggableRef: { current: a }
             } = this;
-        (this.position = {
+        ((this.position = {
             top: t,
             left: n,
             bottom: r,
             right: i
         }),
-            null != a && ((a.style.top = g(t)), (a.style.bottom = g(r)), (a.style.left = g(n)), (a.style.right = g(i)));
+            null != a && ((a.style.top = g(t)), (a.style.bottom = g(r)), (a.style.left = g(n)), (a.style.right = g(i))));
     }
     render() {
         let { children: e, className: t } = this.props,
@@ -144,7 +144,7 @@ class E extends (r = a.PureComponent) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             s(this, 'draggableRef', a.createRef()),
             s(this, '_dragStart', {
                 x: 0,
@@ -173,14 +173,14 @@ class E extends (r = a.PureComponent) {
                             _.clientHeight
                         )
                     );
-                    (this._dragStart = {
+                    ((this._dragStart = {
                         x: e.clientX,
                         y: e.clientY
                     }),
                         (this._offsetX = e.clientX - a),
                         (this._offsetY = e.clientY - o),
                         window.addEventListener('mousemove', this.handleMouseMove),
-                        window.addEventListener('mouseup', this.handleMouseUp);
+                        window.addEventListener('mouseup', this.handleMouseUp));
                 }
             }),
             s(this, 'handleMouseMove', (e) => {
@@ -215,13 +215,13 @@ class E extends (r = a.PureComponent) {
                     );
                 if (g) {
                     let e = _((S = p(S)));
-                    (y = e[0]), (O = e[1]);
+                    ((y = e[0]), (O = e[1]));
                 } else
                     S = {
                         top: S.top,
                         left: S.left
                     };
-                2 === s && O !== this.state.horizontalOrientation && ((this._offsetX = I - this._offsetX), (v = !0)),
+                (2 === s && O !== this.state.horizontalOrientation && ((this._offsetX = I - this._offsetX), (v = !0)),
                     2 === o && y !== this.state.verticalOrientation && ((this._offsetY = T - this._offsetY), (v = !0)),
                     this.setDOMPositions(S),
                     b || null == u || u(S, r),
@@ -232,21 +232,21 @@ class E extends (r = a.PureComponent) {
                         verticalOrientation: y,
                         horizontalOrientation: O,
                         atTopEdge: 0 === S.top
-                    });
+                    }));
             }),
             s(this, 'handleMouseUp', () => {
-                window.removeEventListener('mousemove', this.handleMouseMove),
+                (window.removeEventListener('mousemove', this.handleMouseMove),
                     window.removeEventListener('mouseup', this.handleMouseUp),
                     this.state.dragging &&
                         this.setState({ dragging: !1 }, () => {
                             let { onDragEnd: e } = this.props,
                                 { current: t } = this.draggableRef;
                             null != t && null != e && e(this.position, t);
-                        });
+                        }));
             }),
             s(this, '_checkBoundsRAF', null),
             s(this, 'checkBounds', () => {
-                null != this._checkBoundsRAF && cancelAnimationFrame(this._checkBoundsRAF), (this._checkBoundsRAF = requestAnimationFrame(this._performCheckBounds));
+                (null != this._checkBoundsRAF && cancelAnimationFrame(this._checkBoundsRAF), (this._checkBoundsRAF = requestAnimationFrame(this._performCheckBounds)));
             }),
             s(this, '_performCheckBounds', () => {
                 let e,
@@ -262,7 +262,7 @@ class E extends (r = a.PureComponent) {
                     h = d(t, i, a, f, u);
                 if (((h = m(h)), s)) {
                     let t = _((e = p(h)));
-                    (l = t[0]), (c = t[1]);
+                    ((l = t[0]), (c = t[1]));
                 } else
                     e = {
                         top: h.top,
@@ -271,7 +271,7 @@ class E extends (r = a.PureComponent) {
                         bottom: null
                     };
                 if (t.left === e.left && t.right === e.right && t.top === e.top && t.bottom === e.bottom) return;
-                null == o || o(e, r), this.setDOMPositions(e);
+                (null == o || o(e, r), this.setDOMPositions(e));
                 let g = 0 === e.top;
                 (l !== n.verticalOrientation || c !== n.horizontalOrientation || g !== n.atTopEdge) &&
                     this.setState({
@@ -279,18 +279,18 @@ class E extends (r = a.PureComponent) {
                         horizontalOrientation: c,
                         atTopEdge: g
                     });
-            });
+            }));
         let [t, n] = _(e.initialPosition);
-        (this.position = h(e.initialPosition)),
+        ((this.position = h(e.initialPosition)),
             (this.state = {
                 dragging: !1,
                 verticalOrientation: t,
                 horizontalOrientation: n,
                 atTopEdge: 0 === this.position.top
-            });
+            }));
     }
 }
-s(E, 'FlipTypes', u),
+(s(E, 'FlipTypes', u),
     s(E, 'defaultProps', {
         snapOrientation: !1,
         maxX: 0,
@@ -298,4 +298,4 @@ s(E, 'FlipTypes', u),
         flipVertical: 0,
         flipHorizontal: 0,
         dragAnywhere: !1
-    });
+    }));

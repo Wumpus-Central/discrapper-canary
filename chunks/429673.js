@@ -1,15 +1,9 @@
-n.d(t, {
-    r2: () => l,
-    sc: () => a
-});
-var r = n(818083),
-    i = n(987338);
-let l = (0, r.B)({
+n.d(t, { s: () => l });
+let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2025-05_enable_emoji_in_channel_names_guild',
     label: 'Emojis in Channel Name',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -18,10 +12,13 @@ let l = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function l(e) {
     let { guildId: t, location: n } = e;
-    return l.useExperiment({
-        guildId: t,
-        location: n
-    }).enabled;
+    return i.useExperiment(
+        {
+            guildId: t,
+            location: n
+        },
+        { autoTrackExposure: !0 }
+    ).enabled;
 }

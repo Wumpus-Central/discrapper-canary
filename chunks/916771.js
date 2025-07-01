@@ -23,7 +23,7 @@ function _(e) {
         description: f.intl.format(f.t.sXsgsL, { helpUrl: c.Z.getArticleURL(d.BhN.STREAM_FAILED) }),
         errorCodeMessage: g ? f.intl.formatToPlainString(f.t['ejOT9/'], { errorCode: E }) : void 0,
         onCTAClick: () => {
-            (0, a.w)(i.Yn.STREAM, n.ownerId), (0, l.Z)(n);
+            ((0, a.w)(i.Yn.STREAM, n.ownerId), (0, l.Z)(n));
         },
         callToAction: f.intl.string(f.t['4EGMWF'])
     });

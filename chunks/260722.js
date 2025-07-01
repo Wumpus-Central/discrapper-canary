@@ -13,7 +13,7 @@ function s(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -21,7 +21,7 @@ function s(t) {
             )),
             i.forEach(function (e) {
                 var i;
-                (i = n[e]),
+                ((i = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: i,
@@ -29,8 +29,8 @@ function s(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = i);
-            });
+                        : (t[e] = i));
+            }));
     }
     return t;
 }
@@ -128,7 +128,7 @@ let c = {
                 linkedUsers: t.linked_users,
                 users: t.users
             };
-        return r.Z.dispatch(s({ type: 'FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS' }, e)), e;
+        return (r.Z.dispatch(s({ type: 'FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS' }, e)), e);
     },
     async requestLink(t, e) {
         let { body: n } = await i.tn.post({
@@ -143,7 +143,7 @@ let c = {
                 linkedUsers: n.linked_users,
                 users: n.users
             };
-        return r.Z.dispatch(s({ type: 'FAMILY_CENTER_REQUEST_LINK_SUCCESS' }, l)), l;
+        return (r.Z.dispatch(s({ type: 'FAMILY_CENTER_REQUEST_LINK_SUCCESS' }, l)), l);
     },
     async fetchTeenActivity(t) {
         r.Z.dispatch({ type: 'FAMILY_CENTER_FETCH_START' });

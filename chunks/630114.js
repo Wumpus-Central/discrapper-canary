@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(539854), n(388685), n(997841), n(49124);
+(n.d(t, { Z: () => E }), n(539854), n(388685), n(997841), n(49124));
 var r = n(392711),
     i = n.n(r),
     a = n(131704),
@@ -26,7 +26,7 @@ function E(e, t, n, r, i) {
         ];
     let a = [],
         o = Object.values(s.Z.getMutableGuildChannelsForGuild(e.id)).filter((e) => u.Z.can(m.Plq.VIEW_CHANNEL, e));
-    return a.push(...b(e, o)), a.push(y(e)), a.push(O()), a.push(...I(o)), a.push(...T(o)), a.push(...N(o)), l.Z.hasConsented(m.pjP.PERSONALIZATION) ? a.push(...S(e, o, n, r, i)) : a.push(...A(e, o)), a.filter(p.lm);
+    return (a.push(...b(e, o)), a.push(y(e)), a.push(O()), a.push(...I(o)), a.push(...T(o)), a.push(...N(o)), l.Z.hasConsented(m.pjP.PERSONALIZATION) ? a.push(...S(e, o, n, r, i)) : a.push(...A(e, o)), a.filter(p.lm));
 }
 function b(e, t) {
     if (!(d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))) return [];
@@ -34,7 +34,7 @@ function b(e, t) {
             {
                 label: 'Unmuting the guild and marking it as read',
                 apply: (e) => {
-                    (e.muted = !1), (e.mute_config = null);
+                    ((e.muted = !1), (e.mute_config = null));
                 },
                 needsMarkedAsRead: !0
             }
@@ -74,7 +74,7 @@ function O() {
 }
 function v(e, t, n) {
     var r, i;
-    (e.flags = (0, _.mB)(null != (i = null != (r = e.flags) ? r : t.flags) ? i : 0, g.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, _.mB)(e.flags, g.vc.UNREADS_ONLY_MENTIONS, !n));
+    ((e.flags = (0, _.mB)(null != (i = null != (r = e.flags) ? r : t.flags) ? i : 0, g.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, _.mB)(e.flags, g.vc.UNREADS_ONLY_MENTIONS, !n)));
 }
 function I(e) {
     let t = [],
@@ -110,10 +110,10 @@ function T(e) {
                 debug: n.map((e) => '\n    - #'.concat(e.name)).join(''),
                 apply: (e, t) => {
                     for (let r of n)
-                        R(e, t, r.id, !1),
+                        (R(e, t, r.id, !1),
                             C(e, t, r.id, (e) => {
-                                (e.muted = !1), (e.mute_config = null);
-                            });
+                                ((e.muted = !1), (e.mute_config = null));
+                            }));
                 }
             }),
         t
@@ -219,11 +219,11 @@ function N(e) {
 function C(e, t, n, r) {
     var a, o, s, l;
     let c = null != (s = null == (a = e.channel_overrides) ? void 0 : a[n]) ? s : {};
-    r(c, null != (l = null == (o = t.channel_overrides) ? void 0 : o[n]) ? l : {}), i().isEmpty(c) || (null == e.channel_overrides && (e.channel_overrides = {}), (e.channel_overrides[n] = c));
+    (r(c, null != (l = null == (o = t.channel_overrides) ? void 0 : o[n]) ? l : {}), i().isEmpty(c) || (null == e.channel_overrides && (e.channel_overrides = {}), (e.channel_overrides[n] = c)));
 }
 function R(e, t, n, r) {
     C(e, t, n, (e, t) => {
         var n, i;
-        (e.flags = (0, _.mB)(null != (i = null != (n = e.flags) ? n : t.flags) ? i : 0, g.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, _.mB)(e.flags, g.ic.UNREADS_ONLY_MENTIONS, !r));
+        ((e.flags = (0, _.mB)(null != (i = null != (n = e.flags) ? n : t.flags) ? i : 0, g.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, _.mB)(e.flags, g.ic.UNREADS_ONLY_MENTIONS, !r)));
     });
 }

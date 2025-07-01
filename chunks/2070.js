@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(73800),
     i = n(881052),
     l = n(728345);
@@ -26,7 +26,7 @@ function s() {
                     !0
                 );
             } catch (e) {
-                return s(new i.Hx(e)), !1;
+                return (s(new i.Hx(e)), !1);
             } finally {
                 t(!1);
             }

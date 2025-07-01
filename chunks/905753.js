@@ -1,5 +1,5 @@
 let r, i, l;
-n.d(t, { Z: () => h }), n(467055), n(388685);
+(n.d(t, { Z: () => h }), n(467055), n(388685));
 var o,
     a = n(442837),
     s = n(570140),
@@ -22,7 +22,7 @@ let p = {},
     m = {},
     b = !1;
 function g() {
-    (r = void 0), (p = {}), (m = {}), (i = void 0), (l = void 0), (b = !1);
+    ((r = void 0), (p = {}), (m = {}), (i = void 0), (l = void 0), (b = !1));
 }
 class f extends (o = a.ZP.Store) {
     getApplicationPermissions() {
@@ -58,7 +58,7 @@ let h = new f(s.Z, {
     INTEGRATION_PERMISSION_SETTINGS_CLEAR: g,
     INTEGRATION_PERMISSION_SETTINGS_INIT: function (e) {
         let { applicationId: t } = e;
-        g(), (r = t);
+        (g(), (r = t));
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: function (e) {
         var t, n;
@@ -75,7 +75,7 @@ let h = new f(s.Z, {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -83,7 +83,7 @@ let h = new f(s.Z, {
                         )),
                         r.forEach(function (t) {
                             u(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
             })({}, a)),
@@ -134,7 +134,7 @@ let h = new f(s.Z, {
                         applicationId: e.application_id
                     }),
                     n = l[e.id];
-                null != n && (t.permissions = (0, d.tk)(n)), (o[e.id] = t);
+                (null != n && (t.permissions = (0, d.tk)(n)), (o[e.id] = t));
             }
         m = o;
     }

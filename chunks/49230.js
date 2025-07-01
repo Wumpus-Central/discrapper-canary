@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     $: () => f,
     h: () => g
 }),
-    n(388685);
+    n(388685));
 var r = n(512722),
     i = n.n(r),
     l = n(46973),
@@ -21,13 +21,13 @@ async function h(e) {
     if (null != t) return t;
     let n = await (await fetch(e)).arrayBuffer(),
         r = await (null == d ? void 0 : d.decodeAudioData(n));
-    return null != r && p.set(e, r), r;
+    return (null != r && p.set(e, r), r);
 }
 function f(e) {
     let { soundKey: t, soundURL: n, soundVolume: r, reportSoundStartedPlaying: a } = e;
     return new Promise(async (e) => {
         let o = await h(n);
-        null == o && e(),
+        (null == o && e(),
             c.Z.getMediaEngine().eachConnection((n) => {
                 n.context === l.Yn.DEFAULT &&
                     (a(),
@@ -35,7 +35,7 @@ function f(e) {
                     n.startSamplesLocalPlayback(t, o, r, () => {
                         e();
                     }));
-            });
+            }));
     });
 }
 function g(e, t) {
@@ -47,13 +47,13 @@ function g(e, t) {
     }
     return new Promise(async (e) => {
         let a = new (await (0, s.Z)(r))();
-        (a.src = r),
+        ((a.src = r),
             (a.volume = (0, u.Z)(i)),
             a.addEventListener(a instanceof o.Z.OGVPlayer ? 'loadedmetadata' : 'canplaythrough', () => {
-                l(), t.set(n, a), a.play();
+                (l(), t.set(n, a), a.play());
             }),
             a.addEventListener('ended', () => {
-                t.delete(n), (a.src = ''), e();
-            });
+                (t.delete(n), (a.src = ''), e());
+            }));
     });
 }

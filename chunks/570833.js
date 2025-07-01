@@ -14,12 +14,12 @@ function a(e, t) {
         return (
             (o = n.setTimeout(
                 () => {
-                    i || n.cancelIdleCallback(l), s();
+                    (i || n.cancelIdleCallback(l), s());
                 },
                 null != (a = null == t ? void 0 : t.timeout) ? a : r
             )),
             () => {
-                n.cancelIdleCallback(l), null != o && (n.clearTimeout(o), (o = null));
+                (n.cancelIdleCallback(l), null != o && (n.clearTimeout(o), (o = null)));
             }
         );
     }

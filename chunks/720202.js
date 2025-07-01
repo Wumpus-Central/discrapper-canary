@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -33,23 +33,23 @@ function _() {
 function p(e) {
     let { chunks: t } = e;
     for (let e of t)
-        e.members.forEach((t) => {
+        (e.members.forEach((t) => {
             f.acknowledge(e.guildId, t.user.id);
         }),
-            null != e.notFound && e.notFound.forEach((t) => f.acknowledge(e.guildId, t));
+            null != e.notFound && e.notFound.forEach((t) => f.acknowledge(e.guildId, t)));
     return !1;
 }
 function h() {
-    return f.requestUnacknowledged(), !1;
+    return (f.requestUnacknowledged(), !1);
 }
 function m(e, t) {
-    return f.request(e, t), !1;
+    return (f.request(e, t), !1);
 }
 function g(e, t) {
     return (
         t.forEach((t) => {
             let { author: n, mentions: r } = t;
-            null != n && m(e, n.id), null == r || r.forEach((t) => m(e, t.id));
+            (null != n && m(e, n.id), null == r || r.forEach((t) => m(e, t.id)));
         }),
         !1
     );

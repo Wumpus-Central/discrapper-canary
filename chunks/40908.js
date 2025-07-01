@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685), n(781311), n(35282);
+(n.d(t, { Z: () => a }), n(388685), n(781311), n(35282));
 var i = n(73800),
     r = n(304445),
     s = n(997383);
@@ -27,7 +27,7 @@ function a(e) {
             query: c,
             updateQuery: i.useCallback(
                 (e) => {
-                    d(e), p.search(e);
+                    (d(e), p.search(e));
                 },
                 [p]
             )

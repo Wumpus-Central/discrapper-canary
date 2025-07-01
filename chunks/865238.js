@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+(n.d(t, { Z: () => Z }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,12 +22,12 @@ var r = n(255367),
     j = n(37113),
     O = n(388032),
     E = n(15322),
-    I = n(574169);
-function S(e) {
+    S = n(574169);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -43,8 +43,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -60,8 +60,8 @@ function Z(e) {
     (0, i.useEffect)(() => {
         M(!0);
     }, []);
-    let D = (0, i.useContext)(m.h9),
-        L = (0, d.q_F)({
+    let L = (0, i.useContext)(m.h9),
+        D = (0, d.q_F)({
             from: k
                 ? {
                       opacity: 0,
@@ -70,7 +70,7 @@ function Z(e) {
                 : {},
             to: {
                 opacity: 1,
-                transform: D ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
+                transform: L ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
             },
             config: {
                 duration: 250,
@@ -84,10 +84,10 @@ function Z(e) {
             animateOnHover: !0
         }),
         F = C.ZP.getName(t.guild_id, t.id, l),
-        G = A && !R,
-        H = t.hdStreamingUntil;
-    if (null == H || null == l || null == T) return null;
-    let V = s()(H).diff(s()(), 'hours'),
+        H = A && !R,
+        G = t.hdStreamingUntil;
+    if (null == G || null == l || null == T) return null;
+    let V = s()(G).diff(s()(), 'hours'),
         z = Z
             ? O.intl.format(O.t['6LrV9f'], {
                   username: F,
@@ -102,18 +102,18 @@ function Z(e) {
                       helpCenterLink: y.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
                   })
                 : O.intl.formatToPlainString(O.t.vNbVXF, { username: F }),
-        W = R ? O.intl.string(O.t.o7NIjY) : G ? O.intl.string(O.t.r6xhBw) : O.intl.string(O.t.yKw8Dg);
+        W = R ? O.intl.string(O.t.o7NIjY) : H ? O.intl.string(O.t.r6xhBw) : O.intl.string(O.t.yKw8Dg);
     return null == l || null == T
         ? null
         : (0, r.jsxs)(c.animated.div, {
-              style: L,
+              style: D,
               className: E.banner,
               children: [
                   (0, r.jsxs)('div', {
                       children: [
                           (0, r.jsx)(
                               d.qEK,
-                              S(
+                              I(
                                   {
                                       src: U,
                                       'aria-label': l.username,
@@ -124,7 +124,7 @@ function Z(e) {
                           ),
                           (0, r.jsx)('img', {
                               className: E.potion,
-                              src: I,
+                              src: S,
                               alt: ''
                           })
                       ]
@@ -143,19 +143,19 @@ function Z(e) {
                                           t = b.Z.getGoLiveSource();
                                       if (null == e) return void a();
                                       let n = (0, h.s_)(e.resolution, e.frameRate, t);
-                                      return p.Z.setGoLiveSource(n), void a();
+                                      return (p.Z.setGoLiveSource(n), void a());
                                   }
-                                  if (G) return void a();
-                                  (0, d.ZDy)(async () => {
+                                  if (H) return void a();
+                                  ((0, d.ZDy)(async () => {
                                       let { default: e } = await Promise.all([n.e('46746'), n.e('40731')]).then(n.bind(n, 60594));
-                                      return (t) => (0, r.jsx)(e, S({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
+                                      return (t) => (0, r.jsx)(e, I({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
                                   }),
-                                      a();
+                                      a());
                               },
                               className: o()({ [E.actionButton]: !0 !== A }),
                               children: W
                           }),
-                          !G &&
+                          !H &&
                               (0, r.jsx)(d.P3F, {
                                   className: E.x,
                                   onClick: a,

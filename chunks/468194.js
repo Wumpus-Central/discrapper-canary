@@ -1,11 +1,11 @@
-t.d(r, {
+(t.d(r, {
     Fv: () => l,
     _I: () => o
 }),
     t(35282),
     t(388685),
     t(704826),
-    t(513431);
+    t(513431));
 let n = /[\u0300-\u036f]/g,
     o = null == String.prototype.normalize ? (e) => e : (e) => e.normalize('NFD').replace(n, '').normalize('NFC'),
     l =

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Tl: () => f,
     YV: () => l,
     a5: () => d,
@@ -7,7 +7,7 @@ n.d(t, {
     id: () => c,
     tK: () => s
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(223143),
     a = n(286961);
@@ -30,7 +30,7 @@ function s(e) {
 }
 function l(e) {
     let t = new Map();
-    return e.forEach((e) => t.set(e.skuId, e.assetId)), t;
+    return (e.forEach((e) => t.set(e.skuId, e.assetId)), t);
 }
 function c(e, t, n) {
     let r = d(e),

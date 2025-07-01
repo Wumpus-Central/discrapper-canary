@@ -8,7 +8,7 @@ let o = {
         scope: l.KW,
         handler(e) {
             let { socket: t } = e;
-            return (0, i.bu)(t.transport), (0, l.dO)();
+            return ((0, i.bu)(t.transport), (0, l.dO)());
         }
     })
 };

@@ -18,7 +18,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,8 +34,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -79,14 +79,14 @@ function b(e) {
                           className: f.chatHeaderBarButton,
                           color: a.zxk.Colors.PRIMARY,
                           onClick: () => {
-                              c.default.track(
+                              (c.default.track(
                                   p.rMx.CHANNEL_BANNER_CTA_CLICKED,
                                   g(m({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
                                       banner_type: 'thread',
                                       cta_type: 'unarchive'
                                   })
                               ),
-                                  u.Z.unarchiveThread(t, !1);
+                                  u.Z.unarchiveThread(t, !1));
                           },
                           children: h.intl.string(h.t['0dvvEh'])
                       })
@@ -117,14 +117,14 @@ function _(e) {
                           className: f.chatHeaderBarButton,
                           color: a.zxk.Colors.PRIMARY,
                           onClick: () => {
-                              c.default.track(
+                              (c.default.track(
                                   p.rMx.CHANNEL_BANNER_CTA_CLICKED,
                                   g(m({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
                                       banner_type: 'thread',
                                       cta_type: 'unlock'
                                   })
                               ),
-                                  u.Z.unlockThread(t);
+                                  u.Z.unlockThread(t));
                           },
                           children: h.intl.string(h.t.zA9d1N)
                       })

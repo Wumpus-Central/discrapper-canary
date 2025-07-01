@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -43,13 +43,13 @@ class p extends (r = a.PureComponent) {
             (0, i.jsxs)('div', {
                 className: s()(n, d.container),
                 onMouseEnter: () => {
-                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == g || g();
+                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == g || g());
                 },
                 onMouseLeave: () => {
-                    clearTimeout(this._hoverTimeout),
+                    (clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            this.setState({ hovered: !1 }), null == E || E();
-                        }, _));
+                            (this.setState({ hovered: !1 }), null == E || E());
+                        }, _)));
                 },
                 onFocus: () => this.setState({ focused: !0 }),
                 onBlur: () => this.setState({ focused: !1 }),
@@ -58,10 +58,10 @@ class p extends (r = a.PureComponent) {
                     (0, i.jsx)('div', {
                         className: s()(d.volumeButtonSlider, r, { [d.sliderVisible]: b || y || O }),
                         onMouseEnter: () => {
-                            clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
+                            (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
                         onMouseLeave: () => {
-                            clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), _));
+                            (clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), _)));
                         },
                         children: (0, i.jsx)(c.Z, {
                             sliderClassName: a,
@@ -90,7 +90,7 @@ class p extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, '_mediaBar', a.createRef()),
             f(this, '_hoverTimeout', void 0),
             f(this, 'state', {
@@ -112,10 +112,10 @@ class p extends (r = a.PureComponent) {
                     a = 0.05 * (r - t);
                 switch (e.key) {
                     case 'ArrowUp':
-                        e.stopPropagation(), e.preventDefault(), null == i || i(Math.min(r, n + a));
+                        (e.stopPropagation(), e.preventDefault(), null == i || i(Math.min(r, n + a)));
                         break;
                     case 'ArrowDown':
-                        e.stopPropagation(), e.preventDefault(), null == i || i(Math.max(t, n - a));
+                        (e.stopPropagation(), e.preventDefault(), null == i || i(Math.max(t, n - a)));
                 }
             }),
             f(this, 'handleDragStart', () => {
@@ -126,7 +126,7 @@ class p extends (r = a.PureComponent) {
             }),
             f(this, 'blur', () => {
                 this.setState({ focused: !1 });
-            });
+            }));
     }
 }
 f(p, 'defaultProps', {

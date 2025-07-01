@@ -37,7 +37,7 @@ let h = (e) => {
                             variant: 'text-md/normal',
                             children: p.intl.format(p.t.xPaO3t, {
                                 onLearnMore: () => {
-                                    a(), o.Z.open(c.oAB.PREMIUM);
+                                    (a(), o.Z.open(c.oAB.PREMIUM));
                                 }
                             })
                         })

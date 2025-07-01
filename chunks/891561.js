@@ -1,8 +1,8 @@
-r.d(t, {
+(r.d(t, {
     Z: () => d,
     s: () => a
 }),
-    r(388685);
+    r(388685));
 var n = r(255367),
     i = r(73800),
     o = r(512722),
@@ -11,7 +11,7 @@ var n = r(255367),
 let c = i.createContext(void 0);
 function a() {
     let e = i.useContext(c);
-    return l()(null != e, 'must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider'), e;
+    return (l()(null != e, 'must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider'), e);
 }
 function d(e) {
     let { children: t, defaultSortOption: r = s.zJ.NEWEST_ARRIVALS } = e,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(467055), n(388685);
+(n.d(t, { Z: () => c }), n(467055), n(388685));
 var r = n(710845),
     i = n(430824),
     a = n(287328);
@@ -24,14 +24,14 @@ class l {
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(null != t ? t : []);
         } catch (e) {
-            return s.warn("couldn't load guild versions", e), {};
+            return (s.warn("couldn't load guild versions", e), {});
         }
     }
     remove(e, t) {
-        this.deleteWith(e), this.commit(t);
+        (this.deleteWith(e), this.commit(t));
     }
     handleBackgroundSync(e, t) {
-        for (let n of e.guilds) 'unavailable' !== n.data_mode && this.updateWith(n.id, [n]), null == i.Z.getGuild(n.id) && this.remove(n.id, t);
+        for (let n of e.guilds) ('unavailable' !== n.data_mode && this.updateWith(n.id, [n]), null == i.Z.getGuild(n.id) && this.remove(n.id, t));
         this.commit(t);
     }
     handleConnectionOpen(e, t) {
@@ -42,43 +42,43 @@ class l {
         var n;
         let r = e.guild,
             i = e.guild.id;
-        this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null == (n = r.channelUpdates) ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t);
+        (this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null == (n = r.channelUpdates) ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t));
     }
     handleGuildUpdate(e, t) {
         let n = e.guild,
             r = e.guild.id;
-        this.updateWith(r, [n]), this.updateWith(r, n.emojis), this.updateWith(r, n.stickers), this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t);
+        (this.updateWith(r, [n]), this.updateWith(r, n.emojis), this.updateWith(r, n.stickers), this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t));
     }
     handleGuildDelete(e, t) {
-        this.deleteWith(e.guild.id), this.commit(t);
+        (this.deleteWith(e.guild.id), this.commit(t));
     }
     handleGuildRoleChange(e, t) {
-        this.updateWith(e.guildId, [e.role]), this.commit(t);
+        (this.updateWith(e.guildId, [e.role]), this.commit(t));
     }
     handleGuildRoleDelete(e, t) {
-        this.updateWith(e.guildId, [{ version: e.version }]), this.commit(t);
+        (this.updateWith(e.guildId, [{ version: e.version }]), this.commit(t));
     }
     handleGuildEmojisUpdate(e, t) {
-        this.updateWith(e.guildId, e.emojis), this.commit(t);
+        (this.updateWith(e.guildId, e.emojis), this.commit(t));
     }
     handleGuildStickersUpdate(e, t) {
-        this.updateWith(e.guildId, e.stickers), this.commit(t);
+        (this.updateWith(e.guildId, e.stickers), this.commit(t));
     }
     handleChannelCreate(e, t) {
-        null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t);
+        (null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t));
     }
     handleChannelUpdates(e, t) {
         for (let t of e.channels) null != t.guild_id && this.updateWith(t.guild_id, [t]);
         this.commit(t);
     }
     handleChannelDelete(e, t) {
-        null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t);
+        (null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t));
     }
     resetInMemoryState() {
         this.reset();
     }
     reset() {
-        (this.committed = new Map()), (this.pending = new Map());
+        ((this.committed = new Map()), (this.pending = new Map()));
     }
     deleteWith(e) {
         this.pending.set(e, null);
@@ -114,7 +114,7 @@ class l {
         }
     }
     constructor() {
-        o(this, 'pending', new Map()),
+        (o(this, 'pending', new Map()),
             o(this, 'committed', new Map()),
             o(this, 'actions', {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
@@ -130,7 +130,7 @@ class l {
                 GUILD_ROLE_UPDATE: (e, t) => this.handleGuildRoleChange(e, t),
                 GUILD_STICKERS_UPDATE: (e, t) => this.handleGuildStickersUpdate(e, t),
                 GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
-            });
+            }));
     }
 }
 let c = new l();

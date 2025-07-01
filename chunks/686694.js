@@ -42,16 +42,16 @@ class E extends (s = a.Component) {
         this.terminate();
     }
     initialize() {
-        this.children.forEach((t) => t.initialize()), this.bindEvents(), this.resizeCanvas(), document.hidden && this.delayedPause();
+        (this.children.forEach((t) => t.initialize()), this.bindEvents(), this.resizeCanvas(), document.hidden && this.delayedPause());
     }
     terminate() {
-        this.pause(), this.unbindEvents(), this.children.forEach((t) => t.terminate());
+        (this.pause(), this.unbindEvents(), this.children.forEach((t) => t.terminate()));
     }
     bindEvents() {
-        window.addEventListener('resize', this.resizeCanvas, !1), window.addEventListener('blur', this.delayedPause, !1), window.addEventListener('focus', this.play, !1), document.addEventListener('visibilitychange', this.handleVisibilityChange, !1), c.S.subscribe(g.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+        (window.addEventListener('resize', this.resizeCanvas, !1), window.addEventListener('blur', this.delayedPause, !1), window.addEventListener('focus', this.play, !1), document.addEventListener('visibilitychange', this.handleVisibilityChange, !1), c.S.subscribe(g.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize));
     }
     unbindEvents() {
-        window.removeEventListener('resize', this.resizeCanvas, !1), window.removeEventListener('blur', this.delayedPause, !1), window.removeEventListener('focus', this.play, !1), document.removeEventListener('visibilitychange', this.handleVisibilityChange, !1), c.S.unsubscribe(g.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+        (window.removeEventListener('resize', this.resizeCanvas, !1), window.removeEventListener('blur', this.delayedPause, !1), window.removeEventListener('focus', this.play, !1), document.removeEventListener('visibilitychange', this.handleVisibilityChange, !1), c.S.unsubscribe(g.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize));
     }
     advanceTransitionalState() {
         let { waveState: t } = this.props;
@@ -88,7 +88,7 @@ class E extends (s = a.Component) {
         });
     }
     constructor(t) {
-        super(t),
+        (super(t),
             b(this, 'width', 0),
             b(this, 'height', 0),
             b(this, 'canvas', void 0),
@@ -103,27 +103,27 @@ class E extends (s = a.Component) {
             b(this, 'setCanvas', (t) => {
                 var e;
                 if (null == t) return;
-                (this.canvas = t), (this.canvasContext = this.canvas.getContext('2d'));
+                ((this.canvas = t), (this.canvasContext = this.canvas.getContext('2d')));
                 let i = null != (e = window.devicePixelRatio) ? e : 1,
                     s = this.canvasContext.webkitBackingStorePixelRatio || this.canvasContext.mozBackingStorePixelRatio || this.canvasContext.msBackingStorePixelRatio || this.canvasContext.oBackingStorePixelRatio || this.canvasContext.backingStorePixelRatio || 1;
-                (this.ratio = i / s), this.resizeCanvas();
+                ((this.ratio = i / s), this.resizeCanvas());
             }),
             b(this, 'resizeCanvas', () => {
-                (this.width = window.innerWidth), (this.height = window.innerHeight);
+                ((this.width = window.innerWidth), (this.height = window.innerHeight));
                 let { canvas: t, canvasContext: e, width: i, height: s, ratio: n } = this;
-                null != t && null != e && ((t.width = i * n), (t.height = s * n), (t.style.width = i + 'px'), (t.style.height = s + 'px'), e.scale(n, n)), i <= y ? this.pause() : this.play(), this.wave.resizeWave(), this.renderAnimation();
+                (null != t && null != e && ((t.width = i * n), (t.height = s * n), (t.style.width = i + 'px'), (t.style.height = s + 'px'), e.scale(n, n)), i <= y ? this.pause() : this.play(), this.wave.resizeWave(), this.renderAnimation());
             }),
             b(this, 'handleVisibilityChange', () => {
                 document.hidden ? this.delayedPause() : this.play();
             }),
             b(this, 'play', () => {
-                clearTimeout(this._pauseTimeout), this._isPlaying || ((this._isPlaying = !0), this.run());
+                (clearTimeout(this._pauseTimeout), this._isPlaying || ((this._isPlaying = !0), this.run()));
             }),
             b(this, 'pause', () => {
-                clearTimeout(this._pauseTimeout), (this._isPlaying = !1), null != this._reqAnimId && window.cancelAnimationFrame(this._reqAnimId), (this._reqAnimId = null), this.advanceTransitionalState();
+                (clearTimeout(this._pauseTimeout), (this._isPlaying = !1), null != this._reqAnimId && window.cancelAnimationFrame(this._reqAnimId), (this._reqAnimId = null), this.advanceTransitionalState());
             }),
             b(this, 'delayedPause', () => {
-                clearTimeout(this._pauseTimeout), (this._pauseTimeout = setTimeout(this.pause, 4000));
+                (clearTimeout(this._pauseTimeout), (this._pauseTimeout = setTimeout(this.pause, 4000)));
             }),
             b(this, 'updateWaveState', (t) => {
                 let { updateWaveState: e } = this.props;
@@ -135,19 +135,19 @@ class E extends (s = a.Component) {
             b(this, 'run', () => {
                 if (!this._isPlaying) return;
                 if (0 === this._lastTick) {
-                    (this._lastTick = Date.now()), (this._reqAnimId = requestAnimationFrame(this.run));
+                    ((this._lastTick = Date.now()), (this._reqAnimId = requestAnimationFrame(this.run)));
                     return;
                 }
                 let t = Date.now(),
                     e = Math.min((t - this._lastTick) / 1000, 8 * x);
                 for (; e > 0; ) {
                     let t = e < x ? e : x;
-                    this.updateAnimation(t), (e -= t);
+                    (this.updateAnimation(t), (e -= t));
                 }
-                this.renderAnimation(), (this._lastTick = t), (this._reqAnimId = requestAnimationFrame(this.run));
+                (this.renderAnimation(), (this._lastTick = t), (this._reqAnimId = requestAnimationFrame(this.run)));
             }),
             (this.wave = new m.Z(this.updateWaveState)),
-            (this.children = [new p.Z(), new f.Z(), this.wave]);
+            (this.children = [new p.Z(), new f.Z(), this.wave]));
     }
 }
 b(E, 'defaultProps', { embedded: !1 });
@@ -159,7 +159,7 @@ let O = (t) => {
             for (var e = 1; e < arguments.length; e++) {
                 var i = null != arguments[e] ? arguments[e] : {},
                     s = Object.keys(i);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (s = s.concat(
                         Object.getOwnPropertySymbols(i).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(i, t).enumerable;
@@ -167,7 +167,7 @@ let O = (t) => {
                     )),
                     s.forEach(function (e) {
                         b(t, e, i[e]);
-                    });
+                    }));
             }
             return t;
         })({ canvasFillStyle: e }, t)

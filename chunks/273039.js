@@ -1,4 +1,4 @@
-t.d(n, { Z: () => c }), t(388685);
+(t.d(n, { Z: () => c }), t(388685));
 var l = t(255367),
     i = t(73800),
     o = t(120356),
@@ -9,7 +9,7 @@ function c(e) {
     let { hasSetEmoji: n, onClick: t, children: o, className: c, buttonClassName: u, look: d } = e,
         [m, f] = i.useState(!1),
         j = i.useCallback(() => {
-            t(), f(!1);
+            (t(), f(!1));
         }, [t, f]);
     return (0, l.jsxs)('div', {
         className: r()(s.container, c),

@@ -1,4 +1,4 @@
-r.d(t, { Z: () => m }), r(35282);
+(r.d(t, { Z: () => m }), r(35282));
 var n = r(990547),
     i = r(544891),
     o = r(570140),
@@ -95,7 +95,7 @@ let m = {
                 },
                 rejectWithError: !1
             });
-            t.body.taken &&
+            (t.body.taken &&
                 a.default.track(u.rMx.POMELO_ERRORS, {
                     reason: 'already_taken',
                     username_error: !0,
@@ -106,11 +106,11 @@ let m = {
                     type: 'POMELO_ATTEMPT_SUCCESS',
                     username: e,
                     taken: t.body.taken
-                });
+                }));
         } catch (l) {
             let n = new s.Hx(l),
                 i = null != (t = n.getAnyErrorMessage()) ? t : void 0;
-            a.default.track(u.rMx.POMELO_ERRORS, {
+            (a.default.track(u.rMx.POMELO_ERRORS, {
                 reason: i,
                 username_error: !0,
                 location: r,
@@ -122,7 +122,7 @@ let m = {
                     error: null != n.status && n.status < 500 && 401 !== n.status ? i : void 0,
                     statusCode: n.status,
                     retryAfter: n.retryAfter
-                });
+                }));
         }
     },
     async createPomelo(e) {

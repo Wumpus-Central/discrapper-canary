@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -17,7 +17,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -25,7 +25,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -33,8 +33,8 @@ function h(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -69,7 +69,7 @@ function b() {
     }
     function I(e) {
         let t = new Set(b);
-        t.delete(e), j(t);
+        (t.delete(e), j(t));
     }
     let E = (0, a.mY)();
     return (0, r.jsxs)(l.hjN, {
@@ -95,7 +95,7 @@ function b() {
                                       t,
                                       x(h({}, n), {
                                           onConfirmDelete: () => {
-                                              I(e.id), n.onClose();
+                                              (I(e.id), n.onClose());
                                           }
                                       })
                                   );
@@ -115,7 +115,7 @@ function b() {
                                     initialTierEmojiIds: b,
                                     onSubmit: N,
                                     transitionToManageEmoji: () => {
-                                        O(), n.onClose();
+                                        (O(), n.onClose());
                                     }
                                 })
                             );

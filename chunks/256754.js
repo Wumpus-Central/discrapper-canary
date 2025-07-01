@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -37,11 +37,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -58,7 +58,7 @@ function d(e, t) {
 }
 let f = async function () {
     let { userImage: e = null, guildId: t = null, analyticsLocation: l = null } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    a.default.track(s.rMx.OPEN_MODAL, {
+    (a.default.track(s.rMx.OPEN_MODAL, {
         type: 'Emoji Studio',
         source: l
     }),
@@ -75,5 +75,5 @@ let f = async function () {
                     );
             },
             { modalKey: o.Hj }
-        );
+        ));
 };

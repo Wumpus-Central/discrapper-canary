@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => g }), n(415506), n(35282), n(49124);
+(n.r(t), n.d(t, { default: () => g }), n(415506), n(35282), n(49124));
 var r = n(836560),
     i = n(525654),
     a = n.n(i),
@@ -25,7 +25,7 @@ class m extends r.EventEmitter {
     connect() {
         if (null == h) {
             if (p > d) {
-                (p = u.V6Z), this.emit('disconnected');
+                ((p = u.V6Z), this.emit('disconnected'));
                 return;
             }
             try {
@@ -41,47 +41,47 @@ class m extends r.EventEmitter {
                         if ('string' == typeof e.data) t = JSON.parse(e.data);
                         else throw Error('payload data not a string');
                     } catch (e) {
-                        this.emit('error', e), this.disconnect();
+                        (this.emit('error', e), this.disconnect());
                         return;
                     }
                     let { cmd: n, evt: r, nonce: i, data: a } = t;
                     if (n === u.Etm.DISPATCH) {
                         if (r === u.zMe.READY) return void this.emit('connected');
                         if (r === u.zMe.ERROR) {
-                            this.emit('error', new c.Z({ errorCode: a.code }, a.message)), this.disconnect();
+                            (this.emit('error', new c.Z({ errorCode: a.code }, a.message)), this.disconnect());
                             return;
                         }
                         return void this.emit(f(n, r), a);
                     }
                     let o = null;
-                    r === u.zMe.ERROR && ((o = new c.Z({ errorCode: a.code }, a.message)), (a = null)), this.emit(f(n, i), o, a);
+                    (r === u.zMe.ERROR && ((o = new c.Z({ errorCode: a.code }, a.message)), (a = null)), this.emit(f(n, i), o, a));
                 }),
                 (h.onclose = h.onerror = (e) => this.disconnect(e)));
         }
     }
     disconnect(e) {
         if (null != e && 'code' in e && [u.$VG.CLOSE_ABNORMAL, u.$VG.INVALID_CLIENTID].includes(e.code)) {
-            p++, (h = null), this.connect();
+            (p++, (h = null), this.connect());
             return;
         }
         null != h && (this.emit('disconnected'), h.close(), (h = null));
     }
     subscribe(e, t, n) {
-        return this.on(f(u.Etm.DISPATCH, e), n), this.request(u.Etm.SUBSCRIBE, t, e);
+        return (this.on(f(u.Etm.DISPATCH, e), n), this.request(u.Etm.SUBSCRIBE, t, e));
     }
     unsubscribe(e, t, n) {
-        return this.removeListener(f(u.Etm.DISPATCH, e), n), this.request(u.Etm.UNSUBSCRIBE, t, e);
+        return (this.removeListener(f(u.Etm.DISPATCH, e), n), this.request(u.Etm.UNSUBSCRIBE, t, e));
     }
     request(e, t, n) {
         return new Promise((r, i) => {
             if (!this.connected) {
-                this.once('connected', () => {
-                    this.removeAllListeners('disconnected'), r(this.request(e, t, n));
+                (this.once('connected', () => {
+                    (this.removeAllListeners('disconnected'), r(this.request(e, t, n)));
                 }),
                     this.once('disconnected', () => {
-                        this.removeAllListeners('connected'), i(Error('disconnected during request'));
+                        (this.removeAllListeners('connected'), i(Error('disconnected during request')));
                     }),
-                    this.connect();
+                    this.connect());
                 return;
             }
             let a = (0, s.Z)(),
@@ -91,7 +91,7 @@ class m extends r.EventEmitter {
                     evt: n,
                     nonce: a
                 });
-            this.once(f(e, a), (e, t) => (null != e ? i(e) : r(t))), null == h || h.send(o);
+            (this.once(f(e, a), (e, t) => (null != e ? i(e) : r(t))), null == h || h.send(o));
         });
     }
     requestOnce(e, t, n) {
@@ -125,7 +125,7 @@ class m extends r.EventEmitter {
                 })
             ),
             i = encodeURIComponent(''.concat(location.protocol, '//').concat(location.host).concat(location.pathname, '?done=true'));
-        return window.open('http://127.0.0.1:'.concat(this.port, '/rpc?v=').concat(u.X6Q, '&payload=').concat(r, '&callback=').concat(i), '_self'), new Promise(() => null);
+        return (window.open('http://127.0.0.1:'.concat(this.port, '/rpc?v=').concat(u.X6Q, '&payload=').concat(r, '&callback=').concat(i), '_self'), new Promise(() => null));
     }
 }
 let g = new m();

@@ -29,14 +29,14 @@ let h = (e) => {
         onClick: () =>
             (function (e, t, n) {
                 let i = p.intl.formatToPlainString(p.t.QWGvxM, { applicationName: e.name });
-                (0, l.h7j)((e) =>
+                ((0, l.h7j)((e) =>
                     (0, r.jsx)(
                         a.default,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ let h = (e) => {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -52,8 +52,8 @@ let h = (e) => {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })(
@@ -73,7 +73,7 @@ let h = (e) => {
                         application_id: e.id,
                         channel_id: n.id,
                         channel_type: n.type
-                    });
+                    }));
             })(f, b, n),
         children: p.intl.string(p.t['5S3sQE'])
     });

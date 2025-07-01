@@ -15,7 +15,7 @@ function u() {
         children: (0, i.jsx)(r.j7V, {
             note: d.intl.string(d.t.WNbX4O),
             onChange: (e) => {
-                a.qF.updateSetting(e), l.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                (a.qF.updateSetting(e), l.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e }));
             },
             value: e,
             hideBorder: !0,

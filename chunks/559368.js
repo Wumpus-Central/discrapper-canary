@@ -27,18 +27,18 @@ function m(e) {
         i = {},
         s = n[0],
         a = n[1];
-    null != s &&
+    (null != s &&
         c.forEach((e) => {
             if (null != s[e]) {
                 let t = l()(e);
-                null != a && 0 !== a[e] && (r[''.concat(t, 'Change')] = ((s[e] - a[e]) * 100) / a[e]), (i[t] = s[e]);
+                (null != a && 0 !== a[e] && (r[''.concat(t, 'Change')] = ((s[e] - a[e]) * 100) / a[e]), (i[t] = s[e]));
             }
         }),
         (d[t] = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -46,10 +46,10 @@ function m(e) {
                     )),
                     r.forEach(function (t) {
                         o(e, t, n[t]);
-                    });
+                    }));
             }
             return e;
-        })({}, i, r, d[t]));
+        })({}, i, r, d[t])));
 }
 function g(e) {
     let { error: t } = e;

@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     $_: () => u,
     KQ: () => c,
     MU: () => l,
     RF: () => f
 }),
-    n(35282);
+    n(35282));
 var r = n(477690),
     i = n(911969),
     a = n(472401),
@@ -49,5 +49,5 @@ function f(e) {
                     youtubeVideoId: r
                 };
     }
-    return console.warn('Unsupported carousel item', e), null;
+    return (console.warn('Unsupported carousel item', e), null);
 }

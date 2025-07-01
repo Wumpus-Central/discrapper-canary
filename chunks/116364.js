@@ -124,6 +124,6 @@ let S = {
                 options: r
             } = e,
             i = t[n];
-        return r.insertText(T(i)), { type: p.z2.CHOICE };
+        return (r.insertText(T(i)), { type: p.z2.CHOICE });
     }
 };

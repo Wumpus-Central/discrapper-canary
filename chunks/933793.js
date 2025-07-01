@@ -30,7 +30,7 @@ function h(e) {
                                 title: p.intl.string(p.t.IMbjxs),
                                 body: p.intl.string(p.t['mi5+Vl']),
                                 onConfirm: async () => {
-                                    await s.Z.unpin(h), s.Z.pin(e);
+                                    (await s.Z.unpin(h), s.Z.pin(e));
                                 }
                             })
                           : s.Z.pin(e);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -25,10 +25,10 @@ let c = null,
     p = new Set();
 function h(e) {
     let { sessionId: t } = e;
-    (c = t), (u = null);
+    ((c = t), (u = null));
 }
 function m() {
-    (c = null), (u = null);
+    ((c = null), (u = null));
 }
 function g(e) {
     let { sessionType: t, nonce: n, channelId: r, deviceId: i, commandId: a } = e;
@@ -50,7 +50,7 @@ function b(e) {
     p.delete(t);
     let r = (f[t] = {}),
         i = {};
-    for (let e of n) (r[e.id] = e), _[t] === e.id && (i[t] = e.id);
+    for (let e of n) ((r[e.id] = e), _[t] === e.id && (i[t] = e.id));
     _ = i;
 }
 function y(e) {
@@ -64,7 +64,7 @@ function O(e) {
 let v = Object.freeze({});
 class I extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(o.Z, s.Z);
+        (null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(o.Z, s.Z));
     }
     getUserAgnosticState() {
         return { lastSelectedDeviceByPlatform: _ };
@@ -93,7 +93,7 @@ class I extends (r = i.ZP.DeviceSettingsStore) {
         return u;
     }
 }
-l(I, 'displayName', 'GameConsoleStore'), l(I, 'persistKey', 'GameConsoleStore');
+(l(I, 'displayName', 'GameConsoleStore'), l(I, 'persistKey', 'GameConsoleStore'));
 let T = new I(a.Z, {
     REMOTE_SESSION_CONNECT: h,
     REMOTE_SESSION_DISCONNECT: m,

@@ -48,7 +48,7 @@ var r = n(695170),
     m = Object.keys(h),
     g = (function () {
         function e(e, t) {
-            void 0 === e && (e = {}), void 0 === t && (t = !1), (this._cache = t ? null : new d.C()), (this.origOptions = (0, l.Fx)(e));
+            (void 0 === e && (e = {}), void 0 === t && (t = !1), (this._cache = t ? null : new d.C()), (this.origOptions = (0, l.Fx)(e)));
             var n = (0, l.I6)(e).parsedOptions;
             this.options = n;
         }
@@ -74,7 +74,7 @@ var r = n(695170),
             (e.prototype.all = function (e) {
                 if (e) return this._iter(new a.Z('all', {}, e));
                 var t = this._cacheGet('all');
-                return !1 === t && ((t = this._iter(new i.Z('all', {}))), this._cacheAdd('all', t)), t;
+                return (!1 === t && ((t = this._iter(new i.Z('all', {}))), this._cacheAdd('all', t)), t);
             }),
             (e.prototype.between = function (e, t, n, o) {
                 if ((void 0 === n && (n = !1), !(0, r.qb)(e) || !(0, r.qb)(t))) throw Error('Invalid date passed in to RRule.between');
@@ -85,7 +85,7 @@ var r = n(695170),
                 };
                 if (o) return this._iter(new a.Z('between', s, o));
                 var l = this._cacheGet('between', s);
-                return !1 === l && ((l = this._iter(new i.Z('between', s))), this._cacheAdd('between', l, s)), l;
+                return (!1 === l && ((l = this._iter(new i.Z('between', s))), this._cacheAdd('between', l, s)), l);
             }),
             (e.prototype.before = function (e, t) {
                 if ((void 0 === t && (t = !1), !(0, r.qb)(e))) throw Error('Invalid date passed in to RRule.before');
@@ -94,7 +94,7 @@ var r = n(695170),
                         inc: t
                     },
                     a = this._cacheGet('before', n);
-                return !1 === a && ((a = this._iter(new i.Z('before', n))), this._cacheAdd('before', a, n)), a;
+                return (!1 === a && ((a = this._iter(new i.Z('before', n))), this._cacheAdd('before', a, n)), a);
             }),
             (e.prototype.after = function (e, t) {
                 if ((void 0 === t && (t = !1), !(0, r.qb)(e))) throw Error('Invalid date passed in to RRule.after');
@@ -103,7 +103,7 @@ var r = n(695170),
                         inc: t
                     },
                     a = this._cacheGet('after', n);
-                return !1 === a && ((a = this._iter(new i.Z('after', n))), this._cacheAdd('after', a, n)), a;
+                return (!1 === a && ((a = this._iter(new i.Z('after', n))), this._cacheAdd('after', a, n)), a);
             }),
             (e.prototype.count = function () {
                 return this.all().length;

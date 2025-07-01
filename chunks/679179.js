@@ -34,7 +34,7 @@ function n(t) {
     return e > a ? [] : t.slice(e, a - e + 1);
 }
 function o(t, e) {
-    (t = _(t).slice(1)), (e = _(e).slice(1));
+    ((t = _(t).slice(1)), (e = _(e).slice(1)));
     let a = n(t.split('/')),
         r = n(e.split('/')),
         o = Math.min(a.length, r.length),
@@ -55,5 +55,5 @@ function i(t, e) {
                 a = r.exec(e);
             return a ? a.slice(1) : [];
         })(t)[2] || '';
-    return e && a.slice(-1 * e.length) === e && (a = a.slice(0, a.length - e.length)), a;
+    return (e && a.slice(-1 * e.length) === e && (a = a.slice(0, a.length - e.length)), a);
 }

@@ -21,7 +21,7 @@ r(
                         o(i, t, e).then(n.resolve, r);
                     });
                 });
-            return l.error && r(l.value), n.promise;
+            return (l.error && r(l.value), n.promise);
         }
     }
 );

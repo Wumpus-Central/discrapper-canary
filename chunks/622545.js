@@ -31,7 +31,7 @@ class s {
     }
     constructor(e) {
         var t, n;
-        (n = void 0),
+        ((n = void 0),
             (t = 'items') in this
                 ? Object.defineProperty(this, t, {
                       value: n,
@@ -40,6 +40,6 @@ class s {
                       writable: !0
                   })
                 : (this[t] = n),
-            (this.items = e);
+            (this.items = e));
     }
 }

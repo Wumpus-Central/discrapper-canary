@@ -41,7 +41,7 @@ var n = r(73800),
             );
         return n.createElement('div', { style: u.wrap }, n.createElement('div', { style: u.bg }), n.createElement('div', { style: u.content }, a));
     };
-(s.propTypes = {
+((s.propTypes = {
     background: a().string,
     zDepth: a().oneOf([0, 1, 2, 3, 4, 5]),
     radius: a().number,
@@ -52,5 +52,5 @@ var n = r(73800),
         zDepth: 1,
         radius: 2,
         styles: {}
-    });
+    }));
 let u = s;

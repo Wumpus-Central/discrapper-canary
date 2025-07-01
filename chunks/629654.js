@@ -24,7 +24,7 @@ function m(e) {
         children: [
             (0, i.jsx)(l.P3F, {
                 onClick: () => {
-                    n(), g.startAnimation(!1);
+                    (n(), g.startAnimation(!1));
                 },
                 className: u.button,
                 'aria-label': d.intl.string(d.t['44yJxs']),
@@ -32,7 +32,7 @@ function m(e) {
             }),
             (0, i.jsxs)(l.P3F, {
                 onClick: () => {
-                    n(), g.startAnimation(!1);
+                    (n(), g.startAnimation(!1));
                 },
                 'aria-label': ''.concat(p, ': ').concat(d.intl.string(d.t['44yJxs'])),
                 className: u.select,

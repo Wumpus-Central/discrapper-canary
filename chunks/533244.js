@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     CG: () => u,
     OY: () => E,
     SG: () => g,
@@ -11,7 +11,7 @@ n.d(t, {
     sO: () => _,
     ur: () => h
 }),
-    n(539854);
+    n(539854));
 var r = n(913527),
     i = n.n(r),
     a = n(666657),
@@ -37,11 +37,11 @@ function f(e) {
 }
 function _(e, t) {
     let n = [];
-    return e && n.push(a.dj.INVITES_DISABLED), t && n.push(a.dj.DMS_DISABLED), n;
+    return (e && n.push(a.dj.INVITES_DISABLED), t && n.push(a.dj.DMS_DISABLED), n);
 }
 function p(e, t) {
     let n = [];
-    return e || n.push(a.dj.INVITES_DISABLED), t || n.push(a.dj.DMS_DISABLED), n;
+    return (e || n.push(a.dj.INVITES_DISABLED), t || n.push(a.dj.DMS_DISABLED), n);
 }
 function h(e) {
     return (null != e.dmsDisabledUntil && new Date(e.dmsDisabledUntil) > new Date()) || (null != e.invitesDisabledUntil && new Date(e.invitesDisabledUntil) > new Date());

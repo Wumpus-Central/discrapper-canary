@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -143,7 +143,7 @@ class _ extends r.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'handleJoinHypeSquadClick', () => {
                 (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('83264').then(n.bind(n, 711184));
@@ -154,7 +154,7 @@ class _ extends r.Component {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -162,12 +162,12 @@ class _ extends r.Component {
                                         )),
                                         i.forEach(function (t) {
                                             g(e, t, n[t]);
-                                        });
+                                        }));
                                 }
                                 return e;
                             })({}, t)
                         );
                 });
-            });
+            }));
     }
 }

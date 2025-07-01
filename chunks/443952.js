@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(388685), n(415506), n(997841);
+(n.d(t, { Z: () => G }), n(388685), n(415506), n(997841));
 var r = n(255367);
 n(73800);
 var i = n(243814),
@@ -169,10 +169,10 @@ let G = {
                 c = null != s ? E.Z.getWindow(s) : void 0;
             (null == c ? void 0 : c.closed) && (c = void 0);
             let u = null != c ? k.IlC.POPOUT : k.IlC.APP;
-            (0, j.Pr)({}, null == c ? void 0 : c.document),
+            ((0, j.Pr)({}, null == c ? void 0 : c.document),
                 (0, a.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                        let { default: e } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
                         return (t) => {
                             var n, a;
                             return (0, r.jsx)(
@@ -181,7 +181,7 @@ let G = {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -189,7 +189,7 @@ let G = {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -197,8 +197,8 @@ let G = {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({}, t)),
@@ -227,7 +227,7 @@ let G = {
                         };
                     },
                     { contextKey: u === k.IlC.POPOUT ? a.u1M : a.z1l }
-                );
+                ));
         }
     },
     [k.Etm.INITIATE_IMAGE_UPLOAD]: (0, l.S)(k.Etm.INITIATE_IMAGE_UPLOAD, {
@@ -252,23 +252,23 @@ let G = {
                     }
                     if (null == n) throw new A.Z({ errorCode: k.lTL.UNKNOWN_ERROR }, 'No valid window found');
                     let i = n.document.createElement('input');
-                    (i.style.display = 'none'), (i.type = 'file'), (i.accept = 'image/jpeg, image/jpg, image/png, image/gif');
+                    ((i.style.display = 'none'), (i.type = 'file'), (i.accept = 'image/jpeg, image/jpg, image/png, image/gif'));
                     let l = () => {
-                        (null == i.files || 0 === i.files.length) && t(),
+                        ((null == i.files || 0 === i.files.length) && t(),
                             n.document.body.removeEventListener('focus', l, !0),
                             setTimeout(() => {
                                 n.document.body.removeChild(i);
-                            }, 1000);
+                            }, 1000));
                     };
-                    i.addEventListener('change', () => {
-                        (0, N.lm)(i.files) && e(i.files[0]), l();
+                    (i.addEventListener('change', () => {
+                        ((0, N.lm)(i.files) && e(i.files[0]), l());
                     }),
                         i.addEventListener('cancel', () => {
                             l();
                         }),
                         n.document.body.addEventListener('focus', l, !0),
                         n.document.body.appendChild(i),
-                        i.click();
+                        i.click());
                 })(
                     async (n) => {
                         let l = await (0, f.kv)(r, i, n);
@@ -323,7 +323,7 @@ let G = {
             if (null == h && s) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No channel found');
             if (null !== l || null !== o || null !== c) {
                 let e = [];
-                void 0 !== l &&
+                (void 0 !== l &&
                     (e = [
                         {
                             id: T.default.cast(T.default.fromTimestamp(Date.now())),
@@ -341,13 +341,13 @@ let G = {
                         content: c,
                         components: o,
                         attachments: e
-                    }));
+                    })));
             }
             return new Promise((e) => {
                 let t = !1,
                     r = (0, R.jU)(d),
                     l = a.z1l;
-                (E.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
+                ((E.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
                     (0, _.M)({
                         applicationId: p,
                         channel: h,
@@ -357,11 +357,11 @@ let G = {
                         },
                         requireLaunchChannel: !0 === s,
                         onShareResult: (n) => {
-                            t || (t = n), r.lock(), e({ success: t });
+                            (t || (t = n), r.lock(), e({ success: t }));
                         },
                         previewMessage: n,
                         contextKey: l
-                    });
+                    }));
             });
         }
     })

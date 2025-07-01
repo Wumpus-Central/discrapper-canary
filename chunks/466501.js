@@ -1,4 +1,4 @@
-t.d(i, { default: () => j }), t(953529);
+(t.d(i, { default: () => j }), t(953529));
 var n = t(255367),
     r = t(73800),
     l = t(481060),
@@ -45,7 +45,7 @@ function f(e) {
                 actions: {
                     onEnableMFAClick: a.ZP.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        (0, l.Mr3)(b.Q), o.Z.open(h, u.pNK.SAFETY, void 0, u.KsC.SAFETY_PERMISSIONS);
+                        ((0, l.Mr3)(b.Q), o.Z.open(h, u.pNK.SAFETY, void 0, u.KsC.SAFETY_PERMISSIONS));
                     }
                 }
             }),

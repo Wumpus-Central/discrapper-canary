@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ee }), n(388685);
+(n.d(t, { Z: () => ee }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -43,7 +43,7 @@ function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function F(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -59,8 +59,8 @@ function F(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -271,7 +271,7 @@ function W(e) {
                     size: u.zxk.Sizes.SMALL,
                     color: u.zxk.Colors.PRIMARY,
                     'aria-label': V.intl.string(V.t.YXeWYG),
-                    onClick: J,
+                    onClick: Q,
                     children: p ? V.intl.string(V.t['16kTw8']) : V.intl.string(V.t.bt75u7)
                 })
             ]
@@ -457,7 +457,7 @@ function X(e) {
         })
     );
 }
-function Q(e) {
+function J(e) {
     let { user: t } = e,
         n = (0, x.Z)({
             id: t.id,
@@ -495,7 +495,7 @@ function Q(e) {
           })
         : null;
 }
-function J() {
+function Q() {
     m.Z.setSection(B.oAB.PROFILE_CUSTOMIZATION);
 }
 function $(e) {
@@ -542,7 +542,7 @@ function ee() {
     var e;
     let t = (0, c.e7)([P.default], () => {
             let e = P.default.getCurrentUser();
-            return o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
+            return (o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e);
         }),
         n = (0, T.ZP)(t.id),
         r = (0, v.Z)(n),
@@ -587,7 +587,7 @@ function ee() {
                                         className: G.userTag,
                                         discriminatorClass: G.discriminator
                                     }),
-                                    (0, i.jsx)(Q, { user: t })
+                                    (0, i.jsx)(J, { user: t })
                                 ]
                             }),
                             (0, i.jsx)(N.Z, {
@@ -598,7 +598,7 @@ function ee() {
                         ]
                     }),
                     (0, i.jsx)(u.zxk, {
-                        onClick: J,
+                        onClick: Q,
                         size: u.zxk.Sizes.SMALL,
                         children: V.intl.string(V.t['2p2aY2'])
                     })

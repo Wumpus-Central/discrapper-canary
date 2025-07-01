@@ -1,4 +1,4 @@
-t.d(l, { default: () => v }), t(388685), t(539854);
+(t.d(l, { default: () => v }), t(388685), t(539854));
 var n = t(255367),
     r = t(73800),
     i = t(149765),
@@ -59,7 +59,7 @@ let w = (e, l, t) => {
                                 for (var l = 1; l < arguments.length; l++) {
                                     var t = null != arguments[l] ? arguments[l] : {},
                                         n = Object.keys(t);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (n = n.concat(
                                             Object.getOwnPropertySymbols(t).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -67,7 +67,7 @@ let w = (e, l, t) => {
                                         )),
                                         n.forEach(function (l) {
                                             var n;
-                                            (n = t[l]),
+                                            ((n = t[l]),
                                                 l in e
                                                     ? Object.defineProperty(e, l, {
                                                           value: n,
@@ -75,8 +75,8 @@ let w = (e, l, t) => {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[l] = n);
-                                        });
+                                                    : (e[l] = n));
+                                        }));
                                 }
                                 return e;
                             })({}, l.permissionOverwrites),
@@ -111,14 +111,14 @@ let w = (e, l, t) => {
             })(l, t),
             V = async () => {
                 if (!B) return;
-                M(!0), E(!1);
+                (M(!0), E(!1));
                 let e = [...z];
                 if (y) {
                     let t = l.getEveryoneRoleId();
                     e.push(t);
                 }
                 try {
-                    await L(v, e), b();
+                    (await L(v, e), b());
                 } catch (e) {
                     E(!0);
                 } finally {

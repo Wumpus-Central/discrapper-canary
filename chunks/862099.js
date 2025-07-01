@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Co: () => X,
     ZP: () => Q,
     bZ: () => q,
     gt: () => B
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -155,11 +155,11 @@ function H(e) {
             className: G.joinButton,
             innerClassName: G.rsvpButton,
             onClick: function () {
-                (0, D.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, T.L_)(t.id), 1000)),
+                ((0, D.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, T.L_)(t.id), 1000)),
                     v.default.track(M.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n
-                    });
+                    }));
             },
             look: l ? c.zxk.Looks.OUTLINED : c.zxk.Looks.FILLED,
             color: l ? c.zxk.Colors.TRANSPARENT : c.zxk.Colors.GREEN,
@@ -220,11 +220,11 @@ function F(e) {
                         }),
                         (0, i.jsx)(c.P3F, {
                             onClick: () => {
-                                v.default.track(M.rMx.CHANNEL_NOTICE_CLOSED, {
+                                (v.default.track(M.rMx.CHANNEL_NOTICE_CLOSED, {
                                     notice_type: r,
                                     guild_id: n.guild_id
                                 }),
-                                    (0, T.L_)(n.id);
+                                    (0, T.L_)(n.id));
                             },
                             className: G.closeIcon,
                             'aria-label': U.intl.string(U.t.cpT0Cg),
@@ -377,7 +377,7 @@ function X(e) {
             f = U.intl.string(U.t.VJlc0d);
             break;
         case 2:
-            (f = U.intl.string(U.t.ZYO5OD)), (null == h ? void 0 : h.speaker) ? (f = U.intl.string(U.t['/cnSFR'])) : null != h && (f = U.intl.string(U.t.btSGOj));
+            ((f = U.intl.string(U.t.ZYO5OD)), (null == h ? void 0 : h.speaker) ? (f = U.intl.string(U.t['/cnSFR'])) : null != h && (f = U.intl.string(U.t.btSGOj)));
             break;
         case 3:
             f = U.intl.string(U.t.wBoE6O);

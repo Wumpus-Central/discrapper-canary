@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => R }), n(388685), n(704826), n(35282);
+(n.d(t, { Z: () => R }), n(388685), n(704826), n(35282));
 var i,
     a = n(442837),
     o = n(570140),
@@ -24,7 +24,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -66,24 +66,24 @@ function g(e, t) {
     h = p(f({}, h), { [e]: f({}, null != (n = h[e]) ? n : {}, t) });
 }
 function E(e) {
-    (h = f({}, h)), delete h[e];
+    ((h = f({}, h)), delete h[e]);
 }
 function b(e, t) {
     r.pathLabels = p(f({}, r.pathLabels), { [e]: t });
 }
 function y(e) {
     if (null == r.pathLabels[e]) return !1;
-    (r.pathLabels = f({}, r.pathLabels)), delete r.pathLabels[e];
+    ((r.pathLabels = f({}, r.pathLabels)), delete r.pathLabels[e]);
 }
 function O(e) {
     let { applicationId: t, branchId: n, installationPath: i } = e;
-    null == r.installations[t] && (r.installations[t] = {}),
+    (null == r.installations[t] && (r.installations[t] = {}),
         (r.installations[t][n] = { installationPath: i }),
         r.installationPaths.has(i) ||
             T({
                 path: i,
                 metadata: {}
-            });
+            }));
 }
 function v(e) {
     let { applicationId: t, branchId: n } = e,
@@ -99,24 +99,24 @@ function v(e) {
 function I(e) {
     let { applicationId: t, branchId: n } = e;
     if (null == r.installations[t]) return !1;
-    delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t];
+    (delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t]);
 }
 function T(e) {
     if (r.installationPaths.has(e.path)) return !1;
     g(e.path, e.metadata);
     let t = new Set(r.installationPaths);
-    t.add(e.path), (r.installationPaths = t);
+    (t.add(e.path), (r.installationPaths = t));
 }
 function S(e) {
     let { path: t } = e;
     if (!r.installationPaths.has(t) || r.defaultInstallationPath === t) return !1;
     let n = new Set(r.installationPaths);
-    n.delete(t), (r.installationPaths = n), E(t), y(t);
+    (n.delete(t), (r.installationPaths = n), E(t), y(t));
 }
 function A(e) {
     let { path: t, label: n, isDefault: i } = e;
     if (!r.installationPaths.has(t)) return !1;
-    null != n && '' !== n && r.pathLabels[t] !== n && b(t, n), i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t);
+    (null != n && '' !== n && r.pathLabels[t] !== n && b(t, n), i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t));
 }
 function N(e) {
     let { metadataPayload: t } = e;
@@ -125,7 +125,7 @@ function N(e) {
 class C extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         let t = f({}, e);
-        null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = m), null == t.installationPaths ? (t.installationPaths = new Set([t.defaultInstallationPath])) : (t.installationPaths = new Set(Array.from(t.installationPaths))), null == t.pathLabels && (t.pathLabels = {}), (r = t);
+        (null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = m), null == t.installationPaths ? (t.installationPaths = new Set([t.defaultInstallationPath])) : (t.installationPaths = new Set(Array.from(t.installationPaths))), null == t.pathLabels && (t.pathLabels = {}), (r = t));
     }
     getState() {
         return r;
@@ -169,7 +169,7 @@ class C extends (i = a.ZP.PersistedStore) {
               : '?';
     }
 }
-d(C, 'displayName', 'InstallationManagerStore'), d(C, 'persistKey', 'InstallationManagerStore');
+(d(C, 'displayName', 'InstallationManagerStore'), d(C, 'persistKey', 'InstallationManagerStore'));
 let R = new C(o.Z, {
     DISPATCH_APPLICATION_INSTALL: O,
     DISPATCH_APPLICATION_UNINSTALL: I,

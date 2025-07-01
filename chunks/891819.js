@@ -1,4 +1,4 @@
-n.d(t, { N: () => g }), n(35282), n(539854);
+(n.d(t, { N: () => g }), n(35282), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(711873),
@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -37,11 +37,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -63,7 +63,7 @@ function f(e, t) {
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -73,7 +73,7 @@ function _(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let p = /url\(['"](.*)['"]\)/,
@@ -100,39 +100,39 @@ function g(e) {
                 : null != a && a !== n && !0 === r && this.setState({ loaded: !1 }, () => this.preloadURL(a));
         }
         preloadURL(e) {
-            this.canceller && this.canceller(),
+            (this.canceller && this.canceller(),
                 (this.canceller = (0, s.po)(e, (t) => {
-                    this.canceller && (this.canceller = null),
+                    (this.canceller && (this.canceller = null),
                         t ||
                             (this.cachedURLs.push(e),
                             this.setState({
                                 cached: e,
                                 loaded: !0
-                            }));
+                            })));
                     let { onBackgroundImageLoad: n } = this.props;
                     n && n(t, e);
-                }));
+                })));
         }
         componentWillUnmount() {
-            this.canceller && this.canceller(), (this.cachedURLs.length = 0);
+            (this.canceller && this.canceller(), (this.cachedURLs.length = 0));
         }
         render() {
             let t = this.props,
                 { style: n, onBackgroundImageLoad: i } = t,
                 a = f(t, ['style', 'onBackgroundImageLoad']),
                 { loaded: o, cached: s } = this.state;
-            return o || null == n || (n = d(c({}, n), { backgroundImage: m(s) })), (0, r.jsx)(e, c({ style: n }, a));
+            return (o || null == n || (n = d(c({}, n), { backgroundImage: m(s) })), (0, r.jsx)(e, c({ style: n }, a)));
         }
         constructor(e) {
-            super(e), l(this, 'cachedURLs', []), l(this, 'canceller', null);
+            (super(e), l(this, 'cachedURLs', []), l(this, 'canceller', null));
             let { style: t } = e,
                 n = null != t ? h(t.backgroundImage) : null;
-            (this.cachedURLs = [n]),
+            ((this.cachedURLs = [n]),
                 (this.state = {
                     cached: n,
                     loaded: !0
-                });
+                }));
         }
     }
-    return o()(t, e), t;
+    return (o()(t, e), t);
 }

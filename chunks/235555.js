@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -48,7 +48,7 @@ class E extends i.PureComponent {
             : null;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'handleUserContextMenu', (e, t) => {
                 (0, s.jW)(e, async () => {
                     let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('86423')]).then(n.bind(n, 881351));
@@ -60,7 +60,7 @@ class E extends i.PureComponent {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -68,7 +68,7 @@ class E extends i.PureComponent {
                                         )),
                                         r.forEach(function (t) {
                                             _(e, t, n[t]);
-                                        });
+                                        }));
                                 }
                                 return e;
                             })({}, n)),
@@ -96,7 +96,7 @@ class E extends i.PureComponent {
                     party: e,
                     header: b.intl.formatToPlainString(b.t.I9et19, { count: e.length })
                 });
-            });
+            }));
     }
 }
 let O = o.ZP.connectStores([d.Z, f.default, h.Z, p.Z], () => {

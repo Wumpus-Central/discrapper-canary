@@ -1,4 +1,4 @@
-e.d(a, { default: () => c }), e(388685);
+(e.d(a, { default: () => c }), e(388685));
 var n = e(255367),
     i = e(73800),
     l = e(481060),
@@ -31,7 +31,7 @@ function c(t) {
                 children: [
                     (0, n.jsx)(l.olH, {
                         onClick: () => {
-                            d(), c();
+                            (d(), c());
                         },
                         className: r.closeButton
                     }),

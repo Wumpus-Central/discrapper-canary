@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -67,7 +67,7 @@ let m = !1,
 function y(e) {
     let { assets: t } = e,
         n = {};
-    t.forEach((e) => (n[e.id] = e)), (b = n);
+    (t.forEach((e) => (n[e.id] = e)), (b = n));
 }
 function O(e) {
     let { videoFilterAsset: t } = e;
@@ -75,7 +75,7 @@ function O(e) {
 }
 function v(e) {
     let { videoFilterAsset: t } = e;
-    (b = _({}, b)), delete b[t.id];
+    ((b = _({}, b)), delete b[t.id]);
 }
 function I(e) {
     var t;
@@ -93,14 +93,14 @@ function S(e) {
     a.TO.CAMERA_BACKGROUND_LIVE in t && (m = !0);
 }
 function A() {
-    g !== c.Z.getVoiceChannelId() && (E = !1), I() && (E = !0), (g = c.Z.getVoiceChannelId());
+    (g !== c.Z.getVoiceChannelId() && (E = !1), I() && (E = !0), (g = c.Z.getVoiceChannelId()));
 }
 function N() {
-    (m = !1), (E = !1), (g = null), (b = {});
+    ((m = !1), (E = !1), (g = null), (b = {}));
 }
 class C extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, c.Z, l.Z), this.syncWith([c.Z, l.Z], A);
+        (this.waitFor(s.Z, c.Z, l.Z), this.syncWith([c.Z, l.Z], A));
     }
     get videoFilterAssets() {
         return b;

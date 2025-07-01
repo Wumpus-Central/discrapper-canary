@@ -26,8 +26,8 @@ r(
                 n = a(t),
                 r = arguments.length;
             s(n + r);
-            for (var l = 0; l < r; l++) (t[n] = arguments[l]), n++;
-            return o(t, n), n;
+            for (var l = 0; l < r; l++) ((t[n] = arguments[l]), n++);
+            return (o(t, n), n);
         }
     }
 );

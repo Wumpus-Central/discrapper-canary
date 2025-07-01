@@ -7,7 +7,7 @@ t.exports = function (t, e) {
     return (
         e &&
             e.forEach(function (e) {
-                for (var n = o(t, 0, e.offset).length, i = n + o(t, e.offset, e.length).length; n < i; ) (r[n] = r[n].add(e.style)), n++;
+                for (var n = o(t, 0, e.offset).length, i = n + o(t, e.offset, e.length).length; n < i; ) ((r[n] = r[n].add(e.style)), n++);
             }),
         r
     );

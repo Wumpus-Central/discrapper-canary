@@ -28,7 +28,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -44,11 +44,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -69,7 +69,7 @@ let h = {
     crunchyroll: a()(u.aspectRatio, u.crunchyroll)
 };
 var m = (function (e) {
-    return (e.SIZE_60 = 'size-60'), (e.SIZE_72 = 'size-72'), (e.SIZE_100 = 'size-100'), e;
+    return ((e.SIZE_60 = 'size-60'), (e.SIZE_72 = 'size-72'), (e.SIZE_100 = 'size-100'), e);
 })({});
 let g = {
     'size-60': {

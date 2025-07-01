@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     V: () => O,
     e: () => b
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367);
 n(73800);
@@ -41,7 +41,7 @@ class g extends (r = a.ZP.PersistedStore) {
         return [...m];
     }
 }
-h(g, 'displayName', 'PTOStore'), h(g, 'persistKey', 'PTOStore');
+(h(g, 'displayName', 'PTOStore'), h(g, 'persistKey', 'PTOStore'));
 let E = new g(s.Z, {}),
     b = (e) =>
         (0, a.e7)([u.ZP, f.default, E], () => {

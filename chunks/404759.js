@@ -8,8 +8,8 @@ function a(e, t) {
             a = n.cache;
         if (a.has(i)) return a.get(i);
         var o = e.apply(this, r);
-        return (n.cache = a.set(i, o) || a), o;
+        return ((n.cache = a.set(i, o) || a), o);
     };
-    return (n.cache = new (a.Cache || r)()), n;
+    return ((n.cache = new (a.Cache || r)()), n);
 }
-(a.Cache = r), (e.exports = a);
+((a.Cache = r), (e.exports = a));

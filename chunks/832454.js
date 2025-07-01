@@ -6,14 +6,14 @@ let s = new Uint32Array([1116352408, 1899447441, 3049323471, 3921009573, 9619871
     h = new Uint32Array(64);
 class a extends r.VR {
     constructor() {
-        super(64, 32, 8, !1), (this.A = 0 | o[0]), (this.B = 0 | o[1]), (this.C = 0 | o[2]), (this.D = 0 | o[3]), (this.E = 0 | o[4]), (this.F = 0 | o[5]), (this.G = 0 | o[6]), (this.H = 0 | o[7]);
+        (super(64, 32, 8, !1), (this.A = 0 | o[0]), (this.B = 0 | o[1]), (this.C = 0 | o[2]), (this.D = 0 | o[3]), (this.E = 0 | o[4]), (this.F = 0 | o[5]), (this.G = 0 | o[6]), (this.H = 0 | o[7]));
     }
     get() {
         let { A: t, B: e, C: n, D: r, E: i, F: s, G: o, H: h } = this;
         return [t, e, n, r, i, s, o, h];
     }
     set(t, e, n, r, i, s, o, h) {
-        (this.A = 0 | t), (this.B = 0 | e), (this.C = 0 | n), (this.D = 0 | r), (this.E = 0 | i), (this.F = 0 | s), (this.G = 0 | o), (this.H = 0 | h);
+        ((this.A = 0 | t), (this.B = 0 | e), (this.C = 0 | n), (this.D = 0 | r), (this.E = 0 | i), (this.F = 0 | s), (this.G = 0 | o), (this.H = 0 | h));
     }
     process(t, e) {
         for (let n = 0; n < 16; n++, e += 4) h[n] = t.getUint32(e, !1);
@@ -28,15 +28,15 @@ class a extends r.VR {
         for (let t = 0; t < 64; t++) {
             let e = (d + ((0, i.np)(c, 6) ^ (0, i.np)(c, 11) ^ (0, i.np)(c, 25)) + (0, r.bc)(c, l, u) + s[t] + h[t]) | 0,
                 x = (((0, i.np)(n, 2) ^ (0, i.np)(n, 13) ^ (0, i.np)(n, 22)) + (0, r.l3)(n, o, a)) | 0;
-            (d = u), (u = l), (l = c), (c = (f + e) | 0), (f = a), (a = o), (o = n), (n = (e + x) | 0);
+            ((d = u), (u = l), (l = c), (c = (f + e) | 0), (f = a), (a = o), (o = n), (n = (e + x) | 0));
         }
-        (n = (n + this.A) | 0), (o = (o + this.B) | 0), (a = (a + this.C) | 0), (f = (f + this.D) | 0), (c = (c + this.E) | 0), (l = (l + this.F) | 0), (u = (u + this.G) | 0), (d = (d + this.H) | 0), this.set(n, o, a, f, c, l, u, d);
+        ((n = (n + this.A) | 0), (o = (o + this.B) | 0), (a = (a + this.C) | 0), (f = (f + this.D) | 0), (c = (c + this.E) | 0), (l = (l + this.F) | 0), (u = (u + this.G) | 0), (d = (d + this.H) | 0), this.set(n, o, a, f, c, l, u, d));
     }
     roundClean() {
         h.fill(0);
     }
     destroy() {
-        this.set(0, 0, 0, 0, 0, 0, 0, 0), this.buffer.fill(0);
+        (this.set(0, 0, 0, 0, 0, 0, 0, 0), this.buffer.fill(0));
     }
 }
 let f = (0, i.hE)(() => new a());

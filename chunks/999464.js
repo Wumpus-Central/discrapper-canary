@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(120356),
@@ -15,15 +15,15 @@ let _ = (0, d.hQ)(),
     g = (e) => {
         let { email: t, setStep: n, onBack: r, school: d, setSchool: g } = e,
             [f, N] = i.useState(null),
-            [v, p] = i.useState(!1),
+            [p, v] = i.useState(!1),
             E = async () => {
-                N(null), p(!0);
+                (N(null), v(!0));
                 try {
-                    await o.Z.signup(t, d), n(u.tF.EMAIL_WAITLIST);
+                    (await o.Z.signup(t, d), n(u.tF.EMAIL_WAITLIST));
                 } catch (e) {
                     N(new c.Hx(e));
                 } finally {
-                    p(!1);
+                    v(!1);
                 }
             },
             S = async (e) => {
@@ -81,7 +81,7 @@ let _ = (0, d.hQ)(),
                             size: a.zxk.Sizes.MEDIUM,
                             color: a.zxk.Colors.BRAND,
                             className: h.__invalid_submitButton,
-                            submitting: v,
+                            submitting: p,
                             children: x.intl.string(x.t.PDsYAg)
                         })
                     ]

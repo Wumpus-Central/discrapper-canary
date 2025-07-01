@@ -14,14 +14,14 @@ let _ = (e) => {
     let { onClose: t } = e,
         { analyticsLocations: n } = (0, s.ZP)(),
         _ = () => {
-            t(),
+            (t(),
                 (0, l.uL)(u.Z5c.COLLECTIBLES_SHOP),
                 (0, c.mK)({
                     openInLayer: !1,
                     analyticsSource: o.Z.PREMIUM_PAYMENT_MODAL,
                     analyticsLocations: n
                 }),
-                (0, a.xf)();
+                (0, a.xf)());
         };
     return (0, r.jsxs)('div', {
         className: f.container,

@@ -57,10 +57,10 @@ function i(e, t) {
                     },
                     n: function () {
                         var e = r.next();
-                        return (i = e.done), e;
+                        return ((i = e.done), e);
                     },
                     e: function (e) {
-                        (c = !0), (s = e);
+                        ((c = !0), (s = e));
                     },
                     f: function () {
                         try {

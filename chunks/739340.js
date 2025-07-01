@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => j,
     jd: () => v,
     wt: () => C
@@ -7,13 +7,13 @@ n.d(t, {
     n(187205),
     n(539854),
     n(388685),
-    n(642613);
+    n(642613));
 var r,
     i = n(73800),
     l = n(106351),
     o = n(442837),
-    s = n(904245),
-    a = n(89892),
+    a = n(904245),
+    s = n(89892),
     c = n(601070),
     u = n(569471),
     d = n(723170),
@@ -61,7 +61,7 @@ function j() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState('loading'),
         l = C(),
-        c = (0, o.Wu)([f.Z], () => (0, a.K)(l.map((e) => f.Z.getMessages(e))), [l]),
+        c = (0, o.Wu)([f.Z], () => (0, s.K)(l.map((e) => f.Z.getMessages(e))), [l]),
         u = i.useCallback(
             async (n) => {
                 r('loading');
@@ -76,13 +76,13 @@ function j() {
                                 t = o;
                                 break;
                             }
-                            let a = f.Z.getMessages(i),
-                                c = a.length;
+                            let s = f.Z.getMessages(i),
+                                c = s.length;
                             null == i ||
-                                a.loadingMore ||
-                                (a.hasPresent() && (a.hasFetched || a.ready) && (!(c < 50) || !a.hasMoreBefore)) ||
+                                s.loadingMore ||
+                                (s.hasPresent() && (s.hasFetched || s.ready) && (!(c < 50) || !s.hasMoreBefore)) ||
                                 (r.push(
-                                    s.Z.fetchMessages({
+                                    a.Z.fetchMessages({
                                         channelId: i,
                                         limit: 50
                                     })
@@ -97,8 +97,8 @@ function j() {
                             }
                         );
                     },
-                    { hasLoadedAny: o, hasMoreOlder: a } = await i();
-                o || a ? r('loaded') : r('done'), !e && l.length > 0 && t(!0);
+                    { hasLoadedAny: o, hasMoreOlder: s } = await i();
+                (o || s ? r('loaded') : r('done'), !e && l.length > 0 && t(!0));
             },
             [l, e]
         );

@@ -24,32 +24,32 @@ var r,
     };
 if (o || d.state) {
     var b = d.state || (d.state = new m());
-    (b.get = b.get),
+    ((b.get = b.get),
         (b.has = b.has),
         (b.set = b.set),
         (r = function (e, t) {
             if (b.has(e)) throw new h(p);
-            return (t.facade = e), b.set(e, t), t;
+            return ((t.facade = e), b.set(e, t), t);
         }),
         (i = function (e) {
             return b.get(e) || {};
         }),
         (a = function (e) {
             return b.has(e);
-        });
+        }));
 } else {
     var y = f('state');
-    (_[y] = !0),
+    ((_[y] = !0),
         (r = function (e, t) {
             if (u(e, y)) throw new h(p);
-            return (t.facade = e), c(e, y, t), t;
+            return ((t.facade = e), c(e, y, t), t);
         }),
         (i = function (e) {
             return u(e, y) ? e[y] : {};
         }),
         (a = function (e) {
             return u(e, y);
-        });
+        }));
 }
 e.exports = {
     set: r,

@@ -1,4 +1,4 @@
-t.d(r, { default: () => x }), t(388685);
+(t.d(r, { default: () => x }), t(388685));
 var n = t(255367),
     o = t(73800),
     l = t(512722),
@@ -62,7 +62,7 @@ let x = (e) => {
                 (0, n.jsx)(i.mzw, {
                     children: (0, n.jsx)('form', {
                         onSubmit: (e) => {
-                            e.preventDefault(), k(t);
+                            (e.preventDefault(), k(t));
                         },
                         children: (0, n.jsxs)(u.Z.ButtonFooter, {
                             children: [

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Uc: () => p,
     ac: () => E,
     cv: () => b,
@@ -15,7 +15,7 @@ n.d(t, {
     n(415506),
     n(388685),
     n(539854),
-    n(583741);
+    n(583741));
 var r = n(647943),
     i = n(581282),
     a = n(392711),
@@ -42,7 +42,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -82,19 +82,19 @@ function y(e, t) {
 }
 function O(e, t, n) {
     for (let e in ((t = _({}, t)), n)) delete t[e];
-    return e.mergePartial(t, n), t;
+    return (e.mergePartial(t, n), t);
 }
 function v(e, t, n) {
-    return null == e.guilds && (e.guilds = l.os.create()), I(e.guilds, t, n);
+    return (null == e.guilds && (e.guilds = l.os.create()), I(e.guilds, t, n));
 }
 function I(e, t, n) {
-    return (null == t || 'null' === t) && (t = d.aIL), t in e.guilds || (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
+    return ((null == t || 'null' === t) && (t = d.aIL), t in e.guilds || (e.guilds[t] = l.C4.create()), n(e.guilds[t]));
 }
 function T(e, t, n, r) {
     return v(e, t, (e) => S(e, n, r));
 }
 function S(e, t, n) {
-    return t in e.channels || (e.channels[t] = l.p5.create()), n(e.channels[t]);
+    return (t in e.channels || (e.channels[t] = l.p5.create()), n(e.channels[t]));
 }
 function A(e, t) {
     null == e.versions && (e.versions = c.L.create());
@@ -117,7 +117,7 @@ function A(e, t) {
             null == (s = n.cleanup) || s.call(n);
             continue;
         }
-        (i = !0), null != n.cleanup && a.push(n.cleanup);
+        ((i = !0), null != n.cleanup && a.push(n.cleanup));
     }
     return {
         proto: e,
@@ -142,7 +142,7 @@ function N(e, t) {
     let r = {};
     for (let [e, t] of n) {
         let n = s._F.create();
-        (n.frecency = t.frecency), (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)), (n.score = Math.round(t.score)), (n.totalUses = t.totalUses), (r[e] = n);
+        ((n.frecency = t.frecency), (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)), (n.score = Math.round(t.score)), (n.totalUses = t.totalUses), (r[e] = n));
     }
     return r;
 }

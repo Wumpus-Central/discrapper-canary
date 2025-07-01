@@ -13,11 +13,11 @@ var n = r(73800),
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     b = (function (e) {
@@ -28,7 +28,7 @@ var n = r(73800),
                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                 return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
             })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (r.state = { currentColor: e.hex }), r;
+            return ((r.state = { currentColor: e.hex }), r);
         }
         return (
             (t.prototype = Object.create(e && e.prototype, {
@@ -183,7 +183,7 @@ var n = r(73800),
             t
         );
     })(n.Component);
-(b.propTypes = {
+((b.propTypes = {
     header: a().string,
     styles: a().object
 }),
@@ -191,4 +191,4 @@ var n = r(73800),
         header: 'Color Picker',
         styles: {}
     }),
-    (0, s.t1)(b);
+    (0, s.t1)(b));

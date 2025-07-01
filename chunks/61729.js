@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'threezerotwofour',
         author: 'jan t. sott (http://github.com/idleberg)',
@@ -19,4 +19,4 @@
         base0E: '#a16a94',
         base0F: '#cdab53'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

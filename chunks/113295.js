@@ -11,10 +11,10 @@ e.exports = (e, t, n, f) => {
     let _, p, h, m, g;
     switch (((e = new r(e, f)), (t = new o(t, f)), n)) {
         case '>':
-            (_ = l), (p = u), (h = c), (m = '>'), (g = '>=');
+            ((_ = l), (p = u), (h = c), (m = '>'), (g = '>='));
             break;
         case '<':
-            (_ = c), (p = d), (h = l), (m = '<'), (g = '<=');
+            ((_ = c), (p = d), (h = l), (m = '<'), (g = '<='));
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');
@@ -26,7 +26,7 @@ e.exports = (e, t, n, f) => {
             s = null;
         if (
             (r.forEach((e) => {
-                e.semver === a && (e = new i('>=0.0.0')), (o = o || e), (s = s || e), _(e.semver, o.semver, f) ? (o = e) : h(e.semver, s.semver, f) && (s = e);
+                (e.semver === a && (e = new i('>=0.0.0')), (o = o || e), (s = s || e), _(e.semver, o.semver, f) ? (o = e) : h(e.semver, s.semver, f) && (s = e));
             }),
             o.operator === m || o.operator === g || ((!s.operator || s.operator === m) && p(e, s.semver)) || (s.operator === g && h(e, s.semver)))
         )

@@ -30,26 +30,26 @@ function u(e) {
         E = M[1],
         k = (0, a.useCallback)(
             function (e, t) {
-                'function' == typeof d && d(e, t), E(e);
+                ('function' == typeof d && d(e, t), E(e));
             },
             [d]
         ),
         V = (0, a.useCallback)(
             function (e, t) {
                 var n;
-                'function' == typeof p && (n = p(e, t)), O(void 0 !== n ? n : e);
+                ('function' == typeof p && (n = p(e, t)), O(void 0 !== n ? n : e));
             },
             [p]
         ),
         R = (0, a.useCallback)(
             function () {
-                'function' == typeof h && h(), C(!0);
+                ('function' == typeof h && h(), C(!0));
             },
             [h]
         ),
         P = (0, a.useCallback)(
             function () {
-                'function' == typeof f && f(), C(!1);
+                ('function' == typeof f && f(), C(!1));
             },
             [f]
         ),

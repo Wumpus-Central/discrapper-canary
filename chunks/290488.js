@@ -17,7 +17,7 @@ function i() {
                           }
                       }
                   });
-              return await t.init(), t;
+              return (await t.init(), t);
           })());
 }
 n.d(t, { n: () => i });

@@ -207,7 +207,7 @@ let O = [T.x_.LEAF, T.x_.SWORD, T.x_.HEART, T.x_.FIRE, T.x_.WATER_DROP, T.x_.SKU
                                           className: k.boostingLinkContainer,
                                           children: (0, r.jsx)(b.P, {
                                               onClick: () => {
-                                                  (0, h.Z)(w.id, o.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), p.Z.close();
+                                                  ((0, h.Z)(w.id, o.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), p.Z.close());
                                               }
                                           })
                                       }),

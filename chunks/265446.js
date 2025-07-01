@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(35282), n(388685);
+(n.d(t, { Z: () => s }), n(35282), n(388685));
 var r = n(53529),
     i = n(436660),
     a = n(887490);
@@ -18,7 +18,7 @@ function s(e) {
             if (!l(e)) return void n(a.join(' '));
             r.T.withSingleEntry(e, () => {
                 let t = !1;
-                for (let r of a) t && i.Q.splitNodes(e, { always: !0 }), n(r), (t = !0);
+                for (let r of a) (t && i.Q.splitNodes(e, { always: !0 }), n(r), (t = !0));
             });
         }),
         e

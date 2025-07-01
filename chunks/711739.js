@@ -30,7 +30,7 @@ function E(e, t) {
 function b(e, t) {
     let n = e.split('@'),
         r = '';
-    return n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + E((e = e.replace(f, '.')).split('.'), t).join('.');
+    return (n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + E((e = e.replace(f, '.')).split('.'), t).join('.'));
 }
 function y(e) {
     let t = [],
@@ -64,20 +64,20 @@ let O = function (e) {
             f = s,
             _ = e.lastIndexOf(c);
         _ < 0 && (_ = 0);
-        for (let t = 0; t < _; ++t) e.charCodeAt(t) >= 128 && g('not-basic'), a.push(e.charCodeAt(t));
+        for (let t = 0; t < _; ++t) (e.charCodeAt(t) >= 128 && g('not-basic'), a.push(e.charCodeAt(t)));
         for (let s = _ > 0 ? _ + 1 : 0; s < o; ) {
             let l = u;
             for (let a = 1, l = n; ; l += n) {
                 s >= o && g('invalid-input');
                 let c = O(e.charCodeAt(s++));
-                (c >= n || c > h((t - u) / a)) && g('overflow'), (u += c * a);
+                ((c >= n || c > h((t - u) / a)) && g('overflow'), (u += c * a));
                 let d = l <= f ? r : l >= f + i ? i : l - f;
                 if (c < d) break;
                 let _ = n - d;
-                a > h(t / _) && g('overflow'), (a *= _);
+                (a > h(t / _) && g('overflow'), (a *= _));
             }
             let c = a.length + 1;
-            (f = I(u - l, c, 0 == l)), h(u / c) > t - d && g('overflow'), (d += h(u / c)), (u %= c), a.splice(u++, 0, d);
+            ((f = I(u - l, c, 0 == l)), h(u / c) > t - d && g('overflow'), (d += h(u / c)), (u %= c), a.splice(u++, 0, d));
         }
         return String.fromCodePoint(...a);
     },
@@ -102,11 +102,11 @@ let O = function (e) {
                         if (e < o) break;
                         let s = e - o,
                             l = n - o;
-                        a.push(m(v(o + (s % l), 0))), (e = h(s / l));
+                        (a.push(m(v(o + (s % l), 0))), (e = h(s / l)));
                     }
-                    a.push(m(v(e, 0))), (f = I(d, s, p == _)), (d = 0), ++p;
+                    (a.push(m(v(e, 0))), (f = I(d, s, p == _)), (d = 0), ++p);
                 }
-            ++d, ++u;
+            (++d, ++u);
         }
         return a.join('');
     },

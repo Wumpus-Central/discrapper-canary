@@ -1,10 +1,10 @@
-t.d(n, {
+(t.d(n, {
     CP: () => er,
     Gq: () => es,
     R7: () => ec
 }),
     t(539854),
-    t(388685);
+    t(388685));
 var i = t(255367),
     l = t(73800),
     r = t(120356),
@@ -62,7 +62,7 @@ function et(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -70,7 +70,7 @@ function et(e) {
             )),
             i.forEach(function (n) {
                 var i;
-                (i = t[n]),
+                ((i = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: i,
@@ -78,8 +78,8 @@ function et(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = i);
-            });
+                        : (e[n] = i));
+            }));
     }
     return e;
 }
@@ -127,7 +127,7 @@ function er(e) {
         G = (0, u.e7)([B.default], () => B.default.getCurrentUser()),
         k = (0, u.e7)([A.Z], () => A.Z.getGuild(r), [r]),
         er = (0, I.Z)({ forceFetch: !1 });
-    c()(null != M, 'Missing guildBoostingSubscriptionPlan'), c()(null != k, 'Unknown guild: '.concat(r));
+    (c()(null != M, 'Missing guildBoostingSubscriptionPlan'), c()(null != k, 'Unknown guild: '.concat(r)));
     let ea = [
             {
                 planId: M.id,
@@ -548,7 +548,7 @@ function ec(e) {
                                       case O.fe.Scenes.IDLE:
                                           return P(O.fe.Scenes.SUCCESS);
                                       case O.fe.Scenes.SUCCESS:
-                                          return x(!0), P(O.fe.Scenes.IDLE);
+                                          return (x(!0), P(O.fe.Scenes.IDLE));
                                   }
                           },
                           pauseWhileUnfocused: !1

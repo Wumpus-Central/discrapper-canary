@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     A2: () => eK,
     AY: () => en,
     CM: () => ei,
@@ -77,7 +77,7 @@ n.d(t, {
     zA: () => Y,
     zY: () => eG
 }),
-    n(388685);
+    n(388685));
 var r = n(392711),
     i = n(442837),
     a = n(524437),
@@ -883,7 +883,7 @@ let eT = (0, d.KM)(
             };
         }
     );
-(0, d.Zc)(
+((0, d.Zc)(
     'appearance',
     'searchResultExactCountEnabled',
     (e) => {
@@ -900,14 +900,14 @@ let eT = (0, d.KM)(
             return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
-    );
+    ));
 let eZ = (0, d.Zc)(
     'appearance',
     'timestampHourCycle',
     (e) => (null != e ? e : a.hg.AUTO),
     (e) => e
 );
-(0, d.Zc)(
+((0, d.Zc)(
     'appearance',
     'launchPadMode',
     (e) => (null != e ? e : a.l1.LAUNCH_PAD_DISABLED),
@@ -918,7 +918,7 @@ let eZ = (0, d.Zc)(
         'swipeRightToLeftMode',
         (e) => (null != e ? e : a.n9.SWIPE_RIGHT_TO_LEFT_UNSET),
         (e) => e
-    );
+    ));
 let eH = (0, d.Zc)(
         'userContent',
         'lastReceivedChangelogId',

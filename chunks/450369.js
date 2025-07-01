@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => L,
+    Q: () => D,
     Z: () => F
 });
 var r = n(255367),
@@ -25,8 +25,8 @@ var r = n(255367),
     j = n(880395),
     O = n(670188),
     E = n(199902),
-    I = n(314897),
-    S = n(430824),
+    S = n(314897),
+    I = n(430824),
     P = n(496675),
     Z = n(979651),
     N = n(88751),
@@ -39,7 +39,7 @@ function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function M(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -55,12 +55,12 @@ function M(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function D(e, t) {
         e
     );
 }
-let L = 16 / 9,
+let D = 16 / 9,
     U = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: l, guildId: o, user: a, width: s, isModerator: u, onContextMenu: d, inPopout: p } = e,
             h = i.useRef(null),
@@ -93,7 +93,7 @@ let L = 16 / 9,
             children: (e) =>
                 (0, r.jsx)(
                     c.P3F,
-                    D(
+                    L(
                         M(
                             {
                                 innerRef: h,
@@ -106,7 +106,7 @@ let L = 16 / 9,
                                 T.Z,
                                 {
                                     participant: n,
-                                    aspectRatio: L,
+                                    aspectRatio: D,
                                     blocked: m,
                                     ignored: g,
                                     channel: l,
@@ -130,25 +130,25 @@ let L = 16 / 9,
             { reducedMotion: f } = i.useContext(c.Sfi),
             { id: m, blocked: g, ignored: _ } = t,
             j = (0, s.Wu)([E.Z], () => E.Z.getAllActiveStreams(), []),
-            { selectedParticipant: O, largeStream: I } = (0, s.cj)([b.Z], () => ({
+            { selectedParticipant: O, largeStream: S } = (0, s.cj)([b.Z], () => ({
                 selectedParticipant: null != l ? b.Z.getSelectedParticipant(l.id) : null,
                 largeStream: null != l && b.Z.getStageStreamSize(l.id)
             })),
             N = i.useCallback(
                 (e, t) => {
                     if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, C.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
-                        if (!(0, x.p9)(l, Z.Z, S.Z, P.Z, y.Z)[0]) return;
+                        if (!(0, x.p9)(l, Z.Z, I.Z, P.Z, y.Z)[0]) return;
                         (0, p.rn)((0, C.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == O ? void 0 : O.id) === e.id ? (I ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1)) : u.Z.updateStageStreamSize(l.id, !0)) : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
+                    (null == O ? void 0 : O.id) === e.id ? (S ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1)) : u.Z.updateStageStreamSize(l.id, !0)) : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
                 },
-                [j, l, O, I]
+                [j, l, O, S]
             );
         return (0, r.jsx)(
             T.Z,
             {
                 participant: n,
-                aspectRatio: L,
+                aspectRatio: D,
                 fit: n.type === R.fO.USER ? v.L.COVER : void 0,
                 blocked: g,
                 ignored: _,
@@ -171,7 +171,7 @@ let L = 16 / 9,
             { newestAnalyticsLocation: u } = (0, m.ZP)(f.Z.STAGE_TILE),
             p = (0, h.bp)(),
             y = l.getGuildId(),
-            C = I.default.getId();
+            C = S.default.getId();
         o()(null != y, 'Channel cannot be guildless');
         let { user: x } = i,
             v = (0, s.e7)([b.Z], () => b.Z.getParticipant(l.id, i.id), [l.id, i.id]),
@@ -188,11 +188,11 @@ let L = 16 / 9,
                     }
                 });
             },
-            S = (e, t, i, o) => {
+            I = (e, t, i, o) => {
                 switch (e.type) {
                     case R.fO.HIDDEN_STREAM:
                     case R.fO.STREAM:
-                        E(R.TH.STREAM),
+                        (E(R.TH.STREAM),
                             (0, d.jW)(
                                 t,
                                 async () => {
@@ -200,7 +200,7 @@ let L = 16 / 9,
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            D(M({}, n), {
+                                            L(M({}, n), {
                                                 stream: e.stream,
                                                 appContext: p,
                                                 exitFullscreen: () => {},
@@ -213,7 +213,7 @@ let L = 16 / 9,
                                         );
                                 },
                                 { context: p }
-                            );
+                            ));
                         return;
                     case R.fO.USER:
                     default:
@@ -235,7 +235,7 @@ let L = 16 / 9,
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        D(M({}, t), {
+                                        L(M({}, t), {
                                             user: x,
                                             guildId: y,
                                             channel: l,
@@ -262,7 +262,7 @@ let L = 16 / 9,
                   user: x,
                   width: c,
                   isModerator: O,
-                  onContextMenu: S,
+                  onContextMenu: I,
                   inPopout: p === w.IlC.POPOUT
               })
             : (0, r.jsx)(U, {
@@ -273,7 +273,7 @@ let L = 16 / 9,
                   user: x,
                   width: c,
                   isModerator: O,
-                  onContextMenu: S,
+                  onContextMenu: I,
                   inPopout: p === w.IlC.POPOUT
               });
     });

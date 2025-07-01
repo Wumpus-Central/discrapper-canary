@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+(n.d(t, { Z: () => D }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -30,7 +30,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -46,8 +46,8 @@ function w(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -82,12 +82,12 @@ let _ = (0, l.animated)(u.CJ0),
                             r,
                             s = {},
                             o = Object.keys(e);
-                        for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+                        for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
                         return s;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
                 }
                 return s;
             })(e, ['quest', 'location', 'questContentPosition', 'sourceQuestContent']);
@@ -101,7 +101,7 @@ let _ = (0, l.animated)(u.CJ0),
             };
         }, []);
         let g = () => {
-            p({
+            (p({
                 questId: t.id,
                 questContent: n,
                 questContentCTA: x.jZ.COPY_QUEST_URL,
@@ -109,8 +109,8 @@ let _ = (0, l.animated)(u.CJ0),
                 sourceQuestContent: i
             }),
                 (0, h.JG)((0, C.Rs)(t.id), () => {
-                    d(!0), m.current.start(1000, () => d(!1));
-                });
+                    (d(!0), m.current.start(1000, () => d(!1)));
+                }));
         };
         return (0, r.jsx)(u.ua7, {
             forceOpen: a,
@@ -138,7 +138,7 @@ let _ = (0, l.animated)(u.CJ0),
             [G, W] = s.useState(null),
             F = (0, p.Z)((e) => {
                 let t = e.target;
-                U(t.offsetWidth), W(t.scrollWidth);
+                (U(t.offsetWidth), W(t.scrollWidth));
             }),
             z = (0, m.y)(F),
             X = (0, T.uq)(c),
@@ -150,7 +150,7 @@ let _ = (0, l.animated)(u.CJ0),
             $ = (0, g.B6)(f.r.build(o.config).rewardsExpireAt),
             ee = s.useMemo(() => null != o.config.cosponsorMetadata, [o]),
             et = (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     e.currentTarget.blur(),
                     A(),
                     J({
@@ -159,7 +159,7 @@ let _ = (0, l.animated)(u.CJ0),
                         questContentCTA: M ? x.jZ.COLLAPSE : x.jZ.EXPAND,
                         questContentPosition: k,
                         sourceQuestContent: Q
-                    });
+                    }));
             },
             en = (0, r.jsx)(b.ZP, {
                 className: P.partnerBranding,

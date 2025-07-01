@@ -21,7 +21,7 @@ function h(e) {
         (t) => {
             t.folders = e.map((e) => {
                 let t = r.yX.create({ guildIds: e.guildIds });
-                return null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })), null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (t.name = i.Gm.create({ value: String(e.folderName) })), t;
+                return (null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })), null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (t.name = i.Gm.create({ value: String(e.folderName) })), t);
             });
         },
         f.fy.FREQUENT_USER_ACTION
@@ -85,11 +85,11 @@ function E(e) {
         return f.hW.updateAsync(
             'appearance',
             (e) => {
-                (e.theme = m(r)),
+                ((e.theme = m(r)),
                     (e.clientThemeSettings = g({
                         backgroundGradientPresetId: t,
                         customUserThemeSettings: n
-                    }));
+                    })));
             },
             s
         );
@@ -168,7 +168,7 @@ let b = {
             f.fy.INFREQUENT_USER_ACTION
         ),
     updateTheme(e) {
-        o.Z.dispatch({
+        (o.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: { appearance: { settings: { theme: e } } }
         }),
@@ -179,6 +179,6 @@ let b = {
                         t.theme = m(e);
                     },
                     f.fy.INFREQUENT_USER_ACTION
-                );
+                ));
     }
 };

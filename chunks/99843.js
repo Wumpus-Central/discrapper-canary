@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+(n.d(t, { Z: () => P }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,7 +22,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -38,8 +38,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -95,12 +95,12 @@ let O = (e) => {
                                     r,
                                     i = {},
                                     l = Object.keys(e);
-                                for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                 return i;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
                             var l = Object.getOwnPropertySymbols(e);
-                            for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                            for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                         }
                         return i;
                     })(e, ['onMouseEnter']);
@@ -130,12 +130,12 @@ let O = (e) => {
                             ),
                         onDoubleClick: (e) => e.stopPropagation(),
                         onMouseEnter: () => {
-                            null == u || u(),
+                            (null == u || u(),
                                 _.default.track(y.rMx.GDM_EDIT_INTERACTED, {
                                     channel_id: t.id,
                                     action: 'entry_point_hovered',
                                     location: d.Z.HEADER_BAR
-                                });
+                                }));
                         },
                         'aria-label': l,
                         children: i
@@ -144,7 +144,7 @@ let O = (e) => {
             }
         });
     },
-    I = (e) => {
+    S = (e) => {
         let { channel: t, children: n, inlineEditor: l } = e,
             c = t.id,
             u = t.name,
@@ -188,7 +188,7 @@ let O = (e) => {
                                     })
                                   : (0, r.jsx)('form', {
                                         onSubmit: () => {
-                                            !1 !== m && m !== u && s.Z.setName(c, m), b(!1);
+                                            (!1 !== m && m !== u && s.Z.setName(c, m), b(!1));
                                         },
                                         children: (0, r.jsx)(a.oil, {
                                             autoFocus: !0,
@@ -244,7 +244,7 @@ let O = (e) => {
                   ]
               });
     },
-    S = (e) => {
+    I = (e) => {
         let { channel: t, children: n } = e,
             l = (0, p.ZP)(t),
             o = i.useCallback(
@@ -302,7 +302,7 @@ let O = (e) => {
     P = (e) => {
         let { channel: t, legacyIconClassName: n } = e,
             { enabled: i, unifiedEditing: l } = (0, h.Ae)('header_bar', t.id);
-        return (0, r.jsx)(i ? I : S, {
+        return (0, r.jsx)(i ? S : I, {
             channel: t,
             inlineEditor: !l,
             children: (0, r.jsx)(m.v, {

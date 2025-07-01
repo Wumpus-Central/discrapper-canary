@@ -1,4 +1,4 @@
-n.d(e, { Z: () => b }), n(388685);
+(n.d(e, { Z: () => b }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -15,21 +15,21 @@ let b = function (t) {
     let { onClose: e, channelId: n } = t,
         [b, x] = r.useState(!1),
         p = r.useCallback(() => {
-            l.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e();
+            (l.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e());
         }, [e]),
         O = r.useCallback(() => {
             b ||
                 (x(!0),
                 (0, a.Uj)(n)
                     .then(() => {
-                        e(),
+                        (e(),
                             (0, c.t)({
                                 text: S.intl.string(S.t.FhgVWl),
                                 id: 'safety-tools-report-false-positive'
-                            });
+                            }));
                     })
                     .catch(() => {
-                        x(!1), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE));
+                        (x(!1), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE)));
                     }));
         }, [n, e, b]);
     return (0, i.jsxs)(u.Z, {

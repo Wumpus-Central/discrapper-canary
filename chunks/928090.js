@@ -1,4 +1,4 @@
-r.d(t, { default: () => O }), r(388685);
+(r.d(t, { default: () => O }), r(388685));
 var n = r(255367),
     s = r(73800),
     i = r(990547),
@@ -20,7 +20,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -28,7 +28,7 @@ function N(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -36,8 +36,8 @@ function N(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -77,7 +77,7 @@ function O(e) {
         await u.Z.sendTransferOwnershipPincode(t.id, !0);
     }
     async function C(e) {
-        e.preventDefault(), g();
+        (e.preventDefault(), g());
         try {
             O.mfaEnabled || null == O.email
                 ? (await u.Z.transferOwnership(t.id, m.id, O.mfaEnabled ? h.X.MFA : null), (0, o.xf)())

@@ -1,4 +1,4 @@
-n.d(t, { P: () => O }), n(388685), n(953529);
+(n.d(t, { P: () => O }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(580685),
@@ -38,15 +38,15 @@ function v(e) {
         [S, T] = i.useState(!1),
         P = null != c && l.Y.VISIBLE.has(c.visibility),
         w = !O && !P && !y;
-    i.useEffect(() => {
+    (i.useEffect(() => {
         C || (0, p.R)(t);
     }, [C, t]),
         i.useEffect(() => {
             g();
-        }, [t, g]);
+        }, [t, g]));
     let R = i.useCallback(
         async (e) => {
-            T(!0), await (0, h.c)(t, e, N), T(!1);
+            (T(!0), await (0, h.c)(t, e, N), T(!1));
         },
         [N, t]
     );

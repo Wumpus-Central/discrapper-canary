@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(997841), n(415506), n(35282);
+(n.d(t, { Z: () => m }), n(388685), n(997841), n(415506), n(35282));
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
@@ -83,11 +83,11 @@ let g = ['349134787773988865'],
                         Promise.resolve(p)
                     );
                 let b = {};
-                (p.name = r.application.name), (p.application_id = r.application.id);
+                ((p.name = r.application.name), (p.application_id = r.application.id));
                 let _ = r.transport === h.He.POST_MESSAGE;
                 p.platform = _ ? f.M7m.EMBEDDED : f.M7m.DESKTOP;
                 let E = (0, o.S5)(p, _);
-                E > 0 && (p.flags = E), delete p.instance, null == (t = p.party) || delete t.privacy;
+                (E > 0 && (p.flags = E), delete p.instance, null == (t = p.party) || delete t.privacy);
                 let { assets: O, party: y, secrets: I, timestamps: v, buttons: C, type: S } = p;
                 if ((null == S && (p.type = f.IIU.PLAYING), null != I)) {
                     let e = i()
@@ -121,7 +121,7 @@ let g = ['349134787773988865'],
                             details: null != (t = p.details) ? t : '',
                             state: null != (n = p.state) ? n : ''
                         };
-                    return null != c && ((d.has_match_secret = !!c.match), (d.has_join_secret = !!c.join)), null != O && (d.has_images = !!(O.large_image || O.small_image)), null != u && ((d.party_max = null != u.size && u.size[1] > 0 ? u.size[1] : void 0), (d.party_id = u.id)), s.default.track(f.rMx.ACTIVITY_UPDATED, d), p;
+                    return (null != c && ((d.has_match_secret = !!c.match), (d.has_join_secret = !!c.join)), null != O && (d.has_images = !!(O.large_image || O.small_image)), null != u && ((d.party_max = null != u.size && u.size[1] > 0 ? u.size[1] : void 0), (d.party_id = u.id)), s.default.track(f.rMx.ACTIVITY_UPDATED, d), p);
                 });
             }
         }

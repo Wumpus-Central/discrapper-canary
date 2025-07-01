@@ -1,10 +1,10 @@
-i.d(e, {
-    AF: () => y,
+(i.d(e, {
+    AF: () => S,
     oL: () => O,
     xH: () => b
 }),
     i(388685),
-    i(781311);
+    i(781311));
 var n = i(255367),
     r = i(73800),
     s = i(512722),
@@ -33,7 +33,7 @@ function f(t, e, i) {
 class m {
     constructor(t, e, i) {
         var n, r, s;
-        f(this, 'channelId', void 0),
+        (f(this, 'channelId', void 0),
             f(this, '_set', void 0),
             f(this, 'get', void 0),
             f(this, 'editorHeight', void 0),
@@ -116,7 +116,7 @@ class m {
             }),
             (this.toggleAppliedTag = (t) => {
                 let { appliedTags: e } = this.get();
-                (e = new Set(e)).has(t) ? e.delete(t) : e.add(t), this.set({ appliedTags: e }), d.Z.changeThreadSettings(this.channelId, { appliedTags: e });
+                ((e = new Set(e)).has(t) ? e.delete(t) : e.add(t), this.set({ appliedTags: e }), d.Z.changeThreadSettings(this.channelId, { appliedTags: e }));
             }),
             (this.setPopoutOpen = (t) => {
                 this.set({ popoutOpen: t });
@@ -131,7 +131,7 @@ class m {
                 this.set({ submitting: t });
             }),
             (this.setFormOpen = (t) => {
-                this.set({ formOpen: t }), p.Z.clearForumSearch(this.channelId);
+                (this.set({ formOpen: t }), p.Z.clearForumSearch(this.channelId));
             }),
             (this.setOnboardingExpanded = (t) => {
                 this.set({ onboardingExpanded: t });
@@ -143,10 +143,10 @@ class m {
                 this.set({ bodyFocused: t });
             }),
             (this.setName = (t) => {
-                this.set({ name: t }), d.Z.changeThreadSettings(this.channelId, { name: t });
+                (this.set({ name: t }), d.Z.changeThreadSettings(this.channelId, { name: t }));
             }),
             (this.setTextAreaState = (t) => {
-                this.set({ textAreaState: t }), d.Z.saveDraft(this.channelId, t.textValue, h.d.FirstThreadMessage);
+                (this.set({ textAreaState: t }), d.Z.saveDraft(this.channelId, t.textValue, h.d.FirstThreadMessage));
             }),
             (this.setHasClickedForm = (t) => {
                 this.set({ hasClickedForm: t });
@@ -154,18 +154,18 @@ class m {
             (this.resetFormState = () => {
                 let t = c.Z.getChannel(this.channelId),
                     e = null == t || null == t.template ? '' : t.template.trim();
-                this.set({
+                (this.set({
                     name: '',
                     textAreaState: (0, u.eK)(e),
                     appliedTags: new Set(),
                     hasClickedForm: !1
                 }),
-                    p.Z.clearForumSearch(this.channelId);
+                    p.Z.clearForumSearch(this.channelId));
             }),
             (this.setFormOpenFromUserAction = () => {
                 if (this.hasClickedForm) return;
                 let t = c.Z.getChannel(this.channelId);
-                null != t &&
+                (null != t &&
                     (0, g.HR)({
                         guildId: t.guild_id,
                         channelId: this.channelId
@@ -174,15 +174,15 @@ class m {
                         hasClickedForm: !0,
                         formOpen: !0
                     }),
-                    p.Z.clearForumSearch(this.channelId);
-            });
+                    p.Z.clearForumSearch(this.channelId));
+            }));
         let o = c.Z.getChannel(t);
         if (null == o) return;
         let l = null != (n = h.Z.getThreadSettings(o.id)) ? n : {},
             m = null == o.template ? '' : o.template.trim(),
             v = h.Z.getDraft(o.id, h.d.FirstThreadMessage),
             O = (0, u.eK)(null != v && '' !== v.trim() ? v : m);
-        (this.name = null != (r = l.name) ? r : ''), (s = new Set(l.appliedTags)), (this.appliedTags = void 0 !== s ? s : new Set()), (this.formOpen = this.name.length > 0 && O.textValue.length > 0), (this.textAreaState = O);
+        ((this.name = null != (r = l.name) ? r : ''), (s = new Set(l.appliedTags)), (this.appliedTags = void 0 !== s ? s : new Set()), (this.formOpen = this.name.length > 0 && O.textValue.length > 0), (this.textAreaState = O));
     }
 }
 let v = r.createContext(null);
@@ -196,9 +196,9 @@ function O(t) {
 }
 function b(t, e) {
     let i = r.useContext(v);
-    return o()(null != i, '[useForumPostComposerStore] Context should not be null'), i(t, e);
+    return (o()(null != i, '[useForumPostComposerStore] Context should not be null'), i(t, e));
 }
-function y() {
+function S() {
     let t = r.useContext(v);
-    return o()(null != t, '[useForumPostComposerStore] Context should not be null'), t;
+    return (o()(null != t, '[useForumPostComposerStore] Context should not be null'), t);
 }

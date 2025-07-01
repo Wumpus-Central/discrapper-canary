@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     CP: () => C,
     T4: () => R,
     XK: () => D,
@@ -7,7 +7,7 @@ n.d(t, {
     i6: () => N,
     yC: () => P
 }),
-    n(388685);
+    n(388685));
 var r = n(261470),
     i = n(535655),
     a = n(344372),
@@ -37,11 +37,11 @@ async function A(e) {
     let n = Date.now(),
         i = null != (t = S.get(e)) ? t : 0;
     if (_.Z.getApplicationFetchState(e) === _.M.FETCHING || _.Z.isInvalidApplication(e) || n < i + T) return;
-    S.set(e, n),
+    (S.set(e, n),
         c.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION',
             applicationId: e
-        });
+        }));
     let a = new r.Z(y, O),
         o = (e, t) =>
             429 === e.status &&
@@ -232,7 +232,7 @@ async function P(e) {
                 },
                 rejectWithError: !0
             });
-            c.Z.dispatch({
+            (c.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS',
                 query: n,
                 guildId: r,
@@ -254,7 +254,7 @@ async function P(e) {
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
                 source: y
             }),
-                null == a || a(e.body.result_count);
+                null == a || a(e.body.result_count));
         } catch (e) {
             c.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE',

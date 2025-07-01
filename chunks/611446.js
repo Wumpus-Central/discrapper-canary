@@ -1,8 +1,8 @@
-n.d(e, {
+(n.d(e, {
     O: () => b,
     default: () => x
 }),
-    n(388685);
+    n(388685));
 var i,
     r = n(255367),
     s = n(73800),
@@ -107,7 +107,7 @@ let x = (t) => {
                             children: (0, r.jsx)(u.Z, {
                                 channelId: n,
                                 onClose: () => {
-                                    e(), E(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
+                                    (e(), E(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS));
                                 }
                             })
                         }),
@@ -124,7 +124,7 @@ let x = (t) => {
                     (0, r.jsx)(f, {
                         text: S.intl.string(S.t.cpT0Cg),
                         onClick: () => {
-                            e(), E(c.NM.USER_SAFETY_TOOLS_DISMISS);
+                            (e(), E(c.NM.USER_SAFETY_TOOLS_DISMISS));
                         }
                     }),
                     N()

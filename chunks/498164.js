@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
+(n.d(t, { Z: () => w }), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(756647),
@@ -33,7 +33,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -49,8 +49,8 @@ function x(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -142,7 +142,7 @@ let w = {
                     d.Z.resolveGiftCode(t, !0, !0)
                         .then((i) => {
                             let { giftCode: a } = i;
-                            P.ZP.focus(),
+                            (P.ZP.focus(),
                                 S.default.track(Z.rMx.OPEN_MODAL, {
                                     type: 'gift_accept',
                                     location: Z.SaU
@@ -151,7 +151,7 @@ let w = {
                                     let { default: e } = await Promise.all([n.e('92446'), n.e('51139')]).then(n.bind(n, 409858));
                                     return (n) => (0, r.jsx)(e, x({ code: t }, n));
                                 }),
-                                e({ giftCode: a });
+                                e({ giftCode: a }));
                         })
                         .catch(() => i(new j.Z({ errorCode: Z.lTL.INVALID_GIFT_CODE }, 'Invalid gift code: '.concat(t))));
                 });
@@ -174,10 +174,10 @@ let w = {
                     null != n && ((0, y.dL)(T.Z.formatPathWithQuery(Z.Z5c.CHANGELOGS(n.date), n.query)), L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.LIBRARY:
-                    (0, y.dL)(Z.Z5c.APPLICATION_LIBRARY), null != n && L(n.fingerprint, (0, A.O)(t));
+                    ((0, y.dL)(Z.Z5c.APPLICATION_LIBRARY), null != n && L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.STORE_HOME:
-                    (0, y.dL)(Z.Z5c.APPLICATION_STORE), null != n && L(n.fingerprint, (0, A.O)(t));
+                    ((0, y.dL)(Z.Z5c.APPLICATION_STORE), null != n && L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.STORE_LISTING:
                     null != n && ((0, y.dL)(Z.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), L(n.fingerprint, (0, A.O)(t)));
@@ -219,7 +219,7 @@ let w = {
                     let r = new URL(Z.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
                     r.search = n.search;
                     let i = (0, O.getOAuth2AuthorizeProps)(r.toString());
-                    if (null != i) return (0, O.openOAuth2ModalWithCreateGuildModal)(i), !0;
+                    if (null != i) return ((0, O.openOAuth2ModalWithCreateGuildModal)(i), !0);
                     return !1;
                 case A.jE.SHOP:
                     null != n &&
@@ -268,7 +268,7 @@ let w = {
             let {
                 args: { handoffToken: t, fingerprint: n }
             } = e;
-            P.ZP.focus(null, !0), (0, s.lx)(t, n);
+            (P.ZP.focus(null, !0), (0, s.lx)(t, n));
         }
     },
     [Z.Etm.CONNECTIONS_CALLBACK]: {

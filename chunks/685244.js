@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(498607),
@@ -12,7 +12,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -20,7 +20,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -28,8 +28,8 @@ function C(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -73,12 +73,12 @@ function f(e) {
                         r,
                         l = {},
                         o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
             return l;
         })(e, ['value', 'children', 'equalityFn', 'style']);
@@ -87,7 +87,7 @@ function f(e) {
         x = (0, u.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         v = (0, u.dQu)(c.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
         O = l.useCallback(() => {
-            g({
+            (g({
                 spring: 1,
                 config: b
             }),
@@ -95,7 +95,7 @@ function f(e) {
                     spring: 0,
                     config: p,
                     delay: 300
-                });
+                }));
         }, [g]);
     l.useEffect(() => {
         null != t && null != h && (o(t, h) || O());

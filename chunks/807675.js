@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     K: () => d,
     y: () => _
 }),
     n(539854),
-    n(35282);
+    n(35282));
 var r = n(593473),
     i = n(243814),
     a = n(149765),
@@ -14,7 +14,7 @@ var r = n(593473),
     u = n(981631);
 function d(e) {
     let t = e.filter((e) => !c.up.includes(e));
-    return t.includes(i.x.BOT) && !t.includes(i.x.APPLICATIONS_COMMANDS) && t.push(i.x.APPLICATIONS_COMMANDS), t;
+    return (t.includes(i.x.BOT) && !t.includes(i.x.APPLICATIONS_COMMANDS) && t.push(i.x.APPLICATIONS_COMMANDS), t);
 }
 function f(e) {
     if (![u.ME, u.I_8, u.o_z].includes(e)) return null != e ? e : void 0;

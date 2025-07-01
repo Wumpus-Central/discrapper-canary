@@ -45,10 +45,10 @@ function d(t, e, r, n) {
             t.extend(e, r);
         } catch (a) {
             throw (
-                (i.logSelectionStateFailure({
+                i.logSelectionStateFailure({
                     anonymizedDom: p(e, function (e) {
                         var r = [];
-                        return e === o && r.push('active element'), e === t.anchorNode && r.push('selection anchor node'), e === t.focusNode && r.push('selection focus node'), r;
+                        return (e === o && r.push('active element'), e === t.anchorNode && r.push('selection anchor node'), e === t.focusNode && r.push('selection focus node'), r);
                     }),
                     extraParams: JSON.stringify(
                         {
@@ -68,12 +68,12 @@ function d(t, e, r, n) {
                     ),
                     selectionState: JSON.stringify(n.toJS(), null, 2)
                 }),
-                a)
+                a
             );
         }
     } else if (t.rangeCount > 0) {
         var c = t.getRangeAt(0);
-        c.setEnd(e, r), t.addRange(c.cloneRange());
+        (c.setEnd(e, r), t.addRange(c.cloneRange()));
     }
 }
 function g(t, e, r, o) {
@@ -107,21 +107,21 @@ t.exports = {
             if (!u.extend && h) {
                 var y = c,
                     v = l;
-                (c = f), (l = p), (f = y), (p = v), (h = !1);
+                ((c = f), (l = p), (f = y), (p = v), (h = !1));
             }
             var m = c === r && n <= l && i >= l,
                 _ = f === r && n <= p && i >= p;
             if (m && _) {
-                u.removeAllRanges(), g(u, e, l - n, t), d(u, e, p - n, t);
+                (u.removeAllRanges(), g(u, e, l - n, t), d(u, e, p - n, t));
                 return;
             }
             if (h) {
                 if ((_ && (u.removeAllRanges(), g(u, e, p - n, t)), m)) {
                     var b = u.focusNode,
                         S = u.focusOffset;
-                    u.removeAllRanges(), g(u, e, l - n, t), d(u, b, S, t);
+                    (u.removeAllRanges(), g(u, e, l - n, t), d(u, b, S, t));
                 }
-            } else m && (u.removeAllRanges(), g(u, e, l - n, t)), _ && d(u, e, p - n, t);
+            } else (m && (u.removeAllRanges(), g(u, e, l - n, t)), _ && d(u, e, p - n, t));
         }
     },
     addFocusToSelection: d

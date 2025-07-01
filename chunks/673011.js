@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => i }), n(388685);
+(n.d(t, { Z: () => i }), n(388685));
 class i {
     has(e) {
         return this.listeners.has(e);
@@ -24,7 +24,7 @@ class i {
     }
     constructor() {
         var e = this;
-        r(this, 'listeners', new Set()),
+        (r(this, 'listeners', new Set()),
             r(this, 'add', (e) => {
                 this.listeners.add(e);
             }),
@@ -38,6 +38,6 @@ class i {
                     !1 === t() && e.remove(r);
                 };
                 e.add(r);
-            });
+            }));
     }
 }

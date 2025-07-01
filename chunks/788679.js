@@ -1,7 +1,7 @@
-n.r(t), n.d(t, { default: () => d });
-var i = n(255367);
+(n.r(t), n.d(t, { default: () => d }));
+var r = n(255367);
 n(73800);
-var r = n(481060),
+var i = n(481060),
     l = n(522664),
     a = n(247206),
     o = n(668058),
@@ -9,35 +9,35 @@ var r = n(481060),
     c = n(160877),
     u = n(388032);
 function d(e) {
-    let { channelId: t, messageId: n, mediaItemUrl: d, embedId: f, transitionState: g, onClose: m } = e,
-        h = (0, s.v)(t, n, d),
-        p = (0, s.Z)(t, n, f),
-        { reportFalsePositive: b, isReportFalsePositiveLoading: O } = (0, o.$)({
-            onSuccess: () => (0, c.s)(m),
+    let { channelId: t, messageId: n, mediaItemUrl: d, embedId: f, transitionState: g, onClose: b } = e,
+        p = (0, s.v)(t, n, d),
+        O = (0, s.Z)(t, n, f),
+        { reportFalsePositive: m, isReportFalsePositiveLoading: y } = (0, o.$)({
+            onSuccess: () => (0, c.s)(b),
             onError: () => {
-                (0, r.showToast)((0, r.createToast)(u.intl.string(u.t.R0RpRU), r.ToastType.FAILURE));
+                (0, i.showToast)((0, i.createToast)(u.intl.string(u.t.R0RpRU), i.ToastType.FAILURE));
             },
             report: () => {
                 (0, l.Uj)(
                     t,
                     n,
-                    h.map((e) => e.id),
-                    p.map((e) => e.id)
+                    p.map((e) => e.id),
+                    O.map((e) => e.id)
                 );
             }
         });
     return (
-        h.length > 0 || p.length > 0 || m(),
-        (0, i.jsx)(c.$, {
+        p.length > 0 || O.length > 0 || b(),
+        (0, r.jsx)(c.$, {
             messageId: n,
             channelId: t,
-            isReportFalsePositiveLoading: O,
+            isReportFalsePositiveLoading: y,
             analyticsContext: a.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-            onConfirmPress: b,
-            attachmentPreview: 1 === h.length && 0 === p.length ? h[0] : void 0,
-            embedPreview: 1 === p.length && 0 === h.length ? p[0] : void 0,
+            onConfirmPress: m,
+            attachmentPreview: 1 === p.length && 0 === O.length ? p[0] : void 0,
+            embedPreview: 1 === O.length && 0 === p.length ? O[0] : void 0,
             transitionState: g,
-            onClose: m
+            onClose: b
         })
     );
 }

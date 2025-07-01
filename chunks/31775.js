@@ -13,21 +13,21 @@ function c() {
 }
 function u(e) {
     if (!(this instanceof u)) return new u(e);
-    'number' == typeof e && (e = { max: e }), e || (e = {});
+    ('number' == typeof e && (e = { max: e }), e || (e = {}));
     var t = l(this, 'max', e.max);
     (!t || 'number' != typeof t || t <= 0) && l(this, 'max', 1 / 0);
     var n = e.length || c;
-    'function' != typeof n && (n = c), l(this, 'lengthCalculator', n), l(this, 'allowStale', e.stale || !1), l(this, 'maxAge', e.maxAge || 0), l(this, 'dispose', e.dispose), this.reset();
+    ('function' != typeof n && (n = c), l(this, 'lengthCalculator', n), l(this, 'allowStale', e.stale || !1), l(this, 'maxAge', e.maxAge || 0), l(this, 'dispose', e.dispose), this.reset());
 }
 function d(e, t, n, r) {
     var i = n.value;
-    _(e, i) && (h(e, n), l(e, 'allowStale') || (i = void 0)), i && t.call(r, i.value, i.key, e);
+    (_(e, i) && (h(e, n), l(e, 'allowStale') || (i = void 0)), i && t.call(r, i.value, i.key, e));
 }
 function f(e, t, n) {
     var r = l(e, 'cache').get(t);
     if (r) {
         var i = r.value;
-        _(e, i) ? (h(e, r), l(e, 'allowStale') || (i = void 0)) : n && l(e, 'lruList').unshiftNode(r), i && (i = i.value);
+        (_(e, i) ? (h(e, r), l(e, 'allowStale') || (i = void 0)) : n && l(e, 'lruList').unshiftNode(r), i && (i = i.value));
     }
     return i;
 }
@@ -41,19 +41,19 @@ function p(e) {
     if (l(e, 'length') > l(e, 'max'))
         for (var t = l(e, 'lruList').tail; l(e, 'length') > l(e, 'max') && null !== t; ) {
             var n = t.prev;
-            h(e, t), (t = n);
+            (h(e, t), (t = n));
         }
 }
 function h(e, t) {
     if (t) {
         var n = t.value;
-        l(e, 'dispose') && l(e, 'dispose').call(this, n.key, n.value), l(e, 'length', l(e, 'length') - n.length), l(e, 'cache').delete(n.key), l(e, 'lruList').removeNode(t);
+        (l(e, 'dispose') && l(e, 'dispose').call(this, n.key, n.value), l(e, 'length', l(e, 'length') - n.length), l(e, 'cache').delete(n.key), l(e, 'lruList').removeNode(t));
     }
 }
 function m(e, t, n, r, i) {
-    (this.key = e), (this.value = t), (this.length = n), (this.now = r), (this.maxAge = i || 0);
+    ((this.key = e), (this.value = t), (this.length = n), (this.now = r), (this.maxAge = i || 0));
 }
-(r =
+((r =
     'function' == typeof Symbol
         ? function (e) {
               return Symbol.for(e);
@@ -63,7 +63,7 @@ function m(e, t, n, r, i) {
           }),
     Object.defineProperty(u.prototype, 'max', {
         set: function (e) {
-            (!e || 'number' != typeof e || e <= 0) && (e = 1 / 0), l(this, 'max', e), p(this);
+            ((!e || 'number' != typeof e || e <= 0) && (e = 1 / 0), l(this, 'max', e), p(this));
         },
         get: function () {
             return l(this, 'max');
@@ -81,7 +81,7 @@ function m(e, t, n, r, i) {
     }),
     Object.defineProperty(u.prototype, 'maxAge', {
         set: function (e) {
-            (!e || 'number' != typeof e || e < 0) && (e = 0), l(this, 'maxAge', e), p(this);
+            ((!e || 'number' != typeof e || e < 0) && (e = 0), l(this, 'maxAge', e), p(this));
         },
         get: function () {
             return l(this, 'maxAge');
@@ -90,14 +90,14 @@ function m(e, t, n, r, i) {
     }),
     Object.defineProperty(u.prototype, 'lengthCalculator', {
         set: function (e) {
-            'function' != typeof e && (e = c),
+            ('function' != typeof e && (e = c),
                 e !== l(this, 'lengthCalculator') &&
                     (l(this, 'lengthCalculator', e),
                     l(this, 'length', 0),
                     l(this, 'lruList').forEach(function (e) {
-                        (e.length = l(this, 'lengthCalculator').call(this, e.value, e.key)), l(this, 'length', l(this, 'length') + e.length);
+                        ((e.length = l(this, 'lengthCalculator').call(this, e.value, e.key)), l(this, 'length', l(this, 'length') + e.length));
                     }, this)),
-                p(this);
+                p(this));
         },
         get: function () {
             return l(this, 'lengthCalculator');
@@ -120,14 +120,14 @@ function m(e, t, n, r, i) {
         t = t || this;
         for (var n = l(this, 'lruList').tail; null !== n; ) {
             var r = n.prev;
-            d(this, e, n, t), (n = r);
+            (d(this, e, n, t), (n = r));
         }
     }),
     (u.prototype.forEach = function (e, t) {
         t = t || this;
         for (var n = l(this, 'lruList').head; null !== n; ) {
             var r = n.next;
-            d(this, e, n, t), (n = r);
+            (d(this, e, n, t), (n = r));
         }
     }),
     (u.prototype.keys = function () {
@@ -145,7 +145,7 @@ function m(e, t, n, r, i) {
             }, this);
     }),
     (u.prototype.reset = function () {
-        l(this, 'dispose') &&
+        (l(this, 'dispose') &&
             l(this, 'lruList') &&
             l(this, 'lruList').length &&
             l(this, 'lruList').forEach(function (e) {
@@ -153,7 +153,7 @@ function m(e, t, n, r, i) {
             }, this),
             l(this, 'cache', new i()),
             l(this, 'lruList', new o()),
-            l(this, 'length', 0);
+            l(this, 'length', 0));
     }),
     (u.prototype.dump = function () {
         return l(this, 'lruList')
@@ -189,7 +189,7 @@ function m(e, t, n, r, i) {
                 u ? (n += ',\n  ') : (r && (n += ',\n'), (u = !0), (n += '\n  '));
                 var i = a.inspect(e.key).split('\n').join('\n  '),
                     l = { value: e.value };
-                e.maxAge !== o && (l.maxAge = e.maxAge), s !== c && (l.length = e.length), _(this, e) && (l.stale = !0), (l = a.inspect(l, t).split('\n').join('\n  ')), (n += i + ' => ' + l);
+                (e.maxAge !== o && (l.maxAge = e.maxAge), s !== c && (l.length = e.length), _(this, e) && (l.stale = !0), (l = a.inspect(l, t).split('\n').join('\n  ')), (n += i + ' => ' + l));
             }),
             (u || r) && (n += '\n'),
             (n += '}')
@@ -199,9 +199,9 @@ function m(e, t, n, r, i) {
         var r = (n = n || l(this, 'maxAge')) ? Date.now() : 0,
             i = l(this, 'lengthCalculator').call(this, t, e);
         if (l(this, 'cache').has(e)) {
-            if (i > l(this, 'max')) return h(this, l(this, 'cache').get(e)), !1;
+            if (i > l(this, 'max')) return (h(this, l(this, 'cache').get(e)), !1);
             var a = l(this, 'cache').get(e).value;
-            return l(this, 'dispose') && l(this, 'dispose').call(this, e, a.value), (a.now = r), (a.maxAge = n), (a.value = t), l(this, 'length', l(this, 'length') + (i - a.length)), (a.length = i), this.get(e), p(this), !0;
+            return (l(this, 'dispose') && l(this, 'dispose').call(this, e, a.value), (a.now = r), (a.maxAge = n), (a.value = t), l(this, 'length', l(this, 'length') + (i - a.length)), (a.length = i), this.get(e), p(this), !0);
         }
         var o = new m(e, t, i, r, n);
         return o.length > l(this, 'max') ? (l(this, 'dispose') && l(this, 'dispose').call(this, e, t), !1) : (l(this, 'length', l(this, 'length') + o.length), l(this, 'lruList').unshift(o), l(this, 'cache').set(e, l(this, 'lruList').head), p(this), !0);
@@ -239,4 +239,4 @@ function m(e, t, n, r, i) {
         l(this, 'cache').forEach(function (t, n) {
             f(e, n, !1);
         });
-    });
+    }));

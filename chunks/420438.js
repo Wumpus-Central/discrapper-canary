@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r,
     i = n(442837),
     l = n(570140);
@@ -31,7 +31,7 @@ class s extends (r = i.ZP.PersistedStore) {
         return a;
     }
 }
-o(s, 'displayName', 'GuildPromptsStore'), o(s, 'persistKey', 'GuildPromptsStore');
+(o(s, 'displayName', 'GuildPromptsStore'), o(s, 'persistKey', 'GuildPromptsStore'));
 let c = new s(l.Z, {
     GUILD_PROMPT_VIEWED: function (e) {
         let { prompt: t, guildId: n } = e,

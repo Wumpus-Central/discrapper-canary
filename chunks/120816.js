@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854), n(388685);
+(n.d(t, { Z: () => v }), n(539854), n(388685));
 var a,
     r,
     l,
@@ -9,28 +9,28 @@ var a,
     d = n(314897),
     u = n(906467);
 let m = 0,
-    p = [],
-    h = 0,
     x = [],
+    h = 0,
+    p = [],
     b = !1;
 class f extends (a = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
     get loggedEvents() {
-        return p;
+        return x;
     }
     get loggedEventsVersion() {
         return h;
     }
     get loggedTriggers() {
-        return x;
+        return p;
     }
     get trackTriggers() {
         return b;
     }
 }
-(l = 'AnalyticsLogStore'),
+((l = 'AnalyticsLogStore'),
     (r = 'displayName') in f
         ? Object.defineProperty(f, r, {
               value: l,
@@ -38,12 +38,12 @@ class f extends (a = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (f[r] = l);
+        : (f[r] = l));
 let v = new f(c.Z, {
     TRACK: function (e) {
         let { event: t, properties: n, fingerprint: a } = e;
         u.Z.isDeveloper &&
-            (p.push({
+            (x.push({
                 key: (m++).toString(),
                 event: t,
                 properties: n,
@@ -51,14 +51,14 @@ let v = new f(c.Z, {
                 timestamp: new Date()
             }),
             h++,
-            p.length > 500 && (p = p.slice(-Math.floor(250))));
+            x.length > 500 && (x = x.slice(-Math.floor(250))));
     },
     TRACK_TRIGGER: function (e) {
         let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: l, previouslyTracked: s } = e;
         u.Z.isDeveloper &&
             b &&
-            (x = [
-                ...x,
+            (p = [
+                ...p,
                 {
                     key: (0, i.Z)(),
                     experimentId: t,
@@ -70,13 +70,13 @@ let v = new f(c.Z, {
                     timestamp: new Date()
                 }
             ]).length > 500 &&
-            x.shift();
+            p.shift();
     },
     SET_TRACK_TRIGGERS: function (e) {
         let { enabled: t } = e;
         b = t;
     },
     ANALYTICS_LOG_CLEAR: function () {
-        (p = []), h++, (x = []);
+        ((x = []), h++, (p = []));
     }
 });

@@ -11,7 +11,7 @@ function s(t) {
 }
 t.exports = (function () {
     function t(t) {
-        (this.data = t), (this.types = t.types ? i(t.types) : []);
+        ((this.data = t), (this.types = t.types ? i(t.types) : []));
     }
     var e = t.prototype;
     return (
@@ -26,7 +26,7 @@ t.exports = (function () {
         }),
         (e.getText = function () {
             var t;
-            return this.data.getData && (this.types.length ? -1 != this.types.indexOf('text/plain') && (t = this.data.getData('text/plain')) : (t = this.data.getData('Text'))), t ? t.replace(a, '\n') : null;
+            return (this.data.getData && (this.types.length ? -1 != this.types.indexOf('text/plain') && (t = this.data.getData('text/plain')) : (t = this.data.getData('Text'))), t ? t.replace(a, '\n') : null);
         }),
         (e.getHTML = function () {
             if (this.data.getData) {

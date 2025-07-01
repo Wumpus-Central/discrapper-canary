@@ -23,7 +23,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function u(e) {
             )),
             i.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -54,7 +54,7 @@ class p extends (i = r.ZP.PersistedStore) {
         return null != (t = g.unlockedAchievements[e]) ? t : null;
     }
 }
-d(p, 'displayName', 'PoggermodeAchievementStore'), d(p, 'persistKey', 'PoggermodeAchievementStore');
+(d(p, 'displayName', 'PoggermodeAchievementStore'), d(p, 'persistKey', 'PoggermodeAchievementStore'));
 let h = new p(s.Z, {
     POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
         let { achievementId: t } = e;
@@ -62,7 +62,7 @@ let h = new p(s.Z, {
         !(function (e) {
             var t, n;
             if (null == g.unlockedAchievements[e])
-                (t = u({}, g.unlockedAchievements)),
+                ((t = u({}, g.unlockedAchievements)),
                     (n = n =
                         {
                             [e]: {
@@ -85,7 +85,7 @@ let h = new p(s.Z, {
                     (g.unlockedAchievements = t),
                     setTimeout(() => {
                         (0, a.D)(e, !0);
-                    }, 2000);
+                    }, 2000));
         })(t);
     }
 });

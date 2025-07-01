@@ -60,7 +60,7 @@ function h(e) {
                                   for (var n = 1; n < arguments.length; n++) {
                                       var t = null != arguments[n] ? arguments[n] : {},
                                           l = Object.keys(t);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (l = l.concat(
                                               Object.getOwnPropertySymbols(t).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -68,7 +68,7 @@ function h(e) {
                                           )),
                                           l.forEach(function (n) {
                                               var l;
-                                              (l = t[n]),
+                                              ((l = t[n]),
                                                   n in e
                                                       ? Object.defineProperty(e, n, {
                                                             value: l,
@@ -76,8 +76,8 @@ function h(e) {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[n] = l);
-                                          });
+                                                      : (e[n] = l));
+                                          }));
                                   }
                                   return e;
                               })({}, t)),

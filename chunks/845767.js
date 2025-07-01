@@ -4,10 +4,10 @@ var r = n(570140),
     l = n(594174);
 class a extends i.Z {
     _initialize() {
-        r.Z.subscribe('POST_CONNECTION_OPEN', this._maybeStartDevSession), r.Z.subscribe('LOGOUT', this._maybeStopDevSession);
+        (r.Z.subscribe('POST_CONNECTION_OPEN', this._maybeStartDevSession), r.Z.subscribe('LOGOUT', this._maybeStopDevSession));
     }
     _terminate() {
-        r.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeStartDevSession), r.Z.unsubscribe('LOGOUT', this._maybeStopDevSession);
+        (r.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeStartDevSession), r.Z.unsubscribe('LOGOUT', this._maybeStopDevSession));
     }
     _maybeStartDevSession() {
         if (null == window.DiscordDevSession || !0 !== window.__METICULOUS_ENABLED) return;

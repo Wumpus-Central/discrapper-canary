@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var i,
     a = n(442837),
     o = n(570140);
@@ -24,16 +24,16 @@ let l = [],
     _ = new Map(),
     p = new Map(),
     h = (e) => {
-        _.set(e.tab, !0), f.set(e.tab, void 0), d.set(e.tab, e.options), d.set(e.tab, e.options), u.set(e.tab, void 0);
+        (_.set(e.tab, !0), f.set(e.tab, void 0), d.set(e.tab, e.options), d.set(e.tab, e.options), u.set(e.tab, void 0));
     },
     m = (e) => {
-        p.set(e.tab, e.shopHome.shopBlocks), c.set(e.tab, Date.now()), _.set(e.tab, !1), f.set(e.tab, void 0), u.set(e.tab, void 0);
+        (p.set(e.tab, e.shopHome.shopBlocks), c.set(e.tab, Date.now()), _.set(e.tab, !1), f.set(e.tab, void 0), u.set(e.tab, void 0));
     },
     g = (e) => {
-        p.set(e.tab, l), _.set(e.tab, !1), f.set(e.tab, e.error), u.set(e.tab, Date.now());
+        (p.set(e.tab, l), _.set(e.tab, !1), f.set(e.tab, e.error), u.set(e.tab, Date.now()));
     },
     E = () => {
-        p.clear(), d.clear(), f.clear(), _.clear(), c.clear(), u.clear(), (r = void 0);
+        (p.clear(), d.clear(), f.clear(), _.clear(), c.clear(), u.clear(), (r = void 0));
     },
     b = (e) => {
         r = e.shopHomeConfigOverride;

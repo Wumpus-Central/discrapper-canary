@@ -1,5 +1,5 @@
 let r;
-n.d(t, { y: () => p }), n(358797), n(388685), n(539854);
+(n.d(t, { y: () => p }), n(358797), n(388685), n(539854));
 var i = n(512722),
     a = n.n(i),
     o = n(956067);
@@ -23,14 +23,14 @@ let u = [],
     d = !1,
     f = new Promise((e) => {
         r = () => {
-            e(), (r = null);
+            (e(), (r = null));
         };
     });
 function _(e, t) {
     let n = null;
     return 0 === e
         ? function () {
-              clearImmediate(n), (n = setImmediate(t));
+              (clearImmediate(n), (n = setImmediate(t)));
           }
         : function () {
               null == n &&
@@ -45,10 +45,10 @@ function _(e, t) {
 }
 class p {
     static initialize() {
-        (d = !0), u.forEach((e) => e.initializeIfNeeded()), null != r && r();
+        ((d = !0), u.forEach((e) => e.initializeIfNeeded()), null != r && r());
     }
     static destroy() {
-        (u.length = 0), l.Z.destroy();
+        ((u.length = 0), l.Z.destroy());
     }
     static getAll() {
         return u;
@@ -63,7 +63,7 @@ class p {
     initializeIfNeeded() {
         if (!this._isInitialized) {
             let e = Date.now();
-            this.initialize(), (this._isInitialized = !0);
+            (this.initialize(), (this._isInitialized = !0));
             let t = Date.now() - e;
             t > 5 && o.Z.mark('\uD83E\uDDA5', this.getName() + '.initialize()', t);
         }
@@ -75,7 +75,7 @@ class p {
                 i = () => {
                     r !== l.Z.getChangeSentinel() && ((r = l.Z.getChangeSentinel()), !1 !== t() && this.emitChange());
                 };
-            (i = _(null != n ? n : 0, i)), e.forEach((e) => e.addChangeListener(i));
+            ((i = _(null != n ? n : 0, i)), e.forEach((e) => e.addChangeListener(i)));
         } else
             e.forEach((e) => {
                 e._syncWiths.push({
@@ -103,7 +103,7 @@ class p {
         this._mustEmitChanges = e;
     }
     constructor(e, t, n) {
-        c(this, '_changeCallbacks', new s.Z()),
+        (c(this, '_changeCallbacks', new s.Z()),
             c(this, '_reactChangeCallbacks', new s.Z()),
             c(this, '_syncWiths', []),
             c(this, '_dispatchToken', void 0),
@@ -122,7 +122,7 @@ class p {
             (this._dispatchToken = this._dispatcher.createToken()),
             this.registerActionHandlers(null != t ? t : {}, n),
             u.push(this),
-            d && this.initializeIfNeeded();
+            d && this.initializeIfNeeded());
     }
 }
-c(p, 'displayName', void 0), c(p, 'initialized', f);
+(c(p, 'displayName', void 0), c(p, 'initialized', f));

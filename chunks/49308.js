@@ -34,7 +34,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,7 +52,7 @@ function I(e) {
         { skusById: f, selectedSkuId: _, application: h } = (0, g.JL)(),
         m = (0, s.e7)([c.Z], () => c.Z.getProduct(_)),
         E = (0, d.o)(m, l);
-    o()(null != _, 'Expected selectedSkuId'), o()(null != h, 'Expected application');
+    (o()(null != _, 'Expected selectedSkuId'), o()(null != h, 'Expected application'));
     let O = f[_];
     return (o()(null != O, 'Expected sku'), null == m)
         ? null

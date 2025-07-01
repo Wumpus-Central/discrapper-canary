@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(997841), n(388685);
+(n.d(t, { Z: () => O }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -38,8 +38,8 @@ function v(e) {
         O = b && v,
         {
             editingMessage: E,
-            editingTextValue: I,
-            editingRichValue: S
+            editingTextValue: S,
+            editingRichValue: I
         } = (0, l.cj)(
             [d.Z],
             () => ({
@@ -55,7 +55,7 @@ function v(e) {
                 let { content: i } = r,
                     l = h.Z.can(y.Plq.MANAGE_MESSAGES, t),
                     s = null != E && null != E.author ? E.author.id : null;
-                return O && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve();
+                return (O && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve());
             },
             [E, O, P, t]
         ),
@@ -68,7 +68,7 @@ function v(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -76,7 +76,7 @@ function v(e) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -84,8 +84,8 @@ function v(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -111,13 +111,13 @@ function v(e) {
             },
             [c]
         );
-    return null != I && null != S
+    return null != S && null != I
         ? (0, r.jsx)(_.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: I,
-              richValue: S,
+              textValue: S,
+              richValue: I,
               onCancel: o.Z.endEditMessage,
               onChange: o.Z.updateEditMessage,
               onConfirmDelete: a.Z.confirmDelete,
@@ -138,7 +138,7 @@ function j(e) {
                 f.S.subscribe(y.CkL.TEXTAREA_FOCUS, g),
                 f.S.subscribe(y.CkL.TEXTAREA_BLUR, b),
                 () => {
-                    f.S.unsubscribe(y.CkL.TEXTAREA_FOCUS, g), f.S.unsubscribe(y.CkL.TEXTAREA_BLUR, b);
+                    (f.S.unsubscribe(y.CkL.TEXTAREA_FOCUS, g), f.S.unsubscribe(y.CkL.TEXTAREA_BLUR, b));
                 }
             ),
             [g, b]

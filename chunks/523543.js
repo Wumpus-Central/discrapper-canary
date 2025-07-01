@@ -429,7 +429,7 @@ e.exports = function (e) {
             $pattern: /\b[\w\.]+/,
             keyword: (function (e, { exceptions: t, when: n } = {}) {
                 let r = n;
-                return (t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : r(e) ? `${e}|0` : e));
+                return ((t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : r(e) ? `${e}|0` : e)));
             })(f, { when: (e) => e.length < 3 }),
             literal: a,
             type: s,

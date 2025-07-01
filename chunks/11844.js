@@ -18,7 +18,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function _(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -34,8 +34,8 @@ function _(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -64,7 +64,7 @@ let E = function () {
         { fractionalState: j } = (0, o.Z)(),
         C = (0, u.y)('guild_boosting_boost_cta', E, j);
     function O(n) {
-        null != e.current && (0, l.Mr3)(e.current),
+        (null != e.current && (0, l.Mr3)(e.current),
             (0, d.u)({
                 analyticsLocation: {
                     page: h.ZY5.GUILD_BOOSTING_USER_SETTINGS,
@@ -74,7 +74,7 @@ let E = function () {
                 },
                 analyticsLocations: t,
                 guild: n
-            });
+            }));
     }
     async function S() {
         e.current = await (0, l.ZDy)(

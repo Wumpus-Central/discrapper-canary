@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(979651),
     i = n(938475),
     a = n(65154);
@@ -42,18 +42,18 @@ class s {
             if (t === this.speaking) return;
             if (t !== a.Dg.NONE) {
                 let e = Object.values(r.Z.getVoiceStatesForChannel(this.channelId)).filter((e) => !e.selfDeaf && !e.deaf);
-                e.forEach((e) => this.totalListeners.add(e.userId)), (this.maxListenerCount = Math.max(e.length, this.maxListenerCount));
+                (e.forEach((e) => this.totalListeners.add(e.userId)), (this.maxListenerCount = Math.max(e.length, this.maxListenerCount)));
             }
             this.speaking = t;
         }
     }
     setChannelId(e) {
         if (e === this.channelId) return;
-        (this.channelId = e), (this.totalParticipants = new Set([this.userId]));
+        ((this.channelId = e), (this.totalParticipants = new Set([this.userId])));
         let t = Object.keys(r.Z.getVoiceStatesForChannel(this.channelId));
-        t.forEach((e) => this.totalParticipants.add(e)), (this.maxVoiceStateCount = t.length), (this.speaking = a.Dg.NONE), (this.maxListenerCount = 0), (this.totalListeners = new Set()), (this.maxSpeakerCount = 0), (this.totalSpeakers = {});
+        (t.forEach((e) => this.totalParticipants.add(e)), (this.maxVoiceStateCount = t.length), (this.speaking = a.Dg.NONE), (this.maxListenerCount = 0), (this.totalListeners = new Set()), (this.maxSpeakerCount = 0), (this.totalSpeakers = {}));
     }
     constructor(e, t) {
-        o(this, 'userId', void 0), o(this, 'channelId', void 0), o(this, 'maxVoiceStateCount', 1), o(this, 'totalParticipants', void 0), o(this, 'speaking', a.Dg.NONE), o(this, 'maxListenerCount', 0), o(this, 'totalListeners', void 0), o(this, 'maxSpeakerCount', 0), o(this, 'totalSpeakers', void 0), (this.userId = e), this.setChannelId(t);
+        (o(this, 'userId', void 0), o(this, 'channelId', void 0), o(this, 'maxVoiceStateCount', 1), o(this, 'totalParticipants', void 0), o(this, 'speaking', a.Dg.NONE), o(this, 'maxListenerCount', 0), o(this, 'totalListeners', void 0), o(this, 'maxSpeakerCount', 0), o(this, 'totalSpeakers', void 0), (this.userId = e), this.setChannelId(t));
     }
 }

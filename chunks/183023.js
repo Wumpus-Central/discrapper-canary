@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Az: () => $,
     Oe: () => ee,
     UA: () => en,
@@ -6,7 +6,7 @@ n.d(t, {
     vk: () => et
 }),
     n(388685),
-    n(953529);
+    n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -67,7 +67,7 @@ function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -75,7 +75,7 @@ function K(e) {
             )),
             r.forEach(function (t) {
                 W(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -83,11 +83,11 @@ function z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -354,12 +354,12 @@ let X = 32,
                 isDiscoverable: Q,
                 shouldHideRoleSubscriptionCTA: ea,
                 onOpenPremiumSettings: () => {
-                    C(),
+                    (C(),
                         k.default.track(V.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_page: $.page,
                             location_section: $.section
                         }),
-                        (0, R.z)();
+                        (0, R.z)());
                 }
             }),
             ec = X && en && !ea && ((z && et) || !z),
@@ -380,11 +380,11 @@ let X = 32,
                         C();
                         let e = I.id;
                         try {
-                            await d.Z.joinGuild(e), d.Z.transitionToGuildSync(e);
+                            (await d.Z.joinGuild(e), d.Z.transitionToGuildSync(e));
                         } catch (e) {}
                     },
                     t = () => {
-                        C(), (null == T ? void 0 : T.id) != null && d.Z.transitionToGuildSync(T.id, { sourceLocationStack: [_.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] }, F.oC.ROLE_SUBSCRIPTIONS);
+                        (C(), (null == T ? void 0 : T.id) != null && d.Z.transitionToGuildSync(T.id, { sourceLocationStack: [_.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] }, F.oC.ROLE_SUBSCRIPTIONS));
                     },
                     n = !X && Q,
                     i = () =>

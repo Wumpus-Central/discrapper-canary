@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(953529);
+(n.d(t, { Z: () => f }), n(388685), n(953529));
 var s = n(255367),
     i = n(73800),
     r = n(120356),
@@ -116,7 +116,7 @@ class C extends i.PureComponent {
         );
     }
     constructor(e) {
-        super(e),
+        (super(e),
             I(this, '_animItem', null),
             I(this, '_lottieRef', void 0),
             I(this, 'headerId', (0, o.Z)()),
@@ -145,7 +145,7 @@ class C extends i.PureComponent {
             (this.state = {
                 animated: !1,
                 phone: ''
-            });
+            }));
     }
 }
 let f = C;

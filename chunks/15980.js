@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var i,
     r,
     s,
@@ -18,7 +18,7 @@ class u extends (i = l.ZP.Store) {
         return d;
     }
 }
-(s = 'WebAuthnStore'),
+((s = 'WebAuthnStore'),
     (r = 'displayName') in u
         ? Object.defineProperty(u, r, {
               value: s,
@@ -26,13 +26,13 @@ class u extends (i = l.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (u[r] = s);
+        : (u[r] = s));
 let m = new u(a.Z, {
     LOGOUT: function () {
-        (d = []), (c = !1);
+        ((d = []), (c = !1));
     },
     MFA_WEBAUTHN_CREDENTIALS_LOADED(e) {
-        (d = e.credentials), (c = !0);
+        ((d = e.credentials), (c = !0));
     },
     AUTHENTICATOR_CREATE(e) {
         let { credential: t } = e;

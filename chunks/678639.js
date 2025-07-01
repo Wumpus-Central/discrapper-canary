@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(642613);
+(n.d(t, { Z: () => _ }), n(388685), n(642613));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -9,9 +9,9 @@ var a = n(255367),
     d = n(428530),
     u = n(484036),
     m = n(681619),
-    p = n(621060),
+    x = n(621060),
     h = n(616257),
-    x = n(564799);
+    p = n(564799);
 function b(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
@@ -30,7 +30,7 @@ function f(e) {
             );
         }, [t, n]),
         (0, a.jsx)(o.zJl, {
-            className: x.inspectorContainer,
+            className: p.inspectorContainer,
             children: (0, a.jsx)(d.Z, { data: l })
         })
     );
@@ -38,23 +38,23 @@ function f(e) {
 let v = [
         {
             key: 'name',
-            cellClassName: x.__invalid_eventColumn,
+            cellClassName: p.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
             }
         }
     ],
-    _ = [
+    j = [
         {
             id: 'local',
             name: 'Local Variables',
-            group: p.v0.NONE,
+            group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
                 return null == t.__getLocalVars
                     ? (0, a.jsxs)('div', {
-                          className: x.inspectorContainer,
+                          className: p.inspectorContainer,
                           children: ['Store is missing ', (0, a.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
                     : (0, a.jsx)(f, {
@@ -66,7 +66,7 @@ let v = [
         {
             id: 'instance',
             name: 'Store Instance',
-            group: p.v0.NONE,
+            group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
                 return (0, a.jsx)(f, {
@@ -78,15 +78,15 @@ let v = [
     ];
 function g(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, p.ZP)({ tabs: _ }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: j }, []);
     return (0, a.jsxs)(u.Z, {
-        className: x.subPanel,
+        className: p.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, a.jsx)(r, {}),
             (0, a.jsxs)(c.ZP, {
-                className: i()(h.headerBar, x.subPanelHeaderBar),
+                className: i()(h.headerBar, p.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
                         icon: o.lO_,
@@ -99,7 +99,7 @@ function g(e) {
         ]
     });
 }
-function j() {
+function _() {
     let e = r.useRef(null),
         [t, n] = r.useState(''),
         l = s.yh.getAll(),
@@ -121,15 +121,15 @@ function j() {
                 })(e, t)
             ),
         [d, u] = r.useState(),
-        p = l.find((e) => e._dispatchToken === d);
+        x = l.find((e) => e._dispatchToken === d);
     return (0, a.jsxs)('div', {
         ref: e,
-        className: i()(h.panel, x.panel),
+        className: i()(h.panel, p.panel),
         children: [
             (0, a.jsx)('div', {
-                className: x.toolbar,
+                className: p.toolbar,
                 children: (0, a.jsx)(o.E1j, {
-                    className: x.searchBar,
+                    className: p.searchBar,
                     size: o.E1j.Sizes.SMALL,
                     query: t,
                     onChange: n,
@@ -144,9 +144,9 @@ function j() {
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),
-            null != p &&
+            null != x &&
                 (0, a.jsx)(g, {
-                    store: p,
+                    store: x,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })
         ]

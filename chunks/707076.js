@@ -217,13 +217,13 @@ function v() {
                                   onClick: function () {
                                       if (null != e) {
                                           var t, n;
-                                          g.default.track(
+                                          (g.default.track(
                                               E.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                                               ((t = (function (e) {
                                                   for (var t = 1; t < arguments.length; t++) {
                                                       var n = null != arguments[t] ? arguments[t] : {},
                                                           l = Object.keys(n);
-                                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                                           (l = l.concat(
                                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -231,7 +231,7 @@ function v() {
                                                           )),
                                                           l.forEach(function (t) {
                                                               var l;
-                                                              (l = n[t]),
+                                                              ((l = n[t]),
                                                                   t in e
                                                                       ? Object.defineProperty(e, t, {
                                                                             value: l,
@@ -239,8 +239,8 @@ function v() {
                                                                             configurable: !0,
                                                                             writable: !0
                                                                         })
-                                                                      : (e[t] = l);
-                                                          });
+                                                                      : (e[t] = l));
+                                                          }));
                                                   }
                                                   return e;
                                               })({}, (0, o.hH)(e))),
@@ -264,7 +264,7 @@ function v() {
                                                     }),
                                               t)
                                           ),
-                                              (0, f.IG)(e, S.PG.LANDING);
+                                              (0, f.IG)(e, S.PG.LANDING));
                                       }
                                   },
                                   color: a.zxk.Colors.BRAND,

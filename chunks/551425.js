@@ -36,7 +36,7 @@ let g = l.EFr.SIZE_152,
                     for (var e = 1; e < arguments.length; e++) {
                         var n = null != arguments[e] ? arguments[e] : {},
                             i = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -44,7 +44,7 @@ let g = l.EFr.SIZE_152,
                             )),
                             i.forEach(function (e) {
                                 var i;
-                                (i = n[e]),
+                                ((i = n[e]),
                                     e in t
                                         ? Object.defineProperty(t, e, {
                                               value: i,
@@ -52,8 +52,8 @@ let g = l.EFr.SIZE_152,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (t[e] = i);
-                            });
+                                        : (t[e] = i));
+                            }));
                     }
                     return t;
                 })({}, d)),

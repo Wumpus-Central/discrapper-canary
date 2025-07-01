@@ -62,7 +62,7 @@ function l(e) {
                         t = o.slice(0, -e.length);
                     '%' === e ? ((o = new Number(t / 100)).type = '<percentage>') : (((o = new Number(t * c[e])).type = '<angle>'), (o.unit = e));
                 } else t.test(o) ? ((o = new Number(o)).type = '<number>') : 'none' === o && ((o = new Number(NaN)).none = !0);
-                a.startsWith('/') && ((o = o instanceof Number ? o : new Number(o)).alpha = !0), 'object' == typeof o && o instanceof Number && (o.raw = n), e.push(o);
+                (a.startsWith('/') && ((o = o instanceof Number ? o : new Number(o)).alpha = !0), 'object' == typeof o && o instanceof Number && (o.raw = n), e.push(o));
             }),
             {
                 name: a[1].toLowerCase(),
@@ -89,7 +89,7 @@ function d(e) {
             let t = (e = e.trim()).match(/^(<[a-z]+>)\[(-?[.\d]+),\s*(-?[.\d]+)\]?$/);
             if (t) {
                 let e = new String(t[1]);
-                return (e.range = [+t[2], +t[3]]), e;
+                return ((e.range = [+t[2], +t[3]]), e);
             }
             return e;
         })

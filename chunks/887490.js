@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     C0: () => E,
     Ew: () => O,
     Jz: () => b,
@@ -9,7 +9,7 @@ n.d(t, {
     lP: () => S,
     q: () => m
 }),
-    n(388685);
+    n(388685));
 var r = n(512722),
     i = n.n(r),
     a = n(327432),
@@ -33,7 +33,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,11 +49,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -72,11 +72,11 @@ n(789952);
 let _ = !1;
 {
     let e = o.F3.findDocumentOrShadowRoot;
-    (o.F3.findDocumentOrShadowRoot = (t) => {
+    ((o.F3.findDocumentOrShadowRoot = (t) => {
         var n, r;
         return null != (r = null == (n = t.windowContext) ? void 0 : n.renderWindow.document) ? r : e(t);
     }),
-        (_ = !0);
+        (_ = !0));
 }
 let p = f(u({}, a.ML, o.F3), {
         richValue: (e) => e.children,
@@ -256,7 +256,7 @@ let p = f(u({}, a.ML, o.F3), {
     m = f(u({}, a.W_), {
         updateElement(e, t) {
             let n = p.node(e, t[1]);
-            return i()(!p.isEditor(t[0]), 'Element is the root node'), i()(null != n, 'Failed to find element'), i()(m.isElement(n[0]), 'Node at this path is no longer an element'), i()(n[0].type === t[0].type, 'Node at this path is a different type'), n;
+            return (i()(!p.isEditor(t[0]), 'Element is the root node'), i()(null != n, 'Failed to find element'), i()(m.isElement(n[0]), 'Node at this path is no longer an element'), i()(n[0].type === t[0].type, 'Node at this path is a different type'), n);
         },
         markdown(e, t, n) {
             var r;
@@ -306,7 +306,7 @@ let p = f(u({}, a.ML, o.F3), {
         },
         clamp(e, t) {
             let [n, r] = y.edges(t);
-            return b.isBefore(e, n) && (e = n), b.isAfter(e, r) && (e = r), e;
+            return (b.isBefore(e, n) && (e = n), b.isAfter(e, r) && (e = r), e);
         }
     }),
     y = f(u({}, a.e6), {
@@ -407,7 +407,7 @@ let p = f(u({}, a.ML, o.F3), {
                 at: t,
                 match: (t) => p.isInline(e, t) && !p.isVoid(e, t) && t !== i[0]
             });
-            null != a && (r = p.after(e, a[1])), null == r && (r = p.start(e, i[1]));
+            (null != a && (r = p.after(e, a[1])), null == r && (r = p.start(e, i[1])));
             let o = {
                     anchor: r,
                     focus: t
@@ -429,7 +429,7 @@ let p = f(u({}, a.ML, o.F3), {
                 at: t,
                 match: (t) => p.isInline(e, t) && !p.isVoid(e, t) && t !== i[0]
             });
-            null != a && (r = p.before(e, a[1])), null == r && (r = p.end(e, i[1]));
+            (null != a && (r = p.before(e, a[1])), null == r && (r = p.end(e, i[1])));
             let o = {
                     anchor: t,
                     focus: r

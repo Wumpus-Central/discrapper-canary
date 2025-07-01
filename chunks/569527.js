@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
+(n.d(t, { Z: () => T }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282));
 var r = n(255367),
     a = n(73800),
     i = n(114858),
@@ -65,7 +65,7 @@ function T(e) {
         );
     a.useEffect(() => {
         var e;
-        null == (e = L.current) || e.scrollTo({ to: 0 }),
+        (null == (e = L.current) || e.scrollTo({ to: 0 }),
             k !== Z.current &&
                 ((Z.current = k),
                 h.yC({
@@ -81,7 +81,7 @@ function T(e) {
                     source: s.F.APP_DIRECTORY
                 },
                 onSuccessCallback: z
-            });
+            }));
     }, [D, w, k, z]);
     let { fetchState: B, searchResults: U } = (0, o.cj)([b.Z], () => ({
             fetchState: b.Z.getFetchState({
@@ -109,7 +109,7 @@ function T(e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
                               r = Object.keys(n);
-                          'function' == typeof Object.getOwnPropertySymbols &&
+                          ('function' == typeof Object.getOwnPropertySymbols &&
                               (r = r.concat(
                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -117,7 +117,7 @@ function T(e) {
                               )),
                               r.forEach(function (t) {
                                   var r;
-                                  (r = n[t]),
+                                  ((r = n[t]),
                                       t in e
                                           ? Object.defineProperty(e, t, {
                                                 value: r,
@@ -125,8 +125,8 @@ function T(e) {
                                                 configurable: !0,
                                                 writable: !0
                                             })
-                                          : (e[t] = r);
-                              });
+                                          : (e[t] = r));
+                              }));
                       }
                       return e;
                   })({ [x.MU]: e.totalCount }, e.countsByCategory)
@@ -146,7 +146,7 @@ function T(e) {
         ),
         W = a.useCallback(
             (e) => {
-                (0, v.zZ)(E.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+                ((0, v.zZ)(E.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                     category: e.name,
                     category_id: e.id,
                     current_page: y.m_.SEARCH
@@ -154,20 +154,20 @@ function T(e) {
                     (0, I.pR)({
                         query: k,
                         categoryId: e.id
-                    });
+                    }));
             },
             [k]
         ),
         X = a.useCallback(
             (e, t) => {
-                (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                ((0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: y.m_.SEARCH,
                     application_id: e,
                     load_id: null == H ? void 0 : H.loadId,
                     search_term: k,
                     position: t
                 }),
-                    n(e);
+                    n(e));
             },
             [null == H ? void 0 : H.loadId, n, k]
         ),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(570140),
     i = n(317770),
     l = n(728345),
@@ -16,15 +16,15 @@ class s extends i.Z {
     }
     constructor(...e) {
         var t, n;
-        super(...e),
+        (super(...e),
             (t = 'handlePostConnectionOpen'),
             (n = () => {
                 let e = a.Z.getGameRelationships(),
                     t = new Set();
-                e.values().forEach((e) => {
+                (e.values().forEach((e) => {
                     e.type === o.OGo.PENDING_INCOMING && t.add(e.applicationId);
                 }),
-                    l.ZP.fetchApplications(Array.from(t));
+                    l.ZP.fetchApplications(Array.from(t)));
             }),
             t in this
                 ? Object.defineProperty(this, t, {
@@ -33,7 +33,7 @@ class s extends i.Z {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = n);
+                : (this[t] = n));
     }
 }
 let c = new s();

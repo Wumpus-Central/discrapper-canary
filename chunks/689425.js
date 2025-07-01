@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -129,7 +129,7 @@ class _ extends (r = a.PureComponent) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             c(this, '_ref', a.createRef()),
             c(this, '_height', 0),
             c(this, '_width', 0),
@@ -149,20 +149,20 @@ class _ extends (r = a.PureComponent) {
                 let { position: i } = this.state,
                     a = e.target;
                 if (e.button === l.AeJ.PRIMARY && (t || (null != r && a.matches(r)))) {
-                    this.grabDimensions(),
+                    (this.grabDimensions(),
                         (this._dragStart = {
                             x: e.clientX,
                             y: e.clientY
                         }),
                         (this._offsetX = e.clientX - i.x._value),
-                        (this._offsetY = e.clientY - i.y._value);
+                        (this._offsetY = e.clientY - i.y._value));
                     let t = e.nativeEvent.view;
-                    this._removeListeners(),
+                    (this._removeListeners(),
                         t.addEventListener('mousemove', this.handleMouseMove),
                         t.addEventListener('mouseup', this.handleMouseUp),
                         (this._removeListeners = () => {
-                            t.removeEventListener('mousemove', this.handleMouseMove), t.removeEventListener('mouseup', this.handleMouseUp);
-                        });
+                            (t.removeEventListener('mousemove', this.handleMouseMove), t.removeEventListener('mouseup', this.handleMouseUp));
+                        }));
                 }
             }),
             c(this, 'handleMouseMove', (e) => {
@@ -170,7 +170,7 @@ class _ extends (r = a.PureComponent) {
                 let { onDragStart: t, onDrag: n, disabled: r } = this.props;
                 if (r) return;
                 let { dragging: i, dragging: a } = this.state;
-                !i &&
+                (!i &&
                     d(this._dragStart, {
                         x: e.clientX,
                         y: e.clientY
@@ -188,17 +188,17 @@ class _ extends (r = a.PureComponent) {
                             !1
                         ),
                         this.setState({ dragging: i }, () => {
-                            a || null == t || t(e.clientX, e.clientY), null == n || n(e.clientX, e.clientY);
-                        }));
+                            (a || null == t || t(e.clientX, e.clientY), null == n || n(e.clientX, e.clientY));
+                        })));
             }),
             c(this, 'handleMouseUp', (e) => {
-                this._removeListeners(),
+                (this._removeListeners(),
                     this.state.dragging &&
                         this.setState({ dragging: !1 }, () => {
                             let { onDragEnd: t } = this.props;
                             null == t || t(e.clientX, e.clientY);
-                        });
-            });
+                        }));
+            }));
         let t = new o.Z.Value(e.initialX),
             n = new o.Z.Value(e.initialY);
         this.state = {

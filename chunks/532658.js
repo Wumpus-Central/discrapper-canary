@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => Q,
     e5: () => T,
     px: () => M
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -39,7 +39,7 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function A(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -55,8 +55,8 @@ function A(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -149,10 +149,10 @@ function W(e, t) {
         }),
         (0, O.ZP)(() => {
             let e = setTimeout(() => {
-                r(!1),
+                (r(!1),
                     setTimeout(() => {
                         o(!1);
-                    }, 16);
+                    }, 16));
             }, 2600);
             return () => clearTimeout(e);
         }),
@@ -497,7 +497,7 @@ let F = i.memo(function (e) {
             { user: h, member: y, voiceState: P, connectedOn: x } = o,
             [S, I] = i.useState(null),
             [E, Z] = i.useState(null);
-        i.useEffect(() => {
+        (i.useEffect(() => {
             c && Z(null);
         }, [c]),
             i.useEffect(() => {
@@ -506,7 +506,7 @@ let F = i.memo(function (e) {
                         type: V.Qu.GO_LIVE,
                         value: V.bk.STREAM_PREVIEWED
                     });
-            }, [S]);
+            }, [S]));
         let N = (e) => {
                 I(e);
             },
@@ -547,7 +547,7 @@ let F = i.memo(function (e) {
                     var n, r;
                     let i = null == (n = w.Z.getWidget(t)) ? void 0 : n.layoutId,
                         o = null != i ? (null == (r = w.Z.getWidgetsForLayout(i)) ? void 0 : r.find((e) => e.type === k.Odu.GO_LIVE)) : null;
-                    null == o ||
+                    (null == o ||
                         o.pinned ||
                         ((0, d.xh)(o.id),
                         f.Z.track(k.rMx.OVERLAY_PIN_TOGGLED, {
@@ -563,7 +563,7 @@ let F = i.memo(function (e) {
                                 type: V.Qu.GO_LIVE,
                                 value: V.bk.ENABLED,
                                 userId: e.ownerId
-                            });
+                            }));
                 },
                 [l, t]
             );

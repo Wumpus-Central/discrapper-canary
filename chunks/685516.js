@@ -15,7 +15,7 @@ var r = n(740078),
     m = n(894417);
 function g(e, t) {
     var n = (0, d.Z)(e, !1, 'fixed' === t);
-    return (n.top = n.top + e.clientTop), (n.left = n.left + e.clientLeft), (n.bottom = n.top + e.clientHeight), (n.right = n.left + e.clientWidth), (n.width = e.clientWidth), (n.height = e.clientHeight), (n.x = n.left), (n.y = n.top), n;
+    return ((n.top = n.top + e.clientTop), (n.left = n.left + e.clientLeft), (n.bottom = n.top + e.clientHeight), (n.right = n.left + e.clientWidth), (n.width = e.clientWidth), (n.height = e.clientHeight), (n.x = n.left), (n.y = n.top), n);
 }
 function E(e, t, n) {
     return t === r.Pj ? (0, h.Z)((0, i.Z)(e, n)) : (0, u.kK)(t) ? g(t, n) : (0, h.Z)((0, a.Z)((0, l.Z)(e)));
@@ -35,9 +35,9 @@ function y(e, t, n, r) {
         o = i.reduce(
             function (t, n) {
                 var i = E(e, n, r);
-                return (t.top = (0, m.Fp)(i.top, t.top)), (t.right = (0, m.VV)(i.right, t.right)), (t.bottom = (0, m.VV)(i.bottom, t.bottom)), (t.left = (0, m.Fp)(i.left, t.left)), t;
+                return ((t.top = (0, m.Fp)(i.top, t.top)), (t.right = (0, m.VV)(i.right, t.right)), (t.bottom = (0, m.VV)(i.bottom, t.bottom)), (t.left = (0, m.Fp)(i.left, t.left)), t);
             },
             E(e, a, r)
         );
-    return (o.width = o.right - o.left), (o.height = o.bottom - o.top), (o.x = o.left), (o.y = o.top), o;
+    return ((o.width = o.right - o.left), (o.height = o.bottom - o.top), (o.x = o.left), (o.y = o.top), o);
 }

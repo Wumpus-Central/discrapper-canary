@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -30,7 +30,7 @@ function f() {
             children: (0, i.jsx)(u.Z, {
                 selectedBackgroundOption: f,
                 onSelectBackgroundOption: (n) => {
-                    (t.current = !0), (_.current = n), b(n), (0, d.wG)(n, { location: e.location }).catch(h.dG4);
+                    ((t.current = !0), (_.current = n), b(n), (0, d.wG)(n, { location: e.location }).catch(h.dG4));
                 },
                 currentDeviceId: n,
                 smallerBackgroundOptions: !1

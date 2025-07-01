@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(433517),
     i = n(147913),
     a = n(594174),
@@ -33,11 +33,11 @@ function _() {
 }
 class p extends i.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'actions', { POST_CONNECTION_OPEN: () => this.onPostConnectionOpen() }),
             c(this, 'onPostConnectionOpen', () => {
                 _() && (0, s.a)(l.Kq.APP_START, !0, !1) && f();
-            });
+            }));
     }
 }
 let h = new p();

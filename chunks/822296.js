@@ -50,7 +50,7 @@ function h(e) {
                                     size: 'small' === E ? s.zxk.Sizes.MEDIUM : s.zxk.Sizes.LARGE,
                                     color: s.zxk.Colors.PRIMARY,
                                     onClick: (e) => {
-                                        e.stopPropagation(), m();
+                                        (e.stopPropagation(), m());
                                     },
                                     children: (0, r.jsx)(s.Text, {
                                         color: 'none',

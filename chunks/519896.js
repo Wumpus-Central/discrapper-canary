@@ -1,4 +1,4 @@
-l.r(n), l.d(n, { SubscriptionDetailsModal: () => j }), l(953529);
+(l.r(n), l.d(n, { SubscriptionDetailsModal: () => j }), l(953529));
 var t = l(255367),
     r = l(73800),
     i = l(269210),

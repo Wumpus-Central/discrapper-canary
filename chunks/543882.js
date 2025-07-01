@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -26,29 +26,29 @@ let d = 120000,
     h = {},
     m = new Set();
 function g() {
-    (p = {}), (h = {});
+    ((p = {}), (h = {}));
 }
 function E(e) {
     let { streamKey: t, previewURL: n } = e;
-    (p[t] = {
+    ((p[t] = {
         url: n,
         expires: Date.now() + d
     }),
         (h[t] = 0),
-        m.delete(t);
+        m.delete(t));
 }
 function b(e) {
     let { streamKey: t, retryAfter: n } = e;
-    (p[t] = {
+    ((p[t] = {
         url: null,
         expires: Date.now() + (null != n ? n : f * h[t])
     }),
-        m.delete(t);
+        m.delete(t));
 }
 function y(e) {
     var t;
     let { streamKey: n } = e;
-    (h[n] = (null != (t = h[n]) ? t : 0) + 1), m.add(n);
+    ((h[n] = (null != (t = h[n]) ? t : 0) + 1), m.add(n));
 }
 function O(e) {
     let { voiceStates: t } = e;
@@ -63,7 +63,7 @@ function O(e) {
                 channelId: i,
                 ownerId: n
             });
-            return delete p[o], delete h[o], !0;
+            return (delete p[o], delete h[o], !0);
         }, !1)
     );
 }

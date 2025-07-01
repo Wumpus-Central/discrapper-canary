@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(147913),
     i = n(358221),
     a = n(729052),
@@ -32,7 +32,7 @@ class u extends r.Z {
         }
     }
     constructor(...e) {
-        super(...e), c(this, 'actions', { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect });
+        (super(...e), c(this, 'actions', { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect }));
     }
 }
 let d = new u();

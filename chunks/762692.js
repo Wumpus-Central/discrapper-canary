@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(539854);
+(n.d(t, { Z: () => u }), n(539854));
 var r = n(544891),
     i = n(343817),
     l = n(570140),
@@ -34,7 +34,7 @@ let u = {
             if (h) {
                 var f;
                 let n = [];
-                null == (f = t.body.categories) ||
+                (null == (f = t.body.categories) ||
                     f.slice(0, 8).forEach((e) => {
                         let { id: t, count: r } = e;
                         n.push([Number(t), r]);
@@ -43,7 +43,7 @@ let u = {
                         type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS',
                         query: e,
                         categoryCounts: n
-                    });
+                    }));
             }
             l.Z.dispatch({
                 type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS',
@@ -55,7 +55,7 @@ let u = {
             });
         } catch (r) {
             let t = new i.Hx(r);
-            a.m9({
+            (a.m9({
                 categoryId: n,
                 error: t,
                 willRequestRetry: !1,
@@ -73,7 +73,7 @@ let u = {
                     categoryId: n,
                     languageCode: u,
                     error: r
-                });
+                }));
         }
     },
     clearSearchResults: function (e) {

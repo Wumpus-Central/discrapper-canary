@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => M }), n(388685);
+(n.d(t, { Z: () => M }), n(388685));
 var i,
     a = n(442837),
     o = n(433517),
@@ -48,7 +48,7 @@ function A() {
 }
 function N(e) {
     if (null == e || null == I.get(e)) return !1;
-    I.delete(e), (T = new Set(T)).delete(e);
+    (I.delete(e), (T = new Set(T)).delete(e));
 }
 function C(e) {
     let { channelId: t, ringing: n } = e;
@@ -121,7 +121,7 @@ function x() {
 }
 class k extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, p.Z), this.syncWith([p.Z], L), this.syncWith([u.Z], L), this.syncWith([l.Z], x);
+        (this.waitFor(_.Z, p.Z), this.syncWith([p.Z], L), this.syncWith([u.Z], L), this.syncWith([l.Z], x));
     }
     getIncomingCalls() {
         return S ? v : Array.from(I.values());

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(481060),
@@ -28,13 +28,13 @@ function p(e) {
         ? (0, r.jsx)('div', {
               className: d.badge,
               onMouseEnter: () => {
-                  (f.current = !0), g(!0);
+                  ((f.current = !0), g(!0));
               },
               onMouseLeave: () => {
-                  (f.current = !1),
+                  ((f.current = !1),
                       setTimeout(() => {
                           f.current || g(!1);
-                      }, 100);
+                      }, 100));
               },
               children: (0, r.jsx)(o.yRy, {
                   targetElementRef: p,

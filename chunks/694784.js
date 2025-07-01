@@ -16,7 +16,7 @@ async function u(e) {
         m = !1;
     if (null == p && null != n && null == a.Z.getGuild(n))
         try {
-            await (0, s.Ub)(n, { object: c.qAy.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }), (m = !0), await (0, r.V)(n), (p = l.Z.getChannel(u));
+            (await (0, s.Ub)(n, { object: c.qAy.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }), (m = !0), await (0, r.V)(n), (p = l.Z.getChannel(u)));
         } catch (e) {}
     o.default.track(c.rMx.FORWARD_BREADCRUMB_CLICKED, {
         guild_id: null == (t = l.Z.getBasicChannel(e.channel_id)) ? void 0 : t.guild_id,

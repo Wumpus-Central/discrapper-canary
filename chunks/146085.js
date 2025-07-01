@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     L_: () => c,
     N: () => s,
     gl: () => l,
     xS: () => o,
     yP: () => a
 }),
-    n(388685);
+    n(388685));
 var r = n(149765),
     i = n(981631);
 let a = r.$e(i.Plq.MANAGE_CHANNELS, i.Plq.MUTE_MEMBERS, i.Plq.MOVE_MEMBERS);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(361932), n(187205), n(388685), n(642613), n(781311), n(539854), n(472816), n(794429);
+(n.d(t, { Z: () => W }), n(361932), n(187205), n(388685), n(642613), n(781311), n(539854), n(472816), n(794429));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -258,7 +258,7 @@ function U(e) {
                                 })
                                 .reduce((e, t) => {
                                     let n = S.default.getUser(t);
-                                    return null != n && e.push(n), e;
+                                    return (null != n && e.push(n), e);
                                 }, []),
                         []
                     );
@@ -272,7 +272,7 @@ function U(e) {
                                         let n = null == t ? void 0 : t.channelId;
                                         if (null == n) return e;
                                         let i = v.Z.getChannel(n);
-                                        return null != i && x.Z.can(w.Plq.CONNECT, i) && e.add(n), e;
+                                        return (null != i && x.Z.can(w.Plq.CONNECT, i) && e.add(n), e);
                                     }, new Set())
                             ).filter(C.lm),
                         [e]
@@ -287,7 +287,7 @@ function U(e) {
                             new Set(
                                 t.reduce((e, t) => {
                                     let i = v.Z.getChannel(t);
-                                    return null != i && x.Z.can(w.Plq.CONNECT, i) && !n.has(t) && e.push(t), e;
+                                    return (null != i && x.Z.can(w.Plq.CONNECT, i) && !n.has(t) && e.push(t), e);
                                 }, [])
                             )
                         );
@@ -336,7 +336,7 @@ function W(e) {
         u = (0, a.Wu)(
             [_.Z, E.ZP, j.Z, I.Z, x.Z],
             () =>
-                Object.values(_.Z.getGuilds())
+                _.Z.getGuildsArray()
                     .reduce(
                         (e, t) => [
                             ...e,
@@ -366,7 +366,7 @@ function W(e) {
         ),
         g = r.useCallback(
             (e) => {
-                c(e), l();
+                (c(e), l());
             },
             [c, l]
         );
@@ -398,7 +398,7 @@ function W(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     i = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -406,7 +406,7 @@ function W(e) {
                     )),
                     i.forEach(function (t) {
                         var i;
-                        (i = n[t]),
+                        ((i = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: i,
@@ -414,8 +414,8 @@ function W(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = i);
-                    });
+                                : (e[t] = i));
+                    }));
             }
             return e;
         })({ className: P.recentChannelsMenu }, S)),

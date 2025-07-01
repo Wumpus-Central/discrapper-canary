@@ -45,7 +45,7 @@ function u(e) {
                         options: A,
                         onChange: (e) => {
                             let { value: t } = e;
-                            a.default.track(o.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), E(t), N(''), t === c.pw.SOMETHING_ELSE && i.Z.trackExposure({ location: 'change_email_collect_reasons_slide' });
+                            (a.default.track(o.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), E(t), N(''), t === c.pw.SOMETHING_ELSE && i.Z.trackExposure({ location: 'change_email_collect_reasons_slide' }));
                         }
                     }),
                     h &&

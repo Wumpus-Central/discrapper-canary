@@ -8,7 +8,7 @@ var r = n(139232),
     o = n(695170),
     s = (function () {
         function e(e, t, n, r) {
-            (this.hour = e), (this.minute = t), (this.second = n), (this.millisecond = r || 0);
+            ((this.hour = e), (this.minute = t), (this.second = n), (this.millisecond = r || 0));
         }
         return (
             (e.prototype.getHours = function () {
@@ -32,7 +32,7 @@ var r = n(139232),
     l = (function (e) {
         function t(t, n, r, i, a, o, s) {
             var l = e.call(this, i, a, o, s) || this;
-            return (l.year = t), (l.month = n), (l.day = r), l;
+            return ((l.year = t), (l.month = n), (l.day = r), l);
         }
         return (
             (0, r.ZT)(t, e),
@@ -61,14 +61,14 @@ var r = n(139232),
                 if (((this.month += e), this.month > 12)) {
                     var t = Math.floor(this.month / 12),
                         n = (0, a.Vy)(this.month, 12);
-                    (this.month = n), (this.year += t), 0 === this.month && ((this.month = 12), --this.year);
+                    ((this.month = n), (this.year += t), 0 === this.month && ((this.month = 12), --this.year));
                 }
             }),
             (t.prototype.addWeekly = function (e, t) {
-                t > this.getWeekday() ? (this.day += -(this.getWeekday() + 1 + (6 - t)) + 7 * e) : (this.day += -(this.getWeekday() - t) + 7 * e), this.fixDay();
+                (t > this.getWeekday() ? (this.day += -(this.getWeekday() + 1 + (6 - t)) + 7 * e) : (this.day += -(this.getWeekday() - t) + 7 * e), this.fixDay());
             }),
             (t.prototype.addDaily = function (e) {
-                (this.day += e), this.fixDay();
+                ((this.day += e), this.fixDay());
             }),
             (t.prototype.addHours = function (e, t, n) {
                 for (t && (this.hour += Math.floor((23 - this.hour) / e) * e); ; ) {

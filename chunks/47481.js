@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(539854), n(388685);
+(n.d(t, { Z: () => d }), n(539854), n(388685));
 var r = n(275726),
     i = n(135938),
     l = n(55935),
@@ -28,26 +28,26 @@ function d(e) {
                         r = o.default.extractTimestamp(g[e].endId);
                     if (t >= n && t <= r) {
                         if (x === g[e].id) break;
-                        _.push({
+                        (_.push({
                             type: u.ys_.DIVIDER,
                             content: g[e].topic,
                             contentKey: g[e].id
                         }),
-                            (x = g[e].id);
+                            (x = g[e].id));
                         break;
                     }
                 }
             }
-            let I = (0, l.vc)(e.timestamp, 'LL');
-            I !== t &&
+            let S = (0, l.vc)(e.timestamp, 'LL');
+            S !== t &&
                 null == x &&
                 (_.push({
                     type: u.ys_.DIVIDER,
-                    content: I,
-                    contentKey: I
+                    content: S,
+                    contentKey: S
                 }),
-                (t = I));
-            let S = _[_.length - 1],
+                (t = S));
+            let I = _[_.length - 1],
                 P = null,
                 Z = (0, s.DQ)(e);
             y = y || Z;
@@ -59,8 +59,8 @@ function d(e) {
                 return null;
             })(p, e, Z && m);
             (null !== N &&
-                ([P, S] =
-                    ((E = v = S),
+                ([P, I] =
+                    ((E = v = I),
                     null == v || v.type !== N
                         ? ((O = {
                               type: N,
@@ -71,8 +71,8 @@ function d(e) {
                         : (E = (O = v).content[O.content.length - 1]),
                     [O, E])),
             f === e.id && null != C)
-                ? (null != S && S.type === u.ys_.DIVIDER
-                      ? (S.unreadId = e.id)
+                ? (null != I && I.type === u.ys_.DIVIDER
+                      ? (I.unreadId = e.id)
                       : null !== P
                         ? ((j = P),
                           e.isFirstMessageInForumPost(p) ||
@@ -102,7 +102,7 @@ function d(e) {
                     content: T,
                     groupId: T.id
                 });
-            let A = (null == S ? void 0 : S.type) === u.ys_.MESSAGE ? d : S;
+            let A = (null == I ? void 0 : I.type) === u.ys_.MESSAGE ? d : I;
             (0, a.J)(p, A, e) && (n = e.id);
             let w = {
                 type: e.type === u.uaV.THREAD_STARTER_MESSAGE ? u.ys_.THREAD_STARTER_MESSAGE : u.ys_.MESSAGE,
@@ -111,7 +111,7 @@ function d(e) {
             };
             n === e.id && (d = w);
             let { jumpSequenceId: R, jumpFlash: k, jumpTargetId: M } = h;
-            k && e.id === M && null != R && (w.flashKey = R),
+            (k && e.id === M && null != R && (w.flashKey = R),
                 h.jumpTargetId === e.id && (w.jumpTarget = !0),
                 null != b &&
                     e.id === b.startId &&
@@ -131,7 +131,7 @@ function d(e) {
                         type: u.ys_.DIVIDER,
                         contentKey: b.endId,
                         isSummaryDivider: !0
-                    });
+                    }));
         }),
         y && (0, s.P1)(p) && i.Z.trackExposure({ location: '416cc9_1' }),
         _

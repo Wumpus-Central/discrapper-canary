@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h }), t(388685);
+(t.d(n, { Z: () => h }), t(388685));
 var i,
     l,
     r,
@@ -40,7 +40,7 @@ class v extends (i = o.ZP.Store) {
         return null != (n = m[e]) ? n : void 0;
     }
 }
-(r = 'EventDirectoryStore'),
+((r = 'EventDirectoryStore'),
     (l = 'displayName') in v
         ? Object.defineProperty(v, l, {
               value: r,
@@ -48,7 +48,7 @@ class v extends (i = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (v[l] = r);
+        : (v[l] = r));
 let h = new v(s.Z, {
     EVENT_DIRECTORY_FETCH_START: function () {
         g = !0;

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => u }), t(388685), t(539854);
+(t.d(n, { Z: () => u }), t(388685), t(539854));
 var l = t(255367),
     r = t(73800),
     i = t(692547),
@@ -82,11 +82,11 @@ function u(e) {
         _ = r.useCallback(
             (e) => {
                 let n = [];
-                e.forEach((e) => {
+                (e.forEach((e) => {
                     let t = p.get(e);
                     null != t && n.push(t);
                 }),
-                    u(n);
+                    u(n));
             },
             [u, p]
         );

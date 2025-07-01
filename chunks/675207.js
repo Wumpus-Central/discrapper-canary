@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         VerifyAccountDeekLink: () => m,
         VerifyAccountLoading: () => S,
@@ -7,7 +7,7 @@ n.r(t),
     n(388685),
     n(704826),
     n(35282),
-    n(457542);
+    n(457542));
 var r = n(255367),
     c = n(73800),
     o = n(114858),
@@ -40,7 +40,7 @@ function v() {
         [x, D] = c.useState(!1),
         k = (0, u.Z)(),
         Z = null == C ? (null != p ? p : '') : C;
-    c.useEffect(() => {
+    (c.useEffect(() => {
         let e;
         if (null != v) return;
         for (let t of i.keys()) t.startsWith('openid.') && (null == e && (e = {}), (e[t] = i.get(t)));
@@ -55,10 +55,10 @@ function v() {
                         return;
                     }
                     if ([200, 204].includes(r)) {
-                        n.replace(N.Z5c.CONNECTIONS_SUCCESS(t)), y && window.close();
+                        (n.replace(N.Z5c.CONNECTIONS_SUCCESS(t)), y && window.close());
                         return;
                     }
-                    (null == c ? void 0 : c.code) != null && i.append('error-code', c.code), n.replace(''.concat(N.Z5c.CONNECTIONS_ERROR(t), '?').concat(i.toString()));
+                    ((null == c ? void 0 : c.code) != null && i.append('error-code', c.code), n.replace(''.concat(N.Z5c.CONNECTIONS_ERROR(t), '?').concat(i.toString())));
                 }
             }
             if (
@@ -87,7 +87,7 @@ function v() {
                           handleCallbackResponse: r,
                           handleCallbackError: (e) => {
                               var r;
-                              (null == e || null == (r = e.body) ? void 0 : r.code) != null && i.append('error-code', e.body.code), n.replace(''.concat(N.Z5c.CONNECTIONS_ERROR(t), '?').concat(i.toString()));
+                              ((null == e || null == (r = e.body) ? void 0 : r.code) != null && i.append('error-code', e.body.code), n.replace(''.concat(N.Z5c.CONNECTIONS_ERROR(t), '?').concat(i.toString())));
                           },
                           openidParams: e,
                           code: Z,
@@ -119,7 +119,7 @@ function v() {
                     null != e && clearTimeout(e);
                 }
             );
-        }, [k, n, R, A, b]);
+        }, [k, n, R, A, b]));
     let I = c.useMemo(() => {
         if (null != R) return 'discord://'.concat(N.Z5c.CONNECTIONS(R), '/?').concat(i.toString());
     }, [R, i]);
@@ -129,7 +129,7 @@ function v() {
                   platformType: R,
                   deeplink: I,
                   onClick: () => {
-                      D(!1), T(!0);
+                      (D(!1), T(!0));
                   }
               })
             : (0, r.jsx)(S, { platformType: R })
@@ -194,7 +194,7 @@ async function E(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -202,7 +202,7 @@ async function E(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -210,8 +210,8 @@ async function E(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })(
@@ -242,14 +242,14 @@ async function E(e) {
             .finally(() => {
                 p.default.disconnect();
             });
-        return a(e), !0;
+        return (a(e), !0);
     } catch (e) {
         return !1;
     }
 }
 async function _(e, t, n, r, c) {
     try {
-        return await s.Z.sessionHandoff(e, t, n, r, c), 0;
+        return (await s.Z.sessionHandoff(e, t, n, r, c), 0);
     } catch (e) {
         var o, l;
         if ((null == e || null == (o = e.body) ? void 0 : o.code) === 10020) return 2;
@@ -270,8 +270,8 @@ async function h(e) {
             },
             !y
         );
-        return r(e), !0;
+        return (r(e), !0);
     } catch (e) {
-        return c(e), !0;
+        return (c(e), !0);
     }
 }

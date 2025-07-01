@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(554747),
-    a = n(434479),
+    a = n(554747),
+    s = n(434479),
     c = n(593364),
     u = n(703656),
     d = n(944486),
@@ -16,7 +16,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -24,7 +24,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -32,8 +32,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -114,7 +114,7 @@ let _ = [
             getName: () => g.intl.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -129,7 +129,7 @@ let _ = [
     ],
     O = (e) => {
         let { guild: t, channel: n } = e,
-            o = (0, s.ZP)(t.id);
+            o = (0, a.ZP)(t.id);
         i.useEffect(() => {
             h.Z.trackExposure({
                 guildId: t.id,
@@ -148,14 +148,14 @@ let _ = [
             m = (0, p.t)(n);
         return (0, r.jsx)(r.Fragment, {
             children: _.map((e) => {
-                let { key: i, getName: l, handler: o, renderIcon: s } = e;
+                let { key: i, getName: l, handler: o, renderIcon: a } = e;
                 if (!u && 'EVENTS' === i) return null;
                 let d = ''.concat(i, '-').concat(t.id);
                 return (0, r.jsx)(
-                    a.m,
+                    s.m,
                     {
                         id: d,
-                        renderIcon: s,
+                        renderIcon: a,
                         text: l(g),
                         selected: f && 'JOIN_SERVERS' === i,
                         onClick: null != n ? () => o(t, n) : void 0,

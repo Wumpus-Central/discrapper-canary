@@ -38,13 +38,13 @@ function R(e, t) {
         { trusted: T, onClick: C, onConfirm: R, onCancel: P, shouldConfirm: w, messageId: D, channelId: L } = e,
         x = i().sanitizeUrl(e.href);
     if (null == x) {
-        null != t && t.preventDefault(),
+        (null != t && t.preventDefault(),
             a.Z.show({
                 title: N.intl.string(N.t.x87gam),
                 body: N.intl.format(N.t['9rqRws'], { url: e.href }),
                 isDismissable: !0,
                 contextKey: I
-            });
+            }));
         return;
     }
     let k = x;
@@ -73,7 +73,7 @@ function R(e, t) {
     if (null != L) {
         let e = E.Z.getChannel(L),
             t = b.Z.getGuild(null == e ? void 0 : e.getGuildId());
-        null != e &&
+        (null != e &&
             null != t &&
             t.hasFeature(A.oNc.DISCOVERABLE) &&
             S.default.track(A.rMx.URL_CLICKED, {
@@ -85,7 +85,7 @@ function R(e, t) {
                 S.default.track(A.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'inline_link',
                     target: k
-                });
+                }));
     }
     if ((_.Z.trackLinkClicked(k), null != C)) {
         if (C(t)) return;
@@ -114,15 +114,15 @@ function R(e, t) {
         },
         Y = null != P ? P : () => {};
     if (null !== c.Z.isBlockedDomain(k)) {
-        null == t || t.preventDefault(), l.Z.show(k);
+        (null == t || t.preventDefault(), l.Z.show(k));
         return;
     }
     if (null != (0, g.v)(k)) {
-        null == t || t.preventDefault(), m.Z.show(k);
+        (null == t || t.preventDefault(), m.Z.show(k));
         return;
     }
     if ((0, f.I)(k)) {
-        null == t || t.preventDefault(), d.Z.show(k);
+        (null == t || t.preventDefault(), d.Z.show(k));
         return;
     }
     let W = 'function' == typeof T ? T() : T,

@@ -1,4 +1,4 @@
-n.d(t, { n: () => o }), n(388685), n(642613), n(539854);
+(n.d(t, { n: () => o }), n(388685), n(642613), n(539854));
 var r = n(372817);
 function i(e, t, n) {
     return (
@@ -73,11 +73,11 @@ class o {
             ? Array.from(e.values())
             : Array.from(e).reduce((e, t) => {
                   let [n, r] = t;
-                  return this.manager.getMonitor().canDropOnTarget(n) && e.push(r), e;
+                  return (this.manager.getMonitor().canDropOnTarget(n) && e.push(r), e);
               }, []);
     }
     constructor(e, t, n, a, o) {
-        i(this, 'targetNodes', void 0),
+        (i(this, 'targetNodes', void 0),
             i(this, 'manager', void 0),
             i(this, 'previewer', void 0),
             i(this, 'announcer', void 0),
@@ -93,10 +93,10 @@ class o {
             (this.handleDraggedElementKeyDown = async (e) => {
                 switch (e.key) {
                     case 'ArrowUp':
-                        e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget());
+                        (e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget()));
                         return;
                     case 'ArrowDown':
-                        e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getNextDropTarget());
+                        (e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getNextDropTarget()));
                 }
             }),
             (this.currentHoveredNode = e),
@@ -106,6 +106,6 @@ class o {
             })),
             (this.actions = n.getActions()),
             (this.monitor = n.getMonitor()),
-            window.addEventListener('keydown', this.handleDraggedElementKeyDown, { capture: !0 });
+            window.addEventListener('keydown', this.handleDraggedElementKeyDown, { capture: !0 }));
     }
 }

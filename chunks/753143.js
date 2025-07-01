@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Z: () => f,
     r: () => _
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(134158),
     a = n(924428),
@@ -25,7 +25,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -139,7 +139,7 @@ function _(e) {
             if (t < 0 || t >= a.sections[n.section] || o(n.section, n.row) !== n.id) return !1;
             let [i] = a.computeScrollPosition(n.section, t),
                 s = i - n.scrollOffset;
-            return r !== s && (e.scrollTop = s), !0;
+            return (r !== s && (e.scrollTop = s), !0);
         };
         !s(n.row) && (s(n.row - 1) || s(n.row + 1));
     }, [s]);

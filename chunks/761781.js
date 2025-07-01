@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var a,
     r,
     l,
@@ -15,7 +15,7 @@ class u extends (a = i.ZP.Store) {
         return c;
     }
 }
-(l = 'RecentUserActivityStore'),
+((l = 'RecentUserActivityStore'),
     (r = 'displayName') in u
         ? Object.defineProperty(u, r, {
               value: l,
@@ -23,7 +23,7 @@ class u extends (a = i.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (u[r] = l);
+        : (u[r] = l));
 let m = new u(s.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: d,
     CONNECTION_OPEN_STATE_UPDATE: d

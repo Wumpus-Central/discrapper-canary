@@ -35,7 +35,7 @@ function p(e) {
                         (0, r.jsx)(i.zxk, {
                             size: i.zxk.Sizes.MEDIUM,
                             onClick: () => {
-                                (0, o.mL)(t), l.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIERS), (0, a.GN)(t);
+                                ((0, o.mL)(t), l.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIERS), (0, a.GN)(t));
                             },
                             className: u.__invalid_button,
                             children: c.intl.string(c.t['I/XhUl'])

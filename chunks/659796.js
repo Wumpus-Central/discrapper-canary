@@ -30,7 +30,7 @@ t.exports = {
                     for (var e = 1; e < arguments.length; e++) {
                         var r = null != arguments[e] ? arguments[e] : {},
                             n = Object.keys(r);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(r).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -38,7 +38,7 @@ t.exports = {
                             )),
                             n.forEach(function (e) {
                                 var n, i, o;
-                                (n = t),
+                                ((n = t),
                                     (i = e),
                                     (o = r[e]),
                                     i in n
@@ -48,13 +48,13 @@ t.exports = {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (n[i] = o);
-                            });
+                                        : (n[i] = o));
+                            }));
                     }
                     return t;
                 })({}, u, { prevSibling: (t[s] = t[s].merge({ nextSibling: o })).getKey() });
             }
-            return t.push(new d(u)), t;
+            return (t.push(new d(u)), t);
         }, []);
     }
 };

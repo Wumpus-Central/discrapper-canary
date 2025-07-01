@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Z: () => L,
     w: () => A
 }),
     n(388685),
-    n(642613);
+    n(642613));
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -33,7 +33,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function N(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -49,8 +49,8 @@ function N(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -64,12 +64,12 @@ function w(e, t) {
                 i,
                 r = {},
                 o = Object.keys(e);
-            for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
             return r;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+        for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
     }
     return r;
 }
@@ -86,7 +86,7 @@ function k(e, t, n, i, r) {
         s = (a - 1) * o,
         c = t * a + s,
         u = n * a + s;
-    return e === I.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l);
+    return (e === I.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l));
 }
 function D(e, t, n) {
     return k(e, E.bt, E.fd, t, n);
@@ -290,7 +290,7 @@ function L(e) {
             o.current = i;
         });
         let l = t.length;
-        r.useLayoutEffect(() => {
+        (r.useLayoutEffect(() => {
             let e = o.current,
                 { id: t, containerSize: n, tileSize: i, sizeOffset: r, layout: a, padding: s, widget: c } = e,
                 u = w(e, ['id', 'containerSize', 'tileSize', 'sizeOffset', 'layout', 'padding', 'widget']);
@@ -376,7 +376,7 @@ function L(e) {
                             a
                         )
                     );
-            });
+            }));
     })({
         id: A,
         streamParticipants: eo,

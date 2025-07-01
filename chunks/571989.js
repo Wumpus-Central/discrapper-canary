@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     MO: () => f,
     yx: () => o,
     zq: () => c
@@ -6,7 +6,7 @@ n.d(t, {
     n(413496),
     n(433524),
     n(35282),
-    n(704826);
+    n(704826));
 let r = RegExp('\\p{Cf}|\\p{Zl}|\\p{Zp}|[^\\P{Cc}\\n]|[^\\P{Zs} ]', 'gu'),
     i = ['͏', '឴', '឵', 'ᅠ', 'ㅤ', 'ﾠ'],
     a = RegExp(''.concat(r.source, '|').concat(i.join('|')), 'gu');
@@ -57,7 +57,7 @@ function d(e) {
 }
 function f(e) {
     let t = p(e);
-    return (t += _(e.pathname)), (t += _(e.search)), (t += _(e.hash));
+    return ((t += _(e.pathname)), (t += _(e.search)), (t += _(e.hash)));
 }
 function _(e) {
     let t;
@@ -74,20 +74,20 @@ function _(e) {
             t = i.codePointAt(0);
         if (e === t) {
             let t = String.fromCodePoint(e);
-            (n += t), (r = r.substring(t.length)), (i = i.substring(t.length));
+            ((n += t), (r = r.substring(t.length)), (i = i.substring(t.length)));
             continue;
         }
         let a = String.fromCodePoint(t),
             o = encodeURIComponent(a),
             s = o === a ? 3 : o.length;
-        (n += d(t) ? a : o), (r = r.substring(s)), (i = i.substring(a.length));
+        ((n += d(t) ? a : o), (r = r.substring(s)), (i = i.substring(a.length)));
     }
     return n;
 }
 function p(e) {
     if ('null' === e.origin && e.pathname.startsWith('//')) return e.protocol;
     let t = '';
-    '' !== e.username && (t += e.username), '' !== e.password && (t += ':' + e.password), '' !== t && (t += '@');
+    ('' !== e.username && (t += e.username), '' !== e.password && (t += ':' + e.password), '' !== t && (t += '@'));
     let n = '//' === e.href.substr(e.protocol.length, 2) ? '//' : '';
     return ''.concat(e.protocol).concat(n).concat(t).concat(e.host);
 }

@@ -25,13 +25,13 @@ function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return new Promise(async (i) => {
         let a = c.Z.getChannel(t);
-        if (null != a) return b(a, n), i(a);
-        await (0, s.O)([e]),
+        if (null != a) return (b(a, n), i(a));
+        (await (0, s.O)([e]),
             await r.Z.joinGuild(e, { lurker: !0 }),
             u.Z.addConditionalChangeListener(() => {
                 let e = c.Z.getChannel(t);
                 return null == e || (b(e), m.Z.initialize(), i(e), !1);
-            });
+            }));
     });
 }
 function b(e) {
@@ -39,7 +39,7 @@ function b(e) {
         n = f.Z.getVoiceChannelId();
     if ((!t && !g(e, n)) || (p.Z.initialize(), i.default.selectVoiceChannel(e.id), (n = f.Z.getVoiceChannelId()) !== e.id)) return !1;
     let r = l.Z.getAllApplicationStreamsForChannel(e.id);
-    return r.length > 0 && (0, a.rn)(r[0], { noFocus: !1 }), !0;
+    return (r.length > 0 && (0, a.rn)(r[0], { noFocus: !1 }), !0);
 }
 function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

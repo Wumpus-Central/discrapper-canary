@@ -1,4 +1,4 @@
-n.d(t, { F: () => u }), n(388685);
+(n.d(t, { F: () => u }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,12 +28,12 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 var c = (function (e) {
-    return (e.SVG = 'svg'), (e.CANVAS = 'canvas'), e;
+    return ((e.SVG = 'svg'), (e.CANVAS = 'canvas'), e);
 })(c || {});
 class u extends (r = a.Component) {
     componentDidMount() {
@@ -43,7 +43,7 @@ class u extends (r = a.Component) {
         (null != this.props.versionKey && this.props.versionKey < 0) || (null != this.props.versionKey && null != e.versionKey && this.props.versionKey > e.versionKey ? this.loadAnimation() : this.playOrPauseAnimation(e));
     }
     componentWillUnmount() {
-        null != this.animation && (this.animation.stop(), this.animation.destroy(), (this.animation = null)), this.delayTimeout.stop();
+        (null != this.animation && (this.animation.stop(), this.animation.destroy(), (this.animation = null)), this.delayTimeout.stop());
     }
     playOrPauseAnimation(e) {
         null != this.animation && (this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? (this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play()) : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0)));
@@ -55,7 +55,7 @@ class u extends (r = a.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             s(this, 'animationRef', a.createRef()),
             s(this, 'animation', void 0),
             s(this, 'delayTimeout', new o.V7()),
@@ -65,7 +65,7 @@ class u extends (r = a.Component) {
                 let [c, { default: u }] = await Promise.all([e(), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
                 if (null == this.animationRef.current) return;
                 let d = 'object' == typeof c && 'default' in c && 'string' == typeof c.default ? { path: c.default } : { animationData: c };
-                (this.animation = u.loadAnimation(
+                ((this.animation = u.loadAnimation(
                     l(
                         {
                             container: this.animationRef.current,
@@ -83,19 +83,19 @@ class u extends (r = a.Component) {
                               null == (e = this.animation) || e.play();
                           })
                         : this.playOrPauseAnimation(),
-                    this.animation.addEventListener('complete', this.handleComplete);
+                    this.animation.addEventListener('complete', this.handleComplete));
             }),
             s(this, 'handleComplete', () => {
                 let { onComplete: e } = this.props;
                 null != e && e();
-            });
+            }));
     }
 }
-s(u, 'defaultProps', {
+(s(u, 'defaultProps', {
     loop: !0,
     autoplay: !0,
     renderer: 'svg',
     shouldAnimate: !0,
     resetOnPlay: !1
 }),
-    s(u, 'Renderers', c);
+    s(u, 'Renderers', c));

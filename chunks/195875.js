@@ -18,7 +18,7 @@ t.exports = (function (t) {
     function e() {
         return t.apply(this, arguments) || this;
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r.shouldComponentUpdate = function (t) {
@@ -68,7 +68,7 @@ t.exports = (function (t) {
                 var O = b[D];
                 if (O.wrapperTemplate) {
                     var K = [];
-                    do K.push(b[D].block), D++;
+                    do (K.push(b[D].block), D++);
                     while (D < b.length && b[D].wrapperTemplate === O.wrapperTemplate);
                     var T = u.cloneElement(
                         O.wrapperTemplate,
@@ -79,7 +79,7 @@ t.exports = (function (t) {
                         K
                     );
                     E.push(T);
-                } else E.push(O.block), D++;
+                } else (E.push(O.block), D++);
             }
             return u.createElement('div', { 'data-contents': 'true' }, E);
         }),

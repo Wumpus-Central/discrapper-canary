@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
+(n.d(t, { Z: () => g }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282));
 var r = n(255367),
     a = n(73800),
     i = n(442837),
@@ -36,7 +36,7 @@ function g(e) {
                     if (null != e && t && null != n && 'true' === a.searchParams.get(h)) {
                         a.searchParams.delete(h);
                         let e = a.pathname + a.search;
-                        (0, s.dL)(e), r();
+                        ((0, s.dL)(e), r());
                     }
                 }, [t, r, n, e]),
                 {

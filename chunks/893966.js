@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J }), n(388685), n(539854);
+(n.d(t, { Z: () => J }), n(388685), n(539854));
 var r,
     i = n(442837),
     a = n(570140),
@@ -29,7 +29,7 @@ function g(e, t, n) {
 let E = !1,
     b = {};
 function y(e) {
-    return null == b[e] && (b[e] = new f.P(e)), b[e];
+    return (null == b[e] && (b[e] = new f.P(e)), b[e]);
 }
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -75,7 +75,7 @@ function R(e) {
 function P(e) {
     let t = !1,
         n = y(e.guildId);
-    return 'GUILD_ROLE_DELETE' === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
+    return ('GUILD_ROLE_DELETE' === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t);
 }
 function w(e) {
     let { guildId: t, userId: n } = e;
@@ -100,7 +100,7 @@ function L(e) {
     let r = y(t),
         i = n.reduce((e, t) => {
             let n = t.userId;
-            return e.push(n), e;
+            return (e.push(n), e);
         }, []);
     return r.updateMembersByMemberIds(i);
 }
@@ -110,7 +110,7 @@ function x(e) {
     let r = y(t),
         i = n.reduce((e, t) => {
             let n = t.userId;
-            return e.push(n), e;
+            return (e.push(n), e);
         }, []);
     return r.updateMembersByMemberIds(i);
 }
@@ -149,7 +149,7 @@ function U(e) {
             let { id: n, activity_instances: r } = e,
                 i = y(n),
                 a = [];
-            null == r ||
+            (null == r ||
                 r.forEach((e) => {
                     var t;
                     null == (t = e.participants) ||
@@ -157,13 +157,13 @@ function U(e) {
                             (0, u.lm)(e.member) && a.push(e.member);
                         });
                 }),
-                (t = i.updateServerMembers(a) || t);
+                (t = i.updateServerMembers(a) || t));
         }),
         t
     );
 }
 function G(e) {
-    return E ? (E = !1) : v(!0), j(e);
+    return (E ? (E = !1) : v(!0), j(e));
 }
 function B(e) {
     return U(e);
@@ -217,7 +217,7 @@ function z(e) {
 function q(e) {
     let { guildId: t, memberSupplementals: n } = e,
         r = (0, p.Qu)(t, n);
-    return r && y(t).updateMembersByMemberIds(n.map((e) => e.userId)), r;
+    return (r && y(t).updateMembersByMemberIds(n.map((e) => e.userId)), r);
 }
 function X(e) {
     var t, n, r, i, a, o;

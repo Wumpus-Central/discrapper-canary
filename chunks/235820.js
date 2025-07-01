@@ -25,8 +25,8 @@ let o = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.DJj,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             o = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-            s = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
-        i.Z.dispatch({
+            a = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
+        (i.Z.dispatch({
             type: 'LOAD_RECENT_MENTIONS',
             guildId: n
         }),
@@ -38,7 +38,7 @@ let o = {
                         limit: t,
                         guild_id: n,
                         roles: o,
-                        everyone: s
+                        everyone: a
                     },
                     retries: 2,
                     oldFormErrors: !0,
@@ -57,10 +57,10 @@ let o = {
                     () => {
                         i.Z.dispatch({ type: 'LOAD_RECENT_MENTIONS_FAILURE' });
                     }
-                );
+                ));
     },
     deleteRecentMention(e) {
-        r.tn.del({
+        (r.tn.del({
             url: l.ANM.MENTIONS_MESSAGE_ID(e),
             retries: 2,
             oldFormErrors: !0,
@@ -69,7 +69,7 @@ let o = {
             i.Z.dispatch({
                 type: 'RECENT_MENTION_DELETE',
                 id: e
-            });
+            }));
     },
     setRecentMentionsStale() {
         i.Z.dispatch({ type: 'SET_RECENT_MENTIONS_STALE' });

@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     S: () => I,
     Z: () => N
 }),
     n(704826),
     n(35282),
     n(415506),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -84,7 +84,7 @@ function N(e) {
                       className: v.previewToggle,
                       note: S.intl.string(S.t.WNbX4O),
                       onChange: (e) => {
-                          b.qF.updateSetting(e), E.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                          (b.qF.updateSetting(e), E.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e }));
                       },
                       value: w,
                       hideBorder: !0,
@@ -116,7 +116,7 @@ function N(e) {
                                     className: v.cameraDeeplink,
                                     children: S.intl.format(S.t.aJYgRk, {
                                         onCameraSettingsClick: () => {
-                                            null == A || A(), window.open((0, j.getPlatform)() === j.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != R ? '?cameraId='.concat(encodeURIComponent(R.replace(T, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : ''), E.default.track(C.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: P });
+                                            (null == A || A(), window.open((0, j.getPlatform)() === j.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != R ? '?cameraId='.concat(encodeURIComponent(R.replace(T, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : ''), E.default.track(C.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: P }));
                                         }
                                     })
                                 })

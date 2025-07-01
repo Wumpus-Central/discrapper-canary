@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -55,13 +55,13 @@ let j = r.createContext(
             let n = this.zones.get(e);
             null != n && this.resizeObserver.unobserve(n.element);
             let i = e.getBoundingClientRect();
-            this.zones.set(e, {
+            (this.zones.set(e, {
                 element: e,
                 zone: C(null != (t = null == n ? void 0 : n.zone.name) ? t : (0, a.Z)(), i)
             }),
                 this.elements.add(e),
                 this.resizeObserver.observe(e),
-                this.updateZones();
+                this.updateZones());
         }
         unobserve(e) {
             var t;
@@ -86,10 +86,10 @@ let j = r.createContext(
         }
         cleanUp() {
             var e, t;
-            this.globalUpdate.cancel(), this.zones.clear(), this.elements.clear(), null == (e = this.resizeObserver) || e.disconnect(), null == (t = this.mutationObserver) || t.disconnect(), this.updateZones();
+            (this.globalUpdate.cancel(), this.zones.clear(), this.elements.clear(), null == (e = this.resizeObserver) || e.disconnect(), null == (t = this.mutationObserver) || t.disconnect(), this.updateZones());
         }
         constructor(e) {
-            x(this, 'resizeObserver', void 0),
+            (x(this, 'resizeObserver', void 0),
                 x(this, 'mutationObserver', void 0),
                 x(this, 'zones', new Map()),
                 x(this, 'elements', new Set()),
@@ -126,7 +126,7 @@ let j = r.createContext(
                         }
                     )
                 ),
-                (this.window = e);
+                (this.window = e));
         }
     })((0, g.i)())
 );
@@ -142,7 +142,7 @@ function w(e) {
                     null != e && (t ? c.observe(e) : c.unobserve(e));
                 },
                 refHandler(t) {
-                    null != e && c.unobserve(e), (e = t);
+                    (null != e && c.unobserve(e), (e = t));
                 }
             };
         });

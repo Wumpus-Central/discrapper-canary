@@ -35,7 +35,7 @@ class d extends (r = i.ZP.PersistedStore) {
         return null == e ? null : null != (t = c[e]) ? t : u[e];
     }
 }
-s(d, 'displayName', 'GuildOnboardingHomeNavigationStore'), s(d, 'persistKey', 'GuildOnboardingHomeNavigationStore');
+(s(d, 'displayName', 'GuildOnboardingHomeNavigationStore'), s(d, 'persistKey', 'GuildOnboardingHomeNavigationStore'));
 let p = new d(l.Z, {
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e;
@@ -47,10 +47,10 @@ let p = new d(l.Z, {
     },
     SELECT_HOME_RESOURCE_CHANNEL: function (e) {
         let { channelId: t, guildId: n } = e;
-        null == t ? delete u[n] : (c[n] = t), delete u[n];
+        (null == t ? delete u[n] : (c[n] = t), delete u[n]);
     },
     SELECT_NEW_MEMBER_ACTION_CHANNEL: function (e) {
         let { channelId: t, guildId: n } = e;
-        delete c[n], (u[n] = t);
+        (delete c[n], (u[n] = t));
     }
 });

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => q }), n(388685);
+(n.d(t, { Z: () => q }), n(388685));
 var i,
     a = n(392711),
     o = n.n(a),
@@ -42,7 +42,7 @@ let S = new c.ZP((e) => {
 });
 function A(e, t) {
     let n = {};
-    S.forEach((i) => {
+    (S.forEach((i) => {
         var a;
         i !== v.Z.getGuildId() && i !== b.Z.getGuildId() && i !== (null == (a = h.Z.getChannel(O.Z.getChannelId())) ? void 0 : a.getGuildId()) && (null == r || r.guildId !== i) && (S.clearWithoutFlushing(i, e), t && (n[i] = S.get(i)));
     }),
@@ -50,10 +50,10 @@ function A(e, t) {
             l.Z.dispatch({
                 type: 'GUILD_SUBSCRIPTIONS_FLUSH',
                 subscriptions: n
-            });
+            }));
 }
 function N(e, t) {
-    return S.subscribeToGuild(e), null != t && p.ZP.getSection(t) === I.ULH.MEMBERS && C(e, t, c.KV);
+    return (S.subscribeToGuild(e), null != t && p.ZP.getSection(t) === I.ULH.MEMBERS && C(e, t, c.KV));
 }
 function C(e, t, n) {
     if (t === _.oL) return S.subscribeChannel(e, t, n);
@@ -68,14 +68,14 @@ function R(e) {
     let n = v.Z.getGuildId();
     null != n && N(n, O.Z.getChannelId(n));
     let r = {};
-    S.forEach((e) => {
+    (S.forEach((e) => {
         null == E.Z.getGuild(e) ? S.clearWithoutFlushing(e, !0) : (r[e] = S.get(e));
     }),
         o().isEmpty(r) ||
             l.Z.dispatch({
                 type: 'GUILD_SUBSCRIPTIONS_FLUSH',
                 subscriptions: r
-            });
+            }));
 }
 function P() {
     A(!1, !1);
@@ -158,11 +158,11 @@ function W() {
         let n = g.ZP.memberOf(t);
         if (0 === n.length) return !1;
         let [i] = n;
-        (r = {
+        ((r = {
             guildId: i,
             userId: t
         }),
-            S.subscribeUser(i, t);
+            S.subscribeUser(i, t));
     }
     return !1;
 }
@@ -173,7 +173,7 @@ function K(e) {
 }
 class z extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, E.Z, v.Z, O.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], W), this.syncWith([p.ZP], Z);
+        (this.waitFor(h.Z, E.Z, v.Z, O.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], W), this.syncWith([p.ZP], Z));
     }
     getSubscribedThreadIds() {
         return S.getSubscribedThreadIds();

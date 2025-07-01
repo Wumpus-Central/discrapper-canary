@@ -1,37 +1,37 @@
-n.d(t, { default: () => P }), n(388685);
+(n.d(t, { default: () => P }), n(388685));
 var i = n(255367),
     a = n(73800),
     o = n(120356),
-    l = n.n(o),
-    r = n(481060),
+    r = n.n(o),
+    l = n(481060),
     c = n(100527),
     s = n(906732),
     d = n(313201),
     u = n(455708),
-    _ = n(222062),
-    f = n(530329),
-    g = n(626135),
-    p = n(488499),
-    N = n(58384),
-    m = n(981631),
+    f = n(222062),
+    g = n(530329),
+    p = n(626135),
+    _ = n(488499),
+    m = n(58384),
+    N = n(981631),
     x = n(486324),
-    A = n(388032),
-    h = n(922349);
+    h = n(388032),
+    A = n(922349);
 function P(e) {
     let { transitionState: t, onClose: o, onComplete: P, uploadType: b, showUpsellHeader: E, analyticsPage: R } = e,
-        [j, C] = a.useState(!1),
-        Z = (0, r.vRw)(),
-        v = (0, d.Dt)(),
-        { analyticsLocations: y, newestAnalyticsLocation: I } = (0, s.ZP)(c.Z.GIF_PICKER);
-    async function k(e) {
+        [j, v] = a.useState(!1),
+        y = (0, l.vRw)(),
+        C = (0, d.Dt)(),
+        { analyticsLocations: k, newestAnalyticsLocation: I } = (0, s.ZP)(c.Z.GIF_PICKER);
+    async function Z(e) {
         let { gifSrc: t } = e;
         if (null == t || j) return;
-        C(!0);
-        let a = (0, N.Q)(t),
-            l = await fetch(a),
-            c = await l.blob();
-        o(),
-            (0, r.ZDy)(
+        v(!0);
+        let a = (0, m.Q)(t),
+            r = await fetch(a),
+            c = await r.blob();
+        (o(),
+            (0, l.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('59732'), n.e('93157')]).then(n.bind(n, 712451));
                     return (t) =>
@@ -41,7 +41,7 @@ function P(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function P(e) {
                                         )),
                                         i.forEach(function (t) {
                                             var i;
-                                            (i = n[t]),
+                                            ((i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: i,
@@ -57,8 +57,8 @@ function P(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = i);
-                                        });
+                                                    : (e[t] = i));
+                                        }));
                                 }
                                 return e;
                             })(
@@ -73,67 +73,67 @@ function P(e) {
                             )
                         );
                 },
-                { contextKey: Z }
-            );
+                { contextKey: y }
+            ));
     }
     a.useEffect(() => {
-        g.default.track(m.rMx.OPEN_MODAL, {
-            type: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location_stack: y,
+        p.default.track(N.rMx.OPEN_MODAL, {
+            type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+            location_stack: k,
             location: { page: R }
         });
-    }, [y, R]);
-    let S = b === x.pC.AVATAR || b === x.pC.BANNER,
-        L = (0, _.M)(!S);
+    }, [k, R]);
+    let L = b === x.pC.AVATAR || b === x.pC.BANNER,
+        B = (0, f.M)(!L);
     return (0, i.jsx)(s.Gt, {
-        value: y,
-        children: (0, i.jsxs)(r.Y0X, {
-            'aria-labelledby': v,
+        value: k,
+        children: (0, i.jsxs)(l.Y0X, {
+            'aria-labelledby': C,
             transitionState: t,
-            size: r.CgR.SMALL,
+            size: l.CgR.SMALL,
             parentComponent: 'GIFPickerCroppingModal',
             children: [
                 E &&
-                    !L &&
-                    (0, i.jsx)(p.Z, {
+                    !B &&
+                    (0, i.jsx)(_.Z, {
                         type: b,
                         analyticsPage: R,
-                        analyticsSection: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                        analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0
                     }),
-                (0, i.jsxs)(r.xBx, {
-                    className: h.modalHeader,
+                (0, i.jsxs)(l.xBx, {
+                    className: A.modalHeader,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(r.vwX, {
-                            className: h.titleCase,
-                            tag: r.RB0.H1,
-                            children: A.intl.string(A.t['xsC+//'])
+                        (0, i.jsx)(l.vwX, {
+                            className: A.titleCase,
+                            tag: l.RB0.H1,
+                            children: h.intl.string(h.t['xsC+//'])
                         }),
-                        (0, i.jsx)(r.olH, {
+                        (0, i.jsx)(l.olH, {
                             onClick: o,
-                            className: h.modalCloseButton
+                            className: A.modalCloseButton
                         })
                     ]
                 }),
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(u.Z, {
-                            contentClassName: l()({ [h.gifPickerContent]: E && L }),
-                            className: l()(h.gifPicker, { [h.loadingOverlay]: j }),
-                            onSelectGIF: k,
+                            contentClassName: r()({ [A.gifPickerContent]: E && B }),
+                            className: r()(A.gifPicker, { [A.loadingOverlay]: j }),
+                            onSelectGIF: Z,
                             hideFavorites: !0
                         }),
-                        j && (0, i.jsx)(r.$jN, { className: h.spinner })
+                        j && (0, i.jsx)(l.$jN, { className: A.spinner })
                     ]
                 }),
                 E &&
-                    L &&
-                    (0, i.jsx)(f.Z, {
+                    B &&
+                    (0, i.jsx)(g.Z, {
                         uploadType: b,
                         analyticsSource: I,
                         showUpsell: !0,
-                        className: h.nitroUpsell
+                        className: A.nitroUpsell
                     })
             ]
         })

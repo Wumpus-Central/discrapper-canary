@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -90,7 +90,7 @@ class d extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'state', {
                 aStreamId: null,
                 aReady: !1,
@@ -117,7 +117,7 @@ class d extends (r = a.PureComponent) {
             c(this, 'handleContextMenu', (e) => {
                 let { onContextMenu: t, id: n } = this.props;
                 null == t || t(e, n);
-            });
+            }));
     }
 }
 c(d, 'defaultProps', { paused: !0 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(505266),
@@ -26,7 +26,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -42,8 +42,8 @@ function w(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -139,7 +139,7 @@ function R(e) {
             });
         }, [W, G.points]),
         Q = (0, s.useCallback)(() => {
-            R(1), q({ count: Y + 1 }), X();
+            (R(1), q({ count: Y + 1 }), X());
         }, [Y, X, q]),
         $ = (0, s.useCallback)(() => {
             1 === P && R(2);
@@ -154,7 +154,7 @@ function R(e) {
     });
     let et = (0, s.useCallback)(
         (e) => {
-            delete K[e], V(w({}, K));
+            (delete K[e], V(w({}, K)));
         },
         [K]
     );

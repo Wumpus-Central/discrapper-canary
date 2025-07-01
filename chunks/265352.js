@@ -15,7 +15,7 @@ var e = n(220159),
         y >= 51 ||
         !o(function () {
             var t = [];
-            return (t[h] = !1), t.concat()[0] !== t;
+            return ((t[h] = !1), t.concat()[0] !== t);
         }),
     d = function (t) {
         if (!u(t)) return !1;
@@ -41,8 +41,8 @@ e(
                 v = 0;
             for (r = -1, e = arguments.length; r < e; r++)
                 if (((i = -1 === r ? u : arguments[r]), d(i))) for (f(v + (o = c(i))), n = 0; n < o; n++, v++) n in i && a(l, v, i[n]);
-                else f(v + 1), a(l, v++, i);
-            return (l.length = v), l;
+                else (f(v + 1), a(l, v++, i));
+            return ((l.length = v), l);
         }
     }
 );

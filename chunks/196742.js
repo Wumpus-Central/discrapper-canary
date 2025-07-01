@@ -36,12 +36,12 @@ function C(e) {
                         r,
                         o = {},
                         c = Object.keys(e);
-                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    for (r = 0; r < c.length; r++) ((n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < c.length; r++) (n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                for (r = 0; r < c.length; r++) ((n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
             }
             return o;
         })(e, ['analyticsLocations']);
@@ -55,11 +55,11 @@ function C(e) {
         (0, o.useEffect)(() => {
             null != Z &&
                 (async () => {
-                    await (0, m.YM)(Z),
+                    (await (0, m.YM)(Z),
                         (0, f.qg)({
                             variantsReturnStyle: N,
                             location: 'ClickerGameRedeemPrizeModal'
-                        });
+                        }));
                 })();
         }, []),
         (0, r.jsxs)(
@@ -68,7 +68,7 @@ function C(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -76,7 +76,7 @@ function C(e) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -84,8 +84,8 @@ function C(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({}, z)),
@@ -121,16 +121,16 @@ function C(e) {
                             children: [
                                 (0, r.jsx)(i.zxk, {
                                     onClick: () => {
-                                        z.onClose(),
+                                        (z.onClose(),
                                             (0, d.ps)({
                                                 initialSelectedDecorationId: y.MH,
                                                 analyticsLocations: E,
                                                 onClose: () => {
                                                     let e = g.Z.getAllPending(),
                                                         t = (0, b.ED)(e);
-                                                    (0, a.Mn)(t), (0, a.si)();
+                                                    ((0, a.Mn)(t), (0, a.si)());
                                                 }
-                                            });
+                                            }));
                                     },
                                     submitting: M || S,
                                     children: k.intl.string(k.t.BVcYCw)

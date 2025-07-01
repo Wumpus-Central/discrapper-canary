@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     k: () => h,
     u: () => p
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -110,7 +110,7 @@ class h extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'inputRef', a.createRef()),
             _(this, 'containerRef', a.createRef()),
             _(this, 'handleButtonClick', () => {
@@ -120,10 +120,10 @@ class h extends (r = a.PureComponent) {
             }),
             _(this, 'handleInputClick', () => {
                 this.select();
-            });
+            }));
     }
 }
-_(h, 'contextType', l.q3N),
+(_(h, 'contextType', l.q3N),
     _(h, 'defaultProps', {
         supportsCopy: !0,
         buttonColor: l.Ttl.PRIMARY,
@@ -132,4 +132,4 @@ _(h, 'contextType', l.q3N),
     }),
     _(h, 'Modes', p),
     _(h, 'ButtonColors', l.Ttl),
-    _(h, 'ButtonLooks', l.iLD);
+    _(h, 'ButtonLooks', l.iLD));

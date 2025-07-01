@@ -8,6 +8,6 @@ let a = {
     comboKeysBindGlobal: !0,
     action() {
         let e = i.Z.getChannel(r.Z.getChannelId());
-        return null == e || e.isManaged() || s.S.dispatch(l.CkL.UPLOAD_FILE), !1;
+        return (null == e || e.isManaged() || s.S.dispatch(l.CkL.UPLOAD_FILE), !1);
     }
 };

@@ -20,24 +20,24 @@ function g(e, t, n) {
 let E = m.QZA.CLOSED,
     b = {};
 function y(e) {
-    (d = e.guild), (E = m.QZA.OPEN), (b = {}), (f = e.source);
+    ((d = e.guild), (E = m.QZA.OPEN), (b = {}), (f = e.source));
 }
 function O() {
-    (E = m.QZA.CLOSED), (b = {}), (f = void 0);
+    ((E = m.QZA.CLOSED), (b = {}), (f = void 0));
 }
 function v() {
-    (E = m.QZA.SUBMITTING), (b = {});
+    ((E = m.QZA.SUBMITTING), (b = {}));
 }
 function I(e) {
-    (d = e.guild), (b = {});
+    ((d = e.guild), (b = {}));
 }
 function T(e) {
     var t;
     if (E !== m.QZA.SUBMITTING) return !1;
-    (E = m.QZA.OPEN), (b = null != (t = e.errors) ? t : {});
+    ((E = m.QZA.OPEN), (b = null != (t = e.errors) ? t : {}));
 }
 function S(e) {
-    (E = m.QZA.OPEN), (b = e.errors);
+    ((E = m.QZA.OPEN), (b = e.errors));
 }
 function A(e) {
     let { avatar: t } = e;
@@ -72,19 +72,19 @@ function L(e) {
     u = t;
 }
 function x() {
-    k(), M(), (b = {}), (E = m.QZA.OPEN);
+    (k(), M(), (b = {}), (E = m.QZA.OPEN));
 }
 function k() {
-    (r = void 0), (c = void 0), (i = void 0);
+    ((r = void 0), (c = void 0), (i = void 0));
 }
 function M() {
-    (o = void 0), (s = void 0), (l = void 0), (u = void 0), (a = void 0);
+    ((o = void 0), (s = void 0), (l = void 0), (u = void 0), (a = void 0));
 }
 function j() {
     b = {};
 }
 function U() {
-    x(), O();
+    (x(), O());
 }
 class G extends (_ = p.ZP.Store) {
     getFormState() {

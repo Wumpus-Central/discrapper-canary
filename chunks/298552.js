@@ -1,27 +1,8 @@
-n.d(t, { Z: () => c }), n(35282);
+(n.d(t, { Z: () => s }), n(35282));
 var r = n(159635),
-    i = n.n(r),
-    a = n(818083);
-let o = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
-    s = (0, a.B)({
-        kind: 'user',
-        id: '2023-11_attachment_link_markup',
-        label: 'Attachment Link Config User Experiment',
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Shows links to attachments as regular links',
-                config: { enabled: !1 }
-            },
-            {
-                id: 2,
-                label: 'Shows links to attachments as "mentions" of the filename',
-                config: { enabled: !0 }
-            }
-        ]
-    });
-function l(e, t) {
+    i = n.n(r);
+let a = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/;
+function o(e, t) {
     return {
         type: 'attachmentLink',
         content: [
@@ -34,21 +15,14 @@ function l(e, t) {
         attachmentName: e
     };
 }
-let c = {
+let s = {
     attachmentLink: {
         order: i().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ['h'],
-        match(e) {
-            let t = o.exec(e);
-            if (null !== t) {
-                let { enabled: e } = s.getCurrentConfig({ location: 'markup' });
-                if (!e) return null;
-            }
-            return t;
-        },
+        match: (e) => a.exec(e),
         parse(e, t, n) {
             let r = e[0];
-            return l(e[1], r);
+            return o(e[1], r);
         }
     }
 };

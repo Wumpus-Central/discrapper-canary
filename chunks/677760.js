@@ -1,31 +1,31 @@
-n.d(t, { Z: () => w }), n(388685);
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(695469),
-    a = n(442837),
-    o = n(481060),
-    s = n(447543),
+    s = n(442837),
+    a = n(481060),
+    o = n(447543),
     c = n(587444),
     u = n(393238),
     d = n(388905),
     h = n(108427),
     p = n(314897),
-    m = n(701190),
-    g = n(626135),
+    g = n(701190),
+    m = n(626135),
     f = n(768581),
     _ = n(823379),
     x = n(264229),
-    E = n(230224),
-    b = n(617730),
-    I = n(258356),
-    v = n(981631),
-    O = n(388032),
-    N = n(534962);
-function j(e) {
+    b = n(230224),
+    E = n(617730),
+    v = n(258356),
+    I = n(981631),
+    j = n(388032),
+    O = n(534962);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function j(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -41,8 +41,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -64,10 +64,10 @@ function S(e, t) {
         e
     );
 }
-function y() {
+function N() {
     return (0, r.jsx)('div', {
-        className: N.centerFlex,
-        children: (0, r.jsx)(o.$jN, {})
+        className: O.centerFlex,
+        children: (0, r.jsx)(a.$jN, {})
     });
 }
 let C = (e) => {
@@ -75,39 +75,39 @@ let C = (e) => {
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
     switch (n) {
-        case v.r2o.RESOLVED:
-        case v.r2o.ACCEPTED:
-        case v.r2o.APP_NOT_OPENED:
-        case v.r2o.APP_OPENED:
-        case v.r2o.ACCEPTING:
-        case v.r2o.APP_OPENING:
+        case I.r2o.RESOLVED:
+        case I.r2o.ACCEPTED:
+        case I.r2o.APP_NOT_OPENED:
+        case I.r2o.APP_OPENED:
+        case I.r2o.ACCEPTING:
+        case I.r2o.APP_OPENING:
             return 1;
-        case v.r2o.EXPIRED:
-        case v.r2o.BANNED:
-        case v.r2o.ERROR:
+        case I.r2o.EXPIRED:
+        case I.r2o.BANNED:
+        case I.r2o.ERROR:
             return 2;
-        case v.r2o.RESOLVING:
+        case I.r2o.RESOLVING:
             return 0;
         default:
             (0, _.vE)(n);
     }
 };
-function T(e) {
+function A(e) {
     let { invite: t, onAcceptInvite: n } = e;
-    return (null == t ? void 0 : t.state) === v.r2o.BANNED
+    return (null == t ? void 0 : t.state) === I.r2o.BANNED
         ? (0, r.jsx)(c.u, {
-              text: O.intl.string(O.t['5AkWAQ']),
-              buttonCta: O.intl.string(O.t['8osdkp']),
+              text: j.intl.string(j.t['5AkWAQ']),
+              buttonCta: j.intl.string(j.t['8osdkp']),
               onClick: n
           })
         : (0, r.jsx)(c.u, {
-              text: O.intl.string(O.t['usP+MT']),
-              buttonCta: O.intl.string(O.t['8osdkp']),
+              text: j.intl.string(j.t['usP+MT']),
+              buttonCta: j.intl.string(j.t['8osdkp']),
               onClick: n
           });
 }
-function A(e) {
-    var { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: s } = e;
+function T(e) {
+    var { children: t, cardChildren: n, startAnimHeightPx: s, innerStyle: o } = e;
     let { invite: c } = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -118,19 +118,19 @@ function A(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['children', 'cardChildren', 'startAnimHeightPx', 'innerStyle']),
         [d, h] = i.useState(C(c)),
-        { ref: p, height: m } = (0, u.ZP)(),
-        g = (0, o.q_F)({
-            height: null != m && 0 !== m ? ''.concat(m, 'px') : ''.concat(a, 'px'),
+        { ref: p, height: g } = (0, u.ZP)(),
+        m = (0, a.q_F)({
+            height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(s, 'px'),
             config: l.config.stiff
         });
     return (
@@ -139,15 +139,15 @@ function A(e) {
             e !== d && h(e);
         }, [c, d]),
         (0, r.jsxs)(l.animated.div, {
-            className: N.inviteCard,
-            style: g,
+            className: O.inviteCard,
+            style: m,
             children: [
                 (0, r.jsx)(l.animated.div, {
-                    className: N.inviteChildContainer,
-                    style: g,
+                    className: O.inviteChildContainer,
+                    style: m,
                     children: (0, r.jsx)('section', {
                         ref: p,
-                        className: null == s ? void 0 : s(d),
+                        className: null == o ? void 0 : o(d),
                         children: t(d)
                     })
                 }),
@@ -158,15 +158,15 @@ function A(e) {
 }
 function P(e) {
     let { invite: t } = e;
-    if (null == t || !(0, E.JI)(t)) return null;
-    let n = (e) => (null == t ? null : 1 === e ? (0, r.jsx)(I.X, { invite: t }) : null);
+    if (null == t || !(0, b.JI)(t)) return null;
+    let n = (e) => (null == t ? null : 1 === e ? (0, r.jsx)(v.X, { invite: t }) : null);
     return (0, r.jsx)(
-        A,
+        T,
         S(
-            j(
+            y(
                 {
                     startAnimHeightPx: 0,
-                    innerStyle: () => N.guildInfoInner
+                    innerStyle: () => O.guildInfoInner
                 },
                 e
             ),
@@ -177,25 +177,25 @@ function P(e) {
 function Z(e) {
     let { invite: t } = e,
         n = (n) => {
-            if (null == t) return (0, r.jsx)(y, {});
+            if (null == t) return (0, r.jsx)(N, {});
             switch (n) {
                 case 1:
-                    return (0, r.jsx)(b.Z, S(j({}, e), { invite: t }));
+                    return (0, r.jsx)(E.Z, S(y({}, e), { invite: t }));
                 case 2:
-                    return (0, r.jsx)(T, S(j({}, e), { invite: t }));
+                    return (0, r.jsx)(A, S(y({}, e), { invite: t }));
                 default:
-                    return (0, r.jsx)(y, {});
+                    return (0, r.jsx)(N, {});
             }
         },
         i = {
-            1: N.inviteCardInner,
-            2: N.inviteCardInnerError,
-            0: N.inviteCardInnerLoading
+            1: O.inviteCardInner,
+            2: O.inviteCardInnerError,
+            0: O.inviteCardInnerLoading
         };
     return (0, r.jsx)(
-        A,
+        T,
         S(
-            j(
+            y(
                 {
                     startAnimHeightPx: 200,
                     innerStyle: (e) => i[e]
@@ -218,25 +218,25 @@ function R(e) {
         null != e && ((l.backgroundImage = 'url('.concat(e, ')')), (l.backgroundSize = 'cover'));
     }
     return (0, r.jsxs)(d.ZP, {
-        theme: v.BRd.DARK,
-        className: N.splashBackground,
+        theme: I.BRd.DARK,
+        className: O.splashBackground,
         style: l,
-        contentClassName: N.centerAuthBoxContent,
-        children: [(0, r.jsx)(Z, S(j({}, e), { onAcceptInvite: n })), (0, r.jsx)(P, j({}, e))]
+        contentClassName: O.centerAuthBoxContent,
+        children: [(0, r.jsx)(Z, S(y({}, e), { onAcceptInvite: n })), (0, r.jsx)(P, y({}, e))]
     });
 }
 function w(e) {
     let { inviteKey: t, transitionTo: n } = e,
-        l = (0, a.e7)([m.Z], () => m.Z.getInvite(t));
+        l = (0, s.e7)([g.Z], () => g.Z.getInvite(t));
     return (
         i.useEffect(() => {
             (0, h.e)('invite_mobile');
         }, []),
         i.useEffect(() => {
             null != l &&
-                l.state === v.r2o.RESOLVED &&
-                g.default.track(
-                    v.rMx.INVITE_VIEWED,
+                l.state === I.r2o.RESOLVED &&
+                m.default.track(
+                    I.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
                         friends_count: null == l ? void 0 : l.friends_count
@@ -249,18 +249,18 @@ function w(e) {
             onAcceptInvite: (e) => {
                 !(function (e, t, n) {
                     var r, i, l;
-                    null == e || e.preventDefault(),
-                        g.default.track(v.rMx.INVITE_APP_OPENED, {
+                    (null == e || e.preventDefault(),
+                        m.default.track(I.rMx.INVITE_APP_OPENED, {
                             invite_code: (0, x.jX)(t),
                             guild_id: null == n || null == (r = n.guild) ? void 0 : r.id,
                             channel_id: null == n || null == (i = n.channel) ? void 0 : i.id,
                             inviter_id: null == n || null == (l = n.inviter) ? void 0 : l.id
-                        });
-                    let a = null != n && n.state !== v.r2o.EXPIRED && n.state !== v.r2o.BANNED ? t : void 0,
-                        o = p.default.getFingerprint(),
-                        c = null != o ? o : p.default.getId(),
+                        }));
+                    let s = null != n && n.state !== I.r2o.EXPIRED && n.state !== I.r2o.BANNED ? t : void 0,
+                        a = p.default.getFingerprint(),
+                        c = null != a ? a : p.default.getId(),
                         u = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
-                    s.ZP.openApp(a, void 0, c, void 0, u);
+                    o.ZP.openApp(s, void 0, c, void 0, u);
                 })(e, t, l);
             },
             transitionTo: n

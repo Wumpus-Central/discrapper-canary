@@ -11,10 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => i }), n(953529);
+(n.d(t, { Z: () => i }), n(953529));
 class i {
     constructor(e, t, n) {
-        r(this, 'name', void 0),
+        (r(this, 'name', void 0),
             r(this, 'description', void 0),
             r(this, 'getFeatureValue', void 0),
             (this.name = e),
@@ -24,6 +24,6 @@ class i {
                 value: t,
                 configurable: !1,
                 writable: !1
-            });
+            }));
     }
 }

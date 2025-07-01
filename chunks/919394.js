@@ -1,4 +1,4 @@
-n.d(t, { SO: () => y }), n(539854), n(953529), n(512722);
+(n.d(t, { SO: () => y }), n(539854), n(953529), n(512722));
 var r = n(913527),
     i = n.n(r),
     a = n(705512);
@@ -7,7 +7,7 @@ var o = n(55000);
 n(220082);
 var s = n(693824),
     l = n(690725);
-n(706454), n(594174);
+(n(706454), n(594174));
 var c = n(70956),
     u = n(709054),
     d = n(561308);
@@ -33,7 +33,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -114,7 +114,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                 color: e,
                 stop: t
             }));
-        e.setSize(
+        (e.setSize(
             {
                 w: _.nx,
                 h: _.bg
@@ -160,9 +160,9 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                     },
                     !0,
                     2 + 2 / 3
-                );
+                ));
         let u = ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'];
-        (0, f.l)({
+        ((0, f.l)({
             canvas: e,
             avatarSrcs: u.slice(0, l),
             position: {
@@ -187,7 +187,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                     w: _.kC
                 },
                 !0
-            );
+            ));
         let d = E(a, n);
         (0, f.J)({
             canvas: e,

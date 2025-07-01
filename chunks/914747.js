@@ -2,11 +2,11 @@ var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
         }
     }
     return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+        return (n && e(t.prototype, n), r && e(t, r), t);
     };
 })();
 function i(e, t) {
@@ -18,7 +18,7 @@ function a(e, t) {
 }
 function o(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
+    ((e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -26,13 +26,13 @@ function o(e, t) {
             configurable: !0
         }
     })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
 }
 e.exports = (function (e) {
     function t() {
         i(this, t);
         var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (e._children = []), e;
+        return ((e._children = []), e);
     }
     return (
         o(t, e),
@@ -40,7 +40,7 @@ e.exports = (function (e) {
             {
                 key: '__addChild',
                 value: function (e) {
-                    0 === this._children.length && this.__attach(), this._children.push(e);
+                    (0 === this._children.length && this.__attach(), this._children.push(e));
                 }
             },
             {
@@ -48,7 +48,7 @@ e.exports = (function (e) {
                 value: function (e) {
                     var t = this._children.indexOf(e);
                     if (-1 === t) return void console.warn("Trying to remove a child that doesn't exist");
-                    this._children.splice(t, 1), 0 === this._children.length && this.__detach();
+                    (this._children.splice(t, 1), 0 === this._children.length && this.__detach());
                 }
             },
             {

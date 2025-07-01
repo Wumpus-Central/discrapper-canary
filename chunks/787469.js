@@ -1,99 +1,99 @@
-n.d(t, { Z: () => y }), n(642613);
+(n.d(t, { Z: () => I }), n(642613));
 var r = n(255367),
-    i = n(73800),
-    l = n(120356),
-    o = n.n(l),
+    l = n(73800),
+    i = n(120356),
+    s = n.n(i),
     a = n(399606),
-    s = n(481060),
-    c = n(893966),
-    u = n(472596),
+    o = n(481060),
+    u = n(893966),
+    c = n(472596),
     d = n(285173),
-    p = n(485386),
-    h = n(430824),
-    f = n(496675),
+    E = n(485386),
+    _ = n(430824),
+    A = n(496675),
     m = n(776767),
-    g = n(981631),
-    b = n(388032),
-    _ = n(12740);
-function y(e) {
+    T = n(981631),
+    f = n(388032),
+    g = n(12740);
+function I(e) {
     let { member: t } = e,
-        n = (0, a.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
-        l = (0, a.e7)([p.Z], () => p.Z.getRoles(t.guildId)),
-        y = i.useMemo(
+        n = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guildId)),
+        i = (0, a.e7)([E.Z], () => E.Z.getRoles(t.guildId)),
+        I = l.useMemo(
             () =>
                 null == n
                     ? []
                     : null == t.highestRoleId
                       ? t.roles
-                      : Object.values(l)
+                      : Object.values(i)
                             .filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id))
                             .sort((e, t) => {
                                 var n, r;
                                 return null != (r = null != (n = null == e ? void 0 : e.position) ? n : 0 - (null == t ? void 0 : t.position)) ? r : 0;
                             })
                             .map((e) => e.id),
-            [t.roles, t.highestRoleId, n, l]
+            [t.roles, t.highestRoleId, n, i]
         ),
-        C = (0, a.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        x = (0, u.zq)(C),
-        v = (0, u.vN)(t),
-        j = (0, a.e7)([f.Z], () => f.Z.can(g.Plq.MANAGE_ROLES, n), [n]);
+        h = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
+        O = (0, c.zq)(h),
+        N = (0, c.vN)(t),
+        p = (0, a.e7)([A.Z], () => A.Z.can(T.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
-        : (0, r.jsx)(s.xJW, {
-              title: b.intl.string(b.t.LPJmLy),
-              titleClassName: _.infoTitle,
+        : (0, r.jsx)(o.xJW, {
+              title: f.intl.string(f.t.LPJmLy),
+              titleClassName: g.infoTitle,
               children: (0, r.jsx)(m.WM, {
                   children: (0, r.jsx)(m._2, {
                       description:
-                          t.roles.length > 0 || j
+                          t.roles.length > 0 || p
                               ? (0, r.jsxs)('div', {
-                                    className: _.roleContainer,
+                                    className: g.roleContainer,
                                     children: [
-                                        (0, r.jsx)(s.ua7, {
-                                            'aria-label': b.intl.string(b.t['0g8Xd3']),
+                                        (0, r.jsx)(o.ua7, {
+                                            'aria-label': f.intl.string(f.t['0g8Xd3']),
                                             allowOverflow: !0,
-                                            text: b.intl.string(b.t['93S+lJ']),
+                                            text: f.intl.string(f.t['93S+lJ']),
                                             children: (e) => {
-                                                let { onMouseEnter: n, onMouseLeave: i } = e;
-                                                return (0, r.jsx)(s.P3F, {
+                                                let { onMouseEnter: n, onMouseLeave: l } = e;
+                                                return (0, r.jsx)(o.P3F, {
                                                     onMouseEnter: n,
-                                                    onMouseLeave: i,
+                                                    onMouseLeave: l,
                                                     children: (0, r.jsx)(d.Z, {
-                                                        className: o()(_.roleTooltipItem, _.highestRole),
-                                                        role: x,
+                                                        className: s()(g.roleTooltipItem, g.highestRole),
+                                                        role: O,
                                                         guildId: t.guildId
                                                     })
                                                 });
                                             }
                                         }),
-                                        y.map((e) =>
+                                        I.map((e) =>
                                             (0, r.jsx)(
                                                 d.Z,
                                                 {
-                                                    className: _.roleTooltipItem,
-                                                    role: l[e],
+                                                    className: g.roleTooltipItem,
+                                                    role: i[e],
                                                     guildId: t.guildId
                                                 },
                                                 e
                                             )
                                         ),
-                                        j &&
-                                            (0, r.jsx)(s.ua7, {
-                                                'aria-label': b.intl.string(b.t.ljnBlp),
+                                        p &&
+                                            (0, r.jsx)(o.ua7, {
+                                                'aria-label': f.intl.string(f.t.ljnBlp),
                                                 allowOverflow: !0,
-                                                text: b.intl.string(b.t.ljnBlp),
+                                                text: f.intl.string(f.t.ljnBlp),
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
-                                                    return (0, r.jsx)(s.P3F, {
-                                                        className: _.addRoleContainer,
-                                                        onClick: v,
+                                                    return (0, r.jsx)(o.P3F, {
+                                                        className: g.addRoleContainer,
+                                                        onClick: N,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
-                                                        children: (0, r.jsx)(s.oFk, {
+                                                        children: (0, r.jsx)(o.oFk, {
                                                             size: 'custom',
                                                             color: 'currentColor',
-                                                            className: _.addRoleIcon,
+                                                            className: g.addRoleIcon,
                                                             width: 20,
                                                             height: 20
                                                         })
@@ -103,10 +103,10 @@ function y(e) {
                                     ]
                                 })
                               : (0, r.jsx)('div', {
-                                    className: _.noRoles,
-                                    children: (0, r.jsx)(s.Text, {
+                                    className: g.noRoles,
+                                    children: (0, r.jsx)(o.Text, {
                                         variant: 'text-sm/normal',
-                                        children: b.intl.string(b.t.nZfHsb)
+                                        children: f.intl.string(f.t.nZfHsb)
                                     })
                                 })
                   })

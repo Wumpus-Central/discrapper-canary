@@ -36,7 +36,7 @@ function a(t, e, r) {
             d < g;
 
         )
-            (p = a.get(d)), (a = a.set(d, n.applyEntity(p, null))), d++;
+            ((p = a.get(d)), (a = a.set(d, n.applyEntity(p, null))), d++);
         return e.set('characterList', a);
     }
     return e;

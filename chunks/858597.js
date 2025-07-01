@@ -110,13 +110,13 @@ let C = function (t) {
             [s, l, e, a, k]
         ),
         F = r.useCallback(() => {
-            (0, c.Mr3)(f.X_), v(h.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
+            ((0, c.Mr3)(f.X_), v(h.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM));
         }, [v]),
         P = r.useCallback(() => {
-            u.Z.unblockUser(e, { location: f.DL }), v(h.NM.USER_SAFETY_TOOLS_UNBLOCK);
+            (u.Z.unblockUser(e, { location: f.DL }), v(h.NM.USER_SAFETY_TOOLS_UNBLOCK));
         }, [e, v]),
         Z = r.useCallback(() => {
-            (0, c.Mr3)(f.X_), v(h.NM.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
+            ((0, c.Mr3)(f.X_), v(h.NM.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM));
         }, [v]),
         Y = r.useMemo(
             () => [
@@ -149,7 +149,7 @@ let C = function (t) {
                                           onBlock: F,
                                           onBlockAndReport: Z,
                                           onCancel: () => {
-                                              null == l || l(), v(h.NM.USER_SAFETY_TOOLS_BLOCK_CANCEL);
+                                              (null == l || l(), v(h.NM.USER_SAFETY_TOOLS_BLOCK_CANCEL));
                                           },
                                           onClose: l,
                                           userId: e,
@@ -166,7 +166,7 @@ let C = function (t) {
                     buttonText: N.intl.string(N.t.X27yhI),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, c.Mr3)(f.X_), (0, T.wk)(y), v(h.NM.USER_SAFETY_TOOLS_REPORT);
+                        ((0, c.Mr3)(f.X_), (0, T.wk)(y), v(h.NM.USER_SAFETY_TOOLS_REPORT));
                     }
                 }
             ],
@@ -179,7 +179,7 @@ let C = function (t) {
                     buttonText: N.intl.string(N.t.rK4Gqq),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, d.Z)(f.EI), v(h.NM.USER_SAFETY_TOOLS_CTL);
+                        ((0, d.Z)(f.EI), v(h.NM.USER_SAFETY_TOOLS_CTL));
                     }
                 },
                 e = {
@@ -188,7 +188,7 @@ let C = function (t) {
                     buttonText: N.intl.string(N.t.rK4Gqq),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, d.Z)(f.n4), v(h.NM.USER_SAFETY_TOOLS_NO_FILTR);
+                        ((0, d.Z)(f.n4), v(h.NM.USER_SAFETY_TOOLS_NO_FILTR));
                     }
                 },
                 n = {
@@ -197,7 +197,7 @@ let C = function (t) {
                     buttonText: N.intl.string(N.t.rK4Gqq),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, d.Z)(f.$l), v(h.NM.USER_SAFETY_TOOLS_THROUGHLINE);
+                        ((0, d.Z)(f.$l), v(h.NM.USER_SAFETY_TOOLS_THROUGHLINE));
                     }
                 };
             return [
@@ -208,7 +208,7 @@ let C = function (t) {
                     buttonText: N.intl.string(N.t.rzvzyc),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, O.Z)(c.pTH), v(h.NM.USER_SAFETY_TOOLS_VIBING_WUMPUS);
+                        ((0, O.Z)(c.pTH), v(h.NM.USER_SAFETY_TOOLS_VIBING_WUMPUS));
                     }
                 },
                 {
@@ -216,14 +216,14 @@ let C = function (t) {
                     title: N.intl.string(N.t['7LgVmp']),
                     subTitle: N.intl.string(N.t.pwoRjY),
                     onPress: () => {
-                        g(A.O.SAFETY_TIPS), v(h.NM.USER_SAFETY_TOOLS_SAFETY_TIPS);
+                        (g(A.O.SAFETY_TIPS), v(h.NM.USER_SAFETY_TOOLS_SAFETY_TIPS));
                     }
                 },
                 (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var n = null != arguments[e] ? arguments[e] : {},
                             i = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -231,7 +231,7 @@ let C = function (t) {
                             )),
                             i.forEach(function (e) {
                                 var i;
-                                (i = n[e]),
+                                ((i = n[e]),
                                     e in t
                                         ? Object.defineProperty(t, e, {
                                               value: i,
@@ -239,8 +239,8 @@ let C = function (t) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (t[e] = i);
-                            });
+                                        : (t[e] = i));
+                            }));
                     }
                     return t;
                 })({ type: 0 }, C ? t : L ? n : e)
@@ -252,7 +252,7 @@ let C = function (t) {
                     type: 1,
                     title: N.intl.string(N.t.otdt29),
                     onPress: () => {
-                        g(A.O.ABOUT_SAFETY_ALERTS), v(h.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS);
+                        (g(A.O.ABOUT_SAFETY_ALERTS), v(h.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS));
                     }
                 }
             ],

@@ -1,9 +1,8 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(259443),
-    i = n(570140),
-    a = n(845856),
-    o = n(894276);
-function s(e, t, n) {
+    i = n(845856),
+    a = n(894276);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,32 +15,30 @@ function s(e, t, n) {
         e
     );
 }
-let l = new r.Yd('NoteStore');
-class c extends a.f {
+let s = new r.Yd('NoteStore');
+class l extends i.fE {
     getNote(e) {
-        var t;
-        return null != (t = this.kv[e]) ? t : null;
+        return this.get(e);
     }
 }
-s(c, 'displayName', 'NoteStore'), l.info('libdiscore enabled: '.concat(o.I.cachedIsEnabled()));
-let u = new c(
-    i.Z,
-    o.I.cachedIsEnabled()
+(o(l, 'displayName', 'NoteStore'), s.info('libdiscore enabled: '.concat(a.I.cachedIsEnabled())));
+let c = new l(
+    a.I.cachedIsEnabled()
         ? void 0
-        : (e) => ({
-              CONNECTION_OPEN: () => e.reset(),
-              OVERLAY_INITIALIZE: () => e.reset(),
-              USER_NOTE_UPDATE: (t) => {
-                  e.set(t.id, {
+        : {
+              CONNECTION_OPEN: (e, t) => t.reset(),
+              OVERLAY_INITIALIZE: (e, t) => t.reset(),
+              USER_NOTE_UPDATE: (e, t) => {
+                  t.set(e.id, {
                       loading: !1,
-                      note: t.note
+                      note: e.note
                   });
               },
-              USER_NOTE_LOAD_START: (t) => {
-                  e.set(t.userId, {
+              USER_NOTE_LOAD_START: (e, t) => {
+                  t.set(e.userId, {
                       loading: !0,
                       note: null
                   });
               }
-          })
+          }
 );

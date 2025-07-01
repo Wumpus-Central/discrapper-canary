@@ -1,4 +1,4 @@
-n.d(t, { default: () => A }), n(388685);
+(n.d(t, { default: () => A }), n(388685));
 var r = n(255367),
     o = n(73800),
     i = n(512722),
@@ -31,11 +31,11 @@ function N(e, t, n) {
         e
     );
 }
-function g(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,11 +43,11 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
-let M = (e) => {
+let g = (e) => {
     var t,
         n,
         { label: o, text: i, children: a } = e,
@@ -61,18 +61,18 @@ let M = (e) => {
                         r,
                         o = {},
                         i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
             }
             return o;
         })(e, ['label', 'text', 'children']);
     return (0, r.jsxs)(
         p.Z,
-        ((t = g({ direction: p.Z.Direction.VERTICAL }, s)),
+        ((t = M({ direction: p.Z.Direction.VERTICAL }, s)),
         (n = n =
             {
                 children: [
@@ -115,7 +115,7 @@ class C extends o.PureComponent {
             n = e.hasFlag(y.xW$.MFA_SMS),
             o = e.hasFlag(y.xW$.PARTNER) || e.hasFlag(y.xW$.STAFF);
         return t
-            ? (0, r.jsxs)(M, {
+            ? (0, r.jsxs)(g, {
                   label: m.intl.string(m.t.DZQe29),
                   text: m.intl.string(m.t.fspJ4O),
                   children: [
@@ -146,7 +146,7 @@ class C extends o.PureComponent {
                       })
                   ]
               })
-            : (0, r.jsx)(M, {
+            : (0, r.jsx)(g, {
                   label: m.intl.string(m.t.DZQe29),
                   text: m.intl.string(m.t.fspJ4O),
                   children: (0, r.jsx)(l.zxk, {
@@ -159,7 +159,7 @@ class C extends o.PureComponent {
               });
     }
     renderBackupCodesSection(e) {
-        return (0, r.jsx)(M, {
+        return (0, r.jsx)(g, {
             label: m.intl.string(m.t.qZZUy8),
             text: e,
             children: (0, r.jsx)(u.Z, {
@@ -211,7 +211,7 @@ class C extends o.PureComponent {
             cancelText: m.intl.string(m.t['ETE/oK']),
             onCancel: () => this.setState({ showConfirmModal: !1 }),
             onConfirm: () => {
-                c.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }), t();
+                (c.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }), t());
             },
             children: (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
@@ -260,10 +260,10 @@ class C extends o.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, l.h7j)((t) => (0, r.jsx)(f.default, g({ reason: _.L.MFA_PHONE_UPDATE }, t, e)), { modalKey: b.M });
+        (0, l.h7j)((t) => (0, r.jsx)(f.default, M({ reason: _.L.MFA_PHONE_UPDATE }, t, e)), { modalKey: b.M });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             N(this, 'state', { showConfirmModal: !1 }),
             N(this, 'handleCloseModal', () => {
                 let { onClose: e, hasSeenBackupPrompt: t } = this.props;
@@ -288,7 +288,7 @@ class C extends o.PureComponent {
             N(this, 'handleEnableSMS', () => {
                 let { currentUser: e } = this.props;
                 null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: d.Z.enableSMS }) : d.Z.enableSMS();
-            });
+            }));
     }
 }
 let A = s.ZP.connectStores([S.default, E.Z], () => {

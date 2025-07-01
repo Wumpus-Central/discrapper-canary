@@ -30,7 +30,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -79,7 +79,7 @@ function N() {
 }
 class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (null == e ? void 0 : e.theme) != null && ((O = 1), (T = e.theme), (0, d.Z)(T), null != e.preferences && (v = e.preferences), (0, a.wj)(T) && (v[h.zd.DARK] = T)), this.waitFor(_.ZP, f.Z, p.Z, s.Z);
+        ((null == e ? void 0 : e.theme) != null && ((O = 1), (T = e.theme), (0, d.Z)(T), null != e.preferences && (v = e.preferences), (0, a.wj)(T) && (v[h.zd.DARK] = T)), this.waitFor(_.ZP, f.Z, p.Z, s.Z));
     }
     getState() {
         return {
@@ -102,36 +102,36 @@ class C extends (r = i.ZP.PersistedStore) {
     }
 }
 function R() {
-    return 0 === O && ((v = y(E({}, v), { [h.zd.DARK]: m.BRd.DARKER })), (O = 1)), N();
+    return (0 === O && ((v = y(E({}, v), { [h.zd.DARK]: m.BRd.DARKER })), (O = 1)), N());
 }
 function P() {
     return (0, a.ap)(A());
 }
 function w(e) {
-    return (S = null), !e.isSwitchingAccount && T !== m.BRd.DARK && ((T = m.BRd.DARK), (0, d.Z)(T), N());
+    return ((S = null), !e.isSwitchingAccount && T !== m.BRd.DARK && ((T = m.BRd.DARK), (0, d.Z)(T), N()));
 }
 function D(e) {
     let { systemTheme: t } = e;
-    return (I = t), N();
+    return ((I = t), N());
 }
 function L(e) {
-    return (v = E({}, v, e.preferences)), N();
+    return ((v = E({}, v, e.preferences)), N());
 }
 function x(e) {
-    return (S = e.theme), N();
+    return ((S = e.theme), N());
 }
 function k() {
-    return (S = null), N();
+    return ((S = null), N());
 }
-g(C, 'displayName', 'ThemeStore'),
+(g(C, 'displayName', 'ThemeStore'),
     g(C, 'persistKey', 'ThemeStore'),
     g(C, 'migrations', [
         (e) => {
             let t = e.theme;
-            return 'amoled' === t && (t = 'midnight'), y(E({}, e), { theme: t });
+            return ('amoled' === t && (t = 'midnight'), y(E({}, e), { theme: t }));
         },
         (e) => e
-    ]);
+    ]));
 let M = new C(o.Z, {
     CACHE_LOADED: N,
     CONNECTION_OPEN: R,

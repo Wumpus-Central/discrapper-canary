@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => j,
     cy: () => x,
     iu: () => C
 }),
-    n(388685);
+    n(388685));
 var r,
     i,
     l,
@@ -35,7 +35,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -128,12 +128,12 @@ class v extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'state', { confirmed: !1 }),
             b(this, 'handleDismiss', () => {
                 let { onClickComplete: e } = this.props;
                 this.setState({ confirmed: !0 }, () => (null == e ? void 0 : e()));
-            });
+            }));
     }
 }
 class j extends (r = a.PureComponent) {
@@ -150,12 +150,12 @@ class j extends (r = a.PureComponent) {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(e, ['renderMedia', 'textAlign', 'onComplete', 'onSkipAll', 'isLongText', 'title', 'body', 'children', 'spacing', 'forceTheme', 'innerRef']),
@@ -172,13 +172,13 @@ class j extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'onClickComplete', (e) => {
-                e(), this.props.onComplete();
+                (e(), this.props.onComplete());
             }),
             b(this, 'onClickSkipAll', (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
-                e(), t(), p.default.track(f.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
+                (e(), t(), p.default.track(f.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n }));
             }),
             b(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,
@@ -211,7 +211,7 @@ class j extends (r = a.PureComponent) {
                             })
                         )
                 });
-            });
+            }));
     }
 }
-b(j, 'TextAlignments', C), b(j, 'defaultProps', { textAlign: 'left' });
+(b(j, 'TextAlignments', C), b(j, 'defaultProps', { textAlign: 'left' }));

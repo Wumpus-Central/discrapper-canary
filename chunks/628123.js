@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(392711),
@@ -46,7 +46,7 @@ function A() {
         return null;
     let n = async () => {
         try {
-            t(!0), await (0, _.bF)(), window.location.reload(!0);
+            (t(!0), await (0, _.bF)(), window.location.reload(!0));
         } catch (e) {
             t(!1);
         }
@@ -84,7 +84,7 @@ class C extends i.PureComponent {
         });
         let r = (0, u.e)(),
             i = y.Z.captureCrash(e, { extra: t });
-        b.default.track(v.rMx.APP_CRASHED, {
+        (b.default.track(v.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -94,7 +94,7 @@ class C extends i.PureComponent {
             error_level: 'fatal'
         }),
             N(r),
-            O.ZP.cleanupDisplaySleep();
+            O.ZP.cleanupDisplaySleep());
     }
     _handleSubmitReport() {
         location.reload(!0);
@@ -138,12 +138,12 @@ class C extends i.PureComponent {
         return e;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             S(this, 'state', {
                 error: null,
                 info: null
             }),
-            S(this, 'discordErrorsSet', !1);
+            S(this, 'discordErrorsSet', !1));
     }
 }
 let R = C;

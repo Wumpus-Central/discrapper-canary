@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(544891),
     i = n(626135),
     l = n(186901),
@@ -45,14 +45,14 @@ let o = {
         scope: l.lH,
         handler(e) {
             let { socket: t, args: n } = e;
-            (n.application_id = t.application.id), i.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n);
+            ((n.application_id = t.application.id), i.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n));
         }
     },
     [a.Etm.NETWORKING_PEER_METRICS]: {
         scope: l.lH,
         handler(e) {
             let { socket: t, args: n } = e;
-            (n.application_id = t.application.id), i.default.track(a.rMx.NETWORKING_PEER_METRICS, n);
+            ((n.application_id = t.application.id), i.default.track(a.rMx.NETWORKING_PEER_METRICS, n));
         }
     },
     [a.Etm.NETWORKING_CREATE_TOKEN]: {

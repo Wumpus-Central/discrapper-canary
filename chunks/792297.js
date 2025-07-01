@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => b,
     p: () => g
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -54,13 +54,13 @@ function E(e) {
     return (
         i.useEffect(() => {
             let e = () => h((e) => e + 1);
-            return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
+            return (window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
         }),
         i.useEffect(() => {
             if (t.length > 1) {
                 let e = t[(0, s.gN)(n - 1, t.length)],
                     r = t[(0, s.gN)(n + 1, t.length)];
-                (0, u.WG)(e, !0), t.length > 2 && (0, u.WG)(r, !0);
+                ((0, u.WG)(e, !0), t.length > 2 && (0, u.WG)(r, !0));
             }
         }, [n, t]),
         (0, r.jsx)(

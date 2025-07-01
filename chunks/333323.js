@@ -1,4 +1,4 @@
-t.d(n, { Z: () => D }), t(388685);
+(t.d(n, { Z: () => D }), t(388685));
 var l = t(255367),
     r = t(73800),
     a = t(120356),
@@ -31,7 +31,7 @@ function S(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -39,7 +39,7 @@ function S(e) {
             )),
             l.forEach(function (n) {
                 var l;
-                (l = t[n]),
+                ((l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
@@ -47,8 +47,8 @@ function S(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
-            });
+                        : (e[n] = l));
+            }));
     }
     return e;
 }
@@ -189,7 +189,7 @@ function D(e) {
                       ? (0, l.jsx)(_.Z, {
                             pageWidth: m,
                             onSidebarResize: (e, n) => {
-                                R(n), T(e);
+                                (R(n), T(e));
                             }
                         })
                       : null

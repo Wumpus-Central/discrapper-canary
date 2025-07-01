@@ -1,4 +1,4 @@
-n.d(t, { Z: () => et }), n(388685), n(539854), n(997841);
+(n.d(t, { Z: () => et }), n(388685), n(539854), n(997841));
 var l = n(255367),
     i = n(73800),
     r = n(392711),
@@ -78,7 +78,7 @@ function et(e) {
         O = x && g && N && E,
         A = (d || u) && !O,
         I = p && c;
-    i.useEffect(() => {
+    (i.useEffect(() => {
         var e;
         let n = 'channel' === t.type ? (null == (e = t.channel) ? void 0 : e.guild_id) : void 0;
         (0, y.w1)({
@@ -88,7 +88,7 @@ function et(e) {
     }, [t]),
         i.useEffect(() => {
             n === R._b.VOICE && y.ux();
-        }, [n]);
+        }, [n]));
     let _ = r.length > 0;
     return (0, l.jsxs)('div', {
         className: Q.container,
@@ -183,18 +183,18 @@ function el(e) {
         ),
         d = i.useCallback(() => n(''), [n]),
         p = i.useCallback(() => {
-            c(!0),
+            (c(!0),
                 (0, j.yw)(q.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
                     source: L.Z.entrypoint(),
                     location: C.Vh.APP_LAUNCHER_HOME
-                });
+                }));
         }, []),
         m = i.useCallback(() => {
             c(!1);
         }, []),
         h = i.useCallback(
             (e) => {
-                s || p(), n(e), u(e);
+                (s || p(), n(e), u(e));
             },
             [s, n, p, u]
         );
@@ -693,7 +693,7 @@ function eu(e) {
                 : {
                       items: l.slice(0, r),
                       handleViewMore: () => {
-                          (0, j.yw)(q.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+                          ((0, j.yw)(q.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: a,
                               source: L.Z.entrypoint(),
                               num: l.length
@@ -705,7 +705,7 @@ function eu(e) {
                                   items: l,
                                   sectionName: a,
                                   sectionOverallPosition: o
-                              });
+                              }));
                       }
                   },
         [l, r, a, s, t, n, o]

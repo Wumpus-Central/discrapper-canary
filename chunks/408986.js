@@ -50,7 +50,7 @@ function p(e) {
                                     guild: r,
                                     nick: c,
                                     onSelect: () => {
-                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(r.id), n(), (0, i.xf)();
+                                        (p({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(r.id), n(), (0, i.xf)());
                                     }
                                 },
                                 r.id

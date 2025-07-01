@@ -23,7 +23,7 @@ var r = n(706165),
             if (!e || ('object' != typeof e && 'function' != typeof e)) throw new a('`O` is not an object');
             if ('string' != typeof t) throw new a('`slot` must be a string');
             var r = i.get(e);
-            r || ((r = {}), i.set(e, r)), (r['$' + t] = n);
+            (r || ((r = {}), i.set(e, r)), (r['$' + t] = n));
         }
     };
-Object.freeze && Object.freeze(o), (e.exports = o);
+(Object.freeze && Object.freeze(o), (e.exports = o));

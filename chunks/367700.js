@@ -19,7 +19,7 @@ var a = r(44837),
                     if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -27,7 +27,7 @@ var a = r(44837),
                 function () {
                     var e,
                         r = (0, l.Z)(b);
-                    return (e = t ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor) : r.apply(this, arguments)), (0, c.Z)(this, e);
+                    return ((e = t ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor) : r.apply(this, arguments)), (0, c.Z)(this, e));
                 });
         function b(e) {
             var t;

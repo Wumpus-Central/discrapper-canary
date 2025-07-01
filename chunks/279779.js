@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(997841), n(539854), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506), n(361932), n(187205);
+(n.d(t, { Z: () => N }), n(997841), n(539854), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506), n(361932), n(187205));
 var r = n(392711),
     i = n.n(r),
     a = n(772848),
@@ -36,7 +36,7 @@ function O(e) {
         id: e.id,
         username: '0' !== e.discriminator ? ''.concat(e.username, '#').concat(e.discriminator) : e.username
     };
-    return null != g.ZP.getGlobalName(e) && (r.globalName = e.globalName), e.bot && (r.isBot = !0), e instanceof l.Z ? (r.isProvisional = e.isProvisional) : 'flags' in e ? (r.isProvisional = _.yE(null != (t = e.flags) ? t : 0, E.xW$.PROVISIONAL_ACCOUNT)) : (r.isProvisional = !1), d.Z.isFriend(e.id) && ((r.isFriend = !0), (r.friendNickname = d.Z.getNickname(e.id))), e instanceof l.Z ? (r.isStaff = e.isStaff()) : 'flags' in e ? (r.isStaff = _.yE(null != (n = e.flags) ? n : 0, E.xW$.STAFF)) : (r.isStaff = !1), r;
+    return (null != g.ZP.getGlobalName(e) && (r.globalName = e.globalName), e.bot && (r.isBot = !0), e instanceof l.Z ? (r.isProvisional = e.isProvisional) : 'flags' in e ? (r.isProvisional = _.yE(null != (t = e.flags) ? t : 0, E.xW$.PROVISIONAL_ACCOUNT)) : (r.isProvisional = !1), d.Z.isFriend(e.id) && ((r.isFriend = !0), (r.friendNickname = d.Z.getNickname(e.id))), e instanceof l.Z ? (r.isStaff = e.isStaff()) : 'flags' in e ? (r.isStaff = _.yE(null != (n = e.flags) ? n : 0, E.xW$.STAFF)) : (r.isStaff = !1), r);
 }
 function v(e, t, n) {
     null != e && (e[t] = null != n && '' !== n ? n : null);
@@ -48,7 +48,7 @@ function I(e) {
     return (
         n.forEach((n) => {
             let r = O(f.default.getUser(n));
-            null != e && v(r, e.id), t.push(r);
+            (null != e && v(r, e.id), t.push(r));
         }),
         t
     );
@@ -65,7 +65,7 @@ function T(e, t) {
 }
 class S {
     setLimit(e) {
-        (this._limit = e), null != this._nextQuery && (this._nextQuery.limit = e);
+        ((this._limit = e), null != this._nextQuery && (this._nextQuery.limit = e));
     }
     subscribe() {
         null == this._worker || this._subscribed || (this._worker.addEventListener('message', this.handleMessages, !1), (this._subscribed = !0), this._setNextQuery());
@@ -74,17 +74,17 @@ class S {
         null != this._worker && this._subscribed && (this._worker.removeEventListener('message', this.handleMessages, !1), (this._subscribed = !1));
     }
     destroy() {
-        this.clearQuery(), this.unsubscribe();
+        (this.clearQuery(), this.unsubscribe());
     }
     clearQuery() {
-        (this._currentQuery = !1),
+        ((this._currentQuery = !1),
             (this._nextQuery = null),
             null != this._worker &&
                 this._subscribed &&
                 this._worker.postMessage({
                     uuid: this._uuid,
                     type: 'QUERY_CLEAR'
-                });
+                }));
     }
     setQuery(e, t, n, r) {
         null != e &&
@@ -111,7 +111,7 @@ class S {
                 : this._subscribed || this.subscribe());
     }
     constructor(e, t, n = y) {
-        b(this, '_worker', void 0),
+        (b(this, '_worker', void 0),
             b(this, '_uuid', void 0),
             b(this, '_callback', void 0),
             b(this, '_limit', void 0),
@@ -129,7 +129,7 @@ class S {
             (this._currentQuery = null),
             (this._nextQuery = null),
             (this._subscribed = !1),
-            this.subscribe();
+            this.subscribe());
     }
 }
 class A extends o.Z {
@@ -140,7 +140,7 @@ class A extends o.Z {
         null != this._worker && (this._worker.terminate(), (this._worker = null));
     }
     rebootWebworker() {
-        null != this._worker && (this._worker.terminate(), (this._worker = null)), (this._worker = new Worker(new URL('/assets/' + n.u('69731'), n.b)));
+        (null != this._worker && (this._worker.terminate(), (this._worker = null)), (this._worker = new Worker(new URL('/assets/' + n.u('69731'), n.b))));
     }
     updateUsers(e, t) {
         let { _worker: n } = this;
@@ -178,7 +178,7 @@ class A extends o.Z {
         return new S(n, e, t);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, '_worker', void 0),
             b(this, 'actions', {
                 LOGOUT: () => this._handleLogout(),
@@ -258,7 +258,7 @@ class A extends o.Z {
                             null != i && null != a && null != a.nick && (v(i, e, a.nick), r.set(n, i));
                         }
                 }
-                this.updateUsers(Array.from(r.values()), 'overlay_initialize'), r.clear();
+                (this.updateUsers(Array.from(r.values()), 'overlay_initialize'), r.clear());
             }),
             b(this, '_handleCurrentUserUpdate', (e) => {
                 let { user: t } = e,
@@ -303,7 +303,7 @@ class A extends o.Z {
                     n = I(c.Z.getChannel(t));
                 if (0 === n.length) return;
                 let r = O(f.default.getCurrentUser());
-                v(r, t), n.push(r), this.updateUsers(n, 'dm_create');
+                (v(r, t), n.push(r), this.updateUsers(n, 'dm_create'));
             }),
             b(this, '_handleDMUpdates', (e) => {
                 let { channels: t } = e;
@@ -311,15 +311,15 @@ class A extends o.Z {
                     let t = I(c.Z.getChannel(e.id));
                     if (0 === t.length) continue;
                     let n = O(f.default.getCurrentUser());
-                    v(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');
+                    (v(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates'));
                 }
             }),
             b(this, '_handleRecipientChanges', (e) => {
                 let { channelId: t, user: n, isMember: r } = e;
                 if (!r) return;
                 let i = O(n);
-                v(i, t), this.updateUsers([i], 'recipient_changes');
-            });
+                (v(i, t), this.updateUsers([i], 'recipient_changes'));
+            }));
     }
 }
 let N = new A();

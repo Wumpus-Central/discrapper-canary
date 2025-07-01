@@ -1,4 +1,4 @@
-n.d(t, { G: () => o }), n(388685);
+(n.d(t, { G: () => o }), n(388685));
 var i = n(73800),
     r = n(881052),
     s = n(260722),
@@ -20,7 +20,7 @@ function o(e) {
                 if (!S) {
                     c(!0);
                     try {
-                        await (0, s.Yw)(e.id, a.ne.ACTIVE), null == n || n();
+                        (await (0, s.Yw)(e.id, a.ne.ACTIVE), null == n || n());
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -36,7 +36,7 @@ function o(e) {
                 if (!S) {
                     u(!0);
                     try {
-                        await (0, s.Yw)(e.id, a.ne.DECLINED), null == n || n();
+                        (await (0, s.Yw)(e.id, a.ne.DECLINED), null == n || n());
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -52,7 +52,7 @@ function o(e) {
                 if (!S) {
                     g(!0);
                     try {
-                        await (0, s.Yw)(e.id, a.ne.INACTIVE), null == n || n();
+                        (await (0, s.Yw)(e.id, a.ne.INACTIVE), null == n || n());
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -68,7 +68,7 @@ function o(e) {
                 if (!S) {
                     h(!0);
                     try {
-                        await (0, s.fc)(e.id), null == n || n();
+                        (await (0, s.fc)(e.id), null == n || n());
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -83,7 +83,7 @@ function o(e) {
             if (!f) {
                 b(!0);
                 try {
-                    await (0, s.qd)(), null == n || n();
+                    (await (0, s.qd)(), null == n || n());
                 } catch (n) {
                     let e = new r.Hx(n);
                     null == t || t(e);
@@ -97,7 +97,7 @@ function o(e) {
                 if (!E) {
                     j(!0);
                     try {
-                        await s.ZP.fetchTeenActivity(e), null == n || n();
+                        (await s.ZP.fetchTeenActivity(e), null == n || n());
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -120,7 +120,7 @@ function o(e) {
                 if (!_) {
                     x(!0);
                     try {
-                        await s.ZP.requestLink(e, i), null == n || n();
+                        (await s.ZP.requestLink(e, i), null == n || n());
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);

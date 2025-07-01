@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Cp: () => h,
     Fq: () => p,
     H2: () => b,
@@ -13,14 +13,14 @@ n.d(t, {
     d5: () => v,
     uc: () => O
 }),
-    n(388685);
+    n(388685));
 var r = n(704215),
     i = n(267642),
     a = n(474936),
     o = n(981631),
     s = n(388032),
     l = (function (e) {
-        return (e.PERK = 'perk'), (e.LEVEL = 'level'), e;
+        return ((e.PERK = 'perk'), (e.LEVEL = 'level'), e);
     })({});
 let c = '1340102344645283891',
     u = '1341586379779604621',

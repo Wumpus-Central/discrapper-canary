@@ -1,4 +1,4 @@
-t.d(a, { Z: () => M }), t(388685);
+(t.d(a, { Z: () => M }), t(388685));
 var s = t(255367);
 t(73800);
 var n = t(120356),
@@ -34,7 +34,7 @@ function k(e) {
     for (var a = 1; a < arguments.length; a++) {
         var t = null != arguments[a] ? arguments[a] : {},
             s = Object.keys(t);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (s = s.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -42,7 +42,7 @@ function k(e) {
             )),
             s.forEach(function (a) {
                 var s;
-                (s = t[a]),
+                ((s = t[a]),
                     a in e
                         ? Object.defineProperty(e, a, {
                               value: s,
@@ -50,8 +50,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[a] = s);
-            });
+                        : (e[a] = s));
+            }));
     }
     return e;
 }
@@ -135,7 +135,7 @@ function A(e) {
                                   size: x.J.SIZE_60,
                                   className: R.clickableImage,
                                   onClick: (e) => {
-                                      e.stopPropagation(), A({ action: 'PRESS_IMAGE' }), S(e), b !== O.lY.MODAL && b !== O.lY.MODAL_V2 && (null == m || m());
+                                      (e.stopPropagation(), A({ action: 'PRESS_IMAGE' }), S(e), b !== O.lY.MODAL && b !== O.lY.MODAL_V2 && (null == m || m()));
                                   }
                               }),
                               (0, s.jsxs)('div', {
@@ -144,7 +144,7 @@ function A(e) {
                                       (0, s.jsx)(r.P3F, {
                                           className: R.clickableText,
                                           onClick: (e) => {
-                                              e.stopPropagation(), A({ action: 'PRESS_TEXT' }), S(e), b !== O.lY.MODAL && b !== O.lY.MODAL_V2 && (null == m || m());
+                                              (e.stopPropagation(), A({ action: 'PRESS_TEXT' }), S(e), b !== O.lY.MODAL && b !== O.lY.MODAL_V2 && (null == m || m()));
                                           },
                                           children: (0, s.jsx)(Z.f, {
                                               variant: 'heading-sm/semibold',
@@ -208,7 +208,7 @@ function Y(e) {
                                   size: x.J.SIZE_60,
                                   className: R.clickableImage,
                                   onClick: (e) => {
-                                      e.stopPropagation(), p({ action: 'PRESS_IMAGE' }), (0, m.Y)(u);
+                                      (e.stopPropagation(), p({ action: 'PRESS_IMAGE' }), (0, m.Y)(u));
                                   }
                               }),
                         (0, s.jsxs)('div', {
@@ -231,7 +231,7 @@ function Y(e) {
                                     : (0, s.jsxs)(r.P3F, {
                                           className: R.clickableText,
                                           onClick: (e) => {
-                                              e.stopPropagation(), p({ action: 'PRESS_TEXT' }), (0, m.Y)(u);
+                                              (e.stopPropagation(), p({ action: 'PRESS_TEXT' }), (0, m.Y)(u));
                                           },
                                           children: [
                                               (0, s.jsx)(Z.f, {
@@ -296,7 +296,7 @@ function w(e) {
                                   size: x.J.SIZE_60,
                                   className: R.clickableImage,
                                   onClick: (e) => {
-                                      e.stopPropagation(), v({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, m.o)(S.Hw.ALBUM, _.external_parent_id);
+                                      (e.stopPropagation(), v({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, m.o)(S.Hw.ALBUM, _.external_parent_id));
                                   }
                               }),
                               (0, s.jsxs)('div', {
@@ -308,7 +308,7 @@ function w(e) {
                                                   variant: 'heading-sm/semibold',
                                                   text: _.title,
                                                   onClick: () => {
-                                                      v({ action: 'OPEN_SPOTIFY_TRACK' }), (0, m.o)(S.Hw.TRACK, _.external_id);
+                                                      (v({ action: 'OPEN_SPOTIFY_TRACK' }), (0, m.o)(S.Hw.TRACK, _.external_id));
                                                   },
                                                   id: j
                                               }),
@@ -317,7 +317,7 @@ function w(e) {
                                                   text: null == (t = _.artists[0]) ? void 0 : t.name,
                                                   onClick: () => {
                                                       var e;
-                                                      v({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, m.o)(S.Hw.ARTIST, null == (e = _.artists[0]) ? void 0 : e.external_id);
+                                                      (v({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, m.o)(S.Hw.ARTIST, null == (e = _.artists[0]) ? void 0 : e.external_id));
                                                   }
                                               })
                                           ]
@@ -376,7 +376,7 @@ function G(e) {
                             size: x.J.SIZE_60,
                             className: R.clickableImage,
                             onClick: (e) => {
-                                e.stopPropagation(), u({ action: 'PRESS_IMAGE' }), p();
+                                (e.stopPropagation(), u({ action: 'PRESS_IMAGE' }), p());
                             }
                         }),
                         (0, s.jsxs)('div', {
@@ -387,7 +387,7 @@ function G(e) {
                                         variant: 'heading-sm/semibold',
                                         text: t.extra.activity_name,
                                         onClick: () => {
-                                            u({ action: 'PRESS_TEXT' }), p();
+                                            (u({ action: 'PRESS_TEXT' }), p());
                                         },
                                         id: r
                                     })
@@ -417,12 +417,12 @@ function M(e) {
                         s,
                         n = {},
                         i = Object.keys(e);
-                    for (s = 0; s < i.length; s++) (t = i[s]), a.indexOf(t) >= 0 || (n[t] = e[t]);
+                    for (s = 0; s < i.length; s++) ((t = i[s]), a.indexOf(t) >= 0 || (n[t] = e[t]));
                     return n;
                 })(e, a);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (s = 0; s < i.length; s++) (t = i[s]), !(a.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]);
+                for (s = 0; s < i.length; s++) ((t = i[s]), !(a.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]));
             }
             return n;
         })(e, ['entry']);

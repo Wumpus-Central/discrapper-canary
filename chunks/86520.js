@@ -21,10 +21,10 @@ r(
                         i = [],
                         s = 0,
                         l = 1;
-                    c(e, function (e) {
+                    (c(e, function (e) {
                         var a = s++,
                             c = !1;
-                        l++,
+                        (l++,
                             o(n, t, e).then(
                                 function (e) {
                                     !c &&
@@ -44,11 +44,11 @@ r(
                                         }),
                                         --l || r(i));
                                 }
-                            );
+                            ));
                     }),
-                        --l || r(i);
+                        --l || r(i));
                 });
-            return u.error && l(u.value), n.promise;
+            return (u.error && l(u.value), n.promise);
         }
     }
 );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -44,13 +44,13 @@ function I(e) {
         }),
         o = a.useCallback(
             (e, r) => {
-                (0, _.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                ((0, _.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: t.id,
                     item_position: r,
                     collection_position: n,
                     application_id: e
                 }),
-                    i(e);
+                    i(e));
             },
             [t.id, n, i]
         );

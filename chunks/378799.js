@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Dz: () => p,
     SW: () => D,
     T_: () => M,
@@ -12,7 +12,7 @@ n.d(t, {
     n(361932),
     n(187205),
     n(539854),
-    n(642613);
+    n(642613));
 var r = n(921738),
     i = n.n(r),
     a = n(259443),
@@ -37,7 +37,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -131,23 +131,23 @@ class g {
         this.map.set(e, t);
     }
     constructor(e = h) {
-        u(this, 'map', void 0),
+        (u(this, 'map', void 0),
             (this.map = new Map(
                 Object.entries(e).map((e) => {
                     let [t, n] = e;
                     return [t, m(n)];
                 })
-            ));
+            )));
     }
 }
 let E = new g();
 async function b() {
     var e;
-    if (__OVERLAY__) return (E = new g()), !1;
+    if (__OVERLAY__) return ((E = new g()), !1);
     if ((null == (e = navigator.keyboard) ? void 0 : e.getLayoutMap) != null)
         try {
             let e = await navigator.keyboard.getLayoutMap();
-            return (E = new g(Object.fromEntries(e.entries()))), !0;
+            return ((E = new g(Object.fromEntries(e.entries()))), !0);
         } catch (e) {
             E = new g();
         }
@@ -165,7 +165,7 @@ function O(e) {
             f.error('Seperate keyCode mappings found for: '.concat(e));
             continue;
         }
-        t.add(e), (n[e] = i);
+        (t.add(e), (n[e] = i));
     }
     return n;
 }
@@ -186,14 +186,14 @@ function S(e) {
 }
 class A {
     _setCachedKeyCodeMapEntries() {
-        (this._cachedKeyCodeMapEntries = Object.entries(this.keyCodeMap).map((e) => {
+        ((this._cachedKeyCodeMapEntries = Object.entries(this.keyCodeMap).map((e) => {
             let [t, n] = e;
             return [Number(t), n];
         })),
             (this._cachedAllEvents = this._cachedKeyCodeMapEntries.flatMap((e) => {
                 let [t, n] = e;
                 return n;
-            }));
+            })));
     }
     _setCachedKeyMapEntries() {
         this._cachedKeyMapEntries = Object.entries(this.keyMap);
@@ -202,36 +202,36 @@ class A {
         this._cachedKeyLayoutMapEntries = Array.from(this.getLayoutMap().entries());
     }
     get cachedKeyCodeMapEntries() {
-        return 0 === this._cachedKeyCodeMapEntries.length && this._setCachedKeyCodeMapEntries(), this._cachedKeyCodeMapEntries;
+        return (0 === this._cachedKeyCodeMapEntries.length && this._setCachedKeyCodeMapEntries(), this._cachedKeyCodeMapEntries);
     }
     get cachedKeyMapEntries() {
-        return 0 === this._cachedKeyMapEntries.length && this._setCachedKeyMapEntries(), this._cachedKeyMapEntries;
+        return (0 === this._cachedKeyMapEntries.length && this._setCachedKeyMapEntries(), this._cachedKeyMapEntries);
     }
     get cachedKeyLayoutMapEntries() {
-        return 0 === this._cachedKeyLayoutMapEntries.length && this._setCachedKeyLayoutMapEntries(), this._cachedKeyLayoutMapEntries;
+        return (0 === this._cachedKeyLayoutMapEntries.length && this._setCachedKeyLayoutMapEntries(), this._cachedKeyLayoutMapEntries);
     }
     get cachedAllEvents() {
-        return 0 === this._cachedAllEvents.length && this._setCachedKeyCodeMapEntries(), this._cachedAllEvents;
+        return (0 === this._cachedAllEvents.length && this._setCachedKeyCodeMapEntries(), this._cachedAllEvents);
     }
     getKeyCodeMapItem(e) {
-        return null == this.keyCodeMap[e] && (this.keyCodeMap[e] = []), this.keyCodeMap[e];
+        return (null == this.keyCodeMap[e] && (this.keyCodeMap[e] = []), this.keyCodeMap[e]);
     }
     _buildKeyCodeMapFromKeyMap() {
         let e = {};
         for (let [n, r] of Object.entries(this.keyMap)) {
             var t;
-            (e[r] = null != (t = e[r]) ? t : []),
+            ((e[r] = null != (t = e[r]) ? t : []),
                 e[r].push({
                     keyCode: r,
                     key: n,
                     code: this.findCodeFromKeyboardLayoutMap(n, !0)
-                });
+                }));
         }
         return e;
     }
     _initializeInternalLayoutMap() {
         let e = y();
-        (this._internalKeyLayoutMap = new Map(Array.from(e.entries()))), this._setCachedKeyLayoutMapEntries();
+        ((this._internalKeyLayoutMap = new Map(Array.from(e.entries()))), this._setCachedKeyLayoutMapEntries());
     }
     _hasExactMatch(e) {
         if (null == e.keyCode) return !1;
@@ -241,13 +241,13 @@ class A {
     addEvent(e) {
         var t, n;
         let r = v(e);
-        null == this._internalKeyLayoutMap && this._initializeInternalLayoutMap(), this._hasExactMatch(r) || (null != r.key && 'dead' !== r.key && (null == this.keyMap[r.key] ? (this.keyMap[r.key] = r.keyCode) : this.keyMap[r.key] !== r.keyCode && s.default.logKeyboardMismatches && f.error('KeyboardMapper - Key code mismatch for key '.concat(r.key, ': ').concat(this.keyMap[r.key], ' !== ').concat(r.keyCode)), (this.keyCodeMap[r.keyCode] = null != (n = this.keyCodeMap[r.keyCode]) ? n : []), this.keyCodeMap[r.keyCode].push(r), null == (t = this._internalKeyLayoutMap) || t.set(r.code, r.key), this.updateCaches()));
+        (null == this._internalKeyLayoutMap && this._initializeInternalLayoutMap(), this._hasExactMatch(r) || (null != r.key && 'dead' !== r.key && (null == this.keyMap[r.key] ? (this.keyMap[r.key] = r.keyCode) : this.keyMap[r.key] !== r.keyCode && s.default.logKeyboardMismatches && f.error('KeyboardMapper - Key code mismatch for key '.concat(r.key, ': ').concat(this.keyMap[r.key], ' !== ').concat(r.keyCode)), (this.keyCodeMap[r.keyCode] = null != (n = this.keyCodeMap[r.keyCode]) ? n : []), this.keyCodeMap[r.keyCode].push(r), null == (t = this._internalKeyLayoutMap) || t.set(r.code, r.key), this.updateCaches())));
     }
     updateCaches() {
-        this._setCachedKeyCodeMapEntries(), this._setCachedKeyMapEntries(), this._setCachedKeyLayoutMapEntries();
+        (this._setCachedKeyCodeMapEntries(), this._setCachedKeyMapEntries(), this._setCachedKeyLayoutMapEntries());
     }
     reset() {
-        (this._internalKeyLayoutMap = null), (this.keyMap = O(d({}, this._defaultKeyMap))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches(), this.save();
+        ((this._internalKeyLayoutMap = null), (this.keyMap = O(d({}, this._defaultKeyMap))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches(), this.save());
     }
     save() {
         S(this.keyMap);
@@ -275,9 +275,9 @@ class A {
         return null != a ? a : e;
     }
     constructor(e = {}) {
-        u(this, 'keyCodeMap', void 0), u(this, 'keyMap', void 0), u(this, '_internalKeyLayoutMap', null), u(this, '_defaultKeyMap', void 0), u(this, '_cachedKeyCodeMapEntries', []), u(this, '_cachedKeyMapEntries', []), u(this, '_cachedKeyLayoutMapEntries', []), u(this, '_cachedAllEvents', []), (this._defaultKeyMap = e);
+        (u(this, 'keyCodeMap', void 0), u(this, 'keyMap', void 0), u(this, '_internalKeyLayoutMap', null), u(this, '_defaultKeyMap', void 0), u(this, '_cachedKeyCodeMapEntries', []), u(this, '_cachedKeyMapEntries', []), u(this, '_cachedKeyLayoutMapEntries', []), u(this, '_cachedAllEvents', []), (this._defaultKeyMap = e));
         let t = T();
-        null != t ? (this.keyMap = t) : (this.keyMap = O(d({}, e))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches(), this.save();
+        (null != t ? (this.keyMap = t) : (this.keyMap = O(d({}, e))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches(), this.save());
     }
 }
 class N extends A {
@@ -336,7 +336,7 @@ class N extends A {
             .sort((r, i) => {
                 let a = (r) => {
                         let i = 0;
-                        return m(r.key) === m(e) && (i += 0.5), null != t && r.code === t && (i += 0.3), null != n && r.keyCode === n && (i += 0.2), i;
+                        return (m(r.key) === m(e) && (i += 0.5), null != t && r.code === t && (i += 0.3), null != n && r.keyCode === n && (i += 0.2), i);
                     },
                     o = a(r);
                 return a(i) - o;
@@ -405,7 +405,7 @@ function P() {
     return null != R
         ? R
         : (R = new Promise(async (e) => {
-              await b(),
+              (await b(),
                   (C = new N(_)),
                   document.addEventListener('keydown', (e) => {
                       try {
@@ -417,7 +417,7 @@ function P() {
                           });
                       }
                   }),
-                  e();
+                  e());
           }));
 }
 function w() {
@@ -425,7 +425,7 @@ function w() {
 }
 async function D() {
     var e;
-    await b(), null == (e = w()) || e.reset();
+    (await b(), null == (e = w()) || e.reset());
 }
 function L() {
     var e, t;

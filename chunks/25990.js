@@ -21,18 +21,18 @@ function S(e, t, n) {
 let A = T.QZA.CLOSED,
     N = {};
 function C() {
-    (A = T.QZA.OPEN), (N = {});
+    ((A = T.QZA.OPEN), (N = {}));
 }
 function R() {
-    (A = T.QZA.CLOSED), (N = {});
+    ((A = T.QZA.CLOSED), (N = {}));
 }
 function P() {
-    (A = T.QZA.SUBMITTING), (N = {});
+    ((A = T.QZA.SUBMITTING), (N = {}));
 }
 function w(e) {
     var t;
     if (A !== T.QZA.SUBMITTING) return !1;
-    (A = T.QZA.OPEN), (N = null != (t = e.errors) ? t : {});
+    ((A = T.QZA.OPEN), (N = null != (t = e.errors) ? t : {}));
 }
 function D(e) {
     let { section: t } = e;
@@ -40,7 +40,7 @@ function D(e) {
 }
 function L(e) {
     let { avatar: t } = e;
-    (r = t), (m = void 0);
+    ((r = t), (m = void 0));
 }
 function x(e) {
     let { globalName: t } = e;
@@ -112,7 +112,7 @@ function X(e) {
 }
 function Q(e) {
     let { banner: t, themeColors: n, avatarDecoration: r } = e;
-    (b = t), (h = n), (g = r);
+    ((b = t), (h = n), (g = r));
 }
 function J() {
     r = void 0;
@@ -121,16 +121,16 @@ function $() {
     N = {};
 }
 function ee() {
-    et(), en(), ea(), eo(), (N = {});
+    (et(), en(), ea(), eo(), (N = {}));
 }
 function et() {
-    (r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0);
+    ((r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0));
 }
 function en() {
-    (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (o = void 0);
+    ((l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (o = void 0));
 }
 function er() {
-    (m = void 0), (g = void 0), (E = void 0), (b = void 0), (h = void 0);
+    ((m = void 0), (g = void 0), (E = void 0), (b = void 0), (h = void 0));
 }
 function ei() {
     a = void 0;
@@ -142,7 +142,7 @@ function eo() {
     p = void 0;
 }
 function es() {
-    ee(), er(), R();
+    (ee(), er(), R());
 }
 class el extends (y = v.ZP.Store) {
     getFormState() {

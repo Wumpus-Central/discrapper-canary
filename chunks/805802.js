@@ -37,7 +37,7 @@ function u(e, t) {
                     case 'RDATE':
                         var f = null != (t = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) ? t : [],
                             _ = f[1];
-                        _ && !c && (c = _), (r = r.concat(b(d, u)));
+                        (_ && !c && (c = _), (r = r.concat(b(d, u))));
                         break;
                     case 'EXRULE':
                         if (u.length) throw Error('unsupported EXRULE parm: '.concat(u.join(',')));
@@ -97,7 +97,7 @@ function d(e, t) {
     return new i.Ci(_(h, h.dtstart || t.dtstart || c, h.tzid || t.tzid || d), f);
 }
 function f(e, t) {
-    return void 0 === t && (t = {}), d(e, p(t));
+    return (void 0 === t && (t = {}), d(e, p(t)));
 }
 function _(e, t, n) {
     return (0, r.pi)((0, r.pi)({}, e), {

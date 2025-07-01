@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => I,
     _: () => N
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -40,7 +40,7 @@ let N = () => {
                 r = h.Z.getSortDeltas(),
                 i = null,
                 l = null;
-            h.Z.hasRoleConfigurationChanges && ((l = h.Z.editedRoleIdsForConfigurations), (i = h.Z.getEditedRoleConnectionConfigurationsMap())), (0, f.Gf)(t, n, r, l, i);
+            (h.Z.hasRoleConfigurationChanges && ((l = h.Z.editedRoleIdsForConfigurations), (i = h.Z.getEditedRoleConnectionConfigurationsMap())), (0, f.Gf)(t, n, r, l, i));
         },
         submitting: t === C.QZA.SUBMITTING,
         onReset: f.S1
@@ -62,13 +62,13 @@ function I(e) {
     let g = i.useMemo(() => l.filter((e) => !(0, u.pM)(n.id, e.id)), [l, n]),
         p = (0, a.e7)([x.Z], () => x.Z.getSelectedRoleId()),
         [f, C] = i.useState(g.length > 0);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         C(f || g.length > 0);
     }, [f, g.length]),
         (0, d.ZP)(() => {
             let e = m.Z.getMemberCount(n.id);
             null != e && e <= b.cm && o.Z.requestMembers(n.id, '', 0, !1);
-        });
+        }));
     let [N, I] = i.useState(O.ZI.DISPLAY);
     return (i.useEffect(() => {
         null == p && I(O.ZI.DISPLAY);

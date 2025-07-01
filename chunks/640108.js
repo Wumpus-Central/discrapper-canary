@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => en,
     yv: () => K
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r,
     i,
     a = n(255367),
@@ -55,7 +55,7 @@ function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -63,7 +63,7 @@ function U(e) {
             )),
             r.forEach(function (t) {
                 j(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,11 +71,11 @@ function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -270,7 +270,7 @@ class X extends (r = o.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             j(this, 'state', { translateY: new d.Z.Value(0) }),
             j(this, 'volumeButton', void 0),
             j(this, 'durationBar', void 0),
@@ -279,7 +279,7 @@ class X extends (r = o.Component) {
             }),
             j(this, 'setVolumeButtonRef', (e) => {
                 this.volumeButton = e;
-            });
+            }));
     }
 }
 function Q(e) {
@@ -348,7 +348,7 @@ class J extends o.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             j(this, 'state', {
                 play: !1,
                 scale: new d.Z.Value(0),
@@ -356,7 +356,7 @@ class J extends o.Component {
             }),
             j(this, 'popAnimation', () => {
                 let { opacity: e, scale: t } = this.state;
-                t.setValue(0),
+                (t.setValue(0),
                     e.setValue(0),
                     d.Z.parallel([
                         d.Z.sequence([
@@ -370,8 +370,8 @@ class J extends o.Component {
                             })
                         ]),
                         d.Z.spring(t, B(U({ toValue: 1.5 }, H), { friction: 80 }))
-                    ]).start();
-            });
+                    ]).start());
+            }));
     }
 }
 let $ = (0, g.B)({
@@ -389,13 +389,13 @@ let $ = (0, g.B)({
 });
 class ee {
     moveToState(e) {
-        (this.stateTime = performance.now()), (this.currentState = e);
+        ((this.stateTime = performance.now()), (this.currentState = e));
     }
     timeInState() {
         return performance.now() - this.stateTime;
     }
     sendEvent() {
-        this.analyticsEnabled &&
+        (this.analyticsEnabled &&
             (null == this.errorCode && null == this.errorMessage && !1 === this.metadata.hasValidFrame && ((this.errorCode = 4), (this.errorMessage = 'No valid video frames detected - codec may be unsupported')),
             v.default.track(D.rMx.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
@@ -424,14 +424,14 @@ class ee {
             (this.seekWaitingMs = 0),
             (this.playbackStartTime = void 0),
             (this.lastPlayingTime = void 0),
-            this.moveToState('not_started');
+            this.moveToState('not_started'));
     }
     updatePlayTime(e) {
         var t, n;
-        (this.playTimeSec += Math.max((null != (t = this.lastPlayingTime) ? t : e) - (null != (n = this.playbackStartTime) ? n : 0), 0)), (this.playWallTimeMs += this.timeInState());
+        ((this.playTimeSec += Math.max((null != (t = this.lastPlayingTime) ? t : e) - (null != (n = this.playbackStartTime) ? n : 0), 0)), (this.playWallTimeMs += this.timeInState()));
     }
     constructor(e) {
-        j(this, 'metadata', void 0),
+        (j(this, 'metadata', void 0),
             j(this, 'playTimeSec', 0),
             j(this, 'playWallTimeMs', 0),
             j(this, 'firstPlayWaitingMs', 0),
@@ -452,7 +452,7 @@ class ee {
                         this.moveToState('not_started_waiting');
                         break;
                     case 'playing':
-                        this.updatePlayTime(e.currentTarget.currentTime), (this.stallCount += 1), this.moveToState('stalled');
+                        (this.updatePlayTime(e.currentTarget.currentTime), (this.stallCount += 1), this.moveToState('stalled'));
                         break;
                     case 'seeking':
                     case 'not_started_waiting':
@@ -485,14 +485,14 @@ class ee {
                     default:
                         (0, _.UT)(this.currentState);
                 }
-                (this.seekCount += 1), this.moveToState('seeking');
+                ((this.seekCount += 1), this.moveToState('seeking'));
             }),
             j(this, 'onSeeked', (e) => {
                 switch (this.currentState) {
                     case 'seeking':
                     case 'seeked':
                         let t = this.stateTime;
-                        this.moveToState('seeked'), (this.stateTime = t);
+                        (this.moveToState('seeked'), (this.stateTime = t));
                         break;
                     case 'not_started':
                     case 'not_started_waiting':
@@ -507,10 +507,10 @@ class ee {
             j(this, 'onPause', (e) => {
                 switch (this.currentState) {
                     case 'playing':
-                        this.updatePlayTime(e.currentTarget.currentTime), this.moveToState('paused'), this.sendEvent();
+                        (this.updatePlayTime(e.currentTarget.currentTime), this.moveToState('paused'), this.sendEvent());
                         break;
                     case 'stalled':
-                        (this.stallMs += this.timeInState()), this.moveToState('paused'), this.sendEvent();
+                        ((this.stallMs += this.timeInState()), this.moveToState('paused'), this.sendEvent());
                         break;
                     case 'not_started':
                     case 'not_started_waiting':
@@ -518,14 +518,14 @@ class ee {
                     case 'seeking':
                         break;
                     case 'seeked':
-                        (this.seekWaitingMs += this.timeInState()), (this.seekCount += 1);
+                        ((this.seekWaitingMs += this.timeInState()), (this.seekCount += 1));
                         break;
                     default:
                         (0, _.UT)(this.currentState);
                 }
             }),
             j(this, 'onError', (e) => {
-                this.moveToState('paused'), this.sendEvent();
+                (this.moveToState('paused'), this.sendEvent());
             }),
             j(this, 'onPlaying', (e) => {
                 switch (this.currentState) {
@@ -549,7 +549,7 @@ class ee {
                     default:
                         (0, _.UT)(this.currentState);
                 }
-                (this.playbackStartTime = e.currentTarget.currentTime), this.moveToState('playing');
+                ((this.playbackStartTime = e.currentTarget.currentTime), this.moveToState('playing'));
             }),
             j(this, 'onTimeUpdate', (e) => {
                 switch (this.currentState) {
@@ -575,7 +575,7 @@ class ee {
             }),
             (this.metadata = e),
             (this.analyticsEnabled = $.getCurrentConfig({ location: 'media_player' }).enabled),
-            (0, E.x)({ location: 'media_player' }).enabled && C.Z.getInstance().getCapabilities();
+            (0, E.x)({ location: 'media_player' }).enabled && C.Z.getInstance().getCapabilities());
     }
 }
 class et extends (i = o.PureComponent) {
@@ -600,9 +600,9 @@ class et extends (i = o.PureComponent) {
             { current: u } = this.mediaRef,
             { current: d } = this.playPausePopRef;
         if (null == u) return;
-        a && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a))) : !a && t.playing && (u.pause(), null == d || d.pop(a), null == n || n()), a && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
+        (a && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a))) : !a && t.playing && (u.pause(), null == d || d.pop(a), null == n || n()), a && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability());
         let f = (0, S.fn)(u.parentNode, u);
-        o && !t.fullscreen && null != f ? ((0, S.Dj)(f), f.addEventListener(S.NO, this.handleFullScreenExit)) : !o && t.fullscreen && null != f && (f.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(f, f.ownerDocument)), l === N.Z.Types.DURATION && t.dragging !== N.Z.Types.DURATION && a ? u.pause() : l !== N.Z.Types.DURATION && t.dragging === N.Z.Types.DURATION && a && u.play(), s !== t.muted && ((u.muted = s), null == i || i(s)), c !== t.volume && ((u.volume = c), null == r || r(c));
+        (o && !t.fullscreen && null != f ? ((0, S.Dj)(f), f.addEventListener(S.NO, this.handleFullScreenExit)) : !o && t.fullscreen && null != f && (f.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(f, f.ownerDocument)), l === N.Z.Types.DURATION && t.dragging !== N.Z.Types.DURATION && a ? u.pause() : l !== N.Z.Types.DURATION && t.dragging === N.Z.Types.DURATION && a && u.play(), s !== t.muted && ((u.muted = s), null == i || i(s)), c !== t.volume && ((u.volume = c), null == r || r(c)));
     }
     componentWillUnmount() {
         this._unmounted = !0;
@@ -625,7 +625,7 @@ class et extends (i = o.PureComponent) {
                 let e = r();
                 e !== this.state.muted && ((i.muted = e), (a.muted = e));
             }
-            this.setState(a), i.play(), null == t || t(e, i.currentTime * I.Z.Millis.SECOND, i.duration * I.Z.Millis.SECOND);
+            (this.setState(a), i.play(), null == t || t(e, i.currentTime * I.Z.Millis.SECOND, i.duration * I.Z.Millis.SECOND));
         }
     }
     getWidth() {
@@ -889,7 +889,7 @@ class et extends (i = o.PureComponent) {
     }
     constructor(e) {
         var t, n;
-        super(e),
+        (super(e),
             (t = this),
             j(this, '_unmounted', !1),
             j(this, '_lastMove', 0),
@@ -967,20 +967,20 @@ class et extends (i = o.PureComponent) {
             ),
             j(this, 'handleEnded', (e) => {
                 let { onEnded: t } = this.props;
-                null != t && t(e),
+                (null != t && t(e),
                     this.setState({
                         playing: !1,
                         hideControls: !1
-                    });
+                    }));
             }),
             j(this, 'handleMouseMove', () => {
                 this._lastMove = Date.now();
             }),
             j(this, 'handleMouseLeave', () => {
-                this.state.playing && (this._lastMove = 0), this.setState({ hovering: !1 });
+                (this.state.playing && (this._lastMove = 0), this.setState({ hovering: !1 }));
             }),
             j(this, 'handleMouseEnter', () => {
-                'none' === this.state.preload && this.setState({ preload: 'metadata' }), this.setState({ hovering: !0 });
+                ('none' === this.state.preload && this.setState({ preload: 'metadata' }), this.setState({ hovering: !0 }));
             }),
             j(this, 'handleVideoClick', (e) => {
                 let {
@@ -988,13 +988,13 @@ class et extends (i = o.PureComponent) {
                     props: { onClick: r, autoPlay: i, autoMute: a }
                 } = this;
                 if (null != r) return void r(e);
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     i && !t && n && a
                         ? this.setState({
                               muted: !1,
                               hasClickedPlay: !0
                           })
-                        : this.setPlay(!this.state.playing);
+                        : this.setPlay(!this.state.playing));
             }),
             j(this, 'setPlay', (e) => {
                 let {
@@ -1015,26 +1015,26 @@ class et extends (i = o.PureComponent) {
             }),
             j(this, 'handleDragStart', (e) => {
                 var t, n;
-                this.setState({ dragging: e }), this._analytics.onDragStart(null != (n = null == (t = this.mediaRef.current) ? void 0 : t.currentTime) ? n : null);
+                (this.setState({ dragging: e }), this._analytics.onDragStart(null != (n = null == (t = this.mediaRef.current) ? void 0 : t.currentTime) ? n : null));
             }),
             j(this, 'handleDragEnd', () => {
-                this.setState({ dragging: null }), (this._lastMove = Date.now());
+                (this.setState({ dragging: null }), (this._lastMove = Date.now()));
             }),
             j(this, 'handleKeyDown', (e) => {
                 let { current: t } = this.mediaRef,
                     { disableArrowKeySeek: n } = this.props;
-                if (e.which === D.yXg.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
+                if (e.which === D.yXg.SPACE) (e.preventDefault(), this.setPlay(!this.state.playing));
                 else if (e.which !== D.yXg.ARROW_LEFT || null == t || n)
                     if (e.which !== D.yXg.ARROW_RIGHT || null == t || n) {
                         if (e.which >= D.yXg.DIGIT_0 && e.which <= D.yXg.DIGIT_9 && null != t) {
-                            e.preventDefault(), e.stopPropagation();
+                            (e.preventDefault(), e.stopPropagation());
                             let n = (e.which - D.yXg.DIGIT_0) / 10;
-                            (t.currentTime = t.duration * n), this.setPlay(!0);
+                            ((t.currentTime = t.duration * n), this.setPlay(!0));
                         }
                     } else {
                         let { enabled: n } = (0, A.U)({ location: 'media_player' });
                         if (n) {
-                            e.preventDefault(), e.stopPropagation();
+                            (e.preventDefault(), e.stopPropagation());
                             let n = Math.min(isFinite(t.duration) ? t.duration : 0, t.currentTime + 5);
                             this.setTime(n);
                         }
@@ -1042,7 +1042,7 @@ class et extends (i = o.PureComponent) {
                 else {
                     let { enabled: n } = (0, A.U)({ location: 'media_player' });
                     if (n) {
-                        e.preventDefault(), e.stopPropagation();
+                        (e.preventDefault(), e.stopPropagation());
                         let n = Math.max(0, t.currentTime - 5);
                         this.setTime(n);
                     }
@@ -1051,13 +1051,13 @@ class et extends (i = o.PureComponent) {
             j(this, 'handleError', (e) => {
                 var t, n, r, i;
                 let a = e.currentTarget;
-                (this._analytics.errorCode = null != (r = null == (t = a.error) ? void 0 : t.code) ? r : null), (this._analytics.errorMessage = null != (i = null == (n = a.error) ? void 0 : n.message) ? i : null), this._analytics.onError(e);
+                ((this._analytics.errorCode = null != (r = null == (t = a.error) ? void 0 : t.code) ? r : null), (this._analytics.errorMessage = null != (i = null == (n = a.error) ? void 0 : n.message) ? i : null), this._analytics.onError(e));
             }),
             (this._analytics = new ee({
                 src: e.src,
                 mimeType: null == (n = e.mimeType) ? void 0 : n.join('/'),
                 fileSize: e.fileSizeBytes
-            }));
+            })));
         let { autoPlay: r, autoMute: i, volume: a, playable: s } = this.props,
             l = 'function' == typeof a ? a() : a,
             c = 'function' == typeof i ? i() : i;
@@ -1080,7 +1080,7 @@ class et extends (i = o.PureComponent) {
         };
     }
 }
-j(et, 'Types', Y),
+(j(et, 'Types', Y),
     j(et, 'defaultProps', {
         width: 400,
         height: 300,
@@ -1092,5 +1092,5 @@ j(et, 'Types', Y),
         volume: 1
     }),
     j(et, 'minWidth', 150),
-    j(et, 'minHeight', 110);
+    j(et, 'minHeight', 110));
 let en = et;

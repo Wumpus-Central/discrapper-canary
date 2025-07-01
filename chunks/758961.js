@@ -1,4 +1,4 @@
-n.d(t, { default: () => S }), n(388685), n(415506);
+(n.d(t, { default: () => S }), n(388685), n(415506));
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -41,7 +41,7 @@ function S(e) {
         [K, Q] = a.useState(S);
     async function $(e) {
         try {
-            await B(null != e ? e : null), X('ready'), q(null);
+            (await B(null != e ? e : null), X('ready'), q(null));
         } catch (e) {
             ee(e);
         }
@@ -60,7 +60,7 @@ function S(e) {
         (null == O ? void 0 : O.file) != null && e(O.file);
         async function e(e) {
             try {
-                await B(e), X('ready'), q(null);
+                (await B(e), X('ready'), q(null));
             } catch (e) {
                 ee(e);
             }
@@ -92,7 +92,7 @@ function S(e) {
             X('encoding');
             try {
                 let n = await (0, y.kV)(e, t);
-                return X('ready'), n;
+                return (X('ready'), n);
             } catch (e) {
                 throw (X('encoding-failed'), e);
             }
@@ -109,7 +109,7 @@ function S(e) {
             let t = (0, y.Zk)(e);
             X('uploading');
             try {
-                await (0, y.bb)({
+                (await (0, y.bb)({
                     readPromise: t,
                     guildId: K,
                     name: Z,
@@ -117,15 +117,15 @@ function S(e) {
                     emojiId: D,
                     emojiName: F
                 }),
-                    X('ready');
+                    X('ready'));
             } catch (e) {
                 throw new c.Z(e);
             }
         }, [A, K, Z, ei, V, T, D, F]),
         es = a.useCallback(async () => {
-            o()(null != K, 'Cannot submit soundboard sound with no guildId'), H(!0), q(null);
+            (o()(null != K, 'Cannot submit soundboard sound with no guildId'), H(!0), q(null));
             try {
-                el
+                (el
                     ? await (0, g.$d)({
                           guildId: K,
                           soundId: P.soundId,
@@ -135,23 +135,23 @@ function S(e) {
                           emojiName: F
                       })
                     : (await er(), (0, u.showToast)((0, u.createToast)(w.intl.string(w.t.T7dhBA), u.ToastType.SUCCESS))),
-                    E();
+                    E());
             } catch (e) {
                 ee(e);
             } finally {
-                X('ready'), H(!1), R(1), U(1);
+                (X('ready'), H(!1), R(1), U(1));
             }
         }, [el, E, K, P, Z, T, D, F, er, U]);
-    (0, d.ZP)(() => {
-        B(null),
+    ((0, d.ZP)(() => {
+        (B(null),
             h.default.track(j.rMx.OPEN_MODAL, {
                 type: 'Soundboard Upload Sound',
                 guild_id: K
-            });
+            }));
     }),
         a.useEffect(() => {
             R(Math.min(T, L));
-        }, [T, R, L]);
+        }, [T, R, L]));
     let eo = (0, l.jsx)(f.Z, {
         guildId: K,
         emojiId: D,

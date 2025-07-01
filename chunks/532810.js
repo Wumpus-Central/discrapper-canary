@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     A$: () => L,
     OF: () => p
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r,
     a,
     l = n(73800),
@@ -31,19 +31,19 @@ let m = [o.Z, c.Z, s.Z, f.Z, d.Z, b.Z, h.Z],
     I = () => {},
     E = document.body;
 function N() {
-    (A = 0),
+    ((A = 0),
         (y = 0),
         (x = null),
         (k = {
             hash: 0,
             violations: new Map()
-        });
+        }));
 }
 function M() {
     w = requestIdleCallback(_);
 }
 function Z() {
-    (x = null), (y = 0), A < m.length - 1 ? ((A += 1), M()) : (I(k), N());
+    ((x = null), (y = 0), A < m.length - 1 ? ((A += 1), M()) : (I(k), N()));
 }
 function _() {
     let e = m[A];
@@ -65,7 +65,7 @@ function _() {
                                 ? (function (e) {
                                       let t = '',
                                           n = e;
-                                      for (; null != n; ) (t += n.className), (n = n.parentElement);
+                                      for (; null != n; ) ((t += n.className), (n = n.parentElement));
                                       return S(t);
                                   })(t)
                                 : l.join('\n')
@@ -81,14 +81,14 @@ function _() {
                               instances: new Map()
                           },
                 s = null != (a = c.instances.get(o)) ? a : [];
-            s.push({
+            (s.push({
                 element: t,
                 message: n,
                 trace: null != l ? l : [],
                 hash: u
             }),
                 c.instances.set(o, s),
-                k.violations.set(e.id, c);
+                k.violations.set(e.id, c));
         }
     }
     if (y < x.length - 1) return M();
@@ -99,12 +99,12 @@ let T = (e) => {
 };
 function L(e, t) {
     let n = (0, l.useRef)(t);
-    (0, l.useLayoutEffect)(() => {
+    ((0, l.useLayoutEffect)(() => {
         n.current = t;
     }),
         (0, l.useLayoutEffect)(() => {
             if (g && null != e) {
-                (I = n.current), (E = e);
+                ((I = n.current), (E = e));
                 let t = (function (e) {
                     let t = new MutationObserver(T);
                     return (
@@ -117,15 +117,15 @@ function L(e, t) {
                     );
                 })(e);
                 return () => {
-                    (I = () => {}), t.disconnect();
+                    ((I = () => {}), t.disconnect());
                 };
             }
-        }, [e]);
+        }, [e]));
 }
 function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         n = 3735928559 ^ t,
         r = 1103547991 ^ t;
-    for (let t = 0, a; t < e.length; t++) (n = Math.imul(n ^ (a = e.charCodeAt(t)), 2654435761)), (r = Math.imul(r ^ a, 1597334677));
-    return (n = Math.imul(n ^ (n >>> 16), 2246822507) ^ Math.imul(r ^ (r >>> 13), 3266489909)), 4294967296 * (2097151 & (r = Math.imul(r ^ (r >>> 16), 2246822507) ^ Math.imul(n ^ (n >>> 13), 3266489909))) + (n >>> 0);
+    for (let t = 0, a; t < e.length; t++) ((n = Math.imul(n ^ (a = e.charCodeAt(t)), 2654435761)), (r = Math.imul(r ^ a, 1597334677)));
+    return ((n = Math.imul(n ^ (n >>> 16), 2246822507) ^ Math.imul(r ^ (r >>> 13), 3266489909)), 4294967296 * (2097151 & (r = Math.imul(r ^ (r >>> 16), 2246822507) ^ Math.imul(n ^ (n >>> 13), 3266489909))) + (n >>> 0));
 }

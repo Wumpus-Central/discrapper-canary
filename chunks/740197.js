@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     HS: () => d,
     Hg: () => u,
     PW: () => _,
@@ -7,7 +7,7 @@ n.d(t, {
     l0: () => f
 }),
     n(358797),
-    n(539854);
+    n(539854));
 var r = n(65154);
 let i = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
     a = i && 'setSinkId' in HTMLAudioElement.prototype;

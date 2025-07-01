@@ -83,6 +83,6 @@ class s {
               };
     }
     constructor() {
-        o(this, 'cpuHistogram', new a.b()), o(this, 'memoryHistogram', new a.b()), o(this, 'startCPU', i.Z.getCumulativeCPUUsage()), o(this, 'lastCPU', this.startCPU), o(this, 'lastBattery', null);
+        (o(this, 'cpuHistogram', new a.b()), o(this, 'memoryHistogram', new a.b()), o(this, 'startCPU', i.Z.getCumulativeCPUUsage()), o(this, 'lastCPU', this.startCPU), o(this, 'lastBattery', null));
     }
 }

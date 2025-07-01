@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Ar: () => N,
     DO: () => E,
     Fn: () => d,
@@ -13,7 +13,7 @@ n.d(t, {
     vo: () => g
 }),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(581364),
     l = n(314897),
     i = n(866830),
@@ -47,7 +47,7 @@ function j(e, t) {
         };
     if (_(a)) throw Error(c.intl.string(c.t['A/nX8P']));
     let s = (0, u.mY)(e, t);
-    return s > 0 && (a.name += ' '.concat(s + 1)), a;
+    return (s > 0 && (a.name += ' '.concat(s + 1)), a);
 }
 function p(e, t) {
     if (e.length > t) throw Error(c.intl.formatToPlainString(c.t.mee4qa, { limit: t }));

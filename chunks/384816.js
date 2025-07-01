@@ -93,7 +93,7 @@ function I(e) {
                                 applicationRoleConnection: e,
                                 locale: C,
                                 onApplicationClicked: () => {
-                                    T({ action: 'PRESS_APP_CONNECTION' }), E();
+                                    (T({ action: 'PRESS_APP_CONNECTION' }), E());
                                 },
                                 selectedGuildId: null != S ? S : void 0
                             },

@@ -88,7 +88,7 @@ function u(e) {
 function d(e, t, n) {
     e = i(e, n);
     let { width: r, height: o } = a(t, n);
-    return (r = 'string' == typeof r ? 0 : r), (o = 'string' == typeof o ? 0 : o), l(e, n.width, n.height, r, o);
+    return ((r = 'string' == typeof r ? 0 : r), (o = 'string' == typeof o ? 0 : o), l(e, n.width, n.height, r, o));
 }
 function f(e, t, n) {
     let { top: r, left: i } = e,
@@ -163,9 +163,9 @@ function p(e, t) {
         left: void 0,
         right: void 0
     };
-    return null != t.top && (n.top = e.top), null != t.bottom && (n.bottom = e.bottom), null != t.left && (n.left = e.left), null != t.right && (n.right = e.right), n;
+    return (null != t.top && (n.top = e.top), null != t.bottom && (n.bottom = e.bottom), null != t.left && (n.left = e.left), null != t.right && (n.right = e.right), n);
 }
-n.d(t, {
+(n.d(t, {
     BL: () => p,
     KR: () => i,
     Ox: () => s,
@@ -178,4 +178,4 @@ n.d(t, {
     vS: () => d,
     w_: () => a
 }),
-    n(415506);
+    n(415506));

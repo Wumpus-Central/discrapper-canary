@@ -1,4 +1,4 @@
-t.d(n, { default: () => g }), t(388685);
+(t.d(n, { default: () => g }), t(388685));
 var l = t(255367),
     o = t(73800),
     i = t(442837),
@@ -36,7 +36,7 @@ function g(e) {
         T = () => {
             if (null != _ && R) {
                 if (O) {
-                    p.Z.updateForumTag(
+                    (p.Z.updateForumTag(
                         {
                             id: C.id,
                             name: _,
@@ -46,10 +46,10 @@ function g(e) {
                         },
                         f
                     ),
-                        g();
+                        g());
                     return;
                 }
-                p.Z.createForumTag(
+                (p.Z.createForumTag(
                     {
                         name: _,
                         emojiId: null == z ? void 0 : z.id,
@@ -58,7 +58,7 @@ function g(e) {
                     },
                     f
                 ),
-                    g();
+                    g());
             }
         },
         Z = (e) => {
@@ -115,7 +115,7 @@ function g(e) {
                                                 closePopout: n,
                                                 onSelectEmoji: (e) => {
                                                     let { emoji: t, willClose: l } = e;
-                                                    Z(t), l && n();
+                                                    (Z(t), l && n());
                                                 },
                                                 pickerIntention: v.Hz.COMMUNITY_CONTENT,
                                                 onNavigateAway: g,
@@ -134,7 +134,7 @@ function g(e) {
                                                     for (var n = 1; n < arguments.length; n++) {
                                                         var t = null != arguments[n] ? arguments[n] : {},
                                                             l = Object.keys(t);
-                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                                             (l = l.concat(
                                                                 Object.getOwnPropertySymbols(t).filter(function (e) {
                                                                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -142,7 +142,7 @@ function g(e) {
                                                             )),
                                                             l.forEach(function (n) {
                                                                 var l;
-                                                                (l = t[n]),
+                                                                ((l = t[n]),
                                                                     n in e
                                                                         ? Object.defineProperty(e, n, {
                                                                               value: l,
@@ -150,8 +150,8 @@ function g(e) {
                                                                               configurable: !0,
                                                                               writable: !0
                                                                           })
-                                                                        : (e[n] = l);
-                                                            });
+                                                                        : (e[n] = l));
+                                                            }));
                                                     }
                                                     return e;
                                                 })({}, e)),
@@ -210,7 +210,7 @@ function g(e) {
                                           'aria-label': b.intl.string(b.t.o8lsHR),
                                           className: h.clearButton,
                                           onClick: () => {
-                                              P(''), I(null);
+                                              (P(''), I(null));
                                           },
                                           look: r.zxk.Looks.BLANK,
                                           size: r.zxk.Sizes.NONE,

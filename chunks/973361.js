@@ -1,4 +1,4 @@
-(t.parse = o), (t.serialize = s);
+((t.parse = o), (t.serialize = s));
 var n = decodeURIComponent,
     r = encodeURIComponent,
     i = /; */,
@@ -15,7 +15,7 @@ function o(e, t) {
             if (!(t < 0)) {
                 var n = e.substr(0, t).trim(),
                     i = e.substr(++t, e.length).trim();
-                '"' == i[0] && (i = i.slice(1, -1)), void 0 == r[n] && (r[n] = l(i, s));
+                ('"' == i[0] && (i = i.slice(1, -1)), void 0 == r[n] && (r[n] = l(i, s)));
             }
         }),
         r
@@ -41,7 +41,7 @@ function s(e, t, n) {
         if (!a.test(i.path)) throw TypeError('option path is invalid');
         l.push('Path=' + i.path);
     }
-    return i.expires && l.push('Expires=' + i.expires.toUTCString()), i.httpOnly && l.push('HttpOnly'), i.secure && l.push('Secure'), i.firstPartyOnly && l.push('First-Party-Only'), l.join('; ');
+    return (i.expires && l.push('Expires=' + i.expires.toUTCString()), i.httpOnly && l.push('HttpOnly'), i.secure && l.push('Secure'), i.firstPartyOnly && l.push('First-Party-Only'), l.join('; '));
 }
 function l(e, t) {
     try {

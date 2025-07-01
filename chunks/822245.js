@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(539854);
+(n.d(t, { Z: () => N }), n(539854));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -90,12 +90,12 @@ function I(e) {
     T(t);
 }
 function T(e) {
-    b.pendingUsages.push({
+    (b.pendingUsages.push({
         key: e,
         timestamp: Date.now()
     }),
         y.track(e),
-        y.compute();
+        y.compute());
 }
 function S() {
     var e, t;
@@ -107,7 +107,7 @@ function S() {
 }
 class A extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], S);
+        (null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], S));
     }
     getState() {
         return b;
@@ -126,7 +126,7 @@ class A extends (r = o.ZP.PersistedStore) {
         return y.frequently;
     }
 }
-p(A, 'displayName', 'ApplicationFrecencyStore'), p(A, 'persistKey', 'ApplicationFrecency');
+(p(A, 'displayName', 'ApplicationFrecencyStore'), p(A, 'persistKey', 'ApplicationFrecency'));
 let N = new A(s.Z, {
     APPLICATION_COMMAND_USED: v,
     EMBEDDED_ACTIVITY_OPEN: I,

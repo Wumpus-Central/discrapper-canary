@@ -19,10 +19,10 @@ function _() {
 }
 function p(e, t) {
     let n = o.QZ.getSetting();
-    s.hW.updateAsync(
+    (s.hW.updateAsync(
         'notifications',
         (n) => {
-            (n.quietMode = r.D5.create({ value: e })), (n.focusModeExpiresAtMs = e && null != t ? ''.concat(Date.now() + t) : '0');
+            ((n.quietMode = r.D5.create({ value: e })), (n.focusModeExpiresAtMs = e && null != t ? ''.concat(Date.now() + t) : '0'));
         },
         s.fy.INFREQUENT_USER_ACTION
     ),
@@ -42,5 +42,5 @@ function p(e, t) {
                 onConfirm: () => {
                     (0, a.Z)({ nextStatus: d.Skl.ONLINE });
                 }
-            });
+            }));
 }

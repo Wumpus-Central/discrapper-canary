@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var i = n(255367),
     l = n(73800),
     r = n(748780),
@@ -9,13 +9,13 @@ var i = n(255367),
     d = n(277053),
     u = n(259580),
     h = n(388032),
-    g = n(241756);
-function m() {
+    m = n(241756);
+function g() {
     let e = (0, s.e7)([d.Z], () => d.Z.advancedMode),
         [t] = l.useState(new r.Z.Value(+!!e));
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(a.$i$, { className: g.advancedModeDivider }),
+            (0, i.jsx)(a.$i$, { className: m.advancedModeDivider }),
             (0, i.jsx)(a.y5t, {
                 component: (0, i.jsx)(a.zxk, {
                     look: a.zxk.Looks.BLANK,
@@ -36,12 +36,12 @@ function m() {
                     },
                     children: (0, i.jsxs)(a.vwX, {
                         tag: 'h1',
-                        className: g.advancedTitle,
+                        className: m.advancedTitle,
                         children: [
                             h.intl.string(h.t.dYRsrq),
                             (0, i.jsx)(u.Z, {
                                 expanded: e,
-                                className: g.titleCaret,
+                                className: m.titleCaret,
                                 width: 20,
                                 height: 20
                             })

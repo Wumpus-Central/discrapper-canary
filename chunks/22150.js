@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(953529);
+(n.d(t, { Z: () => m }), n(388685), n(953529));
 var s = n(255367),
     r = n(73800),
     l = n(442837),
@@ -13,9 +13,9 @@ function m(e) {
         [m, u] = r.useState(!1),
         E = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         _ = async (e) => {
-            e.preventDefault(), u(!0);
+            (e.preventDefault(), u(!0));
             try {
-                await (0, o.i)(), t();
+                (await (0, o.i)(), t());
             } catch (t) {
                 let e = new a.Z(t).getAnyErrorMessage();
                 null != e && (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));

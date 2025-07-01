@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(539854);
+(n.d(t, { Z: () => u }), n(539854));
 var r,
     i = n(442837),
     l = n(570140),
@@ -29,7 +29,7 @@ class c extends (r = i.ZP.PersistedStore) {
         return s;
     }
 }
-o(c, 'displayName', 'LiveChannelNoticesStore'), o(c, 'persistKey', 'liveChannelNotices_v2');
+(o(c, 'displayName', 'LiveChannelNoticesStore'), o(c, 'persistKey', 'liveChannelNotices_v2'));
 let u = new c(l.Z, {
     LIVE_CHANNEL_NOTICE_HIDE: function (e) {
         let { eventId: t, stageId: n } = e;

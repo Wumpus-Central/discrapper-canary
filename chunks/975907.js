@@ -18,13 +18,13 @@ function d(e) {
         }, []),
         p = r.useCallback(() => {
             let e = (0, i.K)();
-            (0, l.zZ)(c.rMx.APP_DIRECTORY_SEARCH_STARTED, {
+            ((0, l.zZ)(c.rMx.APP_DIRECTORY_SEARCH_STARTED, {
                 search_term: n,
                 category: e.name,
                 current_page: s.m_.HOME,
                 category_id: e.id
             }),
-                (0, o.pR)({ query: n });
+                (0, o.pR)({ query: n }));
         }, [n]);
     return {
         searchQuery: n,

@@ -1,4 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }),
+(Object.defineProperty(t, '__esModule', { value: !0 }),
     (t.calculateChange = function (e, t, r) {
         var n = r.getBoundingClientRect(),
             o = n.width,
@@ -7,7 +7,7 @@ Object.defineProperty(t, '__esModule', { value: !0 }),
             l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
             s = i - (r.getBoundingClientRect().left + window.pageXOffset),
             u = l - (r.getBoundingClientRect().top + window.pageYOffset);
-        s < 0 ? (s = 0) : s > o && (s = o), u < 0 ? (u = 0) : u > a && (u = a);
+        (s < 0 ? (s = 0) : s > o && (s = o), u < 0 ? (u = 0) : u > a && (u = a));
         var c = s / o,
             p = 1 - u / a;
         return {
@@ -17,4 +17,4 @@ Object.defineProperty(t, '__esModule', { value: !0 }),
             a: t.a,
             source: 'hsv'
         };
-    });
+    }));

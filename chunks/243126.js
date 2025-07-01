@@ -1,4 +1,4 @@
-n.d(t, { N: () => b }), n(388685), n(642613), n(290780);
+(n.d(t, { N: () => b }), n(388685), n(642613), n(290780));
 var r = n(73800),
     l = n(392711),
     a = n.n(l),
@@ -47,7 +47,7 @@ let b = (e, t) => {
             );
         }, [_, E, x, t, S, l, b, v]),
         j = r.useCallback(() => {
-            O((e) => e + 1), C(i.m.RANDOM);
+            (O((e) => e + 1), C(i.m.RANDOM));
         }, []);
     return {
         sortType: _,

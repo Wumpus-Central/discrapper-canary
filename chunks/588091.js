@@ -1,4 +1,4 @@
-n.d(t, { default: () => P }), n(388685);
+(n.d(t, { default: () => P }), n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -138,15 +138,15 @@ function P(e) {
     a.useEffect(() => {
         !(async function () {
             try {
-                C(!0), await (0, p.cf)(s, l), C(!1);
+                (C(!0), await (0, p.cf)(s, l), C(!1));
             } catch (e) {
-                n(),
+                (n(),
                     (0, x.Z)({
                         body: N.intl.string(N.t.VQ0lXV),
                         confirmText: N.intl.string(N.t['NX+WJC']),
                         header: N.intl.string(N.t.OCwKlp),
                         confirmButtonColor: d.zx.Colors.BRAND
-                    });
+                    }));
             }
         })();
     }, [s, l, n]);

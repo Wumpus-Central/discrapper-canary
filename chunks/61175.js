@@ -1,4 +1,4 @@
-r(42547),
+(r(42547),
     (t.exports = {
         isValidBlock: function (t, e) {
             var r = t.getKey(),
@@ -53,4 +53,4 @@ r(42547),
                 }) && this.isConnectedTree(t)
             );
         }
-    });
+    }));

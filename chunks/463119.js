@@ -1,4 +1,4 @@
-n.d(t, { i: () => H }), n(388685);
+(n.d(t, { i: () => H }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -31,7 +31,7 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function Z(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -47,8 +47,8 @@ function Z(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -80,12 +80,12 @@ function L(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -116,7 +116,7 @@ let w = (e) => {
             { analyticsLocations: E } = (0, f.ZP)(_),
             [y, I] = i.useState(!1),
             v = i.useCallback(() => {
-                void 0 !== o && o(),
+                (void 0 !== o && o(),
                     void 0 !== c &&
                         (0, O.mK)({
                             openInLayer: !1,
@@ -128,7 +128,7 @@ let w = (e) => {
                     (0, O.Sm)({
                         analyticsSource: _,
                         analyticsLocations: E
-                    });
+                    }));
             }, [_, E, o, I, c]),
             C = T.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
@@ -222,12 +222,12 @@ let w = (e) => {
         P ? (U ? ((t = null == (l = v.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered), (n = null == (u = v.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark)) : ((t = null == (h = v.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered), (n = null == (g = v.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))) : U ? ((t = null == (m = v.entryPointBackgroundAssets) ? void 0 : m.srcDark), (n = null == (_ = v.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark)) : ((t = null == (O = v.entryPointBackgroundAssets) ? void 0 : O.srcLight), (n = null == (I = v.entrypointBackgroundStyle) || null == (y = I.resting) ? void 0 : y.light));
         let G = i.useCallback(
                 (e) => {
-                    T((e) => (e + 1) % v.assetIds.length), R(!0), null == e || e();
+                    (T((e) => (e + 1) % v.assetIds.length), R(!0), null == e || e());
                 },
                 [v.assetIds.length]
             ),
             B = i.useCallback((e) => {
-                R(!1), null == e || e();
+                (R(!1), null == e || e());
             }, []),
             V = v.title();
         return (0, r.jsx)(s.ua7, {
@@ -360,7 +360,7 @@ let w = (e) => {
                 selected: t,
                 locationState: i,
                 onClick: () => {
-                    o || c(), null == n || n();
+                    (o || c(), null == n || n());
                 },
                 listItemRef: l
             };

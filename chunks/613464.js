@@ -1,104 +1,104 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => S }), n(388685));
 var r = n(255367),
-    i = n(73800),
-    l = n(120356),
-    o = n.n(l),
+    l = n(73800),
+    i = n(120356),
+    s = n.n(i),
     a = n(442837),
-    s = n(481060),
-    c = n(749210),
-    u = n(110924),
+    o = n(481060),
+    u = n(749210),
+    c = n(110924),
     d = n(410030),
-    p = n(616780),
-    h = n(100527),
-    f = n(906732),
+    E = n(616780),
+    _ = n(100527),
+    A = n(906732),
     m = n(527379),
-    g = n(687158),
-    b = n(184301),
-    _ = n(502762),
-    y = n(271383),
-    C = n(594174),
-    x = n(189357),
-    v = n(718617),
-    j = n(327250),
-    O = n(50767);
-function E(e) {
-    let { userId: t, guildId: n, onClose: l, className: E, infoPanelClassName: I, style: S } = e,
-        P = (0, x.m)(n),
-        Z = (0, a.e7)([C.default], () => C.default.getUser(t), [t]),
-        N = (0, a.e7)([y.ZP], () => y.ZP.getMember(n, t), [n, t]),
-        [T, A] = i.useState(null == Z || null == N),
-        w = (0, u.Z)(N),
-        R = i.useRef(null),
-        { analyticsLocations: k } = (0, f.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW),
-        M = (0, g.ZP)(t, n),
-        D = (0, d.ZP)();
-    return (i.useEffect(() => {
-        P || l();
-    }, [P, l]),
-    i.useEffect(() => {
-        null == w || null != N || T || l();
-    }, [T, N, l, w]),
-    i.useEffect(() => {
-        null != Z && null != N && A(!1);
-    }, [Z, N]),
-    i.useEffect(() => {
-        let e = null == N;
+    T = n(687158),
+    f = n(184301),
+    g = n(502762),
+    I = n(271383),
+    h = n(594174),
+    O = n(189357),
+    N = n(718617),
+    p = n(327250),
+    R = n(50767);
+function S(e) {
+    let { userId: t, guildId: n, onClose: i, className: S, infoPanelClassName: C, style: b } = e,
+        v = (0, O.m)(n),
+        D = (0, a.e7)([h.default], () => h.default.getUser(t), [t]),
+        x = (0, a.e7)([I.ZP], () => I.ZP.getMember(n, t), [n, t]),
+        [M, L] = l.useState(null == D || null == x),
+        U = (0, c.Z)(x),
+        P = l.useRef(null),
+        { analyticsLocations: j } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
+        y = (0, T.ZP)(t, n),
+        w = (0, d.ZP)();
+    return (l.useEffect(() => {
+        v || i();
+    }, [v, i]),
+    l.useEffect(() => {
+        null == U || null != x || M || i();
+    }, [M, x, i, U]),
+    l.useEffect(() => {
+        null != D && null != x && L(!1);
+    }, [D, x]),
+    l.useEffect(() => {
+        let e = null == x;
         return (
-            !T && e && (R.current = window.setTimeout(l, 500)),
+            !M && e && (P.current = window.setTimeout(i, 500)),
             () => {
-                null != R.current && window.clearTimeout(R.current);
+                null != P.current && window.clearTimeout(P.current);
             }
         );
-    }, [T, N, l]),
-    (0, p.$)({ [n]: [t] }),
-    i.useEffect(() => {
+    }, [M, x, i]),
+    (0, E.$)({ [n]: [t] }),
+    l.useEffect(() => {
         !(async function () {
             let e = [
-                c.Z.requestMembersById(n, [t]),
+                u.Z.requestMembersById(n, [t]),
                 (0, m.nb)(n, [t]),
-                (0, b.Z)(t, void 0, {
+                (0, f.Z)(t, void 0, {
                     guildId: n,
                     dispatchWait: !0
                 })
             ];
-            await Promise.all(e), A(!1);
+            (await Promise.all(e), L(!1));
         })();
     }, [n, t]),
-    P)
-        ? T || null == Z || null == N
+    v)
+        ? M || null == D || null == x
             ? (0, r.jsx)('div', {
-                  className: o()(O.sidebarContainer, O.loadingContainer, E),
-                  style: S,
-                  children: (0, r.jsx)(s.$jN, {
+                  className: s()(R.sidebarContainer, R.loadingContainer, S),
+                  style: b,
+                  children: (0, r.jsx)(o.$jN, {
                       animated: !0,
-                      type: T ? s.$jN.Type.SPINNING_CIRCLE : s.$jN.Type.CHASING_DOTS
+                      type: M ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS
                   })
               })
-            : (0, r.jsx)(f.Gt, {
-                  value: k,
+            : (0, r.jsx)(A.Gt, {
+                  value: j,
                   children: (0, r.jsx)('div', {
-                      className: o()(O.sidebarContainer, E),
-                      style: S,
-                      children: (0, r.jsx)(_.Z, {
-                          user: Z,
-                          displayProfile: M,
+                      className: s()(R.sidebarContainer, S),
+                      style: b,
+                      children: (0, r.jsx)(g.Z, {
+                          user: D,
+                          displayProfile: y,
                           themeType: null,
-                          themeOverride: D,
+                          themeOverride: w,
                           forceShowPremium: !0,
-                          className: O.profileThemedContainer,
+                          className: R.profileThemedContainer,
                           children: (0, r.jsxs)('div', {
-                              className: O.innerContainer,
+                              className: R.innerContainer,
                               children: [
-                                  (0, r.jsx)(j.ZP, {
+                                  (0, r.jsx)(p.ZP, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: l
+                                      onClose: i
                                   }),
-                                  (0, r.jsx)(v.Z, {
+                                  (0, r.jsx)(N.Z, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: l,
-                                      className: I
+                                      onClose: i,
+                                      className: C
                                   })
                               ]
                           })

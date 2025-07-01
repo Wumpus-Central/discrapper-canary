@@ -17,16 +17,16 @@ var r = n(255367),
     p = n(328977),
     g = n(412222),
     v = n(223312),
-    C = n(172751),
-    _ = n(768762),
+    _ = n(172751),
+    C = n(768762),
     T = n(892001),
     N = n(598077),
     E = n(430824),
     S = n(51144),
     I = n(388032),
     R = n(555405),
-    P = n(710931),
-    O = n(771429),
+    O = n(710931),
+    P = n(771429),
     y = n(350381);
 function w(e) {
     let t,
@@ -34,13 +34,13 @@ function w(e) {
         { status: l } = e;
     switch (l) {
         case b.wB.REJECTED:
-            (t = I.t['7YSJ6e']), (n = I.t.i05OUV);
+            ((t = I.t['7YSJ6e']), (n = I.t.i05OUV));
             break;
         case b.wB.APPROVED:
-            (t = I.t.bv82GR), (n = I.t.D4OUHR);
+            ((t = I.t.bv82GR), (n = I.t.D4OUHR));
             break;
         default:
-            (t = I.t['/wqiSk']), (n = I.t.o47YZm);
+            ((t = I.t['/wqiSk']), (n = I.t.o47YZm));
     }
     return (0, r.jsxs)('div', {
         className: R.emptyContainer,
@@ -66,7 +66,7 @@ function A(e) {
     let { sortOrder: t, onSortChange: n } = e;
     return (0, r.jsx)('thead', {
         children: (0, r.jsxs)('tr', {
-            className: O.tableHeaderRow,
+            className: P.tableHeaderRow,
             children: [
                 (0, r.jsx)('th', {
                     className: R.headerCell,
@@ -88,13 +88,13 @@ function A(e) {
                                 children: I.intl.string(I.t.EZ5QWF)
                             }),
                             t === b.Nw.TIMESTAMP_ASC
-                                ? (0, r.jsx)(_.Z, {
+                                ? (0, r.jsx)(C.Z, {
                                       className: R.sortIcon,
-                                      direction: _.Z.Directions.UP
+                                      direction: C.Z.Directions.UP
                                   })
-                                : (0, r.jsx)(_.Z, {
+                                : (0, r.jsx)(C.Z, {
                                       className: R.sortIcon,
-                                      direction: _.Z.Directions.DOWN
+                                      direction: C.Z.Directions.DOWN
                                   })
                         ]
                     })
@@ -117,13 +117,13 @@ let M = l.memo(function (e) {
             { analyticsLocations: s } = (0, x.ZP)(),
             o = l.useCallback(
                 (e) => {
-                    e.stopPropagation(),
+                    (e.stopPropagation(),
                         e.preventDefault(),
                         (0, T.openUserProfileModal)({
                             userId: n.id,
                             joinRequestId: i,
                             sourceAnalyticsLocations: s
-                        });
+                        }));
                 },
                 [n, i, s]
             );
@@ -144,7 +144,7 @@ let M = l.memo(function (e) {
                             className: y.nameContainer,
                             children: [
                                 n.globalName,
-                                (0, r.jsx)(C.ZP, {
+                                (0, r.jsx)(_.ZP, {
                                     primaryGuild: null == n ? void 0 : n.primaryGuild,
                                     userId: null == n ? void 0 : n.id,
                                     contextGuildId: a,
@@ -190,7 +190,7 @@ let M = l.memo(function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -198,7 +198,7 @@ let M = l.memo(function (e) {
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -206,8 +206,8 @@ let M = l.memo(function (e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({}, t)),
@@ -341,14 +341,14 @@ function D(e) {
         }),
         x = l.useCallback(async () => {
             let e = s === b.Nw.TIMESTAMP_ASC ? b.Nw.TIMESTAMP_DESC : b.Nw.TIMESTAMP_ASC;
-            h.Z.setSelectedSortOrder(t, e), await m(e, n);
+            (h.Z.setSelectedSortOrder(t, e), await m(e, n));
         }, [s, t, m, n]);
     return null == a
         ? null
         : (0, r.jsx)('div', {
-              className: P.mainTableContainer,
+              className: O.mainTableContainer,
               children: (0, r.jsx)(d.Den, {
-                  className: P.horizatonalScroller,
+                  className: O.horizatonalScroller,
                   ref: i,
                   orientation: 'horizontal',
                   children: (0, r.jsxs)('table', {

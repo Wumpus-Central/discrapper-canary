@@ -20,7 +20,7 @@ let s = 120000,
     c = {};
 function u(e) {
     let { guildId: t, roleMemberCount: n } = e;
-    (l[t] = n), (c[t] = Date.now());
+    ((l[t] = n), (c[t] = Date.now()));
 }
 function d(e) {
     let { guildId: t, roleId: n, count: r } = e,
@@ -49,11 +49,11 @@ function p(e) {
 }
 function h(e) {
     let { guildId: t, role: n } = e;
-    null == l[t] && (l[t] = {}), (l[t][n.id] = 0);
+    (null == l[t] && (l[t] = {}), (l[t][n.id] = 0));
 }
 function m(e) {
     let { guild: t } = e;
-    delete l[t.id], delete c[t.id];
+    (delete l[t.id], delete c[t.id]);
 }
 class g extends (r = i.ZP.Store) {
     getRoleMemberCount(e) {

@@ -1,4 +1,4 @@
-n.d(e, { default: () => j }), n(388685);
+(n.d(e, { default: () => j }), n(388685));
 var a = n(255367),
     r = n(73800),
     i = n(442837),
@@ -66,7 +66,7 @@ function j(t) {
                                 selectedItem: S,
                                 type: 'top',
                                 onItemSelect: (t) => {
-                                    O(t), (0, d.ws)({ forumDemoId: t });
+                                    (O(t), (0, d.ws)({ forumDemoId: t }));
                                 },
                                 className: h.tags,
                                 children: P.map((t, e) =>
@@ -102,8 +102,8 @@ function j(t) {
                                 j &&
                                     (0, a.jsx)(s.zxk, {
                                         onClick: () => {
-                                            (0, s.ZDy)(async () => {
-                                                let { default: t } = await Promise.all([n.e('45094'), n.e('63228')]).then(n.bind(n, 218613));
+                                            ((0, s.ZDy)(async () => {
+                                                let { default: t } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
                                                 return (n) => {
                                                     var r, i;
                                                     return (0, a.jsx)(
@@ -112,7 +112,7 @@ function j(t) {
                                                             for (var e = 1; e < arguments.length; e++) {
                                                                 var n = null != arguments[e] ? arguments[e] : {},
                                                                     a = Object.keys(n);
-                                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                                     (a = a.concat(
                                                                         Object.getOwnPropertySymbols(n).filter(function (t) {
                                                                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -120,7 +120,7 @@ function j(t) {
                                                                     )),
                                                                     a.forEach(function (e) {
                                                                         var a;
-                                                                        (a = n[e]),
+                                                                        ((a = n[e]),
                                                                             e in t
                                                                                 ? Object.defineProperty(t, e, {
                                                                                       value: a,
@@ -128,8 +128,8 @@ function j(t) {
                                                                                       configurable: !0,
                                                                                       writable: !0
                                                                                   })
-                                                                                : (t[e] = a);
-                                                                    });
+                                                                                : (t[e] = a));
+                                                                    }));
                                                             }
                                                             return t;
                                                         })({}, n)),
@@ -155,7 +155,7 @@ function j(t) {
                                                     );
                                                 };
                                             }),
-                                                b(p.L.PRIMARY);
+                                                b(p.L.PRIMARY));
                                         },
                                         children: x.intl.string(x.t['1X8SKy'])
                                     })

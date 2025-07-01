@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(73800),
     i = n(442837),
     l = n(821849),
@@ -26,7 +26,7 @@ function u(e) {
                 if (null == l) continue;
                 let a = n[l];
                 if (null != a) {
-                    (i = a), (r = t);
+                    ((i = a), (r = t));
                     break;
                 }
             }

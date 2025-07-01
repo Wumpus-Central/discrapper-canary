@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r = n(570140),
     i = n(846027),
     l = n(13245),
@@ -51,7 +51,7 @@ function x(e, t, n) {
     let a = Z.get(l);
     null == a && ((a = new Map()), Z.set(l, a));
     let o = a.get(t);
-    null == o && ((o = new Set()), a.set(t, o)), e ? o.add(n.id) : o.delete(n.id);
+    (null == o && ((o = new Set()), a.set(t, o)), e ? o.add(n.id) : o.delete(n.id));
     let s = o.size > 0;
     y.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(s, t), l);
 }
@@ -277,23 +277,23 @@ let L = {
 };
 class w extends u.Z {
     _initialize() {
-        r.Z.wait(() =>
+        (r.Z.wait(() =>
             r.Z.dispatch({
                 type: 'KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS',
                 keybinds: L
             })
         ),
             r.Z.subscribe('AUDIO_SET_MODE', this.resetPTTState),
-            r.Z.subscribe('VOICE_CHANNEL_SELECT', this.resetPTTState);
+            r.Z.subscribe('VOICE_CHANNEL_SELECT', this.resetPTTState));
     }
     _terminate() {
-        r.Z.unsubscribe('AUDIO_SET_MODE', this.resetPTTState), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.resetPTTState);
+        (r.Z.unsubscribe('AUDIO_SET_MODE', this.resetPTTState), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.resetPTTState));
     }
     resetPTTState() {
-        Z.clear(),
+        (Z.clear(),
             y.Z.getMediaEngine().eachConnection((e) => {
-                e.setForceAudioInput(!1, !1), e.setForceAudioInput(!1, !0);
-            }, A.Yn.DEFAULT);
+                (e.setForceAudioInput(!1, !1), e.setForceAudioInput(!1, !0));
+            }, A.Yn.DEFAULT));
     }
 }
 let R = new w();

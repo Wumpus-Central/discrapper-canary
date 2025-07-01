@@ -18,7 +18,7 @@ function g(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -26,7 +26,7 @@ function g(t) {
             )),
             r.forEach(function (e) {
                 var r;
-                (r = n[e]),
+                ((r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
@@ -34,8 +34,8 @@ function g(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
-            });
+                        : (t[e] = r));
+            }));
     }
     return t;
 }
@@ -90,12 +90,12 @@ function h(t) {
                         r,
                         i = {},
                         o = Object.keys(t);
-                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]));
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]));
             }
             return i;
         })(t, ['user', 'guildId', 'channelId', 'onIgnore', 'onBlock', 'location']);
@@ -117,7 +117,7 @@ function h(t) {
                         confirmText: p.intl.string(p.t.ytCpKi),
                         cancelText: p.intl.string(p.t['ETE/oK']),
                         onConfirm: () => {
-                            null == h || h(), c.Z.ignoreUser(e.id, y, null != s ? s : void 0), d.default.track(j.rMx.IGNORE_USER_CONFIRMED);
+                            (null == h || h(), c.Z.ignoreUser(e.id, y, null != s ? s : void 0), d.default.track(j.rMx.IGNORE_USER_CONFIRMED));
                         },
                         onCancel: () => {
                             d.default.track(j.rMx.USER_REMEDIATION_ACTION, {
@@ -181,7 +181,7 @@ function h(t) {
                                             buttonText: p.intl.string(p.t.QdfUHB),
                                             buttonColor: l.Ttl.PRIMARY,
                                             onButtonPress: () => {
-                                                d.default.track(j.rMx.USER_REMEDIATION_ACTION, {
+                                                (d.default.track(j.rMx.USER_REMEDIATION_ACTION, {
                                                     action: m.l.GOTO_BLOCK,
                                                     location: y
                                                 }),
@@ -198,7 +198,7 @@ function h(t) {
                                                                 location: y
                                                             })
                                                         )
-                                                    );
+                                                    ));
                                             }
                                         })
                                     }),

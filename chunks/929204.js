@@ -21,7 +21,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,17 +29,17 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 function c(e) {
-    a.default.track(o.rMx.OPEN_MODAL, {
+    (a.default.track(o.rMx.OPEN_MODAL, {
         type: o.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
         location: e
     }),
         (0, i.ZDy)(async () => {
             let { default: e } = await n.e('75613').then(n.bind(n, 72691));
             return (t) => (0, r.jsx)(e, l({}, t));
-        });
+        }));
 }

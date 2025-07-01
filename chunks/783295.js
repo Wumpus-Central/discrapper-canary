@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(147913),
     i = n(314897),
     a = n(592125),
@@ -19,7 +19,7 @@ function l(e, t, n) {
 }
 class c extends r.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             l(this, 'prevConnected', !1),
             l(this, 'tempMutedChannel', null),
             l(this, 'handleRTCConnectionState', (e) => {
@@ -29,7 +29,7 @@ class c extends r.Z {
                     l = a.Z.getChannel(n),
                     c = null == l ? void 0 : l.getGuildId(),
                     u = this.tempMutedChannel === n;
-                i && null != c && (u ? (this.tempMutedChannel = null) : (0, o.M2)(c)), (this.prevConnected = r);
+                (i && null != c && (u ? (this.tempMutedChannel = null) : (0, o.M2)(c)), (this.prevConnected = r));
             }),
             l(this, 'handleMute', (e) => {
                 let { channelId: t } = e;
@@ -48,7 +48,7 @@ class c extends r.Z {
                 RTC_CONNECTION_STATE: this.handleRTCConnectionState,
                 SOUNDBOARD_MUTE_JOIN_SOUND: this.handleMute,
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates
-            });
+            }));
     }
 }
 let u = new c();

@@ -21,7 +21,7 @@ var r = function (e, t, n) {
         var o = e.key + '-' + t.name;
         if (void 0 === e.inserted[t.name]) {
             var i = t;
-            do e.insert(t === i ? '.' + o : '', i, e.sheet, !0), (i = i.next);
+            do (e.insert(t === i ? '.' + o : '', i, e.sheet, !0), (i = i.next));
             while (void 0 !== i);
         }
     };

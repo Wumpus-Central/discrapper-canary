@@ -1,13 +1,13 @@
-n.d(t, {
+(n.d(t, {
     W3: () => s,
     pJ: () => i
 }),
     n(388685),
     n(539854),
-    n(255367);
+    n(255367));
 var r = n(73800),
     i = (function (e) {
-        return (e[(e.MOUNTED = 0)] = 'MOUNTED'), (e[(e.ENTERED = 1)] = 'ENTERED'), (e[(e.YEETED = 2)] = 'YEETED'), e;
+        return ((e[(e.MOUNTED = 0)] = 'MOUNTED'), (e[(e.ENTERED = 1)] = 'ENTERED'), (e[(e.YEETED = 2)] = 'YEETED'), e);
     })({});
 let a = {};
 function o(e) {
@@ -55,7 +55,7 @@ function s(e) {
                         renderItem: n
                     };
                 }
-                a.set(t, o), r.delete(t);
+                (a.set(t, o), r.delete(t));
             }
             for (let e of r) {
                 let t = a.get(e);

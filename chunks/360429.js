@@ -36,7 +36,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function D(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -52,8 +52,8 @@ function D(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -120,21 +120,21 @@ function T(e) {
                       label: t,
                       action: a
                           ? function () {
-                                (0, s.g)((0, m.V9)(e)),
+                                ((0, s.g)((0, m.V9)(e)),
                                     (0, k.Ws)(A.Odu.GO_LIVE, {
                                         type: k.Qu.GO_LIVE,
                                         value: k.bk.DISABLED,
                                         userId: e.ownerId
-                                    });
+                                    }));
                             }
                           : function () {
-                                c.default.selectVoiceChannel(e.channelId),
+                                (c.default.selectVoiceChannel(e.channelId),
                                     (0, s.rn)(e),
                                     (0, k.Ws)(A.Odu.GO_LIVE, {
                                         type: k.Qu.GO_LIVE,
                                         value: k.bk.ENABLED,
                                         userId: e.ownerId
-                                    });
+                                    }));
                             }
                   });
         })(t),

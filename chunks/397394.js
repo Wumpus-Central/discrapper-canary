@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Jh: () => k,
     Lk: () => j,
     Xg: () => U,
@@ -8,7 +8,7 @@ n.d(t, {
     j3: () => G
 }),
     n(358797),
-    n(35282);
+    n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -50,7 +50,7 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -58,7 +58,7 @@ function C(e) {
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -66,11 +66,11 @@ function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -92,7 +92,7 @@ function w(e, t) {
         i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -102,7 +102,7 @@ function D(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function L(e) {
@@ -187,7 +187,7 @@ function M(e) {
         }, [a, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
         s = p.z8.getField('entrypoint'),
         l = i.useCallback(() => {
-            null == a || a(), y.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
+            (null == a || a(), y.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id }));
         }, [a, null == n ? void 0 : n.id]),
         u = window.location.pathname.startsWith(T.Z5c.APPLICATION_DIRECTORY),
         d = i.useCallback(() => {
@@ -195,7 +195,7 @@ function M(e) {
                 (null == a || a(),
                 null != s && (0, h.uL)(''),
                 setImmediate(() => {
-                    O.S.dispatchToLastSubscribed(T.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), y.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                    (O.S.dispatchToLastSubscribed(T.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), y.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id }));
                 }));
         }, [null == n ? void 0 : n.id, a, s]),
         _ = (0, c.e7)([b.Z, g.Z], () => g.Z.getChannel(b.Z.getChannelId())),

@@ -14,5 +14,5 @@ e.exports = function (e) {
         if (!c) throw new a('ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]');
         c(n, t);
     }
-    return 0 !== e && (n.length = e), n;
+    return (0 !== e && (n.length = e), n);
 };

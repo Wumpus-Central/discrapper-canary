@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(570140),
     i = n(147913),
     a = n(314897),
@@ -47,7 +47,7 @@ function _() {
         });
 }
 function p() {
-    f(), _();
+    (f(), _());
 }
 function h(e) {
     let { channels: t } = e;
@@ -61,11 +61,11 @@ function m(e) {
 }
 class g extends i.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'actions', {
                 CHANNEL_UPDATES: h,
                 VOICE_STATE_UPDATES: m
-            });
+            }));
     }
 }
 let E = new g();

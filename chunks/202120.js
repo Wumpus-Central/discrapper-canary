@@ -29,5 +29,5 @@ async function s(e) {
         null == p || p.close();
         return;
     }
-    return null != p ? (p.location.href = h) : window.open(h), h;
+    return (null != p ? (p.location.href = h) : window.open(h), h);
 }

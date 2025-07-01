@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(147913),
     i = n(594174),
     a = n(74538);
@@ -21,7 +21,7 @@ function c(e, t, n) {
 }
 class u extends r.Z {
     async onPostConnectionOpen() {
-        this.maybeFetchActiveOutboundPromotions(), await this.maybeFetchBogoPromotion();
+        (this.maybeFetchActiveOutboundPromotions(), await this.maybeFetchBogoPromotion());
     }
     maybeFetchActiveOutboundPromotions() {
         let e = i.default.getCurrentUser(),
@@ -36,7 +36,7 @@ class u extends r.Z {
         (t || n) && (0, s.vM)();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'actions', {
                 POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this),
                 EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this)
@@ -44,7 +44,7 @@ class u extends r.Z {
             c(this, 'maybeFetchBogoPromotion', async () => {
                 let e = i.default.getCurrentUser();
                 a.ZP.isPremiumExactly(e, l.p9.TIER_2);
-            });
+            }));
     }
 }
 let d = new u();

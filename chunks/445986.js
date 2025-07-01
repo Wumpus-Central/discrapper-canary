@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Q: () => f,
     Z: () => x
 }),
     n(35282),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(481060),
@@ -31,7 +31,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,12 +71,12 @@ function g(e, t) {
                 r,
                 a = {},
                 i = Object.keys(e);
-            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]));
             return a;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+        for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]));
     }
     return a;
 }
@@ -92,12 +92,12 @@ let _ = (e) => {
     for (let e of n)
         if (e.type === d.s9s.IMG) {
             let { width: t, height: n, src: r } = e;
-            e === i && (l = o.length),
+            (e === i && (l = o.length),
                 o.push({
                     src: f(r),
                     width: t,
                     height: n
-                });
+                }));
         }
     return (0, r.jsx)(
         s.Z,
@@ -116,7 +116,7 @@ class b extends a.Component {
         return (0, r.jsx)(a, h(m({}, n), { onCurrentItemClick: this.handleCurrentItemClick }));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'handleCurrentItemClick', (e, t) => {
                 e.type !== d.s9s.IMG ||
                     (0, i.$sL)() ||
@@ -144,7 +144,7 @@ class b extends a.Component {
                             )
                         )
                     );
-            });
+            }));
     }
 }
 let x = b;

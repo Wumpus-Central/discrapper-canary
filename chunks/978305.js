@@ -1,4 +1,4 @@
-t.d(r, { default: () => v }), t(388685);
+(t.d(r, { default: () => v }), t(388685));
 var n = t(255367),
     o = t(73800),
     s = t(120356),
@@ -28,18 +28,18 @@ let v = (e) => {
         q = o.useRef(N);
     i()(!s, 'FamilyCenterQRCodeModal should only be rendered for teens.');
     let k = () => {
-        v((e) => (f.default.track(b.rMx.FAMILY_CENTER_ACTION, { action: l ? x.YC.HideQRCode : x.YC.RevealQRCode }), !e)),
+        (v((e) => (f.default.track(b.rMx.FAMILY_CENTER_ACTION, { action: l ? x.YC.HideQRCode : x.YC.RevealQRCode }), !e)),
             l ||
                 setTimeout(() => {
                     t();
-                }, x.f2);
+                }, x.f2));
     };
-    (0, d.ZP)(() => {
+    ((0, d.ZP)(() => {
         O();
     }),
         o.useEffect(() => {
             N > q.current && t();
-        }, [q, N, t]);
+        }, [q, N, t]));
     let S = l && !j && null != z;
     return (0, n.jsxs)(c.Y0X, {
         className: y.modalRoot,

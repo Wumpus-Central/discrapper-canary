@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     Z: () => U,
     r: () => m
 }),
     n(642613),
     n(388685),
     n(825670),
-    n(467055);
+    n(467055));
 var r,
     i = n(315008),
     a = n(347715),
@@ -32,7 +32,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,11 +48,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -68,7 +68,7 @@ function h(e, t) {
     );
 }
 var m = (function (e) {
-    return (e.ERROR_DOWNLOADING_DEPENDENCY = 'ERROR_DOWNLOADING_DEPENDENCY'), (e.ERROR_ACTIVATING_VOICE_FILTER = 'ERROR_ACTIVATING_VOICE_FILTER'), e;
+    return ((e.ERROR_DOWNLOADING_DEPENDENCY = 'ERROR_DOWNLOADING_DEPENDENCY'), (e.ERROR_ACTIVATING_VOICE_FILTER = 'ERROR_ACTIVATING_VOICE_FILTER'), e);
 })({});
 let g = new o.Yd('VoiceFilterStore'),
     E = {
@@ -115,7 +115,7 @@ function v(e) {
 }
 function I(e) {
     if (null == E.limitedTimeVoices) return void g.warn('No limited time voices available to update');
-    (E.limitedTimeVoices.current_set_end = e.toISOString()), (E.limitedTimeVoices.next_set_start = e.toISOString()), (E.limitedTimeVoices.next_set_end = (0, i.default)(e, 2).toISOString()), C();
+    ((E.limitedTimeVoices.current_set_end = e.toISOString()), (E.limitedTimeVoices.next_set_start = e.toISOString()), (E.limitedTimeVoices.next_set_end = (0, i.default)(e, 2).toISOString()), C());
 }
 function T(e) {
     return Object.entries(e)
@@ -128,7 +128,7 @@ function T(e) {
 function S(e) {
     let { catalog: t, initialModelState: n } = e,
         r = y();
-    (E.catalogFetchFailed = !1), (E.models = t.models), (E.limitedTimeVoices = t.limited_time_voices);
+    ((E.catalogFetchFailed = !1), (E.models = t.models), (E.limitedTimeVoices = t.limited_time_voices));
     let i = {},
         a = v(E.limitedTimeVoices);
     if (((E.catalogUpdateTime = a.catalogUpdateTime), r))
@@ -146,7 +146,7 @@ function S(e) {
                 available: !!r || o,
                 temporarilyAvailable: a.currentSet.includes(e)
             }));
-    (E.voiceFilters = i), (E.sortedVoiceFilters = T(E.voiceFilters)), (E.catalogLastFetchTime = new Date()), null != n && (Object.keys(E.modelState).length > 0 ? (E.modelState = n) : g.warn('Attempted to replace existing model state with initial model state'));
+    ((E.voiceFilters = i), (E.sortedVoiceFilters = T(E.voiceFilters)), (E.catalogLastFetchTime = new Date()), null != n && (Object.keys(E.modelState).length > 0 ? (E.modelState = n) : g.warn('Attempted to replace existing model state with initial model state')));
 }
 function A() {
     E.catalogFetchFailed = !0;
@@ -216,11 +216,11 @@ class N extends (r = s.ZP.Store) {
 }
 function C() {
     let e = v(E.limitedTimeVoices);
-    (E.catalogUpdateTime = e.catalogUpdateTime),
+    ((E.catalogUpdateTime = e.catalogUpdateTime),
         Object.keys(E.voiceFilters).forEach((t) => {
             E.voiceFilters[t].temporarilyAvailable = e.currentSet.includes(t);
         }),
-        (E.sortedVoiceFilters = T(E.voiceFilters));
+        (E.sortedVoiceFilters = T(E.voiceFilters)));
 }
 function R(e) {
     let { modelId: t } = e;

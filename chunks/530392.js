@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     h: () => d,
     m: () => f
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -31,7 +31,7 @@ function d(e) {
                 _(h.current.getBoundingClientRect().height > r.height);
             }),
             r = null != (t = null == p || null == (e = p.current) ? void 0 : e.getScrollerNode()) ? t : null;
-        return null != r && n.observe(r), (null == h ? void 0 : h.current) != null && n.observe(h.current), () => n.disconnect();
+        return (null != r && n.observe(r), (null == h ? void 0 : h.current) != null && n.observe(h.current), () => n.disconnect());
     }, []),
     null == n && null == t)
         ? null

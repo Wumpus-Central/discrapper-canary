@@ -22,7 +22,7 @@ u && s && l
           if (Symbol.toStringTag in t && l) {
               var n = l(t),
                   r = s(n, Symbol.toStringTag);
-              !r && n && (r = s(l(n), Symbol.toStringTag)), (h['$' + e] = a(r.get));
+              (!r && n && (r = s(l(n), Symbol.toStringTag)), (h['$' + e] = a(r.get)));
           }
       })
     : r(f, function (e) {
@@ -48,7 +48,7 @@ var m = function (e) {
             r(h, function (n, r) {
                 if (!t)
                     try {
-                        n(e), (t = _(r, 1));
+                        (n(e), (t = _(r, 1)));
                     } catch (e) {}
             }),
             t

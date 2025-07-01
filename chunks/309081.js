@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     I: () => S,
     Z: () => T
 }),
     n(388685),
-    n(953529);
+    n(953529));
 var r = n(255367),
     a = n(73800),
     l = n(120356),
@@ -33,7 +33,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -49,8 +49,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -64,12 +64,12 @@ function A(e, t) {
                 r,
                 a = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]));
             return a;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]));
     }
     return a;
 }
@@ -172,7 +172,7 @@ function R(e) {
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
                             let { emoji: n, willClose: r } = e;
-                            null != n && d(n, m), r && t();
+                            (null != n && d(n, m), r && t());
                         }
                     })
                 });
@@ -330,7 +330,7 @@ let T = a.forwardRef(function (e, t) {
                 switch (e.key.toLowerCase()) {
                     case 'enter':
                         var r;
-                        g && (e.preventDefault(), ((0, y.cS)(d, b) || 'macos' !== (0, j.getOS)() ? t : n) ? (e.stopPropagation(), T()) : D()), null == (r = L.current[p + 1]) || r.focus();
+                        (g && (e.preventDefault(), ((0, y.cS)(d, b) || 'macos' !== (0, j.getOS)() ? t : n) ? (e.stopPropagation(), T()) : D()), null == (r = L.current[p + 1]) || r.focus());
                         break;
                     case 'e':
                         ('macos' === (0, j.getOS)() ? n : t) && (e.preventDefault(), e.stopPropagation(), X());

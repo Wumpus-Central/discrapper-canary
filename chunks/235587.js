@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(442837),
     a = n(902704),
@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -53,7 +53,7 @@ function _(e) {
         },
         c = f.currentLeaderboardRanks[o];
     if ((0, a.E)(l.ranks, null != (t = null == c ? void 0 : c.ranks) ? t : [])) return !1;
-    (f.prevLeaderboardRanks[o] = c), (f.currentLeaderboardRanks[o] = l);
+    ((f.prevLeaderboardRanks[o] = c), (f.currentLeaderboardRanks[o] = l));
 }
 function p() {
     let e = Date.now();
@@ -62,7 +62,7 @@ function p() {
 }
 class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        return (f = c({}, f, null != e ? e : {})), p(), !0;
+        return ((f = c({}, f, null != e ? e : {})), p(), !0);
     }
     getState() {
         return f;
@@ -79,5 +79,5 @@ class h extends (r = i.ZP.PersistedStore) {
         f = d();
     }
 }
-l(h, 'displayName', 'GuildLeaderboardRanksStore'), l(h, 'persistKey', 'GuildLeaderboardRanksStore');
+(l(h, 'displayName', 'GuildLeaderboardRanksStore'), l(h, 'persistKey', 'GuildLeaderboardRanksStore'));
 let m = new h(o.Z, { SET_GUILD_LEADERBOARD: _ });

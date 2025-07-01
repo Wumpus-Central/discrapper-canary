@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(457542);
+(n.d(t, { Z: () => u }), n(388685), n(457542));
 var s,
     i = n(255367),
     r = n(73800),
@@ -93,7 +93,7 @@ class h extends (s = r.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'state', {
                 value: '',
                 error: null,
@@ -103,7 +103,7 @@ class h extends (s = r.PureComponent) {
                 e.preventDefault();
                 let { value: t } = this.state,
                     { handleSubmit: n, onClose: s, onError: i } = this.props;
-                this.setState({ isLoading: !0 }),
+                (this.setState({ isLoading: !0 }),
                     n(t)
                         .then(
                             (e) => s(null != e ? e : void 0),
@@ -123,7 +123,7 @@ class h extends (s = r.PureComponent) {
                                               })));
                             }
                         )
-                        .finally(() => this.setState({ isLoading: !1 }));
+                        .finally(() => this.setState({ isLoading: !1 })));
             }),
             c(this, 'shouldSkipErrorMsgRender', (e) => {
                 let { skipErrorMsgAbortCode: t } = this.props;
@@ -135,8 +135,8 @@ class h extends (s = r.PureComponent) {
             }),
             c(this, 'handlePasswordChange', (e) => {
                 let { onPasswordChange: t } = this.props;
-                null == t || t(e), this.setState({ value: e });
-            });
+                (null == t || t(e), this.setState({ value: e }));
+            }));
     }
 }
 c(h, 'key', () => 'password-confirm-modal');

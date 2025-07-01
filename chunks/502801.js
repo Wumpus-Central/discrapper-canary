@@ -1,4 +1,4 @@
-t.d(e, { default: () => M }), t(539854), t(642613), t(388685);
+(t.d(e, { default: () => M }), t(539854), t(642613), t(388685));
 var l = t(255367),
     i = t(73800),
     r = t(120356),
@@ -188,13 +188,13 @@ function M(n) {
         if (null != l) {
             L(!0);
             try {
-                await (0, O.e)(e, {
+                (await (0, O.e)(e, {
                     channelId: l,
                     editMetadata: t,
                     analyticsLocations: Z
                 }),
                     null == n && (0, S.Kh)(l),
-                    d.pT();
+                    d.pT());
             } catch (n) {
             } finally {
                 L(!1);

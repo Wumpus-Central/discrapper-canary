@@ -28,7 +28,7 @@ function l(e) {
             var t;
             if ((null == (t = u.current) || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0)) {
                 let e = d.query.resultCount - 1;
-                g.setFocus(e.toString()), null == f || f(e);
+                (g.setFocus(e.toString()), null == f || f(e));
             }
         },
         g = (0, i.ZP)({

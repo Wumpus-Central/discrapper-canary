@@ -10,41 +10,41 @@ var r = n(120356),
     d = n(40851),
     u = n(358221),
     m = n(754347),
-    p = n(428548),
+    x = n(428548),
     h = n(718759),
-    x = n(679219),
+    p = n(679219),
     b = n(835225),
     f = n(939039),
     v = n(117795),
-    _ = n(358085),
+    j = n(358085),
     g = n(998502),
-    j = n(388032),
+    _ = n(388032),
     y = n(445561);
 let C = (e) => g.ZP.close(e),
-    N = (e) => g.ZP.minimize(e),
-    O = (e, t) => {
-        (0, _.isMac)() && !t.altKey ? g.ZP.fullscreen(e) : g.ZP.maximize(e);
+    O = (e) => g.ZP.minimize(e),
+    N = (e, t) => {
+        (0, j.isMac)() && !t.altKey ? g.ZP.fullscreen(e) : g.ZP.maximize(e);
     },
     E = (e) => {
         let { children: t, windowKey: n, themeOverride: r, hasOpenLayer: i } = e,
             o = (0, a.jsx)(s.P3F, {
                 className: y.winButtonClose,
                 onClick: () => C(n),
-                'aria-label': j.intl.string(j.t.ZdNUj4),
-                tabIndex: -1,
-                children: (0, a.jsx)(p.Z, {})
-            }),
-            c = (0, a.jsx)(s.P3F, {
-                className: y.winButtonMinMax,
-                onClick: (e) => O(n, e),
-                'aria-label': j.intl.string(j.t.G1u0hI),
+                'aria-label': _.intl.string(_.t.ZdNUj4),
                 tabIndex: -1,
                 children: (0, a.jsx)(x.Z, {})
             }),
+            c = (0, a.jsx)(s.P3F, {
+                className: y.winButtonMinMax,
+                onClick: (e) => N(n, e),
+                'aria-label': _.intl.string(_.t.G1u0hI),
+                tabIndex: -1,
+                children: (0, a.jsx)(p.Z, {})
+            }),
             d = (0, a.jsx)(s.P3F, {
                 className: y.winButtonMinMax,
-                onClick: () => N(n),
-                'aria-label': j.intl.string(j.t.CxOC4e),
+                onClick: () => O(n),
+                'aria-label': _.intl.string(_.t.CxOC4e),
                 tabIndex: -1,
                 children: (0, a.jsx)(f.Z, {})
             }),
@@ -85,21 +85,21 @@ let C = (e) => g.ZP.close(e),
                                       (0, a.jsx)(s.P3F, {
                                           className: y.macButtonClose,
                                           onClick: () => C(n),
-                                          'aria-label': j.intl.string(j.t.ZdNUj4),
+                                          'aria-label': _.intl.string(_.t.ZdNUj4),
                                           tabIndex: -1,
                                           children: (0, a.jsx)(h.Z, { color: '#4c0000' })
                                       }),
                                       (0, a.jsx)(s.P3F, {
                                           className: y.macButtonMinimize,
-                                          onClick: () => N(n),
-                                          'aria-label': j.intl.string(j.t.CxOC4e),
+                                          onClick: () => O(n),
+                                          'aria-label': _.intl.string(_.t.CxOC4e),
                                           tabIndex: -1,
                                           children: (0, a.jsx)(v.Z, { color: '#975500' })
                                       }),
                                       (0, a.jsx)(s.P3F, {
                                           className: y.macButtonMaximize,
-                                          onClick: (e) => O(n, e),
-                                          'aria-label': j.intl.string(j.t['2nM3Pj']),
+                                          onClick: (e) => N(n, e),
+                                          'aria-label': _.intl.string(_.t['2nM3Pj']),
                                           tabIndex: -1,
                                           children: (0, a.jsx)(b.Z, { color: '#006500' })
                                       })
@@ -119,22 +119,22 @@ function S(e) {
     let { focused: t, type: n, windowKey: r, macOSFrame: l = !1, themeOverride: s } = e,
         c = (0, d.bp)(),
         m = (0, i.e7)([u.Z], () => u.Z.isFullscreenInContext(c)),
-        p = (0, o.Z)();
+        x = (0, o.Z)();
     if (m) return null;
     switch (n) {
-        case _.PlatformTypes.WINDOWS:
+        case j.PlatformTypes.WINDOWS:
             return (0, a.jsx)(E, {
                 windowKey: r,
                 themeOverride: s,
-                hasOpenLayer: p
+                hasOpenLayer: x
             });
-        case _.PlatformTypes.OSX:
+        case j.PlatformTypes.OSX:
             return (0, a.jsx)(T, {
                 focused: t,
                 windowKey: r,
                 frame: l,
                 themeOverride: s,
-                hasOpenLayer: p
+                hasOpenLayer: x
             });
         default:
             return null;

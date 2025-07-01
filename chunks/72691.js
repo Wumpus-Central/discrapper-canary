@@ -126,12 +126,12 @@ function L(e) {
                         o,
                         t = {},
                         i = Object.keys(e);
-                    for (o = 0; o < i.length; o++) (n = i[o]), r.indexOf(n) >= 0 || (t[n] = e[n]);
+                    for (o = 0; o < i.length; o++) ((n = i[o]), r.indexOf(n) >= 0 || (t[n] = e[n]));
                     return t;
                 })(e, r);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < i.length; o++) (n = i[o]), !(r.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (t[n] = e[n]);
+                for (o = 0; o < i.length; o++) ((n = i[o]), !(r.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (t[n] = e[n]));
             }
             return t;
         })(e, ['onClose']);
@@ -142,7 +142,7 @@ function L(e) {
         P = (0, b.Ng)();
     t.useEffect(() => {
         a.Z.wait(() => {
-            (0, p.tZ)(), (0, u.Y2)(null, null, I.JjL.DISCOVERY);
+            ((0, p.tZ)(), (0, u.Y2)(null, null, I.JjL.DISCOVERY));
         });
     }, []);
     let C = x ? y.ZP.getDefaultPrice(S.Xh.PREMIUM_MONTH_TIER_2) : null;
@@ -156,7 +156,7 @@ function L(e) {
                 for (var r = 1; r < arguments.length; r++) {
                     var n = null != arguments[r] ? arguments[r] : {},
                         o = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (o = o.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -164,7 +164,7 @@ function L(e) {
                         )),
                         o.forEach(function (r) {
                             var o;
-                            (o = n[r]),
+                            ((o = n[r]),
                                 r in e
                                     ? Object.defineProperty(e, r, {
                                           value: o,
@@ -172,8 +172,8 @@ function L(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[r] = o);
-                        });
+                                    : (e[r] = o));
+                        }));
                 }
                 return e;
             })({}, c)),

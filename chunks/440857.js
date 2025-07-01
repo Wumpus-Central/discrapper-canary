@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(692547),
@@ -20,7 +20,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -36,8 +36,8 @@ function x(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -67,7 +67,7 @@ function O(e) {
         w = async (e, t, n, r) => {
             try {
                 let l = await c.Z.banMultipleUsers(e, t, n, r);
-                (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.AsCe5O), s.ToastType.SUCCESS)),
+                ((0, s.showToast)((0, s.createToast)(j.intl.string(j.t.AsCe5O), s.ToastType.SUCCESS)),
                     m.default.track(
                         h.rMx.BULK_MODERATION_ACTION_COMPLETED,
                         v(x({}, (0, d.hH)(e)), {
@@ -77,7 +77,7 @@ function O(e) {
                             successful_user_ids: l.body.banned_users,
                             location
                         })
-                    );
+                    ));
             } catch (e) {
                 (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.mICAWV), s.ToastType.FAILURE));
             }
@@ -134,7 +134,7 @@ function O(e) {
                   (0, r.jsx)(s.oXn, {
                       children: (0, r.jsx)(u.Z, {
                           onSave: () => {
-                              m.default.track(
+                              (m.default.track(
                                   h.rMx.BULK_MODERATION_ACTION_STARTED,
                                   v(x({}, (0, d.hH)(t)), {
                                       action_type: b.jQ.BAN,
@@ -155,7 +155,7 @@ function O(e) {
                                                   onBanMultiple: w
                                               })
                                           );
-                                  });
+                                  }));
                           },
                           onSaveText: D,
                           onSaveButtonColor: s.Ttl.RED,

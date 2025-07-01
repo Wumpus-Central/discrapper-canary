@@ -34,7 +34,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,11 +50,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -78,7 +78,7 @@ function T(e) {
         { premiumTier: l, premiumSubscriberCount: c } = t;
     if (0 === c && l === g.Eu4.NONE) return null;
     let u = (e) => {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 e.preventDefault(),
                 a &&
                     !i &&
@@ -88,7 +88,7 @@ function T(e) {
                             section: g.jXE.GUILD_HEADER,
                             object: g.qAy.BOOST_GEM_ICON
                         }
-                    });
+                    }));
         },
         _ = l === g.Eu4.NONE ? E.intl.string(E.t.c2wsn5) : m.nW(l),
         y = (0, r.jsxs)(r.Fragment, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(147913),
     i = n(604375),
     a = n(268004);
@@ -27,12 +27,12 @@ class s extends r.Z {
         i.X.trigger();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, 'actions', {
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
                 CALL_CREATE: this.handleCallCreate,
                 USER_SETTINGS_MODAL_OPEN: this.handleUserSettingsModalOpen
-            });
+            }));
     }
 }
 let l = new s();

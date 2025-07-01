@@ -2,45 +2,44 @@ n.d(t, { Z: () => h });
 var i = n(255367),
     a = n(73800),
     o = n(442837),
-    l = n(481060),
-    r = n(100527),
+    r = n(481060),
+    l = n(100527),
     c = n(906732),
-    s = n(118012),
-    d = n(767714),
-    u = n(411477),
-    _ = n(594174),
+    s = n(767714),
+    d = n(411477),
+    u = n(594174),
     f = n(626135),
     g = n(74538),
     p = n(981631),
-    N = n(486324),
+    _ = n(486324),
     m = n(474936),
-    x = n(388032),
-    A = n(886563);
+    N = n(388032),
+    x = n(886563);
 function h(e) {
     let { analyticsSection: t, type: n } = e,
-        h = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        P = g.ZP.canUseAnimatedAvatar(h),
-        b = g.ZP.canUsePremiumProfileCustomization(h),
-        E = (n === N.pC.BANNER && b) || (n === N.pC.AVATAR && P),
-        { sourceAnalyticsLocations: R } = (0, c.ZP)(r.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
+        h = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        A = g.ZP.canUseAnimatedAvatar(h),
+        P = g.ZP.canUsePremiumProfileCustomization(h),
+        b = (n === _.pC.BANNER && P) || (n === _.pC.AVATAR && A),
+        { sourceAnalyticsLocations: E } = (0, c.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
         (a.useEffect(() => {
-            E ||
+            b ||
                 f.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: t,
-                    location_stack: R
+                    location_stack: E
                 });
-        }, [E, t, R]),
-        E)
+        }, [b, t, E]),
+        b)
     )
         return null;
-    let j = (0, i.jsx)(d.Z, {
-        className: A.__invalid_getNitroLink,
-        size: l.zxk.Sizes.SMALL,
-        look: l.zxk.Looks.LINK,
-        color: l.zxk.Colors.LINK,
+    let R = (0, i.jsx)(s.Z, {
+        className: x.__invalid_getNitroLink,
+        size: r.zxk.Sizes.SMALL,
+        look: r.zxk.Looks.LINK,
+        color: r.zxk.Colors.LINK,
         subscriptionTier: m.Si.TIER_2,
-        textOptions: { textOverride: x.intl.format(x.t['944tDg'], {}) },
+        textOptions: { textOverride: N.intl.format(N.t['944tDg'], {}) },
         showIcon: !1,
         premiumModalAnalyticsLocation: {
             section: t,
@@ -48,12 +47,10 @@ function h(e) {
         },
         disableShine: !0
     });
-    return (0, i.jsx)(u.Z, {
+    return (0, i.jsx)(d.Z, {
         reducedRightPadding: !0,
-        className: A.nitroPreviewUpsell,
-        text: x.intl.format(x.t.Og8039, {}),
-        textSize: s.Z.Sizes.SIZE_14,
-        textColor: s.Z.Colors.HEADER_PRIMARY,
-        button: j
+        className: x.nitroPreviewUpsell,
+        text: N.intl.format(N.t.Og8039, {}),
+        button: R
     });
 }

@@ -23,11 +23,11 @@ let _ = (e) => {
         x = (0, i.e7)([c.Z], () => c.Z.getChannel(n), [n]),
         h = a.useMemo(() => u.ZP.getName(null == x ? void 0 : x.guild_id, null == x ? void 0 : x.id, t), [x, t]),
         f = a.useCallback(() => {
-            o.ZP.trackWithMetadata(m.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
+            (o.ZP.trackWithMetadata(m.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
                 report_id: _
             }),
-                l.Z.ignoreUser(t.id, 'web_iar_ignore_user_element', n);
+                l.Z.ignoreUser(t.id, 'web_iar_ignore_user_element', n));
         }, [t, _, n]),
         v = a.useMemo(() => g || b, [g, b]);
     return (0, r.jsx)(s.ZP, {

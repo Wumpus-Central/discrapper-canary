@@ -1,12 +1,12 @@
-n.d(t, {
+(n.d(t, {
     PZ: () => a,
     XX: () => o
 }),
-    n(388685);
+    n(388685));
 var r = n(601964),
     i = n(981631),
     a = (function (e) {
-        return (e.PUBLIC = 'PUBLIC'), (e.INVITE_ONLY = 'INVITE_ONLY'), (e.APPLY_TO_JOIN = 'APPLY_TO_JOIN'), e;
+        return ((e.PUBLIC = 'PUBLIC'), (e.INVITE_ONLY = 'INVITE_ONLY'), (e.APPLY_TO_JOIN = 'APPLY_TO_JOIN'), e);
     })({});
 function o(e) {
     let t = new Set(e.features),

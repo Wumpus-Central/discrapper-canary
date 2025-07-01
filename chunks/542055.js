@@ -1,4 +1,4 @@
-n.d(t, { default: () => N }), n(388685), n(781311), n(642613);
+(n.d(t, { default: () => N }), n(388685), n(781311), n(642613));
 var r = n(255367),
     l = n(73800),
     a = n(658722),
@@ -25,7 +25,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -41,8 +41,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -77,7 +77,7 @@ function N(e) {
         A = (0, u.Wu)([j.Z], () => j.Z.getNewClipIds()),
         { analyticsLocations: H } = (0, f.ZP)(m.Z.CLIPS_GALLERY),
         V = l.useMemo(() => [...z, ..._], [_, z]);
-    (0, b.Z)(
+    ((0, b.Z)(
         {
             type: c.ImpressionTypes.MODAL,
             name: c.ImpressionNames.CLIP_GALLERY_VIEWED,
@@ -90,11 +90,11 @@ function N(e) {
             () => (
                 (0, y.eL)(),
                 () => {
-                    (0, y.eL)(), (0, y.zq)();
+                    ((0, y.eL)(), (0, y.zq)());
                 }
             ),
             []
-        );
+        ));
     let B = l.useMemo(
         () =>
             s()(V)

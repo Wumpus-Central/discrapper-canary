@@ -71,7 +71,7 @@ function _(e) {
                                 children: d.intl.format(d.t['5Ey5Dw'], {
                                     recentActivityURL: o.Z.getArticleURL(l.BhN.MEMBER_LIST_ACTIVITY_FEED),
                                     handleActivityPrivacyClick: () => {
-                                        a(), (0, r.Z)(c.Z.ACTIVITY_PRIVACY);
+                                        (a(), (0, r.Z)(c.Z.ACTIVITY_PRIVACY));
                                     }
                                 })
                             })

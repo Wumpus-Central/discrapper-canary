@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(539854);
+(n.d(t, { Z: () => _ }), n(388685), n(539854));
 var i = n(768433),
     r = n(710845),
     s = n(38618),
@@ -90,7 +90,7 @@ let _ = new (class {
             if (!this.synced.has(i)) {
                 f.verbose('optimstically writing basic_channels (guild: '.concat(i, ')'));
                 try {
-                    await o.o.loadGuildIds([i]), await t.transaction((e) => this.syncOne(i, e), 'handlePostConnectionOpen');
+                    (await o.o.loadGuildIds([i]), await t.transaction((e) => this.syncOne(i, e), 'handlePostConnectionOpen'));
                 } catch (e) {
                     f.warn("couldn't optimstically write basic_channel:", e);
                     return;
@@ -132,11 +132,11 @@ let _ = new (class {
         this.unsync(e, t);
     }
     delete(e, t) {
-        this.unsync(e, t), g.Z.basicChannelsTransaction(t).delete(e), g.Z.syncedBasicChannelsTransaction(t).delete(e);
+        (this.unsync(e, t), g.Z.basicChannelsTransaction(t).delete(e), g.Z.syncedBasicChannelsTransaction(t).delete(e));
     }
     unsync(e, t) {
         var n;
-        null == (n = this.synced) || n.delete(e), g.Z.basicChannelsTransaction(t).delete(e), g.Z.syncedBasicChannelsTransaction(t).put(e, !1), p.Z.invalidate(e);
+        (null == (n = this.synced) || n.delete(e), g.Z.basicChannelsTransaction(t).delete(e), g.Z.syncedBasicChannelsTransaction(t).put(e, !1), p.Z.invalidate(e));
     }
     sync(e) {
         f.verbose('Starting to write all basic channels');
@@ -170,7 +170,7 @@ let _ = new (class {
         );
     }
     constructor() {
-        h(this, 'synced', null),
+        (h(this, 'synced', null),
             h(this, 'actions', {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
@@ -184,6 +184,6 @@ let _ = new (class {
                 GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
                 WRITE_CACHES: (e, t) => this.handleWriteCaches(e, t)
-            });
+            }));
     }
 })();

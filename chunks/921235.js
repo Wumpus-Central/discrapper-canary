@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(583741);
+(n.d(t, { Z: () => j }), n(388685), n(583741));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -34,23 +34,23 @@ function j(e) {
                     .find((e) => e.author.id !== h.default.getId() && e.state === y.yb.SENT && !(0, _.Z)(e))
         ),
         E = (0, a.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        I = null != (t = b.ZP.useName(E)) ? t : C.intl.string(C.t.y1Wu2d),
-        S = (0, a.e7)([d.Z], () => d.Z.getStickerById(v)),
+        S = null != (t = b.ZP.useName(E)) ? t : C.intl.string(C.t.y1Wu2d),
+        I = (0, a.e7)([d.Z], () => d.Z.getStickerById(v)),
         P = i.useCallback(async () => {
             if (null == l || '' === l)
                 try {
-                    await c.Z.sendGreetMessage(n.id, v),
+                    (await c.Z.sendGreetMessage(n.id, v),
                         g.default.track(y.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',
                             type: 'Send wave'
-                        });
+                        }));
                 } catch (e) {
                     e.ok || 429 !== e.status || j(C.intl.string(C.t['Whhv4+']));
                 }
         }, [n.id, n.type, l]),
-        Z = C.intl.formatToPlainString(C.t.m0zYbW, { username: I }),
+        Z = C.intl.formatToPlainString(C.t.m0zYbW, { username: S }),
         N =
             null != l && '' !== l
                 ? (0, r.jsx)(s.Text, {
@@ -70,7 +70,7 @@ function j(e) {
                       onClick: P,
                       children: [
                           (0, r.jsx)(p.Z, {
-                              sticker: S,
+                              sticker: I,
                               size: 24
                           }),
                           (0, r.jsx)(s.Text, {
@@ -87,7 +87,7 @@ function j(e) {
               className: x.containerExpanded,
               children: [
                   (0, r.jsx)(p.Z, {
-                      sticker: S,
+                      sticker: I,
                       size: 160
                   }),
                   (0, r.jsx)(s.zxk, {

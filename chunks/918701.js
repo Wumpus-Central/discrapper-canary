@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $H: () => eP,
     $J: () => e4,
     AV: () => eu,
@@ -80,7 +80,7 @@ n.d(t, {
     n(642613),
     n(784620),
     n(973216),
-    n(539854);
+    n(539854));
 var r = n(991998),
     i = n(392711),
     a = n(278074),
@@ -130,7 +130,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -138,7 +138,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 L(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -146,11 +146,11 @@ function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -174,7 +174,7 @@ function G(e) {
             .exhaustive();
     } catch (n) {
         var t;
-        return console.error("Unknown config version '".concat(null == e || null == (t = e.config) ? void 0 : t.config_version, "'"), n), !1;
+        return (console.error("Unknown config version '".concat(null == e || null == (t = e.config) ? void 0 : t.config_version, "'"), n), !1);
     }
 }
 let B = (e) => e.application_id === w.Ev || e.platform === P.M7m.XBOX,
@@ -504,7 +504,7 @@ function eL(e) {
 }
 function ex(e, t) {
     let n = N.r.build(e.config).application.link;
-    (0, v._3)({
+    ((0, v._3)({
         questId: e.id,
         questContent: t.content,
         questContentCTA: t.ctaContent,
@@ -513,10 +513,10 @@ function ex(e, t) {
         sourceQuestContent: t.sourceQuestContent
     }),
         g.S.dispatch(P.CkL.QUEST_GAME_LINK_OPENED),
-        (0, f.Z)(n);
+        (0, f.Z)(n));
 }
 let ek = (e, t) => {
-        (0, v._3)({
+        ((0, v._3)({
             questId: e,
             questContent: t.content,
             questContentCTA: t.ctaContent,
@@ -524,7 +524,7 @@ let ek = (e, t) => {
             impressionId: t.impressionId,
             sourceQuestContent: t.sourceQuestContent
         }),
-            (0, m.JG)(es(e));
+            (0, m.JG)(es(e)));
     },
     eM = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
     ej = (e) => e6(e) || T.Z.isProgressingOnDesktop(e.id),
@@ -695,7 +695,7 @@ function e7() {
 }
 function e9(e, t) {
     let { platformType: n, quest: r } = e;
-    (0, v._3)({
+    ((0, v._3)({
         questId: r.id,
         questContent: t.content,
         sourceQuestContent: t.sourceQuestContent,
@@ -705,7 +705,7 @@ function e9(e, t) {
         (0, _.Z)({
             platformType: n,
             location: t.ctaContent
-        });
+        }));
 }
 function te(e, t) {
     let { quest: n } = e;
@@ -728,7 +728,7 @@ function te(e, t) {
 }
 function tt(e, t) {
     let { quest: n } = e;
-    (0, v._3)({
+    ((0, v._3)({
         questId: n.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -736,7 +736,7 @@ function tt(e, t) {
         impressionId: t.impressionId,
         sourceQuestContent: t.sourceQuestContent
     }),
-        e7();
+        e7());
 }
 function tn() {
     return window.location.pathname.startsWith(P.Z5c.QUEST_HOME);
@@ -783,7 +783,7 @@ function tl(e) {
     let t = eN({ quest: e }) || eC({ quest: e }),
         n = e$(e),
         r = [];
-    return t && r.push(R.cd.DESKTOP), n && r.push(R.cd.CONSOLE), r;
+    return (t && r.push(R.cd.DESKTOP), n && r.push(R.cd.CONSOLE), r);
 }
 function tc(e) {
     var t;
@@ -870,7 +870,7 @@ function tT(e) {
     let s = T.Z.getQuest(r);
     null != s && (null == (t = s.userStatus) ? void 0 : t.enrolledAt) != null && (null == (n = s.userStatus) ? void 0 : n.completedAt) == null && tp(s, o.maxTimestampSec);
     let l = tE(o.maxTimestampSec, o.duration);
-    (0, v.dA)({
+    ((0, v.dA)({
         questId: r,
         event: P.rMx.QUEST_VIDEO_PROGRESSED,
         properties: {
@@ -889,5 +889,5 @@ function tT(e) {
                 network_connection_speed: h.Z.getEffectiveConnectionSpeed()
             },
             sourceQuestContent: i
-        });
+        }));
 }

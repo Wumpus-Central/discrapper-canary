@@ -1,34 +1,34 @@
 let r;
-n.d(t, { Z: () => N }), n(388685), n(35282);
+(n.d(t, { Z: () => O }), n(388685), n(35282));
 var i = n(255367),
     l = n(73800),
-    a = n(873546),
-    o = n(442837),
-    s = n(481060),
+    s = n(873546),
+    a = n(442837),
+    o = n(481060),
     c = n(980591),
     u = n(605782),
     d = n(133853),
     h = n(568154),
     p = n(353926),
-    m = n(703656),
-    g = n(981631),
+    g = n(703656),
+    m = n(981631),
     f = n(963865);
 let _ = n(575703),
     x = n(2984),
-    E = [g.Z5c.LOGIN, g.Z5c.LOGIN_HANDOFF, g.Z5c.REGISTER, g.Z5c.INVITE(''), g.Z5c.GIFT_CODE(''), g.Z5c.GUILD_TEMPLATE_LOGIN(''), g.Z5c.GUILD_TEMPLATE(''), g.Z5c.DISABLE_EMAIL_NOTIFICATIONS, g.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, g.Z5c.BILLING_PREMIUM_SUBSCRIBE, g.Z5c.BILLING_PAYMENT_SOURCES_CREATE, g.Z5c.BILLING_PAYMENTS, g.Z5c.BILLING_PREMIUM_SWITCH_PLAN, g.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, g.Z5c.VERIFY, g.Z5c.VERIFY_HUB_EMAIL, g.Z5c.REJECT_IP, g.Z5c.REJECT_MFA, g.Z5c.AUTHORIZE_IP, g.Z5c.AUTHORIZE_PAYMENT, g.Z5c.RESET, g.Z5c.HANDOFF, g.Z5c.REPORT, g.Z5c.REPORT_SECOND_LOOK, g.Z5c.ACCOUNT_REVERT('')];
-function b(e) {
-    return E.some((t) => e.startsWith(t));
+    b = [m.Z5c.LOGIN, m.Z5c.LOGIN_HANDOFF, m.Z5c.REGISTER, m.Z5c.INVITE(''), m.Z5c.GIFT_CODE(''), m.Z5c.GUILD_TEMPLATE_LOGIN(''), m.Z5c.GUILD_TEMPLATE(''), m.Z5c.DISABLE_EMAIL_NOTIFICATIONS, m.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, m.Z5c.BILLING_PREMIUM_SUBSCRIBE, m.Z5c.BILLING_PAYMENT_SOURCES_CREATE, m.Z5c.BILLING_PAYMENTS, m.Z5c.BILLING_PREMIUM_SWITCH_PLAN, m.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, m.Z5c.VERIFY, m.Z5c.VERIFY_HUB_EMAIL, m.Z5c.REJECT_IP, m.Z5c.REJECT_MFA, m.Z5c.AUTHORIZE_IP, m.Z5c.AUTHORIZE_PAYMENT, m.Z5c.RESET, m.Z5c.HANDOFF, m.Z5c.REPORT, m.Z5c.REPORT_SECOND_LOOK, m.Z5c.ACCOUNT_REVERT('')];
+function E(e) {
+    return b.some((t) => e.startsWith(t));
 }
-let I = (e) => ((r = e), e);
-function v(e) {
+let v = (e) => ((r = e), e);
+function I(e) {
     let { children: t } = e;
     switch (
         (function () {
             var e;
             let [t, n] = l.useState(!1),
-                [i, a] = l.useState(!0),
-                s = (0, o.e7)([p.Z], () => p.Z.hasLoadedExperiments);
-            return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && s ? (t || n(!0), I(((e = 0), 'default'))) : i ? I('default') : 'loading';
+                [i, s] = l.useState(!0),
+                o = (0, a.e7)([p.Z], () => p.Z.hasLoadedExperiments);
+            return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && o ? (t || n(!0), v(((e = 0), 'default'))) : i ? v('default') : 'loading';
         })()
     ) {
         case 'default':
@@ -52,7 +52,7 @@ function v(e) {
             return null;
     }
 }
-class O extends l.Component {
+class j extends l.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -60,14 +60,14 @@ class O extends l.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (b(e)) (0, m.uL)(e, t);
+        if (E(e)) (0, g.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        b(e) ? (0, m.dL)(e) : (window.location = e);
+        E(e) ? (0, g.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -75,14 +75,14 @@ class O extends l.Component {
                 component: l.Fragment,
                 children: l.Children.map(this.props.children, (e) =>
                     l.cloneElement(e, {
-                        transitionTo: m.uL,
-                        replaceWith: m.dL
+                        transitionTo: g.uL,
+                        replaceWith: g.dL
                     })
                 )
             });
         return (0, i.jsx)('div', {
             className: f.characterBackground,
-            children: (0, i.jsx)(s.y5t, {
+            children: (0, i.jsx)(o.y5t, {
                 forceLevel: 1,
                 children:
                     null != e
@@ -98,7 +98,7 @@ class O extends l.Component {
                                   })
                               ]
                           })
-                        : (0, i.jsx)(v, { children: t })
+                        : (0, i.jsx)(I, { children: t })
             })
         });
     }
@@ -116,11 +116,11 @@ class O extends l.Component {
     render() {
         let { isMobileWidth: e } = this.state,
             t = navigator.userAgent.includes('GameLauncher');
-        return e || a.tq || a.Em || t ? this.renderMobile() : this.renderDefault();
+        return e || s.tq || s.Em || t ? this.renderMobile() : this.renderDefault();
     }
     constructor(e) {
         var t, n;
-        super(e),
+        (super(e),
             (t = 'handleResize'),
             (n = () => {
                 this.setState({ isMobileWidth: window.innerWidth <= 485 });
@@ -133,7 +133,7 @@ class O extends l.Component {
                       writable: !0
                   })
                 : (this[t] = n),
-            (this.state = { isMobileWidth: window.innerWidth <= 485 });
+            (this.state = { isMobileWidth: window.innerWidth <= 485 }));
     }
 }
-let N = O;
+let O = j;

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => C }), n(415506), n(388685);
+(n.d(t, { Z: () => C }), n(415506), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(570140),
     o = n(317770),
-    s = n(100527),
-    a = n(963249),
+    a = n(100527),
+    s = n(963249),
     c = n(93127),
     u = n(594174),
     d = n(431),
@@ -32,7 +32,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -89,7 +89,7 @@ class v extends o.Z {
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
         return new Promise((t, n) => {
-            (0, a.Z)(
+            (0, s.Z)(
                 y(O({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
@@ -102,7 +102,7 @@ class v extends o.Z {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
         let { initialPlanId: t, subscriptionTier: n, followupSKUInfo: r, analyticsObject: i } = null != e ? e : {};
         return new Promise((e, o) => {
-            (this._premiumPaymentModalCloseResolve = e),
+            ((this._premiumPaymentModalCloseResolve = e),
                 (this._premiumPaymentModalCloseReject = o),
                 l.Z.dispatch({
                     type: 'PREMIUM_PAYMENT_MODAL_OPEN',
@@ -110,11 +110,11 @@ class v extends o.Z {
                     subscriptionTier: n,
                     followupSKUInfo: r,
                     analyticsObject: i
-                });
+                }));
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, '_premiumPaymentModalCloseResolve', null),
             _(this, '_premiumPaymentModalCloseReject', null),
             _(this, '_maybeFetchPremiumOffer', async () => {
@@ -137,9 +137,9 @@ class v extends o.Z {
                 b.Y.trackExposure({ location: 'PremiumManager' });
             }),
             _(this, '_handlePremiumPaymentModalOpen', (e) => {
-                (0, a.Z)(
+                (0, s.Z)(
                     y(O({}, e), {
-                        analyticsLocations: [s.Z.OVERLAY],
+                        analyticsLocations: [a.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
                                 type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
@@ -151,8 +151,8 @@ class v extends o.Z {
             }),
             _(this, '_handlePremiumPaymentModalClose', (e) => {
                 let { didSucceed: t } = e;
-                t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), (this._premiumPaymentModalCloseResolve = null), (this._premiumPaymentModalCloseReject = null);
-            });
+                (t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), (this._premiumPaymentModalCloseResolve = null), (this._premiumPaymentModalCloseReject = null));
+            }));
     }
 }
 let C = new v();

@@ -27,7 +27,7 @@ var r = n(764908),
     },
     b = function (e, t, n) {
         var r = 0;
-        for (e = n ? l(e / 700) : e >> 1, e += l(e / t); e > 455; ) (e = l(e / 35)), (r += 36);
+        for (e = n ? l(e / 700) : e >> 1, e += l(e / t); e > 455; ) ((e = l(e / 35)), (r += 36));
         return l(r + (36 * e) / (e + 38));
     },
     _ = function (e) {
@@ -54,12 +54,12 @@ var r = n(764908),
                         if (k < Z) break;
                         var w = k - Z,
                             S = 36 - Z;
-                        h(r, u(g(Z + (w % S)))), (k = l(w / S)), (C += 36);
+                        (h(r, u(g(Z + (w % S)))), (k = l(w / S)), (C += 36));
                     }
-                    h(r, u(g(k))), (d = b(c, _, m === f)), (c = 0), m++;
+                    (h(r, u(g(k))), (d = b(c, _, m === f)), (c = 0), m++);
                 }
             }
-            c++, a++;
+            (c++, a++);
         }
         return p(r, '');
     };

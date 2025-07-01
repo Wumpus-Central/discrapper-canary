@@ -27,7 +27,7 @@
             }
         },
         E = b(function () {
-            (d = 22), (_ = 66), (f = 0);
+            ((d = 22), (_ = 66), (f = 0));
         });
     function b(e) {
         var t,
@@ -38,20 +38,20 @@
                 a < r ? (t = setTimeout(i, r - a)) : ((t = null), e());
             };
         return function () {
-            (n = Date.now()), t || (t = setTimeout(i, r));
+            ((n = Date.now()), t || (t = setTimeout(i, r)));
         };
     }
     function y() {
         u && (i && s(i), r && clearTimeout(r), (u = !1));
     }
     function O() {
-        125 != _ && ((d = 7), (_ = 125), (f = 35), u && (y(), T())), E();
+        (125 != _ && ((d = 7), (_ = 125), (f = 35), u && (y(), T())), E());
     }
     function v() {
-        (i = null), (r = setTimeout(S, 0));
+        ((i = null), (r = setTimeout(S, 0)));
     }
     function I() {
-        (r = null), o(v);
+        ((r = null), o(v));
     }
     function T() {
         u || ((t = _ - (Date.now() - h)), (e = Date.now()), (u = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(I, t)) : ((t = 0), I()));
@@ -61,11 +61,11 @@
             i,
             a,
             o = d > 9 ? 9 : 1;
-        if (((h = Date.now()), (u = !1), (r = null), c > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > o; i++) (n = l.shift()), m++, n && n(g);
+        if (((h = Date.now()), (u = !1), (r = null), c > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > o; i++) ((n = l.shift()), m++, n && n(g));
         l.length ? T() : (c = 0);
     }
     function A(e) {
-        return p++, l.push(e), T(), p;
+        return (p++, l.push(e), T(), p);
     }
     function N(e) {
         var t = e - 1 - m;
@@ -95,7 +95,7 @@
             })(a.requestIdleCallback);
         }
     else
-        (a.requestIdleCallback = A),
+        ((a.requestIdleCallback = A),
             (a.cancelIdleCallback = N),
             a.document &&
                 document.addEventListener &&
@@ -114,7 +114,7 @@
                         childList: !0,
                         subtree: !0,
                         attributes: !0
-                    }));
+                    })));
     return {
         request: A,
         cancel: N

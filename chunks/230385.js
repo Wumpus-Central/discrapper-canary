@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(539854), n(388685);
+(n.d(t, { Z: () => T }), n(539854), n(388685));
 var r = n(704215),
     i = n(147913),
     a = n(710845),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -129,7 +129,7 @@ class I extends i.Z {
             o = 'USER_CANCELED_DOWNLOAD',
             c = null != a && o in a,
             u = (null != (t = null == a ? void 0 : a.message) ? t : String(a)).substring(0, 200);
-        c && (u = o),
+        (c && (u = o),
             l.default.track(p.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
                 canceled: c,
                 active_voice_filter_id: null != (n = s.Z.getActiveVoiceFilter()) ? n : null,
@@ -137,7 +137,7 @@ class I extends i.Z {
                 voice_filter_id: i,
                 model_id: r,
                 error_message: u
-            });
+            }));
     }
     handleVoiceFilterApplied(e) {
         let { voiceFilterId: t, analyticsContext: n, activationDurationMs: i } = e,
@@ -175,7 +175,7 @@ class I extends i.Z {
         c.ZP.stopVoiceFilterDownloads();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'actions', {
                 VOICE_FILTER_REQUEST_SWITCH: this.handleVoiceFilterRequestSwitch,
                 VOICE_FILTER_PREFETCH: this.handleVoiceFilterPrefetch,
@@ -183,7 +183,7 @@ class I extends i.Z {
                 VOICE_FILTER_DOWNLOAD_CANCELED: this.handleVoiceFilterDownloadCanceled,
                 VOICE_FILTER_APPLIED: this.handleVoiceFilterApplied,
                 VOICE_FILTER_APPLY_FAILED: this.handleVoiceFilterApplyFailed
-            });
+            }));
     }
 }
 let T = new I();

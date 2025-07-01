@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(415506);
+(n.d(t, { Z: () => v }), n(388685), n(415506));
 var r = n(772848),
     i = n(259443),
     a = n(570140),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -171,12 +171,12 @@ let y = new i.Yd('OverlayActionCreators'),
             });
         },
         setNotificationDisabledSetting(e, t) {
-            e === l.OverlayNotificationDisabledSetting.GAME_ACTIVITY && this.track(h.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
+            (e === l.OverlayNotificationDisabledSetting.GAME_ACTIVITY && this.track(h.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
                 a.Z.dispatch({
                     type: 'OVERLAY_SET_NOTIFICATION_DISABLED_SETTING',
                     setting: e,
                     disabled: t
-                });
+                }));
         },
         setInviteMessage(e) {
             a.Z.dispatch({
@@ -278,13 +278,13 @@ let y = new i.Yd('OverlayActionCreators'),
                     let { type: t, id: n, anchor: r, size: i } = e;
                     switch (t) {
                         case h.Odu.TEXT:
-                            (y = (0, f.w_)(i, E)), (0, p.E9)(n);
+                            ((y = (0, f.w_)(i, E)), (0, p.E9)(n));
                             break;
                         case h.Odu.GUILDS:
-                            (O = (0, f.vS)(r, i, E)), (v = (0, f.w_)(i, E)), (0, p.E9)(n);
+                            ((O = (0, f.vS)(r, i, E)), (v = (0, f.w_)(i, E)), (0, p.E9)(n));
                             break;
                         case h.Odu.GUILDS_TEXT:
-                            (I = (0, f.vS)(r, i, E)), (T = (0, f.w_)(i, E)), (0, p.E9)(n);
+                            ((I = (0, f.vS)(r, i, E)), (T = (0, f.w_)(i, E)), (0, p.E9)(n));
                     }
                 }),
                 e)

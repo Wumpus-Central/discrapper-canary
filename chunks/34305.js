@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -172,26 +172,26 @@ class E extends i.PureComponent {
         return this.props.editingPath === this.props.path ? this.renderEditing() : this.renderViewing();
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'state', {
                 label: void 0,
                 isDefault: null
             }),
             _(this, 'handleStartEditing', () => {
                 let { path: e, label: t, isDefault: n, onToggleEditing: r } = this.props;
-                r(e),
+                (r(e),
                     this.setState({
                         label: t,
                         isDefault: n
-                    });
+                    }));
             }),
             _(this, 'handleStopEditing', () => {
                 let { onToggleEditing: e } = this.props;
-                e(null),
+                (e(null),
                     this.setState({
                         label: void 0,
                         isDefault: null
-                    });
+                    }));
             }),
             _(this, 'handleRemoveLocation', () => {
                 (0, a.h7j)((e) => {
@@ -202,7 +202,7 @@ class E extends i.PureComponent {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -210,7 +210,7 @@ class E extends i.PureComponent {
                                     )),
                                     r.forEach(function (t) {
                                         _(e, t, n[t]);
-                                    });
+                                    }));
                             }
                             return e;
                         })({}, e)),
@@ -220,7 +220,7 @@ class E extends i.PureComponent {
                                 confirmText: g.intl.string(g.t.iBUzS0),
                                 cancelText: g.intl.string(g.t['ETE/oK']),
                                 onConfirm: () => {
-                                    this.handleStopEditing(), (0, o.iD)(this.props.path);
+                                    (this.handleStopEditing(), (0, o.iD)(this.props.path));
                                 },
                                 children: (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
@@ -244,18 +244,18 @@ class E extends i.PureComponent {
                 });
             }),
             _(this, 'handleSaveChanges', () => {
-                (0, o.Tb)(this.props.path, {
+                ((0, o.Tb)(this.props.path, {
                     label: null != this.state.label ? this.state.label : this.props.label,
                     isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
                 }),
-                    this.handleStopEditing();
+                    this.handleStopEditing());
             }),
             _(this, 'handleLabelChange', (e) => {
                 this.setState({ label: e });
             }),
             _(this, 'handleToggleDefault', () => {
                 this.setState({ isDefault: !this.state.isDefault });
-            });
+            }));
     }
 }
 class O extends i.PureComponent {
@@ -303,7 +303,7 @@ class O extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'state', { editingPath: null }),
             _(this, 'handleAddInstallationLocation', () => {
                 f.ZP.showOpenDialog(['openDirectory']).then((e) => {
@@ -312,7 +312,7 @@ class O extends i.PureComponent {
             }),
             _(this, 'handleToggleEditing', (e) => {
                 this.setState({ editingPath: e });
-            });
+            }));
     }
 }
 let y = l.ZP.connectStores([d.Z], () => ({

@@ -7,7 +7,7 @@ function a(e, t) {
     if ('undefined' == typeof Image) return;
     let l = null == (n = e.user) ? void 0 : n.id;
     if (null != l && '' !== l)
-        null != t &&
+        (null != t &&
             (null == (a = e.guild_member_profile) ? void 0 : a.banner) != null &&
             (s = (0, i.tp)({
                 id: l,
@@ -23,5 +23,5 @@ function a(e, t) {
                     canAnimate: r.QK.getSetting(),
                     size: 600
                 })),
-            null != s && (new Image().src = s);
+            null != s && (new Image().src = s));
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(457542), n(953529);
+(n.d(t, { Z: () => A }), n(388685), n(457542), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(831209),
@@ -26,7 +26,7 @@ function S(e) {
         o = i.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await c.Z.joinGuild(t), c.Z.transitionToGuildSync(t);
+                    (await c.Z.joinGuild(t), c.Z.transitionToGuildSync(t));
                 } catch (e) {}
         }, [n, t]);
     return a === b.y.GET_NITRO
@@ -66,7 +66,7 @@ function A(e) {
                     C(e);
                 })
                 .finally(() => {
-                    D(!1), g();
+                    (D(!1), g());
                 }));
     }, [g, P, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, b.Z)(t, n, A, N),

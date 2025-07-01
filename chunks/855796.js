@@ -29,12 +29,12 @@ function u(e) {
 async function d(e) {
     let { userId: t, applicationId: n, onSuccess: i } = e;
     try {
-        await r.tn.del({
+        (await r.tn.del({
             url: s.ANM.USER_GAME_RELATIONSHIP(t, n),
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-            i();
+            i());
     } catch (e) {
         c(e);
     }

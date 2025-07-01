@@ -20,7 +20,7 @@ let d = (e) => {
                 className: s()(c.tabBar, { [c.vertical]: 'vertical' === p }),
                 selectedItem: _.setting,
                 onItemSelect: (e) => {
-                    a.Z.setSection(r, e), null == g || g(e);
+                    (a.Z.setSection(r, e), null == g || g(e));
                 },
                 orientation: p,
                 type: 'vertical' === p ? 'side' : 'top',

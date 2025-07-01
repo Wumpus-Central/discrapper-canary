@@ -36,7 +36,7 @@ let _ = (e) => {
             innerRef: P,
             style: { backgroundImage: 'url('.concat(j, ')') },
             onClick: () => {
-                x('shop marketing tile', E),
+                (x('shop marketing tile', E),
                     u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                         sku_id: E,
@@ -46,7 +46,7 @@ let _ = (e) => {
                         tile_type: 'FEATURED_BLOCK',
                         tile_position: String(null == I ? void 0 : I.tilePosition),
                         cta_name: null
-                    });
+                    }));
             },
             children: [
                 null != S &&
@@ -80,7 +80,7 @@ let _ = (e) => {
                     className: m.featuredBlockButton,
                     color: c.Ttl.WHITE,
                     onClick: (e) => {
-                        x('shop marketing take me there button', E),
+                        (x('shop marketing take me there button', E),
                             e.stopPropagation(),
                             u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -91,7 +91,7 @@ let _ = (e) => {
                                 tile_type: 'FEATURED_BLOCK',
                                 tile_position: String(null == I ? void 0 : I.tilePosition),
                                 cta_name: 'Take me there button'
-                            });
+                            }));
                     },
                     children: b.intl.string(b.t.jVcuVV)
                 })

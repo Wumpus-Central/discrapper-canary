@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+(n.d(t, { Z: () => A }), n(388685));
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
@@ -62,7 +62,7 @@ let A = {
                     },
                     online: 0
                 };
-                return i().isEqual(r, o) || l(o), o;
+                return (i().isEqual(r, o) || l(o), o);
             };
         }
     },
@@ -161,7 +161,7 @@ let A = {
                     average_ping: f.Z.getAveragePing(),
                     last_ping: f.Z.getLastPing()
                 };
-            return i().isEqual(r, t) || n(r), r;
+            return (i().isEqual(r, t) || n(r), r);
         }
     },
     [S.zMe.MESSAGE_CREATE]: {
@@ -275,7 +275,7 @@ let A = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = { currentUser: g.default.getCurrentUser() };
-            return null == r.currentUser || (null != t && (0, a.Z)(r, t)) || n((0, v.Z)(r.currentUser)), r;
+            return (null == r.currentUser || (null != t && (0, a.Z)(r, t)) || n((0, v.Z)(r.currentUser)), r);
         }
     },
     [S.zMe.CURRENT_GUILD_MEMBER_UPDATE]: {
@@ -289,7 +289,7 @@ let A = {
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
                     i = { currentGuildMember: d.ZP.getSelfMember(t) };
-                return null == i.currentGuildMember || (null != n && (0, a.Z)(i, n)) || r((0, I.Z)(i.currentGuildMember)), i;
+                return (null == i.currentGuildMember || (null != n && (0, a.Z)(i, n)) || r((0, I.Z)(i.currentGuildMember)), i);
             };
         }
     },
@@ -322,7 +322,7 @@ let A = {
                     pid: null != (t = null == l ? void 0 : l.pid) ? t : null,
                     application: null != d ? { name: p } : null
                 };
-            return i().isEqual(h, n) || r(h), h;
+            return (i().isEqual(h, n) || r(h), h);
         }
     },
     [S.zMe.VIDEO_STATE_UPDATE]: {
@@ -332,7 +332,7 @@ let A = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = { active: h.Z.isVideoEnabled() };
-            return i().isEqual(r, t) || n(r), r;
+            return (i().isEqual(r, t) || n(r), r);
         }
     }
 };

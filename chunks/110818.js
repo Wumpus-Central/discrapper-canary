@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Db: () => N,
     HC: () => O,
     NQ: () => E,
     fe: () => x
 }),
-    n(388685);
+    n(388685));
 var r,
     i,
     a,
@@ -31,7 +31,7 @@ function h(e, t, n) {
     );
 }
 var m = (function (e) {
-    return (e.NORMAL = 'normal'), (e.SPEED_START = 'speed_start'), (e.SPEED_LOOP = 'speed_loop'), (e.FINISH = 'finish'), (e.IDLE = 'idle'), e;
+    return ((e.NORMAL = 'normal'), (e.SPEED_START = 'speed_start'), (e.SPEED_LOOP = 'speed_loop'), (e.FINISH = 'finish'), (e.IDLE = 'idle'), e);
 })(m || {});
 let g = {
     normal: {
@@ -92,7 +92,7 @@ class E extends (r = l.PureComponent) {
 }
 h(E, 'Scenes', m);
 var b = (function (e) {
-    return (e.NORMAL = 'normal'), (e.SPEED_START = 'speed_start'), (e.SPEED_LOOP = 'speed_loop'), (e.FINISH = 'finish'), (e.IDLE = 'idle'), e;
+    return ((e.NORMAL = 'normal'), (e.SPEED_START = 'speed_start'), (e.SPEED_LOOP = 'speed_loop'), (e.FINISH = 'finish'), (e.IDLE = 'idle'), e);
 })(b || {});
 let y = {
     normal: {
@@ -153,7 +153,7 @@ class O extends (i = l.PureComponent) {
 }
 h(O, 'Scenes', b);
 var v = (function (e) {
-    return (e.IDLE_ENTRY = 'idle_entry'), (e.IDLE_LOOP = 'idle_loop'), (e.BOOST_START = 'boost_start'), (e.BOOST_LOOP = 'boost_loop'), (e.BOOST_END = 'boost_end'), (e.VICTORY = 'victory'), (e.ERROR = 'error'), e;
+    return ((e.IDLE_ENTRY = 'idle_entry'), (e.IDLE_LOOP = 'idle_loop'), (e.BOOST_START = 'boost_start'), (e.BOOST_LOOP = 'boost_loop'), (e.BOOST_END = 'boost_end'), (e.VICTORY = 'victory'), (e.ERROR = 'error'), e);
 })(v || {});
 let I = {
     idle_entry: {
@@ -295,7 +295,7 @@ class N extends (a = l.PureComponent) {
         this.animateEntry(S.ERROR);
     }
     animateIdleLoop() {
-        this.animateIdleLoopBackground(), this.animateIdleLoopForeground();
+        (this.animateIdleLoopBackground(), this.animateIdleLoopForeground());
     }
     animateBoostStart() {
         f.Z.parallel([
@@ -347,7 +347,7 @@ class N extends (a = l.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             h(
                 this,
                 'backgroundAnimation',
@@ -386,7 +386,7 @@ class N extends (a = l.PureComponent) {
             h(this, 'handleScenePlay', (e) => {
                 switch (e) {
                     case 'idle_entry':
-                        this.animateIdleEntry(), this.animateIdleLoop();
+                        (this.animateIdleEntry(), this.animateIdleLoop());
                         break;
                     case 'error':
                         this.animateError();
@@ -396,12 +396,12 @@ class N extends (a = l.PureComponent) {
                 }
                 let { onScenePlay: t } = this.props;
                 null != t && t(e);
-            });
+            }));
     }
 }
 h(N, 'Scenes', v);
 var C = (function (e) {
-    return (e.ENTRY = 'entry'), (e.IDLE = 'idle'), (e.STARS = 'stars'), (e.ERROR = 'error'), (e.SUCCESS = 'success'), e;
+    return ((e.ENTRY = 'entry'), (e.IDLE = 'idle'), (e.STARS = 'stars'), (e.ERROR = 'error'), (e.SUCCESS = 'success'), e);
 })(C || {});
 let R = {
         entry: {

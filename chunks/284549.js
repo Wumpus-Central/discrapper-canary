@@ -1,4 +1,4 @@
-i.d(t, { default: () => C }), i(388685);
+(i.d(t, { default: () => C }), i(388685));
 var n = i(255367),
     s = i(73800),
     a = i(442837),
@@ -40,7 +40,7 @@ let C = (e) => {
             k(!1);
         },
         onVerify: function (e, t) {
-            (0, r.Mn)({
+            ((0, r.Mn)({
                 email: e,
                 password: t
             }).then((e) => {
@@ -49,7 +49,7 @@ let C = (e) => {
                     (null == e || null == (t = e.body) ? void 0 : t.username) != null ? (0, d.P)() : 0 === P.length && 0 === b.length && (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.R0RpRU), l.ToastType.FAILURE));
                 }
             }),
-                k(!0);
+                k(!0));
         },
         onResend: function () {
             o.Z.verifyResend();

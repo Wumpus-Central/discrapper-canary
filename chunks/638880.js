@@ -30,7 +30,7 @@ async function O(e) {
     if (null == D) return !1;
     if (null == R || (w && !R.isPrivate()) || null == l) return Promise.resolve(!1);
     let L = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === l && null != L && L.applicationId === n && (0, _.p)(L.location) === a.Z.getVoiceChannelId())) return (0, E.Z)(P, L.location), Promise.resolve(!0);
+    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === l && null != L && L.applicationId === n && (0, _.p)(L.location) === a.Z.getVoiceChannelId())) return ((0, E.Z)(P, L.location), Promise.resolve(!0));
     let x = await (0, p.Z)(n, l);
     if (
         !(await (0, f.p)({

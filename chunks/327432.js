@@ -37,11 +37,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -85,9 +85,9 @@ var m = () => {
                     }
                 };
             if (el.operationCanTransformPath(t)) for (var _ of ((a = []), (o = new Set()), u)) f(el.transform(_, t));
-            else (a = u), (o = d);
+            else ((a = u), (o = d));
             for (var p of e.getDirtyPaths(t)) f(p);
-            s.set(e, a),
+            (s.set(e, a),
                 l.set(e, o),
                 eY.transform(e, t),
                 e.operations.push(t),
@@ -96,8 +96,8 @@ var m = () => {
                 c.get(e) ||
                     (c.set(e, !0),
                     Promise.resolve().then(() => {
-                        c.set(e, !1), e.onChange({ operation: t }), (e.operations = []);
-                    }));
+                        (c.set(e, !1), e.onChange({ operation: t }), (e.operations = []));
+                    })));
         },
         addMark: (t, n) => {
             var { selection: r, markableVoid: i } = e;
@@ -128,7 +128,7 @@ var m = () => {
                     );
                 else {
                     var f = h(h({}, $.marks(e) || {}), {}, { [t]: n });
-                    (e.marks = f), c.get(e) || e.onChange();
+                    ((e.marks = f), c.get(e) || e.onChange());
                 }
             }
         },
@@ -194,29 +194,29 @@ var m = () => {
                             d = s === n.children.length - 1,
                             f = eA.isText(c) || (K.isElement(c) && e.isInline(c));
                         if (f !== a)
-                            eY.removeNodes(e, {
+                            (eY.removeNodes(e, {
                                 at: r.concat(o),
                                 voids: !0
                             }),
-                                o--;
+                                o--);
                         else if (K.isElement(c)) {
                             if (e.isInline(c))
                                 if (null != u && eA.isText(u)) {
                                     if (d) {
                                         var _ = { text: '' };
-                                        eY.insertNodes(e, _, {
+                                        (eY.insertNodes(e, _, {
                                             at: r.concat(o + 1),
                                             voids: !0
                                         }),
-                                            o++;
+                                            o++);
                                     }
                                 } else {
                                     var p = { text: '' };
-                                    eY.insertNodes(e, p, {
+                                    (eY.insertNodes(e, p, {
                                         at: r.concat(o),
                                         voids: !0
                                     }),
-                                        o++;
+                                        o++);
                                 }
                         } else
                             null != u &&
@@ -268,7 +268,7 @@ var m = () => {
                     });
                 else {
                     var u = h({}, $.marks(e) || {});
-                    delete u[t], (e.marks = u), c.get(e) || e.onChange();
+                    (delete u[t], (e.marks = u), c.get(e) || e.onChange());
                 }
             }
         },
@@ -334,7 +334,7 @@ function g(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function E(e, t) {
@@ -344,7 +344,7 @@ function E(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -373,7 +373,7 @@ var b = function (e) {
         for (var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], n = 0, r = !1; e.length > 0; ) {
             var i = b(e, t),
                 [a, o] = T(e, i, t);
-            if (S(a, o, t)) (r = !0), (n += i);
+            if (S(a, o, t)) ((r = !0), (n += i));
             else if (r) break;
             else n += i;
             e = o;
@@ -403,7 +403,7 @@ var b = function (e) {
             if (C(r.charCodeAt(0))) {
                 var i = e.charAt(t - n - 1);
                 if (N(i.charCodeAt(0))) {
-                    yield i + r, n++;
+                    (yield i + r, n++);
                     continue;
                 }
             }
@@ -413,7 +413,7 @@ var b = function (e) {
     N = (e) => e >= 55296 && e <= 56319,
     C = (e) => e >= 56320 && e <= 57343;
 !(function (e) {
-    (e[(e.None = 0)] = 'None'), (e[(e.Extend = 1)] = 'Extend'), (e[(e.ZWJ = 2)] = 'ZWJ'), (e[(e.RI = 4)] = 'RI'), (e[(e.Prepend = 8)] = 'Prepend'), (e[(e.SpacingMark = 16)] = 'SpacingMark'), (e[(e.L = 32)] = 'L'), (e[(e.V = 64)] = 'V'), (e[(e.T = 128)] = 'T'), (e[(e.LV = 256)] = 'LV'), (e[(e.LVT = 512)] = 'LVT'), (e[(e.ExtPict = 1024)] = 'ExtPict'), (e[(e.Any = 2048)] = 'Any');
+    ((e[(e.None = 0)] = 'None'), (e[(e.Extend = 1)] = 'Extend'), (e[(e.ZWJ = 2)] = 'ZWJ'), (e[(e.RI = 4)] = 'RI'), (e[(e.Prepend = 8)] = 'Prepend'), (e[(e.SpacingMark = 16)] = 'SpacingMark'), (e[(e.L = 32)] = 'L'), (e[(e.V = 64)] = 'V'), (e[(e.T = 128)] = 'T'), (e[(e.LV = 256)] = 'LV'), (e[(e.LVT = 512)] = 'LVT'), (e[(e.ExtPict = 1024)] = 'ExtPict'), (e[(e.Any = 2048)] = 'Any'));
 })(r || (r = {}));
 var R = /^(?:[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED\u0711\u0730-\u074A\u07A6-\u07B0\u07EB-\u07F3\u07FD\u0816-\u0819\u081B-\u0823\u0825-\u0827\u0829-\u082D\u0859-\u085B\u08D3-\u08E1\u08E3-\u0902\u093A\u093C\u0941-\u0948\u094D\u0951-\u0957\u0962\u0963\u0981\u09BC\u09BE\u09C1-\u09C4\u09CD\u09D7\u09E2\u09E3\u09FE\u0A01\u0A02\u0A3C\u0A41\u0A42\u0A47\u0A48\u0A4B-\u0A4D\u0A51\u0A70\u0A71\u0A75\u0A81\u0A82\u0ABC\u0AC1-\u0AC5\u0AC7\u0AC8\u0ACD\u0AE2\u0AE3\u0AFA-\u0AFF\u0B01\u0B3C\u0B3E\u0B3F\u0B41-\u0B44\u0B4D\u0B55-\u0B57\u0B62\u0B63\u0B82\u0BBE\u0BC0\u0BCD\u0BD7\u0C00\u0C04\u0C3E-\u0C40\u0C46-\u0C48\u0C4A-\u0C4D\u0C55\u0C56\u0C62\u0C63\u0C81\u0CBC\u0CBF\u0CC2\u0CC6\u0CCC\u0CCD\u0CD5\u0CD6\u0CE2\u0CE3\u0D00\u0D01\u0D3B\u0D3C\u0D3E\u0D41-\u0D44\u0D4D\u0D57\u0D62\u0D63\u0D81\u0DCA\u0DCF\u0DD2-\u0DD4\u0DD6\u0DDF\u0E31\u0E34-\u0E3A\u0E47-\u0E4E\u0EB1\u0EB4-\u0EBC\u0EC8-\u0ECD\u0F18\u0F19\u0F35\u0F37\u0F39\u0F71-\u0F7E\u0F80-\u0F84\u0F86\u0F87\u0F8D-\u0F97\u0F99-\u0FBC\u0FC6\u102D-\u1030\u1032-\u1037\u1039\u103A\u103D\u103E\u1058\u1059\u105E-\u1060\u1071-\u1074\u1082\u1085\u1086\u108D\u109D\u135D-\u135F\u1712-\u1714\u1732-\u1734\u1752\u1753\u1772\u1773\u17B4\u17B5\u17B7-\u17BD\u17C6\u17C9-\u17D3\u17DD\u180B-\u180D\u1885\u1886\u18A9\u1920-\u1922\u1927\u1928\u1932\u1939-\u193B\u1A17\u1A18\u1A1B\u1A56\u1A58-\u1A5E\u1A60\u1A62\u1A65-\u1A6C\u1A73-\u1A7C\u1A7F\u1AB0-\u1AC0\u1B00-\u1B03\u1B34-\u1B3A\u1B3C\u1B42\u1B6B-\u1B73\u1B80\u1B81\u1BA2-\u1BA5\u1BA8\u1BA9\u1BAB-\u1BAD\u1BE6\u1BE8\u1BE9\u1BED\u1BEF-\u1BF1\u1C2C-\u1C33\u1C36\u1C37\u1CD0-\u1CD2\u1CD4-\u1CE0\u1CE2-\u1CE8\u1CED\u1CF4\u1CF8\u1CF9\u1DC0-\u1DF9\u1DFB-\u1DFF\u200C\u20D0-\u20F0\u2CEF-\u2CF1\u2D7F\u2DE0-\u2DFF\u302A-\u302F\u3099\u309A\uA66F-\uA672\uA674-\uA67D\uA69E\uA69F\uA6F0\uA6F1\uA802\uA806\uA80B\uA825\uA826\uA82C\uA8C4\uA8C5\uA8E0-\uA8F1\uA8FF\uA926-\uA92D\uA947-\uA951\uA980-\uA982\uA9B3\uA9B6-\uA9B9\uA9BC\uA9BD\uA9E5\uAA29-\uAA2E\uAA31\uAA32\uAA35\uAA36\uAA43\uAA4C\uAA7C\uAAB0\uAAB2-\uAAB4\uAAB7\uAAB8\uAABE\uAABF\uAAC1\uAAEC\uAAED\uAAF6\uABE5\uABE8\uABED\uFB1E\uFE00-\uFE0F\uFE20-\uFE2F\uFF9E\uFF9F]|\uD800[\uDDFD\uDEE0\uDF76-\uDF7A]|\uD802[\uDE01-\uDE03\uDE05\uDE06\uDE0C-\uDE0F\uDE38-\uDE3A\uDE3F\uDEE5\uDEE6]|\uD803[\uDD24-\uDD27\uDEAB\uDEAC\uDF46-\uDF50]|\uD804[\uDC01\uDC38-\uDC46\uDC7F-\uDC81\uDCB3-\uDCB6\uDCB9\uDCBA\uDD00-\uDD02\uDD27-\uDD2B\uDD2D-\uDD34\uDD73\uDD80\uDD81\uDDB6-\uDDBE\uDDC9-\uDDCC\uDDCF\uDE2F-\uDE31\uDE34\uDE36\uDE37\uDE3E\uDEDF\uDEE3-\uDEEA\uDF00\uDF01\uDF3B\uDF3C\uDF3E\uDF40\uDF57\uDF66-\uDF6C\uDF70-\uDF74]|\uD805[\uDC38-\uDC3F\uDC42-\uDC44\uDC46\uDC5E\uDCB0\uDCB3-\uDCB8\uDCBA\uDCBD\uDCBF\uDCC0\uDCC2\uDCC3\uDDAF\uDDB2-\uDDB5\uDDBC\uDDBD\uDDBF\uDDC0\uDDDC\uDDDD\uDE33-\uDE3A\uDE3D\uDE3F\uDE40\uDEAB\uDEAD\uDEB0-\uDEB5\uDEB7\uDF1D-\uDF1F\uDF22-\uDF25\uDF27-\uDF2B]|\uD806[\uDC2F-\uDC37\uDC39\uDC3A\uDD30\uDD3B\uDD3C\uDD3E\uDD43\uDDD4-\uDDD7\uDDDA\uDDDB\uDDE0\uDE01-\uDE0A\uDE33-\uDE38\uDE3B-\uDE3E\uDE47\uDE51-\uDE56\uDE59-\uDE5B\uDE8A-\uDE96\uDE98\uDE99]|\uD807[\uDC30-\uDC36\uDC38-\uDC3D\uDC3F\uDC92-\uDCA7\uDCAA-\uDCB0\uDCB2\uDCB3\uDCB5\uDCB6\uDD31-\uDD36\uDD3A\uDD3C\uDD3D\uDD3F-\uDD45\uDD47\uDD90\uDD91\uDD95\uDD97\uDEF3\uDEF4]|\uD81A[\uDEF0-\uDEF4\uDF30-\uDF36]|\uD81B[\uDF4F\uDF8F-\uDF92\uDFE4]|\uD82F[\uDC9D\uDC9E]|\uD834[\uDD65\uDD67-\uDD69\uDD6E-\uDD72\uDD7B-\uDD82\uDD85-\uDD8B\uDDAA-\uDDAD\uDE42-\uDE44]|\uD836[\uDE00-\uDE36\uDE3B-\uDE6C\uDE75\uDE84\uDE9B-\uDE9F\uDEA1-\uDEAF]|\uD838[\uDC00-\uDC06\uDC08-\uDC18\uDC1B-\uDC21\uDC23\uDC24\uDC26-\uDC2A\uDD30-\uDD36\uDEEC-\uDEEF]|\uD83A[\uDCD0-\uDCD6\uDD44-\uDD4A]|\uD83C[\uDFFB-\uDFFF]|\uDB40[\uDC20-\uDC7F\uDD00-\uDDEF])$/,
     P = /^(?:[\u0600-\u0605\u06DD\u070F\u0890\u0891\u08E2\u0D4E]|\uD804[\uDCBD\uDCCD\uDDC2\uDDC3]|\uD806[\uDD3F\uDD41\uDE3A\uDE84-\uDE89]|\uD807\uDD46)$/,
@@ -427,7 +427,7 @@ var R = /^(?:[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u0
     j = /^(?:[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u2388\u23CF\u23E9-\u23F3\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB-\u25FE\u2600-\u2605\u2607-\u2612\u2614-\u2685\u2690-\u2705\u2708-\u2712\u2714\u2716\u271D\u2721\u2728\u2733\u2734\u2744\u2747\u274C\u274E\u2753-\u2755\u2757\u2763-\u2767\u2795-\u2797\u27A1\u27B0\u27BF\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B50\u2B55\u3030\u303D\u3297\u3299]|\uD83C[\uDC00-\uDCFF\uDD0D-\uDD0F\uDD2F\uDD6C-\uDD71\uDD7E\uDD7F\uDD8E\uDD91-\uDD9A\uDDAD-\uDDE5\uDE01-\uDE0F\uDE1A\uDE2F\uDE32-\uDE3A\uDE3C-\uDE3F\uDE49-\uDFFA]|\uD83D[\uDC00-\uDD3D\uDD46-\uDE4F\uDE80-\uDEFF\uDF74-\uDF7F\uDFD5-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE-\uDCFF\uDD0C-\uDD3A\uDD3C-\uDD45\uDD47-\uDEFF]|\uD83F[\uDC00-\uDFFD])$/,
     U = (e, t) => {
         var n = r.Any;
-        return -1 !== e.search(R) && (n |= r.Extend), 8205 === t && (n |= r.ZWJ), t >= 127462 && t <= 127487 && (n |= r.RI), -1 !== e.search(P) && (n |= r.Prepend), -1 !== e.search(w) && (n |= r.SpacingMark), -1 !== e.search(D) && (n |= r.L), -1 !== e.search(L) && (n |= r.V), -1 !== e.search(x) && (n |= r.T), -1 !== e.search(k) && (n |= r.LV), -1 !== e.search(M) && (n |= r.LVT), -1 !== e.search(j) && (n |= r.ExtPict), n;
+        return (-1 !== e.search(R) && (n |= r.Extend), 8205 === t && (n |= r.ZWJ), t >= 127462 && t <= 127487 && (n |= r.RI), -1 !== e.search(P) && (n |= r.Prepend), -1 !== e.search(w) && (n |= r.SpacingMark), -1 !== e.search(D) && (n |= r.L), -1 !== e.search(L) && (n |= r.V), -1 !== e.search(x) && (n |= r.T), -1 !== e.search(k) && (n |= r.LV), -1 !== e.search(M) && (n |= r.LVT), -1 !== e.search(j) && (n |= r.ExtPict), n);
     };
 function G(e, t) {
     return (e & t) != 0;
@@ -474,11 +474,11 @@ function X(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -532,7 +532,7 @@ var J = new WeakMap(),
                 o = 0;
             for (var s of $.positions(e, Q(Q({}, r), {}, { at: i }))) {
                 if (o > a) break;
-                0 !== o && (n = s), o++;
+                (0 !== o && (n = s), o++);
             }
             return n;
         },
@@ -557,7 +557,7 @@ var J = new WeakMap(),
                 )
             )) {
                 if (o > a) break;
-                0 !== o && (n = s), o++;
+                (0 !== o && (n = s), o++);
             }
             return n;
         },
@@ -610,7 +610,7 @@ var J = new WeakMap(),
             if (void 0 !== t) return t;
             if (!(0, i.P)(e)) return !1;
             var n = 'function' == typeof e.addMark && 'function' == typeof e.apply && 'function' == typeof e.deleteBackward && 'function' == typeof e.deleteForward && 'function' == typeof e.deleteFragment && 'function' == typeof e.insertBreak && 'function' == typeof e.insertSoftBreak && 'function' == typeof e.insertFragment && 'function' == typeof e.insertNode && 'function' == typeof e.insertText && 'function' == typeof e.isInline && 'function' == typeof e.isVoid && 'function' == typeof e.normalizeNode && 'function' == typeof e.onChange && 'function' == typeof e.removeMark && 'function' == typeof e.getDirtyPaths && (null === e.marks || (0, i.P)(e.marks)) && (null === e.selection || eg.isRange(e.selection)) && ei.isNodeList(e.children) && es.isOperationList(e.operations);
-            return J.set(e, n), n;
+            return (J.set(e, n), n);
         },
         isEnd(e, t, n) {
             var r = $.end(e, n);
@@ -650,7 +650,7 @@ var J = new WeakMap(),
                 var o = [],
                     s = $.path(e, n);
                 for (var [l, c] of ei.levels(e, s)) if (a(l, c) && (o.push([l, c]), !i && K.isElement(l) && $.isVoid(e, l))) break;
-                r && o.reverse(), yield* o;
+                (r && o.reverse(), yield* o);
             }
         },
         marks(e) {
@@ -720,11 +720,11 @@ var J = new WeakMap(),
                 { at: a = e.selection, mode: o = 'all', universal: s = !1, reverse: l = !1, voids: c = !1 } = i,
                 { match: u } = i;
             if ((u || (u = () => !0), a)) {
-                if (ee.isSpan(a)) (t = a[0]), (n = a[1]);
+                if (ee.isSpan(a)) ((t = a[0]), (n = a[1]));
                 else {
                     var d = $.path(e, a, { edge: 'start' }),
                         f = $.path(e, a, { edge: 'end' });
-                    (t = l ? f : d), (n = l ? d : f);
+                    ((t = l ? f : d), (n = l ? d : f));
                 }
                 var _ = ei.nodes(e, {
                         reverse: l,
@@ -747,10 +747,10 @@ var J = new WeakMap(),
                             continue;
                         }
                         var E = 'lowest' === o ? r : [h, m];
-                        E && (s ? p.push(E) : yield E), (r = [h, m]);
+                        (E && (s ? p.push(E) : yield E), (r = [h, m]));
                     }
                 }
-                'lowest' === o && r && (s ? p.push(r) : yield r), s && (yield* p);
+                ('lowest' === o && r && (s ? p.push(r) : yield r), s && (yield* p));
             }
         },
         normalize(e) {
@@ -761,7 +761,7 @@ var J = new WeakMap(),
                 o = (e) => {
                     var t = i(e).pop(),
                         n = t.join(',');
-                    return a(e).delete(n), t;
+                    return (a(e).delete(n), t);
                 };
             if ($.isNormalizing(e)) {
                 if (n) {
@@ -770,7 +770,7 @@ var J = new WeakMap(),
                             return t;
                         }),
                         u = new Set(c.map((e) => e.join(',')));
-                    s.set(e, c), l.set(e, u);
+                    (s.set(e, c), l.set(e, u));
                 }
                 0 !== i(e).length &&
                     $.withoutNormalizing(e, () => {
@@ -795,7 +795,7 @@ var J = new WeakMap(),
                                 var f = $.node(e, d);
                                 e.normalizeNode(f, { operation: r });
                             }
-                            u++, (l = i(e));
+                            (u++, (l = i(e)));
                         }
                     });
             }
@@ -818,7 +818,7 @@ var J = new WeakMap(),
                     t = o;
                 }
             }
-            return eg.isRange(t) && (t = 'start' === i ? eg.start(t) : 'end' === i ? eg.end(t) : el.common(t.anchor.path, t.focus.path)), ef.isPoint(t) && (t = t.path), null != r && (t = t.slice(0, r)), t;
+            return (eg.isRange(t) && (t = 'start' === i ? eg.start(t) : 'end' === i ? eg.end(t) : el.common(t.anchor.path, t.focus.path)), ef.isPoint(t) && (t = t.path), null != r && (t = t.slice(0, r)), t);
         },
         hasPath: (e, t) => ei.has(e, t),
         pathRef(e, t) {
@@ -829,14 +829,14 @@ var J = new WeakMap(),
                     affinity: r,
                     unref() {
                         var { current: t } = i;
-                        return $.pathRefs(e).delete(i), (i.current = null), t;
+                        return ($.pathRefs(e).delete(i), (i.current = null), t);
                     }
                 };
-            return $.pathRefs(e).add(i), i;
+            return ($.pathRefs(e).add(i), i);
         },
         pathRefs(e) {
             var t = d.get(e);
-            return t || ((t = new Set()), d.set(e, t)), t;
+            return (t || ((t = new Set()), d.set(e, t)), t);
         },
         point(e, t) {
             var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -871,14 +871,14 @@ var J = new WeakMap(),
                     affinity: r,
                     unref() {
                         var { current: t } = i;
-                        return $.pointRefs(e).delete(i), (i.current = null), t;
+                        return ($.pointRefs(e).delete(i), (i.current = null), t);
                     }
                 };
-            return $.pointRefs(e).add(i), i;
+            return ($.pointRefs(e).add(i), i);
         },
         pointRefs(e) {
             var t = f.get(e);
-            return t || ((t = new Set()), f.set(e, t)), t;
+            return (t || ((t = new Set()), f.set(e, t)), t);
         },
         *positions(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -906,7 +906,7 @@ var J = new WeakMap(),
                         if ($.hasInlines(e, h)) {
                             var g = el.isAncestor(m, l.path) ? l : $.end(e, m),
                                 E = el.isAncestor(m, s.path) ? s : $.start(e, m);
-                            (d = $.string(
+                            ((d = $.string(
                                 e,
                                 {
                                     anchor: E,
@@ -914,7 +914,7 @@ var J = new WeakMap(),
                                 },
                                 { voids: a }
                             )),
-                                (u = !0);
+                                (u = !0));
                         }
                     }
                     if (eA.isText(h)) {
@@ -932,17 +932,17 @@ var J = new WeakMap(),
                         ) {
                             if (0 === f) {
                                 if ('' === d) break;
-                                (f = O(d, r, i)), (d = T(d, f, i)[1]);
+                                ((f = O(d, r, i)), (d = T(d, f, i)[1]));
                             }
                             if (((p = i ? p - f : p + f), (_ -= f) < 0)) {
                                 f = -_;
                                 break;
                             }
-                            (f = 0),
+                            ((f = 0),
                                 yield {
                                     path: m,
                                     offset: p
-                                };
+                                });
                         }
                     }
                 }
@@ -992,14 +992,14 @@ var J = new WeakMap(),
                     affinity: r,
                     unref() {
                         var { current: t } = i;
-                        return $.rangeRefs(e).delete(i), (i.current = null), t;
+                        return ($.rangeRefs(e).delete(i), (i.current = null), t);
                     }
                 };
-            return $.rangeRefs(e).add(i), i;
+            return ($.rangeRefs(e).add(i), i);
         },
         rangeRefs(e) {
             var t = _.get(e);
-            return t || ((t = new Set()), _.set(e, t)), t;
+            return (t || ((t = new Set()), _.set(e, t)), t);
         },
         removeMark(e, t) {
             e.removeMark(t);
@@ -1020,7 +1020,7 @@ var J = new WeakMap(),
                 voids: r
             })) {
                 var u = l.text;
-                el.equals(c, o.path) && (u = u.slice(0, o.offset)), el.equals(c, a.path) && (u = u.slice(a.offset)), (s += u);
+                (el.equals(c, o.path) && (u = u.slice(0, o.offset)), el.equals(c, a.path) && (u = u.slice(a.offset)), (s += u));
             }
             return s;
         },
@@ -1105,7 +1105,7 @@ var J = new WeakMap(),
             for (var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, { reverse: r = !1 } = n, i = ei.ancestor(e, t), { children: a } = i, o = r ? a.length - 1 : 0; r ? o >= 0 : o < a.length; ) {
                 var s = ei.child(i, o),
                     l = t.concat(o);
-                yield [s, l], (o = r ? o - 1 : o + 1);
+                (yield [s, l], (o = r ? o - 1 : o + 1));
             }
         },
         common(e, t, n) {
@@ -1136,7 +1136,7 @@ var J = new WeakMap(),
         first(e, t) {
             for (var n = t.slice(), r = ei.get(e, n); r; )
                 if (eA.isText(r) || 0 === r.children.length) break;
-                else (r = r.children[0]), n.push(0);
+                else ((r = r.children[0]), n.push(0));
             return [r, n];
         },
         fragment(e, t) {
@@ -1189,14 +1189,14 @@ var J = new WeakMap(),
             var t = er.get(e);
             if (void 0 !== t) return t;
             var n = e.every((e) => ei.isNode(e));
-            return er.set(e, n), n;
+            return (er.set(e, n), n);
         },
         last(e, t) {
             for (var n = t.slice(), r = ei.get(e, n); r; )
                 if (eA.isText(r) || 0 === r.children.length) break;
                 else {
                     var i = r.children.length - 1;
-                    (r = r.children[i]), n.push(i);
+                    ((r = r.children[i]), n.push(i));
                 }
             return [r, n];
         },
@@ -1218,22 +1218,22 @@ var J = new WeakMap(),
                 if ((o.has(l) || (yield [l, s]), !o.has(l) && !eA.isText(l) && 0 !== l.children.length && (null == n || !1 === n([l, s])))) {
                     o.add(l);
                     var c = r ? l.children.length - 1 : 0;
-                    el.isAncestor(s, i) && (c = i[s.length]), (s = s.concat(c)), (l = ei.get(e, s));
+                    (el.isAncestor(s, i) && (c = i[s.length]), (s = s.concat(c)), (l = ei.get(e, s)));
                     continue;
                 }
                 if (0 === s.length) break;
                 if (!r) {
                     var u = el.next(s);
                     if (ei.has(e, u)) {
-                        (s = u), (l = ei.get(e, s));
+                        ((s = u), (l = ei.get(e, s)));
                         continue;
                     }
                 }
                 if (r && 0 !== s[s.length - 1]) {
-                    (s = el.previous(s)), (l = ei.get(e, s));
+                    ((s = el.previous(s)), (l = ei.get(e, s)));
                     continue;
                 }
-                (s = el.parent(s)), (l = ei.get(e, s)), o.add(l);
+                ((s = el.parent(s)), (l = ei.get(e, s)), o.add(l));
             }
         },
         parent(e, t) {
@@ -1252,11 +1252,11 @@ function ea(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1456,7 +1456,7 @@ var es = {
         },
         levels(e) {
             for (var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, { reverse: n = !1 } = t, r = [], i = 0; i <= e.length; i++) r.push(e.slice(0, i));
-            return n && r.reverse(), r;
+            return (n && r.reverse(), r);
         },
         next(e) {
             if (0 === e.length) throw Error('Cannot get the next path of a root path ['.concat(e, '], because it has no next index.'));
@@ -1521,7 +1521,7 @@ var es = {
                     if (el.equals(d, f)) break;
                     if (el.isAncestor(d, r) || el.equals(d, r)) {
                         var _ = f.slice();
-                        return el.endsBefore(d, f) && d.length < f.length && (_[d.length - 1] -= 1), _.concat(r.slice(d.length));
+                        return (el.endsBefore(d, f) && d.length < f.length && (_[d.length - 1] -= 1), _.concat(r.slice(d.length)));
                     }
                     el.isSibling(d, f) && (el.isAncestor(f, r) || el.equals(f, r)) ? (el.endsBefore(d, r) ? (r[d.length - 1] -= 1) : (r[d.length - 1] += 1)) : el.endsBefore(f, r) || el.equals(f, r) || el.isAncestor(f, r) ? (el.endsBefore(d, r) && (r[d.length - 1] -= 1), (r[f.length - 1] += 1)) : el.endsBefore(d, r) && (el.equals(f, r) && (r[f.length - 1] += 1), (r[d.length - 1] -= 1));
             }
@@ -1533,7 +1533,7 @@ var es = {
             var { current: n, affinity: r } = e;
             if (null != n) {
                 var i = el.transform(n, t, { affinity: r });
-                (e.current = i), null == i && e.unref();
+                ((e.current = i), null == i && e.unref());
             }
         }
     };
@@ -1541,11 +1541,11 @@ function eu(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1588,7 +1588,7 @@ var ef = {
                         el.equals(t.path, i) && (t.offset < a || (t.offset === a && 'forward' === r)) && (e.offset += t.text.length);
                         break;
                     case 'merge_node':
-                        el.equals(t.path, i) && (e.offset += t.position), (e.path = el.transform(i, t, n));
+                        (el.equals(t.path, i) && (e.offset += t.position), (e.path = el.transform(i, t, n)));
                         break;
                     case 'remove_text':
                         el.equals(t.path, i) && t.offset <= a && (e.offset -= Math.min(a - t.offset, t.text.length));
@@ -1611,7 +1611,7 @@ var ef = {
             var { current: n, affinity: r } = e;
             if (null != n) {
                 var i = ef.transform(n, t, { affinity: r });
-                (e.current = i), null == i && e.unref();
+                ((e.current = i), null == i && e.unref());
             }
         }
     },
@@ -1620,11 +1620,11 @@ function eh(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1665,7 +1665,7 @@ var eg = {
             var [o, s] = eg.edges(e),
                 l = !1,
                 c = !1;
-            return ef.isPoint(t) ? ((l = ef.compare(t, o) >= 0), (c = 0 >= ef.compare(t, s))) : ((l = el.compare(t, o.path) >= 0), (c = 0 >= el.compare(t, s.path))), l && c;
+            return (ef.isPoint(t) ? ((l = ef.compare(t, o) >= 0), (c = 0 >= ef.compare(t, s))) : ((l = el.compare(t, o.path) >= 0), (c = 0 >= el.compare(t, s.path))), l && c);
         },
         intersection(e, t) {
             var n = E(e, ep),
@@ -1695,7 +1695,7 @@ var eg = {
         isForward: (e) => !eg.isBackward(e),
         isRange: (e) => (0, i.P)(e) && ef.isPoint(e.anchor) && ef.isPoint(e.focus),
         *points(e) {
-            yield [e.anchor, 'anchor'], yield [e.focus, 'focus'];
+            (yield [e.anchor, 'anchor'], yield [e.focus, 'focus']);
         },
         start(e) {
             var [t] = eg.edges(e);
@@ -1715,7 +1715,7 @@ var eg = {
                 var s = ef.transform(e.anchor, t, { affinity: r }),
                     l = ef.transform(e.focus, t, { affinity: i });
                 if (!s || !l) return null;
-                (e.anchor = s), (e.focus = l);
+                ((e.anchor = s), (e.focus = l));
             });
         }
     },
@@ -1724,7 +1724,7 @@ var eg = {
             var { current: n, affinity: r } = e;
             if (null != n) {
                 var i = eg.transform(n, t, { affinity: r });
-                (e.current = i), null == i && e.unref();
+                ((e.current = i), null == i && e.unref());
             }
         }
     },
@@ -1755,11 +1755,11 @@ function eT(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1807,7 +1807,7 @@ var eA = {
                 var { length: f } = d.text,
                     _ = l;
                 if (((l += f), c <= _ && l <= u)) {
-                    Object.assign(d, i), s.push(d);
+                    (Object.assign(d, i), s.push(d));
                     continue;
                 }
                 if ((c !== u && (c === l || u === _)) || c > l || u < _ || (u === _ && 0 !== _)) {
@@ -1819,13 +1819,13 @@ var eA = {
                     m = void 0;
                 if (u < l) {
                     var g = u - _;
-                    (m = eS(eS({}, p), {}, { text: p.text.slice(g) })), (p = eS(eS({}, p), {}, { text: p.text.slice(0, g) }));
+                    ((m = eS(eS({}, p), {}, { text: p.text.slice(g) })), (p = eS(eS({}, p), {}, { text: p.text.slice(0, g) })));
                 }
                 if (c > _) {
                     var b = c - _;
-                    (h = eS(eS({}, p), {}, { text: p.text.slice(0, b) })), (p = eS(eS({}, p), {}, { text: p.text.slice(b) }));
+                    ((h = eS(eS({}, p), {}, { text: p.text.slice(0, b) })), (p = eS(eS({}, p), {}, { text: p.text.slice(b) })));
                 }
-                Object.assign(p, i), h && s.push(h), s.push(p), m && s.push(m);
+                (Object.assign(p, i), h && s.push(h), s.push(p), m && s.push(m));
             }
             n = s;
         }
@@ -1836,11 +1836,11 @@ function eN(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1917,7 +1917,7 @@ var eR = (e, t, n) => {
                                     break;
                                 }
                             var H = !1;
-                            B && V && (H = el.equals(V[1], k) ? !el.hasPrevious(V[1]) : el.common(B[1], k).length < el.common(V[1], k).length), B && !H ? ((j.path = B[1]), (j.offset = B[0].text.length)) : V ? ((j.path = V[1]), (j.offset = 0)) : (t = null);
+                            (B && V && (H = el.equals(V[1], k) ? !el.hasPrevious(V[1]) : el.common(B[1], k).length < el.common(V[1], k).length), B && !H ? ((j.path = B[1]), (j.offset = B[0].text.length)) : V ? ((j.path = V[1]), (j.offset = 0)) : (t = null));
                         }
                     }
                 break;
@@ -1967,11 +1967,11 @@ var eR = (e, t, n) => {
                 if (eA.isText(em)) {
                     var eO = em.text.slice(0, ep),
                         ev = em.text.slice(ep);
-                    (em.text = eO), (ed = eC(eC({}, eh), {}, { text: ev }));
+                    ((em.text = eO), (ed = eC(eC({}, eh), {}, { text: ev })));
                 } else {
                     var eI = em.children.slice(0, ep),
                         eT = em.children.slice(ep);
-                    (em.children = eI), (ed = eC(eC({}, eh), {}, { children: eT }));
+                    ((em.children = eI), (ed = eC(eC({}, eh), {}, { children: eT })));
                 }
                 if ((eE.children.splice(eb + 1, 0, ed), t)) for (var [eS, eN] of eg.points(t)) t[eN] = ef.transform(eS, n);
         }
@@ -1984,7 +1984,7 @@ var eR = (e, t, n) => {
             try {
                 n = eR(e, n, t);
             } finally {
-                (e.children = (0, a._x)(e.children)), n ? (e.selection = (0, a.mv)(n) ? (0, a._x)(n) : n) : (e.selection = null);
+                ((e.children = (0, a._x)(e.children)), n ? (e.selection = (0, a.mv)(n) ? (0, a._x)(n) : n) : (e.selection = null));
             }
         }
     },
@@ -1994,11 +1994,11 @@ function eL(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2030,7 +2030,7 @@ var ek = {
                         else {
                             var [, u] = eg.edges(o),
                                 d = $.pointRef(e, u);
-                            eY.delete(e, { at: o }), (o = d.unref());
+                            (eY.delete(e, { at: o }), (o = d.unref()));
                         }
                     if (ef.isPoint(o)) {
                         null == s && (s = eA.isText(c) ? (e) => eA.isText(e) : e.isInline(c) ? (t) => eA.isText(t) || $.isInline(e, t) : (t) => K.isElement(t) && $.isBlock(e, t));
@@ -2058,13 +2058,13 @@ var ek = {
                     if (!(!i && $.void(e, { at: g }))) {
                         for (var b of t) {
                             var y = g.concat(E);
-                            E++,
+                            (E++,
                                 e.apply({
                                     type: 'insert_node',
                                     path: y,
                                     node: b
                                 }),
-                                (o = el.next(o));
+                                (o = el.next(o)));
                         }
                         if (((o = el.previous(o)), l)) {
                             var O = $.end(e, o);
@@ -2098,7 +2098,7 @@ var ek = {
                             { length: _ } = u.children;
                         if (1 === _) {
                             var p = el.next(d);
-                            eY.moveNodes(e, {
+                            (eY.moveNodes(e, {
                                 at: c,
                                 to: p,
                                 voids: i
@@ -2106,7 +2106,7 @@ var ek = {
                                 eY.removeNodes(e, {
                                     at: d,
                                     voids: i
-                                });
+                                }));
                         } else if (0 === f)
                             eY.moveNodes(e, {
                                 at: c,
@@ -2123,7 +2123,7 @@ var ek = {
                         } else {
                             var m = el.next(c),
                                 g = el.next(d);
-                            eY.splitNodes(e, {
+                            (eY.splitNodes(e, {
                                 at: m,
                                 voids: i
                             }),
@@ -2131,7 +2131,7 @@ var ek = {
                                     at: c,
                                     to: g,
                                     voids: i
-                                });
+                                }));
                         }
                     }
                 }
@@ -2155,7 +2155,7 @@ var ek = {
                         else {
                             var [, u] = eg.edges(a),
                                 d = $.pointRef(e, u);
-                            eY.delete(e, { at: a }), (a = d.unref()), null == t.at && eY.select(e, a);
+                            (eY.delete(e, { at: a }), (a = d.unref()), null == t.at && eY.select(e, a));
                         }
                     var [f] = $.nodes(e, {
                             at: a,
@@ -2190,12 +2190,12 @@ var ek = {
                                 T = I && $.pathRef(e, I[1]);
                             if (eA.isText(p) && eA.isText(m)) {
                                 var S = E(p, ew);
-                                (r = m.text.length), (n = S);
+                                ((r = m.text.length), (n = S));
                             } else if (K.isElement(p) && K.isElement(m)) {
                                 var S = E(p, eD);
-                                (r = m.children.length), (n = S);
+                                ((r = m.children.length), (n = S));
                             } else throw Error('Cannot merge the node at path ['.concat(h, '] with the previous sibling because it is not the same kind: ').concat(ey.stringify(p), ' ').concat(ey.stringify(m)));
-                            O ||
+                            (O ||
                                 eY.moveNodes(e, {
                                     at: h,
                                     to: b,
@@ -2217,7 +2217,7 @@ var ek = {
                                           position: r,
                                           properties: n
                                       }),
-                                T && T.unref();
+                                T && T.unref());
                         }
                     }
                 }
@@ -2243,13 +2243,13 @@ var ek = {
                     for (var u of c) {
                         var d = u.unref(),
                             f = s.current;
-                        0 !== d.length &&
+                        (0 !== d.length &&
                             e.apply({
                                 type: 'move_node',
                                 path: d,
                                 newPath: f
                             }),
-                            s.current && el.isSibling(f, d) && el.isAfter(f, d) && (s.current = el.next(s.current));
+                            s.current && el.isSibling(f, d) && el.isAfter(f, d) && (s.current = el.next(s.current)));
                     }
                     s.unref();
                 }
@@ -2261,7 +2261,7 @@ var ek = {
                 var { hanging: n = !1, voids: r = !1, mode: i = 'lowest' } = t,
                     { at: a = e.selection, match: o } = t;
                 if (a) {
-                    null == o && (o = el.isPath(a) ? eU(e, a) : (t) => K.isElement(t) && $.isBlock(e, t)), !n && eg.isRange(a) && (a = $.unhangRange(e, a, { voids: r }));
+                    (null == o && (o = el.isPath(a) ? eU(e, a) : (t) => K.isElement(t) && $.isBlock(e, t)), !n && eg.isRange(a) && (a = $.unhangRange(e, a, { voids: r })));
                     var s = $.nodes(e, {
                             at: a,
                             match: o,
@@ -2306,7 +2306,7 @@ var ek = {
                             always: !h
                         });
                         var m = $.isStart(e, f, f.path);
-                        eY.splitNodes(e, {
+                        (eY.splitNodes(e, {
                             at: f,
                             match: r,
                             mode: p,
@@ -2314,7 +2314,7 @@ var ek = {
                             always: !m
                         }),
                             (i = d.unref()),
-                            null == n.at && eY.select(e, i);
+                            null == n.at && eY.select(e, i));
                     }
                     for (var [g, E] of (a || (a = (e, t) => e !== t),
                     $.nodes(e, {
@@ -2351,7 +2351,7 @@ var ek = {
                     var u = s,
                         d = $.point(e, u),
                         [f] = $.parent(e, u);
-                    (o = (e) => e === f), (l = d.path.length - u.length + 1), (s = d), (c = !0);
+                    ((o = (e) => e === f), (l = d.path.length - u.length + 1), (s = d), (c = !0));
                 }
                 if (s) {
                     var _ = $.pointRef(e, s, { affinity: 'backward' });
@@ -2375,15 +2375,15 @@ var ek = {
                                 if (!b) {
                                     var y = { text: '' },
                                         O = el.next(E);
-                                    eY.insertNodes(e, y, {
+                                    (eY.insertNodes(e, y, {
                                         at: O,
                                         voids: a
                                     }),
-                                        (b = $.point(e, O));
+                                        (b = $.point(e, O)));
                                 }
-                                (s = b), (c = !0);
+                                ((s = b), (c = !0));
                             }
-                            (l = s.path.length - E.length + 1), (c = !0);
+                            ((l = s.path.length - E.length + 1), (c = !0));
                         }
                         n = $.pointRef(e, s);
                         var v = s.path.length - l,
@@ -2416,7 +2416,7 @@ var ek = {
                             eY.select(e, D);
                         }
                     } finally {
-                        _.unref(), null == (r = n) || r.unref();
+                        (_.unref(), null == (r = n) || r.unref());
                     }
                 }
             });
@@ -2434,7 +2434,7 @@ var ek = {
                 var { mode: n = 'lowest', split: r = !1, voids: i = !1 } = t,
                     { at: a = e.selection, match: o } = t;
                 if (a) {
-                    null == o && (o = el.isPath(a) ? eU(e, a) : (t) => K.isElement(t) && $.isBlock(e, t)), el.isPath(a) && (a = $.range(e, a));
+                    (null == o && (o = el.isPath(a) ? eU(e, a) : (t) => K.isElement(t) && $.isBlock(e, t)), el.isPath(a) && (a = $.range(e, a)));
                     var s = eg.isRange(a) ? $.rangeRef(e, a) : null,
                         l = $.nodes(e, {
                             at: a,
@@ -2450,12 +2450,12 @@ var ek = {
                             var n = t.unref(),
                                 [a] = $.node(e, n),
                                 o = $.range(e, n);
-                            r && s && (o = eg.intersection(s.current, o)),
+                            (r && s && (o = eg.intersection(s.current, o)),
                                 eY.liftNodes(e, {
                                     at: o,
                                     match: (e) => K.isAncestor(a) && a.children.includes(e),
                                     voids: i
-                                });
+                                }));
                         };
                     for (var d of c) u(d);
                     s && s.unref();
@@ -2471,7 +2471,7 @@ var ek = {
                     if ((null == o && (o = el.isPath(s) ? eU(e, s) : e.isInline(t) ? (t) => (K.isElement(t) && $.isInline(e, t)) || eA.isText(t) : (t) => K.isElement(t) && $.isBlock(e, t)), i && eg.isRange(s))) {
                         var [l, c] = eg.edges(s),
                             u = $.rangeRef(e, s, { affinity: 'inward' });
-                        eY.splitNodes(e, {
+                        (eY.splitNodes(e, {
                             at: c,
                             match: o,
                             voids: a
@@ -2482,7 +2482,7 @@ var ek = {
                                 voids: a
                             }),
                             (s = u.unref()),
-                            null == n.at && eY.select(e, s);
+                            null == n.at && eY.select(e, s));
                     }
                     var d = Array.from(
                         $.nodes(e, {
@@ -2518,7 +2518,7 @@ var ek = {
                                             u = s.length + 1,
                                             d = el.next(o.slice(0, u)),
                                             f = ex(ex({}, t), {}, { children: [] });
-                                        eY.insertNodes(e, f, {
+                                        (eY.insertNodes(e, f, {
                                             at: d,
                                             voids: a
                                         }),
@@ -2527,7 +2527,7 @@ var ek = {
                                                 match: (e) => K.isAncestor(c) && c.children.includes(e),
                                                 to: d.concat(0),
                                                 voids: a
-                                            });
+                                            }));
                                     })()
                             )
                                 continue;
@@ -2548,7 +2548,7 @@ var ek = {
         if (eg.isCollapsed(t)) return t.anchor;
         var [, n] = eg.edges(t),
             r = $.pointRef(e, n);
-        return eY.delete(e, { at: t }), r.unref();
+        return (eY.delete(e, { at: t }), r.unref());
     },
     eU = (e, t) => {
         var [n] = $.node(e, t);
@@ -2558,11 +2558,11 @@ function eG(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2613,7 +2613,7 @@ var eV = {
                 { distance: r = 1, unit: i = 'character', reverse: a = !1 } = t,
                 { edge: o = null } = t;
             if (n) {
-                'start' === o && (o = eg.isBackward(n) ? 'focus' : 'anchor'), 'end' === o && (o = eg.isBackward(n) ? 'anchor' : 'focus');
+                ('start' === o && (o = eg.isBackward(n) ? 'focus' : 'anchor'), 'end' === o && (o = eg.isBackward(n) ? 'anchor' : 'focus'));
                 var { anchor: s, focus: l } = n,
                     c = {
                         distance: r,
@@ -2646,7 +2646,7 @@ var eV = {
                 { selection: r } = e,
                 { edge: i = 'both' } = n;
             if (r) {
-                'start' === i && (i = eg.isBackward(r) ? 'focus' : 'anchor'), 'end' === i && (i = eg.isBackward(r) ? 'anchor' : 'focus');
+                ('start' === i && (i = eg.isBackward(r) ? 'focus' : 'anchor'), 'end' === i && (i = eg.isBackward(r) ? 'anchor' : 'focus'));
                 var { anchor: a, focus: o } = r,
                     s = 'anchor' === i ? a : o;
                 eY.setSelection(e, { ['anchor' === i ? 'anchor' : 'focus']: eB(eB({}, s), t) });
@@ -2690,11 +2690,11 @@ var eV = {
                                     distance: a
                                 },
                                 _ = r ? $.before(e, s, f) || $.start(e, []) : $.after(e, s, f) || $.end(e, []);
-                            (s = {
+                            ((s = {
                                 anchor: s,
                                 focus: _
                             }),
-                                (l = !0);
+                                (l = !0));
                         }
                     }
                     if (el.isPath(s))
@@ -2797,7 +2797,7 @@ var eV = {
                                 }),
                                 (L = Z));
                         }
-                        !O &&
+                        (!O &&
                             y &&
                             D.current &&
                             w.current &&
@@ -2806,7 +2806,7 @@ var eV = {
                                 hanging: !0,
                                 voids: o
                             }),
-                            c && r && 'character' === i && L.length > 1 && L.match(/[\u0E00-\u0E7F]+/) && eY.insertText(e, L.slice(0, L.length - a));
+                            c && r && 'character' === i && L.length > 1 && L.match(/[\u0E00-\u0E7F]+/) && eY.insertText(e, L.slice(0, L.length - a)));
                         var H = w.unref(),
                             Y = D.unref(),
                             W = r ? H || Y : Y || H;
@@ -2829,7 +2829,7 @@ var eV = {
                                 var [, s] = eg.edges(o);
                                 if (!a && $.void(e, { at: s })) return;
                                 var l = $.pointRef(e, s);
-                                eY.delete(e, { at: o }), (o = l.unref());
+                                (eY.delete(e, { at: o }), (o = l.unref()));
                             }
                         else el.isPath(o) && (o = $.start(e, o));
                         if (!(!a && $.void(e, { at: o }))) {
@@ -2919,7 +2919,7 @@ var eV = {
                                 var M = $.end(e, r);
                                 eY.select(e, M);
                             }
-                            k.unref(), L.unref(), x.unref();
+                            (k.unref(), L.unref(), x.unref());
                         }
                     }
                 }
@@ -2945,11 +2945,11 @@ var eV = {
                             });
                             var c = s.unref(),
                                 u = l.unref();
-                            (i = c || u),
+                            ((i = c || u),
                                 eY.setSelection(e, {
                                     anchor: i,
                                     focus: i
-                                });
+                                }));
                         }
                     if (!(!r && $.void(e, { at: i }))) {
                         var { path: d, offset: f } = i;
@@ -2969,11 +2969,11 @@ function eZ(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }

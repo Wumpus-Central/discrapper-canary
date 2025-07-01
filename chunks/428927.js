@@ -14,7 +14,7 @@ function f(e) {
         { trackUserProfileAction: f } = (0, s.KZ)(),
         { mutualGuilds: p, isFetching: g } = (0, a.Z)(n),
         v = (e) => {
-            (0, o.X)(e), t(), (0, i.xf)();
+            ((0, o.X)(e), t(), (0, i.xf)());
         };
     return (0, l.jsx)(r.zJl, {
         className: d.listScroller,
@@ -37,7 +37,7 @@ function f(e) {
                                     guild: t,
                                     nick: r,
                                     onSelect: () => {
-                                        f({ action: 'PRESS_MUTUAL_GUILD' }), v(t.id);
+                                        (f({ action: 'PRESS_MUTUAL_GUILD' }), v(t.id));
                                     }
                                 },
                                 t.id

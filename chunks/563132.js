@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     JL: () => z,
     PaymentContextProvider: () => X
 }),
     n(388685),
-    n(997841);
+    n(997841));
 var r = n(255367),
     i = n(73800),
     a = n(245364),
@@ -61,7 +61,7 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -69,7 +69,7 @@ function H(e) {
             )),
             r.forEach(function (t) {
                 Z(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -77,11 +77,11 @@ function Y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }

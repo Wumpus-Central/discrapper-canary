@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $p: () => s,
     AK: () => d,
     Es: () => c,
@@ -24,7 +24,7 @@ n.d(t, {
     n(918970),
     n(121784),
     n(644351),
-    n(146733);
+    n(146733));
 var r = n(392711),
     l = n(36793),
     a = n(486324);
@@ -49,19 +49,19 @@ async function s(e) {
                 let { data: r } = n;
                 if (r.type === a.u.CROP_GIF_COMPLETE) {
                     var l;
-                    e(
+                    (e(
                         ((l = new Blob([r.result])),
                         new Promise((e) => {
                             let t = new FileReader();
-                            (t.onload = (t) => {
+                            ((t.onload = (t) => {
                                 var n;
                                 let r = null == (n = t.target) ? void 0 : n.result;
                                 'string' == typeof r ? e(r) : e('');
                             }),
-                                t.readAsDataURL(l);
+                                t.readAsDataURL(l));
                         }))
                     ),
-                        v.terminate();
+                        v.terminate());
                 } else r.type === a.u.CROP_GIF_ERROR && (t(Error('Error cropping GIF', { cause: null == r ? void 0 : r.error })), v.terminate());
             };
         });
@@ -137,7 +137,7 @@ function u(e, t, n) {
         },
         l = e - n.width,
         a = t - n.height;
-    return 0 !== l && ((r.left = -Math.abs(l / 2)), (r.right = l / 2)), 0 !== a && ((r.bottom = -Math.abs(a / 2)), (r.top = a / 2)), r;
+    return (0 !== l && ((r.left = -Math.abs(l / 2)), (r.right = l / 2)), 0 !== a && ((r.bottom = -Math.abs(a / 2)), (r.top = a / 2)), r);
 }
 function d(e, t, n, r) {
     let l = a.US;

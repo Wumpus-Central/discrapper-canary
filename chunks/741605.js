@@ -44,11 +44,11 @@ function o(t, e, n, o) {
         b = new Uint8Array(u.outputLen);
     for (let t = 1, e = 0; e < c; t++, e += u.outputLen) {
         let n = l.subarray(e, e + u.outputLen);
-        p.setInt32(0, t, !1), (a = d._cloneInto(a)).update(x).digestInto(b), n.set(b.subarray(0, n.length));
+        (p.setInt32(0, t, !1), (a = d._cloneInto(a)).update(x).digestInto(b), n.set(b.subarray(0, n.length)));
         for (let t = 1; t < f; t++) {
             u._cloneInto(a).update(b).digestInto(b);
             for (let t = 0; t < n.length; t++) n[t] ^= b[t];
         }
     }
-    return (h = a), u.destroy(), d.destroy(), h && h.destroy(), b.fill(0), l;
+    return ((h = a), u.destroy(), d.destroy(), h && h.destroy(), b.fill(0), l);
 }

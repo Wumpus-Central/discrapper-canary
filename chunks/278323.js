@@ -10,7 +10,7 @@ var r = n(544891),
 let d = {
     updateActivity(e) {
         let { applicationId: t, distributor: n, shareActivity: a, token: o = null, duration: s = 0, closed: l = !1, exePath: c = null, voiceChannelId: d = null, sessionId: f = null, mediaSessionId: _ = null } = e;
-        i.Z.wait(() =>
+        (i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'ACTIVITY_UPDATE_START',
                 applicationId: t,
@@ -54,7 +54,7 @@ let d = {
                         type: 'ACTIVITY_UPDATE_FAIL',
                         applicationId: t
                     });
-                });
+                }));
     },
     sendActivityInvite(e) {
         let { channelId: t, type: n, activity: r, content: i, location: l } = e,

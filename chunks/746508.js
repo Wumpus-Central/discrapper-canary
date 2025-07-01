@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eJ }), n(388685);
+(n.d(t, { Z: () => eJ }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -106,7 +106,7 @@ function eG(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -114,7 +114,7 @@ function eG(e) {
             )),
             r.forEach(function (t) {
                 eU(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -146,12 +146,12 @@ function eV(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -173,10 +173,10 @@ function eF(e) {
 }
 function ez() {
     let e = i.useRef(null);
-    (0, f.Tbt)(e),
+    ((0, f.Tbt)(e),
         i.useEffect(() => {
             eS.default.track(eL.rMx.OPEN_POPOUT, { type: eL.jXE.NOISE_CANCELLATION_POPOUT });
-        }, []);
+        }, []));
     let t = (0, u.e7)([e_.Z], () => e_.Z.getNoiseCancellation());
     return (0, r.jsxs)('div', {
         ref: e,
@@ -233,7 +233,7 @@ function eW() {
         tooltipText: n,
         icon: t ? f.xjP : f.RZG,
         onClick: () => {
-            (0, L.v)(e, L.d.STAGE_MUSIC, t), (0, $.v)(!t);
+            ((0, L.v)(e, L.d.STAGE_MUSIC, t), (0, $.v)(!t));
         }
     });
 }
@@ -255,9 +255,9 @@ function eY(e) {
                 if (e_.Z.isVideoEnabled() === e) return;
                 let n = () => {
                     var n;
-                    g.Z.setVideoEnabled(e), e && (0, W.uL)(eL.Z5c.CHANNEL(null != (n = t.getGuildId()) ? n : eL.ME, t.id));
+                    (g.Z.setVideoEnabled(e), e && (0, W.uL)(eL.Z5c.CHANNEL(null != (n = t.getGuildId()) ? n : eL.ME, t.id)));
                 };
-                (0, L.v)(s, L.d.CAMERA, e), e ? (0, ed.Z)(n, O) : n();
+                ((0, L.v)(s, L.d.CAMERA, e), e ? (0, ed.Z)(n, O) : n());
             },
             [t, O, s]
         ),
@@ -313,19 +313,19 @@ function eY(e) {
                                             eB(eG({ buttonRef: o }, u, e, c), {
                                                 onClick: (t) => {
                                                     var n;
-                                                    u.onClick(t), null == (n = e.onClick) || n.call(e), p && s(t);
+                                                    (u.onClick(t), null == (n = e.onClick) || n.call(e), p && s(t));
                                                 },
                                                 onMouseEnter: () => {
                                                     var t, n;
-                                                    null == (t = e.onMouseEnter) || t.call(e), null == (n = c.onMouseEnter) || n.call(c), T.onMouseEnter();
+                                                    (null == (t = e.onMouseEnter) || t.call(e), null == (n = c.onMouseEnter) || n.call(c), T.onMouseEnter());
                                                 },
                                                 onMouseLeave: () => {
                                                     var t;
-                                                    null == (t = e.onMouseLeave) || t.call(e), T.onMouseLeave();
+                                                    (null == (t = e.onMouseLeave) || t.call(e), T.onMouseLeave());
                                                 },
                                                 onContextMenu: (t) => {
                                                     var n;
-                                                    s(t), null == (n = e.onContextMenu) || n.call(e);
+                                                    (s(t), null == (n = e.onContextMenu) || n.call(e));
                                                 },
                                                 size: f.zxk.Sizes.MEDIUM,
                                                 className: a()(ek.button, ek.buttonColor, {
@@ -382,22 +382,22 @@ function eK(e) {
                           {
                               onClick: () => {
                                   var n;
-                                  _(),
+                                  (_(),
                                       (0, P.Z)({
                                           channel: t,
                                           openInPopout: s,
                                           analyticsLocations: l
                                       }),
                                       null == (n = e.onClick) || n.call(e),
-                                      (0, L.v)(o, L.d.ACTIVITY);
+                                      (0, L.v)(o, L.d.ACTIVITY));
                               },
                               onMouseEnter: () => {
                                   var t;
-                                  b.onMouseEnter(), null == e || null == (t = e.onMouseEnter) || t.call(e);
+                                  (b.onMouseEnter(), null == e || null == (t = e.onMouseEnter) || t.call(e));
                               },
                               onMouseLeave: () => {
                                   var t;
-                                  b.onMouseLeave(), null == e || null == (t = e.onMouseLeave) || t.call(e);
+                                  (b.onMouseLeave(), null == e || null == (t = e.onMouseLeave) || t.call(e));
                               },
                               disabled: g,
                               className: a()(ek.button, ek.buttonColor, {
@@ -485,7 +485,7 @@ function eq(e) {
                                     size: f.zxk.Sizes.MEDIUM,
                                     onClick: (r) => {
                                         var i;
-                                        (0, L.v)(p, L.d.STREAM, null == y), C ? n(r) : t(), null == (i = e.onClick) || i.call(e);
+                                        ((0, L.v)(p, L.d.STREAM, null == y), C ? n(r) : t(), null == (i = e.onClick) || i.call(e));
                                     },
                                     disabled: !m || s,
                                     className: a()(ek.button, ek.buttonColor, {
@@ -498,11 +498,11 @@ function eq(e) {
                             {
                                 onMouseEnter: () => {
                                     var t;
-                                    null == i || i(), null == (t = e.onMouseEnter) || t.call(e), j.onMouseEnter();
+                                    (null == i || i(), null == (t = e.onMouseEnter) || t.call(e), j.onMouseEnter());
                                 },
                                 onMouseLeave: () => {
                                     var t;
-                                    null == (t = e.onMouseLeave) || t.call(e), j.onMouseLeave();
+                                    (null == (t = e.onMouseLeave) || t.call(e), j.onMouseLeave());
                                 },
                                 innerClassName: ek.buttonContents,
                                 wrapperClassName: ek.button,
@@ -686,13 +686,13 @@ class eX extends i.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             eU(this, 'ref', i.createRef()),
             eU(this, 'krispButtonRef', i.createRef()),
             eU(this, 'handleChannelLinkClick', (e) => {
                 var t;
                 let { guild: n, channel: r } = this.props;
-                s()(null != r, 'Channel is null during navigation click'), e.stopPropagation(), b.Z.channelListScrollTo(null != (t = null == n ? void 0 : n.id) ? t : eL.ME, r.id), (0, L.v)(j.Z.RTC_PANEL, L.d.CHANNEL_LINK);
+                (s()(null != r, 'Channel is null during navigation click'), e.stopPropagation(), b.Z.channelListScrollTo(null != (t = null == n ? void 0 : n.id) ? t : eL.ME, r.id), (0, L.v)(j.Z.RTC_PANEL, L.d.CHANNEL_LINK));
             }),
             eU(this, 'handleChannelLinkContextMenu', (e) => {
                 let { channel: t, analyticsLocations: i } = this.props;
@@ -737,7 +737,7 @@ class eX extends i.PureComponent {
                         })
                     ]
                 })
-            );
+            ));
     }
 }
 function eQ(e) {
@@ -751,11 +751,11 @@ function eQ(e) {
             eB(eG({}, t), {
                 ref: a,
                 onClick: (e) => {
-                    (0, L.v)(o, L.d.KRISP, !l), t.onClick(e);
+                    ((0, L.v)(o, L.d.KRISP, !l), t.onClick(e));
                 },
                 onMouseEnter: () => {
                     var e;
-                    null == (e = t.onMouseEnter) || e.call(t), u.onMouseEnter();
+                    (null == (e = t.onMouseEnter) || e.call(t), u.onMouseEnter());
                 },
                 onMouseLeave: () => {
                     u.onMouseLeave();

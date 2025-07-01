@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     G0: () => m,
     u$: () => g
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -41,7 +41,7 @@ class p extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), d(this, 'state', { backgroundColor: s().sample(_) });
+        (super(...e), d(this, 'state', { backgroundColor: s().sample(_) }));
     }
 }
 class h extends (r = a.Component) {
@@ -74,7 +74,7 @@ class h extends (r = a.Component) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             d(this, 'animateSlide', () => {
                 let {
                         props: { direction: e },
@@ -82,13 +82,13 @@ class h extends (r = a.Component) {
                     } = this,
                     r = e > 0 ? 0 : -n / 2 + f,
                     i = e > 0 ? -n / 2 + f : 0;
-                t.setValue(r),
+                (t.setValue(r),
                     l.Z.timing(t, {
                         toValue: i,
                         duration: 800,
                         easing: l.Z.Easing.linear
-                    }).start(this.animateSlide);
-            });
+                    }).start(this.animateSlide));
+            }));
         let t = Array(10)
             .fill(null)
             .map(() => s().random(40, 150));

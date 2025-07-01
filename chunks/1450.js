@@ -76,7 +76,7 @@ let v = (e) => {
     }
     {
         let e = () => {
-            (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, T);
+            ((0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, T));
         };
         return (0, r.jsxs)('div', {
             className: o()(O.upsell, t),

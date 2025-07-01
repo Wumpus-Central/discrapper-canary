@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -102,7 +102,7 @@ function C() {
                         !D &&
                         (function (e) {
                             if (!(0, c.Z)(C, e, y, N, w)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
-                            I({
+                            (I({
                                 type: 'set_resolution',
                                 resolution: e
                             }),
@@ -110,7 +110,7 @@ function C() {
                                     I({
                                         type: 'set_preset',
                                         preset: _.tI.PRESET_CUSTOM
-                                    });
+                                    }));
                         })(e.value)
                 })
             }),
@@ -126,7 +126,7 @@ function C() {
                         !D &&
                         (function (e) {
                             if (!(0, c.Z)(C, Z, e, N, w)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
-                            I({
+                            (I({
                                 type: 'set_fps',
                                 fps: e
                             }),
@@ -134,7 +134,7 @@ function C() {
                                     I({
                                         type: 'set_preset',
                                         preset: _.tI.PRESET_CUSTOM
-                                    });
+                                    }));
                         })(e.value)
                 })
             })

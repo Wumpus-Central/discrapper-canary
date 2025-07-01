@@ -7,13 +7,13 @@ class i {
         if (((t = a(t)), e instanceof i))
             if (!!t.loose === e.loose) return e;
             else e = e.value;
-        c('comparator', (e = e.trim().split(/\s+/).join(' ')), t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === r ? (this.value = '') : (this.value = this.operator + this.semver.version), c('comp', this);
+        (c('comparator', (e = e.trim().split(/\s+/).join(' ')), t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === r ? (this.value = '') : (this.value = this.operator + this.semver.version), c('comp', this));
     }
     parse(e) {
         let t = this.options.loose ? o[s.COMPARATORLOOSE] : o[s.COMPARATOR],
             n = e.match(t);
         if (!n) throw TypeError(`Invalid comparator: ${e}`);
-        (this.operator = void 0 !== n[1] ? n[1] : ''), '=' === this.operator && (this.operator = ''), n[2] ? (this.semver = new u(n[2], this.options.loose)) : (this.semver = r);
+        ((this.operator = void 0 !== n[1] ? n[1] : ''), '=' === this.operator && (this.operator = ''), n[2] ? (this.semver = new u(n[2], this.options.loose)) : (this.semver = r));
     }
     toString() {
         return this.value;

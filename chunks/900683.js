@@ -7,22 +7,22 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
-    s = n(388032),
-    a = n(978862),
+    a = n(388032),
+    s = n(978862),
     c = n(531599);
 function u() {
     return (0, r.jsxs)('div', {
-        className: l()(a.upsellFooter, a.reverseTrialUpsellContainer),
+        className: l()(s.upsellFooter, s.reverseTrialUpsellContainer),
         children: [
             (0, r.jsx)('img', {
                 src: c.Z,
                 alt: 'reverse trial unlock',
-                className: a.unlockIcon
+                className: s.unlockIcon
             }),
             (0, r.jsx)(o.Text, {
                 variant: 'text-sm/medium',
-                className: a.upsellText,
-                children: s.intl.format(s.t.f5VHKi, {})
+                className: s.upsellText,
+                children: a.intl.format(a.t.f5VHKi, {})
             })
         ]
     });
@@ -30,11 +30,11 @@ function u() {
 function d(e) {
     let { text: t, color: n } = e;
     return (0, r.jsxs)('div', {
-        className: a.upsellFooter,
+        className: s.upsellFooter,
         children: [
             (0, r.jsx)(o.SrA, {
                 size: 'md',
-                className: a.upsellFooterIcon,
+                className: s.upsellFooterIcon,
                 color: n
             }),
             (0, r.jsx)('div', { children: t })

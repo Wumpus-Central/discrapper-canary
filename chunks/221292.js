@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     NE: () => P,
     QN: () => A,
     Qf: () => w,
@@ -9,7 +9,7 @@ n.d(t, {
     z7: () => R
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(367907),
     i = n(752048),
     a = n(199902),
@@ -42,7 +42,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -58,11 +58,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -89,7 +89,7 @@ let v = (e) => {
             let e = (0, d.xR)(null == a ? void 0 : a.banner);
             o.push(e ? h.cm.ANIMATED_BANNER : h.cm.BANNER);
         }
-        return (null == a ? void 0 : a.bio) && o.push(h.cm.BIO), (null == a ? void 0 : a.themeColors) != null && void 0 !== a.themeColors.find((e) => null !== e) && o.push(h.cm.THEME), (null == t ? void 0 : t.avatarDecoration) != null && o.push(h.cm.AVATAR_DECORATION), (null == a ? void 0 : a.profileEffectId) != null && o.push(h.cm.PROFILE_EFFECT), o;
+        return ((null == a ? void 0 : a.bio) && o.push(h.cm.BIO), (null == a ? void 0 : a.themeColors) != null && void 0 !== a.themeColors.find((e) => null !== e) && o.push(h.cm.THEME), (null == t ? void 0 : t.avatarDecoration) != null && o.push(h.cm.AVATAR_DECORATION), (null == a ? void 0 : a.profileEffectId) != null && o.push(h.cm.PROFILE_EFFECT), o);
     },
     I = (e) => {
         let t = s.Z.getStatus(e),

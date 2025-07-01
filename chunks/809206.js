@@ -46,7 +46,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -54,7 +54,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -78,7 +78,7 @@ function g(e, t) {
         modalProps: { title: n },
         checkEnabled: !1
     }).then(() => {
-        c.Z.logoutInternal(), (0, s.uL)(u.Z5c.DEFAULT_LOGGED_OUT);
+        (c.Z.logoutInternal(), (0, s.uL)(u.Z5c.DEFAULT_LOGGED_OUT));
     });
 }
 async function E(e) {
@@ -91,7 +91,7 @@ async function E(e) {
         n = t.body;
     if (n.token) {
         let t = n.token;
-        delete n.token,
+        (delete n.token,
             o.Z.dispatch({
                 type: 'UPDATE_TOKEN',
                 token: t,
@@ -102,7 +102,7 @@ async function E(e) {
                 o.Z.dispatch({
                     type: 'PASSWORD_UPDATED',
                     userId: n.id
-                });
+                }));
     }
     return (
         o.Z.dispatch({
@@ -134,12 +134,12 @@ function b(e) {
                     },
                     e
                 );
-                null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)), null === O && (o.nameplate_id = null), null != O && ((o.nameplate_id = O.id), (o.nameplate_sku_id = O.skuId)), void 0 !== v && (o.primary_guild_id = v);
+                (null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)), null === O && (o.nameplate_id = null), null != O && ((o.nameplate_id = O.id), (o.nameplate_sku_id = O.skuId)), void 0 !== v && (o.primary_guild_id = v));
                 let l = i.K.get(u.JkL),
                     f = (0, d.xJ)();
                 null != f && null != l && ((o.push_provider = f), (o.push_token = l));
                 let I = i.K.get(u.scU);
-                return null != d.mv && null != I && ((o.push_voip_provider = d.mv), (o.push_voip_token = I)), E(o);
+                return (null != d.mv && null != I && ((o.push_voip_provider = d.mv), (o.push_voip_token = I)), E(o));
             },
             {
                 checkEnabled: !1,
@@ -173,11 +173,11 @@ function y(e) {
     });
 }
 function O(e) {
-    o.Z.dispatch({
+    (o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
-        null == e ? a.uv.announce(f.intl.string(f.t['f1+oNj'])) : a.uv.announce(f.intl.string(f.t.NstziY));
+        null == e ? a.uv.announce(f.intl.string(f.t['f1+oNj'])) : a.uv.announce(f.intl.string(f.t.NstziY)));
 }
 function v(e) {
     o.Z.dispatch({

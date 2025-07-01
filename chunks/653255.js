@@ -17,7 +17,7 @@ class m extends (l = a.ZP.Store) {
         !s.isPlatformEmbedded ||
             __OVERLAY__ ||
             c.ZP.getGPUDriverVersions().then((e) => {
-                (h = (0, p.Z)(e)), (f = (0, u.Z)(e)), (g = (0, d.Z)(e)), this.emitChange();
+                ((h = (0, p.Z)(e)), (f = (0, u.Z)(e)), (g = (0, d.Z)(e)), this.emitChange());
             });
     }
     get GPUDriversOutdated() {
@@ -37,7 +37,7 @@ class m extends (l = a.ZP.Store) {
         };
     }
 }
-(i = 'StreamingCapabilitiesStore'),
+((i = 'StreamingCapabilitiesStore'),
     (r = 'displayName') in m
         ? Object.defineProperty(m, r, {
               value: i,
@@ -45,10 +45,10 @@ class m extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (m[r] = i);
+        : (m[r] = i));
 let b = new m(o.Z, {
     OVERLAY_INITIALIZE: function (e) {
         let { streamingCapabilitiesStoreState: t } = e;
-        (h = t.GPUDriversOutdated), (f = t.canUseHardwareAcceleration);
+        ((h = t.GPUDriversOutdated), (f = t.canUseHardwareAcceleration));
     }
 });

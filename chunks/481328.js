@@ -37,7 +37,7 @@ var s = n(73800),
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
-                (this.mounted = !0), this.setState({ contextValue: { isMounting: !1 } });
+                ((this.mounted = !0), this.setState({ contextValue: { isMounting: !1 } }));
             }),
             (n.componentWillUnmount = function () {
                 this.mounted = !1;
@@ -57,7 +57,7 @@ var s = n(73800),
                     this.mounted &&
                         this.setState(function (t) {
                             var n = (0, i.Z)({}, t.children);
-                            return delete n[e.key], { children: n };
+                            return (delete n[e.key], { children: n });
                         }));
             }),
             (n.render = function () {
@@ -72,5 +72,5 @@ var s = n(73800),
             t
         );
     })(s.Component);
-(f.propTypes = {}), (f.defaultProps = d);
+((f.propTypes = {}), (f.defaultProps = d));
 let _ = f;

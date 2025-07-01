@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     B$: () => d,
     l7: () => p,
     p: () => m
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(255367),
     s = n(73800),
     o = n(867309),
@@ -15,7 +15,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -23,7 +23,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -31,8 +31,8 @@ function c(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -71,8 +71,8 @@ let d = s.createContext({
             { recalculateAnimationPositions: m, registerComponent: f, unregisterComponent: g, expansionSpring: x, mountPoints: h } = s.useContext(d),
             b = s.useRef(null),
             j = s.useRef(null),
-            _ = s.useRef(void 0);
-        s.useEffect(() => {
+            v = s.useRef(void 0);
+        (s.useEffect(() => {
             m();
         }, [m]),
             s.useLayoutEffect(() => {
@@ -83,15 +83,15 @@ let d = s.createContext({
                         null != e && g(c, u);
                     }
                 );
-            }, [c, u, f, g]);
-        let v = s.useCallback(
+            }, [c, u, f, g]));
+        let _ = s.useCallback(
             (e) => {
                 let { height: t } = e;
-                _.current !== t && (m(), (_.current = t));
+                v.current !== t && (m(), (v.current = t));
             },
             [m]
         );
-        (0, i.PM)(b, v);
+        (0, i.PM)(b, _);
         let y = null == (n = h.get(c)) ? void 0 : n.current,
             C = null;
         return (
@@ -144,7 +144,7 @@ let d = s.createContext({
             [m, f] = s.useState([]),
             [g, x] = s.useState(() => new Map()),
             h = s.useCallback((e, t, n) => {
-                p((r) => {
+                (p((r) => {
                     var s;
                     let o =
                         null != (s = r[t])
@@ -157,12 +157,12 @@ let d = s.createContext({
                 }),
                     x((e) => {
                         let n = new Map(e);
-                        return n.set(t, s.createRef()), n;
-                    });
+                        return (n.set(t, s.createRef()), n);
+                    }));
             }, []),
             b = s.useCallback((e, t) => {
                 let n = !1;
-                p((r) => {
+                (p((r) => {
                     var s;
                     let o =
                         null != (s = r[e])
@@ -171,13 +171,13 @@ let d = s.createContext({
                                   expanded: null,
                                   collapsed: null
                               };
-                    return (o[t] = null), (n = null == o.expanded && null == o.collapsed), u(c({}, r), { [e]: o });
+                    return ((o[t] = null), (n = null == o.expanded && null == o.collapsed), u(c({}, r), { [e]: o }));
                 }),
                     n &&
                         x((t) => {
                             let n = new Map(t);
-                            return n.delete(e), n;
-                        });
+                            return (n.delete(e), n);
+                        }));
             }, []),
             j = s.useCallback(() => {
                 let e = [];

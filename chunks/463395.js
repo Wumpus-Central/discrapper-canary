@@ -29,21 +29,21 @@ function h(e, t, n) {
 }
 function m(e, t) {
     let n = f[e];
-    null != n && n.forEach((e) => delete _[e.id]), (f[e] = t), t.forEach((e) => (_[e.id] = e));
+    (null != n && n.forEach((e) => delete _[e.id]), (f[e] = t), t.forEach((e) => (_[e.id] = e)));
 }
 function g(e) {
     let { applicationId: t, devices: n } = e;
-    m(t, n), s.K.set(d, f), p++;
+    (m(t, n), s.K.set(d, f), p++);
 }
 class E extends (r = o.ZP.Store) {
     initialize() {
         let e = s.K.get(d);
         null != e &&
             a().forEach(e, (e, t) => {
-                e.forEach((e) => {
+                (e.forEach((e) => {
                     'audioinput' === e.type && e.hardwareMute && (e.hardwareMute = !1);
                 }),
-                    m(t, e);
+                    m(t, e));
             });
     }
     isCertified(e) {

@@ -1,4 +1,4 @@
-n.d(t, { f: () => N }), n(388685);
+(n.d(t, { f: () => N }), n(388685));
 var i = n(255367),
     s = n(73800),
     l = n(481060),
@@ -31,7 +31,7 @@ function S(e, t, n) {
 class N extends s.PureComponent {
     highlight() {
         this.setState({ highlight: !0 }, () => {
-            null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000));
+            (null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000)));
         });
     }
     componentWillUnmount() {
@@ -167,7 +167,7 @@ class N extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             S(this, '_timeout', void 0),
             S(this, 'contentDomRef', s.createRef()),
             S(this, 'state', { highlight: !1 }),
@@ -180,7 +180,7 @@ class N extends s.PureComponent {
             }),
             S(this, 'handleDelete', () => {
                 let { onDelete: e, channel: t } = this.props;
-                this.setMessageNotification(p.bL.NULL, !1, x.ZB.OverrideDeleted), null != e && e(t.id);
-            });
+                (this.setMessageNotification(p.bL.NULL, !1, x.ZB.OverrideDeleted), null != e && e(t.id));
+            }));
     }
 }

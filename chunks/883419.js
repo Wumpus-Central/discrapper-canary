@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(997841);
+(n.d(t, { Z: () => S }), n(388685), n(997841));
 var i = n(255367),
     r = n(73800),
     l = n(512722),
@@ -36,7 +36,7 @@ function S(e) {
     }, [M]);
     let el = r.useCallback(
             (e) => {
-                D(e), P(b.h8.CONFIRM);
+                (D(e), P(b.h8.CONFIRM));
             },
             [P, D]
         ),

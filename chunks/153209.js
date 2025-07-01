@@ -1,10 +1,10 @@
-n.d(t, { Z: () => S }), n(388685), n(642613);
+(n.d(t, { Z: () => E }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(524437),
+    a = n(442837),
+    s = n(524437),
     c = n(481060),
     u = n(140155),
     d = n(497089),
@@ -20,7 +20,7 @@ var r = n(255367),
     v = n(388032),
     C = n(929968),
     j = n(413813);
-function E(e) {
+function S(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(c.M0o, {
         tooltip: v.intl.string(v.t['8k+6QU']),
@@ -33,10 +33,10 @@ function E(e) {
         onClick: t
     });
 }
-function S(e) {
+function E(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: c, items: v, loading: j, loadMore: S } = (0, p.y6)(),
-        x = (0, s.e7)([u.Z], () => u.Z.localItems),
+        { initialized: c, items: v, loading: j, loadMore: E } = (0, p.y6)(),
+        x = (0, a.e7)([u.Z], () => u.Z.localItems),
         I = (0, g.Us)({ location: 'ForYou' }),
         P = i.useMemo(() => [...[...v, ...x].sort((e, t) => -1 * _.default.compare(e.id, t.id))], [v, x]),
         N = v.length > 0 ? v[0] : null,
@@ -53,12 +53,12 @@ function S(e) {
         className: o()(C.container, { [C.widerInbox]: I }),
         children: [
             (0, r.jsx)(O.Z, {
-                tab: a.X.FOR_YOU,
+                tab: s.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
                 closePopout: l,
                 children: Z
-                    ? (0, r.jsx)(E, {
+                    ? (0, r.jsx)(S, {
                           onClick: () => {
                               null != N && (m.d$.updateSetting(N.id), b.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
                           }
@@ -69,7 +69,7 @@ function S(e) {
                 initialized: c,
                 items: P,
                 loading: j,
-                loadMore: S
+                loadMore: E
             })
         ]
     });

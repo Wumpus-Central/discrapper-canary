@@ -1,4 +1,4 @@
-n.d(t, { l: () => p }), n(388685);
+(n.d(t, { l: () => p }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(954332);
 let u = 200;
 var d = (function (e) {
-    return (e[(e.TRANSLATE = 1)] = 'TRANSLATE'), (e[(e.SCALE = 2)] = 'SCALE'), (e[(e.FADE = 3)] = 'FADE'), e;
+    return ((e[(e.TRANSLATE = 1)] = 'TRANSLATE'), (e[(e.SCALE = 2)] = 'SCALE'), (e[(e.FADE = 3)] = 'FADE'), e);
 })(d || {});
 let f = Object.freeze({
         1: c.translate,
@@ -34,13 +34,13 @@ function p(e) {
     return (
         i.useLayoutEffect(() => {
             var e;
-            null == (e = y.current) ||
+            (null == (e = y.current) ||
                 e.addEventListener('transitionend', () => {
                     b(!1);
                 }),
                 setTimeout(() => {
                     b(!1);
-                }, u);
+                }, u));
         }, []),
         i.useEffect(() => () => g.stop(), [g]),
         i.useEffect(() => {

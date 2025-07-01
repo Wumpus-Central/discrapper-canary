@@ -11,12 +11,12 @@ var r = n(255367),
 function p(e) {
     let { application: t, className: n } = e,
         p = a.useCallback((e) => {
-            (0, l.zZ)(c.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+            ((0, l.zZ)(c.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: e.name,
                 category_id: e.id,
                 current_page: s.m_.APPLICATION
             }),
-                (0, o.pR)({ categoryId: e.id });
+                (0, o.pR)({ categoryId: e.id }));
         }, []);
     return null == t.categories || 0 === t.categories.length
         ? null

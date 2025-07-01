@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685), n(539854);
+(n.d(t, { Z: () => l }), n(388685), n(539854));
 var i = n(658722),
     r = n.n(i);
 function s(e, t, n) {
@@ -40,6 +40,6 @@ class l {
         }
     }
     constructor(e) {
-        s(this, 'terms', void 0), s(this, 'cache', void 0), (this.terms = e), (this.cache = {});
+        (s(this, 'terms', void 0), s(this, 'cache', void 0), (this.terms = e), (this.cache = {}));
     }
 }

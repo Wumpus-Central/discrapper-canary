@@ -15,14 +15,14 @@ var r = n(255367),
     g = n(354459),
     b = n(363987);
 let _ = (0, l.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: _, layout: y, onSelectParticipant: C, onContextMenuParticipant: x, onFullscreenParticipant: v, channel: j, hasConnectPermission: O, className: E, inCall: I, showParticipants: S = !0, width: P, height: Z, idle: N, mode: T, popoutWindow: A, awaitingRemoteSessionInfo: w, callContainerDimensions: R } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: _, layout: y, onSelectParticipant: C, onContextMenuParticipant: x, onFullscreenParticipant: v, channel: j, hasConnectPermission: O, className: E, inCall: S, showParticipants: I = !0, width: P, height: Z, idle: N, mode: T, popoutWindow: A, awaitingRemoteSessionInfo: w, callContainerDimensions: R } = e;
     i.useEffect(() => {
         c.S.dispatch(m.CkL.REMEASURE_TARGET);
     }, [P, Z, R.width, R.height]);
     let k = i.useMemo(() => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, _]);
     return (null == w ? void 0 : w.channelId) === j.id
         ? (0, r.jsx)(d.Z, { height: Z })
-        : (null == j ? void 0 : j.isGuildVocal()) && !I
+        : (null == j ? void 0 : j.isGuildVocal()) && !S
           ? (0, r.jsx)(u.Z, {
                 channel: j,
                 participants: t,
@@ -36,7 +36,7 @@ let _ = (0, l.Z)((e) => {
                   participants: t,
                   onContextMenu: x
               })
-            : ((n = I ? n : t), null == l)
+            : ((n = S ? n : t), null == l)
               ? 0 === n.length
                   ? (0, r.jsx)(f.Z, { channelId: j.id })
                   : (0, r.jsx)(s.Z, {
@@ -51,7 +51,7 @@ let _ = (0, l.Z)((e) => {
                             onClick: C,
                             onDoubleClick: v,
                             onContextMenu: x,
-                            inCall: I
+                            inCall: S
                         })
                     })
               : (0, r.jsx)(h.Z, {
@@ -67,8 +67,8 @@ let _ = (0, l.Z)((e) => {
                     height: Z,
                     width: P,
                     layout: y,
-                    inCall: I,
+                    inCall: S,
                     channel: j,
-                    showParticipants: S
+                    showParticipants: I
                 });
 });

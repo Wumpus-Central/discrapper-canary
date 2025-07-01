@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     X9: () => Z,
     b8: () => b,
     hz: () => L
@@ -9,7 +9,7 @@ n.d(t, {
     n(65234),
     n(111804),
     n(490233),
-    n(97749);
+    n(97749));
 var l = n(73800),
     i = n(512722),
     u = n.n(i),
@@ -73,7 +73,7 @@ function Z(e, t) {
         L = (0, a.e7)([N.Z], () => N.Z.getModalState(g), [g]),
         Z = (0, c.Z)(() => new Set()),
         b = l.useCallback(() => {
-            S(null),
+            (S(null),
                 h(null),
                 v(Z) &&
                     h(
@@ -114,18 +114,18 @@ function Z(e, t) {
                                             429 === e.status ? setTimeout(o, e.body.retry_after * C.Z.Millis.SECOND) : (0, T.yr)(n);
                                         });
                             };
-                            return o(), n;
+                            return (o(), n);
                         })(e, m)
-                    );
+                    ));
         }, [m, e, Z]);
     l.useEffect(() => {
-        L === N.i.SUCCEEDED &&
+        (L === N.i.SUCCEEDED &&
             (o.Z.dispatch({
                 type: 'CLEAR_INTERACTION_MODAL_STATE',
                 customId: i
             }),
             t()),
-            L === N.i.ERRORED && S(A.intl.string(A.t.uJgdEh));
+            L === N.i.ERRORED && S(A.intl.string(A.t.uJgdEh)));
     }, [g, L, t, i]);
     let { applicationIconURL: M, applicationName: P } = R(n);
     return {

@@ -1,4 +1,4 @@
-l.d(t, { default: () => h }), l(413496), l(433524), l(35282), l(388685);
+(l.d(t, { default: () => h }), l(413496), l(433524), l(35282), l(388685));
 var n = l(255367),
     s = l(73800),
     i = l(990547),
@@ -20,19 +20,19 @@ function h(e) {
     });
     let y = async (e) => {
         if ((e.preventDefault(), _(null), C(!0), !1 === d.test(g))) {
-            _(u.intl.string(u.t.hML7Gx)), C(!1);
+            (_(u.intl.string(u.t.hML7Gx)), C(!1));
             return;
         }
         try {
             let e = null != l ? await l(g) : void 0;
-            null != h &&
+            (null != h &&
                 (null != e
                     ? h({
                           response: e,
                           email: g
                       })
                     : h(g)),
-                x();
+                x());
         } catch (e) {
             _(new r.Z(e).getAnyErrorMessage());
         } finally {

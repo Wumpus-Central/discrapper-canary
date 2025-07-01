@@ -1,4 +1,4 @@
-n.d(t, { p: () => y }), n(997841);
+(n.d(t, { p: () => y }), n(997841));
 var r = n(252258),
     i = n(570140),
     a = n(881052),
@@ -38,20 +38,20 @@ async function g(e) {
                     a = (0, f.p)(null == i ? void 0 : i.location),
                     s = o.Z.getChannel(a);
                 if (null == i || null == s) return void e(!0);
-                null == r || r(),
+                (null == r || r(),
                     (0, u.Z)(
                         t,
                         s,
                         () => {
-                            (0, p.Z)().leaveActivity({
+                            ((0, p.Z)().leaveActivity({
                                 location: i.location,
                                 applicationId: t.id,
                                 shouldClosePopout: n
                             }),
-                                e(!0);
+                                e(!0));
                         },
                         () => e(!1)
-                    );
+                    ));
             }))) &&
         !0
     );
@@ -73,13 +73,13 @@ async function E(e) {
             (null != (l = null == (o = e.embeddedActivityConfig) ? void 0 : o.requires_age_gate) &&
                 l &&
                 !(await new Promise((t) => {
-                    null == a || a(),
+                    (null == a || a(),
                         (0, c.V)({
                             application: e,
                             channelId: null == r ? void 0 : r.id,
                             onAgree: () => t(!0),
                             onDisagree: () => t(!1)
-                        });
+                        }));
                 })))
         )
             return !1;
@@ -101,12 +101,12 @@ async function b(e) {
         null != o &&
         (!!((0, s.yE)(o.flags, h.udG.EMBEDDED_RELEASED) || o.isVerified || l.ZP.hasActivityEverBeenLaunched(r)) ||
             new Promise((e) => {
-                null == a || a(),
+                (null == a || a(),
                     (0, d.j)({
                         application: o,
                         onConfirm: () => e(!0),
                         onCancel: () => e(!1)
-                    });
+                    }));
             }))
     );
 }

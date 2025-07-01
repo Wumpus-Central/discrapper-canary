@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(781311);
+(n.d(t, { Z: () => h }), n(388685), n(781311));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -13,7 +13,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -21,7 +21,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -29,8 +29,8 @@ function g(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -154,11 +154,11 @@ function h(e) {
         [T, P] = i.useState(j),
         w = i.useRef(null),
         R = N > E ? N : E;
-    i.useEffect(() => {
+    (i.useEffect(() => {
         j
             ? (P(!0),
               (w.current = setTimeout(() => {
-                  P(!1), (w.current = null);
+                  (P(!1), (w.current = null));
               }, u.I5)))
             : P(!1);
     }, [j]),
@@ -167,7 +167,7 @@ function h(e) {
                 clearTimeout(w.current);
             },
             []
-        );
+        ));
     let Z = i.useCallback(
             (e) => {
                 n(e.target.value);
@@ -179,9 +179,9 @@ function h(e) {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if ((t.trim().length <= 0 && p(), null != _.current && null != y.current && null != v.current)) {
                     var n;
-                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (y.current.scrollLeft = 0), (null == (n = v.current) ? void 0 : n.ref) != null && (v.current.ref.scrollLeft = 0);
+                    (_.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (y.current.scrollLeft = 0), (null == (n = v.current) ? void 0 : n.ref) != null && (v.current.ref.scrollLeft = 0));
                 }
-                C(!1), l(e);
+                (C(!1), l(e));
             },
             [t, y, l, p]
         ),
@@ -195,7 +195,7 @@ function h(e) {
         A = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                g(t), t ? e.preventDefault() : C(!0), e.stopPropagation();
+                (g(t), t ? e.preventDefault() : C(!0), e.stopPropagation());
             },
             [g]
         ),

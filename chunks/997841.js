@@ -19,7 +19,7 @@ i &&
             i = function (t, n) {
                 Object.defineProperty(e, t, {
                     get: function () {
-                        return (r += n), !0;
+                        return ((r += n), !0);
                     }
                 });
             },

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => P,
     yw: () => R
 }),
@@ -12,7 +12,7 @@ n.d(t, {
     n(111804),
     n(490233),
     n(97749),
-    n(781311);
+    n(781311));
 var r = n(392711),
     i = n.n(r),
     a = n(31775),
@@ -41,7 +41,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,11 +57,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -87,7 +87,7 @@ function E(e) {
             whitespaceSanitized: r,
             fullySanitized: i
         };
-    return g.set(t, a), a;
+    return (g.set(t, a), a);
 }
 let b = ['http:', 'https:', 'discord:', 'tel:', 'sms:', 'mailto:'],
     y = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
@@ -158,7 +158,7 @@ function R(e) {
         if (!b.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
         let i = (0, f.MO)(n);
-        (n.username = ''), (n.password = '');
+        ((n.username = ''), (n.password = ''));
         let a = (0, f.MO)(n);
         return {
             target: i,

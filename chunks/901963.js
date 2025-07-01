@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(913527),
@@ -57,7 +57,7 @@ let y = 'premiumRetentionEmojiPickerNotice',
                         (0, r.jsx)('div', {
                             children: (0, r.jsx)(c.eee, {
                                 onClick: () => {
-                                    (0, h.A3)(n), t(), d.Z.open(m.oAB.PREMIUM);
+                                    ((0, h.A3)(n), t(), d.Z.open(m.oAB.PREMIUM));
                                 },
                                 children: E.intl.string(E.t.W3aavr)
                             })
@@ -66,7 +66,7 @@ let y = 'premiumRetentionEmojiPickerNotice',
                 }),
                 (0, r.jsx)(c.P3F, {
                     onClick: () => {
-                        l.K.set(y, A), (O = A), v(!0);
+                        (l.K.set(y, A), (O = A), v(!0));
                     },
                     children: (0, r.jsx)(c.Dio, {
                         size: 'md',

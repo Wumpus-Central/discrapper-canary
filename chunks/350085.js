@@ -23,13 +23,13 @@ let d = {
                     d = n.application.id;
                 if (null != d) {
                     let e = l.Z.getActiveLibraryApplication(d);
-                    null != e && (c = c && e.isOverlayEnabled()), (u = o.default.isLocked(t));
+                    (null != e && (c = c && e.isOverlayEnabled()), (u = o.default.isLocked(t)));
                 }
                 let p = {
                     enabled: c,
                     locked: u
                 };
-                return i().isEqual(p, r) || s(p), p;
+                return (i().isEqual(p, r) || s(p), p);
             };
         }
     }

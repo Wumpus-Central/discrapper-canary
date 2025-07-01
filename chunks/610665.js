@@ -1,10 +1,10 @@
-t.d(n, {
+(t.d(n, {
     GV: () => m,
     iQ: () => x
 }),
     t(539854),
     t(388685),
-    t(415506);
+    t(415506));
 var i = t(512722),
     l = t.n(i),
     a = t(333848),
@@ -46,10 +46,10 @@ async function x(e) {
         { channel_id: t, entity_type: i, name: a, id: s, guild_id: c } = e;
     switch (i) {
         case d.WX.STAGE_INSTANCE:
-            l()(null != t, 'channel_id is required'), await (0, r.me)(t, a, d.j8.GUILD_ONLY, n, s);
+            (l()(null != t, 'channel_id is required'), await (0, r.me)(t, a, d.j8.GUILD_ONLY, n, s));
             break;
         case d.WX.VOICE:
-            l()(null != t, 'channel_id is required'), await u.Z.startEvent(s, c);
+            (l()(null != t, 'channel_id is required'), await u.Z.startEvent(s, c));
             break;
         case d.WX.EXTERNAL:
             await u.Z.startEvent(s, c);

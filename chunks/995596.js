@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -17,7 +17,7 @@ var r = n(255367),
     p = n(384433),
     g = n(388032),
     v = n(86931);
-let C = (e) => [
+let _ = (e) => [
         {
             id: p.e.ALL_MEMBERS,
             label: g.intl.string(g.t.NOOm1d)
@@ -35,7 +35,7 @@ let C = (e) => [
             label: g.intl.string(g.t.aURgY2)
         }
     ],
-    _ = (e) => {
+    C = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: l, onClose: i } = e;
         return (0, r.jsx)(d.v2r, {
             navId: 'members-tabs-overflow-menu',
@@ -84,7 +84,7 @@ function T(e) {
         targetElementRef: s,
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, r.jsx)(_, {
+            return (0, r.jsx)(C, {
                 selectedTab: i,
                 onClose: l,
                 tabs: n,
@@ -102,7 +102,7 @@ function T(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -110,7 +110,7 @@ function T(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -118,8 +118,8 @@ function T(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, e)),
@@ -168,9 +168,9 @@ function N(e) {
     let { guildId: t, currentTab: n, onTabSelect: i } = e,
         [a, c] = l.useState(0),
         x = l.useRef(null),
-        _ = l.useRef(a),
+        C = l.useRef(a),
         N = (0, j.A)({ guildId: t }),
-        E = C(null != N ? N : 0),
+        E = _(null != N ? N : 0),
         {
             lastVisibleIndex: S,
             onItemLayout: I,
@@ -181,14 +181,14 @@ function N(e) {
             maxLines: 1,
             containerWidth: a - 200
         }),
-        P = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
-        O = (0, h.L)({ guildId: t }),
-        y = l.useMemo(() => (n === p.e.ALL_MEMBERS ? P : null != O && null != O.user), [n, P, O]),
+        O = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
+        P = (0, h.L)({ guildId: t }),
+        y = l.useMemo(() => (n === p.e.ALL_MEMBERS ? O : null != P && null != P.user), [n, O, P]),
         w = l.useMemo(() => E.slice(0, S + 1), [S, E]),
         A = l.useMemo(() => E.slice(S + 1), [S, E]),
         M = (0, m.Z)((e) => {
             let t = e.contentRect.width;
-            null != t && _.current !== t && (c(t), (_.current = t));
+            null != t && C.current !== t && (c(t), (C.current = t));
         });
     return (
         (0, u.s)(x, M, [y]),

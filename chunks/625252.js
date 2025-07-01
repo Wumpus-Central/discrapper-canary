@@ -18,7 +18,7 @@ function _() {
     let e = (0, l.wj)((0, c.ZP)()),
         t = r.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = r.useCallback(() => {
-            (0, o.xf)(),
+            ((0, o.xf)(),
                 (0, g.navigateToQuestHome)({ fromContent: m.jn.QUEST_HOME_MOVE_CALLOUT }),
                 d.default.track(
                     p.rMx.QUEST_CONTENT_CLICKED,
@@ -26,7 +26,7 @@ function _() {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function _() {
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    (i = n[t]),
+                                    ((i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
@@ -42,8 +42,8 @@ function _() {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = i);
-                                });
+                                            : (e[t] = i));
+                                }));
                         }
                         return e;
                     })(
@@ -54,7 +54,7 @@ function _() {
                         },
                         (0, u.mH)(m.jn.QUEST_HOME_MOVE_CALLOUT)
                     )
-                );
+                ));
         }, []);
     return (0, i.jsx)('div', {
         className: f.container,

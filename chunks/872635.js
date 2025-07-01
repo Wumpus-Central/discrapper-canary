@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     I: () => E,
     Z: () => b
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -97,7 +97,7 @@ let b = i.forwardRef(function (e, t) {
         m = i.useRef(null),
         b = i.useContext(c.ZP),
         y = i.useCallback(() => {
-            p(!1), clearTimeout(m.current);
+            (p(!1), clearTimeout(m.current));
         }, []),
         O = i.useCallback(
             (e) => {
@@ -115,19 +115,19 @@ let b = i.forwardRef(function (e, t) {
                     else {
                         var n;
                         let r = e.target instanceof t.Node && (null == (n = f.current) ? void 0 : n.contains(e.target));
-                        clearTimeout(m.current),
+                        (clearTimeout(m.current),
                             (m.current = setTimeout(() => {
                                 var t;
                                 let n = null == (t = (0, d.uB)(e)) ? void 0 : t.activeElement,
                                     i = o.current;
                                 p(r || (null != n && null != i && i.contains(n)));
-                            }, 100));
+                            }, 100)));
                     }
                 else y();
             },
             [b, o, y]
         );
-    i.useImperativeHandle(t, () => ({ hide: y }), [y]),
+    (i.useImperativeHandle(t, () => ({ hide: y }), [y]),
         i.useEffect(() => {
             let e = b.renderWindow;
             return (
@@ -137,10 +137,10 @@ let b = i.forwardRef(function (e, t) {
                 e.addEventListener('focus', y),
                 e.addEventListener('blur', y),
                 () => {
-                    e.document.removeEventListener('keydown', y), e.document.removeEventListener('mousedown', O), e.document.removeEventListener('mouseup', I), e.removeEventListener('focus', y), e.removeEventListener('blur', y), clearTimeout(m.current);
+                    (e.document.removeEventListener('keydown', y), e.document.removeEventListener('mousedown', O), e.document.removeEventListener('mouseup', I), e.removeEventListener('focus', y), e.removeEventListener('blur', y), clearTimeout(m.current));
                 }
             );
-        }, [b, y, O, I]);
+        }, [b, y, O, I]));
     let { x: T, y: S } = i.useMemo(() => {
             var e, t, n, r;
             let i = null == (e = a.current) ? void 0 : e.getSlateEditor();
@@ -157,13 +157,13 @@ let b = i.forwardRef(function (e, t) {
                     y: null
                 };
             let u = l.createRange();
-            u.setStart(c.focusNode, c.focusOffset), u.setEnd(c.focusNode, c.focusOffset);
+            (u.setStart(c.focusNode, c.focusOffset), u.setEnd(c.focusNode, c.focusOffset));
             let d = u.getBoundingClientRect(),
                 f = l.createRange();
-            f.setStart(c.anchorNode, c.anchorOffset), f.setEnd(c.anchorNode, c.anchorOffset);
+            (f.setStart(c.anchorNode, c.anchorOffset), f.setEnd(c.anchorNode, c.anchorOffset));
             let p = f.getBoundingClientRect(),
                 m = l.createRange();
-            m.setStart(c.anchorNode, c.anchorOffset), m.setEnd(c.focusNode, c.focusOffset);
+            (m.setStart(c.anchorNode, c.anchorOffset), m.setEnd(c.focusNode, c.focusOffset));
             let g = m.getBoundingClientRect(),
                 E = d.x === p.x,
                 b = E ? g.x : Math.min(d.x, p.x),
@@ -180,7 +180,7 @@ let b = i.forwardRef(function (e, t) {
         (i.useLayoutEffect(() => {
             if (null == T || null == S || null == f.current) return;
             let e = f.current.getBoundingClientRect();
-            R(e.width / 2), N(e.height + 12);
+            (R(e.width / 2), N(e.height + 12));
         }, [T, S]),
         null == T || null == S)
     )
@@ -253,7 +253,7 @@ function v(e) {
                 if ((null == n ? void 0 : n.selection) == null || null == a) return;
                 let t = n.selection;
                 f.T.withSingleEntry(n, () => {
-                    p.Q.voidToText(n, e, a), p.Q.select(n, t);
+                    (p.Q.voidToText(n, e, a), p.Q.select(n, t));
                 });
             },
             [n, a]

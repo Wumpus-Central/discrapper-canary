@@ -1,6 +1,6 @@
 function r(e, t) {
     let { style: n } = e;
-    t.backgroundColor && (n.backgroundColor = t.backgroundColor), t.width && (n.width = `${t.width}px`), t.height && (n.height = `${t.height}px`);
+    (t.backgroundColor && (n.backgroundColor = t.backgroundColor), t.width && (n.width = `${t.width}px`), t.height && (n.height = `${t.height}px`));
     let r = t.style;
     return (
         null != r &&

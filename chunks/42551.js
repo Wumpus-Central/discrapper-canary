@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(539854);
+(n.d(t, { Z: () => _ }), n(388685), n(539854));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -66,11 +66,11 @@ function _(e) {
             _.reduce((n, r) => {
                 let { record: l } = r,
                     o = e.has(l.id);
-                return s()(t.toLowerCase(), l.name.toLowerCase()) ? n.push(H(r, o)) : o && n.push(H(r, o)), n;
+                return (s()(t.toLowerCase(), l.name.toLowerCase()) ? n.push(H(r, o)) : o && n.push(H(r, o)), n);
             }, []),
         N = l.useCallback(
             (e) => {
-                (0, j.Dr)(t, { selectedRoleIds: e }), o(e);
+                ((0, j.Dr)(t, { selectedRoleIds: e }), o(e));
             },
             [t, o]
         ),
@@ -78,7 +78,7 @@ function _(e) {
         D = l.useCallback(
             (e) => {
                 let t;
-                d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), S(t);
+                (d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), S(t));
             },
             [c, S]
         );

@@ -56,7 +56,7 @@ class u extends i.PureComponent {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             d(this, '_inputRef', void 0),
             d(this, 'setInputRef', (e) => {
                 this._inputRef = e;
@@ -73,7 +73,7 @@ class u extends i.PureComponent {
             }),
             d(this, 'handleFocusInput', () => {
                 null != this._inputRef && this._inputRef.focus();
-            });
+            }));
         let { autoFocus: t } = this.props;
         this.state = { focused: null != t && t };
     }

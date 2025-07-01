@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'paraiso',
         author: 'jan t. sott',
@@ -19,4 +19,4 @@
         base0E: '#815ba4',
         base0F: '#e96ba8'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

@@ -1,4 +1,4 @@
-n.d(e, { default: () => m }), n(953529);
+(n.d(e, { default: () => m }), n(953529));
 var o = n(255367),
     i = n(73800),
     r = n(772848),
@@ -30,7 +30,7 @@ let m = function (t) {
                 buttonIconColor: s.TVs.colors.WHITE,
                 buttonLoading: L,
                 onPress: () => {
-                    T(), (0, _.x3)(S, _.d_.RETRY, _.sU.GET_STARTED);
+                    (T(), (0, _.x3)(S, _.d_.RETRY, _.sU.GET_STARTED));
                 }
             },
             {
@@ -41,7 +41,7 @@ let m = function (t) {
                 buttonIcon: s.Gr1,
                 buttonIconColor: s.TVs.colors.TEXT_PRIMARY,
                 onPress: () => {
-                    a.Z.openUrl(u.sQ.APPEALS_LINK), (0, _.x3)(S, _.d_.RETRY, _.sU.MANUAL_REVIEW_REQUEST);
+                    (a.Z.openUrl(u.sQ.APPEALS_LINK), (0, _.x3)(S, _.d_.RETRY, _.sU.MANUAL_REVIEW_REQUEST));
                 }
             }
         ],
@@ -95,7 +95,7 @@ let m = function (t) {
                     className: N.learnMore,
                     children: I.intl.format(I.t['L+FgkZ'], {
                         handleOnHelpUrlHook: () => {
-                            a.Z.openUrl(c.Z.getArticleURL(E.BhN.TIGGER_PAWTECT_LEARN_MORE)), (0, _.x3)(S, _.d_.RETRY, _.sU.LEARN_MORE);
+                            (a.Z.openUrl(c.Z.getArticleURL(E.BhN.TIGGER_PAWTECT_LEARN_MORE)), (0, _.x3)(S, _.d_.RETRY, _.sU.LEARN_MORE));
                         }
                     })
                 })

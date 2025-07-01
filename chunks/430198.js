@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var r,
     i = n(149765),
     a = n(442837),
@@ -99,7 +99,7 @@ function C(e, t) {
     return a !== o && (o ? n.add(t) : n.delete(t), !0);
 }
 function R() {
-    (v = {}), I.clear();
+    ((v = {}), I.clear());
 }
 function P(e) {
     let { guild: t } = e;
@@ -129,12 +129,12 @@ function k(e) {
 }
 class M extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, g.Z, h.Z, _.Z), c.Zo.subscribe({ location: '1' }, () => R());
+        (this.waitFor(E.Z, g.Z, h.Z, _.Z), c.Zo.subscribe({ location: '1' }, () => R()));
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
         let n = v[e];
-        return null == n && (N(e), (n = v[e])), null != n && n.has(t);
+        return (null == n && (N(e), (n = v[e])), null != n && n.has(t));
     }
     isChannelGatedAndVisible(e, t) {
         return null != e && this.isChannelGated(e, t) && !I.has(e);

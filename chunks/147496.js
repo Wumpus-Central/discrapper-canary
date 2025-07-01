@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { ItemDetailsModal: () => y }), r(953529), r(781311);
+(r.r(t), r.d(t, { ItemDetailsModal: () => y }), r(953529), r(781311));
 var n = r(255367);
 r(73800);
 var l = r(752843),

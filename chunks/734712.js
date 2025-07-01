@@ -1,13 +1,13 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.Saturation = void 0);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.Saturation = void 0));
 var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     o = r(73800),
@@ -18,7 +18,7 @@ var n = (function () {
         if (e && e.__esModule) return e;
         var t = {};
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
-        return (t.default = e), t;
+        return ((t.default = e), t);
     })(r(673046));
 function u(e) {
     return e && e.__esModule ? e : { default: e };
@@ -38,7 +38,7 @@ var c = (t.Saturation = (function (e) {
             (r.handleMouseDown = function (e) {
                 r.handleChange(e);
                 var t = r.getContainerRenderWindow();
-                t.addEventListener('mousemove', r.handleChange), t.addEventListener('mouseup', r.handleMouseUp);
+                (t.addEventListener('mousemove', r.handleChange), t.addEventListener('mouseup', r.handleMouseUp));
             }),
             (r.handleMouseUp = function () {
                 r.unbindEventListeners();
@@ -63,7 +63,7 @@ var c = (t.Saturation = (function (e) {
             {
                 key: 'componentWillUnmount',
                 value: function () {
-                    this.throttle.cancel(), this.unbindEventListeners();
+                    (this.throttle.cancel(), this.unbindEventListeners());
                 }
             },
             {
@@ -77,7 +77,7 @@ var c = (t.Saturation = (function (e) {
                 key: 'unbindEventListeners',
                 value: function () {
                     var e = this.getContainerRenderWindow();
-                    e.removeEventListener('mousemove', this.handleChange), e.removeEventListener('mouseup', this.handleMouseUp);
+                    (e.removeEventListener('mousemove', this.handleChange), e.removeEventListener('mouseup', this.handleMouseUp));
                 }
             },
             {

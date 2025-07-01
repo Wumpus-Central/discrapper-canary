@@ -21,7 +21,7 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             c = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (c = c.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function L(e) {
             )),
             c.forEach(function (t) {
                 var c;
-                (c = n[t]),
+                ((c = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: c,
@@ -37,8 +37,8 @@ function L(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = c);
-            });
+                        : (e[t] = c));
+            }));
     }
     return e;
 }
@@ -83,12 +83,12 @@ function g(e) {
                         c,
                         a = {},
                         d = Object.keys(e);
-                    for (c = 0; c < d.length; c++) (n = d[c]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    for (c = 0; c < d.length; c++) ((n = d[c]), t.indexOf(n) >= 0 || (a[n] = e[n]));
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var d = Object.getOwnPropertySymbols(e);
-                for (c = 0; c < d.length; c++) (n = d[c]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                for (c = 0; c < d.length; c++) ((n = d[c]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]));
             }
             return a;
         })(e, ['user', 'uploadType', 'imageSrc', 'onClose', 'analyticsSource', 'analyticsLocation', 'onSecondaryClick']);
@@ -115,7 +115,7 @@ function g(e) {
                       body: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
                       glowUp: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
                       onSecondaryClick: () => {
-                          null == g || g(), (0, i.$)(r);
+                          (null == g || g(), (0, i.$)(r));
                       },
                       secondaryCTA: u.intl.string(u.t.PcTCBw),
                       onClose: r,

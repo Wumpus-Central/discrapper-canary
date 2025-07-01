@@ -1,4 +1,4 @@
-s.d(e, { default: () => E }), s(388685), s(415506);
+(s.d(e, { default: () => E }), s(388685), s(415506));
 var l = s(255367),
     n = s(73800),
     a = s(442837),
@@ -140,7 +140,7 @@ class b extends n.Component {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             L(this, 'state', {
                 selectedInstallationPath: this.props.defaultInstallationPath,
                 hasError: !1,
@@ -157,7 +157,7 @@ class b extends n.Component {
             L(this, 'install', (t, e) => {
                 let { application: s, branchId: l, analyticsLocation: n } = this.props;
                 if (null == s) return null;
-                (0, u.LO)({
+                ((0, u.LO)({
                     application: s,
                     branchId: l,
                     buildId: t,
@@ -166,11 +166,11 @@ class b extends n.Component {
                     analyticsLocation: n
                 }),
                     (0, g.uL)(C.Z5c.APPLICATION_LIBRARY),
-                    this.close();
+                    this.close());
             }),
             L(this, 'handleInstall', () => {
                 let { application: t, buildId: e, manifestIds: s, hasPreviouslyAcceptedStoreTerms: l } = this.props;
-                if (null != e && null != s) l || (0, d.B)(), null != t && null != t.eulaId && (0, d.D)(t.eulaId), this.install(e, s);
+                if (null != e && null != s) (l || (0, d.B)(), null != t && null != t.eulaId && (0, d.D)(t.eulaId), this.install(e, s));
                 else throw Error('Unexpected missing build info for non-premium product');
             }),
             L(this, 'handlePurchaseTermsChange', (t) => {
@@ -178,7 +178,7 @@ class b extends n.Component {
             }),
             L(this, 'close', () => {
                 this.props.onClose();
-            });
+            }));
     }
 }
 let E = a.ZP.connectStores([f.Z, _.Z, P.Z, p.Z], (t) => {

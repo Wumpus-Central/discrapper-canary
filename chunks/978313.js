@@ -1,4 +1,4 @@
-r.d(t, { Z: () => E }), r(388685);
+(r.d(t, { Z: () => E }), r(388685));
 var n = r(255367),
     i = r(73800),
     a = r(120356),
@@ -54,7 +54,7 @@ function E(e) {
                       (0, n.jsx)(u.P3F, {
                           className: p.clickable,
                           onClick: () => {
-                              r(h ? m.as.ShowMore : m.as.ShowLess), x(!h);
+                              (r(h ? m.as.ShowMore : m.as.ShowLess), x(!h));
                           },
                           children: (0, n.jsx)(o.xv, {
                               variant: 'text-sm/semibold',

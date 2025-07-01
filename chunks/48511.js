@@ -97,14 +97,14 @@ function X(e) {
     if ('symbol' == typeof e) return !0;
     if (!e || 'object' != typeof e || !R) return !1;
     try {
-        return R.call(e), !0;
+        return (R.call(e), !0);
     } catch (e) {}
     return !1;
 }
 function Q(e) {
     if (!e || 'object' != typeof e || !N) return !1;
     try {
-        return N.call(e), !0;
+        return (N.call(e), !0);
     } catch (e) {}
     return !1;
 }
@@ -138,7 +138,7 @@ e.exports = function e(t, r, i, s) {
     function y(t, n, r) {
         if ((n && (s = S.call(s)).push(n), r)) {
             var a = { depth: l.depth };
-            return $(l, 'quoteStyle') && (a.quoteStyle = l.quoteStyle), e(t, a, i + 1, s);
+            return ($(l, 'quoteStyle') && (a.quoteStyle = l.quoteStyle), e(t, a, i + 1, s));
         }
         return e(t, l, i + 1, s);
     }
@@ -153,7 +153,7 @@ e.exports = function e(t, r, i, s) {
     }
     if (el(t)) {
         for (var M = '<' + O.call(String(t.nodeName)), G = t.attributes || [], F = 0; F < G.length; F++) M += ' ' + G[F].name + '=' + B(V(G[F].value), 'double', l);
-        return (M += '>'), t.childNodes && t.childNodes.length && (M += '...'), (M += '</' + O.call(String(t.nodeName)) + '>');
+        return ((M += '>'), t.childNodes && t.childNodes.length && (M += '...'), (M += '</' + O.call(String(t.nodeName)) + '>'));
     }
     if (Z(t)) {
         if (0 === t.length) return '[]';
@@ -257,7 +257,7 @@ function ei(e) {
 function ea(e) {
     if (!_ || !e || 'object' != typeof e) return !1;
     try {
-        return _.call(e), !0;
+        return (_.call(e), !0);
     } catch (e) {}
     return !1;
 }
@@ -297,7 +297,7 @@ function ec(e, t) {
         return ec(E.call(e, 0, t.maxStringLength), t) + r;
     }
     var i = G[t.quoteStyle || 'single'];
-    return (i.lastIndex = 0), B(b.call(b.call(e, i, '\\$1'), /[\x00-\x1f]/g, eu), 'single', t);
+    return ((i.lastIndex = 0), B(b.call(b.call(e, i, '\\$1'), /[\x00-\x1f]/g, eu), 'single', t));
 }
 function eu(e) {
     var t = e.charCodeAt(0),

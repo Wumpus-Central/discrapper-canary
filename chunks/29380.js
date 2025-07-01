@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(481060),
@@ -74,12 +74,12 @@ function b(e) {
                                 l,
                                 i = {},
                                 r = Object.keys(e);
-                            for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            for (l = 0; l < r.length; l++) ((n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var r = Object.getOwnPropertySymbols(e);
-                        for (l = 0; l < r.length; l++) (n = r[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        for (l = 0; l < r.length; l++) ((n = r[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                     }
                     return i;
                 })(e, ['onClick']);
@@ -89,7 +89,7 @@ function b(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             l = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (l = l.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -97,7 +97,7 @@ function b(e) {
                             )),
                             l.forEach(function (t) {
                                 var l;
-                                (l = n[t]),
+                                ((l = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: l,
@@ -105,8 +105,8 @@ function b(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = l);
-                            });
+                                        : (e[t] = l));
+                            }));
                     }
                     return e;
                 })({}, o)),
@@ -118,13 +118,13 @@ function b(e) {
                         disabled: Z,
                         submitting: A,
                         onClick: () => {
-                            I(!0),
+                            (I(!0),
                                 T(),
                                 null == a || a(),
                                 s.default.track(v.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                     application_id: n.id,
                                     button_action: d._y.USE_APP_COMMAND
-                                });
+                                }));
                         },
                         'aria-label': y.intl.formatToPlainString(y.t['XjP/R0'], {
                             buttonText: R,

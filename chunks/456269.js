@@ -1,4 +1,4 @@
-t.d(n, {
+(t.d(n, {
     AJ: () => $,
     Bs: () => W,
     ES: () => Y,
@@ -27,7 +27,7 @@ t.d(n, {
 }),
     t(388685),
     t(583741),
-    t(781311);
+    t(781311));
 var r = t(73800),
     l = t(392711),
     u = t.n(l),
@@ -146,7 +146,7 @@ function B(e) {
                             for (var n = 1; n < arguments.length; n++) {
                                 var t = null != arguments[n] ? arguments[n] : {},
                                     r = Object.keys(t);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(t).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -154,7 +154,7 @@ function B(e) {
                                     )),
                                     r.forEach(function (n) {
                                         var r;
-                                        (r = t[n]),
+                                        ((r = t[n]),
                                             n in e
                                                 ? Object.defineProperty(e, n, {
                                                       value: r,
@@ -162,8 +162,8 @@ function B(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[n] = r);
-                                    });
+                                                : (e[n] = r));
+                                    }));
                             }
                             return e;
                         })({}, e)),
@@ -337,7 +337,7 @@ function ei(e) {
     return r.useMemo(() => {
         var t;
         let r = [...(null != (t = null == e ? void 0 : e.availableTags) ? t : [])];
-        return n || (r = r.filter((e) => !e.moderated)), r;
+        return (n || (r = r.filter((e) => !e.moderated)), r);
     }, [n, null == e ? void 0 : e.availableTags]);
 }
 function ea(e, n) {
@@ -369,14 +369,14 @@ function es(e, n, t) {
         d = r.useRef(new Set());
     r.useEffect(() => {
         if (null == i && null != o.current) {
-            j.Z.clearForumSearch(e.id), (o.current = null);
+            (j.Z.clearForumSearch(e.id), (o.current = null));
             return;
         }
         if (null == i || 0 === i.length || l) return;
         if (!a) return void j.Z.clearForumSearch(e.id);
         if ((o.current === i && d.current === n) || u) return;
         let r = setTimeout(async () => {
-            (o.current = i), (d.current = n);
+            ((o.current = i), (d.current = n));
             try {
                 await j.Z.searchForumPosts(e.guild_id, e.id, i, n, t);
             } catch (e) {}

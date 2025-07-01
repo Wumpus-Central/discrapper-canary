@@ -19,7 +19,7 @@ let c = {
                     channelId: n,
                     messageId: o
                 });
-            (0, i.dL)({ pathname: s.Z5c.CHANNEL(t, n, o) }), l.ZP.focus();
+            ((0, i.dL)({ pathname: s.Z5c.CHANNEL(t, n, o) }), l.ZP.focus());
         }
     }
 };

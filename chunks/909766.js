@@ -1,4 +1,4 @@
-n.d(t, { b: () => a }), n(539854), n(388685);
+(n.d(t, { b: () => a }), n(539854), n(388685));
 var r = n(508385);
 function i(e, t, n) {
     return (
@@ -16,7 +16,7 @@ function i(e, t, n) {
 class a {
     addSample(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        (this.total += e * t), (this.totalWeight += t), this.samples++, r.TDigest.prototype.push.call(this.digest, e, t), this.digest.check_continuous();
+        ((this.total += e * t), (this.totalWeight += t), this.samples++, r.TDigest.prototype.push.call(this.digest, e, t), this.digest.check_continuous());
     }
     getReport() {
         var e, t, n, r;
@@ -33,6 +33,6 @@ class a {
         };
     }
     constructor() {
-        i(this, 'digest', new r.Digest()), i(this, 'total', 0), i(this, 'samples', 0), i(this, 'totalWeight', 0);
+        (i(this, 'digest', new r.Digest()), i(this, 'total', 0), i(this, 'samples', 0), i(this, 'totalWeight', 0));
     }
 }

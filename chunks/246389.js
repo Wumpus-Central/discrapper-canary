@@ -21,7 +21,7 @@ let f = (0, u.Z)(
             return (0, l.jsx)(r.v2r, {
                 navId: 'guild-moderation-roles',
                 onClose: () => {
-                    (0, o.Zy)(), null == f || f();
+                    ((0, o.Zy)(), null == f || f());
                 },
                 'aria-label': _.intl.string(_.t.liqwPD),
                 onSelect: u,

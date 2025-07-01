@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -20,7 +20,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -66,14 +66,14 @@ function m(e) {
 }
 function g(e) {
     let { outbox: t, userId: n } = e;
-    d.set(n, u(l({}, t), { lastFetched: Date.now() })), f.delete(n);
+    (d.set(n, u(l({}, t), { lastFetched: Date.now() })), f.delete(n));
 }
 function E(e) {
     let { userId: t } = e;
     f.delete(t);
 }
 function b() {
-    (_ = null), (p = !0);
+    ((_ = null), (p = !0));
 }
 function y(e) {
     let { entry: t, userId: n } = e;
@@ -81,20 +81,20 @@ function y(e) {
     let r = d.get(n);
     if (null == r) return !1;
     let i = r.entries.filter((e) => e.id !== t.id);
-    d.set(n, u(l({}, r), { entries: i })), (p = !1);
+    (d.set(n, u(l({}, r), { entries: i })), (p = !1));
 }
 function O(e) {
     let { error: t } = e;
-    (_ = t), (p = !1);
+    ((_ = t), (p = !1));
 }
 function v() {
-    (_ = null), (p = !1);
+    ((_ = null), (p = !1));
 }
 function I() {
-    (d = new Map()), (f = new Set()), (_ = null), (p = !1);
+    ((d = new Map()), (f = new Set()), (_ = null), (p = !1));
 }
 function T() {
-    I(), (h = !0);
+    (I(), (h = !0));
 }
 function S() {
     I();

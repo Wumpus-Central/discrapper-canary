@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'green screen',
         author: 'chris kempson (http://chriskempson.com)',
@@ -19,4 +19,4 @@
         base0E: '#00bb00',
         base0F: '#005500'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

@@ -1,4 +1,4 @@
-r.d(e, { default: () => s }), r(388685);
+(r.d(e, { default: () => s }), r(388685));
 var n = r(255367),
     o = r(73800),
     i = r(481060),
@@ -19,25 +19,25 @@ let s = function (t) {
                         n,
                         o = {},
                         i = Object.keys(t);
-                    for (n = 0; n < i.length; n++) (r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
+                    for (n = 0; n < i.length; n++) ((r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]));
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < i.length; n++) (r = i[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
+                for (n = 0; n < i.length; n++) ((r = i[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]));
             }
             return o;
         })(t, ['channelId', 'application', 'onClose']);
     let [f, O] = o.useState(!1),
         y = async () => {
             try {
-                O(!0), await l.ZP.removeLinkedLobby(s), b();
+                (O(!0), await l.ZP.removeLinkedLobby(s), b());
             } catch (t) {
-                O(!1),
+                (O(!1),
                     c.Z.show({
                         title: a.intl.string(a.t.vFzPFh),
                         body: a.intl.string(a.t['6D5WVl'])
-                    });
+                    }));
             }
         };
     return (0, n.jsx)(
@@ -46,7 +46,7 @@ let s = function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -54,7 +54,7 @@ let s = function (t) {
                     )),
                     n.forEach(function (e) {
                         var n;
-                        (n = r[e]),
+                        ((n = r[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: n,
@@ -62,8 +62,8 @@ let s = function (t) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (t[e] = n);
-                    });
+                                : (t[e] = n));
+                    }));
             }
             return t;
         })(

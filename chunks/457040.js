@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ea }), n(388685);
+(n.d(t, { Z: () => ea }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(954955),
@@ -52,7 +52,7 @@ function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -60,7 +60,7 @@ function B(e) {
             )),
             r.forEach(function (t) {
                 G(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -68,11 +68,11 @@ function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -134,7 +134,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ey = eE.length + eb.length,
             eO = i.useCallback(
                 (e) => {
-                    '' === ea ? (0, S.On)(e) : (0, S.Yk)(e, ea, ey), v(e.sticker, C.V0.STICKER_PICKER);
+                    ('' === ea ? (0, S.On)(e) : (0, S.Yk)(e, ea, ey), v(e.sticker, C.V0.STICKER_PICKER));
                 },
                 [v, ea, ey]
             ),
@@ -159,14 +159,14 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { location: i } = t;
                     switch (e.type) {
                         case C.al.CREATE_STICKER:
-                            O.default.track(j.rMx.OPEN_MODAL, {
+                            (O.default.track(j.rMx.OPEN_MODAL, {
                                 type: j.jXE.CREATE_STICKER_MODAL,
                                 location: V
                             }),
                                 (0, u.ZDy)(async () => {
                                     let { default: t } = await Promise.all([n.e('93626'), n.e('61547')]).then(n.bind(n, 136735));
                                     return (n) => (0, r.jsx)(t, B({ guildId: e.guild_id }, n));
-                                });
+                                }));
                             break;
                         case C.al.STICKER:
                             null != e.sticker && (0, T.kl)(e.sticker, e_, c) && eO(e);
@@ -198,7 +198,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 t = null != (n = N.Z.getStickersByGuildId(e)) ? n : [];
             }
             let r = 0;
-            null != eg &&
+            (null != eg &&
                 [...eg.values()].forEach((e) => {
                     r += e.length;
                 }),
@@ -208,10 +208,10 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     frequentlyUsedStickers: em,
                     guildStickers: t,
                     stickersTotal: r
-                });
+                }));
         };
-        i.useEffect(() => {
-            '' === es.current && '' !== ea && (0, S.n8)(), (es.current = ea);
+        (i.useEffect(() => {
+            ('' === es.current && '' !== ea && (0, S.n8)(), (es.current = ea));
         }, [ea]),
             i.useEffect(() => {
                 0 === ey ? et(ea) : en(ea, ey, eo);
@@ -219,9 +219,9 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             i.useLayoutEffect(() => {
                 var e;
                 null == (e = er.current) || e.focus();
-            }, []);
+            }, []));
         let ek = i.useCallback(() => {
-            G(), O.default.track(j.rMx.PREMIUM_PROMOTION_OPENED, { location_section: j.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
+            (G(), O.default.track(j.rMx.PREMIUM_PROMOTION_OPENED, { location_section: j.jXE.STICKER_PICKER_UPSELL }), (0, g.z)());
         }, [G]);
         return (0, r.jsxs)(_.Gt, {
             value: z,

@@ -1,19 +1,19 @@
-n.d(t, { R: () => u });
+n.d(t, { R: () => o });
 var r = n(255367),
     l = n(659580),
     i = n(875527),
     a = n(306609);
-function u(e) {
-    let { onClose: t, onInteraction: n, location: u, overlayLimitedInteraction: o = !1 } = e;
+function o(e) {
+    let { onClose: t, onInteraction: n, location: o, overlayLimitedInteraction: u = !1 } = e;
     return (0, i.Hu)({
-        location: u,
+        location: o,
         autoTrackExposure: !0
     })
         ? (0, r.jsx)(a.l, {
               wide: !0,
               showOutputDevices: !0,
               onSettingsButtonClick: t,
-              showSearchBar: !o
+              showSearchBar: !u
           })
         : (0, r.jsx)(l.default, {
               onClose: t,

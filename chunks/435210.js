@@ -6,7 +6,7 @@ var r = n(444675),
             return n;
         },
     a = /%[sdj%]/g;
-(t.format = function (e) {
+((t.format = function (e) {
     if (!I(e)) {
         for (var t = [], n = 0; n < arguments.length; n++) t.push(c(arguments[n]));
         return t.join(' ');
@@ -50,11 +50,11 @@ var r = n(444675),
         return function () {
             if (!i) {
                 if (r.throwDeprecation) throw Error(n);
-                r.traceDeprecation ? console.trace(n) : console.error(n), (i = !0);
+                (r.traceDeprecation ? console.trace(n) : console.error(n), (i = !0));
             }
             return e.apply(this, arguments);
         };
-    });
+    }));
 var o = {},
     s = /^$/;
 if (r.env.NODE_DEBUG) {
@@ -75,7 +75,7 @@ function c(e, n) {
         seen: [],
         stylize: d
     };
-    return arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), y(n) ? (r.showHidden = n) : n && t._extend(r, n), T(r.showHidden) && (r.showHidden = !1), T(r.depth) && (r.depth = 2), T(r.colors) && (r.colors = !1), T(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = u), _(r, e, r.depth);
+    return (arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), y(n) ? (r.showHidden = n) : n && t._extend(r, n), T(r.showHidden) && (r.showHidden = !1), T(r.depth) && (r.depth = 2), T(r.colors) && (r.colors = !1), T(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = u), _(r, e, r.depth));
 }
 function u(e, t) {
     var n = c.styles[t];
@@ -97,7 +97,7 @@ function _(e, n, r) {
     if (e.customInspect && n && R(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
         var i,
             a = n.inspect(r, e);
-        return I(a) || (a = _(e, a, r)), a;
+        return (I(a) || (a = _(e, a, r)), a);
     }
     var o = p(e, n);
     if (o) return o;
@@ -191,7 +191,7 @@ function g(e, t, n, r, i, a) {
 function E(e, t, n) {
     var r = 0;
     return e.reduce(function (e, t) {
-        return r++, t.indexOf('\n') >= 0 && r++, e + t.replace(/\u001b\[\d\d?m/g, '').length + 1;
+        return (r++, t.indexOf('\n') >= 0 && r++, e + t.replace(/\u001b\[\d\d?m/g, '').length + 1);
     }, 0) > 60
         ? n[0] + ('' === t ? '' : t + '\n ') + ' ' + e.join(',\n  ') + ' ' + n[1]
         : n[0] + t + ' ' + e.join(', ') + ' ' + n[1];
@@ -235,7 +235,7 @@ function P(e) {
 function w(e) {
     return e < 10 ? '0' + e.toString(10) : e.toString(10);
 }
-(t.debuglog = function (e) {
+((t.debuglog = function (e) {
     if (!o[(e = e.toUpperCase())])
         if (s.test(e)) {
             var n = r.pid;
@@ -296,7 +296,7 @@ function w(e) {
     (t.isPrimitive = function (e) {
         return null === e || 'boolean' == typeof e || 'number' == typeof e || 'string' == typeof e || 'symbol' == typeof e || void 0 === e;
     }),
-    (t.isBuffer = n(102439));
+    (t.isBuffer = n(102439)));
 var D = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 function L() {
     var e = new Date(),
@@ -306,7 +306,7 @@ function L() {
 function x(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
 }
-(t.log = function () {
+((t.log = function () {
     console.log('%s - %s', L(), t.format.apply(t, arguments));
 }),
     (t.inherits = n(689118)),
@@ -314,16 +314,16 @@ function x(e, t) {
         if (!t || !A(t)) return e;
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
-    });
+    }));
 var k = 'undefined' != typeof Symbol ? Symbol('util.promisify.custom') : void 0;
 function M(e, t) {
     if (!e) {
         var n = Error('Promise was rejected with a falsy value');
-        (n.reason = e), (e = n);
+        ((n.reason = e), (e = n));
     }
     return t(e);
 }
-(t.promisify = function (e) {
+((t.promisify = function (e) {
     if ('function' != typeof e) throw TypeError('The "original" argument must be of type Function');
     if (k && e[k]) {
         var t = e[k];
@@ -343,7 +343,7 @@ function M(e, t) {
             var t,
                 n,
                 r = new Promise(function (e, r) {
-                    (t = e), (n = r);
+                    ((t = e), (n = r));
                 }),
                 i = [],
                 a = 0;
@@ -393,5 +393,5 @@ function M(e, t) {
                 }
             );
         }
-        return Object.setPrototypeOf(t, Object.getPrototypeOf(e)), Object.defineProperties(t, i(e)), t;
-    });
+        return (Object.setPrototypeOf(t, Object.getPrototypeOf(e)), Object.defineProperties(t, i(e)), t);
+    }));

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(539854);
+(n.d(t, { Z: () => N }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -26,7 +26,7 @@ function O(e) {
         l = i.useCallback(() => {
             n ||
                 (0, _.JG)(t, () => {
-                    a(!0), (s.current = setTimeout(() => a(!1), 2000));
+                    (a(!0), (s.current = setTimeout(() => a(!1), 2000)));
                 });
         }, [t, n]);
     return (
@@ -100,7 +100,7 @@ function T(e) {
     l()(null != a, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
     let { discord_web: g, discord_developers: b } = a.targetBuildOverride,
         O = null != g ? g : b;
-    l()(null != O, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), y(O, i) ? ((n = E.intl.string(E.t.tX4xrq)), (t = s), (r = c.zxk.Colors.RED)) : ((n = E.intl.string(E.t.nOunHB)), (t = o), (r = c.zxk.Colors.GREEN));
+    (l()(null != O, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), y(O, i) ? ((n = E.intl.string(E.t.tX4xrq)), (t = s), (r = c.zxk.Colors.RED)) : ((n = E.intl.string(E.t.nOunHB)), (t = o), (r = c.zxk.Colors.GREEN)));
     let v = () => {
         d.Z.isConnected()
             ? u.Z.show({

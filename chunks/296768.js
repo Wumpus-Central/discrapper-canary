@@ -1,4 +1,4 @@
-r.d(t, { Z: () => y }), r(388685);
+(r.d(t, { Z: () => y }), r(388685));
 var n = r(255367),
     i = r(73800),
     a = r(120356),
@@ -22,7 +22,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -30,7 +30,7 @@ function b(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -38,8 +38,8 @@ function b(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -57,7 +57,7 @@ let I = (e) => {
                     {
                         className: j.similarGameImageClickable,
                         onClick: async () => {
-                            i(f.as.ClickSimilarGame, t.applicationId),
+                            (i(f.as.ClickSimilarGame, t.applicationId),
                                 (0, u.ZDy)(() =>
                                     Promise.resolve((e) =>
                                         (0, n.jsx)(
@@ -73,7 +73,7 @@ let I = (e) => {
                                     )
                                 ),
                                 await new Promise((e) => setTimeout(e, 10)),
-                                r();
+                                r());
                         },
                         children: (0, n.jsx)(E.C, {
                             game: t,

@@ -1,4 +1,4 @@
-n.r(l), n.d(l, { default: () => p }), n(35282);
+(n.r(l), n.d(l, { default: () => p }), n(35282));
 var t = n(255367);
 n(73800);
 var u = n(593473),
@@ -24,7 +24,7 @@ let p = (e) => {
                     h.ZP.focus();
                     let e = t.guild_id,
                         l = t.id;
-                    return t.type === o.d4z.GUILD_VOICE && (null != t.getGuildId() && d.default.selectVoiceChannel(t.id), (l = e)), null != l && null != e ? o.Z5c.CHANNEL(e, l) : null;
+                    return (t.type === o.d4z.GUILD_VOICE && (null != t.getGuildId() && d.default.selectVoiceChannel(t.id), (l = e)), null != l && null != e ? o.Z5c.CHANNEL(e, l) : null);
                 }
                 if (n) {
                     let n = () => {

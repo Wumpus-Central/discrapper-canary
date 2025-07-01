@@ -20,7 +20,7 @@ function p(e) {
             id: 'connect-crunchyroll',
             label: _.intl.formatToPlainString(_.t.XWSHTU, { platform: s.Z.get(f.ABu.CRUNCHYROLL).name }),
             action: () => {
-                null == h || h({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), o.Z.open(f.oAB.CONNECTIONS), null == m || m();
+                (null == h || h({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), o.Z.open(f.oAB.CONNECTIONS), null == m || m());
             }
         });
     if ('recent' !== p || !(0, u.gr)(n)) return null;
@@ -31,7 +31,7 @@ function p(e) {
               id: 'watch-on-crunchyroll',
               label: _.intl.string(_.t.OpxQVF),
               action: () => {
-                  null == h || h({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, c.Y)(E);
+                  (null == h || h({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, c.Y)(E));
               }
           });
 }

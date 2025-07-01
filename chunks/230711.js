@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(415506);
+(n.d(t, { Z: () => g }), n(415506));
 var r = n(544891),
     i = n(433517),
     a = n(570140),
@@ -26,7 +26,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -66,7 +66,7 @@ let g = {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
-        a.Z.dispatch(
+        (a.Z.dispatch(
             p(
                 {
                     type: 'USER_SETTINGS_MODAL_OPEN',
@@ -76,7 +76,7 @@ let g = {
                 n
             )
         ),
-            (0, c.jN)(u.S9g.USER_SETTINGS);
+            (0, c.jN)(u.S9g.USER_SETTINGS));
     },
     init: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -94,7 +94,7 @@ let g = {
     },
     close() {
         let e = s.Z.onClose;
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e();
+        (a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e());
     },
     setSection(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,

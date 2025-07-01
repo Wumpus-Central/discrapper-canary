@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+(n.d(t, { Z: () => _ }), n(539854));
 var r = n(878604);
 function i(e, t, n) {
     return (
@@ -17,7 +17,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -25,7 +25,7 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -326,20 +326,20 @@ function _(e, t, n, i) {
                     let r = f(e, n, i, _);
                     if (null != r) {
                         let n = s(e.rtpStats);
-                        (m = (null != m ? m : 0) + n), y[t].push(r);
+                        ((m = (null != m ? m : 0) + n), y[t].push(r));
                     }
                 });
             else if (null != c) {
                 let e = f(c, n, i, _);
                 if (null != e) {
                     let n = s(c.rtpStats);
-                    (m = (null != m ? m : 0) + n), y[t].push(e);
+                    ((m = (null != m ? m : 0) + n), y[t].push(e));
                 }
             }
         });
     let { transport: O, clips: v } = E,
         I = {};
-    null != O && ((I.availableOutgoingBitrate = O.sendBandwidth), (I.ping = O.rtt), (I.decryptionFailures = O.decryptionFailures), null != O.routingFailures && (I.routingFailures = O.routingFailures), (I.localAddress = O.localAddress), (I.pacerDelay = O.pacerDelay), null != O.receiverReports && (I.receiverReports = O.receiverReports), (I.receiverBitrateEstimate = O.receiverBitrateEstimate), (I.outboundBitrateEstimate = O.outboundBitrateEstimate), (I.inboundBitrateEstimate = null != (l = O.inboundBitrateEstimate) ? l : 0), (I.packetsReceived = O.packetsReceived), (I.packetsSent = O.packetsSent), null != O.secureFramesProtocolVersion && (I.secureFramesProtocolVersion = O.secureFramesProtocolVersion)), ((null == O ? void 0 : O.bytesReceived) == null && (null == m || Number.isNaN(m))) || (I.bytesReceived = null != (_ = null != (c = null == O ? void 0 : O.bytesReceived) ? c : m) ? _ : void 0), ((null == O ? void 0 : O.bytesSent) == null && (null == g || Number.isNaN(g))) || (I.bytesSent = null != (h = null != (p = null == O ? void 0 : O.bytesSent) ? p : g) ? h : void 0);
+    (null != O && ((I.availableOutgoingBitrate = O.sendBandwidth), (I.ping = O.rtt), (I.decryptionFailures = O.decryptionFailures), null != O.routingFailures && (I.routingFailures = O.routingFailures), (I.localAddress = O.localAddress), (I.pacerDelay = O.pacerDelay), null != O.receiverReports && (I.receiverReports = O.receiverReports), (I.receiverBitrateEstimate = O.receiverBitrateEstimate), (I.outboundBitrateEstimate = O.outboundBitrateEstimate), (I.inboundBitrateEstimate = null != (l = O.inboundBitrateEstimate) ? l : 0), (I.packetsReceived = O.packetsReceived), (I.packetsSent = O.packetsSent), null != O.secureFramesProtocolVersion && (I.secureFramesProtocolVersion = O.secureFramesProtocolVersion)), ((null == O ? void 0 : O.bytesReceived) == null && (null == m || Number.isNaN(m))) || (I.bytesReceived = null != (_ = null != (c = null == O ? void 0 : O.bytesReceived) ? c : m) ? _ : void 0), ((null == O ? void 0 : O.bytesSent) == null && (null == g || Number.isNaN(g))) || (I.bytesSent = null != (h = null != (p = null == O ? void 0 : O.bytesSent) ? p : g) ? h : void 0));
     let { screenshare: T, camera: S, audioDevice: A } = E;
     return {
         mediaEngineConnectionId: e,

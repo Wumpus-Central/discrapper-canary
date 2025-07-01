@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(35282), n(388685), n(539854);
+(n.d(t, { Z: () => u }), n(35282), n(388685), n(539854));
 var r = n(878604);
 function i(e, t, n) {
     return (
@@ -17,7 +17,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -25,7 +25,7 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -33,11 +33,11 @@ function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -146,14 +146,14 @@ function u(e, t, n, i, o) {
         };
         if ('audio' === e.kind) {
             let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount) : 0;
-            null == E[c] && (E[c] = []),
+            (null == E[c] && (E[c] = []),
                 E[c].push(
                     s(a({}, u), {
                         audioLevel: e.audioLevel,
                         jitter: 1000 * e.jitter,
                         jitterBuffer: t
                     })
-                );
+                ));
         } else if ('video' === e.kind) {
             null == E[c] && (E[c] = []);
             let t =

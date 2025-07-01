@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var i,
     r,
     s,
@@ -15,10 +15,10 @@ let p = { status: '' },
     f = ['discord.com', 'discordapp.com', 'discordapp.net', 'dl.discordapp.net', 'discordcdn.com', 'discord.gg', 'discord.media'];
 class b extends (i = l.ZP.Store) {
     initialize() {
-        this.updateState(), this.addListener();
+        (this.updateState(), this.addListener());
     }
     logEvent(e) {
-        'status' in e && 'string' == typeof e.status && (p = e), (h = [...h.slice(h.length < 10 ? 0 : 1, 10), e]), this.emitChange();
+        ('status' in e && 'string' == typeof e.status && (p = e), (h = [...h.slice(h.length < 10 ? 0 : 1, 10), e]), this.emitChange());
     }
     async updateState() {
         try {
@@ -45,11 +45,11 @@ class b extends (i = l.ZP.Store) {
             try {
                 this.logEvent({ status: 'Installing' });
                 let e = await u.ZP.getDiscordUtils().installWarp();
-                this.logEvent({
+                (this.logEvent({
                     status: 'Installed',
                     installLog: e
                 }),
-                    this.connect();
+                    this.connect());
             } catch (e) {
                 this.logEvent({
                     status: 'InstallFailed',
@@ -119,9 +119,9 @@ class b extends (i = l.ZP.Store) {
     }
     async connect() {
         if (this.clientEnabled) {
-            this.logEvent({ status: 'Configuring' }), await this.configureLicense(), await this.configureExceptions(), await this.configureMode();
+            (this.logEvent({ status: 'Configuring' }), await this.configureLicense(), await this.configureExceptions(), await this.configureMode());
             try {
-                this.logEvent({ status: 'ConnectCommandSent' }), await this.runCommand('connect');
+                (this.logEvent({ status: 'ConnectCommandSent' }), await this.runCommand('connect'));
             } catch (e) {
                 'Failed to locate warp-cli' === e.message && this.promptInstall();
             }
@@ -129,10 +129,10 @@ class b extends (i = l.ZP.Store) {
         return this.clientEnabled;
     }
     disconnect() {
-        return this.clientEnabled && (this.runCommand('disconnect'), (p = { status: 'DisconnectCommandSent' })), this.clientEnabled;
+        return (this.clientEnabled && (this.runCommand('disconnect'), (p = { status: 'DisconnectCommandSent' })), this.clientEnabled);
     }
 }
-(s = 'WarpClientStore'),
+((s = 'WarpClientStore'),
     (r = 'displayName') in b
         ? Object.defineProperty(b, r, {
               value: s,
@@ -140,5 +140,5 @@ class b extends (i = l.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (b[r] = s);
+        : (b[r] = s));
 let _ = new b(o.Z, {});

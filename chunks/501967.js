@@ -36,11 +36,11 @@ class g extends a.PureComponent {
     }
     componentWillEnter(e) {
         let { animation: t } = this.state;
-        t.setValue(0),
+        (t.setValue(0),
             l.Z.spring(t, {
                 toValue: 1,
                 overshootClamping: !0
-            }).start(e);
+            }).start(e));
     }
     componentWillLeave(e) {
         l.Z.spring(this.state.animation, {
@@ -56,15 +56,15 @@ class g extends a.PureComponent {
         });
     }
     constructor(e) {
-        super(e), (this.state = { animation: new l.Z.Value(0) });
+        (super(e), (this.state = { animation: new l.Z.Value(0) }));
     }
 }
 class E extends (r = a.PureComponent) {
     componentDidMount() {
-        document.addEventListener('mousedown', this.handleMouseEvent, !0), document.addEventListener('mousemove', this.handleMouseEvent, !0);
+        (document.addEventListener('mousedown', this.handleMouseEvent, !0), document.addEventListener('mousemove', this.handleMouseEvent, !0));
     }
     componentWillUnmount() {
-        document.removeEventListener('mousedown', this.handleMouseEvent, !0), document.removeEventListener('mousemove', this.handleMouseEvent, !0), this._timeout.stop();
+        (document.removeEventListener('mousedown', this.handleMouseEvent, !0), document.removeEventListener('mousemove', this.handleMouseEvent, !0), this._timeout.stop());
     }
     static getDerivedStateFromProps(e, t) {
         return e.layout !== t.layoutProp
@@ -133,7 +133,7 @@ class E extends (r = a.PureComponent) {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             p(this, '_timeout', new c.V7()),
             p(this, 'handleMouseEvent', () => {
                 let { layout: e } = this.props;
@@ -143,7 +143,7 @@ class E extends (r = a.PureComponent) {
                 idle: !1,
                 backgroundAnimation: new l.Z.Value(0),
                 layoutProp: e.layout
-            });
+            }));
     }
 }
 p(E, 'defaultProps', {

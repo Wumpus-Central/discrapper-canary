@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(953529);
+(n.d(t, { Z: () => _ }), n(388685), n(953529));
 var r = n(73800),
     i = n(266791),
     a = n(314897),
@@ -19,7 +19,7 @@ function f(e, t, n, r) {
 function _(e) {
     (0, l.K)(e.id, e.label, e.commonTriggerPoint);
     let t = new Map();
-    t.set(c.NZ.NOT_ELIGIBLE, {
+    (t.set(c.NZ.NOT_ELIGIBLE, {
         description: 'Not Eligible',
         config: e.defaultConfig
     }),
@@ -32,7 +32,7 @@ function _(e) {
                 description: 'Treatment '.concat(e.id, ': ').concat(e.label),
                 config: e.config
             });
-        });
+        }));
     let n = u(e.kind, {
         id: e.id,
         title: e.label,

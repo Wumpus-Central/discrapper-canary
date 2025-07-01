@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(392711),
@@ -63,14 +63,14 @@ function y(e) {
                     p = u - c,
                     m = (0, r.clamp)(t - d, p + 1, u + 20),
                     f = p === m ? 1 : (0, r.clamp)((e - p) / (m - p), 0, 1);
-                (a.style.filter = 'brightness('.concat(1 + ((j ? 1.4 : 0.6) - 1) * f, ')')),
+                ((a.style.filter = 'brightness('.concat(1 + ((j ? 1.4 : 0.6) - 1) * f, ')')),
                     (a.style.backgroundColor = 'color-mix(in oklab,'
                         .concat(A, ' ')
                         .concat((1 - f) * 100, '%, ')
                         .concat(I, ')')),
                     (o.style.opacity = ''.concat(0 + +f)),
                     (o.style.transform = 'translateY('.concat((l = c / 4) + (0 - l) * f, 'px)')),
-                    null != s && (s.style.opacity = ''.concat(1 + -1 * f));
+                    null != s && (s.style.opacity = ''.concat(1 + -1 * f)));
             }
         }, [I, A, null == S ? void 0 : S.height, j, b, null == _ ? void 0 : _.height]);
     return (

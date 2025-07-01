@@ -15,7 +15,7 @@ class d extends (l = a.ZP.Store) {
         return c;
     }
 }
-(i = 'CodedLinkNativeAppStateStore'),
+((i = 'CodedLinkNativeAppStateStore'),
     (r = 'displayName') in d
         ? Object.defineProperty(d, r, {
               value: i,
@@ -23,18 +23,18 @@ class d extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (d[r] = i);
+        : (d[r] = i));
 let p = new d(o.Z, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
-        (u[t] = s.kEZ.OPENING), null === c && (c = s.kEZ.OPENING);
+        ((u[t] = s.kEZ.OPENING), null === c && (c = s.kEZ.OPENING));
     },
     NATIVE_APP_MODAL_OPENED: function (e) {
         let { code: t } = e;
-        (u[t] = s.kEZ.OPEN), (c = s.kEZ.OPEN);
+        ((u[t] = s.kEZ.OPEN), (c = s.kEZ.OPEN));
     },
     NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
         let { code: t } = e;
-        (u[t] = s.kEZ.OPEN_FAIL), (null === c || c === s.kEZ.OPENING) && (c = s.kEZ.OPEN_FAIL);
+        ((u[t] = s.kEZ.OPEN_FAIL), (null === c || c === s.kEZ.OPENING) && (c = s.kEZ.OPEN_FAIL));
     }
 });

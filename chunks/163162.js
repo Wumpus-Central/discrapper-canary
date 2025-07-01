@@ -19,12 +19,12 @@ a.d(e, {
                     return e.apply(this, r);
                 } catch (t) {
                     throw (
-                        (s++,
+                        s++,
                         setTimeout(() => {
                             s--;
                         }),
                         (0, r.$e)((e) => {
-                            e.addEventProcessor(
+                            (e.addEventProcessor(
                                 (t) => (
                                     a.mechanism && ((0, i.Db)(t, void 0, void 0), (0, i.EG)(t, a.mechanism)),
                                     (t.extra = {
@@ -34,16 +34,16 @@ a.d(e, {
                                     t
                                 )
                             ),
-                                (0, _.Tb)(t);
+                                (0, _.Tb)(t));
                         }),
-                        t)
+                        t
                     );
                 }
             };
             try {
                 for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (c[t] = e[t]);
             } catch (t) {}
-            (0, o.$Q)(c, e), (0, o.xp)(e, '__sentry_wrapped__', c);
+            ((0, o.$Q)(c, e), (0, o.xp)(e, '__sentry_wrapped__', c));
             try {
                 Object.getOwnPropertyDescriptor(c, 'name').configurable && Object.defineProperty(c, 'name', { get: () => e.name });
             } catch (t) {}

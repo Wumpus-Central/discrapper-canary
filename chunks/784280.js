@@ -1,4 +1,4 @@
-a.d(t, { default: () => g }), a(388685);
+(a.d(t, { default: () => g }), a(388685));
 var n = a(255367),
     r = a(73800),
     o = a(442837),
@@ -22,15 +22,15 @@ function g(e) {
         v = (0, o.e7)([s.Z], () => s.Z.useReducedMotion, []),
         H = async (t) => {
             let { onClose: a, guildId: n } = e;
-            t.preventDefault(), _(null);
+            (t.preventDefault(), _(null));
             try {
-                await (0, m.e)(n, { nick: p }), null == a || a();
+                (await (0, m.e)(n, { nick: p }), null == a || a());
             } catch (e) {
                 _(new l.Hx(e));
             }
         },
         { transitionState: N } = e,
-        j = Object.values(u.Z.getGuilds()).filter((e) => e.id !== t && e.hasFeature(b.oNc.HUB)).length > 0,
+        j = u.Z.getGuildsArray().filter((e) => e.id !== t && e.hasFeature(b.oNc.HUB)).length > 0,
         S = !v && !j && (null == a ? void 0 : a.hasFeature(b.oNc.HUB)) && (0, f.b)();
     return (
         r.useEffect(() => {

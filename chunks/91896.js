@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(539854), n(388685);
+(n.d(t, { Z: () => A }), n(539854), n(388685));
 var r,
     i = n(442837),
     a = n(759174),
@@ -35,7 +35,7 @@ let d = (e, t) => ''.concat(t, '-').concat(e),
     };
 function _(e) {
     let t = [];
-    return t.push(f.BY_APPLICATION_ID(e.applicationId)), t.push(f.BY_USER_ID(e.id)), t.push(f.BY_RELATIONSHIP_TYPE(e.type)), t;
+    return (t.push(f.BY_APPLICATION_ID(e.applicationId)), t.push(f.BY_USER_ID(e.id)), t.push(f.BY_RELATIONSHIP_TYPE(e.type)), t);
 }
 let p = new a.h(_, (e) => ''.concat(e.since)),
     h = 0,
@@ -45,7 +45,7 @@ function E() {
     let e = 0,
         t = 0,
         n = 0;
-    p.values().forEach((r) => {
+    (p.values().forEach((r) => {
         let { type: i, id: a } = r;
         if (i === l.OGo.FRIEND) n += 1;
         else if (i === l.OGo.PENDING_OUTGOING) t += 1;
@@ -56,7 +56,7 @@ function E() {
     }),
         (h = e),
         (m = t),
-        (g = n);
+        (g = n));
 }
 function b(e) {
     p.set(d(e.id, e.applicationId), e);
@@ -72,17 +72,17 @@ function O(e) {
     }
 }
 function v(e) {
-    p.clear(),
+    (p.clear(),
         e.gameRelationships.forEach((e) => {
             b(u(e));
         }),
-        E();
+        E());
 }
 function I(e) {
-    b(e.gameRelationship), E();
+    (b(e.gameRelationship), E());
 }
 function T(e) {
-    y(e.userId, e.applicationId), E();
+    (y(e.userId, e.applicationId), E());
 }
 class S extends (r = i.ZP.Store) {
     initialize() {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -26,7 +26,7 @@ class h extends i.PureComponent {
     }
     constructor(...e) {
         var t, n;
-        super(...e),
+        (super(...e),
             (t = 'handleButtonClick'),
             (n = () => {
                 let { guild: e } = this.props;
@@ -45,7 +45,7 @@ class h extends i.PureComponent {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = n);
+                : (this[t] = n));
     }
 }
 let f = l.ZP.connectStores([s.Z], (e) => {

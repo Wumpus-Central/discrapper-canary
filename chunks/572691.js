@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+(n.d(t, { Z: () => _ }), n(539854));
 var r = n(97613),
     i = n.n(r),
     a = n(570140),
@@ -24,7 +24,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -85,17 +85,17 @@ let _ = {
         });
     },
     pop() {
-        (0, s.GZ)(), a.Z.dispatch({ type: 'MODAL_POP' });
+        ((0, s.GZ)(), a.Z.dispatch({ type: 'MODAL_POP' }));
     },
     popWithKey(e, t) {
-        (0, s.GZ)(e, t),
+        ((0, s.GZ)(e, t),
             a.Z.dispatch({
                 type: 'MODAL_POP',
                 key: e,
                 onExited: t
-            });
+            }));
     },
     popAll() {
-        (0, s.lE)(), a.Z.dispatch({ type: 'MODAL_POP_ALL' }), a.Z.dispatch({ type: 'EMAIL_VERIFICATION_MODAL_CLOSE' }), a.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' }), a.Z.dispatch({ type: 'HIDE_ACTION_SHEET' }), a.Z.dispatch({ type: 'DISPLAYED_INVITE_CLEAR' }), a.Z.dispatch({ type: 'NOTIFICATION_SETTINGS_MODAL_CLOSE' }), a.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' }), a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), a.Z.dispatch({ type: 'CONNECTIONS_GRID_MODAL_HIDE' }), a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
+        ((0, s.lE)(), a.Z.dispatch({ type: 'MODAL_POP_ALL' }), a.Z.dispatch({ type: 'EMAIL_VERIFICATION_MODAL_CLOSE' }), a.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' }), a.Z.dispatch({ type: 'HIDE_ACTION_SHEET' }), a.Z.dispatch({ type: 'DISPLAYED_INVITE_CLEAR' }), a.Z.dispatch({ type: 'NOTIFICATION_SETTINGS_MODAL_CLOSE' }), a.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' }), a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), a.Z.dispatch({ type: 'CONNECTIONS_GRID_MODAL_HIDE' }), a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' }));
     }
 };

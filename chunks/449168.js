@@ -15,7 +15,7 @@ t.exports = (function (t) {
     function e() {
         return t.apply(this, arguments) || this;
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r.getEntityMap = function () {
@@ -93,16 +93,16 @@ t.exports = (function (t) {
             return t.size > 1 || escape(t.first().getText()).replace(/%u200B/g, '').length > 0;
         }),
         (r.createEntity = function (t, e, r) {
-            return u.__create(t, e, r), this;
+            return (u.__create(t, e, r), this);
         }),
         (r.mergeEntityData = function (t, e) {
-            return u.__mergeData(t, e), this;
+            return (u.__mergeData(t, e), this);
         }),
         (r.replaceEntityData = function (t, e) {
-            return u.__replaceData(t, e), this;
+            return (u.__replaceData(t, e), this);
         }),
         (r.addEntity = function (t) {
-            return u.__add(t), this;
+            return (u.__add(t), this);
         }),
         (r.getEntity = function (t) {
             return u.__get(t);

@@ -20,7 +20,7 @@ t.exports = (function (t) {
     function e() {
         return t.apply(this, arguments) || this;
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r.shouldComponentUpdate = function (t) {
@@ -64,23 +64,23 @@ t.exports = (function (t) {
                         selection: m,
                         tree: h.getBlockTree(O)
                     },
-                    F = e.get(K) || e.get('unstyled'),
-                    N = F.wrapper,
-                    P = F.element || e.get('unstyled').element,
-                    z = D.getDepth(),
+                    N = e.get(K) || e.get('unstyled'),
+                    F = N.wrapper,
+                    z = N.element || e.get('unstyled').element,
+                    P = D.getDepth(),
                     j = '';
-                (n && (j = n(D)), 'li' === P) &&
+                (n && (j = n(D)), 'li' === z) &&
                     (j = c(
                         j,
                         s({
                             'public/DraftStyleDefault/unorderedListItem': 'unordered-list-item' === K,
                             'public/DraftStyleDefault/orderedListItem': 'ordered-list-item' === K,
-                            'public/DraftStyleDefault/reset': C !== N || null === k || z > k,
-                            'public/DraftStyleDefault/depth0': 0 === z,
-                            'public/DraftStyleDefault/depth1': 1 === z,
-                            'public/DraftStyleDefault/depth2': 2 === z,
-                            'public/DraftStyleDefault/depth3': 3 === z,
-                            'public/DraftStyleDefault/depth4': z >= 4,
+                            'public/DraftStyleDefault/reset': C !== F || null === k || P > k,
+                            'public/DraftStyleDefault/depth0': 0 === P,
+                            'public/DraftStyleDefault/depth1': 1 === P,
+                            'public/DraftStyleDefault/depth2': 2 === P,
+                            'public/DraftStyleDefault/depth3': 3 === P,
+                            'public/DraftStyleDefault/depth4': P >= 4,
                             'public/DraftStyleDefault/listLTR': 'LTR' === B,
                             'public/DraftStyleDefault/listRTL': 'RTL' === B
                         })
@@ -98,7 +98,7 @@ t.exports = (function (t) {
                         for (var e = 1; e < arguments.length; e++) {
                             var r = null != arguments[e] ? arguments[e] : {},
                                 n = Object.keys(r);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (n = n.concat(
                                     Object.getOwnPropertySymbols(r).filter(function (t) {
                                         return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -106,7 +106,7 @@ t.exports = (function (t) {
                                 )),
                                 n.forEach(function (e) {
                                     var n, i, o;
-                                    (n = t),
+                                    ((n = t),
                                         (i = e),
                                         (o = r[e]),
                                         i in n
@@ -116,29 +116,29 @@ t.exports = (function (t) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (n[i] = o);
-                                });
+                                            : (n[i] = o));
+                                }));
                         }
                         return t;
                     })({}, q, {
                         contentEditable: I,
                         suppressContentEditableWarning: !0
                     }));
-                var H = u.createElement(P, q, u.createElement(U, i({}, R, { key: O })));
-                x.push({
+                var H = u.createElement(z, q, u.createElement(U, i({}, R, { key: O })));
+                (x.push({
                     block: H,
-                    wrapperTemplate: N,
+                    wrapperTemplate: F,
                     key: O,
                     offsetKey: L
                 }),
-                    (k = N ? D.getDepth() : null),
-                    (C = N);
+                    (k = F ? D.getDepth() : null),
+                    (C = F));
             }
             for (var W = [], V = 0; V < x.length; ) {
                 var G = x[V];
                 if (G.wrapperTemplate) {
                     var J = [];
-                    do J.push(x[V].block), V++;
+                    do (J.push(x[V].block), V++);
                     while (V < x.length && x[V].wrapperTemplate === G.wrapperTemplate);
                     var X = u.cloneElement(
                         G.wrapperTemplate,
@@ -149,7 +149,7 @@ t.exports = (function (t) {
                         J
                     );
                     W.push(X);
-                } else W.push(G.block), V++;
+                } else (W.push(G.block), V++);
             }
             return u.createElement('div', { 'data-contents': 'true' }, W);
         }),

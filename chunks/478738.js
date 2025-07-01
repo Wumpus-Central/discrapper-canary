@@ -1,16 +1,16 @@
-n.d(t, { Z: () => u }), n(539854);
+(n.d(t, { Z: () => u }), n(539854));
 var r,
     i,
     l,
     o = n(442837),
-    s = n(570140);
-let a = [];
+    a = n(570140);
+let s = [];
 class c extends (r = o.ZP.Store) {
     getGeoRestrictedGuilds() {
-        return a;
+        return s;
     }
 }
-(l = 'GeoRestrictedGuildStore'),
+((l = 'GeoRestrictedGuildStore'),
     (i = 'displayName') in c
         ? Object.defineProperty(c, i, {
               value: l,
@@ -18,25 +18,25 @@ class c extends (r = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (c[i] = l);
-let u = new c(s.Z, {
+        : (c[i] = l));
+let u = new c(a.Z, {
     CONNECTION_OPEN: function (e) {
-        a = e.geoRestrictedGuilds;
+        s = e.geoRestrictedGuilds;
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        if (-1 === a.findIndex((e) => e.id === t.id)) return !1;
-        a = a.filter((e) => e.id !== t.id);
+        if (-1 === s.findIndex((e) => e.id === t.id)) return !1;
+        s = s.filter((e) => e.id !== t.id);
     },
     GUILD_GEO_RESTRICTED: function (e) {
-        let t = a.filter((t) => t.id !== e.guildId);
-        t.push({
+        let t = s.filter((t) => t.id !== e.guildId);
+        (t.push({
             id: e.guildId,
             name: e.name,
             icon: e.icon,
             unavailable: !0,
             geo_restricted: !0
         }),
-            (a = t);
+            (s = t));
     }
 });

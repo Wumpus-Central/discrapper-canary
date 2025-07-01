@@ -1,4 +1,4 @@
-n.d(t, { Z: () => q }), n(784620), n(973216);
+(n.d(t, { Z: () => q }), n(784620), n(973216));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(918701),
     b = n(974390),
     j = n(475595),
-    _ = n(18578),
-    v = n(623249),
+    v = n(18578),
+    _ = n(623249),
     y = n(685613),
     C = n(670638),
     O = n(341907),
@@ -32,7 +32,7 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function R(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -48,8 +48,8 @@ function R(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -100,10 +100,10 @@ function B(e) {
                           },
             [o, x, h, a]
         ),
-        _ = 2 !== b,
+        v = 2 !== b,
         y = (0, c.q_F)({
-            opacity: +!!_,
-            height: _ ? f : 0,
+            opacity: +!!v,
+            height: v ? f : 0,
             config: P.Y
         }),
         C = 0 === b ? c.P4T : c.d3s,
@@ -132,7 +132,7 @@ function B(e) {
                 0 === b &&
                     (0, r.jsx)(c.zxk, {
                         onClick: () =>
-                            (0, v.y)({
+                            (0, _.y)({
                                 questId: n.id,
                                 errorHints: o,
                                 sourceQuestContent: d
@@ -157,7 +157,7 @@ function I(e) {
         className: A.heroAssetCont,
         children:
             o &&
-            (0, r.jsx)(_.K, {
+            (0, r.jsx)(v.K, {
                 imageAsset:
                     null != a
                         ? {
@@ -185,7 +185,7 @@ function I(e) {
 }
 function q(e) {
     var t, n, o, i, u;
-    let { quest: p, isHovering: b, errorHints: j, warningHints: _, isVisibleInViewport: v, onCtxMenuClose: w, onCtxMenuOpen: P, onCtxMenuSelect: q, sourceQuestContent: D } = e,
+    let { quest: p, isHovering: b, errorHints: j, warningHints: v, isVisibleInViewport: _, onCtxMenuClose: w, onCtxMenuOpen: P, onCtxMenuSelect: q, sourceQuestContent: D } = e,
         Q = (0, h.PB)(p),
         V = (0, d.ZP)(),
         L = ((0, l.wj)(V) ? T.BRd.DARK : T.BRd.LIGHT) === T.BRd.DARK,
@@ -220,7 +220,7 @@ function q(e) {
                 children: (0, r.jsx)(I, {
                     quest: p,
                     isHovering: b,
-                    showAssets: v
+                    showAssets: _
                 })
             }),
             (0, r.jsx)('div', {
@@ -292,7 +292,7 @@ function q(e) {
                                 ]
                             }),
                             (0, r.jsx)(S.E, {
-                                showPlaceholder: !v,
+                                showPlaceholder: !_,
                                 width: 100,
                                 height: 30,
                                 className: A.partnerBranding,
@@ -327,7 +327,7 @@ function q(e) {
                     (0, r.jsx)(B, {
                         quest: p,
                         errorHints: j,
-                        warningHints: _,
+                        warningHints: v,
                         isDarkTheme: L,
                         sourceQuestContent: D
                     })

@@ -1,4 +1,4 @@
-n.d(t, { O: () => O }), n(388685);
+(n.d(t, { O: () => N }), n(388685));
 var a = n(255367),
     r = n(73800),
     l = n(481060),
@@ -9,11 +9,11 @@ var a = n(255367),
     d = n(281598),
     u = n(206878),
     m = n(63874);
-function p(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -21,7 +21,7 @@ function p(e) {
             )),
             a.forEach(function (t) {
                 var a;
-                (a = n[t]),
+                ((a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: a,
@@ -29,8 +29,8 @@ function p(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a);
-            });
+                        : (e[t] = a));
+            }));
     }
     return e;
 }
@@ -44,7 +44,7 @@ let h = [
             value: 'validate'
         }
     ],
-    x = {
+    p = {
         label: '[none selected]',
         value: null
     },
@@ -58,7 +58,7 @@ let h = [
             : (0, l.ZDy)(
                   async () => {
                       let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
-                      return (t) => (0, a.jsx)(e, p({}, t));
+                      return (t) => (0, a.jsx)(e, x({}, t));
                   },
                   {
                       modalKey: s.g,
@@ -72,7 +72,7 @@ let h = [
             : (0, l.ZDy)(
                   async () => {
                       let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
-                      return (t) => (0, a.jsx)(e, p({}, t));
+                      return (t) => (0, a.jsx)(e, x({}, t));
                   },
                   {
                       modalKey: s.c,
@@ -80,12 +80,12 @@ let h = [
                   }
               );
     },
-    _ = () => {
+    j = () => {
         let e = (0, i.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, o.N9)(),
             s = r.useMemo(
                 () => [
-                    x,
+                    p,
                     ...e.map((e) => ({
                         label: e.name,
                         value: e.id
@@ -154,7 +154,7 @@ let h = [
                   ]
               });
     },
-    j = (e) => {
+    _ = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
             { collectionAssets: i } = (0, o.xq)(),
             { deleteCollectionAsset: s, clearAssets: c } = (0, o.N9)(),
@@ -167,8 +167,8 @@ let h = [
                 [i]
             ),
             u = r.useCallback((e) => s(e), [s]),
-            p = r.useCallback(() => {
-                c(), t(), n();
+            x = r.useCallback(() => {
+                (c(), t(), n());
             }, [c, t, n]);
         return 0 === d.length
             ? null
@@ -185,7 +185,7 @@ let h = [
                               (0, a.jsx)(l.zxk, {
                                   look: l.zxk.Looks.FILLED,
                                   size: l.zxk.Sizes.TINY,
-                                  onClick: p,
+                                  onClick: x,
                                   children: 'Clear All'
                               })
                           ]
@@ -261,24 +261,24 @@ let h = [
         let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: s } = (0, u.g)(),
             o = Object.entries(s),
             d = Object.entries(i),
-            p = o.length > 0,
+            x = o.length > 0,
             h = d.length > 0,
-            x = r.useCallback(
+            p = r.useCallback(
                 (n) => {
-                    t(), e(n);
+                    (t(), e(n));
                 },
                 [e, t]
             );
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(c.L, { onDrop: x }),
+                (0, a.jsx)(c.L, { onDrop: p }),
                 n
                     ? (0, a.jsxs)('div', {
                           className: m.validationSummary,
                           children: [
                               (0, a.jsx)(l.Text, {
                                   variant: 'text-md/normal',
-                                  color: p ? 'text-danger' : 'text-default',
+                                  color: x ? 'text-danger' : 'text-default',
                                   children: ''.concat(o.length, ' errors')
                               }),
                               (0, a.jsx)(l.Text, {
@@ -300,7 +300,7 @@ let h = [
                           children: 'Drop asset folder to validate.'
                       }),
                 (0, a.jsx)(l.LZC, { size: 16 }),
-                p &&
+                x &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(l.X6q, {
@@ -395,14 +395,14 @@ let h = [
             ]
         });
     },
-    N = () => {
+    O = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
-            { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
+            { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: x } = (0, d.hm)(),
             h = r.useCallback(
                 (e) => {
-                    n(), p(e);
+                    (n(), x(e));
                 },
-                [p, n]
+                [x, n]
             );
         return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -431,9 +431,9 @@ let h = [
                         })
                     ]
                 }),
-                (0, a.jsx)(_, {}),
+                (0, a.jsx)(j, {}),
                 (0, a.jsx)(g, {}),
-                (0, a.jsx)(j, {
+                (0, a.jsx)(_, {
                     clearAssets: s,
                     clearIgnoredFiles: u
                 }),
@@ -444,7 +444,7 @@ let h = [
             ]
         });
     },
-    O = () => {
+    N = () => {
         let [e, t] = r.useState('preview');
         return (0, a.jsxs)('div', {
             className: m.container,
@@ -460,7 +460,7 @@ let h = [
                     optionClassName: m.panelModeControlOption
                 }),
                 (0, a.jsx)(l.LZC, { size: 8 }),
-                'preview' === e && (0, a.jsx)(N, {}),
+                'preview' === e && (0, a.jsx)(O, {}),
                 'validate' === e && (0, a.jsx)(C, {}),
                 (0, a.jsx)(l.LZC, { size: 16 })
             ]

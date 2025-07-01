@@ -1,4 +1,4 @@
-t.d(s, { default: () => A }), t(388685);
+(t.d(s, { default: () => A }), t(388685));
 var l = t(255367),
     r = t(73800),
     a = t(120356),
@@ -175,7 +175,7 @@ class z extends r.Component {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             L(this, 'handleClick', () => {
                 let { onInvite: e, row: s } = this.props;
                 e(s);
@@ -183,7 +183,7 @@ class z extends r.Component {
             L(this, 'handleMouseEnter', () => {
                 let { onMouseEnter: e, row: s } = this.props;
                 e(s);
-            });
+            }));
     }
 }
 function A(e) {
@@ -214,7 +214,7 @@ function A(e) {
             var e;
             null == (e = f.current) || e.scrollPageDown({ animate: !0 });
         }, [f]);
-    r.useEffect(
+    (r.useEffect(
         () => (
             g.S.subscribe(C.CkL.SCROLL_PAGE_UP, R),
             () => {
@@ -237,8 +237,8 @@ function A(e) {
         }, [t, h]),
         r.useEffect(() => {
             var e;
-            null == (e = f.current) || e.scrollToTop(), N(0);
-        }, [f, a]);
+            (null == (e = f.current) || e.scrollToTop(), N(0));
+        }, [f, a]));
     let I = r.useCallback(
             (e) => {
                 let {
@@ -269,7 +269,7 @@ function A(e) {
             Z('');
         },
         Z = (e) => {
-            _(e), (0, i.rh)(e);
+            (_(e), (0, i.rh)(e));
         };
     return null == h
         ? null
@@ -307,12 +307,12 @@ function A(e) {
                                       },
                                       onSelectionChange: (e, s) => {
                                           var t;
-                                          N(s),
+                                          (N(s),
                                               null == (t = f.current) ||
                                                   t.scrollIntoViewRect({
                                                       start: 48 * s,
                                                       end: 48 * s + 48
-                                                  });
+                                                  }));
                                       },
                                       onQueryChange: Z,
                                       placeholder: S.intl.string(S.t.IJExws),

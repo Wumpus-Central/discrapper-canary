@@ -3,17 +3,17 @@ var r = n(255367),
     i = n(73800),
     l = n(481060),
     o = n(833592),
-    s = n(388032);
-let a = (e) => {
+    a = n(388032);
+let s = (e) => {
         let { item: t, closePopout: n } = e;
         return (0, r.jsx)(l.v2r, {
             navId: 'notification-actions',
             onClose: n,
             onSelect: n,
-            'aria-label': s.intl.string(s.t.ljs3OT),
+            'aria-label': a.intl.string(a.t.ljs3OT),
             children: (0, r.jsx)(l.sNh, {
                 id: 'delete',
-                label: s.intl.string(s.t.oyYWHB),
+                label: a.intl.string(a.t.oyYWHB),
                 icon: l.XHJ,
                 action: async () => {
                     await (0, o.g3)(t);
@@ -29,12 +29,12 @@ let a = (e) => {
             renderPopout: (e) => {
                 var n, i;
                 return (0, r.jsx)(
-                    a,
+                    s,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ let a = (e) => {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -50,8 +50,8 @@ let a = (e) => {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -78,14 +78,14 @@ let a = (e) => {
                 let { onClick: t } = e;
                 return (0, r.jsx)(l.M0o, {
                     ref: n,
-                    tooltip: s.intl.string(s.t.UKOtz8),
+                    tooltip: a.intl.string(a.t.UKOtz8),
                     color: l.YX$.TERTIARY,
                     icon: (0, r.jsx)(l.xhG, {
                         size: 'xs',
                         color: 'currentColor'
                     }),
                     onClick: (e) => {
-                        e.stopPropagation(), t(e);
+                        (e.stopPropagation(), t(e));
                     },
                     'aria-haspopup': 'menu'
                 });

@@ -1,14 +1,14 @@
-n.d(t, {
+(n.d(t, {
     Zg: () => l,
     pj: () => o,
     pr: () => s
 }),
-    n(642613);
+    n(642613));
 var r = n(544891),
     i = n(570140),
     a = n(981631);
 function o(e) {
-    i.Z.dispatch({
+    (i.Z.dispatch({
         type: 'TOP_EMOJIS_FETCH',
         guildId: e
     }),
@@ -35,17 +35,17 @@ function o(e) {
                         type: 'TOP_EMOJIS_FETCH_FAILURE',
                         guildId: e
                     })
-            );
+            ));
 }
 function s(e, t) {
-    i.Z.dispatch({ type: 'NEWLY_ADDED_EMOJI_SEEN_UPDATED' }),
+    (i.Z.dispatch({ type: 'NEWLY_ADDED_EMOJI_SEEN_UPDATED' }),
         null != e &&
             null != t &&
             i.Z.dispatch({
                 type: 'NEWLY_ADDED_EMOJI_SEEN_PENDING',
                 guildId: e,
                 emojiId: t
-            });
+            }));
 }
 function l(e, t) {
     null != e &&

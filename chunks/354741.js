@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => S }), n(388685);
+(n.r(t), n.d(t, { default: () => S }), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -29,7 +29,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function v(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -45,8 +45,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -116,7 +116,7 @@ let S = (0, c.Z)(
                                                                 onChange: (n) => {
                                                                     var i;
                                                                     let { imageUri: r } = n;
-                                                                    o.Z.setIcon(t.id, r), null == (i = e.onClose) || i.call(e);
+                                                                    (o.Z.setIcon(t.id, r), null == (i = e.onClose) || i.call(e));
                                                                 },
                                                                 multiple: !1,
                                                                 'aria-label': m.intl.string(m.t['6yrpFR'])
@@ -127,14 +127,14 @@ let S = (0, c.Z)(
                                                             {
                                                                 onInteraction: () => {
                                                                     var n;
-                                                                    null == (n = e.onInteraction) || n.call(e),
+                                                                    (null == (n = e.onInteraction) || n.call(e),
                                                                         h.default.track(C.rMx.GDM_EDIT_INTERACTED, {
                                                                             action: 'open',
                                                                             channel_id: t.id,
                                                                             channel_type: C.d4z.GROUP_DM,
                                                                             location: f.Z.GROUP_DM_CONTEXT_MENU,
                                                                             location_stack: [...X, f.Z.GROUP_DM_CONTEXT_MENU_CHANGE_ICON]
-                                                                        });
+                                                                        }));
                                                                 },
                                                                 ref: n
                                                             }),
@@ -160,14 +160,14 @@ let S = (0, c.Z)(
                                             id: 'remove-icon',
                                             label: m.intl.string(m.t['uY+Nk5']),
                                             action: () => {
-                                                h.default.track(C.rMx.GDM_EDIT_INTERACTED, {
+                                                (h.default.track(C.rMx.GDM_EDIT_INTERACTED, {
                                                     action: 'open',
                                                     channel_id: t.id,
                                                     channel_type: C.d4z.GROUP_DM,
                                                     location: f.Z.GROUP_DM_CONTEXT_MENU,
                                                     location_stack: [...X, f.Z.GROUP_DM_CONTEXT_MENU_REMOVE_ICON]
                                                 }),
-                                                    o.Z.setIcon(t.id, null);
+                                                    o.Z.setIcon(t.id, null));
                                             }
                                         })
                                       : null,

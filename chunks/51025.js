@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     A1: () => N,
     LO: () => y,
     S1: () => E,
@@ -13,7 +13,7 @@ n.d(t, {
     wO: () => A,
     wi: () => R
 }),
-    n(415506);
+    n(415506));
 var r = n(544891),
     i = n(570140),
     a = n(812206),
@@ -54,7 +54,7 @@ function b() {
 }
 function y(e) {
     let { application: t, branchId: n, buildId: r, manifestIds: a, installationPath: o, analyticsLocation: s } = e;
-    _.Z.setTargetManifest({
+    (_.Z.setTargetManifest({
         applicationId: t.id,
         applicationName: t.name,
         applicationIcon: t.icon,
@@ -74,10 +74,10 @@ function y(e) {
             application_name: t.name,
             sku_id: t.primarySkuId,
             location: s
-        });
+        }));
 }
 function O(e, t, n) {
-    (0, p.l)(e.id, t).then(() => {
+    ((0, p.l)(e.id, t).then(() => {
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_REPAIR',
             applicationId: e.id,
@@ -89,7 +89,7 @@ function O(e, t, n) {
             application_name: e.name,
             sku_id: e.primarySkuId,
             location: n
-        });
+        }));
 }
 function v(e, t, n, r) {
     if (o.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;
@@ -107,17 +107,17 @@ function v(e, t, n, r) {
 }
 function I(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-    v(e, t, n, r),
+    (v(e, t, n, r),
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_UPDATE',
             applicationId: e.id,
             branchId: t,
             automatic: a
-        });
+        }));
 }
 function T(e, t, n) {
     let r = a.Z.getApplication(e);
-    null != r &&
+    (null != r &&
         (f.Z.removeShortcuts(r.name),
         u.default.track(h.rMx.LIBRARY_UNINSTALL_INITIATED, {
             application_id: r.id,
@@ -130,7 +130,7 @@ function T(e, t, n) {
             type: 'DISPATCH_APPLICATION_UNINSTALL',
             applicationId: e,
             branchId: t
-        });
+        }));
 }
 function S() {
     _.Z.resume();
@@ -146,12 +146,12 @@ function N(e, t) {
     });
 }
 function C(e, t) {
-    _.Z.cancel(e, t),
+    (_.Z.cancel(e, t),
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_CANCEL',
             applicationId: e,
             branchId: t
-        });
+        }));
 }
 function R(e, t) {
     i.Z.dispatch({
@@ -166,7 +166,7 @@ function P(e, t) {
 }
 function w(e, t) {
     let i = a.Z.getApplication(e);
-    r.tn.post({
+    (r.tn.post({
         url: h.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
         oldFormErrors: !0,
         rejectWithError: !0
@@ -188,5 +188,5 @@ function w(e, t) {
                             isUserAvatar: !1
                         }
                     );
-                }));
+                })));
 }

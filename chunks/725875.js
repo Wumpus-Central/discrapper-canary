@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(539854), n(388685), n(642613);
+(n.d(t, { Z: () => g }), n(539854), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -35,7 +35,7 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 x() && (e === (null == f ? void 0 : f.id) ? o.Z.stopEditingWebhook() : o.Z.startEditingWebhook(e));
             },
@@ -106,7 +106,7 @@ function g(e) {
                 lastCreatedWebhookId: g,
                 editedWebhook: f,
                 errors: h,
-                toggleWebhookExpand: y
+                toggleWebhookExpand: v
             });
         })
     });

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Rj: () => l,
     Ws: () => c
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(979554),
     a = n(388032);
@@ -35,11 +35,11 @@ class s {
     sortByTypes(e) {
         return e.reduce((e, t) => {
             let n = e.get(t.type);
-            return null != n ? n.push(t) : e.set(t.type, [t]), e;
+            return (null != n ? n.push(t) : e.set(t.type, [t]), e);
         }, new Map());
     }
     constructor(e) {
-        o(this, 'itemsByTypes', void 0), (this.itemsByTypes = this.sortByTypes(e));
+        (o(this, 'itemsByTypes', void 0), (this.itemsByTypes = this.sortByTypes(e)));
     }
 }
 let l = (e) => {
@@ -54,7 +54,7 @@ let l = (e) => {
             n = a.intl.string(a.t.wR5wOj);
         if (null != e.bundledProducts) {
             var r, i;
-            e.bundledProducts.length > 0 && (t = null == (r = e.bundledProducts[0]) ? void 0 : r.name), e.bundledProducts.length > 1 && (n = null == (i = e.bundledProducts[1]) ? void 0 : i.name);
+            (e.bundledProducts.length > 0 && (t = null == (r = e.bundledProducts[0]) ? void 0 : r.name), e.bundledProducts.length > 1 && (n = null == (i = e.bundledProducts[1]) ? void 0 : i.name));
         }
         return {
             itemOneName: t,

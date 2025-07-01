@@ -28,7 +28,7 @@ function g(e) {
     );
     var t,
         n = this.options;
-    n.raw && n.windowBits > 0 ? (n.windowBits = -n.windowBits) : n.gzip && n.windowBits > 0 && n.windowBits < 16 && (n.windowBits += 16), (this.err = 0), (this.msg = ''), (this.ended = !1), (this.chunks = []), (this.strm = new s()), (this.strm.avail_out = 0);
+    (n.raw && n.windowBits > 0 ? (n.windowBits = -n.windowBits) : n.gzip && n.windowBits > 0 && n.windowBits < 16 && (n.windowBits += 16), (this.err = 0), (this.msg = ''), (this.ended = !1), (this.chunks = []), (this.strm = new s()), (this.strm.avail_out = 0));
     var c = r.deflateInit2(this.strm, n.level, n.method, n.windowBits, n.memLevel, n.strategy);
     if (c !== d) throw Error(o[c]);
     if ((n.header && r.deflateSetHeader(this.strm, n.header), n.dictionary)) {
@@ -42,20 +42,20 @@ function E(e, t) {
     return n.result;
 }
 function b(e, t) {
-    return ((t = t || {}).raw = !0), E(e, t);
+    return (((t = t || {}).raw = !0), E(e, t));
 }
 function y(e, t) {
-    return ((t = t || {}).gzip = !0), E(e, t);
+    return (((t = t || {}).gzip = !0), E(e, t));
 }
-(g.prototype.push = function (e, t) {
+((g.prototype.push = function (e, t) {
     var n,
         o,
         s = this.strm,
         p = this.options.chunkSize;
     if (this.ended) return !1;
-    (o = t === ~~t ? t : !0 === t ? u : c), 'string' == typeof e ? (s.input = a.string2buf(e)) : '[object ArrayBuffer]' === l.call(e) ? (s.input = new Uint8Array(e)) : (s.input = e), (s.next_in = 0), (s.avail_in = s.input.length);
+    ((o = t === ~~t ? t : !0 === t ? u : c), 'string' == typeof e ? (s.input = a.string2buf(e)) : '[object ArrayBuffer]' === l.call(e) ? (s.input = new Uint8Array(e)) : (s.input = e), (s.next_in = 0), (s.avail_in = s.input.length));
     do {
-        if ((0 === s.avail_out && ((s.output = new i.Buf8(p)), (s.next_out = 0), (s.avail_out = p)), (n = r.deflate(s, o)) !== f && n !== d)) return this.onEnd(n), (this.ended = !0), !1;
+        if ((0 === s.avail_out && ((s.output = new i.Buf8(p)), (s.next_out = 0), (s.avail_out = p)), (n = r.deflate(s, o)) !== f && n !== d)) return (this.onEnd(n), (this.ended = !0), !1);
         (0 === s.avail_out || (0 === s.avail_in && (o === u || o === _))) && ('string' === this.options.to ? this.onData(a.buf2binstring(i.shrinkBuf(s.output, s.next_out))) : this.onData(i.shrinkBuf(s.output, s.next_out)));
     } while ((s.avail_in > 0 || 0 === s.avail_out) && n !== f);
     return o === u ? ((n = r.deflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === d) : (o === _ && (this.onEnd(d), (s.avail_out = 0)), !0);
@@ -64,9 +64,9 @@ function y(e, t) {
         this.chunks.push(e);
     }),
     (g.prototype.onEnd = function (e) {
-        e === d && ('string' === this.options.to ? (this.result = this.chunks.join('')) : (this.result = i.flattenChunks(this.chunks))), (this.chunks = []), (this.err = e), (this.msg = this.strm.msg);
+        (e === d && ('string' === this.options.to ? (this.result = this.chunks.join('')) : (this.result = i.flattenChunks(this.chunks))), (this.chunks = []), (this.err = e), (this.msg = this.strm.msg));
     }),
     (t.Deflate = g),
     (t.deflate = E),
     (t.deflateRaw = b),
-    (t.gzip = y);
+    (t.gzip = y));

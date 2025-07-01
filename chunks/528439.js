@@ -1,11 +1,11 @@
-r.d(t, {
+(r.d(t, {
     $0: () => f,
     Tm: () => p,
     ZP: () => g,
     oT: () => m
 }),
     r(388685),
-    r(539854);
+    r(539854));
 var n,
     i = r(73800),
     l = r(399606),
@@ -27,7 +27,7 @@ let p = { id: 'None' },
             let e = (0, c.yn)(r, n).reduce(
                 (e, n) => {
                     let i = r.get(n.skuId);
-                    return (0, c.qS)(i) ? e.premium_purchase.push(n) : null != i ? e.purchase.push(n) : !t && (0, c.G1)(f.get(n.skuId)) ? e.premium_purchase.push(n) : e.preview.push(n), e;
+                    return ((0, c.qS)(i) ? e.premium_purchase.push(n) : null != i ? e.purchase.push(n) : !t && (0, c.G1)(f.get(n.skuId)) ? e.premium_purchase.push(n) : e.preview.push(n), e);
                 },
                 {
                     purchase: [],

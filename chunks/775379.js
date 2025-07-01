@@ -1,4 +1,4 @@
-r.d(t, { S: () => l }), r(388685);
+(r.d(t, { S: () => l }), r(388685));
 var n = r(73800);
 class l extends n.PureComponent {
     static getDerivedStateFromError(e) {
@@ -12,7 +12,7 @@ class l extends n.PureComponent {
     }
     constructor(...e) {
         var t, r;
-        super(...e),
+        (super(...e),
             (r = { error: null }),
             (t = 'state') in this
                 ? Object.defineProperty(this, t, {
@@ -21,6 +21,6 @@ class l extends n.PureComponent {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = r);
+                : (this[t] = r));
     }
 }

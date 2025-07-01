@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => Z }), n(388685);
+(n.r(t), n.d(t, { default: () => Z }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -40,7 +40,7 @@ let w = (e) => {
                 let e = (e) => {
                     e.key === N.mR.Escape && r();
                 };
-                return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
+                return (window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e));
             }, [n, a, r]),
             t
         );
@@ -79,26 +79,26 @@ let w = (e) => {
             }),
             [U, G] = l.useState(),
             z = l.useCallback((e, t) => {
-                G(e), W(t);
+                (G(e), W(t));
             }, []),
             { selectedTab: q, transitionState: Y, transitionToTab: K } = (0, j.B)(N, n, t),
             { handleScroll: $ } = (0, g.z)(N, a, q);
-        (0, x.q3)(a, q, V, Y, U),
+        ((0, x.q3)(a, q, V, Y, U),
             (0, x.EB)(q, c),
             (0, L.Z)(),
             l.useEffect(() => {
                 t || (0, d.Y)(B.Z5c.COLLECTIBLES_SHOP);
-            }, [t]);
+            }, [t]));
         let X = (0, s.e7)([C.Z], () => C.Z.getLayers().includes(B.S9g.COLLECTIBLES_SHOP)),
             J = l.useRef(null),
             Q = l.useRef(null);
-        (0, u.Tbt)(J),
+        ((0, u.Tbt)(J),
             l.useEffect(() => {
                 if (!t) {
                     var e;
                     null == (e = Q.current) || e.focus();
                 }
-            }, [t]);
+            }, [t]));
         let { analyticsLocations: ee } = (0, x.MV)(q);
         return (0, r.jsx)(f.Gt, {
             value: ee,

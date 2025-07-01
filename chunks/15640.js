@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     V: () => u,
     a: () => d
 }),
-    n(388685);
+    n(388685));
 var r = n(442837),
     i = n(710845),
     a = n(853872),
@@ -23,8 +23,8 @@ function d() {
         d = n.defaultPaymentSourceId,
         f = r.isLoadedForSKUs(t),
         _ = null == (e = i.getPremiumTypeSubscription()) ? void 0 : e.paymentSourceId;
-    if (null != _ && !r.hasPaymentSourceForSKUIds(_, t)) return c('subscription payment source '.concat(_, ' not loaded for ').concat(t)), !1;
-    if (null != d && !r.hasPaymentSourceForSKUIds(d, t)) return c('default payment source '.concat(d, ' not loaded for ').concat(t)), !1;
-    for (let e of u) if (!r.hasPaymentSourceForSKUIds(e, t)) return c('payment source '.concat(e, ' not loaded for ').concat(t)), !1;
+    if (null != _ && !r.hasPaymentSourceForSKUIds(_, t)) return (c('subscription payment source '.concat(_, ' not loaded for ').concat(t)), !1);
+    if (null != d && !r.hasPaymentSourceForSKUIds(d, t)) return (c('default payment source '.concat(d, ' not loaded for ').concat(t)), !1);
+    for (let e of u) if (!r.hasPaymentSourceForSKUIds(e, t)) return (c('payment source '.concat(e, ' not loaded for ').concat(t)), !1);
     return f;
 }

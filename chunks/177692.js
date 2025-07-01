@@ -1,4 +1,4 @@
-n.d(t, { Mn: () => d }), n(539854), n(415506);
+(n.d(t, { Mn: () => d }), n(539854), n(415506));
 var r = n(259443),
     i = n(668757),
     a = n(511495),
@@ -12,7 +12,7 @@ async function d() {
         try {
             await (0, a.e)();
             let e = (0, i.rs)(6, 7);
-            c.info('The answer for life the universe and everything is:', e), f();
+            (c.info('The answer for life the universe and everything is:', e), f());
         } catch (e) {
             p(e);
         }
@@ -21,13 +21,13 @@ async function d() {
 }
 function f() {
     let e = [];
-    s.o.forEach((t) => {
+    (s.o.forEach((t) => {
         t.cachedIsEnabled() && e.push(t.feature);
     }),
         o.default.track(l.rMx.LIBDISCORE_LOADED, {
             success: !0,
             experimental_features: e
-        });
+        }));
 }
 function _(e) {
     let t = '',

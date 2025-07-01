@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(415506), n(35282);
+(n.d(t, { Z: () => g }), n(415506), n(35282));
 var r = n(570140),
     i = n(846027),
     a = n(872810),
@@ -26,7 +26,7 @@ function h(e, t, n) {
 }
 class m {
     _onGameDetectionUpdate(e) {
-        (this.applications = e.map((e) => {
+        ((this.applications = e.map((e) => {
             var t, n;
             return {
                 applicationId: null != (t = e.id) ? t : null,
@@ -36,13 +36,13 @@ class m {
                 executableName: e.exeName
             };
         })),
-            'verbatim-source' !== this.mode && this.director.onDetectionUpdate(this.applications);
+            'verbatim-source' !== this.mode && this.director.onDetectionUpdate(this.applications));
     }
     _onStreamApplication(e, t, n) {
-        (this.mode = 'application'), (this.streamKey = e), this.director.onStreamBegin(this.applications, t, n);
+        ((this.mode = 'application'), (this.streamKey = e), this.director.onStreamBegin(this.applications, t, n));
     }
     _onStreamDirectSource(e, t, n, r) {
-        (this.mode = 'verbatim-source'),
+        ((this.mode = 'verbatim-source'),
             (this.streamKey = e),
             (this.director.sound = null == r || r),
             this._onDirectorAction({
@@ -50,7 +50,7 @@ class m {
                 sourceId: t,
                 audioSourceId: n,
                 sound: r
-            });
+            }));
     }
     _onStreamEnd(e) {
         if (this.streamKey === e)
@@ -142,7 +142,7 @@ class m {
         }
     }
     constructor() {
-        h(this, 'director', void 0),
+        (h(this, 'director', void 0),
             h(this, 'applications', void 0),
             h(this, 'streamKey', void 0),
             h(this, 'mode', void 0),
@@ -179,8 +179,8 @@ class m {
             r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
                 var t;
                 let { settings: n } = e;
-                (null == n ? void 0 : n.context) === p.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded(), (null == n || null == (t = n.desktopSettings) ? void 0 : t.sound) != null && (this.director.sound = n.desktopSettings.sound);
-            });
+                ((null == n ? void 0 : n.context) === p.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded(), (null == n || null == (t = n.desktopSettings) ? void 0 : t.sound) != null && (this.director.sound = n.desktopSettings.sound));
+            }));
     }
 }
 let g = {

@@ -14,7 +14,7 @@ function l(e) {
         r = Object.keys(s);
     r.forEach((e) => {
         let r = s[e];
-        (n[e] = t[e]), (t[e] = r);
+        ((n[e] = t[e]), (t[e] = r));
     });
     try {
         return e();

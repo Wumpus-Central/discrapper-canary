@@ -1,4 +1,4 @@
-n.d(t, { default: () => k }), n(388685);
+(n.d(t, { default: () => k }), n(388685));
 var r = n(255367),
     a = n(73800),
     l = n(120356),
@@ -112,7 +112,7 @@ function k(e) {
         en = a.useRef(R.length),
         er = T === s.C.DEFAULT,
         ea = a.useCallback(() => {
-            et(), l();
+            (et(), l());
         }, [l, et]),
         el = a.useCallback(() => {
             if (!(0, p.D$)(N, R, T))
@@ -129,7 +129,7 @@ function k(e) {
                 });
             ea();
         }, [ea, R, N, T]);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         (0, c.oav)(
             y.$z,
             (e) => {
@@ -140,7 +140,7 @@ function k(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -148,7 +148,7 @@ function k(e) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -156,8 +156,8 @@ function k(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -197,7 +197,7 @@ function k(e) {
                 }
                 ee(!1);
             }
-        }, [V, R, $, ee, A, P]);
+        }, [V, R, $, ee, A, P]));
     let eo = () => {
             n === c.Dvm.ENTERED && J();
         },

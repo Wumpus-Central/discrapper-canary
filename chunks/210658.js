@@ -16,11 +16,11 @@ var n = r(73800),
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })();
 function u(e, t) {
@@ -39,13 +39,13 @@ let c = (function (e) {
                 t && 'function' == typeof n.props.onChange && n.props.onChange(t, e);
             }),
             (n.handleMouseDown = function (e) {
-                n.handleChange(e), window.addEventListener('mousemove', n.handleChange), window.addEventListener('mouseup', n.handleMouseUp);
+                (n.handleChange(e), window.addEventListener('mousemove', n.handleChange), window.addEventListener('mouseup', n.handleMouseUp));
             }),
             (n.handleMouseUp = function () {
                 n.unbindEventListeners();
             }),
             (n.unbindEventListeners = function () {
-                window.removeEventListener('mousemove', n.handleChange), window.removeEventListener('mouseup', n.handleMouseUp);
+                (window.removeEventListener('mousemove', n.handleChange), window.removeEventListener('mouseup', n.handleMouseUp));
             }),
             u(n, r)
         );

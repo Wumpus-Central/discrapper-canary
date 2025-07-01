@@ -15,7 +15,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -23,7 +23,7 @@ function f(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -31,8 +31,8 @@ function f(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -83,7 +83,7 @@ function y(e) {
                     y();
                 },
                 onNotificationClick: (e, t) => {
-                    O('unlock'), o.Z.updateNotificationStatus(t);
+                    (O('unlock'), o.Z.updateNotificationStatus(t));
                     let c = l.default.isOverlayOOPEnabledForPid((0, a.getPID)());
                     if ((c ? o.Z.setInputLocked(!1, (0, a.getPID)()) : o.Z.setInstanceLocked(!1), null == s.default.getCurrentUser())) return;
                     let u = c ? { contextKey: r.u1M } : void 0;
@@ -119,7 +119,7 @@ function y(e) {
                     s();
                 },
                 onNotificationClick: (e, t) => {
-                    p('unlock'), o.Z.updateNotificationStatus(t);
+                    (p('unlock'), o.Z.updateNotificationStatus(t));
                     let s = l.default.isOverlayOOPEnabledForPid((0, a.getPID)());
                     s ? o.Z.setInputLocked(!1, (0, a.getPID)()) : o.Z.setInstanceLocked(!1);
                     let c = s ? { contextKey: r.u1M } : void 0;

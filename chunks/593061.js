@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(544891),
@@ -31,7 +31,7 @@ function g(e) {
                 let n = await m(t.id);
                 s(n);
                 let i = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
-                window.open(i, '_blank'), g(null);
+                (window.open(i, '_blank'), g(null));
             } catch (e) {
                 var n;
                 g(null == (n = e.body) ? void 0 : n.message);
@@ -96,7 +96,7 @@ function g(e) {
                   children: (0, i.jsx)(l.eee, {
                       onClick: () => {
                           var e;
-                          (e = t.paymentSource), a.Z.open(t, e);
+                          ((e = t.paymentSource), a.Z.open(t, e));
                       },
                       children: d.intl.string(d.t.onRIxc)
                   })

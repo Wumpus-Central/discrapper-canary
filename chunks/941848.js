@@ -1,4 +1,4 @@
-n.d(e, { Z: () => p }), n(388685);
+(n.d(e, { Z: () => p }), n(388685));
 var a = n(255367),
     r = n(73800),
     i = n(481060),
@@ -9,7 +9,7 @@ function c(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             a = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -17,7 +17,7 @@ function c(t) {
             )),
             a.forEach(function (e) {
                 var a;
-                (a = n[e]),
+                ((a = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: a,
@@ -25,8 +25,8 @@ function c(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = a);
-            });
+                        : (t[e] = a));
+            }));
     }
     return t;
 }

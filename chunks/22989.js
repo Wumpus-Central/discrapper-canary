@@ -1,4 +1,4 @@
-n.d(t, { default: () => j }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+(n.d(t, { default: () => j }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
 var a = n(255367),
     r = n(73800),
     l = n(990547),
@@ -23,23 +23,23 @@ function j(e) {
         [L, T] = r.useState(null),
         [F, D] = r.useState(null),
         { analyticsLocations: I } = (0, c.ZP)(u.Z.CLIPS_EDITOR);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         !(async function () {
             let e;
             try {
                 e = await s.Z.clips.loadClip(P.filepath);
             } catch (e) {
-                N(),
+                (N(),
                     o.Z.show({
                         title: x.intl.string(x.t.yjoSOD),
                         body: x.intl.string(x.t.JmYczc)
-                    });
+                    }));
                 return;
             }
             let t = await (0, m.w)(e.data.buffer),
                 n = URL.createObjectURL(new Blob([t], { type: 'audio/mp4' })),
                 a = URL.createObjectURL(new Blob([e.data], { type: 'video/mp4' }));
-            D(n), T(a);
+            (D(n), T(a));
         })();
     }, [P.filepath, N]),
         r.useEffect(
@@ -53,7 +53,7 @@ function j(e) {
                 null != F && URL.revokeObjectURL(F);
             },
             [F]
-        );
+        ));
     let [A, Z] = r.useState(null == (_ = null == (t = P.editMetadata) ? void 0 : t.voiceAudio) || _),
         [B, M] = r.useState(null == (w = null == (n = P.editMetadata) ? void 0 : n.applicationAudio) || w),
         [z, H] = r.useState({
@@ -83,14 +83,14 @@ function j(e) {
     r.useEffect(() => {
         async function e() {
             let e = {};
-            null != X && (e = { thumbnail: await (0, p.R)(X, V.current.editMetadata.start) }),
+            (null != X && (e = { thumbnail: await (0, p.R)(X, V.current.editMetadata.start) }),
                 (0, d.Tm)(
                     P.id,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 a = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (a = a.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -98,7 +98,7 @@ function j(e) {
                                 )),
                                 a.forEach(function (t) {
                                     var a;
-                                    (a = n[t]),
+                                    ((a = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: a,
@@ -106,12 +106,12 @@ function j(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = a);
-                                });
+                                            : (e[t] = a));
+                                }));
                         }
                         return e;
                     })({}, V.current, e)
-                );
+                ));
         }
         return () => {
             e();

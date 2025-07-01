@@ -1,4 +1,4 @@
-n.d(t, { default: () => v }), n(388685);
+(n.d(t, { default: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(831209),
@@ -20,7 +20,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -36,12 +36,12 @@ function O(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,22 +59,22 @@ function y(e, t) {
         e
     );
 }
-function v(e) {
-    let { guildId: t, transitionState: n, onClose: v, analyticsData: _ } = e,
+function y(e) {
+    let { guildId: t, transitionState: n, onClose: y, analyticsData: _ } = e,
         C = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         N = !!(null == C ? void 0 : C.hasFeature(h.oNc.INVITES_DISABLED)),
         [I] = i.useState(!1),
         [S, E] = i.useState(f.Fl),
-        w = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
-        P = (0, p.BT)(C),
-        T = (0, m.SG)(w) || N,
-        Z = (0, m.sN)(w),
-        [k, A] = i.useState(T),
-        [R, D] = i.useState(Z),
+        T = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
+        w = (0, p.BT)(C),
+        P = (0, m.SG)(T) || N,
+        Z = (0, m.sN)(T),
+        [k, A] = i.useState(P),
+        [D, R] = i.useState(Z),
         [L, M] = i.useState(!1),
-        B = k !== T || R !== Z || L,
-        U = N && !P;
-    if (null == C) return v(), null;
+        B = k !== P || D !== Z || L,
+        U = N && !w;
+    if (null == C) return (y(), null);
     function W() {
         A((e) => !e);
     }
@@ -109,7 +109,7 @@ function v(e) {
                             placeholder: x.intl.string(x.t.vKYZzc),
                             options: (0, f.c1)(),
                             select: (e) => {
-                                E(e), M(!0);
+                                (E(e), M(!0));
                             },
                             isSelected: (e) => e === S,
                             serialize: (e) => String(e)
@@ -138,7 +138,7 @@ function v(e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             'div',
-                                            y(O({}, e), {
+                                            v(O({}, e), {
                                                 children: (0, r.jsx)(a.rsf, {
                                                     className: j.toggle,
                                                     onChange: W,
@@ -171,9 +171,9 @@ function v(e) {
                                 (0, r.jsx)(a.rsf, {
                                     className: j.toggle,
                                     onChange: function () {
-                                        D((e) => !e);
+                                        R((e) => !e);
                                     },
-                                    checked: R
+                                    checked: D
                                 })
                             ]
                         })
@@ -184,18 +184,18 @@ function v(e) {
                 children: [
                     (0, r.jsx)(a.zxk, {
                         onClick: () => {
-                            (T || Z) && !k && !R ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, y(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, k, R, S);
+                            (P || Z) && !k && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, v(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, k, D, S);
                             let { source: e, alertType: n, messageId: i } = _;
-                            d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+                            (d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                 guild_id: t,
                                 source: e,
                                 raid_alert_id: i,
                                 raid_alert_type: n,
-                                intervention_type_enabled: (0, m.sO)(k, R),
-                                intervention_type_disabled: (0, m.lk)(k, R),
+                                intervention_type_enabled: (0, m.sO)(k, D),
+                                intervention_type_disabled: (0, m.lk)(k, D),
                                 duration: 60 * S
                             }),
-                                v();
+                                y());
                         },
                         color: a.zxk.Colors.BRAND,
                         look: a.zxk.Looks.FILLED,
@@ -204,7 +204,7 @@ function v(e) {
                         children: x.intl.string(x.t['pwm/z8'])
                     }),
                     (0, r.jsx)(a.zxk, {
-                        onClick: v,
+                        onClick: y,
                         color: a.zxk.Colors.PRIMARY,
                         look: a.zxk.Looks.LINK,
                         disabled: I,

@@ -6,7 +6,7 @@ var a = (function () {
             t,
             a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         if (!(this instanceof r)) throw TypeError('Cannot call a class as a function');
-        (t = void 0),
+        ((t = void 0),
             (e = 'items') in this
                 ? Object.defineProperty(this, e, {
                       value: t,
@@ -15,14 +15,14 @@ var a = (function () {
                       writable: !0
                   })
                 : (this[e] = t),
-            (this.items = a);
+            (this.items = a));
     }
     return (
         (e = [
             {
                 key: 'add',
                 value: function (e) {
-                    return !1 === this.has(e) && this.items.push(e), this;
+                    return (!1 === this.has(e) && this.items.push(e), this);
                 }
             },
             {
@@ -68,7 +68,7 @@ var a = (function () {
         (function (e, r) {
             for (var t = 0; t < r.length; t++) {
                 var a = r[t];
-                (a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a);
+                ((a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a));
             }
         })(r.prototype, e),
         r

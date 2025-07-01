@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         loadVideoQuestModal: () => B,
         maybeShowSurveyForQuest: () => G,
@@ -11,7 +11,7 @@ n.r(t),
         openQuestsNitroRewardModal: () => L,
         openQuestsRewardCodeModal: () => D,
         openVideoQuestModal: () => V
-    });
+    }));
 var r = n(255367);
 n(73800);
 var i = n(772848),
@@ -53,7 +53,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -61,7 +61,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -69,11 +69,11 @@ function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -166,7 +166,7 @@ function M(e, t, i) {
     });
 }
 function j(e, t) {
-    (0, h._3)({
+    ((0, h._3)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -184,7 +184,7 @@ function j(e, t) {
                         quest: e
                     })
                 );
-        });
+        }));
 }
 function U() {
     let { fromContent: e, questId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -195,18 +195,18 @@ function U() {
         utmContentCurrent: Object.keys(m.jn).find((t) => m.jn[t] === e)
     });
     let n = null != t ? '#'.concat(t) : '';
-    c.Z.setState({ selectedTab: S.GlobalDiscoveryTab.QUESTS }), (0, l.xf)(), (0, d.uL)(T.Z5c.QUEST_HOME + n);
+    (c.Z.setState({ selectedTab: S.GlobalDiscoveryTab.QUESTS }), (0, l.xf)(), (0, d.uL)(T.Z5c.QUEST_HOME + n));
 }
 function G(e) {
     let t = (0, b.T)({ quest: e }),
         n = { location: I.dr.QUESTS_BAR };
     if (!(0, E.j)(n)) return;
     let r = (0, y.Z)({ entityName: e.config.messages.gameTitle });
-    t.log('Showing survey '.concat(r.id)),
+    (t.log('Showing survey '.concat(r.id)),
         (0, O.C)({
             questId: e.id,
             survey: r
-        });
+        }));
 }
 function B() {
     return Promise.all([n.e('66816'), n.e('32249'), n.e('58914')]).then(n.bind(n, 536687));
@@ -260,7 +260,7 @@ function F(e) {
 function Z(e) {
     let t = F(e),
         n = (0, a.zS)(t);
-    null != n &&
+    (null != n &&
         _.default.track(T.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
@@ -272,5 +272,5 @@ function Z(e) {
                     pathname: T.Z5c.QUEST_HOME,
                     hash: e
                 });
-        });
+        }));
 }

@@ -41,13 +41,13 @@ function d(t) {
 function l(t) {
     return 'object' == typeof t && null !== t && 'function' == typeof t.toJSDate;
 }
-Object.defineProperty(e, '__esModule', { value: !0 }),
+(Object.defineProperty(e, '__esModule', { value: !0 }),
     (e.toDurationString = e.toJSON = e.isRRule = e.isMomentDuration = e.isLuxonDate = e.isDayjs = e.isMomentTZ = e.isMoment = e.toDate = e.checkDate = e.checkEnum = e.checkNameAndMail = e.generateCustomAttributes = e.addOrGetCustomAttributes = e.foldLines = e.escape = e.formatDateTZ = e.formatDate = void 0),
     (e.formatDate = r),
     (e.formatDateTZ = function (t, e, a, i) {
         let n = '',
             s = (null == i ? void 0 : i.floating) || !1;
-        return (null == i ? void 0 : i.timezone) && ((n = ';TZID=' + i.timezone), (s = !0)), e + n + ':' + r(t, a, !1, s);
+        return ((null == i ? void 0 : i.timezone) && ((n = ';TZID=' + i.timezone), (s = !0)), e + n + ':' + r(t, a, !1, s));
     }),
     (e.escape = n),
     (e.foldLines = function (t) {
@@ -60,7 +60,7 @@ Object.defineProperty(e, '__esModule', { value: !0 }),
                     let n = t.charAt(r);
                     n >= '\uD800' && n <= '\uDBFF' && (n += t.charAt(++r));
                     let s = i.from(n).length;
-                    (a += s) > 74 && ((e += '\r\n '), (a = s)), (e += n);
+                    ((a += s) > 74 && ((e += '\r\n '), (a = s)), (e += n));
                 }
                 return e;
             })
@@ -150,5 +150,5 @@ Object.defineProperty(e, '__esModule', { value: !0 }),
     }),
     (e.toDurationString = function (t) {
         let e = '';
-        return t < 0 && ((e = '-'), (t *= -1)), (e += 'P'), t >= 86400 && ((e += Math.floor(t / 86400) + 'D'), (t %= 86400)), (!t && e.length > 1) || ((e += 'T'), t >= 3600 && ((e += Math.floor(t / 3600) + 'H'), (t %= 3600)), t >= 60 && ((e += Math.floor(t / 60) + 'M'), (t %= 60)), t > 0 ? (e += t + 'S') : e.length <= 2 && (e += '0S')), e;
-    });
+        return (t < 0 && ((e = '-'), (t *= -1)), (e += 'P'), t >= 86400 && ((e += Math.floor(t / 86400) + 'D'), (t %= 86400)), (!t && e.length > 1) || ((e += 'T'), t >= 3600 && ((e += Math.floor(t / 3600) + 'H'), (t %= 3600)), t >= 60 && ((e += Math.floor(t / 60) + 'M'), (t %= 60)), t > 0 ? (e += t + 'S') : e.length <= 2 && (e += '0S')), e);
+    }));

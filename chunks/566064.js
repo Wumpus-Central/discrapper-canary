@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(35282);
+(n.d(t, { Z: () => _ }), n(388685), n(35282));
 var r = n(73800),
     i = n(611144),
     a = n(536895),
@@ -45,12 +45,12 @@ function f(e) {
                 new o.$o((e) => {
                     let [t, n] = e.split(',').map(Number);
                     return () => {
-                        S(!0),
+                        (S(!0),
                             g({
                                 type: i.s.SET_FOCUSED_POSITION,
                                 x: t,
                                 y: n
-                            });
+                            }));
                     };
                 })
         );
@@ -104,17 +104,17 @@ function f(e) {
     let M = r.useCallback((e) => {
         v.current && null == e && k(!0);
     }, []);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         T && A && null != I && (w(I), N(!1));
     }, [A, I]),
         r.useEffect(() => {
             T && (C || D(f, _), R(!1));
-        }, [f, _]);
+        }, [f, _]));
     let j = r.useCallback(
             (e) => {
                 if (!v.current) return;
                 if (!O && s.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
-                    e.preventDefault(), e.stopPropagation(), L();
+                    (e.preventDefault(), e.stopPropagation(), L());
                     return;
                 }
                 let t = l(e);
@@ -127,11 +127,11 @@ function f(e) {
                     case a.Us.NAVIGATE_INLINE_END:
                     case a.Us.NAVIGATE_START:
                     case a.Us.NAVIGATE_END:
-                        0 !== n.length && (0 !== f || 0 !== _ || t !== a.Us.NAVIGATE_LEFT) && (e.preventDefault(), e.stopPropagation()), g({ type: t });
+                        (0 !== n.length && (0 !== f || 0 !== _ || t !== a.Us.NAVIGATE_LEFT) && (e.preventDefault(), e.stopPropagation()), g({ type: t }));
                         return;
                     case a.Us.SELECT_FOCUSED_ITEM:
                         if ((y && !d(I)) || e.repeat) return;
-                        e.preventDefault(), e.stopPropagation(), g({ type: t }), null != p ? p(f, _, e) : null != I && I.click();
+                        (e.preventDefault(), e.stopPropagation(), g({ type: t }), null != p ? p(f, _, e) : null != I && I.click());
                 }
             },
             [L, g, y, I, p, f, _]
@@ -167,7 +167,7 @@ function f(e) {
                     tabIndex: E && e === f && n === _ ? 0 : -1,
                     onFocus: P.get(''.concat(e, ',').concat(n))
                 };
-                return e === f && n === _ && (r.ref = M), r;
+                return (e === f && n === _ && (r.ref = M), r);
             },
             [t, E, f, _, P, M]
         ),
@@ -193,7 +193,7 @@ function _(e) {
         g = r.useCallback(
             (e, t) => {
                 let n = (0, i.Z)(e, t);
-                return null != p && p(e, n, t), n;
+                return (null != p && p(e, n, t), n);
             },
             [p]
         ),

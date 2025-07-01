@@ -1,4 +1,4 @@
-t.d(l, { Z: () => d }), t(704826), t(35282);
+(t.d(l, { Z: () => d }), t(704826), t(35282));
 var n = t(255367);
 t(73800);
 var r = t(120356),
@@ -17,7 +17,7 @@ function d(e) {
         d = null;
     try {
         let e = s.parse(t.replace(/intl-[^/]+\//, ''), !0);
-        (r = e.host), (d = e.pathname);
+        ((r = e.host), (d = e.pathname));
     } catch (e) {
         return null;
     }

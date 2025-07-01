@@ -16,7 +16,7 @@ function f(e) {
     let { user: t } = e,
         s = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         f = r.useCallback(() => {
-            l()(void 0 !== s, 'User must be logged in to accept a link request'),
+            (l()(void 0 !== s, 'User must be logged in to accept a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('50872').then(n.bind(n, 442673));
                     return (n) => {
@@ -27,7 +27,7 @@ function f(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function f(e) {
                                         )),
                                         i.forEach(function (t) {
                                             var i;
-                                            (i = n[t]),
+                                            ((i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: i,
@@ -43,8 +43,8 @@ function f(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = i);
-                                        });
+                                                    : (e[t] = i));
+                                        }));
                                 }
                                 return e;
                             })({}, n)),
@@ -68,7 +68,7 @@ function f(e) {
                             r)
                         );
                     };
-                });
+                }));
         }, [s, t]);
     return (0, i.jsxs)('div', {
         className: h.container,

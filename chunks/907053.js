@@ -1,4 +1,4 @@
-e.d(n, { default: () => u }), e(388685), e(457542), e(953529);
+(e.d(n, { default: () => u }), e(388685), e(457542), e(953529));
 var s = e(255367),
     i = e(73800),
     l = e(544891),
@@ -39,7 +39,7 @@ function u(t) {
         [p, g] = i.useState(!1),
         [C, v] = i.useState('DOMAIN'),
         R = () => {
-            g(!0),
+            (g(!0),
                 _(null),
                 l.tn
                     .post({
@@ -56,7 +56,7 @@ function u(t) {
                     })
                     .finally(() => {
                         g(!1);
-                    });
+                    }));
         };
     return (0, s.jsxs)(o.Y0X, {
         transitionState: e,
@@ -86,7 +86,7 @@ function u(t) {
                         id: 'DOMAIN',
                         children: (0, s.jsxs)('form', {
                             onSubmit: (t) => {
-                                t.preventDefault(), R();
+                                (t.preventDefault(), R());
                             },
                             children: [
                                 (0, s.jsxs)(o.hzk, {
@@ -198,7 +198,7 @@ function u(t) {
                                         look: o.zxk.Looks.LINK,
                                         color: o.zxk.Colors.PRIMARY,
                                         onClick: () => {
-                                            v('DOMAIN'), _(null);
+                                            (v('DOMAIN'), _(null));
                                         },
                                         children: x.intl.string(x.t['13/7kZ'])
                                     }),
@@ -209,7 +209,7 @@ function u(t) {
                                                 look: o.zxk.Looks.LINK,
                                                 color: o.zxk.Colors.PRIMARY,
                                                 onClick: () => {
-                                                    v('PROOF_HTTP'), _(null);
+                                                    (v('PROOF_HTTP'), _(null));
                                                 },
                                                 className: h.__invalid_switchButton,
                                                 children: x.intl.string(x.t.CkfdNz)
@@ -266,7 +266,7 @@ function u(t) {
                                         look: o.zxk.Looks.LINK,
                                         color: o.zxk.Colors.PRIMARY,
                                         onClick: () => {
-                                            v('DOMAIN'), _(null);
+                                            (v('DOMAIN'), _(null));
                                         },
                                         children: x.intl.string(x.t['13/7kZ'])
                                     }),
@@ -277,7 +277,7 @@ function u(t) {
                                                 look: o.zxk.Looks.LINK,
                                                 color: o.zxk.Colors.PRIMARY,
                                                 onClick: () => {
-                                                    v('PROOF_DNS'), _(null);
+                                                    (v('PROOF_DNS'), _(null));
                                                 },
                                                 className: h.__invalid_switchButton,
                                                 children: x.intl.string(x.t.RhJMVV)

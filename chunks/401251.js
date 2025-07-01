@@ -10,11 +10,11 @@ function o(e, t) {
 function i(e, t) {
     for (var r = 0; r < t.length; r++) {
         var n = t[r];
-        (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+        ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
     }
 }
 function a(e, t, r) {
-    return t && i(e.prototype, t), r && i(e, r), e;
+    return (t && i(e.prototype, t), r && i(e, r), e);
 }
 function s(e, t, r) {
     return (
@@ -31,7 +31,7 @@ function s(e, t, r) {
 }
 var c = (function () {
     function e(t) {
-        o(this, e), s(this, 'isDisposed', !1), s(this, 'action', void 0), (this.action = (0, n.mf)(t) ? t : n.ZT);
+        (o(this, e), s(this, 'isDisposed', !1), s(this, 'action', void 0), (this.action = (0, n.mf)(t) ? t : n.ZT));
     }
     return (
         a(
@@ -71,7 +71,7 @@ var c = (function () {
 s(c, 'empty', { dispose: n.ZT });
 var u = (function () {
         function e() {
-            o(this, e), s(this, 'isDisposed', !1), s(this, 'disposables', void 0);
+            (o(this, e), s(this, 'isDisposed', !1), s(this, 'disposables', void 0));
             for (var t = arguments.length, r = Array(t), n = 0; n < t; n++) r[n] = arguments[n];
             this.disposables = r;
         }
@@ -121,7 +121,7 @@ var u = (function () {
     })(),
     d = (function () {
         function e() {
-            o(this, e), s(this, 'isDisposed', !1), s(this, 'current', void 0);
+            (o(this, e), s(this, 'isDisposed', !1), s(this, 'current', void 0));
         }
         return (
             a(e, [
@@ -137,7 +137,7 @@ var u = (function () {
                         var t = this.isDisposed;
                         if (!t) {
                             var r = this.current;
-                            (this.current = e), r && r.dispose();
+                            ((this.current = e), r && r.dispose());
                         }
                         t && e && e.dispose();
                     }
@@ -148,7 +148,7 @@ var u = (function () {
                         if (!this.isDisposed) {
                             this.isDisposed = !0;
                             var e = this.current;
-                            (this.current = void 0), e && e.dispose();
+                            ((this.current = void 0), e && e.dispose());
                         }
                     }
                 }

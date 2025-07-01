@@ -195,7 +195,7 @@ var _ = {
     yellow: 4294902015,
     yellowgreen: 2597139199
 };
-(t.rgba = function (e) {
+((t.rgba = function (e) {
     return {
         r: Math.round((4278190080 & e) >>> 24),
         g: Math.round((16711680 & e) >>> 16),
@@ -203,4 +203,4 @@ var _ = {
         a: ((255 & e) >>> 0) / 255
     };
 }),
-    (e.exports = t);
+    (e.exports = t));

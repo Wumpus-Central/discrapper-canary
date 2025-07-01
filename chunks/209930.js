@@ -26,7 +26,7 @@ function d(t, e, r) {
 }
 t.exports = {
     onDragEnd: function (t) {
-        t.exitCurrentMode(), h(t);
+        (t.exitCurrentMode(), h(t));
     },
     onDrop: function (t, e) {
         var r = new n(e.nativeEvent.dataTransfer),
@@ -37,12 +37,12 @@ t.exports = {
                     i = u(t.currentTarget);
                 if ('function' == typeof i.caretRangeFromPoint) {
                     var o = i.caretRangeFromPoint(t.x, t.y);
-                    (r = o.startContainer), (n = o.startOffset);
+                    ((r = o.startContainer), (n = o.startOffset));
                 } else {
                     if (!t.rangeParent) return null;
-                    (r = t.rangeParent), (n = t.rangeOffset);
+                    ((r = t.rangeParent), (n = t.rangeOffset));
                 }
-                (r = p(r)), (n = p(n));
+                ((r = p(r)), (n = p(n)));
                 var s = p(a(r));
                 return c(e, s, n, s, n);
             })(e.nativeEvent, l);
@@ -59,7 +59,7 @@ t.exports = {
                 return;
             }
             var b = t._internalDrag ? 'internal' : 'external';
-            (t.props.handleDrop && f(t.props.handleDrop(g, r, b))) || (t._internalDrag ? t.update(((y = l), (v = g), (m = i.moveText(y.getCurrentContent(), y.getSelection(), v)), o.push(y, m, 'insert-fragment'))) : t.update(d(l, g, r.getText()))), h(t);
+            ((t.props.handleDrop && f(t.props.handleDrop(g, r, b))) || (t._internalDrag ? t.update(((y = l), (v = g), (m = i.moveText(y.getCurrentContent(), y.getSelection(), v)), o.push(y, m, 'insert-fragment'))) : t.update(d(l, g, r.getText()))), h(t));
         }
     }
 };

@@ -17,7 +17,7 @@ e(
             var r = u(t);
             if (i(f, r)) return f[r];
             var n = o('Symbol')(r);
-            return (f[r] = n), (a[n] = r), n;
+            return ((f[r] = n), (a[n] = r), n);
         }
     }
 );

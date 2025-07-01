@@ -1,4 +1,4 @@
-n.d(i, { Z: () => p }), n(388685);
+(n.d(i, { Z: () => p }), n(388685));
 var E = n(230711),
     l = n(200876),
     r = n(456269),
@@ -118,7 +118,7 @@ let p = {
                         sectionDescription: d
                             ? R.intl.format(h, {
                                   setUpAutomod: () => {
-                                      f || (0, e.MO)(), s.Z.open(t, M.pNK.GUILD_AUTOMOD);
+                                      (f || (0, e.MO)(), s.Z.open(t, M.pNK.GUILD_AUTOMOD));
                                   }
                               })
                             : void 0,
@@ -156,7 +156,7 @@ let p = {
                               for (var i = 1; i < arguments.length; i++) {
                                   var n = null != arguments[i] ? arguments[i] : {},
                                       E = Object.keys(n);
-                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                  ('function' == typeof Object.getOwnPropertySymbols &&
                                       (E = E.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (t) {
                                               return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -164,7 +164,7 @@ let p = {
                                       )),
                                       E.forEach(function (i) {
                                           var E;
-                                          (E = n[i]),
+                                          ((E = n[i]),
                                               i in t
                                                   ? Object.defineProperty(t, i, {
                                                         value: E,
@@ -172,8 +172,8 @@ let p = {
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (t[i] = E);
-                                      });
+                                                  : (t[i] = E));
+                                      }));
                               }
                               return t;
                           })({}, t)),

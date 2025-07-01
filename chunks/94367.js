@@ -17,7 +17,7 @@ function c(e, t, r, n) {
         let b = c.range;
         '<percentage>' === f && (b ||= [0, 1]);
         let d = s.range || s.refRange;
-        return b && d && (n[o] = a.KK(b, d, n[o])), c;
+        return (b && d && (n[o] = a.KK(b, d, n[o])), c);
     });
 }
 function l(e, { meta: t } = {}) {
@@ -88,7 +88,7 @@ function l(e, { meta: t } = {}) {
                 let n = e.formats[a];
                 if ('custom' !== n.type || (n.test && !n.test(r.str))) continue;
                 let s = n.parse(r.str);
-                if (s) return (s.alpha ??= 1), t && (t.formatId = a), s;
+                if (s) return ((s.alpha ??= 1), t && (t.formatId = a), s);
             }
     throw TypeError(`Could not parse ${e} as a color. Missing a plugin?`);
 }

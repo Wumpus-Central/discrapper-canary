@@ -1,9 +1,12 @@
-n.d(t, {
-    Jt: () => c,
-    VG: () => d
+(n.d(t, {
+    JG: () => p,
+    Jt: () => d,
+    T3: () => m,
+    VG: () => _,
+    o8: () => h
 }),
     n(388685),
-    n(415506);
+    n(415506));
 var r = n(308521),
     i = n(97519),
     a = n(570833),
@@ -21,56 +24,92 @@ function s(e, t, n) {
         e
     );
 }
-function l(e, t) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
-var c = (function (e) {
-    return (e.Loading = 'loading'), (e.Loaded = 'loaded'), e;
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var d = (function (e) {
+    return ((e.Loading = 'loading'), (e.Loaded = 'loaded'), e);
 })({});
-let u = (0, i.U)(() => ({
+let f = (0, i.U)(() => ({
     riveAssetCache: new Map(),
     riveOverrideCache: {}
 }));
-function d(e) {
-    let t = f(e),
-        n = null != t ? t : e,
-        i = u((e) => e.riveAssetCache.get(n));
-    return (
-        (0, o.ZP)(() => {
-            if (u.getState().riveAssetCache.has(n)) return;
-            let e = new r.RiveFile({ src: n }),
-                t = () => {
-                    e.init(),
-                        e.on(r.EventType.Load, () => {
-                            let t = {
-                                status: 'loaded',
-                                buffer: e.buffer
-                            };
-                            u.setState((e) => ({ riveAssetCache: e.riveAssetCache.set(n, t) }));
-                        }),
-                        e.on(r.EventType.LoadError, (e) => {
-                            console.error('Rive file load error', n, e);
-                        });
-                };
-            (0, a.f)(t);
-        }),
-        null != i
-            ? i
-            : {
-                  status: 'loading',
-                  buffer: null
-              }
-    );
+function _(e) {
+    let t = h(e),
+        n = f((t) => t.riveAssetCache.get(e));
+    return ((0, o.ZP)(() => {
+        if (null != t || f.getState().riveAssetCache.has(e)) return;
+        let n = new r.RiveFile({ src: e }),
+            i = () => {
+                (n.init(),
+                    n.on(r.EventType.Load, () => {
+                        let t = {
+                            status: 'loaded',
+                            buffer: n.buffer
+                        };
+                        f.setState((n) => ({ riveAssetCache: n.riveAssetCache.set(e, t) }));
+                    }),
+                    n.on(r.EventType.LoadError, (t) => {
+                        console.error('Rive file load error', e, t);
+                    }));
+            };
+        (0, a.f)(i);
+    }),
+    null != t)
+        ? {
+              status: 'loaded',
+              buffer: t
+          }
+        : null != n
+          ? n
+          : {
+                status: 'loading',
+                buffer: null
+            };
 }
-function f(e) {
-    return u((e) => e.riveOverrideCache)[e];
+function p(e, t) {
+    let n = f.getState().riveOverrideCache;
+    f.setState({ riveOverrideCache: u(l({}, n), { [e]: t }) });
+}
+function h(e) {
+    return f((e) => e.riveOverrideCache)[e];
+}
+function m(e) {
+    return null != f((e) => e.riveOverrideCache)[e];
 }

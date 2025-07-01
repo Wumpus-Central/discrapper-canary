@@ -1,16 +1,16 @@
-n.d(t, {
+(n.d(t, {
     PD: () => A,
     ZP: () => L,
     aR: () => R
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(695469),
-    a = n(91192),
+    a = n(695469),
+    s = n(91192),
     c = n(442837),
     u = n(704215),
     d = n(477690),
@@ -26,8 +26,8 @@ var r = n(255367),
     v = n(624138),
     C = n(667815),
     j = n(531572),
-    E = n(651138),
-    S = n(18857),
+    S = n(651138),
+    E = n(18857),
     x = n(981631),
     I = n(388032),
     P = n(93841),
@@ -36,7 +36,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -52,8 +52,8 @@ function w(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -109,14 +109,14 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 [R, d, k, M]
             ),
             G = t.premiumTier < A && R >= x.oCV[A],
-            B = (0, S.Z)(t),
+            B = (0, E.Z)(t),
             F = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, y.e9)(A) }),
             V = I.intl.format(I.t.dhKnYm, {
                 numBoosts: d,
                 numTotal: x.oCV[A]
             });
-        T && ((F = (0, y.e9)(A)), (V = I.intl.format(I.t.B2byER, { numBoosts: d }))), (F = F.toLocaleLowerCase());
-        let H = (0, a.JA)('boosts-'.concat(t.id)),
+        (T && ((F = (0, y.e9)(A)), (V = I.intl.format(I.t.B2byER, { numBoosts: d }))), (F = F.toLocaleLowerCase()));
+        let H = (0, s.JA)('boosts-'.concat(t.id)),
             z = i.useRef(null),
             W = (0, m.W)(t.id, 'GuildBoostingSidebarDisplay'),
             K = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0,
@@ -167,7 +167,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                         onClick: B,
                                         className: o()(N.container, { [N.containerWithMargin]: n }),
                                         onContextMenu: (e) => {
-                                            L && (0, p.vq)(e, (e) => (0, r.jsx)(E.default, Z(w({}, e), { guild: t })));
+                                            L && (0, p.vq)(e, (e) => (0, r.jsx)(S.default, Z(w({}, e), { guild: t })));
                                         },
                                         children: [
                                             (0, r.jsx)(h.nn4, { children: e['aria-label'] }),
@@ -207,7 +207,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                             (0, r.jsxs)('div', {
                                                 className: o()(N.progressBarContainer, { [N.progressBarContainerComplete]: T }),
                                                 children: [
-                                                    (0, r.jsx)(s.animated.div, {
+                                                    (0, r.jsx)(a.animated.div, {
                                                         className: N.progressBar,
                                                         style: U
                                                     }),

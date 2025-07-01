@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => f });
+(r.r(t), r.d(t, { default: () => f }));
 var n = r(255367),
     a = r(73800),
     i = r(597846),
@@ -32,7 +32,7 @@ let d = () => {
                         droppedFramesCallback: r.improvePerformance
                     },
                     drawCallback: (e, t) => {
-                        r.update(t), r.draw(e);
+                        (r.update(t), r.draw(e));
                     }
                 })
             })

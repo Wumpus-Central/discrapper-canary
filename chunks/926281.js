@@ -1,4 +1,4 @@
-r.d(t, { default: () => a }), r(388685);
+(r.d(t, { default: () => a }), r(388685));
 var n = r(255367),
     l = r(73800),
     o = r(481060),
@@ -7,7 +7,7 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -15,7 +15,7 @@ function i(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -23,8 +23,8 @@ function i(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -61,12 +61,12 @@ function a(e) {
                         n,
                         l = {},
                         o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]));
             }
             return l;
         })(e.settings, ['onConfirm']);
@@ -109,7 +109,7 @@ function a(e) {
         }),
         [d, p] = l.useState(!1),
         y = (e) => (t, r) => {
-            b((t) => s(i({}, t), { [e]: s(i({}, t[e]), { checked: r }) })), r && d && p(!1);
+            (b((t) => s(i({}, t), { [e]: s(i({}, t[e]), { checked: r }) })), r && d && p(!1));
         },
         g = Object.values(u).some((e) => e.checked);
     return (0, n.jsxs)(
@@ -168,7 +168,7 @@ function a(e) {
                                 let e = Object.keys(u)
                                     .filter((e) => u[e].checked)
                                     .map((e) => u[e].value);
-                                null == r || r(e), t.onClose();
+                                (null == r || r(e), t.onClose());
                             },
                             children: a.confirmText
                         }),
@@ -181,7 +181,7 @@ function a(e) {
                                 size: o.zxk.Sizes.MEDIUM,
                                 onClick: () => {
                                     var e;
-                                    null == (e = a.onCancel) || e.call(a), t.onClose();
+                                    (null == (e = a.onCancel) || e.call(a), t.onClose());
                                 },
                                 style: { marginRight: 8 },
                                 children: a.cancelText

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => G }), t(953529);
+(t.d(n, { Z: () => G }), t(953529));
 var i = t(255367),
     l = t(73800),
     r = t(120356),
@@ -80,7 +80,7 @@ function U(e) {
     let { guild: n, onClick: t, onClose: r } = e,
         d = l.useCallback(
             (e) => {
-                null == t || t(e), null != t && (null == r || r(e));
+                (null == t || t(e), null != t && (null == r || r(e)));
             },
             [t, r]
         ),
@@ -151,14 +151,14 @@ function G(e) {
         P = (0, b.Z)(n.guild_id, n.id, p),
         z = l.useCallback(
             (e) => {
-                e.stopPropagation(), null != n && (0, s.Bk)(n);
+                (e.stopPropagation(), null != n && (0, s.Bk)(n));
             },
             [n]
         ),
         k = (0, C.Z)(p, n.id),
         A = (0, h.Z)(n);
     l.useEffect(() => {
-        v.Z.getGuildEventUserCounts(t.id, n.id, null != p ? [p] : []), v.Z.getGuildEventsForCurrentUser(t.id);
+        (v.Z.getGuildEventUserCounts(t.id, n.id, null != p ? [p] : []), v.Z.getGuildEventsForCurrentUser(t.id));
     }, [t.id, n.id, p]);
     let R = (0, x.KV)(n.recurrence_rule),
         B = (null == n ? void 0 : n.scheduled_start_time) != null ? (0, T.lh)(k, S, new Date(null == n ? void 0 : n.scheduled_start_time)) : null;

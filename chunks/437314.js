@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Z: () => _,
     j: () => f
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -146,21 +146,21 @@ class b extends l.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             h(this, 'state', { opacity: new a.Z.Value(1) }),
             h(this, 'componentWillEnter', (e) => {
-                this.state.opacity.setValue(0),
+                (this.state.opacity.setValue(0),
                     a.Z.timing(this.state.opacity, {
                         toValue: 1,
                         duration: 250
-                    }).start(e);
+                    }).start(e));
             }),
             h(this, 'componentWillLeave', (e) => {
                 a.Z.timing(this.state.opacity, {
                     toValue: 0,
                     duration: 250
                 }).start(e);
-            });
+            }));
     }
 }
 let _ = o.ZP.connectStores([c.Z], () => ({ theme: c.Z.theme }), { forwardRef: !0 })(b);

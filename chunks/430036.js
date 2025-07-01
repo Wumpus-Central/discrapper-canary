@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ea }), n(388685);
+(n.d(t, { Z: () => ea }), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -68,7 +68,7 @@ function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -76,7 +76,7 @@ function en(e) {
             )),
             i.forEach(function (t) {
                 et(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -108,22 +108,22 @@ function er(e, t) {
                 i,
                 r = {},
                 o = Object.keys(e);
-            for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
             return r;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+        for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
     }
     return r;
 }
 let eo = Q.wF.TOP;
 class el extends r.Component {
     componentDidUpdate(e) {
-        e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) && this.setState({ focused: !0 });
+        (e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) && this.setState({ focused: !0 }));
     }
     componentWillUnmount() {
-        R.Z.removeChangeListener(this.draftDidChange), G.S.unsubscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), G.S.unsubscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
+        (R.Z.removeChangeListener(this.draftDidChange), G.S.unsubscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), G.S.unsubscribe(q.CkL.TEXTAREA_BLUR, this.blurInput));
     }
     render() {
         let e = this.props,
@@ -135,12 +135,12 @@ class el extends r.Component {
                 position: 'top',
                 onRequestClose: () => {
                     var e;
-                    null == s || null == (e = s.onCancel) || e.call(s), this.setState({ contentWarningProps: null });
+                    (null == s || null == (e = s.onCancel) || e.call(s), this.setState({ contentWarningProps: null }));
                 },
                 shouldShow: null != s,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return a()(null != s, 'ConnectedChannelTextArea.render - renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(y.Z, en({ onClose: t }, s));
+                    return (a()(null != s, 'ConnectedChannelTextArea.render - renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(y.Z, en({ onClose: t }, s)));
                 },
                 children: () =>
                     (0, i.jsx)(
@@ -182,7 +182,7 @@ class el extends r.Component {
     }
     constructor(e) {
         var t;
-        super(e),
+        (super(e),
             (t = this),
             et(this, 'textAreaRef', r.createRef()),
             et(this, 'draftDidChange', function () {
@@ -203,12 +203,12 @@ class el extends r.Component {
                 let {
                     channel: { id: i }
                 } = this.props;
-                h.Z.changeDraft(i, this.state.textValue, R.d.ChannelMessage),
+                (h.Z.changeDraft(i, this.state.textValue, R.d.ChannelMessage),
                     '' !== t ? g.Z.startTyping(i) : g.Z.stopTyping(i),
                     this.setState({
                         textValue: t,
                         richValue: n
-                    });
+                    }));
             }),
             et(this, 'handleSendMessage', (e) => {
                 let { value: t } = e,
@@ -265,20 +265,20 @@ class el extends r.Component {
                     canOnlyUseTextCommands: e
                 })
             ),
-            R.Z.addChangeListener(this.draftDidChange);
+            R.Z.addChangeListener(this.draftDidChange));
         let n = R.Z.getDraft(e.channel.id, R.d.ChannelMessage);
-        (this.state = ei(en({}, (0, C.eK)(n)), {
+        ((this.state = ei(en({}, (0, C.eK)(n)), {
             focused: !1,
             contentWarningProps: null
         })),
             G.S.subscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput),
-            G.S.subscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
+            G.S.subscribe(q.CkL.TEXTAREA_BLUR, this.blurInput));
     }
 }
 class es extends r.PureComponent {
     componentDidUpdate(e) {
         let { channel: t, activated: n } = this.props;
-        (0, K.CR)(e, this.props, this.shouldDisplay),
+        ((0, K.CR)(e, this.props, this.shouldDisplay),
             null != t &&
                 n &&
                 !e.activated &&
@@ -286,7 +286,7 @@ class es extends r.PureComponent {
                     channel_id: t.id,
                     channel_type: t.type,
                     guild_id: t.guild_id
-                });
+                }));
     }
     componentDidMount() {
         (0, K.m3)(this.props, this.shouldDisplay());
@@ -460,18 +460,18 @@ class es extends r.PureComponent {
         return l ? this.renderContainedWrapper(s) : this.renderWidgetWrapper(s);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             et(this, 'handlePin', () => {
                 var e, t, n;
                 let i = !this.props.pinned;
-                f.Z.track(q.rMx.OVERLAY_PIN_TOGGLED, {
+                (f.Z.track(q.rMx.OVERLAY_PIN_TOGGLED, {
                     pinned: i,
                     guild_id: null == (e = this.props.channel) ? void 0 : e.guild_id,
                     channel_id: null == (t = this.props.channel) ? void 0 : t.id,
                     channel_type: null == (n = this.props.channel) ? void 0 : n.type,
                     widget_type: q.Odu.TEXT
                 }),
-                    f.Z.setPinChat(i);
+                    f.Z.setPinChat(i));
             }),
             et(this, 'handleContextMenu', (e) => {
                 let { channel: t, user: r } = this.props;
@@ -497,7 +497,7 @@ class es extends r.PureComponent {
             et(this, 'resizeDragStart', (e) => {
                 let { dragStart: t } = this.props;
                 t(P.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
-            });
+            }));
     }
 }
 function ea(e) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685), n(704826), n(35282), n(539854), n(804061);
+(n.d(t, { Z: () => l }), n(388685), n(704826), n(35282), n(539854), n(804061));
 var r = n(710845),
     i = n(287328);
 function a(e, t, n) {
@@ -20,7 +20,7 @@ class s {
         let t = performance.now(),
             n = await i.Z.stickers(e).getMapEntries(),
             r = performance.now();
-        return o.log('asynchronously loaded in '.concat(r - t, 'ms (guilds: ').concat(n.length, ')')), n;
+        return (o.log('asynchronously loaded in '.concat(r - t, 'ms (guilds: ').concat(n.length, ')')), n);
     }
     handleConnectionOpen(e, t) {
         for (let n of e.guilds) this.handleOneGuildCreate(n, t);
@@ -48,7 +48,7 @@ class s {
         );
     }
     handleOneGuildCreate(e, t) {
-        null != e.stickers && this.replace(e.id, e.stickers, t), null != e.stickerUpdates && this.update(e.id, e.stickerUpdates.writes, e.stickerUpdates.deletes, t);
+        (null != e.stickers && this.replace(e.id, e.stickers, t), null != e.stickerUpdates && this.update(e.id, e.stickerUpdates.writes, e.stickerUpdates.deletes, t));
     }
     resetInMemoryState() {}
     replace(e, t, n) {

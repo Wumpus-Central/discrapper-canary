@@ -18,5 +18,5 @@ function l(e, t) {
         m = (0, o.Z)(null != (n = null != (l = null != (c = null != (u = null == t ? void 0 : t.firstWeekContainsDate) ? u : null == t || null == (d = t.locale) || null == (f = d.options) ? void 0 : f.firstWeekContainsDate) ? c : h.firstWeekContainsDate) ? l : null == (_ = h.locale) || null == (p = _.options) ? void 0 : p.firstWeekContainsDate) ? n : 1),
         g = (0, r.Z)(e, t),
         E = new Date(0);
-    return E.setUTCFullYear(g, 0, m), E.setUTCHours(0, 0, 0, 0), (0, a.Z)(E, t);
+    return (E.setUTCFullYear(g, 0, m), E.setUTCHours(0, 0, 0, 0), (0, a.Z)(E, t));
 }

@@ -16,7 +16,7 @@ var e = n(425184),
 t.exports = {
     getConstructor: function (t, r, n, a) {
         var p = t(function (t, o) {
-                s(t, l),
+                (s(t, l),
                     x(t, {
                         type: r,
                         index: e(null),
@@ -29,7 +29,7 @@ t.exports = {
                         f(o, t[a], {
                             that: t,
                             AS_ENTRIES: n
-                        });
+                        }));
             }),
             l = p.prototype,
             h = d(r),
@@ -67,8 +67,8 @@ t.exports = {
         return (
             i(l, {
                 clear: function () {
-                    for (var t = h(this), r = t.first; r; ) (r.removed = !0), r.previous && (r.previous = r.previous.next = null), (r = r.next);
-                    (t.first = t.last = null), (t.index = e(null)), v ? (t.size = 0) : (this.size = 0);
+                    for (var t = h(this), r = t.first; r; ) ((r.removed = !0), r.previous && (r.previous = r.previous.next = null), (r = r.next));
+                    ((t.first = t.last = null), (t.index = e(null)), v ? (t.size = 0) : (this.size = 0));
                 },
                 delete: function (t) {
                     var r = h(this),
@@ -76,7 +76,7 @@ t.exports = {
                     if (n) {
                         var e = n.next,
                             o = n.previous;
-                        delete r.index[n.index], (n.removed = !0), o && (o.next = e), e && (e.previous = o), r.first === n && (r.first = e), r.last === n && (r.last = o), v ? r.size-- : this.size--;
+                        (delete r.index[n.index], (n.removed = !0), o && (o.next = e), e && (e.previous = o), r.first === n && (r.first = e), r.last === n && (r.last = o), v ? r.size-- : this.size--);
                     }
                     return !!n;
                 },
@@ -119,7 +119,7 @@ t.exports = {
         var e = r + ' Iterator',
             o = d(r),
             i = d(e);
-        a(
+        (a(
             t,
             r,
             function (t, r) {
@@ -139,6 +139,6 @@ t.exports = {
             !n,
             !0
         ),
-            l(r);
+            l(r));
     }
 };

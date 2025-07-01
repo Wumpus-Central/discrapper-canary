@@ -9,7 +9,7 @@ var r = n(126387),
     u = n(581206),
     d = n(740078),
     f = function (e, t) {
-        return (e = 'function' == typeof e ? e(Object.assign({}, t.rects, { placement: t.placement })) : e), (0, c.Z)('number' != typeof e ? e : (0, u.Z)(e, d.mv));
+        return ((e = 'function' == typeof e ? e(Object.assign({}, t.rects, { placement: t.placement })) : e), (0, c.Z)('number' != typeof e ? e : (0, u.Z)(e, d.mv)));
     };
 let _ = {
     name: 'arrow',

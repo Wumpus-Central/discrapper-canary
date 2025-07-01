@@ -6,9 +6,9 @@ let l = {
     binds: ['mod+shift+alt+v'],
     comboKeysBindGlobal: !0,
     action(e) {
-        e.preventDefault(), e.stopPropagation();
+        (e.preventDefault(), e.stopPropagation());
         let t = r.Z.getGuildId(),
             n = r.Z.getChannelId();
-        return null != n && (0, i.K)(null != t ? t : s.ME, n), !1;
+        return (null != n && (0, i.K)(null != t ? t : s.ME, n), !1);
     }
 };

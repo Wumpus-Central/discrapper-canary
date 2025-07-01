@@ -57,11 +57,11 @@ function O() {
 }
 function v(e) {
     let { markAsDismissed: t } = e;
-    (m.client.coachmarkImpressions += 1), m.client.coachmarkImpressions >= h && (null == t || t(f.L.UNKNOWN), O(), (0, o.Ll)());
+    ((m.client.coachmarkImpressions += 1), m.client.coachmarkImpressions >= h && (null == t || t(f.L.UNKNOWN), O(), (0, o.Ll)()));
 }
 class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (m = e), this.waitFor(s.default), this.syncWith([s.default], E);
+        (null != e && (m = e), this.waitFor(s.default), this.syncWith([s.default], E));
     }
     get isUpsellPreview() {
         return g;
@@ -74,7 +74,7 @@ class I extends (r = i.ZP.PersistedStore) {
         return null == m || null == (e = m.client) ? void 0 : e.desktop;
     }
 }
-p(I, 'displayName', 'AppIconPersistedStoreState'), p(I, 'persistKey', 'AppIconPersistedStoreState');
+(p(I, 'displayName', 'AppIconPersistedStoreState'), p(I, 'persistKey', 'AppIconPersistedStoreState'));
 let T = new I(a.Z, {
     APP_ICON_UPDATED: y,
     APP_ICON_EDITOR_RESET: O,

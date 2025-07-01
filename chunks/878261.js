@@ -2,7 +2,7 @@ t.exports = (function (t) {
     function e() {
         return t.apply(this, arguments) || this;
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r.getType = function () {

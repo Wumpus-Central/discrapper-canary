@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -80,7 +80,7 @@ function I(e) {
         x = (0, f.Sl)(E.Il.RED_430).hex,
         k = R ? L : void 0,
         M = i.useCallback(() => {
-            S === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE && A(g.L.TAKE_ACTION), null == I || I();
+            (S === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE && A(g.L.TAKE_ACTION), null == I || I());
         }, [S, A, I]),
         j = S === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE;
     return (0, r.jsxs)(m.S4, {

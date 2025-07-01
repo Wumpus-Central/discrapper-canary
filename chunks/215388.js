@@ -1,22 +1,22 @@
-n.d(t, { Z: () => q }), n(388685);
-var r = n(255367),
-    A = n(73800),
-    a = n(120356),
-    l = n.n(a),
-    o = n(772848),
-    i = n(481060),
-    s = n(752305),
-    c = n(893718),
-    d = n(131704),
-    u = n(703558),
-    g = n(981631),
-    f = n(388032),
-    p = n(3840),
-    m = n(999249);
-let h = (0, o.Z)(),
+(A.d(t, { Z: () => q }), A(388685));
+var n = A(255367),
+    r = A(73800),
+    a = A(120356),
+    l = A.n(a),
+    i = A(772848),
+    o = A(481060),
+    s = A(752305),
+    c = A(893718),
+    d = A(131704),
+    u = A(703558),
+    f = A(981631),
+    g = A(388032),
+    p = A(3840),
+    h = A(999249);
+let m = (0, i.Z)(),
     b = (0, d.kt)({
         id: '1',
-        type: g.d4z.DM
+        type: f.d4z.DM
     });
 function v() {
     return new Promise((e) => {
@@ -28,22 +28,22 @@ function v() {
 }
 function C(e) {
     var t;
-    let { hasError: n, maxLength: A, text: a } = e;
-    return (0, r.jsxs)('div', {
-        className: l()(m.maxLength, { [m.errorOverflow]: n }),
+    let { hasError: A, maxLength: r, text: a } = e;
+    return (0, n.jsxs)('div', {
+        className: l()(h.maxLength, { [h.errorOverflow]: A }),
         'aria-hidden': 'true',
-        children: [null != (t = null == a ? void 0 : a.length) ? t : 0, ' ', null != A && '/ '.concat(A)]
+        children: [null != (t = null == a ? void 0 : a.length) ? t : 0, ' ', null != r && '/ '.concat(r)]
     });
 }
 function q(e) {
     var t;
-    let { 'aria-labelledby': n, className: a, id: o, autoFocus: d, maxLength: g, onChange: m, onSubmit: q, showCharacterCount: x = !1, placeholder: j, required: O, value: U, enableThemedBackground: P = !1, parentModalKey: V } = e,
-        y = (0, i.Gc0)(),
-        [N, I] = A.useState(() => (0, s.JM)(U)),
-        T = A.useRef(!0 === d),
-        F = null != n ? n : null == y ? void 0 : y.titleId,
-        Z = null != (t = null == y ? void 0 : y.errorId) ? t : h,
-        K = A.useMemo(
+    let { 'aria-labelledby': A, className: a, id: i, autoFocus: d, maxLength: f, onChange: h, onSubmit: q, showCharacterCount: x = !1, placeholder: j, required: U, value: O, enableThemedBackground: V = !1, parentModalKey: P } = e,
+        y = (0, o.Gc0)(),
+        [N, I] = r.useState(() => (0, s.JM)(O)),
+        F = r.useRef(!0 === d),
+        T = null != A ? A : null == y ? void 0 : y.titleId,
+        K = null != (t = null == y ? void 0 : y.errorId) ? t : m,
+        Z = r.useMemo(
             () => ({
                 analyticsName: 'simple',
                 autocomplete: {
@@ -61,43 +61,43 @@ function q(e) {
             }),
             [d]
         );
-    return (0, r.jsxs)(c.Z, {
-        'aria-describedby': Z,
-        'aria-labelledby': F,
+    return (0, n.jsxs)(c.Z, {
+        'aria-describedby': K,
+        'aria-labelledby': T,
         innerClassName: l()(a, p.textArea),
-        id: o,
-        maxCharacterCount: g,
-        onChange: function (e, t, n) {
-            m(t), I(n);
+        id: i,
+        maxCharacterCount: f,
+        onChange: function (e, t, A) {
+            (h(t), I(A));
         },
         placeholder: j,
-        required: O,
+        required: U,
         channel: b,
-        textValue: U,
+        textValue: O,
         richValue: N,
-        type: K,
+        type: Z,
         onBlur: () => {
-            T.current = !1;
+            F.current = !1;
         },
         onFocus: () => {
-            T.current = !0;
+            F.current = !0;
         },
-        focused: T.current,
+        focused: F.current,
         onSubmit: null != q ? q : v,
-        disableThemedBackground: !P,
-        parentModalKey: V,
+        disableThemedBackground: !V,
+        parentModalKey: P,
         emojiPickerCloseOnModalOuterClick: !0,
         children: [
             !0 === x &&
-                (0, r.jsx)(C, {
-                    hasError: null != y.error || (null != g && U.length > g),
-                    text: U,
-                    maxLength: g
+                (0, n.jsx)(C, {
+                    hasError: null != y.error || (null != f && O.length > f),
+                    text: O,
+                    maxLength: f
                 }),
-            null != g &&
-                (0, r.jsx)(i.nn4, {
-                    id: h,
-                    children: f.intl.format(f.t['+DFxLS'], { maxLength: g })
+            null != f &&
+                (0, n.jsx)(o.nn4, {
+                    id: m,
+                    children: g.intl.format(g.t['+DFxLS'], { maxLength: f })
                 })
         ]
     });

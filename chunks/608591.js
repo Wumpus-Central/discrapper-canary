@@ -32,7 +32,7 @@ function i(e) {
 }
 function a(e) {
     let t = { video: i(e.video) };
-    return null != e.video_low_res && (t.videoLowRes = i(e.video_low_res)), null != e.video_hls && (t.videoHls = i(e.video_hls)), t;
+    return (null != e.video_low_res && (t.videoLowRes = i(e.video_low_res)), null != e.video_hls && (t.videoHls = i(e.video_hls)), t);
 }
 function o(e) {
     return {
@@ -44,7 +44,7 @@ function o(e) {
 }
 function s(e) {
     let t = { video: i(e.video) };
-    return null != e.video_low_res && (t.videoLowRes = i(e.video_low_res)), null != e.video_hls && (t.videoHls = i(e.video_hls)), t;
+    return (null != e.video_low_res && (t.videoLowRes = i(e.video_low_res)), null != e.video_hls && (t.videoHls = i(e.video_hls)), t);
 }
 function l(e) {
     return {

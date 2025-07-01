@@ -41,7 +41,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,11 +57,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -77,14 +77,14 @@ function I(e, t) {
     );
 }
 var T = (function (e) {
-    return (e.MESSAGE = 'Message'), (e.FORUM_TOOLBAR = 'Forum Toolbar'), (e.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (e.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (e.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (e.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (e.MESSAGE_REACTION_PICKER = 'Message Reaction Picker'), (e.MESSAGE_SHORTCUT = 'Message Shortcut'), e;
+    return ((e.MESSAGE = 'Message'), (e.FORUM_TOOLBAR = 'Forum Toolbar'), (e.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (e.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (e.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (e.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (e.MESSAGE_REACTION_PICKER = 'Message Reaction Picker'), (e.MESSAGE_SHORTCUT = 'Message Shortcut'), e);
 })({});
 function S(e, t, n) {
     let { headers: r, status: i, body: a } = e;
     if (429 === i) {
         if (n.isRetry) return !0;
         let e = parseInt(r['retry-after']);
-        return isNaN(e) || setTimeout(t, e * h.Z.Millis.SECOND), !1;
+        return (isNaN(e) || setTimeout(t, e * h.Z.Millis.SECOND), !1);
     }
     if (403 === i)
         switch (a && a.code) {
@@ -101,7 +101,7 @@ function S(e, t, n) {
                     intensity: 2
                 });
         }
-    else if (!n.isRetry) return t(), !1;
+    else if (!n.isRetry) return (t(), !1);
     return !0;
 }
 function A(e, t, n, r, i) {
@@ -246,7 +246,7 @@ function w(e) {
 }
 async function D(e, t, n) {
     let i = null != n && !!n.isRetry;
-    await c.Z.unarchiveThreadIfNecessary(e),
+    (await c.Z.unarchiveThreadIfNecessary(e),
         r.tn
             .del({
                 url: E.ANM.REMOVE_REACTIONS(e, t),
@@ -255,7 +255,7 @@ async function D(e, t, n) {
             })
             .catch((n) => {
                 S(n, () => D(e, t, { isRetry: !0 }), { isRetry: i });
-            });
+            }));
 }
 async function L(e, t, n, i) {
     let a = null != i && !!i.isRetry;
@@ -275,7 +275,7 @@ async function x(e) {
     let { channelId: t, messageId: n, emoji: a, location: o = 'Message', userId: s, options: u } = e,
         d = null != u && !!u.burst,
         f = null != u && !!u.isRetry;
-    A('MESSAGE_REACTION_REMOVE', t, n, a, {
+    (A('MESSAGE_REACTION_REMOVE', t, n, a, {
         userId: s,
         burst: d
     }),
@@ -320,14 +320,14 @@ async function x(e) {
                     )
                 ) {
                     let e = await k(a, d);
-                    A('MESSAGE_REACTION_ADD', t, n, a, {
+                    (A('MESSAGE_REACTION_ADD', t, n, a, {
                         userId: s,
                         burst: d,
                         colors: e
                     }),
-                        (null == u ? void 0 : u.burst) ? i.uv.announce(b.intl.formatToPlainString(b.t.OamVbW, { name: a.name })) : i.uv.announce(b.intl.formatToPlainString(b.t['tD9+b2'], { name: a.name }));
+                        (null == u ? void 0 : u.burst) ? i.uv.announce(b.intl.formatToPlainString(b.t.OamVbW, { name: a.name })) : i.uv.announce(b.intl.formatToPlainString(b.t['tD9+b2'], { name: a.name })));
                 }
-            });
+            }));
 }
 async function k(e, t) {
     let n = [];

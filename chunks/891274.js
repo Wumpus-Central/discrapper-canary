@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(415506), n(570140);
+(n.d(t, { Z: () => f }), n(415506), n(570140));
 var r = n(147913);
 n(471518);
 var i = n(751189),
@@ -38,7 +38,7 @@ function u(e) {
 }
 class d extends r.Z {
     constructor() {
-        super(), (0, o.Z)(this, u);
+        (super(), (0, o.Z)(this, u));
     }
 }
 let f = new d();

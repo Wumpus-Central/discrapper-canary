@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     J: () => d,
     Z: () => _
 }),
-    n(388685);
+    n(388685));
 var r = n(298444),
     i = n(570140),
     a = n(447543),
@@ -26,7 +26,7 @@ function u(e, t, n) {
 let d = 'guestInviteToAccept';
 class f extends o.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
             u(this, 'handleConnectionOpen', async () => {
                 if ((0, l.isWeb)()) {
@@ -43,7 +43,7 @@ class f extends o.Z {
                             r.x.remove(d));
                     }
                 }
-            });
+            }));
     }
 }
 let _ = new f();

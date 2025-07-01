@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     A3: () => D,
     C1: () => W,
     DV: () => F,
@@ -25,7 +25,7 @@ n.d(t, {
     n(388685),
     n(314940),
     n(704826),
-    n(35282);
+    n(35282));
 var r = n(73800),
     i = n(392711),
     a = n(278074),
@@ -110,7 +110,7 @@ let P = function (e, t) {
                         let { emojisDisabled: o, emojisUnfiltered: s, emojisPremiumLockedCount: l, emojiNitroLocked: u } = f(a);
                         if (0 === s.length) continue;
                         let d = null;
-                        t === T.En.GUILD &&
+                        (t === T.En.GUILD &&
                             (d = {
                                 type: T.En.GUILD,
                                 guild: e,
@@ -118,7 +118,7 @@ let P = function (e, t) {
                                 emojis: a,
                                 emojisDisabled: o
                             }),
-                            null != d && (e.id === n ? c.unshift(d) : c.push(d));
+                            null != d && (e.id === n ? c.unshift(d) : c.push(d)));
                     }
                 })(o, T.En.GUILD),
                 l.ZP.categories.reduce(
@@ -158,7 +158,7 @@ let P = function (e, t) {
                             });
                         } else if (r === T.UX.CUSTOM) {
                             let e = c;
-                            a || (e = c.filter((e) => e.type === T.En.GUILD && e.guild.id === n)), t.push(...e);
+                            (a || (e = c.filter((e) => e.type === T.En.GUILD && e.guild.id === n)), t.push(...e));
                         } else
                             t.push({
                                 type: T.En.UNICODE,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(781311);
+(n.d(t, { Z: () => D }), n(388685), n(781311));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -25,7 +25,7 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function H(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -41,8 +41,8 @@ function H(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -171,7 +171,7 @@ function D(e) {
         ),
         E = l.useCallback(
             (e) => {
-                e === R
+                (e === R
                     ? (0, j.Dr)(t, {
                           selectedSourceInviteCode: void 0,
                           selectedJoinSourceType: void 0
@@ -180,17 +180,17 @@ function D(e) {
                           selectedSourceInviteCode: null,
                           selectedJoinSourceType: e
                       }),
-                    Z(!1);
+                    Z(!1));
             },
             [t, R]
         ),
         T = l.useCallback(
             (e) => {
-                (0, j.Dr)(t, {
+                ((0, j.Dr)(t, {
                     selectedSourceInviteCode: e,
                     selectedJoinSourceType: void 0
                 }),
-                    M(e);
+                    M(e));
             },
             [t, M]
         );

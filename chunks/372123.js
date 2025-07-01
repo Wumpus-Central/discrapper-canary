@@ -1,4 +1,4 @@
-n.d(e, { Z: () => c }), n(415506);
+(n.d(e, { Z: () => c }), n(415506));
 var i = n(570140),
     r = n(710845),
     l = n(209492),
@@ -7,7 +7,7 @@ let a = new r.Z('CloudSync');
 class s {
     constructor(t) {
         var e, n;
-        (n = void 0),
+        ((n = void 0),
             (e = 'message') in this
                 ? Object.defineProperty(this, e, {
                       value: n,
@@ -16,7 +16,7 @@ class s {
                       writable: !0
                   })
                 : (this[e] = n),
-            (this.message = t);
+            (this.message = t));
     }
 }
 async function c(t, e) {
@@ -30,26 +30,26 @@ async function c(t, e) {
     try {
         if ((n = await l.j(t, e, r)).type === o.QCD.CONFLICT)
             throw (
-                (i.Z.dispatch({
+                i.Z.dispatch({
                     type: 'GAME_CLOUD_SYNC_CONFLICT',
                     applicationId: t,
                     branchId: e,
                     next: n.next,
                     remote: n.remote
                 }),
-                new s('Conflict in cloud sync.'))
+                new s('Conflict in cloud sync.')
             );
         (n.type === o.QCD.PULL || n.type === o.QCD.PUSH) && a.info('Sync complete', n);
     } catch (n) {
         if (n instanceof s) throw n;
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GAME_CLOUD_SYNC_ERROR',
                 applicationId: t,
                 branchId: e
             }),
             a.error('Failed to cloud sync:', n),
-            Error('Failed to cloud sync.'))
+            Error('Failed to cloud sync.')
         );
     }
     return (

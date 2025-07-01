@@ -27,7 +27,7 @@ var r,
     T = O
         ? (function () {
               try {
-                  return arguments.callee, I;
+                  return (arguments.callee, I);
               } catch (e) {
                   try {
                       return O(arguments, 'callee').get;
@@ -147,7 +147,7 @@ var k = function e(t) {
             var i = e('%AsyncGenerator%');
             i && A && (n = A(i.prototype));
         }
-        return (L[t] = n), n;
+        return ((L[t] = n), n);
     },
     M = {
         __proto__: null,
@@ -265,7 +265,7 @@ e.exports = function (e, t) {
             if (O && d + 1 >= n.length) {
                 var m = O(o, _);
                 o = (f = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : o[_];
-            } else (f = U(o, _)), (o = o[_]);
+            } else ((f = U(o, _)), (o = o[_]));
             f && !s && (L[a] = o);
         }
     }

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => et }), n(35282), n(388685), n(539854), n(361932), n(187205);
+(n.d(t, { ZP: () => et }), n(35282), n(388685), n(539854), n(361932), n(187205));
 var r = n(392711),
     i = n.n(r),
     a = n(159635),
@@ -44,7 +44,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -52,7 +52,7 @@ function D(e) {
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -60,11 +60,11 @@ function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -360,7 +360,7 @@ function X(e, t, n) {
             i = c.ZP.translateSurrogatesToInlineEmoji(t.content);
         for (; null !== (r = q.exec(i)); ) {
             let i;
-            null != r[1] && '' !== r[1] ? e.emojiContext && (i = e.emojiContext.getById(r[1])) : (i = c.ZP.getByName(r[2])), i && n(i, t.isShortcut || !1);
+            (null != r[1] && '' !== r[1] ? e.emojiContext && (i = e.emojiContext.getById(r[1])) : (i = c.ZP.getByName(r[2])), i && n(i, t.isShortcut || !1));
         }
     }
 }

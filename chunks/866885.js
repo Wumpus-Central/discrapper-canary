@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685);
+(n.d(t, { Z: () => H }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -52,7 +52,7 @@ function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -60,7 +60,7 @@ function B(e) {
             )),
             r.forEach(function (t) {
                 G(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,7 +71,7 @@ function V(e, t) {
         i = F(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -81,7 +81,7 @@ function F(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function Z(e) {
@@ -138,7 +138,7 @@ function Z(e) {
                     })
                 );
             let t = null != (e = _.getGuildId()) ? e : x.ME;
-            d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id);
+            (d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id));
         }
         null == K && (0, f.Ou)();
     }
@@ -170,7 +170,7 @@ function Z(e) {
                         onMouseDown: n,
                         onMouseLeave: i,
                         onJumpToChannel: () => {
-                            ei(), (0, T.tg)(L.Ez.PANEL);
+                            (ei(), (0, T.tg)(L.Ez.PANEL));
                         },
                         channel: _,
                         applicationId: B.applicationId,

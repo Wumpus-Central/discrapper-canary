@@ -6,11 +6,11 @@ function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -47,7 +47,7 @@ function c(e) {
         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             n = e.getMonitor(),
             r = e.getRegistry();
-        u(n),
+        (u(n),
             _(n).forEach(function (a, o) {
                 var l = d(a, o, r, n),
                     c = {
@@ -55,21 +55,21 @@ function c(e) {
                         payload: { dropResult: s(s({}, t), l) }
                     };
                 e.dispatch(c);
-            });
+            }));
     };
 }
 function u(e) {
-    (0, r.k)(e.isDragging(), 'Cannot call drop while not dragging.'), (0, r.k)(!e.didDrop(), 'Cannot call drop twice during one drag operation.');
+    ((0, r.k)(e.isDragging(), 'Cannot call drop while not dragging.'), (0, r.k)(!e.didDrop(), 'Cannot call drop twice during one drag operation.'));
 }
 function d(e, t, n, r) {
     var i = n.getTarget(e),
         a = i ? i.drop(r, e) : void 0;
-    return f(a), void 0 === a && (a = 0 === t ? {} : r.getDropResult()), a;
+    return (f(a), void 0 === a && (a = 0 === t ? {} : r.getDropResult()), a);
 }
 function f(e) {
     (0, r.k)(void 0 === e || (0, a.Kn)(e), 'Drop result must either be an object or undefined.');
 }
 function _(e) {
     var t = e.getTargetIds().filter(e.canDropOnTarget, e);
-    return t.reverse(), t;
+    return (t.reverse(), t);
 }

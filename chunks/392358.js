@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(73800),
     i = n(40851),
     a = n(981631);
@@ -13,7 +13,7 @@ function s(e, t) {
             l.subscribe(a.CkL.POPOUT_SHOW, e),
             l.subscribe(a.CkL.POPOUT_HIDE, t),
             () => {
-                l.unsubscribe(a.CkL.POPOUT_SHOW, e), l.unsubscribe(a.CkL.POPOUT_HIDE, t);
+                (l.unsubscribe(a.CkL.POPOUT_SHOW, e), l.unsubscribe(a.CkL.POPOUT_HIDE, t));
             }
         );
     }, [l]);
@@ -25,7 +25,7 @@ function s(e, t) {
                     (!c && n > 0) || (e instanceof KeyboardEvent && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || o.indexOf(e.key) >= 0)) || u((e) => !e);
                 },
                 i = c ? 'keyup' : 'mousemove';
-            return t && e.addEventListener(i, r), () => (null == e ? void 0 : e.removeEventListener(i, r));
+            return (t && e.addEventListener(i, r), () => (null == e ? void 0 : e.removeEventListener(i, r)));
         }, [e, c, n, t]),
         t && 0 === n && c
     );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(35282);
+(n.d(t, { Z: () => S }), n(35282));
 var l = n(255367),
     i = n(73800),
     r = n(120356),
@@ -25,12 +25,12 @@ function S(e) {
             var e;
             return null != (e = null == n ? void 0 : n.authorIds) ? e : [];
         }, [n]);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         c.Z.requestMembersById(t, O);
     }, [t, O]),
         i.useEffect(() => {
             null != T && (0, m.Z)(T.id, T.getAvatarURL(t, 48), { guildId: t });
-        }, [T, t]);
+        }, [T, t]));
     let _ = g.ZP.useName(t, null, T),
         j = (0, N._T)(x);
     if (null == T || null == x || null == n) return null;

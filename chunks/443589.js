@@ -52,7 +52,7 @@ function P(e) {
         D = (e) => {
             e.stopPropagation();
             let r = g.Z.getUserAffinity(t.id);
-            m.default.track(v.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+            (m.default.track(v.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: n,
                 affinity: null == r ? void 0 : r.communicationProbability
             }),
@@ -69,7 +69,7 @@ function P(e) {
                         objectType: v.Qqv.GIFT
                     },
                     giftMessage: k()
-                });
+                }));
         },
         k = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.formatToPlainString(C.t['L2s/Nz'], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) }) : (0, b.Ou)(n)),
         M = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t['4LohBA']) : (0, b.Ou)(n)),

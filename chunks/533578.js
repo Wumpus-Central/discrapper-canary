@@ -43,7 +43,7 @@ function a(e) {
 let s = (0, o.ze)(0);
 function u(e, t, n, u) {
     var l;
-    void 0 === t && (t = !1), void 0 === n && (n = !1);
+    (void 0 === t && (t = !1), void 0 === n && (n = !1));
     let c = e.getBoundingClientRect(),
         d = i(e),
         p = (0, o.ze)(1);
@@ -74,7 +74,7 @@ function u(e, t, n, u) {
                 i = (0, r.Dx)(o),
                 s = t.left + (o.clientLeft + parseFloat(i.paddingLeft)) * e.x,
                 u = t.top + (o.clientTop + parseFloat(i.paddingTop)) * e.y;
-            (h *= e.x), (v *= e.y), (m *= e.x), (g *= e.y), (h += s), (v += u), (n = (0, r.Jj)(o)), (o = (0, r.wK)(n));
+            ((h *= e.x), (v *= e.y), (m *= e.x), (g *= e.y), (h += s), (v += u), (n = (0, r.Jj)(o)), (o = (0, r.wK)(n)));
         }
     }
     return (0, o.JB)({
@@ -94,7 +94,7 @@ function c(e, t, n, a) {
         v = i(e),
         m = c || d ? [...(v ? (0, r.Kx)(v) : []), ...(0, r.Kx)(t)] : [];
     m.forEach((e) => {
-        c && e.addEventListener('scroll', n, { passive: !0 }), d && e.addEventListener('resize', n);
+        (c && e.addEventListener('scroll', n, { passive: !0 }), d && e.addEventListener('resize', n));
     });
     let g =
             v && f
@@ -104,11 +104,11 @@ function c(e, t, n, a) {
                           a = (0, r.tF)(e);
                       function s() {
                           var e;
-                          clearTimeout(n), null == (e = i) || e.disconnect(), (i = null);
+                          (clearTimeout(n), null == (e = i) || e.disconnect(), (i = null));
                       }
                       return (
                           !(function r(u, c) {
-                              void 0 === u && (u = !1), void 0 === c && (c = 1), s();
+                              (void 0 === u && (u = !1), void 0 === c && (c = 1), s());
                               let d = e.getBoundingClientRect(),
                                   { left: p, top: f, width: h, height: v } = d;
                               if ((u || t(), !h || !v)) return;
@@ -129,7 +129,7 @@ function c(e, t, n, a) {
                                                 r(!1, 1e-7);
                                             }, 1000));
                                   }
-                                  1 !== o || l(d, e.getBoundingClientRect()) || r(), (y = !1);
+                                  (1 !== o || l(d, e.getBoundingClientRect()) || r(), (y = !1));
                               }
                               try {
                                   i = new IntersectionObserver(O, {
@@ -150,7 +150,7 @@ function c(e, t, n, a) {
     p &&
         ((y = new ResizeObserver((e) => {
             let [o] = e;
-            o &&
+            (o &&
                 o.target === v &&
                 y &&
                 (y.unobserve(t),
@@ -159,7 +159,7 @@ function c(e, t, n, a) {
                     var e;
                     null == (e = y) || e.observe(t);
                 }))),
-                n();
+                n());
         })),
         v && !h && y.observe(v),
         y.observe(t));
@@ -168,18 +168,18 @@ function c(e, t, n, a) {
         h &&
             (function t() {
                 let o = u(e);
-                O && !l(O, o) && n(), (O = o), (s = requestAnimationFrame(t));
+                (O && !l(O, o) && n(), (O = o), (s = requestAnimationFrame(t)));
             })(),
         n(),
         () => {
             var e;
-            m.forEach((e) => {
-                c && e.removeEventListener('scroll', n), d && e.removeEventListener('resize', n);
+            (m.forEach((e) => {
+                (c && e.removeEventListener('scroll', n), d && e.removeEventListener('resize', n));
             }),
                 null == g || g(),
                 null == (e = y) || e.disconnect(),
                 (y = null),
-                h && cancelAnimationFrame(s);
+                h && cancelAnimationFrame(s));
         }
     );
 }

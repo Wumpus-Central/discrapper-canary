@@ -15,25 +15,25 @@ function m(e) {
         f = (0, o.v)(),
         x = t.isMediaChannel(),
         p = (e) => {
-            (0, c.KR)({
+            ((0, c.KR)({
                 guildId: t.guild_id,
                 channelId: t.id,
                 sortOrder: e
             }),
                 f.getState().setSortOrder(t.id, e),
-                n();
+                n());
         },
         b = (e) => {
-            (0, c.Do)({
+            ((0, c.Do)({
                 guildId: t.guild_id,
                 channelId: t.id,
                 forumLayout: e
             }),
                 f.getState().setLayoutType(t.id, e),
-                n();
+                n());
         },
         j = (e) => {
-            f.getState().setTagSetting(t.id, e), n();
+            (f.getState().setTagSetting(t.id, e), n());
         },
         v = null != t.availableTags && t.availableTags.length > 0;
     return (0, r.jsx)('div', {
@@ -116,7 +116,7 @@ function m(e) {
                             children: d.intl.string(d.t['3b//lJ'])
                         }),
                         action: () => {
-                            p(t.getDefaultSortOrder()), b(t.getDefaultLayout()), j(t.getDefaultTagSetting());
+                            (p(t.getDefaultSortOrder()), b(t.getDefaultLayout()), j(t.getDefaultTagSetting()));
                         }
                     })
                 })

@@ -26,13 +26,13 @@ function _(e) {
               id: 'mod-view',
               label: y.intl.string(y.t.kj3tz8),
               action: () => {
-                  null == m || m(),
+                  (null == m || m(),
                       (0, u.i)(M),
                       (0, c.r)(n, t, null != S ? S : g.oC.MEMBER_SAFETY, {
                           modViewPanel: b.k.INFO,
                           sourceLocation: null != p ? p : j.location
                       }),
-                      P.dispatch(E.CkL.POPOUT_CLOSE);
+                      P.dispatch(E.CkL.POPOUT_CLOSE));
               }
           })
         : null;

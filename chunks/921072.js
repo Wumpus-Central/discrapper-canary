@@ -1,11 +1,11 @@
-n.d(t, { u$: () => l }), n(980754), n(388685), n(415506), n(539854);
+(n.d(t, { u$: () => l }), n(980754), n(388685), n(415506), n(539854));
 var r = n(230367),
     i = n(320215),
     a = n(240773),
     o = n(495852),
     s = n(835913),
     l = (function (e) {
-        return (e[(e.UNSPECIFIED_DISCLOSURE = 0)] = 'UNSPECIFIED_DISCLOSURE'), (e[(e.IP_LOCATION = 1)] = 'IP_LOCATION'), (e[(e.DISPLAYS_ADVERTISEMENTS = 2)] = 'DISPLAYS_ADVERTISEMENTS'), (e[(e.PARTNER_SDK_DATA_SHARING_MESSAGE = 3)] = 'PARTNER_SDK_DATA_SHARING_MESSAGE'), e;
+        return ((e[(e.UNSPECIFIED_DISCLOSURE = 0)] = 'UNSPECIFIED_DISCLOSURE'), (e[(e.IP_LOCATION = 1)] = 'IP_LOCATION'), (e[(e.DISPLAYS_ADVERTISEMENTS = 2)] = 'DISPLAYS_ADVERTISEMENTS'), (e[(e.PARTNER_SDK_DATA_SHARING_MESSAGE = 3)] = 'PARTNER_SDK_DATA_SHARING_MESSAGE'), e);
     })({});
 class c extends o.C {
     create(e) {
@@ -73,9 +73,9 @@ class c extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let n of Object.keys(e.metadata)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(n).tag(2, r.TD.LengthDelimited).string(e.metadata[n]).join();
-        '' !== e.platformName && t.tag(2, r.TD.LengthDelimited).string(e.platformName), '' !== e.platformUsername && t.tag(3, r.TD.LengthDelimited).string(e.platformUsername), '0' !== e.version && t.tag(4, r.TD.Bit64).fixed64(e.version);
+        ('' !== e.platformName && t.tag(2, r.TD.LengthDelimited).string(e.platformName), '' !== e.platformUsername && t.tag(3, r.TD.LengthDelimited).string(e.platformUsername), '0' !== e.version && t.tag(4, r.TD.Bit64).fixed64(e.version));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection', [
@@ -145,9 +145,9 @@ class u extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.disclosureType && t.tag(1, r.TD.Varint).int32(e.disclosureType), e.ackedAt && s.E.internalBinaryWrite(e.ackedAt, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+        (0 !== e.disclosureType && t.tag(1, r.TD.Varint).int32(e.disclosureType), e.ackedAt && s.E.internalBinaryWrite(e.ackedAt, t.tag(2, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure', [
@@ -197,7 +197,7 @@ class f extends o.C {
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.ackedDisclosures.length; i++) d.internalBinaryWrite(e.ackedDisclosures[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures', [

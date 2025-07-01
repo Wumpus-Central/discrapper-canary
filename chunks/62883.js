@@ -1,9 +1,9 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         contextMenuCallbackNative: () => u,
         contextMenuCallbackWeb: () => d,
         getSelectionText: () => c
-    });
+    }));
 var r = n(255367);
 n(73800);
 var i = n(239091);
@@ -24,7 +24,7 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -40,11 +40,11 @@ function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -86,7 +86,7 @@ function u(e) {
             c,
             u,
             d = e.target;
-        for (; null != d; ) 'src' in d && null != d.src && (c = d.src), 'href' in d && null != d.href && ((s = d.href), (u = d.textContent)), (d = null == d ? void 0 : d.parentNode);
+        for (; null != d; ) ('src' in d && null != d.src && (c = d.src), 'href' in d && null != d.href && ((s = d.href), (u = d.textContent)), (d = null == d ? void 0 : d.parentNode));
         if (null != c)
             return (0, i.jW)(e, async () => {
                 let { default: e } = await n.e('12241').then(n.bind(n, 115512));
@@ -110,7 +110,7 @@ function u(e) {
                 return (n) => (0, r.jsx)(e, l(o({}, n), { text: t }));
             });
     }
-    return e.preventDefault(), null;
+    return (e.preventDefault(), null);
 }
 function d(e) {
     let t = !1,
@@ -122,7 +122,7 @@ function d(e) {
         let n,
             r,
             i = e.target;
-        for (; null != i; ) 'src' in i && null != i.src && (r = i.src), 'href' in i && null != i.href && (n = i.href), (i = null == i ? void 0 : i.parentNode);
+        for (; null != i; ) ('src' in i && null != i.src && (r = i.src), 'href' in i && null != i.href && (n = i.href), (i = null == i ? void 0 : i.parentNode));
         (null != n || null != r) && (t = !0);
     }
     t || e.preventDefault();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -29,7 +29,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -74,7 +74,7 @@ class y extends i.Component {
             : null;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, '_mouseDown', !1),
             g(this, '_mouseUp', !1),
             g(this, 'handleOpenTopic', (e) => {
@@ -96,7 +96,7 @@ class y extends i.Component {
                 this._mouseDown && (this._mouseDown = !1);
             }),
             g(this, 'onMouseUp', (e) => {
-                this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
+                (this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1));
             }),
             g(this, 'handleContextMenu', (e) => {
                 let { channel: t, guild: i } = this.props;
@@ -136,7 +136,7 @@ class y extends i.Component {
                     return;
                 }
                 this.handleOpenTopic(e);
-            });
+            }));
     }
 }
 let C = y;

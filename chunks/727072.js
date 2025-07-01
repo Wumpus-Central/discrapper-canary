@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     I2: () => p,
     RD: () => A,
     mY: () => j,
     pH: () => _
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(73800),
     l = n(94171),
     i = n(362383),
@@ -19,7 +19,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -35,8 +35,8 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -104,7 +104,7 @@ let d = {},
                     var r;
                     let l = Number(t),
                         a = null != (r = i[l]) ? r : [];
-                    return (e[l] = a.filter((e) => e.id !== n)), e;
+                    return ((e[l] = a.filter((e) => e.id !== n)), e);
                 }, {});
             (0, a.j)(() => {
                 e({
@@ -153,7 +153,7 @@ function p(e) {
         r.useCallback(async () => {
             if (!a && null != e)
                 try {
-                    n(!0), await i(e);
+                    (n(!0), await i(e));
                 } finally {
                     n(!1);
                 }

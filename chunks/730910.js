@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+(n.d(t, { Z: () => L }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -35,7 +35,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -51,8 +51,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -101,7 +101,7 @@ function M(e) {
         [{ spring: H }, V] = (0, m.q_F)(() => ({ spring: 0 }), 'animate-always');
     i.useEffect(() => {
         function e() {
-            V({
+            (V({
                 spring: 1,
                 config: a.config.gentle
             }),
@@ -109,7 +109,7 @@ function M(e) {
                     spring: 0,
                     config: a.config.gentle,
                     delay: 1000
-                });
+                }));
         }
         return (
             x.S.subscribe(R.CkL.EMPHASIZE_NOTICE, e),
@@ -151,7 +151,7 @@ function M(e) {
             return !0;
         },
         $ = async () => {
-            h.default.track(
+            (h.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 A(k({}, (0, p.hH)(l)), {
                     step: I.PG[b],
@@ -160,10 +160,10 @@ function M(e) {
                 })
             ),
                 (0, _.Nb)((0, I.lg)(b)),
-                (await J()) && (0, _.IG)(l, b);
+                (await J()) && (0, _.IG)(l, b));
         },
         ee = async () => {
-            h.default.track(
+            (h.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 A(k({}, (0, p.hH)(l)), {
                     step: I.PG[b],
@@ -171,7 +171,7 @@ function M(e) {
                     skip: !1
                 })
             ),
-                (await J()) && (0, _.Wy)(l, b);
+                (await J()) && (0, _.Wy)(l, b));
         },
         et = null;
     B && (b === I.PG.SAFETY_CHECK ? (et = (0, r.jsx)(S.j7, {})) : b === I.PG.DEFAULT_CHANNELS ? (et = (0, r.jsx)(S.Io, {})) : b === I.PG.CUSTOMIZATION_QUESTIONS ? (et = (0, r.jsx)(S.cZ, {})) : b === I.PG.HOME_SETTINGS && (et = (0, r.jsx)(S.g6, {})));

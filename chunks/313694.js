@@ -12,7 +12,7 @@ function r(e, t, n) {
     );
 }
 function i(e, t, n) {
-    a(e, t), t.set(e, n);
+    (a(e, t), t.set(e, n));
 }
 function a(e, t) {
     if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
@@ -26,7 +26,7 @@ function s(e, t) {
 }
 function l(e, t, n) {
     var r = c(e, t, 'set');
-    return u(e, r, n), n;
+    return (u(e, r, n), n);
 }
 function c(e, t, n) {
     if (!t.has(e)) throw TypeError('attempted to ' + n + ' private field on non-instance');
@@ -43,7 +43,7 @@ n.d(t, { J: () => f });
 var d = new WeakMap();
 class f {
     constructor() {
-        i(this, d, {
+        (i(this, d, {
             writable: !0,
             value: void 0
         }),
@@ -57,6 +57,6 @@ class f {
             r(this, 'backendChanged', (e) => {
                 for (let t of o(this, d)) t.backendChanged(e);
             }),
-            l(this, d, []);
+            l(this, d, []));
     }
 }

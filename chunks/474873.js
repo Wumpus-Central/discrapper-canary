@@ -41,5 +41,5 @@ class u extends (r = i.ZP.PersistedStore) {
         return l.lastSoundpackExperimentId;
     }
 }
-s(u, 'displayName', 'SoundpackStore'), s(u, 'persistKey', 'SoundpackStore');
+(s(u, 'displayName', 'SoundpackStore'), s(u, 'persistKey', 'SoundpackStore'));
 let d = new u(a.Z, { SET_SOUNDPACK: c });

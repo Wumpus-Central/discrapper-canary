@@ -15,7 +15,7 @@ let r = (e) => Symbol.iterator in e,
             a = r.next();
         for (; !i.done && !a.done; ) {
             if (!Object.is(i.value, a.value)) return !1;
-            (i = n.next()), (a = r.next());
+            ((i = n.next()), (a = r.next()));
         }
         return !!i.done && !!a.done;
     };

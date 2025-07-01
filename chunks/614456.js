@@ -11,7 +11,7 @@ class c {
     }
     prepare() {
         var e;
-        if (void 0 === this.fMap) for (let t of ((this.fMap = {}), null != (e = this.info.fields) ? e : [])) (this.fMap[t.name] = t), (this.fMap[t.jsonName] = t), (this.fMap[t.localName] = t);
+        if (void 0 === this.fMap) for (let t of ((this.fMap = {}), null != (e = this.info.fields) ? e : [])) ((this.fMap[t.name] = t), (this.fMap[t.jsonName] = t), (this.fMap[t.localName] = t));
     }
     assert(e, t, n) {
         if (!e) {
@@ -32,7 +32,7 @@ class c {
             let c = l.localName;
             if (l.oneof) {
                 if (i.includes(l.oneof)) throw Error(`Multiple members of the oneof group "${l.oneof}" of ${this.info.typeName} are present in JSON.`);
-                i.push(l.oneof), (e = t[l.oneof] = { oneofKind: c });
+                (i.push(l.oneof), (e = t[l.oneof] = { oneofKind: c }));
             } else e = t;
             if ('map' == l.kind) {
                 if (null === s) continue;
@@ -52,7 +52,7 @@ class c {
                     }
                     this.assert(void 0 !== i, l.name + ' map value', r);
                     let o = e;
-                    l.K == a.wx.BOOL && (o = 'true' == o || ('false' != o && o)), (t[(o = this.scalar(o, l.K, a.pz.STRING, l.name).toString())] = i);
+                    (l.K == a.wx.BOOL && (o = 'true' == o || ('false' != o && o)), (t[(o = this.scalar(o, l.K, a.pz.STRING, l.name).toString())] = i));
                 }
             } else if (l.repeat) {
                 if (null === s) continue;
@@ -70,7 +70,7 @@ class c {
                         case 'scalar':
                             r = this.scalar(e, l.T, l.L, l.name);
                     }
-                    this.assert(void 0 !== r, l.name, s), t.push(r);
+                    (this.assert(void 0 !== r, l.name, s), t.push(r));
                 }
             } else
                 switch (l.kind) {
@@ -95,13 +95,13 @@ class c {
         if (('google.protobuf.NullValue' == e[0] && (0, s.hu)(null === t, `Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} only accepts null.`), null === t)) return 0;
         switch (typeof t) {
             case 'number':
-                return (0, s.hu)(Number.isInteger(t), `Unable to parse field ${this.info.typeName}#${n}, enum can only be integral number, got ${t}.`), t;
+                return ((0, s.hu)(Number.isInteger(t), `Unable to parse field ${this.info.typeName}#${n}, enum can only be integral number, got ${t}.`), t);
             case 'string':
                 let i = t;
                 e[2] && t.substring(0, e[2].length) === e[2] && (i = t.substring(e[2].length));
                 let a = e[1][i];
                 if (void 0 === a && r) return !1;
-                return (0, s.hu)('number' == typeof a, `Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} has no value for "${t}".`), a;
+                return ((0, s.hu)('number' == typeof a, `Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} has no value for "${t}".`), a);
         }
         (0, s.hu)(!1, `Unable to parse field ${this.info.typeName}#${n}, cannot parse enum value from ${typeof t}".`);
     }
@@ -133,7 +133,7 @@ class c {
                         c = 'too large or small';
                         break;
                     }
-                    return t == a.wx.FLOAT && (0, s.E_)(r), r;
+                    return (t == a.wx.FLOAT && (0, s.E_)(r), r);
                 case a.wx.INT32:
                 case a.wx.FIXED32:
                 case a.wx.SFIXED32:
@@ -142,7 +142,7 @@ class c {
                     let u;
                     if (null === e) return 0;
                     if (('number' == typeof e ? (u = e) : '' === e ? (c = 'empty string') : 'string' == typeof e && (e.trim().length !== e.length ? (c = 'extra whitespace') : (u = Number(e))), void 0 === u)) break;
-                    return t == a.wx.UINT32 ? (0, s.fp)(u) : (0, s.ug)(u), u;
+                    return (t == a.wx.UINT32 ? (0, s.fp)(u) : (0, s.ug)(u), u);
                 case a.wx.INT64:
                 case a.wx.SFIXED64:
                 case a.wx.SINT64:

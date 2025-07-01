@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     C: () => R,
     Z: () => k
 }),
     n(953529),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -93,7 +93,7 @@ let P = (e) => {
         i.useEffect(() => {
             if (null == g.current || null == N) return;
             let e = Math.min(2, (0, p.x_)());
-            (g.current.width = a * e), (g.current.height = a * e);
+            ((g.current.width = a * e), (g.current.height = a * e));
             let t = !1;
             return (
                 (async () => {
@@ -115,14 +115,14 @@ let P = (e) => {
                 })(),
                 () => {
                     var e;
-                    null == (e = E.current) || e.drop(), (E.current = null), (t = !0);
+                    (null == (e = E.current) || e.drop(), (E.current = null), (t = !0));
                 }
             );
         }, [N, a, o.id, c, m]),
         i.useEffect(() => {
             var e;
             let n;
-            t || (n = 0), null == (e = E.current) || e.setState(t && u, n);
+            (t || (n = 0), null == (e = E.current) || e.setState(t && u, n));
         }, [o, t, u]),
         null == N)
             ? null

@@ -26,11 +26,11 @@ let _ = async () => {
         });
     } catch (t) {
         let e = new o.Hx(t);
-        (0, s.G)(e),
+        ((0, s.G)(e),
             a.Z.dispatch({
                 type: 'FETCH_CHAT_WALLPAPERS_FAILURE',
                 error: e
-            });
+            }));
     }
 };
 async function p(e, t, n) {
@@ -50,7 +50,7 @@ async function p(e, t, n) {
         (await l.Z.updatePrivateChannelRecipientFlags(e.id, n)).ok || null == d || d();
     } catch (t) {
         let e = new o.Hx(t);
-        (0, s.G)(e), null == d || d();
+        ((0, s.G)(e), null == d || d());
     } finally {
         a.Z.dispatch({
             type: 'UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE',

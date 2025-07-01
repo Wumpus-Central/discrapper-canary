@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     Ct: () => u,
     UP: () => l,
     ZP: () => f,
     rj: () => c
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(929991),
     i = n(480739),
     a = n(228392),
@@ -51,7 +51,7 @@ function d(e) {
 }
 class f extends i.zQ {
     constructor({ guildId: e, channelId: t, windowId: n, isPaused: r }) {
-        super({
+        (super({
             windowId: n,
             isPaused: r,
             id: l(t)
@@ -73,6 +73,6 @@ class f extends i.zQ {
             }),
             (this.guildId = e),
             (this.channelId = t),
-            (this.sessionId = (0, o.WW)(t));
+            (this.sessionId = (0, o.WW)(t)));
     }
 }

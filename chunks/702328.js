@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+(n.d(t, { Z: () => F }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -51,8 +51,8 @@ let F = () => {
         Y = (0, m.ZP)(),
         W = (0, c.wj)(Y),
         [K, q] = r.useState(!1),
-        [X, Q] = r.useState(!1),
-        [J, $] = r.useState(!1),
+        [X, J] = r.useState(!1),
+        [Q, $] = r.useState(!1),
         [ee, et] = r.useState(!1),
         en = (0, j.rO)(),
         [ei, er] = r.useState(!1),
@@ -66,7 +66,7 @@ let F = () => {
         { analyticsLocations: em } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
         eg = (0, S.Z)({ location: 'PremiumMarketing' }),
         ep = 'PremiumMarketingHome';
-    (0, u.j)({
+    ((0, u.j)({
         location: ep + ' auto on',
         autoTrackExposure: !0
     }),
@@ -76,7 +76,7 @@ let F = () => {
         }),
         r.useEffect(() => {
             er(!0);
-        }, []);
+        }, []));
     let eh = (0, i.jsxs)('div', {
         className: l()(B.container, B.responsiveContainer, { [B.containerBackground]: W }),
         'data-cy': 'tier-0-marketing-page',
@@ -151,7 +151,7 @@ let F = () => {
                 children: (0, i.jsx)(R.Z, { className: B.planComparisonTableApplicationHome })
             }),
             (0, i.jsx)(P.Z, {
-                isVisible: !K && !J && !X && ei,
+                isVisible: !K && !Q && !X && ei,
                 subscriptionTier: eo,
                 isApplicationHome: !0,
                 isEligibleForBogoPromotion: ed
@@ -169,7 +169,7 @@ let F = () => {
             (0, i.jsx)(o.$, {
                 innerRef: H,
                 onChange: (e) => {
-                    Q(e);
+                    J(e);
                 },
                 children: (0, i.jsx)(D.Z, {
                     ref: H,

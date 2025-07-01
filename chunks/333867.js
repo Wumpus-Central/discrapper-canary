@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(772848),
@@ -27,7 +27,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -69,7 +69,7 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -79,7 +79,7 @@ function E(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let b = 'payment-modal',
@@ -109,10 +109,10 @@ function v(e) {
                     analyticsLocations: I,
                     giftRecipient: S,
                     onClose: (e) => {
-                        t(), null == E || E(e);
+                        (t(), null == E || E(e));
                     },
                     onComplete: () => {
-                        (N = !0), null == v || v();
+                        ((N = !0), null == v || v());
                     },
                     returnRef: i,
                     onStepChange: R
@@ -122,7 +122,7 @@ function v(e) {
         {
             modalKey: P,
             onCloseCallback: () => {
-                N ||
+                (N ||
                     c.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: C,
                         payment_type: f.Zuq[f.GZQ.ONE_TIME],
@@ -138,7 +138,7 @@ function v(e) {
                         (0, l.qg)({
                             variantsReturnStyle: A,
                             location: 'openCollectiblesPaymentModal'
-                        });
+                        }));
             },
             onCloseRequest: () => {
                 null != t && O.has(t) && (0, a.Mr3)(P);

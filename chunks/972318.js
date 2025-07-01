@@ -1,4 +1,4 @@
-r.r(a), r.d(a, { default: () => o });
+(r.r(a), r.d(a, { default: () => o }));
 var o = {
     payButton: 'Pagar',
     'payButton.redirecting': 'Redirigiendo...',

@@ -1,4 +1,4 @@
-a.d(t, { Z: () => o }), a(388685);
+(a.d(t, { Z: () => o }), a(388685));
 var n = a(255367),
     r = a(73800),
     s = a(764110);
@@ -32,12 +32,12 @@ class i extends r.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             l(this, 'scrollRef', r.createRef()),
             l(this, 'scrollTo', (e) => {
                 null != this.scrollRef.current && (this.scrollRef.current.scrollTop = e);
             }),
-            l(this, 'getScrollTop', () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop));
+            l(this, 'getScrollTop', () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop)));
     }
 }
 let o = (0, s.EN)(i);

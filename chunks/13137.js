@@ -1,4 +1,4 @@
-o.d(t, { Z: () => y }), o(388685);
+(o.d(t, { Z: () => y }), o(388685));
 var n = o(255367),
     i = o(73800),
     r = o(120356),
@@ -25,7 +25,7 @@ let v = (e) =>
                     for (var t = 1; t < arguments.length; t++) {
                         var o = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(o);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(o).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(o, e).enumerable;
@@ -33,7 +33,7 @@ let v = (e) =>
                             )),
                             n.forEach(function (t) {
                                 var n;
-                                (n = o[t]),
+                                ((n = o[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: n,
@@ -41,8 +41,8 @@ let v = (e) =>
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = n);
-                            });
+                                        : (e[t] = n));
+                            }));
                     }
                     return e;
                 })({}, e)),
@@ -84,7 +84,7 @@ function y(e) {
         [H, V] = i.useState(null),
         [U, z] = i.useState(null),
         [J, X] = i.useState('');
-    (0, u.ZP)(a),
+    ((0, u.ZP)(a),
         (0, u.zq)(() => {
             var e;
             y({
@@ -94,7 +94,7 @@ function y(e) {
                 dontShowAgain: F,
                 feedback: J
             });
-        });
+        }));
     let K = !0,
         W = !1;
     return (
@@ -108,7 +108,7 @@ function y(e) {
                               emojiKind: k,
                               selectedRating: A,
                               onChangeRating: function (e) {
-                                  B(e), e === h.aZ.GOOD && x();
+                                  (B(e), e === h.aZ.GOOD && x());
                               }
                           })
                       }),
@@ -156,7 +156,7 @@ function y(e) {
                               options: H.problemOptions,
                               onClick: function (e) {
                                   var t;
-                                  z(e), null != H && null != e && (null == (t = H.freeformConfig) ? void 0 : t.value) !== e.value && x();
+                                  (z(e), null != H && null != e && (null == (t = H.freeformConfig) ? void 0 : t.value) !== e.value && x());
                               },
                               hideCaret: (e) => {
                                   var t;
@@ -193,7 +193,7 @@ function y(e) {
                       })
                   })),
                   (r = () => {
-                      X(''), z(null);
+                      (X(''), z(null));
                   }),
                   (W = !0)),
         (0, n.jsxs)(c.Y0X, {

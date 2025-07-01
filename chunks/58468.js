@@ -1,9 +1,9 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r,
-    i = n(442837),
-    s = n(570140),
-    o = n(709054),
-    l = n(592125);
+    s = n(442837),
+    i = n(570140),
+    l = n(709054),
+    o = n(592125);
 function a(e, t, n) {
     return (
         t in e
@@ -20,13 +20,13 @@ function a(e, t, n) {
 let c = {},
     u = c;
 function d() {
-    o.default.keys(u).forEach((e) => {
-        null == l.Z.getChannel(e) && delete u[e];
+    l.default.keys(u).forEach((e) => {
+        null == o.Z.getChannel(e) && delete u[e];
     });
 }
-class f extends (r = i.ZP.PersistedStore) {
+class f extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(l.Z), (u = null != e ? e : c);
+        (this.waitFor(o.Z), (u = null != e ? e : c));
     }
     getState() {
         return u;
@@ -38,18 +38,18 @@ class f extends (r = i.ZP.PersistedStore) {
         return u[e] || !1;
     }
 }
-a(f, 'displayName', 'CollapsedVoiceChannelStore'), a(f, 'persistKey', 'collapsedChannels');
-let p = new f(s.Z, {
+(a(f, 'displayName', 'CollapsedVoiceChannelStore'), a(f, 'persistKey', 'collapsedChannels'));
+let p = new f(i.Z, {
     CONNECTION_OPEN: d,
     OVERLAY_INITIALIZE: d,
     CHANNEL_COLLAPSE: function (e) {
         let { channelId: t } = e;
-        u[t] ? delete u[t] : (u[t] = !0),
+        (u[t] ? delete u[t] : (u[t] = !0),
             (u = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -57,9 +57,9 @@ let p = new f(s.Z, {
                         )),
                         r.forEach(function (t) {
                             a(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
-            })({}, u));
+            })({}, u)));
     }
 });

@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(818083),
     i = (function (e) {
-        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.WITH_TOP_LIST = 1)] = 'WITH_TOP_LIST'), (e[(e.WITHOUT_TOP_LIST = 2)] = 'WITHOUT_TOP_LIST'), e;
+        return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.WITH_TOP_LIST = 1)] = 'WITH_TOP_LIST'), (e[(e.WITHOUT_TOP_LIST = 2)] = 'WITHOUT_TOP_LIST'), e);
     })({});
 let a = (0, r.B)({
     kind: 'user',

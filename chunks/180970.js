@@ -20,7 +20,7 @@ function f(e) {
         var t;
         let { rating: o, problem: a, feedback: l } = e,
             c = null == o;
-        (0, s.tp)(o, l, null != (t = null == a ? void 0 : a.value) ? t : null, c),
+        ((0, s.tp)(o, l, null != (t = null == a ? void 0 : a.value) ? t : null, c),
             c ||
                 (0, i.ZDy)(async () => {
                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
@@ -31,7 +31,7 @@ function f(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function f(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -47,13 +47,13 @@ function f(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })({ body: b.intl.string(b.t['d9+vQ0']) }, t)
                         );
-                });
+                }));
     }, []);
     return (0, r.jsx)(l.Z, {
         modalType: 'block_user',

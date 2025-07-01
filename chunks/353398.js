@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     Q5: () => S,
     Sf: () => E,
     ZP: () => T
 }),
     n(781311),
     n(953529),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -53,7 +53,7 @@ class I extends (r = d.ZP.Store) {
         return null != e && null != this.name && (this.name.trim() !== e.name || this.description.trim() !== e.description);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             N(this, 'name', ''),
             N(this, 'description', ''),
             N(this, 'error', null),
@@ -61,22 +61,22 @@ class I extends (r = d.ZP.Store) {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
-                    (this.name = null != (t = e.name) ? t : this.name), (this.description = null != (n = e.description) ? n : this.description);
-                } else (this.name = ''), (this.description = '');
+                    ((this.name = null != (t = e.name) ? t : this.name), (this.description = null != (n = e.description) ? n : this.description));
+                } else ((this.name = ''), (this.description = ''));
                 this.emitChange();
             }),
             N(this, 'setName', (e) => {
-                (this.name = e), this.emitChange();
+                ((this.name = e), this.emitChange());
             }),
             N(this, 'setDescription', (e) => {
-                (this.description = e), this.emitChange();
+                ((this.description = e), this.emitChange());
             }),
             N(this, 'setError', (e) => {
-                (this.error = e), this.emitChange();
+                ((this.error = e), this.emitChange());
             }),
             N(this, 'save', async () => {
-                await x.Z.updateGuildTemplate(_.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
-            });
+                (await x.Z.updateGuildTemplate(_.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange());
+            }));
     }
 }
 N(I, 'displayName', 'GuildSettingsTemplateMetadataStore_');
@@ -84,7 +84,7 @@ let E = new I(g.Z);
 function S() {
     let [e, t] = l.useState(!1),
         n = async () => {
-            t(!0), await E.save(), t(!1);
+            (t(!0), await E.save(), t(!1));
         };
     return (0, i.jsx)(f.Z, {
         submitting: e,
@@ -126,7 +126,7 @@ function P() {
                     !(async function () {
                         n(!0);
                         try {
-                            await x.Z.loadTemplatesForGuild(e), n(!1);
+                            (await x.Z.loadTemplatesForGuild(e), n(!1));
                         } catch (e) {
                             E.setError(new h.Hx(e));
                         }
@@ -143,14 +143,14 @@ function P() {
             if (n && !s) {
                 if (null != a) {
                     var e, t;
-                    E.setName(null != (e = a.name) ? e : ''), E.setDescription(null != (t = a.description) ? t : '');
+                    (E.setName(null != (e = a.name) ? e : ''), E.setDescription(null != (t = a.description) ? t : ''));
                 }
                 r(!1);
             }
         }, [n, a, s]),
         l.useEffect(
             () => () => {
-                E.reset(), E.setError(null);
+                (E.reset(), E.setError(null));
             },
             []
         ),
@@ -380,7 +380,7 @@ function k(e) {
         n = (0, d.e7)([E], () => E.name),
         [r, s] = l.useState(!1),
         a = async () => {
-            E.setError(null), s(!0);
+            (E.setError(null), s(!0));
             try {
                 await x.Z.createGuildTemplate(t.id, E.name, E.description);
             } catch (e) {
@@ -400,7 +400,7 @@ function A(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, s] = l.useState(!1),
         a = async () => {
-            E.setError(null), s(!0);
+            (E.setError(null), s(!0));
             try {
                 await x.Z.syncGuildTemplate(t.id, n.code);
             } catch (e) {
@@ -421,7 +421,7 @@ function L(e) {
         a = async () => {
             E.setError(null);
             try {
-                await x.Z.deleteGuildTemplate(t.id, n.code), E.setName(''), E.setDescription('');
+                (await x.Z.deleteGuildTemplate(t.id, n.code), E.setName(''), E.setDescription(''));
             } catch (e) {
                 E.setError(new h.Hx(e));
             }
@@ -461,7 +461,7 @@ function M(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -469,7 +469,7 @@ function M(e) {
                                     )),
                                     r.forEach(function (t) {
                                         N(e, t, n[t]);
-                                    });
+                                    }));
                             }
                             return e;
                         })({}, n)),

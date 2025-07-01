@@ -28,16 +28,16 @@ function a(e) {
             }
         switch (a) {
             case 0:
-                (s = o), (a = 1);
+                ((s = o), (a = 1));
                 break;
             case 1:
-                (n[r++] = (s << 2) | ((48 & o) >> 4)), (s = o), (a = 2);
+                ((n[r++] = (s << 2) | ((48 & o) >> 4)), (s = o), (a = 2));
                 break;
             case 2:
-                (n[r++] = ((15 & s) << 4) | ((60 & o) >> 2)), (s = o), (a = 3);
+                ((n[r++] = ((15 & s) << 4) | ((60 & o) >> 2)), (s = o), (a = 3));
                 break;
             case 3:
-                (n[r++] = ((3 & s) << 6) | o), (a = 0);
+                ((n[r++] = ((3 & s) << 6) | o), (a = 0));
         }
     }
     if (1 == a) throw Error('invalid base64 string.');
@@ -51,14 +51,14 @@ function o(e) {
     for (let o = 0; o < e.length; o++)
         switch (((i = e[o]), n)) {
             case 0:
-                (t += r[i >> 2]), (a = (3 & i) << 4), (n = 1);
+                ((t += r[i >> 2]), (a = (3 & i) << 4), (n = 1));
                 break;
             case 1:
-                (t += r[a | (i >> 4)]), (a = (15 & i) << 2), (n = 2);
+                ((t += r[a | (i >> 4)]), (a = (15 & i) << 2), (n = 2));
                 break;
             case 2:
-                (t += r[a | (i >> 6)]), (t += r[63 & i]), (n = 0);
+                ((t += r[a | (i >> 6)]), (t += r[63 & i]), (n = 0));
         }
-    return n && ((t += r[a]), (t += '='), 1 == n && (t += '=')), t;
+    return (n && ((t += r[a]), (t += '='), 1 == n && (t += '=')), t);
 }
-(i[45] = r.indexOf('+')), (i[95] = r.indexOf('/'));
+((i[45] = r.indexOf('+')), (i[95] = r.indexOf('/')));

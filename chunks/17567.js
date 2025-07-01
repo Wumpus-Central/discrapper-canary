@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var i = n(710845),
     r = n(314897),
     s = n(271383),
@@ -24,7 +24,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function m(e) {
             )),
             i.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -60,7 +60,7 @@ let p = new i.Z('Guilds'),
             let t = performance.now(),
                 n = await d.Z.guilds(e).getMany(),
                 i = performance.now();
-            return p.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n;
+            return (p.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n);
         }
         async getOneAsync(e, t) {
             return await d.Z.guilds(e).get(t);
@@ -120,14 +120,14 @@ let p = new i.Z('Guilds'),
                 let i = m({}, l.Z.getRoles(e.guildId));
                 delete i[e.roleId];
                 let r = s.ZP.getSelfMember(e.guildId);
-                null != r && (r = g(m({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
+                (null != r && (r = g(m({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
                     this.put(
                         o.rk(n, {
                             roles: i,
                             member: r
                         }),
                         t
-                    );
+                    ));
             }
         }
         handleGuildMemberAdd(e, t) {

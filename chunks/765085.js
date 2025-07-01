@@ -41,7 +41,7 @@ var p = n(363545),
                 start: function (e) {
                     var r = t,
                         i = n;
-                    r.stopTracking(), n.toValue instanceof a ? r.track(new f(r, n.toValue, p, i, e)) : r.animate(new p(i), e);
+                    (r.stopTracking(), n.toValue instanceof a ? r.track(new f(r, n.toValue, p, i, e)) : r.animate(new p(i), e));
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -80,7 +80,7 @@ var p = n(363545),
                     e.forEach(function (o, s) {
                         var l = function (o) {
                             if (((r[s] = !0), ++n === e.length)) {
-                                (n = 0), t && t(o);
+                                ((n = 0), t && t(o));
                                 return;
                             }
                             !o.finished && i && a.stop();
@@ -90,7 +90,7 @@ var p = n(363545),
                 },
                 stop: function () {
                     e.forEach(function (e, t) {
-                        r[t] || e.stop(), (r[t] = !0);
+                        (r[t] || e.stop(), (r[t] = !0));
                     });
                 }
             };
@@ -115,15 +115,15 @@ var p = n(363545),
             for (var n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
             var s = function e(t, n, r) {
                 if ('number' == typeof n) {
-                    i(t instanceof o, 'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'), t.setValue(n);
+                    (i(t instanceof o, 'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'), t.setValue(n));
                     return;
                 }
                 for (var r in (i('object' == typeof t, 'Bad mapping of type ' + typeof t + ' for key ' + r), i('object' == typeof n, 'Bad event of type ' + typeof n + ' for key ' + r), t)) e(t[r], n[r], r);
             };
-            e.forEach(function (e, t) {
+            (e.forEach(function (e, t) {
                 s(e, r[t], 'arg' + t);
             }),
-                t && t.listener && t.listener.apply(null, r);
+                t && t.listener && t.listener.apply(null, r));
         };
     };
 e.exports = {
@@ -135,7 +135,7 @@ e.exports = {
                 start: function (e) {
                     var r = t,
                         i = n;
-                    r.stopTracking(), r.animate(new h(i), e);
+                    (r.stopTracking(), r.animate(new h(i), e));
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -150,7 +150,7 @@ e.exports = {
                 start: function (e) {
                     var r = t,
                         i = n;
-                    r.stopTracking(), n.toValue instanceof a ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
+                    (r.stopTracking(), n.toValue instanceof a ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e));
                 },
                 stop: function () {
                     t.stopAnimation();

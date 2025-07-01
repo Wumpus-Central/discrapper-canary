@@ -10,6 +10,6 @@ function o(e, t, { inGamut: r } = {}) {
             coords: i,
             alpha: e.alpha
         };
-    return r && (c = (0, s.Z)(c, !0 === r ? void 0 : r)), c;
+    return (r && (c = (0, s.Z)(c, !0 === r ? void 0 : r)), c);
 }
 o.returns = 'color';

@@ -21,7 +21,7 @@ var a = 12633 == r.j ? ['canDrop', 'hover', 'drop'] : null,
                   var e;
                   function t(e, r, n) {
                       if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
-                      i(this, 'props', null), i(this, 'spec', void 0), i(this, 'monitor', void 0), i(this, 'ref', void 0), (this.spec = e), (this.monitor = r), (this.ref = n);
+                      (i(this, 'props', null), i(this, 'spec', void 0), i(this, 'monitor', void 0), i(this, 'ref', void 0), (this.spec = e), (this.monitor = r), (this.ref = n));
                   }
                   return (
                       (e = [
@@ -59,7 +59,7 @@ var a = 12633 == r.j ? ['canDrop', 'hover', 'drop'] : null,
                       (function (e, t) {
                           for (var r = 0; r < t.length; r++) {
                               var n = t[r];
-                              (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                              ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
                           }
                       })(t.prototype, e),
                       t
@@ -69,7 +69,7 @@ var a = 12633 == r.j ? ['canDrop', 'hover', 'drop'] : null,
 function c(e) {
     return (
         Object.keys(e).forEach(function (t) {
-            (0, n.k)(a.indexOf(t) > -1, 'Expected the drop target specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target', a.join(', '), t), (0, n.k)('function' == typeof e[t], 'Expected %s in the drop target specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target', t, t, e[t]);
+            ((0, n.k)(a.indexOf(t) > -1, 'Expected the drop target specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target', a.join(', '), t), (0, n.k)('function' == typeof e[t], 'Expected %s in the drop target specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target', t, t, e[t]));
         }),
         function (t, r) {
             return new s(e, t, r);

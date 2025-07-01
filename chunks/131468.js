@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(570140),
     i = n(317770),
     l = n(314897),
@@ -24,9 +24,9 @@ class s extends i.Z {
         __OVERLAY__ || (r.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived), r.Z.unsubscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect), r.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, '_playSound', function (e) {
-                arguments.length > 1 && void 0 !== arguments[1] && arguments[1], arguments.length > 2 && arguments[2], arguments.length > 3 && arguments[3];
+                (arguments.length > 1 && void 0 !== arguments[1] && arguments[1], arguments.length > 2 && arguments[2], arguments.length > 3 && arguments[3]);
             }),
             o(this, '_stopAndClearSounds', () => {}),
             o(this, '_handleToggleSelfDeafened', () => {
@@ -43,6 +43,6 @@ class s extends i.Z {
             }),
             o(this, '_handleVoiceChannelSelect', () => {
                 this._stopAndClearSounds();
-            });
+            }));
     }
 }

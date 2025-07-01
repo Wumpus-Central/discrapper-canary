@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(49124), n(953529), n(457542);
+(n.d(t, { Z: () => v }), n(388685), n(49124), n(953529), n(457542));
 var i = n(255367),
     r = n(73800),
     s = n(849055),
@@ -21,7 +21,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function j(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -37,8 +37,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -75,10 +75,10 @@ function O(e) {
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), A(x.intl.string(x.t.xSCvBQ)), T(b.x.INIT);
+                (g.Z.captureException(e), A(x.intl.string(x.t.xSCvBQ)), T(b.x.INIT));
                 return;
             }
-            N(e), T(b.x.NAME);
+            (N(e), T(b.x.NAME));
         };
     return (0, i.jsxs)(a.Y0X, {
         transitionState: t,
@@ -170,15 +170,15 @@ function O(e) {
                         id: b.x.NAME,
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
-                                e.preventDefault(),
+                                (e.preventDefault(),
                                     (0, h.Sr)(j, o, I)
                                         .then(async () => {
                                             await (0, d.Yn)(!1);
                                         })
                                         .then(() => l())
                                         .catch(() => {
-                                            A(x.intl.string(x.t.fEptJC)), T(b.x.INIT);
-                                        });
+                                            (A(x.intl.string(x.t.fEptJC)), T(b.x.INIT));
+                                        }));
                             },
                             children: [
                                 (0, i.jsxs)(a.hzk, {
@@ -201,7 +201,7 @@ function O(e) {
                                                     className: E.input,
                                                     value: j,
                                                     onChange: (e) => {
-                                                        C(e), S(0 === e.length);
+                                                        (C(e), S(0 === e.length));
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -321,7 +321,7 @@ function v() {
             (0, i.jsx)('div', {
                 children: (0, i.jsx)(a.zxk, {
                     onClick: () => {
-                        s(!0),
+                        (s(!0),
                             (0, h.L$)()
                                 .then((e) => {
                                     let { ticket: t, challenge: n } = e;
@@ -340,7 +340,7 @@ function v() {
                                 })
                                 .finally(() => {
                                     s(!1);
-                                });
+                                }));
                     },
                     submitting: n,
                     disabled: !u.Ae,

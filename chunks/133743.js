@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Gp: () => u,
     O4: () => o,
     Yp: () => s,
@@ -9,7 +9,7 @@ n.d(t, {
     n(111804),
     n(490233),
     n(97749),
-    n(388685);
+    n(388685));
 var r = n(703656),
     a = n(216780),
     i = n(258971),
@@ -32,13 +32,13 @@ let s = () => {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             s = { previousView: (0, i.Xh)() },
             o = new URLSearchParams();
-        null != e && '' !== e && o.set('q', e),
+        (null != e && '' !== e && o.set('q', e),
             null != t && t !== a.MU && o.set('category_id', t.toString()),
             null != n && n > 1 && o.set('page', n.toString()),
             (0, r.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, {
                 state: s,
                 search: o.toString()
-            });
+            }));
     },
     u = (e) => {
         let {

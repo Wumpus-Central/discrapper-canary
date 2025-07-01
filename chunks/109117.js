@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -61,7 +61,7 @@ async function E() {
     let n = await t(),
         { didCrashReporterSeeCrash: r, didCrashOrUncleanExit: a } = b(i.K.get(h, {}), n),
         o = O(r, a, n);
-    s.default.track(d.rMx.APP_NATIVE_CRASH, o), i.K.set(h, { lastId: null == n ? void 0 : n.id }), a && setTimeout(async () => await y(), 10000);
+    (s.default.track(d.rMx.APP_NATIVE_CRASH, o), i.K.set(h, { lastId: null == n ? void 0 : n.id }), a && setTimeout(async () => await y(), 10000));
 }
 function b(e, t) {
     var n;
@@ -77,7 +77,7 @@ async function y() {
     var e, t;
     if (null != (t = null == (e = o.default.getCurrentUser()) ? void 0 : e.isStaff()) && t)
         try {
-            await a.Z.getMediaEngine().writeAudioDebugState(), await (0, u.E)(d.GU0.RTC), console.log('Successfully uploaded debug files');
+            (await a.Z.getMediaEngine().writeAudioDebugState(), await (0, u.E)(d.GU0.RTC), console.log('Successfully uploaded debug files'));
         } catch (e) {
             console.log('Failed to upload debug files');
         }

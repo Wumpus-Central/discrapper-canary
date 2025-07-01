@@ -40,7 +40,7 @@ class a extends r.Z {
         return this.expectedChargeTime > new Date().toISOString();
     }
     constructor(e) {
-        super(), i(this, 'userId', void 0), i(this, 'subscriptionId', void 0), i(this, 'oldCurrency', void 0), i(this, 'oldPrice', void 0), i(this, 'newCurrency', void 0), i(this, 'newPrice', void 0), i(this, 'priceChangeMode', void 0), i(this, 'expectedChargeTime', void 0), i(this, 'priceChangeId', void 0), (this.userId = e.userId), (this.subscriptionId = e.subscriptionId), (this.oldCurrency = e.oldCurrency), (this.oldPrice = e.oldPrice), (this.newCurrency = e.newCurrency), (this.newPrice = e.newPrice), (this.priceChangeMode = e.priceChangeMode), (this.expectedChargeTime = e.expectedChargeTime), (this.priceChangeId = e.priceChangeId);
+        (super(), i(this, 'userId', void 0), i(this, 'subscriptionId', void 0), i(this, 'oldCurrency', void 0), i(this, 'oldPrice', void 0), i(this, 'newCurrency', void 0), i(this, 'newPrice', void 0), i(this, 'priceChangeMode', void 0), i(this, 'expectedChargeTime', void 0), i(this, 'priceChangeId', void 0), (this.userId = e.userId), (this.subscriptionId = e.subscriptionId), (this.oldCurrency = e.oldCurrency), (this.oldPrice = e.oldPrice), (this.newCurrency = e.newCurrency), (this.newPrice = e.newPrice), (this.priceChangeMode = e.priceChangeMode), (this.expectedChargeTime = e.expectedChargeTime), (this.priceChangeId = e.priceChangeId));
     }
 }
 let o = a;

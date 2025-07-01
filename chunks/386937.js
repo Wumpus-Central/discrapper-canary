@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+(n.d(t, { Z: () => Z }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -41,7 +41,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 S(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -76,7 +76,7 @@ class R extends i.Component {
     componentDidMount() {
         this.measure();
         let { guildId: e } = this.props;
-        null != e && (0, m.C0)(e), window.addEventListener('resize', this.measure);
+        (null != e && (0, m.C0)(e), window.addEventListener('resize', this.measure));
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.measure);
@@ -181,7 +181,7 @@ class R extends i.Component {
                 });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             S(this, 'tierRefs', {}),
             S(this, 'defaultTierRef', i.createRef()),
             S(this, 'subscribersPopoutTargetRef', i.createRef()),
@@ -283,7 +283,7 @@ class R extends i.Component {
                     },
                     n
                 )
-            );
+            ));
     }
 }
 let Z = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, O.default, _.ZP], () => {

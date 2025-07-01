@@ -34,9 +34,9 @@ async function c(t) {
             return new URL(`/${_.J}/${t}.min.js`, n).toString();
         })(e),
         E = n.m9.document.createElement('script');
-    (E.src = s), (E.crossOrigin = 'anonymous'), (E.referrerPolicy = 'origin');
+    ((E.src = s), (E.crossOrigin = 'anonymous'), (E.referrerPolicy = 'origin'));
     let l = new Promise((t, e) => {
-        E.addEventListener('load', () => t()), E.addEventListener('error', e);
+        (E.addEventListener('load', () => t()), E.addEventListener('error', e));
     });
     n.m9.document.body.appendChild(E);
     try {

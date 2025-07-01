@@ -6,5 +6,5 @@ t.exports = e
           return o.f(t, r, i(1, n));
       }
     : function (t, r, n) {
-          return (t[r] = n), t;
+          return ((t[r] = n), t);
       };

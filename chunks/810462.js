@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(94171),
@@ -16,14 +16,14 @@ let d = i.forwardRef(function (e, t) {
         v = i.useCallback(
             (e) => {
                 var t;
-                n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, c.ql)(e), null == (t = p.current) || t.scrollTo(0);
+                (n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, c.ql)(e), null == (t = p.current) || t.scrollTo(0));
             },
             [p, n]
         ),
         I = i.useCallback(() => {
             (0, c.ql)('');
         }, []);
-    i.useImperativeHandle(t, () => ({
+    (i.useImperativeHandle(t, () => ({
         focus: () => {
             var e;
             return null == (e = g.current) ? void 0 : e.focus();
@@ -34,7 +34,7 @@ let d = i.forwardRef(function (e, t) {
                 var e;
                 null == (e = g.current) || e.focus();
             }
-        }, [b]);
+        }, [b]));
     let T = () => (null != y ? y : d || null == m ? h : m);
     return (0, r.jsx)('div', {
         className: u.wrapper,

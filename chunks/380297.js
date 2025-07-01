@@ -14,7 +14,7 @@ e.exports = function (e) {
         var u = n.length,
             d = !0;
         return function (e, t) {
-            if (d) return (d = !1), t;
+            if (d) return ((d = !1), t);
             if (i(this)) return t;
             for (var r = 0; r < u; r++) if (n[r] === e) return t;
         };

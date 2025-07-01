@@ -6,7 +6,7 @@ var o = n(17506),
     s = n(540065),
     u = n(904498),
     l = n(11472);
-n(590686), n(139934);
+(n(590686), n(139934));
 var c = function (e, t, n) {
         for (var o = 0, i = 0; (o = i), (i = (0, r.fj)()), 38 === o && 12 === i && (t[n] = 1), !(0, r.r)(i); ) (0, r.lp)();
         return (0, r.tP)(e, r.FK);
@@ -17,14 +17,14 @@ var c = function (e, t, n) {
         do
             switch ((0, r.r)(o)) {
                 case 0:
-                    38 === o && 12 === (0, r.fj)() && (t[n] = 1), (e[n] += c(r.FK - 1, t, n));
+                    (38 === o && 12 === (0, r.fj)() && (t[n] = 1), (e[n] += c(r.FK - 1, t, n)));
                     break;
                 case 2:
                     e[n] += (0, r.iF)(o);
                     break;
                 case 4:
                     if (44 === o) {
-                        (e[++n] = 58 === (0, r.fj)() ? '&\f' : ''), (t[n] = e[n].length);
+                        ((e[++n] = 58 === (0, r.fj)() ? '&\f' : ''), (t[n] = e[n].length));
                         break;
                     }
                 default:
@@ -195,11 +195,11 @@ var c = function (e, t, n) {
         var r = e.stylisPlugins || v,
             i = {},
             a = [];
-        (c = e.container || document.head),
+        ((c = e.container || document.head),
             Array.prototype.forEach.call(document.querySelectorAll('style[data-emotion^="' + t + ' "]'), function (e) {
                 for (var t = e.getAttribute('data-emotion').split(' '), n = 1; n < t.length; n++) i[t[n]] = !0;
                 a.push(e);
-            });
+            }));
         var c,
             d,
             p = [
@@ -224,8 +224,8 @@ var c = function (e, t, n) {
                 registered: {},
                 insert: function (e, t, n, o) {
                     var r;
-                    (d = n), (r = e ? e + '{' + t.styles + '}' : t.styles), (0, s.q)((0, l.MY)(r), m), o && (g.inserted[t.name] = !0);
+                    ((d = n), (r = e ? e + '{' + t.styles + '}' : t.styles), (0, s.q)((0, l.MY)(r), m), o && (g.inserted[t.name] = !0));
                 }
             };
-        return g.sheet.hydrate(a), g;
+        return (g.sheet.hydrate(a), g);
     };

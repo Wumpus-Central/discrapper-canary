@@ -5,11 +5,11 @@ var n = r(73800),
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     i = [38, 40],
@@ -55,7 +55,7 @@ let s = (function (e) {
                 r.unbindEventListeners();
             }),
             (r.unbindEventListeners = function () {
-                window.removeEventListener('mousemove', r.handleDrag), window.removeEventListener('mouseup', r.handleMouseUp);
+                (window.removeEventListener('mousemove', r.handleDrag), window.removeEventListener('mouseup', r.handleMouseUp));
             }),
             (r.state = {
                 value: String(e.value).toUpperCase(),
@@ -124,7 +124,7 @@ let s = (function (e) {
                 key: 'setUpdatedValue',
                 value: function (e, t) {
                     var r = this.props.label ? this.getValueObjectWithLabel(e) : e;
-                    this.props.onChange && this.props.onChange(r, t), this.setState({ value: e });
+                    (this.props.onChange && this.props.onChange(r, t), this.setState({ value: e }));
                 }
             },
             {

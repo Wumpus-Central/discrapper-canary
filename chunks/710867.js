@@ -22,7 +22,7 @@ let o = (e) => {
                             position: 'absolute'
                         },
                         onLoad: () => {
-                            s(o.current - 1), (o.current = o.current - 1);
+                            (s(o.current - 1), (o.current = o.current - 1));
                         }
                     },
                     e.src

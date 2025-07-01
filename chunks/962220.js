@@ -15,7 +15,7 @@ let h = 'template',
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -23,7 +23,7 @@ let h = 'template',
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -31,8 +31,8 @@ let h = 'template',
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })({}, d.Z)),
@@ -50,13 +50,13 @@ let h = 'template',
                             fingerprint: t,
                             attemptId: r
                         });
-                    c.default.track(p.rMx.DEEP_LINK_CLICKED, {
+                    (c.default.track(p.rMx.DEEP_LINK_CLICKED, {
                         fingerprint: (0, o.K)(t),
                         attempt_id: r,
                         source: h,
                         guild_template_code: e
                     }),
-                        u.Z.launch(i, () => {});
+                        u.Z.launch(i, () => {}));
                 }
             }),
         Object.getOwnPropertyDescriptors

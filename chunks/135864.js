@@ -62,11 +62,11 @@ function S(e) {
                                 restorePreviousView: !0
                             }
                         });
-                    d.Z.resetState(), (0, E.transitionToGlobalDiscovery)({ tab: t });
+                    (d.Z.resetState(), (0, E.transitionToGlobalDiscovery)({ tab: t }));
                     return;
                 case O.GlobalDiscoveryTab.SERVERS:
                     if (!N) return (0, E.transitionToGlobalDiscovery)({ tab: t });
-                    h.Z.resetState(), f.Z.resetState();
+                    (h.Z.resetState(), f.Z.resetState());
                     return;
                 default:
                     return (0, E.transitionToGlobalDiscovery)({ tab: t });

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Qk: () => N,
     WG: () => P,
     ZP: () => w
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -98,7 +98,7 @@ function w(e) {
         { zoomed: m, setZoomed: N } = (0, E.Y)(),
         P = i.useCallback(
             (e) => {
-                _((e = C(e, t.length))), (p.current = e), null == n || n(e), N(!1);
+                (_((e = C(e, t.length))), (p.current = e), null == n || n(e), N(!1));
             },
             [n, t, N]
         );
@@ -109,7 +109,7 @@ function w(e) {
             h.S.subscribe(T.CkL.MODAL_CAROUSEL_NEXT, e),
             h.S.subscribe(T.CkL.MODAL_CAROUSEL_PREV, t),
             () => {
-                h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_NEXT, e), h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_PREV, t);
+                (h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_NEXT, e), h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_PREV, t));
             }
         );
     }, [P, N]);
@@ -123,7 +123,7 @@ function w(e) {
         ),
         L = u
             ? (e) => {
-                  e.stopPropagation(), e.preventDefault();
+                  (e.stopPropagation(), e.preventDefault());
               }
             : () => (0, g.yg)(g.uG.CONTEXT_MENU_OPENED),
         x = t.length > 1;
@@ -136,7 +136,7 @@ function w(e) {
                               children: [
                                   (0, r.jsx)(v.Z, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_PREV);
+                                          (e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_PREV));
                                       },
                                       icon: s.j9r,
                                       tooltip: S.intl.string(S.t.vgfxaG),
@@ -144,7 +144,7 @@ function w(e) {
                                   }),
                                   (0, r.jsx)(v.Z, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_NEXT);
+                                          (e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_NEXT));
                                       },
                                       icon: s.d4D,
                                       tooltip: S.intl.string(S.t.XiOHRU),

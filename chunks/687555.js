@@ -1,4 +1,4 @@
-r.d(t, { Z: () => B }), r(388685), r(953529), r(539854);
+(r.d(t, { Z: () => B }), r(388685), r(953529), r(539854));
 var a = r(255367),
     i = r(73800),
     s = r(120356),
@@ -176,7 +176,7 @@ function U(e) {
                                 onChange: (e, t) => {
                                     C((r) => {
                                         let a = new Set(r);
-                                        return t ? a.add(e) : a.delete(e), a;
+                                        return (t ? a.add(e) : a.delete(e), a);
                                     });
                                 }
                             },
@@ -190,7 +190,7 @@ function U(e) {
                         className: S.submit,
                         disabled: f,
                         onClick: async () => {
-                            p(!0), await t([...o.values()]), p(!1);
+                            (p(!0), await t([...o.values()]), p(!1));
                         },
                         children: v.intl.string(v.t.ItpQxs)
                     })
@@ -261,7 +261,7 @@ let B = function (e) {
                             L((t) => {
                                 let r = [...t.values()][e],
                                     a = new Map(t);
-                                return a.delete(r.id), a;
+                                return (a.delete(r.id), a);
                             });
                         },
                         onQueryChange: x,
@@ -284,7 +284,7 @@ let B = function (e) {
                                       onChange: (e, t) => {
                                           L((r) => {
                                               let a = new Map(r);
-                                              return t ? a.set(e.id, e) : a.delete(e.id), a;
+                                              return (t ? a.set(e.id, e) : a.delete(e.id), a);
                                           });
                                       }
                                   },
@@ -302,7 +302,7 @@ let B = function (e) {
                     disabled: (0 === j.size && !G) || w,
                     onClick: async () => {
                         if (G) return void t();
-                        b(!0), await r([...j.values()]), b(!1);
+                        (b(!0), await r([...j.values()]), b(!1));
                     },
                     children: G ? v.intl.string(v.t.wpSqAQ) : v.intl.string(v.t.ItpQxs)
                 })

@@ -12,7 +12,7 @@ function u(e) {
         p = !1,
         m = (0, i.Z)(),
         f = t.id,
-        h = () => {
+        g = () => {
             p = !0;
         };
     (0, l.ZDy)(
@@ -26,7 +26,7 @@ function u(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function u(e) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -42,8 +42,8 @@ function u(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, n)),
@@ -57,7 +57,7 @@ function u(e) {
                                 guildId: u
                             },
                             loadId: m,
-                            onComplete: h
+                            onComplete: g
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -77,7 +77,7 @@ function u(e) {
         },
         {
             onCloseCallback: () => {
-                p ||
+                (p ||
                     s.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: m,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
@@ -86,7 +86,7 @@ function u(e) {
                         location_stack: Array.isArray(d) ? d : [d]
                     }),
                     (0, a.fw)(),
-                    (0, o.p)();
+                    (0, o.p)());
             },
             onCloseRequest: c.dG4
         }

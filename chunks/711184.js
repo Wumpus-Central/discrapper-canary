@@ -1,4 +1,4 @@
-r.d(t, { default: () => C }), r(388685);
+(r.d(t, { default: () => C }), r(388685));
 var n = r(255367),
     s = r(73800),
     i = r(120356),
@@ -55,7 +55,7 @@ class S extends s.Component {
             n = 0;
         return (Object.keys(t).forEach((s) => {
             let i = t[s];
-            null == r[i] && (r[i] = 0), r[i]++, r[i] > n && ((e = i), (n = r[i]));
+            (null == r[i] && (r[i] = 0), r[i]++, r[i] > n && ((e = i), (n = r[i])));
         }),
         null == e || e === h.jsM)
             ? (0, c.uj)()
@@ -235,7 +235,7 @@ class S extends s.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'state', {
                 currentStep: 0,
                 hasSubmittedHouse: !1,
@@ -254,7 +254,7 @@ class S extends s.Component {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var r = null != arguments[t] ? arguments[t] : {},
                                         n = Object.keys(r);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (n = n.concat(
                                             Object.getOwnPropertySymbols(r).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -262,7 +262,7 @@ class S extends s.Component {
                                         )),
                                         n.forEach(function (t) {
                                             b(e, t, r[t]);
-                                        });
+                                        }));
                                 }
                                 return e;
                             })({}, t.responses)),
@@ -309,7 +309,7 @@ class S extends s.Component {
             }),
             b(this, 'handleNextQuestionButtonClick', () => {
                 this.setState((e) => ({ currentStep: e.currentStep + 1 }));
-            });
+            }));
     }
 }
 let C = S;

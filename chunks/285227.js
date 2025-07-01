@@ -9,7 +9,7 @@ e.exports = function (e) {
     var t = 0;
     return (
         (e = r(e, function (e) {
-            if (s(e)) return (t = l(e.length, t)), !0;
+            if (s(e)) return ((t = l(e.length, t)), !0);
         })),
         o(t, function (t) {
             return i(e, a(t));

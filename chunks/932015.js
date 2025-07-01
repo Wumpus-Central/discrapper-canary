@@ -25,7 +25,7 @@ class a extends r.Z {
         });
     }
     constructor(e) {
-        super(), i(this, 'id', void 0), i(this, 'guildId', void 0), i(this, 'userId', void 0), i(this, 'user', void 0), i(this, 'ended', void 0), i(this, 'endsAt', void 0), (this.id = e.id), (this.guildId = e.guildId), (this.userId = e.userId), (this.user = e.user), (this.ended = e.ended), (this.endsAt = null != e.endsAt ? e.endsAt : null);
+        (super(), i(this, 'id', void 0), i(this, 'guildId', void 0), i(this, 'userId', void 0), i(this, 'user', void 0), i(this, 'ended', void 0), i(this, 'endsAt', void 0), (this.id = e.id), (this.guildId = e.guildId), (this.userId = e.userId), (this.user = e.user), (this.ended = e.ended), (this.endsAt = null != e.endsAt ? e.endsAt : null));
     }
 }
 let o = a;

@@ -6,12 +6,12 @@ a.d(e, {
                 if (null === a || 'function' != typeof E) r(a);
                 else {
                     let l = E({ ...a }, i);
-                    o.X && E.id && null === l && _.kg.log(`Event processor "${E.id}" dropped event`),
+                    (o.X && E.id && null === l && _.kg.log(`Event processor "${E.id}" dropped event`),
                         (0, n.J8)(l)
                             ? l.then((a) => t(e, a, i, c + 1).then(r)).then(null, s)
                             : t(e, l, i, c + 1)
                                   .then(r)
-                                  .then(null, s);
+                                  .then(null, s));
                 }
             });
         }

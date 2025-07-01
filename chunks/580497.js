@@ -2,26 +2,26 @@ n.d(t, { Z: () => f });
 var r = n(512722),
     i = n.n(r),
     l = n(525654),
-    a = n.n(l),
-    o = n(39612),
-    s = n(271579),
+    s = n.n(l),
+    a = n(39612),
+    o = n(271579),
     c = n(756647),
     u = n(703656),
     d = n(314897),
     h = n(896797),
     p = n(626135),
-    m = n(954824),
-    g = n(981631);
+    g = n(954824),
+    m = n(981631);
 function f(e) {
     let t = (function (e) {
             var t;
-            let n = null == (t = a().os) ? void 0 : t.family;
+            let n = null == (t = s().os) ? void 0 : t.family;
             if ('Android' === n || 'iOS' === n) {
                 let t = d.default.getFingerprint(),
-                    n = (0, s.WS)();
+                    n = (0, o.WS)();
                 return (
                     i()(null != e, 'generateAppPath: guildId cannot be null'),
-                    (0, s.ZP)((0, o.z0)(e), {
+                    (0, o.ZP)((0, a.z0)(e), {
                         utmSource: 'verify_hub_email',
                         fingerprint: t,
                         attemptId: n
@@ -30,14 +30,14 @@ function f(e) {
             }
             return 'discord://';
         })(e),
-        n = (0, s.zS)(t);
-    null != n &&
-        p.default.track(g.rMx.DEEP_LINK_CLICKED, {
+        n = (0, o.zS)(t);
+    (null != n &&
+        p.default.track(m.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
-        m.Z.launch(t, (e) => {
+        g.Z.launch(t, (e) => {
             e || (0, u.dL)(h.Z.fallbackRoute);
-        });
+        }));
 }

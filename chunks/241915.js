@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => N,
     _: () => S
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -32,7 +32,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -81,7 +81,7 @@ function T(e) {
         }),
         d = a.useCallback(
             (e) => {
-                e.stopPropagation(), u(e);
+                (e.stopPropagation(), u(e));
             },
             [u]
         );
@@ -98,7 +98,7 @@ class S extends (r = a.PureComponent) {
         if (null != this.props.width && null != this.props.resizeConfig && e.width !== this.props.width) {
             var t, n;
             let r = null != (n = null != (t = this._width) ? t : e.width) ? n : this.props.width;
-            (this._width = this.props.width), null != this._innerDivRef.current && (Math.abs(r - this._width) > b && (this._innerDivRef.current.style.transition = 'none'), (this._innerDivRef.current.style.width = ''.concat(this.props.width, 'px')));
+            ((this._width = this.props.width), null != this._innerDivRef.current && (Math.abs(r - this._width) > b && (this._innerDivRef.current.style.transition = 'none'), (this._innerDivRef.current.style.width = ''.concat(this.props.width, 'px'))));
         }
         (e.edgeOffsetTop !== this.props.edgeOffsetTop || e.edgeOffsetLeft !== this.props.edgeOffsetLeft || e.edgeOffsetBottom !== this.props.edgeOffsetBottom || e.edgeOffsetRight !== this.props.edgeOffsetRight || e.maxX !== this.props.maxX || e.maxY !== this.props.maxY || e.dockedRect !== this.props.dockedRect || e.roundCorners !== this.props.roundCorners) && (this.ensureIsInPosition(), this.ensureWidth());
     }
@@ -110,7 +110,7 @@ class S extends (r = a.PureComponent) {
         let t = this._innerDivRef.current;
         if (null != t) {
             let e = t.getBoundingClientRect();
-            (this._boundWidth = e.width), (this._boundHeight = e.height);
+            ((this._boundWidth = e.width), (this._boundHeight = e.height));
         }
         let { edgeOffsetTop: n, edgeOffsetLeft: r, edgeOffsetBottom: i, edgeOffsetRight: a, maxX: o, maxY: s, dockedRect: l } = this.props,
             c = Math.round(n),
@@ -241,7 +241,7 @@ class S extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             h(this, 'state', { isResizing: !1 }),
             h(this, '_draggable', void 0),
             h(this, '_innerDivRef', a.createRef()),
@@ -268,24 +268,24 @@ class S extends (r = a.PureComponent) {
                 let t = null == e ? void 0 : e.ownerDocument.defaultView;
                 if (null != e && null != t) {
                     var n;
-                    (this._resizeObserver = new t.ResizeObserver(this.ensureIsInPosition)), null == (n = this._resizeObserver) || n.observe(e);
+                    ((this._resizeObserver = new t.ResizeObserver(this.ensureIsInPosition)), null == (n = this._resizeObserver) || n.observe(e));
                 }
             }),
             h(this, 'handleSetDraggableRef', (e) => {
                 this._draggable = e;
             }),
             h(this, 'handleResize', (e) => {
-                (this._width = e), this.state.isResizing || this.setState({ isResizing: !0 });
+                ((this._width = e), this.state.isResizing || this.setState({ isResizing: !0 }));
             }),
             h(this, 'handleResizeEnd', (e) => {
                 let { onResize: t, resizeConfig: n } = this.props;
                 if (null == n) return;
                 let r = I(e, n);
-                (this._width = r), null == t || t(r), this.setState({ isResizing: !1 }), this.ensureWidth();
+                ((this._width = r), null == t || t(r), this.setState({ isResizing: !1 }), this.ensureWidth());
             }),
             h(this, 'handleDragStart', (e, t) => {
                 var n, r;
-                (this._velocityX = 0), (this._velocityY = 0), (this._lastMoveX = e), (this._lastMoveY = t), (this._lastMoveTime = new Date()), null == (n = (r = this.props).onDragStart) || n.call(r, e, t);
+                ((this._velocityX = 0), (this._velocityY = 0), (this._lastMoveX = e), (this._lastMoveY = t), (this._lastMoveTime = new Date()), null == (n = (r = this.props).onDragStart) || n.call(r, e, t));
             }),
             h(this, 'handleDrag', (e, t) => {
                 let n = new Date(),
@@ -304,7 +304,7 @@ class S extends (r = a.PureComponent) {
                     null == t || t(e, i);
                 }
                 null == (n = (r = this.props).onDragEnd) || n.call(r, e, t);
-            });
+            }));
     }
 }
 h(S, 'defaultProps', {

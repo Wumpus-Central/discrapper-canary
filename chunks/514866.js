@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => j });
 var a = n(255367);
 n(73800);
 var r = n(120356),
@@ -10,9 +10,9 @@ var r = n(120356),
     d = n(963886),
     u = n(110478),
     m = n(423932),
-    p = n(695346),
+    x = n(695346),
     h = n(306052),
-    x = n(594174),
+    p = n(594174),
     b = n(994331),
     f = n(20493);
 let v = () => {
@@ -41,10 +41,10 @@ let v = () => {
             );
         });
 };
-function _() {
-    let e = x.default.getCurrentUser(),
+function j() {
+    let e = p.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
-        n = p.Rt.useSetting();
+        n = x.Rt.useSetting();
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)('div', {
@@ -100,7 +100,7 @@ function _() {
                             className: l()(b.buttonsContainer, f.marginBottom20),
                             children: (0, a.jsx)(s.j7V, {
                                 value: n,
-                                onChange: (e) => p.Rt.updateSetting(e),
+                                onChange: (e) => x.Rt.updateSetting(e),
                                 hideBorder: !0,
                                 children: 'Ignore profile speedbump disabled'
                             })

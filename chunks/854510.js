@@ -1,24 +1,24 @@
-r.d(t, { default: () => b }), r(953529), r(388685);
+(r.d(t, { default: () => b }), r(953529), r(388685));
 var n = r(255367);
 r(73800);
 var o = r(481060),
     s = r(313201),
     c = r(930180),
-    i = r(320596),
-    l = r(388032),
+    l = r(320596),
+    i = r(388032),
     a = r(891430);
 function d(e) {
     let { blockedUsersCount: t, ignoredUsersCount: r } = e;
-    return t > 0 && r > 0 ? l.intl.format(l.t.Uzdyho, { number: t + r }) : r > 0 ? l.intl.format(l.t.wvygk5, { number: r }) : l.intl.format(l.t.HviVAw, { number: t });
+    return t > 0 && r > 0 ? i.intl.format(i.t.Uzdyho, { number: t + r }) : r > 0 ? i.intl.format(i.t.wvygk5, { number: r }) : i.intl.format(i.t.HviVAw, { number: t });
 }
 function u(e) {
     let { blockedUsersCount: t, ignoredUsersCount: r } = e;
-    return t > 0 && r > 0 ? l.intl.string(l.t['P/KFX1']) : r > 0 ? l.intl.format(l.t.Ri3o39, { number: r }) : l.intl.format(l.t['28qZMT'], { number: t });
+    return t > 0 && r > 0 ? i.intl.string(i.t['P/KFX1']) : r > 0 ? i.intl.format(i.t.Ri3o39, { number: r }) : i.intl.format(i.t['28qZMT'], { number: t });
 }
 function b(e) {
     var t,
         r,
-        { channel: b, onAccept: m, transitionState: j, onClose: x } = e,
+        { channel: b, onAccept: m, transitionState: x, onClose: j } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -29,12 +29,12 @@ function b(e) {
                         n,
                         o = {},
                         s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    for (n = 0; n < s.length; n++) ((r = s[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++) (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                for (n = 0; n < s.length; n++) ((r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
             }
             return o;
         })(e, ['channel', 'onAccept', 'transitionState', 'onClose']);
@@ -47,7 +47,7 @@ function b(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -55,7 +55,7 @@ function b(e) {
                     )),
                     n.forEach(function (t) {
                         var n;
-                        (n = r[t]),
+                        ((n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
@@ -63,13 +63,13 @@ function b(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
-                    });
+                                : (e[t] = n));
+                    }));
             }
             return e;
         })(
             {
-                transitionState: j,
+                transitionState: x,
                 'aria-labelledby': p
             },
             f
@@ -105,7 +105,7 @@ function b(e) {
                         children: [...h, ...g].map((e) => {
                             let { user: t, id: r, speaker: o } = e;
                             return (0, n.jsx)(
-                                i.Ie,
+                                l.Ie,
                                 {
                                     user: t,
                                     speaker: o,
@@ -121,18 +121,18 @@ function b(e) {
                         children: [
                             (0, n.jsx)(o.zxk, {
                                 onClick: () => {
-                                    m(b), x();
+                                    (m(b), j());
                                 },
                                 color: o.zxk.Colors.BRAND,
-                                children: l.intl.string(l.t.mbD50N)
+                                children: i.intl.string(i.t.mbD50N)
                             }),
                             (0, n.jsx)(o.zxk, {
                                 onClick: () => {
-                                    x();
+                                    j();
                                 },
                                 color: o.zxk.Colors.PRIMARY,
                                 look: o.zxk.Looks.LINK,
-                                children: l.intl.string(l.t.CZGqeX)
+                                children: i.intl.string(i.t.CZGqeX)
                             })
                         ]
                     })

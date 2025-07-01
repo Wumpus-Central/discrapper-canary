@@ -14,17 +14,17 @@ function u(e) {
     var t = Math.round(e).toString(16).toUpperCase();
     return t.length < 2 ? '0' + t : t;
 }
-(c.get = function (e) {
+((c.get = function (e) {
     var t, r;
     switch (e.substring(0, 3).toLowerCase()) {
         case 'hsl':
-            (t = c.get.hsl(e)), (r = 'hsl');
+            ((t = c.get.hsl(e)), (r = 'hsl'));
             break;
         case 'hwb':
-            (t = c.get.hwb(e)), (r = 'hwb');
+            ((t = c.get.hwb(e)), (r = 'hwb'));
             break;
         default:
-            (t = c.get.rgb(e)), (r = 'rgb');
+            ((t = c.get.rgb(e)), (r = 'rgb'));
     }
     return t
         ? {
@@ -57,7 +57,7 @@ function u(e) {
         } else if (!(t = e.match(/^(\w+)$/))) return null;
         else return 'transparent' === t[1] ? [0, 0, 0, 0] : s.call(a, t[1]) ? (((o = a[t[1]])[3] = 1), o) : null;
         for (r = 0; r < 3; r++) o[r] = l(o[r], 0, 255);
-        return (o[3] = l(o[3], 0, 1)), o;
+        return ((o[3] = l(o[3], 0, 1)), o);
     }),
     (c.get.hsl = function (e) {
         if (!e) return null;
@@ -99,8 +99,8 @@ function u(e) {
     (c.to.hwb = function () {
         var e = n(arguments),
             t = '';
-        return e.length >= 4 && 1 !== e[3] && (t = ', ' + e[3]), 'hwb(' + e[0] + ', ' + e[1] + '%, ' + e[2] + '%' + t + ')';
+        return (e.length >= 4 && 1 !== e[3] && (t = ', ' + e[3]), 'hwb(' + e[0] + ', ' + e[1] + '%, ' + e[2] + '%' + t + ')');
     }),
     (c.to.keyword = function (e) {
         return o[e.slice(0, 3)];
-    });
+    }));

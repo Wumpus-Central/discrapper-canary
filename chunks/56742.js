@@ -1,7 +1,7 @@
 var n, r;
-(n = { value: !0 }),
+((n = { value: !0 }),
     (function (e) {
-        (e.Unidentified = 'Unidentified'),
+        ((e.Unidentified = 'Unidentified'),
             (e.Alt = 'Alt'),
             (e.AltGraph = 'AltGraph'),
             (e.CapsLock = 'CapsLock'),
@@ -316,5 +316,5 @@ var n, r;
             (e.Add = 'Add'),
             (e.Divide = 'Divide'),
             (e.Subtract = 'Subtract'),
-            (e.Separator = 'Separator');
-    })((r = t.Key || (t.Key = {})));
+            (e.Separator = 'Separator'));
+    })((r = t.Key || (t.Key = {}))));

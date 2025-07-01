@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(73346),
     l = n(700307),
     c = (function (e) {
-        return (e[(e.SMALL = 40)] = 'SMALL'), (e[(e.MEDIUM = 66)] = 'MEDIUM'), e;
+        return ((e[(e.SMALL = 40)] = 'SMALL'), (e[(e.MEDIUM = 66)] = 'MEDIUM'), e);
     })({});
 let u = {
         40: l.small,

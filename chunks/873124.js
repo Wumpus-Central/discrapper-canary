@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685), n(457542);
+(n.d(t, { Z: () => a }), n(388685), n(457542));
 var r = n(255367),
     l = n(73800),
     i = n(481060),
@@ -19,7 +19,7 @@ function a(e) {
         }, [u]),
         (0, r.jsxs)('form', {
             onSubmit: (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     f(!0),
                     n({
                         mfaType: 'password',
@@ -31,7 +31,7 @@ function a(e) {
                         })
                         .finally(() => {
                             f(!1);
-                        });
+                        }));
             },
             children: [
                 (0, r.jsx)(s.Z.SlideHeader, { onClose: c }),

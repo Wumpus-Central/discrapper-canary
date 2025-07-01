@@ -50,7 +50,7 @@ function h(e) {
                               color: o.zxk.Colors.PRIMARY,
                               look: o.zxk.Looks.LINK,
                               onClick: function () {
-                                  (0, s.Kw)(s.v6.CLIPS_CHANNEL_ATTACH_REMINDER), h();
+                                  ((0, s.Kw)(s.v6.CLIPS_CHANNEL_ATTACH_REMINDER), h());
                               },
                               children: d.intl.string(d.t['7r5Z19'])
                           }),

@@ -12,7 +12,7 @@ function o(e, t, n, o, s, l) {
             });
         });
     }
-    s.forEach(function (e) {
+    (s.forEach(function (e) {
         c[Number(new r.M(e, l).rezonedDate())] = !0;
     }),
         (e.accept = function (e) {
@@ -24,7 +24,7 @@ function o(e, t, n, o, s, l) {
             (e.accept = function (e) {
                 var t = Number(e);
                 return !!c[t] || ((c[t] = !0), u.call(this, e));
-            }));
+            })));
     for (var f = 0; f < o.length; f++) {
         var _ = new r.M(o[f], l).rezonedDate();
         if (!e.accept(new Date(_.getTime()))) break;

@@ -17,7 +17,7 @@ function d(e) {
                 ctaClickable: null != e,
                 onCtaClicked() {
                     var t;
-                    i()(null != e, 'Guild must be not null open COMMUNITY settings'), s.Z.open(null != (t = null == e ? void 0 : e.id) ? t : '', o.pNK.COMMUNITY);
+                    (i()(null != e, 'Guild must be not null open COMMUNITY settings'), s.Z.open(null != (t = null == e ? void 0 : e.id) ? t : '', o.pNK.COMMUNITY));
                 }
             };
         case a.d5.WAITLIST_ONLY:

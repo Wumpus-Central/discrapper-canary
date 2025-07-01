@@ -15,7 +15,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -23,7 +23,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -31,8 +31,8 @@ function g(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -53,13 +53,13 @@ let m = a().debounce(s.ZP.trackWithMetadata, 500),
                   className: f.btn,
                   size: o.zxk.Sizes.SMALL,
                   onClick: () => {
-                      null != u &&
+                      (null != u &&
                           c.default.track(p.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: b,
                               guild_id: t.id,
                               notice_type: u
                           }),
-                          null == O || O();
+                          null == O || O());
                   },
                   fullWidth: !0,
                   color: I,
@@ -73,7 +73,7 @@ let m = a().debounce(s.ZP.trackWithMetadata, 500),
                     ? null
                     : (0, r.jsx)(o.P3F, {
                           onClick: () => {
-                              s.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: u }), null == E || E();
+                              (s.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: u }), null == E || E());
                           },
                           className: f.close,
                           'aria-label': h.intl.string(h.t.WAI6xs),

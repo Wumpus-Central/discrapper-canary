@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(388685);
+(n.d(t, { Z: () => W }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -40,7 +40,7 @@ function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function U(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -56,8 +56,8 @@ function U(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -107,11 +107,11 @@ function W(e) {
             }),
             (0, i.jsx)(O.F, {
                 setting: R.s6.ACCESSIBILITY_ROLE_STYLE,
-                children: (0, i.jsx)(Q, {})
+                children: (0, i.jsx)(J, {})
             }),
             (0, i.jsx)(O.F, {
                 setting: R.s6.ACCESSIBILITY_PROFILE_COLORS,
-                children: (0, i.jsx)(J, {})
+                children: (0, i.jsx)(Q, {})
             }),
             (0, h.b)()
                 ? (0, i.jsxs)(O.F, {
@@ -168,7 +168,7 @@ function K() {
                     }
                 )
             );
-            return (e.colorString = 'green'), e;
+            return ((e.colorString = 'green'), e);
         });
     return (0, i.jsx)(d.Rny, {
         children: (0, i.jsxs)(d.Zbd, {
@@ -271,7 +271,7 @@ function X() {
         })
     });
 }
-function Q() {
+function J() {
     let e = (0, c.e7)([p.Z], () => p.Z.roleStyle);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -310,7 +310,7 @@ function Q() {
         ]
     });
 }
-function J() {
+function Q() {
     let e = (0, c.e7)([p.Z], () => p.Z.syncProfileThemeWithUserTheme),
         t = r.useRef(null);
     return (
@@ -344,7 +344,7 @@ function $() {
     }, [e]);
     let s = r.useRef(null);
     r.useEffect(() => {
-        null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, g.qz)(t), 150));
+        (null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, g.qz)(t), 150)));
     }, [t, e]);
     let l = k.intl.format(k.t.GwEVEx, { learnMoreLink: I.Z.getArticleURL(D.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
@@ -507,11 +507,11 @@ function en() {
                         value: t,
                         note: k.intl.string(k.t.Q7wgHR),
                         onChange: (e) => {
-                            T.default.track(D.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            (T.default.track(D.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
                                 location: { section: D.jXE.SETTINGS_ACCESSIBILITY }
                             }),
-                                N.dN.updateSetting(e);
+                                N.dN.updateSetting(e));
                         },
                         children: k.intl.string(k.t.TZ2hZG)
                     })
@@ -564,17 +564,17 @@ function ei() {
                                       color: d.Ttl.BRAND,
                                       onClick: () => {
                                           if (n) {
-                                              (0, S.NB)(), s(!1);
+                                              ((0, S.NB)(), s(!1));
                                               return;
                                           }
-                                          (0, S.cP)(
+                                          ((0, S.cP)(
                                               k.intl.string(k.t.PKaNJC),
                                               !0,
                                               void 0,
                                               () => s(!0),
                                               () => s(!1)
                                           ),
-                                              s(!0);
+                                              s(!0));
                                       },
                                       children: (0, i.jsxs)(f.Z, {
                                           align: f.Z.Align.CENTER,

@@ -41,7 +41,7 @@ var r = n(72689),
               t)
             : Object.keys(n).reduce(function (t, a) {
                   var o = n[a];
-                  return i.call(t, a) ? (t[a] = e(t[a], o, r)) : (t[a] = o), t;
+                  return (i.call(t, a) ? (t[a] = e(t[a], o, r)) : (t[a] = o), t);
               }, o);
     },
     u = 1024;
@@ -49,7 +49,7 @@ e.exports = {
     arrayToObject: l,
     assign: function (e, t) {
         return Object.keys(t).reduce(function (e, n) {
-            return (e[n] = t[n]), e;
+            return ((e[n] = t[n]), e);
         }, e);
     },
     combine: function (e, t) {
@@ -80,7 +80,7 @@ e.exports = {
                     }),
                     n.push(u));
             }
-        return s(t), e;
+        return (s(t), e);
     },
     decode: function (e, t, n) {
         var r = e.replace(/\+/g, ' ');
@@ -117,7 +117,7 @@ e.exports = {
                     f[f.length] = o[224 | (p >> 12)] + o[128 | ((p >> 6) & 63)] + o[128 | (63 & p)];
                     continue;
                 }
-                (_ += 1), (p = 65536 + (((1023 & p) << 10) | (1023 & d.charCodeAt(_)))), (f[f.length] = o[240 | (p >> 18)] + o[128 | ((p >> 12) & 63)] + o[128 | ((p >> 6) & 63)] + o[128 | (63 & p)]);
+                ((_ += 1), (p = 65536 + (((1023 & p) << 10) | (1023 & d.charCodeAt(_)))), (f[f.length] = o[240 | (p >> 18)] + o[128 | ((p >> 12) & 63)] + o[128 | ((p >> 6) & 63)] + o[128 | (63 & p)]));
             }
             l += f.join('');
         }

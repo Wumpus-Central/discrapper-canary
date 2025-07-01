@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h }), t(388685);
+(t.d(n, { Z: () => h }), t(388685));
 var r,
     l,
     u,
@@ -19,10 +19,10 @@ class m extends (r = o.ZP.Store) {
         return g[e];
     }
     getThreadIdsMissingCounts(e, n) {
-        return a()(c.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'), n.filter((e) => !(e in g) && !Z.has(e));
+        return (a()(c.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'), n.filter((e) => !(e in g) && !Z.has(e)));
     }
 }
-(u = 'ForumPostUnreadCountStore'),
+((u = 'ForumPostUnreadCountStore'),
     (l = 'displayName') in m
         ? Object.defineProperty(m, l, {
               value: u,
@@ -30,10 +30,10 @@ class m extends (r = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (m[l] = u);
+        : (m[l] = u));
 let h = new m(d.Z, {
     CONNECTION_OPEN: function () {
-        (g = {}), (Z = new Set());
+        ((g = {}), (Z = new Set()));
     },
     THREAD_CREATE: function (e) {
         let { channel: n, isNewlyCreated: t } = e;

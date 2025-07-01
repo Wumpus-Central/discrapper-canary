@@ -61,7 +61,7 @@ var r = n(220159),
                 r < v.length;
                 r++
             )
-                (t = v[r].k.charAt(0)), o.charAt(o.length - 1) !== t && (o += t);
+                ((t = v[r].k.charAt(0)), o.charAt(o.length - 1) !== t && (o += t));
             return 'DGBEFHACIJK' !== o;
         }
     });

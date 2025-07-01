@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(73800),
     a = n(442837),
@@ -27,7 +27,7 @@ function m(e, t) {
     return {
         playSoundboardSound: i.useCallback(
             (n) => {
-                null != g.current && g.current.pause(), null != t && (0, f.GN)(e, t, n);
+                (null != g.current && g.current.pause(), null != t && (0, f.GN)(e, t, n));
             },
             [e, g, t]
         ),
@@ -39,7 +39,7 @@ function m(e, t) {
                 var i;
                 null == (i = r.setSinkId) || i.call(r, o.voiceSinkId);
             }
-            (g.current = r), (r.currentTime = 0), (r.volume = (0, p.Z)(e.volume, n)), r.play(), b(!0), r.addEventListener('pause', () => b(!1), { once: !0 });
+            ((g.current = r), (r.currentTime = 0), (r.volume = (0, p.Z)(e.volume, n)), r.play(), b(!0), r.addEventListener('pause', () => b(!1), { once: !0 }));
         }, [e, n, g, m]),
         isPreviewingSound: E
     };

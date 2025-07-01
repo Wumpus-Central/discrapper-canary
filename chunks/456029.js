@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+(n.d(t, { Z: () => P }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(772848),
@@ -22,7 +22,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function j(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -38,8 +38,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -58,10 +58,10 @@ function P(e) {
     let B = (0, p.eR)(N),
         T = (e) => {
             var t;
-            null == (t = I.current) || t.removeDrop(e), B(), A({ count: R + 1 });
+            (null == (t = I.current) || t.removeDrop(e), B(), A({ count: R + 1 }));
         },
         L = (e) => {
-            delete Z[e], S(j({}, Z));
+            (delete Z[e], S(j({}, Z)));
         };
     return E
         ? null

@@ -1,4 +1,4 @@
-n.d(t, { default: () => j }), n(388685), n(704826), n(35282), n(781311);
+(n.d(t, { default: () => j }), n(388685), n(704826), n(35282), n(781311));
 var l = n(255367),
     r = n(73800),
     o = n(120356),
@@ -51,7 +51,7 @@ let _ = 'MULTIPLE_CHOICE',
                     f(g),
                     j(C(b)),
                     () => {
-                        f(null), C(null);
+                        (f(null), C(null));
                     }
                 ),
                 [f, C, j]
@@ -117,14 +117,14 @@ let _ = 'MULTIPLE_CHOICE',
                 let n = e.replace(/(\r\n|\n|\r)/g, ' ');
                 n.length > g.au && (n = n.slice(0, g.au));
                 let l = [...C];
-                (l[t] = n), y(l);
+                ((l[t] = n), y(l));
             },
             z = (e, t, n) => {
                 if (null == C) return;
                 null != v && I(null);
                 let l = C.indexOf(e),
                     r = [...C];
-                null != t && t !== l && (r.splice(l, 1), r.splice(t, 0, e), y(r)), n ? null !== t && k(null) : t !== O && k(t);
+                (null != t && t !== l && (r.splice(l, 1), r.splice(t, 0, e), y(r)), n ? null !== t && k(null) : t !== O && k(t));
             },
             E = (e) => {
                 null != v && I(null);
@@ -143,7 +143,7 @@ let _ = 'MULTIPLE_CHOICE',
                     required: !0
                 };
                 try {
-                    await c(t), m();
+                    (await c(t), m());
                 } catch (e) {
                     I(new u.Hx(e).getAnyErrorMessage());
                 }
@@ -154,7 +154,7 @@ let _ = 'MULTIPLE_CHOICE',
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         l = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (l = l.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -162,7 +162,7 @@ let _ = 'MULTIPLE_CHOICE',
                         )),
                         l.forEach(function (t) {
                             var l;
-                            (l = n[t]),
+                            ((l = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: l,
@@ -170,8 +170,8 @@ let _ = 'MULTIPLE_CHOICE',
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = l);
-                        });
+                                    : (e[t] = l));
+                        }));
                 }
                 return e;
             })({}, e)),
@@ -188,7 +188,7 @@ let _ = 'MULTIPLE_CHOICE',
                             onChange: (e) => {
                                 null != v && I(null);
                                 let t = e.replace(/(\r\n|\n|\r)/g, ' ');
-                                t.length > g.XN && (t = e.slice(0, g.XN)), j(t);
+                                (t.length > g.XN && (t = e.slice(0, g.XN)), j(t));
                             },
                             placeholder: h.intl.string(h.t.fqVmbG),
                             value: _
@@ -214,7 +214,7 @@ let _ = 'MULTIPLE_CHOICE',
                                 children: (0, l.jsxs)(d.P3F, {
                                     className: x.addItemButton,
                                     onClick: () => {
-                                        null != v && I(null), C.length !== g.mb && y([...C, '']);
+                                        (null != v && I(null), C.length !== g.mb && y([...C, '']));
                                     },
                                     children: [
                                         (0, l.jsx)(d.oFk, {

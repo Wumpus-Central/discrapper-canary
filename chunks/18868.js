@@ -1,4 +1,4 @@
-n.d(t, { L: () => h }), n(388685);
+(n.d(t, { L: () => h }), n(388685));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -19,7 +19,7 @@ let m = () => {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     a = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (a = a.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ let m = () => {
                                     )),
                                     a.forEach(function (t) {
                                         var a;
-                                        (a = n[t]),
+                                        ((a = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: a,
@@ -35,8 +35,8 @@ let m = () => {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = a);
-                                    });
+                                                : (e[t] = a));
+                                    }));
                             }
                             return e;
                         })(
@@ -51,22 +51,22 @@ let m = () => {
             { modalKey: c.A }
         );
     },
-    p = (e) => {
-        e.stopPropagation(), e.preventDefault();
+    x = (e) => {
+        (e.stopPropagation(), e.preventDefault());
     },
     h = (e) => {
         let { className: t, onDrop: n } = e,
             [l, h] = r.useState(!1),
-            x = r.useRef(null),
+            p = r.useRef(null),
             b = r.useCallback((e) => {
-                p(e), h(!0), (0, s.Mr3)(c.A);
+                (x(e), h(!0), (0, s.Mr3)(c.A));
             }, []),
             f = r.useCallback((e) => {
-                p(e), h(!1);
+                (x(e), h(!1));
             }, []),
             v = r.useCallback(
                 async (e) => {
-                    p(e), h(!1);
+                    (x(e), h(!1));
                     let t = e.dataTransfer;
                     if (null == t) return void m();
                     let a = await Promise.all(
@@ -80,7 +80,7 @@ let m = () => {
                 [n]
             );
         return (0, a.jsx)('div', {
-            ref: x,
+            ref: p,
             className: i()(t, u.uploadArea),
             onDragEnter: b,
             onDragLeave: f,

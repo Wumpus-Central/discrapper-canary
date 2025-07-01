@@ -61,7 +61,7 @@
         dayOfMonthOrdinalParse: /\d{1,2}(r|n|t|è|a)/,
         ordinal: function (e, t) {
             var n = 1 === e ? 'r' : 2 === e ? 'n' : 3 === e ? 'r' : 4 === e ? 't' : 'è';
-            return ('w' === t || 'W' === t) && (n = 'a'), e + n;
+            return (('w' === t || 'W' === t) && (n = 'a'), e + n);
         },
         week: {
             dow: 1,

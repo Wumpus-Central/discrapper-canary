@@ -16,9 +16,9 @@ var r = n(220159),
     g = function (e, t) {
         var n,
             r = o(b, this);
-        i ? (n = i(new y(), r ? a(this) : b)) : l((n = r ? this : c(b)), m, 'Error'), void 0 !== t && l(n, 'message', f(t)), p(n, g, n.stack, 1), arguments.length > 2 && d(n, arguments[2]);
+        (i ? (n = i(new y(), r ? a(this) : b)) : l((n = r ? this : c(b)), m, 'Error'), void 0 !== t && l(n, 'message', f(t)), p(n, g, n.stack, 1), arguments.length > 2 && d(n, arguments[2]));
         var s = [];
-        return h(e, v, { that: s }), l(n, 'errors', s), n;
+        return (h(e, v, { that: s }), l(n, 'errors', s), n);
     };
 i ? i(g, y) : s(g, y, { name: !0 });
 var b = (g.prototype = c(y.prototype, {

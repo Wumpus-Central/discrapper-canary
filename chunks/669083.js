@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -89,7 +89,7 @@ class Z extends r.PureComponent {
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        s.Z.setNotificationPositionMode(t), j();
+        (s.Z.setNotificationPositionMode(t), j());
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
@@ -298,18 +298,18 @@ class Z extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             E(this, 'state', { selectedSection: 'GENERAL' }),
             E(this, 'handleSelectSection', (e) => {
                 this.setState({ selectedSection: e });
             }),
             E(this, 'handleToggleTextChatNotifications', () => {
-                s.Z.setNotificationDisabledSetting(g.OverlayNotificationDisabledSetting.TEXT_CHAT, !this.props.textChatDisabled), j();
+                (s.Z.setNotificationDisabledSetting(g.OverlayNotificationDisabledSetting.TEXT_CHAT, !this.props.textChatDisabled), j());
             }),
             E(this, 'handleToggleInviteNotification', () => {
                 let e = this.props.shouldShowInviteNotification;
                 s.Z.setNotificationDisabledSetting(g.OverlayNotificationDisabledSetting.GAME_ACTIVITY, !e);
-            });
+            }));
     }
 }
 function I(e) {

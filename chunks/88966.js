@@ -17,7 +17,7 @@ function g(e, n, t) {
               id: 'message-user',
               label: d.intl.string(d.t.OAJQlJ),
               action: () => {
-                  (0, u.i)(n, !0), a.Z.openPrivateChannel({ recipientIds: e }), g.dispatch(c.CkL.POPOUT_CLOSE), (0, r.pTH)();
+                  ((0, u.i)(n, !0), a.Z.openPrivateChannel({ recipientIds: e }), g.dispatch(c.CkL.POPOUT_CLOSE), (0, r.pTH)());
               },
               icon: t
           });

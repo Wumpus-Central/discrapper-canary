@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685), n(539854);
+(n.d(t, { Z: () => a }), n(388685), n(539854));
 var r = n(887490);
 let i = 'applicationCommand';
 function a(e, t) {

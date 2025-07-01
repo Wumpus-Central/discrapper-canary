@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(692547),
@@ -20,7 +20,7 @@ function m(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function m(e) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -36,18 +36,18 @@ function m(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({ type: _ }, (0, s.v_)(b))
         );
     }, [_, b]);
     let x = i.useCallback(() => {
-            null == m || m(), t();
+            (null == m || m(), t());
         }, [m, t]),
         v = i.useCallback(() => {
-            null == g || g(), t();
+            (null == g || g(), t());
         }, [g, t]),
         j = i.useRef(null);
     return (
@@ -70,7 +70,7 @@ function m(e) {
                             }));
                     })(),
                 () => {
-                    (r = !0), null != e && (e.destroy(), (e = void 0));
+                    ((r = !0), null != e && (e.destroy(), (e = void 0)));
                 }
             );
         }, [C]),

@@ -16,7 +16,7 @@ r(
     },
     {
         queueMicrotask: function (e) {
-            s(arguments.length, 1), a(o(e));
+            (s(arguments.length, 1), a(o(e)));
         }
     }
 );

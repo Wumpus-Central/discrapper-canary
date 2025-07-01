@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(997841);
+(n.d(t, { Z: () => E }), n(388685), n(997841));
 var i = n(255367),
     s = n(73800),
     l = n(120356),
@@ -22,7 +22,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function b(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -38,8 +38,8 @@ function b(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -92,7 +92,7 @@ function E(e) {
         T = f ? x.s8.CUSTOM : (0, x.gs)(l, r),
         L = (e) => {
             if (e === x.s8.CUSTOM) return void E(!0);
-            E(!1), (0, g.V)(t, e);
+            (E(!1), (0, g.V)(t, e));
         };
     return (0, i.jsxs)('div', {
         children: [
@@ -157,7 +157,7 @@ function E(e) {
                                 value: l,
                                 className: N.input,
                                 onChange: (e) => {
-                                    E(!1), d.Z.updateGuildNotificationSettings(t, { flags: (0, h.Q4)(n, e === v.i.ALL_MESSAGES ? j.vc.UNREADS_ALL_MESSAGES : j.vc.UNREADS_ONLY_MENTIONS) }, u.UE.unreads(e));
+                                    (E(!1), d.Z.updateGuildNotificationSettings(t, { flags: (0, h.Q4)(n, e === v.i.ALL_MESSAGES ? j.vc.UNREADS_ALL_MESSAGES : j.vc.UNREADS_ONLY_MENTIONS) }, u.UE.unreads(e)));
                                 },
                                 options: (0, m.y)({ notificationSetting: r }),
                                 renderOptionLabel: (e) => {
@@ -194,7 +194,7 @@ function E(e) {
                                 onChange: (e) => {
                                     E(!1);
                                     let n = { message_notifications: e };
-                                    e === p.bL.ALL_MESSAGES && l !== v.i.ALL_MESSAGES && (n.flags = (0, h.Q4)(c.ZP.getGuildFlags(t), j.vc.UNREADS_ALL_MESSAGES)), d.Z.updateGuildNotificationSettings(t, n, u.UE.notifications(e));
+                                    (e === p.bL.ALL_MESSAGES && l !== v.i.ALL_MESSAGES && (n.flags = (0, h.Q4)(c.ZP.getGuildFlags(t), j.vc.UNREADS_ALL_MESSAGES)), d.Z.updateGuildNotificationSettings(t, n, u.UE.notifications(e)));
                                 },
                                 options: (0, m.d)({ notificationSetting: r }),
                                 renderOptionLabel: (e) => {

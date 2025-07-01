@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(35282), n(997841), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+(n.d(t, { Z: () => P }), n(35282), n(997841), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
 var r = n(664751),
     i = n(373793),
     l = n(243814),
@@ -23,7 +23,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -39,8 +39,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -225,12 +225,12 @@ function P(e, t) {
                                     !(function (e, t, n, r) {
                                         var i;
                                         let l = null != (i = c.K.get(S)) ? i : {};
-                                        (l[e] = {
+                                        ((l[e] = {
                                             accessToken: t,
                                             scope: n,
                                             expires: Date.now() + r
                                         }),
-                                            c.K.set(S, l);
+                                            c.K.set(S, l));
                                     })(n, l.access_token, l.scope, l.expires_in),
                                     T(i, l.access_token)
                                 );
@@ -241,13 +241,13 @@ function P(e, t) {
                             if (null != n && null != n[e]) {
                                 let r = n[e];
                                 if (!(r.scope !== t || r.expires <= Date.now())) return r.accessToken;
-                                delete n[e], c.K.set(S, n);
+                                (delete n[e], c.K.set(S, n));
                             }
                         })(n, s))
                         ? T(i, o).catch(() => {
                               var e;
                               let t = null != (e = c.K.get(S)) ? e : {};
-                              return delete t[n], c.K.set(S, t), u();
+                              return (delete t[n], c.K.set(S, t), u());
                           })
                         : u();
                 }

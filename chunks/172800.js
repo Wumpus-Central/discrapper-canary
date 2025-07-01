@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -41,7 +41,7 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function R(e) {
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,11 +57,11 @@ function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -83,7 +83,7 @@ function D(e, t) {
         i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -93,7 +93,7 @@ function L(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let x = (e) => {
@@ -116,7 +116,7 @@ let x = (e) => {
         [el, ec] = i.useState(es.inspectedExpressionPosition),
         [eu, ed] = (0, c.Z)(null, 300),
         ef = i.useRef(null);
-    i.useEffect(
+    (i.useEffect(
         () =>
             h.kJ.subscribe(
                 (e) => e.inspectedExpressionPosition,
@@ -126,7 +126,7 @@ let x = (e) => {
     ),
         i.useEffect(() => {
             E.DZ.loadIfNecessary();
-        }, []);
+        }, []));
     let e_ = a === T.Su.LARGE,
         ep = a === T.Su.MEDIUM,
         eh = (e) => {
@@ -172,7 +172,7 @@ let x = (e) => {
                     let { visibleRowIndex: t, columnIndex: i } = e,
                         a = el.rowIndex === t && el.columnIndex === i,
                         o = (t) => {
-                            t.stopPropagation(),
+                            (t.stopPropagation(),
                                 j.current ||
                                     U.current ||
                                     (C(e, {
@@ -184,7 +184,7 @@ let x = (e) => {
                                     y.default.track(S.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
                                         collapsed: e.sectionCollapsedToThreeRows,
                                         guild_id: e.guildId
-                                    }));
+                                    })));
                         },
                         l = e.sectionCollapsedToThreeRows ? (a ? ((0, s.wj)(eo) ? er : ea) : (0, s.wj)(eo) ? J : $) : a ? ((0, s.wj)(eo) ? en : ei) : (0, s.wj)(eo) ? ee : et,
                         c = A.intl.string(e.sectionCollapsedToThreeRows ? A.t.NZI2Zm : A.t['/K2RDA']);
@@ -202,14 +202,14 @@ let x = (e) => {
                 case v.ld.CREATE_EMOJI: {
                     if (Q) return null;
                     let t = (t) => {
-                        t.stopPropagation(),
+                        (t.stopPropagation(),
                             j.current ||
                                 U.current ||
                                 (C(e, {
                                     isFinalSelection: !0,
                                     toggleFavorite: !1
                                 }),
-                                m.Z.open(e.guildId, S.pNK.EMOJI, S.jXE.EMOJI_PICKER_POPOUT));
+                                m.Z.open(e.guildId, S.pNK.EMOJI, S.jXE.EMOJI_PICKER_POPOUT)));
                     };
                     return n({
                         handleSelect: t,

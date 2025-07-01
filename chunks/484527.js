@@ -1,4 +1,4 @@
-r.d(t, { Z: () => x }), r(388685), r(35282);
+(r.d(t, { Z: () => x }), r(388685), r(35282));
 var n = r(255367),
     i = r(73800),
     a = r(120356),
@@ -87,14 +87,14 @@ function x(e) {
             (0, n.jsx)(c.zxk, {
                 color: c.Ttl.PRIMARY,
                 onClick: () => {
-                    x(),
+                    (x(),
                         r(f.as.JoinOfficialServer),
                         u.Z.dispatch({
                             type: 'INVITE_MODAL_OPEN',
                             invite: v,
                             code: v.code,
                             context: p.IlC.APP
-                        });
+                        }));
                 },
                 children: b ? O.intl.string(O.t.cEnaW1) : O.intl.string(O.t.XpeFYm)
             })

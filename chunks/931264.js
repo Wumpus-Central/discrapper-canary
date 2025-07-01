@@ -50,21 +50,21 @@ t.exports = function (t, e) {
                 isBackward: !1
             }),
             R = E.getEntityAt(x),
-            F = u(R) ? C.getEntity(R) : null,
-            N = 'MUTABLE' === (null != F ? F.getMutability() : null),
-            P = n.replaceText(C, L, g, E.getInlineStyleAt(x), N ? E.getEntityAt(x) : null);
-        if (f) (A = (M = x + Math.min((K = r.anchorOffset), (T = r.focusOffset))) + Math.abs(K - T)), (K = M), (T = A);
+            N = u(R) ? C.getEntity(R) : null,
+            F = 'MUTABLE' === (null != N ? N.getMutability() : null),
+            z = n.replaceText(C, L, g, E.getInlineStyleAt(x), F ? E.getEntityAt(x) : null);
+        if (f) ((A = (M = x + Math.min((K = r.anchorOffset), (T = r.focusOffset))) + Math.abs(K - T)), (K = M), (T = A));
         else {
-            var z = g.length - D.length;
-            (M = B.getStartOffset()), (A = B.getEndOffset()), (K = p ? A + z : M), (T = A + z);
+            var P = g.length - D.length;
+            ((M = B.getStartOffset()), (A = B.getEndOffset()), (K = p ? A + P : M), (T = A + P));
         }
-        var j = P.merge({
+        var j = z.merge({
             selectionBefore: C.getSelectionAfter(),
             selectionAfter: B.merge({
                 anchorOffset: K,
                 focusOffset: T
             })
         });
-        t.update(o.push(y, j, N ? 'spellcheck-change' : 'apply-entity'));
+        t.update(o.push(y, j, F ? 'spellcheck-change' : 'apply-entity'));
     }
 };

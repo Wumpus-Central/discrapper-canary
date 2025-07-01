@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     G: () => v,
     Z: () => T
 }),
     n(388685),
-    n(781311);
+    n(781311));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -46,7 +46,7 @@ function S(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -54,7 +54,7 @@ function S(e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -62,8 +62,8 @@ function S(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })({}, j)),
@@ -225,7 +225,7 @@ function T(e) {
                                   y = null != z && Object.keys(n).length >= z;
                               switch (i) {
                                   case f.m$.ROLES:
-                                      (u = (l = v((d = w[s]))) in n || d.disabled),
+                                      ((u = (l = v((d = w[s]))) in n || d.disabled),
                                           (x = d.disabled || (!u && y)),
                                           (b = q === f.m$.ROLES && G === s),
                                           (t = (0, r.jsxs)('div', {
@@ -258,10 +258,10 @@ function T(e) {
                                                       ]
                                                   })
                                               ]
-                                          }));
+                                          })));
                                       break;
                                   case f.m$.MEMBERS:
-                                      (u = (l = v((d = R[s]))) in n || d.disabled),
+                                      ((u = (l = v((d = R[s]))) in n || d.disabled),
                                           (x = d.disabled || (!u && y)),
                                           (b = q === f.m$.MEMBERS && G === s),
                                           (t = (0, r.jsxs)('div', {
@@ -288,10 +288,10 @@ function T(e) {
                                                       : null,
                                                   d.bot && (0, r.jsx)(c.Z, { verified: d.verifiedBot })
                                               ]
-                                          }));
+                                          })));
                                       break;
                                   case f.m$.USERS:
-                                      (u = (l = v((d = O[s]))) in n || d.disabled),
+                                      ((u = (l = v((d = O[s]))) in n || d.disabled),
                                           (x = d.disabled || (!u && y)),
                                           (b = q === f.m$.USERS && G === s),
                                           (t = (0, r.jsxs)('div', {
@@ -319,10 +319,10 @@ function T(e) {
                                                       ]
                                                   })
                                               ]
-                                          }));
+                                          })));
                                       break;
                                   case f.m$.GUILDS:
-                                      (u = (l = v((d = k[s]))) in n || d.disabled),
+                                      ((u = (l = v((d = k[s]))) in n || d.disabled),
                                           (x = d.disabled || (!u && y)),
                                           (b = q === f.m$.GUILDS && G === s),
                                           (t = (0, r.jsxs)('div', {
@@ -342,7 +342,7 @@ function T(e) {
                                                       })
                                                   })
                                               ]
-                                          }));
+                                          })));
                               }
                               return null == d
                                   ? null

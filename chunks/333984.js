@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(592125),
     i = n(750041);
 function a(e, t, n) {
@@ -22,15 +22,15 @@ function c(e) {
 }
 function u(e) {
     let t = !1;
-    return c(e) && !o.has(e.id) && (o.add(e.id), (t = !0)), !c(e) && o.has(e.id) && (o.delete(e.id), (t = !0)), !c(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), t;
+    return (c(e) && !o.has(e.id) && (o.add(e.id), (t = !0)), !c(e) && o.has(e.id) && (o.delete(e.id), (t = !0)), !c(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), t);
 }
 function d() {
-    o.clear(),
+    (o.clear(),
         s.clear(),
         Object.values(r.Z.getMutablePrivateChannels()).forEach((e) => {
             u(e);
         }),
-        (l = !0);
+        (l = !0));
 }
 function f(e) {
     let { channelId: t } = e;
@@ -47,7 +47,7 @@ function p(e) {
 function h(e) {
     let { channel: t } = e,
         n = !1;
-    return o.has(t.id) && (o.delete(t.id), (n = !0)), n;
+    return (o.has(t.id) && (o.delete(t.id), (n = !0)), n);
 }
 class m extends i.Z {
     initialize() {
@@ -90,5 +90,5 @@ class m extends i.Z {
         });
     }
 }
-a(m, 'displayName', 'SpamMessageRequestStore'), a(m, 'LATEST_SNAPSHOT_VERSION', 1);
+(a(m, 'displayName', 'SpamMessageRequestStore'), a(m, 'LATEST_SNAPSHOT_VERSION', 1));
 let g = new m();

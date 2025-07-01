@@ -1,4 +1,4 @@
-n.d(t, { u: () => f }), n(35282), n(388685), n(49124);
+(n.d(t, { u: () => f }), n(35282), n(388685), n(49124));
 var r = n(259443),
     i = n(544891),
     a = n(881052),
@@ -13,8 +13,8 @@ function d(e, t) {
         i = n.join('.'),
         a = ''.concat(i, '.').concat(r),
         o = 1;
-    for (; e.has(a); ) (a = ''.concat(i, '_').concat(o, '.').concat(r)), (o += 1);
-    return e.add(a), a;
+    for (; e.has(a); ) ((a = ''.concat(i, '_').concat(o, '.').concat(r)), (o += 1));
+    return (e.add(a), a);
 }
 async function f(e, t) {
     let n;

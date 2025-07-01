@@ -22,7 +22,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -64,7 +64,7 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -74,7 +74,7 @@ function h(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let m = {
@@ -116,20 +116,20 @@ class g extends (r = a.PureComponent) {
         return (0, i.jsx)(r, _(d({ className: s()(c.modal, t, a, { [c.fullscreenOnMobile]: o }) }, l), { children: this.renderChildren() }));
     }
     constructor(e) {
-        super(e),
+        (super(e),
             u(this, '_scroller', null),
             u(this, 'setRef', (e) => {
-                (this._scroller = e), null != e && this.calculateScroll();
+                ((this._scroller = e), null != e && this.calculateScroll());
             }),
             u(this, 'handleScroll', (e) => {
                 this.calculateScroll();
                 let { onScroll: t } = this.props;
                 null == t || t(e);
             }),
-            (this.state = { hideSeparator: !1 });
+            (this.state = { hideSeparator: !1 }));
     }
 }
-u(g, 'Header', l.xBx),
+(u(g, 'Header', l.xBx),
     u(g, 'Footer', l.mzw),
     u(g, 'Content', l.hzk),
     u(g, 'ListContent', l.YAO),
@@ -139,4 +139,4 @@ u(g, 'Header', l.xBx),
         fullscreenOnMobile: !0,
         size: m.SMALL,
         tag: 'div'
-    });
+    }));

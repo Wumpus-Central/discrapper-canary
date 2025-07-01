@@ -54,14 +54,14 @@ var r = n(288660),
                     b = _[m],
                     y = b.indexOf(']='),
                     O = -1 === y ? b.indexOf('=') : y + 1;
-                -1 === O
+                (-1 === O
                     ? ((g = t.decoder(b, o.decoder, h, 'key')), (E = t.strictNullHandling ? null : ''))
                     : ((g = t.decoder(b.slice(0, O), o.decoder, h, 'key')),
                       (E = r.maybeMap(l(b.slice(O + 1), t, a(n[g]) ? n[g].length : 0), function (e) {
                           return t.decoder(e, o.decoder, h, 'value');
                       }))),
                     E && t.interpretNumericEntities && 'iso-8859-1' === h && (E = s(String(E))),
-                    b.indexOf('[]=') > -1 && (E = a(E) ? [E] : E);
+                    b.indexOf('[]=') > -1 && (E = a(E) ? [E] : E));
                 var v = i.call(n, g);
                 v && 'combine' === t.duplicates ? (n[g] = r.combine(n[g], E)) : (v && 'last' !== t.duplicates) || (n[g] = E);
             }

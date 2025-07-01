@@ -81,7 +81,7 @@ function p(e) {
         onSubmit: function (e) {
             var t, o;
             let { rating: n, problem: i, dontShowAgain: c, feedback: s } = e;
-            c &&
+            (c &&
                 (0, a.Uv)({
                     feedbackType: _.nw.VOICE_FILTER,
                     location: 'VoiceFilterFeedbackModal'
@@ -93,7 +93,7 @@ function p(e) {
                         reasonDescription: null != (o = null == i ? void 0 : i.value) ? o : null,
                         feedback: s,
                         analyticsData: p
-                    });
+                    }));
         },
         onClose: t,
         transitionState: o,

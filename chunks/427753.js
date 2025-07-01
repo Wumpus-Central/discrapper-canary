@@ -43,7 +43,7 @@ e.exports = function (e, t) {
     try {
         return a(e, t);
     } catch (e) {
-        if ((e.message || '').match(/stack|recursion/i)) return console.warn('react-fast-compare cannot handle circular refs'), !1;
+        if ((e.message || '').match(/stack|recursion/i)) return (console.warn('react-fast-compare cannot handle circular refs'), !1);
         throw e;
     }
 };

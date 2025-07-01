@@ -27,7 +27,7 @@ function f() {
             (a = (async () => {
                 await i.mX();
                 let e = i.Qw();
-                e.installLogCallback(s, l, c, u, d), await e.initLibdiscore();
+                (e.installLogCallback(s, l, c, u, d), await e.initLibdiscore());
             })()),
         a
     );

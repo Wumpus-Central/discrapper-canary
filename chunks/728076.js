@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(781311);
+(n.d(t, { Z: () => b }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(781311));
 var r = n(73800),
     a = n(263568),
     l = n(935369),
@@ -13,7 +13,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -21,7 +21,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -29,8 +29,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -68,27 +68,27 @@ function b(e, t, n) {
         B = h.length < d.fw,
         Z = h.length > d.gY,
         U = r.useCallback((e) => {
-            k((e) => {
+            (k((e) => {
                 let t = m({}, e);
-                return delete t.question, t;
+                return (delete t.question, t);
             }),
-                y(e);
+                y(e));
         }, []),
         M = r.useCallback((e) => {
             let { text: t, index: n, localCreationAnswerId: r } = e;
-            k((e) => {
+            (k((e) => {
                 let t = m({}, e);
-                return delete t['answer-'.concat(r)], t;
+                return (delete t['answer-'.concat(r)], t);
             }),
                 O((e) => {
                     let r = [...e];
-                    return (r[n] = p(m({}, r[n]), { text: t })), r;
-                });
+                    return ((r[n] = p(m({}, r[n]), { text: t })), r);
+                }));
         }, []),
         z = r.useCallback((e, t) => {
             O((n) => {
                 let r = [...n];
-                return (r[t] = p(m({}, r[t]), { image: e })), r;
+                return ((r[t] = p(m({}, r[t]), { image: e })), r);
             });
         }, []),
         W = r.useCallback(
@@ -112,13 +112,13 @@ function b(e, t, n) {
             (e, t, n) => {
                 let r = h[t].localCreationAnswerId,
                     a = URL.createObjectURL(n);
-                W(e, t), z(g(a, i._.PREPARING), t), s.fH(e, r, n), z(g(a, i._.READY_TO_UPLOAD), t);
+                (W(e, t), z(g(a, i._.PREPARING), t), s.fH(e, r, n), z(g(a, i._.READY_TO_UPLOAD), t));
             },
             [h, z, W]
         ),
         F = r.useCallback(
             (e, t) => {
-                W(b, t),
+                (W(b, t),
                     z(
                         {
                             emoji: e,
@@ -126,14 +126,14 @@ function b(e, t, n) {
                             mediaAttachmentState: void 0
                         },
                         t
-                    );
+                    ));
             },
             [b, z, W]
         ),
         K = r.useCallback((e) => {
             O((t) => {
                 let n = [...t];
-                return (n[e] = p(m({}, n[e]), { image: void 0 })), n;
+                return ((n[e] = p(m({}, n[e]), { image: void 0 })), n);
             });
         }, []),
         q = r.useCallback(() => {
@@ -143,16 +143,16 @@ function b(e, t, n) {
             (e) => {
                 if (!Z) return;
                 let t = h.length;
-                W(b, e),
+                (W(b, e),
                     O((t) => {
                         let n = [...t];
-                        return n.splice(e, 1), n;
+                        return (n.splice(e, 1), n);
                     }),
                     null == n ||
                         n({
                             indexToRemove: e,
                             numberOfAnswers: t
-                        });
+                        }));
             },
             [h.length, Z, b, n, W]
         );

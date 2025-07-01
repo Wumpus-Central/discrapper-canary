@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => b });
+(n.r(t), n.d(t, { default: () => b }));
 var r = n(310644),
     i = n(465735),
     a = n(528734),
@@ -66,7 +66,7 @@ function b(e, t, n) {
             var i = r[0];
             if ("'" === i) return y(r);
             var a = o.Z[i];
-            if (a) return !(null != n && n.useAdditionalWeekYearTokens) && (0, c.Do)(r) && (0, c.qp)(r, t, String(e)), !(null != n && n.useAdditionalDayOfYearTokens) && (0, c.Iu)(r) && (0, c.qp)(r, t, String(e)), a(Z, r, U.localize, H);
+            if (a) return (!(null != n && n.useAdditionalWeekYearTokens) && (0, c.Do)(r) && (0, c.qp)(r, t, String(e)), !(null != n && n.useAdditionalDayOfYearTokens) && (0, c.Iu)(r) && (0, c.qp)(r, t, String(e)), a(Z, r, U.localize, H));
             if (i.match(E)) throw RangeError('Format string contains an unescaped latin alphabet character `' + i + '`');
             return r;
         })

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h }), n(35282);
+(n.d(t, { Z: () => h }), n(35282));
 var r,
     i = n(255367),
     l = n(73800),
-    a = n(442837),
-    o = n(388905),
-    s = n(703656),
+    s = n(442837),
+    a = n(388905),
+    o = n(703656),
     c = n(108427),
     u = n(559786);
 function d(e, t, n) {
@@ -20,14 +20,14 @@ function d(e, t, n) {
         e
     );
 }
-a.ZP.initialize();
+s.ZP.initialize();
 class h extends (r = l.PureComponent) {
     componentDidMount() {
         (0, c.e)('account_revert');
     }
     render() {
         let { token: e } = this.props.match.params;
-        return (0, i.jsx)(o.ZP, {
+        return (0, i.jsx)(a.ZP, {
             style: { padding: 0 },
             children: (0, i.jsx)(
                 u.Z,
@@ -35,7 +35,7 @@ class h extends (r = l.PureComponent) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ class h extends (r = l.PureComponent) {
                             )),
                             r.forEach(function (t) {
                                 d(e, t, n[t]);
-                            });
+                            }));
                     }
                     return e;
                 })(
@@ -58,6 +58,6 @@ class h extends (r = l.PureComponent) {
     }
 }
 d(h, 'defaultProps', {
-    transitionTo: s.uL,
-    replaceWith: s.dL
+    transitionTo: o.uL,
+    replaceWith: o.dL
 });

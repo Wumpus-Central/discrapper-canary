@@ -1,4 +1,4 @@
-t.d(n, { default: () => C }), t(388685);
+(t.d(n, { default: () => C }), t(388685));
 var i = t(255367),
     s = t(73800),
     l = t(990547),
@@ -23,7 +23,7 @@ function C(e) {
         g(C);
     }, [g, C]);
     let f = s.useCallback(() => {
-            d.Z.close(), p();
+            (d.Z.close(), p());
         }, [p]),
         A = s.useCallback(() => {
             var e;

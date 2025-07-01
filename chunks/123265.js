@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'solarized',
         author: 'ethan schoonover (http://ethanschoonover.com/solarized)',
@@ -19,4 +19,4 @@
         base0E: '#6c71c4',
         base0F: '#d33682'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

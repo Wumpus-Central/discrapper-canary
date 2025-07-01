@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+(n.d(t, { Z: () => A }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -37,11 +37,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -77,15 +77,15 @@ function E(e, t, n, r) {
     var i;
     e in p || (p[e] = {});
     let a = null != (i = p[e][null != t ? t : o.kod]) ? i : {};
-    (p[e][null != t ? t : o.kod] = d(c({}, a), { [r]: { streamId: n } })), delete h[m(r, e)];
+    ((p[e][null != t ? t : o.kod] = d(c({}, a), { [r]: { streamId: n } })), delete h[m(r, e)]);
 }
 function b(e) {
     let { user: t, sessionId: n } = e;
-    (f = t.id), (_ = n);
+    ((f = t.id), (_ = n));
 }
 function y(e) {
     let { user: t, sessionId: n } = e;
-    (f = t.id), (_ = n);
+    ((f = t.id), (_ = n));
 }
 function O(e) {
     let { userId: t, guildId: n, streamId: r, context: i } = e;
@@ -98,7 +98,7 @@ function v(e) {
         let { userId: r, sessionId: i, channelId: a, guildId: s } = t;
         if (null == a && r === f)
             if (i !== _) return e;
-            else (p = {}), (h = {});
+            else ((p = {}), (h = {}));
         else {
             if (null != a || (null == (n = p[r]) ? void 0 : n[null != s ? s : o.kod]) == null) return e;
             g(r, s);

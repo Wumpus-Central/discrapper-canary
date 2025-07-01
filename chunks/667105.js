@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     DH: () => F,
     Ks: () => V,
     Ws: () => H,
@@ -8,7 +8,7 @@ n.d(t, {
     qN: () => Z,
     tP: () => j
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(695469),
@@ -55,7 +55,7 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -63,7 +63,7 @@ function L(e) {
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,11 +71,11 @@ function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -136,7 +136,7 @@ let U = (e) => {
             [o, l] = (0, s.q_F)(() => ({})),
             c = i.useRef(!1),
             u = (e) => {
-                (c.current = !0),
+                ((c.current = !0),
                     l({
                         from: { rotate: '0deg' },
                         to: { rotate: '360deg' },
@@ -147,7 +147,7 @@ let U = (e) => {
                         },
                         loop: () => (null != e ? e : c.current),
                         immediate: t
-                    });
+                    }));
             },
             d = (0, a.animated)(s.DuK);
         return {
@@ -221,7 +221,7 @@ function V(e) {
             (0, d.$)();
         }, []),
         j = i.useCallback(() => {
-            (0, f.Y)({
+            ((0, f.Y)({
                 pageType: R.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: R.jXE.QUEST_TILE_CTA,
                 ctaObject: R.qAy.CTA_TO_ORBS_SHOP
@@ -231,7 +231,7 @@ function V(e) {
                     tab: P.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: l.Z.QUEST_HOME_PAGE
-                });
+                }));
         }, []),
         U = null == (t = (0, m.WD)()) ? void 0 : t.getId(),
         { launchInGameActivity: G } = (0, E.zB)(n),
@@ -256,7 +256,7 @@ function V(e) {
                         text: e,
                         tooltipText: null,
                         onClick: () => {
-                            (0, g.AH)(n.id, {
+                            ((0, g.AH)(n.id, {
                                 questContent: o,
                                 questContentCTA: t,
                                 questContentPosition: s,
@@ -268,7 +268,7 @@ function V(e) {
                                           quest: n,
                                           sourceQuestContent: v
                                       })
-                                    : b && n.config.features.includes(C.S7.START_QUEST_CTA) && G();
+                                    : b && n.config.features.includes(C.S7.START_QUEST_CTA) && G());
                         }
                     }
                 );

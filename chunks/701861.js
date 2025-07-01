@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+(n.d(t, { Z: () => A }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -165,7 +165,7 @@ class j extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             T(this, 'peopleListItemRef', i.createRef()),
             T(this, 'state', { isActiveRow: !1 }),
             T(this, 'handleOpenPrivateChannel', (e) => {
@@ -176,7 +176,7 @@ class j extends i.PureComponent {
             }),
             T(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;
-                (0, d.vq)(
+                ((0, d.vq)(
                     e,
                     (e) => {
                         var l, a;
@@ -186,7 +186,7 @@ class j extends i.PureComponent {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -194,7 +194,7 @@ class j extends i.PureComponent {
                                         )),
                                         r.forEach(function (t) {
                                             T(e, t, n[t]);
-                                        });
+                                        }));
                                 }
                                 return e;
                             })({}, e)),
@@ -225,8 +225,8 @@ class j extends i.PureComponent {
                         }
                     }
                 ),
-                    this.setState({ isActiveRow: !0 });
-            });
+                    this.setState({ isActiveRow: !0 }));
+            }));
     }
 }
 let A = j;

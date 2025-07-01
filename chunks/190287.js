@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(539854);
+(n.d(t, { Z: () => h }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -36,7 +36,7 @@ let f = (e) => {
                             closePopout: t,
                             onSelectEmoji: (e) => {
                                 let { emoji: n, willClose: r } = e;
-                                null != n && f(n), r && t();
+                                (null != n && f(n), r && t());
                             }
                         });
                     },
@@ -129,7 +129,7 @@ let f = (e) => {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -137,7 +137,7 @@ let f = (e) => {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -145,8 +145,8 @@ let f = (e) => {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })(
@@ -160,12 +160,12 @@ let f = (e) => {
                             onSetReason: (t) => {
                                 let n = [...l],
                                     r = Object.assign({}, l[e], { reason: t });
-                                (n[e] = r), (0, d.P$)(i, n);
+                                ((n[e] = r), (0, d.P$)(i, n));
                             },
                             onSelectEmoji: (t) => {
                                 let n = [...l],
                                     r = Object.assign({}, l[e], { emoji_name: t.optionallyDiverseSequence });
-                                (n[e] = r), (0, d.P$)(i, n);
+                                ((n[e] = r), (0, d.P$)(i, n));
                             },
                             onClearPressed: () => {
                                 let t = [...l],
@@ -173,7 +173,7 @@ let f = (e) => {
                                         reason: '',
                                         emoji_name: null
                                     };
-                                (t[e] = n), (0, d.P$)(i, t);
+                                ((t[e] = n), (0, d.P$)(i, t));
                             },
                             reasonMinLength: t,
                             reasonMaxLength: n

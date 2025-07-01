@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r,
     i,
     l,
@@ -21,7 +21,7 @@ class f extends (l = a.ZP.Store) {
         return null != p && p.id !== m ? p : null;
     }
 }
-(i = 'MaintenanceStore'),
+((i = 'MaintenanceStore'),
     (r = 'displayName') in f
         ? Object.defineProperty(f, r, {
               value: i,
@@ -29,10 +29,10 @@ class f extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (f[r] = i);
-let h = new f(s.Z, {
+        : (f[r] = i));
+let g = new f(s.Z, {
     CONNECTION_OPEN: function () {
-        (d = null), c.Z.checkScheduledMaintenances();
+        ((d = null), c.Z.checkScheduledMaintenances());
     },
     STATUS_PAGE_INCIDENT: function (e) {
         d = e.incident;
@@ -42,6 +42,6 @@ let h = new f(s.Z, {
     },
     STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
         if (null == p) return !1;
-        (m = p.id), o.K.set(u, m);
+        ((m = p.id), o.K.set(u, m));
     }
 });

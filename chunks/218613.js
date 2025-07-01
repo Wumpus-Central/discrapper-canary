@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     default: () => eo,
     p: () => es
 }),
@@ -6,7 +6,7 @@ n.d(t, {
     n(953529),
     n(388685),
     n(781311),
-    n(415506);
+    n(415506));
 var i = n(255367),
     s = n(73800),
     l = n(120356),
@@ -27,14 +27,14 @@ var i = n(255367),
     I = n(367907),
     j = n(812206),
     b = n(429673),
-    O = n(933557),
-    f = n(636816),
+    f = n(933557),
+    O = n(636816),
     v = n(605436),
     S = n(185413),
     A = n(313201),
     _ = n(318766),
-    y = n(907040),
-    T = n(906411),
+    T = n(907040),
+    y = n(906411),
     L = n(688465),
     D = n(456269),
     P = n(312146),
@@ -76,7 +76,7 @@ function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -84,7 +84,7 @@ function en(e) {
             )),
             i.forEach(function (t) {
                 et(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -159,7 +159,7 @@ function er(e) {
         a = s.useCallback(
             (e) => {
                 let { closePopout: s } = e;
-                return (0, i.jsx)(y.Z, {
+                return (0, i.jsx)(T.Z, {
                     channel: null,
                     guildId: n,
                     pickerIntention: K.Hz.CHANNEL_NAME,
@@ -167,7 +167,7 @@ function er(e) {
                     onNavigateAway: s,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: i } = e;
-                        null != n && n.type === T.B.UNICODE && t(n.surrogates), i && s();
+                        (null != n && n.type === y.B.UNICODE && t(n.surrogates), i && s());
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: r
@@ -208,15 +208,15 @@ class ea extends s.PureComponent {
         let { _input: e } = this;
         null != e && e.select();
         let { guildId: t, applications: n, canCreateStoreChannel: i } = this.props;
-        i && null == n && C.Z.fetchApplications(t),
+        (i && null == n && C.Z.fetchApplications(t),
             I.ZP.trackWithMetadata(W.rMx.OPEN_MODAL, { type: 'Create Channel' }),
             D.O2.trackExposure({
                 guildId: t,
                 location: '45d324_1'
-            });
+            }));
     }
     componentDidUpdate(e, t) {
-        !t.isPrivate && this.state.isPrivate && this.state.channelType === W.d4z.GUILD_ANNOUNCEMENT && this.setState({ channelType: W.d4z.GUILD_TEXT }), !t.isPrivate && this.state.isPrivate && I.ZP.trackWithMetadata(W.rMx.OPEN_MODAL, { type: 'Create Private Channel' });
+        (!t.isPrivate && this.state.isPrivate && this.state.channelType === W.d4z.GUILD_ANNOUNCEMENT && this.setState({ channelType: W.d4z.GUILD_TEXT }), !t.isPrivate && this.state.isPrivate && I.ZP.trackWithMetadata(W.rMx.OPEN_MODAL, { type: 'Create Private Channel' }));
     }
     getGuildId() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
@@ -303,7 +303,7 @@ class ea extends s.PureComponent {
                     ? (0, i.jsx)(m.R94, {
                           className: ee.channelNameNote,
                           type: m.R94.Types.DESCRIPTION,
-                          children: $.intl.format($.t.s2ZzZW, { name: (0, O.F6)(t, H.default, F.Z, !0) })
+                          children: $.intl.format($.t.s2ZzZW, { name: (0, f.F6)(t, H.default, F.Z, !0) })
                       })
                     : o === W.d4z.GUILD_FORUM
                       ? (0, i.jsx)(m.R94, {
@@ -755,7 +755,7 @@ class ea extends s.PureComponent {
                         this.renderType(),
                         this.renderName(),
                         e === W.d4z.GUILD_STORE ? this.renderStoreOptions() : null,
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(O.Z, {
                             guildId: t,
                             channelType: e,
                             className: ee.channelTypeDescription
@@ -858,7 +858,7 @@ class ea extends s.PureComponent {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             et(this, 'headerId', (0, A.hQ)()),
             et(this, '_input', void 0),
             et(this, 'setInputRef', (e) => {
@@ -883,18 +883,18 @@ class ea extends s.PureComponent {
                 this.setState({ name: o }, () => {
                     var t, n;
                     let i = l + e.length;
-                    null == (t = this._input) || t.focus(), null == (n = this._input) || n.setSelectionRange(i, i);
+                    (null == (t = this._input) || t.focus(), null == (n = this._input) || n.setSelectionRange(i, i));
                 });
             }),
             et(this, 'handleTypeChange', (e) => {
                 let { value: t } = e,
                     { name: n } = this.state;
-                M.xL.has(t) && (n = (0, V.Nj)(n)),
+                (M.xL.has(t) && (n = (0, V.Nj)(n)),
                     t === W.d4z.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
                     this.setState({
                         channelType: t,
                         name: n
-                    });
+                    }));
             }),
             et(this, 'handlePrivacyChange', (e) => {
                 this.setState({ isPrivate: e });
@@ -924,7 +924,7 @@ class ea extends s.PureComponent {
                     { name: u, pendingPermissionOverwrites: p, channelType: m, skuId: C, branchId: N, isPrivate: x } = this.state,
                     I = this.getGuildId();
                 if (null != I) {
-                    if (null != s) (t = c().values(s.permissionOverwrites)), (n = s.bitrate), (i = s.userLimit);
+                    if (null != s) ((t = c().values(s.permissionOverwrites)), (n = s.bitrate), (i = s.userLimit));
                     else if (m === W.d4z.GUILD_ANNOUNCEMENT) t = (0, V.rt)(I);
                     else {
                         if (x) {
@@ -959,7 +959,7 @@ class ea extends s.PureComponent {
                         });
                         if (null == e || 201 !== e.status) return void this.setState({ submitting: !1 });
                         let s = e.body;
-                        M.xL.has(m) && (0, U.XU)(s.guild_id, s.id), this.setState({ submitting: !1 }), d();
+                        (M.xL.has(m) && (0, U.XU)(s.guild_id, s.id), this.setState({ submitting: !1 }), d());
                     } catch (e) {
                         null != e.body && 'object' == typeof e.body
                             ? this.setState({
@@ -972,11 +972,11 @@ class ea extends s.PureComponent {
                               });
                     }
                 }
-            });
+            }));
         let { channelType: t, cloneChannel: n, prefillChannelName: i } = e;
-        (this.state = {
+        ((this.state = {
             channelType: null != t ? t : W.d4z.GUILD_TEXT,
-            name: null != n ? (0, O.F6)(n, H.default, F.Z) : null != i ? i : '',
+            name: null != n ? (0, f.F6)(n, H.default, F.Z) : null != i ? i : '',
             pendingPermissionOverwrites: {},
             isPrivate: !1,
             prevGuildId: e.guildId,
@@ -989,7 +989,7 @@ class ea extends s.PureComponent {
             errors: {},
             submitting: !1
         }),
-            (this.handlePermissionOverwriteChange = this.handlePermissionOverwriteChange.bind(this));
+            (this.handlePermissionOverwriteChange = this.handlePermissionOverwriteChange.bind(this)));
     }
 }
 let eo = s.forwardRef(function (e, t) {
@@ -1028,7 +1028,7 @@ let eo = s.forwardRef(function (e, t) {
         u = (0, z.m)(s) && c && h,
         m = (0, D.W3)(s),
         g = (0, P.Ui)(null == r ? void 0 : r.guild),
-        C = (0, b.sc)({
+        C = (0, b.s)({
             guildId: s,
             location: 'ConnectedCreateChannel'
         });

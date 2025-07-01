@@ -16,7 +16,7 @@ function k(t) {
     let { onClose: n, transitionState: i } = t,
         k = (0, l.Dt)();
     function C() {
-        n(), o.Z.open(d.oAB.ACCESSIBILITY, null, { scrollPosition: x.rP.LEGACY_CHAT_INPUT });
+        (n(), o.Z.open(d.oAB.ACCESSIBILITY, null, { scrollPosition: x.rP.LEGACY_CHAT_INPUT }));
     }
     return (0, e.jsxs)(a.Y0X, {
         transitionState: i,
@@ -62,12 +62,12 @@ function k(t) {
                     (0, e.jsx)(a.zxk, {
                         type: 'button',
                         onClick: function () {
-                            c.default.track(d.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            (c.default.track(d.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: !1,
                                 location: 'LegacyChatInputExplanationModal'
                             }),
                                 r.dN.updateSetting(!1),
-                                n();
+                                n());
                         },
                         children: u.intl.string(u.t.VdzwlJ)
                     }),

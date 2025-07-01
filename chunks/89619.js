@@ -1,4 +1,4 @@
-a.d(i, { default: () => j }), a(388685), a(953529);
+(a.d(i, { default: () => j }), a(388685), a(953529));
 var t = a(255367),
     n = a(73800),
     s = a(120356),
@@ -69,7 +69,7 @@ function j(e) {
                         look: o.iLD.FILLED,
                         size: o.zxk.Sizes.MEDIUM,
                         onClick: () => {
-                            null != w && r(w), _();
+                            (null != w && r(w), _());
                         },
                         children: (0, t.jsx)(o.Text, {
                             variant: 'text-md/semibold',

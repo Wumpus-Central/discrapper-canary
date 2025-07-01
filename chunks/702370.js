@@ -1,4 +1,4 @@
-n.d(t, { default: () => ez }), n(388685), n(314940), n(953529);
+(n.d(t, { default: () => ez }), n(388685), n(314940), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -82,7 +82,7 @@ function eE(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -90,7 +90,7 @@ function eE(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -98,8 +98,8 @@ function eE(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -311,7 +311,7 @@ let eN = {
                 [j, m, S.skuId, eh]
             );
         i.useEffect(() => {
-            if (null != ec) return (0, v.cV)(ec), () => (0, v.cV)(void 0);
+            if (null != ec) return ((0, v.cV)(ec), () => (0, v.cV)(void 0));
         }, [ec]);
         let eA = (e, t) => {
                 let n = () => {
@@ -320,7 +320,7 @@ let eN = {
                             onCheckoutSuccess: (e) => {
                                 var t;
                                 let { entitlements: n } = e;
-                                (0, z.qg)({
+                                ((0, z.qg)({
                                     variantsReturnStyle: eh,
                                     location: 'collectible_checkout_with_orb'
                                 }),
@@ -331,7 +331,7 @@ let eN = {
                                         shouldCheckoutWithOrbs: !0,
                                         itemConsumed: null == (t = n[0]) ? void 0 : t.consumed,
                                         purchaseType: e_.o8.ORB
-                                    });
+                                    }));
                             },
                             analyticsLocations: j
                         });
@@ -484,13 +484,13 @@ let eN = {
                                                     submittingStartedLabel: ek.intl.string(ek.t['TYw+9v']),
                                                     submittingFinishedLabel: ek.intl.string(ek.t.Pg1UPz),
                                                     onClick: async () => {
-                                                        await (0, z.fK)(S.skuId),
+                                                        (await (0, z.fK)(S.skuId),
                                                             m(),
                                                             (0, eC.Z)({
                                                                 product: S,
                                                                 analyticsLocations: j,
                                                                 purchaseType: e_.o8.PREMIUM_PURCHASE
-                                                            });
+                                                            }));
                                                     },
                                                     children: ek.intl.string(ek.t.zp6caG)
                                                 })
@@ -608,12 +608,12 @@ let eN = {
                             r,
                             i = {},
                             a = Object.keys(e);
-                        for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var a = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(a, ['pendingAvatar']),
@@ -730,14 +730,14 @@ let eN = {
         }, [b]);
         let N = i.useMemo(() => (0, G.jm)(a.type, a.skuId), [a.type, a.skuId]);
         i.useEffect(() => {
-            B.default.track(ej.rMx.OPEN_MODAL, {
+            (B.default.track(ej.rMx.OPEN_MODAL, {
                 type: ej.jXE.COLLECTIBLES_SHOP_DETAILS_MODAL,
                 source: c,
                 location_stack: k,
                 sku_id: I.skuId,
                 product_type: N
             }),
-                I.items.forEach(z.oK);
+                I.items.forEach(z.oK));
         }, [c, k, I.skuId, I.items, N]);
         let y = (0, R.r)(),
             L = t === h.Dvm.EXITING;

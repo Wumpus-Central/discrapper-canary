@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $W: () => I,
     Mx: () => A,
     PZ: () => N,
@@ -9,7 +9,7 @@ n.d(t, {
     s8: () => D
 }),
     n(388685),
-    n(35282);
+    n(35282));
 var i,
     r = n(255367),
     s = n(73800),
@@ -81,7 +81,7 @@ class v extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             S(this, 'node', void 0),
             S(this, 'handleClick', (e) => {
                 e.preventDefault();
@@ -96,7 +96,7 @@ class v extends s.PureComponent {
             }),
             S(this, 'setRef', (e) => {
                 this.node = e;
-            });
+            }));
     }
 }
 class T extends s.Component {
@@ -350,7 +350,7 @@ class y extends s.Component {
         let e,
             { user: t, comparator: n } = this.props,
             i = x.Z.getNickname(t.id);
-        return ((e = n === t.tag || null == n || '' === n ? t.username : n) === t.username || e === t.id) && (e = null != i ? i : j.ZP.getName(t)), e;
+        return (((e = n === t.tag || null == n || '' === n ? t.username : n) === t.username || e === t.id) && (e = null != i ? i : j.ZP.getName(t)), e);
     }
     renderName() {
         let e,
@@ -535,47 +535,47 @@ class D extends s.Component {
             c = s ? l.iWm : l.jje;
         switch (n.type) {
             case o.Ky.SHOP:
-                (e = C.intl.string(C.t.pWG4zc)),
+                ((e = C.intl.string(C.t.pWG4zc)),
                     (t = (0, r.jsx)(l.EOn, {
                         size: 'xs',
                         color: 'currentColor'
-                    }));
+                    })));
                 break;
             case o.Ky.NITRO_HOME:
-                (e = C.intl.string(C.t.Ipxkoq)),
+                ((e = C.intl.string(C.t.Ipxkoq)),
                     (t = (0, r.jsx)(l.SrA, {
                         size: 'xs',
                         color: 'currentColor'
-                    }));
+                    })));
                 break;
             case o.Ky.QUEST_HOME:
-                (e = C.intl.string(C.t.JALI2N)),
+                ((e = C.intl.string(C.t.JALI2N)),
                     (t = (0, r.jsx)(l.qDn, {
                         size: 'xs',
                         color: 'currentColor'
-                    }));
+                    })));
                 break;
             case o.Ky.APPS_HOME:
-                (e = C.intl.string(C.t.PHjkRE)),
+                ((e = C.intl.string(C.t.PHjkRE)),
                     (t = (0, r.jsx)(c, {
                         size: 'xs',
                         color: 'currentColor'
-                    }));
+                    })));
                 break;
             case o.Ky.SETTINGS:
                 var d;
-                (e = null != (d = n.label) ? d : C.intl.string(C.t['3D5yo6'])),
+                ((e = null != (d = n.label) ? d : C.intl.string(C.t['3D5yo6'])),
                     (t = (0, r.jsx)(l.ewm, {
                         size: 'xs',
                         color: 'currentColor'
-                    }));
+                    })));
                 break;
             default:
-                (e = n.id),
+                ((e = n.id),
                     (t = (0, r.jsx)(l.xPt, {
                         size: 'xs',
                         color: 'currentColor'
-                    }));
+                    })));
         }
         return (0, r.jsxs)('div', {
             className: O.contentDefault,

@@ -29,5 +29,5 @@ class u extends (i = a.ZP.PersistedStore) {
         return { animationType: r };
     }
 }
-l(u, 'displayName', 'VoiceChannelEffectsPersistedStore'), l(u, 'persistKey', 'VoiceChannelEffectsPersistedStore');
+(l(u, 'displayName', 'VoiceChannelEffectsPersistedStore'), l(u, 'persistKey', 'VoiceChannelEffectsPersistedStore'));
 let d = new u(o.Z, { VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: c });

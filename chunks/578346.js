@@ -9,7 +9,7 @@ var r = a(176984),
 let o = {},
     i = {};
 function c(t, e) {
-    (o[t] = o[t] || []), o[t].push(e);
+    ((o[t] = o[t] || []), o[t].push(e));
 }
 function s(t, e) {
     i[t] || (e(), (i[t] = !0));

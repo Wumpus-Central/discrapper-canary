@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     R: () => v,
     Z: () => w
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(392711),
     i = n(433517),
     a = n(147913),
@@ -34,7 +34,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,11 +50,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -161,7 +161,7 @@ function T(e) {
         let t = null == (n = c.A2.getSetting()[e.feedbackType]) ? void 0 : n.optOutExpiryTime,
             r = null != t && !Number.isNaN(t) && Date.now() < t,
             i = !s.Z.hasHotspot(e.hotspot);
-        return i && !r && c.A2.updateSetting((t) => b(g({}, t), { [e.feedbackType]: b(g({}, t[e.feedbackType]), { optOutExpiryTime: h.uf }) })), !r && !i;
+        return (i && !r && c.A2.updateSetting((t) => b(g({}, t), { [e.feedbackType]: b(g({}, t[e.feedbackType]), { optOutExpiryTime: h.uf }) })), !r && !i);
     }
 }
 function S(e) {
@@ -173,7 +173,7 @@ function A(e, t) {
         var a, o, s;
         let n,
             l = null == (a = c.A2.getSetting()[t.feedbackType]) ? void 0 : a.lastImpressionTime;
-        return (null == l || Number.isNaN(l)) && null != t.storageKey && (null == (n = null != (o = i.K.get(t.storageKey)) ? o : void 0) || Number.isNaN(n) || c.A2.updateSetting((e) => b(g({}, e), { [t.feedbackType]: b(g({}, e[t.feedbackType]), { lastImpressionTime: n }) }))), (null != (s = (0, r.max)([l, n])) ? s : 0) + e.cooldown < Date.now();
+        return ((null == l || Number.isNaN(l)) && null != t.storageKey && (null == (n = null != (o = i.K.get(t.storageKey)) ? o : void 0) || Number.isNaN(n) || c.A2.updateSetting((e) => b(g({}, e), { [t.feedbackType]: b(g({}, e[t.feedbackType]), { lastImpressionTime: n }) }))), (null != (s = (0, r.max)([l, n])) ? s : 0) + e.cooldown < Date.now());
     }
     if (null != t.storageKey) {
         let n = i.K.get(t.storageKey);
@@ -209,10 +209,10 @@ class w extends a.Z {
             null == n || n();
             return;
         }
-        (this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t, n);
+        ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t, n));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'feedbackTypeToShow', null),
             m(
                 this,
@@ -220,6 +220,6 @@ class w extends a.Z {
                 (0, r.debounce)((e, t) => {
                     null != this.feedbackTypeToShow ? (P(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e()) : null == t || t();
                 }, y)
-            );
+            ));
     }
 }

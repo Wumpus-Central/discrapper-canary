@@ -1,4 +1,4 @@
-n.d(t, { ApplicationCommandShareModal: () => w }), n(388685), n(35282);
+(n.d(t, { ApplicationCommandShareModal: () => w }), n(388685), n(35282));
 var r = n(255367),
     l = n(73800),
     i = n(481060),
@@ -21,7 +21,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function j(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -37,8 +37,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -96,12 +96,12 @@ function w(e) {
                         r,
                         l = {},
                         i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
             return l;
         })(e, ['applicationId', 'channel', 'command', 'onClose', 'requireLaunchChannel', 'onShareResult', 'previewMessage']);
@@ -139,12 +139,12 @@ function w(e) {
         }),
         G = l.useCallback(
             (e) => {
-                z(e), W(e);
+                (z(e), W(e));
             },
             [W]
         ),
         X = l.useCallback(() => {
-            E(!1), w();
+            (E(!1), w());
         }, [E, w]),
         [B] = (0, s.Z)([n]),
         V = l.useCallback(() => {
@@ -166,7 +166,7 @@ function w(e) {
                     });
                     if (-1 === n) return q ? t : (z(''), W(''), (A.current += 1), [e, ...t]);
                     let r = [...t];
-                    return r.splice(n, 1), (A.current += 1), r;
+                    return (r.splice(n, 1), (A.current += 1), r);
                 });
             },
             [q, W]
@@ -182,7 +182,7 @@ function w(e) {
                 if (null === Q) return;
                 D(!0);
                 let n = (await Promise.all(e.map(o.qx))).filter(f.lm);
-                t && (E(!0), S()),
+                (t && (E(!0), S()),
                     n.forEach(async (e) => {
                         var t, n;
                         let r = c.Z.getChannel(e);
@@ -218,7 +218,7 @@ function w(e) {
                             })) && (0, i.showToast)((0, i.createToast)(y.intl.string(y.t['5WjJcn']), i.ToastType.MESSAGE));
                     }),
                     E(!0),
-                    S();
+                    S());
             },
             [E, Q, g.options]
         ),

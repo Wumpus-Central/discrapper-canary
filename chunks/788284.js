@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -38,7 +38,7 @@ function h(e) {
         g = (0, c.e7)([d.Z], () => d.Z.isFocused()),
         h = s.useRef(null),
         [b, j] = s.useState(!1),
-        _ = s.useMemo(() => {
+        v = s.useMemo(() => {
             if (null == i) return null;
             let e = (0, p.oo)(i.config.colors.primary),
                 t = {
@@ -49,7 +49,7 @@ function h(e) {
                 n = f.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
             return x(i.id, n);
         }, [i]),
-        v = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
+        _ = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
         y = !l && g;
     s.useEffect(() => {
         var e, t, n, r;
@@ -58,7 +58,7 @@ function h(e) {
     let C = s.useCallback(() => {
         j(!0);
     }, []);
-    return null == _ || v
+    return null == v || _
         ? (0, r.jsx)('div', {
               className: m.backgroundFallback,
               style: { backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')') }
@@ -70,7 +70,7 @@ function h(e) {
                   {
                       ref: h,
                       onComplete: C,
-                      importData: () => _,
+                      importData: () => v,
                       shouldAnimate: !b && y,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,

@@ -33,7 +33,7 @@ let u = {
                 let t = o.Z.getLastSelectedGuildId();
                 null != t && ((e = t), (0, r.K)(t, a.Z.getChannelId(t)));
             }
-            return null != e && (0, l.X)(e), !1;
+            return (null != e && (0, l.X)(e), !1);
         }
     },
     p = {

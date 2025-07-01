@@ -24,12 +24,12 @@ let _ = r.memo(function (e) {
                         o,
                         r = {},
                         a = Object.keys(e);
-                    for (o = 0; o < a.length; o++) (t = a[o]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+                    for (o = 0; o < a.length; o++) ((t = a[o]), n.indexOf(t) >= 0 || (r[t] = e[t]));
                     return r;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < a.length; o++) (t = a[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+                for (o = 0; o < a.length; o++) ((t = a[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
             }
             return r;
         })(e, ['context']);
@@ -46,7 +46,7 @@ let _ = r.memo(function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
                         o = Object.keys(t);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (o = o.concat(
                             Object.getOwnPropertySymbols(t).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -54,7 +54,7 @@ let _ = r.memo(function (e) {
                         )),
                         o.forEach(function (n) {
                             var o;
-                            (o = t[n]),
+                            ((o = t[n]),
                                 n in e
                                     ? Object.defineProperty(e, n, {
                                           value: o,
@@ -62,8 +62,8 @@ let _ = r.memo(function (e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[n] = o);
-                        });
+                                    : (e[n] = o));
+                        }));
                 }
                 return e;
             })(

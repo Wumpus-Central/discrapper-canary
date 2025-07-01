@@ -13,7 +13,7 @@ if (a) {
             toString: u,
             valueOf: u
         };
-    'symbol' == typeof Symbol.toPrimitive && (d[Symbol.toPrimitive] = u),
+    ('symbol' == typeof Symbol.toPrimitive && (d[Symbol.toPrimitive] = u),
         (r = function (e) {
             if (!e || 'object' != typeof e) return !1;
             var t = s(e, 'lastIndex');
@@ -23,7 +23,7 @@ if (a) {
             } catch (e) {
                 return e === c;
             }
-        });
+        }));
 } else {
     var f = i('Object.prototype.toString'),
         _ = '[object RegExp]';

@@ -27,12 +27,12 @@ let m = (e) => {
             children: f.intl.string(f.t.fYfGgI)
         }),
         onTryFeature: () => {
-            (0, d.uL)(h.Z5c.COLLECTIBLES_SHOP),
+            ((0, d.uL)(h.Z5c.COLLECTIBLES_SHOP),
                 (0, p.mK)({
                     openInLayer: !1,
                     analyticsLocations: n,
                     analyticsSource: s.Z.HOME_PAGE_SHOP_TAB
-                });
+                }));
         },
         header: (0, r.jsx)(a.X6q, {
             variant: 'heading-md/extrabold',

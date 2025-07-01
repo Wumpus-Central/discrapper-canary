@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(415506), n(388685), n(49124);
+(n.d(t, { Z: () => m }), n(415506), n(388685), n(49124));
 var r = n(72924),
     i = n(100527),
     l = n(367207),
@@ -57,7 +57,7 @@ let m = {
                         analyticsLocationObject: m,
                         context: h
                     });
-                    return o(), e;
+                    return (o(), e);
                 } catch (e) {
                     if ((o(), null != e)) {
                         let t = '';

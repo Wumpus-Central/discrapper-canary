@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
+(n.d(t, { Z: () => u }), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
 var i = n(73800),
     r = n(442837),
     s = n(704215),
@@ -21,7 +21,7 @@ let u = () => {
         u = (0, a.Z)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, t),
         m = (0, a.Z)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, t),
         g = i.useCallback(() => {
-            n.isDismissed && n.handleToggleDismissState(), u.isDismissed && u.handleToggleDismissState(), m.isDismissed && m.handleToggleDismissState(), l.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET' });
+            (n.isDismissed && n.handleToggleDismissState(), u.isDismissed && u.handleToggleDismissState(), m.isDismissed && m.handleToggleDismissState(), l.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET' }));
         }, [u, m, n]),
         { handleResetStatusClick: p } = (0, o.kJ)(d.V6);
     return {

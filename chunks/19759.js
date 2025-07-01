@@ -23,7 +23,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,7 +52,7 @@ function d(e) {
 }
 class f extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        (u = null != e ? e : u), (a.Z.actionLogger.persist = o.Z.isDeveloper);
+        ((u = null != e ? e : u), (a.Z.actionLogger.persist = o.Z.isDeveloper));
     }
     getUserAgnosticState() {
         return u;
@@ -77,5 +77,5 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
         return u.sortedScreenKeys;
     }
 }
-s(f, 'displayName', 'DevToolsSettingsStore'), s(f, 'persistKey', 'DevToolsSettingsStore');
+(s(f, 'displayName', 'DevToolsSettingsStore'), s(f, 'persistKey', 'DevToolsSettingsStore'));
 let _ = new f(a.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });

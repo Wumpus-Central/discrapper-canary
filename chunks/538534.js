@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Ee: () => C,
     Fj: () => I,
     ar: () => A,
     xU: () => N
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -35,7 +35,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,11 +51,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -77,7 +77,7 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -87,7 +87,7 @@ function O(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let v = {
@@ -223,7 +223,7 @@ class S extends (r = a.PureComponent) {
                                   hasSelection: o,
                                   option: n,
                                   onClick: (e) => {
-                                      this.handleClick(e), u(e);
+                                      (this.handleClick(e), u(e));
                                   },
                                   size: r,
                                   infoClassName: a,
@@ -269,12 +269,12 @@ class S extends (r = a.PureComponent) {
             : I;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'handleClick', (e) => {
                 e.preventDefault();
                 let { onClick: t, option: n } = this.props;
                 return null == t ? void 0 : t(n);
-            });
+            }));
     }
 }
 function A() {
@@ -303,12 +303,12 @@ function A() {
                     a = 'vertical' === e ? p.yXg.ARROW_DOWN : p.yXg.ARROW_RIGHT;
                 switch (t.which) {
                     case a: {
-                        t.stopPropagation(), t.preventDefault();
+                        (t.stopPropagation(), t.preventDefault());
                         let e = await i.getNextFocusableElement({ wrap: !0 });
                         return null == e ? void 0 : e.focus();
                     }
                     case n: {
-                        t.stopPropagation(), t.preventDefault();
+                        (t.stopPropagation(), t.preventDefault());
                         let e = await i.getPreviousFocusableElement({ wrap: !0 });
                         return null == e ? void 0 : e.focus();
                     }
@@ -372,8 +372,8 @@ function C(e) {
         })
     );
 }
-m(S, 'defaultProps', {
+(m(S, 'defaultProps', {
     withTransparentBackground: !1,
     radioPosition: 'left'
 }),
-    (C.Sizes = v);
+    (C.Sizes = v));

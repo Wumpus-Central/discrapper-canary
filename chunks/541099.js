@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -26,11 +26,11 @@ let l = {
 };
 function c(e) {
     let { entrypoint: t, activeViewType: n, initialState: r } = e;
-    return (l.show = !0), (l.entrypoint = t), (l.lastShownEntrypoint = t), (l.closeReason = o.ti.DISMISSED), (l.activeViewType = n), (l.initialState = r), !0;
+    return ((l.show = !0), (l.entrypoint = t), (l.lastShownEntrypoint = t), (l.closeReason = o.ti.DISMISSED), (l.activeViewType = n), (l.initialState = r), !0);
 }
 function u(e) {
     let { closeReason: t = o.ti.DISMISSED } = e;
-    return (l.show = !1), (l.entrypoint = o._b.NONE), (l.closeReason = t), (l.initialState = void 0), !0;
+    return ((l.show = !1), (l.entrypoint = o._b.NONE), (l.closeReason = t), (l.initialState = void 0), !0);
 }
 let d = new Set();
 class f extends (r = i.ZP.Store) {

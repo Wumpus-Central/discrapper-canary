@@ -1,4 +1,4 @@
-t.d(l, { Z: () => d }), t(413496), t(433524), t(35282);
+(t.d(l, { Z: () => d }), t(413496), t(433524), t(35282));
 var n = t(255367);
 t(73800);
 var r = t(120356),
@@ -11,7 +11,7 @@ function u(e) {
         t = null,
         n = null;
     try {
-        (l = (n = s.parse(e, !0)).host), (t = n.pathname);
+        ((l = (n = s.parse(e, !0)).host), (t = n.pathname));
     } catch (e) {
         return null;
     }

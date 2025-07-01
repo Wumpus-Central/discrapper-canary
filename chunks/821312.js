@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -133,12 +133,12 @@ function b(e) {
                   (0, r.jsx)(s.mzw, {
                       children: (0, r.jsx)(s.zxk, {
                           onClick: function () {
-                              (0, c.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                              ((0, c.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
                                   raid_lockdown_feedback_type: b,
                                   raid_lockdown_feedback_other_reason: f,
                                   guild_id: t
                               }),
-                                  l();
+                                  l());
                           },
                           color: s.zxk.Colors.BRAND,
                           look: s.zxk.Looks.FILLED,

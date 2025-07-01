@@ -14,7 +14,7 @@ class d extends (l = i.ZP.Store) {
         return o;
     }
 }
-(r = 'SoundboardOverlayStore'),
+((r = 'SoundboardOverlayStore'),
     (a = 'displayName') in d
         ? Object.defineProperty(d, a, {
               value: r,
@@ -22,7 +22,7 @@ class d extends (l = i.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (d[a] = r);
+        : (d[a] = r));
 let u = new d(s.Z, {
     SOUNDBOARD_SET_OVERLAY_ENABLED: function (e) {
         if (((o = e.enabled), e.enabled)) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -46,7 +46,7 @@ let y = {
             leave: { maxHeight: 0 },
             config: { duration: 200 }
         }),
-    S = (e) => {
+    N = (e) => {
         let { guild: t } = e,
             n = (0, o.e7)([g.Z], () => g.Z.can(x.Plq.MANAGE_GUILD, t));
         return (0, r.jsxs)(c.Kqy, {
@@ -225,7 +225,7 @@ let y = {
             ]
         });
     };
-function N(e) {
+function T(e) {
     let { guild: t } = e,
         [n, a] = (0, d.R)('report-to-mod-education-dismissed', !1),
         [o, u] = (0, d.R)('report-to-mod-education-expanded', !1),
@@ -287,7 +287,7 @@ function N(e) {
                                 n
                                     ? (0, r.jsxs)(s.animated.div, {
                                           style: e,
-                                          children: [(0, r.jsx)('hr', { className: j.separator }), (0, r.jsx)(S, { guild: t })]
+                                          children: [(0, r.jsx)('hr', { className: j.separator }), (0, r.jsx)(N, { guild: t })]
                                       })
                                     : null
                             )

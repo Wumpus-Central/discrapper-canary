@@ -16,7 +16,7 @@ function r(e, t) {
     return e === t || (e != e && t != t);
 }
 function i(e, t, n) {
-    (this.key = e), (this.value = t), (this._index = n);
+    ((this.key = e), (this.value = t), (this._index = n));
 }
 function a(e, n) {
     for (var i = 0, a = '_' + n, o = a; t.call(e, o); o = a + i++) if (r(e[o].key, n)) return e[o];
@@ -27,14 +27,14 @@ function o(e, n, a) {
             e[l].value = a;
             return;
         }
-    e.size++, (e[l] = new i(n, a, l));
+    (e.size++, (e[l] = new i(n, a, l)));
 }
-(e.exports = n),
+((e.exports = n),
     (n.prototype.forEach = function (e, t) {
-        (t = t || this),
+        ((t = t || this),
             Object.keys(this._data).forEach(function (n) {
                 'size' !== n && e.call(t, this._data[n].value, this._data[n].key);
-            }, this);
+            }, this));
     }),
     (n.prototype.has = function (e) {
         return !!a(this._data, e);
@@ -52,13 +52,13 @@ function o(e, n, a) {
     }),
     (n.prototype.clear = function () {
         var e = Object.create(null);
-        (e.size = 0),
+        ((e.size = 0),
             Object.defineProperty(this, '_data', {
                 value: e,
                 enumerable: !1,
                 configurable: !0,
                 writable: !1
-            });
+            }));
     }),
     Object.defineProperty(n.prototype, 'size', {
         get: function () {
@@ -73,4 +73,4 @@ function o(e, n, a) {
         n.prototype.entries =
             function () {
                 throw Error('iterators are not implemented in this version');
-            });
+            }));

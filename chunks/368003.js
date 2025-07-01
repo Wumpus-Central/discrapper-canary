@@ -1,4 +1,4 @@
-r.d(t, { Z: () => h }), r(388685);
+(r.d(t, { Z: () => h }), r(388685));
 var n = r(255367),
     s = r(73800),
     i = r(404759),
@@ -46,7 +46,7 @@ class h extends s.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'state', { selectedValue: null }),
             d(
                 this,
@@ -62,7 +62,7 @@ class h extends s.Component {
             ),
             d(this, 'handleOptionChange', (e) => {
                 let { onSelect: t } = this.props;
-                this.setState({ selectedValue: e.value }), t(e.value);
-            });
+                (this.setState({ selectedValue: e.value }), t(e.value));
+            }));
     }
 }

@@ -22,7 +22,7 @@ function o(e, t, n) {
     if (null == o) {
         if (e.length > 0) {
             let i = r.GP[e[0].planId];
-            (t = i.interval), (n = i.intervalCount);
+            ((t = i.interval), (n = i.intervalCount));
         }
         return i(t, n);
     }

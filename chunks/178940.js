@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     F: () => T,
     X: () => v
 }),
     n(583741),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -34,7 +34,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,15 +42,15 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
 var E = (function (e) {
-        return (e.DEFAULT = 'default'), (e.INVERTED = 'inverted'), (e.GHOST = 'ghost'), (e.ROW = 'row'), e;
+        return ((e.DEFAULT = 'default'), (e.INVERTED = 'inverted'), (e.GHOST = 'ghost'), (e.ROW = 'row'), e);
     })(E || {}),
     b = (function (e) {
-        return (e.TOP = 'top'), (e.CENTER = 'center'), e;
+        return ((e.TOP = 'top'), (e.CENTER = 'center'), e);
     })(b || {});
 let y = {
         BOX: h.box,
@@ -101,11 +101,11 @@ class v extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e, e.currentTarget.checked);
-            });
+            }));
     }
 }
 function I(e) {
@@ -121,12 +121,12 @@ function I(e) {
             case 'ghost':
                 if (i.startsWith('var(--')) {
                     let e = ''.concat(i.slice(0, -1), '-hsl)');
-                    (a.borderColor = 'rgba('.concat(e, ', 0.15)')), (a.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
-                } else c()((0, u.FX)(i), 'Checkbox: '.concat(i, ' is not a valid hex color')), (a.borderColor = (0, u.wK)(i, 0.15)), (a.backgroundColor = (0, u.wK)(i, 0.15));
+                    ((a.borderColor = 'rgba('.concat(e, ', 0.15)')), (a.backgroundColor = 'rgba('.concat(e, ', 0.15)')));
+                } else (c()((0, u.FX)(i), 'Checkbox: '.concat(i, ' is not a valid hex color')), (a.borderColor = (0, u.wK)(i, 0.15)), (a.backgroundColor = (0, u.wK)(i, 0.15)));
                 break;
             case 'row':
             case 'inverted':
-                (a.backgroundColor = i), (a.borderColor = i);
+                ((a.backgroundColor = i), (a.borderColor = i));
         }
     return a;
 }
@@ -154,7 +154,7 @@ function T(e) {
         })
     });
 }
-m(v, 'Types', E),
+(m(v, 'Types', E),
     m(v, 'Shapes', y),
     m(v, 'Aligns', b),
     m(v, 'defaultProps', {
@@ -168,4 +168,4 @@ m(v, 'Types', E),
         align: 'center',
         onChange: p.dG4,
         reverse: !1
-    });
+    }));

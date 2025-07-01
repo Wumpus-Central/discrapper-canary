@@ -22,7 +22,7 @@ let h = function (t) {
             onClose: h
         }),
         C = a.useCallback(() => {
-            h(), o.Z.close(), (0, r.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_APPLICATIONS));
+            (h(), o.Z.close(), (0, r.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_APPLICATIONS)));
         }, [n, h]);
     return (0, i.jsxs)(s.Y0X, {
         className: m.container,

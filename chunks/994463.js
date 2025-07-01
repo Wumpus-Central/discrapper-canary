@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     l = n(73800),
-    s = n(525654),
-    i = n.n(s),
+    i = n(525654),
+    s = n.n(i),
     a = n(748780),
     o = n(782682);
-function E(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,11 +28,11 @@ function c(e) {
         transform: [{ translateX: t(e.x) }, { translateY: t(e.y) }]
     };
 }
-class u extends l.Component {
+class d extends l.Component {
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: t } = this.state;
-        'Firefox' !== i().name &&
+        'Firefox' !== s().name &&
             (a.Z.animate(e, {
                 loop: !0,
                 toValueMin: -74,
@@ -464,13 +464,13 @@ class u extends l.Component {
         });
     }
     constructor(...e) {
-        super(...e),
-            E(this, 'state', {
+        (super(...e),
+            u(this, 'state', {
                 x: new a.Z.Value(0),
                 y: new a.Z.Value(0)
             }),
-            E(this, '_isMounted', !1),
-            E(this, 'shouldLoop', () => this._isMounted);
+            u(this, '_isMounted', !1),
+            u(this, 'shouldLoop', () => this._isMounted));
     }
 }
-let _ = u;
+let E = d;

@@ -24,7 +24,7 @@ function _(e) {
             (0, c.EW)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },
         E = () => {
-            l.Z.open(p.oAB.NOTIFICATIONS, null, { analyticsLocations: _ }), x(h.L.SECONDARY);
+            (l.Z.open(p.oAB.NOTIFICATIONS, null, { analyticsLocations: _ }), x(h.L.SECONDARY));
         };
     return n && !u
         ? (0, i.jsx)(d.ZP, {

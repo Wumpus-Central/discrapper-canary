@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(539854), n(388685);
+(n.d(t, { Z: () => P }), n(539854), n(388685));
 var r = n(392711),
     i = n.n(r),
     a = n(377108),
@@ -34,7 +34,7 @@ let y = 10 + Math.random() * (10 * _.Z.Millis.SECOND),
     I = !1;
 class T extends o.Z {
     _initialize() {
-        p.DZ.beforeSendCallbacks.push({
+        (p.DZ.beforeSendCallbacks.push({
             hasChanges: () => !1,
             processProto: () => {
                 R(O, !1);
@@ -75,20 +75,20 @@ class T extends o.Z {
                 processProto: (e) => {
                     f.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, m.tU)(f.Z.frecencyWithoutFetchingLatest.usageHistory, f.C)));
                 }
-            });
+            }));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'actions', {
                 POST_CONNECTION_OPEN: S,
                 CONNECTION_RESUMED: S,
                 CONNECTION_CLOSED: N,
                 APP_STATE_UPDATE: A
-            });
+            }));
     }
 }
 function S() {
-    (I = !0), R(y, !0);
+    ((I = !0), R(y, !0));
 }
 function A(e) {
     I && 'active' !== e.state && (clearTimeout(v), (v = null), C(!1));
@@ -97,13 +97,13 @@ function N() {
     I && (clearTimeout(v), (v = null), C(!1));
 }
 async function C(e) {
-    R(O, !1),
+    (R(O, !1),
         !h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || c.ZP.hasPendingUsage() || s.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || (f.Z.hasPendingUsage() && !e)) && ((0, p.T6)(), await p.DZ.loadIfNecessary()),
         i().forEach(p.aj, (e) => {
             e.markDirtyIfHasPendingChange();
-        });
+        }));
 }
 function R(e, t) {
-    null != v && clearTimeout(v), (v = setTimeout(() => C(t), e));
+    (null != v && clearTimeout(v), (v = setTimeout(() => C(t), e)));
 }
 let P = new T();

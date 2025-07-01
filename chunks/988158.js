@@ -1,10 +1,10 @@
-n.d(e, {
+(n.d(e, {
     X: () => r,
     h: () => i
 }),
     n(704826),
     n(35282),
-    n(388685);
+    n(388685));
 var a = n(73800),
     l = n(902676);
 function i(t) {
@@ -29,7 +29,7 @@ function r(t) {
         [o, c] = a.useState(!1),
         { protocol: d, authorityPrefix: x, hostname: m, theRestOfTheUrl: h } = i(e),
         u = a.useCallback(() => {
-            o && n(e), null == s || s(), l();
+            (o && n(e), null == s || s(), l());
         }, [e, o, n, l, s]);
     return {
         protocol: d,
@@ -40,7 +40,7 @@ function r(t) {
         setShouldTrustUrl: c,
         handleConfirm: u,
         handleCancel: a.useCallback(() => {
-            null == s || s(), r();
+            (null == s || s(), r());
         }, [r, s])
     };
 }

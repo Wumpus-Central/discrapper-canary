@@ -1,4 +1,4 @@
-n.d(t, { h: () => i }), n(388685);
+(n.d(t, { h: () => i }), n(388685));
 var r = n(73800),
     l = n(180650),
     a = n(215023);
@@ -26,7 +26,7 @@ let i = (e) => {
         handlePageChange: r.useCallback(
             (e) => {
                 var n;
-                o(e), null == (n = t.current) || n.scrollTo({ to: 0 });
+                (o(e), null == (n = t.current) || n.scrollTo({ to: 0 }));
             },
             [t, o]
         ),

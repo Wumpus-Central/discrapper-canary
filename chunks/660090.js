@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(642613), n(388685);
+(n.d(t, { Z: () => o }), n(642613), n(388685));
 var l = n(73800),
     i = n(471518),
     r = n(70956),
@@ -51,12 +51,12 @@ function o(e) {
                       };
             }, [t]);
         })({ alphabeticalSortedCommands: c });
-    l.useEffect(() => {
+    (l.useEffect(() => {
         i.i6(t, { dontRefetchMs: r.Z.Millis.DAY });
     }, [t]),
         l.useLayoutEffect(() => {
             d && s(a.bS.POPULAR);
-        }, [d]);
+        }, [d]));
     let p = c;
     switch (o) {
         case a.bS.POPULAR:

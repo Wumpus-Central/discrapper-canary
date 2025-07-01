@@ -1,5 +1,5 @@
 var n;
-(n = { value: !0 }),
+((n = { value: !0 }),
     (t.stringSimilarity = void 0),
     (t.stringSimilarity = function (e, t, n, r) {
         if ((void 0 === n && (n = 2), void 0 === r && (r = !1), r || ((e = e.toLowerCase()), (t = t.toLowerCase())), e.length < n || t.length < n)) return 0;
@@ -14,4 +14,4 @@ var n;
         }
         return (2 * s) / (e.length + t.length - (n - 1) * 2);
     }),
-    t.stringSimilarity;
+    t.stringSimilarity);

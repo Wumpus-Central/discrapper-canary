@@ -1,6 +1,6 @@
 function r(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-    return Array.isArray(e) ? e.forEach((e) => r(e, t)) : 'string' == typeof e.content ? t.push(e.content) : null != e.content && r(e.content, t), t;
+    return (Array.isArray(e) ? e.forEach((e) => r(e, t)) : 'string' == typeof e.content ? t.push(e.content) : null != e.content && r(e.content, t), t);
 }
 function i(e, t) {
     if (Array.isArray(t)) {
@@ -18,7 +18,7 @@ function a(e) {
             t = r;
             continue;
         }
-        (t.content += r.content), e.splice(n, 1), n--;
+        ((t.content += r.content), e.splice(n, 1), n--);
     }
 }
 function o(e, t) {
@@ -27,16 +27,16 @@ function o(e, t) {
         let r = t.length,
             s = [];
         for (let a = 0; a < r; a++) i(s, o(e, t[a], n));
-        return e.isSlate || a(s), s;
+        return (e.isSlate || a(s), s);
     }
     return (null != t.content && (t.content = o(e, t.content, t)), 'inlineCode' === t.type && delete t.validationChildContent, 'list' === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? o(e, t, null) : t))), null != n && t.type === n.type) ? t.content : t;
 }
-n.d(t, {
+(n.d(t, {
     RA: () => l,
     Rp: () => c,
     ge: () => o
 }),
-    n(539854);
+    n(539854));
 let s = {};
 function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: 200 };
@@ -52,7 +52,7 @@ function l(e) {
         }
     } else if ('text' !== e.type) {
         if (((t.limit -= 1), t.limit <= 0)) return s;
-        Array.isArray(e.content) && (e.content = l(e.content, t)), 'list' === e.type && (e.items = e.items.map((e) => l(e, t)));
+        (Array.isArray(e.content) && (e.content = l(e.content, t)), 'list' === e.type && (e.items = e.items.map((e) => l(e, t))));
     }
     return e;
 }

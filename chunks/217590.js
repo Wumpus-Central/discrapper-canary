@@ -34,7 +34,7 @@ let c = (e) => {
     u = (e) => {
         let t,
             { sticker: n, location: i } = e;
-        n.type === a.n0.GUILD && (t = n.guild_id),
+        (n.type === a.n0.GUILD && (t = n.guild_id),
             r.ZP.trackWithMetadata(o.rMx.EXPRESSION_FAVORITED, {
                 location: i,
                 expression_type: s.X1.STICKER,
@@ -43,7 +43,7 @@ let c = (e) => {
                 expression_guild_id: t,
                 is_animated: (0, a.aQ)(n.format_type),
                 is_custom: (0, a.z)(n.type)
-            });
+            }));
     },
     d = () => {
         i.default.track(o.rMx.SEARCH_STARTED, { search_type: o.aib.STICKER });
@@ -59,7 +59,7 @@ let c = (e) => {
     _ = (e, t, n) => {
         let i,
             { sticker: s } = e;
-        s.type === a.n0.GUILD && (i = s.guild_id),
+        (s.type === a.n0.GUILD && (i = s.guild_id),
             r.ZP.trackWithMetadata(o.rMx.SEARCH_RESULT_SELECTED, {
                 load_id: s.id,
                 search_type: o.aib.STICKER,
@@ -68,12 +68,12 @@ let c = (e) => {
                 expression_guild_id: i,
                 sticker_id: s.id,
                 query: t
-            });
+            }));
     },
     p = (e) => {
         let t,
             { sticker: n, category: i } = e;
-        n.type === a.n0.GUILD && (t = n.guild_id),
+        (n.type === a.n0.GUILD && (t = n.guild_id),
             r.ZP.trackWithMetadata(o.rMx.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
                 type: l.cd.EMOJI_PICKER_STICKER_CLICKED,
                 expression_id: n.id,
@@ -82,7 +82,7 @@ let c = (e) => {
                 expression_guild_id: t,
                 is_animated: (0, a.aQ)(n.format_type),
                 is_custom: (0, a.z)(n.type)
-            });
+            }));
     },
     h = (e) => {
         null != e &&

@@ -3,7 +3,7 @@ var r = n(139232);
 let i = (function (e) {
     function t(t, n, r) {
         var i = e.call(this, t, n) || this;
-        return (i.iterator = r), i;
+        return ((i.iterator = r), i);
     }
     return (
         (0, r.ZT)(t, e),

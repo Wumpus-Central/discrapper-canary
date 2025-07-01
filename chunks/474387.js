@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(147913),
     i = n(344185),
     a = n(314897),
@@ -30,7 +30,7 @@ class u extends r.Z {
         }
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'readStateSnapshots', {}),
             c(this, 'actions', {
                 CHANNEL_SELECT: (e) => this.handleChannelSelect(e),
@@ -49,7 +49,7 @@ class u extends r.Z {
                     null != t && (this.readStateSnapshots[e] = t);
                 });
             }),
-            c(this, 'getReadStateSnapshotAnalytics', (e) => this.readStateSnapshots[e]);
+            c(this, 'getReadStateSnapshotAnalytics', (e) => this.readStateSnapshots[e]));
     }
 }
 let d = new u();

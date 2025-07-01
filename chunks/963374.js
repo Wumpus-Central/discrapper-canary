@@ -1,58 +1,58 @@
-i.d(e, { nC: () => c }), i(388685), i(704826), i(35282), i(539854);
-var n = i(392711),
-    r = i.n(n),
-    s = i(697741);
-let o = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
-function l(t) {
-    return t.replace(/('|\u2019|\uFF07)(s|S)$/, '');
+(n.d(t, { nC: () => d }), n(388685), n(704826), n(35282), n(539854));
+var r = n(392711),
+    l = n.n(r),
+    i = n(697741);
+let s = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
+function a(e) {
+    return e.replace(/('|\u2019|\uFF07)(s|S)$/, '');
 }
-function a(t) {
-    return t.toLowerCase();
+function o(e) {
+    return e.toLowerCase();
 }
-function d(t) {
-    return o.has(t);
+function u(e) {
+    return s.has(e);
 }
-function u(t) {
-    return 0 === t.length;
+function c(e) {
+    return 0 === e.length;
 }
-function c(t) {
-    let e = new Set(r()(t.split(/\W+/)).map(l).reject(u).map(a).reject(d).map(s.$).value());
-    return (t) =>
-        (function t(e, i) {
-            if (Array.isArray(e)) e.forEach((e) => t(e, i));
-            else if ('string' == typeof e.content && 'codeBlock' !== e.type) {
-                let t = [],
-                    n = '';
-                e.content.split(/(\W+)/g).forEach((e) => {
-                    var r;
-                    !u((r = a(l((r = e))))) && !d(r) && i.has((0, s.$)(r))
-                        ? (n.length > 0 &&
-                              t.push({
+function d(e) {
+    let t = new Set(l()(e.split(/\W+/)).map(a).reject(c).map(o).reject(u).map(i.$).value());
+    return (e) =>
+        (function e(t, n) {
+            if (Array.isArray(t)) t.forEach((t) => e(t, n));
+            else if ('string' == typeof t.content && 'codeBlock' !== t.type) {
+                let e = [],
+                    r = '';
+                (t.content.split(/(\W+)/g).forEach((t) => {
+                    var l;
+                    !c((l = o(a((l = t))))) && !u(l) && n.has((0, i.$)(l))
+                        ? (r.length > 0 &&
+                              e.push({
                                   type: 'text',
-                                  content: n
+                                  content: r
                               }),
-                          t.push({
+                          e.push({
                               type: 'highlight',
-                              content: e
+                              content: t
                           }),
-                          (n = ''))
-                        : (n += e);
+                          (r = ''))
+                        : (r += t);
                 }),
-                    t.length > 0 &&
-                        (n.length > 0 &&
-                            t.push({
+                    e.length > 0 &&
+                        (r.length > 0 &&
+                            e.push({
                                 type: 'text',
-                                content: n
+                                content: r
                             }),
-                        'text' === e.type
-                            ? (e.content = t)
-                            : (e.content = [
+                        'text' === t.type
+                            ? (t.content = e)
+                            : (t.content = [
                                   {
                                       type: 'text',
-                                      content: t
+                                      content: e
                                   }
-                              ]));
-            } else null != e.content && t(e.content, i);
-            return e;
-        })(t, e);
+                              ])));
+            } else null != t.content && e(t.content, n);
+            return t;
+        })(e, t);
 }

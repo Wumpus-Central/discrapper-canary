@@ -1,4 +1,4 @@
-(e.exports = o), (o.default = o), (o.stable = u), (o.stableStringify = u);
+((e.exports = o), (o.default = o), (o.stable = u), (o.stableStringify = u));
 var t = '[...]',
     n = '[Circular]',
     r = [],
@@ -10,7 +10,7 @@ function a() {
     };
 }
 function o(e, t, n, o) {
-    void 0 === o && (o = a()), l(e, '', 0, [], void 0, 0, o);
+    (void 0 === o && (o = a()), l(e, '', 0, [], void 0, 0, o));
     try {
         s = 0 === i.length ? JSON.stringify(e, t, n) : JSON.stringify(e, f(t), n);
     } catch (e) {
@@ -79,10 +79,10 @@ function d(e, i, a, o, l, u, f) {
                 h = Object.keys(e).sort(c);
             for (_ = 0; _ < h.length; _++) {
                 var m = h[_];
-                d(e[m], m, _, o, e, u, f), (p[m] = e[m]);
+                (d(e[m], m, _, o, e, u, f), (p[m] = e[m]));
             }
             if (void 0 === l) return p;
-            r.push([l, i, e]), (l[i] = p);
+            (r.push([l, i, e]), (l[i] = p));
         }
         o.pop();
     }
@@ -100,7 +100,7 @@ function f(e) {
                 for (var r = 0; r < i.length; r++) {
                     var a = i[r];
                     if (a[1] === t && a[0] === n) {
-                        (n = a[2]), i.splice(r, 1);
+                        ((n = a[2]), i.splice(r, 1));
                         break;
                     }
                 }

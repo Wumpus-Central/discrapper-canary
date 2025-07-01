@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(49124);
+(n.d(t, { Z: () => f }), n(49124));
 var r = n(255367),
     i = n(73800),
     a = n(392711),
@@ -12,7 +12,7 @@ let d = async (e) => {
     let { animationType: n, animationId: r, url: i, shouldResize: o } = e,
         s = null != (t = l.Jw[n]) ? t : l.Jw[c.q.BASIC],
         u = JSON.parse(JSON.stringify(null != r && r < s.length ? s[r] : (0, a.sample)(s)));
-    return (u.assets[0].p = o ? await (0, l.lv)(i) : i), u;
+    return ((u.assets[0].p = o ? await (0, l.lv)(i) : i), u);
 };
 function f(e) {
     let { containerDimensions: t, effect: n, onComplete: a } = e,
@@ -24,7 +24,7 @@ function f(e) {
                 !(async function () {
                     if (null != o.current) {
                         let t = await d(n);
-                        (e = s().loadAnimation({
+                        ((e = s().loadAnimation({
                             container: o.current,
                             renderer: 'svg',
                             loop: !1,
@@ -33,7 +33,7 @@ function f(e) {
                             rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
                         })),
                             n.animationType === c.q.PREMIUM && e.setSpeed(0.8),
-                            e.addEventListener('complete', () => (null == a ? void 0 : a(n.id)));
+                            e.addEventListener('complete', () => (null == a ? void 0 : a(n.id))));
                     }
                 })(),
                 () => {

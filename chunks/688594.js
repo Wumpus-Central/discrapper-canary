@@ -1,6 +1,6 @@
 var a = t(728992),
     o = t(283344).default;
-(e.exports = function (e, r) {
+((e.exports = function (e, r) {
     if ('object' != o(e) || !e) return e;
     var t = e[a];
     if (void 0 !== t) {
@@ -11,4 +11,4 @@ var a = t(728992),
     return ('string' === r ? String : Number)(e);
 }),
     (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+    (e.exports.default = e.exports));

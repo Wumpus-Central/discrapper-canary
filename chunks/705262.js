@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Yk: () => z,
     ZP: () => er,
     yH: () => Y
 }),
     n(314940),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -58,7 +58,7 @@ function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -66,7 +66,7 @@ function B(e) {
             )),
             r.forEach(function (t) {
                 G(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -74,11 +74,11 @@ function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -100,7 +100,7 @@ function Z(e, t) {
         i = H(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -110,11 +110,11 @@ function H(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 var Y = (function (e) {
-    return (e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e;
+    return ((e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e);
 })({});
 let W = Object.freeze({
         EDITOR: k.fy.SLOW_USER_ACTION,
@@ -305,7 +305,7 @@ let W = Object.freeze({
                     (0, r.jsx)(R.Z, {
                         isDisabled: t,
                         onSelect: () => {
-                            (0, m.XO)(m.wh.CUSTOM_THEME, { from: 'SETTINGS' === a ? m.tE.SETTING : m.tE.CLIENT_THEMES_EDITOR }), 'SETTINGS' === a && (0, d.xf)();
+                            ((0, m.XO)(m.wh.CUSTOM_THEME, { from: 'SETTINGS' === a ? m.tE.SETTING : m.tE.CLIENT_THEMES_EDITOR }), 'SETTINGS' === a && (0, d.xf)());
                         }
                     }),
                 w.XV.filter((e) => {
@@ -352,13 +352,13 @@ let W = Object.freeze({
             { analyticsLocations: o } = (0, h.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
             [s, c, u] = (0, l.Wu)([v.Z, I.ZP, N.Z], () => [v.Z.theme, null == N.Z.gradientPreset && null == T.L1.getSetting().customUserThemeSettings, I.ZP.useSystemTheme === x.KW.ON]),
             d = (e) => {
-                (0, A.xs)(),
+                ((0, A.xs)(),
                     z({
                         isPersisted: !0,
                         analyticsLocations: o,
                         themeName: 'default '.concat(e)
                     }),
-                    (0, f.ZI)({ theme: e }, a);
+                    (0, f.ZI)({ theme: e }, a));
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -450,7 +450,7 @@ let W = Object.freeze({
             )
         });
     };
-(en.Basic = (e) => {
+((en.Basic = (e) => {
     let { className: t, hideSystemSelector: n } = e;
     return (0, r.jsx)('section', {
         className: o()(U.presets, t),
@@ -458,5 +458,5 @@ let W = Object.freeze({
     });
 }),
     (en.Gradient = $),
-    (en.BasicAndGradient = et);
+    (en.BasicAndGradient = et));
 let er = en;

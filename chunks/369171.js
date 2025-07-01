@@ -10,7 +10,7 @@ var r = n(73800),
     l = n(212459),
     c = n(35305),
     u = (function (e) {
-        return (e.DEFAULT = 'DEFAULT'), (e.FOCUS_SENSITIVE = 'FOCUS_SENSITIVE'), (e.PINNED = 'PINNED'), e;
+        return ((e.DEFAULT = 'DEFAULT'), (e.FOCUS_SENSITIVE = 'FOCUS_SENSITIVE'), (e.PINNED = 'PINNED'), e);
     })({});
 function d(e) {
     let { children: t, mode: n = 'DEFAULT' } = e,

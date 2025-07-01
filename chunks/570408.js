@@ -5,6 +5,6 @@ let s = {
     binds: ['mod+f'],
     comboKeysBindGlobal: !0,
     action(e) {
-        e.preventDefault(), e.stopPropagation(), i.S.dispatch(r.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !0 });
+        (e.preventDefault(), e.stopPropagation(), i.S.dispatch(r.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !0 }));
     }
 };

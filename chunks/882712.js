@@ -21,7 +21,7 @@ function l(e, t, n) {
     );
 }
 var c = (function (e) {
-    return (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.SUCCESS = 2)] = 'SUCCESS'), (e[(e.ERROR = 3)] = 'ERROR'), e;
+    return ((e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.SUCCESS = 2)] = 'SUCCESS'), (e[(e.ERROR = 3)] = 'ERROR'), e);
 })({});
 let u = 0,
     d = null,
@@ -32,10 +32,10 @@ function _(e) {
     s.Z.isConnected() && n.code === o.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
 }
 function p(e) {
-    (u = 2), (d = e.purchaseTokenHash), (f = e.expiresAt);
+    ((u = 2), (d = e.purchaseTokenHash), (f = e.expiresAt));
 }
 function h() {
-    (u = 0), (d = null), (f = null);
+    ((u = 0), (d = null), (f = null));
 }
 class m extends (r = i.ZP.Store) {
     get purchaseTokenAuthState() {

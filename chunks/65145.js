@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Pk: () => c,
     dv: () => o
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(823379);
@@ -36,7 +36,7 @@ function c(e) {
     return (
         i.useEffect(() => {
             var e, t, r;
-            'POLL_ANSWERS' === n && null != c.current && (null == (t = c.current) || null == (e = t.ref) || e.focus()), 'ACTION_BUTTON' === n && null != o.current && (null == (r = o.current) || r.focus());
+            ('POLL_ANSWERS' === n && null != c.current && (null == (t = c.current) || null == (e = t.ref) || e.focus()), 'ACTION_BUTTON' === n && null != o.current && (null == (r = o.current) || r.focus()));
         }, [n]),
         (0, r.jsx)(s, {
             pollAnswerRef: c,

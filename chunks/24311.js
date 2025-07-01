@@ -20,14 +20,14 @@ function f(e) {
         v = (0, i.e7)([g.Z, c.Z], () => g.Z.getVoiceChannelId() === c.Z.getDMFromUserId(n.id));
     if (P || f === Z.IlC.POPOUT || v || n.bot || n.isProvisional) return null;
     let _ = () => {
-            null == h || h(),
+            (null == h || h(),
                 a.Z.openPrivateChannel({
                     recipientIds: n.id,
                     joinCall: !0,
                     joinCallVideo: O
                 }),
                 j.dispatch(Z.CkL.POPOUT_CLOSE),
-                (0, r.pTH)();
+                (0, r.pTH)());
         },
         y = !u.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.sNh, {
@@ -44,7 +44,7 @@ function f(e) {
                                   for (var n = 1; n < arguments.length; n++) {
                                       var t = null != arguments[n] ? arguments[n] : {},
                                           l = Object.keys(t);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (l = l.concat(
                                               Object.getOwnPropertySymbols(t).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -52,7 +52,7 @@ function f(e) {
                                           )),
                                           l.forEach(function (n) {
                                               var l;
-                                              (l = t[n]),
+                                              ((l = t[n]),
                                                   n in e
                                                       ? Object.defineProperty(e, n, {
                                                             value: l,
@@ -60,8 +60,8 @@ function f(e) {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[n] = l);
-                                          });
+                                                      : (e[n] = l));
+                                          }));
                                   }
                                   return e;
                               })({ onSubmit: _ }, n)

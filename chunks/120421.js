@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var i,
     r = n(442837),
     s = n(570140),
@@ -22,7 +22,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function d(e) {
             )),
             i.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -148,7 +148,7 @@ class b extends (i = r.ZP.PersistedStore) {
         return m.isMuted;
     }
 }
-c(b, 'displayName', 'ClickerGameStore'), c(b, 'persistKey', 'ClickerGameStore');
+(c(b, 'displayName', 'ClickerGameStore'), c(b, 'persistKey', 'ClickerGameStore'));
 let _ = new b(s.Z, {
     CLICKER_GAME_ADD_POINTS: function (e) {
         let { numPoints: t, itemId: n } = e;
@@ -158,7 +158,7 @@ let _ = new b(s.Z, {
             let e = Math.max(-i, t);
             m.pointsByItem[n] += e;
         } else m.pointsByItem[n] += t;
-        (m.pointsByItem = d({}, m.pointsByItem)), null == m.itemContributions[n] && (m.itemContributions[n] = 0), m.itemContributions[n]++, (m.itemContributions = d({}, m.itemContributions));
+        ((m.pointsByItem = d({}, m.pointsByItem)), null == m.itemContributions[n] && (m.itemContributions[n] = 0), m.itemContributions[n]++, (m.itemContributions = d({}, m.itemContributions)));
     },
     CLICKER_GAME_PURCHASE_ITEM: function (e) {
         let { id: t } = e,
@@ -175,12 +175,12 @@ let _ = new b(s.Z, {
             t === a.yN.COMPLETE_GAME)
         ) {
             var i;
-            (m.endTime = Date.now()),
+            ((m.endTime = Date.now()),
                 l.default.track(o.rMx.CLICKER_GAME_COMPLETED, {
                     duration: Math.floor((m.endTime - m.startTime) / 1000),
                     num_clicks: null != (i = m.itemContributions[a.yN.CLICKER_BUTTON]) ? i : 0,
                     total_score: Math.floor(h())
-                });
+                }));
         }
     },
     CLICKER_GAME_PURCHASE_ITEM_UPGRADE: function (e) {
@@ -214,11 +214,11 @@ let _ = new b(s.Z, {
     },
     CLICKER_GAME_UNLOCK_ACHIEVEMENT: function (e) {
         let { id: t } = e;
-        m.unlockedAchievements.add(t),
+        (m.unlockedAchievements.add(t),
             (m.lastAction = {
                 type: 'unlock-achievement',
                 id: t
-            });
+            }));
     },
     CLICKER_GAME_UPDATE_ITEM_METADATA: function (e) {
         let { itemId: t, metadata: n } = e,

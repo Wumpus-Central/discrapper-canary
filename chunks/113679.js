@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -17,7 +17,7 @@ function g(e) {
         [f, h] = i.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         x = i.useCallback(
             async (e) => {
-                h(e), await (0, a.fp)(t, e);
+                (h(e), await (0, a.fp)(t, e));
             },
             [t]
         );

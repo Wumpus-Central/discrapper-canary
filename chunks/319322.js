@@ -1,4 +1,4 @@
-n(980754), n(388685), n(368063);
+(n(980754), n(388685), n(368063));
 var r = n(328865);
 n(2831);
 var i = n(264344),
@@ -16,7 +16,7 @@ function o(e, t, n) {
         e
     );
 }
-(window.platform = a()),
+((window.platform = a()),
     null == window.ResizeObserver && (window.ResizeObserver = r.d),
     'object' != typeof globalThis && (window.globalThis = window),
     (Map.prototype.toJSON = function () {
@@ -24,7 +24,7 @@ function o(e, t, n) {
     }),
     (Set.prototype.toJSON = function () {
         return Array.from(this);
-    });
+    }));
 {
     class e {
         static fromPoint(t) {
@@ -42,7 +42,7 @@ function o(e, t, n) {
             };
         }
         constructor(e = 0, t = 0, n = 0, r = 1) {
-            o(this, 'x', void 0), o(this, 'y', void 0), o(this, 'z', void 0), o(this, 'w', void 0), (this.x = e), (this.y = t), (this.z = n), (this.w = r);
+            (o(this, 'x', void 0), o(this, 'y', void 0), o(this, 'z', void 0), o(this, 'w', void 0), (this.x = e), (this.y = t), (this.z = n), (this.w = r));
         }
     }
     null == window.DOMPoint && (window.DOMPoint = e);
@@ -77,7 +77,7 @@ function o(e, t, n) {
             };
         }
         constructor(e = 0, t = 0, n = 0, r = 0) {
-            o(this, 'x', void 0), o(this, 'y', void 0), o(this, 'width', void 0), o(this, 'height', void 0), (this.x = e), (this.y = t), (this.width = n), (this.height = r);
+            (o(this, 'x', void 0), o(this, 'y', void 0), o(this, 'width', void 0), o(this, 'height', void 0), (this.x = e), (this.y = t), (this.width = n), (this.height = r));
         }
     }
     null == window.DOMRect && (window.DOMRect = e);

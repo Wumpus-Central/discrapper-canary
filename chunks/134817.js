@@ -35,5 +35,5 @@ class g extends i.Component {
 }
 let p = a.ZP.connectStores([c.default], () => {
     let e = c.default.getCurrentUser();
-    return l()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e };
+    return (l()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e });
 })(g);

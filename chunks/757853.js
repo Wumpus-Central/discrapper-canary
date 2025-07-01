@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     F: () => z,
     G: () => G
 }),
-    n(388685);
+    n(388685));
 var l,
     r = n(255367),
     i = n(73800),
@@ -41,7 +41,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function k(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -57,8 +57,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -90,12 +90,12 @@ function M(e, t) {
                 l,
                 r = {},
                 i = Object.keys(e);
-            for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            for (l = 0; l < i.length; l++) ((n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]));
             return r;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        for (l = 0; l < i.length; l++) (n = i[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+        for (l = 0; l < i.length; l++) ((n = i[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
     }
     return r;
 }
@@ -107,13 +107,13 @@ function U(e) {
         I = i.useRef(!1),
         S = i.useCallback(() => {
             if ('send' === l) {
-                y(!0), (I.current = !0);
+                (y(!0), (I.current = !0));
                 return;
             }
             null == g || g(n);
         }, [l, g, n]),
         O = i.useCallback(() => {
-            P.default.track(Z.rMx.FORWARD_ONE_TAP_VIEW, {
+            (P.default.track(Z.rMx.FORWARD_ONE_TAP_VIEW, {
                 channel_id: t.channel_id,
                 message_id: t.id
             }),
@@ -122,15 +122,15 @@ function U(e) {
                     g(n, {
                         transitionToDestination: !0,
                         closeAfterSend: !0
-                    });
+                    }));
         }, [t.channel_id, t.id, g, n]),
         A = i.useCallback(() => {
-            y(!1),
+            (y(!1),
                 (I.current = !1),
                 P.default.track(Z.rMx.FORWARD_ONE_TAP_UNDO, {
                     channel_id: t.channel_id,
                     message_id: t.id
-                });
+                }));
         }, [t]);
     return (
         (0, _.ZP)(() => () => {
@@ -390,7 +390,7 @@ function z(e) {
                             {
                                 scrollerRef: (e) => {
                                     var n;
-                                    (b.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
+                                    ((b.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null));
                                 }
                             },
                             n,

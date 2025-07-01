@@ -29,7 +29,7 @@ function u(e) {
                   return (0, n.jsx)(a.v2r, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, l.Zy)(), t();
+                          ((0, l.Zy)(), t());
                       },
                       'aria-label': c.intl.string(c.t.PNeFgY),
                       onSelect: () => {},
@@ -49,7 +49,7 @@ function u(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
                                           n = Object.keys(r);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (n = n.concat(
                                               Object.getOwnPropertySymbols(r).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -57,7 +57,7 @@ function u(e) {
                                           )),
                                           n.forEach(function (t) {
                                               var n;
-                                              (n = r[t]),
+                                              ((n = r[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: n,
@@ -65,8 +65,8 @@ function u(e) {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = n);
-                                          });
+                                                      : (e[t] = n));
+                                          }));
                                   }
                                   return e;
                               })(

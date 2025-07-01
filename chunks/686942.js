@@ -26,7 +26,7 @@ var r = n(713267),
     },
     s = Array.isArray,
     l = function (e, t) {
-        void 0 === t && (t = e), 1 == arguments.length && ((t = e), (e = 0));
+        (void 0 === t && (t = e), 1 == arguments.length && ((t = e), (e = 0)));
         for (var n = [], r = e; r < t; r++) n.push(r);
         return n;
     },

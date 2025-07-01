@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Z: () => X,
     f: () => R
 }),
@@ -7,7 +7,7 @@ n.d(t, {
     n(388685),
     n(583741),
     n(642613),
-    n(539854);
+    n(539854));
 var r,
     i = n(348327),
     a = n.n(i),
@@ -121,7 +121,7 @@ function D(e) {
     let n = s().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
     if (n.status !== p.Skl.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)) {
         var r;
-        (E[e] = n.status), (b[e] = n.activities), (y[e] = null != (r = n.hiddenActivities) ? r : []), null != n.clientStatus && (O[e] = n.clientStatus);
+        ((E[e] = n.status), (b[e] = n.activities), (y[e] = null != (r = n.hiddenActivities) ? r : []), null != n.clientStatus && (O[e] = n.clientStatus));
     }
 }
 function L(e) {
@@ -144,16 +144,16 @@ function L(e) {
     else {
         let e = o.length > 1 ? [...o].sort(R) : o,
             n = u[t];
-        (o = null != n && a()(n.activities, e) ? n.activities : e),
+        ((o = null != n && a()(n.activities, e) ? n.activities : e),
             (u[t] = {
                 status: r,
                 clientStatus: i,
                 activities: o,
                 hiddenActivities: s,
                 processedAtTimestamp: l
-            });
+            }));
     }
-    return delete v[n], P(n), !0;
+    return (delete v[n], P(n), !0);
 }
 function x(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
@@ -187,7 +187,7 @@ function k(e, t) {
     if (t === f.default.getId()) return !1;
     let n = g[t];
     if (null == n || null == n[e]) return !1;
-    delete n[e], 0 === Object.keys(n).length && delete g[t], P(t);
+    (delete n[e], 0 === Object.keys(n).length && delete g[t], P(t));
 }
 function M(e) {
     for (let t of d.default.keys(g)) k(e, t);
@@ -198,12 +198,12 @@ function j() {
 function U(e) {
     let { guilds: t, presences: n } = e,
         r = f.default.getId();
-    (g = {}), (v = {}), (E = { [r]: E[r] }), (b = { [r]: b[r] }), (y = { [r]: y[r] }), (O = { [r]: {} });
+    ((g = {}), (v = {}), (E = { [r]: E[r] }), (b = { [r]: b[r] }), (y = { [r]: y[r] }), (O = { [r]: {} }));
     let i = new Set();
-    t.forEach((e) => {
+    (t.forEach((e) => {
         e.presences.forEach((t) => {
             let { user: n, status: r, clientStatus: a, activities: o, hiddenActivities: s, processedAtTimestamp: l } = t;
-            x({
+            (x({
                 guildId: e.id,
                 userId: n.id,
                 status: r,
@@ -212,7 +212,7 @@ function U(e) {
                 hiddenActivities: s,
                 processedAtTimestamp: l
             }),
-                i.add(n.id);
+                i.add(n.id));
         });
     }),
         n.forEach((e) => {
@@ -230,15 +230,15 @@ function U(e) {
                 i.add(t.id));
         }),
         i.delete(r),
-        i.forEach(D);
+        i.forEach(D));
 }
 function G(e) {
     let { presences: t } = e;
-    (g = t.presencesForGuilds), (E = t.statuses), (b = t.activities), (y = t.hiddenActivities), (v = t.activityMetadata);
+    ((g = t.presencesForGuilds), (E = t.statuses), (b = t.activities), (y = t.hiddenActivities), (v = t.activityMetadata));
 }
 function B(e) {
     let { presences: t } = e;
-    M(p.ME),
+    (M(p.ME),
         t.forEach((e) => {
             let { user: t, status: n, clientStatus: r, activities: i, hiddenActivities: a, processedAtTimestamp: o } = e;
             null != t &&
@@ -251,7 +251,7 @@ function B(e) {
                     hiddenActivities: a,
                     processedAtTimestamp: o
                 });
-        });
+        }));
 }
 function V(e) {
     let { guild: t } = e;
@@ -327,18 +327,18 @@ function W(e) {
 function K(e) {
     let t = f.default.getId();
     if (E[t] === e.status && b[t] === e.activities && y[t] === e.hiddenActivities) return !1;
-    (E[t] = e.status), (b[t] = [...e.activities].sort(R)), (y[t] = [...e.hiddenActivities].sort(R)), delete v[t];
+    ((E[t] = e.status), (b[t] = [...e.activities].sort(R)), (y[t] = [...e.hiddenActivities].sort(R)), delete v[t]);
 }
 function z(e) {
     let { userId: t, metadata: n } = e;
-    return (v[t] = n), !1;
+    return ((v[t] = n), !1);
 }
 class q extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (E[f.default.getId()] = e), (b[f.default.getId()] = [...t].sort(R));
+        ((E[f.default.getId()] = e), (b[f.default.getId()] = [...t].sort(R)));
     }
     getStatus(e) {
         var t, n;
@@ -387,7 +387,7 @@ class q extends (r = l.ZP.Store) {
             r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         r = null != r && r;
         let i = this.getActivities(e, n);
-        return r && (i = i.concat(this.getHiddenActivities(e, n))), i.find(t);
+        return (r && (i = i.concat(this.getHiddenActivities(e, n))), i.find(t));
     }
     getActivityMetadata(e) {
         return v[e];

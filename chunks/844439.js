@@ -23,7 +23,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -118,7 +118,7 @@ let g = new O(o.Z, {
                 channelId: r,
                 withCommands: l
             });
-        (d = u(c({}, d), { [i]: t })), (m = u(c({}, m), { [i]: 1 }));
+        ((d = u(c({}, d), { [i]: t })), (m = u(c({}, m), { [i]: 1 })));
         let o = Date.now();
         p = u(c({}, p), { [i]: o });
     },

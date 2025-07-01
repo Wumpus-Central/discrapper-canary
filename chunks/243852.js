@@ -29,7 +29,7 @@ function j(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     t && A(e, !0);
     let n = T[e.applicationId];
-    null != n && (n.stop(), delete T[e.applicationId]), delete N[e.applicationId], s.K.set(v, N);
+    (null != n && (n.stop(), delete T[e.applicationId]), delete N[e.applicationId], s.K.set(v, N));
 }
 function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -40,7 +40,7 @@ function A(e) {
         l = y.Z.getVoiceChannelId(),
         a = b.default.getSessionId(),
         o = O.Z.getMediaSessionId();
-    d.Z.updateActivity({
+    (d.Z.updateActivity({
         applicationId: e.applicationId,
         distributor: e.isDiscordApplication ? I.GQo.DISCORD : e.distributor,
         shareActivity: i,
@@ -52,9 +52,9 @@ function A(e) {
         sessionId: a,
         mediaSessionId: o
     }),
-        (e.updatedAt = n);
+        (e.updatedAt = n));
     let u = T[e.applicationId];
-    null == u && (u = T[e.applicationId] = new c.Xp()).start(C, () => A(e)), t || ((N[e.applicationId] = e), s.K.set(v, N));
+    (null == u && (u = T[e.applicationId] = new c.Xp()).start(C, () => A(e)), t || ((N[e.applicationId] = e), s.K.set(v, N)));
 }
 function Z() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -80,13 +80,13 @@ function x() {
 }
 class L extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, f.Z, E.Z), this.syncWith([f.Z], Z);
+        (this.waitFor(h.ZP, f.Z, E.Z), this.syncWith([f.Z], Z));
     }
     getActivities() {
         return N;
     }
 }
-(a = 'ActivityTrackingStore'),
+((a = 'ActivityTrackingStore'),
     (l = 'displayName') in L
         ? Object.defineProperty(L, l, {
               value: a,
@@ -100,7 +100,7 @@ class L extends (i = o.ZP.Store) {
         CONNECTION_OPEN: function () {
             if (P) return !1;
             for (let e of Object.keys(N)) A(N[e]);
-            Z(!1), (P = !0);
+            (Z(!1), (P = !0));
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
@@ -111,12 +111,12 @@ class L extends (i = o.ZP.Store) {
             let { applicationId: t, token: n } = e,
                 r = N[t];
             if (null == r) return !1;
-            (r.token = n), s.K.set(v, N);
+            ((r.token = n), s.K.set(v, N));
         },
         ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
                 n = N[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), s.K.set(v, N);
+            ((n.token = null), (n.updatedAt = null), s.K.set(v, N));
         }
-    });
+    }));

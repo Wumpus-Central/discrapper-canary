@@ -27,7 +27,7 @@ var n = r(46015),
     },
     b = function (t, e, r) {
         var n = 0;
-        for (t = r ? h(t / 700) : t >> 1, t += h(t / e); t > 455; ) (t = h(t / 35)), (n += 36);
+        for (t = r ? h(t / 700) : t >> 1, t += h(t / e); t > 455; ) ((t = h(t / 35)), (n += 36));
         return h(n + (36 * t) / (t + 38));
     },
     w = function (t) {
@@ -54,12 +54,12 @@ var n = r(46015),
                         if (x < R) break;
                         var k = x - R,
                             P = 36 - R;
-                        p(n, c(y(R + (k % P)))), (x = h(k / P)), (S += 36);
+                        (p(n, c(y(R + (k % P)))), (x = h(k / P)), (S += 36));
                     }
-                    p(n, c(y(x))), (f = b(u, w, g === v)), (u = 0), g++;
+                    (p(n, c(y(x))), (f = b(u, w, g === v)), (u = 0), g++);
                 }
             }
-            u++, s++;
+            (u++, s++);
         }
         return l(n, '');
     };

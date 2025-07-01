@@ -1,4 +1,4 @@
-n.d(t, { Z: () => en }), n(388685), n(539854);
+(n.d(t, { Z: () => en }), n(388685), n(539854));
 var r,
     i = n(348327),
     a = n.n(i),
@@ -68,7 +68,7 @@ function L(e) {
 }
 function x(e) {
     let t = R[e];
-    return null == t && ((t = new v.ZP(e)), (R[e] = t), t.rebuild()), t;
+    return (null == t && ((t = new v.ZP(e)), (R[e] = t), t.rebuild()), t);
 }
 function k(e) {
     return null != e && e.isGuildStageVoice() && O.ZP.countVoiceStatesForChannel(e.id) > 0;
@@ -89,14 +89,14 @@ function U(e) {
     return j((t) => t.updateParticipant(e), t);
 }
 function G(e) {
-    for (let t of N.values(e)) N.delete(t.id), delete R[t.id];
+    for (let t of N.values(e)) (N.delete(t.id), delete R[t.id]);
     C.delete(e);
 }
 function B(e) {
     return null != e && (delete R[e], N.delete(e), !0);
 }
 function V() {
-    C.clear(), N.clear(), (R = {});
+    (C.clear(), N.clear(), (R = {}));
 }
 function F(e, t, n) {
     if (null == n || e.has(n)) return;
@@ -155,9 +155,9 @@ function J(e) {
         n = t.reduce((e, t) => {
             if (!t.isGuildStageVoice() || !C.has(t.guild_id)) return e;
             let n = N.get(t.id);
-            return null == n || a()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), N.set(t.id, t)), e;
+            return (null == n || a()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), N.set(t.id, t)), e);
         }, []);
-    return j((e) => e.rebuild(), n), n.length > 0;
+    return (j((e) => e.rebuild(), n), n.length > 0);
 }
 function $(e) {
     let { guildId: t } = e;
@@ -189,7 +189,7 @@ class et extends (r = l.ZP.Store) {
         return null != (r = null == (n = L(e)) ? void 0 : n.size(t)) ? r : 0;
     }
     getChannels(e) {
-        return D(null != e ? e : A), N.values(null != e ? e : A);
+        return (D(null != e ? e : A), N.values(null != e ? e : A));
     }
     getChannelsVersion() {
         return N.version;

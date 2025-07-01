@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(997841), n(358797);
+(n.d(t, { Z: () => Z }), n(388685), n(997841), n(358797));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -91,7 +91,7 @@ function P() {
 }
 function w(e) {
     let { libraryApplications: t } = e;
-    (O = {}), R(t), (y = !0);
+    ((O = {}), R(t), (y = !0));
 }
 function D(e) {
     let { libraryApplications: t } = e;
@@ -101,22 +101,22 @@ function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
         a = B(t, n);
-    null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i);
+    (null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i));
 }
 function x(e) {
     let { libraryApplication: t } = e,
         n = c.Z.createFromServer(t),
         r = (0, d.Tu)(n.id, n.branchId);
-    (O[r] = n), I.delete(r);
+    ((O[r] = n), I.delete(r));
 }
 function k(e) {
     let { applicationId: t, branchId: n, launchOptionId: r } = e;
-    (S[(0, d.Tu)(t, n)] = r), N();
+    ((S[(0, d.Tu)(t, n)] = r), N());
 }
 function M(e) {
     let { applicationId: t, branchId: n } = e;
     if (T[t] === n) return !1;
-    (T[t] = n), C();
+    ((T[t] = n), C());
 }
 function j(e) {
     let { libraryApplications: t } = e;
@@ -204,7 +204,7 @@ class F extends (r = o.ZP.Store) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (y) return setImmediate(e), !1;
+            if (y) return (setImmediate(e), !1);
         });
     }
 }

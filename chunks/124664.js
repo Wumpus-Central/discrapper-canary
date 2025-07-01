@@ -8,7 +8,7 @@ e.exports = (e, t) => {
     if ((t = t || {}).rtl) {
         let r,
             i = t.includePrerelease ? a[o.COERCERTLFULL] : a[o.COERCERTL];
-        for (; (r = i.exec(e)) && (!n || n.index + n[0].length !== e.length); ) (n && r.index + r[0].length === n.index + n[0].length) || (n = r), (i.lastIndex = r.index + r[1].length + r[2].length);
+        for (; (r = i.exec(e)) && (!n || n.index + n[0].length !== e.length); ) ((n && r.index + r[0].length === n.index + n[0].length) || (n = r), (i.lastIndex = r.index + r[1].length + r[2].length));
         i.lastIndex = -1;
     } else n = e.match(t.includePrerelease ? a[o.COERCEFULL] : a[o.COERCE]);
     if (null === n) return null;

@@ -7,10 +7,10 @@ n.d(t, {
 var r = n(475595),
     i = n(46140),
     a = (function (e) {
-        return (e.VIDEO = 'video'), (e.VIDEO_LOW_RES = 'videoLowRes'), (e.VIDEO_HLS = 'videoHls'), e;
+        return ((e.VIDEO = 'video'), (e.VIDEO_LOW_RES = 'videoLowRes'), (e.VIDEO_HLS = 'videoHls'), e);
     })({}),
     o = (function (e) {
-        return (e.VIDEO = 'url'), (e.THUMBNAIL = 'thumbnail'), (e.CAPTION = 'caption'), (e.TRANSCRIPT = 'transcript'), e;
+        return ((e.VIDEO = 'url'), (e.THUMBNAIL = 'thumbnail'), (e.CAPTION = 'caption'), (e.TRANSCRIPT = 'transcript'), e);
     })({});
 function s(e, t, n, a) {
     let o = e.config.taskConfigV2.tasks[t];

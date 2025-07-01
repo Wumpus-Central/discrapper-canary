@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $y: () => x,
     Kk: () => S,
     NB: () => f,
@@ -9,7 +9,7 @@ n.d(t, {
     tS: () => p
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var l = n(544891),
     i = n(570140),
     r = n(668781),
@@ -26,7 +26,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function g(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -42,8 +42,8 @@ function g(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -123,15 +123,15 @@ async function T(e, t) {
         S = l.map((t) => _(e, l, t));
     if (S.filter(d.lm).length > 0)
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED',
                 errors: S
             }),
-            Error('failed to locally validate prompts'))
+            Error('failed to locally validate prompts')
         );
     if (m.length > I.b3)
         throw (
-            (r.Z.show({
+            r.Z.show({
                 title: h.intl.string(h.t.iLdiqa),
                 body: h.intl.formatToPlainString(h.t['cTb/rq'], { numQuestions: I.b3 })
             }),
@@ -139,27 +139,27 @@ async function T(e, t) {
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED',
                 errors: S
             }),
-            Error('too many prompts in onboarding'))
+            Error('too many prompts in onboarding')
         );
     let E = [...m, ...f];
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT' });
     try {
-        await O(e.id, { prompts: E.map(I.dr) }),
+        (await O(e.id, { prompts: E.map(I.dr) }),
             i.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS',
                 guildId: e.id,
                 updates: { prompts: E }
-            });
+            }));
     } catch (n) {
         var p;
         let { fieldName: e, error: t } = null != (p = new s.Hx(n).getAnyErrorMessageAndField()) ? p : {};
         throw (
-            (r.Z.show({
+            r.Z.show({
                 title: h.intl.string(h.t.iLdiqa),
                 body: [e, t].filter(d.lm).join(': ')
             }),
             i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED' }),
-            Error('failed to save prompts'))
+            Error('failed to save prompts')
         );
     }
 }
@@ -190,7 +190,7 @@ async function O(e, t) {
 function _(e, t, n) {
     let l = { optionErrors: [] },
         i = !1;
-    return n.title.length <= 0 && ((l.title = h.intl.string(h.t.h8Hg1d)), (i = !0)), n.options.length <= 0 && ((l.options = h.intl.string(h.t['64tF+f'])), (i = !0)), n.inOnboarding && t.filter((e) => e.inOnboarding).length > I.b3 && ((l.config = h.intl.formatToPlainString(h.t['cTb/rq'], { numQuestions: I.b3 })), (i = !0)), (l.optionErrors = n.options.map((l) => j(e, t, n, l))), (i = i || l.optionErrors.some((e) => null != e)) ? l : null;
+    return (n.title.length <= 0 && ((l.title = h.intl.string(h.t.h8Hg1d)), (i = !0)), n.options.length <= 0 && ((l.options = h.intl.string(h.t['64tF+f'])), (i = !0)), n.inOnboarding && t.filter((e) => e.inOnboarding).length > I.b3 && ((l.config = h.intl.formatToPlainString(h.t['cTb/rq'], { numQuestions: I.b3 })), (i = !0)), (l.optionErrors = n.options.map((l) => j(e, t, n, l))), (i = i || l.optionErrors.some((e) => null != e)) ? l : null);
 }
 function j(e, t, n, l) {
     var i, r, s;

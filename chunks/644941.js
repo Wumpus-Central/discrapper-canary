@@ -1,4 +1,4 @@
-r.d(t, { default: () => B }), r(388685), r(49124);
+(r.d(t, { default: () => B }), r(388685), r(49124));
 var n = r(255367),
     i = r(73800),
     a = r(120356),
@@ -240,14 +240,14 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                 });
             };
         return ((0, g.ZP)(() => {
-            (0, I.IS)({
+            ((0, I.IS)({
                 source: a,
                 viewId: S,
                 applicationId: r,
                 gameName: null != D ? D : '',
                 authorId: s
             }),
-                (0, O.Jn)();
+                (0, O.Jn)());
         }),
         (0, f.Z)(N),
         i.useEffect(() => {

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $K: () => N,
     OQ: () => O,
     RE: () => I,
@@ -8,7 +8,7 @@ n.d(t, {
     t0: () => y
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(544891),
@@ -30,13 +30,13 @@ function y(e) {
     _.hW.updateAsync(
         'textAndImages',
         (t) => {
-            (t.diversitySurrogate = o.Gm.create()), (t.diversitySurrogate.value = e);
+            ((t.diversitySurrogate = o.Gm.create()), (t.diversitySurrogate.value = e));
         },
         E.fy.FREQUENT_USER_ACTION
     );
 }
 function O(e) {
-    s.Z.dispatch({
+    (s.Z.dispatch({
         type: 'EMOJI_FETCH',
         guildId: e
     }),
@@ -58,7 +58,7 @@ function O(e) {
                         type: 'EMOJI_FETCH_FAILURE',
                         guildId: e
                     })
-            );
+            ));
 }
 function v(e) {
     let { guildId: t, image: n, name: r, roles: i, analyticsLocation: o } = e;

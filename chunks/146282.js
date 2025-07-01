@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var i,
     a = n(442837),
     o = n(570140),
@@ -22,11 +22,11 @@ let c = new Map(),
     d = new Map(),
     f = !1;
 function _(e) {
-    e(c), (c = new Map(c));
+    (e(c), (c = new Map(c)));
 }
 function p(e) {
     let { feedId: t, feed: n } = e;
-    _((e) => e.set(t, n)), d.set(t, new Date());
+    (_((e) => e.set(t, n)), d.set(t, new Date()));
 }
 function h(e) {
     let { feedId: t, state: n } = e;

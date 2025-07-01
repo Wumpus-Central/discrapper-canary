@@ -109,7 +109,7 @@ o
                       enumerable: !0
                   });
               };
-          Y
+          (Y
               ? s &&
                 ((E = t(function (e, t, n, r) {
                     return (
@@ -137,7 +137,7 @@ o
                         d = 0;
                     if (O(t))
                         if ($(t)) {
-                            (i = t), (d = m(n, o));
+                            ((i = t), (d = m(n, o)));
                             var f = t.byteLength;
                             if (void 0 === r) {
                                 if (f % o || (s = f - d) < 0) throw new V(Q);
@@ -163,9 +163,9 @@ o
                 (b = E.prototype = I(z))),
               b.constructor !== E && f(b, 'constructor', E),
               (U(b).TypedArrayConstructor = E),
-              W && f(b, W, l);
+              W && f(b, W, l));
           var w = E !== _;
-          (y[l] = E),
+          ((y[l] = E),
               r(
                   {
                       global: !0,
@@ -177,6 +177,6 @@ o
               ),
               X in E || f(E, X, o),
               X in b || f(b, X, o),
-              R(l);
+              R(l));
       }))
     : (e.exports = function () {});

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+(n.d(t, { Z: () => A }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(622535),
@@ -41,7 +41,7 @@ let A = function (e) {
         }, []),
         M = (0, u.Ek)(n.id, 'GuildBoostingMarketing'),
         j = i.useCallback(() => {
-            null == A || A(),
+            (null == A || A(),
                 _.default.track(I.rMx.MODAL_DISMISSED, {
                     type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: w,
@@ -49,7 +49,7 @@ let A = function (e) {
                     location_object: t.object,
                     guild_id: n.id,
                     duration_open_ms: Date.now() - P
-                });
+                }));
         }, [A, t, w, P, n.id]),
         U = i.useCallback(
             (e) => {

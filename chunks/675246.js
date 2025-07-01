@@ -32,10 +32,10 @@ function t(e, t) {
         },
         n: function () {
             var e = r.next();
-            return (s = e.done), e;
+            return ((s = e.done), e);
         },
         e: function (e) {
-            (l = !0), (o = e);
+            ((l = !0), (o = e));
         },
         f: function () {
             try {
@@ -75,7 +75,7 @@ for (var a = 0, o = ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'aut
         );
     };
 }
-(i.prototype._setDefaults = function (e) {
+((i.prototype._setDefaults = function (e) {
     var n,
         r = t(this._defaults);
     try {
@@ -89,4 +89,4 @@ for (var a = 0, o = ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'aut
         r.f();
     }
 }),
-    (e.exports = i);
+    (e.exports = i));

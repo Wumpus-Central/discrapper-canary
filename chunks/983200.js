@@ -117,7 +117,7 @@ function m(e) {
                 if (null != a) return a;
                 {
                     let e = d(n, r, t, 4);
-                    return u.set(i, e), e;
+                    return (u.set(i, e), e);
                 }
             })({
                 numAttachments: t,
@@ -142,5 +142,5 @@ function g(e) {
         s = r.useRef(i),
         o = n > l.current + 100,
         c = i > s.current + 100;
-    return (o || c) && (a.current = h(t)), a.current;
+    return ((o || c) && (a.current = h(t)), a.current);
 }

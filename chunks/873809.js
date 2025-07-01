@@ -1,4 +1,4 @@
-n.d(s, { default: () => d }), n(388685);
+(n.d(s, { default: () => d }), n(388685));
 var t = n(255367),
     i = n(73800),
     r = n(481060),
@@ -64,15 +64,15 @@ class c extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, 'handleConfirm', () => {
                 let { onConfirm: e, onClose: s } = this.props;
-                null == s || s(), null == e || e();
+                (null == s || s(), null == e || e());
             }),
             o(this, 'handleDismiss', () => {
                 let { onDismiss: e, onClose: s } = this.props;
-                null == s || s(), null == e || e();
-            });
+                (null == s || s(), null == e || e());
+            }));
     }
 }
 let d = c;

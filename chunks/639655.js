@@ -1,4 +1,4 @@
-n.d(t, { I: () => p }), n(539854), n(415506), n(644351), n(146733), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(388685);
+(n.d(t, { I: () => p }), n(539854), n(415506), n(644351), n(146733), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(388685));
 var r = n(710845),
     i = n(358085),
     a = n(374023),
@@ -30,10 +30,10 @@ class f {
         this._onDataReady = e;
     }
     constructor(e) {
-        s(this, '_onDataReady', void 0), s(this, '_gatewayEncoding', void 0), (this._onDataReady = null), (this._gatewayEncoding = e);
+        (s(this, '_onDataReady', void 0), s(this, '_gatewayEncoding', void 0), (this._onDataReady = null), (this._gatewayEncoding = e));
     }
 }
-d.push(
+(d.push(
     class extends f {
         static canUse() {
             return (0, o.N)();
@@ -48,11 +48,11 @@ d.push(
             let t;
             if (null == this._stream) throw Error('Trying to decompress with zstd but did not initialize with it');
             if (!(e instanceof ArrayBuffer)) throw Error('Expected array buffer, but got ' + typeof e);
-            (t = this._stream.decompress(e)), null != this._decoder && (t = this._decoder.decode(t)), null != this._onDataReady && this._onDataReady(t);
+            ((t = this._stream.decompress(e)), null != this._decoder && (t = this._decoder.decode(t)), null != this._onDataReady && this._onDataReady(t));
         }
         close() {}
         constructor(e) {
-            super(e), s(this, '_decoder', null), s(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, o.G)());
+            (super(e), s(this, '_decoder', null), s(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, o.G)()));
         }
     }
 ),
@@ -76,7 +76,7 @@ d.push(
                 this._inflate.push(e, !!n && this._pako.Z_SYNC_FLUSH);
             }
             close() {
-                null != this._inflate && ((this._inflate.onEnd = null), (this._inflate.chunks = [])), (this._inflate = null);
+                (null != this._inflate && ((this._inflate.onEnd = null), (this._inflate.chunks = [])), (this._inflate = null));
             }
             handleFlushEnd(e) {
                 let t,
@@ -94,14 +94,14 @@ d.push(
                         r = 0;
                     for (let e = 0; e < o; e++) {
                         let t = a[e];
-                        n.set(t, r), (r += t.length);
+                        (n.set(t, r), (r += t.length));
                     }
                     t = n;
                 } else t = a[0];
-                (a.length = 0), null != this._onDataReady && this._onDataReady(t);
+                ((a.length = 0), null != this._onDataReady && this._onDataReady(t));
             }
             constructor(e) {
-                super(e),
+                (super(e),
                     s(this, '_inflate', void 0),
                     s(this, '_pako', n(457854)),
                     s(this, '_usesZstd', !1),
@@ -111,7 +111,7 @@ d.push(
                         chunkSize: 65536,
                         to: this._gatewayEncoding.wantsString() ? 'string' : ''
                     })),
-                    (this._inflate.onEnd = this.handleFlushEnd.bind(this));
+                    (this._inflate.onEnd = this.handleFlushEnd.bind(this)));
             }
         }
     ),
@@ -133,7 +133,7 @@ d.push(
             }
             close() {}
             constructor(...e) {
-                super(...e), s(this, '_pako', n(457854));
+                (super(...e), s(this, '_pako', n(457854)));
             }
         }
     ),
@@ -143,7 +143,7 @@ d.push(
                 return !1;
             }
             bindWebSocket(e) {
-                this.close(), (this._socketId = e._socketId), (0, o.N)() ? ((0, i.isAndroid)() ? null == c || c.enableZstdStreamSupport(this._socketId) : l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)) : (0, i.isAndroid)() ? null == c || c.enableZlibStreamSupport(this._socketId) : l.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
+                (this.close(), (this._socketId = e._socketId), (0, o.N)() ? ((0, i.isAndroid)() ? null == c || c.enableZstdStreamSupport(this._socketId) : l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)) : (0, i.isAndroid)() ? null == c || c.enableZlibStreamSupport(this._socketId) : l.DCDCompressionManager.enableZlibStreamSupport(this._socketId));
             }
             getAlgorithm() {
                 return (0, o.N)() ? 'zstd-stream' : 'zlib-stream';
@@ -157,13 +157,13 @@ d.push(
             }
             close() {
                 let e = this._socketId;
-                (this._socketId = null), null !== e && ((0, i.isAndroid)() ? null == c || c.disableZlibStreamSupport(e) : l.DCDCompressionManager.disableZlibStreamSupport(e));
+                ((this._socketId = null), null !== e && ((0, i.isAndroid)() ? null == c || c.disableZlibStreamSupport(e) : l.DCDCompressionManager.disableZlibStreamSupport(e)));
             }
             constructor(e) {
-                super(e), s(this, '_socketId', void 0), (this._socketId = null);
+                (super(e), s(this, '_socketId', void 0), (this._socketId = null));
             }
         }
-    );
+    ));
 class _ extends f {
     static canUse() {
         return !0;

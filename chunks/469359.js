@@ -5,13 +5,13 @@ var o = a(578346),
     c = a(394798),
     s = a(395848);
 function E(t) {
-    (0, o.Hj)('dom', t), (0, o.D2)('dom', l);
+    ((0, o.Hj)('dom', t), (0, o.D2)('dom', l));
 }
 function l() {
     if (!s.m.document) return;
     let t = o.rK.bind(null, 'dom'),
         e = u(t, !0);
-    s.m.document.addEventListener('click', e, !1),
+    (s.m.document.addEventListener('click', e, !1),
         s.m.document.addEventListener('keypress', e, !1),
         ['EventTarget', 'Node'].forEach((e) => {
             let a = s.m[e] && s.m[e].prototype;
@@ -26,7 +26,7 @@ function l() {
                                     n = (r[a] = r[a] || { refCount: 0 });
                                 if (!n.handler) {
                                     let r = u(t);
-                                    (n.handler = r), e.call(this, a, r, _);
+                                    ((n.handler = r), e.call(this, a, r, _));
                                 }
                                 n.refCount++;
                             } catch (t) {}
@@ -44,7 +44,7 @@ function l() {
                         return t.call(this, e, a, r);
                     };
                 }));
-        });
+        }));
 }
 function u(t, e = !1) {
     return (a) => {
@@ -58,9 +58,9 @@ function u(t, e = !1) {
             }
         })(a);
         if (((o = a.type), 'keypress' === o && (!E || !E.tagName || ('INPUT' !== E.tagName && 'TEXTAREA' !== E.tagName && !E.isContentEditable && 1)))) return;
-        (0, i.xp)(a, '_sentryCaptured', !0), E && !E._sentryId && (0, i.xp)(E, '_sentryId', (0, c.DM)());
+        ((0, i.xp)(a, '_sentryCaptured', !0), E && !E._sentryId && (0, i.xp)(E, '_sentryId', (0, c.DM)()));
         let l = 'keypress' === a.type ? 'input' : a.type;
-        !(function (t) {
+        (!(function (t) {
             if (t.type !== _) return !1;
             try {
                 if (!t.target || t.target._sentryId !== n) return !1;
@@ -76,7 +76,7 @@ function u(t, e = !1) {
             (n = E ? E._sentryId : void 0)),
             clearTimeout(r),
             (r = s.m.setTimeout(() => {
-                (n = void 0), (_ = void 0);
-            }, 1000));
+                ((n = void 0), (_ = void 0));
+            }, 1000)));
     };
 }

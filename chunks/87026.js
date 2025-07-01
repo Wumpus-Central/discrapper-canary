@@ -1,4 +1,4 @@
-i.d(t, { default: () => K }), i(953529), i(539854), i(388685);
+(i.d(t, { default: () => K }), i(953529), i(539854), i(388685));
 var s = i(255367),
     n = i(73800),
     l = i(120356),
@@ -41,7 +41,7 @@ function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var i = null != arguments[t] ? arguments[t] : {},
             s = Object.keys(i);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (s = s.concat(
                 Object.getOwnPropertySymbols(i).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(i, e).enumerable;
@@ -49,7 +49,7 @@ function F(e) {
             )),
             s.forEach(function (t) {
                 var s;
-                (s = i[t]),
+                ((s = i[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: s,
@@ -57,8 +57,8 @@ function F(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = s);
-            });
+                        : (e[t] = s));
+            }));
     }
     return e;
 }
@@ -680,7 +680,7 @@ let V = (e) => {
                 e.add(R.oNc.COMMUNITY);
                 let t = g ? r.Od(Y.permissions, y.mu) : Y.permissions,
                     i = q(F({}, Y), { permissions: t });
-                t !== Y.permissions && (await (0, h.Gf)(a.id, [i])),
+                (t !== Y.permissions && (await (0, h.Gf)(a.id, [i])),
                     p.Z.updateGuild({
                         features: e,
                         rulesChannelId: O,
@@ -696,7 +696,7 @@ let V = (e) => {
                     }),
                     setTimeout(() => {
                         l();
-                    }, 0);
+                    }, 0));
             },
             ei = (0, s.jsx)(B, {
                 guild: a,
@@ -733,10 +733,10 @@ let V = (e) => {
                       policyAccepted: d,
                       onAcceptPolicy: (e, t) => {
                           if (t) {
-                              u(!0), ee || p.Z.updateGuild({ defaultMessageNotifications: R.bL.ONLY_MENTIONS }), g || null == Y || S(!0);
+                              (u(!0), ee || p.Z.updateGuild({ defaultMessageNotifications: R.bL.ONLY_MENTIONS }), g || null == Y || S(!0));
                               return;
                           }
-                          u(!1), ee && p.Z.updateGuild({ defaultMessageNotifications: A }), g && null != Y && S(!1);
+                          (u(!1), ee && p.Z.updateGuild({ defaultMessageNotifications: A }), g && null != Y && S(!1));
                       },
                       headerId: z,
                       theme: c
@@ -789,7 +789,7 @@ let V = (e) => {
             title: L.intl.string(L.t['6U5XTk']),
             transitionState: i,
             onClose: () => {
-                l(), E.default.track(R.rMx.MODAL_DISMISSED, { type: y.tA });
+                (l(), E.default.track(R.rMx.MODAL_DISMISSED, { type: y.tA }));
             },
             completeButtonText: L.intl.string(L.t.XGl4bW),
             onComplete: et,

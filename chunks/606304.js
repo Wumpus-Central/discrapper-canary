@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(997841);
+(n.d(t, { Z: () => N }), n(388685), n(997841));
 var r,
     i = n(442837),
     a = n(570140),
@@ -29,13 +29,13 @@ let p = new Map(),
 function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT,
         t = p.get(e);
-    return null == t && ((t = new Map()), p.set(e, t)), t;
+    return (null == t && ((t = new Map()), p.set(e, t)), t);
 }
 function b(e, t) {
     let n = p.get(e);
     if (null == n) return !1;
     let r = n.delete(t);
-    return 0 === n.size && p.delete(e), r;
+    return (0 === n.size && p.delete(e), r);
 }
 function y(e, t, n) {
     var r, i, a;
@@ -54,22 +54,22 @@ function v(e, t, n) {
         o = a.get(t),
         s = null != (r = null == o ? void 0 : o.flags) ? r : 0;
     if (0 === s && 0 === n) return !1;
-    if (0 === n) a.delete(t), 0 === a.size && p.delete(e);
+    if (0 === n) (a.delete(t), 0 === a.size && p.delete(e));
     else {
         let e = null != (i = null == o ? void 0 : o.since) ? i : null,
             r = (s & f.Dg.VOICE) === f.Dg.VOICE,
             l = (n & f.Dg.VOICE) === f.Dg.VOICE;
-        r !== l && (e = l ? Date.now() : null),
+        (r !== l && (e = l ? Date.now() : null),
             a.set(t, {
                 flags: n,
                 since: e
-            });
+            }));
     }
     return !0;
 }
 function I(e) {
     let { user: t, sessionId: n } = e;
-    (h = t.id), (m = n), (g = null);
+    ((h = t.id), (m = n), (g = null));
 }
 function T(e) {
     let { context: t, userId: n, speakingFlags: r } = e;
@@ -84,7 +84,7 @@ function T(e) {
             ? l.Z.setCanHavePriority(n, !0)
             : (l.Z.setCanHavePriority(n, !1), (r &= ~f.Dg.PRIORITY));
     }
-    return (r & f.Dg.HIDDEN) === f.Dg.HIDDEN && (r = 0), v(t, n, r);
+    return ((r & f.Dg.HIDDEN) === f.Dg.HIDDEN && (r = 0), v(t, n, r));
 }
 function S(e) {
     let { voiceStates: t } = e;
@@ -92,12 +92,12 @@ function S(e) {
         let { userId: n, channelId: r, sessionId: i } = t,
             a = !1,
             o = g;
-        return n === h && i === m && (g = null != r ? r : null), o !== g && (a = p.delete(f.Yn.DEFAULT) || a), null == r ? (a = n === h && i === m ? p.delete(f.Yn.DEFAULT) || a : b(f.Yn.DEFAULT, n) || a) : n === h && i !== m ? (a = p.delete(f.Yn.DEFAULT) || a) : n !== h && r !== c.Z.getChannelId() && (a = b(f.Yn.DEFAULT, n) || a), a || e;
+        return (n === h && i === m && (g = null != r ? r : null), o !== g && (a = p.delete(f.Yn.DEFAULT) || a), null == r ? (a = n === h && i === m ? p.delete(f.Yn.DEFAULT) || a : b(f.Yn.DEFAULT, n) || a) : n === h && i !== m ? (a = p.delete(f.Yn.DEFAULT) || a) : n !== h && r !== c.Z.getChannelId() && (a = b(f.Yn.DEFAULT, n) || a), a || e);
     }, !1);
 }
 class A extends (r = i.ZP.Store) {
     initialize() {
-        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(c.Z);
+        (this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(c.Z));
     }
     getSpeakingDuration(e, t) {
         var n, r;

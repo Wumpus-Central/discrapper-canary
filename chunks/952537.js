@@ -8,4 +8,4 @@ function r(e) {
         joinTimestamp: e.join_timestamp
     };
 }
-n.d(t, { Z: () => r }), n(997841);
+(n.d(t, { Z: () => r }), n(997841));

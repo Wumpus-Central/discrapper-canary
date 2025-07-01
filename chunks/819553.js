@@ -21,7 +21,7 @@ function s(e, t, n) {
     );
 }
 var l = (function (e) {
-    return (e.STARTED = 'started'), (e.READY = 'ready'), (e.COMPLETED = 'completed'), (e.NOT_APPLICABLE = 'not_applicable'), e;
+    return ((e.STARTED = 'started'), (e.READY = 'ready'), (e.COMPLETED = 'completed'), (e.NOT_APPLICABLE = 'not_applicable'), e);
 })({});
 function c(e) {
     return null != e && ['started', 'ready'].includes(e);
@@ -29,7 +29,7 @@ function c(e) {
 let u = {},
     d = {};
 function f() {
-    (u = {}), (d = {});
+    ((u = {}), (d = {}));
 }
 function _(e) {
     let { guildId: t } = e;
@@ -50,7 +50,7 @@ function m(e) {
 }
 function g(e) {
     let { guild: t } = e;
-    delete u[t.id], delete d[t.id];
+    (delete u[t.id], delete d[t.id]);
 }
 function E(e) {
     let { guildId: t, step: n } = e;
@@ -67,7 +67,7 @@ class y extends (r = i.ZP.Store) {
         return u[e];
     }
     resetOnboardingStatus(e) {
-        (u[e] = 'started'), (d[e] = 'cover');
+        ((u[e] = 'started'), (d[e] = 'cover'));
     }
     getCurrentOnboardingStep(e) {
         var t;

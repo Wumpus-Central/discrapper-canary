@@ -1,4 +1,4 @@
-r.d(t, { default: () => l }), r(388685);
+(r.d(t, { default: () => l }), r(388685));
 var n = r(255367),
     c = r(73800),
     o = r(481060),
@@ -11,7 +11,7 @@ let l = (e) => {
         [y, j] = c.useState(),
         g = async () => {
             try {
-                await i.Z.updateGuildJoinRequest(l, u, p, a.wB.REJECTED, y), null == b || b();
+                (await i.Z.updateGuildJoinRequest(l, u, p, a.wB.REJECTED, y), null == b || b());
             } catch (e) {
                 null == O || O();
             }
@@ -22,7 +22,7 @@ let l = (e) => {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -30,7 +30,7 @@ let l = (e) => {
                     )),
                     n.forEach(function (t) {
                         var n;
-                        (n = r[t]),
+                        ((n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
@@ -38,8 +38,8 @@ let l = (e) => {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
-                    });
+                                : (e[t] = n));
+                    }));
             }
             return e;
         })(

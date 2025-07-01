@@ -1,8 +1,8 @@
-n.d(e, {
+(n.d(e, {
     default: () => b,
     x: () => x
 }),
-    n(388685);
+    n(388685));
 var r,
     s = n(255367),
     i = n(73800),
@@ -18,7 +18,7 @@ function _(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -26,7 +26,7 @@ function _(t) {
             )),
             r.forEach(function (e) {
                 var r;
-                (r = n[e]),
+                ((r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
@@ -34,8 +34,8 @@ function _(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
-            });
+                        : (t[e] = r));
+            }));
     }
     return t;
 }
@@ -139,7 +139,7 @@ let b = (t) => {
                         color: o.zxk.Colors.CUSTOM,
                         size: o.zxk.Sizes.MIN,
                         onClick: function () {
-                            x.onClose(), (0, c.T)(b, [e]), g(a.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            (x.onClose(), (0, c.T)(b, [e]), g(a.NM.USER_TAKEOVER_MODAL_DISMISS));
                         },
                         children: E.intl.string(E.t.cpT0Cg)
                     }),

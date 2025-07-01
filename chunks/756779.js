@@ -1,4 +1,4 @@
-r.d(s, { default: () => L }), r(953529);
+(r.d(s, { default: () => L }), r(953529));
 var o = r(255367);
 r(73800);
 var n = r(512722),
@@ -25,12 +25,12 @@ function L(e) {
     let { transitionState: s, onClose: r, guildId: n, markAsDismissed: L } = e,
         j = (0, u.Dt)(),
         I = (0, t.e7)([g.Z], () => g.Z.getGuild(n));
-    i()(null != I, 'Guild must be defined'),
+    (i()(null != I, 'Guild must be defined'),
         (0, c.Z)({
             type: C.n.MODAL,
             name: a.ImpressionNames.GUILD_SHOP_UPSELL,
             properties: { passed_in_guild_id: n }
-        });
+        }));
     let O = b.QK.useSetting();
     return (0, o.jsxs)(d.Y0X, {
         size: d.CgR.LARGE,
@@ -100,7 +100,7 @@ function L(e) {
                 children: [
                     (0, o.jsx)(d.zxk, {
                         onClick: () => {
-                            v.some((e) => I.hasFeature(e)) ? _.Z.open(n, N.pNK.GUILD_PRODUCTS) : _.Z.open(n, N.pNK.ROLE_SUBSCRIPTIONS), L(S.L.PRIMARY), r();
+                            (v.some((e) => I.hasFeature(e)) ? _.Z.open(n, N.pNK.GUILD_PRODUCTS) : _.Z.open(n, N.pNK.ROLE_SUBSCRIPTIONS), L(S.L.PRIMARY), r());
                         },
                         children: 'Check it out'
                     }),

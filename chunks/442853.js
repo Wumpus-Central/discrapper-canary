@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(539854);
+(n.d(t, { Z: () => f }), n(388685), n(539854));
 var r = n(73800),
     i = n(149765),
     l = n(442837),
@@ -17,7 +17,7 @@ function f(e) {
         g = r.useRef(new Set()),
         b = r.useMemo(() => {
             let e = new Set(null == t ? void 0 : t.map((e) => e.author_id));
-            return (0, o.E)([...g.current], [...e]) || (g.current = e), g.current;
+            return ((0, o.E)([...g.current], [...e]) || (g.current = e), g.current);
         }, [t]);
     r.useEffect(() => {
         null != m &&

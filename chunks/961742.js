@@ -18,7 +18,7 @@ function i(e, t) {
     let n = document.implementation.createHTMLDocument(),
         r = n.createElement('base'),
         i = n.createElement('a');
-    return n.head.appendChild(r), n.body.appendChild(i), t && (r.href = t), (i.href = e), i.href;
+    return (n.head.appendChild(r), n.body.appendChild(i), t && (r.href = t), (i.href = e), i.href);
 }
 let a = (() => {
     let e = 0,
@@ -56,7 +56,7 @@ function d() {
         t = r;
     } catch (e) {}
     let n = t && t.env ? t.env.devicePixelRatio : null;
-    return n && Number.isNaN((e = parseInt(n, 10))) && (e = 1), e || window.devicePixelRatio || 1;
+    return (n && Number.isNaN((e = parseInt(n, 10))) && (e = 1), e || window.devicePixelRatio || 1);
 }
 let f = 16384;
 function _(e) {
@@ -80,7 +80,7 @@ function p(e, t = {}) {
 function h(e) {
     return new Promise((t, n) => {
         let r = new Image();
-        (r.decode = () => t(r)), (r.onload = () => t(r)), (r.onerror = n), (r.crossOrigin = 'anonymous'), (r.decoding = 'async'), (r.src = e);
+        ((r.decode = () => t(r)), (r.onload = () => t(r)), (r.onerror = n), (r.crossOrigin = 'anonymous'), (r.decoding = 'async'), (r.src = e));
     });
 }
 async function m(e) {
@@ -93,7 +93,7 @@ async function g(e, t, n) {
     let r = 'http://www.w3.org/2000/svg',
         i = document.createElementNS(r, 'svg'),
         a = document.createElementNS(r, 'foreignObject');
-    return i.setAttribute('width', `${t}`), i.setAttribute('height', `${n}`), i.setAttribute('viewBox', `0 0 ${t} ${n}`), a.setAttribute('width', '100%'), a.setAttribute('height', '100%'), a.setAttribute('x', '0'), a.setAttribute('y', '0'), a.setAttribute('externalResourcesRequired', 'true'), i.appendChild(a), a.appendChild(e), m(i);
+    return (i.setAttribute('width', `${t}`), i.setAttribute('height', `${n}`), i.setAttribute('viewBox', `0 0 ${t} ${n}`), a.setAttribute('width', '100%'), a.setAttribute('height', '100%'), a.setAttribute('x', '0'), a.setAttribute('y', '0'), a.setAttribute('externalResourcesRequired', 'true'), i.appendChild(a), a.appendChild(e), m(i));
 }
 let E = (e, t) => {
     if (e instanceof t) return !0;

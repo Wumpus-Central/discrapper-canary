@@ -10,6 +10,6 @@ function s(e, t) {
                 context: e
             }),
             s = l.Plq.VIEW_CHANNEL;
-        return e.isGuildVocal() && (s = r.IH(s, l.Plq.CONNECT)), r.e$(t, s) && !i.Uu(s, e);
+        return (e.isGuildVocal() && (s = r.IH(s, l.Plq.CONNECT)), r.e$(t, s) && !i.Uu(s, e));
     });
 }

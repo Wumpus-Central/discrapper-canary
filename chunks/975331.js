@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -26,7 +26,7 @@ function b() {
         y = i.useCallback(
             (e) => {
                 let t = v.find((e) => e.isDefault);
-                s()(null != t, 'Missing default trial duartion option'), l(e ? t.value : null);
+                (s()(null != t, 'Missing default trial duartion option'), l(e ? t.value : null));
             },
             [l, v]
         ),

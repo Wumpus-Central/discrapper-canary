@@ -97,7 +97,7 @@ function A(a) {
                 (0, r.jsx)(b, {}),
                 (0, r.jsx)(c.olH, {
                     onClick: () => {
-                        (C.current = 'tap_close_button'), e();
+                        ((C.current = 'tap_close_button'), e());
                     },
                     className: L.closeButton
                 }),
@@ -123,7 +123,7 @@ function A(a) {
                             look: c.zxk.Looks.LINK,
                             color: c.zxk.Colors.BRAND,
                             onClick: () => {
-                                (C.current = 'change_avatar_decoration'), e(), (0, o.xf)(), I(), (0, u.ps)({ analyticsLocations: A });
+                                ((C.current = 'change_avatar_decoration'), e(), (0, o.xf)(), I(), (0, u.ps)({ analyticsLocations: A }));
                             },
                             children: v.intl.string(v.t['x8T+k5'])
                         }),
@@ -131,13 +131,13 @@ function A(a) {
                             look: c.zxk.Looks.FILLED,
                             color: c.zxk.Colors.BRAND,
                             onClick: () => {
-                                (C.current = 'go_to_shop'),
+                                ((C.current = 'go_to_shop'),
                                     e(),
                                     (0, m.mK)({
                                         analyticsLocations: A,
                                         analyticsSource: l.Z.COLLECTIBLES_EXPIRY_MODAL,
                                         openInLayer: !1
-                                    });
+                                    }));
                             },
                             children: v.intl.string(v.t.fmqMER)
                         })

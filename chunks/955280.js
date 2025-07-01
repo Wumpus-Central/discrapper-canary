@@ -60,10 +60,10 @@ function j(e) {
             displayUserMode: d.default.getDisplayUserMode()
         })),
         x = l.useRef(w);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         x.current = w;
     }),
-        l.useEffect(() => () => x.current(), []);
+        l.useEffect(() => () => x.current(), []));
     let P = (0, r.e7)([p.ZP, u.Z], () => {
             let e = p.ZP.getWidgetByType(m.Odu.VOICE_V3);
             if (null == e) return null;
@@ -140,7 +140,7 @@ function j(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var a = null != arguments[t] ? arguments[t] : {},
                                         n = Object.keys(a);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (n = n.concat(
                                             Object.getOwnPropertySymbols(a).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(a, e).enumerable;
@@ -148,7 +148,7 @@ function j(e) {
                                         )),
                                         n.forEach(function (t) {
                                             var n;
-                                            (n = a[t]),
+                                            ((n = a[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: n,
@@ -156,8 +156,8 @@ function j(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = n);
-                                        });
+                                                    : (e[t] = n));
+                                        }));
                                 }
                                 return e;
                             })({}, e)),

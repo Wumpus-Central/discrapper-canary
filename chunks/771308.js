@@ -25,28 +25,28 @@ function s(e, t) {
             })
             .then((e) => {
                 let r = e.body;
-                l.Z.dispatch({
+                (l.Z.dispatch({
                     type: 'CURRENT_USER_UPDATE',
                     user: r
                 }),
                     o.default.track(c.rMx.AGE_GATE_ACTION, {
                         source: t,
                         action: i.Al.AGE_GATE_SUCCESS
-                    });
+                    }));
             })
     );
 }
 function u(e) {
-    l.Z.dispatch({ type: 'AGE_GATE_PREVENT_UNDERAGE_REGISTRATION' }),
+    (l.Z.dispatch({ type: 'AGE_GATE_PREVENT_UNDERAGE_REGISTRATION' }),
         o.default.track(c.rMx.AGE_GATE_ACTION, {
             source: e,
             action: i.Al.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
-        });
+        }));
 }
 function d(e) {
-    l.Z.dispatch({ type: 'AGE_GATE_LOGOUT_UNDERAGE_NEW_USER' }),
+    (l.Z.dispatch({ type: 'AGE_GATE_LOGOUT_UNDERAGE_NEW_USER' }),
         o.default.track(c.rMx.AGE_GATE_ACTION, {
             source: e,
             action: i.Al.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
-        });
+        }));
 }

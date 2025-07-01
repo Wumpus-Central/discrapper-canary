@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(953529), n(49124), n(539854), n(642613);
+(n.d(t, { Z: () => b }), n(388685), n(953529), n(49124), n(539854), n(642613));
 var i = n(255367),
     r = n(73800),
     s = n(392711),
@@ -76,13 +76,13 @@ function _(e) {
         v = r.useCallback(
             (e) => {
                 (0, g.JG)((0, c.sZ)(s), () => {
-                    (0, o.showToast)({
+                    ((0, o.showToast)({
                         id: 'experiment-link-copied',
                         message: 'Copied experiment link',
                         type: o.ToastType.SUCCESS
                     }),
                         e.preventDefault(),
-                        e.stopPropagation();
+                        e.stopPropagation());
                 });
             },
             [s]
@@ -239,14 +239,14 @@ function x(e) {
                 })
         ),
         [j, C] = (0, a.Wu)([m.Z, u.Z], () => {
-            let e = l().sortBy(l().values(m.Z.getGuilds()), (e) => e.name.toLowerCase()),
+            let e = l().sortBy(m.Z.getGuildsArray(), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
             for (let s of e) {
                 var r;
                 let e = u.Z.getGuildExperimentDescriptor(n, s.id),
                     l = null != (r = null == e ? void 0 : e.bucket) ? r : h.NZ.NOT_ELIGIBLE;
-                l in t || (t[l] = 0), t[l]++, i.push(''.concat(s.name, ': ').concat(l));
+                (l in t || (t[l] = 0), t[l]++, i.push(''.concat(s.name, ': ').concat(l)));
             }
             let s = l()(t)
                 .keys()

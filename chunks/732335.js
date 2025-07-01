@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(290780), n(539854);
+(n.d(t, { Z: () => u }), n(388685), n(290780), n(539854));
 var i = n(255367),
     l = n(73800),
     r = n(481060),
@@ -10,20 +10,20 @@ var i = n(255367),
 function u(e) {
     let { channel: t, onChange: n } = e,
         [u, h] = l.useState(null),
-        g = t.rateLimitPerUser,
-        m = l.useMemo(() => {
+        m = t.rateLimitPerUser,
+        g = l.useMemo(() => {
             let e = [...(null != u ? u : o.BiE)];
             return (
-                e.includes(g) || e.unshift(g),
+                e.includes(m) || e.unshift(m),
                 e.map((e) => ({
                     label: (0, a.A)(e, !1),
                     value: e
                 }))
             );
-        }, [u, g]),
+        }, [u, m]),
         p = l.useCallback(
             (e) => {
-                n(e), h(null);
+                (n(e), h(null));
             },
             [n]
         ),
@@ -36,17 +36,17 @@ function u(e) {
             let i = n * s.Z.Seconds.MINUTE;
             i <= o.GI0 && t.push(i);
             let l = n * s.Z.Seconds.HOUR;
-            l <= o.GI0 && t.push(l), h(t);
+            (l <= o.GI0 && t.push(l), h(t));
         }, []),
         x = l.useCallback(() => {
             h(null);
         }, []);
     return (0, i.jsx)(r.VcW, {
         className: d.marginBottom8,
-        value: g,
+        value: m,
         onChange: p,
         onSearchChange: f,
-        options: m,
+        options: g,
         onBlur: x,
         placeholder: c.intl.string(c.t.dBqQu7)
     });

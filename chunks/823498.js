@@ -8,5 +8,5 @@ function s(e, t) {
     var n = (0, i.default)(e),
         s = (0, r.Z)(t),
         l = (0, a.Z)(n) - s;
-    return n.setUTCDate(n.getUTCDate() - 7 * l), n;
+    return (n.setUTCDate(n.getUTCDate() - 7 * l), n);
 }

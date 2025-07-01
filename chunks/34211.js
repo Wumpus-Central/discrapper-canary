@@ -1,4 +1,4 @@
-a.d(t, { o: () => m }), a(388685);
+(a.d(t, { o: () => m }), a(388685));
 var n,
     r = a(255367),
     s = a(73800),
@@ -184,7 +184,7 @@ class m extends (n = s.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             u(this, 'state', { sectionShown: null }),
             u(this, 'closeSubNav', () => {
                 let { sectionShown: e } = this.state;
@@ -193,7 +193,7 @@ class m extends (n = s.PureComponent) {
             u(this, 'openSubNav', (e) => {
                 let { sectionShown: t } = this.state;
                 t !== e && this.setState({ sectionShown: e });
-            });
+            }));
     }
 }
 u(m, 'defaultProps', {

@@ -1,4 +1,4 @@
-r.d(t, { default: () => b }), r(388685);
+(r.d(t, { default: () => b }), r(388685));
 var n = r(255367),
     s = r(73800),
     i = r(481060),
@@ -86,7 +86,7 @@ class m extends s.PureComponent {
     }
     constructor(...e) {
         var t;
-        super(...e),
+        (super(...e),
             d(this, 'state', {
                 name: null != (t = this.props.folderName) ? t : '',
                 color: this.props.folderColor
@@ -111,7 +111,7 @@ class m extends s.PureComponent {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
                                           n = Object.keys(r);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (n = n.concat(
                                               Object.getOwnPropertySymbols(r).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -119,7 +119,7 @@ class m extends s.PureComponent {
                                           )),
                                           n.forEach(function (t) {
                                               d(e, t, r[t]);
-                                          });
+                                          }));
                                   }
                                   return e;
                               })({}, e)),
@@ -143,8 +143,8 @@ class m extends s.PureComponent {
                               s)
                             : e;
                     });
-                (0, o.V1)(s), this.close();
-            });
+                ((0, o.V1)(s), this.close());
+            }));
     }
 }
 let b = m;

@@ -52,7 +52,7 @@ function O(e) {
         onSubmit: function (e) {
             var t;
             let { rating: o, problem: i, dontShowAgain: c, feedback: s } = e;
-            c &&
+            (c &&
                 (0, a.Uv)({
                     feedbackType: p.nw.STREAM,
                     location: 'StreamFeedback'
@@ -77,7 +77,7 @@ function O(e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -85,7 +85,7 @@ function O(e) {
                                                 )),
                                                 r.forEach(function (t) {
                                                     var r;
-                                                    (r = n[t]),
+                                                    ((r = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: r,
@@ -93,13 +93,13 @@ function O(e) {
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[t] = r);
-                                                });
+                                                            : (e[t] = r));
+                                                }));
                                         }
                                         return e;
                                     })({ body: f.intl.string(f.t.mMTVnp) }, t)
                                 );
-                        }));
+                        })));
         },
         onClose: h,
         transitionState: w,

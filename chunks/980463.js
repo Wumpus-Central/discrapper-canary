@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Gq: () => _,
     SN: () => E,
     Zu: () => h,
@@ -7,7 +7,7 @@ n.d(t, {
     x8: () => b,
     zI: () => g
 }),
-    n(415506);
+    n(415506));
 var r = n(544891),
     i = n(343817),
     a = n(570140),
@@ -33,11 +33,11 @@ let f = {
             });
             if (null == t.body.price)
                 throw (
-                    (a.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'CONSUMABLES_PRICE_FETCH_FAILED',
                         skuId: e
                     }),
-                    Error('price not found'))
+                    Error('price not found')
                 );
             let n = t.body.price;
             return (
@@ -54,11 +54,11 @@ let f = {
             );
         } catch (t) {
             throw (
-                (a.Z.dispatch({
+                a.Z.dispatch({
                     type: 'CONSUMABLES_PRICE_FETCH_FAILED',
                     skuId: e
                 }),
-                new i.Hx(t))
+                new i.Hx(t)
             );
         }
     },
@@ -71,11 +71,11 @@ let f = {
             null == f[e])
         )
             throw (
-                (a.Z.dispatch({
+                a.Z.dispatch({
                     type: 'CONSUMABLES_ENTITLEMENT_FETCH_FAILED',
                     skuId: e
                 }),
-                Error('Invalid consumable skuId: '.concat(e)))
+                Error('Invalid consumable skuId: '.concat(e))
             );
         try {
             let t = await r.tn.get({
@@ -95,17 +95,17 @@ let f = {
             );
         } catch (t) {
             throw (
-                (a.Z.dispatch({
+                a.Z.dispatch({
                     type: 'CONSUMABLES_ENTITLEMENT_FETCH_FAILED',
                     skuId: e
                 }),
-                new i.Hx(t))
+                new i.Hx(t)
             );
         }
     },
     h = async (e) => {
         try {
-            await r.tn.post({
+            (await r.tn.post({
                 url: d.ANM.CONSUME_HD_STREAMING_POTION,
                 body: { channel_id: e },
                 rejectWithError: !1
@@ -113,14 +113,14 @@ let f = {
                 a.Z.dispatch({
                     type: 'CLEAR_CONSUMED_ENTITLEMENT',
                     skuId: l.FX
-                });
+                }));
         } catch (e) {
             throw new i.Hx(e);
         }
     },
     m = async (e, t, n) => {
         try {
-            await r.tn.post({
+            (await r.tn.post({
                 url: d.ANM.CONSUME_MESSAGE_CONFETTI_POTION,
                 body: {
                     channel_id: e,
@@ -132,7 +132,7 @@ let f = {
                 a.Z.dispatch({
                     type: 'CLEAR_CONSUMED_ENTITLEMENT',
                     skuId: l.D1
-                });
+                }));
         } catch (e) {
             throw new i.Hx(e);
         }

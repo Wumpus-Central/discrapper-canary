@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Y: () => T,
     c: () => I
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -36,7 +36,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -120,7 +120,7 @@ let I = (e) => {
                                         tag: 'span',
                                         onClick: (t) => {
                                             var n;
-                                            b(!0), null == e || null == (n = e.onClick) || n.call(e, t);
+                                            (b(!0), null == e || null == (n = e.onClick) || n.call(e, t));
                                         },
                                         className: o()(E.emojiContainer, {
                                             [E.emojiContainerClickable]: s,
@@ -185,14 +185,14 @@ let I = (e) => {
                             position: a,
                             shouldShow: !N,
                             onTooltipShow: () => {
-                                A(!0),
+                                (A(!0),
                                     u &&
                                         (S({
                                             emojiNode: t,
                                             isCustomEmoji: !0,
                                             nonce: w
                                         }),
-                                        (0, d.x)(m.qR.CustomEmojiTooltipShown));
+                                        (0, d.x)(m.qR.CustomEmojiTooltipShown)));
                             },
                             children: (n) =>
                                 (0, r.jsx)(
@@ -206,7 +206,7 @@ let I = (e) => {
                                         onClick: u
                                             ? (t) => {
                                                   var n;
-                                                  A(!1), C(!0), null == e || null == (n = e.onClick) || n.call(e, t);
+                                                  (A(!1), C(!0), null == e || null == (n = e.onClick) || n.call(e, t));
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
@@ -237,7 +237,7 @@ let I = (e) => {
             animation: l.yRy.Animation.FADE,
             align: 'center',
             onRequestClose: () => {
-                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1);
+                (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1));
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,

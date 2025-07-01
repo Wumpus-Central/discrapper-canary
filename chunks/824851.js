@@ -4,10 +4,10 @@ var r = a(899517),
 let n = null;
 function o(t) {
     let e = 'error';
-    (0, _.Hj)(e, t), (0, _.D2)(e, i);
+    ((0, _.Hj)(e, t), (0, _.D2)(e, i));
 }
 function i() {
-    (n = r.n.onerror),
+    ((n = r.n.onerror),
         (r.n.onerror = function (t, e, a, r, o) {
             return (
                 (0, _.rK)('error', {
@@ -20,5 +20,5 @@ function i() {
                 !!n && !n.__SENTRY_LOADER__ && n.apply(this, arguments)
             );
         }),
-        (r.n.onerror.__SENTRY_INSTRUMENTED__ = !0);
+        (r.n.onerror.__SENTRY_INSTRUMENTED__ = !0));
 }

@@ -3,7 +3,7 @@ var r = n(73800),
     i = n(570140);
 function a(e) {
     let t = (0, r.useRef)(e);
-    (0, r.useEffect)(() => {
+    ((0, r.useEffect)(() => {
         t.current = e;
     }, [e]),
         (0, r.useEffect)(() => {
@@ -18,5 +18,5 @@ function a(e) {
                     }
                 );
             }
-        }, []);
+        }, []));
 }

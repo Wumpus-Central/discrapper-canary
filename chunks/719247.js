@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     T: () => b,
     Z: () => A
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -44,7 +44,7 @@ function O(e) {
         let e = y(r.content);
         if (void 0 !== e) {
             let i = b(r.content);
-            n.add(i), e !== E.get(i) && (t.add(i), E.set(i, e));
+            (n.add(i), e !== E.get(i) && (t.add(i), E.set(i, e)));
         }
     }
     return {
@@ -71,18 +71,18 @@ function T() {
         for (let e of a) r.add(e);
         e = e || i.size > 0;
     }
-    for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
+    for (let n of a().difference(t, [...r])) (E.delete(n), (e = !0));
     return e;
 }
 class S extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, u.Z), this.syncWith([u.Z], T);
+        (this.waitFor(d.Z, u.Z), this.syncWith([u.Z], T));
     }
     getMatchingActivity(e) {
         return (0, p.n2)(e) ? null : E.get(b(e));
     }
     constructor(...e) {
-        super(...e), m(this, 'canRenderContent', (e) => !(0, p.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
+        (super(...e), m(this, 'canRenderContent', (e) => !(0, p.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e))));
     }
 }
 m(S, 'displayName', 'ContentInventoryActivityStore');

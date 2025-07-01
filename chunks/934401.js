@@ -16,7 +16,7 @@ class d extends (l = a.ZP.Store) {
         super(o.Z, { CONNECTION_OPEN: u }, o.c.Early);
     }
 }
-(i = 'ExperimentTriggerPointStore'),
+((i = 'ExperimentTriggerPointStore'),
     (r = 'displayName') in d
         ? Object.defineProperty(d, r, {
               value: i,
@@ -25,4 +25,4 @@ class d extends (l = a.ZP.Store) {
               writable: !0
           })
         : (d[r] = i),
-    new d();
+    new d());

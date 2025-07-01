@@ -6,7 +6,7 @@ var r = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'],
     i = (function () {
         function e(e, t) {
             if (0 === t) throw Error("Can't create weekday with n == 0");
-            (this.weekday = e), (this.n = t);
+            ((this.weekday = e), (this.n = t));
         }
         return (
             (e.fromStr = function (t) {
@@ -20,7 +20,7 @@ var r = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'],
             }),
             (e.prototype.toString = function () {
                 var e = r[this.weekday];
-                return this.n && (e = (this.n > 0 ? '+' : '') + String(this.n) + e), e;
+                return (this.n && (e = (this.n > 0 ? '+' : '') + String(this.n) + e), e);
             }),
             (e.prototype.getJsWeekday = function () {
                 return 6 === this.weekday ? 0 : this.weekday + 1;

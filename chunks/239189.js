@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         assign: () => p,
         batchedUpdates: () => f,
@@ -10,7 +10,7 @@ n.r(t),
         skipAnimation: () => u,
         to: () => i,
         willAdvance: () => _
-    });
+    }));
 var r,
     i,
     a = n(19784),

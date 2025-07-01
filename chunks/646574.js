@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -64,13 +64,13 @@ function v(e) {
         [R, P] = (0, u.q_F)(() => ({})),
         w = (0, s.animated)(u.Pt5);
     function D() {
-        P({
+        (P({
             from: { rotate: t ? '360deg' : '0deg' },
             to: { rotate: t ? '0deg' : '360deg' },
             config: E
         }),
             null == n || n(),
-            C(!1);
+            C(!1));
     }
     i.useEffect(() => {
         let e = S === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;

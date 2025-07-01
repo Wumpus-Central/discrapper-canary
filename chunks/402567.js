@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var i = n(73800),
     r = n(442837),
     s = n(607070),
@@ -41,7 +41,7 @@ function g() {
     }, [u, g, h]);
     let f = (0, i.useCallback)(() => {
         let e = m(t);
-        n(e), o.default.track(d.rMx.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e });
+        (n(e), o.default.track(d.rMx.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e }));
     }, [t]);
     return {
         preset: t,

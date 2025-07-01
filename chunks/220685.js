@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685), n(35282);
+(n.d(t, { Z: () => R }), n(388685), n(35282));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -41,7 +41,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             U = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
-                O !== l.hasFeature(y.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = O),
+                (O !== l.hasFeature(y.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = O),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = w),
                     Z !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = Z),
                     A !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = A),
@@ -54,7 +54,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -62,7 +62,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                (r = n[t]),
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
@@ -70,12 +70,12 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
-                                            });
+                                                        : (e[t] = r));
+                                            }));
                                     }
                                     return e;
                                 })({ enabled: O }, (0, b.hH)(l.id))
-                            ));
+                            )));
             },
             B = y.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(M),
             F = null != Z && Z === (null == c ? void 0 : c.store_page_trailer_url),
@@ -244,7 +244,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    P(l.hasFeature(y.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), D(null == c ? void 0 : c.store_page_trailer_url), L(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
+                                    (P(l.hasFeature(y.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), D(null == c ? void 0 : c.store_page_trailer_url), L(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t));
                                 },
                                 onSave: U,
                                 disabled: H

@@ -10,8 +10,8 @@ function a(e, t) {
         let t = Math.round((r.length + 1) * n),
             i = 0,
             o = 0;
-        for (let n = a; n < t && n < e.length; n++) (i += e[n]), o++;
-        (r[r.length] = i / o), (a = t);
+        for (let n = a; n < t && n < e.length; n++) ((i += e[n]), o++);
+        ((r[r.length] = i / o), (a = t));
     }
     return r;
 }

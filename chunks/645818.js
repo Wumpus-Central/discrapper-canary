@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -105,7 +105,7 @@ class _ extends i.PureComponent {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -113,7 +113,7 @@ class _ extends i.PureComponent {
                                 )),
                                 r.forEach(function (t) {
                                     h(e, t, n[t]);
-                                });
+                                }));
                         }
                         return e;
                     })({ className: n }, a, e)
@@ -121,7 +121,7 @@ class _ extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), h(this, '_doneTimer', new a.V7());
+        (super(...e), h(this, '_doneTimer', new a.V7()));
     }
 }
 let E = l.ZP.connectStores([s.Z], (e) => {

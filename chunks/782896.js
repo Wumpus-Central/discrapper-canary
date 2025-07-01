@@ -1,10 +1,10 @@
-n.d(t, { c: () => m }), n(388685), n(290780);
+(n.d(t, { c: () => m }), n(388685), n(290780));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(686546),
-    a = n(430824),
+    a = n(686546),
+    s = n(430824),
     c = n(914010),
     u = n(797670),
     d = n(29953),
@@ -12,9 +12,9 @@ var r = n(255367),
     p = n(836344);
 function f(e) {
     let { children: t } = e;
-    return (0, r.jsx)(s.ZP, {
+    return (0, r.jsx)(a.ZP, {
         className: p.facepileItemContainer,
-        mask: s.ZP.Masks.SQUIRCLE,
+        mask: a.ZP.Masks.SQUIRCLE,
         width: 25,
         height: 25,
         children: t
@@ -59,8 +59,8 @@ function g(e) {
 function m(e) {
     let { guildIds: t } = e,
         n = (0, l.e7)([c.Z], () => c.Z.getGuildId()),
-        s = (0, l.Wu)([a.Z], () => t.map((e) => a.Z.getGuild(e)), [t]),
-        m = (0, i.useMemo)(() => s.filter((e) => null != e), [s]),
+        a = (0, l.Wu)([s.Z], () => t.map((e) => s.Z.getGuild(e)), [t]),
+        m = (0, i.useMemo)(() => a.filter((e) => null != e), [a]),
         {
             visibleGuilds: b,
             numTruncated: _,

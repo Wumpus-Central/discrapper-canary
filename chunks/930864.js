@@ -1,4 +1,4 @@
-n.d(t, { ForwardModal: () => x }), n(388685);
+(n.d(t, { ForwardModal: () => x }), n(388685));
 var l = n(255367),
     r = n(73800),
     i = n(392711),
@@ -25,7 +25,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function v(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -41,8 +41,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -76,12 +76,12 @@ function x(e) {
                         l,
                         r = {},
                         i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (l = 0; l < i.length; l++) ((n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++) (n = i[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (l = 0; l < i.length; l++) ((n = i[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['message', 'initialSelectedDestinations', 'forwardOptions', 'onClose', 'onRequestSent']);
@@ -112,13 +112,13 @@ function x(e) {
         }),
         Y = r.useCallback(
             (e) => {
-                q(e), X(e);
+                (q(e), X(e));
             },
             [X]
         ),
         J = r.useCallback(
             (e) => {
-                Y(e), (H.current += 1), '' !== e && G(j, Z);
+                (Y(e), (H.current += 1), '' !== e && G(j, Z));
             },
             [j, Z, G, Y]
         ),
@@ -126,13 +126,13 @@ function x(e) {
             Y('');
         }, [Y]),
         ee = r.useCallback(() => {
-            (0, m.sF)({
+            ((0, m.sF)({
                 channelId: j,
                 messageId: Z,
                 numDestinationChanges: U.current,
                 numQueryChanges: H.current
             }),
-                L();
+                L());
         }, [j, Z, L]),
         et = r.useRef(null);
     r.useEffect(() => {
@@ -157,7 +157,7 @@ function x(e) {
         ),
         el = r.useCallback(
             (e) => {
-                M(j, Z, '' !== B),
+                (M(j, Z, '' !== B),
                     Q((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
@@ -165,8 +165,8 @@ function x(e) {
                         });
                         if (-1 === n) return V ? t : (Y(''), (U.current += 1), [e, ...t]);
                         let l = [...t];
-                        return l.splice(n, 1), (U.current += 1), l;
-                    });
+                        return (l.splice(n, 1), (U.current += 1), l);
+                    }));
             },
             [j, V, Z, B, Y, M]
         ),
@@ -195,7 +195,7 @@ function x(e) {
                     }))
                 )
                     return void R(!1);
-                d && (0, y.mc)(), null == T || T(), a && (await o.Z.fetchMessages({ channelId: b[0] }), (0, c.Kh)(b[0], { openTextInVoiceIfVoiceChannel: !0 }));
+                (d && (0, y.mc)(), null == T || T(), a && (await o.Z.fetchMessages({ channelId: b[0] }), (0, c.Kh)(b[0], { openTextInVoiceIfVoiceChannel: !0 })));
                 let I = await g.Z.sendForwards(E, b, C(v({}, P), { withMessage: i })),
                     O = b.some((e) => {
                         let t = f.Z.getChannel(e);
@@ -207,7 +207,7 @@ function x(e) {
                         return 'fulfilled' === t;
                     })
                 ) {
-                    (0, m.gP)({
+                    ((0, m.gP)({
                         channelId: j,
                         messageId: Z,
                         hasError: !1,
@@ -217,7 +217,7 @@ function x(e) {
                         numQueryChanges: H.current,
                         anyDestinationHasSlowmode: O
                     }),
-                        en();
+                        en());
                     return;
                 }
                 (0, m.gP)({

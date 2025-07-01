@@ -22,7 +22,7 @@ let a = {
         minute: '2-digit'
     };
 var s = (function (e) {
-    return (e[(e.JOINED_AT = 0)] = 'JOINED_AT'), (e[(e.ACCOUNT_AGE = 1)] = 'ACCOUNT_AGE'), e;
+    return ((e[(e.JOINED_AT = 0)] = 'JOINED_AT'), (e[(e.ACCOUNT_AGE = 1)] = 'ACCOUNT_AGE'), e);
 })({});
 let l = () => ({
         seconds: i.t.FsBhl5,

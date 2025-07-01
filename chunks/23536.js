@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(784620), n(973216);
+(n.d(t, { Z: () => _ }), n(784620), n(973216));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -26,12 +26,12 @@ function _(e) {
         }),
         x = i.useMemo(() => y.map((e) => e.message), [y]),
         v = (0, l.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
-    i.useEffect(() => {
+    (i.useEffect(() => {
         v && s.Z.ackPins(t.id);
     }, [v, t.id]),
         (0, c.ZP)(() => {
             x.some(u.k5) && s.Z.fetchPins(t.id, { reset: !0 });
-        });
+        }));
     let j = i.useCallback(() => {
             s.Z.fetchPins(t.id);
         }, [t.id]),

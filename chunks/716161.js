@@ -31,11 +31,11 @@ async function f() {
         );
     } catch (e) {
         throw (
-            (i.Z.dispatch({
+            i.Z.dispatch({
                 type: 'VIDEO_FILTER_ASSETS_FETCH_FAILURE',
                 error: e
             }),
-            e)
+            e
         );
     }
 }
@@ -67,11 +67,11 @@ async function p(e) {
         rejectWithError: !1
     });
     let t = (0, l.P)(s.default.getCurrentUser());
-    (0, c.rD)(t) && t.id === e.id && h(null),
+    ((0, c.rD)(t) && t.id === e.id && h(null),
         i.Z.dispatch({
             type: 'VIDEO_FILTER_ASSET_DELETE_SUCCESS',
             videoFilterAsset: e
-        });
+        }));
 }
 async function h(e) {
     if (

@@ -1,6 +1,6 @@
 a.d(e, {
     R: () => I,
-    U0: () => R
+    U0: () => d
 });
 var r = a(394798),
     _ = a(101284),
@@ -12,7 +12,7 @@ var r = a(394798),
     E = a(574054),
     l = a(307854),
     u = a(396234);
-function I(t, e, a, I, R, N) {
+function I(t, e, a, I, d, N) {
     var f, A;
     let { normalizeDepth: T = 3, normalizeMaxBreadth: p = 1000 } = t,
         L = {
@@ -21,9 +21,9 @@ function I(t, e, a, I, R, N) {
             timestamp: e.timestamp || (0, _.yW)()
         },
         h = a.integrations || t.integrations.map((t) => t.name);
-    (function (t, e) {
+    ((function (t, e) {
         let { environment: a, release: r, dist: _, maxValueLength: o = 250 } = e;
-        'environment' in t || (t.environment = 'environment' in e ? a : c.J), void 0 === t.release && void 0 !== r && (t.release = r), void 0 === t.dist && void 0 !== _ && (t.dist = _), t.message && (t.message = (0, n.$G)(t.message, o));
+        ('environment' in t || (t.environment = 'environment' in e ? a : c.J), void 0 === t.release && void 0 !== r && (t.release = r), void 0 === t.dist && void 0 !== _ && (t.dist = _), t.message && (t.message = (0, n.$G)(t.message, o)));
         let i = t.exception && t.exception.values && t.exception.values[0];
         i && i.value && (i.value = (0, n.$G)(i.value, o));
         let s = t.request;
@@ -31,14 +31,14 @@ function I(t, e, a, I, R, N) {
     })(L, t),
         (f = L),
         (A = h).length > 0 && ((f.sdk = f.sdk || {}), (f.sdk.integrations = [...(f.sdk.integrations || []), ...A])),
-        R && R.emit('applyFrameMetadata', e),
+        d && d.emit('applyFrameMetadata', e),
         void 0 === e.type &&
             (function (t, e) {
                 let a,
                     r = o.n._sentryDebugIds;
                 if (!r) return;
-                let _ = d.get(e);
-                _ ? (a = _) : ((a = new Map()), d.set(e, a));
+                let _ = R.get(e);
+                _ ? (a = _) : ((a = new Map()), R.set(e, a));
                 let n = Object.entries(r).reduce((t, [r, _]) => {
                     let n,
                         o = a.get(r);
@@ -59,14 +59,14 @@ function I(t, e, a, I, R, N) {
                         });
                     });
                 } catch (t) {}
-            })(L, t.stackParser);
+            })(L, t.stackParser));
     let O = (function (t, e) {
         if (!e) return t;
         let a = t ? t.clone() : new l.s();
-        return a.update(e), a;
+        return (a.update(e), a);
     })(I, a.captureContext);
     a.mechanism && (0, r.EG)(L, a.mechanism);
-    let P = R ? R.getEventProcessors() : [],
+    let P = d ? d.getEventProcessors() : [],
         g = (0, s.lW)().getScopeData();
     if (N) {
         let t = N.getScopeData();
@@ -77,7 +77,7 @@ function I(t, e, a, I, R, N) {
         (0, u.yo)(g, t);
     }
     let D = [...(a.attachments || []), ...g.attachments];
-    D.length && (a.attachments = D), (0, u.gi)(L, g);
+    (D.length && (a.attachments = D), (0, u.gi)(L, g));
     let C = [...P, ...g.eventProcessors];
     return (0, E.R)(C, L, a).then((t) =>
         (t &&
@@ -91,7 +91,7 @@ function I(t, e, a, I, R, N) {
                     });
                 } catch (t) {}
                 if (0 === Object.keys(e).length) return;
-                (t.debug_meta = t.debug_meta || {}), (t.debug_meta.images = t.debug_meta.images || []);
+                ((t.debug_meta = t.debug_meta || {}), (t.debug_meta.images = t.debug_meta.images || []));
                 let a = t.debug_meta.images;
                 Object.entries(e).forEach(([t, e]) => {
                     a.push({
@@ -129,8 +129,8 @@ function I(t, e, a, I, R, N) {
             : t
     );
 }
-let d = new WeakMap();
-function R(t) {
+let R = new WeakMap();
+function d(t) {
     if (t) {
         var e;
         return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => N.includes(t)) ? { captureContext: t } : t;

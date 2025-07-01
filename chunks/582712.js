@@ -19,7 +19,7 @@ function x(e) {
     let { transitionState: t, guildId: x, onClose: j } = e,
         D = (0, i.e7)([b.Z], () => b.Z.getGuild(x));
     return (l.useEffect(() => {
-        (0, f.Y)(x), (0, g.L)(g.Q.MODAL_VIEWED, x), c.Z.increment({ name: a.V.DM_SETTINGS_UPSELL_VIEW });
+        ((0, f.Y)(x), (0, g.L)(g.Q.MODAL_VIEWED, x), c.Z.increment({ name: a.V.DM_SETTINGS_UPSELL_VIEW }));
     }, [x]),
     null == D)
         ? null
@@ -31,7 +31,7 @@ function x(e) {
                   onSubmit: (e) => {
                       e.preventDefault();
                       let t = (0, m.YK)();
-                      t.add(x), d.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.rlYD1d), s.ToastType.SUCCESS))), j(), (0, g.L)(g.Q.MODAL_DISABLED_DMS, x);
+                      (t.add(x), d.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.rlYD1d), s.ToastType.SUCCESS))), j(), (0, g.L)(g.Q.MODAL_DISABLED_DMS, x));
                   },
                   children: [
                       (0, r.jsx)('img', {
@@ -95,7 +95,7 @@ function x(e) {
                                           className: h.button,
                                           color: s.zxk.Colors.PRIMARY,
                                           onClick: () => {
-                                              j(), (0, g.L)(g.Q.MODAL_DISMISSED, x);
+                                              (j(), (0, g.L)(g.Q.MODAL_DISMISSED, x));
                                           },
                                           children: S.intl.string(S.t.PsWbcn)
                                       }),
@@ -105,10 +105,10 @@ function x(e) {
                                           className: h.footer,
                                           children: S.intl.format(S.t.IzZxXV, {
                                               onClick: () => {
-                                                  j(),
+                                                  (j(),
                                                       (0, u.X)(x),
                                                       (0, s.ZDy)(async () => {
-                                                          let { default: e } = await Promise.all([n.e('14006'), n.e('19456'), n.e('8895'), n.e('70791'), n.e('25292'), n.e('22878'), n.e('80417'), n.e('31978'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('8739'), n.e('18543'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('38626'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('23491'), n.e('76540'), n.e('39797'), n.e('15483'), n.e('69856'), n.e('86350'), n.e('11141'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('25183'), n.e('3940'), n.e('40694'), n.e('43988'), n.e('88622'), n.e('94363'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('89795'), n.e('74739'), n.e('45505'), n.e('99014'), n.e('97870')]).then(n.bind(n, 241420));
+                                                          let { default: e } = await Promise.all([n.e('14006'), n.e('8381'), n.e('95355'), n.e('8895'), n.e('70791'), n.e('25292'), n.e('22878'), n.e('80417'), n.e('31978'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('8739'), n.e('7839'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('38626'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('44421'), n.e('23491'), n.e('76540'), n.e('27947'), n.e('61668'), n.e('81872'), n.e('36512'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('25183'), n.e('3940'), n.e('40694'), n.e('36006'), n.e('88622'), n.e('94363'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('89795'), n.e('10026'), n.e('24358'), n.e('99014'), n.e('93955')]).then(n.bind(n, 241420));
                                                           return (t) => {
                                                               var n, l;
                                                               return (0, r.jsx)(
@@ -117,7 +117,7 @@ function x(e) {
                                                                       for (var t = 1; t < arguments.length; t++) {
                                                                           var n = null != arguments[t] ? arguments[t] : {},
                                                                               r = Object.keys(n);
-                                                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                                                          ('function' == typeof Object.getOwnPropertySymbols &&
                                                                               (r = r.concat(
                                                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -125,7 +125,7 @@ function x(e) {
                                                                               )),
                                                                               r.forEach(function (t) {
                                                                                   var r;
-                                                                                  (r = n[t]),
+                                                                                  ((r = n[t]),
                                                                                       t in e
                                                                                           ? Object.defineProperty(e, t, {
                                                                                                 value: r,
@@ -133,8 +133,8 @@ function x(e) {
                                                                                                 configurable: !0,
                                                                                                 writable: !0
                                                                                             })
-                                                                                          : (e[t] = r);
-                                                                              });
+                                                                                          : (e[t] = r));
+                                                                              }));
                                                                       }
                                                                       return e;
                                                                   })({}, t)),
@@ -155,7 +155,7 @@ function x(e) {
                                                               );
                                                           };
                                                       }),
-                                                      (0, g.L)(g.Q.MODAL_GUILD_SETTINGS_CLICKED, x);
+                                                      (0, g.L)(g.Q.MODAL_GUILD_SETTINGS_CLICKED, x));
                                               }
                                           })
                                       })

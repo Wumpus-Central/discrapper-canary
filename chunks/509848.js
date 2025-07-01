@@ -51,6 +51,6 @@ class f {
         return !i().isEqual(r.get(t), n) && (r.set(t, n), (this._subscriptions[e] = r), this._onChange(e, u(r)), !0);
     }
     constructor(e) {
-        s(this, '_subscriptions', {}), s(this, '_onChange', void 0), (this._onChange = e);
+        (s(this, '_subscriptions', {}), s(this, '_onChange', void 0), (this._onChange = e));
     }
 }

@@ -16,15 +16,15 @@ var r,
         return f + p + d + e + f + '/' + p + d;
     },
     E = function (e) {
-        e.write(g('')), e.close();
+        (e.write(g('')), e.close());
         var t = e.parentWindow.Object;
-        return (e = null), t;
+        return ((e = null), t);
     },
     b = function () {
         var e,
             t = c('iframe'),
             n = 'java' + p + ':';
-        return (t.style.display = 'none'), l.appendChild(t), (t.src = String(n)), (e = t.contentWindow.document).open(), e.write(g('document.F=Object')), e.close(), e.F;
+        return ((t.style.display = 'none'), l.appendChild(t), (t.src = String(n)), (e = t.contentWindow.document).open(), e.write(g('document.F=Object')), e.close(), e.F);
     },
     y = function () {
         try {
@@ -34,10 +34,10 @@ var r,
         for (var e = o.length; e--; ) delete y[_][o[e]];
         return y();
     };
-(s[h] = !0),
+((s[h] = !0),
     (e.exports =
         Object.create ||
         function (e, t) {
             var n;
-            return null !== e ? ((m[_] = i(e)), (n = new m()), (m[_] = null), (n[h] = e)) : (n = y()), void 0 === t ? n : a.f(n, t);
-        });
+            return (null !== e ? ((m[_] = i(e)), (n = new m()), (m[_] = null), (n[h] = e)) : (n = y()), void 0 === t ? n : a.f(n, t));
+        }));

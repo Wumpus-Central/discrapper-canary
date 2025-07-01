@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     FS: () => N,
     ZP: () => A
 }),
     n(642613),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(73800),
     i = n(442837),
     a = n(357156),
@@ -77,7 +77,7 @@ function T(e, t, n) {
         l = O(s),
         c = s.length < (0, u.nL)(t) && i,
         d = 0 === l.length;
-    (c || d) &&
+    ((c || d) &&
         !o &&
         l.push({
             type: g.vB.ADD_SOUND,
@@ -92,7 +92,7 @@ function T(e, t, n) {
                 },
                 key: t.id,
                 items: l
-            });
+            }));
 }
 function S(e, t) {
     var n;
@@ -155,7 +155,7 @@ function A(e) {
                     }
                 }
             );
-        v({
+        (v({
             sections: i,
             guildIds: A,
             allSounds: f,
@@ -186,7 +186,7 @@ function A(e) {
                     currentGuildHasAddPermissions: w,
                     allSounds: f,
                     filterOutEmptyCurrentGuild: t
-                });
+                }));
         let a = R || M.moveDefaultToBottom;
         return (
             a || S(i, f),

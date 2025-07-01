@@ -33,7 +33,6 @@ let o = (e) => ({
         gameTitle: e.messages.game_title,
         gamePublisher: e.messages.game_publisher
     },
-    taskConfig: (0, i.f)(e.task_config),
     taskConfigV2: (0, i._)(e.task_config_v2),
     rewardsConfig: (0, r.v)(e.rewards_config),
     videoMetadata: (0, a.FG)(e.video_metadata),

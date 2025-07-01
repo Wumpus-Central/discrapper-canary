@@ -72,7 +72,7 @@ e.exports = function (e) {
                 let t = [];
                 return (
                     e.forEach((e) => {
-                        t.push(e), e.toLowerCase() === e ? t.push(e.toUpperCase()) : t.push(e.toLowerCase());
+                        (t.push(e), e.toLowerCase() === e ? t.push(e.toUpperCase()) : t.push(e.toLowerCase()));
                     }),
                     t
                 );

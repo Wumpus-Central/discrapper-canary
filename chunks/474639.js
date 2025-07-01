@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(35282), n(388685);
+(n.d(t, { Z: () => S }), n(35282), n(388685));
 var r = n(46973),
     i = n(570140),
     a = n(147913),
@@ -53,7 +53,7 @@ class S extends a.Z {
     }
     handleRTCConnectionFlags(e) {
         let { userId: t, channelId: n, guildId: r } = e;
-        this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t);
+        (this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t));
         let i = _.Z.getRTCConnection(
             s.V9({
                 streamType: null != r ? I.lo.GUILD : I.lo.CALL,
@@ -172,17 +172,17 @@ class S extends a.Z {
         if (u.default.getId() === e) {
             let { clipsEnabled: n } = E.Z.getSettings(),
                 r = (0, g.ln)();
-            t.setClipRecordUser(e, 'audio', r && n), t.setClipRecordUser(e, 'video', r && n);
+            (t.setClipRecordUser(e, 'audio', r && n), t.setClipRecordUser(e, 'video', r && n));
             return;
         }
         let { enableViewerClipping: n, ignoreSenderPreference: r } = l.Z.getCurrentConfig({ location: 'ClipsManager:applyStreamRecording' });
         if (!n) return;
         let i = r || E.Z.isViewerClippingAllowedForUser(e);
-        this.applyNativeClipsSettings(), t.setClipRecordUser(e, 'audio', i), t.setClipRecordUser(e, 'video', i);
+        (this.applyNativeClipsSettings(), t.setClipRecordUser(e, 'audio', i), t.setClipRecordUser(e, 'video', i));
     }
     disableClips() {}
     constructor(...e) {
-        super(...e),
+        (super(...e),
             T(this, 'actions', {
                 POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
                 RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
@@ -197,6 +197,6 @@ class S extends a.Z {
                 RTC_CONNECTION_VIDEO: (e) => this.handleRTCConnectionVideo(e),
                 RTC_CONNECTION_STATE: (e) => this.handleRTCConnectionState(e),
                 MEDIA_ENGINE_SET_HARDWARE_ENCODING: (e) => this.handleMediaEngineSetHardwareEncoding(e)
-            });
+            }));
     }
 }

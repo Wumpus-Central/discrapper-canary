@@ -1,4 +1,4 @@
-n.d(t, { default: () => b }), n(388685);
+(n.d(t, { default: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(512722),
@@ -140,23 +140,23 @@ function b(e) {
             var e, t;
             return null != (t = null == (e = j[null != O ? O : '']) ? void 0 : e.id) ? t : null;
         });
-    i.useEffect(() => {
+    (i.useEffect(() => {
         f.LO(a);
     }, [a]),
         i.useEffect(() => {
             1 === b.length ? w(b[0].id) : null != x && w(x);
-        }, [b, x]);
+        }, [b, x]));
     let S = async () => {
         let e = j[null != I ? I : ''];
         l()(null != e, 'Cannot transfer without selected device');
         try {
-            _(!0), await f.sh(a, e.id, n), u();
+            (_(!0), await f.sh(a, e.id, n), u());
         } catch (t) {
-            _(!1),
+            (_(!1),
                 d.Z.show({
                     title: p.intl.string(p.t['QL1y9/']),
                     body: p.intl.formatToPlainString(p.t['6ZyNHx'], { deviceName: e.name })
-                });
+                }));
         }
     };
     return (
@@ -173,7 +173,7 @@ function b(e) {
                     selectedDeviceId: I,
                     transferring: N || null != O,
                     onSelectDeviceId: (e) => {
-                        w(e), (0, f.bp)(a, e);
+                        (w(e), (0, f.bp)(a, e));
                     }
                 })),
         (0, r.jsxs)(c.Y0X, {

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     L: () => c,
     Z: () => u
 }),
-    n(953529);
+    n(953529));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -62,7 +62,7 @@ function u(e) {
                       look: o.zxk.Looks.BLANK,
                       innerClassName: l.button,
                       onClick: (e) => {
-                          e.stopPropagation(), null == t || t(e);
+                          (e.stopPropagation(), null == t || t(e));
                       },
                       children: n
                   })

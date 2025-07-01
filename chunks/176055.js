@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -126,7 +126,7 @@ class N extends i.PureComponent {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             S(this, 'handleJoinOrView', async () => {
                 let { guild: e, skuId: t, isInGuild: n, isLurking: r } = this.props,
                     i = () => (0, _.X)(e.id);
@@ -134,11 +134,11 @@ class N extends i.PureComponent {
                 else if (n) i();
                 else
                     try {
-                        await u.Z.joinGuild(e.id, {
+                        (await u.Z.joinGuild(e.id, {
                             lurker: !0,
                             source: I.vtS.APPLICATION_STORE
                         }),
-                            i();
+                            i());
                     } catch (e) {}
             }),
             S(this, 'handleLogin', () => {
@@ -147,7 +147,7 @@ class N extends i.PureComponent {
                     search: (0, o.stringify)(e),
                     source: 'verified_guild_invite'
                 });
-            });
+            }));
     }
 }
 let T = (0, p.Z)(

@@ -1,4 +1,4 @@
-n.d(t, { z: () => j }), n(704826), n(35282);
+(n.d(t, { z: () => j }), n(704826), n(35282));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -94,7 +94,7 @@ function j(e) {
         { analyticsLocations: c } = (0, s.ZP)(),
         f = i.useCallback(
             (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     e.stopPropagation(),
                     (0, m.E6)({
                         guild: t,
@@ -103,7 +103,7 @@ function j(e) {
                         analyticsObject: g.qAy.BUTTON_CTA,
                         perks: (0, p.WW)(),
                         targetPremiumGuildTier: g.Eu4.TIER_3
-                    });
+                    }));
             },
             [c, t]
         );

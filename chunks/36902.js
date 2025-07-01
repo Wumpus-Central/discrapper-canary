@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(392711),
     i = n.n(r),
     a = n(46973),
@@ -35,7 +35,7 @@ class c {
         };
     }
     constructor(e) {
-        s(this, 'connection', void 0),
+        (s(this, 'connection', void 0),
             s(this, 'pttQueueLatencyHistogram', void 0),
             s(this, 'sampleStats', void 0),
             (this.connection = e),
@@ -51,6 +51,6 @@ class c {
                         }
                     });
             }),
-            (this.pttQueueLatencyHistogram = new o.b());
+            (this.pttQueueLatencyHistogram = new o.b()));
     }
 }

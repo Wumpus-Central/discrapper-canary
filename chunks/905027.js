@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -27,21 +27,21 @@ function p() {
                 let i = await (0, u.iq)(null == t ? void 0 : t.id, s);
                 if (((g = g && null != (e = null == i ? void 0 : i.ok) && e), null == i ? void 0 : i.ok)) {
                     let e = i.body;
-                    void 0 !== r.pendingAvatar &&
+                    (void 0 !== r.pendingAvatar &&
                         (0, c.Z)({
                             isGuildProfile: !0,
                             avatarHash: e.avatar,
                             avatarId: s.avatarId,
                             avatarAssetOrigin: null == (n = r.pendingAvatar) ? void 0 : n.assetOrigin
                         }),
-                        (0, u.IO)();
+                        (0, u.IO)());
                 }
             }
             if (Object.keys(l).length > 0) {
                 let e = await (0, o.Z)(l, null == t ? void 0 : t.id);
-                (g = g && null != (i = null == e ? void 0 : e.ok) && i), (null == e ? void 0 : e.ok) ? (0, u.pG)() : (0, d.v)();
+                ((g = g && null != (i = null == e ? void 0 : e.ok) && i), (null == e ? void 0 : e.ok) ? (0, u.pG)() : (0, d.v)());
             }
-            g && (0, u.b9)(), h(!1);
+            (g && (0, u.b9)(), h(!1));
         }, [null == t ? void 0 : t.id]),
         _ = r.useCallback(() => {
             (0, u.W3)();

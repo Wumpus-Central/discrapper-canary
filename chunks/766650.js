@@ -1,4 +1,4 @@
-r.d(t, { Z: () => h }), r(388685);
+(r.d(t, { Z: () => h }), r(388685));
 var n = r(255367),
     s = r(73800),
     i = r(120356),
@@ -19,7 +19,7 @@ function h(e) {
             var e, r;
             f(t && null != (r = null == (e = p.current) ? void 0 : e.getBoundingClientRect().width) ? r : 0);
         }
-        return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
+        return (e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
     }, [t, r, i]);
     let j = (0, o.q_F)({
             width: ''.concat(m, 'px'),
@@ -40,7 +40,7 @@ function h(e) {
             (0, n.jsx)(u.Z, {
                 className: d.popout,
                 onClick: (t) => {
-                    v(t), e.closePopout();
+                    (v(t), e.closePopout());
                 }
             }),
         children: (e) => {
@@ -61,7 +61,7 @@ function h(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var r = null != arguments[t] ? arguments[t] : {},
                                             n = Object.keys(r);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (n = n.concat(
                                                 Object.getOwnPropertySymbols(r).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -69,7 +69,7 @@ function h(e) {
                                             )),
                                             n.forEach(function (t) {
                                                 var n;
-                                                (n = r[t]),
+                                                ((n = r[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: n,
@@ -77,8 +77,8 @@ function h(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = n);
-                                            });
+                                                        : (e[t] = n));
+                                            }));
                                     }
                                     return e;
                                 })({}, e)),

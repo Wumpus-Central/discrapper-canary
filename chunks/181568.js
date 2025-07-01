@@ -7,5 +7,5 @@ function o(e) {
     if (!e) throw TypeError('Empty color reference');
     (0, n.HD)(e) && (e = (0, s.Z)(e));
     let t = e.space || e.spaceId;
-    return t instanceof a.Z || (e.space = a.Z.get(t)), void 0 === e.alpha && (e.alpha = 1), e;
+    return (t instanceof a.Z || (e.space = a.Z.get(t)), void 0 === e.alpha && (e.alpha = 1), e);
 }

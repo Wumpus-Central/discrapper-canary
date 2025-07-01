@@ -1,4 +1,4 @@
-t.d(n, { Z: () => N }), t(388685);
+(t.d(n, { Z: () => N }), t(388685));
 var i = t(255367),
     s = t(73800),
     l = t(120356),
@@ -21,10 +21,10 @@ function N(e) {
         [k, E] = s.useState(''),
         [T, f] = s.useState(!1);
     s.useEffect(() => {
-        E(null != I ? I : ''), f(j === _.bK.SOMETHING_ELSE);
+        (E(null != I ? I : ''), f(j === _.bK.SOMETHING_ELSE));
     }, [I, j, t]);
     let A = (e) => {
-            f(e === _.bK.SOMETHING_ELSE),
+            (f(e === _.bK.SOMETHING_ELSE),
                 e !== _.bK.SOMETHING_ELSE &&
                     (E(''),
                     c.Z.dispatch({
@@ -34,7 +34,7 @@ function N(e) {
                 c.Z.dispatch({
                     type: 'SAFETY_HUB_APPEAL_SIGNAL_SELECT',
                     signal: e
-                });
+                }));
         },
         S = _.RY.map((e) => ({
             value: e,
@@ -110,22 +110,22 @@ function N(e) {
                 children: [
                     (0, i.jsx)(o.zxk, {
                         onClick: () => {
-                            c.Z.dispatch({
+                            (c.Z.dispatch({
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                                 userInput: k
                             }),
-                                null == N || N();
+                                null == N || N());
                         },
                         color: o.zxk.Colors.BRAND,
                         children: h.intl.string(h.t.PDTjLC)
                     }),
                     (0, i.jsx)(o.zxk, {
                         onClick: () => {
-                            c.Z.dispatch({
+                            (c.Z.dispatch({
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                                 userInput: k
                             }),
-                                null == g || g();
+                                null == g || g());
                         },
                         color: o.zxk.Colors.PRIMARY,
                         look: o.zxk.Looks.LINK,

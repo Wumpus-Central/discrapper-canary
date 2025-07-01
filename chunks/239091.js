@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Zy: () => d,
     jW: () => _,
     vq: () => f
 }),
-    n(457542);
+    n(457542));
 var r = n(570140),
     i = n(40851),
     a = n(358085),
@@ -26,7 +26,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -62,7 +62,7 @@ function f(e, t, n, r) {
     if (('pageX' in e && ((_ = e.pageX), (p = e.pageY)), 0 === _ && 0 === p)) {
         let t = null == (l = e.target) ? void 0 : l.getBoundingClientRect(),
             { left: n = 0, top: r = 0, width: i = 0, height: a = 0 } = null != t ? t : {};
-        (_ = n + i / 2), (p = r + a / 2);
+        ((_ = n + i / 2), (p = r + a / 2));
     }
     let h = {
         render: t,
@@ -73,10 +73,10 @@ function f(e, t, n, r) {
     };
     if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
         let e = () => {
-                t(), u(h);
+                (t(), u(h));
             },
             t = (0, o.RD)(e);
-    } else e.preventDefault(), u(h);
+    } else (e.preventDefault(), u(h));
 }
 function _(e, t, n) {
     f(e, void 0, n, t);

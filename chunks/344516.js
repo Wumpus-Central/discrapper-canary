@@ -1,4 +1,4 @@
-n.d(t, { default: () => S }), n(388685);
+(n.d(t, { default: () => S }), n(388685));
 var i = n(255367),
     l = n(73800),
     s = n(442837),
@@ -77,7 +77,7 @@ class M extends l.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             C(this, 'handleAutoThresholdChange', (e) => {
                 let { onThresholdChange: t, threshold: n } = this.props;
                 null == t || t(n, e);
@@ -85,7 +85,7 @@ class M extends l.PureComponent {
             C(this, 'handleSensitivityChange', (e) => {
                 let { onThresholdChange: t, autoThreshold: n } = this.props;
                 null == t || t(-((100 - e) * 1), n);
-            });
+            }));
     }
 }
 function N(e) {

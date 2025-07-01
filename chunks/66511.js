@@ -24,7 +24,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -40,11 +40,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -98,7 +98,7 @@ let p = () => {
                 {
                     modalKey: l.Pn,
                     onCloseRequest: () => {
-                        p(), s.rb.getState().hasUnsubmittedChanges ? (0, s.PE)(!0) : (0, i.Mr)(l.Pn);
+                        (p(), s.rb.getState().hasUnsubmittedChanges ? (0, s.PE)(!0) : (0, i.Mr)(l.Pn));
                     },
                     onCloseCallback: t
                 }
@@ -106,7 +106,7 @@ let p = () => {
         },
         closeMemberVerificationModal() {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            e || p(), (0, i.Mr)(l.Pn);
+            (e || p(), (0, i.Mr)(l.Pn));
         },
         openMemberVerificationPreviewModal(e) {
             (0, i.ZD)(async () => {

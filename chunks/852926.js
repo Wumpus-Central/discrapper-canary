@@ -42,10 +42,10 @@ function g(e) {
             });
 }
 let m = async (e, t, n) => {
-        if (((0, u.YK)(e, t), (null == n || '' === n) && (0, u.s9)(t))) return (e.authorization.scopes = [d.cE, d.CN]), Promise.resolve();
+        if (((0, u.YK)(e, t), (null == n || '' === n) && (0, u.s9)(t))) return ((e.authorization.scopes = [d.cE, d.CN]), Promise.resolve());
         if (null == n || '' === n) return Promise.reject(new c.Z({ closeCode: p.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
         let r = o.ZP.releaseChannel !== p.R5N.CANARY && !h.includes(n) && e.transport !== d.He.POST_MESSAGE;
-        return await (0, u.vv)(n, r), (0, u.YS)(e, n, t);
+        return (await (0, u.vv)(n, r), (0, u.YS)(e, n, t));
     },
     b = () =>
         (0, u.tr)((e) => {
@@ -67,5 +67,5 @@ let m = async (e, t, n) => {
     _ = (e) =>
         (0, u.FJ)(e, (e) => {
             let t = '';
-            return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, s.BB)(e.modeOptions.shortcut)), t;
+            return (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, s.BB)(e.modeOptions.shortcut)), t);
         });

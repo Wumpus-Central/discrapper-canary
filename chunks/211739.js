@@ -1,7 +1,7 @@
 n.d(t, {
     N5: () => o,
     c4: () => i,
-    lc: () => s,
+    lc: () => a,
     mJ: () => l
 });
 var r = n(570140);
@@ -23,7 +23,7 @@ function o(e) {
         guildId: e
     });
 }
-function s(e) {
+function a(e) {
     r.Z.dispatch({
         type: 'CATEGORY_EXPAND_ALL',
         guildId: e

@@ -1,4 +1,4 @@
-n.d(t, { r: () => O }), n(388685);
+(n.d(t, { r: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -27,7 +27,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -123,7 +123,7 @@ let O = function (e) {
             'animate-always'
         );
     function P(e) {
-        S(!1), null == n || n(e.currentTarget.checked, e);
+        (S(!1), null == n || n(e.currentTarget.checked, e));
     }
     function w(e) {
         p || e.repeat || ((' ' === e.key || 'Enter' === e.key) && S(!0));
@@ -191,7 +191,7 @@ let O = function (e) {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (I.current = e), null != O && (O.current = e);
+                            ((I.current = e), null != O && (O.current = e));
                         },
                         className: _.input,
                         tabIndex: p ? -1 : 0,

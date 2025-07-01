@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     F: () => C,
     I: () => O
 }),
     n(953529),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(722770),
@@ -101,13 +101,13 @@ function j(e) {
                     {
                         id: ''.concat(t, '-').concat(r),
                         onClick: (e) => {
-                            e.stopPropagation(),
+                            (e.stopPropagation(),
                                 j(r),
                                 (0, g.Z)({
                                     nextStatus: t,
                                     prevStatus: n,
                                     durationMillis: null != r ? r : void 0
-                                });
+                                }));
                         },
                         className: f.durationButton,
                         color: E === r ? l.Ttl.BRAND : l.Ttl.PRIMARY,
@@ -149,12 +149,12 @@ function j(e) {
             });
         },
         action: () => {
-            j(h ? u.Z.Millis.DAY : void 0),
+            (j(h ? u.Z.Millis.DAY : void 0),
                 (0, g.Z)({
                     nextStatus: t,
                     prevStatus: n,
                     durationMillis: c && h ? u.Z.Millis.DAY : void 0
-                });
+                }));
         },
         dontCloseOnAction: !0,
         children: h && !d ? O : void 0

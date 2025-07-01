@@ -1,4 +1,4 @@
-e.d(n, { default: () => k }), e(388685);
+(e.d(n, { default: () => k }), e(388685));
 var l = e(255367),
     a = e(73800),
     s = e(442837),
@@ -28,7 +28,7 @@ function k(t) {
             if (null != T) {
                 P(!0);
                 try {
-                    await o.Z.setCommunicationDisabledDuration(k, g, null, null, D), (0, i.showToast)((0, i.createToast)(b.intl.string(b.t['/Mmbfn']), i.ToastType.SUCCESS)), w();
+                    (await o.Z.setCommunicationDisabledDuration(k, g, null, null, D), (0, i.showToast)((0, i.createToast)(b.intl.string(b.t['/Mmbfn']), i.ToastType.SUCCESS)), w());
                 } catch (t) {
                     (0, i.showToast)((0, i.createToast)(b.intl.string(b.t.epyCur), i.ToastType.FAILURE));
                 } finally {

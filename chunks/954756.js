@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -30,33 +30,33 @@ function b() {
                 let i = await (0, l.Mn)(a);
                 if (((x = x && null != (t = null == i ? void 0 : i.ok) && t), null == i ? void 0 : i.ok)) {
                     let e = i.body;
-                    void 0 !== s.pendingAvatar &&
+                    (void 0 !== s.pendingAvatar &&
                         (0, u.Z)({
                             avatarHash: e.avatar,
                             avatarId: a.avatarId,
                             avatarAssetOrigin: null == (n = s.pendingAvatar) ? void 0 : n.assetOrigin
                         }),
-                        (0, l.si)();
+                        (0, l.si)());
                 } else (null == i || null == (e = i.body) ? void 0 : e.username) != null && (0, h.P)();
             }
             if (Object.keys(f).length > 0) {
                 let e = await (0, d.Z)(f);
-                (x = x && null != (i = null == e ? void 0 : e.ok) && i), (null == e ? void 0 : e.ok) ? (0, d.pG)() : (0, p.r)();
+                ((x = x && null != (i = null == e ? void 0 : e.ok) && i), (null == e ? void 0 : e.ok) ? (0, d.pG)() : (0, p.r)());
             }
             if (void 0 !== s.pendingLegacyUsernameDisabled)
                 try {
-                    await g.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, l.iR)();
+                    (await g.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, l.iR)());
                 } catch (e) {
-                    (0, p.r)(), (x = !1);
+                    ((0, p.r)(), (x = !1));
                 }
             if (Object.keys(_).length > 0) {
                 let { primaryGuildId: e } = _;
                 if (void 0 !== e) {
                     let t = await (0, o.c)(e, null !== e);
-                    (x = x && null != (r = null == t ? void 0 : t.ok) && r), (null == t ? void 0 : t.ok) ? (0, l.OU)() : (0, p.r)();
+                    ((x = x && null != (r = null == t ? void 0 : t.ok) && r), (null == t ? void 0 : t.ok) ? (0, l.OU)() : (0, p.r)());
                 }
             }
-            x && (0, l.b9)(), b(!1);
+            (x && (0, l.b9)(), b(!1));
         }, []),
         E = r.useCallback(() => {
             (0, l.W3)();

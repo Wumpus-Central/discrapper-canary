@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+(n.d(t, { Z: () => o }), n(388685));
 var r = n(73800),
     i = n(846519),
     a = n(211266);
@@ -11,7 +11,7 @@ function o(e, t) {
             n,
             (0, r.useCallback)(
                 (n) => {
-                    o(n), n !== e && s.start(t, () => o(e));
+                    (o(n), n !== e && s.start(t, () => o(e)));
                 },
                 [t, e, s]
             )

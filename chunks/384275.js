@@ -4,7 +4,7 @@ var r = n(544891),
     a = n(981631);
 let o = {
     fetch() {
-        i.Z.dispatch({ type: 'USER_AUTHORIZED_APPS_REQUEST' }),
+        (i.Z.dispatch({ type: 'USER_AUTHORIZED_APPS_REQUEST' }),
             r.tn
                 .get({
                     url: a.ANM.OAUTH2_TOKENS,
@@ -22,7 +22,7 @@ let o = {
                             type: 'USER_AUTHORIZED_APPS_UPDATE',
                             apps: []
                         })
-                );
+                ));
     },
     delete(e) {
         r.tn

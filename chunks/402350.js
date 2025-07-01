@@ -2,7 +2,7 @@ function n(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -10,7 +10,7 @@ function n(t) {
             )),
             n.forEach(function (e) {
                 var n, i, o;
-                (n = t),
+                ((n = t),
                     (i = e),
                     (o = r[e]),
                     i in n
@@ -20,8 +20,8 @@ function n(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (n[i] = o);
-            });
+                        : (n[i] = o));
+            }));
     }
     return t;
 }
@@ -32,7 +32,7 @@ var i = r(551558),
             var n = r.pop();
             e(n);
             var i = n.children;
-            Array.isArray(i) || o(!1), (r = r.concat([].concat(i.reverse())));
+            (Array.isArray(i) || o(!1), (r = r.concat([].concat(i.reverse()))));
         }
     },
     u = function (t) {
@@ -80,10 +80,10 @@ t.exports = {
                         entityRanges: [],
                         inlineStyleRanges: []
                     };
-                    r.unshift(l), 1 === a ? e.push(l) : null != c && c.children.push(l), l.children.push(s);
+                    (r.unshift(l), 1 === a ? e.push(l) : null != c && c.children.push(l), l.children.push(s));
                 } else if (c.depth === a - 1) c.children.push(s);
                 else {
-                    for (; null != c && c.depth >= a; ) r.shift(), (c = r[0]);
+                    for (; null != c && c.depth >= a; ) (r.shift(), (c = r[0]));
                     a > 0 ? c.children.push(s) : e.push(s);
                 }
             }),

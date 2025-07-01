@@ -25,23 +25,23 @@ let d = {
                 .then(
                     (t) => {
                         let n = t.body;
-                        r.Z.dispatch({
+                        (r.Z.dispatch({
                             type: 'GUILD_TEMPLATE_ACCEPT_SUCCESS',
                             code: e,
                             guild: n
                         }),
                             s.Z.isConnected()
                                 ? a.Z.addConditionalChangeListener(() => {
-                                      if (null != a.Z.getGuild(n.id)) return (0, l.X)(n.id), d(n), !1;
+                                      if (null != a.Z.getGuild(n.id)) return ((0, l.X)(n.id), d(n), !1);
                                   })
-                                : ((0, l.X)(n.id), d(n));
+                                : ((0, l.X)(n.id), d(n)));
                     },
                     (t) => {
-                        r.Z.dispatch({
+                        (r.Z.dispatch({
                             type: 'GUILD_TEMPLATE_ACCEPT_FAILURE',
                             code: e
                         }),
-                            u(t.body);
+                            u(t.body));
                     }
                 );
         })

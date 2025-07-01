@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+(n.d(t, { Z: () => T }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -72,7 +72,7 @@ function v(e) {
 }
 class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
+        (this.waitFor(s.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {}));
     }
     getState() {
         return f;
@@ -87,7 +87,7 @@ class I extends (r = i.ZP.PersistedStore) {
         return _;
     }
 }
-d(I, 'displayName', 'CategoryCollapseStore'), d(I, 'persistKey', 'collapsedCategories');
+(d(I, 'displayName', 'CategoryCollapseStore'), d(I, 'persistKey', 'collapsedCategories'));
 let T = new I(a.Z, {
     CONNECTION_OPEN: E,
     USER_GUILD_SETTINGS_FULL_UPDATE: b,

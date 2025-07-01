@@ -5,7 +5,7 @@ let r = n(889658),
     s = n(15496),
     l = (e, t, n = {}) => {
         if (e === t) return !0;
-        (e = new r(e, n)), (t = new r(t, n));
+        ((e = new r(e, n)), (t = new r(t, n)));
         let i = !1;
         s: for (let r of e.set) {
             for (let e of t.set) {

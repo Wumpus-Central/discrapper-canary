@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => u }), n(388685);
+(n.d(t, { ZP: () => u }), n(388685));
 var r = n(73800),
     i = n(372817),
     a = n(25441),
@@ -43,7 +43,7 @@ function u(e) {
                 if (((v.current = e), null == e)) return void (0, a.h)(t, null, g);
                 let n = (0, l.P1)(e),
                     r = (0, l.x3)(e);
-                C(n, r), (0, a.h)(t, r, g);
+                (C(n, r), (0, a.h)(t, r, g));
             },
             [t, g, C]
         ),
@@ -62,7 +62,7 @@ function u(e) {
         ),
         [D, L] = r.useState(!1),
         x = r.useRef(D);
-    r.useLayoutEffect(() => {
+    (r.useLayoutEffect(() => {
         x.current = D;
     }, [D]),
         r.useLayoutEffect(() => {
@@ -74,7 +74,7 @@ function u(e) {
                     e.addEventListener('focus', i),
                     e.addEventListener('scroll', a, { passive: !0 }),
                     () => {
-                        e.removeEventListener('focusin', n), e.removeEventListener('focusout', r), e.removeEventListener('focus', i), e.removeEventListener('scroll', a);
+                        (e.removeEventListener('focusin', n), e.removeEventListener('focusout', r), e.removeEventListener('focus', i), e.removeEventListener('scroll', a));
                     }
                 );
             function n() {
@@ -106,7 +106,7 @@ function u(e) {
             function a() {
                 I.current = !0;
             }
-        }, [u, t, g, C, m, R, P]);
+        }, [u, t, g, C, m, R, P]));
     let k = r.useMemo(
             () => ({
                 wrap: b,
@@ -139,29 +139,29 @@ function u(e) {
                     r = y === s.hy.HORIZONTAL ? s.R8.LEFT : s.R8.UP;
                 switch (e.key) {
                     case n:
-                        e.stopPropagation(), e.preventDefault(), M();
+                        (e.stopPropagation(), e.preventDefault(), M());
                         return;
                     case r:
-                        e.stopPropagation(), e.preventDefault(), j();
+                        (e.stopPropagation(), e.preventDefault(), j());
                         return;
                     case s.R8.HOME:
-                        e.stopPropagation(),
+                        (e.stopPropagation(),
                             e.preventDefault(),
                             d().then(() => {
                                 var e;
                                 let n = null == (e = c(t, T)[0]) ? void 0 : e.getAttribute(l.ie);
                                 null != n && P(n);
-                            });
+                            }));
                         return;
                     case s.R8.END:
-                        e.stopPropagation(),
+                        (e.stopPropagation(),
                             e.preventDefault(),
                             f().then(() => {
                                 var e;
                                 let n = c(t, T),
                                     r = null == (e = n[n.length - 1]) ? void 0 : e.getAttribute(l.ie);
                                 null != r && P(r);
-                            });
+                            }));
                         return;
                     case s.R8.SPACE:
                     case s.R8.ENTER: {
@@ -181,7 +181,7 @@ function u(e) {
         ),
         G = r.useCallback(
             (e) => {
-                (v.current = null != e ? (0, l.jb)(t, e) : null), (0, a.h)(t, e, g);
+                ((v.current = null != e ? (0, l.jb)(t, e) : null), (0, a.h)(t, e, g));
             },
             [t, g]
         );

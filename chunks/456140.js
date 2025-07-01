@@ -10,7 +10,7 @@ function i(e, t, { l: r = 2, c = 1 } = {}) {
         [, d, h] = n.Z.from(a.Z, [u, f, b]),
         [p, m, g] = a.Z.from(t),
         y = n.Z.from(a.Z, [p, m, g])[1];
-    d < 0 && (d = 0), y < 0 && (y = 0);
+    (d < 0 && (d = 0), y < 0 && (y = 0));
     let v = u - p,
         Z = d - y,
         w = f - m,

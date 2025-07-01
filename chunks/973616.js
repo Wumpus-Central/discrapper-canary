@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     BA: () => p,
     ZN: () => h,
     ZP: () => m
@@ -6,7 +6,7 @@ n.d(t, {
     n(953529),
     n(997841),
     n(467055),
-    n(388685);
+    n(388685));
 var r = n(480189),
     i = n(81825),
     a = n(768581),
@@ -30,7 +30,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -46,11 +46,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -74,7 +74,7 @@ function p(e) {
         os: e.os,
         name: e.name
     };
-    return null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t;
+    return (null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t);
 }
 class h extends i.Z {
     static createFromServer(e) {
@@ -130,7 +130,7 @@ class h extends i.Z {
     }
     constructor(e) {
         var t, n;
-        super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'type', void 0), c(this, 'coverImage', void 0), c(this, 'primarySkuId', void 0), c(this, 'bot', void 0), c(this, 'splash', void 0), c(this, 'thirdPartySkus', void 0), c(this, 'isMonetized', void 0), c(this, 'isVerified', void 0), c(this, 'roleConnectionsVerificationUrl', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.splash = e.splash), (this.primarySkuId = e.primarySkuId), (this.thirdPartySkus = null != (t = e.thirdPartySkus) ? t : []), (this.description = e.description), (this.bot = e.bot), (this.coverImage = e.coverImage), (this.type = e.type), (this.isMonetized = e.is_monetized), (this.isVerified = null != (n = e.is_verified) ? n : e.isVerified), (this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl);
+        (super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'type', void 0), c(this, 'coverImage', void 0), c(this, 'primarySkuId', void 0), c(this, 'bot', void 0), c(this, 'splash', void 0), c(this, 'thirdPartySkus', void 0), c(this, 'isMonetized', void 0), c(this, 'isVerified', void 0), c(this, 'roleConnectionsVerificationUrl', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.splash = e.splash), (this.primarySkuId = e.primarySkuId), (this.thirdPartySkus = null != (t = e.thirdPartySkus) ? t : []), (this.description = e.description), (this.bot = e.bot), (this.coverImage = e.coverImage), (this.type = e.type), (this.isMonetized = e.is_monetized), (this.isVerified = null != (n = e.is_verified) ? n : e.isVerified), (this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl));
     }
 }
 class m extends h {
@@ -243,6 +243,6 @@ class m extends h {
     }
     constructor(e) {
         var t, n, i, a, o, s, l, u, d, f, _, h, m, g, E, b, y;
-        super(e), c(this, 'overlay', void 0), c(this, 'overlayWarn', void 0), c(this, 'overlayCompatibilityHook', void 0), c(this, 'overlayMethods', void 0), c(this, 'hook', void 0), c(this, 'aliases', void 0), c(this, 'publishers', void 0), c(this, 'developers', void 0), c(this, 'storeListingSkuId', void 0), c(this, 'guildId', void 0), c(this, 'guild', void 0), c(this, 'executables', void 0), c(this, 'hashes', void 0), c(this, 'eulaId', void 0), c(this, 'slug', void 0), c(this, 'flags', void 0), c(this, 'maxParticipants', void 0), c(this, 'tags', void 0), c(this, 'embeddedActivityConfig', void 0), c(this, 'team', void 0), c(this, 'integrationTypesConfig', void 0), c(this, 'storefront_available', void 0), c(this, 'termsOfServiceUrl', void 0), c(this, 'privacyPolicyUrl', void 0), c(this, 'isDiscoverable', void 0), c(this, 'customInstallUrl', void 0), c(this, 'installParams', void 0), c(this, 'directoryEntry', void 0), c(this, 'categories', void 0), (this.overlay = null != (t = e.overlay) && t), (this.overlayWarn = null != (n = e.overlayWarn) && n), (this.overlayCompatibilityHook = null != (i = e.overlayCompatibilityHook) && i), (this.overlayMethods = null != (a = e.overlayMethods) ? a : r.e.DEFAULT), (this.hook = null == (o = e.hook) || o), (this.aliases = null != (s = e.aliases) ? s : []), (this.publishers = null != (l = e.publishers) ? l : []), (this.developers = null != (u = e.developers) ? u : []), (this.storeListingSkuId = e.storeListingSkuId), (this.guildId = e.guildId), (this.guild = e.guild), (this.executables = (null != (d = e.executables) ? d : []).map(p)), (this.hashes = null != (f = e.hashes) ? f : []), (this.eulaId = e.eulaId), (this.slug = e.slug), (this.flags = null != (_ = e.flags) ? _ : 0), (this.tags = null != (h = e.tags) ? h : []), (this.maxParticipants = e.maxParticipants), (this.embeddedActivityConfig = null != (m = e.embedded_activity_config) ? m : e.embeddedActivityConfig), (this.team = e.team), (this.integrationTypesConfig = e.integrationTypesConfig), (this.storefront_available = e.storefront_available), (this.termsOfServiceUrl = e.termsOfServiceUrl), (this.privacyPolicyUrl = e.privacyPolicyUrl), (this.isDiscoverable = null != (g = e.is_discoverable) ? g : e.isDiscoverable), (this.customInstallUrl = null != (E = e.custom_install_url) ? E : e.customInstallUrl), (this.installParams = null != (b = e.install_params) ? b : e.installParams), (this.directoryEntry = null != (y = e.directory_entry) ? y : e.directoryEntry), (this.categories = e.categories);
+        (super(e), c(this, 'overlay', void 0), c(this, 'overlayWarn', void 0), c(this, 'overlayCompatibilityHook', void 0), c(this, 'overlayMethods', void 0), c(this, 'hook', void 0), c(this, 'aliases', void 0), c(this, 'publishers', void 0), c(this, 'developers', void 0), c(this, 'storeListingSkuId', void 0), c(this, 'guildId', void 0), c(this, 'guild', void 0), c(this, 'executables', void 0), c(this, 'hashes', void 0), c(this, 'eulaId', void 0), c(this, 'slug', void 0), c(this, 'flags', void 0), c(this, 'maxParticipants', void 0), c(this, 'tags', void 0), c(this, 'embeddedActivityConfig', void 0), c(this, 'team', void 0), c(this, 'integrationTypesConfig', void 0), c(this, 'storefront_available', void 0), c(this, 'termsOfServiceUrl', void 0), c(this, 'privacyPolicyUrl', void 0), c(this, 'isDiscoverable', void 0), c(this, 'customInstallUrl', void 0), c(this, 'installParams', void 0), c(this, 'directoryEntry', void 0), c(this, 'categories', void 0), (this.overlay = null != (t = e.overlay) && t), (this.overlayWarn = null != (n = e.overlayWarn) && n), (this.overlayCompatibilityHook = null != (i = e.overlayCompatibilityHook) && i), (this.overlayMethods = null != (a = e.overlayMethods) ? a : r.e.DEFAULT), (this.hook = null == (o = e.hook) || o), (this.aliases = null != (s = e.aliases) ? s : []), (this.publishers = null != (l = e.publishers) ? l : []), (this.developers = null != (u = e.developers) ? u : []), (this.storeListingSkuId = e.storeListingSkuId), (this.guildId = e.guildId), (this.guild = e.guild), (this.executables = (null != (d = e.executables) ? d : []).map(p)), (this.hashes = null != (f = e.hashes) ? f : []), (this.eulaId = e.eulaId), (this.slug = e.slug), (this.flags = null != (_ = e.flags) ? _ : 0), (this.tags = null != (h = e.tags) ? h : []), (this.maxParticipants = e.maxParticipants), (this.embeddedActivityConfig = null != (m = e.embedded_activity_config) ? m : e.embeddedActivityConfig), (this.team = e.team), (this.integrationTypesConfig = e.integrationTypesConfig), (this.storefront_available = e.storefront_available), (this.termsOfServiceUrl = e.termsOfServiceUrl), (this.privacyPolicyUrl = e.privacyPolicyUrl), (this.isDiscoverable = null != (g = e.is_discoverable) ? g : e.isDiscoverable), (this.customInstallUrl = null != (E = e.custom_install_url) ? E : e.customInstallUrl), (this.installParams = null != (b = e.install_params) ? b : e.installParams), (this.directoryEntry = null != (y = e.directory_entry) ? y : e.directoryEntry), (this.categories = e.categories));
     }
 }

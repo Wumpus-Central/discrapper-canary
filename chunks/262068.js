@@ -14,7 +14,7 @@ function c(e) {
 }
 function u(e) {
     let t = [];
-    return e.replace(o, (e, n, r) => (t.push(r), e)), t.filter((e) => !(0, a.pZ)(e));
+    return (e.replace(o, (e, n, r) => (t.push(r), e)), t.filter((e) => !(0, a.pZ)(e)));
 }
 async function d(e, t, n, o, s) {
     try {

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => T,
     n: () => v
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -37,7 +37,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -66,26 +66,26 @@ let v = (e) => {
                 w((t) => t + e);
             }),
             k = i.useRef(O);
-        i.useEffect(() => {
+        (i.useEffect(() => {
             k.current = O;
         }),
             i.useEffect(() => {
-                w(-k.current), T((0, p.H)(E.effects));
+                (w(-k.current), T((0, p.H)(E.effects)));
             }, [E]),
             i.useEffect(() => {
                 let e = 0,
                     t = 1 / 0;
-                I.forEach((n) => {
+                (I.forEach((n) => {
                     let r = n.start + n.duration;
-                    r > e && (e = r), n.loop && n.start < t && (t = n.start);
+                    (r > e && (e = r), n.loop && n.start < t && (t = n.start));
                 }),
                     A(t),
-                    C(e);
-            }, [C, I]);
+                    C(e));
+            }, [C, I]));
         let [M, j] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 === c || s || (D(), w(0)), !s && M && x.current && (D(), w(0)), a && s && !x.current && (L(), E.animationType === f.Q.PERSISTENT ? w(u === f.j.FromStart ? 0 : S) : w(0));
+                (!0 === c || s || (D(), w(0)), !s && M && x.current && (D(), w(0)), a && s && !x.current && (L(), E.animationType === f.Q.PERSISTENT ? w(u === f.j.FromStart ? 0 : S) : w(0)));
             }, [s, M, S, a, D, L, x, E.animationType, c, u]),
             (0, r.jsx)('div', {
                 ref: v,

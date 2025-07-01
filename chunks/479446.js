@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Ou: () => f,
     SR: () => u,
     YD: () => d
 }),
-    n(415506);
+    n(415506));
 var r = n(512722),
     i = n.n(r),
     a = n(493683),
@@ -12,7 +12,7 @@ var r = n(512722),
     l = n(592125),
     c = n(669079),
     u = (function (e) {
-        return (e.ACTION = 'action'), (e.LOOP = 'loop'), (e.IDLE = 'idle'), e;
+        return ((e.ACTION = 'action'), (e.LOOP = 'loop'), (e.IDLE = 'idle'), e);
     })({});
 let d = async (e, t) => {
         if (null == t) throw Error('giftCode must be defined');

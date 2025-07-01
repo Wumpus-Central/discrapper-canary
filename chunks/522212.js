@@ -2,11 +2,11 @@ var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
         }
     }
     return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+        return (n && e(t.prototype, n), r && e(t, r), t);
     };
 })();
 function i(e, t) {
@@ -18,7 +18,7 @@ function a(e, t) {
 }
 function o(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
+    ((e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -26,7 +26,7 @@ function o(e, t) {
             configurable: !0
         }
     })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
 }
 var s = n(914747);
 n(805962);
@@ -37,7 +37,7 @@ e.exports = (function (e) {
     function t(e, n) {
         i(this, t);
         var r = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (r._a = 'number' == typeof e ? new l(e) : e), (r._b = 'number' == typeof n ? new l(n) : n), (r._listeners = {}), r;
+        return ((r._a = 'number' == typeof e ? new l(e) : e), (r._b = 'number' == typeof n ? new l(n) : n), (r._listeners = {}), r);
     }
     return (
         o(t, e),
@@ -52,7 +52,7 @@ e.exports = (function (e) {
                 key: 'addListener',
                 value: function (e) {
                     var t = this;
-                    !this._aListener &&
+                    (!this._aListener &&
                         this._a.addListener &&
                         (this._aListener = this._a.addListener(function () {
                             for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
@@ -61,9 +61,9 @@ e.exports = (function (e) {
                             this._b.addListener &&
                             (this._bListener = this._b.addListener(function () {
                                 for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
-                            }));
+                            })));
                     var n = guid();
-                    return (this._listeners[n] = e), n;
+                    return ((this._listeners[n] = e), n);
                 }
             },
             {
@@ -81,13 +81,13 @@ e.exports = (function (e) {
             {
                 key: '__attach',
                 value: function () {
-                    this._a.__addChild(this), this._b.__addChild(this);
+                    (this._a.__addChild(this), this._b.__addChild(this));
                 }
             },
             {
                 key: '__detach',
                 value: function () {
-                    this._a.__removeChild(this), this._b.__removeChild(this);
+                    (this._a.__removeChild(this), this._b.__removeChild(this));
                 }
             }
         ]),

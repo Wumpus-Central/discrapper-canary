@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     O: () => et,
     y: () => en
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -65,7 +65,7 @@ function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -73,7 +73,7 @@ function q(e) {
             )),
             r.forEach(function (t) {
                 z(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -81,11 +81,11 @@ function X(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -107,7 +107,7 @@ function J(e, t) {
         i = $(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -117,7 +117,7 @@ function $(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function ee(e, t) {
@@ -174,7 +174,7 @@ function et(e) {
         ev = (0, y.MY)(eh),
         eI = ep && (0, y.pO)(eh),
         eT = (0, C.cF)(ed, eI, ey);
-    (b = null != b ? b : eu), (g = null != g ? g : el), l()(void 0 !== g, 'should not be undefined');
+    ((b = null != b ? b : eu), (g = null != g ? g : el), l()(void 0 !== g, 'should not be undefined'));
     let [eS, eA] = (0, c.Wu)([E.Z], () => [null != g ? E.Z.get(g.planId) : null, null != U ? E.Z.get(U) : null]),
         eN = (0, w.N)(en),
         eC = null == eN ? void 0 : eN.subscription_trial,
@@ -202,7 +202,7 @@ function et(e) {
         et && S.ZP.trackExposure({ location: '5f89bb_1' });
     }, [et]);
     let eG = (null == eD ? void 0 : eD.id) != null && $.includes(eD.id);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         if (!eG) {
             if (null == eS || ep) eL($[0]);
             else if (null != eS) {
@@ -213,7 +213,7 @@ function et(e) {
     }, [eG, ep, $, eS, eL]),
         i.useEffect(() => {
             eT && null != ey && ey.length > 0 && eO(ey[0]);
-        }, [ey, eO, eT]);
+        }, [ey, eO, eT]));
     let eB = !eI && (ep || (!eM && !ej)) && eG && ei,
         eV = (0, u.arW)(),
         { ref: eF } = eV,

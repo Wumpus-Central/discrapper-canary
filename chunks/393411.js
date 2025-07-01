@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     R: () => z,
     Z: () => Y
 }),
-    n(415506);
+    n(415506));
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -42,7 +42,7 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function L(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -58,8 +58,8 @@ function L(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -208,10 +208,10 @@ let Y = function (e) {
         K = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         { fractionalState: q } = (0, g.Z)({ forceFetch: !1 }),
         X = q === D.a$.FP_SUB_PAUSED,
-        { enabled: Q } = (0, N.ZP)({ location: Y });
-    (D.pj.has(r.planId) && Z.JwP.ALL_PAUSEABLE.has(r.status) && !X) || (Q = !1);
-    let J = (0, y.Ng)(),
-        $ = null == J || null == (t = J.discount) ? void 0 : t.amount,
+        { enabled: J } = (0, N.ZP)({ location: Y });
+    (D.pj.has(r.planId) && Z.JwP.ALL_PAUSEABLE.has(r.status) && !X) || (J = !1);
+    let Q = (0, y.Ng)(),
+        $ = null == Q || null == (t = Q.discount) ? void 0 : t.amount,
         ee = (0, v.t7)(),
         et = (0, v.lr)(),
         en = (0, T.W)(),
@@ -246,7 +246,7 @@ let Y = function (e) {
                 let t = (0, O.DE)(e, null == p ? void 0 : p.id, !1),
                     n = t.length > 0 ? t[0] : r.currency,
                     i = !1;
-                1 === t.length && (null == p ? void 0 : p.id) === r.paymentSourceId && (0, O.tD)(e.id, n, null == p ? void 0 : p.id) && (i = !0),
+                (1 === t.length && (null == p ? void 0 : p.id) === r.paymentSourceId && (0, O.tD)(e.id, n, null == p ? void 0 : p.id) && (i = !0),
                     i
                         ? d.O5(r, W)
                         : (0, h.Z)({
@@ -255,7 +255,7 @@ let Y = function (e) {
                               analyticsLocation: z,
                               analyticsObject: U,
                               subscription: r
-                          });
+                          }));
             }
         },
         eo = () => {
@@ -361,7 +361,7 @@ let Y = function (e) {
                 return (0, i.jsxs)('div', {
                     className: k.toolsButtons,
                     children: [
-                        Q
+                        J
                             ? (0, i.jsx)(c.zxk, {
                                   className: k.toolsButton,
                                   size: c.zxk.Sizes.SMALL,

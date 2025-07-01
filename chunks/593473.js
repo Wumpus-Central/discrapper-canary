@@ -26,7 +26,7 @@ function s(e) {
                     r[e] = n;
                     return;
                 }
-                void 0 === r[e] && (r[e] = {}), (r[e][t[1]] = n);
+                (void 0 === r[e] && (r[e] = {}), (r[e][t[1]] = n));
             };
         case 'bracket':
             return function (e, n, r) {
@@ -67,7 +67,7 @@ function c(e) {
                 })
           : e;
 }
-(t.extract = function (e) {
+((t.extract = function (e) {
     return e.split('?')[1] || '';
 }),
     (t.parse = function (e, t) {
@@ -78,13 +78,13 @@ function c(e) {
                   var t = e.replace(/\+/g, ' ').split('='),
                       i = t.shift(),
                       o = t.length > 0 ? t.join('=') : void 0;
-                  (o = void 0 === o ? null : a(o)), n(a(i), o, r);
+                  ((o = void 0 === o ? null : a(o)), n(a(i), o, r));
               }),
               Object.keys(r)
                   .sort()
                   .reduce(function (e, t) {
                       var n = r[t];
-                      return n && 'object' == typeof n && !Array.isArray(n) ? (e[t] = c(n)) : (e[t] = n), e;
+                      return (n && 'object' == typeof n && !Array.isArray(n) ? (e[t] = c(n)) : (e[t] = n), e);
                   }, Object.create(null)))
             : r;
     }),
@@ -122,4 +122,4 @@ function c(e) {
                   })
                   .join('&')
             : '';
-    });
+    }));

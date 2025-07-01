@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $7: () => M,
     $8: () => eP,
     $e: () => f,
@@ -103,16 +103,16 @@ n.d(t, {
     ys: () => ej,
     zp: () => U
 }),
-    n(388685);
+    n(388685));
 var r = n(314794),
     i = n(981631),
     a = n(185923),
     o = n(388032),
     s = (function (e) {
-        return (e[(e.PREMIUM_TRIAL = 0)] = 'PREMIUM_TRIAL'), (e[(e.PREMIUM_DISCOUNT = 1)] = 'PREMIUM_DISCOUNT'), e;
+        return ((e[(e.PREMIUM_TRIAL = 0)] = 'PREMIUM_TRIAL'), (e[(e.PREMIUM_DISCOUNT = 1)] = 'PREMIUM_DISCOUNT'), e);
     })({}),
     l = (function (e) {
-        return (e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_0 = 3)] = 'TIER_0'), e;
+        return ((e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_0 = 3)] = 'TIER_0'), e);
     })({});
 let c = void 0,
     u = void 0,
@@ -141,7 +141,7 @@ let c = void 0,
     }),
     _ = '521842831262875670';
 var p = (function (e) {
-    return (e.NONE = '628379670982688768'), (e.TIER_0 = '978380684370378762'), (e.TIER_1 = '521846918637420545'), (e.TIER_2 = '521847234246082599'), (e.GUILD = '590663762298667008'), (e.LEGACY = '521842865731534868'), e;
+    return ((e.NONE = '628379670982688768'), (e.TIER_0 = '978380684370378762'), (e.TIER_1 = '521846918637420545'), (e.TIER_2 = '521847234246082599'), (e.GUILD = '590663762298667008'), (e.LEGACY = '521842865731534868'), e);
 })({});
 let h = ['628379670982688768', '978380684370378762', '521846918637420545', '521847234246082599', '590663762298667008'],
     m = Object.freeze({
@@ -156,7 +156,7 @@ let h = ['628379670982688768', '978380684370378762', '521846918637420545', '5218
         [i.oNc.ENHANCED_ROLE_COLORS]: 3
     };
 var E = (function (e) {
-    return (e.NONE_MONTH = '628379151761408000'), (e.NONE_YEAR = '628381571568631808'), (e.PREMIUM_MONTH_TIER_0 = '978380692553465866'), (e.PREMIUM_YEAR_TIER_0 = '1024422698568122368'), (e.PREMIUM_MONTH_TIER_1 = '511651871736201216'), (e.PREMIUM_YEAR_TIER_1 = '511651876987469824'), (e.PREMIUM_MONTH_TIER_2 = '511651880837840896'), (e.PREMIUM_YEAR_TIER_2 = '511651885459963904'), (e.PREMIUM_MONTH_GUILD = '590665532894740483'), (e.PREMIUM_YEAR_GUILD = '590665538238152709'), (e.NONE_3_MONTH = '944265614527037440'), (e.NONE_6_MONTH = '944265636643602432'), (e.PREMIUM_3_MONTH_TIER_2 = '642251038925127690'), (e.PREMIUM_6_MONTH_TIER_2 = '944037208325619722'), (e.PREMIUM_3_MONTH_GUILD = '944037355453415424'), (e.PREMIUM_6_MONTH_GUILD = '944037391444738048'), (e.PREMIUM_MONTH_LEGACY = '511651856145973248'), (e.PREMIUM_YEAR_LEGACY = '511651860671627264'), e;
+    return ((e.NONE_MONTH = '628379151761408000'), (e.NONE_YEAR = '628381571568631808'), (e.PREMIUM_MONTH_TIER_0 = '978380692553465866'), (e.PREMIUM_YEAR_TIER_0 = '1024422698568122368'), (e.PREMIUM_MONTH_TIER_1 = '511651871736201216'), (e.PREMIUM_YEAR_TIER_1 = '511651876987469824'), (e.PREMIUM_MONTH_TIER_2 = '511651880837840896'), (e.PREMIUM_YEAR_TIER_2 = '511651885459963904'), (e.PREMIUM_MONTH_GUILD = '590665532894740483'), (e.PREMIUM_YEAR_GUILD = '590665538238152709'), (e.NONE_3_MONTH = '944265614527037440'), (e.NONE_6_MONTH = '944265636643602432'), (e.PREMIUM_3_MONTH_TIER_2 = '642251038925127690'), (e.PREMIUM_6_MONTH_TIER_2 = '944037208325619722'), (e.PREMIUM_3_MONTH_GUILD = '944037355453415424'), (e.PREMIUM_6_MONTH_GUILD = '944037391444738048'), (e.PREMIUM_MONTH_LEGACY = '511651856145973248'), (e.PREMIUM_YEAR_LEGACY = '511651860671627264'), e);
 })({});
 let b = new Set(['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904', '511651856145973248', '511651860671627264']),
     y = new Set(['511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904']),
@@ -180,10 +180,10 @@ let b = new Set(['978380692553465866', '1024422698568122368', '51165187173620121
         '521842865731534868': void 0
     });
 var A = (function (e) {
-        return (e[(e.MONTH = 1)] = 'MONTH'), (e[(e.YEAR = 2)] = 'YEAR'), (e[(e.DAY = 3)] = 'DAY'), e;
+        return ((e[(e.MONTH = 1)] = 'MONTH'), (e[(e.YEAR = 2)] = 'YEAR'), (e[(e.DAY = 3)] = 'DAY'), e);
     })({}),
     N = (function (e) {
-        return (e[(e.DAY = 1)] = 'DAY'), (e[(e.WEEK = 2)] = 'WEEK'), (e[(e.MONTH = 3)] = 'MONTH'), (e[(e.YEAR = 4)] = 'YEAR'), e;
+        return ((e[(e.DAY = 1)] = 'DAY'), (e[(e.WEEK = 2)] = 'WEEK'), (e[(e.MONTH = 3)] = 'MONTH'), (e[(e.YEAR = 4)] = 'YEAR'), e);
     })({});
 let C = Object.freeze({
         628379151761408000: {
@@ -511,7 +511,7 @@ var ey = (function (e) {
         );
     })({}),
     eO = (function (e) {
-        return (e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0'), (e[(e.ON_REVERSE_TRIAL = 16)] = 'ON_REVERSE_TRIAL'), e;
+        return ((e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0'), (e[(e.ON_REVERSE_TRIAL = 16)] = 'ON_REVERSE_TRIAL'), e);
     })({});
 let ev = Object.freeze({
         '978380684370378762': 8,
@@ -599,10 +599,10 @@ let ev = Object.freeze({
     }),
     eL = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
 var ex = (function (e) {
-        return (e.SOUNDBOARD_PLAY = 'soundboard play'), (e.PROFILE_THEME_COLOR = 'profile_theme_color'), (e.PROFILE_BANNER = 'profile_banner'), (e.ANIMATED_AVATAR = 'animated_avatar'), (e.AVATAR_DECORATION = 'avatar_decoration'), (e.CLIENT_THEME = 'client_theme'), (e.SHARED_CANVAS = 'shared_canvas'), (e.PROFILE_EFFECT = 'profile_effect'), (e.PRESET = 'preset'), e;
+        return ((e.SOUNDBOARD_PLAY = 'soundboard play'), (e.PROFILE_THEME_COLOR = 'profile_theme_color'), (e.PROFILE_BANNER = 'profile_banner'), (e.ANIMATED_AVATAR = 'animated_avatar'), (e.AVATAR_DECORATION = 'avatar_decoration'), (e.CLIENT_THEME = 'client_theme'), (e.SHARED_CANVAS = 'shared_canvas'), (e.PROFILE_EFFECT = 'profile_effect'), (e.PRESET = 'preset'), e);
     })({}),
     ek = (function (e) {
-        return (e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard'), e;
+        return ((e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard'), e);
     })({});
 let eM = {
     '1024422698568122368': P,
@@ -612,20 +612,20 @@ let eM = {
     '642251038925127690': D
 };
 var ej = (function (e) {
-    return (e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality'), e;
+    return ((e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality'), e);
 })({});
 let eU = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
 var eG = (function (e) {
-        return (e[(e.UserSettings = 0)] = 'UserSettings'), (e[(e.ApplicationStoreHome = 1)] = 'ApplicationStoreHome'), e;
+        return ((e[(e.UserSettings = 0)] = 'UserSettings'), (e[(e.ApplicationStoreHome = 1)] = 'ApplicationStoreHome'), e);
     })({}),
     eB = (function (e) {
-        return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.WINTER = 1)] = 'WINTER'), e;
+        return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.WINTER = 1)] = 'WINTER'), e);
     })({}),
     eV = (function (e) {
-        return (e[(e.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (e[(e.BOX = 2)] = 'BOX'), (e[(e.CUP = 3)] = 'CUP'), (e[(e.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (e[(e.CAKE = 5)] = 'CAKE'), (e[(e.CHEST = 6)] = 'CHEST'), (e[(e.COFFEE = 7)] = 'COFFEE'), (e[(e.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (e[(e.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (e[(e.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (e[(e.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), (e[(e.NITROWEEN_STANDARD = 12)] = 'NITROWEEN_STANDARD'), e;
+        return ((e[(e.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (e[(e.BOX = 2)] = 'BOX'), (e[(e.CUP = 3)] = 'CUP'), (e[(e.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (e[(e.CAKE = 5)] = 'CAKE'), (e[(e.CHEST = 6)] = 'CHEST'), (e[(e.COFFEE = 7)] = 'COFFEE'), (e[(e.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (e[(e.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (e[(e.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (e[(e.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), (e[(e.NITROWEEN_STANDARD = 12)] = 'NITROWEEN_STANDARD'), e);
     })({});
 let eF = Object.freeze({
         IS_BLOCKED_IOS: 32,
@@ -638,7 +638,7 @@ let eF = Object.freeze({
         2: { fileSize: eS }
     });
 var eH = (function (e) {
-    return (e.BOOST = 'boost'), (e.DISMISS = 'dismiss'), e;
+    return ((e.BOOST = 'boost'), (e.DISMISS = 'dismiss'), e);
 })({});
 let eY = new Set(['PL', 'TR']),
     eW = [1, 2, 3],
@@ -647,19 +647,19 @@ let eY = new Set(['PL', 'TR']),
     eq = ez.concat(eW),
     eX = 190;
 var eQ = (function (e) {
-        return (e[(e.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY'), e;
+        return ((e[(e.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY'), e);
     })({}),
     eJ = (function (e) {
-        return (e.VIEW_ALL = 'view_all'), (e.SEND_MESSAGE = 'send_message'), e;
+        return ((e.VIEW_ALL = 'view_all'), (e.SEND_MESSAGE = 'send_message'), e);
     })({}),
     e$ = (function (e) {
-        return (e[(e.DM_CHANNEL = 0)] = 'DM_CHANNEL'), (e[(e.SHOP_PAGE = 1)] = 'SHOP_PAGE'), e;
+        return ((e[(e.DM_CHANNEL = 0)] = 'DM_CHANNEL'), (e[(e.SHOP_PAGE = 1)] = 'SHOP_PAGE'), e);
     })({});
 let e0 = 3,
     e1 = 30,
     e2 = 20;
 var e3 = (function (e) {
-    return (e.PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month_v2'), (e.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month_v2'), (e.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month_v2'), (e.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month_v2'), (e.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month_v2'), (e.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month_v2'), (e.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month_v2'), (e.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month_v2'), e;
+    return ((e.PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month_v2'), (e.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month_v2'), (e.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month_v2'), (e.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month_v2'), (e.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month_v2'), (e.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month_v2'), (e.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month_v2'), (e.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month_v2'), e);
 })({});
 let e4 = ['premium_tenure_1_month_v2', 'premium_tenure_3_month_v2', 'premium_tenure_6_month_v2', 'premium_tenure_12_month_v2', 'premium_tenure_24_month_v2', 'premium_tenure_36_month_v2', 'premium_tenure_60_month_v2', 'premium_tenure_72_month_v2'],
     e5 = {
@@ -721,10 +721,10 @@ let e4 = ['premium_tenure_1_month_v2', 'premium_tenure_3_month_v2', 'premium_ten
         }
     };
 var e6 = (function (e) {
-        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.FP_ONLY = 1)] = 'FP_ONLY'), (e[(e.FP_SUB_PAUSED = 2)] = 'FP_SUB_PAUSED'), e;
+        return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.FP_ONLY = 1)] = 'FP_ONLY'), (e[(e.FP_SUB_PAUSED = 2)] = 'FP_SUB_PAUSED'), e);
     })({}),
     e8 = (function (e) {
-        return (e[(e.HOUR = 1)] = 'HOUR'), (e[(e.DAY = 2)] = 'DAY'), e;
+        return ((e[(e.HOUR = 1)] = 'HOUR'), (e[(e.DAY = 2)] = 'DAY'), e);
     })({});
 let e7 = {
     [r.a.PREMIUM_TIER_2_1_HOUR]: [1, 1],

@@ -65,5 +65,5 @@ let s = function (e, t, a) {
         u = (null == a ? void 0 : a.comparison) || 0,
         m = l ? r[o][u] : n[o],
         c = 'halfaminute' === o ? m : t + m;
-    return s && (c = i[s[0].toLowerCase()] + ' ' + c), c;
+    return (s && (c = i[s[0].toLowerCase()] + ' ' + c), c);
 };

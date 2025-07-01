@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(695469),
@@ -23,7 +23,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -39,8 +39,8 @@ function v(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -74,18 +74,18 @@ function S(e) {
             return (
                 i.useEffect(() => {
                     if (!n) {
-                        t(null), null != l.current && (window.clearTimeout(l.current), (l.current = null));
+                        (t(null), null != l.current && (window.clearTimeout(l.current), (l.current = null)));
                         return;
                     }
                     let e = (e, t, n) => {
-                            null == r.current[e] && (r.current[e] = {}), null == n ? delete r.current[e][t] : (r.current[e][t] = n), 0 === Object.keys(r.current[e]).length && delete r.current[e];
+                            (null == r.current[e] && (r.current[e] = {}), null == n ? delete r.current[e][t] : (r.current[e][t] = n), 0 === Object.keys(r.current[e]).length && delete r.current[e]);
                         },
                         i = (e) => {
-                            null != l.current && (window.clearTimeout(l.current), (l.current = null)),
+                            (null != l.current && (window.clearTimeout(l.current), (l.current = null)),
                                 t(e),
                                 (l.current = window.setTimeout(() => {
-                                    t(null), (l.current = null);
-                                }, 10000));
+                                    (t(null), (l.current = null));
+                                }, 10000)));
                         },
                         a = (t, n, l) => {
                             var a, o, s, c, u, d, p, f;
@@ -133,7 +133,7 @@ function S(e) {
                                         }));
                                 }
                             } else (null == (a = r.current[t]) ? void 0 : a.voice) != null && ((_ = !0), e(t, 'voice', null));
-                            return _ && null != E && i(E), _;
+                            return (_ && null != E && i(E), _);
                         },
                         o = (e) => {
                             for (let t of e.updates) {
@@ -149,7 +149,7 @@ function S(e) {
                         s.Z.subscribe('PRESENCE_UPDATES', o),
                         s.Z.subscribe('VOICE_STATE_UPDATES', c),
                         () => {
-                            s.Z.unsubscribe('PRESENCE_UPDATES', o), s.Z.unsubscribe('VOICE_STATE_UPDATES', c), null != l.current && (window.clearTimeout(l.current), (l.current = null));
+                            (s.Z.unsubscribe('PRESENCE_UPDATES', o), s.Z.unsubscribe('VOICE_STATE_UPDATES', c), null != l.current && (window.clearTimeout(l.current), (l.current = null)));
                         }
                     );
                 }, [n]),

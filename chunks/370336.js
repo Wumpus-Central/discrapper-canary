@@ -33,7 +33,7 @@ function l(e) {
             currentTarget: c(e.currentTarget),
             ...u(e)
         };
-        return 'undefined' != typeof CustomEvent && (0, a.V9)(e, CustomEvent) && (t.detail = e.detail), t;
+        return ('undefined' != typeof CustomEvent && (0, a.V9)(e, CustomEvent) && (t.detail = e.detail), t);
     }
 }
 function c(e) {

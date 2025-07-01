@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => o,
     j: () => a
 }),
-    n(388685);
+    n(388685));
 var r = n(433517);
 let i = 'recentBuildOverrides';
 function a() {

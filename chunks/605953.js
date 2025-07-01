@@ -16,14 +16,14 @@ function h(e) {
     return (0, r.jsx)(c.ZP.Icon, {
         icon: l.sVe,
         onClick: () => {
-            s.default.track(u.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
+            (s.default.track(u.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
                 summaries_sidebar_open: !n,
                 source: d.Dc.TOOLBAR_BUTTON,
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 channel_type: t.type
             }),
-                (0, o.e7)();
+                (0, o.e7)());
         },
         tooltip: n ? p.intl.string(p.t.nGs3kJ) : p.intl.string(p.t.bIm2sL),
         selected: n,

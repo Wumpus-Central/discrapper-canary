@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => u }), n(539854);
+(n.d(t, { ZP: () => u }), n(539854));
 var r = n(131704),
     i = n(699516),
     a = n(594174);
@@ -50,7 +50,7 @@ function u(e) {
                 isSubscriptionGated: p,
                 needSubscriptionToAccess: h
             });
-            return null != E && g.push(E), g.join(', ');
+            return (null != E && g.push(E), g.join(', '));
         case s.d4z.GUILD_STAGE_VOICE:
             t = l.t.TPPk2d;
             break;
@@ -67,5 +67,5 @@ function u(e) {
             isSubscriptionGated: p,
             needSubscriptionToAccess: h
         });
-    return null != y && b.push(y), b.join(', ');
+    return (null != y && b.push(y), b.join(', '));
 }

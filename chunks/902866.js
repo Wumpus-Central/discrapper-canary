@@ -18,7 +18,7 @@ function s(e, t) {
         if (null != t.window.setDevtoolsCallbacks)
             t.window.setDevtoolsCallbacks(
                 () => {
-                    e.hideToken(), o();
+                    (e.hideToken(), o());
                 },
                 () => {
                     e.showToken();
@@ -26,11 +26,11 @@ function s(e, t) {
             );
         else {
             let n = t.window.webContents;
-            n.removeAllListeners('devtools-opened'),
+            (n.removeAllListeners('devtools-opened'),
                 n.on('devtools-opened', () => {
-                    e.hideToken(), o();
+                    (e.hideToken(), o());
                 }),
-                n.on('devtools-closed', e.showToken);
+                n.on('devtools-closed', e.showToken));
         }
     else
         i.tq ||

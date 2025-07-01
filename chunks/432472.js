@@ -1,4 +1,4 @@
-i.r(e), i.d(e, { default: () => o });
+(i.r(e), i.d(e, { default: () => o }));
 var t = i(255367);
 i(73800);
 var l = i(512722),

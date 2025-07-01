@@ -1,13 +1,13 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         announce: () => a,
         clearAnnouncer: () => o,
         destroyAnnouncer: () => s
-    });
+    }));
 let r = 7000,
     i = null;
 function a(e, t = 'assertive', n = r) {
-    i || (i = new l()), i.announce(e, t, n);
+    (i || (i = new l()), i.announce(e, t, n));
 }
 function o(e) {
     i && i.clear(e);
@@ -18,7 +18,7 @@ function s() {
 class l {
     createLog(e) {
         let t = document.createElement('div');
-        return t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t;
+        return (t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t);
     }
     destroy() {
         this.node && (document.body.removeChild(this.node), (this.node = null));
@@ -26,18 +26,18 @@ class l {
     announce(e, t = 'assertive', n = r) {
         if (!this.node) return;
         let i = document.createElement('div');
-        (i.textContent = e),
+        ((i.textContent = e),
             'assertive' === t ? this.assertiveLog.appendChild(i) : this.politeLog.appendChild(i),
             '' !== e &&
                 setTimeout(() => {
                     i.remove();
-                }, n);
+                }, n));
     }
     clear(e) {
         this.node && ((e && 'assertive' !== e) || (this.assertiveLog.innerHTML = ''), (e && 'polite' !== e) || (this.politeLog.innerHTML = ''));
     }
     constructor() {
-        (this.node = document.createElement('div')),
+        ((this.node = document.createElement('div')),
             (this.node.dataset.liveAnnouncer = 'true'),
             Object.assign(this.node.style, {
                 border: 0,
@@ -55,6 +55,6 @@ class l {
             this.node.appendChild(this.assertiveLog),
             (this.politeLog = this.createLog('polite')),
             this.node.appendChild(this.politeLog),
-            document.body.prepend(this.node);
+            document.body.prepend(this.node));
     }
 }

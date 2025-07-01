@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+(n.d(t, { Z: () => T }), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,7 +22,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -38,8 +38,8 @@ function I(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -125,7 +125,7 @@ function T(e) {
             t = e - J.current,
             n = $.current,
             r = ee.current;
-        return et.current && (z((n += t)), en.current || Y((r += t))), H(e), [n, r];
+        return (et.current && (z((n += t)), en.current || Y((r += t))), H(e), [n, r]);
     }
     return (
         i.useEffect(() => {
@@ -146,10 +146,10 @@ function T(e) {
                               });
                     ei(await Promise.all(t));
                 } catch (e) {
-                    b.Z.captureException(e), ei(C);
+                    (b.Z.captureException(e), ei(C));
                 }
             };
-            !0 !== el.current && e(), (el.current = !0);
+            (!0 !== el.current && e(), (el.current = !0));
         }, [l, er]),
         i.useEffect(
             () => () => {
@@ -161,20 +161,20 @@ function T(e) {
             [er]
         ),
         i.useEffect(() => {
-            (J.current = V), ($.current = F), (ee.current = W), (et.current = K), (en.current = X);
+            ((J.current = V), ($.current = F), (ee.current = W), (et.current = K), (en.current = X));
         }, [V, F, W, K, X]),
         i.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
                     let [e, t] = ea();
-                    m.default.track(_.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+                    (m.default.track(_.rMx.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: w,
                         seconds_played: Math.round(e / 1000)
                     }),
                         m.default.track(_.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: w,
                             seconds_unmuted: Math.round(t / 1000)
-                        });
+                        }));
                 }
             },
             [w, l.type]
@@ -185,11 +185,11 @@ function T(e) {
             return (
                 m.default.track(_.rMx.CHANGE_LOG_OPENED, { change_log_id: w }),
                 () => {
-                    m.default.track(_.rMx.CHANGE_LOG_CLOSED, {
+                    (m.default.track(_.rMx.CHANGE_LOG_CLOSED, {
                         change_log_id: w,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != T && (0, f.EW)(T, { dismissAction: E.L.DISMISS });
+                        null != T && (0, f.EW)(T, { dismissAction: E.L.DISMISS }));
                 }
             );
         }, [T, w]),
@@ -223,16 +223,16 @@ function T(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      m.default.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: w }), H(Date.now()), q(!0), Q(e.currentTarget.muted);
+                                      (m.default.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: w }), H(Date.now()), q(!0), Q(e.currentTarget.muted));
                                   },
                                   onEnded: (e) => {
-                                      ea(), Q(e.currentTarget.muted), q(!1);
+                                      (ea(), Q(e.currentTarget.muted), q(!1));
                                   },
                                   onVolumeChange: (e) => {
-                                      ea(), Q(e.currentTarget.muted);
+                                      (ea(), Q(e.currentTarget.muted));
                                   },
                                   onPause: (e) => {
-                                      ea(), Q(e.currentTarget.muted), q(!1);
+                                      (ea(), Q(e.currentTarget.muted), q(!1));
                                   },
                                   disablePictureInPicture: !0,
                                   children:

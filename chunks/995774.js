@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Lh: () => u,
     MR: () => m,
     g1: () => f,
@@ -9,7 +9,7 @@ n.d(t, {
 }),
     n(704826),
     n(35282),
-    n(781311);
+    n(781311));
 var r = n(633302),
     i = n(695346),
     a = n(314897),
@@ -55,10 +55,10 @@ function h(e) {
     return !n || !!r;
 }
 function m(e, t) {
-    i.fz.updateSetting(e),
+    (i.fz.updateSetting(e),
         o.default.track(s.rMx.NOTIFICATION_SETTINGS_UPDATED, {
             update_type: l.I.ACCOUNT,
             reaction_notifications: e,
             reaction_notifications_old: t
-        });
+        }));
 }

@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'grayscale',
         author: 'alexandre gavioli (https://github.com/alexx2/)',
@@ -19,4 +19,4 @@
         base0E: '#747474',
         base0F: '#5e5e5e'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

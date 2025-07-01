@@ -41,7 +41,7 @@ class l {
         this.destroyFramerateScaleFactorTimers();
     }
     constructor(e, t) {
-        o(this, 'connection', void 0),
+        (o(this, 'connection', void 0),
             o(this, 'sinkWants', void 0),
             o(this, 'framerateReductionTimeout', void 0),
             o(this, 'handleSpeaking', void 0),
@@ -57,6 +57,6 @@ class l {
             s.enableNativeLogger(!0),
             e.on(i.Sh.Speaking, this.handleSpeaking),
             e.on(i.Sh.Mute, this.handleSelfMute),
-            this.initialize();
+            this.initialize());
     }
 }

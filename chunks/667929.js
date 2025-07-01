@@ -15,11 +15,11 @@ function b(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (a = a.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, a);
+            r.push.apply(r, a));
     }
     return r;
 }
@@ -120,7 +120,7 @@ var h = o.default,
         var r = Object.keys(t);
         for (var a in e) -1 === r.indexOf(a) && r.push(a);
         return r.reduce(function (r, a) {
-            return (r[a] = y(e[a], t[a])), r;
+            return ((r[a] = y(e[a], t[a])), r);
         }, {});
     },
     Z = function (e, t) {
@@ -134,18 +134,18 @@ var h = o.default,
             .filter(Boolean)
             .reduce(
                 function (e, t) {
-                    return 'string' == typeof t ? (e.className = [e.className, t].filter(Boolean).join(' ')) : 'object' === (0, a.Z)(t) ? (e.style = d(d({}, e.style), t)) : 'function' == typeof t && (e = d(d({}, e), t.apply(void 0, [e].concat(n)))), e;
+                    return ('string' == typeof t ? (e.className = [e.className, t].filter(Boolean).join(' ')) : 'object' === (0, a.Z)(t) ? (e.style = d(d({}, e.style), t)) : 'function' == typeof t && (e = d(d({}, e), t.apply(void 0, [e].concat(n)))), e);
                 },
                 {
                     className: '',
                     style: {}
                 }
             );
-        return o.className || delete o.className, 0 === Object.keys(o.style).length && delete o.style, o;
+        return (o.className || delete o.className, 0 === Object.keys(o.style).length && delete o.style, o);
     },
     w = function (e) {
         return Object.keys(e).reduce(function (t, r) {
-            return (t[r] = /^base/.test(r) ? m(e[r]) : 'scheme' === r ? e[r] + ':inverted' : e[r]), t;
+            return ((t[r] = /^base/.test(r) ? m(e[r]) : 'scheme' === r ? e[r] + ':inverted' : e[r]), t);
         }, {});
     },
     M = u()(function (e) {
@@ -158,11 +158,11 @@ var h = o.default,
         o && (r = d(d({}, o), r));
         for (
             var i = p.reduce(function (e, t) {
-                    return (e[t] = r[t] || n[t]), e;
+                    return ((e[t] = r[t] || n[t]), e);
                 }, {}),
                 c = v(
                     Object.keys(r).reduce(function (e, t) {
-                        return -1 === p.indexOf(t) && (e[t] = r[t]), e;
+                        return (-1 === p.indexOf(t) && (e[t] = r[t]), e);
                     }, {}),
                     e(i)
                 ),
@@ -184,7 +184,7 @@ var h = o.default,
                 a = (0, s.Z)(r, 2),
                 n = a[0],
                 i = a[1];
-            (e = t ? t[n] : o[n]), 'inverted' === i && (e = w(e));
+            ((e = t ? t[n] : o[n]), 'inverted' === i && (e = w(e)));
         }
         return e && Object.prototype.hasOwnProperty.call(e, 'base00') ? e : void 0;
     },

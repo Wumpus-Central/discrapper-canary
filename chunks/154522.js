@@ -25,16 +25,16 @@ function g(e) {
                     let r, n;
                     switch (t) {
                         case f.zJ.NAME:
-                            (r = (e) => e.name.toLowerCase()), (n = 'asc');
+                            ((r = (e) => e.name.toLowerCase()), (n = 'asc'));
                             break;
                         case f.zJ.PRICE_ASC:
-                            (r = 'price_tier'), (n = 'asc');
+                            ((r = 'price_tier'), (n = 'asc'));
                             break;
                         case f.zJ.PRICE_DESC:
-                            (r = 'price_tier'), (n = 'desc');
+                            ((r = 'price_tier'), (n = 'desc'));
                             break;
                         case f.zJ.NEWEST_ARRIVALS:
-                            (r = 'published_at'), (n = 'desc');
+                            ((r = 'published_at'), (n = 'desc'));
                             break;
                         default:
                             return e;

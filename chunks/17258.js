@@ -5,21 +5,21 @@
         var r = e + ' ';
         switch (n) {
             case 'ss':
-                return 1 === e ? (r += 'sekunda') : 2 === e || 3 === e || 4 === e ? (r += 'sekunde') : (r += 'sekundi'), r;
+                return (1 === e ? (r += 'sekunda') : 2 === e || 3 === e || 4 === e ? (r += 'sekunde') : (r += 'sekundi'), r);
             case 'm':
                 return t ? 'jedna minuta' : 'jedne minute';
             case 'mm':
-                return 1 === e ? (r += 'minuta') : 2 === e || 3 === e || 4 === e ? (r += 'minute') : (r += 'minuta'), r;
+                return (1 === e ? (r += 'minuta') : 2 === e || 3 === e || 4 === e ? (r += 'minute') : (r += 'minuta'), r);
             case 'h':
                 return t ? 'jedan sat' : 'jednog sata';
             case 'hh':
-                return 1 === e ? (r += 'sat') : 2 === e || 3 === e || 4 === e ? (r += 'sata') : (r += 'sati'), r;
+                return (1 === e ? (r += 'sat') : 2 === e || 3 === e || 4 === e ? (r += 'sata') : (r += 'sati'), r);
             case 'dd':
-                return 1 === e ? (r += 'dan') : (r += 'dana'), r;
+                return (1 === e ? (r += 'dan') : (r += 'dana'), r);
             case 'MM':
-                return 1 === e ? (r += 'mjesec') : 2 === e || 3 === e || 4 === e ? (r += 'mjeseca') : (r += 'mjeseci'), r;
+                return (1 === e ? (r += 'mjesec') : 2 === e || 3 === e || 4 === e ? (r += 'mjeseca') : (r += 'mjeseci'), r);
             case 'yy':
-                return 1 === e ? (r += 'godina') : 2 === e || 3 === e || 4 === e ? (r += 'godine') : (r += 'godina'), r;
+                return (1 === e ? (r += 'godina') : 2 === e || 3 === e || 4 === e ? (r += 'godine') : (r += 'godina'), r);
         }
     }
     return e.defineLocale('hr', {

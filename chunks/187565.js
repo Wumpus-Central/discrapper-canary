@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     KJ: () => g,
     N0: () => j,
     k3: () => v,
@@ -8,7 +8,7 @@ n.d(t, {
     n(388685),
     n(457542),
     n(781311),
-    n(953529);
+    n(953529));
 var r,
     i = n(73800),
     l = n(442837),
@@ -85,7 +85,7 @@ function v(e) {
 }
 function _(e) {
     let t = (0, p.rb)((e) => e.hasUnsubmittedChanges);
-    i.useEffect(
+    (i.useEffect(
         () => (
             (0, p.a5)(!1),
             () => {
@@ -97,5 +97,5 @@ function _(e) {
         i.useEffect(() => {
             let n = e.some((e) => e.field_type !== f.QJ.TERMS && (0, h.OA)(e));
             n && !t ? (0, p.a5)(!0) : !n && t && (0, p.a5)(!1);
-        }, [e, t]);
+        }, [e, t]));
 }

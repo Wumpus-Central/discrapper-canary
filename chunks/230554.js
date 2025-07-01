@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685), n(35282), n(704826);
+(n.d(t, { Z: () => g }), n(388685), n(35282), n(704826));
 var r = n(73800),
     i = n(650557),
     a = n(911969),
@@ -13,7 +13,7 @@ var r = n(73800),
 let p = (e, t, n) => ({
     getSlateEditor: () => e,
     submit(e) {
-        e.preventDefault(), n();
+        (e.preventDefault(), n());
     },
     focus() {
         u.bN.focus(e);
@@ -91,7 +91,7 @@ let p = (e, t, n) => ({
                     let r = u.q.markdown(n[0], t.guild_id);
                     (0, f.Gg)(e, a, t.id, r) && (a = u.q.updateElement(e, a));
                 }
-                s.xi(e, t.guild_id, t.id, u.q.updateElement(e, a), !1), c.Q.selectNextCommandOption(e);
+                (s.xi(e, t.guild_id, t.id, u.q.updateElement(e, a), !1), c.Q.selectNextCommandOption(e));
             }
         });
     },
@@ -101,7 +101,7 @@ let p = (e, t, n) => ({
         l.T.withSingleEntry(e, () => {
             let a = s.HZ(e),
                 o = null != a && h(t, a[0]);
-            if (o) c.Q.removeInlineChildren(e, a), (i = !1);
+            if (o) (c.Q.removeInlineChildren(e, a), (i = !1));
             else {
                 let { word: t } = this.getCurrentWord();
                 null != t &&
@@ -112,7 +112,7 @@ let p = (e, t, n) => ({
                         reverse: !0
                     });
             }
-            m(e, n, r, i), o && c.Q.selectNextCommandOption(e);
+            (m(e, n, r, i), o && c.Q.selectNextCommandOption(e));
         });
     },
     insertEmoji(t) {

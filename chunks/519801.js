@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(997841);
+(n.d(t, { Z: () => v }), n(997841));
 var i = n(255367),
     r = n(73800),
     l = n(131388),
@@ -25,7 +25,7 @@ function v(e) {
         { createMultipleConfettiAt: T } = r.useContext(o.h),
         w = null != (t = null == k ? void 0 : k.name) ? t : '',
         Z = () => {
-            C(), null == O || O();
+            (C(), null == O || O());
         },
         I = P === m.h8.CONFIRM,
         A = (0, s.KW)(null != (n = null == k ? void 0 : k.flags) ? n : 0),

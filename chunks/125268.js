@@ -1,21 +1,21 @@
 n.d(t, {
     AX: () => s,
     BR: () => d,
-    Bo: () => g,
+    Bo: () => E,
     Df: () => f,
     LT: () => h,
-    ZZ: () => m,
+    ZZ: () => p,
     cV: () => c,
-    fW: () => E,
-    gr: () => p,
-    oW: () => o
+    fW: () => g,
+    gr: () => m,
+    oW: () => u
 });
 var r = n(261470),
     l = n(544891),
     i = n(570140),
     a = n(984063),
-    u = n(981631);
-function o(e, t, n, r, l) {
+    o = n(981631);
+function u(e, t, n, r, l) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_DRAW_LINE_POINT',
         channelId: e,
@@ -27,7 +27,7 @@ function o(e, t, n, r, l) {
 }
 function s(e, t, n, r) {
     return l.tn.post({
-        url: u.ANM.SHARED_CANVAS_LINES(e, n),
+        url: o.ANM.SHARED_CANVAS_LINES(e, n),
         body: {
             line_id: t,
             points: r
@@ -46,28 +46,28 @@ function c(e, t, n, r) {
 }
 function d(e, t, n) {
     return l.tn.post({
-        url: u.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
+        url: o.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
         body: { emoji_hose: n },
         rejectWithError: !1
     });
 }
 function f(e, t, n) {
     l.tn.del({
-        url: u.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
+        url: o.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
         backoff: new r.Z(),
         rejectWithError: !0
     });
 }
-function m(e, t) {
-    (t.state = a.f.STOP),
+function p(e, t) {
+    ((t.state = a.f.STOP),
         i.Z.dispatch({
             type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
             emojiHose: t,
             userId: t.userId,
             streamerId: e
-        });
+        }));
 }
-function p(e, t, n) {
+function m(e, t, n) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
         emojiHose: e,
@@ -75,14 +75,14 @@ function p(e, t, n) {
         streamerId: n
     });
 }
-function E(e, t) {
+function g(e, t) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_CLEAR_DRAWABLES',
         drawables: e,
         streamerId: t
     });
 }
-function g(e) {
+function E(e) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_SET_DRAW_MODE',
         drawMode: e

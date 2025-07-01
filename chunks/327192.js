@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685), n(539854), n(457542);
+(n.d(t, { Z: () => X }), n(388685), n(539854), n(457542));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -43,7 +43,7 @@ function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function F(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -59,8 +59,8 @@ function F(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -151,25 +151,25 @@ function z(e) {
         q = (0, x.rR)(o.type),
         X = _.Z.get(q);
     r.useEffect(() => {
-        b(o.friendSync), S(o.visibility), I(o.metadataVisibility), y(o.showActivity);
+        (b(o.friendSync), S(o.visibility), I(o.metadataVisibility), y(o.showActivity));
     }, [o]);
-    let Q = {
+    let J = {
             inProgressVisibility: A,
             inProgressMetadataVisibility: M
         },
-        J = r.useRef(Q);
-    r.useEffect(() => {
-        J.current = Q;
+        Q = r.useRef(J);
+    (r.useEffect(() => {
+        Q.current = J;
     }),
         r.useEffect(() => {
             if (!1 === o.verified) return;
-            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
-            null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (I(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null));
-        }, [o]);
+            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = Q.current;
+            (null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (I(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null)));
+        }, [o]));
     function $() {
         let e = _.Z.get(o.type),
             t = U.intl.format(U.t.VgqIPj, { provider: e.name });
-        (0, D.Z)(o) &&
+        ((0, D.Z)(o) &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     t,
@@ -193,7 +193,7 @@ function z(e) {
                         n
                     )
                 )
-            );
+            ));
     }
     return (0, i.jsxs)('div', {
         className: V.connection,
@@ -351,7 +351,7 @@ function z(e) {
                 if (null == r || 0 === r.length)
                     if (!0 !== _.Z.get(e.type).hasMetadata) return null;
                     else
-                        (r = [
+                        ((r = [
                             (0, i.jsx)(
                                 u.IGR,
                                 {
@@ -370,7 +370,7 @@ function z(e) {
                                 'label'
                             )
                         ]),
-                            (a = U.intl.string(U.t['LVh3//']));
+                            (a = U.intl.string(U.t['LVh3//'])));
                 return (
                     l && (a = U.intl.string(U.t.i4jeWV)),
                     r.push(
@@ -386,12 +386,12 @@ function z(e) {
                                 onClick: l
                                     ? void 0
                                     : () => {
-                                          Y(!0),
+                                          (Y(!0),
                                               g.Z.refresh(e.type, e.id).finally(() => {
                                                   setTimeout(() => {
-                                                      W.push(e.id), K(W), Y(!1);
+                                                      (W.push(e.id), K(W), Y(!1));
                                                   }, 2000);
-                                              });
+                                              }));
                                       },
                                 children: a
                             },
@@ -410,7 +410,7 @@ function z(e) {
                     hideBorder: !0,
                     value: h,
                     onChange: function (e) {
-                        b(e), g.Z.setFriendSync(o.type, o.id, e);
+                        (b(e), g.Z.setFriendSync(o.type, o.id, e));
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -423,7 +423,7 @@ function z(e) {
                     hideBorder: !0,
                     value: N,
                     onChange: function (e) {
-                        y(e), g.Z.setShowActivity(o.type, o.id, e);
+                        (y(e), g.Z.setShowActivity(o.type, o.id, e));
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -439,14 +439,14 @@ function z(e) {
                         let { verified: t } = o,
                             n = +!!e;
                         if (e && !t) {
-                            G(n),
+                            (G(n),
                                 (0, j.Z)({
                                     platformType: o.type,
                                     location: 'User Settings'
-                                });
+                                }));
                             return;
                         }
-                        I(n), g.Z.setMetadataVisibility(o.type, o.id, n);
+                        (I(n), g.Z.setMetadataVisibility(o.type, o.id, n));
                     },
                     disabled: 1 !== O || null == o.metadata,
                     children: (0, i.jsx)(u.Text, {
@@ -467,14 +467,14 @@ function z(e) {
                                 let { verified: t } = o,
                                     n = +!!e;
                                 if (e && !t) {
-                                    R(n),
+                                    (R(n),
                                         (0, j.Z)({
                                             platformType: o.type,
                                             location: 'User Settings'
-                                        });
+                                        }));
                                     return;
                                 }
-                                S(n), g.Z.setVisibility(o.type, o.id, n);
+                                (S(n), g.Z.setVisibility(o.type, o.id, n));
                             },
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
@@ -552,12 +552,12 @@ function Y() {
 }
 function W(e) {
     let t = _.Z.get(e);
-    (0, j.Z)({ platformType: t.type }),
+    ((0, j.Z)({ platformType: t.type }),
         A.default.track(L.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',
             platform_type: t.type
-        });
+        }));
 }
 function K() {
     function e() {

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ }), n(539854), n(388685), n(953529);
+(n.d(t, { Z: () => _ }), n(539854), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(392711),
-    a = n.n(s),
+    a = n(392711),
+    s = n.n(a),
     c = n(714338),
     u = n(585483),
     d = n(981631),
@@ -43,18 +43,18 @@ let f = {
         );
 class m extends i.PureComponent {
     componentDidMount() {
-        this.setState({ animating: !0 }),
+        (this.setState({ animating: !0 }),
             (this._renderSecondaryTimeout = setTimeout(() => {
                 this.setState({ renderSecondary: !0 });
             }, 120)),
             (this._doneTimeout = setTimeout(this.done, 1000)),
-            f.PRIMARY();
+            f.PRIMARY());
     }
     componentDidUpdate(e, t) {
         this.state.renderSecondary && !t.renderSecondary && f.SECONDARY();
     }
     componentWillUnmount() {
-        clearTimeout(this._renderSecondaryTimeout), clearTimeout(this._doneTimeout);
+        (clearTimeout(this._renderSecondaryTimeout), clearTimeout(this._doneTimeout));
     }
     renderPrimary() {
         return (0, r.jsxs)(
@@ -156,9 +156,9 @@ class m extends i.PureComponent {
     }
     render() {
         let { renderSecondary: e, offsetX: t, offsetY: n, animating: i, scale: l } = this.state,
-            s = [this.renderPrimary()];
+            a = [this.renderPrimary()];
         return (
-            e && s.push(this.renderSecondary(t, n)),
+            e && a.push(this.renderSecondary(t, n)),
             (0, r.jsx)('div', {
                 className: o()(h.container, { [h.animate]: i }),
                 style: {
@@ -166,32 +166,32 @@ class m extends i.PureComponent {
                     left: this.props.left,
                     transform: 'scale('.concat(l, ')')
                 },
-                children: s
+                children: a
             })
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, '_renderSecondaryTimeout', null),
             p(this, '_doneTimeout', null),
             p(this, 'state', {
                 animating: !1,
                 renderSecondary: !1,
-                scale: a().random(0.6, 1, !0),
-                offsetX: a().random(0, 140, !1) - 70,
-                offsetY: a().random(0, 140, !1) - 70
+                scale: s().random(0.6, 1, !0),
+                offsetX: s().random(0, 140, !1) - 70,
+                offsetY: s().random(0, 140, !1) - 70
             }),
             p(this, 'done', () => {
                 this.props.onAnimationComplete(this.props.componentId);
-            });
+            }));
     }
 }
 class b extends i.PureComponent {
     componentDidMount() {
-        this.setTimeout(() => {
-            this.setState({ visible: !0 }), u.S.dispatch(d.CkL.SHAKE_APP, { duration: 2400 });
+        (this.setTimeout(() => {
+            (this.setState({ visible: !0 }), u.S.dispatch(d.CkL.SHAKE_APP, { duration: 2400 }));
         }, 1800),
-            this.setTimeout(this.createExplosion, 1800);
+            this.setTimeout(this.createExplosion, 1800));
     }
     componentWillUnmount() {
         for (let e of (c.Z.enable(), (this.children.length = 0), this._timeouts)) clearTimeout(e);
@@ -203,7 +203,7 @@ class b extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, '_timeouts', []),
             p(this, 'children', []),
             p(this, 'state', {
@@ -212,7 +212,7 @@ class b extends i.PureComponent {
             }),
             p(this, 'setTimeout', (e, t) => {
                 let n = setTimeout(e, t);
-                return this._timeouts.push(n), n;
+                return (this._timeouts.push(n), n);
             }),
             p(this, 'removeExplosion', (e) => {
                 let t = this.children,
@@ -221,7 +221,7 @@ class b extends i.PureComponent {
                         let n = t.props;
                         return null != n.componentId && n.componentId === e;
                     });
-                n >= 0 && t.splice(n, 1), this.forceUpdate();
+                (n >= 0 && t.splice(n, 1), this.forceUpdate());
             }),
             p(this, 'createExplosion', () => {
                 let e = this.children,
@@ -229,28 +229,28 @@ class b extends i.PureComponent {
                     n = (window.innerHeight / 2) >> 0;
                 if (this.state.explosions < 8) {
                     let i = 'expl-'.concat(this.state.explosions);
-                    e.push(
+                    (e.push(
                         (0, r.jsx)(
                             m,
                             {
                                 componentId: i,
-                                top: a().random(n - 100, n + 100, !1),
-                                left: a().random(t - 200, t + 200, !1),
+                                top: s().random(n - 100, n + 100, !1),
+                                left: s().random(t - 200, t + 200, !1),
                                 onAnimationComplete: this.removeExplosion
                             },
                             i
                         )
                     ),
                         this.setTimeout(this.createExplosion, 240),
-                        this.setState({ explosions: this.state.explosions + 1 });
+                        this.setState({ explosions: this.state.explosions + 1 }));
                 } else this.setTimeout(this.addSymbol, 750);
             }),
             p(this, 'addSymbol', () => {
-                (this.children = [(0, r.jsx)(g, {}, 'symbol')]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3000);
+                ((this.children = [(0, r.jsx)(g, {}, 'symbol')]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3000));
             }),
             p(this, 'delayedClose', () => {
                 this.props.handleDemonClose();
-            });
+            }));
     }
 }
 let _ = b;

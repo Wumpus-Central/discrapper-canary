@@ -31,7 +31,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -59,26 +59,26 @@ function T() {
 }
 let S = {
     initBasic() {
-        m.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(m), b.addListener(this.handleSystemColorPreferencesChanged), y.addListener(this.handleSystemColorPreferencesChanged), O.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), g.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
+        (m.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(m), b.addListener(this.handleSystemColorPreferencesChanged), y.addListener(this.handleSystemColorPreferencesChanged), O.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), g.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged());
     },
     init() {
-        this.initBasic(),
+        (this.initBasic(),
             a.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
                 l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: d.Z.colorblindMode });
             }),
             a.Z.subscribe('ACCESSIBILITY_SET_SATURATION', (e) => {
                 l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { saturation_level: e.saturation });
-            });
+            }));
     },
     maybeShowKeyboardNavigationExplainerModal() {
-        (v = Math.max(v - 1, 0)),
+        ((v = Math.max(v - 1, 0)),
             I() ||
                 d.Z.keyboardNavigationExplainerModalSeen ||
                 0 !== v ||
                 (0, i.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e('6380'), n.e('91081')]).then(n.bind(n, 461964));
                     return (t) => (0, r.jsx)(e, h({}, t));
-                });
+                }));
     },
     handleSystemPrefersReducedMotionChanged(e) {
         a.Z.wait(() => {
@@ -90,14 +90,14 @@ let S = {
         b.matches ? (e = _.zd.DARK) : y.matches && (e = _.zd.LIGHT);
         let t = (!c.isPlatformEmbedded || T()) && O.matches ? 'active' : 'none';
         a.Z.wait(() => {
-            o.Q_(e), u.Ej(t);
+            (o.Q_(e), u.Ej(t));
         });
     },
     handleSystemPrefersContrastChanged() {
         let e = 'no-preference';
-        g.matches ? (e = 'more') : E.matches && (e = 'less'),
+        (g.matches ? (e = 'more') : E.matches && (e = 'less'),
             a.Z.wait(() => {
                 u.TX(e);
-            });
+            }));
     }
 };

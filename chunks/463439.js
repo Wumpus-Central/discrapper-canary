@@ -1,4 +1,4 @@
-n.d(e, { Z: () => m }), n(388685);
+(n.d(e, { Z: () => m }), n(388685));
 var r = n(255367),
     s = n(73800),
     i = n(481060),
@@ -26,14 +26,14 @@ function m(t) {
         k = (0, _.q)(n),
         M = s.useMemo(() => (S ? 0 : O ? 2 : 1), [S, O]),
         v = () => {
-            T(!0),
+            (T(!0),
                 C(h.NM.USER_TAKEOVER_MODAL_BLOCK),
                 c.Z.blockUser(e, { location: x.DL }).then(() => {
                     d.Z.showBlockSuccessToast(e, n);
-                });
+                }));
         },
         y = () => {
-            T(!1), c.Z.unblockUser(e, { location: x.DL }), C(h.NM.USER_TAKEOVER_MODAL_UNBLOCK), d.Z.showUnblockSuccessToast(e, n);
+            (T(!1), c.Z.unblockUser(e, { location: x.DL }), C(h.NM.USER_TAKEOVER_MODAL_UNBLOCK), d.Z.showUnblockSuccessToast(e, n));
         },
         z = async () => {
             null != k &&
@@ -41,7 +41,7 @@ function m(t) {
                 await (0, l.J7)(
                     k,
                     () => {
-                        d.Z.showReportSuccessToast(e, n), g();
+                        (d.Z.showReportSuccessToast(e, n), g());
                     },
                     () => {
                         d.Z.showFailedToast();

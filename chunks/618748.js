@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(953529);
+(n.d(t, { Z: () => L }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -140,14 +140,14 @@ function M(e) {
             if (null == e) return;
             o.Z.close();
             let t = { [e.id]: e };
-            (0, d.iD)(n.id, {
+            ((0, d.iD)(n.id, {
                 type: u.z.SERVER_SHOP,
                 roles: t,
                 initialTab: 'role_subscriptions',
                 returnToSection: P.pNK.ROLE_SUBSCRIPTIONS
             }),
                 (0, _.be)(n.id),
-                (0, m.uL)(P.Z5c.CHANNEL(n.id, w.oC.ROLE_SUBSCRIPTIONS));
+                (0, m.uL)(P.Z5c.CHANNEL(n.id, w.oC.ROLE_SUBSCRIPTIONS)));
         };
     if (!j) return (0, r.jsx)(l.$jN, {});
     switch (g) {

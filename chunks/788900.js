@@ -45,13 +45,13 @@ function n(e) {
                 for (let e = 0, t = 0; e < 3; e++)
                     for (let r = +!e, n = 2 * M[e]; r < 3 - e; r++, t++) {
                         let e = Z[r] * n;
-                        (o += x[t] * e), (s += D[t] * e);
+                        ((o += x[t] * e), (s += D[t] * e));
                     }
                 if (v) for (let e = 0, t = 0; e < 5; e++) for (let r = +!e, n = 2 * M[e]; r < 5 - e; r++, t++) c += I[t] * Z[r] * n;
                 let d = n - (2 / 3) * o,
                     O = (3 * n - d + s) / 2,
                     y = O - s;
-                (_[t] = u(0, 255 * i(1, O))), (_[t + 1] = u(0, 255 * i(1, y))), (_[t + 2] = u(0, 255 * i(1, d))), (_[t + 3] = u(0, 255 * i(1, c)));
+                ((_[t] = u(0, 255 * i(1, O))), (_[t + 1] = u(0, 255 * i(1, y))), (_[t + 2] = u(0, 255 * i(1, d))), (_[t + 3] = u(0, 255 * i(1, c))));
             }
         return {
             w: k,
@@ -69,7 +69,7 @@ function n(e) {
         for (let e = 0, o = 0, i = n - 1; e < t; e++, i += n - 1)
             for (l.push(e + 1 < t ? 0 : 1, 255 & n, n >> 8, 255 & ~n, (n >> 8) ^ 255, 0), a = (a + u) % 65521; o < i; o++) {
                 let e = 255 & r[o];
-                l.push(e), (a = (a + (u = (u + e) % 65521)) % 65521);
+                (l.push(e), (a = (a + (u = (u + e) % 65521)) % 65521));
             }
         for (let [e, t] of (l.push(a >> 8, 255 & a, u >> 8, 255 & u, 0, 0, 0, 0, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130),
         [
@@ -77,8 +77,8 @@ function n(e) {
             [37, 41 + o]
         ])) {
             let r = -1;
-            for (let n = e; n < t; n++) (r ^= l[n]), (r = ((r = (r >>> 4) ^ i[15 & r]) >>> 4) ^ i[15 & r]);
-            (r = ~r), (l[t++] = r >>> 24), (l[t++] = (r >> 16) & 255), (l[t++] = (r >> 8) & 255), (l[t++] = 255 & r);
+            for (let n = e; n < t; n++) ((r ^= l[n]), (r = ((r = (r >>> 4) ^ i[15 & r]) >>> 4) ^ i[15 & r]));
+            ((r = ~r), (l[t++] = r >>> 24), (l[t++] = (r >> 16) & 255), (l[t++] = (r >> 8) & 255), (l[t++] = 255 & r));
         }
         return 'data:image/png;base64,' + btoa(String.fromCharCode(...l));
     })(t.w, t.h, t.rgba);

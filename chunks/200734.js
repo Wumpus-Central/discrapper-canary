@@ -22,7 +22,7 @@ function c(e) {
     if (!n) return t;
     var r = n[1],
         i = n[2];
-    return r && (t.tzid = r), (t.dtstart = (0, o.gE)(i)), t;
+    return (r && (t.tzid = r), (t.dtstart = (0, o.gE)(i)), t);
 }
 function u(e) {
     if (!(e = e.replace(/^\s+|\s+$/, '')).length) return null;
@@ -76,7 +76,7 @@ function d(e) {
                     case 'DTSTART':
                     case 'TZID':
                         var d = c(e);
-                        (t.tzid = d.tzid), (t.dtstart = d.dtstart);
+                        ((t.tzid = d.tzid), (t.dtstart = d.dtstart));
                         break;
                     case 'UNTIL':
                         t.until = (0, o.gE)(l);

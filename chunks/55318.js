@@ -15,11 +15,11 @@ var n = r(73800),
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })();
 let s = function (e) {
@@ -35,7 +35,7 @@ let s = function (e) {
                 (t.handleChange = function (e, r) {
                     if (a.LX(e)) {
                         var n = a.jH(e, e.h || t.state.oldHue);
-                        t.setState(n), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, n, r), t.props.onChange && t.props.onChange(n, r);
+                        (t.setState(n), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, n, r), t.props.onChange && t.props.onChange(n, r));
                     }
                 }),
                 (t.handleSwatchHover = function (e, r) {
@@ -68,7 +68,7 @@ let s = function (e) {
                         key: 'render',
                         value: function () {
                             var t = {};
-                            return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), n.createElement(e, i({}, this.props, this.state, { onChange: this.handleChange }, t));
+                            return (this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), n.createElement(e, i({}, this.props, this.state, { onChange: this.handleChange }, t)));
                         }
                     }
                 ],

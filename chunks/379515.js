@@ -1,4 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.mergeClasses = void 0);
+(Object.defineProperty(t, '__esModule', { value: !0 }), (t.mergeClasses = void 0));
 var n = i(r(320403)),
     o = i(r(117806)),
     a =
@@ -22,7 +22,7 @@ var l = (t.mergeClasses = function (e) {
             return (
                 o &&
                     (0, n.default)(o, function (e, t) {
-                        r[t] || (r[t] = {}), (r[t] = a({}, r[t], o[t]));
+                        (r[t] || (r[t] = {}), (r[t] = a({}, r[t], o[t])));
                     }),
                 t
             );

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     B_: () => _,
     Lm: () => c,
     Ol: () => u,
@@ -10,7 +10,7 @@ n.d(t, {
     qu: () => p
 }),
     n(35282),
-    n(415506);
+    n(415506));
 var r = n(654861),
     i = n.n(r);
 function a(e, t, n) {
@@ -69,6 +69,6 @@ class m {
         this.seq = 0;
     }
     constructor() {
-        a(this, 'seq', void 0), (this.seq = 0);
+        (a(this, 'seq', void 0), (this.seq = 0));
     }
 }

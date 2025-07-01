@@ -21,7 +21,7 @@ let b = () =>
             },
             onResetText: h.intl.string(h.t['ETE/oK']),
             onSave: () => {
-                (0, u.PE)(!1), (0, o.Mr3)(f.Pn);
+                ((0, u.PE)(!1), (0, o.Mr3)(f.Pn));
             },
             onSaveText: h.intl.string(h.t['Xt+UaW']),
             onSaveButtonColor: o.Ttl.RED

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -31,7 +31,7 @@ class f extends a.Z {
         l.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'handleVoiceStateUpdates', (e) => {
                 var t;
                 let { voiceStates: l } = e,
@@ -60,7 +60,7 @@ class f extends a.Z {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -68,7 +68,7 @@ class f extends a.Z {
                                                 )),
                                                 r.forEach(function (t) {
                                                     p(e, t, n[t]);
-                                                });
+                                                }));
                                         }
                                         return e;
                                     })({}, t)),
@@ -95,7 +95,7 @@ class f extends a.Z {
                         }
                     );
                 }
-            });
+            }));
     }
 }
 let g = new f();

@@ -29,7 +29,7 @@ let d = () => {
         if (!d()) return;
         let o = null == e.id,
             { shouldPlay: l, failureReason: c } = p(n);
-        a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
+        (a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
             emoji_type: o ? s.aK.Unicode : s.aK.UserCreated,
             will_play: l,
             failure_reason: c,
@@ -40,7 +40,7 @@ let d = () => {
                     type: 'POTIONS_TRIGGER_MESSAGE_CONFETTI',
                     emoji: e,
                     boundingRect: t
-                });
+                }));
     },
     _ = (e, t) => {
         let n = l.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti;
@@ -108,7 +108,7 @@ let d = () => {
         let l = (0, c.Eq)(e),
             f = (null == l || null == (t = l.emoji) ? void 0 : t[0].id) == null,
             { shouldPlay: p, failureReason: h } = _(e, i);
-        a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
+        (a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
             emoji_type: f ? s.aK.Unicode : s.aK.UserCreated,
             will_play: p,
             failure_reason: h,
@@ -122,5 +122,5 @@ let d = () => {
                         emoji: e,
                         boundingRect: n
                     });
-                });
+                }));
     };

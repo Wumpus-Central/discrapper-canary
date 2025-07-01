@@ -10,7 +10,7 @@ function l(e) {
         i = r.useContext(o.mq),
         l = r.useCallback(
             function (e) {
-                (0, s.k$)(n, e), (0, s.DL)(i, e);
+                ((0, s.k$)(n, e), (0, s.DL)(i, e));
             },
             [n, i]
         );

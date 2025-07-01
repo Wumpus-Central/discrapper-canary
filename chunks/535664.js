@@ -4,14 +4,14 @@ n.d(t, {
 });
 var i = n(570140);
 let r = (e, t) => {
-        i.Z.dispatch({
+        (i.Z.dispatch({
             type: 'SET_PREMIUM_TYPE_OVERRIDE',
             premiumType: e
         }),
             i.Z.dispatch({
                 type: 'UPDATE_CLIENT_PREMIUM_TYPE',
                 user: t
-            });
+            }));
     },
     s = (e) => {
         i.Z.dispatch({

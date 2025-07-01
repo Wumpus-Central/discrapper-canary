@@ -9,6 +9,5 @@ e.exports = {
     progressBackground: 'progressBackground__60d39',
     progressBar: 'progressBar__60d39',
     labelWrapper: 'labelWrapper__60d39',
-    requirement: 'requirement__60d39',
-    bold: 'bold__60d39'
+    requirement: 'requirement__60d39'
 };

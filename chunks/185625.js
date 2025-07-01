@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     B0: () => O,
     Jj: () => R,
     Lo: () => y,
@@ -17,7 +17,7 @@ n.d(t, {
 }),
     n(415506),
     n(467055),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(512722),
     a = n.n(i),
@@ -47,7 +47,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -63,11 +63,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -207,15 +207,15 @@ async function P(e) {
 }
 function w(e) {
     let t = e.name;
-    return a()(Object.values(f.BM).includes(t), 'Invalid report type '.concat(e.name)), t;
+    return (a()(Object.values(f.BM).includes(t), 'Invalid report type '.concat(e.name)), t);
 }
 function D(e) {
     let t = e.name;
-    return a()(Object.values(f.b).includes(t), 'Invalid report type '.concat(e.name)), t;
+    return (a()(Object.values(f.b).includes(t), 'Invalid report type '.concat(e.name)), t);
 }
 function L(e) {
     let t = e.name;
-    return a()(Object.values(f.xw).includes(t), 'Invalid report type '.concat(e.name)), t;
+    return (a()(Object.values(f.xw).includes(t), 'Invalid report type '.concat(e.name)), t);
 }
 function x(e) {
     if ((a()(o.s.REPORT_TO_MOD.has(e.name), 'Invalid report type '.concat(e.name)), e.name === f.xw.MESSAGE)) return _.ANM.SUBMIT_MODERATOR_MESSAGE_REPORT(e.record.channel_id, e.record.id);
@@ -396,7 +396,7 @@ function G(e, t, n, r, i) {
     );
 }
 var B = (function (e) {
-    return (e.SETTINGS_UPSELLS_VIEWED = 'SETTINGS_UPSELLS_VIEWED'), (e.SETTINGS_UPSELLS_APPLY_CLICKED = 'SETTINGS_UPSELLS_APPLY_CLICKED'), (e.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED = 'SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED'), e;
+    return ((e.SETTINGS_UPSELLS_VIEWED = 'SETTINGS_UPSELLS_VIEWED'), (e.SETTINGS_UPSELLS_APPLY_CLICKED = 'SETTINGS_UPSELLS_APPLY_CLICKED'), (e.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED = 'SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED'), e);
 })({});
 function V(e, t, n) {
     return r.useCallback(

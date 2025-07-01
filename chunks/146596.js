@@ -75,12 +75,12 @@ function c(e) {
                                                 r,
                                                 i = {},
                                                 l = Object.keys(e);
-                                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                             return i;
                                         })(e, t);
                                     if (Object.getOwnPropertySymbols) {
                                         var l = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                     }
                                 }
                             })(e, ['interval_start_timestamp', 'pct_retained']),

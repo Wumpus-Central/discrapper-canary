@@ -1,4 +1,4 @@
-a.d(t, { default: () => b }), a(388685);
+(a.d(t, { default: () => b }), a(388685));
 var n = a(255367),
     s = a(73800),
     o = a(481060),
@@ -41,7 +41,7 @@ function b(e) {
                     emojiKind: 'thumb',
                     selectedRating: t,
                     onChangeRating: function (t) {
-                        b(t),
+                        (b(t),
                             null != t &&
                                 ((0, c.Z)({ rating: t }),
                                 e.onClose(),
@@ -54,7 +54,7 @@ function b(e) {
                                                 for (var t = 1; t < arguments.length; t++) {
                                                     var a = null != arguments[t] ? arguments[t] : {},
                                                         n = Object.keys(a);
-                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                                         (n = n.concat(
                                                             Object.getOwnPropertySymbols(a).filter(function (e) {
                                                                 return Object.getOwnPropertyDescriptor(a, e).enumerable;
@@ -62,7 +62,7 @@ function b(e) {
                                                         )),
                                                         n.forEach(function (t) {
                                                             var n;
-                                                            (n = a[t]),
+                                                            ((n = a[t]),
                                                                 t in e
                                                                     ? Object.defineProperty(e, t, {
                                                                           value: n,
@@ -70,13 +70,13 @@ function b(e) {
                                                                           configurable: !0,
                                                                           writable: !0
                                                                       })
-                                                                    : (e[t] = n);
-                                                        });
+                                                                    : (e[t] = n));
+                                                        }));
                                                 }
                                                 return e;
                                             })({ body: u.intl.string(u.t.IuPjpK) }, t)
                                         );
-                                }));
+                                })));
                     }
                 })
             }),

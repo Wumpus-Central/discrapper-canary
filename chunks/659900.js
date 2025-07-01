@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(583741);
+(n.d(t, { Z: () => T }), n(388685), n(583741));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -28,7 +28,7 @@ function T(e) {
         [l, a] = r.useState(null),
         [c, d] = r.useState(null),
         u = (0, v.Z)(e.code);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         !(async function () {
             let e = f.default.getCurrentUser();
             if (null == e)
@@ -40,7 +40,7 @@ function T(e) {
             null != e && s(E.intl.formatToPlainString(u.defaultName, { username: e.username }));
         })();
     }, [u.defaultName]),
-        (0, j.Z)(e);
+        (0, j.Z)(e));
     let x = (0, i.jsxs)(i.Fragment, {
             children: [
                 t ? (0, i.jsx)(N.Z, { guildTemplate: e }) : null,
@@ -110,7 +110,7 @@ function T(e) {
         handleSubmit: () => {
             p.Z.acceptGuildTemplate(e.code, n, l)
                 .then(() => {
-                    (0, o.pTH)(), (0, m.Ou)();
+                    ((0, o.pTH)(), (0, m.Ou)());
                 })
                 .catch((e) => d(e));
         }

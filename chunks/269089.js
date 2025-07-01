@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(570140),
     l = n(765250),
@@ -31,10 +31,10 @@ let p = (0, o.Un)({
     });
 class m extends a.Z {
     _initialize() {
-        i.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.subscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.initializeStyleSheetObserver();
+        (i.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.subscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.initializeStyleSheetObserver());
     }
     _terminate() {
-        i.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.unsubscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.terminateStyleSheetObserver();
+        (i.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.unsubscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.terminateStyleSheetObserver());
     }
     handleOpenChannelCallPopout(e) {
         let { channel: t } = e;
@@ -57,7 +57,7 @@ class m extends a.Z {
         );
     }
     initializeStyleSheetObserver() {
-        (this._observer = new MutationObserver(function (e) {
+        ((this._observer = new MutationObserver(function (e) {
             for (let t of e)
                 if ('childList' === t.type) {
                     for (let e of t.addedNodes)
@@ -68,7 +68,7 @@ class m extends a.Z {
                         }
                 }
         })),
-            this._observer.observe(document.head, { childList: !0 });
+            this._observer.observe(document.head, { childList: !0 }));
     }
     terminateStyleSheetObserver() {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
@@ -80,15 +80,15 @@ class m extends a.Z {
         });
     }
     handleOpenActivityPopout() {
-        (0, l.te)(d.$S, s.Z.getDefaultLayout(d.$S, d.HN), d.HN),
+        ((0, l.te)(d.$S, s.Z.getDefaultLayout(d.$S, d.HN), d.HN),
             c.bA(u.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(g, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480
-            });
+            }));
     }
     constructor(...e) {
         var t;
-        super(...e),
+        (super(...e),
             (t = '_observer') in this
                 ? Object.defineProperty(this, t, {
                       value: null,
@@ -96,7 +96,7 @@ class m extends a.Z {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = null);
+                : (this[t] = null));
     }
 }
 let b = new m();

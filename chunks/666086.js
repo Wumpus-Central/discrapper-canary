@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(392711),
     i = n(106351),
     a = n(904245),
@@ -81,11 +81,11 @@ class O extends o.Z {
         }
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             E(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
                 CHANNEL_SELECT: (e) => this.onChannelSelect(e)
-            });
+            }));
     }
 }
 let v = new O();

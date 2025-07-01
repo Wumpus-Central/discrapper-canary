@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     FT: () => Y,
     L3: () => W,
     ZP: () => q
 }),
     n(388685),
-    n(583741);
+    n(583741));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -48,7 +48,7 @@ function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -56,7 +56,7 @@ function F(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -64,8 +64,8 @@ function F(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -128,13 +128,13 @@ let z = d().throttle(f.OQ, 1000),
                             onBlur: () => {
                                 if (o !== n.name) {
                                     let e = w.ZP.sanitizeEmojiName(o);
-                                    e !== n.name &&
+                                    (e !== n.name &&
                                         (0, f.dv)({
                                             guildId: t,
                                             emojiId: n.id,
                                             name: e
                                         }),
-                                        c(e);
+                                        c(e));
                                 }
                             },
                             onChange: (e) => {
@@ -383,7 +383,7 @@ let z = d().throttle(f.OQ, 1000),
                     location: 'guild_settings',
                     autoTrackExposure: !0
                 }) && H > 0;
-        i.useEffect(() => {
+        (i.useEffect(() => {
             h && J();
         }, [h]),
             i.useEffect(() => {
@@ -391,7 +391,7 @@ let z = d().throttle(f.OQ, 1000),
             }, [e.id]),
             i.useEffect(() => {
                 null != f && f < c && z(e.id);
-            }, [c, f, e.id]);
+            }, [c, f, e.id]));
         let Y = i.useCallback(
                 () =>
                     (0, O.i)({
@@ -426,13 +426,13 @@ let z = d().throttle(f.OQ, 1000),
                 });
             },
             Q = async (n) => {
-                l((0, u.Z)()),
+                (l((0, u.Z)()),
                     T.default.track(L.rMx.EMOJI_UPLOAD_STARTED, {
                         guild_id: e.id,
                         upload_id: t
                     }),
                     await (0, I._j)(n, q),
-                    x(!0);
+                    x(!0));
             },
             J = () => {
                 null !== w.current && ((0, g.Mr3)(w.current), (w.current = null));
@@ -487,11 +487,11 @@ let z = d().throttle(f.OQ, 1000),
                                                   size: g.zxk.Sizes.MEDIUM,
                                                   onClick: () => {
                                                       let t = (0, u.Z)();
-                                                      l(t),
+                                                      (l(t),
                                                           T.default.track(L.rMx.EMOJI_UPLOAD_STARTED, {
                                                               guild_id: e.id,
                                                               upload_id: t
-                                                          });
+                                                          }));
                                                   },
                                                   disabled: y || 0 === H || !a,
                                                   submitting: y,

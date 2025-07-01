@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { createStringInterpolator: () => _ });
+(n.r(t), n.d(t, { createStringInterpolator: () => _ }));
 var r,
     i = n(109393),
     a = n(414776),

@@ -22,11 +22,11 @@ function f(e) {
         tooltip: !g || n ? h.intl.string(h.t.YneDgI) : b ? h.intl.string(h.t.niD64e) : h.intl.string(h.t['+FAsHh']),
         icon: l.z65,
         onClick: () => {
-            (0, a.TY)({
+            ((0, a.TY)({
                 displayProfile: m,
                 isProfileOpen: !b
             }),
-                o.Z.toggleUserProfileSidebarSection();
+                o.Z.toggleUserProfileSidebarSection());
         },
         selected: b && g && !n
     });

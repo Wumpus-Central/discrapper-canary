@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     Y0: () => c.Y0,
     hz: () => c.hz,
     mz: () => c.mz,
     u_: () => u,
     xB: () => c.xB
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(97613),
     a = n.n(i),
@@ -46,7 +46,7 @@ function u(e) {
         }),
         r.useLayoutEffect(() => {
             let { contextKey: e, modalKey: r, onCloseCallback: i } = _.current;
-            d.current || (0, s.o)(r, t, n, i, e), (d.current = !1);
+            (d.current || (0, s.o)(r, t, n, i, e), (d.current = !1));
         }, [t, n]),
         null
     );

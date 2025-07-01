@@ -1,4 +1,4 @@
-n.d(t, { K: () => c }), n(539854);
+(n.d(t, { K: () => c }), n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(379649),
@@ -19,7 +19,7 @@ function l(e, t, n) {
 }
 class c {
     reset(e) {
-        (this.current = null), (this.history = []), null != e && this.update(e);
+        ((this.current = null), (this.history = []), null != e && this.update(e));
     }
     update(e) {
         this.current !== e &&
@@ -57,9 +57,9 @@ class c {
                     durationMs: e - t.startTime
                 };
             };
-        return t.push(n()), t;
+        return (t.push(n()), t);
     }
     constructor(e) {
-        l(this, 'current', null), l(this, 'history', []), null != e && this.update(e);
+        (l(this, 'current', null), l(this, 'history', []), null != e && this.update(e));
     }
 }

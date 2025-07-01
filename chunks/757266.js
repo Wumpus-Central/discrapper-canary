@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -21,7 +21,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,7 +38,7 @@ function d(e) {
     let { application: t } = e;
     if (null == t.id) return !1;
     let n = t.id;
-    null == u[n] &&
+    (null == u[n] &&
         (u[n] = {
             count: 0,
             id: t.id,
@@ -47,7 +47,7 @@ function d(e) {
             coverImage: t.coverImage,
             authenticated: !1
         }),
-        u[n].count++;
+        u[n].count++);
 }
 function f(e) {
     let { application: t } = e;

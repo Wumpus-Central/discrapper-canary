@@ -20,7 +20,7 @@ function f() {
                 (c.Te(),
                 o.Z.userDataCache.getCached().then((e) => {
                     if (null == e) {
-                        c.kb(),
+                        (c.kb(),
                             s.default.track(
                                 u.rMx.DOMAIN_MIGRATED,
                                 {
@@ -28,7 +28,7 @@ function f() {
                                     has_data: !1
                                 },
                                 { flush: !0 }
-                            );
+                            ));
                         return;
                     }
                     let t = Object.keys(e),
@@ -36,7 +36,7 @@ function f() {
                         r = null != e.token,
                         l = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
                         f = null == l || null == d(l) || d(l) <= d(a.K.get('RTCRegionStore'));
-                    n &&
+                    (n &&
                         r &&
                         !f &&
                         (a.K.clear(),
@@ -57,7 +57,7 @@ function f() {
                         ),
                         a.K.set(i.SV, !0),
                         o.Z.userDataCache.deleteCache(),
-                        c.Pg();
+                        c.Pg());
                 }));
         }, []),
         null

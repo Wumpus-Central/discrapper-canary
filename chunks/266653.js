@@ -1,4 +1,4 @@
-s.d(t, { default: () => x }), s(388685);
+(s.d(t, { default: () => x }), s(388685));
 var n = s(255367),
     r = s(73800),
     o = s(990547),
@@ -27,19 +27,19 @@ function x(e) {
         [w, k] = r.useState(!1),
         [R, P] = r.useState(f.lds),
         [A, y] = r.useState(null);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         if (w)
-            y(
+            (y(
                 (0, n.jsx)(a.Wn, {
                     messageType: a.QYI.ERROR,
                     className: g.infoMessage,
                     children: m.intl.format(m.t.HAuRSE, { maxNumAccounts: p.$H })
                 })
             ),
-                P(f.lds);
+                P(f.lds));
         else if (null != R) {
             let e = c.default.getUser(R);
-            null != e &&
+            (null != e &&
                 y(
                     (0, n.jsx)(a.Wn, {
                         messageType: a.QYI.POSITIVE,
@@ -47,7 +47,7 @@ function x(e) {
                         children: m.intl.format(m.t['09qidX'], { username: e.username })
                     })
                 ),
-                k(!1);
+                k(!1));
         }
     }, [R, w]),
         r.useEffect(() => {
@@ -56,7 +56,7 @@ function x(e) {
         (0, l.Z)({
             type: o.ImpressionTypes.MODAL,
             name: 0 === x ? o.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : o.ImpressionNames.USER_LOGIN
-        });
+        }));
     let N = null;
     return (
         0 === x
@@ -95,7 +95,7 @@ function x(e) {
                                               s();
                                               break;
                                           case h.W.REMOVED:
-                                              t === (null == C ? void 0 : C.id) && s(), P(t);
+                                              (t === (null == C ? void 0 : C.id) && s(), P(t));
                                       }
                                   }
                               }),

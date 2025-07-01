@@ -18,7 +18,7 @@ var r = n(512722),
     f = n(51144);
 function _(e, t) {
     let n = p(e);
-    return i()(null != n, 'Result cannot be null because the message is not null'), null != t ? t : n;
+    return (i()(null != n, 'Result cannot be null because the message is not null'), null != t ? t : n);
 }
 function p(e) {
     var t;
@@ -59,7 +59,7 @@ function h(e) {
 }
 function m(e, t) {
     let n = g(e, t);
-    return i()(null != n, 'Result cannot be null because user and channel are not null'), n;
+    return (i()(null != n, 'Result cannot be null because user and channel are not null'), n);
 }
 function g(e, t) {
     let n = null == e ? void 0 : e.id,

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     FJ: () => en,
     RE: () => G,
     T5: () => V,
@@ -26,7 +26,7 @@ n.d(t, {
     n(704826),
     n(997841),
     n(642613),
-    n(392711);
+    n(392711));
 var r,
     i,
     l = n(729594),
@@ -60,7 +60,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -68,7 +68,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -76,8 +76,8 @@ function x(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -111,7 +111,7 @@ let w = null != (i = null == (r = T.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT))
     k = +C.Z.Millis.MINUTE,
     M = {};
 function U(e) {
-    return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e;
+    return ('customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e);
 }
 function G(e) {
     return /^http/.test(e)
@@ -133,11 +133,11 @@ function V(e, t) {
         [Z.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    O.Z.whenReady(e.id, () => t()),
+                    (O.Z.whenReady(e.id, () => t()),
                         c.Z.fetchMessages({
                             channelId: e.id,
                             limit: Z.AQB
-                        });
+                        }));
                 })
             ),
         Promise.all(n).then(() => {
@@ -287,7 +287,7 @@ async function J(e, t, n) {
 }
 async function $(e, t) {
     let n = M[e];
-    null == n && ((n = new s.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process();
+    (null == n && ((n = new s.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process());
 }
 function ee(e, t) {
     null == t && (e.authorization.scopes = [A.lH]);

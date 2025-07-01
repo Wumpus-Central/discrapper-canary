@@ -62,7 +62,7 @@ let f = function (e) {
                           className: g.ctaButton,
                           fullWidth: !0,
                           onClick: () => {
-                              i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, a.q)(n.author, b.id);
+                              (i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, a.q)(n.author, b.id));
                           },
                           children: m.intl.format(m.t['+xsVS0'], { username: n.author.username })
                       })

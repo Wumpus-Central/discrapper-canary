@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(668757),
     i = n(147913),
     a = n(818083),
@@ -35,7 +35,7 @@ function d() {
         null === c || !u(c, e))
     ) {
         let n = Array.from(e);
-        t.flushToCache(n), (c = e);
+        (t.flushToCache(n), (c = e));
     }
 }
 function f() {
@@ -63,11 +63,11 @@ function f() {
 }
 class _ extends i.Z {
     _initialize() {
-        f(), d();
+        (f(), d());
     }
     _terminate() {}
     constructor(...e) {
-        super(...e), l(this, 'actions', {}), l(this, 'stores', new Map().set(o.Z, d));
+        (super(...e), l(this, 'actions', {}), l(this, 'stores', new Map().set(o.Z, d)));
     }
 }
 let p = new _();

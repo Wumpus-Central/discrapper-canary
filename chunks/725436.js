@@ -6,7 +6,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -14,7 +14,7 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -22,12 +22,12 @@ function a(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function c(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -45,13 +45,13 @@ function c(e, t) {
         e
     );
 }
-let s = c(a({}, r.Z.guildEventRules.link), {
+let c = s(a({}, r.Z.guildEventRules.link), {
         react: (0, i.Z)({
             enableBuildOverrides: !1,
             mustConfirmExternalLink: !0
         }).react
     }),
-    o = c(a({}, r.Z.guildEventRules.channelMention), {
+    o = s(a({}, r.Z.guildEventRules.channelMention), {
         react: (0, l.Z)({
             enableBuildOverrides: !1,
             shouldCloseDefaultModals: !0,
@@ -59,8 +59,8 @@ let s = c(a({}, r.Z.guildEventRules.link), {
         }).react
     }),
     u = r.Z.reactParserFor(
-        c(a({}, r.Z.guildEventRules), {
-            link: s,
+        s(a({}, r.Z.guildEventRules), {
+            link: c,
             channelMention: o
         })
     );

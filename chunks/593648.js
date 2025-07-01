@@ -1,4 +1,4 @@
-n.d(t, { Z: () => es }), n(539854), n(388685);
+(n.d(t, { Z: () => es }), n(539854), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -60,7 +60,7 @@ function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -68,7 +68,7 @@ function K(e) {
             )),
             i.forEach(function (t) {
                 W(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -120,17 +120,17 @@ function X(e) {
         })
     });
 }
-function Q(e) {
+function J(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: s } = e,
         a = r.useRef(null),
         o = (0, S.p)(),
         c = r.useCallback((e, t) => {
-            t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = (0, R.GN)(e));
+            (t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = (0, R.GN)(e)));
         }, []),
         d = r.useCallback(
             (e, n) => {
                 let i = t.filter((t) => t !== e);
-                n || i.push(e), g.default.setDisabledSounds(i);
+                (n || i.push(e), g.default.setDisabledSounds(i));
             },
             [t]
         );
@@ -280,7 +280,7 @@ function Q(e) {
         })
     });
 }
-function J() {
+function Q() {
     let e = (0, c.e7)([j.Z], () => j.Z.getGuildAlertSettings()),
         [t, n] = r.useState(null),
         s = L.default.keys(e).map((t) => {
@@ -456,9 +456,9 @@ class $ extends r.PureComponent {
                     })
                 }),
                 this.renderTTS(),
-                (0, i.jsx)(J, {}),
+                (0, i.jsx)(Q, {}),
                 (0, i.jsx)(u.xJW, {
-                    children: (0, i.jsx)(Q, {
+                    children: (0, i.jsx)(J, {
                         disabledSounds: s,
                         disableAllSounds: a,
                         notifyMessagesInSelectedChannel: c
@@ -469,7 +469,7 @@ class $ extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             W(this, 'handleToggleShowUnreadBadge', () => {
                 g.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
@@ -513,7 +513,7 @@ class $ extends r.PureComponent {
                         (0, i.jsx)(u.$i$, { className: l()(Y.marginTop40, Y.marginBottom40) })
                     ]
                 });
-            });
+            }));
     }
 }
 let ee = (0, b.B)({
@@ -633,7 +633,7 @@ function en() {
 async function ei(e) {
     e(!0);
     let t = await (0, v.Tn)();
-    0 === t.length
+    (0 === t.length
         ? await (0, I.oL)()
         : m.Z.show({
               title: H.intl.string(H.t['cY+Ooa']),
@@ -642,7 +642,7 @@ async function ei(e) {
               confirmText: H.intl.string(H.t.Rm96T0),
               onConfirm: I.oL
           }),
-        e(!1);
+        e(!1));
 }
 function er(e) {
     let t = (0, S.p)();

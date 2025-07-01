@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(997841);
+(n.d(t, { Z: () => h }), n(388685), n(997841));
 var r = n(544891),
     i = n(780384),
     a = n(570140),
@@ -23,19 +23,19 @@ let h = {
     },
     updateGuildNotificationSettings(e, t, n, r) {
         let i = (0, c.GA)(e);
-        o.Z.saveUserGuildSettings(e, t),
+        (o.Z.saveUserGuildSettings(e, t),
             a.Z.dispatch({
                 type: 'USER_GUILD_SETTINGS_GUILD_UPDATE',
                 guildId: e,
                 settings: t
             }),
-            (0, c.Wq)(e, t, i, n, r);
+            (0, c.Wq)(e, t, i, n, r));
     },
     updateGuildAndChannelNotificationSettings(e, t, n, r) {
         let i = u.default.keys(t.channel_overrides),
             s = (0, c.GA)(e),
             l = (0, c.wK)(e, i);
-        o.Z.saveUserGuildSettings(e, t),
+        (o.Z.saveUserGuildSettings(e, t),
             a.Z.dispatch({
                 type: 'USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE',
                 guildId: e,
@@ -52,27 +52,27 @@ let h = {
                     label: n,
                     location: r
                 });
-            });
+            }));
     },
     updateGuildNotificationSettingsBulk(e, t, n) {
         let r = u.default.keys(e),
             i = (0, c.rU)(r);
-        o.Z.saveUserGuildSettingsBulk(e),
+        (o.Z.saveUserGuildSettingsBulk(e),
             u.default.entries(e).forEach((e) => {
                 let [r, o] = e,
                     s = i.get(r);
-                a.Z.dispatch({
+                (a.Z.dispatch({
                     type: 'USER_GUILD_SETTINGS_GUILD_UPDATE',
                     guildId: r,
                     settings: o
                 }),
-                    (0, c.Wq)(r, o, s, t, n);
-            });
+                    (0, c.Wq)(r, o, s, t, n));
+            }));
     },
     updateChannelOverrideSettings(e, t, n, r, s) {
         let l = (0, c.I)(e, t),
             u = { channel_overrides: { [t]: n } };
-        o.Z.saveUserGuildSettings(e, u),
+        (o.Z.saveUserGuildSettings(e, u),
             a.Z.dispatch({
                 type: 'USER_GUILD_SETTINGS_CHANNEL_UPDATE',
                 guildId: e,
@@ -87,13 +87,13 @@ let h = {
                 previous: l,
                 label: r,
                 location: s
-            });
+            }));
     },
     updateChannelOverrideSettingsBulk(e, t, n, r) {
         let i = u.default.keys(t),
             s = { channel_overrides: t },
             l = (0, c.wK)(e, i);
-        o.Z.saveUserGuildSettings(e, s),
+        (o.Z.saveUserGuildSettings(e, s),
             a.Z.dispatch({
                 type: 'USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK',
                 guildId: e,
@@ -108,12 +108,12 @@ let h = {
                     label: n,
                     location: r
                 })
-            );
+            ));
     },
     updateAppDMOverrideSettings(e, t, n, r, s) {
         let l = (0, c.I)(e, t),
             u = { channel_overrides: { [t]: r } };
-        o.Z.saveUserGuildSettings(e, u),
+        (o.Z.saveUserGuildSettings(e, u),
             a.Z.dispatch({
                 type: 'USER_GUILD_SETTINGS_CHANNEL_UPDATE',
                 guildId: e,
@@ -129,7 +129,7 @@ let h = {
                 change: r,
                 previous: l,
                 label: s
-            });
+            }));
     },
     setForumThreadsCreated(e, t) {
         let n = t ? _.ic.NEW_FORUM_THREADS_ON : _.ic.NEW_FORUM_THREADS_OFF,
@@ -140,7 +140,7 @@ let h = {
     async setAccountFlag(e, t) {
         let n = s.ZP.accountNotificationSettings.flags,
             i = (0, l.mB)(n, e, t);
-        await r.tn.patch({
+        (await r.tn.patch({
             url: d.ANM.ACCOUNT_NOTIFICATION_SETTINGS,
             body: { flags: i },
             rejectWithError: !1
@@ -148,6 +148,6 @@ let h = {
             await a.Z.dispatch({
                 type: 'NOTIFICATION_SETTINGS_UPDATE',
                 settings: { flags: i }
-            });
+            }));
     }
 };

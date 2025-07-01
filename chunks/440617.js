@@ -9,7 +9,6 @@ e.exports = {
     directInviteSubTitle: 'directInviteSubTitle_d69818',
     guildContainer: 'guildContainer_d69818',
     appIn: 'appIn_d69818',
-    appGuildName: 'appGuildName_d69818',
     inviteJoinContainer: 'inviteJoinContainer_d69818',
     inviterIconWrapper: 'inviterIconWrapper_d69818'
 };

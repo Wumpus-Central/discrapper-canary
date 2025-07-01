@@ -1,4 +1,4 @@
-n.d(t, { Q: () => c }), n(953529);
+(n.d(t, { Q: () => c }), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(286379),
@@ -11,14 +11,14 @@ function c(e) {
         o.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, []);
     let m = i.useCallback(() => {
-        null == h || h(),
+        (null == h || h(),
             (0, s.qc)({
                 channelId: t,
                 warningId: n,
                 senderId: c,
                 warningType: u,
                 cta: s.NM.USER_BANNER_DISMISS
-            });
+            }));
     }, [h, t, n, c, u]);
     return (0, r.jsx)(a.W, {
         buttons: f,

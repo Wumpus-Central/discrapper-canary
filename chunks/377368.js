@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -33,25 +33,25 @@ function y(e, t, n) {
 }
 class I extends p.Z {
     _initialize() {
-        super._initialize(), __OVERLAY__ || l.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
+        (super._initialize(), __OVERLAY__ || l.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest));
     }
     _terminate() {
-        super._terminate(), __OVERLAY__ || l.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
+        (super._terminate(), __OVERLAY__ || l.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest));
     }
     constructor(...e) {
         var t;
-        super(...e),
+        (super(...e),
             (t = this),
             y(this, 'playingSoundsWeb', new Map()),
             y(this, '_stopAndClearSounds', () => {
-                c.Z.supports(O.AN.SAMPLE_PLAYBACK) &&
+                (c.Z.supports(O.AN.SAMPLE_PLAYBACK) &&
                     c.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
                     }),
                     this.playingSoundsWeb.forEach((e) => {
-                        e.pause(), (e.src = '');
+                        (e.pause(), (e.src = ''));
                     }),
-                    (this.playingSoundsWeb = new Map());
+                    (this.playingSoundsWeb = new Map()));
             }),
             y(this, '_playSound', async function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -92,7 +92,7 @@ class I extends p.Z {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -100,7 +100,7 @@ class I extends p.Z {
                                             )),
                                             r.forEach(function (t) {
                                                 y(e, t, n[t]);
-                                            });
+                                            }));
                                     }
                                     return e;
                                 })({}, n)),
@@ -126,7 +126,7 @@ class I extends p.Z {
                             );
                         };
                     });
-            });
+            }));
     }
 }
 let v = new I();

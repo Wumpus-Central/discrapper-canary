@@ -1,17 +1,17 @@
-n.d(t, {
+(n.d(t, {
     KK: () => l,
     Z5: () => u,
     aG: () => c,
     d$: () => d
 }),
-    n(415506);
+    n(415506));
 var r = n(358085),
     i = n(18323),
     a = n(647162),
     o = n(616922);
 function s(e, t, n) {
     let s;
-    (0, r.isDesktop)() || (s = window.open('', '_blank')),
+    ((0, r.isDesktop)() || (s = window.open('', '_blank')),
         (0, a.iy)(e, t)
             .then((e) => n(e))
             .then((e) => {
@@ -21,7 +21,7 @@ function s(e, t, n) {
             })
             .catch(() => {
                 null != s && s.close();
-            });
+            }));
 }
 function l() {
     window.open(o.C7.PREMIUM_SITE);

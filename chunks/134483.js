@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685);
+(n.d(t, { Z: () => z }), n(388685));
 var l = n(255367),
     s = n(73800),
     r = n(120356),
@@ -40,7 +40,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -48,7 +48,7 @@ function D(e) {
             )),
             l.forEach(function (t) {
                 var l;
-                (l = n[t]),
+                ((l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
@@ -56,8 +56,8 @@ function D(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l);
-            });
+                        : (e[t] = l));
+            }));
     }
     return e;
 }
@@ -136,7 +136,7 @@ function w(e) {
             });
         }, [w]),
         ec = s.useCallback(() => {
-            H({
+            (H({
                 questId: w.id,
                 questContent: C.jn.QUEST_LIVE_STREAM,
                 questContentCTA: j.jZ.TRACK_PROGRESS,
@@ -145,10 +145,10 @@ function w(e) {
                 (0, U.navigateToQuestHome)({
                     fromContent: C.jn.QUEST_LIVE_STREAM,
                     questId: w.id
-                });
+                }));
         }, [w, H]),
         ed = s.useCallback(() => {
-            H({
+            (H({
                 questId: w.id,
                 questContent: C.jn.QUEST_LIVE_STREAM,
                 questContentCTA: j.jZ.LEARN_MORE,
@@ -157,7 +157,7 @@ function w(e) {
                 (0, U.navigateToQuestHome)({
                     fromContent: C.jn.QUEST_LIVE_STREAM,
                     questId: w.id
-                });
+                }));
         }, [w, H]),
         eE = (0, M.hf)({
             quest: w,

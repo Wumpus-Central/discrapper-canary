@@ -22,7 +22,7 @@ var n = r(359282),
             return l(a, a.getSelectionAfter(), r, u);
         },
         insertText: function (t, e, r, n, i) {
-            return e.isCollapsed() || f(!1), v.replaceText(t, e, r, n, i);
+            return (e.isCollapsed() || f(!1), v.replaceText(t, e, r, n, i));
         },
         moveText: function (t, e, r) {
             var n = u(t, e),
@@ -35,7 +35,7 @@ var n = r(359282),
             return c(i, i.getSelectionAfter(), r, n);
         },
         removeRange: function (t, e, r) {
-            e.getIsBackward() &&
+            (e.getIsBackward() &&
                 (e = e.merge({
                     anchorKey: e.getFocusKey(),
                     anchorOffset: e.getFocusOffset(),
@@ -45,7 +45,7 @@ var n = r(359282),
                 })),
                 (n = e.getAnchorKey()),
                 (i = e.getFocusKey()),
-                (o = t.getBlockForKey(n));
+                (o = t.getBlockForKey(n)));
             var n,
                 i,
                 o,

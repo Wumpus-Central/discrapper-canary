@@ -1,4 +1,4 @@
-e.d(n, { default: () => y }), e(388685);
+(e.d(n, { default: () => y }), e(388685));
 var i = e(255367),
     l = e(73800),
     d = e(442837),
@@ -60,10 +60,10 @@ let y = (t) => {
     if (null != N) {
         let t,
             n = async () => {
-                await c.Z.open(f.id, L.pNK.ONBOARDING), await e();
+                (await c.Z.open(f.id, L.pNK.ONBOARDING), await e());
             },
             l = async () => {
-                await c.Z.open(f.id, L.pNK.COMMUNITY), await e();
+                (await c.Z.open(f.id, L.pNK.COMMUNITY), await e());
             };
         switch (N) {
             case p.j.DEFAULT:

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -40,7 +40,7 @@ function j(e) {
 }
 function b(e) {
     let { onSourceSelect: t } = e;
-    (0, f.UB)(), (0, m.Z)(t, g.Vq);
+    ((0, f.UB)(), (0, m.Z)(t, g.Vq));
     let [{ nativeSourceType: n }, i] = (0, p.E_)(),
         l = (0, u.isMac)() && o().satisfies(null === d.Z || void 0 === d.Z ? void 0 : d.Z.os.release, x.jR);
     return (0, r.jsxs)('div', {

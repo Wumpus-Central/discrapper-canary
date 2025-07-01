@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Dx: () => p,
     aP: () => h
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(392711),
     l = n(442837),
@@ -35,12 +35,12 @@ function h(e, t, n) {
                     s = [];
                 if (n)
                     for (let t of c.Z.getMutableParticipants(e, d.pV.SPEAKER))
-                        if (t.type === d.Ui.STREAM) t.id !== u && s.push(t), a++;
+                        if (t.type === d.Ui.STREAM) (t.id !== u && s.push(t), a++);
                         else break;
                 let p = (e, t, n) => {
                         let o = n ? e.filter((e, t) => e.id !== u && t > a) : e,
                             s = (0, i.chunk)(o, t);
-                        l.push(s), r.push(s.length);
+                        (l.push(s), r.push(s.length));
                     },
                     h = null != u ? c.Z.getParticipant(e, u) : null;
                 return (

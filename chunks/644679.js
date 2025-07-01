@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     i = n(481060),
     l = n(570140),
@@ -24,13 +24,13 @@ function p(e, t, n) {
 let h = 'CollectiblesExpiryModal';
 class f extends a.Z {
     _initialize() {
-        l.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal);
+        (l.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal));
     }
     _terminate() {
-        l.Z.unsubscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), l.Z.unsubscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal), null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null));
+        (l.Z.unsubscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), l.Z.unsubscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal), null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null)));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'timeout', null),
             p(this, 'handleMaybeOpenModal', () => {
                 var e;
@@ -60,7 +60,7 @@ class f extends a.Z {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -68,7 +68,7 @@ class f extends a.Z {
                                                 )),
                                                 r.forEach(function (t) {
                                                     p(e, t, n[t]);
-                                                });
+                                                }));
                                         }
                                         return e;
                                     })({}, t)),
@@ -94,7 +94,7 @@ class f extends a.Z {
                     c.Z.captureMessage('Collectible expiry modal shown'),
                     !0)
                 );
-            });
+            }));
     }
 }
 let g = new f();

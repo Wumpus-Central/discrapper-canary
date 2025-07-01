@@ -59,7 +59,7 @@ function u(e) {
                 className: c.settingsButton,
                 look: l.zxk.Looks.FILLED,
                 onClick: () => {
-                    (0, a.Z)(o.Z.CLIPS), u();
+                    ((0, a.Z)(o.Z.CLIPS), u());
                 },
                 children: (0, r.jsx)(l.ewm, {
                     size: 'md',

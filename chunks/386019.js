@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -42,7 +42,7 @@ function _(e) {
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  T({ action: 'OPEN_MENU' }), v(!0);
+                  (T({ action: 'OPEN_MENU' }), v(!0));
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -51,7 +51,7 @@ function _(e) {
                       children: (0, r.jsx)(a.v2r, {
                           navId: l.N,
                           onClose: () => {
-                              t(), v(!1);
+                              (t(), v(!1));
                           },
                           'aria-label': f.intl.string(f.t.PlAQz8),
                           onSelect: g,

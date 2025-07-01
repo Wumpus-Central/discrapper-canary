@@ -22,7 +22,7 @@ let s = {
                         s.current.initialize()),
                     () => {
                         var e;
-                        null == (e = s.current) || e.terminate(), (s.current = null);
+                        (null == (e = s.current) || e.terminate(), (s.current = null));
                     }
                 ),
                 [n, t, c, o]

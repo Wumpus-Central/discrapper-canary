@@ -1,4 +1,4 @@
-n.d(t, { P: () => l }), n(388685), n(35282), n(539854);
+(n.d(t, { P: () => l }), n(388685), n(35282), n(539854));
 let r = 0,
     a = null;
 function l(e) {
@@ -12,7 +12,7 @@ function l(e) {
                     for (; null != t && t !== document.body; ) {
                         for (let t of Object.keys(e))
                             if (t.startsWith('__reactFiber$')) {
-                                (a = t), (r = 1);
+                                ((a = t), (r = 1));
                                 return;
                             }
                         t = t.parentElement;

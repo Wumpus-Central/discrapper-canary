@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     E2: () => a,
     SO: () => o,
     sR: () => s,
     yY: () => c
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(85746),
     l = n(981631);
@@ -30,4 +30,4 @@ let c = {
     links: 2,
     files: 3
 };
-l.aib.THREAD, l.aib.CHANNEL, l.aib.GUILD_CHANNEL, l.aib.GUILD, l.aib.DMS, l.aib.FAVORITES, l.aib.THREAD, l.aib.CHANNEL, l.aib.GUILD_CHANNEL, l.aib.GUILD, l.aib.DMS, l.aib.FAVORITES, i.l.COZY;
+(l.aib.THREAD, l.aib.CHANNEL, l.aib.GUILD_CHANNEL, l.aib.GUILD, l.aib.DMS, l.aib.FAVORITES, l.aib.THREAD, l.aib.CHANNEL, l.aib.GUILD_CHANNEL, l.aib.GUILD, l.aib.DMS, l.aib.FAVORITES, i.l.COZY);

@@ -1,11 +1,11 @@
-r.d(e, {
+(r.d(e, {
     ZP: () => p,
     _j: () => d,
     po: () => f
 }),
     r(415506),
     r(539854),
-    r(388685);
+    r(388685));
 var n = r(255367),
     i = r(73800),
     l = r(481060),
@@ -17,7 +17,7 @@ function u(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -25,7 +25,7 @@ function u(t) {
             )),
             n.forEach(function (e) {
                 var n;
-                (n = r[e]),
+                ((n = r[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: n,
@@ -33,8 +33,8 @@ function u(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = n);
-            });
+                        : (t[e] = n));
+            }));
     }
     return t;
 }
@@ -43,11 +43,11 @@ async function f(t) {
         let e = await new Promise((e, r) => {
                 if (null != t) {
                     let n = new FileReader();
-                    (n.onload = (t) => {
+                    ((n.onload = (t) => {
                         var n;
                         'string' == typeof (null == (n = t.target) ? void 0 : n.result) ? e(t.target.result) : r(Error('Failed to read file'));
                     }),
-                        n.readAsDataURL(t);
+                        n.readAsDataURL(t));
                 }
             }),
             r = new Image();
@@ -102,7 +102,7 @@ let h = (t) => {
                 null !== b.current && ((0, l.Mr3)(b.current), (b.current = null));
             },
             P = async (t) => {
-                null == y || y(!0), await d(t, e), m(!0), null == y || y(!1);
+                (null == y || y(!0), await d(t, e), m(!0), null == y || y(!1));
             },
             _ = async (t) => {
                 var e, i, o;

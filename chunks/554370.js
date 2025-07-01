@@ -1,4 +1,4 @@
-n.d(t, { Z: () => er }), n(539854), n(388685);
+(n.d(t, { Z: () => er }), n(539854), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -68,7 +68,7 @@ function J(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -76,7 +76,7 @@ function J(e) {
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                (i = n[t]),
+                                ((i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
@@ -84,8 +84,8 @@ function J(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = i);
-                            });
+                                        : (e[t] = i));
+                            }));
                     }
                     return e;
                 })({}, t)),
@@ -192,7 +192,7 @@ function er(e) {
                 mount: e,
                 unmount: t
             });
-            r.useEffect(() => {
+            (r.useEffect(() => {
                 n.current = {
                     mount: e,
                     unmount: t
@@ -206,13 +206,13 @@ function er(e) {
                         }
                     ),
                     []
-                );
+                ));
         })(
             () => {
-                d.Z.overlayReady((0, N.getPID)()), n.addEventListener('keydown', ei), n.addEventListener('keyup', ei), Y && (n.document.hasFocus() && d.Z.setFocusedPID(N.DEV_PID), n.addEventListener('focus', et), n.addEventListener('blur', en));
+                (d.Z.overlayReady((0, N.getPID)()), n.addEventListener('keydown', ei), n.addEventListener('keyup', ei), Y && (n.document.hasFocus() && d.Z.setFocusedPID(N.DEV_PID), n.addEventListener('focus', et), n.addEventListener('blur', en)));
             },
             () => {
-                n.removeEventListener('keydown', ei), n.removeEventListener('keyup', ei), Y && (n.removeEventListener('focus', et), n.removeEventListener('blur', en));
+                (n.removeEventListener('keydown', ei), n.removeEventListener('keyup', ei), Y && (n.removeEventListener('focus', et), n.removeEventListener('blur', en)));
             }
         ),
         !(function () {
@@ -236,7 +236,7 @@ function er(e) {
                     a = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.GO_LIVE_NUDGE),
                     p = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.GAME_ACTIVITY),
                     f = [];
-                l || f.push({ type: G.nc.WELCOME }),
+                (l || f.push({ type: G.nc.WELCOME }),
                     !a &&
                         (s && c
                             ? f.push({
@@ -256,20 +256,20 @@ function er(e) {
                             type: G.nc.CONTENT_INVENTORY,
                             entries: []
                         }),
-                    0 !== f.length && d.Z.overlayMounted(...f);
+                    0 !== f.length && d.Z.overlayMounted(...f));
             }, [a, s, c, t, n, o, u]);
         })(),
         r.useEffect(() => {
             if ((S.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), o)) {
                 if (((0, s.Ay)(c.u1M), n.addEventListener('contextmenu', X, !1), null != K)) {
                     let e = Date.now() - K;
-                    d.Z.track(B.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (K = null);
+                    (d.Z.track(B.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (K = null));
                 }
                 return () => {
                     n.removeEventListener('contextmenu', X, !1);
                 };
             }
-            n.removeEventListener('contextmenu', X, !1), null == K && ((K = Date.now()), d.Z.track(B.rMx.OVERLAY_UNLOCKED));
+            (n.removeEventListener('contextmenu', X, !1), null == K && ((K = Date.now()), d.Z.track(B.rMx.OVERLAY_UNLOCKED)));
         }, [o, n]),
         (0, i.jsx)(f.Gt, {
             value: R,

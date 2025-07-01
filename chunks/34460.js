@@ -1,4 +1,4 @@
-n.d(t, { default: () => S }), n(388685);
+(n.d(t, { default: () => S }), n(388685));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -107,7 +107,7 @@ function S(e) {
         p = (0, c.e7)([g.Z], () => g.Z.getTemplates(l)),
         [T, { loading: N, error: v }] = (0, m.Z)(j.u),
         C = r.useRef('voluntarily_exit');
-    r.useEffect(() => {
+    (r.useEffect(() => {
         (null == p || 0 === p.length) && T(l);
     }, [T, l, p]),
         r.useEffect(() => {
@@ -118,7 +118,7 @@ function S(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 a = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (a = a.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -126,7 +126,7 @@ function S(e) {
                                 )),
                                 a.forEach(function (t) {
                                     var a;
-                                    (a = n[t]),
+                                    ((a = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: a,
@@ -134,18 +134,18 @@ function S(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = a);
-                                });
+                                            : (e[t] = a));
+                                }));
                         }
                         return e;
                     })({ exit_reason: C.current }, (0, x.hH)(l))
                 );
-        }, [t, l, C]);
+        }, [t, l, C]));
     let [O, S] = r.useState(0),
         [w, k] = r.useState(!1),
         B = r.useCallback(
             (e) => {
-                (C.current = 'template_selected'), (0, j.l)(e, l), i(e), n();
+                ((C.current = 'template_selected'), (0, j.l)(e, l), i(e), n());
             },
             [l, i, n]
         ),
@@ -226,7 +226,7 @@ function S(e) {
                                 (0, a.jsxs)(d.zxk, {
                                     size: d.zxk.Sizes.MEDIUM,
                                     onClick: () => {
-                                        (C.current = 'create_from_scratch'), o(), n();
+                                        ((C.current = 'create_from_scratch'), o(), n());
                                     },
                                     look: d.zxk.Looks.OUTLINED,
                                     color: d.zxk.Colors.PRIMARY,

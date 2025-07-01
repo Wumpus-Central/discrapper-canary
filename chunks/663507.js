@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
+(n.d(t, {
     DP: () => a,
     ZI: () => u,
     ZP: () => c,
@@ -22,7 +22,7 @@ n.d(t, {
     n(388685),
     n(539854),
     n(290780),
-    n(415506);
+    n(415506));
 let i = (e) => '__section__'.concat(e),
     a = (e) => '__section_header__'.concat(e),
     o = (e) => parseInt(e.replace(/^__section__/, ''), 10);
@@ -59,22 +59,22 @@ class c {
         if (!this.needsFullCompute) return;
         let { columns: n, getItemKey: r, getItemHeight: o, itemGutter: l, getSectionHeight: c, bufferWidth: u, removeEdgeItemGutters: d } = this,
             f = 'rtl' === this.dir ? 'right' : 'left';
-        (this.coordsMap = {}),
+        ((this.coordsMap = {}),
             (this.gridData = {
                 boundaries: [],
                 coordinates: {}
             }),
             (this.currentRow = 0),
-            (this.lastColumnIndex = 0);
+            (this.lastColumnIndex = 0));
         let _ = this.getPaddingTop(),
             p = this.getPaddingBottom(),
             h = this.getPaddingLeft(),
             m = this.getPaddingRight(),
             g = null != (e = this.marginLeft) ? e : 0;
-        (this.columnHeights = Array(n).fill(_)), (this.columnWidth = (u - m - h - l * (n - 1) - (d ? l : 0)) / n), (this.itemGrid = []);
+        ((this.columnHeights = Array(n).fill(_)), (this.columnWidth = (u - m - h - l * (n - 1) - (d ? l : 0)) / n), (this.itemGrid = []));
         let E = 0;
         for (; E < this.sections.length; ) {
-            (this.gridData.boundaries[E] = this.currentRow), (this.currentRow = 0), (this.lastColumnIndex = 0);
+            ((this.gridData.boundaries[E] = this.currentRow), (this.currentRow = 0), (this.lastColumnIndex = 0));
             let e = this.sections[E],
                 u = 0,
                 d = c(E),
@@ -89,7 +89,7 @@ class c {
                     continue;
                 }
                 let [n, i] = s(this.columnHeights);
-                i < this.lastColumnIndex && this.currentRow++, (this.lastColumnIndex = i);
+                (i < this.lastColumnIndex && this.currentRow++, (this.lastColumnIndex = i));
                 let a = o(E, u, this.columnWidth),
                     c = {
                         position: 'absolute',
@@ -103,9 +103,9 @@ class c {
                         row: this.currentRow,
                         column: i
                     };
-                (this.coordsMap[e] = c), (this.gridData.coordinates[e] = d), (this.columnHeights[i] = n + a + l), (this.itemGrid[i] = null != (t = this.itemGrid[i]) ? t : []), this.itemGrid[i].push(e), u++;
+                ((this.coordsMap[e] = c), (this.gridData.coordinates[e] = d), (this.columnHeights[i] = n + a + l), (this.itemGrid[i] = null != (t = this.itemGrid[i]) ? t : []), this.itemGrid[i].push(e), u++);
             }
-            d > 0 &&
+            (d > 0 &&
                 (this.coordsMap[a(E)] = {
                     position: 'sticky',
                     [f]: h,
@@ -120,9 +120,9 @@ class c {
                     top: _,
                     height: this.getMaxColumnHeight(this.columnHeights) - _
                 }),
-                E++;
+                E++);
         }
-        (this.columnHeights = this.columnHeights.map((e) => e - l + p)), (this.totalHeight = this.getMaxColumnHeight()), (this.visibleSections = {}), (this.needsFullCompute = !1);
+        ((this.columnHeights = this.columnHeights.map((e) => e - l + p)), (this.totalHeight = this.getMaxColumnHeight()), (this.visibleSections = {}), (this.needsFullCompute = !1));
     }
     computeVisibleSections(e, t) {
         this.computeFullCoords();
@@ -154,7 +154,7 @@ class c {
                     continue;
                 }
                 let { top: l, height: u } = o;
-                l + c > e - u && l + c < t && (-1 === f ? this.visibleSections[s].unshift([i, a, d]) : this.visibleSections[s].push([i, a, d])), (d += f);
+                (l + c > e - u && l + c < t && (-1 === f ? this.visibleSections[s].unshift([i, a, d]) : this.visibleSections[s].push([i, a, d])), (d += f));
             }
             if (c < e && u > t) break;
             a++;
@@ -173,7 +173,7 @@ class c {
         };
     }
     constructor() {
-        r(this, 'visibleSections', {}),
+        (r(this, 'visibleSections', {}),
             r(this, 'gridData', {
                 coordinates: {},
                 boundaries: []
@@ -203,7 +203,7 @@ class c {
             r(this, 'getItemHeight', () => {
                 throw Error('MasonryListComputer: getItemHeight has not been implemented');
             }),
-            r(this, 'getSectionHeight', l);
+            r(this, 'getSectionHeight', l));
     }
 }
 function u(e, t, n) {

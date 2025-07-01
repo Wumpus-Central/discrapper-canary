@@ -1,4 +1,4 @@
-n.d(t, { G: () => T }), n(388685);
+(n.d(t, { G: () => T }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -34,7 +34,7 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function v(e) {
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -54,7 +54,7 @@ function T() {
         [S, A] = (0, _.US)(T),
         N = S === o.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
         C = (0, a.e7)([h.default], () => h.default.getId());
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         null != C && g.default.age(C) < m.Z.Millis.DAY && (0, f.EW)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
         let e = 'desktop_refresh_theme_migration_key',
             t = 'true' === s.K.get(e);
@@ -70,7 +70,7 @@ function T() {
                     c.Z.unsubscribe('CHANGE_LOG_RESOLVED', e);
                 }
             );
-        }, []);
+        }, []));
     let R = i.useCallback(() => {
         (0, l.ZDy)(
             async () => {

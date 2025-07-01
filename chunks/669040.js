@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ea }), n(388685);
+(n.d(t, { Z: () => ea }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -81,7 +81,7 @@ let Y = 0,
                     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                         r = new Set(t),
                         i = t.has(e);
-                    i ? r.delete(e) : r.add(e),
+                    (i ? r.delete(e) : r.add(e),
                         null != n &&
                             P.default.track(B.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                                 location: ea.location,
@@ -90,17 +90,17 @@ let Y = 0,
                                 guild_id: n.id
                             }),
                         e === G.UX.SOUNDMOJI && P.default.track(B.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
-                        g(r);
+                        g(r));
                 },
                 [ea, t, g]
             ),
             ed = i.useCallback((e) => {
                 let { columnIndex: t, visibleRowIndex: n } = e,
                     r = e.type === j.ld.SOUNDMOJI ? null : e.type === j.ld.EMOJI ? e.emoji.allNamesString : e.name;
-                eo.current !== B.xAR && window.cancelAnimationFrame(eo.current),
+                (eo.current !== B.xAR && window.cancelAnimationFrame(eo.current),
                     (eo.current = window.requestAnimationFrame(() => {
-                        E.kJ.setInspectedExpressionPosition(t, n, y.u.MOUSE_EVENT), E.kJ.setSearchPlaceholder(r), (eo.current = B.xAR);
-                    }));
+                        (E.kJ.setInspectedExpressionPosition(t, n, y.u.MOUSE_EVENT), E.kJ.setSearchPlaceholder(r), (eo.current = B.xAR));
+                    })));
             }, []),
             ef = (0, u.e7)([I.qc], () => I.qc.hasHotspot(I.v6.FAVORITE_EMOJI_TOOLTIP), []),
             e_ = i.useMemo(
@@ -184,7 +184,7 @@ let Y = 0,
                                     ? (0, r.jsx)(_.P3F, {
                                           className: H.soundmojiViewMore,
                                           onClick: () => {
-                                              (0, b.hr)(V.X1.SOUNDBOARD), P.default.track(B.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
+                                              ((0, b.hr)(V.X1.SOUNDBOARD), P.default.track(B.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK));
                                           },
                                           children: Z.intl.string(Z.t.rUEjBQ)
                                       })
@@ -296,7 +296,7 @@ let Y = 0,
                 emojiListRef: a
             }),
             eh = (e) => {
-                ee(e), '' === K && E.kJ.setActiveCategoryIndex(e);
+                (ee(e), '' === K && E.kJ.setActiveCategoryIndex(e));
             },
             em = (0, O.Uf)({
                 listRef: a,
@@ -321,7 +321,7 @@ let Y = 0,
         });
         let eE = i.useCallback(
                 (e) => {
-                    em(e), eg(e);
+                    (em(e), eg(e));
                 },
                 [em, eg]
             ),

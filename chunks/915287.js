@@ -1,4 +1,4 @@
-n.d(t, { v: () => v }), n(539854), n(388685);
+(n.d(t, { v: () => v }), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -67,7 +67,7 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -77,7 +77,7 @@ function g(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 function E(e) {
@@ -199,7 +199,7 @@ function v(e, t, n, a) {
             eh = i.useRef(I),
             em = i.useRef(T);
         i.useLayoutEffect(() => {
-            (eh.current = I), (em.current = T);
+            ((eh.current = I), (em.current = T));
         });
         let eg = i.useCallback(
                 function () {
@@ -213,7 +213,7 @@ function v(e, t, n, a) {
                 [ef, ea]
             ),
             eE = i.useCallback(() => eg(), [eg]);
-        (0, u.zn)({
+        ((0, u.zn)({
             ref: ei,
             onUpdate: eE,
             key: 'container',
@@ -229,7 +229,7 @@ function v(e, t, n, a) {
                 key: 'content',
                 resizeObserver: f,
                 listenerMap: l
-            });
+            }));
         let eb = E(ec),
             ey = b(A);
         i.useImperativeHandle(
@@ -248,12 +248,12 @@ function v(e, t, n, a) {
         );
         let eO = i.useCallback(
             (e) => {
-                eg(1),
+                (eg(1),
                     null == ee.current ? er(!0) : clearTimeout(ee.current),
                     (ee.current = setTimeout(() => {
-                        (ee.current = null), er(!1);
+                        ((ee.current = null), er(!1));
                     }, 200)),
-                    null != v && v(e);
+                    null != v && v(e));
             },
             [v, eg]
         );

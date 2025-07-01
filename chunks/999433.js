@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'monokai',
         author: 'wimer hazenberg (http://www.monokai.nl)',
@@ -19,4 +19,4 @@
         base0E: '#ae81ff',
         base0F: '#cc6633'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

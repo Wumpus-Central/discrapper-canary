@@ -1,14 +1,14 @@
-n.d(t, {
+(n.d(t, {
     Z: () => P,
     h: () => w
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(525654),
-    a = n.n(s),
+    a = n(525654),
+    s = n.n(a),
     c = n(91192),
     u = n(442837),
     d = n(524437),
@@ -24,18 +24,18 @@ var r = n(255367),
     v = n(240126),
     C = n(791914),
     j = n(147522),
-    E = n(809780),
-    S = n(981631),
+    S = n(809780),
+    E = n(981631),
     x = n(388032),
     I = n(128406);
 function P(e) {
-    var t, n, l, s, P, w, Z;
+    var t, n, l, a, P, w, Z;
     let { setTab: T, onJump: A, showTutorial: R, setSeenTutorial: D, closePopout: L, badgeState: M } = e,
         k = i.useRef(null),
-        [U, G] = (0, E.ZP)(k),
+        [U, G] = (0, S.ZP)(k),
         { loadState: B, channels: F } = U,
         { maybeLoadMore: V, markAllRead: H } = G;
-    (t = k),
+    ((t = k),
         (n = U),
         (l = G),
         i.useLayoutEffect(() => {
@@ -46,25 +46,25 @@ function P(e) {
             if (null == i || null == r) return;
             let o = null == (e = i.getScrollerNode()) ? void 0 : e.children;
             if (null == o) return;
-            let s = o[r];
-            if (null == s) return;
-            let { scrollTop: a, offsetHeight: c } = i.getScrollerState();
-            (s.offsetTop < a || s.offsetTop > a + c) && i.scrollTo({ to: s.offsetTop });
+            let a = o[r];
+            if (null == a) return;
+            let { scrollTop: s, offsetHeight: c } = i.getScrollerState();
+            (a.offsetTop < s || a.offsetTop > s + c) && i.scrollTo({ to: a.offsetTop });
         }),
-        (s = U),
+        (a = U),
         (P = G),
         i.useEffect(() => {
             let e = () => {
-                let e = s.channels.find((e) => !e.collapsed);
+                let e = a.channels.find((e) => !e.collapsed);
                 null != e && P.markChannelRead(e);
             };
             return (
-                _.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                _.S.subscribe(E.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    _.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    _.S.unsubscribe(E.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [P, s.channels]),
+        }, [P, a.channels]),
         (w = G),
         i.useEffect(() => {
             let e = (e) => {
@@ -78,7 +78,7 @@ function P(e) {
             );
         }, [w]),
         i.useEffect(() => {
-            b.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
+            b.default.track(E.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         i.useEffect(
             () => (
@@ -88,7 +88,7 @@ function P(e) {
                 }
             ),
             [L]
-        );
+        ));
     let z = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
         W = (0, m.Us)({ location: 'Unreads' }),
         K = (0, g.Z)('unreads', k);
@@ -105,7 +105,7 @@ function P(e) {
                 (0, r.jsx)(v.Z, {
                     Icon: h.xx7,
                     header: x.intl.string(x.t['6XMM+P']),
-                    tip: (null == (Z = a().os) ? void 0 : Z.family) === 'OS X' ? x.intl.string(x.t.w9uDOT) : x.intl.string(x.t.BiUJCw)
+                    tip: (null == (Z = s().os) ? void 0 : Z.family) === 'OS X' ? x.intl.string(x.t.w9uDOT) : x.intl.string(x.t.BiUJCw)
                 })
             ]
         });
@@ -141,12 +141,12 @@ function P(e) {
                                             r,
                                             i = {},
                                             l = Object.keys(e);
-                                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                         return i;
                                     })(e, t);
                                 if (Object.getOwnPropertySymbols) {
                                     var l = Object.getOwnPropertySymbols(e);
-                                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                 }
                                 return i;
                             })(e, ['ref']);
@@ -156,7 +156,7 @@ function P(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                    ('function' == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -164,7 +164,7 @@ function P(e) {
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            (r = n[t]),
+                                            ((r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
@@ -172,24 +172,24 @@ function P(e) {
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
-                                        });
+                                                    : (e[t] = r));
+                                        }));
                                 }
                                 return e;
                             })(
                                 {
                                     ref: (e) => {
                                         var t;
-                                        (k.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                                        ((k.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                                     }
                                 },
                                 l
                             )),
                             (n = n =
                                 {
-                                    onScroll: B === E.jd.Done ? void 0 : V,
+                                    onScroll: B === S.jd.Done ? void 0 : V,
                                     className: I.scroller,
-                                    children: [R ? (0, r.jsx)(N, { setSeenTutorial: D }) : null, (0, j.Z)(F, G, A), B === E.jd.Done ? null : (0, r.jsx)(h.$jN, { className: I.spinner })]
+                                    children: [R ? (0, r.jsx)(N, { setSeenTutorial: D }) : null, (0, j.Z)(F, G, A), B === S.jd.Done ? null : (0, r.jsx)(h.$jN, { className: I.spinner })]
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

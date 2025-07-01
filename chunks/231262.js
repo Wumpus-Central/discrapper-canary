@@ -39,7 +39,7 @@ class N extends r.PureComponent {
               });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             null != e.locale && d.Z.setLocale(e.locale),
             (_ = (t) =>
                 (0, n.jsx)(
@@ -48,7 +48,7 @@ class N extends r.PureComponent {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
                                 n = Object.keys(a);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (n = n.concat(
                                     Object.getOwnPropertySymbols(a).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(a, e).enumerable;
@@ -56,7 +56,7 @@ class N extends r.PureComponent {
                                 )),
                                 n.forEach(function (t) {
                                     var n;
-                                    (n = a[t]),
+                                    ((n = a[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: n,
@@ -64,8 +64,8 @@ class N extends r.PureComponent {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = n);
-                                });
+                                            : (e[t] = n));
+                                }));
                         }
                         return e;
                     })(
@@ -75,6 +75,6 @@ class N extends r.PureComponent {
                         },
                         t
                     )
-                ));
+                )));
     }
 }

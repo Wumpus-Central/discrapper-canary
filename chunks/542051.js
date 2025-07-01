@@ -1,15 +1,15 @@
-n.d(t, {
-    M: () => h,
-    Z: () => _
+(n.d(t, {
+    M: () => g,
+    Z: () => S
 }),
     n(415506),
-    n(781311);
+    n(781311));
 var r,
-    i = n(255367),
+    s = n(255367),
     l = n(73800),
     a = n(120356),
-    o = n.n(a),
-    s = n(481060),
+    i = n.n(a),
+    o = n(481060),
     c = n(388032),
     u = n(953928);
 function d(e, t, n) {
@@ -25,11 +25,11 @@ function d(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,11 +37,11 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
-function m(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,9 +60,9 @@ function m(e, t) {
     );
 }
 function f(e) {
-    e.stopPropagation(), e.preventDefault();
+    (e.stopPropagation(), e.preventDefault());
 }
-function h(e, t, n) {
+function g(e, t, n) {
     return {
         id: ''.concat(e, '-').concat(t),
         role: 'option',
@@ -70,27 +70,27 @@ function h(e, t, n) {
         'aria-selected': n
     };
 }
-class g extends (r = l.PureComponent) {
+class m extends (r = l.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: n, focusedIndex: r, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: d, hideQuery: f, searchFavorites: g } = this.props;
+        let { query: t, navId: n, focusedIndex: r, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: d, hideQuery: f, searchFavorites: m } = this.props;
         if (e || f) return null;
-        let _ = -1 === r;
-        return (0, i.jsxs)(i.Fragment, {
+        let S = -1 === r;
+        return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, i.jsxs)(
-                    s.P3F,
-                    m(p({ className: o()(u.queryContainer, { [u.focused]: _ }) }, h(n, -1, _)), {
+                (0, s.jsxs)(
+                    o.P3F,
+                    p(h({ className: i()(u.queryContainer, { [u.focused]: S }) }, g(n, -1, S)), {
                         onMouseEnter: d,
                         onClick: l,
                         children: [
-                            (0, i.jsx)('div', {
+                            (0, s.jsx)('div', {
                                 className: u.queryText,
-                                children: g ? c.intl.string(c.t['6RVtLC']) : c.intl.format(c.t.ub226e, { value: t })
+                                children: m ? c.intl.string(c.t['6RVtLC']) : c.intl.format(c.t.ub226e, { value: t })
                             }),
-                            (0, i.jsx)('div', {
+                            (0, s.jsx)('div', {
                                 className: u.queryShortcut,
                                 'aria-hidden': !0,
-                                children: (0, i.jsx)(s.M2$, {
+                                children: (0, s.jsx)(o.M2$, {
                                     shortcut: 'return',
                                     dim: !0,
                                     className: u.keyCombo
@@ -99,21 +99,21 @@ class g extends (r = l.PureComponent) {
                         ]
                     })
                 ),
-                g &&
-                    (0, i.jsxs)(
-                        s.P3F,
-                        m(p({ className: o()(u.queryContainer, { [u.focused]: _ }) }, h(n, -1, _)), {
+                m &&
+                    (0, s.jsxs)(
+                        o.P3F,
+                        p(h({ className: i()(u.queryContainer, { [u.focused]: S }) }, g(n, -1, S)), {
                             onMouseEnter: d,
                             onClick: a,
                             children: [
-                                (0, i.jsx)('div', {
+                                (0, s.jsx)('div', {
                                     className: u.queryText,
                                     children: c.intl.string(c.t.FtSUxc)
                                 }),
-                                (0, i.jsx)('div', {
+                                (0, s.jsx)('div', {
                                     className: u.queryShortcut,
                                     'aria-hidden': !0,
-                                    children: (0, i.jsx)(s.M2$, {
+                                    children: (0, s.jsx)(o.M2$, {
                                         shortcut: 'shift+return',
                                         dim: !0,
                                         className: u.keyCombo
@@ -126,17 +126,17 @@ class g extends (r = l.PureComponent) {
         });
     }
     renderResults(e) {
-        let { numResults: t, renderNoResults: n, renderInitialState: r, renderResult: i, renderCustomResults: l } = this.props;
+        let { numResults: t, renderNoResults: n, renderInitialState: r, renderResult: s, renderCustomResults: l } = this.props;
         if (e) return r();
         if (0 === t) return n();
-        if (null != i) return Array.from({ length: t }).map((e, t) => i(t));
+        if (null != s) return Array.from({ length: t }).map((e, t) => s(t));
         if (null != l) return l();
         throw Error('SearchResultsPopout.renderResults: Flow should never allow this...');
     }
     render() {
         let { query: e, focusedIndex: t, navId: n, width: r } = this.props,
             l = '' === e.trim();
-        return (0, i.jsxs)('div', {
+        return (0, s.jsxs)('div', {
             className: u.container,
             style: { width: r },
             onMouseDown: f,
@@ -148,9 +148,9 @@ class g extends (r = l.PureComponent) {
         });
     }
 }
-d(g, 'defaultProps', {
+d(m, 'defaultProps', {
     renderInitialState: () => null,
     hideQuery: !1,
     width: 320
 });
-let _ = g;
+let S = m;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(953529);
+(n.d(t, { Z: () => f }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,7 +18,7 @@ function f(e) {
         [O, C] = i.useState(!1),
         [y, N] = i.useState(!1),
         I = i.useRef(null);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         v(h);
     }, [h]),
         i.useEffect(
@@ -26,7 +26,7 @@ function f(e) {
                 clearTimeout(I.current);
             },
             []
-        );
+        ));
     let E = x.find((e) => e.value === _),
         S = (e) => {
             e.disabled ||
@@ -35,7 +35,7 @@ function f(e) {
                 null == j || j(e),
                 v(e.value),
                 (I.current = setTimeout(() => {
-                    N(!1), C(!1);
+                    (N(!1), C(!1));
                 }, 1000)));
         };
     return (0, r.jsx)(u.Z, {

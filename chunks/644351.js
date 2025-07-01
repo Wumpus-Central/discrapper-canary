@@ -4,7 +4,7 @@ var r = n(98405),
     o = n(108015),
     s = 'ArrayBuffer',
     l = a[s];
-r(
+(r(
     {
         global: !0,
         constructor: !0,
@@ -12,4 +12,4 @@ r(
     },
     { ArrayBuffer: l }
 ),
-    o(s);
+    o(s));

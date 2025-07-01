@@ -1,10 +1,10 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(91192),
     o = n(442837),
-    s = n(481060),
-    a = n(377171),
+    a = n(481060),
+    s = n(377171),
     c = n(276952),
     u = n(682662),
     d = n(593364),
@@ -20,16 +20,16 @@ var r = n(255367),
     v = n(961040),
     C = n(739340),
     j = n(932711),
-    E = n(981631),
-    S = n(490897),
+    S = n(981631),
+    E = n(490897),
     x = n(522458);
 function I() {
     let e = (0, o.e7)([_.default], () => _.default.getCurrentUser());
-    return (0, o.e7)([m.ZP], () => (null == e ? void 0 : e.id) != null && m.ZP.getMentionCount(e.id, S.W.NOTIFICATION_CENTER) > 0);
+    return (0, o.e7)([m.ZP], () => (null == e ? void 0 : e.id) != null && m.ZP.getMentionCount(e.id, E.W.NOTIFICATION_CENTER) > 0);
 }
 function P(e) {
     var t, n;
-    let { onClick: p, selectedOverride: _ = !1, popoutProps: v, ref: S } = e,
+    let { onClick: p, selectedOverride: _ = !1, popoutProps: v, ref: E } = e,
         P = (0, l.Ie)('notifications-inbox'),
         [N, w] = i.useState(!1),
         Z = (0, y.D)(),
@@ -51,7 +51,7 @@ function P(e) {
         M =
             D === O.jP.LEGACY
                 ? L
-                    ? (0, r.jsx)(s.fWl, {
+                    ? (0, r.jsx)(a.fWl, {
                           style: {
                               height: 12,
                               width: 12,
@@ -59,49 +59,38 @@ function P(e) {
                               left: -2,
                               position: 'relative'
                           },
-                          color: a.Z.STATUS_DANGER
+                          color: s.Z.STATUS_DANGER
                       })
                     : null
                 : R > 0
                   ? (0, d.N)(R)
-                  : A
-                    ? (0, r.jsx)(s.fWl, {
-                          style: {
-                              height: 12,
-                              width: 12,
-                              top: -2,
-                              left: -2,
-                              position: 'relative'
-                          },
-                          color: a.Z.BG_BRAND
-                      })
-                    : null,
-        k = D === O.jP.LEGACY ? s.xx7 : s.Dkj,
+                  : null,
+        k = D === O.jP.LEGACY ? a.xx7 : a.Dkj,
         U = (0, o.e7)([b.Z], () => b.Z.getChannelId()),
         G = i.useMemo(() => {
-            if (D === O.jP.SIDEBAR) return E.Z5c.NOTIFICATIONS_INBOX(null != U ? U : void 0);
+            if (D === O.jP.SIDEBAR) return S.Z5c.NOTIFICATIONS_INBOX(null != U ? U : void 0);
         }, [D, U]);
     return (0, r.jsxs)(u.H, {
-        ref: S,
+        ref: E,
         children: [
-            D === O.jP.SIDEBAR &&
-                (0, r.jsx)(c.Z, {
-                    selected: T,
-                    hovered: N,
-                    unread: A,
-                    className: x.pill
-                }),
+            (0, r.jsx)(c.Z, {
+                selected: T && D === O.jP.SIDEBAR,
+                hovered: N && D === O.jP.SIDEBAR,
+                unread: A,
+                className: x.pill,
+                disabled: D === O.jP.LEGACY
+            }),
             (0, r.jsx)(j.Z, {
-                children: (0, r.jsx)(s.aRk, {
+                children: (0, r.jsx)(a.aRk, {
                     selected: T || N,
                     lowerBadge: M,
                     children: (0, r.jsx)(
-                        s.LYs,
+                        a.LYs,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -109,7 +98,7 @@ function P(e) {
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        (r = n[t]),
+                                        ((r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
@@ -117,8 +106,8 @@ function P(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
-                                    });
+                                                : (e[t] = r));
+                                    }));
                             }
                             return e;
                         })({}, P, v)),

@@ -29,7 +29,7 @@ function _(e) {
     });
 }
 async function p(e, t, n) {
-    await r.tn.post({
+    (await r.tn.post({
         url: d.ANM.SEND_GAMING_STATS(t),
         body: {
             message_reference: {
@@ -40,7 +40,7 @@ async function p(e, t, n) {
         },
         rejectWithError: !1
     }),
-        m(t);
+        m(t));
 }
 async function h(e) {
     let t = await r.tn.patch({
@@ -49,7 +49,7 @@ async function h(e) {
     });
     if (null != t.text && '' !== t.text) {
         let n = s.Z.getChannel(e.channel_id);
-        null != n &&
+        (null != n &&
             ((0, o.fE)({
                 channel: n,
                 message: e,
@@ -57,7 +57,7 @@ async function h(e) {
                 showMentionToggle: !1
             }),
             m(n.id)),
-            i.Z.saveDraft(e.channel_id, t.text, l.d.ChannelMessage);
+            i.Z.saveDraft(e.channel_id, t.text, l.d.ChannelMessage));
     }
 }
 function m(e) {

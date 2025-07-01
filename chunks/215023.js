@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AW: () => b,
     Cm: () => T,
     HU: () => w,
@@ -21,7 +21,7 @@ n.d(t, {
     yf: () => m
 }),
     n(388685),
-    n(73800);
+    n(73800));
 var r = n(463570),
     i = n.n(r),
     a = n(961238),
@@ -138,10 +138,10 @@ let d = {
     m = o()([...l()(p, i()(Array(p.length), new Date('2025-07-02').getTime()))]),
     g = o()([...l()(h, i()(Array(h.length), new Date('2025-03-08').getTime()))]);
 var E = (function (e) {
-        return (e[(e.VISIBLE = 0)] = 'VISIBLE'), (e[(e.HIDDEN = 1)] = 'HIDDEN'), (e[(e.IN = 2)] = 'IN'), (e[(e.OUT = 3)] = 'OUT'), e;
+        return ((e[(e.VISIBLE = 0)] = 'VISIBLE'), (e[(e.HIDDEN = 1)] = 'HIDDEN'), (e[(e.IN = 2)] = 'IN'), (e[(e.OUT = 3)] = 'OUT'), e);
     })({}),
     b = (function (e) {
-        return (e.HOME = 'home'), (e.CATALOG = 'catalog'), (e.ORBS = 'orbs'), (e.AVATAR_DECORATIONS = 'avatar-decorations'), (e.PROFILE_EFFECTS = 'profile-effects'), (e.NAMEPLATES = 'nameplates'), (e.BUNDLES = 'bundles'), e;
+        return ((e.HOME = 'home'), (e.CATALOG = 'catalog'), (e.ORBS = 'orbs'), (e.AVATAR_DECORATIONS = 'avatar-decorations'), (e.PROFILE_EFFECTS = 'profile-effects'), (e.NAMEPLATES = 'nameplates'), (e.BUNDLES = 'bundles'), e);
     })({});
 let y = ['avatar-decorations', 'profile-effects', 'nameplates', 'bundles'],
     O = (e) => y.includes(e),
@@ -156,7 +156,7 @@ let y = ['avatar-decorations', 'profile-effects', 'nameplates', 'bundles'],
     P = 3,
     w = ['1212569433839636530', '1212570343567261736', '1212582298893946880'];
 var D = (function (e) {
-    return (e[(e.FIAT = 0)] = 'FIAT'), (e[(e.ORB = 1)] = 'ORB'), (e[(e.PREMIUM_PURCHASE = 2)] = 'PREMIUM_PURCHASE'), (e[(e.PROMOTIONAL = 3)] = 'PROMOTIONAL'), (e[(e.TENURE_REWARD = 4)] = 'TENURE_REWARD'), (e[(e.GIFT = 5)] = 'GIFT'), e;
+    return ((e[(e.FIAT = 0)] = 'FIAT'), (e[(e.ORB = 1)] = 'ORB'), (e[(e.PREMIUM_PURCHASE = 2)] = 'PREMIUM_PURCHASE'), (e[(e.PROMOTIONAL = 3)] = 'PROMOTIONAL'), (e[(e.TENURE_REWARD = 4)] = 'TENURE_REWARD'), (e[(e.GIFT = 5)] = 'GIFT'), e);
 })({});
 let L = {
         ORB_PROFILE_BADGE: '1342211853484429445',

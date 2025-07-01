@@ -1,11 +1,11 @@
 n.d(t, {
-    R: () => o,
+    R: () => a,
     c: () => s
 });
 var r = n(818083),
     i = n(984134),
     l = n(345655);
-let a = (0, r.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-05_input_profiles_experiment_web',
     label: 'Audio input profiles (studio mode)',
@@ -20,10 +20,10 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.h.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return a.getCurrentConfig(
+    return o.getCurrentConfig(
         { location: t },
         {
             disable: r,
@@ -34,7 +34,7 @@ function o(e) {
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.h.useExperiment({ location: t }, { autoTrackExposure: n });
-    return a.useExperiment(
+    return o.useExperiment(
         { location: t },
         {
             disable: r,

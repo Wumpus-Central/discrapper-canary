@@ -1,9 +1,9 @@
-i.d(e, {
+(i.d(e, {
     Z: () => L,
     i: () => R
 }),
     i(539854),
-    i(388685);
+    i(388685));
 var n = i(255367),
     r = i(73800),
     s = i(120356),
@@ -21,17 +21,17 @@ var n = i(255367),
     v = i(843693),
     O = i(246642),
     b = i(921227),
-    y = i(314897),
-    S = i(430824),
+    S = i(314897),
+    y = i(430824),
     E = i(699516),
-    w = i(885110),
-    Z = i(111583),
-    I = i(594174),
-    x = i(451478),
-    j = i(626135),
-    P = i(823379),
-    C = i(5192),
-    T = i(981631),
+    Z = i(885110),
+    I = i(111583),
+    w = i(594174),
+    P = i(451478),
+    x = i(626135),
+    j = i(823379),
+    T = i(5192),
+    C = i(981631),
     _ = i(388032),
     A = i(486850);
 function N(t, e, i) {
@@ -51,7 +51,7 @@ function F(t) {
     for (var e = 1; e < arguments.length; e++) {
         var i = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(i);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(i).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(i, t).enumerable;
@@ -59,7 +59,7 @@ function F(t) {
             )),
             n.forEach(function (e) {
                 N(t, e, i[e]);
-            });
+            }));
     }
     return t;
 }
@@ -67,7 +67,7 @@ let D = [];
 class M extends r.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
-            this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
+            (this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded());
         }, 100);
     }
     componentDidUpdate() {
@@ -77,7 +77,7 @@ class M extends r.PureComponent {
         let t = this.props.activity.application_id;
         null != t &&
             -1 === D.indexOf(t) &&
-            (j.default.track(T.rMx.SHOW_TUTORIAL, {
+            (x.default.track(C.rMx.SHOW_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: t
             }),
@@ -107,13 +107,13 @@ class M extends r.PureComponent {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             N(this, 'state', { fadeIn: !1 }),
             N(this, 'timeout', null),
             N(this, 'handleDismissInviteEducation', () => {
                 let { activity: t } = this.props;
                 null != t && null != t.application_id && h.Z.dismissForApplicationId(t.application_id);
-            });
+            }));
     }
 }
 function U(t) {
@@ -129,7 +129,7 @@ function U(t) {
 function k(t) {
     let { guildId: e, activity: i, showInviteEducation: r, isFocused: s, typingUsers: l, className: a, channel: d, isThreadCreation: u, renderDots: h, poggermodeEnabled: p, isComboing: g, isInTextChannel: m } = t,
         { rateLimitPerUser: v } = d,
-        b = S.Z.getGuild(e);
+        b = y.Z.getGuild(e);
     if (0 === l.length && !(v > 0) && !g)
         return r && null != i
             ? (0, n.jsx)(M, {
@@ -141,23 +141,23 @@ function k(t) {
                   channel: d,
                   guild: b
               });
-    let [y, E, w] = l,
-        Z = '';
+    let [S, E, Z] = l,
+        I = '';
     return (
         1 === l.length
-            ? (Z = _.intl.format(_.t.lJ9sZW, { a: y }))
+            ? (I = _.intl.format(_.t.lJ9sZW, { a: S }))
             : 2 === l.length
-              ? (Z = _.intl.format(_.t.rB0CUV, {
-                    a: y,
+              ? (I = _.intl.format(_.t.rB0CUV, {
+                    a: S,
                     b: E
                 }))
               : 3 === l.length
-                ? (Z = _.intl.format(_.t.StKTho, {
-                      a: y,
+                ? (I = _.intl.format(_.t.StKTho, {
+                      a: S,
                       b: E,
-                      c: w
+                      c: Z
                   }))
-                : l.length > 3 && (Z = _.intl.string(_.t.uVDhqa)),
+                : l.length > 3 && (I = _.intl.string(_.t.uVDhqa)),
         (0, n.jsxs)('div', {
             className: o()(
                 A.typing,
@@ -183,7 +183,7 @@ function k(t) {
                             className: A.text,
                             'aria-live': 'polite',
                             'aria-atomic': !0,
-                            children: Z
+                            children: I
                         })
                     ]
                 }),
@@ -197,15 +197,15 @@ function k(t) {
     );
 }
 function R(t) {
-    let e = (0, d.e7)([Z.Z], () => Z.Z.getTypingUsers(t.id)),
-        i = (0, d.e7)([I.default], () => I.default.getCurrentUser());
+    let e = (0, d.e7)([I.Z], () => I.Z.getTypingUsers(t.id)),
+        i = (0, d.e7)([w.default], () => w.default.getCurrentUser());
     return a()(e)
         .keys()
         .filter((t) => t !== (null == i ? void 0 : i.id))
         .reject((t) => E.Z.isBlockedOrIgnored(t))
-        .map((t) => I.default.getUser(t))
-        .filter(P.lm)
-        .map((e) => C.ZP.getName(t.guild_id, t.id, e))
+        .map((t) => w.default.getUser(t))
+        .filter(j.lm)
+        .map((e) => T.ZP.getName(t.guild_id, t.id, e))
         .value();
 }
 function L(t) {
@@ -222,17 +222,17 @@ function L(t) {
                         n,
                         r = {},
                         s = Object.keys(t);
-                    for (n = 0; n < s.length; n++) (i = s[n]), e.indexOf(i) >= 0 || (r[i] = t[i]);
+                    for (n = 0; n < s.length; n++) ((i = s[n]), e.indexOf(i) >= 0 || (r[i] = t[i]));
                     return r;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < s.length; n++) (i = s[n]), !(e.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(t, i) && (r[i] = t[i]);
+                for (n = 0; n < s.length; n++) ((i = s[n]), !(e.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(t, i) && (r[i] = t[i]));
             }
             return r;
         })(t, ['channel', 'isThreadCreation']);
-    let l = (0, d.e7)([w.Z], () => w.Z.findActivity((t) => null != t.application_id)),
-        a = (0, d.e7)([v.ZP, y.default], () => v.ZP.getUserCombo(y.default.getId(), r.id)),
+    let l = (0, d.e7)([Z.Z], () => Z.Z.findActivity((t) => null != t.application_id)),
+        a = (0, d.e7)([v.ZP, S.default], () => v.ZP.getUserCombo(S.default.getId(), r.id)),
         h = (0, d.e7)([b.Z, g.Z, E.Z], () => (0, p.Z)(r, l, b.Z, g.Z, E.Z)),
         f = R(r),
         m =
@@ -244,7 +244,7 @@ function L(t) {
                     showInviteEducation: h,
                     activity: l,
                     typingUsers: s ? [] : f,
-                    isFocused: (0, d.e7)([x.Z], () => x.Z.isFocused()),
+                    isFocused: (0, d.e7)([P.Z], () => P.Z.isFocused()),
                     guildId: r.guild_id,
                     isComboing: null != a,
                     channel: r,

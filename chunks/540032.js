@@ -10,7 +10,7 @@ try {
 if (i && r) {
     var a = {},
         o = {};
-    i(o, 'length', {
+    (i(o, 'length', {
         '[[Get]]': function () {
             throw a;
         },
@@ -22,7 +22,7 @@ if (i && r) {
             } catch (e) {
                 return e === a;
             }
-        });
+        }));
 } else
     e.exports = function (e) {
         return 'function' == typeof e && !!e.prototype;

@@ -2,12 +2,12 @@ var r,
     i = n(250683),
     a = n(932093),
     o = 'function' == typeof Symbol && 'function' == typeof Symbol.for ? Symbol.for('nodejs.util.inspect.custom') : null;
-(t.Buffer = c), (r = b), (t.INSPECT_MAX_BYTES = 50);
+((t.Buffer = c), (r = b), (t.INSPECT_MAX_BYTES = 50));
 var s = 2147483647;
 function l(e) {
     if (e > s) throw RangeError('The value "' + e + '" is invalid for option "size"');
     var t = new Uint8Array(e);
-    return Object.setPrototypeOf(t, c.prototype), t;
+    return (Object.setPrototypeOf(t, c.prototype), t);
 }
 function c(e, t, n) {
     if ('number' == typeof e) {
@@ -37,14 +37,14 @@ function f(e, t, n) {
     return (d(e), e <= 0) ? l(e) : void 0 !== t ? ('string' == typeof n ? l(e).fill(t, n) : l(e).fill(t)) : l(e);
 }
 function _(e) {
-    return d(e), l(e < 0 ? 0 : 0 | E(e));
+    return (d(e), l(e < 0 ? 0 : 0 | E(e)));
 }
 function p(e, t) {
     if ((('string' != typeof t || '' === t) && (t = 'utf8'), !c.isEncoding(t))) throw TypeError('Unknown encoding: ' + t);
     var n = 0 | y(e, t),
         r = l(n),
         i = r.write(e, t);
-    return i !== n && (r = r.slice(0, i)), r;
+    return (i !== n && (r = r.slice(0, i)), r);
 }
 function h(e) {
     for (var t = e.length < 0 ? 0 : 0 | E(e.length), n = l(t), r = 0; r < t; r += 1) n[r] = 255 & e[r];
@@ -54,13 +54,13 @@ function m(e, t, n) {
     var r;
     if (t < 0 || e.byteLength < t) throw RangeError('"offset" is outside of buffer bounds');
     if (e.byteLength < t + (n || 0)) throw RangeError('"length" is outside of buffer bounds');
-    return Object.setPrototypeOf((r = void 0 === t && void 0 === n ? new Uint8Array(e) : void 0 === n ? new Uint8Array(e, t) : new Uint8Array(e, t, n)), c.prototype), r;
+    return (Object.setPrototypeOf((r = void 0 === t && void 0 === n ? new Uint8Array(e) : void 0 === n ? new Uint8Array(e, t) : new Uint8Array(e, t, n)), c.prototype), r);
 }
 function g(e) {
     if (c.isBuffer(e)) {
         var t = 0 | E(e.length),
             n = l(t);
-        return 0 === n.length || e.copy(n, 0, 0, t), n;
+        return (0 === n.length || e.copy(n, 0, 0, t), n);
     }
     return void 0 !== e.length ? ('number' != typeof e.length || J(e.length) ? l(0) : h(e)) : 'Buffer' === e.type && Array.isArray(e.data) ? h(e.data) : void 0;
 }
@@ -69,7 +69,7 @@ function E(e) {
     return 0 | e;
 }
 function b(e) {
-    return +e != e && (e = 0), c.alloc(+e);
+    return (+e != e && (e = 0), c.alloc(+e));
 }
 function y(e, t) {
     if (c.isBuffer(e)) return e.length;
@@ -98,7 +98,7 @@ function y(e, t) {
                 return q(e).length;
             default:
                 if (i) return r ? -1 : W(e).length;
-                (t = ('' + t).toLowerCase()), (i = !0);
+                ((t = ('' + t).toLowerCase()), (i = !0));
         }
 }
 function O(e, t, n) {
@@ -125,12 +125,12 @@ function O(e, t, n) {
                 return U(this, t, n);
             default:
                 if (r) throw TypeError('Unknown encoding: ' + e);
-                (e = (e + '').toLowerCase()), (r = !0);
+                ((e = (e + '').toLowerCase()), (r = !0));
         }
 }
 function v(e, t, n) {
     var r = e[t];
-    (e[t] = e[n]), (e[n] = r);
+    ((e[t] = e[n]), (e[n] = r));
 }
 function I(e, t, n, r, i) {
     if (0 === e.length) return -1;
@@ -156,7 +156,7 @@ function T(e, t, n, r, i) {
         l = t.length;
     if (void 0 !== r && ('ucs2' === (r = String(r).toLowerCase()) || 'ucs-2' === r || 'utf16le' === r || 'utf-16le' === r)) {
         if (e.length < 2 || t.length < 2) return -1;
-        (o = 2), (s /= 2), (l /= 2), (n /= 2);
+        ((o = 2), (s /= 2), (l /= 2), (n /= 2));
     }
     function c(e, t) {
         return 1 === o ? e[t] : e.readUInt16BE(t * o);
@@ -166,7 +166,7 @@ function T(e, t, n, r, i) {
         for (a = n; a < s; a++)
             if (c(e, a) === c(t, -1 === u ? 0 : a - u)) {
                 if ((-1 === u && (u = a), a - u + 1 === l)) return u * o;
-            } else -1 !== u && (a -= a - u), (u = -1);
+            } else (-1 !== u && (a -= a - u), (u = -1));
     } else
         for (n + l > s && (n = s - l), a = n; a >= 0; a--) {
             for (var d = !0, f = 0; f < l; f++)
@@ -228,16 +228,16 @@ function D(e, t, n) {
                     (192 & (a = e[i + 1])) == 128 && (l = ((31 & c) << 6) | (63 & a)) > 127 && (u = l);
                     break;
                 case 3:
-                    (a = e[i + 1]), (o = e[i + 2]), (192 & a) == 128 && (192 & o) == 128 && (l = ((15 & c) << 12) | ((63 & a) << 6) | (63 & o)) > 2047 && (l < 55296 || l > 57343) && (u = l);
+                    ((a = e[i + 1]), (o = e[i + 2]), (192 & a) == 128 && (192 & o) == 128 && (l = ((15 & c) << 12) | ((63 & a) << 6) | (63 & o)) > 2047 && (l < 55296 || l > 57343) && (u = l));
                     break;
                 case 4:
-                    (a = e[i + 1]), (o = e[i + 2]), (s = e[i + 3]), (192 & a) == 128 && (192 & o) == 128 && (192 & s) == 128 && (l = ((15 & c) << 18) | ((63 & a) << 12) | ((63 & o) << 6) | (63 & s)) > 65535 && l < 1114112 && (u = l);
+                    ((a = e[i + 1]), (o = e[i + 2]), (s = e[i + 3]), (192 & a) == 128 && (192 & o) == 128 && (192 & s) == 128 && (l = ((15 & c) << 18) | ((63 & a) << 12) | ((63 & o) << 6) | (63 & s)) > 65535 && l < 1114112 && (u = l));
             }
-        null === u ? ((u = 65533), (d = 1)) : u > 65535 && ((u -= 65536), r.push(((u >>> 10) & 1023) | 55296), (u = 56320 | (1023 & u))), r.push(u), (i += d);
+        (null === u ? ((u = 65533), (d = 1)) : u > 65535 && ((u -= 65536), r.push(((u >>> 10) & 1023) | 55296), (u = 56320 | (1023 & u))), r.push(u), (i += d));
     }
     return x(r);
 }
-(r = 2147483647),
+((r = 2147483647),
     (c.TYPED_ARRAY_SUPPORT = (function e() {
         try {
             var e = new Uint8Array(1),
@@ -246,7 +246,7 @@ function D(e, t, n) {
                         return 42;
                     }
                 };
-            return Object.setPrototypeOf(t, Uint8Array.prototype), Object.setPrototypeOf(e, t), 42 === e.foo();
+            return (Object.setPrototypeOf(t, Uint8Array.prototype), Object.setPrototypeOf(e, t), 42 === e.foo());
         } catch (e) {
             return !1;
         }
@@ -287,7 +287,7 @@ function D(e, t, n) {
         if (e === t) return 0;
         for (var n = e.length, r = t.length, i = 0, a = Math.min(n, r); i < a; ++i)
             if (e[i] !== t[i]) {
-                (n = e[i]), (r = t[i]);
+                ((n = e[i]), (r = t[i]));
                 break;
             }
         return n < r ? -1 : +(r < n);
@@ -320,7 +320,7 @@ function D(e, t, n) {
         for (n = 0; n < e.length; ++n) {
             var a = e[n];
             if ((Q(a, Uint8Array) && (a = c.from(a)), !c.isBuffer(a))) throw TypeError('"list" argument must be an Array of Buffers');
-            a.copy(r, i), (i += a.length);
+            (a.copy(r, i), (i += a.length));
         }
         return r;
     }),
@@ -335,13 +335,13 @@ function D(e, t, n) {
     (c.prototype.swap32 = function () {
         var e = this.length;
         if (e % 4 != 0) throw RangeError('Buffer size must be a multiple of 32-bits');
-        for (var t = 0; t < e; t += 4) v(this, t, t + 3), v(this, t + 1, t + 2);
+        for (var t = 0; t < e; t += 4) (v(this, t, t + 3), v(this, t + 1, t + 2));
         return this;
     }),
     (c.prototype.swap64 = function () {
         var e = this.length;
         if (e % 8 != 0) throw RangeError('Buffer size must be a multiple of 64-bits');
-        for (var t = 0; t < e; t += 8) v(this, t, t + 7), v(this, t + 1, t + 6), v(this, t + 2, t + 5), v(this, t + 3, t + 4);
+        for (var t = 0; t < e; t += 8) (v(this, t, t + 7), v(this, t + 1, t + 6), v(this, t + 2, t + 5), v(this, t + 3, t + 4));
         return this;
     }),
     (c.prototype.toString = function () {
@@ -374,7 +374,7 @@ function D(e, t, n) {
         if (((t >>>= 0), (n >>>= 0), (r >>>= 0), (i >>>= 0), this === e)) return 0;
         for (var a = i - r, o = n - t, s = Math.min(a, o), l = this.slice(r, i), u = e.slice(t, n), d = 0; d < s; ++d)
             if (l[d] !== u[d]) {
-                (a = l[d]), (o = u[d]);
+                ((a = l[d]), (o = u[d]));
                 break;
             }
         return a < o ? -1 : +(o < a);
@@ -389,9 +389,9 @@ function D(e, t, n) {
         return I(this, e, t, n, !1);
     }),
     (c.prototype.write = function (e, t, n, r) {
-        if (void 0 === t) (r = 'utf8'), (n = this.length), (t = 0);
-        else if (void 0 === n && 'string' == typeof t) (r = t), (n = this.length), (t = 0);
-        else if (isFinite(t)) (t >>>= 0), isFinite(n) ? ((n >>>= 0), void 0 === r && (r = 'utf8')) : ((r = n), (n = void 0));
+        if (void 0 === t) ((r = 'utf8'), (n = this.length), (t = 0));
+        else if (void 0 === n && 'string' == typeof t) ((r = t), (n = this.length), (t = 0));
+        else if (isFinite(t)) ((t >>>= 0), isFinite(n) ? ((n >>>= 0), void 0 === r && (r = 'utf8')) : ((r = n), (n = void 0)));
         else throw Error('Buffer.write(string, encoding, offset[, length]) is no longer supported');
         var i = this.length - t;
         if (((void 0 === n || n > i) && (n = i), (e.length > 0 && (n < 0 || t < 0)) || t > this.length)) throw RangeError('Attempt to write outside buffer bounds');
@@ -417,7 +417,7 @@ function D(e, t, n) {
                     return P(this, e, t, n);
                 default:
                     if (a) throw TypeError('Unknown encoding: ' + r);
-                    (r = ('' + r).toLowerCase()), (a = !0);
+                    ((r = ('' + r).toLowerCase()), (a = !0));
             }
     }),
     (c.prototype.toJSON = function () {
@@ -425,7 +425,7 @@ function D(e, t, n) {
             type: 'Buffer',
             data: Array.prototype.slice.call(this._arr || this, 0)
         };
-    });
+    }));
 var L = 4096;
 function x(e) {
     var t = e.length;
@@ -447,7 +447,7 @@ function M(e, t, n) {
 }
 function j(e, t, n) {
     var r = e.length;
-    (!t || t < 0) && (t = 0), (!n || n < 0 || n > r) && (n = r);
+    ((!t || t < 0) && (t = 0), (!n || n < 0 || n > r) && (n = r));
     for (var i = '', a = t; a < n; ++a) i += $[e[a]];
     return i;
 }
@@ -468,82 +468,82 @@ function V(e, t, n, r, i, a) {
     if (n + r > e.length || n < 0) throw RangeError('Index out of range');
 }
 function F(e, t, n, r, i) {
-    return (t *= 1), (n >>>= 0), i || V(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38), a.write(e, t, n, r, 23, 4), n + 4;
+    return ((t *= 1), (n >>>= 0), i || V(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38), a.write(e, t, n, r, 23, 4), n + 4);
 }
 function Z(e, t, n, r, i) {
-    return (t *= 1), (n >>>= 0), i || V(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308), a.write(e, t, n, r, 52, 8), n + 8;
+    return ((t *= 1), (n >>>= 0), i || V(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308), a.write(e, t, n, r, 52, 8), n + 8);
 }
-(c.prototype.slice = function (e, t) {
+((c.prototype.slice = function (e, t) {
     var n = this.length;
-    (e = ~~e), (t = void 0 === t ? n : ~~t), e < 0 ? (e += n) < 0 && (e = 0) : e > n && (e = n), t < 0 ? (t += n) < 0 && (t = 0) : t > n && (t = n), t < e && (t = e);
+    ((e = ~~e), (t = void 0 === t ? n : ~~t), e < 0 ? (e += n) < 0 && (e = 0) : e > n && (e = n), t < 0 ? (t += n) < 0 && (t = 0) : t > n && (t = n), t < e && (t = e));
     var r = this.subarray(e, t);
-    return Object.setPrototypeOf(r, c.prototype), r;
+    return (Object.setPrototypeOf(r, c.prototype), r);
 }),
     (c.prototype.readUIntLE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), n || G(e, t, this.length);
+        ((e >>>= 0), (t >>>= 0), n || G(e, t, this.length));
         for (var r = this[e], i = 1, a = 0; ++a < t && (i *= 256); ) r += this[e + a] * i;
         return r;
     }),
     (c.prototype.readUIntBE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), n || G(e, t, this.length);
+        ((e >>>= 0), (t >>>= 0), n || G(e, t, this.length));
         for (var r = this[e + --t], i = 1; t > 0 && (i *= 256); ) r += this[e + --t] * i;
         return r;
     }),
     (c.prototype.readUInt8 = function (e, t) {
-        return (e >>>= 0), t || G(e, 1, this.length), this[e];
+        return ((e >>>= 0), t || G(e, 1, this.length), this[e]);
     }),
     (c.prototype.readUInt16LE = function (e, t) {
-        return (e >>>= 0), t || G(e, 2, this.length), this[e] | (this[e + 1] << 8);
+        return ((e >>>= 0), t || G(e, 2, this.length), this[e] | (this[e + 1] << 8));
     }),
     (c.prototype.readUInt16BE = function (e, t) {
-        return (e >>>= 0), t || G(e, 2, this.length), (this[e] << 8) | this[e + 1];
+        return ((e >>>= 0), t || G(e, 2, this.length), (this[e] << 8) | this[e + 1]);
     }),
     (c.prototype.readUInt32LE = function (e, t) {
-        return (e >>>= 0), t || G(e, 4, this.length), (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3];
+        return ((e >>>= 0), t || G(e, 4, this.length), (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3]);
     }),
     (c.prototype.readUInt32BE = function (e, t) {
-        return (e >>>= 0), t || G(e, 4, this.length), 16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]);
+        return ((e >>>= 0), t || G(e, 4, this.length), 16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]));
     }),
     (c.prototype.readIntLE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), n || G(e, t, this.length);
+        ((e >>>= 0), (t >>>= 0), n || G(e, t, this.length));
         for (var r = this[e], i = 1, a = 0; ++a < t && (i *= 256); ) r += this[e + a] * i;
-        return r >= (i *= 128) && (r -= Math.pow(2, 8 * t)), r;
+        return (r >= (i *= 128) && (r -= Math.pow(2, 8 * t)), r);
     }),
     (c.prototype.readIntBE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), n || G(e, t, this.length);
+        ((e >>>= 0), (t >>>= 0), n || G(e, t, this.length));
         for (var r = t, i = 1, a = this[e + --r]; r > 0 && (i *= 256); ) a += this[e + --r] * i;
-        return a >= (i *= 128) && (a -= Math.pow(2, 8 * t)), a;
+        return (a >= (i *= 128) && (a -= Math.pow(2, 8 * t)), a);
     }),
     (c.prototype.readInt8 = function (e, t) {
         return ((e >>>= 0), t || G(e, 1, this.length), 128 & this[e]) ? -((255 - this[e] + 1) * 1) : this[e];
     }),
     (c.prototype.readInt16LE = function (e, t) {
-        (e >>>= 0), t || G(e, 2, this.length);
+        ((e >>>= 0), t || G(e, 2, this.length));
         var n = this[e] | (this[e + 1] << 8);
         return 32768 & n ? 4294901760 | n : n;
     }),
     (c.prototype.readInt16BE = function (e, t) {
-        (e >>>= 0), t || G(e, 2, this.length);
+        ((e >>>= 0), t || G(e, 2, this.length));
         var n = this[e + 1] | (this[e] << 8);
         return 32768 & n ? 4294901760 | n : n;
     }),
     (c.prototype.readInt32LE = function (e, t) {
-        return (e >>>= 0), t || G(e, 4, this.length), this[e] | (this[e + 1] << 8) | (this[e + 2] << 16) | (this[e + 3] << 24);
+        return ((e >>>= 0), t || G(e, 4, this.length), this[e] | (this[e + 1] << 8) | (this[e + 2] << 16) | (this[e + 3] << 24));
     }),
     (c.prototype.readInt32BE = function (e, t) {
-        return (e >>>= 0), t || G(e, 4, this.length), (this[e] << 24) | (this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3];
+        return ((e >>>= 0), t || G(e, 4, this.length), (this[e] << 24) | (this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]);
     }),
     (c.prototype.readFloatLE = function (e, t) {
-        return (e >>>= 0), t || G(e, 4, this.length), a.read(this, e, !0, 23, 4);
+        return ((e >>>= 0), t || G(e, 4, this.length), a.read(this, e, !0, 23, 4));
     }),
     (c.prototype.readFloatBE = function (e, t) {
-        return (e >>>= 0), t || G(e, 4, this.length), a.read(this, e, !1, 23, 4);
+        return ((e >>>= 0), t || G(e, 4, this.length), a.read(this, e, !1, 23, 4));
     }),
     (c.prototype.readDoubleLE = function (e, t) {
-        return (e >>>= 0), t || G(e, 8, this.length), a.read(this, e, !0, 52, 8);
+        return ((e >>>= 0), t || G(e, 8, this.length), a.read(this, e, !0, 52, 8));
     }),
     (c.prototype.readDoubleBE = function (e, t) {
-        return (e >>>= 0), t || G(e, 8, this.length), a.read(this, e, !1, 52, 8);
+        return ((e >>>= 0), t || G(e, 8, this.length), a.read(this, e, !1, 52, 8));
     }),
     (c.prototype.writeUIntLE = function (e, t, n, r) {
         if (((e *= 1), (t >>>= 0), (n >>>= 0), !r)) {
@@ -566,19 +566,19 @@ function Z(e, t, n, r, i) {
         return t + n;
     }),
     (c.prototype.writeUInt8 = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 1, 255, 0), (this[t] = 255 & e), t + 1;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 1, 255, 0), (this[t] = 255 & e), t + 1);
     }),
     (c.prototype.writeUInt16LE = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 2, 65535, 0), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 2, 65535, 0), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2);
     }),
     (c.prototype.writeUInt16BE = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 2, 65535, 0), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 2, 65535, 0), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2);
     }),
     (c.prototype.writeUInt32LE = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 4, 4294967295, 0), (this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e), t + 4;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 4, 4294967295, 0), (this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e), t + 4);
     }),
     (c.prototype.writeUInt32BE = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 4, 4294967295, 0), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 4, 4294967295, 0), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4);
     }),
     (c.prototype.writeIntLE = function (e, t, n, r) {
         if (((e *= 1), (t >>>= 0), !r)) {
@@ -588,7 +588,7 @@ function Z(e, t, n, r, i) {
         var a = 0,
             o = 1,
             s = 0;
-        for (this[t] = 255 & e; ++a < n && (o *= 256); ) e < 0 && 0 === s && 0 !== this[t + a - 1] && (s = 1), (this[t + a] = (((e / o) >> 0) - s) & 255);
+        for (this[t] = 255 & e; ++a < n && (o *= 256); ) (e < 0 && 0 === s && 0 !== this[t + a - 1] && (s = 1), (this[t + a] = (((e / o) >> 0) - s) & 255));
         return t + n;
     }),
     (c.prototype.writeIntBE = function (e, t, n, r) {
@@ -599,23 +599,23 @@ function Z(e, t, n, r, i) {
         var a = n - 1,
             o = 1,
             s = 0;
-        for (this[t + a] = 255 & e; --a >= 0 && (o *= 256); ) e < 0 && 0 === s && 0 !== this[t + a + 1] && (s = 1), (this[t + a] = (((e / o) >> 0) - s) & 255);
+        for (this[t + a] = 255 & e; --a >= 0 && (o *= 256); ) (e < 0 && 0 === s && 0 !== this[t + a + 1] && (s = 1), (this[t + a] = (((e / o) >> 0) - s) & 255));
         return t + n;
     }),
     (c.prototype.writeInt8 = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 1, 127, -128), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 1, 127, -128), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1);
     }),
     (c.prototype.writeInt16LE = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 2, 32767, -32768), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 2, 32767, -32768), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2);
     }),
     (c.prototype.writeInt16BE = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 2, 32767, -32768), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 2, 32767, -32768), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2);
     }),
     (c.prototype.writeInt32LE = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 4, 2147483647, -2147483648), (this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24), t + 4;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 4, 2147483647, -2147483648), (this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24), t + 4);
     }),
     (c.prototype.writeInt32BE = function (e, t, n) {
-        return (e *= 1), (t >>>= 0), n || B(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
+        return ((e *= 1), (t >>>= 0), n || B(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4);
     }),
     (c.prototype.writeFloatLE = function (e, t, n) {
         return F(this, e, t, !0, n);
@@ -635,7 +635,7 @@ function Z(e, t, n, r, i) {
         if (t < 0) throw RangeError('targetStart out of bounds');
         if (n < 0 || n >= this.length) throw RangeError('Index out of range');
         if (r < 0) throw RangeError('sourceEnd out of bounds');
-        r > this.length && (r = this.length), e.length - t < r - n && (r = e.length - t + n);
+        (r > this.length && (r = this.length), e.length - t < r - n && (r = e.length - t + n));
         var i = r - n;
         if (this === e && 'function' == typeof Uint8Array.prototype.copyWithin) this.copyWithin(t, n, r);
         else if (this === e && n < t && t < r) for (var a = i - 1; a >= 0; --a) e[a + t] = this[a + n];
@@ -662,7 +662,7 @@ function Z(e, t, n, r, i) {
             for (i = 0; i < n - t; ++i) this[i + t] = o[i % s];
         }
         return this;
-    });
+    }));
 var H = /[^+/0-9A-Za-z-_]/g;
 function Y(e) {
     if ((e = (e = e.split('=')[0]).trim().replace(H, '')).length < 2) return '';
@@ -682,7 +682,7 @@ function W(e, t) {
                 continue;
             }
             if (n < 56320) {
-                (t -= 3) > -1 && a.push(239, 191, 189), (i = n);
+                ((t -= 3) > -1 && a.push(239, 191, 189), (i = n));
                 continue;
             }
             n = (((i - 55296) << 10) | (n - 56320)) + 65536;
@@ -708,7 +708,7 @@ function K(e) {
     return t;
 }
 function z(e, t) {
-    for (var n, r, i = [], a = 0; a < e.length && !((t -= 2) < 0); ++a) (r = (n = e.charCodeAt(a)) >> 8), i.push(n % 256), i.push(r);
+    for (var n, r, i = [], a = 0; a < e.length && !((t -= 2) < 0); ++a) ((r = (n = e.charCodeAt(a)) >> 8), i.push(n % 256), i.push(r));
     return i;
 }
 function q(e) {

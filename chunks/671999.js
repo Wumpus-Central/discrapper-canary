@@ -13,8 +13,8 @@ function i(e, t, n) {
     if (null == r) throw Error();
     r.dispatchEvent(e);
 }
-n.d(t, {
+(n.d(t, {
     B: () => r,
     J: () => i
 }),
-    n(415506);
+    n(415506));

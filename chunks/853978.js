@@ -1,4 +1,4 @@
-a.r(r), a.d(r, { default: () => n });
+(a.r(r), a.d(r, { default: () => n }));
 var n = {
     payButton: 'Betaal',
     'payButton.redirecting': 'U wordt doorverwezen...',

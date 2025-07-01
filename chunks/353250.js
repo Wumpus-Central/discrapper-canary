@@ -1,9 +1,9 @@
-r.r(t),
+(r.r(t),
     r.d(t, {
         CaptchaError: () => c,
         emitCaptchaDistributionMetric: () => s,
         extractCaptchaPropsFromResponse: () => o
-    });
+    }));
 var n,
     a = r(644947),
     i = r(234888),
@@ -23,5 +23,5 @@ function o(e) {
     };
 }
 function s(e) {
-    (0, a._8)() && setTimeout(() => (0, a.Zq)(), i.i), (0, a.s$)(e);
+    ((0, a._8)() && setTimeout(() => (0, a.Zq)(), i.i), (0, a.s$)(e));
 }

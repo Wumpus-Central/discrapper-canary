@@ -26,7 +26,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -42,7 +42,7 @@ function p(e) {
     let { context: t, openInPopout: f, analyticsLocation: p, initialState: h } = e;
     f && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
     let m = f ? i.u1M : i.z1l;
-    (0, l.yT)(c.ti.DISMISSED), (0, l.__)(c._b.VOICE, void 0, h);
+    ((0, l.yT)(c.ti.DISMISSED), (0, l.__)(c._b.VOICE, void 0, h));
     let g = 'contextless' !== t.type && (o.ZP.hasUnread(t.channel.id) || o.ZP.getMentionCount(t.channel.id) > 0);
     return (
         s.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {

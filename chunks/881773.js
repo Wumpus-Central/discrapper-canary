@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(781311), n(388685);
+(n.d(t, { Z: () => _ }), n(781311), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -70,7 +70,7 @@ let y = l.forwardRef(function (e, t) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -78,7 +78,7 @@ let y = l.forwardRef(function (e, t) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -86,8 +86,8 @@ let y = l.forwardRef(function (e, t) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, e)),
@@ -222,7 +222,7 @@ function _(e) {
             },
             [N, k, T, I, w, et, Q]
         );
-    l.useEffect(() => {
+    (l.useEffect(() => {
         null != J.current && J.current.focus();
     }, []),
         l.useEffect(
@@ -245,7 +245,7 @@ function _(e) {
                 }
             ),
             [el]
-        );
+        ));
     let eo = 0 === G ? d.OyP : G < 0.5 ? d.X2j : d.gj8,
         { icon: ei, label: ea } = S[E];
     return (0, r.jsxs)(r.Fragment, {
@@ -344,10 +344,10 @@ function _(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        ee(e), M(e), L(e), K && (X(!1), A(!1)), V && e > 0 && B(!1);
+                                        (ee(e), M(e), L(e), K && (X(!1), A(!1)), V && e > 0 && B(!1));
                                     },
                                     asValueChanges: (e) => {
-                                        ee(e), K || (X(!0), A(!0));
+                                        (ee(e), K || (X(!0), A(!0)));
                                     },
                                     fillStyles: { backgroundColor: c.Z.colors.WHITE.css },
                                     orientation: 'horizontal',

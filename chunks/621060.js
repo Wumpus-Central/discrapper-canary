@@ -1,10 +1,10 @@
-n.d(t, {
-    ZP: () => _,
-    v0: () => x
+(n.d(t, {
+    ZP: () => j,
+    v0: () => p
 }),
     n(388685),
     n(539854),
-    n(642613);
+    n(642613));
 var a,
     r = n(255367),
     l = n(73800),
@@ -15,9 +15,9 @@ var a,
     d = n(393238),
     u = n(424625),
     m = n(823379),
-    p = n(246992),
+    x = n(246992),
     h = n(616257),
-    x = (((a = {}).NONE = ''), (a.EXPERIMENTS = 'Experiments'), (a.EVENTS = 'Events'), (a.PREMIUM = 'Premium'), (a.BILLING = 'Billing'), (a.USERS = 'Users'), (a.GUILDS = 'Guilds'), (a.UI = 'UI'), (a.GAMES = 'Games'), (a.AUDIO_VIDEO = 'Audio / Video'), (a.DEVELOPMENT = 'Development'), a);
+    p = (((a = {}).NONE = ''), (a.EXPERIMENTS = 'Experiments'), (a.EVENTS = 'Events'), (a.PREMIUM = 'Premium'), (a.BILLING = 'Billing'), (a.USERS = 'Users'), (a.GUILDS = 'Guilds'), (a.UI = 'UI'), (a.GAMES = 'Games'), (a.AUDIO_VIDEO = 'Audio / Video'), (a.DEVELOPMENT = 'Development'), a);
 let b = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
     f = l.forwardRef(function (e, t) {
         let { id: n, selected: a, onClick: l, children: i } = e;
@@ -32,18 +32,18 @@ let b = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI',
 function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
         i = l.useRef(new Map()),
-        [s, x] = l.useState(() => new Set()),
-        { ref: v, width: _ } = (0, d.ZP)(),
+        [s, p] = l.useState(() => new Set()),
+        { ref: v, width: j } = (0, d.ZP)(),
         g = l.useRef(null);
     l.useEffect(() => {
         var e, a, r, l;
-        if (null == _) return;
+        if (null == j) return;
         let s = new Set(),
-            o = null != _ ? _ : 0;
+            o = null != j ? j : 0;
         for (let c of ((o -= null != (a = null == (e = i.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0), t)) c.id !== n && (o -= null != (l = null == (r = i.current.get(c.id)) ? void 0 : r.getBoundingClientRect().width) ? l : 0) < 0 && s.add(c.id);
-        x(s);
-    }, [t, _, v, n]);
-    let j = l.useCallback(
+        p(s);
+    }, [t, j, v, n]);
+    let _ = l.useCallback(
         (e) => {
             var n, l, i;
             let { closePopout: s } = e,
@@ -151,8 +151,8 @@ function v(e) {
                     s.size > 0 &&
                     (0, r.jsx)(c.yRy, {
                         targetElementRef: g,
-                        layerContext: p.O$,
-                        renderPopout: j,
+                        layerContext: x.O$,
+                        renderPopout: _,
                         position: 'bottom',
                         align: 'right',
                         spacing: 0,
@@ -164,7 +164,7 @@ function v(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             a = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (a = a.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -172,7 +172,7 @@ function v(e) {
                                             )),
                                             a.forEach(function (t) {
                                                 var a;
-                                                (a = n[t]),
+                                                ((a = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: a,
@@ -180,8 +180,8 @@ function v(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = a);
-                                            });
+                                                        : (e[t] = a));
+                                            }));
                                     }
                                     return e;
                                 })({}, e)),
@@ -217,7 +217,7 @@ function v(e) {
         ]
     });
 }
-function _(e, t) {
+function j(e, t) {
     var n, a, i;
     let { tabs: s, initialSelectedTabId: o, onChangeTab: c } = e,
         [d, u] = l.useState(null != o ? o : null == (n = s[0]) ? void 0 : n.id);
@@ -228,7 +228,7 @@ function _(e, t) {
                     tabs: s,
                     selectedTabId: d,
                     onSelectTab: (e) => {
-                        u(e), null == c || c(e);
+                        (u(e), null == c || c(e));
                     }
                 }),
             [d, u, c, ...t]

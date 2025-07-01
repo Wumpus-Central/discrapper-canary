@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         AnalyticEventConfigs: () => B,
         AnalyticsContext: () => A,
@@ -18,7 +18,7 @@ n.r(t),
         trackNetworkAction: () => ei
     }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(772848),
     a = n(990547),
@@ -52,7 +52,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -60,7 +60,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -68,11 +68,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -94,7 +94,7 @@ function I(e, t) {
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -104,7 +104,7 @@ function T(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let S = { location: {} },
@@ -389,15 +389,15 @@ function K(e) {
         let { source: e } = a;
         a = y({}, I(a, ['source']), F(e));
     }
-    (a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = p.Z.getCPUCoreCount()), (a.accessibility_features = Z()), (a.rendered_locale = E.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - M) / 1000));
+    ((a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = p.Z.getCPUCoreCount()), (a.accessibility_features = Z()), (a.rendered_locale = E.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - M) / 1000)));
     let o = p.Z.getProcessUptime();
     null != o && (a.uptime_process_renderer = Math.floor(o));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = N;
-    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), (a.launch_signature = j), U.forEach((e) => e(a)), a;
+    return ((a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), (a.launch_signature = j), U.forEach((e) => e(a)), a);
 }
 function z(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    f.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? u.Hj('Analytics', e, t) : u.Hj('Analytics', e);
+    (f.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? u.Hj('Analytics', e, t) : u.Hj('Analytics', e));
 }
 let q = !1,
     X = {};
@@ -447,7 +447,7 @@ let er = (0, a.trackMaker)({
 });
 function ei(e, t) {
     let n = K(y({ location: (0, c.k$)() }, t));
-    (0, c.dT)(e, y({ type: 'action' }, t)), z(e, n), er(e, n);
+    ((0, c.dT)(e, y({ type: 'action' }, t)), z(e, n), er(e, n));
 }
 function ea() {
     return (0, i.Z)();

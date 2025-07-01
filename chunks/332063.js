@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var i,
     s = n(255367),
     l = n(73800),
@@ -23,7 +23,7 @@ function h(e, t, n) {
 class u extends (i = l.Component) {
     componentDidMount() {
         let { applicationId: e, branches: t, onHasBranchesChange: n } = this.props;
-        (0, o.Z)(e), null == n || n(t.length > 0);
+        ((0, o.Z)(e), null == n || n(t.length > 0));
     }
     componentDidUpdate(e) {
         let { onHasBranchesChange: t, branches: n } = this.props,
@@ -46,10 +46,10 @@ class u extends (i = l.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             h(this, 'handleChange', (e) => {
                 this.props.onChange(e);
-            });
+            }));
     }
 }
 h(u, 'defaultProps', { includeMaster: !1 });

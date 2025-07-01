@@ -395,7 +395,7 @@ let p = {
     h: function (e, t, n) {
         if ('ho' === t) {
             var r = e.getUTCHours() % 12;
-            return 0 === r && (r = 12), n.ordinalNumber(r, { unit: 'hour' });
+            return (0 === r && (r = 12), n.ordinalNumber(r, { unit: 'hour' }));
         }
         return c.Z.h(e, t);
     },

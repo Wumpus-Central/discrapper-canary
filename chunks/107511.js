@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(433517),
     i = n(570140),
     a = n(317770),
@@ -28,7 +28,7 @@ class f extends a.Z {
         i.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'handleVoiceStateUpdates', (e) => {
                 let { voiceStates: t } = e;
                 t.forEach((e) => {
@@ -36,7 +36,7 @@ class f extends a.Z {
                     let t = s.Z.getVoiceChannelId();
                     null != t && e.channelId === t && c.ZP.isAudienceMember(e.userId, t) && (r.K.set(u.$z, !0), l.$(t));
                 });
-            });
+            }));
     }
 }
 let _ = new f();

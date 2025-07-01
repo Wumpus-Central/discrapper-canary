@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(642613);
+(n.d(t, { Z: () => x }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -56,7 +56,7 @@ function x(e) {
         },
         Y = () => (null != h || (f && null == E) ? w.intl.string(w.t.zOmK9P) : null != E ? w.intl.string(w.t.d1lrmZ) : w.intl.string(w.t['/s1xR0'])),
         W = (e, t) => {
-            null != a &&
+            (null != a &&
                 (0, S.dM)(
                     new y.Z({
                         code: t,
@@ -71,7 +71,7 @@ function x(e) {
                 ),
                 setTimeout(() => {
                     I(u.kO8.Modes.DEFAULT);
-                }, L);
+                }, L));
         },
         K = () => {
             let e;
@@ -189,7 +189,7 @@ function x(e) {
 let k = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        f.Z.fetchRelationships(), (0, E._)();
+        (f.Z.fetchRelationships(), (0, E._)());
     }, []);
     let [a, o] = i.useState(),
         [s, p] = i.useState(!1),
@@ -226,7 +226,7 @@ let k = (e) => {
                         renderLeading: () => (v ? (0, r.jsx)(u.$jN, { type: u.RAz.PULSING_ELLIPSIS }) : null),
                         value: a,
                         onChange: (e) => {
-                            o(e), p(!1);
+                            (o(e), p(!1));
                         },
                         options: P.map((e) => ({
                             value: e,
@@ -238,14 +238,14 @@ let k = (e) => {
                         submitting: m,
                         className: D.sendToRecipientButton,
                         onClick: () => {
-                            g(!0),
+                            (g(!0),
                                 (0, h.YD)(a, t)
                                     .then(() => {
-                                        n(), (0, d.Ou)();
+                                        (n(), (0, d.Ou)());
                                     })
                                     .catch(() => {
-                                        p(!0), g(!1);
-                                    });
+                                        (p(!0), g(!1));
+                                    }));
                         },
                         children: w.intl.string(w.t['+EgwQk'])
                     })

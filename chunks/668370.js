@@ -13,7 +13,7 @@ t.exports = function (t, e, r, n) {
             .concat([[o, a.get(o)]])
             .map(function (t) {
                 var e = t.getDepth() + r;
-                return (e = Math.max(0, Math.min(e, n))), t.set('depth', e);
+                return ((e = Math.max(0, Math.min(e, n))), t.set('depth', e));
             });
     return (
         (a = a.merge(u)),

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     CR: () => m,
     UU: () => p,
     jE: () => _
@@ -6,7 +6,7 @@ n.d(t, {
     n(953529),
     n(804061),
     n(704826),
-    n(35282);
+    n(35282));
 var r = n(884439),
     i = n(55000),
     a = n(693824),
@@ -32,7 +32,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -79,7 +79,7 @@ let _ = (e) => {
         return await (0, o.f)({
             assetsToLoad: f,
             drawImage: (e) => {
-                y(e, u),
+                (y(e, u),
                     b(e),
                     E(e),
                     g(e, s),
@@ -88,7 +88,7 @@ let _ = (e) => {
                         badges: d,
                         startPosition: c.Iq,
                         maxWidth: c.kC
-                    });
+                    }));
             },
             exportConfigs: {
                 format: a.kH.CloudUpload,
@@ -100,7 +100,7 @@ let _ = (e) => {
         });
     };
 function g(e, t) {
-    e.setColor('white'),
+    (e.setColor('white'),
         e.setFont({
             size: 16,
             family: c.I8,
@@ -116,7 +116,7 @@ function g(e, t) {
                 w: c.kC
             },
             !0
-        );
+        ));
 }
 function E(e) {
     e.drawRoundedImage(
@@ -161,7 +161,7 @@ function y(e, t) {
         color: e,
         stop: t
     }));
-    e.setSize(
+    (e.setSize(
         {
             w: c.nx,
             h: c.bg
@@ -185,5 +185,5 @@ function y(e, t) {
                 w: c.nx
             },
             8
-        );
+        ));
 }

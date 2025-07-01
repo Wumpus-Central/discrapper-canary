@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(953529);
+(n.d(t, { Z: () => d }), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -13,10 +13,10 @@ let d = function (e) {
         (0, s.YT)(g, b, _);
     }, [g, b, _]);
     let y = i.useCallback(() => {
-            (0, s.qd)(s.iP.NSFW_CHANNEL_DISAGREE_CTA, g, b, _), null == h || h();
+            ((0, s.qd)(s.iP.NSFW_CHANNEL_DISAGREE_CTA, g, b, _), null == h || h());
         }, [h, g, b, _]),
         C = i.useCallback(() => {
-            (0, s.qd)(s.iP.NSFW_CHANNEL_AGREE_CTA, g, b, _), null == p || p();
+            ((0, s.qd)(s.iP.NSFW_CHANNEL_AGREE_CTA, g, b, _), null == p || p());
         }, [p, g, b, _]);
     return (0, r.jsxs)(a.Kqy, {
         className: c.gatedContent,

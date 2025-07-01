@@ -16,7 +16,7 @@ function b(e, t) {
               id: s.intl.string(s.t['154/bG']),
               label: s.intl.string(s.t['154/bG']),
               action: () => {
-                  l.Z.open(e, u.pNK.SOUNDBOARD), null == t || t();
+                  (l.Z.open(e, u.pNK.SOUNDBOARD), null == t || t());
               }
           })
         : null;

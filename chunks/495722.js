@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685), n(953529), n(314940);
+(n.d(t, { Z: () => X }), n(388685), n(953529), n(314940));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(272008),
     b = n(113434),
     j = n(569984),
-    _ = n(497505),
-    v = n(918701),
+    v = n(497505),
+    _ = n(918701),
     y = n(184299),
     C = n(192023),
     O = n(373370),
@@ -49,9 +49,9 @@ function W(e) {
     s.useEffect(() => {
         null != x.current && (u && (!l || p) ? ((x.current.currentTime = 0), x.current.play()) : x.current.pause());
     }, [x, p, l, u]);
-    let _ = j(o.id),
-        v = (null == (t = o.userStatus) ? void 0 : t.completedAt) != null && _ === y.iw.COMPLETED,
-        C = !v && (!l || p);
+    let v = j(o.id),
+        _ = (null == (t = o.userStatus) ? void 0 : t.completedAt) != null && v === y.iw.COMPLETED,
+        C = !_ && (!l || p);
     return (0, r.jsxs)(m.P3F, {
         className: M.videoQuestPreviewCont,
         onClick: i,
@@ -86,7 +86,7 @@ function W(e) {
                 : null,
             (0, r.jsx)('div', {
                 className: M.previewPlayButtonCont,
-                children: v
+                children: _
                     ? (0, r.jsx)(m.Oe7, {
                           color: d.Z.colors.WHITE,
                           className: M.previewPlayButton
@@ -105,9 +105,9 @@ function Z(e) {
         className: a()(M.rewardTile, M.hiddenRewardTile),
         learnMoreStyle: 'text',
         quest: t,
-        questContent: _.jn.QUEST_BAR_V2,
+        questContent: v.jn.QUEST_BAR_V2,
         location: Q.dr.QUESTS_BAR,
-        sourceQuestContent: _.jn.QUEST_BAR_V2
+        sourceQuestContent: v.jn.QUEST_BAR_V2
     });
 }
 function U(e) {
@@ -117,9 +117,9 @@ function U(e) {
         children: (0, O.DD)({
             quest: e.quest,
             location: Q.dr.QUESTS_BAR,
-            questContent: _.jn.QUEST_BAR_V2,
+            questContent: v.jn.QUEST_BAR_V2,
             taskDetails: e.taskDetails,
-            sourceQuestContent: _.jn.QUEST_BAR_V2
+            sourceQuestContent: v.jn.QUEST_BAR_V2
         })
     });
 }
@@ -127,8 +127,8 @@ function H(e) {
     let { quest: t, taskDetails: n, expansionSpring: o, isInteractable: l, reducedMotion: c, containerRef: d, isExpanded: g, onAcceptQuest: x } = e,
         h = (0, u.e7)([j.Z], () => j.Z.isEnrolling(t.id), [t]),
         b = s.useMemo(() => (0, E.fh)(t, E.eC.QUEST_BAR_HERO), [t]),
-        _ = (0, O.CR)({ quest: t }),
-        v = (0, C.h)({
+        v = (0, O.CR)({ quest: t }),
+        _ = (0, C.h)({
             location: Q.dr.QUESTS_BAR,
             questConfig: t.config
         }),
@@ -166,12 +166,12 @@ function H(e) {
                             onClick: l ? x : void 0,
                             size: m.zxk.Sizes.SMALL,
                             submitting: h,
-                            children: _
+                            children: v
                         })
                     ]
                 })
             }),
-            v &&
+            _ &&
                 null != y &&
                 (0, r.jsx)(i.animated.div, {
                     className: M.contentCollapsedBackgroundWrapper,
@@ -190,7 +190,7 @@ function H(e) {
                     filter: o.to([0, 1], [0.8, 1]).to((e) => 'brightness('.concat(e, ')'))
                 },
                 children: [
-                    !v &&
+                    !_ &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(i.animated.div, {
@@ -273,12 +273,12 @@ function F(e) {
         w = s.useRef(null),
         P = (0, b.B6)(n.config.expiresAt),
         Z = (0, b._s)({ quest: n }),
-        U = (0, v.q8)(n),
+        U = (0, _.q8)(n),
         H = (0, b.Jf)(n),
         z = s.useCallback(() => {
             (0, N.openVideoQuestModal)({
                 quest: n,
-                sourceQuestContent: _.jn.QUEST_BAR_V2
+                sourceQuestContent: v.jn.QUEST_BAR_V2
             });
         }, [n]),
         F = null != H ? H.percentComplete : o.percentComplete;
@@ -310,11 +310,11 @@ function F(e) {
                                 onOpen: g,
                                 onClose: x,
                                 onSelect: h,
-                                questContent: _.jn.QUEST_BAR_V2,
+                                questContent: v.jn.QUEST_BAR_V2,
                                 quest: n,
                                 shouldShowDisclosure: !1,
                                 showShareLink: !0,
-                                sourceQuestContent: _.jn.QUEST_BAR_V2,
+                                sourceQuestContent: v.jn.QUEST_BAR_V2,
                                 children: (e) => {
                                     var t, n;
                                     return (0, r.jsx)(
@@ -323,7 +323,7 @@ function F(e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     r = Object.keys(n);
-                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                     (r = r.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -331,7 +331,7 @@ function F(e) {
                                                     )),
                                                     r.forEach(function (t) {
                                                         var r;
-                                                        (r = n[t]),
+                                                        ((r = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: r,
@@ -339,8 +339,8 @@ function F(e) {
                                                                       configurable: !0,
                                                                       writable: !0
                                                                   })
-                                                                : (e[t] = r);
-                                                    });
+                                                                : (e[t] = r));
+                                                    }));
                                             }
                                             return e;
                                         })({}, e)),
@@ -391,16 +391,16 @@ function F(e) {
                     (0, r.jsx)(A.n, {
                         children:
                             !j &&
-                            !(0, v.Gd)(n) &&
+                            !(0, _.Gd)(n) &&
                             (0, l.EQ)(O)
-                                .with(_.LI.SELECT, () =>
+                                .with(v.LI.SELECT, () =>
                                     (0, r.jsx)(D.Z, {
                                         onConsole: () => S(Q.cd.CONSOLE),
                                         onDesktop: () => S(Q.cd.DESKTOP)
                                     })
                                 )
-                                .with(_.LI.DESKTOP, () => (0, r.jsx)(I.Z, { quest: n }))
-                                .with(_.LI.CONSOLE, () =>
+                                .with(v.LI.DESKTOP, () => (0, r.jsx)(I.Z, { quest: n }))
+                                .with(v.LI.CONSOLE, () =>
                                     (0, r.jsx)(B.Z, {
                                         quest: n,
                                         taskDetails: o
@@ -425,10 +425,10 @@ function F(e) {
                                 hasMadeProgress: y,
                                 isProgressing: C,
                                 activeScreen: O,
-                                showBackButton: O !== _.LI.SELECT && E.length > 1 && !y && !C,
+                                showBackButton: O !== v.LI.SELECT && E.length > 1 && !y && !C,
                                 onBack: () => S(null),
                                 taskDetails: o,
-                                sourceQuestContent: _.jn.QUEST_BAR_V2
+                                sourceQuestContent: v.jn.QUEST_BAR_V2
                             })
                         ]
                     })
@@ -444,23 +444,23 @@ function F(e) {
 let X = s.forwardRef(function (e, t) {
     var n;
     let { children: o, className: l, collapsedHeight: c, isExpanded: u, isExpansionAnimationComplete: d, expansionSpring: p, onCtxMenuOpen: m, onCtxMenuClose: f, onCtxMenuSelect: g, overlayRef: j, quest: y, useReducedMotion: C, taskDetails: O } = e,
-        E = (0, v.q8)(y),
-        S = (0, v.Vl)(y),
+        E = (0, _.q8)(y),
+        S = (0, _.Vl)(y),
         { launchInGameActivity: w } = (0, b.zB)(y),
         P = s.useCallback(() => {
             let e = y.config.features.includes(Q.S7.START_QUEST_CTA),
                 t = e ? x.jZ.START_QUEST : x.jZ.ACCEPT_QUEST;
-            (0, h.AH)(y.id, {
-                questContent: _.jn.QUEST_BAR_V2,
+            ((0, h.AH)(y.id, {
+                questContent: v.jn.QUEST_BAR_V2,
                 questContentCTA: t,
-                sourceQuestContent: _.jn.QUEST_BAR_V2
+                sourceQuestContent: v.jn.QUEST_BAR_V2
             }),
                 E &&
                     (0, N.openVideoQuestModal)({
                         quest: y,
-                        sourceQuestContent: _.jn.QUEST_BAR_V2
+                        sourceQuestContent: v.jn.QUEST_BAR_V2
                     }),
-                S && e && w();
+                S && e && w());
         }, [y, E, S, w]),
         T = (null == (n = y.userStatus) ? void 0 : n.enrolledAt) != null,
         A = u && d;

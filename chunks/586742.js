@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     R: () => M,
     Z: () => z
 }),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -37,7 +37,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function k(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -53,8 +53,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -87,7 +87,7 @@ let A = r.memo(function (e) {
             p = r.useCallback(
                 (e, r) => {
                     let o = e.user;
-                    (0, _.Ws)(w.Odu.VIDEO, {
+                    ((0, _.Ws)(w.Odu.VIDEO, {
                         type: _.Qu.CAMERA,
                         value: _.bk.SETTINGS_OPENED,
                         userId: null == o ? void 0 : o.id
@@ -109,7 +109,7 @@ let A = r.memo(function (e) {
                                         }
                                     })
                                 );
-                        });
+                        }));
                 },
                 [t]
             ),
@@ -290,7 +290,7 @@ function z(e) {
                     widgetLayoutSpecs: i
                 },
                 l = r.useRef(o);
-            r.useLayoutEffect(() => void (l.current = o)),
+            (r.useLayoutEffect(() => void (l.current = o)),
                 r.useLayoutEffect(() => {
                     let { size: e, id: n, containerWidth: i, containerHeight: r, widget: o, widgetLayoutSpecs: a } = l.current;
                     if (!((t && e.height > e.width) || (!t && e.width > e.height))) return;
@@ -316,7 +316,7 @@ function z(e) {
                             height: c
                         }
                     });
-                }, [t]);
+                }, [t]));
         })({
             horizontal: v,
             widget: e.widget,

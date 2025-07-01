@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(997841);
+(n.d(t, { Z: () => g }), n(997841));
 var r = n(928801),
     i = n(924557),
     a = n(435064),
@@ -103,6 +103,6 @@ class g extends r.Z {
               });
     }
     constructor(e) {
-        super(), m(this, 'socket', void 0), (this.socket = e);
+        (super(), m(this, 'socket', void 0), (this.socket = e));
     }
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(442837),
     i = n(348326),
     a = n(570140),
@@ -17,13 +17,13 @@ function l(e, t, n) {
         e
     );
 }
-i.Ds.KvCache, i.Ds.KvCache;
+(i.Ds.KvCache, i.Ds.KvCache);
 class c extends r.ZP.Store {
     initialize() {
         this.waitFor(o.default);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             l(this, 'database', (e) => s.Z.database(null != e ? e : o.default.getId())),
             l(
                 this,
@@ -132,7 +132,7 @@ class c extends r.ZP.Store {
             l(this, 'userGuildSettingsTransaction', (e) => this.userGuildSettings(e.database).upgradeTransaction(e)),
             l(this, 'guildsRequiringDeletedIdsSyncTransaction', (e) => this.guildsRequiringDeletedIdsSync(e.database).upgradeTransaction(e)),
             l(this, 'guildsRequiringChannelSyncTransaction', (e) => this.guildsRequiringChannelSync(e.database).upgradeTransaction(e)),
-            l(this, 'userSearchItemsTransaction', (e) => this.userSearchItems(e.database).upgradeTransaction(e));
+            l(this, 'userSearchItemsTransaction', (e) => this.userSearchItems(e.database).upgradeTransaction(e)));
     }
 }
 function u(e) {

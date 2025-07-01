@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -21,7 +21,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function j(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -37,8 +37,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -78,20 +78,20 @@ function O(e) {
             selectedBackgroundOption: O
         },
         L = r.useRef(k);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         L.current = k;
     }),
         r.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
             e ? (0, g.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
-        }, [v]);
+        }, [v]));
     let B = (e) => {
-        S(e),
+        (S(e),
             (0, g.FU)(e, v, { location: w.location })
                 .then(() => A(null))
                 .catch(() => {
-                    A(x.intl.string(x.t.ejrSLS)), (0, g.FU)(null, v, { location: w.location });
-                });
+                    (A(x.intl.string(x.t.ejrSLS)), (0, g.FU)(null, v, { location: w.location }));
+                }));
     };
     return P
         ? (0, i.jsxs)(l.xJW, {
@@ -127,7 +127,7 @@ function O(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  B(i), (0, m.g5)(i, t.type === _.m.MP4, n), A(null);
+                                  (B(i), (0, m.g5)(i, t.type === _.m.MP4, n), A(null));
                               } catch (e) {
                                   A(e.message);
                               }

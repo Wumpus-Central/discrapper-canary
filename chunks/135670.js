@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(415506), n(388685);
+(n.d(t, { Z: () => c }), n(415506), n(388685));
 var r = n(47770),
     i = n(46973),
     a = n(65154);
@@ -23,7 +23,7 @@ function l(e) {
 }
 class c extends r.Z {
     destroy() {
-        this.emit(i.aB.Destroy), this.removeAllListeners();
+        (this.emit(i.aB.Destroy), this.removeAllListeners());
     }
     interact() {}
     supported() {
@@ -158,6 +158,6 @@ class c extends r.Z {
         return Promise.resolve();
     }
     constructor(...e) {
-        super(...e), o(this, 'Video', s), o(this, 'Camera', l);
+        (super(...e), o(this, 'Video', s), o(this, 'Camera', l));
     }
 }

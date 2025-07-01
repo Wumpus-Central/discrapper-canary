@@ -19,10 +19,10 @@ function c(e) {
     return null != e && e.startsWith(s);
 }
 var u = (function (e) {
-        return (e.TRACK = 'track'), (e.ARTIST = 'artist'), (e.ALBUM = 'album'), (e.PLAYLIST = 'playlist'), (e.EPISODE = 'episode'), (e.SHOW = 'show'), e;
+        return ((e.TRACK = 'track'), (e.ARTIST = 'artist'), (e.ALBUM = 'album'), (e.PLAYLIST = 'playlist'), (e.EPISODE = 'episode'), (e.SHOW = 'show'), e);
     })({}),
     d = (function (e) {
-        return (e.USER_ACTIVITY_PLAY = 'user_activity_play'), (e.USER_ACTIVITY_SYNC = 'user_activity_sync'), (e.EMBED_SYNC = 'embed_sync'), e;
+        return ((e.USER_ACTIVITY_PLAY = 'user_activity_play'), (e.USER_ACTIVITY_SYNC = 'user_activity_sync'), (e.EMBED_SYNC = 'embed_sync'), e);
     })({});
 let f = ['open.spotify.com', 'www.spotify.com'],
     _ = 'https://api.spotify.com/v1',

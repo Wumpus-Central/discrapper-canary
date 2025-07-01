@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         PlatformTypes: () => r,
         getNativePlatform: () => b,
@@ -17,9 +17,9 @@ n.r(t),
         isWeb: () => d,
         isWindows: () => s
     }),
-    n(35282);
+    n(35282));
 var r = (function (e) {
-    return (e.WINDOWS = 'WINDOWS'), (e.OSX = 'OSX'), (e.LINUX = 'LINUX'), (e.WEB = 'WEB'), e;
+    return ((e.WINDOWS = 'WINDOWS'), (e.OSX = 'OSX'), (e.LINUX = 'LINUX'), (e.WEB = 'WEB'), e);
 })({});
 let i = window.DiscordNative,
     a = null != i,

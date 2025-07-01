@@ -2,9 +2,9 @@ n.d(t, { m: () => o });
 var o = (function () {
     function e(e) {
         var t = this;
-        (this._insertTag = function (e) {
+        ((this._insertTag = function (e) {
             var n;
-            (n = 0 === t.tags.length ? (t.insertionPoint ? t.insertionPoint.nextSibling : t.prepend ? t.container.firstChild : t.before) : t.tags[t.tags.length - 1].nextSibling), t.container.insertBefore(e, n), t.tags.push(e);
+            ((n = 0 === t.tags.length ? (t.insertionPoint ? t.insertionPoint.nextSibling : t.prepend ? t.container.firstChild : t.before) : t.tags[t.tags.length - 1].nextSibling), t.container.insertBefore(e, n), t.tags.push(e));
         }),
             (this.isSpeedy = void 0 === e.speedy || e.speedy),
             (this.tags = []),
@@ -14,7 +14,7 @@ var o = (function () {
             (this.container = e.container),
             (this.prepend = e.prepend),
             (this.insertionPoint = e.insertionPoint),
-            (this.before = null);
+            (this.before = null));
     }
     var t = e.prototype;
     return (
@@ -37,12 +37,12 @@ var o = (function () {
             this.ctr++;
         }),
         (t.flush = function () {
-            this.tags.forEach(function (e) {
+            (this.tags.forEach(function (e) {
                 var t;
                 return null == (t = e.parentNode) ? void 0 : t.removeChild(e);
             }),
                 (this.tags = []),
-                (this.ctr = 0);
+                (this.ctr = 0));
         }),
         e
     );

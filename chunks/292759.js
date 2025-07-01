@@ -23,7 +23,7 @@ function a(e, t, n) {
                     try {
                         for (i = i.call(e); !(a = (n = i.next()).done) && (o.push(n.value), o.length !== t); a = !0);
                     } catch (e) {
-                        (u = !0), (r = e);
+                        ((u = !0), (r = e));
                     } finally {
                         try {
                             a || null == i.return || i.return();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(772848),
     i = n(259443),
     l = n(416638);
@@ -35,7 +35,7 @@ let s = new (class {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ let s = new (class {
                         )),
                         r.forEach(function (t) {
                             a(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
             })({}, i, t)
@@ -57,7 +57,7 @@ let s = new (class {
         var n, r;
         let i = this.getState(e),
             l = {};
-        (l.searchCount = (null != (n = null == i ? void 0 : i.searchCount) ? n : 0) + 1), t && (l.searchWithFiltersCount = (null != (r = null == i ? void 0 : i.searchWithFiltersCount) ? r : 0) + 1), this.upsertState(e, l);
+        ((l.searchCount = (null != (n = null == i ? void 0 : i.searchCount) ? n : 0) + 1), t && (l.searchWithFiltersCount = (null != (r = null == i ? void 0 : i.searchWithFiltersCount) ? r : 0) + 1), this.upsertState(e, l));
     }
     getSearchCount(e) {
         var t, n;
@@ -91,13 +91,13 @@ let s = new (class {
     }
     initialize(e, t) {
         let n = (0, l.Tm)(e);
-        this.sessions.has(n) || this.sessions.set(n, o(t)), this.searchQueryIds.has(n) || this.searchQueryIds.set(n, (0, r.Z)());
+        (this.sessions.has(n) || this.sessions.set(n, o(t)), this.searchQueryIds.has(n) || this.searchQueryIds.set(n, (0, r.Z)()));
     }
     terminate(e) {
         let t = (0, l.Tm)(e);
-        this.sessions.delete(t), this.searchQueryIds.delete(t);
+        (this.sessions.delete(t), this.searchQueryIds.delete(t));
     }
     constructor() {
-        a(this, 'sessions', new Map()), a(this, 'searchQueryIds', new Map());
+        (a(this, 'sessions', new Map()), a(this, 'searchQueryIds', new Map()));
     }
 })();

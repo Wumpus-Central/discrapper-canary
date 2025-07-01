@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ej }), n(388685), n(539854);
+(n.d(t, { Z: () => ej }), n(388685), n(539854));
 var r,
     i = n(512722),
     a = n.n(i),
@@ -41,7 +41,7 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function R(e) {
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,11 +57,11 @@ function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -92,7 +92,7 @@ let D = new d.Z('ChannelRTCStore'),
     Y = {};
 function W(e) {
     let t = k[e];
-    return null == t && ((t = new S.ZP(e)), (k[e] = t)), t;
+    return (null == t && ((t = new S.ZP(e)), (k[e] = t)), t);
 }
 function K() {
     for (let e of x) ei(e);
@@ -106,9 +106,9 @@ function z() {
     null == n || e.includes(n) || e.push(n);
     let r = f.Z.getRemoteSessionId(),
         i = T.Z.getVoiceStateForSession(m.default.getId(), r);
-    (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), s().difference(x, e).forEach(ei);
+    ((null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), s().difference(x, e).forEach(ei));
     let a = s().difference(e, x);
-    return (x = e), a;
+    return ((x = e), a);
 }
 function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
@@ -149,7 +149,7 @@ function $(e) {
 function ee(e, t) {
     $(e);
     let n = J(e);
-    null == t ? delete M[e] : (M[e] = t), n !== J(e) && j[e].toggleCount++;
+    (null == t ? delete M[e] : (M[e] = t), n !== J(e) && j[e].toggleCount++);
 }
 function et(e) {
     return e.size(S.sI.STREAM) > 0 || e.size(S.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
@@ -160,7 +160,7 @@ function en(e) {
     if (0 === n.size() || y.Z.getVoiceChannelId() !== e) return void ee(e, null);
     let r = A.dF.NONE,
         i = n.toArray(S.sI.STREAM).find((e) => e.type === A.fO.STREAM && h.Z.getActiveStreamForStreamKey(e.id));
-    if (null != i) a()(i.type === A.fO.STREAM, 'Impossible condition'), (r = i.id);
+    if (null != i) (a()(i.type === A.fO.STREAM, 'Impossible condition'), (r = i.id));
     else if (1 === n.size()) r = t;
     else if (1 === n.size(S.sI.VIDEO)) {
         let [e] = n.toArray(S.sI.VIDEO);
@@ -184,14 +184,14 @@ function er(e) {
     n === N.WtW.VOICE ? (delete U[e], delete G[e]) : (U[e] = n);
 }
 function ei(e) {
-    delete k[e], delete M[e], delete U[e], delete G[e];
+    (delete k[e], delete M[e], delete U[e], delete G[e]);
 }
 function ea() {
     return q((e) => e.rebuild(), z());
 }
 function eo(e) {
     let { channelId: t, currentVoiceChannelId: n } = e;
-    return null != t ? delete j[t] : null != n && (delete F[n], delete H[n], $(n)), ea();
+    return (null != t ? delete j[t] : null != n && (delete F[n], delete H[n], $(n)), ea());
 }
 function es(e) {
     let { channelId: t, messageId: n } = e,
@@ -280,11 +280,11 @@ function ey(e) {
 }
 function eO(e) {
     let { channelId: t, chatOpen: n } = e;
-    (F[t] = n), n && (Z[t] = !1);
+    ((F[t] = n), n && (Z[t] = !1));
 }
 function ev(e) {
     let { channelId: t, participantsListOpen: n } = e;
-    (Z[t] = n), n && (F[t] = !1);
+    ((Z[t] = n), n && (F[t] = !1));
 }
 function eI(e) {
     let { channelId: t, id: n } = e,
@@ -310,7 +310,7 @@ function eT(e) {
         let e = t.originChannelId;
         if (null != e) {
             var n, r;
-            return (G[t.id] = { [N.IlC.APP]: null != (r = null == (n = G[e]) ? void 0 : n[N.IlC.APP]) ? r : N.AEg.NORMAL }), !0;
+            return ((G[t.id] = { [N.IlC.APP]: null != (r = null == (n = G[e]) ? void 0 : n[N.IlC.APP]) ? r : N.AEg.NORMAL }), !0);
         }
     }
     return !1;
@@ -319,7 +319,7 @@ function eS(e) {
     let {
         channel: { id: t }
     } = e;
-    return delete F[t], delete Z[t], delete H[t], ei(t);
+    return (delete F[t], delete Z[t], delete H[t], ei(t));
 }
 function eA(e) {
     let { channelId: t, layout: n, appContext: r } = e;
@@ -361,7 +361,7 @@ function eL(e) {
     )
         return !1;
     let i = W(t);
-    return r.forEach((e) => i.updateGuildRingingUsers(e, !0)), q((e) => e.rebuild(), [t]);
+    return (r.forEach((e) => i.updateGuildRingingUsers(e, !0)), q((e) => e.rebuild(), [t]));
 }
 function ex(e) {
     let { channelId: t, guildId: n, ringing: r } = e;
@@ -373,7 +373,7 @@ function ex(e) {
     )
         return !1;
     let i = W(t);
-    return r.forEach((e) => i.updateGuildRingingUsers(e, !1)), q((e) => e.rebuild(), [t]);
+    return (r.forEach((e) => i.updateGuildRingingUsers(e, !1)), q((e) => e.rebuild(), [t]));
 }
 function ek(e) {
     var t;
@@ -381,7 +381,7 @@ function ek(e) {
 }
 class eM extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(h.Z, m.default, g.Z, E.Z, u.ZP, b.Z, y.Z, O.Z, v.default, I.Z, T.Z), this.syncWith([u.ZP], ec), this.syncWith([b.Z], eu), this.syncWith([f.Z], ea), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(V, null == e ? void 0 : e.voiceParticipantsHidden);
+        (this.waitFor(h.Z, m.default, g.Z, E.Z, u.ZP, b.Z, y.Z, O.Z, v.default, I.Z, T.Z), this.syncWith([u.ZP], ec), this.syncWith([b.Z], eu), this.syncWith([f.Z], ea), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(V, null == e ? void 0 : e.voiceParticipantsHidden));
     }
     getState() {
         return { voiceParticipantsHidden: V };
@@ -481,7 +481,7 @@ class eM extends (r = l.ZP.PersistedStore) {
         return Y[e];
     }
 }
-C(eM, 'displayName', 'ChannelRTCStore'), C(eM, 'persistKey', 'ChannelRTCStore');
+(C(eM, 'displayName', 'ChannelRTCStore'), C(eM, 'persistKey', 'ChannelRTCStore'));
 let ej = new eM(c.Z, {
     CONNECTION_OPEN: K,
     CONNECTION_OPEN_SUPPLEMENTAL: ea,

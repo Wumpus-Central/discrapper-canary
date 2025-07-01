@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $N: () => v,
     ZZ: () => A,
     pB: () => C,
@@ -6,7 +6,7 @@ n.d(t, {
     x2: () => T,
     xA: () => N
 }),
-    n(415506);
+    n(415506));
 var r = n(311570),
     i = n(544891),
     a = n(570140),
@@ -39,7 +39,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,11 +55,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -88,7 +88,7 @@ async function v(e, t, n) {
                 };
             n === r.v.VARIANTS_GROUP && (o.query = { variants_return_style: n });
             let s = await (0, h.Kb)(o);
-            a.Z.dispatch({
+            (a.Z.dispatch({
                 type: 'SKU_FETCH_SUCCESS',
                 sku: i ? s.body : s.body.sku
             }),
@@ -96,14 +96,14 @@ async function v(e, t, n) {
                     a.Z.dispatch({
                         type: 'STORE_LISTING_FETCH_SUCCESS',
                         storeListing: s.body
-                    });
+                    }));
         } catch (e) {
             throw (
-                (a.Z.dispatch({
+                a.Z.dispatch({
                     type: 'SKU_FETCH_FAIL',
                     skuId: t
                 }),
-                new l.Z('Failed to fetch SKU '.concat(t)))
+                new l.Z('Failed to fetch SKU '.concat(t))
             );
         }
     }
@@ -131,13 +131,13 @@ async function T(e, t, n, r) {
             payment_source_id: n,
             gift: null == r ? void 0 : r.isGift
         };
-    (d.Z.inTestModeForApplication(e) || c.Z.inDevModeForApplication(e)) && (l.test_mode = !0),
+    ((d.Z.inTestModeForApplication(e) || c.Z.inDevModeForApplication(e)) && (l.test_mode = !0),
         a.Z.dispatch({
             type: 'SKU_PURCHASE_PREVIEW_FETCH',
             skuId: t
-        });
+        }));
     try {
-        (i = await (0, h.Kb)({
+        ((i = await (0, h.Kb)({
             url: g.ANM.STORE_SKU_PURCHASE(t),
             query: l,
             oldFormErrors: !0,
@@ -148,7 +148,7 @@ async function T(e, t, n, r) {
                 skuId: t,
                 paymentSourceId: n,
                 price: i.body
-            });
+            }));
     } catch (n) {
         a.Z.dispatch({
             type: 'SKU_PURCHASE_PREVIEW_FETCH_FAILURE',
@@ -183,9 +183,9 @@ async function A(e, t, n) {
                 let t = await (0, m.EH)(r.type);
                 e.return_url = (0, i.K0)() + g.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(r.type, null != t ? t : '', 'success');
             }
-            (e.gift_info_options = y), null != T && (e.country_code = T);
+            ((e.gift_info_options = y), null != T && (e.country_code = T));
         }
-        null != l && (e.expected_amount = l), null != u && (e.expected_currency = u), (e.purchase_token = (0, p.d)());
+        (null != l && (e.expected_amount = l), null != u && (e.expected_currency = u), (e.purchase_token = (0, p.d)()));
         let n = await i.tn.post({
             url: g.ANM.STORE_SKU_PURCHASE(t),
             body: e,

@@ -18,7 +18,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,8 +34,8 @@ function b(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -153,7 +153,7 @@ function _(e) {
                                 wrapperClassName: x.deleteListingButton,
                                 color: o.zxk.Colors.RED,
                                 onClick: () => {
-                                    s()(null != O, 'group listing doesnt exist'),
+                                    (s()(null != O, 'group listing doesnt exist'),
                                         s()(null != y, 'subscription listing doesnt exist'),
                                         (0, o.ZDy)(async () => {
                                             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
@@ -181,7 +181,7 @@ function _(e) {
                                                         }
                                                     )
                                                 );
-                                        });
+                                        }));
                                 },
                                 submitting: Z,
                                 disabled: !k,

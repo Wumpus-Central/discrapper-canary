@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     R_: () => g,
     cm: () => v
 }),
     n(539854),
     n(642613),
-    n(388685);
+    n(388685));
 var r = n(498607),
     i = n.n(r),
     a = n(759174),
@@ -31,7 +31,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -47,11 +47,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -68,11 +68,11 @@ function h(e, t) {
 }
 let m = Date.now();
 var g = (function (e) {
-    return (e.NEW_GUILD_MEMBER = 'NEW_GUILD_MEMBER'), (e.CURRENT_GUILD_MEMBER = 'CURRENT_GUILD_MEMBER'), (e.INCLUDED_IN_SEARCH_RESULTS = 'INCLUDED_IN_SEARCH_RESULTS'), e;
+    return ((e.NEW_GUILD_MEMBER = 'NEW_GUILD_MEMBER'), (e.CURRENT_GUILD_MEMBER = 'CURRENT_GUILD_MEMBER'), (e.INCLUDED_IN_SEARCH_RESULTS = 'INCLUDED_IN_SEARCH_RESULTS'), e);
 })({});
 function E(e) {
     let t = [e.isCurrentGuildMemberByTimestamp ? 'CURRENT_GUILD_MEMBER' : 'NEW_GUILD_MEMBER'];
-    return e.isIncludedInSearchResults && t.push('INCLUDED_IN_SEARCH_RESULTS'), t;
+    return (e.isIncludedInSearchResults && t.push('INCLUDED_IN_SEARCH_RESULTS'), t);
 }
 function b(e) {
     return e.sort;
@@ -85,7 +85,7 @@ function O(e) {
 }
 class v {
     reset() {
-        this._membersMap.clear(), (this._membersMap = y()), this.resetNewMemberTimestamp();
+        (this._membersMap.clear(), (this._membersMap = y()), this.resetNewMemberTimestamp());
     }
     resetNewMemberTimestamp() {
         this.newMemberTimestamp = Date.now();
@@ -166,6 +166,6 @@ class v {
         return this._membersMap.version;
     }
     constructor(e) {
-        f(this, 'guildId', void 0), f(this, '_membersMap', void 0), f(this, 'newMemberTimestamp', Date.now()), (this.guildId = e), (this._membersMap = y());
+        (f(this, 'guildId', void 0), f(this, '_membersMap', void 0), f(this, 'newMemberTimestamp', Date.now()), (this.guildId = e), (this._membersMap = y()));
     }
 }

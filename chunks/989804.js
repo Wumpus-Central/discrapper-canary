@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => A });
+(n.r(t), n.d(t, { default: () => A }));
 var i = n(255367),
     a = n(73800),
     s = n(442837),
@@ -22,7 +22,7 @@ var i = n(255367),
     m = n(981631),
     P = n(388032);
 let T = a.forwardRef(function () {
-        g.Z.trackExposure({ location: 'cd25e4_1' }), _.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), _.Z.trackExposure({ location: 'user_setting_manual' });
+        (g.Z.trackExposure({ location: 'cd25e4_1' }), _.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), _.Z.trackExposure({ location: 'user_setting_manual' }));
         let e = (0, s.e7)([S.Z], () => S.Z.theme),
             t = (0, s.e7)([S.Z], () => (S.Z.darkSidebar ? m.BRd.DARK : void 0)),
             {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(953529);
+(n.d(t, { Z: () => L }), n(953529));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(272008),
     b = n(113434),
     j = n(569984),
-    _ = n(497505),
-    v = n(918701),
+    v = n(497505),
+    _ = n(918701),
     y = n(865364),
     C = n(373370),
     O = n(475595),
@@ -37,7 +37,7 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -45,7 +45,7 @@ function D(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -53,8 +53,8 @@ function D(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -106,24 +106,24 @@ let L = s.forwardRef(function (e, t) {
         er = $.features.has(R.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
         es = $.features.has(R.S7.START_QUEST_CTA) ? I.intl.string(I.t.E80Bdn) : I.intl.string(I.t.l7E81t),
         eo = s.useCallback(() => {
-            (0, h.AH)(X.id, {
-                questContent: _.jn.QUEST_BAR,
+            ((0, h.AH)(X.id, {
+                questContent: v.jn.QUEST_BAR,
                 questContentCTA: er,
-                sourceQuestContent: _.jn.QUEST_BAR
+                sourceQuestContent: v.jn.QUEST_BAR
             }),
-                $.features.has(R.S7.START_QUEST_CTA) && (0, m.uL)(k.Z5c.ACTIVITY_DETAILS(B.In), void 0);
+                $.features.has(R.S7.START_QUEST_CTA) && (0, m.uL)(k.Z5c.ACTIVITY_DETAILS(B.In), void 0));
         }, [X, er, $.features]),
         ea = (0, A.hf)({
             quest: X,
-            questContent: _.jn.QUEST_BAR,
-            sourceQuestContent: _.jn.QUEST_BAR
+            questContent: v.jn.QUEST_BAR,
+            sourceQuestContent: v.jn.QUEST_BAR
         }),
         ei = s.useCallback(() => {
-            (0, v.nc)(X, {
-                content: _.jn.QUEST_BAR,
+            (0, _.nc)(X, {
+                content: v.jn.QUEST_BAR,
                 ctaContent: g.jZ.OPEN_GAME_LINK,
                 impressionId: G,
-                sourceQuestContent: _.jn.QUEST_BAR
+                sourceQuestContent: v.jn.QUEST_BAR
             });
         }, [G, X]),
         el = $.features.has(R.S7.POST_ENROLLMENT_CTA),
@@ -132,15 +132,15 @@ let L = s.forwardRef(function (e, t) {
         ed = null != eu ? eu.progress > 0 : ec.progressSeconds > 0,
         ep = (null == (n = X.userStatus) ? void 0 : n.enrolledAt) != null,
         em = (null == (o = X.userStatus) ? void 0 : o.completedAt) != null,
-        ef = s.useMemo(() => (0, v.Xv)(X.config), [X.config]),
+        ef = s.useMemo(() => (0, _.Xv)(X.config), [X.config]),
         eg = Z && U,
         ex = (0, C.DD)({
             quest: X,
             taskDetails: ec,
             location: R.dr.QUESTS_BAR,
-            questContent: _.jn.QUEST_BAR,
+            questContent: v.jn.QUEST_BAR,
             thirdPartyTaskDetails: null != eu ? eu : void 0,
-            sourceQuestContent: _.jn.QUEST_BAR
+            sourceQuestContent: v.jn.QUEST_BAR
         }),
         eh = (0, f.isWeb)(),
         eb = s.useMemo(() => {
@@ -193,16 +193,16 @@ let L = s.forwardRef(function (e, t) {
                                                   className: q.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: X,
-                                                  questContent: _.jn.QUEST_BAR,
+                                                  questContent: v.jn.QUEST_BAR,
                                                   location: R.dr.QUESTS_BAR,
-                                                  sourceQuestContent: _.jn.QUEST_BAR
+                                                  sourceQuestContent: v.jn.QUEST_BAR
                                               }),
                                               (0, r.jsxs)('div', {
                                                   children: [
                                                       (0, r.jsx)(d.X6q, {
                                                           color: 'always-white',
                                                           variant: 'heading-sm/semibold',
-                                                          children: (0, v.AV)({
+                                                          children: (0, _.AV)({
                                                               quest: X,
                                                               taskDetails: ec,
                                                               thirdPartyTaskDetails: null != eu ? eu : void 0
@@ -222,11 +222,11 @@ let L = s.forwardRef(function (e, t) {
                                           onOpen: H,
                                           onClose: z,
                                           onSelect: F,
-                                          questContent: _.jn.QUEST_BAR,
+                                          questContent: v.jn.QUEST_BAR,
                                           quest: X,
                                           shouldShowDisclosure: !1,
                                           showShareLink: !0,
-                                          sourceQuestContent: _.jn.QUEST_BAR,
+                                          sourceQuestContent: v.jn.QUEST_BAR,
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   d.P3F,
@@ -277,11 +277,11 @@ let L = s.forwardRef(function (e, t) {
                                                   onOpen: H,
                                                   onClose: z,
                                                   onSelect: F,
-                                                  questContent: _.jn.QUEST_BAR,
+                                                  questContent: v.jn.QUEST_BAR,
                                                   quest: X,
                                                   shouldShowDisclosure: !0,
                                                   showShareLink: !0,
-                                                  sourceQuestContent: _.jn.QUEST_BAR,
+                                                  sourceQuestContent: v.jn.QUEST_BAR,
                                                   children: (e) =>
                                                       (0, r.jsx)(
                                                           d.P3F,
@@ -305,9 +305,9 @@ let L = s.forwardRef(function (e, t) {
                                                   className: q.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: X,
-                                                  questContent: _.jn.QUEST_BAR,
+                                                  questContent: v.jn.QUEST_BAR,
                                                   location: R.dr.QUESTS_BAR,
-                                                  sourceQuestContent: _.jn.QUEST_BAR
+                                                  sourceQuestContent: v.jn.QUEST_BAR
                                               }),
                                               (0, r.jsx)(d.X6q, {
                                                   className: q.title,

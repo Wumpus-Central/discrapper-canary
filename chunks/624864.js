@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+(n.d(t, { Z: () => O }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -73,17 +73,17 @@ function g() {
 }
 function E(e) {
     let { applicationId: t, enabled: n } = e;
-    return (m.gameSettings[t] = { limitedInteractionOverride: n }), !0;
+    return ((m.gameSettings[t] = { limitedInteractionOverride: n }), !0);
 }
 function b(e) {
     let { setting: t, disabled: n } = e;
-    return n ? m.notificationSettings.add(t) : m.notificationSettings.delete(t), (m.notificationSettings = new Set(m.notificationSettings)), !0;
+    return (n ? m.notificationSettings.add(t) : m.notificationSettings.delete(t), (m.notificationSettings = new Set(m.notificationSettings)), !0);
 }
 class y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         let n = h();
-        (m = _(d({}, n, null != e ? e : {}), { notificationSettings: new Set(null != (t = null == e ? void 0 : e.notificationSettings) ? t : n.notificationSettings) })), this.waitFor(o.default);
+        ((m = _(d({}, n, null != e ? e : {}), { notificationSettings: new Set(null != (t = null == e ? void 0 : e.notificationSettings) ? t : n.notificationSettings) })), this.waitFor(o.default));
     }
     getState() {
         return m;
@@ -99,7 +99,7 @@ class y extends (r = i.ZP.PersistedStore) {
         return m.notificationSettings;
     }
 }
-u(y, 'displayName', 'OverlaySettingsStore'),
+(u(y, 'displayName', 'OverlaySettingsStore'),
     u(y, 'persistKey', 'OverlaySettingsStore'),
     u(y, 'migrations', [
         (e) => {
@@ -110,7 +110,7 @@ u(y, 'displayName', 'OverlaySettingsStore'),
                 notificationSettings: new Set([n ? l.OverlayNotificationDisabledSetting.TEXT_CHAT : void 0, r ? l.OverlayNotificationDisabledSetting.GAME_ACTIVITY : void 0, ...Array.from(null != (t = e.notificationSettings) ? t : [])].filter(s.lm))
             });
         }
-    ]);
+    ]));
 let O = new y(a.Z, {
     LOGOUT: p,
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: E,

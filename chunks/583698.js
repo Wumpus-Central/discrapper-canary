@@ -29,5 +29,5 @@ e.exports = function (e) {
         if (i(a)) return a;
         throw TypeError('unable to convert exotic object to primitive');
     }
-    return 'default' === n && (o(e) || s(e)) && (n = 'string'), l(e, 'default' === n ? 'number' : n);
+    return ('default' === n && (o(e) || s(e)) && (n = 'string'), l(e, 'default' === n ? 'number' : n));
 };

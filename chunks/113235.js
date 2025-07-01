@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'isotope',
         author: 'jan t. sott',
@@ -19,4 +19,4 @@
         base0E: '#cc00ff',
         base0F: '#3300ff'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

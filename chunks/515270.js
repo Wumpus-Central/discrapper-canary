@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     L6: () => C,
     ZP: () => h,
     iF: () => N
@@ -6,7 +6,7 @@ n.d(t, {
     n(388685),
     n(539854),
     n(35282),
-    n(704826);
+    n(704826));
 var r = n(466332),
     i = n(31775),
     a = n.n(i),
@@ -24,12 +24,12 @@ function h(e) {
         n = null;
     return (
         (e.onChange = () => {
-            d.bN.richValue(e) !== n &&
+            (d.bN.richValue(e) !== n &&
                 (l.T.withMergedEntry(e, () => {
                     d.bN.withoutNormalizing(e, () => m(e));
                 }),
                 (n = d.bN.richValue(e))),
-                t();
+                t());
         }),
         e
     );
@@ -44,9 +44,9 @@ function E(e) {
         n = null;
     for (let r of d.bN.blocks(e)) {
         let i = null != n && (n.isInCodeBlock || n.opensCodeBlock);
-        (n = b(e, r, i, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n);
+        ((n = b(e, r, i, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n));
     }
-    return v(t), t;
+    return (v(t), t);
 }
 function b(e, t, n, r, i) {
     var a;
@@ -120,7 +120,7 @@ function v(e) {
                         for (; null != (i = g.exec(a)); ) {
                             let t = i.index + i[0].length,
                                 n = i.index - l;
-                            i.index > l &&
+                            (i.index > l &&
                                 (e.length > 0 &&
                                     o.push({
                                         types: [...e],
@@ -129,7 +129,7 @@ function v(e) {
                                     }),
                                 (s += n)),
                                 '</span>' === i[0] ? e.pop() : e.push(i[1]),
-                                (l = t);
+                                (l = t));
                         }
                         if (e.length > 0) {
                             let t = a.length - l;
@@ -145,7 +145,7 @@ function v(e) {
             }
             t = [];
         }
-        n && t.push(i), i.opensCodeBlock && (n = !0);
+        (n && t.push(i), i.opensCodeBlock && (n = !0));
     }
 }
 let I = {
@@ -161,7 +161,7 @@ function S(e, t) {
     let i = s.default.highlight(t, e, !1);
     if (null == i || i.illegal) return null;
     let a = i.value.split('\n');
-    return T.set(n, a), a;
+    return (T.set(n, a), a);
 }
 function A(e) {
     let t,

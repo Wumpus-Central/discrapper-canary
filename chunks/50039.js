@@ -23,7 +23,7 @@ var r = n(73800),
         return e.reduce(function (e, t) {
             var n = t[0],
                 r = t[1];
-            return (e[n] = r), e;
+            return ((e[n] = r), e);
         }, {});
     },
     l = 'undefined' != typeof window && window.document && window.document.createElement ? r.useLayoutEffect : r.useEffect;

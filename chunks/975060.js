@@ -36,10 +36,10 @@ let l = '',
     S = null,
     A = null;
 function N() {
-    (d = null), (l = ''), (c = null), (u = ''), (f = !1), (_ = null), (p = 'US'), (h = ''), (m = ''), (g = ''), (E = ''), (b = ''), (y = ''), (O = ''), (v = !1), (I = null), (T = null), (S = null), (A = null);
+    ((d = null), (l = ''), (c = null), (u = ''), (f = !1), (_ = null), (p = 'US'), (h = ''), (m = ''), (g = ''), (E = ''), (b = ''), (y = ''), (O = ''), (v = !1), (I = null), (T = null), (S = null), (A = null));
 }
 function C(e) {
-    (h = e.name), (p = e.country), (g = e.line1), (E = e.line2), (b = e.city), (y = e.postalCode), (O = e.state), (m = e.email);
+    ((h = e.name), (p = e.country), (g = e.line1), (E = e.line2), (b = e.city), (y = e.postalCode), (O = e.state), (m = e.email));
 }
 function R(e) {
     let { stripePaymentMethod: t } = e;
@@ -49,26 +49,26 @@ function R(e) {
     C(n);
 }
 function P() {
-    (l = ''), (c = null);
+    ((l = ''), (c = null));
 }
 function w(e) {
     let { email: t, nonce: n, billingAddress: r } = e;
-    (l = t), (c = n), C(r), (v = p.length > 0);
+    ((l = t), (c = n), C(r), (v = p.length > 0));
 }
 function D() {
-    (u = ''), (c = null);
+    ((u = ''), (c = null));
 }
 function L(e) {
     let { username: t, nonce: n } = e;
-    (u = t), (c = n);
+    ((u = t), (c = n));
 }
 function x(e) {
     let { info: t, isValid: n } = e;
-    (h = t.name), (f = n);
+    ((h = t.name), (f = n));
 }
 function k(e) {
     let { info: t, isValid: n } = e;
-    null != t.name && '' !== t.name && (h = t.name), (p = t.country), (h = t.name), (g = t.line1), (E = t.line2), (b = t.city), (y = t.postalCode), (O = t.state), (m = t.email), (v = n);
+    (null != t.name && '' !== t.name && (h = t.name), (p = t.country), (h = t.name), (g = t.line1), (E = t.line2), (b = t.city), (y = t.postalCode), (O = t.state), (m = t.email), (v = n));
 }
 function M(e) {
     let { data: t } = e;
@@ -86,7 +86,7 @@ function G(e) {
     (null == t ? void 0 : t.payment_id) != null ? ((S = !0), (T = t.payment_id)) : (null == t ? void 0 : t.payment_source_id) != null && ((S = !0), (A = t.payment_source_id));
 }
 function B() {
-    (S = !1), (T = null);
+    ((S = !1), (T = null));
 }
 class V extends (r = i.ZP.Store) {
     get stripePaymentMethod() {

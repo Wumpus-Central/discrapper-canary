@@ -17,7 +17,7 @@ function x(e) {
     let { onDismiss: t } = e;
     return (0, r.jsxs)(l.P3F, {
         onClick: () => {
-            open(c.V8), (0, s.GX)({ readGuideCta: !0 });
+            (open(c.V8), (0, s.GX)({ readGuideCta: !0 }));
         },
         className: a()(g.container, h.container, m.mainCard),
         children: [
@@ -58,7 +58,7 @@ function x(e) {
                     }),
                     (0, r.jsx)(l.P3F, {
                         onClick: (e) => {
-                            e.stopPropagation(), t(d.L.DISMISS), (0, s.GX)({ readGuideCta: !1 });
+                            (e.stopPropagation(), t(d.L.DISMISS), (0, s.GX)({ readGuideCta: !1 }));
                         },
                         children: (0, r.jsx)(l.Dio, {
                             size: 'xs',

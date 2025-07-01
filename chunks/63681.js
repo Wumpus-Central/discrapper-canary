@@ -2,6 +2,9 @@ t.d(n, { E: () => l });
 var r = t(255367);
 function l(e) {
     let { children: n } = e;
-    return (0, r.jsx)('code', { children: n });
+    return (0, r.jsx)('code', {
+        className: 'inline',
+        children: n
+    });
 }
 t(73800);

@@ -1,4 +1,4 @@
-n.d(t, { c: () => i }), n(388685);
+(n.d(t, { c: () => i }), n(388685));
 var r = n(73800),
     a = n(489863),
     o = n(828878),
@@ -10,16 +10,16 @@ function i(e, t, n) {
             try {
                 s(!0);
                 let n = await (0, a.tV)(e);
-                s(!1),
+                (s(!1),
                     t({
                         userCode: e,
                         clientId: n.body.client_id,
                         scopes: n.body.scopes,
                         twoWayLinkCode: n.body.two_way_link_code
-                    });
+                    }));
             } catch (e) {
                 var r;
-                d(429 === (r = null == e ? void 0 : e.status) ? l.intl.string(l.t.BPmZvr) : 404 === r || 400 === r ? l.intl.string(l.t.aWa1Pz) : l.intl.string(l.t.JNQRU1)), s(!1), (null == e ? void 0 : e.status) === 401 && n();
+                (d(429 === (r = null == e ? void 0 : e.status) ? l.intl.string(l.t.BPmZvr) : 404 === r || 400 === r ? l.intl.string(l.t.aWa1Pz) : l.intl.string(l.t.JNQRU1)), s(!1), (null == e ? void 0 : e.status) === 401 && n());
             }
         }, [e, t, n]);
     return (

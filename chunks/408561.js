@@ -36,7 +36,7 @@ function E(e) {
                 let { problem: t, dontShowAgain: a, feedback: r, closeClicked: s } = e;
                 a && (0, u.EW)(i.z.USER_DM_MUTE_FEEDBACK);
                 let c = null == t || s;
-                (0, _.Z)(t, r, c, a),
+                ((0, _.Z)(t, r, c, a),
                     c ||
                         (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
@@ -47,7 +47,7 @@ function E(e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 l = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                            ('function' == typeof Object.getOwnPropertySymbols &&
                                                 (l = l.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function E(e) {
                                                 )),
                                                 l.forEach(function (t) {
                                                     var l;
-                                                    (l = n[t]),
+                                                    ((l = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: l,
@@ -63,13 +63,13 @@ function E(e) {
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[t] = l);
-                                                });
+                                                            : (e[t] = l));
+                                                }));
                                         }
                                         return e;
                                     })({ body: h.intl.string(h.t.sYrCub) }, t)
                                 );
-                        });
+                        }));
             },
             onClose: E,
             transitionState: t,

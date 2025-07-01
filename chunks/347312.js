@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(853839), n(570086), n(479048), n(388685);
+(n.d(t, { Z: () => G }), n(853839), n(570086), n(479048), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -55,7 +55,7 @@ function w(e) {
     return Math.floor((e + O) / t);
 }
 function D(e, t, n, r, i) {
-    e.moveTo(t, n + i), e.lineTo(t, n + r - i), e.arc(t + i, n + r - i, i, Math.PI, 0, !0), e.lineTo(t + 2 * i, n + i), e.arc(t + i, n + i, i, 0, Math.PI, !0), e.closePath();
+    (e.moveTo(t, n + i), e.lineTo(t, n + r - i), e.arc(t + i, n + r - i, i, Math.PI, 0, !0), e.lineTo(t + 2 * i, n + i), e.arc(t + i, n + i, i, 0, Math.PI, !0), e.closePath());
 }
 function L(e) {
     let { showAll: t, currentTime: n, duration: r, numSegments: i } = e;
@@ -83,7 +83,7 @@ function M(e, t, n) {
             l.current = o;
         }),
         i.useLayoutEffect(() => {
-            a(l.current), s(e);
+            (a(l.current), s(e));
         }, [e, t, n]),
         [r, o]
     );
@@ -129,7 +129,7 @@ function G(e) {
             played: l
         },
         F = i.useRef(V);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         F.current = V;
     }),
         i.useEffect(() => {
@@ -168,11 +168,11 @@ function G(e) {
                     a = y.current;
                 if (null == r || null == i || null == a) return;
                 let o = !1;
-                (v.current !== l || T.current !== d) && ((v.current = l), (T.current = d), (A.current = n)), null != A.current && n > A.current + N && (A.current = null);
+                ((v.current !== l || T.current !== d) && ((v.current = l), (T.current = d), (A.current = n)), null != A.current && n > A.current + N && (A.current = null));
                 let s = r.height / C;
-                i.clearRect(0, 0, r.width, r.height), i.beginPath();
+                (i.clearRect(0, 0, r.width, r.height), i.beginPath());
                 let [c, u] = U(R, w, n, A.current);
-                (o = o || u), (i.fillStyle = c);
+                ((o = o || u), (i.fillStyle = c));
                 for (let e = 0; e < O.length; e++)
                     x({
                         context: i,
@@ -190,7 +190,7 @@ function G(e) {
                 for (let e = 0; e < a.length; e++) {
                     let t = a[e],
                         n = Math.max(t.getCurrentValue(), O[e] - 0.1);
-                    i.beginPath(),
+                    (i.beginPath(),
                         (i.fillStyle = t.isReset ? f : p),
                         x({
                             context: i,
@@ -201,7 +201,7 @@ function G(e) {
                             constrainMin: !t.isReset
                         }),
                         (o = o || t.isAnimating()),
-                        i.fill();
+                        i.fill());
                 }
                 o && (e = requestAnimationFrame(t));
             }
@@ -211,7 +211,7 @@ function G(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [g, C, O, E, a, s, l, d, R, w, D, M, G, B]);
+        }, [g, C, O, E, a, s, l, d, R, w, D, M, G, B]));
     let [, Z] = (0, u.Z)({
         ref: g,
         onDrag: f,

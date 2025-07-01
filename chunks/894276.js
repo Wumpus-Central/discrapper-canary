@@ -24,7 +24,7 @@ class a {
         this._discordExperiment = e;
     }
     constructor(e, t) {
-        i(this, 'id', void 0), i(this, 'feature', void 0), i(this, '_discordExperiment', void 0), (this.id = e), (this.feature = t), (this.id = e), (this.feature = t), (this._discordExperiment = null);
+        (i(this, 'id', void 0), i(this, 'feature', void 0), i(this, '_discordExperiment', void 0), (this.id = e), (this.feature = t), (this.id = e), (this.feature = t), (this._discordExperiment = null));
     }
 }
 let o = new a('2025-05_libdiscore_notestore', 'NoteStore'),

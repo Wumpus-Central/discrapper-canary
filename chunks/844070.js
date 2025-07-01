@@ -34,7 +34,7 @@ function f(e) {
                 sourceAnalyticsLocations: [o.Z.FRIEND_REQUEST_NOTIFICATION]
             });
         }
-        (0, s.uL)(c.Z5c.FRIENDS), i.Z.setSection(c.pJs.PENDING);
+        ((0, s.uL)(c.Z5c.FRIENDS), i.Z.setSection(c.pJs.PENDING));
     });
 }
 function _(e) {

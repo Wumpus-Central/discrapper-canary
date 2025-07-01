@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Tm: () => u,
     ZP: () => _
 }),
     n(415506),
-    n(388685);
+    n(388685));
 var r = n(547545),
     i = n(444591),
     a = n(53566);
@@ -25,7 +25,7 @@ let s = {
     CANCEL_DRAG: ['Escape']
 };
 function l(e) {
-    e.preventDefault(), e.stopImmediatePropagation();
+    (e.preventDefault(), e.stopImmediatePropagation());
 }
 function c(e, t) {
     return t.includes(e.key);
@@ -57,11 +57,11 @@ class f {
     setup() {
         var e;
         if (f.isSetUp) throw Error('Cannot have two Keyboard backends at the same time.');
-        (f.isSetUp = !0), (this._handlingFirstEvent = !0), null == (e = this.context.window) || e.addEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 });
+        ((f.isSetUp = !0), (this._handlingFirstEvent = !0), null == (e = this.context.window) || e.addEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }));
     }
     teardown() {
         var e;
-        (f.isSetUp = !1), null == (e = this.context.window) || e.removeEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }), this.endDrag();
+        ((f.isSetUp = !1), null == (e = this.context.window) || e.removeEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }), this.endDrag());
     }
     setDndMode(e) {
         var t;
@@ -80,7 +80,7 @@ class f {
             this.sourceNodes.set(e, t),
             t.addEventListener('keydown', n),
             () => {
-                this.sourceNodes.delete(e), t.removeEventListener('keydown', n);
+                (this.sourceNodes.delete(e), t.removeEventListener('keydown', n));
             }
         );
     }
@@ -89,7 +89,7 @@ class f {
             this.sourcePreviewNodeOptions.set(e, n),
             this.sourcePreviewNodes.set(e, t),
             () => {
-                this.sourcePreviewNodes.delete(e), this.sourcePreviewNodeOptions.delete(e);
+                (this.sourcePreviewNodes.delete(e), this.sourcePreviewNodeOptions.delete(e));
             }
         );
     }
@@ -99,16 +99,16 @@ class f {
             t.addEventListener('keydown', this.handleDrop),
             (t.tabIndex = Math.max(-1, t.tabIndex)),
             () => {
-                this.targetNodes.delete(e), t.removeEventListener('keydown', this.handleDrop);
+                (this.targetNodes.delete(e), t.removeEventListener('keydown', this.handleDrop));
             }
         );
     }
     endDrag(e) {
         var t;
-        null != e && l(e), null == (t = this._navigator) || t.disconnect(), this._previewer.clear(), this.monitor.isDragging() && this.actions.endDrag(), this.setDndMode(!1);
+        (null != e && l(e), null == (t = this._navigator) || t.disconnect(), this._previewer.clear(), this.monitor.isDragging() && this.actions.endDrag(), this.setDndMode(!1));
     }
     constructor(e, t, n) {
-        o(this, 'manager', void 0),
+        (o(this, 'manager', void 0),
             o(this, 'actions', void 0),
             o(this, 'monitor', void 0),
             o(this, 'context', void 0),
@@ -156,7 +156,7 @@ class f {
             (this.sourcePreviewNodeOptions = new Map()),
             (this.targetNodes = new Map()),
             (this._previewer = new i.Z(t.document)),
-            (this._announcer = new r.Z(null == n ? void 0 : n.announcer));
+            (this._announcer = new r.Z(null == n ? void 0 : n.announcer)));
     }
 }
 o(f, 'isSetUp', void 0);

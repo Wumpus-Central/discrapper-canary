@@ -1,11 +1,11 @@
 let r;
-n.d(t, {
+(n.d(t, {
     I: () => y,
     Z: () => Z
 }),
     n(388685),
     n(642613),
-    n(583741);
+    n(583741));
 var i,
     a = n(392711),
     o = n.n(a),
@@ -45,20 +45,20 @@ let y = 25,
     C = 0,
     R = s.z.MATCH_SOME;
 function P() {
-    (O = !1), (v = !0), (I = !1), (T = !1), (S = null), (A = l.z.LATEST_ACTIVITY), (r = new Set()), (C = 0), (N = []), (R = s.z.MATCH_SOME);
+    ((O = !1), (v = !0), (I = !1), (T = !1), (S = null), (A = l.z.LATEST_ACTIVITY), (r = new Set()), (C = 0), (N = []), (R = s.z.MATCH_SOME));
 }
 function w(e, t) {
     return t === l.z.LATEST_ACTIVITY ? h.ZP.lastMessageId(e.id) : e.id;
 }
 function D(e) {
-    (e.channelId === S && e.sortOrder === A && (0, m.OL)(e.tagFilter, r) && e.tagSetting === R) || P(), (S = e.channelId), (A = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (R = e.tagSetting), (O = !0), (v = !1);
+    ((e.channelId === S && e.sortOrder === A && (0, m.OL)(e.tagFilter, r) && e.tagSetting === R) || P(), (S = e.channelId), (A = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (R = e.tagSetting), (O = !0), (v = !1));
 }
 function L(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, m.OL)(e.tagFilter, r) || e.tagSetting !== R) return !1;
     let t = e.threads.filter((e) => _.AW.has(e.type)).map((e) => e.id);
     N = N.concat(t);
     let n = p.Z.getChannel(S);
-    null != n &&
+    (null != n &&
         n.isForumLikeChannel() &&
         (0, f.Hr)({
             guildId: n.guild_id,
@@ -72,7 +72,7 @@ function L(e) {
         (I = e.hasMore),
         (C = e.offset + y),
         (O = !1),
-        (v = !1);
+        (v = !1));
 }
 function x(e) {
     return (null == S || null == e.channelId || S === e.channelId) && k();
@@ -106,7 +106,7 @@ function k() {
 }
 function M(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, m.OL)(e.tagFilter, r) || e.tagSetting !== R) return !1;
-    (O = !1), (T = !0), (v = !1);
+    ((O = !1), (T = !0), (v = !1));
 }
 function j(e) {
     if (e.channel.id !== S) return !1;

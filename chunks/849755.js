@@ -35,13 +35,13 @@ function v(e) {
             });
     }, [N, t.id, t.guild_id, I]);
     let C = (e) => {
-        e.stopPropagation(),
+        (e.stopPropagation(),
             n({ action: 'PRESS_VOICE_CHANNEL_STATUS' }),
             v === E.lY.POPOUT && (null == a || a()),
             (0, d.Z)({
                 channel: t,
                 sourceAnalyticsLocations: I
-            });
+            }));
     };
     return S && T
         ? (0, r.jsxs)(l.P3F, {

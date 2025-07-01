@@ -9,15 +9,15 @@ var r = n(876026),
         r.C.forEach(function (n) {
             if (0 !== n.activeTargets.length) {
                 var r = [];
-                n.activeTargets.forEach(function (t) {
+                (n.activeTargets.forEach(function (t) {
                     var n = new i.A(t.target),
                         s = (0, a.D)(t.target);
-                    r.push(n), (t.lastReportedSize = (0, o.Y9)(t.target, t.observedBox)), s < e && (e = s);
+                    (r.push(n), (t.lastReportedSize = (0, o.Y9)(t.target, t.observedBox)), s < e && (e = s));
                 }),
                     t.push(function () {
                         n.callback.call(n.observer, r, n.observer);
                     }),
-                    n.activeTargets.splice(0, n.activeTargets.length);
+                    n.activeTargets.splice(0, n.activeTargets.length));
             }
         });
         for (var n = 0, s = t; n < s.length; n++) (0, s[n])();

@@ -23,7 +23,7 @@ class r extends (c = o.ZP.Store) {
         return d.wowMomentWumpusMediaUrl;
     }
 }
-(i = 'PurchasedItemsFestivityStore'),
+((i = 'PurchasedItemsFestivityStore'),
     (n = 'displayName') in r
         ? Object.defineProperty(r, n, {
               value: i,
@@ -31,7 +31,7 @@ class r extends (c = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (r[n] = i);
+        : (r[n] = i));
 let p = new r(s.Z, {
     LOGOUT: function () {
         d = {
@@ -49,9 +49,9 @@ let p = new r(s.Z, {
     },
     PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function (e) {
         let { wumpusMedia: t } = e;
-        (d.wowMomentWumpusMediaUrl = t), (d.isFetchingWowMomentMedia = !1);
+        ((d.wowMomentWumpusMediaUrl = t), (d.isFetchingWowMomentMedia = !1));
     },
     PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE: function () {
-        (d.isFetchingWowMomentMedia = !1), (d.canPlayWowMoment = !1);
+        ((d.isFetchingWowMomentMedia = !1), (d.canPlayWowMoment = !1));
     }
 });

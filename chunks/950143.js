@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(997841), n(388685);
+(n.d(t, { Z: () => f }), n(997841), n(388685));
 var r = n(533800),
     i = n(147913),
     a = n(82085),
@@ -27,7 +27,7 @@ function u(e) {
 }
 class d extends i.Z {
     constructor(...e) {
-        super(...e), c(this, 'actions', { INVITE_ACCEPT_SUCCESS: u });
+        (super(...e), c(this, 'actions', { INVITE_ACCEPT_SUCCESS: u }));
     }
 }
 let f = new d();

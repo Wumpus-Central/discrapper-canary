@@ -22,7 +22,7 @@ function c(e) {
                         size: i.zxk.Sizes.LARGE,
                         color: i.zxk.Colors.PRIMARY,
                         onClick: (e) => {
-                            e.stopPropagation(), l.Z.toggleVoiceParticipantsHidden(t, !1);
+                            (e.stopPropagation(), l.Z.toggleVoiceParticipantsHidden(t, !1));
                         },
                         children: a.intl.string(a.t.kLQySE)
                     })

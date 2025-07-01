@@ -15,7 +15,7 @@ class o extends i.ZP {
         return a.icon.whitePNG;
     }
     constructor() {
-        super({}), (this.id = l), (this.name = a.name);
+        (super({}), (this.id = l), (this.name = a.name));
     }
 }
 let s = new o();

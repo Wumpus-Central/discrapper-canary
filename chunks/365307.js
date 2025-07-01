@@ -59,7 +59,7 @@ function p() {
     return (0, r.jsx)(s.Z, {
         submitting: t,
         onReset: () => {
-            l.Z.init(), u.Ui(), null != e && o.Z.init(e.id);
+            (l.Z.init(), u.Ui(), null != e && o.Z.init(e.id));
         },
         onSave: () => {
             if (null != e) {

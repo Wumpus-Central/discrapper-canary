@@ -18,7 +18,7 @@ var o = !1,
         var e;
         function t(e) {
             if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
-            i(this, 'internalMonitor', void 0), i(this, 'targetId', null), (this.internalMonitor = e.getMonitor());
+            (i(this, 'internalMonitor', void 0), i(this, 'targetId', null), (this.internalMonitor = e.getMonitor()));
         }
         return (
             (e = [
@@ -46,7 +46,7 @@ var o = !1,
                         if (!this.targetId) return !1;
                         (0, r.k)(!o, 'You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor');
                         try {
-                            return (o = !0), this.internalMonitor.canDropOnTarget(this.targetId);
+                            return ((o = !0), this.internalMonitor.canDropOnTarget(this.targetId));
                         } finally {
                             o = !1;
                         }
@@ -116,7 +116,7 @@ var o = !1,
             (function (e, t) {
                 for (var n = 0; n < t.length; n++) {
                     var r = t[n];
-                    (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+                    ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
                 }
             })(t.prototype, e),
             t

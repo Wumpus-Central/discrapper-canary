@@ -1,4 +1,4 @@
-e.d(n, { default: () => b }), e(953529);
+(e.d(n, { default: () => b }), e(953529));
 var o = e(255367),
     i = e(73800),
     r = e(442837),
@@ -30,10 +30,10 @@ let h = [
             _ = (0, r.e7)([x.Z], () => x.Z.getAgeVerificationWebviewUrl()),
             p = (0, r.e7)([x.Z], () => x.Z.getIsLoadingAgeVerification()),
             j = i.useCallback(() => {
-                n(), c.Z.close();
+                (n(), c.Z.close());
             }, [n]),
             N = i.useCallback(() => {
-                c.Z.success(), j(), c.Z.start_verification_check();
+                (c.Z.success(), j(), c.Z.start_verification_check());
             }, [j]);
         return (
             i.useEffect(() => {

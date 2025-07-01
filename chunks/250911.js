@@ -616,7 +616,7 @@ function V(e) {
     );
 }
 var R = function (e) {
-        e.cancelable && e.preventDefault(), e.stopPropagation();
+        (e.cancelable && e.preventDefault(), e.stopPropagation());
     },
     P = ['boxSizing', 'height', 'overflow', 'paddingRight', 'position'],
     D = {
@@ -709,7 +709,7 @@ function U(e) {
                             h = t > 0,
                             v = c - d - l,
                             m = !1;
-                        v > t && s.current && (r && r(e), (s.current = !1)), h && u.current && (a && a(e), (u.current = !1)), h && t > v ? (o && !s.current && o(e), (p.scrollTop = c), (m = !0), (s.current = !0)) : !h && -t > l && (i && !u.current && i(e), (p.scrollTop = 0), (m = !0), (u.current = !0)), m && R(e);
+                        (v > t && s.current && (r && r(e), (s.current = !1)), h && u.current && (a && a(e), (u.current = !1)), h && t > v ? (o && !s.current && o(e), (p.scrollTop = c), (m = !0), (s.current = !0)) : !h && -t > l && (i && !u.current && i(e), (p.scrollTop = 0), (m = !0), (u.current = !0)), m && R(e));
                     }
                 },
                 [o, r, i, a]
@@ -734,7 +734,7 @@ function U(e) {
                 function (e) {
                     if (e) {
                         var t = !!d.s && { passive: !1 };
-                        e.addEventListener('wheel', v, t), e.addEventListener('touchstart', m, t), e.addEventListener('touchmove', g, t);
+                        (e.addEventListener('wheel', v, t), e.addEventListener('touchstart', m, t), e.addEventListener('touchmove', g, t));
                     }
                 },
                 [g, m, v]
@@ -783,13 +783,13 @@ function U(e) {
                             var o = parseInt(C.current.paddingRight, 10) || 0,
                                 r = document.body ? document.body.clientWidth : 0,
                                 i = window.innerWidth - r + o || 0;
-                            Object.keys(D).forEach(function (e) {
+                            (Object.keys(D).forEach(function (e) {
                                 var t = D[e];
                                 n && (n[e] = t);
                             }),
-                                n && (n.paddingRight = ''.concat(i, 'px'));
+                                n && (n.paddingRight = ''.concat(i, 'px')));
                         }
-                        t && A() && (t.addEventListener('touchmove', F, G), e && (e.addEventListener('touchstart', T, G), e.addEventListener('touchmove', L, G))), ($ += 1);
+                        (t && A() && (t.addEventListener('touchmove', F, G), e && (e.addEventListener('touchstart', T, G), e.addEventListener('touchmove', L, G))), ($ += 1));
                     }
                 },
                 [Z]
@@ -799,14 +799,14 @@ function U(e) {
                     if (H) {
                         var t = document.body,
                             n = t && t.style;
-                        ($ = Math.max($ - 1, 0)),
+                        (($ = Math.max($ - 1, 0)),
                             Z &&
                                 $ < 1 &&
                                 P.forEach(function (e) {
                                     var t = C.current[e];
                                     n && (n[e] = t);
                                 }),
-                            t && A() && (t.removeEventListener('touchmove', F, G), e && (e.removeEventListener('touchstart', T, G), e.removeEventListener('touchmove', L, G)));
+                            t && A() && (t.removeEventListener('touchmove', F, G), e && (e.removeEventListener('touchstart', T, G), e.removeEventListener('touchmove', L, G))));
                     }
                 },
                 [Z]
@@ -837,7 +837,7 @@ function U(e) {
                 css: N
             }),
         E(function (e) {
-            U(e), z(e);
+            (U(e), z(e));
         })
     );
 }
@@ -944,7 +944,7 @@ var W = {
                 u = n.matchFrom,
                 l = s ? I(t) : t,
                 c = s ? I(a(e)) : a(e);
-            return o && ((l = l.toLowerCase()), (c = c.toLowerCase())), i && ((l = M(l)), (c = S(c))), 'start' === u ? c.substr(0, l.length) === l : c.indexOf(l) > -1;
+            return (o && ((l = l.toLowerCase()), (c = c.toLowerCase())), i && ((l = M(l)), (c = S(c))), 'start' === u ? c.substr(0, l.length) === l : c.indexOf(l) > -1);
         },
         formatGroupLabel: function (e) {
             return e.label;
@@ -1178,14 +1178,14 @@ var es = function (e) {
                 (o.onChange = function (e, t) {
                     var n = o.props,
                         r = n.onChange;
-                    (t.name = n.name), o.ariaOnChange(e, t), r(e, t);
+                    ((t.name = n.name), o.ariaOnChange(e, t), r(e, t));
                 }),
                 (o.setValue = function (e, t, n) {
                     var r = o.props,
                         i = r.closeMenuOnSelect,
                         a = r.isMulti,
                         s = r.inputValue;
-                    o.onInputChange('', {
+                    (o.onInputChange('', {
                         action: 'set-value',
                         prevInputValue: s
                     }),
@@ -1194,7 +1194,7 @@ var es = function (e) {
                         o.onChange(e, {
                             action: t,
                             option: n
-                        });
+                        }));
                 }),
                 (o.selectOption = function (e) {
                     var t = o.props,
@@ -1234,11 +1234,11 @@ var es = function (e) {
                             return o.getOptionValue(e) !== r;
                         }),
                         a = (0, d.D)(t, i, i[0] || null);
-                    o.onChange(a, {
+                    (o.onChange(a, {
                         action: 'remove-value',
                         removedValue: e
                     }),
-                        o.focusInput();
+                        o.focusInput());
                 }),
                 (o.clearValue = function () {
                     var e = o.state.selectValue;
@@ -1319,7 +1319,7 @@ var es = function (e) {
                 (o.onControlMouseDown = function (e) {
                     if (!e.defaultPrevented) {
                         var t = o.props.openMenuOnClick;
-                        o.state.isFocused ? (o.props.menuIsOpen ? 'INPUT' !== e.target.tagName && 'TEXTAREA' !== e.target.tagName && o.onMenuClose() : t && o.openMenu('first')) : (t && (o.openAfterFocus = !0), o.focusInput()), 'INPUT' !== e.target.tagName && 'TEXTAREA' !== e.target.tagName && e.preventDefault();
+                        (o.state.isFocused ? (o.props.menuIsOpen ? 'INPUT' !== e.target.tagName && 'TEXTAREA' !== e.target.tagName && o.onMenuClose() : t && o.openMenu('first')) : (t && (o.openAfterFocus = !0), o.focusInput()), 'INPUT' !== e.target.tagName && 'TEXTAREA' !== e.target.tagName && e.preventDefault());
                     }
                 }),
                 (o.onDropdownIndicatorMouseDown = function (e) {
@@ -1327,7 +1327,7 @@ var es = function (e) {
                         var t = o.props,
                             n = t.isMulti,
                             r = t.menuIsOpen;
-                        o.focusInput(), r ? (o.setState({ inputIsHiddenAfterUpdate: !n }), o.onMenuClose()) : o.openMenu('first'), e.preventDefault();
+                        (o.focusInput(), r ? (o.setState({ inputIsHiddenAfterUpdate: !n }), o.onMenuClose()) : o.openMenu('first'), e.preventDefault());
                     }
                 }),
                 (o.onClearIndicatorMouseDown = function (e) {
@@ -1379,26 +1379,26 @@ var es = function (e) {
                 (o.handleInputChange = function (e) {
                     var t = o.props.inputValue,
                         n = e.currentTarget.value;
-                    o.setState({ inputIsHiddenAfterUpdate: !1 }),
+                    (o.setState({ inputIsHiddenAfterUpdate: !1 }),
                         o.onInputChange(n, {
                             action: 'input-change',
                             prevInputValue: t
                         }),
-                        o.props.menuIsOpen || o.onMenuOpen();
+                        o.props.menuIsOpen || o.onMenuOpen());
                 }),
                 (o.onInputFocus = function (e) {
-                    o.props.onFocus && o.props.onFocus(e),
+                    (o.props.onFocus && o.props.onFocus(e),
                         o.setState({
                             inputIsHiddenAfterUpdate: !1,
                             isFocused: !0
                         }),
                         (o.openAfterFocus || o.props.openMenuOnFocus) && o.openMenu('first'),
-                        (o.openAfterFocus = !1);
+                        (o.openAfterFocus = !1));
                 }),
                 (o.onInputBlur = function (e) {
                     var t = o.props.inputValue;
                     if (o.menuListRef && o.menuListRef.contains(document.activeElement)) return void o.inputRef.focus();
-                    o.props.onBlur && o.props.onBlur(e),
+                    (o.props.onBlur && o.props.onBlur(e),
                         o.onInputChange('', {
                             action: 'input-blur',
                             prevInputValue: t
@@ -1407,7 +1407,7 @@ var es = function (e) {
                         o.setState({
                             focusedValue: null,
                             isFocused: !1
-                        });
+                        }));
                 }),
                 (o.onOptionHover = function (e) {
                     if (!o.blockOptionHover && o.state.focusedOption !== e) {
@@ -1422,7 +1422,7 @@ var es = function (e) {
                     return es(o.props);
                 }),
                 (o.onValueInputFocus = function (e) {
-                    e.preventDefault(), e.stopPropagation(), o.focus();
+                    (e.preventDefault(), e.stopPropagation(), o.focus());
                 }),
                 (o.onKeyDown = function (e) {
                     var t = o.props,
@@ -1526,7 +1526,7 @@ var es = function (e) {
                 var a = o.getFocusableOptionsWithIds(),
                     s = o.buildFocusableOptions(),
                     u = s.indexOf(o.state.selectValue[0]);
-                (o.state.focusableOptionsWithIds = a), (o.state.focusedOption = s[u]), (o.state.focusedOptionId = et(a, s[u]));
+                ((o.state.focusableOptionsWithIds = a), (o.state.focusedOption = s[u]), (o.state.focusedOptionId = et(a, s[u])));
             }
             return o;
         }
@@ -1537,7 +1537,7 @@ var es = function (e) {
                     {
                         key: 'componentDidMount',
                         value: function () {
-                            this.startListeningComposition(), this.startListeningToTouch(), this.props.closeMenuOnScroll && document && document.addEventListener && document.addEventListener('scroll', this.onScroll, !0), this.props.autoFocus && this.focusInput(), this.props.menuIsOpen && this.state.focusedOption && this.menuListRef && this.focusedOptionRef && (0, d.I)(this.menuListRef, this.focusedOptionRef);
+                            (this.startListeningComposition(), this.startListeningToTouch(), this.props.closeMenuOnScroll && document && document.addEventListener && document.addEventListener('scroll', this.onScroll, !0), this.props.autoFocus && this.focusInput(), this.props.menuIsOpen && this.state.focusedOption && this.menuListRef && this.focusedOptionRef && (0, d.I)(this.menuListRef, this.focusedOptionRef));
                         }
                     },
                     {
@@ -1547,13 +1547,13 @@ var es = function (e) {
                                 n = t.isDisabled,
                                 o = t.menuIsOpen,
                                 r = this.state.isFocused;
-                            ((r && !n && e.isDisabled) || (r && o && !e.menuIsOpen)) && this.focusInput(), r && n && !e.isDisabled ? this.setState({ isFocused: !1 }, this.onMenuClose) : r || n || !e.isDisabled || this.inputRef !== document.activeElement || this.setState({ isFocused: !0 }), this.menuListRef && this.focusedOptionRef && this.scrollToFocusedOptionOnUpdate && ((0, d.I)(this.menuListRef, this.focusedOptionRef), (this.scrollToFocusedOptionOnUpdate = !1));
+                            (((r && !n && e.isDisabled) || (r && o && !e.menuIsOpen)) && this.focusInput(), r && n && !e.isDisabled ? this.setState({ isFocused: !1 }, this.onMenuClose) : r || n || !e.isDisabled || this.inputRef !== document.activeElement || this.setState({ isFocused: !0 }), this.menuListRef && this.focusedOptionRef && this.scrollToFocusedOptionOnUpdate && ((0, d.I)(this.menuListRef, this.focusedOptionRef), (this.scrollToFocusedOptionOnUpdate = !1)));
                         }
                     },
                     {
                         key: 'componentWillUnmount',
                         value: function () {
-                            this.stopListeningComposition(), this.stopListeningToTouch(), document.removeEventListener('scroll', this.onScroll, !0);
+                            (this.stopListeningComposition(), this.stopListeningToTouch(), document.removeEventListener('scroll', this.onScroll, !0));
                         }
                     },
                     {
@@ -1565,11 +1565,11 @@ var es = function (e) {
                     {
                         key: 'onMenuClose',
                         value: function () {
-                            this.onInputChange('', {
+                            (this.onInputChange('', {
                                 action: 'menu-close',
                                 prevInputValue: this.props.inputValue
                             }),
-                                this.props.onMenuClose();
+                                this.props.onMenuClose());
                         }
                     },
                     {
@@ -1603,7 +1603,7 @@ var es = function (e) {
                                 var s = i.indexOf(o[0]);
                                 s > -1 && (a = s);
                             }
-                            (this.scrollToFocusedOptionOnUpdate = !(r && this.menuListRef)),
+                            ((this.scrollToFocusedOptionOnUpdate = !(r && this.menuListRef)),
                                 this.setState(
                                     {
                                         inputIsHiddenAfterUpdate: !1,
@@ -1614,7 +1614,7 @@ var es = function (e) {
                                     function () {
                                         return t.onMenuOpen();
                                     }
-                                );
+                                ));
                         }
                     },
                     {
@@ -1655,14 +1655,14 @@ var es = function (e) {
                             if (o.length) {
                                 var r = 0,
                                     i = o.indexOf(n);
-                                n || (i = -1),
+                                (n || (i = -1),
                                     'up' === e ? (r = i > 0 ? i - 1 : o.length - 1) : 'down' === e ? (r = (i + 1) % o.length) : 'pageup' === e ? (r = i - t) < 0 && (r = 0) : 'pagedown' === e ? (r = i + t) > o.length - 1 && (r = o.length - 1) : 'last' === e && (r = o.length - 1),
                                     (this.scrollToFocusedOptionOnUpdate = !0),
                                     this.setState({
                                         focusedOption: o[r],
                                         focusedValue: null,
                                         focusedOptionId: this.getFocusedOptionId(o[r])
-                                    });
+                                    }));
                             }
                         }
                     },
@@ -2187,7 +2187,7 @@ var es = function (e) {
                                                     s,
                                                     (0, o.Z)({}, h, {
                                                         innerRef: function (e) {
-                                                            t.getMenuListRef(e), n(e);
+                                                            (t.getMenuListRef(e), n(e));
                                                         },
                                                         innerProps: {
                                                             role: 'listbox',

@@ -15,11 +15,11 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,11 +27,11 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
-function a(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,7 +56,7 @@ let c = {
     u = c;
 class d extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        u = s({}, c, null != e ? e : null);
+        u = a({}, c, null != e ? e : null);
     }
     isSpeakingMessage(e, t) {
         let { currentMessage: n } = u;
@@ -72,7 +72,7 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
         return u;
     }
 }
-o(d, 'displayName', 'TTSStore'), o(d, 'persistKey', 'TTSStore'), o(d, 'migrations', []);
+(o(d, 'displayName', 'TTSStore'), o(d, 'persistKey', 'TTSStore'), o(d, 'migrations', []));
 let h = new d(
     l.Z,
     __OVERLAY__
@@ -80,7 +80,7 @@ let h = new d(
         : {
               SPEAKING_MESSAGE: function (e) {
                   let { messageId: t, channelId: n } = e;
-                  u = a(s({}, u), {
+                  u = s(a({}, u), {
                       currentMessage: {
                           messageId: t,
                           channelId: n
@@ -88,10 +88,10 @@ let h = new d(
                   });
               },
               STOP_SPEAKING: function () {
-                  u = a(s({}, u), { currentMessage: null });
+                  u = s(a({}, u), { currentMessage: null });
               },
               SET_TTS_SPEECH_RATE: function (e) {
-                  u = a(s({}, u), { speechRate: e.speechRate });
+                  u = s(a({}, u), { speechRate: e.speechRate });
               }
           }
 );

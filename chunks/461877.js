@@ -5,9 +5,9 @@ function r(e) {
     let [t, n] = e.split('@');
     return ''.concat('*'.repeat(t.length), '@').concat(n);
 }
-n.d(t, {
+(n.d(t, {
     E: () => r,
     n: () => i
 }),
     n(388685),
-    n(35282);
+    n(35282));

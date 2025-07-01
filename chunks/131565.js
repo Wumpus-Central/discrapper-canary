@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(788900),
@@ -27,7 +27,7 @@ function _(e) {
     i.useEffect(() => {
         if (null == f) return void C(void 0);
         let e = performance.now();
-        C(_),
+        (C(_),
             (0, a.p)(f, (t) => {
                 if (t === f) {
                     C(void 0);
@@ -37,7 +37,7 @@ function _(e) {
                         asset_url: t
                     });
                 }
-            });
+            }));
     }, [f, _]),
     t.isViewable && null != d)
         ? (0, r.jsxs)(r.Fragment, {

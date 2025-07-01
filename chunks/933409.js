@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(997841);
+(n.d(t, { Z: () => h }), n(388685), n(997841));
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -28,7 +28,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -44,8 +44,8 @@ function N(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -70,7 +70,7 @@ function I(e, t) {
 function h(e, t, h, T, D) {
     let C = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
         U = null != T ? [T] : [];
-    (0, c.$)(C), (0, i.e7)([_.Z], () => _.Z.getGuildVersion(t), [t]);
+    ((0, c.$)(C), (0, i.e7)([_.Z], () => _.Z.getGuildVersion(t), [t]));
     let R = (0, i.e7)([y.Z], () => y.Z.getGuild(t), [t]),
         L = (0, i.e7)(
             [p.default],
@@ -124,7 +124,7 @@ function h(e, t, h, T, D) {
                                     checked: B,
                                     color: 'danger',
                                     action: () => {
-                                        !1 === B && Y(E.jQ.MUTE), u.Z.setServerMute(t, e.id, !B);
+                                        (!1 === B && Y(E.jQ.MUTE), u.Z.setServerMute(t, e.id, !B));
                                     }
                                 },
                                 'voice-mute'
@@ -161,7 +161,7 @@ function h(e, t, h, T, D) {
             if (t.ctrlKey || t.metaKey)
                 try {
                     var l;
-                    await o.Z.setCommunicationDisabledDuration(n, r, A.UK.DURATION_60_SEC, null, T), Y(E.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(v.intl.formatToPlainString(v.t.O9C3Nj, { user: null != (l = j.ZP.getName(n, null, e)) ? l : '' }), a.ToastType.SUCCESS));
+                    (await o.Z.setCommunicationDisabledDuration(n, r, A.UK.DURATION_60_SEC, null, T), Y(E.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(v.intl.formatToPlainString(v.t.O9C3Nj, { user: null != (l = j.ZP.getName(n, null, e)) ? l : '' }), a.ToastType.SUCCESS)));
                 } catch (e) {
                     (0, a.showToast)((0, a.createToast)(v.intl.string(v.t.epyCur), a.ToastType.FAILURE));
                 }

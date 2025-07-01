@@ -12,7 +12,7 @@ var t = 'Function.prototype.bind called on incompatible ',
         return n;
     },
     s = function (e, t) {
-        for (var n = '', r = 0; r < e.length; r += 1) (n += e[r]), r + 1 < e.length && (n += t);
+        for (var n = '', r = 0; r < e.length; r += 1) ((n += e[r]), r + 1 < e.length && (n += t));
         return n;
     };
 e.exports = function (e) {
@@ -37,7 +37,7 @@ e.exports = function (e) {
         _[p] = '$' + p;
     if (((l = Function('binder', 'return function (' + s(_, ',') + '){ return binder.apply(this,arguments); }')(d)), c.prototype)) {
         var h = function () {};
-        (h.prototype = c.prototype), (l.prototype = new h()), (h.prototype = null);
+        ((h.prototype = c.prototype), (l.prototype = new h()), (h.prototype = null));
     }
     return l;
 };

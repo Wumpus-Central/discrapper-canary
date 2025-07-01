@@ -56,7 +56,7 @@ function h(e) {
         descriptionText: C,
         infoRows: j,
         onDismissAndStay: () => {
-            (p.current = !0),
+            ((p.current = !0),
                 x(),
                 (0, f.g6)(t),
                 A.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
@@ -65,10 +65,10 @@ function h(e) {
                     blocked_user_ids: O ? [n] : [],
                     ignored_user_ids: O ? [] : [n],
                     warning_surface: g.fz.POST_JOIN_MODAL
-                });
+                }));
         },
         onDismissAndLeave: () => {
-            (p.current = !0),
+            ((p.current = !0),
                 x(),
                 o.default.disconnect(),
                 A.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
@@ -77,7 +77,7 @@ function h(e) {
                     blocked_user_ids: O ? [n] : [],
                     ignored_user_ids: O ? [] : [n],
                     warning_surface: g.fz.POST_JOIN_MODAL
-                });
+                }));
         },
         leaveButtonText: N.intl.string(N.t['Y56/oK']),
         stayButtonText: N.intl.string(N.t['Z+/hfX']),

@@ -8,6 +8,6 @@ function l(e, t) {
     if (t) return e.slice();
     var n = e.length,
         r = s ? s(n) : new e.constructor(n);
-    return e.copy(r), r;
+    return (e.copy(r), r);
 }
 e.exports = l;

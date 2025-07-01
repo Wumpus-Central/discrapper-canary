@@ -30,14 +30,14 @@ e.exports = function (e) {
         null !== t[i].parent &&
             (r[i] = (function (e, t) {
                 for (var r = [t[e].parent, e], n = a[t[e].parent][e], s = t[e].parent; t[s].parent; )
-                    r.unshift(t[s].parent),
+                    (r.unshift(t[s].parent),
                         (n = (function (e, t) {
                             return function (r) {
                                 return t(e(r));
                             };
                         })(a[t[s].parent][s], n)),
-                        (s = t[s].parent);
-                return (n.conversion = r), n;
+                        (s = t[s].parent));
+                return ((n.conversion = r), n);
             })(i, t));
     }
     return r;

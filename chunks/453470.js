@@ -1,4 +1,4 @@
-n.d(t, { M: () => v }), n(953529);
+(n.d(t, { M: () => v }), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(286379),
@@ -24,9 +24,9 @@ function v(e) {
         E = i.useCallback(() => {
             (0, p.T)(t, [v]);
         }, [t, v]),
-        I = (0, b.t)({ location: C.zr }),
-        S = (e) => {
-            a.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
+        S = (0, b.t)({ location: C.zr }),
+        I = (e) => {
+            (a.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
                 c.Z.showMuteSuccessToast(j, t),
                 (0, f.qc)({
                     channelId: t,
@@ -35,7 +35,7 @@ function v(e) {
                     warningType: h.pj.LIKELY_ATO,
                     cta: e
                 }),
-                E();
+                E());
         },
         P = () => {
             (0, o.ZDy)(async () => {
@@ -69,7 +69,7 @@ function v(e) {
                                     description: x.intl.string(x.t.w2ve0t),
                                     buttonText: x.intl.string(x.t.ftIK2N),
                                     onButtonPress: () => {
-                                        S(f.NM.USER_MODAL_MUTE), l();
+                                        (I(f.NM.USER_MODAL_MUTE), l());
                                     }
                                 },
                                 'likely-ato-mute'
@@ -95,7 +95,7 @@ function v(e) {
             });
         };
     return (i.useEffect(() => {
-        I &&
+        S &&
             ((0, f.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
                 channelId: t,
                 warningId: v,
@@ -103,8 +103,8 @@ function v(e) {
                 warningType: h.pj.LIKELY_ATO
             }),
             s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
-    }, [t, v, j, I]),
-    I)
+    }, [t, v, j, S]),
+    S)
         ? (0, r.jsx)(m.Q, {
               channelId: t,
               warningId: v,
@@ -118,20 +118,20 @@ function v(e) {
                       text: x.intl.string(x.t.tC1pvL),
                       color: o.zxk.Colors.BRAND,
                       onclick: () => {
-                          P(),
+                          (P(),
                               (0, f.qc)({
                                   channelId: t,
                                   warningId: v,
                                   senderId: j,
                                   warningType: h.pj.LIKELY_ATO,
                                   cta: f.NM.OPEN_MORE_TIPS
-                              });
+                              }));
                       }
                   },
                   {
                       text: x.intl.string(x.t.ftIK2N),
                       color: o.zxk.Colors.PRIMARY,
-                      onclick: () => S(f.NM.USER_BANNER_MUTE)
+                      onclick: () => I(f.NM.USER_BANNER_MUTE)
                   }
               ]
           })

@@ -1,4 +1,4 @@
-n.d(l, { default: () => L }), n(953529), n(539854);
+(n.d(l, { default: () => L }), n(953529), n(539854));
 var a = n(255367),
     i = n(73800),
     s = n(442837),
@@ -36,7 +36,7 @@ let P = (e) => {
             ? (0, a.jsxs)(o.P3F, {
                   className: S.optionContainer,
                   onClick: () => {
-                      r(), i(), (0, x.XU)(d.guild_id, d.id);
+                      (r(), i(), (0, x.XU)(d.guild_id, d.id));
                   },
                   children: [
                       null != j || null != N
@@ -92,7 +92,7 @@ let P = (e) => {
                 hasError: E.Z.hasError()
             })),
             C = (0, d.Dt)();
-        i.useEffect(() => {
+        (i.useEffect(() => {
             null == x && (0, k.RM)(c);
         }, [c, x]),
             i.useEffect(() => {
@@ -107,7 +107,7 @@ let P = (e) => {
                         type: Z._,
                         guild_id: c
                     });
-            }, [c, m]);
+            }, [c, m]));
         let v = i.useCallback(
             (e) => {
                 var l;
@@ -115,9 +115,9 @@ let P = (e) => {
                 let n = [],
                     a = [],
                     i = !1;
-                null == (l = x.welcome_channels) ||
+                (null == (l = x.welcome_channels) ||
                     l.forEach((e) => {
-                        n.push(e.description), a.push(e.channel_id), null != e.emoji_id && (i = !0);
+                        (n.push(e.description), a.push(e.channel_id), null != e.emoji_id && (i = !0));
                     }),
                     g.default.track(f.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
                         index: e,
@@ -126,7 +126,7 @@ let P = (e) => {
                         options_channel_ids: a,
                         guild_description: x.description,
                         has_custom_emojis: i
-                    });
+                    }));
             },
             [c, m, x]
         );

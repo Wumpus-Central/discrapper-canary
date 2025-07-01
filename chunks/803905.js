@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $0: () => R,
     AN: () => M,
     Ct: () => A,
@@ -29,7 +29,7 @@ n.d(t, {
     zZ: () => U,
     zm: () => x
 }),
-    n(49124);
+    n(49124));
 var r = n(848246),
     i = n(710845),
     a = n(380684),
@@ -47,9 +47,9 @@ function f(e, t) {
     if (null == t || null == t.premiumType) return !1;
     try {
         let n = d[t.premiumType];
-        if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
+        if (null == n) return (u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1);
         let r = F[n];
-        if (null == r) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
+        if (null == r) return (u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1);
         return r.skuFeatures.includes(e);
     } catch (e) {
         var n;

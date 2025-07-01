@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Kh: () => G,
     Tm: () => k
 }),
     n(388685),
     n(781311),
-    n(415506);
+    n(415506));
 var r = n(512722),
     i = n.n(r),
     a = n(913527),
@@ -48,7 +48,7 @@ function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -56,7 +56,7 @@ function P(e) {
             )),
             r.forEach(function (t) {
                 R(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -64,11 +64,11 @@ function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -450,7 +450,7 @@ let L = n(227419).Z,
                     var t;
                     let n = O.default.getUser(a);
                     if (null == n) throw Error();
-                    await u.Z.kickUser(r.id, a, null != (t = x(e, 'reason')) ? t : ''), d.Z.sendBotMessage(i.id, C.intl.formatToPlainString(C.t['9wzHDQ'], { user: I.ZP.getUserTag(n) }));
+                    (await u.Z.kickUser(r.id, a, null != (t = x(e, 'reason')) ? t : ''), d.Z.sendBotMessage(i.id, C.intl.formatToPlainString(C.t['9wzHDQ'], { user: I.ZP.getUserTag(n) })));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, C.intl.string(C.t.l0gNlp));
                 });
@@ -562,7 +562,7 @@ let L = n(227419).Z,
                     let o = null != (t = x(e, 'delete_messages')) ? t : 0,
                         s = null != (n = x(e, 'reason')) ? n : '',
                         l = O.default.getUser(a);
-                    await u.Z.banUser(r.id, a, o, s), d.Z.sendBotMessage(i.id, C.intl.formatToPlainString(C.t.YflWdH, { user: null != l ? I.ZP.getUserTag(l) : a }));
+                    (await u.Z.banUser(r.id, a, o, s), d.Z.sendBotMessage(i.id, C.intl.formatToPlainString(C.t.YflWdH, { user: null != l ? I.ZP.getUserTag(l) : a })));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, C.intl.string(C.t.w2J6Qk));
                 });
@@ -642,7 +642,7 @@ let L = n(227419).Z,
                         l = null != (a = x(e, 'reason')) ? a : '',
                         c = O.default.getUser(i);
                     if (null == c) throw Error();
-                    await u.Z.setCommunicationDisabledUntil({
+                    (await u.Z.setCommunicationDisabledUntil({
                         guildId: n.id,
                         userId: i,
                         communicationDisabledUntilTimestamp: o()().add(s, 's').toISOString(),
@@ -655,7 +655,7 @@ let L = n(227419).Z,
                                 user: I.ZP.getUserTag(c),
                                 duration: s
                             })
-                        );
+                        ));
                 })().catch(() => {
                     d.Z.sendBotMessage(r.id, C.intl.string(C.t['+mWyVl']));
                 });
@@ -713,7 +713,7 @@ let L = n(227419).Z,
                 (async () => {
                     await c.Z.openPrivateChannel({ recipientIds: a }).then((e) => {
                         let t = b.Z.getChannel(e);
-                        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, p.ZP.parse(t, o));
+                        (i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, p.ZP.parse(t, o)));
                     });
                 })().catch(() => {
                     d.Z.sendBotMessage(r.id, C.intl.string(C.t['3XaE9/']));

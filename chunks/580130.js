@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685), n(539854);
+(n.d(t, { Z: () => F }), n(388685), n(539854));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -35,10 +35,10 @@ let m = {},
     T = new Set(),
     S = {};
 function A() {
-    (m = {}), (E = {}), (b = {}), (y = !1), (O = !1), (v = !1), (I = new Set()), (T = new Set());
+    ((m = {}), (E = {}), (b = {}), (y = !1), (O = !1), (v = !1), (I = new Set()), (T = new Set()));
 }
 function N(e) {
-    (m[e.id] = c.Z.createFromServer(e)), null == E[e.sku_id] && (E[e.sku_id] = new Set()), null == b[e.application_id] && (b[e.application_id] = new Set()), null != e.subscription_id && (null == S[e.subscription_id] && (S[e.subscription_id] = new Set()), S[e.subscription_id].add(e.id)), b[e.application_id].add(e.id), E[e.sku_id].add(e.id);
+    ((m[e.id] = c.Z.createFromServer(e)), null == E[e.sku_id] && (E[e.sku_id] = new Set()), null == b[e.application_id] && (b[e.application_id] = new Set()), null != e.subscription_id && (null == S[e.subscription_id] && (S[e.subscription_id] = new Set()), S[e.subscription_id].add(e.id)), b[e.application_id].add(e.id), E[e.sku_id].add(e.id));
 }
 function C(e) {
     g[e.id] = c.Z.createFromServer(e);
@@ -63,7 +63,7 @@ function w(e) {
 }
 function D(e) {
     let { entitlements: t } = e;
-    (g = {}), t.forEach(C);
+    ((g = {}), t.forEach(C));
 }
 function L() {}
 function x() {
@@ -74,7 +74,7 @@ function k(e) {
     for (let e of ((O = !0), (y = !1), (v = !n), t)) N(e);
 }
 function M() {
-    (O = !1), (y = !1), (v = !1);
+    ((O = !1), (y = !1), (v = !1));
 }
 function j(e) {
     let { entitlements: t } = e;

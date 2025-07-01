@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => D,
     u: () => P
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -41,7 +41,7 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -49,7 +49,7 @@ function S(e) {
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -57,11 +57,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -119,7 +119,7 @@ function w(e) {
             (0, r.jsx)(c.P3F, {
                 className: I.dropDownContainer,
                 onClick: () => {
-                    i(!n), a();
+                    (i(!n), a());
                 },
                 children: (0, r.jsx)(c.CJ0, {
                     size: 'md',
@@ -147,12 +147,12 @@ function D(e) {
             .slice(0, y.e5);
     null != b && b.length > 0 && M.splice(M.length - 1, 1, b[0]);
     let j = (e) => {
-            x(e), null == p || p(e);
+            (x(e), null == p || p(e));
         },
         U = (e) => {
             let { emoji: t, willClose: n } = e;
             if (null == t && n) return void a();
-            null != t && u(t), j(!n), n && g.kJ.setSearchPlaceholder(null);
+            (null != t && u(t), j(!n), n && g.kJ.setSearchPlaceholder(null));
         },
         G = (e) => {
             null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? j(!0) : j(!L));

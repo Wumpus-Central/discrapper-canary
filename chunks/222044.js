@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(539854);
+(n.d(t, { Z: () => h }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(539854));
 var r = n(147913),
     i = n(339085),
     a = n(592125),
@@ -26,9 +26,9 @@ function f(e) {
             let {
                 data: { url: i }
             } = r;
-            null == d || d.removeEventListener('message', n), e === i && t();
+            (null == d || d.removeEventListener('message', n), e === i && t());
         };
-        null == d || d.addEventListener('message', n), null == d || d.postMessage({ url: e });
+        (null == d || d.addEventListener('message', n), null == d || d.postMessage({ url: e }));
     });
 }
 function _(e) {
@@ -71,7 +71,7 @@ class p extends r.Z {
             });
     }
     constructor(...e) {
-        super(...e), u(this, 'actions', { CHANNEL_PRELOAD: this.handleChannelPreload });
+        (super(...e), u(this, 'actions', { CHANNEL_PRELOAD: this.handleChannelPreload }));
     }
 }
 let h = new p();

@@ -1,4 +1,4 @@
-e.d(c, { default: () => h }), e(953529);
+(e.d(c, { default: () => h }), e(953529));
 var t = e(255367);
 e(73800);
 var o = e(481060),
@@ -11,7 +11,7 @@ function h(n) {
     let { transitionState: c, onClose: e, channel: h } = n,
         d = (0, a.Dt)(),
         f = (n) => {
-            (0, l.RK)(h, n), e();
+            ((0, l.RK)(h, n), e());
         };
     return (0, t.jsx)(o.Y0X, {
         size: o.CgR.SMALL,

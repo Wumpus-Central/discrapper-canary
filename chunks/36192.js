@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(953529), n(781311);
+(n.d(t, { Z: () => v }), n(388685), n(953529), n(781311));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -28,10 +28,10 @@ function v() {
         l = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         [u, g] = r.useState(!1);
     r.useEffect(() => {
-        (0, f.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: C.L.AUTO }), (0, p.fw)();
+        ((0, f.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: C.L.AUTO }), (0, p.fw)());
         let e = setTimeout(() => g(!0), 500);
         return () => {
-            clearTimeout(e), (0, p.$Z)();
+            (clearTimeout(e), (0, p.$Z)());
         };
     }, []);
     let x = () => {
@@ -85,7 +85,7 @@ function v() {
                                                               checked: E.has(e.id_hash),
                                                               setChecked: (t) => {
                                                                   let n = new Set(E);
-                                                                  t ? n.add(e.id_hash) : n.delete(e.id_hash), v(n);
+                                                                  (t ? n.add(e.id_hash) : n.delete(e.id_hash), v(n));
                                                               }
                                                           },
                                                           e.id_hash

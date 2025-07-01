@@ -42,7 +42,7 @@ function c(t) {
                 children: (0, n.jsx)(a.zxk, {
                     color: a.zxk.Colors.RED,
                     onClick: function () {
-                        null == c || c(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED);
+                        (null == c || c(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED));
                     },
                     children: d.intl.string(d.t.VRWPDg)
                 })

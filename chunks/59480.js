@@ -1,4 +1,4 @@
-n.d(t, { a: () => o }), n(388685), n(539854);
+(n.d(t, { a: () => o }), n(388685), n(539854));
 var r = n(271383),
     i = n(594174),
     a = n(981631);
@@ -23,7 +23,7 @@ class o {
             if (null == t) continue;
             let n = i.default.getUser(t),
                 o = r.ZP.getTrueMember(null != e ? e : a.lds, t);
-            null != n && d.push(n), null != o && u.push(o);
+            (null != n && d.push(n), null != o && u.push(o));
         }
         return [u, d];
     }

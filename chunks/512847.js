@@ -28,9 +28,9 @@ function N(e, t, n, r) {
             a = new l.Fh(e, () => {
                 let e = t(),
                     l = n(i, e);
-                null == l || _.Z.isSoundDisabled(l) || (0, u.GN)(l, null != r ? r : 0.4), (i = e);
+                (null == l || _.Z.isSoundDisabled(l) || (0, u.GN)(l, null != r ? r : 0.4), (i = e));
             });
-        return a.attach('useSound'), () => a.detach();
+        return (a.attach('useSound'), () => a.detach());
     });
 }
 function T() {
@@ -273,14 +273,14 @@ function D() {
                 if ((0, C.lm)(i)) {
                     let t = e.voiceChannelActivities.find((e) => e.userIds.has(l)),
                         r = c.find((e) => e.userIds.has(l));
-                    e.voiceChannelActivities.length < c.length && (0, C.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === r && (0, C.lm)(t) && (n = 'activity_end'), void 0 === t && (0, C.lm)(r) && r.userIds.size > 1 && (n = 'activity_user_join'), (0, C.lm)(r) && (0, C.lm)(t) && (r.userIds.size > t.userIds.size && (n = 'activity_user_join'), r.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    (e.voiceChannelActivities.length < c.length && (0, C.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === r && (0, C.lm)(t) && (n = 'activity_end'), void 0 === t && (0, C.lm)(r) && r.userIds.size > 1 && (n = 'activity_user_join'), (0, C.lm)(r) && (0, C.lm)(t) && (r.userIds.size > t.userIds.size && (n = 'activity_user_join'), r.userIds.size < t.userIds.size && (n = 'activity_user_left')));
                 }
                 if (!u) {
                     e.connectedChannelActivities.length < o.length && e.channelActivities.length < a.length && (n = 'activity_launch');
                     let t = e.userConnectedActivity;
-                    null == s && (0, C.lm)(t) && (n = 'activity_end'), (0, C.lm)(s) && (0, C.lm)(t) && (s.userIds.size > t.userIds.size && (n = 'activity_user_join'), s.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    (null == s && (0, C.lm)(t) && (n = 'activity_end'), (0, C.lm)(s) && (0, C.lm)(t) && (s.userIds.size > t.userIds.size && (n = 'activity_user_join'), s.userIds.size < t.userIds.size && (n = 'activity_user_left')));
                 }
-                return null == n && (null != e.connectedActivityLocation || null != r) && (null == e.connectedActivityLocation && null != r ? (n = 'activity_launch') : null != e.connectedActivityLocation && null == r ? (n = 'activity_end') : null != s && null != e.userConnectedActivity && (e.userConnectedActivity.userIds.size < s.userIds.size ? (n = 'activity_user_join') : e.userConnectedActivity.userIds.size > s.userIds.size && (n = 'activity_user_leave'))), n;
+                return (null == n && (null != e.connectedActivityLocation || null != r) && (null == e.connectedActivityLocation && null != r ? (n = 'activity_launch') : null != e.connectedActivityLocation && null == r ? (n = 'activity_end') : null != s && null != e.userConnectedActivity && (e.userConnectedActivity.userIds.size < s.userIds.size ? (n = 'activity_user_join') : e.userConnectedActivity.userIds.size > s.userIds.size && (n = 'activity_user_leave'))), n);
             }
         ),
         null

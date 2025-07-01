@@ -9,5 +9,5 @@ function u(e) {
     var t = (this.__data__ = new n.Z(e));
     this.size = t.size;
 }
-(u.prototype.clear = o.Z), (u.prototype.delete = a.Z), (u.prototype.get = i.Z), (u.prototype.has = l.Z), (u.prototype.set = s.Z);
+((u.prototype.clear = o.Z), (u.prototype.delete = a.Z), (u.prototype.get = i.Z), (u.prototype.has = l.Z), (u.prototype.set = s.Z));
 let c = u;

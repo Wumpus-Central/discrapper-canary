@@ -18,7 +18,7 @@ function i(e, t) {
                 d = !1;
             } else for (; !(d = (i = c.call(n)).done) && (a(u).call(u, i.value), u.length !== t); d = !0);
         } catch (e) {
-            (p = !0), (s = e);
+            ((p = !0), (s = e));
         } finally {
             try {
                 if (!d && null != n.return && ((l = n.return()), Object(l) !== l)) return;

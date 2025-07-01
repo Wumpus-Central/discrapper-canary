@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var l = n(73800),
     i = n(392711),
     r = n.n(i),
@@ -29,7 +29,7 @@ function p(e) {
             () =>
                 m.reduce((e, t) => {
                     let { section: n, data: l } = t;
-                    return l.length > 0 && e.add(n.id), e;
+                    return (l.length > 0 && e.add(n.id), e);
                 }, new Set()),
             [m]
         ),

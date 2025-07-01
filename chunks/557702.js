@@ -26,7 +26,7 @@ var o = (function () {
     var e;
     function t(e, n, r) {
         if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
-        i(this, 'spec', void 0), i(this, 'monitor', void 0), i(this, 'connector', void 0), (this.spec = e), (this.monitor = n), (this.connector = r);
+        (i(this, 'spec', void 0), i(this, 'monitor', void 0), i(this, 'connector', void 0), (this.spec = e), (this.monitor = n), (this.connector = r));
     }
     return (
         (e = [
@@ -64,14 +64,14 @@ var o = (function () {
                         t = this.monitor,
                         n = this.connector,
                         r = e.end;
-                    r && r(t.getItem(), t), n.reconnect();
+                    (r && r(t.getItem(), t), n.reconnect());
                 }
             }
         ]),
         (function (e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+                ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
             }
         })(t.prototype, e),
         t

@@ -54,14 +54,14 @@ function P(e, t, n) {
 }
 function w() {
     l().forEach(R, (e, t) => {
-        e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete R[t];
+        (e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete R[t]);
     });
 }
 function D(e) {
-    (r = e.sessionId), w();
+    ((r = e.sessionId), w());
 }
 function L() {
-    (r = null), w();
+    ((r = null), w());
 }
 function x(e) {
     let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: o, nativePickerStyleUsed: s, goLiveModalDurationMs: c } = e,
@@ -75,7 +75,7 @@ function x(e) {
         ((I[u] = i),
         l().forEach(R, (e) => {
             let { analyticsContext: t, isOwner: n } = e;
-            t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart();
+            (t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart());
         }),
         (A[u] = o),
         (S[u] = a),
@@ -94,14 +94,14 @@ function x(e) {
 }
 function k(e) {
     let { appContext: t, streamKey: n } = e;
-    (I[n] = t),
+    ((I[n] = t),
         l().forEach(R, (e) => {
             let { analyticsContext: n, isOwner: r } = e;
-            n.setActionContext(t), r && n.trackEnd();
+            (n.setActionContext(t), r && n.trackEnd());
         }),
         (A[n] = null),
         (S[n] = null),
-        delete N[n];
+        delete N[n]);
 }
 function M(e) {
     let { streamKey: t, rtcServerId: n, region: r, viewerIds: i } = e,
@@ -118,7 +118,7 @@ function M(e) {
             numViewers: null != i ? i.length : 0,
             goLiveModalDurationMs: N[t]
         });
-        (a = P(t, n, o)), (R[t] = a);
+        ((a = P(t, n, o)), (R[t] = a));
     }
     u.Z.dispatch({
         type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
@@ -140,22 +140,22 @@ function G(e) {
     let { streamKey: t, viewerIds: n, paused: r } = e,
         i = R[t];
     if (null == i) return !1;
-    null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r);
+    (null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r));
 }
 function B(e) {
     let { streamKey: t } = e,
         n = R[t];
     if (null == n) return !1;
-    u.Z.dispatch({
+    (u.Z.dispatch({
         type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
         mediaEngineConnectionId: n.getMediaEngineConnectionId()
     }),
         n.destroy('stream-end'),
-        delete R[t];
+        delete R[t]);
 }
 function V(e) {
     let { layout: t } = e;
-    (C = t), Object.values(R).forEach((e) => e.layoutChange(t));
+    ((C = t), Object.values(R).forEach((e) => e.layoutChange(t)));
 }
 function F() {
     return !0;

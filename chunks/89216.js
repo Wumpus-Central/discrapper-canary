@@ -1,4 +1,4 @@
-a.d(l, { default: () => g }), a(388685);
+(a.d(l, { default: () => g }), a(388685));
 var t = a(255367),
     n = a(73800),
     s = a(392711),
@@ -190,7 +190,7 @@ function g(e) {
         A = n.useCallback(() => {
             N.forEach((e) => {
                 let l = (0, h._A)(e, e.accessPermissions, !0);
-                (0, c.hw)(e.id, [l]), a();
+                ((0, c.hw)(e.id, [l]), a());
             });
         }, [N, a]);
     return 0 === p

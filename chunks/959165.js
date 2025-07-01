@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(781311);
+(n.d(t, { Z: () => u }), n(388685), n(781311));
 var r = n(900849),
     i = n(762692),
     l = n(331114),
@@ -20,7 +20,7 @@ function s(e, t, n) {
 class c {}
 let u = new (class extends c {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             s(this, 'loadMoreCategoryResults', async (e) => {
                 let { query: t, categoryId: n, languageCode: l, offset: o } = e;
                 !a.Z.getIsFetching({
@@ -95,6 +95,6 @@ let u = new (class extends c {
                         withCounts: !0
                     }),
                     o.Z.setState({ resultsQuery: t }));
-            });
+            }));
     }
 })();

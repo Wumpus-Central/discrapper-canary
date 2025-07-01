@@ -9,7 +9,7 @@ var a = n(255367),
     d = n(246992),
     u = n(616257),
     m = n(386);
-let p = [
+let x = [
     {
         label: 'Unset',
         value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET
@@ -39,7 +39,7 @@ function h() {
                 children: 'Receive DMs In Game'
             }),
             (0, a.jsx)(o.PhF, {
-                options: p,
+                options: x,
                 isSelected: (e) => e === t,
                 select: c.JG.updateSetting,
                 popoutLayerContext: d.O$,

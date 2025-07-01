@@ -21,7 +21,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function b(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -37,8 +37,8 @@ function b(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -73,12 +73,12 @@ let _ = (e) =>
                             i,
                             r = {},
                             s = Object.keys(e);
-                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var s = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                 }
                 return r;
             })(e, ['onClose', 'onCtaClick', 'targetElementRef', 'isGuildBarScrolling', 'children']);
@@ -88,15 +88,15 @@ let _ = (e) =>
                 return e.top <= t;
             }, []),
             S = (0, l.e7)([d.Z], () => d.Z.getExpandedFolders().size);
-        r.useEffect(() => {
+        (r.useEffect(() => {
             null !== C.current && C.current.updateElementPositionWithPolling();
         }, [S]),
             r.useEffect(() => {
                 null !== C.current && C.current.updateElementPosition();
-            }, [p]);
+            }, [p]));
         let v = (0, s.TH)().pathname,
             T = r.useCallback(() => {
-                x.includes(v) || (0, c.uL)(g.Z5c.ME), o();
+                (x.includes(v) || (0, c.uL)(g.Z5c.ME), o());
             }, [v, o]);
         return (0, i.jsx)(
             m.WS,
@@ -153,22 +153,22 @@ let C = (e) => {
         d = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'CLOSE';
-                (0, o.EW)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                ((0, o.EW)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                     dismissAction: p.L.INDIRECT_ACTION,
                     groupName: p.R.VIRTUAL_CURRENCY_ONBOARDING
                 }),
-                    c(e);
+                    c(e));
             },
             [c]
         ),
         f = r.useCallback(() => c('CTA_CLICK'), [c]),
         b = r.useCallback(() => {
-            d('CTA_CLICK'),
+            (d('CTA_CLICK'),
                 (0, u.Y)({
                     pageType: g.ZY5.GUILD_LIST,
                     sectionType: g.jXE.ORBS_DISCOVERY_ONBOARDING_COACHMARK,
                     ctaObject: g.qAy.DISCOVERY_BUTTON_TO_ORB_INTRO_QUEST
-                });
+                }));
         }, [d]);
     return t
         ? {

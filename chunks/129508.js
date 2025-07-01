@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(512722),
     i = n.n(r),
     a = n(921608),
@@ -25,11 +25,11 @@ class l {
     }
     setFont(e) {
         var t, n, r, i, a;
-        (this.font.style = null != (t = e.style) ? t : this.font.style), (this.font.size = null != (n = e.size) ? n : this.font.size), (this.font.weight = null != (r = e.weight) ? r : this.font.weight), (this.font.family = null != (i = e.family) ? i : this.font.family), (this.font.truncate = null != (a = e.truncate) ? a : this.font.truncate);
+        ((this.font.style = null != (t = e.style) ? t : this.font.style), (this.font.size = null != (n = e.size) ? n : this.font.size), (this.font.weight = null != (r = e.weight) ? r : this.font.weight), (this.font.family = null != (i = e.family) ? i : this.font.family), (this.font.truncate = null != (a = e.truncate) ? a : this.font.truncate));
     }
     setFilter(e) {
         var t, n, r, i, a, o, s, l, c;
-        (this.filter.blur = null != (t = e.blur) ? t : this.filter.blur), (this.filter.brightness = null != (n = e.brightness) ? n : this.filter.brightness), (this.filter.contrast = null != (r = e.contrast) ? r : this.filter.contrast), (this.filter.grayscale = null != (i = e.grayscale) ? i : this.filter.grayscale), (this.filter.hueRotation = null != (a = e.hueRotation) ? a : this.filter.hueRotation), (this.filter.invert = null != (o = e.invert) ? o : this.filter.invert), (this.filter.opacity = null != (s = e.opacity) ? s : this.filter.opacity), (this.filter.saturate = null != (l = e.saturate) ? l : this.filter.saturate), (this.filter.sepia = null != (c = e.sepia) ? c : this.filter.sepia);
+        ((this.filter.blur = null != (t = e.blur) ? t : this.filter.blur), (this.filter.brightness = null != (n = e.brightness) ? n : this.filter.brightness), (this.filter.contrast = null != (r = e.contrast) ? r : this.filter.contrast), (this.filter.grayscale = null != (i = e.grayscale) ? i : this.filter.grayscale), (this.filter.hueRotation = null != (a = e.hueRotation) ? a : this.filter.hueRotation), (this.filter.invert = null != (o = e.invert) ? o : this.filter.invert), (this.filter.opacity = null != (s = e.opacity) ? s : this.filter.opacity), (this.filter.saturate = null != (l = e.saturate) ? l : this.filter.saturate), (this.filter.sepia = null != (c = e.sepia) ? c : this.filter.sepia));
     }
     getFilterString() {
         let e = ['brightness', 'contrast', 'grayscale', 'invert', 'opacity', 'saturate', 'sepia'];
@@ -48,7 +48,7 @@ class l {
         return o.vP.Failure;
     }
     constructor(e, t) {
-        s(this, 'color', 'black'),
+        (s(this, 'color', 'black'),
             s(this, 'font', {
                 style: 'normal',
                 weight: 300,
@@ -70,7 +70,7 @@ class l {
             s(this, 'assetMap', void 0),
             s(this, 'canvas', void 0),
             (this.canvas = e),
-            (this.assetMap = t);
+            (this.assetMap = t));
     }
 }
 let c = l;

@@ -14,7 +14,7 @@ function o(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -22,7 +22,7 @@ function o(t) {
             )),
             n.forEach(function (e) {
                 a(t, e, r[e]);
-            });
+            }));
     }
     return t;
 }
@@ -70,7 +70,7 @@ var m = function (t, e) {
                 n.push(f);
             }
         } catch (t) {
-            (o = !0), (a = t);
+            ((o = !0), (a = t));
         } finally {
             try {
                 i || null == l.return || l.return();
@@ -147,7 +147,7 @@ t.exports = (function (t) {
             e
         );
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r.shouldComponentUpdate = function (t) {
@@ -171,7 +171,7 @@ t.exports = (function (t) {
                     if (i === window) {
                         var a = p(n);
                         (t = a.y + a.height - d().height) > 0 && window.scrollTo(o.x, o.y + t + 10);
-                    } else v(n) || y(!1), (t = n.offsetHeight + n.offsetTop - (i.offsetHeight + o.y)) > 0 && l.setTop(i, l.getTop(i) + t + 10);
+                    } else (v(n) || y(!1), (t = n.offsetHeight + n.offsetTop - (i.offsetHeight + o.y)) > 0 && l.setTop(i, l.getTop(i) + t + 10));
                 }
             }
         }),
@@ -209,7 +209,7 @@ t.exports = (function (t) {
                             offsetKey: i,
                             block: u
                         });
-                    return r.push(c.createElement(m, C, c.createElement(y, E))), !k || _(u, p) || b(k, m, r), r;
+                    return (r.push(c.createElement(m, C, c.createElement(y, E))), !k || _(u, p) || b(k, m, r), r);
                 }, []));
             var K = n.getKey(),
                 T = s.encode(K, 0, 0),

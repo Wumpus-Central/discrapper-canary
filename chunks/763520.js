@@ -1,14 +1,14 @@
-n.d(t, {
+(n.d(t, {
     m: () => f,
     o: () => m
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(259443),
     l = n(379649),
     o = n(314897),
-    s = n(592125),
-    a = n(866960),
+    a = n(592125),
+    s = n(866960),
     c = n(19780),
     u = n(979651),
     d = n(626135),
@@ -37,7 +37,7 @@ class m {
         let r = (function (e) {
                 var t;
                 let n = (null != (t = g.get(e)) ? t : 0) + 1;
-                return g.set(e, n), n;
+                return (g.set(e, n), n);
             })(n),
             i = (0, l.zO)() - this.spinnerVisibleStart;
         if (((this.spinnerVisibleStart = null), i < 0)) return void this.logger.warn('spinner duration is negative: '.concat(i, ' ms\n        [').concat(e, ', count for stream: ').concat(r, ']'));
@@ -52,7 +52,7 @@ class m {
                     if (e.isGroupDM()) return 'group_dm';
                 }
                 return null;
-            })(s.Z.getChannel(f));
+            })(a.Z.getChannel(f));
         d.default.track(h.rMx.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: i,
@@ -63,12 +63,12 @@ class m {
             channel_id: f,
             channel_type: m,
             spinning_user_id: t,
-            connection_type: a.Z.getType(),
-            effective_connection_speed: a.Z.getEffectiveConnectionSpeed(),
-            service_provider: a.Z.getServiceProvider()
+            connection_type: s.Z.getType(),
+            effective_connection_speed: s.Z.getEffectiveConnectionSpeed(),
+            service_provider: s.Z.getServiceProvider()
         });
     }
     constructor(e) {
-        p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new i.Yd(e));
+        (p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new i.Yd(e)));
     }
 }

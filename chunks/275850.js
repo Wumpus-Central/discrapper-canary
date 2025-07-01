@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => T }), n(415506), n(388685);
+(n.d(t, { ZP: () => T }), n(415506), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -112,7 +112,7 @@ function v(e, t) {
 }
 function I(e, t) {
     let n = null;
-    return e && null != t && !t.canRedeemTrial() ? (n = h.intl.string(h.t.SvheW1)) : e && null != t && t.hasFlag(p.Cw.NEW) && (n = h.intl.format(h.t.d7ZLKC, { helpDeskArticle: f.Z.getArticleURL(_.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), n;
+    return (e && null != t && !t.canRedeemTrial() ? (n = h.intl.string(h.t.SvheW1)) : e && null != t && t.hasFlag(p.Cw.NEW) && (n = h.intl.format(h.t.d7ZLKC, { helpDeskArticle: f.Z.getArticleURL(_.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), n);
 }
 function T(e) {
     let { selectedPaymentSourceId: t, paymentSources: n, prependOption: a, hidePersonalInformation: c, onChange: f, onPaymentSourceAdd: _, isTrial: p = !1, disabled: g = !1, className: E, optionClassName: b, dropdownLoading: T, paymentGatewayRestrictions: S } = e,

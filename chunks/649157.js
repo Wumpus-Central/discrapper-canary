@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -25,7 +25,7 @@ function m() {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function m() {
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    (i = n[t]),
+                                    ((i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
@@ -41,8 +41,8 @@ function m() {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = i);
-                                });
+                                            : (e[t] = i));
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -89,7 +89,7 @@ function m() {
         ),
         p = r.useCallback((e) => {
             let { value: t } = e;
-            m(t), u.nextTick(() => a.ZP.updateLocale(t));
+            (m(t), u.nextTick(() => a.ZP.updateLocale(t)));
         }, []);
     return (0, i.jsx)(l.hjN, {
         tag: l.RB0.H1,

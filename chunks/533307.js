@@ -14,7 +14,7 @@ let m = (function (e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ let m = (function (e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -30,8 +30,8 @@ let m = (function (e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 })(
@@ -62,12 +62,12 @@ let m = (function (e) {
                 );
             } catch (t) {
                 throw (
-                    (l.Z.dispatch({
+                    l.Z.dispatch({
                         type: 'GIFT_CODE_RESOLVE_FAILURE',
                         code: e,
                         error: t
                     }),
-                    t)
+                    t
                 );
             }
         },
@@ -142,7 +142,7 @@ let m = (function (e) {
                 code: e
             });
             try {
-                await i.tn.del({
+                (await i.tn.del({
                     url: d.ANM.USER_GIFT_CODE_REVOKE(e),
                     oldFormErrors: !0,
                     rejectWithError: !0
@@ -150,7 +150,7 @@ let m = (function (e) {
                     l.Z.dispatch({
                         type: 'GIFT_CODE_REVOKE_SUCCESS',
                         code: e
-                    });
+                    }));
             } catch (t) {
                 l.Z.dispatch({
                     type: 'GIFT_CODE_REVOKE_FAILURE',

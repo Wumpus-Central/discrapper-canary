@@ -10,7 +10,7 @@ class c extends (l = o.ZP.Store) {
         return s[e];
     }
 }
-(i = 'ChannelFollowerStatsStore'),
+((i = 'ChannelFollowerStatsStore'),
     (r = 'displayName') in c
         ? Object.defineProperty(c, r, {
               value: i,
@@ -18,14 +18,14 @@ class c extends (l = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (c[r] = i);
+        : (c[r] = i));
 let u = new c(a.Z, {
     CONNECTION_OPEN: function () {
         s = {};
     },
     CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (e) {
         let { channelId: t, stats: n } = e;
-        (n = null != n ? n : {}),
+        ((n = null != n ? n : {}),
             (s[t] = {
                 loadingStatus: 'succeeded',
                 lastFetched: Date.now(),
@@ -35,7 +35,7 @@ let u = new c(a.Z, {
                 usersSeenEver: n.users_seen_ever,
                 subscribersGainedSinceLastPost: n.subscribers_gained_since_last_post,
                 subscribersLostSinceLastPost: n.subscribers_lost_since_last_post
-            });
+            }));
     },
     CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (e) {
         let { channelId: t } = e;

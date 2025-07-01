@@ -1,10 +1,10 @@
 class t {
     constructor() {
-        (this.max = 1000), (this.map = new Map());
+        ((this.max = 1000), (this.map = new Map()));
     }
     get(e) {
         let t = this.map.get(e);
-        if (void 0 !== t) return this.map.delete(e), this.map.set(e, t), t;
+        if (void 0 !== t) return (this.map.delete(e), this.map.set(e, t), t);
     }
     delete(e) {
         return this.map.delete(e);

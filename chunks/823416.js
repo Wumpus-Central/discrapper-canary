@@ -2,7 +2,7 @@ function n(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -10,7 +10,7 @@ function n(t) {
             )),
             n.forEach(function (e) {
                 var n, i, o;
-                (n = t),
+                ((n = t),
                     (i = e),
                     (o = r[e]),
                     i in n
@@ -20,8 +20,8 @@ function n(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (n[i] = o);
-            });
+                        : (n[i] = o));
+            }));
     }
     return t;
 }

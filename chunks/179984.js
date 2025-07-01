@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(539854);
+(n.d(t, { Z: () => G }), n(539854));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -36,7 +36,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function k(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -52,8 +52,8 @@ function k(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -148,21 +148,21 @@ let L = () => {
             F = (0, a.e7)([b.ZP], () => b.ZP.hasFetchedSubscriptions()),
             H = (0, h.V)(),
             z = 'PlanComparisonTable';
-        (0, d.j)({
+        ((0, d.j)({
             location: z + ' auto on',
             autoTrackExposure: !0
         }),
             (0, d.j)({
                 location: z + ' auto off',
                 autoTrackExposure: !1
-            });
+            }));
         let Y = (0, u.ZP)(),
             W = (0, o.ap)(Y),
             K = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
             q = (0, _.M5)(K, y.p9.TIER_2),
             X = (0, C.N)(),
-            Q = null == X || null == (t = X.subscription_trial) ? void 0 : t.sku_id,
-            J = (0, E.rT)(),
+            J = null == X || null == (t = X.subscription_trial) ? void 0 : t.sku_id,
+            Q = (0, E.rT)(),
             $ = (0, j.Ng)(),
             ee = null != $ && (0, j.Wp)($, y.Si.TIER_2),
             et = (0, v.A)(y.Xh.PREMIUM_MONTH_TIER_2),
@@ -182,7 +182,7 @@ let L = () => {
             column1: (0, i.jsx)(M, { premiumType: y.p9.TIER_0 }),
             column2: (0, i.jsx)(M, { premiumType: y.p9.TIER_2 })
         };
-        T
+        (T
             ? el.push({
                   label: null,
                   column1: null,
@@ -196,7 +196,7 @@ let L = () => {
                   label: null,
                   column1: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          Q === y.Si.TIER_2 || ea
+                          J === y.Si.TIER_2 || ea
                               ? (0, i.jsx)(S.Z, {
                                     className: P.button,
                                     subscriptionTier: y.Si.TIER_0,
@@ -209,7 +209,7 @@ let L = () => {
                                     subscriptionTier: y.Si.TIER_0,
                                     showIcon: !1
                                 }),
-                          J === y.p9.TIER_2 || null != Q
+                          Q === y.p9.TIER_2 || null != J
                               ? null
                               : (0, i.jsx)(O.Z, {
                                     className: P.button,
@@ -219,7 +219,7 @@ let L = () => {
                   }),
                   column2: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          Q === y.Si.TIER_0
+                          J === y.Si.TIER_0
                               ? (0, i.jsx)(S.Z, {
                                     className: P.button,
                                     subscriptionTier: y.Si.TIER_2,
@@ -233,7 +233,7 @@ let L = () => {
                                     showIcon: !1,
                                     hasActivePromotion: ea
                                 }),
-                          J === y.p9.TIER_0 || null != Q
+                          Q === y.p9.TIER_0 || null != J
                               ? null
                               : (0, i.jsx)(O.Z, {
                                     className: P.button,
@@ -243,20 +243,20 @@ let L = () => {
                   }),
                   withBottomBorder: !1,
                   withBottomBorderRadius: !0,
-                  buttonsRow: null == Q
+                  buttonsRow: null == J
               }),
             (n = D
                 ? null
-                : null != Q || null != J
+                : null != J || null != Q
                   ? (0, i.jsx)(I.Cy, {
-                        text: null != Q ? A.intl.string(A.t.IBYG5e) : A.intl.string(A.t.ce1v3d),
+                        text: null != J ? A.intl.string(A.t.IBYG5e) : A.intl.string(A.t.ce1v3d),
                         className: P.freeTrialPillWithSparkles,
-                        colorOptions: Q === y.Si.TIER_0 ? (W ? I.VE.PREMIUM_TIER_0_GRADIENT_FILL : I.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (q ? I.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : I.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : I.VE.PREMIUM_TIER_2_WHITE_FILL
+                        colorOptions: J === y.Si.TIER_0 ? (W ? I.VE.PREMIUM_TIER_0_GRADIENT_FILL : I.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (q ? I.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : I.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : I.VE.PREMIUM_TIER_2_WHITE_FILL
                     })
                   : ea
                     ? (0, i.jsx)(L, {})
-                    : (0, i.jsx)(B, {}));
-        let ec = Q === y.Si.TIER_0 || J === y.p9.TIER_0 || w === y.p9.TIER_0;
+                    : (0, i.jsx)(B, {})));
+        let ec = J === y.Si.TIER_0 || Q === y.p9.TIER_0 || w === y.p9.TIER_0;
         return (0, i.jsx)(g.Gt, {
             value: G,
             children: (0, i.jsxs)('div', {

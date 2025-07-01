@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     F3: () => g,
     ZP: () => E,
     sE: () => m
 }),
-    n(997841);
+    n(997841));
 var r = n(73800),
     i = n(533800),
     a = n(442837),
@@ -18,10 +18,10 @@ var r = n(73800),
     p = n(330705),
     h = n(981631),
     m = (function (e) {
-        return (e[(e.IS_MEMBER = 0)] = 'IS_MEMBER'), (e[(e.ADOPT_TAG = 1)] = 'ADOPT_TAG'), (e[(e.HAS_APPLICATION = 2)] = 'HAS_APPLICATION'), (e[(e.APPLY_TO_JOIN = 3)] = 'APPLY_TO_JOIN'), (e[(e.LURK_DISCOVERABLE = 4)] = 'LURK_DISCOVERABLE'), (e[(e.JOIN_VIA_INVITE = 5)] = 'JOIN_VIA_INVITE'), e;
+        return ((e[(e.IS_MEMBER = 0)] = 'IS_MEMBER'), (e[(e.ADOPT_TAG = 1)] = 'ADOPT_TAG'), (e[(e.HAS_APPLICATION = 2)] = 'HAS_APPLICATION'), (e[(e.APPLY_TO_JOIN = 3)] = 'APPLY_TO_JOIN'), (e[(e.LURK_DISCOVERABLE = 4)] = 'LURK_DISCOVERABLE'), (e[(e.JOIN_VIA_INVITE = 5)] = 'JOIN_VIA_INVITE'), e);
     })({}),
     g = (function (e) {
-        return (e.INVITE = 'INVITE'), e;
+        return ((e.INVITE = 'INVITE'), e);
     })({});
 function E(e, t) {
     let { id: n, features: m } = e,

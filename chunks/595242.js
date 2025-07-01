@@ -19,7 +19,7 @@ var i = n(255367),
 function E() {
     r.useEffect(() => {
         c.Z.wait(() => {
-            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, _.JjL.DISCOVERY), (0, u.tH)(!0);
+            (d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, _.JjL.DISCOVERY), (0, u.tH)(!0));
         });
     }, []);
     let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0, a.cj)([f.ZP], () => ({

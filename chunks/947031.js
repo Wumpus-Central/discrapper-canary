@@ -10,7 +10,7 @@ e(476400);
 var a = e(44837),
     c = e(791819),
     s = e(431803);
-i.Component, i.Component;
+(i.Component, i.Component);
 var u = function (t, n) {
         return 'function' == typeof t ? t(n) : t;
     },
@@ -38,7 +38,7 @@ var v = f(function (t, n) {
                     t.defaultPrevented || 0 !== t.button || (u && '_self' !== u) || t.metaKey || t.altKey || t.ctrlKey || t.shiftKey || (t.preventDefault(), r());
                 }
             });
-        return p !== f ? (l.ref = n || e) : (l.ref = e), i.createElement('a', l);
+        return (p !== f ? (l.ref = n || e) : (l.ref = e), i.createElement('a', l));
     }),
     h = f(function (t, n) {
         var e = t.component,
@@ -60,7 +60,7 @@ var v = f(function (t, n) {
                         (m || r ? e.replace : e.push)(n);
                     }
                 });
-            return p !== f ? (v.ref = n || y) : (v.innerRef = y), i.createElement(h, v);
+            return (p !== f ? (v.ref = n || y) : (v.innerRef = y), i.createElement(h, v));
         });
     }),
     m = function (t) {
@@ -120,6 +120,6 @@ var y = d(function (t, n) {
             },
             N
         );
-        return m !== d ? (K.ref = n || k) : (K.innerRef = k), i.createElement(h, K);
+        return (m !== d ? (K.ref = n || k) : (K.innerRef = k), i.createElement(h, K));
     });
 });

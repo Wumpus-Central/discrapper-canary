@@ -67,13 +67,13 @@ function h(e) {
                                         shineSize: s.gtL.ShineSizes.SMALL,
                                         onClick: () => {
                                             var e, n;
-                                            d.default.track(
+                                            (d.default.track(
                                                 m.rMx.GUILD_SHOP_PREVIEW_CLICK,
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
                                                             r = Object.keys(n);
-                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                                             (r = r.concat(
                                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -81,7 +81,7 @@ function h(e) {
                                                             )),
                                                             r.forEach(function (t) {
                                                                 var r;
-                                                                (r = n[t]),
+                                                                ((r = n[t]),
                                                                     t in e
                                                                         ? Object.defineProperty(e, t, {
                                                                               value: r,
@@ -89,8 +89,8 @@ function h(e) {
                                                                               configurable: !0,
                                                                               writable: !0
                                                                           })
-                                                                        : (e[t] = r);
-                                                            });
+                                                                        : (e[t] = r));
+                                                            }));
                                                     }
                                                     return e;
                                                 })({}, (0, a.hH)(t))),
@@ -109,7 +109,7 @@ function h(e) {
                                                       }),
                                                 e)
                                             ),
-                                                c.Z.open(t, m.pNK.GUILD_PRODUCTS);
+                                                c.Z.open(t, m.pNK.GUILD_PRODUCTS));
                                         },
                                         children: [
                                             g.intl.string(g.t.oyzLpK),

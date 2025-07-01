@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     d: () => _,
     k: () => N
 }),
-    n(388685);
+    n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(780384),
@@ -12,13 +12,13 @@ var l = n(255367),
     u = n(933557),
     d = n(210887),
     c = n(430824),
-    g = n(751771),
-    h = n(699516),
+    h = n(751771),
+    g = n(699516),
     m = n(594174),
     p = n(768581),
     v = n(624138),
-    x = n(51144),
-    I = n(388032),
+    I = n(51144),
+    x = n(388032),
     f = n(821022);
 function j(e, t, n) {
     return (
@@ -43,8 +43,8 @@ class _ extends i.Component {
             t,
             n,
             { user: i, channel: r } = this.props;
-        if (null != i) (t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = x.ZP.getName(i));
-        else if (null != r && ((t = (0, o.x)(r)), (n = (0, u.F6)(r, m.default, h.Z)), null == t && null != r.guild_id)) {
+        if (null != i) ((t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = I.ZP.getName(i)));
+        else if (null != r && ((t = (0, o.x)(r)), (n = (0, u.F6)(r, m.default, g.Z)), null == t && null != r.guild_id)) {
             let n = c.Z.getGuild(r.guild_id);
             null != n &&
                 (null != n.icon
@@ -82,7 +82,7 @@ class _ extends i.Component {
                       size: s.zxk.Sizes.SMALL,
                       disabled: !0,
                       color: (0, r.wj)(d.Z.theme) ? s.zxk.Colors.WHITE : s.zxk.Colors.BRAND,
-                      children: I.intl.string(I.t['dVT14+'])
+                      children: x.intl.string(x.t['dVT14+'])
                   })
                 : (0, l.jsx)(s.zxk, {
                       color: s.zxk.Colors.GREEN,
@@ -91,7 +91,7 @@ class _ extends i.Component {
                       size: s.zxk.Sizes.SMALL,
                       submitting: i,
                       onClick: this.handleClickInvite,
-                      children: I.intl.string(I.t.jYnGPD)
+                      children: x.intl.string(x.t.jYnGPD)
                   })),
             (0, l.jsxs)('div', {
                 className: f.inviteRow,
@@ -104,7 +104,7 @@ class _ extends i.Component {
                             this.renderUserOrChannel(),
                             (0, l.jsxs)('div', {
                                 className: f.inviteRowName,
-                                children: [x.ZP.getName(t), null != n ? (0, u.F6)(n, m.default, h.Z, !0) : null]
+                                children: [I.ZP.getName(t), null != n ? (0, u.F6)(n, m.default, g.Z, !0) : null]
                             })
                         ]
                     }),
@@ -114,7 +114,7 @@ class _ extends i.Component {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             j(this, 'state', {
                 sending: !1,
                 invited: !1,
@@ -129,7 +129,7 @@ class _ extends i.Component {
             j(this, 'getSuggestedProps', () => {
                 var e;
                 let { row: t } = this.props;
-                return null != (e = null != t ? g.Z.getSelectedInviteMetadata(t) : null) ? e : null;
+                return null != (e = null != t ? h.Z.getSelectedInviteMetadata(t) : null) ? e : null;
             }),
             j(this, 'handleClickInvite', () => {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;
@@ -168,6 +168,6 @@ class _ extends i.Component {
                                   });
                               }
                           )));
-            });
+            }));
     }
 }

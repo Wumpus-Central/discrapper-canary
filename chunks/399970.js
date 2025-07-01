@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(35282);
+(n.d(t, { Z: () => b }), n(388685), n(35282));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -46,7 +46,7 @@ function b(e) {
     let y = null != b && b === E,
         A = y
             ? function () {
-                  o.mc(), j(''), v(null);
+                  (o.mc(), j(''), v(null));
               }
             : N;
     return (0, i.jsxs)(l.Y0X, {
@@ -83,7 +83,7 @@ function b(e) {
                           }),
                     (0, i.jsx)('form', {
                         onSubmit: (e) => {
-                            e.preventDefault(), A();
+                            (e.preventDefault(), A());
                         },
                         children: (0, i.jsxs)(d.Z, {
                             direction: d.Z.Direction.VERTICAL,

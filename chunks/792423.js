@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -56,7 +56,7 @@ class d extends r.PureComponent {
             : null;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'state', {
                 isRequestPending: !1,
                 hasError: !1
@@ -77,6 +77,6 @@ class d extends r.PureComponent {
                             });
                         });
                 });
-            });
+            }));
     }
 }

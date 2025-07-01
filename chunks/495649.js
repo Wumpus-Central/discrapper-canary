@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(997841);
+(n.d(t, { Z: () => y }), n(388685), n(997841));
 var r = n(147913),
     i = n(703656),
     a = n(271383),
@@ -29,7 +29,7 @@ let g = null,
     E = null;
 class b extends r.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'actions', {
                 GUILD_DELETE: (e) => this.handleGuildDelete(e),
                 CHANNEL_SELECT: (e) => this.handleChannelSelect(e),
@@ -43,7 +43,7 @@ class b extends r.Z {
                 let { guildId: t, channelId: n } = e;
                 if ((g === t && E === n) || ((g = null != t ? t : null), (E = null != n ? n : null), null == g || null == E)) return;
                 let r = o.Z.getGuild(t);
-                null != r && r.hasFeature(_.oNc.COMMUNITY) && d.Z.shouldFetchPrompts(g, 8 * l.Z.Millis.HOUR) && (0, u.rj)(g), this._openOnboardingIfIncomplete(g, n);
+                (null != r && r.hasFeature(_.oNc.COMMUNITY) && d.Z.shouldFetchPrompts(g, 8 * l.Z.Millis.HOUR) && (0, u.rj)(g), this._openOnboardingIfIncomplete(g, n));
             }),
             m(this, 'handleGuildDelete', (e) => {
                 let { guild: t } = e;
@@ -56,7 +56,7 @@ class b extends r.Z {
                 if (null == s || !s.hasFeature(_.oNc.GUILD_ONBOARDING)) return;
                 let l = a.ZP.getSelfMember(e);
                 !(null == l || (0, c.yE)(null != (n = l.flags) ? n : 0, h.q.COMPLETED_ONBOARDING)) && (0, c.yE)(null != (r = l.flags) ? r : 0, h.q.STARTED_ONBOARDING) && (await (0, f.default)({ guildId: e }), (0, i.uL)(_.Z5c.CHANNEL(e, t)));
-            });
+            }));
     }
 }
 let y = new b();

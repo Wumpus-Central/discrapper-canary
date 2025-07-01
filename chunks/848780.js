@@ -9,7 +9,7 @@ function c(e) {
     let { userId: t, onClick: n } = e;
     if (!(0, i.e7)([s.Z], () => s.Z.isIgnored(t))) return null;
     let c = () => {
-        o.Rt.updateSetting(!0), n();
+        (o.Rt.updateSetting(!0), n());
     };
     return (0, r.jsx)(a.zxk, {
         look: a.iLD.LINK,

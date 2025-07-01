@@ -6,7 +6,7 @@ var r = n(515652),
     i = n(926028);
 function a(e, t) {
     var n = new i.p(r.s[e]);
-    return n.loadDataTransfer(t), n;
+    return (n.loadDataTransfer(t), n);
 }
 function o(e) {
     if (!e) return null;

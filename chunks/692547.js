@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(704826), n(35282);
+(n.d(t, { Z: () => D }), n(388685), n(704826), n(35282));
 var r = n(688619),
     i = n.n(r),
     a = n(595182),
@@ -42,7 +42,7 @@ let { Themes: g } = n(15202).V,
                     if (1 === a) return N.unsafe_rawColors[i].resolve(t);
                     {
                         let e = A[i];
-                        return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), C(e, t.saturation);
+                        return (0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), C(e, t.saturation));
                     }
                 }
             };
@@ -103,7 +103,7 @@ function R(e, t, n) {
     var r;
     let i = o()(null != (r = n.opacity) ? r : 1, 0, 1),
         a = e;
-    return 1 !== t && (a = a.set('hsl.s', a.get('hsl.s') * t)), 1 !== i && (a = a.alpha(a.alpha() * i)), a;
+    return (1 !== t && (a = a.set('hsl.s', a.get('hsl.s') * t)), 1 !== i && (a = a.alpha(a.alpha() * i)), a);
 }
 function P(e) {
     return e.toLowerCase().replace(/_/g, '-');

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(570140),
     i = n(846027),
     l = n(317770),
@@ -26,14 +26,14 @@ let h = new Set(),
     g = null;
 function m() {
     for (let e of h) i.Z.setDisableLocalVideo(e, u.ZUi.MANUAL_ENABLED, d.Yn.DEFAULT, !1);
-    f.clear(), h.clear();
+    (f.clear(), h.clear());
 }
 class b extends l.Z {
     _initialize() {
-        r.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), r.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), r.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), r.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), o.Z.addChangeListener(this.handlePopoutChange);
+        (r.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), r.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), r.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), r.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), o.Z.addChangeListener(this.handlePopoutChange));
     }
     _terminate() {
-        r.Z.unsubscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), r.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), r.Z.unsubscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), o.Z.removeChangeListener(this.handlePopoutChange), m(), (g = null);
+        (r.Z.unsubscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), r.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), r.Z.unsubscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), o.Z.removeChangeListener(this.handlePopoutChange), m(), (g = null));
     }
     handleIncomingVideo(e) {
         let { userId: t, context: n, streamId: r } = e;
@@ -50,7 +50,7 @@ class b extends l.Z {
         n && (f.add(t), h.delete(t));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'handleWindowVisibilityChange', (e) => {
                 let { visible: t } = e;
                 t && m();
@@ -61,7 +61,7 @@ class b extends l.Z {
             }),
             p(this, 'handlePopoutChange', () => {
                 o.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT) && m();
-            });
+            }));
     }
 }
 let _ = new b();

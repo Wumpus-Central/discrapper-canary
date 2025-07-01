@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r,
     i,
     l,
@@ -21,11 +21,11 @@ let j = new Set(),
 function O(e) {
     let { subsection: t } = e;
     if (d.Z.getGuildId() === v) return !1;
-    (_ = t === b.KsC.SERVER_GUIDE ? h.PG.HOME_SETTINGS : h.PG.LANDING), (v = d.Z.getGuildId());
+    ((_ = t === b.KsC.SERVER_GUIDE ? h.PG.HOME_SETTINGS : h.PG.LANDING), (v = d.Z.getGuildId()));
 }
 class C extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, g.Z, f.Z, p.Z, u.Z), this.syncWith([o.Z, g.Z, f.Z, p.Z, u.Z], () => !0);
+        (this.waitFor(o.Z, g.Z, f.Z, p.Z, u.Z), this.syncWith([o.Z, g.Z, f.Z, p.Z, u.Z], () => !0));
     }
     isEducationUpsellDismissed(e) {
         return j.has(e);
@@ -57,7 +57,7 @@ class C extends (r = s.ZP.Store) {
         return null == v || (!this.hasErrors() && (!(0, x.C)(v) || !this.hasChanges()));
     }
 }
-(l = 'GuildSettingsOnboardingStore'),
+((l = 'GuildSettingsOnboardingStore'),
     (i = 'displayName') in C
         ? Object.defineProperty(C, i, {
               value: l,
@@ -65,7 +65,7 @@ class C extends (r = s.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (C[i] = l);
+        : (C[i] = l));
 let y = new C(a.Z, {
     GUILD_SETTINGS_INIT: O,
     GUILD_SETTINGS_SET_SECTION: O,

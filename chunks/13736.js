@@ -15,7 +15,7 @@ function s(e) {
               id: 'edit-thread',
               label: e.isForumPost() ? a.intl.string(a.t.NP1yHB) : a.intl.string(a.t['2Mk1TE']),
               action: () => {
-                  (0, i.pTH)(), l.ZP.open(e.id);
+                  ((0, i.pTH)(), l.ZP.open(e.id));
               }
           });
 }

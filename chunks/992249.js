@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,18 +18,18 @@ function d(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
         })(e, ['action', 'children', 'className', 'onExpandChange', 'loading']);
     let [g, p] = i.useState(!1),
         f = (e) => {
-            p(e), null == d || d(e);
+            (p(e), null == d || d(e));
         };
     return (0, r.jsx)(a.zF9, {
         className: s()(c.groupContainer, l),
@@ -47,7 +47,7 @@ function d(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function d(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -63,8 +63,8 @@ function d(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, m)),
@@ -73,7 +73,7 @@ function d(e) {
                         className: c.groupHeaderRow,
                         action: u ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : t,
                         onClick: (e) => {
-                            f(!g), l(e);
+                            (f(!g), l(e));
                         }
                     }),
                 Object.getOwnPropertyDescriptors

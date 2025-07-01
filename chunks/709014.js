@@ -1,4 +1,4 @@
-n.d(t, { L: () => E }), n(388685);
+(n.d(t, { L: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -28,7 +28,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -71,9 +71,9 @@ function g(e, t) {
                     let t = null == C.current;
                     if (((C.current = e), x)) {
                         let t = I[e];
-                        R.current.resetSegments(!0), R.current.setSegment(t.start + t.duration, t.start + t.duration), R.current.stop();
+                        (R.current.resetSegments(!0), R.current.setSegment(t.start + t.duration, t.start + t.duration), R.current.stop());
                     } else {
-                        R.current.setLoop(!w && e.includes('hover')), R.current.resetSegments(!0);
+                        (R.current.setLoop(!w && e.includes('hover')), R.current.resetSegments(!0));
                         let n = t && null != v && v >= I[e].start && v <= I[e].start + I[e].duration ? v : I[e].start;
                         R.current.playSegments([n, I[e].start + I[e].duration], !0);
                     }

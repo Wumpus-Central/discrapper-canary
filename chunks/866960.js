@@ -22,11 +22,11 @@ let c = s.IWh.UNKNOWN,
     d = null;
 function f(e) {
     var t;
-    (c = null != e.type ? e.type : s.IWh.UNKNOWN), (u = null != (t = e.effectiveSpeed) ? t : s.IyS.UNKNOWN), (d = e.serviceProvider), p.emitChange();
+    ((c = null != e.type ? e.type : s.IWh.UNKNOWN), (u = null != (t = e.effectiveSpeed) ? t : s.IyS.UNKNOWN), (d = e.serviceProvider), p.emitChange());
 }
 class _ extends (r = i.ZP.Store) {
     initialize() {
-        o.Z.getNetworkInformation().then(f), o.Z.addChangeCallback(f);
+        (o.Z.getNetworkInformation().then(f), o.Z.addChangeCallback(f));
     }
     getType() {
         return c;

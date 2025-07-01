@@ -49,7 +49,7 @@ function f(e, t) {
                     }
             }
         if (0 === t.interval || (E.add(t, S), E.year > i.VQ)) return h(e);
-        (0, r.e)(o) || (y = b.gettimeset(o)(E.hour, E.minute, E.second, 0)), b.rebuild(E.year, E.month);
+        ((0, r.e)(o) || (y = b.gettimeset(o)(E.hour, E.minute, E.second, 0)), b.rebuild(E.year, E.month));
     }
 }
 function _(e, t, n) {

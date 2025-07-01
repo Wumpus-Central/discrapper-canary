@@ -12,7 +12,7 @@ function d(e) {
     let { pendingScheduledMessage: t } = e,
         { channelId: n, scheduledTimestamp: i } = t;
     function d(e) {
-        e.stopPropagation(), (0, l.pO)(n);
+        (e.stopPropagation(), (0, l.pO)(n));
     }
     return (0, r.jsx)('div', {
         className: u.clipContainer,

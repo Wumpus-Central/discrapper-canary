@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,7 +21,7 @@ let g = 'isHideDevBanner',
             });
         if (t) return null;
         let m = () => {
-                s.K.set(g, !0), n(!0);
+                (s.K.set(g, !0), n(!0));
             },
             b = () =>
                 (0, r.jsx)(c.P3F, {
@@ -42,7 +42,7 @@ let g = 'isHideDevBanner',
             : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, r.jsxs)('div', {
                     className: a()(f.devBanner, f.staging),
-                    children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.format(h.t.uyrfYG, { buildNumber: '414077' }), (0, r.jsx)(b, {})]
+                    children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.format(h.t.uyrfYG, { buildNumber: '414640' }), (0, r.jsx)(b, {})]
                 })
               : null;
     };

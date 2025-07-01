@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(953529), n(388685);
+(n.d(t, { Z: () => f }), n(953529), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -100,7 +100,7 @@ function x(e) {
             l('');
         }, [l]),
         m = async () => {
-            c(!0), await o.Z.createRole(t.id), c(!1);
+            (c(!0), await o.Z.createRole(t.id), c(!1));
         };
     return (0, r.jsx)('div', {
         className: p.__invalid_rolesList,

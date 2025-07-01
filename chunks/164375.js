@@ -1,4 +1,4 @@
-n.d(t, { default: () => g }), n(388685), n(290780);
+(n.d(t, { default: () => g }), n(388685), n(290780));
 var r = n(255367),
     s = n(73800),
     i = n(481060),
@@ -105,7 +105,7 @@ function g(e) {
                 ignoredUserIds: i
             }),
             onDismissAndStay: () => {
-                o(),
+                (o(),
                     (0, u.O)(t),
                     c.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: A.q.CLICK_TO_STAY,
@@ -113,10 +113,10 @@ function g(e) {
                         warning_medium: A.WR.MODAL,
                         blocked_user_ids: n,
                         ignored_user_ids: i
-                    });
+                    }));
             },
             onDismissAndLeave: () => {
-                o(),
+                (o(),
                     (0, u.O)(t),
                     a.Z.closePrivateChannel(t, !0, !0),
                     c.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
@@ -125,7 +125,7 @@ function g(e) {
                         warning_medium: A.WR.MODAL,
                         blocked_user_ids: n,
                         ignored_user_ids: i
-                    });
+                    }));
             },
             leaveButtonText: E.intl.string(E.t.I4q1kJ),
             stayButtonText: E.intl.string(E.t.DRJhmZ),

@@ -24,7 +24,7 @@ t.exports = function (t) {
     S && (x = n(x, w > 2 ? arguments[2] : void 0));
     var R = l(y),
         k = 0;
-    if (R && !(this === p && o(R))) for (r = b ? new this() : [], d = (g = f(y, R)).next; !(v = i(d, g)).done; k++) (m = S ? a(g, x, [v.value, k], !0) : v.value), c(r, k, m);
-    else for (e = h(y), r = b ? new this(e) : p(e); e > k; k++) (m = S ? x(y[k], k) : y[k]), c(r, k, m);
-    return (r.length = k), r;
+    if (R && !(this === p && o(R))) for (r = b ? new this() : [], d = (g = f(y, R)).next; !(v = i(d, g)).done; k++) ((m = S ? a(g, x, [v.value, k], !0) : v.value), c(r, k, m));
+    else for (e = h(y), r = b ? new this(e) : p(e); e > k; k++) ((m = S ? x(y[k], k) : y[k]), c(r, k, m));
+    return ((r.length = k), r);
 };

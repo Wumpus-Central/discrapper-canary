@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Zk: () => d,
     bb: () => f,
     kV: () => h
@@ -17,7 +17,7 @@ n.d(t, {
     n(505025),
     n(918970),
     n(121784),
-    n(410992);
+    n(410992));
 var l = n(512722),
     a = n.n(l),
     i = n(304809),
@@ -44,9 +44,9 @@ async function d(e) {
     new Promise((e, n) => {
         let l = new FileReader(),
             a = () => {
-                l.removeEventListener('load', a), l.removeEventListener('error', n), e(l.result);
+                (l.removeEventListener('load', a), l.removeEventListener('error', n), e(l.result));
             };
-        l.addEventListener('load', a), l.addEventListener('error', n), t(l);
+        (l.addEventListener('load', a), l.addEventListener('error', n), t(l));
     }));
     if ('string' != typeof n) throw Error('Unexpected file type');
     return n;
@@ -70,9 +70,9 @@ async function m(e) {
                 let t = e[0],
                     n = e[1],
                     l = [];
-                for (let e = 0; e < t.length; e++) l.push(t[e]), l.push(n[e]);
+                for (let e = 0; e < t.length; e++) (l.push(t[e]), l.push(n[e]));
                 let a = new Float32Array(l.length);
-                return a.set(l), a;
+                return (a.set(l), a);
             }
             throw Error('Only handles up to 2 channels');
         })(
@@ -96,11 +96,11 @@ async function m(e) {
                 a()(null != n.duration, 'Chunk duration must not be null');
                 let l = (n.duration / 1000000) * e.sampleRate,
                     i = new Uint8Array(n.byteLength);
-                n.copyTo(i),
+                (n.copyTo(i),
                     t.push({
                         buffer: i,
                         numSamples: l
-                    });
+                    }));
             },
             error: (e) => {
                 throw Error('Audio encoding error: '.concat(e.message));
@@ -142,7 +142,7 @@ async function h(e, t) {
             let n = m.getChannelData(t),
                 l = e.getChannelData(t),
                 a = 0;
-            for (let e = d; e <= f; e++) (n[a] = l[e]), a++;
+            for (let e = d; e <= f; e++) ((n[a] = l[e]), a++);
         }
         return m;
     })(await c(e), t);

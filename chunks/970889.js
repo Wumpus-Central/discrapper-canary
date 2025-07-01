@@ -1,7 +1,7 @@
 e.exports = function () {
     var e = this;
-    clearTimeout(e.resetTimer),
+    (clearTimeout(e.resetTimer),
         (e.resetTimer = setTimeout(function () {
             e.resetSequences();
-        }, 1000));
+        }, 1000)));
 };

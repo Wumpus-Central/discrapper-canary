@@ -44,7 +44,7 @@ function V() {
         m = r.useRef(null);
     r.useEffect(() => {
         var e, i;
-        t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()), t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection());
+        (t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()), t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection()));
     }, [n, m, t]);
     let k = (0, p.Z)();
     return (0, i.jsxs)(l.hjN, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r,
     i,
     l,
@@ -18,7 +18,7 @@ class f extends (l = a.ZP.Store) {
         return m;
     }
 }
-(i = 'PremiumPromoStore'),
+((i = 'PremiumPromoStore'),
     (r = 'displayName') in f
         ? Object.defineProperty(f, r, {
               value: i,
@@ -26,8 +26,8 @@ class f extends (l = a.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (f[r] = i);
-let h = new f(o.Z, {
+        : (f[r] = i));
+let g = new f(o.Z, {
     CONNECTION_OPEN: function () {
         return m !== (m = d.Z.getFriendIDs().length >= 10 && c.default.extractTimestamp(u.default.getId()) < Date.now() - p);
     }

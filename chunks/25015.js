@@ -1,64 +1,72 @@
-n.d(t, { Z: () => b });
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
     l = n(73800),
-    o = n(905405),
-    i = n(626135),
-    s = n(750030),
-    a = n(937889),
-    c = n(761910),
-    u = n(488968),
-    d = n(479398),
-    p = n(981631),
-    m = n(388032),
-    g = n(875231);
-let f = l.lazy(() => n.e('85831').then(n.bind(n, 120314)));
-function b(e, t) {
-    let { hideSimpleEmbedContent: b, formatInline: h = !1, noStyleAndInteraction: O = !1, isInteracting: y = !1, allowHeading: v = !1, allowList: j = !1, allowLinks: P = !1, allowDevLinks: x = !1, previewLinkTarget: C = !1, viewingChannelId: w } = t,
-        S = (0, o.p)(),
-        N = (0, d.o)({ location: 'useMessageRenderedContent' });
+    o = n(627050),
+    i = n(905405),
+    s = n(626135),
+    a = n(750030),
+    c = n(937889),
+    u = n(761910),
+    d = n(488968),
+    p = n(479398),
+    m = n(981631),
+    g = n(388032),
+    f = n(875231);
+let b = l.lazy(() => n.e('85831').then(n.bind(n, 120314)));
+function h(e, t) {
+    let { hideSimpleEmbedContent: h, formatInline: O = !1, noStyleAndInteraction: y = !1, isInteracting: v = !1, allowHeading: j = !1, allowList: P = !1, allowLinks: x = !1, allowDevLinks: C = !1, previewLinkTarget: w = !1, viewingChannelId: S } = t,
+        N = (0, i.p)(),
+        E = o.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
+        Z = (0, p.o)({ location: 'useMessageRenderedContent' }),
+        [R, T] = l.useState(!1),
+        _ = l.useCallback((e) => {
+            e && T(!0);
+        }, []);
     return l.useMemo(() => {
         if (null != e.customRenderedContent) return e.customRenderedContent;
         if (e.isUnsupported)
             return {
-                content: m.intl.string(m.t.sWi5ER),
+                content: g.intl.string(g.t.sWi5ER),
                 hasSpoilerEmbeds: !1
             };
-        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(p.iLy.LOADING)) return (0, c.Z)(e);
-        if (e.type === p.uaV.CHANGELOG) {
+        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(m.iLy.LOADING)) return (0, u.Z)(e);
+        if (e.type === m.uaV.CHANGELOG) {
             let { renderChangelogMessageMarkup: t } = n(55406);
-            return t(e, g, {
+            return t(e, f, {
                 track: (e, t) => {
-                    i.default.track(e, t);
+                    s.default.track(e, t);
                 }
             });
         }
-        return N.enabled
+        return Z.enabled
             ? {
                   content: (0, r.jsx)(l.Suspense, {
-                      children: (0, r.jsx)(u.v.Provider, {
+                      children: (0, r.jsx)(d.v.Provider, {
                           value: {
                               messageId: e.id,
                               channelId: e.channel_id,
-                              viewingChannelId: w,
-                              guildId: (0, s.k)(e)
+                              viewingChannelId: S,
+                              guildId: (0, a.k)(e),
+                              setHasSpoilerEmbeds: _
                           },
-                          children: (0, r.jsx)(f, { content: e.content })
+                          children: (0, r.jsx)(b, { content: e.content })
                       })
                   }),
-                  hasSpoilerEmbeds: !1
+                  hasSpoilerEmbeds: R
               }
-            : (0, a.ZP)(e, {
-                  hideSimpleEmbedContent: b,
-                  formatInline: h,
-                  noStyleAndInteraction: O,
-                  isInteracting: y,
-                  allowHeading: v,
-                  allowList: j,
-                  allowLinks: P,
-                  allowDevLinks: x,
-                  previewLinkTarget: C,
-                  shouldFilterKeywords: S,
-                  viewingChannelId: w
+            : (0, c.ZP)(e, {
+                  hideSimpleEmbedContent: h,
+                  formatInline: O,
+                  noStyleAndInteraction: y,
+                  isInteracting: v,
+                  allowHeading: j,
+                  allowList: P,
+                  allowLinks: x,
+                  allowDevLinks: C,
+                  previewLinkTarget: w,
+                  shouldFilterKeywords: N,
+                  viewingChannelId: S,
+                  allowGameMentions: E
               });
-    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, b, h, O, y, v, j, P, C, S, x, w, N.enabled]);
+    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, h, O, y, v, j, P, x, w, N, C, S, Z.enabled, E, R]);
 }

@@ -12,7 +12,7 @@ function d(e) {
         u = (0, l.e7)([o.Z], () => o.Z.getError('name')),
         m = i.useCallback(
             (e) => {
-                a.Z.updateGuild({ name: e }), a.Z.updateGuildProfile(d, { name: e });
+                (a.Z.updateGuild({ name: e }), a.Z.updateGuildProfile(d, { name: e }));
             },
             [d]
         );

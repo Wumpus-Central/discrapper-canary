@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(481060),
@@ -12,11 +12,11 @@ function d(e) {
         [m, f] = i.useState(!1),
         h = i.useRef(null),
         v = i.useCallback(async () => {
-            a.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+            (a.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
                 button_action: o._y.OPEN_APP_DM
             }),
-                f(!0);
+                f(!0));
             try {
                 await (0, s.W)({
                     appId: n,
@@ -24,7 +24,7 @@ function d(e) {
                     analyticsLocations: p
                 });
             } catch (e) {}
-            clearTimeout(h.current), f(!1);
+            (clearTimeout(h.current), f(!1));
         }, [t, n, p]);
     return (0, l.jsx)(r.zxk, {
         type: 'submit',

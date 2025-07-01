@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(457542);
+(n.d(t, { Z: () => p }), n(388685), n(457542));
 var r = n(73800),
     i = n(442837),
     l = n(430824),
@@ -12,7 +12,7 @@ function p(e) {
     let [t, n] = r.useState(!1),
         [p, m] = r.useState(!1),
         f = o.default.cast(e),
-        { joinRequest: h, guild: g } = (0, i.cj)([c.Z, u.Z, l.Z, a.Z], () => {
+        { joinRequest: g, guild: _ } = (0, i.cj)([c.Z, u.Z, l.Z, a.Z], () => {
             var e;
             let t = c.Z.getRequest(f);
             if (null == t)
@@ -30,19 +30,19 @@ function p(e) {
         });
     return (
         r.useEffect(() => {
-            null != g || p || (m(!0), s.Z.fetchRequestToJoinGuilds());
-        }, [g, p]),
+            null != _ || p || (m(!0), s.Z.fetchRequestToJoinGuilds());
+        }, [_, p]),
         r.useEffect(() => {
-            null == h &&
+            null == g &&
                 (n(!0),
                 s.Z.fetchGuildJoinRequest(f).finally(() => {
                     n(!1);
                 }));
-        }, [h, f]),
+        }, [g, f]),
         {
             loading: t,
-            joinRequest: h,
-            joinRequestGuild: g
+            joinRequest: g,
+            joinRequestGuild: _
         }
     );
 }

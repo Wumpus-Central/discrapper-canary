@@ -12,7 +12,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -20,7 +20,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -28,8 +28,8 @@ function d(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -52,36 +52,36 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: x, source: y, hover: E, innerClassName: v } = e,
-        C = {
+    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: g, hideNotLaunchable: _, tooltipPosition: h, onClick: b, className: E, source: y, hover: C, innerClassName: x } = e,
+        v = {
             fullWidth: n,
             size: m,
             color: f,
-            customDisabledColor: h,
-            tooltipPosition: _,
+            customDisabledColor: g,
+            tooltipPosition: h,
             onClick: b,
-            className: x,
-            hover: E,
-            innerClassName: v
+            className: E,
+            hover: C,
+            innerClassName: x
         },
         O = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
         j = null != O ? O.sku.id : null,
-        S = null != j ? j : t.primarySkuId,
-        I = (0, i.e7)([o.Z], () => null != S && !o.Z.didFetchingSkuFail(S));
+        I = null != j ? j : t.primarySkuId,
+        S = (0, i.e7)([o.Z], () => null != I && !o.Z.didFetchingSkuFail(I));
     return null != O && (0, s.Je)(O)
         ? (0, r.jsx)(
               u.Z,
-              p(d({}, C), {
+              p(d({}, v), {
                   libraryApplication: O,
                   source: y
               })
           )
-        : I
+        : S
           ? (0, r.jsx)('div', { children: 'deprecated!' })
           : (0, r.jsx)(
                 c.Z,
-                p(d({}, C), {
-                    hideNotLaunchable: g,
+                p(d({}, v), {
+                    hideNotLaunchable: _,
                     applicationId: t.id
                 })
             );

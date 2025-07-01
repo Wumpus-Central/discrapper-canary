@@ -1,4 +1,4 @@
-n.d(t, { default: () => j }), n(388685);
+(n.d(t, { default: () => j }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(658722),
@@ -18,7 +18,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -26,7 +26,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,8 +34,8 @@ function b(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -116,7 +116,7 @@ function j(e) {
             [P]
         ),
         M = l.useCallback(() => {
-            y(null), k();
+            (y(null), k());
         }, [y, k]),
         B = null != (t = C.authorIds[0]) ? t : '',
         Z = (0, s.e7)([d.ZP], () => (null != I ? d.ZP.getMember(I, B) : null)),
@@ -225,7 +225,7 @@ function j(e) {
                                 (0, r.jsx)(i.zxk, {
                                     disabled: 0 === C.message.length || null != E,
                                     onClick: () => {
-                                        y(C), k();
+                                        (y(C), k());
                                     },
                                     children: x.intl.string(x.t.R3BPHx)
                                 })

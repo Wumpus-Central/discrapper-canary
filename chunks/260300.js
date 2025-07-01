@@ -21,7 +21,7 @@ let o = {
         );
     },
     dismiss(e) {
-        i.Z.wait(() =>
+        (i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'TUTORIAL_INDICATOR_DISMISS',
                 tutorialId: e
@@ -31,14 +31,14 @@ let o = {
                 url: l.ANM.TUTORIAL_INDICATOR(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
-            });
+            }));
     },
     suppressAll() {
-        i.Z.dispatch({ type: 'TUTORIAL_INDICATOR_SUPPRESS_ALL' }),
+        (i.Z.dispatch({ type: 'TUTORIAL_INDICATOR_SUPPRESS_ALL' }),
             r.tn.post({
                 url: l.ANM.TUTORIAL_INDICATORS_SUPPRESS,
                 oldFormErrors: !0,
                 rejectWithError: !0
-            });
+            }));
     }
 };

@@ -1,4 +1,4 @@
-n(65234), n(111804), n(490233), n(97749), n(388685), n(539854), n(190126), n(368063), n(35282), n(203651);
+(n(65234), n(111804), n(490233), n(97749), n(388685), n(539854), n(190126), n(368063), n(35282), n(203651));
 var r = n(544891),
     i = n(857613),
     a = n(569611),
@@ -16,7 +16,7 @@ let h = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
     m = new f.R();
 function g(e) {
     let t = new URLSearchParams();
-    t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true');
+    (t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true'));
     let n = d.Z.toURLSafe('traces?'.concat(t.toString()), 'https://datadog.discord.tools/apm/');
     return null == n ? null : n.toString();
 }
@@ -25,7 +25,7 @@ function b(e) {
     let t = 10;
     return e.reduce((e, n) => (10 === t ? e.push(n) : e.push(''.concat(n, ';q=0.').concat(t)), (t = Math.max(t - 1, 1)), e), []).join(',');
 }
-(0, r.lg)({
+((0, r.lg)({
     prepareRequest(e) {
         let { default: t } = n(314897),
             { default: o } = n(857192),
@@ -35,7 +35,7 @@ function b(e) {
             { isPlatformEmbedded: d } = n(358085);
         if ('/' === e.url[0]) {
             var f, p;
-            (e.url = (0, r.K0)() + e.url), 'Authorization' in e.header || 'authorization' in e.header || e.set('Authorization', t.getToken()), (0, i.c)();
+            ((e.url = (0, r.K0)() + e.url), 'Authorization' in e.header || 'authorization' in e.header || e.set('Authorization', t.getToken()), (0, i.c)());
             let n = c.getSuperPropertiesBase64();
             null != n && e.set('X-Super-Properties', n);
             let a = t.getFingerprint();
@@ -64,7 +64,7 @@ function b(e) {
                 }
             }
         }
-        a.Hj('Network', 'Sending '.concat(e.method, ' to ').concat(e.url)),
+        (a.Hj('Network', 'Sending '.concat(e.method, ' to ').concat(e.url)),
             e.on('response', (t) => {
                 let n = null != t && t.status >= 400 ? t.text : null,
                     r = null == n ? '' : 'and body: '.concat(n);
@@ -105,7 +105,7 @@ function b(e) {
                         }
                     });
                 }
-            });
+            }));
     },
     interceptResponse(e, t, r) {
         var i, a, c, u, d;
@@ -118,7 +118,7 @@ function b(e) {
                   .then((e) => {
                       let { captcha_key: n, captcha_rqtoken: r, captcha_session_id: i } = e,
                           a = { 'X-Captcha-Key': n };
-                      null != r && (a['X-Captcha-Rqtoken'] = r), null != i && (a['X-Captcha-Session-Id'] = i), t(a);
+                      (null != r && (a['X-Captcha-Rqtoken'] = r), null != i && (a['X-Captcha-Session-Id'] = i), t(a));
                   })
                   .catch(r),
               !0)
@@ -159,5 +159,5 @@ function b(e) {
     }
 }),
     (0, r.Jt)(async (e) => {
-        a.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), c.Z.isOnline() || (await c.Z.awaitOnline(), a.Hj('Network', 'Network detected online, retrying '.concat(e)));
-    });
+        (a.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), c.Z.isOnline() || (await c.Z.awaitOnline(), a.Hj('Network', 'Network detected online, retrying '.concat(e))));
+    }));

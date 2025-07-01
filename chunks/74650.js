@@ -52,7 +52,7 @@ function p(e) {
                           size: s.zxk.Sizes.LARGE,
                           fullWidth: !0,
                           onClick: () => {
-                              t(c.L.TAKE_ACTION), n();
+                              (t(c.L.TAKE_ACTION), n());
                           },
                           className: m.button,
                           children: u.intl.string(u.t.LhcHi4)

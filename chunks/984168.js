@@ -10,7 +10,7 @@ var i = n(120356),
 function u(e) {
     let { sortOrder: t, onSortOptionClick: n, closePopout: i } = e,
         u = (e) => {
-            n(e), i();
+            (n(e), i());
         };
     return (0, l.jsx)('div', {
         className: r()(o.Jh, c.container),

@@ -1,4 +1,4 @@
-n.d(e, { default: () => p }), n(953529);
+(n.d(e, { default: () => p }), n(953529));
 var r = n(255367);
 n(73800);
 var a = n(120356),
@@ -18,7 +18,7 @@ let p = (t) => {
         parentComponent: 'HubStudyRoomSuppressModal',
         children: (0, r.jsxs)('form', {
             onSubmit: (t) => {
-                null == t || t.preventDefault(), o.Z.clearSuppressWarning(), null == e || e();
+                (null == t || t.preventDefault(), o.Z.clearSuppressWarning(), null == e || e());
             },
             className: m.form,
             children: [

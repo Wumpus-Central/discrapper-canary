@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     Z: () => N,
     x: () => j
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -155,7 +155,7 @@ class y extends (r = l.Component) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -163,7 +163,7 @@ class y extends (r = l.Component) {
                                             )),
                                             r.forEach(function (t) {
                                                 b(e, t, n[t]);
-                                            });
+                                            }));
                                     }
                                     return e;
                                 })({}, e)),
@@ -285,7 +285,7 @@ class y extends (r = l.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'state', {
                 showForegroundTooltip: !1,
                 foregroundTooltipY: 0,
@@ -295,7 +295,7 @@ class y extends (r = l.Component) {
             b(this, 'foregroundTooltipElementRef', l.createRef()),
             b(this, 'tierMarkerMaskId', (0, c.Z)()),
             b(this, 'handleForegroundMouseEnter', (e) => {
-                this.setState({ showForegroundTooltip: !0 }), this.handleForegroundMouseMove(e);
+                (this.setState({ showForegroundTooltip: !0 }), this.handleForegroundMouseMove(e));
             }),
             b(this, 'handleForegroundMouseMove', (e) => {
                 if (!(0, d.k)(e.target)) return;
@@ -321,7 +321,7 @@ class y extends (r = l.Component) {
             }),
             b(this, 'handleFinishedInitialAnimation', () => {
                 this.setState({ finishedInitialAnimation: !0 });
-            });
+            }));
     }
 }
 b(y, 'defaultProps', { initialAnimationDelay: 0 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685), n(642613), n(539854);
+(n.d(t, { Z: () => R }), n(388685), n(642613), n(539854));
 var r,
     i = n(442837),
     a = n(570140),
@@ -67,7 +67,7 @@ function O(e) {
 }
 function v(e) {
     let { skuId: t, subscriptionPlans: n } = e;
-    (_[t] = new Set()), (g[t] = new Set()), n.forEach(y), p.delete(t), h.delete(t);
+    ((_[t] = new Set()), (g[t] = new Set()), n.forEach(y), p.delete(t), h.delete(t));
 }
 function I(e) {
     let { giftCode: t } = e;
@@ -75,14 +75,14 @@ function I(e) {
 }
 function T(e) {
     let { skuId: t } = e;
-    p.delete(t), h.delete(t);
+    (p.delete(t), h.delete(t));
 }
 function S(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.subscription_plan && y(e.subscription_plan);
 }
 function A() {
-    (0, s.Ti)(f), (0, s.Ti)(_), p.clear(), h.clear(), (0, s.Ti)(m), (0, s.Ti)(g), b();
+    ((0, s.Ti)(f), (0, s.Ti)(_), p.clear(), h.clear(), (0, s.Ti)(m), (0, s.Ti)(g), b());
 }
 b();
 let N = [u.rV.DAY, u.rV.MONTH, u.rV.YEAR];
@@ -92,12 +92,12 @@ class C extends (r = i.ZP.Store) {
         for (let r of e) {
             var n;
             let e = Array.from(null != (n = _[r]) ? n : new Set());
-            e.sort((e, t) => {
+            (e.sort((e, t) => {
                 let n = f[e],
                     r = f[t];
                 return N.indexOf(n.interval) - N.indexOf(r.interval) || n.intervalCount - r.intervalCount;
             }),
-                t.push(...e);
+                t.push(...e));
         }
         return t;
     }
@@ -141,7 +141,7 @@ class C extends (r = i.ZP.Store) {
     }
     getPaymentSourceIds() {
         let e = new Set();
-        return Object.values(m).forEach((t) => t.forEach((t) => e.add(t))), e;
+        return (Object.values(m).forEach((t) => t.forEach((t) => e.add(t))), e);
     }
     hasPaymentSourceForSKUId(e, t) {
         return u.Si.NONE === t || (null != g[t] && g[t].has(e));

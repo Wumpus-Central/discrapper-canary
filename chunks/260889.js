@@ -16,7 +16,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -24,7 +24,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -32,8 +32,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -67,7 +67,7 @@ function _(e) {
                   {
                       id: 'join-voice',
                       action: function () {
-                          (0, c.Kh)(n.channel.id),
+                          ((0, c.Kh)(n.channel.id),
                               o.default.selectVoiceChannel(n.channel.id),
                               s.ZP.trackWithMetadata(
                                   f.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED,
@@ -79,7 +79,7 @@ function _(e) {
                                       },
                                       (0, p.y)(e)
                                   )
-                              );
+                              ));
                       },
                       label: g.intl.string(g.t['8yOlh4']),
                       disabled: !_
@@ -91,7 +91,7 @@ function _(e) {
                   {
                       id: 'goto-server',
                       action: function () {
-                          (0, u.X)(n.guild.id),
+                          ((0, u.X)(n.guild.id),
                               s.ZP.trackWithMetadata(
                                   f.rMx.ACTIVITY_FEED_GUILD_VISITED,
                                   m(
@@ -102,7 +102,7 @@ function _(e) {
                                       },
                                       (0, p.y)(e)
                                   )
-                              );
+                              ));
                       },
                       label: g.intl.string(g.t.RGgqm5)
                   },

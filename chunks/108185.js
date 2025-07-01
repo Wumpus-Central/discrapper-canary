@@ -19,7 +19,7 @@ function i(t, e, a, { ...n }) {
                 startTime: e,
                 ...n
             });
-            return t && t.end(a), t;
+            return (t && t.end(a), t);
         })
     );
 }

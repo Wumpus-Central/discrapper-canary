@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+(n.d(t, { Z: () => S }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -40,7 +40,7 @@ function h(e) {
     return _.get(e);
 }
 function m() {
-    return f.clear(), _.clear(), !0;
+    return (f.clear(), _.clear(), !0);
 }
 function g(e) {
     var t;
@@ -49,7 +49,7 @@ function g(e) {
     if (o.optionNameToLastQuery.get(a) === i) return !1;
     o.optionNameToLastQuery.set(a, i);
     let s = null == (t = o.optionNameToAutocompleteQueries.get(a)) ? void 0 : t.get(i);
-    if (null != s) return (o.lastErrored = !1), o.optionNameToLastResults.set(a, s), !0;
+    if (null != s) return ((o.lastErrored = !1), o.optionNameToLastResults.set(a, s), !0);
     let l = o.optionNameToNonce.get(a);
     if (
         (null != l && f.delete(l),
@@ -62,7 +62,7 @@ function g(e) {
         o.optionNameToNonce.set(a, n),
         o.lastErrored)
     )
-        return (o.lastErrored = !1), !0;
+        return ((o.lastErrored = !1), !0);
 }
 let E = (0, l.isDesktop)();
 function b(e) {

@@ -1,10 +1,10 @@
-i.d(e, {
-    G: () => w,
-    d: () => Z
+(i.d(e, {
+    G: () => Z,
+    d: () => I
 }),
     i(539854),
     i(388685),
-    i(415506);
+    i(415506));
 var n = i(475179),
     r = i(904245),
     s = i(166459),
@@ -22,13 +22,13 @@ var n = i(475179),
     v = i(979956),
     O = i(981631),
     b = i(959517),
-    y = i(474936),
-    S = i(388032);
+    S = i(474936),
+    y = i(388032);
 function E(t) {
     for (var e = 1; e < arguments.length; e++) {
         var i = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(i);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(i).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(i, t).enumerable;
@@ -36,7 +36,7 @@ function E(t) {
             )),
             n.forEach(function (e) {
                 var n;
-                (n = i[e]),
+                ((n = i[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: n,
@@ -44,12 +44,12 @@ function E(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = n);
-            });
+                        : (t[e] = n));
+            }));
     }
     return t;
 }
-function w(t, e) {
+function Z(t, e) {
     let i = p.default.getCurrentUser(),
         n = t.getGuildId(),
         r = f.dg(n),
@@ -58,9 +58,9 @@ function w(t, e) {
         a = 0,
         u = 0,
         c = [];
-    for (let t of e) (u += 1), (l += t.size), s.push(t.size), t.size > a && (a = t.size), null != t.type ? c.push(t.type) : c.push('unknown');
+    for (let t of e) ((u += 1), (l += t.size), s.push(t.size), t.size > a && (a = t.size), null != t.type ? c.push(t.type) : c.push('unknown'));
     if (a > r) {
-        (0, d.yw)(O.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
+        ((0, d.yw)(O.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: t.id,
             guild_id: n,
             user_individual_file_size_limit: r,
@@ -71,33 +71,33 @@ function w(t, e) {
             attachment_mimetypes: c
         }),
             (0, o.openUploadError)({
-                title: S.intl.string(S.t['/tGlcn']),
+                title: y.intl.string(y.t['/tGlcn']),
                 help: (0, v.BK)(i, n),
-                showPremiumUpsell: !(0, m.M5)(i, y.p9.TIER_2),
+                showPremiumUpsell: !(0, m.M5)(i, S.p9.TIER_2),
                 fileSize: a
-            });
+            }));
         return;
     }
     (0, o.openUploadError)({
-        title: S.intl.string(S.t['/tGlcn']),
-        help: S.intl.formatToPlainString(S.t.tUOJdH, { maxSize: f.Ng(f.OC()) })
+        title: y.intl.string(y.t['/tGlcn']),
+        help: y.intl.formatToPlainString(y.t.tUOJdH, { maxSize: f.Ng(f.OC()) })
     });
 }
-function Z(t, e, i) {
+function I(t, e, i) {
     let { filesMetadata: d, requireConfirm: p = !0, showLargeMessageDialog: f = !1, isThumbnail: m = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (t.length < 1) return;
     if (null != d && d.length !== t.length) throw Error('Unexpected mismatch between files and file metadata');
     let b = e.getGuildId();
-    if ((0, v.Bf)(t, b)) return void w(e, t);
+    if ((0, v.Bf)(t, b)) return void Z(e, t);
     if (h.Z.getUploadCount(e.id, i) + t.length > O.dN1) {
-        (0, o.openUploadError)({
-            title: S.intl.string(S.t.wOr6hI),
-            help: S.intl.formatToPlainString(S.t['qqyp/f'], { limit: O.dN1 })
+        ((0, o.openUploadError)({
+            title: y.intl.string(y.t.wOr6hI),
+            help: y.intl.formatToPlainString(y.t['qqyp/f'], { limit: O.dN1 })
         }),
             g.default.track(O.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: h.Z.getUploadCount(e.id, i),
                 new_count: t.length
-            });
+            }));
         return;
     }
     if (((e.type !== O.d4z.GUILD_VOICE && e.type !== O.d4z.GUILD_STAGE_VOICE) || u.Z.getChatOpen(e.id) || n.Z.updateChatOpen(e.id, !0), p)) {

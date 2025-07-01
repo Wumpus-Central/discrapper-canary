@@ -22,7 +22,7 @@ function h(e) {
         }, []),
         v = i.useCallback(
             (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     e.stopPropagation(),
                     (0, u.E6)({
                         guild: t,
@@ -30,7 +30,7 @@ function h(e) {
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.qAy.BUTTON_CTA,
                         perks: (0, g.o9)()
-                    });
+                    }));
             },
             [x, t]
         );

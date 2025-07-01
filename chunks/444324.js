@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685);
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(900849);
 function i(e, t, n) {
     return (
@@ -15,12 +15,12 @@ function i(e, t, n) {
 }
 class l {
     markAsSeen(e, t, n) {
-        this.categoryId !== e && ((this.categoryId = e), this.flushSeenGuilds(n)), this.guildIds.add(t);
+        (this.categoryId !== e && ((this.categoryId = e), this.flushSeenGuilds(n)), this.guildIds.add(t));
     }
     flushSeenGuilds(e) {
         this.guildIds.size > 0 && (r.Az(e, Array.from(this.guildIds)), this.guildIds.clear());
     }
     constructor(e) {
-        i(this, 'guildIds', new Set()), i(this, 'categoryId', void 0), (this.categoryId = e);
+        (i(this, 'guildIds', new Set()), i(this, 'categoryId', void 0), (this.categoryId = e));
     }
 }

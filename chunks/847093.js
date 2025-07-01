@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(539854);
+(n.d(t, { Z: () => M }), n(388685), n(539854));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -26,7 +26,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -42,8 +42,8 @@ function w(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -240,7 +240,7 @@ function M(e) {
     }, [M, L, D, F]);
     let W = (0, s.useCallback)(() => {
             var e, t, n;
-            o &&
+            (o &&
                 (c.push({
                     text: null != (e = (0, a.sample)(I())) ? e : '',
                     variation: 50 * Math.random()
@@ -264,11 +264,11 @@ function M(e) {
                           }),
                     t)
                 ),
-                (0, m.KH)(j.yN.CLICKER_BUTTON, R);
+                (0, m.KH)(j.yN.CLICKER_BUTTON, R));
         }, [c, o, U, R, B]),
         G = (0, s.useCallback)(
             (e) => {
-                delete B[e], T(w({}, B));
+                (delete B[e], T(w({}, B)));
             },
             [B]
         );
@@ -277,7 +277,7 @@ function M(e) {
             let e = null;
             if (c.length > 0) {
                 let e = setTimeout(() => {
-                    c.splice(0, 1), d([...c]);
+                    (c.splice(0, 1), d([...c]));
                 }, 1000);
                 p.current.push(e);
             }

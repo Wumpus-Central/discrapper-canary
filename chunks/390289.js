@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685), n(997841);
+(n.d(t, { Z: () => R }), n(388685), n(997841));
 var r,
     i = n(442837),
     l = n(570140),
@@ -55,20 +55,20 @@ let y = [
     j = new Set(),
     O = null,
     E = 0,
-    I = 0;
-function S() {
+    S = 0;
+function I() {
     if (null == O || !N(O)) return !1;
     let e = Z(O);
     if (e.lastActionTime > Date.now() - d.Z.Millis.DAY && e.viewDuration > C) return !1;
     let t = Date.now();
-    (e.lastActionTime = t), (e.viewDuration += t - E), (E = t);
+    ((e.lastActionTime = t), (e.viewDuration += t - E), (E = t));
 }
 function P() {
     return (
-        0 !== I && (clearInterval(I), (I = 0)),
+        0 !== S && (clearInterval(S), (S = 0)),
         u.ZP.useNewNotifications &&
-            (I = setInterval(() => {
-                S() && w.emitChange();
+            (S = setInterval(() => {
+                I() && w.emitChange();
             }, 15 * d.Z.Millis.SECOND)),
         !1
     );
@@ -98,7 +98,7 @@ function T(e, t) {
 }
 class A extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, a.Z);
+        (null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, a.Z));
     }
     getState() {
         return v;
@@ -127,14 +127,14 @@ class A extends (r = i.ZP.PersistedStore) {
         );
     }
 }
-_(A, 'displayName', 'UnreadSettingNoticeStore2'), _(A, 'persistKey', 'UnreadSettingNoticeStore2');
+(_(A, 'displayName', 'UnreadSettingNoticeStore2'), _(A, 'persistKey', 'UnreadSettingNoticeStore2'));
 let w = new A(l.Z, {
         CHANNEL_SELECT: function () {
-            let e = S();
-            return (O = c.Z.getChannelId()), (E = Date.now()), e;
+            let e = I();
+            return ((O = c.Z.getChannelId()), (E = Date.now()), e);
         },
         CONNECTION_OPEN: function () {
-            (O = c.Z.getChannelId()), (E = Date.now()), P();
+            ((O = c.Z.getChannelId()), (E = Date.now()), P());
             let e = Date.now() - x;
             h.default.forEach(v.channels, (t, n) => {
                 let { lastActionTime: r } = t;
@@ -145,7 +145,7 @@ let w = new A(l.Z, {
             var t;
             if (e.optimistic || e.isPushNotification || (null == (t = e.message.author) ? void 0 : t.id) !== o.default.getId() || !N(e.channelId)) return !1;
             let n = Z(e.channelId);
-            (n.lastActionTime = Date.now()), n.numSends++;
+            ((n.lastActionTime = Date.now()), n.numSends++);
         }
     }),
     R = w;

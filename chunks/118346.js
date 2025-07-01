@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     B: () => m,
     b: () => d
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -30,7 +30,7 @@ function u() {
         if (!e) {
             t(!0);
             try {
-                await o.Z.verifyResend(), s(!0), d(!0);
+                (await o.Z.verifyResend(), s(!0), d(!0));
             } catch (e) {
             } finally {
                 t(!1);
@@ -68,7 +68,7 @@ function d() {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -76,7 +76,7 @@ function d() {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -84,8 +84,8 @@ function d() {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)),

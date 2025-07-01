@@ -21,10 +21,10 @@ function c(e, t, n) {
 let u = Object.freeze([]),
     d = {};
 function f(e) {
-    (d = {}),
+    ((d = {}),
         e.sessions.forEach((e) => {
             d[e.sessionId] = e;
-        });
+        }));
 }
 class _ extends (r = o.ZP.Store) {
     initialize() {

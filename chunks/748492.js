@@ -56,13 +56,13 @@ function k(e) {
         F = (0, m.Z)(a),
         { parentAnalyticsLocation: Z } = (0, u.ZP)(),
         H = (e) => {
-            (0, _.v)(Z, _.d.CAMERA, e), l.Z.setVideoEnabled(e);
+            ((0, _.v)(Z, _.d.CAMERA, e), l.Z.setVideoEnabled(e));
         },
         Y = () => {
             B ? H(!0) : (0, g.Z)();
         },
         W = () => {
-            (0, _.v)(Z, _.d.POPOUT, !0), null != a && (0, C.Z)({ onConfirm: () => h.hP(a) });
+            ((0, _.v)(Z, _.d.POPOUT, !0), null != a && (0, C.Z)({ onConfirm: () => h.hP(a) }));
         };
     return (0, r.jsxs)('div', {
         className: L.videoControls,

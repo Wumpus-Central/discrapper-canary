@@ -4,32 +4,32 @@ n.d(t, {
     mc: () => u,
     so: () => s
 });
-var i = n(255367);
+var r = n(255367);
 n(73800);
-var r = n(481060),
+var i = n(481060),
     l = n(822869);
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -41,8 +41,8 @@ function o(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -54,12 +54,12 @@ function o(e, t) {
 let s = 'forward-modal';
 function c(e) {
     let { message: t, source: c, initialSelectedDestinations: u = [], forwardOptions: d, onRequestSent: f } = e;
-    (0, l.Lb)(t.channel_id, t.id, c),
-        (0, r.ZDy)(
+    ((0, l.Lb)(t.channel_id, t.id, c),
+        (0, i.ZDy)(
             async () => {
                 let { ForwardModal: e } = await Promise.all([n.e('25292'), n.e('6380'), n.e('16967')]).then(n.bind(n, 930864));
                 return (n) =>
-                    (0, i.jsx)(
+                    (0, r.jsx)(
                         e,
                         o(a({}, n), {
                             message: t,
@@ -70,17 +70,17 @@ function c(e) {
                     );
             },
             { modalKey: s }
-        );
+        ));
 }
 function u() {
-    (0, r.Mr3)(s);
+    (0, i.Mr3)(s);
 }
 function d(e) {
     let { message: t, failedDestinations: l, forwardOptions: s } = e;
-    (0, r.ZDy)(async () => {
+    (0, i.ZDy)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e('86590').then(n.bind(n, 384331));
         return (n) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 e,
                 o(a({}, n), {
                     message: t,

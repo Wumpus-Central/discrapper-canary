@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(846519),
     i = n(570140),
     l = n(287734),
@@ -18,7 +18,7 @@ class b extends a.Z {
         i.Z.subscribe('IDLE', this.handleIdleUpdate);
     }
     _terminate() {
-        g.stop(), m.stop(), i.Z.unsubscribe('IDLE', this.handleIdleUpdate);
+        (g.stop(), m.stop(), i.Z.unsubscribe('IDLE', this.handleIdleUpdate));
     }
     handleIdleUpdate() {
         let e = u.Z.getIdleSince();

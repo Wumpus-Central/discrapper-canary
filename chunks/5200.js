@@ -1,4 +1,4 @@
-n.d(t, { Y: () => C }), n(388685);
+(n.d(t, { Y: () => C }), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -37,13 +37,13 @@ function C(e) {
             assetNames: b,
             commandOrigin: x
         }),
-        [I, S] = l.useState(!1),
+        [S, I] = l.useState(!1),
         P = l.useCallback(() => {
-            S(!0);
-        }, [S]),
+            I(!0);
+        }, [I]),
         Z = l.useCallback(() => {
-            S(!1);
-        }, [S]),
+            I(!1);
+        }, [I]),
         N = l.useMemo(
             () =>
                 (0, i.jsx)('div', {
@@ -99,7 +99,7 @@ function C(e) {
         children: (0, i.jsx)(c.AMe, {
             config: _,
             from: { value: 0 },
-            to: { value: +!!I },
+            to: { value: +!!S },
             children: (e) => {
                 let { value: t } = e;
                 return (0, i.jsx)(c.f6W, {

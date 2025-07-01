@@ -18,6 +18,6 @@ class a extends r.Z {
         return new a(e);
     }
     constructor(e) {
-        super(), i(this, 'id', void 0), i(this, 'name', void 0), (this.id = e.id), (this.name = e.name);
+        (super(), i(this, 'id', void 0), i(this, 'name', void 0), (this.id = e.id), (this.name = e.name));
     }
 }

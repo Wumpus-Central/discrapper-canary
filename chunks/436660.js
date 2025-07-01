@@ -1,4 +1,4 @@
-n.d(t, { Q: () => c }), n(784620), n(973216), n(583741), n(388685), n(35282);
+(n.d(t, { Q: () => c }), n(784620), n(973216), n(583741), n(388685), n(35282));
 var r = n(327432),
     i = n(91313),
     a = n(887490),
@@ -20,11 +20,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -43,7 +43,7 @@ let c = (function (e, t) {
         for (var t = 1; t < arguments.length; t++) {
             var n = null != arguments[t] ? arguments[t] : {},
                 r = Object.keys(n);
-            'function' == typeof Object.getOwnPropertySymbols &&
+            ('function' == typeof Object.getOwnPropertySymbols &&
                 (r = r.concat(
                     Object.getOwnPropertySymbols(n).filter(function (e) {
                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ let c = (function (e, t) {
                 )),
                 r.forEach(function (t) {
                     s(e, t, n[t]);
-                });
+                }));
         }
         return e;
     })({}, r.YR),
@@ -107,7 +107,7 @@ let c = (function (e, t) {
             }
             if (null != c) {
                 let [e, t] = a.M8.edges(c);
-                a.Jz.isBefore(d, e) && (d = e), a.Jz.isAfter(f, t) && (f = t);
+                (a.Jz.isBefore(d, e) && (d = e), a.Jz.isAfter(f, t) && (f = t));
             }
             !a.Jz.equals(d, f) &&
                 (r.YR.delete(e, {
@@ -126,7 +126,7 @@ let c = (function (e, t) {
                 [s, l] = a.M8.edges(n),
                 c = null != (i = a.bN.before(e, s)) ? i : a.bN.start(e, []),
                 u = a.bN.after(e, l);
-            a.M8.isExpanded(n) &&
+            (a.M8.isExpanded(n) &&
                 r.YR.delete(e, {
                     at: n,
                     voids: !0
@@ -134,7 +134,7 @@ let c = (function (e, t) {
                 r.YR.insertText(e, t, { at: c }),
                 (c = null != c ? c : a.bN.start(e, [])),
                 (u = null != u ? u : a.bN.end(e, [])),
-                d(e, o, c, u, u);
+                d(e, o, c, u, u));
         },
         textToVoid(e, t, n) {
             let i = a.bN.getSelectionOverlap(e, n),
@@ -144,14 +144,14 @@ let c = (function (e, t) {
                     path: a.C0.next(s),
                     offset: 0
                 };
-            r.YR.delete(e, {
+            (r.YR.delete(e, {
                 at: n,
                 voids: !0
             }),
                 0 === o.offset && r.YR.insertNodes(e, [{ text: '' }], { at: o.path }),
                 r.YR.insertNodes(e, [t], { at: o }),
                 (a.bN.hasPath(e, l.path) && a.LC.isText(a.bN.node(e, l.path)[0])) || r.YR.insertNodes(e, [{ text: '' }], { at: l.path }),
-                d(e, i, o, l, l);
+                d(e, i, o, l, l));
         },
         textToInline(e, t, n) {
             let i = a.bN.getSelectionOverlap(e, n),
@@ -162,13 +162,13 @@ let c = (function (e, t) {
                     path: a.C0.child(l, t.children.length - 1),
                     offset: a.LC.isText(o) ? o.text.length : 0
                 };
-            r.YR.delete(e, {
+            (r.YR.delete(e, {
                 at: n,
                 voids: !0
             }),
                 0 === s.offset && r.YR.insertNodes(e, [{ text: '' }], { at: s.path }),
                 r.YR.insertNodes(e, [t], { at: s }),
-                d(e, i, s, c, c);
+                d(e, i, s, c, c));
         },
         voidToText(e, t, n) {
             var i;
@@ -178,22 +178,22 @@ let c = (function (e, t) {
                     path: s.path,
                     offset: s.offset + t.length
                 };
-            r.YR.delete(e, {
+            (r.YR.delete(e, {
                 at: n,
                 voids: !0
             }),
                 r.YR.insertText(e, t, { at: s }),
-                d(e, o, s, s, l);
+                d(e, o, s, s, l));
         },
         removeInline(e, t) {
             var n;
             let i = a.bN.getSelectionOverlap(e, t),
                 o = null != (n = a.bN.before(e, t)) ? n : a.bN.start(e, []);
-            r.YR.delete(e, {
+            (r.YR.delete(e, {
                 at: t,
                 voids: !0
             }),
-                d(e, i, o, o, o);
+                d(e, i, o, o, o));
         },
         removeInlineChildren(e, t) {
             let [n, i] = t,
@@ -202,14 +202,14 @@ let c = (function (e, t) {
                     path: a.C0.child(i, 0),
                     offset: 0
                 };
-            a.bN.withoutNormalizing(e, () => {
+            (a.bN.withoutNormalizing(e, () => {
                 for (let t = n.children.length - 1; t >= 0; t--)
                     r.YR.removeNodes(e, {
                         at: a.C0.child(i, t),
                         voids: !0
                     });
             }),
-                d(e, o, null, s, null);
+                d(e, o, null, s, null));
         },
         selectCommandOption(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -241,7 +241,7 @@ let c = (function (e, t) {
             null != s ? r.YR.select(e, s[1]) : c.resetSelectionToEditorEnd(e);
         },
         insertCommandOption(e, t) {
-            c.resetSelectionToEditorEnd(e),
+            (c.resetSelectionToEditorEnd(e),
                 c.insertNodes(e, [
                     {
                         type: 'applicationCommandOption',
@@ -250,7 +250,7 @@ let c = (function (e, t) {
                         optionType: t.type,
                         children: [{ text: '' }]
                     }
-                ]);
+                ]));
         },
         keyboardMove(e, t) {
             let { reverse: n = !1, unit: i = 'character', edge: o } = null != t ? t : {},

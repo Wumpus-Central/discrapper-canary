@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(846519),
     i = n(904245),
     a = n(287734),
@@ -36,7 +36,7 @@ function m() {
 }
 class g extends o.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'idleTimeout', new r.V7()),
             f(this, 'handleConnectionClosed', () => {
                 this.idleTimeout.stop();
@@ -52,7 +52,7 @@ class g extends o.Z {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
                 CONNECTION_CLOSED: this.handleConnectionClosed,
                 EMBEDDED_ACTIVITY_CLOSE: this.handleEmbeddedActivityDisconnect
-            });
+            }));
     }
 }
 let E = new g();

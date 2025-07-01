@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(539854), n(472816), n(794429);
+(n.d(t, { Z: () => G }), n(539854), n(472816), n(794429));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -28,7 +28,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -71,7 +71,7 @@ function I() {
     v = !0;
 }
 function T() {
-    (v = !1), (b = {});
+    ((v = !1), (b = {}));
 }
 function S(e, t, n) {
     let r = !1,
@@ -79,7 +79,7 @@ function S(e, t, n) {
     for (let t = 0; t < e.options.length; t++) {
         let a = e.options[t],
             o = null == n[a.id];
-        o && (r = !0), i.push(E(m({}, a), { isUnseen: o }));
+        (o && (r = !0), i.push(E(m({}, a), { isUnseen: o })));
     }
     return E(m({}, e), {
         options: i,
@@ -95,7 +95,7 @@ function N(e) {
     v = !1;
     let u = _.ZP.getOnboardingStatus(t) === _.uX.READY,
         d = A(n, o, s);
-    (b[t] = {
+    ((b[t] = {
         enabled: i,
         mode: l,
         belowRequirements: c,
@@ -107,7 +107,7 @@ function N(e) {
         onboardingResponsesSeen: s
     }),
         u || w(t, a),
-        (O[t] = Date.now());
+        (O[t] = Date.now()));
 }
 function C() {
     v = !1;
@@ -127,15 +127,15 @@ function P(e) {
 function w(e, t) {
     if (null == y[e]) return;
     let n = {};
-    Object.keys(y[e]).forEach((r) => {
+    (Object.keys(y[e]).forEach((r) => {
         !t.includes(r) && y[e][r] ? (n[r] = !0) : t.includes(r) && !1 === y[e][r] && (n[r] = !1);
     }),
-        (y[e] = n);
+        (y[e] = n));
     let r = t.filter((e) => null == n[e] || !0 === n[e]);
-    Object.keys(n).forEach((e) => {
+    (Object.keys(n).forEach((e) => {
         !0 !== n[e] || t.includes(e) || r.push(e);
     }),
-        (b[e] = E(m({}, b[e]), { responses: r }));
+        (b[e] = E(m({}, b[e]), { responses: r })));
 }
 function D(e) {
     let { guildId: t, options: n, prompts_seen: r, options_seen: i } = e;
@@ -232,10 +232,10 @@ class U extends (r = o.ZP.Store) {
             n = '0';
         return (
             t.forEach((e) => {
-                e.options.forEach((e) => {
+                (e.options.forEach((e) => {
                     d.default.compare(e.id, n) > 0 && (n = e.id);
                 }),
-                    d.default.compare(e.id, n) > 0 && (n = e.id);
+                    d.default.compare(e.id, n) > 0 && (n = e.id));
             }),
             n
         );

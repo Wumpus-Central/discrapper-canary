@@ -19,7 +19,7 @@ function l(e) {
         l = Math.ceil(e / n);
     if (l < i) return t.useSpace ? r.intl.formatToPlainString(r.t.cS889P, { size: l }) : r.intl.formatToPlainString(r.t.pIn7AQ, { size: l });
     let c = l / i;
-    return (c = t.showDecimalForGB ? Math.round(10 * c) / 10 : Math.round(c)), t.useSpace ? r.intl.formatToPlainString(r.t.yhEXX1, { size: c }) : r.intl.formatToPlainString(r.t.TbMX9P, { size: c });
+    return ((c = t.showDecimalForGB ? Math.round(10 * c) / 10 : Math.round(c)), t.useSpace ? r.intl.formatToPlainString(r.t.yhEXX1, { size: c }) : r.intl.formatToPlainString(r.t.TbMX9P, { size: c }));
 }
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s,

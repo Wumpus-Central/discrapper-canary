@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     S: () => _,
     Z: () => A
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(442837),
     a = n(846519),
@@ -26,7 +26,7 @@ function d(e, t, n) {
 }
 let f = 100;
 var _ = (function (e) {
-    return (e[(e.SendMessage = 0)] = 'SendMessage'), (e[(e.CreateThread = 1)] = 'CreateThread'), e;
+    return ((e[(e.SendMessage = 0)] = 'SendMessage'), (e[(e.CreateThread = 1)] = 'CreateThread'), e);
 })({});
 let p = {
     0: {},
@@ -35,7 +35,7 @@ let p = {
 function h(e, t, n) {
     if ((m(e, t), E(e, t) || n <= 0)) return;
     let r = n + Date.now();
-    (p[t][e.id] = {
+    ((p[t][e.id] = {
         rateLimitPerUser: e.rateLimitPerUser,
         cooldownMs: n,
         cooldownEndTimestamp: r,
@@ -52,7 +52,7 @@ function h(e, t, n) {
                 });
             },
             !0
-        );
+        ));
 }
 function m(e, t) {
     null != p[t][e.id] && (p[t][e.id].timer.stop(), delete p[t][e.id]);
@@ -97,7 +97,7 @@ function I(e) {
 }
 function T() {
     [0, 1].forEach((e) => {
-        Object.keys(p[e]).forEach((t) => p[e][t].timer.stop()), (p[e] = {});
+        (Object.keys(p[e]).forEach((t) => p[e][t].timer.stop()), (p[e] = {}));
     });
 }
 class S extends (r = i.ZP.Store) {

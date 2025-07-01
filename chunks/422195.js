@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+(n.d(t, { Z: () => V }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -39,7 +39,7 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -55,11 +55,11 @@ function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -195,14 +195,14 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                                         [S.firstPartyCategorySelected]: !m && x && U
                                                     }),
                                                     onClick: () => {
-                                                        k.type === b.Ih.PACK &&
+                                                        (k.type === b.Ih.PACK &&
                                                             h.default.track(v.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                                                                 location: null == _ ? void 0 : _.location,
                                                                 tab: I.X1.STICKER,
                                                                 sticker_pack_id: k.id,
                                                                 guild_id: f
                                                             }),
-                                                            s();
+                                                            s());
                                                     },
                                                     children: B
                                                 })
@@ -279,7 +279,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             I = i.useCallback(
                 (e) => {
                     var t;
-                    e(p), null == (t = a.current) || t.scrollTo(h);
+                    (e(p), null == (t = a.current) || t.scrollTo(h));
                 },
                 [p, h]
             );

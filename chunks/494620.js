@@ -9,7 +9,7 @@ var i = n(120356),
     o = n(481060),
     s = n(317812),
     l = (function (e) {
-        return (e.INFO = 'info'), (e.WARNING = 'warning'), e;
+        return ((e.INFO = 'info'), (e.WARNING = 'warning'), e);
     })({});
 let c = {
         info: s.info,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(35282);
+(n.d(t, { Z: () => M }), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -47,7 +47,7 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ function k(e) {
             )),
             r.forEach(function (t) {
                 x(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -107,7 +107,7 @@ function M(e) {
                                         (0, r.jsx)(s.P3F, {
                                             className: o()(L.clickableText, L.inline),
                                             onClick: (e) => {
-                                                e.stopPropagation(), X({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(x, n.id, t);
+                                                (e.stopPropagation(), X({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(x, n.id, t));
                                             },
                                             children: e
                                         }),
@@ -195,7 +195,7 @@ function M(e) {
                                                 size: F === D.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                                 className: L.clickableImage,
                                                 onClick: (e) => {
-                                                    e.stopPropagation(), X({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(x, n.id);
+                                                    (e.stopPropagation(), X({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(x, n.id));
                                                 }
                                             }),
                                             (0, r.jsxs)('div', {
@@ -207,7 +207,7 @@ function M(e) {
                                                                 variant: 'heading-sm/semibold',
                                                                 text: x.details,
                                                                 onClick: () => {
-                                                                    X({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(x);
+                                                                    (X({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(x));
                                                                 },
                                                                 id: G
                                                             }),

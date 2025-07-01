@@ -6,22 +6,22 @@ function o(e) {
     r = e;
 }
 function s() {
-    return a(), r.supported();
+    return (a(), r.supported());
 }
 function l(e) {
-    return a(), r.supportsFeature(e);
+    return (a(), r.supportsFeature(e));
 }
 function c(e) {
-    a(), r.setProcessPriority(e);
+    (a(), r.setProcessPriority(e));
 }
 function u() {
-    return a(), null != i ? i : (i = r.getVoiceEngine());
+    return (a(), null != i ? i : (i = r.getVoiceEngine()));
 }
-n.d(t, {
+(n.d(t, {
     Zh: () => s,
     eJ: () => l,
     f3: () => o,
     p8: () => c,
     zS: () => u
 }),
-    n(415506);
+    n(415506));

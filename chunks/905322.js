@@ -12,7 +12,7 @@ function o(e) {
         p = i.useMemo(() => {
             if (null == u) return;
             let e = { '--custom-background-static': 'url('.concat(u.toString()) };
-            return c || null == a || (e['--custom-background-animated'] = 'url('.concat(a.toString(), ')')), e;
+            return (c || null == a || (e['--custom-background-animated'] = 'url('.concat(a.toString(), ')')), e);
         }, [a, u, c]);
     return (0, r.jsxs)('div', {
         className: s.wrapper,

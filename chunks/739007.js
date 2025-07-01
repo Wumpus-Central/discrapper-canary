@@ -27,7 +27,7 @@ let u = (e) => ''.concat(e.toFixed(0), '%'),
             []
         );
         let E = (e) => {
-            f(e), g.current();
+            (f(e), g.current());
         };
         return (0, r.jsx)('div', {
             className: c.sliderContainer,

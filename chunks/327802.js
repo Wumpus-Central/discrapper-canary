@@ -1,8 +1,8 @@
-r.d(e, {
+(r.d(e, {
     X: () => c,
     Z: () => u
 }),
-    r(415506);
+    r(415506));
 var n = r(255367);
 r(73800);
 var i = r(481060),
@@ -40,7 +40,7 @@ let c = (t) => {
                                     for (var e = 1; e < arguments.length; e++) {
                                         var r = null != arguments[e] ? arguments[e] : {},
                                             n = Object.keys(r);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (n = n.concat(
                                                 Object.getOwnPropertySymbols(r).filter(function (t) {
                                                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -48,7 +48,7 @@ let c = (t) => {
                                             )),
                                             n.forEach(function (e) {
                                                 var n;
-                                                (n = r[e]),
+                                                ((n = r[e]),
                                                     e in t
                                                         ? Object.defineProperty(t, e, {
                                                               value: n,
@@ -56,8 +56,8 @@ let c = (t) => {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (t[e] = n);
-                                            });
+                                                        : (t[e] = n));
+                                            }));
                                     }
                                     return t;
                                 })({ processFiles: () => f(e) }, r)

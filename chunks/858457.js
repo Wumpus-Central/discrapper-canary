@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     Z: () => h,
     r: () => m
 }),
     n(388685),
     n(953529),
-    n(539854);
+    n(539854));
 var r = n(73800),
     i = n(392711),
     l = n(881052),
@@ -14,7 +14,7 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ function o(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -30,8 +30,8 @@ function o(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -74,7 +74,7 @@ let m = '_errors',
 async function p(e, t) {
     if (null == e.triggerMetadata.regexPatterns || 0 === e.triggerMetadata.regexPatterns.length) return void t([]);
     try {
-        await (0, s.qY)(e), t([]);
+        (await (0, s.qY)(e), t([]));
     } catch (i) {
         var n;
         let e = new l.Hx(i).errors;
@@ -97,12 +97,12 @@ async function p(e, t) {
                                               r,
                                               i = {},
                                               l = Object.keys(e);
-                                          for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                          for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                                           return i;
                                       })(e, t);
                                   if (Object.getOwnPropertySymbols) {
                                       var l = Object.getOwnPropertySymbols(e);
-                                      for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                      for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                                   }
                                   return i;
                               })(e, [m].map(d))
@@ -166,7 +166,7 @@ function h(e, t) {
                 (0, i.isEqual)(n, r) ||
                     (f.cancel(),
                     p(c(o({}, e), { triggerMetadata: c(o({}, e.triggerMetadata), { regexPatterns: n }) }), (e) => {
-                        a(e), 0 === e.length && u(null);
+                        (a(e), 0 === e.length && u(null));
                     }),
                     g(n),
                     null == t || t(n));

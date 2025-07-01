@@ -28,10 +28,10 @@ function m(e) {
             muted: C,
             maxValue: p.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                e > 0 && C && a.Z.toggleLocalMute(m, g), a.Z.setLocalVolume(m, (0, d.A)(e), g);
+                (e > 0 && C && a.Z.toggleLocalMute(m, g), a.Z.setLocalVolume(m, (0, d.A)(e), g));
             },
             onToggleMute: () => {
-                null != _ && (0, s.v)(_, s.d.VOLUME, C), a.Z.toggleLocalMute(m, g);
+                (null != _ && (0, s.v)(_, s.d.VOLUME, C), a.Z.toggleLocalMute(m, g));
             }
         })
     });

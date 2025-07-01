@@ -1,4 +1,4 @@
-s.d(e, { default: () => f }), s(953529), s(388685);
+(s.d(e, { default: () => f }), s(953529), s(388685));
 var n = s(255367),
     i = s(73800),
     a = s(442837),
@@ -142,12 +142,12 @@ class x extends i.Component {
         });
     }
     constructor(...t) {
-        super(...t),
+        (super(...t),
             m(this, 'state', { step: 0 }),
             m(this, 'close', async () => {
                 let { step: t } = this.state,
                     { onClose: e, pendingPayment: s } = this.props;
-                0 === t && (await (0, r.UY)(s.id)), e();
+                (0 === t && (await (0, r.UY)(s.id)), e());
             }),
             m(this, 'cancelPayment', async () => {
                 let { pendingPayment: t } = this.props;
@@ -162,7 +162,7 @@ class x extends i.Component {
                 let { pendingPayment: t } = this.props,
                     { error: e } = await (0, h.oe)(t.id);
                 null != e ? this.setState({ step: 1 }) : this.setState({ step: 2 });
-            });
+            }));
     }
 }
 let f = a.ZP.connectStores([o.Z], () => ({ disableAuthentication: o.Z.isAwaitingAuthentication }))(x);

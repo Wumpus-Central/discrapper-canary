@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(457542);
+(n.d(t, { Z: () => O }), n(388685), n(457542));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -116,7 +116,7 @@ function C(e) {
         [p, h] = r.useState(t.metadataVisibility),
         f = (0, c.ZP)();
     r.useEffect(() => {
-        g(t.visibility), h(t.metadataVisibility);
+        (g(t.visibility), h(t.metadataVisibility));
     }, [t]);
     let b = d.Z.get(t.type),
         _ = !0 === b.hasMetadata;
@@ -141,14 +141,14 @@ function C(e) {
                                     let { verified: n } = t,
                                         i = +!!e;
                                     if (e && !n) {
-                                        g(i),
+                                        (g(i),
                                             (0, m.Z)({
                                                 platformType: t.type,
                                                 location: 'User Settings'
-                                            });
+                                            }));
                                         return;
                                     }
-                                    g(i), o.Z.setVisibility(t.type, t.id, i);
+                                    (g(i), o.Z.setVisibility(t.type, t.id, i));
                                 },
                                 children: [
                                     (0, i.jsx)(a.Text, {
@@ -174,14 +174,14 @@ function C(e) {
                                         let { verified: n } = t,
                                             i = +!!e;
                                         if (e && !n) {
-                                            h(i),
+                                            (h(i),
                                                 (0, m.Z)({
                                                     platformType: t.type,
                                                     location: 'User Settings'
-                                                });
+                                                }));
                                             return;
                                         }
-                                        h(i), o.Z.setMetadataVisibility(t.type, t.id, i);
+                                        (h(i), o.Z.setMetadataVisibility(t.type, t.id, i));
                                     },
                                     children: (0, i.jsx)(a.Text, {
                                         variant: 'text-md/normal',

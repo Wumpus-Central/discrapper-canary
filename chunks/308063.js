@@ -7,7 +7,7 @@ var r = n(392711),
 let l = ['Spidey Bot', 'Captain Hook'],
     c = {
         fetchForGuild(e) {
-            o.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'WEBHOOKS_FETCHING',
                 guildId: e
             }),
@@ -32,10 +32,10 @@ let l = ['Spidey Bot', 'Captain Hook'],
                             guildId: e,
                             error: n.message
                         });
-                    });
+                    }));
         },
         fetchForChannel(e, t) {
-            o.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'WEBHOOKS_FETCHING',
                 guildId: e,
                 channelId: t
@@ -62,7 +62,7 @@ let l = ['Spidey Bot', 'Captain Hook'],
                             guildId: e,
                             error: n.message
                         });
-                    });
+                    }));
         },
         create: (e, t, n) => (
             null == n && (n = l[i().random(0, l.length - 1)]),

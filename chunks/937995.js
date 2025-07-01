@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => u,
     h9: () => c,
     nM: () => l
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(846519);
@@ -24,7 +24,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -54,7 +54,7 @@ function u(e) {
             f.current.delay(),
             () => {
                 var e;
-                null == (e = f.current) || e.cancel(), (f.current = null);
+                (null == (e = f.current) || e.cancel(), (f.current = null));
             }
         ),
         [n]
@@ -62,7 +62,7 @@ function u(e) {
     let _ = i.useCallback(
             (e) => {
                 var t;
-                u(!1), d.current.add(e), null == (t = f.current) || t.cancel();
+                (u(!1), d.current.add(e), null == (t = f.current) || t.cancel());
             },
             [d, f, u]
         ),

@@ -1,4 +1,4 @@
-n.d(t, { default: () => c }), n(388685);
+(n.d(t, { default: () => c }), n(388685));
 var s = n(255367),
     l = n(73800),
     i = n(481060),
@@ -12,9 +12,9 @@ function c(e) {
         [m, g] = l.useState(void 0),
         k = l.useRef(null);
     async function p(e) {
-        e.preventDefault(), u(!0);
+        (e.preventDefault(), u(!0));
         try {
-            await (0, a.WQ)(c.id, h), n();
+            (await (0, a.WQ)(c.id, h), n());
         } catch (e) {
             g(e.message);
         } finally {

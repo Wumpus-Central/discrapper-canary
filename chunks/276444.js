@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685);
+(n.d(t, { Z: () => H }), n(388685));
 var r,
     i = n(275726),
     a = n(442837),
@@ -35,28 +35,28 @@ let d = 5,
     T = !1,
     S = null;
 function A() {
-    (f = null), (_ = new Set()), (h = !1), (m = new Set()), (g = new Set()), (E = new Map()), (b = 0), (y = null), (O = []), (v = !1), (I = 0), (T = !1), (S = null), (p = new Map());
+    ((f = null), (_ = new Set()), (h = !1), (m = new Set()), (g = new Set()), (E = new Map()), (b = 0), (y = null), (O = []), (v = !1), (I = 0), (T = !1), (S = null), (p = new Map()));
 }
 let N = () => !0;
 function C(e) {
     let {} = e;
-    (S = null), (h = !0);
+    ((S = null), (h = !0));
 }
 function R(e) {
     let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
-    (T = null == r && a), (h = !1), (f = t), (_ = new Set(n)), (S = r), (p = i);
+    ((T = null == r && a), (h = !1), (f = t), (_ = new Set(n)), (S = r), (p = i));
 }
 function P(e) {
     let {} = e;
-    (T = !1), (S = null), (h = !1), (b += 1), (y = Date.now() + 1000 * Math.pow(2, b));
+    ((T = !1), (S = null), (h = !1), (b += 1), (y = Date.now() + 1000 * Math.pow(2, b)));
 }
 function w(e) {
     let { userTrialOffer: t } = e;
-    (0, l.C$)(), E.set(t.id, t), _.add(t.user_id);
+    ((0, l.C$)(), E.set(t.id, t), _.add(t.user_id));
 }
 function D(e) {
     let { userTrialOffers: t } = e;
-    for (let e of ((0, l.C$)(), t)) E.set(e.id, e), _.add(e.user_id);
+    for (let e of ((0, l.C$)(), t)) (E.set(e.id, e), _.add(e.user_id));
 }
 function L(e) {
     m.add(e);
@@ -67,7 +67,7 @@ function x(e) {
 }
 function k(e) {
     let { userTrialOfferId: t } = e;
-    m.delete(t), g.add(t);
+    (m.delete(t), g.add(t));
 }
 function M(e) {
     let { message: t } = e;
@@ -79,7 +79,7 @@ function j(e) {
 }
 function U(e) {
     let { userTrialOfferId: t } = e;
-    h || (0, l.C$)(), m.has(t) || (L(t), o.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
+    (h || (0, l.C$)(), m.has(t) || (L(t), o.Z.wait(() => (0, l.IB)(t).catch(c.VqG))));
 }
 function G(e) {
     let t = e.type === i.u.PREMIUM_REFERRAL ? e.content : null;
@@ -91,23 +91,23 @@ function B() {
 }
 function V(e) {
     let { users: t, nextIndex: n } = e;
-    (v = !1), (O = t), (I = n);
+    ((v = !1), (O = t), (I = n));
 }
 function F() {
     v = !1;
 }
 class Z extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], N);
+        (this.waitFor(s.default), this.syncWith([s.default], N));
     }
     checkAndFetchReferralsRemaining() {
         null == f && !h && b < d && (null == y || y < Date.now()) && (0, l.C$)();
     }
     getReferralsRemaining() {
-        return this.checkAndFetchReferralsRemaining(), f;
+        return (this.checkAndFetchReferralsRemaining(), f);
     }
     getSentUserIds() {
-        return this.checkAndFetchReferralsRemaining(), Array.from(_.values());
+        return (this.checkAndFetchReferralsRemaining(), Array.from(_.values()));
     }
     isFetchingReferralsRemaining() {
         return h;

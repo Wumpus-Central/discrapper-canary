@@ -1,4 +1,4 @@
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.default = {
         scheme: 'shapeshifter',
         author: 'tyler benziger (http://tybenz.com)',
@@ -19,4 +19,4 @@
         base0E: '#f996e2',
         base0F: '#69542d'
     }),
-    (e.exports = t.default);
+    (e.exports = t.default));

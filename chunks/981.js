@@ -95,7 +95,7 @@ b.a(_, async function (_, a) {
         var c = b(842321),
             d = b(970711),
             n = _([c]);
-        (c = (n.then ? (await n)() : n)[0]), (0, d.oT)(c), c.__wbindgen_start(), a();
+        ((c = (n.then ? (await n)() : n)[0]), (0, d.oT)(c), c.__wbindgen_start(), a());
     } catch (_) {
         a(_);
     }

@@ -1,4 +1,4 @@
-n.d(t, { Q: () => E }), n(35282);
+(n.d(t, { Q: () => E }), n(35282));
 var r = n(264344),
     i = n.n(r),
     a = n(259443),
@@ -29,7 +29,7 @@ function m(e) {
 }
 class g extends s.Z {
     destroy() {
-        super.destroy(), this.pc.close();
+        (super.destroy(), this.pc.close());
     }
     setCodecs(e, t, n) {
         var r, i, a;
@@ -37,7 +37,7 @@ class g extends s.Z {
         (this.fpc.audioCodec !== e || this.fpc.videoCodec !== t) && ((o = this.codecs.find((t) => t.name === e)), (this.fpc.audioCodec = e), (this.fpc.audioPayloadType = null != (r = null == o ? void 0 : o.payloadType) ? r : 0), (o = this.codecs.find((e) => e.name === t)), (this.fpc.videoCodec = t), (this.fpc.videoPayloadType = null != (i = null == o ? void 0 : o.payloadType) ? i : 0), (this.fpc.rtxPayloadType = null != (a = null == o ? void 0 : o.rtxPayloadType) ? a : 0), this.pc.negotiationNeeded());
     }
     setStream(e) {
-        (this.fpc.direction = null != e ? d.Ns.SENDRECV : d.Ns.SENDONLY), this.pc.setStream(null != e ? e : null);
+        ((this.fpc.direction = null != e ? d.Ns.SENDRECV : d.Ns.SENDONLY), this.pc.setStream(null != e ? e : null));
     }
     createUser(e, t, n) {
         var r;
@@ -58,7 +58,7 @@ class g extends s.Z {
         this.voiceBitrate !== e && (super.setBitRate(e), this.pc.setBitRate(e));
     }
     setSDP(e) {
-        this.pc.on('offer', () => this.fpc.createAnswer()), (this.fpc.sdp = e);
+        (this.pc.on('offer', () => this.fpc.createAnswer()), (this.fpc.sdp = e));
     }
     getUserIdBySsrc(e) {}
     getRawStats() {
@@ -66,9 +66,9 @@ class g extends s.Z {
     }
     setVideoEncoderParameters(e) {}
     constructor(e) {
-        super(e), h(this, 'pc', void 0), h(this, 'fpc', void 0), h(this, 'codecs', []), h(this, 'logger', void 0), (this.logger = new a.Yd('Connection('.concat(e.context, ')')));
+        (super(e), h(this, 'pc', void 0), h(this, 'fpc', void 0), h(this, 'codecs', []), h(this, 'logger', void 0), (this.logger = new a.Yd('Connection('.concat(e.context, ')'))));
         let t = new l.Z();
-        t.on('answer', (e) => this.pc.setRemoteDescription(e).catch((e) => this.logger.error('Failed to set remote description (answer): '.concat(e)))),
+        (t.on('answer', (e) => this.pc.setRemoteDescription(e).catch((e) => this.logger.error('Failed to set remote description (answer): '.concat(e)))),
             t.on('offer', (e) => {
                 this.pc
                     .setRemoteDescription(e)
@@ -77,12 +77,12 @@ class g extends s.Z {
                     .catch((e) => this.logger.error('Failed to set remote description (offer): '.concat(e)));
             }),
             (t.direction = null != this.input.stream ? d.Ns.SENDRECV : d.Ns.SENDONLY),
-            (this.fpc = t);
+            (this.fpc = t));
         let n = new u.Z(this.voiceBitrate);
-        n.on('addtrack', (e, t) => this.createOutput(m(e), t)),
+        (n.on('addtrack', (e, t) => this.createOutput(m(e), t)),
             n.on('removetrack', (e, t) => this.destroyOutput(m(e), t)),
             n.once('connected', () => {
-                this.input.reset(), this.setConnectionState(_.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(c.G.VoiceActivity, this.handleVoiceActivity);
+                (this.input.reset(), this.setConnectionState(_.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(c.G.VoiceActivity, this.handleVoiceActivity));
             }),
             n.on('connecting', () => this.setConnectionState(_.$j.DTLS_CONNECTING)),
             n.on('checking', () => this.setConnectionState(_.$j.ICE_CHECKING)),
@@ -94,14 +94,14 @@ class g extends s.Z {
                     { outboundStreams: r, codecs: i, audioSSRC: a, videoSSRC: s, rtxSSRC: l } = (0, d.Nl)(n);
                 this.codecs = i;
                 let c = (0, d.nX)(n);
-                (t.outboundStreams = r), (this.audioSSRC = a), (t.extensions = c), (this.videoStreamParameters[0].ssrc === s && this.videoStreamParameters[0].rtxSsrc === l && this.videoReady) || ((this.videoStreamParameters[0].ssrc = s), (this.videoStreamParameters[0].rtxSsrc = l), this.emit(o.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), (this.videoReady = !0));
+                ((t.outboundStreams = r), (this.audioSSRC = a), (t.extensions = c), (this.videoStreamParameters[0].ssrc === s && this.videoStreamParameters[0].rtxSsrc === l && this.videoReady) || ((this.videoStreamParameters[0].ssrc = s), (this.videoStreamParameters[0].rtxSsrc = l), this.emit(o.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), (this.videoReady = !0)));
             }),
             n.once('offer', (e) => {
                 let { sdp: t } = e;
                 this.emit(o.Sh.Connected, 'webrtc', (0, d.sc)(t));
             }),
             null != this.input.stream ? n.setStream(this.input.stream) : n.negotiationNeeded(),
-            (this.pc = n);
+            (this.pc = n));
     }
 }
 function E(e) {

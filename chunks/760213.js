@@ -1,8 +1,8 @@
-r.d(t, {
+(r.d(t, {
     W: () => E,
     Z: () => S
 }),
-    r(457542);
+    r(457542));
 var n,
     s = r(255367),
     i = r(73800),
@@ -98,7 +98,7 @@ function y(e) {
                                 (0, s.jsx)(c.zxk, {
                                     onClick: function () {
                                         if (S) return void n(0, r.id);
-                                        x.default.track(N.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: N.jXE.MANAGE_ACCOUNTS_MODAL } }), j.yD(r.id), n(1, r.id);
+                                        (x.default.track(N.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: N.jXE.MANAGE_ACCOUNTS_MODAL } }), j.yD(r.id), n(1, r.id));
                                     },
                                     color: c.zxk.Colors.PRIMARY,
                                     children: S ? O.intl.string(O.t['DSN+h4']) : t
@@ -121,7 +121,7 @@ function y(e) {
                                                         j.Zd(r.id);
                                                     });
                                                     let e = {};
-                                                    null != i ? (e.section = N.jXE.MANAGE_ACCOUNTS_MODAL) : (e.page = N.Usc.LOGIN), x.default.track(N.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: e }), n(2, r.id), null != t && t();
+                                                    (null != i ? (e.section = N.jXE.MANAGE_ACCOUNTS_MODAL) : (e.page = N.Usc.LOGIN), x.default.track(N.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: e }), n(2, r.id), null != t && t());
                                                 },
                                                 color: 'danger'
                                             })

@@ -1,4 +1,4 @@
-t.d(n, { default: () => y }), t(388685), t(953529);
+(t.d(n, { default: () => y }), t(388685), t(953529));
 var i = t(255367),
     l = t(73800),
     a = t(120356),
@@ -33,7 +33,7 @@ function y(e) {
     if (!S) return null;
     let X = E === j.j8.PUBLIC ? C.intl.string(C.t.HhlaLC) : C.intl.string(C.t.GI3xXV),
         R = () => {
-            null == y || y(), f(), (0, h.Ku)(!1);
+            (null == y || y(), f(), (0, h.Ku)(!1));
         },
         M = async () => {
             await A(a, _, { onSuccess: R });

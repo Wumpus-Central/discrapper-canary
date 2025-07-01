@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(442837),
     l = n(570140);
@@ -19,7 +19,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -74,7 +74,7 @@ o(f, 'displayName', 'scheduledMessageStore');
 let m = new f(l.Z, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
         let { channelId: t, scheduledMessageSend: n } = e;
-        (u = s(a({}, u), { [n.scheduledMessageId]: n })), (p = a({}, p)), delete p[t];
+        ((u = s(a({}, u), { [n.scheduledMessageId]: n })), (p = a({}, p)), delete p[t]);
     },
     SCHEDULED_MESSAGES_DELETE_START: function (e) {
         let { scheduledMessageId: t } = e;
@@ -84,7 +84,7 @@ let m = new f(l.Z, {
     SCHEDULED_MESSAGES_DELETE_SUCCESS: function (e) {
         let { scheduledMessageId: t } = e;
         if (!d.has(t)) return !1;
-        (d = new Set(d)).delete(t), (u = a({}, u)), delete u[t];
+        ((d = new Set(d)).delete(t), (u = a({}, u)), delete u[t]);
     },
     SCHEDULED_MESSAGES_DELETE_FAILURE: function (e) {
         let { scheduledMessageId: t } = e;
@@ -115,7 +115,7 @@ let m = new f(l.Z, {
     },
     DELETE_PENDING_SCHEDULED_MESSAGE: function (e) {
         let { channelId: t } = e;
-        (p = a({}, p)), delete p[t];
+        ((p = a({}, p)), delete p[t]);
     },
     LOGOUT: h,
     CONNECTION_OPEN: h

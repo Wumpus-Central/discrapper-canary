@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -25,7 +25,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function _(e) {
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -130,7 +130,7 @@ function E(e) {
                         y: t
                     }
                 });
-            C.x.set(i.x), C.y.set(i.y);
+            (C.x.set(i.x), C.y.set(i.y));
         },
         M = (e) => {
             n &&
@@ -147,7 +147,7 @@ function E(e) {
                 0 === e.button && (null == a || a(e));
                 return;
             }
-            (e.clientX - D.x) ** 2 + (e.clientY - D.y) ** 2 < p && (null == a || a(e)), w(!1);
+            ((e.clientX - D.x) ** 2 + (e.clientY - D.y) ** 2 < p && (null == a || a(e)), w(!1));
         };
     return (0, r.jsx)(s.animated.div, {
         ref: v,

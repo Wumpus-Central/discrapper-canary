@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(35282), n(539854);
+(n.d(t, { Z: () => f }), n(35282), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -24,7 +24,7 @@ function f(e) {
                       discriminator: m.fo$
                   });
         }, [t]),
-        y = i.useCallback(() => {
+        v = i.useCallback(() => {
             (0, l.h7j)((e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -33,7 +33,7 @@ function f(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function f(e) {
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    (r = n[t]),
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
@@ -49,8 +49,8 @@ function f(e) {
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
-                                });
+                                            : (e[t] = r));
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -88,14 +88,14 @@ function f(e) {
                 );
             });
         }, [t.guild_id, t.id, t.name]),
-        v = [];
+        y = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (v.push({
+        (y.push({
             icon: l.MqZ,
             text: t.source_channel.name
         }),
-        v.push({
+        y.push({
             text: (0, r.jsx)(
                 'span',
                 {
@@ -161,7 +161,7 @@ function f(e) {
                                 (0, r.jsx)(l.$i$, { className: g.bottomDivider }),
                                 (0, r.jsx)(c.Z, {
                                     children: (0, r.jsx)(l.zxk, {
-                                        onClick: y,
+                                        onClick: v,
                                         size: l.zxk.Sizes.SMALL,
                                         color: l.zxk.Colors.RED,
                                         look: l.zxk.Looks.LINK,
@@ -191,7 +191,7 @@ function f(e) {
                                     name: t.name,
                                     imageSrc: O,
                                     detailsClassName: g.__invalid_description,
-                                    details: v
+                                    details: y
                                 }),
                                 (0, r.jsx)(d.Z, {
                                     className: g.expandIcon,

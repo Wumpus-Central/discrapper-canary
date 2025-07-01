@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => _ });
+(n.r(t), n.d(t, { default: () => _ }));
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -16,7 +16,7 @@ var i = n(255367),
     y = n(649561),
     O = n(631553),
     v = n(981631);
-n(635324), n(167666), n(308765), n(913487), n(606206), o.ZP.initialize();
+(n(635324), n(167666), n(308765), n(913487), n(606206), o.ZP.initialize());
 let _ = function () {
     return (
         r.useEffect(
@@ -25,7 +25,7 @@ let _ = function () {
                 d.Z.initialize(),
                 m.Z.init(),
                 () => {
-                    g.Z.terminate(), d.Z.terminate();
+                    (g.Z.terminate(), d.Z.terminate());
                 }
             ),
             []

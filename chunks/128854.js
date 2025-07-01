@@ -1,8 +1,8 @@
-r.d(t, {
+(r.d(t, {
     F: () => a,
     c: () => o
 }),
-    r(415506);
+    r(415506));
 var n = r(255367),
     l = r(73800);
 let i = l.createContext(null);
@@ -23,12 +23,12 @@ function a(e) {
                         n,
                         l = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]));
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]));
             }
             return l;
         })(e, ['children']);

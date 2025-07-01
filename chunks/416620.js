@@ -18,12 +18,12 @@ var a = n(73800),
                 i = e.call(this, t, n) || this,
                 a = n,
                 o = a && !a.isMounting ? t.enter : t.appear;
-            return (i.appearStatus = null), t.in ? (o ? ((r = d), (i.appearStatus = f)) : (r = _)) : (r = t.unmountOnExit || t.mountOnEnter ? u : d), (i.state = { status: r }), (i.nextCallback = null), i;
+            return ((i.appearStatus = null), t.in ? (o ? ((r = d), (i.appearStatus = f)) : (r = _)) : (r = t.unmountOnExit || t.mountOnEnter ? u : d), (i.state = { status: r }), (i.nextCallback = null), i);
         }
-        (0, i.Z)(t, e),
+        ((0, i.Z)(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
                 return e.in && t.status === u ? { status: d } : null;
-            });
+            }));
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
@@ -79,15 +79,15 @@ var a = n(73800),
                     return void this.safeSetState({ status: _ }, function () {
                         t.props.onEntered(a);
                     });
-                this.props.onEnter(a, l),
+                (this.props.onEnter(a, l),
                     this.safeSetState({ status: f }, function () {
-                        t.props.onEntering(a, l),
+                        (t.props.onEntering(a, l),
                             t.onTransitionEnd(u, function () {
                                 t.safeSetState({ status: _ }, function () {
                                     t.props.onEntered(a, l);
                                 });
-                            });
-                    });
+                            }));
+                    }));
             }),
             (n.performExit = function () {
                 var e = this,
@@ -98,21 +98,21 @@ var a = n(73800),
                     return void this.safeSetState({ status: d }, function () {
                         e.props.onExited(r);
                     });
-                this.props.onExit(r),
+                (this.props.onExit(r),
                     this.safeSetState({ status: p }, function () {
-                        e.props.onExiting(r),
+                        (e.props.onExiting(r),
                             e.onTransitionEnd(n.exit, function () {
                                 e.safeSetState({ status: d }, function () {
                                     e.props.onExited(r);
                                 });
-                            });
-                    });
+                            }));
+                    }));
             }),
             (n.cancelNextCallback = function () {
                 null !== this.nextCallback && (this.nextCallback.cancel(), (this.nextCallback = null));
             }),
             (n.safeSetState = function (e, t) {
-                (t = this.setNextCallback(t)), this.setState(e, t);
+                ((t = this.setNextCallback(t)), this.setState(e, t));
             }),
             (n.setNextCallback = function (e) {
                 var t = this,
@@ -152,7 +152,7 @@ var a = n(73800),
         );
     })(a.Component);
 function m() {}
-(h.contextType = l.Z),
+((h.contextType = l.Z),
     (h.propTypes = {}),
     (h.defaultProps = {
         in: !1,
@@ -172,5 +172,5 @@ function m() {}
     (h.EXITED = d),
     (h.ENTERING = f),
     (h.ENTERED = _),
-    (h.EXITING = p);
+    (h.EXITING = p));
 let g = h;

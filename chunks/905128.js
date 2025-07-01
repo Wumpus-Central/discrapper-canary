@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(467055);
+(n.d(t, { Z: () => N }), n(388685), n(467055));
 var r,
     i = n(442837),
     a = n(570140),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -115,10 +115,10 @@ function O(e) {
 function v(e, t) {
     let { guildId: n, entitlements: r } = e,
         i = b(n);
-    r.forEach((e) => {
+    (r.forEach((e) => {
         t ? (i.unlockedPowerups[e.sku_id] = e) : delete i.unlockedPowerups[e.sku_id];
     }),
-        (h = f(u({}, h), { [n]: f(u({}, i), { appliedBoosts: E(n) }) }));
+        (h = f(u({}, h), { [n]: f(u({}, i), { appliedBoosts: E(n) }) })));
 }
 function I(e) {
     v(e, !0);
@@ -158,7 +158,7 @@ class A extends (r = i.ZP.PersistedStore) {
         return null != e && (null == (t = h[e]) ? void 0 : t.hasFetchedUnlockedPowerups) === !0;
     }
 }
-c(A, 'displayName', 'GuildPowerupsStore'),
+(c(A, 'displayName', 'GuildPowerupsStore'),
     c(A, 'persistKey', 'GuildPowerupsStore'),
     c(A, 'migrations', [
         (e) =>
@@ -184,7 +184,7 @@ c(A, 'displayName', 'GuildPowerupsStore'),
                               ];
                           })
                   )
-    ]);
+    ]));
 let N = new A(a.Z, {
     LOGOUT: S,
     GUILD_POWERUP_CATALOG_FETCH_SUCCESS: y,

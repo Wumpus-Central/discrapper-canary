@@ -23,7 +23,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -112,11 +112,11 @@ function A(e) {
 }
 function N(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach((e) => g(e.id, null)),
+    (t.forEach((e) => g(e.id, null)),
         null == n ||
             n.filter(c.lm).forEach((e) => {
                 g(e.channel_id, e);
-            });
+            }));
 }
 class C extends (r = i.ZP.Store) {
     initialize() {
@@ -133,7 +133,7 @@ class C extends (r = i.ZP.Store) {
         );
     }
 }
-d(C, 'displayName', 'ForumPostRecentMessageStore'),
+(d(C, 'displayName', 'ForumPostRecentMessageStore'),
     new C(a.Z, {
         CONNECTION_OPEN: v,
         MESSAGE_CREATE: T,
@@ -142,4 +142,4 @@ d(C, 'displayName', 'ForumPostRecentMessageStore'),
         LOAD_FORUM_POSTS: I,
         LOAD_ARCHIVED_THREADS_SUCCESS: N,
         LOAD_THREADS_SUCCESS: N
-    });
+    }));

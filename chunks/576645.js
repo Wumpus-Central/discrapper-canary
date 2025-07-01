@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     J: () => k,
     Nt: () => Z,
     Ou: () => G,
@@ -13,7 +13,7 @@ n.d(t, {
     tv: () => B,
     vY: () => V
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(525654),
     a = n.n(i),
@@ -65,7 +65,7 @@ let C = 3500000,
                             r = m.Z.getRTCConnection(n);
                         return null == r || null == (t = r.getVideoStats()) ? void 0 : t.inbound_bitrate_estimate_percentile99;
                     });
-                    P.info('Setting bitrates', e), u(e), l(Date.now());
+                    (P.info('Setting bitrates', e), u(e), l(Date.now()));
                 }
             },
             [o, i]
@@ -115,7 +115,7 @@ function k(e, t) {
     let n = (0, r.useRef)(!0),
         i = null == e ? void 0 : e.hdStreamingUntil,
         a = (0, r.useRef)(t);
-    (0, r.useEffect)(() => {
+    ((0, r.useEffect)(() => {
         a.current = t;
     }),
         (0, r.useEffect)(() => {
@@ -124,7 +124,7 @@ function k(e, t) {
                 return;
             }
             if (null != i && new Date(i) > new Date()) return a.current();
-        }, [i]);
+        }, [i]));
 }
 function M(e) {
     k(e, () => {

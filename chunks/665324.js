@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+(n.d(t, { Z: () => B }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -38,7 +38,7 @@ function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -46,7 +46,7 @@ function M(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -54,8 +54,8 @@ function M(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -152,19 +152,19 @@ let H = (e) => {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(e, ['renderPopoutBody', 'renderPopoutChildren', 'popoutTargetRef']);
         let [a, o] = i.useState(!1),
             c = i.useMemo(() => new d.V7(), []),
             m = i.useCallback(() => {
-                c.stop(), o(!0);
+                (c.stop(), o(!0));
             }, [c]),
             g = i.useCallback(() => {
                 c.start(200, () => o(!1));
@@ -431,7 +431,7 @@ function Y(e) {
                           (0, r.jsx)(u.P3F, {
                               className: L.soundUpdate,
                               onClick: function (e) {
-                                  e.stopPropagation(),
+                                  (e.stopPropagation(),
                                       (0, u.ZDy)(async () => {
                                           let { default: e } = await Promise.all([n.e('56035'), n.e('15878')]).then(n.bind(n, 758961));
                                           return (n) =>
@@ -442,7 +442,7 @@ function Y(e) {
                                                       existingSound: t
                                                   })
                                               );
-                                      });
+                                      }));
                               },
                               'aria-label': A.intl.string(A.t.bt75u7),
                               children: (0, r.jsx)(u.vdY, {
@@ -454,7 +454,7 @@ function Y(e) {
                           (0, r.jsx)(u.P3F, {
                               className: L.soundRemove,
                               onClick: function (e) {
-                                  e.stopPropagation(),
+                                  (e.stopPropagation(),
                                       (0, u.h7j)((e) =>
                                           (0, r.jsx)(
                                               u.ConfirmModal,
@@ -476,7 +476,7 @@ function Y(e) {
                                                   }
                                               )
                                           )
-                                      );
+                                      ));
                               },
                               'aria-label': A.intl.string(A.t.N86XcH),
                               children: (0, r.jsx)(u.Dio, {

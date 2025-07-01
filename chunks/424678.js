@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685), n(35282);
+(n.d(t, { Z: () => l }), n(388685), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(481060);
@@ -30,11 +30,11 @@ class s extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, 'handleClick', () => {
                 let { onClick: e, index: t } = this.props;
                 null == e || e(t);
-            });
+            }));
     }
 }
 class l extends i.PureComponent {
@@ -57,10 +57,10 @@ class l extends i.PureComponent {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, 'handleOpenSpotifyArtist', (e) => {
                 let { onOpenSpotifyArtist: t } = this.props;
                 null == t || t(e);
-            });
+            }));
     }
 }

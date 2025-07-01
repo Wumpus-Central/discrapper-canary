@@ -46,7 +46,7 @@ t.exports =
         );
     })
         ? function (t, e) {
-              for (var r = c(t), i = arguments.length, a = 1, l = u.f, p = h.f; i > a; ) for (var g, d = f(arguments[a++]), m = l ? v(o(d), l(d)) : o(d), y = m.length, b = 0; y > b; ) (g = m[b++]), (!n || s(p, d, g)) && (r[g] = d[g]);
+              for (var r = c(t), i = arguments.length, a = 1, l = u.f, p = h.f; i > a; ) for (var g, d = f(arguments[a++]), m = l ? v(o(d), l(d)) : o(d), y = m.length, b = 0; y > b; ) ((g = m[b++]), (!n || s(p, d, g)) && (r[g] = d[g]));
               return r;
           }
         : l;

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => O }), n(953529), n(415506);
+(n.d(t, { ZP: () => O }), n(953529), n(415506));
 var r = n(688619),
     i = n.n(r),
     a = n(402903),
@@ -57,7 +57,7 @@ let O = {
                 let e = o.gradient[null == n ? void 0 : n.gradient.theme];
                 if (null != e) {
                     let t = i()(e.color in m ? m[e.color] : null == n ? void 0 : n.gradient.colors[e.color]);
-                    'saturation' in e && (t = t.set('hsl.s', e.saturation)), 'lightness' in e && (t = t.set('hsl.l', e.lightness)), (c = t.hex()), (u = 'opacity' in e ? e.opacity : 1);
+                    ('saturation' in e && (t = t.set('hsl.s', e.saturation)), 'lightness' in e && (t = t.set('hsl.l', e.lightness)), (c = t.hex()), (u = 'opacity' in e ? e.opacity : 1));
                 }
             }
             let d = null != (r = null == n ? void 0 : n.contrast) ? r : 1,

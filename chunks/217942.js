@@ -96,10 +96,10 @@ var t = {
         return ((o = 1.70158), (a = 0), (i = s), 0 === e) ? t : 2 == (e /= r / 2) ? t + s : (a || (a = 0.3 * 1.5 * r), i < Math.abs(s) ? ((i = s), (o = a / 4)) : (o = (a / (2 * Math.PI)) * Math.asin(s / i)), e < 1) ? -0.5 * (i * Math.pow(2, 10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * r - o)) / a)) + t : i * Math.pow(2, -10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * r - o)) / a) * 0.5 + s + t;
     },
     easeInBack: function (e, t, n, r, i) {
-        return void 0 === i && (i = 1.70158), (n - t) * (e /= r) * e * ((i + 1) * e - i) + t;
+        return (void 0 === i && (i = 1.70158), (n - t) * (e /= r) * e * ((i + 1) * e - i) + t);
     },
     easeOutBack: function (e, t, n, r, i) {
-        return void 0 === i && (i = 1.70158), (n - t) * ((e = e / r - 1) * e * ((i + 1) * e + i) + 1) + t;
+        return (void 0 === i && (i = 1.70158), (n - t) * ((e = e / r - 1) * e * ((i + 1) * e + i) + 1) + t);
     },
     easeInOutBack: function (e, t, n, r, i) {
         var a = n - t;
@@ -108,7 +108,7 @@ var t = {
     easeInBounce: function (e, n, r, i) {
         var a,
             o = r - n;
-        return (a = t.easeOutBounce(i - e, 0, o, i)), o - a + n;
+        return ((a = t.easeOutBounce(i - e, 0, o, i)), o - a + n);
     },
     easeOutBounce: function (e, t, n, r) {
         var i = n - t;

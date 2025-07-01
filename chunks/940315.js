@@ -1,4 +1,4 @@
-n.d(t, { Y: () => l }), n(388685);
+(n.d(t, { Y: () => l }), n(388685));
 var i = n(73800),
     r = n(442837),
     s = n(709706);
@@ -13,7 +13,7 @@ function l() {
             n(t);
             let i = t ? setTimeout(() => n(!1), 3000) : null;
             return () => {
-                clearTimeout(i), n(!1);
+                (clearTimeout(i), n(!1));
             };
         }, [e]),
         i.useEffect(() => {
@@ -23,7 +23,7 @@ function l() {
             return (
                 t && ((o.current = Date.now()), (n = setTimeout(() => a(!1), 4000))),
                 () => {
-                    clearTimeout(n), a(!1);
+                    (clearTimeout(n), a(!1));
                 }
             );
         }, [e]),

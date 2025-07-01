@@ -97,10 +97,10 @@ let eb = '1344176506041139230',
     eO = 5,
     ev = 'https://discord.com/settings/clicker-game';
 var eI = (function (e) {
-        return (e[(e.CLICKER_BUTTON = 0)] = 'CLICKER_BUTTON'), (e[(e.RAIN = 1)] = 'RAIN'), (e[(e.SUN = 2)] = 'SUN'), (e[(e.STATS = 3)] = 'STATS'), (e[(e.RATE = 4)] = 'RATE'), (e[(e.ACHIEVEMENTS = 5)] = 'ACHIEVEMENTS'), (e[(e.SNEK = 6)] = 'SNEK'), (e[(e.WEEDS = 7)] = 'WEEDS'), (e[(e.PET_WUMPUS = 8)] = 'PET_WUMPUS'), (e[(e.BOUNCING_LOGO = 9)] = 'BOUNCING_LOGO'), (e[(e.NAGBAR = 10)] = 'NAGBAR'), (e[(e.ANT = 11)] = 'ANT'), (e[(e.SNAIL = 12)] = 'SNAIL'), (e[(e.BEE = 13)] = 'BEE'), (e[(e.WORM = 14)] = 'WORM'), (e[(e.BUTTERFLY = 15)] = 'BUTTERFLY'), (e[(e.TULIP = 16)] = 'TULIP'), (e[(e.SUNFLOWER = 17)] = 'SUNFLOWER'), (e[(e.ORCHID = 18)] = 'ORCHID'), (e[(e.LOOTBOXES = 19)] = 'LOOTBOXES'), (e[(e.MESSAGES = 20)] = 'MESSAGES'), (e[(e.AT_SOMEONE = 21)] = 'AT_SOMEONE'), (e[(e.CURSORS = 22)] = 'CURSORS'), (e[(e.POURING_WATER = 23)] = 'POURING_WATER'), (e[(e.WATERING_CAN = 24)] = 'WATERING_CAN'), (e[(e.LEVELING = 25)] = 'LEVELING'), (e[(e.MUSIC = 26)] = 'MUSIC'), (e[(e.LAWNMOWER = 27)] = 'LAWNMOWER'), (e[(e.COMPLETE_GAME = 28)] = 'COMPLETE_GAME'), e;
+        return ((e[(e.CLICKER_BUTTON = 0)] = 'CLICKER_BUTTON'), (e[(e.RAIN = 1)] = 'RAIN'), (e[(e.SUN = 2)] = 'SUN'), (e[(e.STATS = 3)] = 'STATS'), (e[(e.RATE = 4)] = 'RATE'), (e[(e.ACHIEVEMENTS = 5)] = 'ACHIEVEMENTS'), (e[(e.SNEK = 6)] = 'SNEK'), (e[(e.WEEDS = 7)] = 'WEEDS'), (e[(e.PET_WUMPUS = 8)] = 'PET_WUMPUS'), (e[(e.BOUNCING_LOGO = 9)] = 'BOUNCING_LOGO'), (e[(e.NAGBAR = 10)] = 'NAGBAR'), (e[(e.ANT = 11)] = 'ANT'), (e[(e.SNAIL = 12)] = 'SNAIL'), (e[(e.BEE = 13)] = 'BEE'), (e[(e.WORM = 14)] = 'WORM'), (e[(e.BUTTERFLY = 15)] = 'BUTTERFLY'), (e[(e.TULIP = 16)] = 'TULIP'), (e[(e.SUNFLOWER = 17)] = 'SUNFLOWER'), (e[(e.ORCHID = 18)] = 'ORCHID'), (e[(e.LOOTBOXES = 19)] = 'LOOTBOXES'), (e[(e.MESSAGES = 20)] = 'MESSAGES'), (e[(e.AT_SOMEONE = 21)] = 'AT_SOMEONE'), (e[(e.CURSORS = 22)] = 'CURSORS'), (e[(e.POURING_WATER = 23)] = 'POURING_WATER'), (e[(e.WATERING_CAN = 24)] = 'WATERING_CAN'), (e[(e.LEVELING = 25)] = 'LEVELING'), (e[(e.MUSIC = 26)] = 'MUSIC'), (e[(e.LAWNMOWER = 27)] = 'LAWNMOWER'), (e[(e.COMPLETE_GAME = 28)] = 'COMPLETE_GAME'), e);
     })({}),
     eT = (function (e) {
-        return (e[(e.CLICKER_BUTTON_STRONGER = 0)] = 'CLICKER_BUTTON_STRONGER'), (e[(e.WEED_KILLER = 1)] = 'WEED_KILLER'), (e[(e.BOUNCING_LOGO_MORE_LOGOS = 2)] = 'BOUNCING_LOGO_MORE_LOGOS'), (e[(e.BOUNCING_LOGO_CORNERS = 3)] = 'BOUNCING_LOGO_CORNERS'), (e[(e.BOUNCING_LOGO_SPEED = 4)] = 'BOUNCING_LOGO_SPEED'), (e[(e.BOUNCING_LOGO_COLORS = 5)] = 'BOUNCING_LOGO_COLORS'), (e[(e.CLICKER_BUTTON_AFFIRMATIONS = 6)] = 'CLICKER_BUTTON_AFFIRMATIONS'), (e[(e.SUN_RAISE = 7)] = 'SUN_RAISE'), (e[(e.FULLSCREEN_AT_SOMEONE = 8)] = 'FULLSCREEN_AT_SOMEONE'), (e[(e.CLICKER_BUTTON_RAINBOW = 9)] = 'CLICKER_BUTTON_RAINBOW'), (e[(e.MUSIC_CHANGE = 10)] = 'MUSIC_CHANGE'), e;
+        return ((e[(e.CLICKER_BUTTON_STRONGER = 0)] = 'CLICKER_BUTTON_STRONGER'), (e[(e.WEED_KILLER = 1)] = 'WEED_KILLER'), (e[(e.BOUNCING_LOGO_MORE_LOGOS = 2)] = 'BOUNCING_LOGO_MORE_LOGOS'), (e[(e.BOUNCING_LOGO_CORNERS = 3)] = 'BOUNCING_LOGO_CORNERS'), (e[(e.BOUNCING_LOGO_SPEED = 4)] = 'BOUNCING_LOGO_SPEED'), (e[(e.BOUNCING_LOGO_COLORS = 5)] = 'BOUNCING_LOGO_COLORS'), (e[(e.CLICKER_BUTTON_AFFIRMATIONS = 6)] = 'CLICKER_BUTTON_AFFIRMATIONS'), (e[(e.SUN_RAISE = 7)] = 'SUN_RAISE'), (e[(e.FULLSCREEN_AT_SOMEONE = 8)] = 'FULLSCREEN_AT_SOMEONE'), (e[(e.CLICKER_BUTTON_RAINBOW = 9)] = 'CLICKER_BUTTON_RAINBOW'), (e[(e.MUSIC_CHANGE = 10)] = 'MUSIC_CHANGE'), e);
     })({});
 let eS = () => ({
     0: {
@@ -311,7 +311,7 @@ function eA(e) {
     let { numAlreadyPurchased: t } = e,
         n = [1.67, 1.6, 1.25, 1.5],
         r = 250;
-    for (let e = 0; e < t; e++) (r *= n[e % n.length]), (r = Math.floor(r));
+    for (let e = 0; e < t; e++) ((r *= n[e % n.length]), (r = Math.floor(r)));
     return r;
 }
 let eN = () => ({
@@ -626,7 +626,7 @@ let eN = () => ({
         }
     ];
 var eD = (function (e) {
-    return (e[(e.CLICKS_1 = 0)] = 'CLICKS_1'), (e[(e.CLICKS_2 = 1)] = 'CLICKS_2'), (e[(e.CLICKS_3 = 2)] = 'CLICKS_3'), (e[(e.PURCHASE_1 = 3)] = 'PURCHASE_1'), (e[(e.PURCHASE_2 = 4)] = 'PURCHASE_2'), (e[(e.PURCHASE_3 = 5)] = 'PURCHASE_3'), (e[(e.PURCHASE_4 = 6)] = 'PURCHASE_4'), (e[(e.PURCHASE_5 = 7)] = 'PURCHASE_5'), (e[(e.LEVEL_1 = 8)] = 'LEVEL_1'), (e[(e.LEVEL_2 = 9)] = 'LEVEL_2'), (e[(e.LEVEL_3 = 10)] = 'LEVEL_3'), (e[(e.LEVEL_4 = 11)] = 'LEVEL_4'), (e[(e.WEED = 13)] = 'WEED'), (e[(e.LAWNMOWER_1 = 14)] = 'LAWNMOWER_1'), (e[(e.LAWNMOWER_2 = 15)] = 'LAWNMOWER_2'), (e[(e.MESSAGE_1 = 16)] = 'MESSAGE_1'), (e[(e.MESSAGE_2 = 17)] = 'MESSAGE_2'), (e[(e.MESSAGE_3 = 18)] = 'MESSAGE_3'), (e[(e.BOUNCE_1 = 19)] = 'BOUNCE_1'), (e[(e.BOUNCE_2 = 20)] = 'BOUNCE_2'), (e[(e.BOUNCE_3 = 21)] = 'BOUNCE_3'), e;
+    return ((e[(e.CLICKS_1 = 0)] = 'CLICKS_1'), (e[(e.CLICKS_2 = 1)] = 'CLICKS_2'), (e[(e.CLICKS_3 = 2)] = 'CLICKS_3'), (e[(e.PURCHASE_1 = 3)] = 'PURCHASE_1'), (e[(e.PURCHASE_2 = 4)] = 'PURCHASE_2'), (e[(e.PURCHASE_3 = 5)] = 'PURCHASE_3'), (e[(e.PURCHASE_4 = 6)] = 'PURCHASE_4'), (e[(e.PURCHASE_5 = 7)] = 'PURCHASE_5'), (e[(e.LEVEL_1 = 8)] = 'LEVEL_1'), (e[(e.LEVEL_2 = 9)] = 'LEVEL_2'), (e[(e.LEVEL_3 = 10)] = 'LEVEL_3'), (e[(e.LEVEL_4 = 11)] = 'LEVEL_4'), (e[(e.WEED = 13)] = 'WEED'), (e[(e.LAWNMOWER_1 = 14)] = 'LAWNMOWER_1'), (e[(e.LAWNMOWER_2 = 15)] = 'LAWNMOWER_2'), (e[(e.MESSAGE_1 = 16)] = 'MESSAGE_1'), (e[(e.MESSAGE_2 = 17)] = 'MESSAGE_2'), (e[(e.MESSAGE_3 = 18)] = 'MESSAGE_3'), (e[(e.BOUNCE_1 = 19)] = 'BOUNCE_1'), (e[(e.BOUNCE_2 = 20)] = 'BOUNCE_2'), (e[(e.BOUNCE_3 = 21)] = 'BOUNCE_3'), e);
 })({});
 let eL = {
         0: 100,
@@ -759,7 +759,7 @@ let eL = {
         }
     });
 var ek = (function (e) {
-    return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CAT = 1)] = 'CAT'), (e[(e.SWORD = 2)] = 'SWORD'), (e[(e.PIZZA = 3)] = 'PIZZA'), e;
+    return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CAT = 1)] = 'CAT'), (e[(e.SWORD = 2)] = 'SWORD'), (e[(e.PIZZA = 3)] = 'PIZZA'), e);
 })({});
 let eM = () => ({
         0: {

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Z: () => S,
     u: () => b
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -33,7 +33,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,11 +49,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -116,7 +116,7 @@ class T extends (r = a.PureComponent) {
             var d;
             let t = null == l && null == a && u === e.length - 1,
                 s = n(e[u], t, u);
-            o.push(
+            (o.push(
                 t
                     ? (0, i.jsx)(
                           'div',
@@ -138,9 +138,9 @@ class T extends (r = a.PureComponent) {
                           y(e[u], u)
                       )
             ),
-                u++;
+                u++);
         }
-        return null != a ? o.push(a) : null != l && o.push(l), o;
+        return (null != a ? o.push(a) : null != l && o.push(l), o);
     }
     renderMoreUsers(e) {
         let { max: t, count: n, hideMoreUsers: r, renderMoreUsers: o, users: s, dimEmptyUsers: l } = this.props,
@@ -207,7 +207,7 @@ class T extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             h(this, 'state', { popoutUserId: null }),
             h(this, '_ref', a.createRef()),
             h(this, 'defaultRenderUser', (e, t, n) => {
@@ -249,7 +249,7 @@ class T extends (r = a.PureComponent) {
                           e.id
                       )
                     : u;
-            });
+            }));
     }
 }
 h(T, 'defaultProps', {

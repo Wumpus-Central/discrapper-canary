@@ -17,7 +17,7 @@ function u(e) {
                 onMouseEnter: s,
                 onMouseLeave: _,
                 onClick: (e) => {
-                    e.stopPropagation(), null == p || p(), t(e);
+                    (e.stopPropagation(), null == p || p(), t(e));
                 },
                 dangerous: u,
                 'aria-label': null != f ? f : a,

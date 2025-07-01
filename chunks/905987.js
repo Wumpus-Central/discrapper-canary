@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+(n.d(t, { Z: () => f }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -88,7 +88,7 @@ function v(e) {
         let e = 0,
             n = [1500, 1000, 1000, 500].map((t, n) => setTimeout(() => x(n + 1), (e += t)));
         return () => {
-            n.forEach((e) => clearTimeout(e)), setTimeout(() => x(0), 150);
+            (n.forEach((e) => clearTimeout(e)), setTimeout(() => x(0), 150));
         };
     }, [t]);
     let { entrypoints: h } = (0, o._k)({ location: 'tips_tab' });
@@ -293,7 +293,7 @@ function _(e) {
             let e = 0,
                 n = [1000, 1000, 1000, 800, 800].map((t, n) => setTimeout(() => s(n + 1), (e += t)));
             return () => {
-                n.forEach((e) => clearTimeout(e)), setTimeout(() => s(0), 150);
+                (n.forEach((e) => clearTimeout(e)), setTimeout(() => s(0), 150));
             };
         }, [t]),
         (0, i.jsxs)(i.Fragment, {

@@ -39,7 +39,7 @@ function I(e, t) {
 function T(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     function o() {
-        (0, f.A6)(t.id), (0, h.R6)(t, n, 'Reply Chain Nudge');
+        ((0, f.A6)(t.id), (0, h.R6)(t, n, 'Reply Chain Nudge'));
     }
     let s = i.useRef(a);
     return (
@@ -90,10 +90,10 @@ function S(e) {
         w = n.showThreadPromptOnReply && R >= O && P,
         D = () => (0, _.uL)(E.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
     function L(e) {
-        e.stopPropagation(), (0, f.qx)(i.id, !s);
+        (e.stopPropagation(), (0, f.qx)(i.id, !s));
     }
     function x(e) {
-        e.stopPropagation(), (0, f.A6)(i.id);
+        (e.stopPropagation(), (0, f.A6)(i.id));
     }
     return (0, r.jsx)('div', {
         className: y.clipContainer,

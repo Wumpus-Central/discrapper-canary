@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -20,7 +20,7 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function j(e) {
             )),
             a.forEach(function (t) {
                 var a;
-                (a = n[t]),
+                ((a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: a,
@@ -36,8 +36,8 @@ function j(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a);
-            });
+                        : (e[t] = a));
+            }));
     }
     return e;
 }
@@ -86,23 +86,23 @@ let _ = function (e) {
         if (null == t || null == n || null == a) return;
         let r = (0, o.debounce)(L, g.HW),
             l = () => {
-                D(null), W(!1), r.cancel(), r(!0);
+                (D(null), W(!1), r.cancel(), r(!0));
             },
             i = () => {
-                r.cancel(), r(!1);
+                (r.cancel(), r(!1));
             };
         return (
             t.addEventListener('play', l),
             t.addEventListener('pause', i),
             () => {
-                t.removeEventListener('play', l), t.removeEventListener('pause', i);
+                (t.removeEventListener('play', l), t.removeEventListener('pause', i));
             }
         );
     }, [S]);
     let { ref: G, width: K = 0, height: Y = 0 } = (0, d.ZP)(),
         Q = (0, s.e7)([f.Z], () => f.Z.windowSize());
     r.useMemo(() => {
-        Q.width, Q.height;
+        (Q.width, Q.height);
         let e = G.current;
         null != e && V(e.getBoundingClientRect());
     }, [Q.width, Q.height, K, G]);
@@ -112,7 +112,7 @@ let _ = function (e) {
             (e) => {
                 var t;
                 let n = (0, o.clamp)(e, 0, N.end - g.Hp);
-                E(y(j({}, N), { start: n })), null == (t = S.current) || t.seek(n);
+                (E(y(j({}, N), { start: n })), null == (t = S.current) || t.seek(n));
             },
             [N, E, S]
         ),
@@ -122,7 +122,7 @@ let _ = function (e) {
                 let a = null == (t = S.current) ? void 0 : t.videoElement;
                 if (null == a) return;
                 let r = (0, o.clamp)(e, N.start + g.Hp, a.duration);
-                E(y(j({}, N), { end: r })), null == (n = S.current) || n.seek(r);
+                (E(y(j({}, N), { end: r })), null == (n = S.current) || n.seek(r));
             },
             [N, E, S]
         ),
@@ -152,10 +152,10 @@ let _ = function (e) {
                     r = !1;
                 switch (e.key) {
                     case 'ArrowLeft':
-                        (r = !0), q(N.start - a);
+                        ((r = !0), q(N.start - a));
                         break;
                     case 'ArrowRight':
-                        (r = !0), q(N.start + a);
+                        ((r = !0), q(N.start + a));
                 }
                 r && (e.stopPropagation(), e.preventDefault());
             },
@@ -170,10 +170,10 @@ let _ = function (e) {
                     r = !1;
                 switch (e.key) {
                     case 'ArrowLeft':
-                        (r = !0), ee(N.end - a);
+                        ((r = !0), ee(N.end - a));
                         break;
                     case 'ArrowRight':
-                        (r = !0), ee(N.end + a);
+                        ((r = !0), ee(N.end + a));
                 }
                 r && (e.stopPropagation(), e.preventDefault());
             },
@@ -196,14 +196,14 @@ let _ = function (e) {
                 var e;
                 null == (e = S.current) || e.play();
             }
-            W(!1), D(null);
+            (W(!1), D(null));
         }, [S, H]);
-    r.useEffect(
+    (r.useEffect(
         () => (
             document.addEventListener('mousemove', el),
             document.addEventListener('mouseup', ei),
             () => {
-                document.removeEventListener('mousemove', el), document.removeEventListener('mouseup', ei);
+                (document.removeEventListener('mousemove', el), document.removeEventListener('mouseup', ei));
             }
         ),
         [el, ei]
@@ -214,15 +214,15 @@ let _ = function (e) {
                 let t = G.current,
                     n = T.current;
                 if (null == t || null == n || null == I) return;
-                (t.height = Y), (t.width = K);
+                ((t.height = Y), (t.width = K));
                 let a = t.getContext('2d');
                 if (null == a) return;
-                (a.fillStyle = '#000'), a.fillRect(0, 0, K, Y);
+                ((a.fillStyle = '#000'), a.fillRect(0, 0, K, Y));
                 let r = Math.ceil(Y * (n.videoWidth / n.videoHeight)),
                     l = Math.ceil(K / r),
                     i = J.current;
                 if (null == i) return;
-                (i.width = r), (i.height = Y);
+                ((i.width = r), (i.height = Y));
                 let o = null == i ? void 0 : i.getContext('2d', { willReadFrequently: !0 });
                 if (null == o) return;
                 let s = $.current;
@@ -232,15 +232,15 @@ let _ = function (e) {
                 }
                 for (let e = 0; e < l; e++)
                     await new Promise((t) => {
-                        (n.onseeked = () => {
-                            a.drawImage(n, r * e, 0, r, Y), o.drawImage(n, 0, 0, r, Y);
+                        ((n.onseeked = () => {
+                            (a.drawImage(n, r * e, 0, r, Y), o.drawImage(n, 0, 0, r, Y));
                             let i = o.getImageData(0, 0, r, Y);
-                            null == s[l] && (s[l] = []), (s[l][e] = i), t();
+                            (null == s[l] && (s[l] = []), (s[l][e] = i), t());
                         }),
-                            (n.currentTime = (r / K) * I * e);
+                            (n.currentTime = (r / K) * I * e));
                     });
             })();
-        }, [K, Y, G, I, J]);
+        }, [K, Y, G, I, J]));
     let eo = M - N.start,
         es = null == (l = S.current) ? void 0 : l.videoElement;
     return (0, a.jsx)('div', {
@@ -297,7 +297,7 @@ let _ = function (e) {
                                 if (null != e) {
                                     if ((A(e.duration), 0 === N.start && (0 === N.end || N.end === e.duration))) {
                                         var t;
-                                        null == (t = S.current) || t.seek(e.duration / 2), z(e.duration / 2);
+                                        (null == (t = S.current) || t.seek(e.duration / 2), z(e.duration / 2));
                                     }
                                     0 === N.end && E((t) => y(j({}, t), { end: e.duration }));
                                 }
@@ -377,7 +377,7 @@ function w(e) {
     let t = Math.floor(e / 60),
         n = Math.floor(e % 60),
         a = Math.floor((e % 1) * 100);
-    return (t = t < 10 ? '0' + t : t), (n = n < 10 ? '0' + n : n), (a = a < 10 ? '0' + a : a), ''.concat(t, ':').concat(n, '.').concat(a);
+    return ((t = t < 10 ? '0' + t : t), (n = n < 10 ? '0' + n : n), (a = a < 10 ? '0' + a : a), ''.concat(t, ':').concat(n, '.').concat(a));
 }
 function C(e) {
     let t = Math.floor(e / 60),

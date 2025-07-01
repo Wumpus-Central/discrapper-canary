@@ -4,11 +4,11 @@ function r(e, t) {
 function i(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+        ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
     }
 }
 function a(e, t, n) {
-    return t && i(e.prototype, t), n && i(e, n), e;
+    return (t && i(e.prototype, t), n && i(e, n), e);
 }
 function o(e, t, n) {
     return (
@@ -26,12 +26,12 @@ function o(e, t, n) {
 n.d(t, { I: () => s });
 var s = (function () {
     function e(t, n) {
-        r(this, e), o(this, 'xs', void 0), o(this, 'ys', void 0), o(this, 'c1s', void 0), o(this, 'c2s', void 0), o(this, 'c3s', void 0);
+        (r(this, e), o(this, 'xs', void 0), o(this, 'ys', void 0), o(this, 'c1s', void 0), o(this, 'c2s', void 0), o(this, 'c3s', void 0));
         for (var i, a, s, l = t.length, c = [], u = 0; u < l; u++) c.push(u);
         c.sort(function (e, n) {
             return t[e] < t[n] ? -1 : 1;
         });
-        for (var d = [], f = [], _ = [], p = 0; p < l - 1; p++) (i = t[p + 1] - t[p]), (a = n[p + 1] - n[p]), f.push(i), d.push(a), _.push(a / i);
+        for (var d = [], f = [], _ = [], p = 0; p < l - 1; p++) ((i = t[p + 1] - t[p]), (a = n[p + 1] - n[p]), f.push(i), d.push(a), _.push(a / i));
         for (var h = [_[0]], m = 0; m < f.length - 1; m++) {
             var g = _[m],
                 E = _[m + 1];
@@ -49,9 +49,9 @@ var s = (function () {
             var T = h[I],
                 S = 1 / f[I],
                 A = T + h[I + 1] - s - s;
-            O.push((s - T - A) * S), v.push(A * S * S);
+            (O.push((s - T - A) * S), v.push(A * S * S));
         }
-        (this.xs = t), (this.ys = n), (this.c1s = h), (this.c2s = O), (this.c3s = v);
+        ((this.xs = t), (this.ys = n), (this.c1s = h), (this.c2s = O), (this.c3s = v));
     }
     return (
         a(e, [

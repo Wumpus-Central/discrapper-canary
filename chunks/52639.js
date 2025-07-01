@@ -23,12 +23,12 @@ function y(e) {
         x = (0, i.Z)(),
         { mutualFriendsCount: v, mutualFriends: j, mutualGuilds: O } = (0, c.Z)(t),
         E = !t.bot && null != v && v > 0,
-        I = null != O && O.length > 0;
-    return E || I
+        S = null != O && O.length > 0;
+    return E || S
         ? (0, r.jsxs)(m.Z.Overlay, {
               className: _.overlay,
               children: [
-                  I &&
+                  S &&
                       (0, r.jsx)(g.Z, {
                           section: 'MUTUAL_GUILDS',
                           header: b.intl.string(b.t['4lTDZm']),
@@ -47,7 +47,7 @@ function y(e) {
                               );
                           })
                       }),
-                  I && E && (0, r.jsx)(p.Z, { className: _.divider }),
+                  S && E && (0, r.jsx)(p.Z, { className: _.divider }),
                   E &&
                       (0, r.jsx)(g.Z, {
                           section: 'MUTUAL_FRIENDS',
@@ -90,7 +90,7 @@ function y(e) {
                                                             for (var t = 1; t < arguments.length; t++) {
                                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                                     r = Object.keys(n);
-                                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                                     (r = r.concat(
                                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -98,7 +98,7 @@ function y(e) {
                                                                     )),
                                                                     r.forEach(function (t) {
                                                                         var r;
-                                                                        (r = n[t]),
+                                                                        ((r = n[t]),
                                                                             t in e
                                                                                 ? Object.defineProperty(e, t, {
                                                                                       value: r,
@@ -106,8 +106,8 @@ function y(e) {
                                                                                       configurable: !0,
                                                                                       writable: !0
                                                                                   })
-                                                                                : (e[t] = r);
-                                                                    });
+                                                                                : (e[t] = r));
+                                                                    }));
                                                             }
                                                             return e;
                                                         })({}, C)),

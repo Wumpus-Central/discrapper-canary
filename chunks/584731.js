@@ -36,12 +36,12 @@ class h extends r.ZP.Store {
         return null != (r = null == (n = this.guilds.get(e)) ? void 0 : n.messageRecord(t)) ? r : null;
     }
     data(e) {
-        return this.guilds.has(e) || this.guilds.set(e, new c.B()), this.guilds.get(e);
+        return (this.guilds.has(e) || this.guilds.set(e, new c.B()), this.guilds.get(e));
     }
     handleOneGuildCreate(e) {
         var t, n;
         let r = this.data(e.id);
-        r.putMany(null != (t = e.lastMessages) ? t : [], this.generation), r.putMany(null != (n = e.threadMessages) ? n : [], this.generation), null != e.lastMessages && (r.localNeeded = !1);
+        (r.putMany(null != (t = e.lastMessages) ? t : [], this.generation), r.putMany(null != (n = e.threadMessages) ? n : [], this.generation), null != e.lastMessages && (r.localNeeded = !1));
     }
     handleConnectionOpen(e) {
         for (let t of ((this.generation += 1), e.guilds)) this.handleOneGuildCreate(t);
@@ -84,13 +84,13 @@ class h extends r.ZP.Store {
         var t, n;
         let r = o.Z.getBasicChannel(e.channelId);
         if (null == r) return !1;
-        (0, l.Z)(e.messages), e.isAfter || e.isBefore || e.hasMoreAfter ? this.data(r.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, this.generation) : this.data(r.guild_id).put(e.channelId, null != (t = e.messages[0]) ? t : null, this.generation);
+        ((0, l.Z)(e.messages), e.isAfter || e.isBefore || e.hasMoreAfter ? this.data(r.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, this.generation) : this.data(r.guild_id).put(e.channelId, null != (t = e.messages[0]) ? t : null, this.generation));
     }
     handleLocalMessagesLoaded(e) {
         let t = o.Z.getBasicChannel(e.channelId);
         if (null != t) {
             var n;
-            (0, l.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, d);
+            ((0, l.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, d));
         }
     }
     handleMessagePreviewsLoaded(e) {
@@ -108,7 +108,7 @@ class h extends r.ZP.Store {
         this.guilds.clear();
     }
     constructor() {
-        super(i.Z, {
+        (super(i.Z, {
             CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
             GUILD_CREATE: (e) => this.handleGuildCreate(e),
             GUILD_DELETE: (e) => this.handleGuildDelete(e),
@@ -123,7 +123,7 @@ class h extends r.ZP.Store {
             THREAD_LIST_SYNC: (e) => this.handleThreadListSync(e)
         }),
             u(this, 'guilds', new Map()),
-            u(this, 'generation', 0);
+            u(this, 'generation', 0));
     }
 }
 new h();

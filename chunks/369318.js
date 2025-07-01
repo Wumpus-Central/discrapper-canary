@@ -65,7 +65,7 @@ let f = (0, o.NZ)(i, (200 / Math.PI) * u(50), 100 * u(50), 'average', !1),
                         if (e <= 2e-12) return s;
                         f = e;
                     }
-                    (i -= ((s[1] - c) * i) / (2 * s[1])), (l += 1);
+                    ((i -= ((s[1] - c) * i) / (2 * s[1])), (l += 1));
                 }
                 return (0, o.Zk)(
                     {

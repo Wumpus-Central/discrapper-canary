@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+(n.d(t, { Z: () => Z }), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -103,7 +103,7 @@ class j extends r.Component {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             C(this, 'state', { showOpacitySlider: !1 }),
             C(this, 'handleClickCall', (e) => {
                 let { channel: t, userIsInChannelCall: n, channelHasActiveCall: i } = this.props;
@@ -115,11 +115,11 @@ class j extends r.Component {
             }),
             C(this, 'handleOpenOpacitySettings', () => {
                 let { pinned: e } = this.props;
-                this.setState({ showOpacitySlider: !0 }), e && c.Z.setPreviewInGameMode(!0);
+                (this.setState({ showOpacitySlider: !0 }), e && c.Z.setPreviewInGameMode(!0));
             }),
             C(this, 'handleCloseOpacitySettings', () => {
                 let { pinned: e } = this.props;
-                this.setState({ showOpacitySlider: !1 }), e && c.Z.setPreviewInGameMode(!1);
+                (this.setState({ showOpacitySlider: !1 }), e && c.Z.setPreviewInGameMode(!1));
             }),
             C(this, 'handleMouseDown', (e) => {
                 let { onMouseDown: t } = this.props;
@@ -148,7 +148,7 @@ class j extends r.Component {
                               })
                           ]
                       });
-            });
+            }));
     }
 }
 function Z(e) {
@@ -163,12 +163,12 @@ function Z(e) {
                         i,
                         r = {},
                         o = Object.keys(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['channel']);
@@ -187,7 +187,7 @@ function Z(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     i = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -195,7 +195,7 @@ function Z(e) {
                     )),
                     i.forEach(function (t) {
                         C(e, t, n[t]);
-                    });
+                    }));
             }
             return e;
         })(

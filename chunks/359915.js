@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(442837),
     i = n(570140),
     a = n(147913),
@@ -54,12 +54,12 @@ class u extends a.Z {
             });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             c(this, 'actions', {
                 CHANNEL_DELETE: this.handleChannelDelete,
                 MESSAGE_CREATE: this.handleMessageCreate,
                 GUILD_DELETE: this.handleGuildDelete
-            });
+            }));
     }
 }
 let d = new u();

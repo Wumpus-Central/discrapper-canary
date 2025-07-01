@@ -3,13 +3,13 @@ a.d(e, {
     Cd: () => T,
     HY: () => A,
     Jd: () => i,
-    KQ: () => d,
+    KQ: () => R,
     R: () => E,
     V$: () => u,
     f4: () => I,
     gv: () => s,
     mL: () => f,
-    zQ: () => R
+    zQ: () => d
 });
 var r = a(967752),
     _ = a(202811),
@@ -65,7 +65,7 @@ ${JSON.stringify(e)}
         : (function (t) {
               let e = new Uint8Array(t.reduce((t, e) => t + e.length, 0)),
                   a = 0;
-              for (let r of t) e.set(r, a), (a += r.length);
+              for (let r of t) (e.set(r, a), (a += r.length));
               return e;
           })(r);
 }
@@ -73,12 +73,12 @@ function I(t) {
     let e = 'string' == typeof t ? l(t) : t;
     function a(t) {
         let a = e.subarray(0, t);
-        return (e = e.subarray(t + 1)), a;
+        return ((e = e.subarray(t + 1)), a);
     }
     function r() {
         var t;
         let r = e.indexOf(10);
-        return r < 0 && (r = e.length), JSON.parse(((t = a(r)), o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill ? o.n.__SENTRY__.decodePolyfill(t) : new TextDecoder().decode(t)));
+        return (r < 0 && (r = e.length), JSON.parse(((t = a(r)), o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill ? o.n.__SENTRY__.decodePolyfill(t) : new TextDecoder().decode(t))));
     }
     let _ = r(),
         n = [];
@@ -89,10 +89,10 @@ function I(t) {
     }
     return [_, n];
 }
-function d(t) {
+function R(t) {
     return [{ type: 'span' }, t];
 }
-function R(t) {
+function d(t) {
     let e = 'string' == typeof t.data ? l(t.data) : t.data;
     return [
         (0, n.Jr)({

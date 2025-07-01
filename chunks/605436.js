@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $7: () => Q,
     $e: () => W,
     GJ: () => y,
@@ -23,7 +23,7 @@ n.d(t, {
     zB: () => Z
 }),
     n(642613),
-    n(539854);
+    n(539854));
 var r = n(149765),
     i = n(866442),
     a = n(741361),
@@ -56,7 +56,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -64,7 +64,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -110,7 +110,7 @@ function S(e, t, n, i) {
     if (null == a) return !1;
     if (null == e) return a.id !== t;
     let o = e.permissionOverwrites[t];
-    return (null == i ? void 0 : i[t]) != null && (o = i[t]), null == o || !r.e$(o.allow, n);
+    return ((null == i ? void 0 : i[t]) != null && (o = i[t]), null == o || !r.e$(o.allow, n));
 }
 function A(e, t) {
     return _.default.castGuildIdAsEveryoneGuildRoleId(e) === t;
@@ -248,7 +248,7 @@ function Y(e, t, n) {
     let i = e.permissionOverwrites[e.guild_id];
     null == i && (i = f.we(e.guild_id));
     let a = b({}, i);
-    return (a.deny = r.Od(a.deny, t)), (a.allow = r.Od(a.allow, t)), n || (a.deny = r.IH(a.deny, t)), a;
+    return ((a.deny = r.Od(a.deny, t)), (a.allow = r.Od(a.allow, t)), n || (a.deny = r.IH(a.deny, t)), a);
 }
 function W(e, t, n) {
     let r = Y(e, t, n);
@@ -269,13 +269,13 @@ function K(e, t) {
     }
     {
         let { allow: n, deny: o } = i;
-        return (n = r.IH(n, t)), (0, a.kY)(e, i.id, n, o);
+        return ((n = r.IH(n, t)), (0, a.kY)(e, i.id, n, o));
     }
 }
 function z(e, t) {
     if (null == e) return !1;
     let n = e.permissionOverwrites[e.guild_id];
-    return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.e$(n.deny, e.accessPermissions);
+    return ((null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.e$(n.deny, e.accessPermissions));
 }
 function q(e, t) {
     let n = Object.keys(t);

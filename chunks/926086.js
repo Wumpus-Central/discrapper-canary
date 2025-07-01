@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(415506);
+(n.d(t, { Z: () => m }), n(388685), n(415506));
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -35,30 +35,30 @@ function m(e) {
             reappearTimeMs: x
         },
         S = r.useRef(I);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         S.current = I;
     }),
         r.useEffect(
             () => (
                 (b.current = setInterval(() => {
                     let e = Date.now();
-                    g(e),
+                    (g(e),
                         O((t) => {
                             if (0 === t) return e;
                             let n = e - t,
                                 i = S.current.timeToLiveMs,
                                 r = i + S.current.reappearTimeMs;
                             return n > i ? t + r : t;
-                        });
+                        }));
                 }, 100)),
                 () => {
                     clearInterval(b.current);
                 }
             ),
             []
-        );
+        ));
     let j = () => {
-            a(Date.now()), E((e) => e + 1);
+            (a(Date.now()), E((e) => e + 1));
         },
         C = o > 0 && m - o < 1000,
         N = (0, u.Yzy)(y > 0 && y < m && m - y < _, {

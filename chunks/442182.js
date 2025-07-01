@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => A }), n(781311), n(642613), n(388685);
+(n.d(t, { ZP: () => A }), n(781311), n(642613), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -29,7 +29,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -45,8 +45,8 @@ function T(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -132,7 +132,7 @@ function R(e) {
         let i = f.default.getUser(t.id);
         null != i &&
             (0, c.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('26976'), n.e('51458')]).then(n.bind(n, 415118));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('26976'), n.e('73518')]).then(n.bind(n, 415118));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -309,7 +309,7 @@ function A(e) {
                 return null != (n = null == (e = x.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
             }) > C.length,
         R = () => {
-            h.default.track(N.rMx.OPEN_MODAL, {
+            (h.default.track(N.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
                 location_page: 'Role Settings',
                 location_section: 'Members'
@@ -324,7 +324,7 @@ function A(e) {
                                 guildId: t.id
                             })
                         );
-                });
+                }));
         };
     return (0, r.jsxs)('div', {
         className: E.container,

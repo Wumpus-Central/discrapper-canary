@@ -14,7 +14,7 @@ function a(e) {
 }
 function o(e) {
     let t = r.useRef(e);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         t.current = e;
     }),
         r.useEffect(
@@ -22,5 +22,5 @@ function o(e) {
                 t.current();
             },
             []
-        );
+        ));
 }

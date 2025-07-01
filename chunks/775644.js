@@ -39,13 +39,13 @@ let s = Object.freeze({}),
             } catch (n) {
                 let e = new l.HF(n);
                 throw (
-                    (i.Z.dispatch({
+                    i.Z.dispatch({
                         type: 'GIFT_CODE_REDEEM_FAILURE',
                         code: t,
                         error: e
                     }),
                     null == u || u(e),
-                    e)
+                    e
                 );
             }
         }

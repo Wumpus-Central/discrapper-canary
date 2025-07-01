@@ -83,7 +83,7 @@ e.exports = function (e) {
                 },
                 {}
             );
-            return s.contains.push(o), s.contains.push(e.C_NUMBER_MODE), s.contains.push(e.C_BLOCK_COMMENT_MODE), s.contains.push(n), s;
+            return (s.contains.push(o), s.contains.push(e.C_NUMBER_MODE), s.contains.push(e.C_BLOCK_COMMENT_MODE), s.contains.push(n), s);
         },
         l = {
             className: 'built_in',

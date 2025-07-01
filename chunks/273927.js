@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     GF: () => S,
     ZP: () => T,
     yo: () => v
 }),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -57,14 +57,14 @@ function C(e) {
         h = (0, a.e7)([g.default], () => g.default.getUser(n)),
         [f, b] = r.useState(!1),
         _ = r.useCallback(() => {
-            b(!0),
+            (b(!0),
                 p
                     ? c.Z.unblockUser(n).catch(() => {
                           b(!1);
                       })
                     : c.Z.unignoreUser(n, u.Z.USER_SETTINGS).catch(() => {
                           b(!1);
-                      });
+                      }));
         }, [p, n]);
     return null == h
         ? null

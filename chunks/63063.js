@@ -25,7 +25,7 @@ let _ = {
     getCommunityURL: () => d('/hc/'.concat(f())),
     getSubmitRequestURL(e) {
         let t = d('/hc/'.concat(f(), '/requests/new?platform=').concat(encodeURIComponent((0, a.getPlatformName)())));
-        return null != e && (t += '&device_info='.concat(encodeURIComponent(e))), t;
+        return (null != e && (t += '&device_info='.concat(encodeURIComponent(e))), t);
     },
     getSearchURL(e) {
         let t = encodeURIComponent(e);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(125548);
+(n.d(t, { Z: () => f }), n(125548));
 var r = n(255367),
     i = n(73800),
     a = n(25209),
@@ -30,7 +30,7 @@ function f(e) {
                     : void 0;
             if (f.previewLinkTarget && !(0, u.r)(t)) {
                 let e = '\n\n('.concat(t.target, ')');
-                p.length + e.length > d && ((e = '...' + e), (p = (p = p.substr(0, d - e.length)).trimEnd())), (p += e);
+                (p.length + e.length > d && ((e = '...' + e), (p = (p = p.substr(0, d - e.length)).trimEnd())), (p += e));
             }
             return f.noStyleAndInteraction
                 ? (0, r.jsx)(

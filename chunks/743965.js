@@ -1,17 +1,17 @@
-t.d(n, { d: () => _ }), t(388685);
+(t.d(n, { d: () => _ }), t(388685));
 var r = t(255367),
     l = t(73800),
     i = t(120356),
-    u = t.n(i),
-    o = t(481060),
-    c = t(663993),
+    o = t.n(i),
+    c = t(481060),
+    u = t(663993),
     a = t(572004),
     d = t(73433),
     s = t(283574);
 function f(e) {
     let { text: n } = e,
         [t, i] = l.useState(!1);
-    return (0, r.jsx)(o.P3F, {
+    return (0, r.jsx)(c.P3F, {
         onClick: () => {
             (0, a.JG)(
                 n,
@@ -20,11 +20,11 @@ function f(e) {
             );
         },
         children: t
-            ? (0, r.jsx)(o.dz2, {
+            ? (0, r.jsx)(c.dz2, {
                   size: 'xs',
                   color: 'currentColor'
               })
-            : (0, r.jsx)(o.TIy, {
+            : (0, r.jsx)(c.TIy, {
                   size: 'xs',
                   color: 'currentColor'
               })
@@ -34,7 +34,7 @@ function _(e) {
     let { language: n, content: l } = e,
         i = () =>
             (0, r.jsx)('code', {
-                className: u()(s.scrollbarGhostHairline, 'hljs'),
+                className: o()(s.scrollbarGhostHairline, 'hljs'),
                 children: l
             });
     return (0, r.jsx)('pre', {
@@ -47,7 +47,7 @@ function _(e) {
                           children: (0, r.jsx)(f, { text: l })
                       })
                     : null,
-                (0, r.jsx)(c.GI, {
+                (0, r.jsx)(u.GI, {
                     createPromise: () => Promise.resolve().then(t.bind(t, 364964)),
                     webpackId: 364964,
                     renderFallback: i,
@@ -58,7 +58,7 @@ function _(e) {
                             return null == t
                                 ? i()
                                 : (0, r.jsx)('code', {
-                                      className: u()(s.scrollbarGhostHairline, 'hljs', t.language),
+                                      className: o()(s.scrollbarGhostHairline, 'hljs', t.language),
                                       dangerouslySetInnerHTML: { __html: t.value }
                                   });
                         }

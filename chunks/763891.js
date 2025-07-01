@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+(n.d(t, { Z: () => L }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(979554),
@@ -132,7 +132,7 @@ function L(e) {
                                   totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      D(e), F();
+                                      (D(e), F());
                                   },
                                   disablePaginationGap: !0
                               })

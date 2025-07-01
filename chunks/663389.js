@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,13 +51,13 @@ let f = c.QZA.CLOSED,
     S = null,
     A = null;
 function N(e) {
-    (y = !0), C(e);
+    ((y = !0), C(e));
 }
 function C(e) {
     var t, n, r, i, a, o;
     let s = l.default.getCurrentUser();
     if (null == s) return R();
-    (p = null != (t = e.section) ? t : p),
+    ((p = null != (t = e.section) ? t : p),
         (S = null != (n = e.section) ? n : p),
         null != e.subsection && null != p && (h[p] = e.subsection),
         null != e.scrollPosition && null != p && (m[p] = e.scrollPosition),
@@ -82,14 +82,14 @@ function C(e) {
         (v = null != (r = e.onClose) ? r : null),
         (I = null != (i = e.analyticsLocation) ? i : null),
         (T = null != (a = e.analyticsLocations) ? a : []),
-        (A = null != (o = e.impressionSource) ? o : null);
+        (A = null != (o = e.impressionSource) ? o : null));
 }
 function R() {
-    (f = c.QZA.CLOSED), (y = !1), (E = null), (S = null), (b = null), (_ = null), (p = null), (h = {}), (m = {}), (v = null), (I = null), (T = []), (A = null);
+    ((f = c.QZA.CLOSED), (y = !1), (E = null), (S = null), (b = null), (_ = null), (p = null), (h = {}), (m = {}), (v = null), (I = null), (T = []), (A = null));
 }
 function P(e) {
     var t;
-    (_ = p), (p = e.section), (I = null), (T = null != (t = e.analyticsLocations) ? t : []), null != e.subsection && (h[p] = e.subsection);
+    ((_ = p), (p = e.section), (I = null), (T = null != (t = e.analyticsLocations) ? t : []), null != e.subsection && (h[p] = e.subsection));
 }
 function w(e) {
     let { forSection: t } = e;
@@ -110,7 +110,7 @@ function x() {
 }
 function k() {
     let e = l.default.getCurrentUser();
-    M(),
+    (M(),
         null != e &&
             (b = d(
                 {},
@@ -126,15 +126,15 @@ function k() {
                         claimed: e.isClaimed()
                     }
                 })
-            ));
+            )));
 }
 function M() {
-    (f = c.QZA.OPEN), (g = {});
+    ((f = c.QZA.OPEN), (g = {}));
 }
 function j(e) {
     var t;
     if (f !== c.QZA.SUBMITTING) return !1;
-    (f = c.QZA.OPEN), (p = c.oAB.ACCOUNT), (g = null != (t = e.errors) ? t : {});
+    ((f = c.QZA.OPEN), (p = c.oAB.ACCOUNT), (g = null != (t = e.errors) ? t : {}));
 }
 class U extends (r = o.ZP.Store) {
     initialize() {

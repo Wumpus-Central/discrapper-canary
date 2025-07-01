@@ -30,12 +30,12 @@ var i = n(255367),
     N = n(388032),
     y = n(967655);
 let A = () => {
-        (0, b.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
+        ((0, b.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: T.L.PRIMARY,
             forceTrack: !0
         }),
             (0, f.XO)(f.wh.CLIENT_THEMES),
-            (0, c.xf)();
+            (0, c.xf)());
     },
     P = () => {
         var e, t;

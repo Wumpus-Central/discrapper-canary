@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y }), n(388685);
+(n.d(t, { Z: () => Y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(314897),
     O = n(796974),
     E = n(323873),
-    I = n(607744),
-    S = n(375954),
+    S = n(607744),
+    I = n(375954),
     P = n(496675),
     Z = n(306680),
     N = n(62817),
@@ -33,17 +33,17 @@ var r = n(255367),
     R = n(47481),
     k = n(977391),
     M = n(959258),
-    D = n(73274),
-    L = n(419388),
+    L = n(73274),
+    D = n(419388),
     U = n(406534),
     B = n(981631),
     F = n(388032),
-    G = n(977659);
-function H(e) {
+    H = n(977659);
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function H(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -59,8 +59,8 @@ function H(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -92,19 +92,19 @@ function z(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
 let W = i.memo(
         function (e) {
             var t, n;
-            let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: x, channelStream: v, uploads: j, hasUnreads: E, editingMessageId: I, fontSize: S, keyboardModeEnabled: Z, filterAfterTimestamp: N, showingQuarantineBanner: T, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: M, isChatInputBottomAligned: W } = e,
+            let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: x, channelStream: v, uploads: j, hasUnreads: E, editingMessageId: S, fontSize: I, keyboardModeEnabled: Z, filterAfterTimestamp: N, showingQuarantineBanner: T, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: M, isChatInputBottomAligned: W } = e,
                 [Y, q] = i.useState(null != (n = O.Z.isAtBottom(g.id)) && n),
                 K = i.useMemo(
                     () =>
@@ -114,7 +114,7 @@ let W = i.memo(
                                   messageGroups: 30,
                                   groupRange: 4,
                                   attachments: 8,
-                                  fontSize: S,
+                                  fontSize: I,
                                   groupSpacing: p
                               })
                             : (0, k.aJ)({
@@ -122,25 +122,25 @@ let W = i.memo(
                                   messageGroups: 26,
                                   groupRange: 4,
                                   attachments: 8,
-                                  fontSize: S,
+                                  fontSize: I,
                                   groupSpacing: p
                               }),
-                    [x, S, p]
+                    [x, I, p]
                 ),
-                X = (0, L.ZP)({
+                X = (0, D.ZP)({
                     messages: b,
                     channel: g,
                     compact: x,
                     hasUnreads: E,
-                    focusId: I,
+                    focusId: S,
                     placeholderHeight: K.totalHeight,
                     canLoadMore: null == N,
                     handleScrollToBottom: i.useCallback(() => q(!0), [q]),
                     handleScrollFromBottom: i.useCallback(() => q(!1), [q])
                 }),
-                Q = (0, D.Z)({
+                Q = (0, L.Z)({
                     scrollerRef: X.ref,
-                    isEditing: null != I,
+                    isEditing: null != S,
                     keyboardModeEnabled: Z,
                     hasMoreAfter: b.hasMoreAfter
                 }),
@@ -186,7 +186,7 @@ let W = i.memo(
                         var t;
                         return null == (t = e.current) ? void 0 : t.scrollPageDown({ animate: !f.Z.useReducedMotion });
                     }, [e]);
-                (0, A.yp)({
+                ((0, A.yp)({
                     event: B.CkL.SCROLLTO_PRESENT,
                     handler: t
                 }),
@@ -197,7 +197,7 @@ let W = i.memo(
                     (0, A.yp)({
                         event: B.CkL.SCROLL_PAGE_DOWN,
                         handler: r
-                    });
+                    }));
             })(X.ref);
             let ei = (0, u.mFp)(),
                 el = (0, s.l2)(Q),
@@ -205,7 +205,7 @@ let W = i.memo(
                 ea = z(el, ['ref']),
                 es = (0, h.Z)((e) => {
                     var t;
-                    (X.ref.current = e), (eo.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                    ((X.ref.current = e), (eo.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                 }),
                 { fadeStart: ec, fadeEnd: eu } = (0, u.q_F)({
                     fadeStart: M && !Y ? 96 : 16,
@@ -221,7 +221,7 @@ let W = i.memo(
                 children: [
                     null != er && er,
                     (0, r.jsxs)(a.animated.div, {
-                        className: o()(G.messagesWrapper, l, 'group-spacing-'.concat(p)),
+                        className: o()(H.messagesWrapper, l, 'group-spacing-'.concat(p)),
                         style: W
                             ? {
                                   mask: (0, a.to)([ec, eu], (e, t) => 'linear-gradient(180deg, black 0%, black calc(100% - '.concat(e, 'px), rgba(0,0,0,0) calc(100% - ').concat(t, 'px), rgba(0,0,0,0) 100%)'))
@@ -232,12 +232,12 @@ let W = i.memo(
                             (0, r.jsxs)(
                                 u.eTT,
                                 V(
-                                    H(
+                                    G(
                                         {
                                             ref: es,
                                             customTheme: !0,
-                                            className: o()(m, G.scroller),
-                                            contentClassName: G.scrollerContent,
+                                            className: o()(m, H.scroller),
+                                            contentClassName: H.scrollerContent,
                                             onResize: X.handleResize,
                                             onScroll: X.handleScroll,
                                             onMouseDown: X.handleMouseDown,
@@ -253,9 +253,9 @@ let W = i.memo(
                                             (0, r.jsxs)(
                                                 'ol',
                                                 V(
-                                                    H(
+                                                    G(
                                                         {
-                                                            className: o()(G.scrollerInner, { [G.scrollerAllowSticky]: g.isModeratorReportChannel() }),
+                                                            className: o()(H.scrollerInner, { [H.scrollerAllowSticky]: g.isModeratorReportChannel() }),
                                                             'aria-label': F.intl.formatToPlainString(F.t.XarRiI, { channelName: g.name })
                                                         },
                                                         ea
@@ -263,7 +263,7 @@ let W = i.memo(
                                                     {
                                                         children: [
                                                             (0, r.jsx)('span', {
-                                                                className: G.navigationDescription,
+                                                                className: H.navigationDescription,
                                                                 id: 'messagesNavigationDescription',
                                                                 'aria-hidden': !0,
                                                                 children: F.intl.string(F.t.Spb3s7)
@@ -271,9 +271,9 @@ let W = i.memo(
                                                             $,
                                                             (0, r.jsx)('div', {
                                                                 className: o()({
-                                                                    [G.scrollerSpacer]: !T,
-                                                                    [G.empty]: 0 === b.length && !b.loadingMore,
-                                                                    [G.emptyForum]: 1 === b.length && !b.loadingMore && g.isForumPost() && (null == (t = b.first()) ? void 0 : t.isFirstMessageInForumPost(g))
+                                                                    [H.scrollerSpacer]: !T,
+                                                                    [H.empty]: 0 === b.length && !b.loadingMore,
+                                                                    [H.emptyForum]: 1 === b.length && !b.loadingMore && g.isForumPost() && (null == (t = b.first()) ? void 0 : t.isFirstMessageInForumPost(g))
                                                                 })
                                                             })
                                                         ]
@@ -302,7 +302,7 @@ let W = i.memo(
                 canChat: O
             } = (function (e) {
                 let t = e.getGuildId(),
-                    n = (0, c.e7)([I.Z], () => null == t || I.Z.canChatInGuild(t), [t]),
+                    n = (0, c.e7)([S.Z], () => null == t || S.Z.canChatInGuild(t), [t]),
                     { canManageMessages: r, permissionVersion: i } = (0, c.cj)(
                         [P.Z],
                         () => ({
@@ -320,8 +320,8 @@ let W = i.memo(
             {
                 messageGroupSpacing: A,
                 fontSize: k,
-                messageDisplayCompact: D,
-                renderSpoilers: L,
+                messageDisplayCompact: L,
+                renderSpoilers: D,
                 keyboardModeEnabled: U
             } = (function () {
                 let e = v.jU.useSetting(),
@@ -348,12 +348,12 @@ let W = i.memo(
             })(),
             {
                 messages: F,
-                channelStream: G,
+                channelStream: H,
                 oldestUnreadMessageId: Y,
                 editingMessageId: q
             } = (function (e) {
                 var t, n;
-                let r = (0, c.e7)([S.Z], () => S.Z.getMessages(e.id), [e.id]),
+                let r = (0, c.e7)([I.Z], () => I.Z.getMessages(e.id), [e.id]),
                     l = (0, c.e7)(
                         [Z.ZP],
                         () => {
@@ -411,17 +411,17 @@ let W = i.memo(
                 };
             })(t);
         return (0, r.jsx)(b.aQ.Provider, {
-            value: (0, w.Z)(L, h),
+            value: (0, w.Z)(D, h),
             children: (0, r.jsx)(M.v, {
                 children: (0, r.jsx)(
                     W,
-                    V(H({}, d), {
+                    V(G({}, d), {
                         messageGroupSpacing: A,
                         showNewMessagesBar: !0,
                         channel: t,
-                        messageDisplayCompact: !a && (o || D),
+                        messageDisplayCompact: !a && (o || L),
                         messages: F,
-                        channelStream: G,
+                        channelStream: H,
                         permissionVersion: C,
                         uploads: (0, c.e7)([N.Z], () => N.Z.getFiles(t.id), [t]),
                         unreadCount: (0, c.e7)([Z.ZP], () => Z.ZP.getUnreadCount(t.id), [t]),

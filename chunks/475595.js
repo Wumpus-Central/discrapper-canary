@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Dm: () => b,
     N0: () => f,
     Q2: () => E,
@@ -18,7 +18,7 @@ n.d(t, {
     n(111804),
     n(490233),
     n(97749),
-    n(388685);
+    n(388685));
 var r = n(887003),
     i = n(591759),
     a = n(921948),
@@ -30,7 +30,7 @@ let u = 3,
     d = /\.([a-zA-Z0-9]+)$/,
     f = ['video/mp4', 'video/webm'];
 var _ = (function (e) {
-    return (e.HERO = 'hero'), (e.HERO_IMAGE = 'hero_image'), (e.HERO_VIDEO = 'hero_video'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.QUEST_BAR_HERO_VIDEO = 'quest_bar_hero_video'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
+    return ((e.HERO = 'hero'), (e.HERO_IMAGE = 'hero_image'), (e.HERO_VIDEO = 'hero_video'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.QUEST_BAR_HERO_VIDEO = 'quest_bar_hero_video'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e);
 })({});
 function p(e, t, n) {
     let r = E(e, t, n),

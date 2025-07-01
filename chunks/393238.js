@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     PM: () => c,
     ZP: () => s,
     kE: () => l
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(374470),
     a = n(393903),
@@ -18,7 +18,7 @@ function s() {
             l,
             (e) => {
                 let { width: t, height: n } = e;
-                s(n), a(t);
+                (s(n), a(t));
             },
             t
         ),
@@ -39,7 +39,7 @@ function l() {
                     scrollHeight: void 0
                 };
             let n = e.target;
-            s(n.scrollHeight), t(n.scrollWidth);
+            (s(n.scrollHeight), t(n.scrollWidth));
         });
     return {
         ref: (0, a.y)(l),
@@ -58,7 +58,7 @@ function c(e, t) {
                     let t = e.current;
                     if (null != t) {
                         let e = window.getComputedStyle(t);
-                        null == c && (c = parseFloat(null != (s = e.width) ? s : '0')), null == u && (u = parseFloat(null != (l = e.height) ? l : '0'));
+                        (null == c && (c = parseFloat(null != (s = e.width) ? s : '0')), null == u && (u = parseFloat(null != (l = e.height) ? l : '0')));
                     }
                 }
                 t({

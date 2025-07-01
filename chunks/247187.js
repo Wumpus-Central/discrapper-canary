@@ -72,7 +72,7 @@ for (
 )
     o['f' + s] = 111 + s;
 function l(e, t, n) {
-    !t || 'byKey' in t || ((n = t), (t = null)), Array.isArray(e) || (e = [e]);
+    (!t || 'byKey' in t || ((n = t), (t = null)), Array.isArray(e) || (e = [e]));
     var r = e.map(function (e) {
             return d(e, t);
         }),
@@ -105,10 +105,10 @@ function d(e, t) {
             m && (h = h.slice(0, -1));
             var g = p(h),
                 E = i[g];
-            (1 !== o && E) || (n ? (r.key = g) : (r.which = _(h))), E && (r[E] = !m || null);
+            ((1 !== o && E) || (n ? (r.key = g) : (r.which = _(h))), E && (r[E] = !m || null));
         }
     } catch (e) {
-        (c = !0), (u = e);
+        ((c = !0), (u = e));
     } finally {
         try {
             !l && f.return && f.return();
@@ -132,4 +132,4 @@ function _(e) {
 function p(e) {
     return (e = a[(e = e.toLowerCase())] || e);
 }
-(n = l), (n = l), (n = c), (t.isKeyHotkey = u);
+((n = l), (n = l), (n = c), (t.isKeyHotkey = u));

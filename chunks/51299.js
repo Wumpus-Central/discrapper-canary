@@ -1,4 +1,4 @@
-a.d(e, { default: () => h }), a(953529);
+(a.d(e, { default: () => h }), a(953529));
 var i = a(255367);
 a(73800);
 var t = a(512722),
@@ -117,7 +117,7 @@ function h(n) {
                 }),
                 (0, i.jsx)(u, {
                     onComplete: function (n) {
-                        a(n), t();
+                        (a(n), t());
                     },
                     excludedPlatformTypes: l,
                     includedPlatformTypes: c
@@ -127,7 +127,7 @@ function h(n) {
                     onCompleteApplication:
                         null != r
                             ? function (n) {
-                                  null == r || r(n), t();
+                                  (null == r || r(n), t());
                               }
                             : void 0
                 })

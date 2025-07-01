@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(35282), n(415506), n(539854), n(993155);
+(n.d(t, { Z: () => j }), n(388685), n(35282), n(415506), n(539854), n(993155));
 var r,
     i = n(348327),
     a = n.n(i),
@@ -60,21 +60,21 @@ async function w(e, t) {
             body: { data: i }
         } = await P('/games', { id: e }, t),
         a = null == (n = i[0]) ? void 0 : n.name;
-    return (C[e] = a), a;
+    return ((C[e] = a), a);
 }
 class D {
     start() {
         this._started || ((this._started = !0), _.Z.isFetching() ? c.Z.fetch() : this._check());
     }
     stop() {
-        (this._started = !1),
+        ((this._started = !1),
             (A = null),
             (S = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             l.Z.dispatch({
                 type: 'STREAMING_UPDATE',
                 stream: null
-            });
+            }));
     }
     async _checkTwitch(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -157,7 +157,7 @@ class D {
                 return c.Z.refreshAccessToken(e.type, e.id)
                     .then((t) => this._checkYouTube(e, t))
                     .catch(() => null);
-            return 403 === n.status && N.add(e.id), null;
+            return (403 === n.status && N.add(e.id), null);
         }
     }
     _check() {
@@ -167,25 +167,25 @@ class D {
         null != this._nextCheck && clearTimeout(this._nextCheck);
         let t = [h.ABu.TWITCH],
             n = Date.now();
-        S <= n && (t.push(h.ABu.YOUTUBE), (S = n + y)),
+        (S <= n && (t.push(h.ABu.YOUTUBE), (S = n + y)),
             Promise.allSettled(e.filter((e) => t.includes(e.type)).map((e) => (e.type === h.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e)))).then((e) => {
                 if (this._started) {
                     var t;
                     let n = null == (t = e.find((e) => 'fulfilled' === e.status && null != e.value)) ? void 0 : t.value;
-                    null == n && null != A && (n = A),
+                    (null == n && null != A && (n = A),
                         l.Z.dispatch({
                             type: 'STREAMING_UPDATE',
                             stream: n
-                        });
+                        }));
                 }
                 this._scheduleCheck();
-            });
+            }));
     }
     _scheduleCheck() {
         this._started && (this._nextCheck = setTimeout(() => this._check(), E));
     }
     constructor() {
-        m(this, '_nextCheck', void 0), m(this, '_started', void 0), (this._started = !1);
+        (m(this, '_nextCheck', void 0), m(this, '_started', void 0), (this._started = !1));
     }
 }
 let L = new D();
@@ -199,7 +199,7 @@ function k(e) {
 }
 class M extends (r = o.ZP.Store) {
     initialize() {
-        x(), this.waitFor(_.Z), this.syncWith([p.Z], x);
+        (x(), this.waitFor(_.Z), this.syncWith([p.Z], x));
     }
     getStream() {
         return T;

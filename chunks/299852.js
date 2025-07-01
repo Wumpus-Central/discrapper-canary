@@ -1,21 +1,21 @@
-n.d(t, { Z: () => I }), n(35282), n(388685);
+(n.d(t, { Z: () => v }), n(35282), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
-    a = n(593473),
-    o = n(442837),
-    s = n(544891),
+    s = n(593473),
+    a = n(442837),
+    o = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
     h = n(108427),
     p = n(598077),
-    m = n(896797),
-    g = n(981631),
+    g = n(896797),
+    m = n(981631),
     f = n(930441),
     _ = n(388032),
     x = n(20493);
-function E(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,14 +28,14 @@ function E(e, t, n) {
         e
     );
 }
-o.ZP.initialize();
-class b extends (r = l.PureComponent) {
+a.ZP.initialize();
+class E extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
-            t = (0, a.parse)(this.props.location.search);
-        s.tn
+            t = (0, s.parse)(this.props.location.search);
+        (o.tn
             .post({
-                url: g.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -64,7 +64,7 @@ class b extends (r = l.PureComponent) {
                         busy: !1
                     })
             ),
-            (0, h.e)('disable_email_notifications');
+            (0, h.e)('disable_email_notifications'));
     }
     renderBusy() {
         return (0, i.jsx)(d.ZP, { children: (0, i.jsx)(d.Hh, {}) });
@@ -88,7 +88,7 @@ class b extends (r = l.PureComponent) {
                     className: x.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => r(g.Z5c.SETTINGS('notifications', f.vG)),
+                    onClick: () => r(m.Z5c.SETTINGS('notifications', f.vG)),
                     children: _.intl.string(_.t.YYTira)
                 })
             ]
@@ -147,14 +147,14 @@ class b extends (r = l.PureComponent) {
         return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError();
     }
     constructor(...e) {
-        super(...e),
-            E(this, 'state', {
+        (super(...e),
+            b(this, 'state', {
                 busy: !0,
                 success: !1,
                 user: null,
                 category: null
-            });
+            }));
     }
 }
-E(b, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let I = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(b);
+b(E, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
+let v = a.ZP.connectStores([g.Z], () => ({ defaultRoute: g.Z.defaultRoute }))(E);

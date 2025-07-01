@@ -1,4 +1,4 @@
-t.d(n, { default: () => L }), t(388685);
+(t.d(n, { default: () => L }), t(388685));
 var r = t(255367),
     a = t(73800),
     c = t(120356),
@@ -195,12 +195,12 @@ function L(e) {
                         r,
                         a = {},
                         c = Object.keys(e);
-                    for (r = 0; r < c.length; r++) (t = c[r]), n.indexOf(t) >= 0 || (a[t] = e[t]);
+                    for (r = 0; r < c.length; r++) ((t = c[r]), n.indexOf(t) >= 0 || (a[t] = e[t]));
                     return a;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < c.length; r++) (t = c[r]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (a[t] = e[t]);
+                for (r = 0; r < c.length; r++) ((t = c[r]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (a[t] = e[t]));
             }
             return a;
         })(e, ['quest', 'onClose']);
@@ -245,7 +245,7 @@ function L(e) {
         })(c.id, c.preview, s.location),
         { openIntroToOrbsClaimedCoachmark: u } = (0, h.Z)({ location: 'QuestsOrbsRewardModal' }),
         b = a.useCallback(() => {
-            o(),
+            (o(),
                 (0, g.Y)({
                     pageType: v.ZY5.GLOBAL_DISCOVERY_QUESTS,
                     sectionType: v.jXE.ORBS_REWARD_MODAL,
@@ -257,7 +257,7 @@ function L(e) {
                     analyticsLocations: [],
                     analyticsSource: c.id === C.V6 ? f.Z.INTRO_TO_ORBS_QUEST : f.Z.QUEST_HOME_PAGE
                 }),
-                u({ delayMS: 300 });
+                u({ delayMS: 300 }));
         }, [o, u, c.id]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -268,7 +268,7 @@ function L(e) {
                     for (var n = 1; n < arguments.length; n++) {
                         var t = null != arguments[n] ? arguments[n] : {},
                             r = Object.keys(t);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(t).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -276,7 +276,7 @@ function L(e) {
                             )),
                             r.forEach(function (n) {
                                 var r;
-                                (r = t[n]),
+                                ((r = t[n]),
                                     n in e
                                         ? Object.defineProperty(e, n, {
                                               value: r,
@@ -284,8 +284,8 @@ function L(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[n] = r);
-                            });
+                                        : (e[n] = r));
+                            }));
                     }
                     return e;
                 })({}, s)),

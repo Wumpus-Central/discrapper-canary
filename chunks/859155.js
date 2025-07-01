@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(415506);
+(n.d(t, { Z: () => h }), n(415506));
 var l = n(991637),
     r = n.n(l),
     i = n(388123),
@@ -29,11 +29,11 @@ let f = {
                               }
                             : void 0
                 };
-            await a.Z.sendMessage(l.id, h, !1, {
+            (await a.Z.sendMessage(l.id, h, !1, {
                 messageReference: _,
                 eagerDispatch: !1
             }),
-                (null == n ? void 0 : n.withMessage) == null || (0, d.pU)(l, u.Z) || (await a.Z.sendMessage(l.id, o.ZP.parse(l, n.withMessage), !1));
+                (null == n ? void 0 : n.withMessage) == null || (0, d.pU)(l, u.Z) || (await a.Z.sendMessage(l.id, o.ZP.parse(l, n.withMessage), !1)));
         },
         sendForwards: (e, t, n) => r()(t.map((t) => f.sendForward(e, t, n)))
     },

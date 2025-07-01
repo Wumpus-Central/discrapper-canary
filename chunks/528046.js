@@ -21,7 +21,7 @@ class s {
             if (i.oneofKind !== e.localName) continue;
             let a = 'scalar' == e.kind || 'enum' == e.kind ? Object.assign(Object.assign({}, t), { emitDefaultValues: !0 }) : t,
                 s = this.field(e, i[e.localName], a);
-            (0, o.hu)(void 0 !== s), (n[t.useProtoFieldName ? e.name : e.jsonName] = s);
+            ((0, o.hu)(void 0 !== s), (n[t.useProtoFieldName ? e.name : e.jsonName] = s));
         }
         return n;
     }
@@ -34,14 +34,14 @@ class s {
                 case 'scalar':
                     for (let [n, r] of Object.entries(t)) {
                         let t = this.scalar(e.V.T, r, e.name, !1, !0);
-                        (0, o.hu)(void 0 !== t), (i[n.toString()] = t);
+                        ((0, o.hu)(void 0 !== t), (i[n.toString()] = t));
                     }
                     break;
                 case 'message':
                     let a = e.V.T();
                     for (let [r, s] of Object.entries(t)) {
                         let t = this.message(a, s, e.name, n);
-                        (0, o.hu)(void 0 !== t), (i[r.toString()] = t);
+                        ((0, o.hu)(void 0 !== t), (i[r.toString()] = t));
                     }
                     break;
                 case 'enum':
@@ -49,7 +49,7 @@ class s {
                     for (let [r, a] of Object.entries(t)) {
                         (0, o.hu)(void 0 === a || 'number' == typeof a);
                         let t = this.enum(s, a, e.name, !1, !0, n.enumAsInteger);
-                        (0, o.hu)(void 0 !== t), (i[r.toString()] = t);
+                        ((0, o.hu)(void 0 !== t), (i[r.toString()] = t));
                     }
             }
             (n.emitDefaultValues || Object.keys(i).length > 0) && (r = i);
@@ -60,7 +60,7 @@ class s {
                 case 'scalar':
                     for (let n = 0; n < t.length; n++) {
                         let r = this.scalar(e.T, t[n], e.name, e.opt, !0);
-                        (0, o.hu)(void 0 !== r), i.push(r);
+                        ((0, o.hu)(void 0 !== r), i.push(r));
                     }
                     break;
                 case 'enum':
@@ -68,14 +68,14 @@ class s {
                     for (let r = 0; r < t.length; r++) {
                         (0, o.hu)(void 0 === t[r] || 'number' == typeof t[r]);
                         let s = this.enum(a, t[r], e.name, e.opt, !0, n.enumAsInteger);
-                        (0, o.hu)(void 0 !== s), i.push(s);
+                        ((0, o.hu)(void 0 !== s), i.push(s));
                     }
                     break;
                 case 'message':
                     let s = e.T();
                     for (let r = 0; r < t.length; r++) {
                         let a = this.message(s, t[r], e.name, n);
-                        (0, o.hu)(void 0 !== a), i.push(a);
+                        ((0, o.hu)(void 0 !== a), i.push(a));
                     }
             }
             (n.emitDefaultValues || i.length > 0 || n.emitDefaultValues) && (r = i);
@@ -106,11 +106,11 @@ class s {
             case a.wx.SFIXED32:
             case a.wx.SINT32:
                 if (0 === t) return c ? 0 : void 0;
-                return (0, o.ug)(t), t;
+                return ((0, o.ug)(t), t);
             case a.wx.FIXED32:
             case a.wx.UINT32:
                 if (0 === t) return c ? 0 : void 0;
-                return (0, o.fp)(t), t;
+                return ((0, o.fp)(t), t);
             case a.wx.FLOAT:
                 (0, o.E_)(t);
             case a.wx.DOUBLE:
@@ -121,10 +121,10 @@ class s {
                 return t;
             case a.wx.STRING:
                 if ('' === t) return c ? '' : void 0;
-                return (0, o.hu)('string' == typeof t), t;
+                return ((0, o.hu)('string' == typeof t), t);
             case a.wx.BOOL:
                 if (!1 === t) return !c && void 0;
-                return (0, o.hu)('boolean' == typeof t), t;
+                return ((0, o.hu)('boolean' == typeof t), t);
             case a.wx.UINT64:
             case a.wx.FIXED64:
                 (0, o.hu)('number' == typeof t || 'string' == typeof t || 'bigint' == typeof t);

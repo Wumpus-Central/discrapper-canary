@@ -1,4 +1,4 @@
-n.d(t, { Z: () => i }), n(388685);
+(n.d(t, { Z: () => i }), n(388685));
 var r = n(73800);
 function i() {
     let [e, t] = (0, r.useState)(window.innerWidth >= 1132);
@@ -7,7 +7,7 @@ function i() {
             let e = () => {
                 t(window.innerWidth >= 1132);
             };
-            return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
+            return (e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
         }, []),
         e
     );

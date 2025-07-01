@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     U: () => M,
     default: () => P,
     t: () => N
@@ -9,7 +9,7 @@ n.d(t, {
     n(413496),
     n(433524),
     n(35282),
-    n(539854);
+    n(539854));
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -82,7 +82,7 @@ function M(e) {
         onQueryChange: function (e) {
             let t = e.trim(),
                 r = '@' === t.charAt(0);
-            p.Z.requestMembers(n.id, L(t, r), E.EQ), S(e), f(r);
+            (p.Z.requestMembers(n.id, L(t, r), E.EQ), S(e), f(r));
         },
         onClickRow: function (e) {
             let t = (0, v.G)(e);
@@ -91,7 +91,7 @@ function M(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -99,7 +99,7 @@ function M(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -107,15 +107,15 @@ function M(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, n);
                 if (t in r) delete r[t];
                 else {
                     let n;
-                    e.rowType === E.aC.ROLE || e.rowType === E.aC.ADMINISTRATOR
+                    (e.rowType === E.aC.ROLE || e.rowType === E.aC.ADMINISTRATOR
                         ? (n = {
                               type: o.Fj.ROLE,
                               label: e.name,
@@ -131,7 +131,7 @@ function M(e) {
                             (r[t] = {
                                 display: n,
                                 row: e
-                            });
+                            }));
                 }
                 return r;
             });
@@ -149,12 +149,12 @@ function M(e) {
                                 r,
                                 l = {},
                                 i = Object.keys(e);
-                            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                            for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
                             return l;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var i = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                        for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
                     }
                     return l;
                 })(t, [e].map(O));
@@ -221,7 +221,7 @@ function P(e) {
         if (null == v || 0 === Object.keys(g).length) return void n();
         p(!0);
         try {
-            await (function (e, t, n) {
+            (await (function (e, t, n) {
                 let r = [];
                 return (
                     Object.values(t).forEach((t) => {
@@ -232,7 +232,7 @@ function P(e) {
                 );
             })(v, g, x),
                 n(),
-                p(!1);
+                p(!1));
         } catch (e) {
             p(!1);
         }

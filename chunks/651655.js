@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(539854), n(358797), n(290780);
+(n.d(t, { Z: () => s }), n(539854), n(358797), n(290780));
 var r = n(427786),
     i = n.n(r);
 function a(e, t, n) {
@@ -17,12 +17,12 @@ function a(e, t, n) {
 let o = new (n(710845).Z)('Queue');
 class s {
     enqueue(e, t, n) {
-        this.queue.push({
+        (this.queue.push({
             message: e,
             success: t,
             logId: n
         }),
-            this._drainIfNecessary();
+            this._drainIfNecessary());
     }
     get length() {
         return this.queue.length;
@@ -43,15 +43,15 @@ class s {
                 } else {
                     var a;
                     let n = null != (a = t.retryAfter) ? a : this.defaultRetryAfter;
-                    this.logger.info('Rate limited. Delaying draining of queue for '.concat(n, ' ms. LogId:').concat(r, ' QueueLength: ').concat(this.queue.length)),
+                    (this.logger.info('Rate limited. Delaying draining of queue for '.concat(n, ' ms. LogId:').concat(r, ' QueueLength: ').concat(this.queue.length)),
                         (this.timeout = setTimeout(() => {
-                            this.queue.unshift(e), (this.timeout = null), this._drainIfNecessary();
-                        }, n));
+                            (this.queue.unshift(e), (this.timeout = null), this._drainIfNecessary());
+                        }, n)));
                 }
             };
-        this.logger.log('Draining message from queue LogId:'.concat(r, ' QueueLength: ').concat(this.queue.length)), this.drain(t, i);
+        (this.logger.log('Draining message from queue LogId:'.concat(r, ' QueueLength: ').concat(this.queue.length)), this.drain(t, i));
     }
     constructor(e = o, t = 100) {
-        a(this, 'logger', void 0), a(this, 'defaultRetryAfter', void 0), a(this, 'queue', void 0), a(this, 'timeout', void 0), a(this, 'draining', void 0), (this.logger = e), (this.defaultRetryAfter = t), (this.queue = new (i())()), (this.timeout = null), (this.draining = !1);
+        (a(this, 'logger', void 0), a(this, 'defaultRetryAfter', void 0), a(this, 'queue', void 0), a(this, 'timeout', void 0), a(this, 'draining', void 0), (this.logger = e), (this.defaultRetryAfter = t), (this.queue = new (i())()), (this.timeout = null), (this.draining = !1));
     }
 }

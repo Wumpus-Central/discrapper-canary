@@ -1,4 +1,4 @@
-n.d(e, { a: () => T }), n(953529), n(415506), n(388685);
+(n.d(e, { a: () => T }), n(953529), n(415506), n(388685));
 var i = n(255367),
     r = n(73800),
     l = n(913527),
@@ -32,7 +32,7 @@ function b(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -40,7 +40,7 @@ function b(t) {
             )),
             i.forEach(function (e) {
                 m(t, e, n[e]);
-            });
+            }));
     }
     return t;
 }
@@ -176,7 +176,7 @@ class N extends r.PureComponent {
     }
     constructor(...t) {
         var e;
-        super(...t),
+        (super(...t),
             (e = this),
             m(this, 'onClose', () => {
                 this.props.onClose();
@@ -185,12 +185,12 @@ class N extends r.PureComponent {
                 let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     { libraryApplication: i, analyticsParams: r } = e.props;
-                e.onClose(),
+                (e.onClose(),
                     T(i.id, i, {
                         analyticsParams: r,
                         cloudSync: t,
                         cloudSyncForceHash: n
-                    });
+                    }));
             }),
             m(this, 'handleChooseDownload', () => {
                 let { cloudSyncState: t } = this.props;
@@ -199,7 +199,7 @@ class N extends r.PureComponent {
             m(this, 'handleChooseUpload', () => {
                 let { cloudSyncState: t } = this.props;
                 t.type === y.TzF.CONFLICT && this.handlePlay(!0, t.next.hash);
-            });
+            }));
     }
 }
 let A = a.ZP.connectStores([h.Z, u.Z], (t) => {

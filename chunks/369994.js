@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     C4: () => g,
     Fi: () => b,
     KK: () => u,
     f6: () => p,
     n: () => m
 }),
-    n(388685);
+    n(388685));
 var r = n(913527),
     i = n.n(r),
     l = n(544891),
@@ -24,7 +24,7 @@ function u(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function u(e) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -40,8 +40,8 @@ function u(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({}, (0, o.hH)(e))),
@@ -68,7 +68,7 @@ function u(e) {
 }
 async function p(e, t) {
     let n = new Set(e.features);
-    n.has(d.oNc.COMMUNITY) ? (t ? n.delete(d.oNc.RAID_ALERTS_DISABLED) : n.add(d.oNc.RAID_ALERTS_DISABLED)) : t ? n.add(d.oNc.NON_COMMUNITY_RAID_ALERTS) : n.delete(d.oNc.NON_COMMUNITY_RAID_ALERTS), await a.Z.saveGuild(e.id, { features: n }, { throwErr: !0 });
+    (n.has(d.oNc.COMMUNITY) ? (t ? n.delete(d.oNc.RAID_ALERTS_DISABLED) : n.add(d.oNc.RAID_ALERTS_DISABLED)) : t ? n.add(d.oNc.NON_COMMUNITY_RAID_ALERTS) : n.delete(d.oNc.NON_COMMUNITY_RAID_ALERTS), await a.Z.saveGuild(e.id, { features: n }, { throwErr: !0 }));
 }
 async function m(e, t, n, r) {
     let o = i()().add(r, 'hours').toISOString();

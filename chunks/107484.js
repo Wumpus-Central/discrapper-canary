@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var r,
     l,
     o,
@@ -10,7 +10,7 @@ class c extends (r = i.ZP.Store) {
         return null != e ? a.get(e) : void 0;
     }
 }
-(o = 'GuildRoleConnectionEligibilityStore'),
+((o = 'GuildRoleConnectionEligibilityStore'),
     (l = 'displayName') in c
         ? Object.defineProperty(c, l, {
               value: o,
@@ -18,7 +18,7 @@ class c extends (r = i.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (c[l] = o);
+        : (c[l] = o));
 let u = new c(s.Z, {
     GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: (e) => {
         let { roleId: t, roleConnectionEligibility: n } = e;

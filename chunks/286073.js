@@ -1,7 +1,7 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         default: () => i,
         metadata: () => r
-    });
+    }));
 let r = { fileBytes: 24435 },
     i = 'https://cdn.discordapp.com/assets/content/436958c1d99411e473c7065bd969cec65ebdf61702d5b266db7e0720a3937c85.jpg';

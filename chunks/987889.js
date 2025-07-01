@@ -1,10 +1,10 @@
-n.d(t, { Z: () => E }), n(388685);
+(n.d(t, { Z: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(45114),
-    a = n(110255),
+    a = n(45114),
+    s = n(110255),
     c = n(268623),
     u = n(324701),
     d = n(768943),
@@ -16,7 +16,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -24,7 +24,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -32,8 +32,8 @@ function m(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -68,7 +68,7 @@ let _ = {
             return t ? ['ACK', ...n] : n;
         }, [e, t]);
 function y(e) {
-    let { label: t, onClick: n, message: l, Icon: s, interactionType: a } = e,
+    let { label: t, onClick: n, message: l, Icon: a, interactionType: s } = e,
         [c, u] = (0, i.useState)(!1);
     return (0, r.jsx)(o.ua7, {
         text: t,
@@ -82,14 +82,14 @@ function y(e) {
                 b(m({}, e), {
                     className: g.action,
                     onClick: (e) => {
-                        (0, h.Qz)({
+                        ((0, h.Qz)({
                             message: l,
-                            interactionType: a
+                            interactionType: s
                         }),
                             e.stopPropagation(),
-                            n(l);
+                            n(l));
                     },
-                    children: (0, r.jsx)(s, {
+                    children: (0, r.jsx)(a, {
                         size: c ? 'sm' : 'xs',
                         className: g.actionIcon
                     })
@@ -98,7 +98,7 @@ function y(e) {
     });
 }
 function v(e) {
-    let { channel: t, message: n, label: l, Icon: s, Menu: a, interactionType: c } = e,
+    let { channel: t, message: n, label: l, Icon: a, Menu: s, interactionType: c } = e,
         [u, d] = (0, i.useState)(!1),
         [p, f] = (0, i.useState)(!1),
         _ = (0, i.useRef)(null);
@@ -113,7 +113,7 @@ function v(e) {
         renderPopout: (e) =>
             (0, r.jsx)(o.P3F, {
                 onClick: (e) => e.stopPropagation(),
-                children: (0, r.jsx)(a, {
+                children: (0, r.jsx)(s, {
                     renderPopoutProps: e,
                     channel: t,
                     message: n
@@ -133,15 +133,15 @@ function v(e) {
                             innerRef: _,
                             className: g.action,
                             onClick: (e) => {
-                                (0, h.Qz)({
+                                ((0, h.Qz)({
                                     message: n,
                                     interactionType: c
                                 }),
                                     e.stopPropagation(),
-                                    f(!p);
+                                    f(!p));
                             },
                             children: (0, r.jsx)(
-                                s,
+                                a,
                                 b(m({}, e), {
                                     message: n,
                                     'aria-label': l,
@@ -160,7 +160,7 @@ let C = {
             Icon: o.dz2,
             label: f.intl.string(f.t.e6RscX),
             onClick: (e) => {
-                s.In(
+                a.In(
                     e.channel_id,
                     {
                         object: p.qAy.MARK_MESSAGE_AS_READ_BUTTON,
@@ -181,7 +181,7 @@ let C = {
             Menu: (e) => {
                 let { message: t, renderPopoutProps: n } = e,
                     i = (0, l.e7)([d.Z], () => d.Z.getSavedMessage(t.channel_id, t.id)),
-                    s = (0, c.x)({
+                    a = (0, c.x)({
                         message: t,
                         savedMessage: i
                     });
@@ -218,7 +218,7 @@ let C = {
                                           })
                                   }),
                             (0, r.jsx)(o.Clw, {}),
-                            s
+                            a
                         ]
                     })
                 );
@@ -232,7 +232,7 @@ let C = {
             Menu: (e) => {
                 let { channel: t, renderPopoutProps: n } = e;
                 return (0, r.jsx)(
-                    a.Z,
+                    s.Z,
                     b(m({}, n), {
                         channel: t,
                         navId: 'channel-context',
@@ -243,7 +243,7 @@ let C = {
         }
     },
     j = (e) => 'MENTION';
-function E(e) {
+function S(e) {
     let { message: t, channel: n, isUnread: i } = e,
         l = O(t, i);
     return (0, r.jsx)(o.Kqy, {

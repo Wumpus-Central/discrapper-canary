@@ -26,13 +26,13 @@ function I(t) {
         k = r.Z.can(_.yP, I);
     n = p && (null == S ? void 0 : S.premiumTier) === g.Eu4.TIER_3 ? (L <= g.TU7 ? T.intl.string(T.t.tJmOu7) : T.intl.string(T.t['7FHbPD'])) : C ? T.intl.string(T.t['8/uDSE']) : T.intl.string(T.t['7FHbPD']);
     let b = () => {
-            x(),
+            (x(),
                 d.default.track(g.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: I.guild_id,
                     type: h.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: k,
                     action: h.T7.DISMISS
-                });
+                }));
         },
         M = c.Z.getMutableParticipants(I.id, u.pV.SPEAKER).filter((t) => t.type === u.Ui.VOICE).length,
         O = c.Z.getParticipantCount(I.id, u.pV.AUDIENCE);
@@ -83,7 +83,7 @@ function I(t) {
                                   }),
                                   (0, e.jsx)(a.gtL, {
                                       onClick: () => {
-                                          x(),
+                                          (x(),
                                               (0, s.f)({
                                                   guildId: I.guild_id,
                                                   location: { section: g.jXE.STAGE_VIDEO_LIMIT }
@@ -93,7 +93,7 @@ function I(t) {
                                                   type: h.cd.VIDEO_STAGE_LIMIT,
                                                   is_moderator: k,
                                                   action: h.T7.BOOST
-                                              });
+                                              }));
                                       },
                                       size: a.PhG.SMALL,
                                       className: E.boostButton,

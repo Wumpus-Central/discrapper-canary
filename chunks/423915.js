@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(442837),
@@ -37,13 +37,13 @@ function g() {
                       minValue: 0,
                       maxValue: 100,
                       asValueChanges: (e) => {
-                          (0, a.jA)(e / 100),
+                          ((0, a.jA)(e / 100),
                               (0, a.Zj)(0 === e),
                               g(!0),
                               clearTimeout(b.current),
                               (b.current = setTimeout(() => {
                                   g(!1);
-                              }, 1000));
+                              }, 1000)));
                       }
                   })
                 : null

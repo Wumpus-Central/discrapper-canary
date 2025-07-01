@@ -52,7 +52,7 @@ function c(t) {
                         color: n.zxk.Colors.TRANSPARENT,
                         look: n.zxk.Looks.LINK,
                         onClick: () => {
-                            c(), (0, o.Z)(s, !0);
+                            (c(), (0, o.Z)(s, !0));
                         },
                         children: a.intl.string(a.t['/bHu8/'])
                     })

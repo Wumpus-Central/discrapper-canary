@@ -30,31 +30,31 @@ let u = [],
     y = (e) => {
         _ = (0, o.cloneDeep)(e);
         let t = {};
-        _.forEach((e) => {
+        (_.forEach((e) => {
             if (((t[e.id] = e), d.length > 0)) {
                 var n;
                 t[e.id].config.effects = null != (n = (0, o.sample)(d)) ? n : [];
             }
         }),
-            (p = t);
+            (p = t));
     },
     O = () => {
         f = !0;
     },
     v = (e) => {
         let { profileEffects: t } = e;
-        (r = void 0), (i = Date.now() + g), (m = 0), y(0 === t.length ? u : t), (f = !1);
+        ((r = void 0), (i = Date.now() + g), (m = 0), y(0 === t.length ? u : t), (f = !1));
     },
     I = (e) => {
         let { error: t } = e;
-        (r = t), (i = Date.now() + Math.min(E * 2 ** m, b)), ++m, y(u), (f = !1);
+        ((r = t), (i = Date.now() + Math.min(E * 2 ** m, b)), ++m, y(u), (f = !1));
     },
     T = (e) => {
         let { id: t } = e;
         h = t;
     },
     S = () => {
-        y(u), (h = null), (i = void 0), (f = !1);
+        (y(u), (h = null), (i = void 0), (f = !1));
     },
     A = (e) => {
         S();

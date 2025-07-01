@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     J: () => ef,
     Z: () => e_
 }),
@@ -7,7 +7,7 @@ n.d(t, {
     n(539854),
     n(953529),
     n(781311),
-    n(642613);
+    n(642613));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -80,7 +80,7 @@ function ea(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -88,7 +88,7 @@ function ea(e) {
             )),
             r.forEach(function (t) {
                 ei(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -269,7 +269,7 @@ let el = (e) => {
             [X, ei] = i.useState(!1),
             eo = () => {
                 let e = [];
-                for (let n of t) e.push(...(0, L.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(ee.intl.string(ee.t.Ls2XRk));
+                for (let n of t) (e.push(...(0, L.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(ee.intl.string(ee.t.Ls2XRk)));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(g.zF9, {
                         className: et.appDetailsSection,
@@ -311,7 +311,7 @@ let el = (e) => {
                                     (0, r.jsxs)(m.P, {
                                         className: et.appDetailsSectionHeader,
                                         onClick: (e) => {
-                                            ei(!X), n(e);
+                                            (ei(!X), n(e));
                                         },
                                         children: [
                                             (0, r.jsx)(g.X6q, {
@@ -374,7 +374,7 @@ let el = (e) => {
                               return (0, r.jsxs)(m.P, {
                                   className: et.appDetailsSectionHeader,
                                   onClick: (e) => {
-                                      W(!Y), t(e);
+                                      (W(!Y), t(e));
                                   },
                                   children: [
                                       (0, r.jsx)(g.X6q, {
@@ -442,7 +442,7 @@ let el = (e) => {
                 });
             },
             ep = (e) => {
-                K.hW.updateAsync(
+                (K.hW.updateAsync(
                     'applications',
                     (t) => {
                         v in t.appSettings ? (null == t.appSettings[v].appDmSettings ? (t.appSettings[v].appDmSettings = h.c$.create({ allowMobilePush: e })) : (t.appSettings[v].appDmSettings.allowMobilePush = e)) : (t.appSettings[v] = h.dp.create({ appDmSettings: h.c$.create({ allowMobilePush: e }) }));
@@ -453,12 +453,12 @@ let el = (e) => {
                         update_type: $.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
                         application_id: a.id,
                         label: e ? Z.ZB.Unmuted : Z.ZB.Muted
-                    });
+                    }));
             },
             eh = i.useCallback(async () => {
                 u()(null != k, 'dm channel mute setting requires having a bot user');
                 let e = j;
-                null == e && (e = await b.Z.ensurePrivateChannel(k.id)),
+                (null == e && (e = await b.Z.ensurePrivateChannel(k.id)),
                     F
                         ? y.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, Z.ZB.Unmuted)
                         : (0, g.ZDy)(async () => {
@@ -474,7 +474,7 @@ let el = (e) => {
                                           n
                                       )
                                   );
-                          });
+                          }));
             }, [j, k, F, a.id]),
             em = () =>
                 R.enabled
@@ -578,7 +578,7 @@ let el = (e) => {
             a = (0, _.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),
             o = (0, _.e7)([M.Z, j.Z], () => M.Z.getChannel(j.Z.getChannelId())),
             s = null == o ? void 0 : o.getGuildId();
-        i.useEffect(() => {
+        (i.useEffect(() => {
             E.Z.fetch();
         }, []),
             i.useEffect(
@@ -586,7 +586,7 @@ let el = (e) => {
                     ef.setState({ searchQuery: '' });
                 },
                 []
-            );
+            ));
         let c = (e) => {
                 let { id: t, application: n } = e;
                 E.Z.delete(t);

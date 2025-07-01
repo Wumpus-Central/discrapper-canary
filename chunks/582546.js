@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -26,7 +26,7 @@ function h(e) {
             id: 'connect-spotify',
             label: p.intl.formatToPlainString(p.t.XWSHTU, { platform: _.ai }),
             action: () => {
-                null == g || g({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), o.Z.open(f.oAB.CONNECTIONS), null == E || E();
+                (null == g || g({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), o.Z.open(f.oAB.CONNECTIONS), null == E || E());
             }
         });
     if (b) return null;
@@ -37,7 +37,7 @@ function h(e) {
               id: 'play-on-spotify',
               label: p.intl.string(p.t.rRffNz),
               action: () => {
-                  null == g || g({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(_.Hw.TRACK, O.external_id);
+                  (null == g || g({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(_.Hw.TRACK, O.external_id));
               }
           });
 }

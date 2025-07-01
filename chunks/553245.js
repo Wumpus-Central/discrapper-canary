@@ -1,4 +1,4 @@
-n.d(t, { b: () => o }), n(388685);
+(n.d(t, { b: () => o }), n(388685));
 var r = n(689320),
     i = n(143806);
 function a(e, t, n) {
@@ -25,7 +25,7 @@ class o {
         return this.extended.capacity;
     }
     clear() {
-        this.primary.clear(), this.extended.clear();
+        (this.primary.clear(), this.extended.clear());
     }
     has(e) {
         return this.primary.has(e);
@@ -43,7 +43,7 @@ class o {
     delete(e) {
         let t = this.primary.delete(e),
             n = this.extended.delete(e);
-        return this.upstreamItems(), t || n;
+        return (this.upstreamItems(), t || n);
     }
     upstreamItems() {
         if (this.canUpstreamItems()) {
@@ -72,6 +72,6 @@ class o {
         return r.t(this.extended.values(), this.primary.values());
     }
     constructor(e, t) {
-        a(this, 'primary', void 0), a(this, 'extended', void 0), (this.primary = new i.S(e)), (this.extended = new i.S(t));
+        (a(this, 'primary', void 0), a(this, 'extended', void 0), (this.primary = new i.S(e)), (this.extended = new i.S(t)));
     }
 }

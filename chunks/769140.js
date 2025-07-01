@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+(n.d(t, { Z: () => B }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -71,7 +71,7 @@ function B(e) {
     if (null == H || null == Y || !1 === i.discoverable) return null;
     let ei = () => {
             let e = (e) => {
-                e.stopPropagation(), $ && (q({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == V || V());
+                (e.stopPropagation(), $ && (q({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == V || V()));
             };
             return null == er && J
                 ? (0, r.jsx)('div', {
@@ -157,7 +157,7 @@ function B(e) {
                               maxUsers: P.W,
                               size: s.EFr.SIZE_16,
                               onClick: (e) => {
-                                  e.stopPropagation(), null == q || q({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
+                                  (e.stopPropagation(), null == q || q({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,

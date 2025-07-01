@@ -21,10 +21,10 @@ let l = [],
     u = null,
     d = (e) => {
         var t, n;
-        (c = null != (t = e.analyticsLocations) ? t : l), (u = null != (n = e.analyticsSource) ? n : null), (r = e.initialProductSkuId);
+        ((c = null != (t = e.analyticsLocations) ? t : l), (u = null != (n = e.analyticsSource) ? n : null), (r = e.initialProductSkuId));
     },
     f = (e) => {
-        (c = l), (u = null);
+        ((c = l), (u = null));
     },
     _ = (e) => {
         e.item.skuId === r && (r = void 0);

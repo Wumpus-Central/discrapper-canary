@@ -1,4 +1,4 @@
-n.d(e, { default: () => u }), n(388685), n(953529);
+(n.d(e, { default: () => u }), n(388685), n(953529));
 var i = n(255367),
     s = n(73800),
     l = n(481060),
@@ -14,9 +14,9 @@ function u(t) {
         [m, g] = s.useState(n),
         z = s.useRef(null),
         j = async (t) => {
-            t.preventDefault(), k(!0);
+            (t.preventDefault(), k(!0));
             try {
-                await r.Z.updateRelationship(e.id, m), x();
+                (await r.Z.updateRelationship(e.id, m), x());
             } catch (t) {
             } finally {
                 k(!1);
@@ -63,7 +63,7 @@ function u(t) {
                             size: l.zxk.Sizes.NONE,
                             onClick: () => {
                                 var t;
-                                g(null), null == (t = z.current) || t.focus();
+                                (g(null), null == (t = z.current) || t.focus());
                             },
                             className: d.reset,
                             children: c.intl.string(c.t['9qSBvL'])

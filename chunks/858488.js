@@ -1,4 +1,4 @@
-t.d(n, { Z: () => u }), t(388685);
+(t.d(n, { Z: () => u }), t(388685));
 var l = t(255367);
 t(73800);
 var i = t(442837),
@@ -22,7 +22,7 @@ function u(e) {
         id: null == g ? 'add-friend-nickname' : 'edit-friend-nickname',
         label: Z,
         action: () => {
-            null == u || u(),
+            (null == u || u(),
                 (0, r.ZDy)(
                     async () => {
                         let { default: e } = await t.e('25070').then(t.bind(t, 670794));
@@ -33,7 +33,7 @@ function u(e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
                                             l = Object.keys(t);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (l = l.concat(
                                                 Object.getOwnPropertySymbols(t).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
@@ -41,7 +41,7 @@ function u(e) {
                                             )),
                                             l.forEach(function (n) {
                                                 var l;
-                                                (l = t[n]),
+                                                ((l = t[n]),
                                                     n in e
                                                         ? Object.defineProperty(e, n, {
                                                               value: l,
@@ -49,8 +49,8 @@ function u(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[n] = l);
-                                            });
+                                                        : (e[n] = l));
+                                            }));
                                     }
                                     return e;
                                 })(
@@ -63,7 +63,7 @@ function u(e) {
                             );
                     },
                     { contextKey: null != s ? (0, r.VnL)(s) : void 0 }
-                );
+                ));
         }
     });
 }

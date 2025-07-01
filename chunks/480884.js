@@ -1,4 +1,4 @@
-t.d(n, { default: () => v }), t(953529);
+(t.d(n, { default: () => v }), t(953529));
 var a = t(255367),
     s = t(73800),
     o = t(286379),
@@ -18,13 +18,13 @@ function v(e) {
         j = (0, c.e7)([u.ZP], () => u.ZP.getChannelSafetyWarning(v, h));
     return (
         s.useEffect(() => {
-            (0, _.MC)(m.rMx.SAFETY_WARNING_MODAL_VIEWED, {
+            ((0, _.MC)(m.rMx.SAFETY_WARNING_MODAL_VIEWED, {
                 channelId: v,
                 warningId: h,
                 senderId: k,
                 warningType: null == j ? void 0 : j.type
             }),
-                l.Z.increment({ name: o.V.SAFETY_WARNING_MODAL_VIEW });
+                l.Z.increment({ name: o.V.SAFETY_WARNING_MODAL_VIEW }));
         }, [v, h, k, j]),
         (0, a.jsx)(i.Y0X, {
             transitionState: n,

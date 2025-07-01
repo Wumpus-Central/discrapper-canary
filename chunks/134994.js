@@ -7,7 +7,7 @@ function i(t, ...e) {
 }
 function s(t) {
     if ('function' != typeof t || 'function' != typeof t.create) throw Error('Hash should be wrapped by utils.wrapConstructor');
-    r(t.outputLen), r(t.blockLen);
+    (r(t.outputLen), r(t.blockLen));
 }
 function o(t, e = !0) {
     if (t.destroyed) throw Error('Hash instance has been destroyed');

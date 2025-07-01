@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     X: () => C,
     Z: () => T
 }),
-    n(35282);
+    n(35282));
 var r,
     i = n(392711),
     l = n.n(i),
@@ -64,7 +64,7 @@ function S(e, t, n) {
 }
 class N extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(u.Z, c.Z), (m = null != e ? e : g);
+        (this.waitFor(u.Z, c.Z), (m = null != e ? e : g));
     }
     getUserAgnosticState() {
         return m;
@@ -88,7 +88,7 @@ class N extends (r = a.ZP.DeviceSettingsStore) {
         return I;
     }
 }
-f(N, 'displayName', 'ConnectedDeviceStore'),
+(f(N, 'displayName', 'ConnectedDeviceStore'),
     f(N, 'persistKey', 'ConnectedDeviceStore'),
     f(N, 'migrations', [
         (e) => {
@@ -99,7 +99,7 @@ f(N, 'displayName', 'ConnectedDeviceStore'),
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            'function' == typeof Object.getOwnPropertySymbols &&
+                            ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -107,7 +107,7 @@ f(N, 'displayName', 'ConnectedDeviceStore'),
                                 )),
                                 r.forEach(function (t) {
                                     f(e, t, n[t]);
-                                });
+                                }));
                         }
                         return e;
                     })({}, e)),
@@ -129,19 +129,19 @@ f(N, 'displayName', 'ConnectedDeviceStore'),
             }
             return e;
         }
-    ]);
+    ]));
 let T = new N(o.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             r = {};
-        (y.justChanged = !1),
+        ((y.justChanged = !1),
             t.forEach((e) => {
                 if (((r[C(e)] = e.id), e.id === h.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== y.id && (y.justChanged = !0), (y.id = n);
+                    (n !== y.id && (y.justChanged = !0), (y.id = n));
                 }
-            });
+            }));
         let i = {};
         if (
             ((I.justChanged = !1),
@@ -149,12 +149,12 @@ let T = new N(o.Z, {
                 if (((i[C(e)] = e.id), e.id === h.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== I.id && (I.justChanged = !0), (I.id = n);
+                    (n !== I.id && (I.justChanged = !0), (I.id = n));
                 }
             }),
             !b)
         ) {
-            (_ = r), (E = i), (b = !0);
+            ((_ = r), (E = i), (b = !0));
             return;
         }
         let a = Object.keys(_),
@@ -197,9 +197,9 @@ let T = new N(o.Z, {
     },
     CONNECTED_DEVICE_IGNORE: function (e) {
         let { displayName: t } = e;
-        (m.ignoredDevices[t] = !0), delete O[t];
+        ((m.ignoredDevices[t] = !0), delete O[t]);
     },
     CONNECTED_DEVICE_NEVER_SHOW_MODAL: function () {
-        (O = {}), (m.neverShowModal = !0);
+        ((O = {}), (m.neverShowModal = !0));
     }
 });

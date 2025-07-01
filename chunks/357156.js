@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     Gw: () => h,
     Ob: () => _,
     XJ: () => p
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     i = n(149765),
     a = n(442837),
@@ -34,7 +34,7 @@ let d = {
     _ = (e) => {
         if (null == e) return [u.Pl.CREATE_EVENTS, u.Pl.MANAGE_EVENTS];
         let t = c.TT;
-        return e.isGuildStageVoice() ? (t = c.LK) : e.isGuildVoice() && (t = c.AN), [i.$e(t, u.Pl.CREATE_EVENTS), i.$e(t, u.Pl.MANAGE_EVENTS)];
+        return (e.isGuildStageVoice() ? (t = c.LK) : e.isGuildVoice() && (t = c.AN), [i.$e(t, u.Pl.CREATE_EVENTS), i.$e(t, u.Pl.MANAGE_EVENTS)]);
     },
     p = (e) => {
         let [t, n] = e instanceof o.ZP ? [u.Pl.CREATE_EVENTS, u.Pl.MANAGE_EVENTS] : _(e),

@@ -14,7 +14,7 @@ let s = {
             })
             .then(
                 (e) => {
-                    (s = e.body.nick), i.Z.sendBotMessage(t, null != s && '' !== s ? o.intl.formatToMarkdownString(o.t['gz+HRk'], { nick: s }) : o.intl.string(o.t.Vhpd9P));
+                    ((s = e.body.nick), i.Z.sendBotMessage(t, null != s && '' !== s ? o.intl.formatToMarkdownString(o.t['gz+HRk'], { nick: s }) : o.intl.string(o.t.Vhpd9P)));
                 },
                 (e) => {
                     403 === e.status ? i.Z.sendBotMessage(t, o.intl.formatToMarkdownString(o.t.Izf9jI, {})) : i.Z.sendBotMessage(t, o.intl.string(o.t['5LO/Sk']));

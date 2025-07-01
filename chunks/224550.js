@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(415506), n(388685);
+(n.d(t, { Z: () => E }), n(415506), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -18,7 +18,7 @@ let g = (e, t, n, r) => {
         if (null == e || null == t || null == n) {
             let e = Error('Missing base rate for legal fine print'),
                 t = r || 'none';
-            return (0, s.q2)(e, { tags: { planId: t } }), null;
+            return ((0, s.q2)(e, { tags: { planId: t } }), null);
         }
         return (0, u.og)((0, u.T4)(e.amount, e.currency), t, n);
     },
@@ -33,7 +33,7 @@ let g = (e, t, n, r) => {
         let x = null == e.planGroup ? [] : e.planGroup;
         if (null != T) {
             let e = c.ZP.getIntervalForInvoice(T);
-            (t = e.intervalType), (n = e.intervalCount), (s = (0, u.og)((0, u.T4)(T.total, T.currency), t, n)), (E = (0, u.og)((0, u.T4)(T.subtotal, T.currency), t, n));
+            ((t = e.intervalType), (n = e.intervalCount), (s = (0, u.og)((0, u.T4)(T.total, T.currency), t, n)), (E = (0, u.og)((0, u.T4)(T.subtotal, T.currency), t, n)));
         } else null != b && ((t = b.interval), (n = b.intervalCount));
         let k = (0, a.K)({
                 purchaseType: N || f.GZQ.SUBSCRIPTION,
@@ -60,7 +60,7 @@ let g = (e, t, n, r) => {
                 paidURL: f.EYA.PAID_TERMS
             });
             let e = '';
-            (e = D === _.Vt.ORB_PROFILE_BADGE ? h.intl.string(h.t.APcKRk) : D === _.Vt.FRACTIONAL_PREMIUM ? h.intl.string(h.t.FhJ74u) : h.intl.string(h.t.jCRYDw)), Array.isArray(U) ? (U = [...U, ' '.concat(e)]) : (U += ' '.concat(e));
+            ((e = D === _.Vt.ORB_PROFILE_BADGE ? h.intl.string(h.t.APcKRk) : D === _.Vt.FRACTIONAL_PREMIUM ? h.intl.string(h.t.FhJ74u) : h.intl.string(h.t.jCRYDw)), Array.isArray(U) ? (U = [...U, ' '.concat(e)]) : (U += ' '.concat(e)));
         } else if (I)
             if (null != s && (null == T ? void 0 : T.subscriptionPeriodEnd) != null) U = h.intl.format(h.t['2VPTa2'], { subtotalRate: E });
             else
@@ -80,18 +80,18 @@ let g = (e, t, n, r) => {
         else if (N === f.GZQ.ONE_TIME)
             switch (C) {
                 case f.POd.COLLECTIBLES:
-                    (G = M), (U = y ? h.intl.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : h.intl.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
+                    ((G = M), (U = y ? h.intl.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : h.intl.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS })));
                     break;
                 case f.POd.GUILD_PRODUCT:
-                    (G = M), (U = h.intl.format(h.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
+                    ((G = M), (U = h.intl.format(h.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS })));
                     break;
                 default:
-                    (G = j), (U = h.intl.string(h.t['9/siSU']));
+                    ((G = j), (U = h.intl.string(h.t['9/siSU'])));
             }
         else if (null == b || y)
             switch ((y && (G = M), t)) {
                 case p.rV.MONTH:
-                    (U = y ? h.intl.string(h.t.IjNapq) : h.intl.string(h.t['/sGXPj'])), (U = y ? h.intl.string(h.t.IjNapq) : 1 === n ? h.intl.string(h.t['/sGXPj']) : h.intl.formatToPlainString(h.t.Fqjiho, { intervalCount: n }));
+                    ((U = y ? h.intl.string(h.t.IjNapq) : h.intl.string(h.t['/sGXPj'])), (U = y ? h.intl.string(h.t.IjNapq) : 1 === n ? h.intl.string(h.t['/sGXPj']) : h.intl.formatToPlainString(h.t.Fqjiho, { intervalCount: n })));
                     break;
                 case p.rV.YEAR:
                     U = y ? h.intl.string(h.t.vAfbGx) : h.intl.string(h.t.IGzFc3);
@@ -113,7 +113,7 @@ let g = (e, t, n, r) => {
                     planGroup: x,
                     isPrepaidPaymentSource: !1
                 });
-            O || (e = g(P, t, n, b.id)),
+            (O || (e = g(P, t, n, b.id)),
                 (U = (null == w ? void 0 : w.isPausedAllowsResumeButNotUpdates)
                     ? h.intl.format(h.t.B6oNwM, {
                           primaryText: r,
@@ -160,7 +160,7 @@ let g = (e, t, n, r) => {
                                   paidURL: f.EYA.PAID_TERMS,
                                   contactLink: f.EYA.CONTACT,
                                   helpdeskArticle: l.Z.getArticleURL(f.BhN.BILLING)
-                              }));
+                              })));
         }
         return (0, r.jsxs)(r.Fragment, {
             children: [

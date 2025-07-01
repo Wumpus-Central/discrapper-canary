@@ -1,4 +1,4 @@
-(e = n.nmd(e)),
+((e = n.nmd(e)),
     (function (r) {
         var i = t && !t.nodeType && t,
             a = e && !e.nodeType && e,
@@ -36,7 +36,7 @@
         function N(e, t) {
             var n = e.split('@'),
                 r = '';
-            return n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + A((e = e.replace(y, '.')).split('.'), t).join('.');
+            return (n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + A((e = e.replace(y, '.')).split('.'), t).join('.'));
         }
         function C(e) {
             for (var t, n, r = [], i = 0, a = e.length; i < a; ) (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a ? ((64512 & (n = e.charCodeAt(i++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), i--)) : r.push(t);
@@ -45,7 +45,7 @@
         function R(e) {
             return A(e, function (e) {
                 var t = '';
-                return e > 65535 && ((e -= 65536), (t += T(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += T(e));
+                return (e > 65535 && ((e -= 65536), (t += T(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += T(e)));
             }).join('');
         }
         function P(e) {
@@ -75,10 +75,10 @@
                 y = 0,
                 O = m,
                 v = h;
-            for ((n = e.lastIndexOf(g)) < 0 && (n = 0), r = 0; r < n; ++r) e.charCodeAt(r) >= 128 && S('not-basic'), E.push(e.charCodeAt(r));
+            for ((n = e.lastIndexOf(g)) < 0 && (n = 0), r = 0; r < n; ++r) (e.charCodeAt(r) >= 128 && S('not-basic'), E.push(e.charCodeAt(r)));
             for (i = n > 0 ? n + 1 : 0; i < b; ) {
-                for (a = y, o = 1, s = u; i >= b && S('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / o)) && S('overflow'), (y += l * o), !(l < (_ = s <= v ? d : s >= v + f ? f : s - v)); s += u) o > I(c / (p = u - _)) && S('overflow'), (o *= p);
-                (v = D(y - a, (t = E.length + 1), 0 == a)), I(y / t) > c - O && S('overflow'), (O += I(y / t)), (y %= t), E.splice(y++, 0, O);
+                for (a = y, o = 1, s = u; i >= b && S('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / o)) && S('overflow'), (y += l * o), !(l < (_ = s <= v ? d : s >= v + f ? f : s - v)); s += u) (o > I(c / (p = u - _)) && S('overflow'), (o *= p));
+                ((v = D(y - a, (t = E.length + 1), 0 == a)), I(y / t) > c - O && S('overflow'), (O += I(y / t)), (y %= t), E.splice(y++, 0, O));
             }
             return R(E);
         }
@@ -104,10 +104,10 @@
                 for (s = c, o = 0; o < b; ++o) (E = e[o]) >= t && E < s && (s = E);
                 for (s - t > I((c - n) / (y = r + 1)) && S('overflow'), n += (s - t) * y, t = s, o = 0; o < b; ++o)
                     if (((E = e[o]) < t && ++n > c && S('overflow'), E == t)) {
-                        for (l = n, _ = u; !(l < (p = _ <= a ? d : _ >= a + f ? f : _ - a)); _ += u) (v = l - p), (O = u - p), A.push(T(w(p + (v % O), 0))), (l = I(v / O));
-                        A.push(T(w(l, 0))), (a = D(n, y, r == i)), (n = 0), ++r;
+                        for (l = n, _ = u; !(l < (p = _ <= a ? d : _ >= a + f ? f : _ - a)); _ += u) ((v = l - p), (O = u - p), A.push(T(w(p + (v % O), 0))), (l = I(v / O)));
+                        (A.push(T(w(l, 0))), (a = D(n, y, r == i)), (n = 0), ++r);
                     }
-                ++n, ++t;
+                (++n, ++t);
             }
             return A.join('');
         }
@@ -142,4 +142,4 @@
             if (e.exports == i) a.exports = s;
             else for (l in s) s.hasOwnProperty(l) && (i[l] = s[l]);
         else r.punycode = s;
-    })(this);
+    })(this));

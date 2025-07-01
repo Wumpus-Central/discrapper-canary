@@ -1,4 +1,4 @@
-n.d(t, { default: () => f }), n(388685);
+(n.d(t, { default: () => f }), n(388685));
 var i = n(255367),
     a = n(73800),
     o = n(481060),
@@ -29,9 +29,9 @@ function f(e) {
         x = (0, a.useRef)(!1),
         { optOutPerDevice: C } = (0, c.H)({ location: 'ConnectedDevice' });
     function T() {
-        (x.current = !0), d.Wz(n.displayName);
+        ((x.current = !0), d.Wz(n.displayName));
     }
-    (0, l.zq)(() => {
+    ((0, l.zq)(() => {
         x.current || T();
     }),
         (0, a.useEffect)(() => {
@@ -39,7 +39,7 @@ function f(e) {
                 type: null != f ? 'New Audio Device Detected - Certified' : 'New Audio Device Detected - Not Certified',
                 device_name: null != f ? ''.concat(f.vendor.name, ' ').concat(f.model.name) : n.displayName
             });
-        }, [n.displayName, f]);
+        }, [n.displayName, f]));
     let y = null != f ? m.intl.string(m.t.kiqvHR) : m.intl.string(m.t.AbnGIy);
     switch (n.type) {
         case s.Q.INPUT:
@@ -119,7 +119,7 @@ function f(e) {
                                     look: o.zxk.Looks.LINK,
                                     color: o.zxk.Colors.LINK,
                                     onClick: () => {
-                                        C
+                                        (C
                                             ? ((x.current = !0),
                                               d.Gl(n.displayName),
                                               r.default.track(u.rMx.MODAL_DISMISSED, {
@@ -133,7 +133,7 @@ function f(e) {
                                                   type: null != f ? 'New Audio Device Detected - Certified' : 'New Audio Device Detected - Not Certified',
                                                   dismiss_type: 'permanent'
                                               })),
-                                            D();
+                                            D());
                                     },
                                     children: C ? m.intl.formatToPlainString(m.t.cwS3Ex, { device: n.displayName }) : m.intl.string(m.t['5E9SBw'])
                                 })
@@ -150,14 +150,14 @@ function f(e) {
                         (0, i.jsx)(o.zxk, {
                             color: o.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                T(), D();
+                                (T(), D());
                             },
                             className: N.cancelButton,
                             children: m.intl.string(m.t.vPBgq6)
                         }),
                         (0, i.jsx)(o.zxk, {
                             onClick: () => {
-                                (x.current = !0), null != _ && d.mo(n.displayName, _, 'New Audio Device Detected Modal'), D();
+                                ((x.current = !0), null != _ && d.mo(n.displayName, _, 'New Audio Device Detected Modal'), D());
                             },
                             children: m.intl.string(m.t.ydkoDQ)
                         })

@@ -1,4 +1,4 @@
-a.d(t, { a: () => O }), a(388685), a(539854);
+(a.d(t, { a: () => O }), a(388685), a(539854));
 var n = a(255367),
     r = a(73800),
     s = a(120356),
@@ -106,7 +106,7 @@ class O extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             k(this, 'state', { isAppCompatible: !0 }),
             k(this, 'getAppButton', () => {
                 let { token: e, TrackClick: t, authRedirectTo: a } = this.props,
@@ -160,7 +160,7 @@ class O extends r.PureComponent {
                         )
                     ),
                     a = this.getAppButton();
-                return null != a && t.push(a), t;
-            });
+                return (null != a && t.push(a), t);
+            }));
     }
 }

@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => m }), r(388685);
+(r.r(t), r.d(t, { default: () => m }), r(388685));
 var n = r(255367),
     o = r(73800),
     a = r(120356),
@@ -13,7 +13,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -21,7 +21,7 @@ function f(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -29,8 +29,8 @@ function f(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -64,12 +64,12 @@ let g = (e) => {
                             n,
                             o = {},
                             a = Object.keys(e);
-                        for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
                         return o;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var a = Object.getOwnPropertySymbols(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                    for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
                 }
                 return o;
             })(e, ['position', 'color', 'disabled']);
@@ -149,31 +149,31 @@ function m(e) {
             showEnd: !1
         });
     o.useEffect(() => {
-        w(h(a) ? a : null),
+        (w(h(a) ? a : null),
             S({
                 start: a,
                 end: null != j ? j : c.p6O
-            });
+            }));
     }, [a, h, j]);
     let D = o.useCallback(
             (e) => {
-                null == i || i(e), w(null);
+                (null == i || i(e), w(null));
             },
             [i, w]
         ),
         N = o.useCallback(
             (e) => {
-                null == i || i(e), w(e);
+                (null == i || i(e), w(e));
             },
             [i, w]
         ),
         R = o.useCallback(
             (e, t) => {
-                S({
+                (S({
                     start: e,
                     end: t
                 }),
-                    null == y || y([e, t]);
+                    null == y || y([e, t]));
             },
             [y]
         ),

@@ -31,7 +31,7 @@ e(
     },
     {
         groupBy: function (t, r) {
-            u(t), i(r);
+            (u(t), i(r));
             var n = new p(),
                 e = 0;
             return (

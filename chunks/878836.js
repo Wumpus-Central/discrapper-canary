@@ -1,4 +1,4 @@
-n.d(t, { S: () => f }), n(388685);
+(n.d(t, { S: () => f }), n(388685));
 var r = n(73800),
     i = n(481060),
     a = n(355467),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -43,7 +43,7 @@ let f = (e) => {
         m = r.useCallback(async () => {
             var e;
             let n = (0, o.Q8)(null != (e = l.Z.ipCountryCode) ? e : 'ALL').countryPaymentMethods;
-            h((0, c.lS)(n)), t && u(await (0, a.R5)(n.length > 0 ? { regionalPaymentMethods: n } : void 0)), _(!1);
+            (h((0, c.lS)(n)), t && u(await (0, a.R5)(n.length > 0 ? { regionalPaymentMethods: n } : void 0)), _(!1));
         }, [t]);
     (0, s.ZP)(() => {
         m();

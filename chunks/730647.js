@@ -1,41 +1,41 @@
-n.d(t, {
-    f: () => s,
+(n.d(t, {
+    f: () => u,
     l: () => d
 }),
-    n(415506);
+    n(415506));
 var r = n(255367),
     i = n(73800),
     l = n(399606),
-    o = n(38618),
-    a = n(423117),
-    u = n(289393);
+    a = n(38618),
+    o = n(423117),
+    s = n(289393);
 let c = i.createContext(void 0);
-function s(e) {
+function u(e) {
     let t = i.useContext(c);
     if (null == t) throw Error(''.concat(null != e ? e : 'useGroupListingsFetchContext', ' must be used within a GroupListingsFetchContextProvider'));
     let { listingsLoaded: n, fetchGroupListingsForGuild: r } = t;
-    return r(), n;
+    return (r(), n);
 }
 function d(e) {
-    let { guildId: t, children: n, refetchOnMount: s, includeSoftDeleted: d, countryCode: p, dontFetchWhileTrue: f } = e,
-        E = (0, l.e7)([o.Z], () => o.Z.isConnected()),
-        O = (0, l.e7)([u.Z], () => (null != t ? u.Z.getSubscriptionGroupListingsForGuildFetchState(t) : u.M.FETCHED)),
-        _ = i.useRef(s),
-        S = i.useCallback(() => {
-            if (null == t || !E || !0 === f) return;
-            let e = u.Z.getSubscriptionGroupListingsForGuildFetchState(t);
-            (_.current || e === u.M.NOT_FETCHED) &&
+    let { guildId: t, children: n, refetchOnMount: u, includeSoftDeleted: d, countryCode: p, dontFetchWhileTrue: m } = e,
+        f = (0, l.e7)([a.Z], () => a.Z.isConnected()),
+        g = (0, l.e7)([s.Z], () => (null != t ? s.Z.getSubscriptionGroupListingsForGuildFetchState(t) : s.M.FETCHED)),
+        _ = i.useRef(u),
+        h = i.useCallback(() => {
+            if (null == t || !f || !0 === m) return;
+            let e = s.Z.getSubscriptionGroupListingsForGuildFetchState(t);
+            (_.current || e === s.M.NOT_FETCHED) &&
                 ((_.current = !1),
-                a.FP(t, {
+                o.FP(t, {
                     includeSoftDeleted: d,
                     countryCode: p
                 }));
-        }, [E, t, d, p, f]),
-        g = i.useMemo(() => O === u.M.FETCHED && !0 !== _.current, [O, _]);
+        }, [f, t, d, p, m]),
+        b = i.useMemo(() => g === s.M.FETCHED && !0 !== _.current, [g, _]);
     return (0, r.jsx)(c.Provider, {
         value: {
-            listingsLoaded: g,
-            fetchGroupListingsForGuild: S
+            listingsLoaded: b,
+            fetchGroupListingsForGuild: h
         },
         children: n
     });

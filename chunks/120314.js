@@ -1,12 +1,12 @@
 t.a(e, async function (e, r) {
     try {
-        t.r(n), t.d(n, { default: () => j });
+        (t.r(n), t.d(n, { default: () => x }));
         var l = t(255367);
         t(73800);
-        var i = t(215157),
-            u = t(222082),
-            o = t(63681),
-            c = t(743965),
+        var i = t(978056),
+            o = t(222082),
+            c = t(63681),
+            u = t(743965),
             a = t(12781),
             d = t(980426),
             s = t(659700),
@@ -15,19 +15,19 @@ t.a(e, async function (e, r) {
             g = t(312539),
             h = t(325980),
             b = t(472433),
-            x = t(701214),
-            y = e([a, i]);
-        [a, i] = y.then ? (await y)() : y;
-        let m = {
-            text: u.xv,
-            paragraph: u.nv,
-            empty: u.HY,
+            y = t(701214),
+            m = e([a, b, i]);
+        [a, b, i] = m.then ? (await m)() : m;
+        let v = {
+            text: o.xv,
+            paragraph: o.nv,
+            empty: o.HY,
             emoji: a.d,
             link: f.r,
             list: _.a,
             listItem: _.H,
-            code: o.E,
-            code_block: c.d,
+            code: c.E,
+            code_block: u.d,
             quote: h.p,
             bold: d.d8,
             italic: d.Tx,
@@ -37,13 +37,13 @@ t.a(e, async function (e, r) {
             heading: s.X,
             small: s.x,
             spoiler: b.o,
-            timestamp: x.E
+            timestamp: y.E
         };
-        function j(e) {
+        function x(e) {
             let { content: n } = e;
             return (0, l.jsx)(i.ZP, {
                 content: n,
-                renderers: m
+                renderers: v
             });
         }
         r();

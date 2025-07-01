@@ -1,4 +1,4 @@
-t.d(n, { P: () => o });
+t.d(n, { P: () => r });
 let i = (0, t(818083).B)({
     kind: 'user',
     id: '2023-08-30_open-in-popout',
@@ -12,6 +12,6 @@ let i = (0, t(818083).B)({
         }
     ]
 });
-function o(e) {
+function r(e) {
     return i.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(642613);
+(n.d(t, { Z: () => Z }), n(388685), n(642613));
 var r = n(392711),
     i = n.n(r),
     a = n(51407),
@@ -32,7 +32,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -72,7 +72,7 @@ let I = 300,
     S = (e) => 'AudioContextSettingsMigrated:'.concat(e),
     A = (e) => (e === E.Yn.STREAM ? a.h.STREAM : a.h.USER);
 function N(e, t, n) {
-    return e[t].volume !== A(n) || e[t].muted || e[t].soundboardMuted || delete e[t], e;
+    return (e[t].volume !== A(n) || e[t].muted || e[t].soundboardMuted || delete e[t], e);
 }
 function C(e) {
     let t = p.default.entries(e),
@@ -131,7 +131,7 @@ function P() {
                         null == a[n] && ((t = !0), (a[n] = r));
                     }
                 }
-                return s.K.set(S(f.default.getId()), !0), t;
+                return (s.K.set(S(f.default.getId()), !0), t);
             },
             g.fy.AUTOMATED
         );
@@ -142,7 +142,7 @@ function w(e, t, n, r) {
         o = (0, m.z)(n);
     if (null == o) return !1;
     let s = e[o];
-    return (s[t] = null != (i = s[t]) ? i : R(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), a && N(s, t, n), C(s), !0;
+    return ((s[t] = null != (i = s[t]) ? i : R(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), a && N(s, t, n), C(s), !0);
 }
 function D() {
     P();
@@ -151,13 +151,13 @@ let L = i().debounce(() => {
     U();
 }, T);
 function x(e, t, n) {
-    (0, h.RF)(e, t, { volume: n }), L();
+    ((0, h.RF)(e, t, { volume: n }), L());
 }
 function k(e, t, n) {
-    (0, h.RF)(e, t, { muted: n }), L.cancel(), U();
+    ((0, h.RF)(e, t, { muted: n }), L.cancel(), U());
 }
 function M(e, t, n) {
-    (0, h.RF)(e, t, { soundboardMuted: n }), L.cancel(), U();
+    ((0, h.RF)(e, t, { soundboardMuted: n }), L.cancel(), U());
 }
 let j = i().debounce(c.On, 500, { maxWait: 500 });
 function U() {
@@ -182,12 +182,12 @@ function G(e) {
     let { context: t, userId: n, volume: r } = e;
     if (n === f.default.getId()) return;
     let i = u.Z.getRemoteSessionId();
-    null != i &&
+    (null != i &&
         j(i, n, t, {
             muted: _.Z.isLocalMute(n, t),
             volume: r
         }),
-        x(t, n, r);
+        x(t, n, r));
 }
 function B(e) {
     let { context: t, userId: n } = e;
@@ -199,13 +199,13 @@ function V(e) {
 }
 class F extends l.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             b(this, 'actions', {
                 POST_CONNECTION_OPEN: D,
                 AUDIO_SET_LOCAL_VOLUME: G,
                 AUDIO_TOGGLE_LOCAL_MUTE: B,
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: V
-            });
+            }));
     }
 }
 let Z = new F();

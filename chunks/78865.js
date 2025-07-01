@@ -22,12 +22,12 @@ function b(e) {
                         n,
                         a = {},
                         o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                    for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
             }
             return a;
         })(e, ['onClose', 'analyticsSource']);
@@ -44,7 +44,7 @@ function b(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -52,7 +52,7 @@ function b(e) {
                     )),
                     n.forEach(function (t) {
                         var n;
-                        (n = r[t]),
+                        ((n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
@@ -60,8 +60,8 @@ function b(e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
-                    });
+                                : (e[t] = n));
+                    }));
             }
             return e;
         })(
@@ -81,13 +81,13 @@ function b(e) {
                 onSubscribeClick: o.Z,
                 secondaryCTA: p.intl.string(p.t.ZnqyZ2),
                 onSecondaryClick: function () {
-                    (0, o.Z)(),
+                    ((0, o.Z)(),
                         (0, a.pT)(),
                         l.default.track(s.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_section: s.jXE.STREAM_UPSELL_MODAL,
                             location_object: s.qAy.NAVIGATION_LINK
                         }),
-                        (0, i.uL)(s.Z5c.APPLICATION_STORE);
+                        (0, i.uL)(s.Z5c.APPLICATION_STORE));
                 },
                 showEnhancedUpsell: !0,
                 enableArtBoxShadow: !1,

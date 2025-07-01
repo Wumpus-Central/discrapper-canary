@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685), n(35282);
+(n.d(t, { Z: () => c }), n(388685), n(35282));
 var r = n(836560),
     i = n(68721),
     a = n(961304),
@@ -37,7 +37,7 @@ class c extends r.EventEmitter {
     }
     createOutput(e, t) {
         let n = this.outputs[e];
-        null == n && (((n = new a.Z(this.userId, this.audioContext)).mute = !1), (n.volume = 100), n.setSpeakingFlags(o.Dg.VOICE), n.setSinkId(this.sinkId), (this.outputs[e] = n)), n.addTrack(t), n.play();
+        (null == n && (((n = new a.Z(this.userId, this.audioContext)).mute = !1), (n.volume = 100), n.setSpeakingFlags(o.Dg.VOICE), n.setSinkId(this.sinkId), (this.outputs[e] = n)), n.addTrack(t), n.play());
     }
     destroyOutput(e, t) {
         let n = this.outputs[e];
@@ -50,7 +50,7 @@ class c extends r.EventEmitter {
                 let n = t[e];
                 if (/^a=mid:/.test(n)) break;
             }
-            return (e.sdp = t.join('\n')), e;
+            return ((e.sdp = t.join('\n')), e);
         };
         this.pc1.createOffer(l).then((t) => {
             this.pc1.setLocalDescription(e(t)).then(() => {
@@ -65,7 +65,7 @@ class c extends r.EventEmitter {
         });
     }
     constructor(e, t, n, r = '') {
-        super(),
+        (super(),
             s(this, 'userId', void 0),
             s(this, 'sinkId', void 0),
             s(this, 'input', void 0),
@@ -76,14 +76,14 @@ class c extends r.EventEmitter {
             s(this, 'audioContext', void 0),
             s(this, 'handleStream', () => {
                 let e = this.input.getDelayedStream();
-                this.senders.forEach((e) => this.pc1.removeTrack(e)), (this.senders = [...e.getAudioTracks().map((t) => this.pc1.addTrack(t, e))]), this.handshake();
+                (this.senders.forEach((e) => this.pc1.removeTrack(e)), (this.senders = [...e.getAudioTracks().map((t) => this.pc1.addTrack(t, e))]), this.handshake());
             }),
             s(this, 'handleTrack', (e) => {
                 e.streams[0].getTracks().forEach((e) => {
-                    this.createOutput(e.id, e),
+                    (this.createOutput(e.id, e),
                         (e.onmute = () => {
                             this.destroyOutput(e.id, e);
-                        });
+                        }));
                 });
             }),
             (this.userId = r),
@@ -101,6 +101,6 @@ class c extends r.EventEmitter {
             this.input.setSource(t),
             this.input.on('stream', this.handleStream),
             this.input.enable(),
-            (this.audioContext = e);
+            (this.audioContext = e));
     }
 }

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     M: () => d,
     Z: () => K
 }),
-    n(388685);
+    n(388685));
 var r,
     i = n(512722),
     a = n.n(i),
@@ -24,7 +24,7 @@ function u(e, t, n) {
     );
 }
 var d = (function (e) {
-    return (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), e;
+    return ((e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), e);
 })({});
 function f(e) {
     return 'guild:'.concat(e);
@@ -64,7 +64,7 @@ function N(e) {
     g.set(e.id, e);
 }
 function C() {
-    m.clear(), g.clear(), (E = {}), b.clear(), (y = {}), (O = {}), (v = {}), (I = {}), T.clear();
+    (m.clear(), g.clear(), (E = {}), b.clear(), (y = {}), (O = {}), (v = {}), (I = {}), T.clear());
 }
 function R(e) {
     let { settings: t } = e;
@@ -101,7 +101,7 @@ function M(e) {
 }
 function j(e) {
     let { listing: t, groupListing: n } = e;
-    N(t), A(n);
+    (N(t), A(n));
 }
 function U(e) {
     let { listing: t } = e;
@@ -121,11 +121,11 @@ function V(e) {
 }
 function F(e) {
     let { guildId: t, restrictions: n } = e;
-    (v[t] = n), (I[t] = 2);
+    ((v[t] = n), (I[t] = 2));
 }
 function Z(e) {
     let { guildId: t } = e;
-    (I[t] = 2), (v[t] = c.m);
+    ((I[t] = 2), (v[t] = c.m));
 }
 function H(e) {
     let { guildId: t } = e;
@@ -148,7 +148,7 @@ class W extends (r = o.ZP.Store) {
     }
     getSubscriptionGroupListingForSubscriptionListing(e) {
         let t = m.values(_(e));
-        return a()(t.length <= 1, 'Found multiple group listings for listing'), t[0];
+        return (a()(t.length <= 1, 'Found multiple group listings for listing'), t[0]);
     }
     getSubscriptionListing(e) {
         return g.get(e);
@@ -160,7 +160,7 @@ class W extends (r = o.ZP.Store) {
     }
     getSubscriptionListingForPlan(e) {
         let t = g.values(h(e));
-        return a()(t.length <= 1, 'Found multiple listings for plan'), t[0];
+        return (a()(t.length <= 1, 'Found multiple listings for plan'), t[0]);
     }
     getSubscriptionSettings(e) {
         return y[e];

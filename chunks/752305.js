@@ -15,14 +15,14 @@ function i(e) {
         richValue: o(e)
     };
 }
-n.d(t, {
+(n.d(t, {
     H2: () => r,
     JM: () => o,
     VI: () => s,
     eK: () => i
 }),
     n(35282),
-    n(415506);
+    n(415506));
 let a = Object.freeze([
     Object.freeze({
         type: 'line',

@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(846519),
-    a = n(388032);
-function o(e, t, n) {
+    o = n(388032);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,15 +20,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
+                a(e, t, n[t]);
+            }));
     }
     return e;
 }
@@ -104,25 +104,25 @@ function d(e) {
                                 r,
                                 i = {},
                                 l = Object.keys(e);
-                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var l = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                     }
                     return i;
                 })(t, ['timestamps']),
-                { hours: l, minutes: o, seconds: u } = this.state,
+                { hours: l, minutes: a, seconds: u } = this.state,
                 d = {
                     hours: this.renderTime(l, !0),
-                    minutes: this.renderTime(o),
+                    minutes: this.renderTime(a),
                     seconds: this.renderTime(u)
                 };
-            return null != n.end ? (0, r.jsx)(e, c(s({}, i), { message: a.intl.formatToPlainString(a.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, i), { message: a.intl.formatToPlainString(a.t.M9Fexc, d) })) : null;
+            return null != n.end ? (0, r.jsx)(e, c(s({}, i), { message: o.intl.formatToPlainString(o.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, i), { message: o.intl.formatToPlainString(o.t.M9Fexc, d) })) : null;
         }
         constructor(e) {
-            super(e), o(this, '_interval', void 0), (this._interval = new l.Xp()), (this.state = s({}, this.getUpdatedTime()));
+            (super(e), a(this, '_interval', void 0), (this._interval = new l.Xp()), (this.state = s({}, this.getUpdatedTime())));
         }
     };
 }

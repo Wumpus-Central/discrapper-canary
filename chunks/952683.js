@@ -32,7 +32,7 @@ function u(e, t) {
         try {
             for (i = i.call(e); !(o = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); o = !0);
         } catch (e) {
-            (s = !0), (r = e);
+            ((s = !0), (r = e));
         } finally {
             try {
                 o || null == i.return || i.return();

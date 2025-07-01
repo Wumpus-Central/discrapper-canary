@@ -14,20 +14,20 @@ function o(e, t) {
             newSelection: a.selection
         });
     }
-    (e.history = {
+    ((e.history = {
         index: 0,
         stack: []
     }),
         (e.onChange = () => {
             let { history: t } = e;
-            0 === t.stack.length && ((t.stack = [c(e)]), (t.index = 0)), null != e.selection && (r.T.currentEntry(e).selection = e.selection), (h = null), f();
+            (0 === t.stack.length && ((t.stack = [c(e)]), (t.index = 0)), null != e.selection && (r.T.currentEntry(e).selection = e.selection), (h = null), f());
         }),
         (e.undo = () => {
             e.history.index > 0 && _(e.history.index - 1);
         }),
         (e.redo = () => {
             e.history.index < e.history.stack.length - 1 && _(e.history.index + 1);
-        });
+        }));
     let p = null,
         h = null,
         m = null;

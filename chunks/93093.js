@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(388685);
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(442837),
     i = n(570140);
 function a(e, t, n) {
@@ -37,7 +37,7 @@ class o extends r.ZP.Store {
         !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id);
     }
     constructor() {
-        super(
+        (super(
             i.Z,
             {
                 CACHE_LOADED: (e) => this.handleCacheLoaded(e),
@@ -48,7 +48,7 @@ class o extends r.ZP.Store {
             },
             i.c.Early
         ),
-            a(this, 'guildIds', new Set());
+            a(this, 'guildIds', new Set()));
     }
 }
 let s = new o();

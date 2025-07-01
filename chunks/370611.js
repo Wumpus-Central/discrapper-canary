@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -43,7 +43,7 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -51,7 +51,7 @@ function w(e) {
             )),
             r.forEach(function (t) {
                 P(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -59,11 +59,11 @@ function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -231,7 +231,7 @@ function G(e) {
         j = async () => {
             try {
                 let e = await k();
-                await g.ZP.copyImageBlob(e, M), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
+                (await g.ZP.copyImageBlob(e, M), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW));
             } catch (e) {
                 P('error');
             }

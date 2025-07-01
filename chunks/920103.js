@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => a }), n(539854);
+(n.d(t, { Z: () => a }), n(539854));
 let i = 1 / 240;
 class a {
     to(e) {
@@ -19,11 +19,11 @@ class a {
         return ((this.target = t), null != i && this.callbacks.push(i), null != n && (this.from = n), r) ? (this.animating || this.start(), this) : void this.stop(t);
     }
     cancel() {
-        return this.stop(this.from), this;
+        return (this.stop(this.from), this);
     }
     start() {
         var e, t;
-        (this.animating = !0), (this.vel = 0), (this.last = null), (this.nodeWindow = this.getNodeWindow()), (this.nextTick = null != (t = null == (e = this.nodeWindow) ? void 0 : e.requestAnimationFrame(this.update)) ? t : -1);
+        ((this.animating = !0), (this.vel = 0), (this.last = null), (this.nodeWindow = this.getNodeWindow()), (this.nextTick = null != (t = null == (e = this.nodeWindow) ? void 0 : e.requestAnimationFrame(this.update)) ? t : -1));
     }
     getUpdates(e, t) {
         let n = (-this.tension * (t - this.target) + -this.friction * e) / this.mass;
@@ -38,10 +38,10 @@ class a {
     }
     stop(e) {
         var t;
-        null == (t = this.nodeWindow) || t.cancelAnimationFrame(this.nextTick), (this.animating = !1), (this.accumulator = 0), null != e && ((this.target = this.from = e), this.callback(e, this.abort)), this.callbacks.length > 0 && (this.callbacks.forEach((e) => e()), (this.callbacks.length = 0));
+        (null == (t = this.nodeWindow) || t.cancelAnimationFrame(this.nextTick), (this.animating = !1), (this.accumulator = 0), null != e && ((this.target = this.from = e), this.callback(e, this.abort)), this.callbacks.length > 0 && (this.callbacks.forEach((e) => e()), (this.callbacks.length = 0)));
     }
     constructor({ callback: e, tension: t = 160, friction: n = 22, mass: a = 1, threshold: o = 0.001, clamp: s = !1, maxVelocity: l = 1 / 0, getNodeWindow: c = () => window }) {
-        r(this, 'tension', void 0),
+        (r(this, 'tension', void 0),
             r(this, 'friction', void 0),
             r(this, 'threshold', void 0),
             r(this, 'mass', void 0),
@@ -62,7 +62,7 @@ class a {
                 let { to: t, callback: n } = e;
                 this.animating || (null != n && this.callbacks.push(n), this.stop(t));
                 let r = t - this.from;
-                (this.from = t), (this.target = this.target + r), this.callback(this.from, this.abort), null != n && n();
+                ((this.from = t), (this.target = this.target + r), this.callback(this.from, this.abort), null != n && n());
             }),
             r(this, 'abort', () => {
                 this.animating = !1;
@@ -70,7 +70,7 @@ class a {
             r(this, 'update', (e) => {
                 var t, n, r, a;
                 if (null == this.last) {
-                    (this.last = e), (this.nextTick = null != (n = null == (t = this.nodeWindow) ? void 0 : t.requestAnimationFrame(this.update)) ? n : -1);
+                    ((this.last = e), (this.nextTick = null != (n = null == (t = this.nodeWindow) ? void 0 : t.requestAnimationFrame(this.update)) ? n : -1));
                     return;
                 }
                 let o = e;
@@ -86,7 +86,7 @@ class a {
                         t = (e - s) * (this.accumulator / i);
                     s += t;
                 }
-                this.callback(s, this.abort), this.animating && ((this.last = o), (this.nextTick = null != (a = null == (r = this.nodeWindow) ? void 0 : r.requestAnimationFrame(this.update)) ? a : -1));
+                (this.callback(s, this.abort), this.animating && ((this.last = o), (this.nextTick = null != (a = null == (r = this.nodeWindow) ? void 0 : r.requestAnimationFrame(this.update)) ? a : -1)));
             }),
             (this.callback = e),
             (this.from = 0),
@@ -96,6 +96,6 @@ class a {
             (this.maxVelocity = l),
             (this.threshold = o),
             (this.clamp = s),
-            (this.getNodeWindow = c);
+            (this.getNodeWindow = c));
     }
 }

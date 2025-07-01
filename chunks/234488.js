@@ -12,7 +12,7 @@ var r = n(46015),
     p = function (e) {
         if (!a(e)) return !1;
         try {
-            return u(c, [], e), !0;
+            return (u(c, [], e), !0);
         } catch (e) {
             return !1;
         }
@@ -31,7 +31,7 @@ var r = n(46015),
             return !0;
         }
     };
-(h.sham = !0),
+((h.sham = !0),
     (e.exports =
         !u ||
         i(function () {
@@ -46,4 +46,4 @@ var r = n(46015),
             );
         })
             ? h
-            : p);
+            : p));

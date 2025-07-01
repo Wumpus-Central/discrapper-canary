@@ -19,7 +19,7 @@ function j(e) {
         j = (0, o.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
         y = t ? g.noSearchResultsImage : g.noClipsImage,
         h = l.useCallback(() => {
-            n(), (0, c.Z)(f.Z.CLIPS);
+            (n(), (0, c.Z)(f.Z.CLIPS));
         }, [n]),
         x = (() => {
             if (!j) return b.intl.format(b.t['3iveam'], { onClick: h });

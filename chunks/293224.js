@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     L: () => em,
     N3: () => ec,
     Ox: () => ea,
@@ -7,7 +7,7 @@ n.d(t, {
     c_: () => ep,
     sm: () => eu
 }),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -67,7 +67,7 @@ function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -75,7 +75,7 @@ function er(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -83,8 +83,8 @@ function er(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -94,7 +94,7 @@ function eo(e) {
         r.useEffect(() => {
             if (e) {
                 var n;
-                null == (n = t.current) || n.call(t), (t.current = null);
+                (null == (n = t.current) || n.call(t), (t.current = null));
             }
         }, [e]),
         (e) => ((t.current = e), e)
@@ -112,12 +112,12 @@ function el(e) {
                         i,
                         r = {},
                         o = Object.keys(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['ref', 'isActive', 'disabled', 'iconComponent', 'iconColor', 'tooltip', 'defaultColor', 'highlightedColor', 'caretColor', 'popoutOpen', 'onClick', 'popoutDisabled', 'onPopoutClick', 'onMouseEnter', 'onMouseLeave', 'onContextMenu', 'isTrayButton']);
@@ -157,11 +157,11 @@ function ea(e) {
     r.useEffect(() => () => g(), [g, p]);
     let b = eo(l),
         v = (e) => (t) => {
-            e(t),
+            (e(t),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.MICROPHONE,
                     value: J.bk.SETTINGS_OPENED
-                });
+                }));
         },
         E = null == (t = (0, $.II)()) ? void 0 : t.id,
         x = (0, o.e7)([q.Z], () => q.Z.isLimitedInteractionOverrideEnabled(E));
@@ -188,12 +188,12 @@ function ea(e) {
                 highlightedColor: 'red',
                 tooltip: f,
                 onClick: () => {
-                    (0, _.Z)(u, s, et.jXE.OVERLAY),
+                    ((0, _.Z)(u, s, et.jXE.OVERLAY),
                         (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                             type: J.Qu.MICROPHONE,
                             value: p ? J.bk.ENABLED : J.bk.DISABLED,
                             userId: G.default.getId()
-                        });
+                        }));
                 },
                 onPopoutClick: v(n),
                 onContextMenu: v(n),
@@ -222,19 +222,19 @@ function es(e) {
         m = s ? d.Vm4 : u;
     r.useEffect(() => () => p(), [c, p]);
     let g = () => {
-            (0, E.Z)(s, et.jXE.OVERLAY),
+            ((0, E.Z)(s, et.jXE.OVERLAY),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.AUDIO,
                     value: s ? J.bk.ENABLED : J.bk.DISABLED,
                     userId: G.default.getId()
-                });
+                }));
         },
         O = (e) => (t) => {
-            e(t),
+            (e(t),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.AUDIO,
                     value: J.bk.SETTINGS_OPENED
-                });
+                }));
         },
         v = eo(n);
     return (0, i.jsx)(d.yRy, {
@@ -287,19 +287,19 @@ function ec(e) {
             h ? g(!0) : (0, M.Z)();
         },
         O = (e) => (t) => {
-            e(t),
+            (e(t),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.CAMERA,
                     value: J.bk.SETTINGS_OPENED
-                });
+                }));
         },
         b = () => {
-            f ? y() : g(!s),
+            (f ? y() : g(!s),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.CAMERA,
                     value: s ? J.bk.DISABLED : J.bk.ENABLED,
                     userId: G.default.getId()
-                });
+                }));
         },
         {
             Component: E,
@@ -361,12 +361,12 @@ function eu(e) {
         f = (0, o.e7)([W.Z], () => W.Z.getCurrentUserActiveStream()),
         h = (0, ee.g)((0, X.getPID)()),
         m = () => {
-            h(),
+            (h(),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.GO_LIVE,
                     value: J.bk.ENABLED,
                     userId: G.default.getId()
-                });
+                }));
         },
         g = null != f;
     if (g) t = en.intl.string(en.t.S5anIS);
@@ -387,11 +387,11 @@ function eu(e) {
             m();
         },
         O = (e) => (t) => {
-            e(t),
+            (e(t),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.SCREEN_SHARE,
                     value: J.bk.SETTINGS_OPENED
-                });
+                }));
         },
         {
             Component: b,
@@ -500,13 +500,13 @@ function ed(e) {
                 iconComponent: v,
                 tooltip: p ? en.intl.string(en.t['Ox4/zc']) : h ? en.intl.string(en.t['+YBKYG']) : m ? en.intl.string(en.t.X1lQlp) : void 0,
                 onClick: (e) => {
-                    E(),
+                    (E(),
                         (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                             type: J.Qu.SOUNDBOARD,
                             value: J.bk.PANEL_OPENED,
                             userId: G.default.getId()
                         }),
-                        n(e);
+                        n(e));
                 },
                 highlightedColor: S,
                 defaultColor: S,
@@ -527,30 +527,30 @@ function ep(e) {
         s = (0, o.e7)([Y.Z], () => Y.Z.getVoiceChannelId() === (null == t ? void 0 : t.id)),
         { changeLeaveCallAndActivityIcons: c } = (0, N.A)({ location: 'DisconnectActionButton' }),
         u = () => {
-            (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
+            ((0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                 type: J.Qu.CALL_BUTTON,
                 value: J.bk.DISABLED,
                 userId: G.default.getId()
             }),
-                s && h.default.disconnect();
+                s && h.default.disconnect());
         },
         p = (e) => {
-            h.default.selectVoiceChannel(e),
+            (h.default.selectVoiceChannel(e),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.CALL_BUTTON,
                     value: J.bk.ENABLED,
                     userId: G.default.getId()
-                });
+                }));
         },
         [f, m] = r.useTransition(),
         g = (e) => (t) => {
-            m(() => {
+            (m(() => {
                 e(t);
             }),
                 (0, J.Ws)(et.Odu.QUICK_ACTIONS, {
                     type: J.Qu.CALL_BUTTON,
                     value: J.bk.SETTINGS_OPENED
-                });
+                }));
         },
         {
             Component: y,

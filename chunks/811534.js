@@ -13,7 +13,7 @@ function l(e, t, r) {
         'function' == typeof r && (r = r((0, s.Z)(e, t)));
         let { space: n, index: c } = a.Z.resolveCoord(t, e.space),
             l = (0, o.Z)(e, n);
-        (l[c] = r), (0, i.Z)(e, n, l);
+        ((l[c] = r), (0, i.Z)(e, n, l));
     }
     return e;
 }

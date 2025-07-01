@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -35,7 +35,7 @@ function C() {
             isEnabled: p.Z.isEnabled()
         }));
     function I(e, n) {
-        t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE);
+        (t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE));
     }
     function N(e, t) {
         m.Z.setMode(S, {
@@ -47,10 +47,10 @@ function C() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                p.Z.getMediaEngine().on(o.aB.VoiceActivity, I), e.stop();
+                (p.Z.getMediaEngine().on(o.aB.VoiceActivity, I), e.stop());
             }),
             () => {
-                p.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, I), e.stop();
+                (p.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, I), e.stop());
             }
         );
     }, []);

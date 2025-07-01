@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var r = n(152057),
     i = n(570140),
     a = n(147913),
@@ -50,7 +50,7 @@ function v(e, t) {
     return !(null != i && Date.now() - i > g) && !0;
 }
 function I() {
-    for (let e in E) clearTimeout(E.get(e)), E.delete(e);
+    for (let e in E) (clearTimeout(E.get(e)), E.delete(e));
 }
 function T() {
     var e;
@@ -96,14 +96,14 @@ async function S(e) {
                     intervalOffset: -1
                 });
             }
-            i.Z.dispatch({
+            (i.Z.dispatch({
                 type: 'SET_GUILD_LEADERBOARD',
                 leaderboardResponse: e,
                 intervalOffset: 0
             }),
                 y.delete(a),
                 b.delete(a),
-                T();
+                T());
         } catch (i) {
             var o;
             let e = (null != (o = y.get(a)) ? o : 0) + 1;
@@ -127,21 +127,21 @@ function A() {
     T();
 }
 function N() {
-    I(), (E = new Map()), (b = new Set()), (y = new Map()), A();
+    (I(), (E = new Map()), (b = new Set()), (y = new Map()), A());
 }
 class C extends a.Z {
     fetchLeaderboard(e) {
         return S(e);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             _(this, 'actions', {
                 POST_CONNECTION_OPEN: N,
                 CONNECTION_CLOSED: A,
                 WINDOW_FOCUS: A,
                 IDLE: A,
                 CHANNEL_SELECT: A
-            });
+            }));
     }
 }
 let R = new C();

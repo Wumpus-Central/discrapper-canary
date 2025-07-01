@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(35282), n(388685), n(358797);
+(n.d(t, { Z: () => y }), n(35282), n(388685), n(358797));
 var r,
     i = n(442837),
     l = n(570140),
@@ -20,7 +20,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -28,7 +28,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -84,7 +84,7 @@ let y = new _(l.Z, {
         if (((d[o.id] = a), (u[l] = [...m, o]), null == f)) return;
         p[o.id] = f;
         let { items: g } = o;
-        null != g &&
+        (null != g &&
             (h[f.id] =
                 ((r = s({}, o)),
                 (i = i = { items: g }),
@@ -101,7 +101,7 @@ let y = new _(l.Z, {
                           Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 r)),
-            null != (n = f.nonce) || f.id;
+            null != (n = f.nonce) || f.id);
     },
     UPLOAD_COMPRESSION_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;

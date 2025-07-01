@@ -1,8 +1,8 @@
-r.d(t, {
+(r.d(t, {
     G: () => d,
     u: () => l
 }),
-    r(388685);
+    r(388685));
 var n = r(73800),
     o = r(782568),
     a = r(49012),
@@ -14,9 +14,9 @@ function l(e) {
         [_, m] = n.useState(!1),
         f = n.useCallback(async (e, t, r) => {
             try {
-                m(!0), await (0, i.QB)(e, t, r), p(!1), m(!1);
+                (m(!0), await (0, i.QB)(e, t, r), p(!1), m(!1));
             } catch (e) {
-                p(!0), m(!1);
+                (p(!0), m(!1));
             }
         }, []),
         C = n.useCallback((e) => {
@@ -77,14 +77,14 @@ function d(e) {
                     (0, a.q)({
                         href: C,
                         onConfirm: () => {
-                            h({
+                            (h({
                                 questId: c.id,
                                 questContent: u,
                                 questContentCTA: s.jZ.VISIT_REDEMPTION_LINK,
                                 questContentPosition: _,
                                 sourceQuestContent: g
                             }),
-                                (0, o.Z)(C);
+                                (0, o.Z)(C));
                         }
                     })),
                 d());

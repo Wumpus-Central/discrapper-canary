@@ -1,4 +1,4 @@
-n.d(t, { d: () => Z }), n(953529), n(388685);
+(n.d(t, { d: () => Z }), n(953529), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(345074),
@@ -219,7 +219,7 @@ function T(e) {
         g = i.useCallback(
             (e) => {
                 let r = [...n.keywords];
-                r.splice(e, 1), m(null), (0, c.zH)(t, r);
+                (r.splice(e, 1), m(null), (0, c.zH)(t, r));
             },
             [t, n]
         ),

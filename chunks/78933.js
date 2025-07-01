@@ -1,4 +1,4 @@
-n.d(t, { Z: () => es }), n(388685);
+(n.d(t, { Z: () => es }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(873546),
@@ -47,8 +47,8 @@ var i = n(255367),
     K = n(474376),
     q = n(431282),
     X = n(213928),
-    Q = n(587243),
-    J = n(383832),
+    J = n(587243),
+    Q = n(383832),
     $ = n(981631),
     ee = n(228168),
     et = n(388032),
@@ -58,7 +58,7 @@ function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -66,7 +66,7 @@ function er(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -74,8 +74,8 @@ function er(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -90,18 +90,18 @@ function es(e) {
         }),
         { ref: em } = (0, c.ZP)(),
         eg = (0, d.Z)(em);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         null == es || es(em.current);
     }, [em, es]),
-        r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
+        r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []));
     let ep = (0, l.e7)([G.Z], () => G.Z.getStatus(t.id)),
         eh = U.Cr.useSetting(),
-        ef = (0, Q.F)(eh),
+        ef = (0, J.F)(eh),
         { expiringStatusProfileFeedback: eb } = _.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         e_ = (0, l.e7)([F.Z], () => F.Z.hidePersonalInformation),
         ex = (0, x.p)(),
         eE = U.Sb.useSetting(),
-        ej = (0, Q.I)(ep),
+        ej = (0, J.I)(ep),
         eC = (0, K.g)(n),
         eO = (0, E.Z)({ analyticsLocations: ed }),
         eS = (0, Y.I5)(t),
@@ -128,7 +128,7 @@ function es(e) {
         }, 500);
     }, []);
     let eB = (e) => {
-            null == n || n(),
+            (null == n || n(),
                 (0, v.openUserProfileModal)(
                     er(
                         {
@@ -138,7 +138,7 @@ function es(e) {
                         eu,
                         e
                     )
-                );
+                ));
         },
         eM = (null == ec ? void 0 : ec.profileEffectId) != null && !eZ.current;
     return (0, i.jsx)(m.Gt, {
@@ -263,7 +263,7 @@ function es(e) {
                                                             label: et.intl.string(et.t.s5vZlZ),
                                                             icon: o.vdY,
                                                             onClick: () => {
-                                                                eO(), n();
+                                                                (eO(), n());
                                                             }
                                                         }),
                                                         (0, i.jsx)(A.Z, { className: en.menuDivider }),
@@ -299,7 +299,7 @@ function es(e) {
                                                                   },
                                                             onClick: s.tq
                                                                 ? () => {
-                                                                      n(),
+                                                                      (n(),
                                                                           (0, o.ZDy)(
                                                                               () =>
                                                                                   new Promise((e) =>
@@ -317,12 +317,12 @@ function es(e) {
                                                                                                               i,
                                                                                                               r = {},
                                                                                                               s = Object.keys(e);
-                                                                                                          for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                                                                                                          for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                                                                                                           return r;
                                                                                                       })(e, t);
                                                                                                   if (Object.getOwnPropertySymbols) {
                                                                                                       var s = Object.getOwnPropertySymbols(e);
-                                                                                                      for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                                                                                                      for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                                                                                                   }
                                                                                                   return r;
                                                                                               })(e, ['onClose']);
@@ -362,7 +362,7 @@ function es(e) {
                                                                                           );
                                                                                       })
                                                                                   )
-                                                                          );
+                                                                          ));
                                                                   }
                                                                 : void 0
                                                         })
@@ -380,7 +380,7 @@ function es(e) {
                                                             icon: o.lMe,
                                                             label: et.intl.string(et.t.oMNyYG),
                                                             onClick: () => {
-                                                                n(), (0, J.Z)();
+                                                                (n(), (0, Q.Z)());
                                                             },
                                                             renderSubmenu: (e) => {
                                                                 let { closePopout: t } = e;
@@ -404,7 +404,7 @@ function es(e) {
                                                                         icon: o.VuL,
                                                                         label: et.intl.string(et.t['/AXYnJ']),
                                                                         onClick: () => {
-                                                                            (0, H.JG)(t.id), n();
+                                                                            ((0, H.JG)(t.id), n());
                                                                         }
                                                                     })
                                                                 ]

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(570140),
     i = n(147913),
     a = n(70956),
@@ -42,7 +42,7 @@ function d() {
 }
 class f extends i.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             l(this, 'actions', {
                 SAVED_MESSAGES_UPDATE: () => this.handleUpdates(),
                 SAVED_MESSAGE_CREATE: () => this.handleUpdates(),
@@ -50,7 +50,7 @@ class f extends i.Z {
             }),
             l(this, 'handleUpdates', () => {
                 d();
-            });
+            }));
     }
 }
 let _ = new f();

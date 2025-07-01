@@ -1,4 +1,4 @@
-n.d(e, { default: () => h }), n(388685), n(415506), n(953529);
+(n.d(e, { default: () => h }), n(388685), n(415506), n(953529));
 var i = n(255367),
     o = n(73800),
     l = n(481060),
@@ -16,7 +16,7 @@ function h(t) {
         [g, S] = o.useState(!1),
         N = null != (n = null == (e = r.Z.get(p)) ? void 0 : e.name) ? n : d.intl.string(d.t['bU/GZm']),
         v = async () => {
-            S(!0), b(null);
+            (S(!0), b(null));
             try {
                 let t = await (0, c.H)(p, {
                     location: x,
@@ -26,7 +26,7 @@ function h(t) {
                 if (null == t) throw Error();
                 h();
             } catch (t) {
-                b(d.intl.string(d.t['7wbPNj'])), S(!1);
+                (b(d.intl.string(d.t['7wbPNj'])), S(!1));
             }
         },
         B = (0, a.r)(p),
@@ -53,7 +53,7 @@ function h(t) {
             }),
             (0, i.jsxs)('form', {
                 onSubmit: (t) => {
-                    t.preventDefault(), v();
+                    (t.preventDefault(), v());
                 },
                 children: [
                     (0, i.jsxs)(l.hzk, {

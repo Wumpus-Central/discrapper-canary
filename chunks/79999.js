@@ -4,7 +4,7 @@ var n = r(749791),
     a = r(65183),
     u = r(73800),
     s = r(606166);
-a.List,
+(a.List,
     (t.exports = (function (t) {
         function e() {
             return t.apply(this, arguments) || this;
@@ -83,4 +83,4 @@ a.List,
             }),
             e
         );
-    })(u.Component));
+    })(u.Component)));

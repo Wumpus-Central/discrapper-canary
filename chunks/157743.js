@@ -46,7 +46,7 @@ function d(e) {
                 (0, s.jsx)(o.Z, {
                     guildId: a,
                     goToThread: (e, a) => {
-                        n(), (0, t.ok)(e, !a, c.on.GUILD_ACTIVE_THREADS_MODAL);
+                        (n(), (0, t.ok)(e, !a, c.on.GUILD_ACTIVE_THREADS_MODAL));
                     }
                 })
             ]

@@ -13,7 +13,7 @@ function _(t, e, a, _) {
 }
 function n(t) {
     let e = 0;
-    for (let a = 0; a < t.length; a++) (e = (e << 5) - e + t.charCodeAt(a)), (e &= e);
+    for (let a = 0; a < t.length; a++) ((e = (e << 5) - e + t.charCodeAt(a)), (e &= e));
     return e >>> 0;
 }
 function o(t) {

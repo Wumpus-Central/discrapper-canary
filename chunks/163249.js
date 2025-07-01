@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -219,7 +219,7 @@ function b(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [s, d] = i.useState(!1),
         m = async () => {
-            d(!0), await o.Z.createRole(t.id), d(!1);
+            (d(!0), await o.Z.createRole(t.id), d(!1));
         },
         f = i.useCallback(() => {
             l(n.id);

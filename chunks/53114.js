@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     S: () => y,
     d: () => b
 }),
     n(388685),
     n(642613),
-    n(539854);
+    n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(47770),
@@ -32,7 +32,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function p(e) {
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,11 +48,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -75,7 +75,7 @@ function E(e, t) {
     return e.size === t.size && Array.from(e).every((e) => t.has(e));
 }
 var b = (function (e) {
-    return (e.FpsUpdate = 'fps-update'), e;
+    return ((e.FpsUpdate = 'fps-update'), e);
 })({});
 class y extends a.Z {
     addUserToStatsCollectionPausedSet(e) {
@@ -85,13 +85,13 @@ class y extends a.Z {
         this.statCollectionPausedUsers.delete(e);
     }
     start() {
-        (this.streamStart = this.timestampProducer.now()), this.connection.on(o.Sh.Stats, this.sampleStats);
+        ((this.streamStart = this.timestampProducer.now()), this.connection.on(o.Sh.Stats, this.sampleStats));
     }
     setOutboundSsrc(e) {
         null == this.outboundStats[e] && (this.outboundStats[e] = new f.nt(this.timestampProducer));
     }
     getOrCreateInboundStats(e) {
-        return null == this.inboundStats[e] && (this.inboundStats[e] = new f.m7(this.timestampProducer)), this.inboundStats[e];
+        return (null == this.inboundStats[e] && (this.inboundStats[e] = new f.m7(this.timestampProducer)), this.inboundStats[e]);
     }
     updateCallUserIdsCount(e) {
         this.callUserIdsCount = e;
@@ -101,35 +101,35 @@ class y extends a.Z {
     }
     setUserVideoDisabled(e, t) {
         let n = this.getOrCreateInboundStats(e);
-        n.setVideoStopped(t, f.Mq.ClientSideDisableVideo), !t && n.statsWindow.length > 0 && 0 === n.statsWindow[0].packets && (n.startTime = this.timestampProducer.now());
+        (n.setVideoStopped(t, f.Mq.ClientSideDisableVideo), !t && n.statsWindow.length > 0 && 0 === n.statsWindow[0].packets && (n.startTime = this.timestampProducer.now()));
     }
     setOcclusionIncomingVideoEnabled(e) {
         this.videoStoppedForOcclusion.value = !e;
     }
     setWindowOcclusionState(e) {
-        e !== this.windowOccluded.value && this.numWindowOcclusionChanges++, (this.windowOccluded.value = e);
+        (e !== this.windowOccluded.value && this.numWindowOcclusionChanges++, (this.windowOccluded.value = e));
     }
     pause() {
-        !this.paused.value && this.pausedCount++,
+        (!this.paused.value && this.pausedCount++,
             i().forEach(this.outboundStats, (e) => {
                 e.statsWindow = [];
             }),
             i().forEach(this.inboundStats, (e) => {
                 e.statsWindow = [];
             }),
-            this.updateSendState({ paused: !0 });
+            this.updateSendState({ paused: !0 }));
     }
     resume() {
         this.updateSendState({ paused: !1 });
     }
     stop() {
-        this.connection.off(o.Sh.Stats, this.sampleStats), (this.streamEnd = this.timestampProducer.now()), this.removeAllListeners();
+        (this.connection.off(o.Sh.Stats, this.sampleStats), (this.streamEnd = this.timestampProducer.now()), this.removeAllListeners());
     }
     setViewedSimulcastQuality(e) {
-        e !== this.hqSimulcastStreamWatched.value && (this.hqSimulcastStreamWatched.totalDuration() > 0 || this.lqSimulcastStreamWatched.totalDuration() > 0) && this.simulcastQualityChanges++, (this.hqSimulcastStreamWatched.value = e), (this.lqSimulcastStreamWatched.value = !e);
+        (e !== this.hqSimulcastStreamWatched.value && (this.hqSimulcastStreamWatched.totalDuration() > 0 || this.lqSimulcastStreamWatched.totalDuration() > 0) && this.simulcastQualityChanges++, (this.hqSimulcastStreamWatched.value = e), (this.lqSimulcastStreamWatched.value = !e));
     }
     setEligibleSimulcastQuality(e) {
-        (this.hqSimulcastStreamEligible.value = e), (this.lqSimulcastStreamEligible.value = !e);
+        ((this.hqSimulcastStreamEligible.value = e), (this.lqSimulcastStreamEligible.value = !e));
     }
     getNetworkStats() {
         return this.networkQuality.getStats();
@@ -140,7 +140,7 @@ class y extends a.Z {
             let n = new Map();
             for (let r of this.outboundStats[t].getCodecsUsed()) {
                 let i = r.toUpperCase();
-                n.set(i, g(this.outboundStats[t].codecBuckets[i])), e.set(parseInt(t), n);
+                (n.set(i, g(this.outboundStats[t].codecBuckets[i])), e.set(parseInt(t), n));
             }
         }
         return e;
@@ -151,7 +151,7 @@ class y extends a.Z {
             let n = new Map();
             for (let r of this.inboundStats[t].getCodecsUsed()) {
                 let i = r.toUpperCase();
-                n.set(i, g(this.inboundStats[t].codecBuckets[i])), e.set(t, n);
+                (n.set(i, g(this.inboundStats[t].codecBuckets[i])), e.set(t, n));
             }
         }
         return e;
@@ -302,10 +302,10 @@ class y extends a.Z {
         return c.default.keys(this.inboundStats);
     }
     updateSendState(e) {
-        null != e.paused && (this.paused.value = e.paused), null != e.receivers && (this.zeroReceivers.value = 0 === e.receivers);
+        (null != e.paused && (this.paused.value = e.paused), null != e.receivers && (this.zeroReceivers.value = 0 === e.receivers));
         let t = this.paused.value || this.zeroReceivers.value,
             n = this.videoStopped.value;
-        (this.videoStopped.value = t), t !== n && i().forEach(this.outboundStats, (e) => (e.statsWindow = []));
+        ((this.videoStopped.value = t), t !== n && i().forEach(this.outboundStats, (e) => (e.statsWindow = [])));
     }
     getStats(e) {
         if (null == e) return null;
@@ -458,18 +458,18 @@ class y extends a.Z {
             d = new Set();
         this.updateSendState({ receivers: c });
         let _ = this.cameraDuration.value;
-        (this.cameraDuration.value = this.connection.context === o.Yn.DEFAULT && null != t.camera), (this.cameraOpportunityDuration.value = this.connection.context === o.Yn.DEFAULT && null != t.camera && this.callUserIdsCount > 1), (this.cameraSendDuration.value = this.connection.context === o.Yn.DEFAULT && null != t.camera && c > 0), this.cameraDuration.value && !_ && this.cameraToggles++;
+        ((this.cameraDuration.value = this.connection.context === o.Yn.DEFAULT && null != t.camera), (this.cameraOpportunityDuration.value = this.connection.context === o.Yn.DEFAULT && null != t.camera && this.callUserIdsCount > 1), (this.cameraSendDuration.value = this.connection.context === o.Yn.DEFAULT && null != t.camera && c > 0), this.cameraDuration.value && !_ && this.cameraToggles++);
         let p = i().max(n.map((e) => e.quality)),
             h = t.rtp.outbound.filter((e) => 'video' === e.type && (null == e ? void 0 : e.videoEntropy) != null)[0],
             m = null == h ? void 0 : h.videoEntropy;
-        t.rtp.outbound
+        (t.rtp.outbound
             .filter((e) => 'video' === e.type)
             .forEach((t) => {
                 let r = t;
                 if (null != r) {
                     let t = r.ssrc,
                         T = this.outboundStats[t];
-                    null == T && (console.warn('Unknown outbound video stream with SSRC: '.concat(t)), (T = new f.nt(this.timestampProducer)), (this.outboundStats[t] = T)), null == T.timeToFirstFrame && (r.framesEncoded > 0 || (null != (i = r.frameRateInput) ? i : 0) > 0) && (T.timeToFirstFrame = Math.max(0, e - T.startTime)), null != m && m >= 0 && this.videoEntropy.addSample(m);
+                    (null == T && (console.warn('Unknown outbound video stream with SSRC: '.concat(t)), (T = new f.nt(this.timestampProducer)), (this.outboundStats[t] = T)), null == T.timeToFirstFrame && (r.framesEncoded > 0 || (null != (i = r.frameRateInput) ? i : 0) > 0) && (T.timeToFirstFrame = Math.max(0, e - T.startTime)), null != m && m >= 0 && this.videoEntropy.addSample(m));
                     let S = n.find((e) => e.ssrc === t);
                     var i,
                         a,
@@ -486,13 +486,13 @@ class y extends a.Z {
                         v = !0;
                     if (this.connection.context === o.Yn.STREAM) {
                         var I = this.connection.getRemoteVideoSinkWants(t);
-                        (null == I || 0 === I) && (null == S ? void 0 : S.quality) === p && (I = this.connection.getRemoteVideoSinkWants('any')), (v = (null != I ? I : 0) > 0);
+                        ((null == I || 0 === I) && (null == S ? void 0 : S.quality) === p && (I = this.connection.getRemoteVideoSinkWants('any')), (v = (null != I ? I : 0) > 0));
                     }
                     let A = this.videoStopped.value || !v;
                     if ((A !== T.isVideoStopped && T.setVideoStopped(A, f.Mq.SenderStopped), !A)) {
-                        T.appendAndIncrementStats(f.z4.parseOutboundStats(r, e)), T.encoderCodec !== f.u7.UNKNOWN && u.add(T.encoderCodec);
+                        (T.appendAndIncrementStats(f.z4.parseOutboundStats(r, e)), T.encoderCodec !== f.u7.UNKNOWN && u.add(T.encoderCodec));
                         let t = null == S ? void 0 : S.maxBitrate;
-                        T.appendTargetRates(null == S ? void 0 : S.maxFrameRate, null != (l = r.bitrateTarget) ? l : Math.min(null != (a = s.availableOutgoingBitrate) ? a : 0, null != t ? t : 0), t, s.availableOutgoingBitrate), (T.averageEncodeTime = null != (c = r.averageEncodeTime) ? c : 0), (T.framesDroppedRateLimiter = null != (d = r.framesDroppedRateLimiter) ? d : null), (T.framesDroppedEncoderQueue = null != (_ = r.framesDroppedEncoderQueue) ? _ : null), (T.framesDroppedCongestionWindow = null != (h = r.framesDroppedCongestionWindow) ? h : null), (T.framesDroppedEncoder = null != (g = r.framesDroppedEncoder) ? g : null), (this.hqSimulcastStreamEncoded.value = null != (E = r.hqSimulcastStreamEncoded) && E), (this.lqSimulcastStreamEncoded.value = null != (b = r.lqSimulcastStreamEncoded) && b), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null != (y = r.bandwidthLimitedResolution) && y), (this.bandwidthLimitedFramerate.value = null != (O = r.bandwidthLimitedFrameRate) && O);
+                        (T.appendTargetRates(null == S ? void 0 : S.maxFrameRate, null != (l = r.bitrateTarget) ? l : Math.min(null != (a = s.availableOutgoingBitrate) ? a : 0, null != t ? t : 0), t, s.availableOutgoingBitrate), (T.averageEncodeTime = null != (c = r.averageEncodeTime) ? c : 0), (T.framesDroppedRateLimiter = null != (d = r.framesDroppedRateLimiter) ? d : null), (T.framesDroppedEncoderQueue = null != (_ = r.framesDroppedEncoderQueue) ? _ : null), (T.framesDroppedCongestionWindow = null != (h = r.framesDroppedCongestionWindow) ? h : null), (T.framesDroppedEncoder = null != (g = r.framesDroppedEncoder) ? g : null), (this.hqSimulcastStreamEncoded.value = null != (E = r.hqSimulcastStreamEncoded) && E), (this.lqSimulcastStreamEncoded.value = null != (b = r.lqSimulcastStreamEncoded) && b), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null != (y = r.bandwidthLimitedResolution) && y), (this.bandwidthLimitedFramerate.value = null != (O = r.bandwidthLimitedFrameRate) && O));
                     }
                 }
             }),
@@ -503,10 +503,10 @@ class y extends a.Z {
                         let t = this.inboundStats[n];
                         null == t && (console.warn('Unknown inbound video stream for user: '.concat(n)), (t = new f.m7(this.timestampProducer)), (this.inboundStats[n] = t));
                         let i = f.z4.parseInboundStats(r, e);
-                        this.statCollectionPausedUsers.has(n) || (t.appendAndIncrementStats(i), t.appendTransportStats(s)), i.packets > 0 && this.emit('fps-update', n, i.framesCodec, i.timestamp), t.decoderCodec !== f.u7.UNKNOWN && d.add(t.decoderCodec), null == t.timeToFirstFrame && r.framesDecoded > 0 && (t.timeToFirstFrame = e - t.startTime);
+                        (this.statCollectionPausedUsers.has(n) || (t.appendAndIncrementStats(i), t.appendTransportStats(s)), i.packets > 0 && this.emit('fps-update', n, i.framesCodec, i.timestamp), t.decoderCodec !== f.u7.UNKNOWN && d.add(t.decoderCodec), null == t.timeToFirstFrame && r.framesDecoded > 0 && (t.timeToFirstFrame = e - t.startTime));
                     }
                 }),
-            0 !== u.size && 0 !== d.size && (E(u, d) ? this.symmetricCodecUpdates++ : this.asymmetricCodecUpdates++);
+            0 !== u.size && 0 !== d.size && (E(u, d) ? this.symmetricCodecUpdates++ : this.asymmetricCodecUpdates++));
     }
     updateSystemResourceStats() {
         for (let e in this.outboundStats) this.outboundStats[e].addSystemResources();
@@ -517,7 +517,7 @@ class y extends a.Z {
         this.videoEffectDuration.value = (null == t ? void 0 : t.type) === 'video' && null != t.filter;
     }
     constructor(e, t = s.Z_) {
-        super(),
+        (super(),
             _(this, 'connection', void 0),
             _(this, 'timestampProducer', void 0),
             _(this, 'networkQuality', void 0),
@@ -591,6 +591,6 @@ class y extends a.Z {
             (this.cameraDuration = new s.sX(!1, t)),
             (this.cameraOpportunityDuration = new s.sX(!1, t)),
             (this.cameraSendDuration = new s.sX(!1, t)),
-            (this.videoEntropy = new u.b());
+            (this.videoEntropy = new u.b()));
     }
 }

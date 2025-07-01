@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+(n.d(t, { Z: () => B }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -29,7 +29,7 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function y(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -45,8 +45,8 @@ function y(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -139,12 +139,12 @@ function Z(e) {
     function Z() {
         if (E) return;
         let e = null != x.id ? f.Z.getDetectableGame(x.id) : null;
-        _.default.track(C.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        (_.default.track(C.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: x.name
         }),
             (0, c.showToast)((0, c.createToast)(O.intl.formatToPlainString(O.t['6klMOj'], { gameName: x.name }), c.ToastType.SUCCESS)),
-            j(!0);
+            j(!0));
     }
     return (0, i.jsxs)('div', {
         className: P,
@@ -308,7 +308,7 @@ function Z(e) {
                                     className: S.toggleIcon,
                                     onClick: () => {
                                         var t;
-                                        return (t = !e), void d.Z.toggleOverlay(x, t, t);
+                                        return ((t = !e), void d.Z.toggleOverlay(x, t, t));
                                     },
                                     onMouseEnter: r,
                                     onMouseLeave: s,

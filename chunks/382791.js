@@ -17,7 +17,7 @@ var i = n(120356),
     d = n(388032),
     f = n(781793),
     _ = (function (e) {
-        return (e[(e.PREMIUM_TIER_0_WHITE_FILL = 0)] = 'PREMIUM_TIER_0_WHITE_FILL'), (e[(e.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = 'PREMIUM_TIER_0_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_WHITE_FILL = 2)] = 'PREMIUM_TIER_2_WHITE_FILL'), (e[(e.PREMIUM_TIER_2_NEW_GRADIENT_FILL = 3)] = 'PREMIUM_TIER_2_NEW_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE'), (e[(e.PREMIUM_TIER_2_GREY_FILL = 6)] = 'PREMIUM_TIER_2_GREY_FILL'), e;
+        return ((e[(e.PREMIUM_TIER_0_WHITE_FILL = 0)] = 'PREMIUM_TIER_0_WHITE_FILL'), (e[(e.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = 'PREMIUM_TIER_0_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_WHITE_FILL = 2)] = 'PREMIUM_TIER_2_WHITE_FILL'), (e[(e.PREMIUM_TIER_2_NEW_GRADIENT_FILL = 3)] = 'PREMIUM_TIER_2_NEW_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE'), (e[(e.PREMIUM_TIER_2_GREY_FILL = 6)] = 'PREMIUM_TIER_2_GREY_FILL'), e);
     })({});
 function p(e) {
     let { text: t, className: n, colorOptions: i = 2, icon: o, gap: l = !0 } = e;
@@ -120,7 +120,7 @@ function g(e, t, n, r, i) {
     if (null != n && (0, l.Wp)(n, u.Si.TIER_2) && void 0 !== n.discount.amount) return e ? d.intl.string(d.t.EyjDRE) : d.intl.formatToPlainString(d.t.iiLbvr, { percent: n.discount.amount });
     if (i === u.Si.TIER_2) {
         let e = d.intl.string(d.t.IBYG5e);
-        return (null == r ? void 0 : r.trial_id) === u.a7 && (e = d.intl.string(d.t.gtNqJS)), e;
+        return ((null == r ? void 0 : r.trial_id) === u.a7 && (e = d.intl.string(d.t.gtNqJS)), e);
     }
     return t === u.p9.TIER_2 ? d.intl.string(d.t.qYKftb) : e ? d.intl.string(d.t.EyjDRE) : null;
 }

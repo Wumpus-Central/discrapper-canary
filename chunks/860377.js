@@ -1,8 +1,8 @@
 var o = r(933982);
 function n(t, e) {
-    (this.totalCount = t), (this.dataCount = e);
+    ((this.totalCount = t), (this.dataCount = e));
 }
-(n.RS_BLOCK_TABLE = [
+((n.RS_BLOCK_TABLE = [
     [1, 26, 19],
     [1, 26, 16],
     [1, 26, 13],
@@ -184,4 +184,4 @@ function n(t, e) {
                 return;
         }
     }),
-    (t.exports = n);
+    (t.exports = n));

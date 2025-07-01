@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     BG: () => f,
     DO: () => x,
     pt: () => h
 }),
-    n(388685);
+    n(388685));
 var r = n(570140),
     i = n(668781),
     l = n(881052),
@@ -39,20 +39,20 @@ async function x(e) {
     if (d.Z.hasChanges()) {
         r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT' });
         try {
-            await (0, u.n_)(e.id, { default_channel_ids: t }),
+            (await (0, u.n_)(e.id, { default_channel_ids: t }),
                 r.Z.dispatch({
                     type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS',
                     guildId: e.id,
                     channelIds: t
-                });
+                }));
         } catch (n) {
             var j;
             let { fieldName: e, error: t } = null != (j = new l.Hx(n).getAnyErrorMessageAndField()) ? j : {};
-            i.Z.show({
+            (i.Z.show({
                 title: p.intl.string(p.t.iLdiqa),
                 body: [e, t].filter(c.lm).join(': ')
             }),
-                r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED' });
+                r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED' }));
         }
     }
 }

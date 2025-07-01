@@ -7,7 +7,7 @@ var r = n(98405),
     c = 7 !== Error('e', { cause: 7 }).cause,
     u = function (e, t) {
         var n = {};
-        (n[e] = o(e, t, c)),
+        ((n[e] = o(e, t, c)),
             r(
                 {
                     global: !0,
@@ -16,12 +16,12 @@ var r = n(98405),
                     forced: c
                 },
                 n
-            );
+            ));
     },
     d = function (e, t) {
         if (l && l[e]) {
             var n = {};
-            (n[e] = o(s + '.' + e, t, c)),
+            ((n[e] = o(s + '.' + e, t, c)),
                 r(
                     {
                         target: s,
@@ -31,10 +31,10 @@ var r = n(98405),
                         forced: c
                     },
                     n
-                );
+                ));
         }
     };
-u('Error', function (e) {
+(u('Error', function (e) {
     return function (t) {
         return a(e, this, arguments);
     };
@@ -83,4 +83,4 @@ u('Error', function (e) {
         return function (t) {
             return a(e, this, arguments);
         };
-    });
+    }));

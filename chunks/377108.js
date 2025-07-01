@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     EO: () => l,
     JM: () => p,
     Lt: () => m,
@@ -17,14 +17,14 @@ n.d(t, {
     n(980754),
     n(388685),
     n(415506),
-    n(539854);
+    n(539854));
 var r = n(230367),
     i = n(320215),
     a = n(240773),
     o = n(495852),
     s = n(397696),
     l = (function (e) {
-        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.IMAGE = 1)] = 'IMAGE'), (e[(e.VIDEO = 2)] = 'VIDEO'), e;
+        return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.IMAGE = 1)] = 'IMAGE'), (e[(e.VIDEO = 2)] = 'VIDEO'), e);
     })({});
 class c extends o.C {
     create(e) {
@@ -93,9 +93,9 @@ class c extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.versions && s.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.favoriteGifs && f.internalBinaryWrite(e.favoriteGifs, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.favoriteStickers && m.internalBinaryWrite(e.favoriteStickers, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.stickerFrecency && E.internalBinaryWrite(e.stickerFrecency, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.favoriteEmojis && y.internalBinaryWrite(e.favoriteEmojis, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.emojiFrecency && v.internalBinaryWrite(e.emojiFrecency, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && T.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && C.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.applicationFrecency && x.internalBinaryWrite(e.applicationFrecency, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && P.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && D.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && M.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.emojiReactionFrecency && v.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, r.TD.LengthDelimited).fork(), n).join();
+        (e.versions && s.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.favoriteGifs && f.internalBinaryWrite(e.favoriteGifs, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.favoriteStickers && m.internalBinaryWrite(e.favoriteStickers, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.stickerFrecency && E.internalBinaryWrite(e.stickerFrecency, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.favoriteEmojis && y.internalBinaryWrite(e.favoriteEmojis, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.emojiFrecency && v.internalBinaryWrite(e.emojiFrecency, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && T.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && C.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.applicationFrecency && x.internalBinaryWrite(e.applicationFrecency, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && P.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && D.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && M.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.emojiReactionFrecency && v.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.FrecencyUserSettings', [
@@ -238,10 +238,10 @@ class d extends o.C {
         e[null != a ? a : ''] = null != o ? o : p.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.gifs)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), p.internalBinaryWrite(e.gifs[i], t, n), t.join().join();
+        for (let i of Object.keys(e.gifs)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), p.internalBinaryWrite(e.gifs[i], t, n), t.join().join());
         !1 !== e.hideTooltip && t.tag(2, r.TD.Varint).bool(e.hideTooltip);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.FavoriteGIFs', [
@@ -314,9 +314,9 @@ class _ extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.format && t.tag(1, r.TD.Varint).int32(e.format), '' !== e.src && t.tag(2, r.TD.LengthDelimited).string(e.src), 0 !== e.width && t.tag(3, r.TD.Varint).uint32(e.width), 0 !== e.height && t.tag(4, r.TD.Varint).uint32(e.height), 0 !== e.order && t.tag(5, r.TD.Varint).uint32(e.order);
+        (0 !== e.format && t.tag(1, r.TD.Varint).int32(e.format), '' !== e.src && t.tag(2, r.TD.LengthDelimited).string(e.src), 0 !== e.width && t.tag(3, r.TD.Varint).uint32(e.width), 0 !== e.height && t.tag(4, r.TD.Varint).uint32(e.height), 0 !== e.order && t.tag(5, r.TD.Varint).uint32(e.order));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.FavoriteGIF', [
@@ -390,7 +390,7 @@ class h extends o.C {
             t.join();
         }
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.FavoriteStickers', [
@@ -453,9 +453,9 @@ class g extends o.C {
         e[null != a ? a : '0'] = null != o ? o : A.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.stickers)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.stickers[i], t, n), t.join().join();
+        for (let i of Object.keys(e.stickers)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.stickers[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.StickerFrecency', [
@@ -503,7 +503,7 @@ class b extends o.C {
     internalBinaryWrite(e, t, n) {
         for (let n = 0; n < e.emojis.length; n++) t.tag(1, r.TD.LengthDelimited).string(e.emojis[n]);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.FavoriteEmojis', [
@@ -566,9 +566,9 @@ class O extends o.C {
         e[null != a ? a : ''] = null != o ? o : A.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.emojis)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.emojis[i], t, n), t.join().join();
+        for (let i of Object.keys(e.emojis)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.emojis[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.EmojiFrecency', [
@@ -634,9 +634,9 @@ class I extends o.C {
         e[null != a ? a : ''] = null != o ? o : A.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.applicationCommands)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.applicationCommands[i], t, n), t.join().join();
+        for (let i of Object.keys(e.applicationCommands)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.applicationCommands[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ApplicationCommandFrecency', [
@@ -705,9 +705,9 @@ class S extends o.C {
             for (let n = 0; n < e.recentUses.length; n++) t.uint64(e.recentUses[n]);
             t.join();
         }
-        0 !== e.frecency && t.tag(3, r.TD.Varint).int32(e.frecency), 0 !== e.score && t.tag(4, r.TD.Varint).int32(e.score);
+        (0 !== e.frecency && t.tag(3, r.TD.Varint).int32(e.frecency), 0 !== e.score && t.tag(4, r.TD.Varint).int32(e.score));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.FrecencyItem', [
@@ -776,7 +776,7 @@ class N extends o.C {
             t.join();
         }
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.FavoriteSoundboardSounds', [
@@ -839,9 +839,9 @@ class R extends o.C {
         e[null != a ? a : ''] = null != o ? o : A.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.heardSounds)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.heardSounds[i], t, n), t.join().join();
+        for (let i of Object.keys(e.heardSounds)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.heardSounds[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.HeardSoundFrecency', [
@@ -907,9 +907,9 @@ class w extends o.C {
         e[null != a ? a : ''] = null != o ? o : A.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.playedSounds)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.playedSounds[i], t, n), t.join().join();
+        for (let i of Object.keys(e.playedSounds)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.playedSounds[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.PlayedSoundFrecency', [
@@ -975,9 +975,9 @@ class L extends o.C {
         e[null != a ? a : ''] = null != o ? o : A.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.applications)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.applications[i], t, n), t.join().join();
+        for (let i of Object.keys(e.applications)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.applications[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ApplicationFrecency', [
@@ -1043,9 +1043,9 @@ class k extends o.C {
         e[null != a ? a : '0'] = null != o ? o : A.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.guildAndChannels)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.guildAndChannels[i], t, n), t.join().join();
+        for (let i of Object.keys(e.guildAndChannels)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), A.internalBinaryWrite(e.guildAndChannels[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.GuildAndChannelFrecency', [

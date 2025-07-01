@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -35,7 +35,7 @@ class f extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, 'renderBreadcrumb', (e, t) => {
                 let { activeId: n, onBreadcrumbClick: i, breadcrumbs: a, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
                     f = e.id === n,
@@ -74,7 +74,7 @@ class f extends i.PureComponent {
                     },
                     e.id
                 );
-            });
+            }));
     }
 }
 let _ = f;

@@ -1,4 +1,4 @@
-t.d(n, { x: () => F }), t(388685);
+(t.d(n, { x: () => F }), t(388685));
 var i = t(255367),
     l = t(73800),
     r = t(512722),
@@ -85,7 +85,7 @@ function F(e) {
             paymentSourceId: ei.paymentSourceId,
             currency: ei.currency
         });
-    l.useEffect(() => {
+    (l.useEffect(() => {
         eE && eI((null == eO ? void 0 : eO.subscriptionPeriodEnd) == null);
     }, [eO, eE]),
         (0, C.Z)(
@@ -98,7 +98,7 @@ function F(e) {
                 isEligibleForOffer: eE
             },
             { tags: { app_context: 'billing' } }
-        );
+        ));
     let eM = null != (F = null == eT ? void 0 : eT.message) ? F : B.intl.string(B.t.R0RpRU),
         ew = eE && null == eT,
         eA = eE && null != eT,

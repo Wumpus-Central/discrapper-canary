@@ -1,6 +1,6 @@
-function n(...t) {
-    return (...e) => {
-        for (let r of t) 'function' == typeof r && r(...e);
+n.d(t, { t: () => r });
+function r(...e) {
+    return (...t) => {
+        for (let n of e) 'function' == typeof n && n(...t);
     };
 }
-r.d(e, { t: () => n });

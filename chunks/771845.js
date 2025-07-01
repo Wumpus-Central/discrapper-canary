@@ -1,5 +1,5 @@
 let r;
-n.d(t, { ZP: () => H }), n(415506), n(388685), n(539854);
+(n.d(t, { ZP: () => H }), n(388685), n(415506), n(539854));
 var i = n(348327),
     a = n.n(i),
     o = n(512722),
@@ -37,7 +37,7 @@ function v(e, t) {
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -47,12 +47,12 @@ function I(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let T = new c.g8();
 function S(e, t) {
-    for (let n in g.Z.getGuilds()) !e(n) || u.Z.isLurking(n) || m.ZP.isCurrentUserGuest(n) || t(n);
+    for (let n of g.Z.getGuildIds()) !e(n) || u.Z.isLurking(n) || m.ZP.isCurrentUserGuest(n) || t(n);
 }
 function A(e) {
     switch (e.type) {
@@ -86,13 +86,13 @@ function N(e, t) {
                 }
     for (let e of T.allNodes()) e.type === c.eD.GUILD && (u.Z.isLurking(e.id) || m.ZP.isCurrentUserGuest(e.id) || (null == g.Z.getGuild(e.id) && !h.Z.isUnavailable(e.id))) && T.removeNode(e);
     for (let e of Object.values(T.nodes)) e.type === c.eD.FOLDER && 0 === e.children.length && T.removeNode(e);
-    S(
+    (S(
         (e) => null == T.nodes[e],
         (e) => T.addNode((0, c.Mg)(e), T.root, !1)
     ),
-        (T.version = n.version);
+        (T.version = n.version));
     let r = a()(n, T);
-    return r ? (T = n) : (T.version = n.version + 1), !r;
+    return (r ? (T = n) : (T.version = n.version + 1), !r);
 }
 function C() {
     var e, t, n;
@@ -120,11 +120,11 @@ function w(e) {
     let i = T.getNode(r);
     if (null == i) return !1;
     let a = T.convertToFolder(i);
-    (a.name = n),
+    ((a.name = n),
         t.forEach((e) => {
             let t = T.getNode(e);
             null != t && T.moveInto(t, a, !0);
-        });
+        }));
 }
 function D(e) {
     var { targetId: t, sourceIds: n } = e,
@@ -134,7 +134,7 @@ function D(e) {
     let a = '' === r.name ? void 0 : r.name;
     if (a !== i.name) {
         let e = T.cloneNode(i);
-        s()(e.id === i.id, '[SORTED GUILDS] Replacement folder node must have same id.'), (e.name = a), T.replaceNode(i, e);
+        (s()(e.id === i.id, '[SORTED GUILDS] Replacement folder node must have same id.'), (e.name = a), T.replaceNode(i, e));
     }
     let o = T.getNode(t);
     if (null == o) return !1;
@@ -142,7 +142,7 @@ function D(e) {
         u = new Set(l),
         d = new Set(n),
         f = new Set([...l].filter((e) => !d.has(e)));
-    n
+    (n
         .filter((e) => !u.has(e))
         .forEach((e) => {
             let t = T.getNode(e);
@@ -151,7 +151,7 @@ function D(e) {
         f.forEach((e) => {
             let t = T.getNode(e);
             null != t && T.moveNextTo(t, o, !0);
-        });
+        }));
 }
 function L(e) {
     let { targetId: t } = e,
@@ -191,7 +191,7 @@ function j() {
 }
 function U(e, t) {
     let n = T.cloneNode(e);
-    s()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), (n.expanded = t), T.replaceNode(e, n);
+    (s()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), (n.expanded = t), T.replaceNode(e, n));
 }
 let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
     B = (0, f.oH)((e, t) => e.getRoots().map(A)),
@@ -205,7 +205,7 @@ let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
             }
             for (let t of e.children) r(t);
         }
-        return r(e.root), n;
+        return (r(e.root), n);
     }),
     F = (0, f.oH)((e, t) => e.root.children.map(A));
 class Z extends E.Z {
@@ -240,7 +240,7 @@ class Z extends E.Z {
         };
     }
     constructor() {
-        super({
+        (super({
             CONNECTION_OPEN: C,
             OVERLAY_INITIALIZE: C,
             CACHE_LOADED: () => this.loadCache(),
@@ -260,8 +260,8 @@ class Z extends E.Z {
                 let e = this.readSnapshot(Z.LATEST_SNAPSHOT_VERSION),
                     t = null == e ? void 0 : e.tree;
                 if (null != t) for (let e of ((T = new c.g8()).loadSnapshot(t), T.allNodes())) e.type === c.eD.FOLDER && (e.expanded = p.Z.isFolderExpanded(e.id));
-            });
+            }));
     }
 }
-O(Z, 'displayName', 'SortedGuildStore'), O(Z, 'LATEST_SNAPSHOT_VERSION', 2);
+(O(Z, 'displayName', 'SortedGuildStore'), O(Z, 'LATEST_SNAPSHOT_VERSION', 2));
 let H = new Z();

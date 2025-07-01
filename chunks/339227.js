@@ -1,4 +1,4 @@
-n.d(t, { Q: () => G }), n(388685), n(415506), n(35282), n(704826), n(539854), n(49124);
+(n.d(t, { Q: () => G }), n(388685), n(415506), n(35282), n(704826), n(539854), n(49124));
 var r = n(512722),
     i = n.n(r),
     a = n(31775),
@@ -31,7 +31,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -39,7 +39,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -47,11 +47,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -87,6 +87,7 @@ let v = new c.Z('MarkdownToSlate'),
         roleMention: { type: 'inlineObject' },
         commandMention: { type: 'inlineObject' },
         channelMention: { type: 'inlineObject' },
+        gameMention: { type: 'skip' },
         silentPrefix: {
             type: 'inlineStyle',
             before: '@silent',
@@ -192,7 +193,7 @@ let v = new c.Z('MarkdownToSlate'),
 for (let e in d.Z.RULES) {
     if (!(e in I)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
     let t = I[e];
-    'skip' !== t.type && (S[e] = N(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (A[e] = N('text' === e ? f.ZP : d.Z.RULES[e]));
+    ('skip' !== t.type && (S[e] = N(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (A[e] = N('text' === e ? f.ZP : d.Z.RULES[e])));
 }
 function N(e) {
     i()(null != e.parse, 'Slate: rule must have a parse function');
@@ -200,7 +201,7 @@ function N(e) {
     return O(b({}, e), {
         parse(e, n, r) {
             let i = t.call(this, e, n, r);
-            return i instanceof Array || (i.originalMatch = e), i;
+            return (i instanceof Array || (i.originalMatch = e), i);
         }
     });
 }
@@ -301,7 +302,7 @@ function U(e, t, n) {
         };
     V(r, l, c, 0, []);
     let u = B(r);
-    return o.set(e, u), u;
+    return (o.set(e, u), u);
 }
 function G(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -328,7 +329,7 @@ function G(e, t) {
                     s.push(O(b({}, e), { start: e.start + a }));
                 });
         }
-        (o = !o), (a = n);
+        ((o = !o), (a = n));
     }
     return s;
 }
@@ -447,7 +448,7 @@ function V(e, t, n, r, a) {
         case 'subtext': {
             r = W(t, r);
             let { before: n, after: i } = F(t, s, r, l);
-            return (r = H(e, t, n, r, 'syntaxBefore')), a.push(s), (r = Z(e, t, null != o ? o : '', r, a)), a.pop(), (r = H(e, t, i, r, 'syntaxAfter')), W(t, r);
+            return ((r = H(e, t, n, r, 'syntaxBefore')), a.push(s), (r = Z(e, t, null != o ? o : '', r, a)), a.pop(), (r = H(e, t, i, r, 'syntaxAfter')), W(t, r));
         }
         default:
             throw Error('Slate: Unknown rule type: '.concat(s));
@@ -496,13 +497,13 @@ function H(e, t, n, r, i) {
         let a = t.indexOf(n, r);
         if (-1 === a) return K('Slate: Unable to find syntax characters "'.concat(n, '" at position ').concat(r), n, r);
         let o = t.substring(r, a + n.length);
-        e.push({
+        (e.push({
             text: o,
             attributes: [i],
             start: r,
             data: null
         }),
-            (r = a + n.length);
+            (r = a + n.length));
     }
     return r;
 }
@@ -529,12 +530,12 @@ function W(e, t) {
     return t;
 }
 function K(e, t, n) {
-    if (t.split('').some((e) => T.has(e))) return v.error(e), n;
+    if (t.split('').some((e) => T.has(e))) return (v.error(e), n);
     throw Error(e);
 }
 function z(e, t, n, r) {
     for (; n < r; )
-        if (T.has(t[n])) (n = H(e, t, t[n], n, 'syntaxBefore')), (n = W(t, n));
+        if (T.has(t[n])) ((n = H(e, t, t[n], n, 'syntaxBefore')), (n = W(t, n)));
         else break;
     return n;
 }

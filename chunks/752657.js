@@ -16,12 +16,12 @@ function l(t) {
                         n,
                         i = {},
                         l = Object.keys(t);
-                    for (n = 0; n < l.length; n++) (r = l[n]), e.indexOf(r) >= 0 || (i[r] = t[r]);
+                    for (n = 0; n < l.length; n++) ((r = l[n]), e.indexOf(r) >= 0 || (i[r] = t[r]));
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < l.length; n++) (r = l[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (i[r] = t[r]);
+                for (n = 0; n < l.length; n++) ((r = l[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (i[r] = t[r]));
             }
             return i;
         })(t, ['width', 'height', 'color']);
@@ -31,7 +31,7 @@ function l(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(r, t).enumerable;
@@ -39,7 +39,7 @@ function l(t) {
                     )),
                     n.forEach(function (e) {
                         var n;
-                        (n = r[e]),
+                        ((n = r[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: n,
@@ -47,8 +47,8 @@ function l(t) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (t[e] = n);
-                    });
+                                : (t[e] = n));
+                    }));
             }
             return t;
         })({}, (0, i.Z)(s))),

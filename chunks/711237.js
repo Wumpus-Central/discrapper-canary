@@ -33,7 +33,7 @@ let l = (0, r.B)({
     o = (e) => {
         let t = 'guild trigger debug',
             n = 'user trigger debug';
-        a.useExperiment(
+        (a.useExperiment(
             {
                 location: t,
                 guildId: e
@@ -45,5 +45,5 @@ let l = (0, r.B)({
                 guildId: e
             }),
             l.useExperiment({ location: n }, { autoTrackExposure: !1 }),
-            l.trackExposure({ location: n });
+            l.trackExposure({ location: n }));
     };

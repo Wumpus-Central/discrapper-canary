@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(539854);
+(n.d(t, { Z: () => p }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -13,7 +13,7 @@ function p(e) {
         m = (0, l.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
         g = i.useMemo(() => {
             let e = [];
-            return m && n && e.push(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
+            return (m && n && e.push(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e);
         }, [m, n]),
         b = () => {
             setTimeout(() => (0, s.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: d.L.AUTO_DISMISS }), 10000);

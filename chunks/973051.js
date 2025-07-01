@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(399606),
@@ -16,7 +16,7 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -24,7 +24,7 @@ function x(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -32,8 +32,8 @@ function x(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -149,7 +149,7 @@ function j(e) {
                                       (0, r.jsxs)(i.zxk, {
                                           innerClassName: p.buttonInner,
                                           onClick: () => {
-                                              !b &&
+                                              (!b &&
                                                   (m.default.track(
                                                       f.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                                                       g(x({}, (0, s.hH)(n.id)), {
@@ -169,7 +169,7 @@ function j(e) {
                                                               required: j[N].required
                                                           })
                                                       )),
-                                                  _(N);
+                                                  _(N));
                                           },
                                           size: i.zxk.Sizes.MEDIUM,
                                           look: i.zxk.Looks.OUTLINED,

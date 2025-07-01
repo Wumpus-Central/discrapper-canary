@@ -23,7 +23,7 @@ function s(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(r).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -31,7 +31,7 @@ function s(e) {
                             )),
                             n.forEach(function (t) {
                                 var n;
-                                (n = r[t]),
+                                ((n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: n,
@@ -39,8 +39,8 @@ function s(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = n);
-                            });
+                                        : (e[t] = n));
+                            }));
                     }
                     return e;
                 })({}, r)),
@@ -50,11 +50,11 @@ function s(e) {
                         value: 100 * e.opacity,
                         maxValue: 100,
                         onChange: (r) => {
-                            (0, l.nv)({
+                            ((0, l.nv)({
                                 widgetId: e.id,
                                 opacity: r / 100
                             }),
-                                t(Math.floor(r));
+                                t(Math.floor(r)));
                         },
                         'aria-label': u.intl.string(u.t.kbFsAA)
                     }),

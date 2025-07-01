@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -38,10 +38,10 @@ class h extends (r = a.Component) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             p(this, 'handleClick', () => {
                 this.props.disableButton || ((0, c.jN)(d.S9g.USER_SETTINGS), u.Z.setSection(d.oAB.STREAMER_MODE));
-            });
+            }));
     }
 }
 p(h, 'defaultProps', { disableButton: !1 });

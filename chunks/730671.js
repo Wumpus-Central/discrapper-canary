@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+(n.d(t, { Z: () => a }), n(388685));
 var r = n(73800),
     i = n(392711),
     l = n(236413),
@@ -16,15 +16,15 @@ function a(e) {
                     () =>
                         (0, i.debounce)(
                             (t) => {
-                                clearTimeout(s.current),
+                                (clearTimeout(s.current),
                                     (s.current = setTimeout(() => {
                                         try {
-                                            (0, l.km)(t, e), n(null);
+                                            ((0, l.km)(t, e), n(null));
                                         } catch (e) {
                                             n(e.message);
                                         }
                                         clearTimeout(s.current);
-                                    }, 500));
+                                    }, 500)));
                             },
                             300,
                             {
@@ -45,7 +45,7 @@ function a(e) {
                 let n = t.currentTarget.value;
                 'insertFromPaste' === t.nativeEvent.inputType && (n = u(n));
                 let r = (0, s.Ac)(n);
-                o(n), e(r), d()(r);
+                (o(n), e(r), d()(r));
             },
             [d, u, e]
         )

@@ -28,7 +28,7 @@ function s(e) {
     (0, r.k)(Array.isArray(e), 'Expected targetIds to be an array.');
 }
 function l(e, t, n) {
-    (0, r.k)(t.isDragging(), 'Cannot call hover while not dragging.'), (0, r.k)(!t.didDrop(), 'Cannot call hover after drop.');
+    ((0, r.k)(t.isDragging(), 'Cannot call hover while not dragging.'), (0, r.k)(!t.didDrop(), 'Cannot call hover after drop.'));
     for (var i = 0; i < e.length; i++) {
         var a = e[i];
         (0, r.k)(e.lastIndexOf(a) === i, 'Expected targetIds to be unique in the passed array.');

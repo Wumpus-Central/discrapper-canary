@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(539854), n(388685), n(997841);
+(n.d(t, { Z: () => M }), n(539854), n(388685), n(997841));
 var r,
     i = n(348327),
     a = n.n(i),
@@ -35,7 +35,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,11 +51,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -101,23 +101,23 @@ function C() {
         });
     }
     let S = h.Z.getActivity();
-    null != S && e.push(I({ type: O.IIU.LISTENING }, S)), a()(A, e) || (A = e);
+    (null != S && e.push(I({ type: O.IIU.LISTENING }, S)), a()(A, e) || (A = e));
 }
 function R() {
-    (N = {}), C();
+    ((N = {}), C());
 }
 function P(e) {
     let { socketId: t, pid: n, activity: r } = e;
     if (a()(N[t], [n, r])) return !1;
-    null != r ? (N[t] = [n, r]) : delete N[t], C();
+    (null != r ? (N[t] = [n, r]) : delete N[t], C());
 }
 function w(e) {
     let { socketId: t } = e;
-    delete N[t], C();
+    (delete N[t], C());
 }
 function D(e) {
     let { localActivities: t } = e;
-    (N = I({}, t)), C();
+    ((N = I({}, t)), C());
 }
 function L() {
     let e = {},
@@ -131,11 +131,11 @@ function L() {
     return t ? ((N = e), 'APPLICATION_ACTIVITIES_CHANGED') : 'NO_CHANGES';
 }
 function x() {
-    L(), C();
+    (L(), C());
 }
 class k extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(_.ZP, u.ZP, b.Z, E.Z, h.Z, g.Z, y.Z), this.syncWith([p.Z], () => C());
+        (this.waitFor(_.ZP, u.ZP, b.Z, E.Z, h.Z, g.Z, y.Z), this.syncWith([p.Z], () => C()));
     }
     getActivities() {
         return A;

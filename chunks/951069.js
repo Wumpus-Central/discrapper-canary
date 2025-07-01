@@ -29,10 +29,10 @@ var r = n(391997),
             (e.disconnect = function (e) {
                 var t = this,
                     n = s.get(e);
-                n.observationTargets.slice().forEach(function (n) {
+                (n.observationTargets.slice().forEach(function (n) {
                     return t.unobserve(e, n.target);
                 }),
-                    n.activeTargets.splice(0, n.activeTargets.length);
+                    n.activeTargets.splice(0, n.activeTargets.length));
             }),
             e
         );

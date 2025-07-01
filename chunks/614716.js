@@ -15,7 +15,7 @@ function _(e) {
         p = (0, r.e7)([u.Z, d.Z], () => u.Z.getChannel(d.Z.getChannelId())),
         h = (0, i.bp)() === f.IlC.POPOUT;
     return () => {
-        null == n || n(),
+        (null == n || n(),
             null == p || (null == p ? void 0 : p.isVocal())
                 ? (0, l.Z)({
                       context:
@@ -29,6 +29,6 @@ function _(e) {
                       openInPopout: h,
                       initialState: { applicationId: t }
                   })
-                : (0, o.__)(s._b.TEXT, c.Ie.NORMAL, { applicationId: t });
+                : (0, o.__)(s._b.TEXT, c.Ie.NORMAL, { applicationId: t }));
     };
 }

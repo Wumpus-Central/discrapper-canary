@@ -9,8 +9,8 @@ var r = n(990547),
     i = n(544891),
     l = n(283693),
     o = n(570140),
-    s = n(695346),
-    a = n(573261),
+    a = n(695346),
+    s = n(573261),
     c = n(140155),
     u = n(178480),
     d = n(981631);
@@ -28,7 +28,7 @@ async function f(e, t) {
     await o.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
     let n = Math.ceil(c.Z.items.length / e.limit);
     try {
-        let i = await a.Z.get({
+        let i = await s.Z.get({
             url: d.ANM.NOTIF_CENTER_ITEMS(),
             trackedActionData: {
                 event: r.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
@@ -46,7 +46,7 @@ async function f(e, t) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -54,7 +54,7 @@ async function f(e, t) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -62,22 +62,22 @@ async function f(e, t) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({}, e),
             rejectWithError: !0
         });
-        null == t || t(),
+        (null == t || t(),
             await o.Z.dispatch({
                 type: 'LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS',
                 items: i.body.items,
                 cursor: i.body.cursor,
                 hasMore: i.body.has_more
-            });
+            }));
     } catch (e) {
-        null == t || t(), await o.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
+        (null == t || t(), await o.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' }));
     }
 }
 function g(e) {
@@ -99,7 +99,7 @@ function g(e) {
 }
 async function m(e) {
     try {
-        o.Z.dispatch({
+        (o.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK',
             optimistic: !0,
             ids: [e]
@@ -107,7 +107,7 @@ async function m(e) {
             await i.tn.post({
                 url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e),
                 rejectWithError: !0
-            });
+            }));
     } catch (t) {
         o.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK_FAILURE',
@@ -116,13 +116,13 @@ async function m(e) {
     }
 }
 async function b(e) {
-    let t = s.d$.getSetting();
+    let t = a.d$.getSetting();
     try {
-        o.Z.dispatch({
+        (o.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEM_DELETE',
             id: e.id
         }),
-            await a.Z.delete({
+            await s.Z.delete({
                 url: d.ANM.NOTIF_CENTER_ITEMS(e.id),
                 body: { item_type: (0, u.RB)(e) ? 'mention' : 'regular' },
                 trackedActionData: {
@@ -134,14 +134,14 @@ async function b(e) {
                     }
                 },
                 rejectWithError: !1
-            });
+            }));
     } catch (t) {
         throw (
-            (o.Z.dispatch({
+            o.Z.dispatch({
                 type: 'NOTIFICATION_CENTER_ITEM_DELETE_FAILURE',
                 item: e
             }),
-            t)
+            t
         );
     }
 }

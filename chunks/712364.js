@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+(n.d(t, { Z: () => _ }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
@@ -133,7 +133,7 @@ class f extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             d(this, '_input', void 0),
             d(this, 'state', {
                 code: '',
@@ -166,11 +166,11 @@ class f extends (r = a.PureComponent) {
             }),
             d(this, 'handleCancel', () => {
                 let { onClose: e, handleEarlyClose: t } = this.props;
-                e(), null == t || t();
+                (e(), null == t || t());
             }),
             d(this, 'handleCodeChange', (e) => {
                 this.setState({ code: e });
-            });
+            }));
     }
 }
 d(f, 'defaultProps', {

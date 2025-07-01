@@ -16,11 +16,11 @@ function s() {
               label: c.intl.string(c.t.sHJ9wc),
               action: () => {
                   let e = !t;
-                  l.default.track(o.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                  (l.default.track(o.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                       enabled: e,
                       location: { section: o.jXE.SETTINGS_CONTEXT_MENU }
                   }),
-                      a.R$.updateSetting(e);
+                      a.R$.updateSetting(e));
               },
               checked: t
           });

@@ -1,8 +1,8 @@
-r.d(t, {
+(r.d(t, {
     Nz: () => s,
     o9: () => a
 }),
-    r(35282);
+    r(35282));
 var n,
     s = (((n = {}).PHONE = 'phone'), (n.EMAIL = 'email'), n);
 let i = /^[-() \d]+$/,

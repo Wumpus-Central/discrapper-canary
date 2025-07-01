@@ -1,4 +1,4 @@
-n.d(t, { c: () => s }), n(913527);
+(n.d(t, { c: () => s }), n(913527));
 var r = n(442837),
     i = n(91159),
     l = n(306680),
@@ -14,7 +14,7 @@ function s(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -22,7 +22,7 @@ function s(e) {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -30,8 +30,8 @@ function s(e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })({ lastMessageId: (0, r.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)) }, t)

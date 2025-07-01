@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(953529), n(457542);
+(n.d(t, { Z: () => u }), n(388685), n(953529), n(457542));
 var r = n(544891),
     i = n(570140),
     a = n(626135),
@@ -59,7 +59,7 @@ function c(e) {
         .finally(() => {
             l.delete(e);
         });
-    return l.set(e, n), n;
+    return (l.set(e, n), n);
 }
 let u = {
     resolveGuildTemplate: c,

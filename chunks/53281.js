@@ -19,7 +19,7 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function s(e) {
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -42,7 +42,7 @@ class l extends i.Component {
         return (0, r.jsx)(a.S, s({ ref: this.setRef }, this.props));
     }
     constructor(e) {
-        super(e), o(this, '_ref', i.createRef()), (this.setRef = this.setRef.bind(this));
+        (super(e), o(this, '_ref', i.createRef()), (this.setRef = this.setRef.bind(this)));
     }
 }
 let c = l;

@@ -17,8 +17,8 @@ var r = a(370541),
     l = a(366569),
     u = a(73453),
     I = a(99342),
-    d = a(696486),
-    R = a(305625),
+    R = a(696486),
+    d = a(305625),
     N = a(966497),
     f = a(787659),
     A = a(789112),
@@ -49,7 +49,7 @@ function O(t, e) {
                 (0, l.i)(
                     () => e(o),
                     () => {
-                        let { status: t } = (0, d.XU)(o);
+                        let { status: t } = (0, R.XU)(o);
                         o.isRecording() &&
                             (!t || 'ok' === t) &&
                             o.setStatus({
@@ -89,7 +89,7 @@ function P(t, e) {
                 (0, l.i)(
                     () => e(o, c),
                     () => {
-                        let { status: t } = (0, d.XU)(o);
+                        let { status: t } = (0, R.XU)(o);
                         o.isRecording() &&
                             (!t || 'ok' === t) &&
                             o.setStatus({
@@ -123,7 +123,7 @@ function g(t) {
 let D = ({ sentryTrace: t, baggage: e }, a) =>
     (0, i.$e)((_) => {
         let n = (0, r.pT)(t, e);
-        return _.setPropagationContext(n), a();
+        return (_.setPropagationContext(n), a());
     });
 function C(t, e) {
     let a = S();
@@ -137,9 +137,9 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     if (!(0, u.z)()) return new A.b();
     let n = (0, i.aF)();
     if (t && !a)
-        (_ = (function (t, e, a) {
+        ((_ = (function (t, e, a) {
             let { spanId: r, traceId: _ } = t.spanContext(),
-                n = !e.getScopeData().sdkProcessingMetadata[h] && (0, d.Tt)(t),
+                n = !e.getScopeData().sdkProcessingMetadata[h] && (0, R.Tt)(t),
                 o = n
                     ? new T.s({
                           ...a,
@@ -148,16 +148,16 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
                           sampled: n
                       })
                     : new A.b({ traceId: _ });
-            (0, d.j5)(t, o);
+            (0, R.j5)(t, o);
             let c = (0, i.s3)();
-            return c && (c.emit('spanStart', o), a.endTimestamp && c.emit('spanEnd', o)), o;
+            return (c && (c.emit('spanStart', o), a.endTimestamp && c.emit('spanEnd', o)), o);
         })(t, r, e)),
-            (0, d.j5)(t, _);
+            (0, R.j5)(t, _));
     else if (t) {
-        let a = (0, R.jC)(t),
+        let a = (0, d.jC)(t),
             { traceId: n, spanId: o } = t.spanContext(),
-            i = (0, d.Tt)(t);
-        (_ = U(
+            i = (0, R.Tt)(t);
+        ((_ = U(
             {
                 traceId: n,
                 parentSpanId: o,
@@ -166,7 +166,7 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             r,
             i
         )),
-            (0, R.Lh)(_, a);
+            (0, d.Lh)(_, a));
     } else {
         let {
             traceId: t,
@@ -177,7 +177,7 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             ...n.getPropagationContext(),
             ...r.getPropagationContext()
         };
-        (_ = U(
+        ((_ = U(
             {
                 traceId: t,
                 parentSpanId: o,
@@ -186,9 +186,9 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             r,
             i
         )),
-            a && (0, R.Lh)(_, a);
+            a && (0, d.Lh)(_, a));
     }
-    return (0, N.Z)(_), (0, L.YJ)(_, r, n), _;
+    return ((0, N.Z)(_), (0, L.YJ)(_, r, n), _);
 }
 function y(t) {
     let e = {
@@ -197,7 +197,7 @@ function y(t) {
     };
     if (t.startTime) {
         let a = { ...e };
-        return (a.startTimestamp = (0, d.$k)(t.startTime)), delete a.startTime, a;
+        return ((a.startTimestamp = (0, R.$k)(t.startTime)), delete a.startTime, a);
     }
     return e;
 }
@@ -228,13 +228,13 @@ function U(t, e, a) {
             },
             sampled: c
         });
-    return void 0 !== s && l.setAttribute(E.TE, s), r && r.emit('spanStart', l), l;
+    return (void 0 !== s && l.setAttribute(E.TE, s), r && r.emit('spanStart', l), l);
 }
 function b(t) {
     let e = (0, I.Y)(t);
     if (!e) return;
     let a = (0, i.s3)();
-    return (a ? a.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, d.Gx)(e) : e;
+    return (a ? a.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, R.Gx)(e) : e;
 }
 function G(t) {
     return void 0 !== t ? (e) => C(t, e) : (t) => t();

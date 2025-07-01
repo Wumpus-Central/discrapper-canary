@@ -27,7 +27,7 @@ class x extends (o = c.ZP.Store) {
         return null != b ? b : m.Z.fallbackRoute;
     }
 }
-(r = 'AppViewStore'),
+((r = 'AppViewStore'),
     (i = 'displayName') in x
         ? Object.defineProperty(x, i, {
               value: r,
@@ -35,7 +35,7 @@ class x extends (o = c.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (x[i] = r);
+        : (x[i] = r));
 let E = new x(d.Z, {
     OVERLAY_INITIALIZE: function () {
         let e = h.Z.getPrivateChannelIds(),
@@ -58,7 +58,7 @@ let E = new x(d.Z, {
         let { guildId: t, channelId: n } = e;
         if (null == t && null != n) {
             let e = f.Z5c.CHANNEL(f.ME, n);
-            if (e !== b) return (b = e), !0;
+            if (e !== b) return ((b = e), !0);
         }
         return !1;
     },

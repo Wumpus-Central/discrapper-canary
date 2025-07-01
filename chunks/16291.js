@@ -6,5 +6,5 @@ function o(e) {
     (0, a.Z)(1, arguments);
     var t = (0, r.Z)(e),
         n = new Date(0);
-    return n.setUTCFullYear(t, 0, 4), n.setUTCHours(0, 0, 0, 0), (0, i.Z)(n);
+    return (n.setUTCFullYear(t, 0, 4), n.setUTCHours(0, 0, 0, 0), (0, i.Z)(n));
 }

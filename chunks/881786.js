@@ -7,5 +7,6 @@ e.exports = {
     tableContainer: 'tableContainer_fa2640',
     mainTableContainer: 'mainTableContainer_fa2640',
     movedTable: 'movedTable_fa2640',
-    noResultsContainer: 'noResultsContainer_fa2640'
+    noResultsContainer: 'noResultsContainer_fa2640',
+    modViewSidebarContainer: 'modViewSidebarContainer_fa2640'
 };

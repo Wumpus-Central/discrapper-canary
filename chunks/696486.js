@@ -3,13 +3,13 @@ a.d(e, {
     Dp: () => C,
     Gx: () => v,
     HN: () => m,
-    HR: () => R,
+    HR: () => d,
     Hb: () => f,
     Tt: () => L,
     XU: () => p,
     _4: () => h,
     ed: () => D,
-    i0: () => d,
+    i0: () => R,
     j5: () => g,
     ve: () => I,
     wy: () => N,
@@ -26,8 +26,8 @@ var r = a(370336),
     l = a(793373),
     u = a(99342);
 let I = 0,
-    d = 1;
-function R(t) {
+    R = 1;
+function d(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
         { data: _, op: n, parent_span_id: o, status: i, origin: c } = p(t);
     return (0, r.Jr)({
@@ -91,7 +91,7 @@ function p(t) {
 }
 function L(t) {
     let { traceFlags: e } = t.spanContext();
-    return e === d;
+    return e === R;
 }
 function h(t) {
     if (t && t.code !== l.pq) return t.code === l.OP ? 'ok' : t.message || 'unknown_error';
@@ -100,7 +100,7 @@ let O = '_sentryChildSpans',
     P = '_sentryRootSpan';
 function g(t, e) {
     let a = t[P] || t;
-    (0, r.xp)(e, P, a), t[O] ? t[O].add(e) : (0, r.xp)(t, O, new Set([e]));
+    ((0, r.xp)(e, P, a), t[O] ? t[O].add(e) : (0, r.xp)(t, O, new Set([e])));
 }
 function D(t, e) {
     t[O] && t[O].delete(e);

@@ -36,6 +36,6 @@ class i {
         return new Date().toISOString();
     }
     constructor(e) {
-        r(this, 'name', void 0), (this.name = e);
+        (r(this, 'name', void 0), (this.name = e));
     }
 }

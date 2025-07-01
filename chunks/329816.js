@@ -46,7 +46,7 @@ var r = n(255367),
     K = n(950796),
     z = n(981631),
     q = n(325162);
-n(167666),
+(n(167666),
     Promise.resolve()
         .then(n.bind(n, 62883))
         .then((e) => {
@@ -60,7 +60,7 @@ n(167666),
     (0, B.Un)({
         createPromise: () => Promise.all([n.e('50448'), n.e('80451'), n.e('30634'), n.e('58493')]).then(n.bind(n, 80753)),
         webpackId: 80753
-    });
+    }));
 let X = (0, B.Un)({
         createPromise: () => n.e('67110').then(n.bind(n, 177741)),
         webpackId: 177741

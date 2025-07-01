@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(415506);
+(n.d(t, { Z: () => y }), n(388685), n(415506));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -36,7 +36,7 @@ function y(e) {
         [V, G] = r.useState(t.currency),
         F = async (e, n, i) => {
             if (null == t) throw Error('missing subscription and paymentSource');
-            null == e ? await m.fG(t, n, i, L, y) : await m.tq(t, e, n, i, L, y), U(!1), G(n);
+            (null == e ? await m.fG(t, n, i, L, y) : await m.tq(t, e, n, i, L, y), U(!1), G(n));
         },
         H = async (e, n, i) => {
             U(!0);
@@ -66,7 +66,7 @@ function y(e) {
         },
         z = (e) => {
             let n = E.Z.get(t.planIdForCurrencies);
-            o()(null != e, 'paymentSource not specified for change'), o()(null != n, 'Unable to fetch plan');
+            (o()(null != e, 'paymentSource not specified for change'), o()(null != n, 'Unable to fetch plan'));
             let i = (0, C.DE)(n.id, e.id, !1);
             return i.length > 0 ? i[0] : v.pKx.USD;
         },
@@ -74,10 +74,10 @@ function y(e) {
             null != e && H(e, z(e), F);
         },
         W = (e) => {
-            (0, C.i1)(e.id, (0, O.yb)(t)).then(() => {
+            ((0, C.i1)(e.id, (0, O.yb)(t)).then(() => {
                 H(e, z(e), F);
             }),
-                'function' == typeof n && n(e.id);
+                'function' == typeof n && n(e.id));
         },
         K = () => {
             (0, d.ZDy)(
@@ -89,7 +89,7 @@ function y(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                'function' == typeof Object.getOwnPropertySymbols &&
+                                ('function' == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -97,7 +97,7 @@ function y(e) {
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        (i = n[t]),
+                                        ((i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
@@ -105,8 +105,8 @@ function y(e) {
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = i);
-                                    });
+                                                : (e[t] = i));
+                                    }));
                             }
                             return e;
                         })({}, e)),
@@ -226,7 +226,7 @@ let A = async (e, t, r) => {
         },
         {
             onCloseRequest: () => {
-                null != s && (0, d.Mr3)(s), r();
+                (null != s && (0, d.Mr3)(s), r());
             }
         }
     );

@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     g: () => V,
     i: () => B
 }),
     n(388685),
-    n(539854);
+    n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -71,12 +71,12 @@ let B = (e) => {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                 }
                 return i;
             })(e, ['selected', 'route', 'locationState']);
@@ -122,15 +122,15 @@ let B = (e) => {
                 }))),
             en)
         )
-            (n = (0, r.jsx)(T.Z, {})), (O = 0);
+            ((n = (0, r.jsx)(T.Z, {})), (O = 0));
         else if (er) {
             let e = (0, P.$q)();
-            (n = (0, r.jsx)(A._y, {
+            ((n = (0, r.jsx)(A._y, {
                 isTabSelected: F,
                 badgeCopy: U.intl.string(U.t.OS9KPj),
                 offerExpiresAt: !0 === e ? (null == J ? void 0 : J.expires_at) : null
             })),
-                (O = 4);
+                (O = 4));
         } else
             ef === o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE
                 ? ((n = (0, r.jsx)(A._y, {
@@ -173,7 +173,7 @@ let B = (e) => {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -181,7 +181,7 @@ let B = (e) => {
                         )),
                         r.forEach(function (t) {
                             var r;
-                            (r = n[t]),
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
@@ -189,8 +189,8 @@ let B = (e) => {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
-                        });
+                                    : (e[t] = r));
+                        }));
                 }
                 return e;
             })(
@@ -201,12 +201,12 @@ let B = (e) => {
                     text: U.intl.string(U.t.Ipxkoq),
                     locationState: W,
                     onClick: () => {
-                        ec === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eu(M.L.TAKE_ACTION),
+                        (ec === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eu(M.L.TAKE_ACTION),
                             _.default.track(k.rMx.NITRO_TAB_VISITED, {
                                 badge_decorator: O,
                                 has_premium: X
                             }),
-                            null != ef && eg(M.L.USER_DISMISS);
+                            null != ef && eg(M.L.USER_DISMISS));
                     }
                 },
                 Y,

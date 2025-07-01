@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     TV: () => u,
     b8: () => c,
     k$: () => s,
@@ -6,7 +6,7 @@ n.d(t, {
     w5: () => o,
     ym: () => a
 }),
-    n(539854);
+    n(539854));
 var r = n(570140),
     i = n(509848);
 function a(e, t) {
@@ -52,7 +52,7 @@ function u(e) {
     let l = [];
     function u(e) {
         let t = e + (i.dj - 1);
-        return l.push([e, t]), t + 1;
+        return (l.push([e, t]), t + 1);
     }
     let d = s(0.5 * a),
         f = s(r, -d),

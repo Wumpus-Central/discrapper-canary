@@ -24,7 +24,7 @@ let I = i.memo(function () {
             let { duration: n, intensity: r } = t;
             if (p.Z.useReducedMotion || !m.Z.isFocused()) return;
             let { current: i } = e;
-            a()(null != i, 'Shakeable is shaken when not mounted'), i.shake(n, r);
+            (a()(null != i, 'Shakeable is shaken when not mounted'), i.shake(n, r));
         }, []);
     return (
         i.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []),

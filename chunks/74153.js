@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(539854), n(388685);
+(n.d(t, { Z: () => b }), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -35,7 +35,7 @@ class m extends i.PureComponent {
             i = null;
         if (null != e) {
             let r = h.Z5c.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
-            (i = r),
+            ((i = r),
                 null != t &&
                     n.push({
                         id: h.Z5c.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
@@ -44,7 +44,7 @@ class m extends i.PureComponent {
                 n.push({
                     id: r,
                     label: e.name
-                });
+                }));
         }
         return (0, r.jsx)(a.OoM, {
             renderCustomBreadcrumb: this.renderCustomBreadcrumb,
@@ -54,7 +54,7 @@ class m extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'handleClick', (e) => {
                 let { sku: t } = this.props;
                 (0, d.uL)(e.id, {
@@ -73,7 +73,7 @@ class m extends i.PureComponent {
                     muted: !t,
                     children: e.label
                 })
-            );
+            ));
     }
 }
 let b = (0, s.Z)(

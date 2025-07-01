@@ -6,4 +6,4 @@ function r(e) {
     }
     return t;
 }
-n.d(t, { Z: () => r }), n(388685);
+(n.d(t, { Z: () => r }), n(388685));

@@ -9,7 +9,7 @@ async function a(e) {
     try {
         return await e();
     } catch (e) {
-        return i.log('database load failed.', e), null;
+        return (i.log('database load failed.', e), null);
     }
 }
 function o(e, t, n) {

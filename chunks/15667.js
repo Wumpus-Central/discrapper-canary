@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+(n.d(t, { Z: () => c }), n(388685));
 var r = n(255367);
 n(73800);
 var a = n(392711),
@@ -15,7 +15,7 @@ let c = (e) => {
             } = e,
             a = [null, null],
             i = Object.values(null != (t = null == r ? void 0 : r.state) ? t : {});
-        return i.length > 0 && (a[0] = i.join(', ')), '' !== n && (a[1] = n), a;
+        return (i.length > 0 && (a[0] = i.join(', ')), '' !== n && (a[1] = n), a);
     }).filter((e) => null != e);
     return 0 === t.length
         ? null

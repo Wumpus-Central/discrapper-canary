@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     I1: () => v,
     eM: () => y,
     rK: () => O,
     rj: () => b
 }),
-    n(997841);
+    n(997841));
 var r = n(544891),
     i = n(570140),
     a = n(367907),
@@ -34,7 +34,7 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function m(e) {
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,11 +50,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -121,7 +121,7 @@ async function O(e) {
     if (null == a || !a.hasFeature(_.oNc.GUILD_ONBOARDING)) return Promise.resolve();
     let c = d.Z.shouldFetchPrompts(e),
         f = d.Z.getOnboardingPrompts(e);
-    if (!c && f.length > 0) return f.every((e) => !e.inOnboarding) ? T(e) : i || v(e), Promise.resolve();
+    if (!c && f.length > 0) return (f.every((e) => !e.inOnboarding) ? T(e) : i || v(e), Promise.resolve());
     let h = await y(e);
     return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (T(e), Promise.resolve()) : (i || v(e), h);
 }
@@ -133,7 +133,7 @@ function v(e) {
 }
 let I = -2;
 function T(e) {
-    c.default.track(
+    (c.default.track(
         _.rMx.GUILD_ONBOARDING_STEP_VIEWED,
         E(m({}, (0, a.hH)(e)), {
             step: I,
@@ -148,5 +148,5 @@ function T(e) {
                 is_final_step: !0,
                 in_onboarding: !0
             })
-        );
+        ));
 }

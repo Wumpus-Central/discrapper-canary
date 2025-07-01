@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+(n.d(t, { Z: () => l }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
 var r = n(255367),
     s = n(73800),
     o = n(481060),
@@ -33,7 +33,7 @@ let l = function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     r = Object.keys(n);
-                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                ('function' == typeof Object.getOwnPropertySymbols &&
                                                     (r = r.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ let l = function (e) {
                                                     )),
                                                     r.forEach(function (t) {
                                                         var r;
-                                                        (r = n[t]),
+                                                        ((r = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: r,
@@ -49,8 +49,8 @@ let l = function (e) {
                                                                       configurable: !0,
                                                                       writable: !0
                                                                   })
-                                                                : (e[t] = r);
-                                                    });
+                                                                : (e[t] = r));
+                                                    }));
                                             }
                                             return e;
                                         })({ size: 'xs' }, e)
@@ -74,7 +74,7 @@ let l = function (e) {
                         let t = URL.createObjectURL(e);
                         g.current = t;
                         let n = new URL(t);
-                        n.searchParams.append('mimetype', e.type), n.searchParams.append('name', e.name), d(l, n.toString());
+                        (n.searchParams.append('mimetype', e.type), n.searchParams.append('name', e.name), d(l, n.toString()));
                     }
                 })
             ]

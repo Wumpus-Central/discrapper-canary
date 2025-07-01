@@ -1,104 +1,104 @@
-n.d(t, {
-    I: () => S,
-    S: () => _
+(n.d(t, {
+    I: () => N,
+    S: () => C
 }),
-    n(997841);
-var l = n(255367),
-    i = n(73800),
+    n(997841));
+var i = n(255367),
+    l = n(73800),
     r = n(120356),
     s = n.n(r),
     a = n(533800),
     o = n(442837),
-    u = n(481060),
+    c = n(481060),
     d = n(484614),
-    c = n(914010),
-    g = n(246946),
-    h = n(626135),
-    m = n(630388),
+    u = n(914010),
+    h = n(246946),
+    m = n(626135),
+    g = n(630388),
     p = n(971130),
-    v = n(530436),
+    f = n(530436),
     x = n(245335),
-    I = n(981631),
-    f = n(388032),
-    j = n(821022),
-    N = n(20493);
-let _ = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))((e) => {
-        let { value: t, autoFocus: n, hideValue: i, onCopy: r, disabled: s } = e;
-        return (0, l.jsx)(d.Z, {
+    j = n(981631),
+    b = n(388032),
+    v = n(821022),
+    y = n(20493);
+let C = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: l, onCopy: r, disabled: s } = e;
+        return (0, i.jsx)(d.Z, {
             value: t,
-            hideMessage: i ? f.intl.string(f.t['6HzNgY']) : null,
-            buttonColor: u.zxk.Colors.BRAND,
+            hideMessage: l ? b.intl.string(b.t['6HzNgY']) : null,
+            buttonColor: c.zxk.Colors.BRAND,
             onCopy: r,
             autoFocus: n,
             disabled: s
         });
     }),
-    S = (e) => {
-        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: g, setInviteFlags: S, copyValue: E, changePage: b, inviteChannel: T, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
-            { maxAge: w, maxUses: A, networkError: k, showVanityURL: M, flags: R } = d,
-            D = i.useCallback(() => {
-                h.default.track(I.rMx.COPY_INSTANT_INVITE, {
-                    server: c.Z.getGuildId(),
-                    channel: null == T ? void 0 : T.id,
-                    channel_type: null == T ? void 0 : T.type,
-                    location: O,
-                    code: y,
-                    guild_scheduled_event_id: null == C ? void 0 : C.id,
-                    application_id: null == Z ? void 0 : Z.id
+    N = (e) => {
+        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: h, setInviteFlags: N, copyValue: S, changePage: E, inviteChannel: O, source: T, code: w, guildScheduledEvent: Z, disabled: R, application: I } = e,
+            { maxAge: _, maxUses: P, networkError: A, showVanityURL: L, flags: k } = d,
+            D = l.useCallback(() => {
+                m.default.track(j.rMx.COPY_INSTANT_INVITE, {
+                    server: u.Z.getGuildId(),
+                    channel: null == O ? void 0 : O.id,
+                    channel_type: null == O ? void 0 : O.type,
+                    location: T,
+                    code: w,
+                    guild_scheduled_event_id: null == Z ? void 0 : Z.id,
+                    application_id: null == I ? void 0 : I.id
                 });
-            }, [null == Z ? void 0 : Z.id, T, O, y, C]);
-        return (0, l.jsxs)(l.Fragment, {
+            }, [null == I ? void 0 : I.id, O, T, w, Z]);
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, l.jsx)(_, {
-                    value: E,
+                (0, i.jsx)(C, {
+                    value: S,
                     autoFocus: r,
                     onCopy: D,
-                    disabled: P
+                    disabled: R
                 }),
-                g &&
-                    (0, l.jsxs)(l.Fragment, {
+                h &&
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, l.jsx)('div', { className: j.divider }),
-                            (0, l.jsx)(u.j7V, {
-                                className: j.toggle,
-                                value: (0, m.yE)(R, a.$.IS_APPLICATION_BYPASS),
-                                onChange: (e) => S((0, m.mB)(R, a.$.IS_APPLICATION_BYPASS, e)),
-                                disabled: P,
+                            (0, i.jsx)('div', { className: v.divider }),
+                            (0, i.jsx)(c.j7V, {
+                                className: v.toggle,
+                                value: (0, g.yE)(k, a.$.IS_APPLICATION_BYPASS),
+                                onChange: (e) => N((0, g.mB)(k, a.$.IS_APPLICATION_BYPASS, e)),
+                                disabled: R,
                                 hideBorder: !0,
-                                children: (0, l.jsxs)('div', {
-                                    className: j.formText,
+                                children: (0, i.jsxs)('div', {
+                                    className: v.formText,
                                     children: [
-                                        (0, l.jsx)(u.Text, {
+                                        (0, i.jsx)(c.Text, {
                                             variant: 'text-md/semibold',
-                                            children: f.intl.string(f.t['1i1bUl'])
+                                            children: b.intl.string(b.t['1i1bUl'])
                                         }),
-                                        (0, l.jsx)(u.ua7, {
-                                            text: f.intl.string(f.t['jvd/LC']),
+                                        (0, i.jsx)(c.ua7, {
+                                            text: b.intl.string(b.t['jvd/LC']),
                                             children: (e) =>
-                                                (0, l.jsx)(
-                                                    u.d3s,
+                                                (0, i.jsx)(
+                                                    c.d3s,
                                                     (function (e) {
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
-                                                                l = Object.keys(n);
-                                                            'function' == typeof Object.getOwnPropertySymbols &&
-                                                                (l = l.concat(
+                                                                i = Object.keys(n);
+                                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                                                (i = i.concat(
                                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                                     })
                                                                 )),
-                                                                l.forEach(function (t) {
-                                                                    var l;
-                                                                    (l = n[t]),
+                                                                i.forEach(function (t) {
+                                                                    var i;
+                                                                    ((i = n[t]),
                                                                         t in e
                                                                             ? Object.defineProperty(e, t, {
-                                                                                  value: l,
+                                                                                  value: i,
                                                                                   enumerable: !0,
                                                                                   configurable: !0,
                                                                                   writable: !0
                                                                               })
-                                                                            : (e[t] = l);
-                                                                });
+                                                                            : (e[t] = i));
+                                                                }));
                                                         }
                                                         return e;
                                                     })(
@@ -115,33 +115,33 @@ let _ = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                             })
                         ]
                     }),
-                n || M
+                n || L
                     ? null
-                    : (0, l.jsxs)(u.Text, {
+                    : (0, i.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
-                          className: s()(N.marginTop8, j.footerText),
+                          className: s()(y.marginTop8, v.footerText),
                           children: [
-                              (0, p.Vg)(w, A),
+                              (0, p.Vg)(_, P),
                               ' ',
                               r
-                                  ? (0, l.jsx)(u.eee, {
-                                        onClick: () => b(x.RV.SETTINGS),
-                                        children: f.intl.string(f.t.VNe8Pz)
+                                  ? (0, i.jsx)(c.eee, {
+                                        onClick: () => E(x.RV.SETTINGS),
+                                        children: b.intl.string(b.t.VNe8Pz)
                                     })
                                   : null
                           ]
                       }),
-                !n && r && M
-                    ? (0, l.jsxs)(u.Text, {
+                !n && r && L
+                    ? (0, i.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
-                          className: s()(N.marginTop8, j.footerText),
-                          children: [f.intl.string(f.t['0M2U9/']), ' ']
+                          className: s()(y.marginTop8, v.footerText),
+                          children: [b.intl.string(b.t['0M2U9/']), ' ']
                       })
                     : null,
-                null != k
-                    ? (0, l.jsx)(v.W, {
+                null != A
+                    ? (0, i.jsx)(f.W, {
                           guild: t,
-                          error: k,
+                          error: A,
                           onClose: o
                       })
                     : null

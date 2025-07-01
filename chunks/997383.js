@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685), n(704826), n(35282), n(781311), n(457542), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(539854), n(642613);
+(n.d(t, { Z: () => I }), n(388685), n(704826), n(35282), n(781311), n(457542), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(539854), n(642613));
 var r = n(392711),
     i = n.n(r),
     a = n(159635),
@@ -30,7 +30,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -54,10 +54,10 @@ class I {
     }
     setLimit(e) {
         let { userSearchContext: t } = this;
-        (this._limit = e), null != t && t.setLimit(e), this._userResults.length > this._limit && (this._userResults.length = this._limit), this._groupDMResults.length > this._limit && (this._groupDMResults.length = this._limit), this._textChannelResults.length > this._limit && (this._textChannelResults.length = this._limit), this._voiceChannelResults.length > this._limit && (this._voiceChannelResults.length = this._limit), this._guildResults.length > this._limit && (this._guildResults.length = this._limit), this._applicationResults.length > this._limit && (this._applicationResults.length = this._limit), this._linkResults.length > this._limit && (this._linkResults.length = this._limit), this._inAppNavigations.length > this._limit && (this._inAppNavigations.length = this._limit);
+        ((this._limit = e), null != t && t.setLimit(e), this._userResults.length > this._limit && (this._userResults.length = this._limit), this._groupDMResults.length > this._limit && (this._groupDMResults.length = this._limit), this._textChannelResults.length > this._limit && (this._textChannelResults.length = this._limit), this._voiceChannelResults.length > this._limit && (this._voiceChannelResults.length = this._limit), this._guildResults.length > this._limit && (this._guildResults.length = this._limit), this._applicationResults.length > this._limit && (this._applicationResults.length = this._limit), this._linkResults.length > this._limit && (this._linkResults.length = this._limit), this._inAppNavigations.length > this._limit && (this._inAppNavigations.length = this._limit));
     }
     setResultTypes(e) {
-        (this.resultTypes = null != e ? new Set(e) : null), (this._userResults = this._include(m.h8.USER) ? this._userResults : []), (this._groupDMResults = this._include(m.h8.GROUP_DM) ? this._groupDMResults : []), (this._textChannelResults = this._include(m.h8.TEXT_CHANNEL) ? this._textChannelResults : []), (this._voiceChannelResults = this._include(m.h8.VOICE_CHANNEL) ? this._voiceChannelResults : []), (this._guildResults = this._include(m.h8.GUILD) ? this._guildResults : []), (this._applicationResults = this._include(m.h8.APPLICATION) ? this._applicationResults : []), (this._linkResults = this._include(m.h8.LINK) ? this._linkResults : []), (this._inAppNavigations = this._include(m.h8.IN_APP_NAVIGATION) ? this._inAppNavigations : []);
+        ((this.resultTypes = null != e ? new Set(e) : null), (this._userResults = this._include(m.h8.USER) ? this._userResults : []), (this._groupDMResults = this._include(m.h8.GROUP_DM) ? this._groupDMResults : []), (this._textChannelResults = this._include(m.h8.TEXT_CHANNEL) ? this._textChannelResults : []), (this._voiceChannelResults = this._include(m.h8.VOICE_CHANNEL) ? this._voiceChannelResults : []), (this._guildResults = this._include(m.h8.GUILD) ? this._guildResults : []), (this._applicationResults = this._include(m.h8.APPLICATION) ? this._applicationResults : []), (this._linkResults = this._include(m.h8.LINK) ? this._linkResults : []), (this._inAppNavigations = this._include(m.h8.IN_APP_NAVIGATION) ? this._inAppNavigations : []));
     }
     _include(e) {
         return null == this.resultTypes || this.resultTypes.has(e);
@@ -67,28 +67,28 @@ class I {
     }
     setOptions(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        t ? (this.options = E({}, this.options, e)) : (this.options = e),
+        (t ? (this.options = E({}, this.options, e)) : (this.options = e),
             null != this.options.blacklist
                 ? (this._userBlacklist = Array.from(this.options.blacklist)
                       .map((e) => (e.startsWith('user:') ? e.replace('user:', '') : ''))
                       .filter((e) => '' !== e))
-                : (this._userBlacklist = null);
+                : (this._userBlacklist = null));
     }
     search(e, t) {
         if (((this.query = e), '' === e.trim())) {
-            this.clear(), this.updateAllResults();
+            (this.clear(), this.updateAllResults());
             return;
         }
         (this.options.frecencyBoosters ? s.DZ.loadIfNecessary() : Promise.resolve()).finally(() => {
-            this.queryUsers(e, t, this._limit), (this._groupDMResults = this.queryGroupDMs(e, this._limit)), (this._textChannelResults = this.queryTextChannels(e, this._limit)), (this._voiceChannelResults = this.queryVoiceChannels(e, this._limit)), (this._guildResults = this.queryGuilds(e, this._limit)), (this._applicationResults = this.queryApplications(e, this._limit)), (this._linkResults = this.queryLink(e, this._limit)), (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)), this._isAsyncSearch() ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, O))) : this.updateAllResults();
+            (this.queryUsers(e, t, this._limit), (this._groupDMResults = this.queryGroupDMs(e, this._limit)), (this._textChannelResults = this.queryTextChannels(e, this._limit)), (this._voiceChannelResults = this.queryVoiceChannels(e, this._limit)), (this._guildResults = this.queryGuilds(e, this._limit)), (this._applicationResults = this.queryApplications(e, this._limit)), (this._linkResults = this.queryLink(e, this._limit)), (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)), this._isAsyncSearch() ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, O))) : this.updateAllResults());
         });
     }
     clear() {
         let { userSearchContext: e } = this;
-        null != e && e.clearQuery(), (this.results = []), (this._userResults = []), (this._groupDMResults = []), (this._textChannelResults = []), (this._voiceChannelResults = []), (this._guildResults = []), (this._applicationResults = []), (this._linkResults = []), (this._inAppNavigations = []);
+        (null != e && e.clearQuery(), (this.results = []), (this._userResults = []), (this._groupDMResults = []), (this._textChannelResults = []), (this._voiceChannelResults = []), (this._guildResults = []), (this._applicationResults = []), (this._linkResults = []), (this._inAppNavigations = []));
     }
     clean() {
-        this.clear(), this.destroy(), (this.query = ''), this.updateAllResults();
+        (this.clear(), this.destroy(), (this.query = ''), this.updateAllResults());
     }
     pause() {
         var e, t;
@@ -146,7 +146,7 @@ class I {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(m.h8.USER)) return;
         let { userFilters: i } = this.options;
-        void 0 !== t && f.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, v(m.h8.USER, this.options));
+        (void 0 !== t && f.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, v(m.h8.USER, this.options)));
     }
     queryGroupDMs(e, t) {
         if (!this._include(m.h8.GROUP_DM)) return [];
@@ -201,7 +201,7 @@ class I {
             : [];
     }
     constructor(e, t, n = b, r = y) {
-        g(this, 'query', ''),
+        (g(this, 'query', ''),
             g(this, 'options', y),
             g(this, 'results', []),
             g(this, '_userResults', []),
@@ -231,21 +231,21 @@ class I {
                                 comparator: null != r ? r : void 0
                             });
                     }
-                    this._userResults.length > this._limit && (this._userResults.length = this._limit), this.updateAllResults();
+                    (this._userResults.length > this._limit && (this._userResults.length = this._limit), this.updateAllResults());
                 }
             }),
             g(this, 'updateAllResults', () => {
-                clearTimeout(this._asyncTimeout),
+                (clearTimeout(this._asyncTimeout),
                     (this.results = i()([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults, ...this._inAppNavigations])
                         .uniqBy((e) => ''.concat(e.type, '-').concat(e.record.id))
                         .sort(h.Z)
                         .value()),
-                    this.onResultsChange(this.results, this.query);
+                    this.onResultsChange(this.results, this.query));
             }),
             (this.onResultsChange = e),
             this.setOptions(r, !0),
             (this._limit = n),
             this.createSearchContext(),
-            this.setResultTypes(t);
+            this.setResultTypes(t));
     }
 }

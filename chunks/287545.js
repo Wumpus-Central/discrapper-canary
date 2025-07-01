@@ -1,9 +1,9 @@
 let r;
-n.d(t, {
+(n.d(t, {
     U: () => en,
     Z: () => er
 }),
-    n(388685);
+    n(388685));
 var i = n(772848),
     a = n(544891),
     o = n(570140),
@@ -79,7 +79,7 @@ function X(e) {
 }
 function Q(e, t) {
     let n = K[e];
-    if (null != n && n.nonce === t) return delete K[e], n;
+    if (null != n && n.nonce === t) return (delete K[e], n);
 }
 function J(e, t) {
     setTimeout(() => Q(e, t), Y);
@@ -119,7 +119,7 @@ async function ee(e) {
         }),
         { releasePhase: m } = q(h),
         g = p.Z.getRawThermalState();
-    S.default.track(F.rMx.ACTIVITY_SESSION_LEFT, {
+    (S.default.track(F.rMx.ACTIVITY_SESSION_LEFT, {
         channel_id: c,
         guild_id: u,
         media_session_id: l.mediaSessionIds[0],
@@ -146,7 +146,7 @@ async function ee(e) {
             duration_ms: o,
             embedded_activity_location_kind: r.kind
         }),
-        delete W[n];
+        delete W[n]);
 }
 function et(e) {
     var t, n;
@@ -184,7 +184,7 @@ function et(e) {
         };
     W[r] = H;
     let Y = K[r];
-    (0, C.Ew)(m.nonce) || m.nonce === (null == Y ? void 0 : Y.nonce) || (Y = void 0),
+    ((0, C.Ew)(m.nonce) || m.nonce === (null == Y ? void 0 : Y.nonce) || (Y = void 0),
         S.default.track(F.rMx.ACTIVITY_SESSION_JOINED, {
             channel_id: g,
             guild_id: E,
@@ -222,20 +222,20 @@ function et(e) {
             shelf_sorted_rank: G > 0 ? G : null,
             activities_infra_version: w,
             embedded_activity_location_kind: u.kind
-        });
+        }));
 }
 function en(e) {
     return W[e];
 }
 class er extends c.Z {
     _initialize() {
-        I.Z.addChangeListener(this.handleSelectedChannelUpdate), A.S.subscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), A.S.subscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, et), o.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_START', $), o.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), o.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), o.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', ee), o.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), o.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), o.Z.subscribe('CALL_DELETE', this.handleCallDelete), o.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), o.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), o.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete), o.Z.subscribe('INTERACTION_QUEUE', this.handleInteractionQueue), o.Z.subscribe('INTERACTION_CREATE', this.handleInteractionCreate), o.Z.subscribe('INTERACTION_SUCCESS', this.handleInteractionSuccess), o.Z.subscribe('INTERACTION_FAILURE', this.handleInteractionFailure);
+        (I.Z.addChangeListener(this.handleSelectedChannelUpdate), A.S.subscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), A.S.subscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, et), o.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_START', $), o.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), o.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), o.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', ee), o.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), o.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), o.Z.subscribe('CALL_DELETE', this.handleCallDelete), o.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), o.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), o.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete), o.Z.subscribe('INTERACTION_QUEUE', this.handleInteractionQueue), o.Z.subscribe('INTERACTION_CREATE', this.handleInteractionCreate), o.Z.subscribe('INTERACTION_SUCCESS', this.handleInteractionSuccess), o.Z.subscribe('INTERACTION_FAILURE', this.handleInteractionFailure));
     }
     _terminate() {
-        I.Z.removeChangeListener(this.handleSelectedChannelUpdate), A.S.unsubscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), A.S.unsubscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, et), o.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_START', $), o.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), o.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), o.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', ee), o.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), o.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), o.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), o.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), o.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), o.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete), o.Z.unsubscribe('INTERACTION_QUEUE', this.handleInteractionQueue), o.Z.unsubscribe('INTERACTION_CREATE', this.handleInteractionCreate), o.Z.unsubscribe('INTERACTION_SUCCESS', this.handleInteractionSuccess), o.Z.unsubscribe('INTERACTION_FAILURE', this.handleInteractionFailure);
+        (I.Z.removeChangeListener(this.handleSelectedChannelUpdate), A.S.unsubscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), A.S.unsubscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, et), o.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_START', $), o.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), o.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), o.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', ee), o.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), o.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), o.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), o.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), o.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), o.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete), o.Z.unsubscribe('INTERACTION_QUEUE', this.handleInteractionQueue), o.Z.unsubscribe('INTERACTION_CREATE', this.handleInteractionCreate), o.Z.unsubscribe('INTERACTION_SUCCESS', this.handleInteractionSuccess), o.Z.unsubscribe('INTERACTION_FAILURE', this.handleInteractionFailure));
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             H(this, 'handleSelectedChannelUpdate', () => {
                 let e = I.Z.getVoiceChannelId();
                 for (let { location: t, applicationId: n } of D.ZP.getSelfEmbeddedActivities().values()) {
@@ -275,7 +275,7 @@ class er extends c.Z {
             }),
             H(this, 'handleActivityLaunchSuccess', (e) => {
                 let { nonce: t, applicationId: n } = e;
-                J(n, t), (0, x.n9)() && this.showDevShelfOverrideEnabled();
+                (J(n, t), (0, x.n9)() && this.showDevShelfOverrideEnabled());
             }),
             H(this, 'handleActivityLaunchFail', async (e) => {
                 let t,
@@ -285,7 +285,7 @@ class er extends c.Z {
                     d = Q(l, a),
                     f = Z.intl.string(Z.t['IOy+Iy']);
                 if (i instanceof h.Z) {
-                    (t = 0), (r = i.reason);
+                    ((t = 0), (r = i.reason));
                     let e = P.Z.getFetchState();
                     switch ((E.Sb.getSetting() && e !== P.O.LOADED && (await (0, w.$h)()), i.reason)) {
                         case h.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
@@ -299,7 +299,7 @@ class er extends c.Z {
                     }
                 } else if (i instanceof m.Z) {
                     var _;
-                    (t = 1), (r = i.reason), (f = null != (_ = (0, g.A0)(i.reason, l)) ? _ : f);
+                    ((t = 1), (r = i.reason), (f = null != (_ = (0, g.A0)(i.reason, l)) ? _ : f));
                 } else
                     switch (((t = 2), (n = i.status), (r = i.code), i.code)) {
                         case F.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
@@ -451,12 +451,12 @@ class er extends c.Z {
                 let { nonce: t, data: n } = e;
                 if (null == K[n.applicationId]) {
                     let e;
-                    n.interactionType === l.B8.APPLICATION_COMMAND ? (e = [u.Z.INTERACTION_APPLICATION_COMMAND]) : n.interactionType === l.B8.MESSAGE_COMPONENT ? (e = [u.Z.INTERACTION_MESSAGE_COMPONENT]) : n.interactionType === l.B8.MODAL_SUBMIT && (e = [u.Z.INTERACTION_MODAL_SUBMIT]),
+                    (n.interactionType === l.B8.APPLICATION_COMMAND ? (e = [u.Z.INTERACTION_APPLICATION_COMMAND]) : n.interactionType === l.B8.MESSAGE_COMPONENT ? (e = [u.Z.INTERACTION_MESSAGE_COMPONENT]) : n.interactionType === l.B8.MODAL_SUBMIT && (e = [u.Z.INTERACTION_MODAL_SUBMIT]),
                         X({
                             applicationId: n.applicationId,
                             nonce: t,
                             locations: e
-                        }) && (z[t] = n.applicationId);
+                        }) && (z[t] = n.applicationId));
                 }
             }),
             H(this, 'handleInteractionCreate', (e) => {
@@ -478,6 +478,6 @@ class er extends c.Z {
                 if (null == t) return;
                 let n = z[t];
                 null != n && (delete z[t], Q(n, t));
-            });
+            }));
     }
 }

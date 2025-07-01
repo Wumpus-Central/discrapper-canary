@@ -34,11 +34,11 @@ function P(e) {
         x = (0, _.f)(),
         { shouldHideGuildPurchaseEntryPoints: L, restrictionsLoading: w } = (0, h.uP)(t),
         R = null == n || !x || Z || w;
-    (0, u.Tt)({
+    ((0, u.Tt)({
         subsection: N.intl.string(N.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
-        (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
+        (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0));
     let D = P && (null == n || !(j || A) || (L && !w));
     if (
         (i.useEffect(() => {

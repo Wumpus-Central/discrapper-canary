@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(846519),
     i = n(147913),
     a = n(553795),
@@ -52,7 +52,7 @@ async function E(e) {
                 lolConnectionId: n,
                 onlyUpdateIfStale: r
             });
-            (p = !1), (h = !1);
+            ((p = !1), (h = !1));
             let i = new Date(1000 * e),
                 a = new Date(),
                 o = Math.max(0, i.getTime() - a.getTime());
@@ -63,12 +63,12 @@ async function E(e) {
                 })
             );
         } catch (e) {
-            (p = !1), (h = !0);
+            ((p = !1), (h = !0));
         }
     }
 }
 function b() {
-    return Object.values(o.Z.getGuilds()).some(
+    return o.Z.getGuildsArray().some(
         (e) =>
             e.hasFeature(u.oNc.LEADERBOARD_ENABLED) &&
             (0, c.NM)({
@@ -108,7 +108,7 @@ class O extends i.Z {
               });
     }
     constructor(...e) {
-        super(...e), d(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), d(this, 'stores', new Map().set(o.Z, this.handleDependantStoreChanges).set(a.Z, this.handleDependantStoreChanges));
+        (super(...e), d(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), d(this, 'stores', new Map().set(o.Z, this.handleDependantStoreChanges).set(a.Z, this.handleDependantStoreChanges)));
     }
 }
 let v = new O();

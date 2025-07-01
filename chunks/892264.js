@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(355467),
     i = n(496929),
     a = n(147913),
@@ -23,10 +23,10 @@ function f(e, t, n) {
 }
 class _ extends a.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'actions', {
                 POST_CONNECTION_OPEN: () => {
-                    this.maybeFetchSubscriptions(), this.maybeFetchCountryCode(), this.maybeFetchMostRecentSubscription();
+                    (this.maybeFetchSubscriptions(), this.maybeFetchCountryCode(), this.maybeFetchMostRecentSubscription());
                 }
             }),
             f(this, 'maybeFetchSubscriptions', async () => {
@@ -48,8 +48,8 @@ class _ extends a.Z {
                 (0, u.I5)(e) && !s.Z.ipCountryCodeLoaded && (await this.fetchCountryCode());
             }),
             f(this, 'fetchCountryCode', async () => {
-                await (0, r.GE)(), null != s.Z.ipCountryCode && (await (0, r.tZ)());
-            });
+                (await (0, r.GE)(), null != s.Z.ipCountryCode && (await (0, r.tZ)()));
+            }));
     }
 }
 let p = new _();

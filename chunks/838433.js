@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { openGuildProductLink: () => d });
+(n.r(t), n.d(t, { openGuildProductLink: () => d }));
 var u = n(255367);
 n(73800);
 var r = n(481060),
@@ -19,7 +19,7 @@ function d(e, t) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   u = Object.keys(n);
-                              'function' == typeof Object.getOwnPropertySymbols &&
+                              ('function' == typeof Object.getOwnPropertySymbols &&
                                   (u = u.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -27,7 +27,7 @@ function d(e, t) {
                                   )),
                                   u.forEach(function (t) {
                                       var u;
-                                      (u = n[t]),
+                                      ((u = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: u,
@@ -35,8 +35,8 @@ function d(e, t) {
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = u);
-                                  });
+                                              : (e[t] = u));
+                                  }));
                           }
                           return e;
                       })({}, t)

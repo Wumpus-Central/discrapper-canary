@@ -9,5 +9,5 @@ function c(e, t, n) {
     var c = [null];
     o(c).apply(c, t);
     var l = new (a(e).apply(e, c))();
-    return n && (0, s.Z)(l, n.prototype), l;
+    return (n && (0, s.Z)(l, n.prototype), l);
 }

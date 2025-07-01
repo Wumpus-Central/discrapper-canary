@@ -1,8 +1,8 @@
-r.d(t, {
+(r.d(t, {
     ZP: () => g,
     tE: () => j
 }),
-    r(388685);
+    r(388685));
 var n,
     l = r(255367),
     i = r(73800),
@@ -20,7 +20,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
@@ -28,7 +28,7 @@ function O(e) {
             )),
             n.forEach(function (t) {
                 var n;
-                (n = r[t]),
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -36,8 +36,8 @@ function O(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
-            });
+                        : (e[t] = n));
+            }));
     }
     return e;
 }
@@ -68,7 +68,7 @@ function g(e) {
         if (e.every((e) => L.includes(e)) && L.every((t) => e.includes(t))) return;
         D(e);
         let t = new Map(null == h ? void 0 : h.map((e) => [e.value, e]));
-        T(t), Z(new Set(t.keys())), A((e) => e + 1);
+        (T(t), Z(new Set(t.keys())), A((e) => e + 1));
     }, [h, L]);
     let {
             state: _,
@@ -84,7 +84,7 @@ function g(e) {
     i.useEffect(() => {
         if ((null == _ ? void 0 : _.type) === s.re.USER_SELECT || (null == _ ? void 0 : _.type) === s.re.ROLE_SELECT || (null == _ ? void 0 : _.type) === s.re.MENTIONABLE_SELECT || (null == _ ? void 0 : _.type) === s.re.CHANNEL_SELECT) {
             let e = new Map(_.selectedOptions.map((e) => [e.value, e]));
-            T(e), Z(new Set(e.keys()));
+            (T(e), Z(new Set(e.keys())));
         }
     }, [_]);
     let z = i.useCallback(() => {
@@ -137,7 +137,7 @@ function g(e) {
                                       className: b.badges,
                                       value: Array.from(I.values()),
                                       onChange: (e) => {
-                                          w || N(!0), T(new Map(e.map((e) => [e.value, e])));
+                                          (w || N(!0), T(new Map(e.map((e) => [e.value, e]))));
                                       },
                                       multi: !0,
                                       inputClassNames: a()({

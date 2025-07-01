@@ -126,7 +126,7 @@ var n = r(73800),
             )
         );
     };
-(f.propTypes = {
+((f.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     styles: a().object,
     header: a().string
@@ -136,4 +136,4 @@ var n = r(73800),
         styles: {},
         header: 'Color picker'
     }),
-    (0, s.t1)(f);
+    (0, s.t1)(f));

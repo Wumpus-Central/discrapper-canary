@@ -1,4 +1,4 @@
-n.d(a, { default: () => I }), n(388685);
+(n.d(a, { default: () => I }), n(388685));
 var o = n(255367),
     t = n(73800),
     l = n(120356),
@@ -127,7 +127,7 @@ let I = function (e) {
                                           size: d.zxk.Sizes.SMALL,
                                           buttonCTA: f.intl.string(f.t.sdCQY2),
                                           onChange: (e) => {
-                                              S(!1), n(e), m();
+                                              (S(!1), n(e), m());
                                           },
                                           onFileSizeError: () => {
                                               S(!0);

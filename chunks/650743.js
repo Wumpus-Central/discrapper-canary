@@ -36,7 +36,7 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function I(e) {
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -82,11 +82,11 @@ function T(e) {
             isFavorite: S
         });
     let P = () => {
-            v(),
+            (v(),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
                     return (t) => (0, r.jsx)(e, I({}, t));
-                });
+                }));
         },
         w = (0, c.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
         D = () => (0, c.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),

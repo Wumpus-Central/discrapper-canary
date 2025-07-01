@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+(n.d(t, { Z: () => N }), n(388685));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -27,7 +27,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -35,7 +35,7 @@ function O(e) {
             )),
             a.forEach(function (t) {
                 var a;
-                (a = n[t]),
+                ((a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: a,
@@ -43,8 +43,8 @@ function O(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a);
-            });
+                        : (e[t] = a));
+            }));
     }
     return e;
 }
@@ -77,7 +77,7 @@ function N(e) {
     async function z() {
         var e;
         let r = m.Z.getChannel(l);
-        B('export'), null == (e = L.current) || e.pause();
+        (B('export'), null == (e = L.current) || e.pause());
         try {
             let e = await (0, g.rO)(
                 t,
@@ -112,7 +112,7 @@ function N(e) {
     }
     async function H() {
         var e;
-        B('export'), null == (e = L.current) || e.pause();
+        (B('export'), null == (e = L.current) || e.pause());
         try {
             let e = await (0, g.rO)(
                     t,
@@ -130,7 +130,7 @@ function N(e) {
     }
     function W() {
         var e;
-        null == (e = L.current) || e.pause(),
+        (null == (e = L.current) || e.pause(),
             (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('15915').then(n.bind(n, 799677));
                 return (n) =>
@@ -141,11 +141,11 @@ function N(e) {
                                 await n.onClose();
                             },
                             onAfterDelete: async () => {
-                                await n.onClose(), R();
+                                (await n.onClose(), R());
                             }
                         })
                     );
-            });
+            }));
     }
     return (0, a.jsxs)('div', {
         className: k.clipForm,
@@ -210,7 +210,7 @@ function N(e) {
                                 applicationAudioEnabled: I,
                                 voiceAudioEnabled: F,
                                 onShareComplete: () => {
-                                    o.Mr(_.Ut), o.Mr(_.Qr);
+                                    (o.Mr(_.Ut), o.Mr(_.Qr));
                                 }
                             }),
                         children: C.intl.string(C.t.I8lglZ)

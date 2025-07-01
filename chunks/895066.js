@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(539854);
+(n.d(t, { Z: () => p }), n(388685), n(539854));
 var r = n(392711),
     i = n.n(r),
     a = n(46973),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -61,7 +61,7 @@ function _(e) {
     let t = {};
     for (let n in e) {
         let r = e[n];
-        (t[n + '_mean'] = null != r ? r.mean : 0), (t[n + '_p75'] = null != r ? r.p75 : 0), (t[n + '_p95'] = null != r ? r.p95 : 0), (t[n + '_p99'] = null != r ? r.p99 : 0), (t[n + '_max'] = null != r ? r.max : 0);
+        ((t[n + '_mean'] = null != r ? r.mean : 0), (t[n + '_p75'] = null != r ? r.p75 : 0), (t[n + '_p95'] = null != r ? r.p95 : 0), (t[n + '_p99'] = null != r ? r.p99 : 0), (t[n + '_max'] = null != r ? r.max : 0));
     }
     return t;
 }
@@ -76,7 +76,7 @@ class p {
         let e = i().reduce(
             this.inboundStats,
             (e, t) => {
-                (e.mosSum += t.mosSum), (e.mosCount += t.mosCount);
+                ((e.mosSum += t.mosSum), (e.mosCount += t.mosCount));
                 for (var n = 0; n < 5; n++) e.mosBuckets[n] += t.mosBuckets[n];
                 return e;
             },
@@ -180,7 +180,7 @@ class p {
             this.inboundStats,
             (e, t) => {
                 var n, r, i, a, o, s, l;
-                return (e.passthroughCount += null != (n = t.passthroughCount) ? n : 0), (e.decryptSuccessCount += null != (r = t.decryptSuccessCount) ? r : 0), (e.decryptFailureCount += null != (i = t.decryptFailureCount) ? i : 0), (e.decryptDuration += null != (a = t.decryptDuration) ? a : 0), (e.decryptAttempts += null != (o = t.decryptAttempts) ? o : 0), (e.decryptMissingKeyCount += null != (s = t.decryptMissingKeyCount) ? s : 0), (e.decryptInvalidNonceCount += null != (l = t.decryptInvalidNonceCount) ? l : 0), e;
+                return ((e.passthroughCount += null != (n = t.passthroughCount) ? n : 0), (e.decryptSuccessCount += null != (r = t.decryptSuccessCount) ? r : 0), (e.decryptFailureCount += null != (i = t.decryptFailureCount) ? i : 0), (e.decryptDuration += null != (a = t.decryptDuration) ? a : 0), (e.decryptAttempts += null != (o = t.decryptAttempts) ? o : 0), (e.decryptMissingKeyCount += null != (s = t.decryptMissingKeyCount) ? s : 0), (e.decryptInvalidNonceCount += null != (l = t.decryptInvalidNonceCount) ? l : 0), e);
             },
             {
                 passthroughCount: 0,
@@ -248,7 +248,7 @@ class p {
                     };
                 I.normal + I.merged + I.expanded + I.accelerated + I.preemptiveExpanded > 0 && e.push(I);
             }
-            (this.periodicInboundStats[h].accelerateRateSum = 0), (this.periodicInboundStats[h].expandRateSum = 0), (this.periodicInboundStats[h].preemptiveExpandRateSum = 0), (this.periodicInboundStats[h].speechExpandRateSum = 0), (this.periodicInboundStats[h].numRateSamples = 0), (this.periodicInboundStats[h].previous = E), (this.periodicInboundStats[h].previousTimestampMs = b);
+            ((this.periodicInboundStats[h].accelerateRateSum = 0), (this.periodicInboundStats[h].expandRateSum = 0), (this.periodicInboundStats[h].preemptiveExpandRateSum = 0), (this.periodicInboundStats[h].speechExpandRateSum = 0), (this.periodicInboundStats[h].numRateSamples = 0), (this.periodicInboundStats[h].previous = E), (this.periodicInboundStats[h].previousTimestampMs = b));
         }
         return e;
     }
@@ -260,7 +260,7 @@ class p {
         return 93.4 - (0.024 * e + (e > 177.3 ? 0.11 * (e - 177.3) : 0)) - (10 + (122 * t) / (t + 10));
     }
     constructor(e) {
-        c(this, 'connection', void 0),
+        (c(this, 'connection', void 0),
             c(this, 'inboundStats', void 0),
             c(this, 'outboundStats', void 0),
             c(this, 'networkQuality', void 0),
@@ -289,18 +289,18 @@ class p {
                 let r = performance.now();
                 e.aggregationDurationMs += r - e.previousTimestampMs;
                 let i = (r - e.previousTimestampMs) / 1000;
-                (e.bytesAvailable += (t / 8) * i), (e.bytesTarget += (n / 8) * i), (e.previousTimestampMs = r);
+                ((e.bytesAvailable += (t / 8) * i), (e.bytesTarget += (n / 8) * i), (e.previousTimestampMs = r));
             }),
             (this.sampleStats = (e) => {
                 if (null == e) return;
-                this.networkQuality.incrementNetworkStats((0, o.zO)()), this.systemResources.takeSample(), this.duration.connected++;
+                (this.networkQuality.incrementNetworkStats((0, o.zO)()), this.systemResources.takeSample(), this.duration.connected++);
                 let t = this.outboundStats.packetsSent,
                     n = i().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), { packetsReceived: 0 }),
                     r = 0;
-                i().forEach(e.rtp.outbound, (e) => {
+                (i().forEach(e.rtp.outbound, (e) => {
                     if ('audio' === e.type) {
                         var t, n, i, a, o, s, l, c, d;
-                        (r = null != (t = e.bitrateTarget) ? t : 0),
+                        ((r = null != (t = e.bitrateTarget) ? t : 0),
                             (this.outboundStats = f(u({}, this.outboundStats), {
                                 packetsSent: e.packetsSent,
                                 bytesSent: e.bytesSent,
@@ -312,7 +312,7 @@ class p {
                                 encryptAttempts: null != (l = e.encryptAttempts) ? l : 0,
                                 encryptMaxAttempts: null != (c = e.encryptMaxAttempts) ? c : 0,
                                 encryptMissingKeyCount: null != (d = e.encryptMissingKeyCount) ? d : 0
-                            }));
+                            })));
                     }
                 }),
                     (this.decryptionFailures = e.transport.decryptionFailures),
@@ -360,7 +360,7 @@ class p {
                                         r = A - this.inboundStats[n].packetsLost,
                                         a = 0,
                                         o = this.inboundStats[n].mosBuckets;
-                                    e > 0 && r >= 0 && ((a = this.calculateMos(T + w, i().clamp(r / (e + r), 0, 1))), o[Math.floor(a)]++),
+                                    (e > 0 && r >= 0 && ((a = this.calculateMos(T + w, i().clamp(r / (e + r), 0, 1))), o[Math.floor(a)]++),
                                         (this.inboundStats[n] = u(
                                             {
                                                 packetsReceived: S,
@@ -388,9 +388,9 @@ class p {
                                             preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null != (E = t.preemptiveExpandRate) ? E : 0),
                                             speechExpandRateSum: this.periodicInboundStats[n].speechExpandRateSum + (null != (b = t.speechExpandRate) ? b : 0),
                                             numRateSamples: this.periodicInboundStats[n].numRateSamples + 1
-                                        });
+                                        }));
                                 } else
-                                    (this.inboundStats[n] = u(
+                                    ((this.inboundStats[n] = u(
                                         {
                                             packetsReceived: S,
                                             bytesReceived: N,
@@ -417,14 +417,14 @@ class p {
                                             preemptiveExpandRateSum: null != (v = t.preemptiveExpandRate) ? v : 0,
                                             speechExpandRateSum: null != (I = t.speechExpandRate) ? I : 0,
                                             numRateSamples: 1
-                                        });
+                                        }));
                             }
                         });
                     }),
-                    void 0 !== e.audioDevice && (this.sampleAudioDevice(e.audioDevice.input, this.inputDeviceStats), this.sampleAudioDevice(e.audioDevice.output, this.outputDeviceStats));
+                    void 0 !== e.audioDevice && (this.sampleAudioDevice(e.audioDevice.input, this.inputDeviceStats), this.sampleAudioDevice(e.audioDevice.output, this.outputDeviceStats)));
                 let a = !1,
                     s = !1;
-                this.outboundStats.packetsSent > t && ((a = !0), this.duration.speaking++), i().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), { packetsReceived: 0 }).packetsReceived > n.packetsReceived && ((s = !0), this.duration.listening++), (a || s) && this.duration.participation++;
+                (this.outboundStats.packetsSent > t && ((a = !0), this.duration.speaking++), i().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), { packetsReceived: 0 }).packetsReceived > n.packetsReceived && ((s = !0), this.duration.listening++), (a || s) && this.duration.participation++);
             }),
             (this.networkQuality = new s.Z()),
             (this.systemResources = new l.Z()),
@@ -453,7 +453,7 @@ class p {
             }),
             (this.periodicInboundStats = {}),
             (this.inputDeviceStats = {}),
-            (this.outputDeviceStats = {});
+            (this.outputDeviceStats = {}));
     }
 }
 let h = (e, t) => {

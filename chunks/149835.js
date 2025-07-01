@@ -14,7 +14,7 @@ function p(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -22,7 +22,7 @@ function p(t) {
             )),
             r.forEach(function (e) {
                 var r;
-                (r = n[e]),
+                ((r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
@@ -30,8 +30,8 @@ function p(t) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
-            });
+                        : (t[e] = r));
+            }));
     }
     return t;
 }
@@ -41,7 +41,7 @@ function f(t, e) {
     if (n && !t.isHidden()) return null;
     function O() {
         let e = (0, s.x9)(t.getFlags(), d.eHb.HIDDEN);
-        a.h(t.id, t.branchId, e), u.default.track(d.rMx.APPLICATION_SETTINGS_UPDATED, p({ hidden_enabled: (0, s.yE)(e, d.eHb.HIDDEN) }, t.getAnalyticsData()));
+        (a.h(t.id, t.branchId, e), u.default.track(d.rMx.APPLICATION_SETTINGS_UPDATED, p({ hidden_enabled: (0, s.yE)(e, d.eHb.HIDDEN) }, t.getAnalyticsData())));
     }
     return (0, r.jsx)(l.sNh, {
         id: 'in-library',

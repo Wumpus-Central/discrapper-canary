@@ -7,11 +7,11 @@ var n = r(73800),
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })();
 let s = (function (e) {
@@ -29,7 +29,7 @@ let s = (function (e) {
             (r.handleMouseDown = function (e) {
                 r.handleChange(e);
                 var t = r.getContainerRenderWindow();
-                t.addEventListener('mousemove', r.handleChange), t.addEventListener('mouseup', r.handleMouseUp);
+                (t.addEventListener('mousemove', r.handleChange), t.addEventListener('mouseup', r.handleMouseUp));
             }),
             (r.handleMouseUp = function () {
                 r.unbindEventListeners();
@@ -54,7 +54,7 @@ let s = (function (e) {
             {
                 key: 'componentWillUnmount',
                 value: function () {
-                    this.throttle.cancel(), this.unbindEventListeners();
+                    (this.throttle.cancel(), this.unbindEventListeners());
                 }
             },
             {
@@ -68,7 +68,7 @@ let s = (function (e) {
                 key: 'unbindEventListeners',
                 value: function () {
                     var e = this.getContainerRenderWindow();
-                    e.removeEventListener('mousemove', this.handleChange), e.removeEventListener('mouseup', this.handleMouseUp);
+                    (e.removeEventListener('mousemove', this.handleChange), e.removeEventListener('mouseup', this.handleMouseUp));
                 }
             },
             {

@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     V9: () => _,
     ek: () => b
 }),
-    n(388685);
+    n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -39,7 +39,7 @@ let b = {
         }, [E, R]);
         let D = r.useCallback(() => {
                 let e = !I;
-                e &&
+                (e &&
                     null != x &&
                     (0, o.Y)({
                         pageType: x,
@@ -47,7 +47,7 @@ let b = {
                         ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL
                     }),
                     T(e ? u.b.SELECTED : u.b.DEFAULT),
-                    N(e);
+                    N(e));
             }, [I, x]),
             Z = r.useCallback(() => {
                 I && D();
@@ -81,7 +81,7 @@ let b = {
                             analyticsPage: x,
                             ctaText: n,
                             ctaOnClick: () => {
-                                D(), s();
+                                (D(), s());
                             },
                             linkText: j
                         })

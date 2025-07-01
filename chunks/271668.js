@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+(n.d(t, { Z: () => V }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -92,18 +92,18 @@ let D = 512,
             }),
             er = (e) => {
                 let t = q.length * (M + k) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
-                Q && e + U > t && ee(), en(e), B(), (l.current = e);
+                (Q && e + U > t && ee(), en(e), B(), (l.current = e));
             },
             ei = i.useRef(er);
-        i.useEffect(() => {
+        (i.useEffect(() => {
             ei.current = er;
         }),
             i.useEffect(() => {
                 ei.current(l.current);
-            }, [J]);
+            }, [J]));
         let ea = i.useCallback((e) => (e !== q.length - 1 || Q ? k : 0), [q.length, Q]),
             eo = X.map((e) => e.data.length);
-        i.useEffect(() => {
+        (i.useEffect(() => {
             null != H.current && Y && null != V && H.current.scrollRowIntoView(V);
         }, [Y, V]),
             i.useLayoutEffect(() => {
@@ -111,12 +111,12 @@ let D = 512,
                     var e;
                     null == (e = H.current) || e.scrollToSectionTop(0);
                 }
-            }, [J, $]);
+            }, [J, $]));
         let es = i.useCallback(
                 (e) => {
                     if (e.id === $ || e.id === N.bi.FRECENCY) {
                         var t;
-                        et(null), null == (t = H.current) || t.scrollToSectionTop(0);
+                        (et(null), null == (t = H.current) || t.scrollToSectionTop(0));
                     } else et(e.id);
                 },
                 [et, $]
@@ -155,7 +155,7 @@ let D = 512,
                     let t = Q ? L : 0,
                         n = J.length + t,
                         r = null == V ? 0 : V + e;
-                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), Z(r), W(!0), !0;
+                    return (r >= n ? (r = n - 1) : r < 0 && (r = 0), Z(r), W(!0), !0);
                 }
             }),
             [J.length, X, Q, z, el, V]
@@ -230,7 +230,7 @@ let D = 512,
                             section: l,
                             onClick: () => el(o, l, (0, I.tI)(a.section)),
                             onHover: () => {
-                                Z(null), W(!1);
+                                (Z(null), W(!1));
                             }
                         },
                         s

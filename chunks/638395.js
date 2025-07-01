@@ -36,8 +36,8 @@ class u extends (r = i.ZP.DeviceSettingsStore) {
         return null != (t = l[e]) && t;
     }
     set(e, t) {
-        return (l[e] = t), t;
+        return ((l[e] = t), t);
     }
 }
-s(u, 'displayName', 'LabFeatureStore'), s(u, 'persistKey', 'LabFeatureStore');
+(s(u, 'displayName', 'LabFeatureStore'), s(u, 'persistKey', 'LabFeatureStore'));
 let d = new u(a.Z, { LAB_FEATURE_TOGGLE: c });

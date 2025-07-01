@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     A: () => _,
     q: () => d
 }),
-    n(583741);
+    n(583741));
 var r = n(392711),
     i = n.n(r),
     a = n(131704),
@@ -42,7 +42,7 @@ function d(e, t, n, r, i) {
         v = 0;
     p.forEach((e) => {
         var t;
-        O++, (v += null != (t = Number(e.num_messages)) ? t : 0);
+        (O++, (v += null != (t = Number(e.num_messages)) ? t : 0));
     });
     let I = '\n**Pain**:\n- Everyones: '
             .concat(u.XR[null != (s = h.everyones) ? s : 0], '\n- Messages: ')

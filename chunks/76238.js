@@ -21,7 +21,7 @@ class s {
         if (null == e || e > a.X6Q || e < 1) throw new l.Z({ closeCode: a.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(e));
     }
     constructor(e, t, n) {
-        o(this, 'transport', void 0),
+        (o(this, 'transport', void 0),
             o(this, 'version', void 0),
             o(this, 'encoding', void 0),
             o(this, 'id', void 0),
@@ -42,6 +42,6 @@ class s {
                 name: null,
                 icon: null
             }),
-            this.checkRpcVersion(t);
+            this.checkRpcVersion(t));
     }
 }

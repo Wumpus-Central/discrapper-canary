@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685), n(35282);
+(n.d(t, { Z: () => d }), n(388685), n(35282));
 var r = n(255367),
     o = n(73800),
     i = n(593473),
@@ -18,7 +18,7 @@ function d() {
                 let e = (0, i.parse)(t.search);
                 try {
                     var n;
-                    await (0, c.g)(null != (n = e.token) ? n : ''), d(!0);
+                    (await (0, c.g)(null != (n = e.token) ? n : ''), d(!0));
                 } catch (e) {
                     p(!0);
                 }

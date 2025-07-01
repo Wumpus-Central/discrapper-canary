@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -11,11 +11,11 @@ var r = n(255367),
     p = n(35125),
     m = n(626751),
     f = n(891614),
-    h = n(981631),
-    g = n(176505),
-    _ = n(388032),
+    g = n(981631),
+    _ = n(176505),
+    h = n(388032),
     b = n(896293);
-function x(e) {
+function E(e) {
     let { username: t } = e;
     return (0, r.jsx)('div', {
         className: b.welcomeCardText,
@@ -24,7 +24,7 @@ function x(e) {
             className: b.welcomeCardText,
             color: 'status-positive-text',
             variant: 'heading-xl/medium',
-            children: _.intl.format(_.t.MLKSlp, {
+            children: h.intl.format(h.t.MLKSlp, {
                 username: t,
                 usernameHook: (e, t) =>
                     (0, r.jsx)(
@@ -47,22 +47,22 @@ function y(e) {
     return (0, r.jsxs)('div', {
         className: b.welcomeCard,
         role: 'img',
-        'aria-label': _.intl.formatToPlainString(_.t['utf8+f'], { username: i }),
+        'aria-label': h.intl.formatToPlainString(h.t['utf8+f'], { username: i }),
         children: [
             (0, r.jsx)(f.Z, {
                 guildId: t,
                 user: n,
                 className: b.welcomeCardBadge
             }),
-            (0, r.jsx)(x, { username: i })
+            (0, r.jsx)(E, { username: i })
         ]
     });
 }
-function E(e) {
+function C(e) {
     var t, l;
-    let { channel: f, message: _, compact: b } = e,
-        x = (0, s.ZP)(_),
-        E = (function (e) {
+    let { channel: f, message: h, compact: b } = e,
+        E = (0, s.ZP)(h),
+        C = (function (e) {
             let { author: t, channel: n, message: r } = e,
                 l = n.guild_id,
                 s = (0, c.l)({
@@ -74,7 +74,7 @@ function E(e) {
                 { analyticsLocations: u } = (0, o.ZP)(a.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
                 m = r.roleSubscriptionData,
                 f = i.useCallback(() => {
-                    (0, d.uL)(h.Z5c.CHANNEL(l, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == m ? void 0 : m.role_subscription_listing_id) != null && (0, p.y8)(l, n.id, r.id, m.role_subscription_listing_id);
+                    ((0, d.uL)(g.Z5c.CHANNEL(l, _.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == m ? void 0 : m.role_subscription_listing_id) != null && (0, p.y8)(l, n.id, r.id, m.role_subscription_listing_id));
                 }, [l, n, r, m, u]);
             return null == m
                 ? null
@@ -87,29 +87,29 @@ function E(e) {
                   });
         })({
             channel: f,
-            message: _,
-            author: x
+            message: h,
+            author: E
         }),
-        v = (null == (t = _.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null && (null == (l = _.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
-    return null == E
+        x = (null == (t = h.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null && (null == (l = h.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
+    return null == C
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(u.Z, {
                       icon: n(570111),
-                      timestamp: _.timestamp,
+                      timestamp: h.timestamp,
                       compact: b,
-                      children: E
+                      children: C
                   }),
-                  v &&
+                  x &&
                       (0, r.jsx)(y, {
                           guildId: f.guild_id,
-                          user: _.author,
-                          username: x.nick
+                          user: h.author,
+                          username: E.nick
                       }),
                   (0, r.jsx)(m.Z, {
                       channel: f,
-                      message: _
+                      message: h
                   })
               ]
           });

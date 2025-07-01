@@ -40,16 +40,16 @@ function m(e) {
                 if (e.type !== p.d4z.GUILD_VOICE) return;
                 o.default.selectVoiceChannel(e.id);
             }
-            v('join'),
+            (v('join'),
                 r.Z.track(p.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
                     guild_id: e.guild_id,
                     channel_id: e.id,
                     video_enabled: !1
-                });
+                }));
         },
         onCancelClick: () => {
-            i.Z.stopRinging(e.id), v('decline');
+            (i.Z.stopRinging(e.id), v('decline'));
         },
         onDismissClick: () => {
             v('dismiss');

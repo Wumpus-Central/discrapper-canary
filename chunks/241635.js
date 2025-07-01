@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(539854);
+(n.d(t, { Z: () => b }), n(539854));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -47,7 +47,7 @@ function b(e, t) {
                                     body: m.intl.format(m.t['9+nrUV'], { name: t.name }),
                                     cancelText: m.intl.string(m.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        x && (await (0, c.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id);
+                                        (x && (await (0, c.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id));
                                     }
                                 });
                             }

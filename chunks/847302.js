@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Gg: () => O,
     KH: () => E,
     ZP: () => g
@@ -6,7 +6,7 @@ n.d(t, {
     n(388685),
     n(583741),
     n(35282),
-    n(539854);
+    n(539854));
 var r = n(512722),
     i = n.n(r),
     a = n(911969),
@@ -23,19 +23,19 @@ let _ = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#
     m = new Set(['applicationCommandOption']);
 function g(e, t, n) {
     let { isInline: r, isVoid: i, onChange: a } = e;
-    (e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!p.has(e.type) || r(e));
+    ((e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!p.has(e.type) || r(e)));
     let o = null,
         s = !0;
     return (
         (e.onChange = () => {
             let r = f.bN.richValue(e);
-            (r !== o || e.previewMarkdown !== s) &&
+            ((r !== o || e.previewMarkdown !== s) &&
                 (l.T.withMergedEntry(e, () => {
                     f.bN.withoutNormalizing(e, () => E(e, t, n));
                 }),
                 (o = r),
                 (s = e.previewMarkdown)),
-                a();
+                a());
         }),
         e
     );
@@ -59,7 +59,7 @@ function b(e, t, n, r) {
     var i;
     let a = 'line' === t[0].type && (null == (i = t[0].codeBlockState) ? void 0 : i.isInCodeBlock) === !0,
         o = f.q.markdown(t[0], n);
-    y(e, t, a, o) && ((t = f.q.updateElement(e, t)), (o = f.q.markdown(t[0], n))), a || (O(e, t, r, o) && ((t = f.q.updateElement(e, t)), (o = f.q.markdown(t[0], n))), v(e, t, n, r, o));
+    (y(e, t, a, o) && ((t = f.q.updateElement(e, t)), (o = f.q.markdown(t[0], n))), a || (O(e, t, r, o) && ((t = f.q.updateElement(e, t)), (o = f.q.markdown(t[0], n))), v(e, t, n, r, o)));
 }
 function y(e, t, n, r) {
     let [i, a] = t,
@@ -82,7 +82,7 @@ function y(e, t, n, r) {
             }
             if (n) {
                 let n = f.C0.child(a, t + 1);
-                d.Q.voidToText(
+                (d.Q.voidToText(
                     e,
                     (0, u.sg)(l, {
                         mode: 'plain',
@@ -90,7 +90,7 @@ function y(e, t, n, r) {
                     }),
                     n
                 ),
-                    (o = !0);
+                    (o = !0));
             }
         } else if (e.isVoid(s)) {
             let i = f.C0.child(a, t),
@@ -203,11 +203,11 @@ function O(e, t, n, r) {
         if (!S(n, t[0], l)) continue;
         let _ = (0, c.t)(e, i, r.serializedChildren, u.start),
             p = (0, c.t)(e, i, r.serializedChildren, u.start + u.text.length);
-        d.Q.textToVoid(e, l, {
+        (d.Q.textToVoid(e, l, {
             anchor: _,
             focus: p
         }),
-            (a = !0);
+            (a = !0));
     }
     return a;
 }
@@ -246,7 +246,7 @@ function v(e, t, n, r, i) {
                   })
                 : (_.lastIndex = u.index + 1);
         }
-        for (let t of h.reverse()) I(e, [d, f.C0.child(o, c)], t.index, t.length, t.node), (l = !0);
+        for (let t of h.reverse()) (I(e, [d, f.C0.child(o, c)], t.index, t.length, t.node), (l = !0));
     }
     return l;
 }
@@ -260,12 +260,12 @@ function I(e, t, n, r, a) {
             path: s,
             offset: n + r
         };
-    i()(l.offset >= 0 && l.offset <= o.text.length, 'Failed to find valid start position for raw mention replace'),
+    (i()(l.offset >= 0 && l.offset <= o.text.length, 'Failed to find valid start position for raw mention replace'),
         i()(c.offset >= 0 && c.offset <= o.text.length, 'Failed to find valid end position for raw mention replace'),
         d.Q.textToVoid(e, a, {
             anchor: l,
             focus: c
-        });
+        }));
 }
 function T(e, t, n, r) {
     let i = 0;

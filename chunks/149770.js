@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(570140),
     i = n(287734),
     a = n(147913),
@@ -26,14 +26,14 @@ class _ extends a.Z {
         let { guild: t } = e,
             n = c.Z.getChannelId(d.ME),
             r = c.Z.getVoiceChannelId();
-        t.id === n && (0, s.X)(t.id), t.id === r && !1 !== t.unavailable && null == r && i.default.selectVoiceChannel((0, c.C)(t.id));
+        (t.id === n && (0, s.X)(t.id), t.id === r && !1 !== t.unavailable && null == r && i.default.selectVoiceChannel((0, c.C)(t.id)));
     }
     handleChannelCreate(e) {
         let { channel: t } = e;
         if (t.type !== d.d4z.GROUP_DM) return;
         let n = t.originChannelId,
             r = c.Z.getChannelId(d.kod);
-        null == u.Z.getGuildId() && null != n && n === r && (0, o.uL)(d.Z5c.CHANNEL(d.ME, t.id)), null != n && n === c.Z.getVoiceChannelId() && i.default.selectVoiceChannel(t.id, l.Z.isVideoEnabled());
+        (null == u.Z.getGuildId() && null != n && n === r && (0, o.uL)(d.Z5c.CHANNEL(d.ME, t.id)), null != n && n === c.Z.getVoiceChannelId() && i.default.selectVoiceChannel(t.id, l.Z.isVideoEnabled()));
     }
     handleLogout() {
         r.Z.dispatch({
@@ -45,12 +45,12 @@ class _ extends a.Z {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'actions', {
                 GUILD_CREATE: this.handleGuildCreate,
                 CHANNEL_CREATE: this.handleChannelCreate,
                 LOGOUT: this.handleLogout
-            });
+            }));
     }
 }
 let p = new _();

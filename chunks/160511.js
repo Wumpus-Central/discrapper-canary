@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(457542);
+(n.d(t, { Z: () => f }), n(388685), n(457542));
 var r = n(255367),
     l = n(73800),
     i = n(658550),
@@ -16,8 +16,8 @@ function f(e) {
         [S, v] = l.useState(null),
         [C, O] = l.useState(''),
         w = l.useRef(null);
-    l.useEffect(() => {
-        g(!0),
+    (l.useEffect(() => {
+        (g(!0),
             s.tn
                 .post({
                     url: c.ANM.LOGIN_SMS_SEND,
@@ -34,18 +34,18 @@ function f(e) {
                 })
                 .finally(() => {
                     g(!1);
-                });
+                }));
     }, [t.ticket]),
         l.useEffect(() => {
             if (m) {
                 var e;
                 null == (e = w.current) || e.focus();
             }
-        }, [m]);
+        }, [m]));
     let Z = null == b ? u.intl.string(u.t.LQdCQE) : u.intl.formatToPlainString(u.t['8r6h7+'], { phoneNumber: b });
     return (0, r.jsxs)('form', {
         onSubmit: (e) => {
-            e.preventDefault(),
+            (e.preventDefault(),
                 x(!0),
                 n({
                     mfaType: 'sms',
@@ -57,7 +57,7 @@ function f(e) {
                     })
                     .finally(() => {
                         x(!1);
-                    });
+                    }));
         },
         children: [
             (0, r.jsx)(a.Z.SlideHeader, {

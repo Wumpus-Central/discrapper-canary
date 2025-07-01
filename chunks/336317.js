@@ -52,9 +52,9 @@ let r = (function () {
             for (a = !1, o = document.createDocumentFragment(), c = (s = b[y]).nodeValue, _ = 0; (u = n.exec(c)); ) {
                 if (((p = u.index) !== _ && o.appendChild(l(c.slice(_, p), !0)), (g = f((m = u[0]))), (_ = p + m.length), (E = t.callback(g, t)), g && E)) {
                     for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(m, g)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
-                    (h.className = t.className), (h.alt = m), (h.src = E), (a = !0), o.appendChild(h);
+                    ((h.className = t.className), (h.alt = m), (h.src = E), (a = !0), o.appendChild(h));
                 }
-                h || o.appendChild(l(m, !1)), (h = null);
+                (h || o.appendChild(l(m, !1)), (h = null));
             }
             a && (_ < c.length && o.appendChild(l(c.slice(_), !0)), s.parentNode.replaceChild(o, s));
         }
@@ -107,10 +107,10 @@ let r = (function () {
     function O(e) {
         n.lastIndex = 0;
         var t = n.test(e);
-        return (n.lastIndex = 0), t;
+        return ((n.lastIndex = 0), t);
     }
     function v(e, t) {
-        for (var n = [], r = 0, i = 0, a = 0; a < e.length; ) (r = e.charCodeAt(a++)), i ? (n.push((65536 + ((i - 55296) << 10) + (r - 56320)).toString(16)), (i = 0)) : 55296 <= r && r <= 56319 ? (i = r) : n.push(r.toString(16));
+        for (var n = [], r = 0, i = 0, a = 0; a < e.length; ) ((r = e.charCodeAt(a++)), i ? (n.push((65536 + ((i - 55296) << 10) + (r - 56320)).toString(16)), (i = 0)) : 55296 <= r && r <= 56319 ? (i = r) : n.push(r.toString(16)));
         return n.join(t || '-');
     }
 })();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,7 +22,7 @@ var r = n(255367),
     j = n(921944),
     O = n(388032),
     E = n(560163);
-let I = i.forwardRef(function (e, t) {
+let S = i.forwardRef(function (e, t) {
         var n, l;
         let { type: f, animateRef: m } = e,
             b = (0, a.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === f),
@@ -36,10 +36,10 @@ let I = i.forwardRef(function (e, t) {
             }),
             [C]
         );
-        let I = i.useCallback(() => {
-                b ? d.yT(h.ti.DISMISSED) : ((0, _.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: j.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), x();
+        let S = i.useCallback(() => {
+                (b ? d.yT(h.ti.DISMISSED) : ((0, _.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: j.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), x());
             }, [b, f, x]),
-            S = (0, r.jsx)(y, {
+            I = (0, r.jsx)(y, {
                 size: 'refresh_sm',
                 color: 'currentColor'
             });
@@ -52,7 +52,7 @@ let I = i.forwardRef(function (e, t) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -60,7 +60,7 @@ let I = i.forwardRef(function (e, t) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -68,8 +68,8 @@ let I = i.forwardRef(function (e, t) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })(
@@ -78,7 +78,7 @@ let I = i.forwardRef(function (e, t) {
                         size: c.zxk.Sizes.NONE,
                         tabIndex: 0,
                         className: o()(E.button, { [E.buttonActive]: b }),
-                        onClick: I,
+                        onClick: S,
                         'aria-label': O.intl.string(O.t.erHFxM),
                         'aria-expanded': b,
                         'aria-haspopup': 'dialog',
@@ -94,7 +94,7 @@ let I = i.forwardRef(function (e, t) {
                     },
                     C
                 )),
-                (l = l = { children: S }),
+                (l = l = { children: I }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
@@ -111,7 +111,7 @@ let I = i.forwardRef(function (e, t) {
             )
         });
     }),
-    S = i.memo(function (e) {
+    I = i.memo(function (e) {
         let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: o } = e,
             s = i.useRef(null),
             c = (0, m.R)({
@@ -131,7 +131,7 @@ let I = i.forwardRef(function (e, t) {
                           animationContainerClassName: E.entrypointAnimation,
                           glowClassName: E.animationGlow,
                           trinketsClassName: E.animationTrinkets,
-                          children: (0, r.jsx)(I, {
+                          children: (0, r.jsx)(S, {
                               type: n,
                               ref: s,
                               animateRef: l

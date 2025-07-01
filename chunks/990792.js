@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+(n.d(t, { Z: () => p }), n(388685));
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -26,7 +26,7 @@ let p = a.memo(function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         l = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (l = l.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -34,7 +34,7 @@ let p = a.memo(function (e) {
                         )),
                         l.forEach(function (t) {
                             var l;
-                            (l = n[t]),
+                            ((l = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: l,
@@ -42,8 +42,8 @@ let p = a.memo(function (e) {
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = l);
-                        });
+                                    : (e[t] = l));
+                        }));
                 }
                 return e;
             })(
@@ -89,7 +89,7 @@ let p = a.memo(function (e) {
             if (0 !== b.width && 0 !== b.height && null != w && w.length > 0) {
                 let e = n / w.length,
                     a = -(e * (m.nl.waveformBarWidth - 1));
-                t.clearRect(0, 0, n, l), (t.fillStyle = C.hex);
+                (t.clearRect(0, 0, n, l), (t.fillStyle = C.hex));
                 for (let n = 0; n < w.length; n++) {
                     let i = w[n] * l,
                         r = n * e + a,

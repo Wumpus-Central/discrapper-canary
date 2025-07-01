@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     C4: () => j,
     Dd: () => A,
     E5: () => g,
@@ -49,7 +49,7 @@ n.d(t, {
     n(121784),
     n(644351),
     n(146733),
-    n(539854);
+    n(539854));
 var r = n(230367),
     i = n(320215),
     a = n(240773),
@@ -58,64 +58,64 @@ var r = n(230367),
     l = n(835913),
     c = n(397696),
     u = (function (e) {
-        return (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.MENTIONS = 1)] = 'MENTIONS'), (e[(e.UNREADS = 2)] = 'UNREADS'), (e[(e.TODOS = 3)] = 'TODOS'), (e[(e.FOR_YOU = 4)] = 'FOR_YOU'), (e[(e.GAME_INVITES = 5)] = 'GAME_INVITES'), (e[(e.BOOKMARKS = 6)] = 'BOOKMARKS'), (e[(e.SCHEDULED = 7)] = 'SCHEDULED'), e;
+        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.MENTIONS = 1)] = 'MENTIONS'), (e[(e.UNREADS = 2)] = 'UNREADS'), (e[(e.TODOS = 3)] = 'TODOS'), (e[(e.FOR_YOU = 4)] = 'FOR_YOU'), (e[(e.GAME_INVITES = 5)] = 'GAME_INVITES'), (e[(e.BOOKMARKS = 6)] = 'BOOKMARKS'), (e[(e.SCHEDULED = 7)] = 'SCHEDULED'), e);
     })({}),
     d = (function (e) {
-        return (e[(e.NO_GUILD_ONBOARDING = 0)] = 'NO_GUILD_ONBOARDING'), (e[(e.GUILD_NOTICE_SHOWN = 1)] = 'GUILD_NOTICE_SHOWN'), (e[(e.GUILD_NOTICE_CLEARED = 2)] = 'GUILD_NOTICE_CLEARED'), e;
+        return ((e[(e.NO_GUILD_ONBOARDING = 0)] = 'NO_GUILD_ONBOARDING'), (e[(e.GUILD_NOTICE_SHOWN = 1)] = 'GUILD_NOTICE_SHOWN'), (e[(e.GUILD_NOTICE_CLEARED = 2)] = 'GUILD_NOTICE_CLEARED'), e);
     })({}),
     f = (function (e) {
-        return (e[(e.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] = 'UNSET_EXPLICIT_CONTENT_REDACTION'), (e[(e.SHOW = 1)] = 'SHOW'), (e[(e.BLUR = 2)] = 'BLUR'), (e[(e.BLOCK = 3)] = 'BLOCK'), e;
+        return ((e[(e.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] = 'UNSET_EXPLICIT_CONTENT_REDACTION'), (e[(e.SHOW = 1)] = 'SHOW'), (e[(e.BLUR = 2)] = 'BLUR'), (e[(e.BLOCK = 3)] = 'BLOCK'), e);
     })({}),
     _ = (function (e) {
-        return (e[(e.DEFAULT_UNSET = 0)] = 'DEFAULT_UNSET'), (e[(e.DISABLED = 1)] = 'DISABLED'), (e[(e.NON_FRIENDS = 2)] = 'NON_FRIENDS'), (e[(e.FRIENDS_AND_NON_FRIENDS = 3)] = 'FRIENDS_AND_NON_FRIENDS'), e;
+        return ((e[(e.DEFAULT_UNSET = 0)] = 'DEFAULT_UNSET'), (e[(e.DISABLED = 1)] = 'DISABLED'), (e[(e.NON_FRIENDS = 2)] = 'NON_FRIENDS'), (e[(e.FRIENDS_AND_NON_FRIENDS = 3)] = 'FRIENDS_AND_NON_FRIENDS'), e);
     })({}),
     p = (function (e) {
-        return (e[(e.NOTIFICATIONS_ENABLED = 0)] = 'NOTIFICATIONS_ENABLED'), (e[(e.ONLY_DMS = 1)] = 'ONLY_DMS'), (e[(e.NOTIFICATIONS_DISABLED = 2)] = 'NOTIFICATIONS_DISABLED'), e;
+        return ((e[(e.NOTIFICATIONS_ENABLED = 0)] = 'NOTIFICATIONS_ENABLED'), (e[(e.ONLY_DMS = 1)] = 'ONLY_DMS'), (e[(e.NOTIFICATIONS_DISABLED = 2)] = 'NOTIFICATIONS_DISABLED'), e);
     })({}),
     h = (function (e) {
-        return (e[(e.ACTIVITY_NOTIFICATIONS_UNSET = 0)] = 'ACTIVITY_NOTIFICATIONS_UNSET'), (e[(e.ACTIVITY_NOTIFICATIONS_DISABLED = 1)] = 'ACTIVITY_NOTIFICATIONS_DISABLED'), (e[(e.ACTIVITY_NOTIFICATIONS_ENABLED = 2)] = 'ACTIVITY_NOTIFICATIONS_ENABLED'), (e[(e.ONLY_GAMES_PLAYED = 3)] = 'ONLY_GAMES_PLAYED'), e;
+        return ((e[(e.ACTIVITY_NOTIFICATIONS_UNSET = 0)] = 'ACTIVITY_NOTIFICATIONS_UNSET'), (e[(e.ACTIVITY_NOTIFICATIONS_DISABLED = 1)] = 'ACTIVITY_NOTIFICATIONS_DISABLED'), (e[(e.ACTIVITY_NOTIFICATIONS_ENABLED = 2)] = 'ACTIVITY_NOTIFICATIONS_ENABLED'), (e[(e.ONLY_GAMES_PLAYED = 3)] = 'ONLY_GAMES_PLAYED'), e);
     })({}),
     m = (function (e) {
-        return (e[(e.STATUS_PUSH_UNSET = 0)] = 'STATUS_PUSH_UNSET'), (e[(e.STATUS_PUSH_ENABLED = 1)] = 'STATUS_PUSH_ENABLED'), (e[(e.STATUS_PUSH_DISABLED = 2)] = 'STATUS_PUSH_DISABLED'), e;
+        return ((e[(e.STATUS_PUSH_UNSET = 0)] = 'STATUS_PUSH_UNSET'), (e[(e.STATUS_PUSH_ENABLED = 1)] = 'STATUS_PUSH_ENABLED'), (e[(e.STATUS_PUSH_DISABLED = 2)] = 'STATUS_PUSH_DISABLED'), e);
     })({}),
     g = (function (e) {
-        return (e[(e.OFF = 0)] = 'OFF'), (e[(e.ON_FOR_LARGE_GUILDS = 1)] = 'ON_FOR_LARGE_GUILDS'), (e[(e.ON = 2)] = 'ON'), e;
+        return ((e[(e.OFF = 0)] = 'OFF'), (e[(e.ON_FOR_LARGE_GUILDS = 1)] = 'ON_FOR_LARGE_GUILDS'), (e[(e.ON = 2)] = 'ON'), e);
     })({}),
     E = (function (e) {
-        return (e[(e.OFF_FOR_NEW_GUILDS = 0)] = 'OFF_FOR_NEW_GUILDS'), (e[(e.ON_FOR_NEW_GUILDS = 1)] = 'ON_FOR_NEW_GUILDS'), e;
+        return ((e[(e.OFF_FOR_NEW_GUILDS = 0)] = 'OFF_FOR_NEW_GUILDS'), (e[(e.ON_FOR_NEW_GUILDS = 1)] = 'ON_FOR_NEW_GUILDS'), e);
     })({}),
     b = (function (e) {
-        return (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET = 0)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL = 1)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME = 2)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE = 3)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE'), e;
+        return ((e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET = 0)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL = 1)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME = 2)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE = 3)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE'), e);
     })({}),
     y = (function (e) {
-        return (e[(e.UNSET_UI_DENSITY = 0)] = 'UNSET_UI_DENSITY'), (e[(e.COMPACT = 1)] = 'COMPACT'), (e[(e.COZY = 2)] = 'COZY'), (e[(e.RESPONSIVE = 3)] = 'RESPONSIVE'), (e[(e.DEFAULT = 4)] = 'DEFAULT'), e;
+        return ((e[(e.UNSET_UI_DENSITY = 0)] = 'UNSET_UI_DENSITY'), (e[(e.COMPACT = 1)] = 'COMPACT'), (e[(e.COZY = 2)] = 'COZY'), (e[(e.RESPONSIVE = 3)] = 'RESPONSIVE'), (e[(e.DEFAULT = 4)] = 'DEFAULT'), e);
     })({}),
     O = (function (e) {
-        return (e[(e.UNSET = 0)] = 'UNSET'), (e[(e.DARK = 1)] = 'DARK'), (e[(e.LIGHT = 2)] = 'LIGHT'), (e[(e.DARKER = 3)] = 'DARKER'), (e[(e.MIDNIGHT = 4)] = 'MIDNIGHT'), e;
+        return ((e[(e.UNSET = 0)] = 'UNSET'), (e[(e.DARK = 1)] = 'DARK'), (e[(e.LIGHT = 2)] = 'LIGHT'), (e[(e.DARKER = 3)] = 'DARKER'), (e[(e.MIDNIGHT = 4)] = 'MIDNIGHT'), e);
     })({}),
     v = (function (e) {
-        return (e[(e.MINT_APPLE = 0)] = 'MINT_APPLE'), (e[(e.CITRUS_SHERBERT = 1)] = 'CITRUS_SHERBERT'), (e[(e.RETRO_RAINCLOUD = 2)] = 'RETRO_RAINCLOUD'), (e[(e.HANAMI = 3)] = 'HANAMI'), (e[(e.SUNRISE = 4)] = 'SUNRISE'), (e[(e.COTTON_CANDY = 5)] = 'COTTON_CANDY'), (e[(e.LOFI_VIBES = 6)] = 'LOFI_VIBES'), (e[(e.DESERT_KHAKI = 7)] = 'DESERT_KHAKI'), (e[(e.SUNSET = 8)] = 'SUNSET'), (e[(e.CHROMA_GLOW = 9)] = 'CHROMA_GLOW'), (e[(e.FOREST = 10)] = 'FOREST'), (e[(e.CRIMSON_MOON = 11)] = 'CRIMSON_MOON'), (e[(e.MIDNIGHT_BLURPLE = 12)] = 'MIDNIGHT_BLURPLE'), (e[(e.MARS = 13)] = 'MARS'), (e[(e.DUSK = 14)] = 'DUSK'), (e[(e.UNDER_THE_SEA = 15)] = 'UNDER_THE_SEA'), (e[(e.EASTER_EGG = 16)] = 'EASTER_EGG'), (e[(e.RETRO_STORM = 17)] = 'RETRO_STORM'), (e[(e.NEON_NIGHTS = 18)] = 'NEON_NIGHTS'), (e[(e.SEPIA = 19)] = 'SEPIA'), (e[(e.STRAWBERRY_LEMONADE = 20)] = 'STRAWBERRY_LEMONADE'), (e[(e.AURORA = 21)] = 'AURORA'), (e[(e.BLURPLE_TWILIGHT = 22)] = 'BLURPLE_TWILIGHT'), e;
+        return ((e[(e.MINT_APPLE = 0)] = 'MINT_APPLE'), (e[(e.CITRUS_SHERBERT = 1)] = 'CITRUS_SHERBERT'), (e[(e.RETRO_RAINCLOUD = 2)] = 'RETRO_RAINCLOUD'), (e[(e.HANAMI = 3)] = 'HANAMI'), (e[(e.SUNRISE = 4)] = 'SUNRISE'), (e[(e.COTTON_CANDY = 5)] = 'COTTON_CANDY'), (e[(e.LOFI_VIBES = 6)] = 'LOFI_VIBES'), (e[(e.DESERT_KHAKI = 7)] = 'DESERT_KHAKI'), (e[(e.SUNSET = 8)] = 'SUNSET'), (e[(e.CHROMA_GLOW = 9)] = 'CHROMA_GLOW'), (e[(e.FOREST = 10)] = 'FOREST'), (e[(e.CRIMSON_MOON = 11)] = 'CRIMSON_MOON'), (e[(e.MIDNIGHT_BLURPLE = 12)] = 'MIDNIGHT_BLURPLE'), (e[(e.MARS = 13)] = 'MARS'), (e[(e.DUSK = 14)] = 'DUSK'), (e[(e.UNDER_THE_SEA = 15)] = 'UNDER_THE_SEA'), (e[(e.EASTER_EGG = 16)] = 'EASTER_EGG'), (e[(e.RETRO_STORM = 17)] = 'RETRO_STORM'), (e[(e.NEON_NIGHTS = 18)] = 'NEON_NIGHTS'), (e[(e.SEPIA = 19)] = 'SEPIA'), (e[(e.STRAWBERRY_LEMONADE = 20)] = 'STRAWBERRY_LEMONADE'), (e[(e.AURORA = 21)] = 'AURORA'), (e[(e.BLURPLE_TWILIGHT = 22)] = 'BLURPLE_TWILIGHT'), e);
     })({}),
     I = (function (e) {
-        return (e[(e.AUTO = 0)] = 'AUTO'), (e[(e.H12 = 1)] = 'H12'), (e[(e.H23 = 2)] = 'H23'), e;
+        return ((e[(e.AUTO = 0)] = 'AUTO'), (e[(e.H12 = 1)] = 'H12'), (e[(e.H23 = 2)] = 'H23'), e);
     })({}),
     T = (function (e) {
-        return (e[(e.LAUNCH_PAD_DISABLED = 0)] = 'LAUNCH_PAD_DISABLED'), (e[(e.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = 'LAUNCH_PAD_GESTURE_FULL_SCREEN'), (e[(e.LAUNCH_PAD_GESTURE_RIGHT_EDGE = 2)] = 'LAUNCH_PAD_GESTURE_RIGHT_EDGE'), (e[(e.LAUNCH_PAD_PULL_TAB = 3)] = 'LAUNCH_PAD_PULL_TAB'), e;
+        return ((e[(e.LAUNCH_PAD_DISABLED = 0)] = 'LAUNCH_PAD_DISABLED'), (e[(e.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = 'LAUNCH_PAD_GESTURE_FULL_SCREEN'), (e[(e.LAUNCH_PAD_GESTURE_RIGHT_EDGE = 2)] = 'LAUNCH_PAD_GESTURE_RIGHT_EDGE'), (e[(e.LAUNCH_PAD_PULL_TAB = 3)] = 'LAUNCH_PAD_PULL_TAB'), e);
     })({}),
     S = (function (e) {
-        return (e[(e.SWIPE_RIGHT_TO_LEFT_UNSET = 0)] = 'SWIPE_RIGHT_TO_LEFT_UNSET'), (e[(e.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS = 1)] = 'SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS'), (e[(e.SWIPE_RIGHT_TO_LEFT_REPLY = 2)] = 'SWIPE_RIGHT_TO_LEFT_REPLY'), e;
+        return ((e[(e.SWIPE_RIGHT_TO_LEFT_UNSET = 0)] = 'SWIPE_RIGHT_TO_LEFT_UNSET'), (e[(e.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS = 1)] = 'SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS'), (e[(e.SWIPE_RIGHT_TO_LEFT_REPLY = 2)] = 'SWIPE_RIGHT_TO_LEFT_REPLY'), e);
     })({}),
     A = (function (e) {
-        return (e[(e.UNSET_FAVORITE_CHANNEL_TYPE = 0)] = 'UNSET_FAVORITE_CHANNEL_TYPE'), (e[(e.REFERENCE_ORIGINAL = 1)] = 'REFERENCE_ORIGINAL'), (e[(e.CATEGORY = 2)] = 'CATEGORY'), e;
+        return ((e[(e.UNSET_FAVORITE_CHANNEL_TYPE = 0)] = 'UNSET_FAVORITE_CHANNEL_TYPE'), (e[(e.REFERENCE_ORIGINAL = 1)] = 'REFERENCE_ORIGINAL'), (e[(e.CATEGORY = 2)] = 'CATEGORY'), e);
     })({}),
     N = (function (e) {
-        return (e[(e.UNSET_SAFETY_SETTINGS_PRESET = 0)] = 'UNSET_SAFETY_SETTINGS_PRESET'), (e[(e.BALANCED = 1)] = 'BALANCED'), (e[(e.STRICT = 2)] = 'STRICT'), (e[(e.RELAXED = 3)] = 'RELAXED'), (e[(e.CUSTOM = 4)] = 'CUSTOM'), e;
+        return ((e[(e.UNSET_SAFETY_SETTINGS_PRESET = 0)] = 'UNSET_SAFETY_SETTINGS_PRESET'), (e[(e.BALANCED = 1)] = 'BALANCED'), (e[(e.STRICT = 2)] = 'STRICT'), (e[(e.RELAXED = 3)] = 'RELAXED'), (e[(e.CUSTOM = 4)] = 'CUSTOM'), e);
     })({}),
     C = (function (e) {
-        return (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.ALL = 1)] = 'ALL'), (e[(e.BOOKMARKS = 2)] = 'BOOKMARKS'), (e[(e.REMINDERS = 3)] = 'REMINDERS'), e;
+        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.ALL = 1)] = 'ALL'), (e[(e.BOOKMARKS = 2)] = 'BOOKMARKS'), (e[(e.REMINDERS = 3)] = 'REMINDERS'), e);
     })({}),
     R = (function (e) {
-        return (e[(e.VOICE = 0)] = 'VOICE'), (e[(e.STREAM = 1)] = 'STREAM'), (e[(e.VIDEO_BACKGROUND = 2)] = 'VIDEO_BACKGROUND'), (e[(e.ACTIVITY = 3)] = 'ACTIVITY'), (e[(e.IN_APP_REPORTS = 4)] = 'IN_APP_REPORTS'), (e[(e.USER_DM_MUTE = 5)] = 'USER_DM_MUTE'), (e[(e.BLOCK_USER = 6)] = 'BLOCK_USER'), (e[(e.VOICE_FILTER = 7)] = 'VOICE_FILTER'), (e[(e.SEARCH_RESULTS = 8)] = 'SEARCH_RESULTS'), e;
+        return ((e[(e.VOICE = 0)] = 'VOICE'), (e[(e.STREAM = 1)] = 'STREAM'), (e[(e.VIDEO_BACKGROUND = 2)] = 'VIDEO_BACKGROUND'), (e[(e.ACTIVITY = 3)] = 'ACTIVITY'), (e[(e.IN_APP_REPORTS = 4)] = 'IN_APP_REPORTS'), (e[(e.USER_DM_MUTE = 5)] = 'USER_DM_MUTE'), (e[(e.BLOCK_USER = 6)] = 'BLOCK_USER'), (e[(e.VOICE_FILTER = 7)] = 'VOICE_FILTER'), (e[(e.SEARCH_RESULTS = 8)] = 'SEARCH_RESULTS'), e);
     })({});
 class P extends o.C {
     create(e) {
@@ -220,9 +220,9 @@ class P extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.inbox && L.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.guilds && k.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.userContent && K.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && $.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.textAndImages && es.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.notifications && ec.internalBinaryWrite(e.notifications, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.privacy && ed.internalBinaryWrite(e.privacy, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.debug && e_.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eh.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.status && eg.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.localization && eO.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.appearance && eS.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), e.guildFolders && ew.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), e.favorites && ek.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eV.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), e.communities && eZ.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.broadcast && eq.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.clips && eQ.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.forLater && e1.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.safetySettings && e$.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.icymiSettings && e3.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.applications && e5.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.ads && tr.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join(), e.inAppFeedbackSettings && ts.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, r.TD.LengthDelimited).fork(), n).join();
+        (e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.inbox && L.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.guilds && k.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.userContent && K.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && $.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.textAndImages && es.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.notifications && ec.internalBinaryWrite(e.notifications, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.privacy && ed.internalBinaryWrite(e.privacy, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.debug && e_.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eh.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.status && eg.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.localization && eO.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.appearance && eS.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), e.guildFolders && ew.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), e.favorites && ek.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eV.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), e.communities && eZ.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.broadcast && eq.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.clips && eQ.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.forLater && e1.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.safetySettings && e$.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.icymiSettings && e3.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.applications && e5.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.ads && tr.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join(), e.inAppFeedbackSettings && ts.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.PreloadedUserSettings', [
@@ -417,9 +417,9 @@ class D extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.currentTab && t.tag(1, r.TD.Varint).int32(e.currentTab), !1 !== e.viewedTutorial && t.tag(2, r.TD.Varint).bool(e.viewedTutorial);
+        (0 !== e.currentTab && t.tag(1, r.TD.Varint).int32(e.currentTab), !1 !== e.viewedTutorial && t.tag(2, r.TD.Varint).bool(e.viewedTutorial));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.InboxSettings', [
@@ -487,9 +487,9 @@ class x extends o.C {
         e[null != a ? a : '0'] = null != o ? o : j.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.guilds)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), j.internalBinaryWrite(e.guilds[i], t, n), t.join().join();
+        for (let i of Object.keys(e.guilds)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), j.internalBinaryWrite(e.guilds[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.AllGuildSettings', [
@@ -596,10 +596,10 @@ class M extends o.C {
         e[null != a ? a : '0'] = null != o ? o : V.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.channels)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), V.internalBinaryWrite(e.channels[i], t, n), t.join().join();
-        0 !== e.hubProgress && t.tag(2, r.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, r.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && l.E.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, r.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && eK.internalBinaryWrite(e.joinSound, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && eI.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, r.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, r.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), !1 !== e.leaderboardsDisabled && t.tag(11, r.TD.Varint).bool(e.leaderboardsDisabled);
+        for (let i of Object.keys(e.channels)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), V.internalBinaryWrite(e.channels[i], t, n), t.join().join());
+        (0 !== e.hubProgress && t.tag(2, r.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, r.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && l.E.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, r.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && eK.internalBinaryWrite(e.joinSound, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && eI.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, r.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, r.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), !1 !== e.leaderboardsDisabled && t.tag(11, r.TD.Varint).bool(e.leaderboardsDisabled));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.GuildSettings', [
@@ -714,9 +714,9 @@ class U extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.id && s.wA.internalBinaryWrite(e.id, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.name && s.Gm.internalBinaryWrite(e.name, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.color && s.wA.internalBinaryWrite(e.color, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
+        (e.id && s.wA.internalBinaryWrite(e.id, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.name && s.Gm.internalBinaryWrite(e.name, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.color && s.wA.internalBinaryWrite(e.color, t.tag(3, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ChannelIconEmoji', [
@@ -779,9 +779,9 @@ class B extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        !1 !== e.collapsedInInbox && t.tag(1, r.TD.Varint).bool(e.collapsedInInbox), e.iconEmoji && G.internalBinaryWrite(e.iconEmoji, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
+        (!1 !== e.collapsedInInbox && t.tag(1, r.TD.Varint).bool(e.collapsedInInbox), e.iconEmoji && G.internalBinaryWrite(e.iconEmoji, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ChannelSettings', [
@@ -837,7 +837,7 @@ class F extends o.C {
     internalBinaryWrite(e, t, n) {
         e.notificationSoundPackId && s.Gm.internalBinaryWrite(e.notificationSoundPackId, t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.CustomNotificationSoundConfig', [
@@ -892,9 +892,9 @@ class H extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.lastDismissedVersion && t.tag(1, r.TD.Varint).uint32(e.lastDismissedVersion), '0' !== e.lastDismissedAtMs && t.tag(2, r.TD.Varint).uint64(e.lastDismissedAtMs), '0' !== e.lastDismissedObjectId && t.tag(3, r.TD.Varint).uint64(e.lastDismissedObjectId);
+        (0 !== e.lastDismissedVersion && t.tag(1, r.TD.Varint).uint32(e.lastDismissedVersion), '0' !== e.lastDismissedAtMs && t.tag(2, r.TD.Varint).uint64(e.lastDismissedAtMs), '0' !== e.lastDismissedObjectId && t.tag(3, r.TD.Varint).uint64(e.lastDismissedObjectId));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.RecurringDismissibleContentState', [
@@ -993,9 +993,9 @@ class W extends o.C {
         e[null != a ? a : 0] = null != o ? o : Y.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of (e.dismissedContents.length && t.tag(1, r.TD.LengthDelimited).bytes(e.dismissedContents), e.lastDismissedOutboundPromotionStartDate && s.Gm.internalBinaryWrite(e.lastDismissedOutboundPromotionStartDate, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.premiumTier0ModalDismissedAt && l.E.internalBinaryWrite(e.premiumTier0ModalDismissedAt, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.guildOnboardingUpsellDismissedAt && l.E.internalBinaryWrite(e.guildOnboardingUpsellDismissedAt, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.safetyUserSentimentNoticeDismissedAt && l.E.internalBinaryWrite(e.safetyUserSentimentNoticeDismissedAt, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.lastReceivedChangelogId && t.tag(6, r.TD.Bit64).fixed64(e.lastReceivedChangelogId), Object.keys(e.recurringDismissibleContentStates))) t.tag(7, r.TD.LengthDelimited).fork().tag(1, r.TD.Varint).int32(parseInt(i)), t.tag(2, r.TD.LengthDelimited).fork(), Y.internalBinaryWrite(e.recurringDismissibleContentStates[i], t, n), t.join().join();
+        for (let i of (e.dismissedContents.length && t.tag(1, r.TD.LengthDelimited).bytes(e.dismissedContents), e.lastDismissedOutboundPromotionStartDate && s.Gm.internalBinaryWrite(e.lastDismissedOutboundPromotionStartDate, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.premiumTier0ModalDismissedAt && l.E.internalBinaryWrite(e.premiumTier0ModalDismissedAt, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.guildOnboardingUpsellDismissedAt && l.E.internalBinaryWrite(e.guildOnboardingUpsellDismissedAt, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.safetyUserSentimentNoticeDismissedAt && l.E.internalBinaryWrite(e.safetyUserSentimentNoticeDismissedAt, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.lastReceivedChangelogId && t.tag(6, r.TD.Bit64).fixed64(e.lastReceivedChangelogId), Object.keys(e.recurringDismissibleContentStates))) (t.tag(7, r.TD.LengthDelimited).fork().tag(1, r.TD.Varint).int32(parseInt(i)), t.tag(2, r.TD.LengthDelimited).fork(), Y.internalBinaryWrite(e.recurringDismissibleContentStates[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.UserContentSettings', [
@@ -1086,9 +1086,9 @@ class z extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        '0' !== e.id && t.tag(1, r.TD.Bit64).fixed64(e.id), '' !== e.assetHash && t.tag(2, r.TD.LengthDelimited).string(e.assetHash);
+        ('0' !== e.id && t.tag(1, r.TD.Bit64).fixed64(e.id), '' !== e.assetHash && t.tag(2, r.TD.LengthDelimited).string(e.assetHash));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.VideoFilterAsset', [
@@ -1138,7 +1138,7 @@ class X extends o.C {
     internalBinaryWrite(e, t, n) {
         !1 !== e.useBlur && t.tag(1, r.TD.Varint).bool(e.useBlur);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.VideoFilterBackgroundBlur', [
@@ -1219,9 +1219,9 @@ class J extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        'blur' === e.videoBackgroundFilterDesktop.oneofKind && Q.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), 'presetOption' === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, r.TD.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), 'customAsset' === e.videoBackgroundFilterDesktop.oneofKind && q.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && s.D5.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.afkTimeout && s.yC.internalBinaryWrite(e.afkTimeout, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && s.D5.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && s.D5.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.soundboardSettings && eY.internalBinaryWrite(e.soundboardSettings, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.disableStreamPreviews && s.D5.internalBinaryWrite(e.disableStreamPreviews, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.soundmojiVolume && s.A8.internalBinaryWrite(e.soundmojiVolume, t.tag(11, r.TD.LengthDelimited).fork(), n).join();
+        ('blur' === e.videoBackgroundFilterDesktop.oneofKind && Q.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), 'presetOption' === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, r.TD.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), 'customAsset' === e.videoBackgroundFilterDesktop.oneofKind && q.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && s.D5.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.afkTimeout && s.yC.internalBinaryWrite(e.afkTimeout, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && s.D5.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && s.D5.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.soundboardSettings && eY.internalBinaryWrite(e.soundboardSettings, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.disableStreamPreviews && s.D5.internalBinaryWrite(e.disableStreamPreviews, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.soundmojiVolume && s.A8.internalBinaryWrite(e.soundmojiVolume, t.tag(11, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.VoiceAndVideoSettings', [
@@ -1333,9 +1333,9 @@ class ee extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.explicitContentGuilds && t.tag(1, r.TD.Varint).int32(e.explicitContentGuilds), 0 !== e.explicitContentFriendDm && t.tag(2, r.TD.Varint).int32(e.explicitContentFriendDm), 0 !== e.explicitContentNonFriendDm && t.tag(3, r.TD.Varint).int32(e.explicitContentNonFriendDm);
+        (0 !== e.explicitContentGuilds && t.tag(1, r.TD.Varint).int32(e.explicitContentGuilds), 0 !== e.explicitContentFriendDm && t.tag(2, r.TD.Varint).int32(e.explicitContentFriendDm), 0 !== e.explicitContentNonFriendDm && t.tag(3, r.TD.Varint).int32(e.explicitContentNonFriendDm));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ExplicitContentSettings', [
@@ -1402,9 +1402,9 @@ class en extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.goreContentGuilds && t.tag(1, r.TD.Varint).int32(e.goreContentGuilds), 0 !== e.goreContentFriendDm && t.tag(2, r.TD.Varint).int32(e.goreContentFriendDm), 0 !== e.goreContentNonFriendDm && t.tag(3, r.TD.Varint).int32(e.goreContentNonFriendDm);
+        (0 !== e.goreContentGuilds && t.tag(1, r.TD.Varint).int32(e.goreContentGuilds), 0 !== e.goreContentFriendDm && t.tag(2, r.TD.Varint).int32(e.goreContentFriendDm), 0 !== e.goreContentNonFriendDm && t.tag(3, r.TD.Varint).int32(e.goreContentNonFriendDm));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.GoreContentSettings', [
@@ -1467,9 +1467,9 @@ class ei extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.profanity && s.D5.internalBinaryWrite(e.profanity, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.sexualContent && s.D5.internalBinaryWrite(e.sexualContent, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.slurs && s.D5.internalBinaryWrite(e.slurs, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
+        (e.profanity && s.D5.internalBinaryWrite(e.profanity, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.sexualContent && s.D5.internalBinaryWrite(e.sexualContent, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.slurs && s.D5.internalBinaryWrite(e.slurs, t.tag(3, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.KeywordFilterSettings', [
@@ -1621,14 +1621,14 @@ class eo extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.diversitySurrogate && s.Gm.internalBinaryWrite(e.diversitySurrogate, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.useRichChatInput && s.D5.internalBinaryWrite(e.useRichChatInput, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.useThreadSidebar && s.D5.internalBinaryWrite(e.useThreadSidebar, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.renderSpoilers && s.Gm.internalBinaryWrite(e.renderSpoilers, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+        (e.diversitySurrogate && s.Gm.internalBinaryWrite(e.diversitySurrogate, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.useRichChatInput && s.D5.internalBinaryWrite(e.useRichChatInput, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.useThreadSidebar && s.D5.internalBinaryWrite(e.useThreadSidebar, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.renderSpoilers && s.Gm.internalBinaryWrite(e.renderSpoilers, t.tag(4, r.TD.LengthDelimited).fork(), n).join());
         for (let n = 0; n < e.emojiPickerCollapsedSections.length; n++) t.tag(5, r.TD.LengthDelimited).string(e.emojiPickerCollapsedSections[n]);
         for (let n = 0; n < e.stickerPickerCollapsedSections.length; n++) t.tag(6, r.TD.LengthDelimited).string(e.stickerPickerCollapsedSections[n]);
-        e.viewImageDescriptions && s.D5.internalBinaryWrite(e.viewImageDescriptions, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.showCommandSuggestions && s.D5.internalBinaryWrite(e.showCommandSuggestions, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.inlineAttachmentMedia && s.D5.internalBinaryWrite(e.inlineAttachmentMedia, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.inlineEmbedMedia && s.D5.internalBinaryWrite(e.inlineEmbedMedia, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.gifAutoPlay && s.D5.internalBinaryWrite(e.gifAutoPlay, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.renderEmbeds && s.D5.internalBinaryWrite(e.renderEmbeds, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.renderReactions && s.D5.internalBinaryWrite(e.renderReactions, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), e.animateEmoji && s.D5.internalBinaryWrite(e.animateEmoji, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), e.animateStickers && s.yC.internalBinaryWrite(e.animateStickers, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), e.enableTtsCommand && s.D5.internalBinaryWrite(e.enableTtsCommand, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), e.messageDisplayCompact && s.D5.internalBinaryWrite(e.messageDisplayCompact, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.explicitContentFilter && s.yC.internalBinaryWrite(e.explicitContentFilter, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.viewNsfwGuilds && s.D5.internalBinaryWrite(e.viewNsfwGuilds, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.convertEmoticons && s.D5.internalBinaryWrite(e.convertEmoticons, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.expressionSuggestionsEnabled && s.D5.internalBinaryWrite(e.expressionSuggestionsEnabled, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.viewNsfwCommands && s.D5.internalBinaryWrite(e.viewNsfwCommands, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.useLegacyChatInput && s.D5.internalBinaryWrite(e.useLegacyChatInput, t.tag(24, r.TD.LengthDelimited).fork(), n).join();
+        (e.viewImageDescriptions && s.D5.internalBinaryWrite(e.viewImageDescriptions, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.showCommandSuggestions && s.D5.internalBinaryWrite(e.showCommandSuggestions, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.inlineAttachmentMedia && s.D5.internalBinaryWrite(e.inlineAttachmentMedia, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.inlineEmbedMedia && s.D5.internalBinaryWrite(e.inlineEmbedMedia, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.gifAutoPlay && s.D5.internalBinaryWrite(e.gifAutoPlay, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.renderEmbeds && s.D5.internalBinaryWrite(e.renderEmbeds, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.renderReactions && s.D5.internalBinaryWrite(e.renderReactions, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), e.animateEmoji && s.D5.internalBinaryWrite(e.animateEmoji, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), e.animateStickers && s.yC.internalBinaryWrite(e.animateStickers, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), e.enableTtsCommand && s.D5.internalBinaryWrite(e.enableTtsCommand, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), e.messageDisplayCompact && s.D5.internalBinaryWrite(e.messageDisplayCompact, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.explicitContentFilter && s.yC.internalBinaryWrite(e.explicitContentFilter, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.viewNsfwGuilds && s.D5.internalBinaryWrite(e.viewNsfwGuilds, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.convertEmoticons && s.D5.internalBinaryWrite(e.convertEmoticons, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.expressionSuggestionsEnabled && s.D5.internalBinaryWrite(e.expressionSuggestionsEnabled, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.viewNsfwCommands && s.D5.internalBinaryWrite(e.viewNsfwCommands, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.useLegacyChatInput && s.D5.internalBinaryWrite(e.useLegacyChatInput, t.tag(24, r.TD.LengthDelimited).fork(), n).join());
         for (let n = 0; n < e.soundboardPickerCollapsedSections.length; n++) t.tag(25, r.TD.LengthDelimited).string(e.soundboardPickerCollapsedSections[n]);
-        e.dmSpamFilter && s.yC.internalBinaryWrite(e.dmSpamFilter, t.tag(26, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.dmSpamFilterV2 && t.tag(27, r.TD.Varint).int32(e.dmSpamFilterV2), e.includeStickersInAutocomplete && s.D5.internalBinaryWrite(e.includeStickersInAutocomplete, t.tag(28, r.TD.LengthDelimited).fork(), n).join(), e.explicitContentSettings && et.internalBinaryWrite(e.explicitContentSettings, t.tag(29, r.TD.LengthDelimited).fork(), n).join(), e.keywordFilterSettings && ea.internalBinaryWrite(e.keywordFilterSettings, t.tag(30, r.TD.LengthDelimited).fork(), n).join(), e.includeSoundmojiInAutocomplete && s.D5.internalBinaryWrite(e.includeSoundmojiInAutocomplete, t.tag(31, r.TD.LengthDelimited).fork(), n).join(), e.goreContentSettings && er.internalBinaryWrite(e.goreContentSettings, t.tag(32, r.TD.LengthDelimited).fork(), n).join();
+        (e.dmSpamFilter && s.yC.internalBinaryWrite(e.dmSpamFilter, t.tag(26, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.dmSpamFilterV2 && t.tag(27, r.TD.Varint).int32(e.dmSpamFilterV2), e.includeStickersInAutocomplete && s.D5.internalBinaryWrite(e.includeStickersInAutocomplete, t.tag(28, r.TD.LengthDelimited).fork(), n).join(), e.explicitContentSettings && et.internalBinaryWrite(e.explicitContentSettings, t.tag(29, r.TD.LengthDelimited).fork(), n).join(), e.keywordFilterSettings && ea.internalBinaryWrite(e.keywordFilterSettings, t.tag(30, r.TD.LengthDelimited).fork(), n).join(), e.includeSoundmojiInAutocomplete && s.D5.internalBinaryWrite(e.includeSoundmojiInAutocomplete, t.tag(31, r.TD.LengthDelimited).fork(), n).join(), e.goreContentSettings && er.internalBinaryWrite(e.goreContentSettings, t.tag(32, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.TextAndImagesSettings', [
@@ -1889,9 +1889,9 @@ class el extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.showInAppNotifications && s.D5.internalBinaryWrite(e.showInAppNotifications, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.notifyFriendsOnGoLive && s.D5.internalBinaryWrite(e.notifyFriendsOnGoLive, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.notificationCenterAckedBeforeId && t.tag(3, r.TD.Bit64).fixed64(e.notificationCenterAckedBeforeId), e.enableBurstReactionNotifications && s.D5.internalBinaryWrite(e.enableBurstReactionNotifications, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.quietMode && s.D5.internalBinaryWrite(e.quietMode, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.focusModeExpiresAtMs && t.tag(6, r.TD.Bit64).fixed64(e.focusModeExpiresAtMs), 0 !== e.reactionNotifications && t.tag(7, r.TD.Varint).int32(e.reactionNotifications), 0 !== e.gameActivityNotifications && t.tag(8, r.TD.Varint).int32(e.gameActivityNotifications), 0 !== e.customStatusPushNotifications && t.tag(9, r.TD.Varint).int32(e.customStatusPushNotifications), e.gameActivityExcludeSteamNotifications && s.D5.internalBinaryWrite(e.gameActivityExcludeSteamNotifications, t.tag(10, r.TD.LengthDelimited).fork(), n).join();
+        (e.showInAppNotifications && s.D5.internalBinaryWrite(e.showInAppNotifications, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.notifyFriendsOnGoLive && s.D5.internalBinaryWrite(e.notifyFriendsOnGoLive, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.notificationCenterAckedBeforeId && t.tag(3, r.TD.Bit64).fixed64(e.notificationCenterAckedBeforeId), e.enableBurstReactionNotifications && s.D5.internalBinaryWrite(e.enableBurstReactionNotifications, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.quietMode && s.D5.internalBinaryWrite(e.quietMode, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.focusModeExpiresAtMs && t.tag(6, r.TD.Bit64).fixed64(e.focusModeExpiresAtMs), 0 !== e.reactionNotifications && t.tag(7, r.TD.Varint).int32(e.reactionNotifications), 0 !== e.gameActivityNotifications && t.tag(8, r.TD.Varint).int32(e.gameActivityNotifications), 0 !== e.customStatusPushNotifications && t.tag(9, r.TD.Varint).int32(e.customStatusPushNotifications), e.gameActivityExcludeSteamNotifications && s.D5.internalBinaryWrite(e.gameActivityExcludeSteamNotifications, t.tag(10, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.NotificationSettings', [
@@ -2099,9 +2099,9 @@ class eu extends o.C {
             for (let n = 0; n < e.messageRequestRestrictedGuildIds.length; n++) t.fixed64(e.messageRequestRestrictedGuildIds[n]);
             t.join();
         }
-        e.defaultMessageRequestRestricted && s.D5.internalBinaryWrite(e.defaultMessageRequestRestricted, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.dropsOptedOut && s.D5.internalBinaryWrite(e.dropsOptedOut, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.nonSpamRetrainingOptIn && s.D5.internalBinaryWrite(e.nonSpamRetrainingOptIn, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.familyCenterEnabled && s.D5.internalBinaryWrite(e.familyCenterEnabled, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.familyCenterEnabledV2 && s.D5.internalBinaryWrite(e.familyCenterEnabledV2, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.hideLegacyUsername && s.D5.internalBinaryWrite(e.hideLegacyUsername, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.inappropriateConversationWarnings && s.D5.internalBinaryWrite(e.inappropriateConversationWarnings, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.recentGamesEnabled && s.D5.internalBinaryWrite(e.recentGamesEnabled, t.tag(24, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.guildsLeaderboardOptOutDefault && t.tag(25, r.TD.Varint).int32(e.guildsLeaderboardOptOutDefault), e.allowGameFriendDmsInDiscord && s.D5.internalBinaryWrite(e.allowGameFriendDmsInDiscord, t.tag(26, r.TD.LengthDelimited).fork(), n).join(), e.defaultGuildsRestrictedV2 && s.D5.internalBinaryWrite(e.defaultGuildsRestrictedV2, t.tag(27, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.slayerSdkReceiveDmsInGame && t.tag(28, r.TD.Varint).int32(e.slayerSdkReceiveDmsInGame);
+        (e.defaultMessageRequestRestricted && s.D5.internalBinaryWrite(e.defaultMessageRequestRestricted, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.dropsOptedOut && s.D5.internalBinaryWrite(e.dropsOptedOut, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.nonSpamRetrainingOptIn && s.D5.internalBinaryWrite(e.nonSpamRetrainingOptIn, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.familyCenterEnabled && s.D5.internalBinaryWrite(e.familyCenterEnabled, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.familyCenterEnabledV2 && s.D5.internalBinaryWrite(e.familyCenterEnabledV2, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.hideLegacyUsername && s.D5.internalBinaryWrite(e.hideLegacyUsername, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.inappropriateConversationWarnings && s.D5.internalBinaryWrite(e.inappropriateConversationWarnings, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.recentGamesEnabled && s.D5.internalBinaryWrite(e.recentGamesEnabled, t.tag(24, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.guildsLeaderboardOptOutDefault && t.tag(25, r.TD.Varint).int32(e.guildsLeaderboardOptOutDefault), e.allowGameFriendDmsInDiscord && s.D5.internalBinaryWrite(e.allowGameFriendDmsInDiscord, t.tag(26, r.TD.LengthDelimited).fork(), n).join(), e.defaultGuildsRestrictedV2 && s.D5.internalBinaryWrite(e.defaultGuildsRestrictedV2, t.tag(27, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.slayerSdkReceiveDmsInGame && t.tag(28, r.TD.Varint).int32(e.slayerSdkReceiveDmsInGame));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.PrivacySettings', [
@@ -2299,7 +2299,7 @@ class ef extends o.C {
     internalBinaryWrite(e, t, n) {
         e.rtcPanelShowVoiceStates && s.D5.internalBinaryWrite(e.rtcPanelShowVoiceStates, t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.DebugSettings', [
@@ -2350,9 +2350,9 @@ class ep extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.installShortcutDesktop && s.D5.internalBinaryWrite(e.installShortcutDesktop, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.installShortcutStartMenu && s.D5.internalBinaryWrite(e.installShortcutStartMenu, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.disableGamesTab && s.D5.internalBinaryWrite(e.disableGamesTab, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
+        (e.installShortcutDesktop && s.D5.internalBinaryWrite(e.installShortcutDesktop, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.installShortcutStartMenu && s.D5.internalBinaryWrite(e.installShortcutStartMenu, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.disableGamesTab && s.D5.internalBinaryWrite(e.disableGamesTab, t.tag(3, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.GameLibrarySettings', [
@@ -2418,9 +2418,9 @@ class em extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.status && s.Gm.internalBinaryWrite(e.status, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.customStatus && eb.internalBinaryWrite(e.customStatus, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.showCurrentGame && s.D5.internalBinaryWrite(e.showCurrentGame, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.statusExpiresAtMs && t.tag(4, r.TD.Bit64).fixed64(e.statusExpiresAtMs);
+        (e.status && s.Gm.internalBinaryWrite(e.status, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.customStatus && eb.internalBinaryWrite(e.customStatus, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.showCurrentGame && s.D5.internalBinaryWrite(e.showCurrentGame, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.statusExpiresAtMs && t.tag(4, r.TD.Bit64).fixed64(e.statusExpiresAtMs));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.StatusSettings', [
@@ -2504,9 +2504,9 @@ class eE extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        '' !== e.text && t.tag(1, r.TD.LengthDelimited).string(e.text), '0' !== e.emojiId && t.tag(2, r.TD.Bit64).fixed64(e.emojiId), '' !== e.emojiName && t.tag(3, r.TD.LengthDelimited).string(e.emojiName), '0' !== e.expiresAtMs && t.tag(4, r.TD.Bit64).fixed64(e.expiresAtMs), '0' !== e.createdAtMs && t.tag(5, r.TD.Bit64).fixed64(e.createdAtMs), e.label && s.Gm.internalBinaryWrite(e.label, t.tag(6, r.TD.LengthDelimited).fork(), n).join();
+        ('' !== e.text && t.tag(1, r.TD.LengthDelimited).string(e.text), '0' !== e.emojiId && t.tag(2, r.TD.Bit64).fixed64(e.emojiId), '' !== e.emojiName && t.tag(3, r.TD.LengthDelimited).string(e.emojiName), '0' !== e.expiresAtMs && t.tag(4, r.TD.Bit64).fixed64(e.expiresAtMs), '0' !== e.createdAtMs && t.tag(5, r.TD.Bit64).fixed64(e.createdAtMs), e.label && s.Gm.internalBinaryWrite(e.label, t.tag(6, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.CustomStatus', [
@@ -2584,9 +2584,9 @@ class ey extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.locale && s.Gm.internalBinaryWrite(e.locale, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.timezoneOffset && s.T4.internalBinaryWrite(e.timezoneOffset, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+        (e.locale && s.Gm.internalBinaryWrite(e.locale, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.timezoneOffset && s.T4.internalBinaryWrite(e.timezoneOffset, t.tag(2, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.LocalizationSettings', [
@@ -2640,9 +2640,9 @@ class ev extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.layout && s.Gm.internalBinaryWrite(e.layout, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.messagePreviews && s.Gm.internalBinaryWrite(e.messagePreviews, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+        (e.layout && s.Gm.internalBinaryWrite(e.layout, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.messagePreviews && s.Gm.internalBinaryWrite(e.messagePreviews, t.tag(2, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ChannelListSettings', [
@@ -2734,9 +2734,9 @@ class eT extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.theme && t.tag(1, r.TD.Varint).int32(e.theme), !1 !== e.developerMode && t.tag(2, r.TD.Varint).bool(e.developerMode), e.clientThemeSettings && eR.internalBinaryWrite(e.clientThemeSettings, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), !1 !== e.mobileRedesignDisabled && t.tag(4, r.TD.Varint).bool(e.mobileRedesignDisabled), e.channelListLayout && s.Gm.internalBinaryWrite(e.channelListLayout, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.messagePreviews && s.Gm.internalBinaryWrite(e.messagePreviews, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.searchResultExactCountEnabled && s.D5.internalBinaryWrite(e.searchResultExactCountEnabled, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.timestampHourCycle && t.tag(9, r.TD.Varint).int32(e.timestampHourCycle), e.happeningNowCardsDisabled && s.D5.internalBinaryWrite(e.happeningNowCardsDisabled, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.launchPadMode && t.tag(11, r.TD.Varint).int32(e.launchPadMode), 0 !== e.uiDensity && t.tag(12, r.TD.Varint).int32(e.uiDensity), 0 !== e.swipeRightToLeftMode && t.tag(13, r.TD.Varint).int32(e.swipeRightToLeftMode);
+        (0 !== e.theme && t.tag(1, r.TD.Varint).int32(e.theme), !1 !== e.developerMode && t.tag(2, r.TD.Varint).bool(e.developerMode), e.clientThemeSettings && eR.internalBinaryWrite(e.clientThemeSettings, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), !1 !== e.mobileRedesignDisabled && t.tag(4, r.TD.Varint).bool(e.mobileRedesignDisabled), e.channelListLayout && s.Gm.internalBinaryWrite(e.channelListLayout, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.messagePreviews && s.Gm.internalBinaryWrite(e.messagePreviews, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.searchResultExactCountEnabled && s.D5.internalBinaryWrite(e.searchResultExactCountEnabled, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.timestampHourCycle && t.tag(9, r.TD.Varint).int32(e.timestampHourCycle), e.happeningNowCardsDisabled && s.D5.internalBinaryWrite(e.happeningNowCardsDisabled, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.launchPadMode && t.tag(11, r.TD.Varint).int32(e.launchPadMode), 0 !== e.uiDensity && t.tag(12, r.TD.Varint).int32(e.uiDensity), 0 !== e.swipeRightToLeftMode && t.tag(13, r.TD.Varint).int32(e.swipeRightToLeftMode));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.AppearanceSettings', [
@@ -2868,9 +2868,9 @@ class eA extends o.C {
             for (let n = 0; n < e.gradientColorStops.length; n++) t.float(e.gradientColorStops[n]);
             t.join();
         }
-        0 !== e.gradientAngle && t.tag(3, r.TD.Varint).int32(e.gradientAngle), 0 !== e.baseMix && t.tag(4, r.TD.Varint).int32(e.baseMix);
+        (0 !== e.gradientAngle && t.tag(3, r.TD.Varint).int32(e.gradientAngle), 0 !== e.baseMix && t.tag(4, r.TD.Varint).int32(e.baseMix));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.CustomUserThemeSettings', [
@@ -2938,9 +2938,9 @@ class eC extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.backgroundGradientPresetId && s.yC.internalBinaryWrite(e.backgroundGradientPresetId, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.customUserThemeSettings && eN.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+        (e.backgroundGradientPresetId && s.yC.internalBinaryWrite(e.backgroundGradientPresetId, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.customUserThemeSettings && eN.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ClientThemeSettings', [
@@ -3005,7 +3005,7 @@ class eP extends o.C {
             t.join();
         }
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.GuildFolders', [
@@ -3073,9 +3073,9 @@ class eD extends o.C {
             for (let n = 0; n < e.guildIds.length; n++) t.fixed64(e.guildIds[n]);
             t.join();
         }
-        e.id && s.r1.internalBinaryWrite(e.id, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.name && s.Gm.internalBinaryWrite(e.name, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.color && s.wA.internalBinaryWrite(e.color, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+        (e.id && s.r1.internalBinaryWrite(e.id, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.name && s.Gm.internalBinaryWrite(e.name, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.color && s.wA.internalBinaryWrite(e.color, t.tag(4, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.GuildFolder', [
@@ -3165,10 +3165,10 @@ class ex extends o.C {
         e[null != a ? a : '0'] = null != o ? o : ej.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.favoriteChannels)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), ej.internalBinaryWrite(e.favoriteChannels[i], t, n), t.join().join();
+        for (let i of Object.keys(e.favoriteChannels)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), ej.internalBinaryWrite(e.favoriteChannels[i], t, n), t.join().join());
         !1 !== e.muted && t.tag(2, r.TD.Varint).bool(e.muted);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.Favorites', [
@@ -3237,9 +3237,9 @@ class eM extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        '' !== e.nickname && t.tag(1, r.TD.LengthDelimited).string(e.nickname), 0 !== e.type && t.tag(2, r.TD.Varint).int32(e.type), 0 !== e.position && t.tag(3, r.TD.Varint).uint32(e.position), '0' !== e.parentId && t.tag(4, r.TD.Bit64).fixed64(e.parentId);
+        ('' !== e.nickname && t.tag(1, r.TD.LengthDelimited).string(e.nickname), 0 !== e.type && t.tag(2, r.TD.Varint).int32(e.type), 0 !== e.position && t.tag(3, r.TD.Varint).uint32(e.position), '0' !== e.parentId && t.tag(4, r.TD.Bit64).fixed64(e.parentId));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.FavoriteChannel', [
@@ -3316,9 +3316,9 @@ class eU extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        !1 !== e.muted && t.tag(1, r.TD.Varint).bool(e.muted), 0 !== e.volume && t.tag(2, r.TD.Bit32).float(e.volume), '0' !== e.modifiedAt && t.tag(3, r.TD.Bit64).fixed64(e.modifiedAt), !1 !== e.soundboardMuted && t.tag(4, r.TD.Varint).bool(e.soundboardMuted);
+        (!1 !== e.muted && t.tag(1, r.TD.Varint).bool(e.muted), 0 !== e.volume && t.tag(2, r.TD.Bit32).float(e.volume), '0' !== e.modifiedAt && t.tag(3, r.TD.Bit64).fixed64(e.modifiedAt), !1 !== e.soundboardMuted && t.tag(4, r.TD.Varint).bool(e.soundboardMuted));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.AudioContextSetting', [
@@ -3427,10 +3427,10 @@ class eB extends o.C {
         e[null != a ? a : '0'] = null != o ? o : eG.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.user)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), eG.internalBinaryWrite(e.user[i], t, n), t.join().join();
-        for (let i of Object.keys(e.stream)) t.tag(2, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), eG.internalBinaryWrite(e.stream[i], t, n), t.join().join();
+        for (let i of Object.keys(e.user)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), eG.internalBinaryWrite(e.user[i], t, n), t.join().join());
+        for (let i of Object.keys(e.stream)) (t.tag(2, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), eG.internalBinaryWrite(e.stream[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.AudioSettings', [
@@ -3488,7 +3488,7 @@ class eF extends o.C {
     internalBinaryWrite(e, t, n) {
         e.disableHomeAutoNav && s.D5.internalBinaryWrite(e.disableHomeAutoNav, t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.CommunitiesSettings', [
@@ -3532,7 +3532,7 @@ class eH extends o.C {
     internalBinaryWrite(e, t, n) {
         0 !== e.volume && t.tag(1, r.TD.Bit32).float(e.volume);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.SoundboardSettings', [
@@ -3583,9 +3583,9 @@ class eW extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        '0' !== e.soundId && t.tag(1, r.TD.Bit64).fixed64(e.soundId), '0' !== e.guildId && t.tag(2, r.TD.Bit64).fixed64(e.guildId);
+        ('0' !== e.soundId && t.tag(1, r.TD.Bit64).fixed64(e.soundId), '0' !== e.guildId && t.tag(2, r.TD.Bit64).fixed64(e.guildId));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.CustomCallSound', [
@@ -3662,7 +3662,7 @@ class ez extends o.C {
         }
         e.autoBroadcast && s.D5.internalBinaryWrite(e.autoBroadcast, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.BroadcastSettings', [
@@ -3726,7 +3726,7 @@ class eX extends o.C {
     internalBinaryWrite(e, t, n) {
         e.allowVoiceRecording && s.D5.internalBinaryWrite(e.allowVoiceRecording, t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ClipsSettings', [
@@ -3777,9 +3777,9 @@ class eJ extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.safetySettingsPreset && t.tag(1, r.TD.Varint).int32(e.safetySettingsPreset), !1 !== e.ignoreProfileSpeedbumpDisabled && t.tag(2, r.TD.Varint).bool(e.ignoreProfileSpeedbumpDisabled);
+        (0 !== e.safetySettingsPreset && t.tag(1, r.TD.Varint).int32(e.safetySettingsPreset), !1 !== e.ignoreProfileSpeedbumpDisabled && t.tag(2, r.TD.Varint).bool(e.ignoreProfileSpeedbumpDisabled));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.SafetySettings', [
@@ -3829,7 +3829,7 @@ class e0 extends o.C {
     internalBinaryWrite(e, t, n) {
         0 !== e.currentTab && t.tag(1, r.TD.Varint).int32(e.currentTab);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ForLaterSettings', [
@@ -3873,7 +3873,7 @@ class e2 extends o.C {
     internalBinaryWrite(e, t, n) {
         '0' !== e.feedGeneratedAt && t.tag(1, r.TD.Bit64).fixed64(e.feedGeneratedAt);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ICYMISettings', [
@@ -3935,9 +3935,9 @@ class e4 extends o.C {
         e[null != a ? a : '0'] = null != o ? o : e8.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.appSettings)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), e8.internalBinaryWrite(e.appSettings[i], t, n), t.join().join();
+        for (let i of Object.keys(e.appSettings)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), e8.internalBinaryWrite(e.appSettings[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.AllApplicationSettings', [
@@ -3989,9 +3989,9 @@ class e6 extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.appDmSettings && e9.internalBinaryWrite(e.appDmSettings, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.appSharingSettings && tt.internalBinaryWrite(e.appSharingSettings, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+        (e.appDmSettings && e9.internalBinaryWrite(e.appDmSettings, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.appSharingSettings && tt.internalBinaryWrite(e.appSharingSettings, t.tag(2, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ApplicationSettings', [
@@ -4041,7 +4041,7 @@ class e7 extends o.C {
     internalBinaryWrite(e, t, n) {
         !1 !== e.allowMobilePush && t.tag(2, r.TD.Varint).bool(e.allowMobilePush);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ApplicationDMSettings', [
@@ -4085,7 +4085,7 @@ class te extends o.C {
     internalBinaryWrite(e, t, n) {
         !1 !== e.disableApplicationActivitySharing && t.tag(1, r.TD.Varint).bool(e.disableApplicationActivitySharing);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.ApplicationSharingSettings', [
@@ -4129,7 +4129,7 @@ class tn extends o.C {
     internalBinaryWrite(e, t, n) {
         !1 !== e.alwaysDeliver && t.tag(1, r.TD.Varint).bool(e.alwaysDeliver);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.AdsSettings', [
@@ -4177,9 +4177,9 @@ class ti extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.lastImpressionTime && s.wA.internalBinaryWrite(e.lastImpressionTime, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.optOutExpiryTime && s.wA.internalBinaryWrite(e.optOutExpiryTime, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+        (e.lastImpressionTime && s.wA.internalBinaryWrite(e.lastImpressionTime, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.optOutExpiryTime && s.wA.internalBinaryWrite(e.optOutExpiryTime, t.tag(2, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.InAppFeedbackState', [
@@ -4247,9 +4247,9 @@ class to extends o.C {
         e[null != a ? a : 0] = null != o ? o : ta.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.inAppFeedbackStates)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Varint).int32(parseInt(i)), t.tag(2, r.TD.LengthDelimited).fork(), ta.internalBinaryWrite(e.inAppFeedbackStates[i], t, n), t.join().join();
+        for (let i of Object.keys(e.inAppFeedbackStates)) (t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Varint).int32(parseInt(i)), t.tag(2, r.TD.LengthDelimited).fork(), ta.internalBinaryWrite(e.inAppFeedbackStates[i], t, n), t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
     constructor() {
         super('discord_protos.discord_users.v1.InAppFeedbackSettings', [

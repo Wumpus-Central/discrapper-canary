@@ -1,4 +1,4 @@
-n.d(t, { U: () => f }), n(539854), n(388685), n(290780);
+(n.d(t, { U: () => f }), n(539854), n(388685), n(290780));
 var r = n(73800),
     i = n(512722),
     l = n.n(i),
@@ -41,14 +41,14 @@ function f(e) {
             }
             return e;
         }, [t, i, f]),
-        y = (e) => {
+        v = (e) => {
             var t;
             return e.managed && (null == (t = e.tags) ? void 0 : t.bot_id) != null;
         },
-        v = r.useMemo(() => {
+        y = r.useMemo(() => {
             let r = [];
             for (let i of j) {
-                if (y(i)) continue;
+                if (v(i)) continue;
                 let l = !o.e$(i.permissions, g.Plq.ADMINISTRATOR) && u.Z.isRoleHigher(t, n, i),
                     a = {
                         id: i.id,
@@ -63,12 +63,12 @@ function f(e) {
         N = r.useMemo(() => {
             var t;
             let n = (t = _).startsWith('@') ? t.substr(1) : t,
-                r = _.startsWith('@') ? v.filter((t) => t.id === e) : v;
+                r = _.startsWith('@') ? y.filter((t) => t.id === e) : y;
             return {
                 members: (0, b.B)(O, h, n),
                 roles: (0, b.B)(r, x, n)
             };
-        }, [e, O, _, v]);
+        }, [e, O, _, y]);
     return {
         query: _,
         results: N,

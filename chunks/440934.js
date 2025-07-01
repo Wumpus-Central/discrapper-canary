@@ -1,85 +1,84 @@
-n.r(t),
-    n.d(t, {
-        default: () => u,
-        openInteractionModal: () => p
-    });
-var i = n(255367);
-n(73800);
-var o = n(481060),
-    r = n(118012),
-    a = n(970184),
-    c = n(471073),
-    l = n(293979),
-    s = n(954654),
-    _ = n(388032),
-    d = n(994186);
-function u(e) {
-    let { title: t, onClose: n, transitionState: u } = e,
-        { components: p, applicationIconURL: I, applicationName: f, submissionState: m, error: S, validators: C, onSubmit: T } = (0, l.X9)(e, n);
-    return (0, i.jsx)('form', {
+(t.r(n),
+    t.d(n, {
+        default: () => d,
+        openInteractionModal: () => u
+    }));
+var o = t(255367);
+t(73800);
+var i = t(481060),
+    r = t(970184),
+    a = t(471073),
+    c = t(293979),
+    l = t(954654),
+    _ = t(388032),
+    s = t(994186);
+function d(e) {
+    let { title: n, onClose: t, transitionState: d } = e,
+        { components: u, applicationIconURL: m, applicationName: f, submissionState: p, error: b, validators: h, onSubmit: I } = (0, c.X9)(e, t);
+    return (0, o.jsx)('form', {
         onSubmit: (e) => {
-            e.preventDefault(), T();
+            (e.preventDefault(), I());
         },
-        children: (0, i.jsxs)(o.Y0X, {
-            transitionState: u,
+        children: (0, o.jsxs)(i.Y0X, {
+            transitionState: d,
             parentComponent: 'InteractionModal',
             children: [
-                (0, i.jsxs)(o.xBx, {
+                (0, o.jsxs)(i.xBx, {
                     separator: !1,
                     children: [
-                        (0, i.jsx)(o.qEK, {
-                            src: I,
-                            size: o.EFr.SIZE_24,
+                        (0, o.jsx)(i.qEK, {
+                            src: m,
+                            size: i.EFr.SIZE_24,
                             'aria-label': f,
-                            className: d.applicationIcon
+                            className: s.applicationIcon
                         }),
-                        (0, i.jsx)(r.Z, {
-                            color: r.Z.Colors.HEADER_PRIMARY,
-                            size: r.Z.Sizes.SIZE_24,
-                            children: t
+                        (0, o.jsx)(i.X6q, {
+                            variant: 'heading-xl/bold',
+                            color: 'header-primary',
+                            children: n
                         }),
-                        (0, i.jsx)(o.olH, {
-                            onClick: n,
-                            className: d.closeButton
+                        (0, o.jsx)(i.olH, {
+                            onClick: t,
+                            className: s.closeButton
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.hzk, {
+                (0, o.jsxs)(i.hzk, {
                     children: [
-                        null != S && '' !== S
-                            ? (0, i.jsx)(o.Wn, {
-                                  messageType: o.QYI.ERROR,
-                                  className: d.submissionWarning,
-                                  children: S
+                        null != b && '' !== b
+                            ? (0, o.jsx)(i.Wn, {
+                                  messageType: i.QYI.ERROR,
+                                  className: s.submissionWarning,
+                                  children: b
                               })
                             : null,
-                        (0, i.jsx)(o.Wn, {
-                            messageType: o.QYI.WARNING,
-                            className: d.submissionWarning,
+                        (0, o.jsx)(i.Wn, {
+                            messageType: i.QYI.WARNING,
+                            className: s.submissionWarning,
                             children: _.intl.format(_.t['dSTy//'], { applicationName: f })
                         }),
-                        (0, i.jsx)(o.hjN, {
-                            children: (0, i.jsx)(a.Il, {
+                        (0, o.jsx)(i.hjN, {
+                            children: (0, o.jsx)(r.Il, {
                                 modal: e,
-                                validators: C,
-                                children: (0, s.xX)(p)
+                                validators: h,
+                                children: (0, l.xX)(u)
                             })
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.mzw, {
+                (0, o.jsxs)(i.mzw, {
                     children: [
-                        (0, i.jsx)(o.zxk, {
+                        (0, o.jsx)(i.zxk, {
                             type: 'submit',
-                            color: o.zxk.Colors.BRAND,
-                            size: o.zxk.Sizes.MEDIUM,
-                            submitting: m === c.i.IN_FLIGHT,
+                            color: i.zxk.Colors.BRAND,
+                            size: i.zxk.Sizes.MEDIUM,
+                            submitting: p === a.i.IN_FLIGHT,
                             children: _.intl.string(_.t.geKm7u)
                         }),
-                        (0, i.jsx)(o.zxk, {
-                            look: o.zxk.Looks.LINK,
-                            color: o.zxk.Colors.PRIMARY,
-                            onClick: n,
+                        (0, o.jsx)(i.zxk, {
+                            look: i.zxk.Looks.LINK,
+                            color: i.zxk.Colors.PRIMARY,
+                            onClick: t,
                             children: _.intl.string(_.t['ETE/oK'])
                         })
                     ]
@@ -88,35 +87,35 @@ function u(e) {
         })
     });
 }
-function p(e) {
-    (0, o.h7j)((t) =>
-        (0, i.jsx)(
-            u,
+function u(e) {
+    (0, i.h7j)((n) =>
+        (0, o.jsx)(
+            d,
             (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                for (var n = 1; n < arguments.length; n++) {
+                    var t = null != arguments[n] ? arguments[n] : {},
+                        o = Object.keys(t);
+                    ('function' == typeof Object.getOwnPropertySymbols &&
+                        (o = o.concat(
+                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
                             })
                         )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
+                        o.forEach(function (n) {
+                            var o;
+                            ((o = t[n]),
+                                n in e
+                                    ? Object.defineProperty(e, n, {
+                                          value: o,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = i);
-                        });
+                                    : (e[n] = o));
+                        }));
                 }
                 return e;
-            })({}, t, e)
+            })({}, n, e)
         )
     );
 }

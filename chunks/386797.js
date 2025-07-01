@@ -25,7 +25,7 @@ let i = _.n,
                                 a.frames &&
                                 (a.frames = a.frames.map((t) => {
                                     var a, _, n, i;
-                                    return (a = t), (_ = s), (n = r), (i = e), a.filename === n && a.lineno && _.length && (0, o.go)(_, a, i), a;
+                                    return ((a = t), (_ = s), (n = r), (i = e), a.filename === n && a.lineno && _.length && (0, o.go)(_, a, i), a);
                                 }));
                         }),
                         t

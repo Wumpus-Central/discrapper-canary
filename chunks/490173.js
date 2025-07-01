@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(990547),
@@ -29,7 +29,7 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -37,7 +37,7 @@ function g(e) {
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -72,7 +72,7 @@ let O = (e) => {
         b = i.useRef(null),
         O = i.useMemo(() => ({ current: l }), [l]),
         v = i.useRef(n);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         v.current = n;
     }),
         i.useEffect(() => {
@@ -90,12 +90,12 @@ let O = (e) => {
                 null == (n = r.ownerDocument) || n.addEventListener('contextmenu', i, !0),
                 () => {
                     var e, t;
-                    null == (e = r.ownerDocument) || e.removeEventListener('click', i, !0), null == (t = r.ownerDocument) || t.removeEventListener('contextmenu', i, !0);
+                    (null == (e = r.ownerDocument) || e.removeEventListener('click', i, !0), null == (t = r.ownerDocument) || t.removeEventListener('contextmenu', i, !0));
                 }
             );
-        }, []);
+        }, []));
     let I = i.useRef(o);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         I.current = o;
     }),
         i.useEffect(
@@ -113,7 +113,7 @@ let O = (e) => {
             type: a.ImpressionTypes.MENU,
             name: m,
             properties: g
-        });
+        }));
     let T = (0, c.Aq)(),
         S = i.useCallback(() => {
             T.dispatch(h.CkL.POPOUT_SHOW);
@@ -143,7 +143,7 @@ class v extends i.PureComponent {
                 this.setState({ render: () => (0, r.jsx)(s.TlX, {}) });
             }, 300);
             e().then((e) => {
-                this.setState({ render: e }), clearTimeout(t);
+                (this.setState({ render: e }), clearTimeout(t));
             });
         }
     }
@@ -156,7 +156,7 @@ class v extends i.PureComponent {
     }
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
-        e.removeEventListener('resize', this.closeResize, !0), p.S.unsubscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+        (e.removeEventListener('resize', this.closeResize, !0), p.S.unsubscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
     }
     render() {
         var e, t;
@@ -188,7 +188,7 @@ class v extends i.PureComponent {
             : null;
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             m(this, 'state', { render: void 0 }),
             m(this, 'closeResize', (e) => {
                 let { renderWindow: t } = this.props;
@@ -197,7 +197,7 @@ class v extends i.PureComponent {
             m(this, 'close', () => {
                 let { isOpen: e, closeContextMenu: t } = this.props;
                 e && t();
-            });
+            }));
     }
 }
 function I() {

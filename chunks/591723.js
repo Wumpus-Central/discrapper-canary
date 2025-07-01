@@ -11,11 +11,11 @@ function c(e, t) {
 function u(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+        ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
     }
 }
 function d(e, t, n) {
-    return t && u(e.prototype, t), n && u(e, n), e;
+    return (t && u(e.prototype, t), n && u(e, n), e);
 }
 function f(e, t) {
     return g(e) || m(e, t) || p(e, t) || _();
@@ -45,7 +45,7 @@ function m(e, t) {
         try {
             for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
         } catch (e) {
-            (i = !0), (a = e);
+            ((i = !0), (a = e));
         } finally {
             try {
                 r || null == s.return || s.return();
@@ -93,24 +93,24 @@ function y(e, t) {
 }
 var O = (function () {
     function e(t) {
-        c(this, e), (this.types = new Map()), (this.dragSources = new Map()), (this.dropTargets = new Map()), (this.pinnedSourceId = null), (this.pinnedSource = null), (this.store = t);
+        (c(this, e), (this.types = new Map()), (this.dragSources = new Map()), (this.dropTargets = new Map()), (this.pinnedSourceId = null), (this.pinnedSource = null), (this.store = t));
     }
     return (
         d(e, [
             {
                 key: 'addSource',
                 value: function (e, t) {
-                    (0, s.sM)(e), (0, s.up)(t);
+                    ((0, s.sM)(e), (0, s.up)(t));
                     var n = this.addHandler(o.t.SOURCE, e, t);
-                    return this.store.dispatch((0, i.j1)(n)), n;
+                    return (this.store.dispatch((0, i.j1)(n)), n);
                 }
             },
             {
                 key: 'addTarget',
                 value: function (e, t) {
-                    (0, s.sM)(e, !0), (0, s.JP)(t);
+                    ((0, s.sM)(e, !0), (0, s.JP)(t));
                     var n = this.addHandler(o.t.TARGET, e, t);
-                    return this.store.dispatch((0, i.jn)(n)), n;
+                    return (this.store.dispatch((0, i.jn)(n)), n);
                 }
             },
             {
@@ -123,25 +123,25 @@ var O = (function () {
                 key: 'getSource',
                 value: function (e) {
                     var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                    return (0, r.k)(this.isSourceId(e), 'Expected a valid source ID.'), t && e === this.pinnedSourceId ? this.pinnedSource : this.dragSources.get(e);
+                    return ((0, r.k)(this.isSourceId(e), 'Expected a valid source ID.'), t && e === this.pinnedSourceId ? this.pinnedSource : this.dragSources.get(e));
                 }
             },
             {
                 key: 'getTarget',
                 value: function (e) {
-                    return (0, r.k)(this.isTargetId(e), 'Expected a valid target ID.'), this.dropTargets.get(e);
+                    return ((0, r.k)(this.isTargetId(e), 'Expected a valid target ID.'), this.dropTargets.get(e));
                 }
             },
             {
                 key: 'getSourceType',
                 value: function (e) {
-                    return (0, r.k)(this.isSourceId(e), 'Expected a valid source ID.'), this.types.get(e);
+                    return ((0, r.k)(this.isSourceId(e), 'Expected a valid source ID.'), this.types.get(e));
                 }
             },
             {
                 key: 'getTargetType',
                 value: function (e) {
-                    return (0, r.k)(this.isTargetId(e), 'Expected a valid target ID.'), this.types.get(e);
+                    return ((0, r.k)(this.isTargetId(e), 'Expected a valid target ID.'), this.types.get(e));
                 }
             },
             {
@@ -160,37 +160,37 @@ var O = (function () {
                 key: 'removeSource',
                 value: function (e) {
                     var t = this;
-                    (0, r.k)(this.getSource(e), 'Expected an existing source.'),
+                    ((0, r.k)(this.getSource(e), 'Expected an existing source.'),
                         this.store.dispatch((0, i.wZ)(e)),
                         (0, l.eM)(function () {
-                            t.dragSources.delete(e), t.types.delete(e);
-                        });
+                            (t.dragSources.delete(e), t.types.delete(e));
+                        }));
                 }
             },
             {
                 key: 'removeTarget',
                 value: function (e) {
-                    (0, r.k)(this.getTarget(e), 'Expected an existing target.'), this.store.dispatch((0, i.BT)(e)), this.dropTargets.delete(e), this.types.delete(e);
+                    ((0, r.k)(this.getTarget(e), 'Expected an existing target.'), this.store.dispatch((0, i.BT)(e)), this.dropTargets.delete(e), this.types.delete(e));
                 }
             },
             {
                 key: 'pinSource',
                 value: function (e) {
                     var t = this.getSource(e);
-                    (0, r.k)(t, 'Expected an existing source.'), (this.pinnedSourceId = e), (this.pinnedSource = t);
+                    ((0, r.k)(t, 'Expected an existing source.'), (this.pinnedSourceId = e), (this.pinnedSource = t));
                 }
             },
             {
                 key: 'unpinSource',
                 value: function () {
-                    (0, r.k)(this.pinnedSource, 'No source is pinned at the time.'), (this.pinnedSourceId = null), (this.pinnedSource = null);
+                    ((0, r.k)(this.pinnedSource, 'No source is pinned at the time.'), (this.pinnedSourceId = null), (this.pinnedSource = null));
                 }
             },
             {
                 key: 'addHandler',
                 value: function (e, t, n) {
                     var r = E(e);
-                    return this.types.set(r, t), e === o.t.SOURCE ? this.dragSources.set(r, n) : e === o.t.TARGET && this.dropTargets.set(r, n), r;
+                    return (this.types.set(r, t), e === o.t.SOURCE ? this.dragSources.set(r, n) : e === o.t.TARGET && this.dropTargets.set(r, n), r);
                 }
             }
         ]),

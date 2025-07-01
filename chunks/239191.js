@@ -1,4 +1,4 @@
-n.d(t, { DesktopRefreshOnboardingModal: () => w }), n(388685), n(539854);
+(n.d(t, { DesktopRefreshOnboardingModal: () => w }), n(388685), n(539854));
 var s = n(255367),
     i = n(73800),
     r = n(120356),
@@ -39,7 +39,7 @@ function f(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             s = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
                                             (s = s.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function f(e) {
                                             )),
                                             s.forEach(function (t) {
                                                 var s;
-                                                (s = n[t]),
+                                                ((s = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: s,
@@ -55,8 +55,8 @@ function f(e) {
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = s);
-                                            });
+                                                        : (e[t] = s));
+                                            }));
                                     }
                                     return e;
                                 })({}, t)),
@@ -226,14 +226,14 @@ function w(e) {
                                     options: P,
                                     selected: N,
                                     onSelect: (e) => {
-                                        k(e),
+                                        (k(e),
                                             'gradient' === e
                                                 ? null != r &&
                                                   (0, d.ZI)({
                                                       backgroundGradientPresetId: r.id,
                                                       theme: r.theme
                                                   })
-                                                : (0, d.ZI)({ theme: e });
+                                                : (0, d.ZI)({ theme: e }));
                                     },
                                     renderOptionContainer: (e, t) =>
                                         'gradient' === e.id

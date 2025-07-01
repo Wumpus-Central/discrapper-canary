@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+(n.d(t, { Z: () => k }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(873546),
@@ -22,15 +22,15 @@ var r = n(255367),
     j = n(233870),
     O = n(51144),
     E = n(998502),
-    I = n(276264),
-    S = n(981631),
+    S = n(276264),
+    I = n(981631),
     P = n(388032),
     Z = n(11847);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -38,7 +38,7 @@ function N(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -46,8 +46,8 @@ function N(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
@@ -94,12 +94,12 @@ function w(e) {
         w = () => {
             let e = '@'.concat(O.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            v.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: a.id }),
-                v.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+            (v.S.dispatch(I.CkL.TEXTAREA_FOCUS, { channelId: a.id }),
+                v.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n
                 }),
-                c.Z.startTyping(a.id);
+                c.Z.startTyping(a.id));
         },
         R = (0, m.K)({ user: t }),
         [k, M] = i.useState(!1);
@@ -124,17 +124,17 @@ function w(e) {
                                 r,
                                 i = {},
                                 l = Object.keys(e);
-                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var l = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
                     }
                     return i;
                 })(e, ['onClick', 'onMouseDown']);
             return (0, r.jsx)(
-                I.Z,
+                S.Z,
                 N(
                     {
                         ref: Z,
@@ -190,11 +190,11 @@ function k(e) {
                     var r, i, l;
                     _.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
-                              status: null != (i = b.Z.getStatus(t.id)) ? i : S.Skl.OFFLINE,
+                              status: null != (i = b.Z.getStatus(t.id)) ? i : I.Skl.OFFLINE,
                               activities: null != (l = b.Z.getActivities(t.id)) ? l : T
                           })
                         : (n[t.id] = {
-                              status: S.Skl.OFFLINE,
+                              status: I.Skl.OFFLINE,
                               activities: T
                           });
                 }
@@ -213,7 +213,7 @@ function k(e) {
             R
         );
     i.useEffect(() => {
-        x.default.track(S.rMx.MEMBER_LIST_VIEWED, {
+        x.default.track(I.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id

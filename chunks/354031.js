@@ -1,4 +1,4 @@
-n.d(t, { P: () => u }), n(388685), n(953529);
+(n.d(t, { P: () => u }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -12,7 +12,7 @@ function u(e) {
         u = i.useCallback(
             (e) => {
                 let n = new Set(t);
-                e ? n.add(o.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(o.oNc.SUMMARIES_ENABLED_BY_USER), a.Z.updateGuild({ features: n });
+                (e ? n.add(o.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(o.oNc.SUMMARIES_ENABLED_BY_USER), a.Z.updateGuild({ features: n }));
             },
             [t]
         );

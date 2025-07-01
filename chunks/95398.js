@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     ZP: () => R,
     aQ: () => A
 }),
-    n(388685);
+    n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -34,7 +34,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -42,7 +42,7 @@ function E(e) {
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -50,11 +50,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -70,7 +70,7 @@ function y(e, t) {
     );
 }
 var O = (function (e) {
-    return (e.TEXT = 'text'), (e.ATTACHMENT = 'attachment'), (e.EMBED = 'embed'), e;
+    return ((e.TEXT = 'text'), (e.ATTACHMENT = 'attachment'), (e.EMBED = 'embed'), e);
 })(O || {});
 let v = (e) => {
         let { className: t } = e;
@@ -363,24 +363,24 @@ class N extends i.PureComponent {
         }
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             g(this, 'state', { visible: !1 }),
             g(this, 'removeObscurity', (e) => {
                 let { visible: t } = this.state;
                 if (t) return;
-                t || (e.preventDefault(), e.stopPropagation()), this.setState({ visible: !0 });
+                (t || (e.preventDefault(), e.stopPropagation()), this.setState({ visible: !0 }));
                 let { onReveal: n } = this.props;
                 null != n && n();
             }),
             g(this, 'handleToggleObscurity', (e) => {
                 if ((e.stopPropagation(), e.nativeEvent.stopPropagation(), (0, f.Jl)({ obscure: this.state.visible }), this.props.shouldAgeVerify)) return void c.Z.showAgeVerificationGetStartedModal(u.cU.OBSCURED_MEDIA);
                 let { onToggleObscurity: t } = this.props;
-                null != t && t(e), this.setState((e) => ({ visible: !e.visible }));
+                (null != t && t(e), this.setState((e) => ({ visible: !e.visible })));
             }),
             g(this, 'obscure', () => {
                 let { visible: e } = this.state;
                 e && this.setState({ visible: !1 });
-            });
+            }));
     }
 }
 let C = (e) => {
@@ -394,5 +394,5 @@ let C = (e) => {
         })
     );
 };
-(C.Types = O), (C.Reasons = _.wk);
+((C.Types = O), (C.Reasons = _.wk));
 let R = C;

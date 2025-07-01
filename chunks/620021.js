@@ -1,4 +1,4 @@
-n.d(e, { default: () => b }), n(388685);
+(n.d(e, { default: () => b }), n(388685));
 var t = n(255367),
     r = n(73800),
     i = n(120356),
@@ -23,7 +23,7 @@ function E(l) {
         c = r.useRef(null),
         k = r.useCallback(() => {
             var l;
-            i(''), null == (l = c.current) || l.focus();
+            (i(''), null == (l = c.current) || l.focus());
         }, [i]);
     return (0, t.jsxs)(t.Fragment, {
         children: [
@@ -101,19 +101,19 @@ let b = function (l) {
                 let h = null;
                 if ((M !== (null != (e = null == j ? void 0 : j.nick) ? e : '') && ((h = null != h ? h : {}).nick = M), null == h)) return void x();
                 try {
-                    I(!0),
+                    (I(!0),
                         await u.tn.patch({
                             url: v.ANM.GUILD_MEMBER(a, i.id),
                             body: h,
                             rejectWithError: !1
                         }),
                         P(c.jQ.CHANGE_NICKNAME),
-                        x();
+                        x());
                 } catch (i) {
                     let l;
                     I(!1);
                     let e = null != (t = null == (n = i.body) ? void 0 : n.errors) ? t : null;
-                    (null == e ? void 0 : e.nick) != null ? (l = (null == (o = e.nick) || null == (s = o._errors) || null == (r = s[0]) ? void 0 : r.message) || _.intl.string(_.t.xex86u)) : (null == e ? void 0 : e.username) != null && (l = (null == (N = e.username) || null == (k = N._errors) || null == (d = k[0]) ? void 0 : d.message) || _.intl.string(_.t.xex86u)), G({ nick: l });
+                    ((null == e ? void 0 : e.nick) != null ? (l = (null == (o = e.nick) || null == (s = o._errors) || null == (r = s[0]) ? void 0 : r.message) || _.intl.string(_.t.xex86u)) : (null == e ? void 0 : e.username) != null && (l = (null == (N = e.username) || null == (k = N._errors) || null == (d = k[0]) ? void 0 : d.message) || _.intl.string(_.t.xex86u)), G({ nick: l }));
                 }
             },
             [a, M, x, i, j, P]

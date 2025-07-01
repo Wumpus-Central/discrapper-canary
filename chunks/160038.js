@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(49124);
+(n.d(t, { Z: () => x }), n(388685), n(49124));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -29,7 +29,7 @@ let m = () => {
                             })
                             .map((e, n) => {
                                 let r = e.stats;
-                                return (r.context = t), (r.index = n), r;
+                                return ((r.context = t), (r.index = n), r);
                             });
                         for (let e of n) {
                             var r;
@@ -50,7 +50,7 @@ let m = () => {
         }, []);
         let t = (0, l.useCallback)(() => {
                 let { closePopout: t } = e;
-                null != t && t(), u.bA();
+                (null != t && t(), u.bA());
             }, [e]),
             n = (0, l.useCallback)(() => {
                 let { hostname: t, averagePing: n, lastPing: i, outboundLossRate: a } = e,

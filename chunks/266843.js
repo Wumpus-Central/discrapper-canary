@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     O: () => c,
     h: () => a
 }),
-    n(388685);
+    n(388685));
 var r = n(73800),
     s = n(481060),
     o = n(393903),
@@ -27,7 +27,7 @@ function c(e) {
         [n, o] = r.useState(t),
         [i, l] = r.useState(!1),
         a = r.useCallback(() => {
-            o((e) => !e), l(!0);
+            (o((e) => !e), l(!0));
         }, []),
         { expansionSpring: c } = (0, s.q_F)({
             expansionSpring: +!!n,

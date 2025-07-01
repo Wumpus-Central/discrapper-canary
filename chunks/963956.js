@@ -24,7 +24,7 @@ t.exports = (function (t) {
             e
         );
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
     var r = e.prototype;
     return (
         (r._setSelection = function () {
@@ -41,13 +41,13 @@ t.exports = (function (t) {
                     var f = this.leaf;
                     f || a(!1);
                     var p = f.firstChild;
-                    p || a(!1), p.nodeType === Node.TEXT_NODE ? (t = p) : u(p) ? (t = f) : (t = p.firstChild) || a(!1), s(e, t, c, i, l);
+                    (p || a(!1), p.nodeType === Node.TEXT_NODE ? (t = p) : u(p) ? (t = f) : (t = p.firstChild) || a(!1), s(e, t, c, i, l));
                 }
             }
         }),
         (r.shouldComponentUpdate = function (t) {
             var e = this.leaf;
-            return e || a(!1), e.textContent !== t.text || t.styleSet !== this.props.styleSet || t.forceSelection;
+            return (e || a(!1), e.textContent !== t.text || t.styleSet !== this.props.styleSet || t.forceSelection);
         }),
         (r.componentDidUpdate = function () {
             this._setSelection();
@@ -68,7 +68,7 @@ t.exports = (function (t) {
                 f = l.reduce(function (t, e) {
                     var r = {},
                         i = u[e];
-                    return void 0 !== i && t.textDecoration !== i.textDecoration && (r.textDecoration = [t.textDecoration, i.textDecoration].join(' ').trim()), n(t, i, r);
+                    return (void 0 !== i && t.textDecoration !== i.textDecoration && (r.textDecoration = [t.textDecoration, i.textDecoration].join(' ').trim()), n(t, i, r));
                 }, {});
             return (
                 s && (f = n(f, s(l, e))),

@@ -1,10 +1,10 @@
-n.d(t, {
+(n.d(t, {
     $B: () => s,
     GF: () => a,
     XL: () => o,
     pE: () => c
 }),
-    n(415506);
+    n(415506));
 var r = n(255367),
     i = n(73800);
 let l = i.createContext(void 0);

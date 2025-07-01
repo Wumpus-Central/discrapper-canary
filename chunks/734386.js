@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+(n.d(t, { Z: () => k }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(430824),
     O = n(496675),
     E = n(594174),
-    I = n(700785),
-    S = n(51144),
+    S = n(700785),
+    I = n(51144),
     P = n(396769),
     Z = n(967128),
     N = n(318374),
@@ -37,11 +37,11 @@ function k(e) {
         a = (0, m.ZP)(t, !0),
         k = t.guild_id,
         M = (0, d.e7)([v.Z], () => (null != k ? v.Z.getRoles(k) : void 0)),
-        D = (0, d.e7)([E.default, j.Z], () => {
+        L = (0, d.e7)([E.default, j.Z], () => {
             var e;
             return E.default.getUser(null == (e = j.Z.getGuild(k)) ? void 0 : e.ownerId);
         }),
-        L = i.useMemo(
+        D = i.useMemo(
             () =>
                 null != k
                     ? s()(M)
@@ -53,23 +53,23 @@ function k(e) {
         ),
         U = i.useMemo(
             () =>
-                s()(L)
+                s()(D)
                     .filter((e) => {
                         if (null == k) return !1;
-                        let n = I.I0({
+                        let n = S.I0({
                             forceRoles: { [e.id]: e },
                             context: t
                         });
                         return c.e$(n, T.Plq.ADMINISTRATOR) || c.e$(n, T.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, k, L]
+            [t, k, D]
         ),
         B = (0, d.Wu)(
             [E.default],
             () => {
                 let e = {};
-                for (let n of (null != D && (e[D.id] = D), Object.values(t.permissionOverwrites))) {
+                for (let n of (null != L && (e[L.id] = L), Object.values(t.permissionOverwrites))) {
                     if (n.type !== f.BN.MEMBER || null != e[n.id]) continue;
                     let t = E.default.getUser(n.id);
                     null != t && (e[t.id] = t);
@@ -77,21 +77,21 @@ function k(e) {
                 return s()(e)
                     .filter((e) => {
                         var n;
-                        let r = I.BT({
+                        let r = S.BT({
                                 permission: T.Plq.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
-                            i = null != (n = t.permissionOverwrites[e.id]) ? n : I.Hn,
+                            i = null != (n = t.permissionOverwrites[e.id]) ? n : S.Hn,
                             l = c.e$(i.allow, T.Plq.VIEW_CHANNEL);
                         return r || l;
                     })
                     .value();
             },
-            [t, D]
+            [t, L]
         ),
         F = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
-        G = i.useCallback(() => l(!1), []);
+        H = i.useCallback(() => l(!1), []);
     return (0, r.jsxs)(Z.ZP, {
         channelId: t.id,
         children: [
@@ -144,7 +144,7 @@ function k(e) {
                                 users: B
                             });
                         let e = B[0],
-                            n = S.ZP.getName(e);
+                            n = I.ZP.getName(e);
                         return (0, r.jsxs)('div', {
                             className: w.avatars,
                             children: [
@@ -183,7 +183,7 @@ function k(e) {
                                       disabled: !F,
                                       verified: s,
                                       onClick: () => {
-                                          C.Z.open(t.guild_id, T.pNK.MEMBERS), C.Z.selectRole(e.id);
+                                          (C.Z.open(t.guild_id, T.pNK.MEMBERS), C.Z.selectRole(e.id));
                                       }
                                   },
                                   e.id
@@ -211,7 +211,7 @@ function k(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                      ('function' == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -219,7 +219,7 @@ function k(e) {
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              (r = n[t]),
+                                              ((r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
@@ -227,14 +227,14 @@ function k(e) {
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
-                                          });
+                                                      : (e[t] = r));
+                                          }));
                                   }
                                   return e;
                               })({}, e)),
                               (i = i =
                                   {
-                                      onClose: () => (G(), e.onClose()),
+                                      onClose: () => (H(), e.onClose()),
                                       channelId: t.id
                                   }),
                               Object.getOwnPropertyDescriptors

@@ -24,7 +24,7 @@ function E(e) {
         O = g.guild_settings.sort_by_statistic_id,
         v = i.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
         I = i.useMemo(() => g.users.find((e) => e.user_id === E), [g, E]);
-    o()(null != I, 'User row should not be null'), o()(null != y, 'User must exist');
+    (o()(null != I, 'User row should not be null'), o()(null != y, 'User must exist'));
     let T = d.ZP.getName(b, void 0, y),
         S = null != (n = null == (t = I.statistics[O]) ? void 0 : t.value) ? n : 0;
     return (0, r.jsxs)('div', {

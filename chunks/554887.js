@@ -11,12 +11,12 @@ var r,
             var t = 0,
                 n = document.createTextNode(''),
                 o = { characterData: !0 };
-            new MutationObserver(function () {
+            (new MutationObserver(function () {
                 return a();
             }).observe(n, o),
                 (r = function () {
                     n.textContent = '' + (t ? t-- : t++);
-                });
+                }));
         }
-        i.push(e), r();
+        (i.push(e), r());
     };

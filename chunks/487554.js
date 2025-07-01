@@ -37,7 +37,7 @@ class d extends (i = l.ZP.Store) {
 o(d, 'displayName', 'MediaPostEmbedStore');
 let p = new d(a.Z, {
     CONNECTION_OPEN: function () {
-        (c = {}), (u = {});
+        ((c = {}), (u = {}));
     },
     MEDIA_POST_EMBED_FETCH: function (e) {
         let { threadId: t } = e;
@@ -46,11 +46,11 @@ let p = new d(a.Z, {
     MEDIA_POST_EMBED_FETCH_SUCCESS: function (e) {
         var t, n;
         let { threadId: r, mediaPostEmbed: i } = e;
-        (t = (function (e) {
+        ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -58,7 +58,7 @@ let p = new d(a.Z, {
                     )),
                     r.forEach(function (t) {
                         o(e, t, n[t]);
-                    });
+                    }));
             }
             return e;
         })({}, c)),
@@ -76,7 +76,7 @@ let p = new d(a.Z, {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             (c = t),
-            (u[r] = 2);
+            (u[r] = 2));
     },
     MEDIA_POST_EMBED_FETCH_FAILURE: function (e) {
         let { threadId: t } = e;

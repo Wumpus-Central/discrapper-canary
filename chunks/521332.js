@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(953529), n(388685);
+(n.d(t, { Z: () => h }), n(953529), n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(442837),
@@ -26,7 +26,7 @@ function x(e) {
             buttonText: o ? g.intl.string(g.t['h+WsPT']) : g.intl.string(g.t.A8t4NT),
             buttonDisabled: o,
             onButtonPress: () => {
-                i(), c(!0), l(p.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
+                (i(), c(!0), l(p.M4.SETTINGS_UPSELLS_APPLY_CLICKED));
             }
         })
     );
@@ -65,14 +65,14 @@ function h(e) {
                   (0, r.jsx)(l.zxk, {
                       className: b.navLinkButton,
                       onClick: () => {
-                          o.Z.open(_.oAB.CONTENT_AND_SOCIAL),
+                          (o.Z.open(_.oAB.CONTENT_AND_SOCIAL),
                               a(),
                               c.ZP.trackWithMetadata(_.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: s,
                                   report_type: d.name,
                                   report_subtype: h,
                                   action: p.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
-                              });
+                              }));
                       },
                       look: l.zxk.Looks.LINK,
                       color: l.zxk.Colors.LINK,

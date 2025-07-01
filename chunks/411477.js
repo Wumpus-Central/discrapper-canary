@@ -1,34 +1,33 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => s });
 var i = n(255367);
 n(73800);
 var a = n(120356),
     o = n.n(a),
-    l = n(481060),
-    r = n(436774),
-    c = n(118012),
-    s = n(237844);
-function d(e) {
-    let { text: t, textSize: n = c.Z.Sizes.SIZE_12, textColor: a = c.Z.Colors.STANDARD, className: d, button: u, reducedRightPadding: _ = !1 } = e;
+    r = n(481060),
+    l = n(436774),
+    c = n(237844);
+function s(e) {
+    let { text: t, className: n, button: a, reducedRightPadding: s = !1 } = e;
     return (0, i.jsxs)('div', {
-        className: o()(_ ? s.noticeWithoutRightPadding : s.noticeWithRightPadding, d),
+        className: o()(s ? c.noticeWithoutRightPadding : c.noticeWithRightPadding, n),
         children: [
             (0, i.jsxs)('div', {
-                className: s.noticeLeft,
+                className: c.noticeLeft,
                 children: [
-                    (0, i.jsx)(l.SrA, {
+                    (0, i.jsx)(r.SrA, {
                         size: 'md',
-                        className: s.icon,
-                        color: r.JX.PREMIUM_TIER_2
+                        className: c.icon,
+                        color: l.JX.PREMIUM_TIER_2
                     }),
-                    (0, i.jsx)(c.Z, {
-                        className: s.text,
-                        size: n,
-                        color: a,
+                    (0, i.jsx)(r.Text, {
+                        className: c.text,
+                        variant: 'text-md/normal',
+                        color: 'header-primary',
                         children: t
                     })
                 ]
             }),
-            u
+            a
         ]
     });
 }

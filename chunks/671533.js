@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(415506);
+(n.d(t, { Z: () => u }), n(415506));
 var a,
     r = n(255367);
 n(73800);
@@ -10,7 +10,7 @@ var l = n(120356),
 let d = (e) => {
     var t,
         n,
-        { width: a = 24, height: l = 24, color: c = 'currentColor', direction: d, foreground: u, className: m, title: p } = e,
+        { width: a = 24, height: l = 24, color: c = 'currentColor', direction: d, foreground: u, className: m, title: x } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -21,12 +21,12 @@ let d = (e) => {
                         a,
                         r = {},
                         l = Object.keys(e);
-                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (a = 0; a < l.length; a++) ((n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < l.length; a++) (n = l[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (a = 0; a < l.length; a++) ((n = l[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['width', 'height', 'color', 'direction', 'foreground', 'className', 'title']);
@@ -36,7 +36,7 @@ let d = (e) => {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     a = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (a = a.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ let d = (e) => {
                     )),
                     a.forEach(function (t) {
                         var a;
-                        (a = n[t]),
+                        ((a = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: a,
@@ -52,8 +52,8 @@ let d = (e) => {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = a);
-                    });
+                                : (e[t] = a));
+                    }));
             }
             return e;
         })({}, (0, s.Z)(h))),
@@ -84,7 +84,7 @@ let d = (e) => {
                 ),
                 viewBox: '0 0 24 24',
                 children: [
-                    null != p ? (0, r.jsx)('title', { children: p }) : null,
+                    null != x ? (0, r.jsx)('title', { children: x }) : null,
                     (0, r.jsx)('polygon', {
                         className: u,
                         fill: c,

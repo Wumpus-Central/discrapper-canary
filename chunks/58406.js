@@ -1,4 +1,4 @@
-n.d(t, { g: () => d }), n(415506);
+(n.d(t, { g: () => d }), n(415506));
 var r = n(626135),
     i = n(823967),
     a = n(281058),
@@ -22,7 +22,7 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function u(e) {
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -41,7 +41,7 @@ class d {
         let a = await t(),
             l = a === o.NZ.AUTHORIZED || a === o.NZ.LIMITED,
             c = l ? o.PQ.ACCEPTED : o.PQ.DENIED;
-        return i.Z.setPermission(e, c), !l && n.showAuthorizationError && this.showAlert(e), l;
+        return (i.Z.setPermission(e, c), !l && n.showAuthorizationError && this.showAlert(e), l);
     }
     requestPermission(e, t) {
         let n = d.defaultNativePermissionsRequestOptions(t);

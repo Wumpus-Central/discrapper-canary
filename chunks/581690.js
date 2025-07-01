@@ -1,4 +1,4 @@
-n.d(t, { c: () => m }), n(35282), n(388685);
+(n.d(t, { c: () => m }), n(35282), n(388685));
 var r = n(255367),
     a = n(73800),
     o = n(481060),
@@ -17,7 +17,7 @@ function x(e) {
     return (
         a.useEffect(() => {
             let e = new Image();
-            (e.src = f), (e.onload = () => i(!0)), (e.onerror = () => i(!0));
+            ((e.src = f), (e.onload = () => i(!0)), (e.onerror = () => i(!0)));
         }, [f]),
         '' !== t && n
             ? (0, r.jsxs)(r.Fragment, {

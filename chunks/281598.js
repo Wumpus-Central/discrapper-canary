@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     BU: () => v,
     CM: () => h,
     Eo: () => m,
@@ -14,7 +14,7 @@ n.d(t, {
     n(539854),
     n(472816),
     n(794429),
-    n(642613);
+    n(642613));
 var r = n(73800),
     i = n(481060),
     a = n(406432),
@@ -36,7 +36,7 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function l(e) {
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -72,10 +72,10 @@ function u(e, t) {
     );
 }
 var d = (function (e) {
-        return (e.SHOP_ALL_BANNER_STATIC = 'shop_all_banner.jpg'), (e.SHOP_ALL_BANNER_ANIMATED = 'shop_all_banner_animated.webm'), (e.HERO_BANNER_STATIC = 'hero_banner.jpg'), (e.HERO_BANNER_ANIMATED = 'hero_banner_animated.webm'), (e.HERO_LOGO = 'hero_logo.png'), (e.FEATURED_BLOCK = 'featured_block.png'), (e.UPSELL_BANNER = 'upsell_banner.jpg'), (e.UPSELL_BANNER_POPOUT = 'upsell_banner_popout.png'), (e.PDP_BACKGROUND = 'pdp_bg.jpg'), (e.PDP_LOGO = 'pdp_logo.png'), (e.COLLECTED_MODAL_BG = 'collected_modal_bg.jpg'), (e.SHOP_BUTTON_BG_HOVER = 'shop_button_bg_hover.png'), (e.SHOP_BUTTON_BG_HOVER_DARK = 'shop_button_bg_hover_dark.png'), (e.SHOP_BUTTON_BG_HOVER_LIGHT = 'shop_button_bg_hover_light.png'), (e.SHOP_BUTTON_BG_RESTING = 'shop_button_bg_resting.png'), (e.SHOP_BUTTON_BG_RESTING_DARK = 'shop_button_bg_resting_dark.png'), (e.SHOP_BUTTON_BG_RESTING_LIGHT = 'shop_button_bg_resting_light.png'), (e.COACHTIP_AVATAR = 'coachtip_avatar.png'), (e.MOBILE_BANNER = 'mobile_banner.jpg'), (e.MOBILE_BACKGROUND = 'mobile_bg.jpg'), e;
+        return ((e.SHOP_ALL_BANNER_STATIC = 'shop_all_banner.jpg'), (e.SHOP_ALL_BANNER_ANIMATED = 'shop_all_banner_animated.webm'), (e.HERO_BANNER_STATIC = 'hero_banner.jpg'), (e.HERO_BANNER_ANIMATED = 'hero_banner_animated.webm'), (e.HERO_LOGO = 'hero_logo.png'), (e.FEATURED_BLOCK = 'featured_block.png'), (e.UPSELL_BANNER = 'upsell_banner.jpg'), (e.UPSELL_BANNER_POPOUT = 'upsell_banner_popout.png'), (e.PDP_BACKGROUND = 'pdp_bg.jpg'), (e.PDP_LOGO = 'pdp_logo.png'), (e.COLLECTED_MODAL_BG = 'collected_modal_bg.jpg'), (e.SHOP_BUTTON_BG_HOVER = 'shop_button_bg_hover.png'), (e.SHOP_BUTTON_BG_HOVER_DARK = 'shop_button_bg_hover_dark.png'), (e.SHOP_BUTTON_BG_HOVER_LIGHT = 'shop_button_bg_hover_light.png'), (e.SHOP_BUTTON_BG_RESTING = 'shop_button_bg_resting.png'), (e.SHOP_BUTTON_BG_RESTING_DARK = 'shop_button_bg_resting_dark.png'), (e.SHOP_BUTTON_BG_RESTING_LIGHT = 'shop_button_bg_resting_light.png'), (e.COACHTIP_AVATAR = 'coachtip_avatar.png'), (e.MOBILE_BANNER = 'mobile_banner.jpg'), (e.MOBILE_BACKGROUND = 'mobile_bg.jpg'), e);
     })({}),
     f = (function (e) {
-        return (e.PROFILE_EFFECT = 'profile_effect'), (e.AVATAR_DECORATION = 'avatar_decoration'), e;
+        return ((e.PROFILE_EFFECT = 'profile_effect'), (e.AVATAR_DECORATION = 'avatar_decoration'), e);
     })({});
 let _ = {
         'shop_all_banner.jpg': 'shop_all_banner.jpg',
@@ -101,7 +101,7 @@ let _ = {
     },
     p = '.DS_Store';
 var h = (function (e) {
-    return (e.COLLECTION = 'collection'), (e.AVATAR_DECORATIONS = 'avatar_decorations'), (e.PROFILE_EFFECTS = 'profile_effects'), e;
+    return ((e.COLLECTION = 'collection'), (e.AVATAR_DECORATIONS = 'avatar_decorations'), (e.PROFILE_EFFECTS = 'profile_effects'), e);
 })({});
 let m = (e) => {
         (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
@@ -111,11 +111,11 @@ let m = (e) => {
     },
     E = (e, t) => {
         let n = new FileReader();
-        (n.onload = (n) => {
+        ((n.onload = (n) => {
             if (null == n.target || 'string' != typeof n.target.result) return void m('Error uploading file. Try again!');
             t(e, n.target.result);
         }),
-            n.readAsDataURL(e);
+            n.readAsDataURL(e));
     },
     b = (e, t, n) => {
         if (0 === e.length) {
@@ -146,7 +146,7 @@ let m = (e) => {
     },
     T = (e, t, n) => {
         if (!O(t) && !t.name.endsWith('.txt')) return void n.ignoredFilenames.push(y(e, t.name));
-        e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(t);
+        (e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(t));
     },
     S = (e, t, n, r) => {
         if (t.name === p) return;
@@ -203,7 +203,7 @@ let m = (e) => {
                 let e = n;
                 S('', await new Promise((t) => e.file(t)), null, t);
             }
-        return t.collectionFiles.sort((e, t) => e.name.localeCompare(t.name)), t.avatarDecorationFiles.sort((e, t) => e.name.localeCompare(t.name)), t.ignoredFilenames.sort((e, t) => e.localeCompare(t)), t;
+        return (t.collectionFiles.sort((e, t) => e.name.localeCompare(t.name)), t.avatarDecorationFiles.sort((e, t) => e.name.localeCompare(t.name)), t.ignoredFilenames.sort((e, t) => e.localeCompare(t)), t);
     },
     P = () => {
         let [e, t] = r.useState(() => ({
@@ -216,7 +216,7 @@ let m = (e) => {
             a = r.useCallback(
                 async (e) => {
                     let r = await R(e);
-                    t(r),
+                    (t(r),
                         (0 !== r.collectionFiles.length || 0 !== r.avatarDecorationFiles.length) &&
                             (r.collectionFiles.forEach((e) => {
                                 E(e, (e) => {
@@ -228,7 +228,7 @@ let m = (e) => {
                                 E(e, (e) => {
                                     i(e);
                                 });
-                            }));
+                            })));
                 },
                 [n, i]
             ),

@@ -22,7 +22,7 @@ var n = r(214788),
             d = o ? r.getNextSiblingKey() : u,
             g = o ? u : r.getPrevSiblingKey();
         return t.withMutations(function (t) {
-            c(l, t, function (t) {
+            (c(l, t, function (t) {
                 var e = t.getChildKeys();
                 return t.merge({ children: e.delete(e.indexOf(a)) });
             }),
@@ -42,7 +42,7 @@ var n = r(214788),
                     var e = t.getChildKeys(),
                         r = e.indexOf(u),
                         n = e.toArray();
-                    return n.splice(o ? r + 1 : 0 !== r ? r - 1 : 0, 0, a), t.merge({ children: s(n) });
+                    return (n.splice(o ? r + 1 : 0 !== r ? r - 1 : 0, 0, a), t.merge({ children: s(n) }));
                 }),
                 c(a, t, function (t) {
                     return t.merge({
@@ -50,7 +50,7 @@ var n = r(214788),
                         prevSibling: g,
                         parent: h
                     });
-                });
+                }));
         });
     };
 t.exports = function (t, e, r, o) {
@@ -78,7 +78,7 @@ t.exports = function (t, e, r, o) {
                     return !!(i || (r && e !== r) || o);
                 })
                 .forEach(function (e) {
-                    h.push(e), t.delete(e.getKey());
+                    (h.push(e), t.delete(e.getKey()));
                 });
         })));
     var g = d.toSeq().takeUntil(function (t) {
@@ -96,10 +96,10 @@ t.exports = function (t, e, r, o) {
         m = u();
     if ('before' === o) {
         var _ = t.getBlockBefore(s);
-        _ && _.getKey() === e.getKey() && a(!1), (m = g.concat([].concat(v, [[s, r]]), y).toOrderedMap());
+        (_ && _.getKey() === e.getKey() && a(!1), (m = g.concat([].concat(v, [[s, r]]), y).toOrderedMap()));
     } else if ('after' === o) {
         var b = t.getBlockAfter(s);
-        b && b.getKey() === c && a(!1), (m = g.concat([[s, r]].concat(v), y).toOrderedMap());
+        (b && b.getKey() === c && a(!1), (m = g.concat([[s, r]].concat(v), y).toOrderedMap()));
     }
     return t.merge({
         blockMap: l(m, e, r, o, p),

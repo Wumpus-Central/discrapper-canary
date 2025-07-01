@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+(n.d(t, { Z: () => P }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -65,12 +65,12 @@ function R(e) {
         E = A(g),
         C = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
         O = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == E;
-    r.useEffect(() => {
+    (r.useEffect(() => {
         O && (0, f.tt)({ location: n });
     }, [O, n]),
         r.useEffect(() => {
             (0, p.w)();
-        }, []);
+        }, []));
     let S = r.useCallback((e, t) => {
             let { inDropdown: n } = t;
             return null == e ? null : n ? (0, i.jsx)(D, { guildId: e.value }) : null;

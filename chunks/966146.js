@@ -1,4 +1,4 @@
-n.d(t, { x: () => o }), n(415506), n(388685), n(539854), n(642613);
+(n.d(t, { x: () => o }), n(415506), n(388685), n(539854), n(642613));
 var r = n(65154);
 function i(e, t, n) {
     return (
@@ -17,7 +17,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -25,7 +25,7 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -82,11 +82,11 @@ class o {
                 u = 0;
             for (let r of n) {
                 if (r.pixelCount * t > e) break;
-                (l = r.width), (c = r.height), (u = r.budgetPortion);
+                ((l = r.width), (c = r.height), (u = r.budgetPortion));
             }
             if (a !== l) {
                 let e = o.getMutedFramerate(s);
-                (i[s] = {
+                ((i[s] = {
                     width: l,
                     height: c,
                     budgetPortion: u,
@@ -94,7 +94,7 @@ class o {
                     framerate: r.Gs
                 }),
                     (s -= 10),
-                    (a = l);
+                    (a = l));
             }
         }
         return i;
@@ -122,9 +122,9 @@ class o {
         return t;
     }
     constructor(e = r.kS) {
-        i(this, 'pixelBudget', void 0), i(this, 'ladder', void 0), i(this, 'orderedLadder', void 0);
+        (i(this, 'pixelBudget', void 0), i(this, 'ladder', void 0), i(this, 'orderedLadder', void 0));
         let { width: t, height: n } = e.videoBudget;
         if (t <= 0 || n <= 0) throw Error('Invalid argument');
-        (this.pixelBudget = t * n), (this.ladder = o.calculateLadder(this.pixelBudget)), (this.orderedLadder = o.calculateOrderedLadder(this.ladder));
+        ((this.pixelBudget = t * n), (this.ladder = o.calculateLadder(this.pixelBudget)), (this.orderedLadder = o.calculateOrderedLadder(this.ladder)));
     }
 }

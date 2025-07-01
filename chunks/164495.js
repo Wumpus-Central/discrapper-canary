@@ -19,13 +19,13 @@ var r = n(255367),
     h = n(341907),
     b = n(46140),
     j = n(215023),
-    _ = n(388032),
-    v = n(895518);
+    v = n(388032),
+    _ = n(895518);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -33,7 +33,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -41,15 +41,15 @@ function y(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
 function C(e) {
     let { quest: t, sourceQuestContent: n, taskDetails: s } = e;
     return (0, r.jsx)(i.zxk, {
-        className: v.cta,
+        className: _.cta,
         color: i.zxk.Colors.BRAND,
         fullWidth: !0,
         onClick: () => {
@@ -66,7 +66,7 @@ let O = (e) => {
         let { quest: t, sourceQuestContent: n } = e,
             s = (0, d.aM)();
         return (0, r.jsx)(i.zxk, {
-            className: v.cta,
+            className: _.cta,
             size: i.zxk.Sizes.SMALL,
             onClick: () =>
                 (0, f.nc)(t, {
@@ -75,7 +75,7 @@ let O = (e) => {
                     impressionId: s,
                     sourceQuestContent: n
                 }),
-            children: (0, f.pO)(t) ? _.intl.string(_.t.hvVgAQ) : _.intl.string(_.t.lwQdjI)
+            children: (0, f.pO)(t) ? v.intl.string(v.t.hvVgAQ) : v.intl.string(v.t.lwQdjI)
         });
     },
     E = (e) => {
@@ -84,7 +84,7 @@ let O = (e) => {
             o = null == (t = (0, d.WD)()) ? void 0 : t.getId();
         return (0, r.jsx)(i.zxk, {
             fullWidth: !0,
-            className: v.cta,
+            className: _.cta,
             onClick: () =>
                 (0, f.gI)(
                     { quest: n },
@@ -96,7 +96,7 @@ let O = (e) => {
                     }
                 ),
             size: i.zxk.Sizes.SMALL,
-            children: _.intl.string(_.t.csptqa)
+            children: v.intl.string(v.t.csptqa)
         });
     },
     S = (e) => {
@@ -107,7 +107,7 @@ let O = (e) => {
             { launchInGameActivity: a } = (0, p.zB)(t);
         return n && s
             ? (0, r.jsx)(i.zxk, {
-                  className: v.cta,
+                  className: _.cta,
                   color: i.zxk.Colors.BRAND,
                   fullWidth: !0,
                   onClick: a,
@@ -120,7 +120,7 @@ let O = (e) => {
         var t,
             n,
             o,
-            { quest: u, useReducedMotion: d, isExpanded: p, className: h, ctaLabel: _, onClick: C, questContent: O = m.jn.QUEST_BAR_V2, sourceQuestContent: E } = e,
+            { quest: u, useReducedMotion: d, isExpanded: p, className: h, ctaLabel: v, onClick: C, questContent: O = m.jn.QUEST_BAR_V2, sourceQuestContent: E } = e,
             S = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -131,12 +131,12 @@ let O = (e) => {
                             r,
                             s = {},
                             o = Object.keys(e);
-                        for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+                        for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
                         return s;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
                 }
                 return s;
             })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick', 'questContent', 'sourceQuestContent']);
@@ -149,7 +149,7 @@ let O = (e) => {
             T = s.useCallback(
                 (e) => {
                     var t;
-                    null == C || C(e),
+                    (null == C || C(e),
                         (0, f.xN)(u.config) && (null == (t = u.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, c.mK)({
                                   openInLayer: !1,
@@ -157,7 +157,7 @@ let O = (e) => {
                                   analyticsLocations: [],
                                   analyticsSource: l.Z.QUEST_HOME_PAGE
                               })
-                            : w();
+                            : w());
                 },
                 [C, u.config, null == (o = u.userStatus) ? void 0 : o.claimedAt, w]
             );
@@ -169,12 +169,12 @@ let O = (e) => {
                     size: i.zxk.Sizes.SMALL,
                     onClick: T,
                     pauseAnimation: d || !p,
-                    className: a()(v.cta, h),
-                    buttonShineClassName: v.shine
+                    className: a()(_.cta, h),
+                    buttonShineClassName: _.shine
                 },
                 S
             )),
-            (n = n = { children: null != _ ? _ : P }),
+            (n = n = { children: null != v ? v : P }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -224,18 +224,18 @@ let O = (e) => {
     };
 function T(e) {
     return (0, r.jsxs)('div', {
-        className: v.ctaButtons,
+        className: _.ctaButtons,
         children: [
             e.showBackButton &&
                 (0, r.jsx)(i.zxk, {
-                    className: v.backButton,
-                    innerClassName: v.backButtonInner,
+                    className: _.backButton,
+                    innerClassName: _.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, r.jsx)(i.V7D, { className: v.backIcon })
+                    children: (0, r.jsx)(i.V7D, { className: _.backIcon })
                 }),
             (0, r.jsx)(P, y({}, e))
         ]

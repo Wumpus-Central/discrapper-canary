@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+(n.d(t, { Z: () => j }), n(388685));
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -99,7 +99,7 @@ function j(e) {
                             textLabels: L,
                             selectedRating: w,
                             onChangeRating: function (e) {
-                                G(e), e === x.aZ.GOOD && F();
+                                (G(e), e === x.aZ.GOOD && F());
                             }
                         })
                     }),
@@ -112,7 +112,7 @@ function j(e) {
                             children: (0, l.jsx)(E.Z, {
                                 options: K,
                                 onClick: function (e) {
-                                    z(e), C.includes(e.value) || F();
+                                    (z(e), C.includes(e.value) || F());
                                 },
                                 hideCaret: (e) => {
                                     let { value: t } = e;

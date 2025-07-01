@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854), n(388685), n(467055);
+(n.d(t, { Z: () => y }), n(539854), n(388685), n(467055));
 var r = n(73800),
     i = n(512722),
     l = n.n(i),
@@ -17,11 +17,11 @@ var r = n(73800),
     x = n(905753),
     j = n(399860),
     O = n(981631);
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function y(e) {
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -37,17 +37,17 @@ function y(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
-            });
+                        : (e[t] = r));
+            }));
     }
     return e;
 }
-function v(e, t, n) {
+function y(e, t, n) {
     let i = (0, s.e7)([x.Z], () => x.Z.getApplicationPermissions()),
         o = r.useMemo(
             () =>
                 (function (e, t) {
-                    let n = y({}, t),
+                    let n = v({}, t),
                         r = (0, u.bD)(e),
                         i = (0, j.rE)(r, d.Kw.CHANNEL),
                         l = (0, j.rE)(e, d.Kw.ROLE);
@@ -69,7 +69,7 @@ function v(e, t, n) {
                 })(e, null != i ? i : {}),
             [i, e]
         ),
-        v = (0, s.e7)(
+        y = (0, s.e7)(
             [x.Z],
             () => {
                 var e;
@@ -88,8 +88,8 @@ function v(e, t, n) {
             [n]
         ),
         C = null != n ? n : t,
-        N = null != n ? v : o,
-        I = r.useMemo(() => (null != _ ? _ : y({}, null != N ? N : {})), [_, N]),
+        N = null != n ? y : o,
+        I = r.useMemo(() => (null != _ ? _ : v({}, null != N ? N : {})), [_, N]),
         S = r.useMemo(() => Object.keys(I).length, [I]),
         E = r.useMemo(() => (null == N || null == I ? null : !a().isEqual(N, I)), [N, I]);
     return (
@@ -98,7 +98,7 @@ function v(e, t, n) {
         }, [t, E, C]),
         {
             originalApplicationPermissions: o,
-            originalCommandPermissions: v,
+            originalCommandPermissions: y,
             editedTargetPermissions: (function (e, t) {
                 let n = (0, s.e7)([b.Z], () => b.Z.getGuild(e), [e]);
                 l()(null != n, 'guild must be present to be editing its integration settings');
@@ -124,7 +124,7 @@ function v(e, t, n) {
                             userIds: r
                         };
                     }, [t]),
-                    v = (0, s.cj)(
+                    y = (0, s.cj)(
                         [p.Z],
                         () =>
                             Object.fromEntries(
@@ -166,15 +166,15 @@ function v(e, t, n) {
                             c = !1;
                         if (s.type === d.Kw.CHANNEL) {
                             let e = s.id === r,
-                                n = v[s.id];
-                            (t = e || g.Z.can(O.Plq.VIEW_CHANNEL, n)), (c = !0);
+                                n = y[s.id];
+                            ((t = e || g.Z.can(O.Plq.VIEW_CHANNEL, n)), (c = !0));
                         } else if (s.type === d.Kw.ROLE) {
                             let r = s.id === e,
                                 l = _[s.id];
-                            (t = r || null != l), (c = a || r || g.Z.isRoleHigher(n, i, l));
+                            ((t = r || null != l), (c = a || r || g.Z.isRoleHigher(n, i, l)));
                         } else if (s.type === d.Kw.USER) {
                             let e = C[s.id];
-                            (t = null != e), (c = null != e && (a || g.Z.canManageUser(O.Plq.USE_APPLICATION_COMMANDS, e, n)));
+                            ((t = null != e), (c = null != e && (a || g.Z.canManageUser(O.Plq.USE_APPLICATION_COMMANDS, e, n))));
                         }
                         l[o] = (function (e, t) {
                             return (
@@ -193,13 +193,13 @@ function v(e, t, n) {
                                       }),
                                 e
                             );
-                        })(y({}, s), {
+                        })(v({}, s), {
                             canRead: t,
                             canWrite: c
                         });
                     }
                     return l;
-                }, [v, n, i, a, t, _, C]);
+                }, [y, n, i, a, t, _, C]);
             })(e, I),
             hasChanges: E,
             selectedPermissionCount: S

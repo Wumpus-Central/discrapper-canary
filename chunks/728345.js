@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     IX: () => b,
     Rt: () => y,
     UM: () => g,
@@ -9,7 +9,7 @@ n.d(t, {
     n(111804),
     n(490233),
     n(97749),
-    n(388685);
+    n(388685));
 var r = n(442837),
     i = n(544891),
     a = n(570140),
@@ -35,7 +35,7 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -43,7 +43,7 @@ function f(e) {
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -51,11 +51,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -77,7 +77,7 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -87,7 +87,7 @@ function m(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 async function g(e) {
@@ -114,11 +114,11 @@ async function g(e) {
         );
     } catch (t) {
         throw (
-            (a.Z.dispatch({
+            a.Z.dispatch({
                 type: 'APPLICATION_FETCH_FAIL',
                 applicationId: e
             }),
-            t)
+            t
         );
     }
 }
@@ -210,12 +210,12 @@ let E = {
                     });
                 } catch (e) {
                     throw (
-                        (429 !== e.status &&
+                        429 !== e.status &&
                             a.Z.dispatch({
                                 type: 'APPLICATIONS_FETCH_FAIL',
                                 applicationIds: n
                             }),
-                        e)
+                        e
                     );
                 }
                 let t = new Set(e.body.map((e) => e.id)),

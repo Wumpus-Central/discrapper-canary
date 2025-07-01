@@ -19,7 +19,7 @@ class p extends (l = o.ZP.Store) {
         return u === e;
     }
 }
-(i = 'LurkerModePopoutStore'),
+((i = 'LurkerModePopoutStore'),
     (r = 'displayName') in p
         ? Object.defineProperty(p, r, {
               value: i,
@@ -27,5 +27,5 @@ class p extends (l = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (p[r] = i);
+        : (p[r] = i));
 let h = new p(a.Z);

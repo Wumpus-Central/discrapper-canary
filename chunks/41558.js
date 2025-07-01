@@ -31,7 +31,7 @@ function u(e) {
         ]
     });
 }
-(u.buttonTypes = c),
+((u.buttonTypes = c),
     (u.Loading = function () {
         let e = r.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
         return (0, i.jsx)('div', {
@@ -44,4 +44,4 @@ function u(e) {
                 children: '_'
             })
         });
-    });
+    }));

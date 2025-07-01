@@ -24,7 +24,7 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -32,7 +32,7 @@ function p(e) {
             )),
             i.forEach(function (t) {
                 d(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -70,7 +70,7 @@ function m(e) {
     let t = O[e];
     if (null == t) return !1;
     let n = t.gameId;
-    return null != N[n] && ((N = p({}, N)), delete N[n][e], 0 === Object.values(N[n]).length && delete N[n]), (O = p({}, O)), delete O[e], !0;
+    return (null != N[n] && ((N = p({}, N)), delete N[n][e], 0 === Object.values(N[n]).length && delete N[n]), (O = p({}, O)), delete O[e], !0);
 }
 function E(e) {
     let { user: t, activities: n } = e;
@@ -132,7 +132,7 @@ function S() {
 }
 class y extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(a.Z), this.syncWith([a.Z], S);
+        (this.waitFor(a.Z), this.syncWith([a.Z], S));
     }
     get games() {
         return N;
@@ -153,7 +153,7 @@ class y extends (i = r.ZP.Store) {
 d(y, 'displayName', 'NowPlayingStore');
 let I = new y(l.Z, {
     CONNECTION_OPEN: function () {
-        (N = {}), (O = {});
+        ((N = {}), (O = {}));
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
@@ -167,7 +167,7 @@ let I = new y(l.Z, {
         );
     },
     LOGOUT: function () {
-        (N = {}), (O = {});
+        ((N = {}), (O = {}));
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;

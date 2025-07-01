@@ -9,4 +9,4 @@ var r = n(195653)(),
     s = (function () {
         return a(arguments);
     })();
-(a.isLegacyArguments = o), (e.exports = s ? a : o);
+((a.isLegacyArguments = o), (e.exports = s ? a : o));

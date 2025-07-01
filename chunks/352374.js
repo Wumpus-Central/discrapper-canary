@@ -63,11 +63,11 @@
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
             var r = Object.getOwnPropertySymbols(e);
-            t &&
+            (t &&
                 (r = r.filter(function (t) {
                     return Object.getOwnPropertyDescriptor(e, t).enumerable;
                 })),
-                n.push.apply(n, r);
+                n.push.apply(n, r));
         }
         return n;
     }
@@ -102,11 +102,11 @@
     function to(e, t) {
         for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
         }
     }
     function ts(e, t, n) {
-        return t && to(e.prototype, t), n && to(e, n), e;
+        return (t && to(e.prototype, t), n && to(e, n), e);
     }
     function tl(e, t, n) {
         return (
@@ -134,14 +134,14 @@
     }
     function tu(e, t) {
         if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
-        (e.prototype = Object.create(t && t.prototype, {
+        ((e.prototype = Object.create(t && t.prototype, {
             constructor: {
                 value: e,
                 writable: !0,
                 configurable: !0
             }
         })),
-            t && tf(e, t);
+            t && tf(e, t));
     }
     function td(e) {
         return (td = Object.setPrototypeOf
@@ -154,7 +154,7 @@
         return (tf =
             Object.setPrototypeOf ||
             function (e, t) {
-                return (e.__proto__ = t), e;
+                return ((e.__proto__ = t), e);
             })(e, t);
     }
     function t_(e) {
@@ -169,7 +169,7 @@
             if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
             if ('function' == typeof Proxy) return !0;
             try {
-                return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
             } catch (e) {
                 return !1;
             }
@@ -177,7 +177,7 @@
         return function () {
             var n,
                 r = td(e);
-            return (n = t ? Reflect.construct(r, arguments, td(this).constructor) : r.apply(this, arguments)), tp(this, n);
+            return ((n = t ? Reflect.construct(r, arguments, td(this).constructor) : r.apply(this, arguments)), tp(this, n));
         };
     }
     function tm(e) {
@@ -267,7 +267,7 @@
         return Array.isArray(t)
             ? (t.forEach(function (t) {
                   var n = e7.default(e, t, new Date(), { locale: o });
-                  r && (s = tS(n, i) && e === eh.default(n, t, { awareOfUnicodeTokens: !0 })), tS(n, i) && s && (a = n);
+                  (r && (s = tS(n, i) && e === eh.default(n, t, { awareOfUnicodeTokens: !0 })), tS(n, i) && s && (a = n));
               }),
               a)
             : ((a = e7.default(e, t, new Date(), { locale: o })),
@@ -286,7 +286,7 @@
               tS(a) && s ? a : null);
     }
     function tS(e, t) {
-        return (t = t || new Date('1/1/1000')), ep.default(e) && e4.default(e, t);
+        return ((t = t || new Date('1/1/1000')), ep.default(e) && e4.default(e, t));
     }
     function tA(e, t, n) {
         if ('en' === n) return eh.default(e, t, { awareOfUnicodeTokens: !0 });
@@ -657,7 +657,7 @@
         for (var i = [], a = 0; a < 2 * t + 1; a++) {
             var o = e + t - a,
                 s = !0;
-            n && (s = ex.default(n) <= o), r && s && (s = ex.default(r) >= o), s && i.push(o);
+            (n && (s = ex.default(n) <= o), r && s && (s = ex.default(r) >= o), s && i.push(o));
         }
         return i;
     }
@@ -665,7 +665,7 @@
             tu(n, e);
             var t = th(n);
             function n(e) {
-                ta(this, n),
+                (ta(this, n),
                     tl(t_((r = t.call(this, e))), 'renderOptions', function () {
                         var e = r.props.year,
                             t = r.state.yearsList.map(function (t) {
@@ -733,12 +733,12 @@
                     }),
                     tl(t_(r), 'decrementYears', function () {
                         return r.shiftYears(-1);
-                    });
+                    }));
                 var r,
                     i = e.yearDropdownItemNumber,
                     a = e.scrollableYearDropdown,
                     o = i || (a ? 10 : 5);
-                return (r.state = { yearsList: ni(r.props.year, o, r.props.minDate, r.props.maxDate) }), r;
+                return ((r.state = { yearsList: ni(r.props.year, o, r.props.minDate, r.props.maxDate) }), r);
             }
             return (
                 ts(n, [
@@ -824,10 +824,10 @@
                     tl(t_(e), 'renderScrollMode', function () {
                         var t = e.state.dropdownVisible,
                             n = [e.renderReadView(!t)];
-                        return t && n.unshift(e.renderDropdown()), n;
+                        return (t && n.unshift(e.renderDropdown()), n);
                     }),
                     tl(t_(e), 'onChange', function (t) {
-                        e.toggleDropdown(), t !== e.props.year && e.props.onChange(t);
+                        (e.toggleDropdown(), t !== e.props.year && e.props.onChange(t));
                     }),
                     tl(t_(e), 'toggleDropdown', function (t) {
                         e.setState({ dropdownVisible: !e.state.dropdownVisible }, function () {
@@ -835,7 +835,7 @@
                         });
                     }),
                     tl(t_(e), 'handleYearChange', function (t, n) {
-                        e.onSelect(t, n), e.setOpen();
+                        (e.onSelect(t, n), e.setOpen());
                     }),
                     tl(t_(e), 'onSelect', function (t, n) {
                         e.props.onSelect && e.props.onSelect(t, n);
@@ -969,10 +969,10 @@
                     tl(t_(e), 'renderScrollMode', function (t) {
                         var n = e.state.dropdownVisible,
                             r = [e.renderReadView(!n, t)];
-                        return n && r.unshift(e.renderDropdown(t)), r;
+                        return (n && r.unshift(e.renderDropdown(t)), r);
                     }),
                     tl(t_(e), 'onChange', function (t) {
-                        e.toggleDropdown(), t !== e.props.month && e.props.onChange(t);
+                        (e.toggleDropdown(), t !== e.props.month && e.props.onChange(t));
                     }),
                     tl(t_(e), 'toggleDropdown', function () {
                         return e.setState({ dropdownVisible: !e.state.dropdownVisible });
@@ -1011,7 +1011,7 @@
             );
         })(ed.default.Component);
     function nd(e, t) {
-        for (var n = [], r = tL(e), i = tL(t); !e4.default(r, i); ) n.push(tI(r)), (r = ey.default(r, 1));
+        for (var n = [], r = tL(e), i = tL(t); !e4.default(r, i); ) (n.push(tI(r)), (r = ey.default(r, 1)));
         return n;
     }
     var nf = (function (e) {
@@ -1076,7 +1076,7 @@
                     tl(t_(e), 'renderSelectOptions', function () {
                         for (var t = tL(e.props.minDate), n = tL(e.props.maxDate), r = []; !e4.default(t, n); ) {
                             var i = ek.default(t);
-                            r.push(
+                            (r.push(
                                 ed.default.createElement(
                                     'option',
                                     {
@@ -1086,7 +1086,7 @@
                                     tA(t, e.props.dateFormat, e.props.locale)
                                 )
                             ),
-                                (t = ey.default(t, 1));
+                                (t = ey.default(t, 1)));
                         }
                         return r;
                     }),
@@ -1136,7 +1136,7 @@
                     tl(t_(e), 'renderScrollMode', function () {
                         var t = e.state.dropdownVisible,
                             n = [e.renderReadView(!t)];
-                        return t && n.unshift(e.renderDropdown()), n;
+                        return (t && n.unshift(e.renderDropdown()), n);
                     }),
                     tl(t_(e), 'onChange', function (t) {
                         e.toggleDropdown();
@@ -1185,7 +1185,7 @@
                         !e.isDisabled() && e.props.onMouseEnter && e.props.onMouseEnter(t);
                     }),
                     tl(t_(e), 'handleOnKeyDown', function (t) {
-                        ' ' === t.key && (t.preventDefault(), (t.key = 'Enter')), e.props.handleOnKeyDown(t);
+                        (' ' === t.key && (t.preventDefault(), (t.key = 'Enter')), e.props.handleOnKeyDown(t));
                     }),
                     tl(t_(e), 'isSameDay', function (t) {
                         return tG(e.props.day, t);
@@ -1309,7 +1309,7 @@
                     tl(t_(e), 'handleFocusDay', function () {
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                             n = !1;
-                        0 === e.getTabIndex() && !t.isInputFocused && e.isSameDay(e.props.preSelection) && ((document.activeElement && document.activeElement !== document.body) || (n = !0), e.props.inline && !e.props.shouldFocusDayInline && (n = !1), e.props.containerRef && e.props.containerRef.current && e.props.containerRef.current.contains(document.activeElement) && document.activeElement.classList.contains('react-datepicker__day') && (n = !0)), n && e.dayEl.current.focus({ preventScroll: !0 });
+                        (0 === e.getTabIndex() && !t.isInputFocused && e.isSameDay(e.props.preSelection) && ((document.activeElement && document.activeElement !== document.body) || (n = !0), e.props.inline && !e.props.shouldFocusDayInline && (n = !1), e.props.containerRef && e.props.containerRef.current && e.props.containerRef.current.contains(document.activeElement) && document.activeElement.classList.contains('react-datepicker__day') && (n = !0)), n && e.dayEl.current.focus({ preventScroll: !0 }));
                     }),
                     tl(t_(e), 'renderDayContents', function () {
                         return e.isOutsideMonth() && ((e.props.monthShowsDuplicateDaysEnd && 10 > eP.default(e.props.day)) || (e.props.monthShowsDuplicateDaysStart && eP.default(e.props.day) > 20)) ? null : e.props.renderDayContents ? e.props.renderDayContents(eP.default(e.props.day), e.props.day) : eP.default(e.props.day);
@@ -1409,7 +1409,7 @@
                         e.props.onDayMouseEnter && e.props.onDayMouseEnter(t);
                     }),
                     tl(t_(e), 'handleWeekClick', function (t, n, r) {
-                        'function' == typeof e.props.onWeekSelect && e.props.onWeekSelect(t, n, r), e.props.shouldCloseOnSelect && e.props.setOpen(!1);
+                        ('function' == typeof e.props.onWeekSelect && e.props.onWeekSelect(t, n, r), e.props.shouldCloseOnSelect && e.props.setOpen(!1));
                     }),
                     tl(t_(e), 'formatWeekNumber', function (t) {
                         return e.props.formatWeekNumber ? e.props.formatWeekNumber(t) : tR(t);
@@ -1607,7 +1607,7 @@
                                 !i;
 
                         ) {
-                            r++, (a = eb.default(a, 1));
+                            (r++, (a = eb.default(a, 1)));
                             var o = n && r >= 6,
                                 s = !n && !e.isWeekInMonth(a);
                             if (o || s) {
@@ -1628,7 +1628,7 @@
                         if (!e.props.disabledKeyboardNavigation)
                             switch (r) {
                                 case 'Enter':
-                                    e.onMonthClick(t, n), e.props.setPreSelection(e.props.selected);
+                                    (e.onMonthClick(t, n), e.props.setPreSelection(e.props.selected));
                                     break;
                                 case 'ArrowRight':
                                     e.handleMonthNavigation(11 === n ? 0 : n + 1, ey.default(e.props.preSelection, 1));
@@ -1821,10 +1821,10 @@
                     }),
                     tl(t_(e), 'liClasses', function (t, n, r) {
                         var i = ['react-datepicker__time-list-item', e.props.timeClassName ? e.props.timeClassName(t, n, r) : void 0];
-                        return e.props.selected && n === eC.default(t) && r === eN.default(t) && i.push('react-datepicker__time-list-item--selected'), (((e.props.minTime || e.props.maxTime) && t3(t, e.props)) || ((e.props.excludeTimes || e.props.includeTimes || e.props.filterTime) && t2(t, e.props))) && i.push('react-datepicker__time-list-item--disabled'), e.props.injectTimes && (60 * eC.default(t) + eN.default(t)) % e.props.intervals != 0 && i.push('react-datepicker__time-list-item--injected'), i.join(' ');
+                        return (e.props.selected && n === eC.default(t) && r === eN.default(t) && i.push('react-datepicker__time-list-item--selected'), (((e.props.minTime || e.props.maxTime) && t3(t, e.props)) || ((e.props.excludeTimes || e.props.includeTimes || e.props.filterTime) && t2(t, e.props))) && i.push('react-datepicker__time-list-item--disabled'), e.props.injectTimes && (60 * eC.default(t) + eN.default(t)) % e.props.intervals != 0 && i.push('react-datepicker__time-list-item--injected'), i.join(' '));
                     }),
                     tl(t_(e), 'handleOnKeyDown', function (t, n) {
-                        ' ' === t.key && (t.preventDefault(), (t.key = 'Enter')), 'Enter' === t.key && e.handleClick(n), e.props.handleOnKeyDown(t);
+                        (' ' === t.key && (t.preventDefault(), (t.key = 'Enter')), 'Enter' === t.key && e.handleClick(n), e.props.handleOnKeyDown(t));
                     }),
                     tl(t_(e), 'renderTimes', function () {
                         for (
@@ -1881,7 +1881,7 @@
                         {
                             key: 'componentDidMount',
                             value: function () {
-                                (this.list.scrollTop = n.calcCenterPosition(this.props.monthRef ? this.props.monthRef.clientHeight - this.header.clientHeight : this.list.clientHeight, this.centerLi)), this.props.monthRef && this.header && this.setState({ height: this.props.monthRef.clientHeight - this.header.clientHeight });
+                                ((this.list.scrollTop = n.calcCenterPosition(this.props.monthRef ? this.props.monthRef.clientHeight - this.header.clientHeight : this.list.clientHeight, this.centerLi)), this.props.monthRef && this.header && this.setState({ height: this.props.monthRef.clientHeight - this.header.clientHeight }));
                             }
                         },
                         {
@@ -2031,7 +2031,7 @@
                     tl(t_((r = t.call(this, e))), 'onTimeChange', function (e) {
                         r.setState({ time: e });
                         var t = new Date();
-                        t.setHours(e.split(':')[0]), t.setMinutes(e.split(':')[1]), r.props.onChange(t);
+                        (t.setHours(e.split(':')[0]), t.setMinutes(e.split(':')[1]), r.props.onChange(t));
                     }),
                     tl(t_(r), 'renderTimeInput', function () {
                         var e = r.state.time,
@@ -2147,22 +2147,22 @@
                         );
                     }),
                     tl(t_(r), 'handleDayClick', function (e, t, n) {
-                        r.props.onSelect(e, t, n), r.props.setPreSelection && r.props.setPreSelection(e);
+                        (r.props.onSelect(e, t, n), r.props.setPreSelection && r.props.setPreSelection(e));
                     }),
                     tl(t_(r), 'handleDayMouseEnter', function (e) {
-                        r.setState({ selectingDate: e }), r.props.onDayMouseEnter && r.props.onDayMouseEnter(e);
+                        (r.setState({ selectingDate: e }), r.props.onDayMouseEnter && r.props.onDayMouseEnter(e));
                     }),
                     tl(t_(r), 'handleMonthMouseLeave', function () {
-                        r.setState({ selectingDate: null }), r.props.onMonthMouseLeave && r.props.onMonthMouseLeave();
+                        (r.setState({ selectingDate: null }), r.props.onMonthMouseLeave && r.props.onMonthMouseLeave());
                     }),
                     tl(t_(r), 'handleYearChange', function (e) {
-                        r.props.onYearChange && r.props.onYearChange(e), r.props.adjustDateOnChange && (r.props.onSelect && r.props.onSelect(e), r.props.setOpen && r.props.setOpen(!0)), r.props.setPreSelection && r.props.setPreSelection(e);
+                        (r.props.onYearChange && r.props.onYearChange(e), r.props.adjustDateOnChange && (r.props.onSelect && r.props.onSelect(e), r.props.setOpen && r.props.setOpen(!0)), r.props.setPreSelection && r.props.setPreSelection(e));
                     }),
                     tl(t_(r), 'handleMonthChange', function (e) {
-                        r.props.onMonthChange && r.props.onMonthChange(e), r.props.adjustDateOnChange && (r.props.onSelect && r.props.onSelect(e), r.props.setOpen && r.props.setOpen(!0)), r.props.setPreSelection && r.props.setPreSelection(e);
+                        (r.props.onMonthChange && r.props.onMonthChange(e), r.props.adjustDateOnChange && (r.props.onSelect && r.props.onSelect(e), r.props.setOpen && r.props.setOpen(!0)), r.props.setPreSelection && r.props.setPreSelection(e));
                     }),
                     tl(t_(r), 'handleMonthYearChange', function (e) {
-                        r.handleYearChange(e), r.handleMonthChange(e);
+                        (r.handleYearChange(e), r.handleMonthChange(e));
                     }),
                     tl(t_(r), 'changeYear', function (e) {
                         r.setState(
@@ -2278,7 +2278,7 @@
                             if ((r.props.forceShowMonthNavigation || r.props.showDisabledMonthNavigation || !e) && !r.props.showTimeSelectOnly) {
                                 var t = ['react-datepicker__navigation', 'react-datepicker__navigation--previous'],
                                     n = r.decreaseMonth;
-                                (r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker) && (n = r.decreaseYear), e && r.props.showDisabledMonthNavigation && (t.push('react-datepicker__navigation--previous--disabled'), (n = null));
+                                ((r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker) && (n = r.decreaseYear), e && r.props.showDisabledMonthNavigation && (t.push('react-datepicker__navigation--previous--disabled'), (n = null)));
                                 var i = r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker,
                                     a = r.props,
                                     o = a.previousMonthAriaLabel,
@@ -2332,9 +2332,9 @@
                             }
                             if ((r.props.forceShowMonthNavigation || r.props.showDisabledMonthNavigation || !e) && !r.props.showTimeSelectOnly) {
                                 var t = ['react-datepicker__navigation', 'react-datepicker__navigation--next'];
-                                r.props.showTimeSelect && t.push('react-datepicker__navigation--next--with-time'), r.props.todayButton && t.push('react-datepicker__navigation--next--with-today-button');
+                                (r.props.showTimeSelect && t.push('react-datepicker__navigation--next--with-time'), r.props.todayButton && t.push('react-datepicker__navigation--next--with-today-button'));
                                 var n = r.increaseMonth;
-                                (r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker) && (n = r.increaseYear), e && r.props.showDisabledMonthNavigation && (t.push('react-datepicker__navigation--next--disabled'), (n = null));
+                                ((r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker) && (n = r.increaseYear), e && r.props.showDisabledMonthNavigation && (t.push('react-datepicker__navigation--next--disabled'), (n = null)));
                                 var i = r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker,
                                     a = r.props,
                                     o = a.nextMonthAriaLabel,
@@ -2357,7 +2357,7 @@
                     tl(t_(r), 'renderCurrentMonth', function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.state.date,
                             t = ['react-datepicker__current-month'];
-                        return r.props.showYearDropdown && t.push('react-datepicker__current-month--hasYearDropdown'), r.props.showMonthDropdown && t.push('react-datepicker__current-month--hasMonthDropdown'), r.props.showMonthYearDropdown && t.push('react-datepicker__current-month--hasMonthYearDropdown'), ed.default.createElement('div', { className: t.join(' ') }, tA(e, r.props.dateFormat, r.props.locale));
+                        return (r.props.showYearDropdown && t.push('react-datepicker__current-month--hasYearDropdown'), r.props.showMonthDropdown && t.push('react-datepicker__current-month--hasMonthDropdown'), r.props.showMonthYearDropdown && t.push('react-datepicker__current-month--hasMonthYearDropdown'), ed.default.createElement('div', { className: t.join(' ') }, tA(e, r.props.dateFormat, r.props.locale)));
                     }),
                     tl(t_(r), 'renderYearDropdown', function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -2780,14 +2780,14 @@
             var t = th(n);
             function n(e) {
                 var r;
-                return ta(this, n), ((r = t.call(this, e)).el = document.createElement('div')), r;
+                return (ta(this, n), ((r = t.call(this, e)).el = document.createElement('div')), r);
             }
             return (
                 ts(n, [
                     {
                         key: 'componentDidMount',
                         value: function () {
-                            (this.portalRoot = document.getElementById(this.props.portalId)), this.portalRoot || ((this.portalRoot = document.createElement('div')), this.portalRoot.setAttribute('id', this.props.portalId), document.body.appendChild(this.portalRoot)), this.portalRoot.appendChild(this.el);
+                            ((this.portalRoot = document.getElementById(this.props.portalId)), this.portalRoot || ((this.portalRoot = document.createElement('div')), this.portalRoot.setAttribute('id', this.props.portalId), document.body.appendChild(this.portalRoot)), this.portalRoot.appendChild(this.el));
                         }
                     },
                     {
@@ -2810,7 +2810,7 @@
             tu(n, e);
             var t = th(n);
             function n() {
-                return ta(this, n), t.apply(this, arguments);
+                return (ta(this, n), t.apply(this, arguments));
             }
             return (
                 ts(
@@ -2866,7 +2866,7 @@
                                         }
                                     );
                                 }
-                                this.props.popperContainer && (e = ed.default.createElement(this.props.popperContainer, {}, e)), f && !i && (e = ed.default.createElement(nN, { portalId: f }, e));
+                                (this.props.popperContainer && (e = ed.default.createElement(this.props.popperContainer, {}, e)), f && !i && (e = ed.default.createElement(nN, { portalId: f }, e)));
                                 var p = ef.default('react-datepicker-wrapper', r);
                                 return ed.default.createElement(
                                     el.Manager,
@@ -2939,7 +2939,7 @@
                         r.input && r.input.focus && r.input.focus({ preventScroll: !0 });
                     }),
                     tl(t_(r), 'setBlur', function () {
-                        r.input && r.input.blur && r.input.blur(), r.cancelFocusInput();
+                        (r.input && r.input.blur && r.input.blur(), r.cancelFocusInput());
                     }),
                     tl(t_(r), 'setOpen', function (e) {
                         var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -2956,7 +2956,7 @@
                                             return { focused: !!t && e.focused };
                                         },
                                         function () {
-                                            t || r.setBlur(), r.setState({ inputValue: null });
+                                            (t || r.setBlur(), r.setState({ inputValue: null }));
                                         }
                                     );
                             }
@@ -2969,25 +2969,25 @@
                         return void 0 === r.props.open ? r.state.open && !r.props.disabled && !r.props.readOnly : r.props.open;
                     }),
                     tl(t_(r), 'handleFocus', function (e) {
-                        r.state.preventFocus || (r.props.onFocus(e), r.props.preventOpenOnFocus || r.props.readOnly || r.setOpen(!0)), r.setState({ focused: !0 });
+                        (r.state.preventFocus || (r.props.onFocus(e), r.props.preventOpenOnFocus || r.props.readOnly || r.setOpen(!0)), r.setState({ focused: !0 }));
                     }),
                     tl(t_(r), 'cancelFocusInput', function () {
-                        clearTimeout(r.inputFocusTimeout), (r.inputFocusTimeout = null);
+                        (clearTimeout(r.inputFocusTimeout), (r.inputFocusTimeout = null));
                     }),
                     tl(t_(r), 'deferFocusInput', function () {
-                        r.cancelFocusInput(),
+                        (r.cancelFocusInput(),
                             (r.inputFocusTimeout = setTimeout(function () {
                                 return r.setFocus();
-                            }, 1));
+                            }, 1)));
                     }),
                     tl(t_(r), 'handleDropdownFocus', function () {
                         r.cancelFocusInput();
                     }),
                     tl(t_(r), 'handleBlur', function (e) {
-                        (!r.state.open || r.props.withPortal || r.props.showTimeInput) && r.props.onBlur(e), r.setState({ focused: !1 });
+                        ((!r.state.open || r.props.withPortal || r.props.showTimeInput) && r.props.onBlur(e), r.setState({ focused: !1 }));
                     }),
                     tl(t_(r), 'handleCalendarClickOutside', function (e) {
-                        r.props.inline || r.setOpen(!1), r.props.onClickOutside(e), r.props.withPortal && e.preventDefault();
+                        (r.props.inline || r.setOpen(!1), r.props.onClickOutside(e), r.props.withPortal && e.preventDefault());
                     }),
                     tl(t_(r), 'handleChange', function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -3048,7 +3048,7 @@
                                 ) {
                                     var d = c && !u,
                                         f = c && u;
-                                    c || u ? d && s(e5.default(a, c) ? [a, null] : [c, a], t) : s([a, null], t), f && s([a, null], t);
+                                    (c || u ? d && s(e5.default(a, c) ? [a, null] : [c, a], t) : s([a, null], t), f && s([a, null], t));
                                 } else s(a, t);
                             n || (r.props.onSelect(a, t), r.setState({ inputValue: null }));
                         }
@@ -3075,10 +3075,10 @@
                             hour: eC.default(e),
                             minute: eN.default(e)
                         });
-                        r.setState({ preSelection: t }), r.props.onChange(t), r.props.shouldCloseOnSelect && r.setOpen(!1), r.props.showTimeInput && r.setOpen(!0), r.setState({ inputValue: null });
+                        (r.setState({ preSelection: t }), r.props.onChange(t), r.props.shouldCloseOnSelect && r.setOpen(!1), r.props.showTimeInput && r.setOpen(!0), r.setState({ inputValue: null }));
                     }),
                     tl(t_(r), 'onInputClick', function () {
-                        r.props.disabled || r.props.readOnly || r.setOpen(!0), r.props.onInputClick();
+                        (r.props.disabled || r.props.readOnly || r.setOpen(!0), r.props.onInputClick());
                     }),
                     tl(t_(r), 'onInputKeyDown', function (e) {
                         r.props.onKeyDown(e);
@@ -3091,12 +3091,12 @@
                                     return void (n && n.focus({ preventScroll: !0 }));
                                 }
                                 var i = tI(r.state.preSelection);
-                                'Enter' === t ? (e.preventDefault(), r.inputOk() && r.state.lastPreSelectChange === nx ? (r.handleSelect(i, e), r.props.shouldCloseOnSelect || r.setPreSelection(i)) : r.setOpen(!1)) : 'Escape' === t && (e.preventDefault(), r.setOpen(!1)),
+                                ('Enter' === t ? (e.preventDefault(), r.inputOk() && r.state.lastPreSelectChange === nx ? (r.handleSelect(i, e), r.props.shouldCloseOnSelect || r.setPreSelection(i)) : r.setOpen(!1)) : 'Escape' === t && (e.preventDefault(), r.setOpen(!1)),
                                     r.inputOk() ||
                                         r.props.onInputError({
                                             code: 1,
                                             msg: nw
-                                        });
+                                        }));
                             }
                         } else ('ArrowDown' !== t && 'ArrowUp' !== t && 'Enter' !== t) || r.onInputClick();
                     }),
@@ -3105,15 +3105,15 @@
                         var t,
                             n = e.key,
                             i = tI(r.state.preSelection);
-                        if ('Enter' === n) e.preventDefault(), r.handleSelect(i, e), r.props.shouldCloseOnSelect || r.setPreSelection(i);
+                        if ('Enter' === n) (e.preventDefault(), r.handleSelect(i, e), r.props.shouldCloseOnSelect || r.setPreSelection(i));
                         else if ('Escape' === n)
-                            e.preventDefault(),
+                            (e.preventDefault(),
                                 r.setOpen(!1),
                                 r.inputOk() ||
                                     r.props.onInputError({
                                         code: 1,
                                         msg: nw
-                                    });
+                                    }));
                         else if (!r.props.disabledKeyboardNavigation) {
                             switch (n) {
                                 case 'ArrowLeft':
@@ -3161,14 +3161,14 @@
                         'Escape' === e.key &&
                             (e.preventDefault(),
                             r.setState({ preventFocus: !0 }, function () {
-                                r.setOpen(!1),
+                                (r.setOpen(!1),
                                     setTimeout(function () {
-                                        r.setFocus(), r.setState({ preventFocus: !1 });
-                                    });
+                                        (r.setFocus(), r.setState({ preventFocus: !1 }));
+                                    }));
                             }));
                     }),
                     tl(t_(r), 'onClearClick', function (e) {
-                        e && e.preventDefault && e.preventDefault(), r.props.selectsRange ? r.props.onChange([null, null], e) : r.props.onChange(null, e), r.setState({ inputValue: null });
+                        (e && e.preventDefault && e.preventDefault(), r.props.selectsRange ? r.props.onChange([null, null], e) : r.props.onChange(null, e), r.setState({ inputValue: null }));
                     }),
                     tl(t_(r), 'clear', function () {
                         r.onClearClick();
@@ -3374,13 +3374,13 @@
                             key: 'componentDidUpdate',
                             value: function (e, t) {
                                 var n, r;
-                                e.inline && ((n = e.selected), (r = this.props.selected), n && r ? eD.default(n) !== eD.default(r) || ex.default(n) !== ex.default(r) : n !== r) && this.setPreSelection(this.props.selected), void 0 !== this.state.monthSelectedIn && e.monthsShown !== this.props.monthsShown && this.setState({ monthSelectedIn: 0 }), e.highlightDates !== this.props.highlightDates && this.setState({ highlightDates: ne(this.props.highlightDates) }), t.focused || tB(e.selected, this.props.selected) || this.setState({ inputValue: null }), t.open !== this.state.open && (!1 === t.open && !0 === this.state.open && this.props.onCalendarOpen(), !0 === t.open && !1 === this.state.open && this.props.onCalendarClose());
+                                (e.inline && ((n = e.selected), (r = this.props.selected), n && r ? eD.default(n) !== eD.default(r) || ex.default(n) !== ex.default(r) : n !== r) && this.setPreSelection(this.props.selected), void 0 !== this.state.monthSelectedIn && e.monthsShown !== this.props.monthsShown && this.setState({ monthSelectedIn: 0 }), e.highlightDates !== this.props.highlightDates && this.setState({ highlightDates: ne(this.props.highlightDates) }), t.focused || tB(e.selected, this.props.selected) || this.setState({ inputValue: null }), t.open !== this.state.open && (!1 === t.open && !0 === this.state.open && this.props.onCalendarOpen(), !0 === t.open && !1 === this.state.open && this.props.onCalendarClose()));
                             }
                         },
                         {
                             key: 'componentWillUnmount',
                             value: function () {
-                                this.clearPreventFocusTimeout(), window.removeEventListener('scroll', this.onScroll, !0);
+                                (this.clearPreventFocusTimeout(), window.removeEventListener('scroll', this.onScroll, !0));
                             }
                         },
                         {
@@ -3473,15 +3473,15 @@
         })(ed.default.Component),
         nL = 'input',
         nx = 'navigate';
-    (e.CalendarContainer = nv),
+    ((e.CalendarContainer = nv),
         (e.default = nD),
         (e.getDefaultLocale = tF),
         (e.registerLocale = function (e, t) {
             var r = 'undefined' != typeof window ? window : n.g;
-            r.__localeData__ || (r.__localeData__ = {}), (r.__localeData__[e] = t);
+            (r.__localeData__ || (r.__localeData__ = {}), (r.__localeData__[e] = t));
         }),
         (e.setDefaultLocale = function (e) {
             ('undefined' != typeof window ? window : n.g).__localeId__ = e;
         }),
-        Object.defineProperty(e, '__esModule', { value: !0 });
+        Object.defineProperty(e, '__esModule', { value: !0 }));
 });

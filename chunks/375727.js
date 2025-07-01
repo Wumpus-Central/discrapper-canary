@@ -1,4 +1,4 @@
-n.d(t, { I: () => N }), n(388685);
+(n.d(t, { I: () => N }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -43,7 +43,7 @@ let E = new u.Z('EmojiStudio'),
                         analyticsLocation: { page: _.ZY5.EMOJI_STUDIO }
                     });
                 } catch (e) {
-                    S((0, v.z)(e)), E.error('Failed to upload emoji.', e);
+                    (S((0, v.z)(e)), E.error('Failed to upload emoji.', e));
                     return;
                 }
                 (0, o.Mr3)(m.Hj);
@@ -52,17 +52,17 @@ let E = new u.Z('EmojiStudio'),
                 A(e.length < 2 ? e : g.ZP.sanitizeEmojiName(e));
             }, []),
             P = l.useCallback(() => {
-                S(null), u(null), M(null), A('');
+                (S(null), u(null), M(null), A(''));
             }, []),
             L = l.useRef(0),
             z = l.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: n = 0, error: r } = e,
                     l = null;
-                null != t && g.ZP.isDataTooBig(t) && (l = m.ze.TOO_BIG), S(null != r ? r : l), n < L.current || (null != t && (M(t), (L.current = n)));
+                (null != t && g.ZP.isDataTooBig(t) && (l = m.ze.TOO_BIG), S(null != r ? r : l), n < L.current || (null != t && (M(t), (L.current = n))));
             }, []),
             Z = l.useCallback((e) => {
                 var t;
-                u(e),
+                (u(e),
                     A((t) => {
                         var n, r;
                         if ('' !== t) return t;
@@ -71,7 +71,7 @@ let E = new u.Z('EmojiStudio'),
                             s = -1 === a ? l : l.substring(0, a);
                         return g.ZP.sanitizeEmojiName(s);
                     }),
-                    M(null != (t = null == e ? void 0 : e.data) ? t : null);
+                    M(null != (t = null == e ? void 0 : e.data) ? t : null));
             }, []);
         return (0, r.jsxs)('main', {
             className: s()(j.main, { [j.checkerboard]: null != a }),

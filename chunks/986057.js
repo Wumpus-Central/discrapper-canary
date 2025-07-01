@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(846027),
     i = n(147913),
     a = n(353926),
@@ -43,7 +43,7 @@ class h extends i.Z {
         e !== l.Z.getLoopbackReasons().has('voice_filter') && r.Z.setLoopback('voice_filter', e);
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             f(this, 'actions', {
                 VOICE_FILTER_LOOPBACK_TOGGLE: this.updateLoopbackState,
                 RTC_CONNECTION_STATE: this.updateLoopbackState,
@@ -52,7 +52,7 @@ class h extends i.Z {
                 AUDIO_SET_TEMPORARY_SELF_MUTE: this.updateLoopbackState,
                 AUDIO_SET_SELF_MUTE: this.updateLoopbackState
             }),
-            f(this, 'stores', new Map().set(a.Z, this.handleExperimentStateChange));
+            f(this, 'stores', new Map().set(a.Z, this.handleExperimentStateChange)));
     }
 }
 let m = new h();

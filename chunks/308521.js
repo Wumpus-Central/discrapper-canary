@@ -98,10 +98,10 @@ function c(e, t) {
                                     }
                                 );
                             case 5:
-                                o.label++, (r = a[1]), (a = [0]);
+                                (o.label++, (r = a[1]), (a = [0]));
                                 continue;
                             case 7:
-                                (a = o.ops.pop()), o.trys.pop();
+                                ((a = o.ops.pop()), o.trys.pop());
                                 continue;
                             default:
                                 if (!(i = (i = o.trys).length > 0 && i[i.length - 1]) && (6 === a[0] || 2 === a[0])) {
@@ -113,19 +113,19 @@ function c(e, t) {
                                     break;
                                 }
                                 if (6 === a[0] && o.label < i[1]) {
-                                    (o.label = i[1]), (i = a);
+                                    ((o.label = i[1]), (i = a));
                                     break;
                                 }
                                 if (i && o.label < i[2]) {
-                                    (o.label = i[2]), o.ops.push(a);
+                                    ((o.label = i[2]), o.ops.push(a));
                                     break;
                                 }
-                                i[2] && o.ops.pop(), o.trys.pop();
+                                (i[2] && o.ops.pop(), o.trys.pop());
                                 continue;
                         }
                         a = t.call(e, o);
                     } catch (e) {
-                        (a = [6, e]), (r = 0);
+                        ((a = [6, e]), (r = 0));
                     } finally {
                         n = i = 0;
                     }
@@ -169,7 +169,7 @@ function d() {
 }
 var f = (function () {
         function e() {}
-        return (e.prototype.observe = function () {}), (e.prototype.unobserve = function () {}), (e.prototype.disconnect = function () {}), e;
+        return ((e.prototype.observe = function () {}), (e.prototype.unobserve = function () {}), (e.prototype.disconnect = function () {}), e);
     })(),
     _ = globalThis.ResizeObserver || f,
     p = void 0 !== globalThis.ResizeObserver,
@@ -214,10 +214,10 @@ function m(e, t) {
                 (l = 0),
                 function () {
                     for (var e = this, t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
-                    clearTimeout(l),
+                    (clearTimeout(l),
                         (l = window.setTimeout(function () {
                             return o.apply(e, t);
-                        }, s));
+                        }, s)));
                 })
             )
         );
@@ -230,7 +230,7 @@ function m(e, t) {
                     return (
                         e.current && p && n.observe(e.current),
                         function () {
-                            n.disconnect(), r && p && n.unobserve(r);
+                            (n.disconnect(), r && p && n.unobserve(r));
                         }
                     );
                 }
@@ -308,7 +308,7 @@ function b(e) {
             },
             [a, N, x, k]
         );
-    r.useEffect(
+    (r.useEffect(
         function () {
             if (C && a.current && n) {
                 var e = M(),
@@ -321,7 +321,7 @@ function b(e) {
                         if (s || t * D !== v || r * D !== O) {
                             var c = D * t,
                                 u = D * r;
-                            (i.width = c),
+                            ((i.width = c),
                                 (i.height = u),
                                 (i.style.width = t + 'px'),
                                 (i.style.height = r + 'px'),
@@ -329,7 +329,7 @@ function b(e) {
                                     width: c,
                                     height: u
                                 }),
-                                (o = !0);
+                                (o = !0));
                         }
                     } else
                         s &&
@@ -345,7 +345,7 @@ function b(e) {
                         height: r
                     });
                 }
-                l && (S || o) && l && l(), S && A(!1);
+                (l && (S || o) && l && l(), S && A(!1));
             }
         },
         [i, a, w, D, M, S, A, O, v, p, h, l, C, N, R, n]
@@ -358,38 +358,38 @@ function b(e) {
                 });
             },
             [i]
-        );
+        ));
 }
 var y,
     O = (function () {
         function e() {}
-        return (e.prototype.observe = function () {}), (e.prototype.unobserve = function () {}), (e.prototype.disconnect = function () {}), e;
+        return ((e.prototype.observe = function () {}), (e.prototype.unobserve = function () {}), (e.prototype.disconnect = function () {}), e);
     })(),
     v = globalThis.IntersectionObserver || O,
     I = (function () {
         function e() {
             var e = this;
-            (this.elementsMap = new Map()),
+            ((this.elementsMap = new Map()),
                 (this.onObserved = function (t) {
                     t.forEach(function (t) {
                         var n = e.elementsMap.get(t.target);
                         n && n(t);
                     });
                 }),
-                (this.observer = new v(this.onObserved));
+                (this.observer = new v(this.onObserved)));
         }
         return (
             (e.prototype.registerCallback = function (e, t) {
-                this.observer.observe(e), this.elementsMap.set(e, t);
+                (this.observer.observe(e), this.elementsMap.set(e, t));
             }),
             (e.prototype.removeCallback = function (e) {
-                this.observer.unobserve(e), this.elementsMap.delete(e);
+                (this.observer.unobserve(e), this.elementsMap.delete(e));
             }),
             e
         );
     })(),
     T = function () {
-        return y || (y = new I()), y;
+        return (y || (y = new I()), y);
     };
 function S(e) {
     var t = e.setContainerRef,
@@ -449,9 +449,9 @@ function A(e, t) {
                 if (f) {
                     if (f.layout && f.layout.fit === i.Fit.Layout && s) {
                         var e = m * f.layout.layoutScaleFactor;
-                        (f.devicePixelRatioUsed = m), (f.artboardWidth = (null == s ? void 0 : s.width) / e), (f.artboardHeight = (null == s ? void 0 : s.height) / e);
+                        ((f.devicePixelRatioUsed = m), (f.artboardWidth = (null == s ? void 0 : s.width) / e), (f.artboardHeight = (null == s ? void 0 : s.height) / e));
                     }
-                    f.startRendering(), f.resizeToCanvas();
+                    (f.startRendering(), f.resizeToCanvas());
                 }
             },
             [f, m]
@@ -465,7 +465,7 @@ function A(e, t) {
         artboardBounds: null == f ? void 0 : f.bounds
     });
     var y = r.useCallback(function (e) {
-        null === e && s && ((s.height = 0), (s.width = 0)), l(e);
+        (null === e && s && ((s.height = 0), (s.width = 0)), l(e));
     }, []);
     r.useEffect(
         function () {
@@ -475,7 +475,7 @@ function A(e, t) {
                 if (null == f) {
                     var r = h.useOffscreenRenderer;
                     (t = new i.Rive(o(o({ useOffscreenRenderer: r }, e), { canvas: s }))).on(i.EventType.Load, function () {
-                        (n = !0), s ? _(t) : t.cleanup();
+                        ((n = !0), s ? _(t) : t.cleanup());
                     });
                 }
                 return function () {
@@ -498,7 +498,7 @@ function A(e, t) {
         },
         I = v.observe,
         A = v.unobserve;
-    r.useEffect(
+    (r.useEffect(
         function () {
             var e,
                 t = !1,
@@ -512,7 +512,7 @@ function A(e, t) {
                 s &&
                     !1 !== h.shouldUseIntersectionObserver &&
                     I(s, function (r) {
-                        r.isIntersecting ? f && f.startRendering() : f && f.stopRendering(), (t = !r.isIntersecting), clearTimeout(e), r.isIntersecting || 0 !== r.boundingClientRect.width || (e = setTimeout(n, 10));
+                        (r.isIntersecting ? f && f.startRendering() : f && f.stopRendering(), (t = !r.isIntersecting), clearTimeout(e), r.isIntersecting || 0 !== r.boundingClientRect.width || (e = setTimeout(n, 10)));
                     }),
                 function () {
                     s && A(s);
@@ -528,7 +528,7 @@ function A(e, t) {
                 };
             },
             [f, s]
-        );
+        ));
     var N = null == e ? void 0 : e.animations;
     r.useEffect(
         function () {
@@ -583,12 +583,12 @@ function N(e, t, n) {
         var e = p.current,
             t = h.current,
             n = m.current;
-        if (!e || !t) return s(null), u(n.defaultValue), _(null), function () {};
+        if (!e || !t) return (s(null), u(n.defaultValue), _(null), function () {});
         var r = n.getProperty(e, t);
         if (r) {
-            s(r), u(n.getValue(r)), n.getExtendedData && _(n.getExtendedData(r));
+            (s(r), u(n.getValue(r)), n.getExtendedData && _(n.getExtendedData(r)));
             var i = function () {
-                u(n.getValue(r)), n.getExtendedData && _(n.getExtendedData(r)), n.onPropertyEvent && n.onPropertyEvent();
+                (u(n.getValue(r)), n.getExtendedData && _(n.getExtendedData(r)), n.onPropertyEvent && n.onPropertyEvent());
             };
             return (
                 r.on(i),
@@ -601,7 +601,7 @@ function N(e, t, n) {
     }, []);
     r.useEffect(
         function () {
-            return (p.current = t), (h.current = e), g();
+            return ((p.current = t), (h.current = e), g());
         },
         [t, e, g]
     );
@@ -609,7 +609,7 @@ function N(e, t, n) {
             function (e) {
                 if (a && p.current === t)
                     try {
-                        return e(a), void (m.current.getExtendedData && _(m.current.getExtendedData(a)));
+                        return (e(a), void (m.current.getExtendedData && _(m.current.getExtendedData(a))));
                     } catch (e) {}
                 if (p.current)
                     try {
@@ -626,9 +626,9 @@ function N(e, t, n) {
             [E]
         ),
         y = o({ value: c }, b);
-    return n.getExtendedData && (y.extendedData = f), y;
+    return (n.getExtendedData && (y.extendedData = f), y);
 }
-(t.default = function (e) {
+((t.default = function (e) {
     var t = e.src,
         n = e.artboard,
         r = e.animations,
@@ -680,17 +680,17 @@ function N(e, t, n) {
                         l(t, void 0, void 0, function () {
                             return c(this, function (t) {
                                 try {
-                                    d('loading'),
+                                    (d('loading'),
                                         (n = new i.RiveFile(e)).init(),
                                         n.on(i.EventType.Load, function () {
-                                            null == n || n.getInstance(), o(n), d('success');
+                                            (null == n || n.getInstance(), o(n), d('success'));
                                         }),
                                         n.on(i.EventType.LoadError, function () {
                                             d('failed');
                                         }),
-                                        o(n);
+                                        o(n));
                                 } catch (e) {
-                                    console.error(e), d('failed');
+                                    (console.error(e), d('failed'));
                                 }
                                 return [2];
                             });
@@ -722,15 +722,15 @@ function N(e, t, n) {
                                 var i = r.find(function (e) {
                                     return e.name === n;
                                 });
-                                void 0 !== a && i && (i.value = a), l(i || null);
+                                (void 0 !== a && i && (i.value = a), l(i || null));
                             }
                         } else l(null);
                     }
-                    r(),
+                    (r(),
                         e &&
                             e.on(i.EventType.Load, function () {
                                 r();
-                            });
+                            }));
                 },
                 [e]
             ),
@@ -785,7 +785,7 @@ function N(e, t, n) {
                     var t, n, r;
                     if (e) {
                         var a = null;
-                        f((a = null != i ? e.instanceByName(i) || null : o ? (null == (t = e.defaultInstance) ? void 0 : t.call(e)) || null : l ? (null == (n = e.instance) ? void 0 : n.call(e)) || null : (null == (r = e.defaultInstance) ? void 0 : r.call(e)) || null)), c && a && c.viewModelInstance !== a && c.bindViewModelInstance(a);
+                        (f((a = null != i ? e.instanceByName(i) || null : o ? (null == (t = e.defaultInstance) ? void 0 : t.call(e)) || null : l ? (null == (n = e.instance) ? void 0 : n.call(e)) || null : (null == (r = e.defaultInstance) ? void 0 : r.call(e)) || null)), c && a && c.viewModelInstance !== a && c.bindViewModelInstance(a));
                     } else f(null);
                 },
                 [e, i, o, l, c]
@@ -972,4 +972,4 @@ function N(e, t, n) {
                     return i[e];
                 }
             });
-    });
+    }));

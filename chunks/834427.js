@@ -1,4 +1,4 @@
-n.d(t, { S: () => c }), n(388685);
+(n.d(t, { S: () => c }), n(388685));
 var r,
     i = n(255367),
     a = n(73800);
@@ -55,7 +55,7 @@ class c extends (r = a.Component) {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             o(this, '_input', null),
             o(this, 'activateUploadDialogue', () => {
                 this._input && this._input.click();
@@ -68,7 +68,7 @@ class c extends (r = a.Component) {
             }),
             o(this, 'handleBrowserInputMouseDown', (e) => {
                 e.currentTarget.value = null;
-            });
+            }));
     }
 }
 o(c, 'defaultProps', {

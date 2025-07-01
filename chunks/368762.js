@@ -14,28 +14,28 @@ function i(e, t) {
 function a(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+        ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
     }
 }
 function o(e, t, n) {
-    return t && a(e.prototype, t), n && a(e, n), e;
+    return (t && a(e.prototype, t), n && a(e, n), e);
 }
 function s(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
-    (e.prototype = Object.create(t && t.prototype, {
+    ((e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             writable: !0,
             configurable: !0
         }
     })),
-        t && l(e, t);
+        t && l(e, t));
 }
 function l(e, t) {
     return (l =
         Object.setPrototypeOf ||
         function (e, t) {
-            return (e.__proto__ = t), e;
+            return ((e.__proto__ = t), e);
         })(e, t);
 }
 function c(e) {
@@ -43,7 +43,7 @@ function c(e) {
     return function () {
         var n,
             r = _(e);
-        return (n = t ? Reflect.construct(r, arguments, _(this).constructor) : r.apply(this, arguments)), u(this, n);
+        return ((n = t ? Reflect.construct(r, arguments, _(this).constructor) : r.apply(this, arguments)), u(this, n));
     };
 }
 function u(e, t) {
@@ -57,7 +57,7 @@ function f() {
     if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {
-        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+        return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
     } catch (e) {
         return !1;
     }
@@ -90,7 +90,7 @@ var h = (function (e) {
         var e;
         i(this, n);
         for (var r = arguments.length, a = Array(r), o = 0; o < r; o++) a[o] = arguments[o];
-        return p(d((e = t.call.apply(t, [this].concat(a)))), 'priority', 140), p(d(e), 'incompatibleTokens', ['R', 'u', 't', 'T']), e;
+        return (p(d((e = t.call.apply(t, [this].concat(a)))), 'priority', 140), p(d(e), 'incompatibleTokens', ['R', 'u', 't', 'T']), e);
     }
     return (
         o(n, [
@@ -112,7 +112,7 @@ var h = (function (e) {
             {
                 key: 'set',
                 value: function (e, t, n) {
-                    return (t.era = n), e.setUTCFullYear(n, 0, 1), e.setUTCHours(0, 0, 0, 0), e;
+                    return ((t.era = n), e.setUTCFullYear(n, 0, 1), e.setUTCHours(0, 0, 0, 0), e);
                 }
             }
         ]),

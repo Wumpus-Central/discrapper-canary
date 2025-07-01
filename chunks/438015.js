@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+(n.d(t, { Z: () => d }), n(388685));
 var i = n(255367),
     r = n(73800),
     o = n(13245),
@@ -70,12 +70,12 @@ class c extends r.Component {
                             i,
                             r = {},
                             o = Object.keys(e);
-                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                 }
                 return r;
             })(this.props.notification.props, ['renderFooter', 'onNotificationShow', 'onDismissClick', 'onNotificationClick', 'onConfirmClick', 'onCancelClick']);
@@ -85,7 +85,7 @@ class c extends r.Component {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
+                    ('function' == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -93,7 +93,7 @@ class c extends r.Component {
                         )),
                         i.forEach(function (t) {
                             a(e, t, n[t]);
-                        });
+                        }));
                 }
                 return e;
             })({}, h)),
@@ -124,7 +124,7 @@ class c extends r.Component {
         );
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             a(this, 'handleNotificationShow', () => {
                 let {
                     id: e,
@@ -137,7 +137,7 @@ class c extends r.Component {
                     id: t,
                     props: { onDismissClick: n }
                 } = this.props.notification;
-                o.Z.updateNotificationStatus(t), null == n || n(e, t);
+                (o.Z.updateNotificationStatus(t), null == n || n(e, t));
             }),
             a(this, 'handleNotificationClick', (e) => {
                 let {
@@ -167,7 +167,7 @@ class c extends r.Component {
                     } = this.props.notification,
                     i = this.props.locked;
                 return null != n ? n(e, t, i) : null;
-            });
+            }));
     }
 }
 let d = c;

@@ -1,4 +1,4 @@
-n.d(t, { default: () => b }), n(953529);
+(n.d(t, { default: () => b }), n(953529));
 var r = n(255367);
 n(73800);
 var a = n(512722),
@@ -21,7 +21,7 @@ function b(e) {
     var t, n;
     let { transitionState: a, guildProductListingId: b, analyticsLocation: v, guildId: Z, onClose: N } = e,
         C = (0, l.e7)([f.Z], () => f.Z.getGuildProduct(b));
-    i()(null != C, 'guildProductListing cannot be null'),
+    (i()(null != C, 'guildProductListing cannot be null'),
         (0, d.Z)({
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
@@ -30,7 +30,7 @@ function b(e) {
                 has_entitlement: !0 === C.has_entitlement,
                 location: v
             }
-        });
+        }));
     let I = null != (t = (0, h.C)(C)) ? t : '',
         y = (0, h.k)(C),
         O = (0, l.e7)([x.Z], () => x.Z.getGuild(Z));

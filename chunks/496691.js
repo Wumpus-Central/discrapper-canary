@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => h }), a(388685);
+(a.r(t), a.d(t, { default: () => h }), a(388685));
 var n = a(255367),
     r = a(73800),
     s = a(548668),
@@ -50,7 +50,7 @@ class p extends r.Component {
     }
     constructor(...e) {
         var t, a;
-        super(...e),
+        (super(...e),
             (t = 'handleHeaderLocaleChange'),
             (a = (e) => {
                 e !== this.props.locale && c.ZP.overrideLocale(e);
@@ -62,7 +62,7 @@ class p extends r.Component {
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = a);
+                : (this[t] = a));
     }
 }
 let h = o.ZP.connectStores([d.default], () => ({ locale: d.default.locale }))(p);

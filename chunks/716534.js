@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685);
+(n.d(t, { Z: () => Q }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -54,14 +54,14 @@ function X(e, t, n) {
         let { intervalType: e, intervalCount: o } = P.ZP.getIntervalForInvoice(t),
             s = (0, w.og)((0, w.T4)(t.total, t.currency), e, o),
             l = null != n ? n : t.subscriptionPeriodEnd;
-        (r = z.intl.format(z.t.ZzmrTk, {
+        ((r = z.intl.format(z.t.ZzmrTk, {
             termsURL: W.EYA.TERMS,
             paidURL: W.EYA.PAID_TERMS,
             rate: s,
             renewalDate: l
         })),
             (i = q.trialCheckbox),
-            (a = q.trialCheckboxLabel);
+            (a = q.trialCheckboxLabel));
     }
     return {
         checkboxLabel: r,
@@ -230,7 +230,7 @@ function Q(e) {
                 className: q.spinnerWrapper,
                 children: (0, r.jsx)(f.$jN, {})
             });
-        em && eH.subscriptionPeriodEnd !== eW.subscriptionPeriodEnd && (W = eH.subscriptionPeriodEnd),
+        (em && eH.subscriptionPeriodEnd !== eW.subscriptionPeriodEnd && (W = eH.subscriptionPeriodEnd),
             (Q = (0, r.jsxs)(r.Fragment, {
                 children: [
                     tt &&
@@ -261,7 +261,7 @@ function Q(e) {
                         ]
                     })
                 ]
-            }));
+            })));
     }
     let ta = c.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
         { checkboxLabel: to, checkboxClassname: ts, checkboxLabelClassname: tl } = X(null != em && em, eW, W),

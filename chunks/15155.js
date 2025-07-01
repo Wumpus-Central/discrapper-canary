@@ -4,12 +4,12 @@ function n(e, t) {
     return (n =
         Object.setPrototypeOf ||
         function (e, t) {
-            return (e.__proto__ = t), e;
+            return ((e.__proto__ = t), e);
         })(e, t);
 }
 var s = function (e) {
         var t = document.createElement('script');
-        (t.async = !0), (t.defer = !0), (t.src = e), document.head && document.head.appendChild(t);
+        ((t.async = !0), (t.defer = !0), (t.src = e), document.head && document.head.appendChild(t));
     },
     o = /(http|https):\/\/(www)?.+\/recaptcha/,
     i = ['sitekey', 'theme', 'size', 'badge', 'tabindex', 'hl', 'isolated'],
@@ -42,7 +42,7 @@ var s = function (e) {
                         a = e.onLoad;
                     window.grecaptcha.ready(function () {
                         t.setState({ ready: !0 }, function () {
-                            r || t.renderExplicitly(), a && a();
+                            (r || t.renderExplicitly(), a && a());
                         });
                     });
                 }),
@@ -71,12 +71,12 @@ var s = function (e) {
                     t.timer && clearInterval(t.timer);
                 }),
                 (t.componentDidMount = function () {
-                    t._inject(),
+                    (t._inject(),
                         t._isAvailable()
                             ? t._prepare()
                             : (t.timer = window.setInterval(function () {
                                   t._isAvailable() && (t._prepare(), t._stopTimer());
-                              }, 500));
+                              }, 500)));
                 }),
                 (t.componentWillUnmount = function () {
                     t._stopTimer();
@@ -103,14 +103,14 @@ var s = function (e) {
                                 rendered: !0
                             },
                             function () {
-                                t.props.onRender && t.props.onRender(), e();
+                                (t.props.onRender && t.props.onRender(), e());
                             }
                         );
                     });
                 }),
                 (t.reset = function () {
                     return new Promise(function (e, r) {
-                        if (t.state.rendered) return t._resetRecaptcha(), e();
+                        if (t.state.rendered) return (t._resetRecaptcha(), e());
                         r(Error('This recaptcha instance did not render yet.'));
                     });
                 }),

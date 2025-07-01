@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(539854), n(388685);
+(n.d(t, { Z: () => O }), n(539854), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(287734),
@@ -29,7 +29,7 @@ function O(e) {
             let l = T[i - 1],
                 a = ''.concat(null != (t = null == e ? void 0 : e.key) ? t : ''),
                 o = ''.concat(null != (n = null == l ? void 0 : l.key) ? n : '').startsWith('game') && a.startsWith('rich-presence');
-            T.push((0, r.jsx)(m.Z.Separator, { inset: o }, 'sep-'.concat(a))), T.push(e);
+            (T.push((0, r.jsx)(m.Z.Separator, { inset: o }, 'sep-'.concat(a))), T.push(e));
         };
     for (let { activity: e } of (I.length > 0 &&
         I.forEach((e) => {
@@ -77,7 +77,7 @@ function O(e) {
                             activity: a,
                             applicationStream: t,
                             onPreviewClick: () => {
-                                i.default.selectVoiceChannel(t.channelId), (0, l.iV)(t);
+                                (i.default.selectVoiceChannel(t.channelId), (0, l.iV)(t));
                             }
                         },
                         'application-stream-'.concat(t.ownerId)

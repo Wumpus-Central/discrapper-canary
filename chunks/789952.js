@@ -1,11 +1,11 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         hasDomParent: () => o,
         isDOMRangeCollapsed: () => s,
         normalizeDOMPoint: () => l
     }),
     n(415506),
-    n(388685);
+    n(388685));
 var r = n(650557);
 function i(e) {
     return f(e)
@@ -50,7 +50,7 @@ let a = !1;
             : null;
     };
     let e = r.F3.toSlatePoint;
-    (r.F3.toSlatePoint = (t, n, r) => {
+    ((r.F3.toSlatePoint = (t, n, r) => {
         let { exactMatch: i, suppressThrow: a, direction: o = 'forward' } = r;
         i || (n = l(n, o));
         try {
@@ -63,7 +63,7 @@ let a = !1;
             throw e;
         }
     }),
-        (a = !0);
+        (a = !0));
 }
 function o(e, t) {
     if (null == t) return !1;
@@ -95,14 +95,14 @@ function c(e, t, n) {
         s = !1;
     for (; (u(i) || (d(i) && 0 === i.childNodes.length) || (d(i) && 'false' === i.getAttribute('contenteditable'))) && (!o || !s); ) {
         if (a >= r.length) {
-            (o = !0), (a = t - 1), (n = 'backward');
+            ((o = !0), (a = t - 1), (n = 'backward'));
             continue;
         }
         if (a < 0) {
-            (s = !0), (a = t + 1), (n = 'forward');
+            ((s = !0), (a = t + 1), (n = 'forward'));
             continue;
         }
-        (i = r[a]), (t = a), (a += 'forward' === n ? 1 : -1);
+        ((i = r[a]), (t = a), (a += 'forward' === n ? 1 : -1));
     }
     return [i, t];
 }

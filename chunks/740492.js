@@ -28,7 +28,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -36,7 +36,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -44,7 +44,7 @@ let m = (window.innerWidth - d.PrS) / 2,
     g = 'standard',
     E = null;
 function b() {
-    return null == E && (E = Math.max((window.innerWidth - d.PrS) * 0.4, d.$Y6)), E;
+    return (null == E && (E = Math.max((window.innerWidth - d.PrS) * 0.4, d.$Y6)), E);
 }
 let y = {};
 function O(e) {
@@ -61,7 +61,7 @@ function I() {
 }
 function T() {}
 function S() {
-    return (y.darkSidebar = !y.darkSidebar), !0;
+    return ((y.darkSidebar = !y.darkSidebar), !0);
 }
 function A() {
     var e;
@@ -191,17 +191,17 @@ class N extends (r = o.ZP.DeviceSettingsStore) {
         return null != (e = y.listDensity) ? e : _.fx.COZY;
     }
 }
-p(N, 'displayName', 'UnsyncedUserSettingsStore'),
+(p(N, 'displayName', 'UnsyncedUserSettingsStore'),
     p(N, 'persistKey', 'UnsyncedUserSettingsStore'),
     p(N, 'migrations', [
         () => {
             let e = s.K.get('UserSettingsStore');
-            return s.K.remove('UserSettingsStore'), a().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain');
+            return (s.K.remove('UserSettingsStore'), a().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain'));
         },
         (e) => {
             delete e.disableVisualRefresh;
         }
-    ]);
+    ]));
 let C = new N(l.Z, {
     UNSYNCED_USER_SETTINGS_UPDATE: O,
     LOGOUT: v,

@@ -1,4 +1,4 @@
-e.d(n, { default: () => x }), e(388685);
+(e.d(n, { default: () => x }), e(388685));
 var i = e(255367),
     r = e(73800),
     l = e(442837),
@@ -54,7 +54,7 @@ function x(t) {
                                         s.eee,
                                         {
                                             onClick: () => {
-                                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : o.Z.open(), R();
+                                                (null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : o.Z.open(), R());
                                             },
                                             children: t
                                         },
@@ -79,7 +79,7 @@ function x(t) {
                             color: s.Ttl.RED,
                             size: s.PhG.SMALL,
                             onClick: () => {
-                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, R);
+                                (null == N || N({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, R));
                             },
                             children: null != L ? h.intl.string(h.t['5911LS']) : h.intl.string(h.t.VkKicX)
                         }),

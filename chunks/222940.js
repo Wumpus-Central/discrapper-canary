@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -19,7 +19,7 @@ function h(e) {
     }, [n]),
     i.useEffect(() => {
         if (null == g) return void f(!1);
-        (0, c.Br)(g), f(!0);
+        ((0, c.Br)(g), f(!0));
         let e = new a.V7();
         return (
             e.start(5000, () => {

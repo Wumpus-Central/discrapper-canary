@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(539854);
+(n.d(t, { Z: () => y }), n(388685), n(539854));
 var r,
     i,
     l,
@@ -15,7 +15,7 @@ let h = {},
     f = {},
     m = new a.sW(3000, function () {
         let e = [];
-        for (let [t, n] of Object.entries(f)) e.push(n), (h[t] = n), delete f[t];
+        for (let [t, n] of Object.entries(f)) (e.push(n), (h[t] = n), delete f[t]);
         0 !== e.length && c.Z.subscribeActivities(e);
     });
 function g(e) {
@@ -23,7 +23,7 @@ function g(e) {
     return t in h || t in f;
 }
 function b() {
-    (h = {}), (f = {});
+    ((h = {}), (f = {}));
 }
 class _ extends (r = o.ZP.Store) {
     initialize() {
@@ -33,7 +33,7 @@ class _ extends (r = o.ZP.Store) {
         return g(e);
     }
 }
-(l = 'PresenceSubscriptionsStore'),
+((l = 'PresenceSubscriptionsStore'),
     (i = 'displayName') in _
         ? Object.defineProperty(_, i, {
               value: l,
@@ -41,7 +41,7 @@ class _ extends (r = o.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (_[i] = l);
+        : (_[i] = l));
 let y = new _(s.Z, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
@@ -72,6 +72,6 @@ let y = new _(s.Z, {
     CONNECTION_OPEN: b,
     CONNECTION_RESUMED: b,
     LOGOUT: function () {
-        (h = {}), (f = {});
+        ((h = {}), (f = {}));
     }
 });

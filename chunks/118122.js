@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(239091),
-    a = n(906732),
+    a = n(239091),
+    s = n(906732),
     c = n(560067),
     u = n(451603),
     d = n(885714),
@@ -30,7 +30,7 @@ let v = {
     }
 };
 function C(e) {
-    (0, s.jW)(e, async () => {
+    (0, a.jW)(e, async () => {
         let { default: e } = await n.e('9606').then(n.bind(n, 987578));
         return (t) =>
             (0, r.jsx)(
@@ -39,7 +39,7 @@ function C(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        'function' == typeof Object.getOwnPropertySymbols &&
+                        ('function' == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -47,7 +47,7 @@ function C(e) {
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                (r = n[t]),
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
@@ -55,8 +55,8 @@ function C(e) {
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
-                            });
+                                        : (e[t] = r));
+                            }));
                     }
                     return e;
                 })({}, t)
@@ -65,13 +65,12 @@ function C(e) {
 }
 function j(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        s = (0, l.e7)([p.Z], () => p.Z.getGuilds()),
-        j = i.useMemo(() => Object.values(s), [s]),
-        E = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-        S = i.useMemo(() => j.some((e) => e.isOwner(E)), [j, E]),
-        x = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
-        { analyticsLocations: I } = (0, a.ZP)(),
-        P = (0, r.jsx)(m.Z, {
+        a = (0, l.Wu)([p.Z], () => p.Z.getGuildsArray()),
+        j = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        S = i.useMemo(() => a.some((e) => e.isOwner(j)), [a, j]),
+        E = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
+        { analyticsLocations: x } = (0, s.ZP)(),
+        I = (0, r.jsx)(m.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -82,17 +81,17 @@ function j(e) {
                               page: b.Sbl.CREATE_JOIN_GUILD_MODAL,
                               section: b.jXE.GUILD_CAP_UPSELL_MODAL
                           },
-                          analyticsLocations: I
+                          analyticsLocations: x
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: x,
+            selected: E,
             onContextMenu: C,
             tooltip: O.intl.string(O.t.l5WIbW),
             icon: o.oFk
         });
     return t
-        ? P
+        ? I
         : (0, r.jsx)('div', {
               className: y.tutorialContainer,
               children: (0, r.jsxs)(h.Z, {
@@ -100,7 +99,7 @@ function j(e) {
                   inlineSpecs: v,
                   position: 'right',
                   children: [
-                      P,
+                      I,
                       null != n &&
                           (0, r.jsx)(g.ZP, {
                               name: O.intl.string(O.t['45xjMz']),

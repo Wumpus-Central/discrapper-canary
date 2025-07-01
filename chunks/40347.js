@@ -103,7 +103,7 @@ function T() {
     if (d > 0) {
         let e = a.Qh[d - 1],
             n = S[e];
-        (c.prevBadge = (0, l.fv)(e)), (c.prevBadgeTextGradient = t ? (null == n ? void 0 : n.dark) : null == n ? void 0 : n.light);
+        ((c.prevBadge = (0, l.fv)(e)), (c.prevBadgeTextGradient = t ? (null == n ? void 0 : n.dark) : null == n ? void 0 : n.light));
     }
     return c;
 }

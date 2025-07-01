@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(35282);
+(n.d(t, { Z: () => L }), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -42,7 +42,7 @@ function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function P(e) {
             )),
             r.forEach(function (t) {
                 R(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -58,11 +58,11 @@ function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -122,7 +122,7 @@ function L(e) {
                                         (0, r.jsx)(s.P3F, {
                                             className: o()(C.clickableText, C.inline),
                                             onClick: (e) => {
-                                                e.stopPropagation(), V({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(a, t.id, n);
+                                                (e.stopPropagation(), V({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(a, t.id, n));
                                             },
                                             children: e
                                         }),
@@ -187,7 +187,7 @@ function L(e) {
                                 size: k === N.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: C.clickableImage,
                                 onClick: (e) => {
-                                    e.stopPropagation(), V({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(a, t.id);
+                                    (e.stopPropagation(), V({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(a, t.id));
                                 }
                             }),
                             (0, r.jsxs)('div', {
@@ -199,7 +199,7 @@ function L(e) {
                                                 variant: 'heading-sm/semibold',
                                                 text: a.details,
                                                 onClick: () => {
-                                                    V({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(a);
+                                                    (V({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(a));
                                                 },
                                                 id: L
                                             }),

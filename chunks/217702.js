@@ -11,6 +11,6 @@ let r = 550,
     a = 350,
     o = 40;
 var s = (function (e) {
-    return (e.STATIC = 'STATIC'), (e.RESPONSIVE = 'RESPONSIVE'), (e.MOSAIC = 'MOSAIC'), e;
+    return ((e.STATIC = 'STATIC'), (e.RESPONSIVE = 'RESPONSIVE'), (e.MOSAIC = 'MOSAIC'), e);
 })({});
 let l = 20;

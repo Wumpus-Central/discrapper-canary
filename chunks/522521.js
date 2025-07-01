@@ -10,10 +10,10 @@ let _ = (0, a(151122)._I)((t = {}) => {
         name: 'Debug',
         setup(t) {
             t.on('beforeSendEvent', (t, a) => {
-                e.debugger,
+                (e.debugger,
                     (0, r.Cf)(() => {
                         e.stringify ? (console.log(JSON.stringify(t, null, 2)), a && Object.keys(a).length && console.log(JSON.stringify(a, null, 2))) : (console.log(t), a && Object.keys(a).length && console.log(a));
-                    });
+                    }));
             });
         }
     };

@@ -19,11 +19,11 @@ function v(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (a = a.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, a);
+            r.push.apply(r, a));
     }
     return r;
 }
@@ -64,14 +64,14 @@ function M(e) {
             })).length > 0 &&
                 ((t = 'string' == typeof t ? { extend: t } : Z({}, t)),
                 a.forEach(function (a) {
-                    console.error('Styling method "'.concat(a, '" is deprecated, use "theme" property instead')),
+                    (console.error('Styling method "'.concat(a, '" is deprecated, use "theme" property instead')),
                         (t[r[a]] = function (t) {
                             for (var r = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++) s[o - 1] = arguments[o];
                             return { style: Z(Z({}, r), e[a].apply(e, s)) };
-                        });
+                        }));
                 })),
             t);
-    return e.invertTheme && (n = (0, g.y7)(n)), { styling: (0, m.Z)(n) };
+    return (e.invertTheme && (n = (0, g.y7)(n)), { styling: (0, m.Z)(n) });
 }
 var k = (function (e) {
     (0, i.Z)(u, e);
@@ -81,7 +81,7 @@ var k = (function (e) {
                 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
-                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                    return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
                 } catch (e) {
                     return !1;
                 }
@@ -89,11 +89,11 @@ var k = (function (e) {
             function () {
                 var e,
                     r = (0, l.Z)(u);
-                return (e = t ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor) : r.apply(this, arguments)), (0, c.Z)(this, e);
+                return ((e = t ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor) : r.apply(this, arguments)), (0, c.Z)(this, e));
             });
     function u(e) {
         var t;
-        return (0, s.Z)(this, u), ((t = r.call(this, e)).state = M(e)), t;
+        return ((0, s.Z)(this, u), ((t = r.call(this, e)).state = M(e)), t);
     }
     return (
         (0, o.Z)(u, [
@@ -153,7 +153,7 @@ var k = (function (e) {
         u
     );
 })(b.Component);
-(0, u.Z)(k, 'propTypes', {
+((0, u.Z)(k, 'propTypes', {
     data: h().any,
     hideRoot: h().bool,
     theme: h().oneOfType([h().object, h().string]),
@@ -182,4 +182,4 @@ var k = (function (e) {
         },
         collectionLimit: 50,
         invertTheme: !0
-    });
+    }));

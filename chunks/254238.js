@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     LO: () => C,
     On: () => S,
     Vv: () => I,
@@ -9,7 +9,7 @@ n.d(t, {
     sh: () => D
 }),
     n(539854),
-    n(388685);
+    n(388685));
 var r = n(434179),
     i = n(771649),
     a = n(544891),
@@ -42,7 +42,7 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -50,7 +50,7 @@ function b(e) {
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -66,7 +66,7 @@ async function O() {
         t = null == e ? void 0 : e.nonce;
     o.Z.dispatch({ type: 'REMOTE_SESSION_DISCONNECT' });
     let n = [];
-    ((null == e ? void 0 : e.type) === m.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === m.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(w(e.type, e.deviceId, e.commandId)), null != t && n.push(N(t));
+    (((null == e ? void 0 : e.type) === m.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === m.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(w(e.type, e.deviceId, e.commandId)), null != t && n.push(N(t)));
     try {
         await Promise.all(n);
     } catch (e) {
@@ -84,7 +84,7 @@ function v(e) {
 }
 function I(e, t) {
     let { selfMute: n, selfDeaf: r } = t;
-    o.Z.dispatch({
+    (o.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,
         payload: {
@@ -93,16 +93,16 @@ function I(e, t) {
             self_deaf: r
         }
     }),
-        y('VOICE_STATE_UPDATE', e);
+        y('VOICE_STATE_UPDATE', e));
 }
 function T(e) {
-    o.Z.dispatch({
+    (o.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,
         payload: { type: 'DISCONNECT' }
     }),
         y('DISCONNECT', e),
-        O();
+        O());
 }
 function S(e, t, n, r) {
     let i = (0, l.z)(n);
@@ -156,12 +156,12 @@ async function C(e) {
         });
     } catch (t) {
         throw (
-            (o.Z.dispatch({
+            o.Z.dispatch({
                 type: 'GAME_CONSOLE_FETCH_DEVICES_FAIL',
                 platform: e,
                 error: t
             }),
-            t)
+            t
         );
     }
     let n = t.body.devices;
@@ -200,12 +200,12 @@ async function P(e, t, n, i) {
         });
     } catch (t) {
         throw (
-            (o.Z.dispatch({
+            o.Z.dispatch({
                 type: 'GAME_CONSOLE_DEVICE_SEND_COMMAND_FAIL',
                 platform: e,
                 error: t
             }),
-            t)
+            t
         );
     }
     let l = s.body.id;
@@ -235,14 +235,14 @@ async function w(e, t, n) {
         });
     } catch (r) {
         throw (
-            (o.Z.dispatch({
+            o.Z.dispatch({
                 type: 'GAME_CONSOLE_DEVICE_CANCEL_COMMAND_FAIL',
                 platform: e,
                 deviceId: t,
                 commandId: n,
                 error: r
             }),
-            r)
+            r
         );
     }
     o.Z.dispatch({
@@ -253,7 +253,7 @@ async function w(e, t, n) {
     });
 }
 async function D(e, t, n) {
-    await _.Z.maybeShowPTTAlert(e), await O();
+    (await _.Z.maybeShowPTTAlert(e), await O());
     let r = await A();
-    await P(e, t, n, r), (0, h.Z)(n.id, e);
+    (await P(e, t, n, r), (0, h.Z)(n.id, e));
 }

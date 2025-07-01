@@ -17,9 +17,9 @@ function c(t) {
     if (c && 'function' == typeof c.createElement)
         try {
             let e = c.createElement('iframe');
-            (e.hidden = !0), c.head.appendChild(e);
+            ((e.hidden = !0), c.head.appendChild(e));
             let r = e.contentWindow;
-            r && r[t] && (a = r[t]), c.head.removeChild(e);
+            (r && r[t] && (a = r[t]), c.head.removeChild(e));
         } catch (e) {
             n.X && _.kg.warn(`Could not create sandbox iframe for ${t} check, bailing to window.${t}: `, e);
         }

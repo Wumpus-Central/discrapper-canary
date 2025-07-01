@@ -1,4 +1,4 @@
-n.d(t, { N: () => u }), n(388685), n(35282), n(642613);
+(n.d(t, { N: () => u }), n(388685), n(35282), n(642613));
 var r = n(626135),
     i = n(960048),
     o = n(592204),
@@ -44,6 +44,6 @@ function u(e, t) {
                 )
         );
     } catch (t) {
-        return i.Z.captureException(t, { tags: { app_context: 'keyword_filtering' } }), e;
+        return (i.Z.captureException(t, { tags: { app_context: 'keyword_filtering' } }), e);
     }
 }

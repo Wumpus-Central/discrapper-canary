@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(314940);
+(n.d(t, { Z: () => j }), n(388685), n(314940));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -48,7 +48,7 @@ let L = () =>
         let { markAsDismissed: t } = e,
             n = (0, A.q)(),
             i = () => {
-                null != t && t(R.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, S.C)();
+                (null != t && t(R.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, S.C)());
             };
         return (0, r.jsxs)('div', {
             className: D.editorHeader,
@@ -107,7 +107,7 @@ let L = () =>
             [o, c] = i.useState(!1),
             d = (0, A.q)(),
             _ = () => {
-                null != t && t(R.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, S.C)(), n || f.Z.open();
+                (null != t && t(R.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, S.C)(), n || f.Z.open());
             },
             p = (0, s.EQ)({
                 isPreview: a,
@@ -146,14 +146,14 @@ function j(e) {
         })),
         d = (0, g.oq)().activePanel === g.wh.CLIENT_THEMES,
         f = (0, A.q)();
-    i.useEffect(() => f(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), [f]),
+    (i.useEffect(() => f(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), [f]),
         i.useEffect(() => {
             s &&
                 v.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: a
                 });
-        }, [s, a]);
+        }, [s, a]));
     let E = (0, A.J)(),
         b = (0, _.Z)(null, s ? E : C.dG4);
     return (

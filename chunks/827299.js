@@ -1,4 +1,4 @@
-n.d(t, { K: () => E }), n(388685), n(35282), n(539854), n(415506);
+(n.d(t, { K: () => E }), n(388685), n(35282), n(539854), n(415506));
 var r = n(73800),
     i = n(399606);
 function a(e, t) {
@@ -16,7 +16,7 @@ function l(e, t) {
     return o(e, n);
 }
 function c(e, t, n) {
-    a(e, t), t.set(e, n);
+    (a(e, t), t.set(e, n));
 }
 function u(e, t, n) {
     return (
@@ -42,7 +42,7 @@ class _ {
         return !0 === l(this.search(e), f).isStale;
     }
     getOrCreate(e) {
-        return null == l(this, d)[e] && (l(this, d)[e] = new _()), l(this, d)[e];
+        return (null == l(this, d)[e] && (l(this, d)[e] = new _()), l(this, d)[e]);
     }
     getState(e) {
         var t;
@@ -55,7 +55,7 @@ class _ {
     }
     loadingStart(e, t) {
         let n = this.search(e);
-        (l(n, f).fetchState = 1), null != t && (l(n, f).controller = t), (l(n, f).error = void 0);
+        ((l(n, f).fetchState = 1), null != t && (l(n, f).controller = t), (l(n, f).error = void 0));
     }
     search(e) {
         if (null == e) return new _();
@@ -65,7 +65,7 @@ class _ {
     }
     setError(e, t) {
         let n = this.search(e);
-        (l(n, f).error = t), (l(n, f).isStale = !1);
+        ((l(n, f).error = t), (l(n, f).isStale = !1));
     }
     subscribe(e, t) {
         l(this.search(e), f).validateData = t;
@@ -79,13 +79,13 @@ class _ {
             let e = r.pop();
             null != e && ((l(e, f).isStale = !0), _.resetErrorState(e), r.push(...Object.values(l(e, d))), 'function' == typeof l(e, f).validateData && n.push(l(e, f).validateData));
         }
-        (l(t, f).isStale = !0), _.resetErrorState(t), n.forEach((e) => e());
+        ((l(t, f).isStale = !0), _.resetErrorState(t), n.forEach((e) => e()));
     }
     static resetErrorState(e) {
-        (l(e, f).error = void 0), (l(e, f).fetchFailCounter = 0), (l(e, f).fetchState = 0);
+        ((l(e, f).error = void 0), (l(e, f).fetchFailCounter = 0), (l(e, f).fetchState = 0));
     }
     constructor() {
-        c(this, d, {
+        (c(this, d, {
             writable: !0,
             value: {}
         }),
@@ -95,7 +95,7 @@ class _ {
                     fetchFailCounter: 0,
                     fetchState: 0
                 }
-            });
+            }));
     }
 }
 let p = new _(),
@@ -105,7 +105,7 @@ class m extends Error {
         this.status = e;
     }
     constructor(...e) {
-        super(...e), u(this, 'name', 'HTTPResponseError'), u(this, 'status', 0);
+        (super(...e), u(this, 'name', 'HTTPResponseError'), u(this, 'status', 0));
     }
 }
 function g(e) {
@@ -113,14 +113,14 @@ function g(e) {
     if ('object' == typeof e) {
         if ('body' in e && null != e.body && 'message' in e.body) {
             let t = new m(String(e.body.message));
-            return t.setStatus(e.status), t;
+            return (t.setStatus(e.status), t);
         }
         let t = new m(
             Object.entries(e)
                 .map((e, t) => ''.concat(e, ': [').concat(String(t), ']'))
                 .join(',')
         );
-        return t.setStatus(e.status), t;
+        return (t.setStatus(e.status), t);
     }
     return Error(String(e));
 }
@@ -147,14 +147,14 @@ function E(e, t) {
             O = (0, r.useCallback)(() => {
                 if (null == f || !y()) return;
                 let e = new AbortController();
-                p.loadingStart(f, n ? e : void 0),
+                (p.loadingStart(f, n ? e : void 0),
                     o(e.signal, ...b.current)
                         .then((e) => (p.loadingDone(f, !0), e))
                         .catch((t) => {
                             if ((p.loadingDone(f), e.signal.aborted)) return;
                             let n = g(t);
                             (!(h.fetchFailCounter >= s) && n instanceof m && (n.status >= 500 || 429 === n.status)) || p.setError(f, n);
-                        });
+                        }));
             }, [h.fetchFailCounter, f, y]);
         return (
             (0, r.useEffect)(
@@ -162,7 +162,7 @@ function E(e, t) {
                     O(),
                     p.subscribe(f, O),
                     () => {
-                        p.abort(f), p.subscribe(f, void 0);
+                        (p.abort(f), p.subscribe(f, void 0));
                     }
                 ),
                 [f, O]

@@ -7,5 +7,5 @@ function a(e) {
         n = t.getFullYear(),
         a = t.getMonth(),
         o = new Date(0);
-    return o.setFullYear(n, a + 1, 0), o.setHours(0, 0, 0, 0), o.getDate();
+    return (o.setFullYear(n, a + 1, 0), o.setHours(0, 0, 0, 0), o.getDate());
 }

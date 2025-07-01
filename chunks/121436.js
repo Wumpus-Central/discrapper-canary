@@ -86,11 +86,11 @@ let O = (e) => {
             );
         }),
         B = () => {
-            (0, c.uL)(x.Z5c.APPLICATION_STORE, {
+            ((0, c.uL)(x.Z5c.APPLICATION_STORE, {
                 source: d.Z.TIERED_TENURE_BADGES_MODAL,
                 sourceLocationStack: j
             }),
-                null == O || O();
+                null == O || O());
         },
         { enabled: A } = b.$.useExperiment({ location: 'evolving_tenure_badge_modal_web' }, { autoTrackExposure: !1 });
     return (0, l.jsxs)(u.Y0X, {

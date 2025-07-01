@@ -26,7 +26,7 @@ let u = function () {
                     }),
                     (0, i.jsx)(r.zx, {
                         onClick: () => {
-                            (0, o.it)(), (0, l.xf)(), (0, a.uL)(c.Z5c.QUEST_HOME);
+                            ((0, o.it)(), (0, l.xf)(), (0, a.uL)(c.Z5c.QUEST_HOME));
                         },
                         children: 'Clear History'
                     }),

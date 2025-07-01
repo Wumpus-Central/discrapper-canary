@@ -1,4 +1,4 @@
-i.d(e, { Z: () => p }), i(388685);
+(i.d(e, { Z: () => p }), i(388685));
 var n = i(442837),
     r = i(715903),
     s = i(71619),
@@ -18,7 +18,7 @@ function p(t) {
         v = (0, n.e7)([u.Z], () => g && u.Z.can(h.Plq.ADD_REACTIONS, t), [g, t]),
         O = (0, r.ux)(p),
         [, b] = (0, s.AB)(p),
-        y = (0, l.$R)(t);
+        S = (0, l.$R)(t);
     return null == t
         ? {
               disableReactionReads: !0,
@@ -32,7 +32,7 @@ function p(t) {
               for (var e = 1; e < arguments.length; e++) {
                   var i = null != arguments[e] ? arguments[e] : {},
                       n = Object.keys(i);
-                  'function' == typeof Object.getOwnPropertySymbols &&
+                  ('function' == typeof Object.getOwnPropertySymbols &&
                       (n = n.concat(
                           Object.getOwnPropertySymbols(i).filter(function (t) {
                               return Object.getOwnPropertyDescriptor(i, t).enumerable;
@@ -40,7 +40,7 @@ function p(t) {
                       )),
                       n.forEach(function (e) {
                           var n;
-                          (n = i[e]),
+                          ((n = i[e]),
                               e in t
                                   ? Object.defineProperty(t, e, {
                                         value: n,
@@ -48,8 +48,8 @@ function p(t) {
                                         configurable: !0,
                                         writable: !0
                                     })
-                                  : (t[e] = n);
-                      });
+                                  : (t[e] = n));
+                      }));
               }
               return t;
           })(
@@ -62,7 +62,7 @@ function p(t) {
                   isLurking: f,
                   isGuest: m,
                   communicationDisabled: b,
-                  isActiveChannelOrUnarchivableThread: y,
+                  isActiveChannelOrUnarchivableThread: S,
                   isAutomodQuarantined: O
               })
           )),

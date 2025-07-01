@@ -1,4 +1,4 @@
-e.d(t, { default: () => Z }), e(388685);
+(e.d(t, { default: () => Z }), e(388685));
 var i = e(255367),
     r = e(73800),
     l = e(399606),
@@ -96,7 +96,7 @@ function Z(n) {
                       children: [
                           (0, i.jsx)(o.zxk, {
                               onClick: () => {
-                                  M(), e();
+                                  (M(), e());
                               },
                               color: o.zxk.Colors.BRAND,
                               look: o.zxk.Looks.FILLED,

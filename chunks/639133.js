@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(793030),
@@ -292,7 +292,7 @@ function C(e) {
     (0, l.Z)(w, v);
     let O = (0, d.eR)(N),
         j = (e, t, n) => {
-            b({
+            (b({
                 points: t,
                 responseMessage: n
             }),
@@ -300,8 +300,8 @@ function C(e) {
                 x({ count: v + 1 }),
                 (i.current = setTimeout(() => {
                     var t;
-                    null == (t = o.current) || t.removeDrop(e), f(u + 1), b(null);
-                }, 3000));
+                    (null == (t = o.current) || t.removeDrop(e), f(u + 1), b(null));
+                }, 3000)));
         };
     return ((0, s.useEffect)(() => () => clearTimeout(i.current), []), u >= _().length)
         ? null

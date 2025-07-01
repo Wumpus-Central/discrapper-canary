@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(147913),
     i = n(594190),
     a = n(77498),
@@ -25,11 +25,11 @@ function l(e) {
 }
 class c extends r.Z {
     constructor(...e) {
-        super(...e),
+        (super(...e),
             s(this, 'actions', {
                 RUNNING_GAME_TOGGLE_DETECTION: l,
                 RUNNING_GAME_DELETE_ENTRY: l
-            });
+            }));
     }
 }
 let u = new c();

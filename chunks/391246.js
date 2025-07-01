@@ -89,25 +89,25 @@ var r = n(127849),
     };
 if (o) {
     var er = A && M.name !== C;
-    !d(function () {
+    (!d(function () {
         M(1);
     }) ||
     !d(function () {
         new M(-1);
     }) ||
     d(function () {
-        return new M(), new M(1.5), new M(NaN), 1 !== M.length || (er && !N);
+        return (new M(), new M(1.5), new M(NaN), 1 !== M.length || (er && !N));
     })
         ? (((j = function (e) {
-              return f(this, U), v(new M(h(e)), this, j);
+              return (f(this, U), v(new M(h(e)), this, j));
           })[P] = U),
           (U.constructor = j),
           I(j, M))
         : er && N && l(M, 'name', C),
-        b && E(B) !== V && b(B, V);
+        b && E(B) !== V && b(B, V));
     var ei = new G(new j(2)),
         ea = i(B.setInt8);
-    ei.setInt8(0, 2147483648),
+    (ei.setInt8(0, 2147483648),
         ei.setInt8(1, 2147483649),
         (ei.getInt8(0) || !ei.getInt8(1)) &&
             u(
@@ -121,33 +121,33 @@ if (o) {
                     }
                 },
                 { unsafe: !0 }
-            );
+            ));
 } else
-    (U = (j = function (e) {
+    ((U = (j = function (e) {
         f(this, U);
         var t = h(e);
-        k(this, {
+        (k(this, {
             type: C,
             bytes: H(F(t), 0),
             byteLength: t
         }),
-            a || ((this.byteLength = t), (this.detached = !1));
+            a || ((this.byteLength = t), (this.detached = !1)));
     })[P]),
         (B = (G = function (e, t, n) {
-            f(this, B), f(e, U);
+            (f(this, B), f(e, U));
             var r = L(e),
                 i = r.byteLength,
                 o = _(t);
             if (o < 0 || o > i) throw new Z('Wrong offset');
             if (((n = void 0 === n ? i - o : p(n)), o + n > i)) throw new Z(w);
-            k(this, {
+            (k(this, {
                 type: R,
                 buffer: e,
                 byteLength: n,
                 byteOffset: o,
                 bytes: r.bytes
             }),
-                a || ((this.buffer = e), (this.byteLength = n), (this.byteOffset = o));
+                a || ((this.buffer = e), (this.byteLength = n), (this.byteOffset = o)));
         })[P]),
         a && (ee(j, 'byteLength', L), ee(G, 'buffer', x), ee(G, 'byteLength', x), ee(G, 'byteOffset', x)),
         u(B, {
@@ -201,10 +201,10 @@ if (o) {
             setFloat64: function (e, t) {
                 en(this, 8, e, $, t, arguments.length > 2 && arguments[2]);
             }
-        });
-T(j, C),
+        }));
+(T(j, C),
     T(G, R),
     (e.exports = {
         ArrayBuffer: j,
         DataView: G
-    });
+    }));

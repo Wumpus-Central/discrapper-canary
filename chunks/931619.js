@@ -16,7 +16,7 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -24,7 +24,7 @@ function a(e) {
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -32,11 +32,11 @@ function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -51,7 +51,7 @@ function s(e, t) {
         e
     );
 }
-n.d(t, { Z: () => u }), n(539854), (r = n(538036).Z);
+(n.d(t, { Z: () => u }), n(539854), (r = n(538036).Z));
 let l = [],
     c = !1,
     u = s(a({}, r), {
@@ -62,7 +62,7 @@ let l = [],
                     if ((l.push(e), c)) return;
                     c = !0;
                     let t = () => {
-                        l.forEach((e) => e()), (l.length = 0), (c = !1), r.removeOnlineCallback(t);
+                        (l.forEach((e) => e()), (l.length = 0), (c = !1), r.removeOnlineCallback(t));
                     };
                     r.addOnlineCallback(t);
                 }

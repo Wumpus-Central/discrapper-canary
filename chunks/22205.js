@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+(n.d(t, { Z: () => R }), n(388685));
 var i = n(255367),
     r = n(73800),
     l = n(392711),
@@ -72,7 +72,7 @@ function M(e) {
         )
     );
     let w = r.useCallback(() => {
-            p.set(0), null != b.current && clearTimeout(b.current), (b.current = null), null == o || o(), null == u || u();
+            (p.set(0), null != b.current && clearTimeout(b.current), (b.current = null), null == o || o(), null == u || u());
         }, [p, o, u]),
         N = r.useCallback(
             (e) => {
@@ -94,13 +94,13 @@ function M(e) {
         ),
         D = r.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (g(!0), null != b.current && clearTimeout(b.current)) : g(!1);
+                (e.stopPropagation(), e.shiftKey ? (g(!0), null != b.current && clearTimeout(b.current)) : g(!1));
             },
             [g]
         ),
         M = r.useCallback(
             (e) => {
-                e.stopPropagation(), null == o || o(), null == a || a();
+                (e.stopPropagation(), null == o || o(), null == a || a());
             },
             [a, o]
         ),
@@ -170,9 +170,9 @@ class L extends r.PureComponent {
             info: t
         });
         let i = (0, j.getPID)();
-        m.Z.setOverlayCrashed(i, e), m.Z.setInputLocked(!0, i);
+        (m.Z.setOverlayCrashed(i, e), m.Z.setInputLocked(!0, i));
         let r = C.Z.captureCrash(e, { extra: t });
-        m.Z.track(E.rMx.APP_CRASHED, {
+        (m.Z.track(E.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -181,7 +181,7 @@ class L extends r.PureComponent {
             error_level: 'fatal'
         }),
             D(),
-            (this.pid = i);
+            (this.pid = i));
     }
     render() {
         let { children: e, className: t } = this.props,
@@ -195,7 +195,7 @@ class L extends r.PureComponent {
                           onLock: () => {
                               var e;
                               let t = null != (e = this.pid) ? e : (0, j.getPID)();
-                              m.Z.setInputLocked(!0, t), this.setState({ showError: !1 });
+                              (m.Z.setInputLocked(!0, t), this.setState({ showError: !1 }));
                           },
                           onDisable: () => {
                               let e = k.ZP.getFocusedRunningGame();
@@ -204,10 +204,10 @@ class L extends r.PureComponent {
                           onCrashDisabled: () => {
                               var e;
                               let t = null != (e = this.pid) ? e : (0, j.getPID)();
-                              m.Z.updateOverlayState(t, b.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 });
+                              (m.Z.updateOverlayState(t, b.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 }));
                           },
                           onReload: () => {
-                              m.Z.setReloadOverlay((0, j.getPID)()), this.setState({ showError: !1 });
+                              (m.Z.setReloadOverlay((0, j.getPID)()), this.setState({ showError: !1 }));
                           }
                       })
                   })
@@ -218,13 +218,13 @@ class L extends r.PureComponent {
               });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             N(this, 'state', {
                 error: null,
                 showError: !0,
                 info: null
             }),
-            N(this, 'pid', null);
+            N(this, 'pid', null));
     }
 }
 let R = L;

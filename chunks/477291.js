@@ -22,7 +22,7 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -30,7 +30,7 @@ function c(e) {
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -38,11 +38,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -60,7 +60,7 @@ function d(e, t) {
 function f(e, t, n) {
     var r;
     let { rating: o, problem: l, feedback: c } = n;
-    (0, a.Z)({
+    ((0, a.Z)({
         problem: null != (r = null == l ? void 0 : l.value) ? r : null,
         summary: e,
         feedback: c,
@@ -69,7 +69,7 @@ function f(e, t, n) {
         location: 'Summary divider',
         rating: o
     }),
-        (0, i.showToast)((0, i.createToast)(s.intl.string(s.t['d9+vQ0']), i.ToastType.SUCCESS));
+        (0, i.showToast)((0, i.createToast)(s.intl.string(s.t['d9+vQ0']), i.ToastType.SUCCESS)));
 }
 function _(e) {
     let { summary: t, channel: a, rating: s } = e;

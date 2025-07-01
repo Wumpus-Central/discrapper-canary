@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -33,10 +33,10 @@ class O extends i.Component {
         document.addEventListener('keydown', this.handleKeyDown);
     }
     componentWillUnmount() {
-        c.Z.wait(() => u.wX(null)), document.removeEventListener('keydown', this.handleKeyDown);
+        (c.Z.wait(() => u.wX(null)), document.removeEventListener('keydown', this.handleKeyDown));
     }
     reset() {
-        u.wX(null), u.JZ('');
+        (u.wX(null), u.JZ(''));
     }
     focusInput() {
         let { searchBarRef: e } = this;
@@ -66,7 +66,7 @@ class O extends i.Component {
                 onBlur: () => this.setState({ focused: !1 }),
                 name: 'filter',
                 onClear: () => {
-                    this.reset(), this.focusInput();
+                    (this.reset(), this.focusInput());
                 },
                 maxLength: 100,
                 query: e,
@@ -75,7 +75,7 @@ class O extends i.Component {
         });
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             E(this, 'searchBarRef', null),
             E(this, 'state', { focused: !1 }),
             E(this, 'setRef', (e) => {
@@ -112,12 +112,12 @@ class O extends i.Component {
                             break;
                         case m.yXg.ARROW_DOWN:
                         case m.yXg.ARROW_UP:
-                            e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === m.yXg.ARROW_DOWN ? 1 : -1);
+                            (e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === m.yXg.ARROW_DOWN ? 1 : -1));
                             break;
                         default:
                             null != l.inputRef.current && e.target !== l.inputRef.current && l.focus();
                     }
-            });
+            }));
     }
 }
 function y() {

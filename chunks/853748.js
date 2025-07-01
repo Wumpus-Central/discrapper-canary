@@ -1,4 +1,4 @@
-n.d(t, { $: () => b }), n(539854);
+(n.d(t, { $: () => b }), n(539854));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -17,7 +17,7 @@ function h(e) {
         o = (function (e, t, n, r) {
             let l = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
                 a = [];
-            return e > 0 && a.push(l(e, d.intl.string(d.t.QJyuxc))), (t > 0 || a.length > 0) && a.push(l(t, d.intl.string(d.t['1LyF1t']))), (n > 0 || a.length > 0) && a.push(l(n, d.intl.string(d.t.n7dksL))), a.push(l(r, d.intl.string(d.t['6m/6nJ']))), a.join(':');
+            return (e > 0 && a.push(l(e, d.intl.string(d.t.QJyuxc))), (t > 0 || a.length > 0) && a.push(l(t, d.intl.string(d.t['1LyF1t']))), (n > 0 || a.length > 0) && a.push(l(n, d.intl.string(d.t.n7dksL))), a.push(l(r, d.intl.string(d.t['6m/6nJ']))), a.join(':'));
         })(n, l, a, i);
     return (0, r.jsx)(c.Text, {
         variant: 'heading-md/medium',
@@ -47,7 +47,7 @@ let b = l.memo(function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
+                ('function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -55,7 +55,7 @@ let b = l.memo(function (e) {
                     )),
                     r.forEach(function (t) {
                         var r;
-                        (r = n[t]),
+                        ((r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
@@ -63,8 +63,8 @@ let b = l.memo(function (e) {
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
-                    });
+                                : (e[t] = r));
+                    }));
             }
             return e;
         })({}, l.style, u),

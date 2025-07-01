@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     $1: () => b,
     YT: () => v,
     pn: () => I
 }),
-    n(415506);
+    n(415506));
 var r = n(570140),
     i = n(923928),
     a = n(593472),
@@ -32,7 +32,7 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -40,7 +40,7 @@ function h(e) {
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -48,11 +48,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -82,7 +82,7 @@ async function y() {
     if (b()) return Promise.reject(Error('Hook module is too old'));
     await d.ZP.ensureModule('discord_hook');
     let e = await d.ZP.requireModule('discord_hook');
-    return O(e), e;
+    return (O(e), e);
 }
 function O(e) {
     if (null == e.setFlags) return;
@@ -90,7 +90,7 @@ function O(e) {
         n = f.Z.getCurrentConfig({ location: 'edd7d3_1' }, { autoTrackExposure: !1 });
     n.enableCrashReporting && (console.log('Hook: Enabling crash reporting.'), (t |= 1));
     let r = l.default.getCurrentUser();
-    null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log('Hook: Enabling crash trigger.'), (t |= 2)), e.setFlags(t);
+    (null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log('Hook: Enabling crash trigger.'), (t |= 2)), e.setFlags(t));
 }
 function v(e, t) {
     return y().then((n) => {
@@ -100,7 +100,7 @@ function v(e, t) {
             f = null;
         return new Promise((s) => {
             let l = (e, n) => {
-                    c.default.track(
+                    (c.default.track(
                         _.rMx.HOOK_RESULT,
                         h(
                             {
@@ -113,13 +113,13 @@ function v(e, t) {
                         )
                     ),
                         null != f && (clearTimeout(f), (f = null)),
-                        n ? s() : s((e = null != e ? e : 'Unknown hook error'));
+                        n ? s() : s((e = null != e ? e : 'Unknown hook error')));
                 },
                 p = o.ZP.getOverlayOptionsForPID(e),
                 m = g(h({}, a.r, p), { elevate: o.ZP.shouldElevateProcessForPID(e) });
             null == m.allowHook || m.allowHook
                 ? ((f = setTimeout(() => {
-                      n.cancelAttachToProcess(e), l('Timed out waiting for hook response', !1);
+                      (n.cancelAttachToProcess(e), l('Timed out waiting for hook response', !1));
                   }, 120000)),
                   n.attachToProcess(e, m, l),
                   r.Z.wait(() => i.Z.clearElevatedProcess()))

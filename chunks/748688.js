@@ -21,8 +21,8 @@ var r = a(559508),
     l = a(454463),
     u = a(163162);
 let I = String(0),
-    d = '',
     R = '',
+    d = '',
     N = '',
     f = (u.m9.navigator && u.m9.navigator.userAgent) || '',
     A = '',
@@ -55,7 +55,7 @@ function O(t) {
     p
         .getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((t) => {
-            if (((d = t.platform || ''), (N = t.architecture || ''), (A = t.model || ''), (R = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
+            if (((R = t.platform || ''), (N = t.architecture || ''), (A = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
                 let e = t.fullVersionList[t.fullVersionList.length - 1];
                 f = `${e.brand} ${e.version}`;
             }
@@ -77,15 +77,15 @@ function C() {
             maxBufferSize: e
         });
     } catch (t) {
-        l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0);
+        (l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0));
     }
 }
 function v(t) {
-    if (g) return l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
-    if (!t.isRecording()) return l.X && o.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
+    if (g) return (l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1);
+    if (!t.isRecording()) return (l.X && o.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1);
     let e = (0, n.s3)(),
         a = e && e.getOptions();
-    if (!a) return l.X && o.kg.log('[Profiling] Profiling disabled, no options found.'), !1;
+    if (!a) return (l.X && o.kg.log('[Profiling] Profiling disabled, no options found.'), !1);
     let r = a.profilesSampleRate;
     return (('number' != typeof r && 'boolean' != typeof r) || ('number' == typeof r && isNaN(r)) ? (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(r)} of type ${JSON.stringify(typeof r)}.`), 1) : !0 !== r && !1 !== r && (r < 0 || r > 1) && (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${r}.`), 1)) ? (l.X && o.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1) : r ? !!(!0 === r || Math.random() < r) || (l.X && o.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(r)})`), !1) : (l.X && o.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1);
 }
@@ -118,12 +118,12 @@ function m(t, e, a, _) {
                       return (
                           t.samples.forEach((_, o) => {
                               if (void 0 === _.stackId) {
-                                  void 0 === e && ((e = a), (r.stacks[e] = []), a++),
+                                  (void 0 === e && ((e = a), (r.stacks[e] = []), a++),
                                       (r.samples[o] = {
                                           elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
                                           stack_id: e,
                                           thread_id: I
-                                      });
+                                      }));
                                   return;
                               }
                               let i = t.stacks[_.stackId],
@@ -131,7 +131,7 @@ function m(t, e, a, _) {
                               for (; i; ) {
                                   s.push(i.frameId);
                                   let e = t.frames[i.frameId];
-                                  e &&
+                                  (e &&
                                       void 0 === r.frames[i.frameId] &&
                                       (r.frames[i.frameId] = {
                                           function: e.name,
@@ -139,14 +139,14 @@ function m(t, e, a, _) {
                                           lineno: e.line,
                                           colno: e.column
                                       }),
-                                      (i = void 0 === i.parentId ? void 0 : t.stacks[i.parentId]);
+                                      (i = void 0 === i.parentId ? void 0 : t.stacks[i.parentId]));
                               }
                               let E = {
                                   elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
                                   stack_id: a,
                                   thread_id: I
                               };
-                              (r.stacks[a] = s), (r.samples[o] = E), a++;
+                              ((r.stacks[a] = s), (r.samples[o] = E), a++);
                           }),
                           r
                       );
@@ -165,8 +165,8 @@ function m(t, e, a, _) {
             version: u.m9.navigator.userAgent
         },
         os: {
-            name: d,
-            version: R,
+            name: R,
+            version: d,
             build_number: f
         },
         device: {
@@ -232,7 +232,7 @@ function S() {
 }
 function U(t) {
     let e = y.get(t);
-    return e && y.delete(t), e;
+    return (e && y.delete(t), e);
 }
 function b(t, e) {
     if ((y.set(t, e), y.size > 30)) {

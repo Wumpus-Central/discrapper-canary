@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ }), n(388685), n(415506), n(358797);
+(n.d(t, { Z: () => $ }), n(388685), n(415506), n(358797));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -33,7 +33,7 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -41,7 +41,7 @@ function O(e) {
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -109,14 +109,14 @@ function B(e) {
                                 { executable: r, name: i, working_dir: a } = n,
                                 o = i,
                                 s = l.Z.fileManager.join(e, r);
-                            (0, h.isMac)() && !s.startsWith(R) && (s = ''.concat(R).concat(s)),
+                            ((0, h.isMac)() && !s.startsWith(R) && (s = ''.concat(R).concat(s)),
                                 (t = null != a ? l.Z.fileManager.join(e, a) : l.Z.fileManager.dirname(s)),
                                 (E[o] = I(O({}, n), {
                                     id: o,
                                     fullExecutablePath: s,
                                     fullWorkingDir: t
                                 })),
-                                null == y && (y = o);
+                                null == y && (y = o));
                         }
                 } else if (null != c) {
                     t === b.QR$.WIN64 && null == c[t] && (t = b.QR$.WIN32);
@@ -125,14 +125,14 @@ function B(e) {
                         let { executable: r } = n,
                             i = 'Default',
                             a = i;
-                        (E[a] = I(O({}, n), {
+                        ((E[a] = I(O({}, n), {
                             name: i,
                             id: a,
                             fullExecutablePath: l.Z.fileManager.join(e, r),
                             fullWorkingDir: e,
                             platforms: [t]
                         })),
-                            (y = a);
+                            (y = a));
                     }
                 }
             }
@@ -255,13 +255,13 @@ function Q(e) {
                             case b.f07.VERIFYING:
                             case b.f07.REPAIRING:
                             case b.f07.POST_INSTALL_SCRIPTS:
-                                c.Z.setProgress('dispatch_application_progress', (0, p.xI)(e.progress, e.total) / 100), (a = !0);
+                                (c.Z.setProgress('dispatch_application_progress', (0, p.xI)(e.progress, e.total) / 100), (a = !0));
                         }
                 }
             }
             if (!j) {
                 let r = l.Z.fileManager.dirname(n[o].installPath);
-                E.Z.getInstallationPath(e, t) !== r &&
+                (E.Z.getInstallationPath(e, t) !== r &&
                     s.Z.wait(() => {
                         s.Z.dispatch({
                             type: 'DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS',
@@ -281,10 +281,10 @@ function Q(e) {
                                 branchId: t,
                                 automatic: !0
                             });
-                        });
+                        }));
             }
         }
-    a || 'dispatch_application_progress' !== c.Z.taskID || c.Z.clearProgress('dispatch_application_progress'), (N = n), (j = !0);
+    (a || 'dispatch_application_progress' !== c.Z.taskID || c.Z.clearProgress('dispatch_application_progress'), (N = n), (j = !0));
 }
 class J extends (r = o.ZP.Store) {
     initialize() {
@@ -336,7 +336,7 @@ class J extends (r = o.ZP.Store) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (P) return setImmediate(e), !1;
+            if (P) return (setImmediate(e), !1);
         });
     }
 }

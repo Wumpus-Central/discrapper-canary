@@ -42,7 +42,7 @@
         calendar: function (e, n) {
             var r = this._calendarEl[e],
                 i = n && n.hours();
-            return t(r) && (r = r.apply(n)), r.replace('{}', i % 12 == 1 ? 'στη' : 'στις');
+            return (t(r) && (r = r.apply(n)), r.replace('{}', i % 12 == 1 ? 'στη' : 'στις'));
         },
         relativeTime: {
             future: 'σε %s',

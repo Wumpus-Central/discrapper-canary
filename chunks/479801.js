@@ -1,4 +1,4 @@
-n.d(t, { e: () => m }), n(388685);
+(n.d(t, { e: () => m }), n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(634894),
@@ -23,7 +23,7 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -31,7 +31,7 @@ function d(e) {
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -62,14 +62,14 @@ let p = 600000,
     h = 600000;
 function m(e, t, n) {
     let u = 'useMaybeFetchCollectiblesCategories';
-    (0, a.j)({
+    ((0, a.j)({
         location: u + ' auto on',
         autoTrackExposure: !0
     }),
         (0, a.j)({
             location: u + ' auto off',
             autoTrackExposure: !1
-        });
+        }));
     let f = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
         m = null == e ? void 0 : e.includeBundles,
         g = (0, c.hv)('useMaybeFetchCollectiblesCategoriesShared'),

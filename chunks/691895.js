@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s }), n(704826), n(35282), n(539854), n(388685);
+(n.d(t, { Z: () => s }), n(704826), n(35282), n(539854), n(388685));
 var r = n(392711),
     i = n.n(r),
     a = n(956067),
@@ -16,7 +16,7 @@ function s(e) {
                     .concat(c + 1, ' started ')
                     .concat((0, o.Ye)(d), '\n')
                     .concat(m);
-            return null != p && (g += '\n Server trace for trace #'.concat(c + 1).concat(p)), g;
+            return (null != p && (g += '\n Server trace for trace #'.concat(c + 1).concat(p)), g);
         })
         .join('\n\n');
 }
@@ -71,7 +71,7 @@ function u(e, t, n, r) {
             log: r,
             shouldKeep: l
         };
-        _(e, u), c && ((a += '| '), o.push(u));
+        (_(e, u), c && ((a += '| '), o.push(u)));
     });
     let s = !1;
     return e.filter((e) => !(s && e.log.includes('\u21AA')) && !(s = (!r && '\uD83C\uDFA8' === e.emoji) || !1 === e.shouldKeep));
@@ -81,7 +81,7 @@ function d(e) {
 }
 function f(e) {
     let t = null == e.tag ? e.label : ''.concat(e.label, ' ').concat(e.tag);
-    return t.includes('_START') && (t = 'Start ' + t.replace('_START', '')), t.includes('_END') && (t = 'Finish ' + t.replace('_END', '')), t;
+    return (t.includes('_START') && (t = 'Start ' + t.replace('_START', '')), t.includes('_END') && (t = 'Finish ' + t.replace('_END', '')), t);
 }
 function _(e, t) {
     let n = 0;

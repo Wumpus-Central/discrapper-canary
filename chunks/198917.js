@@ -1,4 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }),
+(Object.defineProperty(t, '__esModule', { value: !0 }),
     (t.calculateChange = function (e, t, r, n) {
         var o = n.clientWidth,
             a = n.clientHeight,
@@ -28,4 +28,4 @@ Object.defineProperty(t, '__esModule', { value: !0 }),
                 };
         }
         return null;
-    });
+    }));

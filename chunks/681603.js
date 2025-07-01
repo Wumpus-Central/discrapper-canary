@@ -21,7 +21,7 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -29,7 +29,7 @@ function E(e) {
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
@@ -37,8 +37,8 @@ function E(e) {
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
-            });
+                        : (e[t] = i));
+            }));
     }
     return e;
 }
@@ -48,7 +48,7 @@ class _ extends i.Component {
         let { selectedGuild: t, selectedChannel: n, isMemberPending: i, hasPreviewEnabled: r, postableChannelCount: o } = this.props;
         if (null != t && (t !== e.selectedGuild || (i && !e.isMemberPending))) {
             var d, p;
-            (0, c.Q)(
+            ((0, c.Q)(
                 v.rMx.GUILD_VIEWED,
                 ((d = E(
                     {},
@@ -74,11 +74,11 @@ class _ extends i.Component {
                       }),
                 d)
             ),
-                (0, s.a)(v.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t });
+                (0, s.a)(v.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t }));
         }
         if (null != n && n !== e.selectedChannel) {
             let e = (0, a.K)(u.Z.getChannel(n), !0);
-            (0, c.Q)(v.rMx.CHANNEL_OPENED, E({}, e, (0, l.$H)(n))), (0, s.a)(v.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
+            ((0, c.Q)(v.rMx.CHANNEL_OPENED, E({}, e, (0, l.$H)(n))), (0, s.a)(v.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n }));
         }
     }
     render() {

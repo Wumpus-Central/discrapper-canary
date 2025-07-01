@@ -62,7 +62,7 @@ var n = r(73800),
             )
         );
     };
-(p.propTypes = { styles: a().object }),
+((p.propTypes = { styles: a().object }),
     (p.defaultProps = {
         width: '316px',
         height: '16px',
@@ -70,4 +70,4 @@ var n = r(73800),
         pointer: u.Z,
         styles: {}
     }),
-    (0, s.t1)(p);
+    (0, s.t1)(p));

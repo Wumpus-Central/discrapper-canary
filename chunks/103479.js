@@ -44,13 +44,13 @@ function h(e) {
                           size: i.PhG.TINY,
                           themeColor: 'secondary',
                           onClick: (e) => {
-                              e.stopPropagation(),
+                              (e.stopPropagation(),
                                   null == a || a({ action: l ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
                                   p({
                                       user: t,
                                       activity: n,
                                       index: o
-                                  });
+                                  }));
                           }
                       },
                       o
@@ -67,13 +67,13 @@ function h(e) {
                           themeColor: 'secondary',
                           fullWidth: !0,
                           onClick: (e) => {
-                              e.stopPropagation(),
+                              (e.stopPropagation(),
                                   null == a || a({ action: l ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
                                   p({
                                       user: t,
                                       activity: n,
                                       index: i
-                                  });
+                                  }));
                           }
                       },
                       i

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(642613), n(583741);
+(n.d(t, { Z: () => m }), n(388685), n(642613), n(583741));
 var i = n(392711),
     r = n.n(i),
     s = n(710845),
@@ -25,7 +25,7 @@ let u = new s.Z('ReadStates'),
             let t = performance.now(),
                 n = await c.Z.readStates(e).getMany(),
                 i = performance.now();
-            return u.log('asynchronously loaded in '.concat(i - t, 'ms (readStates: ').concat(n.length, ')')), n;
+            return (u.log('asynchronously loaded in '.concat(i - t, 'ms (readStates: ').concat(n.length, ')')), n);
         }
         resetInMemoryState() {
             this.readStateVersion = null;
@@ -62,10 +62,10 @@ let u = new s.Z('ReadStates'),
                 ]);
             }
             let s = c.Z.readStatesTransaction(e);
-            s.delete(), n.forEach((e) => s.put(''.concat(e.type, '-').concat(e.channelId), e));
+            (s.delete(), n.forEach((e) => s.put(''.concat(e.type, '-').concat(e.channelId), e)));
         }
         constructor() {
-            d(this, 'readStateVersion', null),
+            (d(this, 'readStateVersion', null),
                 d(this, 'actions', {
                     CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                     CHANNEL_PINS_ACK: (e) => this.handleReadStateAction(e),
@@ -74,6 +74,6 @@ let u = new s.Z('ReadStates'),
                         e.messagesOnly || this.handleWriteCaches(t, !1);
                     },
                     WRITE_CACHES: (e, t) => this.handleWriteCaches(t, !0)
-                });
+                }));
         }
     })();

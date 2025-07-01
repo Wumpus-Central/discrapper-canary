@@ -115,11 +115,11 @@ let q = function () {
         Y = (0, f.Z)({ forceFetch: !0 }),
         q = (0, w.W)(),
         X = null !== e ? e.currentPeriodEnd : void 0,
-        Q = !(q && !(Y.unactivatedUnits.length > 0)) && (Y.fractionalState !== U.a$.NONE || Y.unactivatedUnits.length > 0);
+        J = !(q && !(Y.unactivatedUnits.length > 0)) && (Y.fractionalState !== U.a$.NONE || Y.unactivatedUnits.length > 0);
     return (r.useEffect(
         () => (
             c.Z.wait(() => {
-                (0, g.Y2)(), d.jg(), (0, u.X8)(), d.tZ();
+                ((0, g.Y2)(), d.jg(), (0, u.X8)(), d.tZ());
             }),
             function () {
                 p.Z.clearSubsection();
@@ -148,7 +148,7 @@ let q = function () {
                                         subscriptions: t
                                     })
                                   : (0, i.jsx)(M.MM, {}),
-                              Q &&
+                              J &&
                                   (0, i.jsxs)('section', {
                                       children: [
                                           (0, i.jsx)(o.X6q, {
@@ -189,7 +189,7 @@ let q = function () {
                                           (0, i.jsx)(O.Z, {
                                               count: Z,
                                               onClickManageSubscription: () => {
-                                                  p.Z.setSection(V.oAB.SUBSCRIPTIONS, G.XZ), R.default.track(V.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+                                                  (p.Z.setSection(V.oAB.SUBSCRIPTIONS, G.XZ), R.default.track(V.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED));
                                               }
                                           })
                                       ]

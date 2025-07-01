@@ -17,12 +17,12 @@ let a = (t) => {
                         r,
                         o = {},
                         l = Object.keys(t);
-                    for (r = 0; r < l.length; r++) (n = l[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), e.indexOf(n) >= 0 || (o[n] = t[n]));
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]));
             }
             return o;
         })(t, ['onConfirm', 'channel']);
@@ -35,7 +35,7 @@ let a = (t) => {
                   for (var e = 1; e < arguments.length; e++) {
                       var n = null != arguments[e] ? arguments[e] : {},
                           r = Object.keys(n);
-                      'function' == typeof Object.getOwnPropertySymbols &&
+                      ('function' == typeof Object.getOwnPropertySymbols &&
                           (r = r.concat(
                               Object.getOwnPropertySymbols(n).filter(function (t) {
                                   return Object.getOwnPropertyDescriptor(n, t).enumerable;
@@ -43,7 +43,7 @@ let a = (t) => {
                           )),
                           r.forEach(function (e) {
                               var r;
-                              (r = n[e]),
+                              ((r = n[e]),
                                   e in t
                                       ? Object.defineProperty(t, e, {
                                             value: r,
@@ -51,8 +51,8 @@ let a = (t) => {
                                             configurable: !0,
                                             writable: !0
                                         })
-                                      : (t[e] = r);
-                          });
+                                      : (t[e] = r));
+                          }));
                   }
                   return t;
               })(

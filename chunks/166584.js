@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(539854), n(642613);
+(n.d(t, { Z: () => x }), n(388685), n(539854), n(642613));
 var r = n(255367),
     i = n(73800),
     a = n(772848),
@@ -36,7 +36,7 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
+        ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
@@ -44,7 +44,7 @@ function T(e) {
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            });
+            }));
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -78,7 +78,7 @@ function N(e, t) {
         i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -88,7 +88,7 @@ function C(e, t) {
         r,
         i = {},
         a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
 let R = 4,
@@ -111,7 +111,7 @@ function L(e) {
         G = i.useRef(null),
         B = i.useRef(null),
         V = i.useRef(0);
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         V.current = 0;
     }, [d]),
         i.useLayoutEffect(() => {
@@ -131,11 +131,11 @@ function L(e) {
                     }
                     let o = Math.min(a.getBoundingClientRect().width, t);
                     if (e + o > t) break;
-                    (e += o + R), n.push(i);
+                    ((e += o + R), n.push(i));
                 }
             }
-            x(n.length === L.length ? L : n), M(r), V.current++;
-        }, [d, L, j]);
+            (x(n.length === L.length ? L : n), M(r), V.current++);
+        }, [d, L, j]));
     let F = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
         Z = (0, o.ZP)({
             id: F,
@@ -164,10 +164,10 @@ function L(e) {
         }),
         { trackUserProfileAction: K } = (0, g.KZ)(),
         z = i.useCallback(() => {
-            U(!0), K({ action: 'EXPAND_ROLES' });
+            (U(!0), K({ action: 'EXPAND_ROLES' }));
         }, [K]),
         q = i.useCallback(() => {
-            U(!1), K({ action: 'COLLAPSE_ROLES' });
+            (U(!1), K({ action: 'COLLAPSE_ROLES' }));
         }, [K]);
     return (0, r.jsx)(s.bG, {
         navigator: Z,
@@ -269,7 +269,7 @@ function x(e) {
             (e) => {
                 o({ action: 'ADD_ROLE' });
                 let n = null != h ? h : [];
-                -1 === n.indexOf(e) && (n = n.concat([e])), d.Z.updateMemberRoles(a.id, t.id, n, [e], []);
+                (-1 === n.indexOf(e) && (n = n.concat([e])), d.Z.updateMemberRoles(a.id, t.id, n, [e], []));
             },
             [h, a.id, t.id, o]
         ),

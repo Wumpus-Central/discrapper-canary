@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Q4: () => R,
     Vv: () => T,
     oO: () => A,
@@ -6,7 +6,7 @@ n.d(t, {
     x_: () => f.Z
 }),
     n(388685),
-    n(35282);
+    n(35282));
 var r = n(392711),
     i = n.n(r),
     a = n(31775),
@@ -35,11 +35,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -52,35 +52,35 @@ function O(e, t) {
     null == e.backoff && (e.backoff = new l.Z());
     let { backoff: n } = e;
     return async () => {
-        await u.Z.isOnline(),
+        (await u.Z.isOnline(),
             n.fails < m
                 ? n.fail(() => {
                       v(e);
                   })
-                : I(!0, e, t);
+                : I(!0, e, t));
     };
 }
 function v(e) {
     let t = new Image();
-    (t.onerror = O(e, t)),
+    ((t.onerror = O(e, t)),
         (t.onload = () => {
             let { backoff: n } = e;
-            null != n && n.succeed(), I(!1, e, t);
+            (null != n && n.succeed(), I(!1, e, t));
         }),
-        (t.src = e.url);
+        (t.src = e.url));
 }
 function I(e, t, n) {
     let { callbacks: r, url: i } = t;
     if (e) y.del(i);
     else {
         let { width: e, height: r } = n;
-        (t = {
+        ((t = {
             url: i,
             loaded: !0,
             width: e,
             height: r
         }),
-            y.set(i, t);
+            y.set(i, t));
     }
     null != r && r.forEach((n) => n(e, t));
 }
@@ -141,20 +141,20 @@ function C(e) {
     let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: o, format: l = null, quality: u = null, animated: f = !1, srcIsAnimated: p = !1 } = e;
     if (t.startsWith('data:image') || d.Z.isDiscordCdnUrl(t)) return t;
     let [h, m] = N(t);
-    null != l && (m.format = l), null != u && (m.quality = u), f && p && (g.test(t) || E.test(t)) && (m.animated = !0), E.test(t) && (m.format = 'webp');
+    (null != l && (m.format = l), null != u && (m.quality = u), f && p && (g.test(t) || E.test(t)) && (m.animated = !0), E.test(t) && (m.format = 'webp'));
     let b = (0, c.Tj)({
         width: a,
         height: o,
         maxWidth: _.hiG,
         maxHeight: _.hiG
     });
-    return (a = b.width), (o = b.height), (a !== n || o !== r) && ((m.width = 0 | a), (m.height = 0 | o)), i().isEmpty(m) || (h += '?' + s.stringify(m)), h;
+    return ((a = b.width), (o = b.height), (a !== n || o !== r) && ((m.width = 0 | a), (m.height = 0 | o)), i().isEmpty(m) || (h += '?' + s.stringify(m)), h);
 }
 function R(e) {
     let { src: t, width: n, height: r, maxWidth: i, maxHeight: a, ratio: o = 1, format: s = null, quality: l = null, animated: c = !1, srcIsAnimated: u = !1 } = e,
         d = n,
         _ = r;
-    o < 1 && ((d = Math.round(n * o)), (_ = Math.round(r * o))), null != i && (d = Math.min(d, i)), null != a && (_ = Math.min(_, a));
+    (o < 1 && ((d = Math.round(n * o)), (_ = Math.round(r * o))), null != i && (d = Math.min(d, i)), null != a && (_ = Math.min(_, a)));
     let p = (0, f.Z)();
     return C({
         src: t,

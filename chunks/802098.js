@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+(n.d(t, { Z: () => P }), n(388685));
 var r,
     i = n(442837),
     a = n(433517),
@@ -41,11 +41,11 @@ function v(e) {
 }
 function I(e) {
     let { config: t, latestChangelogId: n } = e;
-    (p = n), (m = t);
+    ((p = n), (m = t));
 }
 function T(e) {
     let { id: t, changelog: n } = e;
-    null == f[t] && (f[t] = {}),
+    (null == f[t] && (f[t] = {}),
         (f[t][n.locale] = {
             id: t,
             date: n.date,
@@ -55,12 +55,12 @@ function T(e) {
             [n.asset_type === u.h3.YOUTUBE_VIDEO_ID ? 'youtube_video_id' : 'image']: n.asset
         }),
         null == _[t] && (_[t] = {}),
-        (_[t][n.locale] = u.LU.LOADED_SUCCESS);
+        (_[t][n.locale] = u.LU.LOADED_SUCCESS));
 }
 function S(e) {
     let { id: t, locale: n } = e;
     if (null != f[t] && null != f[t][n]) return !1;
-    null == _[t] && (_[t] = {}), (_[t][n] = u.LU.LOADED_FAILURE);
+    (null == _[t] && (_[t] = {}), (_[t][n] = u.LU.LOADED_FAILURE));
 }
 function A(e) {
     let { id: t } = e;
@@ -68,14 +68,14 @@ function A(e) {
 }
 function N(e) {
     let { changelogDate: t } = e;
-    (b = new Date(t)), a.K.set(g, t);
+    ((b = new Date(t)), a.K.set(g, t));
 }
 function C() {
     E = l.l4.getSetting();
 }
 class R extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.default, c.Z), this.syncWith([s.default], () => !0), this.syncWith([c.Z], C);
+        (this.waitFor(s.default, c.Z), this.syncWith([s.default], () => !0), this.syncWith([c.Z], C));
         let e = a.K.get(g);
         if (null != e)
             try {

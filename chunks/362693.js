@@ -12,7 +12,7 @@ function d(e) {
         { videoPlayerRef: f, cropData: v, applicationAudioEnabled: h, voiceAudioEnabled: g } = (0, u.S)(),
         x = r.useCallback(() => {
             var e;
-            null == (e = f.current) || e.seek(v.start), n();
+            (null == (e = f.current) || e.seek(v.start), n());
         }, [n, v.start, f]);
     return (
         r.useEffect(() => {
@@ -27,17 +27,17 @@ function d(e) {
                     i = !1;
                 switch (e.key) {
                     case ' ':
-                        (i = !0), r.paused ? a.play() : a.pause();
+                        ((i = !0), r.paused ? a.play() : a.pause());
                         break;
                     case 'ArrowLeft':
-                        (i = !0), a.seek(Math.max(r.currentTime - l, v.start));
+                        ((i = !0), a.seek(Math.max(r.currentTime - l, v.start)));
                         break;
                     case 'ArrowRight':
-                        (i = !0), a.seek(Math.min(r.currentTime + l, v.end));
+                        ((i = !0), a.seek(Math.min(r.currentTime + l, v.end)));
                 }
                 i && (e.stopPropagation(), e.preventDefault());
             }
-            return document.addEventListener('keydown', e), () => document.removeEventListener('keydown', e);
+            return (document.addEventListener('keydown', e), () => document.removeEventListener('keydown', e));
         }, [v.start, v.end, f]),
         (0, a.jsxs)('div', {
             className: c.editorPane,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(457542);
+(n.d(t, { Z: () => j }), n(388685), n(457542));
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -45,7 +45,7 @@ function j() {
                 cancelText: _.intl.string(_.t.jpVjsr),
                 confirmButtonColor: o.zxk.Colors.BRAND,
                 onConfirm: (e) => {
-                    j(!0),
+                    (j(!0),
                         (0, g.h)(e)
                             .then(
                                 (e) => {
@@ -65,7 +65,7 @@ function j() {
                                     });
                                 }
                             )
-                            .finally(() => j(!1));
+                            .finally(() => j(!1)));
                 }
             });
         };

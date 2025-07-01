@@ -14,7 +14,7 @@ var r = n(544891),
 let h = {
     call(e, t, n, i, a) {
         let o = (n) => {
-            f.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e);
+            (f.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e));
         };
         if (null != i) {
             if (s.Z.isBlocked(i)) return;
@@ -30,7 +30,7 @@ let h = {
                         o(n && e.body.ringable);
                     },
                     () => {
-                        c.default.track(_.rMx.OPEN_POPOUT, {
+                        (c.default.track(_.rMx.OPEN_POPOUT, {
                             type: 'Not Friend',
                             source: 'Call'
                         }),
@@ -45,7 +45,7 @@ let h = {
                                         context: { location: 'Call' }
                                     });
                                 }
-                            });
+                            }));
                     }
                 );
         } else o(n);
@@ -56,7 +56,7 @@ let h = {
         let l = (0, a.V)(s),
             c = _.TPd.CALLABLE.has(s.type);
         if (l) {
-            r.tn.post({
+            (r.tn.post({
                 url: _.ANM.CALL_RING(e),
                 body: {
                     recipients: t,
@@ -71,7 +71,7 @@ let h = {
                         type: 'GUILD_LOCAL_RING_START',
                         ringing: t,
                         guildId: s.guild_id
-                    });
+                    }));
             return;
         }
         c &&

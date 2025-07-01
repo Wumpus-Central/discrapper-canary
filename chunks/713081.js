@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Fm: () => p,
     H6: () => h,
     Qh: () => f,
@@ -7,7 +7,7 @@ n.d(t, {
     jd: () => d
 }),
     n(642613),
-    n(539854);
+    n(539854));
 var r = n(544891),
     i = n(570140),
     a = n(823379),
@@ -29,14 +29,14 @@ function _(e, t) {
     if (!0 === t) {
         let t = s.G.concat(s.W),
             n = {};
-        (n[c.Us.LEVEL] = s.G),
+        ((n[c.Us.LEVEL] = s.G),
             (n[c.Us.PERK] = s.W),
             i.Z.dispatch({
                 type: 'GUILD_POWERUP_CATALOG_FETCH_SUCCESS',
                 guildId: e,
                 allPowerups: t.sort((e, t) => (e.skuId >= t.skuId ? 1 : -1)).reduce((e, t) => ((e[t.skuId] = t), e), {}),
                 powerupCatalog: n
-            });
+            }));
         return;
     }
     let n = { application_id: c.NO };
@@ -54,7 +54,7 @@ function _(e, t) {
                 (e, t) => {
                     var n, r;
                     let { allPowerups: i, powerupCatalog: a } = e;
-                    return (i[t.skuId] = t), null == a[t.type] && (a[t.type] = []), null == (r = a[t.type]) || null == (n = r.push) || n.call(r, t), e;
+                    return ((i[t.skuId] = t), null == a[t.type] && (a[t.type] = []), null == (r = a[t.type]) || null == (n = r.push) || n.call(r, t), e);
                 },
                 {
                     allPowerups: {},
