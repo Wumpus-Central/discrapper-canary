@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => ek }), n(415506));
+(n.d(t, { Z: () => eL }), n(415506));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -31,8 +31,8 @@ var r = n(255367),
     w = n(565799),
     Z = n(590415),
     R = n(911560),
-    L = n(488131),
-    k = n(814820),
+    k = n(488131),
+    L = n(814820),
     D = n(314897),
     M = n(523746),
     U = n(592125),
@@ -152,7 +152,7 @@ function eR(e) {
         usernameHook: l
     });
 }
-let eL = Object.freeze({
+let ek = Object.freeze({
         [eT.uaV.DEFAULT]: void 0,
         [eT.uaV.REPLY]: void 0,
         [eT.uaV.CHAT_INPUT_COMMAND]: void 0,
@@ -332,7 +332,7 @@ let eL = Object.freeze({
                         compact: n,
                         usernameHook: o
                     }),
-                    (0, r.jsx)(k.f, {
+                    (0, r.jsx)(L.f, {
                         channel: i,
                         message: t
                     })
@@ -428,7 +428,7 @@ let eL = Object.freeze({
                         if (null != r) {
                             await R.Z.loadThread(r);
                             let t = U.Z.getChannel(r);
-                            null != t && (0, L.ok)(t, e.shiftKey);
+                            null != t && (0, k.ok)(t, e.shiftKey);
                         }
                     },
                     [t]
@@ -751,10 +751,10 @@ let eL = Object.freeze({
         [eT.uaV.REPORT_TO_MOD_DELETED_MESSAGE]: N.Z,
         [eT.uaV.REPORT_TO_MOD_CLOSED_REPORT]: N.Z
     }),
-    ek = i.memo(function (e) {
+    eL = i.memo(function (e) {
         let { message: t, channel: n, compact: i, disableInteraction: l } = e,
             { type: a } = t,
-            o = eL[a];
+            o = ek[a];
         if (null == o) {
             var s;
             return ((s = Error('unknown message type '.concat(t.type))), Y.Z.captureException(s), new _.Z('SystemMessage').error('', s), null);

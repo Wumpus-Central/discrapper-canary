@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685), n(642613));
+(n.d(t, { Z: () => S }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,7 +20,7 @@ var r = n(255367),
     v = n(388032),
     C = n(929968),
     j = n(413813);
-function S(e) {
+function E(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(c.M0o, {
         tooltip: v.intl.string(v.t['8k+6QU']),
@@ -33,9 +33,9 @@ function S(e) {
         onClick: t
     });
 }
-function E(e) {
+function S(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: c, items: v, loading: j, loadMore: E } = (0, p.y6)(),
+        { initialized: c, items: v, loading: j, loadMore: S } = (0, p.y6)(),
         x = (0, a.e7)([u.Z], () => u.Z.localItems),
         I = (0, g.Us)({ location: 'ForYou' }),
         P = i.useMemo(() => [...[...v, ...x].sort((e, t) => -1 * _.default.compare(e.id, t.id))], [v, x]),
@@ -58,7 +58,7 @@ function E(e) {
                 badgeState: n,
                 closePopout: l,
                 children: Z
-                    ? (0, r.jsx)(S, {
+                    ? (0, r.jsx)(E, {
                           onClick: () => {
                               null != N && (m.d$.updateSetting(N.id), b.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
                           }
@@ -69,7 +69,7 @@ function E(e) {
                 initialized: c,
                 items: P,
                 loading: j,
-                loadMore: E
+                loadMore: S
             })
         ]
     });

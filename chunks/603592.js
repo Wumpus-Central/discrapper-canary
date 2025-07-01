@@ -11,7 +11,7 @@ var r = n(255367),
     h = n(329922);
 let p = i.forwardRef(function (e, t) {
     var n, l;
-    let { id: p, onClick: f, onContextMenu: g, icon: m, selected: b, tooltip: _, upperBadge: O, lowerBadge: y, lowerBadgeSize: v, showPill: C = !0, className: j, 'aria-label': S, children: E, onMouseEnter: x, onMouseLeave: I, onMouseDown: P } = e,
+    let { id: p, onClick: f, onContextMenu: g, icon: m, selected: b, tooltip: _, upperBadge: O, lowerBadge: y, lowerBadgeSize: v, showPill: C = !0, className: j, 'aria-label': E, children: S, onMouseEnter: x, onMouseLeave: I, onMouseDown: P } = e,
         N = (0, a.Ie)(p),
         [w, Z] = i.useState(!1);
     return (0, r.jsxs)(u.H, {
@@ -71,7 +71,7 @@ let p = i.forwardRef(function (e, t) {
                                 onMouseDown: P,
                                 className: o()(h.circleIconButton, j, { [h.selected]: b || w }),
                                 onClick: f,
-                                'aria-label': 'string' == typeof _ && null == S ? _ : S,
+                                'aria-label': 'string' == typeof _ && null == E ? _ : E,
                                 'aria-selected': b,
                                 onContextMenu: g,
                                 focusProps: { enabled: !1 }
@@ -103,7 +103,7 @@ let p = i.forwardRef(function (e, t) {
                     )
                 })
             }),
-            E
+            S
         ]
     });
 });

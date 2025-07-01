@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(561788),
     C = n(876548),
     j = n(543432),
-    S = n(981631),
-    E = n(388032),
+    E = n(981631),
+    S = n(388032),
     x = n(642317),
     I = n(656855);
 function P(e) {
@@ -46,7 +46,7 @@ function P(e) {
     let C = (0, u.ZP)(o),
         j = Array.from((0, u.uF)(C).values()),
         I = null != (t = null == g ? void 0 : g.filter(_.lm)) ? t : [],
-        P = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
+        P = (e) => (t) => ([E.IIU.PLAYING, E.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === E.IIU.LISTENING,
         w = (0, a.e7)(
             [m.Z],
             () => {
@@ -64,7 +64,7 @@ function P(e) {
                                               members: [],
                                               activity: n
                                           };
-                            (s.members.push(t), (0, d.Z)(s.activity, S.xjy.JOIN) || (s.activity = n), (e[a] = s));
+                            (s.members.push(t), (0, d.Z)(s.activity, E.xjy.JOIN) || (s.activity = n), (e[a] = s));
                         }
                     }),
                     Object.values(e)
@@ -119,7 +119,7 @@ function P(e) {
                                   children: (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: E.intl.format(E.t.ePyoY2, {
+                                      children: S.intl.format(S.t.ePyoY2, {
                                           onClick: () => {
                                               (0, s.ZDy)(async () => {
                                                   let { default: e } = await n.e('59500').then(n.bind(n, 241420));
@@ -180,7 +180,7 @@ function P(e) {
 }
 function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
-        l = (0, a.e7)([g.Z], () => !g.Z.can(S.Plq.CONNECT, t)),
+        l = (0, a.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, t)),
         s = (0, a.e7)([b.Z], () => b.Z.hasVideo(t.id)),
         c = (0, O.ZP)({
             channel: t,

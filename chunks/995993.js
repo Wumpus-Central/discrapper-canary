@@ -1,4 +1,4 @@
-n.d(t, { m: () => S });
+n.d(t, { m: () => E });
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -20,9 +20,9 @@ var r = n(255367),
     v = n(490897),
     C = n(388032),
     j = n(990252);
-function S(e) {
-    let { guild: t, selected: S } = e,
-        E = (0, h.Z)(t),
+function E(e) {
+    let { guild: t, selected: E } = e,
+        S = (0, h.Z)(t),
         x = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         I = (0, l.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
         P = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, v.W.GUILD_ONBOARDING_QUESTION)),
@@ -35,8 +35,8 @@ function S(e) {
             return null != e && e > r;
         }),
         Z = i.useCallback(() => {
-            (0, f.uL)(O.Z5c.CHANNEL(t.id, E ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
-        }, [t.id, E]),
+            (0, f.uL)(O.Z5c.CHANNEL(t.id, S ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
+        }, [t.id, S]),
         T = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -93,7 +93,7 @@ function S(e) {
         A = null;
     return (
         (x && !P && !N) ||
-            S ||
+            E ||
             w ||
             (A = (0, r.jsx)(s.IGR, {
                 color: a.Z.colors.BADGE_BRAND_BG.css,
@@ -108,8 +108,8 @@ function S(e) {
                     color: 'currentColor',
                     className: e
                 }),
-            text: E ? C.intl.string(C.t.h9mGOD) : C.intl.string(C.t.et6wam),
-            selected: S,
+            text: S ? C.intl.string(C.t.h9mGOD) : C.intl.string(C.t.et6wam),
+            selected: E,
             onClick: Z,
             onContextMenu: T,
             trailing: A

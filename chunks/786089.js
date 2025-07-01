@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(594174),
     b = n(626135),
     _ = n(617136),
-    E = n(113434),
-    O = n(497505),
+    O = n(113434),
+    E = n(497505),
     y = n(475595),
     I = n(352084),
     v = n(125011),
@@ -36,7 +36,7 @@ let P = (0, i.memo)(function (e) {
         B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
         { ref: V, height: H = 0 } = (0, p.ZP)(),
         F = (0, h.ZP)(),
-        z = (0, E.B6)(null == (t = Z.userStatus) ? void 0 : t.claimedAt, {
+        z = (0, O.B6)(null == (t = Z.userStatus) ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
@@ -59,7 +59,7 @@ let P = (0, i.memo)(function (e) {
         ee = (0, i.useMemo)(() => null != Z.config.cosponsorMetadata, [Z]),
         et = (0, i.useMemo)(() => (0, y.fh)(Z, y.eC.REWARD), [Z]),
         en = x ? H + 8 : 0,
-        er = (0, _.mH)(O.jn.TROPHY_CASE_CARD),
+        er = (0, _.mH)(E.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
         ea = (function (e, t) {
             if (null == e) return {};

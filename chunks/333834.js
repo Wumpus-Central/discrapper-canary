@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(982183),
     C = n(981631),
     j = n(144717),
-    S = n(388032),
-    E = n(709701);
+    E = n(388032),
+    S = n(709701);
 function x(e) {
     e.stopPropagation();
 }
@@ -29,7 +29,7 @@ function I(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(u.P3F, {
         onClick: i,
-        className: o()(E.messagesGroupHeaderWrap, { [E.collapsed]: !n }),
+        className: o()(S.messagesGroupHeaderWrap, { [S.collapsed]: !n }),
         children: (0, r.jsxs)(u.Kqy, {
             gap: 4,
             direction: 'horizontal',
@@ -38,12 +38,12 @@ function I(e) {
                 (0, r.jsx)(u.X6q, {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
-                    className: E.messagesGroupHeader,
-                    children: (0, a.capitalize)(S.intl.string(v.Vv[t]).toLowerCase())
+                    className: S.messagesGroupHeader,
+                    children: (0, a.capitalize)(E.intl.string(v.Vv[t]).toLowerCase())
                 }),
                 (0, r.jsx)(u.CJ0, {
                     size: 'xxs',
-                    className: E.chevron
+                    className: S.chevron
                 })
             ]
         })
@@ -53,7 +53,7 @@ let P = [v.KZ.UNREAD, v.KZ.TODAY, v.KZ.YESTERDAY, v.KZ.OLDER];
 function N() {
     let { analyticsLocations: e } = (0, p.ZP)(h.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)('div', {
-        className: E.emptyStateContainer,
+        className: S.emptyStateContainer,
         children: (0, r.jsxs)(u.Kqy, {
             gap: 24,
             align: 'center',
@@ -72,7 +72,7 @@ function N() {
                             variant: 'text-sm/medium',
                             color: C.tPk.TEXT_MUTED,
                             style: { textAlign: 'center' },
-                            children: S.intl.string(j.default['O+racX'])
+                            children: E.intl.string(j.default['O+racX'])
                         })
                     ]
                 }),
@@ -80,14 +80,14 @@ function N() {
                     onClick: () => (0, O.j4)(e),
                     color: u.zxk.Colors.PRIMARY,
                     style: { fontWeight: 600 },
-                    children: S.intl.string(j.default.klSpfn)
+                    children: E.intl.string(j.default.klSpfn)
                 })
             ]
         })
     });
 }
 function w(e) {
-    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: a, renderLoadingState: h, renderMessageGroup: p, scrollerClassName: j, className: S, listName: w, ignoreGrouping: Z = !1 } = e,
+    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: a, renderLoadingState: h, renderMessageGroup: p, scrollerClassName: j, className: E, listName: w, ignoreGrouping: Z = !1 } = e,
         T = i.useRef(null),
         A = (0, d.Z)(w, T),
         { notificationCenterVariant: R } = m.Lk.useExperiment({ location: 'NotificationsInboxSidebarList' }),
@@ -207,7 +207,7 @@ function w(e) {
             (B = (0, r.jsx)(
                 'div',
                 {
-                    className: E.loadingMore,
+                    className: S.loadingMore,
                     children: (0, r.jsx)(u.$jN, {})
                 },
                 'loading-more-after'
@@ -231,12 +231,12 @@ function w(e) {
             groupedUnreadMessages: null == U ? void 0 : U.UNREAD
         }),
         (0, r.jsx)('div', {
-            className: o()(S, E.messagesPopoutWrap),
+            className: o()(E, S.messagesPopoutWrap),
             onClick: x,
             onDoubleClick: x,
             'aria-label': e['aria-label'],
             children: (0, r.jsx)(u.Den, {
-                className: o()(E.messagesPopout, j),
+                className: o()(S.messagesPopout, j),
                 onScroll: M,
                 fade: !0,
                 ref: T,

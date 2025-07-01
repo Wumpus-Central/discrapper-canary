@@ -150,9 +150,9 @@ let N = ['TOP_LEFT', 'TOP_RIGHT'],
     }),
     Z = 'falling-leaf',
     R = ['#61D5B2'],
-    L = n(303893),
-    k = n(313226),
-    D = [L, k];
+    k = n(303893),
+    L = n(313226),
+    D = [k, L];
 function M() {
     return n
         .e('77843')
@@ -295,7 +295,7 @@ function U(e) {
                             }
                         }
                     },
-                    { sprite: 'TOP_LEFT' === g ? L : k }
+                    { sprite: 'TOP_LEFT' === g ? k : L }
                 );
             }
         }, [x, y, g, d]),
@@ -388,17 +388,17 @@ function F(e) {
                     d(t.left + t.width / 2, t.top + t.height / 2);
                 } else S(!0);
         }, [d, N, I]),
-        L = l.useCallback(() => {
+        k = l.useCallback(() => {
             S(!1);
         }, []),
-        k = l.useCallback(() => {
+        L = l.useCallback(() => {
             ((0, _.AI)({ settingsVisible: !0 }), m.Z.open(x.oAB.POGGERMODE), S(!1));
         }, []),
         D = l.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(Z)) && k();
+                (null == t ? void 0 : t.id.startsWith(Z)) && L();
             },
-            [k]
+            [L]
         );
     l.useEffect(() => j(D));
     let M = (0, i.jsx)(p.P3F, {
@@ -425,8 +425,8 @@ function F(e) {
                       children: (0, i.jsx)('div', {
                           className: O.cannonWrapper,
                           children: (0, i.jsx)(U, {
-                              onAnimationComplete: L,
-                              onClick: k
+                              onAnimationComplete: k,
+                              onClick: L
                           })
                       })
                   })

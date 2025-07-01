@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685), n(539854));
+(n.d(t, { Z: () => O }), n(388685), n(539854));
 var r = n(836560),
     i = n(317381),
     l = n(16609),
@@ -29,7 +29,7 @@ let g = 10 * s.Z.Millis.SECOND,
     _ = (e, t, n) => {
         n([u.Z.CLOSE, t], e);
     };
-class E extends r.EventEmitter {
+class O extends r.EventEmitter {
     routeEvent(e, t, n, r) {
         if (!Array.isArray(n)) return void console.warn('[PostMessageTransport] Protocol error: event data should be an Array!');
         let [i, l] = n;

@@ -25035,9 +25035,13 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     top: 0
 }
 
+.align-chat-input .emojiButton__74017 {
+    border-radius: 8px;
+    transition-duration: .2s
+}
+
 .align-chat-input .emojiButton__74017:hover {
-    background-color: var(--background-modifier-selected);
-    border-radius: 8px
+    background-color: var(--background-modifier-selected)
 }
 
 .has-webkit-scrollbar .buttons__74017 {
@@ -35647,9 +35651,13 @@ div.modalOverrideBody__34eac {
     color: var(--interactive-active)
 }
 
+.align-chat-input .button__24af7:not(.noHover__24af7) {
+    border-radius: 8px;
+    transition-duration: .2s
+}
+
 .align-chat-input .button__24af7:not(.noHover__24af7):hover {
-    background-color: var(--background-modifier-selected);
-    border-radius: 8px
+    background-color: var(--background-modifier-selected)
 }
 
 .iconMask__24af7 {

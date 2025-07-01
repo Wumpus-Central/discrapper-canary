@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => R,
-    Z: () => L
+    Z: () => k
 });
 var r,
     i = n(255367),
@@ -34,8 +34,8 @@ var r,
     w = n(388032),
     Z = n(587862),
     R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
-function L(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: L, analyticsPage: k, analyticsSection: D, glow: M, giftIntentSecondaryAction: U } = e,
+function k(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: L, analyticsSection: D, glow: M, giftIntentSecondaryAction: U } = e,
         F = (0, c.e7)([C.default], () => C.default.getCurrentUser()),
         { analyticsLocations: B } = (0, g.ZP)(),
         G = (0, c.e7)([I.Z], () => I.Z.getFriendAnniversaryYears(r.id));
@@ -168,7 +168,7 @@ function L(e) {
                                     analyticsLocation: 'system_message' === n ? i.chat : i.actionButtonCoachmark,
                                     analyticsLocations: B,
                                     analyticsObject: {
-                                        page: k,
+                                        page: L,
                                         section: D,
                                         object: N.qAy.BUTTON_CTA,
                                         objectType: N.Qqv.GIFT
@@ -197,11 +197,11 @@ function L(e) {
                         })
                     ]
                 }),
-                null != L &&
+                null != k &&
                     (0, i.jsx)('div', {
                         className: o()(Z.connector, {
-                            [Z.leftPopoutConnector]: 'left' === L,
-                            [Z.rightPopoutConnector]: 'right' === L
+                            [Z.leftPopoutConnector]: 'left' === k,
+                            [Z.rightPopoutConnector]: 'right' === k
                         })
                     })
             ]

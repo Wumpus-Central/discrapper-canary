@@ -31,8 +31,8 @@ var r,
     w = n(417363),
     Z = n(768581),
     R = n(358085),
-    L = n(804739),
-    k = n(410575),
+    k = n(804739),
+    L = n(410575),
     D = n(981631),
     M = n(701488);
 function U(e, t, n) {
@@ -94,8 +94,8 @@ class G extends (r = l.PureComponent) {
         return null != t && null != t.primarySkuId && !e && R.isPlatformEmbedded;
     }
     render() {
-        return (0, i.jsx)(k.Z, {
-            section: k.Z.Sections.APPLICATION_EMBED,
+        return (0, i.jsx)(L.Z, {
+            section: L.Z.Sections.APPLICATION_EMBED,
             children: this.renderEmbed()
         });
     }
@@ -273,7 +273,7 @@ let H = a.ZP.connectStores([y.Z, j.Z, T.Z, N.Z, O.Z, A.Z, S.Z, b.Z, w.Z, P.defau
         isSyncable: m && !g,
         isLaunchable:
             null != s &&
-            (0, L.t)({
+            (0, k.t)({
                 LibraryApplicationStore: S.Z,
                 LaunchableGameStore: b.Z,
                 DispatchApplicationStore: w.Z,

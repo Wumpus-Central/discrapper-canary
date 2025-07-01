@@ -47,8 +47,8 @@ function y(e) {
 let v = b.IlC.APP,
     C = !1,
     j = !1,
-    S = [];
-function E() {
+    E = [];
+function S() {
     C = !0;
 }
 class x extends (i = l.ZP.Store) {
@@ -57,11 +57,11 @@ class x extends (i = l.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(C && S.length > 0 && v === e);
+        return !!(C && E.length > 0 && v === e);
     }
     getProps() {
         return {
-            invite: S.length > 0 ? S[0][0] : null,
+            invite: E.length > 0 ? E[0][0] : null,
             error: null != r && '' !== r ? r : null,
             submitting: j
         };
@@ -69,8 +69,8 @@ class x extends (i = l.ZP.Store) {
 }
 O(x, 'displayName', 'InviteModalStore');
 let I = new x(o.Z, {
-    OVERLAY_INITIALIZE: E,
-    CONNECTION_OPEN: E,
+    OVERLAY_INITIALIZE: S,
+    CONNECTION_OPEN: S,
     CONNECTION_CLOSED: function () {
         C = !1;
     },
@@ -99,7 +99,7 @@ let I = new x(o.Z, {
             }
         }
         if (
-            S.some((e) => {
+            E.some((e) => {
                 let [n] = e;
                 return n.code === t.code;
             })
@@ -122,11 +122,11 @@ let I = new x(o.Z, {
                 };
             return (null != d && (f.channel = y({}, d)), null != h && (f.guild = new u.ZP(h)), null != e.inviter && (f.inviter = y({}, e.inviter)), f);
         })(t);
-        S.push([n, e.resolve]);
+        E.push([n, e.resolve]);
     },
     INVITE_MODAL_CLOSE: function () {
-        if (((r = null), (j = !1), S.length > 0)) {
-            let [, e] = S.shift();
+        if (((r = null), (j = !1), E.length > 0)) {
+            let [, e] = E.shift();
             null != e && e();
         }
     },

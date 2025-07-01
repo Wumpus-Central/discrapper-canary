@@ -1,7 +1,7 @@
 (n.d(t, {
     Sr: () => j,
-    Xq: () => S,
-    Zg: () => E
+    Xq: () => E,
+    Zg: () => S
 }),
     n(415506));
 var r = n(186070),
@@ -61,8 +61,8 @@ let j = {
         [y.EkH.CALL_START]: r.FI,
         [y.EkH.QUICKSWITCHER_SHOW]: c.$
     },
-    S = { [y.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function E() {
+    E = { [y.EkH.QUICKSWITCHER_SHOW]: c.$ };
+function S() {
     return [
         {
             description: v.intl.string(v.t.bx4Uy8),

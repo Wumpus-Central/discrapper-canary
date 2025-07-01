@@ -21,16 +21,16 @@ var i = n(120356),
     v = n(853856),
     C = n(981631),
     j = n(388032),
-    S = n(714509),
-    E = n(375613);
+    E = n(714509),
+    S = n(375613);
 function x(e, t) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: S.row,
+              className: E.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: S.activityIcon,
+                      className: E.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, r.jsx)(h.Z, {
@@ -77,7 +77,7 @@ function I() {
             for (let t of i) e += p.Z.getParticipantCount(t, f.pV.AUDIENCE);
             return e;
         }),
-        E = (0, s.Wu)(
+        S = (0, s.Wu)(
             [g.Z],
             () =>
                 g.Z.getAllApplicationStreams()
@@ -99,21 +99,21 @@ function I() {
             [t]
         ),
         P = (0, s.Wu)([b.default], () => I.map((e) => b.default.getUser(e)), [I]),
-        N = (0, s.Wu)([b.default], () => E.map((e) => b.default.getUser(e)), [E]),
+        N = (0, s.Wu)([b.default], () => S.map((e) => b.default.getUser(e)), [S]),
         w = x(
             c.gj8,
-            l.filter((e) => !E.includes(e.id) && !I.includes(e.id))
+            l.filter((e) => !S.includes(e.id) && !I.includes(e.id))
         ),
         Z =
             0 === o.length
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: S.row,
+                      className: E.row,
                       children: [
                           (0, r.jsx)(c.ewx, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: S.activityIcon
+                              className: E.activityIcon
                           }),
                           (0, r.jsx)(h.Z, {
                               guildId: void 0,
@@ -121,14 +121,14 @@ function I() {
                               max: 3
                           }),
                           (0, r.jsxs)('div', {
-                              className: S.stageListenerPill,
+                              className: E.stageListenerPill,
                               children: [
                                   (0, r.jsx)(c.VWR, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, r.jsx)(c.Text, {
-                                      className: S.stageListenerCount,
+                                      className: E.stageListenerCount,
                                       color: 'text-default',
                                       variant: 'text-xs/medium',
                                       children: j
@@ -151,9 +151,9 @@ function P() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: l()(S.row, S.rowGuildName),
+                className: l()(E.row, E.rowGuildName),
                 children: (0, r.jsx)('span', {
-                    className: l()(S.guildNameText, S.guildNameTextLimitedSize),
+                    className: l()(E.guildNameText, E.guildNameTextLimitedSize),
                     children: j.intl.string(j.t.wMWycn)
                 })
             }),
@@ -169,7 +169,7 @@ function N(e) {
         position: 'right',
         text: (0, r.jsx)(P, {}),
         'aria-label': t,
-        tooltipClassName: E.listItemTooltip,
+        tooltipClassName: S.listItemTooltip,
         onTooltipShow: n,
         children: (e) => {
             var t, n;

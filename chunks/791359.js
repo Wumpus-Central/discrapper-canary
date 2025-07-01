@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(594174),
     b = n(801077),
     _ = n(626135),
-    E = n(70956),
-    O = n(225559),
+    O = n(70956),
+    E = n(225559),
     y = n(910436),
     I = n(203028),
     v = n(358924),
@@ -27,7 +27,7 @@ var r = n(255367),
     P = n(46140),
     j = n(388032),
     A = n(370168);
-let Z = 15 * E.Z.Millis.MINUTE,
+let Z = 15 * O.Z.Millis.MINUTE,
     x = (0, S.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = i.useRef(null),
@@ -43,8 +43,8 @@ let Z = 15 * E.Z.Millis.MINUTE,
             { partiedMembers: p, applicationStreams: h, currentActivities: f, voiceChannels: g } = t,
             m = p.length,
             b = h.length,
-            E = f.length,
-            O = g.length > 0,
+            O = f.length,
+            E = g.length > 0,
             S = i.useCallback(() => {
                 let e = f
                     .filter((e) => {
@@ -55,11 +55,11 @@ let Z = 15 * E.Z.Millis.MINUTE,
                 _.default.track(N.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: m,
                     num_streams: b,
-                    num_activities: E,
-                    in_voice_channel: O,
+                    num_activities: O,
+                    in_voice_channel: E,
                     games_detected: e
                 });
-            }, [m, b, E, O, f]),
+            }, [m, b, O, E, f]),
             P = s()(S, Z);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
@@ -148,7 +148,7 @@ function w() {
             currentUser: m.default.getCurrentUser()
         })),
         o = (0, c.e7)([p.Z], () => p.Z.quests);
-    (i.useEffect(() => (d.Z.wait(() => O.L()), () => d.Z.wait(() => O.v())), [null == a ? void 0 : a.id]),
+    (i.useEffect(() => (d.Z.wait(() => E.L()), () => d.Z.wait(() => E.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && L();
         }, [n, l]));

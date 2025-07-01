@@ -19,8 +19,8 @@ function b(e) {
         { enabled: y, inInbox: v } = d.Z.useExperiment({ location: 'RecentsPopout' }),
         C = (0, p.Us)({ location: 'RecentsHeader' }),
         { enabled: j } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        S = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        E = (0, i.e7)([h.Z], () => h.Z.getOverdueMessageReminderCount());
+        E = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        S = (0, i.e7)([h.Z], () => h.Z.getOverdueMessageReminderCount());
     return (0, r.jsxs)(a.h4, {
         className: m.header,
         children: [
@@ -85,7 +85,7 @@ function b(e) {
                                   className: m.tab,
                                   children: [
                                       g.intl.string(g.t.apq3cX),
-                                      S > 0
+                                      E > 0
                                           ? (0, r.jsx)(o.fWl, {
                                                 color: s.Z.STATUS_DANGER,
                                                 className: m.iconBadge
@@ -99,7 +99,7 @@ function b(e) {
                                   'aria-label': g.intl.string(g.t['2pAkDA']),
                                   id: l.X.BOOKMARKS,
                                   className: m.tab,
-                                  children: 0 === E ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: E })
+                                  children: 0 === S ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: S })
                               })
                             : null,
                         C

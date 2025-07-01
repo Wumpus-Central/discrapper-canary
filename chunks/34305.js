@@ -27,7 +27,7 @@ function _(e, t, n) {
         e
     );
 }
-class E extends i.PureComponent {
+class O extends i.PureComponent {
     renderDiskUsageCircle() {
         let { metadata: e } = this.props;
         return null != e && null != e.availableKB && null != e.totalKB
@@ -258,7 +258,7 @@ class E extends i.PureComponent {
             }));
     }
 }
-class O extends i.PureComponent {
+class E extends i.PureComponent {
     componentDidMount() {
         (0, o.ec)(
             this.props.installationPaths.map((e) => {
@@ -277,7 +277,7 @@ class O extends i.PureComponent {
                 e.map((e) => {
                     let { path: l, label: a } = e;
                     return (0, r.jsx)(
-                        E,
+                        O,
                         {
                             path: l,
                             label: a,
@@ -319,4 +319,4 @@ let y = l.ZP.connectStores([d.Z], () => ({
     installationPaths: d.Z.installationPaths,
     installationPathsMetadata: d.Z.installationPathsMetadata,
     defaultInstallationPath: d.Z.defaultInstallationPath
-}))(O);
+}))(E);

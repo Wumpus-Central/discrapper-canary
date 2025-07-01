@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(901461),
     C = n(739566),
     j = n(443877),
-    S = n(492593),
-    E = n(938353),
+    E = n(492593),
+    S = n(938353),
     x = n(25015),
     I = n(689674),
     P = n(963550),
@@ -126,7 +126,7 @@ let G = i.memo(function e(t) {
                 count: 1,
                 collapsedReason: i
             })
-          : (0, r.jsx)(S.Z, {
+          : (0, r.jsx)(E.Z, {
                 compact: A,
                 className: o()(L, {
                     [M.ephemeral]: (0, O.Pv)(s),
@@ -140,7 +140,7 @@ let G = i.memo(function e(t) {
                         guildId: l.guild_id
                     })
                 ),
-                childrenAccessories: (0, r.jsx)(E.BB, {
+                childrenAccessories: (0, r.jsx)(S.BB, {
                     channel: l,
                     message: s,
                     hasSpoilerEmbeds: er,
@@ -177,7 +177,7 @@ let G = i.memo(function e(t) {
 });
 function B(e) {
     let { className: t, count: n, compact: i, collapsedReason: l } = e;
-    return (0, r.jsx)(S.Z, {
+    return (0, r.jsx)(E.Z, {
         className: t,
         compact: i,
         role: 'group',

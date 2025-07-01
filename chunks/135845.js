@@ -31,9 +31,9 @@ function x(e) {
         Z = null != x && x.target_type === E.Iq.STREAM && null != x.target_user && null != P,
         R = null != x && null != A && null != x.channel && null != x.guild && A.channelId === x.channel.id && A.guildId === x.guild.id;
     a()(null != x, 'Invite cannot be null');
-    let { target_type: L, target_user: k } = x;
-    a()(L === E.Iq.STREAM && null != k, 'invalid streaming invite');
-    let D = v === k.id,
+    let { target_type: k, target_user: L } = x;
+    a()(k === E.Iq.STREAM && null != L, 'invalid streaming invite');
+    let D = v === L.id,
         M = x.state === b.r2o.ACCEPTING,
         U = i.useCallback(() => {
             let e = 'noop';
@@ -54,7 +54,7 @@ function x(e) {
         O = new m.ZP(x.guild);
     }
     let B = null != x.channel ? (0, p.jD)(x.channel) : null,
-        G = _.ZP.getName(k);
+        G = _.ZP.getName(L);
     F && !R ? (l = D ? y.intl.string(y.t.oBLoZG) : y.intl.formatToPlainString(y.t['0QJmAw'], { name: G })) : ((t = y.intl.string(y.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), Z && ((t = y.intl.string(y.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (l = D ? y.intl.string(y.t['4hyaHh']) : y.intl.formatToPlainString(y.t.QmlLEh, { name: G })));
     let H = N === O.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : y.intl.formatToPlainString(y.t.u0vaDA, { guildName: O.name });
     return (0, r.jsxs)(d.Z, {

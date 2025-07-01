@@ -75,10 +75,10 @@ let _ = i.memo(function (e) {
                 onDismiss: v
             });
         case m.voiceChannelsSectionNumber: {
-            var S;
+            var E;
             let e = m.getCategoryFromSection(m.voiceChannelsSectionNumber);
             if (null == e || e.isEmpty()) return null;
-            let n = null == (S = m.getChannelFromSectionRow(t, 0)) ? void 0 : S.channel;
+            let n = null == (E = m.getChannelFromSectionRow(t, 0)) ? void 0 : E.channel;
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     (0, r.jsx)('div', { className: g.sectionDivider }),

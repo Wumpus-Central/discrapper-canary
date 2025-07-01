@@ -37,7 +37,7 @@ function j(e, t, n) {
         e
     );
 }
-function S(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function S(e) {
     }
     return e;
 }
-let E = {
+let S = {
     [y.vxO.INSTALLING]: {
         [f.J6.NONE]: (e, t) => v.intl.formatToPlainString(v.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
@@ -135,7 +135,7 @@ class x extends l.PureComponent {
                 if (null == l || null == o || null == i) return null;
                 let s = (e[e.length - 1] / t) * 1000,
                     c = 0 !== s ? Math.max(1, (o - l) / s) : null,
-                    u = E[a],
+                    u = S[a],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, f.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -186,7 +186,7 @@ class I extends (r = l.PureComponent) {
                     var r, l;
                     return (0, i.jsx)(
                         'div',
-                        ((r = S({}, n)),
+                        ((r = E({}, n)),
                         (l = l =
                             {
                                 children: (0, i.jsx)(h._3P, {
@@ -268,7 +268,7 @@ let N = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     return t
         ? (0, i.jsx)(d.W, {
               component: l.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(I, S({}, n)) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(I, E({}, n)) : null
           })
-        : (0, i.jsx)(I, S({}, n));
+        : (0, i.jsx)(I, E({}, n));
 });

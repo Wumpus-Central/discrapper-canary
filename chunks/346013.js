@@ -31,8 +31,8 @@ var r = n(255367),
     w = n(959517),
     Z = n(388032),
     R = n(70249),
-    L = n(527455);
-function k(e) {
+    k = n(527455);
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -144,7 +144,7 @@ function M(e) {
                     !Q &&
                         (!0 === V.shouldShowBlurredThumbnailImage
                             ? (0, r.jsx)('img', {
-                                  src: L,
+                                  src: k,
                                   alt: Z.intl.string(Z.t.rIbh8P),
                                   className: a()(R.thumbnail, { [R.spoiler]: V.shouldSpoiler }),
                                   onContextMenu: W,
@@ -221,7 +221,7 @@ function M(e) {
                                             onMouseLeave: eg,
                                             children: (0, r.jsx)(
                                                 u.qEK,
-                                                D(k({}, e), {
+                                                D(L({}, e), {
                                                     ref: H,
                                                     size: u.EFr.SIZE_40,
                                                     src: ef,
@@ -283,7 +283,7 @@ function M(e) {
                                                                   children: (e) =>
                                                                       (0, r.jsx)(
                                                                           u.rz2,
-                                                                          D(k({}, e), {
+                                                                          D(L({}, e), {
                                                                               ref: G,
                                                                               name: V.authorName,
                                                                               color: er,

@@ -21,8 +21,8 @@ var i = n(120356),
     v = n(626135),
     C = n(434479),
     j = n(981631),
-    S = n(176505),
-    E = n(629481),
+    E = n(176505),
+    S = n(629481),
     x = n(388032),
     I = n(664832);
 function P(e) {
@@ -72,8 +72,8 @@ function w(e) {
     let { guildId: t, selected: n, handleClick: i } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
         g = (0, o.e7)([y.Z], () => y.Z.getGuild(t)),
-        S = (null == g ? void 0 : g.hasFeature(j.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        w = 'false' === s.K.get(E.tM, 'false'),
+        E = (null == g ? void 0 : g.hasFeature(j.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        w = 'false' === s.K.get(S.tM, 'false'),
         Z = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(C.m, {
         id: 'shop-'.concat(t),
@@ -109,7 +109,7 @@ function w(e) {
                     (0, r.jsx)(c.P3F, {
                         className: I.closeButton,
                         onClick: (e) => {
-                            if ((e.stopPropagation(), (0, b.EW)(a.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, N(P({}, (0, h.hH)(t)), { action_taken: E.mz.DISMISS_CHANNEL_ROW })), !u || !S)) {
+                            if ((e.stopPropagation(), (0, b.EW)(a.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, N(P({}, (0, h.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !E)) {
                                 var n;
                                 (0, _.dL)(j.Z5c.CHANNEL(t, null == (n = O.ZP.getDefaultChannel(t)) ? void 0 : n.id));
                             }
@@ -128,7 +128,7 @@ function Z(e) {
     let { guild: t, selected: i } = e,
         l = (0, g.g)(t, 'guild_shop_channel_row'),
         o = () => {
-            (s.K.set(E.tM, 'true'), (0, _.uL)(j.Z5c.CHANNEL(t.id, S.oC.GUILD_SHOP)));
+            (s.K.set(S.tM, 'true'), (0, _.uL)(j.Z5c.CHANNEL(t.id, E.oC.GUILD_SHOP)));
         };
     return l
         ? (0, r.jsx)(w, {

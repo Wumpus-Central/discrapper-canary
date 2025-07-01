@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => G,
-    x: () => S
+    x: () => E
 }),
     n(388685));
 var r,
@@ -24,15 +24,15 @@ var r,
     v = n(823379),
     C = n(734307),
     j = n(981631),
-    S = (((i = {}).HIDDEN = 'hidden'), (i.UNREAD = 'unread'), (i.MENTIONS = 'mentions'), (i.VOICE_CHANNELS = 'voice-channels'), i);
-let E = {
+    E = (((i = {}).HIDDEN = 'hidden'), (i.UNREAD = 'unread'), (i.MENTIONS = 'mentions'), (i.VOICE_CHANNELS = 'voice-channels'), i);
+let S = {
         mode: 'hidden',
         mentionCount: 0,
         targetChannelId: null
     },
     x = {
-        topBar: E,
-        bottomBar: E
+        topBar: S,
+        bottomBar: S
     },
     I = {},
     P = {};
@@ -74,7 +74,7 @@ function T(e) {
     let y = 0,
         v = !1,
         j = 0,
-        S = !1;
+        E = !1;
     if (h || d)
         for (let e = m.length - 1; e >= 0; e--) {
             let t = m[e];
@@ -84,7 +84,7 @@ function T(e) {
         for (let e = 0; e < O.length; e++) {
             let t = O[e];
             if (!h && !d) break;
-            ((N(t.id) || s().some(t.threadIds, N)) && (null == u && (u = t.id), (S = !0)), (w(t.id) || s().some(t.threadIds, w)) && (null == c && (c = t.id), (j += b.ZP.getMentionCount(t.id)), (j += s().sumBy(t.threadIds, b.ZP.getMentionCount))));
+            ((N(t.id) || s().some(t.threadIds, N)) && (null == u && (u = t.id), (E = !0)), (w(t.id) || s().some(t.threadIds, w)) && (null == c && (c = t.id), (j += b.ZP.getMentionCount(t.id)), (j += s().sumBy(t.threadIds, b.ZP.getMentionCount))));
         }
     let x = null,
         T = null,
@@ -102,7 +102,7 @@ function T(e) {
                 targetChannelId: null
             })
           : h &&
-            S &&
+            E &&
             (x = {
                 mode: 'unread',
                 mentionCount: 0,
@@ -125,8 +125,8 @@ function T(e) {
         D = null != x && ('mentions' === x.mode || !R);
     return (
         (I[e] = {
-            topBar: R && null != T ? T : E,
-            bottomBar: D && null != x ? x : E
+            topBar: R && null != T ? T : S,
+            bottomBar: D && null != x ? x : S
         }),
         !0
     );

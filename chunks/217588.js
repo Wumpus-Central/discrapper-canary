@@ -55,7 +55,7 @@ function R(e) {
     }
     return e;
 }
-function L(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,7 +73,7 @@ function L(e, t) {
         e
     );
 }
-let k = (e, t) => (t ? A.intl.format(A.t.auckX1, { stickerPackName: e.name }) : A.intl.format(A.t.OzB6e3, { stickerPackName: e.name })),
+let L = (e, t) => (t ? A.intl.format(A.t.auckX1, { stickerPackName: e.name }) : A.intl.format(A.t.OzB6e3, { stickerPackName: e.name })),
     D = (e) => {
         let { sticker: t, stickerPack: n } = e;
         return i.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
@@ -160,7 +160,7 @@ let F = (e) => {
                       }),
                       (0, r.jsx)(s.Text, {
                           variant: 'text-sm/normal',
-                          children: k(c, p)
+                          children: L(c, p)
                       }),
                       (0, r.jsx)('ul', {
                           className: w.stickersList,
@@ -205,8 +205,8 @@ let F = (e) => {
             { sticker: n, channel: l, closePopout: m, refreshPositionKey: b } = e,
             [O, j] = i.useState(null),
             [I, T] = i.useState(!1),
-            k = C.default.getCurrentUser(),
-            D = v.ZP.canUseCustomStickersEverywhere(k),
+            L = C.default.getCurrentUser(),
+            D = v.ZP.canUseCustomStickersEverywhere(L),
             F = (0, o.e7)([y.Z], () => y.Z.getGuild(n.guild_id)),
             B = null != F,
             [G, H] = i.useState(!1),
@@ -353,7 +353,7 @@ let F = (e) => {
                                                           children: t.map((e) =>
                                                               (0, r.jsx)(
                                                                   s.ua7,
-                                                                  L(R({ text: e.name }, h.b_), {
+                                                                  k(R({ text: e.name }, h.b_), {
                                                                       children: (t) => {
                                                                           var { onMouseEnter: n, onMouseLeave: i } = t,
                                                                               l = (function (e, t) {
@@ -377,7 +377,7 @@ let F = (e) => {
                                                                               })(t, ['onMouseEnter', 'onMouseLeave']);
                                                                           return (0, r.jsx)(
                                                                               'div',
-                                                                              L(
+                                                                              k(
                                                                                   R(
                                                                                       {
                                                                                           className: a()(Z.otherEmoji, { [w.nonInteractingSticker]: null != V && V !== e.id }),

@@ -55,14 +55,14 @@ function g(e) {
         { color: v } = (0, c.F7)(y),
         C = (0, i.wj)(m) ? p : f,
         j = (_.size - _.offset - 2 * _.stroke) * 0.8,
-        S = _.size - _.stroke,
-        E = {
+        E = _.size - _.stroke,
+        S = {
             width: 0.4 * j,
             height: 0.4 * j
         },
         x = {
-            width: E.width + 1,
-            height: E.height + 1,
+            width: S.width + 1,
+            height: S.height + 1,
             right: _.stroke + 1,
             bottom: _.stroke + 1,
             padding: 0
@@ -70,8 +70,8 @@ function g(e) {
     return (0, r.jsxs)('div', {
         className: d.container,
         style: {
-            width: S,
-            height: S,
+            width: E,
+            height: E,
             padding: _.stroke
         },
         'aria-label': ''.concat(null != (t = O()) ? t : ''),
@@ -96,7 +96,7 @@ function g(e) {
                                 size: 'custom',
                                 color: (0, a.Lq)(C.locked)
                             },
-                            E
+                            S
                         )
                     )
                 }),
@@ -105,7 +105,7 @@ function g(e) {
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
                     style: x,
-                    children: (0, r.jsx)(s.Z, h({ className: d.confettiIcon }, E))
+                    children: (0, r.jsx)(s.Z, h({ className: d.confettiIcon }, S))
                 })
         ]
     });

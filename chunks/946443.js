@@ -24,15 +24,15 @@ var r = n(255367),
     v = n(240126),
     C = n(791914),
     j = n(147522),
-    S = n(809780),
-    E = n(981631),
+    E = n(809780),
+    S = n(981631),
     x = n(388032),
     I = n(128406);
 function P(e) {
     var t, n, l, a, P, w, Z;
     let { setTab: T, onJump: A, showTutorial: R, setSeenTutorial: D, closePopout: L, badgeState: M } = e,
         k = i.useRef(null),
-        [U, G] = (0, S.ZP)(k),
+        [U, G] = (0, E.ZP)(k),
         { loadState: B, channels: F } = U,
         { maybeLoadMore: V, markAllRead: H } = G;
     ((t = k),
@@ -59,9 +59,9 @@ function P(e) {
                 null != e && P.markChannelRead(e);
             };
             return (
-                _.S.subscribe(E.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                _.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    _.S.unsubscribe(E.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    _.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
         }, [P, a.channels]),
@@ -78,7 +78,7 @@ function P(e) {
             );
         }, [w]),
         i.useEffect(() => {
-            b.default.track(E.rMx.OPEN_POPOUT, { type: 'Inbox' });
+            b.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         i.useEffect(
             () => (
@@ -187,9 +187,9 @@ function P(e) {
                             )),
                             (n = n =
                                 {
-                                    onScroll: B === S.jd.Done ? void 0 : V,
+                                    onScroll: B === E.jd.Done ? void 0 : V,
                                     className: I.scroller,
-                                    children: [R ? (0, r.jsx)(N, { setSeenTutorial: D }) : null, (0, j.Z)(F, G, A), B === S.jd.Done ? null : (0, r.jsx)(h.$jN, { className: I.spinner })]
+                                    children: [R ? (0, r.jsx)(N, { setSeenTutorial: D }) : null, (0, j.Z)(F, G, A), B === E.jd.Done ? null : (0, r.jsx)(h.$jN, { className: I.spinner })]
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

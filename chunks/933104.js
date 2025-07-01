@@ -1,7 +1,7 @@
 n.d(t, {
-    $h: () => S,
+    $h: () => E,
     jG: () => j,
-    yI: () => E
+    yI: () => S
 });
 var r = n(255367);
 n(73800);
@@ -35,7 +35,7 @@ function j(e) {
         markAsDismissed: i
     });
 }
-function S(e) {
+function E(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, p.Z)(t);
     return (0, r.jsx)(x, {
@@ -58,7 +58,7 @@ function S(e) {
         caretPosition: i ? d.DF.LEFT_TOP : d.DF.TOP_CENTER
     });
 }
-function E(e) {
+function S(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
         l = (0, a.e7)([h.Z], () => {
             var e;

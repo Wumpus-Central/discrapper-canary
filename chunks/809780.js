@@ -27,8 +27,8 @@ var r,
     v = n(723170),
     C = n(675478),
     j = n(581883),
-    S = n(131704),
-    E = n(592125),
+    E = n(131704),
+    S = n(592125),
     x = n(984933),
     I = n(731290),
     P = n(430824),
@@ -354,7 +354,7 @@ function K() {
                 r = null != (t = null == (e = j.Z.settings.guilds) ? void 0 : e.guilds) ? t : {};
             for (let e in r)
                 for (let t in r[e].channels) {
-                    let i = E.Z.getChannel(t);
+                    let i = S.Z.getChannel(t);
                     (t in n && (null == i ? void 0 : i.guild_id) !== e) || (n[t] = r[e].channels[t].collapsedInInbox);
                 }
             return n;
@@ -362,7 +362,7 @@ function K() {
         t = (function (e) {
             let t = [];
             return (
-                E.Z.getSortedPrivateChannels().forEach((n) => Y(e, t, null, n.id)),
+                S.Z.getSortedPrivateChannels().forEach((n) => Y(e, t, null, n.id)),
                 T.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let r = x.ZP.getSelectableChannelIds(n),
@@ -395,8 +395,8 @@ function K() {
 }
 function Y(e, t, n, r) {
     if (null == r) return;
-    let i = E.Z.getChannel(r);
-    if (null == i || (!S.Ec.has(i.type) && A.ZP.isGuildOrCategoryOrChannelMuted(n, i.id))) return;
+    let i = S.Z.getChannel(r);
+    if (null == i || (!E.Ec.has(i.type) && A.ZP.isGuildOrCategoryOrChannelMuted(n, i.id))) return;
     if (i.isPrivate()) {
         if (0 === Z.ZP.getMentionCount(r)) return;
     } else if (!(0, b.d)(i) && 0 === Z.ZP.getMentionCount(r)) return;
@@ -426,7 +426,7 @@ function Y(e, t, n, r) {
         hasMentionsOrUnreads: c,
         mentionCount: s,
         sortOrder: (function (e, t, n) {
-            let r = E.Z.getChannel(t);
+            let r = S.Z.getChannel(t);
             if (g.Z.isFavorite(t)) return 0;
             if (r.isPrivate()) return 1;
             if (Z.ZP.getMentionCount(t) > 0) return Z.ZP.getIsMentionLowImportance(t) ? 3 : 2;

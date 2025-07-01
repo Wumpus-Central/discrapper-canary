@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(25601),
     C = n(207055),
     j = n(981631),
-    S = n(124368),
-    E = n(388032),
+    E = n(124368),
+    S = n(388032),
     x = n(915887),
     I = n(768107),
     P = n(995453);
@@ -157,7 +157,7 @@ let T = i.memo(function (e) {
         U = (0, s.e7)([p.Z], () => p.Z.isMuted(t.id)),
         G = i.useCallback(
             (e) => {
-                (0, f.ok)(t, !e.shiftKey, S.on.CHANNEL_LIST);
+                (0, f.ok)(t, !e.shiftKey, E.on.CHANNEL_LIST);
             },
             [t]
         ),
@@ -200,13 +200,13 @@ let T = i.memo(function (e) {
         K = i.useRef(null),
         Y =
             M > 0
-                ? E.intl.formatToPlainString(E.t['ZL7+Iy'], {
+                ? S.intl.formatToPlainString(S.t['ZL7+Iy'], {
                       channelName: t.name,
                       mentionCount: M
                   })
                 : L
-                  ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
-                  : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name });
+                  ? S.intl.formatToPlainString(S.t.YlVvmZ, { channelName: t.name })
+                  : S.intl.formatToPlainString(S.t['0nZpiI'], { channelName: t.name });
     return (0, r.jsxs)('li', {
         role: z,
         className: o()(x.containerDefault, { [x.selected]: l }),

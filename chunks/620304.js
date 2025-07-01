@@ -22,20 +22,20 @@ function C(e) {
     let { guild: t, withMargin: l } = e,
         C = i.useMemo(() => (0, _.Z)(t), [t]),
         j = (0, m.Z)(t.id),
-        S = i.useCallback(() => {
+        E = i.useCallback(() => {
             (0, b.Z)(t.id, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        E = (0, c.e7)([f.Z], () => {
+        S = (0, c.e7)([f.Z], () => {
             var e;
             return null != (e = f.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        E !== t.premiumSubscriberCount && (0, p.v)(t.id, t.premiumSubscriberCount);
-    }, [t.id, E, t.premiumSubscriberCount]);
-    let x = Math.min((E / C) * 100, 100),
+        S !== t.premiumSubscriberCount && (0, p.v)(t.id, t.premiumSubscriberCount);
+    }, [t.id, S, t.premiumSubscriberCount]);
+    let x = Math.min((S / C) * 100, 100),
         [I, P] = (0, u.q_F)(
             () => ({
-                width: E === t.premiumSubscriberCount ? ''.concat(x, '%') : '0%',
+                width: S === t.premiumSubscriberCount ? ''.concat(x, '%') : '0%',
                 config: {
                     tension: 285,
                     damping: 10,
@@ -43,12 +43,12 @@ function C(e) {
                 }
             }),
             'respect-motion-settings',
-            [E, t.premiumSubscriberCount]
+            [S, t.premiumSubscriberCount]
         );
     i.useEffect(() => {
         P({ width: ''.concat(x, '%') });
     }, [x, P]);
-    let N = E >= C;
+    let N = S >= C;
     return (0, r.jsx)(u.P3F, {
         'aria-label': void 0,
         role: 'button',
@@ -58,7 +58,7 @@ function C(e) {
                 right: 4
             }
         },
-        onClick: S,
+        onClick: E,
         className: o()(v.container, { [v.containerWithMargin]: l }),
         onContextMenu: (e) => {
             j &&
@@ -147,9 +147,9 @@ function C(e) {
                                     className: v.text,
                                     variant: 'text-xs/semibold',
                                     children: N
-                                        ? y.intl.formatToPlainString(O.default['Ehpq+/'], { appliedBoostCount: E })
+                                        ? y.intl.formatToPlainString(O.default['Ehpq+/'], { appliedBoostCount: S })
                                         : y.intl.formatToPlainString(O.default['/rbPDg'], {
-                                              appliedBoostCount: E,
+                                              appliedBoostCount: S,
                                               maxBoostCount: C
                                           })
                                 }),

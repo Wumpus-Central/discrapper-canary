@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(919285),
     b = n(50101),
     _ = n(118470),
-    E = n(413307),
-    O = n(374023),
+    O = n(413307),
+    E = n(374023),
     y = n(661599),
     I = n(617899),
     v = n(8521),
@@ -102,7 +102,7 @@ let Z = (e) => {
     let { guild: t } = e;
     switch ((0, S.Z)(t)) {
         case S.R.ENABLE_PUBLIC_GUILD:
-            return (0, r.jsx)(E.Z, { guild: t });
+            return (0, r.jsx)(O.Z, { guild: t });
         case S.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, r.jsx)(u.Z, { guild: t });
         case S.R.MAX_MEMBER_COUNT:
@@ -118,5 +118,5 @@ let Z = (e) => {
         case S.R.HUB_STUDY_ROOM:
             return (0, r.jsx)(g.Z, { guild: t });
     }
-    return O.s.isDisallowPopupsSet() ? null : (0, r.jsx)(A, { guild: e.guild });
+    return E.s.isDisallowPopupsSet() ? null : (0, r.jsx)(A, { guild: e.guild });
 };

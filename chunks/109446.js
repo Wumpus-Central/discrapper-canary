@@ -52,7 +52,7 @@ function j(e) {
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
-                    .map((e) => (0, r.jsx)(S, { thread: e }, e.id))
+                    .map((e) => (0, r.jsx)(E, { thread: e }, e.id))
                     .filter((e) => i.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(s.P3F, {
@@ -103,7 +103,7 @@ function j(e) {
         })
     );
 }
-function S(e) {
+function E(e) {
     let { thread: t } = e,
         n = (0, a.e7)([m.default], () => m.default.getUser(t.ownerId)),
         i = (0, h.Ok)(t);

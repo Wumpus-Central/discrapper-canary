@@ -20,7 +20,7 @@ var r = n(255367),
 let v = (e) => {
     let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: v } = e,
         [C, j] = (0, i.useState)(!1),
-        S = (function (e) {
+        E = (function (e) {
             let { isForceShowSharingPopout: t } = e,
                 { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, m.D)('SharingPrivacyPopout'),
                 i = (0, d.Ws)({ location: y.dr.CONFLICT_CHECKS }),
@@ -36,11 +36,11 @@ let v = (e) => {
             }
             return null;
         })({ isForceShowSharingPopout: n }),
-        E = (0, i.useRef)(null);
+        S = (0, i.useRef)(null);
     return ((0, i.useEffect)(() => {
         n && g.default.track(_.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
-    null != S || C)
+    null != E || C)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
@@ -50,7 +50,7 @@ let v = (e) => {
                           ((0, s.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: O.L.USER_DISMISS }), v(!1), j(!1));
                       };
                       return (0, r.jsx)(a.yRy, {
-                          targetElementRef: E,
+                          targetElementRef: S,
                           shouldShow: !0,
                           spacing: 10,
                           position: 'top',
@@ -61,12 +61,12 @@ let v = (e) => {
                               return (0, r.jsx)(b.I, {
                                   closePopout: t,
                                   onOpen: () => j(!0),
-                                  popoutState: S
+                                  popoutState: E
                               });
                           },
                           children: () =>
                               (0, r.jsx)(a.P3F, {
-                                  innerRef: E,
+                                  innerRef: S,
                                   onClick: e,
                                   children: t
                               })

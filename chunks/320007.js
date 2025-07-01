@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(388032);
 function _(e) {
     let { canShowReminder: t = !1, className: _ } = e,
-        E = (0, h.Z)(u.Z),
-        { showClipsHeaderEntrypoint: O } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        O = (0, h.Z)(u.Z),
+        { showClipsHeaderEntrypoint: E } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
             hasClips: y,
             hasNewClips: I,
@@ -73,7 +73,7 @@ function _(e) {
             { modalKey: m.Qr }
         );
     }
-    return (i.useEffect(() => (S ? A() : Z(), () => Z()), [S, A, Z]), O && E && y)
+    return (i.useEffect(() => (S ? A() : Z(), () => Z()), [S, A, Z]), E && O && y)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != T &&

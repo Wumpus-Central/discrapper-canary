@@ -12,7 +12,7 @@ var r = n(255367),
     h = n(29504);
 let f = (0, o.debounce)(c.ZP.trackWithMetadata, 500),
     g = function (e) {
-        let { guild: t, title: n, message: l, image: o, type: g, imageStyles: m, imageMarginX: b, imageMarginTop: _, trackingSource: E, undismissable: O, onDismissed: y, onClick: I, cta: v, ctaColor: C, centerText: S, className: N } = e;
+        let { guild: t, title: n, message: l, image: o, type: g, imageStyles: m, imageMarginX: b, imageMarginTop: _, trackingSource: O, undismissable: E, onDismissed: y, onClick: I, cta: v, ctaColor: C, centerText: S, className: N } = e;
         i.useEffect(() => {
             f(d.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: g,
@@ -29,7 +29,7 @@ let f = (0, o.debounce)(c.ZP.trackWithMetadata, 500),
                   onClick: () => {
                       (null != g &&
                           u.default.track(d.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: E,
+                              source: O,
                               guild_id: t.id,
                               notice_type: g
                           }),
@@ -63,7 +63,7 @@ let f = (0, o.debounce)(c.ZP.trackWithMetadata, 500),
         return (0, r.jsxs)('div', {
             className: a()(h.container, N),
             children: [
-                !0 === O
+                !0 === E
                     ? null
                     : (0, r.jsx)(s.P3F, {
                           onClick: () => {

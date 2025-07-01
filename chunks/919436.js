@@ -20,8 +20,8 @@ var r,
     v = n(451478),
     C = n(276952),
     j = n(682662),
-    S = n(662146),
-    E = n(674552),
+    E = n(662146),
+    S = n(674552),
     x = n(981631),
     I = n(388032),
     P = n(223203);
@@ -161,14 +161,14 @@ class R extends (r = l.PureComponent) {
                         unread: !m && d,
                         className: P.pill
                     }),
-                    (0, i.jsx)(S.Z, {
+                    (0, i.jsx)(E.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: r > 0 ? (0, E.Ne)(r, void 0, !0) : null,
-                            upperBadge: (0, E.Or)({
+                            lowerBadge: r > 0 ? (0, S.Ne)(r, void 0, !0) : null,
+                            upperBadge: (0, S.Or)({
                                 audio: l,
                                 video: a,
                                 screenshare: s,
@@ -271,9 +271,9 @@ let D = l.forwardRef(function (e, t) {
         { isFacepileEnabled: v } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         C = o === n,
         j = !1,
-        S = !1;
-    C && ((j = u === x.WtW.VOICE), (S = u === x.WtW.VIDEO));
-    let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
+        E = !1;
+    C && ((j = u === x.WtW.VOICE), (E = u === x.WtW.VIDEO));
+    let S = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         R,
         Z(w({}, e), {
@@ -283,11 +283,11 @@ let D = l.forwardRef(function (e, t) {
             selected: g === n,
             badge: y,
             audio: j,
-            video: S,
+            video: E,
             stream: h,
             isCurrentUserInThisDMCall: C,
             isGDMFacepileEnabled: v,
-            size: E,
+            size: S,
             treeItemProps: l
         })
     );

@@ -72,9 +72,9 @@ let m = 24,
               });
     },
     E = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: f = 'bottom', color: p, foreground: g, background: E, icon: b, iconSize: y = m, onClick: O, onContextMenu: v, tooltip: I = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipDisabled: A, tooltipSpacing: N, hideOnClick: C = !0, role: R, 'aria-label': P, 'aria-hidden': w, 'aria-checked': D, 'aria-expanded': L, 'aria-haspopup': x, 'data-jump-section': k } = e,
-            M = null != E ? { secondaryColorClass: E } : {},
-            j = (0, r.jsx)(
+        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: f = 'bottom', color: p, foreground: g, background: E, icon: b, iconSize: y = m, onClick: O, onContextMenu: v, tooltip: I = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipAlign: A, tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': k, 'data-jump-section': M } = e,
+            j = null != E ? { secondaryColorClass: E } : {},
+            U = (0, r.jsx)(
                 b,
                 h(
                     {
@@ -87,19 +87,20 @@ let m = 24,
                         colorClass: null != g ? g : void 0,
                         color: null != p ? p : 'currentColor'
                     },
-                    M
+                    j
                 )
             ),
-            U = P;
+            G = w;
         return (
-            null == U && 'string' == typeof I && (U = I),
+            null == G && 'string' == typeof I && (G = I),
             (0, r.jsx)(c.ua7, {
                 text: I,
                 color: T,
                 position: S,
-                hideOnClick: C,
-                shouldShow: !A,
-                spacing: N,
+                align: A,
+                hideOnClick: R,
+                shouldShow: !N,
+                spacing: C,
                 children: (e) => {
                     let { onMouseEnter: m, onMouseLeave: E, onFocus: I, onBlur: T } = e;
                     return null == O
@@ -118,13 +119,13 @@ let m = 24,
                                           className: o()(i, _.icon),
                                           colorClass: null != g ? g : void 0,
                                           color: null != p ? p : 'currentColor',
-                                          'aria-hidden': w,
+                                          'aria-hidden': D,
                                           onMouseEnter: m,
                                           onMouseLeave: E,
                                           onFocus: I,
                                           onBlur: T
                                       },
-                                      M
+                                      j
                                   )
                               )
                           })
@@ -143,23 +144,23 @@ let m = 24,
                                   [_.selected]: s,
                                   [_.iconDisabled]: l
                               }),
-                              role: R,
-                              'aria-label': U,
-                              'aria-hidden': w,
-                              'aria-checked': D,
-                              'aria-haspopup': x,
-                              'aria-expanded': L,
+                              role: P,
+                              'aria-label': G,
+                              'aria-hidden': D,
+                              'aria-checked': L,
+                              'aria-haspopup': k,
+                              'aria-expanded': x,
                               tabIndex: l || null == O ? -1 : 0,
-                              'data-jump-section': k,
+                              'data-jump-section': M,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {
                                             mask: 'top' === f ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                             height: y,
                                             width: y,
-                                            children: j
+                                            children: U
                                         })
-                                      : j,
+                                      : U,
                                   u ? (0, r.jsx)('span', { className: o()(_.iconBadge, 'top' === f ? _.iconBadgeTop : _.iconBadgeBottom) }) : null,
                                   a
                               ]

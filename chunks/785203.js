@@ -18,8 +18,8 @@ var r,
     m = n(496675),
     b = n(541566),
     _ = n(192513),
-    E = n(255791),
-    O = n(70956),
+    O = n(255791),
+    E = n(70956),
     y = n(267642),
     I = n(981631),
     v = (((r = {})[(r.ENABLE_PUBLIC_GUILD = 0)] = 'ENABLE_PUBLIC_GUILD'), (r[(r.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1)] = 'APPLIED_GUILD_BOOST_GRACE_PERIOD'), (r[(r.MAX_MEMBER_COUNT = 2)] = 'MAX_MEMBER_COUNT'), (r[(r.GUILD_LIVE_CHANNEL = 3)] = 'GUILD_LIVE_CHANNEL'), (r[(r.GUILD_MFA_WARNING = 4)] = 'GUILD_MFA_WARNING'), (r[(r.COMMANDS_MIGRATION = 5)] = 'COMMANDS_MIGRATION'), (r[(r.APPLICATION_SUBSCRIPTION_EXPIRATION = 6)] = 'APPLICATION_SUBSCRIPTION_EXPIRATION'), (r[(r.HUB_STUDY_ROOM = 7)] = 'HUB_STUDY_ROOM'), (r[(r.CLAN_UPSELL = 8)] = 'CLAN_UPSELL'), r);
@@ -36,7 +36,7 @@ function C(e) {
         })),
         S = (0, p.Ek)(n, 'GuildBoostingNoticeStore'),
         N = (0, l.e7)([f.Z], () => f.Z.isVisible(e)),
-        T = (0, l.e7)([E.Z], () => E.Z.isVisible(e)),
+        T = (0, l.e7)([O.Z], () => O.Z.isVisible(e)),
         P = (0, l.e7)([m.Z], () => m.Z.can(I.Plq.ADMINISTRATOR, e)),
         j = null != v && Date.now() - v <= I.Dge,
         A = (0, y.Jh)(n) !== I.Eu4.NONE,
@@ -61,7 +61,7 @@ function C(e) {
                         () => {
                             null != n && (0, a.C0)(n);
                         },
-                        30 * Math.random() * O.Z.Millis.SECOND
+                        30 * Math.random() * E.Z.Millis.SECOND
                     )),
                 () => {
                     window.clearTimeout(e);

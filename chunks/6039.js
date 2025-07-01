@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(246364),
     b = n(937111),
     _ = n(381416),
-    E = n(523924),
-    O = n(390500),
+    O = n(523924),
+    E = n(390500),
     y = n(981631),
     I = n(898625),
     v = n(388032),
@@ -156,12 +156,12 @@ let N = (e) => {
                     if (null == N) return null;
                     switch (N.applicationStatus) {
                         case m.wB.SUBMITTED:
-                            return (0, r.jsx)(O.Z, {
+                            return (0, r.jsx)(E.Z, {
                                 onWithdrawApplication: L,
                                 guild: j
                             });
                         case m.wB.REJECTED:
-                            return (0, r.jsx)(E.Z, {
+                            return (0, r.jsx)(O.Z, {
                                 reapplyText: v.intl.string(v.t.I1LYVl),
                                 onReapply: x,
                                 confirmText: v.intl.string(v.t.g9tK0t),

@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(626135),
     b = n(960048),
     _ = n(981631),
-    E = n(921944),
-    O = n(388032),
+    O = n(921944),
+    E = n(388032),
     y = n(937976);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -189,7 +189,7 @@ function T(e) {
                         change_log_id: w,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != T && (0, f.EW)(T, { dismissAction: E.L.DISMISS }));
+                        null != T && (0, f.EW)(T, { dismissAction: O.L.DISMISS }));
                 }
             );
         }, [T, w]),
@@ -239,7 +239,7 @@ function T(e) {
                                       null == er
                                           ? void 0
                                           : er.map((e) => {
-                                                let t = (0, O.getLanguages)().find((t) => t.code === e.locale);
+                                                let t = (0, E.getLanguages)().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
                                                     : (0, r.jsx)(

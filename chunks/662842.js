@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(151864),
     b = n(725436),
     _ = n(497656),
-    E = n(554747),
-    O = n(230900),
+    O = n(554747),
+    E = n(230900),
     y = n(854698),
     I = n(703656),
     v = n(922482),
@@ -35,7 +35,7 @@ var r = n(255367),
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, _.y)(t.id),
-        d = (0, E.k5)(t.id),
+        d = (0, O.k5)(t.id),
         P = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
         { isStageNoticeHidden: D, isEventNoticeHidden: M } = (0, o.cj)(
             [m.Z],
@@ -70,7 +70,7 @@ function D(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: l, myRole: a, eventCreator: o, speakers: s, listenerCount: u, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     _ = null != n && null != i && !h,
-                    E = null != t ? (0, y.DK)(t) : null;
+                    O = null != t ? (0, y.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -178,9 +178,9 @@ function D(e) {
                         }
                     );
                 } else if (t.entity_type === L.WX.EXTERNAL) {
-                    let e = (0, O.cS)(t);
+                    let e = (0, E.cS)(t);
                     if (null == e) return { noticeType: null };
-                    let n = f.ZP.getUserCount(t.id, E);
+                    let n = f.ZP.getUserCount(t.id, O);
                     return {
                         noticeType: 1,
                         title: t.name,
@@ -220,7 +220,7 @@ function D(e) {
                     };
                 } else if (t.entity_type === L.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
-                        n = f.ZP.getUserCount(t.id, E);
+                        n = f.ZP.getUserCount(t.id, O);
                     return {
                         noticeType: 2,
                         title: t.name,

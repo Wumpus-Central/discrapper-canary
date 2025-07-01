@@ -35,7 +35,7 @@ var r = n(255367),
     T = n(914498),
     N = n(172109),
     P = n(880251),
-    A = n(208444),
+    A = n(515344),
     w = n(388032),
     Z = n(758364);
 function R(e) {
@@ -60,47 +60,49 @@ function R(e) {
         }),
         V = null != y && C && H,
         z = B && C,
-        W = (0, A.z)(t),
-        K = i.useMemo(() => {
+        W = (0, A.G)(t),
+        K = (0, A.z)(t),
+        Y = i.useMemo(() => {
             let e = [];
             return (
-                z &&
-                    e.push({
-                        label: null == U ? w.intl.string(w.t.cnBQPD) : w.intl.string(w.t.VJlc0d),
-                        trackingArea: T.j_.PLAY,
-                        onClick() {
-                            (0, c.G6)({
-                                channelId: null != M ? M : void 0,
-                                applicationId: t.id,
-                                isStart: null == U,
-                                embeddedActivitiesManager: G,
-                                customId: a,
-                                referrerId: R,
-                                analyticsLocations: D
-                            });
-                        },
-                        disabledReason: F ? w.intl.string(w.t.wJNK8P) : void 0
-                    }),
-                !z &&
-                    V &&
-                    e.push({
-                        label: w.intl.string(w.t.JeK1Wl),
-                        trackingArea: T.j_.PLAY,
-                        onClick() {
-                            (0, m.W)({
-                                appId: t.id,
-                                botId: y,
-                                analyticsLocations: D,
-                                customId: a,
-                                referrerId: R
-                            });
-                        }
-                    }),
-                null != W && e.push(W),
+                C
+                    ? (z &&
+                          e.push({
+                              label: null == U ? w.intl.string(w.t.cnBQPD) : w.intl.string(w.t.VJlc0d),
+                              trackingArea: T.j_.PLAY,
+                              onClick() {
+                                  (0, c.G6)({
+                                      channelId: null != M ? M : void 0,
+                                      applicationId: t.id,
+                                      isStart: null == U,
+                                      embeddedActivitiesManager: G,
+                                      customId: a,
+                                      referrerId: R,
+                                      analyticsLocations: D
+                                  });
+                              },
+                              disabledReason: F ? w.intl.string(w.t.wJNK8P) : void 0
+                          }),
+                      !z &&
+                          V &&
+                          e.push({
+                              label: w.intl.string(w.t.JeK1Wl),
+                              trackingArea: T.j_.PLAY,
+                              onClick() {
+                                  (0, m.W)({
+                                      appId: t.id,
+                                      botId: y,
+                                      analyticsLocations: D,
+                                      customId: a,
+                                      referrerId: R
+                                  });
+                              }
+                          }))
+                    : null != K && e.push(K),
                 e
             );
-        }, [z, V, W, U, F, M, t.id, G, a, R, D, y]),
-        Y = C ? (0, r.jsx)(k, { app: t }) : (0, r.jsx)(L, { app: t });
+        }, [z, V, U, F, M, t.id, G, a, R, D, C, K, y]),
+        X = C ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(k, { app: t });
     return (0, r.jsx)(I.W, {
         title: h,
         staticBannerSrc: O,
@@ -108,8 +110,9 @@ function R(e) {
         bannerAspectRatio: Z,
         iconSrc: x,
         embedUrl: n,
-        info: Y,
-        actions: K,
+        info: X,
+        actions: Y,
+        onClickContent: W,
         trackingConfig: {
             id: t.id,
             linkType: l,
@@ -119,7 +122,7 @@ function R(e) {
         }
     });
 }
-function L(e) {
+function k(e) {
     var t, n, a;
     let { app: c } = e,
         u =
@@ -168,7 +171,7 @@ function L(e) {
         ]
     });
 }
-function k(e) {
+function L(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l } = t,
         c = (0, o.e7)(

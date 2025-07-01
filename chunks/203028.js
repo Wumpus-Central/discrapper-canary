@@ -17,9 +17,9 @@ var i = n(512722),
     b = n(388032);
 function _(e) {
     var t, i;
-    let { party: _, onUserContextMenu: E } = e,
-        { priorityMembers: O, guildContext: y } = _,
-        I = O[0],
+    let { party: _, onUserContextMenu: O } = e,
+        { priorityMembers: E, guildContext: y } = _,
+        I = E[0],
         v = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 r = new Set(
@@ -51,10 +51,10 @@ function _(e) {
             var t;
             let { priorityMembers: i, partiedMembers: c, voiceChannels: u, currentActivities: p } = e,
                 _ = i.length,
-                E = c.length - _,
-                O = p[0],
-                y = null == O ? void 0 : O.activity,
-                I = null == O ? void 0 : O.startedPlayingTime,
+                O = c.length - _,
+                E = p[0],
+                y = null == E ? void 0 : E.activity,
+                I = null == E ? void 0 : E.startedPlayingTime,
                 v = { name: null != (t = null == y ? void 0 : y.name) ? t : '' };
             if ((0, a.Z)(y) && null != y)
                 return {
@@ -65,8 +65,8 @@ function _(e) {
                     }),
                     icon: null
                 };
-            if (_ + E === 1 && null != O) {
-                let { game: e } = O;
+            if (_ + O === 1 && null != E) {
+                let { game: e } = E;
                 if (null == y)
                     return {
                         subtitle: null,
@@ -172,6 +172,6 @@ function _(e) {
         icon: S,
         onSubtitleClick: N,
         onIconClick: N,
-        onContextMenu: (e) => E(e, I.user)
+        onContextMenu: (e) => O(e, I.user)
     });
 }

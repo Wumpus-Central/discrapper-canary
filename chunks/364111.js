@@ -12,7 +12,7 @@ function d(e, t, n) {
         p = (0, i.e7)([s.Z], () => s.Z.skipNumCategories),
         h = (0, u.hv)('useMaybeFetchCollectiblesShopHome'),
         f = (0, a.isDesktop)() || (0, a.isWeb)(),
-        [g, m, b, _, E, O, y] = (0, i.Wu)([c.Z], () => {
+        [g, m, b, _, O, E, y] = (0, i.Wu)([c.Z], () => {
             var t, n;
             return [c.Z.getShopBlocks(e), null != (t = c.Z.getLastSuccessfulFetch(e)) ? t : 0, null != (n = c.Z.getLastErrorTimestamp(e)) ? n : 0, c.Z.getLastFetchOptions(e), c.Z.getFetchShopHomeError(e), c.Z.getIsFetchingShopHome(e), c.Z.getShopHomeConfigOverride()];
         }),
@@ -72,13 +72,13 @@ function d(e, t, n) {
         C = (0, r.useMemo)(() => Date.now() - m < 600000, [m]);
     return (
         (0, r.useEffect)(() => {
-            if (!d || O) return;
+            if (!d || E) return;
             let t = Date.now() - b < 600000;
-            (null != E && t) || ((v || !C) && (0, o.Ov)(e, I, n));
-        }, [d, O, E, b, C, v, I, e, n]),
+            (null != O && t) || ((v || !C) && (0, o.Ov)(e, I, n));
+        }, [d, E, O, b, C, v, I, e, n]),
         {
-            isFetchingShopHome: O,
-            fetchShopHomeError: E,
+            isFetchingShopHome: E,
+            fetchShopHomeError: O,
             shopBlocks: g,
             refreshShopHome: (0, r.useCallback)(() => {
                 (0, o.Ov)(e, I, n);

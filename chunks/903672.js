@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(455199),
     C = n(655354),
     j = n(999671),
-    S = n(324081),
-    E = n(240126),
+    E = n(324081),
+    S = n(240126),
     x = n(791914),
     I = n(981631),
     P = n(388032),
@@ -46,8 +46,8 @@ function T(e) {
             messages: b,
             hasMore: O,
             loading: C,
-            guildFilter: S,
-            roleFilter: E,
+            guildFilter: E,
+            roleFilter: S,
             everyoneFilter: w
         } = (0, a.cj)([v.Z], () => ({
             messages: v.Z.getMentions(),
@@ -58,13 +58,13 @@ function T(e) {
             everyoneFilter: v.Z.everyoneFilter
         })),
         T = (0, m.Us)({ location: 'RecentMentions' }),
-        R = (0, p.Z)(S),
-        L = (0, p.Z)(E),
+        R = (0, p.Z)(E),
+        L = (0, p.Z)(S),
         M = (0, p.Z)(w);
     (i.useEffect(() => {
         if (!v.Z.hasLoadedEver) return void Z(g, !0);
-        ((null != R && S !== R) || (null != L && E !== L) || (null != M && w !== M)) && Z(g, !0);
-    }, [R, S, L, E, M, w, g, !0]),
+        ((null != R && E !== R) || (null != L && S !== L) || (null != M && w !== M)) && Z(g, !0);
+    }, [R, E, L, S, M, w, g, !0]),
         (0, h.ZP)(() => {
             (null == b ? void 0 : b.some(f.k5)) && (u.Z.clearMentions(), Z(g, !0));
         }),
@@ -132,7 +132,7 @@ function R(e) {
     return (0, r.jsxs)('div', {
         className: N.container,
         children: [
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(E.Z, {
                 channel: l,
                 gotoChannel: n,
                 children:
@@ -176,7 +176,7 @@ function R(e) {
     });
 }
 function D() {
-    return (0, r.jsx)(E.Z, {
+    return (0, r.jsx)(S.Z, {
         Icon: c.lOy,
         header: P.intl.string(P.t['bgDz7+']),
         tip: P.intl.string(P.t.NS15vr)

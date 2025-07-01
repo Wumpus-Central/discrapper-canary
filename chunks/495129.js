@@ -44,15 +44,15 @@ function v(e) {
                 ? void 0
                 : v.rawValue,
         R = (0, a.e7)([_.Z], () => _.Z.getGuild(w)),
-        L = (0, a.e7)([g.Z], () => g.Z.getChannel(Z)),
-        k = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
-        D = (0, a.e7)([], () => P.author.id === (null == k ? void 0 : k.id)),
+        k = (0, a.e7)([g.Z], () => g.Z.getChannel(Z)),
+        L = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        D = (0, a.e7)([], () => P.author.id === (null == L ? void 0 : L.id)),
         M = null == (I = A.recipients) ? void 0 : I.find((e) => e !== P.author.id),
         U = (0, a.e7)([h.default], () => (null != M ? h.default.getUser(M) : null)),
         F = (0, d.ZP)(P),
         B = (0, E._T)(A.getGuildId(), A.id, U),
-        G = (0, a.Wu)([b.ZP], () => (null != L ? b.ZP.getVoiceStatesForChannel(L) : []), [L]),
-        H = G.some((e) => e.user.id === (null == k ? void 0 : k.id)),
+        G = (0, a.Wu)([b.ZP], () => (null != k ? b.ZP.getVoiceStatesForChannel(k) : []), [k]),
+        H = G.some((e) => e.user.id === (null == L ? void 0 : L.id)),
         V =
             null == (N = P.embeds[0]) ||
             null == (T = N.fields) ||
@@ -66,9 +66,9 @@ function v(e) {
         z = null != V ? V.split(',') : [],
         W = (0, a.Wu)([h.default], () => z.map((e) => h.default.getUser(e)).filter(Boolean)),
         K = D && null != U ? C.intl.formatToPlainString(C.t['er/cHx'], { username: B }) : C.intl.formatToPlainString(C.t.noNjkZ, { username: F.nick }),
-        Y = null != R && null != L,
+        Y = null != R && null != k,
         X = null;
-    ((X = Y ? (D || H ? C.intl.format(C.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != L ? L : void 0 }, t) }) : C.intl.format(C.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != L ? L : void 0 }, t) })) : C.intl.string(C.t['tHT/Vl'])), 0 === G.length && (X = D ? C.intl.string(C.t.IE2uZW) : C.intl.string(C.t.QVhmGx)));
+    ((X = Y ? (D || H ? C.intl.format(C.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : C.intl.format(C.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : C.intl.string(C.t['tHT/Vl'])), 0 === G.length && (X = D ? C.intl.string(C.t.IE2uZW) : C.intl.string(C.t.QVhmGx)));
     let q = D ? C.intl.string(C.t['00XIbm']) : C.intl.string(C.t['7CrE9/']);
     return (0, r.jsxs)('div', {
         children: [

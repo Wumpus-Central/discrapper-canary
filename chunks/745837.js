@@ -16,10 +16,10 @@ var i = n(120356),
     m = n(332325),
     b = n(388032),
     _ = n(318098);
-function E(e) {
+function O(e) {
     ((0, s.Z)(m.Z.CLIPS), (0, h.UW)(e));
 }
-function O() {
+function E() {
     let e = (0, a.e7)([c.ZP], () => c.ZP.getKeybindForAction(g.kg4.SAVE_CLIP));
     if (null == e) return (0, r.jsx)(r.Fragment, { children: b.intl.string(b.t.miecxM) });
     let t = d.BB(e.shortcut, !0);
@@ -62,16 +62,16 @@ let y = {
         buttonColor: o.zxk.Colors.BRAND,
         bodyCopy: () => b.intl.string(b.t.MhrVg4),
         buttonCopy: () => b.intl.string(b.t.GMLBKS),
-        ctaOnClick: () => E(f.D5.Disabled),
+        ctaOnClick: () => O(f.D5.Disabled),
         containerClass: _.container
     },
     [f.D5.Enabled]: {
         textColor: 'always-white',
         buttonLook: o.zxk.Looks.FILLED,
         buttonColor: o.zxk.Colors.BRAND_INVERTED,
-        bodyCopy: () => (0, r.jsx)(O, {}),
+        bodyCopy: () => (0, r.jsx)(E, {}),
         buttonCopy: () => b.intl.string(b.t.GMLBKS),
-        ctaOnClick: () => E(f.D5.Enabled),
+        ctaOnClick: () => O(f.D5.Enabled),
         containerClass: l()(_.container, _.containerEnabled)
     }
 };

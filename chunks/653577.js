@@ -31,10 +31,10 @@ function _(e) {
         null == t.guild_id)
     )
         return null;
-    let S = o()(m.statusDiv, n && C ? m.hoverable : null);
+    let E = o()(m.statusDiv, n && C ? m.hoverable : null);
     return v
         ? (0, r.jsx)(s.P3F, {
-              className: S,
+              className: E,
               onClick: C ? O : void 0,
               children: (0, r.jsx)(s.Text, {
                   variant: 'text-xs/medium',
@@ -44,7 +44,7 @@ function _(e) {
           })
         : n && C && (!j || l)
           ? (0, r.jsxs)(s.P3F, {
-                className: S,
+                className: E,
                 onClick: O,
                 children: [
                     (0, r.jsx)(s.Text, {

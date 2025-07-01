@@ -1,6 +1,6 @@
 (n.d(t, {
     $p: () => e7,
-    BB: () => e5,
+    BB: () => e8,
     ZP: () => e6
 }),
     n(388685),
@@ -41,8 +41,8 @@ var r,
     w = n(10433),
     Z = n(715903),
     R = n(71619),
-    L = n(637618),
-    k = n(225890),
+    k = n(637618),
+    L = n(225890),
     D = n(364097),
     M = n(495129),
     U = n(939170),
@@ -95,8 +95,8 @@ var r,
     ew = n(530472),
     eZ = n(29909),
     eR = n(782658),
-    eL = n(219797),
-    ek = n(453687),
+    ek = n(219797),
+    eL = n(453687),
     eD = n(128854),
     eM = n(101578),
     eU = n(524444),
@@ -190,7 +190,7 @@ let e1 = 15 * eh.Z.Millis.MINUTE,
             className: eX.gifFavoriteButton
         });
     },
-    e8 = (e) => () => {
+    e5 = (e) => () => {
         let { url: t, proxyUrl: n, width: r, height: l, flags: a } = e,
             o = (0, eE.yE)(a, z.hR.IS_ANIMATED);
         return null != r && null != l && (W.uo.test(n) || (o && (W.YG.test(n) || W.FH.test(n))))
@@ -204,7 +204,7 @@ let e1 = 15 * eh.Z.Millis.MINUTE,
               })
             : null;
     };
-class e5 extends (r = l.Component) {
+class e8 extends (r = l.Component) {
     shouldRenderInvite(e) {
         let { channel: t } = this.props;
         return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e3.has(e));
@@ -277,7 +277,7 @@ class e5 extends (r = l.Component) {
                             )
                           : null;
                   if (n === O.g.TEMPLATE) return (0, i.jsx)(D.Z, { code: r }, r);
-                  if (n === O.g.EVENT) return (0, i.jsx)(k.Z, { code: r }, r);
+                  if (n === O.g.EVENT) return (0, i.jsx)(L.Z, { code: r }, r);
                   if (n === O.g.CHANNEL_LINK)
                       return (0, i.jsx)(
                           eP.Z,
@@ -311,7 +311,7 @@ class e5 extends (r = l.Component) {
                           },
                           r
                       );
-                  } else if (n === O.g.GUILD_PRODUCT) return (0, i.jsx)(L.Z, { code: r }, r);
+                  } else if (n === O.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
                   else if (n === O.g.SERVER_SHOP) return (0, i.jsx)(j.Z, { guildId: r }, r);
                   else if (n === O.g.QUESTS_EMBED) return (0, i.jsx)(ee.Z, { questId: r }, r);
                   else if (n === O.g.APP_DIRECTORY_STOREFRONT)
@@ -449,12 +449,12 @@ class e5 extends (r = l.Component) {
                                   (e.stopPropagation(), e.preventDefault(), a(e, o));
                               }
                             : void 0,
-                    renderAudioComponent: _ ? eL.jY : eL.q7,
-                    renderImageComponent: eL.dS,
-                    renderVideoComponent: eL.vZ,
-                    renderPlaintextFilePreview: eL.d4,
-                    renderGenericFileComponent: eL.ZK,
-                    renderMosaicItemFooter: eL.L9,
+                    renderAudioComponent: _ ? ek.jY : ek.q7,
+                    renderImageComponent: ek.dS,
+                    renderVideoComponent: ek.vZ,
+                    renderPlaintextFilePreview: ek.d4,
+                    renderGenericFileComponent: ek.ZK,
+                    renderMosaicItemFooter: ek.L9,
                     onPlay: (e, n, r) => {
                         e_.default.track(eW.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
                             guild_id: t.guild_id,
@@ -466,7 +466,7 @@ class e5 extends (r = l.Component) {
                             duration: r
                         });
                     },
-                    gifFavoriteButton: e8(o),
+                    gifFavoriteButton: e5(o),
                     isSearchResult: this.props.isSearchResult
                 },
                 c = (0, eg.q)({
@@ -511,7 +511,7 @@ class e5 extends (r = l.Component) {
         let { gifAutoPlay: t, enabledContentHarmTypeFlags: n, shouldHideMediaOptions: r, disableComponentInteractivity: l, onMediaItemContextMenu: a } = this.props;
         return (0, i.jsx)(eD.F, {
             gifAutoPlay: t,
-            getGifFavButton: e8,
+            getGifFavButton: e5,
             getOnMediaItemContextMenu:
                 null == a
                     ? void 0
@@ -744,7 +744,7 @@ class e5 extends (r = l.Component) {
         return null == u && null == m && null == _ && null == h && null == b && null == d && null == p && null == E && null == y && null == C && null == x && null == v && null == j && null == O && null == S && null == T && null != I && null == w && null == P && null == Z && null == R
             ? null
             : (0, i.jsxs)('div', {
-                  id: (0, ek.bX)(t),
+                  id: (0, eL.bX)(t),
                   className: o()(e, eX.container),
                   children: [R, Z, O, w, u, d, p, S, m, f, _, A, h, C, v, j, I, g, c, b, E, y, a && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), x, T, N, P]
               });
@@ -874,10 +874,10 @@ function e6(e) {
         P = (0, K.Z)(null == n ? void 0 : n.id),
         A = (0, q.Z)(r),
         w = (0, S.v)(r),
-        L = (0, eI._)(n),
-        k = (0, ex.ro)(r.id, r.channel_id);
+        k = (0, eI._)(n),
+        L = (0, ex.ro)(r.id, r.channel_id);
     return (0, i.jsx)(
-        e5,
+        e8,
         e$(
             eJ(
                 e$(
@@ -893,7 +893,7 @@ function e6(e) {
                 e
             ),
             {
-                hasSpoilerEmbeds: e.hasSpoilerEmbeds && L,
+                hasSpoilerEmbeds: e.hasSpoilerEmbeds && k,
                 isLurking: g && f,
                 isGuest: _ && f,
                 isPendingMember: h && f,
@@ -908,12 +908,12 @@ function e6(e) {
                 showMaskedLinks: N,
                 shouldHideMediaOptions: P,
                 enabledContentHarmTypeFlags: w,
-                ctaButtonType: k
+                ctaButtonType: L
             }
         )
     );
 }
-eQ(e5, 'defaultProps', {
+eQ(e8, 'defaultProps', {
     renderEmbeds: !0,
     compact: !1
 });
@@ -949,7 +949,7 @@ let e7 = (e) => {
         E = (0, ex.ro)(n.id, n.channel_id),
         y = (0, q.Z)(n);
     return (0, i.jsx)(
-        e5,
+        e8,
         e$(eJ({}, d), {
             message: n,
             channel: r,

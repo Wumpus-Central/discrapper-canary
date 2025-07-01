@@ -15,14 +15,14 @@ var r = n(392711),
     m = n(979651),
     b = n(996106),
     _ = n(914946),
-    E = n(238679),
-    O = n(452426),
+    O = n(238679),
+    E = n(452426),
     y = n(295424),
     I = n(222263),
     v = n(863141),
     C = n(186901),
     S = n(981631);
-let N = (e) => (0, O.Z)(e).required().keys({ channel_id: e.string().required() });
+let N = (e) => (0, E.Z)(e).required().keys({ channel_id: e.string().required() });
 function T(e) {
     var t;
     let {
@@ -33,7 +33,7 @@ function T(e) {
     if (null == i || !(0, _.zM)(i, r.application.id, r.authorization.scopes)) throw new b.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
     if (i.isNSFW() && (null == (t = g.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) !== !0) throw new b.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(i.id));
 }
-let P = (e) => (0, O.Z)(e).keys({ channel_id: e.string().allow(null) });
+let P = (e) => (0, E.Z)(e).keys({ channel_id: e.string().allow(null) });
 function j(e) {
     let {
         args: { channel_id: t }
@@ -43,7 +43,7 @@ function j(e) {
 let A = {
     [S.zMe.GUILD_STATUS]: {
         scope: l.x.RPC,
-        validation: (e) => (0, O.Z)(e).required().keys({ guild_id: e.string().required() }),
+        validation: (e) => (0, E.Z)(e).required().keys({ guild_id: e.string().required() }),
         handler(e) {
             let {
                 args: { guild_id: t }
@@ -70,7 +70,7 @@ let A = {
         scope: {
             [C.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, O.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, E.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
@@ -99,7 +99,7 @@ let A = {
         scope: {
             [C.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, O.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, E.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
@@ -127,7 +127,7 @@ let A = {
         scope: {
             [C.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, O.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, E.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
@@ -245,7 +245,7 @@ let A = {
         scope: void 0,
         handler() {}
     },
-    [S.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: E.gQ,
+    [S.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: O.gQ,
     [S.zMe.THERMAL_STATE_UPDATE]: {
         scope: { [C.Gp.ANY]: [C.wE] },
         handler() {}

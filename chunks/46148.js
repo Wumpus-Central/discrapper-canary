@@ -1,4 +1,4 @@
-(n.d(t, { s: () => E }), n(388685));
+(n.d(t, { s: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -23,7 +23,7 @@ let C = (e, t) => {
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
     j = (e) => ('has-wallpaper-nitro' === e ? O.intl.string(O.t.T9dXPj) : O.intl.string(O.t.zyvzQ0)),
-    S = (e) => {
+    E = (e) => {
         switch (e) {
             case 'non-nitro':
                 return O.intl.string(O.t.VU8fxM);
@@ -33,14 +33,14 @@ let C = (e, t) => {
                 return O.intl.string(O.t.eZMxlZ);
         }
     },
-    E = (e) => {
-        let { children: t, channelId: n, selectedChannelId: E } = e,
+    S = (e) => {
+        let { children: t, channelId: n, selectedChannelId: S } = e,
             x = (0, s.wE)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
             I = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
-            P = E === n,
+            P = S === n,
             { canAccessPicker: N, entryPoint: w } = (0, p.m)({
                 location: 'ChatWallpaperDMListCoachmark',
-                selectedChannelId: E
+                selectedChannelId: S
             }),
             Z = w === h.FN.CONTEXT_MENU,
             [T, A] = (0, c.US)(x && Z && P && N && !I ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
@@ -71,7 +71,7 @@ let C = (e, t) => {
             },
             V = C(R, null != D ? D : null),
             H = j(V),
-            z = S(V);
+            z = E(V);
         return (0, r.jsx)('div', {
             ref: M,
             children: (0, r.jsx)(a.yRy, {

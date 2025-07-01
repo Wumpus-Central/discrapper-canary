@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(739566),
     C = n(930282),
     j = n(318713),
-    S = n(47930),
-    E = n(123145),
+    E = n(47930),
+    S = n(123145),
     x = n(25015),
     I = n(178480),
     P = n(703656),
@@ -96,7 +96,7 @@ function F(e) {
             animateOnHover: !0
         }),
         P = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == f,
-        w = (0, S.x)({
+        w = (0, E.x)({
             channel: n,
             message: t,
             user: t.author,
@@ -106,7 +106,7 @@ function F(e) {
         A = (0, r.jsxs)('div', {
             className: U.usernameTagContainer,
             children: [
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(S.Z, {
                     channel: n,
                     message: t,
                     hideGuildTag: !0,

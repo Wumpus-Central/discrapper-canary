@@ -21,8 +21,8 @@ let b = i.memo(function (e) {
         v = (0, a.E)(y),
         C = (0, l.e7)([p.Z], () => p.Z.isFocused()),
         j = (0, l.e7)([u.Z], () => u.Z.isUnavailable(O)),
-        S = (0, c.Z)((e) => e.guildId),
-        E = (0, f.Z)(O),
+        E = (0, c.Z)((e) => e.guildId),
+        S = (0, f.Z)(O),
         {
             badge: x,
             unread: I,
@@ -83,12 +83,12 @@ let b = i.memo(function (e) {
                 guild: y,
                 unavailable: j,
                 animatable: C,
-                selected: S === O,
+                selected: E === O,
                 badge: x,
                 isMentionLowImportance: P,
                 lowerBadge: w,
                 unread: I,
-                mediaState: E,
+                mediaState: S,
                 guildJoinRequestStatus: v
             }),
         Object.getOwnPropertyDescriptors

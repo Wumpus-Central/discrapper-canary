@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(941128),
     C = n(780570),
     j = n(278464),
-    S = n(276952),
-    E = n(682662),
+    E = n(276952),
+    S = n(682662),
     x = n(662146),
     I = n(674552),
     P = n(981631),
@@ -154,9 +154,9 @@ function R(e) {
             inlineSpecs: A,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, r.jsxs)(E.H, {
+            children: (0, r.jsxs)(S.H, {
                 children: [
-                    (0, r.jsx)(S.Z, {
+                    (0, r.jsx)(E.Z, {
                         selected: o,
                         hovered: _,
                         className: T.pill
@@ -192,15 +192,15 @@ function D() {
         d = (0, h.q)(),
         f = n + s + d,
         g = f === s && s > 0 && n + d === 0,
-        S = O.Z.getHomeLink();
+        E = O.Z.getHomeLink();
     return (
-        g && (S = P.Z5c.APPLICATION_STORE),
+        g && (E = P.Z5c.APPLICATION_STORE),
         (0, r.jsx)(R, {
             selected: e,
             user: u,
             selectedChannelId: m.Z.getChannelId(P.ME),
             badge: f,
-            link: S,
+            link: E,
             showProgressBadge: t
         })
     );

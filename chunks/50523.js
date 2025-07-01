@@ -1,7 +1,6 @@
 (n.d(t, { b: () => C }), n(539854), n(953529));
-var r = n(255367);
-n(73800);
-var i = n(442837),
+var r = n(255367),
+    i = n(442837),
     l = n(100527),
     a = n(906732),
     o = n(915346),
@@ -10,7 +9,7 @@ var i = n(442837),
     u = n(230171),
     d = n(758199),
     p = n(914498),
-    m = n(208444),
+    m = n(515344),
     f = n(944486),
     g = n(768581),
     _ = n(566620),
@@ -38,11 +37,11 @@ function C(e) {
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
         R = (0, i.e7)([h.ZP], () => h.ZP.getCurrentEmbeddedActivity()),
-        L = (0, b.Z)(),
-        k = w === E.jy.CAN_LAUNCH,
+        k = (0, b.Z)(),
+        L = w === E.jy.CAN_LAUNCH,
         D = null != x ? x : v.customId,
         M = [];
-    (k &&
+    (L &&
         M.push({
             label: null == Z ? y.intl.string(y.t.cnBQPD) : y.intl.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
@@ -51,7 +50,7 @@ function C(e) {
                     channelId: null != A ? A : void 0,
                     applicationId: C.id,
                     isStart: null == Z,
-                    embeddedActivitiesManager: L,
+                    embeddedActivitiesManager: k,
                     customId: D,
                     referrerId: j,
                     analyticsLocations: P
@@ -60,7 +59,7 @@ function C(e) {
             disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? y.intl.string(y.t.wJNK8P) : void 0
         }),
         N &&
-            !k &&
+            !L &&
             M.push({
                 label: y.intl.string(y.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
@@ -74,27 +73,25 @@ function C(e) {
                     });
                 }
             }));
-    let U = (0, m.z)(C);
-    return (
-        null != M && null != U && M.push(U),
-        (0, r.jsx)(d.W, {
-            actions: M,
-            embedUrl: O,
-            header: C.name,
-            iconSrc: g.ZP.getApplicationIconURL({
-                id: C.id,
-                icon: C.icon,
-                bot: C.bot
-            }),
-            info: (0, r.jsx)('div', { children: v.description }),
-            staticBannerSrc: v.getAssetURL(),
-            title: v.title,
-            trackingConfig: {
-                id: C.id,
-                linkType: u.U.CUSTOM_ACTIVITY_LINK,
-                referrerId: j,
-                activityCustomId: D
-            }
-        })
-    );
+    let U = (0, m.G)(C);
+    return (0, r.jsx)(d.W, {
+        actions: M,
+        onClickContent: U,
+        embedUrl: O,
+        header: C.name,
+        iconSrc: g.ZP.getApplicationIconURL({
+            id: C.id,
+            icon: C.icon,
+            bot: C.bot
+        }),
+        info: (0, r.jsx)('div', { children: v.description }),
+        staticBannerSrc: v.getAssetURL(),
+        title: v.title,
+        trackingConfig: {
+            id: C.id,
+            linkType: u.U.CUSTOM_ACTIVITY_LINK,
+            referrerId: j,
+            activityCustomId: D
+        }
+    });
 }

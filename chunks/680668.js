@@ -24,8 +24,8 @@ function C(e) {
         j,
         { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
         w = A === P.author.id,
-        { channel: Z, approximate_member_count: R, approximate_presence_count: L } = N,
-        k = N.state === b.r2o.ACCEPTING,
+        { channel: Z, approximate_member_count: R, approximate_presence_count: k } = N,
+        L = N.state === b.r2o.ACCEPTING,
         D = null != Z ? (0, m.jD)(Z) : null,
         M = null != T,
         U = null != D,
@@ -117,10 +117,10 @@ function C(e) {
                       })
                   ]
               })))
-            : (null != R && R >= 5) || (null != L && L > 0)
+            : (null != R && R >= 5) || (null != k && k > 0)
               ? (v = (0, r.jsx)(p.Z.Data, {
                     members: R,
-                    membersOnline: L
+                    membersOnline: k
                 }))
               : U &&
                 (v = (0, r.jsx)(p.Z.Channel, {
@@ -149,7 +149,7 @@ function C(e) {
                         }),
                         (0, r.jsx)(p.Z.Button, {
                             onClick: Q,
-                            submitting: k,
+                            submitting: L,
                             color: p.Z.Button.Colors.GREEN,
                             children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
                         })

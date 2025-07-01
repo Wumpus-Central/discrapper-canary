@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(252686),
     C = n(682662),
     j = n(662146),
-    S = n(981631),
-    E = n(388032),
+    E = n(981631),
+    S = n(388032),
     x = n(728492),
     I = n(335426);
 let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
@@ -59,7 +59,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [M, s]
             ),
-            er = null != z && '' !== z ? z : null != T && '' !== T ? T : E.intl.string(E.t.xV9hVl),
+            er = null != z && '' !== z ? z : null != T && '' !== T ? T : S.intl.string(S.t.xV9hVl),
             ei = (0, c.Ie)(''.concat(H)),
             el = 'folder-items-'.concat(H),
             eo = (function (e) {
@@ -131,8 +131,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         : null
                 ]
             }),
-            eu = null != t.color ? t.color : S.Wyy,
-            ed = eu === S.Wyy ? void 0 : (0, u.Rf)(eu);
+            eu = null != t.color ? t.color : E.Wyy,
+            ed = eu === E.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)('div', {
             ref: es,
             className: o()(x.folderGroup, {

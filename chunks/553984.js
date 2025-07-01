@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => C,
-    p: () => E
+    p: () => S
 }),
     n(539854),
     n(388685),
@@ -129,7 +129,7 @@ function C(e) {
                     )
                 )
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(E, {
                 setSelectedFilter: n,
                 hiddenFilters: d,
                 selectedFilter: t
@@ -145,7 +145,7 @@ function j(e) {
         children: t
     });
 }
-function S(e) {
+function E(e) {
     let { setSelectedFilter: t, hiddenFilters: n, selectedFilter: l } = e,
         o = (0, i.useRef)(null),
         [a, c] = (0, i.useState)(!1),
@@ -216,7 +216,7 @@ function S(e) {
                   )
           });
 }
-function E(e) {
+function S(e) {
     let { selectedFilter: t, setSelectedFilter: n, className: l } = e,
         o = y(),
         a = (0, i.useRef)(null),

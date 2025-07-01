@@ -15,11 +15,11 @@ var r = n(255367),
 let m = (e) => {
     let { guildId: t, inviteCode: n } = e,
         [m, b] = i.useState(f.hO.INITIAL),
-        [_, E] = i.useState(null != n);
+        [_, O] = i.useState(null != n);
     i.useEffect(() => {
-        null != n && a.ZP.resolveInvite(n, 'Hub').finally(() => E(!1));
+        null != n && a.ZP.resolveInvite(n, 'Hub').finally(() => O(!1));
     }, [n]);
-    let O = (0, l.e7)([u.Z], () => (null != n ? u.Z.getInvite(n) : null)),
+    let E = (0, l.e7)([u.Z], () => (null != n ? u.Z.getInvite(n) : null)),
         y = (0, l.e7)([c.Z], () => c.Z.getGuild(t));
     i.useEffect(() => {
         null != y && (0, s.uL)(h.Z5c.CHANNEL(t));
@@ -40,7 +40,7 @@ let m = (e) => {
                 (0, r.jsx)('div', { className: g.dragRegion }),
                 (0, r.jsx)('div', {
                     className: g.contentWrapper,
-                    children: !_ && (0, r.jsx)(p.H, { invite: O })
+                    children: !_ && (0, r.jsx)(p.H, { invite: E })
                 })
             ]
         })

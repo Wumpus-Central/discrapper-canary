@@ -53,7 +53,7 @@ let _ = i.memo(function (e) {
         { hasDivider: y, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, O, t), [n, O, t, h]),
         C = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
         j = (0, a.DM)(m),
-        S = (0, l.Wu)(
+        E = (0, l.Wu)(
             [s.ZP],
             () => {
                 if (null == C || !C.isCollapsed || !v) return [];
@@ -68,15 +68,15 @@ let _ = i.memo(function (e) {
             },
             [C, v, m, j]
         ),
-        E = i.useMemo(
+        S = i.useMemo(
             () =>
                 (0, c.c4)({
-                    channels: S,
+                    channels: E,
                     selectedChannelId: b,
                     selectedVoiceChannelId: _,
                     voiceStates: p
                 }),
-            [S, b, _, p]
+            [E, b, _, p]
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, r.jsx)(g, {
@@ -84,14 +84,14 @@ let _ = i.memo(function (e) {
             guildChannelsVersion: h
         });
     let x = y ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
-    return v && 0 !== E.length
+    return v && 0 !== S.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
                       className: f.voiceUserSummary,
                       children: (0, r.jsx)(o.Z, {
                           renderIcon: !0,
-                          users: E,
+                          users: S,
                           max: 8,
                           showUserPopout: !0,
                           guildId: m

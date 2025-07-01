@@ -1,7 +1,7 @@
 (n.r(t),
     n.d(t, {
-        default: () => B,
-        useAppSidebarState: () => U
+        default: () => V,
+        useAppSidebarState: () => G
     }));
 var r = n(255367),
     i = n(73800),
@@ -19,25 +19,26 @@ var r = n(255367),
     m = n(300986),
     b = n(314451),
     _ = n(35583),
-    E = n(821020),
-    O = n(370774),
-    y = n(522474),
-    I = n(141321),
-    v = n(210887),
-    C = n(592125),
-    S = n(430824),
-    N = n(944486),
-    T = n(914010),
-    P = n(451478),
-    j = n(998502),
-    A = n(228488),
-    Z = n(950796),
-    x = n(981631),
-    L = n(741764),
-    w = n(388032),
-    R = n(916723),
-    D = n(103609);
-function k(e) {
+    O = n(821020),
+    E = n(370774),
+    y = n(340137),
+    I = n(522474),
+    v = n(141321),
+    C = n(210887),
+    S = n(592125),
+    N = n(430824),
+    T = n(944486),
+    P = n(914010),
+    j = n(451478),
+    A = n(998502),
+    Z = n(228488),
+    x = n(950796),
+    L = n(981631),
+    w = n(741764),
+    R = n(388032),
+    D = n(916723),
+    k = n(103609);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +63,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function U(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,21 +81,21 @@ function M(e, t) {
         e
     );
 }
-let U = (0, a.U)(() => ({ isOpen: !0 }));
-function G() {
+let G = (0, a.U)(() => ({ isOpen: !0 }));
+function B() {
     let e,
         t = (0, l.TH)(),
-        n = (0, o.e7)([N.Z], () => N.Z.getChannelId()),
-        i = (0, o.e7)([T.Z], () => T.Z.getGuildId()),
-        a = (0, o.e7)([C.Z], () => C.Z.getChannel(n), [n]),
+        n = (0, o.e7)([T.Z], () => T.Z.getChannelId()),
+        i = (0, o.e7)([P.Z], () => P.Z.getGuildId()),
+        a = (0, o.e7)([S.Z], () => S.Z.getChannel(n), [n]),
         c = null != i ? i : null == a ? void 0 : a.guild_id,
-        u = (0, o.e7)([S.Z], () => S.Z.getGuild(c), [c]),
+        u = (0, o.e7)([N.Z], () => N.Z.getGuild(c), [c]),
         d = (0, h.Z)(),
-        p = (0, O.D)(),
+        p = (0, E.D)(),
         f = null;
     return (
         p
-            ? ((e = w.intl.string(w.t.HcoRu7)), (f = (0, r.jsx)(s.Dkj, { size: 'xs' })))
+            ? ((e = R.intl.string(R.t.HcoRu7)), (f = (0, r.jsx)(s.Dkj, { size: 'xs' })))
             : null != u
               ? ((f = d
                     ? (0, r.jsx)(s.r7p, { size: 'xs' })
@@ -102,24 +103,24 @@ function G() {
                           guild: u,
                           size: g.Z.Sizes.MINI,
                           active: !0,
-                          className: D.guildIcon
+                          className: k.guildIcon
                       })),
                 (e = u.name))
               : null != a && (a.isDM() || a.isGroupDM())
-                ? ((e = w.intl.string(w.t.YUU0RE)), (f = (0, r.jsx)(s.gw7, { size: 'xs' })))
-                : t.pathname.startsWith(x.Z5c.GLOBAL_DISCOVERY)
-                  ? ((e = w.intl.string(w.t['4nEZLi'])), (f = (0, r.jsx)(s.Jmo, { size: 'xs' })))
-                  : t.pathname.startsWith(x.Z5c.NITRO_HOME)
-                    ? ((e = w.intl.string(w.t.Ipxkoq)), (f = (0, r.jsx)(s.SrA, { size: 'xs' })))
-                    : t.pathname.startsWith(x.Z5c.COLLECTIBLES_SHOP)
-                      ? ((e = w.intl.string(w.t.pWG4zc)), (f = (0, r.jsx)(s.EOn, { size: 'xs' })))
-                      : t.pathname.startsWith(x.Z5c.FRIENDS)
-                        ? ((e = w.intl.string(w.t.TdEu5e)), (f = (0, r.jsx)(s.iFz, { size: 'xs' })))
-                        : t.pathname.startsWith(x.Z5c.FAMILY_CENTER) && ((e = w.intl.string(R.default.RZqaJi)), (f = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
+                ? ((e = R.intl.string(R.t.YUU0RE)), (f = (0, r.jsx)(s.gw7, { size: 'xs' })))
+                : t.pathname.startsWith(L.Z5c.GLOBAL_DISCOVERY)
+                  ? ((e = R.intl.string(R.t['4nEZLi'])), (f = (0, r.jsx)(s.Jmo, { size: 'xs' })))
+                  : t.pathname.startsWith(L.Z5c.NITRO_HOME)
+                    ? ((e = R.intl.string(R.t.Ipxkoq)), (f = (0, r.jsx)(s.SrA, { size: 'xs' })))
+                    : t.pathname.startsWith(L.Z5c.COLLECTIBLES_SHOP)
+                      ? ((e = R.intl.string(R.t.pWG4zc)), (f = (0, r.jsx)(s.EOn, { size: 'xs' })))
+                      : t.pathname.startsWith(L.Z5c.FRIENDS)
+                        ? ((e = R.intl.string(R.t.TdEu5e)), (f = (0, r.jsx)(s.iFz, { size: 'xs' })))
+                        : t.pathname.startsWith(L.Z5c.FAMILY_CENTER) && ((e = R.intl.string(D.default.RZqaJi)), (f = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
-                className: D.title,
+                className: k.title,
                 children: [
                     f,
                     (0, r.jsx)(s.Text, {
@@ -131,19 +132,19 @@ function G() {
             })
     );
 }
-let B = i.memo(function () {
+let V = i.memo(function () {
     i.useLayoutEffect(() => {
-        j.ZP.setMinimumSize(L.J, L.N);
+        A.ZP.setMinimumSize(w.J, w.N);
     }, []);
     let e = (0, p.T)('AppTitleBar'),
-        t = !U((e) => e.isOpen) && e,
+        t = !G((e) => e.isOpen) && e,
         { hasBugReporterAccess: n } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     i.useLayoutEffect(() => {
-        j.ZP.setMinimumSize(L.J, L.N);
+        A.ZP.setMinimumSize(w.J, w.N);
     }, []);
-    let l = (0, o.e7)([v.Z], () => (v.Z.darkSidebar ? x.BRd.DARK : void 0)),
-        a = (0, o.e7)([P.Z, y.Z], () => (0, A.rB)()),
-        { notificationCenterVariant: h } = E.Lk.useExperiment({ location: 'AppTitleBar' });
+    let l = (0, o.e7)([C.Z], () => (C.Z.darkSidebar ? L.BRd.DARK : void 0)),
+        a = (0, o.e7)([j.Z, I.Z], () => (0, Z.rB)()),
+        { notificationCenterVariant: h, entrypoint: g } = O.Lk.useExperiment({ location: 'AppTitleBar' });
     return a
         ? null
         : (0, r.jsx)(s.Wdt, {
@@ -151,55 +152,59 @@ let B = i.memo(function () {
                   (0, r.jsx)(s.f6W, {
                       theme: l,
                       children: (i) =>
-                          (0, r.jsx)(Z.T, {
+                          (0, r.jsx)(x.T, {
                               className: i,
-                              leading:
-                                  t &&
-                                  (0, r.jsxs)(r.Fragment, {
-                                      children: [
-                                          (0, r.jsx)(
-                                              s.P3F,
-                                              M(k({}, e), {
-                                                  className: D.button,
-                                                  onClick: () => {
-                                                      U.setState({ isOpen: !U.getState().isOpen });
-                                                  },
-                                                  children: (0, r.jsx)(V, {})
-                                              })
-                                          ),
-                                          (0, r.jsx)(s.P3F, {
-                                              className: D.button,
-                                              onClick: () => {
-                                                  c.Z.open(x.oAB.ACCOUNT);
-                                              },
-                                              children: (0, r.jsx)(s.ewm, {
-                                                  size: 'xs',
-                                                  color: 'currentColor'
-                                              })
-                                          })
-                                      ]
-                                  }),
-                              title: (0, r.jsx)(G, {}),
+                              leading: (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      t &&
+                                          (0, r.jsxs)(r.Fragment, {
+                                              children: [
+                                                  (0, r.jsx)(
+                                                      s.P3F,
+                                                      U(M({}, e), {
+                                                          className: k.button,
+                                                          onClick: () => {
+                                                              G.setState({ isOpen: !G.getState().isOpen });
+                                                          },
+                                                          children: (0, r.jsx)(H, {})
+                                                      })
+                                                  ),
+                                                  (0, r.jsx)(s.P3F, {
+                                                      className: k.button,
+                                                      onClick: () => {
+                                                          c.Z.open(L.oAB.ACCOUNT);
+                                                      },
+                                                      children: (0, r.jsx)(s.ewm, {
+                                                          size: 'xs',
+                                                          color: 'currentColor'
+                                                      })
+                                                  })
+                                              ]
+                                          }),
+                                      null !== h && g === O.u3.TITLE_BAR_LEFT && (0, r.jsx)(y.Z, {})
+                                  ]
+                              }),
+                              title: (0, r.jsx)(B, {}),
                               trailing: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(f.Z, { className: D.button }),
+                                      (0, r.jsx)(f.Z, { className: k.button }),
                                       (0, r.jsx)(d.Z, {
                                           canShowReminder: !0,
-                                          className: D.button
+                                          className: k.button
                                       }),
-                                      null === h && (0, r.jsx)(I.Z, M(k({}, t ? {} : e), { className: D.button })),
-                                      n ? (0, r.jsx)(b.Z, { className: D.button }) : (0, r.jsx)(m.Z, { className: D.button }),
-                                      (0, r.jsx)(_.Z, { className: D.button })
+                                      null === h && (0, r.jsx)(v.Z, U(M({}, t ? {} : e), { className: k.button })),
+                                      n ? (0, r.jsx)(b.Z, { className: k.button }) : (0, r.jsx)(m.Z, { className: k.button }),
+                                      (0, r.jsx)(_.Z, { className: k.button })
                                   ]
                               })
                           })
                   })
           });
 });
-function V() {
+function H() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: D.icon,
+        className: k.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

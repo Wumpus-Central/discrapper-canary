@@ -26,8 +26,8 @@ var r,
     v = n(914010),
     C = n(281029),
     j = n(981631),
-    S = n(388032),
-    E = n(915887);
+    E = n(388032),
+    S = n(915887);
 function x(e, t, n) {
     return (
         t in e
@@ -79,19 +79,19 @@ function N(e, t, n) {
     return null != t && !!t && !(0, C.ig)(n, e.type);
 }
 function w(e, t) {
-    return null == t ? E.containerDefault : e > t ? E.containerDragAfter : E.containerDragBefore;
+    return null == t ? S.containerDefault : e > t ? S.containerDragAfter : S.containerDragBefore;
 }
 function Z(e) {
     let { tabIndex: t, forceShowButtons: n, hasChannelInfo: r, onContextMenu: l } = e;
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t.OBr7Cw),
+        text: E.intl.string(E.t.OBr7Cw),
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: s, onFocus: u, onBlur: d } = e;
             return (0, i.jsx)(c.P3F, {
-                className: a()(E.iconItem, n ? E.alwaysShown : void 0, r ? E.iconWithChannelInfo : E.iconNoChannelInfo),
+                className: a()(S.iconItem, n ? S.alwaysShown : void 0, r ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: l,
                 tabIndex: t,
-                'aria-label': S.intl.string(S.t.OBr7Cw),
+                'aria-label': E.intl.string(E.t.OBr7Cw),
                 onMouseEnter: o,
                 onMouseLeave: s,
                 onFocus: u,
@@ -99,7 +99,7 @@ function Z(e) {
                 children: (0, i.jsx)(c.xhG, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: E.actionIcon
+                    className: S.actionIcon
                 })
             });
         }
@@ -112,14 +112,14 @@ function T(e) {
         u.ZP.open(t.id);
     }
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t['3gUsJS']),
+        text: E.intl.string(E.t['3gUsJS']),
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: s, onBlur: u } = e;
             return (0, i.jsx)(c.P3F, {
-                className: a()(E.iconItem, l ? E.alwaysShown : void 0, o ? E.iconWithChannelInfo : E.iconNoChannelInfo),
+                className: a()(S.iconItem, l ? S.alwaysShown : void 0, o ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: d,
                 tabIndex: r,
-                'aria-label': S.intl.string(S.t['3gUsJS']),
+                'aria-label': E.intl.string(E.t['3gUsJS']),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onFocus: s,
@@ -127,7 +127,7 @@ function T(e) {
                 children: (0, i.jsx)(c.ewm, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: E.actionIcon
+                    className: S.actionIcon
                 })
             });
         }
@@ -140,8 +140,8 @@ function A(e) {
         x = (0, s.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         N = (0, s.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
         w = (0, s.e7)([y.Z], () => (0, p.b)(y.Z, C, t, x)),
-        Z = (0, s.e7)([y.Z], () => (y.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.intl.string(S.t.zJrgTE) : S.intl.string(S.t.Sd8Ix8))),
-        T = v ? S.intl.string(S.t['EE+P0N']) : Z,
+        Z = (0, s.e7)([y.Z], () => (y.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? E.intl.string(E.t.zJrgTE) : E.intl.string(E.t.Sd8Ix8))),
+        T = v ? E.intl.string(E.t['EE+P0N']) : Z,
         A = l.useRef(null);
     if (o || !w || t.isModeratorReportChannel()) return null;
     function R() {
@@ -166,7 +166,7 @@ function A(e) {
     let D = v ? c.oLu : c.ejJ,
         L = (0, i.jsx)(D, {
             size: 'xs',
-            className: E.actionIcon,
+            className: S.actionIcon,
             'aria-hidden': !0,
             color: 'currentColor'
         });
@@ -186,7 +186,7 @@ function A(e) {
             children: (e) =>
                 (0, i.jsx)(
                     c.P3F,
-                    P(I({ className: a()(E.iconItem, f ? E.alwaysShown : void 0, b ? E.iconWithChannelInfo : E.iconNoChannelInfo) }, e), {
+                    P(I({ className: a()(S.iconItem, f ? S.alwaysShown : void 0, b ? S.iconWithChannelInfo : S.iconNoChannelInfo) }, e), {
                         onClick: R,
                         tabIndex: u,
                         'aria-label': T,
@@ -202,17 +202,17 @@ function R(e) {
             (0, f._U)(t.guild_id, t.id);
         };
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t.ROh4T0),
+        text: E.intl.string(E.t.ROh4T0),
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                P(I({ className: E.iconItem }, e), {
+                P(I({ className: S.iconItem }, e), {
                     onClick: n,
-                    'aria-label': S.intl.string(S.t.ROh4T0),
+                    'aria-label': E.intl.string(E.t.ROh4T0),
                     children: (0, i.jsx)(c.Dio, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: E.actionIcon
+                        className: S.actionIcon
                     })
                 })
             )
@@ -224,17 +224,17 @@ function D(e) {
             (0, f.dM)(t.guild_id, t.id, !0, { section: j.jXE.CHANNEL_LIST });
         };
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t['N2c/Ul']),
+        text: E.intl.string(E.t['N2c/Ul']),
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                P(I({ className: E.iconItem }, e), {
+                P(I({ className: S.iconItem }, e), {
                     onClick: n,
-                    'aria-label': S.intl.string(S.t['N2c/Ul']),
+                    'aria-label': E.intl.string(E.t['N2c/Ul']),
                     children: (0, i.jsx)(c.dz2, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: E.actionIcon
+                        className: S.actionIcon
                     })
                 })
             )

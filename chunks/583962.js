@@ -26,8 +26,8 @@ var r = n(255367),
     v = n(624138),
     C = n(667815),
     j = n(531572),
-    S = n(651138),
-    E = n(18857),
+    E = n(651138),
+    S = n(18857),
     x = n(981631),
     I = n(388032),
     P = n(93841),
@@ -109,7 +109,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 [R, d, k, M]
             ),
             G = t.premiumTier < A && R >= x.oCV[A],
-            B = (0, E.Z)(t),
+            B = (0, S.Z)(t),
             F = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, y.e9)(A) }),
             V = I.intl.format(I.t.dhKnYm, {
                 numBoosts: d,
@@ -167,7 +167,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                         onClick: B,
                                         className: o()(N.container, { [N.containerWithMargin]: n }),
                                         onContextMenu: (e) => {
-                                            L && (0, p.vq)(e, (e) => (0, r.jsx)(S.default, Z(w({}, e), { guild: t })));
+                                            L && (0, p.vq)(e, (e) => (0, r.jsx)(E.default, Z(w({}, e), { guild: t })));
                                         },
                                         children: [
                                             (0, r.jsx)(h.nn4, { children: e['aria-label'] }),

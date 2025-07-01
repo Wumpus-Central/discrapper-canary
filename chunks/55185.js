@@ -86,7 +86,7 @@ function j(e) {
         ]
     });
 }
-function S(e) {
+function E(e) {
     let { children: t, closePopout: n } = e,
         r = (0, l.useRef)(null);
     (0, c.Tbt)(r);
@@ -133,10 +133,10 @@ function S(e) {
         ]
     });
 }
-function E(e) {
+function S(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(E, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -158,7 +158,7 @@ function E(e) {
 }
 function x(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(E, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -174,7 +174,7 @@ function x(e) {
 function I(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(E, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -198,7 +198,7 @@ function P(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
         { showLinkToSettings: r } = (0, f.D)('popout');
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(E, {
         children: [
             (0, i.jsx)(j, {
                 showCurrentGame: n,
@@ -216,7 +216,7 @@ function P(e) {
 }
 function N(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(E, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
@@ -237,7 +237,7 @@ function w(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
         { showLinkToSettings: r } = (0, f.D)('popout');
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(E, {
         children: [
             (0, i.jsx)(j, {
                 showCurrentGame: n,
@@ -265,7 +265,7 @@ function T(e) {
         o)
     ) {
         case 0:
-            return (0, i.jsx)(E, { closePopout: n });
+            return (0, i.jsx)(S, { closePopout: n });
         case 1:
             return (0, i.jsx)(x, { closePopout: n });
         case 2:

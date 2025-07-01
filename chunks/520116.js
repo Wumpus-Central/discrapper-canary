@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(539854));
+(n.d(t, { Z: () => S }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(913527),
@@ -23,7 +23,7 @@ let j = {
     left: 4,
     right: -12
 };
-function S(e) {
+function E(e) {
     var t, n, l;
     let { channel: o, message: c, compact: u, isGroupStart: d, treatSpam: h, gotoChannel: f } = e,
         g = (0, a.JA)(null != (t = c.id) ? t : ''),
@@ -108,13 +108,13 @@ function S(e) {
         )
     });
 }
-function E(e) {
+function S(e) {
     var t, n;
     let { channel: i, channelRecord: l, gotoChannel: a } = e,
         { enabled: p } = c.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         _ = f.jU.useSetting(),
         j = (0, d.P1)(l),
-        E = !1,
+        S = !1,
         x = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), 'day'),
         I = null != (n = null == (t = m.default.getUser(g.default.getId())) ? void 0 : t.hasFlag(y.xW$.SPAMMER)) && n,
         P = [];
@@ -139,10 +139,10 @@ function E(e) {
             }
             let i = null == t || (0, u.Z)(l, t, n);
             ((t = n),
-                (E = E || (0, d.DQ)(n)),
+                (S = S || (0, d.DQ)(n)),
                 P.push(
                     (0, r.jsx)(
-                        S,
+                        E,
                         {
                             channel: l,
                             message: n,
@@ -171,7 +171,7 @@ function E(e) {
             0 === P.length && (P = [(0, r.jsx)(s.$jN, {}, 'spinner')]));
     }
     return (
-        E && j && c.Z.trackExposure({ location: '20e3b0_2' }),
+        S && j && c.Z.trackExposure({ location: '20e3b0_2' }),
         (0, r.jsx)('div', {
             className: C.messages,
             children: P

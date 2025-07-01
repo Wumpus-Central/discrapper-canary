@@ -1,4 +1,4 @@
-(n.d(t, { k: () => E }), n(388685));
+(n.d(t, { k: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(740442),
@@ -20,9 +20,9 @@ var r = n(255367),
     v = n(946443),
     C = n(264233),
     j = n(981631),
-    S = n(388032);
-function E(e) {
-    let { onOpen: t, onClose: n, children: E, badgeState: x, popoutPosition: I, popoutAlign: P, targetElementRef: N, spacing: w, dialogClassName: Z } = e,
+    E = n(388032);
+function S(e) {
+    let { onOpen: t, onClose: n, children: S, badgeState: x, popoutPosition: I, popoutAlign: P, targetElementRef: N, spacing: w, dialogClassName: Z } = e,
         { analyticsLocations: T } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [A, R] = i.useState(!1),
         [D, L] = [
@@ -91,7 +91,7 @@ function E(e) {
             onRequestClose: U,
             renderPopout: function () {
                 return (0, r.jsx)(s.VqE, {
-                    'aria-label': S.intl.string(S.t.GSmTKC),
+                    'aria-label': E.intl.string(E.t.GSmTKC),
                     className: Z,
                     children:
                         D === a.X.FOR_YOU
@@ -146,7 +146,7 @@ function E(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return E(G, n, e, V);
+                return S(G, n, e, V);
             }
         })
     });

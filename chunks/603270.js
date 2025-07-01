@@ -109,7 +109,7 @@ function Z(e) {
                 });
         });
     };
-    return (0, r.jsx)(L, {
+    return (0, r.jsx)(k, {
         appName: u.name,
         title: N.intl.formatToPlainString(N.t.XDRjs7, { appName: u.name }),
         description: A,
@@ -171,7 +171,7 @@ function R(e) {
         ),
         x = i.useMemo(() => (null != E ? (0, v.y)(E, 45) : void 0), [E]),
         Z = (0, j.R)(null != (l = null == E ? void 0 : E.id) ? l : ''),
-        { openModal: R, subscriptionPurchaseButtonState: k } = (0, g.Z)({
+        { openModal: R, subscriptionPurchaseButtonState: L } = (0, g.Z)({
             skuId: c,
             initialSubscribeForGuild: y
         });
@@ -255,7 +255,7 @@ function R(e) {
             area: 'purchase_button'
         });
     };
-    return (0, r.jsx)(L, {
+    return (0, r.jsx)(k, {
         appName: E.name,
         title: m.name,
         description: B,
@@ -301,7 +301,7 @@ function R(e) {
                               }),
                               onHasClicked: G,
                               subscriptionPlan: h,
-                              state: k
+                              state: L
                           })
                         : (0, r.jsx)(s.zxk, {
                               onClick: F,
@@ -320,7 +320,7 @@ function R(e) {
         })
     });
 }
-function L(e) {
+function k(e) {
     let { appName: t, title: n, description: i, link: l, iconSrc: a, onIconClick: o, onLinkCopy: c, children: u } = e;
     return (0, r.jsxs)('div', {
         className: P.wrapper,

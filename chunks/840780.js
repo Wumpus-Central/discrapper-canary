@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(736409),
     C = n(835473),
     j = n(413523),
-    S = n(933557),
-    E = n(194082),
+    E = n(933557),
+    S = n(194082),
     x = n(550532),
     I = n(436774),
     P = n(594190),
@@ -130,9 +130,9 @@ class ec extends i.PureComponent {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
-                    : (0, r.jsx)(E.ZP, {
-                          look: E.ZP.Looks.GRAY,
-                          size: E.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(S.ZP, {
+                          look: S.ZP.Looks.GRAY,
+                          size: S.ZP.Sizes.SMALL,
                           className: el.liveIndicator
                       }),
                 (0, r.jsxs)('div', {
@@ -275,7 +275,7 @@ let eu = (0, g.Z)(function (e) {
         [g, _] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
         v = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         j = (0, c.e7)([O.ZP], () => O.ZP.getCurrentEmbeddedActivity()),
-        E = (0, c.e7)([H.Z, W.Z, V.ZP], () => (null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(V.ZP.getChannels(o), H.Z, W.Z).length > 0)),
+        S = (0, c.e7)([H.Z, W.Z, V.ZP], () => (null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(V.ZP.getChannels(o), H.Z, W.Z).length > 0)),
         [I] = (0, C.Z)([null != (l = null != _ && null != _.id ? _.id : null != u && null != u.id ? u.id : null != j ? j.applicationId : void 0) ? l : '']),
         N = (0, c.e7)([x.Z], () => x.Z.getFakeGameData()),
         T = (0, c.e7)([O.ZP], () => O.ZP.getCurrentEmbeddedActivity()),
@@ -283,7 +283,7 @@ let eu = (0, g.Z)(function (e) {
         D = (0, c.e7)([z.Z], () => (0, Z.Z)(z.Z) && (0, J.isWindows)()),
         k = (0, c.e7)([K.Z], () => (null != s ? K.Z.findActivity(s, (e) => e.type === er.IIU.PLAYING) : null)),
         U = null != g && g.ownerId === s && g.state !== er.jm8.ENDED,
-        $ = (0, c.e7)([X.default, Y.Z], () => (null != p ? (0, S.F6)(p, X.default, Y.Z) : void 0)),
+        $ = (0, c.e7)([X.default, Y.Z], () => (null != p ? (0, E.F6)(p, X.default, Y.Z) : void 0)),
         ee = (0, M.Z)(),
         [et, en] = i.useState(!1),
         ei = (0, c.e7)([L.Z], () => L.Z.getWindowOpen(er.KJ3.ACTIVITY_POPOUT));
@@ -302,7 +302,7 @@ let eu = (0, g.Z)(function (e) {
                 useReducedMotion: v,
                 isStreaming: U,
                 channel: p,
-                canStream: E,
+                canStream: S,
                 stream: g,
                 streamMetadata: _,
                 channelName: $,

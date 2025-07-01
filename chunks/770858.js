@@ -20,16 +20,16 @@ var r = n(255367),
     v = n(961040),
     C = n(739340),
     j = n(932711),
-    S = n(981631),
-    E = n(490897),
+    E = n(981631),
+    S = n(490897),
     x = n(522458);
 function I() {
     let e = (0, o.e7)([_.default], () => _.default.getCurrentUser());
-    return (0, o.e7)([m.ZP], () => (null == e ? void 0 : e.id) != null && m.ZP.getMentionCount(e.id, E.W.NOTIFICATION_CENTER) > 0);
+    return (0, o.e7)([m.ZP], () => (null == e ? void 0 : e.id) != null && m.ZP.getMentionCount(e.id, S.W.NOTIFICATION_CENTER) > 0);
 }
 function P(e) {
     var t, n;
-    let { onClick: p, selectedOverride: _ = !1, popoutProps: v, ref: E } = e,
+    let { onClick: p, selectedOverride: _ = !1, popoutProps: v, ref: S } = e,
         P = (0, l.Ie)('notifications-inbox'),
         [N, w] = i.useState(!1),
         Z = (0, y.D)(),
@@ -68,10 +68,10 @@ function P(e) {
         k = D === O.jP.LEGACY ? a.xx7 : a.Dkj,
         U = (0, o.e7)([b.Z], () => b.Z.getChannelId()),
         G = i.useMemo(() => {
-            if (D === O.jP.SIDEBAR) return S.Z5c.NOTIFICATIONS_INBOX(null != U ? U : void 0);
+            if (D === O.jP.SIDEBAR) return E.Z5c.NOTIFICATIONS_INBOX(null != U ? U : void 0);
         }, [D, U]);
     return (0, r.jsxs)(u.H, {
-        ref: E,
+        ref: S,
         children: [
             (0, r.jsx)(c.Z, {
                 selected: T && D === O.jP.SIDEBAR,

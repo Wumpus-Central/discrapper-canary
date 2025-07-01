@@ -24,8 +24,8 @@ var r = n(255367),
     v = n(352978),
     C = n(936847),
     j = n(512384),
-    S = n(33316),
-    E = n(576645),
+    E = n(33316),
+    S = n(576645),
     x = n(210975),
     I = n(695346),
     P = n(937995),
@@ -103,7 +103,7 @@ function ei(e, t) {
 let el = [Q.fO.ACTIVITY],
     eo = i.memo((e) => {
         var t, n, l, s, k;
-        let { participant: U, onDoubleClick: G, onContextMenu: Y, onClick: eo, onMouseDown: ea, onKeyDown: es, className: eu, style: ed, containerStyle: eh, channel: ep, width: ef, inPopout: eg, onVideoResize: em, inCall: eb = !1, selected: e_ = !1, noBorder: eO = !1, noVideoRender: ey = !1, focused: ev = !1, blocked: eC = !1, ignored: ej = !1, fit: eS = v.L.CONTAIN, paused: eE = !1, pulseSpeakingIndicator: ex = !1, forceIdle: eI = !1, inOverlayPopout: eP = !1 } = e,
+        let { participant: U, onDoubleClick: G, onContextMenu: Y, onClick: eo, onMouseDown: ea, onKeyDown: es, className: eu, style: ed, containerStyle: eh, channel: ep, width: ef, inPopout: eg, onVideoResize: em, inCall: eb = !1, selected: e_ = !1, noBorder: eO = !1, noVideoRender: ey = !1, focused: ev = !1, blocked: eC = !1, ignored: ej = !1, fit: eE = v.L.CONTAIN, paused: eS = !1, pulseSpeakingIndicator: ex = !1, forceIdle: eI = !1, inOverlayPopout: eP = !1 } = e,
             eN = i.useContext(P.h9) || eI,
             [ew, eZ] = i.useState(!1),
             eT = I.Sb.useSetting(),
@@ -194,7 +194,7 @@ let el = [Q.fO.ACTIVITY],
             e7 = i.useCallback(() => {
                 h.Z.useReducedMotion || e5(!0);
             }, []);
-        (0, E.J)(ep, e7);
+        (0, S.J)(ep, e7);
         let e2 = i.useCallback(() => {
                 null != ek && u.Z.toggleLocalMute(ek, ee.Yn.STREAM);
             }, [ek]),
@@ -225,9 +225,9 @@ let el = [Q.fO.ACTIVITY],
                     participant: U,
                     selected: e_,
                     width: ef,
-                    fit: eS,
+                    fit: eE,
                     onVideoResize: em,
-                    paused: eE,
+                    paused: eS,
                     inPopout: eg,
                     focused: ev,
                     inOverlayPopout: eP
@@ -247,9 +247,9 @@ let el = [Q.fO.ACTIVITY],
                     channel: ep,
                     inCall: eb,
                     participant: U,
-                    fit: eS,
+                    fit: eE,
                     onVideoResize: em,
-                    paused: eE,
+                    paused: eS,
                     selected: e_,
                     width: ef,
                     blocked: eC,
@@ -279,9 +279,9 @@ let el = [Q.fO.ACTIVITY],
                     participant: U,
                     selected: e_,
                     width: ef,
-                    fit: eS,
+                    fit: eE,
                     onVideoResize: em,
-                    paused: eE,
+                    paused: eS,
                     inPopout: eg,
                     focused: ev,
                     inOverlayPopout: eP
@@ -303,7 +303,7 @@ let el = [Q.fO.ACTIVITY],
                 children: [
                     e8 &&
                         U.type === Q.fO.STREAM &&
-                        (0, r.jsx)(S.Z, {
+                        (0, r.jsx)(E.Z, {
                             baseTileRef: tl.current,
                             cleanup: () => e5(!1)
                         }),
@@ -512,7 +512,7 @@ function es(e) {
 }
 eo.displayName = 'CallTile';
 let ec = i.memo((e) => {
-    let { idle: t, title: n, width: l, focused: u, videoToggleState: d, blocked: h, ignored: p, participantType: f, participantUserId: m, platform: b, secureFramesVerified: _, onContextMenu: O, muted: y, deafened: v, localMuted: C, serverMuted: j, serverDeafened: S, hasVideo: E, hideAudioIcon: x, onToggleMute: I } = e,
+    let { idle: t, title: n, width: l, focused: u, videoToggleState: d, blocked: h, ignored: p, participantType: f, participantUserId: m, platform: b, secureFramesVerified: _, onContextMenu: O, muted: y, deafened: v, localMuted: C, serverMuted: j, serverDeafened: E, hasVideo: S, hideAudioIcon: x, onToggleMute: I } = e,
         P = (0, a.e7)([R.Z], () => null != m && R.Z.isLocalVideoAutoDisabled(m, (0, g.Z)(f)), [m, f]),
         N = (0, Y.N)(l),
         w = (0, Y.K)(l),
@@ -524,14 +524,14 @@ let ec = i.memo((e) => {
             };
         return (k.Z.addChangeListener(t), () => k.Z.removeChangeListener(t));
     }, []);
-    let A = !x && f === Q.fO.STREAM && E && (!w || C),
+    let A = !x && f === Q.fO.STREAM && S && (!w || C),
         D = (function (e) {
             let { localMuted: t, serverMuted: n, serverDeafened: r, deafened: i, muted: l } = e;
             return r ? c.Vm4 : n ? c.v0G : i ? c.wE8 : t ? c.v0G : l ? c.nRN : null;
         })({
             localMuted: C,
             serverMuted: j,
-            serverDeafened: S,
+            serverDeafened: E,
             deafened: v,
             muted: y
         });

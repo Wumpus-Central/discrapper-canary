@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -243,7 +243,7 @@ let C = {
         }
     },
     j = (e) => 'MENTION';
-function S(e) {
+function E(e) {
     let { message: t, channel: n, isUnread: i } = e,
         l = O(t, i);
     return (0, r.jsx)(o.Kqy, {
