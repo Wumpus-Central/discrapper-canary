@@ -1,4 +1,5 @@
-function r(e, t, n) {
+var r;
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,12 +12,12 @@ function r(e, t, n) {
         e
     );
 }
-(n.d(t, { Z: () => s }), n(290780), n(539854));
-let i = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
-    a = 'undefined' != typeof performance;
-class o {
+(n.d(t, { Z: () => l }), n(980754), n(290780), n(539854));
+let a = null != (r = globalThis.__getTotalRequireTime) ? r : () => 0,
+    o = 'undefined' != typeof performance;
+class s {
     get isTracing() {
-        return !!a && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
+        return !!o && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
     }
     get endTime() {
         return this.endTime_;
@@ -59,7 +60,7 @@ class o {
                 this.addImportLogDetail()));
     }
     addImportLogDetail() {
-        let e = i();
+        let e = a();
         e - this.lastImportDuration > 25 && (this.addDetail('JS Imports', Math.ceil(e) + 'ms'), (this.lastImportDuration = e));
     }
     markWithDelta(e, t) {
@@ -110,10 +111,10 @@ class o {
         this.logGroups[0].serverTrace = e;
     }
     constructor() {
-        (r(this, 'isTracing_', !0),
-            r(this, 'endTime_', Date.now() + 15000),
-            r(this, 'lastImportDuration', 0),
-            r(this, 'logGroups', [
+        (i(this, 'isTracing_', !0),
+            i(this, 'endTime_', Date.now() + 15000),
+            i(this, 'lastImportDuration', 0),
+            i(this, 'logGroups', [
                 {
                     index: 0,
                     timestamp: Date.now(),
@@ -121,8 +122,8 @@ class o {
                     nativeLogs: []
                 }
             ]),
-            r(this, 'logs', this.logGroups[0].logs),
-            r(this, 'prefix', ''));
+            i(this, 'logs', this.logGroups[0].logs),
+            i(this, 'prefix', ''));
     }
 }
-let s = new o();
+let l = new s();
