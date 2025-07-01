@@ -5500,6 +5500,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     width: auto
 }
 
+.rounded__6af3a {
+    border-radius: var(--radius-round)
+}
+
 .scrollerBase_d125d2 {
     box-sizing: border-box;
     flex: 1 1 auto;
