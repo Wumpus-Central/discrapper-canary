@@ -5,7 +5,7 @@ n.d(t, {
 var r = n(255367),
     i = n(73800),
     l = n(704215),
-    a = n(605236),
+    a = n(266454),
     o = n(930153),
     s = n(507808),
     c = n(822857),
@@ -105,7 +105,7 @@ let g = (e) =>
             p = i.useCallback(() => {
                 null != t && null != t.current && t.current.scrollToTop({ animate: !0 });
             }, [t]),
-            h = (0, a.wE)(l.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK),
+            h = (0, a.Nj)(l.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK),
             { shouldShow: f, closeCoachmarkIfOpen: g } = (0, u.M)({
                 onboardingCoachmarkType: 'shop',
                 prevCoachmarksDismissed: h,

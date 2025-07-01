@@ -487,7 +487,8 @@ async function H(e) {
                 creative_id: null == (f = g.ad_identifiers) ? void 0 : f.creative_id,
                 creative_type: null == (p = g.ad_identifiers) ? void 0 : p.creative_type,
                 decision_id: g.request_id,
-                is_targeted: null != g.ad_identifiers
+                is_targeted: null != g.ad_identifiers,
+                metadata_raw: g.metadata_raw
             },
             placement: e
         }),

@@ -344,7 +344,7 @@ function W(e) {
                                                   dotRadius: 2
                                               })
                                           }),
-                                          (0, r.jsx)(u.Z, {
+                                          (0, r.jsx)(u.ZP, {
                                               channel: t,
                                               className: z.typingUsers,
                                               renderDots: !1

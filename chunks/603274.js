@@ -33,7 +33,7 @@ function x(e, t) {
                       className: E.activityIcon,
                       color: 'currentColor'
                   }),
-                  (0, r.jsx)(h.Z, {
+                  (0, r.jsx)(h.ZP, {
                       guildId: void 0,
                       users: t,
                       max: 6
@@ -115,7 +115,7 @@ function I() {
                               color: 'currentColor',
                               className: E.activityIcon
                           }),
-                          (0, r.jsx)(h.Z, {
+                          (0, r.jsx)(h.ZP, {
                               guildId: void 0,
                               users: o,
                               max: 3

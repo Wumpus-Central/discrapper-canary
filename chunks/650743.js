@@ -6,7 +6,7 @@ var i = n(399606),
     o = n(481060),
     s = n(596454),
     l = n(607070),
-    c = n(605236),
+    c = n(266454),
     u = n(880949),
     d = n(28546),
     f = n(65029),
@@ -88,8 +88,8 @@ function T(e) {
                     return (t) => (0, r.jsx)(e, I({}, t));
                 }));
         },
-        w = (0, c.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
-        D = () => (0, c.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        w = (0, c.zu)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        D = () => (0, c.Q3)(a.z.SOUNDBOARD_KEYBIND_TIP),
         L =
             null != R && (0, m.isWindows)() && !w
                 ? y.intl.format(y.t.udMTtr, {

@@ -30,8 +30,8 @@ let f = [T.Plq.KICK_MEMBERS, T.Plq.BAN_MEMBERS, T.Plq.ADMINISTRATOR, T.Plq.MANAG
     M = !1,
     L = null,
     U = T.rsA.ALL,
-    P = null,
-    j = {},
+    j = null,
+    P = {},
     y = 0;
 function w(e) {
     let t = [],
@@ -79,7 +79,7 @@ function w(e) {
             }
             if (_.actionType === T.vB8.DELETE && (null != o || null != u)) {
                 let e = null != (i = null == o ? void 0 : o.oldValue) ? i : null == u ? void 0 : u.oldValue;
-                ((_.targetType === T.KFR.CHANNEL || _.targetType === T.KFR.CHANNEL_OVERWRITE) && null !== c && (0, E.r8)(c.oldValue) && (e = '#'.concat(e)), null == j[_.targetType] ? (j[_.targetType] = { [_.targetId]: e }) : (j[_.targetType][_.targetId] = e));
+                ((_.targetType === T.KFR.CHANNEL || _.targetType === T.KFR.CHANNEL_OVERWRITE) && null !== c && (0, E.r8)(c.oldValue) && (e = '#'.concat(e)), null == P[_.targetType] ? (P[_.targetType] = { [_.targetId]: e }) : (P[_.targetType][_.targetId] = e));
             }
             ((n = 0), t.unshift(_));
         }),
@@ -152,13 +152,13 @@ class k extends (r = u.ZP.Store) {
         return L;
     }
     get targetIdFilter() {
-        return P;
+        return j;
     }
     get actionFilter() {
         return U;
     }
     get deletedTargets() {
-        return j;
+        return P;
     }
     get groupedFetchCount() {
         return y;
@@ -208,14 +208,14 @@ let F = new k(c.Z, {
     },
     AUDIT_LOG_FILTER_BY_TARGET: function (e) {
         let { targetId: t } = e;
-        P = t;
+        j = t;
     },
     GUILD_SETTINGS_SET_SECTION: G,
     GUILD_SETTINGS_INIT: function (e) {
         let { guildId: t, section: n } = e;
-        return ((g = t), (P = null), G({ section: n }));
+        return ((g = t), (j = null), G({ section: n }));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        ((I = []), (O = []), (U = T.rsA.ALL), (L = null), (P = null), (j = {}), (y = 0), (b = !0), (h = []), (N = []), (p = []), (R = []), (S = []));
+        ((I = []), (O = []), (U = T.rsA.ALL), (L = null), (j = null), (P = {}), (y = 0), (b = !0), (h = []), (N = []), (p = []), (R = []), (S = []));
     }
 });

@@ -23,7 +23,7 @@ var r = n(255367),
     C = n(745837),
     S = n(13228),
     N = n(211644),
-    T = n(605236),
+    T = n(266454),
     P = n(243778),
     j = n(492162),
     A = n(43740),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(10401),
     K = n(970731),
     q = n(210887),
-    X = n(592125),
-    Q = n(796974),
+    Q = n(592125),
+    X = n(796974),
     J = n(486472),
     $ = n(984933),
     ee = n(650774),
@@ -403,9 +403,9 @@ class eN extends i.PureComponent {
             }),
             eE(this, 'handleCloseStudentHubPrivacySettingsTooltip', () => {
                 var e;
-                let t = (0, T.un)(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+                let t = (0, T.zu)(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
                     n = null == (e = this.props.guild) ? void 0 : e.hasFeature(ef.oNc.HUB);
-                !t && n && (0, T.EW)(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: em.L.AUTO });
+                !t && n && (0, T.Q3)(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: em.L.AUTO });
             }),
             eE(this, 'handleCloseSubscribeTooltip', () => {
                 (this.showTimeout.stop(), this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 }));
@@ -485,7 +485,7 @@ function eT(e) {
         o = (0, d.e7)([et.Z], () => et.Z.getGuild(n));
     (0, _.J_)(n);
     let c = (0, j.Z)(n),
-        h = (0, d.e7)([Q.Z], () => Q.Z.getGuildDimensions(n).scrollTo),
+        h = (0, d.e7)([X.Z], () => X.Z.getGuildDimensions(n).scrollTo),
         g = (0, d.e7)([el.Z], () => el.Z.getChannelId()),
         [m, b, C] = (0, d.Wu)([er.Z], () => [er.Z.can(ef.Plq.MANAGE_GUILD, o), er.Z.can(ef.Plq.MANAGE_ROLES, o), er.Z.can(ef.Plq.MANAGE_THREADS, o)]),
         P = (0, d.e7)([J.Z], () => J.Z.isUnavailable(n)),
@@ -515,7 +515,7 @@ function eT(e) {
         ej = (0, I.Q)(),
         eA = (m || (null == o ? void 0 : o.premiumTier) === ef.Eu4.NONE) && !es.s.isDisallowPopupsSet() && !ej,
         eZ = (0, d.e7)([R.Z, en.Z], () => null != o && null != w && m && !en.Z.hasLayers() && R.Z.shouldShowGuildTemplateDirtyTooltip(n)),
-        ex = (0, d.e7)([X.Z], () => X.Z.getChannel(a)),
+        ex = (0, d.e7)([Q.Z], () => Q.Z.getChannel(a)),
         { isPopoutOpen: eL } = (0, A.y)(),
         ew = null != (t = null == o ? void 0 : o.hasFeature(ef.oNc.COMMUNITY)) && t,
         eR = (0, d.e7)([z.Z], () => !s().isEmpty(z.Z.getThreadsForGuild(n))),
@@ -523,7 +523,7 @@ function eT(e) {
         ek = W && !eD,
         eM = (0, S.Z)(w);
     (0, Z.Z)(o);
-    let eU = (0, T.wE)(p.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+    let eU = (0, T.Nj)(p.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eG = (0, U.Z)(n),
         eB = (0, x.Z)(n),
         eV = (0, d.e7)([el.Z], () => el.Z.getChannelId()),

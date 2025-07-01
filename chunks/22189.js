@@ -13,7 +13,7 @@ var s = n(399606),
     d = n(906732),
     u = n(975298),
     m = n(779618),
-    g = n(605236),
+    g = n(266454),
     p = n(300284),
     h = n(703656),
     f = n(547972),
@@ -27,8 +27,8 @@ var s = n(399606),
     S = n(229555),
     v = n(768865),
     T = n(391110),
-    I = n(75077),
-    N = n(474936),
+    N = n(75077),
+    I = n(474936),
     y = n(981631),
     A = n(921944),
     P = n(526761),
@@ -51,8 +51,8 @@ var s = n(399606),
     K = n(498730),
     q = n(607762),
     X = n(474106),
-    J = n(572501),
-    Q = n(755590),
+    Q = n(572501),
+    J = n(755590),
     $ = n(909910),
     ee = n(912429),
     et = n(91394),
@@ -67,17 +67,17 @@ var s = n(399606),
 let ed = () => {
     let { analyticsLocations: e } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, o.ZP)(),
-        n = (0, j.BU)(N.Uq / 1024, { useKibibytes: !0 }),
+        n = (0, j.BU)(I.Uq / 1024, { useKibibytes: !0 }),
         i = (0, s.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
         ec = null != i ? O.ZP.getPremiumPlanItem(i) : null,
-        ed = (null != ec ? O.ZP.getSkuIdForPlan(ec.planId) : null) === N.Si.TIER_2,
+        ed = (null != ec ? O.ZP.getSkuIdForPlan(ec.planId) : null) === I.Si.TIER_2,
         eu = _.default.getCurrentUser(),
-        em = (0, O.I5)(eu, N.p9.TIER_2),
-        eg = (0, O.I5)(eu, N.p9.TIER_0),
+        em = (0, O.I5)(eu, I.p9.TIER_2),
+        eg = (0, O.I5)(eu, I.p9.TIER_0),
         ep = (0, m.Z)(b.Z),
         { isFractionalPremiumActive: eh } = (0, u.Z)(),
-        ef = null != i && i.hasPremiumAtLeast(N.p9.TIER_2),
-        eb = (0, g.wE)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
+        ef = null != i && i.hasPremiumAtLeast(I.p9.TIER_2),
+        eb = (0, g.Nj)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         e_ = (0, p.Z)({
             scrollPosition: P.Y_.TRY_IT_OUT,
             analyticsLocations: e
@@ -218,7 +218,7 @@ let ed = () => {
                       title: D.intl.string(D.t['H+v6eX']),
                       subtitle: D.intl.string(D.t.wmbOAg),
                       description: D.intl.string(D.t.gdA9FB),
-                      perkImage: Q,
+                      perkImage: J,
                       pillText: D.intl.string(D.t.EYxi0t)
                   }
                 : {
@@ -226,7 +226,7 @@ let ed = () => {
                       title: D.intl.string(D.t['H+v6eX']),
                       subtitle: D.intl.string(D.t.wmbOAg),
                       description: D.intl.string(D.t.fiLtJi),
-                      perkImage: Q,
+                      perkImage: J,
                       pillText: D.intl.string(D.t.EYxi0t)
                   },
             serverBoosts: {
@@ -348,14 +348,14 @@ let ed = () => {
                 name: 'customSoundsEverywhere',
                 title: D.intl.string(D.t.LWsAra),
                 subtitle: D.intl.string(D.t.bTzbVl),
-                perkImage: (0, I.gx)(t, w, k),
+                perkImage: (0, N.gx)(t, w, k),
                 description: D.intl.string(D.t.JLnOMz)
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
                 title: D.intl.string(D.t.tzdIwM),
                 subtitle: D.intl.string(D.t.FXlU29),
-                perkImage: (0, I.gx)(t, L, ee),
+                perkImage: (0, N.gx)(t, L, ee),
                 description: D.intl.string(D.t.e7FKCg)
             },
             largeUploads: {
@@ -389,7 +389,7 @@ let ed = () => {
                 description: D.intl.format(D.t['2JqTFx'], { helpdeskArticle: C.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: D.intl.string(D.t.JST6jo),
                 isPremiumGetCta: !ed || void 0,
-                perkImage: J
+                perkImage: Q
             },
             serverProfiles: {
                 name: 'serverProfiles',
@@ -409,7 +409,7 @@ let ed = () => {
                 isPremiumGetCta: !em,
                 onCtaClick: em
                     ? () => {
-                          (eb || (0, g.EW)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: A.L.TAKE_ACTION }), e_());
+                          (eb || (0, g.Q3)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: A.L.TAKE_ACTION }), e_());
                       }
                     : void 0,
                 pillText: eb || !em ? void 0 : D.intl.string(D.t.y2b7CA).toLocaleUpperCase(),

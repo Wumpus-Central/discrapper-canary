@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(911367),
     v = n(43747),
     T = n(970815),
-    I = n(430824),
-    N = n(78839),
+    N = n(430824),
+    I = n(78839),
     y = n(981631),
     A = n(474936),
     P = n(951386);
@@ -94,8 +94,8 @@ function Z(e) {
 let w = function () {
     let [e, t] = r.useState(A.Si.TIER_2),
         [n, _] = r.useState(null),
-        x = (0, a.Wu)([I.Z], () => I.Z.getGuildsArray()),
-        [w] = (0, a.Wu)([N.ZP], () => [N.ZP.getPremiumSubscription()]);
+        x = (0, a.Wu)([N.Z], () => N.Z.getGuildsArray()),
+        [w] = (0, a.Wu)([I.ZP], () => [I.ZP.getPremiumSubscription()]);
     (0, S.t)();
     let k = x.map((e) => ({
             value: e,
@@ -112,7 +112,7 @@ let w = function () {
         { analyticsLocations: Y } = (0, g.ZP)(m.Z.PAYMENT_FLOW_TEST_PAGE),
         [W, K] = r.useState(''),
         [q, X] = r.useState(y.lds),
-        { balance: J, isFetching: Q, error: $ } = (0, v.A)(),
+        { balance: Q, isFetching: J, error: $ } = (0, v.A)(),
         { isSubmitting: ee, responseMessage: et, redeemVirtualCurrency: en } = (0, v.f)(),
         [ei, er] = r.useState(y.lds),
         [es, el] = r.useState(''),
@@ -342,7 +342,7 @@ let w = function () {
                                     variant: 'text-sm/normal',
                                     children: 'Virtual Currency Balance:'
                                 }),
-                                Q
+                                J
                                     ? (0, i.jsx)('div', {
                                           className: P.loader,
                                           children: (0, i.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE })
@@ -356,7 +356,7 @@ let w = function () {
                                                       children: ['Error fetching Virtual Currency Balance: ', $.message]
                                                   }),
                                               (0, i.jsx)(T.A4, {
-                                                  balance: null != J ? J : 0,
+                                                  balance: null != Q ? Q : 0,
                                                   balanceWidgetMode: T.b6.SELECTED
                                               })
                                           ]

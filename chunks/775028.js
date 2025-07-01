@@ -9,7 +9,7 @@ var l = t(255367),
     d = t(481060),
     u = t(239091),
     m = t(111028),
-    h = t(605236),
+    h = t(266454),
     p = t(66999),
     f = t(549631),
     g = t(473403),
@@ -239,7 +239,7 @@ let D = r.memo(function () {
             V = P.intl.string(P.t.vetGQk);
         n.isGuildStageVoice() || n.isGuildVoice() ? (V = P.intl.string(P.t.VJlc0d)) : n.isForumLikeChannel() && (V = P.intl.string(P.t['3xjX0d']));
         let J = H ? 'text-muted' : 'text-default',
-            Y = (0, d.dQu)(H ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
+            Q = (0, d.dQu)(H ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.ua7, {
@@ -286,7 +286,7 @@ let D = r.memo(function () {
                                                         }),
                                                         R
                                                             ? (0, l.jsx)(f.Z, {
-                                                                  color: Y,
+                                                                  color: Q,
                                                                   className: E.premiumIcon
                                                               })
                                                             : null,
@@ -338,7 +338,7 @@ let D = r.memo(function () {
 function H(e) {
     let { categories: n, guild: t, className: i, innerClassName: o, hasSidebar: c } = e,
         { onChannelClick: u } = (0, O.Z)(t.id),
-        m = (0, h.wE)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
+        m = (0, h.Nj)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
         p = r.useCallback(
             (e) => {
                 let { section: r } = e;

@@ -22,8 +22,8 @@ var i = n(374470),
     h = n(986240),
     v = n(667922),
     j = n(941389),
-    E = n(449751),
-    S = n(749339),
+    S = n(449751),
+    E = n(749339),
     _ = n(601184),
     P = n(6148),
     Z = n(519110),
@@ -53,8 +53,8 @@ function z(e) {
         { analyticsLocations: h } = (0, c.ZP)([s.Z.MESSAGE_CONTEXT_MENU]),
         v = b,
         j = b.getAttribute('data-type'),
-        E = b.getAttribute('data-id'),
-        S = b.getAttribute('data-name');
+        S = b.getAttribute('data-id'),
+        E = b.getAttribute('data-name');
     if (null != p) o = l = u = p.url;
     else for (; (0, i.k)(v); ) ((0, i.k)(v, HTMLImageElement) && null != v.src && (o = v.src), (0, i.k)(v, HTMLAnchorElement) && null != v.href && ((l = v.href), (d = v.textContent), null == o && 'img' === v.getAttribute('data-role') && ((o = l), v.hasAttribute('data-safe-src') && '' !== v.getAttribute('data-safe-src') && (u = v.getAttribute('data-safe-src')))), (v = v.parentNode));
     let _ = null != (n = null == (t = document.getSelection()) ? void 0 : t.toString()) ? n : '';
@@ -66,8 +66,8 @@ function z(e) {
             mediaItem: p,
             textSelection: _,
             favoriteableType: j,
-            favoriteableId: E,
-            favoriteableName: S,
+            favoriteableId: S,
+            favoriteableName: E,
             itemHref: l,
             itemSrc: o,
             itemSafeSrc: u,
@@ -83,7 +83,7 @@ function z(e) {
     });
 }
 function B(e) {
-    let { message: t, channel: n, mediaItem: i, textSelection: a, favoriteableType: s, favoriteableId: c, favoriteableName: z, itemHref: B, itemSrc: X, itemSafeSrc: K, itemTextContent: W, canReport: q, onHeightUpdate: V, onSelect: J, onClose: Q, navId: Y, ariaLabel: $, shouldHideMediaOptions: ee = !1 } = e,
+    let { message: t, channel: n, mediaItem: i, textSelection: a, favoriteableType: s, favoriteableId: c, favoriteableName: z, itemHref: B, itemSrc: X, itemSafeSrc: K, itemTextContent: W, canReport: q, onHeightUpdate: V, onSelect: Q, onClose: J, navId: Y, ariaLabel: $, shouldHideMediaOptions: ee = !1 } = e,
         et = (0, d.Z)(a),
         en = (0, b.Z)(a),
         er = (0, N.Z)(t, n),
@@ -99,7 +99,7 @@ function B(e) {
         ec = (0, T.Z)(t, n),
         eu = (0, A.Z)(t),
         ed = (0, j.Z)(t, n),
-        ef = (0, E.Z)(t, n),
+        ef = (0, S.Z)(t, n),
         eg = (0, x.Z)(t, n),
         eb = (0, M.Z)(t, n),
         ep = (0, _.Z)(t, n),
@@ -112,8 +112,8 @@ function B(e) {
             shouldHideMediaOptions: ee,
             contentType: null == i ? void 0 : i.contentType
         }),
-        eE = (0, U.Z)(t, i),
-        eS = (0, u.Z)({
+        eS = (0, U.Z)(t, i),
+        eE = (0, u.Z)({
             id: t.id,
             label: H.intl.string(H.t.zBoHlZ),
             shiftId: ''.concat(t.channel_id, '-').concat(t.id)
@@ -123,7 +123,7 @@ function B(e) {
         eZ = (0, k.Z)(t, n),
         eI = (0, m.Z)(a, n.getGuildId()),
         eT = (0, y.Z)(t),
-        ew = (0, S.Z)(t),
+        ew = (0, E.Z)(t),
         eN = (0, F.Z)(t),
         eA = (0, h.Z)(t, n),
         ex = (0, O.Z)({
@@ -137,9 +137,9 @@ function B(e) {
         eD = (0, p.Z)(t);
     return (0, r.jsxs)(l.v2r, {
         navId: Y,
-        onClose: Q,
+        onClose: J,
         'aria-label': $,
-        onSelect: J,
+        onSelect: Q,
         children: [
             (0, r.jsx)(l.kSQ, { children: et }),
             (0, r.jsx)(l.kSQ, { children: en }),
@@ -156,10 +156,10 @@ function B(e) {
                 children: [eb, eg, ep, q && eO, q && ey, em]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [eo, eI, ej, eE, eN]
+                children: [eo, eI, ej, eS, eN]
             }),
             (0, r.jsx)(l.kSQ, { children: ev }),
-            (0, r.jsx)(l.kSQ, { children: eS })
+            (0, r.jsx)(l.kSQ, { children: eE })
         ]
     });
 }

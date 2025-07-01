@@ -114,7 +114,7 @@ function v(e) {
     }),
     0 === n.length)
         ? null
-        : (0, r.jsx)(c.Z, {
+        : (0, r.jsx)(c.ZP, {
               className: x.facepile,
               showDefaultAvatarsForNullUsers: !0,
               guildId: t.guild_id,

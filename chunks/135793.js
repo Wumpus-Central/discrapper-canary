@@ -14,7 +14,7 @@ var r = n(255367),
     c = n(596454),
     u = n(100527),
     d = n(906732),
-    f = n(605236),
+    f = n(266454),
     _ = n(688465),
     p = n(333867),
     h = n(592125),
@@ -92,7 +92,7 @@ let k = 190,
         let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: c = 'activate', source: u } = e,
             d = h.Z.getChannel(t);
         null != d &&
-            ((0, f.EW)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
+            ((0, f.Q3)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
             (0, l.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 135793));

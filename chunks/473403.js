@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => P,
+    ZP: () => j,
     _W: () => U,
     ge: () => M,
     je: () => L
@@ -171,7 +171,7 @@ let U = (e) => {
                 )
         });
     },
-    P =
+    j =
         12633 == n.j
             ? l.forwardRef(function (e, t) {
                   var n;
@@ -189,8 +189,8 @@ let U = (e) => {
                           onMouseUp: x,
                           onContextMenu: M,
                           connectDragPreview: L,
-                          className: P,
-                          iconClassName: j,
+                          className: j,
+                          iconClassName: P,
                           subtitle: y,
                           subtitleColor: w,
                           channel: { type: G },
@@ -260,7 +260,7 @@ let U = (e) => {
                                               className: S.linkTop,
                                               children: [
                                                   (0, r.jsx)(U, {
-                                                      className: j,
+                                                      className: P,
                                                       channel: i,
                                                       guild: B,
                                                       hasActiveThreads: I,
@@ -308,7 +308,7 @@ let U = (e) => {
                       children: (0, r.jsxs)('div', {
                           ref: t,
                           className: s()(
-                              P,
+                              j,
                               null != h || null != x || null != O || H ? S.wrapper : S.notInteractive,
                               (() => {
                                   if (E) return s()(R.selectedChannel, v.SELECTED);

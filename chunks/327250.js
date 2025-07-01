@@ -138,7 +138,7 @@ function U(e) {
         ]
     });
 }
-function P(e) {
+function j(e) {
     var { tag: t = 'div', text: n, disabled: l, children: s, onClick: o } = e,
         u = (function (e, t) {
             if (null == e) return {};
@@ -177,7 +177,7 @@ function P(e) {
             )
     });
 }
-function j(e) {
+function P(e) {
     let { user: t, member: l, guildId: i } = e,
         m = (0, s.e7)([I.Z], () => I.Z.getGuild(i)),
         {
@@ -200,7 +200,7 @@ function j(e) {
             location: v,
             locations: b
         }),
-        j = (0, s.e7)([T.default], () => T.default.getId() === (null == t ? void 0 : t.id)),
+        P = (0, s.e7)([T.default], () => T.default.getId() === (null == t ? void 0 : t.id)),
         y = (0, s.e7)(
             [N.Z, f.Z],
             () => {
@@ -214,8 +214,8 @@ function j(e) {
     return (0, r.jsxs)('div', {
         className: x.bottomRow,
         children: [
-            (0, r.jsx)(P, {
-                disabled: j,
+            (0, r.jsx)(j, {
+                disabled: P,
                 text: D.intl.string(D.t['g33r/P']),
                 onClick: () => {
                     o.Z.openPrivateChannel({ recipientIds: t.id });
@@ -227,7 +227,7 @@ function j(e) {
                     height: 24
                 })
             }),
-            (0, r.jsx)(P, {
+            (0, r.jsx)(j, {
                 disabled: !g,
                 text: D.intl.string(D.t['3glT6e']),
                 onClick: () => {
@@ -252,7 +252,7 @@ function j(e) {
                     color: a.TVs.colors.TEXT_DEFAULT.css
                 })
             }),
-            (0, r.jsx)(P, {
+            (0, r.jsx)(j, {
                 disabled: !O,
                 text: D.intl.string(D.t['5MBJ5O']),
                 onClick: () => {
@@ -277,7 +277,7 @@ function j(e) {
                     color: a.TVs.colors.TEXT_DEFAULT.css
                 })
             }),
-            (0, r.jsx)(P, {
+            (0, r.jsx)(j, {
                 disabled: !p,
                 text: C ? D.intl.string(D.t.N86XcH) : D.intl.string(D.t.kTlLr6),
                 onClick: () => {
@@ -301,7 +301,7 @@ function j(e) {
                     color: a.TVs.colors.TEXT_DEFAULT.css
                 })
             }),
-            (0, r.jsx)(P, {
+            (0, r.jsx)(j, {
                 text: D.intl.string(D.t.IHTjzM),
                 onClick: () => {
                     (U(A.jQ.COPY_ID), (0, S.JG)(t.id));
@@ -331,7 +331,7 @@ function y(e) {
                       guildId: n,
                       onClose: l
                   }),
-                  (0, r.jsx)(j, {
+                  (0, r.jsx)(P, {
                       user: i,
                       member: a,
                       guildId: n

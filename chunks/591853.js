@@ -27,7 +27,7 @@ var c = n(442837),
     b = n(220779),
     y = n(557135),
     O = n(194082),
-    v = n(605236),
+    v = n(266454),
     I = n(543241),
     T = n(318374),
     S = n(258609),
@@ -202,7 +202,7 @@ function eE(e) {
                         channel_id: null == t ? void 0 : t.id,
                         guild_id: null == t ? void 0 : t.guild_id
                     }),
-                    (0, v.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
+                    (0, v.Q3)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
                     T(!0),
                     A(!1),
                     m)
@@ -232,7 +232,7 @@ function eE(e) {
         },
         F = async (e) => {
             let r;
-            if (((0, v.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m)) (l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t));
+            if (((0, v.Q3)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m)) (l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t));
             else {
                 let e = await _.Z.openPrivateChannel({ recipientIds: n.id }),
                     t = M.Z.getChannel(e);

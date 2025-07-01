@@ -9,7 +9,7 @@ var l = t(255367),
     d = t(481060),
     u = t(111028),
     m = t(252618),
-    h = t(605236),
+    h = t(266454),
     p = t(473403),
     f = t(984370),
     g = t(216306),
@@ -32,7 +32,7 @@ function T(e) {
     let { guild: n, previousChannel: t } = e,
         i = (0, O.Z)(n);
     r.useEffect(() => {
-        (0, h.EW)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: w.L.DISMISS });
+        (0, h.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: w.L.DISMISS });
     });
     let a = i ? P.intl.formatToPlainString(P.t.uqZgYW, { guildName: n.name }) : P.intl.formatToPlainString(P.t.velJeX, { guildName: n.name }),
         o = i ? P.intl.string(P.t.h9mGOD) : P.intl.string(P.t.et6wam);

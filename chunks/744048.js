@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(724145),
     u = n(507962),
     d = n(726034),
-    f = n(605236),
+    f = n(266454),
     _ = n(243778),
     p = n(819640),
     h = n(594174),
@@ -37,7 +37,7 @@ let y = function () {
                           markAsDismissed: A
                               ? S
                               : () => {
-                                    (0, f.EW)(a.z.CLIENT_THEMES_COACHMARK, {
+                                    (0, f.Q3)(a.z.CLIENT_THEMES_COACHMARK, {
                                         dismissAction: b.L.INDIRECT_ACTION,
                                         forceTrack: !0
                                     });

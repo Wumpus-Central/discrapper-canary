@@ -5,7 +5,7 @@ var i = n(704215),
     a = n(952265),
     o = n(468026),
     s = n(231757),
-    l = n(605236),
+    l = n(266454),
     c = n(131951),
     u = n(626135),
     d = n(542238),
@@ -69,7 +69,7 @@ let y = 'game_console_alert_modal',
     O = 'game_console_ptt_alert_modal',
     v = {
         maybeShowPTTAlert(e) {
-            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
+            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.zu)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
             let t = {
                 [_.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
                 [_.ABu.PLAYSTATION]: p.intl.string(p.t['6iqUsb']),
@@ -79,7 +79,7 @@ let y = 'game_console_alert_modal',
                 ? Promise.resolve()
                 : new Promise((e) => {
                       let n = () => {
-                              ((0, l.EW)(i.z.CONSOLE_PTT_DISABLE_ALERT), e());
+                              ((0, l.Q3)(i.z.CONSOLE_PTT_DISABLE_ALERT), e());
                           },
                           s = (e) =>
                               (0, r.jsx)(

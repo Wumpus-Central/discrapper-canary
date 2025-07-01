@@ -41,7 +41,7 @@ function L(e) {
         },
         W = (0, c.Fg)(),
         V = (0, o.ap)(W),
-        [U, G, z] = l.useMemo(() => {
+        [U, z, G] = l.useMemo(() => {
             switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
                     return [v.intl.string(v.t.dRZYND), V ? y.Z : E.Z, a.Z.AVATAR_DECORATION];
@@ -59,10 +59,10 @@ function L(e) {
                 q(
                     H.filter((e) => {
                         var t;
-                        return e.type === z || (e.type === a.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
+                        return e.type === G || (e.type === a.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
                     })
                 ),
-            [H, z, q]
+            [H, G, q]
         ),
         K = (0, g.l)(Y);
     return (l.useEffect(() => {
@@ -91,7 +91,7 @@ function L(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
-                      style: { backgroundImage: 'url('.concat(G, ')') },
+                      style: { backgroundImage: 'url('.concat(z, ')') },
                       className: O.bannerContainer,
                       children: (0, r.jsx)(s.X6q, {
                           variant: 'heading-xxl/extrabold',

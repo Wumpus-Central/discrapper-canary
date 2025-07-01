@@ -136,7 +136,8 @@ let W = i.memo(
                     placeholderHeight: K.totalHeight,
                     canLoadMore: null == N,
                     handleScrollToBottom: i.useCallback(() => q(!0), [q]),
-                    handleScrollFromBottom: i.useCallback(() => q(!1), [q])
+                    handleScrollFromBottom: i.useCallback(() => q(!1), [q]),
+                    additionalMessagePadding: 48 * !!W
                 }),
                 Q = (0, L.Z)({
                     scrollerRef: X.ref,
@@ -208,8 +209,8 @@ let W = i.memo(
                     ((X.ref.current = e), (eo.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                 }),
                 { fadeStart: ec, fadeEnd: eu } = (0, u.q_F)({
-                    fadeStart: M && !Y ? 96 : 16,
-                    fadeEnd: M && !Y ? 24 : 0,
+                    fadeStart: M && !Y ? 96 : M ? 32 : 16,
+                    fadeEnd: M && !Y ? 24 : 24 * !!M,
                     config: {
                         tension: 150,
                         friction: 15,

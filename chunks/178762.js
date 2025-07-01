@@ -18,7 +18,7 @@ var r = n(255367),
     f = n(239091),
     _ = n(607070),
     p = n(100527),
-    h = n(605236),
+    h = n(266454),
     m = n(704041),
     g = n(475676),
     E = n(662594),
@@ -268,7 +268,7 @@ let Y = (e) => {
         return (0, r.jsx)('div', {
             ref: p,
             onMouseEnter: () => {
-                (m.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: k.L.SECONDARY }),
+                (m.entry.content_type !== l.s.LEADERBOARD || (0, h.zu)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.Q3)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: k.L.SECONDARY }),
                     (N.current = !0),
                     setTimeout(() => {
                         (N.current && R(!0), F(A));

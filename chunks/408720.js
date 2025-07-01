@@ -10,8 +10,8 @@ var r = a(469359),
     l = a(394798),
     u = a(622916),
     I = a(467510),
-    R = a(954211),
-    d = a(886115),
+    d = a(954211),
+    R = a(886115),
     N = a(873567),
     f = a(454463),
     A = a(163162);
@@ -40,12 +40,12 @@ let T = (0, o._I)((t = {}) => {
                                 arguments: t.args,
                                 logger: 'console'
                             },
-                            level: (0, R.V)(t.level),
-                            message: (0, d.nK)(t.args, ' ')
+                            level: (0, d.V)(t.level),
+                            message: (0, R.nK)(t.args, ' ')
                         };
                         if ('assert' === t.level)
                             if (!1 !== t.args[0]) return;
-                            else ((e.message = `Assertion failed: ${(0, d.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1)));
+                            else ((e.message = `Assertion failed: ${(0, R.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1)));
                         (0, c.n)(e, {
                             input: t.args,
                             level: t.level

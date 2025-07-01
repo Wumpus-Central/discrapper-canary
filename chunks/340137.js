@@ -55,7 +55,7 @@ function C(e) {
         N = n || n || O,
         T = (0, r.jsx)(c.Dkj, {
             className: v.icon,
-            color: g || N ? c.TVs.colors.CONTROL_ICON_TERTIARY_ACTIVE : c.TVs.colors.ICON_TERTIARY,
+            color: g || N ? c.TVs.colors.ICON_PRIMARY : c.TVs.colors.ICON_TERTIARY,
             size: 'custom',
             height: 16,
             width: 16

@@ -14,7 +14,7 @@ var r = n(255367),
     u = n(927359),
     d = n(975298),
     p = n(211644),
-    h = n(605236),
+    h = n(266454),
     f = n(243778),
     g = n(594174),
     m = n(351402),
@@ -82,8 +82,8 @@ let B = (e) => {
             })(e, ['selected', 'route', 'locationState']);
         let K = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
             q = (0, a.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
-            X = (0, O.Qo)(K, q),
-            Q = (0, l.JA)('nitro'),
+            Q = (0, O.Qo)(K, q),
+            X = (0, l.JA)('nitro'),
             J = (0, N.N)(),
             $ = (0, S.Ng)(),
             ee = (0, I.W)(),
@@ -158,7 +158,7 @@ let B = (e) => {
                         ? el
                             ? ((n = (0, r.jsx)(Z.l, {
                                   isSelected: F,
-                                  onSelect: () => (0, h.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: M.L.TAKE_ACTION })
+                                  onSelect: () => (0, h.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: M.L.TAKE_ACTION })
                               })),
                               (E = 6))
                             : et && ((n = (0, r.jsx)(j.k, { entryPoint: j.U.PrivateMessages })), F || (t = G.localizeBadge), (E = 5))
@@ -204,13 +204,13 @@ let B = (e) => {
                         (ec === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eu(M.L.TAKE_ACTION),
                             _.default.track(k.rMx.NITRO_TAB_VISITED, {
                                 badge_decorator: E,
-                                has_premium: X
+                                has_premium: Q
                             }),
                             null != ef && eg(M.L.USER_DISMISS));
                     }
                 },
                 Y,
-                Q
+                X
             )),
             (H = H =
                 {

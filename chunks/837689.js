@@ -6,7 +6,7 @@ var i = n(873546),
     a = n(481060),
     o = n(570140),
     s = n(317770),
-    c = n(605236),
+    c = n(266454),
     u = n(594174),
     d = n(431),
     p = n(74538),
@@ -88,7 +88,7 @@ class T extends s.Z {
                 if ((await (0, f.l2)(), h.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = _.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).enabled,
-                    n = (0, c.un)(l.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL),
+                    n = (0, c.zu)(l.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL),
                     r = u.default.getCurrentUser();
                 if ((!t || n || (0, a.$sL)() || (0, p.I5)(r) || ((await (0, m.G)(e.userTrialOffer)) && (0, I.Z)({ upsellType: C.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })), (null == r || r.verified) && !(0, a.$sL)() && b.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !i.tq)) {
                     for (let t of await (0, E.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;

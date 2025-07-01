@@ -70,8 +70,8 @@ function N(e) {
         [x, M] = i.useState(!1),
         L = (0, u.e7)([A.ZP], () => (null != b ? A.ZP.getUsableCustomEmojiById(b) : null)),
         U = D || null != N,
-        P = (!D || !x) && (null != b || null != v),
-        j = 0 === r,
+        j = (!D || !x) && (null != b || null != v),
+        P = 0 === r,
         y = i.useRef(null),
         w = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         G = (e) => {
@@ -85,9 +85,9 @@ function N(e) {
         },
         k = (0, l.jsxs)(l.Fragment, {
             children: [
-                P
+                j
                     ? (0, l.jsx)(E.Z, {
-                          className: a()(g.emoji, { [g.small]: j }),
+                          className: a()(g.emoji, { [g.small]: P }),
                           emojiId: b,
                           emojiName: v,
                           animated: !!(null == L ? void 0 : L.animated),
@@ -105,7 +105,7 @@ function N(e) {
                         })
                     }),
                 (0, l.jsx)(c.Text, {
-                    variant: j ? 'text-xs/semibold' : 'text-sm/semibold',
+                    variant: P ? 'text-xs/semibold' : 'text-sm/semibold',
                     lineClamp: 1,
                     color: 'currentColor',
                     children: C
@@ -119,7 +119,7 @@ function N(e) {
                 {
                     [g.disabled]: s,
                     [g.clickable]: U,
-                    [g.small]: j,
+                    [g.small]: P,
                     [g.selected]: R,
                     [g[t.color]]: null != t.color && !U
                 },

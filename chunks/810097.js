@@ -11,7 +11,7 @@ var r = n(255367),
     l = n(704215),
     c = n(481060),
     u = n(951394),
-    d = n(605236),
+    d = n(266454),
     f = n(314897),
     _ = n(837411),
     p = n(510659),
@@ -100,7 +100,7 @@ function N(e) {
                         interactionSource: n,
                         interactionSourceId: O
                     }),
-                w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
+                w === m.lY.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
         },
         k = () => {
             (L(I),
@@ -111,7 +111,7 @@ function N(e) {
                         interactionSource: n,
                         interactionSourceId: O
                     }),
-                w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
+                w === m.lY.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
         };
     return (0, r.jsxs)(u.ZP, {
         className: o()(E.popover, {

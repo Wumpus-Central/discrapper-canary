@@ -324,7 +324,7 @@ async function ei(e) {
     let n = f.ZP.getGameForPID(e),
         r = null != (t = null == n ? void 0 : n.fullscreenType) ? t : c.Jx.UNKNOWN;
     if (G.has(r)) {
-        let t = await (0, O.hj)(e, O.X8);
+        let t = await (0, O.hj)(e, (0, O.O0)('first_fullscreen'));
         (P.verbose('Resolved fullscreen type for pid '.concat(e, ': ').concat(t)), null != t && (r = t));
     }
     return r;
@@ -332,11 +332,11 @@ async function ei(e) {
 async function ea(e) {
     let t = await ei(e);
     if (B.has(t)) {
-        let n = await (0, O.hj)(e, O.tY);
+        let n = await (0, O.hj)(e, (0, O.aW)('initial_status'));
         null != n && (t = n);
     }
     if (t === c.Jx.UNKNOWN) {
-        let n = await (0, O.hj)(e, O.tY);
+        let n = await (0, O.hj)(e, (0, O.aW)('initial_status'));
         null != n && (t = n);
     }
     let n = W(e);

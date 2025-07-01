@@ -5,7 +5,7 @@ var r = n(255367),
     s = n(704215),
     a = n(481060),
     o = n(725803),
-    c = n(605236),
+    c = n(266454),
     d = n(999382),
     u = n(614342),
     m = n(303737),
@@ -22,7 +22,7 @@ function j() {
         _ = i.useRef(null),
         v = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
-        null != t && (0, m.sO)(t) && (0, c.EW)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
+        null != t && (0, m.sO)(t) && (0, c.Q3)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
     let O = (null == t ? void 0 : t.hasFeature(h.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(h.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (

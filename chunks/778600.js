@@ -67,7 +67,7 @@ function I(t, e, a, r, _ = window) {
         () => I(t, e, n || {}, !0)
     );
 }
-function R(t, e, a) {
+function d(t, e, a) {
     try {
         if (!(e in t)) return () => {};
         let r = t[e],
@@ -90,7 +90,7 @@ function R(t, e, a) {
         return () => {};
     }
 }
-function d(t, e, a, r, _) {
+function R(t, e, a, r, _) {
     if (!t) return !1;
     let n = t ? (t.nodeType === t.ELEMENT_NODE ? t : t.parentElement) : null;
     if (!n) return !1;
@@ -149,13 +149,13 @@ var g = function (t) {
 let D = new Map(),
     C = (t, e, a) => {
         let r;
-        if (!t || !(m(t, e) || 'object' == typeof t)) return;
+        if (!t || !(v(t, e) || 'object' == typeof t)) return;
         let _ = t.constructor.name,
             n = ((r = D.get(a)) || ((r = new Map()), D.set(a, r)), r.has(_) || r.set(_, []), r.get(_)),
             o = n.indexOf(t);
         return (-1 === o && ((o = n.length), n.push(t)), o);
     },
-    v = (t, e, a) =>
+    m = (t, e, a) =>
         t.map((t) =>
             (function t(e, a, r) {
                 if (e instanceof Array) return e.map((e) => t(e, a, r));
@@ -192,7 +192,7 @@ let D = new Map(),
                         rr_type: e.constructor.name,
                         args: [t(e.data, a, r), e.width, e.height]
                     };
-                else if (m(e, a) || 'object' == typeof e)
+                else if (v(e, a) || 'object' == typeof e)
                     return {
                         rr_type: e.constructor.name,
                         index: C(e, a, r)
@@ -200,13 +200,13 @@ let D = new Map(),
                 return e;
             })(t, e, a)
         ),
-    m = (t, e) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((t) => 'function' == typeof e[t]).find((a) => t instanceof e[a]);
+    v = (t, e) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((t) => 'function' == typeof e[t]).find((a) => t instanceof e[a]);
 function y(t, e, a, r, _) {
     let n = [];
     try {
-        let o = R(t.HTMLCanvasElement.prototype, 'getContext', function (t) {
+        let o = d(t.HTMLCanvasElement.prototype, 'getContext', function (t) {
             return function (n, ...o) {
-                if (!d(this, e, a, r, !0)) {
+                if (!R(this, e, a, r, !0)) {
                     let t = 'experimental-webgl' === n ? 'webgl' : n;
                     if (('__context' in this || (this.__context = t), _ && ['webgl', 'webgl2'].includes(t)))
                         if (o[0] && 'object' == typeof o[0]) {
@@ -231,11 +231,11 @@ function S(t, e, a, r, _, n, o, i) {
         if (!['isContextLost', 'canvas', 'drawingBufferWidth', 'drawingBufferHeight'].includes(o))
             try {
                 if ('function' != typeof t[o]) continue;
-                let s = R(t, o, function (t) {
+                let s = d(t, o, function (t) {
                     return function (...c) {
                         let s = t.apply(this, c);
-                        if ((C(s, i, this), 'tagName' in this.canvas && !d(this.canvas, r, _, n, !0))) {
-                            let t = v(c, i, this),
+                        if ((C(s, i, this), 'tagName' in this.canvas && !R(this.canvas, r, _, n, !0))) {
+                            let t = m(c, i, this),
                                 r = {
                                     type: e,
                                     property: o,
@@ -403,12 +403,12 @@ class U {
                 for (let o of Object.getOwnPropertyNames(e.CanvasRenderingContext2D.prototype))
                     try {
                         if ('function' != typeof e.CanvasRenderingContext2D.prototype[o]) continue;
-                        let i = R(e.CanvasRenderingContext2D.prototype, o, function (n) {
+                        let i = d(e.CanvasRenderingContext2D.prototype, o, function (n) {
                             return function (...i) {
                                 return (
-                                    d(this.canvas, a, r, _, !0) ||
+                                    R(this.canvas, a, r, _, !0) ||
                                         T(() => {
-                                            let a = v(i, e, this);
+                                            let a = m(i, e, this);
                                             t(this.canvas, {
                                                 type: p['2D'],
                                                 property: o,
@@ -467,7 +467,7 @@ class U {
                 let e = [],
                     n = (t) => {
                         t.querySelectorAll('canvas').forEach((t) => {
-                            d(t, a, r, _, !0) || e.push(t);
+                            R(t, a, r, _, !0) || e.push(t);
                         });
                     };
                 for (let t of this.windows) {

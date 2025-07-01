@@ -1,5 +1,5 @@
 n.d(t, { T: () => l });
-var r = n(259443),
+var r = n(710845),
     i = n(818083),
     a = n(231338);
 let o = (0, i.B)({
@@ -28,7 +28,7 @@ function l() {
         o = null != t ? '-'.concat(t) : '',
         l = null != i ? '-'.concat(i, ')') : '',
         c = 'QuestLogger'.concat(o).concat(l),
-        u = new r.Yd(c);
+        u = new r.Z(c);
     return {
         log: n ? u.log : a.dG,
         warn: n ? u.warn : a.dG,

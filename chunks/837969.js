@@ -124,10 +124,10 @@ function d(e) {
                 U = r.useCallback(() => {
                     S || C(!0);
                 }, [S]),
-                P = r.useCallback(() => {
+                j = r.useCallback(() => {
                     S || (T ? v(h(t, d), d) : M(!0));
                 }, [h, t, v, T, S, d, M]),
-                j = r.useCallback(
+                P = r.useCallback(
                     (e) => {
                         e.currentTarget.contains(e.relatedTarget) ||
                             requestAnimationFrame(() => {
@@ -143,13 +143,13 @@ function d(e) {
                 if (null != e)
                     return (
                         e.addEventListener('focusin', U),
-                        e.addEventListener('focus', P),
-                        e.addEventListener('focusout', j),
+                        e.addEventListener('focus', j),
+                        e.addEventListener('focusout', P),
                         () => {
-                            (e.removeEventListener('focusin', U), e.removeEventListener('focus', P), e.removeEventListener('focusout', j));
+                            (e.removeEventListener('focusin', U), e.removeEventListener('focus', j), e.removeEventListener('focusout', P));
                         }
                     );
-            }, [P, U, j]);
+            }, [j, U, P]);
             let w = r.useCallback(
                     () => ({
                         role: 'list',

@@ -1,15 +1,15 @@
 a.d(e, {
     $k: () => A,
     Dp: () => C,
-    Gx: () => v,
-    HN: () => m,
-    HR: () => d,
+    Gx: () => m,
+    HN: () => v,
+    HR: () => R,
     Hb: () => f,
     Tt: () => L,
     XU: () => p,
     _4: () => h,
     ed: () => D,
-    i0: () => R,
+    i0: () => d,
     j5: () => g,
     ve: () => I,
     wy: () => N,
@@ -26,8 +26,8 @@ var r = a(370336),
     l = a(793373),
     u = a(99342);
 let I = 0,
-    R = 1;
-function d(t) {
+    d = 1;
+function R(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
         { data: _, op: n, parent_span_id: o, status: i, origin: c } = p(t);
     return (0, r.Jr)({
@@ -91,7 +91,7 @@ function p(t) {
 }
 function L(t) {
     let { traceFlags: e } = t.spanContext();
-    return e === R;
+    return e === d;
 }
 function h(t) {
     if (t && t.code !== l.pq) return t.code === l.OP ? 'ok' : t.message || 'unknown_error';
@@ -114,15 +114,15 @@ function C(t) {
         Array.from(e)
     );
 }
-function v(t) {
+function m(t) {
     return t[P] || t;
 }
-function m() {
+function v() {
     let t = (0, i.c)(),
         e = (0, o.G)(t);
     return e.getActiveSpan ? e.getActiveSpan() : (0, u.Y)((0, c.nZ)());
 }
 function y(t, e, a, r, _, n) {
-    let o = m();
+    let o = v();
     o && (0, s.V)(o, t, e, a, r, _, n);
 }

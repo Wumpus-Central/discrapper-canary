@@ -4,7 +4,7 @@ var r = n(255367),
     l = n(442837),
     o = n(704215),
     a = n(481060),
-    s = n(605236),
+    s = n(266454),
     c = n(243778),
     u = n(7093),
     d = n(667105),
@@ -47,7 +47,7 @@ let v = (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          ((0, s.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: O.L.USER_DISMISS }), v(!1), j(!1));
+                          ((0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: O.L.USER_DISMISS }), v(!1), j(!1));
                       };
                       return (0, r.jsx)(a.yRy, {
                           targetElementRef: S,

@@ -4,7 +4,7 @@ var a,
     o = n(442837),
     s = n(704215),
     l = n(570140),
-    c = n(605236),
+    c = n(266454),
     u = n(238514),
     d = n(781391),
     f = n(210887),
@@ -57,7 +57,7 @@ let A = !0,
     w = (e) => {
         let { channelId: t, guildId: n } = e,
             r = E.default.getCurrentUser();
-        if (null == t || null == n || (0, c.un)(s.z.CLIENT_THEMES_COACHMARK) || !(0, y.Fc)(r)) return;
+        if (null == t || null == n || (0, c.zu)(s.z.CLIENT_THEMES_COACHMARK) || !(0, y.Fc)(r)) return;
         let i = g.Z.getChannel(t);
         null != i && (0, m.zi)(i.type) && (N = !0);
     };

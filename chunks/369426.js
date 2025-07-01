@@ -20,7 +20,7 @@ var r = {
     'spinner-lg': 'spinner-lg__6af3a',
     primary: 'primary__6af3a',
     secondary: 'secondary__6af3a',
-    tertiary: 'tertiary__6af3a',
+    'icon-only': 'icon-only__6af3a',
     'color-mix': 'color-mix__6af3a',
     'critical-primary': 'critical-primary__6af3a',
     'critical-secondary': 'critical-secondary__6af3a',
@@ -33,6 +33,7 @@ var r = {
     expressiveFill: 'expressiveFill__6af3a',
     expressiveHoverContainer: 'expressiveHoverContainer__6af3a',
     expressiveWrapper: 'expressiveWrapper__6af3a',
-    fullWidth: 'fullWidth__6af3a'
+    fullWidth: 'fullWidth__6af3a',
+    rounded: 'rounded__6af3a'
 };
 n.r((e.exports = r));

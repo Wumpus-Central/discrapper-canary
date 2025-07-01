@@ -54,16 +54,16 @@ let b = (e) => {
         let S = (0, p.re)(C),
             v = (0, m.Z)(),
             T = (0, p.mN)(),
-            { fractionalState: I } = (0, o.Z)(),
-            N = (0, c.W)(),
+            { fractionalState: N } = (0, o.Z)(),
+            I = (0, c.W)(),
             y = (0, d.Z)({ location: 'WhatsNewSection' }),
             A = (0, p.ZM)({
                 perksCards: v,
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
                 isPremiumSubscriber: T,
-                fractionalState: I,
-                isInReverseTrial: N,
+                fractionalState: N,
+                isInReverseTrial: I,
                 showVoiceFiltersCard: y
             }),
             P = A.some((e) => null != e.pillText);

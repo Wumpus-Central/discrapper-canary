@@ -15,8 +15,8 @@
     n(642613));
 var r = n(921738),
     i = n.n(r),
-    a = n(259443),
-    o = n(433517),
+    a = n(433517),
+    o = n(710845),
     s = n(857192),
     l = n(358085),
     c = n(981631);
@@ -49,7 +49,7 @@ function d(e) {
     }
     return e;
 }
-let f = new a.Yd('KeyboardLayoutMapUtils'),
+let f = new o.Z('KeyboardLayoutMapUtils'),
     _ = (0, l.isLinux)() ? c.HsE : (0, l.isMac)() ? c.REU : (0, l.isWindows)() || __OVERLAY__ ? c.iC$ : i().codes,
     p = new Set([192, 220, 222, 223, 229]),
     h = Object.freeze({
@@ -179,10 +179,10 @@ function v(e) {
 let I = 'keyboard-layout-map';
 function T() {
     var e;
-    return null != (e = o.K.get(I)) ? e : null;
+    return null != (e = a.K.get(I)) ? e : null;
 }
 function S(e) {
-    o.K.set(I, e);
+    a.K.set(I, e);
 }
 class A {
     _setCachedKeyCodeMapEntries() {

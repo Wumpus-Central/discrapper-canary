@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(981631),
     K = n(675654),
     q = n(474936),
-    X = n(388032),
-    Q = n(916723),
+    Q = n(388032),
+    X = n(916723),
     J = n(416350);
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -144,7 +144,7 @@ let en = (e) => {
                                 selected: t,
                                 route: Y.Z5c.FRIENDS,
                                 icon: f.iFz,
-                                text: X.intl.string(X.t.TdEu5e),
+                                text: Q.intl.string(Q.t.TdEu5e),
                                 onMouseEnter: () => {
                                     O(!0);
                                 },
@@ -195,7 +195,7 @@ let en = (e) => {
                         selected: t,
                         route: Y.Z5c.APPLICATION_LIBRARY,
                         icon: f.vqy,
-                        text: X.intl.string(X.t.cw57am)
+                        text: Q.intl.string(Q.t.cw57am)
                     },
                     i,
                     l
@@ -222,7 +222,7 @@ let en = (e) => {
                         selected: t,
                         route: Y.Z5c.MESSAGE_REQUESTS,
                         icon: f._XJ,
-                        text: X.intl.string(X.t.e7GWjY),
+                        text: Q.intl.string(Q.t.e7GWjY),
                         onClick: l
                     },
                     n
@@ -233,7 +233,7 @@ let en = (e) => {
     },
     ea = (e) => {
         let { selected: t } = e,
-            n = X.intl.string(Q.default.Rkdixs),
+            n = Q.intl.string(X.default.Rkdixs),
             l = (0, c.JA)('family-center'),
             [a, o] = i.useState(!0);
         return (0, r.jsx)(
@@ -270,7 +270,7 @@ let en = (e) => {
                           return (t) => (0, r.jsx)(e, $({}, t));
                       });
                   },
-                  'aria-label': X.intl.string(X.t.cpT0Cg)
+                  'aria-label': Q.intl.string(Q.t.cpT0Cg)
               })
             : i > 0
               ? (0, r.jsx)('div', {
@@ -283,7 +283,7 @@ let en = (e) => {
                         let { visibleContent: t } = e;
                         return t === p.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, r.jsx)(f.IGR, {
-                                  text: X.intl.string(X.t.y2b7CA),
+                                  text: Q.intl.string(Q.t.y2b7CA),
                                   color: E.Z.BG_BRAND
                               })
                             : null;
@@ -309,7 +309,7 @@ let eu = i.memo(function (e) {
         b = i.useRef(null);
     return (0, r.jsxs)('nav', {
         className: J.privateChannels,
-        'aria-label': X.intl.string(X.t.ZH9aPz),
+        'aria-label': Q.intl.string(Q.t.ZH9aPz),
         children: [
             (0, r.jsx)(R.Z, {
                 childRef: g,
@@ -325,7 +325,7 @@ let eu = i.memo(function (e) {
                         size: f.zxk.Sizes.SMALL,
                         fullWidth: !0,
                         onClick: es,
-                        children: X.intl.string(X.t.LzcpeX)
+                        children: Q.intl.string(Q.t.LzcpeX)
                     })
                 })
             }),

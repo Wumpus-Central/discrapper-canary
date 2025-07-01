@@ -1,5 +1,5 @@
 n.d(t, { Z: () => c });
-var r = n(259443),
+var r = n(710845),
     i = n(845856),
     a = n(894276);
 function o(e, t, n) {
@@ -15,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-let s = new r.Yd('NoteStore');
+let s = new r.Z('NoteStore');
 class l extends i.fE {
     getNote(e) {
         return this.get(e);

@@ -6,12 +6,12 @@
 }),
     n(997841),
     n(388685));
-var r = n(259443),
+var r = n(710845),
     i = n(467798),
     a = n(630388),
     o = n(215644),
     s = n(981631);
-let l = new r.Yd('Scheduled Messages');
+let l = new r.Z('Scheduled Messages');
 function c(e) {
     let { content: t, flags: n } = e,
         [r, o] = (0, i.Z)(t);

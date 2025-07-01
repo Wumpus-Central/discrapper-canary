@@ -15,15 +15,15 @@ function g(e) {
         [E, j] = r.useState(''),
         [C, O] = r.useState(''),
         [S, v] = r.useState(''),
-        [T, I] = r.useState(null),
-        [N, y] = r.useState(null),
+        [T, N] = r.useState(null),
+        [I, y] = r.useState(null),
         A = (0, s.e7)([o.Z], () => o.Z.getErrors()),
         P = (0, s.e7)([o.Z], () => o.Z.getFormState()),
         R = r.useRef(null);
     async function D(e) {
         (e.preventDefault(), (0, a.b9)());
         let t = !1;
-        if (('' === C ? (I(u.intl.string(u.t['/7/oPT'])), (t = !0)) : I(null), C !== S ? (y(u.intl.string(u.t.IEKYZ2)), (t = !0)) : y(null), t)) return;
+        if (('' === C ? (N(u.intl.string(u.t['/7/oPT'])), (t = !0)) : N(null), C !== S ? (y(u.intl.string(u.t.IEKYZ2)), (t = !0)) : y(null), t)) return;
         let n = await (0, a.Mn)({
             password: E,
             newPassword: C
@@ -97,7 +97,7 @@ function g(e) {
                                 (0, i.jsx)(l.xJW, {
                                     className: m.newPassword,
                                     title: u.intl.string(u.t.iQG2KC),
-                                    error: null != N ? N : void 0,
+                                    error: null != I ? I : void 0,
                                     children: (0, i.jsx)(l.oil, {
                                         type: 'password',
                                         value: S,

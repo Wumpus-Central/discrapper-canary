@@ -44,11 +44,11 @@ function O(e) {
     return (0, r.jsxs)('div', {
         className: v.audienceSummary,
         children: [
-            (0, r.jsx)(u.Z, {
+            (0, r.jsx)(u.ZP, {
                 className: v.summaryItem,
                 guildId: t.guild_id,
                 users: i,
-                size: u.u.SIZE_16
+                size: u.u8.SIZE_16
             }),
             (0, r.jsx)(c.Text, {
                 variant: 'text-sm/normal',

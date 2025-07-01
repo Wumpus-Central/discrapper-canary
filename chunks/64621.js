@@ -5,7 +5,7 @@ var r = n(255367),
     o = n(704215),
     s = n(481060),
     l = n(980591),
-    c = n(605236),
+    c = n(266454),
     u = n(243778),
     d = n(970731),
     f = n(158776),
@@ -65,7 +65,7 @@ function S(e) {
                   spacing: I,
                   dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY
               },
-        V = (0, c.wE)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
+        V = (0, c.Nj)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
         F = D && !V ? [B] : [],
         [Z, H] = (0, u.US)(F);
     return (0, r.jsx)(s.yRy, {

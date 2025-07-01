@@ -4,8 +4,8 @@
 }),
     n(388685));
 var r,
-    i = n(259443),
-    l = n(379649),
+    i = n(379649),
+    l = n(710845),
     o = n(314897),
     a = n(592125),
     s = n(866960),
@@ -30,7 +30,7 @@ var f = (((r = {}).SELF_VIDEO = 'self_video'), (r.SELF_STREAM = 'self_stream'), 
 let g = new Map();
 class m {
     onSpinnerStarted() {
-        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, l.zO)());
+        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, i.zO)());
     }
     trackSpinnerDuration(e, t, n) {
         if (null == this.spinnerVisibleStart) return;
@@ -39,9 +39,9 @@ class m {
                 let n = (null != (t = g.get(e)) ? t : 0) + 1;
                 return (g.set(e, n), n);
             })(n),
-            i = (0, l.zO)() - this.spinnerVisibleStart;
-        if (((this.spinnerVisibleStart = null), i < 0)) return void this.logger.warn('spinner duration is negative: '.concat(i, ' ms\n        [').concat(e, ', count for stream: ').concat(r, ']'));
-        this.logger.info('spinner visible for '.concat(i, ' ms\n      [').concat(e, ', count for stream: ').concat(r, ']'));
+            l = (0, i.zO)() - this.spinnerVisibleStart;
+        if (((this.spinnerVisibleStart = null), l < 0)) return void this.logger.warn('spinner duration is negative: '.concat(l, ' ms\n        [').concat(e, ', count for stream: ').concat(r, ']'));
+        this.logger.info('spinner visible for '.concat(l, ' ms\n      [').concat(e, ', count for stream: ').concat(r, ']'));
         let p = c.Z.getGuildId(),
             f = u.Z.getUserVoiceChannelId(p, o.default.getId()),
             m = (function (e) {
@@ -55,7 +55,7 @@ class m {
             })(a.Z.getChannel(f));
         d.default.track(h.rMx.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
-            duration_video_spinner_visible_ms: i,
+            duration_video_spinner_visible_ms: l,
             rtc_connection_id: c.Z.getRTCConnectionId(),
             media_session_id: c.Z.getMediaSessionId(),
             event_count_for_stream: r,
@@ -69,6 +69,6 @@ class m {
         });
     }
     constructor(e) {
-        (p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new i.Yd(e)));
+        (p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new l.Z(e)));
     }
 }

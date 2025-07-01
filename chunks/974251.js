@@ -14,7 +14,7 @@ var r = n(255367),
     m = n(924557),
     g = n(435064),
     b = n(712114),
-    _ = n(605236),
+    _ = n(266454),
     y = n(536442),
     C = n(79390),
     x = n(216789),
@@ -176,10 +176,10 @@ let H = i.memo(function (e) {
             position: 'top',
             positionKey: null != ea ? ea : 'null',
             onRequestOpen: () => {
-                (ef && (0, _.EW)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }), es('attachMenu'));
+                (ef && (0, _.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }), es('attachMenu'));
             },
             onRequestClose: () => {
-                (0, c.$sL)() || (ef && (0, _.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), es(null));
+                (0, c.$sL)() || (ef && (0, _.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), es(null));
             },
             renderPopout: (e) => {
                 switch (ea) {

@@ -39,13 +39,13 @@ function D(e) {
     let { avatarSize: t, guildId: n, channelId: l, users: i } = e,
         a = null != t ? t : u.EFr.SIZE_32,
         o = (0, u.pxk)(a);
-    return (0, r.jsx)(S.Z, {
+    return (0, r.jsx)(S.ZP, {
         size: o,
         guildId: n,
         users: i,
         max: 4,
         renderUser: (e) => {
-            if (null == e) return null;
+            if (null == e || e === S.ag) return null;
             let t = R.ZP.getName(n, l, e);
             return (0, r.jsx)(
                 u.DY3,

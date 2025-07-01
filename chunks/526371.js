@@ -9,7 +9,7 @@ var i = n(255367),
     d = n(230711),
     u = n(100527),
     m = n(906732),
-    g = n(605236),
+    g = n(266454),
     p = n(314910),
     h = n(498646),
     f = n(981631),
@@ -23,7 +23,7 @@ function C() {
         [t, n] = (0, r.useState)(!1),
         { analyticsLocations: s } = (0, m.ZP)(u.Z.HOLIDAY_COACHMARK),
         h = (e) => {
-            (0, g.EW)(o.z.CLICKER_COACHMARK, {
+            (0, g.Q3)(o.z.CLICKER_COACHMARK, {
                 dismissAction: e,
                 forceTrack: !0
             });
@@ -109,7 +109,7 @@ function C() {
     );
 }
 function O() {
-    let e = (0, g.wE)(o.z.CLICKER_COACHMARK),
+    let e = (0, g.Nj)(o.z.CLICKER_COACHMARK),
         { enableGame: t } = h.C.getCurrentConfig({ location: 'Coachmark' });
     return e || !t ? null : (0, i.jsx)(C, {});
 }

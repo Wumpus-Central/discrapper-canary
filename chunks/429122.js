@@ -89,7 +89,7 @@ let _ = i.memo(function (e) {
               children: [
                   (0, r.jsx)('div', {
                       className: f.voiceUserSummary,
-                      children: (0, r.jsx)(o.Z, {
+                      children: (0, r.jsx)(o.ZP, {
                           renderIcon: !0,
                           users: S,
                           max: 8,

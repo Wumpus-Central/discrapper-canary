@@ -40,7 +40,7 @@ var r = t(255367),
     z = t(981631),
     W = t(388032),
     K = t(951927);
-let M = U.u.SIZE_24;
+let M = U.u8.SIZE_24;
 function J(e) {
     let { applicationId: n, channelId: t } = e,
         i = (0, a.e7)([p.Z], () => p.Z.getApplication(n)),
@@ -67,7 +67,7 @@ function J(e) {
         q = o.useCallback(
             (e, n) => {
                 var t;
-                if (null == e) return null;
+                if (null == e || e === U.ag) return null;
                 let o = F.get(e.id),
                     i = null != (t = null == o ? void 0 : o.nick) ? t : S.ZP.getName(e);
                 return (0, r.jsx)(
@@ -191,7 +191,7 @@ function J(e) {
                                         children: '.'
                                     })
                                 }),
-                                (0, r.jsx)(U.Z, {
+                                (0, r.jsx)(U.ZP, {
                                     renderIcon: !1,
                                     users: $,
                                     size: M,

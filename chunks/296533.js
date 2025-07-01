@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => y,
-    r: () => N
+    r: () => I
 }),
     n(539854),
     n(388685));
@@ -97,7 +97,7 @@ function v(e) {
         j = r.useMemo(() => null != E && E > new Date(), [E]),
         v = (0, p.tl)(n),
         T = (0, c.Z)(),
-        I = r.useRef(null);
+        N = r.useRef(null);
     return (0, i.jsxs)('div', {
         className: O.boostContainer,
         children: [
@@ -127,7 +127,7 @@ function v(e) {
                                   })
                     }),
                     (0, i.jsx)(a.yRy, {
-                        targetElementRef: I,
+                        targetElementRef: N,
                         renderPopout: function (e) {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(d.Z, {
@@ -172,7 +172,7 @@ function v(e) {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        innerRef: I,
+                                        innerRef: N,
                                         'aria-label': C.intl.string(C.t.PdRCRk),
                                         className: O.boostSlotMenuIcon,
                                         children: (0, i.jsx)(a.Huf, {
@@ -229,7 +229,7 @@ function T(e) {
         ]
     });
 }
-function I(e) {
+function N(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: r } = e,
         s = (0, l.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         a = f.default.fromTimestamp(Date.now());
@@ -277,7 +277,7 @@ function I(e) {
         ]
     });
 }
-function N(e) {
+function I(e) {
     let { appliedGuildBoosts: t, premiumSubscription: n } = e,
         s = r.useMemo(() => {
             let e = {};
@@ -298,7 +298,7 @@ function N(e) {
                       className: O.container,
                       children: f.default.keys(s).map((e) =>
                           (0, i.jsx)(
-                              I,
+                              N,
                               {
                                   guildId: e,
                                   premiumSubscription: n,

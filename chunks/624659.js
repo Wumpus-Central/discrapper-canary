@@ -41,9 +41,9 @@ function T(e) {
         G = (0, f.Z)(P),
         z = (0, f.Z)(I),
         K = (0, f.Z)(U),
-        W = (0, f.Z)(H),
-        V = null != P ? y[P] : null,
-        X = null != V;
+        V = (0, f.Z)(H),
+        W = null != P ? y[P] : null,
+        Q = null != W;
     return (
         a.useEffect(() => {
             s().isEqual(R, E) || F((0, v.Bi)(E, x));
@@ -53,7 +53,7 @@ function T(e) {
                 problem: G.current,
                 dontShowAgain: Y.current,
                 feedback: K.current,
-                closeClicked: W.current
+                closeClicked: V.current
             });
         }),
         (0, l.jsxs)(u.Y0X, {
@@ -77,7 +77,7 @@ function T(e) {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
                             className: i()(p.ratingBody, S.headerBody),
-                            children: null != (t = null == V ? void 0 : V.subheader) ? t : o
+                            children: null != (t = null == W ? void 0 : W.subheader) ? t : o
                         }),
                         C
                             ? (0, l.jsx)(u.olH, {
@@ -92,7 +92,7 @@ function T(e) {
                 (0, l.jsxs)(u.hzk, {
                     className: S.modalContent,
                     children: [
-                        X
+                        Q
                             ? null
                             : (0, l.jsx)(u.xJW, {
                                   className: p.problemInfo,
@@ -104,7 +104,7 @@ function T(e) {
                                       }
                                   })
                               }),
-                        X
+                        Q
                             ? (0, l.jsxs)(u.xJW, {
                                   className: p.problemInfo,
                                   children: [
@@ -113,7 +113,7 @@ function T(e) {
                                           maxLength: g.iF,
                                           onChange: w,
                                           className: S.textArea,
-                                          placeholder: null != (n = V.hint) ? n : m.intl.string(m.t.h95hcn)
+                                          placeholder: null != (n = W.hint) ? n : m.intl.string(m.t.h95hcn)
                                       }),
                                       A ? (0, l.jsx)(N, {}) : null
                                   ]
@@ -121,11 +121,11 @@ function T(e) {
                             : null
                     ]
                 }),
-                j || X
+                j || Q
                     ? (0, l.jsx)(u.mzw, {
-                          className: i()(p.footer, X ? S.submitFooter : S.modalFooter),
+                          className: i()(p.footer, Q ? S.submitFooter : S.modalFooter),
                           direction: b.Z.Direction.HORIZONTAL,
-                          children: X
+                          children: Q
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsx)(u.zxk, {

@@ -14,7 +14,7 @@ var r = n(255367),
     m = n(100527),
     g = n(906732),
     b = n(895924),
-    _ = n(605236),
+    _ = n(266454),
     y = n(340541),
     C = n(448239),
     x = n(626135),
@@ -311,7 +311,7 @@ function A(e) {
                             close_type: 'permanent',
                             n_participants: d
                         }),
-                            (0, _.EW)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT));
+                            (0, _.Q3)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT));
                     },
                     children: [
                         (0, r.jsx)(C.Z, {}),

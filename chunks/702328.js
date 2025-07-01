@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(220654),
     v = n(91802),
     T = n(8647),
-    I = n(568126),
-    N = n(744129),
+    N = n(568126),
+    I = n(744129),
     y = n(823188),
     A = n(611116),
     P = n(349803),
@@ -51,8 +51,8 @@ let F = () => {
         Y = (0, m.ZP)(),
         W = (0, c.wj)(Y),
         [K, q] = r.useState(!1),
-        [X, J] = r.useState(!1),
-        [Q, $] = r.useState(!1),
+        [X, Q] = r.useState(!1),
+        [J, $] = r.useState(!1),
         [ee, et] = r.useState(!1),
         en = (0, j.rO)(),
         [ei, er] = r.useState(!1),
@@ -122,7 +122,7 @@ let F = () => {
             }),
             (0, i.jsxs)('div', {
                 className: B.promoBannerContainer,
-                children: [(0, i.jsx)(T.Z, { variant: T.C.APPLICATION_NITRO_HOME }), null != ec && (0, i.jsx)(I.Z, { localizedPricingPromo: ec })]
+                children: [(0, i.jsx)(T.Z, { variant: T.C.APPLICATION_NITRO_HOME }), null != ec && (0, i.jsx)(N.Z, { localizedPricingPromo: ec })]
             }),
             (0, i.jsx)('div', {
                 className: l()(B.whatsNewSectionBackground, B.whatsNewSectionBackgroundV2),
@@ -139,7 +139,7 @@ let F = () => {
                     threshold: 0.1,
                     active: !0,
                     children: eg
-                        ? (0, i.jsx)(N.rz, { innerRef: n })
+                        ? (0, i.jsx)(I.rz, { innerRef: n })
                         : (0, i.jsx)(y.Ub, {
                               innerRef: n,
                               hasActiveTier2PremiumPromotion: eu
@@ -151,7 +151,7 @@ let F = () => {
                 children: (0, i.jsx)(R.Z, { className: B.planComparisonTableApplicationHome })
             }),
             (0, i.jsx)(P.Z, {
-                isVisible: !K && !Q && !X && ei,
+                isVisible: !K && !J && !X && ei,
                 subscriptionTier: eo,
                 isApplicationHome: !0,
                 isEligibleForBogoPromotion: ed
@@ -169,7 +169,7 @@ let F = () => {
             (0, i.jsx)(o.$, {
                 innerRef: H,
                 onChange: (e) => {
-                    J(e);
+                    Q(e);
                 },
                 children: (0, i.jsx)(D.Z, {
                     ref: H,

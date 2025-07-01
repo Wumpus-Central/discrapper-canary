@@ -11,11 +11,11 @@
 var r = n(512722),
     i = n.n(r),
     a = n(392711),
-    o = n(259443),
-    s = n(544891),
-    l = n(46973),
-    c = n(283693),
-    u = n(570140),
+    o = n(544891),
+    s = n(46973),
+    l = n(283693),
+    c = n(570140),
+    u = n(710845),
     d = n(314897),
     f = n(131951),
     _ = n(626135),
@@ -82,11 +82,11 @@ function C(e, t) {
         e
     );
 }
-let R = new o.Yd('VoiceFilterActionCreators'),
+let R = new u.Z('VoiceFilterActionCreators'),
     P = 1000,
     w = (0, a.debounce)(
         () => {
-            u.Z.dispatch({ type: 'VOICE_FILTER_LAGGING' });
+            c.Z.dispatch({ type: 'VOICE_FILTER_LAGGING' });
         },
         P,
         { leading: !0 }
@@ -101,10 +101,10 @@ function x(e) {
     if (null != o) return o;
     if ((null == a ? void 0 : a.status) === O.L.DOWNLOADED) return Promise.resolve();
     if ((null == a ? void 0 : a.status) === O.L.DOWNLOADING) return Promise.reject(Error('Voice filter model is downloading but not in active downloads map'));
-    u.Z.dispatch(A({ type: 'VOICE_FILTER_DOWNLOAD_STARTED' }, e));
+    c.Z.dispatch(A({ type: 'VOICE_FILTER_DOWNLOAD_STARTED' }, e));
     let s = g.ZP.downloadVoiceFilterFile(n, i, (t) => {
         let { downloadedBytes: n, totalBytes: r } = t;
-        u.Z.dispatch(
+        c.Z.dispatch(
             C(A({ type: 'VOICE_FILTER_DOWNLOAD_PROGRESS' }, e), {
                 downloadedBytes: n,
                 totalBytes: r
@@ -122,7 +122,7 @@ function x(e) {
                     reason: null != (a = null == t ? void 0 : t.reason) ? a : null
                 });
             }
-            u.Z.dispatch(C(A({ type: 'VOICE_FILTER_FILE_READY' }, e), { analyticsContext: t }));
+            c.Z.dispatch(C(A({ type: 'VOICE_FILTER_FILE_READY' }, e), { analyticsContext: t }));
         })
         .catch((t) => {
             if (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD) R.info('User canceled the download for Voice Filter dependency', e);
@@ -138,7 +138,7 @@ function x(e) {
                         extra: { reason: t }
                     }));
             }
-            u.Z.dispatch(C(A({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
+            c.Z.dispatch(C(A({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
         })
         .finally(() => {
             L.delete(r);
@@ -153,7 +153,7 @@ async function k(e) {
         let r = g.ZP.getVoiceFilters();
         (R.info('Setting voice filter in native module:', e),
             await r.setVoiceFilter({ name: e }),
-            u.Z.dispatch({
+            c.Z.dispatch({
                 type: 'VOICE_FILTER_APPLIED',
                 voiceFilterId: e,
                 analyticsContext: t,
@@ -161,7 +161,7 @@ async function k(e) {
             }));
     } catch (t) {
         (R.error('failed to set voice filter', t),
-            u.Z.dispatch({
+            c.Z.dispatch({
                 type: 'VOICE_FILTER_APPLY_FAILED',
                 voiceFilterId: e,
                 error: t
@@ -171,7 +171,7 @@ async function k(e) {
 async function M(e) {
     if (null == e.getCatalogNonce || null == e.getModuleVersion || null == e.getRequestedModelIds || null == e.setCatalog) throw Error('Voice filters signed catalog is not supported');
     let t = e.getCatalogNonce(),
-        n = await s.tn.get({
+        n = await o.tn.get({
             url: T.ANM.VOICE_FILTERS_CATALOG,
             query: {
                 vfm_version: e.getModuleVersion(),
@@ -205,7 +205,7 @@ async function U(e) {
         r = {};
     for (let { id: e, exists: t } of n) r[e] = { status: t ? O.L.DOWNLOADED : O.L.MISSING };
     let i = t.map((e) => e.fileName);
-    return ((0, c.dZ)(i) && (await (0, v.A)(i)), r);
+    return ((0, l.dZ)(i) && (await (0, v.A)(i)), r);
 }
 async function G() {
     if (!y.Z.isNativeModuleLoaded()) return void R.info('Voice Filter catalog refresh ignored, module not loaded.');
@@ -223,7 +223,7 @@ async function G() {
                 ? await M(t)
                 : await j(t);
             let r = null == y.Z.getCatalogLastFetchTime() ? await U(e) : void 0;
-            await u.Z.dispatch({
+            await c.Z.dispatch({
                 type: 'VOICE_FILTER_CATALOG_FETCH_SUCCESS',
                 catalog: e,
                 initialModelState: r
@@ -235,23 +235,23 @@ async function G() {
                     cause: (0, p.X)(e)
                 }),
                 m.Z.captureException(e),
-                await u.Z.dispatch({ type: 'VOICE_FILTER_CATALOG_FETCH_FAILED' }));
+                await c.Z.dispatch({ type: 'VOICE_FILTER_CATALOG_FETCH_FAILED' }));
         } finally {
             D = !1;
         }
 }
 function B() {
-    u.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
+    c.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
 }
 async function V() {
     if (!(y.Z.isNativeModuleLoaded() || y.Z.isNativeModuleLoading()) && !__OVERLAY__) {
         if (!(0, h.isWindows)() && !(0, h.isMac)())
-            return void u.Z.dispatch({
+            return void c.Z.dispatch({
                 type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                 state: O.O.UNSUPPORTED
             });
         try {
-            (u.Z.dispatch({
+            (c.Z.dispatch({
                 type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                 state: O.O.LOADING
             }),
@@ -261,12 +261,12 @@ async function V() {
                 void 0 !== t.setVoiceFilterLaggingCallback && (await t.setVoiceFilterLaggingCallback(w)),
                 void 0 !== t.setVoiceFilterReadyCallback &&
                     (await t.setVoiceFilterReadyCallback((e) => {
-                        u.Z.dispatch({
+                        c.Z.dispatch({
                             type: 'VOICE_FILTER_READY',
                             name: e
                         });
                     })),
-                await u.Z.dispatch({
+                await c.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: O.O.LOADED
                 }),
@@ -276,7 +276,7 @@ async function V() {
                 var e;
                 (null == (e = y.Z.getVoiceFilter(n)) ? void 0 : e.available) !== !0 ? (0, E.v6)(null) : (0, E.v6)(n);
             }
-            f.Z.getMediaEngine().on(l.aB.VoiceFiltersFailed, (e) => {
+            f.Z.getMediaEngine().on(s.aB.VoiceFiltersFailed, (e) => {
                 (R.warn('Voice Filters failed in process: '.concat(e)),
                     _.default.track(T.rMx.VOICE_FILTER_ERROR, {
                         error_message: 'Voice Filters failed in process',
@@ -291,7 +291,7 @@ async function V() {
                     cause: (0, p.X)(e)
                 }),
                 m.Z.captureException(e),
-                u.Z.dispatch({
+                c.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: O.O.FAILED
                 }));

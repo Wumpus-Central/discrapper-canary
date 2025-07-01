@@ -2,9 +2,11 @@ n.d(t, {
     NW: () => l,
     OV: () => a,
     Rb: () => s,
+    Se: () => _,
     XE: () => c,
     Yo: () => u,
     dj: () => d,
+    hS: () => p,
     o4: () => o,
     td: () => f
 });
@@ -98,4 +100,44 @@ let d = (0, r.B)({
 function f(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return d.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+}
+let _ = (0, r.B)({
+    kind: 'user',
+    id: '2025-06_overlay_render_timeout',
+    label: 'Overlay Render Timeout',
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    defaultConfig: {
+        shortTimeout: 8000,
+        longTimeout: 12000
+    },
+    treatments: [
+        {
+            id: 1,
+            label: 'Shortest Timeouts (2s, 3s)',
+            config: {
+                shortTimeout: 2000,
+                longTimeout: 3000
+            }
+        },
+        {
+            id: 2,
+            label: 'Medium Timeouts (4s, 6s)',
+            config: {
+                shortTimeout: 4000,
+                longTimeout: 6000
+            }
+        },
+        {
+            id: 3,
+            label: 'Longer Timeouts (16s, 24s)',
+            config: {
+                shortTimeout: 16000,
+                longTimeout: 24000
+            }
+        }
+    ]
+});
+function p(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return _.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }

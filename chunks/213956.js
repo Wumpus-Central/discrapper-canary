@@ -4,7 +4,7 @@ var r = n(255367),
     l = n(442837),
     s = n(704215),
     a = n(481060),
-    o = n(605236),
+    o = n(266454),
     c = n(874993),
     d = n(768762),
     u = n(430824),
@@ -25,7 +25,7 @@ function O() {
         O = (0, l.e7)([p.Z], () => p.Z.getCurrentPage());
     if (
         (i.useEffect(() => {
-            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: j.L.AUTO });
+            (0, o.Q3)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: j.L.AUTO });
         }, []),
         null == n)
     )

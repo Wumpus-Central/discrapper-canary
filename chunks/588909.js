@@ -8,7 +8,7 @@ var r = n(704215),
     s = n(620662),
     c = n(835473),
     u = n(442550),
-    d = n(605236),
+    d = n(266454),
     p = n(293273),
     f = n(145597),
     h = n(32300),
@@ -134,7 +134,7 @@ function N(e, t) {
                         });
                     }));
         }
-    let N = (0, d.un)(r.z.OVERLAY_OOP_WELCOME_NUX),
+    let N = (0, d.zu)(r.z.OVERLAY_OOP_WELCOME_NUX),
         w = N ? _.intl.string(_.t.KWDIrq) : _.intl.string(_.t['prl+ra']),
         Z = N ? void 0 : _.intl.string(_.t.R3CpPT),
         P =
@@ -156,7 +156,7 @@ function N(e, t) {
                 onConfirmClick: N
                     ? void 0
                     : () => {
-                          (u('unlock'), a.Z.setInputLocked(!1, (0, f.getPID)()), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX));
+                          (u('unlock'), a.Z.setInputLocked(!1, (0, f.getPID)()), N || (0, d.Q3)(r.z.OVERLAY_OOP_WELCOME_NUX));
                       }
             },
             E
@@ -164,15 +164,15 @@ function N(e, t) {
         {
             onNotificationShow: (e) => {
                 var t;
-                (c(), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (t = E.onNotificationShow) || t.call(E, e));
+                (c(), N || (0, d.Q3)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (t = E.onNotificationShow) || t.call(E, e));
             },
             onNotificationClick: (e, t) => {
                 var n;
-                (u('unlock'), a.Z.setInputLocked(!1, (0, f.getPID)()), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (n = E.onNotificationClick) || n.call(E, e, t));
+                (u('unlock'), a.Z.setInputLocked(!1, (0, f.getPID)()), N || (0, d.Q3)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (n = E.onNotificationClick) || n.call(E, e, t));
             },
             onDismissClick: (e, t) => {
                 var n;
-                (u('dismiss'), N || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (n = E.onDismissClick) || n.call(E, e, t));
+                (u('dismiss'), N || (0, d.Q3)(r.z.OVERLAY_OOP_WELCOME_NUX), null == (n = E.onDismissClick) || n.call(E, e, t));
             }
         }
     );

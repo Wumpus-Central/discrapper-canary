@@ -3,7 +3,7 @@ var r = n(73800),
     i = n(442837),
     a = n(704215),
     o = n(211644),
-    s = n(605236),
+    s = n(266454),
     l = n(243778),
     c = n(944486),
     u = n(626135),
@@ -31,7 +31,7 @@ function m(e) {
         C = A === a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
         [R, P] = (0, l.US)(C ? [a.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
         w = (0, o.ZP)((e) => e.recentlyShown[0]),
-        D = (0, s.wE)(a.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
+        D = (0, s.Nj)(a.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
     if (
         (r.useMemo(() => {
             v &&

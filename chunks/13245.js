@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => v }), n(388685), n(415506));
 var r = n(772848),
-    i = n(259443),
-    a = n(570140),
-    o = n(318885),
+    i = n(570140),
+    a = n(318885),
+    o = n(710845),
     s = n(444295),
     l = n(486016),
     c = n(355863),
@@ -64,167 +64,167 @@ function b(e, t) {
         e
     );
 }
-let y = new i.Yd('OverlayActionCreators'),
+let y = new o.Z('OverlayActionCreators'),
     O = {
         track(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            (0, o.Q)(e, t, n);
+            (0, a.Q)(e, t, n);
         },
         overlayReady(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_READY',
                 pid: e
             });
         },
         overlayMounted() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_MOUNTED',
                 nudges: t
             });
         },
         setFocusedPID(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_FOCUSED',
                 pid: e
             });
         },
         setInputLocked(e, t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_INPUT_LOCKED',
                 locked: e,
                 pid: t
             });
         },
         setOverlayCrashed(e, t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_CRASHED',
                 pid: e,
                 error: t
             });
         },
         setReloadOverlay(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_RELOAD',
                 pid: e
             });
         },
         setRenderDebugMode(e, t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_RENDER_DEBUG_MODE',
                 enabled: e,
                 mode: t
             });
         },
         clearTrackedPids() {
-            a.Z.dispatch({ type: 'OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS' });
+            i.Z.dispatch({ type: 'OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS' });
         },
         setInstanceLocked(e) {
             if (!__OVERLAY__) return void y.error('Attempting to start an overlay session outside of the overlay context');
             O.setInputLocked(e, (0, _.getPID)());
         },
         setEnabled(e, t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_ENABLED',
                 legacyEnabled: e,
                 oopEnabled: t
             });
         },
         selectCall(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SELECT_CALL',
                 callId: e
             });
         },
         setDisplayNameMode(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_DISPLAY_NAME_MODE',
                 mode: e
             });
         },
         setDisplayUserMode(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_DISPLAY_USER_MODE',
                 mode: e
             });
         },
         setAvatarSizeMode(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_AVATAR_SIZE_MODE',
                 mode: e
             });
         },
         setNotificationPositionMode(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_NOTIFICATION_POSITION_MODE',
                 mode: e
             });
         },
         setDisableClickableRegions(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_DISABLE_CLICKABLE_REGIONS',
                 disable: e
             });
         },
         setShowKeybindIndicators(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS',
                 shouldShow: e
             });
         },
         setNotificationDisabledSetting(e, t) {
             (e === l.OverlayNotificationDisabledSetting.GAME_ACTIVITY && this.track(h.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
-                a.Z.dispatch({
+                i.Z.dispatch({
                     type: 'OVERLAY_SET_NOTIFICATION_DISABLED_SETTING',
                     setting: e,
                     disabled: t
                 }));
         },
         setInviteMessage(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_INVITE_MESSAGE',
                 message: e
             });
         },
         callPrivateChannel(e, t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_CALL_PRIVATE_CHANNEL',
                 channelId: e,
                 ring: t
             });
         },
         setTextWidgetOpacity(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_TEXT_WIDGET_OPACITY',
                 opacity: e
             });
         },
         disableExternalLinkAlert() {
-            a.Z.dispatch({ type: 'OVERLAY_DISABLE_EXTERNAL_LINK_ALERT' });
+            i.Z.dispatch({ type: 'OVERLAY_DISABLE_EXTERNAL_LINK_ALERT' });
         },
         startSession() {
             if (!__OVERLAY__) return void y.error('Attempting to start an overlay session outside of the overlay context');
-            a.Z.dispatch({ type: 'OVERLAY_START_SESSION' });
+            i.Z.dispatch({ type: 'OVERLAY_START_SESSION' });
         },
         activateRegion(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_ACTIVATE_REGION',
                 region: e
             });
         },
         deactivateAllRegions() {
-            a.Z.dispatch({ type: 'OVERLAY_DEACTIVATE_ALL_REGIONS' });
+            i.Z.dispatch({ type: 'OVERLAY_DEACTIVATE_ALL_REGIONS' });
         },
         setPreviewInGameMode(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_PREVIEW_IN_GAME_MODE',
                 isPreviewingInGame: e
             });
         },
         updateNotificationStatus(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h._1z.DISMISSED;
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_UPDATE_NOTIFICATION_STATUS',
                 notificationId: e,
                 status: t
@@ -232,13 +232,13 @@ let y = new i.Yd('OverlayActionCreators'),
         },
         notificationEvent(e, t) {
             var n, r;
-            let i = u.Z.getGame();
-            a.Z.dispatch({
+            let a = u.Z.getGame();
+            i.Z.dispatch({
                 type: 'OVERLAY_NOTIFICATION_EVENT',
                 notificationType: e,
                 action: t,
-                gameName: null != (n = null == i ? void 0 : i.name) ? n : null,
-                gameId: null != (r = null == i ? void 0 : i.id) ? r : null
+                gameName: null != (n = null == a ? void 0 : a.name) ? n : null,
+                gameId: null != (r = null == a ? void 0 : a.id) ? r : null
             });
         },
         setPinChat(e) {
@@ -349,13 +349,13 @@ let y = new i.Yd('OverlayActionCreators'),
             null != c.Z.getLayout(e) && ((0, p.sz)(e), (0, p.jx)(c.Z.getDefaultLayout(e, t)));
         },
         setClickZones(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_CLICK_ZONES',
                 zones: e
             });
         },
         relayClickZoneClicked(e, t, n) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_RELAY_CLICK_ZONE_CLICKED',
                 zoneName: e,
                 normalizedMouseX: t,
@@ -363,7 +363,7 @@ let y = new i.Yd('OverlayActionCreators'),
             });
         },
         setAssociatedGame(e, t, n) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_ASSOCIATED_GAME',
                 previousAssociatedGamePID: e,
                 associatedGamePID: t,
@@ -371,39 +371,39 @@ let y = new i.Yd('OverlayActionCreators'),
             });
         },
         forceRenderMode(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_FORCE_RENDER_MODE',
                 mode: e
             });
         },
         updateOverlayMethod: (e, t) =>
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_UPDATE_OVERLAY_METHOD',
                 pid: e,
                 overlayMethod: t
             }),
         updateOverlayState(e, t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_UPDATE_OVERLAY_STATE',
                 pid: e,
                 overlayState: t
             });
         },
         setLimitedInteractionOverride(e, t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE',
                 applicationId: e,
                 enabled: t
             });
         },
         successfullyShown(e) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SUCCESSFULLY_SHOWN',
                 pid: e
             });
         },
         setGpuBoostRequested(e, t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'OVERLAY_SET_GPU_BOOST_REQUESTED',
                 reason: e,
                 enabled: t

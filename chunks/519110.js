@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(704826), n(35282));
+(n.d(t, { Z: () => E }), n(704826), n(35282));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -59,11 +59,11 @@ function j(e, t) {
         e
     );
 }
-function E(e) {
+function S(e) {
     return d.ZP.getByName(e.replace(/(^:|:$)/g, ''));
 }
-function S(e) {
-    let { type: t, id: n, name: S, isInExpressionPicker: _ = !1 } = e,
+function E(e) {
+    let { type: t, id: n, name: E, isInExpressionPicker: _ = !1 } = e,
         { location: P } = (0, s.O)(),
         Z = i.useMemo(() => j(v({}, P), { section: _ ? y.jXE.EXPRESSION_PICKER : y.jXE.CONTEXT_MENU }), [P, _]),
         I = (0, p.Go)(),
@@ -72,9 +72,9 @@ function S(e) {
         N = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
-                else if (null != S) {
+                else if (null != E) {
                     var e;
-                    return null != (e = E(S)) ? e : E(d.ZP.convertSurrogateToName(S));
+                    return null != (e = S(E)) ? e : S(d.ZP.convertSurrogateToName(E));
                 }
             }
         }),

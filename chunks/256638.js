@@ -29,7 +29,7 @@ var s = n(442837),
     S = n(812206),
     T = n(391650),
     N = n(600164),
-    P = n(605236),
+    P = n(266454),
     A = n(749277),
     w = n(196068),
     Z = n(131130),
@@ -984,7 +984,7 @@ let eI =
                       let eX = a()().add(5, 'days').toDate();
                       return (0, r.jsx)(X.Z, {
                           dismissCurrentNotice: () => {
-                              ((0, P.EW)(es.m9[ef.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), ej(eX));
+                              ((0, P.Q3)(es.m9[ef.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), ej(eX));
                           },
                           subscriptionTier: eg.Si.TIER_2
                       });

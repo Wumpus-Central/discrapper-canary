@@ -28,11 +28,11 @@ function S(e) {
         x = (0, o.e7)([T.ZP], () => T.ZP.getGuildSidebarState(S), [S]),
         M = l.useRef(0),
         [L, U] = l.useState(null != (t = null == x ? void 0 : x.details.additionalSearchQuery) ? t : {}),
-        P = (0, h.z0)(i, S, {
+        j = (0, h.z0)(i, S, {
             addtionalQuery: L,
             shouldDispatch: !0
         }),
-        j = (0, o.e7)([g.default], () => g.default.getUser(i), [i]),
+        P = (0, o.e7)([g.default], () => g.default.getUser(i), [i]),
         y = (0, o.e7)([f.ZP], () => f.ZP.getMember(S, i), [S, i]);
     (0, c.Ng)(() => {
         let e = null == x ? void 0 : x.details.scrollOffset;
@@ -115,8 +115,8 @@ function S(e) {
         Z = (0, o.e7)(
             [E.Z],
             () => {
-                if (null == P.result) return [];
-                let e = P.result.messages,
+                if (null == j.result) return [];
+                let e = j.result.messages,
                     t = (0, d.nC)('');
                 return e.map((e) =>
                     e.map((e) => {
@@ -142,11 +142,11 @@ function S(e) {
                     })
                 );
             },
-            [P.result]
+            [j.result]
         ),
         z = l.useMemo(() => {
             var e, t, n, r;
-            return null == P.result
+            return null == j.result
                 ? {
                       documentsIndexed: 0,
                       isSearching: !0,
@@ -159,18 +159,18 @@ function S(e) {
                       showNoResultsAlt: !1
                   }
                 : {
-                      documentsIndexed: null != (e = P.result.documents_indexed) ? e : 0,
+                      documentsIndexed: null != (e = j.result.documents_indexed) ? e : 0,
                       isSearching: !1,
-                      isIndexing: null != (t = P.result.doing_deep_historical_index) && t,
-                      isHistoricalIndexing: null != (n = P.result.doing_deep_historical_index) && n,
+                      isIndexing: null != (t = j.result.doing_deep_historical_index) && t,
+                      isHistoricalIndexing: null != (n = j.result.doing_deep_historical_index) && n,
                       offset: F,
-                      totalResults: null != (r = P.result.total_results) ? r : 0,
+                      totalResults: null != (r = j.result.total_results) ? r : 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1
                   };
-        }, [P.result, F]);
-    return null == j || null == y || null == z
+        }, [j.result, F]);
+    return null == P || null == y || null == z
         ? null
         : (0, r.jsxs)('div', {
               className: s()(p.container, b),

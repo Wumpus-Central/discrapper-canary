@@ -24,8 +24,8 @@ var r = n(512722),
     S = n(643879),
     v = n(350327),
     T = n(621853),
-    I = n(687158),
-    N = n(25990),
+    N = n(687158),
+    I = n(25990),
     y = n(594174),
     A = n(74538),
     P = n(388032),
@@ -48,10 +48,10 @@ function D() {
             pendingLegacyUsernameDisabled: Y,
             pendingPrimaryGuildId: W,
             errors: K
-        } = (0, l.cj)([N.Z], () => {
+        } = (0, l.cj)([I.Z], () => {
             var e, t;
-            let n = N.Z.getAllPending(),
-                i = N.Z.getErrors();
+            let n = I.Z.getAllPending(),
+                i = I.Z.getErrors();
             return (
                 (e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -99,8 +99,8 @@ function D() {
             image: M
         }),
         X = (0, c.gS)(),
-        J = A.ZP.canUsePremiumProfileCustomization(L),
-        Q = (0, m.gd)(M, L.avatar),
+        Q = A.ZP.canUsePremiumProfileCustomization(L),
+        J = (0, m.gd)(M, L.avatar),
         $ = (0, m.f$)(V, null == B ? void 0 : B.banner),
         ee = 'DefaultCustomizationSections';
     ((0, o.j)({
@@ -111,7 +111,7 @@ function D() {
             location: ee + ' auto off',
             autoTrackExposure: !1
         }));
-    let et = (0, I.ZP)(L.id),
+    let et = (0, N.ZP)(L.id),
         en = null == et ? void 0 : et.getLegacyUsername(),
         ei = (null != (n = null == (e = K.global_name) ? void 0 : e.length) ? n : 0) > 0 ? K.global_name : null != (r = null == X ? void 0 : X.nick) ? r : [],
         er = (null != (D = null == (t = K.bio) ? void 0 : t.length) ? D : 0) > 0 ? K.bio : null != (Z = null == X ? void 0 : X.bio) ? Z : [],
@@ -141,7 +141,7 @@ function D() {
                 h.Z,
                 {
                     onAvatarChange: a.I5,
-                    showRemoveAvatarButton: Q,
+                    showRemoveAvatarButton: J,
                     errors: K.avatar,
                     sectionTitle: P.intl.string(P.t.lqaIxM),
                     forcedDivider: !0
@@ -165,7 +165,7 @@ function D() {
                 },
                 'effect'
             ),
-            J
+            Q
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(

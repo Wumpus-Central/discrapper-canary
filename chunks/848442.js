@@ -14,7 +14,7 @@ var i = n(120356),
     f = n(652515),
     g = n(550951),
     m = n(886176),
-    b = n(605236),
+    b = n(266454),
     _ = n(703656),
     O = n(984933),
     y = n(430824),
@@ -109,7 +109,7 @@ function w(e) {
                     (0, r.jsx)(c.P3F, {
                         className: I.closeButton,
                         onClick: (e) => {
-                            if ((e.stopPropagation(), (0, b.EW)(a.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, N(P({}, (0, h.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !E)) {
+                            if ((e.stopPropagation(), (0, b.Q3)(a.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, N(P({}, (0, h.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !E)) {
                                 var n;
                                 (0, _.dL)(j.Z5c.CHANNEL(t, null == (n = O.ZP.getDefaultChannel(t)) ? void 0 : n.id));
                             }

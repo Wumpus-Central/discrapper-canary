@@ -81,10 +81,10 @@ function P(e) {
                   }
                 : null,
         [E, P] = o.useState(!1),
-        A = o.useCallback(() => {
+        N = o.useCallback(() => {
             ((0, x.xI)({ added: !1 }), l(), u());
         }, [l, u]),
-        N = o.useCallback(() => {
+        A = o.useCallback(() => {
             null != f &&
                 null != b &&
                 ((0, x.xI)({ added: !0 }),
@@ -146,14 +146,14 @@ function P(e) {
                               color: c.zxk.Colors.PRIMARY,
                               className: w.dontAddButton,
                               disabled: E,
-                              onClick: A,
+                              onClick: N,
                               children: j.intl.string(j.t['8rKVHB'])
                           }),
                           (0, a.jsx)(c.zxk, {
                               color: c.zxk.Colors.BRAND,
                               className: w.__invalid_button,
                               submitting: E,
-                              onClick: N,
+                              onClick: A,
                               autoFocus: !0,
                               children: j.intl.string(j.t.d611xM)
                           })

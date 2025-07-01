@@ -1,17 +1,17 @@
 (n.d(t, { Mn: () => d }), n(539854), n(415506));
-var r = n(259443),
-    i = n(668757),
-    a = n(511495),
+var r = n(668757),
+    i = n(511495),
+    a = n(710845),
     o = n(626135),
     s = n(894276),
     l = n(981631);
-let c = new r.Yd('libdiscore'),
+let c = new a.Z('libdiscore'),
     u = !1;
 async function d() {
     if (!u) {
         try {
-            await (0, a.e)();
-            let e = (0, i.rs)(6, 7);
+            await (0, i.e)();
+            let e = (0, r.rs)(6, 7);
             (c.info('The answer for life the universe and everything is:', e), f());
         } catch (e) {
             p(e);

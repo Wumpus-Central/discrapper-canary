@@ -35,13 +35,13 @@ let k = (e) => {
         F = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         V = !F && W,
-        { animationPhase: U, startAnimation: G } = (0, S.y)(),
-        z = (0, b.sp)(),
-        q = null != (t = null == z ? void 0 : z.sessionId) ? t : '',
+        { animationPhase: U, startAnimation: z } = (0, S.y)(),
+        G = (0, b.sp)(),
+        q = null != (t = null == G ? void 0 : G.sessionId) ? t : '',
         Y = l.useRef(null),
         K = l.useCallback(
             (e) => {
-                (G({
+                (z({
                     isShuffling: !1,
                     onOutroComplete: () => w(e)
                 }),
@@ -50,7 +50,7 @@ let k = (e) => {
                         sort_type: e
                     }));
             },
-            [G, w, q]
+            [z, w, q]
         );
     return null == I
         ? null
@@ -150,7 +150,7 @@ let k = (e) => {
                                                 color: s.Ttl.PRIMARY,
                                                 buttonRef: Y,
                                                 onClick: () => {
-                                                    (G({
+                                                    (z({
                                                         isShuffling: !0,
                                                         onOutroComplete: H,
                                                         returnRef: Y

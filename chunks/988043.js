@@ -43,7 +43,7 @@ function C(e) {
             applied_to_existing_guilds: t
         });
     }
-    let I = (e) => {
+    let N = (e) => {
             (0, h.V)({
                 header: j.intl.string(j.t['uUr+GR']),
                 body: j.intl.string(j.t.hjGJBg),
@@ -58,21 +58,21 @@ function C(e) {
                 }
             });
         },
-        N = S ? j.intl.string(j.t.PMsfcH) : j.intl.string(j.t.RAQUSE);
+        I = S ? j.intl.string(j.t.PMsfcH) : j.intl.string(j.t.RAQUSE);
     return (0, i.jsx)(g.U, {
         setting: _.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
             n === x.T
                 ? (0, i.jsx)(p.Z, {
-                      title: N,
+                      title: I,
                       note: S ? j.intl.string(j.t.XXGmuL) : j.intl.string(j.t.wbYDfX),
                       value: !O,
                       onChange: (e) => {
-                          I(!e);
+                          N(!e);
                       }
                   })
                 : (0, i.jsx)(p.Z, {
-                      title: N,
+                      title: I,
                       note: b ? j.intl.string(j.t.V0ka0d) : S ? j.intl.string(j.t.F9WY3d) : j.intl.string(j.t.G7c3Xl),
                       value: !C,
                       onChange: v

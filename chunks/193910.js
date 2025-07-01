@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(566620),
     d = n(403404),
     p = n(906732),
-    h = n(605236),
+    h = n(266454),
     f = n(706140),
     m = n(243778),
     g = n(618857),
@@ -35,7 +35,7 @@ function T() {
     return (
         i.useEffect(
             () => () => {
-                n === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.EW)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
+                n === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.Q3)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -67,7 +67,7 @@ function A(e) {
         k();
     }
     function F() {
-        ((0, h.EW)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
+        ((0, h.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));

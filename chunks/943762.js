@@ -14,11 +14,11 @@ function c(e) {
     return (0, r.jsxs)('div', {
         className: s.wrapper,
         children: [
-            (0, r.jsx)(l.Z, {
+            (0, r.jsx)(l.ZP, {
                 guildId: n,
                 users: t,
                 max: 6,
-                size: l.u.SIZE_16
+                size: l.u8.SIZE_16
             }),
             (0, r.jsxs)(i.Text, {
                 variant: 'text-xs/normal',

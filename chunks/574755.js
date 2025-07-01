@@ -5,7 +5,7 @@ var i = n(255367),
     l = n(704215),
     a = n(481060),
     o = n(906732),
-    c = n(605236),
+    c = n(266454),
     d = n(441167),
     u = n(695346),
     m = n(131951),
@@ -25,17 +25,17 @@ function S(e) {
         S = u.tU.useSetting(),
         { enableViewerClipping: v } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: T } = (0, o.ZP)(),
-        I = (0, g.Go)(),
-        { viewerClipsEnabled: N } = (0, s.cj)([p.Z], () => p.Z.getSettings()),
+        N = (0, g.Go)(),
+        { viewerClipsEnabled: I } = (0, s.cj)([p.Z], () => p.Z.getSettings()),
         y = (0, h.Z)(m.Z);
     return (
         r.useEffect(() => {
-            (0, c.EW)(l.z.CLIPS_SETTINGS_BETA_TAG);
+            (0, c.Q3)(l.z.CLIPS_SETTINGS_BETA_TAG);
         }),
         (0, i.jsxs)(o.Gt, {
             value: T,
             children: [
-                (I || n) &&
+                (N || n) &&
                     (0, i.jsx)(a.hjN, {
                         className: t,
                         tag: a.RB0.H1,
@@ -46,15 +46,15 @@ function S(e) {
                               })
                             : null,
                         children:
-                            I &&
+                            N &&
                             (0, i.jsxs)('form', {
                                 onSubmit: (e) => e.preventDefault(),
                                 children: [(0, i.jsx)(_.Z, {}), (0, i.jsx)(x.Z, {})]
                             })
                     }),
-                I && (0, i.jsx)(a.$i$, {}),
+                N && (0, i.jsx)(a.$i$, {}),
                 (0, i.jsxs)(a.hjN, {
-                    className: n || I ? O.marginTop20 : t,
+                    className: n || N ? O.marginTop20 : t,
                     children: [
                         (0, i.jsx)(a.j7V, {
                             hideBorder: !0,
@@ -69,7 +69,7 @@ function S(e) {
                             (0, i.jsx)(a.j7V, {
                                 hideBorder: !0,
                                 className: C.formItem,
-                                value: N,
+                                value: I,
                                 note: E.intl.string(E.t['0vjy8P']),
                                 onChange: (e) =>
                                     f.yl({

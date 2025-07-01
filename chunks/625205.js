@@ -34,11 +34,11 @@ function C() {
             inputDeviceId: m.Z.getInputDeviceId(),
             outputDeviceId: m.Z.getOutputDeviceId()
         })),
-        I = (0, d.zX)({ location: 'UserSettingsDevices' }),
-        N = (0, d.rB)({ location: 'UserSettingsDevices' }),
+        N = (0, d.zX)({ location: 'UserSettingsDevices' }),
+        I = (0, d.rB)({ location: 'UserSettingsDevices' }),
         y = r.useMemo(() => {
-            let e = I.find((e) => e.id === v),
-                t = N.find((e) => e.id === T),
+            let e = N.find((e) => e.id === v),
+                t = I.find((e) => e.id === T),
                 n = j.some((t) => {
                     var n;
                     return null == e || null == (n = e.hardwareId) ? void 0 : n.startsWith(t);
@@ -48,7 +48,7 @@ function C() {
                     return null == t || null == (n = t.hardwareId) ? void 0 : n.startsWith(e);
                 });
             return n && i && (null == e ? void 0 : e.containerId) != null && e.containerId === (null == t ? void 0 : t.containerId);
-        }, [I, N, v, T]);
+        }, [N, I, v, T]);
     (O ||
         (e = (0, i.jsx)(a.R94, {
             type: a.R94.Types.DESCRIPTION,
@@ -61,9 +61,9 @@ function C() {
                 className: E.marginTop8,
                 children: _.intl.format(_.t.Ow0dbG, { onDownloadClick: () => (0, f.y)('Help Text Output Devices') })
             })));
-    let A = I[0],
+    let A = N[0],
         P = null != A ? A.disabled : null != e,
-        R = N[0],
+        R = I[0],
         D = null != R ? R.disabled : null != t;
     function Z(e) {
         let t,
@@ -112,7 +112,7 @@ function C() {
                                             location: 'Settings',
                                             analyticsLocations: g
                                         }),
-                                    options: I.map((e) => {
+                                    options: N.map((e) => {
                                         let { id: t, name: n } = e;
                                         return {
                                             value: t,
@@ -139,7 +139,7 @@ function C() {
                                             location: 'Settings',
                                             analyticsLocations: g
                                         }),
-                                    options: N.map((e) => {
+                                    options: I.map((e) => {
                                         let { id: t, name: n } = e;
                                         return {
                                             value: t,

@@ -23,8 +23,8 @@ var i,
     S = n(807160),
     v = n(981631),
     T = n(474936),
-    I = n(231338),
-    N = n(388032),
+    N = n(231338),
+    I = n(388032),
     y = n(474915),
     A = n(468590);
 function P(e, t, n) {
@@ -172,12 +172,12 @@ class w extends (i = s.PureComponent) {
                 children: [
                     (0, r.jsx)('div', {
                         className: y.externalRowHeader,
-                        children: N.intl.format(N.t['6mIX6u'], { paymentGatewayName: I.Vz[e.paymentGateway] })
+                        children: I.intl.format(I.t['6mIX6u'], { paymentGatewayName: N.Vz[e.paymentGateway] })
                     }),
                     (0, r.jsx)('div', {
                         className: y.externalRowBody,
-                        children: N.intl.format(N.t.eG0uZG, {
-                            paymentGatewayName: I.Vz[e.paymentGateway],
+                        children: I.intl.format(I.t.eG0uZG, {
+                            paymentGatewayName: N.Vz[e.paymentGateway],
                             billingHistoryLink: (0, O.JE)(e.paymentGateway, 'BILLING_HISTORY')
                         })
                     })
@@ -206,15 +206,15 @@ class w extends (i = s.PureComponent) {
                                                   children: [
                                                       (0, r.jsx)('div', {
                                                           className: A.date,
-                                                          children: N.intl.string(N.t['5t11BQ'])
+                                                          children: I.intl.string(I.t['5t11BQ'])
                                                       }),
                                                       (0, r.jsx)('div', {
                                                           className: y.paymentRowHeaderDescription,
-                                                          children: N.intl.string(N.t.yAAPb2)
+                                                          children: I.intl.string(I.t.yAAPb2)
                                                       }),
                                                       (0, r.jsx)('div', {
                                                           className: A.amount,
-                                                          children: N.intl.string(N.t['6MqHXV'])
+                                                          children: I.intl.string(I.t['6MqHXV'])
                                                       })
                                                   ]
                                               })

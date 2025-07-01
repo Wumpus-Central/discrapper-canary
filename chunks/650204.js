@@ -1,7 +1,6 @@
-n(710845);
-var r = n(259443),
+var r = n(710845),
     i = n(511495);
-let a = new r.Yd('libdiscore');
+let a = new r.Z('libdiscore');
 !(async function () {
     try {
         __OVERLAY__ || (await (0, i.e)());

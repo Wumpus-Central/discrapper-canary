@@ -6,7 +6,7 @@ var r = n(255367),
     a = n(442837),
     o = n(704215),
     c = n(481060),
-    d = n(605236),
+    d = n(266454),
     u = n(768762),
     m = n(999382),
     g = n(743475),
@@ -40,7 +40,7 @@ function T(e) {
         S = !h && m;
     switch (
         (i.useEffect(() => {
-            (0, d.EW)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
+            (0, d.Q3)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
         }, []),
         l)
     ) {

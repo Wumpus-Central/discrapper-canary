@@ -158,7 +158,7 @@ function M(e) {
             (0, r.jsxs)('div', {
                 className: L.bottomControls,
                 children: [
-                    (0, r.jsx)(N.Z, {
+                    (0, r.jsx)(N.ZP, {
                         renderIcon: !1,
                         users: p,
                         size: 24,

@@ -50,7 +50,7 @@ function d(e, t) {
     );
 }
 function u(e) {
-    var { role: t = 'button', text: n, focusProps: r, variant: u = 'primary', textVariant: m = 'text-sm/medium', lineClamp: g = 1 } = e,
+    var { role: t = 'button', text: n, focusProps: r, variant: u = 'primary', textVariant: m = 'text-md/medium', lineClamp: g = 1 } = e,
         p = (function (e, t) {
             if (null == e) return {};
             var n,

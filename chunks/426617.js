@@ -15,5 +15,6 @@ e.exports = {
     colors: 'colors__6fdb8',
     color: 'color__6fdb8',
     heading: 'heading__6fdb8',
-    modalOutlines: 'modalOutlines__6fdb8'
+    modalOutlines: 'modalOutlines__6fdb8',
+    video: 'video__6fdb8'
 };

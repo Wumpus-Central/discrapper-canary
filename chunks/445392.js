@@ -1,41 +1,41 @@
-var o,
-    r = t(442837),
-    a = t(570140);
-function i(e, n, t) {
+var r,
+    i = n(442837),
+    l = n(570140);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
-let c = 10 * t(70956).Z.Millis.MINUTE,
-    l = {
+let s = 10 * n(70956).Z.Millis.MINUTE,
+    o = {
         lastUsedCommandId: null,
         lastUsedTimeMs: null
     };
-class d extends (o = r.ZP.PersistedStore) {
+class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && ((l.lastUsedCommandId = e.lastUsedCommandId), (l.lastUsedTimeMs = e.lastUsedTimeMs));
+        null != e && ((o.lastUsedCommandId = e.lastUsedCommandId), (o.lastUsedTimeMs = e.lastUsedTimeMs));
     }
     getState() {
-        return l;
+        return o;
     }
     getLastUsedCommandId() {
         let e = Date.now();
-        return null == l.lastUsedTimeMs || null == l.lastUsedCommandId ? null : (e > l.lastUsedTimeMs + c && ((l.lastUsedCommandId = null), (l.lastUsedTimeMs = null)), l.lastUsedCommandId);
+        return null == o.lastUsedTimeMs || null == o.lastUsedCommandId ? null : (e > o.lastUsedTimeMs + s && ((o.lastUsedCommandId = null), (o.lastUsedTimeMs = null)), o.lastUsedCommandId);
     }
 }
-(i(d, 'displayName', 'AppLauncherLastUsedCommandStore'),
-    i(d, 'persistKey', 'AppLauncherLastUsedCommandStore'),
-    new d(a.Z, {
+(a(c, 'displayName', 'AppLauncherLastUsedCommandStore'),
+    a(c, 'persistKey', 'AppLauncherLastUsedCommandStore'),
+    new c(l.Z, {
         APPLICATION_COMMAND_USED: function (e) {
-            let { command: n } = e;
-            ((l.lastUsedCommandId = n.id), (l.lastUsedTimeMs = Date.now()));
+            let { command: t } = e;
+            ((o.lastUsedCommandId = t.id), (o.lastUsedTimeMs = Date.now()));
         }
     }));

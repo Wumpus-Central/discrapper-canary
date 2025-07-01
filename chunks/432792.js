@@ -1,8 +1,8 @@
 (n.d(t, {
-    M: () => O,
-    M4: () => v,
-    WS: () => T,
-    t4: () => j
+    M: () => S,
+    M4: () => T,
+    WS: () => N,
+    t4: () => C
 }),
     n(388685),
     n(953529));
@@ -14,110 +14,111 @@ var i = n(255367),
     o = n(350810),
     c = n(607070),
     d = n(70097),
-    u = n(605236),
-    m = n(765585),
-    g = n(930153),
-    p = n(822857),
-    h = n(622562),
-    f = n(937860),
-    b = n(921944),
-    _ = n(973792),
-    x = n(447489),
-    E = n(484885);
-let j = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panels-height'), 56) + 8,
-    C = {
+    u = n(266454),
+    m = n(605236),
+    g = n(765585),
+    p = n(930153),
+    h = n(822857),
+    f = n(622562),
+    b = n(937860),
+    _ = n(921944),
+    x = n(973792),
+    E = n(447489),
+    j = n(484885);
+let C = () => (0, p.Lk)(document.body.style.getPropertyValue('--custom-app-panels-height'), 56) + 8,
+    O = {
         discover: l.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
         shop: l.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK
     },
-    O = (e) => {
+    S = (e) => {
         let { onboardingCoachmarkType: t, prevCoachmarksDismissed: n = !0, onShowCoachmarkHandler: i } = e,
-            s = (0, u.wE)(l.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
-            { enabled: a } = (0, p.WX)({ location: 'virtual_currency_onboarding_coachmark' }),
-            o = C[t],
-            c = (0, u.wE)(o),
+            s = (0, u.Nj)(l.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
+            { enabled: a } = (0, h.WX)({ location: 'virtual_currency_onboarding_coachmark' }),
+            o = O[t],
+            c = (0, u.Nj)(o),
             d = a && s && n && !c,
-            m = r.useCallback(
+            g = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'CLOSE';
                     c ||
-                        (0, u.EW)(C[t], {
+                        (0, u.Q3)(O[t], {
                             forceTrack: !0,
-                            dismissAction: 'CTA_CLICK' === e ? b.L.TAKE_ACTION : b.L.USER_DISMISS,
-                            groupName: b.R.VIRTUAL_CURRENCY_ONBOARDING
+                            dismissAction: 'CTA_CLICK' === e ? _.L.TAKE_ACTION : _.L.USER_DISMISS,
+                            groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING
                         });
                 },
                 [c, t]
             ),
-            [g, h] = r.useState(!1);
+            [p, f] = r.useState(!1);
         return (
             r.useEffect(() => {
-                d ? g || ((0, u.kk)(o, { groupName: b.R.VIRTUAL_CURRENCY_ONBOARDING }), void 0 !== i && i(), h(!0)) : g && h(!1);
-            }, [d, i, g, o]),
+                d ? p || ((0, m.kk)(o, { groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING }), void 0 !== i && i(), f(!0)) : p && f(!1);
+            }, [d, i, p, o]),
             {
-                shouldShow: g,
-                closeCoachmarkIfOpen: m
+                shouldShow: p,
+                closeCoachmarkIfOpen: g
             }
         );
     },
-    S = (e) => {
+    v = (e) => {
         let { customIconSrcs: t } = e,
             n = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-            r = void 0 !== t ? t.animated : E.Z,
-            l = void 0 !== t ? t.static : x.Z;
+            r = void 0 !== t ? t.animated : j.Z,
+            l = void 0 !== t ? t.static : E.Z;
         return n || null == r
             ? (0, i.jsx)('img', {
                   src: l,
-                  className: _.orbAsset,
+                  className: x.orbAsset,
                   alt: 'Orb'
               })
             : (0, i.jsxs)(d.Z, {
                   autoPlay: !0,
                   loop: !0,
-                  className: _.orbAsset,
+                  className: x.orbAsset,
                   children: [
                       (0, i.jsx)('source', {
-                          src: E.Z,
+                          src: j.Z,
                           type: 'video/webm'
                       }),
                       (0, i.jsx)('img', {
-                          src: x.Z,
-                          className: _.orbAsset,
+                          src: E.Z,
+                          className: x.orbAsset,
                           alt: 'Orb'
                       })
                   ]
               });
     },
-    v = (e) => {
+    T = (e) => {
         let { titleText: t, descriptionText: n, ctaText: r, onCtaClick: s, onClose: o, customIconSrcs: c, position: d = 'right', align: u = 'bottom' } = e;
-        return (0, i.jsx)(m.Z, {
+        return (0, i.jsx)(g.Z, {
             dismissibleContent: l.z.COLLECTIBLES_NAMEPLATE_SHOP_COACHMARK,
             inlineArt: !0,
             tryItText: r,
             onTryFeature: s,
             header: (0, i.jsx)(a.X6q, {
-                className: _.title,
+                className: x.title,
                 variant: 'heading-md/bold',
                 children: t
             }),
             body: (0, i.jsx)(a.Text, {
                 variant: 'text-sm/medium',
-                className: _.description,
+                className: x.description,
                 children: n
             }),
             position: d,
             align: u,
             hideDismissButton: !0,
-            dismissIcon: (0, i.jsx)(f.s, {}),
+            dismissIcon: (0, i.jsx)(b.s, {}),
             onDismissIconClick: o,
-            contentClassName: _.container,
-            pointerClassName: _.coachmarkPointer,
+            contentClassName: x.container,
+            pointerClassName: x.coachmarkPointer,
             tryItButtonColor: a.zxk.Colors.BRAND,
-            art: (0, i.jsx)(S, { customIconSrcs: c })
+            art: (0, i.jsx)(v, { customIconSrcs: c })
         });
     };
-function T(e) {
+function N(e) {
     let { calculateVisibility: t, children: n, popoutElement: s, positionControlRef: l, targetElementRef: c, defaultCoachmarkAlign: d, disableAutoInvert: u, onGetTargetElementDimensions: m, spacing: g, position: p = 'right' } = e,
-        [f, b] = r.useState('bottom' === d),
+        [h, b] = r.useState('bottom' === d),
         [_, x] = r.useState(!0),
         [E, j] = r.useState(String(Date.now())),
         C = (0, o.Z)(),
@@ -154,28 +155,28 @@ function T(e) {
             ) {
                 if ((O(i), r && j(String(Date.now())), u)) return;
                 let e = i.top < window.innerHeight / 2;
-                if (e === f) return;
+                if (e === h) return;
                 (b(e), j(String(Date.now())));
             }
         },
-        [f, O, m, u]
+        [h, O, m, u]
     );
-    (0, h.fu)({
+    (0, f.fu)({
         onGetElementDimensionsAndBoundingRect: T,
         positionControlRef: l,
         shouldPollPositionOnMount: !0,
         targetElementRef: c
     });
-    let I = r.useMemo(() => (u ? (null != d ? d : 'bottom') : f ? 'top' : 'bottom'), [u, d, f]),
-        N = _ && !C,
-        y = r.Children.map(s, (e) => r.cloneElement(e, { align: I }));
+    let N = r.useMemo(() => (u ? (null != d ? d : 'bottom') : h ? 'top' : 'bottom'), [u, d, h]),
+        I = _ && !C,
+        y = r.Children.map(s, (e) => r.cloneElement(e, { align: N }));
     return (0, i.jsx)(a.yRy, {
         autoInvert: !1,
         renderPopout: () => y,
         position: p,
-        align: I,
+        align: N,
         nudgeAlignIntoViewport: !1,
-        shouldShow: N,
+        shouldShow: I,
         spacing: g,
         positionKey: E,
         animation: a.yRy.Animation.TRANSLATE,

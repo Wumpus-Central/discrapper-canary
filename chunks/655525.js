@@ -5,11 +5,11 @@ var s = n(120356),
     i = n.n(s),
     l = n(704215),
     o = n(481060),
-    a = n(605236),
+    a = n(266454),
     c = n(388032),
     u = n(901986);
 function d() {
-    return (0, a.un)(l.z.BOGO_2025_NITRO_TAB_BADGE)
+    return (0, a.zu)(l.z.BOGO_2025_NITRO_TAB_BADGE)
         ? (0, r.jsxs)('div', {
               className: i()(u.premiumTrialBadge, u.premiumTrialAcknowledgedBadge, {}),
               children: [

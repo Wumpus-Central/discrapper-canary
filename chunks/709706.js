@@ -9,10 +9,10 @@
 var r,
     i = n(315008),
     a = n(347715),
-    o = n(259443),
-    s = n(442837),
-    l = n(570140),
-    c = n(579806),
+    o = n(442837),
+    s = n(570140),
+    l = n(579806),
+    c = n(710845),
     u = n(750180),
     d = n(999224);
 function f(e, t, n) {
@@ -70,7 +70,7 @@ function h(e, t) {
 var m = (function (e) {
     return ((e.ERROR_DOWNLOADING_DEPENDENCY = 'ERROR_DOWNLOADING_DEPENDENCY'), (e.ERROR_ACTIVATING_VOICE_FILTER = 'ERROR_ACTIVATING_VOICE_FILTER'), e);
 })({});
-let g = new o.Yd('VoiceFilterStore'),
+let g = new c.Z('VoiceFilterStore'),
     E = {
         nativeVoiceFilterModuleState: u.O.UNINITIALIZED,
         models: {},
@@ -85,7 +85,7 @@ let g = new o.Yd('VoiceFilterStore'),
     },
     b = null;
 function y() {
-    return (null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion()) === '0.0.0';
+    return (null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion()) === '0.0.0';
 }
 function O(e) {
     return e.available ? 0 : e.temporarilyAvailable ? 1 : 2;
@@ -151,7 +151,7 @@ function S(e) {
 function A() {
     E.catalogFetchFailed = !0;
 }
-class N extends (r = s.ZP.Store) {
+class N extends (r = o.ZP.Store) {
     getVoiceFilterModels() {
         return E.models;
     }
@@ -265,7 +265,7 @@ function j() {
     b = Date.now();
 }
 f(N, 'displayName', 'VoiceFilterStore');
-let U = new N(l.Z, {
+let U = new N(s.Z, {
     VOICE_FILTER_DOWNLOAD_STARTED: R,
     VOICE_FILTER_DOWNLOAD_PROGRESS: P,
     VOICE_FILTER_DOWNLOAD_FAILED: w,

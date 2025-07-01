@@ -754,7 +754,7 @@ class tr extends i.PureComponent {
                                                                           channel: i,
                                                                           children: H
                                                                       }),
-                                                                (0, r.jsx)(b.Z, {
+                                                                (0, r.jsx)(b.ZP, {
                                                                     channel: i,
                                                                     poggermodeEnabled: x,
                                                                     isInTextChannel: !0
@@ -936,8 +936,10 @@ let ti = i.memo(function (e) {
         G = (0, d.e7)([eP.Z], () => eP.Z.getChannel(H)),
         V = (0, d.e7)([eM.default], () => (t.type !== e0.d4z.DM ? null : eM.default.getUser(t.getRecipientId()))),
         W = (0, d.e7)([eh.ZP, eS.default], () => eh.ZP.getUserCombo(eS.default.getId(), t.id)),
-        Y = (0, b.i)(t).length > 0 || t.rateLimitPerUser > 0 || null != W,
-        X = (0, z.Z)('ChannelChat');
+        Y = (0, b.iD)(t),
+        X = (0, b.d7)(t),
+        Q = Y.length > 0 || t.rateLimitPerUser > 0 || null != W || null != X,
+        $ = (0, z.Z)('ChannelChat');
     return (0, r.jsx)(tr, {
         channel: t,
         isEditing: null != (0, d.e7)([eN.Z], () => eN.Z.getEditingMessageId(t.id)),
@@ -967,7 +969,7 @@ let ti = i.memo(function (e) {
         theme: P,
         chatWallpaperState: N,
         wallpaperColorMix: T,
-        messagesTypingGradient: X && Y,
-        isChatInputBottomAligned: X
+        messagesTypingGradient: $ && Q,
+        isChatInputBottomAligned: $
     });
 });

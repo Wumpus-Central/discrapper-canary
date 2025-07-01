@@ -175,7 +175,7 @@ function S(e) {
                       className: j.akaBadge
                   }),
                   l.length > 0
-                      ? (0, r.jsx)(c.Z, {
+                      ? (0, r.jsx)(c.ZP, {
                             size: 16,
                             users: o,
                             showUserPopout: !1,

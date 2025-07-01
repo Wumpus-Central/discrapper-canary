@@ -32,7 +32,7 @@ function v(e) {
             currency: t.currency
         }),
         T = (0, j.og)((0, j.T4)(v.amount, v.currency), C.interval, C.intervalCount);
-    async function I() {
+    async function N() {
         (await (0, m.dP)(
             t,
             t.planId,
@@ -78,7 +78,7 @@ function v(e) {
             (0, i.jsxs)(u.mzw, {
                 children: [
                     (0, i.jsx)(u.zxk, {
-                        onClick: I,
+                        onClick: N,
                         children: O.intl.string(O.t.frE8KC)
                     }),
                     (0, i.jsx)(u.zxk, {

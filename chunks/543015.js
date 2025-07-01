@@ -396,7 +396,7 @@ function em(e) {
                                           dotRadius: 2
                                       })
                                   }),
-                                  (0, r.jsx)(f.Z, {
+                                  (0, r.jsx)(f.ZP, {
                                       channel: t,
                                       className: el.typingUsers,
                                       renderDots: !1
@@ -515,7 +515,7 @@ function ex(e) {
         a = (0, w.iM)(t, n);
     return (0, r.jsx)('div', {
         ref: i,
-        children: (0, r.jsx)(p.Z, {
+        children: (0, r.jsx)(p.ZP, {
             className: el.__invalid_facepile,
             showDefaultAvatarsForNullUsers: !0,
             guildId: t.guild_id,

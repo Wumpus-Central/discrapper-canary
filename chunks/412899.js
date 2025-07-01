@@ -36,8 +36,8 @@ var r = n(255367),
     M = n(594174),
     L = n(700785),
     U = n(944613),
-    P = n(981631),
-    j = n(388032),
+    j = n(981631),
+    P = n(388032),
     y = n(78248);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -129,7 +129,7 @@ function Z(e) {
                     (0, r.jsx)('div', {
                         className: y.overflowRolesPopoutHeaderText,
                         id: i,
-                        children: j.intl.format(j.t.PCs0oq, { numRoles: t.length })
+                        children: P.intl.format(P.t.PCs0oq, { numRoles: t.length })
                     })
                 ]
             }),
@@ -157,7 +157,7 @@ let z = l.forwardRef(function (e, t) {
         }),
         L = (0, _.e7)([I.Z], () => I.Z.roleStyle),
         U = (0, b._f)(N, g, g.colorStrings),
-        P = (null == (i = g.tags) ? void 0 : i.guild_connections) === null,
+        j = (null == (i = g.tags) ? void 0 : i.guild_connections) === null,
         F = l.useCallback(
             (e) => {
                 (0, T.jW)(e, async () => {
@@ -167,7 +167,7 @@ let z = l.forwardRef(function (e, t) {
                             e,
                             G(w({}, t), {
                                 id: g.id,
-                                label: j.intl.string(j.t.sMsaLi)
+                                label: P.intl.string(P.t.sMsaLi)
                             })
                         );
                 });
@@ -180,7 +180,7 @@ let z = l.forwardRef(function (e, t) {
         V = A.Z.unsafe_rawColors.WHITE_500.css,
         H = (0, E._i)(z);
     (null != H && 0.3 > (0, E.Bd)(H) && (V = A.Z.unsafe_rawColors.PRIMARY_630.css),
-        (u = P
+        (u = j
             ? (0, r.jsx)(O.Z, {
                   className: y.roleFlowerStar,
                   iconClassName: d ? y.roleVerifiedIcon : void 0,
@@ -227,7 +227,7 @@ let z = l.forwardRef(function (e, t) {
                             tabIndex: d ? D : -1,
                             focusProps: { focusClassName: y.roleRemoveIconFocused },
                             'aria-hidden': !d,
-                            'aria-label': j.intl.formatToPlainString(j.t.QrxwhY, { roleName: g.name }),
+                            'aria-label': P.intl.formatToPlainString(P.t.QrxwhY, { roleName: g.name }),
                             children: [
                                 u,
                                 d
@@ -301,7 +301,7 @@ function V(e) {
                         w(
                             G(w({ ref: t }, e), {
                                 className: s()(y.addButton, o, u),
-                                'aria-label': j.intl.string(j.t.e3Wly8),
+                                'aria-label': P.intl.string(P.t.e3Wly8),
                                 type: 'button'
                             }),
                             E
@@ -370,7 +370,7 @@ function H(e) {
     }, [E, A, b]);
     let U = M.default.getCurrentUser();
     o()(null != U, 'MemberRolesList: currentUser cannot be undefined');
-    let Z = !T && x.Z.can(P.Plq.MANAGE_ROLES, i),
+    let Z = !T && x.Z.can(j.Plq.MANAGE_ROLES, i),
         H = L.e9(i, U.id),
         K = l.useMemo(() => 'roles-'.concat((0, u.Z)()), []),
         W = (0, d.ZP)({
@@ -413,7 +413,7 @@ function H(e) {
                             w(
                                 {
                                     className: s()(y.root, m),
-                                    'aria-label': j.intl.formatToPlainString(j.t.PCs0oq, { numRoles: a.length }),
+                                    'aria-label': P.intl.formatToPlainString(P.t.PCs0oq, { numRoles: a.length }),
                                     ref: n
                                 },
                                 l

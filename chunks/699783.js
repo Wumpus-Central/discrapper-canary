@@ -1,69 +1,69 @@
 n.d(t, { default: () => x });
-var l = n(255367),
-    o = n(73800),
-    s = n(399606),
-    a = n(481060),
-    r = n(194359),
-    i = n(726521),
+var o = n(255367),
+    l = n(73800),
+    i = n(399606),
+    s = n(481060),
+    a = n(194359),
+    r = n(726521),
     c = n(681678),
     d = n(594174),
-    u = n(51144),
-    h = n(991981),
-    k = n(134612),
+    h = n(51144),
+    k = n(991981),
+    u = n(134612),
     m = n(388032),
     p = n(995605);
 function x(e) {
-    let { userId: t, channelId: n, transitionState: x, onBlock: C, onBlockAndReport: M, onClose: g, onCancel: z } = e,
-        f = (0, h.q)(n),
-        j = o.useCallback(() => {
-            r.Z.blockUser(t, { location: k.zr }).then(() => {
+    let { userId: t, channelId: n, transitionState: x, onBlock: C, onBlockAndReport: z, onClose: M, onCancel: j } = e,
+        D = (0, k.q)(n),
+        f = l.useCallback(() => {
+            a.Z.blockUser(t, { location: u.zr }).then(() => {
                 c.Z.showBlockSuccessToast(t, n);
             });
         }, [t, n]),
-        D = o.useCallback(() => {
-            (j(), C(), g());
-        }, [j, C, g]),
-        U = o.useCallback(() => {
-            (j(), (0, i.wk)(f), M(), g());
-        }, [f, j, M, g]),
-        b = (0, s.e7)([d.default], () => d.default.getUser(t)),
-        T = u.ZP.useName(b);
-    return (0, l.jsx)(a.Y0X, {
+        b = l.useCallback(() => {
+            (f(), C(), M());
+        }, [f, C, M]),
+        g = l.useCallback(() => {
+            (f(), (0, r.wk)(D), z(), M());
+        }, [D, f, z, M]),
+        T = (0, i.e7)([d.default], () => d.default.getUser(t)),
+        U = h.ZP.useName(T);
+    return (0, o.jsx)(s.Y0X, {
         transitionState: x,
         parentComponent: 'BlockAndReportModal',
-        children: (0, l.jsx)(a.Ttm, {
+        children: (0, o.jsx)(s.Ttm, {
             style: { overflow: 'hidden auto' },
-            children: (0, l.jsxs)(a.hzk, {
+            children: (0, o.jsxs)(s.hzk, {
                 className: p.modalContent,
                 children: [
-                    (0, l.jsx)(a.X6q, {
+                    (0, o.jsx)(s.X6q, {
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: m.intl.format(m.t.x5pOn5, { name: T })
+                        children: m.intl.format(m.t.x5pOn5, { name: U })
                     }),
-                    (0, l.jsx)(a.Text, {
+                    (0, o.jsx)(s.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
                         className: p.modalDescription,
                         children: m.intl.string(m.t.aedksr)
                     }),
-                    (0, l.jsx)(a.zxk, {
-                        onClick: D,
-                        color: a.Ttl.BRAND,
-                        size: a.PhG.MEDIUM,
+                    (0, o.jsx)(s.zxk, {
+                        onClick: b,
+                        color: s.Ttl.BRAND,
+                        size: s.PhG.MEDIUM,
                         children: m.intl.string(m.t.MzsUsr)
                     }),
-                    (0, l.jsx)(a.zxk, {
-                        onClick: U,
-                        color: a.Ttl.PRIMARY,
-                        size: a.PhG.MEDIUM,
+                    (0, o.jsx)(s.zxk, {
+                        onClick: g,
+                        color: s.Ttl.PRIMARY,
+                        size: s.PhG.MEDIUM,
                         children: m.intl.string(m.t['3pzuj4'])
                     }),
-                    (0, l.jsx)(a.zxk, {
-                        onClick: z,
-                        color: a.Ttl.PRIMARY,
-                        look: a.iLD.OUTLINED,
-                        size: a.PhG.MEDIUM,
+                    (0, o.jsx)(s.zxk, {
+                        onClick: j,
+                        color: s.Ttl.PRIMARY,
+                        look: s.iLD.OUTLINED,
+                        size: s.PhG.MEDIUM,
                         children: m.intl.string(m.t.okuCoa)
                     })
                 ]

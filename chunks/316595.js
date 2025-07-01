@@ -4,7 +4,7 @@ var r = n(255367),
     l = n(442837),
     o = n(704215),
     a = n(890977),
-    s = n(605236),
+    s = n(266454),
     c = n(243778),
     u = n(375954),
     d = n(921944);
@@ -16,7 +16,7 @@ function p(e) {
             return (m && n && e.push(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e);
         }, [m, n]),
         b = () => {
-            setTimeout(() => (0, s.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: d.L.AUTO_DISMISS }), 10000);
+            setTimeout(() => (0, s.Q3)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: d.L.AUTO_DISMISS }), 10000);
         };
     return (0, r.jsx)(c.ZP, {
         contentTypes: g,

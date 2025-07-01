@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(823379),
     b = n(51144),
     _ = n(291798);
-let O = d.u.SIZE_24;
+let O = d.u8.SIZE_24;
 function y(e) {
     var t, n;
     let { activity: l, user: o, embeddedApp: a, onOpenSpotifyAlbum: u } = e,
@@ -211,7 +211,7 @@ function S(e) {
                                   }),
                                   (0, r.jsx)(j, { activity: t }),
                                   S.length > 0 &&
-                                      (0, r.jsx)(d.Z, {
+                                      (0, r.jsx)(d.ZP, {
                                           className: _.usersSummary,
                                           guildId: o.guild_id,
                                           users: x,
@@ -219,7 +219,7 @@ function S(e) {
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
-                                              if (null == e) return null;
+                                              if (null == e || e === d.ag) return null;
                                               let n = P.get(e.id),
                                                   i = null != (t = null == n ? void 0 : n.nick) ? t : b.ZP.getName(e);
                                               return (0, r.jsx)(

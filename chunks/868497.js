@@ -1,4 +1,4 @@
-a.d(e, { m: () => d });
+a.d(e, { m: () => R });
 var r = a(873567),
     _ = a(370541),
     n = a(285883),
@@ -10,8 +10,8 @@ var r = a(873567),
     l = a(789112),
     u = a(793373),
     I = a(152228),
-    R = a(305625);
-function d(t, e, a, N, f = 'auto.http.browser') {
+    d = a(305625);
+function R(t, e, a, N, f = 'auto.http.browser') {
     if (!t.fetchData) return;
     let A = (0, s.z)() && e(t.fetchData.url);
     if (t.endTimestamp && A) {
@@ -79,20 +79,20 @@ function d(t, e, a, N, f = 'auto.http.browser') {
                     ...(0, i.aF)().getPropagationContext(),
                     ...a.getPropagationContext()
                 },
-                d = c ? (0, E.Hb)(c) : (0, _.$p)(s, l, u),
-                N = (0, n.IQ)(I || (c ? (0, R.jC)(c) : (0, R._l)(s, e))),
+                R = c ? (0, E.Hb)(c) : (0, _.$p)(s, l, u),
+                N = (0, n.IQ)(I || (c ? (0, d.jC)(c) : (0, d._l)(s, e))),
                 f = r.headers || ('undefined' != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
             if (!f)
                 return {
-                    'sentry-trace': d,
+                    'sentry-trace': R,
                     baggage: N
                 };
             if ('undefined' != typeof Headers && (0, o.V9)(f, Headers)) {
                 let t = new Headers(f);
-                return (t.append('sentry-trace', d), N && t.append(n.bU, N), t);
+                return (t.append('sentry-trace', R), N && t.append(n.bU, N), t);
             }
             if (Array.isArray(f)) {
-                let t = [...f, ['sentry-trace', d]];
+                let t = [...f, ['sentry-trace', R]];
                 return (N && t.push([n.bU, N]), t);
             }
             {
@@ -103,7 +103,7 @@ function d(t, e, a, N, f = 'auto.http.browser') {
                     N && e.push(N),
                     {
                         ...f,
-                        'sentry-trace': d,
+                        'sentry-trace': R,
                         baggage: e.length > 0 ? e.join(',') : void 0
                     }
                 );

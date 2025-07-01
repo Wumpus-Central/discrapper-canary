@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(639119),
     v = n(8647),
     T = n(784238),
-    I = n(605289),
-    N = n(218390),
+    N = n(605289),
+    I = n(218390),
     y = n(823188),
     A = n(135785),
     P = n(498765),
@@ -53,7 +53,7 @@ let G = (e) => {
             [z, Y] = r.useState(!1),
             [W, K] = r.useState(!1),
             [q, X] = r.useState(!1),
-            [J, Q] = r.useState(!1),
+            [Q, J] = r.useState(!1),
             $ = (0, a.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
             ee = null != $ ? (0, x.Af)($) : null,
             et = null != ee ? x.ZP.getSkuIdForPlan(ee.planId) : null,
@@ -77,7 +77,7 @@ let G = (e) => {
                 autoTrackExposure: !1
             }),
             r.useEffect(() => {
-                Q(!0);
+                J(!0);
             }, []));
         let eg = (0, i.jsx)('div', {
             className: U.premiumTierCardsContainerSettings,
@@ -128,7 +128,7 @@ let G = (e) => {
                 }),
                 (0, i.jsx)(G, { inOfferExperience: ea }),
                 er
-                    ? (0, i.jsx)(I.Z, {
+                    ? (0, i.jsx)(N.Z, {
                           localizedPricingPromo: ei,
                           smallGap: !0
                       })
@@ -157,7 +157,7 @@ let G = (e) => {
                 }),
                 eg,
                 null != ed &&
-                    (0, i.jsx)(N.C, {
+                    (0, i.jsx)(I.C, {
                         className: U.giftPromoCard,
                         config: ed
                     }),
@@ -171,7 +171,7 @@ let G = (e) => {
                 }),
                 (0, i.jsx)('div', { className: U.footerSpacing }),
                 (0, i.jsx)(Z.Z, {
-                    isVisible: !z && !W && J,
+                    isVisible: !z && !W && Q,
                     subscriptionTier: en,
                     isApplicationHome: !1,
                     isEligibleForBogoPromotion: eo

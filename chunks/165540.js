@@ -14,7 +14,7 @@ var r = n(255367),
     m = n(533379),
     g = n(562129),
     b = n(307508),
-    _ = n(605236),
+    _ = n(266454),
     y = n(291407),
     C = n(685006),
     x = n(61356),
@@ -37,7 +37,7 @@ let S = i.forwardRef(function (e, t) {
             [C]
         );
         let S = i.useCallback(() => {
-                (b ? d.yT(h.ti.DISMISSED) : ((0, _.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: j.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), x());
+                (b ? d.yT(h.ti.DISMISSED) : ((0, _.Q3)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: j.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), x());
             }, [b, f, x]),
             I = (0, r.jsx)(y, {
                 size: 'refresh_sm',

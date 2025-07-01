@@ -1,14 +1,14 @@
 (t.d(r, {
-    Fv: () => l,
-    _I: () => o
+    Fv: () => o,
+    _I: () => l
 }),
     t(35282),
     t(388685),
     t(704826),
     t(513431));
 let n = /[\u0300-\u036f]/g,
-    o = null == String.prototype.normalize ? (e) => e : (e) => e.normalize('NFD').replace(n, '').normalize('NFC'),
-    l =
+    l = null == String.prototype.normalize ? (e) => e : (e) => e.normalize('NFD').replace(n, '').normalize('NFC'),
+    o =
         null == String.prototype.normalize
             ? (e) => e
             : function (e) {

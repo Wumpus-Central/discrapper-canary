@@ -4,7 +4,7 @@ n.d(t, {
     Kn: () => c
 });
 var i = n(704215),
-    r = n(605236),
+    r = n(266454),
     s = n(533525),
     l = n(796634),
     a = n(388032);
@@ -24,7 +24,7 @@ let o = (e) => {
     },
     c = (e) => {
         let t = (0, s.b)(e),
-            n = (0, r.wE)(i.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+            n = (0, r.Nj)(i.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return t && !n;
     },
     d = (e) => {

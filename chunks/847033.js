@@ -11,7 +11,7 @@ var i = n(255367),
     s = n(399606),
     a = n(704215),
     c = n(367907),
-    d = n(605236),
+    d = n(266454),
     u = n(584825),
     _ = n(994592),
     E = n(160404),
@@ -56,7 +56,7 @@ function m(e) {
                 categoryTabs: U,
                 isPhantomPreview: Z,
                 handlePreviewDismiss: (e) => {
-                    (0, d.EW)(a.z.SERVER_SHOP_PHANTOM_PREVIEW);
+                    (0, d.Q3)(a.z.SERVER_SHOP_PHANTOM_PREVIEW);
                     let t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},

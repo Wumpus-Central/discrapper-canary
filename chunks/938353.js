@@ -1,6 +1,6 @@
 (n.d(t, {
     $p: () => e7,
-    BB: () => e8,
+    BB: () => e5,
     ZP: () => e6
 }),
     n(388685),
@@ -190,7 +190,7 @@ let e1 = 15 * eh.Z.Millis.MINUTE,
             className: eX.gifFavoriteButton
         });
     },
-    e5 = (e) => () => {
+    e8 = (e) => () => {
         let { url: t, proxyUrl: n, width: r, height: l, flags: a } = e,
             o = (0, eE.yE)(a, z.hR.IS_ANIMATED);
         return null != r && null != l && (W.uo.test(n) || (o && (W.YG.test(n) || W.FH.test(n))))
@@ -204,7 +204,7 @@ let e1 = 15 * eh.Z.Millis.MINUTE,
               })
             : null;
     };
-class e8 extends (r = l.Component) {
+class e5 extends (r = l.Component) {
     shouldRenderInvite(e) {
         let { channel: t } = this.props;
         return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e3.has(e));
@@ -466,7 +466,7 @@ class e8 extends (r = l.Component) {
                             duration: r
                         });
                     },
-                    gifFavoriteButton: e5(o),
+                    gifFavoriteButton: e8(o),
                     isSearchResult: this.props.isSearchResult
                 },
                 c = (0, eg.q)({
@@ -511,7 +511,7 @@ class e8 extends (r = l.Component) {
         let { gifAutoPlay: t, enabledContentHarmTypeFlags: n, shouldHideMediaOptions: r, disableComponentInteractivity: l, onMediaItemContextMenu: a } = this.props;
         return (0, i.jsx)(eD.F, {
             gifAutoPlay: t,
-            getGifFavButton: e5,
+            getGifFavButton: e8,
             getOnMediaItemContextMenu:
                 null == a
                     ? void 0
@@ -877,7 +877,7 @@ function e6(e) {
         k = (0, eI._)(n),
         L = (0, ex.ro)(r.id, r.channel_id);
     return (0, i.jsx)(
-        e8,
+        e5,
         e$(
             eJ(
                 e$(
@@ -913,7 +913,7 @@ function e6(e) {
         )
     );
 }
-eQ(e8, 'defaultProps', {
+eQ(e5, 'defaultProps', {
     renderEmbeds: !0,
     compact: !1
 });
@@ -949,7 +949,7 @@ let e7 = (e) => {
         E = (0, ex.ro)(n.id, n.channel_id),
         y = (0, q.Z)(n);
     return (0, i.jsx)(
-        e8,
+        e5,
         e$(eJ({}, d), {
             message: n,
             channel: r,

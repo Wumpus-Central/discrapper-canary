@@ -151,7 +151,7 @@ class j {
                 null == (c = this.ref.current) ||
                     c.scrollIntoViewNode({
                         node: e,
-                        padding: _.kQ,
+                        padding: _.kQ + this.props.additionalMessagePadding,
                         callback: this.handleScroll
                     });
                 return;
@@ -248,7 +248,7 @@ class j {
                 null == (r = this.ref.current) ||
                     r.scrollIntoViewNode({
                         node: t,
-                        padding: _.kQ,
+                        padding: _.kQ + this.props.additionalMessagePadding,
                         callback: this.handleScroll
                     }));
         } else this.mergeTo(n, this.handleScroll);
@@ -567,9 +567,9 @@ class j {
     }
 }
 function O(e) {
-    let { messages: t, channel: n, compact: i, hasUnreads: l, focusId: o, placeholderHeight: a, canLoadMore: s = !0, handleScrollToBottom: c, handleScrollFromBottom: d } = e,
-        { windowId: p } = r.useContext(u.ZP),
-        [h] = r.useState(
+    let { messages: t, channel: n, compact: i, hasUnreads: l, focusId: o, placeholderHeight: a, canLoadMore: s = !0, handleScrollToBottom: c, handleScrollFromBottom: d, additionalMessagePadding: p = 0 } = e,
+        { windowId: h } = r.useContext(u.ZP),
+        [f] = r.useState(
             () =>
                 new j({
                     messages: t,
@@ -579,15 +579,16 @@ function O(e) {
                     focusId: o,
                     placeholderHeight: a,
                     canLoadMore: s,
-                    windowId: p,
+                    windowId: h,
                     handleScrollToBottom: c,
-                    handleScrollFromBottom: d
+                    handleScrollFromBottom: d,
+                    additionalMessagePadding: p
                 })
         );
     return (
-        h.getSnapshotBeforeUpdate(o),
+        f.getSnapshotBeforeUpdate(o),
         r.useLayoutEffect(() =>
-            h.mergePropsAndUpdate({
+            f.mergePropsAndUpdate({
                 messages: t,
                 channel: n,
                 compact: i,
@@ -595,12 +596,13 @@ function O(e) {
                 focusId: o,
                 placeholderHeight: a,
                 canLoadMore: s,
-                windowId: p,
+                windowId: h,
                 handleScrollToBottom: c,
-                handleScrollFromBottom: d
+                handleScrollFromBottom: d,
+                additionalMessagePadding: p
             })
         ),
-        r.useLayoutEffect(() => () => h.cleanup(), [h]),
-        h
+        r.useLayoutEffect(() => () => f.cleanup(), [f]),
+        f
     );
 }

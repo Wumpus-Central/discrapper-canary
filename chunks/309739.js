@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(362352),
     v = n(413182),
     T = n(695346),
-    I = n(726985),
-    N = n(981631),
+    N = n(726985),
+    I = n(981631),
     y = n(388032),
     A = n(187382),
     P = n(20493);
@@ -119,7 +119,7 @@ function D() {
             }
         ];
     return (0, i.jsx)(x.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_STATUS,
+        setting: N.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, i.jsxs)(m.hjN, {
             children: [
                 (0, i.jsx)(m.vwX, {
@@ -144,7 +144,7 @@ function D() {
                                           variant: 'text-sm/normal',
                                           color: 'header-secondary',
                                           className: P.marginBottom8,
-                                          children: y.intl.format(y.t.aUxRra, { helpdeskArticle: C.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) })
+                                          children: y.intl.format(y.t.aUxRra, { helpdeskArticle: C.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) })
                                       }),
                                       (0, i.jsx)(m.q4e, {
                                           options: o,
@@ -158,7 +158,7 @@ function D() {
                       })
                     : (0, i.jsx)(m.j7V, {
                           value: t === d.E5.OFF,
-                          note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: C.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: C.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
                           children: y.intl.string(y.t.D5GXTU)
                       })
@@ -170,7 +170,7 @@ function Z() {
     let e = T.cP.useSetting(),
         t = T.Ou.useSetting();
     return (0, i.jsx)(x.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        setting: N.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, i.jsxs)(m.hjN, {
             className: P.marginBottom40,
             children: [
@@ -197,14 +197,14 @@ function Z() {
 }
 function w() {
     return (0, i.jsx)(x.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_TOS,
+        setting: N.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(m.hjN, {
             className: P.marginBottom40,
             children: (0, i.jsx)(m.ToO, {
                 type: m.ToO.Types.PRIMARY,
                 body: y.intl.format(y.t.xvCsx8, {
-                    termsLink: N.EYA.TERMS,
-                    privacyLink: N.EYA.PRIVACY
+                    termsLink: I.EYA.TERMS,
+                    privacyLink: I.EYA.PRIVACY
                 })
             })
         })
@@ -212,9 +212,9 @@ function w() {
 }
 let k = (e) => {
     switch (e.type) {
-        case N.ABu.SPOTIFY:
+        case I.ABu.SPOTIFY:
             return y.intl.format(y.t['5sYPnp'], { name: e.name });
-        case N.ABu.CRUNCHYROLL:
+        case I.ABu.CRUNCHYROLL:
             return y.intl.format(y.t.Ge29Z2, { name: e.name });
         default:
             return y.intl.format(y.t.nmMsys, { game: e.name });
@@ -267,7 +267,7 @@ function L(e) {
 }
 function B() {
     let e = (0, c.e7)([E.Z], () => E.Z.getAccounts()),
-        t = r.useMemo(() => e.filter((e) => h.Z.isSupported(e.type) && N.vbS.has(e.type)), [e]),
+        t = r.useMemo(() => e.filter((e) => h.Z.isSupported(e.type) && I.vbS.has(e.type)), [e]),
         [n, s] = r.useState(''),
         l = r.useMemo(() => {
             let e = n.trim().toLowerCase();
@@ -276,7 +276,7 @@ function B() {
     return 0 === t.length
         ? null
         : (0, i.jsx)(x.F, {
-              setting: I.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
+              setting: N.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
               children: (0, i.jsxs)(m.hjN, {
                   className: P.marginBottom40,
                   children: [

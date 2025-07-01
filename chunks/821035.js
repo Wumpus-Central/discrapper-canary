@@ -43,12 +43,12 @@ function E(e) {
                 label: _.intl.string(_.t.S49UaW)
             }
         ],
-        I = {
+        N = {
             value: r.Q4.SHOW,
             label: _.intl.string(_.t['5k5OFh'])
         };
     return (
-        E && (v.unshift(I), T.unshift(I)),
+        E && (v.unshift(N), T.unshift(N)),
         (0, i.jsx)(p.U, {
             setting: f.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: h.FY.EXPLICIT_MEDIA_REDACTION_V2,

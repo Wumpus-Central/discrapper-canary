@@ -217,47 +217,59 @@ function er(e) {
         ),
         !(function () {
             let e = r.useRef(!1),
-                t = (0, U.pL)(),
-                n = v.Z.getVoiceChannelId(),
-                i = y.Z.getChannel(n),
-                o = null != i ? O.Z.getGuild(i.guild_id) : null,
-                l = null != g.Z.getCurrentUserActiveStream(),
-                a = null != n,
-                s = (0, m.Z)(b.Z) && !l && null != t,
-                c = a && null != o && null != n,
-                { allowActivityWidget: u } = (0, P.o4)('overlay');
+                t = r.useRef(null),
+                n = (0, U.pL)(),
+                i = v.Z.getVoiceChannelId(),
+                o = y.Z.getChannel(i),
+                l = null != o ? O.Z.getGuild(o.guild_id) : null,
+                a = null != g.Z.getCurrentUserActiveStream(),
+                s = null != i,
+                c = (0, m.Z)(b.Z) && !a && null != n,
+                u = s && null != l && null != i,
+                { allowActivityWidget: p } = (0, P.o4)('overlay');
             r.useEffect(() => {
-                var i;
+                var r;
                 if (e.current) return;
                 e.current = !0;
-                let r = null != (i = _.default.getFocusedPID()) ? i : (0, N.getPID)();
-                if (L.default.hasChangedRenderMode(r)) return;
-                let l = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.WELCOME_GENERAL),
-                    a = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.GO_LIVE_NUDGE),
-                    p = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.GAME_ACTIVITY),
-                    f = [];
-                (l || f.push({ type: G.nc.WELCOME }),
-                    !a &&
-                        (s && c
-                            ? f.push({
+                let o = null != (r = _.default.getFocusedPID()) ? r : (0, N.getPID)();
+                if (L.default.hasChangedRenderMode(o)) return;
+                let a = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.WELCOME_GENERAL),
+                    s = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.GO_LIVE_NUDGE),
+                    f = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.GAME_ACTIVITY),
+                    h = [];
+                if (
+                    (a || h.push({ type: G.nc.WELCOME }),
+                    !s &&
+                        (c && u
+                            ? h.push({
                                   type: G.nc.GO_LIVE_VOICE,
-                                  game: t,
-                                  voiceChannelId: n,
-                                  voiceGuild: o
+                                  game: n,
+                                  voiceChannelId: i,
+                                  voiceGuild: l
                               })
-                            : s &&
-                              f.push({
+                            : c &&
+                              h.push({
                                   type: G.nc.GO_LIVE_NON_VOICE,
-                                  game: t
+                                  game: n
                               })),
-                    u &&
-                        !p &&
-                        f.push({
+                    p &&
+                        !f &&
+                        h.push({
                             type: G.nc.CONTENT_INVENTORY,
                             entries: []
                         }),
-                    0 !== f.length && d.Z.overlayMounted(...f));
-            }, [a, s, c, t, n, o, u]);
+                    0 !== h.length)
+                )
+                    return (
+                        null != t.current && clearTimeout(t.current),
+                        (t.current = setTimeout(() => {
+                            d.Z.overlayMounted(...h);
+                        }, 1000)),
+                        () => {
+                            null != t.current && (clearTimeout(t.current), (t.current = null));
+                        }
+                    );
+            }, [s, c, u, n, i, l, p]);
         })(),
         r.useEffect(() => {
             if ((S.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), o)) {

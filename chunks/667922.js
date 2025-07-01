@@ -21,7 +21,7 @@ function h(e, t) {
         h = (0, l.e7)([f.Z], () => (t.isPrivate() || f.Z.can(O.Plq.ADD_REACTIONS, t)) && g, [t, g]),
         j = (0, o.MZ)(t.getGuildId());
     if (!d.nc.getSetting() || !h) return null;
-    let E = j
+    let S = j
         .filter(
             (e) =>
                 !p.ZP.isEmojiFilteredOrLocked({
@@ -105,7 +105,7 @@ function h(e, t) {
         color: 'default',
         children: (0, r.jsxs)(r.Fragment, {
             children: [
-                E,
+                S,
                 (0, r.jsx)(a.Clw, {}),
                 (0, r.jsx)(a.sNh, {
                     color: 'default',

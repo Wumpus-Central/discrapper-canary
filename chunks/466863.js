@@ -1,6 +1,6 @@
 (n.d(t, { Z: () => s }), n(388685));
 var r = n(772848),
-    i = n(259443),
+    i = n(710845),
     l = n(416638);
 function a(e, t, n) {
     return (
@@ -23,7 +23,7 @@ function o(e) {
         searchWithFiltersCount: 0
     };
 }
-new i.Yd('SearchSessionAnalyticsManager');
+new i.Z('SearchSessionAnalyticsManager');
 let s = new (class {
     upsertState(e, t) {
         let n = (0, l.Tm)(e),

@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => E,
+    ZP: () => S,
     eH: () => P,
     wY: () => _
 });
@@ -11,7 +11,7 @@ var i = n(442837),
     o = n(493773),
     s = n(377171),
     c = n(432877),
-    u = n(605236),
+    u = n(266454),
     d = n(243778),
     f = n(726521),
     g = n(993706),
@@ -23,7 +23,7 @@ var i = n(442837),
     h = n(921944),
     v = n(388032),
     j = n(130883);
-function E(e) {
+function S(e) {
     let t = (0, i.e7)([O.Z], () => O.Z.getGuildId()),
         n = (0, p.Q_)(t);
     return (0, y.a4)(e)
@@ -36,7 +36,7 @@ function E(e) {
           })
         : null;
 }
-function S() {
+function E() {
     return (0, r.jsx)(d.ZP, {
         contentTypes: [l.z.REPORT_TO_MOD_NEW_TAG],
         children: (e) => {
@@ -57,16 +57,16 @@ function _(e) {
     let t = (0, i.e7)([g.Z], () => g.Z.hasReportedMessage(e.channel_id, e.id)),
         n = (0, b.sP)(e);
     return ((0, o.zq)(() => {
-        n && (0, u.EW)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.AUTO_DISMISS });
+        n && (0, u.Q3)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.AUTO_DISMISS });
     }),
     n)
         ? (0, r.jsx)(a.sNh, {
               id: 'report-to-mod',
               label: t ? v.intl.string(j.default['8wsdnp']) : v.intl.string(j.default['1D+vq6']),
               action: () => {
-                  ((0, u.EW)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.USER_DISMISS }), (0, f.tV)(e));
+                  ((0, u.Q3)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.USER_DISMISS }), (0, f.tV)(e));
               },
-              icon: (0, r.jsx)(S, {}),
+              icon: (0, r.jsx)(E, {}),
               disabled: t
           })
         : null;

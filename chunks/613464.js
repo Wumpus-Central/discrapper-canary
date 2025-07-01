@@ -28,8 +28,8 @@ function S(e) {
         x = (0, a.e7)([I.ZP], () => I.ZP.getMember(n, t), [n, t]),
         [M, L] = l.useState(null == D || null == x),
         U = (0, c.Z)(x),
-        P = l.useRef(null),
-        { analyticsLocations: j } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
+        j = l.useRef(null),
+        { analyticsLocations: P } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
         y = (0, T.ZP)(t, n),
         w = (0, d.ZP)();
     return (l.useEffect(() => {
@@ -44,9 +44,9 @@ function S(e) {
     l.useEffect(() => {
         let e = null == x;
         return (
-            !M && e && (P.current = window.setTimeout(i, 500)),
+            !M && e && (j.current = window.setTimeout(i, 500)),
             () => {
-                null != P.current && window.clearTimeout(P.current);
+                null != j.current && window.clearTimeout(j.current);
             }
         );
     }, [M, x, i]),
@@ -75,7 +75,7 @@ function S(e) {
                   })
               })
             : (0, r.jsx)(A.Gt, {
-                  value: j,
+                  value: P,
                   children: (0, r.jsx)('div', {
                       className: s()(R.sidebarContainer, S),
                       style: b,

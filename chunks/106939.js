@@ -18,7 +18,7 @@ var i = n(255367),
     f = n(906732),
     b = n(252618),
     _ = n(313201),
-    x = n(605236),
+    x = n(266454),
     E = n(984370),
     j = n(797614),
     C = n(108427),
@@ -26,8 +26,8 @@ var i = n(255367),
     S = n(695346),
     v = n(594174),
     T = n(626135),
-    I = n(260722),
-    N = n(914788),
+    N = n(260722),
+    I = n(914788),
     y = n(841409),
     A = n(652262),
     P = n(880257),
@@ -150,8 +150,8 @@ function Y(e) {
 function W() {
     let e = (0, P.Z)(),
         t = (0, R.M8)(),
-        n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        s = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
+        n = (0, x.Nj)(d.z.FAMILY_CENTER_NEW_BADGE),
+        s = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
         l = (0, A.M)(),
         { selectedTab: a, handleTabChange: m } = (0, y.Z)(),
         h = (0, _.Dt)(),
@@ -160,9 +160,9 @@ function W() {
         O = s && null != f && !E;
     (0, g.ZP)(() => {
         ((0, C.e)('family-center'),
-            I.ZP.initialPageLoad(),
+            N.ZP.initialPageLoad(),
             n ||
-                (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                (0, x.Q3)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
                     forceTrack: !0
                 }));
@@ -219,8 +219,8 @@ function K() {
     let { analyticsLocations: e } = (0, f.ZP)(h.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, R.M8)(),
-        s = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        a = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
+        s = (0, x.Nj)(d.z.FAMILY_CENTER_NEW_BADGE),
+        a = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
         E = (0, A.M)(),
         D = (0, c.e7)([O.Z], () => O.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
@@ -231,9 +231,9 @@ function K() {
     (0, g.ZP)(() => {
         (m.Y(L.Z5c.FAMILY_CENTER),
             (0, C.e)('family-center'),
-            !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
+            !I.Z.isLoading() && I.Z.canRefetch() && N.ZP.initialPageLoad(),
             s ||
-                (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                (0, x.Q3)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
                     forceTrack: !0
                 }));
@@ -272,8 +272,8 @@ function K() {
         K)
     )
         return null;
-    let J = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
-        Q = H[J];
+    let Q = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
+        J = H[Q];
     return (0, i.jsx)(f.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -283,19 +283,19 @@ function K() {
                 (0, i.jsx)(b.yY, { location: V.intl.string(U.default.RZqaJi) }),
                 (0, i.jsx)(Y, {
                     theme: D,
-                    section: J,
+                    section: Q,
                     handleItemSelect: (e) => {
                         w(e);
                     }
                 }),
                 (0, i.jsx)(u.njP.Panel, {
-                    id: J,
+                    id: Q,
                     'aria-labelledby': F,
                     className: G.contentPanel,
                     children: (0, i.jsx)(u.Ttm, {
                         children: (0, i.jsx)('div', {
                             className: G.sideNavContent,
-                            children: Q()
+                            children: J()
                         })
                     })
                 })

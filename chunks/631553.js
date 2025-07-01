@@ -25,7 +25,7 @@ var r = n(255367),
     j = n(906732),
     Z = n(600164);
 n(70097);
-var I = n(605236),
+var I = n(266454),
     P = n(594190),
     w = n(74299),
     N = n(989941),
@@ -198,7 +198,7 @@ class eE extends o.Component {
             et.Z.trackExposure({ location: 'Overlay' }));
         let c = n && !i && null != l,
             d = e && null != r && null != o,
-            u = (0, I.un)(g.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX),
+            u = (0, I.zu)(g.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX),
             h = this.props.hasOverlayV3UI,
             p = { type: eu.nc.WELCOME };
         if (
