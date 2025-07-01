@@ -380,7 +380,7 @@ function em(e) {
     o.Z.setFocusedPID(0 === e ? null : e);
 }
 function eg(e) {
-    (em(e), eH.emitChange());
+    (em(e), eH.emitChange(), e !== V && x.info('OverlayStore: Focused new PID', e));
 }
 function eE(e) {
     (eb(), eH.emitChange());

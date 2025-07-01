@@ -22,8 +22,8 @@ var a = n(255367),
     C = n(621060),
     O = n(388032),
     N = n(459100),
-    E = n(616257);
-let T = [
+    T = n(616257);
+let E = [
     {
         key: 'event',
         cellClassName: N.eventColumn,
@@ -100,7 +100,7 @@ let w = [
                     'data-mtctest-ignore': 'true',
                     children: [
                         (0, a.jsxs)(m.ZP, {
-                            className: i()(E.headerBar, N.subPanelHeaderBar),
+                            className: i()(T.headerBar, N.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(m.ZP.Icon, {
                                     icon: d.IeX,
@@ -278,7 +278,7 @@ function R() {
         { TabBar: S, renderSelectedTab: P } = (0, C.ZP)({ tabs: w }, []);
     return (0, a.jsxs)('div', {
         ref: e,
-        className: i()(E.panel, N.panel),
+        className: i()(T.panel, N.panel),
         children: [
             (0, a.jsxs)('div', {
                 className: N.toolbar,
@@ -328,7 +328,7 @@ function R() {
                 })
             }),
             (0, a.jsx)(y.Z, {
-                columns: T,
+                columns: E,
                 data: p,
                 selectedRowKey: b,
                 onClickRow: (e) => f(e.key)

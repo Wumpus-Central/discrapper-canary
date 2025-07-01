@@ -225,7 +225,14 @@ class j {
         let e = this.game,
             t = y.ZP.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
         if (t !== this.lastscreenType) {
-            if (!(t in this.counters)) return void L.error('ScreenTypeAnalytics: Unknown screen type: '.concat(t), t);
+            if (!(t in this.counters)) {
+                let n = p.default.getTrackedGameByPid(e.pid);
+                L.error('ScreenTypeAnalytics: Unknown screen type for '.concat(this.game.name, ': ').concat(t), {
+                    rawGame: this.game,
+                    overlayTrackedGame: n
+                });
+                return;
+            }
             (this.counters[t].start(), null != this.lastscreenType && this.counters[this.lastscreenType].stop(), (this.lastscreenType = t));
         }
     }

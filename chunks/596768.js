@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685), n(642613));
+(n.d(t, { Z: () => E }), n(388685), n(642613));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -47,7 +47,7 @@ let N = [
             }
         }
     ],
-    E = [
+    T = [
         {
             id: 'details',
             name: 'Details',
@@ -120,15 +120,15 @@ let N = [
             }
         }
     ];
-function T() {
+function E() {
     let [e, t] = r.useState(''),
         n = r.useRef(null),
         l = (0, u.Wu)([b.Z], () => b.Z.loggedTriggers),
         s = r.useMemo(() => l.filter((t) => 0 === e.length || o()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = r.useState(void 0),
         h = s.find((e) => e.key === c),
-        { TabBar: p, renderSelectedTab: v } = (0, _.ZP)({ tabs: E }, []),
-        T = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
+        { TabBar: p, renderSelectedTab: v } = (0, _.ZP)({ tabs: T }, []),
+        E = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
         S = r.useCallback((e) => {
             x.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
@@ -146,7 +146,7 @@ function T() {
                         title: 'Enables tracking of all triggers',
                         className: C.triggersEnable,
                         children: (0, a.jsx)(m.rsf, {
-                            checked: T,
+                            checked: E,
                             onChange: S,
                             className: C.__invalid_toolbarSwitch
                         })

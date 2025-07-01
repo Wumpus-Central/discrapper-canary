@@ -117,6 +117,9 @@ let y = new i.Yd('OverlayActionCreators'),
                 mode: t
             });
         },
+        clearTrackedPids() {
+            a.Z.dispatch({ type: 'OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS' });
+        },
         setInstanceLocked(e) {
             if (!__OVERLAY__) return void y.error('Attempting to start an overlay session outside of the overlay context');
             O.setInputLocked(e, (0, _.getPID)());

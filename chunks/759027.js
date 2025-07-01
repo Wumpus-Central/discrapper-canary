@@ -74,7 +74,7 @@ let j = {
 function y(e) {
     var t, n, l, p, y, C;
     let { subscription: O, onUpdated: N } = e,
-        [E, T] = r.useState(!1),
+        [T, E] = r.useState(!1),
         [S, P] = r.useState(!1),
         [w, I] = r.useState(!1),
         [k, R] = r.useState(!1),
@@ -316,7 +316,7 @@ function y(e) {
                     children: [
                         (0, a.jsxs)(o.P3F, {
                             onClick: () => {
-                                T(!E);
+                                E(!T);
                             },
                             className: v.collapsablePaneHeader,
                             children: [
@@ -326,10 +326,10 @@ function y(e) {
                                         children: 'Metadata'
                                     })
                                 }),
-                                (0, a.jsx)(c.Z, { direction: E ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                (0, a.jsx)(c.Z, { direction: T ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                             ]
                         }),
-                        E &&
+                        T &&
                             (0, a.jsx)('ul', {
                                 style: { marginBottom: '15px' },
                                 children: Object.entries(O.metadata).map((e) => {

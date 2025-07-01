@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => E,
+    Z: () => T,
     q: () => N
 }),
     n(804061),
@@ -106,10 +106,10 @@ function N(e, t) {
         ((r.href = a), (r.download = ''.concat(e, '-').concat(n.slice(0, 8), '.json')), r.click(), URL.revokeObjectURL(a));
     });
 }
-function E() {
+function T() {
     let e = (0, x.Fg)(),
         [t, n, l, s, d, u] = (0, v.zn)(),
-        { semanticColorOverrides: f, rawColorOverrides: y, tab: O, scales: E } = t,
+        { semanticColorOverrides: f, rawColorOverrides: y, tab: O, scales: T } = t,
         S = r.useMemo(() => {
             let t = Object.entries(f).map((t) => {
                     let [n, a] = t,
@@ -142,7 +142,7 @@ function E() {
                         l = o().kebabCase(e);
                     return ['--'.concat(l, '-hsl: ').concat(n, ' calc(var(--saturation-factor, 1) * ').concat(a, '%) ').concat(r, '% !important;'), '--'.concat(l, ': hsl(var(--').concat(l, '-hsl)) !important;')];
                 }),
-                a = E.reduce((e, t) => {
+                a = T.reduce((e, t) => {
                     let { name: n } = t,
                         a = (0, v.XM)(t),
                         r = (0, v.W6)(a, n);
@@ -157,7 +157,7 @@ function E() {
                     );
                 }, '');
             return '\n      :root {\n        '.concat(a, '\n      }\n\n      .theme-').concat(e, ' {\n        ').concat(t.join('\n'), '\n      }\n\n      html {\n        ').concat(n.join('\n'), '\n      }\n    ');
-        }, [y, E, f, e]);
+        }, [y, T, f, e]);
     return (0, a.jsxs)('div', {
         className: j.panel,
         children: [
@@ -258,7 +258,7 @@ function E() {
             (0, a.jsx)('div', {
                 className: j.tab,
                 hidden: O !== v.H8.TOKENS,
-                children: (0, a.jsx)(T, {
+                children: (0, a.jsx)(E, {
                     state: t,
                     setState: n
                 })
@@ -280,7 +280,7 @@ function E() {
         ]
     });
 }
-function T(e) {
+function E(e) {
     let { state: t, setState: n } = e,
         l = (0, x.Fg)(),
         { semanticColorOverrides: i, rawColorOverrides: s } = t,

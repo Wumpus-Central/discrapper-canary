@@ -65,7 +65,7 @@ let y = async () => {
             };
         }
     },
-    E = async () => {
+    T = async () => {
         try {
             await s.tn.del({
                 url: v.ANM.USER_OFFERS,
@@ -76,7 +76,7 @@ let y = async () => {
             (await m.Z.forceReset(), await (0, d.T)());
         }
     },
-    T = async (e) => {
+    E = async (e) => {
         await s.tn.post({
             url: v.ANM.CREATE_REVERSE_TRIAL,
             body: { ends_at: e },
@@ -89,11 +89,11 @@ function S(e) {
         [b, f] = r.useState(!1),
         [g, y] = r.useState(!1),
         [C, N] = r.useState(!1),
-        [E, T] = r.useState(!1);
+        [T, E] = r.useState(!1);
     r.useEffect(() => {
-        C && T(!0);
+        C && E(!0);
         let e = setTimeout(() => {
-            T(!1);
+            E(!1);
         }, 500);
         return () => {
             clearTimeout(e);
@@ -281,7 +281,7 @@ function S(e) {
                     })
                 }),
                 (0, a.jsx)('div', {
-                    className: i()(_.loadingContainer, { [_.isLoading]: C || E }),
+                    className: i()(_.loadingContainer, { [_.isLoading]: C || T }),
                     children: (0, a.jsx)(c.$jN, {})
                 })
             ]
@@ -304,14 +304,14 @@ function P(e) {
             clearTimeout(e);
         };
     }, [f]);
-    let { id: C, expires_at: N, applied_at: E, discount_id: T, discount: S } = l,
+    let { id: C, expires_at: N, applied_at: T, discount_id: E, discount: S } = l,
         P =
             null !=
             (n =
                 null ==
                 (t = o.find((e) => {
                     let { value: t } = e;
-                    return t === T;
+                    return t === E;
                 }))
                     ? void 0
                     : t.label)
@@ -407,13 +407,13 @@ function P(e) {
                 (0, a.jsxs)(c.P3F, {
                     className: i()(_.row, _.idRow),
                     onClick: () => {
-                        (0, x.JG)(T, () => b(!0));
+                        (0, x.JG)(E, () => b(!0));
                     },
                     children: [
                         (0, a.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'text-default',
-                            children: ['Discount: ', T]
+                            children: ['Discount: ', E]
                         }),
                         p
                             ? (0, a.jsx)(c.dz2, {
@@ -466,7 +466,7 @@ function P(e) {
                                 children: A
                             })
                         }),
-                        null != E &&
+                        null != T &&
                             (0, a.jsx)('div', {
                                 className: i()(_.badge, _.redeemed),
                                 children: (0, a.jsx)(c.Text, {
@@ -533,11 +533,11 @@ function w() {
             null != x && (await C(x, 'discount'), R(!0));
         },
         V = async () => {
-            (await E(), R(!0));
+            (await T(), R(!0));
         },
         H = async () => {
             let e = new Date(Date.now() + 60 * A * 1000).toISOString();
-            (await T(e), B());
+            (await E(e), B());
         };
     return (0, a.jsx)(c.zJl, {
         className: g.panel,

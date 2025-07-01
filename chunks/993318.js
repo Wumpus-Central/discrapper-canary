@@ -1,19 +1,20 @@
-a.d(t, { AnnouncementModal: () => C });
+a.d(t, { AnnouncementModal: () => y });
 var r = a(255367);
 a(73800);
 var s = a(481060),
-    c = a(442837),
-    n = a(607070),
+    n = a(442837),
+    c = a(607070),
     o = a(313201),
     d = a(70097),
     i = a(688465),
-    l = a(388032),
-    u = a(418822),
-    b = a(6210),
-    p = a(313460),
-    f = a(686936),
-    h = a(326238);
-function m(e) {
+    l = a(794231),
+    u = a(388032),
+    b = a(418822),
+    p = a(6210),
+    f = a(313460),
+    h = a(686936),
+    m = a(326238);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(a);
@@ -38,21 +39,21 @@ function m(e) {
     }
     return e;
 }
-let x = a(450390),
-    _ = (e) => {
+let g = a(450390),
+    x = (e) => {
         var t, a;
         return (0, r.jsx)(
             s.zxk,
-            ((t = m({}, e)),
+            ((t = _({}, e)),
             (a = a =
                 {
-                    'aria-label': l.intl.string(l.t.cpT0Cg),
+                    'aria-label': u.intl.string(u.t.cpT0Cg),
                     look: s.zxk.Looks.BLANK,
                     size: s.zxk.Sizes.NONE,
                     children: (0, r.jsx)('img', {
-                        src: x,
+                        src: g,
                         alt: 'Close Modal',
-                        className: u.closeButtonIcon
+                        className: b.closeButtonIcon
                     })
                 }),
             Object.getOwnPropertyDescriptors
@@ -72,7 +73,7 @@ let x = a(450390),
     },
     j = (e) => {
         let { animatedAssetURL: t, staticAssetURL: a, className: s } = e;
-        return (0, c.e7)([n.Z], () => n.Z.useReducedMotion) || null == t
+        return (0, n.e7)([c.Z], () => c.Z.useReducedMotion) || null == t
             ? (0, r.jsx)('img', {
                   src: a,
                   className: s,
@@ -88,26 +89,26 @@ let x = a(450390),
                   })
               });
     },
-    g = (e) => {
-        let { header: t, subHeader: a, staticAsset: c, animatedAsset: n } = e;
+    C = (e) => {
+        let { header: t, subHeader: a, staticAsset: n, animatedAsset: c } = e;
         return (0, r.jsxs)('div', {
-            className: u.featureCard,
+            className: b.featureCard,
             children: [
                 (0, r.jsx)(j, {
-                    staticAssetURL: c,
-                    animatedAssetURL: n,
-                    className: u.orbAsset
+                    staticAssetURL: n,
+                    animatedAssetURL: c,
+                    className: b.orbAsset
                 }),
                 (0, r.jsxs)('div', {
-                    className: u.featureCardTextGroup,
+                    className: b.featureCardTextGroup,
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: 'heading-md/extrabold',
-                            className: u.featureCardTextHeader,
+                            className: b.featureCardTextHeader,
                             children: t
                         }),
                         (0, r.jsx)('div', {
-                            className: u.featureCardTextSubHeader,
+                            className: b.featureCardTextSubHeader,
                             children: a
                         })
                     ]
@@ -115,66 +116,67 @@ let x = a(450390),
             ]
         });
     },
-    C = (e) => {
-        let { onClose: t, ctaOnClick: a, transitionState: c } = e,
-            n = (0, o.Dt)(),
-            d = [
+    y = (e) => {
+        let { onClose: t, ctaOnClick: a, transitionState: n } = e,
+            c = (0, o.Dt)(),
+            { showBetaTag: d } = l.Z.useExperiment({ location: 'virtual_currency_announcement_modal_v2' }),
+            g = [
                 {
-                    header: l.intl.string(l.t['2Nvn8/']),
-                    subHeader: l.intl.string(l.t.F1lGFx),
-                    staticAsset: f.Z
+                    header: u.intl.string(u.t['2Nvn8/']),
+                    subHeader: u.intl.string(u.t.F1lGFx),
+                    staticAsset: h.Z
                 },
                 {
-                    header: l.intl.string(l.t['1IEs7+']),
-                    subHeader: l.intl.string(l.t.mej05u),
-                    staticAsset: h.Z
+                    header: u.intl.string(u.t['1IEs7+']),
+                    subHeader: u.intl.string(u.t.mej05u),
+                    staticAsset: m.Z
                 }
             ];
         return (0, r.jsxs)(s.Y0X, {
-            className: u.root,
-            transitionState: c,
-            'aria-labelledby': n,
+            className: b.root,
+            transitionState: n,
+            'aria-labelledby': c,
             hideShadow: !0,
             parentComponent: 'AnnouncementModalV2',
             children: [
-                (0, r.jsx)(_, {
-                    className: u.closeButton,
+                (0, r.jsx)(x, {
+                    className: b.closeButton,
                     onClick: t
                 }),
                 (0, r.jsx)(j, {
-                    staticAssetURL: b.Z,
-                    animatedAssetURL: p.Z,
-                    className: u.heroAsset
+                    staticAssetURL: p.Z,
+                    animatedAssetURL: f.Z,
+                    className: b.heroAsset
                 }),
                 (0, r.jsxs)(s.hzk, {
-                    className: u.content,
+                    className: b.content,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: u.headerContainer,
+                            className: b.headerContainer,
                             children: [
                                 (0, r.jsx)(s.X6q, {
                                     variant: 'display-md',
-                                    className: u.header,
-                                    children: l.intl.string(l.t.XKlAys)
+                                    className: b.header,
+                                    children: u.intl.string(u.t.XKlAys)
                                 }),
-                                (0, r.jsx)(i.Z, { className: u.betaBadge })
+                                d && (0, r.jsx)(i.Z, { className: b.betaBadge })
                             ]
                         }),
                         (0, r.jsx)(s.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: u.subHeader,
-                            children: l.intl.string(l.t.icWQKi)
+                            className: b.subHeader,
+                            children: u.intl.string(u.t.icWQKi)
                         }),
-                        d.length > 0 &&
+                        g.length > 0 &&
                             (0, r.jsx)('div', {
-                                className: u.featureCardGroup,
-                                children: d.map((e, t) => (0, r.jsx)(g, m({}, e), ''.concat(e.header, '_').concat(t)))
+                                className: b.featureCardGroup,
+                                children: g.map((e, t) => (0, r.jsx)(C, _({}, e), ''.concat(e.header, '_').concat(t)))
                             }),
                         (0, r.jsx)(s.gtL, {
                             onClick: a,
-                            color: u.buttonColor,
-                            className: u.button,
-                            children: l.intl.string(l.t.ynollp)
+                            color: b.buttonColor,
+                            className: b.button,
+                            children: u.intl.string(u.t.ynollp)
                         })
                     ]
                 })

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685), n(35282));
+(n.d(t, { Z: () => E }), n(388685), n(35282));
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -81,7 +81,7 @@ function N() {
         ]
     });
 }
-function E() {
+function T() {
     let e = r.useCallback(() => {
         d.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
@@ -91,7 +91,7 @@ function E() {
         children: 'Open System DM'
     });
 }
-function T() {
+function E() {
     let e = g.ZP.allByCategory(g.zU.MESSAGING).map((e) => {
         let [t, n, { label: r }] = e;
         return (0, a.jsx)(
@@ -108,6 +108,6 @@ function T() {
     });
     return (0, a.jsxs)('div', {
         className: i()(O.panel, C.panel),
-        children: [e, (0, a.jsx)('div', { className: C.divider }), (0, a.jsx)(N, {}), (0, a.jsx)('div', { className: C.divider }), (0, a.jsx)(E, {})]
+        children: [e, (0, a.jsx)('div', { className: C.divider }), (0, a.jsx)(N, {}), (0, a.jsx)('div', { className: C.divider }), (0, a.jsx)(T, {})]
     });
 }

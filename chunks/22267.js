@@ -16,8 +16,8 @@ var r = n(255367),
     g = n(5192),
     E = n(579407),
     b = n(538566),
-    y = n(326578),
-    O = n(85662);
+    y = n(460400),
+    O = n(943549);
 let v = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,

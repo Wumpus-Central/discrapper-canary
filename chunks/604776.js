@@ -96,7 +96,7 @@ function g() {
         [n, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [d, f] = r.useState([]),
         [g, _] = r.useState([]),
-        { refreshEntitlementList: y, grantFractionalPremium: C, deleteFractionalPremium: O, triggerNextEntitlementFulfillment: N, entitlements: E, loading: T } = (0, m.m)();
+        { refreshEntitlementList: y, grantFractionalPremium: C, deleteFractionalPremium: O, triggerNextEntitlementFulfillment: N, entitlements: T, loading: E } = (0, m.m)();
     r.useEffect(() => {
         y();
     }, [y]);
@@ -104,8 +104,8 @@ function g() {
         P = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
     return (
         r.useEffect(() => {
-            (f(S(E)), _(P(E)));
-        }, [E]),
+            (f(S(T)), _(P(T)));
+        }, [T]),
         (0, a.jsx)(o.zJl, {
             className: p.panel,
             children: (0, a.jsxs)('div', {
@@ -191,7 +191,7 @@ function g() {
                                         className: h.buttonGroup,
                                         children: [
                                             (0, a.jsx)(o.zxk, {
-                                                disabled: T,
+                                                disabled: E,
                                                 size: o.zxk.Sizes.TINY,
                                                 color: o.zxk.Colors.PRIMARY,
                                                 look: o.zxk.Looks.OUTLINED,
@@ -199,7 +199,7 @@ function g() {
                                                 children: 'Run fulfillment'
                                             }),
                                             (0, a.jsx)(o.zxk, {
-                                                disabled: T,
+                                                disabled: E,
                                                 size: o.zxk.Sizes.TINY,
                                                 color: o.zxk.Colors.RED,
                                                 look: o.zxk.Looks.OUTLINED,
@@ -207,7 +207,7 @@ function g() {
                                                 children: 'Delete all'
                                             }),
                                             (0, a.jsx)(o.zxk, {
-                                                disabled: T,
+                                                disabled: E,
                                                 look: o.zxk.Looks.BLANK,
                                                 size: o.zxk.Sizes.ICON,
                                                 onClick: y,

@@ -23,8 +23,8 @@ var _ = n(392750),
     C = n(789654),
     O = n(719672),
     N = n(691867),
-    E = n(916790),
-    T = n(645973),
+    T = n(916790),
+    E = n(645973),
     S = n(903502),
     P = n(604776),
     w = n(912072),
@@ -47,8 +47,8 @@ var _ = n(392750),
     K = n(384207),
     X = n(264603),
     Y = n(678639),
-    q = n(771751),
-    J = n(596768),
+    J = n(771751),
+    q = n(596768),
     $ = n(56706),
     Q = n(260950),
     ee = n(621060),
@@ -85,7 +85,7 @@ function ei(e) {
                     id: 'triggers',
                     name: 'Triggers',
                     group: ee.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(J.Z, {})
+                    render: () => (0, a.jsx)(q.Z, {})
                 },
                 {
                     id: 'stores',
@@ -97,7 +97,7 @@ function ei(e) {
                     id: 'dispatcher',
                     name: 'Dispatcher',
                     group: ee.v0.EVENTS,
-                    render: () => (0, a.jsx)(E.Z, {})
+                    render: () => (0, a.jsx)(T.Z, {})
                 }
             ];
             return (
@@ -118,7 +118,7 @@ function ei(e) {
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
                         group: ee.v0.DEVELOPMENT,
-                        render: () => (0, a.jsx)(T.Z, {})
+                        render: () => (0, a.jsx)(E.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -240,7 +240,7 @@ function ei(e) {
                         id: 'trials',
                         name: 'Trials',
                         group: ee.v0.PREMIUM,
-                        render: () => (0, a.jsx)(q.Z, {})
+                        render: () => (0, a.jsx)(J.Z, {})
                     }),
                     e.push({
                         id: 'payments',

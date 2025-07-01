@@ -2,8 +2,8 @@
     $R: () => K,
     A0: () => et,
     GU: () => Y,
-    H8: () => J,
-    HI: () => q,
+    H8: () => q,
+    HI: () => J,
     HW: () => F,
     Ib: () => eo,
     KB: () => eu,
@@ -49,8 +49,8 @@ var a,
     C = n(981613),
     O = n(762399),
     N = n(232112),
-    E = n(53796),
-    T = n(723757),
+    T = n(53796),
+    E = n(723757),
     S = n(375924),
     P = n(596136),
     w = n(341901),
@@ -126,8 +126,8 @@ let F = {
         OKLCH: C.Z,
         OKLab: O.Z,
         P3: N.Z,
-        ProPhoto: E.Z,
-        REC_2020: T.Z,
+        ProPhoto: T.Z,
+        REC_2020: E.Z,
         REC_2100_HLG: S.Z,
         REC_2100_PQ: P.Z,
         XYZ_D50: w.Z,
@@ -181,10 +181,10 @@ function X(e, t, n, a, r) {
 function Y(e) {
     return B(z({}, e), { highlight: !e.highlight });
 }
-function q(e) {
+function J(e) {
     return (0, R.Z)((0, A.Z)(e, i.Z), { format: 'hex' });
 }
-var J = (((a = {}).TOKENS = 'Tokens'), (a.PALETTES = 'Palettes'), a);
+var q = (((a = {}).TOKENS = 'Tokens'), (a.PALETTES = 'Palettes'), a);
 function $() {
     return (function (e, t) {
         let [n, a] = W(''.concat(e, '-states'), [t]),

@@ -428,6 +428,24 @@ let z = {
             for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
             I.ipc.send(e, ...n);
         },
+        isIPCReady() {
+            if (!h.isPlatformEmbedded) return !0;
+            try {
+                return (null == I ? void 0 : I.ipc) != null && 'function' == typeof I.ipc.send;
+            } catch (e) {
+                return !1;
+            }
+        },
+        async waitForIPCReady() {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5000,
+                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : window,
+                n = Date.now();
+            for (; Date.now() - n < e; ) {
+                if (this.isIPCReady()) return !0;
+                await new Promise((e) => t.requestAnimationFrame(e));
+            }
+            return !1;
+        },
         flashFrame(e) {
             I.window.flashFrame(e);
         },
@@ -463,7 +481,8 @@ let z = {
             return ('function' == typeof I.window.isAlwaysOnTop && (t = await I.window.isAlwaysOnTop(e)), t);
         },
         showInactive(e) {
-            'function' == typeof I.window.showInactive && I.window.showInactive(e);
+            var t;
+            'function' == typeof (null == I || null == (t = I.window) ? void 0 : t.showInactive) && I.window.showInactive(e);
         },
         setMinimumSize(e, t) {
             var n, r;

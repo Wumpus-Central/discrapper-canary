@@ -39,7 +39,7 @@ function N(e) {
             return 'ADOPT_CLAN_IDENTITY_NOTICE';
     }
 }
-async function E(e, t, n) {
+async function T(e, t, n) {
     (await Promise.all(
         t.map((e) =>
             s.tn.patch({
@@ -52,7 +52,7 @@ async function E(e, t, n) {
         (0, d.C0)(e),
         (0, h.Fm)(e, !0));
 }
-async function T(e) {
+async function E(e) {
     await s.tn.post({
         url: g.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
         rejectWithError: !0
@@ -130,13 +130,13 @@ function S() {
                             children: [
                                 (0, a.jsx)(c.zxk, {
                                     onClick: () => {
-                                        E(t, s.slice(Math.floor(s.length / 2)), !1);
+                                        T(t, s.slice(Math.floor(s.length / 2)), !1);
                                     },
                                     children: 'Set Half Boosts expiring in 1 day'
                                 }),
                                 (0, a.jsx)(c.zxk, {
                                     onClick: () => {
-                                        E(t, s, !0);
+                                        T(t, s, !0);
                                     },
                                     children: 'Reset End Date'
                                 })
@@ -229,7 +229,7 @@ function S() {
                         }),
                         (0, a.jsx)(c.zxk, {
                             onClick: () => {
-                                T(t);
+                                E(t);
                             },
                             children: 'Send System Message'
                         })

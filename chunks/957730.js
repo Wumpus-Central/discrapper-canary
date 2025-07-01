@@ -286,6 +286,7 @@ let G = u.Z.RULES,
                     return { content: null != e ? '@'.concat(e) : '@'.concat(o) };
                 }
                 {
+                    if (a.bot) return { content: '@'.concat(o) };
                     let e = '';
                     if ((null == i ? void 0 : i.id) != null) {
                         let t = b.Z.getRoles(i.id);

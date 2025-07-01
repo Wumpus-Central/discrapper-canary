@@ -78,8 +78,8 @@ function C() {
     r.useEffect(() => {
         N();
     }, [N]);
-    let E = r.useMemo(() => m.filter((e) => e.status !== f.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [m]),
-        T = async () => {
+    let T = r.useMemo(() => m.filter((e) => e.status !== f.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [m]),
+        E = async () => {
             (await o.tn.post({
                 url: '/debug/subscription',
                 body: { plan_id: n },
@@ -137,7 +137,7 @@ function C() {
                                 }),
                                 (0, a.jsx)(c.zxk, {
                                     size: c.zxk.Sizes.SMALL,
-                                    onClick: T,
+                                    onClick: E,
                                     children: 'Create Subscription'
                                 })
                             ]
@@ -161,7 +161,7 @@ function C() {
                         children: 'End All Subscriptions'
                     })
                 }),
-                E.length > 0 &&
+                T.length > 0 &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(c.X6q, {
@@ -169,7 +169,7 @@ function C() {
                                 className: j.header,
                                 children: 'Previous Subscriptions'
                             }),
-                            E.map((e) =>
+                            T.map((e) =>
                                 (0, a.jsx)(
                                     b.Z,
                                     {

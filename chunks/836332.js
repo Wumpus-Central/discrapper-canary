@@ -57,6 +57,7 @@ let O = r.forwardRef((e, t) => {
                         className: x.footerArtContainer,
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
+                            muted: !0,
                             preload: 'auto',
                             poster: j.Z,
                             className: x.footerArt,
