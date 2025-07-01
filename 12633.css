@@ -10743,6 +10743,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     width: 8px
 }
 
+.dimmed__58105 {
+    opacity: .1;
+    transition: opacity .3s ease
+}
+
 .enable-forced-colors .item__58105 {
     background-color: Highlight
 }
