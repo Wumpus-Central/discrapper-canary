@@ -22,7 +22,7 @@ function y(e) {
     let n,
         { handleClose: t, planGroup: r, onSubscriptionConfirmation: y, renderPurchaseConfirmation: E, postSuccessGuild: S, followupSKUInfo: v, continueSessionToInitialStep: P } = e,
         { activeSubscription: Z, paymentSources: b, paymentSourceId: I, selectedPlan: O, selectedSkuId: T, step: M, updatedSubscription: w, startingPremiumSubscriptionPlanIdRef: A, startingFractionalPremiumEndsAtRef: N } = (0, h.JL)(),
-        { isGift: R, giftRecipient: k, giftCode: U, hasSentMessage: B, isSendingMessage: H, sendGiftMessage: F, claimableRewards: G, selectedGiftingPromotionReward: D } = (0, x.wD)(),
+        { isGift: R, giftRecipient: U, giftCode: k, hasSentMessage: B, isSendingMessage: H, sendGiftMessage: F, claimableRewards: G, selectedGiftingPromotionReward: D } = (0, x.wD)(),
         { confirmationFooter: W } = (0, f.zb)(),
         z = null != W,
         Y = (0, C.id)(O, R, G),
@@ -37,8 +37,8 @@ function y(e) {
     }, [t, y]);
     return (
         l.useEffect(() => {
-            !R || null == k || null == U || B || H || (0, u.pO)(k) || F({ onSubscriptionConfirmation: y });
-        }, [F, R, k, U, B, H, y]),
+            !R || null == U || null == k || B || H || (0, u.pO)(U) || F({ onSubscriptionConfirmation: y });
+        }, [F, R, U, k, B, H, y]),
         l.useEffect(() => {
             null != K && null != K.reminderNotice && Y && (0, o.wH)(a.z.GIFTING_PROMOTION_REMINDER, K.dismissibleContentVersion, { dismissAction: g.L.INDIRECT_ACTION });
         }, [K, Y]),

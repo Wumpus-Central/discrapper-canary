@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685), n(49124));
+(n.d(t, { Z: () => O }), n(388685), n(49124));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -12,11 +12,13 @@ var i = n(255367),
     g = n(998502),
     p = n(740492),
     h = n(695346),
-    f = n(399970),
-    b = n(726985),
-    _ = n(981631),
-    x = n(388032);
-function E(e) {
+    f = n(494620),
+    b = n(399970),
+    _ = n(726985),
+    x = n(981631),
+    E = n(388032),
+    j = n(40713);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -41,31 +43,32 @@ function E(e) {
     }
     return e;
 }
-function j() {
+function O() {
     let [e] = r.useState(() => g.ZP.getEnableHardwareAcceleration()),
         t = h.bm.useSetting(),
         n = h.Sb.useSetting(),
-        j = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
-        C = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
-        O = r.useCallback((e) => {
+        O = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
+        S = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
+        v = r.useCallback((e) => {
             h.bm.updateSetting(!e);
         }, []),
-        S = r.useCallback((e) => {
-            e ? (0, l.h7j)((e) => (0, i.jsx)(f.Z, E({}, e))) : a.mc();
+        T = r.useCallback((e) => {
+            e ? (0, l.h7j)((e) => (0, i.jsx)(b.Z, C({}, e))) : a.mc();
         }, []),
-        v = r.useCallback((e) => {
+        N = r.useCallback((e) => {
             (0, c.BV)(e, o.Z.USER_SETTINGS);
         }, []),
-        T = r.useCallback((e) => {
+        I = r.useCallback((e) => {
             (0, l.h7j)((t) => {
                 var n, r;
+                let s = e ? E.intl.format(E.t.LYXRxM, {}) : E.intl.format(E.t.uDP3Ky, {});
                 return (0, i.jsx)(
                     l.ConfirmModal,
-                    ((n = E(
+                    ((n = C(
                         {
-                            header: x.intl.string(x.t.aqpAvr),
-                            confirmText: x.intl.string(x.t.vT7ckp),
-                            cancelText: x.intl.string(x.t['ETE/oK']),
+                            header: E.intl.string(E.t.aqpAvr),
+                            confirmText: E.intl.string(E.t.vT7ckp),
+                            cancelText: E.intl.string(E.t['ETE/oK']),
                             onConfirm: () => g.ZP.setEnableHardwareAcceleration(e)
                         },
                         t
@@ -74,7 +77,7 @@ function j() {
                         {
                             children: (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
-                                children: x.intl.format(x.t.uDP3Ky, {})
+                                children: s
                             })
                         }),
                     Object.getOwnPropertyDescriptors
@@ -94,79 +97,91 @@ function j() {
             });
         }, []),
         {
-            warpEnabled: N,
-            warpConnecting: I,
-            warpLog: y
+            warpEnabled: y,
+            warpConnecting: A,
+            warpLog: P
         } = (0, s.cj)([d.Z], () => ({
             warpEnabled: d.Z.enabled,
             warpConnecting: d.Z.connecting,
             warpLog: d.Z.log
         })),
-        A = r.useCallback((e) => {
+        R = r.useCallback((e) => {
             e ? d.Z.connect() : d.Z.disconnect();
         }, []);
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H1,
-        title: x.intl.string(x.t['8/udY2']),
+        title: E.intl.string(E.t['8/udY2']),
         children: [
             (0, i.jsx)(u.F, {
-                setting: b.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
+                setting: _.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
                 children: (0, i.jsx)(l.j7V, {
                     value: n,
                     onChange: h.Sb.updateSetting,
-                    note: x.intl.format(x.t['CY6q/f'], { apiDocsUrl: _.EYA.API_DOCS }),
-                    children: x.intl.string(x.t.ObIb1d)
+                    note: E.intl.format(E.t['CY6q/f'], { apiDocsUrl: x.EYA.API_DOCS }),
+                    children: E.intl.string(E.t.ObIb1d)
                 })
             }),
             (0, i.jsx)(u.F, {
-                setting: b.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+                setting: _.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(l.j7V, {
+                    className: e ? '' : j.formSwitchExtension,
                     value: e,
-                    onChange: T,
-                    note: x.intl.string(x.t.Afc7l5),
-                    children: x.intl.string(x.t['eOC/Fx'])
+                    onChange: I,
+                    note: E.intl.string(E.t.Afc7l5),
+                    hideBorder: !e,
+                    children: E.intl.string(E.t['eOC/Fx'])
                 })
             }),
+            !e &&
+                (0, i.jsxs)(i.Fragment, {
+                    children: [
+                        (0, i.jsx)(f.Z, {
+                            look: f.z.WARNING,
+                            children: E.intl.string(E.t.j7S6IS)
+                        }),
+                        (0, i.jsx)(l.$i$, { className: j.infoBoxDivider })
+                    ]
+                }),
             (0, i.jsx)(u.F, {
-                setting: b.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+                setting: _.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                 children: (0, i.jsx)(l.j7V, {
                     value: !t,
-                    onChange: O,
-                    note: x.intl.string(x.t['8mYp39']),
-                    children: x.intl.string(x.t.fi3UQE)
-                })
-            }),
-            (0, i.jsx)(u.F, {
-                setting: b.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
-                children: (0, i.jsx)(l.j7V, {
-                    value: null != j,
-                    note: x.intl.string(x.t['52hMnJ']),
-                    onChange: S,
-                    children: x.intl.string(x.t.erOqlp)
-                })
-            }),
-            (0, i.jsx)(u.F, {
-                setting: b.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
-                children: (0, i.jsx)(l.j7V, {
-                    value: C,
-                    note: x.intl.string(x.t['B/qU4O']),
                     onChange: v,
-                    children: x.intl.string(x.t.qDZryM)
+                    note: E.intl.string(E.t['8mYp39']),
+                    children: E.intl.string(E.t.fi3UQE)
+                })
+            }),
+            (0, i.jsx)(u.F, {
+                setting: _.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+                children: (0, i.jsx)(l.j7V, {
+                    value: null != O,
+                    note: E.intl.string(E.t['52hMnJ']),
+                    onChange: T,
+                    children: E.intl.string(E.t.erOqlp)
+                })
+            }),
+            (0, i.jsx)(u.F, {
+                setting: _.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
+                children: (0, i.jsx)(l.j7V, {
+                    value: S,
+                    note: E.intl.string(E.t['B/qU4O']),
+                    onChange: N,
+                    children: E.intl.string(E.t.qDZryM)
                 })
             }),
             (0, i.jsxs)(u.F, {
-                setting: b.s6.SETTINGS_ADVANCED_CF_WARP,
+                setting: _.s6.SETTINGS_ADVANCED_CF_WARP,
                 children: [
                     (0, i.jsx)(l.j7V, {
-                        value: N,
+                        value: y,
                         note: 'Enable WARP Proxy Connection',
-                        onChange: A,
+                        onChange: R,
                         children: 'Enable WARP'
                     }),
-                    I ? (0, i.jsx)(l.$jN, {}) : null,
+                    A ? (0, i.jsx)(l.$jN, {}) : null,
                     (0, i.jsx)(l.Text, {
                         variant: 'code',
-                        children: y.map((e, t) => (0, i.jsx)('div', { children: JSON.stringify(e) }, t))
+                        children: P.map((e, t) => (0, i.jsx)('div', { children: JSON.stringify(e) }, t))
                     })
                 ]
             })

@@ -20,48 +20,49 @@ var l = t(120356),
     L = t(677163);
 function g(e) {
     let { handleStepChange: n, handleClose: t, referralTrialOfferId: l } = e,
-        { setSelectedSkuId: r, activeSubscription: s, startedPaymentFlowWithPaymentSourcesRef: d, setSelectedPlanId: c, priceOptions: _ } = (0, x.JL)(),
-        { isGift: L, claimableRewards: g } = (0, p.wD)(),
-        E = L && null != g && g.length > 0,
-        S = (0, C.N)(l),
-        v = (0, a.Nx)(),
-        P = (0, o.Z)({ location: 'PremiumPaymentSelect' });
+        { setSelectedSkuId: r, activeSubscription: s, startedPaymentFlowWithPaymentSourcesRef: d, setSelectedPlanId: c, priceOptions: _, defaultPlanId: L } = (0, x.JL)(),
+        { isGift: g, claimableRewards: E } = (0, p.wD)(),
+        S = g && null != E && E.length > 0,
+        v = (0, C.N)(l),
+        P = (0, a.Nx)(),
+        Z = (0, o.Z)({ location: 'PremiumPaymentSelect' });
     return (0, i.jsx)(y, {
         selectSku: (e) =>
             (function (e) {
-                let { activeSubscription: n, newSkuId: t, setSelectedSkuId: i, handleStepChange: l, isGift: r, userTrialOffer: s, setSelectedPlanId: a, startedPaymentFlowWithPaymentSources: o } = e;
+                let { activeSubscription: n, newSkuId: t, setSelectedSkuId: i, handleStepChange: l, isGift: r, userTrialOffer: s, setSelectedPlanId: a, startedPaymentFlowWithPaymentSources: o, defaultPlanId: C } = e;
                 i(t);
-                let C = h.h8.PLAN_SELECT,
-                    d = (0, u.k5)(n);
-                (d !== m.Si.TIER_1 && d !== m.Si.TIER_2) || t !== m.Si.TIER_0 || r || (C = h.h8.WHAT_YOU_LOSE);
-                let c = (0, j.T)({
+                let d = h.h8.PLAN_SELECT,
+                    c = (0, u.k5)(n);
+                (c !== m.Si.TIER_1 && c !== m.Si.TIER_2) || t !== m.Si.TIER_0 || r || (d = h.h8.WHAT_YOU_LOSE);
+                let p = (0, j.T)({
                         userTrialOffer: s,
                         isGift: r,
                         skuId: t
                     }),
-                    p = (0, f.Kp)({
-                        isTrial: c,
+                    x = (0, f.Kp)({
+                        isTrial: p,
                         isGift: r,
                         selectedSkuId: t,
                         startedPaymentFlowWithPaymentSources: o
                     });
-                (C !== h.h8.WHAT_YOU_LOSE && p && ((C = h.h8.REVIEW), a((0, f.nA)(t, n))), l(C, { analyticsDataOverride: { sku_id: t } }));
+                (d !== h.h8.WHAT_YOU_LOSE && x && ((d = h.h8.REVIEW), a((0, f.nA)(t, n, C))), l(d, { analyticsDataOverride: { sku_id: t } }));
             })({
                 activeSubscription: s,
                 newSkuId: e,
                 setSelectedSkuId: r,
                 handleStepChange: n,
-                isGift: L,
-                userTrialOffer: S,
+                isGift: g,
+                userTrialOffer: v,
                 startedPaymentFlowWithPaymentSources: d.current,
-                setSelectedPlanId: c
+                setSelectedPlanId: c,
+                defaultPlanId: L
             }),
         onClose: t,
-        isGift: L,
-        inOfferExperience: v,
+        isGift: g,
+        inOfferExperience: P,
         priceOptions: _,
-        showPromotionalGiftBanner: E,
-        enablePremiumBrandRefresh: P
+        showPromotionalGiftBanner: S,
+        enablePremiumBrandRefresh: Z
     });
 }
 function y(e) {
