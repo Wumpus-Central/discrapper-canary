@@ -15,7 +15,7 @@ let m = l.memo(function (e) {
             C = l.useMemo(() => (0, a.Hg)(x), [x]),
             w = l.useMemo(() => (null != f ? (0, a.vc)(x, f) : o ? (0, a.vc)(x, 'LT') : (0, a.Y4)(x, !0)), [x, f, o]),
             S = l.useMemo(() => (o ? (0, u.Z)(w) : null), [o, w]),
-            N = l.useMemo(() => (v ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: C }) : C), [v, C]);
+            E = l.useMemo(() => (v ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: C }) : C), [v, C]);
         return (0, r.jsx)('span', {
             className: i()(n, S, {
                 [p.timestamp]: !0,
@@ -27,7 +27,7 @@ let m = l.memo(function (e) {
                 null == j
                     ? (0, r.jsx)(s.ua7, {
                           text: () => (0, a.vc)(x, 'LLLL'),
-                          'aria-label': N,
+                          'aria-label': E,
                           tooltipClassName: p.timestampTooltip,
                           position: P,
                           delay: 750,

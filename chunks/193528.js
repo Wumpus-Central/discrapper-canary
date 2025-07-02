@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,8 +56,8 @@ function _(e, t) {
         e
     );
 }
-function x(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: E, label: j, colorPickerMiddle: C, colorPickerFooter: O, showEyeDropper: S } = e,
+function _(e) {
+    let { onChange: t, onClose: n, color: s, suggestedColors: _, disabled: E, label: j, colorPickerMiddle: C, colorPickerFooter: O, showEyeDropper: S } = e,
         v = r.useRef(null),
         T = (0, d.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         N = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -78,10 +78,10 @@ function x(e) {
             renderPopout: (e) =>
                 (0, i.jsx)(
                     d.Z$W,
-                    _(b({}, e), {
+                    x(b({}, e), {
                         value: s,
                         onChange: t,
-                        suggestedColors: x,
+                        suggestedColors: _,
                         middle: C,
                         footer: O,
                         showEyeDropper: S
@@ -115,7 +115,7 @@ function x(e) {
                     children: [
                         (0, i.jsx)(
                             d.P3F,
-                            _(b({}, n), {
+                            x(b({}, n), {
                                 tabIndex: E ? -1 : 0,
                                 onClick: E ? p.dG4 : t,
                                 style: {

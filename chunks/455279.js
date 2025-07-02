@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => j,
-    c: () => _
+    c: () => x
 }),
     n(388685));
 var i,
@@ -30,8 +30,8 @@ function b(e, t, n) {
         e
     );
 }
-var _ = (((i = {}).DEFAULT = 'DEFAULT'), (i.RECORDING = 'RECORDING'), i);
-let x = {
+var x = (((i = {}).DEFAULT = 'DEFAULT'), (i.RECORDING = 'RECORDING'), i);
+let _ = {
     DEFAULT: f.__invalid_default,
     RECORDING: f.recording
 };
@@ -61,7 +61,7 @@ class E extends s.PureComponent {
                 onClick: this.handleClick,
                 onMouseDown: this.handleMouseDown,
                 ref: this._containerRef,
-                className: a()(f.recorderContainer, x[t], {
+                className: a()(f.recorderContainer, _[t], {
                     [f.hasValue]: l,
                     [f.containerDisabled]: i
                 }),

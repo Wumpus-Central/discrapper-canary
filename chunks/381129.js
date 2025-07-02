@@ -2,7 +2,7 @@
 var r = n(512722),
     i = n.n(r),
     a = n(957730),
-    o = n(662594),
+    o = n(439170),
     s = n(496675),
     l = n(981631);
 let c = new RegExp(/@(:?everyone|here)/),

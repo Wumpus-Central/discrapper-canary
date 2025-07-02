@@ -19,10 +19,10 @@ let g = (e) => {
                 sourceAnalyticsLocations: f
             });
         }, [t, f]),
-        _ = () => {
+        x = () => {
             h(!0);
         },
-        x = () => {
+        _ = () => {
             h(!1);
         };
     return (0, i.jsx)(c.mh, {
@@ -67,8 +67,8 @@ let g = (e) => {
                                 [m.last]: s,
                                 [m.active]: p
                             }),
-                            onMouseEnter: _,
-                            onMouseLeave: x,
+                            onMouseEnter: x,
+                            onMouseLeave: _,
                             onClick: b
                         },
                         e

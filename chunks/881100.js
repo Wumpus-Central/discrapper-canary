@@ -14,8 +14,8 @@ var i = n(399606),
     h = n(101732),
     f = n(450598),
     b = n(633030),
-    _ = n(97942),
-    x = n(269987),
+    x = n(97942),
+    _ = n(269987),
     E = n(548629),
     j = n(507084),
     C = n(680313),
@@ -87,7 +87,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     };
                     return r ? g.intl.format(g.t.aj1pfX, { onCheckItOutClick: t }) : g.intl.format(g.t.d2oYS0, { onTryItOutClick: t });
                 },
-                imageSource: _,
+                imageSource: x,
                 imageClassName: t.perGuildProfilesImage
             },
             longerMessages: {
@@ -111,7 +111,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             remix: {
                 title: g.intl.string(g.t.ZvulDg),
                 description: g.intl.string(g.t['8GwCPT']),
-                imageSource: M(n, x, E),
+                imageSource: M(n, _, E),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },

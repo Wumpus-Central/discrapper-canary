@@ -14,7 +14,7 @@ var i = n(255367),
     h = n(727785),
     f = n(388032),
     b = n(484671);
-function _(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function x(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -96,9 +96,9 @@ function N(e) {
                 async () => (e) =>
                     (0, i.jsx)(
                         I,
-                        x(_({}, e), {
+                        _(x({}, e), {
                             onSelect: (e) => {
-                                (u(e), a.Z.setKeybind(x(_({}, o.current), { params: { channelId: e } })));
+                                (u(e), a.Z.setKeybind(_(x({}, o.current), { params: { channelId: e } })));
                             }
                         })
                     )
@@ -129,9 +129,9 @@ function N(e) {
 function I(e) {
     let { transitionState: t, onClose: n, onSelect: a } = e,
         c = r.useId(),
-        _ = r.useRef(null),
+        x = r.useRef(null),
         {
-            mouseFocusEnabled: x,
+            mouseFocusEnabled: _,
             enableMouseFocus: E,
             disableMouseFocus: O
         } = (function () {
@@ -190,7 +190,7 @@ function I(e) {
             );
         })(N);
     r.useEffect(() => {
-        let { current: e } = _;
+        let { current: e } = x;
         null == e ||
             e.isItemVisible(0, P, !0) ||
             e.scrollToIndex({
@@ -260,7 +260,7 @@ function I(e) {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': f.intl.string(f.t['+N3fW1']),
-                        ref: _,
+                        ref: x,
                         sections: [D],
                         renderRow: function (e) {
                             let { row: t } = e,
@@ -279,7 +279,7 @@ function I(e) {
                                     channel: r,
                                     category: s,
                                     focused: P === t,
-                                    onMouseEnter: () => x.current && R(t),
+                                    onMouseEnter: () => _.current && R(t),
                                     onClick: () => {
                                         (a(r.id), n());
                                     },

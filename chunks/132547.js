@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(391110),
     f = n(71363),
     b = n(781800),
-    _ = n(981631),
-    x = n(388032),
+    x = n(981631),
+    _ = n(388032),
     E = n(614729),
     j = n(865215);
 let C = () => {
@@ -63,15 +63,15 @@ let C = () => {
                                     className: E.giftNitro,
                                     location: a.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                     analyticsLocation: {
-                                        page: _.ZY5.NITRO_HOME,
-                                        section: _.jXE.GIFT_BANNER
+                                        page: x.ZY5.NITRO_HOME,
+                                        section: x.jXE.GIFT_BANNER
                                     }
                                 }),
                                 (0, i.jsx)('div', { className: E.footerSpacing }),
                                 (0, i.jsx)(s.$, {
                                     innerRef: t,
                                     onChange: (e) => {
-                                        e && !S && (u.default.track(_.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }), v(!0));
+                                        e && !S && (u.default.track(x.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }), v(!0));
                                     },
                                     children: (0, i.jsx)('div', {
                                         ref: t,
@@ -83,7 +83,7 @@ let C = () => {
                                     className: E.bottomIllustration,
                                     width: 112,
                                     height: 85,
-                                    alt: x.intl.string(x.t.X4IxWF)
+                                    alt: _.intl.string(_.t.X4IxWF)
                                 })
                             ]
                         })

@@ -4,8 +4,13 @@ e.exports = {
     out: 'out__6db1d',
     in: 'in__6db1d',
     fadeIn: 'fadeIn__6db1d',
-    pageWrapper: 'pageWrapper__6db1d',
     page: 'page__6db1d',
+    pageFilter: 'pageFilter__6db1d',
+    controls: 'controls__6db1d',
+    pageWrapper: 'pageWrapper__6db1d',
+    pageWrapperFilter: 'pageWrapperFilter__6db1d',
+    inventory: 'inventory__6db1d',
+    inventoryNoFilter: 'inventoryNoFilter__6db1d',
     pageFullscreen: 'pageFullscreen__6db1d',
     categoryWrapper: 'categoryWrapper__6db1d',
     cardsContainer: 'cardsContainer__6db1d',
@@ -14,9 +19,12 @@ e.exports = {
     itemTypeTitle: 'itemTypeTitle__6db1d',
     easterEggAnimation: 'easterEggAnimation__6db1d',
     easterEggAnimationReverse: 'easterEggAnimationReverse__6db1d',
+    categoriesNoFilter: 'categoriesNoFilter__6db1d',
     categories: 'categories__6db1d',
     products: 'products__6db1d',
     skeletons: 'skeletons__6db1d',
     paginationContainer: 'paginationContainer__6db1d',
-    bannerContainer: 'bannerContainer__6db1d'
+    bannerContainer: 'bannerContainer__6db1d',
+    filterBar: 'filterBar__6db1d',
+    filterButton: 'filterButton__6db1d'
 };

@@ -424,7 +424,7 @@ function en(e) {
 }
 function er(e) {
     let { onStepChange: t, selectedPlanId: n, isGift: i, claimableRewards: a, paymentSources: o, shouldRenderUpdatedPaymentModal: s, isTrial: l } = e,
-        d = (0, c.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
+        d = (0, c.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
         { step: f, selectedPlan: _ } = (0, m.JL)(),
         { hasEntitlements: p } = (0, G.H)(n, i),
         h = (null != d && null != d.paymentSourceId) || Object.keys(o).length > 0 || (p && !l);

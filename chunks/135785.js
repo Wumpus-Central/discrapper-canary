@@ -18,10 +18,10 @@ let h = (e) => {
         { premiumSubscription: r, className: h, textColor: f } = e,
         b = (0, d.Nx)();
     if (null == r) return null;
-    let _ = null != r ? c.ZP.getPremiumPlanItem(r) : null;
-    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != _ && (t = c.ZP.getDisplayPremiumType(_.planId)), null == t)) return null;
-    let x = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
-        E = (null != _ ? c.ZP.getSkuIdForPlan(_.planId) : null) === u.Si.TIER_1;
+    let x = null != r ? c.ZP.getPremiumPlanItem(r) : null;
+    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
+    let _ = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
+        E = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
     return (
         (n = null != f ? f : b ? 'always-white' : 'text-default'),
         (0, i.jsxs)(l.Zbd, {
@@ -41,11 +41,11 @@ let h = (e) => {
                     children: E
                         ? g.intl.format(g.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
-                              onSubscriptionsClick: x
+                              onSubscriptionsClick: _
                           })
                         : g.intl.format(g.t.xHRgU1, {
                               subscriptionName: t,
-                              onSubscriptionsClick: x
+                              onSubscriptionsClick: _
                           })
                 })
             ]

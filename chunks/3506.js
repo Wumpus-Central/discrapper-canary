@@ -15,8 +15,8 @@ var r = n(512722),
     h = n(212632),
     f = n(444295),
     b = n(486016),
-    _ = n(809357),
-    x = n(371651),
+    x = n(809357),
+    _ = n(371651),
     E = n(624864),
     j = n(957148),
     C = n(556296),
@@ -56,7 +56,7 @@ function R(e) {
 }
 function D(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { oopEnabled: r, legacyEnabled: l } = (0, o.cj)([x.default], () => x.default.getGlobalEnabledStatus()),
+        { oopEnabled: r, legacyEnabled: l } = (0, o.cj)([_.default], () => _.default.getGlobalEnabledStatus()),
         {
             avatarSizeMode: O,
             displayNameMode: T,
@@ -73,7 +73,7 @@ function D(e) {
             textChatDisabled: E.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
         })),
         L = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
-        B = (0, _.Z)({ location: 'overlay_user_settings' }),
+        B = (0, x.Z)({ location: 'overlay_user_settings' }),
         M = (0, g.$1)(),
         U = P(A);
     return (

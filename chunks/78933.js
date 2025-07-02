@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(429467),
     f = n(526031),
     b = n(243778),
-    _ = n(440051),
-    x = n(734934),
+    x = n(440051),
+    _ = n(734934),
     E = n(300284),
     j = n(680295),
     C = n(785717),
@@ -97,9 +97,9 @@ function es(e) {
     let ep = (0, l.e7)([G.Z], () => G.Z.getStatus(t.id)),
         eh = U.Cr.useSetting(),
         ef = (0, Q.F)(eh),
-        { expiringStatusProfileFeedback: eb } = _.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
-        e_ = (0, l.e7)([F.Z], () => F.Z.hidePersonalInformation),
-        ex = (0, x.p)(),
+        { expiringStatusProfileFeedback: eb } = x.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
+        ex = (0, l.e7)([F.Z], () => F.Z.hidePersonalInformation),
+        e_ = (0, _.p)(),
         eE = U.Sb.useSetting(),
         ej = (0, Q.I)(ep),
         eC = (0, K.g)(n),
@@ -228,7 +228,7 @@ function es(e) {
                                     (0, i.jsx)(B.Z, {
                                         user: t,
                                         bio: null == ec ? void 0 : ec.bio,
-                                        hidePersonalInformation: e_,
+                                        hidePersonalInformation: ex,
                                         onClose: n
                                     }),
                                     (0, i.jsx)(y.Z, {
@@ -284,7 +284,7 @@ function es(e) {
                                                                     status: ep,
                                                                     size: 12
                                                                 }),
-                                                            hint: (ex || ep === $.Skl.DND) && (0, i.jsx)(o.owu, { size: 'xxs' }),
+                                                            hint: (e_ || ep === $.Skl.DND) && (0, i.jsx)(o.owu, { size: 'xxs' }),
                                                             renderSubmenu: s.tq
                                                                 ? void 0
                                                                 : (e) => {

@@ -15,8 +15,8 @@ var r = n(990547),
     h = n(782568),
     f = n(758182),
     b = n(49226),
-    _ = n(163379),
-    x = n(498646),
+    x = n(163379),
+    _ = n(498646),
     E = n(489968),
     j = n(803038),
     C = n(703288),
@@ -69,8 +69,8 @@ var r = n(990547),
     eh = n(675047),
     ef = n(177508),
     eb = n(956699),
-    e_ = n(54942),
-    ex = n(293389),
+    ex = n(54942),
+    e_ = n(293389),
     eE = n(88624),
     ej = n(387747),
     eC = n(389650),
@@ -116,12 +116,12 @@ let eJ = () => {
         let e = [];
         return (V.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
     },
-    e3 = () => {
+    e1 = () => {
         let e = e0(),
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(R.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(a.IGR, { text: eK.intl.string(eK.t.y2b7CA) }) : null;
     },
-    e1 = eD.Z,
+    e3 = eD.Z,
     e8 = (e) => {
         let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: j, impressionSource: N, numOfPendingFamilyRequests: R, isOverlaySupported: V, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e6, isKeywordFilteringEnabled: e2, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tg, isInputProfileCustom: tp, isGoreContentFilteringEnabled: th } = e;
         return Object.freeze({
@@ -270,7 +270,7 @@ let eJ = () => {
                 label: eK.intl.string(eK.t['vi7f+v']),
                 ariaLabel: eK.intl.string(eK.t['vi7f+v']),
                 element: L.Z,
-                newIndicator: (0, i.jsx)(e3, {}),
+                newIndicator: (0, i.jsx)(e1, {}),
                 newIndicatorDismissibleContentTypes: [...e0()],
                 notice: {
                     stores: [Y.Z, A.Z],
@@ -499,7 +499,7 @@ let eJ = () => {
                 searchableTitles: [eK.intl.string(eX.default.gntCQU)],
                 label: eK.intl.string(eX.default.gntCQU),
                 ariaLabel: eK.intl.string(eX.default.gntCQU),
-                element: e_.Z,
+                element: ex.Z,
                 badgeCount: R,
                 newIndicator: (0, i.jsx)(a.IGR, {
                     text: eK.intl.string(eK.t.y2b7CA),
@@ -1130,7 +1130,7 @@ let eJ = () => {
                 label: eK.intl.string(eq.default['7qZdOz']),
                 ariaLabel: eK.intl.string(eq.default['7qZdOz']),
                 element: E.Z,
-                predicate: () => x.C.getCurrentConfig({ location: 'SettingsRendererConfig' }, { autoTrackExposure: !1 }).enableGame,
+                predicate: () => _.C.getCurrentConfig({ location: 'SettingsRendererConfig' }, { autoTrackExposure: !1 }).enableGame,
                 icon: (0, i.jsx)('img', {
                     alt: '',
                     src: n(186542),
@@ -1407,7 +1407,7 @@ let eJ = () => {
                 section: ez.oAB.LINUX,
                 searchableTitles: [eK.intl.string(eK.t['7pPjTU'])],
                 label: eK.intl.string(eK.t['7pPjTU']),
-                element: e1,
+                element: e3,
                 predicate: () => X.isPlatformEmbedded && (0, X.isLinux)()
             },
             [eF.s6.STREAMER_MODE]: {
@@ -1532,7 +1532,7 @@ let eJ = () => {
                 section: ez.oAB.REGISTERED_GAMES,
                 searchableTitles: [eK.intl.string(eK.t.AVDyEh)],
                 label: eK.intl.string(eK.t.AVDyEh),
-                element: ex.Z,
+                element: e_.Z,
                 predicate: () => !e6 && (0, ek.Jw)()
             },
             [eF.s6.OVERLAY]: {
@@ -1544,7 +1544,7 @@ let eJ = () => {
             },
             [eF.s6.CHANGELOG]: {
                 section: 'changelog',
-                onClick: () => (0, _.Z)(!0),
+                onClick: () => (0, x.Z)(!0),
                 searchableTitles: [eK.intl.string(eK.t.LRmNAg)],
                 label: eK.intl.string(eK.t.LRmNAg)
             },

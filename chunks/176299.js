@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(821020),
     K = n(147341),
     q = n(82409),
-    Q = n(664608),
-    X = n(270759),
+    X = n(664608),
+    Q = n(270759),
     J = n(918701),
     $ = n(982168),
     ee = n(905423),
@@ -289,18 +289,18 @@ let eP = (0, u.Un)({
         };
     },
     eW = (e) => (0, r.jsx)(y.Z, eT({}, e)),
-    eY = () => (0, r.jsx)(X.Z, {}),
+    eY = () => (0, r.jsx)(Q.Z, {}),
     eK = () => (0, r.jsx)(F.Z, {}),
-    eq = () => (0, r.jsx)(Q.Z, {}),
-    eQ = (e) => {
+    eq = () => (0, r.jsx)(X.Z, {}),
+    eX = (e) => {
         let { match: t } = e;
         switch (t.params.feature) {
             case 'friends':
-                return (0, r.jsx)(X.Z, { initialSection: ey.pJs.ONLINE });
+                return (0, r.jsx)(Q.Z, { initialSection: ey.pJs.ONLINE });
             case 'addFriends':
-                return (0, r.jsx)(X.Z, { initialSection: ey.pJs.ADD_FRIEND });
+                return (0, r.jsx)(Q.Z, { initialSection: ey.pJs.ADD_FRIEND });
             case 'pendingFriends':
-                return (0, r.jsx)(X.Z, { initialSection: ey.pJs.PENDING });
+                return (0, r.jsx)(Q.Z, { initialSection: ey.pJs.PENDING });
             case 'sessionManagement':
                 return (0, r.jsx)(s.l_, { to: ey.Z5c.SETTINGS('sessions') });
             case 'connections':
@@ -334,12 +334,12 @@ let eP = (0, u.Un)({
                 return (0, r.jsx)(s.l_, { to: ey.Z5c.ME });
         }
     },
-    eX = (e) => {
+    eQ = (e) => {
         let t = e.location.pathname;
         return (0, r.jsx)(g.Z, {
             deepLinkType: eS.jE.FEATURES,
             path: t,
-            children: eQ(e)
+            children: eX(e)
         });
     };
 function eJ(e) {
@@ -673,13 +673,13 @@ function e0() {
                                             (0, r.jsx)(I.Z, {
                                                 path: ey.Z5c.GUILD_FEATURE(':feature', en.Hw.guildId()),
                                                 exact: !0,
-                                                render: eX,
+                                                render: eQ,
                                                 disableTrack: !0
                                             }),
                                             (0, r.jsx)(I.Z, {
                                                 path: ey.Z5c.FEATURE(':feature'),
                                                 exact: !0,
-                                                render: eX,
+                                                render: eQ,
                                                 disableTrack: !0
                                             })
                                         ]

@@ -14,12 +14,12 @@ var i = n(255367),
     h = n(474936),
     f = n(388032),
     b = n(583532),
-    _ = n(982404),
-    x = n(299156);
+    x = n(982404),
+    _ = n(299156);
 function E(e) {
     let { premiumSubscription: t, premiumType: n, onClose: E, confettiCanvas: j, userWasChurned: C = !1, userDiscountOffer: O } = e,
         S = (0, o.ZP)(),
-        v = (0, l.wj)(S) ? _ : x,
+        v = (0, l.wj)(S) ? x : _,
         T = r.useRef(null),
         [N, I] = r.useState(!1),
         y = (0, g._)(t, h.Xh.PREMIUM_MONTH_TIER_2, O),

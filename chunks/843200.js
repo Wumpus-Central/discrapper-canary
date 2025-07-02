@@ -42,7 +42,7 @@ function f(e) {
         {
             isClaimed: f,
             isVerified: b,
-            hasEmail: _
+            hasEmail: x
         } = (0, o.cj)([u.default], () => {
             let e = u.default.getCurrentUser();
             return (
@@ -54,7 +54,7 @@ function f(e) {
                 }
             );
         });
-    function x() {
+    function _() {
         (0, c.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('9343'), n.e('39809')]).then(n.bind(n, 642298));
             return (t) => (0, i.jsx)(e, h({}, t));
@@ -83,7 +83,7 @@ function f(e) {
                                   className: p.content,
                                   children: [
                                       f
-                                          ? _
+                                          ? x
                                               ? (0, i.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
@@ -92,7 +92,7 @@ function f(e) {
                                               : (0, i.jsx)(c.zxk, {
                                                     size: c.zxk.Sizes.MEDIUM,
                                                     color: c.zxk.Colors.BRAND,
-                                                    onClick: x,
+                                                    onClick: _,
                                                     children: g.intl.string(g.t.ydw5nZ)
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
@@ -110,14 +110,14 @@ function f(e) {
                                                     children: g.intl.string(g.t.fiNVio)
                                                 })
                                             }),
-                                      f && _
+                                      f && x
                                           ? (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
                                                 children: (0, i.jsx)(c.zxk, {
                                                     color: c.zxk.Colors.PRIMARY,
                                                     look: c.zxk.Looks.LINK,
-                                                    onClick: x,
+                                                    onClick: _,
                                                     children: g.intl.string(g.t.Vm8akJ)
                                                 })
                                             })

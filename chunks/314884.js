@@ -79,12 +79,12 @@ function g() {
 }
 function E() {
     let e = {};
-    for (let t of Object.values(_)) ((e[t.id] = t), (t.subscription = o.ZP.getSubscriptionById(t.subscriptionId)));
+    for (let t of Object.values(_)) ((e[t.id] = t), (t.subscription = o.Z.getSubscriptionById(t.subscriptionId)));
     _ = e;
 }
 class b extends (r = i.ZP.Store) {
     initialize() {
-        this.syncWith([o.ZP], E);
+        this.syncWith([o.Z], E);
     }
     get hasFetched() {
         return d;

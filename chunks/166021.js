@@ -28,12 +28,12 @@ let u = (e) => {
             g((e) => (f > p && e > f - p ? f - p : f <= p ? 0 : e));
         }, [f, p]));
     let b = m > 0,
-        _ = r.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
-        [x, E] = (0, o.bYB)(t.length, _);
+        x = r.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
+        [_, E] = (0, o.bYB)(t.length, x);
     return (
         r.useEffect(() => {
-            E(_);
-        }, [E, _]),
+            E(x);
+        }, [E, x]),
         (0, i.jsx)('div', {
             className: n,
             children: (0, i.jsxs)('div', {
@@ -57,7 +57,7 @@ let u = (e) => {
                         }),
                     (0, i.jsx)('div', {
                         className: d.cardInnerContainer,
-                        children: x.map((e, n) => {
+                        children: _.map((e, n) => {
                             var r, l;
                             let { x: o } = e;
                             return (0, i.jsx)(

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048));
+(n.d(t, { Z: () => _ }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -47,15 +47,15 @@ let f = "Make sure you're only uploading text files!",
             ]
         });
     },
-    _ = () => ({
+    x = () => ({
         id: (0, a.Z)(),
         name: 'New Profile Effect',
         config: { effects: [] }
     });
-function x() {
+function _() {
     let { profileEffects: e, upsertConfig: t } = (0, g.n6)(),
         [n, s] = r.useState(),
-        x = r.useRef(null),
+        _ = r.useRef(null),
         E = (0, o.Wu)([m.Z], () => m.Z.profileEffects),
         [j, C] = r.useState(''),
         O = r.useMemo(
@@ -131,7 +131,7 @@ function x() {
                                             children: 'Import Shared Config'
                                         }),
                                         (0, i.jsx)(d.Z, {
-                                            ref: x,
+                                            ref: _,
                                             onChange: v,
                                             multiple: !1
                                         })
@@ -139,7 +139,7 @@ function x() {
                                 }),
                                 (0, i.jsx)(c.zxk, {
                                     onClick: () => {
-                                        t(_());
+                                        t(x());
                                     },
                                     children: 'Create New Effect'
                                 })

@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(921944),
     f = n(526761),
     b = n(388032),
-    _ = n(170339);
-let x = (0, o.hQ)(),
+    x = n(170339);
+let _ = (0, o.hQ)(),
     E = r.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
             [E, j] = (0, c.US)([l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
@@ -83,23 +83,23 @@ let x = (0, o.hQ)(),
             (0, m.Z)(R, f.Y_.GUILD_TAG),
             (0, i.jsxs)(u.Z, {
                 title: b.intl.string(b.t.Pdd1nZ),
-                titleId: x,
+                titleId: _,
                 ref: R,
                 titleIcon:
                     E === l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&
                     (0, i.jsx)(a.IGR, {
                         text: b.intl.string(b.t.y2b7CA),
-                        className: _.newBadge
+                        className: x.newBadge
                     }),
                 children: [
                     (0, i.jsx)(a.Text, {
-                        className: _.subtitle,
+                        className: x.subtitle,
                         variant: 'text-sm/normal',
                         children: b.intl.string(b.t.mlZ6Jy)
                     }),
                     (0, i.jsx)(a.PhF, {
-                        className: _.select,
-                        optionClassName: _.selectPopout,
+                        className: x.select,
+                        optionClassName: x.selectPopout,
                         isSelected: y,
                         options: v,
                         select: I,

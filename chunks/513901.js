@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => _ });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -14,9 +14,9 @@ var i = n(255367),
     h = n(981631),
     f = n(474936),
     b = n(388032),
-    _ = n(482470);
-function x(e) {
-    let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: E = !1, withTutorial: j = !1, showBorder: C = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: S } = e,
+    x = n(482470);
+function _(e) {
+    let { user: t, guild: n, className: s, sectionTitle: _, forcedDivider: E = !1, withTutorial: j = !1, showBorder: C = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: S } = e,
         v = (0, m.Kg)(t, n),
         T = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: N } = (0, o.ZP)(),
@@ -43,22 +43,22 @@ function x(e) {
         forcedDivider: E,
         borderType: p.Y.PREMIUM,
         hasBackground: !0,
-        title: x,
+        title: _,
         showBorder: C,
         errors: y,
         className: s,
         children: (0, i.jsxs)('div', {
-            className: _.buttonsContainer,
+            className: x.buttonsContainer,
             children: [
                 (0, i.jsx)(R, {
                     size: a.zxk.Sizes.SMALL,
                     onClick: A,
-                    className: l()({ [_.buttonHighlighted]: j }),
+                    className: l()({ [x.buttonHighlighted]: j }),
                     children: b.intl.string(b.t['/dRfCQ'])
                 }),
                 (O || void 0 !== I ? null != I : null != v) &&
                     (0, i.jsx)(a.zxk, {
-                        className: _.removeButton,
+                        className: x.removeButton,
                         color: a.zxk.Colors.PRIMARY,
                         look: a.zxk.Looks.LINK,
                         size: a.zxk.Sizes.SMALL,

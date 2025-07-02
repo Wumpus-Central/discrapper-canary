@@ -49,7 +49,7 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
         return (i && (d = d.filter((e) => !e.hideOnNarrowScreen)), d);
     },
     p = (e) => {
-        let t = (0, i.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+        let t = (0, i.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
             n = null != t ? a.ZP.getPremiumPlanItem(t) : null,
             r = (null != n ? a.ZP.getSkuIdForPlan(n.planId) : null) === c.Si.TIER_2;
         return e

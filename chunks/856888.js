@@ -9,11 +9,11 @@ var i = n(255367),
     d = n(179867);
 function u(e) {
     let { onGoBack: t } = e,
-        n = (0, s.Wu)([a.ZP], () => {
+        n = (0, s.Wu)([a.Z], () => {
             var e, t;
             return null !=
                 (t =
-                    null == (e = a.ZP.getActiveApplicationSubscriptions())
+                    null == (e = a.Z.getActiveApplicationSubscriptions())
                         ? void 0
                         : e.slice().sort((e, t) => {
                               var n, i, r, s;

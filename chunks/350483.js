@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(392711),
@@ -28,10 +28,10 @@ function b(e, t) {
               }).map((e) => e.id))
     ];
 }
-let _ = s().throttle(function (e, t) {
+let x = s().throttle(function (e, t) {
     var r, s;
     let a,
-        { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: _ = () => !1, ensureChatIsVisible: x = () => !1, withVoiceChannels: E = !1 } = t,
+        { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: x = () => !1, ensureChatIsVisible: _ = () => !1, withVoiceChannels: E = !1 } = t,
         j = null != (r = o.Z.getState().guildId) ? r : h.ME,
         C = o.Z.getState().channelId,
         O = (function (e, t) {
@@ -46,8 +46,8 @@ let _ = s().throttle(function (e, t) {
         if (((a = v[T]), f(j)))
             for (; null != a && '' !== a; ) {
                 if ('string' == typeof a) {
-                    if (m(j, a)) return (0, p.K)(j, a, !1, x(j, a));
-                } else if ('object' == typeof a && _(a.resourceId, a.type))
+                    if (m(j, a)) return (0, p.K)(j, a, !1, _(j, a));
+                } else if ('object' == typeof a && x(a.resourceId, a.type))
                     return (
                         j !== d.Z.getGuildId() && (0, p.K)(j, null == (s = c.ZP.getDefaultChannel(j)) ? void 0 : s.id),
                         (0, l.ZDy)(async () => {

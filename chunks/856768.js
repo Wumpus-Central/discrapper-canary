@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => b,
-    q: () => _
+    q: () => x
 }),
     n(290780));
 var i = n(255367),
@@ -24,7 +24,7 @@ function b(e) {
         title: h.intl.string(h.t.ref7Ki),
         hideDivider: s,
         forcedDivider: !0,
-        children: (0, i.jsx)(_, {
+        children: (0, i.jsx)(x, {
             guildId: t,
             onChange: a,
             renderOptionSuffix: o,
@@ -32,15 +32,15 @@ function b(e) {
         })
     });
 }
-function _(e) {
+function x(e) {
     let { guildId: t, globalOption: n, onChange: s, renderOptionSuffix: l } = e,
         d = (0, a.e7)([p.Z], () => p.Z.showNotice()),
         b = (0, a.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
-        _ = (0, a.e7)([u.Z], () => u.Z.getGuilds()),
-        x = r.useMemo(() => {
+        x = (0, a.e7)([u.Z], () => u.Z.getGuilds()),
+        _ = r.useMemo(() => {
             let e = b
                 .map((e) => {
-                    let t = _[e];
+                    let t = x[e];
                     return null == t
                         ? null
                         : {
@@ -50,7 +50,7 @@ function _(e) {
                 })
                 .filter(g.lm);
             return (null != n && e.unshift(n), e);
-        }, [b, _, n]),
+        }, [b, x, n]),
         E = r.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === (null == n ? void 0 : n.label) && (null == e ? void 0 : e.value) === (null == n ? void 0 : n.value);
@@ -58,22 +58,22 @@ function _(e) {
                     ? null
                     : (0, i.jsx)(c.Z, {
                           className: f.guildSelectOptionIcon,
-                          guild: _[e.value],
+                          guild: x[e.value],
                           size: c.Z.Sizes.SMOL,
                           active: !0
                       });
             },
-            [_, n]
+            [x, n]
         );
     return (0, i.jsx)(o.VcW, {
         isDisabled: d,
         onChange: (e) => {
             if ('' === e || e === (null == n ? void 0 : n.value)) return void s(null);
-            let t = _[e];
+            let t = x[e];
             null != t && s(t);
         },
         value: t,
-        options: x,
+        options: _,
         renderOptionPrefix: E,
         renderOptionSuffix: l,
         placeholder: h.intl.string(h.t['kMgj+f'])

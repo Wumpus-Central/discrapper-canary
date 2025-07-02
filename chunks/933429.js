@@ -536,7 +536,7 @@ function ez() {
     ex = null;
     let i = eu.default.getCurrentUser();
     if (null == i) return !1;
-    let r = eI.ZP.getPremiumSubscription(),
+    let r = eI.Z.getPremiumSubscription(),
         l = eE.Z.isLocalizedPromoEnabled,
         o = eo.Z.getGuildId(),
         s = el.Z.getVoiceChannelId(),
@@ -613,7 +613,7 @@ function eY() {
 }
 class eK extends (i = o.ZP.Store) {
     initialize() {
-        (this.syncWith([ec.Z, ei.Z, J.Z, eo.Z, k.Z, ep.Z, Y.Z, X.Z, W.Z, R.Z, w.Z, H.Z], ez), this.waitFor(eu.default, es.Z, $.Z, Q.ZP, er.Z, ee.Z, ea.Z, O.Z, eo.Z, ed.Z, V.Z, S.ZP, ei.Z, eS.Z, eN.Z, eT.Z, et.Z, eI.ZP, ef.Z, J.Z, eh.Z, en.Z, k.Z, eC.Z, ep.Z, X.Z, b.Z, I.Z, j.Z, w.Z, H.Z));
+        (this.syncWith([ec.Z, ei.Z, J.Z, eo.Z, k.Z, ep.Z, Y.Z, X.Z, W.Z, R.Z, w.Z, H.Z], ez), this.waitFor(eu.default, es.Z, $.Z, Q.ZP, er.Z, ee.Z, ea.Z, O.Z, eo.Z, ed.Z, V.Z, S.ZP, ei.Z, eS.Z, eN.Z, eT.Z, et.Z, eI.Z, ef.Z, J.Z, eh.Z, en.Z, k.Z, eC.Z, ep.Z, X.Z, b.Z, I.Z, j.Z, w.Z, H.Z));
     }
     hasNotice() {
         return null != ex && null != ex.type;

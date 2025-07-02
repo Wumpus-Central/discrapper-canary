@@ -6,6 +6,7 @@
     J0: () => N,
     K8: () => P,
     RE: () => O,
+    Vh: () => M,
     Vt: () => L,
     ZS: () => f,
     a$: () => R,
@@ -18,6 +19,7 @@
     o8: () => D,
     pv: () => A,
     rL: () => _,
+    xg: () => j,
     yf: () => m
 }),
     n(388685),
@@ -164,3 +166,7 @@ let L = {
     },
     x = new Set(Object.values(L)),
     k = (e) => x.has(e);
+var M = (function (e) {
+    return ((e.AVATAR_DECORATIONS = 'avatarDecorations'), (e.PROFILE_EFFECTS = 'profileEffects'), (e.NAMEPLATES = 'nameplates'), (e.BUNDLES = 'bundles'), (e.ORBS_ELIGIBLE = 'orbsEligible'), e);
+})({});
+let j = ['avatarDecorations', 'profileEffects', 'nameplates', 'bundles', 'orbsEligible'];

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -17,18 +17,18 @@ let h = (0, c.hQ)(),
         type: m.d4z.DM
     }),
     b = (0, c.hQ)();
-function _(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: _, currentBio: x, disabled: E = !1 } = e,
-        [j, C] = r.useState(null != d ? d : x),
+function x(e) {
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: x, currentBio: _, disabled: E = !1 } = e,
+        [j, C] = r.useState(null != d ? d : _),
         [O, S] = r.useState((0, a.JM)(j)),
         v = r.useRef(!1);
     return (
         r.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, a.JM)(x);
-                (C(x), S(e));
+                let e = (0, a.JM)(_);
+                (C(_), S(e));
             }
-        }, [d, x]),
+        }, [d, _]),
         (0, i.jsxs)(u.Z, {
             title: t,
             titleId: h,
@@ -45,7 +45,7 @@ function _(e) {
                     onChange: function (e, t, n) {
                         t !== j && (C(t), S(n), c(t));
                     },
-                    placeholder: _,
+                    placeholder: x,
                     channel: f,
                     textValue: j,
                     richValue: O,

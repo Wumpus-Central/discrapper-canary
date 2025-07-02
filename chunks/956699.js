@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(661111),
     f = n(179658),
     b = n(491428),
-    _ = n(225433),
-    x = n(484614),
+    x = n(225433),
+    _ = n(484614),
     E = n(615287),
     j = n(386506),
     C = n(865427),
@@ -116,7 +116,7 @@ class er extends r.Component {
             direction: v.Z.Direction.VERTICAL,
             className: l()(K.buildOverrideGroup, X.marginBottom20, q.card, K.row),
             children: [
-                (0, i.jsx)(_.Z, {
+                (0, i.jsx)(x.Z, {
                     className: l()(K.removeBuildOverride, { [K.removeBuildOverrideDisabled]: r }),
                     onClick: r ? void 0 : this.handleRemoveBuildOverride
                 }),
@@ -647,7 +647,7 @@ class el extends r.Component {
                             (0, i.jsx)(v.Z.Child, {
                                 wrap: !0,
                                 basis: '75%',
-                                children: (0, i.jsx)(x.Z, { value: n })
+                                children: (0, i.jsx)(_.Z, { value: n })
                             }),
                             (0, i.jsx)(g.zxk, {
                                 onClick: this.handleGenerateLink,

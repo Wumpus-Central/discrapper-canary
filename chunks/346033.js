@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(433811),
     f = n(214852),
     b = n(78839),
-    _ = n(626135),
-    x = n(74538),
+    x = n(626135),
+    _ = n(74538),
     E = n(367074),
     j = n(140465),
     C = n(286961),
@@ -54,9 +54,9 @@ let G = (e) => {
             [W, K] = r.useState(!1),
             [q, X] = r.useState(!1),
             [Q, J] = r.useState(!1),
-            $ = (0, a.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
-            ee = null != $ ? (0, x.Af)($) : null,
-            et = null != ee ? x.ZP.getSkuIdForPlan(ee.planId) : null,
+            $ = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
+            ee = null != $ ? (0, _.Af)($) : null,
+            et = null != ee ? _.ZP.getSkuIdForPlan(ee.planId) : null,
             en = null !== et && et !== k.Si.TIER_2 ? k.Si.TIER_2 : null,
             ei = (0, O.n)(),
             er = null != ei,
@@ -179,7 +179,7 @@ let G = (e) => {
                 (0, i.jsx)(o.$, {
                     innerRef: P,
                     onChange: (e) => {
-                        e && !q && (_.default.track(L.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }), X(!0));
+                        e && !q && (x.default.track(L.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }), X(!0));
                     },
                     children: (0, i.jsx)('div', {
                         ref: P,

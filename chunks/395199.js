@@ -66,7 +66,7 @@ function C(e) {
 }
 let v = (e) => {
     let { canceledCount: t } = e,
-        l = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription());
+        l = (0, a.e7)([x.Z], () => x.Z.getPremiumTypeSubscription());
     return null == l
         ? null
         : (0, r.jsxs)('div', {

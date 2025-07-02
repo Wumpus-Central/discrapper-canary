@@ -11,7 +11,7 @@ var i = n(255367),
     m = n(132709);
 function g(e) {
     var t, n, g, p;
-    let { transitionState: h, onSuccess: f, onClose: b, requirementsUpdated: _, noSkip: x = !1 } = e,
+    let { transitionState: h, onSuccess: f, onClose: b, requirementsUpdated: x, noSkip: _ = !1 } = e,
         [E, j] = r.useState(''),
         [C, O] = r.useState(''),
         [S, v] = r.useState(''),
@@ -59,9 +59,9 @@ function g(e) {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: m.subtitle,
-                            children: _ ? u.intl.string(u.t['37iHbW']) : u.intl.string(u.t.iOurYm)
+                            children: x ? u.intl.string(u.t['37iHbW']) : u.intl.string(u.t.iOurYm)
                         }),
-                        !0 !== x &&
+                        !0 !== _ &&
                             (0, i.jsx)(l.olH, {
                                 onClick: b,
                                 className: m.modalCloseButton
@@ -115,7 +115,7 @@ function g(e) {
                                     submitting: P === d.QZA.SUBMITTING,
                                     children: u.intl.string(u.t.i4jeWV)
                                 }),
-                                !0 !== x &&
+                                !0 !== _ &&
                                     (0, i.jsx)(l.zxk, {
                                         className: m.cancel,
                                         look: l.zxk.Looks.LINK,

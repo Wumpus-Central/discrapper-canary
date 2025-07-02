@@ -732,7 +732,7 @@ async function ec() {
     });
     try {
         let e = I.Zx.ADD_PERKS_IF_DETECTED,
-            t = m.ZP.getLastLazyPerkSync();
+            t = m.Z.getLastLazyPerkSync();
         (null == t || s()().diff(t, 'hours') >= 1) && ((e = I.Zx.FULL_RESYNC), (t = s()()));
         let n = await l.tn.get({
             url: v.ANM.BILLING_SUBSCRIPTIONS,

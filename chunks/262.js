@@ -93,8 +93,8 @@ function d(e) {
         { content: a, timestamp: d, messageReference: p } = i,
         m = (0, o.ZP)(i),
         f = t(m),
-        _ = (null != a ? a : '').split(' ').slice(0, -1).join(' '),
-        g = c.intl.format(c.t['47CZc3'], {
+        g = (null != a ? a : '').split(' ').slice(0, -1).join(' '),
+        _ = c.intl.format(c.t['47CZc3'], {
             username: m.nick,
             usernameHook: f,
             webhookName: a,
@@ -103,7 +103,7 @@ function d(e) {
                     u,
                     {
                         messageReference: p,
-                        guildName: _,
+                        guildName: g,
                         children: e
                     },
                     t
@@ -113,6 +113,6 @@ function d(e) {
         icon: n(570111),
         timestamp: d,
         compact: l,
-        children: g
+        children: _
     });
 }

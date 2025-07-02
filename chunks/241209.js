@@ -14,7 +14,7 @@ var i,
     h = n(532901),
     f = n(204227),
     b = n(283574);
-function _(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function _(e, t, n) {
         e
     );
 }
-function x(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -38,7 +38,7 @@ function x(e) {
                 })
             )),
             i.forEach(function (t) {
-                _(e, t, n[t]);
+                x(e, t, n[t]);
             }));
     }
     return e;
@@ -65,8 +65,8 @@ let j = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ?
 function C(e) {
     return 'string' == typeof e.content ? e.content : v(e.content);
 }
-let O = E(x({}, d().defaultRules), {
-        heading: E(x({}, d().defaultRules.heading), {
+let O = E(_({}, d().defaultRules), {
+        heading: E(_({}, d().defaultRules.heading), {
             react(e, t, n) {
                 let i = 'h'.concat(e.level);
                 return (0, s.jsx)(
@@ -79,7 +79,7 @@ let O = E(x({}, d().defaultRules), {
                 );
             }
         }),
-        paragraph: E(x({}, d().defaultRules.paragraph), {
+        paragraph: E(_({}, d().defaultRules.paragraph), {
             react: (e, t, n) =>
                 (0, s.jsx)(
                     'div',
@@ -90,12 +90,12 @@ let O = E(x({}, d().defaultRules), {
                     n.key
                 )
         }),
-        strong: E(x({}, d().defaultRules.strong), { order: 6 }),
-        em: E(x({}, d().defaultRules.em), { order: 6 }),
-        u: E(x({}, d().defaultRules.u), { order: 5 }),
-        del: E(x({}, d().defaultRules.del), { order: 6 }),
-        link: E(x({}, g.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
-        blockQuote: E(x({}, d().defaultRules.blockQuote), {
+        strong: E(_({}, d().defaultRules.strong), { order: 6 }),
+        em: E(_({}, d().defaultRules.em), { order: 6 }),
+        u: E(_({}, d().defaultRules.u), { order: 5 }),
+        del: E(_({}, d().defaultRules.del), { order: 6 }),
+        link: E(_({}, g.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
+        blockQuote: E(_({}, d().defaultRules.blockQuote), {
             react: (e, t, n) =>
                 (0, s.jsx)(
                     'blockquote',
@@ -106,7 +106,7 @@ let O = E(x({}, d().defaultRules), {
                     n.key
                 )
         }),
-        image: E(x({}, d().defaultRules.image), {
+        image: E(_({}, d().defaultRules.image), {
             order: 6,
             match(e, t, n) {
                 let i = d().defaultRules.image;
@@ -119,7 +119,7 @@ let O = E(x({}, d().defaultRules), {
                 return !1;
             }
         }),
-        inlineCode: E(x({}, p.Z.RULES.inlineCode), {
+        inlineCode: E(_({}, p.Z.RULES.inlineCode), {
             order: 6,
             react: (e, t, n) =>
                 (0, s.jsx)(
@@ -131,7 +131,7 @@ let O = E(x({}, d().defaultRules), {
                     n.key
                 )
         }),
-        codeBlock: E(x({}, d().defaultRules.codeBlock), {
+        codeBlock: E(_({}, d().defaultRules.codeBlock), {
             react(e, t, i) {
                 let r = () =>
                     (0, s.jsx)(
@@ -179,15 +179,15 @@ let O = E(x({}, d().defaultRules), {
 class T extends (r = l.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: i, output: r } = this.props,
-            l = r(i(''.concat(t, '\n\n'), x({ inline: !1 }, n)));
+            l = r(i(''.concat(t, '\n\n'), _({ inline: !1 }, n)));
         return (0, s.jsx)('div', {
             className: o()(f.markdown, e),
             children: l
         });
     }
 }
-(_(T, 'rules', O),
-    _(T, 'defaultProps', {
+(x(T, 'rules', O),
+    x(T, 'defaultProps', {
         parser: S,
         output: v
     }));

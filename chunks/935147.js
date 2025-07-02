@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(175756),
     f = n(104494),
     b = n(639119),
-    _ = n(402567),
-    x = n(629654),
+    x = n(402567),
+    _ = n(629654),
     E = n(53691),
     j = n(165583),
     C = n(267717),
@@ -97,7 +97,7 @@ function G(e) {
             );
         }),
         $ = (0, h.Z)(Q),
-        { preset: ee, onShuffle: et } = (0, _.Z)(),
+        { preset: ee, onShuffle: et } = (0, x.Z)(),
         en = r.useRef(null);
     (0, v.Z)(en, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ei, newestAnalyticsLocation: er, sourceAnalyticsLocations: es } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
@@ -154,7 +154,7 @@ function G(e) {
                           }),
                           profilePreview: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(x.Z, {
+                                  (0, i.jsx)(_.Z, {
                                       preset: ee,
                                       onShuffle: et
                                   }),

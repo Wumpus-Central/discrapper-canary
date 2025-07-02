@@ -22,23 +22,23 @@ var r = t(120356),
     T = t(840052);
 let O = (e) => {
     var n, t;
-    let { transitionState: r, onClose: O, displayProfile: P } = e,
-        { analyticsLocations: j } = (0, s.ZP)(d.Z.TIERED_TENURE_BADGES_MODAL),
-        h = (0, o.Dt)(),
-        S = Object.values(E.vK),
-        M = (0, _.SI)(null == P ? void 0 : P.userId),
+    let { transitionState: r, onClose: O, displayProfile: j } = e,
+        { analyticsLocations: h } = (0, s.ZP)(d.Z.TIERED_TENURE_BADGES_MODAL),
+        S = (0, o.Dt)(),
+        M = Object.values(E.vK),
+        P = (0, _.SI)(null == j ? void 0 : j.userId),
         R = (0, _.Rw)(),
         U = m.default.getCurrentUser(),
-        I = null != (t = (0, _.a1)(null != (n = null == P ? void 0 : P.userId) ? n : null == U ? void 0 : U.id)) ? t : new Date(),
+        I = null != (t = (0, _.a1)(null != (n = null == j ? void 0 : j.userId) ? n : null == U ? void 0 : U.id)) ? t : new Date(),
         y = (0, g.yd)(null == U ? void 0 : U.premiumType, E.p9.TIER_2),
-        Z = S.map((e) => {
+        Z = M.map((e) => {
             let { id: n, nameUnformatted: t, tenureReqNumMonths: r } = e,
                 u = N.intl.string(t),
                 d = (0, p.J)(n),
                 s = (0, f.q)(n, r),
-                o = null == P,
+                o = null == j,
                 c = o && (null == R ? void 0 : R.id) === n,
-                m = !o && (null == M ? void 0 : M.id) === n,
+                m = !o && (null == P ? void 0 : P.id) === n,
                 g = c && (null == R ? void 0 : R.status) === _.Vq.EARNED,
                 v = c && (null == R ? void 0 : R.status) === _.Vq.UPCOMING,
                 b = m || g;
@@ -88,14 +88,14 @@ let O = (e) => {
         B = () => {
             ((0, c.uL)(x.Z5c.APPLICATION_STORE, {
                 source: d.Z.TIERED_TENURE_BADGES_MODAL,
-                sourceLocationStack: j
+                sourceLocationStack: h
             }),
                 null == O || O());
         },
         { enabled: A } = b.$.useExperiment({ location: 'evolving_tenure_badge_modal_web' }, { autoTrackExposure: !1 });
     return (0, l.jsxs)(u.Y0X, {
         transitionState: r,
-        'aria-labelledby': h,
+        'aria-labelledby': S,
         className: a()(T.container, 'theme-dark'),
         parentComponent: 'EvolvingTenureBadgeModal',
         children: [
@@ -123,8 +123,8 @@ let O = (e) => {
                                       className: T.badgeList,
                                       children: Z
                                   }),
-                                  null != P &&
-                                      P.userId !== (null == U ? void 0 : U.id) &&
+                                  null != j &&
+                                      j.userId !== (null == U ? void 0 : U.id) &&
                                       (0, l.jsx)(u.gtL, {
                                           className: T.learnMoreButton,
                                           onClick: B,

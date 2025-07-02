@@ -43,13 +43,13 @@ function p() {
             }
             (g && (0, u.b9)(), h(!1));
         }, [null == t ? void 0 : t.id]),
-        _ = r.useCallback(() => {
+        x = r.useCallback(() => {
             (0, u.W3)();
         }, []);
     return (0, i.jsx)(l.Z, {
         submitting: p,
         onSave: b,
-        onReset: _,
+        onReset: x,
         disabled: e,
         errorMessage: null != f ? f : void 0
     });

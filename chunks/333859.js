@@ -15,8 +15,8 @@ var r = n(442837),
     h = n(981631),
     f = n(474936),
     b = n(388032),
-    _ = n(614467);
-let x = () => {
+    x = n(614467);
+let _ = () => {
         ((0, m.XO)(m.wh.APP_ICON), (0, l.xf)());
     },
     E = () => {
@@ -31,23 +31,23 @@ let x = () => {
                     });
             }),
             (0, i.jsxs)('div', {
-                className: _.selectionGroup,
+                className: x.selectionGroup,
                 children: [
                     (0, i.jsx)(u.Z, {
                         disabled: t,
                         renderCTAButtons: () =>
                             (0, i.jsxs)('div', {
-                                className: _.tryItOutButtons,
+                                className: x.tryItOutButtons,
                                 children: [
                                     (0, i.jsx)(s.zxk, {
                                         size: s.zxk.Sizes.MEDIUM,
                                         color: t ? s.zxk.Colors.PRIMARY : s.zxk.Colors.BRAND,
-                                        onClick: () => x(),
+                                        onClick: () => _(),
                                         children: b.intl.string(b.t['hb/wEx'])
                                     }),
                                     t
                                         ? (0, i.jsx)(g.Z, {
-                                              className: _.tryItOutButton,
+                                              className: x.tryItOutButton,
                                               showGradient: !1,
                                               subscriptionTier: f.Si.TIER_2,
                                               textOptions: { textOverride: b.intl.string(b.t.mr4K7O) }
@@ -56,7 +56,7 @@ let x = () => {
                                 ]
                             })
                     }),
-                    (0, i.jsx)(s.$i$, { className: _.divider })
+                    (0, i.jsx)(s.$i$, { className: x.divider })
                 ]
             })
         );

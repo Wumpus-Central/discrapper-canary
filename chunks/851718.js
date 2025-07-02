@@ -58,10 +58,10 @@ function p(e) {
         b = () => {
             h({ route: c.j.HOME });
         },
-        _ = (e) => {
+        x = (e) => {
             (h(m({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.intl.string(u.t.VFqtkJ), b));
         },
-        [x, E] = r.useState({});
+        [_, E] = r.useState({});
     r.useEffect(() => {
         for (let n of t) {
             var e;
@@ -88,8 +88,8 @@ function p(e) {
                         o.Z,
                         {
                             subscription: e,
-                            navigateToSwitchPlan: _,
-                            loadingState: C ? o.G.LOADING : null != (t = x[e.id]) ? t : o.G.LOADING
+                            navigateToSwitchPlan: x,
+                            loadingState: C ? o.G.LOADING : null != (t = _[e.id]) ? t : o.G.LOADING
                         },
                         e.id
                     );

@@ -77,10 +77,10 @@ function p(e, t) {
 }
 function h(e) {
     var { id: t, label: n, sublabel: c, icon: h, hint: f, renderSubmenu: b } = e,
-        _ = p(e, ['id', 'label', 'sublabel', 'icon', 'hint', 'renderSubmenu']);
-    let x = (0, l.JA)(t),
-        { onFocus: E } = x,
-        j = p(x, ['onFocus']),
+        x = p(e, ['id', 'label', 'sublabel', 'icon', 'hint', 'renderSubmenu']);
+    let _ = (0, l.JA)(t),
+        { onFocus: E } = _,
+        j = p(_, ['onFocus']),
         { id: C } = (0, l.f$)(),
         O = r.useRef(null),
         [S, v] = r.useState(!1),
@@ -94,7 +94,7 @@ function h(e) {
     let N = (e) =>
         (0, i.jsxs)(
             d.kF,
-            g(m({}, e, j, _), {
+            g(m({}, e, j, x), {
                 ref: O,
                 role: 'button',
                 look: o.zxk.Looks.BLANK,

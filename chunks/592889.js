@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(975298),
     f = n(600164),
     b = n(210887),
-    _ = n(301766),
-    x = n(509545),
+    x = n(301766),
+    _ = n(509545),
     E = n(74538),
     j = n(937615),
     C = n(474936),
@@ -25,7 +25,7 @@ function v(e) {
     let { subscription: t, renewalMutations: n, transitionState: r, onClose: s, analyticsLocation: l } = e,
         a = (0, c.e7)([b.Z], () => b.Z.theme),
         { analyticsLocations: h } = (0, p.ZP)(g.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL),
-        C = x.Z.get(t.planId);
+        C = _.Z.get(t.planId);
     o()(null != C, 'Missing subscriptionPlan');
     let v = (0, E.aS)(t.planId, !1, !1, {
             paymentSourceId: t.paymentSourceId,
@@ -64,7 +64,7 @@ function v(e) {
             }),
             (0, i.jsx)(u.hzk, {
                 className: S.modalBody,
-                children: (0, _.Q0)(t.planId)
+                children: (0, x.Q0)(t.planId)
                     ? O.intl.format(O.t.GMp54O, {
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
                           existingRate: T

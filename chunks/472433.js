@@ -1,28 +1,28 @@
 t.a(e, async function (e, r) {
     try {
-        t.d(n, { o: () => d });
+        t.d(n, { o: () => u });
         var l = t(255367),
-            i = t(73800),
-            c = t(31675),
+            c = t(73800),
+            i = t(269755),
             o = t(95398),
-            u = t(488968),
-            a = e([c]);
-        function d(e) {
+            a = t(488968),
+            s = e([i]);
+        function u(e) {
             let { children: n, node: t } = e,
-                r = i.useMemo(() => Array.from((0, c.h)([t])).some((e) => 'link' === e.type), [t]),
-                a = (0, u.d)();
+                r = c.useMemo(() => Array.from((0, i.h)([t])).some((e) => 'link' === e.type), [t]),
+                s = (0, a.d)();
             return (
-                i.useEffect(() => {
+                c.useEffect(() => {
                     var e;
-                    null == a || null == (e = a.setHasSpoilerEmbeds) || e.call(a, r);
-                }, [a, r]),
+                    null == s || null == (e = s.setHasSpoilerEmbeds) || e.call(s, r);
+                }, [s, r]),
                 (0, l.jsx)(o.ZP, {
                     type: o.ZP.Types.TEXT,
                     children: () => n
                 })
             );
         }
-        ((c = (a.then ? (await a)() : a)[0]), r());
+        ((i = (s.then ? (await s)() : s)[0]), r());
     } catch (e) {
         r(e);
     }

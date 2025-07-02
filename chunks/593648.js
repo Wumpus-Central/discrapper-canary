@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(419363),
     f = n(761781),
     b = n(818083),
-    _ = n(688465),
-    x = n(890022),
+    x = n(688465),
+    _ = n(890022),
     E = n(688907),
     j = n(487419),
     C = n(197344),
@@ -298,7 +298,7 @@ function J() {
                   (0, i.jsxs)(u.X6q, {
                       variant: 'heading-lg/semibold',
                       className: l()(z.titleWithBeta, Y.marginBottom20),
-                      children: [H.intl.string(H.t.D9yVAA), (0, i.jsx)(_.Z, {})]
+                      children: [H.intl.string(H.t.D9yVAA), (0, i.jsx)(x.Z, {})]
                   }),
                   (0, i.jsx)(u.R94, {
                       type: u.geA.DESCRIPTION,
@@ -661,7 +661,7 @@ function es() {
     return (0, i.jsx)(er, q(K({}, e), { afkTimeout: B.CM.useSetting() }));
 }
 function el() {
-    let e = (0, x._x)('notification_settings'),
+    let e = (0, _._x)('notification_settings'),
         t = (0, E.BH)(),
         n = (0, E.nC)(),
         r = (0, c.e7)([f.Z], () => f.Z.currentUserApplicationIds.size > 0);

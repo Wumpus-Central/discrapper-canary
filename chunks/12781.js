@@ -1,70 +1,70 @@
 t.a(e, async function (e, r) {
     try {
-        t.d(n, { d: () => _ });
+        t.d(n, { d: () => f });
         var l = t(255367);
         t(73800);
-        var i = t(926302),
-            c = t(442837),
+        var c = t(926302),
+            i = t(442837),
             o = t(339085),
-            u = t(633302),
-            a = t(590956),
-            d = t(488968),
-            s = t(176354),
-            f = e([i]);
-        function _(e) {
+            a = t(633302),
+            s = t(590956),
+            u = t(488968),
+            d = t(176354),
+            h = e([c]);
+        function f(e) {
             let { value: n, type: t } = e,
-                r = (0, i.Kq)(),
-                c = 1 === r.length && 'paragraph' === r[0].type && 1 === r[0].value.length && 'emoji' === r[0].value[0].type;
+                r = (0, c.Kq)(),
+                i = 1 === r.length && 'paragraph' === r[0].type && 1 === r[0].value.length && 'emoji' === r[0].value[0].type;
             switch (t) {
                 case 'unicode':
-                    return (0, l.jsx)(h, {
+                    return (0, l.jsx)(j, {
                         value: n,
-                        jumboable: c
+                        jumboable: i
                     });
                 case 'custom':
-                    return (0, l.jsx)(b, {
+                    return (0, l.jsx)(m, {
                         value: n,
-                        jumboable: c
+                        jumboable: i
                     });
             }
         }
-        function h(e) {
+        function j(e) {
             let { value: n, jumboable: t } = e,
-                r = s.ZP.getURL(n),
-                i = u.ZP.convertSurrogateToName(n),
-                c = (0, d.d)();
-            return (0, l.jsx)(a.c, {
+                r = d.ZP.getURL(n),
+                c = a.ZP.convertSurrogateToName(n),
+                i = (0, u.d)();
+            return (0, l.jsx)(s.c, {
                 node: {
-                    name: i,
+                    name: c,
                     src: r,
                     jumboable: t
                 },
-                channelId: null == c ? void 0 : c.channelId,
-                messageId: null == c ? void 0 : c.messageId
+                channelId: null == i ? void 0 : i.channelId,
+                messageId: null == i ? void 0 : i.messageId
             });
         }
-        function b(e) {
+        function m(e) {
             var n;
             let { value: t, jumboable: r } = e,
-                i = (0, d.d)(),
-                u = null == i ? void 0 : i.guildId,
-                s = (0, c.e7)([o.ZP], () => o.ZP.getDisambiguatedEmojiContext(u).getById(t.id), [u, t.id]),
-                f = null != (n = null == s ? void 0 : s.name) ? n : t.name;
+                c = (0, u.d)(),
+                a = null == c ? void 0 : c.guildId,
+                d = (0, i.e7)([o.ZP], () => o.ZP.getDisambiguatedEmojiContext(a).getById(t.id), [a, t.id]),
+                h = null != (n = null == d ? void 0 : d.name) ? n : t.name;
             return (
-                null != s && s.require_colons && (f = ':'.concat(s.name, ':')),
-                (0, l.jsx)(a.Y, {
+                null != d && d.require_colons && (h = ':'.concat(d.name, ':')),
+                (0, l.jsx)(s.Y, {
                     node: {
-                        name: f,
+                        name: h,
                         animated: t.animated,
                         emojiId: t.id,
                         jumboable: r
                     },
-                    channelId: null == i ? void 0 : i.channelId,
-                    messageId: null == i ? void 0 : i.messageId
+                    channelId: null == c ? void 0 : c.channelId,
+                    messageId: null == c ? void 0 : c.messageId
                 })
             );
         }
-        ((i = (f.then ? (await f)() : f)[0]), r());
+        ((c = (h.then ? (await h)() : h)[0]), r());
     } catch (e) {
         r(e);
     }

@@ -57,7 +57,7 @@ async function f() {
             oldFormErrors: !0,
             rejectWithError: !1
         })
-    ).body.map((e) => s.Z.createFromServer(e, l.ZP.getSubscriptionById(e.subscription_id)));
+    ).body.map((e) => s.Z.createFromServer(e, l.Z.getSubscriptionById(e.subscription_id)));
     return (
         i.Z.dispatch({
             type: 'GUILD_BOOST_SLOTS_FETCH_SUCCESS',
@@ -129,7 +129,7 @@ async function h(e) {
             oldFormErrors: !0,
             rejectWithError: !0
         }),
-        n = s.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
+        n = s.Z.createFromServer(t.body, l.Z.getSubscriptionById(t.body.subscription_id));
     return (
         i.Z.dispatch({
             type: 'GUILD_BOOST_SLOT_UPDATE_SUCCESS',
@@ -144,7 +144,7 @@ async function m(e) {
             oldFormErrors: !0,
             rejectWithError: !0
         }),
-        n = s.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
+        n = s.Z.createFromServer(t.body, l.Z.getSubscriptionById(t.body.subscription_id));
     return (
         i.Z.dispatch({
             type: 'GUILD_BOOST_SLOT_UPDATE_SUCCESS',

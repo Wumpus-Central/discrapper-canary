@@ -13,7 +13,7 @@ var r = n(442837),
 function p(e) {
     let { subscriptionTier: t, buttonTextOverride: n, defaultTextOverride: p } = e,
         m = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
-        g = (0, r.e7)([s.ZP], () => s.ZP.getPremiumTypeSubscription()),
+        g = (0, r.e7)([s.Z], () => s.Z.getPremiumTypeSubscription()),
         { fractionalState: E } = (0, i.Z)({ forceFetch: !1 }),
         b = (0, r.e7)([c.Z], () => c.Z.getPremiumTypeOverride()),
         y = null != p ? p : _.intl.string(_.t['2pG5GR']),

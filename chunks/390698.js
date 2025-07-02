@@ -2,14 +2,14 @@ n.d(t, { U: () => c });
 var r = n(255367);
 n(73800);
 var l = n(120356),
-    a = n.n(l),
-    i = n(481060),
+    i = n.n(l),
+    a = n(481060),
     o = n(388032),
     s = n(44615);
 let c = (e) => {
     let { className: t, isPartiallyPurchased: n } = e;
     return n
-        ? (0, r.jsx)(i.ua7, {
+        ? (0, r.jsx)(a.ua7, {
               tooltipClassName: s.partiallyOwnedDisclaimer,
               position: 'top',
               align: 'left',
@@ -42,19 +42,19 @@ let c = (e) => {
                                   }));
                           }
                           return e;
-                      })({ className: a()(s.partialOwnStateContainer, t) }, e)),
+                      })({ className: i()(s.partialOwnStateContainer, t) }, e)),
                       (l = l =
                           {
                               children: [
                                   (0, r.jsx)('span', {
                                       className: s.iconWrapper,
-                                      children: (0, r.jsx)(i.d3s, {
+                                      children: (0, r.jsx)(a.d3s, {
                                           size: 'md',
                                           color: 'currentColor',
                                           className: s.infoIcon
                                       })
                                   }),
-                                  (0, r.jsx)(i.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       variant: 'text-md/semibold',
                                       children: o.intl.string(o.t.BEjTio)
                                   })
@@ -76,7 +76,7 @@ let c = (e) => {
                   );
               }
           })
-        : (0, r.jsx)(i.Text, {
+        : (0, r.jsx)(a.Text, {
               variant: 'text-md/semibold',
               className: t,
               children: o.intl.string(o.t['6cfuDg'])

@@ -20,8 +20,8 @@ var i = n(255367),
     h = n(239091),
     f = n(420660),
     b = n(468363),
-    _ = n(326255),
-    x = n(956221),
+    x = n(326255),
+    _ = n(956221),
     E = n(771173),
     j = n(385499),
     C = n(570908),
@@ -177,7 +177,7 @@ let et = K.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
             className: Q.favoriteIcon
         }),
     ea = (e) => {
-        var { route: t, selected: n, icon: r, iconClassName: s, interactiveClassName: a, text: o, children: d, locationState: m, onClick: p, className: h, role: f, 'aria-posinset': b, 'aria-setsize': _, listItemRef: x } = e,
+        var { route: t, selected: n, icon: r, iconClassName: s, interactiveClassName: a, text: o, children: d, locationState: m, onClick: p, className: h, role: f, 'aria-posinset': b, 'aria-setsize': x, listItemRef: _ } = e,
             E = ee(e, ['route', 'selected', 'icon', 'iconClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
         return (0, i.jsx)(N.Z, {
             className: l()(Q.channel, { [Q.fullWidth]: u.tq }, h),
@@ -185,8 +185,8 @@ let et = K.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
             role: f,
             focusProps: J({ within: !0 }, en),
             'aria-posinset': b,
-            'aria-setsize': _,
-            ref: x,
+            'aria-setsize': x,
+            ref: _,
             children: (0, i.jsx)(g.vjx, {
                 as: 'div',
                 selected: n,
@@ -225,7 +225,7 @@ let et = K.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
         });
     };
 function eo(e) {
-    let { channel: t, isGDMFacepileEnabled: s, selected: a = !1, user: u, activities: b, applicationStream: x, voiceChannel: A, isTyping: D, status: Z, isMobile: U, nameplate: V, ref: H, 'aria-posinset': Y, 'aria-setsize': W } = e,
+    let { channel: t, isGDMFacepileEnabled: s, selected: a = !1, user: u, activities: b, applicationStream: _, voiceChannel: A, isTyping: D, status: Z, isMobile: U, nameplate: V, ref: H, 'aria-posinset': Y, 'aria-setsize': W } = e,
         [K, ea] = r.useState(!1),
         [eo, ec] = r.useState(!1),
         ed = r.useRef(null),
@@ -242,16 +242,16 @@ function eo(e) {
         }),
         ef = t.isMultiUserDM(),
         eb = t.isSystemDM(),
-        e_ = (0, B.Q)(),
-        ex = !ef && !eb && t.type === q.d4z.DM,
-        eE = ex && (null == u ? void 0 : u.primaryGuild) != null,
+        ex = (0, B.Q)(),
+        e_ = !ef && !eb && t.type === q.d4z.DM,
+        eE = e_ && (null == u ? void 0 : u.primaryGuild) != null,
         ej = (0, m.e7)([z.ZP], () => z.ZP.isChannelMuted(t.getGuildId(), t.id)),
         { ignored: eC, blocked: eO } = (0, m.cj)([F.Z], () => ({
             ignored: F.Z.isIgnored(t.getRecipientId()),
             blocked: F.Z.isBlocked(t.getRecipientId())
         })),
-        eS = ex && eC,
-        ev = ex && eO,
+        eS = e_ && eC,
+        ev = e_ && eO,
         eT = (ej || eS || ev) && !(a || K),
         eN = (0, m.e7)([G.ZP], () => G.ZP.getMentionCount(t.id) > 0),
         eI = (0, T.ZP)(t),
@@ -348,10 +348,10 @@ function eo(e) {
                         className: Q.subtext,
                         children: X.intl.format(X.t.CxSA5O, { members: t.recipients.length + 1 })
                     })
-                  : (0, _.Z)({
+                  : (0, x.Z)({
                           activities: b,
                           status: Z,
-                          applicationStream: x,
+                          applicationStream: _,
                           voiceChannel: A
                       })
                     ? (0, i.jsx)(E.Z, {
@@ -359,7 +359,7 @@ function eo(e) {
                           user: u,
                           activities: b,
                           voiceChannel: A,
-                          applicationStream: x,
+                          applicationStream: _,
                           animateEmoji: K || eo,
                           textClassName: Q.activityStatusText,
                           iconClassName: eT ? Q.mutedIcon : void 0
@@ -446,7 +446,7 @@ function eo(e) {
                     eA && eN ? (0, i.jsx)('div', { className: l()(Q.unreadPill, { [Q.muted]: eT }) }) : null,
                     (0, i.jsxs)(g.vjx, {
                         className: l()(Q.interactive, {
-                            [Q.interactiveSystemDM]: e_ && eb,
+                            [Q.interactiveSystemDM]: ex && eb,
                             [Q.interactiveSelected]: a
                         }),
                         as: 'div',
@@ -542,7 +542,7 @@ let ec =
                       [t, c, l]
                   ),
                   { voiceActivityStatusEnabled: u } = (0, b.U)({ location: 'PrivateChannel' }),
-                  { voiceChannel: g } = (0, x.Z)({ userId: c }),
+                  { voiceChannel: g } = (0, _.Z)({ userId: c }),
                   p = (0, D.K)({ user: s }),
                   h = (0, m.e7)(
                       [Y.default, H.Z],

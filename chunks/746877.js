@@ -5,7 +5,7 @@ var r = n(73800),
     o = n(941028),
     s = n(509848),
     l = n(849522),
-    c = n(662594);
+    c = n(439170);
 let u = '@here';
 function d(e) {
     return e.length > 1 || 1 !== e.length || 'GROUP' !== e[0].type || 'unknown' !== e[0].id;

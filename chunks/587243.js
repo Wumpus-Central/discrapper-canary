@@ -44,7 +44,7 @@ let b = [
             label: () => h.intl.string(h.t['46dqJS'])
         }
     ],
-    _ = [
+    x = [
         {
             duration: u.Z.Millis.HOUR,
             label: () => h.intl.formatToPlainString(h.t.rhY1Rk, { hours: 1 })
@@ -62,7 +62,7 @@ let b = [
             label: () => h.intl.string(h.t['46dqJS'])
         }
     ],
-    x = 'forever';
+    _ = 'forever';
 function E(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
@@ -88,13 +88,13 @@ function j(e) {
                             }),
                         dontCloseOnAction: !0
                     },
-                    null != r ? r : x
+                    null != r ? r : _
                 );
             })
         }),
         S = (0, i.jsx)('div', {
             className: f.durationButtons,
-            children: _.map((e) => {
+            children: x.map((e) => {
                 let { duration: r, label: s } = e;
                 return (0, i.jsx)(
                     l.zxk,
@@ -115,7 +115,7 @@ function j(e) {
                         grow: !1,
                         children: s()
                     },
-                    null != r ? r : x
+                    null != r ? r : _
                 );
             })
         });
@@ -181,7 +181,7 @@ function O(e) {
         u = c.e.useExperiment({ location: 'UserProfileAccountPopout' }).allowQuietMode || r,
         m = d.fv.useSetting(),
         g = e === p.Skl.DND,
-        _ = (i) => {
+        x = (i) => {
             let r = C(n);
             if (e === i && null != r) return r;
             switch (i) {
@@ -206,7 +206,7 @@ function O(e) {
                         },
                         dontCloseOnAction: !0
                     },
-                    null != n ? n : x
+                    null != n ? n : _
                 );
             })
         }),
@@ -217,17 +217,17 @@ function O(e) {
         S = j({
             status: p.Skl.IDLE,
             currentStatus: e,
-            description: _(p.Skl.IDLE)
+            description: x(p.Skl.IDLE)
         }),
         v = j({
             status: p.Skl.DND,
             currentStatus: e,
-            description: _(p.Skl.DND)
+            description: x(p.Skl.DND)
         }),
         T = j({
             status: p.Skl.INVISIBLE,
             currentStatus: e,
-            description: _(p.Skl.INVISIBLE)
+            description: x(p.Skl.INVISIBLE)
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [

@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(714338),
     f = n(857595),
     b = n(607070),
-    _ = n(627845),
-    x = n(514361),
+    x = n(627845),
+    _ = n(514361),
     E = n(803038),
     j = n(600164),
     C = n(313201),
@@ -336,7 +336,7 @@ class $ extends r.Component {
                   children: (0, i.jsx)(u.R94, {
                       type: u.R94.Types.DEFAULT,
                       className: V.forcedColorsWarning,
-                      children: (0, _.b)()
+                      children: (0, x.b)()
                           ? U.intl.format(U.t.Jae48P, {
                                 onClick: () => {
                                     g.Z.open(L.oAB.ACCESSIBILITY);
@@ -710,7 +710,7 @@ function en() {
         r.useEffect(() => {
             d && et(o.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE);
         }, [d]));
-    let u = (0, a.cj)([P.Z, R.ZP, b.Z, y.default, x.Z], () => {
+    let u = (0, a.cj)([P.Z, R.ZP, b.Z, y.default, _.Z], () => {
         var e, t;
         return {
             theme: P.Z.theme,
@@ -722,7 +722,7 @@ function en() {
             messageGroupSpacing: b.Z.messageGroupSpacing,
             displayCompactAvatars: R.ZP.displayCompactAvatars,
             isStaff: null != (t = null == (e = y.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
-            gradientPreset: x.Z.gradientPreset
+            gradientPreset: _.Z.gradientPreset
         };
     });
     return (0, i.jsx)(

@@ -12,13 +12,13 @@ let d = (e) => {
     let { tabs: n, settingsSection: r, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g, orientation: p = 'horizontal' } = e,
         { viewableTabs: h, filteredTab: f } = (0, o.a)(n, d),
         b = null != m ? n[m] : null,
-        _ = null != (t = null != b ? b : f) ? t : h[0];
+        x = null != (t = null != b ? b : f) ? t : h[0];
     return (0, i.jsxs)('div', {
         className: s()(c.tabbedSettingsContainer, { [c.vertical]: 'vertical' === p }),
         children: [
             (0, i.jsx)(l.njP, {
                 className: s()(c.tabBar, { [c.vertical]: 'vertical' === p }),
-                selectedItem: _.setting,
+                selectedItem: x.setting,
                 onItemSelect: (e) => {
                     (a.Z.setSection(r, e), null == g || g(e));
                 },
@@ -31,7 +31,7 @@ let d = (e) => {
                         {
                             className: s()(c.tab, {
                                 [c.vertical]: 'vertical' === p,
-                                [c.selected]: e.setting === _.setting
+                                [c.selected]: e.setting === x.setting
                             }),
                             id: e.setting,
                             'aria-label': e.title,
@@ -42,13 +42,13 @@ let d = (e) => {
                 )
             }),
             (0, i.jsx)(l.njP.Panel, {
-                id: _.setting,
-                'aria-labelledby': _.title,
+                id: x.setting,
+                'aria-labelledby': x.title,
                 className: s()(c.tabBarPanel, u, { [c.vertical]: 'vertical' === p }),
                 children: ((e) => {
                     let t = e.component;
                     return 'function' == typeof t ? (0, i.jsx)(t, {}) : t;
-                })(_)
+                })(x)
             })
         ]
     });

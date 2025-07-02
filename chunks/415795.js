@@ -25,8 +25,8 @@ var i,
     h = n(565138),
     f = n(754688),
     b = n(237583),
-    _ = n(430824),
-    x = n(699516),
+    x = n(430824),
+    _ = n(699516),
     E = n(594174),
     j = n(51144),
     C = n(388032),
@@ -188,14 +188,14 @@ class N extends (i = s.Component) {
             null != i &&
                 (t = (0, r.jsx)('span', {
                     className: O.note,
-                    children: (0, d.F6)(i, E.default, x.Z)
+                    children: (0, d.F6)(i, E.default, _.Z)
                 })),
             (0, r.jsxs)('div', {
                 className: O.name,
                 children: [
                     (0, r.jsx)('span', {
                         className: O.match,
-                        children: (0, d.F6)(s, E.default, x.Z)
+                        children: (0, d.F6)(s, E.default, _.Z)
                     }),
                     e,
                     this.renderVoiceStates(),
@@ -236,8 +236,8 @@ class N extends (i = s.Component) {
     getAccessibilityLabel() {
         var e;
         let { channel: t } = this.props,
-            n = null == (e = _.Z.getGuild(this.props.channel.guild_id)) ? void 0 : e.name,
-            i = (0, d.F6)(t, E.default, x.Z),
+            n = null == (e = x.Z.getGuild(this.props.channel.guild_id)) ? void 0 : e.name,
+            i = (0, d.F6)(t, E.default, _.Z),
             r = (0, m.Z)(t);
         return C.intl.formatToPlainString(C.t['Vw/da2'], {
             name: i,
@@ -288,7 +288,7 @@ class I extends s.Component {
                 children: [
                     (0, r.jsx)('span', {
                         className: O.match,
-                        children: (0, d.F6)(n, E.default, x.Z)
+                        children: (0, d.F6)(n, E.default, _.Z)
                     }),
                     e
                 ]
@@ -311,7 +311,7 @@ class I extends s.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, d.F6)(e, E.default, x.Z);
+            n = (0, d.F6)(e, E.default, _.Z);
         return null != t && t > 0
             ? C.intl.formatToPlainString(C.t.LYdVfH, {
                   name: n,
@@ -349,7 +349,7 @@ class y extends s.Component {
     getDisplayNickname() {
         let e,
             { user: t, comparator: n } = this.props,
-            i = x.Z.getNickname(t.id);
+            i = _.Z.getNickname(t.id);
         return (((e = n === t.tag || null == n || '' === n ? t.username : n) === t.username || e === t.id) && (e = null != i ? i : j.ZP.getName(t)), e);
     }
     renderName() {

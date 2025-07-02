@@ -4,7 +4,7 @@ var r = n(73800),
     a = n(355467),
     o = n(78839);
 function s() {
-    let e = (0, i.e7)([o.ZP], () => o.ZP.hasFetchedSubscriptions());
+    let e = (0, i.e7)([o.Z], () => o.Z.hasFetchedSubscriptions());
     return (
         r.useEffect(() => {
             e || (0, a.jg)();

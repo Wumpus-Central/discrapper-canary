@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(434624),
     m = n(287151),
     f = n(388032),
-    _ = n(92254),
-    g = n(588429);
+    g = n(92254),
+    _ = n(588429);
 function h(e, t, n) {
     return (
         t in e
@@ -82,7 +82,7 @@ class v extends i.PureComponent {
     render() {
         let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: h, isForumToolbar: b, channel: E, className: y, forceAddReactions: C, reactionClassName: x, useChatFontScaling: v, forceHideReactionCreates: O, remainingReactions: j, combinedReactions: I, visibleReactionsCount: S } = this.props,
             { disableTransitionAppear: T } = this.state,
-            N = v ? g : _,
+            N = v ? _ : g,
             P = S > 0;
         if (!P && !C) return null;
         let A = C || P;

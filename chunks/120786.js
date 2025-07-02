@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(350298),
     f = n(806539),
     b = n(477154),
-    _ = n(230114);
-let x = () => {
+    x = n(230114);
+let _ = () => {
         let e = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, i.jsx)('div', {
             className: h.assetContainer,
@@ -31,7 +31,7 @@ let x = () => {
                       className: h.orbAsset,
                       children: [
                           (0, i.jsx)('source', {
-                              src: _.Z,
+                              src: x.Z,
                               type: 'video/webm'
                           }),
                           (0, i.jsx)('img', {
@@ -56,7 +56,7 @@ let x = () => {
         return (0, i.jsxs)('div', {
             className: l()(h.container, f.baseCardOutline),
             children: [
-                (0, i.jsx)(x, {}),
+                (0, i.jsx)(_, {}),
                 (0, i.jsx)(o.zx, {
                     className: h.ctaButton,
                     color: o.zx.Colors.BRAND,

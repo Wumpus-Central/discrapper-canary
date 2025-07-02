@@ -14,8 +14,8 @@ var i,
     h = n(827837),
     f = n(821849),
     b = n(724757),
-    _ = n(600164),
-    x = n(239827),
+    x = n(600164),
+    _ = n(239827),
     E = n(818035),
     j = n(509545),
     C = n(78839),
@@ -84,7 +84,7 @@ function Z(e) {
         var e;
         null == (e = o.current) || e.scrollTo({ to: 0 });
     }, [c]);
-    let _ = s.useCallback(
+    let x = s.useCallback(
             (e) => {
                 u(e);
                 let n = t[t.length - 1].id;
@@ -118,13 +118,13 @@ function Z(e) {
                         return r;
                     })(e, ['ref']);
                 return (0, r.jsx)(
-                    x.Z,
+                    _.Z,
                     D(
                         R(
                             {
                                 className: a()(y.verticalFit, y.paginator),
                                 currentPageIndex: c,
-                                onChangePage: _,
+                                onChangePage: x,
                                 numPages: l,
                                 showPageCount: !1,
                                 ref: t
@@ -201,7 +201,7 @@ class w extends (i = s.PureComponent) {
                                         ? null
                                         : (0, r.jsx)('div', {
                                               className: a()(y.paymentRow, y.bottomDivider),
-                                              children: (0, r.jsxs)(_.Z, {
+                                              children: (0, r.jsxs)(x.Z, {
                                                   className: y.paymentRowHeader,
                                                   children: [
                                                       (0, r.jsx)('div', {
@@ -244,7 +244,7 @@ function k(e) {
 }
 function L(e) {
     let t = (0, u.e7)([E.Z], () => E.Z.getPayments()),
-        n = (0, u.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
+        n = (0, u.e7)([C.Z], () => C.Z.getPremiumTypeSubscription()),
         i = s.useMemo(
             () =>
                 new Set(

@@ -13,15 +13,15 @@ var i = t(255367),
     x = t(987209),
     h = t(563132),
     f = t(107998),
-    j = t(614277),
+    j = t(27034),
     m = t(400981),
     _ = t(435020),
     L = t(698708),
     g = t(921944);
 function y(e) {
     let n,
-        { handleClose: t, planGroup: r, onSubscriptionConfirmation: y, renderPurchaseConfirmation: E, postSuccessGuild: S, followupSKUInfo: v, continueSessionToInitialStep: P } = e,
-        { activeSubscription: Z, paymentSources: b, paymentSourceId: I, selectedPlan: O, selectedSkuId: T, step: M, updatedSubscription: w, startingPremiumSubscriptionPlanIdRef: A, startingFractionalPremiumEndsAtRef: N } = (0, h.JL)(),
+        { handleClose: t, planGroup: r, onSubscriptionConfirmation: y, renderPurchaseConfirmation: E, postSuccessGuild: S, followupSKUInfo: v, continueSessionToInitialStep: Z } = e,
+        { activeSubscription: P, paymentSources: b, paymentSourceId: I, selectedPlan: O, selectedSkuId: T, step: M, updatedSubscription: w, startingPremiumSubscriptionPlanIdRef: A, startingFractionalPremiumEndsAtRef: N } = (0, h.JL)(),
         { isGift: R, giftRecipient: U, giftCode: k, hasSentMessage: B, isSendingMessage: H, sendGiftMessage: F, claimableRewards: G, selectedGiftingPromotionReward: D } = (0, x.wD)(),
         { confirmationFooter: W } = (0, f.zb)(),
         z = null != W,
@@ -45,7 +45,7 @@ function y(e) {
         (n =
             null != E
                 ? E(O, X, w)
-                : null != P
+                : null != Z
                   ? (0, i.jsx)(c.VY, {})
                   : R
                     ? (0, i.jsx)(c.TB, {
@@ -66,7 +66,7 @@ function y(e) {
                             startingPremiumSubscriptionPlanId: A.current,
                             planId: O.id,
                             onClose: X,
-                            isDowngrade: null != Z && (0, p.GY)(Z, O.id, r),
+                            isDowngrade: null != P && (0, p.GY)(P, O.id, r),
                             paymentSourceType: J,
                             hideClose: z,
                             startingFractionalPremiumEndsAt: N.current

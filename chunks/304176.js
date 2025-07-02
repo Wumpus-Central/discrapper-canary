@@ -79,14 +79,14 @@ let S = (e) => {
             )
         );
     });
-    let N = (0, l.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
-        E = (0, p.Z)(N),
-        Z = E ? P.intl.formatToPlainString(P.t.t0928f, { name: S }) : P.intl.formatToPlainString(P.t.UDDkGx, { name: S }),
+    let E = (0, l.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
+        N = (0, p.Z)(E),
+        Z = N ? P.intl.formatToPlainString(P.t.t0928f, { name: S }) : P.intl.formatToPlainString(P.t.UDDkGx, { name: S }),
         R = w(C({}, t), {
             src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40
         }),
-        T = E
+        T = N
             ? () => {
                   (0, m.uL)(v.Z5c.CHANNEL(n.id, j.oC.ROLE_SUBSCRIPTIONS));
               }

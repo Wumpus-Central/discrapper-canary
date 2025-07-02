@@ -181,7 +181,7 @@ function Z(e) {
         r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : void 0,
         a = null != (t = m.Z.defaultPaymentSourceId) ? t : void 0,
-        o = E.ZP.getPremiumTypeSubscription();
+        o = E.Z.getPremiumTypeSubscription();
     return (
         null != o && null != o.paymentSourceId && (a = o.paymentSourceId),
         H(e, n, r, {

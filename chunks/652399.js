@@ -46,11 +46,11 @@ function m(e, t) {
 function f(e) {
     return m(e, (e) => a.Z.getSessionId(e));
 }
-function _(e) {
+function g(e) {
     var t, n;
     return null != (n = null == e || null == (t = e.trim()) ? void 0 : t.length) ? n : 0;
 }
-function g(e) {
+function _(e) {
     var t, n, r;
     return null != (r = null == e || null == (n = e.content) || null == (t = n.trim()) ? void 0 : t.length) ? r : 0;
 }
@@ -72,8 +72,8 @@ function h(e) {
         page_num_links: b,
         page_num_embeds: E,
         page_num_attach: y,
-        search_query_length: _(C),
-        search_query_content_length: g(x)
+        search_query_length: g(C),
+        search_query_content_length: _(x)
     });
 }
 function b(e) {
@@ -90,8 +90,8 @@ function b(e) {
         limit: u,
         offset: p,
         index_num: m,
-        search_query_length: _(h),
-        search_query_content_length: g(b)
+        search_query_length: g(h),
+        search_query_content_length: _(b)
     });
 }
 function E(e) {
@@ -109,8 +109,8 @@ function y(e) {
         search_id: r,
         search_session_id: f(n),
         search_type: t,
-        search_query_length: _(l),
-        search_query_content_length: g(a)
+        search_query_length: g(l),
+        search_query_content_length: _(a)
     });
 }
 function C(e) {
@@ -166,8 +166,8 @@ function O(e) {
             search_id: null != n ? o.Z.getAnalyticsId(n) : null,
             search_session_id: f(n),
             search_type: t,
-            search_query_length: _(a),
-            search_query_content_length: g(l),
+            search_query_length: g(a),
+            search_query_content_length: _(l),
             sort_type: (0, r.Vj)(l),
             filter_in_count: m,
             filter_from_count: h,

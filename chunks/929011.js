@@ -17,7 +17,7 @@ var i = n(255367),
     f = n(981631);
 async function S(t) {
     let { subscriptionPlanId: e, sku: o, subscriptionGroupPlanIds: S, initialSubscribeForGuild: O, analyticsLocations: I, analyticsLocation: b, disableGuildSelector: g = !1 } = t,
-        { promise: P, resolve: _ } = Promise.withResolvers();
+        { promise: _, resolve: P } = Promise.withResolvers();
     if ((0, d.KK)(o.flags) && !1 === g) {
         let { promise: t, resolve: e } = Promise.withResolvers();
         ((0, r.ZDy)(async () => {
@@ -39,7 +39,7 @@ async function S(t) {
         null != y &&
             ([m] = (0, c.E8)({
                 groupSku: y,
-                SubscriptionStore: s.ZP,
+                SubscriptionStore: s.Z,
                 SubscriptionPlanStore: a.Z,
                 mapSubscriptionItems: c.ec,
                 guildId: O
@@ -59,11 +59,11 @@ async function S(t) {
             analyticsSubscriptionType: f.NYc.APPLICATION,
             analyticsLocations: I,
             analyticsLocation: b,
-            onComplete: _,
+            onComplete: P,
             showBenefitsFirst: !1,
             forcesTransitionToGuild: !1
         }),
-        P
+        _
     );
 }
 function O(t) {

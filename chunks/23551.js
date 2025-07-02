@@ -15,9 +15,9 @@ var r = n(120356),
 let h = (e) => {
     let { disabled: t = !1, type: n, className: r, innerClassName: h, onConnect: f } = e,
         b = (0, o.ZP)(),
-        _ = c.Z.get((0, d.rR)(n));
+        x = c.Z.get((0, d.rR)(n));
     return (0, i.jsx)(a.ua7, {
-        text: _.name,
+        text: x.name,
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: d } = e;
             return (0, i.jsx)('div', {
@@ -29,7 +29,7 @@ let h = (e) => {
                         className: s()(p.inner, h),
                         type: 'button',
                         disabled: t,
-                        style: { backgroundImage: "url('".concat((0, l.wj)(b) ? _.icon.darkSVG : _.icon.lightSVG, "')") },
+                        style: { backgroundImage: "url('".concat((0, l.wj)(b) ? x.icon.darkSVG : x.icon.lightSVG, "')") },
                         onClick:
                             null != f
                                 ? f
@@ -46,7 +46,7 @@ let h = (e) => {
                                                   platform_type: t.type
                                               }));
                                       })(n),
-                        'aria-label': _.name
+                        'aria-label': x.name
                     })
                 })
             });

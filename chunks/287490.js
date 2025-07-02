@@ -30,7 +30,7 @@ function b() {
             }),
             l.length > 0
                 ? l.map((t) => {
-                      let n = t.experiment.type === h.xY.GUILD ? x : _;
+                      let n = t.experiment.type === h.xY.GUILD ? _ : x;
                       return (0, i.jsx)(
                           n,
                           {
@@ -52,13 +52,13 @@ function b() {
         ]
     });
 }
-function _(e) {
+function x(e) {
     var t;
     let { experiment: n, experimentId: s, overrideDescriptor: m, defaultOpen: p } = e,
-        [b, _] = r.useState(p),
-        [x, E] = r.useState(!1),
+        [b, x] = r.useState(p),
+        [_, E] = r.useState(!1),
         j = r.useCallback(() => {
-            _((e) => !e);
+            x((e) => !e);
         }, []),
         C = (0, a.e7)([u.Z], () => u.Z.getUserExperimentDescriptor(s)),
         O = (0, a.e7)([u.Z], () => u.Z.getLoadedUserExperiment(s)),
@@ -167,7 +167,7 @@ function _(e) {
                                       : null
                               ]
                           }),
-                          x
+                          _
                               ? (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsx)(o.vwX, {
@@ -219,14 +219,14 @@ function _(e) {
               children: (0, i.jsx)(o.hjN, { children: T })
           });
 }
-function x(e) {
+function _(e) {
     let { experiment: t, experimentId: n, overrideDescriptor: s } = e,
         [c, g] = r.useState(null != s),
         [p, b] = r.useState(!1),
-        _ = r.useCallback(() => {
+        x = r.useCallback(() => {
             g((e) => !e);
         }, []),
-        x = (0, a.e7)([u.Z], () => u.Z.getLoadedGuildExperiment(n)),
+        _ = (0, a.e7)([u.Z], () => u.Z.getLoadedGuildExperiment(n)),
         E = (0, a.Wu)([u.Z], () =>
             l()
                 .sortBy(u.Z.getRecentExposures(h.xY.GUILD, n), (e) => {
@@ -257,7 +257,7 @@ function x(e) {
             return [i.join('\n'), s];
         }),
         O = (0, i.jsx)(o.P3F, {
-            onClick: _,
+            onClick: x,
             children: (0, i.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
                 className: f.title,
@@ -314,7 +314,7 @@ function x(e) {
                                       type: o.geA.DESCRIPTION,
                                       children: ['Current Assignments: ', C]
                                   }),
-                                  null == x
+                                  null == _
                                       ? (0, i.jsx)(o.R94, {
                                             type: o.geA.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -343,7 +343,7 @@ function x(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: f.pre,
-                                            children: null == x ? 'None' : JSON.stringify(x, void 0, 2)
+                                            children: null == _ ? 'None' : JSON.stringify(_, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.vwX, {
                                             tag: 'h5',

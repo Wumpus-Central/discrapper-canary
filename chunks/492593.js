@@ -74,8 +74,8 @@ let g = function (e) {
                 }
             },
             hasThread: S,
-            isSystemMessage: N,
-            hasReply: E,
+            isSystemMessage: E,
+            hasReply: N,
             author: Z,
             onMouseEnter: R,
             onMouseLeave: T
@@ -135,8 +135,8 @@ let g = function (e) {
                                         [d.cozy]: !n,
                                         [d.zalgo]: g,
                                         [d.hasThread]: S,
-                                        [d.isSystemMessage]: N,
-                                        [d.hasReply]: E
+                                        [d.isSystemMessage]: E,
+                                        [d.hasReply]: N
                                     }),
                                     ref: C
                                 },

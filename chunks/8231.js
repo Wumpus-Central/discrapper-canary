@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(78839),
     f = n(74538),
     b = n(104494),
-    _ = n(639119),
-    x = n(230916),
+    x = n(639119),
+    _ = n(230916),
     E = n(694338),
     j = n(474936),
     C = n(388032),
@@ -244,7 +244,7 @@ let A = () =>
         let n,
             { className: s, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: u = j.p9.TIER_2 } = e,
             { analyticsLocations: C } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-            S = (0, a.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
+            S = (0, a.e7)([h.Z], () => h.Z.hasFetchedSubscriptions()),
             v = (0, p.V)(),
             T = 'PlanComparisonTable';
         ((0, d.j)({
@@ -255,11 +255,11 @@ let A = () =>
                 location: T + ' auto off',
                 autoTrackExposure: !1
             }));
-        let N = (0, _.N)(),
+        let N = (0, x.N)(),
             R = null == N || null == (t = N.subscription_trial) ? void 0 : t.sku_id,
             D = (0, b.Ng)(),
             Z = null != D && (0, b.Wp)(D, j.Si.TIER_2),
-            k = (0, x.A)(j.Xh.PREMIUM_MONTH_TIER_2),
+            k = (0, _.A)(j.Xh.PREMIUM_MONTH_TIER_2),
             M = ''.concat(k, '/').concat((0, f.eP)(j.rV.MONTH)),
             U = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_0),
             V = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_2),

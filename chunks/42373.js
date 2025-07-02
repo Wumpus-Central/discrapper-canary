@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(953529));
+(n.d(t, { Z: () => x }), n(953529));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(981631),
     f = n(869783),
     b = n(888723);
-let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, customVideoStyle: O, isReducedMotion: S, onClick: v, badgeText: T, size: N } = e,
+let x = (e) => {
+    let { name: t, title: n, description: s, descriptionCta: x, previewImage: _, videoUrl: E, shouldLoadVideo: j, index: C, customVideoStyle: O, isReducedMotion: S, onClick: v, badgeText: T, size: N } = e,
         I = (0, g.rO)(),
         y = r.useRef(null),
         A = r.useRef(0),
@@ -100,7 +100,7 @@ let _ = (e) => {
                         className: b.description,
                         children: s
                     }),
-                    null != _ &&
+                    null != x &&
                         null != v &&
                         (0, i.jsx)(c.zxk, {
                             look: c.iLD.OUTLINED,
@@ -109,7 +109,7 @@ let _ = (e) => {
                             onClick: () => {
                                 (w(), v());
                             },
-                            children: _
+                            children: x
                         })
                 ]
             }),
@@ -126,7 +126,7 @@ let _ = (e) => {
                         playsInline: !0,
                         preload: j ? 'auto' : 'none',
                         muted: !0,
-                        poster: x,
+                        poster: _,
                         loop: !0,
                         className: l()({
                             [b.largeBoxVideo]: N === p.y$.LARGE,

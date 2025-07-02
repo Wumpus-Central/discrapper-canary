@@ -108,7 +108,7 @@ function N(e, t, n, r) {
 }
 function C() {
     return new Promise(async (e) => {
-        if (m.ZP.hasFetchedSubscriptions()) e();
+        if (m.Z.hasFetchedSubscriptions()) e();
         else if (p.Z.isSubscriptionFetching) {
             let t = () => {
                 p.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
@@ -127,7 +127,7 @@ async function R(e) {
     }
     let s = h.Z.getDefaultBillingCountryCode(),
         l = null != (r = null == (t = h.Z.defaultPaymentSource) ? void 0 : t.id) ? r : null,
-        c = m.ZP.getPremiumTypeSubscription();
+        c = m.Z.getPremiumTypeSubscription();
     (null != c && null != c.paymentSourceId && (l = c.paymentSourceId), null === s && (s = null != (i = p.Z.ipCountryCode) ? i : null));
     let f = {};
     if ((null != s && (f.country_code = s), null != l && (f.payment_source_id = l), null != s || null != l)) {

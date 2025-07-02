@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(255367),
     l = n(73800),
-    a = n(481060),
-    i = n(215023),
+    i = n(481060),
+    a = n(215023),
     o = n(388032);
 function s(e) {
     let { handleTransition: t, onClose: n } = e,
@@ -10,35 +10,35 @@ function s(e) {
             () => [
                 {
                     label: o.intl.string(o.t.dRZYND),
-                    value: i.AW.AVATAR_DECORATIONS
+                    value: a.AW.AVATAR_DECORATIONS
                 },
                 {
                     label: o.intl.string(o.t['1cNjt7']),
-                    value: i.AW.PROFILE_EFFECTS
+                    value: a.AW.PROFILE_EFFECTS
                 },
                 {
                     label: o.intl.string(o.t.V68Fq6),
-                    value: i.AW.NAMEPLATES
+                    value: a.AW.NAMEPLATES
                 },
                 {
                     label: o.intl.string(o.t.FYFppq),
-                    value: i.AW.BUNDLES
+                    value: a.AW.BUNDLES
                 },
                 {
                     label: o.intl.string(o.t.xFcotb),
-                    value: i.AW.CATALOG
+                    value: a.AW.CATALOG
                 }
             ],
             []
         );
-    return (0, r.jsx)(a.v2r, {
+    return (0, r.jsx)(i.v2r, {
         navId: 'collectibles-index-page-menu',
         onClose: n,
         'aria-label': o.intl.string(o.t.xFcotb),
         onSelect: () => {},
         children: s.map((e) =>
             (0, r.jsx)(
-                a.sNh,
+                i.sNh,
                 {
                     id: e.value,
                     label: e.label,

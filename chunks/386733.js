@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(281494),
     f = n(276444),
     b = n(520540),
-    _ = n(796634),
-    x = n(736519),
+    x = n(796634),
+    _ = n(736519),
     E = n(119269),
     j = n(938736),
     C = n(981631),
@@ -155,7 +155,7 @@ let I = (e) => {
     R = (e) => {
         let { isInSettings: t = !1 } = e,
             n = (0, a.e7)([f.Z], () => f.Z.getRecipientStatus()),
-            { referralSentUsers: s } = (0, _.G)(),
+            { referralSentUsers: s } = (0, x.G)(),
             u = r.useMemo(() => s.map((e) => new m.Z(e)), [s]),
             { subscriberHomeVariant: g } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
             T = g === b.p.VARIANT_2,
@@ -167,11 +167,11 @@ let I = (e) => {
         n.forEach((e) => {
             (e === h.Fe.REDEEMED && N.redeemed++, e === h.Fe.CONVERTED && (N.redeemed++, N.converted++));
         });
-        let I = N.sent === _.Q,
+        let I = N.sent === x.Q,
             y = p.Z.getArticleURL(C.BhN.REFERRAL_PROGRAM),
             { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             D = r.useRef(null),
-            Z = (N.sent / _.Q) * 100,
+            Z = (N.sent / x.Q) * 100,
             w = (0, i.jsxs)('div', {
                 className: S.referralInfoContent,
                 children: [
@@ -204,7 +204,7 @@ let I = (e) => {
                                 children: [
                                     !t &&
                                         !T &&
-                                        (0, i.jsx)(x.Z, {
+                                        (0, i.jsx)(_.Z, {
                                             color: o.Ttl.CUSTOM,
                                             textOptions: { textOverride: O.intl.string(O.t.Ve9Ge3) },
                                             className: l()(S.expandedProgressBarGiftingCTA, { [S.expandedProgressBarGiftingCTALayout]: !t })
@@ -232,7 +232,7 @@ let I = (e) => {
                     })
                 ]
             }),
-            k = N.redeemed === _.Q;
+            k = N.redeemed === x.Q;
         return (0, i.jsx)(d.Gt, {
             value: R,
             children: (0, i.jsx)('div', {

@@ -14,13 +14,13 @@ var i = n(255367),
     h = n(294206),
     f = n(388032),
     b = n(517058);
-function _(e) {
+function x(e) {
     let { onSelect: t } = e,
         [n, l] = r.useState(!1),
         o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         u = d.ZP.canUseCustomCallSounds(o),
         m = r.useRef(null);
-    function _(e) {
+    function x(e) {
         u && (l(!1), null == t || t(e));
     }
     return (0, i.jsx)(a.yRy, {
@@ -37,7 +37,7 @@ function _(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: _,
+                    onSelect: x,
                     gridNotice: u ? null : (0, i.jsx)(g.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
@@ -102,7 +102,7 @@ function _(e) {
         }
     });
 }
-function x(e) {
+function _(e) {
     let { sound: t } = e,
         { previewSound: n } = (0, m.Z)(t, null),
         r =
@@ -161,7 +161,7 @@ function E(e) {
                                   : t.name
                     }),
                     s
-                        ? (0, i.jsx)(x, { sound: t })
+                        ? (0, i.jsx)(_, { sound: t })
                         : (0, i.jsx)(a.gj8, {
                               size: 'md',
                               color: 'currentColor',
@@ -172,7 +172,7 @@ function E(e) {
             (0, i.jsxs)('div', {
                 className: b.container,
                 children: [
-                    (0, i.jsx)(_, { onSelect: r }),
+                    (0, i.jsx)(x, { onSelect: r }),
                     s &&
                         !n &&
                         (0, i.jsx)(h.hU, {

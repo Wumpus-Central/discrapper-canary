@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(906732),
     f = n(211242),
     b = n(15640),
-    _ = n(89057),
-    x = n(433811),
+    x = n(89057),
+    _ = n(433811),
     E = n(214852),
     j = n(621853),
     C = n(484459),
@@ -36,10 +36,10 @@ var i = n(255367),
     L = n(126867);
 let B = function (e) {
     let { entrypoint: t = w.EZ.UserSettings } = e;
-    (0, E.z)(x.X);
+    (0, E.z)(_.X);
     let n = (0, f.Q)(),
         { sourceAnalyticsLocations: s, analyticsLocations: B } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
-        M = (0, a.e7)([v.ZP], () => v.ZP.hasFetchedSubscriptions()),
+        M = (0, a.e7)([v.Z], () => v.Z.hasFetchedSubscriptions()),
         U = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
         V = null == U ? void 0 : U.id,
         G = (0, R.N)(),
@@ -74,7 +74,7 @@ let B = function (e) {
     (0, a.e7)([O.Z], () => O.Z.enabled))
         ? (0, i.jsx)(g.Z, {})
         : n
-          ? (0, i.jsx)(_.c8, {})
+          ? (0, i.jsx)(x.c8, {})
           : t === w.EZ.ApplicationStoreHome && K
             ? null == Q
                 ? (0, i.jsx)('div', {

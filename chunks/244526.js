@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(953529));
+(n.d(t, { Z: () => _ }), n(953529));
 var i,
     r,
     s,
@@ -14,8 +14,8 @@ var i,
     h = n(122289),
     f = n(624138),
     b = n(388032),
-    _ = n(943617);
-class x extends (i = a.PureComponent) {
+    x = n(943617);
+class _ extends (i = a.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
         if (e instanceof p.qo) return g.ZP.Types.PAYPAL;
@@ -82,7 +82,7 @@ class x extends (i = a.PureComponent) {
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
         return (0, l.jsx)(d.Text, {
-            className: c()(_.description, t),
+            className: c()(x.description, t),
             variant: 'text-md/semibold',
             children: this.getLabel(e)
         });
@@ -112,7 +112,7 @@ class x extends (i = a.PureComponent) {
                 r && (0, l.jsx)(g.ZP, { type: this.typeString }),
                 (0, l.jsxs)(m.Z, {
                     direction: m.Z.Direction.VERTICAL,
-                    className: _.descriptionWrapper,
+                    className: x.descriptionWrapper,
                     children: [
                         (0, l.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
@@ -120,19 +120,19 @@ class x extends (i = a.PureComponent) {
                                 this.renderDescription(),
                                 s && e
                                     ? (0, l.jsx)('div', {
-                                          className: _.defaultIndicator,
+                                          className: x.defaultIndicator,
                                           children: b.intl.string(b.t.bBvAEB)
                                       })
                                     : null,
                                 i
                                     ? (0, l.jsx)('div', {
-                                          className: _.premiumIndicator,
+                                          className: x.premiumIndicator,
                                           children: b.intl.string(b.t.YCrcPD)
                                       })
                                     : null,
                                 s && t.invalid
                                     ? (0, l.jsx)('div', {
-                                          className: _.invalidIndicator,
+                                          className: x.invalidIndicator,
                                           children: b.intl.string(b.t['851k9/'])
                                       })
                                     : null
@@ -140,7 +140,7 @@ class x extends (i = a.PureComponent) {
                         }),
                         n && null != a
                             ? (0, l.jsx)('div', {
-                                  className: _.subText,
+                                  className: x.subText,
                                   children: a
                               })
                             : null
@@ -157,11 +157,11 @@ class x extends (i = a.PureComponent) {
     showPaymentSourceIcon: !1,
     showLabels: !1
 }),
-    (r = 'defaultProps') in x
-        ? Object.defineProperty(x, r, {
+    (r = 'defaultProps') in _
+        ? Object.defineProperty(_, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (x[r] = s));
+        : (_[r] = s));

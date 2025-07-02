@@ -26,8 +26,8 @@ let g = (e, t) =>
             r = (0, d.u)(null == t ? void 0 : t.id);
         if (null == t || null == r) return null;
         let { id: p, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
-            _ = u.intl.string(h),
-            x = (0, o.q)(p, f),
+            x = u.intl.string(h),
+            _ = (0, o.q)(p, f),
             E = { '--custom-badge-glow-color': (0, a.rj)(t.glowColor, 0.5) };
         return (0, i.jsxs)('div', {
             className: m.container,
@@ -37,7 +37,7 @@ let g = (e, t) =>
                 ' ',
                 (0, i.jsx)('img', {
                     src: r,
-                    alt: _,
+                    alt: x,
                     className: s()(m.badgeImage, {
                         [m.upcomingBadge]: t.status === c.Vq.UPCOMING,
                         [m.wide]: b
@@ -49,12 +49,12 @@ let g = (e, t) =>
                         (0, i.jsx)(l.xv, {
                             variant: 'text-lg/semibold',
                             className: m.badgeText,
-                            children: _
+                            children: x
                         }),
                         (0, i.jsx)(l.xv, {
                             variant: 'text-md/normal',
                             className: m.badgeText,
-                            children: x
+                            children: _
                         }),
                         (0, i.jsx)(l.xv, {
                             variant: 'text-xs/normal',

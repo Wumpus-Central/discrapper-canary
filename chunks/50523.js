@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(914498),
     m = n(515344),
     f = n(944486),
-    _ = n(768581),
-    g = n(566620),
+    g = n(768581),
+    _ = n(566620),
     h = n(317381),
     b = n(574952),
     E = n(374065),
@@ -46,7 +46,7 @@ function C(e) {
             label: null == Z ? y.intl.string(y.t.cnBQPD) : y.intl.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
-                (0, g.G6)({
+                (0, _.G6)({
                     channelId: null != A ? A : void 0,
                     applicationId: C.id,
                     isStart: null == Z,
@@ -79,7 +79,7 @@ function C(e) {
         onClickContent: U,
         embedUrl: O,
         header: C.name,
-        iconSrc: _.ZP.getApplicationIconURL({
+        iconSrc: g.ZP.getApplicationIconURL({
             id: C.id,
             icon: C.icon,
             bot: C.bot

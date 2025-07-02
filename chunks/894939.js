@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(763296),
     f = n(242291),
     b = n(893663),
-    _ = n(331642),
-    x = n(63063),
+    x = n(331642),
+    _ = n(63063),
     E = n(581883),
     j = n(738486),
     C = n(918257),
@@ -79,7 +79,7 @@ function R(e) {
             children: [
                 (0, i.jsx)(o.xJW, {
                     title: N.intl.string(N.t.nzUc3N),
-                    children: (0, i.jsx)(o.R94, { children: N.intl.format(N.t.u9RWmp, { helpdeskArticle: x.Z.getArticleURL(v.BhN.SOUNDBOARD) }) })
+                    children: (0, i.jsx)(o.R94, { children: N.intl.format(N.t.u9RWmp, { helpdeskArticle: _.Z.getArticleURL(v.BhN.SOUNDBOARD) }) })
                 }),
                 (0, i.jsx)(u.Z, {
                     guildId: s,
@@ -106,7 +106,7 @@ function R(e) {
                     }),
                     forcedDivider: !t,
                     children: [
-                        (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(x.Z, {
                             sound: E,
                             isGlobal: C,
                             onSelect: (e) => {

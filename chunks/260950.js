@@ -63,7 +63,7 @@ let _ = async () =>
         }
     ];
 function C() {
-    let e = (0, s.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
+    let e = (0, s.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
         t = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
         [n, l] = r.useState('511651880837840896'),
         [m, v] = r.useState([]),

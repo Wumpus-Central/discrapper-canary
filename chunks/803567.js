@@ -15,8 +15,8 @@ var r = n(120356),
     h = n(626135),
     f = n(63063),
     b = n(210887),
-    _ = n(738486),
-    x = n(726985),
+    x = n(738486),
+    _ = n(726985),
     E = n(981631),
     j = n(388032),
     C = n(20493);
@@ -144,7 +144,7 @@ function y(e) {
             [r]
         ),
         v = n === E.pM4.VOICE_ACTIVITY && u,
-        T = (0, i.jsxs)(_.Z, {
+        T = (0, i.jsxs)(x.Z, {
             children: [
                 (b || O || S) &&
                     (0, i.jsx)(o.R94, {
@@ -153,7 +153,7 @@ function y(e) {
                         children: j.intl.string(j.t['/Whuzs'])
                     }),
                 (0, i.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
+                    setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                     children: (0, i.jsx)(o.j7V, {
                         className: t ? void 0 : s()(C.marginTop8, C.marginBottom20),
                         value: a,
@@ -168,11 +168,11 @@ function y(e) {
                     })
                 }),
                 (0, i.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
+                    setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
                     children: (0, i.jsx)(I, { refreshStyles: t })
                 }),
                 (0, i.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
+                    setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
                     children: (0, i.jsx)(o.j7V, {
                         value: h,
                         onChange: (e) => c.Z.setMode(n, { vadUseKrisp: e }),
@@ -183,7 +183,7 @@ function y(e) {
                     })
                 }),
                 (0, i.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
+                    setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
                     children: (0, i.jsx)(o.j7V, {
                         value: d,
                         onChange: (e) =>
@@ -198,7 +198,7 @@ function y(e) {
                     })
                 }),
                 (0, i.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_BYPASS_SYSTEM_INPUT_PROCESSING,
+                    setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_BYPASS_SYSTEM_INPUT_PROCESSING,
                     children: (0, i.jsx)(o.j7V, {
                         value: f,
                         onChange: (e) => {

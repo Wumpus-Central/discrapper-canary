@@ -10,8 +10,8 @@ var l = n(255367),
     d = n(906732),
     p = n(600164),
     E = n(963249),
-    P = n(639119),
-    m = n(165583),
+    m = n(639119),
+    P = n(165583),
     h = n(263954),
     _ = n(706454),
     S = n(709586),
@@ -68,7 +68,7 @@ function L(e) {
         A = null == n || null == n.premiumSubscriptionType,
         R = N.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, L),
         D = (0, I.T4)(R.amount, R.currency),
-        Z = (0, P.N)(),
+        Z = (0, m.N)(),
         v = null == Z ? void 0 : Z.trial_id,
         w = (null == Z || null == (t = Z.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_2;
     return (
@@ -87,7 +87,7 @@ function L(e) {
                             onClick: i,
                             className: x.closeButton
                         }),
-                        w && (0, l.jsx)(m.dz, { className: x.premiumTrialBadge }),
+                        w && (0, l.jsx)(P.dz, { className: x.premiumTrialBadge }),
                         (0, l.jsx)('div', { className: s()(x.upsellImage, { [x.upsellImageWithTrialOffer]: w }) }),
                         (0, l.jsx)('div', {
                             className: x.bodyText,

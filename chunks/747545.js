@@ -21,8 +21,8 @@ var i = n(255367),
     h = n(72897),
     f = n(921801),
     b = n(695346),
-    _ = n(938117),
-    x = n(131951),
+    x = n(938117),
+    _ = n(131951),
     E = n(626135),
     j = n(358085),
     C = n(981631),
@@ -32,7 +32,7 @@ var i = n(255367),
 let T = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
 function N() {
     let [e, t] = r.useState(!1),
-        n = (0, c.e7)([x.Z], () => x.Z.isMediaFilterSettingLoading());
+        n = (0, c.e7)([_.Z], () => _.Z.isMediaFilterSettingLoading());
     return (r.useEffect(() => {
         let e = new d.V7();
         return (
@@ -54,9 +54,9 @@ function N() {
 function I(e) {
     let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: r = !1, onLearnMore: s, selectedBackgroundOption: a, onSelectBackgroundOption: d, renderCamera: N, hidePreviewToggle: I = !1, showSmallBackgroundOptions: y = !1, onCancelPreview: A } = e,
         { analyticsLocations: P } = (0, p.ZP)(),
-        { currentDeviceId: R, isVideoAvailable: D } = (0, c.cj)([x.Z], () => ({
-            currentDeviceId: x.Z.getVideoDeviceId(),
-            isVideoAvailable: x.Z.isVideoAvailable()
+        { currentDeviceId: R, isVideoAvailable: D } = (0, c.cj)([_.Z], () => ({
+            currentDeviceId: _.Z.getVideoDeviceId(),
+            isVideoAvailable: _.Z.isVideoAvailable()
         })),
         Z = (0, h.kj)({ location: 'CameraSettings' }),
         w = b.qF.useSetting(),
@@ -70,7 +70,7 @@ function I(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             N(R),
-            x.Z.isEnabled()
+            _.Z.isEnabled()
                 ? null
                 : (0, i.jsx)(u.Text, {
                       className: v.permissionWarning,
@@ -125,7 +125,7 @@ function I(e) {
                 }),
             (0, i.jsx)(f.F, {
                 setting: O.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
-                children: (0, i.jsx)(_.Z, {
+                children: (0, i.jsx)(x.Z, {
                     className: v.spacingTop24,
                     onLearnMore: s,
                     selectedBackgroundOption: a,

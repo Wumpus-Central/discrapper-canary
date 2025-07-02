@@ -7,12 +7,12 @@ var i = n(120356),
     o = n(318713),
     s = n(614507);
 function c(e) {
-    let { icon: t, iconNode: n, timestamp: i, timestampFormat: a, className: c, children: u, contentClassName: d, iconClassName: p, iconContainerClassName: m, timestampClassName: f, compact: _ = !1 } = e;
+    let { icon: t, iconNode: n, timestamp: i, timestampFormat: a, className: c, children: u, contentClassName: d, iconClassName: p, iconContainerClassName: m, timestampClassName: f, compact: g = !1 } = e;
     return (0, r.jsxs)('div', {
         className: l()(c, {
             [s.container]: !0,
-            [s.compact]: _,
-            [s.cozy]: !_
+            [s.compact]: g,
+            [s.cozy]: !g
         }),
         children: [
             null != n &&

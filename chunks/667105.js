@@ -357,9 +357,9 @@ function Z(e) {
         i = (0, I.Zy)({ location: n }),
         a = (0, E.tP)(r),
         s = (0, v.b)({ location: n }),
-        { premiumSubscription: l, hasFetchedSubscriptions: c } = (0, o.cj)([p.ZP], () => ({
-            premiumSubscription: p.ZP.getPremiumSubscription(),
-            hasFetchedSubscriptions: p.ZP.hasFetchedSubscriptions()
+        { premiumSubscription: l, hasFetchedSubscriptions: c } = (0, o.cj)([p.Z], () => ({
+            premiumSubscription: p.Z.getPremiumSubscription(),
+            hasFetchedSubscriptions: p.Z.hasFetchedSubscriptions()
         })),
         u = (0, o.e7)([b.Z], () => null != b.Z.questDeliveryOverride);
     if (null == r)

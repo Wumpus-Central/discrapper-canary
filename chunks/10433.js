@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(626135),
     m = n(471518),
     f = n(370210),
-    _ = n(981631),
-    g = n(388032),
+    g = n(981631),
+    _ = n(388032),
     h = n(280306);
 function b(e) {
     let { code: t, message: n, embedUrl: b } = e,
@@ -27,7 +27,7 @@ function b(e) {
         }, []),
         I = (0, o.O)(j),
         S = i.useCallback(() => {
-            p.default.track(_.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+            p.default.track(g.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                 application_id: t,
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
@@ -44,7 +44,7 @@ function b(e) {
     i.useEffect(() => {
         v &&
             y &&
-            p.default.track(_.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+            p.default.track(g.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
                 guild_id: x,
@@ -55,7 +55,7 @@ function b(e) {
         ? (0, r.jsxs)(c.Z, {
               containerRef: I,
               children: [
-                  (0, r.jsx)(c.Z.Header, { text: g.intl.string(g.t.j4KtLS) }),
+                  (0, r.jsx)(c.Z.Header, { text: _.intl.string(_.t.j4KtLS) }),
                   (0, r.jsx)(c.Z.Body, {
                       children: (0, r.jsxs)('div', {
                           className: h.invalidBody,
@@ -63,8 +63,8 @@ function b(e) {
                               (0, r.jsx)(c.Z.Icon, { expired: !0 }),
                               (0, r.jsx)(c.Z.Info, {
                                   expired: !0,
-                                  title: g.intl.string(g.t.NaQLEx),
-                                  children: g.intl.string(g.t['0H5OT0'])
+                                  title: _.intl.string(_.t.NaQLEx),
+                                  children: _.intl.string(_.t['0H5OT0'])
                               })
                           ]
                       })
@@ -74,7 +74,7 @@ function b(e) {
         : null == E || C === f.M.FETCHING
           ? (0, r.jsxs)(c.Z, {
                 containerRef: I,
-                children: [(0, r.jsx)(c.Z.Header, { text: g.intl.string(g.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]
+                children: [(0, r.jsx)(c.Z.Header, { text: _.intl.string(_.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]
             })
           : (0, r.jsx)(s.O, {
                 app: u.ZP.createFromServer(E),

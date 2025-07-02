@@ -14,7 +14,7 @@ var i = n(255367),
     h = n(916723),
     f = n(388032),
     b = n(708734);
-function _(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function x(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,7 +69,7 @@ function E(e) {
                     return (n) =>
                         (0, i.jsx)(
                             e,
-                            x(_({}, n), {
+                            _(x({}, n), {
                                 currentUser: j,
                                 otherUser: t
                             })
@@ -83,7 +83,7 @@ function E(e) {
                     return (n) =>
                         (0, i.jsx)(
                             e,
-                            x(_({}, n), {
+                            _(x({}, n), {
                                 currentUser: j,
                                 otherUser: t
                             })
@@ -97,7 +97,7 @@ function E(e) {
                     return (n) =>
                         (0, i.jsx)(
                             e,
-                            x(_({}, n), {
+                            _(x({}, n), {
                                 currentUser: j,
                                 otherUser: t
                             })

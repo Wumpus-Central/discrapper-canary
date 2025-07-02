@@ -20,15 +20,15 @@ var n = l(255367),
 let b = (e) => {
     var t, l;
     let { guildBoostSlots: s, selectedGuild: b, locationSection: y, transitionState: S, onClose: N } = e,
-        P = (0, h.vx)(m.Z.boostSlots);
+        O = (0, h.vx)(m.Z.boostSlots);
     (i()(null != s || null != b, 'Must either provide slots or an initial selected guild'), i()(!(null == s ? void 0 : s.some((e) => e.isOnCooldown())), 'If slots are provided, they must not be on cooldown'));
-    let O = [null == s ? 'UNUSED_QUANTITY_SELECT' : null, null == b ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter((e) => null != e),
+    let P = [null == s ? 'UNUSED_QUANTITY_SELECT' : null, null == b ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter((e) => null != e),
         [E, T] = (0, o.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
         [L, Z] = r.useState(''),
-        [w, I] = r.useState(O[0]),
+        [w, I] = r.useState(P[0]),
         [k, M] = r.useState(!1),
         [G, D] = r.useState(b),
-        [U, z] = r.useState(null != s ? s : P.slice(0, 1)),
+        [U, z] = r.useState(null != s ? s : O.slice(0, 1)),
         B = r.useMemo(
             () =>
                 null == U
@@ -53,7 +53,7 @@ let b = (e) => {
         _ = {
             UNUSED_QUANTITY_SELECT: {
                 body: () => (
-                    i()(null != s || 0 !== P.length, 'Cannot provide no slots if there are no other available slots'),
+                    i()(null != s || 0 !== O.length, 'Cannot provide no slots if there are no other available slots'),
                     (0, n.jsxs)('div', {
                         className: v.quantitySelectorBody,
                         children: [
@@ -72,9 +72,9 @@ let b = (e) => {
                                 children: [
                                     (0, n.jsx)(a.FiK, {
                                         value: U.length,
-                                        onChange: (e) => z(P.slice(0, e)),
+                                        onChange: (e) => z(O.slice(0, e)),
                                         minValue: 1,
-                                        maxValue: P.length
+                                        maxValue: O.length
                                     }),
                                     (0, n.jsx)(a.Text, {
                                         className: v.quantitySelectorLabel,
@@ -157,7 +157,7 @@ let b = (e) => {
                 },
                 footer() {
                     let e = U.length,
-                        t = 'CONFIRM' === O[0] ? F : () => I(O[O.indexOf(w) - 1]),
+                        t = 'CONFIRM' === P[0] ? F : () => I(P[P.indexOf(w) - 1]),
                         l = async () => {
                             if (null != G && (null == U ? void 0 : U.length) !== 0) {
                                 i()(!U.some((e) => e.isOnCooldown()), 'Cannot use a premium guild subscription slot while on cooldown');
@@ -219,7 +219,7 @@ let b = (e) => {
                 className: A.bodyClass,
                 children: (0, n.jsx)(a.qBt, {
                     step: w,
-                    steps: O,
+                    steps: P,
                     children: A.body()
                 })
             }),

@@ -1,5 +1,5 @@
 (n.d(t, {
-    V9: () => _,
+    V9: () => x,
     ek: () => b
 }),
     n(388685));
@@ -21,8 +21,8 @@ let b = {
         START: f.alignLeft,
         END: f.alignRight
     },
-    _ = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: _, analyticsPage: x, isCoachmarkEnabled: E = !0, linkText: j = h.intl.string(h.t.XRdyj4), cardAlignment: C = b.START, className: O } = e,
+    x = (e) => {
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: x, analyticsPage: _, isCoachmarkEnabled: E = !0, linkText: j = h.intl.string(h.t.XRdyj4), cardAlignment: C = b.START, className: O } = e,
             { balance: S } = (0, d.A)(),
             [v, T] = r.useState(u.b.DEFAULT),
             [N, I] = r.useState(!1),
@@ -40,15 +40,15 @@ let b = {
         let D = r.useCallback(() => {
                 let e = !N;
                 (e &&
-                    null != x &&
+                    null != _ &&
                     (0, o.Y)({
-                        pageType: x,
+                        pageType: _,
                         sectionType: p.jXE.ORBS_BALANCE_MENU,
                         ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL
                     }),
                     T(e ? u.b.SELECTED : u.b.DEFAULT),
                     I(e));
-            }, [N, x]),
+            }, [N, _]),
             Z = r.useCallback(() => {
                 N && D();
             }, [N, D]),
@@ -61,7 +61,7 @@ let b = {
             children: [
                 (0, i.jsx)(g.y, {
                     pillRef: P,
-                    anchorPillType: _,
+                    anchorPillType: x,
                     balance: S,
                     balanceWidgetMode: R ? u.b.DEFAULT : v,
                     onMouseDown: (e) => {
@@ -78,7 +78,7 @@ let b = {
                         }),
                         ref: w,
                         children: (0, i.jsx)(m.L, {
-                            analyticsPage: x,
+                            analyticsPage: _,
                             ctaText: n,
                             ctaOnClick: () => {
                                 (D(), s());
@@ -89,4 +89,4 @@ let b = {
             ]
         });
     };
-_.CardAlignment = b;
+x.CardAlignment = b;

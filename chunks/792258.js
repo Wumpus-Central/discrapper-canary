@@ -20,23 +20,23 @@ let h = [18, 18, 16, 16, 14, 12, 10],
         let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
             f = n.toString(),
             b = n.getIconURL(40, !0),
-            _ = null,
-            x = h[h.length - 1];
+            x = null,
+            _ = h[h.length - 1];
         if (null == n.icon && null != f) {
             var E;
-            x = null != (E = h[(_ = (0, l.Zg)(f)).length - 1]) ? E : h[h.length - 1];
+            _ = null != (E = h[(x = (0, l.Zg)(f)).length - 1]) ? E : h[h.length - 1];
         }
         return (0, i.jsxs)('div', {
             className: p.container,
             children: [
                 (0, i.jsxs)('div', {
-                    style: { fontSize: x },
+                    style: { fontSize: _ },
                     children: [
-                        null != _
+                        null != x
                             ? (0, i.jsx)('div', {
                                   className: s()(p.childWrapper, p.acronym),
                                   'aria-hidden': !0,
-                                  children: _
+                                  children: x
                               })
                             : null,
                         null != b

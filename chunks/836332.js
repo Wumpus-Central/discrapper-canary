@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(635921),
     f = n(474936),
     b = n(869783),
-    _ = n(388032),
-    x = n(578504),
+    x = n(388032),
+    _ = n(578504),
     E = n(839526),
     j = n(4046),
     C = n(423741);
@@ -38,29 +38,29 @@ let O = r.forwardRef((e, t) => {
             value: I,
             children: (0, i.jsxs)('div', {
                 ref: t,
-                className: l()(x.container, O),
+                className: l()(_.container, O),
                 children: [
                     (0, i.jsx)(a.X6q, {
-                        className: x.footerHeader,
+                        className: _.footerHeader,
                         variant: 'display-md',
                         color: 'header-primary',
-                        children: _.intl.string(_.t.lEw32t)
+                        children: x.intl.string(x.t.lEw32t)
                     }),
                     (0, i.jsx)(h.PK, {
                         subscriptionTier: null != (s = null != N ? N : null == P || null == (n = P.subscription_trial) ? void 0 : n.sku_id) ? s : A,
                         inOfferExperience: R,
-                        containerClassName: x.footerCTAContainer,
+                        containerClassName: _.footerCTAContainer,
                         isApplicationHome: !0,
                         isDarkMode: v
                     }),
                     (0, i.jsx)('div', {
-                        className: x.footerArtContainer,
+                        className: _.footerArtContainer,
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             muted: !0,
                             preload: 'auto',
                             poster: j.Z,
-                            className: x.footerArt,
+                            className: _.footerArt,
                             onEnded: () => {
                                 k(!0);
                             },
@@ -71,8 +71,8 @@ let O = r.forwardRef((e, t) => {
                             })
                         })
                     }),
-                    (0, i.jsx)('div', { className: x.leftGradient }),
-                    (0, i.jsx)('div', { className: x.rightGradient })
+                    (0, i.jsx)('div', { className: _.leftGradient }),
+                    (0, i.jsx)('div', { className: _.rightGradient })
                 ]
             })
         })

@@ -14,7 +14,7 @@ var i = n(255367),
     h = n(388032),
     f = n(142436);
 function b(e) {
-    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: x = !1, isTryItOutFlow: E = !1 } = e,
+    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: _ = !1, isTryItOutFlow: E = !1 } = e,
         { analyticsLocations: j } = (0, o.ZP)(),
         C = null != n,
         { userAvatarDecoration: O, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, g.$U)(t, n),
@@ -29,7 +29,7 @@ function b(e) {
             [j, E, n]
         ),
         y = E || void 0 !== v ? null != v : (C ? S : O) != null,
-        A = x ? a.gtL : a.zxk;
+        A = _ ? a.gtL : a.zxk;
     return (0, i.jsxs)(p.Z, {
         className: s,
         forcedDivider: b,
@@ -43,7 +43,7 @@ function b(e) {
                     (0, i.jsx)(A, {
                         size: a.zxk.Sizes.SMALL,
                         onClick: I,
-                        className: l()({ [f.buttonHighlighted]: x }),
+                        className: l()({ [f.buttonHighlighted]: _ }),
                         children: h.intl.string(h.t.BVcYCw)
                     }),
                     y &&
@@ -59,11 +59,11 @@ function b(e) {
                         })
                 ]
             }),
-            t.isStaff() && N && (0, i.jsx)(_, { user: t })
+            t.isStaff() && N && (0, i.jsx)(x, { user: t })
         ]
     });
 }
-let _ = (e) => {
+let x = (e) => {
     let { user: t } = e;
     return (0, i.jsxs)('div', {
         className: f.overrideButtonsContainer,

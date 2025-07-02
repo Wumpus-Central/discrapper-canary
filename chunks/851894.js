@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(678135),
     f = n(643879),
     b = n(621853),
-    _ = n(246946),
-    x = n(594174),
+    x = n(246946),
+    _ = n(594174),
     E = n(63063),
     j = n(74538),
     C = n(18438),
@@ -77,12 +77,12 @@ function P(e) {
 function R(e) {
     let { selectedGuild: t } = e,
         { analyticsLocations: n } = (0, g.ZP)(u.Z.USER_SETTINGS_GUILD_PROFILE),
-        s = (0, a.e7)([x.default], () => {
-            let e = x.default.getCurrentUser();
+        s = (0, a.e7)([_.default], () => {
+            let e = _.default.getCurrentUser();
             return (l()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e);
         }),
         R = (0, a.e7)([b.Z], () => !b.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
-        D = (0, a.e7)([_.Z], () => _.Z.hidePersonalInformation),
+        D = (0, a.e7)([x.Z], () => x.Z.hidePersonalInformation),
         Z = (0, a.cj)([O.Z], () => A(y({}, O.Z.getAllPending()), { source: O.Z.getSource() })),
         { source: w, pendingAvatar: k } = Z,
         L = (function (e, t) {

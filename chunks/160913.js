@@ -9,7 +9,7 @@ var r = n(913527),
     u = n(981631),
     d = n(231338);
 function f() {
-    let e = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+    let e = (0, a.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
         t = (0, a.e7)([s.Z], () => (null != e && null != e.planIdFromItems ? s.Z.get(null == e ? void 0 : e.planIdFromItems) : null)),
         n = (0, a.e7)([o.Z], () => (null != e && null != e.paymentSourceId ? o.Z.getPaymentSource(e.paymentSourceId) : null), [e]),
         r = null != n && d.Uk.has(n.type),

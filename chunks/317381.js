@@ -1,11 +1,10 @@
 let r;
 (n.d(t, {
-    ZP: () => eN,
+    ZP: () => eA,
     i6: () => R
 }),
     n(388685),
-    n(539854),
-    n(825670));
+    n(539854));
 var i,
     a = n(442837),
     o = n(570140),
@@ -82,8 +81,8 @@ let C = {
         everLaunchedActivities: new Set(),
         seenNewActivities: {},
         seenUpdatedActivities: {},
-        surfacesToShowNewActivityIndicator: new Set(),
-        lastCheckedForBadgeableActivities: null
+        lastCheckedForBadgeableActivities: null,
+        dateRangesForSurfaces: {}
     },
     R = [],
     P = [],
@@ -159,7 +158,7 @@ function Q(e) {
                   customId: G.customId,
                   inviterUserId: null == w ? void 0 : w.inviterUserId
               }),
-          eg({
+          em({
               channelId: null != h ? h : null,
               applicationId: u
           }));
@@ -196,7 +195,7 @@ function ee(e) {
     let { guilds: t } = e;
     (x.clear(), L.clear(), M.clear(), k.clear(), t.forEach((e) => J(e)));
     let n = c.default.getId();
-    for (let e of Array.from(D.values())) eA.getEmbeddedActivitiesForLocation(e.location).some((t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n)) || $(e);
+    for (let e of Array.from(D.values())) eS.getEmbeddedActivitiesForLocation(e.location).some((t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n)) || $(e);
 }
 function et(e) {
     let { guild: t } = e;
@@ -268,7 +267,7 @@ function ei(e) {
                   o.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
               }))
             : (K = C !== d.Z.getChannelId() || (0, y.Z)(C) ? v.Ez.PIP : v.Ez.PANEL),
-        W.set(eI(l.id, i), Date.now()));
+        W.set(ev(l.id, i), Date.now()));
 }
 function ea(e) {
     let { applicationId: t } = e,
@@ -312,32 +311,30 @@ function eu(e) {
     });
 }
 function ed(e) {
-    let { activities: t, now: n } = e;
-    t.forEach((e) => {
-        let t = e.application_id,
-            r = e.client_platform_config[(0, b.Z)((0, p.getOS)())];
-        if (null == r.label_until) return;
-        let i = new Date(r.label_until).getTime();
-        if (i < n) return;
-        let a = C.seenNewActivities[t],
-            o = Object.hasOwn(C.seenNewActivities, t),
-            l = new Date(a).getTime() < i;
-        r.label_type === s.ww.NEW &&
-            (!o || l) &&
-            (Object.values(s.eR).forEach((e) => {
-                r.omit_badge_from_surfaces.includes(e) || C.surfacesToShowNewActivityIndicator.add(e);
-            }),
-            (C.seenNewActivities[t] = r.label_until));
-        let c = C.seenUpdatedActivities[t],
-            u = Object.hasOwn(C.seenUpdatedActivities, t),
-            d = new Date(c).getTime() < i;
-        r.label_type === s.ww.UPDATED &&
-            (!u || d) &&
-            (Object.values(s.eR).forEach((e) => {
-                r.omit_badge_from_surfaces.includes(e) || C.surfacesToShowNewActivityIndicator.add(e);
-            }),
-            (C.seenUpdatedActivities[t] = r.label_until));
-    });
+    let { activities: t, now: n } = e,
+        r = (0, b.Z)((0, p.getOS)()),
+        i = t.reduce((e, t) => {
+            let i = t.client_platform_config[r];
+            if (null == i.label_from || null == i.label_until) return e;
+            let a = {
+                    fromDate: i.label_from,
+                    untilDate: i.label_until
+                },
+                o = new Date(i.label_from).getTime(),
+                l = new Date(i.label_until).getTime();
+            return (
+                o > n ||
+                    l < n ||
+                    Object.values(s.eR)
+                        .filter((e) => !i.omit_badge_from_surfaces.includes(e))
+                        .forEach((t) => {
+                            let n = e[t];
+                            (null == n || new Date(n.fromDate).getTime() < o) && (e[t] = a);
+                        }),
+                e
+            );
+        }, {});
+    C.dateRangesForSurfaces = i;
 }
 function ef(e) {
     let { guildId: t, activities: n } = e,
@@ -353,10 +350,7 @@ function ef(e) {
             lastFetchTimestampMs: i
         }));
 }
-let e_ = () => {
-    C.surfacesToShowNewActivityIndicator.clear();
-};
-function ep(e) {
+function e_(e) {
     let { applicationId: t, componentId: n, commandOrigin: r, launchParams: i, channelId: a, inviterUserId: o } = e;
     (U.set(j(a, t), {
         isLaunching: !0,
@@ -366,60 +360,55 @@ function ep(e) {
     }),
         (z = r === l.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? v.MI.NO_CHAT : v.MI.RESIZABLE));
 }
-function eh(e) {
+function ep(e) {
     let { applicationId: t } = e;
     C.everLaunchedActivities.add(t);
 }
-function em(e) {
+function eh(e) {
     let { applicationId: t, channelId: n } = e;
-    eg({
+    em({
         applicationId: t,
         channelId: n
     });
 }
-function eg(e) {
+function em(e) {
     let { applicationId: t, channelId: n } = e;
     U.delete(j(n, t));
 }
-function eE(e) {
+function eg(e) {
     let { applicationId: t, lockState: n, pictureInPictureLockState: r, gridLockState: i } = e;
     (null == n ? V.delete(t) : V.set(t, n), null === r ? F.delete(t) : void 0 !== r && F.set(t, r), null === i ? Z.delete(t) : void 0 !== i && Z.set(t, i));
 }
-function eb(e) {
+function eE(e) {
     let { activityPanelMode: t } = e;
     K = t;
 }
-function ey(e) {
+function eb(e) {
     let { focusedActivityLayout: t } = e;
     z = t;
 }
-function eO(e) {
+function ey(e) {
     let { applicationId: t, layoutMode: n } = e;
     H.set(t, n);
 }
-function ev(e) {
+function eO(e) {
     let { channelId: t } = e;
     if (null == r) return;
     let n = (0, E.p)(r);
     null != n && n !== t && K === v.Ez.PANEL && (K = v.Ez.PIP);
 }
-function eI(e, t) {
+function ev(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function eT(e) {
+function eI(e) {
     let { key: t } = e;
     t === I.KJ3.ACTIVITY_POPOUT && (K = v.Ez.PIP);
 }
-class eS extends (i = a.ZP.PersistedStore) {
+class eT extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        var t, n;
-        let r = new Set(null != (t = null == e ? void 0 : e.everLaunchedActivities) ? t : []),
-            i = new Set(null != (n = null == e ? void 0 : e.surfacesToShowNewActivityIndicator) ? n : []);
-        null != e &&
-            (C = N(S({}, e), {
-                everLaunchedActivities: r,
-                surfacesToShowNewActivityIndicator: i
-            }));
+        var t;
+        let n = new Set(null != (t = null == e ? void 0 : e.everLaunchedActivities) ? t : []);
+        null != e && (C = N(S({}, e), { everLaunchedActivities: n }));
     }
     getState() {
         return C;
@@ -455,7 +444,7 @@ class eS extends (i = a.ZP.PersistedStore) {
         return x;
     }
     getEmbeddedActivityDurationMs(e, t) {
-        let n = W.get(eI(e, t));
+        let n = W.get(ev(e, t));
         return null == n ? null : Date.now() - n;
     }
     isLaunchingActivity() {
@@ -533,9 +522,9 @@ class eS extends (i = a.ZP.PersistedStore) {
         return q;
     }
 }
-(T(eS, 'displayName', 'EmbeddedActivitiesStore'),
-    T(eS, 'persistKey', 'EmbeddedActivities'),
-    T(eS, 'migrations', [
+(T(eT, 'displayName', 'EmbeddedActivitiesStore'),
+    T(eT, 'persistKey', 'EmbeddedActivities'),
+    T(eT, 'migrations', [
         (e) =>
             N(S({}, e), {
                 seenFeaturedActivities: [],
@@ -556,16 +545,17 @@ class eS extends (i = a.ZP.PersistedStore) {
         },
         (e) => (delete e.usersHavePlayedByApp, S({}, e)),
         (e) => ((e.surfacesToShowNewActivityIndicator = new Set()), e.shouldShowNewActivityIndicator && e.surfacesToShowNewActivityIndicator.add(s.eR.VOICE_LAUNCHER), delete e.shouldShowNewActivityIndicator, S({}, e)),
-        (e) => N(S({}, e), { lastCheckedForBadgeableActivities: null })
+        (e) => N(S({}, e), { lastCheckedForBadgeableActivities: null }),
+        (e) => (delete e.surfacesToShowNewActivityIndicator, N(S({}, e), { dateRangesForSurfaces: {} }))
     ]));
-let eA = new eS(o.Z, {
-        ACTIVITY_LAYOUT_MODE_UPDATE: eO,
+let eS = new eT(o.Z, {
+        ACTIVITY_LAYOUT_MODE_UPDATE: ey,
         CONNECTION_OPEN_SUPPLEMENTAL: ee,
         GUILD_CREATE: et,
         CHANNEL_DELETE: en,
-        EMBEDDED_ACTIVITY_LAUNCH_START: ep,
-        EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: eh,
-        EMBEDDED_ACTIVITY_LAUNCH_FAIL: em,
+        EMBEDDED_ACTIVITY_LAUNCH_START: e_,
+        EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: ep,
+        EMBEDDED_ACTIVITY_LAUNCH_FAIL: eh,
         EMBEDDED_ACTIVITY_CLOSE: ea,
         EMBEDDED_ACTIVITY_UPDATE_POPOUT_WINDOW_LAYOUT: eo,
         EMBEDDED_ACTIVITY_UPDATE_V2: er,
@@ -574,11 +564,10 @@ let eA = new eS(o.Z, {
         EMBEDDED_ACTIVITY_FETCH_SHELF: ec,
         EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: ef,
         EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: eu,
-        EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR: e_,
-        EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: eE,
-        EMBEDDED_ACTIVITY_SET_PANEL_MODE: eb,
-        EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: ey,
-        CHANNEL_SELECT: ev,
-        POPOUT_WINDOW_CLOSE: eT
+        EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: eg,
+        EMBEDDED_ACTIVITY_SET_PANEL_MODE: eE,
+        EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: eb,
+        CHANNEL_SELECT: eO,
+        POPOUT_WINDOW_CLOSE: eI
     }),
-    eN = eA;
+    eA = eS;

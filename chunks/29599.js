@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(410030),
     f = n(454585),
     b = n(163684),
-    _ = n(178100),
-    x = n(518638),
+    x = n(178100),
+    _ = n(518638),
     E = n(725727),
     j = n(454982),
     C = n(767714),
@@ -37,9 +37,9 @@ function Z(e) {
         [m, g] = r.useState(!1),
         p = () => u((e) => !e),
         b = (0, h.ZP)(),
-        E = (0, x.Pz)(n.id, b),
+        E = (0, _.Pz)(n.id, b),
         C = null != s,
-        O = (0, _.Z)(n, C);
+        O = (0, x.Z)(n, C);
     C && c
         ? (t = R.intl.format(R.t.pkxVx8, {
               endDate: O,
@@ -191,8 +191,8 @@ let w = function () {
             (0, m.Qv)().then(() => f(!0));
         });
     }, []);
-    let { promotionsLoaded: _, activeOutboundPromotions: x, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: w, addClaimedOutboundPromotionCode: k } = (0, E.lG)(),
-        L = x.length + j.length > 0,
+    let { promotionsLoaded: x, activeOutboundPromotions: _, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: w, addClaimedOutboundPromotionCode: k } = (0, E.lG)(),
+        L = _.length + j.length > 0,
         B =
             b.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -201,7 +201,7 @@ let w = function () {
                     disable: s
                 }
             ).enabled && L;
-    return h && _
+    return h && x
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (function () {
@@ -270,7 +270,7 @@ let w = function () {
                                                   n.id
                                               );
                                           }),
-                                          x.map((e) =>
+                                          _.map((e) =>
                                               (0, i.jsx)(
                                                   Z,
                                                   {

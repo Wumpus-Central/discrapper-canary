@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(955415),
     m = n(131704),
     f = n(630388),
-    _ = n(411198),
-    g = n(277707),
+    g = n(411198),
+    _ = n(277707),
     h = n(358595),
     b = n(981631),
     E = n(388032),
@@ -56,9 +56,9 @@ function C(e) {
         }, [N, P, z, M, I, S]);
     if (null == T) {
         if (null == N.guild) return (0, r.jsx)(h.Z, {});
-        (T = _.Qs(N.guild)).premiumTier = null != (x = N.guild.premium_tier) ? x : b.Eu4.NONE;
+        (T = g.Qs(N.guild)).premiumTier = null != (x = N.guild.premium_tier) ? x : b.Eu4.NONE;
     }
-    let J = (0, g.e)({
+    let J = (0, _.e)({
         isVoiceChannel: F,
         isOwnInvite: w,
         isGuest: G,

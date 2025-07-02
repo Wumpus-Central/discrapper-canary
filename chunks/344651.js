@@ -1240,13 +1240,13 @@ function Q(e) {
     H(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE'], (e) => {
         K({
             type: 'GUILD_BOOST_SLOT_CREATE',
-            guildBoostSlot: b.Z.createFromServer(e, N.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: b.Z.createFromServer(e, N.Z.getSubscriptionById(e.subscription_id))
         });
     }),
     H(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE'], (e) => {
         K({
             type: 'GUILD_BOOST_SLOT_UPDATE',
-            guildBoostSlot: b.Z.createFromServer(e, N.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: b.Z.createFromServer(e, N.Z.getSubscriptionById(e.subscription_id))
         });
     }),
     H(['BILLING_POPUP_BRIDGE_CALLBACK'], (e) => {

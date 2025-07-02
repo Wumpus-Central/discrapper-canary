@@ -15,8 +15,8 @@ var r = n(442837),
     h = n(821035),
     f = n(694569),
     b = n(394655),
-    _ = n(540204),
-    x = n(546957),
+    x = n(540204),
+    _ = n(546957),
     E = n(893996),
     j = n(273927),
     C = n(211466),
@@ -33,11 +33,11 @@ let R = () =>
         (0, i.jsx)(E.Z, {
             title: P.intl.string(P.t['y62Z/f']),
             webSetting: I.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
-            children: (0, i.jsxs)(x.Z, {
+            children: (0, i.jsxs)(_.Z, {
                 children: [
                     (0, i.jsx)(l.F, {
                         setting: I.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                        children: (0, i.jsx)(_.Z, {})
+                        children: (0, i.jsx)(x.Z, {})
                     }),
                     (0, i.jsx)(T.Z, {}),
                     (0, i.jsx)(N.Z, {}),

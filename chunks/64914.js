@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(695346),
     f = n(494620),
     b = n(399970),
-    _ = n(726985),
-    x = n(981631),
+    x = n(726985),
+    _ = n(981631),
     E = n(388032),
     j = n(40713);
 function C(e) {
@@ -113,16 +113,16 @@ function O() {
         title: E.intl.string(E.t['8/udY2']),
         children: [
             (0, i.jsx)(u.F, {
-                setting: _.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
+                setting: x.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
                 children: (0, i.jsx)(l.j7V, {
                     value: n,
                     onChange: h.Sb.updateSetting,
-                    note: E.intl.format(E.t['CY6q/f'], { apiDocsUrl: x.EYA.API_DOCS }),
+                    note: E.intl.format(E.t['CY6q/f'], { apiDocsUrl: _.EYA.API_DOCS }),
                     children: E.intl.string(E.t.ObIb1d)
                 })
             }),
             (0, i.jsx)(u.F, {
-                setting: _.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+                setting: x.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(l.j7V, {
                     className: e ? '' : j.formSwitchExtension,
                     value: e,
@@ -143,7 +143,7 @@ function O() {
                     ]
                 }),
             (0, i.jsx)(u.F, {
-                setting: _.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+                setting: x.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                 children: (0, i.jsx)(l.j7V, {
                     value: !t,
                     onChange: v,
@@ -152,7 +152,7 @@ function O() {
                 })
             }),
             (0, i.jsx)(u.F, {
-                setting: _.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+                setting: x.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                 children: (0, i.jsx)(l.j7V, {
                     value: null != O,
                     note: E.intl.string(E.t['52hMnJ']),
@@ -161,7 +161,7 @@ function O() {
                 })
             }),
             (0, i.jsx)(u.F, {
-                setting: _.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
+                setting: x.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                 children: (0, i.jsx)(l.j7V, {
                     value: S,
                     note: E.intl.string(E.t['B/qU4O']),
@@ -170,7 +170,7 @@ function O() {
                 })
             }),
             (0, i.jsxs)(u.F, {
-                setting: _.s6.SETTINGS_ADVANCED_CF_WARP,
+                setting: x.s6.SETTINGS_ADVANCED_CF_WARP,
                 children: [
                     (0, i.jsx)(l.j7V, {
                         value: y,

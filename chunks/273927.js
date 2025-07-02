@@ -19,8 +19,8 @@ var i = n(255367),
     h = n(838436),
     f = n(526761),
     b = n(726985),
-    _ = n(981631),
-    x = n(388032),
+    x = n(981631),
+    _ = n(388032),
     E = n(569834);
 function j(e) {
     let { listType: t, numberOfUsers: n } = e,
@@ -38,12 +38,12 @@ function j(e) {
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/semibold',
                         color: 'interactive-active',
-                        children: x.intl.string(r ? x.t.PFOUKS : x.t['93ZDWF'])
+                        children: _.intl.string(r ? _.t.PFOUKS : _.t['93ZDWF'])
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: r ? x.intl.format(x.t['r91W/v'], { numberOfBlockedUsers: n }) : x.intl.format(x.t.rXUeOj, { numberOfIgnoredUsers: n })
+                        children: r ? _.intl.format(_.t['r91W/v'], { numberOfBlockedUsers: n }) : _.intl.format(_.t.rXUeOj, { numberOfIgnoredUsers: n })
                     })
                 ]
             })
@@ -56,7 +56,7 @@ function C(e) {
         p = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
         h = (0, a.e7)([g.default], () => g.default.getUser(n)),
         [f, b] = r.useState(!1),
-        _ = r.useCallback(() => {
+        x = r.useCallback(() => {
             (b(!0),
                 p
                     ? c.Z.unblockUser(n).catch(() => {
@@ -97,9 +97,9 @@ function C(e) {
                   }),
                   (0, i.jsx)(o.zxk, {
                       color: o.Ttl.PRIMARY,
-                      onClick: _,
+                      onClick: x,
                       submitting: f,
-                      children: x.intl.string(p ? x.t.XyHpKC : x.t['8wXU9P'])
+                      children: _.intl.string(p ? _.t.XyHpKC : _.t['8wXU9P'])
                   })
               ]
           });
@@ -140,7 +140,7 @@ function O(e) {
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-default',
-                                  children: x.intl.format(x.t.jULEDg, { numberOfUsers: l + 5 < n.length ? 5 : n.length - l })
+                                  children: _.intl.format(_.t.jULEDg, { numberOfUsers: l + 5 < n.length ? 5 : n.length - l })
                               })
                           })
                       })
@@ -172,8 +172,8 @@ function T() {
         scrollHighlightDelay: 900,
         children: [
             (0, i.jsx)(h.H, {
-                header: x.intl.string(x.t['3wRorq']),
-                description: x.intl.format(x.t['0aNQo6'], { helpArticle: p.Z.getArticleURL(_.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+                header: _.intl.string(_.t['3wRorq']),
+                description: _.intl.format(_.t['0aNQo6'], { helpArticle: p.Z.getArticleURL(x.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
             }),
             (0, i.jsx)(S, {}),
             (0, i.jsx)(v, {})

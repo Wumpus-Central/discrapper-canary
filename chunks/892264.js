@@ -32,8 +32,8 @@ class _ extends a.Z {
             f(this, 'maybeFetchSubscriptions', async () => {
                 let e = o.default.getCurrentUser();
                 if ((0, u.I5)(e)) {
-                    l.ZP.hasFetchedSubscriptions() || (await (0, r.jg)());
-                    let e = l.ZP.getPremiumSubscription();
+                    l.Z.hasFetchedSubscriptions() || (await (0, r.jg)());
+                    let e = l.Z.getPremiumSubscription();
                     (null == e ? void 0 : e.paymentSourceId) != null || c.Z.applicationIdsFetched.has(d.CL) || (await (0, i.yD)(d.CL));
                 }
             }),

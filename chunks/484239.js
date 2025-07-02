@@ -9,9 +9,9 @@ var r = n(120356),
     c = n(593595);
 let d = (e) => {
     var t;
-    let { title: n, titleClassName: r, buttonClassName: d, perkImage: u, isCarousel: m, onCtaClick: g, perkComponent: p, subtitle: h = '', descriptionCta: f = '', cardVariant: b, subtitleClassName: _, imageOverlayText: x } = e,
+    let { title: n, titleClassName: r, buttonClassName: d, perkImage: u, isCarousel: m, onCtaClick: g, perkComponent: p, subtitle: h = '', descriptionCta: f = '', cardVariant: b, subtitleClassName: x, imageOverlayText: _ } = e,
         E = (0, a._)(b),
-        j = null != x;
+        j = null != _;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', { className: s()(c.cover, c.below) }),
@@ -21,7 +21,7 @@ let d = (e) => {
                 cardVariantStyleInfo: E,
                 titleClassName: r,
                 subtitle: h,
-                subtitleClassName: _
+                subtitleClassName: x
             }),
             null != u &&
                 (0, i.jsxs)('div', {
@@ -38,7 +38,7 @@ let d = (e) => {
                                   children: (0, i.jsx)(l.Text, {
                                       className: c.imageOverlayText,
                                       variant: 'text-md/bold',
-                                      children: x
+                                      children: _
                                   })
                               })
                             : null

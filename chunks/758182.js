@@ -15,8 +15,8 @@ var a = n(149765),
     h = n(685736),
     f = n(266750),
     b = n(768910),
-    _ = n(632093),
-    x = n(347994),
+    x = n(632093),
+    _ = n(347994),
     E = n(591526),
     j = n(261875),
     C = n(710845),
@@ -82,9 +82,9 @@ async function F(e, t, n) {
         p = S.Z.fetchGuildCache.measureAsync(() => z(e, n)),
         h = S.Z.fetchGuildCache.measureAsync(() => Y(e, n)),
         f = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => E.Z.getAsync(e, null)) : Promise.resolve([]),
-        j = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => x.Z.getAll(e)),
+        j = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => _.Z.getAll(e)),
         C = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
-        v = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => _.Z.getAll(e)),
+        v = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => x.Z.getAll(e)),
         [[I, y], A, R, Z, w, k, L] = await Promise.all([g, p, h, f, j, C, v]),
         B = performance.now() - m;
     if ((D.verbose('cache loaded in '.concat(B, 'ms (channel_history ').concat(I, 'ms)')), null == y)) return ((0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0]);
@@ -281,7 +281,7 @@ async function W(e, t, n, i) {
                 return e + i.length;
             }, 0),
             b = p - f,
-            _ = 0 === o.stale.length ? '' : ' \xB7 '.concat(o.stale.join(', '));
+            x = 0 === o.stale.length ? '' : ' \xB7 '.concat(o.stale.join(', '));
         (D.verbose(
             'lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: '
                 .concat(t, '\n          initial_guild: ')
@@ -294,7 +294,7 @@ async function W(e, t, n, i) {
                 .concat(o.channels.length, ' guilds)\n              stale: ')
                 .concat(b, ' (')
                 .concat(o.stale.length, ' guilds')
-                .concat(_, ')\n              unstale: ')
+                .concat(x, ')\n              unstale: ')
                 .concat(f, '\n            full_channels (guilds_with_stale_basic_channels):\n              total: ')
                 .concat(m, ' (')
                 .concat(c.length, ' guilds)\n      )')

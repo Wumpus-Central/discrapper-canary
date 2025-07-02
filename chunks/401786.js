@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(374649),
     f = n(431369),
     b = n(811334),
-    _ = n(55610),
-    x = n(311821),
+    x = n(55610),
+    _ = n(311821),
     E = n(42818),
     j = n(314884),
     C = n(509545),
@@ -54,7 +54,7 @@ function R(e) {
                 }),
                 (0, i.jsxs)(o.hzk, {
                     className: P.body,
-                    children: [(0, i.jsx)('div', { className: P.cancelImage }), (0, i.jsx)('div', { children: a }), (0, i.jsx)(_.Z, { fromBoostCancelModal: !0 })]
+                    children: [(0, i.jsx)('div', { className: P.cancelImage }), (0, i.jsx)('div', { children: a }), (0, i.jsx)(x.Z, { fromBoostCancelModal: !0 })]
                 }),
                 t.isPurchasedExternally
                     ? null
@@ -104,7 +104,7 @@ async function D(e, t, n, i) {
 }
 function Z(e) {
     var t, n, s;
-    let { premiumSubscription: l, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: g, onNext: _, onClose: j } = e,
+    let { premiumSubscription: l, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: g, onNext: x, onClose: j } = e,
         [O, S] = r.useState(!1),
         [y, R] = r.useState(null),
         [Z, w] = r.useMemo(() => {
@@ -213,14 +213,14 @@ function Z(e) {
                             disabled: O,
                             onClick: async () => {
                                 try {
-                                    (S(!0), R(null), await D(l, Z, M, c), _());
+                                    (S(!0), R(null), await D(l, Z, M, c), x());
                                 } catch (e) {
                                     (R(A.intl.string(A.t['5mlOCQ'])), S(!1));
                                 }
                             },
                             children: A.intl.string(A.t['/AS/gI'])
                         }),
-                        (0, i.jsx)(x.Z, { onClick: g })
+                        (0, i.jsx)(_.Z, { onClick: g })
                     ]
                 })
             ]
@@ -262,9 +262,9 @@ function k(e) {
     let t,
         { guildBoostSlot: n, transitionState: s, onClose: l } = e;
     r.useEffect(() => {
-        O.ZP.hasFetchedSubscriptions() || (0, c.jg)();
+        O.Z.hasFetchedSubscriptions() || (0, c.jg)();
     }, []);
-    let d = (0, a.e7)([O.ZP], () => O.ZP.getPremiumTypeSubscription()),
+    let d = (0, a.e7)([O.Z], () => O.Z.getPremiumTypeSubscription()),
         p = (0, g.Z)(),
         [h, f] = r.useState(1),
         { analyticsLocations: b } = (0, m.ZP)(u.Z.GUILD_BOOST_CANCELLATION_MODAL);

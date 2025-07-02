@@ -16,8 +16,8 @@ var r,
     p = n(86357),
     m = n(914602),
     f = n(568836),
-    _ = n(730749),
-    g = n(112724),
+    g = n(730749),
+    _ = n(112724),
     h = n(812206),
     b = n(283595),
     E = n(558314),
@@ -218,6 +218,6 @@ function N(e) {
         libraryApplication: null != n ? b.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
-let P = (0, g.Z)((0, _.Z)(S)),
+let P = (0, _.Z)((0, g.Z)(S)),
     A = o.ZP.connectStores(T, N)(P),
-    w = (0, _.Z)(o.ZP.connectStores(T, N)(S));
+    w = (0, g.Z)(o.ZP.connectStores(T, N)(S));

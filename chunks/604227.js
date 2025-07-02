@@ -13,11 +13,11 @@ var r = n(525654),
 function g() {
     var e, t, n, r, g;
     let p = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        h = '415034',
-        f = 'ca5d4d78c9a3296538a9abc27b40d0502423f597'.substring(0, 7),
+        h = '415151',
+        f = '519fbc212be561a73175ccf1a9118a4e563db1d7'.substring(0, 7),
         b = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
-        _ = null === a.Z || void 0 === a.Z || null == (e = (t = a.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
-        x = null === a.Z || void 0 === a.Z || null == (n = (r = a.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
+        x = null === a.Z || void 0 === a.Z || null == (e = (t = a.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
+        _ = null === a.Z || void 0 === a.Z || null == (n = (r = a.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
         E = null == (g = o.C.getCurrentBuildOverride().overrides) ? void 0 : g.discord_web,
         j = (function () {
             var e;
@@ -29,7 +29,7 @@ function g() {
         })(),
         C = [p, h, '('.concat(f, ')')];
     return (
-        null != b && (C.push('Host '.concat(b)), null != x && C.push(x.toLowerCase()), null != _ && C.push('('.concat(_, ')'))),
+        null != b && (C.push('Host '.concat(b)), null != _ && C.push(_.toLowerCase()), null != x && C.push('('.concat(x, ')'))),
         C.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
         null != j && C.push(j),
         (0, i.jsx)(c.Z, {
@@ -113,15 +113,15 @@ function g() {
                                                           'Host ',
                                                           b,
                                                           ' ',
-                                                          null != x
-                                                              ? (0, i.jsxs)('span', {
-                                                                    className: m.appArch,
-                                                                    children: [x.toLowerCase(), ' ']
-                                                                })
-                                                              : null,
                                                           null != _
                                                               ? (0, i.jsxs)('span', {
-                                                                    children: ['(', _, ')']
+                                                                    className: m.appArch,
+                                                                    children: [_.toLowerCase(), ' ']
+                                                                })
+                                                              : null,
+                                                          null != x
+                                                              ? (0, i.jsxs)('span', {
+                                                                    children: ['(', x, ')']
                                                                 })
                                                               : null
                                                       ]

@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(906732),
     f = n(70097),
     b = n(433811),
-    _ = n(214852),
-    x = n(78839),
+    x = n(214852),
+    _ = n(78839),
     E = n(626135),
     j = n(526167),
     C = n(74538),
@@ -40,7 +40,7 @@ var i = n(255367),
     V = n(313199),
     G = n(821969);
 let F = () => {
-    (0, _.z)(b.X);
+    (0, x.z)(b.X);
     let e = r.useRef(null),
         t = r.useRef(null),
         n = r.useRef(null),
@@ -56,7 +56,7 @@ let F = () => {
         [ee, et] = r.useState(!1),
         en = (0, j.rO)(),
         [ei, er] = r.useState(!1),
-        es = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
+        es = (0, a.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
         el = null != es ? (0, C.Af)(es) : null,
         ea = null != el ? C.ZP.getSkuIdForPlan(el.planId) : null,
         eo = null !== ea && ea !== w.Si.TIER_2 ? w.Si.TIER_2 : null,

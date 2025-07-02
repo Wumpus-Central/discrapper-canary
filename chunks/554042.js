@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(865427),
     f = n(358085),
     b = n(210887),
-    _ = n(981631),
-    x = n(388032),
+    x = n(981631),
+    _ = n(388032),
     E = n(560030);
 let j = [
     {
@@ -144,12 +144,12 @@ function C() {
                                 orientation: 'horizontal',
                                 options: [
                                     {
-                                        name: x.intl.string(x.t.b8Cei4),
-                                        value: _.BRd.DARK
+                                        name: _.intl.string(_.t.b8Cei4),
+                                        value: x.BRd.DARK
                                     },
                                     {
-                                        name: x.intl.string(x.t.K2sFfn),
-                                        value: _.BRd.LIGHT
+                                        name: _.intl.string(_.t.K2sFfn),
+                                        value: x.BRd.LIGHT
                                     }
                                 ],
                                 onChange: (e) => {

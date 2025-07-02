@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(63063),
     m = n(436952),
     f = n(411149),
-    _ = n(115215),
-    g = n(151480),
+    g = n(115215),
+    _ = n(151480),
     h = n(680783),
     b = n(66420),
     E = n(981631),
@@ -44,9 +44,9 @@ function v(e) {
         B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         G = (null == B ? void 0 : B.id) === T.author.id,
         H = (0, c.m)(y.p9.TIER_2),
-        V = _.t(N);
+        V = g.t(N);
     return (i.useEffect(() => {
-        null == L && f.Z.shouldFetchWallpapers && g.k9();
+        null == L && f.Z.shouldFetchWallpapers && _.k9();
     }, [L]),
     null == A)
         ? null
@@ -76,7 +76,7 @@ function v(e) {
               (S = (0, r.jsx)(a.zxk, {
                   className: x.action,
                   onClick: () => {
-                      g.X(N, A, {
+                      _.X(N, A, {
                           shouldClear: !V,
                           onError: () => {
                               (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.F8FvU1), a.ToastType.FAILURE));

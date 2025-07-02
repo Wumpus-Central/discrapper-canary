@@ -374,6 +374,7 @@ class ev extends d.Z {
                 .finally(() => {
                     (e.identify({
                         serverId: this.trueServerId,
+                        channelId: this.trueChannelId,
                         userId: this.userId,
                         sessionId: this.sessionId,
                         token: t,

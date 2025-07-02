@@ -122,6 +122,8 @@ var o = (function (e) {
             (e.RING = 'RING'),
             (e.STOP_RINGING = 'STOP_RINGING'),
             (e.MANAGE_APP = 'MANAGE_APP'),
+            (e.PRESS_REMOVE_FROM_THREAD = 'PRESS_REMOVE_FROM_THREAD'),
+            (e.PRESS_LEAVE_THREAD = 'PRESS_LEAVE_THREAD'),
             e
         );
     })({});

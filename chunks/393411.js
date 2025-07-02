@@ -19,8 +19,8 @@ var r = n(120356),
     h = n(963249),
     f = n(301766),
     b = n(594174),
-    _ = n(509545),
-    x = n(931331),
+    x = n(509545),
+    _ = n(931331),
     E = n(754347),
     j = n(122289),
     C = n(74538),
@@ -241,7 +241,7 @@ let Y = function (e) {
         },
         ea = () => {
             if (null != r && null != r.premiumPlanIdFromItems) {
-                let e = _.Z.get(r.premiumPlanIdFromItems);
+                let e = x.Z.get(r.premiumPlanIdFromItems);
                 if (null == e) return void M.info('Plan not fetched for plan id: '.concat(r.premiumPlanIdFromItems));
                 let t = (0, O.DE)(e, null == p ? void 0 : p.id, !1),
                     n = t.length > 0 ? t[0] : r.currency,
@@ -315,7 +315,7 @@ let Y = function (e) {
             eh = (0, i.jsx)(H, {});
             break;
         case D.p9.TIER_2:
-            eh = (0, i.jsx)(x.Z, {
+            eh = (0, i.jsx)(_.Z, {
                 className: k.planName,
                 'aria-label': w.intl.string(w.t.lpNrPj)
             });

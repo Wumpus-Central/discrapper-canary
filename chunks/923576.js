@@ -56,7 +56,7 @@ function v() {
     let [n, v] = r.useState(!1),
         j = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         g = (0, d.kG)(),
-        _ = (0, l.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
+        _ = (0, l.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
         y = null != g && null != (t = null == (e = b.vK[g]) ? void 0 : e.tenureReqNumMonths) ? t : 0,
         C = r.useCallback(
             async (e) => {

@@ -1,72 +1,72 @@
-t.d(n, { r: () => b });
+t.d(n, { r: () => m });
 var r = t(255367),
     l = t(73800),
-    i = t(481060),
-    c = t(239091),
+    c = t(481060),
+    i = t(239091),
     o = t(794295),
-    u = t(782568),
-    a = t(364640),
-    d = t(124072),
-    s = t(198620),
-    f = t(823379),
-    _ = t(312539),
-    h = t(606629);
-function b(e) {
+    a = t(782568),
+    s = t(364640),
+    u = t(124072),
+    d = t(198620),
+    h = t(823379),
+    f = t(312539),
+    j = t(606629);
+function m(e) {
     let { type: n, value: t, children: l } = e;
     switch (n) {
         case 'normal':
             return (0, r.jsx)(o.Z, {
                 title: t.title,
                 href: t.url,
-                children: l
+                children: (0, r.jsx)('span', { children: l })
             });
         case 'mention':
             switch (t.type) {
                 case 'channel':
                 case 'message':
                     let {
-                            value: { guild_id: i, channel_id: c }
+                            value: { guild_id: c, channel_id: i }
                         } = t,
-                        u = 'message_id' in t.value ? t.value.message_id : void 0;
-                    return (0, r.jsx)(_.d, {
-                        channelId: c,
-                        guildId: i,
-                        messageId: u
+                        a = 'message_id' in t.value ? t.value.message_id : void 0;
+                    return (0, r.jsx)(f.d, {
+                        channelId: i,
+                        guildId: c,
+                        messageId: a
                     });
                 case 'attachment':
                     let {
-                        value: { domain: a, ephemeral: d, channel_id: s, attachment_id: h, name: b }
+                        value: { domain: s, ephemeral: u, channel_id: d, attachment_id: j, name: m }
                     } = t;
-                    return (0, r.jsx)(g, {
-                        domain: a,
-                        ephemeral: d,
-                        channelId: s,
-                        attachmentId: h,
-                        name: b
+                    return (0, r.jsx)(p, {
+                        domain: s,
+                        ephemeral: u,
+                        channelId: d,
+                        attachmentId: j,
+                        name: m
                     });
                 default:
-                    (0, f.vE)(t);
+                    (0, h.vE)(t);
             }
             break;
         default:
-            (0, f.vE)(n);
+            (0, h.vE)(n);
     }
 }
-function g(e) {
-    let { domain: n, ephemeral: o, channelId: f, attachmentId: _, name: b } = e,
-        g = 'https://'
+function p(e) {
+    let { domain: n, ephemeral: o, channelId: h, attachmentId: f, name: m } = e,
+        p = 'https://'
             .concat(n, '/')
             .concat(o ? 'ephemeral-attachments' : 'attachments', '/')
+            .concat(h, '/')
             .concat(f, '/')
-            .concat(_, '/')
-            .concat(b),
-        m = l.useCallback(async () => {
-            let e = await (0, s.B_)(g);
-            (a.Z.trackLinkClicked(e), (0, u.Z)(e));
-        }, [g]),
-        y = l.useCallback(
+            .concat(m),
+        g = l.useCallback(async () => {
+            let e = await (0, d.B_)(p);
+            (s.Z.trackLinkClicked(e), (0, a.Z)(e));
+        }, [p]),
+        v = l.useCallback(
             (e) => {
-                (0, c.jW)(e, async () => {
+                (0, i.jW)(e, async () => {
                     let { default: e } = await t.e('98466').then(t.bind(t, 151578));
                     return (n) => {
                         var t, l;
@@ -99,8 +99,8 @@ function g(e) {
                             })({}, n)),
                             (l = l =
                                 {
-                                    attachmentUrl: g,
-                                    attachmentName: b
+                                    attachmentUrl: p,
+                                    attachmentName: m
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
@@ -119,21 +119,21 @@ function g(e) {
                     };
                 });
             },
-            [b, g]
+            [m, p]
         );
-    return (0, r.jsxs)(d.Z, {
+    return (0, r.jsxs)(u.Z, {
         role: 'link',
-        href: g,
-        onClick: m,
-        onContextMenu: y,
+        href: p,
+        onClick: g,
+        onContextMenu: v,
         className: 'attachmentLink',
         children: [
-            (0, r.jsx)(i.Ujz, {
+            (0, r.jsx)(c.Ujz, {
                 size: 'xs',
-                className: h.icon,
+                className: j.icon,
                 color: 'currentColor'
             }),
-            b
+            m
         ]
     });
 }

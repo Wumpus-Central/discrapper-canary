@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(168107),
     f = n(480916),
     b = n(81643),
-    _ = n(952306),
-    x = n(299206),
+    x = n(952306),
+    _ = n(299206),
     E = n(295474),
     j = n(144114),
     C = n(918505),
@@ -95,9 +95,9 @@ function Y(e) {
     r.useEffect(() => {
         b(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
-    let _ = !o.isClaimed(),
-        x = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || _,
-        j = x ? V.intl.string(V.t['7Ngnys']) : void 0;
+    let x = !o.isClaimed(),
+        _ = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || x,
+        j = _ ? V.intl.string(V.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: l()(G.field, a),
         children: [
@@ -183,7 +183,7 @@ function Y(e) {
                     (0, i.jsx)(
                         u.zxk,
                         H(F({}, e), {
-                            disabled: x,
+                            disabled: _,
                             size: u.zxk.Sizes.SMALL,
                             className: G.fieldButton,
                             color: u.zxk.Colors.PRIMARY,
@@ -337,7 +337,7 @@ function q(e) {
             buttonAriaLabel: V.intl.string(V.t.BleMPD),
             buttonColor: u.zxk.Colors.BRAND,
             valueMessage: V.intl.string(V.t.qxk9zs),
-            handleClick: () => _.Z.openClaimAccountModal()
+            handleClick: () => x.Z.openClaimAccountModal()
         };
     return (0, i.jsxs)('div', {
         className: l()(G.field, r),
@@ -459,7 +459,7 @@ function X(e) {
 }
 function Q(e) {
     let { user: t } = e,
-        n = (0, x.Z)({
+        n = (0, _.Z)({
             id: t.id,
             label: V.intl.string(V.t['/AXYnJ'])
         }),

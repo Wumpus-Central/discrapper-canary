@@ -18,8 +18,8 @@ var i = n(255367),
     h = n(37234),
     f = n(821849),
     b = n(230711),
-    _ = n(497321),
-    x = n(634894),
+    x = n(497321),
+    _ = n(634894),
     E = n(410030),
     j = n(607070),
     C = n(100527),
@@ -115,7 +115,7 @@ function ec() {
         t = (0, L.t7)(),
         n = (0, L.lr)(),
         r = (0, E.ZP)(),
-        s = (0, c.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
+        s = (0, c.e7)([R.Z], () => R.Z.getPremiumTypeSubscription()),
         a = (0, v.Z)(),
         o = (0, B.W)(),
         d = null !== s && null !== s.planIdFromItems;
@@ -368,8 +368,8 @@ function eu() {
 let em = function () {
     let e = (0, S.Q)(),
         { analyticsLocations: t } = (0, O.ZP)(C.Z.PREMIUM_SETTINGS),
-        n = (0, c.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
-        s = (0, c.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+        n = (0, c.e7)([R.Z], () => R.Z.getPremiumTypeSubscription()),
+        s = (0, c.e7)([R.Z], () => R.Z.hasFetchedSubscriptions()),
         l = (0, T.V)(),
         [a, o] = r.useState(!0),
         u = (0, v.Z)({ forceFetch: !0 }),
@@ -378,11 +378,11 @@ let em = function () {
         E = (0, c.e7)([A.Z], () => A.Z.enabled),
         j = r.useRef(null),
         y = 'PremiumManagementSettings';
-    ((0, x.j)({
+    ((0, _.j)({
         location: y + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, x.j)({
+        (0, _.j)({
             location: y + ' auto off',
             autoTrackExposure: !1
         }),
@@ -394,7 +394,7 @@ let em = function () {
         });
     }, [b, E, e]);
     let [D, w] = r.useState(!1);
-    if (E) return (0, i.jsx)(_.Z, {});
+    if (E) return (0, i.jsx)(x.Z, {});
     if (e) return (0, i.jsx)(N.c8, {});
     let k = s && null !== n && l,
         L = u.fetched && u.isFractionalPremiumActive;

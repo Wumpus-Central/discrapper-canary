@@ -19,8 +19,8 @@ var i,
     h = n(410030),
     f = n(100527),
     b = n(906732),
-    _ = n(211242),
-    x = n(600164),
+    x = n(211242),
+    _ = n(600164),
     E = n(509545),
     j = n(626135),
     C = n(122289),
@@ -97,7 +97,7 @@ async function H(e) {
 function z(e) {
     var t;
     let { premiumSubscription: n, premiumType: i, setStep: l, onClose: a, whatYouLoseExperienceEnabled: o, analyticsLocation: c } = e,
-        d = (0, _.Q)(),
+        d = (0, x.Q)(),
         [u, p] = s.useState(!1),
         [f, E] = s.useState(!1),
         j = (0, h.ZP)(),
@@ -205,7 +205,7 @@ function z(e) {
                 ]
             }),
             (0, r.jsxs)(g.mzw, {
-                justify: x.Z.Justify.START,
+                justify: _.Z.Justify.START,
                 children: [T, N]
             })
         ]
@@ -281,8 +281,8 @@ function W(e) {
                 ]
             }),
             (0, r.jsxs)(g.mzw, {
-                align: x.Z.Align.CENTER,
-                justify: x.Z.Justify.BETWEEN,
+                align: _.Z.Align.CENTER,
+                justify: _.Z.Justify.BETWEEN,
                 children: [
                     (0, r.jsx)(g.zxk, {
                         color: g.zxk.Colors.RED,
@@ -328,8 +328,8 @@ function X(e) {
     var t;
     let n,
         { premiumSubscription: i, transitionState: l, onClose: a, analyticsLocations: c, analyticsLocation: u, initialStep: p } = e,
-        _ = s.useRef(new o.qA()),
-        [x, E] = s.useState(null),
+        x = s.useRef(new o.qA()),
+        [_, E] = s.useState(null),
         O = null == (t = (0, S.Af)(i)) ? void 0 : t.planId,
         v = null != O ? S.ZP.getPremiumType(O) : null;
     d()(null != v, 'Should not be cancelling Nitro without premiumType');
@@ -502,7 +502,7 @@ function X(e) {
                 premiumSubscription: i,
                 premiumType: v,
                 onClose: () => Q(w),
-                confettiCanvas: x,
+                confettiCanvas: _,
                 userDiscountOffer: $
             });
             break;
@@ -515,7 +515,7 @@ function X(e) {
             (0, r.jsx)(o.O_, {
                 ref: E,
                 className: V.confettiCanvas,
-                environment: _.current
+                environment: x.current
             }),
             (0, r.jsx)(g.Y0X, {
                 transitionState: l,

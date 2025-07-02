@@ -26,8 +26,8 @@ var i = n(481060),
     h = n(722589),
     f = n(131704),
     b = n(592125),
-    _ = n(283595),
-    x = n(944486),
+    x = n(283595),
+    _ = n(944486),
     E = n(914010),
     j = n(626135),
     C = n(777754),
@@ -81,7 +81,7 @@ function A(e) {
 function P(e, t) {
     let { results: n, queryMode: i, query: r, maxQueryLength: s } = O.Z.getProps(),
         l = E.Z.getGuildId(),
-        a = x.Z.getChannelId(l),
+        a = _.Z.getChannelId(l),
         o = n[(0, d.gJ)(d.a8.DOWN, -1, n)],
         c = C.Z.isEmail(r),
         u = C.Z.isPhoneNumber(r),
@@ -141,7 +141,7 @@ function D() {
         let t;
         if (O.Z.isOpen()) return;
         let n = E.Z.getGuildId(),
-            i = x.Z.getChannelId(n);
+            i = _.Z.getChannelId(n);
         if (null != i) {
             let e = b.Z.getChannel(i);
             t = null != e ? e.type : null;
@@ -171,22 +171,22 @@ function L(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     (R(), (0, i.pTH)(), P(S.rMx.QUICKSWITCHER_RESULT_SELECTED, e));
-    let { type: f, record: x } = e,
+    let { type: f, record: _ } = e,
         E = { page: S.ZY5.QUICK_SWITCHER };
     switch (f) {
         case d.h8.GUILD:
-            (0, p.X)(x.id, { navigationReplace: !0 });
+            (0, p.X)(_.id, { navigationReplace: !0 });
             break;
         case d.h8.TEXT_CHANNEL:
-            null != (t = b.Z.getChannel(x.id)) &&
+            null != (t = b.Z.getChannel(_.id)) &&
                 (0, g.Kh)(t.id, {
                     state: { analyticsSource: E },
                     navigationReplace: !0
                 });
             break;
         case d.h8.VOICE_CHANNEL:
-            null != (t = b.Z.getChannel(x.id)) &&
-                (n ? l.Z.updateChatOpen(x.id, !0) : o.default.selectVoiceChannel(x.id),
+            null != (t = b.Z.getChannel(_.id)) &&
+                (n ? l.Z.updateChatOpen(_.id, !0) : o.default.selectVoiceChannel(_.id),
                 (0, g.Kh)(t.id, {
                     state: { analyticsSource: E },
                     navigationReplace: !0
@@ -194,17 +194,17 @@ function L(e) {
             break;
         case d.h8.USER:
             (s.Z.openPrivateChannel({
-                recipientIds: [x.id],
+                recipientIds: [_.id],
                 location: 'Quickswitcher'
             }),
-                a.Z.channelListScrollTo(S.ME, b.Z.getDMFromUserId(x.id)));
+                a.Z.channelListScrollTo(S.ME, b.Z.getDMFromUserId(_.id)));
             break;
         case d.h8.GROUP_DM:
-            ((0, g.Kh)(x.id, { navigationReplace: !0 }), a.Z.channelListScrollTo(S.ME, x.id));
+            ((0, g.Kh)(_.id, { navigationReplace: !0 }), a.Z.channelListScrollTo(S.ME, _.id));
             break;
         case d.h8.APPLICATION:
-            let j = _.Z.getActiveLibraryApplication(x.id);
-            N(x.id, j, {
+            let j = x.Z.getActiveLibraryApplication(_.id);
+            N(_.id, j, {
                 analyticsParams: {
                     source: S.Sbl.QUICK_SWITCHER,
                     location: S.Sbl.QUICK_SWITCHER
@@ -212,7 +212,7 @@ function L(e) {
             });
             break;
         case d.h8.LINK:
-            (0, m.Z)(x.path, { navigationReplace: !0 });
+            (0, m.Z)(_.path, { navigationReplace: !0 });
             break;
         case d.h8.IN_APP_NAVIGATION:
             if (e.record.type === u.Ky.SETTINGS) {
@@ -222,7 +222,7 @@ function L(e) {
                         openWithoutBackstack: !1,
                         impressionSource: t.source
                     });
-            } else (0, m.Z)(x.path, { navigationReplace: !0 });
+            } else (0, m.Z)(_.path, { navigationReplace: !0 });
     }
     r.Z.dispatch({
         type: 'QUICKSWITCHER_SWITCH_TO',

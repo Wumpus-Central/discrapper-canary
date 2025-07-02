@@ -1,44 +1,90 @@
-n.d(t, { Z: () => f });
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
-    l = n(120356),
-    a = n.n(l),
-    i = n(381585),
-    o = n(193227),
-    s = n(312030),
-    c = n(763891),
-    u = n(215023),
-    d = n(484920);
-let p = [u.AW.AVATAR_DECORATIONS, u.AW.PROFILE_EFFECTS, u.AW.NAMEPLATES, u.AW.BUNDLES];
-function f(e) {
-    let { isFullScreen: t, scrollerRef: n, tab: l, sortedCategories: u, setCategoryRef: f } = e,
-        { handlePageChange: g, currentPage: h } = (0, s.h)({
+    l = n(73800),
+    i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(381585),
+    c = n(870289),
+    u = n(193227),
+    d = n(841875),
+    p = n(312030),
+    g = n(763891),
+    f = n(215023),
+    h = n(388032),
+    b = n(484920);
+let m = [f.AW.AVATAR_DECORATIONS, f.AW.PROFILE_EFFECTS, f.AW.NAMEPLATES, f.AW.BUNDLES];
+function _(e) {
+    let { isFullScreen: t, scrollerRef: n, tab: i, sortedCategories: f, setCategoryRef: _ } = e,
+        { handlePageChange: C, currentPage: v } = (0, p.h)({
             scrollerRef: n,
-            sortedCategories: u
-        });
-    return (0, r.jsx)('div', {
-        className: d.pageWrapper,
-        children: (0, r.jsx)('main', {
-            className: a()(d.page, { [d.pageFullscreen]: t }),
-            children: p.includes(l)
-                ? (0, r.jsx)(
-                      c.Z,
-                      {
-                          isFullScreen: t,
-                          scrollerRef: n,
-                          tab: l
-                      },
-                      l
-                  )
-                : (0, r.jsx)(i.k0, {
-                      newValue: { pageIndex: h },
-                      children: (0, r.jsx)(o.Z, {
-                          isFullScreen: t,
-                          sortedCategories: u,
-                          setCategoryRef: f,
-                          currentPage: h,
-                          handlePageChange: g
-                      })
-                  })
+            sortedCategories: f
+        }),
+        O = (0, c.F)('CollectiblesBrowse'),
+        [x, S] = l.useState(O);
+    return (
+        l.useEffect(() => {
+            O || S(!1);
+        }, [O, S]),
+        (0, r.jsx)('div', {
+            className: a()(b.pageWrapper, { [b.pageWrapperFilter]: O }),
+            children: (0, r.jsxs)('main', {
+                className: a()(b.page, { [b.pageFilter]: O }),
+                children: [
+                    (0, r.jsxs)('div', {
+                        className: a()(b.inventory, {
+                            [b.inventoryNoFilter]: !O,
+                            [b.pageFullscreen]: t
+                        }),
+                        children: [
+                            O &&
+                                (0, r.jsx)('div', {
+                                    className: b.controls,
+                                    children: (0, r.jsx)(o.zxk, {
+                                        onClick: () => S((e) => !e),
+                                        look: o.iLD.OUTLINED,
+                                        color: o.Ttl.TRANSPARENT,
+                                        children: (0, r.jsxs)('div', {
+                                            className: b.filterButton,
+                                            children: [
+                                                h.intl.string(x ? h.t.fYtm6e : h.t.TeTYEx),
+                                                (0, r.jsx)(o.gXV, {
+                                                    size: 'xs',
+                                                    color: 'var(--button-outline-primary-text)'
+                                                })
+                                            ]
+                                        })
+                                    })
+                                }),
+                            m.includes(i)
+                                ? (0, r.jsx)(
+                                      g.Z,
+                                      {
+                                          isFullScreen: t,
+                                          scrollerRef: n,
+                                          tab: i
+                                      },
+                                      i
+                                  )
+                                : (0, r.jsx)(s.k0, {
+                                      newValue: { pageIndex: v },
+                                      children: (0, r.jsx)(u.Z, {
+                                          isFullScreen: t,
+                                          sortedCategories: f,
+                                          setCategoryRef: _,
+                                          currentPage: v,
+                                          handlePageChange: C
+                                      })
+                                  })
+                        ]
+                    }),
+                    x &&
+                        (0, r.jsx)('aside', {
+                            className: b.filterBar,
+                            children: (0, r.jsx)(d.Z, {})
+                        })
+                ]
+            })
         })
-    });
+    );
 }

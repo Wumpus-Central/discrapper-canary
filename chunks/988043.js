@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(922628),
     f = n(703115),
     b = n(526761),
-    _ = n(726985),
-    x = n(736530),
+    x = n(726985),
+    _ = n(736530),
     E = n(981631),
     j = n(388032);
 function C(e) {
@@ -60,9 +60,9 @@ function C(e) {
         },
         I = S ? j.intl.string(j.t.PMsfcH) : j.intl.string(j.t.RAQUSE);
     return (0, i.jsx)(g.U, {
-        setting: _.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
+        setting: x.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
-            n === x.T
+            n === _.T
                 ? (0, i.jsx)(p.Z, {
                       title: I,
                       note: S ? j.intl.string(j.t.XXGmuL) : j.intl.string(j.t.wbYDfX),

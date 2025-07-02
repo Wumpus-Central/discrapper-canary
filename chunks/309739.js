@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(726542),
     f = n(316496),
     b = n(116841),
-    _ = n(335082),
-    x = n(921801),
+    x = n(335082),
+    _ = n(921801),
     E = n(553795),
     j = n(430824),
     C = n(63063),
@@ -118,7 +118,7 @@ function D() {
                 label: y.intl.string(y.t.MIgNPD)
             }
         ];
-    return (0, i.jsx)(x.F, {
+    return (0, i.jsx)(_.F, {
         setting: N.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, i.jsxs)(m.hjN, {
             children: [
@@ -169,7 +169,7 @@ function D() {
 function Z() {
     let e = T.cP.useSetting(),
         t = T.Ou.useSetting();
-    return (0, i.jsx)(x.F, {
+    return (0, i.jsx)(_.F, {
         setting: N.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, i.jsxs)(m.hjN, {
             className: P.marginBottom40,
@@ -196,7 +196,7 @@ function Z() {
     });
 }
 function w() {
-    return (0, i.jsx)(x.F, {
+    return (0, i.jsx)(_.F, {
         setting: N.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(m.hjN, {
             className: P.marginBottom40,
@@ -275,7 +275,7 @@ function B() {
         }, [t, n]);
     return 0 === t.length
         ? null
-        : (0, i.jsx)(x.F, {
+        : (0, i.jsx)(_.F, {
               setting: N.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
               children: (0, i.jsxs)(m.hjN, {
                   className: P.marginBottom40,
@@ -302,7 +302,7 @@ function M(e) {
         { showPerGuildActivityStatusSetting: s } = (0, b.c)('activity privacy tab'),
         { showUpdatedSettingsPage: l } = (0, f.D)('activity privacy tab');
     return s || l
-        ? (0, i.jsx)(_.Z, {})
+        ? (0, i.jsx)(x.Z, {})
         : (0, i.jsxs)(m.hjN, {
               className: t,
               tag: m.RB0.H1,

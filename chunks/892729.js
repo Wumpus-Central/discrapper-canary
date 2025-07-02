@@ -9,15 +9,15 @@ let c = [];
 function d() {
     let { ensureFresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, a.Z)() === o.PY.SUBSCRIBED,
-        n = (0, r.e7)([l.ZP], () => l.ZP.getActiveGuildSubscriptions()),
+        n = (0, r.e7)([l.Z], () => l.Z.getActiveGuildSubscriptions()),
         d = i.useRef(!1);
     return (
         i.useEffect(() => {
             (function (e) {
                 var t;
                 let { ensureFresh: n, hasFetched: i, hasRoleSubscriptions: r } = e,
-                    s = l.ZP.getActiveGuildSubscriptions();
-                return ((null != (t = null == s ? void 0 : s.length) ? t : 0) === 0 && !!r) || (!!n && !i) || (!i && !l.ZP.hasFetchedSubscriptions());
+                    s = l.Z.getActiveGuildSubscriptions();
+                return ((null != (t = null == s ? void 0 : s.length) ? t : 0) === 0 && !!r) || (!!n && !i) || (!i && !l.Z.hasFetchedSubscriptions());
             })({
                 ensureFresh: e,
                 hasRoleSubscriptions: t,

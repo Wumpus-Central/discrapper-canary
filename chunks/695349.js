@@ -29,7 +29,7 @@ async function h(e) {
 }
 function m() {
     let e = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
-        t = s.ZP.getPremiumTypeSubscription(),
+        t = s.Z.getPremiumTypeSubscription(),
         n = null != t && !t.isBoostOnly,
         l = (0, r.e7)([c.Z], () => c.Z.getReverseTrialEntitlement(!1));
     return (

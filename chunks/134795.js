@@ -11,21 +11,21 @@ var r = n(120356),
     u = n(388032),
     m = n(771066);
 function g(e) {
-    let { showRemoveBannerButton: t, errors: n, onBannerChange: r, guildId: g, className: p, disabled: h = !1, showPremiumIcon: f = !0, isTryItOutFlow: b = !1, forcedDivider: _, withHighlight: x = !1 } = e,
+    let { showRemoveBannerButton: t, errors: n, onBannerChange: r, guildId: g, className: p, disabled: h = !1, showPremiumIcon: f = !0, isTryItOutFlow: b = !1, forcedDivider: x, withHighlight: _ = !1 } = e,
         { newestAnalyticsLocation: E } = (0, a.ZP)(),
-        j = x ? l.gtL : l.zxk;
+        j = _ ? l.gtL : l.zxk;
     return (0, i.jsx)(c.Z, {
         className: p,
         title: u.intl.string(u.t.Vgdusr),
         showPremiumIcon: f,
         errors: n,
         disabled: h,
-        forcedDivider: _,
+        forcedDivider: x,
         children: (0, i.jsxs)('div', {
             className: m.buttonsContainer,
             children: [
                 (0, i.jsx)(j, {
-                    className: s()({ [m.buttonHighlighted]: x }),
+                    className: s()({ [m.buttonHighlighted]: _ }),
                     size: l.zxk.Sizes.SMALL,
                     onClick: () =>
                         (0, o.$r)({

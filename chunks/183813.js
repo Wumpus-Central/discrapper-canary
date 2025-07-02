@@ -13,7 +13,7 @@ var i = t(255367),
     x = t(987209),
     h = t(563132),
     f = t(409813),
-    j = t(614277),
+    j = t(27034),
     m = t(981631),
     _ = t(388032),
     L = t(529190);
@@ -21,12 +21,12 @@ function g(e) {
     let { handleStepChange: n, handleClose: t } = e,
         { selectedPlan: r, selectedSkuId: g, step: y } = (0, h.JL)(),
         { setSelectedGiftingPromotionReward: E, selectedGiftingPromotionReward: S, claimableRewards: v } = (0, x.wD)(),
-        P = (0, a.e7)([u.default], () => u.default.getCurrentUser());
+        Z = (0, a.e7)([u.default], () => u.default.getCurrentUser());
     l.useEffect(() => {
         let e = null != v && v.length > 0;
         null == S && e && E(v[0]);
     }, [v, S, E]);
-    let Z = (e) => {
+    let P = (e) => {
         let n = e.skuId;
         return (0, i.jsx)(
             d.Z,
@@ -41,12 +41,12 @@ function g(e) {
         );
     };
     (s()(null != r, 'Expected plan to selected'), s()(null != g, 'Expected selectedSkuId'), s()(null != y, 'Step should be set'));
-    let b = null == v ? void 0 : v.map((e) => Z(e)),
+    let b = null == v ? void 0 : v.map((e) => P(e)),
         I =
-            null != S && null != P
+            null != S && null != Z
                 ? (0, i.jsx)(C.Z, {
                       avatarDecorationOverride: { asset: S.assetId },
-                      user: P,
+                      user: Z,
                       guildId: null,
                       avatarSize: o.EFr.SIZE_152
                   })
@@ -56,10 +56,10 @@ function g(e) {
                 className: L.modalFooter,
                 children: (0, i.jsx)(c.y, {
                     onStepChange: (e) => {
-                        (null != P &&
+                        (null != Z &&
                             null != S &&
                             p.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: P.id,
+                                user_id: Z.id,
                                 reward_sku_id: S.skuId
                             }),
                             n(e));

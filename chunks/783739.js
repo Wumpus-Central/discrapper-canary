@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(594174),
     f = n(314884),
     b = n(74538),
-    _ = n(199778),
-    x = n(296533),
+    x = n(199778),
+    _ = n(296533),
     E = n(901750),
     j = n(112863),
     C = n(701157),
@@ -57,18 +57,18 @@ function N(e) {
                     hasGuildAffinitiesOrInGuild: R,
                     subscriptionIsPausedOrPausePending: M
                 }),
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(x.Z, {
                 hide: k,
                 containerClassName: T.FPContainer,
                 pillClassName: T.FPPill
             }),
             !R && (0, i.jsx)(j.Z, {}),
             (null == t ? void 0 : t.isPaused) && B !== v.a$.FP_SUB_PAUSED
-                ? (0, i.jsx)(x.r, {
+                ? (0, i.jsx)(_.r, {
                       appliedGuildBoosts: L,
                       premiumSubscription: t
                   })
-                : (0, i.jsx)(x.Z, {
+                : (0, i.jsx)(_.Z, {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),

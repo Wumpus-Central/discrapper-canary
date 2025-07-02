@@ -1,6 +1,6 @@
 n.d(e, {
-    YG: () => _,
-    pV: () => P,
+    YG: () => P,
+    pV: () => _,
     rf: () => g
 });
 var i,
@@ -20,7 +20,7 @@ var l = n(860911),
     I = n(388032),
     b = n(299283),
     g = (((i = {})[(i.AVAILABLE = 0)] = 'AVAILABLE'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.UPCOMING_PLAN = 2)] = 'UPCOMING_PLAN'), (i[(i.SUBSCRIBED = 3)] = 'SUBSCRIBED'), (i[(i.UNAVAILABLE = 4)] = 'UNAVAILABLE'), i);
-function P(t) {
+function _(t) {
     let { appId: e, className: n, onClick: i, onHasClicked: l, skuId: o, subscriptionPlan: a, icon: s, state: u = 0 } = t,
         c = null != a ? (0, f.xg)(a) : null,
         d = 1 === u;
@@ -52,7 +52,7 @@ function P(t) {
               })(u, null != c ? c : '')
           });
 }
-function _(t) {
+function P(t) {
     let { appId: e, className: n, onClick: i, onHasClicked: l, sku: o, icon: u } = t,
         { analyticsLocations: d } = (0, s.ZP)(a.Z.APP_STOREFRONT),
         p = () => {
@@ -63,11 +63,11 @@ function _(t) {
             });
         },
         g = (0, S.M)(o.id),
-        P = o.type === O.epS.DURABLE && g,
-        { price: _ } = o;
-    return null == _
+        _ = o.type === O.epS.DURABLE && g,
+        { price: P } = o;
+    return null == P
         ? null
-        : P
+        : _
           ? (0, r.jsx)(m, {
                 className: n,
                 children: I.intl.string(I.t['6cfuDg'])
@@ -81,7 +81,7 @@ function _(t) {
                 className: n,
                 children: (0, r.jsxs)('div', {
                     className: b.btnContent,
-                    children: [u, I.intl.format(I.t.Xp5WTk, { price: (0, f.T4)(_.amount, _.currency) })]
+                    children: [u, I.intl.format(I.t.Xp5WTk, { price: (0, f.T4)(P.amount, P.currency) })]
                 })
             });
 }

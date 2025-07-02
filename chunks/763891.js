@@ -1,16 +1,16 @@
 (n.d(t, { Z: () => L }), n(388685));
 var r = n(255367),
     l = n(73800),
-    a = n(979554),
-    i = n(399606),
+    i = n(979554),
+    a = n(399606),
     o = n(780384),
     s = n(481060),
     c = n(410030),
     u = n(594174),
     d = n(381585),
     p = n(597688),
-    f = n(370039),
-    g = n(937510),
+    g = n(370039),
+    f = n(937510),
     h = n(303952),
     b = n(38900),
     m = n(709999),
@@ -18,11 +18,11 @@ var r = n(255367),
     C = n(215023),
     v = n(388032),
     O = n(484920),
-    S = n(558513),
-    x = n(662128),
+    x = n(558513),
+    S = n(662128),
     E = n(676790),
-    y = n(665195),
-    j = n(42742),
+    j = n(665195),
+    y = n(42742),
     P = n(283727),
     k = n(266058),
     T = n(719138);
@@ -30,10 +30,10 @@ function L(e) {
     var t;
     let { isFetchingCategories: n, isFullScreen: L, scrollerRef: I, tab: B } = e,
         N = (0, d.sp)(),
-        A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
-        { noCache: w, includeUnpublished: Z } = (0, _.Z)(),
-        R = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        H = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        w = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
+        { noCache: A, includeUnpublished: Z } = (0, _.Z)(),
+        R = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        H = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [M, D] = l.useState(1),
         F = () => {
             var e;
@@ -44,48 +44,48 @@ function L(e) {
         [U, z, G] = l.useMemo(() => {
             switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
-                    return [v.intl.string(v.t.dRZYND), V ? y.Z : E.Z, a.Z.AVATAR_DECORATION];
+                    return [v.intl.string(v.t.dRZYND), V ? j.Z : E.Z, i.Z.AVATAR_DECORATION];
                 case C.AW.PROFILE_EFFECTS:
-                    return [v.intl.string(v.t['1cNjt7']), V ? T.Z : k.Z, a.Z.PROFILE_EFFECT];
+                    return [v.intl.string(v.t['1cNjt7']), V ? T.Z : k.Z, i.Z.PROFILE_EFFECT];
                 case C.AW.NAMEPLATES:
-                    return [v.intl.string(v.t.V68Fq6), V ? P.Z : j.Z, a.Z.NAMEPLATE];
+                    return [v.intl.string(v.t.V68Fq6), V ? P.Z : y.Z, i.Z.NAMEPLATE];
                 case C.AW.BUNDLES:
-                    return [v.intl.string(v.t.FYFppq), V ? x.Z : S.Z, a.Z.BUNDLE];
+                    return [v.intl.string(v.t.FYFppq), V ? S.Z : x.Z, i.Z.BUNDLE];
             }
         }, [B, V]),
-        q = (0, f.a)(),
+        q = (0, g.a)(),
         Y = l.useMemo(
             () =>
                 q(
                     H.filter((e) => {
                         var t;
-                        return e.type === G || (e.type === a.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
+                        return e.type === G || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
                     })
                 ),
             [H, G, q]
         ),
-        K = (0, g.l)(Y);
+        K = (0, f.l)(Y);
     return (l.useEffect(() => {
         (0, h.n)({
-            sessionId: A,
+            sessionId: w,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: B,
             isFullScreen: L,
             unpublishedCategoriesShown: Z,
-            cacheDisabled: w
+            cacheDisabled: A
         });
     }, []),
     l.useEffect(() => {
         n ||
             (0, h.n)({
-                sessionId: A,
+                sessionId: w,
                 checkpoint: h.a.SHOP_RENDERED,
                 tab: B,
                 isFullScreen: L,
                 unpublishedCategoriesShown: Z,
-                cacheDisabled: w
+                cacheDisabled: A
             });
-    }, [A, L, Z, w, n, B]),
+    }, [w, L, Z, A, n, B]),
     n || null == R)
         ? (0, r.jsx)(b.Z, {})
         : (0, r.jsxs)(r.Fragment, {

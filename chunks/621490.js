@@ -18,7 +18,7 @@ var i = n(255367),
     h = n(981631),
     f = n(388032),
     b = n(309103);
-function _(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -43,7 +43,7 @@ function _(e) {
     }
     return e;
 }
-function x(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -97,7 +97,7 @@ let E = (e) => {
                 return r;
             })(e, ['orbBalance', 'orbPriceAmount', 'submitting', 'onClick']);
         let o = f.intl.string(f.t.wmcDys),
-            c = _(
+            c = x(
                 {
                     color: r.zxk.Colors.GREEN,
                     type: 'submit',
@@ -109,16 +109,16 @@ let E = (e) => {
         return null === n
             ? (0, i.jsx)(r.ua7, {
                   text: f.intl.string(f.t['c/rcUl']),
-                  children: (e) => (0, i.jsx)(r.zxk, x(_({}, e, c), { disabled: !0 }))
+                  children: (e) => (0, i.jsx)(r.zxk, _(x({}, e, c), { disabled: !0 }))
               })
             : null === t || n > t
               ? (0, i.jsx)(r.ua7, {
                     text: f.intl.string(f.t.keFvXF),
-                    children: (e) => (0, i.jsx)(r.zxk, x(_({}, e, c), { disabled: !0 }))
+                    children: (e) => (0, i.jsx)(r.zxk, _(x({}, e, c), { disabled: !0 }))
                 })
               : (0, i.jsx)(
                     r.zxk,
-                    x(_({}, c), {
+                    _(x({}, c), {
                         submitting: s,
                         onClick: l
                     })

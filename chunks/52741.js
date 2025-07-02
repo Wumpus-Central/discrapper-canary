@@ -33,7 +33,7 @@ function T(e) {
 function j(e) {
     var t, n, r, a, g, j, P;
     let { isGift: E, premiumTier: N, offerTierMatchesCard: b, offerType: S, showYearlyPrice: _, priceOptions: R, textVariant: Z, className: y, isApplicationHome: w, enablePremiumBrandRefresh: M, headerClassName: O, headingVariant: L = 'heading-md/normal', headingColor: H } = e,
-        A = (0, o.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription()),
+        A = (0, o.e7)([d.Z], () => d.Z.getPremiumTypeSubscription()),
         U = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         G = (0, C.t7)(),
         k = (0, C.lr)(),

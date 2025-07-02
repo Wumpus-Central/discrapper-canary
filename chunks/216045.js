@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(100527),
     f = n(906732),
     b = n(475977),
-    _ = n(266454),
-    x = n(243778),
+    x = n(266454),
+    _ = n(243778),
     E = n(957730),
     j = n(53691),
     C = n(267717),
@@ -76,12 +76,12 @@ function F() {
         X = Z.ZP.canUsePremiumProfileCustomization(n),
         { analyticsLocations: Q, newestAnalyticsLocation: J } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
         $ = (0, I.T)({ location: 'UserSettingsProfileCustomization' }),
-        ee = (0, _.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+        ee = (0, x.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
         et = $ && !ee;
     r.useEffect(() => {
-        et && (0, _.Q3)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+        et && (0, x.Q3)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
     }, [et]);
-    let [en, ei] = (0, x.US)([o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
+    let [en, ei] = (0, _.US)([o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
         er = en === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
     (r.useEffect(() => {
         er && ei(U.L.TAKE_ACTION);

@@ -236,6 +236,7 @@ var r = (function (e) {
             (e.AUTH_SESSIONS_LOGGED_OUT = 'network_action_auth_sessions_logged_out'),
             (e.AUTHORIZE_IP = 'network_action_authorize_ip'),
             (e.AUTHORIZE_PAYMENT = 'network_action_authorize_payment'),
+            (e.BILLING_IP_LOCATION_FETCH_ERROR = 'network_action_billing_ip_location_fetch_error'),
             (e.BUG_REPORT_SUBMIT = 'network_action_bug_report_submit'),
             (e.CHANNEL_CREATE = 'network_action_channel_create'),
             (e.DETECTABLE_APPLICATIONS_FETCH = 'network_action_detectable_applications_fetch'),

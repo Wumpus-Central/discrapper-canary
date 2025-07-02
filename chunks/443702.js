@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(246946),
     f = n(594174),
     b = n(351402),
-    _ = n(853872),
-    x = n(78839),
+    x = n(853872),
+    _ = n(78839),
     E = n(706454),
     j = n(726985),
     C = n(981631),
@@ -78,8 +78,8 @@ class T extends r.PureComponent {
     }
 }
 function N() {
-    let e = (0, s.cj)([E.default, b.Z, _.Z, f.default, h.Z, x.ZP], () => {
-        let e = x.ZP.getPremiumTypeSubscription(),
+    let e = (0, s.cj)([E.default, b.Z, x.Z, f.default, h.Z, _.Z], () => {
+        let e = _.Z.getPremiumTypeSubscription(),
             t = f.default.getCurrentUser();
         return null == t
             ? { shouldRenderBillingSettings: !1 }
@@ -90,8 +90,8 @@ function N() {
                   isClaimed: t.isClaimed(),
                   isVerified: t.verified,
                   premiumSubscription: e,
-                  defaultPaymentSourceId: _.Z.defaultPaymentSourceId,
-                  paymentSources: _.Z.paymentSources,
+                  defaultPaymentSourceId: x.Z.defaultPaymentSourceId,
+                  paymentSources: x.Z.paymentSources,
                   syncing: b.Z.isSyncing,
                   isRemovingPaymentSource: b.Z.isRemovingPaymentSource,
                   isUpdatingPaymentSource: b.Z.isUpdatingPaymentSource

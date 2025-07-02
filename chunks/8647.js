@@ -18,8 +18,8 @@ var s = n(120356),
     h = n(981631),
     f = n(388032),
     b = n(669792),
-    _ = n(917062),
-    x = n(579273),
+    x = n(917062),
+    _ = n(579273),
     E = n(38874),
     j = n(267201),
     C = (((i = {}).SUBSCRIBER_HOME = 'SUBSCRIBER_HOME'), (i.NITRO_SETTINGS = 'SETTINGS'), (i.APPLICATION_NITRO_HOME = 'APPLICATION_NITRO_HOME'), i);
@@ -80,7 +80,7 @@ let O = function (e) {
                                       className: b.imageContainer,
                                       children: (0, r.jsx)('img', {
                                           alt: '',
-                                          src: x.Z,
+                                          src: _.Z,
                                           className: b.applicationHomeImage
                                       })
                                   })
@@ -154,7 +154,7 @@ let O = function (e) {
                                     className: b.subHomeBannerImageContainer,
                                     children: (0, r.jsx)('img', {
                                         alt: '',
-                                        src: _.Z,
+                                        src: x.Z,
                                         className: b.settingsImage
                                     })
                                 }),

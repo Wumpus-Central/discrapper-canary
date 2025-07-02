@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(857192),
     f = n(131951),
     b = n(226961),
-    _ = n(12647),
-    x = n(569550),
+    x = n(12647),
+    _ = n(569550),
     E = n(726985),
     j = n(981631),
     C = n(65154),
@@ -107,7 +107,7 @@ function y(e) {
     async function D() {
         d(!0);
         try {
-            (await f.Z.getMediaEngine().writeAudioDebugState(), await _.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, m.E)(j.GU0.RTC));
+            (await f.Z.getMediaEngine().writeAudioDebugState(), await x.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, m.E)(j.GU0.RTC));
             let e = O.intl.string(O.t['fKBB8/']),
                 t = O.intl.string(O.t.BvyxEx);
             (0, l.h7j)((n) =>
@@ -184,7 +184,7 @@ function y(e) {
                 children: (0, i.jsx)(l.j7V, {
                     value: P,
                     onChange: (e) => {
-                        ((0, x.Z)('stream_info_overlay_enabled', e, P), (0, o.y)({ isStreamInfoOverlayEnabled: e }));
+                        ((0, _.Z)('stream_info_overlay_enabled', e, P), (0, o.y)({ isStreamInfoOverlayEnabled: e }));
                     },
                     note: O.intl.string(O.t.kBXuW1),
                     hideBorder: t,

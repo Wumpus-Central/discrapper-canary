@@ -1,5 +1,5 @@
 n.d(t, {
-    Nv: () => x,
+    Nv: () => _,
     pd: () => f,
     uX: () => E,
     wk: () => b
@@ -59,13 +59,13 @@ let g = (e, t) => {
             );
         }
     },
-    _ = (e, t) => o.ZP.getMentionCount(t) > 0,
-    x = {
+    x = (e, t) => o.ZP.getMentionCount(t) > 0,
+    _ = {
         binds: ['mod+shift+alt+down'],
         comboKeysBindGlobal: !0,
         action: () => (
             (0, i.Z)(1, {
-                channelPredicate: _,
+                channelPredicate: x,
                 ensureChatIsVisible: h,
                 withVoiceChannels: !0
             }),
@@ -77,7 +77,7 @@ let g = (e, t) => {
         comboKeysBindGlobal: !0,
         action: () => (
             (0, i.Z)(-1, {
-                channelPredicate: _,
+                channelPredicate: x,
                 ensureChatIsVisible: h,
                 withVoiceChannels: !0
             }),

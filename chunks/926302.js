@@ -1,20 +1,20 @@
 t.a(e, async function (e, r) {
     try {
         t.d(n, {
-            Kq: () => u,
-            ZP: () => s
+            Kq: () => _,
+            ZP: () => a
         });
-        var l = t(255367),
+        var o = t(255367),
             i = t(31675),
-            c = t(73800),
-            o = e([i]);
-        i = (o.then ? (await o)() : o)[0];
-        let f = (0, c.createContext)(null);
-        function u() {
-            return (0, c.useContext)(f);
+            u = t(73800),
+            c = e([i]);
+        i = (c.then ? (await c)() : c)[0];
+        let d = (0, u.createContext)(null);
+        function _() {
+            return (0, u.useContext)(d);
         }
-        let _ = new Set(['bold', 'italic', 'underline', 'strikethrough', 'spoiler', 'emoji', 'timestamp', 'mention', 'link', 'code', 'code_block', 'heading', 'list', 'quote', 'small']);
-        function a({ node: e, renderers: n, ...t }) {
+        let s = new Set(['bold', 'italic', 'underline', 'strikethrough', 'spoiler', 'emoji', 'timestamp', 'mention', 'link', 'code', 'code_block', 'heading', 'list', 'quote', 'small']);
+        function l({ node: e, renderers: n, ...t }) {
             let r = n[e.type];
             if (
                 (!(function (e, n) {
@@ -22,10 +22,10 @@ t.a(e, async function (e, r) {
                 })(r, e.type),
                 Array.isArray(e.value))
             )
-                return (0, l.jsx)(r, {
+                return (0, o.jsx)(r, {
                     node: e,
                     ...t,
-                    children: (0, l.jsx)(d, {
+                    children: (0, o.jsx)(f, {
                         nodes: e.value,
                         renderers: n
                     })
@@ -35,63 +35,63 @@ t.a(e, async function (e, r) {
                 case 'timestamp':
                 case 'emoji':
                 case 'code_block':
-                    return (0, l.jsx)(r, {
+                    return (0, o.jsx)(r, {
                         node: e,
                         ...e.value,
                         ...t
                     });
                 case 'link': {
                     let i = e.value,
-                        c = null;
+                        u = null;
                     if ('normal' === i.type) {
                         let {
                             value: { text: e, url: t }
                         } = i;
-                        c = e
-                            ? (0, l.jsx)(d, {
+                        u = e
+                            ? (0, o.jsx)(f, {
                                   nodes: e,
                                   renderers: n
                               })
                             : t;
                     }
-                    return (0, l.jsx)(r, {
+                    return (0, o.jsx)(r, {
                         node: e,
                         ...e.value,
                         ...t,
-                        children: c
+                        children: u
                     });
                 }
                 case 'text':
                 case 'code':
-                    return (0, l.jsx)(r, {
+                    return (0, o.jsx)(r, {
                         node: e,
                         ...t,
                         children: e.value
                     });
                 case 'heading':
-                    return (0, l.jsx)(r, {
+                    return (0, o.jsx)(r, {
                         node: e,
                         level: e.value.level,
                         ...t,
-                        children: (0, l.jsx)(d, {
+                        children: (0, o.jsx)(f, {
                             nodes: e.value.content,
                             renderers: n
                         })
                     });
                 case 'list': {
                     let i = n.listItem ?? 'li';
-                    return (0, l.jsx)(r, {
+                    return (0, o.jsx)(r, {
                         node: e,
                         ...e.value,
                         ...t,
                         children: e.value.items.map((t, r) =>
-                            (0, l.jsx)(
+                            (0, o.jsx)(
                                 i,
                                 {
                                     node: t,
                                     siblings: e.value.items,
                                     index: r,
-                                    children: (0, l.jsx)(d, {
+                                    children: (0, o.jsx)(f, {
                                         nodes: t.content,
                                         renderers: n
                                     })
@@ -102,12 +102,12 @@ t.a(e, async function (e, r) {
                     });
                 }
                 case 'empty':
-                    return (0, l.jsx)(r, { ...t });
+                    return (0, o.jsx)(r, { ...t });
                 case 'small':
-                    return (0, l.jsx)(r, {
+                    return (0, o.jsx)(r, {
                         node: e,
                         ...t,
-                        children: (0, l.jsx)(d, {
+                        children: (0, o.jsx)(f, {
                             nodes: e.value.content,
                             renderers: n
                         })
@@ -116,11 +116,11 @@ t.a(e, async function (e, r) {
                     throw TypeError(`Unknown node type "${e.type}"`);
             }
         }
-        function d({ nodes: e, renderers: n }) {
-            return (0, l.jsx)(l.Fragment, {
+        function f({ nodes: e, renderers: n }) {
+            return (0, o.jsx)(o.Fragment, {
                 children: e.map((t, r) =>
-                    (0, l.jsx)(
-                        a,
+                    (0, o.jsx)(
+                        l,
                         {
                             node: t,
                             renderers: n,
@@ -132,15 +132,15 @@ t.a(e, async function (e, r) {
                 )
             });
         }
-        function s({ content: e, renderers: n }) {
-            let t = (0, c.useMemo)(() => {
-                    let e = Object.keys(n).filter((e) => _.has(e));
+        function a({ content: e, renderers: n }) {
+            let t = (0, u.useMemo)(() => {
+                    let e = Object.keys(n).filter((e) => s.has(e));
                     return e.length > 0 ? e : null;
                 }, [n]),
-                r = (0, c.useMemo)(() => (0, i.Q)(e, t), [e, t]);
-            return (0, l.jsx)(f.Provider, {
+                r = (0, u.useMemo)(() => (0, i.Q)(e, t), [e, t]);
+            return (0, o.jsx)(d.Provider, {
                 value: r,
-                children: (0, l.jsx)(d, {
+                children: (0, o.jsx)(f, {
                     nodes: r,
                     renderers: n
                 })

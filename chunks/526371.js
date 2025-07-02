@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(498646),
     f = n(981631),
     b = n(921944),
-    _ = n(603571),
-    x = n(388032),
+    x = n(603571),
+    _ = n(388032),
     E = n(631587),
     j = n(394637);
 function C() {
@@ -58,7 +58,7 @@ function C() {
                                     (0, i.jsx)(a.xv, {
                                         color: 'currentColor',
                                         variant: 'text-xs/bold',
-                                        children: x.intl.string(_.default.AsH93d)
+                                        children: _.intl.string(x.default.AsH93d)
                                     })
                                 ]
                             }),
@@ -88,12 +88,12 @@ function C() {
                                     (0, i.jsx)(a.xv, {
                                         variant: 'text-md/bold',
                                         color: 'always-white',
-                                        children: x.intl.string(_.default['7qZdOz'])
+                                        children: _.intl.string(x.default['7qZdOz'])
                                     }),
                                     (0, i.jsx)(a.xv, {
                                         variant: 'text-sm/medium',
                                         color: 'always-white',
-                                        children: x.intl.string(_.default.orfMLS)
+                                        children: _.intl.string(x.default.orfMLS)
                                     })
                                 ]
                             }),

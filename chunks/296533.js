@@ -19,8 +19,8 @@ var i = n(255367),
     h = n(74538),
     f = n(709054),
     b = n(357956),
-    _ = n(275909),
-    x = n(300037),
+    x = n(275909),
+    _ = n(300037),
     E = n(981631),
     j = n(474936),
     C = n(388032),
@@ -92,7 +92,7 @@ function S(e) {
 function v(e) {
     let { guildTier: t, guildBoostSlot: n, premiumSubscription: s, hasCancelableGuildBoostSlot: u, showAltText: m, isLastGuildBoostSlot: h } = e,
         f = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
-        x = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        _ = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         E = r.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         j = r.useMemo(() => null != E && E > new Date(), [E]),
         v = (0, p.tl)(n),
@@ -104,7 +104,7 @@ function v(e) {
             (0, i.jsxs)('div', {
                 className: O.boostInnerContainer,
                 children: [
-                    (0, i.jsx)(_.Z, {
+                    (0, i.jsx)(x.Z, {
                         isCanceled: v,
                         hasCooldown: j,
                         useReducedMotion: f
@@ -136,7 +136,7 @@ function v(e) {
                                 premiumSubscription: s,
                                 hasCancelableGuildBoostSlot: u,
                                 fractionalState: T.fractionalState,
-                                user: x
+                                user: _
                             });
                         },
                         position: 'right',
@@ -208,7 +208,7 @@ function T(e) {
     return (0, i.jsxs)('div', {
         className: O.appliedBoostContainer,
         children: [
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(_.Z, {
                 guildId: t,
                 boostingVariant: !1
             }),
@@ -256,7 +256,7 @@ function N(e) {
     return (0, i.jsxs)('div', {
         className: O.appliedBoostContainer,
         children: [
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(_.Z, {
                 guildId: t,
                 boostingVariant: !1
             }),

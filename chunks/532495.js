@@ -15,8 +15,8 @@ var r = n(512722),
     h = n(532432),
     f = n(349177),
     b = n(872736),
-    _ = n(818420),
-    x = n(134795),
+    x = n(818420),
+    _ = n(134795),
     E = n(610966),
     j = n(513901),
     C = n(451392),
@@ -156,7 +156,7 @@ function D() {
                 },
                 'decoration'
             ),
-            (0, i.jsx)(_.Z, { user: L }),
+            (0, i.jsx)(x.Z, { user: L }),
             (0, i.jsx)(
                 j.Z,
                 {
@@ -169,7 +169,7 @@ function D() {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(
-                              x.Z,
+                              _.Z,
                               {
                                   showRemoveBannerButton: $,
                                   errors: K.banner,

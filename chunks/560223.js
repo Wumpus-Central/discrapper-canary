@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -43,8 +43,8 @@ let b = (e) => {
                     })
                 });
     },
-    _ = (e) => {
-        let { className: t, variant: n, noBackground: s = !1, leftAlignHeaders: _ = !1, showAllPerksButton: x, headerClassname: E } = e,
+    x = (e) => {
+        let { className: t, variant: n, noBackground: s = !1, leftAlignHeaders: x = !1, showAllPerksButton: _, headerClassname: E } = e,
             j = r.useRef(null),
             C = n === g.gM.WHATS_NEW,
             O = (0, u.x)();
@@ -72,15 +72,15 @@ let b = (e) => {
             className: l()(
                 f.section,
                 {
-                    [f.centerAlignSection]: !_,
-                    [f.leftAlignSection]: _
+                    [f.centerAlignSection]: !x,
+                    [f.leftAlignSection]: x
                 },
                 t
             ),
             children: [
                 (0, i.jsx)(b, {
-                    showAllPerksButton: x,
-                    leftAlignHeaders: _,
+                    showAllPerksButton: _,
+                    leftAlignHeaders: x,
                     title: S.title,
                     headerClassname: E
                 }),
@@ -88,20 +88,20 @@ let b = (e) => {
                     variant: 'text-lg/normal',
                     color: 'header-primary',
                     className: l()(f.subtitle, {
-                        [f.subtitle]: null == x || _,
-                        [f.subtitleWithButton]: null != x && !_,
-                        [f.fullWidth]: C || _,
+                        [f.subtitle]: null == _ || x,
+                        [f.subtitleWithButton]: null != _ && !x,
+                        [f.fullWidth]: C || x,
                         [f.moreSubtitleMargin]: P,
-                        [f.leftAlignSubtitle]: _,
-                        [f.centerAlignSubtitle]: !_
+                        [f.leftAlignSubtitle]: x,
+                        [f.centerAlignSubtitle]: !x
                     }),
                     children: S.subtitle
                 }),
-                !_ &&
-                    null != x &&
+                !x &&
+                    null != _ &&
                     (0, i.jsx)('div', {
                         className: f.showAllPerksButtonCenter,
-                        children: x
+                        children: _
                     }),
                 (0, i.jsx)('div', {
                     className: f.cardContainer,

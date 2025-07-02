@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -43,7 +43,7 @@ let p = {
             [d.gkr.HOUSE_2]: u.intl.string(u.t.VNPE6u),
             [d.gkr.HOUSE_3]: u.intl.string(u.t.KNfiTU)
         })[e];
-class _ extends r.Component {
+class x extends r.Component {
     render() {
         let { houseMembership: e, isClaimed: t, isVerified: n } = this.props;
         if (!t || !n) return null;

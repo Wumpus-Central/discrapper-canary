@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(23551),
     f = n(468026),
     b = n(410030),
-    _ = n(726542),
-    x = n(122021),
+    x = n(726542),
+    _ = n(122021),
     E = n(275759),
     j = n(231757),
     C = n(888496),
@@ -111,7 +111,7 @@ let H = (e) => {
                                     children: s.guild.toString()
                                 }),
                                 (0, i.jsx)(u.eee, {
-                                    href: null == (n = _.Z.get(s.type)) || null == (t = n.getPlatformUserUrl) ? void 0 : t.call(n, s.account),
+                                    href: null == (n = x.Z.get(s.type)) || null == (t = n.getPlatformUserUrl) ? void 0 : t.call(n, s.account),
                                     children: (0, i.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
@@ -148,8 +148,8 @@ function z(e) {
         [M, G] = r.useState(null),
         [z, Y] = r.useState(!1),
         [W, K] = r.useState([]),
-        q = (0, x.rR)(o.type),
-        X = _.Z.get(q);
+        q = (0, _.rR)(o.type),
+        X = x.Z.get(q);
     r.useEffect(() => {
         (b(o.friendSync), S(o.visibility), N(o.metadataVisibility), y(o.showActivity));
     }, [o]);
@@ -167,7 +167,7 @@ function z(e) {
             (null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (N(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null)));
         }, [o]));
     function $() {
-        let e = _.Z.get(o.type),
+        let e = x.Z.get(o.type),
             t = U.intl.format(U.t.VgqIPj, { provider: e.name });
         ((0, D.Z)(o) &&
             (t = (0, i.jsxs)(i.Fragment, {
@@ -200,8 +200,8 @@ function z(e) {
         children: [
             (function (e) {
                 var t;
-                let n = _.Z.get(e.type),
-                    r = _.Z.get(q),
+                let n = x.Z.get(e.type),
+                    r = x.Z.get(q),
                     s = '1' === (null != (t = e.metadata) ? t : {})[B.PC.TWITTER_VERIFIED],
                     l = null;
                 return (
@@ -349,7 +349,7 @@ function z(e) {
                 let l = W.includes(e.id),
                     a = U.intl.string(U.t.wzzjk5);
                 if (null == r || 0 === r.length)
-                    if (!0 !== _.Z.get(e.type).hasMetadata) return null;
+                    if (!0 !== x.Z.get(e.type).hasMetadata) return null;
                     else
                         ((r = [
                             (0, i.jsx)(
@@ -430,7 +430,7 @@ function z(e) {
                         children: U.intl.format(U.t['6u6J0t'], { platform: X.name })
                     })
                 })),
-            (null == (t = _.Z.get(o.type)) ? void 0 : t.hasMetadata) === !0 &&
+            (null == (t = x.Z.get(o.type)) ? void 0 : t.hasMetadata) === !0 &&
                 (l = (0, i.jsx)(u.j7V, {
                     className: V.connectionOptionSwitch,
                     hideBorder: !0,
@@ -551,7 +551,7 @@ function Y() {
     );
 }
 function W(e) {
-    let t = _.Z.get(e);
+    let t = x.Z.get(e);
     ((0, j.Z)({ platformType: t.type }),
         A.default.track(L.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
@@ -566,7 +566,7 @@ function K() {
             onComplete: W
         });
     }
-    let t = (0, x.fq)();
+    let t = (0, _.fq)();
     return (0, i.jsxs)('div', {
         className: V.connectionsContainer,
         children: [
@@ -627,7 +627,7 @@ function q(e) {
                     })
                 })
               : r
-                    .filter((e) => _.Z.isSupported(e.type))
+                    .filter((e) => x.Z.isSupported(e.type))
                     .map((e, t) =>
                         (0, i.jsx)(
                             z,

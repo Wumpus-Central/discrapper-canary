@@ -21,9 +21,9 @@ let y = 'premiumRetentionEmojiPickerNotice',
     v = (e) => {
         let { closePopout: t, channel: n } = e,
             [a, v] = i.useState(!1),
-            { subscription: I, hasFetchedSubscriptions: T } = (0, s.cj)([_.ZP], () => ({
-                subscription: _.ZP.getPremiumSubscription(),
-                hasFetchedSubscriptions: _.ZP.hasFetchedSubscriptions()
+            { subscription: I, hasFetchedSubscriptions: T } = (0, s.cj)([_.Z], () => ({
+                subscription: _.Z.getPremiumSubscription(),
+                hasFetchedSubscriptions: _.Z.hasFetchedSubscriptions()
             }));
         if (
             (i.useEffect(() => {

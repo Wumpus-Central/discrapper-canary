@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -14,9 +14,9 @@ var i = n(255367),
     h = n(451740),
     f = n(699623),
     b = n(820350);
-function _(e) {
-    let { user: t, showOverlay: n, children: _ } = e,
-        x = (0, l.ZP)(),
+function x(e) {
+    let { user: t, showOverlay: n, children: x } = e,
+        _ = (0, l.ZP)(),
         { analyticsLocations: E } = (0, o.ZP)(a.Z.PREMIUM_UPSELL_OVERLAY);
     return (r.useEffect(() => {
         n &&
@@ -29,7 +29,7 @@ function _(e) {
         ? (0, i.jsxs)('div', {
               className: h.upsellOverlayContainer,
               children: [
-                  (0, i.jsx)('div', { children: _ }),
+                  (0, i.jsx)('div', { children: x }),
                   (0, i.jsxs)('div', {
                       className: h.upsellOverlay,
                       children: [
@@ -43,7 +43,7 @@ function _(e) {
                                       case m.BRd.LIGHT:
                                           return b;
                                   }
-                              })(x)
+                              })(_)
                           }),
                           (0, i.jsxs)('div', {
                               className: h.upsellTextContainer,
@@ -70,5 +70,5 @@ function _(e) {
                   })
               ]
           })
-        : _;
+        : x;
 }

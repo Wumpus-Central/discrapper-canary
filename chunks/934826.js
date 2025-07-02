@@ -8,7 +8,7 @@ var r = n(73800),
     c = n(697227),
     d = n(981631);
 function u(e) {
-    let t = (0, i.e7)([s.ZP], () => s.ZP.getSubscriptions()),
+    let t = (0, i.e7)([s.Z], () => s.Z.getSubscriptions()),
         n = r.useMemo(() => {
             if (null == t) return {};
             let e = {};

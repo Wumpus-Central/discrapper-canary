@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -14,12 +14,12 @@ var i = n(255367),
     h = n(981631),
     f = n(388032),
     b = n(959963);
-let _ = {
+let x = {
     width: 387,
     height: 218
 };
-function x(e) {
-    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: x } = e,
+function _(e) {
+    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: _ } = e,
         E = g.Z.getCameraComponent(),
         [j, C] = r.useState((0, c.P)(p.default.getCurrentUser())),
         O = r.useRef(!1),
@@ -38,7 +38,7 @@ function x(e) {
             onSelectBackgroundOption: (e) => {
                 ((O.current = !0), (S.current = e), C(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4));
             },
-            onCancelPreview: x,
+            onCancelPreview: _,
             renderCamera: (e) =>
                 t
                     ? (0, i.jsx)('div', {
@@ -48,8 +48,8 @@ function x(e) {
                               children: [
                                   (0, i.jsx)(E, {
                                       deviceId: e,
-                                      width: _.width,
-                                      height: _.height,
+                                      width: x.width,
+                                      height: x.height,
                                       disabled: !t
                                   }),
                                   (0, i.jsx)(m.S, {})

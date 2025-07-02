@@ -15,7 +15,7 @@ let g = function (e) {
         n = t.countryCode,
         g = (0, r.e7)([l.default], () => l.default.locale);
     (0, c.U)(u.jXE.SETTINGS_PREMIUM_BANNER, n);
-    let p = (0, r.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()),
+    let p = (0, r.e7)([a.Z], () => a.Z.getPremiumTypeSubscription()),
         { localizedPricingBannerBody: h } = (0, o.vB)({
             localizedPricingPromo: t,
             subscription: p,

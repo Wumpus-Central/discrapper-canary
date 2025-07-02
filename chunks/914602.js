@@ -11,8 +11,8 @@ var r,
     p = n(669021),
     m = n(73346),
     f = n(568836),
-    _ = n(345898),
-    g = n(981631),
+    g = n(345898),
+    _ = n(981631),
     h = n(817165);
 function b(e, t, n) {
     return (
@@ -30,7 +30,7 @@ function b(e, t, n) {
 class E extends (r = l.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: r, renderCustomTagline: l, renderCustomTitle: a, renderCustomMedia: o, isEmbed: s } = this.props,
-            c = s ? f.$G : _.Z;
+            c = s ? f.$G : g.Z;
         return (0, i.jsx)(c, {
             className: r,
             renderMedia: null != o ? o : this.renderMedia,
@@ -57,7 +57,7 @@ class E extends (r = l.PureComponent) {
                                   className: a && r ? h.tilePriceWithVisibleBuyButton : h.tilePrice
                               }),
                               (0, i.jsx)(c.n, {
-                                  systems: [g.TaA.WINDOWS],
+                                  systems: [_.TaA.WINDOWS],
                                   className: h.platform
                               }),
                               a ? (0, i.jsx)('div', { children: 'deprecated!' }) : null

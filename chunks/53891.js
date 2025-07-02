@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => x });
+n.d(t, { ZP: () => _ });
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -41,7 +41,7 @@ function b(e) {
         children: e.children
     });
 }
-function _(e) {
+function x(e) {
     function t(t) {
         var n;
         (a.Z.dispatch({
@@ -69,7 +69,7 @@ function _(e) {
         children: e.children
     });
 }
-function x(e) {
+function _(e) {
     let t = (0, r.e7)([d.Z], () => d.Z.getGuild(e.guildId)),
         n = (0, u.S3)(e.guildId);
     return null != t && (0, m.jq)(t) && null !== n
@@ -80,7 +80,7 @@ function x(e) {
                   targetElementRef: e.targetElementRef,
                   children: e.children
               })
-            : (0, i.jsx)(_, {
+            : (0, i.jsx)(x, {
                   guild: t,
                   onDismiss: e.onDismiss,
                   targetElementRef: e.targetElementRef,

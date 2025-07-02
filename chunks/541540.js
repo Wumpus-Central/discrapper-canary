@@ -41,7 +41,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,12 +59,12 @@ function _(e, t) {
         e
     );
 }
-class x extends r.Component {
+class _ extends r.Component {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e }
         } = this.props;
-        return _(b({}, e), { object: g.qAy.BUTTON_CTA });
+        return x(b({}, e), { object: g.qAy.BUTTON_CTA });
     }
     render() {
         let { obscureInput: e } = this.props,
@@ -134,7 +134,7 @@ class x extends r.Component {
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
                     (u.default.track(g.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
-                        location: _(b({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA })
+                        location: x(b({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA })
                     }),
                         (0, c.V)({ processedCode: n }),
                         this.setState({ codeInput: '' }));
@@ -149,7 +149,7 @@ class x extends r.Component {
 function E() {
     let e = r.useContext(u.AnalyticsContext),
         t = (0, s.e7)([d.Z], () => d.Z.enabled);
-    return (0, i.jsx)(x, {
+    return (0, i.jsx)(_, {
         analyticsContext: e,
         obscureInput: t
     });

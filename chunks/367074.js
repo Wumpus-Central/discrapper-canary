@@ -65,9 +65,9 @@ function L() {
         { promotion: r } = (0, A.mq)(),
         { enabled: i } = (0, O.ZP)(),
         { enabled: s } = (0, y.ZP)(),
-        { mostRecentSubscription: c, premiumSubscription: u } = (0, o.cj)([d.ZP], () => ({
-            mostRecentSubscription: d.ZP.getMostRecentPremiumTypeSubscription(),
-            premiumSubscription: d.ZP.getPremiumTypeSubscription()
+        { mostRecentSubscription: c, premiumSubscription: u } = (0, o.cj)([d.Z], () => ({
+            mostRecentSubscription: d.Z.getMostRecentPremiumTypeSubscription(),
+            premiumSubscription: d.Z.getPremiumTypeSubscription()
         })),
         f = (0, I.N)(),
         _ = (0, v.Ng)(),
@@ -120,11 +120,11 @@ async function x() {
         { enabled: _ } = E.Z.getCurrentConfig({ location: '153d31_4' }, { autoTrackExposure: !1 }),
         p = !a.tq || c;
     if (r || i || !o || (t && !_) || !p || (f.Z.shouldFetchOffer() && !(0, h.I5)(n) && (await (0, g.T)('BogoPromotionUtils')), f.Z.hasFetchedOffer() && (f.Z.hasAnyUnexpiredOffer() || f.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
-    (!d.ZP.hasFetchedMostRecentPremiumTypeSubscription() && (null == (e = u.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(C.in.PREMIUM_TIER_2)) && (await (0, s.ou)()), d.ZP.hasFetchedSubscriptions() || (await (0, s.jg)()));
-    let m = d.ZP.getMostRecentPremiumTypeSubscription();
+    (!d.Z.hasFetchedMostRecentPremiumTypeSubscription() && (null == (e = u.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(C.in.PREMIUM_TIER_2)) && (await (0, s.ou)()), d.Z.hasFetchedSubscriptions() || (await (0, s.jg)()));
+    let m = d.Z.getMostRecentPremiumTypeSubscription();
     return w({
         experimentEnabled: o,
-        premiumSubscription: d.ZP.getPremiumTypeSubscription(),
+        premiumSubscription: d.Z.getPremiumTypeSubscription(),
         mostRecentSubscription: m
     });
 }

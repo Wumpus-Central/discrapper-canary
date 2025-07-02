@@ -28,13 +28,13 @@ function h() {
 }
 let m = () => {
         var e;
-        let t = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+        let t = (0, o.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
             n = null == t || null == (e = t.metadata) ? void 0 : e.active_discount_expires_at;
         return null != n && a()(Date.now()) <= a()(n);
     },
     g = () => {
         var e;
-        let t = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
+        let t = (0, o.e7)([l.Z], () => l.Z.getPremiumTypeSubscription());
         switch (null == t || null == (e = t.metadata) ? void 0 : e.active_discount_id) {
             case _.dT:
             case _.rB:
@@ -115,7 +115,7 @@ let m = () => {
         );
     },
     y = () => {
-        let e = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+        let e = (0, o.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
             t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = !!(null == e ? void 0 : e.hasActiveTrial);

@@ -18,8 +18,8 @@ var i,
     h = n(509614),
     f = n(880511),
     b = n(985443),
-    _ = n(612253),
-    x = n(872532),
+    x = n(612253),
+    _ = n(872532),
     E = n(91342),
     j = n(181708),
     C = n(290650),
@@ -72,7 +72,7 @@ let M = () => {
             description: p.intl.string(p.t.HMSHeH),
             descriptionCta: p.intl.string(p.t.jVcuVV),
             onClick: t,
-            previewImage: x,
+            previewImage: _,
             videoUrl: n ? I.ZP : y.ZP
         },
         U = {
@@ -87,7 +87,7 @@ let M = () => {
             title: p.intl.string(p.t.Ij3Zmp),
             description: p.intl.string(p.t.UsOUxc),
             descriptionCta: p.intl.string(p.t.jVcuVV),
-            previewImage: _,
+            previewImage: x,
             onClick: t,
             videoUrl: n ? A.Z : P.Z
         },

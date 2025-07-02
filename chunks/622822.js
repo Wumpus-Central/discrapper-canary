@@ -3,7 +3,7 @@ n.d(t, {
     Kt: () => b,
     Yt: () => h,
     a1: () => E,
-    bN: () => g
+    bN: () => _
 });
 var r = n(81643),
     i = n(974814),
@@ -17,13 +17,13 @@ var r = n(81643),
     p = n(981631),
     m = n(388032);
 let f = new Date('06/16/2020'),
-    _ = [p.V_K.AGE_RESTRICTED, p.V_K.EXPLICIT];
-function g() {
+    g = [p.V_K.AGE_RESTRICTED, p.V_K.EXPLICIT];
+function _() {
     let e = s.default.getCurrentUser();
     return null != e && c.default.extractTimestamp(e.id) > f.getTime() && null == e.nsfwAllowed;
 }
 function h(e) {
-    return _.includes(e.nsfwLevel);
+    return g.includes(e.nsfwLevel);
 }
 function b() {
     let e = (0, i.s8)({ location: 'age-gate-utils' }),

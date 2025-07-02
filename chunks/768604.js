@@ -17,8 +17,8 @@ var r = n(524437),
 function b() {
     var e;
     let t = null == (e = (0, m.Z)()) || e,
-        { goreContentGuilds: n, goreContentFriendDm: b, goreContentNonFriendDm: _ } = (0, d.K)(),
-        x = (e) => {
+        { goreContentGuilds: n, goreContentFriendDm: b, goreContentNonFriendDm: x } = (0, d.K)(),
+        _ = (e) => {
             let t = Object.values(e);
             if ((0, o.Ks)() && t.includes(r.Q4.SHOW)) return void l.Z.showAgeVerificationGetStartedModal(a.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
             (0, c.Jr)(e);
@@ -59,7 +59,7 @@ function b() {
                             look: s.qQH.CUSTOM,
                             options: E,
                             value: b,
-                            onChange: (e) => x({ goreContentFriendDm: e }),
+                            onChange: (e) => _({ goreContentFriendDm: e }),
                             renderOptionValue: (e) => {
                                 let [t] = e;
                                 return (0, i.jsx)(u.Z, { option: t });
@@ -78,8 +78,8 @@ function b() {
                         (0, i.jsx)(s.q4e, {
                             look: s.qQH.CUSTOM,
                             options: E,
-                            value: _,
-                            onChange: (e) => x({ goreContentNonFriendDm: e }),
+                            value: x,
+                            onChange: (e) => _({ goreContentNonFriendDm: e }),
                             renderOptionValue: (e) => {
                                 let [t] = e;
                                 return (0, i.jsx)(u.Z, { option: t });
@@ -99,7 +99,7 @@ function b() {
                             look: s.qQH.CUSTOM,
                             options: j,
                             value: n,
-                            onChange: (e) => x({ goreContentGuilds: e }),
+                            onChange: (e) => _({ goreContentGuilds: e }),
                             isDisabled: !t,
                             renderOptionValue: (e) => {
                                 let [t] = e;

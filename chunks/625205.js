@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(494620),
     f = n(962100),
     b = n(65154),
-    _ = n(388032),
-    x = n(209782),
+    x = n(388032),
+    _ = n(209782),
     E = n(20493);
 let j = g.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
 function C() {
@@ -53,13 +53,13 @@ function C() {
         (e = (0, i.jsx)(a.R94, {
             type: a.R94.Types.DESCRIPTION,
             className: E.marginTop8,
-            children: _.intl.format(_.t['1iK6UV'], { onDownloadClick: () => (0, f.y)('Help Text Input Devices') })
+            children: x.intl.format(x.t['1iK6UV'], { onDownloadClick: () => (0, f.y)('Help Text Input Devices') })
         })),
         S ||
             (t = (0, i.jsx)(a.R94, {
                 type: a.R94.Types.DESCRIPTION,
                 className: E.marginTop8,
-                children: _.intl.format(_.t.Ow0dbG, { onDownloadClick: () => (0, f.y)('Help Text Output Devices') })
+                children: x.intl.format(x.t.Ow0dbG, { onDownloadClick: () => (0, f.y)('Help Text Output Devices') })
             })));
     let A = N[0],
         P = null != A ? A.disabled : null != e,
@@ -73,16 +73,16 @@ function C() {
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: x.deviceOptionCertified
+                className: _.deviceOptionCertified
             });
         }
         return (0, i.jsxs)(
             'span',
             {
-                className: x.deviceOption,
+                className: _.deviceOption,
                 children: [
                     (0, i.jsx)('span', {
-                        className: x.deviceOptionLabel,
+                        className: _.deviceOptionLabel,
                         children: u.Z.getCertifiedDeviceName(s, r)
                     }),
                     t
@@ -95,15 +95,15 @@ function C() {
         return Z(e[0]);
     }
     return (0, i.jsxs)('div', {
-        className: x.devices,
+        className: _.devices,
         children: [
             (0, i.jsxs)('div', {
-                className: x.deviceColumns,
+                className: _.deviceColumns,
                 children: [
                     (0, i.jsx)('div', {
-                        className: x.column,
+                        className: _.column,
                         children: (0, i.jsxs)(a.xJW, {
-                            title: _.intl.string(_.t.hHMYbW),
+                            title: x.intl.string(x.t.hHMYbW),
                             children: [
                                 (0, i.jsx)(a.q4e, {
                                     value: v,
@@ -128,9 +128,9 @@ function C() {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: x.column,
+                        className: _.column,
                         children: (0, i.jsxs)(a.xJW, {
-                            title: _.intl.string(_.t.dl18zc),
+                            title: x.intl.string(x.t.dl18zc),
                             children: [
                                 (0, i.jsx)(a.q4e, {
                                     value: T,
@@ -159,7 +159,7 @@ function C() {
             y &&
                 (0, i.jsx)(h.Z, {
                     look: h.z.WARNING,
-                    children: _.intl.string(_.t.Ioz3g4)
+                    children: x.intl.string(x.t.Ioz3g4)
                 })
         ]
     });

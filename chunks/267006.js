@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => _ });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -14,7 +14,7 @@ var i = n(255367),
     h = n(726985),
     f = n(388032),
     b = n(20493);
-function _(e) {
+function x(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, a.e7)([u.Z], () => u.Z.getExperimentalEncoders());
     return (0, i.jsx)(d.F, {
@@ -28,14 +28,14 @@ function _(e) {
         })
     });
 }
-function x(e) {
+function _(e) {
     let { refreshStyles: t = !1 } = e,
         { openH264: n, hardwareEncoding: s } = (0, a.cj)([u.Z], () => ({
             openH264: u.Z.getOpenH264(),
             hardwareEncoding: u.Z.getHardwareEncoding()
         })),
-        x = r.useRef(null);
-    (0, m.Z)(x, p.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
+        _ = r.useRef(null);
+    (0, m.Z)(_, p.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
     let E = r.useCallback((e) => {
             e
                 ? c.Z.setHardwareEncoding(!0)
@@ -117,7 +117,7 @@ function x(e) {
                         children: [
                             (0, i.jsx)(o.j7V, {
                                 style: { scrollMarginTop: '48px' },
-                                containerRef: x,
+                                containerRef: _,
                                 className: t ? null : l()(b.marginTop8, b.marginBottom20),
                                 value: s,
                                 onChange: E,
@@ -133,7 +133,7 @@ function x(e) {
                         ]
                     })
                 }),
-                (0, i.jsx)(_, { refreshStyles: t })
+                (0, i.jsx)(x, { refreshStyles: t })
             ]
         });
     return (0, i.jsx)(d.F, {

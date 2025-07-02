@@ -4204,7 +4204,7 @@ var n_ = (function (e) {
             (e.MASKED_LINK_MODAL_CLICKED = 'masked_link_modal_clicked'),
             (e.ACTIVITY_SHARING_SETTINGS_INTERACTED = 'activity_sharing_settings_interacted'),
             (e.RUNNING_GAME_CARD_STATE_CHANGED = 'running_game_card_state_changed'),
-            (e.BILLING_IP_LOCATION_FETCH_ERROR = 'billing_ip_location_fetch_error'),
+            (e.BILLING_IP_LOCATION_FETCH_ERROR = 'network_action_billing_ip_location_fetch_error'),
             e
         );
     })({}),

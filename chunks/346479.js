@@ -170,7 +170,7 @@ let T = {
     ),
     removeMember: (e, t, n) =>
         i.tn.del({
-            url: b.ANM.THREAD_MEMBER(e.id, t),
+            url: b.ANM.THREAD_MEMBER(e, t),
             query: { location: n },
             rejectWithError: !1
         }),

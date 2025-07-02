@@ -9,7 +9,7 @@ function c(e) {
     let { defaultResponse: t, onDiscountOffer: n, onNonSubscriber: c, onTier0TrialOffer: u, onTier2TrialOffer: d, onTier0TrialPeriod: f, onTier2TrialPeriod: _, onNonTier2Subscriber: p, onTier2Subscriber: h, onCustomCriteria: m } = e,
         g = (0, s.N)(),
         E = (0, o.Ng)(),
-        b = (0, r.e7)([i.ZP], () => i.ZP.getPremiumTypeSubscription()),
+        b = (0, r.e7)([i.Z], () => i.Z.getPremiumTypeSubscription()),
         y = a.ZP.getPremiumTypeFromSubscription(b);
     if (null != m) {
         let e = m();

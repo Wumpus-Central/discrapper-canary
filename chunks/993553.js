@@ -53,8 +53,8 @@ function c(e) {
                     ]
                 })
             }),
-        [b, _] = r.useState(null),
-        x = r.useCallback(() => {
+        [b, x] = r.useState(null),
+        _ = r.useCallback(() => {
             if (null == b) return;
             let { scrollHeight: e, clientHeight: t } = b;
             e > t &&
@@ -64,8 +64,8 @@ function c(e) {
                 });
         }, [b]);
     r.useEffect(() => {
-        requestAnimationFrame(x);
-    }, [x, c, d]);
+        requestAnimationFrame(_);
+    }, [_, c, d]);
     let E = 'auto';
     return (
         null != p && (E = m ? ''.concat(p.expandedHeight, 'px') : ''.concat(p.truncatedHeight, 'px')),
@@ -102,7 +102,7 @@ function c(e) {
                         {
                             className: o.content,
                             lineClamp: m ? void 0 : d,
-                            ref: _,
+                            ref: x,
                             style: { height: E },
                             children: c
                         }),

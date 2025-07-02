@@ -110,7 +110,7 @@ function V(e) {
 function F(e) {
     var t;
     let { ctaButton: n, showYearlyPrice: i, className: l, isGift: o = !1, priceOptions: c } = e,
-        u = (0, s.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
+        u = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
         d = (0, b.N)(),
         m = null == d || null == (t = d.subscription_trial) ? void 0 : t.sku_id,
         C = !!(null == u ? void 0 : u.hasActiveTrial),
@@ -155,7 +155,7 @@ function F(e) {
 function W(e) {
     var t;
     let { showWumpus: n, ctaButton: i, showYearlyPrice: l, className: o, isGift: u = !1, priceOptions: d } = e,
-        m = (0, s.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
+        m = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
         C = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
         p = (0, b.N)(),
         h = null == p || null == (t = p.subscription_trial) ? void 0 : t.sku_id,
@@ -390,7 +390,7 @@ function q(e) {
 function K(e) {
     var t, n, i, l;
     let { showWumpus: d, ctaButton: m, showYearlyPrice: C, featureSet: p = 0, className: f, isGift: I = !1, isModal: v = !1, priceOptions: S, showPromotionalGiftBanner: w = !1 } = e,
-        M = (0, s.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
+        M = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
         H = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
         A = (0, b.N)(),
         G = null == A || null == (t = A.subscription_trial) ? void 0 : t.sku_id,

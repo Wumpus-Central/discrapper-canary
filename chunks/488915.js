@@ -27,10 +27,10 @@ function b(t) {
 function g(t, e, n) {
     return 'entitlement:'.concat(t, ':').concat(n, ':').concat(e);
 }
-function P(t, e) {
+function _(t, e) {
     return 'entitlement:'.concat(e, ':').concat(t);
 }
-let _ = new c.h(
+let P = new c.h(
         (t) => [I(t.application_id), ...t.subscription_listings_ids.map(O)],
         (t) => t.id
     ),
@@ -39,14 +39,14 @@ let _ = new c.h(
         (t) => t.id
     ),
     m = new c.h(
-        (t) => [g(t.applicationId, t.isValid(null, f.Z), t.guildId), P(t.isValid(null, f.Z), t.guildId)],
+        (t) => [g(t.applicationId, t.isValid(null, f.Z), t.guildId), _(t.isValid(null, f.Z), t.guildId)],
         (t) => t.id
     ),
     v = {},
     E = {};
 function h(t) {
     var e, n;
-    for (let i of (_.set(t.id, t), null != (e = t.subscription_listings) ? e : [])) {
+    for (let i of (P.set(t.id, t), null != (e = t.subscription_listings) ? e : [])) {
         ((n = i), y.set(n.id, n));
     }
 }
@@ -56,10 +56,10 @@ class T extends (i = u.yh) {
         return null != (e = v[t]) ? e : 0;
     }
     getSubscriptionGroupListing(t) {
-        return _.get(t);
+        return P.get(t);
     }
     getSubscriptionGroupListingForSubscriptionListing(t) {
-        let e = _.values(O(t));
+        let e = P.values(O(t));
         return (s()(e.length <= 1, 'Found multiple group listings for listing'), e[0]);
     }
     getSubscriptionListing(t) {
@@ -82,7 +82,7 @@ class T extends (i = u.yh) {
     }
     getEntitlementsForGuild(t) {
         let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        return m.values(P(e, t));
+        return m.values(_(e, t));
     }
 }
 ((o = 'ApplicationSubscriptionStore'),
@@ -96,12 +96,12 @@ class T extends (i = u.yh) {
         : (T[l] = o));
 let C = new T(d.Z, {
     LOGOUT: function () {
-        (_.clear(), y.clear(), m.clear(), (v = {}), (E = {}));
+        (P.clear(), y.clear(), m.clear(), (v = {}), (E = {}));
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function (t) {
         let { applicationId: e, groupListingId: n } = t;
         v[e] = 1;
-        let i = _.get(n);
+        let i = P.get(n);
         if (null != i) for (let t of i.subscription_listings_ids) y.delete(t);
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (t) {

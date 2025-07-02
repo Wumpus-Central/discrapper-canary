@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -15,13 +15,13 @@ var r = n(120356),
     h = n(388032),
     f = n(700195),
     b = n(20493);
-function _() {
+function x() {
     let {
             enabled: e,
             autoToggle: t,
             hideInstantInvites: r,
-            hidePersonalInformation: _,
-            disableSounds: x,
+            hidePersonalInformation: x,
+            disableSounds: _,
             disableNotifications: E,
             enableContentProtection: j
         } = (0, l.cj)([u.Z], () =>
@@ -108,7 +108,7 @@ function _() {
                     (0, i.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, i.jsx)(a.j7V, {
-                            value: _,
+                            value: x,
                             onChange: (e) => C('hidePersonalInformation', e),
                             note: h.intl.string(h.t['+9Lra2']),
                             children: h.intl.string(h.t.UpQziI)
@@ -126,7 +126,7 @@ function _() {
                     (0, i.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, i.jsx)(a.j7V, {
-                            value: x,
+                            value: _,
                             onChange: (e) => C('disableSounds', e),
                             note: h.intl.string(h.t.eAkaio),
                             children: h.intl.string(h.t.o56OZm)

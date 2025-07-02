@@ -1,8 +1,8 @@
-t.d(n, { p: () => i });
+t.d(n, { p: () => c });
 var r = t(255367);
 t(73800);
 var l = t(73433);
-function i(e) {
+function c(e) {
     let { children: n } = e;
     return (0, r.jsxs)('div', {
         className: l.blockquoteContainer,

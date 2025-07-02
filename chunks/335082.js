@@ -156,7 +156,7 @@ function b() {
         })
     });
 }
-function _() {
+function x() {
     let e = a.G6.useSetting(),
         t = o.isPlatformEmbedded ? g.intl.string(m.default.UQ9RHB) : g.intl.string(g.t.oKqC4u);
     return (0, i.jsx)(l.F, {
@@ -185,7 +185,7 @@ function _() {
         })
     });
 }
-function x() {
+function _() {
     return (0, i.jsx)(l.F, {
         setting: u.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(s.hjN, {
@@ -211,7 +211,7 @@ let E = function (e) {
                 color: 'header-primary',
                 children: g.intl.string(g.t.Cq98yM)
             }),
-            children: [(0, i.jsx)(_, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(f, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(b, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(x, {})]
+            children: [(0, i.jsx)(x, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(f, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(b, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(_, {})]
         })
     });
 };

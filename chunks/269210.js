@@ -17,7 +17,7 @@ var r = n(120356),
     p = n(820468);
 let f = 5;
 function S(t) {
-    let { description: e, imgSrc: n, renderPurchaseButton: r, onPurchase: S, title: O, onDetails: I, benefitItems: b, benefitsSummary: g, subtitle: P, maxBenefits: _ = f } = t;
+    let { description: e, imgSrc: n, renderPurchaseButton: r, onPurchase: S, title: O, onDetails: I, benefitItems: b, benefitsSummary: g, subtitle: _, maxBenefits: P = f } = t;
     return (0, i.jsx)(o.tE, {
         children: (0, i.jsxs)('div', {
             className: l()(d.container, p.hoverCard),
@@ -62,7 +62,7 @@ function S(t) {
                                       }
                                   })
                                 : null,
-                            P,
+                            _,
                             null != e &&
                                 '' !== e &&
                                 (0, i.jsx)(s.x, {
@@ -97,14 +97,14 @@ function S(t) {
                                         variant: 'eyebrow',
                                         children: c.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                     }),
-                                    b.length > _
+                                    b.length > P
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  b.slice(0, _),
+                                                  b.slice(0, P),
                                                   (0, i.jsx)(s.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: b.length - _ })
+                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: b.length - P })
                                                   })
                                               ]
                                           })

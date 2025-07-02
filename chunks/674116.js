@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(429789),
     f = n(726763),
     b = n(208113),
-    _ = n(894939),
-    x = n(710808),
+    x = n(894939),
+    _ = n(710808),
     E = n(625205),
     j = n(325808),
     C = n(823087),
@@ -94,7 +94,7 @@ function V() {
             }),
             (0, i.jsx)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, i.jsx)(_.Z, {})
+                children: (0, i.jsx)(x.Z, {})
             }),
             (0, i.jsxs)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_VIDEO,
@@ -132,7 +132,7 @@ function V() {
                         (0, i.jsx)(l.$i$, { className: M.marginBottom40 }),
                         (0, i.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, i.jsx)(x.Z, {})
+                            children: (0, i.jsx)(_.Z, {})
                         }),
                         (0, i.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,

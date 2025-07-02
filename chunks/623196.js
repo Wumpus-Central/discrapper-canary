@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(838436),
     f = n(726985),
     b = n(981631),
-    _ = n(388032),
-    x = n(891170);
+    x = n(388032),
+    _ = n(891170);
 let E = (e) => {
     (0, o.ZDy)(async () => {
         let { default: t } = await n.e('25120').then(n.bind(n, 926281));
@@ -39,10 +39,10 @@ function j() {
         S = C && O,
         v = () => {
             E({
-                header: _.intl.string(_.t.jxXMEx),
-                body: _.intl.format(_.t.fSv59f, { helpdeskArticle: u.Z.getArticleURL(b.BhN.GDPR_PACKAGE_CONTENTS) }),
-                confirmText: _.intl.string(_.t.NYgNg4),
-                cancelText: _.intl.string(_.t.jpVjsr),
+                header: x.intl.string(x.t.jxXMEx),
+                body: x.intl.format(x.t.fSv59f, { helpdeskArticle: u.Z.getArticleURL(b.BhN.GDPR_PACKAGE_CONTENTS) }),
+                confirmText: x.intl.string(x.t.NYgNg4),
+                cancelText: x.intl.string(x.t.jpVjsr),
                 confirmButtonColor: o.zxk.Colors.BRAND,
                 onConfirm: (e) => {
                     (j(!0),
@@ -50,17 +50,17 @@ function j() {
                             .then(
                                 (e) => {
                                     null != e && null != e.body
-                                        ? c.Z.show({ body: _.intl.string(_.t['6Nmv4u']) })
+                                        ? c.Z.show({ body: x.intl.string(x.t['6Nmv4u']) })
                                         : c.Z.show({
-                                              title: _.intl.string(_.t.OjbtDg),
-                                              body: _.intl.string(_.t['0F5Jys'])
+                                              title: x.intl.string(x.t.OjbtDg),
+                                              body: x.intl.string(x.t['0F5Jys'])
                                           });
                                 },
                                 (e) => {
                                     var t;
-                                    let n = (null == e ? void 0 : e.message) || (null == e || null == (t = e.body) ? void 0 : t.message) || _.intl.string(_.t['0F5Jys']);
+                                    let n = (null == e ? void 0 : e.message) || (null == e || null == (t = e.body) ? void 0 : t.message) || x.intl.string(x.t['0F5Jys']);
                                     c.Z.show({
-                                        title: _.intl.string(_.t.OjbtDg),
+                                        title: x.intl.string(x.t.OjbtDg),
                                         body: n
                                     });
                                 }
@@ -73,21 +73,21 @@ function j() {
         setting: f.s6.PRIVACY_DATA_REQUEST_V2,
         children: [
             (0, i.jsx)(h.H, {
-                header: _.intl.string(_.t.XAHCgI),
-                description: _.intl.format(_.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(b.BhN.GDPR_REQUEST_DATA) })
+                header: x.intl.string(x.t.XAHCgI),
+                description: x.intl.format(x.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(b.BhN.GDPR_REQUEST_DATA) })
             }),
             S
                 ? (0, i.jsx)(o.Zbd, {
-                      className: x.card,
+                      className: _.card,
                       children: (0, i.jsx)(o.Text, {
                           variant: 'text-md/normal',
-                          children: _.intl.format(_.t.RNDlV1, { date: l()(t.created_at).add(b.eBq, 'days').format('MMMM Do YYYY') })
+                          children: x.intl.format(x.t.RNDlV1, { date: l()(t.created_at).add(b.eBq, 'days').format('MMMM Do YYYY') })
                       })
                   })
                 : (0, i.jsx)('div', {
-                      className: x.button,
+                      className: _.button,
                       children: (0, i.jsx)(o.ua7, {
-                          text: e.isStaff() ? _.intl.string(_.t.ZPQLHx) : e.verified ? null : _.intl.string(_.t['c1f88/']),
+                          text: e.isStaff() ? x.intl.string(x.t.ZPQLHx) : e.verified ? null : x.intl.string(x.t['c1f88/']),
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: r } = e;
                               return (0, i.jsx)(o.zxk, {
@@ -98,7 +98,7 @@ function j() {
                                   look: o.zxk.Looks.FILLED,
                                   color: o.zxk.Colors.BRAND,
                                   submitting: s || n,
-                                  children: _.intl.string(_.t.dmBSKi)
+                                  children: x.intl.string(x.t.dmBSKi)
                               });
                           }
                       })

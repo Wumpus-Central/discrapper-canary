@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(404615),
     f = n(238108),
     b = n(22189),
-    _ = n(391110),
-    x = n(484239),
+    x = n(391110),
+    _ = n(484239),
     E = n(658370),
     j = n(981631),
     C = n(921944),
@@ -65,12 +65,12 @@ function T(e, t) {
     );
 }
 let N = r.memo((e) => {
-    let { name: t, canReveal: n = !0, dismissibleContentType: s, forceShadow: h, cardType: x } = e,
+    let { name: t, canReveal: n = !0, dismissibleContentType: s, forceShadow: h, cardType: _ } = e,
         E = null == e ? void 0 : e.onCtaClick,
         y = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
         [A, P] = r.useState(!1),
         [R, D] = r.useState(!1),
-        Z = x === _.gM.CARD_CAROUSEL_FIRST_ROW || x === _.gM.CARD_CAROUSEL_SECOND_ROW || x === _.gM.CARD_CAROUSEL_THIRD_ROW,
+        Z = _ === x.gM.CARD_CAROUSEL_FIRST_ROW || _ === x.gM.CARD_CAROUSEL_SECOND_ROW || _ === x.gM.CARD_CAROUSEL_THIRD_ROW,
         w = (0, b.Z)(),
         [k, L] = (0, g.cv)(null != s && n ? [s] : []),
         { easterEggLevel: B, isEasterEggTriggered: M, onHover: U, onUnhover: V } = (0, f.Z)(5),
@@ -189,8 +189,8 @@ N.displayName = 'PremiumPerkCard';
 let I = r.forwardRef((e, t) => {
     var n;
     let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: f, cardVariant: b, cardType: j, onClick: C, backgroundImage: O, pillText: v, perkImage: T, imageOverlayText: N, hasNitroGradientBackground: I } = e,
-        y = j === _.gM.CARD_CAROUSEL_FIRST_ROW || j === _.gM.CARD_CAROUSEL_SECOND_ROW || j === _.gM.CARD_CAROUSEL_THIRD_ROW,
-        A = '' !== o || '' !== c || ('' !== a && b === _.zW.REWARD),
+        y = j === x.gM.CARD_CAROUSEL_FIRST_ROW || j === x.gM.CARD_CAROUSEL_SECOND_ROW || j === x.gM.CARD_CAROUSEL_THIRD_ROW,
+        A = '' !== o || '' !== c || ('' !== a && b === x.zW.REWARD),
         P = (0, h._)(b);
     return (0, i.jsxs)(d.P3F, {
         className: l()(S.card, p, null == (n = P.cardContainer) ? void 0 : n.className, {
@@ -209,7 +209,7 @@ let I = r.forwardRef((e, t) => {
                     children: v
                 }),
             (0, i.jsx)('div', { ref: t }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(_.Z, {
                 title: r,
                 titleClassName: s,
                 subtitle: a,

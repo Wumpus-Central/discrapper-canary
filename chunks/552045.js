@@ -15,8 +15,8 @@ var r = n(120356),
     h = n(864903),
     f = n(589608),
     b = n(633488),
-    _ = n(361848);
-let x = () => {
+    x = n(361848);
+let _ = () => {
         let e = (0, d.mq)(m.ne.ACTIVE),
             t = (0, c.Z)(),
             { handleTabChange: n } = (0, o.Z)();
@@ -59,13 +59,13 @@ let x = () => {
                                 ]
                             })
                         }),
-                        (0, i.jsx)(x, {})
+                        (0, i.jsx)(_, {})
                     ]
                 }),
                 (0, i.jsx)('div', {
                     className: h.headerImage,
                     children: (0, i.jsx)('img', {
-                        src: e ? b : _,
+                        src: e ? b : x,
                         alt: p.intl.string(g.default.ffg6xc)
                     })
                 })

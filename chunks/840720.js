@@ -11,11 +11,11 @@ var i = n(255367),
 function m(e) {
     let { className: t, guildTag: n, guildBadge: s, guildId: m, guildName: g, guildIcon: p, guildIconSize: h } = e,
         f = r.useRef(null),
-        [b, _] = r.useState(!1);
+        [b, x] = r.useState(!1);
     return (
         r.useEffect(() => {
             let e = f.current;
-            null != e && null != e.offsetWidth && null != e.scrollWidth && _(e.offsetWidth < e.scrollWidth);
+            null != e && null != e.offsetWidth && null != e.scrollWidth && x(e.offsetWidth < e.scrollWidth);
         }, []),
         (0, i.jsxs)('div', {
             className: l()(u.container, t),

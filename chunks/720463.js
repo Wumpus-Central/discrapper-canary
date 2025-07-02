@@ -17,8 +17,8 @@ var i = n(255367),
     h = n(622562),
     f = n(937860),
     b = n(335346),
-    _ = n(981631),
-    x = n(388032),
+    x = n(981631),
+    _ = n(388032),
     E = n(806539),
     j = n(293401),
     C = n(447489),
@@ -52,7 +52,7 @@ let S = () => {
         });
     },
     v = (e) => {
-        let { descriptionText: t = x.intl.string(x.t['6If1Cw']), onClose: n = () => {} } = e;
+        let { descriptionText: t = _.intl.string(_.t['6If1Cw']), onClose: n = () => {} } = e;
         return (0, i.jsxs)('div', {
             className: l()(j.container, E.baseCardOutline),
             children: [
@@ -73,7 +73,7 @@ let S = () => {
                                 variant: 'heading-md/bold',
                                 color: 'header-primary',
                                 className: j.coachmarkTitle,
-                                children: x.intl.string(x.t['D/nzVl'])
+                                children: _.intl.string(_.t['D/nzVl'])
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
@@ -117,7 +117,7 @@ function T(e) {
     return (0, i.jsxs)(h.E9, {
         className: j.coachmarkModalContainer,
         backgroundElementRef: t,
-        onGetBoundingRect: _.dG4,
+        onGetBoundingRect: x.dG4,
         getOffsetsRelativeToElement: () => ({
             top: 0,
             right: 0

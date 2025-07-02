@@ -10,11 +10,11 @@ var r = n(442837),
     s = n(786397),
     l = n(474936);
 let c = () => {
-    let e = (0, r.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription());
+    let e = (0, r.e7)([a.Z], () => a.Z.getPremiumTypeSubscription());
     return !!(null == e ? void 0 : e.hasActiveTrial);
 };
 function u() {
-    let e = (0, r.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()),
+    let e = (0, r.e7)([a.Z], () => a.Z.getPremiumTypeSubscription()),
         t = (0, r.e7)([i.default], () => i.default.getCurrentUser());
     return (null == e ? void 0 : e.hasActiveTrial) ? (null == t ? void 0 : t.premiumType) : null;
 }

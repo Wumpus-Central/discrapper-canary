@@ -143,10 +143,11 @@ function k(e) {
 }
 function M(e) {
     let t = U(e),
-        n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())];
-    if ((null == n ? void 0 : n.label_until) != null && Date.now() < Date.parse(null == n ? void 0 : n.label_until)) {
-        var r;
-        return null != (r = null == n ? void 0 : n.label_type) ? r : o.ww.NONE;
+        n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())],
+        r = Date.now();
+    if ((null == n ? void 0 : n.label_until) != null && r < Date.parse(n.label_until) && (null == n ? void 0 : n.label_from) != null && r > Date.parse(n.label_from)) {
+        var i;
+        return null != (i = null == n ? void 0 : n.label_type) ? i : o.ww.NONE;
     }
     return o.ww.NONE;
 }

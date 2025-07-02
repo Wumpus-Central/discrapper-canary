@@ -117,7 +117,7 @@ function T() {
         a = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
         s = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
         l = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
-        h = (0, c.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
+        h = (0, c.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
         m = null !== i && !p.Z.fetchingAllEntitlements && (!p.Z.fetchedAllEntitlements || e),
         [E, b] = r.useState(
             I({

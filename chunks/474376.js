@@ -15,8 +15,8 @@ var r = n(442837),
     h = n(726745),
     f = n(251423),
     b = n(383832),
-    _ = n(981631),
-    x = n(388032),
+    x = n(981631),
+    _ = n(388032),
     E = n(965695);
 function j(e) {
     let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
@@ -24,7 +24,7 @@ function j(e) {
         j = (0, r.e7)([o.Z], () => (0, s.wj)(o.Z.theme)),
         { multiAccountUsers: C } = (0, f.L)(),
         O = (e) => {
-            e !== (null == t ? void 0 : t.id) && (m.default.track(_.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: _.jXE.USER_PROFILE } }), p.yD(e));
+            e !== (null == t ? void 0 : t.id) && (m.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }), p.yD(e));
         },
         S = C.map((r) => {
             let s = new c.Z(r),
@@ -68,14 +68,14 @@ function j(e) {
                                 o &&
                                     (0, i.jsx)(l.owK, {
                                         size: 'sm',
-                                        color: (0, a.Lq)(t ? _.Ilk.WHITE_500 : _.Ilk.BRAND_500),
-                                        secondaryColor: (0, a.Lq)((t && j) || (t && !j) ? _.Ilk.BRAND_500 : _.Ilk.WHITE_500),
+                                        color: (0, a.Lq)(t ? x.Ilk.WHITE_500 : x.Ilk.BRAND_500),
+                                        secondaryColor: (0, a.Lq)((t && j) || (t && !j) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
                                         className: E.activeIcon
                                     }),
                                 d &&
                                     (0, i.jsx)(l.P4T, {
-                                        color: (0, a.Lq)(_.Ilk.RED_400),
-                                        secondaryColor: (0, a.Lq)((t && j) || (t && !j) ? _.Ilk.BRAND_500 : _.Ilk.WHITE_500),
+                                        color: (0, a.Lq)(x.Ilk.RED_400),
+                                        secondaryColor: (0, a.Lq)((t && j) || (t && !j) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
                                         size: 'xs',
                                         className: E.activeIcon
                                     })
@@ -96,7 +96,7 @@ function j(e) {
                     (0, i.jsx)(l.Clw, {}),
                     (0, i.jsx)(l.sNh, {
                         id: 'manage-accounts',
-                        label: x.intl.string(x.t.WbFpq6),
+                        label: _.intl.string(_.t.WbFpq6),
                         action: () => {
                             (null == e || e(), (0, b.Z)());
                         }

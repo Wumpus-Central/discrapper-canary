@@ -1,8 +1,8 @@
 n.d(t, { E: () => p });
 var r = n(73800),
     l = n(442837),
-    a = n(626135),
-    i = n(74538),
+    i = n(626135),
+    a = n(74538),
     o = n(381585),
     s = n(597688),
     c = n(884697),
@@ -11,14 +11,14 @@ var r = n(73800),
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'product',
         p = (0, o.sp)(),
-        f = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
-        g = (0, u.x)(),
-        h = i.ZP.canUseCollectibles(g),
+        g = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
+        f = (0, u.x)(),
+        h = a.ZP.canUseCollectibles(f),
         b = r.useRef(null),
         m = r.useCallback(() => {
-            let r = null != f ? (0, c.Vw)(f, h, !1) : null,
-                l = null != f ? (0, c.eu)(f, h, !1) : void 0;
-            a.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
+            let r = null != g ? (0, c.Vw)(g, h, !1) : null,
+                l = null != g ? (0, c.eu)(g, h, !1) : void 0;
+            i.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: null == p ? void 0 : p.sessionId,
                 sku_id: e,
                 display_price: null == r ? void 0 : r.amount,
@@ -31,7 +31,7 @@ function p(e, t) {
                 type: n,
                 category_position: null == p ? void 0 : p.categoryPosition
             });
-        }, [null == p ? void 0 : p.sessionId, null == p ? void 0 : p.categoryPosition, null == p ? void 0 : p.pageCategory, null == p ? void 0 : p.pageSection, null == p ? void 0 : p.tilePosition, h, t, f, e, n]),
+        }, [null == p ? void 0 : p.sessionId, null == p ? void 0 : p.categoryPosition, null == p ? void 0 : p.pageCategory, null == p ? void 0 : p.pageSection, null == p ? void 0 : p.tilePosition, h, t, g, e, n]),
         _ = r.useCallback(
             (e) => {
                 e

@@ -45,7 +45,7 @@ var r = n(255367),
 let B = (e) => {
         let { selected: t } = e,
             n = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-            r = (0, a.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
+            r = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
             i = (0, N.N)(),
             l = (0, S.Ng)(),
             o = (0, y.Vi)(),
@@ -81,9 +81,9 @@ let B = (e) => {
                 return i;
             })(e, ['selected', 'route', 'locationState']);
         let K = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-            q = (0, a.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
-            Q = (0, O.Qo)(K, q),
-            X = (0, l.JA)('nitro'),
+            q = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
+            X = (0, O.Qo)(K, q),
+            Q = (0, l.JA)('nitro'),
             J = (0, N.N)(),
             $ = (0, S.Ng)(),
             ee = (0, I.W)(),
@@ -204,13 +204,13 @@ let B = (e) => {
                         (ec === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eu(M.L.TAKE_ACTION),
                             _.default.track(k.rMx.NITRO_TAB_VISITED, {
                                 badge_decorator: E,
-                                has_premium: Q
+                                has_premium: X
                             }),
                             null != ef && eg(M.L.USER_DISMISS));
                     }
                 },
                 Y,
-                X
+                Q
             )),
             (H = H =
                 {

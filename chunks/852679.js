@@ -14,7 +14,7 @@ let _ = 'guild-boost-purchase-modal';
 async function p(e) {
     let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: h, guildId: m, closeLayer: g, onCloseModal: E, totalNumberOfSlotsToAssign: b = 1, disablePremiumUpsell: y, onSubscribeComplete: O, onSubscriptionConfirmation: v, inPopout: I, applicationId: T, intent: S } = e,
         A = I ? i.u1M : i.z1l,
-        N = l.ZP.getPremiumTypeSubscription();
+        N = l.Z.getPremiumTypeSubscription();
     if (null != N && N.isPurchasedExternally && null != N.paymentGateway) {
         (null != g && g(),
             a.Z.show({

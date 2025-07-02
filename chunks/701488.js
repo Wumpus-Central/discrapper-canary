@@ -68,6 +68,7 @@ var N = (function (e) {
 let C = {
         label_type: r.ww.NONE,
         release_phase: '',
+        label_from: null,
         label_until: null,
         omit_badge_from_surfaces: []
     },

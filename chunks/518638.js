@@ -83,7 +83,7 @@ function S() {
                       let { id: t } = e;
                       return 1 === p.default.compare(t, o);
                   }),
-        c = u.ZP.getPremiumTypeSubscription(),
+        c = u.Z.getPremiumTypeSubscription(),
         _ = !!(null == c ? void 0 : c.hasActiveTrial),
         g = d.Z.hasAnyUnexpiredOffer(),
         E = _ || g ? s.filter((e) => e.isRedeemableByTrialUsers()) : s;

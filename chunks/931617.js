@@ -44,8 +44,8 @@ function P(e, n) {
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
         h = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         P = (0, r.e7)([b.Z], () => b.Z.getGuild(n)),
-        x = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
-        v = (0, r.e7)([o.Z], () => o.Z.roleStyle),
+        v = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
+        x = (0, r.e7)([o.Z], () => o.Z.roleStyle),
         _ = (0, s.sE)(n, {
             location: i,
             targetUserId: e
@@ -69,7 +69,7 @@ function P(e, n) {
         C = (0, d.ZP)(n, e);
     if (__OVERLAY__ || null == y || null == P || !N) return null;
     let I = f.Z.getHighestRole(P),
-        S = Object.values(x).filter((e) => !(0, u.pM)(P.id, e.id)),
+        S = Object.values(v).filter((e) => !(0, u.pM)(P.id, e.id)),
         T =
             E && !h
                 ? S.map((t) => {
@@ -81,7 +81,7 @@ function P(e, n) {
                                 a.S89,
                                 {
                                     id: t.id,
-                                    label: () => j(t, v, C),
+                                    label: () => j(t, x, C),
                                     disabled: i,
                                     action: () => {
                                         y.includes(t.id)
@@ -107,7 +107,7 @@ function P(e, n) {
                                 a.sNh,
                                 {
                                     id: e.id,
-                                    label: () => j(e, v, C)
+                                    label: () => j(e, x, C)
                                 },
                                 e.id
                             )

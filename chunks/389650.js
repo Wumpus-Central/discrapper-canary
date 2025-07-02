@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(721383),
     f = n(612226),
     b = n(714338),
-    _ = n(924557),
-    x = n(600164),
+    x = n(924557),
+    _ = n(600164),
     E = n(74299),
     j = n(577153),
     C = n(365023),
@@ -113,8 +113,8 @@ class V extends r.PureComponent {
     }
     render() {
         let { managed: e, enabled: t } = this.props.keybind;
-        return (0, i.jsxs)(x.Z, {
-            direction: x.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(_.Z, {
+            direction: _.Z.Direction.VERTICAL,
             className: l()(D.keybindGroup, Z.card),
             children: [
                 !e &&
@@ -124,10 +124,10 @@ class V extends r.PureComponent {
                         onClick: this.handleDeleteKeybind,
                         look: g.Z.Looks.FILLED
                     }),
-                (0, i.jsxs)(x.Z, {
+                (0, i.jsxs)(_.Z, {
                     className: w.marginBottom8,
                     children: [
-                        (0, i.jsx)(x.Z.Child, {
+                        (0, i.jsx)(_.Z.Child, {
                             basis: '45%',
                             children: (0, i.jsx)(u.xJW, {
                                 title: R.intl.string(R.t.UUpADw),
@@ -140,7 +140,7 @@ class V extends r.PureComponent {
                                 })
                             })
                         }),
-                        (0, i.jsx)(x.Z.Child, {
+                        (0, i.jsx)(_.Z.Child, {
                             basis: '45%',
                             children: (0, i.jsx)(u.xJW, {
                                 title: R.intl.string(R.t['1La4tL']),
@@ -151,7 +151,7 @@ class V extends r.PureComponent {
                                 })
                             })
                         }),
-                        (0, i.jsx)(x.Z.Child, {
+                        (0, i.jsx)(_.Z.Child, {
                             grow: 0,
                             shrink: 0,
                             children: (0, i.jsx)(u.xJW, {
@@ -173,7 +173,7 @@ class V extends r.PureComponent {
                         })
                     ]
                 }),
-                (0, i.jsx)(x.Z.Child, { children: this.renderMessage() }),
+                (0, i.jsx)(_.Z.Child, { children: this.renderMessage() }),
                 this.renderExtraSettings()
             ]
         });
@@ -364,18 +364,18 @@ class G extends r.PureComponent {
                     children: N.isPlatformEmbedded
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsxs)(x.Z, {
-                                      justify: x.Z.Justify.BETWEEN,
+                                  (0, i.jsxs)(_.Z, {
+                                      justify: _.Z.Justify.BETWEEN,
                                       className: w.marginBottom20,
                                       children: [
-                                          (0, i.jsx)(x.Z.Child, {
+                                          (0, i.jsx)(_.Z.Child, {
                                               grow: 0,
                                               children: (0, i.jsx)(u.Wn, {
                                                   messageType: u.QYI.WARNING,
                                                   children: R.intl.string(R.t.NoKjWF)
                                               })
                                           }),
-                                          (0, i.jsx)(x.Z.Child, {
+                                          (0, i.jsx)(_.Z.Child, {
                                               wrap: !0,
                                               grow: 0,
                                               children: (0, i.jsx)(u.zxk, {
@@ -494,7 +494,7 @@ function F() {
     let e = (0, c.e7)([v.ZP], () => v.ZP.getState()),
         t = (0, c.e7)([S.Z], () => (0, E.Z)(S.Z)),
         n = (0, c.e7)([O.ZP], () => O.ZP.isSupported()),
-        r = (0, _.Go)();
+        r = (0, x.Go)();
     return (0, i.jsx)(G, {
         keybinds: e,
         canGoLive: t,

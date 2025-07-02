@@ -14,8 +14,8 @@ var i = n(255367),
     h = n(695349),
     f = n(103433),
     b = n(166021),
-    _ = n(22189),
-    x = n(391110),
+    x = n(22189),
+    _ = n(391110),
     E = n(75077),
     j = n(981631),
     C = n(388032),
@@ -27,7 +27,7 @@ let v = (e) => {
         { isAllPerksVisible: s, setIsAllPerksVisible: v, previousComponent: T } = e,
         N = r.useRef(null),
         I = r.useRef(null),
-        y = Object.entries((0, _.Z)()).reduce((e, t) => {
+        y = Object.entries((0, x.Z)()).reduce((e, t) => {
             let [n, i] = t;
             return (!1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e);
         }, {}),
@@ -55,7 +55,7 @@ let v = (e) => {
                             onBackClick: () => {
                                 (v(!1),
                                     p.default.track(j.rMx.NITRO_HOME_NAVIGATION, {
-                                        current_component: x.MQ.SEE_ALL,
+                                        current_component: _.MQ.SEE_ALL,
                                         next_component: T,
                                         interaction_component: 'Back Button'
                                     }));
@@ -74,13 +74,13 @@ let v = (e) => {
                                     className: O.cardCarousel,
                                     cards: (0, E.ZM)({
                                         perksCards: y,
-                                        variant: x.gM.CARD_CAROUSEL_FIRST_ROW,
+                                        variant: _.gM.CARD_CAROUSEL_FIRST_ROW,
                                         isPremiumSubscriber: Z,
                                         hideCardsOnNarrowScreen: !0,
                                         fractionalState: w,
                                         isInReverseTrial: k
                                     }),
-                                    cardType: x.gM.CARD_CAROUSEL_FIRST_ROW
+                                    cardType: _.gM.CARD_CAROUSEL_FIRST_ROW
                                 }),
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
@@ -92,13 +92,13 @@ let v = (e) => {
                                     className: O.cardCarousel,
                                     cards: (0, E.ZM)({
                                         perksCards: y,
-                                        variant: x.gM.CARD_CAROUSEL_SECOND_ROW,
+                                        variant: _.gM.CARD_CAROUSEL_SECOND_ROW,
                                         isPremiumSubscriber: Z,
                                         hideCardsOnNarrowScreen: !0,
                                         fractionalState: w,
                                         isInReverseTrial: k
                                     }),
-                                    cardType: x.gM.CARD_CAROUSEL_SECOND_ROW
+                                    cardType: _.gM.CARD_CAROUSEL_SECOND_ROW
                                 }),
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
@@ -110,13 +110,13 @@ let v = (e) => {
                                     className: O.cardCarousel,
                                     cards: (0, E.ZM)({
                                         perksCards: y,
-                                        variant: x.gM.CARD_CAROUSEL_THIRD_ROW,
+                                        variant: _.gM.CARD_CAROUSEL_THIRD_ROW,
                                         isPremiumSubscriber: Z,
                                         hideCardsOnNarrowScreen: !0,
                                         fractionalState: w,
                                         isInReverseTrial: k
                                     }),
-                                    cardType: x.gM.CARD_CAROUSEL_THIRD_ROW
+                                    cardType: _.gM.CARD_CAROUSEL_THIRD_ROW
                                 })
                             ]
                         }),

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -26,11 +26,11 @@ function b() {
         })
     });
 }
-function _(e) {
+function x(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, a.e7)([d.Z], () => d.Z.supports(p.AN.VIDEO)),
         [s, u] = r.useState(!1),
-        _ = (0, i.jsxs)(i.Fragment, {
+        x = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.F, {
                     setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
@@ -44,7 +44,7 @@ function _(e) {
             ]
         });
     return t
-        ? _
+        ? x
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.y5t, {
@@ -53,7 +53,7 @@ function _(e) {
                           className: f.marginBottom20,
                           children: h.intl.string(h.t.LKzQSE)
                       }),
-                      children: _
+                      children: x
                   }),
                   (0, i.jsx)(o.$i$, { className: l()(f.marginBottom40, f.marginTop40) })
               ]

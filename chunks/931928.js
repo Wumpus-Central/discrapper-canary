@@ -1,5 +1,5 @@
 n.d(t, {
-    ED: () => _,
+    ED: () => x,
     fO: () => j,
     qp: () => C
 });
@@ -42,7 +42,7 @@ function b(e) {
     }
     return e;
 }
-let _ = (e) =>
+let x = (e) =>
         (0, i.jsx)(
             m.M4,
             b(
@@ -54,7 +54,7 @@ let _ = (e) =>
                 e
             )
         ),
-    x = [g.Z5c.ME, g.Z5c.COLLECTIBLES_SHOP, g.Z5c.NITRO_HOME],
+    _ = [g.Z5c.ME, g.Z5c.COLLECTIBLES_SHOP, g.Z5c.NITRO_HOME],
     E = {
         position: 'right',
         align: 'bottom'
@@ -96,7 +96,7 @@ let _ = (e) =>
             }, [p]));
         let v = (0, s.TH)().pathname,
             T = r.useCallback(() => {
-                (x.includes(v) || (0, c.uL)(g.Z5c.ME), o());
+                (_.includes(v) || (0, c.uL)(g.Z5c.ME), o());
             }, [v, o]);
         return (0, i.jsx)(
             m.WS,
@@ -107,7 +107,7 @@ let _ = (e) =>
                     calculateVisibility: O,
                     defaultCoachmarkAlign: E.align,
                     popoutElement: (0, i.jsx)(
-                        _,
+                        x,
                         b(
                             {
                                 onClose: a,

@@ -2,16 +2,16 @@ n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var l = n(120356),
-    a = n.n(l),
-    i = n(481060),
+    i = n.n(l),
+    a = n(481060),
     o = n(884697),
     s = n(409116),
     c = n(200615),
     u = n(981631),
     d = n(388032),
     p = n(561197);
-function f() {
-    return (f =
+function g() {
+    return (g =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -21,7 +21,7 @@ function f() {
             return e;
         }).apply(this, arguments);
 }
-function g(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,22 +70,22 @@ function b(e) {
     if (null == C) return null;
     if (C.amount <= 0)
         return (0, r.jsx)('div', {
-            className: a()(p.priceTagsContainer, b),
+            className: i()(p.priceTagsContainer, b),
             children: (0, r.jsx)(s.F, { price: C })
         });
     let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
         O = !n && !(0, o.x6)(t),
-        S = (0, o.x6)(t) && n ? h(g({}, C), { amount: l.original }) : C,
-        x = _ && n,
+        x = (0, o.x6)(t) && n ? h(f({}, C), { amount: l.original }) : C,
+        S = _ && n,
         E = _ && !n;
     return (0, r.jsxs)('div', {
-        className: a()(p.priceTagsContainer, b),
+        className: i()(p.priceTagsContainer, b),
         children: [
-            !x &&
+            !S &&
                 (0, r.jsx)(s.F, {
-                    price: S,
+                    price: x,
                     discount: n ? o.f_ : l,
-                    className: a()(p.price, {
+                    className: i()(p.price, {
                         [p.striked]: n,
                         [p.dimmed]: n,
                         [p.fullPrice]: O
@@ -98,7 +98,7 @@ function b(e) {
                     discount: n ? l : o.f_,
                     renderPrice: m
                         ? (e) =>
-                              (0, r.jsx)(i.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-xs/medium',
                                   children: d.intl.format(d.t.Sv8iiY, {
                                       price: e,
@@ -108,16 +108,16 @@ function b(e) {
                         : O
                           ? (e) => d.intl.formatToPlainString(d.t.W3gIWF, { price: e })
                           : void 0,
-                    className: a()(p.price, {
+                    className: i()(p.price, {
                         [p.dimmed]: !n,
                         [p.fullPrice]: O
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
-                    icon: (0, r.jsx)(i.ua7, {
+                    icon: (0, r.jsx)(a.ua7, {
                         text: d.intl.string(d.t.MPFyJy),
                         'aria-label': d.intl.string(d.t.X3Ekj4),
                         children: (e) => {
-                            var t = f(
+                            var t = g(
                                 {},
                                 (function (e) {
                                     if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -125,16 +125,16 @@ function b(e) {
                                 })(e)
                             );
                             return (0, r.jsx)(
-                                i.SrA,
+                                a.SrA,
                                 h(
-                                    g(
+                                    f(
                                         {
                                             size: 'md',
                                             color: 'currentColor'
                                         },
                                         t
                                     ),
-                                    { className: a()(p.premiumIcon, { [p.fullPrice]: O }) }
+                                    { className: i()(p.premiumIcon, { [p.fullPrice]: O }) }
                                 )
                             );
                         }

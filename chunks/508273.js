@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(906732),
     m = n(406218),
     f = n(749958),
-    _ = n(993860),
-    g = n(137162),
+    g = n(993860),
+    _ = n(137162),
     h = n(15210),
     b = n(43542),
     E = n(910200),
@@ -22,7 +22,7 @@ var r = n(255367),
     v = n(583136);
 function O(e) {
     let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d, currentUserId: p } = e,
-        _ = i.useRef(null),
+        g = i.useRef(null),
         [h, O] = i.useState(!0),
         [I, S] = i.useState(!1),
         T = t.state === C.r2o.ACCEPTING,
@@ -32,7 +32,7 @@ function O(e) {
         Z = A ? 326 : 292;
     i.useLayoutEffect(() => {
         var e, t;
-        S((null != (t = null == (e = _.current) ? void 0 : e.clientHeight) ? t : 0) > Z);
+        S((null != (t = null == (e = g.current) ? void 0 : e.clientHeight) ? t : 0) > Z);
     }, [Z, S]);
     let R = (0, m.PC)(t),
         k = i.useCallback(() => {
@@ -43,9 +43,9 @@ function O(e) {
         }, [h, I]),
         D = i.useMemo(() => {
             var e;
-            return I && (null == (e = _.current) ? void 0 : e.clientHeight) != null
+            return I && (null == (e = g.current) ? void 0 : e.clientHeight) != null
                 ? {
-                      height: h ? Z : _.current.clientHeight + 36 + 48,
+                      height: h ? Z : g.current.clientHeight + 36 + 48,
                       transition: N ? void 0 : 'height 0.2s ease'
                   }
                 : {};
@@ -59,7 +59,7 @@ function O(e) {
               children: [
                   (0, r.jsxs)('div', {
                       className: v.cardHeightMeasure,
-                      ref: _,
+                      ref: g,
                       children: [
                           A
                               ? (0, r.jsx)('div', {
@@ -78,7 +78,7 @@ function O(e) {
                           }),
                           (0, r.jsx)(E.N3, { profile: R }),
                           (0, r.jsx)(b.Z, { profile: R }),
-                          (0, r.jsx)(g.E, {
+                          (0, r.jsx)(_.E, {
                               profile: R,
                               className: v.mainContent
                           })
@@ -125,7 +125,7 @@ function O(e) {
 }
 function j(e) {
     let { invite: t, profile: n, isMemberOfGuild: l, message: a, submitting: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: u, inIterationExperiment: m } = e,
-        { guildId: f, ctaType: g } = (0, _.ZP)(n, _.F3.INVITE),
+        { guildId: f, ctaType: _ } = (0, g.ZP)(n, g.F3.INVITE),
         { analyticsLocations: b } = (0, p.ZP)(d.Z.INVITE_EMBED),
         E = i.useCallback(() => {
             let e = l ? 'transition' : 'accept';
@@ -139,11 +139,11 @@ function j(e) {
                 b
             );
         }, [t, a, b, l]);
-    return null == g
+    return null == _
         ? null
         : (0, r.jsx)(h.o, {
               guildId: f,
-              ctaType: g,
+              ctaType: _,
               submitting: o,
               onGoToGuild: s,
               onAcceptInvite: u,

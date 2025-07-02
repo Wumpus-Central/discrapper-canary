@@ -7,7 +7,7 @@ var r = n(255367),
     s = n(911969),
     c = n(40851),
     u = n(317381),
-    d = n(588580),
+    d = n(314490),
     p = n(374065),
     h = n(451576),
     f = n(526846),
@@ -29,7 +29,7 @@ function S(e) {
         N = (0, p.g5)(Z),
         T = Z !== p.jy.CAN_LAUNCH || P,
         { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: k } = (0, C.Z)(200, 300),
-        M = (0, d.a)({ surface: s.eR.VOICE_LAUNCHER }),
+        M = (0, d.p)({ surface: s.eR.VOICE_LAUNCHER }),
         L = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
         D = !T,
         U = i.useCallback(
@@ -89,80 +89,87 @@ function S(e) {
                             : (0, r.jsx)(r.Fragment, {});
                     },
                     children: () =>
-                        (0, r.jsxs)(r.Fragment, {
-                            children: [
-                                (0, r.jsx)(a.ua7, {
-                                    text: E.intl.string(E.t.P8vmUl),
-                                    color: a.FGA.BRAND,
-                                    forceOpen: !0,
-                                    shouldShow: s,
-                                    children: (e) => {
-                                        var t, n;
-                                        return (0, r.jsx)(
-                                            'div',
-                                            ((t = (function (e) {
-                                                for (var t = 1; t < arguments.length; t++) {
-                                                    var n = null != arguments[t] ? arguments[t] : {},
-                                                        r = Object.keys(n);
-                                                    ('function' == typeof Object.getOwnPropertySymbols &&
-                                                        (r = r.concat(
-                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        (0, r.jsx)(y.Xf, {
+                            contentType: o.z.ACTIVITIES_VOICE_LAUNCHER_BADGE,
+                            latestVersion: M,
+                            children: (e) => {
+                                let { visibleContent: t, markAsDismissed: n } = e;
+                                return (0, r.jsxs)(r.Fragment, {
+                                    children: [
+                                        (0, r.jsx)(a.ua7, {
+                                            text: E.intl.string(E.t.P8vmUl),
+                                            color: a.FGA.BRAND,
+                                            forceOpen: !0,
+                                            shouldShow: s,
+                                            children: (e) => {
+                                                var a, s;
+                                                return (0, r.jsx)(
+                                                    'div',
+                                                    ((a = (function (e) {
+                                                        for (var t = 1; t < arguments.length; t++) {
+                                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                                r = Object.keys(n);
+                                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                                                (r = r.concat(
+                                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                    })
+                                                                )),
+                                                                r.forEach(function (t) {
+                                                                    var r;
+                                                                    ((r = n[t]),
+                                                                        t in e
+                                                                            ? Object.defineProperty(e, t, {
+                                                                                  value: r,
+                                                                                  enumerable: !0,
+                                                                                  configurable: !0,
+                                                                                  writable: !0
+                                                                              })
+                                                                            : (e[t] = r));
+                                                                }));
+                                                        }
+                                                        return e;
+                                                    })({ ref: W }, e)),
+                                                    (s = s =
+                                                        {
+                                                            children: (0, r.jsx)(x.Z, {
+                                                                disabled: T,
+                                                                'aria-label': N,
+                                                                label: D ? void 0 : N,
+                                                                isActivityActive: L,
+                                                                onClick: () => {
+                                                                    (G(), (i === o.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === o.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(O.L.TAKE_ACTION), t === o.z.ACTIVITIES_VOICE_LAUNCHER_BADGE && n(O.L.TAKE_ACTION));
+                                                                },
+                                                                onMouseEnter: U,
+                                                                onMouseLeave: k
                                                             })
-                                                        )),
-                                                        r.forEach(function (t) {
-                                                            var r;
-                                                            ((r = n[t]),
-                                                                t in e
-                                                                    ? Object.defineProperty(e, t, {
-                                                                          value: r,
-                                                                          enumerable: !0,
-                                                                          configurable: !0,
-                                                                          writable: !0
-                                                                      })
-                                                                    : (e[t] = r));
-                                                        }));
-                                                }
-                                                return e;
-                                            })({ ref: W }, e)),
-                                            (n = n =
-                                                {
-                                                    children: (0, r.jsx)(x.Z, {
-                                                        disabled: T,
-                                                        'aria-label': N,
-                                                        label: D ? void 0 : N,
-                                                        isActivityActive: L,
-                                                        onClick: () => {
-                                                            (G(), (i === o.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === o.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(O.L.TAKE_ACTION));
-                                                        },
-                                                        onMouseEnter: U,
-                                                        onMouseLeave: k
-                                                    })
-                                                }),
-                                            Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                                : (function (e, t) {
-                                                      var n = Object.keys(e);
-                                                      if (Object.getOwnPropertySymbols) {
-                                                          var r = Object.getOwnPropertySymbols(e);
-                                                          n.push.apply(n, r);
-                                                      }
-                                                      return n;
-                                                  })(Object(n)).forEach(function (e) {
-                                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                                  }),
-                                            t)
-                                        );
-                                    }
-                                }),
-                                M
-                                    ? (0, r.jsx)(m.r, {
-                                          top: 2,
-                                          right: 2,
-                                          size: 6
-                                      })
-                                    : null
-                            ]
+                                                        }),
+                                                    Object.getOwnPropertyDescriptors
+                                                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
+                                                        : (function (e, t) {
+                                                              var n = Object.keys(e);
+                                                              if (Object.getOwnPropertySymbols) {
+                                                                  var r = Object.getOwnPropertySymbols(e);
+                                                                  n.push.apply(n, r);
+                                                              }
+                                                              return n;
+                                                          })(Object(s)).forEach(function (e) {
+                                                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(s, e));
+                                                          }),
+                                                    a)
+                                                );
+                                            }
+                                        }),
+                                        t === o.z.ACTIVITIES_VOICE_LAUNCHER_BADGE
+                                            ? (0, r.jsx)(m.r, {
+                                                  top: 2,
+                                                  right: 2,
+                                                  size: 6
+                                              })
+                                            : null
+                                    ]
+                                });
+                            }
                         })
                 })
             );
