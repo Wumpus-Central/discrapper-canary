@@ -25,27 +25,27 @@ let b = (e, t) => {
         m = l.length > 0 && n,
         [_, C] = r.useState(m ? a.m.RECOMMENDED : a.m.POPULAR),
         [v, O] = r.useState(0),
-        x = (0, d.u)(),
-        S = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
+        S = (0, d.u)(),
+        x = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
         E = (0, p.a)(),
         j = r.useMemo(() => {
             let e = [];
             return (
                 _ === a.m.RECENT
-                    ? (e = S)
+                    ? (e = x)
                     : _ === a.m.PRICE_LOW_TO_HIGH
-                      ? (e = [...S].sort((e, n) => {
+                      ? (e = [...x].sort((e, n) => {
                             var r, l, i, a;
                             return (null != (i = null == (r = (0, u.Vw)(e, t, !1)) ? void 0 : r.amount) ? i : 0) - (null != (a = null == (l = (0, u.Vw)(n, t, !1)) ? void 0 : l.amount) ? a : 0);
                         }))
                       : _ === a.m.RECOMMENDED
-                        ? (e = x(l))
+                        ? (e = S(l))
                         : _ === a.m.POPULAR
-                          ? (e = x(b))
-                          : _ === a.m.RANDOM && (e = i().shuffle(S)),
+                          ? (e = S(b))
+                          : _ === a.m.RANDOM && (e = i().shuffle(x)),
                 E(e)
             );
-        }, [_, E, S, t, x, l, b, v]),
+        }, [_, E, x, t, S, l, b, v]),
         y = r.useCallback(() => {
             (O((e) => e + 1), C(a.m.RANDOM));
         }, []);

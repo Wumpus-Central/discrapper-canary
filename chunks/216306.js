@@ -2,8 +2,8 @@
     Fo: () => b,
     KY: () => v,
     Uo: () => D,
-    fU: () => M,
-    qw: () => L,
+    fU: () => L,
+    qw: () => M,
     tn: () => x
 }),
     n(290780));
@@ -117,7 +117,7 @@ function x(e, t, n, r) {
         s
     );
 }
-function M(e) {
+function L(e) {
     var t, n;
     let r = (0, o.e7)([g.Z], () => g.Z.getCategories(e)),
         l = r._categories.length,
@@ -126,7 +126,7 @@ function M(e) {
     let s = r[null != (n = null == (t = i.channel) ? void 0 : t.id) ? n : 'null'];
     return null == s ? 0 : 0 === s.length ? i.index + 2 - l : s[s.length - 1].index + 2 - l;
 }
-function L(e) {
+function M(e) {
     var t;
     return S.intl.formatToPlainString(S.t['8N0BHR'], { timeAgo: a()(h.default.extractTimestamp(null != (t = I.ZP.lastMessageId(e)) ? t : e)).fromNow() });
 }

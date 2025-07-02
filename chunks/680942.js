@@ -16,12 +16,12 @@ var r = n(255367),
     m = n(388032),
     _ = n(846165);
 let C = (e) => {
-    let { product: t, selectedVariantIndex: n, returnRef: C, onSuccess: v, tooltipDelay: O, color: x = a.Ttl.BRAND } = e,
-        { analyticsLocations: S } = (0, o.ZP)(),
+    let { product: t, selectedVariantIndex: n, returnRef: C, onSuccess: v, tooltipDelay: O, color: S = a.Ttl.BRAND } = e,
+        { analyticsLocations: x } = (0, o.ZP)(),
         E = l.useRef(null),
         j = (0, p.hv)('CollectiblesShopGiftButton'),
         y = (0, u.sp)(),
-        P = (0, g.Z)();
+        T = (0, g.Z)();
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(a.ua7, {
@@ -60,7 +60,7 @@ let C = (e) => {
                           {
                               buttonRef: E,
                               className: _.giftButton,
-                              color: x,
+                              color: S,
                               look: a.zxk.Looks.FILLED,
                               size: a.PhG.ICON,
                               innerClassName: _.giftButtonInner,
@@ -75,7 +75,7 @@ let C = (e) => {
                                           tile_type: i.Z[t.type],
                                           tile_position: String(null == y ? void 0 : y.tilePosition),
                                           cta_name: 'gift button',
-                                          page_type: P || 'home'
+                                          page_type: T || 'home'
                                       }),
                                       (0, s.Z)({
                                           skuId: (0, f.S)({
@@ -84,7 +84,7 @@ let C = (e) => {
                                           }),
                                           isGift: !0,
                                           giftingOrigin: b.Wt.SHOP_PAGE,
-                                          analyticsLocations: S,
+                                          analyticsLocations: x,
                                           returnRef: C,
                                           variantsReturnStyle: j,
                                           onClose:

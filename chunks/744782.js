@@ -10,8 +10,8 @@ var r = n(442837),
     u = n(984933),
     d = n(430824),
     x = n(341165),
-    m = n(626135),
-    g = n(572004),
+    g = n(626135),
+    m = n(572004),
     h = n(971130),
     v = n(230900),
     f = n(981631),
@@ -49,9 +49,9 @@ function E(e) {
                       guildScheduledEventId: P
                   })
                 : null,
-        _ = null == D || null == Z,
-        k = (0, s.Z)(null != D ? D : ''),
-        R = null != (n = null == Z ? void 0 : Z.maxAge) ? n : y.value,
+        k = null == D || null == Z,
+        R = (0, s.Z)(null != D ? D : ''),
+        _ = null != (n = null == Z ? void 0 : Z.maxAge) ? n : y.value,
         L = null != (E = null == Z ? void 0 : Z.maxUses) ? E : b.value;
     return (0, l.jsxs)('div', {
         className: j.container,
@@ -92,13 +92,13 @@ function E(e) {
                 className: j.invite,
                 children: [
                     (0, l.jsx)(o.S, {
-                        value: k,
+                        value: R,
                         autoFocus: !1,
                         onCopy: (e) => {
-                            if (_) return;
-                            (0, g.JG)(e);
+                            if (k) return;
+                            (0, m.JG)(e);
                             let t = (0, v.xC)(N.entity_type);
-                            m.default.track(f.rMx.COPY_INSTANT_INVITE, {
+                            g.default.track(f.rMx.COPY_INSTANT_INVITE, {
                                 server: N.guild_id,
                                 channel: I,
                                 channel_type: t,
@@ -113,7 +113,7 @@ function E(e) {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
                             className: j.inviteDetail,
-                            children: (0, h.Vg)(R, L)
+                            children: (0, h.Vg)(_, L)
                         })
                 ]
             })

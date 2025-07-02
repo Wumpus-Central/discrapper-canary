@@ -33,8 +33,8 @@ var r = n(255367),
     v = n(271383),
     D = n(485386),
     x = n(496675),
-    M = n(594174),
-    L = n(700785),
+    L = n(594174),
+    M = n(700785),
     U = n(944613),
     j = n(981631),
     P = n(388032),
@@ -150,12 +150,12 @@ let z = l.forwardRef(function (e, t) {
         v = (0, c.JA)(g.id),
         { tabIndex: D } = v,
         x = k(v, ['tabIndex']),
-        M = (0, S.p9)({
+        L = (0, S.p9)({
             roleId: g.id,
             size: 16,
             guildId: N
         }),
-        L = (0, _.e7)([I.Z], () => I.Z.roleStyle),
+        M = (0, _.e7)([I.Z], () => I.Z.roleStyle),
         U = (0, b._f)(N, g, g.colorStrings),
         j = (null == (i = g.tags) ? void 0 : i.guild_connections) === null,
         F = l.useCallback(
@@ -187,7 +187,7 @@ let z = l.forwardRef(function (e, t) {
                   color: z,
                   size: 14
               })
-            : 'dot' === L
+            : 'dot' === M
               ? (0, r.jsx)(m.FhE, {
                     className: y.roleDot,
                     color: z,
@@ -240,7 +240,7 @@ let z = l.forwardRef(function (e, t) {
                                     : null
                             ]
                         }),
-                        null != M ? (0, r.jsx)(p.Z, G(w({ className: y.roleIcon }, M), { enableTooltip: !1 })) : null,
+                        null != L ? (0, r.jsx)(p.Z, G(w({ className: y.roleIcon }, L), { enableTooltip: !1 })) : null,
                         (0, r.jsx)('div', {
                             'aria-hidden': !0,
                             className: y.roleName,
@@ -368,10 +368,10 @@ function H(e) {
         }
         R((t) => (e < b.length ? e : t));
     }, [E, A, b]);
-    let U = M.default.getCurrentUser();
+    let U = L.default.getCurrentUser();
     o()(null != U, 'MemberRolesList: currentUser cannot be undefined');
     let Z = !T && x.Z.can(j.Plq.MANAGE_ROLES, i),
-        H = L.e9(i, U.id),
+        H = M.e9(i, U.id),
         K = l.useMemo(() => 'roles-'.concat((0, u.Z)()), []),
         W = (0, d.ZP)({
             id: K,
@@ -387,7 +387,7 @@ function H(e) {
                 {
                     className: g,
                     role: e,
-                    canRemove: (null == (t = e.tags) ? void 0 : t.guild_connections) === null ? n.id === U.id : Z && L.r6(i, U.id, H, e),
+                    canRemove: (null == (t = e.tags) ? void 0 : t.guild_connections) === null ? n.id === U.id : Z && M.r6(i, U.id, H, e),
                     onRemove: () => O(e),
                     ref: (t) => {
                         var n;

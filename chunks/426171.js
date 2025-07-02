@@ -1,7 +1,7 @@
 (n.d(t, {
     Kp: () => O,
     u9: () => C,
-    xV: () => x
+    xV: () => S
 }),
     n(413496),
     n(433524),
@@ -115,7 +115,7 @@ let b = ''.concat('#').concat('itemSkuId', '='),
             }
         }, [n, _, b, t, O, c, d, C]);
     },
-    x = (e) => {
+    S = (e) => {
         let t = r.useRef({}),
             n = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
             l = (0, i.e7)([c.Z], () => c.Z.isFetchingCategories),

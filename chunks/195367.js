@@ -9,8 +9,8 @@ var l = n(255367),
     u = n(930180),
     d = n(320596),
     x = n(924301),
-    m = n(236373),
-    g = n(854698),
+    g = n(236373),
+    m = n(854698),
     h = n(405613),
     v = n(440371),
     f = n(765305),
@@ -104,28 +104,28 @@ function E(e) {
         : null;
 }
 function O(e) {
-    let { guildEvent: t, guildEventId: i, guildId: O, editBroadcastInfoData: N, error: C, validationErrorMessage: S, onChange: T, canSetFocus: I = !1 } = e,
-        { entityType: P, channelId: Z, description: w, name: D, image: _, scheduledEndTime: k, scheduledStartTime: R, recurrenceRule: L } = t,
-        A = (0, u._d)(Z),
-        z = (0, u.K3)(Z),
-        M = null != t && (0, x.xt)(t),
-        G = r.useMemo(() => {
-            let e = (0, g.v1)(t);
-            return null != e ? e : { startDate: a()(R) };
-        }, [t, R]),
-        [X, V] = r.useState(() => (0, g.zi)(a()(R), L)),
-        W = r.useRef(null);
+    let { guildEvent: t, guildEventId: i, guildId: O, editBroadcastInfoData: C, error: S, validationErrorMessage: T, onChange: I, canSetFocus: P = !1 } = e,
+        { entityType: Z, channelId: w, description: D, name: k, image: R, scheduledEndTime: _, scheduledStartTime: L, recurrenceRule: A } = t,
+        z = (0, u._d)(w),
+        M = (0, u.K3)(w),
+        G = null != t && (0, x.xt)(t),
+        X = r.useMemo(() => {
+            let e = (0, m.v1)(t);
+            return null != e ? e : { startDate: a()(L) };
+        }, [t, L]),
+        [V, W] = r.useState(() => (0, m.zi)(a()(L), A)),
+        U = r.useRef(null);
     r.useEffect(() => {
-        if (I) {
+        if (P) {
             var e;
-            null == (e = W.current) || e.focus();
+            null == (e = U.current) || e.focus();
         }
-    }, [I]);
-    let U = (e) => {
-            T({ image: e });
+    }, [P]);
+    let F = (e) => {
+            I({ image: e });
         },
         q = (e, t) => {
-            if (null == e || void 0 === t) return void U(null);
+            if (null == e || void 0 === t) return void F(null);
             (0, s.ZDy)(async () => {
                 let { default: r } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
                 return (n) =>
@@ -137,7 +137,7 @@ function O(e) {
                                 file: t,
                                 onCrop: (e) => {
                                     let { imageUri: t } = e;
-                                    return U(t);
+                                    return F(t);
                                 },
                                 uploadType: p.pC.SCHEDULED_EVENT_IMAGE
                             },
@@ -145,12 +145,15 @@ function O(e) {
                         )
                     );
             });
-        };
+        },
+        B = null == S ? void 0 : S.getFirstFieldErrorMessage('name'),
+        Y = null == S ? void 0 : S.getFirstFieldErrorMessage('description'),
+        H = null == B && null == Y ? (null == S ? void 0 : S.getAnyErrorMessage()) : null;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)('div', {
                 className: y.blockedUsersContainer,
-                children: null != Z && !M && (A > 0 || z > 0) && (0, l.jsx)(d.mv, { channelId: Z })
+                children: null != w && !G && (z > 0 || M > 0) && (0, l.jsx)(d.mv, { channelId: w })
             }),
             (0, l.jsxs)('div', {
                 className: y.form,
@@ -163,22 +166,16 @@ function O(e) {
                             (0, l.jsx)(s.oil, {
                                 className: y.textInput,
                                 onChange: (e) => {
-                                    T({ name: e });
+                                    I({ name: e });
                                 },
                                 placeholder: j.intl.string(j.t['6/yarq']),
                                 maxLength: f.p,
-                                value: D,
+                                value: k,
                                 autoComplete: 'off',
-                                inputRef: W
+                                inputRef: U
                             }),
-                            null != C
-                                ? (0, l.jsx)(s.Text, {
-                                      color: 'text-danger',
-                                      variant: 'text-xs/normal',
-                                      className: y.warning,
-                                      children: C.getAnyErrorMessage()
-                                  })
-                                : null
+                            (0, l.jsx)(N, { error: B }),
+                            (0, l.jsx)(N, { error: H })
                         ]
                     }),
                     (0, l.jsx)(v.Z, {
@@ -189,40 +186,35 @@ function O(e) {
                                     scheduledStartTime: null == t ? void 0 : t.toISOString(),
                                     scheduledEndTime: null == n ? void 0 : n.toISOString()
                                 };
-                            (null != t && null != k && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, 'hour').toISOString()), null != t && null != X && (l.recurrenceRule = (0, g.mF)(X, t)), T(l));
+                            (null != t && null != _ && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, 'hour').toISOString()), null != t && null != V && (l.recurrenceRule = (0, m.mF)(V, t)), I(l));
                         },
                         onRecurrenceChange: (e) => {
-                            let t = G.startDate;
-                            null != t && (T({ recurrenceRule: (0, g.mF)(e, t) }), V(e));
+                            let t = X.startDate;
+                            null != t && (I({ recurrenceRule: (0, m.mF)(e, t) }), W(e));
                         },
-                        schedule: G,
-                        recurrenceRule: L,
-                        showEndDate: P === f.WX.EXTERNAL,
-                        requireEndDate: P === f.WX.EXTERNAL,
-                        disableStartDateTime: M,
+                        schedule: X,
+                        recurrenceRule: A,
+                        showEndDate: Z === f.WX.EXTERNAL,
+                        requireEndDate: Z === f.WX.EXTERNAL,
+                        disableStartDateTime: G,
                         guildId: O
                     }),
-                    null != S
-                        ? (0, l.jsx)(s.Text, {
-                              color: 'text-danger',
-                              variant: 'text-xs/normal',
-                              className: y.warning,
-                              children: S
-                          })
-                        : null,
-                    (0, l.jsx)(s.xJW, {
+                    (0, l.jsx)(N, { error: T }),
+                    (0, l.jsxs)(s.xJW, {
                         title: j.intl.string(j.t['+gRCCw']),
                         className: y.formItem,
-                        children: (0, l.jsx)(s.Kx8, {
-                            className: y.__invalid_descriptionInput,
-                            placeholder: j.intl.string(j.t['kWO/Ex']),
-                            value: w,
-                            onChange: (e) => {
-                                T({ description: e });
-                            },
-                            maxLength: f.wm,
-                            autosize: !0
-                        })
+                        children: [
+                            (0, l.jsx)(s.Kx8, {
+                                placeholder: j.intl.string(j.t['kWO/Ex']),
+                                value: D,
+                                onChange: (e) => {
+                                    I({ description: e });
+                                },
+                                maxLength: f.wm,
+                                autosize: !0
+                            }),
+                            (0, l.jsx)(N, { error: Y })
+                        ]
                     }),
                     (0, l.jsxs)(s.xJW, {
                         title: j.intl.string(j.t.Ly121d),
@@ -234,18 +226,18 @@ function O(e) {
                                 className: y.addImageHint,
                                 children: j.intl.string(j.t.B9C9bW)
                             }),
-                            null != _
+                            null != R
                                 ? (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsx)(o.Z, {
                                               className: y.imagePreview,
                                               iconWrapperClassName: y.imagePreviewInner,
-                                              image: _,
+                                              image: R,
                                               makeURL: (e) => {
                                                   if (null == e) return null;
                                                   if (null != O) {
                                                       var n;
-                                                      return null != (n = (0, h.Z)((0, m.Gb)(t, O, i))) ? n : null;
+                                                      return null != (n = (0, h.Z)((0, g.Gb)(t, O, i))) ? n : null;
                                                   }
                                               },
                                               onChange: q,
@@ -255,7 +247,7 @@ function O(e) {
                                           }),
                                           (0, l.jsx)(s.zxk, {
                                               size: s.zxk.Sizes.SMALL,
-                                              onClick: () => U(null),
+                                              onClick: () => F(null),
                                               children: j.intl.string(j.t.gmUvOz)
                                           })
                                       ]
@@ -267,9 +259,20 @@ function O(e) {
                                   })
                         ]
                     }),
-                    (0, l.jsx)(E, { editBroadcastInfoData: N })
+                    (0, l.jsx)(E, { editBroadcastInfoData: C })
                 ]
             })
         ]
     });
+}
+function N(e) {
+    let { error: t } = e;
+    return null == t
+        ? null
+        : (0, l.jsx)(s.Text, {
+              color: 'text-danger',
+              variant: 'text-xs/normal',
+              className: y.warning,
+              children: t
+          });
 }

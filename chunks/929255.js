@@ -21,11 +21,11 @@ function _(e) {
             sortedCategories: f
         }),
         O = (0, c.F)('CollectiblesBrowse'),
-        [x, S] = l.useState(O);
+        [S, x] = l.useState(O);
     return (
         l.useEffect(() => {
-            O || S(!1);
-        }, [O, S]),
+            O || x(!1);
+        }, [O, x]),
         (0, r.jsx)('div', {
             className: a()(b.pageWrapper, { [b.pageWrapperFilter]: O }),
             children: (0, r.jsxs)('main', {
@@ -41,13 +41,13 @@ function _(e) {
                                 (0, r.jsx)('div', {
                                     className: b.controls,
                                     children: (0, r.jsx)(o.zxk, {
-                                        onClick: () => S((e) => !e),
+                                        onClick: () => x((e) => !e),
                                         look: o.iLD.OUTLINED,
                                         color: o.Ttl.TRANSPARENT,
                                         children: (0, r.jsxs)('div', {
                                             className: b.filterButton,
                                             children: [
-                                                h.intl.string(x ? h.t.fYtm6e : h.t.TeTYEx),
+                                                h.intl.string(S ? h.t.fYtm6e : h.t.TeTYEx),
                                                 (0, r.jsx)(o.gXV, {
                                                     size: 'xs',
                                                     color: 'var(--button-outline-primary-text)'
@@ -78,7 +78,7 @@ function _(e) {
                                   })
                         ]
                     }),
-                    x &&
+                    S &&
                         (0, r.jsx)('aside', {
                             className: b.filterBar,
                             children: (0, r.jsx)(d.Z, {})

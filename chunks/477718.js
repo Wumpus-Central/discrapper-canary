@@ -35,13 +35,13 @@ function v(e) {
         v = (0, _.LJ)(n.id),
         D = (0, u.e7)([I.ZP], () => (null != n.userId ? I.ZP.getMember(i.guildId, n.userId) : null), [i.guildId, n.userId]),
         x = (0, g.X7)(null == D ? void 0 : D.guildId, null == D ? void 0 : D.userId, null == D ? void 0 : D.colorStrings),
-        M = l.useCallback(
+        L = l.useCallback(
             (e) => (t) => {
                 (t.preventDefault(), t.stopPropagation(), null != e && (0, A.RE)(e, d));
             },
             [d]
         ),
-        L = l.useCallback(
+        M = l.useCallback(
             () =>
                 null == n.user
                     ? null
@@ -53,7 +53,7 @@ function v(e) {
                               return (0, r.jsx)(c.P3F, {
                                   tag: 'span',
                                   className: S.username,
-                                  onClick: M(D),
+                                  onClick: L(D),
                                   onMouseEnter: l,
                                   onMouseLeave: s,
                                   children: (0, r.jsxs)(c.Text, {
@@ -71,7 +71,7 @@ function v(e) {
                               });
                           }
                       }),
-            [M, n.user, i.guildId, D, x]
+            [L, n.user, i.guildId, D, x]
         )();
     return (0, r.jsxs)('div', {
         className: s()(C.modInfoItem, S.auditLogItem),
@@ -112,7 +112,7 @@ function v(e) {
                     children: (0, r.jsxs)('div', {
                         className: S.auditLogReason,
                         children: [
-                            L,
+                            M,
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
@@ -129,7 +129,7 @@ function v(e) {
                     children: (0, r.jsxs)('div', {
                         className: S.auditLogSecondary,
                         children: [
-                            L,
+                            M,
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',

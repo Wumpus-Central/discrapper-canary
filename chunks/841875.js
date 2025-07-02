@@ -1,91 +1,86 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => f });
 var r = n(255367),
     l = n(73800),
-    i = n(481060),
-    a = n(824274),
-    o = n(215023),
-    s = n(388032),
-    c = n(590305);
-function u() {
-    let { filterSettings: e, onChange: t } = (0, a.C)();
+    i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(410030),
+    c = n(501431),
+    u = n(215023),
+    d = n(231338),
+    p = n(388032),
+    g = n(590305);
+function f() {
     return (0, r.jsxs)('div', {
-        className: c.filterBar,
+        className: g.filterBar,
         children: [
             (0, r.jsxs)('div', {
-                className: c.filterCheckboxes,
+                className: g.filterCheckboxes,
                 children: [
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-md/semibold',
-                        children: s.intl.string(s.t.Qk6r1d)
+                        children: p.intl.string(p.t.Qk6r1d)
                     }),
-                    o.xg.map((n) =>
-                        (0, r.jsx)(
-                            d,
-                            {
-                                filter: n,
-                                filterSettings: e,
-                                onChange: t
-                            },
-                            n
-                        )
-                    )
+                    u.xg.map((e) => (0, r.jsx)(h, { filter: e }, e))
                 ]
             }),
-            (0, r.jsx)(p, {}),
-            (0, r.jsx)(f, {})
+            (0, r.jsx)(b, {}),
+            (0, r.jsx)(_, {})
         ]
     });
 }
-let d = (e) => {
-        let { filter: t, filterSettings: n, onChange: l } = e,
-            a = {
-                [o.Vh.AVATAR_DECORATIONS]: s.intl.string(s.t.dRZYND),
-                [o.Vh.PROFILE_EFFECTS]: s.intl.string(s.t['1cNjt7']),
-                [o.Vh.NAMEPLATES]: s.intl.string(s.t.V68Fq6),
-                [o.Vh.BUNDLES]: s.intl.string(s.t.FYFppq),
-                [o.Vh.ORBS_ELIGIBLE]: s.intl.string(s.t.AHHHgI)
-            };
-        return (0, r.jsxs)('div', {
-            className: c.filterCheckbox,
+let h = (e) => {
+        let { filter: t } = e,
+            n = {
+                [u.Vh.AVATAR_DECORATIONS]: p.intl.string(p.t.dRZYND),
+                [u.Vh.PROFILE_EFFECTS]: p.intl.string(p.t['1cNjt7']),
+                [u.Vh.NAMEPLATES]: p.intl.string(p.t.V68Fq6),
+                [u.Vh.BUNDLES]: p.intl.string(p.t.FYFppq),
+                [u.Vh.ORBS_ELIGIBLE]: p.intl.string(p.t.AHHHgI)
+            },
+            { itemTypeFilters: l, onToggleItemType: i } = (0, c.S)();
+        return (0, r.jsxs)(o.P3F, {
+            className: g.filterCheckbox,
+            onClick: () => i(t),
             children: [
                 (0, r.jsx)('div', {
-                    className: c.checkbox,
-                    children: (0, r.jsx)(i.XZJ, {
-                        value: n.has(t),
-                        onChange: (e, n) => {
-                            (e.stopPropagation(), l(t, n));
-                        }
-                    })
+                    className: g.checkbox,
+                    children: (0, r.jsx)(o.XZJ, { value: l.has(t) })
                 }),
-                (0, r.jsx)(i.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: a[t]
+                    children: n[t]
                 })
             ]
         });
     },
-    p = () => {
+    b = () => {
         let e = l.useMemo(
                 () => [
                     {
                         color: '#262626',
-                        label: s.intl.string(s.t['dMey+v'])
+                        label: p.intl.string(p.t['dMey+v']),
+                        enum: u.S1.BLACK
                     },
                     {
                         color: '#9B59B6',
-                        label: s.intl.string(s.t.kqUD4O)
+                        label: p.intl.string(p.t.kqUD4O),
+                        enum: u.S1.PURPLE
                     },
                     {
                         color: '#3498DB',
-                        label: s.intl.string(s.t.qQTRaW)
+                        label: p.intl.string(p.t.qQTRaW),
+                        enum: u.S1.BLUE
                     },
                     {
                         color: '#1ABC9C',
-                        label: s.intl.string(s.t.ceaZKy)
+                        label: p.intl.string(p.t.ceaZKy),
+                        enum: u.S1.TEAL
                     },
                     {
                         color: '#2ECC71',
-                        label: s.intl.string(s.t['f/Ylk5'])
+                        label: p.intl.string(p.t['f/Ylk5']),
+                        enum: u.S1.GREEN
                     }
                 ],
                 []
@@ -94,144 +89,202 @@ let d = (e) => {
                 () => [
                     {
                         color: '#A0522D',
-                        label: s.intl.string(s.t['Sd/BMT'])
+                        label: p.intl.string(p.t['Sd/BMT']),
+                        enum: u.S1.BROWN
                     },
                     {
                         color: '#F1C40F',
-                        label: s.intl.string(s.t['0fevY2'])
+                        label: p.intl.string(p.t['0fevY2']),
+                        enum: u.S1.YELLOW
                     },
                     {
                         color: '#E67E22',
-                        label: s.intl.string(s.t.ZE7weH)
+                        label: p.intl.string(p.t.ZE7weH),
+                        enum: u.S1.ORANGE
                     },
                     {
                         color: '#E74C3C',
-                        label: s.intl.string(s.t.hKJGOD)
+                        label: p.intl.string(p.t.hKJGOD),
+                        enum: u.S1.RED
                     },
                     {
                         color: '#EC407A',
-                        label: s.intl.string(s.t.HvLEGB)
+                        label: p.intl.string(p.t.HvLEGB),
+                        enum: u.S1.PINK
                     }
                 ],
                 []
             );
         return (0, r.jsxs)('div', {
-            className: c.colorSwatches,
+            className: g.colorSwatches,
             children: [
-                (0, r.jsx)(i.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-md/semibold',
-                    children: s.intl.string(s.t.K1xGoK)
+                    children: p.intl.string(p.t.K1xGoK)
                 }),
-                (0, r.jsx)(g, { colors: e }),
-                (0, r.jsx)(g, { colors: t })
+                (0, r.jsx)(m, { colors: e }),
+                (0, r.jsx)(m, { colors: t })
             ]
         });
     },
-    g = (e) => {
-        let { colors: t } = e;
+    m = (e) => {
+        let { colors: t } = e,
+            { colorFilters: n, onToggleColor: l } = (0, c.S)();
         return (0, r.jsx)('div', {
-            className: c.colorSwatchRow,
+            className: g.colorSwatchRow,
             children: t.map((e) => {
-                let { color: t, label: n } = e;
+                let { color: t, label: i, enum: s } = e;
                 return (0, r.jsx)(
-                    i.P3F,
+                    o.P3F,
                     {
-                        className: c.circle,
+                        className: a()(g.circle, { [g.circleToggled]: n.has(s) }),
                         style: { backgroundColor: t },
-                        'aria-label': n
+                        'aria-label': i,
+                        onClick: () => l(s)
                     },
                     t
                 );
             })
         });
     },
-    f = () => {
-        let e = l.useMemo(
-            () => [
-                [
-                    {
-                        name: s.intl.string(s.t.aVBOKi),
-                        icon: (0, r.jsx)(i.wGt, { size: 'xxs' })
-                    },
-                    {
-                        name: s.intl.string(s.t['3WoZBQ']),
-                        icon: (0, r.jsx)(i.iWm, { size: 'xxs' })
-                    }
+    _ = () => {
+        let { themeFilters: e, onToggleTheme: t } = (0, c.S)(),
+            n = (0, s.ZP)() === d.BR.DARK,
+            i = l.useCallback(
+                (t) => {
+                    if (e.has(t) || n) return 'always-white';
+                },
+                [e, n]
+            ),
+            f = l.useCallback((t) => (e.has(t) || n ? o.TVs.colors.WHITE : o.TVs.colors.INTERACTIVE_NORMAL), [e, n]),
+            h = l.useMemo(
+                () => [
+                    [
+                        {
+                            name: p.intl.string(p.t.aVBOKi),
+                            icon: (0, r.jsx)(o.wGt, {
+                                size: 'xxs',
+                                color: f(u.t0.ANIME)
+                            }),
+                            enum: u.t0.ANIME
+                        },
+                        {
+                            name: p.intl.string(p.t['3WoZBQ']),
+                            icon: (0, r.jsx)(o.iWm, {
+                                size: 'xxs',
+                                color: f(u.t0.GAMING)
+                            }),
+                            enum: u.t0.GAMING
+                        }
+                    ],
+                    [
+                        {
+                            name: p.intl.string(p.t.yuEmLi),
+                            icon: (0, r.jsx)(o.YqE, {
+                                size: 'xxs',
+                                color: f(u.t0.CUTE_COZY)
+                            }),
+                            enum: u.t0.CUTE_COZY
+                        },
+                        {
+                            name: p.intl.string(p.t.mMvCHh),
+                            icon: (0, r.jsx)(o.lqV, {
+                                size: 'xxs',
+                                color: f(u.t0.SCI_FI)
+                            }),
+                            enum: u.t0.SCI_FI
+                        }
+                    ],
+                    [
+                        {
+                            name: p.intl.string(p.t.TlhOQE),
+                            icon: (0, r.jsx)(o.ED8, {
+                                size: 'xxs',
+                                color: f(u.t0.FOOD_DRINKS)
+                            }),
+                            enum: u.t0.FOOD_DRINKS
+                        },
+                        {
+                            name: p.intl.string(p.t['4IaUIC']),
+                            icon: (0, r.jsx)(o.HI3, {
+                                size: 'xxs',
+                                color: f(u.t0.FANTASY)
+                            }),
+                            enum: u.t0.FANTASY
+                        }
+                    ],
+                    [
+                        {
+                            name: p.intl.string(p.t.w0nSGx),
+                            icon: (0, r.jsx)(o.Qjj, {
+                                size: 'xxs',
+                                color: f(u.t0.ANIMALS_PETS)
+                            }),
+                            enum: u.t0.ANIMALS_PETS
+                        },
+                        {
+                            name: p.intl.string(p.t.cJng7u),
+                            icon: (0, r.jsx)(o.hg2, {
+                                size: 'xxs',
+                                color: f(u.t0.NATURE)
+                            }),
+                            enum: u.t0.NATURE
+                        }
+                    ],
+                    [
+                        {
+                            name: p.intl.string(p.t['5mUvyM']),
+                            icon: (0, r.jsx)(o.Roe, {
+                                size: 'xxs',
+                                color: f(u.t0.MOVIES_TV)
+                            }),
+                            enum: u.t0.MOVIES_TV
+                        },
+                        {
+                            name: p.intl.string(p.t.MB9H5e),
+                            icon: (0, r.jsx)(o.Z6G, {
+                                size: 'xxs',
+                                color: f(u.t0.DARK_MOODY)
+                            }),
+                            enum: u.t0.DARK_MOODY
+                        }
+                    ]
                 ],
-                [
-                    {
-                        name: s.intl.string(s.t.yuEmLi),
-                        icon: (0, r.jsx)(i.YqE, { size: 'xxs' })
-                    },
-                    {
-                        name: s.intl.string(s.t.mMvCHh),
-                        icon: (0, r.jsx)(i.lqV, { size: 'xxs' })
-                    }
-                ],
-                [
-                    {
-                        name: s.intl.string(s.t.TlhOQE),
-                        icon: (0, r.jsx)(i.ED8, { size: 'xxs' })
-                    },
-                    {
-                        name: s.intl.string(s.t['4IaUIC']),
-                        icon: (0, r.jsx)(i.HI3, { size: 'xxs' })
-                    }
-                ],
-                [
-                    {
-                        name: s.intl.string(s.t.w0nSGx),
-                        icon: (0, r.jsx)(i.Qjj, { size: 'xxs' })
-                    },
-                    {
-                        name: s.intl.string(s.t.cJng7u),
-                        icon: (0, r.jsx)(i.hg2, { size: 'xxs' })
-                    }
-                ],
-                [
-                    {
-                        name: s.intl.string(s.t['5mUvyM']),
-                        icon: (0, r.jsx)(i.Roe, { size: 'xxs' })
-                    },
-                    {
-                        name: s.intl.string(s.t.MB9H5e),
-                        icon: (0, r.jsx)(i.Z6G, { size: 'xxs' })
-                    }
-                ]
-            ],
-            []
-        );
+                [f]
+            );
         return (0, r.jsxs)('div', {
-            className: c.themesSection,
+            className: g.themesSection,
             children: [
-                (0, r.jsx)(i.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-md/semibold',
-                    children: s.intl.string(s.t.t1Ztrq)
+                    children: p.intl.string(p.t.t1Ztrq)
                 }),
-                e.map((e) =>
+                h.map((n) =>
                     (0, r.jsx)(
                         'div',
                         {
-                            className: c.themeRow,
-                            children: e.map((e) => {
-                                let { name: t, icon: n } = e;
+                            className: g.themeRow,
+                            children: n.map((n) => {
+                                let { name: l, icon: s, enum: c } = n;
                                 return (0, r.jsxs)(
-                                    i.P3F,
+                                    o.P3F,
                                     {
-                                        className: c.theme,
+                                        className: a()(g.theme, { [g.themeToggled]: e.has(c) }),
+                                        onClick: () => t(c),
                                         children: [
-                                            n,
-                                            (0, r.jsx)(i.Text, {
+                                            s,
+                                            (0, r.jsx)(o.Text, {
+                                                color: i(c),
                                                 variant: 'text-xs/medium',
-                                                children: t
+                                                children: l
                                             })
                                         ]
                                     },
-                                    t
+                                    l
                                 );
                             })
                         },
-                        e.map((e) => e.name).join(',')
+                        n.map((e) => e.name).join(',')
                     )
                 )
             ]

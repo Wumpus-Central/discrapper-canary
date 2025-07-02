@@ -8,5 +8,7 @@ e.exports = {
     themesSection: 'themesSection__11877',
     themeRow: 'themeRow__11877',
     theme: 'theme__11877',
-    circle: 'circle__11877'
+    themeToggled: 'themeToggled__11877',
+    circle: 'circle__11877',
+    circleToggled: 'circleToggled__11877'
 };

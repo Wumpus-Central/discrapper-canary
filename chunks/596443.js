@@ -31,8 +31,8 @@ function v(e) {
         v = R.Plq[o],
         D = null != (i = null == (t = h[v.toString()]) ? void 0 : t.title) ? i : (0, m.wt)(v),
         x = null != (a = null == (n = h[v.toString()]) ? void 0 : n.description) ? a : '',
-        M = p._o.has(v),
-        L = p.Qn.includes(o),
+        L = p._o.has(v),
+        M = p.Qn.includes(o),
         U = T.length,
         j = (0, u.e7)([I.Z], () => I.Z.can(R.Plq.MANAGE_ROLES, g), [g]),
         P = l.useCallback(
@@ -42,7 +42,7 @@ function v(e) {
             [j, g.id]
         );
     return (0, r.jsxs)('div', {
-        className: s()(b.permissionItemContainer, { [b.elevatedPermission]: M }),
+        className: s()(b.permissionItemContainer, { [b.elevatedPermission]: L }),
         children: [
             (0, r.jsxs)('div', {
                 className: b.permissionItemHeader,
@@ -64,7 +64,7 @@ function v(e) {
                                             color: 'header-muted',
                                             children: O
                                         }),
-                                        M &&
+                                        L &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
                                                     (0, r.jsx)(E.Z, {
@@ -138,8 +138,8 @@ function v(e) {
                                                     })
                                                 ]
                                             }),
-                                        !M &&
-                                            L &&
+                                        !L &&
+                                            M &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
                                                     (0, r.jsx)(E.Z, {
@@ -226,8 +226,8 @@ function x(e) {
         f = (0, p.B2)(t, n, p.pd),
         I = Object.keys(f).length,
         x = l.useMemo(() => (null != _ ? O.Z.getGuildPermissionSpecMap(_) : null), [_]),
-        M = l.useMemo(() => (null != _ ? O.Z.generateGuildPermissionSpec(_) : null), [_]),
-        [L, U] = l.useState(''),
+        L = l.useMemo(() => (null != _ ? O.Z.generateGuildPermissionSpec(_) : null), [_]),
+        [M, U] = l.useState(''),
         [j, P] = l.useState(''),
         y = l.useMemo(() => o()(P, 300), []),
         w = l.useCallback(
@@ -248,8 +248,8 @@ function x(e) {
                 });
             let e = [];
             return (
-                null == M ||
-                    M.forEach((n) => {
+                null == L ||
+                    L.forEach((n) => {
                         n.permissions.forEach((l) => {
                             let i = l.flag,
                                 s = p.pd.find((e) => R.Plq[e] === i);
@@ -289,7 +289,7 @@ function x(e) {
                     }),
                 e
             );
-        }, [_, x, A, I, M, f, j, t]);
+        }, [_, x, A, I, L, f, j, t]);
     return null == E || null == A
         ? null
         : (0, r.jsxs)('div', {
@@ -309,7 +309,7 @@ function x(e) {
                               children: [
                                   (0, r.jsx)(c.E1j, {
                                       className: b.searchBar,
-                                      query: L,
+                                      query: M,
                                       placeholder: S.intl.string(S.t['yD9+dH']),
                                       onChange: w,
                                       onClear: G,

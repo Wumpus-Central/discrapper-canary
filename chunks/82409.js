@@ -4,7 +4,7 @@ var r = n(255367),
     l = n(120356),
     o = n.n(l),
     a = n(392711),
-    s = n(695469),
+    s = n(405499),
     c = n(442837),
     u = n(481060),
     d = n(235820),
@@ -245,27 +245,27 @@ function M(e, t, n) {
 }
 function k(e) {
     let { hideBanner: t } = e,
-        [n, l] = i.useState(!1),
-        a = (0, c.e7)([j.Z], () => j.Z.shouldHide),
-        s = n ? u.kSu : u.kmB;
-    return (0, r.jsx)(u.P3F, {
-        onClick: () => j.Z.dismiss(),
-        onMouseEnter: () => l(!0),
-        onMouseLeave: () => l(!1),
-        className: o()(T.caughtUpContainer, { [T.hide]: a || t }),
+        n = (0, c.e7)([j.Z], () => j.Z.shouldHide);
+    return (0, r.jsx)('div', {
+        className: o()(T.caughtUpContainer, { [T.hide]: n || t }),
         children: (0, r.jsxs)('div', {
             className: T.caughtUpContent,
             children: [
                 (0, r.jsx)(u.Text, {
-                    variant: n ? 'text-sm/medium' : 'text-sm/normal',
+                    variant: 'text-sm/medium',
                     color: 'text-feedback-positive',
                     className: T.caughtUpText,
                     children: Z.intl.string(Z.t['6XMM+P'])
                 }),
-                (0, r.jsx)(s, {
+                (0, r.jsx)(u.W6s, {
                     size: 'sm',
-                    className: T.caughtUpIcon,
                     color: f.Z.TEXT_FEEDBACK_POSITIVE
+                }),
+                (0, r.jsx)(u.Dio, {
+                    size: 'sm',
+                    className: T.caughtUpCloseIcon,
+                    color: f.Z.BACKGROUND_MOD_STRONG,
+                    onClickCapture: () => j.Z.dismiss()
                 })
             ]
         })
@@ -289,7 +289,6 @@ function G() {
         { analyticsLocations: n } = (0, p.ZP)(h.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)(u.ua7, {
         position: 'bottom',
-        align: 'left',
         text: Z.intl.string(Z.t.h850Sk),
         shouldShow: e,
         forceOpen: e,

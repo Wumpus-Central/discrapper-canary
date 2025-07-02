@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685));
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(979554),
@@ -18,60 +18,60 @@ var r = n(255367),
     C = n(215023),
     v = n(388032),
     O = n(484920),
-    x = n(558513),
-    S = n(662128),
+    S = n(558513),
+    x = n(662128),
     E = n(676790),
     j = n(665195),
     y = n(42742),
-    P = n(283727),
-    k = n(266058),
-    T = n(719138);
-function L(e) {
+    T = n(283727),
+    P = n(266058),
+    k = n(719138);
+function I(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: L, scrollerRef: I, tab: B } = e,
+    let { isFetchingCategories: n, isFullScreen: I, scrollerRef: L, tab: B } = e,
         N = (0, d.sp)(),
         w = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
-        { noCache: A, includeUnpublished: Z } = (0, _.Z)(),
-        R = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        { noCache: A, includeUnpublished: R } = (0, _.Z)(),
+        Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         H = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [M, D] = l.useState(1),
         F = () => {
             var e;
-            null == I || null == (e = I.current) || e.scrollToTop({ animate: !0 });
+            null == L || null == (e = L.current) || e.scrollToTop({ animate: !0 });
         },
         W = (0, c.Fg)(),
         V = (0, o.ap)(W),
-        [U, z, G] = l.useMemo(() => {
+        [U, G, z] = l.useMemo(() => {
             switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
                     return [v.intl.string(v.t.dRZYND), V ? j.Z : E.Z, i.Z.AVATAR_DECORATION];
                 case C.AW.PROFILE_EFFECTS:
-                    return [v.intl.string(v.t['1cNjt7']), V ? T.Z : k.Z, i.Z.PROFILE_EFFECT];
+                    return [v.intl.string(v.t['1cNjt7']), V ? k.Z : P.Z, i.Z.PROFILE_EFFECT];
                 case C.AW.NAMEPLATES:
-                    return [v.intl.string(v.t.V68Fq6), V ? P.Z : y.Z, i.Z.NAMEPLATE];
+                    return [v.intl.string(v.t.V68Fq6), V ? T.Z : y.Z, i.Z.NAMEPLATE];
                 case C.AW.BUNDLES:
-                    return [v.intl.string(v.t.FYFppq), V ? S.Z : x.Z, i.Z.BUNDLE];
+                    return [v.intl.string(v.t.FYFppq), V ? x.Z : S.Z, i.Z.BUNDLE];
             }
         }, [B, V]),
-        q = (0, g.a)(),
-        Y = l.useMemo(
+        Y = (0, g.a)(),
+        q = l.useMemo(
             () =>
-                q(
+                Y(
                     H.filter((e) => {
                         var t;
-                        return e.type === G || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
+                        return e.type === z || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
                     })
                 ),
-            [H, G, q]
+            [H, z, Y]
         ),
-        K = (0, f.l)(Y);
+        K = (0, f.l)(q);
     return (l.useEffect(() => {
         (0, h.n)({
             sessionId: w,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: B,
-            isFullScreen: L,
-            unpublishedCategoriesShown: Z,
+            isFullScreen: I,
+            unpublishedCategoriesShown: R,
             cacheDisabled: A
         });
     }, []),
@@ -81,17 +81,17 @@ function L(e) {
                 sessionId: w,
                 checkpoint: h.a.SHOP_RENDERED,
                 tab: B,
-                isFullScreen: L,
-                unpublishedCategoriesShown: Z,
+                isFullScreen: I,
+                unpublishedCategoriesShown: R,
                 cacheDisabled: A
             });
-    }, [w, L, Z, A, n, B]),
-    n || null == R)
+    }, [w, I, R, A, n, B]),
+    n || null == Z)
         ? (0, r.jsx)(b.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
-                      style: { backgroundImage: 'url('.concat(z, ')') },
+                      style: { backgroundImage: 'url('.concat(G, ')') },
                       className: O.bannerContainer,
                       children: (0, r.jsx)(s.X6q, {
                           variant: 'heading-xxl/extrabold',
@@ -112,7 +112,7 @@ function L(e) {
                                             m.Z,
                                             {
                                                 product: e,
-                                                user: R,
+                                                user: Z,
                                                 category: n,
                                                 tab: B
                                             },

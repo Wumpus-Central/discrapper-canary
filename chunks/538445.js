@@ -27,6 +27,7 @@ function f(e) {
                 }),
                 (0, r.jsx)(o.olH, {
                     className: h.close,
+                    innerClassName: h.innerClose,
                     onClick: () => (null == n ? void 0 : n(c.L.USER_DISMISS))
                 })
             ]

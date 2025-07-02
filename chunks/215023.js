@@ -6,6 +6,7 @@
     J0: () => N,
     K8: () => P,
     RE: () => O,
+    S1: () => j,
     Vh: () => M,
     Vt: () => L,
     ZS: () => f,
@@ -19,7 +20,8 @@
     o8: () => D,
     pv: () => A,
     rL: () => _,
-    xg: () => j,
+    t0: () => U,
+    xg: () => G,
     yf: () => m
 }),
     n(388685),
@@ -167,6 +169,12 @@ let L = {
     x = new Set(Object.values(L)),
     k = (e) => x.has(e);
 var M = (function (e) {
-    return ((e.AVATAR_DECORATIONS = 'avatarDecorations'), (e.PROFILE_EFFECTS = 'profileEffects'), (e.NAMEPLATES = 'nameplates'), (e.BUNDLES = 'bundles'), (e.ORBS_ELIGIBLE = 'orbsEligible'), e);
-})({});
-let j = ['avatarDecorations', 'profileEffects', 'nameplates', 'bundles', 'orbsEligible'];
+        return ((e.AVATAR_DECORATIONS = 'avatarDecorations'), (e.PROFILE_EFFECTS = 'profileEffects'), (e.NAMEPLATES = 'nameplates'), (e.BUNDLES = 'bundles'), (e.ORBS_ELIGIBLE = 'orbsEligible'), e);
+    })({}),
+    j = (function (e) {
+        return ((e.BLACK = 'Black'), (e.PURPLE = 'Purple'), (e.BLUE = 'Blue'), (e.TEAL = 'Teal'), (e.GREEN = 'Green'), (e.BROWN = 'Brown'), (e.YELLOW = 'Yellow'), (e.ORANGE = 'Orange'), (e.RED = 'Red'), (e.PINK = 'Pink'), e);
+    })({}),
+    U = (function (e) {
+        return ((e.ANIME = 'Anime'), (e.GAMING = 'Gaming'), (e.CUTE_COZY = 'Cute & Cozy'), (e.SCI_FI = 'Sci-Fi'), (e.FOOD_DRINKS = 'Food & Drinks'), (e.NATURE = 'Nature'), (e.ANIMALS_PETS = 'Animals & Pets'), (e.MOVIES_TV = 'Movies & TV'), (e.DARK_MOODY = 'Dark & Moody'), (e.FANTASY = 'Fantasy'), e);
+    })({});
+let G = ['avatarDecorations', 'profileEffects', 'nameplates', 'bundles', 'orbsEligible'];

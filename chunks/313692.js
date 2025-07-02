@@ -26,10 +26,10 @@ function S(e) {
     let { userId: i, guildId: S, location: C, className: b, onNavigate: v } = e,
         D = l.useRef(null),
         x = (0, o.e7)([T.ZP], () => T.ZP.getGuildSidebarState(S), [S]),
-        M = l.useRef(0),
-        [L, U] = l.useState(null != (t = null == x ? void 0 : x.details.additionalSearchQuery) ? t : {}),
+        L = l.useRef(0),
+        [M, U] = l.useState(null != (t = null == x ? void 0 : x.details.additionalSearchQuery) ? t : {}),
         j = (0, h.z0)(i, S, {
-            addtionalQuery: L,
+            addtionalQuery: M,
             shouldDispatch: !0
         }),
         P = (0, o.e7)([g.default], () => g.default.getUser(i), [i]),
@@ -48,14 +48,14 @@ function S(e) {
     let w = l.useCallback(
             (e) => {
                 null != x &&
-                    ((M.current = e.target.scrollTop),
+                    ((L.current = e.target.scrollTop),
                     (0, I.r)(S, i, x.baseChannelId, {
                         modViewPanel: N.k.MESSAGE_HISTORY,
-                        additionalSearchQuery: L,
-                        scrollOffset: M.current
+                        additionalSearchQuery: M,
+                        scrollOffset: L.current
                     }));
             },
-            [S, i, x, L]
+            [S, i, x, M]
         ),
         G = (0, a.throttle)(w, 300),
         k = l.useCallback(
@@ -87,7 +87,7 @@ function S(e) {
                                 }));
                         }
                         return e;
-                    })({}, L)),
+                    })({}, M)),
                     (n = n = { offset: 25 * e }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -106,12 +106,12 @@ function S(e) {
                     (0, I.r)(S, i, x.baseChannelId, {
                         modViewPanel: N.k.MESSAGE_HISTORY,
                         additionalSearchQuery: r,
-                        scrollOffset: M.current
+                        scrollOffset: L.current
                     }));
             },
-            [S, i, x, L]
+            [S, i, x, M]
         ),
-        F = null != (n = null == L ? void 0 : L.offset) ? n : 0,
+        F = null != (n = null == M ? void 0 : M.offset) ? n : 0,
         Z = (0, o.e7)(
             [E.Z],
             () => {

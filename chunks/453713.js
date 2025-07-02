@@ -1,4 +1,4 @@
-n.d(t, { P: () => S });
+n.d(t, { P: () => x });
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -84,13 +84,13 @@ let O = s()((e) => {
         }
         return t ? p.TVs.unsafe_rawColors.PRIMARY_700.css : p.TVs.unsafe_rawColors.PRIMARY_200.css;
     }),
-    x = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: g, minimal: x } = e,
-            { isPurchased: S } = (0, h.L)(n),
+    S = (e) => {
+        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: g, minimal: S } = e,
+            { isPurchased: x } = (0, h.L)(n),
             E = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
             { onFocus: j } = E,
             y = v(E, ['onFocus']),
-            P = l.useCallback(
+            T = l.useCallback(
                 (e) => {
                     (e.preventDefault(), e.stopPropagation(), (0, f.$)(t, i), j());
                 },
@@ -99,7 +99,7 @@ let O = s()((e) => {
         return (0, r.jsx)(p.ua7, {
             text: b.intl.string(b.t['6cfuDg']),
             'aria-label': !1,
-            shouldShow: !x && S,
+            shouldShow: !S && x,
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,
@@ -121,21 +121,21 @@ let O = s()((e) => {
                             var t;
                             (g(), null == (t = e.onMouseLeave) || t.call(e));
                         },
-                        onClick: P,
+                        onClick: T,
                         onKeyDown: (e) => {
-                            e.key === u.R8.ENTER && P(e);
+                            e.key === u.R8.ENTER && T(e);
                         },
                         className: m.colorVariant,
                         children: (0, r.jsx)('div', {
                             className: a()(m.colorSwatch, {
-                                [m.open]: !x,
+                                [m.open]: !S,
                                 [m.selected]: i === s
                             }),
                             style: {
                                 backgroundColor: n.variantValue,
                                 zIndex: o - i
                             },
-                            children: S
+                            children: x
                                 ? (0, r.jsx)(p.kSu, {
                                       className: m.purchasedIndicator,
                                       color: O(n.variantValue)
@@ -146,15 +146,15 @@ let O = s()((e) => {
                 )
         });
     },
-    S = (e) => {
+    x = (e) => {
         var t, n;
         let { variantGroupProduct: l, className: i, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: f, alternativeBackgroundColor: h } = e,
             O = o.previewingVariantIndex,
-            S = null == (t = l.variants) ? void 0 : t[f],
+            x = null == (t = l.variants) ? void 0 : t[f],
             E = null !== O ? (null == (n = l.variants) ? void 0 : n[O]) : void 0,
             j = (0, g.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
-        if (null == S) return null;
-        let y = null != E ? E.variantLabel : null == S ? void 0 : S.variantLabel;
+        if (null == x) return null;
+        let y = null != E ? E.variantLabel : null == x ? void 0 : x.variantLabel;
         return (0, r.jsx)(c.bG, {
             navigator: j,
             children: (0, r.jsx)(c.SJ, {
@@ -180,7 +180,7 @@ let O = s()((e) => {
                                             : t.map((e, t) => {
                                                   var n, i;
                                                   return (0, r.jsx)(
-                                                      x,
+                                                      S,
                                                       {
                                                           variantGroupProduct: l,
                                                           variant: e,

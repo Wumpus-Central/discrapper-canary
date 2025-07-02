@@ -17,23 +17,23 @@ var r = n(255367),
 let _ = [m.AW.HOME, m.AW.ORBS];
 function C(e) {
     let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: h, refreshCategories: C } = e,
-        x = v();
-    O(x);
-    let S = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+        S = v();
+    O(S);
+    let x = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         { setCategoryRef: E, handleScrollToCategory: j } = (0, g.xV)(s.current),
         y = l.useCallback(
             async (e, t, r) => {
                 h(e, t);
-                let l = r && !n && !S,
+                let l = r && !n && !x,
                     a = t === i.T.ORB ? m.AW.ORBS : m.AW.CATALOG;
                 (await u(a, l), null != t && j(t));
             },
-            [n, S, u, j, h]
+            [n, x, u, j, h]
         );
-    return null != x
+    return null != S
         ? (0, r.jsx)(f.Z, {
               onRetry: C,
-              errorMessage: x,
+              errorMessage: S,
               errorOrigin: f.i.SHOP_PAGE
           })
         : _.includes(t)

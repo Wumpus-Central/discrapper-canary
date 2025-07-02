@@ -18,15 +18,15 @@ var r = n(255367),
     C = n(426171),
     v = n(823941),
     O = n(38900),
-    x = n(709999),
-    S = n(258939),
+    S = n(709999),
+    x = n(258939),
     E = n(81136),
     j = n(619899),
     y = n(302800),
-    P = n(215023),
-    k = n(981631),
-    T = n(484920);
-function L(e) {
+    T = n(215023),
+    P = n(981631),
+    k = n(484920);
+function I(e) {
     let { products: t, handleShopCardMount: n, header: l, category: i } = e,
         a = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         c = (0, j.St)(t);
@@ -36,27 +36,27 @@ function L(e) {
               children: [
                   null != l
                       ? (0, r.jsx)(s.Text, {
-                            className: T.itemTypeTitle,
+                            className: k.itemTypeTitle,
                             color: 'header-secondary',
                             variant: 'text-sm/bold',
                             children: l
                         })
                       : (0, r.jsx)(s.LZC, { size: 24 }),
                   (0, r.jsx)('div', {
-                      className: T.cardsContainer,
+                      className: k.cardsContainer,
                       children: c.map((e, t) =>
                           (0, r.jsx)(
                               p.k0,
                               {
                                   newValue: { tilePosition: t },
                                   children: (0, r.jsx)(
-                                      x.Z,
+                                      S.Z,
                                       {
                                           onMount: n,
                                           category: i,
                                           product: e,
                                           user: a,
-                                          tab: P.AW.CATALOG
+                                          tab: T.AW.CATALOG
                                       },
                                       e.skuId
                                   )
@@ -68,7 +68,7 @@ function L(e) {
               ]
           });
 }
-function I(e) {
+function L(e) {
     var { category: t, initialItemCardRef: n } = e,
         i = (function (e, t) {
             if (null == e) return {};
@@ -100,7 +100,7 @@ function I(e) {
             [c, n]
         );
     return (0, r.jsx)(
-        L,
+        I,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -146,14 +146,14 @@ function B(e) {
             i ? 0.13 : 0.15
         );
     return (0, r.jsxs)('div', {
-        className: T.categoryWrapper,
+        className: k.categoryWrapper,
         ref: u,
         children: [
             (0, r.jsx)(v.Z, {
                 category: t,
                 hideLimitedTimeBadge: null != s
             }),
-            (0, r.jsx)(I, {
+            (0, r.jsx)(L, {
                 category: t,
                 initialItemCardRef: n
             }),
@@ -172,20 +172,20 @@ function N(e) {
     var t;
     let { sortedCategories: n, setCategoryRef: i, isFullScreen: c, currentPage: d, handlePageChange: g } = e,
         h = (0, p.sp)(),
-        b = (0, S.R)(),
+        b = (0, x.R)(),
         _ = null != (t = null == h ? void 0 : h.sessionId) ? t : '',
-        { noCache: v, includeUnpublished: x } = (0, E.Z)(),
+        { noCache: v, includeUnpublished: S } = (0, E.Z)(),
         j = l.useMemo(() => {
-            let e = (d - 1) * P.kN;
-            return n.slice(e, e + P.kN);
+            let e = (d - 1) * T.kN;
+            return n.slice(e, e + T.kN);
         }, [n, d]);
     (l.useEffect(() => {
         (0, m.n)({
             sessionId: _,
             checkpoint: m.a.SHOP_MOUNTED,
-            tab: P.AW.CATALOG,
+            tab: T.AW.CATALOG,
             isFullScreen: c,
-            unpublishedCategoriesShown: x,
+            unpublishedCategoriesShown: S,
             cacheDisabled: v
         });
     }, []),
@@ -195,24 +195,24 @@ function N(e) {
                 (0, m.n)({
                     sessionId: _,
                     checkpoint: m.a.SHOP_RENDERED,
-                    tab: P.AW.CATALOG,
+                    tab: T.AW.CATALOG,
                     isFullScreen: c,
-                    unpublishedCategoriesShown: x,
+                    unpublishedCategoriesShown: S,
                     cacheDisabled: v
                 });
-        }, [_, c, x, v, b, j.length]));
+        }, [_, c, S, v, b, j.length]));
     let y = l.useRef(null),
-        L = (0, o.e7)([u.Z], () => u.Z.getLayers().includes(k.S9g.COLLECTIBLES_SHOP));
+        I = (0, o.e7)([u.Z], () => u.Z.getLayers().includes(P.S9g.COLLECTIBLES_SHOP));
     (0, C.Kp)({
         isFetchingCategories: b,
-        isLayer: L,
+        isLayer: I,
         initialItemCardRef: y
     });
-    let I = (0, f.F)('CollectiblesBrowse');
+    let L = (0, f.F)('CollectiblesBrowse');
     return b
         ? (0, r.jsx)(O.Z, {})
         : (0, r.jsxs)('div', {
-              className: a()(T.categories, { [T.categoriesNoFilter]: !I }),
+              className: a()(k.categories, { [k.categoriesNoFilter]: !L }),
               children: [
                   j
                       .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
@@ -238,11 +238,11 @@ function N(e) {
                           )
                       ),
                   (0, r.jsx)('div', {
-                      className: T.paginationContainer,
+                      className: k.paginationContainer,
                       children: (0, r.jsx)(s.DsT, {
                           currentPage: d,
                           totalCount: n.length,
-                          pageSize: P.kN,
+                          pageSize: T.kN,
                           onPageChange: g,
                           disablePaginationGap: !0
                       })

@@ -3,7 +3,7 @@ var i,
     r = n(255367),
     o = n(73800),
     a = n(796075),
-    s = n(695469),
+    s = n(405499),
     l = n(481060);
 let u = null != (i = window.ResizeObserver) ? i : a.d,
     d = () => {

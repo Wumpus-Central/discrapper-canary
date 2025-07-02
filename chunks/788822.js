@@ -17,62 +17,62 @@ var r = n(255367),
 let _ = (e) => {
     var t, n, i, _;
     let C,
-        { category: v, subblock: O, badgeText: x, handleTransition: S } = e;
+        { category: v, subblock: O, badgeText: S, handleTransition: x } = e;
     null != O && (C = null == (t = p.Z.getCategoryByStoreListingId(null == O ? void 0 : O.categoryStoreListingId)) ? void 0 : t.skuId);
     let E = null != (n = null != C ? C : null == v ? void 0 : v.skuId) ? n : '',
         { handleCardVisibilityChange: j } = (0, g.E)(E, 'home', 'marketing featured block'),
         { featuredBlockBanner: y } = (0, f.YG)(v, O),
-        P = l.useRef(null),
-        k = E === o.T.NAMEPLATES_V3,
-        T = k ? 'NAMEPLATES VOL.3' : null,
-        L = null == O ? void 0 : O.bodyText,
-        I = (0, d.sp)();
+        T = l.useRef(null),
+        P = E === o.T.NAMEPLATES_V3,
+        k = P ? 'NAMEPLATES VOL.3' : null,
+        I = null == O ? void 0 : O.bodyText,
+        L = (0, d.sp)();
     return (0, r.jsx)(s.$, {
-        innerRef: P,
+        innerRef: T,
         onChange: j,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
             className: m.featuredBlock,
-            innerRef: P,
+            innerRef: T,
             style: { backgroundImage: 'url('.concat(y, ')') },
             onClick: () => {
-                (S('shop marketing tile', E),
+                (x('shop marketing tile', E),
                     u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                        collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
                         sku_id: E,
                         page_type: 'home',
-                        page_section: null == I ? void 0 : I.pageSection,
-                        page_category: null == I ? void 0 : I.pageCategory,
+                        page_section: null == L ? void 0 : L.pageSection,
+                        page_category: null == L ? void 0 : L.pageCategory,
                         tile_type: 'FEATURED_BLOCK',
-                        tile_position: String(null == I ? void 0 : I.tilePosition),
+                        tile_position: String(null == L ? void 0 : L.tilePosition),
                         cta_name: null
                     }));
             },
             children: [
-                null != x &&
+                null != S &&
                     (0, r.jsx)(c.IGR, {
                         disableColor: !0,
-                        text: x,
+                        text: S,
                         className: m.featuredBlockBadge
                     }),
                 (0, r.jsxs)('div', {
                     className: m.featuredBlockTextContainer,
                     children: [
-                        null != T &&
+                        null != k &&
                             (0, r.jsx)(c.X6q, {
                                 lineClamp: 2,
-                                className: a()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: k }),
+                                className: a()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: P }),
                                 style: { color: null != (i = null == O ? void 0 : O.bannerTextColor) ? i : 'white' },
                                 variant: 'heading-xl/semibold',
-                                children: T
+                                children: k
                             }),
-                        null != L &&
+                        null != I &&
                             (0, r.jsx)(c.X6q, {
-                                lineClamp: null != T ? 2 : 4,
+                                lineClamp: null != k ? 2 : 4,
                                 className: m.featuredBlockBodyText,
                                 style: { color: null != (_ = null == O ? void 0 : O.bannerTextColor) ? _ : 'white' },
                                 variant: 'heading-md/medium',
-                                children: L
+                                children: I
                             })
                     ]
                 }),
@@ -80,16 +80,16 @@ let _ = (e) => {
                     className: m.featuredBlockButton,
                     color: c.Ttl.WHITE,
                     onClick: (e) => {
-                        (S('shop marketing take me there button', E),
+                        (x('shop marketing take me there button', E),
                             e.stopPropagation(),
                             u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                                collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
                                 sku_id: E,
                                 page_type: 'home',
-                                page_section: null == I ? void 0 : I.pageSection,
-                                page_category: null == I ? void 0 : I.pageCategory,
+                                page_section: null == L ? void 0 : L.pageSection,
+                                page_category: null == L ? void 0 : L.pageCategory,
                                 tile_type: 'FEATURED_BLOCK',
-                                tile_position: String(null == I ? void 0 : I.tilePosition),
+                                tile_position: String(null == L ? void 0 : L.tilePosition),
                                 cta_name: 'Take me there button'
                             }));
                     },

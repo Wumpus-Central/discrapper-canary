@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => Z }), n(388685));
+(n.r(t), n.d(t, { default: () => R }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -18,16 +18,16 @@ var r = n(255367),
     C = n(819640),
     v = n(594174),
     O = n(381585),
-    x = n(597688),
-    S = n(780475),
+    S = n(597688),
+    x = n(780475),
     E = n(223143),
     j = n(298228),
     y = n(309956),
-    P = n(98535),
-    k = n(963102),
-    T = n(508498),
-    L = n(849217),
-    I = n(215023),
+    T = n(98535),
+    P = n(963102),
+    k = n(508498),
+    I = n(849217),
+    L = n(215023),
     B = n(981631),
     N = n(420212),
     w = n(484920);
@@ -45,20 +45,20 @@ let A = (e) => {
             t
         );
     },
-    Z = function (e) {
-        let { isFullScreen: t = !0, tab: n = I.AW.HOME } = e;
+    R = function (e) {
+        let { isFullScreen: t = !0, tab: n = L.AW.HOME } = e;
         (0, b.z)(h.f);
         let i = (0, p.Z)((0, o.Z)()),
             c = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
             N = l.useRef(null),
-            { closeIntroToOrbsClaimedCoachmark: Z } = (0, _.Z)({ location: 'CollectiblesShop' });
+            { closeIntroToOrbsClaimedCoachmark: R } = (0, _.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
             () => () => {
-                Z();
+                R();
             },
-            [i, Z]
+            [i, R]
         );
-        let { onClose: R } = (0, T.Db)(),
+        let { onClose: Z } = (0, k.Db)(),
             { categories: H, refreshCategories: M } = (0, E.ZP)(
                 {
                     location: 'CollectiblesShop.web',
@@ -73,19 +73,19 @@ let A = (e) => {
         (0, m.P)();
         let D = (0, j.O)(H),
             [F, W] = l.useState(),
-            V = (0, s.e7)([x.Z], () => {
+            V = (0, s.e7)([S.Z], () => {
                 var e;
-                return null == (e = x.Z.getCategory(F)) ? void 0 : e.name;
+                return null == (e = S.Z.getCategory(F)) ? void 0 : e.name;
             }),
-            [U, z] = l.useState(),
-            G = l.useCallback((e, t) => {
-                (z(e), W(t));
+            [U, G] = l.useState(),
+            z = l.useCallback((e, t) => {
+                (G(e), W(t));
             }, []),
-            { selectedTab: q, transitionState: Y, transitionToTab: K } = (0, y.B)(N, n, t),
-            { handleScroll: X } = (0, f.z)(N, i, q);
-        ((0, S.q3)(i, q, V, Y, U),
-            (0, S.EB)(q, c),
-            (0, L.Z)(),
+            { selectedTab: Y, transitionState: q, transitionToTab: K } = (0, y.B)(N, n, t),
+            { handleScroll: X } = (0, f.z)(N, i, Y);
+        ((0, x.q3)(i, Y, V, q, U),
+            (0, x.EB)(Y, c),
+            (0, I.Z)(),
             l.useEffect(() => {
                 t || (0, d.Y)(B.Z5c.COLLECTIBLES_SHOP);
             }, [t]));
@@ -99,17 +99,17 @@ let A = (e) => {
                     null == (e = J.current) || e.focus();
                 }
             }, [t]));
-        let { analyticsLocations: ee } = (0, S.MV)(q);
+        let { analyticsLocations: ee } = (0, x.MV)(Y);
         return (0, r.jsx)(g.Gt, {
             value: ee,
             children: (0, r.jsx)(O.k0, {
                 newValue: {
                     sessionId: i,
                     pageCategory: V,
-                    pageSize: I.kN
+                    pageSize: L.kN
                 },
                 children: (0, r.jsx)(A, {
-                    onClose: R,
+                    onClose: Z,
                     shouldAddEventListener: t && !$,
                     children: (0, r.jsx)('div', {
                         className: w.shop,
@@ -121,27 +121,27 @@ let A = (e) => {
                             onScroll: X,
                             children: (0, r.jsxs)('div', {
                                 className: a()(w.shopViewWrapper, {
-                                    [w.visible]: Y === I.f7.VISIBLE,
-                                    [w.in]: Y === I.f7.IN,
-                                    [w.out]: Y === I.f7.OUT
+                                    [w.visible]: q === L.f7.VISIBLE,
+                                    [w.in]: q === L.f7.IN,
+                                    [w.out]: q === L.f7.OUT
                                 }),
                                 children: [
-                                    (0, r.jsx)(k.I, {
+                                    (0, r.jsx)(P.I, {
                                         isFullScreen: t,
                                         isLayer: $,
-                                        onClose: R,
+                                        onClose: Z,
                                         handleTransition: K,
-                                        selectedTab: q
+                                        selectedTab: Y
                                     }),
-                                    (0, r.jsx)(P.Z, {
-                                        tab: q,
+                                    (0, r.jsx)(T.Z, {
+                                        tab: Y,
                                         isFullScreen: t,
                                         scrollerRef: N,
                                         refreshCategories: M,
                                         transitionToTab: K,
-                                        transitionState: Y,
+                                        transitionState: q,
                                         sortedCategories: D,
-                                        updateAnalyticsState: G
+                                        updateAnalyticsState: z
                                     })
                                 ]
                             })

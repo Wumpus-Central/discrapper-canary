@@ -67,8 +67,8 @@ function N(e) {
     let { tag: t, size: r = 1, disabled: s, className: O, onClick: N, onRemove: p, selected: R, ariaLabel: S } = e,
         { name: C, emojiId: b, emojiName: v } = t,
         D = null != p,
-        [x, M] = i.useState(!1),
-        L = (0, u.e7)([A.ZP], () => (null != b ? A.ZP.getUsableCustomEmojiById(b) : null)),
+        [x, L] = i.useState(!1),
+        M = (0, u.e7)([A.ZP], () => (null != b ? A.ZP.getUsableCustomEmojiById(b) : null)),
         U = D || null != N,
         j = (!D || !x) && (null != b || null != v),
         P = 0 === r,
@@ -90,7 +90,7 @@ function N(e) {
                           className: a()(g.emoji, { [g.small]: P }),
                           emojiId: b,
                           emojiName: v,
-                          animated: !!(null == L ? void 0 : L.animated),
+                          animated: !!(null == M ? void 0 : M.animated),
                           size: 'reaction'
                       })
                     : null,
@@ -129,8 +129,8 @@ function N(e) {
                 (null == N || N(e), null == p || p(t), w || null == y.current || y.current.blur());
             },
             onContextMenu: (e) => G(e),
-            onMouseEnter: () => D && M(!0),
-            onMouseLeave: () => D && M(!1)
+            onMouseEnter: () => D && L(!0),
+            onMouseLeave: () => D && L(!1)
         },
         Z = (0, o.JA)('forum-tag-'.concat(t.id));
     return U

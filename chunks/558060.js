@@ -75,15 +75,15 @@ function b(e) {
         });
     let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
         O = !n && !(0, o.x6)(t),
-        x = (0, o.x6)(t) && n ? h(f({}, C), { amount: l.original }) : C,
-        S = _ && n,
+        S = (0, o.x6)(t) && n ? h(f({}, C), { amount: l.original }) : C,
+        x = _ && n,
         E = _ && !n;
     return (0, r.jsxs)('div', {
         className: i()(p.priceTagsContainer, b),
         children: [
-            !S &&
+            !x &&
                 (0, r.jsx)(s.F, {
-                    price: x,
+                    price: S,
                     discount: n ? o.f_ : l,
                     className: i()(p.price, {
                         [p.striked]: n,

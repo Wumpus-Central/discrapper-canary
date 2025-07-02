@@ -1,8 +1,8 @@
 n.d(t, {
     ZP: () => j,
     _W: () => U,
-    ge: () => M,
-    je: () => L
+    ge: () => L,
+    je: () => M
 });
 var r = n(255367),
     l = n(73800),
@@ -82,7 +82,7 @@ function D(e) {
     (e.preventDefault(), e.stopPropagation());
 }
 let x = O.ZP.getEnableHardwareAcceleration() ? u.Xo$ : u.qEK;
-function M(e) {
+function L(e) {
     let { channel: t, size: n = u.EFr.SIZE_20 } = e;
     return (0, r.jsx)(x, {
         src: (0, c.x)(t),
@@ -90,7 +90,7 @@ function M(e) {
         size: n
     });
 }
-function L(e) {
+function M(e) {
     let { channel: t, size: n = u.EFr.SIZE_20 } = e,
         l = (0, o.e7)([h.default], () => h.default.getUser(null == t ? void 0 : t.recipients[0])),
         i = (0, o.e7)([I.Z], () => !(null == l || null == t || t.isMultiUserDM()) && null != I.Z.getTypingUsers(null == t ? void 0 : t.id)[null == l ? void 0 : l.id]),
@@ -135,11 +135,11 @@ let U = (e) => {
                 switch (e.type) {
                     case N.d4z.DM:
                         return function () {
-                            return (0, r.jsx)(L, { channel: e });
+                            return (0, r.jsx)(M, { channel: e });
                         };
                     case N.d4z.GROUP_DM:
                         return function () {
-                            return (0, r.jsx)(M, { channel: e });
+                            return (0, r.jsx)(L, { channel: e });
                         };
                     default:
                         return (0, E.KS)(e, t, n);
@@ -187,8 +187,8 @@ let U = (e) => {
                           onClick: h,
                           onMouseDown: O,
                           onMouseUp: x,
-                          onContextMenu: M,
-                          connectDragPreview: L,
+                          onContextMenu: L,
+                          connectDragPreview: M,
                           className: j,
                           iconClassName: P,
                           subtitle: y,
@@ -341,10 +341,10 @@ let U = (e) => {
                           ),
                           onMouseUp: (e) => (null == x ? void 0 : x(e, i)),
                           onMouseDown: (e) => (null == O ? void 0 : O(e, i)),
-                          onContextMenu: (e) => (null == M ? void 0 : M(e, i)),
+                          onContextMenu: (e) => (null == L ? void 0 : L(e, i)),
                           onMouseEnter: k,
                           onMouseLeave: F,
-                          children: [c || !f ? null : (0, r.jsx)('div', { className: s()(S.unread, X ? S.unreadImportant : void 0) }), null != (n = null == L ? void 0 : L(ea)) ? n : ea]
+                          children: [c || !f ? null : (0, r.jsx)('div', { className: s()(S.unread, X ? S.unreadImportant : void 0) }), null != (n = null == M ? void 0 : M(ea)) ? n : ea]
                       })
                   });
               })

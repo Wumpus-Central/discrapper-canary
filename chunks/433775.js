@@ -9,7 +9,7 @@ var l = n(73800),
 let u = { can_broadcast: !1 };
 function d(e, t, n) {
     let [d, x] = l.useState(u),
-        [m, g] = l.useState(!1),
+        [g, m] = l.useState(!1),
         h = l.useRef(!1),
         v = null == e ? void 0 : e.id,
         f = null == e ? void 0 : e.hasFeature(c.oNc.HAS_DIRECTORY_ENTRY);
@@ -30,14 +30,14 @@ function d(e, t, n) {
     }, [v, f, t]),
         l.useEffect(() => {
             var e;
-            if (!d.can_broadcast) return void g(!1);
-            g(null == (e = d.has_broadcast) || e);
+            if (!d.can_broadcast) return void m(!1);
+            m(null == (e = d.has_broadcast) || e);
         }, [d]));
     let p = (0, r.e7)([a.Z], () => (0, i.wg)(n, [a.Z]));
     return {
         broadcastInfo: d,
-        broadcastToDirectoryChannels: p && m,
-        setBroadcastToDirectoryChannels: g,
+        broadcastToDirectoryChannels: p && g,
+        setBroadcastToDirectoryChannels: m,
         canEveryoneRoleViewEvent: p
     };
 }

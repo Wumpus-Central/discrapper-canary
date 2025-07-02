@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     l = n(73800),
-    i = n(695469),
+    i = n(405499),
     s = n(442837),
     a = n(186325),
     o = n(481060),
@@ -39,7 +39,7 @@ function h(e) {
             },
             [R, h, n]
         ),
-        M = l.useMemo(
+        L = l.useMemo(
             () => ({
                 [g.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
@@ -49,8 +49,8 @@ function h(e) {
             }),
             [O, S, x]
         );
-    l.useEffect(() => (c.Z.enable(), c.Z.enableTemp(M), () => c.Z.disableTemp()), [M]);
-    let L = (0, o.Yzy)(
+    l.useEffect(() => (c.Z.enable(), c.Z.enableTemp(L), () => c.Z.disableTemp()), [L]);
+    let M = (0, o.Yzy)(
         S,
         {
             value: 0,
@@ -67,7 +67,7 @@ function h(e) {
             flex: 1,
             overflow: 'hidden'
         },
-        children: L((e, t, l) => {
+        children: M((e, t, l) => {
             var s, a, o;
             let { key: u } = l;
             return (0, r.jsx)(
