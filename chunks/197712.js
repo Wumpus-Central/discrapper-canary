@@ -1,9 +1,9 @@
 (n.d(t, {
-    $p: () => s,
+    $p: () => i,
     AK: () => d,
-    Es: () => c,
-    U$: () => i,
-    kH: () => u
+    Es: () => u,
+    U$: () => s,
+    kH: () => c
 }),
     n(190126),
     n(368063),
@@ -28,8 +28,8 @@
 var r = n(392711),
     l = n(36793),
     a = n(486324);
-async function s(e) {
-    let { file: t, image: r, cropDimensions: s, cropOriginCoordinates: i, maxDimensions: o, imageRotation: c = 0, resizeWidth: u = null, resizeHeight: d = null } = e,
+async function i(e) {
+    let { file: t, image: r, cropDimensions: i, cropOriginCoordinates: s, maxDimensions: o, imageRotation: u = 0, resizeWidth: c = null, resizeHeight: d = null } = e,
         {
             sourceX: h,
             sourceY: p,
@@ -37,10 +37,10 @@ async function s(e) {
             sourceHeight: m
         } = (0, l.GS)({
             image: r,
-            cropDimensions: s,
-            cropOriginCoordinates: i,
+            cropDimensions: i,
+            cropOriginCoordinates: s,
             maxDimensions: o,
-            imageRotation: c
+            imageRotation: u
         }),
         f = await t.arrayBuffer(),
         v = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
@@ -73,8 +73,8 @@ async function s(e) {
             y: 0 | p,
             width: 0 | g,
             height: 0 | m,
-            imageRotation: 0 | c,
-            resizeWidth: u,
+            imageRotation: 0 | u,
+            resizeWidth: c,
             resizeHeight: d
         }),
         {
@@ -83,7 +83,7 @@ async function s(e) {
         }
     );
 }
-function i(e, t, n) {
+function s(e, t, n) {
     return {
         x: (0, r.clamp)(e, n.left, n.right),
         y: (0, r.clamp)(t, n.bottom, n.top)
@@ -91,19 +91,19 @@ function i(e, t, n) {
 }
 function o(e, t, n, r) {
     let l = n,
-        s = r,
-        i = a.US;
-    return (n > i && ((l = i), (s = (i / n) * r)), n / r < e)
+        i = r,
+        s = a.US;
+    return (n > s && ((l = s), (i = (s / n) * r)), n / r < e)
         ? {
               width: l,
-              height: s
+              height: i
           }
         : {
-              width: (t / s) * l,
+              width: (t / i) * l,
               height: t
           };
 }
-function c(e, t, n) {
+function u(e, t, n) {
     switch (e) {
         case a.pC.AVATAR:
         case a.pC.AVATAR_DECORATION:
@@ -119,16 +119,16 @@ function c(e, t, n) {
             let l = a.t2;
             return o(a.Ij, l, t, n);
         case a.pC.VIDEO_BACKGROUND:
-            let s = a.kP;
-            return o(a.Ff, s, t, n);
+            let i = a.kP;
+            return o(a.Ff, i, t, n);
         case a.pC.SCHEDULED_EVENT_IMAGE:
-            let i = a.tv;
-            return o(a.ut, i, t, n);
+            let s = a.tv;
+            return o(a.ut, s, t, n);
         case a.pC.HOME_HEADER:
             return o(a.sX, a.SW, t, n);
     }
 }
-function u(e, t, n) {
+function c(e, t, n) {
     let r = {
             top: 0,
             bottom: 0,
@@ -145,16 +145,16 @@ function d(e, t, n, r) {
         case a.pC.AVATAR:
         case a.pC.AVATAR_DECORATION:
         case a.pC.GUILD_ICON:
-            let s = Math.min(t, n);
-            return {
-                width: s,
-                height: s
-            };
-        case a.pC.BANNER:
-            let i = Math.min(t, l);
+            let i = Math.min(t, n);
             return {
                 width: i,
-                height: i * (1 / a.MY)
+                height: i
+            };
+        case a.pC.BANNER:
+            let s = Math.min(t, l);
+            return {
+                width: s,
+                height: s * (1 / a.MY)
             };
         case a.pC.GUILD_BANNER:
             let o = Math.min(t, l);
@@ -163,16 +163,16 @@ function d(e, t, n, r) {
                 height: Math.min((9 / 16) * o, r)
             };
         case a.pC.VIDEO_BACKGROUND:
-            let c = Math.min(t, l);
-            return {
-                width: c,
-                height: (9 / 16) * c
-            };
-        case a.pC.SCHEDULED_EVENT_IMAGE:
             let u = Math.min(t, l);
             return {
                 width: u,
-                height: 0.4 * u
+                height: (9 / 16) * u
+            };
+        case a.pC.SCHEDULED_EVENT_IMAGE:
+            let c = Math.min(t, l);
+            return {
+                width: c,
+                height: 0.4 * c
             };
         case a.pC.HOME_HEADER:
             let d = Math.min(t, l);

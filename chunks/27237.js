@@ -8,8 +8,8 @@ var r = t(255367),
     c = t(808189),
     d = t(477415),
     u = t(690786),
-    p = t(838968),
-    m = t(262212),
+    m = t(838968),
+    p = t(262212),
     _ = t(279604),
     f = t(981631),
     x = t(93841),
@@ -92,7 +92,7 @@ function C(e) {
     return (
         (0, _.KT)(C),
         (n = 0 === o ? 'start' : null == l ? 'end' : 'middle'),
-        (0, r.jsxs)(p.Z, {
+        (0, r.jsxs)(m.Z, {
             guildId: t,
             powerup: a,
             className: v.card,
@@ -111,7 +111,7 @@ function C(e) {
                         }),
                         (0, r.jsx)(j, { index: o }),
                         !c &&
-                            (0, r.jsx)(p.u, {
+                            (0, r.jsx)(m.u, {
                                 className: v.footer,
                                 guildId: t,
                                 powerup: a
@@ -121,7 +121,7 @@ function C(e) {
                 !c &&
                     (0, r.jsx)('div', {
                         className: g.buttonContainer,
-                        children: (0, r.jsx)(m.ZP, {
+                        children: (0, r.jsx)(p.ZP, {
                             guildId: t,
                             powerup: a,
                             onError: E

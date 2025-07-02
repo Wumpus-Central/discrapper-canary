@@ -1,32 +1,32 @@
 n.d(t, {
-    H: () => c,
+    H: () => u,
     z: () => d
 });
 var r = n(255367),
     l = n(481060),
     a = n(598117),
-    s = n(981631),
-    i = n(185923),
+    i = n(981631),
+    s = n(185923),
     o = n(388032);
-let c = (e) => {
+let u = (e) => {
         let { error: t } = e;
         return (0, r.jsx)(l.Text, {
             variant: 'text-sm/normal',
             color: 'text-danger',
-            children: u(t)
+            children: c(t)
         });
     },
-    u = (e) => {
+    c = (e) => {
         switch (e) {
-            case s.evJ.TOO_MANY_EMOJI:
+            case i.evJ.TOO_MANY_EMOJI:
                 return o.intl.string(o.t['jP/Rqq']);
-            case s.evJ.TOO_MANY_ANIMATED_EMOJI:
+            case i.evJ.TOO_MANY_ANIMATED_EMOJI:
                 return o.intl.string(o.t['6v5dPz']);
             case a.ze.TOO_BIG:
-            case s.evJ.INVALID_FILE_ASSET_SIZE:
-            case s.evJ.INVALID_FORM_BODY:
-                return o.intl.formatToPlainString(o.t.kIO9j4, { maxSize: i.xG });
-            case s.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
+            case i.evJ.INVALID_FILE_ASSET_SIZE:
+            case i.evJ.INVALID_FORM_BODY:
+                return o.intl.formatToPlainString(o.t.kIO9j4, { maxSize: s.xG });
+            case i.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
                 return o.intl.string(o.t.sp16MT);
             case a.ze.MISSING_IMAGE_DATA:
                 return o.intl.string(o.t['41/Kbm']);

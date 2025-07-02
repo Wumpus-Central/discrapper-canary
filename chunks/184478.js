@@ -9,8 +9,8 @@ var i = t(793030),
     c = t(430824),
     d = t(63063),
     u = t(317169),
-    p = t(639660),
-    m = t(767218),
+    m = t(639660),
+    p = t(767218),
     _ = t(981631),
     f = t(93841),
     x = t(388032),
@@ -28,6 +28,7 @@ function v(e) {
                     children: [
                         (0, r.jsx)(i.xv, {
                             variant: 'eyebrow',
+                            color: 'text-secondary',
                             children: x.intl.string(f.default.hjvcLC)
                         }),
                         (0, r.jsx)(i.xv, {
@@ -40,17 +41,17 @@ function v(e) {
                 (0, r.jsxs)('div', {
                     className: b.contentContainer,
                     children: [
-                        (0, r.jsx)(m.Z, {
+                        (0, r.jsx)(p.Z, {
                             count: v,
-                            type: m.b.AVAILABLE
+                            type: p.b.AVAILABLE
                         }),
-                        (0, r.jsx)(m.Z, {
+                        (0, r.jsx)(p.Z, {
                             count: g,
-                            type: m.b.SPENT
+                            type: p.b.SPENT
                         }),
-                        (0, r.jsx)(m.Z, {
+                        (0, r.jsx)(p.Z, {
                             count: h,
-                            type: m.b.TOTAL
+                            type: p.b.TOTAL
                         })
                     ]
                 }),
@@ -70,7 +71,7 @@ function v(e) {
                         color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                     })
                 }),
-                (0, r.jsx)(p.Z, { guildId: n })
+                (0, r.jsx)(m.Z, { guildId: n })
             ]
         });
 }

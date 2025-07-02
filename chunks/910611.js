@@ -1,7 +1,7 @@
 (n.d(t, {
-    TS: () => U,
-    ud: () => k,
-    v0: () => L
+    TS: () => F,
+    ud: () => L,
+    v0: () => U
 }),
     n(388685));
 var r = n(255367),
@@ -36,6 +36,49 @@ var r = n(255367),
     A = n(388032),
     w = n(100658);
 function R(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r));
+            }));
+    }
+    return e;
+}
+function k(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function M(e) {
     var t;
     let { channel: n, children: i } = e,
         l = (0, u.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
@@ -88,75 +131,34 @@ function R(e) {
             text: p,
             'aria-label': h,
             forceOpen: o === s.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP || void 0,
-            children: (e) => {
-                var t, n;
-                return (0, r.jsxs)(
+            children: (e) =>
+                (0, r.jsxs)(
                     'div',
-                    ((t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    ((r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0
-                                              })
-                                            : (e[t] = r));
-                                }));
-                        }
-                        return e;
-                    })({ className: w.linkedLobbyTooltip }, e)),
-                    (n = n =
-                        {
-                            children: [
-                                i,
-                                (0, r.jsxs)(c.Text, {
-                                    className: w.linkedLobby,
-                                    variant: 'text-sm/medium',
-                                    color: 'header-primary',
-                                    children: [
-                                        '\u2022',
-                                        (0, r.jsx)('img', {
-                                            alt: '',
-                                            src: d,
-                                            className: w.linkedLobbyApplicationIcon
-                                        }),
-                                        l.name
-                                    ]
-                                })
-                            ]
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t)
-                );
-            }
+                    k(R({ className: w.linkedLobbyTooltip }, e), {
+                        children: [
+                            i,
+                            (0, r.jsxs)(c.Text, {
+                                className: w.linkedLobby,
+                                variant: 'text-sm/medium',
+                                color: 'header-primary',
+                                children: [
+                                    '\u2022',
+                                    (0, r.jsx)('img', {
+                                        alt: '',
+                                        src: d,
+                                        className: w.linkedLobbyApplicationIcon
+                                    }),
+                                    l.name
+                                ]
+                            })
+                        ]
+                    })
+                )
         },
         o
     );
 }
-function k(e) {
+function L(e) {
     let { channel: t, channelName: n, parentChannel: l, guild: a, inSidebar: s = !1, handleClick: u, handleContextMenu: d, handleParentClick: f, handleParentContextMenu: m, renderFollowButton: g } = e,
         b = (0, h.KS)(t, a),
         { prefix: _, level: C } = (function (e, t) {
@@ -240,10 +242,10 @@ function k(e) {
         case N.d4z.GUILD_FORUM:
         case N.d4z.GUILD_MEDIA:
             return null != t.linkedLobby
-                ? (0, r.jsxs)(R, {
+                ? (0, r.jsxs)(M, {
                       channel: t,
                       children: [
-                          D(b, t.type === N.d4z.GUILD_ANNOUNCEMENT ? A.intl.string(A.t.l1dkSE) : A.intl.string(A.t.Pnajj4)),
+                          B(b, t.type === N.d4z.GUILD_ANNOUNCEMENT ? A.intl.string(A.t.l1dkSE) : A.intl.string(A.t.Pnajj4)),
                           (0, r.jsx)(P.Z.Title, {
                               level: C,
                               onContextMenu: d,
@@ -254,7 +256,7 @@ function k(e) {
                   })
                 : (0, r.jsxs)(i.Fragment, {
                       children: [
-                          D(b, t.type === N.d4z.GUILD_ANNOUNCEMENT ? A.intl.string(A.t.l1dkSE) : A.intl.string(A.t.Pnajj4)),
+                          B(b, t.type === N.d4z.GUILD_ANNOUNCEMENT ? A.intl.string(A.t.l1dkSE) : A.intl.string(A.t.Pnajj4)),
                           (0, r.jsx)(P.Z.Title, {
                               level: C,
                               onContextMenu: d,
@@ -267,7 +269,7 @@ function k(e) {
         case N.d4z.GUILD_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    D(b, A.intl.string(A.t.BVZqJi)),
+                    B(b, A.intl.string(A.t.BVZqJi)),
                     (0, r.jsx)(P.Z.Title, {
                         level: C,
                         onContextMenu: d,
@@ -279,7 +281,7 @@ function k(e) {
         case N.d4z.GUILD_STAGE_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    D(b, A.intl.string(A.t.EErMzM)),
+                    B(b, A.intl.string(A.t.EErMzM)),
                     (0, r.jsx)(P.Z.Title, {
                         level: C,
                         onContextMenu: d,
@@ -296,7 +298,7 @@ function k(e) {
                 let e = (0, h.KS)(l, a);
                 j = (0, r.jsxs)(i.Fragment, {
                     children: [
-                        D(e, A.intl.string(A.t.Pnajj4)),
+                        B(e, A.intl.string(A.t.Pnajj4)),
                         (0, r.jsx)(P.Z.Title, {
                             level: C,
                             onContextMenu: m,
@@ -312,7 +314,7 @@ function k(e) {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     j,
-                    D(O ? null : b, A.intl.string(A.t['7Xm5QE'])),
+                    B(O ? null : b, A.intl.string(A.t['7Xm5QE'])),
                     (0, r.jsx)(P.Z.Title, {
                         level: C,
                         onContextMenu: d,
@@ -356,7 +358,7 @@ function k(e) {
             return null;
     }
 }
-let M = (e) => {
+let D = (e) => {
     let { channel: t } = e,
         n = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
         l = (0, a.e7)([x.default], () => x.default.getUser(t.getRecipientId())),
@@ -379,11 +381,11 @@ let M = (e) => {
               : null
         : null;
 };
-function L(e, t) {
+function U(e, t) {
     switch (e.type) {
         case N.d4z.DM:
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(M, { channel: e }), (0, r.jsx)(E.Z, { channel: e }, e.id)]
+                children: [(0, r.jsx)(D, { channel: e }), (0, r.jsx)(E.Z, { channel: e }, e.id)]
             });
         case N.d4z.GUILD_ANNOUNCEMENT:
         case N.d4z.GUILD_TEXT:
@@ -404,7 +406,7 @@ function L(e, t) {
             return null;
     }
 }
-function D(e, t) {
+function B(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null !== e &&
@@ -417,26 +419,39 @@ function D(e, t) {
         ]
     });
 }
-function U(e) {
-    let { guild: t, channel: n, caretPosition: i = 'left' } = e,
-        l = (0, a.e7)([C.Z], () => C.Z.getGuildId()),
-        o = (0, g.D)();
-    return (l === N.I_8 || o) && null != t
-        ? (0, r.jsxs)(c.P3F, {
-              onClick: () => {
-                  (0, b.XU)(t.id, n.id);
-              },
-              className: w.guildBreadcrumbContainer,
-              children: [
-                  'left' === i && (0, r.jsx)(P.Z.Caret, { direction: 'left' }),
-                  (0, r.jsx)(m.Z, {
-                      guild: t,
-                      size: m.Z.Sizes.SMALLER,
-                      className: w.guildBreadcrumbIcon,
-                      active: !0
-                  }),
-                  'right' === i && (0, r.jsx)(P.Z.Caret, { direction: 'right' })
-              ]
-          })
-        : null;
+function F(e) {
+    let { guild: t, channel: n, caretPosition: l = 'left' } = e,
+        o = (0, a.e7)([C.Z], () => C.Z.getGuildId()),
+        s = (0, g.D)(),
+        u = i.useRef(null);
+    if ((o !== N.I_8 && !s) || null == t) return null;
+    let d = () => {
+        (0, b.XU)(t.id, n.id);
+    };
+    return (0, r.jsx)(c.ua7, {
+        text: t.name,
+        targetElementRef: u,
+        position: 'bottom',
+        children: (e) =>
+            (0, r.jsxs)(
+                c.P3F,
+                k(R({}, e), {
+                    onClick: d,
+                    className: w.guildBreadcrumbContainer,
+                    children: [
+                        'left' === l && (0, r.jsx)(P.Z.Caret, { direction: 'left' }),
+                        (0, r.jsx)('div', {
+                            ref: u,
+                            children: (0, r.jsx)(m.Z, {
+                                guild: t,
+                                size: m.Z.Sizes.SMALLER,
+                                className: w.guildBreadcrumbIcon,
+                                active: !0
+                            })
+                        }),
+                        'right' === l && (0, r.jsx)(P.Z.Caret, { direction: 'right' })
+                    ]
+                })
+            )
+    });
 }

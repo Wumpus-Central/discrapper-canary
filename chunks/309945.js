@@ -8,8 +8,8 @@ var r = t(255367),
     c = t(899667),
     d = t(905128),
     u = t(93841),
-    p = t(388032),
-    m = t(45355);
+    m = t(388032),
+    p = t(45355);
 function _(e) {
     let { guildId: n, powerups: t } = e,
         _ = (0, s.e7)([d.Z], () => {
@@ -26,20 +26,20 @@ function _(e) {
     return x <= 0
         ? null
         : (0, r.jsxs)('div', {
-              className: m.container,
+              className: p.container,
               children: [
                   (0, r.jsx)(o.P4T, {
                       color: l.Z.colors.TEXT_FEEDBACK_WARNING,
-                      className: m.icon
+                      className: p.icon
                   }),
                   (0, r.jsx)(a.xv, {
                       variant: 'text-md/semibold',
                       color: 'text-feedback-warning',
-                      children: p.intl.string(u.default.n5hQhY)
+                      children: m.intl.string(u.default.n5hQhY)
                   }),
                   (0, r.jsx)(a.xv, {
                       variant: 'text-sm/medium',
-                      children: p.intl.formatToPlainString(u.default.iAaAiI, {
+                      children: m.intl.formatToPlainString(u.default.iAaAiI, {
                           boostCount: x,
                           perksString: t.map((e) => e.title).join(', ')
                       })

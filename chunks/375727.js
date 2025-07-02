@@ -2,11 +2,11 @@
 var r = n(255367),
     l = n(73800),
     a = n(120356),
-    s = n.n(a),
-    i = n(442837),
+    i = n.n(a),
+    s = n(442837),
     o = n(481060),
-    c = n(80932),
-    u = n(710845),
+    u = n(80932),
+    c = n(710845),
     d = n(430824),
     h = n(496675),
     p = n(914010),
@@ -19,11 +19,11 @@ var r = n(255367),
     _ = n(981631),
     O = n(388032),
     j = n(139797);
-let E = new u.Z('EmojiStudio'),
+let E = new c.Z('EmojiStudio'),
     N = (e) => {
         let { userImage: t, guildId: n } = e,
-            [a, u] = l.useState(t),
-            N = (0, i.e7)([d.Z, p.Z, h.Z], () => {
+            [a, c] = l.useState(t),
+            N = (0, s.e7)([d.Z, p.Z, h.Z], () => {
                 let e = p.Z.getGuildId(),
                     t = d.Z.getGuild(e);
                 return h.Z.can(_.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
@@ -32,11 +32,12 @@ let E = new u.Z('EmojiStudio'),
             [y, S] = l.useState(null),
             [w, A] = l.useState(''),
             [k, M] = l.useState(null),
-            T = l.useCallback(async () => {
+            [T, R] = l.useState(!1),
+            P = l.useCallback(async () => {
                 if ((S(null), null == I)) return void S(m.ze.MISSING_GUILD);
                 if (null == a || (null == a ? void 0 : a.file) == null || null == k) return void S(m.ze.MISSING_IMAGE_DATA);
                 try {
-                    await (0, c.rS)({
+                    await (0, u.rS)({
                         image: k,
                         guildId: I,
                         name: w,
@@ -48,33 +49,33 @@ let E = new u.Z('EmojiStudio'),
                 }
                 (0, o.Mr3)(m.Hj);
             }, [I, a, k, w]),
-            R = l.useCallback((e) => {
+            L = l.useCallback((e) => {
                 A(e.length < 2 ? e : g.ZP.sanitizeEmojiName(e));
             }, []),
-            P = l.useCallback(() => {
-                (S(null), u(null), M(null), A(''));
+            z = l.useCallback(() => {
+                (S(null), c(null), M(null), A(''));
             }, []),
-            L = l.useRef(0),
-            z = l.useCallback((e) => {
+            Z = l.useRef(0),
+            G = l.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: n = 0, error: r } = e,
                     l = null;
-                (null != t && g.ZP.isDataTooBig(t) && (l = m.ze.TOO_BIG), S(null != r ? r : l), n < L.current || (null != t && (M(t), (L.current = n))));
+                (null != t && g.ZP.isDataTooBig(t) && (l = m.ze.TOO_BIG), S(null != r ? r : l), n < Z.current || (null != t && (M(t), (Z.current = n))));
             }, []),
-            Z = l.useCallback((e) => {
+            U = l.useCallback((e) => {
                 var t;
-                (u(e),
+                (c(e),
                     A((t) => {
                         var n, r;
                         if ('' !== t) return t;
                         let l = null != (r = null == e || null == (n = e.file) ? void 0 : n.name) ? r : '',
                             a = l.lastIndexOf('.'),
-                            s = -1 === a ? l : l.substring(0, a);
-                        return g.ZP.sanitizeEmojiName(s);
+                            i = -1 === a ? l : l.substring(0, a);
+                        return g.ZP.sanitizeEmojiName(i);
                     }),
                     M(null != (t = null == e ? void 0 : e.data) ? t : null));
             }, []);
         return (0, r.jsxs)('main', {
-            className: s()(j.main, { [j.checkerboard]: null != a }),
+            className: i()(j.main, { [j.checkerboard]: null != a }),
             children: [
                 (0, r.jsx)(o.X6q, {
                     variant: 'heading-lg/medium',
@@ -83,52 +84,48 @@ let E = new u.Z('EmojiStudio'),
                     children: O.intl.string(O.t.iMJO39)
                 }),
                 null == a
-                    ? (0, r.jsx)(f.u, { setImage: Z })
+                    ? (0, r.jsx)(f.u, { setImage: U })
                     : (0, r.jsx)('div', {
                           className: j.editor,
                           children: (0, r.jsx)(b.v, {
                               file: a.file,
                               imageUri: a.data,
-                              onUpdate: z
+                              onUpdate: G
                           })
                       }),
                 (0, r.jsxs)('aside', {
                     className: j.aside,
                     children: [
-                        (0, r.jsxs)('p', {
-                            children: [
-                                (0, r.jsxs)('label', {
-                                    htmlFor: 'emoji_name',
-                                    children: [
-                                        O.intl.string(O.t.m0YV7O),
-                                        ' ',
-                                        (0, r.jsx)('span', {
-                                            title: O.intl.string(O.t.EkokLy),
-                                            children: '*'
-                                        })
-                                    ]
-                                }),
-                                (0, r.jsx)(o.oil, {
-                                    minLength: 2,
-                                    value: w,
-                                    onChange: R,
-                                    placeholder: O.intl.string(O.t.U2JFHR),
-                                    name: 'emoji_name'
-                                })
-                            ]
+                        (0, r.jsx)(o.xJW, {
+                            title: O.intl.string(O.t.m0YV7O),
+                            required: !0,
+                            tag: 'label',
+                            children: (0, r.jsx)(o.oil, {
+                                error: T ? '' : void 0,
+                                minLength: 2,
+                                value: w,
+                                onChange: L,
+                                placeholder: O.intl.string(O.t.U2JFHR),
+                                name: 'emoji_name',
+                                onBlur: () => R(!1),
+                                onFocus: () => R(!0),
+                                required: !0
+                            })
                         }),
-                        (0, r.jsxs)('p', {
-                            children: [
-                                (0, r.jsx)('label', { children: O.intl.string(O.t['9uKafX']) }),
-                                (0, r.jsx)(x.q, {
-                                    onChange: C,
-                                    selected: I,
-                                    onError: () => S(m.ze.NO_PERMISSIONS)
-                                })
-                            ]
+                        (0, r.jsx)(o.xJW, {
+                            title: O.intl.string(O.t['9uKafX']),
+                            required: !0,
+                            tag: 'label',
+                            titleId: 'guild-selector-label',
+                            children: (0, r.jsx)(x.q, {
+                                onChange: C,
+                                selected: I,
+                                onError: () => S(m.ze.NO_PERMISSIONS),
+                                labelledBy: 'guild-selector-label'
+                            })
                         }),
                         null != a &&
-                            (0, r.jsxs)('p', {
+                            (0, r.jsxs)('div', {
                                 className: j.preview,
                                 children: [
                                     (0, r.jsx)('label', { children: O.intl.string(O.t.JmuIb2) }),
@@ -165,7 +162,7 @@ let E = new u.Z('EmojiStudio'),
                                 null != y && (0, r.jsx)(v.H, { error: y }),
                                 (0, r.jsx)(o.zxk, {
                                     className: j.submit,
-                                    onClick: T,
+                                    onClick: P,
                                     fullWidth: !0,
                                     disabled: null == a || null == I || w.length < 2,
                                     children: O.intl.string(O.t.DU0dy8)
@@ -175,7 +172,7 @@ let E = new u.Z('EmojiStudio'),
                     ]
                 }),
                 null != a
-                    ? (0, r.jsx)(D, { back: P })
+                    ? (0, r.jsx)(D, { back: z })
                     : (0, r.jsx)(o.olH, {
                           onClick: () => (0, o.Mr3)(m.Hj),
                           className: j.closeButton

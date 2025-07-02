@@ -1,6 +1,6 @@
 (n.d(t, {
-    g: () => V,
-    i: () => B
+    g: () => H,
+    i: () => V
 }),
     n(388685),
     n(539854));
@@ -24,44 +24,45 @@ var r = n(255367),
     E = n(502087),
     y = n(367074),
     I = n(695349),
-    v = n(963590),
-    C = n(767870),
-    S = n(104494),
-    N = n(639119),
-    T = n(655525),
-    P = n(93237),
-    j = n(52188),
-    A = n(924540),
-    Z = n(474486),
-    x = n(497334),
-    L = n(119850),
-    w = n(938736),
-    R = n(227140),
-    D = n(474936),
-    k = n(981631),
-    M = n(921944),
-    U = n(388032),
-    G = n(419720);
-let B = (e) => {
+    v = n(532245),
+    C = n(963590),
+    S = n(767870),
+    N = n(104494),
+    T = n(639119),
+    P = n(655525),
+    j = n(93237),
+    A = n(52188),
+    Z = n(924540),
+    x = n(474486),
+    L = n(497334),
+    w = n(119850),
+    R = n(938736),
+    D = n(227140),
+    k = n(474936),
+    M = n(981631),
+    U = n(921944),
+    G = n(388032),
+    B = n(419720);
+let V = (e) => {
         let { selected: t } = e,
             n = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
             r = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
-            i = (0, N.N)(),
-            l = (0, S.Ng)(),
+            i = (0, T.N)(),
+            l = (0, N.Ng)(),
             o = (0, y.Vi)(),
-            s = (0, L.V)(),
+            s = (0, w.V)(),
             c = (0, O.Qo)(n, r),
             u = (0, a.e7)([E.Z], () => E.Z.getCreatedAtOverride()),
             d = t || null != i || null != l || o || null != s || c,
             p = null != u ? u : null == n ? void 0 : n.createdAt;
         return d || (null != n && null != p && Date.now() - p.getTime() > 1209600000);
     },
-    V = (e) => {
+    H = (e) => {
         let t, n, E;
-        var V,
-            H,
-            { selected: F, route: z, locationState: W } = e,
-            Y = (function (e, t) {
+        var H,
+            F,
+            { selected: z, route: W, locationState: Y } = e,
+            K = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -80,96 +81,100 @@ let B = (e) => {
                 }
                 return i;
             })(e, ['selected', 'route', 'locationState']);
-        let K = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-            q = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
-            X = (0, O.Qo)(K, q),
-            Q = (0, l.JA)('nitro'),
-            J = (0, N.N)(),
-            $ = (0, S.Ng)(),
-            ee = (0, I.W)(),
-            et = (0, a.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == J,
-            en = (0, y.Vi)(),
-            er = (0, P.HI)({ trialOffer: J }),
-            ei = (0, L.V)(),
-            el = (0, w.Kn)('NitroTabButton'),
-            { fractionalState: ea, startsAt: eo, endsAt: es } = (0, d.Z)({ forceFetch: !0 }),
-            [ec, eu] = (0, f.bf)(ea !== D.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
-                showAfterTimestamp: eo.valueOf(),
+        let q = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+            X = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
+            Q = (0, O.Qo)(q, X),
+            { enabled: J, variant: $ } = v.p1.useExperiment({ location: 'NitroTabButton' }),
+            { enabled: ee } = v.pd.useExperiment({ location: 'NitroTabButton' }),
+            et = (0, l.JA)('nitro'),
+            en = (0, T.N)(),
+            er = (0, N.Ng)(),
+            ei = (0, I.W)(),
+            el = (0, a.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == en,
+            ea = (0, y.Vi)(),
+            eo = (0, j.HI)({ trialOffer: en }),
+            es = (0, w.V)(),
+            ec = (0, R.Kn)('NitroTabButton'),
+            { fractionalState: eu, startsAt: ed, endsAt: ep } = (0, d.Z)({ forceFetch: !0 }),
+            [eh, ef] = (0, f.bf)(eu !== k.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+                showAfterTimestamp: ed.valueOf(),
                 cooldownDurationMs: 0
             }),
-            ed = (0, v.Z)({ location: 'NitroTabButton' }),
-            ep = (null == J ? void 0 : J.trial_id) === D.a7,
-            eh = [];
-        (0, p.Kl)() && (en && eh.push(o.z.BOGO_2025_NITRO_TAB_BADGE), ed && eh.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE), ee && eh.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2));
-        let [ef, eg] = (0, f.US)(eh, void 0, !0);
+            eg = (0, C.Z)({ location: 'NitroTabButton' }),
+            em = (null == en ? void 0 : en.trial_id) === k.a7,
+            eb = [];
+        (0, p.Kl)() && (ea && eb.push(o.z.BOGO_2025_NITRO_TAB_BADGE), eg && eb.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE), ei && eb.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2));
+        let [e_, eO] = (0, f.US)(eb, void 0, !0);
         if (
             (i.useEffect(() => {
-                !0 === F && null != ef && eg(M.L.AUTO_DISMISS);
-            }, [eg, F, ef]),
-            !B({ selected: F }))
+                !0 === z && null != e_ && eO(U.L.AUTO_DISMISS);
+            }, [eO, z, e_]),
+            !V({ selected: z }))
         )
             return null;
         if (
-            (ea === D.a$.NONE ||
-                ee ||
+            (eu === k.a$.NONE ||
+                ei ||
                 ((E = 7),
-                (n = (0, r.jsx)(C.Z, {
+                (n = (0, r.jsx)(S.Z, {
                     className: '',
-                    startsAt: eo,
-                    endsAt: es,
+                    startsAt: ed,
+                    endsAt: ep,
                     messageStyle: u.aj.SHORT_TIME,
                     upperCase: !0
                 }))),
-            en)
+            ea)
         )
-            ((n = (0, r.jsx)(T.Z, {})), (E = 0));
-        else if (er) {
-            let e = (0, P.$q)();
-            ((n = (0, r.jsx)(A._y, {
-                isTabSelected: F,
-                badgeCopy: U.intl.string(U.t.OS9KPj),
-                offerExpiresAt: !0 === e ? (null == J ? void 0 : J.expires_at) : null
+            ((n = (0, r.jsx)(P.Z, {})), (E = 0));
+        else if (eo) {
+            let e = (0, j.$q)();
+            ((n = (0, r.jsx)(Z._y, {
+                isTabSelected: z,
+                badgeCopy: G.intl.string(G.t.OS9KPj),
+                offerExpiresAt: !0 === e ? (null == en ? void 0 : en.expires_at) : null
             })),
                 (E = 4));
         } else
-            ef === o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE
-                ? ((n = (0, r.jsx)(A._y, {
-                      isTabSelected: F,
-                      badgeCopy: U.intl.string(U.t.y2b7CA),
+            e_ === o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE
+                ? ((n = (0, r.jsx)(Z._y, {
+                      isTabSelected: z,
+                      badgeCopy: G.intl.string(G.t.y2b7CA),
                       offerExpiresAt: null
                   })),
                   (E = 2))
-                : ee
-                  ? ((n = (0, r.jsx)(x.S, { expiresAt: es })), (E = 4))
-                  : null != ei
-                    ? ((n = (0, r.jsx)(R.Z, {
-                          copy: ei,
+                : ei
+                  ? ((n = (0, r.jsx)(L.S, { expiresAt: ep })), (E = 4))
+                  : null != es
+                    ? ((n = (0, r.jsx)(D.Z, {
+                          copy: es,
                           showStars: !1
                       })),
                       (E = 1))
-                    : null != $
-                      ? ((n = (0, r.jsx)(A.GN, {
-                            userDiscount: $,
-                            isTabSelected: F,
+                    : null != er
+                      ? ((n = (0, r.jsx)(Z.GN, {
+                            userDiscount: er,
+                            isTabSelected: z,
                             includesAmountOff: !1
                         })),
                         (E = 3))
-                      : null == J || ep
-                        ? el
-                            ? ((n = (0, r.jsx)(Z.l, {
-                                  isSelected: F,
-                                  onSelect: () => (0, h.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: M.L.TAKE_ACTION })
+                      : null == en || em
+                        ? ec
+                            ? ((n = (0, r.jsx)(x.l, {
+                                  isSelected: z,
+                                  onSelect: () => (0, h.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: U.L.TAKE_ACTION })
                               })),
                               (E = 6))
-                            : et && ((n = (0, r.jsx)(j.k, { entryPoint: j.U.PrivateMessages })), F || (t = G.localizeBadge), (E = 5))
-                        : ((n = (0, r.jsx)(A.$H, {
-                              trialOffer: J,
-                              isTabSelected: F
+                            : el && ((n = (0, r.jsx)(A.k, { entryPoint: A.U.PrivateMessages })), z || (t = B.localizeBadge), (E = 5))
+                        : ((n = (0, r.jsx)(Z.$H, {
+                              trialOffer: en,
+                              isTabSelected: z
                           })),
                           (E = 4));
-        let em = (0, r.jsx)(
+        let eE = G.intl.string(G.t.Ipxkoq);
+        (Q && ee && (eE = G.intl.string(G.t['4gwVVl'])), !Q && J && ($ === v.Rx.TRY_NITRO && null != en ? (eE = G.intl.string(G.t['3O6A4e'])) : $ === v.Rx.JOIN_NITRO ? (eE = G.intl.string(G.t.brBiOz)) : $ === v.Rx.GET_NITRO && (eE = G.intl.string(G.t.GayC1t))));
+        let ey = (0, r.jsx)(
             c.Qj,
-            ((V = (function (e) {
+            ((H = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -195,30 +200,30 @@ let B = (e) => {
                 return e;
             })(
                 {
-                    selected: F,
-                    route: z,
+                    selected: z,
+                    route: W,
                     icon: s.SrA,
-                    text: U.intl.string(U.t.Ipxkoq),
-                    locationState: W,
+                    text: eE,
+                    locationState: Y,
                     onClick: () => {
-                        (ec === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eu(M.L.TAKE_ACTION),
-                            _.default.track(k.rMx.NITRO_TAB_VISITED, {
+                        (eh === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && ef(U.L.TAKE_ACTION),
+                            _.default.track(M.rMx.NITRO_TAB_VISITED, {
                                 badge_decorator: E,
-                                has_premium: X
+                                has_premium: Q
                             }),
-                            null != ef && eg(M.L.USER_DISMISS));
+                            null != e_ && eO(U.L.USER_DISMISS));
                     }
                 },
-                Y,
-                Q
+                K,
+                et
             )),
-            (H = H =
+            (F = F =
                 {
                     className: t,
                     children: n
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(V, Object.getOwnPropertyDescriptors(H))
+                ? Object.defineProperties(H, Object.getOwnPropertyDescriptors(F))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -226,10 +231,10 @@ let B = (e) => {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(H)).forEach(function (e) {
-                      Object.defineProperty(V, e, Object.getOwnPropertyDescriptor(H, e));
+                  })(Object(F)).forEach(function (e) {
+                      Object.defineProperty(H, e, Object.getOwnPropertyDescriptor(F, e));
                   }),
-            V)
+            H)
         );
-        return el ? (0, r.jsx)(Z.C, { children: em }) : em;
+        return ec ? (0, r.jsx)(x.C, { children: ey }) : ey;
     };

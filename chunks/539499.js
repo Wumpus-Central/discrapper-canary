@@ -2,7 +2,6 @@ e.exports = {
     channelName: 'channelName_cb862a',
     unread: 'unread_cb862a',
     inlineIcon: 'inlineIcon_cb862a',
-    clanTag: 'clanTag_cb862a',
     messageContainer: 'messageContainer_cb862a',
     messageClickableContainer: 'messageClickableContainer_cb862a',
     message: 'message_cb862a',
