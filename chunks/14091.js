@@ -11,22 +11,22 @@ var r = n(255367),
     p = n(603263),
     h = n(410030),
     f = n(169223),
-    m = n(977885),
-    g = n(778877),
-    b = n(903488),
-    _ = n(416638),
-    y = n(695346),
-    C = n(592125),
-    x = n(768119),
-    v = n(944486),
-    j = n(585483),
-    O = n(72006),
-    E = n(965996),
-    S = n(652399),
-    I = n(861262),
-    P = n(251285),
-    Z = n(406326),
-    N = n(994463),
+    m = n(778877),
+    g = n(903488),
+    b = n(416638),
+    _ = n(695346),
+    y = n(592125),
+    C = n(768119),
+    x = n(944486),
+    v = n(585483),
+    j = n(72006),
+    O = n(965996),
+    E = n(652399),
+    S = n(861262),
+    I = n(251285),
+    P = n(406326),
+    Z = n(994463),
+    N = n(611004),
     T = n(619753),
     A = n(902733),
     w = n(981631),
@@ -48,8 +48,8 @@ function D(e, t, n) {
     );
 }
 function U(e) {
-    let t = null != e ? x.Z.getEditorState(e) : null;
-    return null != t ? O.Sq(t) : null;
+    let t = null != e ? C.Z.getEditorState(e) : null;
+    return null != t ? j.Sq(t) : null;
 }
 class B extends i.Component {
     componentDidMount() {
@@ -80,14 +80,14 @@ class B extends i.Component {
                             (null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && l++), null != e.embeds && e.embeds.length > 0 && i++, null != e.attachments && e.attachments.length > 0 && r++);
                         }),
                     0 === n
-                        ? (0, S.Qb)({
+                        ? (0, E.Qb)({
                               searchId: t.props.searchId,
                               searchType: t.props.searchType,
                               searchAnalyticsId: t.props.searchAnalyticsId,
                               searchQueryString: U(t.props.searchId),
-                              searchQuery: x.Z.getQuery(t.props.searchId)
+                              searchQuery: C.Z.getQuery(t.props.searchId)
                           })
-                        : (0, S.hM)({
+                        : (0, E.hM)({
                               searchType: t.props.searchType,
                               searchId: t.props.searchId,
                               searchAnalyticsId: t.props.searchAnalyticsId,
@@ -104,7 +104,7 @@ class B extends i.Component {
                               pageNumEmbeds: i,
                               pageNumAttachments: r,
                               searchQueryString: U(t.props.searchId),
-                              searchQuery: x.Z.getQuery(t.props.searchId)
+                              searchQuery: C.Z.getQuery(t.props.searchId)
                           }));
             }));
     }
@@ -121,10 +121,10 @@ let F = (e) => {
 };
 class H extends i.PureComponent {
     componentDidMount() {
-        j.S.subscribe(w.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        v.S.subscribe(w.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentWillUnmount() {
-        j.S.unsubscribe(w.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        v.S.unsubscribe(w.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentDidUpdate(e) {
         let { search: t } = e;
@@ -133,7 +133,7 @@ class H extends i.PureComponent {
             if (null == e) return;
             e.scrollToBottom();
         }
-        let n = x.Z.getQuery(this.props.searchId);
+        let n = C.Z.getQuery(this.props.searchId);
         JSON.stringify(n) !== JSON.stringify(this.state.searchQuery) &&
             this.setState({
                 searchQuery: n,
@@ -190,7 +190,7 @@ class H extends i.PureComponent {
                 });
             }),
             D(this, 'selectChannel', (e) => {
-                e !== v.Z.getChannelId() && d.ZP.transitionToInviteChannelSync(e);
+                e !== x.Z.getChannelId() && d.ZP.transitionToInviteChannelSync(e);
             }),
             D(this, 'handleSearchResultsClose', () => {
                 let { searchId: e } = this.props;
@@ -205,14 +205,14 @@ class H extends i.PureComponent {
                     } = this.props,
                     { searchMode: l } = this.state;
                 if (e !== l && !r) {
-                    (0, S.zW)({
+                    (0, E.zW)({
                         searchId: t,
                         searchType: n,
                         searchAnalyticsId: i,
                         mode: e
                     });
-                    let r = null != t ? x.Z.getEditorState(t) : null,
-                        l = null != r ? O.Sq(r) : null;
+                    let r = null != t ? C.Z.getEditorState(t) : null,
+                        l = null != r ? j.Sq(r) : null;
                     (p.Nz(t, e, l), this.setState({ searchMode: e }));
                 }
             }),
@@ -235,7 +235,7 @@ class H extends i.PureComponent {
             D(this, 'renderHeader', () => {
                 let { searchMode: e } = this.state,
                     { totalResults: t, isSearching: n, isHistoricalIndexing: i, documentsIndexed: l } = this.props.search;
-                return (0, r.jsx)(Z.Z, {
+                return (0, r.jsx)(P.Z, {
                     searchId: this.props.searchId,
                     searchMode: e,
                     searchByMode: this.searchByMode,
@@ -249,7 +249,7 @@ class H extends i.PureComponent {
                 let e = this.props.searchType === w.aib.GUILD ? M.intl.string(M.t.AXPbZm) : M.intl.string(M.t.Q0JJjo);
                 return (0, r.jsxs)(F, {
                     children: [
-                        (0, r.jsx)(N.Z, {}),
+                        (0, r.jsx)(Z.Z, {}),
                         (0, r.jsx)('div', {
                             className: (L.emptyResultsText, L.stillIndexing),
                             children: e
@@ -282,11 +282,11 @@ class H extends i.PureComponent {
                 })
             ),
             D(this, 'handleSearchResultClick', (e, t) => {
-                let n = C.Z.getChannel(e.channel_id),
+                let n = y.Z.getChannel(e.channel_id),
                     r = null != n ? n.getGuildId() : null,
                     { searchId: i, searchType: l, searchAnalyticsId: o } = this.props,
                     { offset: a, totalResults: s } = this.props.search;
-                (0, S.sL)({
+                (0, E.sL)({
                     searchId: i,
                     searchType: l,
                     searchAnalyticsId: o,
@@ -299,7 +299,7 @@ class H extends i.PureComponent {
                     offset: a,
                     index: t,
                     searchQueryString: U(i),
-                    searchQuery: x.Z.getQuery(i)
+                    searchQuery: C.Z.getQuery(i)
                 });
             }),
             D(this, 'renderContent', () => {
@@ -329,19 +329,19 @@ class H extends i.PureComponent {
 }
 function G(e) {
     let { searchId: t, isFeedbackVisible: n, theme: l, dismissFeedbackEntrypoint: o } = e,
-        a = (0, c.cj)([x.Z], () => x.Z.getResultsState(t), [t]),
-        s = (0, I.k)(t),
-        u = (0, c.e7)([x.Z], () => x.Z.getAnalyticsId(t)),
+        a = (0, c.cj)([C.Z], () => C.Z.getResultsState(t), [t]),
+        s = (0, S.k)(t),
+        u = (0, c.e7)([C.Z], () => C.Z.getAnalyticsId(t)),
         d = i.useCallback(
             (e) => {
                 if (a.isSearching) return;
-                let n = null != t ? x.Z.getEditorState(t) : null,
-                    r = null != n ? O.Sq(n) : null;
+                let n = null != t ? C.Z.getEditorState(t) : null,
+                    r = null != n ? j.Sq(n) : null;
                 p.oO(t, e, r);
             },
             [t, a.isSearching]
         ),
-        { searchResults: h, ignoreCount: f, blockCount: m } = (0, P.Z)(t);
+        { searchResults: h, ignoreCount: f, blockCount: m } = (0, I.Z)(t);
     return (0, r.jsx)(H, {
         searchId: t,
         search: a,
@@ -350,8 +350,8 @@ function G(e) {
         searchResults: h,
         ignoreCount: f,
         blockCount: m,
-        renderEmbeds: y.NA.useSetting(),
-        developerMode: y.Sb.useSetting(),
+        renderEmbeds: _.NA.useSetting(),
+        developerMode: _.Sb.useSetting(),
         theme: l,
         isFeedbackVisible: n,
         dismissFeedbackEntrypoint: o,
@@ -361,73 +361,64 @@ function G(e) {
 function V(e) {
     let { theme: t, isFeedbackVisible: n, dismissFeedbackEntrypoint: l } = e,
         o = i.useMemo(() => ({ type: w.aib.DMS }), []),
-        a = (0, _.WJ)(o),
-        s = (0, c.e7)([x.Z], () => x.Z.getSearchResultsQueryString(a)),
-        u = (0, _.jj)(o, k.sR.MESSAGES, s),
-        [d, h] = i.useState(0);
+        a = (0, b.WJ)(o),
+        s = (0, c.e7)([C.Z], () => C.Z.getSearchResultsQueryString(a)),
+        u = (0, b.jj)(o, k.sR.MESSAGES, s),
+        [d, p] = i.useState(0);
     i.useEffect(() => {
-        h(0);
+        p(0);
     }, [s]);
-    let f = (0, c.cj)([b.Z], () => {
+    let h = (0, c.cj)([g.Z, C.Z], () => {
             var e, t, n, r;
             return {
-                isSearching: null != (e = b.Z.getIsFetching(u)) && e,
-                isIndexing: null != (t = b.Z.getIsIndexing(u)) && t,
-                isHistoricalIndexing: null != (n = b.Z.getIsHistoricalIndexing(u)) && n,
-                documentsIndexed: b.Z.getDocumentsIndexed(u),
+                isSearching: null != (e = g.Z.getIsFetching(u)) && e,
+                isIndexing: null != (t = g.Z.getIsIndexing(u)) && t,
+                isHistoricalIndexing: null != (n = g.Z.getIsHistoricalIndexing(u)) && n,
+                documentsIndexed: g.Z.getDocumentsIndexed(u),
                 offset: d * w.vpv,
-                totalResults: null != (r = b.Z.getTotalCount(u)) ? r : 0,
-                hasError: null != b.Z.getError(u),
-                showBlockedResults: !1,
-                showNoResultsAlt: b.Z.getShowNoResultsAlt(u)
+                totalResults: null != (r = g.Z.getTotalCount(u)) ? r : 0,
+                hasError: null != g.Z.getError(u),
+                showBlockedResults: C.Z.shouldShowBlockedResults(a),
+                showNoResultsAlt: C.Z.shouldShowNoResultsAlt(a)
             };
         }),
-        g = (0, c.e7)([b.Z], () => b.Z.getLastSearchAnalyticsId()),
-        C = i.useCallback(
+        f = (0, c.e7)([g.Z], () => g.Z.getLastSearchAnalyticsId()),
+        m = i.useCallback(
             (e) => {
                 var t;
-                (h(e),
-                    m.Z.clearSearch(),
-                    m.Z.fetchMessages({
+                (p(e),
+                    N.Z.fetchCrossDMMessages({
                         searchContext: o,
-                        searchTabs: [k.sR.MESSAGES],
-                        searchQueryString: null != (t = U(a)) ? t : '',
-                        getLimit: () => w.vpv,
-                        onFetchStart: (e) => {
-                            let { searchContext: t, searchQueryString: n, searchQuery: r } = e,
-                                i = (0, _.WJ)(t);
-                            p.Vs(i, n, r);
-                        },
-                        pagination: { offset: e * w.vpv },
-                        trackExactTotalHits: !0
+                        queryString: null != (t = U(a)) ? t : '',
+                        selectedPageIndex: e
                     }));
             },
             [o, a]
         ),
-        { searchResults: v, ignoreCount: j, blockCount: O } = (0, P.G)(o);
+        { searchResults: y, ignoreCount: x, blockCount: v } = (0, I.G)(o);
     return (0, r.jsx)(H, {
         searchId: w.aib.DMS,
-        search: f,
-        searchAnalyticsId: g,
+        search: h,
+        searchAnalyticsId: f,
         searchType: w.aib.DMS,
-        searchResults: v,
-        ignoreCount: j,
-        blockCount: O,
-        renderEmbeds: y.NA.useSetting(),
-        developerMode: y.Sb.useSetting(),
+        searchResults: y,
+        ignoreCount: x,
+        blockCount: v,
+        renderEmbeds: _.NA.useSetting(),
+        developerMode: _.Sb.useSetting(),
         theme: t,
         isFeedbackVisible: n,
         dismissFeedbackEntrypoint: l,
-        onPageChange: C
+        onPageChange: m
     });
 }
 function z(e) {
     let { searchId: t } = e,
         n = (0, h.ZP)(),
-        l = (0, g.U)({ location: 'SearchResults' }),
+        l = (0, m.U)({ location: 'SearchResults' }),
         o = i.useRef(null),
         [a, s] = i.useState(!1),
-        { enabled: c, force: u } = (0, E.f)({ location: 'SearchResults' });
+        { enabled: c, force: u } = (0, O.f)({ location: 'SearchResults' });
     (i.useEffect(() => {
         c && u && s(!0);
     }, [u, c]),

@@ -8,8 +8,8 @@ t.a(e, async function (e, r) {
             o = t(339085),
             u = t(633302),
             a = t(590956),
-            s = t(488968),
-            d = t(176354),
+            d = t(488968),
+            s = t(176354),
             f = e([i]);
         function _(e) {
             let { value: n, type: t } = e,
@@ -30,9 +30,9 @@ t.a(e, async function (e, r) {
         }
         function h(e) {
             let { value: n, jumboable: t } = e,
-                r = d.ZP.getURL(n),
+                r = s.ZP.getURL(n),
                 i = u.ZP.convertSurrogateToName(n),
-                c = (0, s.d)();
+                c = (0, d.d)();
             return (0, l.jsx)(a.c, {
                 node: {
                     name: i,
@@ -46,12 +46,12 @@ t.a(e, async function (e, r) {
         function b(e) {
             var n;
             let { value: t, jumboable: r } = e,
-                i = (0, s.d)(),
+                i = (0, d.d)(),
                 u = null == i ? void 0 : i.guildId,
-                d = (0, c.e7)([o.ZP], () => o.ZP.getDisambiguatedEmojiContext(u).getById(t.id), [u, t.id]),
-                f = null != (n = null == d ? void 0 : d.name) ? n : t.name;
+                s = (0, c.e7)([o.ZP], () => o.ZP.getDisambiguatedEmojiContext(u).getById(t.id), [u, t.id]),
+                f = null != (n = null == s ? void 0 : s.name) ? n : t.name;
             return (
-                null != d && d.require_colons && (f = ':'.concat(d.name, ':')),
+                null != s && s.require_colons && (f = ':'.concat(s.name, ':')),
                 (0, l.jsx)(a.Y, {
                     node: {
                         name: f,

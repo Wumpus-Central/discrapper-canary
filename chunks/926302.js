@@ -2,7 +2,7 @@ t.a(e, async function (e, r) {
     try {
         t.d(n, {
             Kq: () => u,
-            ZP: () => d
+            ZP: () => s
         });
         var l = t(255367),
             i = t(31675),
@@ -25,7 +25,7 @@ t.a(e, async function (e, r) {
                 return (0, l.jsx)(r, {
                     node: e,
                     ...t,
-                    children: (0, l.jsx)(s, {
+                    children: (0, l.jsx)(d, {
                         nodes: e.value,
                         renderers: n
                     })
@@ -48,7 +48,7 @@ t.a(e, async function (e, r) {
                             value: { text: e, url: t }
                         } = i;
                         c = e
-                            ? (0, l.jsx)(s, {
+                            ? (0, l.jsx)(d, {
                                   nodes: e,
                                   renderers: n
                               })
@@ -73,7 +73,7 @@ t.a(e, async function (e, r) {
                         node: e,
                         level: e.value.level,
                         ...t,
-                        children: (0, l.jsx)(s, {
+                        children: (0, l.jsx)(d, {
                             nodes: e.value.content,
                             renderers: n
                         })
@@ -91,7 +91,7 @@ t.a(e, async function (e, r) {
                                     node: t,
                                     siblings: e.value.items,
                                     index: r,
-                                    children: (0, l.jsx)(s, {
+                                    children: (0, l.jsx)(d, {
                                         nodes: t.content,
                                         renderers: n
                                     })
@@ -107,7 +107,7 @@ t.a(e, async function (e, r) {
                     return (0, l.jsx)(r, {
                         node: e,
                         ...t,
-                        children: (0, l.jsx)(s, {
+                        children: (0, l.jsx)(d, {
                             nodes: e.value.content,
                             renderers: n
                         })
@@ -116,7 +116,7 @@ t.a(e, async function (e, r) {
                     throw TypeError(`Unknown node type "${e.type}"`);
             }
         }
-        function s({ nodes: e, renderers: n }) {
+        function d({ nodes: e, renderers: n }) {
             return (0, l.jsx)(l.Fragment, {
                 children: e.map((t, r) =>
                     (0, l.jsx)(
@@ -132,7 +132,7 @@ t.a(e, async function (e, r) {
                 )
             });
         }
-        function d({ content: e, renderers: n }) {
+        function s({ content: e, renderers: n }) {
             let t = (0, c.useMemo)(() => {
                     let e = Object.keys(n).filter((e) => _.has(e));
                     return e.length > 0 ? e : null;
@@ -140,7 +140,7 @@ t.a(e, async function (e, r) {
                 r = (0, c.useMemo)(() => (0, i.Q)(e, t), [e, t]);
             return (0, l.jsx)(f.Provider, {
                 value: r,
-                children: (0, l.jsx)(s, {
+                children: (0, l.jsx)(d, {
                     nodes: r,
                     renderers: n
                 })

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(539854));
+n.d(t, { Z: () => M });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -24,7 +24,50 @@ var i = n(255367),
     v = n(768236),
     T = n(314907),
     N = n(826701);
-let I = () =>
+function I(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                ((i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i));
+            }));
+    }
+    return e;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let A = () =>
         (0, i.jsx)('div', {
             className: O.comparisonTablePill,
             children: (0, i.jsx)(c.X6q, {
@@ -33,7 +76,7 @@ let I = () =>
                 children: C.intl.string(C.t.TR2B4e)
             })
         }),
-    y = () =>
+    P = () =>
         (0, i.jsx)('div', {
             className: O.comparisonTablePill,
             children: (0, i.jsx)(c.X6q, {
@@ -42,7 +85,98 @@ let I = () =>
                 children: C.intl.string(C.t.IBYG5e)
             })
         }),
-    A = (e) => {
+    R = (e) => {
+        let { text: t, badge: n, variant: r } = e;
+        return (0, i.jsxs)(c.Text, {
+            color: 'none',
+            variant: null != r ? r : 'text-md/medium',
+            className: O.rowLabelText,
+            children: [
+                t,
+                null != n &&
+                    (0, i.jsxs)(i.Fragment, {
+                        children: [' ', n]
+                    })
+            ]
+        });
+    },
+    D = (e) => {
+        let { isIncluded: t, isTier0: n } = e;
+        return t
+            ? (0, i.jsxs)(i.Fragment, {
+                  children: [
+                      (0, i.jsx)(c.dz2, {
+                          size: 'md',
+                          color: 'currentColor',
+                          className: n ? O.basicCheckMark : O.premiumCheckMark,
+                          'aria-hidden': !0
+                      }),
+                      (0, i.jsx)(c.nn4, { children: C.intl.string(C.t['tq+6t7']) })
+                  ]
+              })
+            : (0, i.jsxs)(i.Fragment, {
+                  children: [
+                      (0, i.jsx)(c.Dio, {
+                          size: 'md',
+                          color: 'currentColor',
+                          className: O.closeIcon,
+                          'aria-hidden': !0
+                      }),
+                      (0, i.jsx)(c.nn4, { children: C.intl.string(C.t.l4qZrq) })
+                  ]
+              });
+    },
+    Z = (e) => {
+        let { label: t, tier0ColumnData: n, tier2ColumnData: r, withBottomMargin: s } = e;
+        return (0, i.jsxs)('tr', {
+            className: l()(O.row, O.rowBottomBorder, { [O.bottomMargin]: s }),
+            children: [
+                (0, i.jsx)('th', {
+                    scope: 'row',
+                    className: O.labelCell,
+                    children: (0, i.jsx)(R, { text: t })
+                }),
+                (0, i.jsx)('td', {
+                    className: O.cell,
+                    children:
+                        null != n.text
+                            ? (0, i.jsx)(R, { text: n.text })
+                            : (0, i.jsx)(D, {
+                                  isIncluded: !!n.includes,
+                                  isTier0: !0
+                              })
+                }),
+                (0, i.jsx)('td', {
+                    className: O.cell,
+                    children: null != r.text ? (0, i.jsx)(R, { text: r.text }) : (0, i.jsx)(D, { isIncluded: !!r.includes })
+                })
+            ]
+        });
+    },
+    w = (e) => {
+        let { title: t, rows: n } = e;
+        return (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsxs)('tr', {
+                    className: O.row,
+                    children: [
+                        (0, i.jsx)('th', {
+                            scope: 'row',
+                            className: O.labelCell,
+                            children: (0, i.jsx)(R, {
+                                text: t,
+                                variant: 'text-lg/bold'
+                            })
+                        }),
+                        (0, i.jsx)('td', {}),
+                        (0, i.jsx)('td', {})
+                    ]
+                }),
+                n.map((e, t) => (0, i.jsx)(Z, y(I({}, e), { withBottomMargin: t === n.length - 1 }), e.id))
+            ]
+        });
+    },
+    k = (e) => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
@@ -54,7 +188,7 @@ let I = () =>
             alt: s
         });
     },
-    P = () =>
+    L = () =>
         (0, i.jsx)('thead', {
             children: (0, i.jsxs)('tr', {
                 className: l()(O.headerRow, O.topBorderRadius),
@@ -71,41 +205,41 @@ let I = () =>
                     (0, i.jsx)('th', {
                         scope: 'col',
                         className: O.headerCell,
-                        children: (0, i.jsx)(A, { premiumType: j.p9.TIER_0 })
+                        children: (0, i.jsx)(k, { premiumType: j.p9.TIER_0 })
                     }),
                     (0, i.jsx)('th', {
                         scope: 'col',
                         className: l()(O.headerCell, O.topBorderRadius),
-                        children: (0, i.jsx)(A, { premiumType: j.p9.TIER_2 })
+                        children: (0, i.jsx)(k, { premiumType: j.p9.TIER_2 })
                     })
                 ]
             })
         }),
-    R = (e) => {
-        let { label: t, tier0Column: n, tier2Column: r, withBottomBorder: s = !0, withBottomMargin: a = !1 } = e;
+    B = (e) => {
+        let { tier0MonthlyPrice: t, tier2MonthlyPrice: n, shouldUseDiscountPrice: r, tier2DiscountedPriceString: s } = e;
         return (0, i.jsxs)('tr', {
-            className: l()(O.row, {
-                [O.rowBottomBorder]: s,
-                [O.bottomMargin]: a
-            }),
+            className: l()(O.row, O.rowBottomBorder, O.bottomMargin),
             children: [
                 (0, i.jsx)('th', {
                     scope: 'row',
                     className: O.labelCell,
-                    children: t
+                    children: (0, i.jsx)(R, {
+                        text: C.intl.string(C.t['09yRKy']),
+                        variant: 'text-lg/bold'
+                    })
                 }),
                 (0, i.jsx)('td', {
                     className: O.cell,
-                    children: n
+                    children: (0, i.jsx)(R, { text: f.ZP.formatPriceString(t, j.rV.MONTH) })
                 }),
                 (0, i.jsx)('td', {
                     className: O.cell,
-                    children: r
+                    children: (0, i.jsx)(R, { text: r ? s : f.ZP.formatPriceString(n, j.rV.MONTH) })
                 })
             ]
         });
     },
-    D = (e) => {
+    M = (e) => {
         var t;
         let n,
             { className: s, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: u = j.p9.TIER_2 } = e,
@@ -122,23 +256,17 @@ let I = () =>
                 autoTrackExposure: !1
             }));
         let N = (0, _.N)(),
-            A = null == N || null == (t = N.subscription_trial) ? void 0 : t.sku_id,
+            R = null == N || null == (t = N.subscription_trial) ? void 0 : t.sku_id,
             D = (0, b.Ng)(),
             Z = null != D && (0, b.Wp)(D, j.Si.TIER_2),
-            w = (0, x.A)(j.Xh.PREMIUM_MONTH_TIER_2),
-            k = ''.concat(w, '/').concat((0, f.eP)(j.rV.MONTH)),
-            L = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_0),
-            B = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_2),
-            M = (0, E.e)(L, B, Z, k);
+            k = (0, x.A)(j.Xh.PREMIUM_MONTH_TIER_2),
+            M = ''.concat(k, '/').concat((0, f.eP)(j.rV.MONTH)),
+            U = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_0),
+            V = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_2),
+            G = (0, E.e)();
         if (!S || !v) return null;
-        (M.push({
-            label: null,
-            tier0Column: null,
-            tier2Column: null,
-            withBottomBorder: !1
-        }),
-            (n = o ? null : null != N ? (0, i.jsx)(y, {}) : (0, i.jsx)(I, {})));
-        let U = A === j.Si.TIER_0 || u === j.p9.TIER_0;
+        n = o ? null : null != N ? (0, i.jsx)(P, {}) : (0, i.jsx)(A, {});
+        let F = R === j.Si.TIER_0 || u === j.p9.TIER_0;
         return (0, i.jsx)(g.Gt, {
             value: C,
             children: (0, i.jsx)('div', {
@@ -149,15 +277,15 @@ let I = () =>
                     children: [
                         (0, i.jsxs)('div', {
                             className: l()(c, {
-                                [O.tier0ColumnPosition]: U,
-                                [O.tier2ColumnPosition]: !U
+                                [O.tier0ColumnPosition]: F,
+                                [O.tier2ColumnPosition]: !F
                             }),
                             children: [
-                                !U && n,
+                                !F && n,
                                 (0, i.jsx)('div', {
                                     className: l()({
-                                        [O.tier0ColumnOuter]: U,
-                                        [O.tier2ColumnOuter]: !U
+                                        [O.tier0ColumnOuter]: F,
+                                        [O.tier2ColumnOuter]: !F
                                     })
                                 })
                             ]
@@ -165,53 +293,17 @@ let I = () =>
                         (0, i.jsxs)('table', {
                             className: O.table,
                             children: [
-                                (0, i.jsx)(P, {}),
-                                (0, i.jsx)('tbody', {
-                                    children: M.map((e, t) => {
-                                        var n, i;
-                                        return (0, r.createElement)(
-                                            R,
-                                            ((n = (function (e) {
-                                                for (var t = 1; t < arguments.length; t++) {
-                                                    var n = null != arguments[t] ? arguments[t] : {},
-                                                        i = Object.keys(n);
-                                                    ('function' == typeof Object.getOwnPropertySymbols &&
-                                                        (i = i.concat(
-                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                            })
-                                                        )),
-                                                        i.forEach(function (t) {
-                                                            var i;
-                                                            ((i = n[t]),
-                                                                t in e
-                                                                    ? Object.defineProperty(e, t, {
-                                                                          value: i,
-                                                                          enumerable: !0,
-                                                                          configurable: !0,
-                                                                          writable: !0
-                                                                      })
-                                                                    : (e[t] = i));
-                                                        }));
-                                                }
-                                                return e;
-                                            })({}, e)),
-                                            (i = i = { key: t }),
-                                            Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                                                : (function (e, t) {
-                                                      var n = Object.keys(e);
-                                                      if (Object.getOwnPropertySymbols) {
-                                                          var i = Object.getOwnPropertySymbols(e);
-                                                          n.push.apply(n, i);
-                                                      }
-                                                      return n;
-                                                  })(Object(i)).forEach(function (e) {
-                                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                                                  }),
-                                            n)
-                                        );
-                                    })
+                                (0, i.jsx)(L, {}),
+                                (0, i.jsxs)('tbody', {
+                                    children: [
+                                        (0, i.jsx)(B, {
+                                            tier0MonthlyPrice: U,
+                                            tier2MonthlyPrice: V,
+                                            shouldUseDiscountPrice: Z,
+                                            tier2DiscountedPriceString: M
+                                        }),
+                                        G.map((e) => (0, r.createElement)(w, y(I({}, e), { key: e.id })))
+                                    ]
                                 })
                             ]
                         })

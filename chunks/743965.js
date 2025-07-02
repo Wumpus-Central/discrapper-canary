@@ -6,8 +6,8 @@ var r = t(255367),
     o = t(481060),
     u = t(663993),
     a = t(572004),
-    s = t(73433),
-    d = t(283574);
+    d = t(73433),
+    s = t(283574);
 function f(e) {
     let { text: n } = e,
         [t, i] = l.useState(!1);
@@ -34,16 +34,16 @@ function _(e) {
     let { language: n, content: l } = e,
         i = () =>
             (0, r.jsx)('code', {
-                className: c()(d.scrollbarGhostHairline, 'hljs'),
+                className: c()(s.scrollbarGhostHairline, 'hljs'),
                 children: l
             });
     return (0, r.jsx)('pre', {
         children: (0, r.jsxs)('div', {
-            className: s.codeContainer,
+            className: d.codeContainer,
             children: [
                 a.wS
                     ? (0, r.jsx)('div', {
-                          className: s.codeActions,
+                          className: d.codeActions,
                           children: (0, r.jsx)(f, { text: l })
                       })
                     : null,
@@ -58,7 +58,7 @@ function _(e) {
                             return null == t
                                 ? i()
                                 : (0, r.jsx)('code', {
-                                      className: c()(d.scrollbarGhostHairline, 'hljs', t.language),
+                                      className: c()(s.scrollbarGhostHairline, 'hljs', t.language),
                                       dangerouslySetInnerHTML: { __html: t.value }
                                   });
                         }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(781311), n(290780));
+(n.d(t, { Z: () => Y }), n(781311), n(290780));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -190,18 +190,22 @@ function G(e) {
     let { searchId: t, showBlocked: n } = e;
     b(t).showBlockedResults = n;
 }
-function B() {
-    (s.K.remove(O), (T = {}));
+function B(e) {
+    let { searchId: t } = e;
+    b(t).showNoResultsAlt = Math.random() < g;
 }
 function V() {
+    (s.K.remove(O), (T = {}));
+}
+function F() {
     return null != S && D({ searchId: S });
 }
-function F(e) {
+function Z(e) {
     let { searchId: t, queryString: n, query: r } = e,
         i = b(t);
     ((i.searchResultsQueryString = n), (i.query = r));
 }
-class Z extends (r = o.ZP.Store) {
+class H extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, _.Z);
         let e = s.K.get(O);
@@ -293,21 +297,22 @@ class Z extends (r = o.ZP.Store) {
         };
     }
 }
-m(Z, 'displayName', 'SearchStore');
-let H = new Z(l.Z, {
+m(H, 'displayName', 'SearchStore');
+let Y = new H(l.Z, {
     SEARCH_START: C,
     SEARCH_INDEXING: P,
     SEARCH_FINISH: w,
-    SEARCH_RESULTS_QUERY_UPDATE: F,
+    SEARCH_RESULTS_QUERY_UPDATE: Z,
     SEARCH_EDITOR_STATE_CLEAR: D,
     SEARCH_ENSURE_SEARCH_STATE: N,
     SEARCH_EDITOR_STATE_CHANGE: A,
     SEARCH_SET_SHOW_BLOCKED_RESULTS: G,
+    SEARCH_SET_SHOW_NO_RESULTS_ALT: B,
     SEARCH_SCREEN_OPEN: k,
     CHANNEL_SELECT: x,
-    CHANNEL_TOGGLE_MEMBERS_SECTION: V,
+    CHANNEL_TOGGLE_MEMBERS_SECTION: F,
     SEARCH_CLEAR_HISTORY: M,
     SEARCH_REMOVE_HISTORY: j,
     SEARCH_ADD_HISTORY: R,
-    LOGOUT: B
+    LOGOUT: V
 });

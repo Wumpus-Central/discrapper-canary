@@ -1,4 +1,5 @@
 n.d(t, {
+    Wf: () => C,
     ZP: () => P,
     wz: () => R
 });
@@ -144,8 +145,8 @@ function N(e, t, n, i, a) {
 }
 function C(e) {
     var t;
-    let { node: n, output: s, state: p } = e,
-        g = (0, a.e7)(
+    let { node: n, stateKey: o, children: s } = e,
+        p = (0, a.e7)(
             [_.Z, m.Z],
             () => {
                 var e;
@@ -153,57 +154,44 @@ function C(e) {
             },
             [n.channelId]
         ),
-        { hasSendMessagePerm: O, hasUseAppCommandsPerm: v } = (0, a.cj)([h.Z], () => ({
-            hasSendMessagePerm: h.Z.can(E.Plq.SEND_MESSAGES, g),
-            hasUseAppCommandsPerm: h.Z.can(E.Plq.USE_APPLICATION_COMMANDS, g)
+        { hasSendMessagePerm: g, hasUseAppCommandsPerm: O } = (0, a.cj)([h.Z], () => ({
+            hasSendMessagePerm: h.Z.can(E.Plq.SEND_MESSAGES, p),
+            hasUseAppCommandsPerm: h.Z.can(E.Plq.USE_APPLICATION_COMMANDS, p)
         })),
-        I =
-            void 0 !== g
+        v =
+            void 0 !== p
                 ? {
                       type: 'channel',
-                      channel: g
+                      channel: p
                   }
                 : { type: 'contextless' },
-        { command: T } = l.YZ(I, null != (t = n.commandKey) ? t : ''),
-        S = f.dN.useSetting(),
-        A = i.useMemo(() => {
-            if (null == T || null == g || T.untranslatedName !== n.commandName || S) return !1;
-            let e = g.isPrivate();
-            if ((0, d.xl)(g) || (!e && !O)) return !1;
-            let t = (null == T ? void 0 : T.applicationId) === b.bi.BUILT_IN;
-            return !!e || !!t || !!v;
-        }, [g, T, O, v, n.commandName, S]),
-        C = i.useCallback(
+        { command: I } = l.YZ(v, null != (t = n.commandKey) ? t : ''),
+        T = f.dN.useSetting(),
+        S = i.useMemo(() => {
+            if (null == I || null == p || I.untranslatedName !== n.commandName || T) return !1;
+            let e = p.isPrivate();
+            if ((0, d.xl)(p) || (!e && !g)) return !1;
+            let t = (null == I ? void 0 : I.applicationId) === b.bi.BUILT_IN;
+            return !!e || !!t || !!O;
+        }, [p, I, g, O, n.commandName, T]),
+        A = i.useCallback(
             (e) => {
-                (null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && N(g.id, n.commandName, n.commandKey, c.Vh.MENTION));
+                (null == e || e.stopPropagation(), null != p && null != n.commandName && null != n.commandKey && N(p.id, n.commandName, n.commandKey, c.Vh.MENTION));
             },
-            [g, n.commandKey, n.commandName]
+            [p, n.commandKey, n.commandName]
         );
-    return A
-        ? (0, r.jsx)(
-              o.ua7,
+    return S
+        ? (0, r.jsxs)(
+              u.Z,
               {
-                  text: n.output,
-                  position: 'top',
-                  children: (e) => {
-                      let { onMouseEnter: t, onMouseLeave: i } = e;
-                      return (0, r.jsxs)(
-                          u.Z,
-                          {
-                              role: 'link',
-                              onClick: C,
-                              onMouseEnter: t,
-                              onMouseLeave: i,
-                              children: [y.GI, s(n.content, p)]
-                          },
-                          p.key
-                      );
-                  }
+                  role: 'link',
+                  onClick: A,
+                  children: [y.GI, s]
               },
-              p.key
+              o
           )
         : (0, r.jsxs)('span', {
-              children: [y.GI, s(n.content, p)]
+              children: [y.GI, s]
           });
 }
 function R(e) {
@@ -224,7 +212,7 @@ function R(e) {
                 onClick: d,
                 onMouseEnter: t,
                 onMouseLeave: i,
-                children: ['/', n]
+                children: [y.GI, n]
             });
         }
     });
@@ -234,8 +222,8 @@ function P(e) {
         react: (e, t, n) =>
             (0, r.jsx)(C, {
                 node: e,
-                output: t,
-                state: n
+                stateKey: n.key,
+                children: t(e.content, n)
             })
     };
 }

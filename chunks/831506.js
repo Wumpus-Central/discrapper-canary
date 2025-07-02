@@ -23,12 +23,12 @@ function p(e, t, n) {
 }
 let m = {},
     f = {};
-function g(e, t) {
+function _(e, t) {
     var n;
     return (null != (n = m[e]) ? n : {})[t];
 }
-function _(e, t) {
-    let n = g(e, t);
+function g(e, t) {
+    let n = _(e, t);
     if (null == n) return;
     let r = m[e];
     (delete r[t], l().isEmpty(r) && delete m[e]);
@@ -38,11 +38,11 @@ function _(e, t) {
 function h(e, t, n, r) {
     let i = n.find((e) => null != e.party && e.party.id),
         l = null != i && null != i.party ? i.party.id : null,
-        a = g(t, e);
-    if (null == l || r === d.Skl.OFFLINE) return null != a && void _(t, e);
+        a = _(t, e);
+    if (null == l || r === d.Skl.OFFLINE) return null != a && void g(t, e);
     if (null != a) {
         if (a === l) return !1;
-        _(t, e);
+        g(t, e);
     }
     !(function (e, t, n) {
         var r;

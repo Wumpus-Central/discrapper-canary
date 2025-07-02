@@ -6,8 +6,8 @@ var r = t(255367),
     o = t(794295),
     u = t(782568),
     a = t(364640),
-    s = t(124072),
-    d = t(198620),
+    d = t(124072),
+    s = t(198620),
     f = t(823379),
     _ = t(312539),
     h = t(606629);
@@ -35,12 +35,12 @@ function b(e) {
                     });
                 case 'attachment':
                     let {
-                        value: { domain: a, ephemeral: s, channel_id: d, attachment_id: h, name: b }
+                        value: { domain: a, ephemeral: d, channel_id: s, attachment_id: h, name: b }
                     } = t;
                     return (0, r.jsx)(g, {
                         domain: a,
-                        ephemeral: s,
-                        channelId: d,
+                        ephemeral: d,
+                        channelId: s,
                         attachmentId: h,
                         name: b
                     });
@@ -61,7 +61,7 @@ function g(e) {
             .concat(_, '/')
             .concat(b),
         m = l.useCallback(async () => {
-            let e = await (0, d.B_)(g);
+            let e = await (0, s.B_)(g);
             (a.Z.trackLinkClicked(e), (0, u.Z)(e));
         }, [g]),
         y = l.useCallback(
@@ -121,7 +121,7 @@ function g(e) {
             },
             [b, g]
         );
-    return (0, r.jsxs)(s.Z, {
+    return (0, r.jsxs)(d.Z, {
         role: 'link',
         href: g,
         onClick: m,

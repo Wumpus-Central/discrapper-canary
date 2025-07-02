@@ -1,6 +1,6 @@
 (n.d(t, {
-    Z: () => _,
-    y: () => g
+    Z: () => g,
+    y: () => _
 }),
     n(953529));
 var r = n(255367),
@@ -36,7 +36,7 @@ let f = (e) => {
             ]
         });
     },
-    g = (e) => {
+    _ = (e) => {
         let { guild: t, onlineCount: n } = e;
         if (null == t) return null;
         let i = new u.ZP(t),
@@ -96,17 +96,17 @@ let f = (e) => {
             ]
         });
     },
-    _ = (e) => {
+    g = (e) => {
         var t;
-        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: g = !1, onClick: _ } = e,
+        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: _ = !1, onClick: g } = e,
             h = i.useMemo(() => (null == l ? null : l instanceof u.ZP ? l : new u.ZP(l)), [l]);
         if (null == n || null == h) return null;
         let { topic: b, speaker_count: E, participant_count: y } = n,
             C = null != (t = n.members) ? t : [],
-            x = g ? C.slice(0, 3) : C,
+            x = _ ? C.slice(0, 3) : C,
             v = E - x.length;
         return (
-            g && (v += C.length - x.length),
+            _ && (v += C.length - x.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -148,9 +148,9 @@ let f = (e) => {
                             })
                         ]
                     }),
-                    g &&
+                    _ &&
                         (0, r.jsxs)('div', {
-                            className: a()(m.guild, { [m.embed]: g }),
+                            className: a()(m.guild, { [m.embed]: _ }),
                             children: [
                                 (0, r.jsx)(s.ZP, {
                                     mask: s.ZP.Masks.SQUIRCLE,
@@ -171,12 +171,12 @@ let f = (e) => {
                             ]
                         }),
                     (0, r.jsx)(o.X6q, {
-                        variant: d || g ? 'heading-md/semibold' : 'heading-lg/semibold',
-                        className: a()(m.header, { [m.embed]: g }),
+                        variant: d || _ ? 'heading-md/semibold' : 'heading-lg/semibold',
+                        className: a()(m.header, { [m.embed]: _ }),
                         children: b
                     }),
                     (0, r.jsxs)('div', {
-                        className: a()(m.members, { [m.embed]: g }),
+                        className: a()(m.members, { [m.embed]: _ }),
                         children: [
                             x.length > 0 &&
                                 (0, r.jsxs)('div', {
@@ -188,7 +188,7 @@ let f = (e) => {
                                                 {
                                                     speaker: e,
                                                     guildId: h.id,
-                                                    isEmbed: g
+                                                    isEmbed: _
                                                 },
                                                 e.user.id
                                             )
@@ -198,16 +198,16 @@ let f = (e) => {
                                                   className: m.speaker,
                                                   children: [
                                                       (0, r.jsx)('div', {
-                                                          className: a()(m.icon, { [m.embed]: g }),
+                                                          className: a()(m.icon, { [m.embed]: _ }),
                                                           children: (0, r.jsx)(o.S6n, {
                                                               size: 'custom',
                                                               color: 'currentColor',
-                                                              height: g ? 12 : 14,
+                                                              height: _ ? 12 : 14,
                                                               className: m.listeners
                                                           })
                                                       }),
                                                       (0, r.jsxs)(o.Text, {
-                                                          variant: g ? 'text-xs/normal' : 'text-sm/normal',
+                                                          variant: _ ? 'text-xs/normal' : 'text-sm/normal',
                                                           color: 'text-secondary',
                                                           children: ['+', p.intl.format(p.t.L1pCBQ, { count: v })]
                                                       })
@@ -216,10 +216,10 @@ let f = (e) => {
                                             : null
                                     ]
                                 }),
-                            g &&
+                            _ &&
                                 (0, r.jsx)(o.zxk, {
                                     color: o.zxk.Colors.GREEN,
-                                    onClick: _,
+                                    onClick: g,
                                     className: m.joinButton,
                                     children: p.intl.string(p.t.ZYO5OD)
                                 })

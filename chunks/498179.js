@@ -52,12 +52,12 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: g, hideNotLaunchable: _, tooltipPosition: h, onClick: b, className: E, source: y, hover: C, innerClassName: x } = e,
+    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: _, hideNotLaunchable: g, tooltipPosition: h, onClick: b, className: E, source: y, hover: C, innerClassName: x } = e,
         v = {
             fullWidth: n,
             size: m,
             color: f,
-            customDisabledColor: g,
+            customDisabledColor: _,
             tooltipPosition: h,
             onClick: b,
             className: E,
@@ -81,7 +81,7 @@ function m(e) {
           : (0, r.jsx)(
                 c.Z,
                 p(d({}, v), {
-                    hideNotLaunchable: _,
+                    hideNotLaunchable: g,
                     applicationId: t.id
                 })
             );

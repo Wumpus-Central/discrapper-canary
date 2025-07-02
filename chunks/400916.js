@@ -13,16 +13,16 @@ var i = n(512722),
     m = n(165674);
 function f(e) {
     var t, n, i, f;
-    let { guildId: g, productId: _ } = e,
-        h = (0, a.e7)([c.Z], () => c.Z.getGuildProduct(_)),
+    let { guildId: _, productId: g } = e,
+        h = (0, a.e7)([c.Z], () => c.Z.getGuildProduct(g)),
         b = (null != (f = null == h || null == (t = h.attachments) ? void 0 : t.length) ? f : 0) > 1,
         E = null == h || null == (i = h.attachments) || null == (n = i[0]) ? void 0 : n.id;
     return b
         ? (0, r.jsxs)(o.zxk, {
               onClick: function () {
                   u.Z.open({
-                      guildId: g,
-                      productId: _
+                      guildId: _,
+                      productId: g
                   });
               },
               innerClassName: m.textWithIcon,
@@ -41,8 +41,8 @@ function f(e) {
           })
         : (l()(null != E, 'No attachment'),
           (0, r.jsxs)(d.Z, {
-              guildId: g,
-              productId: _,
+              guildId: _,
+              productId: g,
               attachmentId: E,
               innerClassName: m.textWithIcon,
               children: [

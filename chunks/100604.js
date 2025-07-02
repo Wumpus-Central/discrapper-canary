@@ -1,4 +1,4 @@
-n.d(t, { r: () => g });
+n.d(t, { r: () => _ });
 var r = n(933557),
     i = n(356264),
     l = n(592125),
@@ -39,12 +39,12 @@ function f(e, t) {
         })
     };
 }
-class g {
+class _ {
     getForwardInfo() {
         var e, t, n, u;
         let m = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
-            g = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
-            _ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
+            _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
+            g = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
             h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
             b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
             E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
@@ -63,7 +63,7 @@ class g {
                       };
             }
             if (!h.can(e.accessPermissions, e)) return { snapshotIndex: y };
-            let t = (0, r.F6)(e, g, _, !0);
+            let t = (0, r.F6)(e, _, g, !0);
             return {
                 snapshotIndex: y,
                 footerInfo: {

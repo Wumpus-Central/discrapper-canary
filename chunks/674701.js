@@ -14,8 +14,8 @@ var r,
     p = n(493683),
     m = n(529103),
     f = n(700582),
-    g = n(906732),
-    _ = n(213609),
+    _ = n(906732),
+    g = n(213609),
     h = n(541716),
     b = n(28546),
     E = n(963249),
@@ -37,10 +37,10 @@ var r,
 function k(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: L, analyticsSection: D, glow: M, giftIntentSecondaryAction: U } = e,
         F = (0, c.e7)([C.default], () => C.default.getCurrentUser()),
-        { analyticsLocations: B } = (0, g.ZP)(),
+        { analyticsLocations: B } = (0, _.ZP)(),
         G = (0, c.e7)([I.Z], () => I.Z.getFriendAnniversaryYears(r.id));
     l.useEffect(() => {
-        (0, _.h)({
+        (0, g.h)({
             name: s.ImpressionNames.GIFT_INTENT_CARD,
             type: s.ImpressionTypes.VIEW,
             properties: {

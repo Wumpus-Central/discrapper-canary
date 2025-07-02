@@ -837,12 +837,32 @@ function q() {
     });
 }
 function X() {
+    let [e, t] = r.useState(C.FGA.PRIMARY),
+        n = r.useMemo(
+            () =>
+                Object.entries(C.FGA).map((e) => {
+                    let [t, n] = e;
+                    return {
+                        label: t,
+                        value: n
+                    };
+                }),
+            []
+        );
     return (0, i.jsxs)('div', {
         className: P.section,
         children: [
             (0, i.jsx)(C.X6q, {
                 variant: 'heading-xl/semibold',
                 children: 'Tooltips'
+            }),
+            (0, i.jsx)(C.xJW, {
+                title: 'Color',
+                children: (0, i.jsx)(C.q4e, {
+                    value: e,
+                    onChange: t,
+                    options: n
+                })
             }),
             (0, i.jsxs)('div', {
                 style: {
@@ -852,21 +872,25 @@ function X() {
                 },
                 children: [
                     (0, i.jsx)(C.ua7, {
+                        color: e,
                         text: "Here's top aligned tooltip text!",
                         position: 'top',
                         children: (e) => (0, i.jsx)(C.zxk, Z(D({}, e), { children: 'Tooltip on the top' }))
                     }),
                     (0, i.jsx)(C.ua7, {
+                        color: e,
                         text: "Here's right aligned tooltip text!",
                         position: 'left',
                         children: (e) => (0, i.jsx)(C.zxk, Z(D({}, e), { children: 'Tooltip on the left' }))
                     }),
                     (0, i.jsx)(C.ua7, {
+                        color: e,
                         text: "Here's bottom aligned tooltip text!",
                         position: 'bottom',
                         children: (e) => (0, i.jsx)(C.zxk, Z(D({}, e), { children: 'Tooltip on the bottom' }))
                     }),
                     (0, i.jsx)(C.ua7, {
+                        color: e,
                         text: "Here's right aligned tooltip text!",
                         position: 'right',
                         children: (e) => (0, i.jsx)(C.zxk, Z(D({}, e), { children: 'Tooltip on the right' }))

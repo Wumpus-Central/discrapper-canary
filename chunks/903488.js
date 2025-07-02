@@ -22,18 +22,18 @@ function d(e, t, n) {
 }
 class h {
     handleSearchStart() {
-        ((this.isFetching = !0), (this.isIndexing = !1), (this.analyticsId = null), (this.showBlockedResults = !1), (this.error = null));
+        ((this.isFetching = !0), (this.isIndexing = !1), (this.analyticsId = null), (this.error = null));
     }
     handleSearchIndexing() {
         ((this.isInitialFetchComplete = !0), (this.isIndexing = !0), (this.isHistoricalIndexing = !0), (this.isFetching = !1), (this.error = null));
     }
     handleSearchFailure(e) {
-        ((this.isFetching = !1), (this.isIndexing = !1), (this.isInitialFetchComplete = !0), (this.isHistoricalIndexing = !1), (this.error = new a.Hx(e)), (this.analyticsId = null), (this.documentsIndexed = 0), (this.showNoResultsAlt = 0.05 > Math.random()));
+        ((this.isFetching = !1), (this.isIndexing = !1), (this.isInitialFetchComplete = !0), (this.isHistoricalIndexing = !1), (this.error = new a.Hx(e)), (this.analyticsId = null), (this.documentsIndexed = 0));
     }
     handleSearchSuccess(e, t) {
         var n;
         let { analyticsId: r, cursor: s, totalResults: l, doingHistoricalIndex: a, documentsIndexed: i } = e;
-        ((this.analyticsId = r), (this.isFetching = !1), (this.isIndexing = !1), (this.isInitialFetchComplete = !0), (this.isHistoricalIndexing = a), (this.error = null), (this.documentsIndexed = i), (this.showNoResultsAlt = 0.05 > Math.random()), (this.cursor = s));
+        ((this.analyticsId = r), (this.isFetching = !1), (this.isIndexing = !1), (this.isInitialFetchComplete = !0), (this.isHistoricalIndexing = a), (this.error = null), (this.documentsIndexed = i), (this.cursor = s));
         let o = this.dedupMessages(t),
             c = this.filterBlockedMessages(o);
         ((this.messages = [...(null != (n = this.messages) ? n : []), ...c]), (this.hasNextPage = null != this.cursor), (this.totalResults = l));
@@ -45,7 +45,7 @@ class h {
         return e.filter((e) => !this.messageIds.has(e.id) && (this.messageIds.add(e.id), !0));
     }
     constructor() {
-        (d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'resultsBlocked', 0), d(this, 'showBlockedResults', !1), d(this, 'showNoResultsAlt', !1), d(this, 'hasNextPage', !1), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null));
+        (d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'hasNextPage', !1), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null));
     }
 }
 let p = new Map(),
@@ -110,9 +110,6 @@ class x extends (r = s.ZP.Store) {
     }
     getCursor(e) {
         return m(e).cursor;
-    }
-    getShowNoResultsAlt(e) {
-        return m(e).showNoResultsAlt;
     }
     getLastSearchAnalyticsId() {
         return g;

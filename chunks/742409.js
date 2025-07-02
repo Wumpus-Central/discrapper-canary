@@ -64,8 +64,28 @@ function M(A) {
     });
 }
 let E = function (A) {
+    var { className: v } = A,
+        g = (function (A, v) {
+            if (null == A) return {};
+            var g,
+                B,
+                t = (function (A, v) {
+                    if (null == A) return {};
+                    var g,
+                        B,
+                        t = {},
+                        f = Object.keys(A);
+                    for (B = 0; B < f.length; B++) ((g = f[B]), v.indexOf(g) >= 0 || (t[g] = A[g]));
+                    return t;
+                })(A, v);
+            if (Object.getOwnPropertySymbols) {
+                var f = Object.getOwnPropertySymbols(A);
+                for (B = 0; B < f.length; B++) ((g = f[B]), !(v.indexOf(g) >= 0) && Object.prototype.propertyIsEnumerable.call(A, g) && (t[g] = A[g]));
+            }
+            return t;
+        })(A, ['className']);
     return (0, B.jsxs)('div', {
-        className: o.container,
+        className: f()(o.container, v),
         children: [
             (0, B.jsx)(M, {
                 className: o.unfocusedMessage,
@@ -112,7 +132,7 @@ let E = function (A) {
                                 }));
                         }
                         return A;
-                    })({}, A)
+                    })({}, g)
                 )
             }),
             (0, B.jsx)(M, {

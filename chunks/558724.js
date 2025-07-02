@@ -17,7 +17,7 @@ var o = n(570140),
     p = n(914010),
     m = n(594174),
     f = n(981631);
-function g(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function g(e, t, n) {
         e
     );
 }
-function _(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -111,11 +111,11 @@ function j(e) {
                 }
                 let s = m.default.getCurrentUser(),
                     u = (null == s ? void 0 : s.id) === o.ownerId,
-                    g = d.Z.can(f.Plq.ADMINISTRATOR, o);
-                if ((t.includes('is_owner') && !u) || (t.includes('is_admin') && !g)) continue;
+                    _ = d.Z.can(f.Plq.ADMINISTRATOR, o);
+                if ((t.includes('is_owner') && !u) || (t.includes('is_admin') && !_)) continue;
                 null == (y = null != y ? y : {})[e.key] && (y[e.key] = e);
-                let _ = p.Z.getGuildId(),
-                    h = null != _ && _ === o.id;
+                let g = p.Z.getGuildId(),
+                    h = null != g && g === o.id;
                 if ((!t.includes('is_viewing') || h) && !i) return !0;
             }
             return !!i && !!a;
@@ -156,20 +156,20 @@ class T extends (r = a.ZP.PersistedStore) {
         return E.lastSeen;
     }
 }
-(g(T, 'displayName', 'SurveyStore'),
-    g(T, 'persistKey', 'SurveyStore'),
-    g(T, 'migrations', [
+(_(T, 'displayName', 'SurveyStore'),
+    _(T, 'persistKey', 'SurveyStore'),
+    _(T, 'migrations', [
         (e) => {
-            let t = _({}, e);
+            let t = g({}, e);
             return (delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t);
         },
         (e) => {
             var t;
-            return h(_({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
+            return h(g({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
         },
         (e) => {
             var t;
-            return h(_({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
+            return h(g({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
         }
     ]));
 let N = new T(o.Z, {

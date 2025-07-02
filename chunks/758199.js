@@ -21,8 +21,8 @@ var r,
     p = n(206295),
     m = n(70097),
     f = n(314897),
-    g = n(572004),
-    _ = n(914498),
+    _ = n(572004),
+    g = n(914498),
     h = n(217702),
     b = n(388032),
     E = n(383195);
@@ -81,7 +81,7 @@ function O(e) {
     let { title: x, header: O, info: j, staticBannerSrc: I, videoBannerSrc: S, bannerAspectRatio: T = 0, iconSrc: N, embedUrl: P, infoUrl: A, actions: w = [], trackingConfig: Z, onClickContent: R } = e;
     Z = {
         id: null != (n = null == (t = Z) ? void 0 : t.id) ? n : '0',
-        linkType: null != (r = null == t ? void 0 : t.linkType) ? r : _.Un.UNKNOWN,
+        linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
         referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : f.default.getId(),
         activityCustomId: null == t ? void 0 : t.activityCustomId,
         onView: null == t ? void 0 : t.onView,
@@ -95,20 +95,20 @@ function O(e) {
             (e) => {
                 if (!1 === U.current && e) {
                     var t;
-                    (null == Z || null == (t = Z.onView) || t.call(Z), (0, _.GF)(Z.id, Z.linkType, Z.referrerId, Z.activityCustomId), (U.current = !0));
+                    (null == Z || null == (t = Z.onView) || t.call(Z), (0, g.GF)(Z.id, Z.linkType, Z.referrerId, Z.activityCustomId), (U.current = !0));
                 }
             },
             void 0
         ),
         B =
-            g.wS && null != P
+            _.wS && null != P
                 ? (0, i.jsx)(c.zxk, {
                       look: c.zxk.Looks.BLANK,
                       size: c.zxk.Sizes.ICON,
                       'aria-label': b.intl.string(b.t.WqhZsr),
                       className: E.linkIcon,
                       onClick: () => {
-                          ((0, g.JG)(P, () => (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['L/PwZW']), c.ToastType.SUCCESS))), (0, _.Yu)(Z.id, Z.linkType));
+                          ((0, _.JG)(P, () => (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['L/PwZW']), c.ToastType.SUCCESS))), (0, g.Yu)(Z.id, Z.linkType));
                       },
                       children: (0, i.jsx)(c.xPt, {
                           size: 'xs',
@@ -141,7 +141,7 @@ function O(e) {
         q = l.useMemo(() => {
             if (null != R)
                 return (e) => {
-                    (R(e), (0, _.KX)(Z.id, Z.linkType, _.j_.CONTENT, Z.referrerId, Z.activityCustomId));
+                    (R(e), (0, g.KX)(Z.id, Z.linkType, g.j_.CONTENT, Z.referrerId, Z.activityCustomId));
                 };
         }, [R, Z]);
     return (0, i.jsxs)('div', {
@@ -243,7 +243,7 @@ function O(e) {
                                         submitting: o,
                                         children: p,
                                         onClick(e) {
-                                            (l(e), (0, _.KX)(Z.id, Z.linkType, s, Z.referrerId, Z.activityCustomId));
+                                            (l(e), (0, g.KX)(Z.id, Z.linkType, s, Z.referrerId, Z.activityCustomId));
                                         }
                                     };
                                 return u

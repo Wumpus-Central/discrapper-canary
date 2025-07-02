@@ -102,8 +102,8 @@ let m = (e) => {
             )
             .value();
         for (let e = 0; e < s && f.length < l; e++) f.push((0, r.jsx)(m, { guildId: o }, 'unknown-member-'.concat(e)));
-        let g = c - u - s;
-        for (let e = 0; e < g && f.length < l; e++)
+        let _ = c - u - s;
+        for (let e = 0; e < _ && f.length < l; e++)
             f.push(
                 (0, r.jsx)(
                     m,
@@ -114,8 +114,8 @@ let m = (e) => {
                     'empty-member-'.concat(e)
                 )
             );
-        let _ = Math.max(Math.min(c - f.length, 99), 0);
-        if (1 === _) {
+        let g = Math.max(Math.min(c - f.length, 99), 0);
+        if (1 === g) {
             let e = n[l];
             f.push(
                 (0, r.jsx)(
@@ -134,10 +134,10 @@ let m = (e) => {
                 className: p.partyMembers,
                 children: [
                     f,
-                    _ > 1
+                    g > 1
                         ? (0, r.jsxs)('div', {
                               className: p.partyMemberOverflow,
-                              children: ['+', _]
+                              children: ['+', g]
                           })
                         : null
                 ]

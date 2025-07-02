@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(453070),
     m = n(373228),
     f = n(419922),
-    g = n(217588),
-    _ = n(981631),
+    _ = n(217588),
+    g = n(981631),
     h = n(474936),
     b = n(282940);
 function E(e) {
@@ -61,7 +61,7 @@ function y(e, t) {
 let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     x = (e) => {
         null != e &&
-            s.ZP.trackWithMetadata(_.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+            s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                 type: h.cd.STICKER_IN_MESSAGE_HOVER,
                 expression_id: e.id,
                 expression_name: e.name,
@@ -73,7 +73,7 @@ let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
         let { renderableSticker: t, channel: n, isInteracting: l } = e,
             s = i.useRef(null),
             [d, m] = i.useState(!0),
-            [_, h] = i.useState(String(Date.now())),
+            [g, h] = i.useState(String(Date.now())),
             [v] = (0, p.XW)(t, l),
             { analyticsLocations: O } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
             j = (0, r.jsxs)('span', {
@@ -92,13 +92,13 @@ let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             children: (0, r.jsx)(a.yRy, {
                 align: 'center',
                 animation: a.yRy.Animation.TRANSLATE,
-                positionKey: _,
+                positionKey: g,
                 onRequestClose: () => {
                     m(!0);
                 },
                 renderPopout: (e) =>
                     (0, r.jsx)(
-                        g.Z,
+                        _.Z,
                         y(E({}, e), {
                             renderableSticker: t,
                             channel: n,

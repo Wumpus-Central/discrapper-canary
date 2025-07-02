@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(317381),
     m = n(100527),
     f = n(906732),
-    g = n(758199),
-    _ = n(943762),
+    _ = n(758199),
+    g = n(943762),
     h = n(914498),
     b = n(880251),
     E = n(515344),
@@ -124,7 +124,7 @@ function D(e) {
     var t, n;
     let l,
         { invite: a, message: o, getAcceptInviteContext: u } = e,
-        { approximate_member_count: g, approximate_presence_count: _, target_type: h, target_application: b } = a;
+        { approximate_member_count: _, approximate_presence_count: g, target_type: h, target_application: b } = a;
     s()(h === w.Iq.EMBEDDED_APPLICATION && null != b, 'invalid application invite');
     let E = i.useCallback(() => {
             var e;
@@ -194,8 +194,8 @@ function D(e) {
                   isMember: H,
                   channel: k,
                   guild: C,
-                  members: g,
-                  membersOnline: _,
+                  members: _,
+                  membersOnline: g,
                   isActivityActive: R,
                   submitting: G,
                   isDisabled: V,
@@ -231,7 +231,7 @@ function M(e) {
             [x, m, y, s, f, C]
         );
     return (0, r.jsx)(
-        g.W,
+        _.W,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -278,7 +278,7 @@ function M(e) {
                         }),
                         s
                             ? A > 0 &&
-                              (0, r.jsx)(_.K, {
+                              (0, r.jsx)(g.K, {
                                   activityUsers: o,
                                   guildId: u.id,
                                   activityText: Z.intl.string(Z.t.BMTj29)

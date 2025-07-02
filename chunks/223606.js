@@ -23,8 +23,8 @@ function f(e, t, n) {
         e
     );
 }
-let g = {},
-    _ = 0,
+let _ = {},
+    g = 0,
     h = {},
     b = {},
     E = (e, t) => {
@@ -35,11 +35,11 @@ let g = {},
                 messageData: e,
                 errorMessage: (0, d.uF)(e, t)
             };
-        ((g[n] = r), _++);
+        ((_[n] = r), g++);
     },
-    y = (e) => g[e],
+    y = (e) => _[e],
     C = (e) => {
-        (null != g[e] && delete g[e], _++);
+        (null != _[e] && delete _[e], g++);
     };
 function x(e) {
     let { messageData: t, errorResponseBody: n } = e;
@@ -69,11 +69,11 @@ function v(e) {
 }
 class O extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(c.Z), null != e && ((g = e.automodFailedMessages), (h = e.mentionRaidDetectionByGuild)));
+        (this.waitFor(c.Z), null != e && ((_ = e.automodFailedMessages), (h = e.mentionRaidDetectionByGuild)));
     }
     getState() {
         return {
-            automodFailedMessages: g,
+            automodFailedMessages: _,
             mentionRaidDetectionByGuild: h,
             lastIncidentAlertMessage: b
         };
@@ -83,7 +83,7 @@ class O extends (r = i.ZP.PersistedStore) {
         return null == e ? null : null != (t = y(e)) ? t : null;
     }
     getMessagesVersion() {
-        return _;
+        return g;
     }
     getMentionRaidDetected(e) {
         var t;
@@ -97,7 +97,7 @@ class O extends (r = i.ZP.PersistedStore) {
 (f(O, 'displayName', 'GuildAutomodMessageStore'), f(O, 'persistKey', 'GuildAutomodMessages'));
 let j = new O(l.Z, {
     CONNECTION_OPEN: function (e) {
-        return 0 !== Object.keys(g).length && ((g = {}), _++, !0);
+        return 0 !== Object.keys(_).length && ((_ = {}), g++, !0);
     },
     LOAD_MESSAGES_SUCCESS: v,
     LOCAL_MESSAGES_LOADED: v,

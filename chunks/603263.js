@@ -1,10 +1,11 @@
 n.d(t, {
+    Gn: () => y,
     Nz: () => m,
-    QQ: () => g,
+    QQ: () => _,
     QY: () => E,
     Vj: () => p,
-    Vs: () => y,
-    j8: () => _,
+    Vs: () => C,
+    j8: () => g,
     oO: () => f,
     qt: () => h,
     u$: () => b,
@@ -121,13 +122,13 @@ function f(e, t, n) {
         p = a.Z.getTotalResults(r);
     return i < 0 || i > p ? void 0 : d(r, u(c({}, o), { offset: i }), l);
 }
-function g(e) {
+function _(e) {
     r.Z.dispatch({
         type: 'SEARCH_CLEAR_HISTORY',
         searchId: e
     });
 }
-function _(e, t) {
+function g(e, t) {
     null != e &&
         r.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CHANGE',
@@ -159,7 +160,13 @@ function E(e, t) {
         showBlocked: t
     });
 }
-function y(e, t, n) {
+function y(e) {
+    r.Z.dispatch({
+        type: 'SEARCH_SET_SHOW_NO_RESULTS_ALT',
+        searchId: e
+    });
+}
+function C(e, t, n) {
     r.Z.dispatch({
         type: 'SEARCH_RESULTS_QUERY_UPDATE',
         searchId: e,

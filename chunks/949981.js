@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(131704),
     m = n(592125),
     f = n(594174),
-    g = n(823379),
-    _ = n(358595),
+    _ = n(823379),
+    g = n(358595),
     h = n(981631),
     b = n(388032),
     E = n(273254);
@@ -39,7 +39,7 @@ function y(e) {
                 ));
         }, [n, l, I, S, C, x]);
     if (null == j) {
-        if (null == n.channel) return (0, r.jsx)(_.Z, {});
+        if (null == n.channel) return (0, r.jsx)(g.Z, {});
         ((j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []));
     } else {
         t = j.recipients.reduce((e, t) => {
@@ -54,7 +54,7 @@ function y(e) {
         (N =
             t.length > 0
                 ? t
-                      .filter(g.lm)
+                      .filter(_.lm)
                       .map((e) => e.username)
                       .join(', ')
                 : b.intl.string(b.t.LJpTRE));
