@@ -50057,6 +50057,10 @@ html.disable-forced-colors * {
     height: 32px
 }
 
+.themePillItemSelected__5a15d {
+    border: 1px solid var(--border-faint)
+}
+
 .container__68a18 {
     background: var(--bg-overlay-5)
 }
