@@ -1,12 +1,12 @@
-(n.d(t, { Z: () => i }), n(388685));
-var r = n(570140);
-let i = {
+(n.d(t, { Z: () => r }), n(388685));
+var i = n(570140);
+let r = {
     setEnabled(e) {
         this.update({ enabled: e });
     },
     update(e) {
         for (let t of Object.keys(e))
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'STREAMER_MODE_UPDATE',
                 key: t,
                 value: e[t]

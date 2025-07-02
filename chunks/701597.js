@@ -97,19 +97,28 @@ class d {
 class f {
     getQuality(e) {
         let t = this.connection.getLocalWant(e),
-            n = this.isStreamContext ? this.getGoliveQuality(t) : this.getVideoQuality(t);
+            n = 0;
+        if (null != e) {
+            let t = this.connection.getRemoteVideoSinkPixelCount(e);
+            if (null != this.lastGoLivePixelCount[e] && this.lastGoLivePixelCount[e] > 0) {
+                let r = t / this.lastGoLivePixelCount[e];
+                n = r > 1.05 || r < 0.95 ? t : this.lastGoLivePixelCount[e];
+            } else n = t;
+            this.lastGoLivePixelCount[e] = n;
+        }
+        let r = this.isStreamContext ? this.getGoliveQuality(t, n) : this.getVideoQuality(t);
         if (null != this.qualityOverwrite) {
-            var r, i, a;
+            var i, a, o;
             return new u({
-                encode: d.extend(n.encode, this.qualityOverwrite.encode),
-                capture: d.extend(n.capture, this.qualityOverwrite.capture),
-                bitrateMin: null != (r = this.qualityOverwrite.bitrateMin) ? r : n.bitrateMin,
-                bitrateMax: null != (i = this.qualityOverwrite.bitrateMax) ? i : n.bitrateMax,
-                bitrateTarget: null != (a = this.qualityOverwrite.bitrateTarget) ? a : n.bitrateTarget,
-                localWant: n.localWant
+                encode: d.extend(r.encode, this.qualityOverwrite.encode),
+                capture: d.extend(r.capture, this.qualityOverwrite.capture),
+                bitrateMin: null != (i = this.qualityOverwrite.bitrateMin) ? i : r.bitrateMin,
+                bitrateMax: null != (a = this.qualityOverwrite.bitrateMax) ? a : r.bitrateMax,
+                bitrateTarget: null != (o = this.qualityOverwrite.bitrateTarget) ? o : r.bitrateTarget,
+                localWant: r.localWant
             });
         }
-        return n;
+        return r;
     }
     applyQualityConstraints(e, t) {
         let n = this.getQuality(t);
@@ -149,6 +158,9 @@ class f {
     shouldEnableGoliveSimulcastForHqQuality(e) {
         return !!this.goliveSimulcastEnabled && ((0 === e.width && 0 === e.height) || e.width * e.height > i.ef * i.ru);
     }
+    setGoLiveUsePixelCounts(e) {
+        this.goliveUsePixelCounts = e;
+    }
     getVideoQuality(e) {
         let t = this.ladder.getResolution(e),
             n = this.options.videoBitrate.min * t.budgetPortion,
@@ -166,8 +178,34 @@ class f {
             localWant: e
         });
     }
-    getGoliveQuality(e) {
-        return this.goliveSimulcastEnabled && e < 100 ? this.getGoliveLQQuality() : this.goliveMaxQuality;
+    getGoliveQuality(e, t) {
+        if (this.goliveSimulcastEnabled && e < 100) return this.getGoliveLQQuality();
+        let n = t / (null != (s = null == (o = this.goliveMaxQuality.encode) ? void 0 : o.pixelCount) ? s : 1);
+        if (n >= 1 || n <= 0 || !this.goliveUsePixelCounts) return this.goliveMaxQuality;
+        let r = this.goliveMaxQuality.bitrateMin * n,
+            i = this.goliveMaxQuality.bitrateMax * n,
+            a = null != this.goliveMaxQuality.bitrateTarget ? this.goliveMaxQuality.bitrateTarget * n : void 0;
+        var o,
+            s,
+            l = void 0;
+        if (null != this.goliveMaxQuality.encode) {
+            let e = Math.ceil(this.goliveMaxQuality.encode.width * Math.sqrt(n)),
+                t = Math.ceil(this.goliveMaxQuality.encode.height * Math.sqrt(n));
+            l = new d({
+                width: e,
+                height: t,
+                framerate: this.goliveMaxQuality.encode.framerate,
+                pixelCount: e * t
+            });
+        }
+        return new u({
+            encode: l,
+            capture: this.goliveMaxQuality.capture,
+            bitrateMin: Math.max(r, this.options.videoBitrateFloor),
+            bitrateMax: Math.max(i, this.options.videoBitrateFloor),
+            bitrateTarget: null != a ? Math.max(a, this.options.videoBitrateFloor) : void 0,
+            localWant: e
+        });
     }
     getDefaultGoliveQuality() {
         return new u({
@@ -211,6 +249,6 @@ class f {
         });
     }
     constructor(e, t, n = i.kS) {
-        (a(this, 'contextType', void 0), a(this, 'connection', void 0), a(this, 'options', void 0), a(this, 'isMuted', void 0), a(this, 'qualityOverwrite', void 0), a(this, 'goliveMaxQuality', void 0), a(this, 'goliveSimulcastEnabled', void 0), a(this, 'goliveSimulcastLQBitrateMax', void 0), a(this, 'goliveSimulcastLQBitrateTarget', void 0), a(this, 'isStreamContext', void 0), a(this, 'ladder', void 0), (this.contextType = e), (this.connection = t), (this.options = n), (this.isMuted = !1), (this.isStreamContext = this.contextType === i.Yn.STREAM), (this.ladder = new r.x(n)), (this.goliveMaxQuality = this.getDefaultGoliveQuality()), (this.goliveSimulcastEnabled = !1), (this.goliveSimulcastLQBitrateMax = i.pk), (this.goliveSimulcastLQBitrateTarget = i.pk));
+        (a(this, 'contextType', void 0), a(this, 'connection', void 0), a(this, 'options', void 0), a(this, 'isMuted', void 0), a(this, 'qualityOverwrite', void 0), a(this, 'goliveMaxQuality', void 0), a(this, 'goliveSimulcastEnabled', void 0), a(this, 'goliveSimulcastLQBitrateMax', void 0), a(this, 'goliveSimulcastLQBitrateTarget', void 0), a(this, 'goliveUsePixelCounts', void 0), a(this, 'isStreamContext', void 0), a(this, 'ladder', void 0), a(this, 'lastGoLivePixelCount', void 0), (this.contextType = e), (this.connection = t), (this.options = n), (this.isMuted = !1), (this.isStreamContext = this.contextType === i.Yn.STREAM), (this.ladder = new r.x(n)), (this.goliveMaxQuality = this.getDefaultGoliveQuality()), (this.goliveSimulcastEnabled = !1), (this.goliveUsePixelCounts = !1), (this.goliveSimulcastLQBitrateMax = i.pk), (this.goliveSimulcastLQBitrateTarget = i.pk), (this.lastGoLivePixelCount = {}));
     }
 }

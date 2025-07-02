@@ -103,6 +103,9 @@ class d extends a.Z {
     configureGoLiveSimulcast(e, t) {
         this.videoQualityManager.configGoLiveSimulcast(e, t);
     }
+    setGoLiveUsePixelCounts(e) {
+        this.videoQualityManager.setGoLiveUsePixelCounts(e);
+    }
     applyQualityConstraints() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             t = arguments.length > 1 ? arguments[1] : void 0;
@@ -148,6 +151,10 @@ class d extends a.Z {
     }
     getRemoteVideoSinkWants(e) {
         return this.remoteVideoSinkWants[e];
+    }
+    getRemoteVideoSinkPixelCount(e) {
+        var t, n;
+        return void 0 === e ? 0 : null != (n = null == (t = this.remoteVideoSinkWants.pixelCounts) ? void 0 : t[e]) ? n : 0;
     }
     async emitStats() {
         let e = await this.getStats();

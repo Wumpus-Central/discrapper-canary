@@ -116,12 +116,12 @@ let eJ = () => {
         let e = [];
         return (V.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
     },
-    e1 = () => {
+    e3 = () => {
         let e = e0(),
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(R.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(a.IGR, { text: eK.intl.string(eK.t.y2b7CA) }) : null;
     },
-    e3 = eD.Z,
+    e1 = eD.Z,
     e8 = (e) => {
         let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: j, impressionSource: N, numOfPendingFamilyRequests: R, isOverlaySupported: V, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e6, isKeywordFilteringEnabled: e2, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tg, isInputProfileCustom: tp, isGoreContentFilteringEnabled: th } = e;
         return Object.freeze({
@@ -270,7 +270,7 @@ let eJ = () => {
                 label: eK.intl.string(eK.t['vi7f+v']),
                 ariaLabel: eK.intl.string(eK.t['vi7f+v']),
                 element: L.Z,
-                newIndicator: (0, i.jsx)(e1, {}),
+                newIndicator: (0, i.jsx)(e3, {}),
                 newIndicatorDismissibleContentTypes: [...e0()],
                 notice: {
                     stores: [Y.Z, A.Z],
@@ -1407,7 +1407,7 @@ let eJ = () => {
                 section: ez.oAB.LINUX,
                 searchableTitles: [eK.intl.string(eK.t['7pPjTU'])],
                 label: eK.intl.string(eK.t['7pPjTU']),
-                element: e3,
+                element: e1,
                 predicate: () => X.isPlatformEmbedded && (0, X.isLinux)()
             },
             [eF.s6.STREAMER_MODE]: {

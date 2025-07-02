@@ -1,45 +1,47 @@
-(n.d(t, { Z: () => g }), n(388685), n(704826), n(35282), n(539854));
+(n.d(t, { Z: () => h }), n(388685), n(704826), n(35282), n(539854));
 var i = n(255367);
 n(73800);
-var r = n(525654),
+var r = n(120356),
     s = n.n(r),
-    l = n(481060),
-    a = n(579806),
-    o = n(304761),
-    c = n(320161),
-    d = n(998502),
-    u = n(388032),
-    m = n(980832);
-function g() {
-    var e, t, n, r, g;
-    let p = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        h = '415325',
-        f = 'f5a73dd82da5a2f2ef7191e3b60c95d9ddabba76'.substring(0, 7),
-        b = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
-        x = null === a.Z || void 0 === a.Z || null == (e = (t = a.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
-        _ = null === a.Z || void 0 === a.Z || null == (n = (r = a.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
-        E = null == (g = o.C.getCurrentBuildOverride().overrides) ? void 0 : g.discord_web,
-        j = (function () {
+    l = n(525654),
+    a = n.n(l),
+    o = n(481060),
+    c = n(579806),
+    d = n(304761),
+    u = n(320161),
+    m = n(998502),
+    g = n(388032),
+    p = n(980832);
+function h() {
+    var e, t, n, r, l;
+    let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
+        f = '415392',
+        b = '67e799d4ca1493923dc4b82b6cd4f03325f7343c'.substring(0, 7),
+        x = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
+        _ = null === c.Z || void 0 === c.Z || null == (e = (t = c.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
+        E = null === c.Z || void 0 === c.Z || null == (n = (r = c.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
+        j = null == (l = d.C.getCurrentBuildOverride().overrides) ? void 0 : l.discord_web,
+        C = (function () {
             var e;
-            let t = null === s() || void 0 === s() || null == (e = s().os) ? void 0 : e.toString();
-            if (null == t || null == a.Z) return null;
-            let n = a.Z.os.release,
-                [i, r, l] = d.ZP.parsedOSRelease;
-            return (t.includes('Windows 10') && void 0 !== l && l >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')'));
+            let t = null === a() || void 0 === a() || null == (e = a().os) ? void 0 : e.toString();
+            if (null == t || null == c.Z) return null;
+            let n = c.Z.os.release,
+                [i, r, s] = m.ZP.parsedOSRelease;
+            return (t.includes('Windows 10') && void 0 !== s && s >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i >= 25 ? i + 1 : i - 9)), ''.concat(t, ' (').concat(n, ')'));
         })(),
-        C = [p, h, '('.concat(f, ')')];
+        O = [h, f, '('.concat(b, ')')];
     return (
-        null != b && (C.push('Host '.concat(b)), null != _ && C.push(_.toLowerCase()), null != x && C.push('('.concat(x, ')'))),
-        C.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
-        null != j && C.push(j),
-        (0, i.jsx)(c.Z, {
-            copyValue: C.join(' '),
-            text: u.intl.string(u.t['9Al4QU']),
+        null != x && (O.push('Host '.concat(x)), null != E && O.push(E.toLowerCase()), null != _ && O.push('('.concat(_, ')'))),
+        O.push('Build Override: '.concat(null != j ? j.id : 'N/A')),
+        null != C && O.push(C),
+        (0, i.jsx)(u.Z, {
+            copyValue: O.join(' '),
+            text: g.intl.string(g.t['9Al4QU']),
             'aria-label': !1,
             children: (e) => {
                 var t, n;
                 return (0, i.jsx)(
-                    l.P3F,
+                    o.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -67,61 +69,61 @@ function g() {
                     })({}, e)),
                     (n = n =
                         {
-                            'aria-label': u.intl.string(u.t['9Al4QU']),
-                            className: m.clickable,
+                            'aria-label': g.intl.string(g.t['9Al4QU']),
+                            className: p.clickable,
                             children: (0, i.jsxs)('div', {
-                                className: m.info,
+                                className: p.info,
                                 'data-mtctest-ignore': 'true',
                                 children: [
-                                    (0, i.jsxs)(l.Text, {
+                                    (0, i.jsxs)(o.Text, {
                                         tag: 'span',
-                                        className: m.line,
+                                        className: p.line,
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
                                         children: [
-                                            p,
-                                            ' ',
                                             h,
                                             ' ',
+                                            f,
+                                            ' ',
                                             (0, i.jsxs)('span', {
-                                                className: m.versionHash,
-                                                children: ['(', f, ')']
+                                                className: p.versionHash,
+                                                children: ['(', b, ')']
                                             })
                                         ]
                                     }),
                                     ' ',
-                                    null != E &&
-                                        (0, i.jsx)(l.Text, {
+                                    null != j &&
+                                        (0, i.jsx)(o.Text, {
                                             tag: 'span',
-                                            className: m.line,
+                                            className: p.line,
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
                                             children: (0, i.jsxs)('span', {
-                                                className: m.versionHash,
-                                                children: ['Build Override: ', E.id]
+                                                className: p.versionHash,
+                                                children: ['Build Override: ', j.id]
                                             })
                                         }),
-                                    null != b
+                                    null != x
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsxs)(l.Text, {
+                                                  (0, i.jsxs)(o.Text, {
                                                       tag: 'span',
-                                                      className: m.line,
+                                                      className: p.line,
                                                       variant: 'text-xs/normal',
                                                       color: 'text-muted',
                                                       children: [
                                                           'Host ',
-                                                          b,
+                                                          x,
                                                           ' ',
-                                                          null != _
+                                                          null != E
                                                               ? (0, i.jsxs)('span', {
-                                                                    className: m.appArch,
-                                                                    children: [_.toLowerCase(), ' ']
+                                                                    className: p.appArch,
+                                                                    children: [E.toLowerCase(), ' ']
                                                                 })
                                                               : null,
-                                                          null != x
+                                                          null != _
                                                               ? (0, i.jsxs)('span', {
-                                                                    children: ['(', x, ')']
+                                                                    children: ['(', _, ')']
                                                                 })
                                                               : null
                                                       ]
@@ -130,13 +132,13 @@ function g() {
                                               ]
                                           })
                                         : null,
-                                    null != j
-                                        ? (0, i.jsx)(l.Text, {
+                                    null != C
+                                        ? (0, i.jsx)(o.Text, {
                                               tag: 'span',
-                                              className: m.line,
+                                              className: s()(p.line, p.os),
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
-                                              children: j
+                                              children: C
                                           })
                                         : null
                                 ]
