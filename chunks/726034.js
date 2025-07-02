@@ -148,7 +148,8 @@ function F(e) {
     return (0, m.Nj)(l.z.CUSTOM_THEME_COACHMARK) ? (n ? (0, r.jsx)(Z, { markAsDismissed: t }) : (0, r.jsx)(V, {})) : (0, r.jsx)(Z, { markAsDismissed: () => (0, m.Q3)(l.z.CUSTOM_THEME_COACHMARK) });
 }
 function Z(e) {
-    let { markAsDismissed: t } = e;
+    let { markAsDismissed: t } = e,
+        n = (0, b.m)(w.p9.TIER_2);
     return (0, r.jsxs)('div', {
         className: x.coachmarkHeaderContainer,
         children: [
@@ -167,7 +168,7 @@ function Z(e) {
                         className: x.subtitle,
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        children: L.intl.string(D.default.TRCE4u)
+                        children: L.intl.string(n ? D.default.TRCE4u : D.default['UV/Vtr'])
                     })
                 ]
             })

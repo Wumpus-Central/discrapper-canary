@@ -1,56 +1,56 @@
-n.d(t, { Z: () => h });
-var i = n(255367),
-    a = n(73800),
-    o = n(442837),
-    r = n(481060),
+n.d(e, { Z: () => x });
+var o = n(255367),
+    r = n(73800),
+    i = n(442837),
+    a = n(481060),
     l = n(100527),
     c = n(906732),
     s = n(767714),
-    d = n(411477),
-    u = n(594174),
-    f = n(626135),
-    g = n(74538),
-    p = n(981631),
-    _ = n(486324),
-    m = n(474936),
-    N = n(388032),
-    x = n(886563);
-function h(e) {
-    let { analyticsSection: t, type: n } = e,
-        h = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        A = g.ZP.canUseAnimatedAvatar(h),
-        P = g.ZP.canUsePremiumProfileCustomization(h),
-        b = (n === _.pC.BANNER && P) || (n === _.pC.AVATAR && A),
-        { sourceAnalyticsLocations: E } = (0, c.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
+    u = n(411477),
+    _ = n(594174),
+    d = n(626135),
+    m = n(74538),
+    f = n(981631),
+    p = n(486324),
+    b = n(474936),
+    g = n(388032),
+    v = n(886563);
+function x(t) {
+    let { analyticsSection: e, type: n } = t,
+        x = (0, i.e7)([_.default], () => _.default.getCurrentUser()),
+        y = m.ZP.canUseAnimatedAvatar(x),
+        C = m.ZP.canUsePremiumProfileCustomization(x),
+        h = (n === p.pC.BANNER && C) || (n === p.pC.AVATAR && y),
+        { sourceAnalyticsLocations: A } = (0, c.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
-        (a.useEffect(() => {
-            b ||
-                f.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: t,
-                    location_stack: E
+        (r.useEffect(() => {
+            h ||
+                d.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: e,
+                    location_stack: A
                 });
-        }, [b, t, E]),
-        b)
+        }, [h, e, A]),
+        h)
     )
         return null;
-    let R = (0, i.jsx)(s.Z, {
-        className: x.__invalid_getNitroLink,
-        size: r.zxk.Sizes.SMALL,
-        look: r.zxk.Looks.LINK,
-        color: r.zxk.Colors.LINK,
-        subscriptionTier: m.Si.TIER_2,
-        textOptions: { textOverride: N.intl.format(N.t['944tDg'], {}) },
+    let N = (0, o.jsx)(s.Z, {
+        className: v.__invalid_getNitroLink,
+        size: a.zxk.Sizes.SMALL,
+        look: a.zxk.Looks.LINK,
+        color: a.zxk.Colors.LINK,
+        subscriptionTier: b.Si.TIER_2,
+        textOptions: { textOverride: g.intl.format(g.t['944tDg'], {}) },
         showIcon: !1,
         premiumModalAnalyticsLocation: {
-            section: t,
-            object: p.qAy.BUTTON_CTA
+            section: e,
+            object: f.qAy.BUTTON_CTA
         },
         disableShine: !0
     });
-    return (0, i.jsx)(d.Z, {
+    return (0, o.jsx)(u.Z, {
         reducedRightPadding: !0,
-        className: x.nitroPreviewUpsell,
-        text: N.intl.format(N.t.Og8039, {}),
-        button: R
+        className: v.nitroPreviewUpsell,
+        text: g.intl.format(g.t.Og8039, {}),
+        button: N
     });
 }

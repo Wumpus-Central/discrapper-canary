@@ -1,93 +1,90 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(218867),
-    o = n(388081),
-    s = n(74538),
-    l = n(28546),
-    c = n(122567),
-    u = n(98528),
-    d = n(204922);
-let f = 20,
-    _ = i.forwardRef(function (e, t) {
-        let { categories: n, store: _, hasSearchResults: p, listPadding: h, renderRow: m, renderSection: g, renderSectionHeader: E, renderSectionFooter: b, renderInspector: y, renderEmptySearchState: O, rowCount: v, rowCountBySection: I, rowHeight: T, sectionHeaderHeight: S, sectionFooterHeight: A, renderUpsell: N, setShowUpsell: C } = e,
-            R = i.useRef(!1),
-            P = i.useRef(null),
-            w = (0, l.Iu)((e) => e.searchQuery),
-            D = _.useStore((e) => e.activeCategoryIndex),
-            L = o.C.useExperiment({ location: 'ExpressionPickerList' }).moveDefaultToBottom,
-            x = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
-            k = (0, u.Uf)({
-                listRef: P,
-                searchQuery: w,
-                nitroLockedSectionStates: x,
-                setShowUpsell: C
+    o = n(74538),
+    s = n(28546),
+    l = n(122567),
+    c = n(98528),
+    u = n(204922);
+let d = 20,
+    f = i.forwardRef(function (e, t) {
+        let { categories: n, store: f, hasSearchResults: _, listPadding: p, renderRow: h, renderSection: m, renderSectionHeader: g, renderSectionFooter: E, renderInspector: b, renderEmptySearchState: y, rowCount: O, rowCountBySection: v, rowHeight: I, sectionHeaderHeight: T, sectionFooterHeight: S, renderUpsell: A, setShowUpsell: N } = e,
+            C = i.useRef(!1),
+            R = i.useRef(null),
+            P = (0, s.Iu)((e) => e.searchQuery),
+            w = f.useStore((e) => e.activeCategoryIndex),
+            D = n.map((e) => ((0, o._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+            L = (0, c.Uf)({
+                listRef: R,
+                searchQuery: P,
+                nitroLockedSectionStates: D,
+                setShowUpsell: N
             }),
-            M = (0, u.Qs)({
-                activeCategoryIndex: D,
-                isScrolling: R,
-                listRef: P,
-                onActiveCategoryIndexChange: _.setActiveCategoryIndex,
-                scrollOffset: f,
-                searchQuery: w
+            x = (0, c.Qs)({
+                activeCategoryIndex: w,
+                isScrolling: C,
+                listRef: R,
+                onActiveCategoryIndexChange: f.setActiveCategoryIndex,
+                scrollOffset: d,
+                searchQuery: P
             }),
-            j = i.useCallback(
+            k = i.useCallback(
                 (e) => {
-                    if ((k(e), M(e), L)) {
-                        let t = (0, c.y)({
-                            listRef: P,
-                            searchQuery: w,
-                            nitroLockedSectionStates: x,
-                            scrollTop: e
-                        });
-                        l.Iu.setState({
-                            isNitroLockedSectionVisible: t.isNitroLockedSectionVisible,
-                            areOnlyNitroLockedSectionsVisible: t.areOnlyNitroLockedSectionsVisible
-                        });
-                    }
+                    (L(e), x(e));
+                    let t = (0, l.y)({
+                        listRef: R,
+                        searchQuery: P,
+                        nitroLockedSectionStates: D,
+                        scrollTop: e
+                    });
+                    s.Iu.setState({
+                        isNitroLockedSectionVisible: t.isNitroLockedSectionVisible,
+                        areOnlyNitroLockedSectionsVisible: t.areOnlyNitroLockedSectionsVisible
+                    });
                 },
-                [k, M, w, x, L]
+                [L, x, P, D]
             );
         return (
-            (0, u.Xs)({
-                searchQuery: w,
-                activeCategoryIndex: D,
-                listRef: P
+            (0, c.Xs)({
+                searchQuery: P,
+                activeCategoryIndex: w,
+                listRef: R
             }),
             i.useImperativeHandle(
                 t,
                 () => ({
                     scrollTo: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = P.current) ? void 0 : e.scrollTo(...n);
+                        return null == (e = R.current) ? void 0 : e.scrollTo(...n);
                     },
                     getRowDescriptors: () => {
                         var e, t;
-                        return null != (t = null == (e = P.current) ? void 0 : e.getRowDescriptors()) ? t : [];
+                        return null != (t = null == (e = R.current) ? void 0 : e.getRowDescriptors()) ? t : [];
                     },
                     getSectionDescriptors: () => {
                         var e, t;
-                        return null != (t = null == (e = P.current) ? void 0 : e.getSectionDescriptors()) ? t : [];
+                        return null != (t = null == (e = R.current) ? void 0 : e.getSectionDescriptors()) ? t : [];
                     },
                     scrollToSectionTop: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = P.current) ? void 0 : e.scrollToSectionTop(...n);
+                        return null == (e = R.current) ? void 0 : e.scrollToSectionTop(...n);
                     },
                     scrollRowIntoView: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = P.current) ? void 0 : e.scrollRowIntoView(...n);
+                        return null == (e = R.current) ? void 0 : e.scrollRowIntoView(...n);
                     },
                     getScrollerNode: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = P.current) ? void 0 : e.getScrollerNode(...n);
+                        return null == (e = R.current) ? void 0 : e.getScrollerNode(...n);
                     },
                     scrollIntoViewNode: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = P.current) ? void 0 : e.scrollIntoViewNode(...n);
+                        return null == (e = R.current) ? void 0 : e.scrollIntoViewNode(...n);
                     },
                     getListDimensions: function () {
                         for (var e, t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-                        return null != (t = null == (e = P.current) ? void 0 : e.getListDimensions(...r))
+                        return null != (t = null == (e = R.current) ? void 0 : e.getListDimensions(...r))
                             ? t
                             : {
                                   height: -1,
@@ -98,28 +95,28 @@ let f = 20,
                 []
             ),
             (0, r.jsxs)('div', {
-                className: d.wrapper,
+                className: u.wrapper,
                 children: [
-                    w.length > 0 && !p && null != O
-                        ? O()
+                    P.length > 0 && !_ && null != y
+                        ? y()
                         : (0, r.jsx)(a.Z, {
                               role: 'none presentation',
-                              listPadding: h,
-                              onScroll: j,
-                              renderRow: m,
-                              renderSection: g,
-                              renderSectionHeader: E,
-                              renderSectionFooter: b,
-                              rowCount: v,
-                              rowCountBySection: I,
-                              rowHeight: T,
-                              sectionHeaderHeight: S,
-                              sectionFooterHeight: A,
+                              listPadding: p,
+                              onScroll: k,
+                              renderRow: h,
+                              renderSection: m,
+                              renderSectionHeader: g,
+                              renderSectionFooter: E,
+                              rowCount: O,
+                              rowCountBySection: v,
+                              rowHeight: I,
+                              sectionHeaderHeight: T,
+                              sectionFooterHeight: S,
                               stickyHeaders: !0,
-                              ref: P
+                              ref: R
                           }),
-                    null == N ? void 0 : N(),
-                    null == y ? void 0 : y()
+                    null == A ? void 0 : A(),
+                    null == b ? void 0 : b()
                 ]
             })
         );

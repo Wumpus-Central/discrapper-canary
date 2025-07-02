@@ -4698,6 +4698,7 @@ var nF = (function (e) {
             (e.NSFW_SERVER_AGE_RESTRICTION = '1500005292701'),
             (e.SUMMER_BOGO_2025 = '32702667550743'),
             (e.FLAG_TO_MOD = '360044103651'),
+            (e.CUSTOM_THEMES = '207260127#h_01JWYFJDVN6E9G80JTN2N86876'),
             e
         );
     })({}),
