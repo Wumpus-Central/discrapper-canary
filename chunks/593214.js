@@ -1,8 +1,8 @@
 (n.d(t, {
-    Mt: () => b,
+    Mt: () => v,
     li: () => f,
     s4: () => h,
-    up: () => v,
+    up: () => b,
     zv: () => g
 }),
     n(388685),
@@ -33,10 +33,10 @@ function g() {
         name: e.channel.name
     }));
 }
-function b() {
+function v() {
     return (0, l.e7)([o.Z], () => o.Z.getGuildId()) === c.I_8;
 }
-function v() {
+function b() {
     let { isFavoritesPerk: e } = (0, d.z)('useFavoriteAdded'),
         t = (0, u.r)(),
         n = i.useCallback(() => {

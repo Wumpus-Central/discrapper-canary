@@ -44,7 +44,7 @@ function S(e) {
     return !!(0, d.Z)(n) && !!(r || (0, d.h)(null != n ? n : void 0) || T(n, t));
 }
 function A(e, t) {
-    if (!t.hasFeature(y.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(y.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
+    if (!t.features.has(y.oNc.CREATOR_MONETIZABLE) && !t.features.has(y.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
     let n = _.Z.isViewingServerShop(t.id);
     for (let r of Object.keys(e.permissionOverwrites)) {
         let i = g.Z.getRole(t.id, r);
@@ -59,8 +59,8 @@ function A(e, t) {
         let a = e.permissionOverwrites[r];
         if ((0, f.TG)(e, a)) return !0;
     }
-    let r = g.Z.getRole(t.id, t.getEveryoneRoleId()),
-        a = null != r && !i.e$(r.permissions, y.Plq.VIEW_CHANNEL),
+    let r = g.Z.getEveryoneRole(t),
+        a = !i.e$(r.permissions, y.Plq.VIEW_CHANNEL),
         o = (0, f.wB)(e, e.permissionOverwrites[t.id]);
     if (a && !o) {
         for (let e of Object.values(g.Z.getRoles(t.id)))
@@ -80,7 +80,7 @@ function N(e) {
     let t = E.Z.getGuild(e);
     if (null == t) return;
     let n = (v[e] = new Set());
-    if (!t.hasFeature(y.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || (!(0, u.kT)(e) && !(0, s.Rw)(t))) return;
+    if (!t.features.has(y.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || (!(0, u.kT)(e) && !(0, s.Rw)(t))) return;
     let r = h.Z.getMutableGuildChannelsForGuild(e);
     for (let e in r) {
         let i = r[e];

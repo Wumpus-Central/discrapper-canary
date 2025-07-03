@@ -9,7 +9,7 @@ var E = n(442837),
 function e(t) {
     var i;
     let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z];
-    return !!(null == (i = n.getGuild(t)) ? void 0 : i.hasFeature(r.oNc.COMMUNITY));
+    return !!(null == (i = n.getGuild(t)) ? void 0 : i.features.has(r.oNc.COMMUNITY));
 }
 function S(t) {
     return (0, E.e7)([l.Z], () => e(t, [l.Z]), [t]);

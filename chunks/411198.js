@@ -237,6 +237,7 @@ function E(e) {
     return new o.ZP(t);
 }
 function b(e) {
+    var t;
     return {
         id: e.id,
         name: e.name,
@@ -256,7 +257,7 @@ function b(e) {
         explicit_content_filter: e.explicitContentFilter,
         default_message_notifications: e.defaultMessageNotifications,
         mfa_level: e.mfaLevel,
-        vanity_url_code: e.vanityURLCode,
+        vanity_url_code: null != (t = e.vanityURLCode) ? t : void 0,
         premium_tier: e.premiumTier,
         premium_progress_bar_enabled: e.premiumProgressBarEnabled,
         system_channel_flags: e.systemChannelFlags,

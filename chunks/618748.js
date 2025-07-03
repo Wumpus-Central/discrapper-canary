@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(953529));
+(n.d(t, { Z: () => M }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -11,113 +11,114 @@ var i = n(442837),
     u = n(225675),
     m = n(703656),
     g = n(577275),
-    p = n(485386),
-    f = n(594174),
-    h = n(823379),
-    x = n(730647),
-    b = n(584825),
-    j = n(723047),
-    _ = n(303737),
-    v = n(568074),
-    O = n(411667),
-    C = n(903773),
-    y = n(822531),
-    N = n(909656),
-    I = n(210591),
-    E = n(927731),
-    S = n(798680),
-    T = n(509026),
-    P = n(981631),
-    w = n(176505),
-    R = n(829857),
-    Z = n(388032),
-    D = n(173409);
-function k(e) {
+    p = n(601964),
+    f = n(485386),
+    h = n(594174),
+    x = n(823379),
+    b = n(730647),
+    j = n(584825),
+    _ = n(723047),
+    v = n(303737),
+    O = n(568074),
+    C = n(411667),
+    y = n(903773),
+    N = n(822531),
+    I = n(909656),
+    E = n(210591),
+    S = n(927731),
+    T = n(798680),
+    P = n(509026),
+    w = n(981631),
+    R = n(176505),
+    Z = n(829857),
+    D = n(388032),
+    k = n(173409);
+function A(e) {
     let { application: t, guild: n } = e,
-        l = (0, b.YB)(n.id),
-        s = (0, b.qi)(n.id),
+        l = (0, j.YB)(n.id),
+        s = (0, j.qi)(n.id),
         a = s.some((e) => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset),
-        o = (0, i.e7)([p.Z], () => p.Z.getRoles(n.id)),
+        o = (0, i.e7)([f.Z], () => f.Z.getRoles(n.id)),
         c = s.map((e) => o[e.role_id]).some((e) => null != e && 0 !== e.color),
         d = s.some((e) => e.role_benefits.benefits.length > 0),
-        u = null != t && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
+        u = null != t && n.features.has(w.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         m = [
             {
-                title: Z.intl.string(Z.t.p2Rsdn),
+                title: D.intl.string(D.t.p2Rsdn),
                 items: [
                     {
-                        description: Z.intl.string(Z.t.zbO7fX),
+                        description: D.intl.string(D.t.zbO7fX),
                         completed: u
                     }
                 ]
             },
             {
-                title: Z.intl.string(Z.t['/CfKoK']),
+                title: D.intl.string(D.t['/CfKoK']),
                 items: [
                     {
-                        description: Z.intl.string(Z.t.zvuI3d),
+                        description: D.intl.string(D.t.zvuI3d),
                         completed: !0
                     },
                     {
-                        description: Z.intl.string(Z.t.cVcEYG),
+                        description: D.intl.string(D.t.cVcEYG),
                         completed: (null == l ? void 0 : l.description) != null && '' !== l.description
                     },
                     {
-                        description: Z.intl.string(Z.t['88XnXF']),
+                        description: D.intl.string(D.t['88XnXF']),
                         completed: (null == l ? void 0 : l.cover_image_asset) != null
                     }
                 ]
             },
             {
-                title: Z.intl.string(Z.t.pXbGYW),
+                title: D.intl.string(D.t.pXbGYW),
                 items: [
                     {
-                        description: Z.intl.string(Z.t.pCxWKC),
+                        description: D.intl.string(D.t.pCxWKC),
                         completed: a
                     },
                     {
-                        description: Z.intl.string(Z.t['+amv5e']),
+                        description: D.intl.string(D.t['+amv5e']),
                         completed: c
                     },
                     {
-                        description: Z.intl.string(Z.t['/P03Cw']),
+                        description: D.intl.string(D.t['/P03Cw']),
                         completed: d
                     }
                 ]
             }
         ];
-    return (0, r.jsx)(I.Z, { children: m });
+    return (0, r.jsx)(E.Z, { children: m });
 }
-function A(e) {
+function L(e) {
     let { application: t } = e,
         { teams: n } = (0, g.Z)({ refreshOnDepChange: !1 }),
         i = n.find((e) => {
             var n;
             return e.id === (null == t || null == (n = t.team) ? void 0 : n.id);
         }),
-        s = [R.C.ACTION_REQUIRED, R.C.BLOCKED, R.C.SUSPENDED];
+        s = [Z.C.ACTION_REQUIRED, Z.C.BLOCKED, Z.C.SUSPENDED];
     return (null == i ? void 0 : i.payout_account_status) != null && s.includes(null == i ? void 0 : i.payout_account_status)
         ? (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)(l.LZC, { size: 16 }), (0, r.jsx)(C.Z, { children: Z.intl.format(Z.t.Yo0ZBw, { url: P.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }) }), (0, r.jsx)(l.LZC, { size: 16 })]
+              children: [(0, r.jsx)(l.LZC, { size: 16 }), (0, r.jsx)(y.Z, { children: D.intl.format(D.t.Yo0ZBw, { url: w.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }) }), (0, r.jsx)(l.LZC, { size: 16 })]
           })
         : null;
 }
-function L(e) {
+function M(e) {
     let t,
         { guild: n, application: l } = e,
         s = (0, i.e7)([c.Z], () => c.Z.getProps().subsection),
-        o = null != l && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED);
+        o = null != l && n.features.has(w.oNc.ROLE_SUBSCRIPTIONS_ENABLED);
     return (
         (0, a.P)(n),
-        (t = o ? (s === P.KsC.ROLE_SUBSCRIPTION_EMOJI ? S.ue.EMOJIS : S.ue.TIERS) : S.ue.PAYMENT),
-        (0, r.jsx)(x.l, {
+        (t = o ? (s === w.KsC.ROLE_SUBSCRIPTION_EMOJI ? T.ue.EMOJIS : T.ue.TIERS) : T.ue.PAYMENT),
+        (0, r.jsx)(b.l, {
             guildId: n.id,
             refetchOnMount: !0,
-            children: (0, r.jsx)(j.in, {
+            children: (0, r.jsx)(_.in, {
                 guildId: n.id,
-                children: (0, r.jsx)(S.M7, {
+                children: (0, r.jsx)(T.M7, {
                     initialTab: t,
-                    children: (0, r.jsx)(M, {
+                    children: (0, r.jsx)(G, {
                         guild: n,
                         application: l
                     })
@@ -126,118 +127,117 @@ function L(e) {
         })
     );
 }
-function M(e) {
+function G(e) {
     let t,
         { guild: n, application: a } = e,
-        c = null != a && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
-        { currentTab: g, setCurrentTab: b } = (0, S.dw)(),
-        j = (0, x.f)(),
-        C = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        I = (0, v.Z)(n.id),
-        R = n.isOwner(C),
-        L = () => {
-            let e = p.Z.getRole(n.id, n.getEveryoneRoleId());
-            if (null == e) return;
+        c = null != a && n.features.has(w.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
+        { currentTab: g, setCurrentTab: j } = (0, T.dw)(),
+        _ = (0, b.f)(),
+        y = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
+        E = (0, O.Z)(n.id),
+        Z = null != n && (0, p.eM)(n, y),
+        M = () => {
+            let e = f.Z.getEveryoneRole(n);
             o.Z.close();
             let t = { [e.id]: e };
             ((0, d.iD)(n.id, {
                 type: u.z.SERVER_SHOP,
                 roles: t,
                 initialTab: 'role_subscriptions',
-                returnToSection: P.pNK.ROLE_SUBSCRIPTIONS
+                returnToSection: w.pNK.ROLE_SUBSCRIPTIONS
             }),
-                (0, _.be)(n.id),
-                (0, m.uL)(P.Z5c.CHANNEL(n.id, w.oC.ROLE_SUBSCRIPTIONS)));
+                (0, v.be)(n.id),
+                (0, m.uL)(w.Z5c.CHANNEL(n.id, R.oC.ROLE_SUBSCRIPTIONS)));
         };
-    if (!j) return (0, r.jsx)(l.$jN, {});
+    if (!_) return (0, r.jsx)(l.$jN, {});
     switch (g) {
-        case S.ue.BASIC_INFO:
+        case T.ue.BASIC_INFO:
+            t = (0, r.jsx)(I.Z, { guild: n });
+            break;
+        case T.ue.TIERS:
+            t = (0, r.jsx)(S.Z, { guildId: n.id });
+            break;
+        case T.ue.PAYMENT:
             t = (0, r.jsx)(N.Z, { guild: n });
             break;
-        case S.ue.TIERS:
-            t = (0, r.jsx)(E.Z, { guildId: n.id });
-            break;
-        case S.ue.PAYMENT:
-            t = (0, r.jsx)(y.Z, { guild: n });
-            break;
-        case S.ue.EMOJIS:
-            t = (0, r.jsx)(T.Z, { guild: n });
+        case T.ue.EMOJIS:
+            t = (0, r.jsx)(P.Z, { guild: n });
             break;
         default:
-            (0, h.vE)(g);
+            (0, x.vE)(g);
     }
     return (0, r.jsxs)('div', {
-        className: D.container,
+        className: k.container,
         children: [
             (0, r.jsxs)('div', {
-                className: D.mainContent,
+                className: k.mainContent,
                 children: [
                     (0, r.jsx)(l.vwX, {
                         tag: 'h1',
-                        children: Z.intl.string(Z.t['KzCF//'])
+                        children: D.intl.string(D.t['KzCF//'])
                     }),
                     (0, r.jsx)(l.R94, {
                         type: l.R94.Types.DESCRIPTION,
-                        children: Z.intl.string(Z.t.KyGv0t)
+                        children: D.intl.string(D.t.KyGv0t)
                     }),
-                    (0, r.jsx)(O.Z, { guild: n }),
-                    c && (0, r.jsx)(A, { application: a }),
+                    (0, r.jsx)(C.Z, { guild: n }),
+                    c && (0, r.jsx)(L, { application: a }),
                     (0, r.jsxs)('div', {
-                        className: D.tabBarContainer,
+                        className: k.tabBarContainer,
                         children: [
                             (0, r.jsxs)(l.njP, {
-                                className: D.tabBar,
-                                'aria-label': Z.intl.string(Z.t['+1H47u']),
+                                className: k.tabBar,
+                                'aria-label': D.intl.string(D.t['+1H47u']),
                                 selectedItem: g,
                                 type: 'top',
                                 look: 'brand',
-                                onItemSelect: b,
+                                onItemSelect: j,
                                 children: [
                                     (0, r.jsx)(s.Z, {
-                                        id: S.ue.BASIC_INFO,
-                                        disabledTooltip: Z.intl.string(Z.t.NVDuUV),
+                                        id: T.ue.BASIC_INFO,
+                                        disabledTooltip: D.intl.string(D.t.NVDuUV),
                                         disabled: !c,
-                                        children: Z.intl.string(Z.t['/CfKoK'])
+                                        children: D.intl.string(D.t['/CfKoK'])
                                     }),
                                     (0, r.jsx)(s.Z, {
-                                        id: S.ue.TIERS,
-                                        disabledTooltip: Z.intl.string(Z.t.NVDuUV),
+                                        id: T.ue.TIERS,
+                                        disabledTooltip: D.intl.string(D.t.NVDuUV),
                                         disabled: !c,
-                                        children: Z.intl.string(Z.t.pXbGYW)
+                                        children: D.intl.string(D.t.pXbGYW)
                                     }),
                                     (0, r.jsx)(s.Z, {
-                                        id: S.ue.EMOJIS,
-                                        disabledTooltip: Z.intl.string(Z.t.NVDuUV),
+                                        id: T.ue.EMOJIS,
+                                        disabledTooltip: D.intl.string(D.t.NVDuUV),
                                         disabled: !c,
-                                        children: Z.intl.string(Z.t.XBkDoK)
+                                        children: D.intl.string(D.t.XBkDoK)
                                     }),
-                                    R
+                                    Z
                                         ? (0, r.jsx)(l.njP.Item, {
-                                              className: D.__invalid_tabBarItem,
-                                              id: S.ue.PAYMENT,
-                                              children: Z.intl.string(Z.t.p2Rsdn)
+                                              className: k.__invalid_tabBarItem,
+                                              id: T.ue.PAYMENT,
+                                              children: D.intl.string(D.t.p2Rsdn)
                                           })
                                         : null
                                 ]
                             }),
                             c &&
                                 (0, r.jsx)('div', {
-                                    className: D.previewButton,
+                                    className: k.previewButton,
                                     children: (0, r.jsx)(l.ua7, {
-                                        text: Z.intl.string(Z.t['1wCH4O']),
+                                        text: D.intl.string(D.t['1wCH4O']),
                                         children: (e) => {
                                             let { onMouseEnter: t, onMouseLeave: n } = e;
                                             return (0, r.jsx)(l.zxk, {
-                                                disabled: I,
-                                                onMouseEnter: I ? t : void 0,
-                                                onMouseLeave: I ? n : void 0,
-                                                onClick: L,
+                                                disabled: E,
+                                                onMouseEnter: E ? t : void 0,
+                                                onMouseLeave: E ? n : void 0,
+                                                onClick: M,
                                                 color: l.zxk.Colors.PRIMARY,
                                                 size: l.zxk.Sizes.SMALL,
-                                                grow: !I,
+                                                grow: !E,
                                                 look: l.zxk.Looks.OUTLINED,
-                                                className: D.previewButton,
-                                                children: Z.intl.string(Z.t.vM81yc)
+                                                className: k.previewButton,
+                                                children: D.intl.string(D.t.vM81yc)
                                             });
                                         }
                                     })
@@ -247,7 +247,7 @@ function M(e) {
                     t
                 ]
             }),
-            (0, r.jsx)(k, {
+            (0, r.jsx)(A, {
                 application: a,
                 guild: n
             })

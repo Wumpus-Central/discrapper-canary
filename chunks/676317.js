@@ -28,7 +28,7 @@ function u(e) {
         [r.Z],
         () => {
             let t = r.Z.getGuild(e);
-            return (null == t ? void 0 : t.hasFeature(i.oNc.COMMUNITY)) || !1;
+            return (null == t ? void 0 : t.features.has(i.oNc.COMMUNITY)) || !1;
         },
         [e]
     );

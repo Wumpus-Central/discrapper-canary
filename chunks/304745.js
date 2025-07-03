@@ -30,8 +30,8 @@ function S(e) {
         T = Z !== p.jy.CAN_LAUNCH || P,
         { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: k } = (0, C.Z)(200, 300),
         M = (0, d.p)({ surface: s.eR.VOICE_LAUNCHER }),
-        L = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
-        D = !T,
+        D = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
+        L = !T,
         U = i.useCallback(
             (e) => {
                 'focus' !== e.type && R();
@@ -74,7 +74,7 @@ function S(e) {
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: i } = e;
-                        return D
+                        return L
                             ? (0, r.jsx)(f.m, {
                                   ref: (e) => {
                                       null == i || i(e);
@@ -135,8 +135,8 @@ function S(e) {
                                                             children: (0, r.jsx)(x.Z, {
                                                                 disabled: T,
                                                                 'aria-label': N,
-                                                                label: D ? void 0 : N,
-                                                                isActivityActive: L,
+                                                                label: L ? void 0 : N,
+                                                                isActivityActive: D,
                                                                 onClick: () => {
                                                                     (G(), (i === o.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === o.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(O.L.TAKE_ACTION), t === o.z.ACTIVITIES_VOICE_LAUNCHER_BADGE && n(O.L.TAKE_ACTION));
                                                                 },

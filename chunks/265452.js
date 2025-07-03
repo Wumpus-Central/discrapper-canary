@@ -37,8 +37,8 @@ var l = n(255367),
     L = n(158776),
     U = n(699516),
     V = n(626135),
-    F = n(971130),
-    B = n(51144),
+    B = n(971130),
+    F = n(51144),
     G = n(264229),
     z = n(601953),
     H = n(277364),
@@ -74,7 +74,7 @@ function $(e) {
     }
     return e;
 }
-let { INVITE_OPTIONS_7_DAYS: ee, INVITE_OPTIONS_UNLIMITED: et } = F.ZP,
+let { INVITE_OPTIONS_7_DAYS: ee, INVITE_OPTIONS_UNLIMITED: et } = B.ZP,
     en = {
         max_age: ee.value,
         max_uses: et.value
@@ -121,8 +121,8 @@ function el(e) {
 }
 function ei(e) {
     let { guild: t, user: n, onToggle: r, isSelected: s, disabled: a } = e,
-        o = B.ZP.useName(n),
-        u = B.ZP.useUserTag(n, { decoration: 'never' }),
+        o = F.ZP.useName(n),
+        u = F.ZP.useUserTag(n, { decoration: 'never' }),
         [d, g] = (0, c.Wu)([U.Z, L.Z], () => [U.Z.getNickname(n.id), L.Z.getStatus(n.id)], [n]),
         m = i.useCallback(() => r(n.id), [r, n.id]),
         v = [u];
@@ -194,8 +194,8 @@ function ea(e) {
                 if (c > 0) return;
                 let g = n[h];
                 switch (g.type) {
-                    case F.bm.FRIEND:
-                    case F.bm.DM:
+                    case B.bm.FRIEND:
+                    case B.bm.DM:
                         let m = g.item;
                         return (
                             (d = null != (i = s.includes(m.id)) && i),
@@ -211,7 +211,7 @@ function ea(e) {
                                 m.id
                             )
                         );
-                    case F.bm.GROUP_DM:
+                    case B.bm.GROUP_DM:
                         let p = g.item;
                         return (
                             (d = null != (a = s.includes(p.id)) && a),
@@ -226,7 +226,7 @@ function ea(e) {
                                 p.id
                             )
                         );
-                    case F.bm.CHANNEL:
+                    case B.bm.CHANNEL:
                         let v = g.item;
                         return (
                             (d = null != (u = s.includes(v.id)) && u),
@@ -319,7 +319,7 @@ function eo(e) {
     null != _ ? (y = X.Iq.EMBEDDED_APPLICATION) : null != x && (y = X.Iq.STREAM);
     let C = (0, E.Z)({ guildId: r.id }),
         [A, R] = i.useState([]),
-        [U, B] = i.useState(''),
+        [U, F] = i.useState(''),
         { current: ee } = i.useRef($({}, en, null == C ? {} : { max_age: C }, null == _ ? {} : { target_application_id: _ }, null == y ? {} : { target_type: y }, null == x ? {} : { target_user_id: x })),
         [et, el] = i.useState(ee),
         [ei, er] = i.useState(!1),
@@ -331,9 +331,9 @@ function eo(e) {
         em = i.useCallback(
             (e) => {
                 var t;
-                (null == (t = eh.current) || t.scrollTo({ to: 0 }), B(e), (0, m.C)(e));
+                (null == (t = eh.current) || t.scrollTo({ to: 0 }), F(e), (0, m.C)(e));
             },
-            [B]
+            [F]
         ),
         ep = i.useCallback(() => {
             em('');
@@ -476,8 +476,8 @@ function eo(e) {
                             i = eg[0],
                             r = null != (n = k.Z.getSelectedInviteMetadata(e)) ? n : null;
                         switch (e.type) {
-                            case F.bm.FRIEND:
-                            case F.bm.DM:
+                            case B.bm.FRIEND:
+                            case B.bm.DM:
                                 l = {
                                     type: I.m.USER,
                                     user: e.item,
@@ -486,7 +486,7 @@ function eo(e) {
                                     suggested: r
                                 };
                                 break;
-                            case F.bm.CHANNEL:
+                            case B.bm.CHANNEL:
                                 l = {
                                     type: I.m.CHANNEL,
                                     channel: e.item,
@@ -495,7 +495,7 @@ function eo(e) {
                                     suggested: r
                                 };
                                 break;
-                            case F.bm.GROUP_DM:
+                            case B.bm.GROUP_DM:
                                 l = {
                                     type: I.m.GROUP_DM,
                                     channel: e.item,

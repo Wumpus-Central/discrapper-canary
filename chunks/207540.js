@@ -52,7 +52,7 @@ let y = (t) => {
             })();
         }, [n, S]),
         l.useEffect(() => {
-            null != f && f.hasFeature(L.oNc.COMMUNITY) && (f.rulesChannelId === S ? H(p.j.RULES) : f.publicUpdatesChannelId === S && H(p.j.UPDATES));
+            null != f && f.features.has(L.oNc.COMMUNITY) && (f.rulesChannelId === S ? H(p.j.RULES) : f.publicUpdatesChannelId === S && H(p.j.UPDATES));
         }, [f, S]),
         null == f)
     )

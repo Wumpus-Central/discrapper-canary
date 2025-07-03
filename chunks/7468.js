@@ -42,7 +42,7 @@ let p = (e) => {
                 E(r);
                 break;
             default:
-                throw (d.error('[TAG] DAVE worker unknown message type'), Error('Unsupported message type'));
+                throw (d.error('DAVE worker unknown message type'), Error('Unsupported message type'));
         }
     },
     m = async () => {
@@ -127,7 +127,10 @@ let p = (e) => {
             let i = c.get(o);
             if (null == i) return void d.warn('no user found for userId', o);
             let l = i.cryptor;
-            if (null == l) return void d.warn('no cryptor found for userId', o);
+            if (null == l) {
+                1 !== c.size && d.warn('no cryptor found for userId', o);
+                return;
+            }
             if (l instanceof t.Encryptor) n = C(e, a, l);
             else {
                 if (!(l instanceof t.Decryptor)) return void d.warn('unsupported cryptor type', l);

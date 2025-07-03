@@ -70,7 +70,7 @@ async function E(e) {
 function b() {
     return o.Z.getGuildsArray().some(
         (e) =>
-            e.hasFeature(u.oNc.LEADERBOARD_ENABLED) &&
+            e.features.has(u.oNc.LEADERBOARD_ENABLED) &&
             (0, c.NM)({
                 guildId: e.id,
                 location: 'LeagueOfLegendsLifecycleManager.handleDependantStoreChanges',

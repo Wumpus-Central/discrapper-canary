@@ -15,7 +15,7 @@ var r = n(255367),
 function h(e) {
     let { guild: t, canManageGuild: n, buttonClassName: h } = e,
         { analyticsLocations: x } = (0, s.ZP)(),
-        b = t.hasFeature(m.oNc.INVITE_SPLASH),
+        b = t.features.has(m.oNc.INVITE_SPLASH),
         j = n && b,
         _ = i.useCallback((e) => {
             c.Z.updateGuild({ splash: e });

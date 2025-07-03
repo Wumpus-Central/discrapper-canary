@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(539854), n(388685));
+(n.d(t, { Z: () => y }), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(149765),
@@ -10,37 +10,38 @@ var r = n(255367),
     u = n(385499),
     p = n(600164),
     m = n(422559),
-    b = n(598077),
-    g = n(271383),
-    f = n(485386),
-    h = n(823379),
-    x = n(700785),
-    j = n(388032),
-    O = n(439478);
-function v(e) {
+    b = n(601964),
+    g = n(598077),
+    f = n(271383),
+    h = n(485386),
+    x = n(823379),
+    j = n(700785),
+    O = n(388032),
+    v = n(439478);
+function y(e) {
     var t;
-    let { guild: n, applicationIntegration: v } = e,
-        y = (0, o.e7)([f.Z], () => f.Z.getRoles(n.id)),
-        { application: _ } = v,
-        C = null != _.bot ? new b.Z(_.bot) : null,
-        N = (0, o.e7)([g.ZP], () => (null != C ? g.ZP.getMember(n.id, C.id) : null), [C, n]),
-        I = null == C ? void 0 : C.id;
+    let { guild: n, applicationIntegration: y } = e,
+        _ = (0, o.e7)([h.Z], () => h.Z.getRoles(n.id)),
+        { application: C } = y,
+        N = null != C.bot ? new g.Z(C.bot) : null,
+        I = (0, o.e7)([f.ZP], () => (null != N ? f.ZP.getMember(n.id, N.id) : null), [N, n]),
+        E = null == N ? void 0 : N.id;
     i.useEffect(() => {
-        null != I && s.Z.requestMembersById(n.id, I);
-    }, [n.id, I]);
+        null != E && s.Z.requestMembersById(n.id, E);
+    }, [n.id, E]);
     let S = i.useMemo(() => {
         var e, t, r;
-        let i = y[n.getEveryoneRoleId()],
-            o = null != (t = null == N || null == (e = N.roles) ? void 0 : e.map((e) => y[e]).filter(h.lm)) ? t : [],
-            a = null != (r = null == i ? void 0 : i.permissions) ? r : x.Hn;
+        let i = _[(0, b.lV)(n)],
+            o = null != (t = null == I || null == (e = I.roles) ? void 0 : e.map((e) => _[e]).filter(x.lm)) ? t : [],
+            a = null != (r = null == i ? void 0 : i.permissions) ? r : j.Hn;
         for (let e of o) a = l.IH(a, e.permissions);
         return a;
-    }, [n, y, N]);
-    return null == C
+    }, [n, _, I]);
+    return null == N
         ? null
         : (0, r.jsx)(a.Zbd, {
               editable: !0,
-              className: O.card,
+              className: v.card,
               children: (0, r.jsxs)(p.Z, {
                   direction: p.Z.Direction.VERTICAL,
                   children: [
@@ -49,17 +50,17 @@ function v(e) {
                           children: [
                               (0, r.jsx)('img', {
                                   alt: '',
-                                  src: C.getAvatarURL(n.id, 32),
-                                  className: O.iconWrapper
+                                  src: N.getAvatarURL(n.id, 32),
+                                  className: v.iconWrapper
                               }),
                               (0, r.jsx)(a.Text, {
                                   color: 'header-primary',
                                   variant: 'text-sm/normal',
-                                  children: j.intl.format(j.t.GyhzGx, { user: C.toString() })
+                                  children: O.intl.format(O.t.GyhzGx, { user: N.toString() })
                               }),
                               (0, r.jsx)(u.Z, {
-                                  className: O.tag,
-                                  verified: C.isVerifiedBot()
+                                  className: v.tag,
+                                  verified: N.isVerifiedBot()
                               })
                           ]
                       }),
@@ -69,16 +70,16 @@ function v(e) {
                           for (let e of m.VY) l.e$(i, e) ? o.push(e) : s.push(e);
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(a.$i$, { className: O.divider }),
+                                  (0, r.jsx)(a.$i$, { className: v.divider }),
                                   n.length > 0
                                       ? (0, r.jsxs)(r.Fragment, {
                                             children: [
                                                 (0, r.jsx)(a.vwX, {
-                                                    className: O.permissionHeader,
-                                                    children: j.intl.format(j.t.PCs0oq, { numRoles: n.length })
+                                                    className: v.permissionHeader,
+                                                    children: O.intl.format(O.t.PCs0oq, { numRoles: n.length })
                                                 }),
                                                 (0, r.jsx)(c.ZP, {
-                                                    className: O.rolePills,
+                                                    className: v.rolePills,
                                                     user: e,
                                                     guild: t,
                                                     userRoles: n,
@@ -91,14 +92,14 @@ function v(e) {
                                   o.length > 0 || s.length > 0
                                       ? (0, r.jsx)(d.Z, {
                                             grantedPermissions: o,
-                                            grantedPermissionsHeader: j.intl.string(j.t['hA4+sr']),
+                                            grantedPermissionsHeader: O.intl.string(O.t['hA4+sr']),
                                             disabledPermissions: s,
-                                            disabledPermissionsHeader: j.intl.string(j.t['/rEZ2t'])
+                                            disabledPermissionsHeader: O.intl.string(O.t['/rEZ2t'])
                                         })
                                       : null
                               ]
                           });
-                      })(C, n, null != (t = null == N ? void 0 : N.roles) ? t : [], S)
+                      })(N, n, null != (t = null == I ? void 0 : I.roles) ? t : [], S)
                   ]
               })
           });

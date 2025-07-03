@@ -7,12 +7,12 @@
     HE: () => V,
     HN: () => q,
     Iv: () => ec,
-    J5: () => eT,
+    J5: () => ef,
     JA: () => es,
     K: () => Q,
     ML: () => z,
     N$: () => J,
-    N5: () => ef,
+    N5: () => eT,
     QM: () => em,
     V$: () => ed,
     _$: () => eO,
@@ -49,8 +49,8 @@ var r = n(654861),
     _ = n(933557),
     A = n(710845),
     m = n(339085),
-    T = n(236413),
-    f = n(45966),
+    f = n(236413),
+    T = n(45966),
     g = n(563534),
     I = n(427679),
     h = n(926491),
@@ -751,7 +751,7 @@ function em(e) {
     else if (r) return P.intl.string(P.t['8mQ6x8']);
     return null;
 }
-function eT(e) {
+function ef(e) {
     let t = eE(L.zUn.ROLES_ADD, e),
         n = eE(L.zUn.ROLES_REMOVE, e),
         r =
@@ -797,7 +797,7 @@ function eT(e) {
             ? P.intl.formatToPlainString(P.t.Wk4pAA, { roleNames: l })
             : null;
 }
-function ef(e) {
+function eT(e) {
     switch (e.action) {
         case L.rsA.GUILD_UPDATE:
             return P.t.LjZO39;
@@ -1143,7 +1143,7 @@ function eO(e, t) {
                             let n = eS(
                                 e,
                                 L.zUn.ID,
-                                (e) => f.Z.getOnboardingPrompt(e),
+                                (e) => T.Z.getOnboardingPrompt(e),
                                 (e) => e.title
                             );
                             return null == n || '' === n ? P.intl.string(P.t.ZNQyiY) : n;
@@ -1439,14 +1439,14 @@ function eO(e, t) {
                                         return eR(
                                             e,
                                             (e) => e.map((e) => e.type),
-                                            (e) => e.map(T.ZF).join(', ')
+                                            (e) => e.map(f.ZF).join(', ')
                                         );
                                     break;
                                 case L.zUn.AUTO_MODERATION_EVENT_TYPE:
-                                    if (t.targetType === L.KFR.AUTO_MODERATION_RULE) return eR(e, T.YN);
+                                    if (t.targetType === L.KFR.AUTO_MODERATION_RULE) return eR(e, f.YN);
                                     break;
                                 case L.zUn.AUTO_MODERATION_TRIGGER_TYPE:
-                                    if (t.targetType === L.KFR.AUTO_MODERATION_RULE) return eR(e, T.Ar);
+                                    if (t.targetType === L.KFR.AUTO_MODERATION_RULE) return eR(e, f.Ar);
                                     break;
                                 case L.zUn.AUTO_MODERATION_TRIGGER_METADATA:
                                     if (t.targetType === L.KFR.AUTO_MODERATION_RULE) return eR(e, (e) => (null != e && 'object' == typeof e ? (null != e.keyword_filter && Array.isArray(e.keyword_filter) ? P.intl.formatToMarkdownString(P.t.y91UXV, { newValue: e.keyword_filter.map((e) => "'".concat(e, "'")).join(', ') }) : JSON.stringify(e)) : e));

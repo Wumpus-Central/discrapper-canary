@@ -101,7 +101,7 @@ class L extends r.PureComponent {
                     section: x && null != o ? o : L,
                     onSetSection: P.Z.setSection,
                     onClose: c.xf,
-                    title: '' !== l.toString() ? l.toString() : j.intl.string(j.t['154/bG']),
+                    title: '' !== l.name ? l.name : j.intl.string(j.t['154/bG']),
                     sections: R
                 }),
                 (0, n.jsx)(h.d, { guildId: l.id })
@@ -122,7 +122,7 @@ function M() {
     r.useEffect(() => {
         E || null == Z || (0, u.aC)(Z);
     }, [E, Z]);
-    let k = null != (e = null == c ? void 0 : c.hasFeature(D.oNc.COMMUNITY)) && e;
+    let k = null != (e = null == c ? void 0 : c.features.has(D.oNc.COMMUNITY)) && e;
     (r.useEffect(() => {
         null != Z && k && ((0, p.eM)(Z), (0, O.RM)(Z));
     }, [Z, k]),

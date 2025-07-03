@@ -1,10 +1,10 @@
 (n.d(t, {
-    BK: () => p,
-    CX: () => b,
-    lD: () => f,
-    mm: () => g,
-    nX: () => m,
-    vV: () => d
+    BK: () => m,
+    CX: () => h,
+    lD: () => b,
+    mm: () => f,
+    nX: () => g,
+    vV: () => p
 }),
     n(997841),
     n(388685));
@@ -14,19 +14,27 @@ var r = n(442837),
     i = n(496675),
     s = n(594174),
     a = n(630388),
-    c = n(372897),
-    u = n(981631);
-let d = (e, t) => {
+    c = n(709054),
+    u = n(372897),
+    d = n(981631);
+let p = (e, t) => {
     var n;
     let i = (0, r.e7)([l.ZP], () => {
             var n, r;
-            return (0, a.yE)(null != (r = null == (n = l.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, c.q.DID_REJOIN);
+            return (0, a.yE)(null != (r = null == (n = l.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, u.q.DID_REJOIN);
         }),
-        u = (0, r.e7)([o.Z], () => {
-            var t;
-            return null == (t = o.Z.getGuild(e)) ? void 0 : t.isNew();
+        d = (0, r.e7)([o.Z], () => {
+            let t = o.Z.getGuild(e);
+            return (
+                null != t &&
+                (function (e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
+                        n = c.default.extractTimestamp(e.id);
+                    return Date.now() - n < 86400000 * t;
+                })(t)
+            );
         }),
-        d = (0, r.e7)([s.default], () => {
+        p = (0, r.e7)([s.default], () => {
             var e;
             return null == (e = s.default.getUser(t)) ? void 0 : e.bot;
         });
@@ -49,28 +57,28 @@ let d = (e, t) => {
                 })(e, n, t),
             [n, e, t]
         ) &&
-            !u &&
             !d &&
+            !p &&
             !i
     );
 };
-function p(e, t) {
-    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, l.ZP];
-    return null != t && m(e, t, [n]) && null != r.getMember(t.id, e.id);
-}
 function m(e, t) {
-    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
-    return null != t && n.canManageUser(u.Plq.KICK_MEMBERS, e, t) && !e.isNonUserBot();
+    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, l.ZP];
+    return null != t && g(e, t, [n]) && null != r.getMember(t.id, e.id);
 }
 function g(e, t) {
-    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, l.ZP];
-    return null != t && f(e, t, [n]) && null != r.getMember(t.id, e.id);
+    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
+    return null != t && n.canManageUser(d.Plq.KICK_MEMBERS, e, t) && !e.isNonUserBot();
 }
 function f(e, t) {
-    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
-    return null != t && n.canManageUser(u.Plq.BAN_MEMBERS, e, t) && !e.isNonUserBot() && !e.bot;
+    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, l.ZP];
+    return null != t && b(e, t, [n]) && null != r.getMember(t.id, e.id);
 }
 function b(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
-    return null != e && null != t && n.canManageUser(u.Plq.MANAGE_MESSAGES, e, t) && !e.isNonUserBot();
+    return null != t && n.canManageUser(d.Plq.BAN_MEMBERS, e, t) && !e.isNonUserBot() && !e.bot;
+}
+function h(e, t) {
+    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
+    return null != e && null != t && n.canManageUser(d.Plq.MANAGE_MESSAGES, e, t) && !e.isNonUserBot();
 }

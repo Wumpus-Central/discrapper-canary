@@ -17,8 +17,8 @@ var o = n(442837),
     _ = n(111028),
     A = n(727429),
     m = n(810123),
-    T = n(690221),
-    f = n(430824),
+    f = n(690221),
+    T = n(430824),
     g = n(158776),
     I = n(111583),
     h = n(594174),
@@ -117,7 +117,7 @@ function M(e) {
 }
 let U = (e) => {
         let { className: t, containerClassName: n, channel: l, locked: i, hasActiveThreads: a, withGuildIcon: c } = e,
-            d = (0, o.e7)([f.Z], () => f.Z.getGuild(l.guild_id), [l.guild_id]),
+            d = (0, o.e7)([T.Z], () => T.Z.getGuild(l.guild_id), [l.guild_id]),
             _ = l.type === N.d4z.DM || l.type === N.d4z.GROUP_DM,
             A = null;
         if (c && null != d && !_)
@@ -154,10 +154,10 @@ let U = (e) => {
                 className: s()(S.icon, t)
             });
         }
-        let T = c ? (null == d ? void 0 : d.name) : (0, E.bT)(l, d, i, a),
-            g = c && null != d ? ''.concat(d.name, ' - ').concat(T, ' icon') : ''.concat(T, ' icon');
+        let f = c ? (null == d ? void 0 : d.name) : (0, E.bT)(l, d, i, a),
+            g = c && null != d ? ''.concat(d.name, ' - ').concat(f, ' icon') : ''.concat(f, ' icon');
         return (0, r.jsx)(u.ua7, {
-            text: T,
+            text: f,
             delay: 500,
             children: (e) =>
                 (0, r.jsx)(
@@ -181,7 +181,7 @@ let U = (e) => {
                           muted: c,
                           selected: E,
                           connected: m,
-                          unread: f,
+                          unread: T,
                           locked: g,
                           hasActiveThreads: I,
                           onClick: h,
@@ -239,7 +239,7 @@ let U = (e) => {
                           className: s()({ [S.favoritesSuggestion]: q }),
                           ref: en,
                           children: (0, r.jsxs)(
-                              T.Z,
+                              f.Z,
                               b(
                                   C(
                                       {
@@ -315,7 +315,7 @@ let U = (e) => {
                                   if (m) return s()(R.selectedChannel, v.CONNECTED);
                                   if (g) return v.LOCKED;
                                   if (c) return v.MUTED;
-                                  if (f)
+                                  if (T)
                                       if (X) return v.UNREAD_IMPORTANT;
                                       else return v.UNREAD_LESS_IMPORTANT;
                                   return null;
@@ -344,7 +344,7 @@ let U = (e) => {
                           onContextMenu: (e) => (null == L ? void 0 : L(e, i)),
                           onMouseEnter: k,
                           onMouseLeave: F,
-                          children: [c || !f ? null : (0, r.jsx)('div', { className: s()(S.unread, X ? S.unreadImportant : void 0) }), null != (n = null == M ? void 0 : M(ea)) ? n : ea]
+                          children: [c || !T ? null : (0, r.jsx)('div', { className: s()(S.unread, X ? S.unreadImportant : void 0) }), null != (n = null == M ? void 0 : M(ea)) ? n : ea]
                       })
                   });
               })

@@ -19,15 +19,15 @@ function s(e) {
             },
             [n]
         ),
-        h = (0, i.e7)([o.Z], () => o.Z.getStageInstanceByChannel(n), [n]),
-        f = (0, r.w8)(n, l.pV.SPEAKER),
+        f = (0, i.e7)([o.Z], () => o.Z.getStageInstanceByChannel(n), [n]),
+        h = (0, r.w8)(n, l.pV.SPEAKER),
         v = (0, r.Rk)(n),
-        m = null != h ? f : u,
-        j = (null != h ? v : d) - m.length;
+        m = null != f ? h : u,
+        j = (null != f ? v : d) - m.length;
     return {
         channelId: n,
         guild: null != p ? p : t,
-        stage: null != h ? h : s,
+        stage: null != f ? f : s,
         speakers: m,
         audienceCount: j,
         context: g

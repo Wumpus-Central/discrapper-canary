@@ -46,7 +46,7 @@ function _(e, t, n) {
     );
 }
 function O() {
-    let e = c.Z.getGuildsArray().filter((e) => e.hasFeature(h.oNc.HUB)),
+    let e = c.Z.getGuildsArray().filter((e) => e.features.has(h.oNc.HUB)),
         t = (e) => {
             (u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, s.X)(e));
         };

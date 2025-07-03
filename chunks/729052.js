@@ -1,4 +1,4 @@
-n.d(e, { p2: () => s });
+n.d(e, { p2: () => r });
 var i = n(818083),
     l = n(981631);
 let a = (0, i.B)({
@@ -19,7 +19,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    r = (0, i.B)({
+    s = (0, i.B)({
         kind: 'guild',
         id: '2023-11_voice_activity_notification_guild',
         label: 'General Voice Channel Notifications for Guild',
@@ -32,9 +32,9 @@ let a = (0, i.B)({
             }
         ]
     });
-function s(t) {
+function r(t) {
     var e;
-    let { voiceChannelActivityNotifsEnabled: n } = r.useExperiment(
+    let { voiceChannelActivityNotifsEnabled: n } = s.useExperiment(
             {
                 location: 'useVoiceActivityNotificationSettingsExperiment',
                 guildId: null != (e = null == t ? void 0 : t.getGuildId()) ? e : l.lds

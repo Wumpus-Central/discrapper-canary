@@ -148,7 +148,7 @@ class c extends r.Z {
         let r = '',
             o = '';
         ((this.mlsSession = new e.Session(r, o, (e, t) => {
-            (this.logger.error('[TAG] MLS failure', e, t), this.emit(a.Sh.MLSFailure, e, t));
+            this.emit(a.Sh.MLSFailure, e, t);
         })),
             (this.encryptionWorker = this.setupEncryptionWorker()));
     }

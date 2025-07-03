@@ -8,10 +8,10 @@ var r = n(442837),
 function s(e) {
     return (0, r.e7)([i.Z], () => {
         let t = i.Z.getGuild(e);
-        return null != t && t.hasFeature(l.oNc.GUILD_ONBOARDING_EVER_ENABLED);
+        return null != t && t.features.has(l.oNc.GUILD_ONBOARDING_EVER_ENABLED);
     });
 }
 function a(e) {
     let t = i.Z.getGuild(e);
-    return null != t && t.hasFeature(l.oNc.GUILD_ONBOARDING_EVER_ENABLED);
+    return null != t && t.features.has(l.oNc.GUILD_ONBOARDING_EVER_ENABLED);
 }

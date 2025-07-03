@@ -58,8 +58,8 @@ function w(e) {
         R = __OVERLAY__,
         k = (0, m.ZP)(t.id),
         M = (0, c.ZP)(),
-        L = i.useRef(Date.now()),
-        { analyticsLocations: D } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
+        D = i.useRef(Date.now()),
+        { analyticsLocations: L } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
         U = (0, h.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
@@ -76,7 +76,7 @@ function w(e) {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: D,
+                        sourceAnalyticsLocations: L,
                         hideRestrictedProfile: !0
                     },
                     U,
@@ -85,10 +85,10 @@ function w(e) {
             );
         };
     return (0, r.jsx)(d.Gt, {
-        value: D,
+        value: L,
         children: (0, r.jsx)(h.Mt, {
             value: U,
-            openedAt: L.current,
+            openedAt: D.current,
             fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
             fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
             isLoaded: null == k ? void 0 : k.isLoaded,
@@ -182,7 +182,7 @@ function w(e) {
                                                 A(
                                                     {
                                                         action: 'PRESS_VIEW_PROFILE',
-                                                        analyticsLocations: D
+                                                        analyticsLocations: L
                                                     },
                                                     U
                                                 )

@@ -20,7 +20,7 @@ var r = n(255367),
     v = n(694095);
 function y(e) {
     var t, n, l;
-    let { name: y, icon: _, imageSrc: C, iconBackgroundColor: N, iconClassName: I, iconWrapperClassName: S, details: E, integration: T, buttonText: w, buttonDisabled: P, hasNextSection: Z, onButtonClick: k, guildId: A, isScrolling: D, canShowMigrationTooltip: R, trailing: L } = e,
+    let { name: y, icon: _, imageSrc: C, iconBackgroundColor: N, iconClassName: I, iconWrapperClassName: E, details: S, integration: T, buttonText: w, buttonDisabled: P, hasNextSection: Z, onButtonClick: k, guildId: A, isScrolling: D, canShowMigrationTooltip: R, trailing: L } = e,
         [M, B] = i.useState(!1),
         [U, W] = i.useState(!1),
         z = R && !D && !U && void 0 !== A && null != T,
@@ -145,8 +145,8 @@ function y(e) {
                     imageSrc: C,
                     iconBackgroundColor: N,
                     iconClassName: I,
-                    iconWrapperClassName: S,
-                    details: E,
+                    iconWrapperClassName: E,
+                    details: S,
                     isPremium: K.length > 0
                 }),
                 (0, r.jsx)(p.Z.Child, {

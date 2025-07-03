@@ -6,7 +6,7 @@ var l = n(592125),
 function s(e) {
     if (!e.isPrivate()) {
         let t = r.Z.getGuild(e.guild_id);
-        return null != t && t.hasFeature(a.oNc.INTERNAL_EMPLOYEE_ONLY);
+        return null != t && t.features.has(a.oNc.INTERNAL_EMPLOYEE_ONLY);
     }
     return e.recipients.every((e) => {
         let t = i.default.getUser(e);

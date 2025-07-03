@@ -22,14 +22,14 @@ function b(e) {
         C = (0, h.y)(I),
         x = (0, _.Ad)(),
         P = (0, i.e7)([f.Z], () => f.Z.getDraft(t.channel_id, f.d.ForwardContextMessage)),
-        [L, T] = r.useState(() => (0, c.eK)(P)),
-        { textValue: N, richValue: j } = L,
+        [T, L] = r.useState(() => (0, c.eK)(P)),
+        { textValue: N, richValue: j } = T,
         [Z, w] = r.useState(!1),
         D = r.useCallback(() => w(!0), []),
         R = r.useCallback(() => w(!1), []),
         k = r.useCallback(
             (e, n, l) => {
-                (T({
+                (L({
                     textValue: n,
                     richValue: l
                 }),

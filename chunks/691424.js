@@ -137,7 +137,7 @@ function Y(e, t, n) {
     let r = T.Z.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.hasFeature(k.oNc.COMMUNITY) && (0, O.uL)(k.Z5c.CHANNEL(e, t));
+        r.features.has(k.oNc.COMMUNITY) && (0, O.uL)(k.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case 'home':

@@ -41,8 +41,8 @@ var i = n(255367),
     U = n(556296),
     B = n(237997),
     G = n(585483),
-    F = n(838440),
-    H = n(13140),
+    H = n(838440),
+    F = n(13140),
     Y = n(519591),
     K = n(906037),
     X = n(786906),
@@ -218,7 +218,7 @@ class el extends r.Component {
                           shouldClear: !1,
                           shouldRefocus: !0
                       })
-                    : (0, F.v)({
+                    : (0, H.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
                           type: x.Ie.OVERLAY,
                           content: t,
@@ -507,7 +507,7 @@ function ea(e) {
         o = (0, c.e7)([z.Z], () => z.Z.getChannelId(r)),
         l = (0, c.e7)([D.Z], () => D.Z.getChannel(o)),
         s = (0, c.e7)([U.ZP], () => U.ZP.getOverlayChatKeybind()),
-        a = null != s ? (0, H.BB)(s.shortcut, !0) : ']',
+        a = null != s ? (0, F.BB)(s.shortcut, !0) : ']',
         [d, u, h] = (0, c.Wu)([B.default], () => [B.default.getTextWidgetOpacity(), B.default.getActiveRegions(), !t && B.default.isPreviewingInGame()]),
         p = (0, c.e7)([L.Z], () => L.Z.getGuild(r)),
         f = (0, c.e7)([A.Z], () => null != r && A.Z.didAgree(r)),

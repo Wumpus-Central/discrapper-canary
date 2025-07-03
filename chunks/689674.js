@@ -15,7 +15,7 @@ function d(e) {
             () => {
                 var e;
                 let t = o.Z.getGuild(p.guild_id);
-                return null != (e = null == t ? void 0 : t.hasFeature(u.oNc.COMMUNITY)) && e;
+                return null != (e = null == t ? void 0 : t.features.has(u.oNc.COMMUNITY)) && e;
             },
             [p.guild_id]
         ),

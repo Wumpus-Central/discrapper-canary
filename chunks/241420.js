@@ -40,7 +40,7 @@ function _(e) {
 }
 function g(e) {
     let { guild: t, transitionState: n, onClose: i } = e,
-        o = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
+        o = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != t ? t.name : '??');
     return (0, a.jsxs)(r.Y0X, {
         transitionState: n,
         size: r.CgR.SMALL,

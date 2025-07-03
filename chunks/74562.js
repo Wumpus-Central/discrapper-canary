@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h });
+t.d(n, { Z: () => f });
 var i = t(255367);
 t(73800);
 var r = t(442837),
@@ -11,16 +11,16 @@ var r = t(442837),
     d = t(981631),
     g = t(388032),
     p = t(588477);
-function h(e) {
+function f(e) {
     let { guildId: n, onClose: t } = e,
-        { showHubEventsList: h } = c.Z.useExperiment(
+        { showHubEventsList: f } = c.Z.useExperiment(
             {
                 guildId: n,
                 location: '6597ca_1'
             },
             { autoTrackExposure: !1 }
         ),
-        f = (0, r.e7)(
+        h = (0, r.e7)(
             [s.Z, u.Z],
             () => {
                 let e = s.Z.getGuild(n);
@@ -32,9 +32,9 @@ function h(e) {
             [s.Z],
             () => {
                 let e = s.Z.getGuild(n);
-                return h && (null == e ? void 0 : e.hasFeature(d.oNc.HUB));
+                return f && (null == e ? void 0 : e.features.has(d.oNc.HUB));
             },
-            [n, h]
+            [n, f]
         );
     return (0, i.jsxs)('div', {
         className: p.container,
@@ -63,7 +63,7 @@ function h(e) {
                 className: p.subtitle,
                 children: v ? g.intl.string(g.t['6hktHB']) : g.intl.string(g.t['v/S/PD'])
             }),
-            f &&
+            h &&
                 (0, i.jsx)(l.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',

@@ -13,7 +13,7 @@ let l = () => {
         let t = i.Z.getChannel(e);
         if (null == t) return !1;
         let n = a.Z.getGuild(t.getGuildId());
-        return null != n && n.hasFeature(s.oNc.HUB);
+        return null != n && n.features.has(s.oNc.HUB);
     },
     c = (e) =>
         (0, r.e7)([o.Z, i.Z, a.Z], () => {

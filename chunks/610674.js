@@ -1,2 +1,2 @@
-n.d(t, { Z: () => i });
-let i = 'https://dis.gd/appeal';
+n.d(t, { Z: () => r });
+let r = 'https://dis.gd/appeal';

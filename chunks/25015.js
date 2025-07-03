@@ -14,17 +14,17 @@ var r = n(255367),
     f = n(875231);
 let b = l.lazy(() => Promise.all([n.e('87597'), n.e('85831')]).then(n.bind(n, 120314)));
 function h(e, t) {
-    let { hideSimpleEmbedContent: h, formatInline: O = !1, noStyleAndInteraction: y = !1, isInteracting: v = !1, allowHeading: j = !1, allowList: P = !1, allowLinks: x = !1, allowDevLinks: C = !1, previewLinkTarget: w = !1, viewingChannelId: S } = t,
+    let { hideSimpleEmbedContent: h, formatInline: O = !1, noStyleAndInteraction: y = !1, isInteracting: j = !1, allowHeading: v = !1, allowList: P = !1, allowLinks: x = !1, allowDevLinks: C = !1, previewLinkTarget: w = !1, viewingChannelId: S } = t,
         E = (0, i.p)(),
         N = o.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        Z = (0, p.o)({ location: 'useMessageRenderedContent' }),
-        [R, T] = l.useState(!1),
+        T = (0, p.o)({ location: 'useMessageRenderedContent' }),
+        [Z, R] = l.useState(!1),
         _ = l.useCallback((e) => {
-            e && T(!0);
+            e && R(!0);
         }, []);
     return (
         l.useEffect(() => {
-            T(!1);
+            R(!1);
         }, [e.content]),
         l.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -42,7 +42,7 @@ function h(e, t) {
                     }
                 });
             }
-            return Z.enabled
+            return T.enabled
                 ? {
                       content: (0, r.jsx)(l.Suspense, {
                           children: (0, r.jsx)(d.v.Provider, {
@@ -56,14 +56,14 @@ function h(e, t) {
                               children: (0, r.jsx)(b, { content: e.content })
                           })
                       }),
-                      hasSpoilerEmbeds: R
+                      hasSpoilerEmbeds: Z
                   }
                 : (0, c.ZP)(e, {
                       hideSimpleEmbedContent: h,
                       formatInline: O,
                       noStyleAndInteraction: y,
-                      isInteracting: v,
-                      allowHeading: j,
+                      isInteracting: j,
+                      allowHeading: v,
                       allowList: P,
                       allowLinks: x,
                       allowDevLinks: C,
@@ -72,6 +72,6 @@ function h(e, t) {
                       viewingChannelId: S,
                       allowGameMentions: N
                   });
-        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, h, O, y, v, j, P, x, w, E, C, S, Z.enabled, N, R])
+        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, h, O, y, j, v, P, x, w, E, C, S, T.enabled, N, Z])
     );
 }

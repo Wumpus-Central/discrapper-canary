@@ -44,13 +44,13 @@ function _(e) {
 }
 let A = -1;
 var m = (((r = {}).MESSAGES = 'messages'), (r.LINKS = 'links'), (r.MEDIA = 'media'), (r.ALL_COUNTS = 'all_counts'), r);
-function T(e, t, n) {
+function f(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         l = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         i = JSON.stringify(r);
     return l ? 'guild_'.concat(t, '_search_tab_').concat(n, '_for_').concat(e, '_with_additonal_').concat(i) : 'guild_'.concat(t, '_search_').concat(n, '_for_').concat(e, '_with_additonal_').concat(i);
 }
-let f = {
+let T = {
         searchFetcher: null,
         searchTabFetcher: null,
         result: null,
@@ -62,7 +62,7 @@ let f = {
         (0, a.j)(() => {
             g.setState((n) => {
                 let r = n.get(e);
-                return (null == r ? n.set(e, _({}, f, t)) : n.set(e, _({}, r, t)), n);
+                return (null == r ? n.set(e, _({}, T, t)) : n.set(e, _({}, r, t)), n);
             });
         });
     },
@@ -102,7 +102,7 @@ function O(e, t, n) {
 function N(e, t, n) {
     return (function (e, t, n, r) {
         let { addtionalQuery: i, shouldDispatch: s = !1 } = r,
-            a = l.useMemo(() => T(e, t, n, i), [e, t, n, i]),
+            a = l.useMemo(() => f(e, t, n, i), [e, t, n, i]),
             _ = h(a),
             m = (0, u.Z)(a),
             [g, N] = l.useState({});
@@ -161,12 +161,12 @@ function N(e, t, n) {
                 }
                 return () => {};
             }, [e, t, _, a, n, i, m, s]),
-            null != _ ? _ : f
+            null != _ ? _ : T
         );
     })(e, t, 'messages', n);
 }
 function p(e, t, n, r) {
-    let i = l.useMemo(() => T(e, t, n, r, !0), [e, t, n, r]),
+    let i = l.useMemo(() => f(e, t, n, r, !0), [e, t, n, r]),
         s = h(i),
         a = (0, u.Z)(i);
     return {
@@ -180,18 +180,18 @@ function R(e, t, n) {
     let { key: a, state: o } = p(e, t, 'messages', n),
         { key: u, state: d } = p(e, t, 'links', n),
         { key: _, state: m } = p(e, t, 'media', n),
-        T = l.useMemo(() => O(e, 'all_counts', n), [e, n]),
-        f = l.useMemo(
+        f = l.useMemo(() => O(e, 'all_counts', n), [e, n]),
+        T = l.useMemo(
             () => ({
                 tabs: {
-                    messages: O(e, 'messages', T),
-                    links: O(e, 'links', T),
-                    media: O(e, 'media', T)
+                    messages: O(e, 'messages', f),
+                    links: O(e, 'links', f),
+                    media: O(e, 'media', f)
                 },
                 track_exact_total_hits: !0,
                 include_nsfw: !0
             }),
-            [e, T]
+            [e, f]
         ),
         g = l.useCallback(
             (e) => {
@@ -213,7 +213,7 @@ function R(e, t, n) {
             [g]
         );
     l.useEffect(() => {
-        let e = new c.tJ(t, E.aib.GUILD, T, f);
+        let e = new c.tJ(t, E.aib.GUILD, f, T);
         h({
             searchTabFetcher: e,
             messageCount: A,
@@ -257,7 +257,7 @@ function R(e, t, n) {
         return () => {
             (e.cancel(), clearTimeout(n));
         };
-    }, [e, t, T, f, h, g]);
+    }, [e, t, f, T, h, g]);
     let [N, R] = l.useState({});
     return {
         messagesCount: null != (r = null == o ? void 0 : o.messageCount) ? r : A,

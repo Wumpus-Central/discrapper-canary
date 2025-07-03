@@ -85,11 +85,11 @@ let y = l.memo(function (e) {
         null != e && (f = h(e));
     }
     if (null == f) return null;
-    let { text: y, icon: v, color: j } = f;
+    let { text: y, icon: j, color: v } = f;
     return (0, r.jsx)(O, {
-        icon: v,
+        icon: j,
         text: y,
         className: n,
-        color: j
+        color: v
     });
 });

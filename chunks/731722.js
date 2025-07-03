@@ -16,7 +16,7 @@ function c(e) {
     return (null == e || null == (t = e.profile) ? void 0 : t.tag) != null;
 }
 function u(e) {
-    return e.hasFeature(l.oNc.GUILD_TAGS);
+    return e.features.has(l.oNc.GUILD_TAGS);
 }
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Gg.SIZE_12;

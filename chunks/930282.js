@@ -29,8 +29,8 @@ let O = l.memo(function (e) {
     var t;
     let { className: n, message: o, children: s, content: c, onUpdate: m, contentRef: h, compact: O } = e,
         y = o.state === p.yb.SEND_FAILED,
-        v = o.state === p.yb.SENDING,
-        j = o.isCommandType(),
+        j = o.state === p.yb.SENDING,
+        v = o.isCommandType(),
         P = null == (t = o.editedTimestamp) ? void 0 : t.toString(),
         x = l.useRef(!1);
     return (
@@ -42,7 +42,7 @@ let O = l.memo(function (e) {
             ref: h,
             className: i()(n, f.markup, {
                 [g.messageContent]: !0,
-                [g.isSending]: v && !j,
+                [g.isSending]: j && !v,
                 [g.markupRtl]: 'rtl' === a()(o.content),
                 [g.isFailed]: y,
                 [g.isUnsupported]: o.isUnsupported

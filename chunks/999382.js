@@ -178,7 +178,7 @@ function eb(e) {
         if (((u = null), t !== e.section)) return eK(e);
     } else
         r === k.pNK.MEMBERS
-            ? (u = s.getEveryoneRoleId())
+            ? (u = (0, S.lV)(s))
             : r === k.pNK.VANITY_URL
               ? (0, L.U5)(s.id)
               : r === k.pNK.SAFETY &&

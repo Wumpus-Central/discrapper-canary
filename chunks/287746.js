@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(895924),
     k = n(581364),
     M = n(667204),
-    L = n(104919),
-    D = n(307508),
+    D = n(104919),
+    L = n(307508),
     U = n(541716),
     B = n(752305),
     F = n(516887),
@@ -87,8 +87,8 @@ var r = n(255367),
     eR = n(944486),
     ek = n(117530),
     eM = n(594174),
-    eL = n(626135),
-    eD = n(934415),
+    eD = n(626135),
+    eL = n(934415),
     eU = n(459273),
     eB = n(585483),
     eF = n(709054),
@@ -204,7 +204,7 @@ class tn extends i.PureComponent {
             let e = eZ.Z.getDraft(n.id, eZ.d.ChannelMessage);
             e !== r && this.setState((0, B.eK)(e));
         }
-        t.textValue.length < e0.J6R && r.length >= e0.J6R && eL.default.track(e0.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
+        t.textValue.length < e0.J6R && r.length >= e0.J6R && eD.default.track(e0.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
     }
     handleEditLastMessage(e) {
         let { channel: t } = this.props;
@@ -395,7 +395,7 @@ class tn extends i.PureComponent {
                         );
                     let e = w.Z.getCommandOrigin(c.id);
                     if (null == e || e === R.bB.CHAT) {
-                        let { isAuthorized: e } = await (0, L.L)({
+                        let { isAuthorized: e } = await (0, D.L)({
                             applicationId: l.applicationId,
                             channel: c,
                             commandIntegrationTypes: l.integration_types
@@ -409,7 +409,7 @@ class tn extends i.PureComponent {
                         var m;
                         let { location: t, sectionName: n } = null != (m = (0, eY._U)(l)) ? m : {},
                             r = e === R.bB.APPLICATION_LAUNCHER ? I.Z.lastShownEntrypoint() : P._b.TEXT,
-                            { isAuthorized: i } = await (0, L.L)({
+                            { isAuthorized: i } = await (0, D.L)({
                                 applicationId: l.applicationId,
                                 channel: c,
                                 commandIntegrationTypes: l.integration_types,
@@ -614,9 +614,9 @@ class tr extends i.PureComponent {
         let n,
             { channel: i, guild: l, keyboardModeEnabled: a, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: y, shakeIntensity: C, poggermodeEnabled: x, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: S, pendingScheduledMessage: I, recipientUser: P, voiceChannel: Z, theme: N, chatWallpaperState: T, wallpaperColorMix: A, messagesTypingGradient: w, isChatInputBottomAligned: R } = this.props,
             { textAreaFocused: k, textAreaHighlighted: M } = this.state,
-            L = d === U.Ie.SIDEBAR;
-        n = L && i.type === e0.d4z.GUILD_VOICE ? e2.t.pnnyFR : L && i.type === e0.d4z.GUILD_STAGE_VOICE ? e2.t.YInSkp : u.T.THREADS.has(i.type) ? e2.t['OkzL+f'] : e2.t.UbNmGR;
-        let D = (0, r.jsx)('div', {
+            D = d === U.Ie.SIDEBAR;
+        n = D && i.type === e0.d4z.GUILD_VOICE ? e2.t.pnnyFR : D && i.type === e0.d4z.GUILD_STAGE_VOICE ? e2.t.YInSkp : u.T.THREADS.has(i.type) ? e2.t['OkzL+f'] : e2.t.UbNmGR;
+        let L = (0, r.jsx)('div', {
                 className: e3.channelBottomBarArea,
                 children: (0, r.jsx)(eX.Z, {})
             }),
@@ -656,7 +656,7 @@ class tr extends i.PureComponent {
                 ]
             }),
             F = E && S,
-            H = F && S ? D : B,
+            H = F && S ? L : B,
             G = o()({
                 [e7.barWithAppLauncherButton]: O,
                 [e7.barWithAppsDMsUI]: E
@@ -670,7 +670,7 @@ class tr extends i.PureComponent {
         return (0, r.jsx)(
             _.Z,
             {
-                page: (0, eD.mE)(this.props.channel),
+                page: (0, eL.mE)(this.props.channel),
                 children: (0, r.jsx)(el.sW, {
                     children: (0, r.jsx)(ei.BV, {
                         children: (0, r.jsxs)(eU.I3, {
@@ -693,7 +693,7 @@ class tr extends i.PureComponent {
                                     handler: this.handleOpenAppLauncher
                                 }),
                                 (0, r.jsxs)(te, {
-                                    isSidebar: L,
+                                    isSidebar: D,
                                     className: o()(e3.chatContent, {
                                         [e3.hasWallpaper]: null == T ? void 0 : T.isViewable,
                                         [X.e3]: z ? (null == T ? void 0 : T.isViewable) : void 0,
@@ -714,7 +714,7 @@ class tr extends i.PureComponent {
                                         (0, r.jsx)(eq.Z, {
                                             channel: i,
                                             guild: l,
-                                            narrow: L
+                                            narrow: D
                                         }),
                                         (0, r.jsxs)(p.y5t, {
                                             component: (0, r.jsx)(p.nn4, { children: (0, r.jsx)(p.H, { children: e2.intl.format(e2.t.eTzKk5, { channelName: i.name }) }) }),
@@ -904,7 +904,7 @@ let ti = i.memo(function (e) {
             channel: t,
             chatInputType: l
         }),
-        j = (0, D.Q)(t.id),
+        j = (0, L.Q)(t.id),
         S = (0, ex.k)(t.id),
         P = (0, C.ZP)(),
         N = (0, K.Z)(t.id),
@@ -915,7 +915,7 @@ let ti = i.memo(function (e) {
             isProfileFetching: R,
             wasProfileFetching: k,
             applicationId: M,
-            channelId: L,
+            channelId: D,
             commands: U
         } = (0, O.Z)({
             context: {
@@ -927,7 +927,7 @@ let ti = i.memo(function (e) {
         isProfileFetching: R,
         wasProfileFetching: k,
         applicationId: M,
-        channelId: L,
+        channelId: D,
         commands: U
     });
     let B = i.useRef(null),

@@ -146,8 +146,8 @@ let E = (e) => {
         B = () => {
             b.Z.open(a.guild_id, C.pNK.ROLE_SUBSCRIPTIONS);
         },
-        H = null != (t = null == R ? void 0 : R.hasFeature(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.intl.string(y.t.n0q7sL) : y.intl.string(y.t.QoYdiY),
-        U = null != (n = (null == R ? void 0 : R.hasFeature(C.oNc.CREATOR_MONETIZABLE)) || (null == R ? void 0 : R.hasFeature(C.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
+        H = null != (t = null == R ? void 0 : R.features.has(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.intl.string(y.t.n0q7sL) : y.intl.string(y.t.QoYdiY),
+        U = null != (n = (null == R ? void 0 : R.features.has(C.oNc.CREATOR_MONETIZABLE)) || (null == R ? void 0 : R.features.has(C.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
         G = U ? y.intl.string(y.t['G/7ciY']) : y.intl.string(y.t.IFOiio),
         V = U ? y.intl.string(y.t.GjgQOz) : y.intl.string(y.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {

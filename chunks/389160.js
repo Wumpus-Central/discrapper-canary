@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(97519),
     i = n(982183);
 let l = {
@@ -13,7 +13,7 @@ let l = {
         [i.KZ.YESTERDAY]: !1,
         [i.KZ.OLDER]: !1
     },
-    a = (0, r.U)((e, t) => ({
+    s = (0, r.U)((e, t) => ({
         messageCategoryOpenStates: l,
         getOpenState: (e) => t().messageCategoryOpenStates[e],
         toggleOpenState: (t) => {

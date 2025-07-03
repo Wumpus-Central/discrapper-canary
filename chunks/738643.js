@@ -8,7 +8,7 @@ var r = n(442837),
 function c(e, t) {
     return (0, r.e7)([l.Z, o.Z, a.Z], () => {
         let n = o.Z.getGuild(t);
-        if (!((null == n ? void 0 : n.hasFeature(s.oNc.WELCOME_SCREEN_ENABLED)) === !0 && n.hasFeature(s.oNc.COMMUNITY)) || n.hasFeature(s.oNc.GUILD_SERVER_GUIDE)) return !1;
+        if (!((null == n ? void 0 : n.features.has(s.oNc.WELCOME_SCREEN_ENABLED)) === !0 && n.features.has(s.oNc.COMMUNITY)) || n.features.has(s.oNc.GUILD_SERVER_GUIDE)) return !1;
         let r = l.Z.getChannel(e);
         return e === a.Z.getChannelId(t) && null != r && r.getGuildId() === n.id && (0, i.zi)(r.type);
     });

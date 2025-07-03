@@ -181,7 +181,7 @@ function E(e) {
 function S(e) {
     let { rules: t, setRules: n, guild: l } = e,
         s = l.rulesChannelId,
-        a = l.hasFeature(v.oNc.PREVIEW_ENABLED),
+        a = l.features.has(v.oNc.PREVIEW_ENABLED),
         c = (0, u.e7)([h.Z], () => (null != s ? h.Z.getChannel(s) : null)),
         d = (0, u.e7)([x.ZP], () => x.ZP.getDefaultChannel(l.id)),
         [g, p] = i.useState(null),

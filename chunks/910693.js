@@ -4,8 +4,8 @@ n.d(t, {
     dW: () => m,
     gm: () => E,
     h1: () => g,
-    jQ: () => T,
-    sE: () => f
+    jQ: () => f,
+    sE: () => T
 });
 var r,
     l,
@@ -83,8 +83,8 @@ function m(e) {
         [e]
     );
 }
-var T = (((l = {}).BAN = 'ban'), (l.KICK = 'kick'), (l.MUTE = 'mute'), (l.TIMEOUT = 'timeout'), (l.ADD_ROLE = 'add_role'), (l.REMOVE_ROLE = 'remove_role'), (l.COPY_ID = 'copy_id'), (l.CHANGE_NICKNAME = 'change_nickname'), l);
-function f(e, t) {
+var f = (((l = {}).BAN = 'ban'), (l.KICK = 'kick'), (l.MUTE = 'mute'), (l.TIMEOUT = 'timeout'), (l.ADD_ROLE = 'add_role'), (l.REMOVE_ROLE = 'remove_role'), (l.COPY_ID = 'copy_id'), (l.CHANGE_NICKNAME = 'change_nickname'), l);
+function T(e, t) {
     let { location: n, targetUserId: r, targets: l, locations: s } = t;
     return i.useCallback(
         (t) => {

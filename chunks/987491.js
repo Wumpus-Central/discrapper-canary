@@ -111,7 +111,7 @@ function A(e) {
         })
     });
 }
-let M = l.memo(function (e) {
+let Z = l.memo(function (e) {
         let { joinRequest: t, user: n } = e,
             { joinRequestId: i, guildId: a } = t,
             { analyticsLocations: s } = (0, x.ZP)(),
@@ -170,7 +170,7 @@ let M = l.memo(function (e) {
             ]
         });
     }),
-    Z = l.memo(function (e) {
+    M = l.memo(function (e) {
         let { joinRequest: t, onSelect: i } = e,
             { guildId: s, createdAt: m, applicationStatus: x } = t,
             h = l.useMemo(() => new N.Z(t.user), [t.user]),
@@ -245,7 +245,7 @@ let M = l.memo(function (e) {
                   className: a()(y.roundedRow, y.memberRowContainer, { [y.selected]: (null == j ? void 0 : j.joinRequestId) === t.joinRequestId }),
                   children: [
                       (0, r.jsx)('td', {
-                          children: (0, r.jsx)(M, {
+                          children: (0, r.jsx)(Z, {
                               joinRequest: t,
                               user: h
                           })
@@ -368,7 +368,7 @@ function D(e) {
                                       })
                                     : u.map((e) =>
                                           (0, r.jsx)(
-                                              Z,
+                                              M,
                                               {
                                                   joinRequest: e,
                                                   onSelect: () => h.Z.setSelectedGuildJoinRequest(t, e)

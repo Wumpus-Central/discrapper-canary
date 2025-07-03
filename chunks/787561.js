@@ -130,7 +130,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
                 .catch(() => b(!1));
         });
         let j = (0, a.e7)([x.Z], () => x.Z.getGuild('942897714956472401')),
-            _ = l.isCommunity() && g >= 1000 && f && null == j;
+            _ = l.features.has(N.oNc.COMMUNITY) && g >= 1000 && f && null == j;
         if (t && n && !_) return null;
         let O = async () => {
             try {

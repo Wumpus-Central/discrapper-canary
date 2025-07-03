@@ -58,7 +58,7 @@ let p = {
         return (e) => {
             var n;
             let r = null != (n = c.Z.getGuild(e)) ? n : s.Z.getGuild(e);
-            return null != r && t.some((e) => r.hasFeature(e));
+            return null != r && t.some((e) => r.features.has(e));
         };
     },
     [o().v3('guild_hub_types')]: (e) => {

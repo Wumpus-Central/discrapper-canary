@@ -32,8 +32,8 @@ function O(e) {
         { mute: w, suppress: R } = (0, _.Z)(t),
         k = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
         M = w || R || k,
-        L = (0, m.sR)({ isSoundboardButtonDisabled: M }),
-        [D, U] = (0, h.cv)(L),
+        D = (0, m.sR)({ isSoundboardButtonDisabled: M }),
+        [L, U] = (0, h.cv)(D),
         { analyticsLocations: B } = (0, u.ZP)(),
         { isHovered: F, setIsHovered: H, onMouseEnter: G, onMouseLeave: V } = (0, f.Z)(200, 300);
     function z(e) {
@@ -121,7 +121,7 @@ function O(e) {
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  D === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  L === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, r.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U

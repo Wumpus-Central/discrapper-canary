@@ -1,38 +1,39 @@
-(n.d(t, { Z: () => d }), n(388685));
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(73800),
     i = n(442837),
     l = n(479531),
-    s = n(430824),
-    a = n(594174),
-    o = n(53365),
-    c = n(223892);
-function d(e, t) {
-    let n = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
-        [d, u] = r.useState(),
-        [m, g] = r.useState(!1),
-        p = (0, c.Ob)(n);
+    s = n(601964),
+    a = n(430824),
+    o = n(594174),
+    c = n(53365),
+    d = n(223892);
+function u(e, t) {
+    let n = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
+        [u, m] = r.useState(),
+        [g, p] = r.useState(!1),
+        f = (0, d.Ob)(n);
     return {
         canSubmitAcceptance: (0, i.e7)(
-            [a.default],
+            [o.default],
             () => {
-                let e = a.default.getCurrentUser();
-                return (null == n ? void 0 : n.isOwner(e)) === !0;
+                let e = o.default.getCurrentUser();
+                return null != n && (0, s.eM)(n, e);
             },
             [n]
         ),
-        error: d,
-        loading: m,
+        error: u,
+        loading: g,
         submitAcceptTermsRequest: r.useCallback(async () => {
-            if (null != e && (p || null != t)) {
-                (g(!0), u(void 0));
+            if (null != e && (f || null != t)) {
+                (p(!0), m(void 0));
                 try {
-                    null != t ? await o.wE(e, t) : await o.zo(e);
+                    null != t ? await c.wE(e, t) : await c.zo(e);
                 } catch (e) {
-                    u(new l.Z(e));
+                    m(new l.Z(e));
                 } finally {
-                    g(!1);
+                    p(!1);
                 }
             }
-        }, [e, t, p])
+        }, [e, t, f])
     };
 }

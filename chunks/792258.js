@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => b });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -7,41 +7,42 @@ var r = n(120356),
     a = n(399606),
     o = n(481060),
     c = n(372769),
-    d = n(914788),
-    u = n(981631),
-    m = n(916723),
-    g = n(388032),
-    p = n(45452);
-let h = [18, 18, 16, 16, 14, 12, 10],
-    f = (e) => {
+    d = n(601964),
+    u = n(914788),
+    m = n(981631),
+    g = n(916723),
+    p = n(388032),
+    h = n(45452);
+let f = [18, 18, 16, 16, 14, 12, 10],
+    b = (e) => {
         let { guildId: t } = e,
-            n = (0, a.e7)([d.Z], () => d.Z.getGuild(t));
+            n = (0, a.e7)([u.Z], () => u.Z.getGuild(t));
         if (void 0 === n) return null;
-        let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
-            f = n.toString(),
-            b = n.getIconURL(40, !0),
-            x = null,
-            _ = h[h.length - 1];
-        if (null == n.icon && null != f) {
-            var E;
-            _ = null != (E = h[(x = (0, l.Zg)(f)).length - 1]) ? E : h[h.length - 1];
+        let r = n.features.has(m.oNc.VERIFIED) || n.features.has(m.oNc.PARTNERED),
+            { name: b } = n,
+            x = (0, d.EB)(n, 40, !0),
+            _ = null,
+            E = f[f.length - 1];
+        if (null == n.icon && null != b) {
+            var j;
+            E = null != (j = f[(_ = (0, l.Zg)(b)).length - 1]) ? j : f[f.length - 1];
         }
         return (0, i.jsxs)('div', {
-            className: p.container,
+            className: h.container,
             children: [
                 (0, i.jsxs)('div', {
-                    style: { fontSize: _ },
+                    style: { fontSize: E },
                     children: [
-                        null != x
+                        null != _
                             ? (0, i.jsx)('div', {
-                                  className: s()(p.childWrapper, p.acronym),
+                                  className: s()(h.childWrapper, h.acronym),
                                   'aria-hidden': !0,
-                                  children: x
+                                  children: _
                               })
                             : null,
-                        null != b
+                        null != x
                             ? (0, i.jsx)(o.qEK, {
-                                  src: n.getIconURL(40, !0),
+                                  src: x,
                                   size: o.EFr.SIZE_40,
                                   'aria-hidden': !0
                               })
@@ -49,22 +50,22 @@ let h = [18, 18, 16, 16, 14, 12, 10],
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: p.descriptors,
+                    className: h.descriptors,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: p.header,
+                            className: h.header,
                             children: [
                                 r
                                     ? (0, i.jsx)(c.Z, {
                                           guild: n,
                                           tooltipPosition: 'bottom',
                                           tooltipColor: o.ua7.Colors.PRIMARY,
-                                          className: p.guildBadge
+                                          className: h.guildBadge
                                       })
                                     : null,
                                 (0, i.jsx)(o.Text, {
                                     variant: 'text-md/semibold',
-                                    children: n.toString()
+                                    children: b
                                 })
                             ]
                         }),
@@ -72,7 +73,7 @@ let h = [18, 18, 16, 16, 14, 12, 10],
                             ? (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-muted',
-                                  children: g.intl.format(m.default['5JmNgo'], { members: n.approximateMemberCount })
+                                  children: p.intl.format(g.default['5JmNgo'], { members: n.approximateMemberCount })
                               })
                             : null
                     ]

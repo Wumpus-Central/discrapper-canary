@@ -81,7 +81,7 @@ let j = (e) => {
                     className: v.confirmationHeader,
                     variant: 'heading-xl/semibold',
                     color: 'header-secondary',
-                    children: b.intl.format(b.t['1HIsTk'], { serverName: null == l ? void 0 : l.toString() })
+                    children: b.intl.format(b.t['1HIsTk'], { serverName: null == l ? void 0 : l.name })
                 }),
                 (0, r.jsx)(s.Text, {
                     className: v.confirmationSubtitle,

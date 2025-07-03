@@ -12,7 +12,7 @@ function d(e, t, n) {
         [g, m] = l.useState(!1),
         h = l.useRef(!1),
         v = null == e ? void 0 : e.id,
-        f = null == e ? void 0 : e.hasFeature(c.oNc.HAS_DIRECTORY_ENTRY);
+        f = null == e ? void 0 : e.features.has(c.oNc.HAS_DIRECTORY_ENTRY);
     (l.useEffect(() => {
         if (!f) return void x(u);
         h.current ||

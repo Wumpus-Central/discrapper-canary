@@ -29,8 +29,8 @@ var l,
     C = n(699516),
     x = n(594174),
     P = n(626135),
-    L = n(55935),
-    T = n(823379),
+    T = n(55935),
+    L = n(823379),
     N = n(51144),
     j = n(784384),
     Z = n(981631),
@@ -310,7 +310,7 @@ function Q(e) {
                               (0, r.jsx)(f.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-secondary',
-                                  children: (0, L.Xf)(c()(o))
+                                  children: (0, T.Xf)(c()(o))
                               })
                           ]
                       })
@@ -371,7 +371,7 @@ function z(e) {
                         'aria-posinset': s + 1,
                         'aria-setsize': t.length
                     };
-                return u === m.h8.USER ? (0, r.jsx)(H, k({ user: d }, E)) : u === m.h8.GROUP_DM ? (0, r.jsx)(W, k({ channel: d }, E)) : u === m.h8.TEXT_CHANNEL || u === m.h8.VOICE_CHANNEL ? (0, r.jsx)(Q, k({ channel: d }, E)) : void (0, T.vE)(u);
+                return u === m.h8.USER ? (0, r.jsx)(H, k({ user: d }, E)) : u === m.h8.GROUP_DM ? (0, r.jsx)(W, k({ channel: d }, E)) : u === m.h8.TEXT_CHANNEL || u === m.h8.VOICE_CHANNEL ? (0, r.jsx)(Q, k({ channel: d }, E)) : void (0, L.vE)(u);
             },
             [c, o, l, a, t, n, p]
         ),

@@ -174,36 +174,39 @@ class O {
         if (this.isVideoStopped || (this.statsWindow.push(e), this.statsWindow.length < 2)) return;
         let t = this.statsWindow[this.statsWindow.length - 1],
             n = this.statsWindow[this.statsWindow.length - 2];
-        this.collectAggregationStats(t, n);
-        let { bytes: r, framesCodec: i, timestamp: a, resolution: o, minorResolution: u, majorResolution: d, encoder: f, decoder: _, codecType: p, localWant: h } = t,
-            { timestamp: m } = n,
-            g = (a - m) / 1000;
-        if (((this.intervalTotal += g), (this.resolutionTotal += o * g), (this.minorResolutionTotal += u * g), (this.majorResolutionTotal += d * g), (this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts)), null != f && null != p && 'encoderBuckets' in this)) {
-            let n = this;
-            ((n.encoderBuckets[f] += g), (n.codecBuckets[p] += g), null != t.codecType && 'UNKNOWN' !== t.codecType && (n.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && ((n.vmafScoreNum += 1), (n.vmafScoreSum += e.vmafScore), n.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && e.psnrDb >= 0 && ((n.psnrDbNum += 1), (n.psnrDbSum += e.psnrDb), n.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && ((n.outboundSinkWantNum += 1), (n.outboundSinkWantSum += e.outboundSinkWant)));
+        if ((this.collectAggregationStats(t, n), null == this.cryptorFailureBeforeSuccessCount && e.cryptorSuccessCount > 0)) {
+            var r;
+            this.cryptorFailureBeforeSuccessCount = null != (r = this.aggregatedProperties.cryptorFailureCount) ? r : 0;
         }
-        if (null != _ && null != p && 'decoderBuckets' in this) {
+        let { bytes: i, framesCodec: a, timestamp: o, resolution: u, minorResolution: d, majorResolution: f, encoder: _, decoder: p, codecType: h, localWant: m } = t,
+            { timestamp: g } = n,
+            E = (o - g) / 1000;
+        if (((this.intervalTotal += E), (this.resolutionTotal += u * E), (this.minorResolutionTotal += d * E), (this.majorResolutionTotal += f * E), (this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts)), null != _ && null != h && 'encoderBuckets' in this)) {
+            let n = this;
+            ((n.encoderBuckets[_] += E), (n.codecBuckets[h] += E), null != t.codecType && 'UNKNOWN' !== t.codecType && (n.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && ((n.vmafScoreNum += 1), (n.vmafScoreSum += e.vmafScore), n.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && e.psnrDb >= 0 && ((n.psnrDbNum += 1), (n.psnrDbSum += e.psnrDb), n.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && ((n.outboundSinkWantNum += 1), (n.outboundSinkWantSum += e.outboundSinkWant)));
+        }
+        if (null != p && null != h && 'decoderBuckets' in this) {
             let e = this;
-            ((e.decoderBuckets[_] += g), (e.codecBuckets[p] += g), null != t.codecType && 'UNKNOWN' !== t.codecType && (e.decoderCodec = t.codecType));
+            ((e.decoderBuckets[p] += E), (e.codecBuckets[h] += E), null != t.codecType && 'UNKNOWN' !== t.codecType && (e.decoderCodec = t.codecType));
         }
         if (this.statsWindow.length < 6) return;
-        let { bytes: E, framesCodec: b, timestamp: y } = this.statsWindow[this.statsWindow.length - 3];
+        let { bytes: b, framesCodec: y, timestamp: O } = this.statsWindow[this.statsWindow.length - 3];
         c.forEach((e) => {
-            o <= e && (this.resolutionBuckets[e] += g);
+            u <= e && (this.resolutionBuckets[e] += E);
         });
-        let O = (a - y) / 1000,
-            v = ((r - E) * 8) / O,
-            I = (i - b) / O;
+        let v = (o - O) / 1000,
+            I = ((i - b) * 8) / v,
+            T = (a - y) / v;
         (s.forEach((e) => {
-            v <= e && (this.bitrateBuckets[e] += g);
+            I <= e && (this.bitrateBuckets[e] += E);
         }),
             l.forEach((e) => {
-                I <= e && (this.fpsBuckets[e] += g);
+                T <= e && (this.fpsBuckets[e] += E);
             }),
-            this.resolutionHistogram.addSample(o),
-            this.bitrateHistogram.addSample(v),
-            this.fpsHistogram.addSample(I),
-            this.localWantHistogram.addSample(h),
+            this.resolutionHistogram.addSample(u),
+            this.bitrateHistogram.addSample(I),
+            this.fpsHistogram.addSample(T),
+            this.localWantHistogram.addSample(m),
             this.statsWindow.shift());
     }
     addSystemResources() {
@@ -276,6 +279,7 @@ class O {
             o(this, 'majorResolutionTotal', 0),
             o(this, 'intervalTotal', 0),
             o(this, 'cryptorMaxAttempts', 0),
+            o(this, 'cryptorFailureBeforeSuccessCount', void 0),
             o(this, 'videoStoppedWatch', void 0),
             o(this, 'videoStoppedReason', 0),
             (this.startTime = e.now()),

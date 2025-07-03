@@ -28,7 +28,7 @@ function h(e) {
     let { guildId: n } = e,
         t = (0, o.e7)([l.Z], () => {
             var e;
-            return (null == (e = l.Z.getGuild(n)) ? void 0 : e.hasFeature(f.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (null == (e = l.Z.getGuild(n)) ? void 0 : e.features.has(f.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
         h = [];
     (h.push(a.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), (0, c.W)(n, 'GuildPowerupNotificationContainer') && h.push(a.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));

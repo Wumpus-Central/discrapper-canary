@@ -80,7 +80,7 @@ let O = () =>
             R = null != c.channel ? (0, g.jD)(c.channel) : null,
             w = null != c.target_application ? new p.ZP(c.target_application) : null,
             L = O || null == c.inviter ? null : new f.Z(c.inviter),
-            D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != Z && Z.hasFeature(b.oNc.COMMUNITY))) && null != L,
+            D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != Z && Z.features.has(b.oNc.COMMUNITY))) && null != L,
             k = null,
             M = !1;
         if (null != Z)

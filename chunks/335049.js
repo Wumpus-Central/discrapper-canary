@@ -23,7 +23,7 @@ var r = n(255367),
     C = n(981631),
     N = n(388032),
     I = n(555781);
-function S(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-function E(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,7 +77,7 @@ function T(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        E(S({}, t), {
+                        S(E({}, t), {
                             id: l,
                             label: N.intl.string(N.t.oJ1Mu7)
                         })
@@ -192,7 +192,7 @@ function P(e) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                E(S({}, t), {
+                                S(E({}, t), {
                                     guild: l,
                                     role: b
                                 })
@@ -208,7 +208,7 @@ function P(e) {
               className: I.identifier,
               children: [
                   null != g
-                      ? (0, r.jsx)(f.Z, S({ className: o()(I.__invalid_icon, I.image) }, g))
+                      ? (0, r.jsx)(f.Z, E({ className: o()(I.__invalid_icon, I.image) }, g))
                       : (0, r.jsx)(u.lZ8, {
                             size: 'custom',
                             width: 23,
@@ -274,7 +274,7 @@ function k(e) {
         children: (e) =>
             (0, r.jsx)(
                 'div',
-                E(S({ className: I.lockIcon }, e), {
+                S(E({ className: I.lockIcon }, e), {
                     children: (0, r.jsx)(u.mBM, {
                         size: 'xs',
                         color: 'currentColor'

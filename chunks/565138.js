@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => D });
 var r,
     i = n(255367),
     a = n(73800),
@@ -9,12 +9,14 @@ var r,
     u = n(692547),
     d = n(481060),
     f = n(891819),
-    _ = n(372769),
-    p = n(451478),
-    h = n(956664),
-    m = n(153066),
-    g = n(812737);
-function E(e, t, n) {
+    _ = n(231053),
+    p = n(372769),
+    h = n(601964),
+    m = n(451478),
+    g = n(956664),
+    E = n(153066),
+    b = n(812737);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +29,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +40,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                y(e, t, n[t]);
             }));
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,29 +57,29 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,7 +88,7 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let T = {
+let A = {
         SMOL: 'Smol',
         MINI: 'Mini',
         SMALLER: 'Smaller',
@@ -96,41 +98,41 @@ let T = {
         LARGER: 'Larger',
         XLARGE: 'XLarge'
     },
-    S = {
-        [T.SMOL]: 16,
-        [T.MINI]: 20,
-        [T.SMALLER]: 24,
-        [T.SMALL]: 30,
-        [T.MEDIUM]: 40,
-        [T.LARGE]: 50,
-        [T.LARGER]: 64,
-        [T.XLARGE]: 100
+    N = {
+        [A.SMOL]: 16,
+        [A.MINI]: 20,
+        [A.SMALLER]: 24,
+        [A.SMALL]: 30,
+        [A.MEDIUM]: 40,
+        [A.LARGE]: 50,
+        [A.LARGER]: 64,
+        [A.XLARGE]: 100
     },
-    A = {
-        [T.SMOL]: [10, 10, 8, 6, 6, 4],
-        [T.MINI]: [12, 12, 10, 10, 8, 6, 4],
-        [T.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-        [T.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-        [T.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-        [T.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-        [T.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-        [T.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+    C = {
+        [A.SMOL]: [10, 10, 8, 6, 6, 4],
+        [A.MINI]: [12, 12, 10, 10, 8, 6, 4],
+        [A.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+        [A.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+        [A.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+        [A.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+        [A.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+        [A.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
     };
-class N extends a.PureComponent {
+class R extends a.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
         return null != e.icon || null != t
             ? null
             : (0, i.jsx)('div', {
-                  className: g.acronym,
-                  children: e.acronym
+                  className: b.acronym,
+                  children: (0, h.gM)(e)
               });
     }
     renderBadge() {
         let { showBadge: e, guild: t, badgeStrokeColor: n, badgeTooltipColor: r, badgeTooltipDelay: a } = this.props;
-        return e && null != t.hasFeature
-            ? (0, i.jsx)(_.Z, {
-                  className: g.guildIconBadge,
+        return e
+            ? (0, i.jsx)(p.Z, {
+                  className: b.guildIconBadge,
                   guild: t,
                   badgeStrokeColor: n,
                   tooltipColor: r,
@@ -141,26 +143,27 @@ class N extends a.PureComponent {
     renderIcon() {
         var e, t;
         let n = this.props,
-            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: h, to: E, badgeStrokeColor: y, animate: I, tabIndex: T, iconSrc: S, 'aria-hidden': N, lossless: C, iconSize: R } = n,
-            P = v(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
-            w = A[c],
-            D = null != h ? d.P3F : 'div';
+            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: m, to: g, badgeStrokeColor: y, animate: v, tabIndex: S, iconSrc: A, 'aria-hidden': N, lossless: R, iconSize: P } = n,
+            w = T(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
+            D = C[c],
+            L = null != m ? d.P3F : 'div',
+            x = (0, h.gM)(r);
         return (0, i.jsxs)(
-            D,
-            O(
-                b(
+            L,
+            I(
+                O(
                     {
-                        className: s()(g.icon, a, (0, m.l)(g, 'iconSize', c), {
-                            [null != (e = (0, m.l)(g, 'iconActive', c)) ? e : '']: l,
-                            [g.iconInactive]: !l,
-                            [g.noIcon]: null == r.icon
+                        className: s()(b.icon, a, (0, E.l)(b, 'iconSize', c), {
+                            [null != (e = (0, E.l)(b, 'iconActive', c)) ? e : '']: l,
+                            [b.iconInactive]: !l,
+                            [b.noIcon]: null == r.icon
                         }),
                         'aria-hidden': N,
-                        style: null == r.icon ? b({ fontSize: (null != (t = w[r.acronym.length]) ? t : w[w.length - 1]) * f }, u) : u,
-                        onClick: null != E || null == h ? void 0 : h,
-                        tabIndex: T
+                        style: null == r.icon ? O({ fontSize: (null != (t = D[x.length]) ? t : D[D.length - 1]) * f }, u) : u,
+                        onClick: null != g || null == m ? void 0 : m,
+                        tabIndex: S
                     },
-                    P
+                    w
                 ),
                 {
                     children: [this.renderAcronym(), this.renderBadge()]
@@ -175,7 +178,7 @@ class N extends a.PureComponent {
                   text: e.name,
                   position: n,
                   'aria-label': !1,
-                  children: (e) => a.cloneElement(a.Children.only(this.renderIcon()), b({}, e))
+                  children: (e) => a.cloneElement(a.Children.only(this.renderIcon()), O({}, e))
               })
             : this.renderIcon();
     }
@@ -188,25 +191,25 @@ class N extends a.PureComponent {
                       pathname: e,
                       state: null != n ? { analyticsSource: n } : null
                   },
-                  'aria-label': t.toString(),
+                  'aria-label': t.name,
                   tabIndex: r,
                   children: this.renderTooltip()
               })
             : this.renderTooltip();
     }
 }
-let C = c.ZP.connectStores([p.Z], (e) => {
+let P = c.ZP.connectStores([m.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: a, iconSize: o, lossless: s } = e;
-    return { style: O(b({}, i), { backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(null != o ? o : S[a], n && p.Z.isFocused(), s)) }) };
-})((0, f.N)((e) => (0, i.jsx)(N, b({}, e))));
-class R extends (r = a.PureComponent) {
+    return (null == r && (r = t instanceof _.JO ? t.getIconURL(null != o ? o : N[a], n && m.Z.isFocused()) : (0, h.EB)(t, null != o ? o : N[a], n && m.Z.isFocused(), s)), { style: I(O({}, i), { backgroundImage: (0, g.rv)(r) }) });
+})((0, f.N)((e) => (0, i.jsx)(R, O({}, e))));
+class w extends (r = a.PureComponent) {
     render() {
-        return (0, i.jsx)(C, b({}, this.props));
+        return (0, i.jsx)(P, O({}, this.props));
     }
 }
-(E(R, 'Sizes', T),
-    E(R, 'defaultProps', {
-        size: T.LARGE,
+(y(w, 'Sizes', A),
+    y(w, 'defaultProps', {
+        size: A.LARGE,
         textScale: 1,
         showBadge: !1,
         showTooltip: !1,
@@ -215,4 +218,4 @@ class R extends (r = a.PureComponent) {
         badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1
     }));
-let P = R;
+let D = w;

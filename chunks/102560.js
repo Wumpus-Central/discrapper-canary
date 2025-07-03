@@ -49,7 +49,7 @@ let p = (e) => {
                 separator: !1,
                 children: (0, r.jsxs)(s.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: [m.intl.string(m.t.zbyz7u), '\u2014', null != t ? t.toString() : '']
+                    children: [m.intl.string(m.t.zbyz7u), '\u2014', null != t ? t.name : '']
                 })
             }),
             (0, r.jsxs)('div', {

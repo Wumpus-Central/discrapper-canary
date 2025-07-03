@@ -4,8 +4,8 @@ n(73800);
 var i = n(481060),
     l = n(570140),
     o = n(317770),
-    a = n(51596),
-    s = n(823385),
+    s = n(51596),
+    a = n(823385),
     c = n(900085);
 let u = 'QUICK_SWITCHER_MODAL_KEY';
 class d extends o.Z {
@@ -16,7 +16,7 @@ class d extends o.Z {
         (l.Z.unsubscribe('QUICKSWITCHER_SHOW', this.handleShow), l.Z.unsubscribe('QUICKSWITCHER_HIDE', this.handleHide));
     }
     handleShow() {
-        s.Z.isOpen() &&
+        a.Z.isOpen() &&
             !(0, i.nfh)(u) &&
             (0, i.h7j)(
                 (e) =>
@@ -51,7 +51,7 @@ class d extends o.Z {
                 {
                     modalKey: u,
                     instant: !0,
-                    onCloseCallback: a.Cp
+                    onCloseCallback: s.Cp
                 }
             );
     }

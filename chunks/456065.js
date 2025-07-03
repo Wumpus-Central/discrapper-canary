@@ -10,7 +10,7 @@ var r,
 let d = !1;
 function p(e) {
     let t = c.Z.getGuild(e);
-    return null != t && !!t.hasFeature(u.oNc.HUB) && ((d = !0), !0);
+    return null != t && !!t.features.has(u.oNc.HUB) && ((d = !0), !0);
 }
 function h() {
     return !0;
@@ -20,7 +20,7 @@ class f extends (r = a.ZP.Store) {
         (this.waitFor(c.Z, s.Z), this.syncWith([s.Z], h));
     }
     channelNoticePredicate(e) {
-        return !!e.hasFeature(u.oNc.LINKED_TO_HUB) && !d;
+        return !!e.features.has(u.oNc.LINKED_TO_HUB) && !d;
     }
 }
 ((l = 'HubLinkNoticeStore'),

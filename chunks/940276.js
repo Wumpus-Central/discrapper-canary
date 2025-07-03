@@ -40,7 +40,7 @@ function h(e) {
                                 variant: 'text-md/medium',
                                 lineClamp: 1,
                                 color: 'text-default',
-                                children: t.toString()
+                                children: t.name
                             }),
                             (0, i.jsxs)('div', {
                                 className: p.memberDetailsContainer,

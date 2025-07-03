@@ -428,7 +428,7 @@ function es(e) {
         a = (0, I.yH)(t.id, n),
         o = (0, d.e7)([Z.Z], () => Z.Z.getRoleStyleData(n.id)),
         c = null != o && a ? o.currentStyle : Z.g.SOLID,
-        u = (0, N.Ek)(t.id, 'GuildSettingsRolesEditDisplay') && !t.hasFeature(U.oNc.ENHANCED_ROLE_COLORS),
+        u = (0, N.Ek)(t.id, 'GuildSettingsRolesEditDisplay') && !t.features.has(U.oNc.ENHANCED_ROLE_COLORS),
         m = (0, b.pM)(null == t ? void 0 : t.id, n.id),
         p = i || m,
         f = (0, d.e7)([P.Z], () => P.Z.canImpersonateRole(t, n)),

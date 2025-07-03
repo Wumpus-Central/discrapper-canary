@@ -29,5 +29,5 @@ function l(e) {
     return a.hZ.has(null == e ? void 0 : e.field_type);
 }
 function c(e) {
-    return null != e && e.hasFeature(o.oNc.MEMBER_VERIFICATION_GATE_ENABLED);
+    return null != e && e.features.has(o.oNc.MEMBER_VERIFICATION_GATE_ENABLED);
 }

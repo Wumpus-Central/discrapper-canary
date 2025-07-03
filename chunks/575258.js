@@ -34,7 +34,7 @@ function p(e) {
         g = d = {
             description: null != (i = t.description) ? i : '',
             channels: null != (l = t.welcome_channels) ? l : [],
-            enabled: null == r ? void 0 : r.hasFeature(a.oNc.WELCOME_SCREEN_ENABLED)
+            enabled: null == r ? void 0 : r.features.has(a.oNc.WELCOME_SCREEN_ENABLED)
         };
     } else g = d = c;
     m = !1;

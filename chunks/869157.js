@@ -23,8 +23,8 @@ var r = n(255367),
     C = n(709054),
     N = n(360606),
     I = n(905753),
-    S = n(399860),
-    E = n(335049),
+    E = n(399860),
+    S = n(335049),
     T = n(617012),
     w = n(981631),
     P = n(388032),
@@ -77,7 +77,7 @@ function D(e) {
         h = (0, c.e7)([O.Z], () => O.Z.getGuild(l));
     o()(null != h, '');
     let x = (0, c.e7)([j.Z], () => j.Z.getRoles(l)),
-        [y, E] = i.useState(new Set()),
+        [y, S] = i.useState(new Set()),
         T = i.useMemo(() => {
             let e = (0, b.bD)(l),
                 t = s()(x)
@@ -116,13 +116,13 @@ function D(e) {
         }, [l, p, x]),
         w = i.useCallback(
             (e, t) => {
-                n({}, [(0, S.rE)(e, t)]);
+                n({}, [(0, E.rE)(e, t)]);
             },
             [n]
         ),
         P = i.useCallback(
             (e, t, r) => {
-                let i = (0, S.rE)(e, t);
+                let i = (0, E.rE)(e, t);
                 null != p[i] &&
                     n(
                         {
@@ -141,8 +141,8 @@ function D(e) {
         let e = Object.values(p)
             .filter((e) => e.type === m.Kw.USER && !e.canRead && !y.has(e.id))
             .map((e) => e.id);
-        0 !== e.length && (u.Z.requestMembersById(l, e, !1), E((t) => new Set([...t, ...e])));
-    }, [l, p, y, E]);
+        0 !== e.length && (u.Z.requestMembersById(l, e, !1), S((t) => new Set([...t, ...e])));
+    }, [l, p, y, S]);
     let k = (0, c.e7)([I.Z], () => I.Z.getApplicationId()),
         A = (0, c.e7)([N.default], () =>
             null == k
@@ -188,9 +188,9 @@ function R(e) {
         N = !f.canWrite || !v,
         I = x.default.getId();
     v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? P.intl.string(P.t['1VF/09']) : P.intl.string(P.t.P1GnER)) : f.type === m.Kw.ROLE && (o = P.intl.string(P.t.mcAijY))) : (o = null != s ? P.intl.string(P.t.tybdam) : P.intl.string(P.t.z2hjk5));
-    let S = O && null != j && f.id === a.id && void 0 !== C && !f.permission;
+    let E = O && null != j && f.id === a.id && void 0 !== C && !f.permission;
     i.useEffect(() => {
-        if (S) {
+        if (E) {
             var e;
             y.default.track(
                 w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
@@ -200,7 +200,7 @@ function R(e) {
                 })
             );
         }
-    }, [a.id, null == j || null == (l = j.application) ? void 0 : l.id, S]);
+    }, [a.id, null == j || null == (l = j.application) ? void 0 : l.id, E]);
     let D = i.useRef(null),
         R = (0, r.jsx)(d.ua7, {
             tooltipClassName: Z.tooltip,
@@ -216,7 +216,7 @@ function R(e) {
                         children: (0, r.jsx)(T.Z, {
                             isDisabled: N,
                             currentValue: f.permission,
-                            onChange: S
+                            onChange: E
                                 ? (e) => {
                                       (g.Z.dismissToggleTooltip(a.id, j), c(e));
                                   }
@@ -245,7 +245,7 @@ function R(e) {
             align: 'center',
             animation: d.yRy.Animation.TRANSLATE,
             onRequestClose: () => g.Z.dismissToggleTooltip(a.id, j),
-            shouldShow: S,
+            shouldShow: E,
             closeOnScroll: !0,
             children: () => R
         });
@@ -256,7 +256,7 @@ function R(e) {
             children: [
                 (0, r.jsx)('div', {
                     className: Z.entryName,
-                    children: (0, r.jsx)(E.Z, {
+                    children: (0, r.jsx)(S.Z, {
                         guild: a,
                         id: f.id,
                         type: f.type,

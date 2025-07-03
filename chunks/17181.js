@@ -26,10 +26,10 @@ async function g(e) {
     let { guildId: t, returnChannelId: n, isPreview: r = !1 } = e;
     ((0, a.pTH)(), i()(null == p[t], 'should not double-join guilds'));
     let l = await (0, o.V)(t);
-    if (l.hasFeature(f.oNc.COMMUNITY)) {
+    if (l.features.has(f.oNc.COMMUNITY)) {
         if (r) (0, c.I1)(t);
         else {
-            if (!l.hasFeature(f.oNc.GUILD_ONBOARDING)) return;
+            if (!l.features.has(f.oNc.GUILD_ONBOARDING)) return;
             await (0, c.rK)(t);
         }
         u.ZP.shouldShowOnboarding(t) && (await E(t), null != n && (0, s.uL)(f.Z5c.CHANNEL(t, n)));

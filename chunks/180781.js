@@ -18,7 +18,7 @@ function m(e) {
         x = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
         h = (0, a.e7)([s.Z], () => s.Z.getGuild(x)),
         { analyticsLocations: A } = (0, r.ZP)();
-    return null == h || h.hasFeature(f.oNc.ANIMATED_BANNER) || (!m && h.hasFeature(f.oNc.BANNER))
+    return null == h || h.features.has(f.oNc.ANIMATED_BANNER) || (!m && h.features.has(f.oNc.BANNER))
         ? null
         : (0, i.jsxs)('div', {
               className: _.container,

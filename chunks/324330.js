@@ -16,19 +16,19 @@ var i = n(392711),
     g = n(388032),
     p = n(953592);
 function f() {
-    var e;
-    let t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
-        n = null != (e = null == t ? void 0 : t.isCommunity()) && e,
-        i = null == t ? void 0 : t.hasFeature(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-        a = n || i;
+    var e, t;
+    let n = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
+        i = null != (e = null == n ? void 0 : n.features.has(m.oNc.COMMUNITY)) && e,
+        a = null != (t = null == n ? void 0 : n.features.has(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && t,
+        c = i || a;
     return (0, r.jsxs)(s.P3F, {
         onClick: (e) => {
-            null != t && (a ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, m.pNK.MEMBERS));
+            null != n && (c ? (e.preventDefault(), d.Z.close(), (0, o._X)(n.id)) : d.Z.open(n.id, m.pNK.MEMBERS));
         },
         className: p.rowContainer,
         children: [
             (0, r.jsx)('div', { children: g.intl.string(g.t['9Oq93t']) }),
-            a &&
+            c &&
                 (0, r.jsx)(s.rgF, {
                     size: 'xs',
                     color: 'currentColor',

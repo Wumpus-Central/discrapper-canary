@@ -42,7 +42,7 @@ function d(e, t) {
                       })({}, t)
                   );
           })
-        : (null == a ? void 0 : a.hasFeature(o.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0
+        : (null == a ? void 0 : a.features.has(o.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE))
           ? (0, l.Z)(o.Z5c.GUILD_PRODUCT(e, t))
           : (0, l.Z)(o.Z5c.CHANNEL(e));
 }

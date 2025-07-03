@@ -232,7 +232,7 @@ function Y(e) {
 }
 function K(e, t, n) {
     let r = _.Z.getGuild(e.getGuildId());
-    return (null != r ? r.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
+    return (null != r ? r.application_id : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
 function q(e) {
     switch (e) {

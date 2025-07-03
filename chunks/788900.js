@@ -13,8 +13,8 @@ function n(e) {
             v = c >> 23,
             O = d >> 15,
             g = u(3, O ? (v ? 5 : 7) : 7 & d),
-            h = u(3, O ? 7 & d : v ? 5 : 7),
-            m = v ? (15 & e[5]) / 15 : 1,
+            m = u(3, O ? 7 & d : v ? 5 : 7),
+            h = v ? (15 & e[5]) / 15 : 1,
             y = (e[5] >> 4) / 15,
             w = v ? 6 : 5,
             j = 0,
@@ -23,7 +23,7 @@ function n(e) {
                 for (let l = 0; l < r; l++) for (let i = +!l; i * r < t * (r - l); i++) o.push((((e[w + (j >> 1)] >> ((1 & j++) << 2)) & 15) / 7.5 - 1) * n);
                 return o;
             },
-            S = P(g, h, ((c >> 18) & 31) / 31),
+            S = P(g, m, ((c >> 18) & 31) / 31),
             x = P(3, 3, (((d >> 3) & 63) / 63) * 1.25),
             D = P(3, 3, (((d >> 9) & 63) / 63) * 1.25),
             I = v && P(5, 5, y),
@@ -38,10 +38,10 @@ function n(e) {
                 let n = f,
                     o = p,
                     s = b,
-                    c = m;
+                    c = h;
                 for (let e = 0, t = u(g, v ? 5 : 3); e < t; e++) Z[e] = a((l / k) * (r + 0.5) * e);
-                for (let t = 0, r = u(h, v ? 5 : 3); t < r; t++) M[t] = a((l / C) * (e + 0.5) * t);
-                for (let e = 0, t = 0; e < h; e++) for (let r = +!e, o = 2 * M[e]; r * h < g * (h - e); r++, t++) n += S[t] * Z[r] * o;
+                for (let t = 0, r = u(m, v ? 5 : 3); t < r; t++) M[t] = a((l / C) * (e + 0.5) * t);
+                for (let e = 0, t = 0; e < m; e++) for (let r = +!e, o = 2 * M[e]; r * m < g * (m - e); r++, t++) n += S[t] * Z[r] * o;
                 for (let e = 0, t = 0; e < 3; e++)
                     for (let r = +!e, n = 2 * M[e]; r < 3 - e; r++, t++) {
                         let e = Z[r] * n;

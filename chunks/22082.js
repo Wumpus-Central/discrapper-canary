@@ -76,7 +76,7 @@ class _ extends (r = l.ZP.Store) {
         var n;
         if (null == e) return !1;
         let r = b.Z.getGuild(e);
-        return null != r && !!r.hasFeature(y.oNc.COMMUNITY) && (null != e && null == S[e] && x(e), (null == (n = S[e]) ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t));
+        return null != r && !!r.features.has(y.oNc.COMMUNITY) && (null != e && null == S[e] && x(e), (null == (n = S[e]) ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t));
     }
 }
 ((i = 'NewChannelsStore'),

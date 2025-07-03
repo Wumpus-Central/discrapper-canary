@@ -76,7 +76,7 @@ function x(e) {
                 value: u.$l.OTHER
             }
         ];
-    function g(e) {
+    function I(e) {
         h.includes(e) ? b((t) => t.filter((t) => t !== e)) : b((t) => [...t, e]);
     }
     return (0, r.jsxs)(a.Y0X, {
@@ -113,14 +113,14 @@ function x(e) {
                                     children: [
                                         (0, r.jsxs)(a.P3F, {
                                             className: p.optionText,
-                                            onClick: () => g(n),
+                                            onClick: () => I(n),
                                             children: [
                                                 (0, r.jsx)('div', {
                                                     children: (0, r.jsx)(a.XZJ, {
                                                         type: a.XZJ.Types.INVERTED,
                                                         size: 20,
                                                         value: h.includes(n),
-                                                        onChange: () => g(n)
+                                                        onChange: () => I(n)
                                                     })
                                                 }),
                                                 (0, r.jsx)(a.Text, {

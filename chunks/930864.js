@@ -65,7 +65,7 @@ function C(e, t) {
     );
 }
 function x(e) {
-    var { message: t, initialSelectedDestinations: x, forwardOptions: P, onClose: L, onRequestSent: T } = e,
+    var { message: t, initialSelectedDestinations: x, forwardOptions: P, onClose: T, onRequestSent: L } = e,
         N = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -132,8 +132,8 @@ function x(e) {
                 numDestinationChanges: U.current,
                 numQueryChanges: H.current
             }),
-                L());
-        }, [j, Z, L]),
+                T());
+        }, [j, Z, T]),
         et = r.useRef(null);
     r.useEffect(() => {
         if ('' === B) {
@@ -195,7 +195,7 @@ function x(e) {
                     }))
                 )
                     return void R(!1);
-                (d && (0, y.mc)(), null == T || T(), a && (await o.Z.fetchMessages({ channelId: b[0] }), (0, c.Kh)(b[0], { openTextInVoiceIfVoiceChannel: !0 })));
+                (d && (0, y.mc)(), null == L || L(), a && (await o.Z.fetchMessages({ channelId: b[0] }), (0, c.Kh)(b[0], { openTextInVoiceIfVoiceChannel: !0 })));
                 let I = await g.Z.sendForwards(E, b, C(v({}, P), { withMessage: i })),
                     O = b.some((e) => {
                         let t = f.Z.getChannel(e);
@@ -237,7 +237,7 @@ function x(e) {
                     forwardOptions: P
                 });
             },
-            [j, P, Z, t, T, en]
+            [j, P, Z, t, L, en]
         ),
         ei = r.useCallback(
             (e) => {

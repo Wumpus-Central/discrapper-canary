@@ -10,8 +10,8 @@ var r,
     i,
     l = n(73800),
     o = n(836560),
-    a = n(512722),
-    s = n.n(a),
+    s = n(512722),
+    a = n.n(s),
     c = n(392711),
     u = n.n(c),
     d = n(570140),
@@ -102,7 +102,7 @@ class z extends o.EventEmitter {
                 if (e.collapsed)
                     if (!e.hasLoadedAnything) return B(G({}, e), { hasLoadedAnything: !0 });
                     else return e;
-                return ((e = this.populateInitialStateFromStore(e)).isFullyLoaded || (s()('nsfw' !== e.type, 'this channel should already be loaded'), 'messages' === e.type && this.loadChannelMessages(e) && (n = !0)), e);
+                return ((e = this.populateInitialStateFromStore(e)).isFullyLoaded || (a()('nsfw' !== e.type, 'this channel should already be loaded'), 'messages' === e.type && this.loadChannelMessages(e) && (n = !0)), e);
             });
         (!n || r.some((e, n) => e !== t[n])) &&
             this.setState({
@@ -148,7 +148,7 @@ class z extends o.EventEmitter {
                     this.setState({
                         loadState: 'loaded',
                         channels: this.updateChannel(e.channelId, (e) => {
-                            s()('messages' === e.type, 'channel cannot change type');
+                            a()('messages' === e.type, 'channel cannot change type');
                             let n = W(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
@@ -168,7 +168,7 @@ class z extends o.EventEmitter {
                         channels: this.updateChannel(e.channelId, (e) => {
                             var t;
                             return (
-                                s()('messages' === e.type, 'channel cannot change type'),
+                                a()('messages' === e.type, 'channel cannot change type'),
                                 B(G({}, W(e, !0)), {
                                     isFullyLoaded: !0,
                                     hasError: !0,
@@ -287,24 +287,24 @@ class z extends o.EventEmitter {
                 let { channelId: t, guildId: n } = e,
                     { channels: r, collapsedChannels: i, loadState: l } = this.state,
                     o = u().findIndex(r, (e) => e.channelId === t),
-                    a = r[o],
-                    s = !a.collapsed;
-                ((i[t] = s),
+                    s = r[o],
+                    a = !s.collapsed;
+                ((i[t] = a),
                     (0, C.BU)(
                         n,
                         t,
                         (e) => {
-                            e.collapsedInInbox = s;
+                            e.collapsedInInbox = a;
                         },
                         C.fy.FREQUENT_USER_ACTION
                     ),
                     this.setState({
                         scrollToChannelIndex: o,
                         collapsedChannels: i,
-                        loadState: 'done' !== l || s || a.isFullyLoaded ? l : 'loaded',
-                        channels: this.updateChannel(t, (e) => B(G({}, e), { collapsed: s }))
+                        loadState: 'done' !== l || a || s.isFullyLoaded ? l : 'loaded',
+                        channels: this.updateChannel(t, (e) => B(G({}, e), { collapsed: a }))
                     }),
-                    a.collapsed ? a.isFullyLoaded || this.loadMore() : this.maybeLoadMore());
+                    s.collapsed ? s.isFullyLoaded || this.loadMore() : this.maybeLoadMore());
             }),
             (this.handleUserGuildSettingsStoreChange = () => {
                 let e = this.state.channels.filter((e) => !A.ZP.isGuildOrCategoryOrChannelMuted(e.guildId, e.channelId));
@@ -338,13 +338,13 @@ function W(e, t) {
         l = i.toArray().filter((t) => L.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= L.default.compare(t.id, e.newestUnreadMessageId));
     if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && r) return e;
     let o = null != i.getAfter(e.oldestReadMessageId) || (null == (n = l[0]) ? void 0 : n.id) === e.oldestUnreadMessageId,
-        a = l[l.length - 1],
-        s = L.default.compare(null == a ? void 0 : a.id, e.newestUnreadMessageId) >= 0 || l.length >= H;
+        s = l[l.length - 1],
+        a = L.default.compare(null == s ? void 0 : s.id, e.newestUnreadMessageId) >= 0 || l.length >= H;
     return B(G({}, e), {
         messages: l,
         hasLoadedAnything: e.hasLoadedAnything || o || t,
         hasLoadedFirst: e.hasLoadedFirst || o || t,
-        isFullyLoaded: e.isFullyLoaded || (o && s) || (t && !i.hasMoreAfter)
+        isFullyLoaded: e.isFullyLoaded || (o && a) || (t && !i.hasMoreAfter)
     });
 }
 function K() {
@@ -408,23 +408,23 @@ function Y(e, t, n, r) {
         l = L.default.fromTimestamp(e.joinedAt.getTime());
     }
     let o = Z.ZP.getOldestUnreadMessageId(r),
-        a = Z.ZP.lastMessageId(r),
-        s = Z.ZP.getMentionCount(r),
-        c = s > 0 || i.isPrivate();
-    if (null == a || L.default.compare(l, a) >= 0) return;
+        s = Z.ZP.lastMessageId(r),
+        a = Z.ZP.getMentionCount(r),
+        c = a > 0 || i.isPrivate();
+    if (null == s || L.default.compare(l, s) >= 0) return;
     let u = {
         guildId: n,
         channelId: r,
         oldestReadMessageId: l,
         oldestUnreadMessageId: o,
-        newestUnreadMessageId: a,
+        newestUnreadMessageId: s,
         collapsed: !0 === e[r],
         hasLoadedAnything: !1,
         hasLoadedFirst: !1,
         isFullyLoaded: !1,
         hasError: !1,
         hasMentionsOrUnreads: c,
-        mentionCount: s,
+        mentionCount: a,
         sortOrder: (function (e, t, n) {
             let r = S.Z.getChannel(t);
             if (g.Z.isFavorite(t)) return 0;
@@ -444,7 +444,7 @@ function Y(e, t, n, r) {
                     r = n === M.bL.NULL ? A.ZP.getMessageNotifications(e) : n;
                 return r === M.bL.ALL_MESSAGES ? 4 : r === M.bL.NO_MESSAGES ? 7 : 5;
             }
-        })(n, r, a),
+        })(n, r, s),
         order: 0
     };
     i.isNSFW() && !I.Z.didAgree(i.guild_id)
@@ -464,35 +464,35 @@ function Q(e) {
     let [t, n] = l.useState(() => new z(K(), e)),
         [r, i] = l.useState(!1),
         o = l.useRef(Date.now()),
-        [a, s] = l.useState(() => K());
+        [s, a] = l.useState(() => K());
     (l.useEffect(() => {
-        let e = (e) => s(e);
+        let e = (e) => a(e);
         return (
             t.on('change', e),
-            s(t.state),
+            a(t.state),
             () => {
                 t.off('change', e);
             }
         );
     }, [t]),
         l.useEffect(() => {
-            if (null == a || a.channels.length > 0 || r) return;
+            if (null == s || s.channels.length > 0 || r) return;
             let t = Date.now(),
                 l = K();
             0 === l.channels.length || t - o.current < 10 * R.Z.Millis.SECOND ? i(!0) : ((o.current = Date.now()), n(new z(l, e)));
-        }, [a, r, e]));
+        }, [s, r, e]));
     let c = l.useRef(t);
     return (
         l.useLayoutEffect(() => {
             c.current = t;
         }),
         l.useLayoutEffect(() => {
-            (null == a || a.channels, null == a || a.loadState, c.current.maybeLoadMore());
-        }, [null == a ? void 0 : a.channels, null == a ? void 0 : a.loadState]),
+            (null == s || s.channels, null == s || s.loadState, c.current.maybeLoadMore());
+        }, [null == s ? void 0 : s.channels, null == s ? void 0 : s.loadState]),
         l.useEffect(() => (N.Z.addChangeListener(t.reloadMessages), () => N.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         l.useEffect(() => (A.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => A.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
         l.useEffect(() => (y.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => y.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
         l.useEffect(() => (O.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => O.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
-        [a, t]
+        [s, t]
     );
 }

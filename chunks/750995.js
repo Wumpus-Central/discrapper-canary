@@ -16,7 +16,7 @@ var i = n(704215),
 let m = (e) => {
     var t;
     let n = d.Z.getGuild(e),
-        r = !!(null == n ? void 0 : n.hasFeature(f.oNc.COMMUNITY)),
+        r = !!(null == n ? void 0 : n.features.has(f.oNc.COMMUNITY)),
         l = p.Z.can(f.Plq.MANAGE_CHANNELS, n),
         a = (0, s.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
         o = null != (t = u.Z.getMemberCount(e)) ? t : 0;

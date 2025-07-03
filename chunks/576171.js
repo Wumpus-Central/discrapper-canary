@@ -11,7 +11,7 @@ var r = n(73800),
 function p(e) {
     let t = (0, i.e7)([s.Z, o.Z, c.default, a.ZP], () => {
         let t = s.Z.getGuild(e);
-        if ((null == t ? void 0 : t.hasFeature(u.oNc.HUB)) !== !0 || !0 === o.Z.hasViewedPrompt(d.r.REAL_NAME_PROMPT, t.id)) return null;
+        if ((null == t ? void 0 : t.features.has(u.oNc.HUB)) !== !0 || !0 === o.Z.hasViewedPrompt(d.r.REAL_NAME_PROMPT, t.id)) return null;
         let n = c.default.getCurrentUser();
         if (null == n) return null;
         let r = a.ZP.getMember(t.id, null == n ? void 0 : n.id);

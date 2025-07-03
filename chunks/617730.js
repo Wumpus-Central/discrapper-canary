@@ -71,7 +71,7 @@ function _(e) {
         b = null != t.channel ? (0, s.jD)(t.channel) : null,
         E = null != t.target_application ? new l.ZP(t.target_application) : null,
         v = _ || null == t.inviter ? null : new o.Z(t.inviter),
-        I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != x && x.hasFeature(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
+        I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != x && x.features.has(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
         j = f(t),
         O = {
             invite: t,

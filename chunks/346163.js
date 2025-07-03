@@ -1,68 +1,69 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(73800),
     i = n(399606),
     l = n(674180),
-    s = n(594174),
-    a = n(63063),
-    o = n(223892),
-    c = n(58259),
-    d = n(158992),
-    u = n(159361),
-    m = n(377176),
-    g = n(981631),
-    p = n(388032);
-function f(e) {
+    s = n(601964),
+    a = n(594174),
+    o = n(63063),
+    c = n(223892),
+    d = n(58259),
+    u = n(158992),
+    m = n(159361),
+    g = n(377176),
+    p = n(981631),
+    f = n(388032);
+function h(e) {
     let t,
-        n = (0, o.Ob)(e),
-        f = null == e ? void 0 : e.hasFeature(g.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-        h = null == e ? void 0 : e.hasFeature(g.oNc.CREATOR_MONETIZABLE),
-        x = (0, i.e7)([s.default], () => {
-            let t = s.default.getCurrentUser();
-            return (null == e ? void 0 : e.isOwner(t)) === !0;
+        n = (0, c.Ob)(e),
+        h = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+        x = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE),
+        b = (0, i.e7)([a.default], () => {
+            let t = a.default.getCurrentUser();
+            return null != e && (0, s.eM)(e, t);
         }),
-        { error: b, loading: j, createEnableRequest: _, submittedRequest: v } = (0, c.Z)(null == e ? void 0 : e.id),
-        { loading: O, error: C, refresh: y, eligibility: N } = (0, d.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: I, requestCooldownDuration: E } = (0, u.Z)(N),
-        S = (null == e ? void 0 : e.hasFeature(g.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(g.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
-        { isMonetizationReapplicationDisabled: T } = (0, l.eC)(null == e ? void 0 : e.id),
-        P = v || (null == N ? void 0 : N.isApplicationPending) === !0,
-        w = (null == N ? void 0 : N.canApply) === !0,
-        R = p.intl.format(p.t.aJUdOj, { faqUrl: a.Z.getArticleURL(g.BhN.CREATOR_FAQ) });
-    I && T
-        ? (t = !0 === f ? p.intl.format(p.t['0o1Q+v'], { communityGuidelineUrl: g.EYA.GUIDELINES }) : p.intl.format(p.t.b6h59v, { communityGuidelineUrl: g.EYA.GUIDELINES }))
-        : I &&
-          null != E &&
-          (t = p.intl.format(p.t.TvX209, {
-              requestCooldownDuration: E,
-              creatorRevenuePolicyUrl: a.Z.getArticleURL(g.BhN.CREATOR_POLICY)
+        { error: j, loading: _, createEnableRequest: v, submittedRequest: O } = (0, d.Z)(null == e ? void 0 : e.id),
+        { loading: C, error: y, refresh: N, eligibility: I } = (0, u.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: E, requestCooldownDuration: S } = (0, m.Z)(I),
+        T = (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
+        { isMonetizationReapplicationDisabled: P } = (0, l.eC)(null == e ? void 0 : e.id),
+        w = O || (null == I ? void 0 : I.isApplicationPending) === !0,
+        R = (null == I ? void 0 : I.canApply) === !0,
+        Z = f.intl.format(f.t.aJUdOj, { faqUrl: o.Z.getArticleURL(p.BhN.CREATOR_FAQ) });
+    E && P
+        ? (t = !0 === h ? f.intl.format(f.t['0o1Q+v'], { communityGuidelineUrl: p.EYA.GUIDELINES }) : f.intl.format(f.t.b6h59v, { communityGuidelineUrl: p.EYA.GUIDELINES }))
+        : E &&
+          null != S &&
+          (t = f.intl.format(f.t.TvX209, {
+              requestCooldownDuration: S,
+              creatorRevenuePolicyUrl: o.Z.getArticleURL(p.BhN.CREATOR_POLICY)
           }));
-    let Z = n && x && !1 === h,
-        D = n && !1 === f,
-        k = (0, m.f)(),
-        A = I && w && x ? p.intl.format(p.t.wbVIUF, {}) : void 0;
+    let D = n && b && !1 === x,
+        k = n && !1 === h,
+        A = (0, g.f)(),
+        L = E && R && b ? f.intl.format(f.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
-            Z && y();
-        }, [y, Z]),
+            D && N();
+        }, [N, D]),
         {
-            resubmittingEnableRequest: j,
-            resubmissionError: b,
-            isGuildOwner: x,
-            createEnableRequest: _,
-            resubmittedRequest: v,
-            eligibilityLoading: O,
-            eligibilityError: C,
-            refreshEligibility: y,
-            eligibility: N,
-            eligibleForMonetization: w,
-            isApplicationPending: P,
-            hasPreviousApplicationRejection: I,
+            resubmittingEnableRequest: _,
+            resubmissionError: j,
+            isGuildOwner: b,
+            createEnableRequest: v,
+            resubmittedRequest: O,
+            eligibilityLoading: C,
+            eligibilityError: y,
+            refreshEligibility: N,
+            eligibility: I,
+            eligibleForMonetization: R,
+            isApplicationPending: w,
+            hasPreviousApplicationRejection: E,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: A,
-            showAcceptTermsFlow: D,
-            wasRejectedInV1: D && (S || I),
-            requirementsFinePrintText: R,
-            acceptTermsCheckboxText: k
+            reapplyNoticeText: L,
+            showAcceptTermsFlow: k,
+            wasRejectedInV1: k && (T || E),
+            requirementsFinePrintText: Z,
+            acceptTermsCheckboxText: A
         }
     );
 }

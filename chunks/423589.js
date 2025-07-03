@@ -8,8 +8,8 @@
 var i = n(442837),
     l = n(798140),
     a = n(9156),
-    r = n(630388),
-    s = n(709054),
+    s = n(630388),
+    r = n(709054),
     o = n(312400),
     d = n(981631),
     c = n(969943),
@@ -50,11 +50,11 @@ let f = {
 };
 function S(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f;
-    return s.default.keys(t).filter((n) => {
+    return r.default.keys(t).filter((n) => {
         var i, a;
-        let s = t[n].message_notifications !== d.bL.NULL,
-            o = r.yE(null != (i = t[n].flags) ? i : 0, u.ic.UNREADS_ALL_MESSAGES) || r.yE(null != (a = t[n].flags) ? a : 0, u.ic.UNREADS_ONLY_MENTIONS);
-        return (!e.ignoreUnreadSetting && o) || (!e.ignoreNotificationSetting && s) || (!e.ignoreMute && (0, l.m$)(t[n]));
+        let r = t[n].message_notifications !== d.bL.NULL,
+            o = s.yE(null != (i = t[n].flags) ? i : 0, u.ic.UNREADS_ALL_MESSAGES) || s.yE(null != (a = t[n].flags) ? a : 0, u.ic.UNREADS_ONLY_MENTIONS);
+        return (!e.ignoreUnreadSetting && o) || (!e.ignoreNotificationSetting && r) || (!e.ignoreMute && (0, l.m$)(t[n]));
     });
 }
 function E(t) {

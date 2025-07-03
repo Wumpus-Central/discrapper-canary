@@ -11,7 +11,7 @@ class u extends (l = a.ZP.Store) {
         (this.waitFor(s.Z), this.syncWith([s.Z], c.dG4));
     }
     channelNoticePredicate(e, t) {
-        return !e.hasFeature(c.oNc.BANNER) && Date.now() - t >= c.Hqc;
+        return !e.features.has(c.oNc.BANNER) && Date.now() - t >= c.Hqc;
     }
 }
 ((i = 'GuildBoostingNoticeStore'),

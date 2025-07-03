@@ -12,8 +12,8 @@ var r = n(255367),
     _ = n(430824),
     A = n(496675),
     m = n(776767),
-    T = n(981631),
-    f = n(388032),
+    f = n(981631),
+    T = n(388032),
     g = n(12740);
 function I(e) {
     let { member: t } = e,
@@ -37,11 +37,11 @@ function I(e) {
         h = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
         O = (0, c.zq)(h),
         N = (0, c.vN)(t),
-        p = (0, a.e7)([A.Z], () => A.Z.can(T.Plq.MANAGE_ROLES, n), [n]);
+        p = (0, a.e7)([A.Z], () => A.Z.can(f.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
         : (0, r.jsx)(o.xJW, {
-              title: f.intl.string(f.t.LPJmLy),
+              title: T.intl.string(T.t.LPJmLy),
               titleClassName: g.infoTitle,
               children: (0, r.jsx)(m.WM, {
                   children: (0, r.jsx)(m._2, {
@@ -51,9 +51,9 @@ function I(e) {
                                     className: g.roleContainer,
                                     children: [
                                         (0, r.jsx)(o.ua7, {
-                                            'aria-label': f.intl.string(f.t['0g8Xd3']),
+                                            'aria-label': T.intl.string(T.t['0g8Xd3']),
                                             allowOverflow: !0,
-                                            text: f.intl.string(f.t['93S+lJ']),
+                                            text: T.intl.string(T.t['93S+lJ']),
                                             children: (e) => {
                                                 let { onMouseEnter: n, onMouseLeave: l } = e;
                                                 return (0, r.jsx)(o.P3F, {
@@ -80,9 +80,9 @@ function I(e) {
                                         ),
                                         p &&
                                             (0, r.jsx)(o.ua7, {
-                                                'aria-label': f.intl.string(f.t.ljnBlp),
+                                                'aria-label': T.intl.string(T.t.ljnBlp),
                                                 allowOverflow: !0,
-                                                text: f.intl.string(f.t.ljnBlp),
+                                                text: T.intl.string(T.t.ljnBlp),
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                                     return (0, r.jsx)(o.P3F, {
@@ -106,7 +106,7 @@ function I(e) {
                                     className: g.noRoles,
                                     children: (0, r.jsx)(o.Text, {
                                         variant: 'text-sm/normal',
-                                        children: f.intl.string(f.t.nZfHsb)
+                                        children: T.intl.string(T.t.nZfHsb)
                                     })
                                 })
                   })

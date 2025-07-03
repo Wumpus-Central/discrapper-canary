@@ -39,7 +39,7 @@ function v() {
     let y = l.Z.getChannel(s);
     if (null == y || !f.oz(b.Plq.VIEW_CHANNEL, y)) return null;
     let v = c.Z.getGuild(y.getGuildId());
-    if (null == v || !v.hasFeature(b.oNc.DISCOVERABLE)) return null;
+    if (null == v || !v.features.has(b.oNc.DISCOVERABLE)) return null;
     let I = (0, h.Lw)(y, u),
         T = (null == O || null == (e = O.party) ? void 0 : e.id) === I ? O : null,
         S = _.Z.getMutableParticipants(y.id, p.pV.SPEAKER),

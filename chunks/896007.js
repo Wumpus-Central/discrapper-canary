@@ -74,7 +74,7 @@ function p(e) {
         N = [];
     (N.push({
         section: g.HEADER,
-        label: '' !== c.toString() ? c.toString() : u.intl.string(u.t['154/bG'])
+        label: '' !== c.name ? c.name : u.intl.string(u.t['154/bG'])
     }),
         N.push(m(d.pNK.PROFILE, y)),
         N.push(m(d.pNK.TAG, y)),
@@ -106,7 +106,7 @@ function p(e) {
         }),
         N.push(m(d.pNK.INTEGRATIONS, y)),
         N.push(m(d.pNK.APP_DIRECTORY, y)));
-    let I = !c.hasFeature(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
+    let I = !c.features.has(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
     (p || f || x || I) &&
         (N.push({ section: g.DIVIDER }),
         N.push({
@@ -118,7 +118,7 @@ function p(e) {
         N.push(m(d.pNK.AUDIT_LOG, y)),
         N.push(m(d.pNK.BANS, y)),
         N.push(m(d.pNK.GUILD_AUTOMOD, y)));
-    let E = c.hasFeature(d.oNc.COMMUNITY) && j,
+    let E = c.features.has(d.oNc.COMMUNITY) && j,
         S = C();
     return ((p || E || S) && (N.push({ section: g.DIVIDER }), N.push(m(d.pNK.COMMUNITY, y)), N.push(m(d.pNK.ONBOARDING, y)), N.push(m(d.pNK.ANALYTICS, y)), N.push(m(d.pNK.COMMUNITY_WELCOME, y)), N.push(m(d.pNK.DISCOVERY_LANDING_PAGE, y)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS, y)), N.push(m(d.pNK.GUILD_PRODUCTS, y)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, y))), N.push({ section: g.DIVIDER }), N.push(m(d.pNK.GUILD_PREMIUM, y)), N.push(m(d.pNK.GUILD_TEMPLATES, y)), N.push(m(d.pNK.DELETE, y)), N.filter(o.lm));
 }

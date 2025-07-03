@@ -1,18 +1,19 @@
-(e.d(n, { T: () => a }), e(388685));
+(e.d(n, { T: () => s }), e(388685));
 var i = e(149765),
-    l = e(973542),
-    d = e(790285),
-    r = e(981631);
-function a(t, n, e) {
-    let a = new Set();
+    l = e(601964),
+    d = e(973542),
+    r = e(790285),
+    a = e(981631);
+function s(t, n, e) {
+    let s = new Set();
     for (let t of Object.keys(e.permissionOverwrites)) {
         let i = n[t],
-            r = e.permissionOverwrites[t];
-        (0, l.Z)(i) && (0, d.TG)(e, r) && a.add(i);
+            l = e.permissionOverwrites[t];
+        (0, d.Z)(i) && (0, r.TG)(e, l) && s.add(i);
     }
-    let s = n[t.getEveryoneRoleId()],
-        _ = null != s && !i.e$(s.permissions, r.Plq.VIEW_CHANNEL),
-        o = (0, d.wB)(e, e.permissionOverwrites[t.id]);
-    if (_ && !o) for (let t of Object.values(n)) (0, l.Z)(t) && (0, d.MT)(t) && a.add(t);
-    return [...a];
+    let _ = n[(0, l.lV)(t)],
+        o = !i.e$(_.permissions, a.Plq.VIEW_CHANNEL),
+        p = (0, r.wB)(e, e.permissionOverwrites[t.id]);
+    if (o && !p) for (let t of Object.values(n)) (0, d.Z)(t) && (0, r.MT)(t) && s.add(t);
+    return [...s];
 }

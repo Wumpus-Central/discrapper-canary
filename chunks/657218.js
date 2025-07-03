@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(838440),
     k = n(127654),
     M = n(241309),
-    L = n(928477),
-    D = n(456077),
+    D = n(928477),
+    L = n(456077),
     U = n(488131),
     B = n(602034),
     F = n(981631),
@@ -200,7 +200,7 @@ function K(e) {
                 }
             );
         })(t, m),
-        C = (0, L.vH)(t),
+        C = (0, D.vH)(t),
         {
             nameError: x,
             messageError: j,
@@ -293,7 +293,7 @@ function K(e) {
             textAreaState: b,
             location: l
         }),
-        P = (0, L.oD)(h, C) ? s.qtY : s.or_;
+        P = (0, D.oD)(h, C) ? s.qtY : s.or_;
     return (0, r.jsx)('div', {
         className: G.chat,
         onMouseDown: d,
@@ -369,7 +369,7 @@ function K(e) {
 }
 function X(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: i, privateThreadMode: l } = e,
-        o = (0, L.oD)(n, l),
+        o = (0, D.oD)(n, l),
         a = (0, r.jsx)('div', {
             className: G.privateThreadFormTitle,
             children: (0, r.jsx)('span', {
@@ -380,7 +380,7 @@ function X(e) {
         c = (0, r.jsx)(s.XZJ, {
             className: G.checkbox,
             type: s.XZJ.Types.INVERTED,
-            disabled: l === L.Jw.PrivateOnly,
+            disabled: l === D.Jw.PrivateOnly,
             value: o,
             onChange: (e, t) => i({ isPrivate: t }),
             children: (0, r.jsx)(s.Text, {
@@ -389,7 +389,7 @@ function X(e) {
                 children: H.intl.string(H.t.TRPp3t)
             })
         });
-    return t || l === L.Jw.Disabled
+    return t || l === D.Jw.Disabled
         ? null
         : (0, r.jsxs)(s.hjN, {
               title: a,
@@ -412,7 +412,7 @@ function Q(e) {
     let { parentChannel: n, parentMessageId: i, threadSettings: l, updateThreadSettings: o, error: a, disabled: c } = e,
         d = null != (t = l.name) ? t : '',
         p = (0, M.Op)(a, { content: d }),
-        h = (0, L.Od)(n, i),
+        h = (0, D.Od)(n, i),
         f = null != i,
         m = (0, x.Dt)();
     return (0, r.jsx)(s.hjN, {
@@ -426,10 +426,10 @@ function Q(e) {
             placeholder: '' !== h ? h : H.intl.string(H.t['Nb2/RE']),
             maxLength: F.HN8,
             onChange: (e) => {
-                (o({ name: (0, D.Z)(e, !1) }), '' !== e ? u.Z.startTyping(n.id) : u.Z.stopTyping(n.id));
+                (o({ name: (0, L.Z)(e, !1) }), '' !== e ? u.Z.startTyping(n.id) : u.Z.stopTyping(n.id));
             },
             onBlur: () => {
-                let e = (0, D.Z)(d, !0);
+                let e = (0, L.Z)(d, !0);
                 e !== d && o({ name: e });
             },
             error: p,

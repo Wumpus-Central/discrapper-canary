@@ -1,13 +1,13 @@
 n.d(t, {
     V5: () => c,
-    ie: () => s
+    ie: () => a
 });
 var r = n(680089),
     i = n(496675),
     l = n(540126),
     o = n(443063),
-    a = n(981631);
-function s(e, t, n) {
+    s = n(981631);
+function a(e, t, n) {
     return {
         hasDivider:
             !(function (e, t) {
@@ -30,7 +30,7 @@ function c(e) {
                 ? []
                 : t.getChannelRecords().filter((e) => {
                       var t;
-                      if (!i.Z.can(a.Plq.VIEW_CHANNEL, e)) return !1;
+                      if (!i.Z.can(s.Plq.VIEW_CHANNEL, e)) return !1;
                       let r = null != (t = n[e.id]) ? t : [];
                       return e.id !== o && e.id !== l && r.length > 0;
                   });

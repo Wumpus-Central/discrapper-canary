@@ -4,8 +4,8 @@ r(73800);
 var i = r(399606),
     l = r(481060),
     a = r(275759),
-    o = r(565138),
-    s = r(706454),
+    s = r(565138),
+    o = r(706454),
     c = r(271383),
     u = r(430824),
     d = r(709054),
@@ -56,7 +56,7 @@ function f(e, t) {
 }
 function j(e) {
     let { userId: t, guildId: r, textClassName: j, tooltipDelay: x } = e,
-        v = (0, i.e7)([s.default], () => s.default.locale),
+        v = (0, i.e7)([o.default], () => o.default.locale),
         O = (0, i.e7)([u.Z], () => (null != r ? u.Z.getGuild(r) : null)),
         h = (0, i.e7)([c.ZP], () => (null != r ? c.ZP.getMember(r, t) : null)),
         y = (0, a.FI)(d.default.extractTimestamp(t), v),
@@ -109,10 +109,10 @@ function j(e) {
                               delay: x,
                               children: (e) =>
                                   (0, n.jsx)(
-                                      o.Z,
+                                      s.Z,
                                       f(p({}, e), {
                                           guild: O,
-                                          size: o.Z.Sizes.SMOL,
+                                          size: s.Z.Sizes.SMOL,
                                           className: b.guildIcon
                                       })
                                   )

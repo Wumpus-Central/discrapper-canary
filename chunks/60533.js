@@ -1,22 +1,23 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
     s = n(90815),
-    a = n(594174),
-    o = n(675968);
-function c(e) {
+    a = n(601964),
+    o = n(594174),
+    c = n(675968);
+function d(e) {
     let { guild: t } = e,
-        n = (0, i.e7)([a.default], () => {
-            let e = a.default.getCurrentUser();
-            return null != e && (null == t ? void 0 : t.isOwner(e)) === !0;
+        n = (0, i.e7)([o.default], () => {
+            let e = o.default.getCurrentUser();
+            return (0, a.eM)(t, e);
         }),
-        c = () => {
+        d = () => {
             (0, s.q)(t.id, { demonetized: !0 });
         };
     return (0, r.jsxs)('div', {
-        className: o.container,
+        className: c.container,
         children: [
             (0, r.jsx)(l.X6q, {
                 variant: 'heading-lg/semibold',
@@ -64,7 +65,7 @@ function c(e) {
                         })({ disabled: !n }, e)),
                         (i = i =
                             {
-                                onClick: c,
+                                onClick: d,
                                 children: 'Accept New Terms'
                             }),
                         Object.getOwnPropertyDescriptors

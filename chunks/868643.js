@@ -25,7 +25,7 @@ function g(e) {
         var t, n, r;
         if (null == e) return !0;
         let i = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
-        if (null != i && (null == (n = o.Z.getGuild(i)) ? void 0 : n.hasFeature(c.oNc.FORWARDING_DISABLED))) return !0;
+        if (null != i && (null == (n = o.Z.getGuild(i)) ? void 0 : n.features.has(c.oNc.FORWARDING_DISABLED))) return !0;
         let s = null != i && l.Z.isChannelOrThreadParentGated(i, e.channel_id),
             u = null != e && (null == (r = a.Z.getChannel(e.channel_id)) ? void 0 : r.isModeratorReportChannel());
         return s || u;

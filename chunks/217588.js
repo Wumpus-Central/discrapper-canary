@@ -230,7 +230,7 @@ let F = (e) => {
             i.useEffect(() => {
                 let { stickerSourceGuild: e } = X.current;
                 (async () => {
-                    ((null == e || e.hasFeature(N.oNc.DISCOVERABLE)) && j(await (0, g.Z)(n.id)), T(!0));
+                    ((null == e || e.features.has(N.oNc.DISCOVERABLE)) && j(await (0, g.Z)(n.id)), T(!0));
                 })();
             }, [n.id, B]));
         let q = n.guild_id === l.getGuildId(),

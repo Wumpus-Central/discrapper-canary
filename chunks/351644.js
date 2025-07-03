@@ -23,8 +23,8 @@ var r = n(255367),
     C = n(626135),
     N = n(768581),
     I = n(63063),
-    S = n(709054),
-    E = n(51144),
+    E = n(709054),
+    S = n(51144),
     T = n(466070),
     w = n(585835),
     P = n(997787),
@@ -102,7 +102,7 @@ function W(e) {
                     showTwitchCard: !1,
                     showYoutubeCard: !1
                 };
-            let e = null == W ? void 0 : W.hasFeature(Z.oNc.COMMUNITY),
+            let e = null == W ? void 0 : W.features.has(Z.oNc.COMMUNITY),
                 t = ei.filter((e) => e.type === Z.ABu.TWITCH).length > 0,
                 n = ei.filter((e) => e.type === Z.ABu.YOUTUBE).length > 0;
             return {
@@ -148,13 +148,13 @@ function W(e) {
                     ? o.push({
                           icon: u.T39,
                           text: A.intl.formatToPlainString(A.t.Nu9sam, {
-                              timestamp: S.default.extractTimestamp(l.id),
-                              user: E.ZP.getUserTag(l.user)
+                              timestamp: E.default.extractTimestamp(l.id),
+                              user: S.ZP.getUserTag(l.user)
                           })
                       })
                     : o.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.gcdJ8P, { timestamp: S.default.extractTimestamp(l.id) })
+                          text: A.intl.formatToPlainString(A.t.gcdJ8P, { timestamp: E.default.extractTimestamp(l.id) })
                       }),
                 (0, r.jsx)(
                     w.Z,
@@ -245,8 +245,8 @@ function W(e) {
             return t > 0 ? l : o;
         })(ee, ef, null == W ? void 0 : W.id)),
         (eI = null));
-    let eS = I.Z.getArticleURL(Z.BhN.INTEGRATIONS),
-        eE = null != z ? A.t.YV0vh4 : A.t.FnZEJi,
+    let eE = I.Z.getArticleURL(Z.BhN.INTEGRATIONS),
+        eS = null != z ? A.t.YV0vh4 : A.t.FnZEJi,
         eT = [];
     if (el) {
         let e, t, i, o, a;
@@ -383,7 +383,7 @@ function W(e) {
         children: [
             (0, r.jsx)(u.R94, {
                 type: u.geA.DESCRIPTION,
-                children: A.intl.format(eE, { helpdeskArticle: eS })
+                children: A.intl.format(eS, { helpdeskArticle: eE })
             }),
             (0, r.jsx)(u.$i$, { className: D.divider }),
             K || er || null == W

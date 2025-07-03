@@ -144,14 +144,15 @@ let S = new j(o.Z, {
                                             };
                                         }
                                         case s.h8.TEXT_CHANNEL: {
-                                            let { record: t } = e,
-                                                n = c.Z.getChannel(t.parent_id),
-                                                r = d.Z.getGuild(t.guild_id);
+                                            var t;
+                                            let { record: n } = e,
+                                                r = c.Z.getChannel(n.parent_id),
+                                                l = d.Z.getGuild(n.guild_id);
                                             return {
                                                 type: s.h8.TEXT_CHANNEL,
-                                                sent: x.includes(t.id),
-                                                categoryName: null != n ? (0, u.F6)(n, g.default, p.Z) : '',
-                                                guildName: null != r ? r.toString() : '',
+                                                sent: x.includes(n.id),
+                                                categoryName: null != r ? (0, u.F6)(r, g.default, p.Z) : '',
+                                                guildName: null != (t = null == l ? void 0 : l.name) ? t : '',
                                                 data: e
                                             };
                                         }

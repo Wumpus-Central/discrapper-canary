@@ -169,5 +169,5 @@ function v(e, t) {
     };
 }
 function O(e) {
-    return (0, p.H2)(e) && e.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, c.$F)() && (0, c.hQ)(e.id);
+    return (0, p.H2)(e) && e.features.has(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, c.$F)() && (0, c.hQ)(e.id);
 }

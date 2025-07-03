@@ -1,4 +1,4 @@
-n.d(t, { D: () => a });
+n.d(t, { D: () => s });
 var r = n(255367);
 n(73800);
 var i = n(239091);
@@ -45,8 +45,8 @@ function o(e, t) {
         e
     );
 }
-function a(e, t, a, s, c) {
-    let u = a.getGuildId();
+function s(e, t, s, a, c) {
+    let u = s.getGuildId();
     return null != u
         ? (0, i.jW)(
               e,
@@ -57,13 +57,13 @@ function a(e, t, a, s, c) {
                           e,
                           o(l({}, n), {
                               user: t,
-                              channel: a,
+                              channel: s,
                               guildId: u,
                               onInteraction: (e) => c('GuildVoiceUserContextMenu', e)
                           })
                       );
               },
-              s
+              a
           )
         : (0, i.jW)(
               e,
@@ -74,11 +74,11 @@ function a(e, t, a, s, c) {
                           e,
                           o(l({}, n), {
                               user: t,
-                              channel: a,
+                              channel: s,
                               onInteraction: (e) => c('BaseVoiceUserContextMenu', e)
                           })
                       );
               },
-              s
+              a
           );
 }

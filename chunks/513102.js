@@ -1,24 +1,24 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => c });
 var i = n(255367);
 n(73800);
-var r = n(481060),
-    l = n(456100),
-    a = n(749681),
-    o = n(258971),
-    c = n(49898),
-    d = n(388032);
-function s(e) {
-    let { enabled: t } = l.c.useExperiment({ location: 'useApplicationDirectoryItem' }, { autoTrackExposure: !0 }),
-        n = t ? r.iWm : r.jje;
-    return (0, i.jsx)(r.sNh, {
+var a = n(481060),
+    r = n(456100),
+    l = n(749681),
+    d = n(258971),
+    o = n(49898),
+    s = n(388032);
+function c(e) {
+    let { enabled: t } = r.c.useExperiment({ location: 'useApplicationDirectoryItem' }, { autoTrackExposure: !0 }),
+        n = t ? a.iWm : a.jje;
+    return (0, i.jsx)(a.sNh, {
         id: 'application-directory',
-        label: (0, i.jsx)(i.Fragment, { children: d.intl.string(d.t.AKcFUl) }),
+        label: (0, i.jsx)(i.Fragment, { children: s.intl.string(s.t.AKcFUl) }),
         icon: n,
         action: () => {
-            (0, a.transitionToGlobalDiscovery)({
-                tab: c.GlobalDiscoveryTab.APPS,
+            (0, l.transitionToGlobalDiscovery)({
+                tab: o.GlobalDiscoveryTab.APPS,
                 newSessionState: {
-                    entrypoint: { name: o.xF.GUILD_HEADER_POPOUT },
+                    entrypoint: { name: d.xF.GUILD_HEADER_POPOUT },
                     guildId: e.id
                 }
             });

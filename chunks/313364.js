@@ -37,7 +37,7 @@ function R(e) {
         D = i.useCallback(() => {
             p.Z.closeGuildSidebar(t);
         }, [t]),
-        k = !1 == !!(null == n ? void 0 : n.hasFeature(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        k = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         A = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         L = i.useCallback(
             (e) => {

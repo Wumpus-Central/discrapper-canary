@@ -38,7 +38,7 @@ function s(e) {
     });
 }
 let l = [i.oNc.ROLE_SUBSCRIPTIONS_ENABLED, i.oNc.CREATOR_MONETIZABLE, i.oNc.CREATOR_MONETIZABLE_PROVISIONAL],
-    c = (e) => null != e && l.some((t) => e.hasFeature(t));
+    c = (e) => null != e && l.some((t) => e.features.has(t));
 function u(e) {
     let { enabled: t } = r.jJ.getCurrentConfig(
         {

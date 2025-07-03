@@ -69,7 +69,7 @@ function I(e) {
         T = I.id,
         [P, w] = i.useState(!1),
         [R, Z] = i.useState(null),
-        D = I.hasFeature(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        D = I.features.has(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         k = null != (t = (0, g.A)({ guildId: I.id })) ? t : 0,
         A = i.useCallback(() => {
             (Z(null), f.Z.init(T, v.pNK.ACCESS));
@@ -131,7 +131,7 @@ function I(e) {
                     let { requireTerms: t, termRules: n = [] } = l,
                         r = n.map((e) => e.value.trim()).filter((e) => '' !== e);
                     L(async () => {
-                        if (I.hasFeature(v.oNc.DISCOVERABLE)) {
+                        if (I.features.has(v.oNc.DISCOVERABLE)) {
                             let e = new Set(I.features);
                             (e.delete(v.oNc.DISCOVERABLE), await M({ features: e }));
                         }
@@ -141,7 +141,7 @@ function I(e) {
                     let { pendingVerificationFields: t } = l;
                     if (null == t) return;
                     L(async () => {
-                        if (I.hasFeature(v.oNc.DISCOVERABLE)) {
+                        if (I.features.has(v.oNc.DISCOVERABLE)) {
                             let e = new Set(I.features);
                             (e.delete(v.oNc.DISCOVERABLE), await M({ features: e }));
                         }

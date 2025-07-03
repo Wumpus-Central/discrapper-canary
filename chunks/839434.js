@@ -41,8 +41,8 @@ var i,
     U = n(938475),
     B = n(237997),
     G = n(136015),
-    F = n(51144),
-    H = n(145597),
+    H = n(51144),
+    F = n(145597),
     Y = n(244073),
     K = n(876205),
     X = n(906037),
@@ -173,7 +173,7 @@ class el extends (i = o.PureComponent) {
                     {
                         guildId: null == a ? void 0 : a.guild_id,
                         user: c,
-                        nick: null != (s = null == p ? void 0 : p.nick) ? s : F.ZP.getName(c),
+                        nick: null != (s = null == p ? void 0 : p.nick) ? s : H.ZP.getName(c),
                         flipped: h,
                         voiceState: d,
                         displayNameMode: n,
@@ -453,7 +453,7 @@ function es(e) {
                 displayUserMode: B.default.getDisplayUserMode(),
                 displayNameMode: B.default.getDisplayNameMode(),
                 avatarSizeMode: B.default.getAvatarSizeMode(),
-                streamApplication: (null == s ? void 0 : s.pid) === (0, H.getPID)() ? (0, j.Z)(e) : null,
+                streamApplication: (null == s ? void 0 : s.pid) === (0, F.getPID)() ? (0, j.Z)(e) : null,
                 stream: t
             };
         });

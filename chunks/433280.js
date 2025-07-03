@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(990547),
@@ -6,18 +6,19 @@ var i = n(990547),
     a = n(213609),
     o = n(434404),
     s = n(970731),
-    c = n(430824),
-    u = n(594174),
-    d = n(981631),
-    p = n(388032),
-    h = n(644909),
-    f = n(217110);
-function g(e) {
+    c = n(601964),
+    u = n(430824),
+    d = n(594174),
+    p = n(981631),
+    h = n(388032),
+    f = n(644909),
+    g = n(217110);
+function m(e) {
     let { guildId: t, markAsDismissed: n } = e,
-        g = (0, l.e7)([c.Z, u.default], () => {
-            let e = u.default.getCurrentUser(),
-                n = c.Z.getGuild(t);
-            return (null == n ? void 0 : n.isOwner(e)) === !0;
+        m = (0, l.e7)([u.Z, d.default], () => {
+            let e = d.default.getCurrentUser(),
+                n = u.Z.getGuild(t);
+            return null != n && (0, c.eM)(n, e);
         });
     return (
         (0, a.Z)({
@@ -25,27 +26,27 @@ function g(e) {
             name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: {
                 guild_id: t,
-                is_owner: g
+                is_owner: m
             }
         }),
         (0, r.jsx)('div', {
-            className: h.container,
+            className: f.container,
             children: (0, r.jsx)(s.ZP, {
-                header: p.intl.string(p.t.C0m4ra),
-                content: p.intl.string(p.t.zOHfER),
+                header: h.intl.string(h.t.C0m4ra),
+                content: h.intl.string(h.t.zOHfER),
                 asset: (0, r.jsx)('div', {
-                    className: h.image,
+                    className: f.image,
                     children: (0, r.jsx)('img', {
-                        alt: p.intl.string(p.t.xad4wc),
-                        src: f,
-                        className: h.image
+                        alt: h.intl.string(h.t.xad4wc),
+                        src: g,
+                        className: f.image
                     })
                 }),
-                buttonCTA: p.intl.string(p.t.OgQQbG),
+                buttonCTA: h.intl.string(h.t.OgQQbG),
                 onClick: () => {
-                    o.Z.open(t, d.pNK.ROLE_SUBSCRIPTIONS);
+                    o.Z.open(t, p.pNK.ROLE_SUBSCRIPTIONS);
                 },
-                secondaryButtonCTA: p.intl.string(p.t.WAI6xs),
+                secondaryButtonCTA: h.intl.string(h.t.WAI6xs),
                 markAsDismissed: n
             })
         })

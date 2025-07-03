@@ -122,7 +122,7 @@ function L(e) {
         [es, ea] = i.useState(!1),
         [er, eo] = i.useState(null),
         eu = (0, u.e7)([x.Z], () => x.Z.getGuild(M)),
-        ec = (null == eu ? void 0 : eu.hasFeature(w.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(w.oNc.VERIFIED)),
+        ec = (null == eu ? void 0 : eu.features.has(w.oNc.PARTNERED)) || (null == eu ? void 0 : eu.features.has(w.oNc.VERIFIED)),
         ed = null != F,
         em = ed || (null == J ? void 0 : J.file) != null,
         ef = 0 === en.length || (en.length >= 2 && en.length <= 100),

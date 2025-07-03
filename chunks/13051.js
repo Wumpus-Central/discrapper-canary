@@ -23,8 +23,8 @@ var r = n(255367),
     C = n(486199),
     N = n(981631),
     I = n(388032),
-    S = n(796920),
-    E = n(20493);
+    E = n(796920),
+    S = n(20493);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -199,12 +199,12 @@ function w(e) {
         ];
     }
     let X = (0, r.jsxs)(b.Z, {
-            className: S.header,
+            className: E.header,
             align: b.Z.Align.CENTER,
             children: [
                 (0, r.jsx)(C.Z, {
                     name: ''.concat(l.name),
-                    detailsClassName: S.description,
+                    detailsClassName: E.description,
                     details: t
                 }),
                 l.enabled
@@ -212,7 +212,7 @@ function w(e) {
                           shrink: 0,
                           grow: 0,
                           children: (0, r.jsx)(O.Z, {
-                              className: S.expandIcon,
+                              className: E.expandIcon,
                               expanded: w && !D,
                               'aria-hidden': !0
                           })
@@ -241,10 +241,10 @@ function w(e) {
             !D &&
             null != a &&
             ($ = (0, r.jsxs)(b.Z, {
-                className: S.body,
+                className: E.body,
                 direction: b.Z.Direction.VERTICAL,
                 children: [
-                    (0, r.jsx)(u.$i$, { className: S.topDivider }),
+                    (0, r.jsx)(u.$i$, { className: E.topDivider }),
                     (function (e) {
                         let { integration: t, labelText: n, subscribersText: i, descriptionText: l, roleLink: o, onSync: a } = e;
                         return (0, r.jsxs)(b.Z, {
@@ -253,11 +253,11 @@ function w(e) {
                                     basis: '50%',
                                     children: [
                                         (0, r.jsx)(u.vwX, {
-                                            className: E.marginBottom8,
+                                            className: S.marginBottom8,
                                             children: I.intl.string(I.t.eBtNBQ)
                                         }),
                                         (0, r.jsx)(u.Text, {
-                                            className: S.syncedRole,
+                                            className: E.syncedRole,
                                             color: 'header-primary',
                                             variant: 'text-sm/normal',
                                             children: o
@@ -268,7 +268,7 @@ function w(e) {
                                     basis: '50%',
                                     children: [
                                         (0, r.jsx)(u.vwX, {
-                                            className: E.marginBottom8,
+                                            className: S.marginBottom8,
                                             children: n
                                         }),
                                         (0, r.jsxs)(b.Z, {
@@ -316,7 +316,7 @@ function w(e) {
                         roleLink: K,
                         onSync: U
                     }),
-                    (0, r.jsx)(u.$i$, { className: S.midDivider }),
+                    (0, r.jsx)(u.$i$, { className: E.midDivider }),
                     (function (e) {
                         let { integration: t, labelText: n, onBehaviorChange: i, onGracePeriodChange: l } = e;
                         return (0, r.jsxs)(b.Z, {
@@ -325,7 +325,7 @@ function w(e) {
                                     basis: '50%',
                                     children: [
                                         (0, r.jsx)(u.vwX, {
-                                            className: E.marginBottom8,
+                                            className: S.marginBottom8,
                                             children: n
                                         }),
                                         (0, r.jsx)(u.q4e, {
@@ -350,7 +350,7 @@ function w(e) {
                                     basis: '50%',
                                     children: [
                                         (0, r.jsx)(u.vwX, {
-                                            className: E.marginBottom8,
+                                            className: S.marginBottom8,
                                             children: I.intl.string(I.t.uiXMo6)
                                         }),
                                         (0, r.jsx)(u.q4e, {
@@ -386,7 +386,7 @@ function w(e) {
                                   children: [
                                       (0, r.jsx)(u.XZJ, {
                                           type: u.XZJ.Types.INVERTED,
-                                          className: o()(E.marginTop20, E.marginBottom8),
+                                          className: o()(S.marginTop20, S.marginBottom8),
                                           value: t.enable_emoticons,
                                           disabled: t.syncing,
                                           onChange: (e) => {
@@ -397,7 +397,7 @@ function w(e) {
                                       }),
                                       (0, r.jsx)(b.Z, {
                                           wrap: b.Z.Wrap.WRAP,
-                                          className: S.__invalid_twitchEmojis,
+                                          className: E.__invalid_twitchEmojis,
                                           children: n.map((e, t) =>
                                               (0, r.jsx)(
                                                   u.ua7,
@@ -410,7 +410,7 @@ function w(e) {
                                                                   {
                                                                       alt: I.intl.formatToPlainString(I.t.n6ZZn5, { name: e.name }),
                                                                       draggable: !1,
-                                                                      className: o()(S.emoji, 'emoji', 'jumboable'),
+                                                                      className: o()(E.emoji, 'emoji', 'jumboable'),
                                                                       src: y.ZP.getEmojiURL({
                                                                           id: e.id,
                                                                           animated: e.animated,
@@ -436,10 +436,10 @@ function w(e) {
                               }
                           })
                         : null,
-                    (0, r.jsx)(u.$i$, { className: S.bottomDivider }),
+                    (0, r.jsx)(u.$i$, { className: E.bottomDivider }),
                     (0, r.jsx)(b.Z, {
                         children: (0, r.jsx)(u.zxk, {
-                            className: S.disableButton,
+                            className: E.disableButton,
                             size: u.zxk.Sizes.SMALL,
                             color: u.zxk.Colors.RED,
                             look: u.zxk.Looks.LINK,
@@ -451,13 +451,13 @@ function w(e) {
             })),
         (0, r.jsx)(u.Zbd, {
             editable: !0,
-            className: S.card,
+            className: E.card,
             children: (0, r.jsxs)(b.Z, {
                 direction: b.Z.Direction.VERTICAL,
                 children: [
                     l.enabled
                         ? (0, r.jsx)(u.P3F, {
-                              className: S.expandableHeader,
+                              className: E.expandableHeader,
                               'aria-expanded': w && !D,
                               onClick: P,
                               children: X

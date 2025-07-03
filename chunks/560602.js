@@ -7,53 +7,54 @@ var n = t(255367),
     a = t(741361),
     c = t(911969),
     u = t(605436),
-    d = t(485386),
-    h = t(700785),
-    p = t(993259),
-    x = t(388032),
-    m = t(821383);
-function f(e) {
+    d = t(601964),
+    h = t(485386),
+    p = t(700785),
+    x = t(993259),
+    m = t(388032),
+    f = t(821383);
+function w(e) {
     return (l) => null != l && !(0, u.pM)(e, l);
 }
-let w = (e, l, t) => {
-        let n = h.Uu(t, l),
+let j = (e, l, t) => {
+        let n = p.Uu(t, l),
             [i, o] = r.useState(n);
         return {
             shouldEveryonePost: i,
             setShouldEveryonePost: o
         };
     },
-    j = (e) => {
+    b = (e) => {
         let { rolesRow: l } = e;
         return (0, n.jsx)('div', {
             'aria-hidden': !0,
-            className: m.roleCircle,
+            className: f.roleCircle,
             style: { backgroundColor: null == l ? void 0 : l.colorString }
         });
     },
     v = (e) => {
-        let { guild: l, channel: t, permission: v, onClose: b, transitionState: g, currentSelectedRoles: k = [] } = e,
-            { shouldEveryonePost: y, setShouldEveryonePost: S } = w(l, t, v),
-            C = r.useRef(null),
-            O = (function (e) {
-                let l = (0, o.e7)([d.Z], () => d.Z.getRoles(e.id));
-                return r.useMemo(() => (0, p.KV)(e, l).filter((l) => f(e.id)(l.id)), [e, l]);
+        let { guild: l, channel: t, permission: v, onClose: g, transitionState: k, currentSelectedRoles: y = [] } = e,
+            { shouldEveryonePost: S, setShouldEveryonePost: C } = j(l, t, v),
+            O = r.useRef(null),
+            N = (function (e) {
+                let l = (0, o.e7)([h.Z], () => h.Z.getRoles(e.id));
+                return r.useMemo(() => (0, x.KV)(e, l).filter((l) => w(e.id)(l.id)), [e, l]);
             })(l),
-            N = O.reduce((e, l) => (e.set(l.id, l), e), new Map()),
-            R = O.map((e) => ({
+            z = N.reduce((e, l) => (e.set(l.id, l), e), new Map()),
+            R = N.map((e) => ({
                 key: e.key,
                 label: e.name,
                 value: e.id
             })),
-            [z, P] = r.useState(k.map((e) => e.id).filter(f(l.id))),
-            [H, M] = r.useState(!1),
-            [_, E] = r.useState(!1),
-            B = z.length > 0 || y,
+            [P, H] = r.useState(y.map((e) => e.id).filter(w(l.id))),
+            [M, _] = r.useState(!1),
+            [V, B] = r.useState(!1),
+            E = P.length > 0 || S,
             L = (function (e, l) {
-                let t = (0, o.e7)([d.Z], () => d.Z.getRoles(e.id));
+                let t = (0, o.e7)([h.Z], () => h.Z.getRoles(e.id));
                 return r.useCallback(
                     (n, r) => {
-                        let o = (0, p.KV)(e, t),
+                        let o = (0, x.KV)(e, t),
                             s = new Set(r),
                             d = (function (e) {
                                 for (var l = 1; l < arguments.length; l++) {
@@ -80,112 +81,112 @@ let w = (e, l, t) => {
                                 }
                                 return e;
                             })({}, l.permissionOverwrites),
-                            x = [],
+                            h = [],
                             m = [];
                         return (
                             o.forEach((l) => {
-                                var t, r, o, a, p, f, w, j, v, b;
+                                var t, r, o, a, x, f, w, j, b, v;
                                 let g = l.id,
                                     k = s.has(g);
                                 k
-                                    ? x.push({
+                                    ? h.push({
                                           id: g,
                                           type: c.BN.ROLE,
-                                          allow: k ? i.IH(null != (a = null == (t = d[g]) ? void 0 : t.allow) ? a : h.Hn, n) : i.Od(null != (p = null == (r = d[g]) ? void 0 : r.allow) ? p : h.Hn, n),
-                                          deny: i.Od(null != (f = null == (o = d[g]) ? void 0 : o.deny) ? f : h.Hn, n)
+                                          allow: k ? i.IH(null != (a = null == (t = d[g]) ? void 0 : t.allow) ? a : p.Hn, n) : i.Od(null != (x = null == (r = d[g]) ? void 0 : r.allow) ? x : p.Hn, n),
+                                          deny: i.Od(null != (f = null == (o = d[g]) ? void 0 : o.deny) ? f : p.Hn, n)
                                       })
                                     : (0, u.pM)(e.id, g)
-                                      ? x.push({
+                                      ? h.push({
                                             id: g,
                                             type: c.BN.ROLE,
-                                            allow: i.Od(null != (v = null == (w = d[g]) ? void 0 : w.allow) ? v : h.Hn, n),
-                                            deny: i.IH(null != (b = null == (j = d[g]) ? void 0 : j.deny) ? b : h.Hn, n)
+                                            allow: i.Od(null != (b = null == (w = d[g]) ? void 0 : w.allow) ? b : p.Hn, n),
+                                            deny: i.IH(null != (v = null == (j = d[g]) ? void 0 : j.deny) ? v : p.Hn, n)
                                         })
                                       : g in d && m.push(g);
                             }, []),
-                            (0, a.kU)(l.id, x, m)
+                            (0, a.kU)(l.id, h, m)
                         );
                     },
                     [e, t, l]
                 );
             })(l, t),
-            V = async () => {
-                if (!B) return;
-                (M(!0), E(!1));
-                let e = [...z];
-                if (y) {
-                    let t = l.getEveryoneRoleId();
+            Z = async () => {
+                if (!E) return;
+                (_(!0), B(!1));
+                let e = [...P];
+                if (S) {
+                    let t = (0, d.lV)(l);
                     e.push(t);
                 }
                 try {
-                    (await L(v, e), b());
+                    (await L(v, e), g());
                 } catch (e) {
-                    E(!0);
+                    B(!0);
                 } finally {
-                    M(!1);
+                    _(!1);
                 }
             };
-        return H
+        return M
             ? (0, n.jsx)(s.$jN, {})
             : (0, n.jsxs)(s.Y0X, {
-                  transitionState: g,
-                  'aria-label': x.intl.string(x.t['3khS8P']),
+                  transitionState: k,
+                  'aria-label': m.intl.string(m.t['3khS8P']),
                   parentComponent: 'QuickRolePermissionToggleModal',
                   children: [
                       (0, n.jsx)(s.xBx, {
                           separator: !1,
                           children: (0, n.jsx)(s.X6q, {
                               variant: 'heading-md/semibold',
-                              children: x.intl.string(x.t.TFGnmp)
+                              children: m.intl.string(m.t.TFGnmp)
                           })
                       }),
                       (0, n.jsxs)(s.hzk, {
                           children: [
                               (0, n.jsx)('div', {
-                                  className: m.row,
+                                  className: f.row,
                                   children: (0, n.jsx)('div', {
-                                      ref: C,
+                                      ref: O,
                                       children: (0, n.jsx)(s.JcV, {
-                                          containerRef: C,
+                                          containerRef: O,
                                           children: (0, n.jsx)(s.VcW, {
                                               closeOnSelect: !1,
-                                              className: m.roleSelector,
+                                              className: f.roleSelector,
                                               maxVisibleItems: 5,
-                                              placeholder: x.intl.string(x.t['8kKqCQ']),
+                                              placeholder: m.intl.string(m.t['8kKqCQ']),
                                               multi: !0,
-                                              value: z,
+                                              value: P,
                                               options: R,
                                               onChange: (e) => {
-                                                  P(e);
+                                                  H(e);
                                               },
-                                              renderOptionPrefix: (e) => (null != e ? (0, n.jsx)(j, { rolesRow: N.get(e.value) }) : null)
+                                              renderOptionPrefix: (e) => (null != e ? (0, n.jsx)(b, { rolesRow: z.get(e.value) }) : null)
                                           })
                                       })
                                   })
                               }),
                               (0, n.jsxs)('div', {
-                                  className: m.row,
+                                  className: f.row,
                                   children: [
                                       (0, n.jsx)(s.j7V, {
-                                          value: y,
+                                          value: S,
                                           hideBorder: !0,
-                                          onChange: S,
-                                          className: m.switchGroup,
-                                          children: x.intl.string(x.t.kPwwAw)
+                                          onChange: C,
+                                          className: f.switchGroup,
+                                          children: m.intl.string(m.t.kPwwAw)
                                       }),
                                       (0, n.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
-                                          children: x.intl.format(x.t.NjCtHx, {})
+                                          children: m.intl.format(m.t.NjCtHx, {})
                                       })
                                   ]
                               }),
-                              _
+                              V
                                   ? (0, n.jsx)('div', {
-                                        className: m.row,
+                                        className: f.row,
                                         children: (0, n.jsx)(s.Text, {
-                                            className: m.error,
+                                            className: f.error,
                                             variant: 'text-sm/normal',
-                                            children: x.intl.string(x.t.mgZKZG)
+                                            children: m.intl.string(m.t.mgZKZG)
                                         })
                                     })
                                   : null
@@ -197,18 +198,18 @@ let w = (e, l, t) => {
                                   type: 'submit',
                                   color: s.zxk.Colors.BRAND,
                                   size: s.zxk.Sizes.SMALL,
-                                  className: m.button,
-                                  onClick: V,
-                                  disabled: !B,
+                                  className: f.button,
+                                  onClick: Z,
+                                  disabled: !E,
                                   autoFocus: !0,
-                                  children: x.intl.string(x.t.R3BPHx)
+                                  children: m.intl.string(m.t.R3BPHx)
                               }),
                               (0, n.jsx)(s.zxk, {
                                   color: s.zxk.Colors.PRIMARY,
                                   size: s.zxk.Sizes.SMALL,
-                                  className: m.button,
-                                  onClick: b,
-                                  children: x.intl.string(x.t['ETE/oK'])
+                                  className: f.button,
+                                  onClick: g,
+                                  children: m.intl.string(m.t['ETE/oK'])
                               })
                           ]
                       })

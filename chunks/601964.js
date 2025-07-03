@@ -1,15 +1,25 @@
 (n.d(t, {
-    Bg: () => u,
-    ZP: () => c
+    Bg: () => y,
+    EB: () => f,
+    Y2: () => b,
+    ZP: () => d,
+    eM: () => p,
+    gM: () => _,
+    kH: () => E,
+    lV: () => g,
+    yn: () => h,
+    zN: () => m
 }),
-    n(388685),
+    n(415506),
     n(953529));
-var r = n(81825),
-    i = n(768581),
-    a = n(709054),
-    o = n(624138),
-    s = n(981631);
-function l(e, t, n) {
+var r = n(843991),
+    i = n(81825),
+    a = n(768581),
+    o = n(960048),
+    s = n(709054),
+    l = n(624138),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,119 +32,64 @@ function l(e, t, n) {
         e
     );
 }
-class c extends r.Z {
+class d extends i.Z {
     merge(e) {
         let { features: t } = e;
         if (null != t) {
-            let n = new Set(t);
-            if (n.size === this.features.size) {
-                let t = !1;
-                for (let e of n)
-                    if (!this.features.has(e)) {
-                        t = !0;
-                        break;
-                    }
-                t || (e.features = this.features);
-            }
+            let n = (0, r.G)(t);
+            (0, r.z)(n, this.features) && (e.features = this.features);
         }
         return super.merge.call(this, e);
     }
-    getSafetyAlertsChannelId() {
-        var e;
-        return null != (e = this.safetyAlertsChannelId) ? e : this.publicUpdatesChannelId;
-    }
-    getModeratorReportChannelId() {
-        var e, t;
-        return null != (t = null == (e = this.moderatorReporting) ? void 0 : e.moderatorReportChannelId) ? t : null;
-    }
-    getModeratorReportingEnabled() {
-        var e, t;
-        return null != (t = null == (e = this.moderatorReporting) ? void 0 : e.moderatorReportingEnabled) && t;
-    }
-    getIconURL(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return i.ZP.getGuildIconURL({
-            id: this.id,
-            size: e,
-            icon: this.icon,
-            canAnimate: t,
-            lossless: n
-        });
-    }
-    getIconSource(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return i.ZP.getAnimatableSourceWithFallback(t, (t) =>
-            i.ZP.getGuildIconSource({
-                id: this.id,
-                size: e,
-                icon: this.icon,
-                canAnimate: t
-            })
-        );
-    }
-    getApplicationId() {
-        return this.application_id;
-    }
     toString() {
         var e;
-        return null != (e = this.name) ? e : '';
-    }
-    get acronym() {
-        return (0, o.Zg)(this.name);
-    }
-    isOwner(e) {
-        let t = 'string' == typeof e ? e : null != e ? e.id : null;
-        return this.ownerId === t;
-    }
-    isOwnerWithRequiredMfaLevel(e) {
-        return (!!e.mfaEnabled || this.mfaLevel !== s.BpS.ELEVATED) && this.isOwner(e);
-    }
-    isNew() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 7,
-            t = a.default.extractTimestamp(this.id);
-        return Date.now() - t < 86400000 * e;
-    }
-    isLurker() {
-        return null == this.joinedAt;
-    }
-    hasFeature(e) {
-        return this.features.has(e);
-    }
-    getEveryoneRoleId() {
-        return a.default.castGuildIdAsEveryoneGuildRoleId(this.id);
-    }
-    getMaxRoleSubscriptionEmojiSlots() {
-        return 25;
-    }
-    isCommunity() {
-        return this.hasFeature(s.oNc.COMMUNITY);
-    }
-    hasCommunityInfoSubheader() {
-        return this.hasFeature(s.oNc.COMMUNITY) && this.hasFeature(s.oNc.DISCOVERABLE);
-    }
-    canHaveRaidActivityAlerts() {
-        return (!this.hasFeature(s.oNc.COMMUNITY) && this.hasFeature(s.oNc.NON_COMMUNITY_RAID_ALERTS)) || (this.hasFeature(s.oNc.COMMUNITY) && !this.hasFeature(s.oNc.RAID_ALERTS_DISABLED));
-    }
-    updateJoinedAt(e) {
-        return this.set('joinedAt', 'string' == typeof e ? new Date(e) : e);
-    }
-    isNSFW() {
-        return this.nsfwLevel === s.V_K.EXPLICIT || this.nsfwLevel === s.V_K.AGE_RESTRICTED;
+        let t = Error('GuildRecord.toString() should not be called, access GuildRecord.name instead');
+        return (o.Z.captureException(t), null != (e = this.name) ? e : '');
     }
     constructor(e) {
-        var t, n, r, i, a, o;
-        (super(), l(this, 'id', void 0), l(this, 'name', void 0), l(this, 'description', void 0), l(this, 'ownerId', void 0), l(this, 'icon', void 0), l(this, 'splash', void 0), l(this, 'banner', void 0), l(this, 'homeHeader', void 0), l(this, 'preferredLocale', void 0), l(this, 'features', void 0), l(this, 'afkChannelId', void 0), l(this, 'afkTimeout', void 0), l(this, 'systemChannelId', void 0), l(this, 'verificationLevel', void 0), l(this, 'joinedAt', void 0), l(this, 'defaultMessageNotifications', void 0), l(this, 'mfaLevel', void 0), l(this, 'application_id', void 0), l(this, 'explicitContentFilter', void 0), l(this, 'vanityURLCode', void 0), l(this, 'premiumTier', void 0), l(this, 'premiumSubscriberCount', void 0), l(this, 'premiumProgressBarEnabled', void 0), l(this, 'systemChannelFlags', void 0), l(this, 'rulesChannelId', void 0), l(this, 'safetyAlertsChannelId', void 0), l(this, 'discoverySplash', void 0), l(this, 'publicUpdatesChannelId', void 0), l(this, 'maxStageVideoChannelUsers', void 0), l(this, 'maxVideoChannelUsers', void 0), l(this, 'maxMembers', void 0), l(this, 'nsfwLevel', void 0), l(this, 'ownerConfiguredContentLevel', void 0), l(this, 'hubType', void 0), l(this, 'latestOnboardingQuestionId', void 0), l(this, 'profile', void 0), l(this, 'premiumFeatures', void 0), l(this, 'moderatorReporting', void 0));
-        let c = e.features instanceof Set ? e.features : new Set(Array.from(e.features || []));
-        ((this.id = e.id), (this.name = e.name || ''), (this.description = e.description || null), (this.ownerId = e.ownerId || null), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.banner = e.banner || null), (this.homeHeader = e.homeHeader || null), (this.features = c), (this.preferredLocale = e.preferredLocale || 'en-US'), (this.afkChannelId = e.afkChannelId || null), (this.afkTimeout = e.afkTimeout), (this.systemChannelId = e.systemChannelId || null), (this.verificationLevel = e.verificationLevel || s.sFg.NONE), (this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : null != e.joinedAt ? new Date(e.joinedAt) : e.joinedAt), (this.defaultMessageNotifications = e.defaultMessageNotifications || s.bL.ALL_MESSAGES), (this.mfaLevel = e.mfaLevel || s.BpS.NONE), (this.application_id = e.application_id || null), (this.explicitContentFilter = e.explicitContentFilter || s.lxg.DISABLED), (this.vanityURLCode = e.vanityURLCode || void 0), (this.premiumTier = e.premiumTier || s.Eu4.NONE), (this.premiumSubscriberCount = e.premiumSubscriberCount || 0), (this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1), (this.systemChannelFlags = e.systemChannelFlags), (this.discoverySplash = e.discoverySplash || null), (this.rulesChannelId = e.rulesChannelId || null), (this.safetyAlertsChannelId = e.safetyAlertsChannelId || null), (this.publicUpdatesChannelId = e.publicUpdatesChannelId || null), (this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1), (this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1), (this.maxMembers = e.maxMembers || -1), (this.nsfwLevel = null != (t = e.nsfwLevel) ? t : s.V_K.DEFAULT), (this.ownerConfiguredContentLevel = null != (n = e.ownerConfiguredContentLevel) ? n : null), (this.hubType = e.hubType), (this.latestOnboardingQuestionId = null != (r = e.latestOnboardingQuestionId) ? r : null), (this.profile = null != (i = e.profile) ? i : null), (this.premiumFeatures = null != (a = e.premiumFeatures) ? a : null), (this.moderatorReporting = null != (o = e.moderatorReporting) ? o : null));
+        var t, n, i, a, o, s;
+        (super(), u(this, 'id', void 0), u(this, 'name', void 0), u(this, 'description', void 0), u(this, 'ownerId', void 0), u(this, 'icon', void 0), u(this, 'splash', void 0), u(this, 'banner', void 0), u(this, 'homeHeader', void 0), u(this, 'preferredLocale', void 0), u(this, 'features', void 0), u(this, 'afkChannelId', void 0), u(this, 'afkTimeout', void 0), u(this, 'systemChannelId', void 0), u(this, 'verificationLevel', void 0), u(this, 'joinedAt', void 0), u(this, 'defaultMessageNotifications', void 0), u(this, 'mfaLevel', void 0), u(this, 'application_id', void 0), u(this, 'explicitContentFilter', void 0), u(this, 'vanityURLCode', void 0), u(this, 'premiumTier', void 0), u(this, 'premiumSubscriberCount', void 0), u(this, 'premiumProgressBarEnabled', void 0), u(this, 'systemChannelFlags', void 0), u(this, 'rulesChannelId', void 0), u(this, 'safetyAlertsChannelId', void 0), u(this, 'discoverySplash', void 0), u(this, 'publicUpdatesChannelId', void 0), u(this, 'maxStageVideoChannelUsers', void 0), u(this, 'maxVideoChannelUsers', void 0), u(this, 'maxMembers', void 0), u(this, 'nsfwLevel', void 0), u(this, 'ownerConfiguredContentLevel', void 0), u(this, 'hubType', void 0), u(this, 'latestOnboardingQuestionId', void 0), u(this, 'profile', void 0), u(this, 'premiumFeatures', void 0), u(this, 'moderatorReporting', void 0), (this.id = e.id), (this.name = e.name || ''), (this.description = e.description || null), (this.ownerId = e.ownerId || null), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.banner = e.banner || null), (this.homeHeader = e.homeHeader || null), (this.features = (0, r.G)(e.features)), (this.preferredLocale = e.preferredLocale || 'en-US'), (this.afkChannelId = e.afkChannelId || null), (this.afkTimeout = e.afkTimeout), (this.systemChannelId = e.systemChannelId || null), (this.verificationLevel = e.verificationLevel || c.sFg.NONE), (this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : null != e.joinedAt ? new Date(e.joinedAt) : e.joinedAt), (this.defaultMessageNotifications = e.defaultMessageNotifications || c.bL.ALL_MESSAGES), (this.mfaLevel = e.mfaLevel || c.BpS.NONE), (this.application_id = e.application_id || null), (this.explicitContentFilter = e.explicitContentFilter || c.lxg.DISABLED), (this.vanityURLCode = e.vanityURLCode || null), (this.premiumTier = e.premiumTier || c.Eu4.NONE), (this.premiumSubscriberCount = e.premiumSubscriberCount || 0), (this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1), (this.systemChannelFlags = e.systemChannelFlags), (this.discoverySplash = e.discoverySplash || null), (this.rulesChannelId = e.rulesChannelId || null), (this.safetyAlertsChannelId = e.safetyAlertsChannelId || null), (this.publicUpdatesChannelId = e.publicUpdatesChannelId || null), (this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1), (this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1), (this.maxMembers = e.maxMembers || -1), (this.nsfwLevel = null != (t = e.nsfwLevel) ? t : c.V_K.DEFAULT), (this.ownerConfiguredContentLevel = null != (n = e.ownerConfiguredContentLevel) ? n : null), (this.hubType = e.hubType), (this.latestOnboardingQuestionId = null != (i = e.latestOnboardingQuestionId) ? i : null), (this.profile = null != (a = e.profile) ? a : null), (this.premiumFeatures = null != (o = e.premiumFeatures) ? o : null), (this.moderatorReporting = null != (s = e.moderatorReporting) ? s : null));
     }
 }
-class u extends c {
+function f(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    return a.ZP.getGuildIconURL({
+        id: e.id,
+        size: t,
+        icon: e.icon,
+        canAnimate: n,
+        lossless: r
+    });
+}
+function _(e) {
+    return (0, l.Zg)(e.name);
+}
+function p(e, t) {
+    let n = 'string' == typeof t ? t : null != t ? t.id : null;
+    return e.ownerId === n;
+}
+function h(e, t) {
+    return (!!t.mfaEnabled || e.mfaLevel !== c.BpS.ELEVATED) && p(e, t);
+}
+function m(e) {
+    return null == e.joinedAt;
+}
+function g(e) {
+    return s.default.castGuildIdAsEveryoneGuildRoleId(e.id);
+}
+function E(e, t) {
+    return e.set('joinedAt', 'string' == typeof t ? new Date(t) : t);
+}
+function b(e) {
+    return e.nsfwLevel === c.V_K.EXPLICIT || e.nsfwLevel === c.V_K.AGE_RESTRICTED;
+}
+class y extends d {
     constructor(e) {
         var t;
         (super(e),
-            l(this, 'roles', void 0),
-            l(this, 'member', void 0),
+            u(this, 'roles', void 0),
+            u(this, 'member', void 0),
             (this.roles = null != (t = e.roles) ? t : {}),
             e.member && e.member.userId && e.member.roles
                 ? (this.member = {

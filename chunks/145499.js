@@ -51,7 +51,7 @@ function P(e) {
     }
     return e;
 }
-let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.TIER_1) ? I.Eu4.TIER_1 : e < (0, _.A3)(I.Eu4.TIER_2) ? I.Eu4.TIER_2 : e < (0, _.A3)(I.Eu4.TIER_3) || (null != t && t.hasFeature(I.oNc.MORE_STICKERS) && e < c.D.MAX_STICKER_SLOTS) ? I.Eu4.TIER_3 : I.Eu4.NONE),
+let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.TIER_1) ? I.Eu4.TIER_1 : e < (0, _.A3)(I.Eu4.TIER_2) ? I.Eu4.TIER_2 : e < (0, _.A3)(I.Eu4.TIER_3) || (null != t && t.features.has(I.oNc.MORE_STICKERS) && e < c.D.MAX_STICKER_SLOTS) ? I.Eu4.TIER_3 : I.Eu4.NONE),
     R = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: i, tier: l } = e,
             s = n < l,
@@ -121,8 +121,8 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
             ),
             { analyticsLocations: d } = (0, u.ZP)(),
             j = (0, x.Z)(t.id),
-            Z = t.hasFeature(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
-            A = t.hasFeature(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : j,
+            Z = t.features.has(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
+            A = t.features.has(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : j,
             L = (0, h.Ek)(t.id, 'GuildStickersTiers'),
             M = (0, b.Z)(t.id);
         if (

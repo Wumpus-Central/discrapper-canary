@@ -13,8 +13,8 @@ function g(e) {
     let { guild: t } = e,
         n = i.useId(),
         g = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
-        p = t.hasFeature(d.oNc.COMMUNITY),
-        [f, h] = i.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        p = t.features.has(d.oNc.COMMUNITY),
+        [f, h] = i.useState(t.features.has(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         x = i.useCallback(
             async (e) => {
                 (h(e), await (0, a.fp)(t, e));

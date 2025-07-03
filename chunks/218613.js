@@ -47,8 +47,8 @@ var i = n(255367),
     Z = n(271383),
     k = n(430824),
     B = n(496675),
-    F = n(699516),
-    H = n(594174),
+    H = n(699516),
+    F = n(594174),
     V = n(934415),
     X = n(823379),
     Y = n(63063),
@@ -303,7 +303,7 @@ class ea extends s.PureComponent {
                     ? (0, i.jsx)(m.R94, {
                           className: ee.channelNameNote,
                           type: m.R94.Types.DESCRIPTION,
-                          children: $.intl.format($.t.s2ZzZW, { name: (0, f.F6)(t, H.default, F.Z, !0) })
+                          children: $.intl.format($.t.s2ZzZW, { name: (0, f.F6)(t, F.default, H.Z, !0) })
                       })
                     : o === W.d4z.GUILD_FORUM
                       ? (0, i.jsx)(m.R94, {
@@ -976,7 +976,7 @@ class ea extends s.PureComponent {
         let { channelType: t, cloneChannel: n, prefillChannelName: i } = e;
         ((this.state = {
             channelType: null != t ? t : W.d4z.GUILD_TEXT,
-            name: null != n ? (0, f.F6)(n, H.default, F.Z) : null != i ? i : '',
+            name: null != n ? (0, f.F6)(n, F.default, H.Z) : null != i ? i : '',
             pendingPermissionOverwrites: {},
             isPrivate: !1,
             prevGuildId: e.guildId,
@@ -994,18 +994,18 @@ class ea extends s.PureComponent {
 }
 let eo = s.forwardRef(function (e, t) {
     let { channelType: n, guildId: s, cloneChannelId: l } = e,
-        r = (0, p.cj)([k.Z, H.default, B.Z, w.Z, Z.ZP], () => {
+        r = (0, p.cj)([k.Z, F.default, B.Z, w.Z, Z.ZP], () => {
             var e, t, i;
             let r = k.Z.getGuild(s),
-                a = H.default.getCurrentUser();
+                a = F.default.getCurrentUser();
             o()(null != a, 'CreateChannel: user cannot be undefined');
-            let d = null != r && null != r.ownerId ? H.default.getUser(r.ownerId) : null,
+            let d = null != r && null != r.ownerId ? F.default.getUser(r.ownerId) : null,
                 c = B.Z.can(W.Plq.ADMINISTRATOR, r),
                 h = w.Z.getChannel(l);
             return {
                 guild: r,
-                canCreateStoreChannel: null != r && r.hasFeature(W.oNc.COMMERCE),
-                canCreateAnnouncementChannel: null != r && r.hasFeature(W.oNc.NEWS),
+                canCreateStoreChannel: null != r && r.features.has(W.oNc.COMMERCE),
+                canCreateAnnouncementChannel: null != r && r.features.has(W.oNc.NEWS),
                 user: a,
                 owner: d,
                 memberRoles: null != (t = null == (e = Z.ZP.getMember(s, a.id)) ? void 0 : e.roles) ? t : [],

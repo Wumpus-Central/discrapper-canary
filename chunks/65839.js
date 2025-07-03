@@ -122,7 +122,7 @@ function v(e) {
 let j = (e) => {
     let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: o, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: y, handleSelectCategory: C, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
         S = (0, a.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
-    return null != S && S.hasFeature(m.oNc.SHARD)
+    return (null == S ? void 0 : S.features.has(m.oNc.SHARD))
         ? (0, r.jsx)(v, {
               guild: S,
               directoryEntries: n,

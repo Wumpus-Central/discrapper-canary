@@ -10,12 +10,12 @@ var r = n(255367),
     d = n(388032),
     p = n(848697);
 let m = l.memo(function (e) {
-        let { children: t, className: n, compact: o = !1, timestamp: m, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: h = !1, isInline: O = !0, id: y, isEdited: v = !1, application: j, tooltipPosition: P } = e,
+        let { children: t, className: n, compact: o = !1, timestamp: m, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: h = !1, isInline: O = !0, id: y, isEdited: j = !1, application: v, tooltipPosition: P } = e,
             x = l.useMemo(() => new Date(m), [m]),
             C = l.useMemo(() => (0, a.Hg)(x), [x]),
             w = l.useMemo(() => (null != f ? (0, a.vc)(x, f) : o ? (0, a.vc)(x, 'LT') : (0, a.Y4)(x, !0)), [x, f, o]),
             S = l.useMemo(() => (o ? (0, u.Z)(w) : null), [o, w]),
-            E = l.useMemo(() => (v ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: C }) : C), [v, C]);
+            E = l.useMemo(() => (j ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: C }) : C), [j, C]);
         return (0, r.jsx)('span', {
             className: i()(n, S, {
                 [p.timestamp]: !0,
@@ -24,7 +24,7 @@ let m = l.memo(function (e) {
                 [p.alt]: h
             }),
             children:
-                null == j
+                null == v
                     ? (0, r.jsx)(s.ua7, {
                           text: () => (0, a.vc)(x, 'LLLL'),
                           'aria-label': E,
@@ -42,7 +42,7 @@ let m = l.memo(function (e) {
                               })
                       })
                     : (0, r.jsx)(c.Z, {
-                          application: j,
+                          application: v,
                           timestamp: x,
                           compact: o,
                           children: (0, r.jsx)(g, {

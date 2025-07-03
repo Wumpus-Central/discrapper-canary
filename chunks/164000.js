@@ -9,7 +9,7 @@ let c = n(981631).Plq.VIEW_CHANNEL;
 function d(e) {
     let t = (0, l.e7)([a.Z, s.Z], () => {
             let t = a.Z.getGuild(e);
-            return null != t ? s.Z.getRole(t.id, t.getEveryoneRoleId()) : void 0;
+            return null != t ? s.Z.getEveryoneRole(t) : void 0;
         }),
         n = r.useMemo(() => (null == t || i.e$(t.permissions, c) ? o.e3.SOME_CHANNELS : o.e3.ALL_CHANNELS), [t]),
         d = n === o.e3.ALL_CHANNELS;

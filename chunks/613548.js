@@ -131,8 +131,8 @@ function M(e) {
             [s]
         ),
         M = t.isGuildVoice() && !n,
-        { hasParticipantsPanel: L } = (0, Z.Z)({ location: 'ChannelCallHeaderToolbar' }),
-        D = !T && L && (t.isGuildVoice() || t.isGroupDM()),
+        { hasParticipantsPanel: D } = (0, Z.Z)({ location: 'ChannelCallHeaderToolbar' }),
+        L = !T && D && (t.isGuildVoice() || t.isGroupDM()),
         { enabled: U, inInbox: B } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         F = [];
     return (
@@ -193,7 +193,7 @@ function M(e) {
                 )
             ),
         y &&
-            !L &&
+            !D &&
             F.push(
                 (0, r.jsx)(
                     u.yRy,
@@ -219,7 +219,7 @@ function M(e) {
                 )
             ),
         U && !B && F.push((0, r.jsx)(_.Z, { className: A.button }, 'for-later')),
-        D &&
+        L &&
             F.push(
                 (0, r.jsx)(
                     O.Z,

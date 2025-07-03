@@ -6,7 +6,7 @@ var r = n(442837),
     i = n(430824),
     a = n(981631);
 function o(e) {
-    return !e.hasFeature(a.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(a.oNc.CREATOR_MONETIZABLE) || e.hasFeature(a.oNc.CREATOR_MONETIZABLE_PROVISIONAL));
+    return !e.features.has(a.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.features.has(a.oNc.CREATOR_MONETIZABLE) || e.features.has(a.oNc.CREATOR_MONETIZABLE_PROVISIONAL));
 }
 function s(e) {
     return (0, r.e7)([i.Z], () => {

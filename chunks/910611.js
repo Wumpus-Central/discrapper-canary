@@ -1,6 +1,6 @@
 (n.d(t, {
     TS: () => F,
-    ud: () => L,
+    ud: () => D,
     v0: () => U
 }),
     n(388685));
@@ -158,7 +158,7 @@ function M(e) {
         o
     );
 }
-function L(e) {
+function D(e) {
     let { channel: t, channelName: n, parentChannel: l, guild: a, inSidebar: s = !1, handleClick: u, handleContextMenu: d, handleParentClick: f, handleParentContextMenu: m, renderFollowButton: g } = e,
         b = (0, h.KS)(t, a),
         { prefix: _, level: C } = (function (e, t) {
@@ -328,7 +328,7 @@ function L(e) {
                 ]
             });
         case N.d4z.GUILD_DIRECTORY:
-            let E = (null == a ? void 0 : a.hasFeature(N.oNc.HUB)) ? A.intl.formatToPlainString(A.t.Dy2aho, { guildName: n }) : n;
+            let E = (null == a ? void 0 : a.features.has(N.oNc.HUB)) ? A.intl.formatToPlainString(A.t.Dy2aho, { guildName: n }) : n;
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     null !== b
@@ -358,7 +358,7 @@ function L(e) {
             return null;
     }
 }
-let D = (e) => {
+let L = (e) => {
     let { channel: t } = e,
         n = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
         l = (0, a.e7)([x.default], () => x.default.getUser(t.getRecipientId())),
@@ -385,7 +385,7 @@ function U(e, t) {
     switch (e.type) {
         case N.d4z.DM:
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(D, { channel: e }), (0, r.jsx)(E.Z, { channel: e }, e.id)]
+                children: [(0, r.jsx)(L, { channel: e }), (0, r.jsx)(E.Z, { channel: e }, e.id)]
             });
         case N.d4z.GUILD_ANNOUNCEMENT:
         case N.d4z.GUILD_TEXT:

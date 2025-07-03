@@ -186,12 +186,12 @@ function N(e) {
         y = l.useMemo(() => (n === p.e.ALL_MEMBERS ? O : null != P && null != P.user), [n, O, P]),
         w = l.useMemo(() => E.slice(0, S + 1), [S, E]),
         A = l.useMemo(() => E.slice(S + 1), [S, E]),
-        M = (0, m.Z)((e) => {
+        Z = (0, m.Z)((e) => {
             let t = e.contentRect.width;
             null != t && C.current !== t && (c(t), (C.current = t));
         });
     return (
-        (0, u.s)(x, M, [y]),
+        (0, u.s)(x, Z, [y]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(b.Z.Divider, { className: v.divider }),

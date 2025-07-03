@@ -31,7 +31,7 @@ let b = (e) => {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(h.Z, {
-                title: g.intl.format(g.t['rm+ojI'], { serverName: b.toString() }),
+                title: g.intl.format(g.t['rm+ojI'], { serverName: b.name }),
                 description: null != y ? y : null,
                 coverImageAsset: null != (n = null == E ? void 0 : E.cover_image_asset) ? n : null,
                 guild: b,

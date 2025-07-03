@@ -179,8 +179,8 @@ class p {
         let e = i().reduce(
             this.inboundStats,
             (e, t) => {
-                var n, r, i, a, o, s, l;
-                return ((e.passthroughCount += null != (n = t.passthroughCount) ? n : 0), (e.decryptSuccessCount += null != (r = t.decryptSuccessCount) ? r : 0), (e.decryptFailureCount += null != (i = t.decryptFailureCount) ? i : 0), (e.decryptDuration += null != (a = t.decryptDuration) ? a : 0), (e.decryptAttempts += null != (o = t.decryptAttempts) ? o : 0), (e.decryptMissingKeyCount += null != (s = t.decryptMissingKeyCount) ? s : 0), (e.decryptInvalidNonceCount += null != (l = t.decryptInvalidNonceCount) ? l : 0), e);
+                var n, r, i, a, o, s, l, c, u;
+                return ((e.passthroughCount += null != (n = t.passthroughCount) ? n : 0), (e.decryptSuccessCount += null != (r = t.decryptSuccessCount) ? r : 0), (e.decryptFailureCount += null != (i = t.decryptFailureCount) ? i : 0), (e.decryptDuration += null != (a = t.decryptDuration) ? a : 0), (e.decryptAttempts += null != (o = t.decryptAttempts) ? o : 0), (e.decryptMissingKeyCount += null != (s = t.decryptMissingKeyCount) ? s : 0), (e.decryptInvalidNonceCount += null != (l = t.decryptInvalidNonceCount) ? l : 0), (e.decryptFailureAfterSuccessCount += (null != (c = t.decryptFailureCount) ? c : 0) - (null != (u = t.decryptFailureBeforeSuccessCount) ? u : 0)), e);
             },
             {
                 passthroughCount: 0,
@@ -189,7 +189,8 @@ class p {
                 decryptDuration: 0,
                 decryptAttempts: 0,
                 decryptMissingKeyCount: 0,
-                decryptInvalidNonceCount: 0
+                decryptInvalidNonceCount: 0,
+                decryptFailureAfterSuccessCount: 0
             }
         );
         return {
@@ -200,6 +201,7 @@ class p {
             decrypt_attempts: e.decryptAttempts,
             decrypt_missing_key_count: e.decryptMissingKeyCount,
             decrypt_invalid_nonce_count: e.decryptInvalidNonceCount,
+            decrypt_failure_after_success_count: e.decryptFailureAfterSuccessCount,
             encrypt_passthrough_count: this.outboundStats.passthroughCount,
             encrypt_success_count: this.outboundStats.encryptSuccessCount,
             encrypt_failure_count: this.outboundStats.encryptFailureCount,
@@ -321,23 +323,23 @@ class p {
                     i().forEach(e.rtp.inbound, (t, n) => {
                         i().forEach(t, (t) => {
                             if ('audio' === t.type) {
-                                var r, a, o, s, l, c, d, f, _, p, h, m, g, E, b, y, O, v, I;
-                                let T = null != (r = e.transport.ping) ? r : 0,
-                                    S = t.packetsReceived,
-                                    A = t.packetsLost,
-                                    N = t.bytesReceived,
-                                    C = t.nackCount,
-                                    R = null != (a = t.fecPacketsReceived) ? a : 0,
-                                    P = null != (o = t.fecPacketsDiscarded) ? o : 0,
-                                    w = null != (s = t.jitterBuffer) ? s : 0,
-                                    D = {
+                                var r, a, o, s, l, c, d, f, _, p, h, m, g, E, b, y, O, v, I, T;
+                                let S = null != (r = e.transport.ping) ? r : 0,
+                                    A = t.packetsReceived,
+                                    N = t.packetsLost,
+                                    C = t.bytesReceived,
+                                    R = t.nackCount,
+                                    P = null != (a = t.fecPacketsReceived) ? a : 0,
+                                    w = null != (o = t.fecPacketsDiscarded) ? o : 0,
+                                    D = null != (s = t.jitterBuffer) ? s : 0,
+                                    L = {
                                         audioJitterBuffer: t.audioJitterBuffer,
                                         audioJitterTarget: t.audioJitterTarget,
                                         audioJitterDelay: t.audioJitterDelay,
                                         relativeReceptionDelay: t.relativeReceptionDelay,
                                         relativePlayoutDelay: t.relativePlayoutDelay
                                     },
-                                    L = {
+                                    x = {
                                         silent: t.opSilence,
                                         normal: t.opNormal,
                                         merged: t.opMerge,
@@ -346,7 +348,7 @@ class p {
                                         preemptiveExpanded: t.opPreemptiveExpand,
                                         cng: t.opCNG
                                     },
-                                    x = {
+                                    k = {
                                         passthroughCount: null != (l = t.passthroughCount) ? l : 0,
                                         decryptSuccessCount: null != (c = t.decryptSuccessCount) ? c : 0,
                                         decryptFailureCount: null != (d = t.decryptFailureCount) ? d : 0,
@@ -356,66 +358,69 @@ class p {
                                         decryptInvalidNonceCount: null != (h = t.decryptInvalidNonceCount) ? h : 0
                                     };
                                 if (null != this.inboundStats[n]) {
-                                    let e = S - this.inboundStats[n].packetsReceived,
-                                        r = A - this.inboundStats[n].packetsLost,
-                                        a = 0,
-                                        o = this.inboundStats[n].mosBuckets;
-                                    (e > 0 && r >= 0 && ((a = this.calculateMos(T + w, i().clamp(r / (e + r), 0, 1))), o[Math.floor(a)]++),
+                                    let e = this.inboundStats[n],
+                                        r = A - e.packetsReceived,
+                                        a = N - e.packetsLost,
+                                        o = 0,
+                                        s = e.mosBuckets,
+                                        l = null != (m = e.decryptFailureBeforeSuccessCount) ? m : k.decryptSuccessCount > 0 ? k.decryptFailureCount : void 0;
+                                    (r > 0 && a >= 0 && ((o = this.calculateMos(S + D, i().clamp(a / (r + a), 0, 1))), s[Math.floor(o)]++),
                                         (this.inboundStats[n] = u(
                                             {
-                                                packetsReceived: S,
-                                                bytesReceived: N,
-                                                packetsLost: A,
-                                                nackCount: null != C ? C : 0,
-                                                fecPacketsReceived: R,
-                                                fecPacketsDiscarded: P,
-                                                mos: a,
-                                                mosSum: this.inboundStats[n].mosSum + a,
-                                                mosCount: this.inboundStats[n].mosCount + +(a > 0),
-                                                mosBuckets: o,
-                                                bufferStats: D,
-                                                frameOpStats: L
+                                                packetsReceived: A,
+                                                bytesReceived: C,
+                                                packetsLost: N,
+                                                nackCount: null != R ? R : 0,
+                                                fecPacketsReceived: P,
+                                                fecPacketsDiscarded: w,
+                                                mos: o,
+                                                mosSum: e.mosSum + o,
+                                                mosCount: e.mosCount + +(o > 0),
+                                                mosBuckets: s,
+                                                bufferStats: L,
+                                                frameOpStats: x,
+                                                decryptFailureBeforeSuccessCount: l
                                             },
-                                            x
+                                            k
                                         )),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
                                             previous: this.periodicInboundStats[n].previous,
                                             currentTimestampMs: performance.now(),
-                                            current: L,
-                                            accelerateRateSum: this.periodicInboundStats[n].accelerateRateSum + (null != (m = t.accelerateRate) ? m : 0),
-                                            expandRateSum: this.periodicInboundStats[n].expandRateSum + (null != (g = t.expandRate) ? g : 0),
-                                            preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null != (E = t.preemptiveExpandRate) ? E : 0),
-                                            speechExpandRateSum: this.periodicInboundStats[n].speechExpandRateSum + (null != (b = t.speechExpandRate) ? b : 0),
+                                            current: x,
+                                            accelerateRateSum: this.periodicInboundStats[n].accelerateRateSum + (null != (g = t.accelerateRate) ? g : 0),
+                                            expandRateSum: this.periodicInboundStats[n].expandRateSum + (null != (E = t.expandRate) ? E : 0),
+                                            preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null != (b = t.preemptiveExpandRate) ? b : 0),
+                                            speechExpandRateSum: this.periodicInboundStats[n].speechExpandRateSum + (null != (y = t.speechExpandRate) ? y : 0),
                                             numRateSamples: this.periodicInboundStats[n].numRateSamples + 1
                                         }));
                                 } else
                                     ((this.inboundStats[n] = u(
                                         {
-                                            packetsReceived: S,
-                                            bytesReceived: N,
-                                            packetsLost: A,
-                                            nackCount: null != C ? C : 0,
-                                            fecPacketsReceived: R,
-                                            fecPacketsDiscarded: P,
+                                            packetsReceived: A,
+                                            bytesReceived: C,
+                                            packetsLost: N,
+                                            nackCount: null != R ? R : 0,
+                                            fecPacketsReceived: P,
+                                            fecPacketsDiscarded: w,
                                             mos: 0,
                                             mosSum: 0,
                                             mosCount: 0,
                                             mosBuckets: [0, 0, 0, 0, 0],
-                                            bufferStats: D,
-                                            frameOpStats: L
+                                            bufferStats: L,
+                                            frameOpStats: x
                                         },
-                                        x
+                                        k
                                     )),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: performance.now(),
-                                            previous: L,
+                                            previous: x,
                                             currentTimestampMs: performance.now(),
-                                            current: L,
-                                            accelerateRateSum: null != (y = t.accelerateRate) ? y : 0,
-                                            expandRateSum: null != (O = t.expandRate) ? O : 0,
-                                            preemptiveExpandRateSum: null != (v = t.preemptiveExpandRate) ? v : 0,
-                                            speechExpandRateSum: null != (I = t.speechExpandRate) ? I : 0,
+                                            current: x,
+                                            accelerateRateSum: null != (O = t.accelerateRate) ? O : 0,
+                                            expandRateSum: null != (v = t.expandRate) ? v : 0,
+                                            preemptiveExpandRateSum: null != (I = t.preemptiveExpandRate) ? I : 0,
+                                            speechExpandRateSum: null != (T = t.speechExpandRate) ? T : 0,
                                             numRateSamples: 1
                                         }));
                             }

@@ -30,8 +30,8 @@ function g(e) {
             }
         },
         { transitionState: N } = e,
-        j = u.Z.getGuildsArray().filter((e) => e.id !== t && e.hasFeature(b.oNc.HUB)).length > 0,
-        S = !v && !j && (null == a ? void 0 : a.hasFeature(b.oNc.HUB)) && (0, f.b)();
+        j = u.Z.getGuildsArray().filter((e) => e.id !== t && e.features.has(b.oNc.HUB)).length > 0,
+        S = !v && !j && (null == a ? void 0 : a.features.has(b.oNc.HUB)) && (0, f.b)();
     return (
         r.useEffect(() => {
             S && k(window.innerWidth / 2, window.innerHeight / 2);

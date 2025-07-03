@@ -4,8 +4,8 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(399606),
-    a = n(704215),
-    s = n(433517),
+    s = n(704215),
+    a = n(433517),
     c = n(481060),
     u = n(239091),
     d = n(607070),
@@ -72,8 +72,8 @@ function w(e) {
     let { guildId: t, selected: n, handleClick: i } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
         g = (0, o.e7)([y.Z], () => y.Z.getGuild(t)),
-        E = (null == g ? void 0 : g.hasFeature(j.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        w = 'false' === s.K.get(S.tM, 'false'),
+        E = (null == g ? void 0 : g.features.has(j.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        w = 'false' === a.K.get(S.tM, 'false'),
         Z = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(C.m, {
         id: 'shop-'.concat(t),
@@ -109,7 +109,7 @@ function w(e) {
                     (0, r.jsx)(c.P3F, {
                         className: I.closeButton,
                         onClick: (e) => {
-                            if ((e.stopPropagation(), (0, b.Q3)(a.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, N(P({}, (0, h.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !E)) {
+                            if ((e.stopPropagation(), (0, b.Q3)(s.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, N(P({}, (0, h.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !E)) {
                                 var n;
                                 (0, _.dL)(j.Z5c.CHANNEL(t, null == (n = O.ZP.getDefaultChannel(t)) ? void 0 : n.id));
                             }
@@ -128,7 +128,7 @@ function Z(e) {
     let { guild: t, selected: i } = e,
         l = (0, g.g)(t, 'guild_shop_channel_row'),
         o = () => {
-            (s.K.set(S.tM, 'true'), (0, _.uL)(j.Z5c.CHANNEL(t.id, E.oC.GUILD_SHOP)));
+            (a.K.set(S.tM, 'true'), (0, _.uL)(j.Z5c.CHANNEL(t.id, E.oC.GUILD_SHOP)));
         };
     return l
         ? (0, r.jsx)(w, {

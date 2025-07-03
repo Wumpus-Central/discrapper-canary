@@ -75,7 +75,7 @@ function y(e) {
                 title: null,
                 body: h.intl.formatToPlainString(h.t.z9znpa, {
                     game: t.name,
-                    server: p.toString()
+                    server: p.name
                 }),
                 hint: () => (0, i.jsx)(m, {}),
                 renderFooter: () => (0, i.jsx)(m, {}),

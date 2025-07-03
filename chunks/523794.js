@@ -17,16 +17,16 @@ var a = n(481060),
 function I(t) {
     var i;
     let n,
-        { channel: I, transitionState: m, onClose: x } = t,
-        S = o.Z.getGuild(I.guild_id),
-        L = null != (i = null == S ? void 0 : S.maxStageVideoChannelUsers) ? i : 0,
-        p = !!(null == S ? void 0 : S.isCommunity()),
+        { channel: I, transitionState: x, onClose: S } = t,
+        L = o.Z.getGuild(I.guild_id),
+        m = null != (i = null == L ? void 0 : L.maxStageVideoChannelUsers) ? i : 0,
+        p = null != L && L.features.has(g.oNc.COMMUNITY),
         f = T.intl.string(T.t.pqPQLy),
-        C = p ? L < g.TU7 : (null == S ? void 0 : S.premiumTier) !== g.Eu4.TIER_3 && L <= g.eez,
+        C = p ? m < g.TU7 : (null == L ? void 0 : L.premiumTier) !== g.Eu4.TIER_3 && m <= g.eez,
         k = r.Z.can(_.yP, I);
-    n = p && (null == S ? void 0 : S.premiumTier) === g.Eu4.TIER_3 ? (L <= g.TU7 ? T.intl.string(T.t.tJmOu7) : T.intl.string(T.t['7FHbPD'])) : C ? T.intl.string(T.t['8/uDSE']) : T.intl.string(T.t['7FHbPD']);
-    let b = () => {
-            (x(),
+    n = p && (null == L ? void 0 : L.premiumTier) === g.Eu4.TIER_3 ? (m <= g.TU7 ? T.intl.string(T.t.tJmOu7) : T.intl.string(T.t['7FHbPD'])) : C ? T.intl.string(T.t['8/uDSE']) : T.intl.string(T.t['7FHbPD']);
+    let M = () => {
+            (S(),
                 d.default.track(g.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: I.guild_id,
                     type: h.cd.VIDEO_STAGE_LIMIT,
@@ -34,18 +34,18 @@ function I(t) {
                     action: h.T7.DISMISS
                 }));
         },
-        M = c.Z.getMutableParticipants(I.id, u.pV.SPEAKER).filter((t) => t.type === u.Ui.VOICE).length,
+        b = c.Z.getMutableParticipants(I.id, u.pV.SPEAKER).filter((t) => t.type === u.Ui.VOICE).length,
         O = c.Z.getParticipantCount(I.id, u.pV.AUDIENCE);
     return (
         d.default.track(g.rMx.BOOSTING_UPSELL_VIEWED, {
             guild_id: I.guild_id,
             type: h.cd.VIDEO_STAGE_LIMIT,
             is_moderator: k,
-            listener_count: M + O
+            listener_count: b + O
         }),
         (0, e.jsxs)(a.Y0X, {
             size: a.CgR.SMALL,
-            transitionState: m,
+            transitionState: x,
             'aria-label': f,
             parentComponent: 'StageBoostingModal',
             children: [
@@ -53,7 +53,7 @@ function I(t) {
                     justify: l.Z.Justify.END,
                     separator: !1,
                     className: E.header,
-                    children: [(0, e.jsx)('div', { className: E.fullArt }), (0, e.jsx)(a.olH, { onClick: x })]
+                    children: [(0, e.jsx)('div', { className: E.fullArt }), (0, e.jsx)(a.olH, { onClick: S })]
                 }),
                 (0, e.jsxs)(a.hzk, {
                     className: E.content,
@@ -78,12 +78,12 @@ function I(t) {
                                       className: E.noThanksButton,
                                       color: a.Ttl.CUSTOM,
                                       size: a.PhG.SMALL,
-                                      onClick: b,
+                                      onClick: M,
                                       children: T.intl.string(T.t.f3Pet7)
                                   }),
                                   (0, e.jsx)(a.gtL, {
                                       onClick: () => {
-                                          (x(),
+                                          (S(),
                                               (0, s.f)({
                                                   guildId: I.guild_id,
                                                   location: { section: g.jXE.STAGE_VIDEO_LIMIT }
@@ -102,7 +102,7 @@ function I(t) {
                               ]
                           })
                         : (0, e.jsx)(a.zxk, {
-                              onClick: b,
+                              onClick: M,
                               size: a.PhG.SMALL,
                               color: a.Ttl.CUSTOM,
                               className: E.boostButton,

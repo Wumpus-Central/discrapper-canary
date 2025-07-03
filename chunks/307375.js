@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(109303);
 function f(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
-        f = l.hasFeature(m.oNc.COMMUNITY),
+        f = l.features.has(m.oNc.COMMUNITY),
         h = (0, a.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, l)),
         x = i.useMemo(() => {
             let e = t === u.A.DISCOVERABLE && !h,

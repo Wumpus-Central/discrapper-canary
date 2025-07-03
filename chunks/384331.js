@@ -1,8 +1,8 @@
 n.d(t, { ForwardFailedAlertModal: () => j });
 var i = n(255367),
     r = n(73800),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     s = n(700582),
     c = n(933557),
     o = n(266076),
@@ -11,18 +11,18 @@ var i = n(255367),
     f = n(430824),
     p = n(158776),
     b = n(699516),
-    I = n(594174),
-    E = n(51144),
+    E = n(594174),
+    I = n(51144),
     _ = n(912332),
     g = n(388032),
     y = n(547754);
-function S(e) {
+function A(e) {
     let { icon: t, label: n } = e;
     return (0, i.jsxs)('div', {
         className: y.failedRow,
         children: [
             t,
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(l.Text, {
                 className: y.label,
                 variant: 'text-md/medium',
                 lineClamp: 1,
@@ -31,13 +31,13 @@ function S(e) {
         ]
     });
 }
-function A(e) {
+function S(e) {
     let { channel: t } = e,
         n = (0, c.ZP)(t);
-    return (0, i.jsx)(S, {
+    return (0, i.jsx)(A, {
         icon: (0, i.jsx)(o.Z, {
             'aria-hidden': !0,
-            size: a.EFr.SIZE_32,
+            size: l.EFr.SIZE_32,
             channel: t,
             experimentLocation: 'forward-failed-retry-modal'
         }),
@@ -46,13 +46,13 @@ function A(e) {
 }
 function O(e) {
     let { user: t } = e,
-        n = E.ZP.useName(t),
-        r = (0, l.e7)([b.Z], () => b.Z.getNickname(t.id)),
-        c = (0, l.e7)([p.Z], () => p.Z.getStatus(t.id));
-    return (0, i.jsx)(S, {
+        n = I.ZP.useName(t),
+        r = (0, a.e7)([b.Z], () => b.Z.getNickname(t.id)),
+        c = (0, a.e7)([p.Z], () => p.Z.getStatus(t.id));
+    return (0, i.jsx)(A, {
         icon: (0, i.jsx)(s.Z, {
             'aria-hidden': !0,
-            size: a.EFr.SIZE_32,
+            size: l.EFr.SIZE_32,
             user: t,
             status: c
         }),
@@ -61,9 +61,9 @@ function O(e) {
 }
 function h(e) {
     let { channel: t } = e,
-        n = (0, l.e7)([f.Z], () => f.Z.getGuild(null == t ? void 0 : t.guild_id)),
+        n = (0, a.e7)([f.Z], () => f.Z.getGuild(null == t ? void 0 : t.guild_id)),
         r = (0, c.ZP)(t);
-    return (0, i.jsx)(S, {
+    return (0, i.jsx)(A, {
         icon: (0, i.jsx)(u.Z, {
             size: u.E.SMALL_32,
             guild: n,
@@ -74,16 +74,16 @@ function h(e) {
 }
 function m(e) {
     let { destination: t } = e,
-        { channel: n, user: r } = (0, l.cj)([d.Z, I.default], () => ({
+        { channel: n, user: r } = (0, a.cj)([d.Z, E.default], () => ({
             channel: 'channel' === t.type ? d.Z.getChannel(t.id) : null,
-            user: 'user' === t.type ? I.default.getUser(t.id) : null
+            user: 'user' === t.type ? E.default.getUser(t.id) : null
         }));
-    return (null == n ? void 0 : n.isGroupDM()) ? (0, i.jsx)(A, { channel: n }) : null != r ? (0, i.jsx)(O, { user: r }) : null != n ? (0, i.jsx)(h, { channel: n }) : null;
+    return (null == n ? void 0 : n.isGroupDM()) ? (0, i.jsx)(S, { channel: n }) : null != r ? (0, i.jsx)(O, { user: r }) : null != n ? (0, i.jsx)(h, { channel: n }) : null;
 }
 function j(e) {
     var t,
         n,
-        { message: l, failedDestinations: s, forwardOptions: c } = e,
+        { message: a, failedDestinations: s, forwardOptions: c } = e,
         o = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -93,26 +93,26 @@ function j(e) {
                     var n,
                         i,
                         r = {},
-                        l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) ((n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                        a = Object.keys(e);
+                    for (i = 0; i < a.length; i++) ((n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++) ((n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                var a = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < a.length; i++) ((n = a[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['message', 'failedDestinations', 'forwardOptions']);
     let u = r.useCallback(() => {
         (0, _.l8)({
-            message: l,
+            message: a,
             source: 'retry-modal',
             initialSelectedDestinations: s,
             forwardOptions: c
         });
-    }, [s, l, c]);
+    }, [s, a, c]);
     return (0, i.jsxs)(
-        a.ConfirmModal,
+        l.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -142,7 +142,7 @@ function j(e) {
                 header: g.intl.string(g.t['/OPIaG']),
                 confirmText: g.intl.string(g.t['5911LS']),
                 cancelText: g.intl.string(g.t['ETE/oK']),
-                confirmButtonColor: a.zxk.Colors.BRAND,
+                confirmButtonColor: l.zxk.Colors.BRAND,
                 onConfirm: u
             },
             o
@@ -150,7 +150,7 @@ function j(e) {
         (n = n =
             {
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/medium',
                         children: g.intl.format(g.t.cn9vFR, { count: s.length })
                     }),

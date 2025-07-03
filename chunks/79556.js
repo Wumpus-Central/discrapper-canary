@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     c = n(493683),
     u = n(239091),
     d = n(146773),
@@ -94,7 +94,7 @@ class M extends I.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: a, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: _, isFavoriteSuggestion: O, subtitle: y, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: E, enableActivities: S } = this.props,
+        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: _, isFavoriteSuggestion: O, subtitle: y, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: E, enableActivities: S } = this.props,
             x = (0, b.jW)({ location: 'text_channel' }).entrypoints,
             I = S && null != C && C.length > 0,
             P = (0, g.D)(y),
@@ -106,7 +106,7 @@ class M extends I.ZP {
                 'data-dnd-name': e.name,
                 onMouseEnter: c || I ? this.handleMouseEnter : void 0,
                 onMouseLeave: c || I ? this.handleMouseLeave : void 0,
-                children: (0, r.jsx)(s.yRy, {
+                children: (0, r.jsx)(a.yRy, {
                     targetElementRef: this.channelItemRef,
                     position: 'right',
                     renderPopout: this.renderPopout,
@@ -123,7 +123,7 @@ class M extends I.ZP {
                             muted: i,
                             unread: l,
                             mentionCount: u,
-                            hasActiveThreads: a,
+                            hasActiveThreads: s,
                             subtitle: null == P ? void 0 : P.subtitle,
                             subtitleColor: null == P ? void 0 : P.color,
                             onMouseDown: this.handleMouseDown,
@@ -264,25 +264,25 @@ class M extends I.ZP {
 }
 let k = (0, d.B)(M);
 function U(e) {
-    let { channel: t, guild: n, disableSorting: i, isFavoriteCategory: l, muted: o, selected: s } = e,
+    let { channel: t, guild: n, disableSorting: i, isFavoriteCategory: l, muted: o, selected: a } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, O.JQ)(t),
-        d = (0, a.cj)([j.ZP], () => ({
+        d = (0, s.cj)([j.ZP], () => ({
             unread: j.ZP.hasUnread(t.id),
             ackMessageId: j.ZP.ackMessageId(t.id),
             isLowImportanceMention: j.ZP.getIsMentionLowImportance(t.id)
         })),
-        f = (0, a.e7)([E.ZP], () => E.ZP.resolveUnreadSetting(t)),
-        g = (0, a.cj)([y.Z, C.Z], () => {
+        f = (0, s.e7)([E.ZP], () => E.ZP.resolveUnreadSetting(t)),
+        g = (0, s.cj)([y.Z, C.Z], () => {
             let e = y.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: C.Z.can(Z.Plq.MANAGE_CHANNELS, t),
                 canReorderChannel: !0 !== i && (n.id === T._ || (null != e ? C.Z.can(Z.Plq.MANAGE_CHANNELS, e) : C.Z.can(Z.Plq.MANAGE_CHANNELS, n)))
             };
         }),
-        b = (0, a.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(n.id, t.id)),
+        b = (0, s.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: v, isSubscriptionGated: x } = (0, m.Z)(t.id),
-        I = (0, a.e7)([E.ZP], () => E.ZP.isFavorite(n.id, t.id)),
-        N = (0, a.e7)(
+        I = (0, s.e7)([E.ZP], () => E.ZP.isFavorite(n.id, t.id)),
+        N = (0, s.e7)(
             [S.default],
             () => {
                 let e = S.default.getCurrentUser();
@@ -294,7 +294,7 @@ function U(e) {
         A = (0, P.Z)({
             channel: t,
             isChannelCollapsed: !1,
-            isChannelSelected: s,
+            isChannelSelected: a,
             isSubscriptionGated: x,
             needSubscriptionToAccess: v,
             isNewChannel: b,

@@ -30,8 +30,8 @@ var r = n(255367),
     y = n(575766),
     w = n(901066),
     A = n(987491),
-    M = n(305473),
-    Z = n(995596),
+    Z = n(305473),
+    M = n(995596),
     k = n(937283),
     D = n(440857),
     L = n(707113),
@@ -105,7 +105,7 @@ function q(e) {
                 }),
                 (0, r.jsx)(C.Z.Title, { children: d }),
                 s &&
-                    (0, r.jsx)(Z.Z, {
+                    (0, r.jsx)(M.Z, {
                         guildId: t.id,
                         currentTab: i,
                         onTabSelect: a
@@ -122,13 +122,13 @@ function V(e) {
         b = (0, s.e7)([I.Z], () => I.Z.getGuild(n)),
         { analyticsLocations: _ } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
         C = (0, p.C)({ guildId: n }),
-        { guildJoinRequests: Z } = (0, g.j)({
+        { guildJoinRequests: M } = (0, g.j)({
             guildId: n,
             applicationStatus: 'ALL_MEMBERS' === u ? j.wB.SUBMITTED : u,
             sortOrder: C
         });
     l.useEffect(() => {
-        (null == b ? void 0 : b.hasFeature(B.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || m(O.e.ALL_MEMBERS);
+        (null == b ? void 0 : b.features.has(B.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || m(O.e.ALL_MEMBERS);
     }, [b]);
     let G = (0, P.n2)(n),
         z = (0, x.m)(n),
@@ -138,7 +138,7 @@ function V(e) {
     (0, y.n)(n);
     let { fetchNextPage: Y } = (0, f.m)({
             guildId: n,
-            guildJoinRequests: Z
+            guildJoinRequests: M
         }),
         H = l.useCallback(async () => {
             var e;
@@ -182,7 +182,7 @@ function V(e) {
                                   children:
                                       u === O.e.ALL_MEMBERS
                                           ? (0, r.jsxs)(r.Fragment, {
-                                                children: [(0, r.jsx)(M.Z, { guild: b }), (0, r.jsx)(L.Z, { guild: b })]
+                                                children: [(0, r.jsx)(Z.Z, { guild: b }), (0, r.jsx)(L.Z, { guild: b })]
                                             })
                                           : (0, r.jsx)(A.Z, {
                                                 guildId: b.id,

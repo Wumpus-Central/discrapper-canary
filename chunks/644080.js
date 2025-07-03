@@ -42,7 +42,7 @@ function N(e) {
         t = () => {
             f.Z.open(n.id, j.pNK.ONBOARDING, void 0, j.KsC.SERVER_GUIDE);
         };
-    return n.hasFeature(j.oNc.BANNER)
+    return n.features.has(j.oNc.BANNER)
         ? (0, l.jsxs)(o.zxk, {
               className: _.editButton,
               innerClassName: _.editButtonInner,

@@ -145,7 +145,7 @@ let p = {
         var i;
         let n = new Set();
         return (
-            t.hasFeature(M.oNc.COMMUNITY) || n.add(M.Plq.VIEW_GUILD_ANALYTICS.toString()),
+            t.features.has(M.oNc.COMMUNITY) || n.add(M.Plq.VIEW_GUILD_ANALYTICS.toString()),
             (i = o.s4(O(t.id))),
             0 === n.size
                 ? i

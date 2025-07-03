@@ -53,10 +53,10 @@ function P(e) {
         ),
         A = (0, f.N)(S),
         B = (0, a.e7)([C.ZP], () => C.ZP.getCurrentOnboardingStep(t)),
-        [F, L] = l.useState(null != S ? null : 'cover'),
+        [L, F] = l.useState(null != S ? null : 'cover'),
         z = l.useCallback(
             (e) => {
-                (L(B), b.Z.setUserOnboardingStep(t, e));
+                (F(B), b.Z.setUserOnboardingStep(t, e));
             },
             [t, B]
         ),
@@ -83,7 +83,7 @@ function P(e) {
                     opacity: 1
                 }
             },
-            'cover' !== F && null !== F ? 'animate-never' : 'respect-motion-settings'
+            'cover' !== L && null !== L ? 'animate-never' : 'respect-motion-settings'
         ),
         W = C.ZP.shouldShowOnboarding(t),
         X = null == M;

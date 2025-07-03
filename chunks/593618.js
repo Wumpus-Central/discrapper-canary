@@ -322,7 +322,7 @@ function z(e) {
                           }),
                     (0, r.jsx)('span', {
                         className: o()(k.guildNameText, { [k.guildNameTextLimitedSize]: null != l }),
-                        children: t.toString()
+                        children: t.name
                     })
                 ]
             }),

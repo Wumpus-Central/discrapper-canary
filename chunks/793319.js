@@ -38,8 +38,8 @@ var r = n(255367),
     R = n(74299),
     k = n(803647),
     M = n(554747),
-    L = n(95764),
-    D = n(459502),
+    D = n(95764),
+    L = n(459502),
     U = n(140465),
     B = n(800966),
     F = n(641015),
@@ -368,7 +368,7 @@ let eP = i.memo(function (e) {
                         })
                     );
                 case 'EVENT':
-                    return (0, r.jsx)(L.Z, {
+                    return (0, r.jsx)(D.Z, {
                         channelId: l.id,
                         onClick: () => {
                             ((0, P.v)(a, P.d.DISCONNECT), m.default.disconnect(), null == n || n());
@@ -470,7 +470,7 @@ let eT = function (e) {
         { suppress: Z, selfMute: N, mute: w } = (0, ec.Z)(n),
         { canGoLive: k } = (0, u.cj)([en.Z], () => ({ canGoLive: (0, R.Z)(en.Z) })),
         M = (0, A.Z)(),
-        L = (0, u.e7)([T.Z], () => null != T.Z.getAwaitingRemoteSessionInfo()),
+        D = (0, u.e7)([T.Z], () => null != T.Z.getAwaitingRemoteSessionInfo()),
         U = null != M,
         B = (0, u.e7)([er.Z], () => {
             var e;
@@ -515,7 +515,7 @@ let eT = function (e) {
                   children: [
                       (0, r.jsx)('div', {
                           className: ex.eventPromptsContainer,
-                          children: (0, r.jsx)(D.Z, { channelId: n.id })
+                          children: (0, r.jsx)(L.Z, { channelId: n.id })
                       }),
                       (0, r.jsxs)('div', {
                           ref: h,
@@ -551,7 +551,7 @@ let eT = function (e) {
                                                   serverMute: w,
                                                   suppress: Z,
                                                   popoutOpen: i,
-                                                  awaitingRemote: L,
+                                                  awaitingRemote: D,
                                                   onClick: () => (0, I.Z)(w, Z, e_.jXE.VOICE_CONTROL_TRAY),
                                                   onContextMenu: em
                                               });

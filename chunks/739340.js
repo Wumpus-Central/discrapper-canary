@@ -12,8 +12,8 @@ var r,
     i = n(73800),
     l = n(106351),
     o = n(442837),
-    a = n(904245),
-    s = n(89892),
+    s = n(904245),
+    a = n(89892),
     c = n(601070),
     u = n(569471),
     d = n(723170),
@@ -61,7 +61,7 @@ function j() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState('loading'),
         l = C(),
-        c = (0, o.Wu)([f.Z], () => (0, s.K)(l.map((e) => f.Z.getMessages(e))), [l]),
+        c = (0, o.Wu)([f.Z], () => (0, a.K)(l.map((e) => f.Z.getMessages(e))), [l]),
         u = i.useCallback(
             async (n) => {
                 r('loading');
@@ -76,13 +76,13 @@ function j() {
                                 t = o;
                                 break;
                             }
-                            let s = f.Z.getMessages(i),
-                                c = s.length;
+                            let a = f.Z.getMessages(i),
+                                c = a.length;
                             null == i ||
-                                s.loadingMore ||
-                                (s.hasPresent() && (s.hasFetched || s.ready) && (!(c < 50) || !s.hasMoreBefore)) ||
+                                a.loadingMore ||
+                                (a.hasPresent() && (a.hasFetched || a.ready) && (!(c < 50) || !a.hasMoreBefore)) ||
                                 (r.push(
-                                    a.Z.fetchMessages({
+                                    s.Z.fetchMessages({
                                         channelId: i,
                                         limit: 50
                                     })
@@ -97,8 +97,8 @@ function j() {
                             }
                         );
                     },
-                    { hasLoadedAny: o, hasMoreOlder: s } = await i();
-                (o || s ? r('loaded') : r('done'), !e && l.length > 0 && t(!0));
+                    { hasLoadedAny: o, hasMoreOlder: a } = await i();
+                (o || a ? r('loaded') : r('done'), !e && l.length > 0 && t(!0));
             },
             [l, e]
         );

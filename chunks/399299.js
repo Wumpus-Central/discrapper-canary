@@ -104,7 +104,7 @@ function H(e) {
                       }),
                       (0, r.jsx)('span', {
                           className: W.ellipsisText,
-                          children: i.toString()
+                          children: i.name
                       }),
                       (0, r.jsx)(a.zxk, {
                           className: W.changeButton,

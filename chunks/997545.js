@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685), n(415506), n(49124), n(642613), n(35282), n(539854));
+(n.d(t, { Z: () => L }), n(388685), n(290780), n(415506), n(49124), n(642613), n(35282), n(539854));
 var r = n(595182),
     i = n.n(r),
     a = n(117806),
@@ -109,7 +109,7 @@ class L extends _.Z {
                             {
                                 type: 'audio',
                                 name: v.ad.OPUS,
-                                priority: 1,
+                                priority: 2,
                                 payloadType: 120
                             },
                             ...(0, g.yQ)(t, r).map((e, t) => {
@@ -126,6 +126,14 @@ class L extends _.Z {
                                 };
                             })
                         ]),
+                            n.experimentFlags.has(O.V8.SIGNAL_RED) &&
+                                (0, b.eJ)(v.eR.AUDIO_CODEC_RED) &&
+                                n.codecs.unshift({
+                                    type: 'audio',
+                                    name: v.ad.RED,
+                                    priority: 1,
+                                    payloadType: 121
+                                }),
                             n.setCodecs(v.ad.OPUS, v.ad.H264, e),
                             n.conn.startReplay());
                     }));
@@ -169,7 +177,7 @@ class L extends _.Z {
                                 {
                                     type: 'audio',
                                     name: v.ad.OPUS,
-                                    priority: 1,
+                                    priority: 2,
                                     payloadType: 120
                                 },
                                 ...(0, g.yQ)(r, i).map((e, t) => {
@@ -186,6 +194,14 @@ class L extends _.Z {
                                     };
                                 })
                             ]),
+                            this.experimentFlags.has(O.V8.SIGNAL_RED) &&
+                                (0, b.eJ)(v.eR.AUDIO_CODEC_RED) &&
+                                this.codecs.unshift({
+                                    type: 'audio',
+                                    name: v.ad.RED,
+                                    priority: 1,
+                                    payloadType: 121
+                                }),
                             this.logger.info('Audio codecs: '.concat(this.codecs.filter((e) => 'audio' === e.type).map((e) => e.name))),
                             this.logger.info('Video codecs: '.concat(this.codecs.filter((e) => 'video' === e.type).map((e) => e.name + '[encode: ' + e.encode + ', decode: ' + e.decode + ']'))),
                             t.getEncryptionModes((r) => {
@@ -754,25 +770,33 @@ class L extends _.Z {
         }
     }
     getCodecOptions(e, t, n) {
-        var r, i, a, o;
-        let s,
-            l = {
-                type: null != (r = null == (s = this.codecs.find((t) => t.name === e)) ? void 0 : s.payloadType) ? r : 0,
+        var r, i, a;
+        let o, s;
+        if (e === v.ad.RED) {
+            let t = this.codecs.find((t) => t.name === e);
+            ((s = null == t ? void 0 : t.payloadType), (e = v.ad.OPUS));
+        }
+        let l = {
+                type: null != (r = null == (o = this.codecs.find((t) => t.name === e)) ? void 0 : o.payloadType) ? r : 0,
                 name: e,
                 freq: 48000,
                 pacsize: 960,
                 channels: 1,
-                rate: 64000
+                rate: 64000,
+                redPayloadType: s
             },
-            c = [
-                {
-                    type: null != (i = null == s ? void 0 : s.payloadType) ? i : 0,
-                    name: e,
-                    freq: 48000,
-                    channels: 2,
-                    params: { stereo: '1' }
-                }
-            ];
+            c = this.codecs
+                .filter((e) => 'audio' === e.type)
+                .map((e) => {
+                    var t;
+                    return {
+                        type: null != (t = null == e ? void 0 : e.payloadType) ? t : 0,
+                        name: e.name,
+                        freq: 48000,
+                        channels: 2,
+                        params: { stereo: '1' }
+                    };
+                });
         n === v.Yn.STREAM && (l.channels = 2);
         let u = [],
             d = {
@@ -781,17 +805,17 @@ class L extends _.Z {
                 rtxType: 0,
                 params: {}
             };
-        for (s of this.codecs) {
-            if (s.name === e) continue;
+        for (o of this.codecs) {
+            if (o.name === e) continue;
             let n = {
-                name: (0, g.AQ)(s.name),
-                type: null != (a = null == s ? void 0 : s.payloadType) ? a : 0,
-                rtxType: null != (o = null == s ? void 0 : s.rtxPayloadType) ? o : 0,
-                params: this.getCodecParams(s.name, !0)
+                name: (0, g.AQ)(o.name),
+                type: null != (i = null == o ? void 0 : o.payloadType) ? i : 0,
+                rtxType: null != (a = null == o ? void 0 : o.rtxPayloadType) ? a : 0,
+                params: this.getCodecParams(o.name, !0)
             };
             (this.experimentFlags.has(O.V8.RESET_DECODER_ON_ERRORS) && (n.params['reset-on-errors'] = '1'), this.experimentFlags.has(O.V8.SOFTWARE_FALLBACK_ON_ERRORS) && (n.params['fallback-after-errors'] = '3'), this.experimentFlags.has(O.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) && (n.params['fallback-on-consecutive-errors'] = '1'), this.experimentFlags.has(O.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params['hardware-av1-decode'] = '1'));
             let r = this.hardwareH264 && this.useElectronVideo ? '1' : '0';
-            ((n.params['hardware-h264'] = r), u.push(n), s.name === t && ((d = A(T({}, n), { params: this.getCodecParams(s.name, !1) })), this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) && (d.params['fixed-rate-presentation-timestamps'] = '1'), (d.params['hardware-h264'] = r)));
+            ((n.params['hardware-h264'] = r), u.push(n), o.name === t && ((d = A(T({}, n), { params: this.getCodecParams(o.name, !1) })), this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) && (d.params['fixed-rate-presentation-timestamps'] = '1'), (d.params['hardware-h264'] = r)));
         }
         return {
             videoEncoder: d,

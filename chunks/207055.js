@@ -34,8 +34,8 @@ let w = i.memo((e) => {
     let { mute: l, deaf: o, user: s, channel: g, sessionId: x, nick: A } = e,
         w = s.id,
         R = (0, a.e7)([_.default], () => _.default.getId() === w, [w]),
-        [k, M, L] = (0, a.Wu)([C.Z], () => (R ? [!C.Z.isSupported() || C.Z.isSelfMute() || C.Z.isSelfMutedTemporarily(), C.Z.isSelfDeaf(), !1] : [!C.Z.isSupported() || C.Z.isLocalMute(w), !1, C.Z.isLocalVideoDisabled(w)]), [R, w]),
-        D = (0, a.e7)([E.Z], () => E.Z.isPrioritySpeaker(w)),
+        [k, M, D] = (0, a.Wu)([C.Z], () => (R ? [!C.Z.isSupported() || C.Z.isSelfMute() || C.Z.isSelfMutedTemporarily(), C.Z.isSelfDeaf(), !1] : [!C.Z.isSupported() || C.Z.isLocalMute(w), !1, C.Z.isLocalVideoDisabled(w)]), [R, w]),
+        L = (0, a.e7)([E.Z], () => E.Z.isPrioritySpeaker(w)),
         U = (0, c.Z)({
             userId: w,
             checkSoundSharing: !0
@@ -98,13 +98,13 @@ let w = i.memo((e) => {
                     otherClientSessionType: null == K || null == (t = K.clientInfo) ? void 0 : t.os,
                     voicePlatform: Q,
                     localMute: k && !R,
-                    localVideoDisabled: L,
+                    localVideoDisabled: D,
                     mute: l || k,
                     deaf: o || M,
                     speaking: U,
                     ringing: F,
                     disconnected: J,
-                    priority: D,
+                    priority: L,
                     embeddedApplication: G[0],
                     isStreaming: null != Y && Y.channelId === g.id,
                     isWatching: null != q && q.state !== N.jm8.ENDED,
@@ -141,20 +141,20 @@ let R = [],
                     (S(T.current), (T.current = null));
                 })
             ),
-            L = i.useRef(
+            D = i.useRef(
                 new s.sW(175, () => {
                     S(null);
                 })
             ),
-            D = i.useCallback(
+            L = i.useCallback(
                 (e) => {
-                    t && (P(!0), L.current.cancel(), (T.current = e), M.current.delay());
+                    t && (P(!0), D.current.cancel(), (T.current = e), M.current.delay());
                 },
                 [t]
             ),
             U = i.useCallback(
                 (e) => {
-                    t && (M.current.cancel(), E === e && (P(!1), L.current.delay()));
+                    t && (M.current.cancel(), E === e && (P(!1), D.current.delay()));
                 },
                 [t, E]
             ),
@@ -196,7 +196,7 @@ let R = [],
                             channel: l,
                             collapsed: u,
                             canDrag: n && x.Z.can(N.Plq.MOVE_MEMBERS, l),
-                            showPreview: D,
+                            showPreview: L,
                             hidePreview: U,
                             previewIsOpen: I,
                             shouldShowPreview: E === o.id,

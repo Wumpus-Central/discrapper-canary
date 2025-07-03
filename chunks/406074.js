@@ -24,7 +24,7 @@ function p(e) {
                           if (!(i || e.published)) return !1;
                           let l = n.permissionOverwrites[e.role_id];
                           if ((0, u.TG)(n, l)) return !0;
-                          let o = a.Z.getRole(t.id, t.getEveryoneRoleId()),
+                          let o = a.Z.getEveryoneRole(t),
                               s = null != o && !r.e$(o.permissions, d.Plq.VIEW_CHANNEL),
                               c = (0, u.wB)(n, n.permissionOverwrites[t.id]),
                               p = a.Z.getRole(t.id, e.role_id);

@@ -13,8 +13,8 @@ var l = n(120356),
     _ = n(946273),
     A = n(910693),
     m = n(172751),
-    T = n(314897),
-    f = n(592125),
+    f = n(314897),
+    T = n(592125),
     g = n(271383),
     I = n(430824),
     h = n(496675),
@@ -74,7 +74,7 @@ function M(e, t) {
 function U(e) {
     let { user: t, guildId: n, onClose: l } = e,
         i = t.id,
-        o = (0, s.e7)([p.Z, O.Z, T.default], () => (i === T.default.getId() ? p.Z.getStatus() : O.Z.getStatus(i, n)), [i, n]);
+        o = (0, s.e7)([p.Z, O.Z, f.default], () => (i === f.default.getId() ? p.Z.getStatus() : O.Z.getStatus(i, n)), [i, n]);
     return (0, r.jsxs)('div', {
         className: x.topRow,
         children: [
@@ -200,12 +200,12 @@ function P(e) {
             location: v,
             locations: b
         }),
-        P = (0, s.e7)([T.default], () => T.default.getId() === (null == t ? void 0 : t.id)),
+        P = (0, s.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
         y = (0, s.e7)(
-            [N.Z, f.Z],
+            [N.Z, T.Z],
             () => {
                 let e = N.Z.getChannelId(i),
-                    t = null != e ? f.Z.getChannel(e) : null,
+                    t = null != e ? T.Z.getChannel(e) : null,
                     n = null != t && t.isModeratorReportChannel() ? e : void 0;
                 return null != n ? n : void 0;
             },

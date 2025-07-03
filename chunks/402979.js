@@ -61,7 +61,7 @@ function u(e) {
         })(
             {
                 header: l.intl.formatToPlainString(l.t['1GX6Pz'], { name: u.name }),
-                confirmText: u.hasFeature(a.oNc.HUB) ? l.intl.string(l.t.Dv8gFR) : l.intl.string(l.t.J2TBi4),
+                confirmText: u.features.has(a.oNc.HUB) ? l.intl.string(l.t.Dv8gFR) : l.intl.string(l.t.J2TBi4),
                 cancelText: l.intl.string(l.t['ETE/oK']),
                 onConfirm: b
             },
@@ -71,7 +71,7 @@ function u(e) {
             {
                 children: (0, n.jsx)(i.Text, {
                     variant: 'text-md/normal',
-                    children: u.hasFeature(a.oNc.HUB) ? l.intl.format(l.t.ZHTXVF, { name: u.name }) : l.intl.format(l.t.ZEXC0t, { name: u.name })
+                    children: u.features.has(a.oNc.HUB) ? l.intl.format(l.t.ZHTXVF, { name: u.name }) : l.intl.format(l.t.ZEXC0t, { name: u.name })
                 })
             }),
         Object.getOwnPropertyDescriptors

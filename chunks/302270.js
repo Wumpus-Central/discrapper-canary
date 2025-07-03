@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => L });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -33,7 +33,7 @@ var r = n(255367),
     R = n(474936),
     k = n(388032),
     M = n(523335);
-function L(e) {
+function D(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: i } = e,
         { analyticsLocations: l, newestAnalyticsLocation: s } = (0, p.ZP)(d.Z.VOICE_CHANNEL_HEADER),
         { chatOpen: c, participantsListOpen: g } = (0, a.cj)(
@@ -89,7 +89,7 @@ function L(e) {
         ]
     });
 }
-function D(e) {
+function L(e) {
     var t;
     let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: d } = e,
         p = (0, g.ZP)(n),
@@ -98,10 +98,10 @@ function D(e) {
         m = (0, S.Rk)(n.id, I.pV.AUDIENCE),
         b = (0, a.e7)([j.Z], () => j.Z.getGuild(n.guild_id), [n.guild_id]),
         x = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        v = (null == b ? void 0 : b.isCommunity()) ? x < w.TU7 : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && x <= w.eez,
+        v = null != b && b.features.has(w.oNc.COMMUNITY) ? x < w.TU7 : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && x <= w.eez,
         P = (0, A.Z)(n),
         T = (0, a.e7)([O.Z], () => O.Z.can(Z.yP, n)),
-        D = () => {
+        L = () => {
             (u.Z.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
                 E.default.track(w.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: n.guild_id,
@@ -135,7 +135,7 @@ function D(e) {
         children: (e) => {
             var t;
             return (0, r.jsxs)(y.ZP, {
-                toolbar: (0, r.jsx)(L, {
+                toolbar: (0, r.jsx)(D, {
                     toggleRequestToSpeakSidebar: l,
                     showRequestToSpeakSidebar: d,
                     channel: n
@@ -216,7 +216,7 @@ function D(e) {
                                         children: [
                                             (0, r.jsx)(c.zxk, {
                                                 className: M.notNowButton,
-                                                onClick: D,
+                                                onClick: L,
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
                                                 children: k.intl.string(k.t.L5eIZ2)
@@ -242,7 +242,7 @@ function D(e) {
                                     })
                                   : (0, r.jsx)(c.zxk, {
                                         className: M.notNowButton,
-                                        onClick: D,
+                                        onClick: L,
                                         look: c.zxk.Looks.BLANK,
                                         size: c.zxk.Sizes.SMALL,
                                         children: k.intl.string(k.t.WAI6xs)

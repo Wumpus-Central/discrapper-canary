@@ -24,7 +24,7 @@ let v = (e) => {
         { analyticsLocations: S } = (0, d.ZP)(),
         A = (0, s.e7)([m.Z], () => m.Z.getGuild(n)),
         { canManageAllExpressions: N } = (0, h.XJ)(A),
-        C = null != A && 0 === (0, g.A3)(A.premiumTier) && !A.hasFeature(E.oNc.MORE_STICKERS);
+        C = null != A && 0 === (0, g.A3)(A.premiumTier) && !A.features.has(E.oNc.MORE_STICKERS);
     if (
         (i.useEffect(() => {
             N &&

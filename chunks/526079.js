@@ -3,13 +3,13 @@ var n = i(73800),
     l = i(512722),
     r = i.n(l),
     a = i(442837),
-    u = i(430824),
-    s = i(771845),
+    s = i(430824),
+    u = i(771845),
     d = i(594174);
 function o(e) {
     let { isGuildIncluded: t, selectedGuildId: i } = e,
-        l = (0, a.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
-        o = (0, a.e7)([u.Z], () => u.Z.getGuilds()),
+        l = (0, a.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
+        o = (0, a.e7)([s.Z], () => s.Z.getGuilds()),
         c = (0, a.e7)([d.default], () => d.default.getCurrentUser());
     return {
         options: n.useMemo(

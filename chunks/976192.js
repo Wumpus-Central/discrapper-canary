@@ -35,7 +35,7 @@ function h(e) {
         A = y === h,
         w = b.Z.canManageUser(p.Plq.MANAGE_NICKNAMES, h, _);
     if (!(U || w || A) || null == N || E) return null;
-    let M = _.hasFeature(p.oNc.HUB) ? O.intl.string(O.t['+MWrWl']) : O.intl.string(O.t['PKQB/P']),
+    let M = _.features.has(p.oNc.HUB) ? O.intl.string(O.t['+MWrWl']) : O.intl.string(O.t['PKQB/P']),
         k = A ? M : O.intl.string(O.t.dilOFx);
     return (0, l.jsx)(a.sNh, {
         id: 'change-nickname',

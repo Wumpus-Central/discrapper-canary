@@ -2,11 +2,11 @@ t.d(i, { ZP: () => d });
 var n,
     l,
     r,
-    a = t(442837),
-    s = t(570140);
+    s = t(442837),
+    a = t(570140);
 let u = {},
     o = !1;
-class c extends (r = a.ZP.Store) {
+class c extends (r = s.ZP.Store) {
     isLoading() {
         return o;
     }
@@ -31,7 +31,7 @@ class c extends (r = a.ZP.Store) {
               writable: !0
           })
         : (c[n] = l));
-let d = new c(s.Z, {
+let d = new c(a.Z, {
     DISCOVER_CHECKLIST_FETCH_START: function (e) {
         o = !0;
     },

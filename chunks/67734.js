@@ -13,7 +13,7 @@ var r = n(255367),
 function p(e) {
     let { guild: t, canManageGuild: n, buttonClassName: p } = e,
         { analyticsLocations: f } = (0, s.ZP)(),
-        h = t.hasFeature(c.oNc.BANNER),
+        h = t.features.has(c.oNc.BANNER),
         x = i.useCallback(
             (e) => {
                 let { imageUri: n, file: r } = e;

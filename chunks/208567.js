@@ -85,7 +85,7 @@ class v extends (i = r.PureComponent) {
             n,
             i,
             r,
-            { image: s, hint: o, name: c, makeURL: f, disabled: v, onChange: y, showIcon: C, showIconDisabled: N, className: S, imageClassName: E, iconClassName: O, iconWrapperClassName: T, icon: w, hideSize: Z, imageStyle: R, showRemoveButton: I, maxFileSizeBytes: _, onFileSizeError: P, onOpenImageSelectModal: A, 'aria-label': L } = this.props;
+            { image: s, hint: o, name: c, makeURL: f, disabled: v, onChange: y, showIcon: C, showIconDisabled: N, className: S, imageClassName: O, iconClassName: E, iconWrapperClassName: T, icon: w, hideSize: Z, imageStyle: R, showRemoveButton: I, maxFileSizeBytes: _, onFileSizeError: P, onOpenImageSelectModal: A, 'aria-label': L } = this.props;
         if (
             (null != (t = null != s && /^data:/.test(s) ? s : f(s))
                 ? (n = 'url("'.concat(t, '")'))
@@ -101,13 +101,13 @@ class v extends (i = r.PureComponent) {
             return (0, l.jsx)('div', {
                 className: a()(p.imageUploader, p.disabled, S),
                 children: (0, l.jsxs)('div', {
-                    className: a()(p.imageUploaderInner, E),
+                    className: a()(p.imageUploaderInner, O),
                     style: j(x({}, R), { backgroundImage: n }),
                     children: [
                         i,
                         N &&
                             (0, l.jsx)('div', {
-                                className: a()(p.imageUploaderIcon, p.imageUploaderIconDisabled, O),
+                                className: a()(p.imageUploaderIcon, p.imageUploaderIconDisabled, E),
                                 children: w
                             })
                     ]
@@ -134,7 +134,7 @@ class v extends (i = r.PureComponent) {
                         className: C ? a()(p.imageUploaderIconWrapper, T) : void 0,
                         children: [
                             (0, l.jsxs)('div', {
-                                className: a()(p.imageUploaderInner, E),
+                                className: a()(p.imageUploaderInner, O),
                                 style: j(x({}, R), { backgroundImage: n }),
                                 children: [
                                     (0, l.jsx)('span', {
@@ -166,7 +166,7 @@ class v extends (i = r.PureComponent) {
                                 }),
                             C &&
                                 (0, l.jsx)(b, {
-                                    className: O,
+                                    className: E,
                                     icon: w
                                 })
                         ]

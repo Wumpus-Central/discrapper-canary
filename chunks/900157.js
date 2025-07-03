@@ -84,18 +84,18 @@ function T(e) {
             }),
             (0, y.ad)(k, { source: E.on.VOICE_AUTO_OPEN }));
     }, [M, k]);
-    let L = i.useRef(!1);
+    let D = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            if (null == A || L.current) return;
-            L.current = !0;
+            if (null == A || D.current) return;
+            D.current = !0;
             let e = (0, p.K)(C.Z.getChannel(A.id), !0);
             ((0, d.yw)(S.rMx.CHANNEL_OPENED, N(Z({}, e, (0, d.$H)(A.id)), { channel_view: T })), (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id }));
         }, [A, T]),
         null == A || null == w)
     )
         return null;
-    let D = (0, r.jsx)(O.Z, {
+    let L = (0, r.jsx)(O.Z, {
         channel: A,
         baseChannelId: l
     });
@@ -106,7 +106,7 @@ function T(e) {
                 draftType: x.d.ChannelMessage
             }),
             (0, r.jsx)(b.ZP, {
-                toolbar: D,
+                toolbar: L,
                 'aria-label': I.intl.string(I.t.Pwe8tL),
                 children: (0, _.ud)({
                     channel: A,

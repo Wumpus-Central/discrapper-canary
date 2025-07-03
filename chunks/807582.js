@@ -13,7 +13,7 @@ let u = (e) => {
         n,
         i,
         { guildFeature: u, guild: m, className: g, hideTooltip: p = !1, tooltipPosition: f = 'left', onClick: h } = e,
-        x = m.hasFeature(u),
+        x = m.features.has(u),
         b = (0, o._p)(u);
     return (x
         ? (null != b && (i = c.intl.string(c.t.hUgjyM)),

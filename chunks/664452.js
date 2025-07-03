@@ -62,9 +62,9 @@ function v(e, t) {
 function y(e) {
     let { guildId: t, transitionState: n, onClose: y, analyticsData: _ } = e,
         C = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        N = !!(null == C ? void 0 : C.hasFeature(h.oNc.INVITES_DISABLED)),
+        N = !!(null == C ? void 0 : C.features.has(h.oNc.INVITES_DISABLED)),
         [I] = i.useState(!1),
-        [S, E] = i.useState(f.Fl),
+        [E, S] = i.useState(f.Fl),
         T = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
         w = (0, p.BT)(C),
         P = (0, m.SG)(T) || N,
@@ -109,9 +109,9 @@ function y(e) {
                             placeholder: x.intl.string(x.t.vKYZzc),
                             options: (0, f.c1)(),
                             select: (e) => {
-                                (E(e), M(!0));
+                                (S(e), M(!0));
                             },
-                            isSelected: (e) => e === S,
+                            isSelected: (e) => e === E,
                             serialize: (e) => String(e)
                         }),
                         (0, r.jsxs)('div', {
@@ -184,7 +184,7 @@ function y(e) {
                 children: [
                     (0, r.jsx)(a.zxk, {
                         onClick: () => {
-                            (P || Z) && !k && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, v(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, k, D, S);
+                            (P || Z) && !k && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, v(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, k, D, E);
                             let { source: e, alertType: n, messageId: i } = _;
                             (d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                 guild_id: t,
@@ -193,7 +193,7 @@ function y(e) {
                                 raid_alert_type: n,
                                 intervention_type_enabled: (0, m.sO)(k, D),
                                 intervention_type_disabled: (0, m.lk)(k, D),
-                                duration: 60 * S
+                                duration: 60 * E
                             }),
                                 y());
                         },

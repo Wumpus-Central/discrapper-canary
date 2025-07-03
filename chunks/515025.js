@@ -15,7 +15,7 @@ var r = n(255367),
     h = n(722733);
 function x(e) {
     let { guild: t, canManageGuild: n } = e,
-        x = t.hasFeature(m.oNc.INVITE_SPLASH),
+        x = t.features.has(m.oNc.INVITE_SPLASH),
         b = n && x,
         { analyticsLocations: j } = (0, s.ZP)(),
         _ = i.useCallback((e) => {

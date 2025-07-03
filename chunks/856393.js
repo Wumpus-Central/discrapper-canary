@@ -37,8 +37,8 @@ var r = n(255367),
     R = n(314897),
     k = n(979696),
     M = n(430824),
-    L = n(496675),
-    D = n(944486),
+    D = n(496675),
+    L = n(944486),
     U = n(358085),
     B = n(998502),
     F = n(922482),
@@ -98,7 +98,7 @@ function ec(e) {
     let { channel: t, appContext: n, popoutOpen: l, popoutWindow: o, popoutWindowAlwaysOnTop: a, selectedParticipant: c } = e,
         { parentAnalyticsLocation: u } = (0, g.ZP)(),
         d = t.getGuildId(),
-        p = (0, s.e7)([D.Z], () => D.Z.getMostRecentSelectedTextChannelId(d), [d]),
+        p = (0, s.e7)([L.Z], () => L.Z.getMostRecentSelectedTextChannelId(d), [d]),
         h = R.default.getId(),
         f = !(0, s.e7)([b.Z], () => b.Z.isFullscreenInContext(n)) && (!U.isPlatformEmbedded || (U.isPlatformEmbedded && B.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS))),
         m = null != c && c.type !== et.fO.ACTIVITY && c.user.id !== h,
@@ -151,7 +151,7 @@ function ec(e) {
 function eu(e) {
     let { channel: t } = e,
         n = (0, f.bp)(),
-        i = (0, s.e7)([L.Z], () => L.Z.can(ee.Plq.CREATE_INSTANT_INVITE, t)),
+        i = (0, s.e7)([D.Z], () => D.Z.can(ee.Plq.CREATE_INSTANT_INVITE, t)),
         l = (0, s.e7)([M.Z], () => M.Z.getGuild(t.guild_id)),
         o = (0, s.e7)([V.Z], () => V.Z.getStageInstanceByChannel(t.id)),
         a = i || (null == o ? void 0 : o.invite_code) != null;
@@ -172,8 +172,8 @@ function ed(e) {
         { channel: c, toggleRequestToSpeakSidebar: u, showRequestToSpeakSidebar: d, popoutWindow: p, popoutWindowAlwaysOnTop: h, popoutOpen: _, chatOpen: C, idleProps: x } = e,
         { analyticsLocations: v } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
         j = (0, f.bp)(),
-        O = (0, s.e7)([D.Z], () => D.Z.getVoiceChannelId() === c.id, [c.id]),
-        E = (0, s.e7)([L.Z], () => L.Z.can(ee.Plq.CONNECT, c)),
+        O = (0, s.e7)([L.Z], () => L.Z.getVoiceChannelId() === c.id, [c.id]),
+        E = (0, s.e7)([D.Z], () => D.Z.can(ee.Plq.CONNECT, c)),
         S = (0, H.w8)(c.id, G.pV.SPEAKER),
         I = (0, s.e7)([b.Z], () => b.Z.getSelectedParticipant(c.id)),
         P = _ && j !== ee.IlC.POPOUT,
@@ -306,7 +306,7 @@ function ep(e) {
     });
     let { width: w = 0, ref: R } = (0, p.ZP)(),
         k = w - 550,
-        L = !O || (O && I === ee.IlC.POPOUT);
+        D = !O || (O && I === ee.IlC.POPOUT);
     return (0, r.jsx)(g.Gt, {
         value: S,
         children: (0, r.jsxs)(y.B2, {
@@ -350,7 +350,7 @@ function ep(e) {
                             className: er.channelChatWrapper,
                             children: [
                                 Z &&
-                                    L &&
+                                    D &&
                                     (0, r.jsx)(C.Z, {
                                         channel: t,
                                         guild: T,
@@ -358,7 +358,7 @@ function ep(e) {
                                     }),
                                 N &&
                                     A &&
-                                    L &&
+                                    D &&
                                     (0, r.jsx)(x.Z, {
                                         channel: t,
                                         maxWidth: k

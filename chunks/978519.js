@@ -23,5 +23,5 @@ function u(e) {
     let t = (0, a.e)();
     if (null == t || -1 === c(t, s)) return !1;
     let n = r.Z.getGuild(e);
-    return null != n && !!l.every((e) => n.hasFeature(e));
+    return null != n && !!l.every((e) => n.features.has(e));
 }

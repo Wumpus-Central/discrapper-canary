@@ -34,7 +34,7 @@ function v(e) {
         f = t.getGuildId(),
         g = (0, l.e7)([p.Z], () => p.Z.getGuild(f), [f]),
         b = t.type === y.d4z.GUILD_ANNOUNCEMENT,
-        v = null != g && g.hasFeature(y.oNc.NEWS),
+        v = null != g && g.features.has(y.oNc.NEWS),
         O = b && v,
         {
             editingMessage: E,

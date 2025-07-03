@@ -284,6 +284,6 @@ function V(e, t) {
         saveError: b,
         hasUnsavedAttachmentChanges: y,
         canAttachFiles: P.length < d.target.getMaxAttachmentsCount(),
-        canAttachArchives: null != (A = null == i ? void 0 : i.hasFeature(v.oNc.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && A
+        canAttachArchives: null != (A = null == i ? void 0 : i.features.has(v.oNc.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && A
     };
 }

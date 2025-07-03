@@ -3,8 +3,8 @@ var n = r(255367),
     i = r(73800),
     l = r(442837),
     a = r(481060),
-    o = r(239091),
-    s = r(129861),
+    s = r(239091),
+    o = r(129861),
     c = r(138182),
     u = r(956221),
     d = r(747017),
@@ -45,7 +45,7 @@ function y(e) {
         className: v.row,
         onClick: w,
         onContextMenu: (e) => {
-            (0, o.jW)(e, async () => {
+            (0, s.jW)(e, async () => {
                 let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('70686')]).then(r.bind(r, 881351));
                 return (r) => {
                     var i, l;
@@ -107,7 +107,7 @@ function y(e) {
             (0, n.jsxs)('div', {
                 className: v.details,
                 children: [
-                    (0, n.jsx)(s.Z, {
+                    (0, n.jsx)(o.Z, {
                         user: t,
                         className: v.tag,
                         discriminatorClass: v.discriminator

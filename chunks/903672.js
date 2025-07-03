@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(524437),
+    s = n(442837),
+    a = n(524437),
     c = n(481060),
     u = n(235820),
     d = n(494404),
@@ -41,7 +41,7 @@ function Z(e, t, n) {
 }
 function T(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: c } = e,
-        g = (0, a.e7)([_.Z, y.Z], () => _.Z.getChannel(y.Z.getChannelId())),
+        g = (0, s.e7)([_.Z, y.Z], () => _.Z.getChannel(y.Z.getChannelId())),
         {
             messages: b,
             hasMore: O,
@@ -49,7 +49,7 @@ function T(e) {
             guildFilter: E,
             roleFilter: S,
             everyoneFilter: w
-        } = (0, a.cj)([v.Z], () => ({
+        } = (0, s.cj)([v.Z], () => ({
             messages: v.Z.getMentions(),
             hasMore: v.Z.hasMore,
             loading: v.Z.loading,
@@ -77,7 +77,7 @@ function T(e) {
     let k = i.useCallback(
         () =>
             (0, r.jsx)(x.Z, {
-                tab: s.X.MENTIONS,
+                tab: a.X.MENTIONS,
                 setTab: t,
                 badgeState: l,
                 closePopout: c,
@@ -128,7 +128,7 @@ function R(e) {
     let l = _.Z.getChannel(t.channel_id);
     if (null == l) return null;
     let o = O.Z.didAgree(l.getGuildId()),
-        a = !!l.isNSFW() && !o;
+        s = !!l.isNSFW() && !o;
     return (0, r.jsxs)('div', {
         className: N.container,
         children: [
@@ -162,7 +162,7 @@ function R(e) {
                             message: t,
                             channel: l,
                             className: N.message,
-                            hideAccessories: a,
+                            hideAccessories: s,
                             compact: b.jU.getSetting(),
                             animateAvatar: !1,
                             focusProps: w,

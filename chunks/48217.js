@@ -25,7 +25,7 @@ function g(e) {
                 (0, r.jsx)(i.X6q, {
                     className: m.guildName,
                     variant: 'heading-md/semibold',
-                    children: t.toString()
+                    children: t.name
                 }),
                 (0, r.jsx)(l.Z, {
                     className: m.dropdown,

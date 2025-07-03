@@ -38,11 +38,11 @@ function l(e) {
 }
 function c(e) {
     let { enableFastMonetizationOnboardingForUser: t } = r.AC.useExperiment({ location: 'e3bb71_7' }, { autoTrackExposure: !1 });
-    return null != e && e.hasFeature(i.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && t;
+    return null != e && e.features.has(i.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && t;
 }
 function u(e) {
     let { enableFastMonetizationOnboardingForUser: t } = r.AC.getCurrentConfig({ location: 'e3bb71_8' });
-    return null != e && e.hasFeature(i.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && t;
+    return null != e && e.features.has(i.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && t;
 }
 function d(e) {
     let t = s(null == e ? void 0 : e.id),

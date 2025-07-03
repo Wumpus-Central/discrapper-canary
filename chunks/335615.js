@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(850020),
     k = n(155409),
     M = n(670188),
-    L = n(706454),
-    D = n(439170),
+    D = n(706454),
+    L = n(439170),
     U = n(485386),
     B = n(944486),
     F = n(111583),
@@ -264,7 +264,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 guildId: l,
                 size: 16
             }),
-            a = (0, h.e7)([L.default], () => new Intl.NumberFormat(L.default.locale).format(i), [i]);
+            a = (0, h.e7)([D.default], () => new Intl.NumberFormat(D.default.locale).format(i), [i]);
         return t === q.Skl.UNKNOWN
             ? (0, r.jsx)('div', {
                   className: X.membersGroup,
@@ -436,7 +436,7 @@ class ea extends i.Component {
                     { channel: l } = this.props,
                     o = this.getRowProps(e);
                 if (null != o) {
-                    if (o.type === D.so.MEMBER && 'user' in o) {
+                    if (o.type === L.so.MEMBER && 'user' in o) {
                         let { colorString: e, colorStrings: t, colorRoleId: n, user: a, status: s, isOwner: c, isMobileOnline: u, nick: d, activities: p, applicationStream: h, premiumSince: f } = o;
                         return (0, r.jsx)(
                             ei,
@@ -459,7 +459,7 @@ class ea extends i.Component {
                             'member-'.concat(o.user.id)
                         );
                     }
-                    if (o.type === D.so.CONTENT_INVENTORY) {
+                    if (o.type === L.so.CONTENT_INVENTORY) {
                         let e = 'content-inventory-'.concat(o.entry.id);
                         null != o.entry.original_id && (e += '-'.concat(o.entry.original_id));
                         let t = (0, r.jsx)(
@@ -472,7 +472,7 @@ class ea extends i.Component {
                         );
                         return o.entry.content_type === p.s.LEADERBOARD ? (0, r.jsx)(w.N, { children: t }, e) : t;
                     }
-                    if (o.type === D.so.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(E.Z, {}, 'content-inventory-hidden-entry');
+                    if (o.type === L.so.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(E.Z, {}, 'content-inventory-hidden-entry');
                 }
                 return (0, r.jsx)(eo, { index: i }, 'placeholder-'.concat(t, ':').concat(n));
             }),
@@ -546,7 +546,7 @@ class ea extends i.Component {
                 let i = r.reduce(
                     (e, t) => {
                         var n;
-                        return (t.type !== D.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === q.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, (null == (n = t.user.collectibles) ? void 0 : n.nameplate) != null && e.num_users_visible_with_nameplate++), e);
+                        return (t.type !== L.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === q.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, (null == (n = t.user.collectibles) ? void 0 : n.nameplate) != null && e.num_users_visible_with_nameplate++), e);
                     },
                     {
                         num_users_visible: 0,
@@ -565,7 +565,7 @@ function es(e) {
     let { channel: t, className: n } = e,
         { analyticsLocations: l } = (0, v.ZP)(C.Z.MEMBER_LIST),
         a = (0, h.e7)([y.Z], () => y.Z.keyboardModeEnabled),
-        s = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
+        s = (0, h.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,
             groups: p,

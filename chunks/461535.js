@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -12,7 +12,7 @@ var r = n(442837),
     f = n(306680),
     h = n(981631),
     g = n(388032);
-function b(e) {
+function v(e) {
     let t = (function (e) {
         let t = (0, o.n2)(e.guild_id, e.id),
             n = (0, r.e7)(

@@ -11,8 +11,8 @@ var a = n(255367),
     d = n(912332),
     m = n(296182),
     g = n(850908),
-    y = n(695346),
-    f = n(572004),
+    f = n(695346),
+    y = n(572004),
     b = n(424218),
     O = n(49012),
     _ = n(358085),
@@ -225,7 +225,7 @@ function R(e) {
             id: p,
             label: T.intl.string(T.t.nwg3lZ)
         }),
-        y = (function (e) {
+        f = (function (e) {
             var t;
             let { alt: n, sourceMetadata: r, width: o, height: i } = e,
                 c = k(T.intl.string(T.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
@@ -293,21 +293,21 @@ function R(e) {
                                     var e;
                                     (0, S.yg)(S.uG.COPY_LINK_PRESSED);
                                     let t = (0, m.s$)(null != (e = r.original) ? e : r.url, r.contentType);
-                                    (0, f.JG)(t, () => (0, l.showToast)((0, l.createToast)(T.intl.string(T.t['L/PwZW']), l.ToastType.SUCCESS)));
+                                    (0, y.JG)(t, () => (0, l.showToast)((0, l.createToast)(T.intl.string(T.t['L/PwZW']), l.ToastType.SUCCESS)));
                                 }
                             },
                             'media-viewer-copy-link'
                         )
                 ]
             }),
-            y,
+            f,
             d
         ]
     });
 }
 function k(e, t, n) {
     let o = r.useCallback((e) => {
-        (0, f.JG)(e, () =>
+        (0, y.JG)(e, () =>
             (0, l.showToast)({
                 message: T.intl.string(T.t.mGZ66O),
                 type: l.ToastType.SUCCESS,
@@ -337,7 +337,7 @@ function Z(e) {
     let { item: o } = e,
         i = r.useRef(null),
         [c, s] = r.useState(!1),
-        u = y.Sb.useSetting(),
+        u = f.Sb.useSetting(),
         p = 'IMAGE' === o.type && null == o.children && !o.animated && (0, m.Lz)(o.url, o.contentType),
         d = (0, m.Jj)(o.url);
     return u || p || d || (null == (n = o.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment'

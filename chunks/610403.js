@@ -13,7 +13,7 @@ function m() {
     let e = (0, i.e7)([a.Z], () => a.Z.getGuild()),
         t = (0, o.y)(null == e ? void 0 : e.id, 'guild_product_settings'),
         { application: n, loading: m } = (0, s.Z)(null == e ? void 0 : e.id, u.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        g = null != n && (null == e ? void 0 : e.hasFeature(d.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0;
+        g = null != n && (null == e ? void 0 : e.features.has(d.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0;
     return (0, r.jsx)('main', {
         children:
             null == e || !t || m

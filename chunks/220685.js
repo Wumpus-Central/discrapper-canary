@@ -31,17 +31,17 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         let { guild: l, canEnable: a } = e,
             c = (0, C.YB)(l.id),
             { loading: u, updateSubscriptionsSettings: _ } = (0, C.QV)(),
-            [O, P] = i.useState(l.hasFeature(y.oNc.CREATOR_STORE_PAGE)),
+            [O, P] = i.useState(l.features.has(y.oNc.CREATOR_STORE_PAGE)),
             [w, R] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : T),
             [Z, D] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
             k = null == Z || null != Z.match(S),
             [A, L] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             M = i.useRef(null == c ? void 0 : c.store_page_slug).current,
-            G = O !== l.hasFeature(y.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || Z !== (null == c ? void 0 : c.store_page_trailer_url) || (null != A && A !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            G = O !== l.features.has(y.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || Z !== (null == c ? void 0 : c.store_page_trailer_url) || (null != A && A !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             U = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
-                (O !== l.hasFeature(y.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = O),
+                (O !== l.features.has(y.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = O),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = w),
                     Z !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = Z),
                     A !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = A),
@@ -244,7 +244,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    (P(l.hasFeature(y.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), D(null == c ? void 0 : c.store_page_trailer_url), L(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t));
+                                    (P(l.features.has(y.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), D(null == c ? void 0 : c.store_page_trailer_url), L(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t));
                                 },
                                 onSave: U,
                                 disabled: H

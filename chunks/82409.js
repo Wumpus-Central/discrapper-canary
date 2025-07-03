@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(392711),
-    s = n(405499),
+    s = n(392711),
+    a = n(405499),
     c = n(442837),
     u = n(481060),
     d = n(235820),
@@ -30,7 +30,7 @@ var r = n(255367),
     Z = n(388032),
     T = n(21678);
 let A = {
-    controller: new s.Controller({
+    controller: new a.Controller({
         value: 1,
         immediate: !0
     }),
@@ -45,7 +45,7 @@ let A = {
 function R(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
-        s = (0, c.Wu)([m.Z], () => {
+        a = (0, c.Wu)([m.Z], () => {
             var e;
             return null != (e = m.Z.getSettingsFilteredMentions()) ? e : [];
         }),
@@ -92,13 +92,13 @@ function R(e) {
                                 ]
                               : [];
                       })
-                    : (0, a.uniqBy)(
+                    : (0, s.uniqBy)(
                           [
                               ...(null !=
                               (e =
-                                  null == s
+                                  null == a
                                       ? void 0
-                                      : s.map((e) => ({
+                                      : a.map((e) => ({
                                             kind: N.fL.MENTION,
                                             message: e
                                         })))
@@ -127,7 +127,7 @@ function R(e) {
                           return !1;
                       })
                 : null;
-        }, [f, s, B, F, j, Z]),
+        }, [f, a, B, F, j, Z]),
         { filterStyle: H } = v.Lk.useExperiment({ location: 'NotificationsInboxSidebar' }),
         z = H === v.v8.DROPDOWN && f !== N.V5.ALL;
     return (0, r.jsxs)('nav', {
@@ -212,7 +212,7 @@ function R(e) {
                 loadingMore: E === S.jd.Loading || h,
                 listName: 'notifications-inbox',
                 loadMore: function (e) {
-                    let t = null != s && s.length > 0 ? s[s.length - 1].id : null;
+                    let t = null != a && a.length > 0 ? a[a.length - 1].id : null;
                     ([N.V5.ALL, N.V5.MENTIONS, N.V5.ANNOUNCEMENTS].includes(f) && d && !h && D(null, t), [N.V5.ALL, N.V5.ANNOUNCEMENTS].includes(f) && E !== S.jd.Done && E !== S.jd.Loading && x(e));
                 },
                 renderLoadingState: L,

@@ -1,5 +1,5 @@
 (n.d(t, {
-    G: () => eO,
+    G: () => eE,
     Z: () => eZ
 }),
     n(997841),
@@ -27,8 +27,8 @@ var i = n(255367),
     C = n(541716),
     N = n(752305),
     S = n(893718),
-    E = n(600164),
-    O = n(313201),
+    O = n(600164),
+    E = n(313201),
     T = n(318766),
     w = n(907040),
     Z = n(906411),
@@ -111,17 +111,17 @@ function ed(e, t) {
         e
     );
 }
-let eu = (0, O.hQ)(),
-    eh = (0, O.hQ)(),
-    em = (0, O.hQ)(),
-    eg = (0, O.hQ)(),
-    ep = (0, O.hQ)(),
-    ef = (0, O.hQ)(),
-    ex = (0, O.hQ)(),
-    ej = (0, O.hQ)(),
-    eb = (0, O.hQ)(),
-    ev = (0, O.hQ)(),
-    ey = (0, O.hQ)(),
+let eu = (0, E.hQ)(),
+    eh = (0, E.hQ)(),
+    em = (0, E.hQ)(),
+    eg = (0, E.hQ)(),
+    ep = (0, E.hQ)(),
+    ef = (0, E.hQ)(),
+    ex = (0, E.hQ)(),
+    ej = (0, E.hQ)(),
+    eb = (0, E.hQ)(),
+    ev = (0, E.hQ)(),
+    ey = (0, E.hQ)(),
     eC = (0, B.kt)({
         id: '1',
         type: ee.d4z.DM
@@ -140,8 +140,8 @@ let eu = (0, O.hQ)(),
             object: ee.qAy.EMOJI_PICKER_BUTTON
         }
     },
-    eE = 'AUTOMATIC_RTC_REGION',
-    eO = d.ZP.connectStores([V.Z], () => {
+    eO = 'AUTOMATIC_RTC_REGION',
+    eE = d.ZP.connectStores([V.Z], () => {
         let { channel: e, submitting: t } = V.Z.getProps();
         return {
             channel: e,
@@ -257,7 +257,7 @@ class ew extends l.PureComponent {
         var n, l, r, d, h, g;
         let p,
             x,
-            { canManageChannels: j, canSendMessages: b, isThreadModerator: v, canManageThread: y, guild: N, isForumPost: E, isOwner: O, showAdvancedSlowModeSetting: T } = this.props,
+            { canManageChannels: j, canSendMessages: b, isThreadModerator: v, canManageThread: y, guild: N, isForumPost: O, isOwner: E, showAdvancedSlowModeSetting: T } = this.props,
             w = B.Ec.has(e.type),
             Z = e.isForumLikeChannel(),
             I = Z && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
@@ -604,7 +604,7 @@ class ew extends l.PureComponent {
                               (0, i.jsx)(m.R94, {
                                   className: ea.marginTop8,
                                   type: m.R94.Types.DESCRIPTION,
-                                  children: E ? er.intl.string(er.t['3aJN9P']) : er.intl.string(er.t.YUXr4e)
+                                  children: O ? er.intl.string(er.t['3aJN9P']) : er.intl.string(er.t.YUXr4e)
                               })
                           ]
                       })
@@ -636,7 +636,7 @@ class ew extends l.PureComponent {
                   })
                 : null,
             eo =
-                B.Y0.has(e.type) && null != N && N.hasFeature(ee.oNc.NEWS) && e.id !== (null == N ? void 0 : N.rulesChannelId) && e.id !== (null == N ? void 0 : N.publicUpdatesChannelId)
+                B.Y0.has(e.type) && null != N && N.features.has(ee.oNc.NEWS) && e.id !== (null == N ? void 0 : N.rulesChannelId) && e.id !== (null == N ? void 0 : N.publicUpdatesChannelId)
                     ? (0, i.jsx)('div', {
                           children: (0, i.jsx)(m.j7V, {
                               note: (0, i.jsxs)(i.Fragment, {
@@ -680,9 +680,9 @@ class ew extends l.PureComponent {
                 ? (0, i.jsx)(m.j7V, {
                       note: er.intl.format(er.t.feJW19, { helpdeskArticle: J.Z.getArticleURL(ee.BhN.CONVERSATION_SUMMARIES) }),
                       onChange: this.handleChannelSummariesToggled,
-                      value: !e.hasFlag(et.zZ.SUMMARIES_DISABLED) && (null == N ? void 0 : N.hasFeature(ee.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      value: !e.hasFlag(et.zZ.SUMMARIES_DISABLED) && (null == N ? void 0 : N.features.has(ee.oNc.SUMMARIES_ENABLED_BY_USER)),
                       hideBorder: !0,
-                      disabled: !j || !(null == N ? void 0 : N.hasFeature(ee.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      disabled: !j || !(null == N ? void 0 : N.features.has(ee.oNc.SUMMARIES_ENABLED_BY_USER)),
                       children: (0, i.jsxs)('div', {
                           className: es.badgedItem,
                           children: [
@@ -728,7 +728,7 @@ class ew extends l.PureComponent {
                                           error: this.getError('name'),
                                           name: p,
                                           autoFocus: !0,
-                                          disabled: O ? !b : !j,
+                                          disabled: E ? !b : !j,
                                           maxLength: ee.HN8,
                                           className: es.nameInputWrapperWithEmojiPicker,
                                           inputClassName: es.nameInputInnerWithEmojiPicker,
@@ -749,7 +749,7 @@ class ew extends l.PureComponent {
                                   error: this.getError('name'),
                                   name: p,
                                   autoFocus: !0,
-                                  disabled: O ? !b : !j,
+                                  disabled: E ? !b : !j,
                                   maxLength: ee.HN8
                               })
                     }),
@@ -781,8 +781,8 @@ class ew extends l.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let l = (0, z.g7)(t, e),
             r = this.getError('bitrate');
-        return (0, i.jsxs)(E.Z, {
-            direction: E.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(O.Z, {
+            direction: O.Z.Direction.VERTICAL,
             className: ea.marginBottom40,
             children: [
                 (0, i.jsx)(m.vwX, {
@@ -847,8 +847,8 @@ class ew extends l.PureComponent {
                 name: er.intl.string(er.t['7jOoJC'])
             }
         ];
-        return (0, i.jsxs)(E.Z, {
-            direction: E.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(O.Z, {
+            direction: O.Z.Direction.VERTICAL,
             className: ea.marginBottom40,
             children: [
                 (0, i.jsx)(m.xJW, {
@@ -878,8 +878,8 @@ class ew extends l.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let n = this.getError('user_limit'),
             l = e.isGuildStageVoice() ? ee.xGv : ee.$pe;
-        return (0, i.jsxs)(E.Z, {
-            direction: E.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(O.Z, {
+            direction: O.Z.Direction.VERTICAL,
             className: ea.marginBottom40,
             children: [
                 (0, i.jsx)(m.vwX, {
@@ -927,11 +927,11 @@ class ew extends l.PureComponent {
                     value: e.id
                 }))).unshift({
                 label: er.intl.string(er.t.JEmsam),
-                value: eE
+                value: eO
             });
-        let a = null != (t = e.rtcRegion) ? t : eE;
-        return (0, i.jsxs)(E.Z, {
-            direction: E.Z.Direction.VERTICAL,
+        let a = null != (t = e.rtcRegion) ? t : eO;
+        return (0, i.jsxs)(O.Z, {
+            direction: O.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(m.vwX, { children: er.intl.string(er.t.Ms8bX1) }),
                 (0, i.jsx)(m.q4e, {
@@ -952,8 +952,8 @@ class ew extends l.PureComponent {
             { theme: l } = this.props;
         return (
             (t = e.type === ee.d4z.GUILD_CATEGORY ? ((0, h.wj)(l) ? n(309095) : n(925442)) : (0, h.wj)(l) ? n(316491) : n(301358)),
-            (0, i.jsx)(E.Z, {
-                justify: E.Z.Justify.CENTER,
+            (0, i.jsx)(O.Z, {
+                justify: O.Z.Justify.CENTER,
                 className: ea.marginTop60,
                 children: (0, i.jsx)('img', {
                     alt: '',
@@ -1113,7 +1113,7 @@ class ew extends l.PureComponent {
                 (0, g.pW)({ defaultAutoArchiveDuration: e });
             }),
             eo(this, 'handleRegionChange', (e) => {
-                (0, g.pW)({ rtcRegion: e === eE ? null : e });
+                (0, g.pW)({ rtcRegion: e === eO ? null : e });
             }),
             eo(this, 'handleVideoQualityModeChange', (e) => {
                 (0, g.pW)({ videoQualityMode: e });
@@ -1172,7 +1172,7 @@ function eZ() {
             guildId: null == o ? void 0 : o.id,
             location: 'ChannelSettingsOverview'
         }),
-        E = l.useCallback(
+        O = l.useCallback(
             (e) => {
                 null != x && f.getState().setLayoutType(x, e);
             },
@@ -1193,7 +1193,7 @@ function eZ() {
         subsection: r,
         isForumPost: null != t && t.isForumPost(),
         isOwner: null == t ? void 0 : t.isOwner(p),
-        handleSetDefaultLayout: E,
+        handleSetDefaultLayout: O,
         showChannelSummariesSettings: C,
         showAdvancedSlowModeSetting: N,
         isEmojiInChannelNamesEnabled: S

@@ -35,7 +35,7 @@ let m = new Date(1682488800000);
 function g(e) {
     return (0, r.e7)([l.Z, c.Z], () => {
         let t = l.Z.getGuild(e),
-            n = !!(null == t ? void 0 : t.hasFeature(p.oNc.COMMUNITY)),
+            n = !!(null == t ? void 0 : t.features.has(p.oNc.COMMUNITY)),
             r = c.Z.can(p.Plq.MANAGE_GUILD, t),
             i = c.Z.can(p.Plq.MANAGE_ROLES, t);
         return n && r && i;
@@ -43,14 +43,14 @@ function g(e) {
 }
 function E(e) {
     let t = l.Z.getGuild(e),
-        n = !!(null == t ? void 0 : t.hasFeature(p.oNc.COMMUNITY)),
+        n = !!(null == t ? void 0 : t.features.has(p.oNc.COMMUNITY)),
         r = c.Z.can(p.Plq.MANAGE_GUILD, t),
         i = c.Z.can(p.Plq.MANAGE_ROLES, t);
     return n && r && i;
 }
 function b(e, t) {
     var n;
-    if (null == e || !e.hasFeature(p.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < m) return !1;
+    if (null == e || !e.features.has(p.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < m) return !1;
     let r = null != (n = t.flags) ? n : 0;
     return u.yE(r, h.q.STARTED_ONBOARDING) && !u.yE(r, h.q.COMPLETED_ONBOARDING);
 }

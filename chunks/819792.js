@@ -37,7 +37,7 @@ let g = function (e) {
     let { guild: t } = e,
         n = (0, l.e7)([s.ZP], () => s.ZP.getChannels(t.id)[s.Zb][0]),
         i = (0, l.e7)([c.Z], () => null != n && c.Z.can(h.Plq.CONNECT, n.channel));
-    return t.hasFeature(h.oNc.HUB) && null != n && i
+    return t.features.has(h.oNc.HUB) && null != n && i
         ? (0, r.jsx)(f, {
               channel: n.channel,
               guild: t

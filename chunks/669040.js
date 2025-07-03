@@ -173,8 +173,8 @@ let Y = 0,
                                             size: 'custom'
                                         })
                                       : null,
-                            u = null == i ? void 0 : i.toString();
-                        null != a && (u = (0, x.Y1)(a, null == i ? void 0 : i.toString()));
+                            u = null == i ? void 0 : i.name;
+                        null != a && (u = (0, x.Y1)(a, null == i ? void 0 : i.name));
                         let d = ee === e,
                             f = n.isNitroLocked,
                             p = f && !d,

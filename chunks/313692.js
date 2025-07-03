@@ -12,8 +12,8 @@ var r = n(255367),
     _ = n(786761),
     A = n(937889),
     m = n(619753),
-    T = n(433355),
-    f = n(271383),
+    f = n(433355),
+    T = n(271383),
     g = n(594174),
     I = n(189432),
     h = n(356778),
@@ -25,7 +25,7 @@ function S(e) {
     var t, n;
     let { userId: i, guildId: S, location: C, className: b, onNavigate: v } = e,
         D = l.useRef(null),
-        x = (0, o.e7)([T.ZP], () => T.ZP.getGuildSidebarState(S), [S]),
+        x = (0, o.e7)([f.ZP], () => f.ZP.getGuildSidebarState(S), [S]),
         L = l.useRef(0),
         [M, U] = l.useState(null != (t = null == x ? void 0 : x.details.additionalSearchQuery) ? t : {}),
         j = (0, h.z0)(i, S, {
@@ -33,7 +33,7 @@ function S(e) {
             shouldDispatch: !0
         }),
         P = (0, o.e7)([g.default], () => g.default.getUser(i), [i]),
-        y = (0, o.e7)([f.ZP], () => f.ZP.getMember(S, i), [S, i]);
+        y = (0, o.e7)([T.ZP], () => T.ZP.getMember(S, i), [S, i]);
     (0, c.Ng)(() => {
         let e = null == x ? void 0 : x.details.scrollOffset;
         if (null != e) {

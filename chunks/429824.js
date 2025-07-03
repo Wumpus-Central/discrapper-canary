@@ -1,18 +1,19 @@
-r.d(t, { Z: () => s });
+r.d(t, { Z: () => b });
 var n = r(255367),
     i = r(73800),
     l = r(481060),
     o = r(528011),
     c = r(666657),
     a = r(533244),
-    u = r(388032);
-function s(e) {
+    u = r(981631),
+    s = r(388032);
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { shouldShowIncidentActions: s, isUnderLockdown: b, incidentData: p } = (0, o.mI)(e.id),
-        O = i.useCallback(() => {
+        { shouldShowIncidentActions: b, isUnderLockdown: p, incidentData: O } = (0, o.mI)(e.id),
+        f = i.useCallback(() => {
             let t = {
                 source: c.Zu.CONTEXT_MENU,
-                alertType: (0, a.T1)(p)
+                alertType: (0, a.T1)(O)
             };
             (0, l.ZDy)(async () => {
                 let { default: i } = await r.e('61536').then(r.bind(r, 664452));
@@ -66,13 +67,13 @@ function s(e) {
                     );
                 };
             });
-        }, [e.id, p]);
-    return e.isCommunity() && s
+        }, [e.id, O]);
+    return e.features.has(u.oNc.COMMUNITY) && b
         ? (0, n.jsx)(l.sNh, {
               id: 'server-lockdown',
-              label: b ? u.intl.string(u.t['+tSVi4']) : u.intl.string(u.t.EPlEdn),
-              icon: t ? (b ? l.d$P : l.mBM) : void 0,
-              action: O,
+              label: p ? s.intl.string(s.t['+tSVi4']) : s.intl.string(s.t.EPlEdn),
+              icon: t ? (p ? l.d$P : l.mBM) : void 0,
+              action: f,
               color: 'danger'
           })
         : null;

@@ -137,7 +137,7 @@ let I = (e) => {
     let { guild: t, guildId: l, className: a, headerContent: o, failedItemsOnly: c = !1 } = e,
         [m, I] = (0, u.Wu)([b.ZP], () => [b.ZP.getDiscoveryChecklist(l), b.ZP.isLoading()], [l]),
         { nsfwProperties: E } = null != m ? m : {},
-        S = null == t ? void 0 : t.hasFeature(j.oNc.PARTNERED),
+        S = null == t ? void 0 : t.features.has(j.oNc.PARTNERED),
         T = null == E ? void 0 : E.channels_banned_keywords,
         P = (0, u.e7)(
             [p.ZP],

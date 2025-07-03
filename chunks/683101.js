@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => T }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(392711),
@@ -39,7 +39,7 @@ function m(e) {
     }
     return e;
 }
-function T(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function T(e, t) {
         e
     );
 }
-class f extends l.PureComponent {
+class T extends l.PureComponent {
     render() {
         let { result: e, listItemProps: t, searchOffset: n, index: l, totalResults: i } = this.props,
             a = s().find(e, (e) => e.isSearchHit);
@@ -71,7 +71,7 @@ class f extends l.PureComponent {
             offset: 4,
             children: (0, r.jsxs)(
                 'li',
-                T(m({ className: _.container }, t), {
+                f(m({ className: _.container }, t), {
                     'aria-posinset': 1 + n + l,
                     'aria-setsize': i,
                     'aria-labelledby': A,
@@ -128,7 +128,7 @@ class f extends l.PureComponent {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                T(m({}, n), {
+                                f(m({}, n), {
                                     message: t,
                                     channel: l
                                 })

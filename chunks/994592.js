@@ -17,7 +17,7 @@ function d(e) {
         r = t.getGuild(e);
     if (null == r) return !1;
     let i = (0, a.l)(r),
-        o = r.hasFeature(u.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+        o = r.features.has(u.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
     return !!((i && o) || n.isViewingServerShop(e));
 }
 function f(e, t) {

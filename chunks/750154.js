@@ -21,7 +21,7 @@ function _(e, t) {
         i = r.default.getId();
     o.ZP.isSpeaker(i, e.id) && (n |= u);
     let s = a.Z.getGuild(e.getGuildId());
-    null != s && (s.hasFeature(l.oNc.PARTNERED) && (n |= d), s.hasFeature(l.oNc.VERIFIED) && (n |= f));
+    null != s && (s.features.has(l.oNc.PARTNERED) && (n |= d), s.features.has(l.oNc.VERIFIED) && (n |= f));
     let _ = n.toString(16);
     return ''.concat(c).concat(e.guild_id, ':').concat(e.id, ':').concat(_, ':').concat(t.id);
 }

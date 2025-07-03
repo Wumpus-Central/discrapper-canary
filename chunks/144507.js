@@ -1,61 +1,62 @@
 n.d(t, {
-    $D: () => g,
-    H2: () => _,
-    MO: () => f,
-    X$: () => m,
-    d5: () => d
+    $D: () => _,
+    H2: () => h,
+    MO: () => g,
+    X$: () => f,
+    d5: () => p
 });
 var r,
     i = n(442837),
     l = n(223892),
     a = n(674180),
-    o = n(496675),
-    s = n(594174),
-    c = n(923726),
-    u = n(981631),
-    d = (((r = {})[(r.NONE = 0)] = 'NONE'), (r[(r.WAITLIST_ONLY = 1)] = 'WAITLIST_ONLY'), (r[(r.NEEDS_COMMUNITY = 2)] = 'NEEDS_COMMUNITY'), (r[(r.VISIBLE = 3)] = 'VISIBLE'), r);
-function p(e) {
-    if (e.guild.hasFeature(u.oNc.CREATOR_MONETIZABLE_DISABLED)) return 0;
+    o = n(601964),
+    s = n(496675),
+    c = n(594174),
+    u = n(923726),
+    d = n(981631),
+    p = (((r = {})[(r.NONE = 0)] = 'NONE'), (r[(r.WAITLIST_ONLY = 1)] = 'WAITLIST_ONLY'), (r[(r.NEEDS_COMMUNITY = 2)] = 'NEEDS_COMMUNITY'), (r[(r.VISIBLE = 3)] = 'VISIBLE'), r);
+function m(e) {
+    if (e.guild.features.has(d.oNc.CREATOR_MONETIZABLE_DISABLED)) return 0;
     if (
         (function (e) {
             let { guild: t, isOwner: n, canManageGuildRoleSubscriptions: r, isGuildEligibleForRoleSubscriptions: i, isExpeditedMonetizationOnboardingGuild: l, isUserInCreatorMonetizationEligibleCountry: a, shouldRestrictUpdatingRoleSubscriptionSettings: o } = e;
-            return !!r && (!o || !!n) && (!!(t.hasFeature(u.oNc.CREATOR_MONETIZABLE) || t.hasFeature(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!t.hasFeature(u.oNc.COMMUNITY) && (!!i || !!l) && n && a));
+            return !!r && (!o || !!n) && (!!(t.features.has(d.oNc.CREATOR_MONETIZABLE) || t.features.has(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!t.features.has(d.oNc.COMMUNITY) && (!!i || !!l) && n && a));
         })(e)
     )
         return 3;
     let { guild: t, isOwner: n, isUserInCreatorMonetizationEligibleCountry: r, isMonetizationWaitlistEnabledForGuild: i, isGuildEligibleForRoleSubscriptions: l, isExpeditedMonetizationOnboardingGuild: a } = e;
-    return n && !r && i ? 1 : n && i && (l || a) && !t.hasFeature(u.oNc.COMMUNITY) ? 2 : 0;
-}
-function m(e) {
-    return 0 !== p(e);
+    return n && !r && i ? 1 : n && i && (l || a) && !t.features.has(d.oNc.COMMUNITY) ? 2 : 0;
 }
 function f(e) {
-    let t = (0, c.Bt)(null == e ? void 0 : e.id),
+    return 0 !== m(e);
+}
+function g(e) {
+    let t = (0, u.Bt)(null == e ? void 0 : e.id),
         n = (0, l.Ob)(e),
         r = (0, l.gS)(null == e ? void 0 : e.id),
-        o = g(e),
-        u = (0, i.e7)([s.default], () => {
-            let t = s.default.getCurrentUser();
-            return null != t && (null == e ? void 0 : e.isOwner(t)) === !0;
+        s = _(e),
+        d = (0, i.e7)([c.default], () => {
+            let t = c.default.getCurrentUser();
+            return null != e && (0, o.eM)(e, t);
         }),
-        d = (0, l.Sd)(),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: m } = (0, a.gX)(null == e ? void 0 : e.id);
+        p = (0, l.Sd)(),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: f } = (0, a.gX)(null == e ? void 0 : e.id);
     return null == e
         ? 0
-        : p({
+        : m({
               guild: e,
-              isOwner: u,
-              canManageGuildRoleSubscriptions: o,
+              isOwner: d,
+              canManageGuildRoleSubscriptions: s,
               isGuildEligibleForRoleSubscriptions: t,
               isMonetizationWaitlistEnabledForGuild: r,
               isExpeditedMonetizationOnboardingGuild: n,
-              isUserInCreatorMonetizationEligibleCountry: d,
-              shouldRestrictUpdatingRoleSubscriptionSettings: m
+              isUserInCreatorMonetizationEligibleCountry: p,
+              shouldRestrictUpdatingRoleSubscriptionSettings: f
           });
 }
-function g(e) {
-    return (0, i.e7)([o.Z], () => _(e), [e]);
-}
 function _(e) {
-    return null != e && o.Z.can(u.Plq.ADMINISTRATOR, e);
+    return (0, i.e7)([s.Z], () => h(e), [e]);
+}
+function h(e) {
+    return null != e && s.Z.can(d.Plq.ADMINISTRATOR, e);
 }

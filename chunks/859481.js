@@ -38,7 +38,7 @@ function x(e) {
 }
 function b(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: o, hasError: d } = e,
-        u = (null == t ? void 0 : t.hasFeature(g.oNc.VANITY_URL)) === !0,
+        u = (null == t ? void 0 : t.features.has(g.oNc.VANITY_URL)) === !0,
         m = i.useCallback(() => {
             (0, c.Gy)('');
         }, []),

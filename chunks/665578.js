@@ -23,8 +23,8 @@ var r = n(255367),
     C = n(981631),
     N = n(689079),
     I = n(388032),
-    S = n(190434);
-function E(e) {
+    E = n(190434);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -172,7 +172,7 @@ function w(e) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        E(
+                        S(
                             {
                                 editPermissions: G,
                                 guildId: j,
@@ -195,7 +195,7 @@ function w(e) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        E(
+                        S(
                             {
                                 editPermissions: G,
                                 guildId: j,
@@ -216,7 +216,7 @@ function w(e) {
                 (0, c.ZDy)(async () => {
                     let { default: e } = await n.e('21897').then(n.bind(n, 303313)),
                         t = R.defaultMemberPermissions;
-                    return (a.fS(t, u.BO) && (t = C.Plq.ADMINISTRATOR), (n) => (0, r.jsx)(e, T(E({}, n), { defaultMemberPermissions: t })));
+                    return (a.fS(t, u.BO) && (t = C.Plq.ADMINISTRATOR), (n) => (0, r.jsx)(e, T(S({}, n), { defaultMemberPermissions: t })));
                 }),
             [R]
         ),
@@ -248,22 +248,22 @@ function w(e) {
                 : null,
             L
                 ? (0, r.jsxs)('div', {
-                      className: S.requiredPermissionsBanner,
+                      className: E.requiredPermissionsBanner,
                       children: [
                           (0, r.jsx)(c.d3s, {
                               size: 'sm',
                               color: 'currentColor',
-                              className: S.icon
+                              className: E.icon
                           }),
                           (0, r.jsx)('span', {
-                              className: S.message,
+                              className: E.message,
                               children: I.intl.format(I.t['2889Gh'], {})
                           }),
                           (0, r.jsx)(c.zxk, {
                               color: c.zxk.Colors.PRIMARY,
                               onClick: K,
                               size: c.zxk.Sizes.SMALL,
-                              className: S.addButton,
+                              className: E.addButton,
                               children: I.intl.string(I.t['HO/oXl'])
                           })
                       ]
@@ -273,12 +273,12 @@ function w(e) {
                 let n = (t) =>
                         (0, r.jsx)(
                             c.zxk,
-                            T(E({}, t), {
+                            T(S({}, t), {
                                 color: c.zxk.Colors.PRIMARY,
                                 disabled: Y || !M,
                                 onClick: e.buttonClick,
                                 size: c.zxk.Sizes.TINY,
-                                className: S.addButton,
+                                className: E.addButton,
                                 children: e.buttonText
                             })
                         ),
@@ -289,7 +289,7 @@ function w(e) {
                         _.Z,
                         {
                             bar: (0, r.jsx)(c.ua7, {
-                                tooltipClassName: S.tooltip,
+                                tooltipClassName: E.tooltip,
                                 text: i,
                                 shouldShow: null != i,
                                 children: (e) => n(e)
@@ -297,7 +297,7 @@ function w(e) {
                             inModal: O,
                             title: e.title,
                             children: (0, r.jsx)('div', {
-                                className: O ? void 0 : S.listContainer,
+                                className: O ? void 0 : E.listContainer,
                                 children: (0, r.jsx)(v.Z, {
                                     guildId: j,
                                     commandId: l,
@@ -317,9 +317,9 @@ function w(e) {
 }
 function P(e) {
     let t = (0, j.w)(e);
-    return T(E({}, t), { results: t.results.map((e) => T(E({}, e), { type: d.Kw.CHANNEL })) });
+    return T(S({}, t), { results: t.results.map((e) => T(S({}, e), { type: d.Kw.CHANNEL })) });
 }
 function Z(e) {
     let t = (0, O.U)(e);
-    return T(E({}, t), { results: t.results.roles.map((e) => T(E({}, e), { type: d.Kw.ROLE })).concat(t.results.members.map((e) => T(E({}, e), { type: d.Kw.USER }))) });
+    return T(S({}, t), { results: t.results.roles.map((e) => T(S({}, e), { type: d.Kw.ROLE })).concat(t.results.members.map((e) => T(S({}, e), { type: d.Kw.USER }))) });
 }

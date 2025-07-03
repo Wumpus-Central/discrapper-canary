@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(913527),
     o = n.n(l),
-    a = n(91192),
-    s = n(481060),
+    s = n(91192),
+    a = n(481060),
     c = n(135938),
     u = n(554838),
     d = n(493892),
@@ -26,7 +26,7 @@ let j = {
 function E(e) {
     var t, n, l;
     let { channel: o, message: c, compact: u, isGroupStart: d, treatSpam: h, gotoChannel: f } = e,
-        g = (0, a.JA)(null != (t = c.id) ? t : ''),
+        g = (0, s.JA)(null != (t = c.id) ? t : ''),
         m = i.useCallback(
             (e) => {
                 if ('ArrowLeft' === e.key) {
@@ -36,7 +36,7 @@ function E(e) {
             },
             [o.id]
         );
-    return (0, r.jsx)(s.tEY, {
+    return (0, r.jsx)(a.tEY, {
         offset: j,
         children: (0, r.jsxs)(
             'div',
@@ -110,7 +110,7 @@ function E(e) {
 }
 function S(e) {
     var t, n;
-    let { channel: i, channelRecord: l, gotoChannel: a } = e,
+    let { channel: i, channelRecord: l, gotoChannel: s } = e,
         { enabled: p } = c.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         _ = f.jU.useSetting(),
         j = (0, d.P1)(l),
@@ -149,7 +149,7 @@ function S(e) {
                             compact: _,
                             isGroupStart: i,
                             treatSpam: !I && p && (0, d.DQ)(n) && j,
-                            gotoChannel: a
+                            gotoChannel: s
                         },
                         n.id
                     )
@@ -158,17 +158,17 @@ function S(e) {
             i.messages.length >= O.hC &&
                 P.push(
                     (0, r.jsxs)(
-                        s.zxk,
+                        a.zxk,
                         {
-                            color: s.zxk.Colors.LINK,
-                            look: s.zxk.Looks.LINK,
-                            onClick: (e) => a(e, n[n.length - 1].id),
+                            color: a.zxk.Colors.LINK,
+                            look: a.zxk.Looks.LINK,
+                            onClick: (e) => s(e, n[n.length - 1].id),
                             children: [v.intl.string(v.t['9OB9ho']), ' \u203A']
                         },
                         'view-all'
                     )
                 ),
-            0 === P.length && (P = [(0, r.jsx)(s.$jN, {}, 'spinner')]));
+            0 === P.length && (P = [(0, r.jsx)(a.$jN, {}, 'spinner')]));
     }
     return (
         S && j && c.Z.trackExposure({ location: '20e3b0_2' }),

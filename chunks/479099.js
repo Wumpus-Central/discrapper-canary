@@ -16,8 +16,8 @@ var r,
     _ = n(607070),
     A = n(339085),
     m = n(695346),
-    T = n(572004),
-    f = n(388032),
+    f = n(572004),
+    T = n(388032),
     g = n(559297);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -76,7 +76,7 @@ function N(e) {
         w = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         G = (e) => {
             let r = m.Sb.getSetting();
-            T.wS &&
+            f.wS &&
                 r &&
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e('29646').then(n.bind(n, 955116));
@@ -141,7 +141,7 @@ function N(e) {
                       h(I({}, Z), {
                           innerRef: y,
                           focusProps: { ringTarget: y },
-                          'aria-label': null != S ? S : f.intl.formatToPlainString(f.t.iyRTLi, { tagName: C }),
+                          'aria-label': null != S ? S : T.intl.formatToPlainString(T.t.iyRTLi, { tagName: C }),
                           role: 'button',
                           'aria-pressed': R
                       }),
@@ -156,7 +156,7 @@ function p(e) {
     let { tags: t, count: n, size: r = 1 } = e,
         i = 0 === r;
     return (0, l.jsx)(c.ua7, {
-        'aria-label': f.intl.string(f.t['P/y+sr']),
+        'aria-label': T.intl.string(T.t['P/y+sr']),
         text: (0, l.jsx)(l.Fragment, {
             children: t.map((e) =>
                 (0, l.jsx)(

@@ -20,6 +20,6 @@ function c(e, t, n, l) {
         return i.X_.EVENT_STARTING_SOON;
     }
     let o = u.default.extractTimestamp(e.id),
-        a = Math.min((null != n ? n : o) + i.Fc, E);
-    if (c.isBetween(o, a) && null == t && !l) return i.X_.NEW_EVENT;
+        s = Math.min((null != n ? n : o) + i.Fc, E);
+    if (c.isBetween(o, s) && null == t && !l) return i.X_.NEW_EVENT;
 }

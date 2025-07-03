@@ -120,7 +120,7 @@ let I = function (e, t, n) {
                 errorCode: j.Z.getError()
             })),
             x = (0, a.e7)([h.Z], () => h.Z.getSettings().enabled),
-            T = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(v.oNc.PARTNERED) && !n.hasFeature(v.oNc.VERIFIED));
+            T = null == t || null == n || (null != t && t < 500 && null != n && !n.features.has(v.oNc.PARTNERED) && !n.features.has(v.oNc.VERIFIED));
         (i.useEffect(() => {
             null == e || T || ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));
         }, [e, T]),

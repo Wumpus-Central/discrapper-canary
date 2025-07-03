@@ -1,19 +1,20 @@
-n.d(t, { P: () => c });
+n.d(t, { P: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     s = n(481060),
-    a = n(594174),
-    o = n(981631);
-function c(e) {
-    let t = (null == e ? void 0 : e.hasFeature(o.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0,
-        c = (null == e ? void 0 : e.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
-        d = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
-        u = (null == e ? void 0 : e.isOwner(d)) === !0;
+    a = n(601964),
+    o = n(594174),
+    c = n(981631);
+function d(e) {
+    let t = (null == e ? void 0 : e.features.has(c.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0,
+        d = (null == e ? void 0 : e.features.has(c.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
+        u = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
+        m = null != e && (0, a.eM)(e, u);
     i.useEffect(() => {
         null != e &&
             t &&
-            u &&
+            m &&
             (0, s.ZDy)(async () => {
                 let { default: t } = await n.e('710').then(n.bind(n, 32342));
                 return (n) => {
@@ -48,7 +49,7 @@ function c(e) {
                         (l = l =
                             {
                                 guildId: e.id,
-                                requireTeamSetup: c
+                                requireTeamSetup: d
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -66,5 +67,5 @@ function c(e) {
                     );
                 };
             });
-    }, [t, c, e, u]);
+    }, [t, d, e, m]);
 }

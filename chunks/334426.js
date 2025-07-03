@@ -3,17 +3,17 @@ var r,
     i,
     l,
     o = n(442837),
-    a = n(570140);
-let s = null,
+    s = n(570140);
+let a = null,
     c = null,
     u = !1;
 class d extends (l = o.ZP.Store) {
     get shouldHide() {
-        return (null != c && null != s && c <= s) || !u;
+        return (null != c && null != a && c <= a) || !u;
     }
     dismiss() {
         let e = Date.now();
-        e !== s && ((s = e), this.emitChange());
+        e !== a && ((a = e), this.emitChange());
     }
     setInboxReadState(e, t) {
         var n;
@@ -30,4 +30,4 @@ class d extends (l = o.ZP.Store) {
               writable: !0
           })
         : (d[r] = i));
-let h = new d(a.Z, {});
+let h = new d(s.Z, {});

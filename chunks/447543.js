@@ -151,7 +151,7 @@ function ed(e, t) {
 function ef(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
         o = U.Z.getGuild(t),
-        s = null == o ? void 0 : o.hasFeature(Q.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        s = null == o ? void 0 : o.features.has(Q.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         { targetUserId: l, targetType: c, targetApplicationId: u, isGuestInvite: f, isApplicationBypassInvite: _ } = null != i ? i : {};
     if (!f && !_ && !(null == i ? void 0 : i.forceTransition) && s && V.Z.getGuildId() !== t) return;
     let { type: p } = r,

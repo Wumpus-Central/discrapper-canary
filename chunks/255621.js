@@ -34,7 +34,7 @@ function l(e) {
                 return !0;
         }
         let n = _.getGuild(e.getGuildId());
-        if (null == n || n.hasFeature(s.oNc.COMMUNITY)) return !1;
+        if (null == n || n.features.has(s.oNc.COMMUNITY)) return !1;
         let r = p.getMemberCount(n.id);
         return null != r && r < 100;
     }

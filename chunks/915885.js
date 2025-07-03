@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(704215),
-    a = n(481060),
-    s = n(566840),
+    s = n(481060),
+    a = n(566840),
     c = n(693546),
     u = n(826581),
     d = n(246364),
@@ -21,8 +21,8 @@ function _(e) {
         y = _ && null != O ? O : 0;
     i.useEffect(() => {
         _ &&
-            t.hasFeature(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
-            t.hasFeature(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+            t.features.has(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
+            t.features.has(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: d.wB.SUBMITTED,
@@ -32,13 +32,13 @@ function _(e) {
     let v = i.useCallback(() => {
             (0, g._X)(t.id);
         }, [t.id]),
-        C = (0, s.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
+        C = (0, a.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
     return (0, r.jsx)('div', {
         ref: C,
         children: (0, r.jsx)(p.m, {
             id: 'members-'.concat(t.id),
             renderIcon: (e) =>
-                (0, r.jsx)(a.BFJ, {
+                (0, r.jsx)(s.BFJ, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
@@ -46,7 +46,7 @@ function _(e) {
             text: b.intl.string(b.t.oclz3d),
             selected: n,
             onClick: v,
-            trailing: y > 0 ? (0, r.jsx)(a.mAB, { count: y }) : null
+            trailing: y > 0 ? (0, r.jsx)(s.mAB, { count: y }) : null
         })
     });
 }

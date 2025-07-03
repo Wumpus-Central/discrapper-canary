@@ -7,8 +7,8 @@ var r,
 n(73800);
 var l = n(442837),
     o = n(481060),
-    a = n(893776),
-    s = n(391650),
+    s = n(893776),
+    a = n(391650),
     c = n(313201),
     u = n(144114),
     d = n(607744),
@@ -81,7 +81,7 @@ let O = (e) => {
                                       ? (0, i.jsx)(o.zxk, {
                                             onClick: () => {
                                                 (y
-                                                    ? s.j()
+                                                    ? a.j()
                                                     : C
                                                       ? (0, o.ZDy)(
                                                             async () => {
@@ -91,7 +91,7 @@ let O = (e) => {
                                                             { modalKey: f.M }
                                                         )
                                                       : v &&
-                                                        (a.Z.verifyResend(),
+                                                        (s.Z.verifyResend(),
                                                         (0, o.h7j)((e) => {
                                                             var t, n, r;
                                                             return (0, i.jsx)(

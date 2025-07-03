@@ -18,7 +18,7 @@ var r = n(255367),
     j = n(773100);
 let _ = function (e) {
     let { guild: t } = e,
-        _ = t.hasFeature(p.oNc.BANNER),
+        _ = t.features.has(p.oNc.BANNER),
         v = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });

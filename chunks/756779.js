@@ -100,7 +100,7 @@ function L(e) {
                 children: [
                     (0, o.jsx)(d.zxk, {
                         onClick: () => {
-                            (v.some((e) => I.hasFeature(e)) ? _.Z.open(n, N.pNK.GUILD_PRODUCTS) : _.Z.open(n, N.pNK.ROLE_SUBSCRIPTIONS), L(S.L.PRIMARY), r());
+                            (v.some((e) => I.features.has(e)) ? _.Z.open(n, N.pNK.GUILD_PRODUCTS) : _.Z.open(n, N.pNK.ROLE_SUBSCRIPTIONS), L(S.L.PRIMARY), r());
                         },
                         children: 'Check it out'
                     }),

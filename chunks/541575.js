@@ -145,7 +145,7 @@ let _ = function (e) {
                         className: x.button,
                         color: (0, i.ap)(O) ? l.zxk.Colors.PRIMARY : l.zxk.Colors.WHITE,
                         look: l.zxk.Looks.OUTLINED,
-                        onClick: () => (t.hasFeature(p.oNc.ROLE_ICONS) ? N() : E({ object: p.qAy.UPLOAD_IMAGE })),
+                        onClick: () => (t.features.has(p.oNc.ROLE_ICONS) ? N() : E({ object: p.qAy.UPLOAD_IMAGE })),
                         disabled: _,
                         children: h.intl.string(h.t.mD1oGB)
                     }),

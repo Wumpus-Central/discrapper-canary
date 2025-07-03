@@ -1,14 +1,14 @@
-n.d(t, { default: () => s });
+n.d(t, { default: () => a });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(933557),
     o = n(388032),
-    a = n(331884);
-function s(e) {
+    s = n(331884);
+function a(e) {
     var t,
         n,
-        { channel: s, category: c } = e,
+        { channel: a, category: c } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -28,7 +28,7 @@ function s(e) {
             }
             return i;
         })(e, ['channel', 'category']);
-    let d = (0, l.ZP)(s, !0),
+    let d = (0, l.ZP)(a, !0),
         h = (0, l.ZP)(c);
     return (0, r.jsx)(
         i.ConfirmModal,
@@ -69,7 +69,7 @@ function s(e) {
             {
                 children: (0, r.jsx)(i.Text, {
                     variant: 'text-md/normal',
-                    className: a.message,
+                    className: s.message,
                     selectable: !1,
                     children: o.intl.format(o.t['iKW+jY'], {
                         channelName: d,

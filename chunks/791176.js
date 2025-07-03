@@ -12,15 +12,15 @@ var r = n(255367),
     _ = n(233608),
     A = n(776767),
     m = n(351127),
-    T = n(50493),
-    f = n(981631),
+    f = n(50493),
+    T = n(981631),
     g = n(388032),
     I = n(514983);
 function h(e) {
     var t, n;
     let { permission: l, roleIds: i, guild: E, specMap: _ } = e,
-        A = f.Plq[l],
-        T = null != (n = null == (t = _[A.toString()]) ? void 0 : t.title) ? n : (0, c.wt)(A),
+        A = T.Plq[l],
+        f = null != (n = null == (t = _[A.toString()]) ? void 0 : t.title) ? n : (0, c.wt)(A),
         h = m._o.has(A),
         O = (0, a.e7)([d.Z], () => d.Z.getRoles(E.id));
     return (0, r.jsx)(o.ua7, {
@@ -66,7 +66,7 @@ function h(e) {
                     (0, r.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'interactive-normal',
-                        children: T
+                        children: f
                     })
                 ]
             });
@@ -99,7 +99,7 @@ let O = l.memo(function (e) {
                     p.forEach((t) => {
                         t.permissions.forEach((t) => {
                             let n = t.flag,
-                                l = m.pd.find((e) => f.Plq[e] === n);
+                                l = m.pd.find((e) => T.Plq[e] === n);
                             if (null == l) return;
                             let s = u[l];
                             null != s &&
@@ -133,7 +133,7 @@ let O = l.memo(function (e) {
                       }),
                       (0, r.jsxs)(o.P3F, {
                           className: I.viewAllPermissions,
-                          onClick: () => n(T.k.PERMISSIONS),
+                          onClick: () => n(f.k.PERMISSIONS),
                           children: [
                               (0, r.jsx)(o.Text, {
                                   variant: 'eyebrow',

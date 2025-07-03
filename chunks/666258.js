@@ -237,8 +237,8 @@ function U(e) {
     );
 }
 function V(e) {
-    let { className: t, guild: r, channel: a, applicationId: m, getInviteKey: p, sendInvite: v, canUseVanityURL: x, disabled: f, hasSelection: j, options: E, setOptions: A, isApplicationBypassAllowed: R, isGuestInviteAllowed: M, isTemporaryInviteAllowed: k, setError: V, analyticsLocation: F } = e,
-        [B, G] = i.useState(!1),
+    let { className: t, guild: r, channel: a, applicationId: m, getInviteKey: p, sendInvite: v, canUseVanityURL: x, disabled: f, hasSelection: j, options: E, setOptions: A, isApplicationBypassAllowed: R, isGuestInviteAllowed: M, isTemporaryInviteAllowed: k, setError: V, analyticsLocation: B } = e,
+        [F, G] = i.useState(!1),
         [z, H] = i.useState(!1),
         q = i.useRef(null),
         [W] = (0, d.Wu)([N.Z], () => [N.Z.hideInstantInvites]),
@@ -270,7 +270,7 @@ function V(e) {
                     server: r.id,
                     channel: null != (e = null == a ? void 0 : a.id) ? e : null,
                     channel_type: null != (t = null == a ? void 0 : a.type) ? t : null,
-                    location: F,
+                    location: B,
                     code: n,
                     application_id: m
                 }),
@@ -278,7 +278,7 @@ function V(e) {
                     null !== q.current && clearTimeout(q.current);
                 }
             );
-        }, [f, p, r, a, F, m, V]),
+        }, [f, p, r, a, B, m, V]),
         $ = i.useCallback(
             (e) => {
                 A({ max_age: e });
@@ -546,7 +546,7 @@ function V(e) {
                                             (null == e || null == (t = e.onClick) || t.call(e), Q());
                                         },
                                         disabled: f,
-                                        children: B
+                                        children: F
                                             ? (0, l.jsxs)(l.Fragment, {
                                                   children: [
                                                       (0, l.jsx)(h.dz2, {

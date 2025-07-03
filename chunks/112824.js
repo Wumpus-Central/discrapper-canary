@@ -64,7 +64,7 @@ function b(e) {
 }
 function j(e) {
     let { guild: t } = e,
-        i = (0, a.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())),
+        i = (0, a.e7)([c.Z], () => c.Z.getEveryoneRole(t)),
         u = b(t),
         m = u.length > 0,
         j = g.$X.some((e) => !d.Z.can(e, t, null, { [i.id]: x(h({}, i), { permissions: s.Od(i.permissions, e) }) })),

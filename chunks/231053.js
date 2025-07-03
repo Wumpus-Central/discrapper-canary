@@ -1,7 +1,7 @@
 (n.d(t, {
-    Fi: () => p,
-    JO: () => h,
-    w6: () => _
+    Fi: () => _,
+    JO: () => p,
+    w6: () => f
 }),
     n(953529),
     n(388685));
@@ -9,9 +9,8 @@ var r = n(544891),
     i = n(81825),
     a = n(601964),
     o = n(768581),
-    s = n(624138),
-    l = n(981631);
-function c(e, t, n) {
+    s = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +34,12 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             }));
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,26 +51,26 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var _ = (function (e) {
+var f = (function (e) {
     return ((e.GUILD = 'GUILD'), (e.APPLICATION = 'APPLICATION'), e);
 })({});
-let p = async (e) => {
+let _ = async (e) => {
     let t = null;
     try {
         let n = (
             await r.tn.get({
-                url: l.ANM.EMOJI_SOURCE_DATA(e),
+                url: s.ANM.EMOJI_SOURCE_DATA(e),
                 oldFormErrors: !0,
                 timeout: 5000,
                 rejectWithError: !0
@@ -79,18 +78,18 @@ let p = async (e) => {
         ).body;
         (null == n ? void 0 : n.type) === 'GUILD'
             ? (t = {
-                  guild: h.createFromServer(n.guild),
+                  guild: p.createFromServer(n.guild),
                   type: n.type
               })
             : (null == n ? void 0 : n.type) === 'APPLICATION' &&
               (t = {
-                  application: m.createFromServer(n.application),
+                  application: h.createFromServer(n.application),
                   type: n.type
               });
     } catch (e) {}
     return t;
 };
-class h extends i.Z {
+class p extends i.Z {
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return o.ZP.getGuildIconURL({
@@ -115,13 +114,10 @@ class h extends i.Z {
         return this.features.has(e);
     }
     isDiscoverable() {
-        return this.hasFeature(l.oNc.DISCOVERABLE);
-    }
-    get acronym() {
-        return (0, s.Zg)(this.name);
+        return this.hasFeature(s.oNc.DISCOVERABLE);
     }
     static async getGuildFromEmojiId(e) {
-        let t = await p(e);
+        let t = await _(e);
         return null != t && (null == t ? void 0 : t.type) === 'GUILD' ? t.guild : null;
     }
     static _mapCommon(e) {
@@ -135,8 +131,8 @@ class h extends i.Z {
         };
     }
     static createFromGuildRecord(e) {
-        return new h(
-            f(u({}, h._mapCommon(e)), {
+        return new p(
+            d(c({}, p._mapCommon(e)), {
                 premiumTier: e.premiumTier,
                 premiumSubscriberCount: e.premiumSubscriberCount,
                 presenceCount: null,
@@ -146,8 +142,8 @@ class h extends i.Z {
         );
     }
     static createFromDiscoverableGuild(e) {
-        return new h(
-            f(u({}, h._mapCommon(e)), {
+        return new p(
+            d(c({}, p._mapCommon(e)), {
                 premiumTier: null,
                 premiumSubscriberCount: e.premiumSubscriptionCount,
                 presenceCount: e.presenceCount,
@@ -157,8 +153,8 @@ class h extends i.Z {
         );
     }
     static createFromServer(e) {
-        return new h(
-            f(u({}, h._mapCommon(e)), {
+        return new p(
+            d(c({}, p._mapCommon(e)), {
                 premiumTier: e.premium_tier,
                 premiumSubscriberCount: e.premium_subscription_count,
                 presenceCount: e.approximate_presence_count,
@@ -168,20 +164,20 @@ class h extends i.Z {
         );
     }
     static createFromGuildType(e) {
-        return e instanceof h ? e : e instanceof a.ZP ? h.createFromGuildRecord(e) : h.createFromDiscoverableGuild(e);
+        return e instanceof p ? e : e instanceof a.ZP ? p.createFromGuildRecord(e) : p.createFromDiscoverableGuild(e);
     }
     constructor(e) {
-        (super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'features', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'presenceCount', void 0), c(this, 'memberCount', void 0), c(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis));
+        (super(), l(this, 'id', void 0), l(this, 'name', void 0), l(this, 'icon', void 0), l(this, 'description', void 0), l(this, 'features', void 0), l(this, 'premiumTier', void 0), l(this, 'premiumSubscriberCount', void 0), l(this, 'presenceCount', void 0), l(this, 'memberCount', void 0), l(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis));
     }
 }
-class m extends i.Z {
+class h extends i.Z {
     static createFromServer(e) {
-        return new m({
+        return new h({
             id: e.id,
             name: e.name
         });
     }
     constructor(e) {
-        (super(), c(this, 'id', void 0), c(this, 'name', void 0), (this.id = e.id), (this.name = e.name));
+        (super(), l(this, 'id', void 0), l(this, 'name', void 0), (this.id = e.id), (this.name = e.name));
     }
 }

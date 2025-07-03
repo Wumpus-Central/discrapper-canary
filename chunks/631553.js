@@ -42,8 +42,8 @@ var I = n(266454),
     U = n(449224),
     B = n(574254),
     G = n(556296),
-    F = n(808506),
-    H = n(372679),
+    H = n(808506),
+    F = n(372679),
     Y = n(237997),
     K = n(451478),
     X = n(70956),
@@ -232,7 +232,7 @@ class eE extends o.Component {
             t && window.addEventListener('contextmenu', eO, !1),
             J.isPlatformEmbedded)
         ) {
-            let e = (0, H.M)();
+            let e = (0, F.M)();
             if (null == e) return;
             if (void 0 !== e.setPerfInfoCallback) {
                 var f;
@@ -330,7 +330,7 @@ class eE extends o.Component {
     constructor(e) {
         (super(e),
             em(this, 'handleWindowResize', () => {
-                F.default.isFocusedPidOutOfProcess()
+                H.default.isFocusedPidOutOfProcess()
                     ? this.forceUpdate()
                     : u()(() => {
                           this.forceUpdate();

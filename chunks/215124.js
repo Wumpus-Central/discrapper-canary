@@ -29,7 +29,7 @@ function m(e) {
               children: [
                   (0, r.jsx)(l.R94, {
                       type: l.R94.Types.DESCRIPTION,
-                      children: u.intl.format(u.t.fvOn6O, { guildName: g.toString() })
+                      children: u.intl.format(u.t.fvOn6O, { guildName: g.name })
                   }),
                   (0, r.jsx)(l.LZC, { size: 16 }),
                   (0, r.jsx)(l.zxk, {

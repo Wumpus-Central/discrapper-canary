@@ -11,5 +11,5 @@ let a = () => (0, s.xu)().selectedGuildId,
         var e;
         let t = a(),
             n = (0, i.e7)([r.Z], () => r.Z.getGuild(t));
-        return null != (e = null == n ? void 0 : n.hasFeature(l.oNc.HUB)) && e;
+        return null != (e = null == n ? void 0 : n.features.has(l.oNc.HUB)) && e;
     };

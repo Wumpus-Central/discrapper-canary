@@ -76,8 +76,8 @@ function g(e) {
 function E(e) {
     var t;
     let n = o.Z.getGuild(e),
-        r = (null == n ? void 0 : n.hasFeature(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[null != (t = null == n ? void 0 : n.premiumTier) ? t : l.Eu4.NONE];
-    for (let [e, t] of Object.entries(s.jn)) (null == n ? void 0 : n.hasFeature(e)) && (r += t);
+        r = (null == n ? void 0 : n.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[null != (t = null == n ? void 0 : n.premiumTier) ? t : l.Eu4.NONE];
+    for (let [e, t] of Object.entries(s.jn)) (null == n ? void 0 : n.features.has(e)) && (r += t);
     return r;
 }
 function b(e) {

@@ -3,11 +3,11 @@ var n = i(73800),
     l = i(442837),
     r = i(172337),
     a = i(101492),
-    u = i(710091),
-    s = i(496675),
+    s = i(710091),
+    u = i(496675),
     d = i(388032);
 let o = {
-        'server-subscriptions-onboarding': u.Z,
+        'server-subscriptions-onboarding': s.Z,
         'server-subscriptions-finish-setting-up': a.Z,
         'server-subscriptions-create-tier-from-template': r.Z
     },
@@ -18,7 +18,7 @@ let o = {
         createGuildDescription: () => d.intl.string(d.t.anOis7),
         createGuildCta: () => d.intl.string(d.t.B44MTk),
         canCreateGuild: !0,
-        useIsGuildSupported: () => (0, l.e7)([s.Z], () => (e) => s.Z.canAccessGuildSettings(e), [], l.pF)
+        useIsGuildSupported: () => (0, l.e7)([u.Z], () => (e) => u.Z.canAccessGuildSettings(e), [], l.pF)
     };
 function p(e) {
     var t;

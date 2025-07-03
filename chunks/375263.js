@@ -14,8 +14,8 @@ var r = n(255367),
     f = n(615511);
 function h(e) {
     let { guild: t, canManageGuild: n } = e,
-        h = t.hasFeature(d.oNc.BANNER),
-        x = t.hasFeature(d.oNc.ANIMATED_BANNER),
+        h = t.features.has(d.oNc.BANNER),
+        x = t.features.has(d.oNc.ANIMATED_BANNER),
         b = h && n,
         { analyticsLocations: j } = (0, s.ZP)(),
         _ = i.useCallback(

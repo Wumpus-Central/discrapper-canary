@@ -20,7 +20,7 @@ class m extends (r = a.ZP.Store) {
     isVisible(e) {
         if (null == e) return;
         let t = c.Z.getMemberCount(e.id);
-        return !g.has(e.id) && null != t && t >= p.U3 && d.Z.can(h.Plq.ADMINISTRATOR, e) && !e.hasFeature(h.oNc.COMMUNITY);
+        return !g.has(e.id) && null != t && t >= p.U3 && d.Z.can(h.Plq.ADMINISTRATOR, e) && !e.features.has(h.oNc.COMMUNITY);
     }
 }
 ((l = 'EnablePublicGuildUpsellNoticeStore'),

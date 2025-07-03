@@ -114,7 +114,7 @@ function ej(e, t) {
 let e_ = {
     getSectionDefinition: function (e, t) {
         let e_ = (0, p.p)(t.guild.id, 'guild_settings'),
-            ev = !1 === t.guild.hasFeature(ep.oNc.CREATOR_MONETIZABLE) && !1 === t.guild.hasFeature(ep.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+            ev = !1 === t.guild.features.has(ep.oNc.CREATOR_MONETIZABLE) && !1 === t.guild.features.has(ep.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
             eO =
                 e_ && ev
                     ? {
@@ -131,7 +131,7 @@ let e_ = {
                           }),
                           ariaLabel: eh.intl.string(eh.t['KzCF//'])
                       },
-            eC = t.guild.hasFeature(ep.oNc.COMMUNITY) && t.canViewGuildAnalytics;
+            eC = t.guild.features.has(ep.oNc.COMMUNITY) && t.canViewGuildAnalytics;
         switch (e) {
             case ep.pNK.PROFILE:
                 return {
@@ -293,7 +293,7 @@ let e_ = {
                     ariaLabel: eh.intl.string(eh.t['suhY+f']),
                     element: M.Z,
                     newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
-                    predicate: () => t.canManageGuild && t.guild.hasFeature(ep.oNc.COMMUNITY)
+                    predicate: () => t.canManageGuild && t.guild.features.has(ep.oNc.COMMUNITY)
                 };
             case ep.pNK.MODERATION:
                 return {
@@ -301,7 +301,7 @@ let e_ = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
                     label: eh.intl.string(eh.t['suhY+f']),
                     element: q.ZP,
-                    predicate: () => t.canManageGuild && !t.guild.hasFeature(ep.oNc.COMMUNITY)
+                    predicate: () => t.canManageGuild && !t.guild.features.has(ep.oNc.COMMUNITY)
                 };
             case ep.pNK.GUILD_AUTOMOD:
                 return {
@@ -313,7 +313,7 @@ let e_ = {
                     ariaLabel: eh.intl.string(eh.t.uRelg4),
                     element: u.Z,
                     newIndicatorDismissibleContentTypes: null,
-                    predicate: () => !t.guild.hasFeature(ep.oNc.COMMUNITY) && ((0, d.Nb)(t.guild.id) || (0, d.ze)(t.guild.id))
+                    predicate: () => !t.guild.features.has(ep.oNc.COMMUNITY) && ((0, d.Nb)(t.guild.id) || (0, d.ze)(t.guild.id))
                 };
             case ep.pNK.AUDIT_LOG:
                 return {
@@ -335,14 +335,14 @@ let e_ = {
             case ep.pNK.COMMUNITY:
                 let ey = eh.intl.string(eh.t.ElKTeX);
                 return (
-                    t.guild.hasFeature(ep.oNc.COMMUNITY) && (ey = eh.intl.string(eh.t['8nY2LC'])),
+                    t.guild.features.has(ep.oNc.COMMUNITY) && (ey = eh.intl.string(eh.t['8nY2LC'])),
                     {
                         section: ep.pNK.COMMUNITY,
-                        impressionName: t.guild.hasFeature(ep.oNc.COMMUNITY) ? i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
+                        impressionName: t.guild.features.has(ep.oNc.COMMUNITY) ? i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
                         label: ey,
                         element: F.Z,
                         ariaLabel: ey,
-                        newIndicator: !t.guild.hasFeature(ep.oNc.COMMUNITY) && null != t.memberCount && t.memberCount >= ef.U3 && _.qc.hasHotspot(_.v6.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+                        newIndicator: !t.guild.features.has(ep.oNc.COMMUNITY) && null != t.memberCount && t.memberCount >= ef.U3 && _.qc.hasHotspot(_.v6.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
                         notice: {
                             stores: [P.Z],
                             element: F.X
@@ -399,7 +399,7 @@ let e_ = {
                     type: o.bT.CUSTOM,
                     predicate() {
                         var e;
-                        return t.canManageGuild && (t.guild.hasFeature(ep.oNc.DISCOVERABLE) || !!(null == (e = t.guildMetadata) ? void 0 : e.isPublished));
+                        return t.canManageGuild && (t.guild.features.has(ep.oNc.DISCOVERABLE) || !!(null == (e = t.guildMetadata) ? void 0 : e.isPublished));
                     }
                 };
             case ep.pNK.COMMUNITY_WELCOME:
@@ -413,7 +413,7 @@ let e_ = {
                         stores: [O.Z],
                         element: C.Z
                     },
-                    predicate: () => t.canManageGuild && t.guild.hasFeature(ep.oNc.COMMUNITY) && !t.welcomeScreenEmpty && !t.guild.hasFeature(ep.oNc.GUILD_SERVER_GUIDE)
+                    predicate: () => t.canManageGuild && t.guild.features.has(ep.oNc.COMMUNITY) && !t.welcomeScreenEmpty && !t.guild.features.has(ep.oNc.GUILD_SERVER_GUIDE)
                 };
             case ep.pNK.ROLE_SUBSCRIPTIONS:
                 return ej(eb({}, eO), {
@@ -467,7 +467,7 @@ let e_ = {
                     onClick() {
                         let e = y.default.getCurrentUser();
                         if (null == e) return;
-                        let i = t.guild.toString(),
+                        let { name: i } = t.guild,
                             l = {
                                 header: eh.intl.formatToPlainString(eh.t.us7mCw, { name: i }),
                                 confirmText: eh.intl.string(eh.t.l3hWPz),

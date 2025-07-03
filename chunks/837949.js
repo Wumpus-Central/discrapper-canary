@@ -13,7 +13,7 @@ function p(e) {
     let t = (0, u.DM)(e),
         r = (0, i.e7)([o.Z], () => o.Z.getGuild(e)),
         p = (0, i.e7)([c.default], () => c.default.getCurrentUser());
-    return null != p && null != r && (r.hasFeature(s.oNc.COMMUNITY) || p.isStaff())
+    return null != p && null != r && (r.features.has(s.oNc.COMMUNITY) || p.isStaff())
         ? (0, n.jsx)(l.S89, {
               id: 'opt-in',
               label: b.intl.string(b.t.FB2ZZW),

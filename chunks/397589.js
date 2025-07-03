@@ -19,15 +19,15 @@ let y = (e) => {
     var t;
     let { message: n } = e,
         y = l.useRef(null),
-        v = (0, p.p7)('Message Header') && n.hasPotions(),
-        j = s.Z.getChannel(n.getChannelId()),
+        j = (0, p.p7)('Message Header') && n.hasPotions(),
+        v = s.Z.getChannel(n.getChannelId()),
         P = null == (t = n.potions) ? void 0 : t[0],
         x = l.useMemo(() => {
             var e;
             if (null == P) return null;
             let t = a.default.getUser(P.used_by);
-            return null != (e = (0, u.y)(null == j ? void 0 : j.getGuildId(), null == j ? void 0 : j.id, t)) ? e : null == t ? void 0 : t.globalName;
-        }, [P, j]),
+            return null != (e = (0, u.y)(null == v ? void 0 : v.getGuildId(), null == v ? void 0 : v.id, t)) ? e : null == t ? void 0 : t.globalName;
+        }, [P, v]),
         C = l.useCallback(() => {
             if (null != y.current && (0, f.Uw)(n)) {
                 let { x: e, y: t, width: r, height: l } = y.current.getBoundingClientRect();
@@ -47,7 +47,7 @@ let y = (e) => {
         w = l.useCallback(() => {
             (0, i.Z)(c.Z.getArticleURL(b.BhN.CONFETTI_POTION));
         }, []);
-    return v && null != x && (null == P ? void 0 : P.type) === g.B.CONFETTI
+    return j && null != x && (null == P ? void 0 : P.type) === g.B.CONFETTI
         ? (0, r.jsx)(o.P3F, {
               onFocus: C,
               onClick: w,

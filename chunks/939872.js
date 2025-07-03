@@ -22,7 +22,7 @@ let u = (e) => {
                 className: d.confirmationHeader,
                 variant: 'heading-lg/extrabold',
                 children: c.intl.format(c.t.I5dYFh, {
-                    serverName: null == m ? void 0 : m.toString(),
+                    serverName: null == m ? void 0 : m.name,
                     tierName: n.name
                 })
             }),

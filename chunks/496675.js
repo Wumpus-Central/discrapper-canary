@@ -228,8 +228,8 @@ class Q extends (r = s.ZP.Store) {
             canViewGuildAnalytics: this.can(I.Plq.VIEW_GUILD_ANALYTICS, e),
             canAccessMembersPage: this.canAccessMemberSafetyPage(e),
             isGuildAdmin: this.can(I.Plq.ADMINISTRATOR, e),
-            isOwner: null != t && e.isOwner(t),
-            isOwnerWithRequiredMfaLevel: null != t && e.isOwnerWithRequiredMfaLevel(t),
+            isOwner: null != t && (0, h.eM)(e, t),
+            isOwnerWithRequiredMfaLevel: null != t && (0, h.yn)(e, t),
             guild: e
         };
     }
@@ -257,7 +257,7 @@ class Q extends (r = s.ZP.Store) {
     }
     canManageUser(e, t, n) {
         let r = t instanceof m.Z ? t.id : t;
-        if (n.isOwner(r)) return !1;
+        if ((0, h.eM)(n, r)) return !1;
         let i = v.default.getCurrentUser();
         if (!this.can(e, n)) return !1;
         let a = null != i ? E.e9(n, i.id) : void 0,

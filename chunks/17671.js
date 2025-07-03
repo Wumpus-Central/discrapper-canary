@@ -10,8 +10,8 @@ var i = t(255367),
     d = t(313201),
     g = t(597),
     p = t(147754),
-    h = t(984933),
-    f = t(720202),
+    f = t(984933),
+    h = t(720202),
     v = t(430824),
     m = t(306680),
     j = t(626135),
@@ -43,13 +43,13 @@ function T(e) {
         }, [L, T]),
         r.useEffect(() => {
             let e = v.Z.getGuild(T);
-            if (!(null == e ? void 0 : e.hasFeature(k.oNc.HUB))) return;
+            if (!(null == e ? void 0 : e.features.has(k.oNc.HUB))) return;
             let { showHubEventsList: n } = p.Z.getCurrentConfig({
                 guildId: T,
                 location: 'd3755f_1'
             });
             if (!n) return;
-            let t = h.ZP.getDefaultChannel(T);
+            let t = f.ZP.getDefaultChannel(T);
             null != t && g.c(t.id);
         }, [T]),
         (0, u.ZP)(() => {
@@ -65,7 +65,7 @@ function T(e) {
                 .filter(b.lm)
                 .uniq()
                 .forEach((e) => {
-                    f.Z.requestMember(T, e);
+                    h.Z.requestMember(T, e);
                 });
         }, [T, L]),
         r.useEffect(() => {

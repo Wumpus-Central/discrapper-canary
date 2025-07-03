@@ -19,7 +19,7 @@ function j(e) {
     let t,
         { guild: n, channel: j, customWebhooks: O, editedWebhook: v, selectableWebhookChannels: y, refToScroller: _, errors: C, canNavigate: N } = e,
         I = (0, d.ZP)(),
-        [S, E] = i.useState(null),
+        [E, S] = i.useState(null),
         [T, w] = i.useState(null);
     if (null != j) t = j;
     else {
@@ -48,7 +48,7 @@ function j(e) {
                     null
                 );
             });
-            null != e && (w(e.id), E(e));
+            null != e && (w(e.id), S(e));
         }
     }, [N, t, n]);
     (0, c.ZP)(() => {
@@ -79,7 +79,7 @@ function j(e) {
                               webhooks: O,
                               editedWebhook: v,
                               selectableWebhookChannels: y,
-                              lastCreatedWebhookId: null == S ? void 0 : S.id,
+                              lastCreatedWebhookId: null == E ? void 0 : E.id,
                               errors: C,
                               canNavigate: N
                           })

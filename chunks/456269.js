@@ -94,7 +94,7 @@ function H(e) {
                 location: '553713_1'
             },
             { autoTrackExposure: !1 }
-        ).enabled || !!((null == n ? void 0 : n.hasFeature(D.oNc.COMMUNITY)) || (null == n ? void 0 : n.hasFeature(D.oNc.INTERNAL_EMPLOYEE_ONLY)))
+        ).enabled || !!((null == n ? void 0 : n.features.has(D.oNc.COMMUNITY)) || (null == n ? void 0 : n.features.has(D.oNc.INTERNAL_EMPLOYEE_ONLY)))
     );
 }
 function Y(e, n, t, l) {

@@ -23,7 +23,7 @@ function c(e) {
         }),
         c = (0, r.e7)([i.Z], () => {
             var t;
-            return (null == (t = i.Z.getGuild(e)) ? void 0 : t.hasFeature(s.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (null == (t = i.Z.getGuild(e)) ? void 0 : t.features.has(s.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         })
             ? 0
             : s.oCV[l];

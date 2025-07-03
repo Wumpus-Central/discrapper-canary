@@ -16,7 +16,7 @@ function o(e, t) {
           });
 }
 function s(e) {
-    if (null == e.guild || (0, i.Qs)(e.guild).hasFeature(a.oNc.HUB)) return !1;
+    if (null == e.guild || (0, i.Qs)(e.guild).features.has(a.oNc.HUB)) return !1;
     let t = (null == e ? void 0 : e.channel) != null ? (0, r.jD)(e.channel) : null;
     return null == t || !t.isGuildVocal();
 }

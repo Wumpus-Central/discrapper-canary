@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(700785),
     k = n(862679),
     M = n(981631),
-    L = n(815660),
-    D = n(388032),
+    D = n(815660),
+    L = n(388032),
     U = n(628829);
 function B(e, t, n) {
     return (
@@ -100,24 +100,24 @@ class G extends i.PureComponent {
                 useReducedMotion: _
             };
         if (e && !h) {
-            if (((j.message = D.intl.string(D.t.Hl0Mqq)), null != f && f >= 1000)) {
+            if (((j.message = L.intl.string(L.t.Hl0Mqq)), null != f && f >= 1000)) {
                 let e = 1000 * Math.floor(f / 1000);
-                j.subtitle = D.intl.formatToPlainString(D.t.C5bgrK, { count: e.toLocaleString() });
+                j.subtitle = L.intl.formatToPlainString(L.t.C5bgrK, { count: e.toLocaleString() });
             }
-            ((j.buttonText = D.intl.string(D.t['3aOv+v'])), (j.onButtonClick = this.handleFollowAnnouncement), t && ((j.onSecondaryButtonClick = this.handleJoinServer), (j.secondaryButtonText = D.intl.string(D.t['RLch7+']))));
-        } else if (n) ((j.message = D.intl.string(D.t['Eg3/c3'])), (j.buttonText = D.intl.string(D.t.fiNVio)), (j.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount));
+            ((j.buttonText = L.intl.string(L.t['3aOv+v'])), (j.onButtonClick = this.handleFollowAnnouncement), t && ((j.onSecondaryButtonClick = this.handleJoinServer), (j.secondaryButtonText = L.intl.string(L.t['RLch7+']))));
+        } else if (n) ((j.message = L.intl.string(L.t['Eg3/c3'])), (j.buttonText = L.intl.string(L.t.fiNVio)), (j.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount));
         else if (g)
             switch (null == C ? void 0 : C.applicationStatus) {
                 case b.wB.SUBMITTED:
-                    ((j.message = D.intl.string(D.t['5iLvS0'])), (j.subtitle = D.intl.string(D.t.FdsK4u)), (j.buttonText = D.intl.string(D.t.mqtdmZ)), (j.onButtonClick = this.handleCancelApplication));
+                    ((j.message = L.intl.string(L.t['5iLvS0'])), (j.subtitle = L.intl.string(L.t.FdsK4u)), (j.buttonText = L.intl.string(L.t.mqtdmZ)), (j.onButtonClick = this.handleCancelApplication));
                     break;
                 case b.wB.REJECTED:
-                    ((j.message = D.intl.string(D.t.lk30cX)), (j.buttonText = D.intl.string(D.t['8RrsHh'])), (j.onButtonClick = this.handleViewApplicationRejection));
+                    ((j.message = L.intl.string(L.t.lk30cX)), (j.buttonText = L.intl.string(L.t['8RrsHh'])), (j.onButtonClick = this.handleViewApplicationRejection));
                     break;
                 default:
-                    ((j.message = D.intl.string(D.t.rEBKvr)), (j.buttonText = D.intl.string(D.t['r8/DT0'])), (j.buttonColor = s.Ttl.BRAND), (j.onButtonClick = this.handleShowMemberVerification));
+                    ((j.message = L.intl.string(L.t.rEBKvr)), (j.buttonText = L.intl.string(L.t['r8/DT0'])), (j.buttonColor = s.Ttl.BRAND), (j.onButtonClick = this.handleShowMemberVerification));
             }
-        else i && !y ? ((j.message = D.intl.string(D.t['2dThMD'])), (j.buttonText = D.intl.string(D.t['50gfOj'])), (j.onButtonClick = this.handleVerifyPhone)) : l ? ((j.message = D.intl.string(D.t.FkGPS0)), (j.buttonText = D.intl.string(D.t.lm1UKi)), (j.onButtonClick = this.handleResendVerification)) : o ? ((j.message = D.intl.formatToPlainString(D.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (j.countdown = a)) : c && ((j.message = D.intl.formatToPlainString(D.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (j.countdown = u));
+        else i && !y ? ((j.message = L.intl.string(L.t['2dThMD'])), (j.buttonText = L.intl.string(L.t['50gfOj'])), (j.onButtonClick = this.handleVerifyPhone)) : l ? ((j.message = L.intl.string(L.t.FkGPS0)), (j.buttonText = L.intl.string(L.t.lm1UKi)), (j.onButtonClick = this.handleResendVerification)) : o ? ((j.message = L.intl.formatToPlainString(L.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (j.countdown = a)) : c && ((j.message = L.intl.formatToPlainString(L.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (j.countdown = u));
         return (0, r.jsx)(s.yRy, {
             targetElementRef: this.textAreaContainerRef,
             position: 'top',
@@ -185,9 +185,9 @@ class G extends i.PureComponent {
                             H(
                                 F(
                                     {
-                                        header: D.intl.string(D.t.aIz1oa),
-                                        confirmText: D.intl.string(D.t['cY+Ooa']),
-                                        cancelText: D.intl.string(D.t['ETE/oK']),
+                                        header: L.intl.string(L.t.aIz1oa),
+                                        confirmText: L.intl.string(L.t['cY+Ooa']),
+                                        cancelText: L.intl.string(L.t['ETE/oK']),
                                         onConfirm: () => f.Z.removeGuildJoinRequest(e.id),
                                         confirmButtonColor: s.zxk.Colors.BRAND
                                     },
@@ -196,7 +196,7 @@ class G extends i.PureComponent {
                                 {
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-md/normal',
-                                        children: D.intl.string(D.t['13tjTU'])
+                                        children: L.intl.string(L.t['13tjTU'])
                                     })
                                 }
                             )
@@ -224,7 +224,7 @@ class G extends i.PureComponent {
                         let { default: e } = await Promise.all([n.e('76540'), n.e('84575')]).then(n.bind(n, 607018));
                         return (t) => (0, r.jsx)(e, F({ reason: E.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: L.M }
+                    { modalKey: D.M }
                 );
             }),
             B(this, 'handleResendVerification', () => {
@@ -236,12 +236,12 @@ class G extends i.PureComponent {
                         (0, r.jsx)(
                             s.ConfirmModal,
                             H(F({}, e), {
-                                header: D.intl.string(D.t.LykQYm),
-                                confirmText: D.intl.string(D.t.BddRzc),
+                                header: L.intl.string(L.t.LykQYm),
+                                confirmText: L.intl.string(L.t.BddRzc),
                                 confirmButtonColor: s.zxk.Colors.BRAND,
                                 children: (0, r.jsx)(s.Text, {
                                     variant: 'text-md/normal',
-                                    children: D.intl.format(D.t.azKEPz, { email: t })
+                                    children: L.intl.format(L.t.azKEPz, { email: t })
                                 })
                             })
                         )
@@ -311,7 +311,7 @@ function V(e) {
         o = i.getGuildId(),
         s = (0, a.e7)([N.Z], () => N.Z.getGuild(o)),
         c = (0, a.e7)([T.Z], () => T.Z.getCheck(o)),
-        u = i.type === M.d4z.GUILD_ANNOUNCEMENT && null != s && s.hasFeature(M.oNc.NEWS),
+        u = i.type === M.d4z.GUILD_ANNOUNCEMENT && null != s && s.features.has(M.oNc.NEWS),
         d = (0, a.e7)([P.Z], () => (u ? P.Z.getFollowerStatsForChannel(i.id) : null)),
         h = (0, a.e7)([v.Z], () => v.Z.isLurking(o)),
         f = (0, a.e7)([w.default], () => w.default.getCurrentUser()),
