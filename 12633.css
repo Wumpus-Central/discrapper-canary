@@ -2505,25 +2505,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     border-top-color: var(--background-surface-high)
 }
 
-.tooltipNested__382e7 {
-    background-color: var(--background-nested-floating);
-    --tooltip-pointer-bg: var(--background-nested-floating)
-}
-
-.tooltipNested__382e7 .tooltipPointer__382e7 {
-    border-top-color: var(--background-nested-floating)
-}
-
-.tooltipBlack__382e7 {
-    background-color: var(--black-500);
-    color: var(--white-500);
-    --tooltip-pointer-bg: var(--black-500)
-}
-
-.tooltipBlack__382e7 .tooltipPointer__382e7 {
-    border-top-color: var(--black-500)
-}
-
 .tooltipGrey__382e7 {
     background-color: var(--primary-700);
     color: var(--white-500);
@@ -2562,24 +2543,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .tooltipGreen__382e7 .tooltipPointer__382e7 {
     border-top-color: var(--green-360)
-}
-
-.tooltipYellow__382e7 {
-    background-color: var(--status-warning-background);
-    color: var(--status-warning-text);
-    --tooltip-pointer-bg: var(--status-warning-background)
-}
-
-.tooltipYellow__382e7 .tooltipPointer__382e7 {
-    border-top-color: var(--status-warning-background)
-}
-
-.tooltipPremium__382e7 {
-    background: linear-gradient(270deg, var(--premium-tier-2-pink-for-gradients) 0, var(--premium-tier-2-pink-for-gradients-2) 33.63%, var(--premium-tier-2-purple-for-gradients) 100%)
-}
-
-.tooltipPremium__382e7 .tooltipPointer__382e7 {
-    border-top-color: var(--premium-tier-2-pink-for-gradients-2)
 }
 
 .tooltipPointerBg__382e7 {
