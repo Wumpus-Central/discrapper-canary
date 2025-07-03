@@ -51,7 +51,7 @@ function b(e) {
 function S(e) {
     var t, n, i, a;
     let { nativePickerEnabled: m } = e,
-        [{ preset: S, resolution: C, fps: y, muteStreamAudio: O, selectedSource: Z, sourceType: I, audioSourceId: w }] = (0, h.E_)(),
+        [{ preset: S, resolution: C, fps: y, muteStreamAudio: O, selectedSource: Z, sourceType: w, audioSourceId: I }] = (0, h.E_)(),
         { twoClickVariant: N } = (0, d.a)({
             location: 'go_live_modal_refresh',
             autoTrackExposure: !1
@@ -60,7 +60,7 @@ function S(e) {
         [E, P] = null != (i = (0, p.Z)(S)) ? i : [C, y],
         R = (0, u.L)(S),
         k = (0, f.M)(E),
-        A = I === s.vA.CAMERA,
+        A = w === s.vA.CAMERA,
         M = null != Z || (!!N && (!m || A)),
         L = null != Z ? (null == Z || null == (t = Z.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : A,
         D = M ? void 0 : S === x.tI.PRESET_VIDEO ? _.intl.string(g.default.MuHUFR) : S === x.tI.PRESET_DOCUMENTS ? _.intl.string(g.default.y0JuYW) : void 0;
@@ -132,7 +132,7 @@ function S(e) {
                                                   null ==
                                                   (n = T.find((e) => {
                                                       let { id: t } = e;
-                                                      return w === t;
+                                                      return I === t;
                                                   }))
                                                       ? void 0
                                                       : n.name

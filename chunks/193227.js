@@ -17,13 +17,13 @@ var r = n(255367),
     _ = n(853748),
     C = n(426171),
     O = n(823941),
-    v = n(38900),
-    E = n(709999),
+    E = n(38900),
+    v = n(709999),
     S = n(258939),
     x = n(81136),
     y = n(619899),
-    T = n(302800),
-    j = n(215023),
+    j = n(302800),
+    T = n(215023),
     P = n(981631),
     L = n(484920);
 function k(e) {
@@ -50,13 +50,13 @@ function k(e) {
                               {
                                   newValue: { tilePosition: t },
                                   children: (0, r.jsx)(
-                                      E.Z,
+                                      v.Z,
                                       {
                                           onMount: n,
                                           category: i,
                                           product: e,
                                           user: o,
-                                          tab: j.AW.CATALOG
+                                          tab: T.AW.CATALOG
                                       },
                                       e.skuId
                                   )
@@ -138,7 +138,7 @@ function I(e) {
 function B(e) {
     let { category: t, initialItemCardRef: n, isFullScreen: i } = e,
         [o, a] = l.useState(!1),
-        s = (0, T.M7)(t.skuId),
+        s = (0, j.M7)(t.skuId),
         u = (0, c.O)(
             (e) => {
                 a(e && null != s);
@@ -174,18 +174,18 @@ function N(e) {
         h = (0, p.sp)(),
         b = (0, S.R)(),
         _ = null != (t = null == h ? void 0 : h.sessionId) ? t : '',
-        { noCache: O, includeUnpublished: E } = (0, x.Z)(),
+        { noCache: O, includeUnpublished: v } = (0, x.Z)(),
         y = l.useMemo(() => {
-            let e = (d - 1) * j.kN;
-            return n.slice(e, e + j.kN);
+            let e = (d - 1) * T.kN;
+            return n.slice(e, e + T.kN);
         }, [n, d]);
     (l.useEffect(() => {
         (0, m.n)({
             sessionId: _,
             checkpoint: m.a.SHOP_MOUNTED,
-            tab: j.AW.CATALOG,
+            tab: T.AW.CATALOG,
             isFullScreen: c,
-            unpublishedCategoriesShown: E,
+            unpublishedCategoriesShown: v,
             cacheDisabled: O
         });
     }, []),
@@ -195,22 +195,22 @@ function N(e) {
                 (0, m.n)({
                     sessionId: _,
                     checkpoint: m.a.SHOP_RENDERED,
-                    tab: j.AW.CATALOG,
+                    tab: T.AW.CATALOG,
                     isFullScreen: c,
-                    unpublishedCategoriesShown: E,
+                    unpublishedCategoriesShown: v,
                     cacheDisabled: O
                 });
-        }, [_, c, E, O, b, y.length]));
-    let T = l.useRef(null),
+        }, [_, c, v, O, b, y.length]));
+    let j = l.useRef(null),
         k = (0, a.e7)([u.Z], () => u.Z.getLayers().includes(P.S9g.COLLECTIBLES_SHOP));
     (0, C.Kp)({
         isFetchingCategories: b,
         isLayer: k,
-        initialItemCardRef: T
+        initialItemCardRef: j
     });
     let I = (0, f.F)('CollectiblesBrowse');
     return b
-        ? (0, r.jsx)(v.Z, {})
+        ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)('div', {
               className: o()(L.categories, { [L.categoriesNoFilter]: !I }),
               children: [
@@ -229,7 +229,7 @@ function N(e) {
                                       newValue: { categoryPosition: t },
                                       children: (0, r.jsx)(B, {
                                           category: e,
-                                          initialItemCardRef: T,
+                                          initialItemCardRef: j,
                                           isFullScreen: c
                                       })
                                   })
@@ -242,7 +242,7 @@ function N(e) {
                       children: (0, r.jsx)(s.DsT, {
                           currentPage: d,
                           totalCount: n.length,
-                          pageSize: j.kN,
+                          pageSize: T.kN,
                           onPageChange: g,
                           disablePaginationGap: !0
                       })

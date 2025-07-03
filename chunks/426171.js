@@ -1,7 +1,7 @@
 (n.d(t, {
-    Kp: () => v,
+    Kp: () => E,
     u9: () => C,
-    xV: () => E
+    xV: () => v
 }),
     n(413496),
     n(433524),
@@ -76,7 +76,7 @@ let b = ''.concat('#').concat('itemSkuId', '='),
         }
         return () => {};
     },
-    v = (e) => {
+    E = (e) => {
         let { isFetchingCategories: t, isLayer: n, initialItemCardRef: c } = e,
             d = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
             g = r.useRef(null),
@@ -89,11 +89,11 @@ let b = ''.concat('#').concat('itemSkuId', '='),
             let e = m.exec(f.hash);
             null != e ? (g.current = e[1]) : (g.current = null);
         }, [C, n, f.hash]);
-        let v = (0, i.e7)([u.Z], () => u.Z.initialProductSkuId);
+        let E = (0, i.e7)([u.Z], () => u.Z.initialProductSkuId);
         r.useEffect(() => {
             if (t) return;
             let e = null;
-            if (null != (e = n ? v : g.current)) {
+            if (null != (e = n ? E : g.current)) {
                 let t = [],
                     n = setTimeout(() => {
                         let n = O({
@@ -113,9 +113,9 @@ let b = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [n, _, b, t, v, c, d, C]);
+        }, [n, _, b, t, E, c, d, C]);
     },
-    E = (e) => {
+    v = (e) => {
         let t = r.useRef({}),
             n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
             l = (0, i.e7)([c.Z], () => c.Z.isFetchingCategories),

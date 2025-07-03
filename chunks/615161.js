@@ -144,7 +144,7 @@ function b(e, t, n) {
         y = null != (r = a.I0.useSetting()) && r,
         O = null != (l = a.eo.useSetting()) && l;
     (0, u.Z)(f.tI.PRESET_CUSTOM, j, b, t, n) || ((j = f.LY.RESOLUTION_720), (b = f.ws.FPS_30));
-    let [Z, I] = i.useReducer(
+    let [Z, w] = i.useReducer(
         v,
         p(h({}, x), {
             muteStreamAudio: !S,
@@ -161,7 +161,7 @@ function b(e, t, n) {
     return (
         i.useEffect(() => {
             o.Z.hasPermission(m.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
-                I({
+                w({
                     type: 'set_has_permission',
                     value: e
                 })
@@ -169,7 +169,7 @@ function b(e, t, n) {
         }, []),
         {
             state: Z,
-            dispatch: I
+            dispatch: w
         }
     );
 }

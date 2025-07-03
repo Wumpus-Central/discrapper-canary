@@ -74,7 +74,7 @@ function C(e) {
 function y(e) {
     var t, n, v;
     let { onClose: y, onSelect: O } = e,
-        [{ notifyFriends: Z, hidePreview: I, muteStreamAudio: w, preset: N, resolution: T, fps: E, sourceType: P, audioSourceId: R }, k] = (0, m.E_)(),
+        [{ notifyFriends: Z, hidePreview: w, muteStreamAudio: I, preset: N, resolution: T, fps: E, sourceType: P, audioSourceId: R }, k] = (0, m.E_)(),
         A = (0, o.zX)({ location: 'StreamOptionsMenu' }),
         M = (0, f.Z)(),
         [L, D] = null != (n = (0, p.Z)(x.tI.PRESET_VIDEO)) ? n : [x.LY.RESOLUTION_720, x.ws.FPS_30],
@@ -192,12 +192,12 @@ function y(e) {
             (0, r.jsx)(l.Clw, {}),
             (0, r.jsx)(l.S89, {
                 id: 'stream-option-mute',
-                checked: w,
+                checked: I,
                 label: _.intl.string(g.default['b0+Ira']),
                 action: () =>
                     k({
                         type: 'set_mute_audio',
-                        value: !w
+                        value: !I
                     })
             }),
             P === i.vA.CAMERA &&
@@ -238,12 +238,12 @@ function y(e) {
                 children: [
                     (0, r.jsx)(l.S89, {
                         id: 'stream-option-share-preview',
-                        checked: I,
+                        checked: w,
                         label: _.intl.string(g.default.H3Qjqa),
                         action: () =>
                             k({
                                 type: 'set_hide_preview',
-                                hidePreview: !I
+                                hidePreview: !w
                             })
                     }),
                     (0, r.jsx)(l.S89, {

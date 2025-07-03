@@ -85,6 +85,6 @@ let d = 'manual',
         let n = (0, s.Nj)(i.z.CUSTOM_THEME_COACHMARK),
             a = (0, o.ZP)((e) => e.recentlyShown[0]);
         r.useEffect(() => {
-            e && !n && null != t && t !== i.z.CUSTOM_THEME_COACHMARK && l.default.track(c.rMx.CUSTOM_THEMES_COACHMARK_NOT_SHOWN_REASON, { last_dismissible_content_winner: null != a ? i.z[a] : 'None' });
+            e && !n && t !== i.z.CUSTOM_THEME_COACHMARK && l.default.track(c.rMx.CUSTOM_THEMES_COACHMARK_NOT_SHOWN_REASON, { last_dismissible_content_winner: null != a ? i.z[a] : 'None' });
         }, [e, n, t, a]);
     };

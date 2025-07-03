@@ -17,10 +17,10 @@ let b = (e) => {
     let { wideBannerBlock: b, handleTransition: m, tab: _ } = e,
         C = null == (t = u.Z.getCategoryByStoreListingId(b.categoryStoreListingId)) ? void 0 : t.skuId,
         O = l.useRef(null),
-        v = l.useRef(null),
-        [E, S] = l.useState();
+        E = l.useRef(null),
+        [v, S] = l.useState();
     l.useEffect(() => {
-        let e = v.current;
+        let e = E.current;
         if (null == e) return;
         let t = () => {
             e.naturalWidth > 0 && e.naturalHeight > 0 && S(1080 * (e.naturalHeight / e.naturalWidth));
@@ -34,44 +34,44 @@ let b = (e) => {
     }, []);
     let x = null != C ? C : '',
         { handleCardVisibilityChange: y } = (0, d.E)(x, 'home', 'marketing wide banner'),
-        T = b.bannerUrl;
-    if (null == T) return null;
-    let j = _ === p.AW.ORBS;
+        j = b.bannerUrl;
+    if (null == j) return null;
+    let T = _ === p.AW.ORBS;
     return (0, r.jsx)(a.$, {
         innerRef: O,
         onChange: y,
         threshold: 0,
         children: (0, r.jsxs)('div', {
             ref: O,
-            className: o()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: j }),
+            className: o()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: T }),
             children: [
                 (0, r.jsx)('div', {
-                    className: o()(h.wideBannerBackgroundImg, { [h.extraRounded]: j }),
+                    className: o()(h.wideBannerBackgroundImg, { [h.extraRounded]: T }),
                     children: (0, r.jsx)('img', {
-                        ref: v,
-                        src: T,
+                        ref: E,
+                        src: j,
                         alt: b.title,
-                        className: o()(h.wideBannerArt, { [h.wideBannerArtOrbs]: j }),
-                        style: { height: null != E ? ''.concat(E, 'px') : 'auto' }
+                        className: o()(h.wideBannerArt, { [h.wideBannerArtOrbs]: T }),
+                        style: { height: null != v ? ''.concat(v, 'px') : 'auto' }
                     })
                 }),
                 (0, r.jsx)('div', {
                     className: h.wideBannerContentContainer,
-                    style: { maxHeight: null != E ? ''.concat(E, 'px') : 'auto' },
+                    style: { maxHeight: null != v ? ''.concat(v, 'px') : 'auto' },
                     children: (0, r.jsxs)('div', {
                         className: h.wideBannerTextContainer,
                         children: [
                             (0, r.jsx)(s.X6q, {
                                 style: { color: null != (n = b.bannerTextColor) ? n : 'var(--header-primary)' },
-                                className: j ? h.wideBannerOrbsHeading : void 0,
-                                variant: j ? 'heading-xl/bold' : 'heading-lg/semibold',
+                                className: T ? h.wideBannerOrbsHeading : void 0,
+                                variant: T ? 'heading-xl/bold' : 'heading-lg/semibold',
                                 children: b.title
                             }),
                             (0, r.jsx)(s.Text, {
                                 style: { color: null != (i = b.bannerTextColor) ? i : 'var(--text-muted)' },
                                 lineClamp: 2,
-                                variant: j ? 'text-md/medium' : 'text-sm/medium',
-                                children: j ? f.intl.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(g.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : b.body
+                                variant: T ? 'text-md/medium' : 'text-sm/medium',
+                                children: T ? f.intl.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(g.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : b.body
                             })
                         ]
                     })

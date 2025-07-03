@@ -16,17 +16,17 @@ var r = n(255367),
     m = n(388032),
     _ = n(846165);
 let C = (e) => {
-    let { product: t, selectedVariantIndex: n, returnRef: C, onSuccess: O, tooltipDelay: v, color: E = o.Ttl.BRAND } = e,
+    let { product: t, selectedVariantIndex: n, returnRef: C, onSuccess: O, tooltipDelay: E, color: v = o.Ttl.BRAND } = e,
         { analyticsLocations: S } = (0, a.ZP)(),
         x = l.useRef(null),
         y = (0, p.hv)('CollectiblesShopGiftButton'),
-        T = (0, u.sp)(),
-        j = (0, g.Z)();
+        j = (0, u.sp)(),
+        T = (0, g.Z)();
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(o.ua7, {
               text: m.intl.string(m.t['JCFN//']),
-              delay: v,
+              delay: E,
               children: (e) => {
                   var l, a;
                   return (0, r.jsx)(
@@ -60,7 +60,7 @@ let C = (e) => {
                           {
                               buttonRef: x,
                               className: _.giftButton,
-                              color: E,
+                              color: v,
                               look: o.zxk.Looks.FILLED,
                               size: o.PhG.ICON,
                               innerClassName: _.giftButtonInner,
@@ -68,14 +68,14 @@ let C = (e) => {
                               onClick: (e) => {
                                   (e.stopPropagation(),
                                       c.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
+                                          collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
                                           sku_id: t.skuId,
-                                          page_section: null == T ? void 0 : T.pageSection,
-                                          page_category: null == T ? void 0 : T.pageCategory,
+                                          page_section: null == j ? void 0 : j.pageSection,
+                                          page_category: null == j ? void 0 : j.pageCategory,
                                           tile_type: i.Z[t.type],
-                                          tile_position: String(null == T ? void 0 : T.tilePosition),
+                                          tile_position: String(null == j ? void 0 : j.tilePosition),
                                           cta_name: 'gift button',
-                                          page_type: j || 'home'
+                                          page_type: T || 'home'
                                       }),
                                       (0, s.Z)({
                                           skuId: (0, f.S)({

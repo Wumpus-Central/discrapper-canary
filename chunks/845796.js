@@ -89,7 +89,7 @@ let p = (e) => {
                         },
                         popularity: {
                             sortType: o.E.POPULARITY,
-                            sortDirection: i.F.ASC
+                            sortDirection: i.F.DESC
                         }
                     })[e],
                 []

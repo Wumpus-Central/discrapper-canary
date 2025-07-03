@@ -23,8 +23,8 @@ var r = n(255367),
     y = n(19780),
     O = n(594174),
     Z = n(449224),
-    I = n(358085),
-    w = n(74538),
+    w = n(358085),
+    I = n(74538),
     N = n(668519),
     T = n(299570),
     E = n(989941),
@@ -63,14 +63,14 @@ function Q(e) {
             autoTrackExposure: !1
         }),
         er = i.useRef(performance.now()),
-        ei = (0, m.e7)([C.Z], () => C.Z.getUseSystemScreensharePicker() && ((0, I.isLinux)() || ((0, I.isMac)() && c().satisfies(null === x.Z || void 0 === x.Z ? void 0 : x.Z.os.release, Y.jR)))),
+        ei = (0, m.e7)([C.Z], () => C.Z.getUseSystemScreensharePicker() && ((0, w.isLinux)() || ((0, w.isMac)() && c().satisfies(null === x.Z || void 0 === x.Z ? void 0 : x.Z.os.release, Y.jR)))),
         { analyticsLocations: el } = (0, v.ZP)(_.Z.GO_LIVE_MODAL_V2),
         es = (0, m.e7)([O.default], () => O.default.getCurrentUser()),
         eo = (0, k.Z)(),
-        { state: ea, dispatch: ec } = (0, B.Ti)(a, es, eo, (0, I.isWindows)() && null != a && Q ? 'confirm' : 'source_select'),
+        { state: ea, dispatch: ec } = (0, B.Ti)(a, es, eo, (0, w.isWindows)() && null != a && Q ? 'confirm' : 'source_select'),
         ed = (0, b.zX)({ location: 'GoLiveModalV2' });
     (0, V.Z)(ei, ec, 'confirm' === ea.modalStep);
-    let eu = !w.ZP.canStreamQuality(w.ZP.StreamQuality.HIGH, es),
+    let eu = !I.ZP.canStreamQuality(I.ZP.StreamQuality.HIGH, es),
         ef = en && !ei,
         em = (0, h.q_F)(
             {
@@ -82,12 +82,12 @@ function Q(e) {
             },
             'respect-motion-settings'
         ),
-        eh = !(0, I.isLinux)(),
+        eh = !(0, w.isLinux)(),
         ep = 'confirm' === ea.modalStep,
         ex = !Q && null != a && !ep,
         eg = ep || (!ex && $ && (!ei || ea.sourceType === f.vA.CAMERA)),
         e_ = ei && ea.sourceType !== f.vA.CAMERA,
-        ev = ei || !(0, I.isWindows)() || !ee || ep,
+        ev = ei || !(0, w.isWindows)() || !ee || ep,
         ej = et && eu,
         eb = ep && ee,
         eS = i.useMemo(() => {
@@ -137,7 +137,7 @@ function Q(e) {
             [n, ea]
         );
     async function eO(e) {
-        if ((0, I.isWindows)() && ee && 'source_select' === ea.modalStep) {
+        if ((0, w.isWindows)() && ee && 'source_select' === ea.modalStep) {
             (ec({
                 type: 'set_step',
                 step: 'confirm'
@@ -157,7 +157,7 @@ function Q(e) {
                 url: ''
             });
         }, [ey, ea.nativeSourceType]),
-        eI = (0, r.jsxs)(h.mzw, {
+        ew = (0, r.jsxs)(h.mzw, {
             className: s()(K.footer, { [K.footerShadow]: !eu && ep }),
             separator: !1,
             direction: u.k.Direction.VERTICAL,
@@ -204,12 +204,12 @@ function Q(e) {
                 eu && (0, r.jsx)(F.Z, { onClose: n })
             ]
         }),
-        ew = ef
+        eI = ef
             ? (0, r.jsx)(o.animated.div, {
                   style: em,
-                  children: eI
+                  children: ew
               })
-            : eI;
+            : ew;
     return (0, r.jsx)(B.Yw, {
         state: ea,
         dispatch: ec,
@@ -218,7 +218,7 @@ function Q(e) {
                 impressionName: d.ImpressionNames.GO_LIVE_MODAL,
                 impressionProperties: {
                     location_stack: el,
-                    application_id: (0, I.isWindows)() ? (null == (t = (0, E.Z)(j.ZP, Z.Z)) ? void 0 : t.id) : void 0,
+                    application_id: (0, w.isWindows)() ? (null == (t = (0, E.Z)(j.ZP, Z.Z)) ? void 0 : t.id) : void 0,
                     parent_media_session_id: y.Z.getMediaSessionId()
                 }
             },
@@ -274,7 +274,7 @@ function Q(e) {
                                                               audioSourceId: null != n ? n : void 0
                                                           });
                                                       }
-                                                      if (ee && (0, I.isWindows)()) {
+                                                      if (ee && (0, w.isWindows)()) {
                                                           (t(),
                                                               ec({
                                                                   type: 'set_selected_source',
@@ -298,7 +298,7 @@ function Q(e) {
                             ]
                         }),
                 eb && (0, r.jsx)(L.Z, {}),
-                ev && ew
+                ev && eI
             ]
         })
     });

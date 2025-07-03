@@ -1,7 +1,7 @@
 (n.d(t, {
-    ZP: () => j,
-    jd: () => v,
-    wt: () => C
+    ZP: () => E,
+    jd: () => C,
+    wt: () => j
 }),
     n(361932),
     n(187205),
@@ -14,55 +14,57 @@ var r,
     o = n(442837),
     a = n(904245),
     s = n(89892),
-    c = n(601070),
-    u = n(569471),
-    d = n(723170),
-    h = n(592125),
-    p = n(984933),
-    f = n(375954),
-    g = n(306680),
-    m = n(771845),
-    b = n(9156),
-    _ = n(709054),
-    O = n(982183),
-    y = n(124368),
-    v = (((r = {}).Loading = 'loading'), (r.Loaded = 'loaded'), (r.Done = 'done'), r);
-function C() {
-    let e = (0, o.Wu)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
-        t = (0, o.Wu)([p.ZP], () => e.flatMap((e) => p.ZP.getSelectableChannelIds(e)), [e]),
-        n = (0, o.cj)([c.Z], () => c.Z.getAllActiveJoinedThreads());
+    c = n(38618),
+    u = n(601070),
+    d = n(569471),
+    h = n(723170),
+    p = n(592125),
+    f = n(984933),
+    g = n(375954),
+    m = n(306680),
+    b = n(771845),
+    _ = n(9156),
+    O = n(709054),
+    y = n(982183),
+    v = n(124368),
+    C = (((r = {}).Loading = 'loading'), (r.Loaded = 'loaded'), (r.Done = 'done'), r);
+function j() {
+    let e = (0, o.Wu)([b.ZP], () => b.ZP.getFlattenedGuildIds()),
+        t = (0, o.Wu)([f.ZP], () => e.flatMap((e) => f.ZP.getSelectableChannelIds(e)), [e]),
+        n = (0, o.cj)([u.Z], () => u.Z.getAllActiveJoinedThreads());
     return (0, o.Wu)(
-        [h.Z, b.ZP, g.ZP, u.Z],
+        [p.Z, _.ZP, m.ZP, d.Z],
         () => {
-            let e = (e) => !!l.T.GUILD_TEXTUAL.has(e.type) && (b.ZP.allowAllMessages(e) || (0, d.J)(e, u.Z, b.ZP, h.Z) === y.iN.ALL_MESSAGES),
+            let e = (e) => !!l.T.GUILD_TEXTUAL.has(e.type) && (_.ZP.allowAllMessages(e) || (0, h.J)(e, d.Z, _.ZP, p.Z) === v.iN.ALL_MESSAGES),
                 r = [];
             for (let n of t) {
-                let t = h.Z.getChannel(n);
+                let t = p.Z.getChannel(n);
                 null != t && e(t) && r.push(t);
             }
             for (let t in n)
                 for (let i in n[t])
                     for (let l in n[t][i]) {
-                        let t = h.Z.getChannel(l);
+                        let t = p.Z.getChannel(l);
                         null != t && e(t) && r.push(t);
                     }
             return r
                 .map((e) => e.id)
-                .sort((e, t) => _.default.compare(g.ZP.lastMessageId(t), g.ZP.lastMessageId(e)))
+                .sort((e, t) => O.default.compare(m.ZP.lastMessageId(t), m.ZP.lastMessageId(e)))
                 .filter((e) => {
-                    let t = g.ZP.lastMessageId(e);
-                    return null == t || _.default.age(t) < O.ib;
+                    let t = m.ZP.lastMessageId(e);
+                    return null == t || O.default.age(t) < y.ib;
                 });
         },
         [t, n]
     );
 }
-function j() {
+function E() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState('loading'),
-        l = C(),
-        c = (0, o.Wu)([f.Z], () => (0, s.K)(l.map((e) => f.Z.getMessages(e))), [l]),
-        u = i.useCallback(
+        l = j(),
+        u = (0, o.e7)([c.Z], () => c.Z.isConnected()),
+        d = (0, o.Wu)([g.Z], () => (0, s.K)(l.map((e) => g.Z.getMessages(e))), [l]),
+        h = i.useCallback(
             async (n) => {
                 r('loading');
                 let i = async () => {
@@ -70,13 +72,13 @@ function j() {
                             t = !1,
                             r = [];
                         for (let i of l) {
-                            let l = g.ZP.lastMessageId(i),
-                                o = null != n && null != l && 0 > _.default.compare(l, n);
+                            let l = m.ZP.lastMessageId(i),
+                                o = null != n && null != l && 0 > O.default.compare(l, n);
                             if (r.length >= 5 || o) {
                                 t = o;
                                 break;
                             }
-                            let s = f.Z.getMessages(i),
+                            let s = g.Z.getMessages(i),
                                 c = s.length;
                             null == i ||
                                 s.loadingMore ||
@@ -104,12 +106,18 @@ function j() {
         );
     return (
         i.useEffect(() => {
-            e || 0 === l.length || u();
-        }, [l, e, u]),
+            if (!e && u) {
+                if (0 === l.length) {
+                    (t(!0), r('done'));
+                    return;
+                }
+                h();
+            }
+        }, [l, e, h, u]),
         {
-            messages: c,
+            messages: d,
             loadState: n,
-            loadMore: u,
+            loadMore: h,
             hasLoadedEver: e
         }
     );

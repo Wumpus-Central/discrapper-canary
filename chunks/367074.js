@@ -32,11 +32,16 @@ var r = n(913527),
     R = n(981631);
 let P = 10;
 function w(e) {
-    let { experimentEnabled: t, premiumSubscription: n, mostRecentSubscription: r } = e;
+    let { experimentEnabled: t, premiumSubscription: n, mostRecentSubscription: r, previousPremiumSubscription: o } = e;
     if (!t) return !1;
     if (null != r && r.status === R.O0b.ENDED) {
         let e = r.endedAt,
             t = r.hasPremiumAtLeast(C.p9.TIER_2);
+        if (null != e && t && i()().subtract(P, 'days').isBefore(e)) return !1;
+    }
+    if (null != o && o.status === R.O0b.ENDED) {
+        let e = o.endedAt,
+            t = o.hasPremiumAtLeast(C.p9.TIER_2);
         if (null != e && t && i()().subtract(P, 'days').isBefore(e)) return !1;
     }
     if (null != n) {
@@ -65,35 +70,41 @@ function L() {
         { promotion: r } = (0, A.mq)(),
         { enabled: i } = (0, O.ZP)(),
         { enabled: s } = (0, y.ZP)(),
-        { mostRecentSubscription: c, premiumSubscription: u } = (0, o.cj)([d.Z], () => ({
+        {
+            mostRecentSubscription: c,
+            premiumSubscription: u,
+            previousPremiumSubscription: f
+        } = (0, o.cj)([d.Z], () => ({
             mostRecentSubscription: d.Z.getMostRecentPremiumTypeSubscription(),
-            premiumSubscription: d.Z.getPremiumTypeSubscription()
+            premiumSubscription: d.Z.getPremiumTypeSubscription(),
+            previousPremiumSubscription: d.Z.getPreviousPremiumTypeSubscription()
         })),
-        f = (0, I.N)(),
-        _ = (0, v.Ng)(),
-        p = new Date(null != (e = null == r ? void 0 : r.endDate) ? e : 0).valueOf(),
-        h = Date.now(),
-        g = h > p;
-    (0, T.Z)({ delay: g ? -1 : p - h });
-    let S = !a.tq || s,
-        N = w({
+        _ = (0, I.N)(),
+        p = (0, v.Ng)(),
+        h = new Date(null != (e = null == r ? void 0 : r.endDate) ? e : 0).valueOf(),
+        g = Date.now(),
+        S = g > h;
+    (0, T.Z)({ delay: S ? -1 : h - g });
+    let N = !a.tq || s,
+        C = w({
             experimentEnabled: i,
             premiumSubscription: u,
-            mostRecentSubscription: c
+            mostRecentSubscription: c,
+            previousPremiumSubscription: f
         }),
-        C = S && N && null == f && null != r && !n && null == _,
-        { enabled: R } = E.Z.useExperiment(
+        R = N && C && null == _ && null != r && !n && null == p,
+        { enabled: P } = E.Z.useExperiment(
             { location: '153d31_2' },
             {
-                autoTrackExposure: C,
-                disable: !C
+                autoTrackExposure: R,
+                disable: !R
             }
         ),
-        { getServerResult: P } = b.Z.useExperiment({ location: 'useIsEligibleForBogoPromotion' });
+        { getServerResult: L } = b.Z.useExperiment({ location: 'useIsEligibleForBogoPromotion' });
     return (
-        !1 === g &&
-            !1 === R &&
-            !0 === P &&
+        !1 === S &&
+            !1 === P &&
+            !0 === L &&
             (0, m.f)({ campaignId: 'BOGO' }).then((e) => {
                 void 0 !== e &&
                     D({
@@ -101,12 +112,12 @@ function L() {
                         origin: 'server'
                     });
             }),
-        !g &&
+        !S &&
             (D({
-                result: C,
+                result: R,
                 origin: 'client'
             }),
-            t ? R : C)
+            t ? P : R)
     );
 }
 async function x() {
@@ -125,7 +136,8 @@ async function x() {
     return w({
         experimentEnabled: o,
         premiumSubscription: d.Z.getPremiumTypeSubscription(),
-        mostRecentSubscription: m
+        mostRecentSubscription: m,
+        previousPremiumSubscription: d.Z.getPreviousPremiumTypeSubscription()
     });
 }
 async function k() {

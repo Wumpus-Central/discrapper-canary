@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => E });
 var r = n(255367),
     l = n(73800),
     i = n(180650),
@@ -8,54 +8,61 @@ var r = n(255367),
     c = n(960048),
     u = n(597688),
     d = n(1870),
-    p = n(929255),
-    g = n(426171),
-    f = n(752053),
-    h = n(81136),
-    b = n(566564),
-    m = n(215023);
-let _ = [m.AW.HOME, m.AW.ORBS];
-function C(e) {
-    let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: h, refreshCategories: C } = e,
-        E = O();
-    v(E);
-    let S = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
-        { setCategoryRef: x, handleScrollToCategory: y } = (0, g.xV)(s.current),
-        T = l.useCallback(
+    p = n(870289),
+    g = n(501431),
+    f = n(929255),
+    h = n(426171),
+    b = n(752053),
+    m = n(81136),
+    _ = n(566564),
+    C = n(215023);
+let O = [C.AW.HOME, C.AW.ORBS];
+function E(e) {
+    let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: m, refreshCategories: E } = e,
+        x = v();
+    S(x);
+    let y = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
+        { setCategoryRef: j, handleScrollToCategory: T } = (0, h.xV)(s.current),
+        P = l.useCallback(
             async (e, t, r) => {
-                h(e, t);
-                let l = r && !n && !S,
-                    o = t === i.T.ORB ? m.AW.ORBS : m.AW.CATALOG;
-                (await u(o, l), null != t && y(t));
+                m(e, t);
+                let l = r && !n && !y,
+                    o = t === i.T.ORB ? C.AW.ORBS : C.AW.CATALOG;
+                (await u(o, l), null != t && T(t));
             },
-            [n, S, u, y, h]
-        );
-    return null != E
-        ? (0, r.jsx)(f.Z, {
-              onRetry: C,
-              errorMessage: E,
-              errorOrigin: f.i.SHOP_PAGE
+            [n, y, u, T, m]
+        ),
+        L = (0, p.F)('content'),
+        { searchQuery: k } = (0, g.S0)();
+    return (l.useEffect(() => {
+        L && '' !== k && P('search');
+    }, [L, k, P]),
+    null != x)
+        ? (0, r.jsx)(b.Z, {
+              onRetry: E,
+              errorMessage: x,
+              errorOrigin: b.i.SHOP_PAGE
           })
-        : _.includes(t)
-          ? (0, r.jsx)(b.Z, {
+        : O.includes(t)
+          ? (0, r.jsx)(_.Z, {
                 isFullScreen: n,
                 scrollerRef: s,
-                handleTransition: T,
+                handleTransition: P,
                 tab: t,
                 transitionState: d
             })
-          : (0, r.jsx)(p.Z, {
+          : (0, r.jsx)(f.Z, {
                 isFullScreen: n,
                 scrollerRef: s,
                 tab: t,
                 sortedCategories: c,
-                setCategoryRef: x
+                setCategoryRef: j
             });
 }
-let O = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
-    v = (e) => {
+let v = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
+    S = (e) => {
         let t = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
-            { noCache: n, includeUnpublished: r } = (0, h.Z)();
+            { noCache: n, includeUnpublished: r } = (0, m.Z)();
         l.useEffect(() => {
             var l, i;
             null != e &&

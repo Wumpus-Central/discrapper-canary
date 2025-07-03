@@ -16,29 +16,29 @@ let d = {
     p = (e, t, n) => {
         let { enabled: i } = (0, o.WX)({ location: 'useShopViewTransition' }),
             p = (0, a.F)('CollectiblesBrowse'),
-            { setItemTypeFilter: g, clearItemTypeFilter: f } = (0, s.S0)();
+            { setItemTypeFilter: g, clearItemTypeFilter: f, reset: h } = (0, s.S0)();
         r.useEffect(() => {
             if (p) {
                 let e = d[t];
                 null != e && g(e);
             } else f();
         }, [p, t, g, f]);
-        let h = r.useMemo(() => (t !== c.AW.ORBS || i ? ((0, c.RE)(t) && p ? c.AW.CATALOG : t) : c.AW.HOME), [t, i, p]),
-            [b, m] = r.useState(h),
-            [_, C] = r.useState(c.f7.VISIBLE);
+        let b = r.useMemo(() => (t !== c.AW.ORBS || i ? ((0, c.RE)(t) && p ? c.AW.CATALOG : t) : c.AW.HOME), [t, i, p]),
+            [m, _] = r.useState(b),
+            [C, O] = r.useState(c.f7.VISIBLE);
         r.useEffect(() => {
-            (m(h), _ !== c.f7.VISIBLE && C(c.f7.VISIBLE));
-        }, [h, _]);
-        let O = (e) => new Promise((t) => setTimeout(t, e)),
+            (_(b), C !== c.f7.VISIBLE && O(c.f7.VISIBLE));
+        }, [b, C]);
+        let E = (e) => new Promise((t) => setTimeout(t, e)),
             v = (0, l.k6)();
         return {
-            selectedTab: b,
-            transitionState: _,
+            selectedTab: m,
+            transitionState: C,
             transitionToTab: r.useCallback(
                 async (t, r) => {
-                    (r ? (C(c.f7.OUT), await O(1.1 * c.lb), m(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), C(c.f7.IN)) : (p ? ((0, c.RE)(t) ? g(d[t]) : f(), m(c.AW.CATALOG)) : m(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), C(c.f7.VISIBLE));
+                    (t === c.AW.HOME && p && h(), r ? (O(c.f7.OUT), await E(1.1 * c.lb), _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), O(c.f7.IN)) : (p ? ((0, c.RE)(t) ? g(d[t]) : f(), _(c.AW.CATALOG)) : _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), O(c.f7.VISIBLE));
                 },
-                [v, n, e, p, g, f]
+                [v, n, e, p, g, f, h]
             )
         };
     };

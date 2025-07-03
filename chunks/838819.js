@@ -17,13 +17,13 @@ var r = n(255367),
     _ = n(511050),
     C = n(819640),
     O = n(594174),
-    v = n(381585),
-    E = n(597688),
+    E = n(381585),
+    v = n(597688),
     S = n(780475),
     x = n(223143),
     y = n(298228),
-    T = n(309956),
-    j = n(98535),
+    j = n(309956),
+    T = n(98535),
     P = n(963102),
     L = n(508498),
     k = n(849217),
@@ -59,7 +59,7 @@ let R = (e) => {
             [i, w]
         );
         let { onClose: Z } = (0, L.Db)(),
-            { categories: D, refreshCategories: M } = (0, x.ZP)(
+            { categories: D, refreshCategories: F } = (0, x.ZP)(
                 {
                     location: 'CollectiblesShop.web',
                     logPerf: !0
@@ -71,17 +71,17 @@ let R = (e) => {
                 }
             );
         (0, m.P)();
-        let F = (0, y.O)(D),
+        let M = (0, y.O)(D),
             [H, W] = l.useState(),
-            V = (0, s.e7)([E.Z], () => {
+            V = (0, s.e7)([v.Z], () => {
                 var e;
-                return null == (e = E.Z.getCategory(H)) ? void 0 : e.name;
+                return null == (e = v.Z.getCategory(H)) ? void 0 : e.name;
             }),
             [U, G] = l.useState(),
             z = l.useCallback((e, t) => {
                 (G(e), W(t));
             }, []),
-            { selectedTab: Y, transitionState: q, transitionToTab: K } = (0, T.B)(N, n, t),
+            { selectedTab: Y, transitionState: q, transitionToTab: K } = (0, j.B)(N, n, t),
             { handleScroll: X } = (0, f.z)(N, i, Y);
         ((0, S.q3)(i, Y, V, q, U),
             (0, S.EB)(Y, c),
@@ -89,10 +89,10 @@ let R = (e) => {
             l.useEffect(() => {
                 t || (0, d.Y)(B.Z5c.COLLECTIBLES_SHOP);
             }, [t]));
-        let $ = (0, s.e7)([C.Z], () => C.Z.getLayers().includes(B.S9g.COLLECTIBLES_SHOP)),
-            Q = l.useRef(null),
+        let Q = (0, s.e7)([C.Z], () => C.Z.getLayers().includes(B.S9g.COLLECTIBLES_SHOP)),
+            $ = l.useRef(null),
             J = l.useRef(null);
-        ((0, u.Tbt)(Q),
+        ((0, u.Tbt)($),
             l.useEffect(() => {
                 if (!t) {
                     var e;
@@ -102,7 +102,7 @@ let R = (e) => {
         let { analyticsLocations: ee } = (0, S.MV)(Y);
         return (0, r.jsx)(g.Gt, {
             value: ee,
-            children: (0, r.jsx)(v.k0, {
+            children: (0, r.jsx)(E.k0, {
                 newValue: {
                     sessionId: i,
                     pageCategory: V,
@@ -110,10 +110,10 @@ let R = (e) => {
                 },
                 children: (0, r.jsx)(R, {
                     onClose: Z,
-                    shouldAddEventListener: t && !$,
+                    shouldAddEventListener: t && !Q,
                     children: (0, r.jsx)('div', {
                         className: A.shop,
-                        ref: t ? Q : J,
+                        ref: t ? $ : J,
                         tabIndex: -1,
                         children: (0, r.jsx)(u.Den, {
                             className: A.shopScroll,
@@ -128,19 +128,19 @@ let R = (e) => {
                                 children: [
                                     (0, r.jsx)(P.I, {
                                         isFullScreen: t,
-                                        isLayer: $,
+                                        isLayer: Q,
                                         onClose: Z,
                                         handleTransition: K,
                                         selectedTab: Y
                                     }),
-                                    (0, r.jsx)(j.Z, {
+                                    (0, r.jsx)(T.Z, {
                                         tab: Y,
                                         isFullScreen: t,
                                         scrollerRef: N,
-                                        refreshCategories: M,
+                                        refreshCategories: F,
                                         transitionToTab: K,
                                         transitionState: q,
-                                        sortedCategories: F,
+                                        sortedCategories: M,
                                         updateAnalyticsState: z
                                     })
                                 ]

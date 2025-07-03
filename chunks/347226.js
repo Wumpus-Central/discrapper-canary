@@ -4,7 +4,6 @@ e.exports = {
     formItemTitleVerySlim: 'formItemTitleVerySlim_a55fdc',
     formItemTitleSlim: 'formItemTitleSlim_a55fdc',
     modalContent: 'modalContent_a55fdc',
-    manaDesktopModalContent: 'manaDesktopModalContent_a55fdc',
     modalHeader: 'modalHeader_a55fdc',
     marginBottom: 'marginBottom_a55fdc',
     formItemTitle: 'formItemTitle_a55fdc',
