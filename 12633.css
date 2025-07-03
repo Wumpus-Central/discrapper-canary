@@ -19660,7 +19660,6 @@ svg.radioIcon_c1e9c4 {
     flex: 1;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: var(--space-64);
     text-align: center
 }
 
@@ -20768,6 +20767,9 @@ svg.radioIcon_c1e9c4 {
 }
 
 .middleBodyContentWrapper__6fd0e {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-64);
     padding: 32px
 }
 
