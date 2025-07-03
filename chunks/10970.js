@@ -10,19 +10,19 @@ var r = n(442837),
     d = n(430824),
     u = n(55563),
     m = n(171246),
-    g = n(263519),
-    p = n(63487),
+    p = n(263519),
+    g = n(63487),
     h = n(981631),
     f = n(388032),
     b = n(831169);
 function x(e) {
     var t;
-    let { app: n, currentSubscription: g, currentListing: h, alternativeListings: x, navigateToHome: E, subscriptionGroup: j, renewalSkuId: C } = e,
+    let { app: n, currentSubscription: p, currentListing: h, alternativeListings: x, navigateToHome: E, subscriptionGroup: j, renewalSkuId: C } = e,
         O = (0, l.y)(n, 100),
         S = (0, m.KK)(j.flags),
         v = S ? s.QTo : s.tBG,
         T = S ? f.intl.string(f.t['46YF2N']) : f.intl.string(f.t.fFyGiI),
-        N = null == (t = g.metadata) ? void 0 : t.application_subscription_guild_id,
+        N = null == (t = p.metadata) ? void 0 : t.application_subscription_guild_id,
         I = (0, r.e7)([d.Z], () => (S && null != N ? d.Z.getGuild(N) : void 0), [N, S]),
         y = (0, r.e7)(
             [u.Z],
@@ -31,7 +31,7 @@ function x(e) {
             },
             [C]
         ),
-        A = (0, p.p)(g.currentPeriodEnd);
+        A = (0, g.p)(p.currentPeriodEnd);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
@@ -174,7 +174,7 @@ function x(e) {
 }
 function _(e) {
     let { storeListing: t, guildId: n, navigateToHome: r } = e,
-        { openModal: l } = (0, g.Z)({
+        { openModal: l } = (0, p.Z)({
             analyticsLocation: h.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: t.skuId,
             initialSubscribeForGuild: n,

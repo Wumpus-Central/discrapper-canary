@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(780384),
     u = n(481060),
     m = n(153867),
-    g = n(230711),
-    p = n(493773),
+    p = n(230711),
+    g = n(493773),
     h = n(714338),
     f = n(857595),
     b = n(607070),
@@ -339,7 +339,7 @@ class $ extends r.Component {
                       children: (0, x.b)()
                           ? U.intl.format(U.t.Jae48P, {
                                 onClick: () => {
-                                    g.Z.open(L.oAB.ACCESSIBILITY);
+                                    p.Z.open(L.oAB.ACCESSIBILITY);
                                 }
                             })
                           : U.intl.string(U.t.AUMSZG)
@@ -495,7 +495,7 @@ class $ extends r.Component {
                     className: G.marginTop20,
                     children: U.intl.format(U.t['5LEQdX'], {
                         onAccessibilityClick() {
-                            g.Z.open(L.oAB.ACCESSIBILITY);
+                            p.Z.open(L.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -678,7 +678,7 @@ class ee extends $ {
                 className: V.a11yCallout,
                 children: U.intl.format(U.t['5LEQdX'], {
                     onAccessibilityClick() {
-                        g.Z.open(L.oAB.ACCESSIBILITY);
+                        p.Z.open(L.oAB.ACCESSIBILITY);
                     }
                 })
             });
@@ -704,7 +704,7 @@ function en() {
         l = D.hg.useSetting(),
         c = D.YC.useSetting(),
         d = E.M.useExperiment({ location: 'UserSettingsAppearance' }).enabled;
-    ((0, p.ZP)(() => {
+    ((0, g.ZP)(() => {
         (et(o.z.CLIENT_THEMES_SETTINGS_BADGE), et(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), et(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK));
     }),
         r.useEffect(() => {

@@ -1,4 +1,4 @@
-n.d(t, { n: () => p });
+n.d(t, { n: () => g });
 var i = n(255367);
 n(73800);
 var r = n(925513),
@@ -10,18 +10,18 @@ var r = n(925513),
     d = n(526761),
     u = n(726985),
     m = n(981631),
-    g = n(388032);
-function p() {
+    p = n(388032);
+function g() {
     let e = (0, r.v6)(),
         t = [
             {
-                title: g.intl.string(g.t.GYpoAg),
+                title: p.intl.string(p.t.GYpoAg),
                 component: () => (0, i.jsx)(a.P, { isNested: !0 }),
                 orientation: 'vertical',
                 setting: u.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION
             },
             {
-                title: g.intl.string(g.t['16/3Bg']),
+                title: p.intl.string(p.t['16/3Bg']),
                 component: o.I,
                 orientation: 'vertical',
                 setting: u.s6.GORE_MEDIA_REDACTION
@@ -32,8 +32,8 @@ function p() {
         scrollPosition: d.FY.EXPLICIT_MEDIA_REDACTION_V2,
         children: [
             (0, i.jsx)(c.H, {
-                header: g.intl.string(g.t['Hj/Bur']),
-                description: g.intl.format(g.t.dliU4u, { learnMoreLink: s.Z.getArticleURL(e) })
+                header: p.intl.string(p.t['Hj/Bur']),
+                description: p.intl.format(p.t.dliU4u, { learnMoreLink: s.Z.getArticleURL(e) })
             }),
             (0, i.jsx)(l.Z, {
                 parentSetting: u.s6.CONTENT_SOCIAL,

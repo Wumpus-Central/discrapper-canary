@@ -10,13 +10,13 @@ var r = n(120356),
     d = n(304761),
     u = n(320161),
     m = n(998502),
-    g = n(388032),
-    p = n(980832);
+    p = n(388032),
+    g = n(980832);
 function h() {
     var e, t, n, r, l;
     let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        f = '415719',
-        b = '89406c91c6b50e96030d52576fa6e4370bcec984'.substring(0, 7),
+        f = '415776',
+        b = '6945d9236b906433bec9083e51efdab93aaae72c'.substring(0, 7),
         x = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         _ = null === c.Z || void 0 === c.Z || null == (e = (t = c.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
         E = null === c.Z || void 0 === c.Z || null == (n = (r = c.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
@@ -36,7 +36,7 @@ function h() {
         null != C && O.push(C),
         (0, i.jsx)(u.Z, {
             copyValue: O.join(' '),
-            text: g.intl.string(g.t['9Al4QU']),
+            text: p.intl.string(p.t['9Al4QU']),
             'aria-label': !1,
             children: (e) => {
                 var t, n;
@@ -69,15 +69,15 @@ function h() {
                     })({}, e)),
                     (n = n =
                         {
-                            'aria-label': g.intl.string(g.t['9Al4QU']),
-                            className: p.clickable,
+                            'aria-label': p.intl.string(p.t['9Al4QU']),
+                            className: g.clickable,
                             children: (0, i.jsxs)('div', {
-                                className: p.info,
+                                className: g.info,
                                 'data-mtctest-ignore': 'true',
                                 children: [
                                     (0, i.jsxs)(o.Text, {
                                         tag: 'span',
-                                        className: p.line,
+                                        className: g.line,
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
                                         children: [
@@ -86,7 +86,7 @@ function h() {
                                             f,
                                             ' ',
                                             (0, i.jsxs)('span', {
-                                                className: p.versionHash,
+                                                className: g.versionHash,
                                                 children: ['(', b, ')']
                                             })
                                         ]
@@ -95,11 +95,11 @@ function h() {
                                     null != j &&
                                         (0, i.jsx)(o.Text, {
                                             tag: 'span',
-                                            className: p.line,
+                                            className: g.line,
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
                                             children: (0, i.jsxs)('span', {
-                                                className: p.versionHash,
+                                                className: g.versionHash,
                                                 children: ['Build Override: ', j.id]
                                             })
                                         }),
@@ -108,7 +108,7 @@ function h() {
                                               children: [
                                                   (0, i.jsxs)(o.Text, {
                                                       tag: 'span',
-                                                      className: p.line,
+                                                      className: g.line,
                                                       variant: 'text-xs/normal',
                                                       color: 'text-muted',
                                                       children: [
@@ -117,7 +117,7 @@ function h() {
                                                           ' ',
                                                           null != E
                                                               ? (0, i.jsxs)('span', {
-                                                                    className: p.appArch,
+                                                                    className: g.appArch,
                                                                     children: [E.toLowerCase(), ' ']
                                                                 })
                                                               : null,
@@ -135,7 +135,7 @@ function h() {
                                     null != C
                                         ? (0, i.jsx)(o.Text, {
                                               tag: 'span',
-                                              className: s()(p.line, p.os),
+                                              className: s()(g.line, g.os),
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
                                               children: C

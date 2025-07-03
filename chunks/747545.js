@@ -16,8 +16,8 @@ var i = n(255367),
     d = n(846519),
     u = n(481060),
     m = n(846027),
-    g = n(579806),
-    p = n(906732),
+    p = n(579806),
+    g = n(906732),
     h = n(72897),
     f = n(921801),
     b = n(695346),
@@ -53,7 +53,7 @@ function N() {
 }
 function I(e) {
     let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: r = !1, onLearnMore: s, selectedBackgroundOption: a, onSelectBackgroundOption: d, renderCamera: N, hidePreviewToggle: I = !1, showSmallBackgroundOptions: y = !1, onCancelPreview: A } = e,
-        { analyticsLocations: P } = (0, p.ZP)(),
+        { analyticsLocations: P } = (0, g.ZP)(),
         { currentDeviceId: R, isVideoAvailable: D } = (0, c.cj)([_.Z], () => ({
             currentDeviceId: _.Z.getVideoDeviceId(),
             isVideoAvailable: _.Z.isVideoAvailable()
@@ -111,7 +111,7 @@ function I(e) {
                             !r &&
                                 !!(0, j.isWindows)() &&
                                 !!j.isPlatformEmbedded &&
-                                o().satisfies(g.Z.os.release, '>=10.0.22000') &&
+                                o().satisfies(p.Z.os.release, '>=10.0.22000') &&
                                 (0, i.jsx)(u.R94, {
                                     className: v.cameraDeeplink,
                                     children: S.intl.format(S.t.aJYgRk, {

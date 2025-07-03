@@ -1,4 +1,4 @@
-n.d(t, { m: () => p });
+n.d(t, { m: () => g });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -51,14 +51,14 @@ function m(e, t) {
         e
     );
 }
-let g = c.Vq;
-function p(e) {
-    let { children: t, targetElementRef: n, shouldShow: r = !0, onRequestClose: c, position: p = 'top', align: h = 'center', hasVideo: f = !1, gradientColor: b } = e;
+let p = c.Vq;
+function g(e) {
+    let { children: t, targetElementRef: n, shouldShow: r = !0, onRequestClose: c, position: g = 'top', align: h = 'center', hasVideo: f = !1, gradientColor: b } = e;
     return (0, i.jsx)(a.H, {
         targetElementRef: n,
         shouldShow: r,
         onRequestClose: c,
-        position: p,
+        position: g,
         align: h,
         spacing: 18,
         layerContext: void 0,
@@ -89,6 +89,6 @@ function p(e) {
                           children: t
                       })
                   ),
-        children: g
+        children: p
     });
 }

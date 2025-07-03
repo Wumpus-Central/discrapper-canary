@@ -1,9 +1,7 @@
-n.d(t, { N: () => r });
-var i = n(520540);
-function r(e) {
-    let { enabled: t, eligibleToFetch: n } = i.g.useExperiment({ location: e }, { autoTrackExposure: !1 });
+n.d(t, { N: () => i });
+function i(e) {
     return {
-        enabled: t,
-        eligibleToFetch: n
+        enabled: !0,
+        eligibleToFetch: !0
     };
 }

@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(634894),
     u = n(410030),
     m = n(100527),
-    g = n(906732),
-    p = n(975298),
+    p = n(906732),
+    g = n(975298),
     h = n(15640),
     f = n(594174),
     b = n(78839),
@@ -144,7 +144,7 @@ let L = () => {
         var t;
         let n,
             { className: s, hideCTAs: T = !1, headingOverride: R, hidePill: D = !1, selectedPlanColumnClassName: Z, selectedPlanTier: w = y.p9.TIER_2 } = e,
-            { analyticsLocations: G } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: G } = (0, p.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             F = (0, a.e7)([b.Z], () => b.Z.hasFetchedSubscriptions()),
             H = (0, h.V)(),
             z = 'PlanComparisonTable';
@@ -169,7 +169,7 @@ let L = () => {
             en = ''.concat(et, '/').concat((0, x.eP)(y.rV.MONTH)),
             ei = (0, x.CY)(y.Xh.PREMIUM_MONTH_TIER_0),
             er = (0, x.CY)(y.Xh.PREMIUM_MONTH_TIER_2),
-            es = (0, p.Z)(),
+            es = (0, g.Z)(),
             el = (0, I.n)(ei, er, ee, en, es.fractionalState),
             ea = (0, _.Vi)();
         if (!F || !H) return null;
@@ -257,7 +257,7 @@ let L = () => {
                     ? (0, i.jsx)(L, {})
                     : (0, i.jsx)(B, {})));
         let ec = Q === y.Si.TIER_0 || J === y.p9.TIER_0 || w === y.p9.TIER_0;
-        return (0, i.jsx)(g.Gt, {
+        return (0, i.jsx)(p.Gt, {
             value: G,
             children: (0, i.jsxs)('div', {
                 className: l()(P.root, s),

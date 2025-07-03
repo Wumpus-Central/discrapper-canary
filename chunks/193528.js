@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(481060),
     u = n(699682),
     m = n(44315),
-    g = n(654904),
-    p = n(981631),
+    p = n(654904),
+    g = n(981631),
     h = n(388032),
     f = n(768402);
 function b(e) {
@@ -61,10 +61,10 @@ function _(e) {
         v = r.useRef(null),
         T = (0, d.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         N = c.Z.colors.BACKGROUND_ACCENT.css,
-        I = (0, g.DP)(s),
+        I = (0, p.DP)(s),
         y = (0, o.Rf)(s),
         A = y === T ? N : y,
-        P = (0, m.Lq)(I ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
+        P = (0, m.Lq)(I ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
         R = (0, u.Z)(C),
         D = (0, u.Z)(O),
         [Z, w] = r.useState((0, a.Z)());
@@ -117,7 +117,7 @@ function _(e) {
                             d.P3F,
                             x(b({}, n), {
                                 tabIndex: E ? -1 : 0,
-                                onClick: E ? p.dG4 : t,
+                                onClick: E ? g.dG4 : t,
                                 style: {
                                     backgroundColor: y,
                                     borderColor: A

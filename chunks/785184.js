@@ -12,9 +12,9 @@ function m() {
     let e = (0, a.Z)({ location: 'TenureLevelUpAnimationLazyWrapper' }),
         t = (0, l.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, o.Z)();
-    return e && t && null != n ? (0, i.jsx)(g, { levelUpData: n }) : null;
+    return e && t && null != n ? (0, i.jsx)(p, { levelUpData: n }) : null;
 }
-function g(e) {
+function p(e) {
     let { levelUpData: t } = e,
         n = r.useRef(null),
         a = r.useCallback(() => {

@@ -9,7 +9,7 @@ var r = n(120356),
     c = n(593595);
 let d = (e) => {
     var t;
-    let { title: n, titleClassName: r, buttonClassName: d, perkImage: u, isCarousel: m, onCtaClick: g, perkComponent: p, subtitle: h = '', descriptionCta: f = '', cardVariant: b, subtitleClassName: x, imageOverlayText: _ } = e,
+    let { title: n, titleClassName: r, buttonClassName: d, perkImage: u, isCarousel: m, onCtaClick: p, perkComponent: g, subtitle: h = '', descriptionCta: f = '', cardVariant: b, subtitleClassName: x, imageOverlayText: _ } = e,
         E = (0, a._)(b),
         j = null != _;
     return (0, i.jsxs)(i.Fragment, {
@@ -44,17 +44,17 @@ let d = (e) => {
                             : null
                     ]
                 }),
-            null != p &&
+            null != g &&
                 (0, i.jsxs)('div', {
                     className: c.cardIllustrationNoHover,
                     children: [
-                        p,
+                        g,
                         0 !== f.length &&
-                            null != g &&
+                            null != p &&
                             (0, i.jsx)(l.zxk, {
                                 className: d,
                                 fullWidth: !0,
-                                onClick: g,
+                                onClick: p,
                                 children: (0, i.jsx)('div', {
                                     className: null == E || null == (t = E.descriptionCta) ? void 0 : t.className,
                                     children: f

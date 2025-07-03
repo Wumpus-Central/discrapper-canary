@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(778825),
     u = n(851894),
     m = n(484459),
-    g = n(216045),
-    p = n(839469),
+    p = n(216045),
+    g = n(839469),
     h = n(25990),
     f = n(594174),
     b = n(585483),
@@ -29,7 +29,7 @@ function v() {
         v = null != e ? e : t,
         T = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         { subsection: N, setSubsection: I } = (0, _.Z)(),
-        { hasSearchResults: y, searchResults: A } = (0, p.E)();
+        { hasSearchResults: y, searchResults: A } = (0, g.E)();
     function P(t) {
         if (N !== t) {
             if (n) {
@@ -87,7 +87,7 @@ function v() {
                             : null
                     ]
                 }),
-                N === j.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: v }) : (0, i.jsx)(g.Z, {})
+                N === j.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: v }) : (0, i.jsx)(p.Z, {})
             ]
         })
     );

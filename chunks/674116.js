@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(131951),
     u = n(663389),
     m = n(63063),
-    g = n(680924),
-    p = n(58765),
+    p = n(680924),
+    g = n(58765),
     h = n(429789),
     f = n(726763),
     b = n(208113),
@@ -46,7 +46,7 @@ function V() {
         var e, i;
         (t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()), t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection()));
     }, [n, m, t]);
-    let k = (0, p.Z)();
+    let k = (0, g.Z)();
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H1,
         title: B.intl.string(B.t.NiTd0d),
@@ -141,7 +141,7 @@ function V() {
                                     look: l.zxk.Looks.OUTLINED,
                                     color: l.zxk.Colors.RED,
                                     onClick: () => {
-                                        (0, g.Z)(B.intl.string(B.t['/RXu6+']), B.intl.string(B.t.sQ42iY), a.Z.reset);
+                                        (0, p.Z)(B.intl.string(B.t['/RXu6+']), B.intl.string(B.t.sQ42iY), a.Z.reset);
                                     },
                                     size: l.zxk.Sizes.SMALL,
                                     children: B.intl.string(B.t['/RXu6+'])

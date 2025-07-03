@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(924356),
     u = n(901151),
     m = n(4188),
-    g = n(24400),
-    p = n(122897),
+    p = n(24400),
+    g = n(122897),
     h = n(821035),
     f = n(694569),
     b = n(394655),
@@ -51,7 +51,7 @@ let R = () =>
         return (0, i.jsxs)(E.Z, {
             title: P.intl.string(P.t.xVRG4O),
             webSetting: I.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-            children: [t ? (0, i.jsx)(C.n, {}) : (0, i.jsx)(h.P, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(b.Z, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(d.Z, {}), (0, i.jsx)(O.Z, {})]
+            children: [t ? (0, i.jsx)(C.n, {}) : (0, i.jsx)(h.P, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(b.Z, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(d.Z, {}), (0, i.jsx)(O.Z, {})]
         });
     },
     Z = () =>

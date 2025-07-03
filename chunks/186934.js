@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(921801),
     u = n(131951),
     m = n(726985),
-    g = n(388032),
-    p = n(20493);
+    p = n(388032),
+    g = n(20493);
 function h(e) {
     let { refreshStyles: t = !1 } = e,
         { sidechainEnabled: n, sidechainStrength: r } = (0, l.cj)([u.Z], () => ({
@@ -22,15 +22,15 @@ function h(e) {
         f = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.j7V, {
-                    className: t ? null : s()(p.marginTop8, p.marginBottom20),
+                    className: t ? null : s()(g.marginTop8, g.marginBottom20),
                     value: n,
                     onChange: (e) => o.Z.setSidechainCompression(e, { analyticsLocations: h }),
-                    note: g.intl.string(g.t.zlA23N),
+                    note: p.intl.string(p.t.zlA23N),
                     hideBorder: t,
-                    children: g.intl.string(g.t['/jwMtr'])
+                    children: p.intl.string(p.t['/jwMtr'])
                 }),
                 (0, i.jsx)(a.xJW, {
-                    title: g.intl.string(g.t.fhEzfn),
+                    title: p.intl.string(p.t.fhEzfn),
                     children: (0, i.jsx)(a.iRW, {
                         initialValue: r,
                         minValue: 1,
@@ -44,7 +44,7 @@ function h(e) {
         children: t
             ? f
             : (0, i.jsx)(a.hjN, {
-                  className: p.marginBottom20,
+                  className: g.marginBottom20,
                   children: f
               })
     });

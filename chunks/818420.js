@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(318110),
     u = n(150039),
     m = n(993413),
-    g = n(921944),
-    p = n(388032),
+    p = n(921944),
+    g = n(388032),
     h = n(388898);
 function f(e) {
     let { user: t } = e,
@@ -21,13 +21,13 @@ function f(e) {
         [E, j] = (0, o.US)(_),
         C = E === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         O = r.useCallback(() => {
-            (j(g.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n }));
+            (j(p.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n }));
         }, [n, j]),
         S = r.useCallback(() => {
             (0, u.Wh)(null);
         }, []);
     return (0, i.jsx)(m.Z, {
-        title: p.intl.string(p.t.x5CoXV),
+        title: g.intl.string(g.t.x5CoXV),
         titleIcon: C ? (0, i.jsx)(c.Z, { className: h.newBadge }) : void 0,
         errors: x,
         children: (0, i.jsxs)('div', {
@@ -36,7 +36,7 @@ function f(e) {
                 (0, i.jsx)(l.zxk, {
                     size: l.zxk.Sizes.SMALL,
                     onClick: O,
-                    children: p.intl.string(p.t.BwdeMz)
+                    children: g.intl.string(g.t.BwdeMz)
                 }),
                 (void 0 === b ? null != f : null != b) &&
                     (0, i.jsx)(l.zxk, {
@@ -44,7 +44,7 @@ function f(e) {
                         color: l.zxk.Colors.PRIMARY,
                         look: l.zxk.Looks.LINK,
                         onClick: S,
-                        children: p.intl.string(p.t['9zwziY'])
+                        children: g.intl.string(g.t['9zwziY'])
                     })
             ]
         })

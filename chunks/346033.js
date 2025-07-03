@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(481060),
     u = n(634894),
     m = n(410030),
-    g = n(100527),
-    p = n(906732),
+    p = n(100527),
+    g = n(906732),
     h = n(433811),
     f = n(214852),
     b = n(78839),
@@ -66,7 +66,7 @@ let G = (e) => {
             eo = (0, E.Vi)(),
             ec = null != eo && eo,
             ed = null == (t = (0, C.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
-            { analyticsLocations: eu } = (0, p.ZP)(g.Z.PREMIUM_MARKETING),
+            { analyticsLocations: eu } = (0, g.ZP)(p.Z.PREMIUM_MARKETING),
             em = 'PremiumMarketingHome';
         ((0, u.j)({
             location: em + ' auto on',
@@ -79,7 +79,7 @@ let G = (e) => {
             r.useEffect(() => {
                 J(!0);
             }, []));
-        let eg = (0, i.jsx)('div', {
+        let ep = (0, i.jsx)('div', {
             className: U.premiumTierCardsContainerSettings,
             children: (0, i.jsx)(o.$, {
                 innerRef: n,
@@ -155,7 +155,7 @@ let G = (e) => {
                     className: U.promoBannerContainer,
                     children: (0, i.jsx)(v.Z, { variant: v.C.NITRO_SETTINGS })
                 }),
-                eg,
+                ep,
                 null != ed &&
                     (0, i.jsx)(I.C, {
                         className: U.giftPromoCard,

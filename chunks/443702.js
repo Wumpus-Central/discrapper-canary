@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(497321),
     u = n(231428),
     m = n(390954),
-    g = n(89057),
-    p = n(921801),
+    p = n(89057),
+    g = n(921801),
     h = n(246946),
     f = n(594174),
     b = n(351402),
@@ -44,7 +44,7 @@ class T extends r.PureComponent {
                   children: [
                       e && 0 === Object.keys(n).length
                           ? (0, i.jsx)(v, {})
-                          : (0, i.jsx)(p.F, {
+                          : (0, i.jsx)(g.F, {
                                 setting: j.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, i.jsx)(m.Z, {
                                     paymentSources: n,
@@ -55,7 +55,7 @@ class T extends r.PureComponent {
                                     submitting: c
                                 })
                             }),
-                      (0, i.jsx)(p.F, {
+                      (0, i.jsx)(g.F, {
                           setting: j.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, i.jsx)('div', {
                               className: S.paymentHistory,
@@ -64,7 +64,7 @@ class T extends r.PureComponent {
                                       tag: 'h1',
                                       children: O.intl.string(O.t.obLrcH)
                                   }),
-                                  children: [(0, i.jsx)(g.oQ, {}), (0, i.jsx)(u.Z, { locale: s })]
+                                  children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(u.Z, { locale: s })]
                               })
                           })
                       }),

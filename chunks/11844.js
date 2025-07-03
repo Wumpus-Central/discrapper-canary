@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(879892),
     u = n(124570),
     m = n(594174),
-    g = n(709586),
-    p = n(267642),
+    p = n(709586),
+    g = n(267642),
     h = n(981631),
     f = n(388032),
     b = n(122039);
@@ -89,11 +89,11 @@ let E = function () {
             }
         );
     }
-    let v = (0, p.aq)({ isBoostManagementDisabledForFractionalPremium: C });
+    let v = (0, g.aq)({ isBoostManagementDisabledForFractionalPremium: C });
     return (0, i.jsxs)('div', {
         className: b.wrapper,
         children: [
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(p.Z, {
                 className: b.boostIcon,
                 width: 16,
                 height: 16

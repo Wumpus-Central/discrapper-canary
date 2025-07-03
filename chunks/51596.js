@@ -21,8 +21,8 @@ var i = n(481060),
     d = n(212819),
     u = n(815372),
     m = n(336197),
-    g = n(359110),
-    p = n(769654),
+    p = n(359110),
+    g = n(769654),
     h = n(722589),
     f = n(131704),
     b = n(592125),
@@ -86,11 +86,11 @@ function P(e, t) {
         c = C.Z.isEmail(r),
         u = C.Z.isPhoneNumber(r),
         m = C.Z.isUserTagLike(r),
-        g = null != a && (0, v.AB)(a),
-        p = (e) => (null == e ? null : e.type === d.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
+        p = null != a && (0, v.AB)(a),
+        g = (e) => (null == e ? null : e.type === d.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
         h = {
-            current_channel_id: g ? void 0 : a,
-            current_channel_static_route: g ? a : void 0,
+            current_channel_id: p ? void 0 : a,
+            current_channel_static_route: p ? a : void 0,
             current_guild_id: l,
             query_mode: null != i ? i : 'GENERAL',
             query_length: r.length,
@@ -99,7 +99,7 @@ function P(e, t) {
             is_phone_like: u,
             is_username_like: m,
             query: c || u || m ? null : r,
-            top_result_type: p(o),
+            top_result_type: g(o),
             top_result_score: null != o ? o.score : null,
             num_results_total: O.Z.getResultTotals(),
             num_results_users: O.Z.getResultTotals(d.h8.USER),
@@ -114,7 +114,7 @@ function P(e, t) {
     }
     if (null != t) {
         let { type: e, score: i, record: r } = t;
-        switch (((h.selected_type = p(t)), (h.selected_score = i), (h.selected_index = n.indexOf(t)), e)) {
+        switch (((h.selected_type = g(t)), (h.selected_score = i), (h.selected_index = n.indexOf(t)), e)) {
             case d.h8.GUILD:
                 h.selected_guild_id = r.id;
                 break;
@@ -175,11 +175,11 @@ function L(e) {
         E = { page: S.ZY5.QUICK_SWITCHER };
     switch (f) {
         case d.h8.GUILD:
-            (0, p.X)(_.id, { navigationReplace: !0 });
+            (0, g.X)(_.id, { navigationReplace: !0 });
             break;
         case d.h8.TEXT_CHANNEL:
             null != (t = b.Z.getChannel(_.id)) &&
-                (0, g.Kh)(t.id, {
+                (0, p.Kh)(t.id, {
                     state: { analyticsSource: E },
                     navigationReplace: !0
                 });
@@ -187,7 +187,7 @@ function L(e) {
         case d.h8.VOICE_CHANNEL:
             null != (t = b.Z.getChannel(_.id)) &&
                 (n ? l.Z.updateChatOpen(_.id, !0) : o.default.selectVoiceChannel(_.id),
-                (0, g.Kh)(t.id, {
+                (0, p.Kh)(t.id, {
                     state: { analyticsSource: E },
                     navigationReplace: !0
                 }));
@@ -200,7 +200,7 @@ function L(e) {
                 a.Z.channelListScrollTo(S.ME, b.Z.getDMFromUserId(_.id)));
             break;
         case d.h8.GROUP_DM:
-            ((0, g.Kh)(_.id, { navigationReplace: !0 }), a.Z.channelListScrollTo(S.ME, _.id));
+            ((0, p.Kh)(_.id, { navigationReplace: !0 }), a.Z.channelListScrollTo(S.ME, _.id));
             break;
         case d.h8.APPLICATION:
             let j = x.Z.getActiveLibraryApplication(_.id);

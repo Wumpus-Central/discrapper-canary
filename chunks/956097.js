@@ -9,8 +9,8 @@ var i,
     d = n(358085),
     u = n(998502),
     m = n(49226),
-    g = n(981631);
-let p = { status: '' },
+    p = n(981631);
+let g = { status: '' },
     h = [],
     f = ['discord.com', 'discordapp.com', 'discordapp.net', 'dl.discordapp.net', 'discordcdn.com', 'discord.gg', 'discord.media'];
 class b extends (i = l.ZP.Store) {
@@ -18,7 +18,7 @@ class b extends (i = l.ZP.Store) {
         (this.updateState(), this.addListener());
     }
     logEvent(e) {
-        ('status' in e && 'string' == typeof e.status && (p = e), (h = [...h.slice(h.length < 10 ? 0 : 1, 10), e]), this.emitChange());
+        ('status' in e && 'string' == typeof e.status && (g = e), (h = [...h.slice(h.length < 10 ? 0 : 1, 10), e]), this.emitChange());
     }
     async updateState() {
         try {
@@ -72,7 +72,7 @@ class b extends (i = l.ZP.Store) {
             if (((null == t ? void 0 : t.code) === 'MissingRegistration' && (await this.runCommand('registration', 'new'), (t = await this.runCommand('registration', 'show'))), (null == t || null == (e = t.account) ? void 0 : e.type) === 'free' && m.Z.getCurrentConfig({ location: 'configureLicense' }).plus)) {
                 let { key: e } = (
                     await a.tn.get({
-                        url: g.ANM.USER_WARP_LICENSE,
+                        url: p.ANM.USER_WARP_LICENSE,
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
@@ -97,7 +97,7 @@ class b extends (i = l.ZP.Store) {
         } catch (e) {}
     }
     get state() {
-        return p;
+        return g;
     }
     get log() {
         return h;
@@ -112,10 +112,10 @@ class b extends (i = l.ZP.Store) {
         ).enable;
     }
     get enabled() {
-        return 'Connected' === p.status || this.connecting;
+        return 'Connected' === g.status || this.connecting;
     }
     get connecting() {
-        return 'Configuring' === p.status || 'Connecting' === p.status || 'ConnectCommandSent' === p.status || 'Installing' === p.status || 'Installed' === p.status;
+        return 'Configuring' === g.status || 'Connecting' === g.status || 'ConnectCommandSent' === g.status || 'Installing' === g.status || 'Installed' === g.status;
     }
     async connect() {
         if (this.clientEnabled) {
@@ -129,7 +129,7 @@ class b extends (i = l.ZP.Store) {
         return this.clientEnabled;
     }
     disconnect() {
-        return (this.clientEnabled && (this.runCommand('disconnect'), (p = { status: 'DisconnectCommandSent' })), this.clientEnabled);
+        return (this.clientEnabled && (this.runCommand('disconnect'), (g = { status: 'DisconnectCommandSent' })), this.clientEnabled);
     }
 }
 ((s = 'WarpClientStore'),

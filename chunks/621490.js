@@ -13,8 +13,8 @@ var i = n(255367),
     d = n(712297),
     u = n(982204),
     m = n(811334),
-    g = n(152521),
-    p = n(960919),
+    p = n(152521),
+    g = n(960919),
     h = n(981631),
     f = n(388032),
     b = n(309103);
@@ -67,7 +67,7 @@ let E = (e) => {
             variant: 'text-md/semibold',
             className: b.orbAmountTag,
             children: [
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(g.Z, {
                     shouldUseThemeColor: !0,
                     customSize: 14
                 }),
@@ -127,7 +127,7 @@ let E = (e) => {
     C = (e) => {
         let { orbPriceAmount: t, skuId: n } = e,
             { skusById: s } = (0, d.Z)({
-                applicationId: (0, g.N)(n),
+                applicationId: (0, p.N)(n),
                 skuIDs: [n],
                 isGift: !1,
                 currentPaymentSourceId: null,

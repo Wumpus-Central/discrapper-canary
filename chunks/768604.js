@@ -10,8 +10,8 @@ var r = n(524437),
     d = n(294602),
     u = n(249996),
     m = n(880257),
-    g = n(838436),
-    p = n(726985),
+    p = n(838436),
+    g = n(726985),
     h = n(388032),
     f = n(298136);
 function b() {
@@ -45,8 +45,8 @@ function b() {
         };
     return (
         t && (E.unshift(C), j.unshift(C)),
-        (0, i.jsxs)(g.U, {
-            setting: p.s6.GORE_MEDIA_REDACTION,
+        (0, i.jsxs)(p.U, {
+            setting: g.s6.GORE_MEDIA_REDACTION,
             children: [
                 (0, i.jsxs)('div', {
                     className: f.selectItemRow,

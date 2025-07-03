@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var i = n(255367);
 n(73800);
 var r = n(399606),
@@ -10,7 +10,7 @@ var r = n(399606),
     d = n(65154),
     u = n(388032),
     m = n(908406);
-function g() {
+function p() {
     return (0, r.e7)([a.Z], () => a.Z.supports(d.AN.LOOPBACK))
         ? (0, i.jsx)('div', {
               className: m.micTest,

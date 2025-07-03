@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(358085),
     u = n(726985),
     m = n(388032),
-    g = n(20493);
-function p(e) {
+    p = n(20493);
+function g(e) {
     (0, d.isMac)() && e
         ? (0, s.ZDy)(async () => {
               let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 878678));
@@ -112,7 +112,7 @@ function h(e) {
                     setting: u.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER,
                     children: (0, i.jsx)(s.j7V, {
                         value: d,
-                        onChange: p,
+                        onChange: g,
                         hideBorder: t,
                         children: m.intl.string(m.t.ie1mgY)
                     })
@@ -124,7 +124,7 @@ function h(e) {
         children: t
             ? h
             : (0, i.jsx)(s.hjN, {
-                  className: g.marginBottom20,
+                  className: p.marginBottom20,
                   title: m.intl.string(m.t.NMCIf3),
                   children: h
               })

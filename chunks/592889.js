@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(780384),
     u = n(481060),
     m = n(355467),
-    g = n(100527),
-    p = n(906732),
+    p = n(100527),
+    g = n(906732),
     h = n(975298),
     f = n(600164),
     b = n(210887),
@@ -24,7 +24,7 @@ var i = n(255367),
 function v(e) {
     let { subscription: t, renewalMutations: n, transitionState: r, onClose: s, analyticsLocation: l } = e,
         a = (0, c.e7)([b.Z], () => b.Z.theme),
-        { analyticsLocations: h } = (0, p.ZP)(g.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL),
+        { analyticsLocations: h } = (0, g.ZP)(p.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL),
         C = _.Z.get(t.planId);
     o()(null != C, 'Missing subscriptionPlan');
     let v = (0, E.aS)(t.planId, !1, !1, {

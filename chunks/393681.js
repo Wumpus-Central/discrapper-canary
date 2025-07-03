@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(780384),
     u = n(481060),
     m = n(816814),
-    g = n(809206),
-    p = n(497321),
+    p = n(809206),
+    g = n(497321),
     h = n(279837),
     f = n(952306),
     b = n(600164),
@@ -91,7 +91,7 @@ class K extends r.PureComponent {
         (0, S.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
-        (m.Z.clearBackupCodes(), (0, g.Zy)());
+        (m.Z.clearBackupCodes(), (0, p.Zy)());
     }
     renderAccountWarning() {
         let { currentUser: e } = this.props;
@@ -282,7 +282,7 @@ class K extends r.PureComponent {
                 confirmText: F.intl.string(F.t['8lQ2ra']),
                 cancelText: F.intl.string(F.t['ETE/oK']),
                 onCancel: e,
-                onConfirm: () => (0, g.ss)('', !0).then(e),
+                onConfirm: () => (0, p.ss)('', !0).then(e),
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
                     children: F.intl.string(F.t.FB4H1N)
@@ -367,7 +367,7 @@ class K extends r.PureComponent {
         });
     }
     render() {
-        return this.props.hide ? (0, i.jsx)(p.Z, {}) : this.renderUnhidden();
+        return this.props.hide ? (0, i.jsx)(g.Z, {}) : this.renderUnhidden();
     }
     handleDisableAccountError(e) {
         if (e.body.code === V.evJ.INVALID_PASSWORD) throw e;
@@ -377,7 +377,7 @@ class K extends r.PureComponent {
         });
     }
     handleSubmitDisableAccount(e, t) {
-        return (0, g.ss)(e, t).then(V.dG4, this.handleDisableAccountError);
+        return (0, p.ss)(e, t).then(V.dG4, this.handleDisableAccountError);
     }
     handleDisableAccount() {
         var e;

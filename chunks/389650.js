@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(692547),
     u = n(481060),
     m = n(660216),
-    g = n(225433),
-    p = n(825209),
+    p = n(225433),
+    g = n(825209),
     h = n(721383),
     f = n(612226),
     b = n(714338),
@@ -118,11 +118,11 @@ class V extends r.PureComponent {
             className: l()(D.keybindGroup, Z.card),
             children: [
                 !e &&
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(p.Z, {
                         'aria-label': R.intl.string(R.t.qEHmmJ),
                         className: D.removeKeybind,
                         onClick: this.handleDeleteKeybind,
-                        look: g.Z.Looks.FILLED
+                        look: p.Z.Looks.FILLED
                     }),
                 (0, i.jsxs)(_.Z, {
                     className: w.marginBottom8,
@@ -145,7 +145,7 @@ class V extends r.PureComponent {
                             children: (0, i.jsx)(u.xJW, {
                                 title: R.intl.string(R.t['1La4tL']),
                                 className: D.item,
-                                children: (0, i.jsx)(p.Z, {
+                                children: (0, i.jsx)(g.Z, {
                                     defaultValue: this.props.keybind.shortcut,
                                     onChange: this.handleShortcutChange
                                 })

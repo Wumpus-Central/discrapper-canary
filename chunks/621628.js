@@ -28,8 +28,8 @@ var i = n(255367),
     d = n(481060),
     u = n(600164),
     m = n(675478),
-    g = n(581883),
-    p = n(883904),
+    p = n(581883),
+    g = n(883904),
     h = n(68985),
     f = n(211644),
     b = n(428967),
@@ -38,9 +38,9 @@ var i = n(255367),
     E = n(20493);
 function j(e) {
     let { content: t } = e,
-        n = (0, a.e7)([g.Z], () => {
+        n = (0, a.e7)([p.Z], () => {
             var e, n;
-            return null == (n = g.Z.settings.userContent) || null == (e = n.recurringDismissibleContentStates) ? void 0 : e[t];
+            return null == (n = p.Z.settings.userContent) || null == (e = n.recurringDismissibleContentStates) ? void 0 : e[t];
         });
     if (null == n) return null;
     let r = [],
@@ -111,9 +111,9 @@ function S() {
         [x, j] = r.useState(''),
         C =
             null !=
-            (e = (0, a.e7)([g.Z], () => {
+            (e = (0, a.e7)([p.Z], () => {
                 var e;
-                return null == (e = g.Z.settings.userContent) ? void 0 : e.dismissedContents;
+                return null == (e = p.Z.settings.userContent) ? void 0 : e.dismissedContents;
             }))
                 ? e
                 : new Uint8Array(),
@@ -159,18 +159,18 @@ function S() {
                     }),
                     (0, i.jsx)(d.j7V, {
                         value: s,
-                        onChange: p.Nj,
+                        onChange: g.Nj,
                         children: 'Override Dismissible Content Daily Cap'
                     }),
                     (0, i.jsx)(d.j7V, {
                         value: b,
-                        onChange: p.KC,
+                        onChange: g.KC,
                         children: 'Override Minimum User Account Age Requirement'
                     }),
                     (0, i.jsxs)(d.xJW, {
                         children: [
                             (0, i.jsx)(d.zxk, {
-                                onClick: () => (0, p.EG)(),
+                                onClick: () => (0, g.EG)(),
                                 children: 'Reset DismissibleContentFrameworkStore'
                             }),
                             (0, i.jsx)(d.R94, {

@@ -9,11 +9,11 @@ var r = n(120356),
     c = n(388032),
     d = n(775853);
 function u(e) {
-    let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: m, showViewFullProfileButton: g } = e,
-        p = () =>
+    let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: m, showViewFullProfileButton: p } = e,
+        g = () =>
             (0, i.jsx)(o.Z, {
                 title: null != m ? m : c.intl.string(c.t.Zb06yM),
-                showViewFullProfileButton: g,
+                showViewFullProfileButton: p,
                 className: d.preview,
                 children: u
             });
@@ -22,10 +22,10 @@ function u(e) {
         children: (0, i.jsxs)(a.hjN, {
             className: d.profileCustomizationSection,
             children: [
-                l.tq && p(),
+                l.tq && g(),
                 (0, i.jsxs)('div', {
                     className: s()(d.baseLayout, r),
-                    children: [t, !l.tq && p()]
+                    children: [t, !l.tq && g()]
                 })
             ]
         })

@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(481060),
     u = n(607070),
     m = n(213609),
-    g = n(706140),
-    p = n(626135),
+    p = n(706140),
+    g = n(626135),
     h = n(404615),
     f = n(238108),
     b = n(22189),
@@ -72,14 +72,14 @@ let N = r.memo((e) => {
         [R, D] = r.useState(!1),
         Z = _ === x.gM.CARD_CAROUSEL_FIRST_ROW || _ === x.gM.CARD_CAROUSEL_SECOND_ROW || _ === x.gM.CARD_CAROUSEL_THIRD_ROW,
         w = (0, b.Z)(),
-        [k, L] = (0, g.cv)(null != s && n ? [s] : []),
+        [k, L] = (0, p.cv)(null != s && n ? [s] : []),
         { easterEggLevel: B, isEasterEggTriggered: M, onHover: U, onUnhover: V } = (0, f.Z)(5),
         G = (0, a.debounce)(() => {
-            p.default.track(j.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, a.snakeCase)(t) });
+            g.default.track(j.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, a.snakeCase)(t) });
         }, 800),
         F = (0, a.debounce)(() => {
             null != E &&
-                p.default.track(j.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+                g.default.track(j.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                     card_type: (0, a.snakeCase)(t),
                     function_name: (0, a.snakeCase)(E.name)
                 });
@@ -94,7 +94,7 @@ let N = r.memo((e) => {
     });
     let H = k !== s || null == s || R;
     return (r.useEffect(() => {
-        y && A && (D(!0), p.default.track(j.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(C.L.TAKE_ACTION));
+        y && A && (D(!0), g.default.track(j.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(C.L.TAKE_ACTION));
     }, [y, A, s, t, L]),
     (0, m.Z)({
         type: o.ImpressionTypes.VIEW,
@@ -156,7 +156,7 @@ let N = r.memo((e) => {
                                 [S.reducedMotion]: y
                             }),
                             onTransitionEnd: (e) => {
-                                A && 'transform' === e.propertyName && e.target.classList.contains(S.flipCard) && (D(!0), p.default.track(j.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(C.L.TAKE_ACTION));
+                                A && 'transform' === e.propertyName && e.target.classList.contains(S.flipCard) && (D(!0), g.default.track(j.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(C.L.TAKE_ACTION));
                             },
                             children: [
                                 (0, i.jsx)('div', {
@@ -188,17 +188,17 @@ let N = r.memo((e) => {
 N.displayName = 'PremiumPerkCard';
 let I = r.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: f, cardVariant: b, cardType: j, onClick: C, backgroundImage: O, pillText: v, perkImage: T, imageOverlayText: N, hasNitroGradientBackground: I } = e,
+    let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: p, className: g, perkComponent: f, cardVariant: b, cardType: j, onClick: C, backgroundImage: O, pillText: v, perkImage: T, imageOverlayText: N, hasNitroGradientBackground: I } = e,
         y = j === x.gM.CARD_CAROUSEL_FIRST_ROW || j === x.gM.CARD_CAROUSEL_SECOND_ROW || j === x.gM.CARD_CAROUSEL_THIRD_ROW,
         A = '' !== o || '' !== c || ('' !== a && b === x.zW.REWARD),
         P = (0, h._)(b);
     return (0, i.jsxs)(d.P3F, {
-        className: l()(S.card, p, null == (n = P.cardContainer) ? void 0 : n.className, {
+        className: l()(S.card, g, null == (n = P.cardContainer) ? void 0 : n.className, {
             [S.clickable]: null != C,
             [S.hideOverflow]: y,
             [S.nitroGradientBackground]: I
         }),
-        onMouseEnter: g,
+        onMouseEnter: p,
         style: { backgroundImage: null != O ? 'url('.concat(O, ')') : void 0 },
         onClick: C,
         children: [

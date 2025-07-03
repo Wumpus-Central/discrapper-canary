@@ -9,15 +9,15 @@ var i = n(255367),
     d = n(389494),
     u = n(353926),
     m = n(430824),
-    g = n(572004),
-    p = n(878209),
+    p = n(572004),
+    g = n(878209),
     h = n(987338),
     f = n(516370);
 function b() {
     let e = (0, a.cj)([u.Z], () => u.Z.getAllExperimentOverrideDescriptors()),
         t = (0, a.cj)([u.Z], () => u.Z.getRegisteredExperiments()),
         [n, s] = r.useState(''),
-        l = (0, p.Ro)((0, p.Tc)((0, p.Cg)(t), e), n);
+        l = (0, g.Ro)((0, g.Tc)((0, g.Cg)(t), e), n);
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
         title: 'Experiments',
@@ -54,8 +54,8 @@ function b() {
 }
 function x(e) {
     var t;
-    let { experiment: n, experimentId: s, overrideDescriptor: m, defaultOpen: p } = e,
-        [b, x] = r.useState(p),
+    let { experiment: n, experimentId: s, overrideDescriptor: m, defaultOpen: g } = e,
+        [b, x] = r.useState(g),
         [_, E] = r.useState(!1),
         j = r.useCallback(() => {
             x((e) => !e);
@@ -75,7 +75,7 @@ function x(e) {
         ),
         v = r.useCallback(
             (e) => {
-                (0, g.JG)((0, c.sZ)(s), () => {
+                (0, p.JG)((0, c.sZ)(s), () => {
                     ((0, o.showToast)({
                         id: 'experiment-link-copied',
                         message: 'Copied experiment link',
@@ -103,7 +103,7 @@ function x(e) {
                                 children: [
                                     n.title,
                                     ' ',
-                                    g.wS &&
+                                    p.wS &&
                                         (0, i.jsx)(o.P3F, {
                                             onClick: v,
                                             children: (0, i.jsx)(o.xPt, { size: 'xs' })
@@ -221,10 +221,10 @@ function x(e) {
 }
 function _(e) {
     let { experiment: t, experimentId: n, overrideDescriptor: s } = e,
-        [c, g] = r.useState(null != s),
-        [p, b] = r.useState(!1),
+        [c, p] = r.useState(null != s),
+        [g, b] = r.useState(!1),
         x = r.useCallback(() => {
-            g((e) => !e);
+            p((e) => !e);
         }, []),
         _ = (0, a.e7)([u.Z], () => u.Z.getLoadedGuildExperiment(n)),
         E = (0, a.Wu)([u.Z], () =>
@@ -322,7 +322,7 @@ function _(e) {
                                       : null
                               ]
                           }),
-                          p
+                          g
                               ? (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsx)(o.vwX, {

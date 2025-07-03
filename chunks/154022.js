@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(481060),
     u = n(230711),
     m = n(419363),
-    g = n(857595),
-    p = n(607070),
+    p = n(857595),
+    g = n(607070),
     h = n(627845),
     f = n(600164),
     b = n(313201),
@@ -83,7 +83,7 @@ let G = (0, b.hQ)(),
     F = (0, b.hQ)(),
     H = (0, b.hQ)(),
     z = o().debounce((e) => {
-        (0, g.o2)(e);
+        (0, p.o2)(e);
     }, 250),
     Y = o().debounce((e) => {
         (0, S.Ct)(e);
@@ -213,9 +213,9 @@ function K() {
     });
 }
 function q() {
-    let { saturation: e, desaturateUserColors: t } = (0, c.cj)([p.Z], () => ({
-        saturation: p.Z.saturation,
-        desaturateUserColors: p.Z.desaturateUserColors
+    let { saturation: e, desaturateUserColors: t } = (0, c.cj)([g.Z], () => ({
+        saturation: g.Z.saturation,
+        desaturateUserColors: g.Z.desaturateUserColors
     }));
     return (0, i.jsxs)(d.hjN, {
         className: B.marginTop20,
@@ -249,7 +249,7 @@ function q() {
                     hideBorder: !0,
                     className: l()(B.marginTop20, B.marginBottom20),
                     value: t,
-                    onChange: g.f1,
+                    onChange: p.f1,
                     note: k.intl.string(k.t.nlAOER),
                     children: k.intl.string(k.t.bQCodH)
                 })
@@ -258,21 +258,21 @@ function q() {
     });
 }
 function X() {
-    let e = (0, c.e7)([p.Z], () => p.Z.alwaysShowLinkDecorations);
+    let e = (0, c.e7)([g.Z], () => g.Z.alwaysShowLinkDecorations);
     return (0, i.jsx)(d.xJW, {
         className: B.marginTop20,
         children: (0, i.jsx)(d.j7V, {
             note: k.intl.string(k.t['72i5GB']),
             value: e,
             onChange: function () {
-                (0, g.gs)(!e);
+                (0, p.gs)(!e);
             },
             children: k.intl.string(k.t.OLZFBw)
         })
     });
 }
 function Q() {
-    let e = (0, c.e7)([p.Z], () => p.Z.roleStyle);
+    let e = (0, c.e7)([g.Z], () => g.Z.roleStyle);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(d.xJW, {
@@ -300,7 +300,7 @@ function Q() {
                             }
                         ],
                         onChange: function (e) {
-                            (0, g.u1)(e.value);
+                            (0, p.u1)(e.value);
                         },
                         value: e
                     })
@@ -311,7 +311,7 @@ function Q() {
     });
 }
 function J() {
-    let e = (0, c.e7)([p.Z], () => p.Z.syncProfileThemeWithUserTheme),
+    let e = (0, c.e7)([g.Z], () => g.Z.syncProfileThemeWithUserTheme),
         t = r.useRef(null);
     return (
         (0, A.Z)(t, P.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
@@ -329,7 +329,7 @@ function J() {
                     }),
                     className: B.marginTop20,
                     value: e,
-                    onChange: g.Uv,
+                    onChange: p.Uv,
                     children: k.intl.string(k.t['sSY+mJ'])
                 })
             })
@@ -337,14 +337,14 @@ function J() {
     );
 }
 function $() {
-    let [e] = (0, c.Wu)([p.Z], () => [p.Z.syncForcedColors, p.Z.systemForcedColors]),
+    let [e] = (0, c.Wu)([g.Z], () => [g.Z.syncForcedColors, g.Z.systemForcedColors]),
         [t, n] = r.useState(e);
     r.useEffect(() => {
         n(e);
     }, [e]);
     let s = r.useRef(null);
     r.useEffect(() => {
-        (null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, g.qz)(t), 150)));
+        (null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, p.qz)(t), 150)));
     }, [t, e]);
     let l = k.intl.format(k.t.GwEVEx, { learnMoreLink: N.Z.getArticleURL(D.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
@@ -370,10 +370,10 @@ function ee() {
             systemPrefersReducedMotion: a,
             gifAutoPlayOverrideReason: o,
             animateEmojiOverrideReason: u
-        } = (0, c.cj)([p.Z, y.Z], () => ({
-            systemPrefersReducedMotion: p.Z.systemPrefersReducedMotion,
-            rawPrefersReducedMotion: p.Z.rawPrefersReducedMotion,
-            useReducedMotion: p.Z.useReducedMotion,
+        } = (0, c.cj)([g.Z, y.Z], () => ({
+            systemPrefersReducedMotion: g.Z.systemPrefersReducedMotion,
+            rawPrefersReducedMotion: g.Z.rawPrefersReducedMotion,
+            useReducedMotion: g.Z.useReducedMotion,
             gifAutoPlayOverrideReason: y.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
             animateEmojiOverrideReason: y.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
@@ -381,12 +381,12 @@ function ee() {
     (0, A.Z)(m, P.rP.REDUCED_MOTION);
     let h = r.useCallback(
             (e, t) => {
-                (0, g.Zt)(t ? 'auto' : a);
+                (0, p.Zt)(t ? 'auto' : a);
             },
             [a]
         ),
         f = r.useCallback((e) => {
-            (0, g.Zt)(e ? 'reduce' : 'no-preference');
+            (0, p.Zt)(e ? 'reduce' : 'no-preference');
         }, []);
     return (0, i.jsxs)(d.xJW, {
         ref: m,
@@ -478,7 +478,7 @@ function et() {
     });
 }
 function en() {
-    let e = (0, c.e7)([p.Z], () => p.Z.isSubmitButtonEnabled),
+    let e = (0, c.e7)([g.Z], () => g.Z.isSubmitButtonEnabled),
         t = I.dN.useSetting(),
         n = r.useRef(null);
     return (
@@ -496,7 +496,7 @@ function en() {
                     children: (0, i.jsx)(d.j7V, {
                         className: B.marginTop20,
                         value: e,
-                        onChange: g.eN,
+                        onChange: p.eN,
                         children: k.intl.string(k.t['3Fztn5'])
                     })
                 }),

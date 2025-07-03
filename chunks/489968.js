@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(788983),
     u = n(668826),
     m = n(120421),
-    g = n(324815),
-    p = n(763283),
+    p = n(324815),
+    g = n(763283),
     h = n(981631),
     f = n(603571),
     b = n(388032),
@@ -105,26 +105,26 @@ function C() {
                         src: _,
                         alt: b.intl.string(f.default['7qZdOz'])
                     }),
-                    (0, i.jsxs)(g.Z, {
+                    (0, i.jsxs)(p.Z, {
                         muted: !0,
                         className: x.playButton,
                         color: 'white',
                         disabled: t,
                         onClick: C,
                         children: [
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(g.Z, {
                                 color: 'always-white',
                                 variant: 'text-lg/bold',
                                 children: e ? b.intl.string(f.default.ziFxys) : b.intl.string(f.default.vLz9lJ)
                             }),
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(g.Z, {
                                 color: 'always-white',
                                 variant: 'text-xxs/medium',
                                 children: b.intl.string(f.default['10J8k5'])
                             })
                         ]
                     }),
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(p.Z, {
                         muted: !0,
                         className: x.resetButton,
                         color: 'white',
@@ -132,7 +132,7 @@ function C() {
                         onClick: () => {
                             ((0, u.yW)(), C());
                         },
-                        children: (0, i.jsx)(p.Z, {
+                        children: (0, i.jsx)(g.Z, {
                             color: 'always-white',
                             variant: 'text-xs/bold',
                             children: b.intl.string(f.default['/A+1UF'])
@@ -143,7 +143,7 @@ function C() {
             (0, i.jsxs)('div', {
                 className: x.footer,
                 children: [
-                    (0, i.jsx)(p.Z, {
+                    (0, i.jsx)(g.Z, {
                         className: x.availability,
                         color: 'always-white',
                         variant: 'text-xxs/medium',
@@ -151,13 +151,13 @@ function C() {
                     }),
                     (0, i.jsx)('div', {
                         className: x.footerCenter,
-                        children: (0, i.jsx)(g.Z, {
+                        children: (0, i.jsx)(p.Z, {
                             muted: !0,
                             color: 'white',
                             href: 'https://www.youtube.com/watch?v=h-9SUgIeJnY',
                             tag: 'a',
                             target: '_blank',
-                            children: (0, i.jsx)(p.Z, {
+                            children: (0, i.jsx)(g.Z, {
                                 color: 'always-white',
                                 variant: 'text-xs/bold',
                                 children: b.intl.string(f.default.CQXsEh)

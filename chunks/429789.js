@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(921801),
     u = n(131951),
     m = n(726985),
-    g = n(388032),
-    p = n(20493);
+    p = n(388032),
+    g = n(20493);
 let h = (0, c.hQ)();
 function f(e) {
     let { refreshStyles: t } = e,
@@ -29,8 +29,8 @@ function f(e) {
                 (0, i.jsx)(a.vwX, {
                     id: h,
                     tag: a.RB0.H5,
-                    className: p.marginBottom8,
-                    children: g.intl.string(g.t.oSdBvb)
+                    className: g.marginBottom8,
+                    children: p.intl.string(p.t.oSdBvb)
                 }),
                 (0, i.jsx)(a.iRW, {
                     initialValue: n,
@@ -40,22 +40,22 @@ function f(e) {
                     'aria-labelledby': h
                 }),
                 (0, i.jsx)(a.R94, {
-                    className: s()({ [p.marginBottom20]: !t }),
+                    className: s()({ [g.marginBottom20]: !t }),
                     type: a.R94.Types.DESCRIPTION,
-                    children: g.intl.string(g.t['0A/8Rk'])
+                    children: p.intl.string(p.t['0A/8Rk'])
                 }),
-                !t && (0, i.jsx)(a.$i$, { className: p.marginBottom20 }),
+                !t && (0, i.jsx)(a.$i$, { className: g.marginBottom20 }),
                 (0, i.jsx)(a.j7V, {
                     value: r,
                     onChange: (e) => o.Z.setAttenuation(n, e, c),
                     hideBorder: t,
-                    children: g.intl.string(g.t['9dHxRU'])
+                    children: p.intl.string(p.t['9dHxRU'])
                 }),
                 (0, i.jsx)(a.j7V, {
                     value: c,
                     onChange: (e) => o.Z.setAttenuation(n, r, e),
                     hideBorder: t,
-                    children: g.intl.string(g.t.SMt0Gh)
+                    children: p.intl.string(p.t.SMt0Gh)
                 })
             ]
         });
@@ -64,7 +64,7 @@ function f(e) {
         children: t
             ? f
             : (0, i.jsx)(a.hjN, {
-                  className: p.marginBottom20,
+                  className: g.marginBottom20,
                   children: f
               })
     });

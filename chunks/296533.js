@@ -14,8 +14,8 @@ var i = n(255367),
     d = n(280942),
     u = n(209747),
     m = n(430824),
-    g = n(594174),
-    p = n(267642),
+    p = n(594174),
+    g = n(267642),
     h = n(74538),
     f = n(709054),
     b = n(357956),
@@ -59,7 +59,7 @@ function S(e) {
                 })(t),
             [t]
         ),
-        g = (0, a.Yzy)(
+        p = (0, a.Yzy)(
             l,
             {
                 from: { opacity: 0 },
@@ -77,7 +77,7 @@ function S(e) {
                   children: u
               })
           })
-        : g((e, t) =>
+        : p((e, t) =>
               (0, i.jsx)(s.animated.div, {
                   style: e,
                   className: O.boostDescriptionInnerContainer,
@@ -92,10 +92,10 @@ function S(e) {
 function v(e) {
     let { guildTier: t, guildBoostSlot: n, premiumSubscription: s, hasCancelableGuildBoostSlot: u, showAltText: m, isLastGuildBoostSlot: h } = e,
         f = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
-        _ = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        _ = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         E = r.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         j = r.useMemo(() => null != E && E > new Date(), [E]),
-        v = (0, p.tl)(n),
+        v = (0, g.tl)(n),
         T = (0, c.Z)(),
         N = r.useRef(null);
     return (0, i.jsxs)('div', {
@@ -333,7 +333,7 @@ function y(e) {
         return (
             Object.keys(t).forEach((i) => {
                 let r = t[i];
-                if ((!(0, p.tl)(r) && e++, null != r.premiumGuildSubscription)) {
+                if ((!(0, g.tl)(r) && e++, null != r.premiumGuildSubscription)) {
                     let e = r.premiumGuildSubscription.guildId;
                     (e in n || (n[e] = []), n[e].push(r));
                 }

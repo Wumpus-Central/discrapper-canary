@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(731722),
     u = n(993413),
     m = n(996073),
-    g = n(594174),
-    p = n(840720),
+    p = n(594174),
+    g = n(840720),
     h = n(921944),
     f = n(526761),
     b = n(388032),
@@ -20,9 +20,9 @@ let _ = (0, o.hQ)(),
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
             [E, j] = (0, c.US)([l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
             C = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            O = (0, s.e7)([g.default], () => {
+            O = (0, s.e7)([p.default], () => {
                 var e;
-                return (0, d.Pb)(null == (e = g.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
+                return (0, d.Pb)(null == (e = p.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
             }),
             S = void 0 !== n ? n : O,
             v = r.useMemo(
@@ -49,7 +49,7 @@ let _ = (0, o.hQ)(),
                     let l = null == (t = s.profile) ? void 0 : t.tag;
                     return null == l
                         ? null
-                        : (0, i.jsx)(p.Z, {
+                        : (0, i.jsx)(g.Z, {
                               guildTag: l,
                               guildBadge: null != (r = null == (n = s.profile) ? void 0 : n.badge) ? r : void 0,
                               guildId: s.id,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -33,8 +33,8 @@ function m(e) {
     }
     return e;
 }
-function g(e) {
-    let { className: t, boxLayout: n, title: r, shouldLoadVideo: s, isReducedMotion: d, includeSideGradient: g = !1, startLeftAligned: p = !1 } = e;
+function p(e) {
+    let { className: t, boxLayout: n, title: r, shouldLoadVideo: s, isReducedMotion: d, includeSideGradient: p = !1, startLeftAligned: g = !1 } = e;
     return (0, i.jsxs)('div', {
         className: l()(u.boxBackdrop, t),
         children: [
@@ -63,7 +63,7 @@ function g(e) {
                             var r, l;
                             return (0, i.jsx)(
                                 c.Z,
-                                ((r = m({ index: t + +!!p }, e)),
+                                ((r = m({ index: t + +!!g }, e)),
                                 (l = l =
                                     {
                                         size: n,
@@ -89,16 +89,16 @@ function g(e) {
                     });
                 })
             }),
-            g && (0, i.jsx)('div', { className: u.bentoSideGradient })
+            p && (0, i.jsx)('div', { className: u.bentoSideGradient })
         ]
     });
 }
-let p = r.memo(function (e) {
+let g = r.memo(function (e) {
     let { whatsNewBoxes: t, bestOfBoxes: n } = (0, o.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(
-                g,
+                p,
                 m(
                     {
                         boxLayout: t,
@@ -108,7 +108,7 @@ let p = r.memo(function (e) {
                 )
             ),
             (0, i.jsx)(
-                g,
+                p,
                 m(
                     {
                         boxLayout: n,

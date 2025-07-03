@@ -1,8 +1,8 @@
 (n.d(t, {
-    ZM: () => g,
+    ZM: () => p,
     gx: () => u,
     mN: () => h,
-    re: () => p
+    re: () => g
 }),
     n(539854));
 var i = n(442837),
@@ -23,7 +23,7 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
             s = f();
         return (r(i ? { card: n.voiceFilters } : { card: n.nameplates }), null != n.tenureBadge && r({ card: n.tenureBadge }), r({ card: n.permadecos }), s ? 0 === t.length && r({ card: n.specialShopPerks }) : r({ card: n.referralProgram }), r({ card: n.newAppStylesUpdateJune2024 }), r({ card: n.serverProfiles }), r({ card: n.earlyAccess }), r({ card: n.unlimitedSuperReactions }), t);
     },
-    g = (e) => {
+    p = (e) => {
         let { perksCards: t, variant: n, hideCardsOnNarrowScreen: i, isPremiumSubscriber: r, fractionalState: s, isInReverseTrial: l, showVoiceFiltersCard: a } = e,
             d = [];
         switch (n) {
@@ -48,7 +48,7 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
         }
         return (i && (d = d.filter((e) => !e.hideOnNarrowScreen)), d);
     },
-    p = (e) => {
+    g = (e) => {
         let t = (0, i.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
             n = null != t ? a.ZP.getPremiumPlanItem(t) : null,
             r = (null != n ? a.ZP.getSkuIdForPlan(n.planId) : null) === c.Si.TIER_2;

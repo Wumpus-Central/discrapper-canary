@@ -9,8 +9,8 @@ var i = n(780384),
     d = n(799974),
     u = n(264511),
     m = n(345614),
-    g = n(925773),
-    p = n(298342),
+    p = n(925773),
+    g = n(298342),
     h = n(761822),
     f = n(131664),
     b = n(389457),
@@ -76,11 +76,11 @@ let S = {
             light: E.Z
         },
         [a.VU.PREMIUM_TENURE_36_MONTH]: {
-            dark: g.Z,
+            dark: p.Z,
             light: j.Z
         },
         [a.VU.PREMIUM_TENURE_60_MONTH]: {
-            dark: p.Z,
+            dark: g.Z,
             light: C.Z
         },
         [a.VU.PREMIUM_TENURE_72_MONTH]: {

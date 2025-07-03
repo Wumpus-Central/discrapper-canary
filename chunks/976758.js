@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(36703),
     u = n(388032),
     m = n(245095);
-let g = (0, o.hQ)(),
-    p = (0, o.hQ)();
+let p = (0, o.hQ)(),
+    g = (0, o.hQ)();
 function h() {
     let { analyticsLocations: e } = (0, a.ZP)(),
         { inputVolume: t, outputVolume: n } = (0, r.cj)([c.Z], () => ({
@@ -25,11 +25,11 @@ function h() {
                 className: m.column,
                 children: (0, i.jsx)(s.xJW, {
                     title: u.intl.string(u.t.OX2Bnp),
-                    titleId: g,
+                    titleId: p,
                     children: (0, i.jsx)(s.iRW, {
                         initialValue: (0, d.P)(t),
                         asValueChanges: (t) => l.Z.setInputVolume((0, d.A)(t), { analyticsLocations: e }),
-                        'aria-labelledby': g
+                        'aria-labelledby': p
                     })
                 })
             }),
@@ -37,13 +37,13 @@ function h() {
                 className: m.column,
                 children: (0, i.jsx)(s.xJW, {
                     title: u.intl.string(u.t.eATD2N),
-                    titleId: p,
+                    titleId: g,
                     children: (0, i.jsx)(s.iRW, {
                         initialValue: (0, d.P)(n),
                         maxValue: 200,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),
                         asValueChanges: (t) => l.Z.setOutputVolume((0, d.A)(t), { analyticsLocations: e }),
-                        'aria-labelledby': p
+                        'aria-labelledby': g
                     })
                 })
             })

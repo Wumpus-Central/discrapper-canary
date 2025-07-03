@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(953529));
+(n.d(t, { Z: () => p }), n(953529));
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -10,12 +10,12 @@ var r = n(120356),
     d = n(955204),
     u = n(674680),
     m = n(927671);
-function g(e) {
+function p(e) {
     let { achievementId: t, dateUnlocked: n } = e,
         r = (0, d.oX)(t);
     if (null == r) return null;
     let l = null != n,
-        { name: g, description: p, hideDescriptionUntilUnlock: h, onAction: f } = r,
+        { name: p, description: g, hideDescriptionUntilUnlock: h, onAction: f } = r,
         b = h && !l,
         x = l ? 'header-primary' : 'text-muted',
         _ = l ? 'header-secondary' : 'text-muted',
@@ -49,12 +49,12 @@ function g(e) {
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',
                         color: x,
-                        children: g()
+                        children: p()
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: _,
-                        children: b ? '?????' : p()
+                        children: b ? '?????' : g()
                     })
                 ]
             })

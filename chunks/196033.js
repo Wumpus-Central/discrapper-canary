@@ -1,4 +1,4 @@
-n.d(t, { W: () => g });
+n.d(t, { W: () => p });
 var i = n(73800),
     r = n(115434),
     s = n(264181),
@@ -9,11 +9,11 @@ var i = n(73800),
     d = n(388032),
     u = n(513767),
     m = n(78230);
-let g = () => {
+let p = () => {
     let e = (0, o.zL)(c.jE.UPSELL_BANNER),
         t = (0, o.zL)(c.jE.UPSELL_BANNER_POPOUT),
         n = (0, l.e7)([a.Z], () => a.Z.getMarketingBySurface(r.K.EDIT_PROFILE_SETTINGS)),
-        g = i.useMemo(
+        p = i.useMemo(
             () =>
                 null != n
                     ? n
@@ -54,12 +54,12 @@ let g = () => {
                         }));
                 }
                 return e;
-            })({}, g)),
+            })({}, p)),
             (i = i =
                 {
                     type: s.Z.BANNER,
-                    asset: null != e ? e : g.asset,
-                    popoutAsset: null != t ? t : g.popoutAsset
+                    asset: null != e ? e : p.asset,
+                    popoutAsset: null != t ? t : p.popoutAsset
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -75,5 +75,5 @@ let g = () => {
                   }),
             n
         );
-    }, [e, t, g]);
+    }, [e, t, p]);
 };

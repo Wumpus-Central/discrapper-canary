@@ -1,4 +1,4 @@
-(n.d(t, { default: () => g }), n(388685));
+(n.d(t, { default: () => p }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(981631),
     u = n(388032),
     m = n(132709);
-function g(e) {
-    var t, n, g, p;
+function p(e) {
+    var t, n, p, g;
     let { transitionState: h, onSuccess: f, onClose: b, requirementsUpdated: x, noSkip: _ = !1 } = e,
         [E, j] = r.useState(''),
         [C, O] = r.useState(''),
@@ -87,7 +87,7 @@ function g(e) {
                                 (0, i.jsx)(l.xJW, {
                                     className: m.newPassword,
                                     title: u.intl.string(u.t['8dM4FB']),
-                                    error: null != (p = null != (g = null == A || null == (n = A.new_password) ? void 0 : n[0]) ? g : T) ? p : void 0,
+                                    error: null != (g = null != (p = null == A || null == (n = A.new_password) ? void 0 : n[0]) ? p : T) ? g : void 0,
                                     children: (0, i.jsx)(l.oil, {
                                         type: 'password',
                                         value: C,

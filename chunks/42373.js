@@ -9,44 +9,44 @@ var i = n(255367),
     d = n(410030),
     u = n(70097),
     m = n(626135),
-    g = n(526167),
-    p = n(572995),
+    p = n(526167),
+    g = n(572995),
     h = n(981631),
     f = n(869783),
     b = n(888723);
 let x = (e) => {
     let { name: t, title: n, description: s, descriptionCta: x, previewImage: _, videoUrl: E, shouldLoadVideo: j, index: C, customVideoStyle: O, isReducedMotion: S, onClick: v, badgeText: T, size: N } = e,
-        I = (0, g.rO)(),
+        I = (0, p.rO)(),
         y = r.useRef(null),
         A = r.useRef(0),
         P = (function (e) {
             let t;
             switch (e) {
-                case p.NA.EMOJIS:
+                case g.NA.EMOJIS:
                     t = b.emojisBackground;
                     break;
-                case p.NA.REFERRAL_PROGRAM:
+                case g.NA.REFERRAL_PROGRAM:
                     t = b.referralProgramBackground;
                     break;
-                case p.NA.NO_LIMITS:
+                case g.NA.NO_LIMITS:
                     t = b.noLimitsBackground;
                     break;
-                case p.NA.NEW_APP_STYLES:
+                case g.NA.NEW_APP_STYLES:
                     t = b.newStylesBackground;
                     break;
-                case p.NA.YOUR_SPACE:
+                case g.NA.YOUR_SPACE:
                     t = b.yourSpaceBackground;
                     break;
-                case p.NA.SERVER_PROFILES:
+                case g.NA.SERVER_PROFILES:
                     t = b.serverProfilesBackground;
                     break;
-                case p.NA.SHOW_YOUR_STYLE:
+                case g.NA.SHOW_YOUR_STYLE:
                     t = b.yourStyleBackground;
                     break;
-                case p.NA.PERMADECOS:
+                case g.NA.PERMADECOS:
                     t = b.permadecosBackground;
                     break;
-                case p.NA.VOICE_FILTERS:
+                case g.NA.VOICE_FILTERS:
                     t = b.voiceFiltersBackground;
             }
             return t;
@@ -66,9 +66,9 @@ let x = (e) => {
         B = () =>
             (0, i.jsxs)('div', {
                 className: l()({
-                    [b.largeTextBox]: N === p.y$.LARGE,
-                    [b.mediumTextBox]: N === p.y$.MEDIUM,
-                    [b.smallTextBox]: N === p.y$.SMALL
+                    [b.largeTextBox]: N === g.y$.LARGE,
+                    [b.mediumTextBox]: N === g.y$.MEDIUM,
+                    [b.smallTextBox]: N === g.y$.SMALL
                 }),
                 children: [
                     (0, i.jsxs)('div', {
@@ -83,12 +83,12 @@ let x = (e) => {
                                     })
                                 }),
                             (0, i.jsx)(c.X6q, {
-                                variant: N === p.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
+                                variant: N === g.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                                 color: 'header-primary',
                                 className: l()(b.header, {
-                                    [b.largeBoxHeader]: N === p.y$.LARGE,
-                                    [b.mediumBoxHeader]: N === p.y$.MEDIUM,
-                                    [b.smallBoxHeader]: N === p.y$.SMALL
+                                    [b.largeBoxHeader]: N === g.y$.LARGE,
+                                    [b.mediumBoxHeader]: N === g.y$.MEDIUM,
+                                    [b.smallBoxHeader]: N === g.y$.SMALL
                                 }),
                                 children: n
                             })
@@ -116,9 +116,9 @@ let x = (e) => {
         M = () =>
             (0, i.jsx)('div', {
                 className: l()({
-                    [b.largeBoxArtContainer]: N === p.y$.LARGE,
-                    [b.mediumBoxArtContainer]: N === p.y$.MEDIUM,
-                    [b.smallBoxArtContainer]: N === p.y$.SMALL
+                    [b.largeBoxArtContainer]: N === g.y$.LARGE,
+                    [b.mediumBoxArtContainer]: N === g.y$.MEDIUM,
+                    [b.smallBoxArtContainer]: N === g.y$.SMALL
                 }),
                 children: (0, i.jsx)(
                     u.Z,
@@ -129,9 +129,9 @@ let x = (e) => {
                         poster: _,
                         loop: !0,
                         className: l()({
-                            [b.largeBoxVideo]: N === p.y$.LARGE,
-                            [b.mediumBoxVideo]: N === p.y$.MEDIUM,
-                            [b.smallBoxVideo]: N === p.y$.SMALL,
+                            [b.largeBoxVideo]: N === g.y$.LARGE,
+                            [b.mediumBoxVideo]: N === g.y$.MEDIUM,
+                            [b.smallBoxVideo]: N === g.y$.SMALL,
                             [O]: null != O
                         }),
                         ref: y,
@@ -145,9 +145,9 @@ let x = (e) => {
             });
     return (0, i.jsx)('div', {
         className: l()(P, {
-            [b.largeBoxContainer]: N === p.y$.LARGE,
-            [b.mediumBoxContainer]: N === p.y$.MEDIUM,
-            [b.smallBoxContainer]: N === p.y$.SMALL
+            [b.largeBoxContainer]: N === g.y$.LARGE,
+            [b.mediumBoxContainer]: N === g.y$.MEDIUM,
+            [b.smallBoxContainer]: N === g.y$.SMALL
         }),
         onMouseEnter: k,
         onFocus: k,

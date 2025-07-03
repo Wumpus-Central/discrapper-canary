@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -65,10 +65,10 @@ let u = (e) => (null != e.globalName ? e.globalName : e.username),
             })
         });
     };
-function g(e) {
+function p(e) {
     let { referrer: t } = e,
         n = l.Z.useExperiment({ location: 'UserTrialOfferAttribution' }),
-        { avatarSrc: g, eventHandlers: p } = (0, s.Z)({
+        { avatarSrc: p, eventHandlers: g } = (0, s.Z)({
             user: t,
             size: a.EF.SIZE_32,
             animateOnHover: !0
@@ -76,8 +76,8 @@ function g(e) {
     return !0 === n.enabled
         ? (0, i.jsx)(m, {
               referrer: t,
-              avatarSrc: g,
-              eventHandlers: p
+              avatarSrc: p,
+              eventHandlers: g
           })
         : (0, i.jsx)('div', {
               className: c.attributionBannerContainer,
@@ -91,11 +91,11 @@ function g(e) {
                               d(
                                   {
                                       className: c.icon,
-                                      src: g,
+                                      src: p,
                                       'aria-label': t.username,
                                       size: a.EF.SIZE_32
                                   },
-                                  p
+                                  g
                               )
                           )
                       }),

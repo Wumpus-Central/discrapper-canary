@@ -9,8 +9,8 @@ var i,
     d = n(317381),
     u = n(16609),
     m = n(430198),
-    g = n(924301),
-    p = n(601070),
+    p = n(924301),
+    g = n(601070),
     h = n(569471),
     f = n(581883),
     b = n(314897),
@@ -96,7 +96,7 @@ function H(e) {
 }
 class z extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, b.default, x.Z, _.Z, E.Z, d.ZP, j.Z, m.Z, g.ZP, h.Z, C.Z, O.ZP, S.Z, v.ZP, f.Z);
+        this.waitFor(g.Z, b.default, x.Z, _.Z, E.Z, d.ZP, j.Z, m.Z, p.ZP, h.Z, C.Z, O.ZP, S.Z, v.ZP, f.Z);
     }
     getGuild(e, t) {
         var n, i;

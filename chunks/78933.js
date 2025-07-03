@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(727637),
     u = n(100527),
     m = n(906732),
-    g = n(359588),
-    p = n(368326),
+    p = n(359588),
+    g = n(368326),
     h = n(429467),
     f = n(526031),
     b = n(243778),
@@ -89,25 +89,25 @@ function es(e) {
             userId: t.id
         }),
         { ref: em } = (0, c.ZP)(),
-        eg = (0, d.Z)(em);
+        ep = (0, d.Z)(em);
     (r.useEffect(() => {
         null == es || es(em.current);
     }, [em, es]),
         r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []));
-    let ep = (0, l.e7)([G.Z], () => G.Z.getStatus(t.id)),
+    let eg = (0, l.e7)([G.Z], () => G.Z.getStatus(t.id)),
         eh = U.Cr.useSetting(),
         ef = (0, Q.F)(eh),
         { expiringStatusProfileFeedback: eb } = x.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         ex = (0, l.e7)([F.Z], () => F.Z.hidePersonalInformation),
         e_ = (0, _.p)(),
         eE = U.Sb.useSetting(),
-        ej = (0, Q.I)(ep),
+        ej = (0, Q.I)(eg),
         eC = (0, K.g)(n),
         eO = (0, E.Z)({ analyticsLocations: ed }),
         eS = (0, Y.I5)(t),
-        ev = (0, p.p)({ location: 'UserProfileAccountPopout' }),
+        ev = (0, g.p)({ location: 'UserProfileAccountPopout' }),
         eT = (0, O.b)({ location: 'UserProfileAccountPopout' }),
-        eN = (0, g.Z)({ location: 'UserProfileAccountPopout' }),
+        eN = (0, p.Z)({ location: 'UserProfileAccountPopout' }),
         eI = r.useRef(null),
         [ey, eA] = r.useState(String(Date.now()));
     (0, V.fu)({
@@ -220,7 +220,7 @@ function es(e) {
                                                 (0, i.jsx)(R.Z, { userId: t.id }),
                                                 (0, i.jsx)(k.Z, {
                                                     user: t,
-                                                    isHovering: eg
+                                                    isHovering: ep
                                                 })
                                             ]
                                         })
@@ -281,10 +281,10 @@ function es(e) {
                                                                 }),
                                                             icon: () =>
                                                                 (0, i.jsx)(o.qbd, {
-                                                                    status: ep,
+                                                                    status: eg,
                                                                     size: 12
                                                                 }),
-                                                            hint: (e_ || ep === $.Skl.DND) && (0, i.jsx)(o.owu, { size: 'xxs' }),
+                                                            hint: (e_ || eg === $.Skl.DND) && (0, i.jsx)(o.owu, { size: 'xxs' }),
                                                             renderSubmenu: s.tq
                                                                 ? void 0
                                                                 : (e) => {
@@ -419,7 +419,7 @@ function es(e) {
                             eM &&
                                 (0, i.jsx)(j.Z, {
                                     profileEffectId: null == ec ? void 0 : ec.profileEffectId,
-                                    isHovering: eg
+                                    isHovering: ep
                                 })
                         ]
                     }),

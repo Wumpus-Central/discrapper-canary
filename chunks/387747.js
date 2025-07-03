@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var i = n(255367);
 n(73800);
 var r = n(410575),
@@ -10,8 +10,8 @@ var r = n(410575),
     d = n(541540),
     u = n(29599),
     m = n(726985),
-    g = n(981631);
-function p() {
+    p = n(981631);
+function g() {
     let { analyticsLocations: e } = (0, l.ZP)(s.Z.USER_SETTINGS_GIFT_INVENTORY);
     return (0, i.jsxs)(l.Gt, {
         value: e,
@@ -19,21 +19,21 @@ function p() {
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_CODE_REDEMPTION,
                 children: (0, i.jsx)(r.Z, {
-                    section: g.jXE.LIBRARY_INVENTORY_CODE_REDEMPTION,
+                    section: p.jXE.LIBRARY_INVENTORY_CODE_REDEMPTION,
                     children: (0, i.jsx)(d.Z, {})
                 })
             }),
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_INVENTORY_QUESTS,
                 children: (0, i.jsx)(r.Z, {
-                    section: g.jXE.QUESTS,
+                    section: p.jXE.QUESTS,
                     children: (0, i.jsx)(o.Z, {})
                 })
             }),
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_INVENTORY_LIST,
                 children: (0, i.jsx)(r.Z, {
-                    section: g.jXE.LIBRARY_INVENTORY_GIFTS_LIST,
+                    section: p.jXE.LIBRARY_INVENTORY_GIFTS_LIST,
                     children: (0, i.jsx)(u.Z, {})
                 })
             }),

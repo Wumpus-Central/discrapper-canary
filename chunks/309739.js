@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(524437),
     u = n(780384),
     m = n(481060),
-    g = n(457330),
-    p = n(410030),
+    p = n(457330),
+    g = n(410030),
     h = n(726542),
     f = n(316496),
     b = n(116841),
@@ -223,7 +223,7 @@ let k = (e) => {
 function L(e) {
     let { account: t } = e,
         [n, s] = r.useState(t.showActivity),
-        l = (0, p.ZP)();
+        l = (0, g.ZP)();
     r.useEffect(() => {
         s(t.showActivity);
     }, [t]);
@@ -235,7 +235,7 @@ function L(e) {
                 hideBorder: !0,
                 value: n,
                 onChange: function (e) {
-                    (s(e), g.Z.setShowActivity(t.type, t.id, e));
+                    (s(e), p.Z.setShowActivity(t.type, t.id, e));
                 },
                 children: (0, i.jsxs)('div', {
                     className: A.activitySwitchRow,

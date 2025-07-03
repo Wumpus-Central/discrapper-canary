@@ -21,7 +21,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -37,7 +37,7 @@ function g(e) {
     }
     return e;
 }
-function p(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -109,7 +109,7 @@ let h = new i.Z('Guilds'),
             null != n &&
                 this.put(
                     c.rk(n, {
-                        roles: p(g({}, i), { [e.role.id]: e.role }),
+                        roles: g(p({}, i), { [e.role.id]: e.role }),
                         member: l.ZP.getSelfMember(e.guildId)
                     }),
                     t
@@ -118,10 +118,10 @@ let h = new i.Z('Guilds'),
         handleGuildRoleDelete(e, t) {
             let n = o.Z.getGuild(e.guildId);
             if (null != n) {
-                let i = g({}, a.Z.getRoles(e.guildId));
+                let i = p({}, a.Z.getRoles(e.guildId));
                 delete i[e.roleId];
                 let r = l.ZP.getSelfMember(e.guildId);
-                (null != r && (r = p(g({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
+                (null != r && (r = g(p({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
                     this.put(
                         c.rk(n, {
                             roles: i,

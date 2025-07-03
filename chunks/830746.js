@@ -10,13 +10,13 @@ var r = n(399606),
     d = n(552045),
     u = n(87792),
     m = n(302289),
-    g = n(946690),
-    p = n(292352),
+    p = n(946690),
+    g = n(292352),
     h = n(916723),
     f = n(388032),
     b = n(959810);
 let x = () => {
-    let e = (0, c.mq)(p.ne.ACTIVE),
+    let e = (0, c.mq)(g.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, r.e7)([l.default], () => l.default.getCurrentUser()),
         x = (0, a.o)(f.intl.string(h.default['5RZ8Tk']), f.intl.string(h.default.bmhCnJ)),
@@ -34,17 +34,17 @@ let x = () => {
                   (0, i.jsxs)('div', {
                       className: b.featureCards,
                       children: [
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(p.Z, {
                               icon: s.eQA,
                               header: f.intl.string(h.default['001l3t']),
                               description: x
                           }),
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(p.Z, {
                               icon: s.tEF,
                               header: f.intl.string(h.default.yipAeH),
                               description: _
                           }),
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(p.Z, {
                               icon: s.IkH,
                               header: f.intl.string(h.default.hhOuMT),
                               description: E

@@ -33,38 +33,38 @@ function u() {
         c = (0, s.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
         u = (0, s.e7)([a.Z], () => a.Z.getGuilds()),
         m = c.map((e) => u[e]),
-        g = l.CW.useSetting(),
-        [p, h] = (0, r.useState)(g),
+        p = l.CW.useSetting(),
+        [g, h] = (0, r.useState)(p),
         f = async (e) => {
             h(e);
             try {
                 await l.CW.updateSetting(e);
             } catch (e) {
-                h(g);
+                h(p);
             }
         },
-        b = 0 !== p.length,
-        [x, _] = (0, r.useState)(() => d[n](m, g)),
+        b = 0 !== g.length,
+        [x, _] = (0, r.useState)(() => d[n](m, p)),
         E = x.map((e) => u[e.id]).filter(Boolean);
     return {
         guilds: '' === e ? E : E.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
         sortOrder: n,
         searchQuery: e,
         setSortOrder: (e) => {
-            (_(d[e](m, g)), i(e));
+            (_(d[e](m, p)), i(e));
         },
         setSearchQuery: t,
         onToggleActivityRestrictedGuild: (e) => {
             let { checked: t, guildId: n } = e,
-                i = new Set(p);
+                i = new Set(g);
             (t ? i.delete(n) : i.add(n), f([...i]));
         },
-        isActivityRestricted: (e) => p.includes(e),
+        isActivityRestricted: (e) => g.includes(e),
         hasActivityRestrictedGuilds: b,
         onToggleAllActivityRestrictedGuilds: () => {
             b ? f([]) : f(c);
         },
         numTotalGuilds: c.length,
-        numActivityRestrictedGuilds: p.length
+        numActivityRestrictedGuilds: g.length
     };
 }

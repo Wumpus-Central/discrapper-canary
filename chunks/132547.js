@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(214852),
     u = n(626135),
     m = n(560223),
-    g = n(347475),
-    p = n(342414),
+    p = n(347475),
+    g = n(342414),
     h = n(391110),
     f = n(71363),
     b = n(781800),
@@ -38,7 +38,7 @@ let C = () => {
                         children: (0, i.jsxs)(o.Gt, {
                             value: O,
                             children: [
-                                (0, i.jsx)(p.Z, {
+                                (0, i.jsx)(g.Z, {
                                     className: E.heroHeading,
                                     location: h.MQ.HOME
                                 }),
@@ -59,7 +59,7 @@ let C = () => {
                                         previousComponent: h.MQ.HOME
                                     })
                                 }),
-                                (0, i.jsx)(g.Z, {
+                                (0, i.jsx)(p.Z, {
                                     className: E.giftNitro,
                                     location: a.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                     analyticsLocation: {

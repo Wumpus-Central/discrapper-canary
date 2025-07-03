@@ -13,8 +13,8 @@ var s = n(120356),
     d = n(182567),
     u = n(63063),
     m = n(367074),
-    g = n(784238),
-    p = n(474936),
+    p = n(784238),
+    g = n(474936),
     h = n(981631),
     f = n(388032),
     b = n(669792),
@@ -64,12 +64,12 @@ let O = function (e) {
                                               color: 'text-secondary',
                                               children: f.intl.format(f.t['lVOH/v'], { helpCenterLink: u.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025) })
                                           }),
-                                          (0, r.jsx)(g.Z, {
+                                          (0, r.jsx)(p.Z, {
                                               textOptions: {
                                                   textOverride: f.intl.string(f.t.J61px8),
                                                   textClassName: b.subscribeButtonText
                                               },
-                                              subscriptionTier: p.Si.TIER_2,
+                                              subscriptionTier: g.Si.TIER_2,
                                               showIcon: !1,
                                               className: b.subscribeButton,
                                               color: s
@@ -120,12 +120,12 @@ let O = function (e) {
                                                 color: 'text-secondary',
                                                 children: f.intl.format(f.t['lVOH/v'], { helpCenterLink: u.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025) })
                                             }),
-                                            (0, r.jsx)(g.Z, {
+                                            (0, r.jsx)(p.Z, {
                                                 textOptions: {
                                                     textOverride: f.intl.string(f.t.J61px8),
                                                     textClassName: b.subscribeButtonText
                                                 },
-                                                subscriptionTier: p.Si.TIER_2,
+                                                subscriptionTier: g.Si.TIER_2,
                                                 showIcon: !1,
                                                 className: b.subscribeButton,
                                                 color: s
@@ -175,8 +175,8 @@ let O = function (e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(g.Z, {
-                                    subscriptionTier: p.Si.TIER_2,
+                                (0, r.jsx)(p.Z, {
+                                    subscriptionTier: g.Si.TIER_2,
                                     showIcon: !0,
                                     shinyButtonClassName: b.buttonGradient,
                                     hasActivePromotion: !0

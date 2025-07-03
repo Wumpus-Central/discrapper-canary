@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(600164),
     u = n(313201),
     m = n(695103),
-    g = n(388032),
-    p = n(458240),
+    p = n(388032),
+    g = n(458240),
     h = n(20493);
 let f = /^\d+$|^$/;
 function b(e) {
@@ -62,18 +62,18 @@ function b(e) {
                         id: T,
                         tag: 'h1',
                         className: h.marginReset,
-                        children: g.intl.string(g.t.f8fzk5)
+                        children: p.intl.string(p.t.f8fzk5)
                     }),
                     (0, i.jsx)(l.olH, { onClick: t })
                 ]
             }),
             (0, i.jsxs)(l.hzk, {
-                className: p.modalContent,
+                className: g.modalContent,
                 children: [
                     (0, i.jsx)(l.R94, {
                         className: h.marginBottom20,
                         type: l.R94.Types.DESCRIPTION,
-                        children: g.intl.string(g.t.a6Vilp)
+                        children: p.intl.string(p.t.a6Vilp)
                     }),
                     null == x
                         ? null
@@ -90,13 +90,13 @@ function b(e) {
                             align: d.Z.Align.START,
                             children: [
                                 (0, i.jsx)(l.xJW, {
-                                    className: p.inputWrapper,
-                                    title: g.intl.string(g.t.P6TzgI),
+                                    className: g.inputWrapper,
+                                    title: p.intl.string(p.t.P6TzgI),
                                     required: !0,
                                     children: (0, i.jsx)(l.oil, {
                                         value: E,
                                         maxLength: 19,
-                                        error: N ? null : g.intl.string(g.t.gPNgKC),
+                                        error: N ? null : p.intl.string(p.t.gPNgKC),
                                         onChange: function (e) {
                                             j(e);
                                         },
@@ -104,20 +104,20 @@ function b(e) {
                                     })
                                 }),
                                 (0, i.jsx)(l.xJW, {
-                                    className: p.inputWrapper,
-                                    title: g.intl.string(g.t['/GTqXF']),
+                                    className: g.inputWrapper,
+                                    title: p.intl.string(p.t['/GTqXF']),
                                     children: (0, i.jsx)(l.q4e, {
                                         isDisabled: !N || '' === E,
                                         value: S,
                                         options: [
                                             {
                                                 value: 'localhost',
-                                                label: g.intl.string(g.t['+Y9Y6u']),
+                                                label: p.intl.string(p.t['+Y9Y6u']),
                                                 key: 'localhost'
                                             },
                                             {
                                                 value: 'proxy',
-                                                label: g.intl.string(g.t.uaksyc),
+                                                label: p.intl.string(p.t.uaksyc),
                                                 key: 'proxy'
                                             }
                                         ],
@@ -130,8 +130,8 @@ function b(e) {
                                 'localhost' !== S
                                     ? null
                                     : (0, i.jsx)(l.xJW, {
-                                          className: p.inputWrapper,
-                                          title: g.intl.string(g.t.fF4zxs),
+                                          className: g.inputWrapper,
+                                          title: p.intl.string(p.t.fF4zxs),
                                           required: !0,
                                           children: (0, i.jsx)(l.oil, {
                                               value: C,
@@ -145,7 +145,7 @@ function b(e) {
                                     type: 'submit',
                                     disabled: !N || 0 === E.length || ('localhost' === S && 0 === C.length),
                                     color: y ? l.zxk.Colors.RED : l.zxk.Colors.GREEN,
-                                    children: y ? g.intl.string(g.t.d6TR3N) : g.intl.string(g.t.qwuK5O)
+                                    children: y ? p.intl.string(p.t.d6TR3N) : p.intl.string(p.t.qwuK5O)
                                 })
                             ]
                         })

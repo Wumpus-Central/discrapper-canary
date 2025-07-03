@@ -9,30 +9,30 @@ var i = n(255367),
     d = n(692547),
     u = n(481060),
     m = n(846027),
-    g = n(313201),
-    p = n(131951),
+    p = n(313201),
+    g = n(131951),
     h = n(65154),
     f = n(388032),
     b = n(979385),
     x = n(251574),
     _ = n(893354),
     E = n(20493);
-let j = (0, g.hQ)();
+let j = (0, p.hQ)();
 function C() {
     let [e, t] = r.useState(-100),
         [n, s] = r.useState(!1),
-        { threshold: C, autoThreshold: O } = (0, a.cj)([p.Z], () => ({
-            threshold: p.Z.getModeOptions().threshold,
-            autoThreshold: p.Z.getModeOptions().autoThreshold
+        { threshold: C, autoThreshold: O } = (0, a.cj)([g.Z], () => ({
+            threshold: g.Z.getModeOptions().threshold,
+            autoThreshold: g.Z.getModeOptions().autoThreshold
         })),
         {
             inputMode: S,
             automaticVADSupported: v,
             isEnabled: T
-        } = (0, a.cj)([p.Z], () => ({
-            inputMode: p.Z.getMode(),
-            automaticVADSupported: p.Z.supports(h.AN.AUTOMATIC_VAD),
-            isEnabled: p.Z.isEnabled()
+        } = (0, a.cj)([g.Z], () => ({
+            inputMode: g.Z.getMode(),
+            automaticVADSupported: g.Z.supports(h.AN.AUTOMATIC_VAD),
+            isEnabled: g.Z.isEnabled()
         }));
     function N(e, n) {
         (t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE));
@@ -47,10 +47,10 @@ function C() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                (p.Z.getMediaEngine().on(o.aB.VoiceActivity, N), e.stop());
+                (g.Z.getMediaEngine().on(o.aB.VoiceActivity, N), e.stop());
             }),
             () => {
-                (p.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, N), e.stop());
+                (g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, N), e.stop());
             }
         );
     }, []);
@@ -97,7 +97,7 @@ function C() {
             className: b.sensitivity,
             children: [
                 v &&
-                    (0, i.jsx)(g.FG, {
+                    (0, i.jsx)(p.FG, {
                         children: (e) =>
                             (0, i.jsxs)('div', {
                                 className: l()(_.horizontal, E.marginBottom4),

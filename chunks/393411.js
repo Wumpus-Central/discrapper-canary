@@ -14,8 +14,8 @@ var r = n(120356),
     d = n(366939),
     u = n(100527),
     m = n(906732),
-    g = n(975298),
-    p = n(710845),
+    p = n(975298),
+    g = n(710845),
     h = n(963249),
     f = n(301766),
     b = n(594174),
@@ -81,7 +81,7 @@ function B(e, t) {
         e
     );
 }
-let M = new p.Z('SubscriptionHeader.tsx'),
+let M = new g.Z('SubscriptionHeader.tsx'),
     U = {
         page: Z.ZY5.USER_SETTINGS,
         section: Z.jXE.SETTINGS_PREMIUM,
@@ -202,11 +202,11 @@ function z() {
 }
 let Y = function (e) {
     var t;
-    let { subscription: r, renewalInvoicePreview: l, paymentSource: p, busy: A, analyticsLocation: z } = e,
+    let { subscription: r, renewalInvoicePreview: l, paymentSource: g, busy: A, analyticsLocation: z } = e,
         Y = 'subscription_header',
         { analyticsLocations: W } = (0, m.ZP)(u.Z.SUBSCRIPTION_HEADER),
         K = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
-        { fractionalState: q } = (0, g.Z)({ forceFetch: !1 }),
+        { fractionalState: q } = (0, p.Z)({ forceFetch: !1 }),
         X = q === D.a$.FP_SUB_PAUSED,
         { enabled: Q } = (0, I.ZP)({ location: Y });
     (D.pj.has(r.planId) && Z.JwP.ALL_PAUSEABLE.has(r.status) && !X) || (Q = !1);
@@ -243,10 +243,10 @@ let Y = function (e) {
             if (null != r && null != r.premiumPlanIdFromItems) {
                 let e = x.Z.get(r.premiumPlanIdFromItems);
                 if (null == e) return void M.info('Plan not fetched for plan id: '.concat(r.premiumPlanIdFromItems));
-                let t = (0, O.DE)(e, null == p ? void 0 : p.id, !1),
+                let t = (0, O.DE)(e, null == g ? void 0 : g.id, !1),
                     n = t.length > 0 ? t[0] : r.currency,
                     i = !1;
-                (1 === t.length && (null == p ? void 0 : p.id) === r.paymentSourceId && (0, O.tD)(e.id, n, null == p ? void 0 : p.id) && (i = !0),
+                (1 === t.length && (null == g ? void 0 : g.id) === r.paymentSourceId && (0, O.tD)(e.id, n, null == g ? void 0 : g.id) && (i = !0),
                     i
                         ? d.O5(r, W)
                         : (0, h.Z)({
@@ -287,18 +287,18 @@ let Y = function (e) {
         eu = C.ZP.getPlanIdFromInvoice(r, l);
     if ((0, f.Q0)(eu)) return null;
     let em = C.ZP.getStatusFromInvoice(r, l),
-        eg = C.ZP.getPremiumType(eu),
-        ep = {
-            [k.tier0]: eg === D.p9.TIER_0,
-            [k.tier1]: eg === D.p9.TIER_1,
-            [k.tier2]: eg === D.p9.TIER_2,
+        ep = C.ZP.getPremiumType(eu),
+        eg = {
+            [k.tier0]: ep === D.p9.TIER_0,
+            [k.tier1]: ep === D.p9.TIER_1,
+            [k.tier2]: ep === D.p9.TIER_2,
             [k.canceled]: em === Z.O0b.CANCELED,
             [k.pausePending]: em === Z.O0b.PAUSE_PENDING,
             [k.paused]: em === Z.O0b.PAUSED && !X,
             [k.failedPayment]: (0, C.zV)(em)
         },
         eh = null;
-    switch (eg) {
+    switch (ep) {
         case D.p9.TIER_0:
             eh = (0, i.jsxs)('div', {
                 className: k.wordMark,
@@ -485,7 +485,7 @@ let Y = function (e) {
                     return t();
             }
         })(),
-        statusClasses: ep,
+        statusClasses: eg,
         shouldUseDiscountMarketing: ee,
         discountAmount: $
     });

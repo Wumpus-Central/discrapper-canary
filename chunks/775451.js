@@ -13,8 +13,8 @@ var i = n(255367),
     d = n(790542),
     u = n(317257),
     m = n(120786),
-    g = n(82856),
-    p = n(981631),
+    p = n(82856),
+    g = n(981631),
     h = n(388032),
     f = n(313008);
 let b = {
@@ -31,8 +31,8 @@ let b = {
             { shouldOpen: R } = (0, c.Mm)({
                 backgroundElementRef: P,
                 isCoachmarkEnabled: E,
-                onCloseCallback: p.dG4,
-                onClickPill: p.dG4
+                onCloseCallback: g.dG4,
+                onClickPill: g.dG4
             });
         r.useEffect(() => {
             E && ((0, c.wH)() || R ? (A(!0), I(!1)) : A(!1));
@@ -43,8 +43,8 @@ let b = {
                     null != _ &&
                     (0, o.Y)({
                         pageType: _,
-                        sectionType: p.jXE.ORBS_BALANCE_MENU,
-                        ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL
+                        sectionType: g.jXE.ORBS_BALANCE_MENU,
+                        ctaObject: g.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL
                     }),
                     T(e ? u.b.SELECTED : u.b.DEFAULT),
                     I(e));
@@ -59,7 +59,7 @@ let b = {
                 [f.visible]: !y
             }),
             children: [
-                (0, i.jsx)(g.y, {
+                (0, i.jsx)(p.y, {
                     pillRef: P,
                     anchorPillType: x,
                     balance: S,

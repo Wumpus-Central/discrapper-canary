@@ -10,8 +10,8 @@ var r = n(990547),
     d = n(37234),
     u = n(809206),
     m = n(230711),
-    g = n(493544),
-    p = n(579806),
+    p = n(493544),
+    g = n(579806),
     h = n(782568),
     f = n(758182),
     b = n(49226),
@@ -64,8 +64,8 @@ var r = n(990547),
     ed = n(501348),
     eu = n(795594),
     em = n(443702),
-    eg = n(327192),
-    ep = n(949493),
+    ep = n(327192),
+    eg = n(949493),
     eh = n(675047),
     ef = n(177508),
     eb = n(956699),
@@ -116,17 +116,17 @@ let eJ = () => {
         let e = [];
         return (V.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
     },
-    e1 = () => {
+    e3 = () => {
         let e = e0(),
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(R.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(a.IGR, { text: eK.intl.string(eK.t.y2b7CA) }) : null;
     },
-    e3 = eD.Z,
+    e1 = eD.Z,
     e8 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: j, impressionSource: N, numOfPendingFamilyRequests: R, isOverlaySupported: V, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e6, isKeywordFilteringEnabled: e2, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tg, isInputProfileCustom: tp, isGoreContentFilteringEnabled: th } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: j, impressionSource: N, numOfPendingFamilyRequests: R, isOverlaySupported: V, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e6, isKeywordFilteringEnabled: e2, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tp, isInputProfileCustom: tg, isGoreContentFilteringEnabled: th } = e;
         return Object.freeze({
             [eF.s6.SEARCH_NO_RESULTS]: {
-                section: g.ID.CUSTOM,
+                section: p.ID.CUSTOM,
                 element: eN.Z
             },
             [eF.s6.ACCOUNT_SECURITY_TAB]: {
@@ -265,12 +265,12 @@ let eJ = () => {
             },
             [eF.s6.PROFILE_CUSTOMIZATION]: {
                 section: ez.oAB.PROFILE_CUSTOMIZATION,
-                type: g.bT.WIDE,
+                type: p.bT.WIDE,
                 searchableTitles: [eK.intl.string(eK.t['vi7f+v'])],
                 label: eK.intl.string(eK.t['vi7f+v']),
                 ariaLabel: eK.intl.string(eK.t['vi7f+v']),
                 element: L.Z,
-                newIndicator: (0, i.jsx)(e1, {}),
+                newIndicator: (0, i.jsx)(e3, {}),
                 newIndicatorDismissibleContentTypes: [...e0()],
                 notice: {
                     stores: [Y.Z, A.Z],
@@ -303,7 +303,7 @@ let eJ = () => {
                 label: eK.intl.string(eK.t['+o1pDQ']),
                 searchableTitles: [eK.intl.string(eK.t['+o1pDQ'])],
                 ariaLabel: eK.intl.string(eK.t['+o1pDQ']),
-                element: ep.Z,
+                element: eg.Z,
                 url: ez.Z5c.SETTINGS('content-and-social')
             },
             [eF.s6.CONTENT_SOCIAL_DISCORD_TAB]: {
@@ -535,7 +535,7 @@ let eJ = () => {
                 searchableTitles: [eK.intl.string(eK.t['3fe7U1'])],
                 label: eK.intl.string(eK.t['3fe7U1']),
                 ariaLabel: eK.intl.string(eK.t['3fe7U1']),
-                element: eg.Z,
+                element: ep.Z,
                 impressionName: r.ImpressionNames.USER_SETTINGS_CONNECTIONS,
                 impressionProperties: { source: N },
                 newIndicatorDismissibleContentTypes: [s.z.NEW_CRUNCHYROLL_CONNECTION],
@@ -552,7 +552,7 @@ let eJ = () => {
                 section: ez.oAB.CONNECTIONS,
                 searchableTitles: [eK.intl.string(eK.t['+/hZMz'])],
                 parent: eF.s6.CONNECTIONS,
-                element: eg.Z
+                element: ep.Z
             },
             [eF.s6.CLIPS]: {
                 section: ez.oAB.CLIPS,
@@ -887,7 +887,7 @@ let eJ = () => {
             },
             [eF.s6.VOICE_AND_VIDEO_INPUT_PROFILE]: {
                 section: ez.oAB.VOICE,
-                searchableTitles: [eK.intl.string(eK.t.LM3U3t), eK.intl.string(eK.t.nuFtHB), eK.intl.string(eK.t.VZPR0d), eK.intl.string(eK.t.cjPbpa)],
+                searchableTitles: [],
                 parent: eF.s6.VOICE_AND_VIDEO_VOICE,
                 predicate: () => {
                     let { enabledInputProfiles: e } = (0, et.R)({
@@ -901,13 +901,13 @@ let eJ = () => {
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t['pS+K2N']), eK.intl.string(eK.t.nuFtHB)],
                 parent: eF.s6.VOICE_AND_VIDEO_VOICE,
-                predicate: () => tg !== eG._.STUDIO
+                predicate: () => tp !== eG._.STUDIO
             },
             [eF.s6.VOICE_AND_VIDEO_SENSITIVITY]: {
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t['sqUm+v']), eK.intl.string(eK.t.nuFtHB)],
                 parent: eF.s6.VOICE_AND_VIDEO_VOICE,
-                predicate: () => tm === eW.pM.VOICE_ACTIVITY && tp
+                predicate: () => tm === eW.pM.VOICE_ACTIVITY && tg
             },
             [eF.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT]: {
                 section: ez.oAB.VOICE,
@@ -1000,7 +1000,7 @@ let eJ = () => {
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t['6I6GUl'])],
                 parent: eF.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => tp
+                predicate: () => tg
             },
             [eF.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION]: {
                 section: ez.oAB.VOICE,
@@ -1116,7 +1116,7 @@ let eJ = () => {
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t['726JHB'])],
                 parent: eF.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => X.isPlatformEmbedded && z.Z.supports(eW.AN.DEBUG_LOGGING) && null != p.Z.fileManager.readLogFiles
+                predicate: () => X.isPlatformEmbedded && z.Z.supports(eW.AN.DEBUG_LOGGING) && null != g.Z.fileManager.readLogFiles
             },
             [eF.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
                 section: ez.oAB.VOICE,
@@ -1407,7 +1407,7 @@ let eJ = () => {
                 section: ez.oAB.LINUX,
                 searchableTitles: [eK.intl.string(eK.t['7pPjTU'])],
                 label: eK.intl.string(eK.t['7pPjTU']),
-                element: e3,
+                element: e1,
                 predicate: () => X.isPlatformEmbedded && (0, X.isLinux)()
             },
             [eF.s6.STREAMER_MODE]: {
@@ -1454,7 +1454,7 @@ let eJ = () => {
                 parent: eF.s6.STREAMER_MODE,
                 predicate: () => {
                     var e, t, n;
-                    return null != (n = null === p.Z || void 0 === p.Z || null == (t = p.Z.window) || null == (e = t.supportsContentProtection) ? void 0 : e.call(t)) && n;
+                    return null != (n = null === g.Z || void 0 === g.Z || null == (t = g.Z.window) || null == (e = t.supportsContentProtection) ? void 0 : e.call(t)) && n;
                 }
             },
             [eF.s6.SETTINGS_ADVANCED]: {
@@ -1995,11 +1995,11 @@ let eJ = () => {
                 variant: 'destructive'
             },
             [eF.s6.SOCIAL_LINKS]: {
-                section: g.ID.CUSTOM,
+                section: p.ID.CUSTOM,
                 element: er.Z
             },
             [eF.s6.CLIENT_DEBUG_INFO]: {
-                section: g.ID.CUSTOM,
+                section: p.ID.CUSTOM,
                 element: $.Z
             }
         });

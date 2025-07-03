@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(933970),
     u = n(340453),
     m = n(292352),
-    g = n(916723),
-    p = n(388032),
+    p = n(916723),
+    g = n(388032),
     h = n(708734);
 function f(e) {
     let { user: t } = e,
@@ -84,7 +84,7 @@ function f(e) {
                 className: h.actions,
                 children: (0, i.jsx)(d.Z, {
                     icon: o.Dio,
-                    tooltip: p.intl.string(g.default.l20ZZm),
+                    tooltip: g.intl.string(p.default.l20ZZm),
                     onClick: f
                 })
             })

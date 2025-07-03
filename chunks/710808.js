@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(579806),
     u = n(600164),
     m = n(729345),
-    g = n(458725),
-    p = n(921801),
+    p = n(458725),
+    g = n(921801),
     h = n(857192),
     f = n(131951),
     b = n(226961),
@@ -136,7 +136,7 @@ function y(e) {
                 var t;
                 let n = O.intl.string(O.t.QZg0Jy),
                     r = null != e ? e : O.intl.string(O.t.VzHcSk),
-                    s = null == (t = (0, g.hp)(g.u.DEBUG_LOG_UPLOAD_FAILED)) ? void 0 : t.errorCode,
+                    s = null == (t = (0, p.hp)(p.u.DEBUG_LOG_UPLOAD_FAILED)) ? void 0 : t.errorCode,
                     a = O.intl.formatToPlainString(O.t['ejOT9/'], { errorCode: s });
                 (0, l.h7j)((e) =>
                     (0, i.jsx)(
@@ -179,7 +179,7 @@ function y(e) {
     }
     let Z = (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(p.F, {
+            (0, i.jsx)(g.F, {
                 setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, i.jsx)(l.j7V, {
                     value: P,
@@ -191,7 +191,7 @@ function y(e) {
                     children: O.intl.string(O.t['0CEP6e'])
                 })
             }),
-            (0, i.jsx)(p.F, {
+            (0, i.jsx)(g.F, {
                 setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, i.jsx)(l.j7V, {
                     value: A,
@@ -201,7 +201,7 @@ function y(e) {
                     children: O.intl.string(O.t['r6K+TE'])
                 })
             }),
-            (0, i.jsxs)(p.F, {
+            (0, i.jsxs)(g.F, {
                 setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, i.jsx)(l.j7V, {
@@ -228,7 +228,7 @@ function y(e) {
                     t ? null : (0, i.jsx)(l.$i$, { className: S.marginBottom20 })
                 ]
             }),
-            (0, i.jsx)(p.F, {
+            (0, i.jsx)(g.F, {
                 setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
                 children: (0, i.jsxs)('div', {
                     children: [

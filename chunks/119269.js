@@ -12,8 +12,8 @@ var i,
     d = n(607070),
     u = n(821982),
     m = n(967538),
-    g = n(885302),
-    p = n(914677),
+    p = n(885302),
+    g = n(914677),
     h = n(914242),
     f = (((i = {})[(i.NITRO_GEM = 0)] = 'NITRO_GEM'), (i[(i.NITRO_LOGO = 1)] = 'NITRO_LOGO'), (i[(i.AVATAR_DECO = 2)] = 'AVATAR_DECO'), i);
 let b = (e) => {
@@ -37,7 +37,7 @@ let b = (e) => {
             T = t && !v;
         return (0, r.jsx)('div', {
             className: a()(h.progressCircle, n),
-            children: (0, r.jsx)(p.Z, {
+            children: (0, r.jsx)(g.Z, {
                 animationClassName: a()(h.activeProgressCircle, {
                     [h.activeProgressCircleAnimation]: T,
                     [null != C ? C : '']: T
@@ -56,7 +56,7 @@ let b = (e) => {
                                 backgroundCircleSize: c
                             });
                         case 1:
-                            return (0, r.jsx)(g.Z, {
+                            return (0, r.jsx)(p.Z, {
                                 circleColor: O,
                                 ellipseOpacity: j
                             });

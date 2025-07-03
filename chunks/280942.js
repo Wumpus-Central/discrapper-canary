@@ -9,7 +9,7 @@ var i = n(255367),
     d = n(474936),
     u = n(388032),
     m = n(898582);
-function g(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -34,7 +34,7 @@ function g(e) {
     }
     return e;
 }
-function p(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -110,7 +110,7 @@ function h(e) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                p(g({}, n), {
+                                g(p({}, n), {
                                     guildBoostSlots: [t],
                                     locationSection: c.jXE.SETTINGS_PREMIUM
                                 })
@@ -127,7 +127,7 @@ function h(e) {
                       action: function () {
                           (0, s.ZDy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
-                              return (n) => (0, i.jsx)(e, p(g({}, n), { guildBoostSlotId: t.id }));
+                              return (n) => (0, i.jsx)(e, g(p({}, n), { guildBoostSlotId: t.id }));
                           });
                       },
                       disabled: j.uncancel.disabled
@@ -139,7 +139,7 @@ function h(e) {
                       action: function () {
                           (0, s.ZDy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
-                              return (n) => (0, i.jsx)(e, p(g({}, n), { guildBoostSlot: t }));
+                              return (n) => (0, i.jsx)(e, g(p({}, n), { guildBoostSlot: t }));
                           });
                       },
                       disabled: j.cancel.disabled,

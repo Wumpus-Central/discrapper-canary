@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(921801),
     u = n(131951),
     m = n(996073),
-    g = n(494620),
-    p = n(526761),
+    p = n(494620),
+    g = n(526761),
     h = n(726985),
     f = n(388032),
     b = n(20493);
@@ -35,7 +35,7 @@ function _(e) {
             hardwareEncoding: u.Z.getHardwareEncoding()
         })),
         _ = r.useRef(null);
-    (0, m.Z)(_, p.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
+    (0, m.Z)(_, g.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
     let E = r.useCallback((e) => {
             e
                 ? c.Z.setHardwareEncoding(!0)
@@ -126,8 +126,8 @@ function _(e) {
                                 children: f.intl.string(f.t.Sln58f)
                             }),
                             !s &&
-                                (0, i.jsx)(g.Z, {
-                                    look: g.z.WARNING,
+                                (0, i.jsx)(p.Z, {
+                                    look: p.z.WARNING,
                                     children: f.intl.string(f.t['Uz6L6+'])
                                 })
                         ]

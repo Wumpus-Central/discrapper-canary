@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(243778),
     u = n(373230),
     m = n(654904),
-    g = n(993413),
-    p = n(921944),
+    p = n(993413),
+    g = n(921944),
     h = n(486324),
     f = n(485696),
     b = n(388032),
@@ -31,7 +31,7 @@ function E(e) {
     let [R, D] = (0, d.US)(P),
         Z = R === a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         w = r.useCallback(() => {
-            (D(p.L.TAKE_ACTION),
+            (D(g.L.TAKE_ACTION),
                 (0, m.$r)({
                     uploadType: h.pC.AVATAR,
                     analyticsSource: I,
@@ -40,7 +40,7 @@ function E(e) {
                     isTryItOutFlow: v
                 }));
         }, [C, I, v, D]);
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(p.Z, {
         className: O,
         title: E,
         titleIcon: Z

@@ -50,7 +50,7 @@ function d(e, t) {
     );
 }
 function u(e) {
-    var { role: t = 'button', text: n, focusProps: r, variant: u = 'primary', textVariant: m = 'text-md/medium', lineClamp: g = 1, className: p, style: h } = e,
+    var { role: t = 'button', text: n, focusProps: r, variant: u = 'primary', textVariant: m = 'text-md/medium', lineClamp: p = 1, className: g, style: h } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -88,7 +88,7 @@ function u(e) {
                             tag: 'span',
                             variant: m,
                             color: 'none',
-                            lineClamp: g,
+                            lineClamp: p,
                             className: o.text,
                             children: n
                         })

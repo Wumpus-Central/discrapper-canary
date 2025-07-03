@@ -9,8 +9,8 @@ var i,
     d = n.n(c),
     u = n(663993),
     m = n(770146),
-    g = n(772096),
-    p = n(428595),
+    p = n(772096),
+    g = n(428595),
     h = n(532901),
     f = n(204227),
     b = n(283574);
@@ -94,7 +94,7 @@ let O = E(_({}, d().defaultRules), {
         em: E(_({}, d().defaultRules.em), { order: 6 }),
         u: E(_({}, d().defaultRules.u), { order: 5 }),
         del: E(_({}, d().defaultRules.del), { order: 6 }),
-        link: E(_({}, g.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
+        link: E(_({}, p.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
         blockQuote: E(_({}, d().defaultRules.blockQuote), {
             react: (e, t, n) =>
                 (0, s.jsx)(
@@ -119,7 +119,7 @@ let O = E(_({}, d().defaultRules), {
                 return !1;
             }
         }),
-        inlineCode: E(_({}, p.Z.RULES.inlineCode), {
+        inlineCode: E(_({}, g.Z.RULES.inlineCode), {
             order: 6,
             react: (e, t, n) =>
                 (0, s.jsx)(

@@ -21,8 +21,8 @@ var i = n(73800),
     d = n(706140),
     u = n(704454),
     m = n(470734),
-    g = n(319828),
-    p = n(592204),
+    p = n(319828),
+    g = n(592204),
     h = n(610697),
     f = n(880257),
     b = n(631885),
@@ -111,7 +111,7 @@ function G() {
             autoTrackExposure: !1
         }));
     let { shouldMergeGameSettings: H } = P.b.useExperiment({ location: 'settings' }),
-        z = (0, p.Xo)({ location: 'settings' }),
+        z = (0, g.Xo)({ location: 'settings' }),
         Y = null != (n = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
         W = (0, O.y0)({ location: 'settings' }),
         K = (0, C.v4)({ location: 'settings' }),
@@ -121,7 +121,7 @@ function G() {
         J = (0, r.e7)([S.default], () => S.default.hasTOTPEnabled()),
         $ = D.Sb.useSetting(),
         ee = (0, h.Z)(),
-        { hypeSquadRemoved: et } = g.Z.useExperiment({ location: 'settings' }),
+        { hypeSquadRemoved: et } = p.Z.useExperiment({ location: 'settings' }),
         en = null == (l = (0, f.Z)()) || l,
         ei = (null == (t = (0, j.s)()) ? void 0 : t.length) > 0,
         { hasBlockedUsers: er, hasIgnoredUsers: es } = (0, r.cj)([I.Z], () => ({

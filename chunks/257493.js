@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => p,
-    d: () => g
+    C: () => g,
+    d: () => p
 });
 var i = n(255367),
     r = n(73800),
@@ -20,8 +20,8 @@ let m = (0, r.createContext)({
         orbProductContext: null,
         onRedeemVirtualCurrency: () => {}
     }),
-    g = (e) => {
-        let { skuId: t, loadId: n, analyticsLocations: s, onCheckoutSuccess: g, children: p } = e,
+    p = (e) => {
+        let { skuId: t, loadId: n, analyticsLocations: s, onCheckoutSuccess: p, children: g } = e,
             h = (0, l.e7)([c.default], () => d.ZP.canUseCollectibles(c.default.getCurrentUser())),
             { product: f } = (0, a.T)(t),
             b = (0, r.useMemo)(() => {
@@ -41,14 +41,14 @@ let m = (0, r.createContext)({
             j = (0, r.useCallback)(
                 (e) => {
                     x(t, n, (n) => {
-                        (g({
+                        (p({
                             entitlements: n,
                             skuId: t
                         }),
                             e());
                     });
                 },
-                [t, n, x, g]
+                [t, n, x, p]
             );
         return (0, i.jsx)(m.Provider, {
             value: {
@@ -60,7 +60,7 @@ let m = (0, r.createContext)({
                 isRedeeming: _,
                 orbRedemptionError: E
             },
-            children: p
+            children: g
         });
     },
-    p = () => (0, r.useContext)(m);
+    g = () => (0, r.useContext)(m);

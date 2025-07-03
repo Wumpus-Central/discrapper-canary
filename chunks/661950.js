@@ -10,8 +10,8 @@ var r = n(481060),
     d = n(429789),
     u = n(208113),
     m = n(625205),
-    g = n(325808),
-    p = n(235144),
+    p = n(325808),
+    g = n(235144),
     h = n(823087),
     f = n(232388),
     b = n(716210),
@@ -56,14 +56,14 @@ function T() {
                         (0, i.jsx)(c.Z, {
                             children: (0, i.jsx)(s.F, {
                                 setting: C.s6.VOICE_AND_VIDEO_INPUT_PROFILE,
-                                children: (0, i.jsx)(p.Z, {})
+                                children: (0, i.jsx)(g.Z, {})
                             })
                         }),
                         (0, i.jsxs)(c.Z, {
                             children: [
                                 (0, i.jsx)(s.F, {
                                     setting: C.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                                    children: (0, i.jsx)(g.Z, {})
+                                    children: (0, i.jsx)(p.Z, {})
                                 }),
                                 (0, i.jsx)(s.F, {
                                     setting: C.s6.VOICE_AND_VIDEO_SENSITIVITY,

@@ -10,8 +10,8 @@ var r = n(524437),
     d = n(973005),
     u = n(726985),
     m = n(981631),
-    g = n(388032),
-    p = n(889652);
+    p = n(388032),
+    g = n(889652);
 function h() {
     var e;
     let t = o.Xr.useSetting(),
@@ -21,12 +21,12 @@ function h() {
         setting: u.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
             (0, i.jsx)(c.H, {
-                header: g.intl.string(g.t.tiCXaG),
-                description: g.intl.format(g.t.RvjRRE, { appealLink: l.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) })
+                header: p.intl.string(p.t.tiCXaG),
+                description: p.intl.format(p.t.RvjRRE, { appealLink: l.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) })
             }),
             (0, i.jsx)(s.FXm, {
-                className: p.radioGroup,
-                radioItemClassName: p.radioGroupItem,
+                className: g.radioGroup,
+                radioItemClassName: g.radioGroupItem,
                 value: h,
                 options: (0, a.c7)(),
                 onChange: (e) => {

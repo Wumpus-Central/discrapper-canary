@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(240872),
     u = n(23645),
     m = n(712364),
-    g = n(279837),
-    p = n(600164),
+    p = n(279837),
+    g = n(600164),
     h = n(144114),
     f = n(921801),
     b = n(607018),
@@ -137,7 +137,7 @@ class k extends r.PureComponent {
                 });
             }
             if (c)
-                e = (0, i.jsx)(p.Z, {
+                e = (0, i.jsx)(g.Z, {
                     className: a ? '' : P.marginTop8,
                     children: (0, i.jsx)(o.zxk, {
                         color: o.zxk.Colors.RED,
@@ -150,7 +150,7 @@ class k extends r.PureComponent {
                 });
             else {
                 let t = (0, S.c)(r);
-                e = (0, i.jsxs)(p.Z, {
+                e = (0, i.jsxs)(g.Z, {
                     className: a ? '' : P.marginTop8,
                     children: [
                         (0, i.jsx)(o.zxk, {
@@ -219,15 +219,15 @@ class k extends r.PureComponent {
                         className: P.marginBottom20,
                         children: y.intl.format(y.t.OhmvYm, {})
                     }),
-                    (0, i.jsxs)(p.Z, {
+                    (0, i.jsxs)(g.Z, {
                         children: [
-                            (0, i.jsx)(p.Z.Child, {
+                            (0, i.jsx)(g.Z.Child, {
                                 children: (0, i.jsx)('ul', {
                                     className: A.checkboxGroup,
                                     children: r(t.slice(0, t.length / 2))
                                 })
                             }),
-                            (0, i.jsx)(p.Z.Child, {
+                            (0, i.jsx)(g.Z.Child, {
                                 children: (0, i.jsx)('ul', {
                                     className: A.checkboxGroup,
                                     children: r(t.slice(t.length / 2))
@@ -255,16 +255,16 @@ class k extends r.PureComponent {
                     className: P.marginBottom20,
                     children: y.intl.string(y.t.bQwxiY)
                 }),
-                (0, i.jsxs)(p.Z, {
-                    justify: p.Z.Justify.START,
+                (0, i.jsxs)(g.Z, {
+                    justify: g.Z.Justify.START,
                     className: P.marginBottom20,
                     children: [
-                        (0, i.jsx)(p.Z.Child, {
+                        (0, i.jsx)(g.Z.Child, {
                             wrap: !0,
                             grow: 0,
                             children: n
                         }),
-                        (0, i.jsxs)(p.Z.Child, {
+                        (0, i.jsxs)(g.Z.Child, {
                             wrap: !0,
                             children: [
                                 (0, i.jsx)(f.F, {
@@ -368,7 +368,7 @@ class k extends r.PureComponent {
             R(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
-                        g.Z,
+                        p.Z,
                         Z(D({}, e), {
                             handleSubmit: (e) =>
                                 c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -422,7 +422,7 @@ class k extends r.PureComponent {
             R(this, 'handleDisableSMS', () => {
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
-                        g.Z,
+                        p.Z,
                         Z(D({}, e), {
                             handleSubmit: c.Z.disableSMS,
                             title: y.intl.string(y.t.KLWnio),

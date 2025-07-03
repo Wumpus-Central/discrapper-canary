@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(70956),
     u = n(981631),
     m = n(388032);
-let g = d.Z.Millis.SECOND,
-    p = 2 * g,
+let p = d.Z.Millis.SECOND,
+    g = 2 * p,
     h = d.Z.Millis.HALF_SECOND,
     f = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
 function b(e) {
@@ -34,7 +34,7 @@ function b(e) {
         I = N ? a.FGA.RED : a.FGA.GREEN,
         y = j ? I : a.FGA.PRIMARY,
         A = () => {
-            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), O || E(_ + 1), S(!0), C(!0), v.start(g, () => S(!1)), T.start(p, () => E(0)));
+            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), O || E(_ + 1), S(!0), C(!0), v.start(p, () => S(!1)), T.start(g, () => E(0)));
         };
     return (0, i.jsx)(a.ua7, {
         text: (() => {

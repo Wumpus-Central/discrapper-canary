@@ -1,8 +1,6 @@
 e.exports = {
     expandedProgressBarContainer: 'expandedProgressBarContainer_a61c56',
     expandedProgressBarContainerSettingsPage: 'expandedProgressBarContainerSettingsPage_a61c56',
-    expandedProgressBarContainerVariant1: 'expandedProgressBarContainerVariant1_a61c56',
-    expandedProgressBarContainerVariant2: 'expandedProgressBarContainerVariant2_a61c56',
     allReferralsSentBorder: 'allReferralsSentBorder_a61c56',
     containerWithGlowWithoutBanner: 'containerWithGlowWithoutBanner_a61c56',
     containerWithoutGlow: 'containerWithoutGlow_a61c56',
@@ -17,8 +15,6 @@ e.exports = {
     halfHighlight: 'halfHighlight_a61c56',
     expandedProgressBarButtonContainer: 'expandedProgressBarButtonContainer_a61c56',
     expandedProgressBarButtonContainerLayout: 'expandedProgressBarButtonContainerLayout_a61c56',
-    expandedProgressBarGiftingCTA: 'expandedProgressBarGiftingCTA_a61c56',
-    expandedProgressBarGiftingCTALayout: 'expandedProgressBarGiftingCTALayout_a61c56',
     expandedProgressBarSelectFriendsCTA: 'expandedProgressBarSelectFriendsCTA_a61c56',
     referralInfoContent: 'referralInfoContent_a61c56',
     expandedProgressBarSelectFriendsCTAInner: 'expandedProgressBarSelectFriendsCTAInner_a61c56',

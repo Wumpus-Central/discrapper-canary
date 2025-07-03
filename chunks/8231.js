@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(634894),
     u = n(410030),
     m = n(100527),
-    g = n(906732),
-    p = n(15640),
+    p = n(906732),
+    g = n(15640),
     h = n(78839),
     f = n(74538),
     b = n(104494),
@@ -243,9 +243,9 @@ let A = () =>
         var t;
         let n,
             { className: s, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: u = j.p9.TIER_2 } = e,
-            { analyticsLocations: C } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: C } = (0, p.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             S = (0, a.e7)([h.Z], () => h.Z.hasFetchedSubscriptions()),
-            v = (0, p.V)(),
+            v = (0, g.V)(),
             T = 'PlanComparisonTable';
         ((0, d.j)({
             location: T + ' auto on',
@@ -267,7 +267,7 @@ let A = () =>
         if (!S || !v) return null;
         n = o ? null : null != N ? (0, i.jsx)(P, {}) : (0, i.jsx)(A, {});
         let F = R === j.Si.TIER_0 || u === j.p9.TIER_0;
-        return (0, i.jsx)(g.Gt, {
+        return (0, i.jsx)(p.Gt, {
             value: C,
             children: (0, i.jsx)('div', {
                 className: l()(O.root, s),

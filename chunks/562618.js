@@ -19,7 +19,7 @@ let d = (e) => {
 function u(e) {
     var t;
     let { title: n, body: r, badge: o, className: u, footerLink: m } = e,
-        g = null == (t = null == m ? void 0 : m.external) || t;
+        p = null == (t = null == m ? void 0 : m.external) || t;
     return (0, i.jsxs)('div', {
         className: s()(c.header, u),
         children: [
@@ -62,8 +62,8 @@ function u(e) {
             null != m &&
                 (0, i.jsx)(l.Anchor, {
                     href: m.link,
-                    target: g ? '_blank' : void 0,
-                    rel: g ? 'noopener noreferrer' : void 0,
+                    target: p ? '_blank' : void 0,
+                    rel: p ? 'noopener noreferrer' : void 0,
                     children: (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         className: c.footerLink,

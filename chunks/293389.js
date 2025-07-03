@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(224706),
     u = n(225433),
     m = n(570928),
-    g = n(594190),
-    p = n(320724),
+    p = n(594190),
+    g = n(320724),
     h = n(297700),
     f = n(77498),
     b = n(283595),
@@ -72,7 +72,7 @@ let P = a.ZP.connectStores([j.Z], () => ({ theme: j.Z.theme }))(c.ubH),
     R = (0, E.isWindows)();
 function D(e) {
     let { onClose: t } = e,
-        n = (0, a.e7)([g.ZP], () => g.ZP.getCandidateGames()),
+        n = (0, a.e7)([p.ZP], () => p.ZP.getCandidateGames()),
         [s, o] = r.useState(null),
         u = n.map((e) => ({
             key: e.pid,
@@ -123,8 +123,8 @@ function D(e) {
 }
 function Z(e) {
     var t;
-    let { rawGame: n, nowPlaying: s = !1, isOverride: p } = e,
-        _ = (0, a.cj)([g.ZP, f.Z, b.Z], () => (0, g.FZ)(n, [g.ZP, f.Z, b.Z])),
+    let { rawGame: n, nowPlaying: s = !1, isOverride: g } = e,
+        _ = (0, a.cj)([p.ZP, f.Z, b.Z], () => (0, p.FZ)(n, [p.ZP, f.Z, b.Z])),
         [E, j] = r.useState(!1),
         [v, I] = r.useState(null != (t = _.name) ? t : '???'),
         P = l()(T.flexCenter, {
@@ -152,7 +152,7 @@ function Z(e) {
             (0, i.jsxs)('div', {
                 className: l()(S.gameNameLastPlayed, T.vertical),
                 children: [
-                    _.verified && !p
+                    _.verified && !g
                         ? (0, i.jsxs)('div', {
                               className: S.detectedApplication,
                               children: [
@@ -216,7 +216,7 @@ function Z(e) {
                     })()
                 ]
             }),
-            p || E
+            g || E
                 ? null
                 : (0, i.jsx)('div', {
                       className: l()(T.flexCenter, T.noWrap, T.justifyBetween, S.toggleContainer),
@@ -319,7 +319,7 @@ function Z(e) {
                     ]
                 });
             })(),
-            !s || p
+            !s || g
                 ? (0, i.jsx)(u.Z, {
                       className: S.removeGame,
                       onClick: function () {
@@ -369,14 +369,14 @@ let L = (0, _.oH)(function () {
     }),
     B = function (e) {
         let { className: t, showHeader: n = !0 } = e,
-            s = (0, a.Wu)([g.ZP], () => g.ZP.getGamesSeen(!0)),
-            { runningGame: o, overrideExePaths: d } = (0, a.cj)([g.ZP], () => ({
-                runningGame: g.ZP.getVisibleGame(),
-                overrideExePaths: L(...g.ZP.getOverrides())
+            s = (0, a.Wu)([p.ZP], () => p.ZP.getGamesSeen(!0)),
+            { runningGame: o, overrideExePaths: d } = (0, a.cj)([p.ZP], () => ({
+                runningGame: p.ZP.getVisibleGame(),
+                overrideExePaths: L(...p.ZP.getOverrides())
             })),
             u = r.useRef(null);
         return (
-            r.useEffect(() => ((0, p.Ky)(), p.P7), []),
+            r.useEffect(() => ((0, g.Ky)(), g.P7), []),
             (0, i.jsxs)(c.hjN, {
                 tag: 'h1',
                 title: n ? O.intl.string(O.t.AVDyEh) : null,
@@ -390,7 +390,7 @@ let L = (0, _.oH)(function () {
                                   isOverride: d.has(o.exePath),
                                   nowPlaying: !0
                               },
-                              (0, g.rH)(o)
+                              (0, p.rH)(o)
                           )
                         : (0, i.jsx)(w, {}),
                     (0, i.jsxs)('div', {
@@ -439,7 +439,7 @@ let L = (0, _.oH)(function () {
                                               rawGame: e,
                                               isOverride: d.has(e.exePath)
                                           },
-                                          (0, g.rH)(e)
+                                          (0, p.rH)(e)
                                       )
                                   )
                               ]

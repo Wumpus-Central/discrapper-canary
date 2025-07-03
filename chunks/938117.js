@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(716161),
     u = n(634041),
     m = n(647177),
-    g = n(672339),
-    p = n(898531),
+    p = n(672339),
+    g = n(898531),
     h = n(636188),
     f = n(678916),
     b = n(981631),
@@ -64,7 +64,7 @@ function O(e) {
     let { onLearnMore: t, selectedBackgroundOption: O, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: N } = e,
         I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
-        P = (0, p.Z)(),
+        P = (0, g.Z)(),
         R = c.ZP.canUseCustomBackgrounds(I);
     r.useEffect(() => {
         (0, d.XV)();
@@ -83,14 +83,14 @@ function O(e) {
     }),
         r.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
-            e ? (0, g.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
+            e ? (0, p.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [v]));
     let B = (e) => {
         (S(e),
-            (0, g.FU)(e, v, { location: w.location })
+            (0, p.FU)(e, v, { location: w.location })
                 .then(() => A(null))
                 .catch(() => {
-                    (A(_.intl.string(_.t.ejrSLS)), (0, g.FU)(null, v, { location: w.location }));
+                    (A(_.intl.string(_.t.ejrSLS)), (0, p.FU)(null, v, { location: w.location }));
                 }));
     };
     return P

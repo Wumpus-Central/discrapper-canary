@@ -55,7 +55,7 @@ let u = {
     lg: 'md'
 };
 function m(e) {
-    var { role: t = 'button', size: n = 'md', variant: r = 'secondary', icon: m, iconOpticalOffsetMargin: g = 0, focusProps: p, pressed: h = !1, 'aria-label': f, className: b, style: x } = e,
+    var { role: t = 'button', size: n = 'md', variant: r = 'secondary', icon: m, iconOpticalOffsetMargin: p = 0, focusProps: g, pressed: h = !1, 'aria-label': f, className: b, style: x } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -77,7 +77,7 @@ function m(e) {
         })(e, ['role', 'size', 'variant', 'icon', 'iconOpticalOffsetMargin', 'focusProps', 'pressed', 'aria-label', 'className', 'style']);
     return (0, i.jsx)(
         l.t,
-        d(c({}, p), {
+        d(c({}, g), {
             children: (0, i.jsx)(
                 'button',
                 d(
@@ -95,7 +95,7 @@ function m(e) {
                             className: a.buttonChildrenWrapper,
                             children: (0, i.jsx)(m, {
                                 color: 'currentColor',
-                                style: 0 === g ? {} : { marginLeft: g },
+                                style: 0 === p ? {} : { marginLeft: p },
                                 size: u[n]
                             })
                         })

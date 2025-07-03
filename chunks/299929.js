@@ -9,15 +9,15 @@ var i = n(255367),
     d = n(388032),
     u = n(729495);
 let m = r.memo(function (e) {
-    let { guildId: t, guildProfile: n, title: r, description: m, onClose: g } = e,
-        { isAdopting: p, onAdoptTag: h, onEditProfile: f } = (0, o.Z)(t, g);
+    let { guildId: t, guildProfile: n, title: r, description: m, onClose: p } = e,
+        { isAdopting: g, onAdoptTag: h, onEditProfile: f } = (0, o.Z)(t, p);
     return (0, i.jsxs)('div', {
         className: u.container,
         ref: e.ref,
         children: [
             (0, i.jsx)(s.olH, {
                 className: u.closeButton,
-                onClick: g
+                onClick: p
             }),
             (0, i.jsx)('div', {
                 className: u.tagContainer,
@@ -51,7 +51,7 @@ let m = r.memo(function (e) {
             }),
             (0, i.jsx)(s.zxk, {
                 className: u.adoptButton,
-                submitting: p,
+                submitting: g,
                 onClick: h,
                 children: d.intl.string(d.t.jwEaiY)
             }),

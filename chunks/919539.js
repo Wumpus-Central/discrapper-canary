@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(63063),
     u = n(88658),
     m = n(750832),
-    g = n(976978),
-    p = n(695346),
+    p = n(976978),
+    g = n(695346),
     h = n(639814),
     f = n(838436),
     b = n(51331),
@@ -24,15 +24,15 @@ var i = n(255367),
 function v(e) {
     let { ingress: t, guildId: n } = e,
         v = (0, h.c_)(),
-        T = (0, g.q)(),
-        N = p.h2.useSetting().includes(n),
-        I = p.mX.useSetting(),
-        y = p.zA.useSetting().includes(n),
+        T = (0, p.q)(),
+        N = g.h2.useSetting().includes(n),
+        I = g.mX.useSetting(),
+        y = g.zA.useSetting().includes(n),
         A = r.useCallback(
             (e) => {
                 let i = (0, u.gl)();
                 (e ? i.delete(n) : i.add(n),
-                    p.zA.updateSetting(Array.from(i)),
+                    g.zA.updateSetting(Array.from(i)),
                     c.default.track(O.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: _.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
                         ingress: t,
@@ -60,10 +60,10 @@ function v(e) {
                   cancelText: S.intl.string(S.t.p89ACg),
                   confirmButtonColor: s.zxk.Colors.BRAND,
                   onConfirm: () => {
-                      (p.mX.updateSetting(n), P(n, !1));
+                      (g.mX.updateSetting(n), P(n, !1));
                   },
                   onCancel: () => {
-                      (p.mX.updateSetting(n), p.zA.updateSetting(n ? o.Z.getGuildIds() : []), P(n, !0));
+                      (g.mX.updateSetting(n), g.zA.updateSetting(n ? o.Z.getGuildIds() : []), P(n, !0));
                   }
               }));
     }

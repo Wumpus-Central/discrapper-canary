@@ -94,7 +94,7 @@ let L = () => {
     };
 class M extends (a = o.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x), this.syncWith([h.Z], k));
+        (null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x));
     }
     getState() {
         return A ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -131,5 +131,10 @@ let j = new M(l.Z, {
     RESET_PREVIEW_CLIENT_THEME: P,
     CLIENT_THEMES_EDITOR_CLOSE: D,
     CHANNEL_SELECT: w,
-    LOGOUT: D
+    LOGOUT: D,
+    CACHE_LOADED: k,
+    OVERLAY_INITIALIZE: k,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: k,
+    UNSYNCED_USER_SETTINGS_UPDATE: k,
+    USER_SETTINGS_PROTO_UPDATE: k
 });

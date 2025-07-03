@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(737604),
     u = n(539873),
     m = n(550385),
-    g = n(767714),
-    p = n(626135),
+    p = n(767714),
+    g = n(626135),
     h = n(981631),
     f = n(474936),
     b = n(388032),
@@ -25,7 +25,7 @@ let _ = () => {
         return (
             (0, a.ZP)(() => {
                 t &&
-                    p.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
+                    g.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: f.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
@@ -46,7 +46,7 @@ let _ = () => {
                                         children: b.intl.string(b.t['hb/wEx'])
                                     }),
                                     t
-                                        ? (0, i.jsx)(g.Z, {
+                                        ? (0, i.jsx)(p.Z, {
                                               className: x.tryItOutButton,
                                               showGradient: !1,
                                               subscriptionTier: f.Si.TIER_2,

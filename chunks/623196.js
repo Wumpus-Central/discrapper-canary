@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(594174),
     u = n(63063),
     m = n(88658),
-    g = n(398826),
-    p = n(575356),
+    p = n(398826),
+    g = n(575356),
     h = n(838436),
     f = n(726985),
     b = n(981631),
@@ -28,9 +28,9 @@ let E = (e) => {
 };
 function j() {
     let e = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        { currentHarvestType: t, awaitingInitialRequest: n } = (0, a.cj)([p.Z], () => ({
-            currentHarvestType: p.Z.harvestType,
-            awaitingInitialRequest: p.Z.requestingHarvest
+        { currentHarvestType: t, awaitingInitialRequest: n } = (0, a.cj)([g.Z], () => ({
+            currentHarvestType: g.Z.harvestType,
+            awaitingInitialRequest: g.Z.requestingHarvest
         })),
         [s, j] = r.useState(!1);
     if (null == e) return null;
@@ -46,7 +46,7 @@ function j() {
                 confirmButtonColor: o.zxk.Colors.BRAND,
                 onConfirm: (e) => {
                     (j(!0),
-                        (0, g.h)(e)
+                        (0, p.h)(e)
                             .then(
                                 (e) => {
                                     null != e && null != e.body

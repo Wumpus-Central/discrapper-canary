@@ -13,8 +13,8 @@ var i = n(255367),
     d = n(622535),
     u = n(780384),
     m = n(481060),
-    g = n(570140),
-    p = n(355467),
+    p = n(570140),
+    g = n(355467),
     h = n(37234),
     f = n(821849),
     b = n(230711),
@@ -68,8 +68,8 @@ function eo(e) {
         a = t.planIdFromItems === J.Xh.PREMIUM_YEAR_TIER_2,
         c = n || l,
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        g = J.GP[t.planIdFromItems],
-        p = k.ZP.formatPriceString(k.ZP.getDefaultPrice(g.id), g.interval);
+        p = J.GP[t.planIdFromItems],
+        g = k.ZP.formatPriceString(k.ZP.getDefaultPrice(p.id), p.interval);
     if (c) {
         var h, f, b;
         return (0, i.jsxs)(i.Fragment, {
@@ -88,16 +88,16 @@ function eo(e) {
                     children: l
                         ? ee.intl.format(ee.t['2CGBrq'], {
                               remainingTime: d,
-                              price: p
+                              price: g
                           })
                         : a
                           ? ee.intl.format(ee.t['+qqh6u'], {
                                 percent: null != (h = null == r ? void 0 : r.percentage) ? h : J.Bo,
-                                regularPrice: p
+                                regularPrice: g
                             })
                           : ee.intl.formatToPlainString(ee.t['3Ziutb'], {
                                 percent: null != (f = null == r ? void 0 : r.percentage) ? f : J.M_,
-                                regularPrice: p,
+                                regularPrice: g,
                                 numMonths: null != (b = null == r ? void 0 : r.duration) ? b : J.rt
                             })
                 })
@@ -107,7 +107,7 @@ function eo(e) {
     return (0, i.jsx)(q.Z, {
         variant: void 0,
         subscriptionTier: J.Si.TIER_2,
-        interval: g.interval
+        interval: p.interval
     });
 }
 function ec() {
@@ -120,16 +120,16 @@ function ec() {
         o = (0, B.W)(),
         d = null !== s && null !== s.planIdFromItems;
     if (!d && !a.isFractionalPremiumActive) return null;
-    let g = a.isFractionalPremiumActive,
-        p = null !== s && s.hasActiveTrial;
+    let p = a.isFractionalPremiumActive,
+        g = null !== s && s.hasActiveTrial;
     return (0, i.jsxs)('div', {
-        className: l()(et.tierCard, { [et.withTier2Rim]: t || p }),
+        className: l()(et.tierCard, { [et.withTier2Rim]: t || g }),
         children: [
             (0, i.jsxs)('div', {
                 className: et.tierInfo,
                 children: [
                     (0, i.jsx)(D.Z, { className: et.tierTitle }),
-                    g && !o
+                    p && !o
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(W.mn, {
@@ -169,8 +169,8 @@ function ec() {
                                   ]
                               })
                             : null,
-                    (0, i.jsx)(K.nT, { featureSet: g ? K.uZ.FRACTIONAL_PREMIUM : K.uZ.DEFAULT }),
-                    g && !d && (0, M.C)('nitro-settings-hero', e)
+                    (0, i.jsx)(K.nT, { featureSet: p ? K.uZ.FRACTIONAL_PREMIUM : K.uZ.DEFAULT }),
+                    p && !d && (0, M.C)('nitro-settings-hero', e)
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(Y.Z, {
@@ -389,8 +389,8 @@ let em = function () {
         (0, H.B)(y));
     let P = (0, F.b)(y);
     r.useEffect(() => {
-        g.Z.wait(async () => {
-            (E || e || (await Promise.all([p.jg(), p.tZ(), (0, f.Y2)(b, null, $.JjL.DISCOVERY)])), o(!1));
+        p.Z.wait(async () => {
+            (E || e || (await Promise.all([g.jg(), g.tZ(), (0, f.Y2)(b, null, $.JjL.DISCOVERY)])), o(!1));
         });
     }, [b, E, e]);
     let [D, w] = r.useState(!1);

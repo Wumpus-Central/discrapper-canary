@@ -15,8 +15,8 @@ var i = n(255367),
     d = n(355467),
     u = n(493773),
     m = n(410030),
-    g = n(906732),
-    p = n(600164),
+    p = n(906732),
+    g = n(600164),
     h = n(74538),
     f = n(296848),
     b = n(798769),
@@ -53,7 +53,7 @@ function C(e) {
             },
             [l]
         ),
-        g = d.status === x.O0b.PAUSED ? _.intl.string(_.t.Lp9WoK) : _.intl.string(_.t.eSR83d),
+        p = d.status === x.O0b.PAUSED ? _.intl.string(_.t.Lp9WoK) : _.intl.string(_.t.eSR83d),
         h = (function (e) {
             let t = e.status === x.O0b.PAUSED ? _.t.o3upfX : _.t.dBXZEh,
                 { durations: n, currentDaysPaused: i } = (0, f.AT)(e),
@@ -100,7 +100,7 @@ function C(e) {
                             (0, i.jsx)(c.X6q, {
                                 variant: 'heading-sm/medium',
                                 className: E.subtitle,
-                                children: g
+                                children: p
                             })
                         ]
                     })
@@ -114,7 +114,7 @@ function C(e) {
                     })
                 }),
                 (0, i.jsx)(c.mzw, {
-                    justify: p.Z.Justify.START,
+                    justify: g.Z.Justify.START,
                     children: o
                 })
             ]
@@ -124,7 +124,7 @@ function C(e) {
 function O(e) {
     let { premiumSubscription: t, premiumType: n, onClose: s, pauseDuration: a, analyticsLocation: d } = e,
         [u, h] = r.useState(!1),
-        { analyticsLocations: f } = (0, g.ZP)(),
+        { analyticsLocations: f } = (0, p.ZP)(),
         [C, O] = r.useState(!1),
         S = (0, m.ZP)(),
         v = null,
@@ -183,7 +183,7 @@ function O(e) {
                     ]
                 }),
                 (0, i.jsx)(c.mzw, {
-                    justify: p.Z.Justify.START,
+                    justify: g.Z.Justify.START,
                     children: (0, i.jsxs)('div', {
                         className: E.whatYouLoseButtonContainer,
                         children: [

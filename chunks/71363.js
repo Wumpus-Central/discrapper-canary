@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(607070),
     u = n(100527),
     m = n(906732),
-    g = n(975298),
-    p = n(626135),
+    p = n(975298),
+    g = n(626135),
     h = n(695349),
     f = n(103433),
     b = n(166021),
@@ -35,7 +35,7 @@ let v = (e) => {
         [P, R] = r.useState(!1),
         D = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         Z = (0, E.mN)(),
-        { fractionalState: w } = (0, g.Z)(),
+        { fractionalState: w } = (0, p.Z)(),
         k = (0, h.W)();
     return (
         Z ? ((t = C.intl.string(C.t['+vt7w8'])), (n = C.intl.string(C.t.LgHbnJ))) : ((t = C.intl.string(C.t.LgHbnJ)), (n = C.intl.string(C.t['+vt7w8']))),
@@ -54,7 +54,7 @@ let v = (e) => {
                             className: O.heroHeading,
                             onBackClick: () => {
                                 (v(!1),
-                                    p.default.track(j.rMx.NITRO_HOME_NAVIGATION, {
+                                    g.default.track(j.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: _.MQ.SEE_ALL,
                                         next_component: T,
                                         interaction_component: 'Back Button'
@@ -124,7 +124,7 @@ let v = (e) => {
                         (0, i.jsx)(o.$, {
                             innerRef: I,
                             onChange: (e) => {
-                                e && !P && (p.default.track(j.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: A }), R(!0));
+                                e && !P && (g.default.track(j.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: A }), R(!0));
                             },
                             children: (0, i.jsx)('div', {
                                 ref: I,

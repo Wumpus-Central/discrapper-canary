@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(823379),
@@ -33,7 +33,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,10 +51,10 @@ function g(e, t) {
         e
     );
 }
-function p(e) {
+function g(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [p, h] = r.useState({ route: c.j.HOME }),
-        { route: f } = p,
+        [g, h] = r.useState({ route: c.j.HOME }),
+        { route: f } = g,
         b = () => {
             h({ route: c.j.HOME });
         },
@@ -67,13 +67,13 @@ function p(e) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (E((e) => g(m({}, e), { [n.id]: o.G.LOADING })),
+                (E((e) => p(m({}, e), { [n.id]: o.G.LOADING })),
                 (0, l.vY)(t)
                     .then(() => {
-                        E((e) => g(m({}, e), { [n.id]: o.G.DONE }));
+                        E((e) => p(m({}, e), { [n.id]: o.G.DONE }));
                     })
                     .catch(() => {
-                        E((e) => g(m({}, e), { [n.id]: o.G.ERROR }));
+                        E((e) => p(m({}, e), { [n.id]: o.G.ERROR }));
                     }));
         }
     }, [t]);
@@ -96,7 +96,7 @@ function p(e) {
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: O } = p,
+            let { route: O } = g,
                 S = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -115,8 +115,8 @@ function p(e) {
                         for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                     }
                     return r;
-                })(p, ['route']);
-            return (0, i.jsx)(d.Z, g(m({}, S), { navigateToHome: b }));
+                })(g, ['route']);
+            return (0, i.jsx)(d.Z, p(m({}, S), { navigateToHome: b }));
         default:
             (0, s.vE)(f);
     }

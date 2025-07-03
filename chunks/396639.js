@@ -12,8 +12,8 @@ var i = n(255367),
     d = n(563132),
     u = n(409813),
     m = n(45572),
-    g = n(126982),
-    p = n(791785),
+    p = n(126982),
+    g = n(791785),
     h = n(51499),
     f = n(27034),
     b = n(626135),
@@ -90,7 +90,7 @@ let I = {
         payment_type: C.Zuq[C.GZQ.ONE_TIME],
         is_gift: !1,
         eligible_for_trial: !1,
-        payment_modal_version: p.PaymentModal.CURRENT_VERSION
+        payment_modal_version: g.PaymentModal.CURRENT_VERSION
     },
     y = (e, t) => {
         let { loadId: n, skuId: i, analyticsLocations: r, analyticsSourceLocation: s } = t;
@@ -208,28 +208,28 @@ let I = {
         var t;
         let { handleClose: n } = e,
             { selectedSkuId: a, purchaseState: c, setPurchaseState: u } = (0, d.JL)(),
-            { product: g } = (0, o.T)(a),
-            { emitOrbCheckoutPaymentFlowEvent: p } = A(),
+            { product: p } = (0, o.T)(a),
+            { emitOrbCheckoutPaymentFlowEvent: g } = A(),
             { skuId: b, onRedeemVirtualCurrency: x, isRedeeming: O, orbRedemptionError: S, orbProductContext: v } = (0, j.C)(),
             T = (0, _.cR)(),
             N = (0, r.useRef)(T);
         ((0, l.ZP)(() => {
-            p(C.rMx.PAYMENT_FLOW_LOADED);
+            g(C.rMx.PAYMENT_FLOW_LOADED);
         }),
             (0, r.useEffect)(() => {
                 c === m.A.COMPLETED && n();
             }, [c, n]),
             (0, r.useEffect)(() => {
-                null != S && null !== N.current && (p(C.rMx.PAYMENT_FLOW_FAILED, S), (N.current = null));
-            }, [S, p]));
+                null != S && null !== N.current && (g(C.rMx.PAYMENT_FLOW_FAILED, S), (N.current = null));
+            }, [S, g]));
         let I = (0, r.useCallback)(() => {
             ((N.current = T),
-                p(C.rMx.PAYMENT_FLOW_COMPLETED),
+                g(C.rMx.PAYMENT_FLOW_COMPLETED),
                 x(() => {
-                    (u(m.A.COMPLETED), p(C.rMx.PAYMENT_FLOW_SUCCEEDED));
+                    (u(m.A.COMPLETED), g(C.rMx.PAYMENT_FLOW_SUCCEEDED));
                 }));
-        }, [x, u, T, p]);
-        if (null == a || null == g) return (0, i.jsx)(s.$jN, { type: s.$jN.Type.WANDERING_CUBES });
+        }, [x, u, T, g]);
+        if (null == a || null == p) return (0, i.jsx)(s.$jN, { type: s.$jN.Type.WANDERING_CUBES });
         let y = null != (t = N.current) ? t : T,
             P = null != v ? v.orbPriceAmount : null;
         return (0, i.jsxs)(i.Fragment, {
@@ -268,7 +268,7 @@ let I = {
         }
     ],
     Z = (e, t, n) =>
-        (0, i.jsx)(g.Z, {
+        (0, i.jsx)(p.Z, {
             isOrbCheckout: !0,
             step: n,
             onClose: () => t(!1)
@@ -293,7 +293,7 @@ let I = {
                 },
                 [s, a]
             );
-        return (0, i.jsx)(p.PaymentModal, {
+        return (0, i.jsx)(g.PaymentModal, {
             applicationId: (0, x.N)(t),
             transitionState: s.transitionState,
             analyticsDataOverride: o,

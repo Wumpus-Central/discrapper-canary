@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(481060),
     u = n(634894),
     m = n(410030),
-    g = n(607070),
-    p = n(100527),
+    p = n(607070),
+    g = n(100527),
     h = n(906732),
     f = n(70097),
     b = n(433811),
@@ -47,7 +47,7 @@ let F = () => {
         s = r.useRef(null),
         F = r.useRef(null),
         H = r.useRef(null),
-        z = (0, a.e7)([g.Z], () => g.Z.useReducedMotion),
+        z = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
         Y = (0, m.ZP)(),
         W = (0, c.wj)(Y),
         [K, q] = r.useState(!1),
@@ -63,15 +63,15 @@ let F = () => {
         ec = (0, v.n)(),
         ed = (0, O.Vi)(),
         eu = null != ed && ed,
-        { analyticsLocations: em } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
-        eg = (0, S.Z)({ location: 'PremiumMarketing' }),
-        ep = 'PremiumMarketingHome';
+        { analyticsLocations: em } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
+        ep = (0, S.Z)({ location: 'PremiumMarketing' }),
+        eg = 'PremiumMarketingHome';
     ((0, u.j)({
-        location: ep + ' auto on',
+        location: eg + ' auto on',
         autoTrackExposure: !0
     }),
         (0, u.j)({
-            location: ep + ' auto off',
+            location: eg + ' auto off',
             autoTrackExposure: !1
         }),
         r.useEffect(() => {
@@ -138,7 +138,7 @@ let F = () => {
                     onChange: (e) => $(e),
                     threshold: 0.1,
                     active: !0,
-                    children: eg
+                    children: ep
                         ? (0, i.jsx)(I.rz, { innerRef: n })
                         : (0, i.jsx)(y.Ub, {
                               innerRef: n,

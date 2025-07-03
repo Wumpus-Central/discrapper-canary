@@ -10,8 +10,8 @@ var r = n(924628),
     d = n(993315),
     u = n(883382),
     m = n(940021),
-    g = n(402583),
-    p = n(230341),
+    p = n(402583),
+    g = n(230341),
     h = n(893996),
     f = n(266132),
     b = n(726985),
@@ -21,7 +21,7 @@ function _() {
         title: x.intl.string(x.t.WWaFn5),
         description: x.intl.format(x.t['/6sFWV'], { helpArticle: (0, l.uV)() }),
         webSetting: b.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-        children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(f.Z, {})]
+        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(f.Z, {})]
     });
 }
 function E() {
@@ -35,7 +35,7 @@ function j() {
     return (0, i.jsxs)(h.Z, {
         title: x.intl.string(x.t.SRZyHh),
         webSetting: b.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(d.Z, {})]
+        children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(d.Z, {})]
     });
 }
 function C() {

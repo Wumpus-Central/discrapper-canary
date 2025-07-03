@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(821849),
     u = n(72924),
     m = n(100527),
-    g = n(906732),
-    p = n(228624),
+    p = n(906732),
+    g = n(228624),
     h = n(883904),
     f = n(678558),
     b = n(730647),
@@ -109,7 +109,7 @@ let w = function () {
         }),
         F = 'true' !== V.gift && null != w,
         [H, z] = r.useState(k.length > 0 ? k[0].value : null),
-        { analyticsLocations: Y } = (0, g.ZP)(m.Z.PAYMENT_FLOW_TEST_PAGE),
+        { analyticsLocations: Y } = (0, p.ZP)(m.Z.PAYMENT_FLOW_TEST_PAGE),
         [W, K] = r.useState(''),
         [q, X] = r.useState(y.lds),
         { balance: Q, isFetching: J, error: $ } = (0, v.A)(),
@@ -118,8 +118,8 @@ let w = function () {
         [es, el] = r.useState(''),
         [ea, eo] = r.useState(y.lds),
         [ec, ed] = r.useState(y.lds),
-        eu = (0, p.hv)('PaymentFlowModalTestPage');
-    return (0, i.jsx)(g.Gt, {
+        eu = (0, g.hv)('PaymentFlowModalTestPage');
+    return (0, i.jsx)(p.Gt, {
         value: Y,
         children: (0, i.jsxs)(o.hjN, {
             title: 'Payment Flow Modals',

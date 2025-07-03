@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(906732),
     u = n(357355),
     m = n(140465),
-    g = n(775412),
-    p = n(51574),
+    p = n(775412),
+    g = n(51574),
     h = n(304480),
     f = n(104494),
     b = n(639119),
@@ -40,7 +40,7 @@ let T = (e) => {
         var n, r;
         let { className: s, buttonClassName: h, subscriptionTier: S, isDarkMode: N, isEligibleForBogoPromotion: I } = e,
             { analyticsLocations: y } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
-            A = (0, g._O)(),
+            A = (0, p._O)(),
             P = (0, f.Ng)(),
             R = (0, f.Wp)(P, O.Si.TIER_2) ? O.Si.TIER_2 : void 0,
             D = (0, b.N)(),
@@ -50,8 +50,8 @@ let T = (e) => {
             L = null != k,
             B = N ? o.Ttl.WHITE : o.Ttl.BRAND,
             M = w.length > 0,
-            U = (0, p.ZP)({ location: 'PremiumMarketingHeroHeading' }),
-            V = (0, p.J1)(U);
+            U = (0, g.ZP)({ location: 'PremiumMarketingHeroHeading' }),
+            V = (0, g.J1)(U);
         return (0, i.jsx)(d.Gt, {
             value: y,
             children: (0, i.jsx)('div', {

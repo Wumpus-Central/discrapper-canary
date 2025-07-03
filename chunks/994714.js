@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+(n.d(t, { Z: () => p }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -41,7 +41,7 @@ let m = (e) => {
             ]
         });
     },
-    g = () => {
+    p = () => {
         let [e, t] = r.useState(0);
         return (0, i.jsxs)('div', {
             className: u.wrapper,

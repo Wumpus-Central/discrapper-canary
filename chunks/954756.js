@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(350327),
     u = n(330055),
     m = n(25990),
-    g = n(695346),
-    p = n(647699),
+    p = n(695346),
+    g = n(647699),
     h = n(155433),
     f = n(388032);
 function b() {
@@ -41,19 +41,19 @@ function b() {
             }
             if (Object.keys(f).length > 0) {
                 let e = await (0, d.Z)(f);
-                ((_ = _ && null != (i = null == e ? void 0 : e.ok) && i), (null == e ? void 0 : e.ok) ? (0, d.pG)() : (0, p.r)());
+                ((_ = _ && null != (i = null == e ? void 0 : e.ok) && i), (null == e ? void 0 : e.ok) ? (0, d.pG)() : (0, g.r)());
             }
             if (void 0 !== s.pendingLegacyUsernameDisabled)
                 try {
-                    (await g.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, l.iR)());
+                    (await p.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, l.iR)());
                 } catch (e) {
-                    ((0, p.r)(), (_ = !1));
+                    ((0, g.r)(), (_ = !1));
                 }
             if (Object.keys(x).length > 0) {
                 let { primaryGuildId: e } = x;
                 if (void 0 !== e) {
                     let t = await (0, o.c)(e, null !== e);
-                    ((_ = _ && null != (r = null == t ? void 0 : t.ok) && r), (null == t ? void 0 : t.ok) ? (0, l.OU)() : (0, p.r)());
+                    ((_ = _ && null != (r = null == t ? void 0 : t.ok) && r), (null == t ? void 0 : t.ok) ? (0, l.OU)() : (0, g.r)());
                 }
             }
             (_ && (0, l.b9)(), b(!1));

@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(709054),
     u = n(695346),
     m = n(749876),
-    g = n(546957),
-    p = n(838436),
+    p = n(546957),
+    g = n(838436),
     h = n(51331),
     f = n(726985),
     b = n(981631),
@@ -180,7 +180,7 @@ function E(e) {
 }
 function j() {
     let e = u._j.useSetting();
-    return (0, i.jsx)(p.U, {
+    return (0, i.jsx)(g.U, {
         setting: f.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
         children: (0, i.jsx)(h.Z, {
             title: x.intl.string(x.t.XpBObG),
@@ -207,10 +207,10 @@ function C() {
                 value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE
             }
         ];
-    return (0, i.jsxs)(p.U, {
+    return (0, i.jsxs)(g.U, {
         setting: f.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS,
         children: [
-            (0, i.jsx)(p.H, {
+            (0, i.jsx)(g.H, {
                 header: x.intl.string(x.t['ms+TmZ']),
                 description: x.intl.string(x.t['4NN4+/'])
             }),
@@ -227,7 +227,7 @@ function C() {
 }
 function O() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, m.Z)(!0);
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(p.Z, {
         children: e
             ? (0, i.jsx)(l.$jN, {})
             : t.length > 0

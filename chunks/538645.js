@@ -9,14 +9,14 @@ var i = n(255367),
     d = n(53281),
     u = n(281598),
     m = n(25251),
-    g = n(373071),
-    p = n(782691),
+    p = n(373071),
+    g = n(782691),
     h = n(662583);
 let f = "Make sure you're only uploading text files!",
     b = (e) => {
         var t, n, r;
         let { effect: s, onClick: a } = e,
-            { deleteConfig: o } = (0, g.n6)();
+            { deleteConfig: o } = (0, p.n6)();
         return (0, i.jsxs)(c.P3F, {
             className: h.previewCard,
             onClick: () => {
@@ -53,7 +53,7 @@ let f = "Make sure you're only uploading text files!",
         config: { effects: [] }
     });
 function _() {
-    let { profileEffects: e, upsertConfig: t } = (0, g.n6)(),
+    let { profileEffects: e, upsertConfig: t } = (0, p.n6)(),
         [n, s] = r.useState(),
         _ = r.useRef(null),
         E = (0, o.Wu)([m.Z], () => m.Z.profileEffects),
@@ -192,7 +192,7 @@ function _() {
                         })
                     ]
                 }),
-            null != n && (0, i.jsx)(p.Z, { effect: n })
+            null != n && (0, i.jsx)(g.Z, { effect: n })
         ]
     });
 }

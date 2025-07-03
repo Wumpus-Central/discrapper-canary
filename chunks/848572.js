@@ -17,8 +17,8 @@ var i,
     d = n(78839),
     u = n(111361),
     m = n(494450),
-    g = n(474936);
-function p(e) {
+    p = n(474936);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -75,7 +75,7 @@ let x = (e) =>
     });
 function _() {
     let e = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        t = (0, u.M5)(e, g.p9.TIER_2),
+        t = (0, u.M5)(e, p.p9.TIER_2),
         n = (0, l.e7)(
             [d.Z],
             () => {
@@ -88,10 +88,10 @@ function _() {
     return null != n ? n : i;
 }
 let E = () => {
-        let e = Object.values(g.vK),
+        let e = Object.values(p.vK),
             t = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
             n = (0, l.e7)([d.Z], () => d.Z.getPremiumTypeSubscription());
-        if (!(0, u.M5)(t, g.p9.TIER_2) || null == n || null == n.premiumSince) return null;
+        if (!(0, u.M5)(t, p.p9.TIER_2) || null == n || null == n.premiumSince) return null;
         let i = s()(),
             r = s()(n.premiumSince).add(1, 'day'),
             a = i.diff(r, 'months');
@@ -107,14 +107,14 @@ let E = () => {
     },
     C = () => {
         let e = _(),
-            t = Object.values(g.vK);
+            t = Object.values(p.vK);
         if (null == e || null == t) return null;
         let n = s()().diff(e, 'days'),
             i = t[0],
             r = 30 * i.tenureReqNumMonths - n;
         return r <= 0
             ? null
-            : h(p({}, i), {
+            : h(g({}, i), {
                   daysLeft: r,
                   status: 'upcoming'
               });
@@ -125,7 +125,7 @@ let E = () => {
             n = j(),
             i = C();
         return null != t
-            ? h(p({}, t), {
+            ? h(g({}, t), {
                   earnedOnDate: n,
                   status: 'earned'
               })
@@ -135,5 +135,5 @@ let E = () => {
     },
     S = (e) => {
         let t = (0, m.l)(e);
-        return null == t ? null : g.vK[t];
+        return null == t ? null : p.vK[t];
     };

@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(140465),
     u = n(474936),
     m = n(981631),
-    g = n(388032),
-    p = n(132383);
+    p = n(388032),
+    g = n(132383);
 let h = (e) => {
     let t,
         n,
@@ -19,13 +19,13 @@ let h = (e) => {
         b = (0, d.Nx)();
     if (null == r) return null;
     let x = null != r ? c.ZP.getPremiumPlanItem(r) : null;
-    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
+    if ((c.ZP.isBoostOnlySubscription(r) ? (t = p.intl.string(p.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
     let _ = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
         E = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
     return (
         (n = null != f ? f : b ? 'always-white' : 'text-default'),
         (0, i.jsxs)(l.Zbd, {
-            className: s()(p.container, h, { [p.centerText]: b }),
+            className: s()(g.container, h, { [g.centerText]: b }),
             type: l.Zbd.Types.CUSTOM,
             children: [
                 (0, i.jsx)(l.P4T, {
@@ -33,17 +33,17 @@ let h = (e) => {
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: s()(p.icon, { [p.lightThemeColorOnly]: b })
+                    className: s()(g.icon, { [g.lightThemeColorOnly]: b })
                 }),
                 (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
                     color: n,
                     children: E
-                        ? g.intl.format(g.t['tYuv+f'], {
+                        ? p.intl.format(p.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
                               onSubscriptionsClick: _
                           })
-                        : g.intl.format(g.t.xHRgU1, {
+                        : p.intl.format(p.t.xHRgU1, {
                               subscriptionName: t,
                               onSubscriptionsClick: _
                           })

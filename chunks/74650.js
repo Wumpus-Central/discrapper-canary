@@ -1,4 +1,4 @@
-n.d(t, { U: () => p });
+n.d(t, { U: () => g });
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -10,11 +10,11 @@ var r = n(442837),
     d = n(474936),
     u = n(388032),
     m = n(441425),
-    g = n(217379);
-function p(e) {
+    p = n(217379);
+function g(e) {
     let { markAsDismissed: t, onCTA: n } = e,
-        p = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        h = (0, o.M5)(p, d.p9.TIER_2);
+        g = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
+        h = (0, o.M5)(g, d.p9.TIER_2);
     return (0, i.jsx)('div', {
         className: m.popup,
         children: (0, i.jsxs)('div', {
@@ -26,7 +26,7 @@ function p(e) {
                     children: (0, i.jsx)(s.Dio, { size: 'xs' })
                 }),
                 (0, i.jsx)('img', {
-                    src: g,
+                    src: p,
                     alt: '',
                     className: m.asset
                 }),

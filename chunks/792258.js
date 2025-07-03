@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(601964),
     u = n(914788),
     m = n(981631),
-    g = n(916723),
-    p = n(388032),
+    p = n(916723),
+    g = n(388032),
     h = n(45452);
 let f = [18, 18, 16, 16, 14, 12, 10],
     b = (e) => {
@@ -73,7 +73,7 @@ let f = [18, 18, 16, 16, 14, 12, 10],
                             ? (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-muted',
-                                  children: p.intl.format(g.default['5JmNgo'], { members: n.approximateMemberCount })
+                                  children: g.intl.format(p.default['5JmNgo'], { members: n.approximateMemberCount })
                               })
                             : null
                     ]

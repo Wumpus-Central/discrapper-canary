@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(880257),
     u = n(631885),
     m = n(933970),
-    g = n(340453),
-    p = n(292352),
+    p = n(340453),
+    g = n(292352),
     h = n(916723),
     f = n(388032),
     b = n(708734);
@@ -109,9 +109,9 @@ function E(e) {
         children: [
             (0, i.jsx)('div', {
                 className: b.details,
-                children: (0, i.jsx)(g.Z, {
+                children: (0, i.jsx)(p.Z, {
                     otherUser: t,
-                    status: p.ne.PENDING
+                    status: g.ne.PENDING
                 })
             }),
             (0, i.jsx)('div', {

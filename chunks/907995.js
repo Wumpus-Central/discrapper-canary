@@ -9,17 +9,17 @@ var i = n(255367),
     d = n(388032),
     u = n(98199);
 function m(e) {
-    let { label: t, labelHook: n, dismissNotice: s, className: m, noticeType: g } = e,
-        p = null != s;
+    let { label: t, labelHook: n, dismissNotice: s, className: m, noticeType: p } = e,
+        g = null != s;
     r.useEffect(() => {
-        (0, o.l)(g, c.up.VIEWED);
-    }, [g]);
+        (0, o.l)(p, c.up.VIEWED);
+    }, [p]);
     let h = r.useCallback(() => {
-            null != s && (s(), (0, o.l)(g, c.up.DISMISS));
-        }, [g, s]),
+            null != s && (s(), (0, o.l)(p, c.up.DISMISS));
+        }, [p, s]),
         f = r.useCallback(() => {
-            (n(), (0, o.l)(g, c.up.LEARN_MORE));
-        }, [g, n]);
+            (n(), (0, o.l)(p, c.up.LEARN_MORE));
+        }, [p, n]);
     return (0, i.jsxs)('div', {
         className: l()(u.safetySettingsNotice, m),
         children: [
@@ -39,7 +39,7 @@ function m(e) {
                         )
                 })
             }),
-            p &&
+            g &&
                 (0, i.jsx)(a.P3F, {
                     className: u.closeButton,
                     onClick: h,

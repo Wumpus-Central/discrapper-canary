@@ -10,8 +10,8 @@ var r = n(524437),
     d = n(294602),
     u = n(249996),
     m = n(880257),
-    g = n(63063),
-    p = n(838436),
+    p = n(63063),
+    g = n(838436),
     h = n(526761),
     f = n(726985),
     b = n(981631),
@@ -49,7 +49,7 @@ function E(e) {
         };
     return (
         E && (v.unshift(N), T.unshift(N)),
-        (0, i.jsx)(p.U, {
+        (0, i.jsx)(g.U, {
             setting: f.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: h.FY.EXPLICIT_MEDIA_REDACTION_V2,
             children: n
@@ -126,9 +126,9 @@ function E(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(p.H, {
+                          (0, i.jsx)(g.H, {
                               header: x.intl.string(x.t['c/UOwM']),
-                              description: x.intl.format(x.t.ZUvrwM, { learnMoreLink: g.Z.getArticleURL(b.BhN.EXPLICIT_MEDIA_REDACTION) })
+                              description: x.intl.format(x.t.ZUvrwM, { learnMoreLink: p.Z.getArticleURL(b.BhN.EXPLICIT_MEDIA_REDACTION) })
                           }),
                           (0, i.jsx)(s.xJW, {
                               tag: s.RB0.H3,
