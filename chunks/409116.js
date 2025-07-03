@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var l = n(120356),
     i = n.n(l),
-    a = n(481060),
-    o = n(937615),
+    o = n(481060),
+    a = n(937615),
     s = n(884697),
     c = n(864356);
 let u = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
@@ -18,13 +18,13 @@ let u = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                 discount: f = s.f_,
                 variant: h = 'heading-md/semibold'
             } = e,
-            b = u((0, o.T4)(n, l)),
+            b = u((0, a.T4)(n, l)),
             m =
                 f !== s.f_ && f.discountPercentage >= 5
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               b,
-                              (0, r.jsx)(a.Text, {
+                              (0, r.jsx)(o.Text, {
                                   variant: h,
                                   color: 'text-feedback-positive',
                                   className: c.discount,
@@ -33,7 +33,7 @@ let u = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                           ]
                       })
                     : b;
-        return (0, r.jsxs)(a.X6q, {
+        return (0, r.jsxs)(o.X6q, {
             variant: h,
             className: i()(c.container, g),
             children: [p, null != (t = null == d ? void 0 : d(m)) ? t : m]

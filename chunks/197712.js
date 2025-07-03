@@ -1,9 +1,9 @@
 (n.d(t, {
     $p: () => i,
     AK: () => d,
-    Es: () => u,
+    Es: () => c,
     U$: () => s,
-    kH: () => c
+    kH: () => u
 }),
     n(190126),
     n(368063),
@@ -29,7 +29,7 @@ var r = n(392711),
     l = n(36793),
     a = n(486324);
 async function i(e) {
-    let { file: t, image: r, cropDimensions: i, cropOriginCoordinates: s, maxDimensions: o, imageRotation: u = 0, resizeWidth: c = null, resizeHeight: d = null } = e,
+    let { file: t, image: r, cropDimensions: i, cropOriginCoordinates: s, maxDimensions: o, imageRotation: c = 0, resizeWidth: u = null, resizeHeight: d = null } = e,
         {
             sourceX: h,
             sourceY: p,
@@ -40,7 +40,7 @@ async function i(e) {
             cropDimensions: i,
             cropOriginCoordinates: s,
             maxDimensions: o,
-            imageRotation: u
+            imageRotation: c
         }),
         f = await t.arrayBuffer(),
         v = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
@@ -73,8 +73,8 @@ async function i(e) {
             y: 0 | p,
             width: 0 | g,
             height: 0 | m,
-            imageRotation: 0 | u,
-            resizeWidth: c,
+            imageRotation: 0 | c,
+            resizeWidth: u,
             resizeHeight: d
         }),
         {
@@ -103,7 +103,7 @@ function o(e, t, n, r) {
               height: t
           };
 }
-function u(e, t, n) {
+function c(e, t, n) {
     switch (e) {
         case a.pC.AVATAR:
         case a.pC.AVATAR_DECORATION:
@@ -128,7 +128,7 @@ function u(e, t, n) {
             return o(a.sX, a.SW, t, n);
     }
 }
-function c(e, t, n) {
+function u(e, t, n) {
     let r = {
             top: 0,
             bottom: 0,
@@ -163,16 +163,16 @@ function d(e, t, n, r) {
                 height: Math.min((9 / 16) * o, r)
             };
         case a.pC.VIDEO_BACKGROUND:
-            let u = Math.min(t, l);
-            return {
-                width: u,
-                height: (9 / 16) * u
-            };
-        case a.pC.SCHEDULED_EVENT_IMAGE:
             let c = Math.min(t, l);
             return {
                 width: c,
-                height: 0.4 * c
+                height: (9 / 16) * c
+            };
+        case a.pC.SCHEDULED_EVENT_IMAGE:
+            let u = Math.min(t, l);
+            return {
+                width: u,
+                height: 0.4 * u
             };
         case a.pC.HOME_HEADER:
             let d = Math.min(t, l);

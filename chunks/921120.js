@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     i = n(120356),
-    a = n.n(i),
-    o = n(979554),
+    o = n.n(i),
+    a = n(979554),
     s = n(876917),
     c = n(597688),
     u = n(616066),
@@ -116,22 +116,22 @@ let g = {
             }, [n]),
             (0, r.jsx)('div', {
                 style: i,
-                className: a()(p.jumbleWrapper, {
+                className: o()(p.jumbleWrapper, {
                     [p.peaking]: t,
                     [p.transitioned]: h
                 }),
                 children: f.map((e, t) => {
                     var l, i;
-                    let { top: a, left: c, rotation: f, size: h, skuId: b } = e,
+                    let { top: o, left: c, rotation: f, size: h, skuId: b } = e,
                         _ = null == (l = m[t]) ? void 0 : l.items[0],
                         C = null == (i = m[t]) ? void 0 : i.type,
-                        O = C === o.Z.AVATAR_DECORATION ? 384 : 512;
+                        O = C === a.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         'div',
                         {
                             className: p.asset,
                             style: {
-                                top: n ? -g - O : a,
+                                top: n ? -g - O : o,
                                 left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
                                 transform: 'rotate('.concat(f, 'deg)'),
                                 height: h.y,
@@ -140,9 +140,9 @@ let g = {
                                 transitionDuration: ''.concat(d.lb - 200 * Math.random(), 'ms')
                             },
                             children: [
-                                null != _ && C === o.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: _ }),
+                                null != _ && C === a.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: _ }),
                                 null != _ &&
-                                    C === o.Z.PROFILE_EFFECT &&
+                                    C === a.Z.PROFILE_EFFECT &&
                                     (0, r.jsx)(s.Z, {
                                         profileEffectId: _.id,
                                         isPurchased: !1,

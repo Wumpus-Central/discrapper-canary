@@ -1,4 +1,4 @@
-n.d(t, { F: () => a });
+n.d(t, { F: () => o });
 var r = n(818083),
     l = n(987338);
 let i = (0, r.B)({
@@ -15,4 +15,4 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (e) => i.useExperiment({ location: e }).collectiblesBrowseEnabled;
+    o = (e) => i.useExperiment({ location: e }).collectiblesBrowseEnabled;

@@ -3,6 +3,7 @@ e.exports = {
     editingContainer: 'editingContainer_ab2592',
     image: 'image_ab2592',
     overlay: 'overlay_ab2592',
+    animatedInfoContainer: 'animatedInfoContainer_ab2592',
     toolsContainer: 'toolsContainer_ab2592',
     zoomControls: 'zoomControls_ab2592',
     slider: 'slider_ab2592',

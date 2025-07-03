@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(255367),
     l = n(73800),
     i = n(180650),
-    a = n(442837),
-    o = n(607070),
+    o = n(442837),
+    a = n(607070),
     s = n(594174),
     c = n(960048),
     u = n(597688),
@@ -19,14 +19,14 @@ function C(e) {
     let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: h, refreshCategories: C } = e,
         E = O();
     v(E);
-    let S = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+    let S = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
         { setCategoryRef: x, handleScrollToCategory: y } = (0, g.xV)(s.current),
         T = l.useCallback(
             async (e, t, r) => {
                 h(e, t);
                 let l = r && !n && !S,
-                    a = t === i.T.ORB ? m.AW.ORBS : m.AW.CATALOG;
-                (await u(a, l), null != t && y(t));
+                    o = t === i.T.ORB ? m.AW.ORBS : m.AW.CATALOG;
+                (await u(o, l), null != t && y(t));
             },
             [n, S, u, y, h]
         );
@@ -52,9 +52,9 @@ function C(e) {
                 setCategoryRef: x
             });
 }
-let O = () => (0, a.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
+let O = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
     v = (e) => {
-        let t = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
+        let t = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
             { noCache: n, includeUnpublished: r } = (0, h.Z)();
         l.useEffect(() => {
             var l, i;

@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => u,
+    H: () => c,
     z: () => d
 });
 var r = n(255367),
@@ -8,15 +8,15 @@ var r = n(255367),
     i = n(981631),
     s = n(185923),
     o = n(388032);
-let u = (e) => {
+let c = (e) => {
         let { error: t } = e;
         return (0, r.jsx)(l.Text, {
             variant: 'text-sm/normal',
             color: 'text-danger',
-            children: c(t)
+            children: u(t)
         });
     },
-    c = (e) => {
+    u = (e) => {
         switch (e) {
             case i.evJ.TOO_MANY_EMOJI:
                 return o.intl.string(o.t['jP/Rqq']);

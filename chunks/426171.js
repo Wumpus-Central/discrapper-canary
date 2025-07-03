@@ -12,8 +12,8 @@
 var r = n(73800),
     l = n(114858),
     i = n(442837),
-    a = n(607070),
-    o = n(100527),
+    o = n(607070),
+    a = n(100527),
     s = n(906732),
     c = n(597688),
     u = n(328347),
@@ -35,10 +35,10 @@ let b = ''.concat('#').concat('itemSkuId', '='),
         }, [e, t.pathname]);
     },
     O = (e) => {
-        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: l, reducedMotion: i = !1, tab: a } = e,
-            o = c.Z.getProduct(t),
+        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: l, reducedMotion: i = !1, tab: o } = e,
+            a = c.Z.getProduct(t),
             s = c.Z.getCategoryForProduct(t);
-        if (null != o && null != s) {
+        if (null != a && null != s) {
             var u;
             null == (u = l.current) ||
                 u.scrollIntoView({
@@ -46,13 +46,13 @@ let b = ''.concat('#').concat('itemSkuId', '='),
                     block: 'center',
                     inline: 'center'
                 });
-            let e = o,
-                p = (0, f.oQ)({ product: o }),
+            let e = a,
+                p = (0, f.oQ)({ product: a }),
                 h = setTimeout(
                     () => {
                         let i = document.getElementById('shop-item-'.concat(e.skuId));
-                        if ((i !== document.activeElement && (null == i || i.focus()), null != o.variantGroupStoreListingId)) {
-                            let n = c.Z.getProductByStoreListingId(o.variantGroupStoreListingId);
+                        if ((i !== document.activeElement && (null == i || i.focus()), null != a.variantGroupStoreListingId)) {
+                            let n = c.Z.getProductByStoreListingId(a.variantGroupStoreListingId);
                             if (null != n) {
                                 var u;
                                 e = n;
@@ -66,7 +66,7 @@ let b = ''.concat('#').concat('itemSkuId', '='),
                             analyticsSource: r,
                             analyticsLocations: n,
                             returnRef: l,
-                            tab: a,
+                            tab: o,
                             shouldCheckoutWithOrbs: p
                         });
                     },
@@ -78,10 +78,10 @@ let b = ''.concat('#').concat('itemSkuId', '='),
     },
     v = (e) => {
         let { isFetchingCategories: t, isLayer: n, initialItemCardRef: c } = e,
-            d = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+            d = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
             g = r.useRef(null),
             f = (0, l.TH)(),
-            b = f.pathname === h.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : f.pathname === h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
+            b = f.pathname === h.Z5c.COLLECTIBLES_SHOP ? a.Z.HOME_PAGE_SHOP_TAB : f.pathname === h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? a.Z.COLLECTIBLES_SHOP_FULLSCREEN : a.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: _ } = (0, s.ZP)(b),
             C = (0, p.Z)();
         r.useEffect(() => {
@@ -117,9 +117,9 @@ let b = ''.concat('#').concat('itemSkuId', '='),
     },
     E = (e) => {
         let t = r.useRef({}),
-            n = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+            n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
             l = (0, i.e7)([c.Z], () => c.Z.isFetchingCategories),
-            [o, s] = r.useState(null),
+            [a, s] = r.useState(null),
             u = r.useCallback((e, n) => {
                 t.current[e] = n;
             }, []),
@@ -143,8 +143,8 @@ let b = ''.concat('#').concat('itemSkuId', '='),
             );
         return (
             r.useEffect(() => {
-                l || null == o || (d(o), s(null));
-            }, [l, d, o, s]),
+                l || null == a || (d(a), s(null));
+            }, [l, d, a, s]),
             {
                 setCategoryRef: u,
                 handleScrollToCategory: d

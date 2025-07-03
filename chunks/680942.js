@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(255367),
     l = n(73800),
     i = n(979554),
-    a = n(481060),
-    o = n(906732),
+    o = n(481060),
+    a = n(906732),
     s = n(333867),
     c = n(626135),
     u = n(381585),
@@ -16,21 +16,21 @@ var r = n(255367),
     m = n(388032),
     _ = n(846165);
 let C = (e) => {
-    let { product: t, selectedVariantIndex: n, returnRef: C, onSuccess: O, tooltipDelay: v, color: E = a.Ttl.BRAND } = e,
-        { analyticsLocations: S } = (0, o.ZP)(),
+    let { product: t, selectedVariantIndex: n, returnRef: C, onSuccess: O, tooltipDelay: v, color: E = o.Ttl.BRAND } = e,
+        { analyticsLocations: S } = (0, a.ZP)(),
         x = l.useRef(null),
         y = (0, p.hv)('CollectiblesShopGiftButton'),
         T = (0, u.sp)(),
         j = (0, g.Z)();
     return (0, d.x6)(t)
         ? null
-        : (0, r.jsx)(a.ua7, {
+        : (0, r.jsx)(o.ua7, {
               text: m.intl.string(m.t['JCFN//']),
               delay: v,
               children: (e) => {
-                  var l, o;
+                  var l, a;
                   return (0, r.jsx)(
-                      a.zxk,
+                      o.zxk,
                       ((l = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -56,13 +56,13 @@ let C = (e) => {
                           }
                           return e;
                       })({}, e)),
-                      (o = o =
+                      (a = a =
                           {
                               buttonRef: x,
                               className: _.giftButton,
                               color: E,
-                              look: a.zxk.Looks.FILLED,
-                              size: a.PhG.ICON,
+                              look: o.zxk.Looks.FILLED,
+                              size: o.PhG.ICON,
                               innerClassName: _.giftButtonInner,
                               'aria-label': m.intl.string(m.t.PEjaCw),
                               onClick: (e) => {
@@ -95,13 +95,13 @@ let C = (e) => {
                                                   : void 0
                                       }));
                               },
-                              children: (0, r.jsx)(a.OgN, {
+                              children: (0, r.jsx)(o.OgN, {
                                   size: 'md',
                                   color: 'currentColor'
                               })
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -109,8 +109,8 @@ let C = (e) => {
                                     n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(o)).forEach(function (e) {
-                                Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                            })(Object(a)).forEach(function (e) {
+                                Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                             }),
                       l)
                   );

@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => L }), n(388685));
+(n.d(t, { Z: () => P }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
-    a = n.n(i),
-    o = n(685816),
+    o = n.n(i),
+    a = n(685816),
     s = n(481060),
     c = n(626135),
     u = n(381585),
@@ -42,8 +42,8 @@ let j = (e) => {
         let {
                 isFetchingShopHome: y,
                 fetchShopHomeError: j,
-                shopBlocks: L,
-                refreshShopHome: P
+                shopBlocks: P,
+                refreshShopHome: L
             } = (0, p.E)(
                 c,
                 {
@@ -59,13 +59,13 @@ let j = (e) => {
                 }
             ),
             k = l.useCallback(() => {
-                P();
-            }, [P]);
+                L();
+            }, [L]);
         if (
             (l.useEffect(() => {
                 null != j ||
                     y ||
-                    0 === L.length ||
+                    0 === P.length ||
                     (0, g.n)({
                         sessionId: x,
                         checkpoint: g.a.SHOP_RENDERED,
@@ -74,7 +74,7 @@ let j = (e) => {
                         unpublishedCategoriesShown: v,
                         cacheDisabled: h
                     });
-            }, [j, y, L.length, v, h, x, c, d]),
+            }, [j, y, P.length, v, h, x, c, d]),
             null != j)
         )
             return (0, r.jsx)(f.Z, {
@@ -82,7 +82,7 @@ let j = (e) => {
                 errorOrigin: f.i.SHOP_PAGE,
                 errorMessage: j.message
             });
-        if (y || 0 === L.length)
+        if (y || 0 === P.length)
             return (0, r.jsxs)('div', {
                 className: T.loadingContainer,
                 children: [
@@ -108,7 +108,7 @@ let j = (e) => {
             if (null == e) return null;
             let l = null;
             switch (e.type) {
-                case o.z.HERO:
+                case a.z.HERO:
                     l = (0, r.jsx)(
                         C.Z,
                         {
@@ -120,7 +120,7 @@ let j = (e) => {
                         t
                     );
                     break;
-                case o.z.FEATURED:
+                case a.z.FEATURED:
                     l = (0, r.jsx)(
                         m.Z,
                         {
@@ -131,7 +131,7 @@ let j = (e) => {
                         t
                     );
                     break;
-                case o.z.FEED:
+                case a.z.FEED:
                     let u = e.sortedSkuIds;
                     l = (0, r.jsx)(
                         _.Z,
@@ -145,7 +145,7 @@ let j = (e) => {
                         t
                     );
                     break;
-                case o.z.WIDE_BANNER:
+                case a.z.WIDE_BANNER:
                     l = (0, r.jsx)(
                         E.Z,
                         {
@@ -156,7 +156,7 @@ let j = (e) => {
                         t
                     );
                     break;
-                case o.z.SHELF:
+                case a.z.SHELF:
                     l = (0, r.jsx)(
                         O.Z,
                         {
@@ -173,16 +173,16 @@ let j = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: a()(T.blockContainer, { [T.topBlockContainer]: 0 === t }),
+                    className: o()(T.blockContainer, { [T.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
             );
         };
-        return (0, r.jsx)(r.Fragment, { children: L.map((e, t) => I(e, t)) });
+        return (0, r.jsx)(r.Fragment, { children: P.map((e, t) => I(e, t)) });
     },
-    L = (e) => {
-        let { isFullScreen: t, scrollerRef: n, handleTransition: i, tab: o, transitionState: p } = e,
+    P = (e) => {
+        let { isFullScreen: t, scrollerRef: n, handleTransition: i, tab: a, transitionState: p } = e,
             g = (0, d.R)('CollectiblesFeedShop'),
             f = (0, h.R)(),
             b = (0, u.sp)(),
@@ -209,16 +209,16 @@ let j = (e) => {
                 className: T.shop,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: a()(T.content, T.mainContent),
+                        className: o()(T.content, T.mainContent),
                         children: [
                             (0, r.jsx)(j, {
                                 handleTransition: i,
                                 numVisibleItems: m,
                                 isFetchingCategories: f,
-                                tab: o,
+                                tab: a,
                                 isFullScreen: t
                             }),
-                            o !== S.AW.CATALOG &&
+                            a !== S.AW.CATALOG &&
                                 m >= g &&
                                 (0, r.jsxs)('div', {
                                     className: T.endOfFeed,
@@ -233,8 +233,8 @@ let j = (e) => {
                                                 (i('shop all button', void 0, !0),
                                                     c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
-                                                        page_type: o,
-                                                        page_category: o === S.AW.HOME || null == b ? void 0 : b.pageCategory,
+                                                        page_type: a,
+                                                        page_category: a === S.AW.HOME || null == b ? void 0 : b.pageCategory,
                                                         cta_name: 'shop the whole shop button'
                                                     }));
                                             },

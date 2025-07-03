@@ -5,8 +5,8 @@ var r = n(255367),
     i = n(327802),
     s = n(372129),
     o = n(598117),
-    u = n(746622),
-    c = n(388032),
+    c = n(746622),
+    u = n(388032),
     d = n(162337);
 let h = (e) => {
         let { setImage: t } = e,
@@ -23,7 +23,7 @@ let h = (e) => {
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-md/medium',
-                        children: c.intl.format(c.t['Ks2/3d'], {
+                        children: u.intl.format(u.t['Ks2/3d'], {
                             selectFileHook: (e, n) =>
                                 (0, r.jsx)(
                                     p,
@@ -35,7 +35,7 @@ let h = (e) => {
                                 )
                         })
                     }),
-                    null !== n && (0, r.jsx)(u.H, { error: o.ze.IMAGE_LOAD }),
+                    null !== n && (0, r.jsx)(c.H, { error: o.ze.IMAGE_LOAD }),
                     (0, r.jsx)(i.X, {
                         onSuccess: t,
                         onError: s

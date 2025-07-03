@@ -2,13 +2,13 @@ n.d(t, { e: () => u });
 var r = n(255367),
     l = n(481060),
     i = n(409116),
-    a = n(755007),
-    o = n(231338),
+    o = n(755007),
+    a = n(231338),
     s = n(858022);
 function c(e) {
     let { price: t, isPremiumUser: n, discount: c, hasSufficientOrbs: u } = e;
-    return t.currency === o.pK.DISCORD_ORB
-        ? (0, r.jsx)(a.Z, {
+    return t.currency === a.pK.DISCORD_ORB
+        ? (0, r.jsx)(o.Z, {
               orbAmount: t.amount,
               className: u ? void 0 : s.disabled
           })

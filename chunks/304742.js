@@ -2,31 +2,31 @@ n.d(t, { Z: () => s });
 var r = n(255367),
     l = n(73800),
     i = n(481060),
-    a = n(215023),
-    o = n(388032);
+    o = n(215023),
+    a = n(388032);
 function s(e) {
     let { handleTransition: t, onClose: n } = e,
         s = l.useMemo(
             () => [
                 {
-                    label: o.intl.string(o.t.dRZYND),
-                    value: a.AW.AVATAR_DECORATIONS
+                    label: a.intl.string(a.t.dRZYND),
+                    value: o.AW.AVATAR_DECORATIONS
                 },
                 {
-                    label: o.intl.string(o.t['1cNjt7']),
-                    value: a.AW.PROFILE_EFFECTS
+                    label: a.intl.string(a.t['1cNjt7']),
+                    value: o.AW.PROFILE_EFFECTS
                 },
                 {
-                    label: o.intl.string(o.t.V68Fq6),
-                    value: a.AW.NAMEPLATES
+                    label: a.intl.string(a.t.V68Fq6),
+                    value: o.AW.NAMEPLATES
                 },
                 {
-                    label: o.intl.string(o.t.FYFppq),
-                    value: a.AW.BUNDLES
+                    label: a.intl.string(a.t.FYFppq),
+                    value: o.AW.BUNDLES
                 },
                 {
-                    label: o.intl.string(o.t.xFcotb),
-                    value: a.AW.CATALOG
+                    label: a.intl.string(a.t.xFcotb),
+                    value: o.AW.CATALOG
                 }
             ],
             []
@@ -34,7 +34,7 @@ function s(e) {
     return (0, r.jsx)(i.v2r, {
         navId: 'collectibles-index-page-menu',
         onClose: n,
-        'aria-label': o.intl.string(o.t.xFcotb),
+        'aria-label': a.intl.string(a.t.xFcotb),
         onSelect: () => {},
         children: s.map((e) =>
             (0, r.jsx)(

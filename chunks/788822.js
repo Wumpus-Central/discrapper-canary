@@ -2,8 +2,8 @@ n.d(t, { q: () => _ });
 var r = n(255367),
     l = n(73800),
     i = n(120356),
-    a = n.n(i),
-    o = n(180650),
+    o = n.n(i),
+    a = n(180650),
     s = n(622535),
     c = n(481060),
     u = n(626135),
@@ -23,8 +23,8 @@ let _ = (e) => {
         { handleCardVisibilityChange: y } = (0, g.E)(x, 'home', 'marketing featured block'),
         { featuredBlockBanner: T } = (0, f.YG)(O, v),
         j = l.useRef(null),
-        L = x === o.T.NAMEPLATES_V3,
-        P = L ? 'NAMEPLATES VOL.3' : null,
+        P = x === a.T.NAMEPLATES_V3,
+        L = P ? 'NAMEPLATES VOL.3' : null,
         k = null == v ? void 0 : v.bodyText,
         I = (0, d.sp)();
     return (0, r.jsx)(s.$, {
@@ -58,17 +58,17 @@ let _ = (e) => {
                 (0, r.jsxs)('div', {
                     className: m.featuredBlockTextContainer,
                     children: [
-                        null != P &&
+                        null != L &&
                             (0, r.jsx)(c.X6q, {
                                 lineClamp: 2,
-                                className: a()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: L }),
+                                className: o()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: P }),
                                 style: { color: null != (i = null == v ? void 0 : v.bannerTextColor) ? i : 'white' },
                                 variant: 'heading-xl/semibold',
-                                children: P
+                                children: L
                             }),
                         null != k &&
                             (0, r.jsx)(c.X6q, {
-                                lineClamp: null != P ? 2 : 4,
+                                lineClamp: null != L ? 2 : 4,
                                 className: m.featuredBlockBodyText,
                                 style: { color: null != (_ = null == v ? void 0 : v.bannerTextColor) ? _ : 'white' },
                                 variant: 'heading-md/medium',

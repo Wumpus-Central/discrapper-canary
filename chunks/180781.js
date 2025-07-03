@@ -1,61 +1,61 @@
-n.d(e, { Z: () => f });
+n.d(t, { Z: () => m });
 var i = n(255367);
 n(73800);
-var o = n(442837),
-    r = n(481060),
-    a = n(906732),
+var a = n(442837),
+    o = n(481060),
+    r = n(906732),
     l = n(48217),
     c = n(26323),
     s = n(430824),
-    u = n(914010),
-    d = n(709586),
-    _ = n(981631),
+    d = n(914010),
+    u = n(709586),
+    f = n(981631),
     g = n(30513),
-    m = n(388032),
-    h = n(273233);
-function f(t) {
-    let { analyticsSection: e, analyticsPage: n, isGIF: f, banner: p } = t,
-        x = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
-        b = (0, o.e7)([s.Z], () => s.Z.getGuild(x)),
-        { analyticsLocations: y } = (0, a.ZP)();
-    return null == b || b.features.has(_.oNc.ANIMATED_BANNER) || (!f && b.features.has(_.oNc.BANNER))
+    p = n(388032),
+    _ = n(273233);
+function m(e) {
+    let { analyticsSection: t, analyticsPage: n, isGIF: m, banner: N } = e,
+        x = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
+        h = (0, a.e7)([s.Z], () => s.Z.getGuild(x)),
+        { analyticsLocations: A } = (0, r.ZP)();
+    return null == h || h.features.has(f.oNc.ANIMATED_BANNER) || (!m && h.features.has(f.oNc.BANNER))
         ? null
         : (0, i.jsxs)('div', {
-              className: h.container,
+              className: _.container,
               children: [
-                  (0, i.jsx)(d.Z, { className: h.guildBoostingIcon }),
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(u.Z, { className: _.guildBoostingIcon }),
+                  (0, i.jsx)(o.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: m.intl.string(m.t['56M7xc'])
+                      children: p.intl.string(p.t['56M7xc'])
                   }),
-                  (0, i.jsx)(r.zxk, {
-                      look: r.zxk.Looks.LINK,
-                      color: r.zxk.Colors.LINK,
-                      className: h.subscribeButton,
+                  (0, i.jsx)(o.zxk, {
+                      look: o.zxk.Looks.LINK,
+                      color: o.zxk.Colors.LINK,
+                      className: _.subscribeButton,
                       onClick: () => {
-                          if (null == b) return;
-                          let t = {
-                              section: e,
+                          if (null == h) return;
+                          let e = {
+                              section: t,
                               page: n,
-                              object: _.qAy.UPSELL_HEADER
+                              object: f.qAy.UPSELL_HEADER
                           };
-                          null != p
+                          null != N
                               ? (0, l.c)({
-                                    analyticsLocations: y,
-                                    analyticsLocation: t,
-                                    guild: b,
-                                    isGIF: f,
-                                    banner: p
+                                    analyticsLocations: A,
+                                    analyticsLocation: e,
+                                    guild: h,
+                                    isGIF: m,
+                                    banner: N
                                 })
                               : (0, c.Z)({
-                                    analyticsLocations: y,
-                                    analyticsSourceLocation: t,
-                                    guild: b,
-                                    perks: f ? (0, g.zC)() : (0, g.XO)()
+                                    analyticsLocations: A,
+                                    analyticsSourceLocation: e,
+                                    guild: h,
+                                    perks: m ? (0, g.zC)() : (0, g.XO)()
                                 });
                       },
-                      children: m.intl.string(m.t.WUHdZW)
+                      children: p.intl.string(p.t.WUHdZW)
                   })
               ]
           });

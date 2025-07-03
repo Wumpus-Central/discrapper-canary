@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     i = n(979554),
-    a = n(399606),
-    o = n(780384),
+    o = n(399606),
+    a = n(780384),
     s = n(481060),
     c = n(410030),
     u = n(594174),
@@ -24,29 +24,29 @@ var r = n(255367),
     y = n(665195),
     T = n(42742),
     j = n(283727),
-    L = n(266058),
-    P = n(719138);
+    P = n(266058),
+    L = n(719138);
 function k(e) {
     var t;
     let { isFetchingCategories: n, isFullScreen: k, scrollerRef: I, tab: B } = e,
         N = (0, d.sp)(),
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
-        { noCache: w, includeUnpublished: R } = (0, _.Z)(),
-        Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-        M = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [H, D] = l.useState(1),
-        F = () => {
+        { noCache: R, includeUnpublished: w } = (0, _.Z)(),
+        Z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        D = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [M, F] = l.useState(1),
+        H = () => {
             var e;
             null == I || null == (e = I.current) || e.scrollToTop({ animate: !0 });
         },
         W = (0, c.Fg)(),
-        V = (0, o.ap)(W),
+        V = (0, a.ap)(W),
         [U, G, z] = l.useMemo(() => {
             switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
                     return [O.intl.string(O.t.dRZYND), V ? y.Z : x.Z, i.Z.AVATAR_DECORATION];
                 case C.AW.PROFILE_EFFECTS:
-                    return [O.intl.string(O.t['1cNjt7']), V ? P.Z : L.Z, i.Z.PROFILE_EFFECT];
+                    return [O.intl.string(O.t['1cNjt7']), V ? L.Z : P.Z, i.Z.PROFILE_EFFECT];
                 case C.AW.NAMEPLATES:
                     return [O.intl.string(O.t.V68Fq6), V ? j.Z : T.Z, i.Z.NAMEPLATE];
                 case C.AW.BUNDLES:
@@ -54,25 +54,25 @@ function k(e) {
             }
         }, [B, V]),
         Y = (0, g.a)(),
-        K = l.useMemo(
+        q = l.useMemo(
             () =>
                 Y(
-                    M.filter((e) => {
+                    D.filter((e) => {
                         var t;
                         return e.type === z || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
                     })
                 ),
-            [M, z, Y]
+            [D, z, Y]
         ),
-        q = (0, f.l)(K);
+        K = (0, f.l)(q);
     return (l.useEffect(() => {
         (0, h.n)({
             sessionId: A,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: B,
             isFullScreen: k,
-            unpublishedCategoriesShown: R,
-            cacheDisabled: w
+            unpublishedCategoriesShown: w,
+            cacheDisabled: R
         });
     }, []),
     l.useEffect(() => {
@@ -82,10 +82,10 @@ function k(e) {
                 checkpoint: h.a.SHOP_RENDERED,
                 tab: B,
                 isFullScreen: k,
-                unpublishedCategoriesShown: R,
-                cacheDisabled: w
+                unpublishedCategoriesShown: w,
+                cacheDisabled: R
             });
-    }, [A, k, R, w, n, B]),
+    }, [A, k, w, R, n, B]),
     n || null == Z)
         ? (0, r.jsx)(b.Z, {})
         : (0, r.jsxs)(r.Fragment, {
@@ -100,7 +100,7 @@ function k(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: v.products,
-                      children: q.slice(40 * (H - 1), 40 * H).map((e, t) => {
+                      children: K.slice(40 * (M - 1), 40 * M).map((e, t) => {
                           let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
@@ -123,16 +123,16 @@ function k(e) {
                                 );
                       })
                   }),
-                  q.length > 40 &&
+                  K.length > 40 &&
                       (0, r.jsx)('div', {
                           className: v.paginationContainer,
                           children: (0, r.jsx)('div', {
                               children: (0, r.jsx)(s.DsT, {
-                                  currentPage: H,
-                                  totalCount: q.length,
+                                  currentPage: M,
+                                  totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      (D(e), F());
+                                      (F(e), H());
                                   },
                                   disablePaginationGap: !0
                               })
