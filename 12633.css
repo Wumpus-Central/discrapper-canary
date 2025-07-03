@@ -30427,6 +30427,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     background-color: var(--background-modifier-selected)
 }
 
+.align-chat-input .stickerButton__74017 {
+    transition: background-color .2s, transform .2s
+}
+
 .has-webkit-scrollbar .buttons__74017 {
     margin-right: 0
 }
@@ -30460,11 +30464,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     margin-top: 1px;
     padding-left: 2px;
     padding-right: 2px
-}
-
-.stickerButtonTilted__74017 {
-    transform: rotate(12deg) scale(1.05);
-    transition: transform .15s
 }
 
 .messageConfettiButton__74017:hover .messageConfettiIcon__74017,
