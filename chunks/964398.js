@@ -5,8 +5,8 @@ var r = n(255367),
     o = n.n(i),
     a = n(481060),
     s = n(65205),
-    u = n(388032),
-    c = n(670161);
+    c = n(388032),
+    u = n(670161);
 function d(e) {
     let { className: t } = e;
     return (0, r.jsxs)('svg', {
@@ -108,7 +108,7 @@ let g = (e, t) => {
         };
     },
     y = l.memo(function (e) {
-        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: b, activeItem: N, onItemSelect: v, onItemAction: m, interactive: x = !0, onClose: E, children: C } = e,
+        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: b, activeItem: v, onItemSelect: m, onItemAction: N, interactive: x = !0, onClose: E, children: C } = e,
             I = l.useRef(null),
             T = l.useRef([]),
             j = l.useRef(!1),
@@ -128,13 +128,13 @@ let g = (e, t) => {
             ),
             U = l.useCallback(
                 (e, t) => {
-                    ((S.current = t), v(h * e + t));
+                    ((S.current = t), m(h * e + t));
                 },
-                [v]
+                [m]
             ),
             k = l.useCallback(() => {
-                ((S.current = null), v(null));
-            }, [v]),
+                ((S.current = null), m(null));
+            }, [m]),
             M = l.useCallback(
                 (e) => {
                     (k(), (j.current = e));
@@ -161,9 +161,9 @@ let g = (e, t) => {
             }, []),
             B = l.useCallback(
                 (e) => {
-                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == m || m(h * P + S.current));
+                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == N || N(h * P + S.current));
                 },
-                [m, P]
+                [N, P]
             ),
             G = l.useMemo(
                 () =>
@@ -179,7 +179,7 @@ let g = (e, t) => {
                                 y: e.clientY
                             };
                         if ((L(i, l, Math.max(t, n)), j.current)) {
-                            null != N && k();
+                            null != v && k();
                             return;
                         }
                         let o = (0, s.ld)(l, i, Math.max(t, n));
@@ -191,7 +191,7 @@ let g = (e, t) => {
                         }
                         k();
                     }, 16),
-                [N, L, k, U, P, n, t]
+                [v, L, k, U, P, n, t]
             ),
             V = l.useCallback(
                 (e) => {
@@ -212,7 +212,7 @@ let g = (e, t) => {
                             'div',
                             {
                                 ref: (e) => D(e, l),
-                                className: c.chatWheelItem,
+                                className: u.chatWheelItem,
                                 style: {
                                     left: o,
                                     top: a,
@@ -227,20 +227,20 @@ let g = (e, t) => {
                 [R, P, t, y, n, O, C.length, D]
             );
         return (0, r.jsx)(a.P3F, {
-            className: c.chatWheelMouseInput,
+            className: u.chatWheelMouseInput,
             onMouseMove: G,
             onWheel: V,
             onClick: B,
             children: (0, r.jsxs)('div', {
                 ref: I,
-                className: c.chatWheel,
+                className: u.chatWheel,
                 style: {
                     width: t,
                     height: n
                 },
                 children: [
                     (0, r.jsxs)('svg', {
-                        className: c.chatWheelBackground,
+                        className: u.chatWheelBackground,
                         viewBox: '0 0 288 288',
                         xmlns: 'http://www.w3.org/2000/svg',
                         children: [
@@ -280,7 +280,7 @@ let g = (e, t) => {
                                 filter: 'url(#soundboard-wheel-background-shadow)',
                                 children: [
                                     (0, r.jsx)('circle', {
-                                        className: c.chatWheelBackground,
+                                        className: u.chatWheelBackground,
                                         cx: '144',
                                         cy: '144',
                                         r: '103.68',
@@ -288,7 +288,7 @@ let g = (e, t) => {
                                     }),
                                     b &&
                                         (0, r.jsx)('circle', {
-                                            className: c.chatWheelDeadZone,
+                                            className: u.chatWheelDeadZone,
                                             onMouseEnter: () => M(!0),
                                             onMouseLeave: () => M(!1),
                                             cx: 144,
@@ -297,7 +297,7 @@ let g = (e, t) => {
                                         }),
                                     w &&
                                         (0, r.jsx)('circle', {
-                                            className: c.chatWheelCenter,
+                                            className: u.chatWheelCenter,
                                             cx: 144 + Z.x,
                                             cy: 144 + Z.y,
                                             r: 28.8
@@ -306,7 +306,7 @@ let g = (e, t) => {
                             }),
                             b &&
                                 (0, r.jsx)('circle', {
-                                    className: c.chatWheelDeadZone,
+                                    className: u.chatWheelDeadZone,
                                     onMouseEnter: () => M(!0),
                                     onMouseLeave: () => M(!1),
                                     cx: 144,
@@ -317,18 +317,18 @@ let g = (e, t) => {
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: c.innerContent,
+                        className: u.innerContent,
                         children: [
                             b &&
                                 (0, r.jsx)(a.P3F, {
-                                    className: c.chatWheelDeadZoneIcon,
+                                    className: u.chatWheelDeadZoneIcon,
                                     onClick: E,
-                                    children: (0, r.jsx)(d, { className: c.chatWheelDeadZoneIcon })
+                                    children: (0, r.jsx)(d, { className: u.chatWheelDeadZoneIcon })
                                 }),
                             x && R.length > 1
                                 ? (0, r.jsx)('div', {
-                                      className: c.paginationHint,
-                                      children: u.intl.string(u.t['Xy+S09'])
+                                      className: u.paginationHint,
+                                      children: c.intl.string(c.t['Xy+S09'])
                                   })
                                 : null
                         ]

@@ -5,8 +5,8 @@ var r = n(255367),
     o = n(481060),
     a = n(19780),
     s = n(571826),
-    u = n(630759),
-    c = n(301107),
+    c = n(630759),
+    u = n(301107),
     d = n(785792),
     f = n(190054),
     h = n(760373),
@@ -18,7 +18,7 @@ function y(e) {
             var e;
             return null == (e = a.Z.getSecureFramesState()) ? void 0 : e.epochAuthenticator;
         }),
-        y = (0, c.W)({
+        y = (0, u.W)({
             fingerprintBase64: n,
             chunkSize: h.y6,
             desiredLength: h.YP
@@ -72,7 +72,7 @@ function y(e) {
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: p.intl.format(p.t.wKxADQ, { helpArticle: (0, u.uV)() })
+                children: p.intl.format(p.t.wKxADQ, { helpArticle: (0, c.uV)() })
             })
         ]
     });

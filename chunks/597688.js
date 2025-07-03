@@ -149,6 +149,9 @@ class Y extends (o = l.ZP.Store) {
     getProduct(e) {
         return null != e ? v.get(e) : void 0;
     }
+    getProductsBySkus(e) {
+        return e.map((e) => v.get(e)).filter((e) => null != e);
+    }
     getProductFetchError(e) {
         return null != e ? P.get(e) : void 0;
     }

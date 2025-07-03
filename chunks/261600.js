@@ -5,14 +5,14 @@ var r = n(255367),
     o = n(481060),
     a = n(592125),
     s = n(922482),
-    u = n(750154),
-    c = n(427679),
+    c = n(750154),
+    u = n(427679),
     d = n(388032);
 function f(e) {
     var t, n;
     let { activity: f } = e,
-        { channelId: h } = null != (t = (0, u.rq)(f)) ? t : {},
-        p = (0, i.e7)([c.Z], () => c.Z.getStageInstanceByChannel(h), [h]),
+        { channelId: h } = null != (t = (0, c.rq)(f)) ? t : {},
+        p = (0, i.e7)([u.Z], () => u.Z.getStageInstanceByChannel(h), [h]),
         g = l.useRef(null),
         y = l.useCallback(() => {
             let e = a.Z.getChannel(h);
@@ -34,7 +34,7 @@ function f(e) {
 }
 class h {
     shouldShow(e) {
-        return (0, u.JE)(e);
+        return (0, c.JE)(e);
     }
     createHeader(e) {
         return {

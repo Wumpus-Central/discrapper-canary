@@ -42,6 +42,10 @@ function A(e) {
 }
 let N = {
     URL_REGEX: b,
+    makeUrl: function (e) {
+        let t = O ? window.GLOBAL_ENV.INVITE_HOST : location.host;
+        return ''.concat(location.protocol, '//').concat(t).concat(e);
+    },
     isDiscordHostname: I,
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
@@ -83,8 +87,11 @@ let N = {
             return null;
         }
     },
-    makeUrl: function (e) {
-        let t = O ? window.GLOBAL_ENV.INVITE_HOST : location.host;
-        return ''.concat(location.protocol, '//').concat(t).concat(e);
+    safeDecodeURIComponent(e) {
+        try {
+            return decodeURIComponent(e);
+        } catch (e) {
+            return null;
+        }
     }
 };

@@ -22,9 +22,10 @@ var s = n(159635),
     l = n.n(s),
     c = n(830121),
     u = n(823379),
-    d = n(172244),
-    f = n(571989);
-function _(e, t, n) {
+    d = n(591759),
+    f = n(172244),
+    _ = n(571989);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +38,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +49,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,79 +66,79 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let g = new (o())({ max: 50 });
-function E(e) {
+let E = new (o())({ max: 50 });
+function b(e) {
     let t = e,
-        n = g.get(t);
+        n = E.get(t);
     if (null != n) return n;
-    let r = (0, f.yx)(e),
-        i = (0, f.zq)(r),
+    let r = (0, _.yx)(e),
+        i = (0, _.zq)(r),
         a = {
             whitespaceSanitized: r,
             fullySanitized: i
         };
-    return (g.set(t, a), a);
+    return (E.set(t, a), a);
 }
-let b = ['http:', 'https:', 'discord:', 'tel:', 'sms:', 'mailto:'],
-    y = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
-    O = [...y, d.b.EMOJI, d.b.CUSTOM_EMOJI],
-    v = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
-    I = [d.b.TEXT],
-    T = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
-function S(e, t) {
+let y = ['http:', 'https:', 'discord:', 'tel:', 'sms:', 'mailto:'],
+    O = [f.b.TEXT, f.b.UNDERLINE, f.b.STRONG, f.b.ITALICS, f.b.STRIKETHROUGH, f.b.INLINE_CODE, f.b.SPOILER, f.b.LINE_BREAK, f.b.TIMESTAMP],
+    v = [...O, f.b.EMOJI, f.b.CUSTOM_EMOJI],
+    I = [f.b.LIST, f.b.HEADING, f.b.BLOCK_QUOTE, f.b.SUBTEXT],
+    T = [f.b.TEXT],
+    S = [f.b.UNDERLINE, f.b.STRONG, f.b.ITALICS, f.b.STRIKETHROUGH, f.b.INLINE_CODE, f.b.SPOILER, f.b.LINE_BREAK, f.b.TIMESTAMP, f.b.EMOJI, f.b.CUSTOM_EMOJI, f.b.LIST, f.b.HEADING, f.b.BLOCK_QUOTE, f.b.SUBTEXT];
+function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (Array.isArray(e) || (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
-        if (r.type === d.b.INLINE_CODE) {
+        if (r.type === f.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == S(r.validationChildContent, e)) return null;
+            if (null == A(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == S(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == A(r.content, t)) return null;
     }
     return e;
 }
-function A(e) {
+function N(e) {
     let t = '';
     for (let n of e)
         switch (n.type) {
-            case d.b.TEXT:
-            case d.b.INLINE_CODE:
+            case f.b.TEXT:
+            case f.b.INLINE_CODE:
                 t += n.content;
                 break;
-            case d.b.CUSTOM_EMOJI:
+            case f.b.CUSTOM_EMOJI:
                 t += n.name;
                 break;
-            case d.b.EMOJI:
+            case f.b.EMOJI:
                 t += n.surrogate;
                 break;
-            case d.b.LINE_BREAK:
+            case f.b.LINE_BREAK:
                 t += '\n';
                 break;
-            case d.b.STRONG:
-            case d.b.ITALICS:
-            case d.b.UNDERLINE:
-            case d.b.STRIKETHROUGH:
-            case d.b.SPOILER:
-                t += A(n.content);
+            case f.b.STRONG:
+            case f.b.ITALICS:
+            case f.b.UNDERLINE:
+            case f.b.STRIKETHROUGH:
+            case f.b.SPOILER:
+                t += N(n.content);
                 break;
-            case d.b.TIMESTAMP:
+            case f.b.TIMESTAMP:
                 t += '<timestamp>';
                 break;
-            case d.b.BLOCK_QUOTE:
-            case d.b.LIST:
-            case d.b.HEADING:
-            case d.b.SUBTEXT:
+            case f.b.BLOCK_QUOTE:
+            case f.b.LIST:
+            case f.b.HEADING:
+            case f.b.SUBTEXT:
                 t += '<'.concat(n.type, 'Content>');
                 break;
             default:
@@ -145,9 +146,13 @@ function A(e) {
         }
     return t;
 }
-let N = [/\\/, /[\x00-\x08\x0A-\x1F\x7F]/, /[\u200B-\u200D\u2060\u2062-\u2064\u202A-\u202E\uFEFF]/, /%25[0-9A-Fa-f]/];
 function C(e) {
-    return N.some((t) => t.test(e));
+    if (b(e).whitespaceSanitized !== e) return !0;
+    let t = d.Z.toURLSafe(e);
+    if (null == t) return !0;
+    if ('http:' !== t.protocol && 'https:' !== t.protocol) return !1;
+    let n = e.split('/');
+    return n.length < 3 || '' !== n[1] || d.Z.safeDecodeURIComponent(n[2]) !== n[2];
 }
 function R(e) {
     try {
@@ -155,11 +160,11 @@ function R(e) {
         if (C(e)) throw Error('Rejected due to suspicious characters in URL: ' + JSON.stringify(e));
         let n = new URL(e),
             r = null != (t = n.protocol) ? t : '';
-        if (!b.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
+        if (!y.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
-        let i = (0, f.MO)(n);
+        let i = (0, _.MO)(n);
         ((n.username = ''), (n.password = ''));
-        let a = (0, f.MO)(n);
+        let a = (0, _.MO)(n);
         return {
             target: i,
             displayTarget: a
@@ -168,40 +173,40 @@ function R(e) {
         return null;
     }
 }
-let P = m(p({}, l().defaultRules.link), {
+let P = g(h({}, l().defaultRules.link), {
     match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
         let [r, a, o, s] = e,
             u = () => ({
-                type: d.b.TEXT,
+                type: f.b.TEXT,
                 content: r
             });
         if (C(o)) return u();
-        let f = E(o),
-            _ = E(a),
-            h = E(null != s ? s : ''),
-            g = f.whitespaceSanitized,
-            b = _.fullySanitized,
-            N = h.fullySanitized,
-            P = b.trim();
-        if (0 === g.trim().length || 0 === P.length) return u();
+        let d = b(o),
+            _ = b(a),
+            p = b(null != s ? s : ''),
+            m = d.whitespaceSanitized,
+            E = _.fullySanitized,
+            y = p.fullySanitized,
+            P = E.trim();
+        if (0 === m.trim().length || 0 === P.length) return u();
         let w = R(l().unescapeUrl(o)),
             D = null == w,
             L = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
         if (D || L) return u();
-        let x = m(p({}, n), {
+        let x = g(h({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             }),
-            k = n.allowEmojiLinks ? O : y,
-            M = [...k, ...v],
-            j = [...I, ...T],
-            U = S(t(b, x), M, [d.b.EMOJI]),
-            G = S(t(N, x), j);
-        if (null == U || null == G || 0 === A(U).trim().length) return u();
+            k = n.allowEmojiLinks ? v : O,
+            M = [...k, ...I],
+            j = [...T, ...S],
+            U = A(t(E, x), M, [f.b.EMOJI]),
+            G = A(t(y, x), j);
+        if (null == U || null == G || 0 === N(U).trim().length) return u();
         let B = i().pick(t.rules, k),
             V = l().parserFor(B)(_.whitespaceSanitized, x),
-            F = h.whitespaceSanitized,
+            F = p.whitespaceSanitized,
             { target: Z } = w;
         return {
             content: V,

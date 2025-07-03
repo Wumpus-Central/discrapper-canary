@@ -5,8 +5,8 @@ var l,
     o = n(570140),
     a = n(278323),
     s = n(212819),
-    u = n(933557),
-    c = n(592125),
+    c = n(933557),
+    u = n(592125),
     d = n(430824),
     f = n(293273),
     h = n(158776),
@@ -27,9 +27,9 @@ function b(e, t, n) {
         e
     );
 }
-let N = [s.h8.TEXT_CHANNEL, s.h8.GROUP_DM, s.h8.USER],
-    v = null,
+let v = [s.h8.TEXT_CHANNEL, s.h8.GROUP_DM, s.h8.USER],
     m = null,
+    N = null,
     x = [],
     E = [];
 function C(e) {
@@ -72,18 +72,18 @@ function C(e) {
         S.emitChange());
 }
 function I() {
-    ((v = null), null != r && (r.destroy(), (r = null)), null != m && m());
+    ((m = null), null != r && (r.destroy(), (r = null)), null != N && N());
 }
 function T() {
-    let e = null != v && null != v.application_id ? f.Z.getApplicationActivity(v.application_id) : null;
-    if (null != v && (null == e || null == e.party || null == e.party.id)) return I();
+    let e = null != m && null != m.application_id ? f.Z.getApplicationActivity(m.application_id) : null;
+    if (null != m && (null == e || null == e.party || null == e.party.id)) return I();
 }
 class j extends (l = i.ZP.Store) {
     initialize() {
         this.waitFor(f.Z);
     }
     getActivity() {
-        return v;
+        return m;
     }
     getQuery() {
         var e;
@@ -96,8 +96,8 @@ class j extends (l = i.ZP.Store) {
 b(j, 'displayName', 'ActivityInviteModalStore');
 let S = new j(o.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            ((v = e.activity),
-                (m = e.resolve),
+            ((m = e.activity),
+                (N = e.resolve),
                 (x = []),
                 null == r &&
                     (r = new s.ZP(
@@ -108,7 +108,7 @@ let S = new j(o.Z, {
                                           let e = [];
                                           return (
                                               y.Z.getPrivateChannelIds().forEach((t) => {
-                                                  let n = c.Z.getChannel(t);
+                                                  let n = u.Z.getChannel(t);
                                                   if (null != n)
                                                       if (n.type === O.d4z.DM) {
                                                           let t = n.getRecipientId(),
@@ -146,12 +146,12 @@ let S = new j(o.Z, {
                                         case s.h8.TEXT_CHANNEL: {
                                             var t;
                                             let { record: n } = e,
-                                                r = c.Z.getChannel(n.parent_id),
+                                                r = u.Z.getChannel(n.parent_id),
                                                 l = d.Z.getGuild(n.guild_id);
                                             return {
                                                 type: s.h8.TEXT_CHANNEL,
                                                 sent: x.includes(n.id),
-                                                categoryName: null != r ? (0, u.F6)(r, g.default, p.Z) : '',
+                                                categoryName: null != r ? (0, c.F6)(r, g.default, p.Z) : '',
                                                 guildName: null != (t = null == l ? void 0 : l.name) ? t : '',
                                                 data: e
                                             };
@@ -171,7 +171,7 @@ let S = new j(o.Z, {
                                 .filter((e) => null != e)),
                                 S.emitChange());
                         },
-                        N,
+                        v,
                         100
                     )),
                 r.search(''));
@@ -181,28 +181,28 @@ let S = new j(o.Z, {
             null != r && r.search(t);
         },
         ACTIVITY_INVITE_MODAL_SEND: function (e) {
-            if (null == v) return;
+            if (null == m) return;
             let t = e.channelId,
                 n = e.userId;
             null != t
                 ? a.Z.sendActivityInvite({
                       channelId: t,
                       type: O.mFx.JOIN,
-                      activity: v,
+                      activity: m,
                       location: 'Channel Text Area - Invite to Join Modal'
                   }).then(() => C(t))
                 : null != n &&
                   a.Z.sendActivityInviteUser({
                       userId: n,
                       type: O.mFx.JOIN,
-                      activity: v,
+                      activity: m,
                       location: 'Channel Text Area - Invite to Join Modal'
                   }).then(() => C(n));
         },
         ACTIVITY_INVITE_MODAL_CLOSE: I,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != v && (I(), !0);
+            return !!t && null != m && (I(), !0);
         },
         LOCAL_ACTIVITY_UPDATE: T,
         RPC_APP_DISCONNECTED: T

@@ -5,8 +5,8 @@ var r = n(255367),
     o = n(481060),
     a = n(313201),
     s = n(19780),
-    u = n(979651),
-    c = n(362446),
+    c = n(979651),
+    u = n(362446),
     d = n(571826),
     f = n(277642),
     h = n(441894),
@@ -15,7 +15,7 @@ var r = n(255367),
     y = n(760373),
     O = n(388032),
     b = n(935179);
-function N(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function N(e) {
     }
     return e;
 }
-function v(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,19 +58,19 @@ function v(e, t) {
         e
     );
 }
-function m(e) {
+function N(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
-        o = (0, i.cj)([c.Z], () => ({
-            connectionState: c.Z.getConnectionState(t),
-            hostname: c.Z.getHostname(t),
-            averagePing: c.Z.getAveragePing(t),
-            lastPing: c.Z.getLastPing(t),
-            pings: c.Z.getPings(),
-            outboundLossRate: c.Z.getOutboundLossRate(t)
+        o = (0, i.cj)([u.Z], () => ({
+            connectionState: u.Z.getConnectionState(t),
+            hostname: u.Z.getHostname(t),
+            averagePing: u.Z.getAveragePing(t),
+            lastPing: u.Z.getLastPing(t),
+            pings: u.Z.getPings(),
+            outboundLossRate: u.Z.getOutboundLossRate(t)
         }));
     return (0, r.jsx)(
         p.Z,
-        v(N({}, o), {
+        m(v({}, o), {
             closePopout: l,
             connectionTypeText: n
         })
@@ -88,7 +88,7 @@ function x(e) {
         }));
     return (0, r.jsx)(
         p.Z,
-        v(N({}, l), {
+        m(v({}, l), {
             closePopout: t,
             connectionTypeText: n
         })
@@ -98,7 +98,7 @@ function E(e) {
     let { channelId: t, isOverlay: n, lobbyId: l, closePopout: i } = e,
         o = (0, h.J)({ channelId: t }) ? O.intl.string(O.t['3BogKS']) : O.intl.string(O.t.ETIVvr);
     return n
-        ? (0, r.jsx)(m, {
+        ? (0, r.jsx)(N, {
               lobbyId: l,
               closePopout: i,
               connectionTypeText: o
@@ -109,13 +109,13 @@ function E(e) {
           });
 }
 function C(e) {
-    let t = (0, i.e7)([u.Z], () => u.Z.hasVideo(e.channelId)),
+    let t = (0, i.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
         [n, s] = l.useState(y.tu.RTC_DEBUG_PANEL),
-        c = (0, a.Dt)(),
+        u = (0, a.Dt)(),
         h = l.useMemo(() => {
             switch (n) {
                 case y.tu.RTC_DEBUG_PANEL:
-                    return (0, r.jsx)(E, N({}, e));
+                    return (0, r.jsx)(E, v({}, e));
                 case y.tu.RTC_SECURE_FRAMES:
                     return (0, r.jsx)(g.Z, { channelId: e.channelId });
             }
@@ -163,7 +163,7 @@ function C(e) {
                 }),
                 (0, r.jsx)(o.njP.Panel, {
                     id: n,
-                    'aria-labelledby': c,
+                    'aria-labelledby': u,
                     children: h
                 })
             ]
@@ -172,12 +172,12 @@ function C(e) {
 }
 function I(e) {
     return (0, h.J)({ channelId: e.channelId })
-        ? (0, r.jsx)(C, N({}, e))
+        ? (0, r.jsx)(C, v({}, e))
         : (0, r.jsx)('div', {
               className: b.debugPanelStandalone,
               children: (0, r.jsx)('section', {
                   className: b.debugPanelSection,
-                  children: (0, r.jsx)(E, N({}, e))
+                  children: (0, r.jsx)(E, v({}, e))
               })
           });
 }

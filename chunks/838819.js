@@ -16,22 +16,22 @@ var r = n(255367),
     m = n(290026),
     _ = n(511050),
     C = n(819640),
-    v = n(594174),
-    O = n(381585),
-    S = n(597688),
-    x = n(780475),
-    E = n(223143),
-    j = n(298228),
-    y = n(309956),
-    T = n(98535),
-    P = n(963102),
-    k = n(508498),
-    I = n(849217),
-    L = n(215023),
+    O = n(594174),
+    v = n(381585),
+    E = n(597688),
+    S = n(780475),
+    x = n(223143),
+    y = n(298228),
+    T = n(309956),
+    j = n(98535),
+    L = n(963102),
+    P = n(508498),
+    k = n(849217),
+    I = n(215023),
     B = n(981631),
     N = n(420212),
-    w = n(484920);
-let A = (e) => {
+    A = n(484920);
+let w = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             i = (0, c.f9)();
         return (
@@ -46,10 +46,10 @@ let A = (e) => {
         );
     },
     R = function (e) {
-        let { isFullScreen: t = !0, tab: n = L.AW.HOME } = e;
+        let { isFullScreen: t = !0, tab: n = I.AW.HOME } = e;
         (0, b.z)(h.f);
         let i = (0, p.Z)((0, o.Z)()),
-            c = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+            c = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
             N = l.useRef(null),
             { closeIntroToOrbsClaimedCoachmark: R } = (0, _.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
@@ -58,8 +58,8 @@ let A = (e) => {
             },
             [i, R]
         );
-        let { onClose: Z } = (0, k.Db)(),
-            { categories: H, refreshCategories: M } = (0, E.ZP)(
+        let { onClose: Z } = (0, P.Db)(),
+            { categories: M, refreshCategories: H } = (0, x.ZP)(
                 {
                     location: 'CollectiblesShop.web',
                     logPerf: !0
@@ -71,21 +71,21 @@ let A = (e) => {
                 }
             );
         (0, m.P)();
-        let D = (0, j.O)(H),
+        let D = (0, y.O)(M),
             [F, W] = l.useState(),
-            V = (0, s.e7)([S.Z], () => {
+            V = (0, s.e7)([E.Z], () => {
                 var e;
-                return null == (e = S.Z.getCategory(F)) ? void 0 : e.name;
+                return null == (e = E.Z.getCategory(F)) ? void 0 : e.name;
             }),
             [U, G] = l.useState(),
             z = l.useCallback((e, t) => {
                 (G(e), W(t));
             }, []),
-            { selectedTab: Y, transitionState: q, transitionToTab: K } = (0, y.B)(N, n, t),
+            { selectedTab: Y, transitionState: K, transitionToTab: q } = (0, T.B)(N, n, t),
             { handleScroll: X } = (0, f.z)(N, i, Y);
-        ((0, x.q3)(i, Y, V, q, U),
-            (0, x.EB)(Y, c),
-            (0, I.Z)(),
+        ((0, S.q3)(i, Y, V, K, U),
+            (0, S.EB)(Y, c),
+            (0, k.Z)(),
             l.useEffect(() => {
                 t || (0, d.Y)(B.Z5c.COLLECTIBLES_SHOP);
             }, [t]));
@@ -99,47 +99,47 @@ let A = (e) => {
                     null == (e = J.current) || e.focus();
                 }
             }, [t]));
-        let { analyticsLocations: ee } = (0, x.MV)(Y);
+        let { analyticsLocations: ee } = (0, S.MV)(Y);
         return (0, r.jsx)(g.Gt, {
             value: ee,
-            children: (0, r.jsx)(O.k0, {
+            children: (0, r.jsx)(v.k0, {
                 newValue: {
                     sessionId: i,
                     pageCategory: V,
-                    pageSize: L.kN
+                    pageSize: I.kN
                 },
-                children: (0, r.jsx)(A, {
+                children: (0, r.jsx)(w, {
                     onClose: Z,
                     shouldAddEventListener: t && !$,
                     children: (0, r.jsx)('div', {
-                        className: w.shop,
+                        className: A.shop,
                         ref: t ? Q : J,
                         tabIndex: -1,
                         children: (0, r.jsx)(u.Den, {
-                            className: w.shopScroll,
+                            className: A.shopScroll,
                             ref: N,
                             onScroll: X,
                             children: (0, r.jsxs)('div', {
-                                className: a()(w.shopViewWrapper, {
-                                    [w.visible]: q === L.f7.VISIBLE,
-                                    [w.in]: q === L.f7.IN,
-                                    [w.out]: q === L.f7.OUT
+                                className: a()(A.shopViewWrapper, {
+                                    [A.visible]: K === I.f7.VISIBLE,
+                                    [A.in]: K === I.f7.IN,
+                                    [A.out]: K === I.f7.OUT
                                 }),
                                 children: [
-                                    (0, r.jsx)(P.I, {
+                                    (0, r.jsx)(L.I, {
                                         isFullScreen: t,
                                         isLayer: $,
                                         onClose: Z,
-                                        handleTransition: K,
+                                        handleTransition: q,
                                         selectedTab: Y
                                     }),
-                                    (0, r.jsx)(T.Z, {
+                                    (0, r.jsx)(j.Z, {
                                         tab: Y,
                                         isFullScreen: t,
                                         scrollerRef: N,
-                                        refreshCategories: M,
-                                        transitionToTab: K,
-                                        transitionState: q,
+                                        refreshCategories: H,
+                                        transitionToTab: q,
+                                        transitionState: K,
                                         sortedCategories: D,
                                         updateAnalyticsState: z
                                     })

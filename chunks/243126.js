@@ -24,35 +24,35 @@ let b = (e, t) => {
         }, [e]),
         m = l.length > 0 && n,
         [_, C] = r.useState(m ? a.m.RECOMMENDED : a.m.POPULAR),
-        [v, O] = r.useState(0),
-        S = (0, d.u)(),
-        x = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
-        E = (0, p.a)(),
-        j = r.useMemo(() => {
+        [O, v] = r.useState(0),
+        E = (0, d.u)(),
+        S = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
+        x = (0, p.a)(),
+        y = r.useMemo(() => {
             let e = [];
             return (
                 _ === a.m.RECENT
-                    ? (e = x)
+                    ? (e = S)
                     : _ === a.m.PRICE_LOW_TO_HIGH
-                      ? (e = [...x].sort((e, n) => {
+                      ? (e = [...S].sort((e, n) => {
                             var r, l, i, a;
                             return (null != (i = null == (r = (0, u.Vw)(e, t, !1)) ? void 0 : r.amount) ? i : 0) - (null != (a = null == (l = (0, u.Vw)(n, t, !1)) ? void 0 : l.amount) ? a : 0);
                         }))
                       : _ === a.m.RECOMMENDED
-                        ? (e = S(l))
+                        ? (e = E(l))
                         : _ === a.m.POPULAR
-                          ? (e = S(b))
-                          : _ === a.m.RANDOM && (e = i().shuffle(x)),
-                E(e)
+                          ? (e = E(b))
+                          : _ === a.m.RANDOM && (e = i().shuffle(S)),
+                x(e)
             );
-        }, [_, E, x, t, S, l, b, v]),
-        y = r.useCallback(() => {
-            (O((e) => e + 1), C(a.m.RANDOM));
+        }, [_, x, S, t, E, l, b, O]),
+        T = r.useCallback(() => {
+            (v((e) => e + 1), C(a.m.RANDOM));
         }, []);
     return {
         sortType: _,
         setSortType: C,
-        sortedItems: (0, g.l)(j),
+        sortedItems: (0, g.l)(y),
         sortOptions: r.useMemo(() => {
             let e = [
                 {
@@ -78,6 +78,6 @@ let b = (e, t) => {
             );
         }, [m]),
         showRecommendationOption: m,
-        shuffleProducts: y
+        shuffleProducts: T
     };
 };

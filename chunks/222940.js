@@ -36,7 +36,7 @@ function h(e) {
               tooltipContentClassName: p.tooltipContent,
               targetElementRef: t,
               position: 'bottom',
-              color: o.FGA.BLACK,
+              color: o.FGA.PRIMARY,
               children: [
                   (0, r.jsxs)('div', {
                       className: p.iconContainer,

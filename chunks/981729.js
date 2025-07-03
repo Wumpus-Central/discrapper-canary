@@ -95,7 +95,7 @@ function T(e, t) {
     return i;
 }
 var S = (function (e) {
-    return ((e.PRIMARY = 'primary'), (e.NESTED = 'nested'), (e.BLACK = 'black'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.YELLOW = 'yellow'), (e.RED = 'red'), (e.PREMIUM = 'premium'), e);
+    return ((e.PRIMARY = 'primary'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.RED = 'red'), e);
 })({});
 let A = 16,
     N = 10,
@@ -109,14 +109,10 @@ let A = 16,
         center: E.tooltipCenter,
         window_center: E.tooltipCenter,
         primary: E.tooltipPrimary,
-        nested: E.tooltipNested,
-        black: E.tooltipBlack,
         grey: E.tooltipGrey,
         brand: E.tooltipBrand,
         green: E.tooltipGreen,
-        yellow: E.tooltipYellow,
-        red: E.tooltipRed,
-        premium: E.tooltipPremium
+        red: E.tooltipRed
     });
 function w(e, t, n) {
     let r = 'left' === e || 'right' === e,

@@ -27,7 +27,7 @@ function b(e) {
             tooltipText: l
         }),
         position: 'top',
-        color: null != C ? C : E ? c.ua7.Colors.BLACK : c.ua7.Colors.BRAND,
+        color: null != C ? C : E ? c.ua7.Colors.PRIMARY : c.ua7.Colors.BRAND,
         'aria-label': l,
         tooltipClassName: f.tooltip,
         className: f.tooltipContainer,

@@ -17,30 +17,30 @@ var r = n(255367),
 let _ = [m.AW.HOME, m.AW.ORBS];
 function C(e) {
     let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: h, refreshCategories: C } = e,
-        S = v();
-    O(S);
-    let x = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-        { setCategoryRef: E, handleScrollToCategory: j } = (0, g.xV)(s.current),
-        y = l.useCallback(
+        E = O();
+    v(E);
+    let S = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+        { setCategoryRef: x, handleScrollToCategory: y } = (0, g.xV)(s.current),
+        T = l.useCallback(
             async (e, t, r) => {
                 h(e, t);
-                let l = r && !n && !x,
+                let l = r && !n && !S,
                     a = t === i.T.ORB ? m.AW.ORBS : m.AW.CATALOG;
-                (await u(a, l), null != t && j(t));
+                (await u(a, l), null != t && y(t));
             },
-            [n, x, u, j, h]
+            [n, S, u, y, h]
         );
-    return null != S
+    return null != E
         ? (0, r.jsx)(f.Z, {
               onRetry: C,
-              errorMessage: S,
+              errorMessage: E,
               errorOrigin: f.i.SHOP_PAGE
           })
         : _.includes(t)
           ? (0, r.jsx)(b.Z, {
                 isFullScreen: n,
                 scrollerRef: s,
-                handleTransition: y,
+                handleTransition: T,
                 tab: t,
                 transitionState: d
             })
@@ -49,11 +49,11 @@ function C(e) {
                 scrollerRef: s,
                 tab: t,
                 sortedCategories: c,
-                setCategoryRef: E
+                setCategoryRef: x
             });
 }
-let v = () => (0, a.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
-    O = (e) => {
+let O = () => (0, a.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
+    v = (e) => {
         let t = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
             { noCache: n, includeUnpublished: r } = (0, h.Z)();
         l.useEffect(() => {

@@ -142,7 +142,6 @@ let R = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(h.ua7, {
                 text: F ? N.intl.formatToPlainString(w.default['9CtPjo'], { perk: (0, C.nW)(D) }) : R ? N.intl.string(N.t['Y+V9go']) : N.intl.formatToPlainString(N.t.UyDKl5, { levelName: (0, C.nW)(D) }),
-                color: h.ua7.Colors.BLACK,
                 position: 'top',
                 delay: 200,
                 hideOnClick: !0,

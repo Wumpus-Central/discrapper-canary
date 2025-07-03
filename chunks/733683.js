@@ -85,7 +85,7 @@ class y extends (r = l.Component) {
             {
                 targetElementRef: this.foregroundTooltipElementRef,
                 position: 'right',
-                color: m.ua7.Colors.BLACK,
+                color: m.ua7.Colors.PRIMARY,
                 tooltipClassName: x.foregroundTooltip,
                 children: [
                     (0, i.jsx)('div', { children: h.intl.format(h.t.gDsyBw, { numSubscriptions: e }) }),

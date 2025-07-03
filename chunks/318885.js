@@ -63,18 +63,21 @@ function h() {
     };
 }
 function m(e, t) {
-    var n;
-    let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        _ = __OVERLAY__ ? c.Z.getGame() : (0, o.pL)(),
-        h = i.ZP.getRunningGames().find((e) => e.name === (null == _ ? void 0 : _.name)),
-        m = null != (n = a.default.getRenderMethod(null == h ? void 0 : h.pid)) ? n : null;
+    var n, s, _;
+    let h = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        m = __OVERLAY__ ? c.Z.getGame() : (0, o.pL)(),
+        g = i.ZP.getRunningGames().find((e) => e.name === (null == m ? void 0 : m.name)),
+        E = (null == g ? void 0 : g.pid) != null ? a.default.getTrackedGameByPid(null == g ? void 0 : g.pid) : null,
+        b = null != (n = null == E ? void 0 : E.source) ? n : null,
+        y = null != (_ = null != (s = null == E ? void 0 : E.overlayMethod) ? s : a.default.getRenderMethod(null == g ? void 0 : g.pid)) ? _ : null;
     switch (
         ((t = p(
             {},
             {
-                overlay_game_name: null != _ ? _.name : 'Unknown Game',
-                overlay_app_id: null != _ ? _.id : null,
-                overlay_render_method: null != m ? r.gl[m] : null,
+                overlay_game_source: b,
+                overlay_game_name: null != m ? m.name : 'Unknown Game',
+                overlay_app_id: null != m ? m.id : null,
+                overlay_render_method: null != y ? r.gl[y] : null,
                 media_session_id: l.Z.getMediaSessionId()
             },
             t
@@ -85,8 +88,8 @@ function m(e, t) {
         case f.rMx.SETTINGS_PANE_VIEWED:
         case f.rMx.GUILD_VIEWED:
         case f.rMx.CHANNEL_OPENED:
-            return (0, d.yw)(e, t, s);
+            return (0, d.yw)(e, t, h);
         default:
-            return u.default.track(e, t, { flush: s });
+            return u.default.track(e, t, { flush: h });
     }
 }

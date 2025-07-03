@@ -17,62 +17,62 @@ var r = n(255367),
 let _ = (e) => {
     var t, n, i, _;
     let C,
-        { category: v, subblock: O, badgeText: S, handleTransition: x } = e;
-    null != O && (C = null == (t = p.Z.getCategoryByStoreListingId(null == O ? void 0 : O.categoryStoreListingId)) ? void 0 : t.skuId);
-    let E = null != (n = null != C ? C : null == v ? void 0 : v.skuId) ? n : '',
-        { handleCardVisibilityChange: j } = (0, g.E)(E, 'home', 'marketing featured block'),
-        { featuredBlockBanner: y } = (0, f.YG)(v, O),
-        T = l.useRef(null),
-        P = E === o.T.NAMEPLATES_V3,
-        k = P ? 'NAMEPLATES VOL.3' : null,
-        I = null == O ? void 0 : O.bodyText,
-        L = (0, d.sp)();
+        { category: O, subblock: v, badgeText: E, handleTransition: S } = e;
+    null != v && (C = null == (t = p.Z.getCategoryByStoreListingId(null == v ? void 0 : v.categoryStoreListingId)) ? void 0 : t.skuId);
+    let x = null != (n = null != C ? C : null == O ? void 0 : O.skuId) ? n : '',
+        { handleCardVisibilityChange: y } = (0, g.E)(x, 'home', 'marketing featured block'),
+        { featuredBlockBanner: T } = (0, f.YG)(O, v),
+        j = l.useRef(null),
+        L = x === o.T.NAMEPLATES_V3,
+        P = L ? 'NAMEPLATES VOL.3' : null,
+        k = null == v ? void 0 : v.bodyText,
+        I = (0, d.sp)();
     return (0, r.jsx)(s.$, {
-        innerRef: T,
-        onChange: j,
+        innerRef: j,
+        onChange: y,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
             className: m.featuredBlock,
-            innerRef: T,
-            style: { backgroundImage: 'url('.concat(y, ')') },
+            innerRef: j,
+            style: { backgroundImage: 'url('.concat(T, ')') },
             onClick: () => {
-                (x('shop marketing tile', E),
+                (S('shop marketing tile', x),
                     u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
-                        sku_id: E,
+                        collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                        sku_id: x,
                         page_type: 'home',
-                        page_section: null == L ? void 0 : L.pageSection,
-                        page_category: null == L ? void 0 : L.pageCategory,
+                        page_section: null == I ? void 0 : I.pageSection,
+                        page_category: null == I ? void 0 : I.pageCategory,
                         tile_type: 'FEATURED_BLOCK',
-                        tile_position: String(null == L ? void 0 : L.tilePosition),
+                        tile_position: String(null == I ? void 0 : I.tilePosition),
                         cta_name: null
                     }));
             },
             children: [
-                null != S &&
+                null != E &&
                     (0, r.jsx)(c.IGR, {
                         disableColor: !0,
-                        text: S,
+                        text: E,
                         className: m.featuredBlockBadge
                     }),
                 (0, r.jsxs)('div', {
                     className: m.featuredBlockTextContainer,
                     children: [
-                        null != k &&
+                        null != P &&
                             (0, r.jsx)(c.X6q, {
                                 lineClamp: 2,
-                                className: a()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: P }),
-                                style: { color: null != (i = null == O ? void 0 : O.bannerTextColor) ? i : 'white' },
+                                className: a()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: L }),
+                                style: { color: null != (i = null == v ? void 0 : v.bannerTextColor) ? i : 'white' },
                                 variant: 'heading-xl/semibold',
-                                children: k
+                                children: P
                             }),
-                        null != I &&
+                        null != k &&
                             (0, r.jsx)(c.X6q, {
-                                lineClamp: null != k ? 2 : 4,
+                                lineClamp: null != P ? 2 : 4,
                                 className: m.featuredBlockBodyText,
-                                style: { color: null != (_ = null == O ? void 0 : O.bannerTextColor) ? _ : 'white' },
+                                style: { color: null != (_ = null == v ? void 0 : v.bannerTextColor) ? _ : 'white' },
                                 variant: 'heading-md/medium',
-                                children: I
+                                children: k
                             })
                     ]
                 }),
@@ -80,16 +80,16 @@ let _ = (e) => {
                     className: m.featuredBlockButton,
                     color: c.Ttl.WHITE,
                     onClick: (e) => {
-                        (x('shop marketing take me there button', E),
+                        (S('shop marketing take me there button', x),
                             e.stopPropagation(),
                             u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
-                                sku_id: E,
+                                collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
+                                sku_id: x,
                                 page_type: 'home',
-                                page_section: null == L ? void 0 : L.pageSection,
-                                page_category: null == L ? void 0 : L.pageCategory,
+                                page_section: null == I ? void 0 : I.pageSection,
+                                page_category: null == I ? void 0 : I.pageCategory,
                                 tile_type: 'FEATURED_BLOCK',
-                                tile_position: String(null == L ? void 0 : L.tilePosition),
+                                tile_position: String(null == I ? void 0 : I.tilePosition),
                                 cta_name: 'Take me there button'
                             }));
                     },
