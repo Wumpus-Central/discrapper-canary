@@ -1,8 +1,8 @@
 n.d(t, { Q: () => m });
 var r = n(255367);
 n(73800);
-var s = n(481060),
-    o = n(230711),
+var o = n(481060),
+    s = n(230711),
     a = n(617136),
     i = n(497505),
     l = n(981631),
@@ -11,7 +11,7 @@ var s = n(481060),
 function d(e) {
     let { text: t, quest: n, sourceQuestContent: c } = e,
         d = (0, a.O5)();
-    return (0, r.jsx)(s.P3F, {
+    return (0, r.jsx)(o.P3F, {
         className: u.showConnectionsButton,
         onClick: () => {
             (d({
@@ -20,9 +20,9 @@ function d(e) {
                 questContentCTA: a.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                 sourceQuestContent: c
             }),
-                o.Z.open(l.oAB.CONNECTIONS));
+                s.Z.open(l.oAB.CONNECTIONS));
         },
-        children: (0, r.jsx)(s.Text, {
+        children: (0, r.jsx)(o.Text, {
             'aria-label': t,
             color: 'none',
             variant: 'text-xxs/normal',
@@ -31,19 +31,19 @@ function d(e) {
     });
 }
 function p(e) {
-    let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: s } = e;
+    let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: o } = e;
     return t.length > 0
         ? (0, r.jsx)(d, {
               text: c.intl.string(c.t['qiS+xs']),
               quest: n,
-              sourceQuestContent: s
+              sourceQuestContent: o
           })
         : null;
 }
 function m(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/medium',
                 children: c.intl.string(c.t.EJFSvL)

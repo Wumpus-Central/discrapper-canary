@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(358230),
-    s = n(18998),
-    a = n(220444),
+    a = n(18998),
+    s = n(220444),
     c = n(569471),
     u = n(592125),
     d = n(306680),
@@ -12,7 +12,7 @@ var r = n(255367),
     p = n(451478);
 function f(e) {
     let t = u.Z.getChannel(e);
-    return null != t && null != t.getGuildId() && !(t.isThread() ? c.Z.isMuted(t.id) : h.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, a.d)(t);
+    return null != t && null != t.getGuildId() && !(t.isThread() ? c.Z.isMuted(t.id) : h.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, s.d)(t);
 }
 function g(e) {
     let t = u.Z.getChannel(e);
@@ -26,7 +26,7 @@ function g(e) {
 let m = i.forwardRef(function (e, t) {
     var n,
         i,
-        { guildId: a, guildChannels: c, guildChannelsVersion: u } = e,
+        { guildId: s, guildChannels: c, guildChannelsVersion: u } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -46,10 +46,10 @@ let m = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ['guildId', 'guildChannels', 'guildChannelsVersion']);
-    let h = (0, o.T)(a, c, u, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
+    let h = (0, o.T)(s, c, u, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
         m = (0, l.e7)([p.Z], () => p.Z.isFocused());
     return (0, r.jsx)(
-        s.Z,
+        a.Z,
         ((n = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

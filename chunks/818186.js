@@ -4,8 +4,8 @@ n(73800);
 var i = n(481060),
     l = n(529103),
     o = n(377171),
-    s = n(497089),
-    a = n(849862),
+    a = n(497089),
+    s = n(849862),
     c = n(703656),
     u = n(626135),
     d = n(981631),
@@ -13,13 +13,13 @@ var i = n(481060),
     p = n(605938);
 function f(e) {
     let { closePopout: t } = e,
-        n = (0, a.If)();
+        n = (0, s.If)();
     return (0, r.jsx)(i.DY3, {
         text: h.intl.string(h.t['lMR96+']),
         children: (0, r.jsxs)(i.P3F, {
             className: p.friendRequestsButton,
             onClick: () => {
-                (u.default.track(d.rMx.NOTIFICATION_CENTER_ACTION, { action_type: s.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, c.uL)(d.Z5c.FRIENDS), l.Z.setSection(d.pJs.PENDING), t());
+                (u.default.track(d.rMx.NOTIFICATION_CENTER_ACTION, { action_type: a.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, c.uL)(d.Z5c.FRIENDS), l.Z.setSection(d.pJs.PENDING), t());
             },
             children: [
                 (0, r.jsx)(i.iFz, {

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(493683),
+    a = n(442837),
+    s = n(493683),
     c = n(239091),
     u = n(146773),
     d = n(201895),
@@ -49,12 +49,12 @@ function C(e) {
 function j(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
-    a.Z.preload(n, t.id);
+    s.Z.preload(n, t.id);
 }
 class E extends m.ZP {
     render() {
-        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: i, connectDragPreview: l, canReorderChannel: s } = this.props,
-            a = (0, r.jsx)('li', {
+        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: i, connectDragPreview: l, canReorderChannel: a } = this.props,
+            s = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), { [y.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, r.jsxs)(b.ZP, {
@@ -64,13 +64,13 @@ class E extends m.ZP {
                     onClick: this.handleClick,
                     onMouseDown: j,
                     onContextMenu: this.handleContextMenu,
-                    connectDragPreview: s ? l : null,
+                    connectDragPreview: a ? l : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
                     resolvedUnreadSetting: O.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });
-        return s ? n(i(a)) : a;
+        return a ? n(i(s)) : s;
     }
     constructor(...e) {
         (super(...e),
@@ -125,7 +125,7 @@ class E extends m.ZP {
 let S = (0, u.B)(E),
     x = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
-            l = (0, s.cj)([p.Z, g.Z], () => {
+            l = (0, a.cj)([p.Z, g.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
                 return {
                     canManageChannel: g.Z.can(_.Plq.MANAGE_CHANNELS, t),

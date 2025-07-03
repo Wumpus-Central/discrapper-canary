@@ -5,9 +5,9 @@
     n(388685),
     n(314940));
 var r = n(255367),
-    s = n(73800),
-    o = n(512722),
-    a = n.n(o),
+    o = n(73800),
+    s = n(512722),
+    a = n.n(s),
     i = n(278074),
     l = n(754700),
     c = n(887003),
@@ -21,8 +21,8 @@ var r = n(255367),
     h = n(415104),
     b = n(78826),
     j = n(37303),
-    v = n(134483),
-    _ = n(683650),
+    _ = n(134483),
+    v = n(683650),
     y = n(920916),
     C = n(341907),
     O = n(478977),
@@ -97,13 +97,13 @@ function V(e) {
 }
 function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: s = null } = e;
+        { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: o = null } = e;
     return {
         userId: '123',
         questId: '1193992107035983872',
         enrolledAt: r,
         completedAt: n,
-        claimedAt: s,
+        claimedAt: o,
         claimedTier: null,
         lastStreamHeartbeatAt: null,
         streamProgressSeconds: t,
@@ -181,15 +181,15 @@ let M = '1193992107035983872',
         targetedContent: []
     };
 function Z() {
-    var e, t, o, u, k, V, M, Z;
-    let [U, H] = s.useState(W),
-        z = s.useCallback((e) => {
+    var e, t, s, u, k, V, M, Z;
+    let [U, H] = o.useState(W),
+        z = o.useCallback((e) => {
             H(I(B({}, e), { preview: !0 }));
         }, []),
-        [F, X] = s.useState(A.a.UNENROLLED),
-        [K, Y] = s.useState(!1),
-        [G, J] = s.useState(!1),
-        [$, ee] = s.useState(null),
+        [F, X] = o.useState(A.a.UNENROLLED),
+        [K, Y] = o.useState(!1),
+        [G, J] = o.useState(!1),
+        [$, ee] = o.useState(null),
         et =
             ((Z = U.config),
             (0, i.EQ)(Z)
@@ -214,36 +214,36 @@ function Z() {
         let n = U.config.taskConfigV2.tasks,
             r = n[l.X.WATCH_VIDEO];
         if (null == r) return;
-        let s = B({}, r.assets);
+        let o = B({}, r.assets);
         switch (e) {
             case 'videoPlayerVideo':
-                s.video = { url: t };
+                o.video = { url: t };
                 break;
             case 'videoPlayerVideoLowRes':
-                s.videoLowRes = { url: t };
+                o.videoLowRes = { url: t };
                 break;
             case 'videoPlayerThumbnail':
-                s.video = I(B({}, s.video), { thumbnail: t });
+                o.video = I(B({}, o.video), { thumbnail: t });
                 break;
             default:
                 return;
         }
-        z(I(B({}, U), { config: I(B({}, U.config), { taskConfigV2: I(B({}, U.config.taskConfigV2), { tasks: I(B({}, n), { [l.X.WATCH_VIDEO]: I(B({}, r), { assets: s }) }) }) }) }));
+        z(I(B({}, U), { config: I(B({}, U.config), { taskConfigV2: I(B({}, U.config.taskConfigV2), { tasks: I(B({}, n), { [l.X.WATCH_VIDEO]: I(B({}, r), { assets: o }) }) }) }) }));
     }
-    function es(e, t) {
-        var n, r, s;
+    function eo(e, t) {
+        var n, r, o;
         z(
             I(B({}, U), {
                 config: I(B({}, U.config), {
                     videoMetadata: I(B({}, U.config.videoMetadata), {
-                        messages: null != (s = null == (n = U.config.videoMetadata) ? void 0 : n.messages) ? s : {},
+                        messages: null != (o = null == (n = U.config.videoMetadata) ? void 0 : n.messages) ? o : {},
                         assets: I(B({}, null == (r = U.config.videoMetadata) ? void 0 : r.assets), { [e]: t })
                     })
                 })
             })
         );
     }
-    function eo(e, t) {
+    function es(e, t) {
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e) {
             var n, r;
             z(
@@ -262,19 +262,19 @@ function Z() {
         let n = U.config.taskConfigV2.tasks,
             r = n[l.X.WATCH_VIDEO];
         if (null == r) return;
-        let s = I(B({}, r.messages), { [e]: t });
-        z(I(B({}, U), { config: I(B({}, U.config), { taskConfigV2: I(B({}, U.config.taskConfigV2), { tasks: I(B({}, n), { [l.X.WATCH_VIDEO]: I(B({}, r), { messages: s }) }) }) }) }));
+        let o = I(B({}, r.messages), { [e]: t });
+        z(I(B({}, U), { config: I(B({}, U.config), { taskConfigV2: I(B({}, U.config.taskConfigV2), { tasks: I(B({}, n), { [l.X.WATCH_VIDEO]: I(B({}, r), { messages: o }) }) }) }) }));
     }
     function ei(e, t, n) {
         if ('name' === e || 'nameWithArticle' === e) {
-            var r, s;
+            var r, o;
             z(
                 I(B({}, U), {
                     config:
                         ((r = U.config),
-                        (s = { [e]: t }),
+                        (o = { [e]: t }),
                         (0, i.EQ)(r)
-                            .with({ configVersion: 2 }, (e) => I(B({}, e), { rewardsConfig: I(B({}, e.rewardsConfig), { rewards: e.rewardsConfig.rewards.map((e, t) => (t === n ? I(B({}, e), { messages: B({}, e.messages, s) }) : e)) }) }))
+                            .with({ configVersion: 2 }, (e) => I(B({}, e), { rewardsConfig: I(B({}, e.rewardsConfig), { rewards: e.rewardsConfig.rewards.map((e, t) => (t === n ? I(B({}, e), { messages: B({}, e.messages, o) }) : e)) }) }))
                             .exhaustive())
                 })
             );
@@ -294,11 +294,11 @@ function Z() {
                   sourceQuestContent: m.jn.INTERNAL_PREVIEW_TOOL
               });
     }
-    let eu = s.useMemo(() => {
+    let eu = o.useMemo(() => {
             for (let [e, t] of Object.entries(U.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
             return 10 * p.Z.Seconds.MINUTE;
         }, [U.config.taskConfigV2.tasks]),
-        ed = s.useMemo(() => l.X.WATCH_VIDEO in U.config.taskConfigV2.tasks, [U.config.taskConfigV2.tasks]);
+        ed = o.useMemo(() => l.X.WATCH_VIDEO in U.config.taskConfigV2.tasks, [U.config.taskConfigV2.tasks]);
     a()(!1 !== U.preview && null != U.preview, 'Preview config must have property preview: true');
     let ep = U.config.taskConfigV2.tasks[l.X.WATCH_VIDEO];
     return (0, r.jsxs)('div', {
@@ -356,19 +356,19 @@ function Z() {
                     (0, r.jsx)(w.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
-                        onMessageChange: eo,
+                        onMessageChange: es,
                         initialValue: U.config.messages.questName
                     }),
                     (0, r.jsx)(w.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
-                        onMessageChange: eo,
+                        onMessageChange: es,
                         initialValue: U.config.messages.gameTitle
                     }),
                     (0, r.jsx)(w.Z, {
                         title: 'Game Publisher',
                         assetKey: 'gamePublisher',
-                        onMessageChange: eo,
+                        onMessageChange: es,
                         initialValue: U.config.messages.gamePublisher
                     }),
                     ed &&
@@ -473,16 +473,16 @@ function Z() {
                                 (0, r.jsx)(S.Z, {
                                     title: 'Quest Bar Preview Video (optional)',
                                     assetKey: 'questBarPreviewVideo',
-                                    onFileChange: es,
+                                    onFileChange: eo,
                                     filters: Q,
                                     initialValue: null == (t = U.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo
                                 }),
                                 (0, r.jsx)(S.Z, {
                                     title: 'Quest Home Video (optional)',
                                     assetKey: 'questHomeVideo',
-                                    onFileChange: es,
+                                    onFileChange: eo,
                                     filters: Q,
-                                    initialValue: null == (o = U.config.videoMetadata) ? void 0 : o.assets.questHomeVideo
+                                    initialValue: null == (s = U.config.videoMetadata) ? void 0 : s.assets.questHomeVideo
                                 })
                             ]
                         })
@@ -733,7 +733,7 @@ function Z() {
                                     questId: '0',
                                     children: (0, r.jsx)('div', {
                                         className: R.questChannelCallHeaderPreview,
-                                        children: (0, r.jsx)(v.Z, {
+                                        children: (0, r.jsx)(_.Z, {
                                             channelId: '123',
                                             previewQuest: U,
                                             isParticipatingOverride: K
@@ -761,7 +761,7 @@ function Z() {
                         children: [
                             (0, r.jsx)(d.vwX, { children: 'Quest Card Embed' }),
                             G
-                                ? (0, r.jsx)(_.o, { questId: U.id })
+                                ? (0, r.jsx)(v.o, { questId: U.id })
                                 : (0, r.jsx)(
                                       j.Z,
                                       {
@@ -819,7 +819,7 @@ function Z() {
         ]
     });
 }
-class U extends s.Component {
+class U extends o.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }

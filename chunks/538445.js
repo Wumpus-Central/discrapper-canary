@@ -4,8 +4,8 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
-    s = n(18857),
-    a = n(970731),
+    a = n(18857),
+    s = n(970731),
     c = n(921944),
     u = n(93841),
     d = n(388032),
@@ -13,10 +13,10 @@ var i = n(120356),
     p = n(128647);
 function f(e) {
     let { guild: t, markAsDismissed: n } = e,
-        i = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0 ? a.DF.LEFT_TOP : a.DF.TOP_CENTER,
-        f = (0, s.Z)(t),
-        g = i === a.DF.TOP_CENTER || i === a.DF.LEFT_TOP ? h[i] : '';
-    return (0, r.jsx)(a.ZP, {
+        i = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0 ? s.DF.LEFT_TOP : s.DF.TOP_CENTER,
+        f = (0, a.Z)(t),
+        g = i === s.DF.TOP_CENTER || i === s.DF.LEFT_TOP ? h[i] : '';
+    return (0, r.jsx)(s.ZP, {
         asset: (0, r.jsxs)('div', {
             className: h.imageContainer,
             children: [

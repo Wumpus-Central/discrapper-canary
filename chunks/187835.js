@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(603592),
     o = n(388032);
-let s = 'DOWNLOAD_APPS';
-function a() {
-    let e = (0, i.s9z)((e) => (0, i.DEQ)(e, s));
+let a = 'DOWNLOAD_APPS';
+function s() {
+    let e = (0, i.s9z)((e) => (0, i.DEQ)(e, a));
     return (0, r.jsx)(l.Z, {
         id: 'app-download-button',
         onClick: () => {
@@ -43,7 +43,7 @@ function a() {
                             })({ source: 'Guilds' }, t)
                         );
                 },
-                { modalKey: s }
+                { modalKey: a }
             );
         },
         selected: e,

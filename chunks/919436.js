@@ -3,8 +3,8 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(405499),
-    s = n(91192),
-    a = n(442837),
+    a = n(91192),
+    s = n(442837),
     c = n(481060),
     u = n(239091),
     d = n(358221),
@@ -148,7 +148,7 @@ class R extends (r = l.PureComponent) {
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
-        let { channel: e, channelName: t, selected: n, badge: r, audio: l, video: s, stream: a, isCurrentUserInThisDMCall: u, unread: d, isGDMFacepileEnabled: h, treeItemProps: p } = this.props,
+        let { channel: e, channelName: t, selected: n, badge: r, audio: l, video: a, stream: s, isCurrentUserInThisDMCall: u, unread: d, isGDMFacepileEnabled: h, treeItemProps: p } = this.props,
             { hovered: f, animating: m } = this.state,
             b = e.isMultiUserDM() && null == e.icon && h;
         return (0, i.jsx)(o.animated.div, {
@@ -170,8 +170,8 @@ class R extends (r = l.PureComponent) {
                             lowerBadge: r > 0 ? (0, S.Ne)(r, void 0, !0) : null,
                             upperBadge: (0, S.Or)({
                                 audio: l,
-                                video: s,
-                                screenshare: a,
+                                video: a,
+                                screenshare: s,
                                 isCurrentUserConnected: u
                             }),
                             lowerBadgeSize: { width: (0, c.OVM)(r) },
@@ -262,12 +262,12 @@ N(R, 'defaultProps', {
 let D = l.forwardRef(function (e, t) {
     let n = e.channel.id,
         r = (0, p.ZP)(e.channel),
-        l = (0, s.Ie)(n, 2),
-        o = (0, a.e7)([b.Z], () => b.Z.getChannelId(), []),
-        u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : x.WtW.VOICE), [o]),
-        h = (0, a.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        g = (0, a.e7)([O.Z], () => O.Z.getChannelId(), []),
-        y = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
+        l = (0, a.Ie)(n, 2),
+        o = (0, s.e7)([b.Z], () => b.Z.getChannelId(), []),
+        u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : x.WtW.VOICE), [o]),
+        h = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
+        g = (0, s.e7)([O.Z], () => O.Z.getChannelId(), []),
+        y = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: v } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         C = o === n,
         j = !1,

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(704215),
-    s = n(481060),
-    a = n(266454),
+    a = n(481060),
+    s = n(266454),
     c = n(243778),
     u = n(612659),
     d = n(819640),
@@ -35,7 +35,7 @@ let C = (e, t) => {
     },
     S = (e) => {
         let { children: t, channelId: n, selectedChannelId: S } = e,
-            x = (0, a.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+            x = (0, s.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
             I = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
             P = S === n,
             { canAccessPicker: N, entryPoint: w } = (0, p.m)({
@@ -74,7 +74,7 @@ let C = (e, t) => {
             z = E(V);
         return (0, r.jsx)('div', {
             ref: M,
-            children: (0, r.jsx)(s.yRy, {
+            children: (0, r.jsx)(a.yRy, {
                 targetElementRef: k,
                 align: G,
                 position: 'right',

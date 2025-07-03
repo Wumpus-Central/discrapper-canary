@@ -22,7 +22,7 @@ let u = (e, t, n) => {
         let { emojiId: t, refreshPositionKey: n } = e,
             { joinedEmojiSourceGuildRecord: s, emoji: d } = (0, i.cj)([o.ZP, a.Z], () => u(o.ZP, a.Z, t)),
             f = null != s,
-            _ = null != s && s.hasFeature(c.oNc.DISCOVERABLE),
+            _ = null != s && s.features.has(c.oNc.DISCOVERABLE),
             p = (!f || _) && null != t,
             [h, m] = r.useState(p),
             [g, E] = r.useState(null),

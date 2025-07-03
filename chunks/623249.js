@@ -4,9 +4,9 @@
 }),
     n(388685));
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(442837),
     l = n(780384),
     c = n(481060),
@@ -20,8 +20,8 @@ var r = n(255367),
     h = n(918701),
     b = n(475595),
     j = n(667105),
-    v = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    v = n(388032),
     y = n(912621),
     C = n(708901);
 function O(e) {
@@ -51,10 +51,10 @@ function O(e) {
 }
 function E(e) {
     var t;
-    let { questId: n, errorHints: o, transitionState: E, onClose: w, sourceQuestContent: P } = e,
+    let { questId: n, errorHints: s, transitionState: E, onClose: w, sourceQuestContent: P } = e,
         T = (0, g.sf)(n);
     null == T && w();
-    let [N, A] = (0, s.useState)(o),
+    let [N, A] = (0, o.useState)(s),
         R = (0, g.KX)(),
         k = (0, m.O5)(),
         B = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
@@ -66,7 +66,7 @@ function E(e) {
         D = N.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
         Q = (0, h.Bz)(T),
         V = (0, i.e7)([p.Z], () => p.Z.getState().theme),
-        L = (0, l.wj)(V) ? v.BRd.DARK : v.BRd.LIGHT,
+        L = (0, l.wj)(V) ? _.BRd.DARK : _.BRd.LIGHT,
         { startConsoleQuest: M, startingConsoleQuest: W } = (0, g.GI)({
             questId: T.id,
             beforeRequest: () => {
@@ -112,7 +112,7 @@ function E(e) {
                     }),
                     (0, r.jsx)(c.X6q, {
                         variant: 'heading-xl/bold',
-                        children: _.intl.string(_.t.W5lmKi)
+                        children: v.intl.string(v.t.W5lmKi)
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
@@ -131,7 +131,7 @@ function E(e) {
                             (0, r.jsx)(c.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: _.intl.string(_.t['+/hZMz'])
+                                children: v.intl.string(v.t['+/hZMz'])
                             }),
                             (0, r.jsxs)(c.P3F, {
                                 className: a()(y.refreshWrapper, { [y.disabled]: W }),
@@ -142,7 +142,7 @@ function E(e) {
                                         variant: 'text-sm/medium',
                                         color: 'currentColor',
                                         className: y.colorTransition,
-                                        children: _.intl.string(_.t.wzzjk5)
+                                        children: v.intl.string(v.t.wzzjk5)
                                     })
                                 ]
                             })
@@ -153,11 +153,11 @@ function E(e) {
                         children: [
                             (0, r.jsx)(S, {
                                 icon: (0, r.jsx)(c.pzj, { size: 'sm' }),
-                                text: _.intl.string(_.t.br3uIi)
+                                text: v.intl.string(v.t.br3uIi)
                             }),
                             (0, r.jsx)(S, {
                                 icon: (0, r.jsx)(c.iWm, { size: 'sm' }),
-                                text: _.intl.string(_.t.XF4wuL),
+                                text: v.intl.string(v.t.XF4wuL),
                                 errors: Q ? void 0 : D.map((e) => e.message),
                                 gameTile: Q
                                     ? (0, r.jsx)(c.ua7, {
@@ -173,7 +173,7 @@ function E(e) {
                                                       (0, r.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-muted',
-                                                          children: _.intl.string(_.t.STpNEB)
+                                                          children: v.intl.string(v.t.STpNEB)
                                                       })
                                                   ]
                                               }),
@@ -217,7 +217,7 @@ function E(e) {
                         size: c.PhG.MIN,
                         onClick: w,
                         className: y.footerCloseButton,
-                        children: _.intl.string(_.t.cpT0Cg)
+                        children: v.intl.string(v.t.cpT0Cg)
                     }),
                     (0, r.jsx)(c.zxk, {
                         look: c.iLD.LINK,
@@ -234,7 +234,7 @@ function E(e) {
                                     }
                                 ));
                         },
-                        children: _.intl.string(_.t['qiS+xs'])
+                        children: v.intl.string(v.t['qiS+xs'])
                     })
                 ]
             })
@@ -242,8 +242,8 @@ function E(e) {
     });
 }
 function S(e) {
-    let { icon: t, text: n, errors: s = [], gameTile: o } = e,
-        i = s.length > 0,
+    let { icon: t, text: n, errors: o = [], gameTile: s } = e,
+        i = o.length > 0,
         l = i ? c._3e : c.B_b;
     return (0, r.jsxs)('div', {
         className: y.connectionRow,
@@ -265,7 +265,7 @@ function S(e) {
                     (0, r.jsxs)('div', {
                         className: y.connectionRowHeaderContent,
                         children: [
-                            o,
+                            s,
                             (0, r.jsx)(l, {
                                 color: 'currentColor',
                                 size: 'sm',
@@ -280,7 +280,7 @@ function S(e) {
             }),
             (0, r.jsx)('div', {
                 className: y.errorsContainer,
-                children: s.map((e) =>
+                children: o.map((e) =>
                     (0, r.jsxs)(
                         'div',
                         {

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(399606),
     o = n(704215),
-    s = n(481060),
-    a = n(239091),
+    a = n(481060),
+    s = n(239091),
     c = n(906732),
     u = n(522651),
     d = n(765585),
@@ -19,7 +19,7 @@ var r = n(255367),
     y = n(388032),
     v = n(856587);
 function C(e) {
-    (0, a.jW)(e, async () => {
+    (0, s.jW)(e, async () => {
         let { default: e } = await n.e('21960').then(n.bind(n, 999466));
         return (t) =>
             (0, r.jsx)(
@@ -57,7 +57,7 @@ let j = (e) => {
             l = (e, t) => {
                 (e.stopPropagation(), e.preventDefault(), null == t || t());
             };
-        return (0, r.jsx)(s.yRy, {
+        return (0, r.jsx)(a.yRy, {
             targetElementRef: i,
             shouldShow: !1,
             position: 'top',
@@ -77,7 +77,7 @@ let j = (e) => {
                             keybindHook: () =>
                                 (0, r.jsx)('span', {
                                     className: v.keybindHintKeys,
-                                    children: (0, r.jsx)(s.M2$, {
+                                    children: (0, r.jsx)(a.M2$, {
                                         className: v.keybindShortcut,
                                         shortcut: t
                                     })
@@ -85,7 +85,7 @@ let j = (e) => {
                         })
                     }),
                     headerClassName: v.clipsEducationHeader,
-                    body: (0, r.jsx)(s.Text, {
+                    body: (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'always-white',
                         className: v.bodyText,
@@ -111,12 +111,12 @@ let j = (e) => {
             { parentAnalyticsLocation: t } = (0, c.ZP)(),
             n = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
             o = (0, m.Go)(),
-            { clipsEnabled: a, isAtMaxSavingClipsOperations: d } = (0, l.cj)([b.Z], () => ({
+            { clipsEnabled: s, isAtMaxSavingClipsOperations: d } = (0, l.cj)([b.Z], () => ({
                 clipsEnabled: b.Z.getSettings().clipsEnabled,
                 isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations()
             })),
             v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(O.kg4.SAVE_CLIP));
-        if (!(o && a) || null == v || n) return null;
+        if (!(o && s) || null == v || n) return null;
         let E = g.BB(v.shortcut, !0);
         return (0, r.jsx)(j, {
             keybindString: E,
@@ -129,7 +129,7 @@ let j = (e) => {
                     ((0, _.C1)(), (0, u.v)(t, u.d.CLIP));
                 },
                 onContextMenu: C,
-                icon: s.AlX
+                icon: a.AlX
             })
         });
     };

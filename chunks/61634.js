@@ -3,8 +3,8 @@ var r = n(106351),
     i = n(442837),
     l = n(595519),
     o = n(317381),
-    s = n(16609),
-    a = n(470883),
+    a = n(16609),
+    s = n(470883),
     c = n(554747),
     u = n(146085),
     d = n(427679),
@@ -28,8 +28,8 @@ function S(e) {
     var t;
     let n = (0, i.e7)([y.ZP], () => y.ZP.isMuted(e)),
         r = (0, c.k5)(e),
-        j = (0, i.Wu)([o.ZP, _.Z], () => o.ZP.getEmbeddedActivitiesForGuild(e).filter((e) => !(0, a.BA)([...e.userIds], _.Z.getBlockedOrIgnoredIDs()))),
-        S = (0, s.p)(null == (t = j[0]) ? void 0 : t.location),
+        j = (0, i.Wu)([o.ZP, _.Z], () => o.ZP.getEmbeddedActivitiesForGuild(e).filter((e) => !(0, s.BA)([...e.userIds], _.Z.getBlockedOrIgnoredIDs()))),
+        S = (0, a.p)(null == (t = j[0]) ? void 0 : t.location),
         x = (0, l.NX)(S),
         {
             guildHasVoice: I,
@@ -42,7 +42,7 @@ function S(e) {
                 let r = O.Z.getVoiceChannelId(),
                     i = null == (t = m.Z.getGuild(e)) ? void 0 : t.afkChannelId,
                     l = v.Z.getUsersWithVideo(e),
-                    o = (0, a.DX)(v.Z.getVoiceStates(e));
+                    o = (0, s.DX)(v.Z.getVoiceStates(e));
                 return {
                     guildHasVoice: (() => {
                         if (n) return !1;
@@ -91,12 +91,12 @@ function S(e) {
                 }),
                 T = f && null != (l = null == (i = g.Z.getChannel(c)) ? void 0 : i.isGuildStageVoice()) && l,
                 A = !!f && null != p.Z.getActiveStreamForUser(w, e),
-                R = (0, a.aK)(p.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
+                R = (0, s.aK)(p.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
                 D = f && N,
                 L = (() => {
                     if (x) return j.length > 0;
                     for (let e of j) {
-                        let t = g.Z.getChannel((0, s.p)(e.location));
+                        let t = g.Z.getChannel((0, a.p)(e.location));
                         if (null != t && (0, h.vd)(t.type)) return !0;
                     }
                     return !1;

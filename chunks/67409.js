@@ -1,7 +1,7 @@
-n.d(t, { S: () => l });
-var r = n(979554);
-let l = (e) => {
-    var t, n, l;
-    let { product: i, selectedVariantIndex: a } = e;
-    return i.type === r.Z.VARIANTS_GROUP && null != a && null != (l = null == (n = i.variants) || null == (t = n[a]) ? void 0 : t.skuId) ? l : i.skuId;
+r.d(t, { S: () => i });
+var n = r(979554);
+let i = (e) => {
+    var t, r, i;
+    let { product: l, selectedVariantIndex: a } = e;
+    return l.type === n.Z.VARIANTS_GROUP && null != a && null != (i = null == (r = l.variants) || null == (t = r[a]) ? void 0 : t.skuId) ? i : l.skuId;
 };

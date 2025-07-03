@@ -55,8 +55,8 @@ let u = {
     lg: 'md'
 };
 function m(e) {
-    var { role: t = 'button', size: n = 'md', variant: r = 'secondary', icon: m, iconOpticalOffsetMargin: g = 0, focusProps: p, pressed: h = !1, 'aria-label': f } = e,
-        b = (function (e, t) {
+    var { role: t = 'button', size: n = 'md', variant: r = 'secondary', icon: m, iconOpticalOffsetMargin: g = 0, focusProps: p, pressed: h = !1, 'aria-label': f, className: b, style: x } = e,
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -74,7 +74,7 @@ function m(e) {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(e, ['role', 'size', 'variant', 'icon', 'iconOpticalOffsetMargin', 'focusProps', 'pressed', 'aria-label']);
+        })(e, ['role', 'size', 'variant', 'icon', 'iconOpticalOffsetMargin', 'focusProps', 'pressed', 'aria-label', 'className', 'style']);
     return (0, i.jsx)(
         l.t,
         d(c({}, p), {
@@ -88,7 +88,7 @@ function m(e) {
                             className: s()(a.button, o.button, a[n], o[r], { [o.pressed]: h }),
                             'aria-label': f
                         },
-                        b
+                        _
                     ),
                     {
                         children: (0, i.jsx)('div', {

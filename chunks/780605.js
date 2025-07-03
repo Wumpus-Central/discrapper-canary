@@ -98,12 +98,12 @@ function A(e) {
     let t;
     var n,
         a,
-        { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, loading: D, loadingStartedLabel: L, loadingFinishedLabel: x, rounded: k = !1 } = e,
-        M = v(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'fullWidth', 'focusProps', 'loading', 'loadingStartedLabel', 'loadingFinishedLabel', 'rounded']);
-    let j = (0, m.M)(),
-        U = null != (n = null == j ? void 0 : j.size) ? n : E,
-        G = null != (a = null == j ? void 0 : j.fullWidth) ? a : P;
-    function B() {
+        { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, loading: D, loadingStartedLabel: L, loadingFinishedLabel: x, rounded: k = !1, className: M, style: j } = e,
+        U = v(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'fullWidth', 'focusProps', 'loading', 'loadingStartedLabel', 'loadingFinishedLabel', 'rounded', 'className', 'style']);
+    let G = (0, m.M)(),
+        B = null != (n = null == G ? void 0 : G.size) ? n : E,
+        V = null != (a = null == G ? void 0 : G.fullWidth) ? a : P;
+    function F() {
         if (0 === R) return {};
         switch (A) {
             case 'start':
@@ -113,29 +113,29 @@ function A(e) {
         }
         return {};
     }
-    let V = null != y;
+    let Z = null != y;
     null != I &&
         (t = (0, r.jsx)(I, {
             color: 'currentColor',
-            style: B(),
-            size: S[U]
+            style: F(),
+            size: S[B]
         }));
-    let F = i.useRef(null),
-        Z = 'expressive' === d,
-        H = i.useContext(l.S),
-        Y = (0, _.a)((0, p.ZP)()),
-        W = i.useRef(!1);
+    let H = i.useRef(null),
+        Y = 'expressive' === d,
+        W = i.useContext(l.S),
+        K = (0, _.a)((0, p.ZP)()),
+        z = i.useRef(!1);
     i.useEffect(() => {
-        (!0 === D && ((W.current = !0), s.u.announce(null != L ? L : h.intl.string(h.t.A11Y_LOADING_STARTED))), !1 === D && !0 === W.current && (s.u.announce(null != x ? x : h.intl.string(h.t.A11Y_LOADING_FINISHED)), (W.current = !1)));
+        (!0 === D && ((z.current = !0), s.u.announce(null != L ? L : h.intl.string(h.t.A11Y_LOADING_STARTED))), !1 === D && !0 === z.current && (s.u.announce(null != x ? x : h.intl.string(h.t.A11Y_LOADING_FINISHED)), (z.current = !1)));
     }, [D, L, x]);
-    let K = (0, r.jsxs)('div', {
+    let q = (0, r.jsxs)('div', {
             className: o()(g.buttonChildren, { [g.loading]: D }),
             children: [
                 null != t && 'start' === A && t,
-                V &&
+                Z &&
                     (0, r.jsx)(f.x, {
                         tag: 'span',
-                        variant: T[U],
+                        variant: T[B],
                         color: 'none',
                         lineClamp: 1,
                         children: y
@@ -143,7 +143,7 @@ function A(e) {
                 null != t && 'end' === A && t
             ]
         }),
-        z = (0, r.jsx)(
+        X = (0, r.jsx)(
             c.t,
             O(b({}, w), {
                 children: (0, r.jsxs)(
@@ -153,32 +153,32 @@ function A(e) {
                             {
                                 role: u,
                                 'aria-busy': D,
-                                className: o()(g.button, g[U], g[d], {
-                                    [g.hasText]: V,
-                                    [g.fullWidth]: G,
+                                className: o()(g.button, g[B], g[d], {
+                                    [g.hasText]: Z,
+                                    [g.fullWidth]: V,
                                     [g.rounded]: k
                                 }),
-                                ref: F
+                                ref: H
                             },
-                            M
+                            U
                         ),
                         {
                             children: [
-                                Z &&
+                                Y &&
                                     (0, r.jsx)(C, {
-                                        hasReducedMotion: H.reducedMotion.enabled,
-                                        buttonRef: F,
-                                        isLightMode: Y
+                                        hasReducedMotion: W.reducedMotion.enabled,
+                                        buttonRef: H,
+                                        isLightMode: K
                                     }),
                                 null == D
                                     ? (0, r.jsx)('div', {
                                           className: g.buttonChildrenWrapper,
-                                          children: K
+                                          children: q
                                       })
                                     : (0, r.jsx)(N, {
                                           loading: D,
-                                          size: U,
-                                          children: K
+                                          size: B,
+                                          children: q
                                       })
                             ]
                         }
@@ -186,12 +186,12 @@ function A(e) {
                 )
             })
         );
-    return Z
+    return Y
         ? (0, r.jsx)('div', {
-              className: o()(g.expressiveWrapper, { [g.fullWidth]: G }),
-              children: z
+              className: o()(g.expressiveWrapper, { [g.fullWidth]: V }),
+              children: X
           })
-        : z;
+        : X;
 }
 function N(e) {
     let { children: t, loading: n, size: a } = e,

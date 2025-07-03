@@ -50,8 +50,8 @@ function d(e, t) {
     );
 }
 function u(e) {
-    var { role: t = 'button', text: n, focusProps: r, variant: u = 'primary', textVariant: m = 'text-md/medium', lineClamp: g = 1 } = e,
-        p = (function (e, t) {
+    var { role: t = 'button', text: n, focusProps: r, variant: u = 'primary', textVariant: m = 'text-md/medium', lineClamp: g = 1, className: p, style: h } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -69,7 +69,7 @@ function u(e) {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(e, ['role', 'text', 'focusProps', 'variant', 'textVariant', 'lineClamp']);
+        })(e, ['role', 'text', 'focusProps', 'variant', 'textVariant', 'lineClamp', 'className', 'style']);
     return (0, i.jsx)(
         l.t,
         d(c({}, r), {
@@ -81,7 +81,7 @@ function u(e) {
                             role: t,
                             className: s()(o.textButton, o[u])
                         },
-                        p
+                        f
                     ),
                     {
                         children: (0, i.jsx)(a.x, {

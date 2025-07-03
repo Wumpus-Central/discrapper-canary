@@ -1,14 +1,14 @@
-n.d(t, { o: () => a });
+n.d(t, { o: () => s });
 var r = n(544891),
     i = n(570140),
     l = n(355467),
     o = n(853872),
-    s = n(981631);
-async function a() {
+    a = n(981631);
+async function s() {
     try {
         i.Z.dispatch({ type: 'CHECKOUT_RECOVERY_STATUS_FETCH' });
         let { body: e } = await r.tn.get({
-                url: s.ANM.CHECKOUT_RECOVERY,
+                url: a.ANM.CHECKOUT_RECOVERY,
                 rejectWithError: !0
             }),
             t = (null == e ? void 0 : e.is_eligible) === !0;

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(392711),
-    a = n.n(s),
+    a = n(392711),
+    s = n.n(a),
     c = n(91192),
     u = n(481060),
     d = n(724757),
@@ -39,7 +39,7 @@ function I(e) {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     className: S.messagesGroupHeader,
-                    children: (0, s.capitalize)(E.intl.string(v.Vv[t]).toLowerCase())
+                    children: (0, a.capitalize)(E.intl.string(v.Vv[t]).toLowerCase())
                 }),
                 (0, r.jsx)(u.CJ0, {
                     size: 'xxs',
@@ -87,7 +87,7 @@ function N() {
     });
 }
 function w(e) {
-    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: s, renderLoadingState: h, renderMessageGroup: p, scrollerClassName: j, className: E, listName: w, ignoreGrouping: Z = !1 } = e,
+    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: a, renderLoadingState: h, renderMessageGroup: p, scrollerClassName: j, className: E, listName: w, ignoreGrouping: Z = !1 } = e,
         T = i.useRef(null),
         A = (0, d.Z)(w, T),
         { notificationCenterVariant: R } = m.Lk.useExperiment({ location: 'NotificationsInboxSidebarList' }),
@@ -113,8 +113,8 @@ function w(e) {
             var e;
             let t = null == (e = T.current) ? void 0 : e.getScrollerState(),
                 n = (0, O.s)(D);
-            null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && (null == s || s(n));
-        }, [s, D]),
+            null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && (null == a || a(n));
+        }, [a, D]),
         k = (0, O.fW)(null != t ? t : []),
         U = i.useMemo(() => {
             if (null == t || n) return null;
@@ -139,12 +139,12 @@ function w(e) {
             return (
                 null != t &&
                     t.length > 0 &&
-                    (a().each(t, (e) => {
+                    (s().each(t, (e) => {
                         let { message: t, kind: n } = e,
                             l = k(t.id);
                         n === v.fL.MENTION ? r[l].push(t) : t.channel_id in i[l] ? i[l][t.channel_id].push(t) : (i[l][t.channel_id] = [t]);
                     }),
-                    a().each(P, (t) => {
+                    s().each(P, (t) => {
                         [...Object.values(i[t]).map((e) => e.reverse()), ...r[t].map((e) => [e])]
                             .sort((e, t) => g.default.compare(t[0].id, e[0].id))
                             .forEach((n) => {
@@ -169,7 +169,7 @@ function w(e) {
                               })
                           )
                         : null != U &&
-                          a().each(P, (t) => {
+                          s().each(P, (t) => {
                               0 !== U[t].length &&
                                   (e.push(
                                       (0, r.jsx)(I, {
@@ -192,17 +192,17 @@ function w(e) {
             );
         }, [n, t, h, D, L, U, Z, p, R, k]);
     i.useEffect(() => {
-        var e, t, r, i, l, o, s;
+        var e, t, r, i, l, o, a;
         if (n) return;
-        let a = null != U && 0 === U.UNREAD.length,
-            c = null != (s = null != (o = null != (l = null == (e = U) || null == (t = e.TODAY[0]) ? void 0 : t[0]) ? l : null == e || null == (r = e.YESTERDAY[0]) ? void 0 : r[0]) ? o : null == e || null == (i = e.OLDER[0]) ? void 0 : i[0]) ? s : null;
-        y.Z.setInboxReadState(a, c);
+        let s = null != U && 0 === U.UNREAD.length,
+            c = null != (a = null != (o = null != (l = null == (e = U) || null == (t = e.TODAY[0]) ? void 0 : t[0]) ? l : null == e || null == (r = e.YESTERDAY[0]) ? void 0 : r[0]) ? o : null == e || null == (i = e.OLDER[0]) ? void 0 : i[0]) ? a : null;
+        y.Z.setInboxReadState(s, c);
     }, [U, n]);
     let B = null;
     return (
         null != t &&
             t.length > 0 &&
-            null != s &&
+            null != a &&
             l &&
             (B = (0, r.jsx)(
                 'div',
@@ -217,10 +217,10 @@ function w(e) {
                 r = i.useRef(!1),
                 l = null != n && n.UNREAD.length > 0,
                 o = null == n || t,
-                { setOpenStateFromUnreads: s } = (0, _.Z)();
+                { setOpenStateFromUnreads: a } = (0, _.Z)();
             i.useEffect(() => {
-                o || r.current || (s(l), (r.current = !0));
-            }, [s, l, o]);
+                o || r.current || (a(l), (r.current = !0));
+            }, [a, l, o]);
         })({
             messagesByCategory: U,
             loadingInitial: n

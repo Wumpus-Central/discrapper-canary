@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(481060),
-    a = n(570140),
+    a = n(481060),
+    s = n(570140),
     c = n(493773),
     u = n(585483),
     d = n(821020),
@@ -26,21 +26,21 @@ function b(e) {
         let e = () => {
             y(!1);
         };
-        return (a.Z.subscribe('USER_SETTINGS_MODAL_OPEN', e), () => a.Z.unsubscribe('USER_SETTINGS_MODAL_OPEN', e));
+        return (s.Z.subscribe('USER_SETTINGS_MODAL_OPEN', e), () => s.Z.unsubscribe('USER_SETTINGS_MODAL_OPEN', e));
     }),
         i.useEffect(() => (u.S.subscribe(f.CkL.TOGGLE_INBOX, C), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, C)), [C]));
     let { entrypoint: j } = d.Lk.useExperiment({ location: 'NotificationsInboxPopout' });
-    return (0, r.jsx)(s.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: b,
         shouldShow: O,
         align: l,
-        animation: j === d.u3.TITLE_BAR_LEFT ? s.yRy.Animation.TRANSLATE : s.yRy.Animation.FADE,
+        animation: j === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
         animationPosition: j === d.u3.TITLE_BAR_LEFT ? 'bottom' : 'left',
         position: n,
         onRequestClose: v,
         spacing: _,
         renderPopout: function () {
-            return (0, r.jsx)(s.VqE, {
+            return (0, r.jsx)(a.VqE, {
                 'aria-label': g.intl.string(g.t.GSmTKC),
                 className: j !== d.u3.TITLE_BAR_LEFT ? m.repositionLayerSidebarPopout : void 0,
                 children: (0, r.jsxs)('div', {

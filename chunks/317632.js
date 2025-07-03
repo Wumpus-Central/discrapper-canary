@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     o = n(823379),
-    s = n(981631);
-function a(e, t, n) {
+    a = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                s(e, t, n[t]);
             }));
     }
     return e;
@@ -44,7 +44,7 @@ function f(e) {
     } catch (e) {
         return null;
     }
-    if (e.platform_type === s.ABu.XBOX) {
+    if (e.platform_type === a.ABu.XBOX) {
         var n, r;
         let i = null == t ? void 0 : t.titleId,
             l = null == t ? void 0 : t.inviteToken;
@@ -96,7 +96,7 @@ class g extends (r = i.ZP.Store) {
         return p;
     }
 }
-a(g, 'displayName', 'GameInviteStore');
+s(g, 'displayName', 'GameInviteStore');
 let m = new g(l.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { gameInvites: t } = e;

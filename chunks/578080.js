@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => L }), n(953529));
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(405499),
     l = n(442837),
     c = n(950104),
@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(272008),
     b = n(113434),
     j = n(569984),
-    v = n(497505),
-    _ = n(918701),
+    _ = n(497505),
+    v = n(918701),
     y = n(865364),
     C = n(373370),
     O = n(475595),
@@ -93,37 +93,37 @@ function V(e) {
           })
         : null;
 }
-let L = s.forwardRef(function (e, t) {
-    var n, o;
+let L = o.forwardRef(function (e, t) {
+    var n, s;
     let { children: y, className: L, collapsedHeight: M, expansionSpring: W, isExpanded: Z, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: z, onCtxMenuSelect: F, quest: X, useReducedMotion: K } = e,
         Y = (0, l.e7)([j.Z], () => j.Z.isEnrolling(X.id), [X]),
         G = (0, x.aM)(),
         J = (0, b.B6)(X.config.expiresAt),
         $ = E.r.build(X.config),
         ee = (0, b.B6)($.rewardsExpireAt),
-        et = s.useMemo(() => (0, O.fh)(X, O.eC.HERO), [X]),
+        et = o.useMemo(() => (0, O.fh)(X, O.eC.HERO), [X]),
         en = (0, A.tP)($.application.id),
         er = $.features.has(R.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
-        es = $.features.has(R.S7.START_QUEST_CTA) ? I.intl.string(I.t.E80Bdn) : I.intl.string(I.t.l7E81t),
-        eo = s.useCallback(() => {
+        eo = $.features.has(R.S7.START_QUEST_CTA) ? I.intl.string(I.t.E80Bdn) : I.intl.string(I.t.l7E81t),
+        es = o.useCallback(() => {
             ((0, h.AH)(X.id, {
-                questContent: v.jn.QUEST_BAR,
+                questContent: _.jn.QUEST_BAR,
                 questContentCTA: er,
-                sourceQuestContent: v.jn.QUEST_BAR
+                sourceQuestContent: _.jn.QUEST_BAR
             }),
                 $.features.has(R.S7.START_QUEST_CTA) && (0, m.uL)(k.Z5c.ACTIVITY_DETAILS(B.In), void 0));
         }, [X, er, $.features]),
         ea = (0, A.hf)({
             quest: X,
-            questContent: v.jn.QUEST_BAR,
-            sourceQuestContent: v.jn.QUEST_BAR
+            questContent: _.jn.QUEST_BAR,
+            sourceQuestContent: _.jn.QUEST_BAR
         }),
-        ei = s.useCallback(() => {
-            (0, _.nc)(X, {
-                content: v.jn.QUEST_BAR,
+        ei = o.useCallback(() => {
+            (0, v.nc)(X, {
+                content: _.jn.QUEST_BAR,
                 ctaContent: g.jZ.OPEN_GAME_LINK,
                 impressionId: G,
-                sourceQuestContent: v.jn.QUEST_BAR
+                sourceQuestContent: _.jn.QUEST_BAR
             });
         }, [G, X]),
         el = $.features.has(R.S7.POST_ENROLLMENT_CTA),
@@ -131,19 +131,19 @@ let L = s.forwardRef(function (e, t) {
         eu = (0, b.Jf)(X),
         ed = null != eu ? eu.progress > 0 : ec.progressSeconds > 0,
         ep = (null == (n = X.userStatus) ? void 0 : n.enrolledAt) != null,
-        em = (null == (o = X.userStatus) ? void 0 : o.completedAt) != null,
-        ef = s.useMemo(() => (0, _.Xv)(X.config), [X.config]),
+        em = (null == (s = X.userStatus) ? void 0 : s.completedAt) != null,
+        ef = o.useMemo(() => (0, v.Xv)(X.config), [X.config]),
         eg = Z && U,
         ex = (0, C.DD)({
             quest: X,
             taskDetails: ec,
             location: R.dr.QUESTS_BAR,
-            questContent: v.jn.QUEST_BAR,
+            questContent: _.jn.QUEST_BAR,
             thirdPartyTaskDetails: null != eu ? eu : void 0,
-            sourceQuestContent: v.jn.QUEST_BAR
+            sourceQuestContent: _.jn.QUEST_BAR
         }),
         eh = (0, f.isWeb)(),
-        eb = s.useMemo(() => {
+        eb = o.useMemo(() => {
             let e = (0, u.Qg)(X.config.colors.primary, {
                 base: '#ffffff',
                 contrastRatio: u.S3.Text
@@ -193,16 +193,16 @@ let L = s.forwardRef(function (e, t) {
                                                   className: q.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: X,
-                                                  questContent: v.jn.QUEST_BAR,
+                                                  questContent: _.jn.QUEST_BAR,
                                                   location: R.dr.QUESTS_BAR,
-                                                  sourceQuestContent: v.jn.QUEST_BAR
+                                                  sourceQuestContent: _.jn.QUEST_BAR
                                               }),
                                               (0, r.jsxs)('div', {
                                                   children: [
                                                       (0, r.jsx)(d.X6q, {
                                                           color: 'always-white',
                                                           variant: 'heading-sm/semibold',
-                                                          children: (0, _.AV)({
+                                                          children: (0, v.AV)({
                                                               quest: X,
                                                               taskDetails: ec,
                                                               thirdPartyTaskDetails: null != eu ? eu : void 0
@@ -222,11 +222,11 @@ let L = s.forwardRef(function (e, t) {
                                           onOpen: H,
                                           onClose: z,
                                           onSelect: F,
-                                          questContent: v.jn.QUEST_BAR,
+                                          questContent: _.jn.QUEST_BAR,
                                           quest: X,
                                           shouldShowDisclosure: !1,
                                           showShareLink: !0,
-                                          sourceQuestContent: v.jn.QUEST_BAR,
+                                          sourceQuestContent: _.jn.QUEST_BAR,
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   d.P3F,
@@ -277,11 +277,11 @@ let L = s.forwardRef(function (e, t) {
                                                   onOpen: H,
                                                   onClose: z,
                                                   onSelect: F,
-                                                  questContent: v.jn.QUEST_BAR,
+                                                  questContent: _.jn.QUEST_BAR,
                                                   quest: X,
                                                   shouldShowDisclosure: !0,
                                                   showShareLink: !0,
-                                                  sourceQuestContent: v.jn.QUEST_BAR,
+                                                  sourceQuestContent: _.jn.QUEST_BAR,
                                                   children: (e) =>
                                                       (0, r.jsx)(
                                                           d.P3F,
@@ -305,9 +305,9 @@ let L = s.forwardRef(function (e, t) {
                                                   className: q.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: X,
-                                                  questContent: v.jn.QUEST_BAR,
+                                                  questContent: _.jn.QUEST_BAR,
                                                   location: R.dr.QUESTS_BAR,
-                                                  sourceQuestContent: v.jn.QUEST_BAR
+                                                  sourceQuestContent: _.jn.QUEST_BAR
                                               }),
                                               (0, r.jsx)(d.X6q, {
                                                   className: q.title,
@@ -328,10 +328,10 @@ let L = s.forwardRef(function (e, t) {
                                           style: '1232852290197655573' !== X.id ? eb : void 0,
                                           color: d.zxk.Colors.CUSTOM,
                                           fullWidth: !0,
-                                          onClick: eg ? eo : void 0,
+                                          onClick: eg ? es : void 0,
                                           size: d.zxk.Sizes.NONE,
                                           submitting: Y,
-                                          children: es
+                                          children: eo
                                       })
                                   ]
                               }),

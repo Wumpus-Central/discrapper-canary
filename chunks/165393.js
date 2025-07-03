@@ -3,13 +3,13 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(866442),
-    a = n(481060),
+    a = n(866442),
+    s = n(481060),
     c = n(686546),
     u = n(629998);
 let d = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367];
 function h(e) {
-    return (0, s.Rf)(
+    return (0, a.Rf)(
         d[
             (function (e) {
                 let t = 5381,
@@ -22,7 +22,7 @@ function h(e) {
 }
 function p(e) {
     var t;
-    let { title: n, className: l, icon: s } = e,
+    let { title: n, className: l, icon: a } = e,
         [d, p] = i.useState(h(n));
     return (
         i.useEffect(() => {
@@ -36,7 +36,7 @@ function p(e) {
                     width: 32,
                     height: 32,
                     children:
-                        null == s || 0 === s.length
+                        null == a || 0 === a.length
                             ? (0, r.jsx)('div', {
                                   className: u.icon,
                                   style: { backgroundColor: d },
@@ -44,11 +44,11 @@ function p(e) {
                               })
                             : (0, r.jsx)('img', {
                                   alt: '',
-                                  src: s,
+                                  src: a,
                                   className: u.icon
                               })
                 }),
-                (0, r.jsx)(a.Odl, {
+                (0, r.jsx)(s.Odl, {
                     size: 'md',
                     color: 'currentColor',
                     className: u.badge

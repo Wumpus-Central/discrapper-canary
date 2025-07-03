@@ -7,8 +7,8 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(793030),
-    s = n(442837),
-    a = n(381499),
+    a = n(442837),
+    s = n(381499),
     c = n(481060),
     u = n(695346),
     d = n(675478),
@@ -25,7 +25,7 @@ async function v(e) {
     await d.hW.updateAsync(
         'status',
         (t) => {
-            ((t.status = a.Gm.create({ value: e })), (t.statusExpiresAtMs = '0'));
+            ((t.status = s.Gm.create({ value: e })), (t.statusExpiresAtMs = '0'));
         },
         d.fy.INFREQUENT_USER_ACTION
     );
@@ -46,8 +46,8 @@ function C(e) {
 }
 function j(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1, shouldShowCustomizeLink: r = !1, closePopout: l } = e,
-        o = (0, s.e7)([h.Z], () => h.Z.getStatus()),
-        { showLinkToSettings: a } = (0, f.D)('popout');
+        o = (0, a.e7)([h.Z], () => h.Z.getStatus()),
+        { showLinkToSettings: s } = (0, f.D)('popout');
     return (0, i.jsxs)('div', {
         className: O.toggleContainer,
         children: [
@@ -74,7 +74,7 @@ function j(e) {
                                 })
                             ]
                         }),
-                    r && a && (0, i.jsx)(g.K, { onClosePopout: l })
+                    r && s && (0, i.jsx)(g.K, { onClosePopout: l })
                 ]
             }),
             (0, i.jsx)(c.rsf, {
@@ -90,8 +90,8 @@ function E(e) {
     let { children: t, closePopout: n } = e,
         r = (0, l.useRef)(null);
     (0, c.Tbt)(r);
-    let a = u.G6.useSetting(),
-        d = (0, s.e7)([h.Z], () => h.Z.getStatus()) === c.Skl.INVISIBLE && a;
+    let s = u.G6.useSetting(),
+        d = (0, a.e7)([h.Z], () => h.Z.getStatus()) === c.Skl.INVISIBLE && s;
     return (0, i.jsxs)('div', {
         className: O.wrapper,
         ref: r,

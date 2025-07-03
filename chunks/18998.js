@@ -3,9 +3,9 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(120356),
-    s = n.n(o),
-    a = n(954955),
-    c = n.n(a),
+    a = n.n(o),
+    s = n(954955),
+    c = n.n(s),
     u = n(748780),
     d = n(902704),
     h = n(481060),
@@ -74,7 +74,7 @@ class b extends l.Component {
     render() {
         let { className: e, text: t, hide: n, onClick: r } = this.props;
         return (0, i.jsx)(u.Z.div, {
-            className: s()(p.bar, e, { [p.hidden]: n }),
+            className: a()(p.bar, e, { [p.hidden]: n }),
             onClick: r,
             style: this.getAnimatedStyle(),
             'aria-hidden': n,
@@ -119,13 +119,13 @@ class _ extends (r = l.PureComponent) {
     }
     render() {
         let { unread: e, mention: t } = this.state,
-            { textMention: n, textUnread: r, reverse: l, className: o, barClassName: a, hide: c, animate: u } = this.props,
+            { textMention: n, textUnread: r, reverse: l, className: o, barClassName: s, hide: c, animate: u } = this.props,
             { reducedMotion: d } = this.context;
         return (0, i.jsx)('div', {
             className: null != o ? o : void 0,
             children: (0, i.jsx)(b, {
                 hide: !0 === c || (null == e && null == t),
-                className: s()(a, null != t ? p.mention : p.unread),
+                className: a()(s, null != t ? p.mention : p.unread),
                 text: null != t ? n : r,
                 reverse: l,
                 animate: u && !d.enabled,
@@ -144,14 +144,14 @@ class _ extends (r = l.PureComponent) {
                 'calculateState',
                 c()(() => {
                     let { items: e, expandedFolders: t, isVisible: n, isUnread: r, isMentioned: i, reverse: l, onCalculate: o } = this.props,
-                        s = null,
                         a = null,
+                        s = null,
                         c = [];
                     e.forEach((e) => {
                         'string' == typeof e ? c.push(e) : 'object' == typeof e && null != e.folderId ? (null != t && t.has(e.folderId) ? (c.push('folder:'.concat(e.folderId)), e.guildIds.forEach((e) => c.push(e))) : c.push(e.guildIds)) : c.push(e.guildIds[0]);
                     });
                     let u = (e) => {
-                            (null == s && i(e, l, c) && (s = e), null == a && r(e, l, c) && (a = e));
+                            (null == a && i(e, l, c) && (a = e), null == s && r(e, l, c) && (s = e));
                         },
                         d = l ? c.length - 1 : 0,
                         h = c[d];
@@ -172,10 +172,10 @@ class _ extends (r = l.PureComponent) {
                         }
                         ((d += l ? -1 : 1), (h = c[d]));
                     }
-                    (null != o && o(s, a, l),
+                    (null != o && o(a, s, l),
                         this.setState({
-                            mention: s,
-                            unread: a
+                            mention: a,
+                            unread: s
                         }));
                 }, 200)
             ),

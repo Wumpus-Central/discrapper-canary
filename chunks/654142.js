@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(239091),
-    s = n(749210),
-    a = n(905423),
+    a = n(749210),
+    s = n(905423),
     c = n(664915),
     u = n(888369),
     d = n(430824),
@@ -78,7 +78,7 @@ let _ = i.memo(function (e) {
         })(e, ['folderNode']);
     let { id: O, name: y, color: v, children: C } = t,
         j = C.map((e) => e.id),
-        E = (0, a.Z)((e) => e.guildId),
+        E = (0, s.Z)((e) => e.guildId),
         S = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
         x = (function (e) {
             let t = e.children
@@ -104,7 +104,7 @@ let _ = i.memo(function (e) {
             unread: j.some((e) => u.default.hasUnread(e))
         })),
         Z = i.useCallback(() => {
-            s.Z.toggleGuildFolderExpand(O);
+            a.Z.toggleGuildFolderExpand(O);
         }, [O]),
         T = i.useCallback(
             (e) => {

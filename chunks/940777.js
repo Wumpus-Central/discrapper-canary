@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(91192),
-    a = n(442837),
+    a = n(91192),
+    s = n(442837),
     c = n(481060),
     u = n(493683),
     d = n(239091),
@@ -62,29 +62,29 @@ let A = {
 };
 function R() {
     var e, t;
-    let l = (0, s.Ie)('favorites'),
+    let l = (0, a.Ie)('favorites'),
         { favoriteAdded: R, clearFavoriteAdded: D } = (0, S.up)(),
         [L, M] = i.useState(!1),
-        { favoriteServerMuted: k, favoriteChannels: U } = (0, a.cj)([E.Z], () => ({
+        { favoriteServerMuted: k, favoriteChannels: U } = (0, s.cj)([E.Z], () => ({
             favoriteChannels: E.Z.getFavoriteChannels(),
             favoriteServerMuted: E.Z.favoriteServerMuted
         })),
-        G = (0, a.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
-        B = (0, a.e7)([y.Z], () => y.Z.getChannel(G)),
+        G = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
+        B = (0, s.e7)([y.Z], () => y.Z.getChannel(G)),
         F = (0, _.Z)((e) => e.guildId) === N.I_8,
         { badge: V, unread: H } = (0, x.Z)(U),
         z = (function (e) {
-            let t = (0, a.e7)([v.Z], () => v.Z.getVoiceChannelId()),
+            let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, a.e7)([O.Z], () => {
+                r = (0, s.e7)([O.Z], () => {
                     if (!n) return !1;
                     let t = O.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, a.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, a.e7)([C.Z], () => n && null != t && C.Z.hasVideo(t), [n, t]),
-                o = (0, a.Wu)([h.ZP], () => j.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
-                s = (0, a.e7)([h.ZP], () =>
+                i = (0, s.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                l = (0, s.e7)([C.Z], () => n && null != t && C.Z.hasVideo(t), [n, t]),
+                o = (0, s.Wu)([h.ZP], () => j.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                a = (0, s.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
                             r = (0, p.p)(n);
@@ -97,7 +97,7 @@ function R() {
                 f = !1,
                 g = !1;
             return (
-                n ? ((u = !l), (d = l), (f = r), (g = s)) : ((f = i), (g = c)),
+                n ? ((u = !l), (d = l), (f = r), (g = a)) : ((f = i), (g = c)),
                 (0, m.Or)({
                     audio: u,
                     video: d,
