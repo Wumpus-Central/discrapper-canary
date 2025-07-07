@@ -40,8 +40,8 @@ let p = (e) => {
     f = () => {
         let [e, t] = l.useState(!1),
             n = l.useRef(null),
-            { sort: d, onSetSort: f } = (0, s.S)(),
-            g = l.useCallback((e) => {
+            { sort: d, onSetSort: f, searchQuery: g } = (0, s.S)(),
+            h = l.useCallback((e) => {
                 let { sortType: t, sortDirection: n } = e;
                 return t === o.E.RECENCY
                     ? n === i.F.DESC
@@ -63,12 +63,17 @@ let p = (e) => {
                                 label: u.intl.string(u.t.zBwQJC),
                                 value: 'price-desc'
                             }
-                      : {
-                            label: u.intl.string(u.t.Y68e5u),
-                            value: 'popularity'
-                        };
+                      : t === o.E.RELEVANCE
+                        ? {
+                              label: u.intl.string(u.t['XoeT//']),
+                              value: 'relevance'
+                          }
+                        : {
+                              label: u.intl.string(u.t.Y68e5u),
+                              value: 'popularity'
+                          };
             }, []),
-            h = l.useCallback(
+            b = l.useCallback(
                 (e) =>
                     ({
                         recent: {
@@ -90,11 +95,15 @@ let p = (e) => {
                         popularity: {
                             sortType: o.E.POPULARITY,
                             sortDirection: i.F.DESC
+                        },
+                        relevance: {
+                            sortType: o.E.RELEVANCE,
+                            sortDirection: i.F.DESC
                         }
                     })[e],
                 []
             ),
-            b = g(d);
+            m = h(d);
         return (0, r.jsx)(a.yRy, {
             children: () =>
                 (0, r.jsx)(a.zxk, {
@@ -102,7 +111,7 @@ let p = (e) => {
                     onClick: () => t((e) => !e),
                     look: a.iLD.OUTLINED,
                     color: a.Ttl.PRIMARY,
-                    children: b.label
+                    children: m.label
                 }),
             closeOnScroll: !0,
             onRequestClose: () => t(!1),
@@ -110,10 +119,10 @@ let p = (e) => {
             align: 'right',
             renderPopout: () =>
                 (0, r.jsx)(p, {
-                    options: c.aP.map(g),
-                    selected: b,
+                    options: (0, c.aP)(g).map(h),
+                    selected: m,
                     onSelect: (e) => {
-                        f(h(e));
+                        f(b(e));
                     }
                 }),
             shouldShow: e,

@@ -43,7 +43,7 @@ function x(e) {
             };
             null != I && e(I.url);
         }, [I, a, v]),
-        null == v || null == v.guild || (!v.guild.features.includes(p.oNc.VERIFIED) && !v.guild.features.includes(p.oNc.PARTNERED)))
+        null == v || null == v.guild || !v.guild.features.includes(p.oNc.VERIFIED))
     )
         return null;
     let y = g.ZP.getGuildIconURL({

@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(315066),
     C = n(243126),
     O = n(38900),
-    v = n(709999),
-    E = n(328626),
+    E = n(709999),
+    v = n(328626),
     S = n(619899),
     x = n(215023),
     y = n(981631),
@@ -28,14 +28,14 @@ let P = (e) => {
     var t;
     let { isLoading: n, sortedSkuIds: i, handleTransition: P, numVisibleItems: L, tab: I } = e,
         k = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        B = h.ZP.canUseCollectibles(k),
-        N = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
-        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: M } = (0, C.N)(i, B),
-        D = (0, S.St)(w),
+        N = h.ZP.canUseCollectibles(k),
+        B = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
+        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(i, N),
+        M = (0, S.St)(w),
         H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
         V = !H && W,
-        { animationPhase: U, startAnimation: G } = (0, E.y)(),
+        { animationPhase: U, startAnimation: G } = (0, v.y)(),
         z = (0, b.sp)(),
         Y = null != (t = null == z ? void 0 : z.sessionId) ? t : '',
         q = l.useRef(null),
@@ -67,7 +67,7 @@ let P = (e) => {
                                       variant: 'heading-lg/semibold',
                                       children: I === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
-                                  M &&
+                                  D &&
                                       (0, r.jsx)(s.ua7, {
                                           text: j.intl.string(j.t['3taPdn']),
                                           position: 'top',
@@ -128,7 +128,7 @@ let P = (e) => {
                           (0, r.jsxs)('div', {
                               className: T.headerRight,
                               children: [
-                                  N &&
+                                  B &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(s.Text, {
@@ -145,7 +145,7 @@ let P = (e) => {
                                           ]
                                       }),
                                   I === x.AW.HOME &&
-                                      (N
+                                      (B
                                           ? (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
                                                 buttonRef: q,
@@ -157,7 +157,7 @@ let P = (e) => {
                                                     }),
                                                         f.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: Y }));
                                                 },
-                                                disabled: U !== E.g.MOUNTED && U !== E.g.FINISHED,
+                                                disabled: U !== v.g.MOUNTED && U !== v.g.FINISHED,
                                                 children: j.intl.string(j.t.X3tnc3)
                                             })
                                           : (0, r.jsx)(s.zxk, {
@@ -174,13 +174,13 @@ let P = (e) => {
                       className: T.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(O.K, {}, t + 1)) })
-                          : D.slice(0, L).map((e, t) => {
+                          : M.slice(0, L).map((e, t) => {
                                 let n,
                                     l = m.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (V)
-                                    if (U === E.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: T.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
-                                    else U === E.g.SORT_OUT ? (n = T.sortChangedOutro) : U === E.g.SHUFFLE_IN ? (n = T.shuffleIntro) : U === E.g.SORT_IN && (n = T.sortChangedIntro);
+                                    if (U === v.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: T.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
+                                    else U === v.g.SORT_OUT ? (n = T.sortChangedOutro) : U === v.g.SHUFFLE_IN ? (n = T.shuffleIntro) : U === v.g.SORT_IN && (n = T.sortChangedIntro);
                                 return (0, r.jsx)(
                                     b.k0,
                                     {
@@ -189,7 +189,7 @@ let P = (e) => {
                                             pageSection: 'popular picks',
                                             categoryPosition: 2
                                         },
-                                        children: (0, r.jsx)(v.Z, {
+                                        children: (0, r.jsx)(E.Z, {
                                             product: e,
                                             category: l,
                                             user: k,

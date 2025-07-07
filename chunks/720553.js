@@ -56,7 +56,7 @@ function p(t) {
                   size: 'md',
                   transitionState: f,
                   onClose: g,
-                  title: h.intl.string(h.t['3w1QGh']),
+                  heading: h.intl.string(h.t['3w1QGh']),
                   headerBody: p ? h.intl.format(h.t.aCYv19, {}) : h.intl.string(h.t.soRxRU),
                   actions: [
                       {

@@ -97,8 +97,8 @@ function g(e) {
               onClose: t,
               size: 'sm',
               gradientColor: 'blue',
-              image: v,
-              title: null != C ? C : y.intl.string(y.t.FpoiHR),
+              graphic: v,
+              heading: null != C ? C : y.intl.string(y.t.FpoiHR),
               headerBody: null != O ? O : y.intl.string(y.t['/CidxM']),
               children: _
           })

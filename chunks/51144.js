@@ -3,10 +3,11 @@
     Fc: () => I,
     Ft: () => N,
     W5: () => A,
-    ZP: () => C,
+    ZP: () => R,
     _T: () => E,
     oY: () => g,
-    u5: () => O
+    u5: () => O,
+    vP: () => C
 }),
     n(415506));
 var r = n(442837),
@@ -145,7 +146,11 @@ function N(e) {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
-let C = {
+function C() {
+    let e = a.default.getCurrentUser();
+    return null != e && e.isStaff();
+}
+let R = {
     getName: g,
     useName: E,
     isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
@@ -157,6 +162,7 @@ let C = {
             (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation)
         );
     },
+    getUserIsStaff: C,
     getFormattedName: y,
     getGlobalName: b,
     humanizeStatus: O,

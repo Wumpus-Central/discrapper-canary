@@ -29,16 +29,16 @@ let d = {
         r.useEffect(() => {
             (_(b), C !== c.f7.VISIBLE && O(c.f7.VISIBLE));
         }, [b, C]);
-        let v = (e) => new Promise((t) => setTimeout(t, e)),
-            E = (0, l.k6)();
+        let E = (e) => new Promise((t) => setTimeout(t, e)),
+            v = (0, l.k6)();
         return {
             selectedTab: m,
             transitionState: C,
             transitionToTab: r.useCallback(
                 async (t, r) => {
-                    (t === c.AW.HOME && p && h(), r ? (O(c.f7.OUT), await v(1.1 * c.lb), _(t), n || E.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), O(c.f7.IN)) : (p ? ((0, c.RE)(t) ? f(d[t]) : g(), _(c.AW.CATALOG)) : _(t), n || E.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), O(c.f7.VISIBLE));
+                    (t === c.AW.HOME && p && h(), r ? (O(c.f7.OUT), await E(1.1 * c.lb), _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), O(c.f7.IN)) : (p ? ((0, c.RE)(t) ? f(d[t]) : g(), _(c.AW.CATALOG)) : _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), O(c.f7.VISIBLE));
                 },
-                [E, n, e, p, f, g, h]
+                [v, n, e, p, f, g, h]
             )
         };
     };

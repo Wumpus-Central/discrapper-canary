@@ -29,9 +29,9 @@ var n = r(255367),
     A = r(38516),
     C = r(891949),
     T = r(252547),
-    R = r(484527),
-    M = r(131033),
-    L = r(296768),
+    M = r(484527),
+    L = r(131033),
+    R = r(296768),
     D = r(978313),
     G = r(206583),
     k = r(388032),
@@ -163,7 +163,7 @@ function F(e) {
                 detectedGame: r,
                 trackAction: d
             }),
-            (0, n.jsx)(L.Z, {
+            (0, n.jsx)(R.Z, {
                 applicationId: i.id,
                 onClose: c,
                 trackAction: d,
@@ -195,7 +195,7 @@ function Y(e) {
                         detectedGame: t,
                         trackAction: a
                     }),
-                    (0, n.jsx)(R.Z, {
+                    (0, n.jsx)(M.Z, {
                         detectedGame: t,
                         trackClick: a,
                         onInviteResolved: o,
@@ -205,7 +205,7 @@ function Y(e) {
                         detectedGame: t,
                         trackClick: a
                     }),
-                    (0, n.jsx)(M.Z, { detectedGame: t })
+                    (0, n.jsx)(L.Z, { detectedGame: t })
                 ]
             })
         ]
@@ -224,10 +224,10 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
             }),
             [w, A] = i.useState(null),
             C = (0, P.N)(r),
-            [T, R] = i.useState(null),
-            M = (0, f.q)(r),
-            L = (0, u.e7)([h.Z], () => h.Z.getGame(r)),
-            D = null != (t = null == L ? void 0 : L.name) ? t : null == M ? void 0 : M.name,
+            [T, M] = i.useState(null),
+            L = (0, f.q)(r),
+            R = (0, u.e7)([h.Z], () => h.Z.getGame(r)),
+            D = null != (t = null == R ? void 0 : R.name) ? t : null == L ? void 0 : L.name,
             G = (e, t) => {
                 var n;
                 (0, I.UE)({
@@ -251,8 +251,8 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
         }),
         (0, f.Z)(N),
         i.useEffect(() => {
-            b.startsWith('en') || (null == L ? void 0 : L.summaryLocalized) != null || m.Z.getDetectableGamesSupplemental([r], { forceFetch: !0 });
-        }, [r, null == L ? void 0 : L.summaryLocalized, b]),
+            b.startsWith('en') || (null == R ? void 0 : R.summaryLocalized) != null || m.Z.getDetectableGamesSupplemental([r], { forceFetch: !0 });
+        }, [r, null == R ? void 0 : R.summaryLocalized, b]),
         i.useEffect(() => {
             (async () => {
                 if (0 === N.length) {
@@ -286,7 +286,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                 officialGuildId: null == T || null == (e = T.guild) ? void 0 : e.id
             });
         }),
-        null == L || null == M)
+        null == R || null == L)
             ? null
             : (0, n.jsx)(d.Y0X, {
                   transitionState: o,
@@ -297,8 +297,8 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                       orientation: 'auto',
                       children: [
                           (0, n.jsx)(Q, {
-                              detectedGame: L,
-                              application: M,
+                              detectedGame: R,
+                              application: L,
                               entries: C,
                               viewId: S,
                               trackAction: G
@@ -308,8 +308,8 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                                   className: l()(K.content, K.mainContent),
                                   children: [
                                       (0, n.jsx)(F, {
-                                          detectedGame: L,
-                                          application: M,
+                                          detectedGame: R,
+                                          application: L,
                                           entries: C,
                                           officialGuildInvite: T,
                                           similarGames: N,
@@ -319,8 +319,8 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                                           trackAction: G
                                       }),
                                       (0, n.jsx)(Y, {
-                                          detectedGame: L,
-                                          setOfficialGuildInvite: R,
+                                          detectedGame: R,
+                                          setOfficialGuildInvite: M,
                                           trackAction: G,
                                           onClose: c,
                                           appContext: v

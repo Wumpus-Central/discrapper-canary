@@ -41,9 +41,12 @@ function p(e) {
             (0, r.jsx)(o.zxk, {
                 className: m.button,
                 onClick: () => {
-                    let e = null;
-                    for (let t of Object.values(s.Z.getRoles(n))) (0, l.YB)(t) && (e = t.id);
-                    (a.Z.open(n, d.pNK.ROLES), null !== e && a.Z.selectRole(e), p(u.L.SECONDARY));
+                    let e = null,
+                        t = s.Z.getRoles(n);
+                    if (null != t && 0 !== Object.keys(t).length) {
+                        for (let n of Object.values(t)) (0, l.YB)(n) && (e = n.id);
+                        (a.Z.open(n, d.pNK.ROLES), null !== e && a.Z.selectRole(e), p(u.L.SECONDARY));
+                    }
                 },
                 children: _.cta
             })

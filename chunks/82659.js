@@ -1,11 +1,12 @@
-n.d(t, { u: () => p });
+n.d(t, { u: () => h });
 var r = n(255367);
 n(73800);
 var i = n(257465),
     a = n(369585),
-    o = n(530392),
-    s = n(37148);
-function l(e, t, n) {
+    o = n(103866),
+    s = n(213734),
+    l = n(37148);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +19,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +30,12 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             }));
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,29 +47,29 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,26 +78,28 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function p(e) {
-    var { title: t, headerBody: n, input: l, preview: u, actions: _, actionBarInput: p, children: h } = e,
-        m = f(e, ['title', 'headerBody', 'input', 'preview', 'actions', 'actionBarInput', 'children']);
+function h(e) {
+    var { size: t, heading: n, headerBody: c, input: d, preview: p, actions: h, actionBarInput: m, children: g } = e,
+        E = _(e, ['size', 'heading', 'headerBody', 'input', 'preview', 'actions', 'actionBarInput', 'children']);
+    let b = null != t ? t : null != d || null != g ? 'md' : 'sm';
     return (0, r.jsxs)(
         i.IX,
-        d(c({}, m), {
+        f(u({}, E), {
+            size: b,
             children: [
-                (0, r.jsx)(s.x, {
-                    title: t,
-                    body: n
+                (0, r.jsx)(l.x, {
+                    heading: n,
+                    body: c
                 }),
-                (0, r.jsx)(o.h, {
-                    controls: l,
-                    children: h
+                (0, r.jsx)(o.f, {
+                    controls: d,
+                    children: g
                 }),
-                (0, r.jsx)(o.m, { children: u }),
+                (0, r.jsx)(s.m, { children: p }),
                 (0, r.jsx)(a.G, {
-                    leading: p,
-                    actions: _,
-                    actionsFullWidth: null == p
+                    leading: m,
+                    actions: h,
+                    actionsFullWidth: null == m
                 })
             ]
         })

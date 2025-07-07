@@ -88,7 +88,7 @@ let p = {
                             a.u,
                             _(d({}, e), {
                                 size: 'sm',
-                                title: t,
+                                heading: t,
                                 headerBody: n,
                                 actions: i
                             })

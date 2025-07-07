@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => es }), n(388685));
+(n.d(t, { ZP: () => el }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,31 +21,30 @@ var r = n(255367),
     O = n(786761),
     C = n(3148),
     y = n(753206),
-    N = n(50101),
-    I = n(402235),
-    E = n(441536),
-    S = n(494620),
-    T = n(598077),
-    P = n(496675),
-    w = n(709586),
-    R = n(764260),
-    Z = n(946724),
-    D = n(95242),
-    k = n(541575),
-    A = n(420966),
-    L = n(337344),
-    M = n(275296),
-    G = n(203377),
-    U = n(981631),
-    B = n(141006),
-    F = n(388032),
-    z = n(93841),
-    H = n(275302),
-    V = n(877248),
-    W = n(179517),
-    Y = n(79829),
-    K = n(540167);
-function X(e) {
+    N = n(402235),
+    I = n(441536),
+    E = n(494620),
+    S = n(598077),
+    T = n(496675),
+    P = n(709586),
+    w = n(764260),
+    R = n(946724),
+    Z = n(95242),
+    D = n(541575),
+    k = n(420966),
+    A = n(337344),
+    L = n(275296),
+    M = n(203377),
+    G = n(981631),
+    U = n(141006),
+    B = n(388032),
+    F = n(93841),
+    z = n(275302),
+    H = n(877248),
+    V = n(179517),
+    W = n(79829),
+    Y = n(540167);
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,12 +69,12 @@ function X(e) {
     }
     return e;
 }
-let q = (0, j.Un)({
+let X = (0, j.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 797967)),
         webpackId: 797967
     }),
-    Q = o().debounce((e, t) => (0, R.Uv)(e, t), 200);
-function J(e) {
+    q = o().debounce((e, t) => (0, w.Uv)(e, t), 200);
+function Q(e) {
     let { role: t, disabled: n } = e,
         [l, s] = i.useState(t.name);
     return (
@@ -83,67 +82,67 @@ function J(e) {
             s(t.name);
         }, [t.name]),
         (0, r.jsx)(g.xJW, {
-            title: F.intl.string(F.t.dLbkBg),
+            title: B.intl.string(B.t.dLbkBg),
             required: !0,
             children: (0, r.jsx)(g.oil, {
                 type: 'text',
                 value: l,
-                maxLength: U.VKK,
+                maxLength: G.VKK,
                 onChange: function (e) {
-                    (s(e), Q(t.id, e));
+                    (s(e), q(t.id, e));
                 },
                 disabled: n
             })
         })
     );
 }
-let $ = [
+let J = [
     {
-        id: Z.g.SOLID,
-        colors: { primary_color: U.p6O },
-        labelString: F.t['8Qyaho']
+        id: R.g.SOLID,
+        colors: { primary_color: G.p6O },
+        labelString: B.t['8Qyaho']
     },
     {
-        id: Z.g.GRADIENT,
-        colors: B.Eg,
-        labelString: F.t.XpWmJy
+        id: R.g.GRADIENT,
+        colors: U.Eg,
+        labelString: B.t.XpWmJy
     },
     {
-        id: Z.g.HOLOGRAPHIC,
-        colors: B.SK,
-        labelString: F.t.QTKppa
+        id: R.g.HOLOGRAPHIC,
+        colors: U.SK,
+        labelString: B.t.QTKppa
     }
 ];
-function ee(e) {
+function $(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: a } = e,
-        o = (e) => l || (a && [Z.g.HOLOGRAPHIC, Z.g.GRADIENT].includes(e)),
-        d = er(F.intl.string(F.t.Mi9KbW)),
+        o = (e) => l || (a && [R.g.HOLOGRAPHIC, R.g.GRADIENT].includes(e)),
+        d = en(B.intl.string(B.t.Mi9KbW)),
         h = (0, f.ZP)(),
         b = (0, v.oC)(n, t),
         j = {
             dark: {
-                src: W,
+                src: V,
                 name: t.name
             },
             light: {
-                src: Y,
+                src: W,
                 name: t.name
             }
         };
     return (0, r.jsxs)(g.xJW, {
         children: [
             (0, r.jsxs)(g.vwX, {
-                className: H.roleStyleFormTitle,
+                className: z.roleStyleFormTitle,
                 children: [
-                    (0, r.jsx)('div', { children: F.intl.string(F.t['9wVJRE']) }),
+                    (0, r.jsx)('div', { children: B.intl.string(B.t['9wVJRE']) }),
                     (0, r.jsx)(_.ZP, {
                         contentTypes: [u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE],
                         children: (e) => {
                             let { visibleContent: t } = e;
                             return t === u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE
                                 ? (0, r.jsx)(g.IGR, {
-                                      text: F.intl.string(F.t.y2b7CA),
-                                      className: H.newBadge
+                                      text: B.intl.string(B.t.y2b7CA),
+                                      className: z.newBadge
                                   })
                                 : null;
                         }
@@ -151,23 +150,23 @@ function ee(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: H.roleStyleContainer,
-                children: $.map((e) => {
+                className: z.roleStyleContainer,
+                children: J.map((e) => {
                     let { id: l, colors: a, labelString: u } = e;
                     return (0, r.jsxs)(
                         'button',
                         {
-                            className: s()(H.roleStylePreviewContainer, {
-                                [H.selected]: i === l,
-                                [H.disabled]: o(l)
+                            className: s()(z.roleStylePreviewContainer, {
+                                [z.selected]: i === l,
+                                [z.disabled]: o(l)
                             }),
                             onClick: () => {
-                                (0, R.Jf)(t.id, l);
+                                (0, w.Jf)(t.id, l);
                             },
                             children: [
                                 (0, r.jsx)(g.Rny, {
                                     children: (0, r.jsx)('div', {
-                                        className: H.roleStyleMessageContainer,
+                                        className: z.roleStyleMessageContainer,
                                         children: (0, r.jsx)(y.Z, {
                                             author: {
                                                 nick: d.author.username,
@@ -188,8 +187,8 @@ function ee(e) {
                                     })
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: H.roleStyleLabel,
-                                    children: F.intl.string(u)
+                                    className: z.roleStyleLabel,
+                                    children: B.intl.string(u)
                                 })
                             ]
                         },
@@ -199,40 +198,40 @@ function ee(e) {
             }),
             a &&
                 (0, r.jsxs)('div', {
-                    className: H.roleStyleUpsell,
+                    className: z.roleStyleUpsell,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: H.roleStyleUpsellMesssages,
+                            className: z.roleStyleUpsellMesssages,
                             children: [
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'button-outline-primary-text',
-                                    children: F.intl.format(z.default.VpEDJS, { magical: (0, r.jsx)(et, {}) })
+                                    children: B.intl.format(F.default.VpEDJS, { magical: (0, r.jsx)(ee, {}) })
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'button-outline-primary-text',
-                                    children: F.intl.string(z.default.FJZeZG)
+                                    children: B.intl.string(F.default.FJZeZG)
                                 })
                             ]
                         }),
                         (0, r.jsxs)(g.gtL, {
                             size: g.zxk.Sizes.MEDIUM,
-                            className: H.roleStyleUpsellButton,
-                            innerClassName: H.roleStyleUpsellButtonContents,
+                            className: z.roleStyleUpsellButton,
+                            innerClassName: z.roleStyleUpsellButtonContents,
                             shineSize: g.gtL.ShineSizes.SMALL,
                             onClick: function () {
-                                ((0, E.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)());
+                                ((0, I.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)());
                             },
                             look: g.zxk.Looks.FILLED,
                             color: g.zxk.Colors.CUSTOM,
                             children: [
-                                (0, r.jsx)(w.Z, {
-                                    className: H.guildBoostBadge,
+                                (0, r.jsx)(P.Z, {
+                                    className: z.guildBoostBadge,
                                     height: 16,
                                     width: 16
                                 }),
-                                F.intl.string(F.t['+7XY39'])
+                                B.intl.string(B.t['+7XY39'])
                             ]
                         })
                     ]
@@ -240,65 +239,65 @@ function ee(e) {
         ]
     });
 }
-function et() {
+function ee() {
     let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
-            primaryColor: (0, c.Rf)(B.SK.primary_color),
-            secondaryColor: (0, c.Rf)(B.SK.secondary_color),
-            tertiaryColor: (0, c.Rf)(B.SK.tertiary_color),
+            primaryColor: (0, c.Rf)(U.SK.primary_color),
+            secondaryColor: (0, c.Rf)(U.SK.secondary_color),
+            tertiaryColor: (0, c.Rf)(U.SK.tertiary_color),
             useReducedMotion: e,
             roleStyle: 'username',
             includeConvenienceGlow: !0,
             animateGradient: !0
         });
     return (0, r.jsx)('span', {
-        style: X({}, t),
+        style: K({}, t),
         className: n,
-        'data-text': F.intl.string(z.default['+/IHLi']),
-        children: F.intl.string(z.default['+/IHLi'])
+        'data-text': B.intl.string(F.default['+/IHLi']),
+        children: B.intl.string(F.default['+/IHLi'])
     });
 }
-function en(e) {
+function et(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: s, hasEnhancedRoleColors: a } = e;
     return (0, r.jsxs)(g.xJW, {
-        className: H.colorPicker,
-        title: F.intl.string(F.t['1F6FzM']),
+        className: z.colorPicker,
+        title: B.intl.string(B.t['1F6FzM']),
         required: !0,
         children: [
             (0, r.jsx)(g.R94, {
-                className: H.colorDescription,
-                children: F.intl.string(F.t['9UCxlZ'])
+                className: z.colorDescription,
+                children: B.intl.string(B.t['9UCxlZ'])
             }),
-            (0, r.jsx)(q, {
-                defaultColor: U.p6O,
-                colors: s === Z.g.GRADIENT && a ? B.tl : U.pmI,
+            (0, r.jsx)(X, {
+                defaultColor: G.p6O,
+                colors: s === R.g.GRADIENT && a ? U.tl : G.pmI,
                 value: i.color,
                 disabled: l,
                 onChange: (e) => {
                     var t;
-                    return ((t = e), void (i.color !== t && (t !== U.p6O || 0 !== i.color) && (t === U.p6O && (t = 0), (0, R.OW)(i.id, t))));
+                    return ((t = e), void (i.color !== t && (t !== G.p6O || 0 !== i.color) && (t === G.p6O && (t = 0), (0, w.OW)(i.id, t))));
                 },
-                secondaryValue: s === Z.g.GRADIENT && a && (null == (t = i.colors) ? void 0 : t.secondary_color) != null ? (null == (n = i.colors) ? void 0 : n.secondary_color) : void 0,
+                secondaryValue: s === R.g.GRADIENT && a && (null == (t = i.colors) ? void 0 : t.secondary_color) != null ? (null == (n = i.colors) ? void 0 : n.secondary_color) : void 0,
                 onChangeGradientColors: (e) => {
                     let t = {
                         primary_color: e[0],
                         secondary_color: e[1],
                         tertiary_color: void 0
                     };
-                    (0, R.TW)(i.id, t, Z.g.GRADIENT);
+                    (0, w.TW)(i.id, t, R.g.GRADIENT);
                 },
-                isGradient: s === Z.g.GRADIENT,
+                isGradient: s === R.g.GRADIENT,
                 customPickerPosition: 'right'
             })
         ]
     });
 }
-function er(e) {
+function en(e) {
     return i.useMemo(() => {
         var t, n;
         let r = (0, O.e5)(
-            ((t = X(
+            ((t = K(
                 {},
                 (0, C.ZP)({
                     channelId: '1337',
@@ -307,7 +306,7 @@ function er(e) {
             )),
             (n = n =
                 {
-                    state: U.yb.SENT,
+                    state: G.yb.SENT,
                     id: '31337'
                 }),
             Object.getOwnPropertyDescriptors
@@ -325,21 +324,21 @@ function er(e) {
             t)
         );
         return (
-            (r.author = new T.Z({
+            (r.author = new S.Z({
                 id: '313337',
-                username: F.intl.string(F.t.cqpybG),
+                username: B.intl.string(B.t.cqpybG),
                 discriminator: '0000',
                 bot: !1
             })),
-            (r.author.getAvatarURL = () => K.Z),
+            (r.author.getAvatarURL = () => Y.Z),
             r
         );
     }, [e]);
 }
-function ei(e) {
+function er(e) {
     var t, n, i, l;
     let { role: a, guildId: o, selectedStyle: c, disableInteraction: d } = e,
-        u = er(F.intl.string(F.t.Mi9KbW)),
+        u = en(B.intl.string(B.t.Mi9KbW)),
         p = {
             nick: u.author.username,
             colorStrings: {
@@ -350,18 +349,18 @@ function ei(e) {
             colorString: null != (l = a.colorString) ? l : void 0
         },
         f = {
-            src: W,
+            src: V,
             name: a.name
         },
         h = {
-            src: Y,
+            src: W,
             name: a.name
         },
         x = (0, v.oC)(o, a),
-        b = [U.BRd.DARK, U.BRd.DARKER, U.BRd.MIDNIGHT, U.BRd.LIGHT];
+        b = [G.BRd.DARK, G.BRd.DARKER, G.BRd.MIDNIGHT, G.BRd.LIGHT];
     return (0, r.jsx)(g.Rny, {
         children: (0, r.jsx)('div', {
-            className: s()(H.previewContainer, { [H.disableInteraction]: d }),
+            className: s()(z.previewContainer, { [z.disableInteraction]: d }),
             'aria-hidden': !0,
             children: b.map((e) =>
                 (0, r.jsx)(
@@ -371,10 +370,10 @@ function ei(e) {
                         disableAdaptiveTheme: !0,
                         children: (t) =>
                             (0, r.jsxs)('div', {
-                                className: s()(t, H.messageWrapper),
+                                className: s()(t, z.messageWrapper),
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: H.messageContainer,
+                                        className: z.messageContainer,
                                         children: (0, r.jsx)(y.Z, {
                                             author: p,
                                             message: u,
@@ -383,13 +382,13 @@ function ei(e) {
                                             isGroupStart: !0
                                         })
                                     }),
-                                    e === U.BRd.LIGHT &&
-                                        c !== Z.g.SOLID &&
+                                    e === G.BRd.LIGHT &&
+                                        c !== R.g.SOLID &&
                                         (0, r.jsx)(g.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'text-secondary',
-                                            className: H.lightThemeNotice,
-                                            children: F.intl.string(F.t.nxwm3N)
+                                            className: z.lightThemeNotice,
+                                            children: B.intl.string(B.t.nxwm3N)
                                         })
                                 ]
                             })
@@ -400,112 +399,112 @@ function ei(e) {
         })
     });
 }
-function el(e) {
+function ei(e) {
     let { role: t, disabled: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(g.j7V, {
                 disabled: n,
                 value: t.hoist,
-                onChange: (e) => (0, R.we)(t.id, e, t.mentionable),
+                onChange: (e) => (0, w.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
-                children: F.intl.string(F.t.vceJPj)
+                children: B.intl.string(B.t.vceJPj)
             }),
-            (0, r.jsx)(g.$i$, { className: H.divider }),
+            (0, r.jsx)(g.$i$, { className: z.divider }),
             (0, r.jsx)(g.j7V, {
                 disabled: n,
                 value: t.mentionable,
-                onChange: (e) => (0, R.we)(t.id, t.hoist, e),
-                note: F.intl.string(F.t.kRg5W1),
+                onChange: (e) => (0, w.we)(t.id, t.hoist, e),
+                note: B.intl.string(B.t.kRg5W1),
                 hideBorder: !0,
-                children: F.intl.format(F.t.DTXoJS, {})
+                children: B.intl.format(B.t.DTXoJS, {})
             })
         ]
     });
 }
-function es(e) {
+function el(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: l } = e,
-        a = (0, I.yH)(t.id, n),
-        o = (0, d.e7)([Z.Z], () => Z.Z.getRoleStyleData(n.id)),
-        c = null != o && a ? o.currentStyle : Z.g.SOLID,
-        u = (0, N.Ek)(t.id, 'GuildSettingsRolesEditDisplay') && !t.features.has(U.oNc.ENHANCED_ROLE_COLORS),
+        a = (0, N.yH)(t.id, n),
+        o = (0, d.e7)([R.Z], () => R.Z.getRoleStyleData(n.id)),
+        c = null != o && a ? o.currentStyle : R.g.SOLID,
+        u = !a,
         m = (0, b.pM)(null == t ? void 0 : t.id, n.id),
         p = i || m,
-        f = (0, d.e7)([P.Z], () => P.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: x } = (0, D.Z)(0),
-        { scrolledToTop: j, handleScroll: _ } = (0, A.V)();
+        f = (0, d.e7)([T.Z], () => T.Z.canImpersonateRole(t, n)),
+        { headerHeight: h, headerRef: x } = (0, Z.Z)(0),
+        { scrolledToTop: j, handleScroll: _ } = (0, k.V)();
     return (0, r.jsx)(g.yWw, {
-        className: H.scroller,
+        className: z.scroller,
         style: { scrollPaddingTop: h },
         onScroll: _,
         children: (0, r.jsxs)('div', {
-            className: V.contentWidth,
+            className: H.contentWidth,
             children: [
                 (0, r.jsx)('div', {
-                    className: s()(V.header, V.stickyHeader, { [V.stickyHeaderElevated]: !j }),
+                    className: s()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !j }),
                     ref: x,
-                    children: (0, r.jsx)(A.Z, {
+                    children: (0, r.jsx)(k.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: G.ZI.DISPLAY,
+                        selectedSection: M.ZI.DISPLAY,
                         setSelectedSection: l
                     })
                 }),
-                (0, r.jsx)(J, {
+                (0, r.jsx)(Q, {
                     role: n,
                     disabled: p
                 }),
                 (0, r.jsx)('div', {
-                    className: H.noticeContainer,
-                    children: (0, r.jsx)(M.Z, { role: n })
+                    className: z.noticeContainer,
+                    children: (0, r.jsx)(L.Z, { role: n })
                 }),
-                (0, r.jsx)(g.$i$, { className: H.divider }),
+                (0, r.jsx)(g.$i$, { className: z.divider }),
                 (a || u) &&
                     null != c &&
-                    (0, r.jsx)(ee, {
+                    (0, r.jsx)($, {
                         role: n,
                         guildId: t.id,
                         selectedStyle: c,
                         disabled: p,
                         shouldShowUpsell: u
                     }),
-                c !== Z.g.HOLOGRAPHIC &&
+                c !== R.g.HOLOGRAPHIC &&
                     null != c &&
-                    (0, r.jsx)(en, {
+                    (0, r.jsx)(et, {
                         role: n,
                         disabled: p,
                         currentStyle: c,
                         hasEnhancedRoleColors: a
                     }),
-                c === Z.g.HOLOGRAPHIC &&
-                    (0, r.jsx)(S.Z, {
-                        className: H.holographicInfoBox,
+                c === R.g.HOLOGRAPHIC &&
+                    (0, r.jsx)(E.Z, {
+                        className: z.holographicInfoBox,
                         children: (0, r.jsx)(g.Text, {
                             variant: 'text-xs/medium',
-                            children: F.intl.string(z.default.tBhCys)
+                            children: B.intl.string(F.default.tBhCys)
                         })
                     }),
-                (0, r.jsx)(k.Z, {
+                (0, r.jsx)(D.Z, {
                     guild: t,
                     disabled: p,
                     role: n
                 }),
-                (0, r.jsx)(ei, {
+                (0, r.jsx)(er, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: c,
                     disableInteraction: !a
                 }),
-                (0, r.jsx)(g.$i$, { className: H.divider }),
-                (0, r.jsx)(el, {
+                (0, r.jsx)(g.$i$, { className: z.divider }),
+                (0, r.jsx)(ei, {
                     role: n,
                     disabled: p
                 }),
                 f
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(g.$i$, { className: H.divider }),
-                              (0, r.jsx)(L.L, {
+                              (0, r.jsx)(g.$i$, { className: z.divider }),
+                              (0, r.jsx)(A.L, {
                                   guildId: t.id,
                                   role: n
                               })

@@ -25,10 +25,10 @@ let y = (t) => {
         z = (0, s.ZP)(n, !0),
         S = n.id,
         A = n.isForumPost(),
-        f = (0, d.e7)([U.Z], () => U.Z.getGuild(n.getGuildId())),
-        h = (0, u.u1)(S),
+        h = (0, d.e7)([U.Z], () => U.Z.getGuild(n.getGuildId())),
+        f = (0, u.u1)(S),
         { isSubscriptionGated: v } = (0, T.Z)(n.id),
-        R = (0, I.Z)(f, n),
+        R = (0, I.Z)(h, n),
         [N, H] = l.useState(),
         x = (0, d.e7)([m.default], () => n.isOwner(m.default.getId()), [n]),
         B = (0, _.q)('DeleteChannelConfirm'),
@@ -42,7 +42,7 @@ let y = (t) => {
             [n.id]
         ),
         P = A && (b || (x && M < 1)),
-        j = h.length > 0 && (n.type === L.d4z.GUILD_VOICE || n.type === L.d4z.GUILD_STAGE_VOICE);
+        j = f.length > 0 && (n.type === L.d4z.GUILD_VOICE || n.type === L.d4z.GUILD_STAGE_VOICE);
     if (
         (l.useEffect(() => {
             (async () => {
@@ -52,18 +52,18 @@ let y = (t) => {
             })();
         }, [n, S]),
         l.useEffect(() => {
-            null != f && f.features.has(L.oNc.COMMUNITY) && (f.rulesChannelId === S ? H(p.j.RULES) : f.publicUpdatesChannelId === S && H(p.j.UPDATES));
-        }, [f, S]),
-        null == f)
+            null != h && h.features.has(L.oNc.COMMUNITY) && (h.rulesChannelId === S ? H(p.j.RULES) : h.publicUpdatesChannelId === S && H(p.j.UPDATES));
+        }, [h, S]),
+        null == h)
     )
         return null;
     if (null != N) {
         let t,
             n = async () => {
-                (await c.Z.open(f.id, L.pNK.ONBOARDING), await e());
+                (await c.Z.open(h.id, L.pNK.ONBOARDING), await e());
             },
             l = async () => {
-                (await c.Z.open(f.id, L.pNK.COMMUNITY), await e());
+                (await c.Z.open(h.id, L.pNK.COMMUNITY), await e());
             };
         switch (N) {
             case p.j.DEFAULT:
@@ -89,7 +89,7 @@ let y = (t) => {
         }
         return B
             ? (0, i.jsx)(r.u, {
-                  title: D.intl.string(D.t['TY/V+P']),
+                  heading: D.intl.string(D.t['TY/V+P']),
                   onClose: e,
                   headerBody: t,
                   transitionState: O,
@@ -161,7 +161,7 @@ let y = (t) => {
               size: 'sm',
               onClose: e,
               transitionState: O,
-              title: X,
+              heading: X,
               headerBody: Y,
               actions: [
                   {
@@ -179,7 +179,7 @@ let y = (t) => {
                   ? (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: D.intl.format(D.t.Ze005O, { count: h.length })
+                        children: D.intl.format(D.t.Ze005O, { count: f.length })
                     })
                   : null
           })
@@ -208,7 +208,7 @@ let y = (t) => {
                                     variant: 'text-md/normal',
                                     color: 'header-secondary',
                                     className: G.warningText,
-                                    children: D.intl.format(D.t.Ze005O, { count: h.length })
+                                    children: D.intl.format(D.t.Ze005O, { count: f.length })
                                 })
                               : null
                       ]

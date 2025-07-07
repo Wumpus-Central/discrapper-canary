@@ -130,8 +130,8 @@ function R(e) {
         ? (0, r.jsx)(c.I, {
               transitionState: n,
               onClose: R,
-              image: A,
-              title: T.intl.string(T.t['5CyJBQ']),
+              graphic: A,
+              heading: T.intl.string(T.t['5CyJBQ']),
               headerBody: T.intl.string(T.t.NRBYjo),
               actions: [
                   {

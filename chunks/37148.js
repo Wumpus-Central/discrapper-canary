@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(667137),
     d = n(946598);
 function f(e) {
-    let { hasGradient: t = !1 } = e,
+    let { shouldColorMix: t = !1 } = e,
         { onClose: n } = (0, u.v)();
     return (0, r.jsx)(l.P, {
         onClick: n,
@@ -28,7 +28,7 @@ function _(e) {
             a,
             (0, r.jsxs)('div', {
                 className: d.headerTrailing,
-                children: [null != n && n, (0, r.jsx)(f, { hasGradient: i })]
+                children: [null != n && n, (0, r.jsx)(f, { shouldColorMix: i })]
             })
         ]
     });
@@ -81,57 +81,64 @@ function p(e) {
                 (0, r.jsxs)('div', {
                     ref: h,
                     className: o()(d.headerTrailing, d.headerTrailingAbsolute),
-                    children: [null != n && n, (0, r.jsx)(f, { hasGradient: a })]
+                    children: [null != n && n, (0, r.jsx)(f, { shouldColorMix: a })]
                 })
             ]
         })
     );
 }
 function h(e) {
-    let { gradientColor: t, image: n, title: i, titleTextVariant: a, body: l, alignCenter: f = !1, leading: h, trailing: m } = e,
+    let { gradientColor: t, graphic: n, heading: i, headingTextVariant: a, body: l, alignCenter: f = !1, leading: h, trailing: m } = e,
         { headingId: g } = (0, u.v)(),
         E = null != t,
         b = f ? p : _,
-        y = (0, r.jsx)('header', {
-            className: o()(d.header, d.section),
-            children: (0, r.jsx)(b, {
-                leading: h,
-                trailing: m,
-                hasGradient: E,
-                children: (0, r.jsxs)(s.Kq, {
-                    gap: 8,
-                    className: o()(d.headerMain, { [d.headerMainCentered]: f }),
-                    children: [
-                        null != n &&
-                            (0, r.jsx)('div', {
-                                className: d.headerImage,
-                                children: (0, r.jsx)('img', {
-                                    src: n,
-                                    alt: ''
-                                })
-                            }),
-                        null != i &&
-                            (0, r.jsx)(s.X6, {
-                                id: g,
-                                variant: null != a ? a : 'heading-lg/semibold',
-                                color: 'text-primary',
-                                children: i
-                            }),
-                        null != l &&
-                            (0, r.jsx)(s.xv, {
-                                variant: 'text-md/normal',
-                                color: 'text-secondary',
-                                children: l
+        y = (0, r.jsx)('div', {
+            className: d.headerGraphic,
+            children: (0, r.jsx)('img', {
+                src: n,
+                alt: '',
+                draggable: !1
+            })
+        }),
+        O = (0, r.jsx)(s.X6, {
+            id: g,
+            variant: null != a ? a : 'heading-lg/semibold',
+            color: 'text-primary',
+            children: i
+        }),
+        v = (0, r.jsx)(s.xv, {
+            variant: 'text-md/normal',
+            color: 'text-secondary',
+            children: l
+        }),
+        I = (0, r.jsx)('header', {
+            className: o()(d.section, d.header, { [d.headerCentered]: f }),
+            children: (0, r.jsxs)(s.Kq, {
+                gap: 8,
+                children: [
+                    (0, r.jsx)('div', {
+                        className: d.headerLayout,
+                        children: (0, r.jsx)(b, {
+                            leading: h,
+                            trailing: m,
+                            hasGradient: E,
+                            children: (0, r.jsxs)(s.Kq, {
+                                gap: 8,
+                                className: d.headerMain,
+                                children: [null != n && y, null == n && null != i && O]
                             })
-                    ]
-                })
+                        })
+                    }),
+                    null != n && null != i && O,
+                    null != l && v
+                ]
             })
         });
     return E
         ? (0, r.jsx)(c.$, {
               color: t,
               className: d.headerGradient,
-              children: y
+              children: I
           })
-        : y;
+        : I;
 }
