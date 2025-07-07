@@ -65,15 +65,15 @@ function N() {
         var n;
         let e = y.default.getCurrentUser(),
             i = null != (n = null == e ? void 0 : e.isStaff()) && n;
-        r.setQuery(
-            v,
-            {
+        r.setQuery({
+            query: v,
+            filters: {
                 friends: !0,
                 staff: i,
                 provisional: !1
             },
-            t,
-            (function () {
+            blacklist: t,
+            boosters: (function () {
                 let e = b.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof p.mn && e.isDM()),
                     t = Math.max(
                         ...e.map((e) => {
@@ -93,7 +93,7 @@ function N() {
                     n
                 );
             })()
-        );
+        });
     }
     return !1;
 }

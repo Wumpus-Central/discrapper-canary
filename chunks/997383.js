@@ -146,7 +146,14 @@ class I {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(m.h8.USER)) return;
         let { userFilters: i } = this.options;
-        (void 0 !== t && f.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, v(m.h8.USER, this.options)));
+        (void 0 !== t && f.Z.requestMembers(t, e, 100),
+            r.setLimit(n),
+            r.setQuery({
+                query: e,
+                filters: i,
+                blacklist: this._userBlacklist,
+                boosters: v(m.h8.USER, this.options)
+            }));
     }
     queryGroupDMs(e, t) {
         if (!this._include(m.h8.GROUP_DM)) return [];

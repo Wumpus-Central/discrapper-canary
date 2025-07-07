@@ -87,15 +87,16 @@ class S {
                     type: 'QUERY_CLEAR'
                 }));
     }
-    setQuery(e, t, n, r) {
-        null != e &&
-            ((this._nextQuery = {
-                query: e,
-                filters: t,
-                blacklist: n,
-                boosters: null != r ? r : {},
-                limit: this._limit
-            }),
+    setQuery(e) {
+        let { query: t, filters: n, blacklist: r, boosters: i, boosterFallback: a } = e;
+        ((this._nextQuery = {
+            query: t,
+            filters: n,
+            blacklist: r,
+            boosters: null != i ? i : {},
+            boosterFallback: null != a ? a : 1,
+            limit: this._limit
+        }),
             this._setNextQuery());
     }
     _setNextQuery() {

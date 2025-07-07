@@ -55,19 +55,18 @@ let f = {
             trailing: !0
         }
     );
-function O(e, r) {
-    return e * (null != r ? r : 1);
+function O(e, r, t) {
+    return e * (null != r ? r : t);
 }
 function y(e, r) {
-    var t, n;
-    let { query: o, limit: a, filters: f, blacklist: d, whitelist: b } = r,
-        v = null != f && f.strict && null != (t = f.guild) ? t : null,
-        y = null != (n = r.boosters) ? n : {},
-        g = RegExp('^'.concat(i.Z.escape(o)), 'i'),
-        h = RegExp(i.Z.escape(o), 'i'),
+    var t;
+    let { query: n, limit: o, filters: a, blacklist: f, whitelist: d, boosters: b, boosterFallback: v } = r,
+        y = null != a && a.strict && null != (t = a.guild) ? t : null,
+        g = RegExp('^'.concat(i.Z.escape(n)), 'i'),
+        h = RegExp(i.Z.escape(n), 'i'),
         E = [];
-    if ('' === o) return m(o, E, e);
-    let S = o.toLocaleLowerCase(),
+    if ('' === n) return m(n, E, e);
+    let S = n.toLocaleLowerCase(),
         w = (0, c.Fv)(S);
     (p.forEach((e, r) => {
         let t;
@@ -80,57 +79,57 @@ function y(e, r) {
                     return (null == o || r.isProvisional === o) && ((!0 === e && !0 === r.isFriend) || (!0 === n && !0 === r.isStaff) || (null != l && (null != r.nicknames[l] || null === r.nicknames[l])));
                 }
                 return !0;
-            })(r, e, f, d, b)
+            })(r, e, a, f, d)
         )
             return;
-        let { username: n } = e;
-        if (r === o)
+        let { username: o } = e;
+        if (r === n)
             t = {
                 id: r,
-                username: n,
+                username: o,
                 comparator: r,
-                score: O(10, y[r])
+                score: O(10, b[r], v)
             };
         else {
-            let o = [e.username, e.friendNickname, e.globalName].filter((e) => null != e);
-            if (null != v) {
-                let r = e.nicknames[v];
-                null != r && o.push(r);
-            } else o.push(...Object.values(e.nicknames).filter((e) => null != e));
-            o.forEach((e) => {
-                var o, a;
+            let n = [e.username, e.friendNickname, e.globalName].filter((e) => null != e);
+            if (null != y) {
+                let r = e.nicknames[y];
+                null != r && n.push(r);
+            } else n.push(...Object.values(e.nicknames).filter((e) => null != e));
+            n.forEach((e) => {
+                var n, a;
                 let i,
                     u = (0, c._I)(e.toLocaleLowerCase());
                 (g.test(e)
                     ? (i = {
                           comparator: e,
-                          score: O(10, y[r])
+                          score: O(10, b[r], v)
                       })
                     : h.test(e)
                       ? (i = {
                             comparator: e,
-                            score: O(5, y[r])
+                            score: O(5, b[r], v)
                         })
                       : l()(S, u)
                         ? (i = {
                               comparator: e,
-                              score: O(1, y[r])
+                              score: O(1, b[r], v)
                           })
                         : l()(w, (0, c.Fv)(u)) &&
                           (i = {
                               comparator: e,
-                              score: O(1, y[r])
+                              score: O(1, b[r], v)
                           }),
                     null != i &&
                         (null == t || t.score < i.score) &&
-                        ((o = s({}, i)),
+                        ((n = s({}, i)),
                         (a = a =
                             {
                                 id: r,
-                                username: n
+                                username: o
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                             : (function (e, r) {
                                   var t = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -139,16 +138,16 @@ function y(e, r) {
                                   }
                                   return t;
                               })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
-                        (t = o)));
+                        (t = n)));
             });
         }
         null != t && E.push(t);
     }),
         E.sort(u.Z),
-        E.length > a && (E.length = a),
-        m(o, E, e));
+        E.length > o && (E.length = o),
+        m(n, E, e));
 }
 function m(e, r, t) {
     let n = {

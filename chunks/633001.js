@@ -426,27 +426,38 @@ function G() {
                             children: 'No recent focused pids'
                         }),
                     [...t].reverse().map((e) => {
-                        var t;
-                        let [n, r] = e;
+                        let [t, n, l] = e;
                         return (0, a.jsx)(
-                            'div',
+                            r.Fragment,
                             {
-                                children: (0, a.jsxs)(c.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'text-default',
-                                    children: [
-                                        (0, a.jsx)(U, {
-                                            pid: r,
-                                            tag: 'span'
-                                        }),
-                                        ' - ',
-                                        null != (t = null == r ? void 0 : r.toString()) ? t : 'null',
-                                        ' @ ',
-                                        F(n, !0)
-                                    ]
+                                children: (0, a.jsx)(c.ua7, {
+                                    position: 'left',
+                                    text: l === m.d5.TRACK_FOCUS ? 'Tracked Focus Event' : 'Clear Focus Event',
+                                    children: (e) => {
+                                        var r;
+                                        return (0, a.jsx)(
+                                            'div',
+                                            R(k({}, e), {
+                                                children: (0, a.jsxs)(c.Text, {
+                                                    variant: 'text-sm/medium',
+                                                    color: l === m.d5.TRACK_FOCUS ? 'text-default' : 'text-danger',
+                                                    children: [
+                                                        (0, a.jsx)(U, {
+                                                            pid: n,
+                                                            tag: 'span'
+                                                        }),
+                                                        ' - ',
+                                                        null != (r = null == n ? void 0 : n.toString()) ? r : 'null',
+                                                        ' @ ',
+                                                        F(t, !0)
+                                                    ]
+                                                })
+                                            })
+                                        );
+                                    }
                                 })
                             },
-                            ''.concat(r, '-').concat(n)
+                            ''.concat(n, '-').concat(t)
                         );
                     })
                 ]

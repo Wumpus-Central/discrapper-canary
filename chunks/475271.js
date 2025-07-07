@@ -1,10 +1,11 @@
-(r.r(t), r.d(t, { default: () => l }), r(415506));
+(r.r(t), r.d(t, { default: () => c }), r(415506));
 var n = r(255367);
 r(73800);
 var o = r(481060),
     a = r(429142),
-    s = r(234888);
-function i(e) {
+    s = r(353250),
+    i = r(234888);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -29,27 +30,27 @@ function i(e) {
     }
     return e;
 }
-let l = {
+let c = {
     showCaptcha: function (e, t) {
-        let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: d, captchaService: c, options: u } = e;
+        let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { sitekey: c, captchaService: d, options: u } = e;
         (0, o.ZDy)(
             async () => {
                 let { default: e } = await r.e('12192').then(r.bind(r, 718742));
                 return (r) =>
                     (0, n.jsx)(
                         e,
-                        i(
+                        l(
                             {
                                 onCaptchaVerify: (e, r) =>
                                     t({
                                         captcha_key: e,
                                         captcha_rqtoken: r
                                     }),
-                                captchaService: c,
-                                sitekey: d
+                                captchaService: d,
+                                sitekey: c
                             },
-                            l,
+                            s,
                             u,
                             r
                         )
@@ -57,46 +58,48 @@ let l = {
             },
             {
                 Layer: a.ZP,
-                modalKey: s.A
+                modalKey: i.A
             }
         );
     },
     showCaptchaAsync: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: l, captchaService: d, captchaSessionId: c, options: u } = e;
-        return new Promise((e, p) => {
+            { sitekey: c, captchaService: d, captchaSessionId: u, options: p } = e;
+        return new Promise((e, _) => {
             (0, o.ZDy)(
                 async () => {
                     let { default: o } = await r.e('12192').then(r.bind(r, 718742));
                     return (r) =>
                         (0, n.jsx)(
                             o,
-                            i(
+                            l(
                                 {
                                     onCaptchaVerify: (t, r) =>
                                         e({
                                             captcha_key: t,
                                             captcha_rqtoken: r,
-                                            captcha_session_id: c
+                                            captcha_session_id: u
                                         }),
                                     captchaService: d,
-                                    sitekey: l,
-                                    onReject: () => p(Error('cancel captcha'))
+                                    sitekey: c,
+                                    onReject: (e) => {
+                                        e === s.CaptchaError.CANCEL ? _(new s.CaptchaCancelError()) : _(Error('cancel captcha'));
+                                    }
                                 },
                                 t,
-                                u,
+                                p,
                                 r
                             )
                         );
                 },
                 {
                     Layer: a.ZP,
-                    modalKey: s.A
+                    modalKey: i.A
                 }
             );
         });
     },
     useIsCaptchaModalOpen: function () {
-        return (0, o.s9z)((e) => (0, o.DEQ)(e, s.A));
+        return (0, o.s9z)((e) => (0, o.DEQ)(e, i.A));
     }
 };

@@ -18,8 +18,8 @@ var i = n(255367),
     y = n(594174),
     O = n(254761),
     x = n(70956),
-    C = n(960048),
-    j = n(145597),
+    C = n(145597),
+    j = n(41534),
     w = n(333031),
     k = n(610394),
     P = n(380736),
@@ -169,9 +169,14 @@ class L extends r.PureComponent {
             error: e,
             info: t
         });
-        let i = (0, j.getPID)();
+        let i = (0, C.getPID)();
         (m.Z.setOverlayCrashed(i, e), m.Z.setInputLocked(!0, i));
-        let r = C.Z.captureCrash(e, { extra: t });
+        let r = (0, j.V)(e, b.gl.OutOfProcess, {
+            extra: {
+                info: t,
+                location: n
+            }
+        });
         (m.Z.track(E.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
@@ -194,7 +199,7 @@ class L extends r.PureComponent {
                           error: n,
                           onLock: () => {
                               var e;
-                              let t = null != (e = this.pid) ? e : (0, j.getPID)();
+                              let t = null != (e = this.pid) ? e : (0, C.getPID)();
                               (m.Z.setInputLocked(!0, t), this.setState({ showError: !1 }));
                           },
                           onDisable: () => {
@@ -203,11 +208,11 @@ class L extends r.PureComponent {
                           },
                           onCrashDisabled: () => {
                               var e;
-                              let t = null != (e = this.pid) ? e : (0, j.getPID)();
+                              let t = null != (e = this.pid) ? e : (0, C.getPID)();
                               (m.Z.updateOverlayState(t, b.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 }));
                           },
                           onReload: () => {
-                              (m.Z.setReloadOverlay((0, j.getPID)()), this.setState({ showError: !1 }));
+                              (m.Z.setReloadOverlay((0, C.getPID)()), this.setState({ showError: !1 }));
                           }
                       })
                   })

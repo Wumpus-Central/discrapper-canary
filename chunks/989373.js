@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => C }), n(415506), n(388685));
+(n.r(t), n.d(t, { default: () => w }), n(415506), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -16,20 +16,21 @@ n(606206);
 var b = n(998502),
     v = n(145597);
 n(371467);
-var h = n(554370),
-    g = n(371651),
-    y = n(610394),
-    I = n(757744),
-    S = n(981631);
-let E = new u.Z('AppOverlay');
-async function O(e, t) {
+var h = n(41534),
+    g = n(554370),
+    y = n(371651),
+    I = n(610394),
+    S = n(757744),
+    E = n(981631);
+let O = new u.Z('AppOverlay');
+async function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1000,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
     if (m.isPlatformEmbedded) {
         try {
             await b.ZP.isAlwaysOnTop(t);
         } catch (e) {
-            E.error('Window does not exist while trying to show inactive', e);
+            (O.error('Window does not exist while trying to show inactive', e), (0, h.D)(e, l.gl.OutOfProcess));
         }
         for (let o = 0; o < r; o++)
             try {
@@ -40,12 +41,12 @@ async function O(e, t) {
                 var i;
                 if ((null == (i = e.message) ? void 0 : i.includes('IPC')) && o < r - 1) {
                     let t = (n / 2) * Math.pow(2, o + 1);
-                    (E.error('Failed to show inactive, retrying in '.concat(t, 'ms'), e), await new Promise((e) => setTimeout(e, t)));
-                } else throw e;
+                    (O.error('Failed to show inactive, retrying in '.concat(t, 'ms'), e), await new Promise((e) => setTimeout(e, t)));
+                } else throw ((0, h.D)(e, l.gl.OutOfProcess), e);
             }
     }
 }
-let C = i.memo(function (e) {
+let w = i.memo(function (e) {
     let { withTitleBar: t, windowKey: n } = e;
     return !(function (e, t) {
         let n = (0, o.e7)([d.Z], () => d.Z.getWindow(e)),
@@ -56,15 +57,15 @@ let C = i.memo(function (e) {
                 let e = p.default.getFocusedPID();
                 return !m.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
             }),
-            [h, I] = i.useState(b),
-            [E, C] = i.useState(!1),
+            [h, g] = i.useState(b),
+            [S, O] = i.useState(!1),
             w = i.useCallback(() => {
                 let e = (0, v.getPID)(),
                     n = null != f.Z.getVoiceChannelId();
-                (a.Z.track(S.rMx.OVERLAY_INITIALIZED, {
+                (a.Z.track(E.rMx.OVERLAY_INITIALIZED, {
                     voice_widget_connected: n,
-                    text_widget_connected: y.ZP.isPinned(S.Odu.TEXT),
-                    overlay_render_method: l.gl[g.default.getOverlayMethod(e)],
+                    text_widget_connected: I.ZP.isPinned(E.Odu.TEXT),
+                    overlay_render_method: l.gl[y.default.getOverlayMethod(e)],
                     unpinned_widget_types: _.Z.getAllUnpinnedPinnedWidgets(t)
                 }),
                     a.Z.successfullyShown(e));
@@ -72,10 +73,10 @@ let C = i.memo(function (e) {
         (0, c.Ng)(() => {
             let e = (e) => {
                 let t = null != n ? n : window;
-                e.data === y.Il &&
+                e.data === I.Il &&
                     t.requestAnimationFrame(() => {
                         t.requestAnimationFrame(() => {
-                            window.parent.postMessage(y.A8, '*');
+                            window.parent.postMessage(I.A8, '*');
                         });
                     });
             };
@@ -94,13 +95,13 @@ let C = i.memo(function (e) {
                     }),
                     (r.current = e.requestAnimationFrame(async () => {
                         try {
-                            await O(e, t);
+                            await C(e, t);
                         } catch (e) {
                             a.Z.setOverlayCrashed((0, v.getPID)(), e);
                             return;
                         }
                         u.current = e.setTimeout(() => {
-                            (I(!0), C(!0), w(), (s.current = null));
+                            (g(!0), O(!0), w(), (s.current = null));
                         }, 100);
                     })));
             },
@@ -116,14 +117,14 @@ let C = i.memo(function (e) {
             (0, c.zq)(() => {
                 null != s.current && s.current();
             }),
-            E
+            S
         );
-    })(n, I.$S)
+    })(n, S.$S)
         ? null
         : (0, r.jsx)(s.Z, {
               withTitleBar: t,
               windowKey: n,
               title: 'Discord Overlay',
-              children: (0, r.jsx)(h.Z, {})
+              children: (0, r.jsx)(g.Z, {})
           });
 });

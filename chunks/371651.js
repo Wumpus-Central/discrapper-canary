@@ -575,7 +575,8 @@ function eN() {
 function eC(e) {
     if (((k = e.pid), V)) {
         var t;
-        F = [...F, [performance.now(), null != (t = e.pid) ? t : null]];
+        let n = [performance.now(), null != (t = e.pid) ? t : null, e.trackMode];
+        F = [...F, n];
     }
     return !(0, m.isValidGamePID)(e.pid) || ((0, m.setPID)(e.pid), !0);
 }

@@ -425,7 +425,7 @@ function eE(e, t) {
 }
 function eb(e) {
     for (let t of (eh(), e.guilds)) eE(t.id, t.emojis.items);
-    ((ee = +!!e.guilds.every((e) => null != e.emojis)), eg());
+    ((ee = +!!e.guilds.every((e) => null != e.emojis.items)), eg());
 }
 function ey(e) {
     for (let t in (eh(), e.emojis)) eE(t, e.emojis[t]);

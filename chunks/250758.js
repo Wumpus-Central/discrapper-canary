@@ -271,7 +271,15 @@ let k = new A(i.Z, {
             else if (i.type === _.Sap.EMPTY || (i.type === _.Sap.FILTER && i.filter !== _.dCx.FILTER_FROM && i.filter !== _.dCx.FILTER_MENTIONS)) (null != c && (c.context.clearQuery(), (c.results = [])), (n = R(r, i)));
             else if (null != c) {
                 let { token: e } = i;
-                null != e && e.getFullMatch().trim().length > 0 ? (h.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = R(r, i)));
+                null != e && e.getFullMatch().trim().length > 0
+                    ? (h.Z.requestMembers(r, e.getFullMatch().trim(), 10),
+                      c.context.setQuery({
+                          query: e.getFullMatch().trim(),
+                          filters: { guild: r }
+                      }),
+                      (n = o.autocompletes),
+                      (u = !1))
+                    : (c.context.clearQuery(), (n = R(r, i)));
             }
             return (
                 (E[r] = O({

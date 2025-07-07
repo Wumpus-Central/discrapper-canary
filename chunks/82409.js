@@ -240,7 +240,8 @@ function R(e, t, n) {
 }
 function D(e) {
     let { hideBanner: t } = e,
-        n = (0, c.e7)([y.Z], () => y.Z.shouldHide);
+        n = (0, c.e7)([y.Z], () => y.Z.shouldHide),
+        [l, a] = (0, i.useState)(!1);
     return (0, r.jsx)('div', {
         className: o()(N.caughtUpContainer, { [N.hide]: n || t }),
         children: (0, r.jsxs)('div', {
@@ -258,8 +259,10 @@ function D(e) {
                 }),
                 (0, r.jsx)(u.Dio, {
                     size: 'sm',
+                    onMouseEnter: () => a(!0),
+                    onMouseLeave: () => a(!1),
                     className: N.caughtUpCloseIcon,
-                    color: h.Z.BACKGROUND_MOD_STRONG,
+                    color: l ? h.Z.CONTROL_ICON_SECONDARY_HOVER : h.Z.ICON_TERTIARY,
                     onClickCapture: () => y.Z.dismiss()
                 })
             ]

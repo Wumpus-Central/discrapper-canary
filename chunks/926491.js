@@ -178,7 +178,7 @@ let L = function (e) {
     },
     j = (e) => {
         let { guilds: t } = e;
-        ((T = null), (I = new Map()), (C = new Map()), t.forEach(G), (O = +!!t.every((e) => null != e.stickers)));
+        ((T = null), (I = new Map()), (C = new Map()), t.forEach(G), (O = +!!t.every((e) => null != e.stickers.items)));
     },
     U = () => {
         ((T = null), (I = new Map()), (C = new Map()), (O = 0));

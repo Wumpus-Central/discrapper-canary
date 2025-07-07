@@ -1,6 +1,6 @@
 n.d(t, {
-    R$: () => f,
-    ZP: () => m
+    R$: () => _,
+    ZP: () => f
 });
 var r = n(913527),
     i = n.n(r),
@@ -8,17 +8,18 @@ var r = n(913527),
     s = n(570140),
     a = n(479531),
     o = n(771308),
-    c = n(314897),
-    u = n(626135),
-    d = n(573261),
-    h = n(959776),
-    p = n(981631),
-    g = n(723359);
-function m(e) {
+    c = n(353250),
+    u = n(314897),
+    d = n(626135),
+    h = n(573261),
+    p = n(959776),
+    g = n(981631),
+    m = n(723359);
+function f(e) {
     var t,
         n,
         { invite: r = null, giftCodeSKUId: i = null } = e;
-    return f(
+    return _(
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -85,40 +86,40 @@ function m(e) {
         t)
     );
 }
-function f(e) {
-    let { email: t, phoneToken: n, username: r, globalName: m, consent: f, password: _, guildTemplateCode: x, birthday: b, invite: E = null, giftCodeSKUId: v = null, promoEmailConsent: I = null, usedUsernameSuggestion: j = null } = e;
-    if ((s.Z.dispatch({ type: 'REGISTER' }), null != b)) {
-        ((0, h.Z)(b, p.jXE.REGISTER),
-            u.default.track(p.rMx.AGE_GATE_ACTION, {
-                source: g.L0.REGISTER,
-                action: g.Al.AGE_GATE_SUBMITTED
+function _(e) {
+    let { email: t, phoneToken: n, username: r, globalName: f, consent: _, password: x, guildTemplateCode: b, birthday: E, invite: v = null, giftCodeSKUId: I = null, promoEmailConsent: j = null, usedUsernameSuggestion: O = null } = e;
+    if ((s.Z.dispatch({ type: 'REGISTER' }), null != E)) {
+        ((0, p.Z)(E, g.jXE.REGISTER),
+            d.default.track(g.rMx.AGE_GATE_ACTION, {
+                source: m.L0.REGISTER,
+                action: m.Al.AGE_GATE_SUBMITTED
             }));
-        let e = i()().diff(b, 'years');
-        e < 13 || u.default.track(p.rMx.USER_AGE_SUBMITTED, { age_bucket: e >= 13 && e <= 17 ? '13-17' : e >= 18 && e <= 22 ? '18-22' : '23+' });
+        let e = i()().diff(E, 'years');
+        e < 13 || d.default.track(g.rMx.USER_AGE_SUBMITTED, { age_bucket: e >= 13 && e <= 17 ? '13-17' : e >= 18 && e <= 22 ? '18-22' : '23+' });
     }
-    return d.Z.post({
-        url: p.ANM.REGISTER,
+    return h.Z.post({
+        url: g.ANM.REGISTER,
         body: {
-            fingerprint: c.default.getFingerprint(),
+            fingerprint: u.default.getFingerprint(),
             email: t,
             username: r,
-            global_name: m,
-            password: _,
-            invite: E,
-            consent: f,
+            global_name: f,
+            password: x,
+            invite: v,
+            consent: _,
             phone_token: n,
-            date_of_birth: null == b ? void 0 : b.format('YYYY-MM-DD'),
-            gift_code_sku_id: v,
-            guild_template_code: x,
-            promotional_email_opt_in: null == I ? void 0 : I.checked
+            date_of_birth: null == E ? void 0 : E.format('YYYY-MM-DD'),
+            gift_code_sku_id: I,
+            guild_template_code: b,
+            promotional_email_opt_in: null == j ? void 0 : j.checked
         },
         trackedActionData: {
             event: l.NetworkActionNames.USER_REGISTER,
             properties: {
-                invite_code: E,
-                used_username_suggestion: j,
-                promotional_email_opt_in: null == I ? void 0 : I.checked,
-                promotional_email_pre_checked: null == I ? void 0 : I.preChecked,
+                invite_code: v,
+                used_username_suggestion: O,
+                promotional_email_opt_in: null == j ? void 0 : j.checked,
+                promotional_email_pre_checked: null == j ? void 0 : j.preChecked,
                 was_unique_username: !0
             }
         },
@@ -129,16 +130,17 @@ function f(e) {
                 type: 'REGISTER_SUCCESS',
                 token: e.body.token
             }),
-                u.default.track(p.rMx.AGE_GATE_ACTION, {
-                    source: g.L0.REGISTER,
-                    action: g.Al.AGE_GATE_SUCCESS
+                d.default.track(g.rMx.AGE_GATE_ACTION, {
+                    source: m.L0.REGISTER,
+                    action: m.Al.AGE_GATE_SUCCESS
                 }));
         },
         (e) => {
+            if (e instanceof c.CaptchaCancelError) throw e;
             let t = new a.Z(e);
             throw (
-                null != t.getFieldErrors('date_of_birth') && o.wE(g.L0.REGISTER),
-                u.default.track(p.rMx.REGISTER_SUBMIT_ERRORED, {
+                null != t.getFieldErrors('date_of_birth') && o.wE(m.L0.REGISTER),
+                d.default.track(g.rMx.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage('email'),
                     phone_error_reason: t.getFirstFieldErrorMessage('phone_token'),
