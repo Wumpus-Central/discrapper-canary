@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(315066),
     C = n(243126),
     O = n(38900),
-    E = n(709999),
-    v = n(328626),
+    v = n(709999),
+    E = n(328626),
     S = n(619899),
     x = n(215023),
     y = n(981631),
@@ -26,16 +26,16 @@ var r = n(255367),
     T = n(806734);
 let P = (e) => {
     var t;
-    let { isLoading: n, sortedSkuIds: i, handleTransition: P, numVisibleItems: L, tab: k } = e,
-        I = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        B = h.ZP.canUseCollectibles(I),
-        N = (0, _.s)('useShopHomeSorting') && k === x.AW.HOME,
-        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: M, showRecommendationOption: D } = (0, C.N)(i, B),
-        F = (0, S.St)(w),
+    let { isLoading: n, sortedSkuIds: i, handleTransition: P, numVisibleItems: L, tab: I } = e,
+        k = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        B = h.ZP.canUseCollectibles(k),
+        N = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
+        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: M } = (0, C.N)(i, B),
+        D = (0, S.St)(w),
         H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
         V = !H && W,
-        { animationPhase: U, startAnimation: G } = (0, v.y)(),
+        { animationPhase: U, startAnimation: G } = (0, E.y)(),
         z = (0, b.sp)(),
         Y = null != (t = null == z ? void 0 : z.sessionId) ? t : '',
         q = l.useRef(null),
@@ -52,7 +52,7 @@ let P = (e) => {
             },
             [G, R, Y]
         );
-    return null == I
+    return null == k
         ? null
         : (0, r.jsxs)('div', {
               className: o()(T.popularPicksSection, T.centeredSection),
@@ -65,9 +65,9 @@ let P = (e) => {
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: k === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
+                                      children: I === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
-                                  D &&
+                                  M &&
                                       (0, r.jsx)(s.ua7, {
                                           text: j.intl.string(j.t['3taPdn']),
                                           position: 'top',
@@ -144,7 +144,7 @@ let P = (e) => {
                                               })
                                           ]
                                       }),
-                                  k === x.AW.HOME &&
+                                  I === x.AW.HOME &&
                                       (N
                                           ? (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
@@ -152,12 +152,12 @@ let P = (e) => {
                                                 onClick: () => {
                                                     (G({
                                                         isShuffling: !0,
-                                                        onOutroComplete: M,
+                                                        onOutroComplete: F,
                                                         returnRef: q
                                                     }),
                                                         f.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: Y }));
                                                 },
-                                                disabled: U !== v.g.MOUNTED && U !== v.g.FINISHED,
+                                                disabled: U !== E.g.MOUNTED && U !== E.g.FINISHED,
                                                 children: j.intl.string(j.t.X3tnc3)
                                             })
                                           : (0, r.jsx)(s.zxk, {
@@ -174,13 +174,13 @@ let P = (e) => {
                       className: T.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(O.K, {}, t + 1)) })
-                          : F.slice(0, L).map((e, t) => {
+                          : D.slice(0, L).map((e, t) => {
                                 let n,
                                     l = m.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (V)
-                                    if (U === v.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: T.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
-                                    else U === v.g.SORT_OUT ? (n = T.sortChangedOutro) : U === v.g.SHUFFLE_IN ? (n = T.shuffleIntro) : U === v.g.SORT_IN && (n = T.sortChangedIntro);
+                                    if (U === E.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: T.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
+                                    else U === E.g.SORT_OUT ? (n = T.sortChangedOutro) : U === E.g.SHUFFLE_IN ? (n = T.shuffleIntro) : U === E.g.SORT_IN && (n = T.sortChangedIntro);
                                 return (0, r.jsx)(
                                     b.k0,
                                     {
@@ -189,11 +189,11 @@ let P = (e) => {
                                             pageSection: 'popular picks',
                                             categoryPosition: 2
                                         },
-                                        children: (0, r.jsx)(E.Z, {
+                                        children: (0, r.jsx)(v.Z, {
                                             product: e,
                                             category: l,
-                                            user: I,
-                                            tab: k,
+                                            user: k,
+                                            tab: I,
                                             className: n
                                         })
                                     },

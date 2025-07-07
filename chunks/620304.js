@@ -177,7 +177,7 @@ function Z(e) {
                                             className: P.textContentContainer,
                                             children: [
                                                 (0, r.jsx)(s.xv, {
-                                                    className: P.text,
+                                                    className: o()(P.text, P.boostCountText),
                                                     variant: 'text-xs/semibold',
                                                     children: k
                                                         ? I.intl.formatToPlainString(x.default['Ehpq+/'], { appliedBoostCount: R })
@@ -190,7 +190,7 @@ function Z(e) {
                                                     width: 12,
                                                     height: 12,
                                                     direction: _.Z.Directions.RIGHT,
-                                                    className: P.text
+                                                    className: o()(P.text, P.boostCountText)
                                                 })
                                             ]
                                         })

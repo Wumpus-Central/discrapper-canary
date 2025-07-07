@@ -36,7 +36,7 @@ function c(e, t) {
 }
 async function u(e, t) {
     let n = e.metadata;
-    if (null != n) return n;
+    if (null != n && Object.keys(n).length > 0) return n;
     let a = o.Z.getActivityMetadata(t);
     if (null != a) return a;
     if (null == e.session_id) throw Error('null/undefined session_id');

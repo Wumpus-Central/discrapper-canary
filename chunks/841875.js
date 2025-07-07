@@ -34,7 +34,7 @@ function m() {
                 ]
             }),
             (0, r.jsx)(O, {}),
-            (0, r.jsx)(v, {})
+            (0, r.jsx)(E, {})
         ]
     });
 }
@@ -141,12 +141,12 @@ let _ = (e) => {
                     variant: 'text-md/semibold',
                     children: h.intl.string(h.t.K1xGoK)
                 }),
-                (0, r.jsx)(E, { colors: e }),
-                (0, r.jsx)(E, { colors: t })
+                (0, r.jsx)(v, { colors: e }),
+                (0, r.jsx)(v, { colors: t })
             ]
         });
     },
-    E = (e) => {
+    v = (e) => {
         let { colors: t } = e,
             { colorFilters: n, onToggleColor: l } = (0, p.S)();
         return (0, r.jsx)('div', {
@@ -166,7 +166,7 @@ let _ = (e) => {
             })
         });
     },
-    v = () => {
+    E = () => {
         let { themeFilters: e, onToggleTheme: t } = (0, p.S)(),
             n = (0, d.ZP)() === g.BR.DARK,
             i = l.useCallback(

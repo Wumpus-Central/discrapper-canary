@@ -187,7 +187,6 @@ function w(e) {
                                   ),
                                   D[t] && e.push(...U[t].map((e) => p(e, R === m.jP.SIDEBAR, k(e[0].id) === v.KZ.UNREAD))));
                           }),
-                (null == t ? void 0 : t.length) !== 0 && e.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer')),
                 e
             );
         }, [n, t, h, D, L, U, Z, p, R, k]);
@@ -198,20 +197,16 @@ function w(e) {
             c = null != (a = null != (o = null != (l = null == (e = U) || null == (t = e.TODAY[0]) ? void 0 : t[0]) ? l : null == e || null == (r = e.YESTERDAY[0]) ? void 0 : r[0]) ? o : null == e || null == (i = e.OLDER[0]) ? void 0 : i[0]) ? a : null;
         y.Z.setInboxReadState(s, c);
     }, [U, n]);
-    let B = null;
+    let B = null != t && t.length > 0 && null != a && l,
+        F = (0, r.jsx)(
+            'div',
+            {
+                className: o()(S.loadMore, { [S.showLoadMore]: B }),
+                children: (0, r.jsx)(u.$jN, {})
+            },
+            'loading-more-after'
+        );
     return (
-        null != t &&
-            t.length > 0 &&
-            null != a &&
-            l &&
-            (B = (0, r.jsx)(
-                'div',
-                {
-                    className: S.loadingMore,
-                    children: (0, r.jsx)(u.$jN, {})
-                },
-                'loading-more-after'
-            )),
         (function (e) {
             let { loadingInitial: t, messagesByCategory: n } = e,
                 r = i.useRef(!1),
@@ -304,7 +299,7 @@ function w(e) {
                                 )),
                                 (i = i =
                                     {
-                                        children: [G, B]
+                                        children: [G, F]
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))

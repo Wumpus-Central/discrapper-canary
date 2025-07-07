@@ -17,86 +17,89 @@ var r = n(255367),
 function _(e) {
     var t;
     let { isFetchingCategories: n, isFullScreen: _, scrollerRef: C, tab: O } = e,
-        E = (0, s.sp)(),
-        v = null != (t = null == E ? void 0 : E.sessionId) ? t : '',
+        v = (0, s.sp)(),
+        E = null != (t = null == v ? void 0 : v.sessionId) ? t : '',
         { noCache: S, includeUnpublished: x } = (0, b.Z)(),
         y = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        { skus: j, currentPage: T, totalCount: P } = (0, p.a)(),
-        L = (0, i.Wu)([c.Z], () => c.Z.getProductsBySkus(j)),
+        { skus: j, currentPage: T, totalCount: P, isFetchingResults: L } = (0, p.a)(),
+        I = (0, i.Wu)([c.Z], () => c.Z.getProductsBySkus(j)),
         k = l.useCallback(() => {
             var e;
             null == C || null == (e = C.current) || e.scrollToTop({ animate: !0 });
         }, [C]),
-        I = (0, u.a)(),
-        B = l.useMemo(() => I(L), [I, L]);
+        B = (0, u.a)(),
+        N = l.useMemo(() => B(I), [B, I]);
     l.useEffect(() => {
         n ||
             (0, f.n)({
-                sessionId: v,
+                sessionId: E,
                 checkpoint: f.a.SHOP_RENDERED,
                 tab: O,
                 isFullScreen: _,
                 unpublishedCategoriesShown: x,
                 cacheDisabled: S
             });
-    }, [v, _, x, S, n, O]);
-    let N = l.useRef(null),
-        { setQueryPageSize: A, setQueryPageOffset: R, queryPageSize: w } = (0, d.S)();
-    return (l.useEffect(() => {
-        if (null != N.current) {
+    }, [E, _, x, S, n, O]);
+    let A = l.useRef(null),
+        { setQueryPageSize: R, setQueryPageOffset: w, queryPageSize: Z } = (0, d.S)();
+    l.useEffect(() => {
+        if (null != A.current) {
             let e = new ResizeObserver(() => {
-                if (null == N.current) return;
-                let { clientWidth: e } = N.current;
-                A(Math.floor(5 * Math.max(1, Math.floor(e / 246))));
+                if (null == A.current) return;
+                let { clientWidth: e } = A.current;
+                R(Math.floor(5 * Math.max(1, Math.floor(e / 246))));
             });
-            return (e.observe(N.current), () => e.disconnect());
+            return (e.observe(A.current), () => e.disconnect());
         }
-    }, [A]),
-    n || null == y)
-        ? (0, r.jsx)(g.Z, {})
-        : (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (0, r.jsx)('div', {
-                      className: m.products,
-                      ref: N,
-                      children: B.map((e, t) => {
-                          let n = c.Z.getCategory(e.categorySkuId);
-                          return null == n
-                              ? null
-                              : (0, r.jsx)(
-                                    s.k0,
-                                    {
-                                        newValue: { tilePosition: t },
-                                        children: (0, r.jsx)(
-                                            h.Z,
-                                            {
-                                                product: e,
-                                                user: y,
-                                                category: n,
-                                                tab: O
-                                            },
-                                            e.skuId
-                                        )
-                                    },
-                                    e.skuId
-                                );
-                      })
-                  }),
-                  P > w &&
+    }, [R]);
+    let F = n || L || null == y;
+    return (0, r.jsx)('div', {
+        ref: A,
+        children: F
+            ? (0, r.jsx)(g.Z, {})
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
                       (0, r.jsx)('div', {
-                          className: m.paginationContainer,
-                          children: (0, r.jsx)('div', {
-                              children: (0, r.jsx)(o.DsT, {
-                                  currentPage: T,
-                                  totalCount: P,
-                                  pageSize: w,
-                                  onPageChange: (e) => {
-                                      (R((e - 1) * w), k());
-                                  },
-                                  disablePaginationGap: !0
+                          className: m.products,
+                          children: N.map((e, t) => {
+                              let n = c.Z.getCategory(e.categorySkuId);
+                              return null == n
+                                  ? null
+                                  : (0, r.jsx)(
+                                        s.k0,
+                                        {
+                                            newValue: { tilePosition: t },
+                                            children: (0, r.jsx)(
+                                                h.Z,
+                                                {
+                                                    product: e,
+                                                    user: y,
+                                                    category: n,
+                                                    tab: O
+                                                },
+                                                e.skuId
+                                            )
+                                        },
+                                        e.skuId
+                                    );
+                          })
+                      }),
+                      P > Z &&
+                          (0, r.jsx)('div', {
+                              className: m.paginationContainer,
+                              children: (0, r.jsx)('div', {
+                                  children: (0, r.jsx)(o.DsT, {
+                                      currentPage: T,
+                                      totalCount: P,
+                                      pageSize: Z,
+                                      onPageChange: (e) => {
+                                          (w((e - 1) * Z), k());
+                                      },
+                                      disablePaginationGap: !0
+                                  })
                               })
                           })
-                      })
-              ]
-          });
+                  ]
+              })
+    });
 }

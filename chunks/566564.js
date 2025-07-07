@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(548685),
     C = n(580914),
     O = n(963278),
-    E = n(921120),
-    v = n(384067),
+    v = n(921120),
+    E = n(384067),
     S = n(215023),
     x = n(981631),
     y = n(388032),
@@ -26,7 +26,7 @@ var r = n(255367),
 let T = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: i, isFetchingCategories: s, tab: c, isFullScreen: d } = e,
-            { noCache: h, includeUnpublished: E } = (0, b.Z)(),
+            { noCache: h, includeUnpublished: v } = (0, b.Z)(),
             S = (0, u.sp)(),
             x = null != (t = null == S ? void 0 : S.sessionId) ? t : '';
         l.useEffect(() => {
@@ -35,7 +35,7 @@ let T = (e) => {
                 checkpoint: f.a.SHOP_MOUNTED,
                 tab: c,
                 isFullScreen: d,
-                unpublishedCategoriesShown: E,
+                unpublishedCategoriesShown: v,
                 cacheDisabled: h
             });
         }, [c]);
@@ -48,7 +48,7 @@ let T = (e) => {
                 c,
                 {
                     noCache: h,
-                    includeUnpublished: E,
+                    includeUnpublished: v,
                     includeBundles: !0,
                     logPerf: !0
                 },
@@ -58,7 +58,7 @@ let T = (e) => {
                     isFullScreen: d
                 }
             ),
-            k = l.useCallback(() => {
+            I = l.useCallback(() => {
                 L();
             }, [L]);
         if (
@@ -71,14 +71,14 @@ let T = (e) => {
                         checkpoint: f.a.SHOP_RENDERED,
                         tab: c,
                         isFullScreen: d,
-                        unpublishedCategoriesShown: E,
+                        unpublishedCategoriesShown: v,
                         cacheDisabled: h
                     });
-            }, [T, y, P.length, E, h, x, c, d]),
+            }, [T, y, P.length, v, h, x, c, d]),
             null != T)
         )
             return (0, r.jsx)(g.Z, {
-                onRetry: k,
+                onRetry: I,
                 errorOrigin: g.i.SHOP_PAGE,
                 errorMessage: T.message
             });
@@ -104,7 +104,7 @@ let T = (e) => {
                     })
                 ]
             });
-        let I = (e, t) => {
+        let k = (e, t) => {
             if (null == e) return null;
             let l = null;
             switch (e.type) {
@@ -147,7 +147,7 @@ let T = (e) => {
                     break;
                 case a.z.WIDE_BANNER:
                     l = (0, r.jsx)(
-                        v.Z,
+                        E.Z,
                         {
                             handleTransition: n,
                             wideBannerBlock: e,
@@ -179,7 +179,7 @@ let T = (e) => {
                 t
             );
         };
-        return (0, r.jsx)(r.Fragment, { children: P.map((e, t) => I(e, t)) });
+        return (0, r.jsx)(r.Fragment, { children: P.map((e, t) => k(e, t)) });
     },
     P = (e) => {
         let { isFullScreen: t, scrollerRef: n, handleTransition: i, tab: a, transitionState: p } = e,
@@ -251,11 +251,11 @@ let T = (e) => {
                     !t &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(v.Z, {
                                     peaking: C,
                                     transitioning: p === S.f7.OUT
                                 }),
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(v.Z, {
                                     style: { left: 1850 },
                                     peaking: C,
                                     transitioning: p === S.f7.OUT

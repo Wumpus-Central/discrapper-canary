@@ -107,6 +107,7 @@ function N(e) {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
                 className: I.input,
+                innerClassName: I.inputInner,
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
                 placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),

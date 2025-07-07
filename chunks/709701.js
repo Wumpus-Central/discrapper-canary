@@ -1,6 +1,7 @@
 e.exports = {
     messagesPopoutWrap: 'messagesPopoutWrap__0aee3',
-    loadingMore: 'loadingMore__0aee3',
+    loadMore: 'loadMore__0aee3',
+    showLoadMore: 'showLoadMore__0aee3',
     messagesPopout: 'messagesPopout__0aee3',
     messagesGroupHeaderWrap: 'messagesGroupHeaderWrap__0aee3',
     messagesGroupHeader: 'messagesGroupHeader__0aee3',

@@ -6,7 +6,10 @@ function r(e) {
         height: t
     };
 }
-n.d(t, { m: () => r });
+n.d(t, {
+    Z: () => i,
+    m: () => r
+});
 let i = {
     xxs: 12,
     xs: 16,

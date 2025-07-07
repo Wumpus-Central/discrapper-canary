@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -17,11 +17,11 @@ var r = n(255367),
     _ = n(215023),
     C = n(388032),
     O = n(484920);
-function E(e) {
-    let { isFullScreen: t, scrollerRef: n, tab: i, sortedCategories: E, setCategoryRef: v } = e,
+function v(e) {
+    let { isFullScreen: t, scrollerRef: n, tab: i, sortedCategories: v, setCategoryRef: E } = e,
         { handlePageChange: S, currentPage: x } = (0, h.h)({
             scrollerRef: n,
-            sortedCategories: E
+            sortedCategories: v
         });
     (0, u.A)();
     let y = (0, c.F)('CollectiblesBrowse'),
@@ -47,7 +47,7 @@ function E(e) {
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: O.controlsLeftSide,
-                                        children: (0, r.jsx)(d.Z, { sortedCategories: E })
+                                        children: (0, r.jsx)(d.Z, { sortedCategories: v })
                                     }),
                                     (0, r.jsxs)('div', {
                                         className: O.controlsRightSide,
@@ -96,8 +96,8 @@ function E(e) {
                                     newValue: { pageIndex: x },
                                     children: (0, r.jsx)(p.Z, {
                                         isFullScreen: t,
-                                        sortedCategories: E,
-                                        setCategoryRef: v,
+                                        sortedCategories: v,
+                                        setCategoryRef: E,
                                         currentPage: x,
                                         handlePageChange: S
                                     })

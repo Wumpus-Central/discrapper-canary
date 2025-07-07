@@ -25,7 +25,7 @@ class a {
     }
     handleBackgroundSync(e, t) {
         let { guilds: n } = e,
-            i = n.filter((e) => 'partial' === e.data_mode && e.unableToSyncDeletes).map((e) => ({ id: e.id }));
+            i = n.filter((e) => 'partial' === e.data_mode && e.unable_to_sync_deletes).map((e) => ({ id: e.id }));
         i.length > 0 && r.Z.guildsRequiringDeletedIdsSyncTransaction(t).putAll(i);
     }
     handleGuildCreate(e, t) {

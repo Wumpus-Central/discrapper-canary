@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(853748),
     C = n(426171),
     O = n(823941),
-    E = n(38900),
-    v = n(709999),
+    v = n(38900),
+    E = n(709999),
     S = n(258939),
     x = n(81136),
     y = n(619899),
@@ -26,7 +26,7 @@ var r = n(255367),
     T = n(215023),
     P = n(981631),
     L = n(484920);
-function k(e) {
+function I(e) {
     let { products: t, handleShopCardMount: n, header: l, category: i } = e,
         o = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         c = (0, y.St)(t);
@@ -50,7 +50,7 @@ function k(e) {
                               {
                                   newValue: { tilePosition: t },
                                   children: (0, r.jsx)(
-                                      v.Z,
+                                      E.Z,
                                       {
                                           onMount: n,
                                           category: i,
@@ -68,7 +68,7 @@ function k(e) {
               ]
           });
 }
-function I(e) {
+function k(e) {
     var { category: t, initialItemCardRef: n } = e,
         i = (function (e, t) {
             if (null == e) return {};
@@ -100,7 +100,7 @@ function I(e) {
             [c, n]
         );
     return (0, r.jsx)(
-        k,
+        I,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -153,7 +153,7 @@ function B(e) {
                 category: t,
                 hideLimitedTimeBadge: null != s
             }),
-            (0, r.jsx)(I, {
+            (0, r.jsx)(k, {
                 category: t,
                 initialItemCardRef: n
             }),
@@ -174,7 +174,7 @@ function N(e) {
         h = (0, p.sp)(),
         b = (0, S.R)(),
         _ = null != (t = null == h ? void 0 : h.sessionId) ? t : '',
-        { noCache: O, includeUnpublished: v } = (0, x.Z)(),
+        { noCache: O, includeUnpublished: E } = (0, x.Z)(),
         y = l.useMemo(() => {
             let e = (d - 1) * T.kN;
             return n.slice(e, e + T.kN);
@@ -185,7 +185,7 @@ function N(e) {
             checkpoint: m.a.SHOP_MOUNTED,
             tab: T.AW.CATALOG,
             isFullScreen: c,
-            unpublishedCategoriesShown: v,
+            unpublishedCategoriesShown: E,
             cacheDisabled: O
         });
     }, []),
@@ -197,22 +197,22 @@ function N(e) {
                     checkpoint: m.a.SHOP_RENDERED,
                     tab: T.AW.CATALOG,
                     isFullScreen: c,
-                    unpublishedCategoriesShown: v,
+                    unpublishedCategoriesShown: E,
                     cacheDisabled: O
                 });
-        }, [_, c, v, O, b, y.length]));
+        }, [_, c, E, O, b, y.length]));
     let j = l.useRef(null),
-        k = (0, a.e7)([u.Z], () => u.Z.getLayers().includes(P.S9g.COLLECTIBLES_SHOP));
+        I = (0, a.e7)([u.Z], () => u.Z.getLayers().includes(P.S9g.COLLECTIBLES_SHOP));
     (0, C.Kp)({
         isFetchingCategories: b,
-        isLayer: k,
+        isLayer: I,
         initialItemCardRef: j
     });
-    let I = (0, g.F)('CollectiblesBrowse');
+    let k = (0, g.F)('CollectiblesBrowse');
     return b
-        ? (0, r.jsx)(E.Z, {})
+        ? (0, r.jsx)(v.Z, {})
         : (0, r.jsxs)('div', {
-              className: o()(L.categories, { [L.categoriesNoFilter]: !I }),
+              className: o()(L.categories, { [L.categoriesNoFilter]: !k }),
               children: [
                   y
                       .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())

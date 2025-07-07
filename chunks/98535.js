@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => v });
 var r = n(255367),
     l = n(73800),
     i = n(180650),
@@ -17,9 +17,9 @@ var r = n(255367),
     _ = n(566564),
     C = n(215023);
 let O = [C.AW.HOME, C.AW.ORBS];
-function E(e) {
-    let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: m, refreshCategories: E } = e,
-        x = v();
+function v(e) {
+    let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: m, refreshCategories: v } = e,
+        x = E();
     S(x);
     let y = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
         { setCategoryRef: j, handleScrollToCategory: T } = (0, h.xV)(s.current),
@@ -33,13 +33,13 @@ function E(e) {
             [n, y, u, T, m]
         ),
         L = (0, p.F)('content'),
-        { searchQuery: k } = (0, f.S)();
+        { searchQuery: I } = (0, f.S)();
     return (l.useEffect(() => {
-        L && '' !== k && P('search');
-    }, [L, k, P]),
+        L && '' !== I && P('search');
+    }, [L, I, P]),
     null != x)
         ? (0, r.jsx)(b.Z, {
-              onRetry: E,
+              onRetry: v,
               errorMessage: x,
               errorOrigin: b.i.SHOP_PAGE
           })
@@ -59,7 +59,7 @@ function E(e) {
                 setCategoryRef: j
             });
 }
-let v = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
+let E = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
     S = (e) => {
         let t = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
             { noCache: n, includeUnpublished: r } = (0, m.Z)();

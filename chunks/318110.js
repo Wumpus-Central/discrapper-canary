@@ -5,7 +5,7 @@ var r = n(481060);
 let s = (e) => {
     let { analyticsLocations: t } = e;
     (0, r.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('88990'), n.e('92404')]).then(n.bind(n, 612293));
+        let { default: e } = await Promise.all([n.e('88990'), n.e('64123')]).then(n.bind(n, 612293));
         return (n) => {
             var r, s;
             return (0, i.jsx)(

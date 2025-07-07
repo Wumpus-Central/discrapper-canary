@@ -48,7 +48,8 @@ let o = {
         currentPage: 0,
         totalCount: 0,
         hasMorePages: !1,
-        searchError: null
+        searchError: null,
+        isFetchingResults: !1
     },
     a = (0, r.U)((e) =>
         i(l({}, o), {
@@ -58,6 +59,9 @@ let o = {
             },
             setSearchError: (t) => {
                 e(i(l({}, o), { searchError: t }));
+            },
+            setIsFetchingResults: (t) => {
+                e({ isFetchingResults: t });
             },
             clear: () => {
                 e(l({}, o));

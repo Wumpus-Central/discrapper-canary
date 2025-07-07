@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685));
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(979554),
@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(81136),
     C = n(215023),
     O = n(388032),
-    E = n(484920),
-    v = n(558513),
+    v = n(484920),
+    E = n(558513),
     S = n(662128),
     x = n(676790),
     y = n(665195),
@@ -26,18 +26,18 @@ var r = n(255367),
     T = n(283727),
     P = n(266058),
     L = n(719138);
-function k(e) {
+function I(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: k, scrollerRef: I, tab: B } = e,
+    let { isFetchingCategories: n, isFullScreen: I, scrollerRef: k, tab: B } = e,
         N = (0, d.sp)(),
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
         { noCache: R, includeUnpublished: w } = (0, _.Z)(),
         Z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        M = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [D, F] = l.useState(1),
+        F = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [M, D] = l.useState(1),
         H = () => {
             var e;
-            null == I || null == (e = I.current) || e.scrollToTop({ animate: !0 });
+            null == k || null == (e = k.current) || e.scrollToTop({ animate: !0 });
         },
         W = (0, c.Fg)(),
         V = (0, a.ap)(W),
@@ -50,19 +50,19 @@ function k(e) {
                 case C.AW.NAMEPLATES:
                     return [O.intl.string(O.t.V68Fq6), V ? T.Z : j.Z, i.Z.NAMEPLATE];
                 case C.AW.BUNDLES:
-                    return [O.intl.string(O.t.FYFppq), V ? S.Z : v.Z, i.Z.BUNDLE];
+                    return [O.intl.string(O.t.FYFppq), V ? S.Z : E.Z, i.Z.BUNDLE];
             }
         }, [B, V]),
         Y = (0, f.a)(),
         q = l.useMemo(
             () =>
                 Y(
-                    M.filter((e) => {
+                    F.filter((e) => {
                         var t;
                         return e.type === z || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
                     })
                 ),
-            [M, z, Y]
+            [F, z, Y]
         ),
         K = (0, g.l)(q);
     return (l.useEffect(() => {
@@ -70,7 +70,7 @@ function k(e) {
             sessionId: A,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: B,
-            isFullScreen: k,
+            isFullScreen: I,
             unpublishedCategoriesShown: w,
             cacheDisabled: R
         });
@@ -81,26 +81,26 @@ function k(e) {
                 sessionId: A,
                 checkpoint: h.a.SHOP_RENDERED,
                 tab: B,
-                isFullScreen: k,
+                isFullScreen: I,
                 unpublishedCategoriesShown: w,
                 cacheDisabled: R
             });
-    }, [A, k, w, R, n, B]),
+    }, [A, I, w, R, n, B]),
     n || null == Z)
         ? (0, r.jsx)(b.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
                       style: { backgroundImage: 'url('.concat(G, ')') },
-                      className: E.bannerContainer,
+                      className: v.bannerContainer,
                       children: (0, r.jsx)(s.X6q, {
                           variant: 'heading-xxl/extrabold',
                           children: U
                       })
                   }),
                   (0, r.jsx)('div', {
-                      className: E.products,
-                      children: K.slice(40 * (D - 1), 40 * D).map((e, t) => {
+                      className: v.products,
+                      children: K.slice(40 * (M - 1), 40 * M).map((e, t) => {
                           let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
@@ -125,14 +125,14 @@ function k(e) {
                   }),
                   K.length > 40 &&
                       (0, r.jsx)('div', {
-                          className: E.paginationContainer,
+                          className: v.paginationContainer,
                           children: (0, r.jsx)('div', {
                               children: (0, r.jsx)(s.DsT, {
-                                  currentPage: D,
+                                  currentPage: M,
                                   totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      (F(e), H());
+                                      (D(e), H());
                                   },
                                   disablePaginationGap: !0
                               })
