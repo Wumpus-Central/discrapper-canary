@@ -124,24 +124,25 @@ class R {
                         (t = !N.has(r) && (0, m.VB)(this.questContent)) && N.add(r);
                     }
                     let r = O(
-                            {
-                                min_view_time_seconds: this.minViewTimeSeconds,
-                                min_viewport_percentage: this.minViewportPercentage,
-                                triggered_by_status_change: this.triggeredByStatusChange
-                            },
-                            (0, d.Z)(),
-                            this.commonProperties(e)
-                        ),
-                        i = (0, u.S)();
-                    (null != i && ((0, _.isIOS)() ? (r.apple_advertising_id = i.advertisingId) : (0, _.isAndroid)() && (r.android_advertising_id = i.advertisingId)),
-                        (0, p.dA)({
-                            questId: e.id,
-                            event: b.rMx.QUEST_CONTENT_VIEWED,
-                            trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
-                            properties: r,
-                            shouldExtendSession: t,
-                            sourceQuestContent: this.sourceQuestContent
-                        }));
+                        {
+                            min_view_time_seconds: this.minViewTimeSeconds,
+                            min_viewport_percentage: this.minViewportPercentage,
+                            triggered_by_status_change: this.triggeredByStatusChange
+                        },
+                        (0, d.Z)(),
+                        this.commonProperties(e)
+                    );
+                    (0, u.S)().then((n) => {
+                        (null != n && ((0, _.isIOS)() ? (r.apple_advertising_id = n.advertisingId) : (0, _.isAndroid)() && (r.android_advertising_id = n.advertisingId)),
+                            (0, p.dA)({
+                                questId: e.id,
+                                event: b.rMx.QUEST_CONTENT_VIEWED,
+                                trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
+                                properties: r,
+                                shouldExtendSession: t,
+                                sourceQuestContent: this.sourceQuestContent
+                            }));
+                    });
                 });
             }),
             y(this, 'beat', function () {

@@ -1,7 +1,7 @@
 (n.d(t, {
-    PD: () => D,
-    ZP: () => k,
-    aR: () => L
+    PD: () => L,
+    ZP: () => U,
+    aR: () => M
 }),
     n(388685),
     n(539854));
@@ -31,10 +31,11 @@ var r = n(255367),
     x = n(651138),
     I = n(18857),
     P = n(981631),
-    N = n(388032),
-    w = n(93841),
-    Z = n(30009);
-function T(e) {
+    N = n(921944),
+    w = n(388032),
+    Z = n(93841),
+    T = n(30009);
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +60,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,88 +78,84 @@ function A(e, t) {
         e
     );
 }
-let R = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    D = 57,
-    L = 57 + R,
-    M = {
+let D = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+    L = 57,
+    M = 57 + D,
+    k = {
         tension: 180,
         friction: 80
     },
-    k = (e) => {
+    U = (e) => {
         let { guild: t, withMargin: n } = e,
             l = (0, C.Jh)(t.id),
             d = (0, b.Z)(t.id),
             j = (0, C.FZ)(l),
-            R = null == j,
-            D = null != j ? j : l,
-            L = (0, c.e7)([S.Z], () => {
+            D = null == j,
+            L = null != j ? j : l,
+            M = (0, c.e7)([S.Z], () => {
                 var e;
                 return null != (e = S.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            k = (0, c.e7)([O.Z], () => O.Z.can(P.Plq.MANAGE_GUILD, t));
+            U = (0, c.e7)([O.Z], () => O.Z.can(P.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            L !== d && (0, E.v)(t.id, d);
-        }, [t.id, L, d]);
-        let U = R ? '100%' : ''.concat(Math.min(100, (d / P.oCV[D]) * 100), '%'),
-            { current: G } = i.useRef(U),
-            [B] = (0, h.q_F)(
+            M !== d && (0, E.v)(t.id, d);
+        }, [t.id, M, d]);
+        let G = D ? '100%' : ''.concat(Math.min(100, (d / P.oCV[L]) * 100), '%'),
+            { current: B } = i.useRef(G),
+            [F] = (0, h.q_F)(
                 () => ({
-                    from: { width: L === d ? G : '0%' },
-                    to: { width: U },
-                    config: M
+                    from: { width: M === d ? B : '0%' },
+                    to: { width: G },
+                    config: k
                 }),
                 'respect-motion-settings',
-                [L, d, G, U]
+                [M, d, B, G]
             ),
-            F = t.premiumTier < D && L >= P.oCV[D],
-            V = (0, I.Z)(t),
-            H = N.intl.formatToPlainString(N.t['2oNfMT'], { levelName: (0, C.e9)(D) }),
-            z = N.intl.format(N.t.dhKnYm, {
+            V = t.premiumTier < L && M >= P.oCV[L],
+            H = (0, I.Z)(t),
+            z = w.intl.formatToPlainString(w.t['2oNfMT'], { levelName: (0, C.e9)(L) }),
+            W = w.intl.format(w.t.dhKnYm, {
                 numBoosts: d,
-                numTotal: P.oCV[D]
+                numTotal: P.oCV[L]
             });
-        (R && ((H = (0, C.e9)(D)), (z = N.intl.format(N.t.B2byER, { numBoosts: d }))), (H = H.toLocaleLowerCase()));
-        let W = (0, s.JA)('boosts-'.concat(t.id)),
-            K = i.useRef(null),
-            Y = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
-            q = (0, _.Z)(null == Y ? void 0 : Y.id, t.id),
-            X = (0, m.W)(t.id, 'GuildBoostingSidebarDisplay'),
-            Q = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0,
-            J = [];
-        q && X && Q && J.push(u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK);
-        let $ = () =>
-            (0, r.jsx)(f.ZP, {
-                contentTypes: J,
-                children: (e) => {
-                    let { visibleContent: n, markAsDismissed: i } = e;
-                    return n === u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK
-                        ? (0, r.jsx)(g.Z, {
-                              guild: t,
-                              markAsDismissed: i
-                          })
-                        : null;
-                }
-            });
+        (D && ((z = (0, C.e9)(L)), (W = w.intl.format(w.t.B2byER, { numBoosts: d }))), (z = z.toLocaleLowerCase()));
+        let K = (0, s.JA)('boosts-'.concat(t.id)),
+            Y = i.useRef(null),
+            q = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
+            X = (0, _.Z)(null == q ? void 0 : q.id, t.id),
+            Q = (0, m.W)(t.id, 'GuildBoostingSidebarDisplay'),
+            J = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0,
+            $ = [];
+        X && Q && J && $.push(u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK);
+        let [ee, et] = (0, f.US)($),
+            en = () =>
+                ee === u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK
+                    ? (0, r.jsx)(g.Z, {
+                          guild: t,
+                          markAsDismissed: et
+                      })
+                    : null;
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(h.ua7, {
-                text: F ? N.intl.formatToPlainString(w.default['9CtPjo'], { perk: (0, C.nW)(D) }) : R ? N.intl.string(N.t['Y+V9go']) : N.intl.formatToPlainString(N.t.UyDKl5, { levelName: (0, C.nW)(D) }),
+                text: V ? w.intl.formatToPlainString(Z.default['9CtPjo'], { perk: (0, C.nW)(L) }) : D ? w.intl.string(w.t['Y+V9go']) : w.intl.formatToPlainString(w.t.UyDKl5, { levelName: (0, C.nW)(L) }),
                 position: 'top',
                 delay: 200,
                 hideOnClick: !0,
                 children: (e) =>
                     (0, r.jsx)(h.yRy, {
-                        targetElementRef: K,
-                        renderPopout: $,
+                        targetElementRef: Y,
+                        renderPopout: en,
                         position: 'right',
                         align: 'top',
-                        shouldShow: !0,
+                        shouldShow: null != ee,
+                        onRequestClose: () => et(N.L.INDIRECT_ACTION),
                         animation: h.yRy.Animation.TRANSLATE,
                         children: (i) =>
                             (0, r.jsx)('div', {
-                                ref: K,
+                                ref: Y,
                                 children: (0, r.jsxs)(
                                     h.P3F,
-                                    A(T({}, W, e, i), {
+                                    R(A({}, K, e, i), {
                                         'aria-label': void 0,
                                         role: 'button',
                                         focusProps: {
@@ -167,38 +164,38 @@ let R = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                                 right: 4
                                             }
                                         },
-                                        onClick: V,
-                                        className: o()(Z.container, { [Z.containerWithMargin]: n }),
+                                        onClick: H,
+                                        className: o()(T.container, { [T.containerWithMargin]: n }),
                                         onContextMenu: (e) => {
-                                            k && (0, p.vq)(e, (e) => (0, r.jsx)(x.default, A(T({}, e), { guild: t })));
+                                            U && (0, p.vq)(e, (e) => (0, r.jsx)(x.default, R(A({}, e), { guild: t })));
                                         },
                                         children: [
                                             (0, r.jsx)(h.nn4, { children: e['aria-label'] }),
                                             (0, r.jsxs)('div', {
-                                                className: Z.textArea,
+                                                className: T.textArea,
                                                 children: [
                                                     (0, r.jsx)('div', {
-                                                        className: Z.goalTextContainer,
+                                                        className: T.goalTextContainer,
                                                         children: (0, r.jsx)(h.Text, {
-                                                            className: Z.goalText,
+                                                            className: T.goalText,
                                                             color: 'none',
                                                             variant: 'text-sm/medium',
                                                             lineClamp: 1,
-                                                            children: H
+                                                            children: z
                                                         })
                                                     }),
                                                     (0, r.jsxs)('div', {
-                                                        className: Z.progressFraction,
+                                                        className: T.progressFraction,
                                                         children: [
                                                             (0, r.jsx)(h.Text, {
                                                                 color: 'none',
                                                                 variant: 'text-sm/medium',
-                                                                className: Z.progressText,
+                                                                className: T.progressText,
                                                                 lineClamp: 1,
-                                                                children: z
+                                                                children: W
                                                             }),
                                                             (0, r.jsx)(v.Z, {
-                                                                className: Z.count,
+                                                                className: T.count,
                                                                 height: 16,
                                                                 width: 16,
                                                                 direction: v.Z.Directions.RIGHT
@@ -208,17 +205,17 @@ let R = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                                 ]
                                             }),
                                             (0, r.jsxs)('div', {
-                                                className: o()(Z.progressBarContainer, { [Z.progressBarContainerComplete]: R }),
+                                                className: o()(T.progressBarContainer, { [T.progressBarContainerComplete]: D }),
                                                 children: [
                                                     (0, r.jsx)(a.animated.div, {
-                                                        className: Z.progressBar,
-                                                        style: B
+                                                        className: T.progressBar,
+                                                        style: F
                                                     }),
-                                                    R
+                                                    D
                                                         ? (0, r.jsx)('span', {
-                                                              'aria-label': N.intl.string(N.t['7iL1q6']),
+                                                              'aria-label': w.intl.string(w.t['7iL1q6']),
                                                               role: 'img',
-                                                              className: Z.tadaIcon,
+                                                              className: T.tadaIcon,
                                                               children: '\uD83C\uDF89'
                                                           })
                                                         : null

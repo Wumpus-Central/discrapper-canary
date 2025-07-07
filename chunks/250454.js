@@ -75,7 +75,7 @@ let c = {
     });
 function d(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = i.h.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: r } = i.Y.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return u.getCurrentConfig(
         { location: t },
         {

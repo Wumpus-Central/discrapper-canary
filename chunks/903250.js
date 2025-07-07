@@ -101,7 +101,7 @@ let T = (e) => {
                                   isEligibleForBogoPromotion: I
                               }),
                         (0, i.jsx)(C._O, {
-                            variant: 'text-md/normal',
+                            variant: 'text-sm/normal',
                             withBottomMargin: !1,
                             isApplicationHome: !0
                         })

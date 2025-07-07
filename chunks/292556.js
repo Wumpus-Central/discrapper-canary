@@ -119,9 +119,9 @@ let u = {
             body: n,
             trackingProps: i,
             options: c(s({}, a), {
-                onClick() {
-                    var e;
-                    (null == (e = a.onClick) || e.call(a), r.Z.dispatch({ type: 'NOTIFICATION_CLICK' }));
+                onClick(e) {
+                    var t;
+                    (null == (t = a.onClick) || t.call(a, e), r.Z.dispatch({ type: 'NOTIFICATION_CLICK' }));
                 }
             })
         });

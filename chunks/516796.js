@@ -1,4 +1,4 @@
 function r() {
-    return null;
+    return Promise.resolve(null);
 }
 n.d(t, { S: () => r });

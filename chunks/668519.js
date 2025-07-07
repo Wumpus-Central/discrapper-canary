@@ -69,7 +69,7 @@ let l = (0, r.B)({
 });
 function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = i.h.useExperiment({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: r } = i.Y.useExperiment({ location: t }, { autoTrackExposure: n });
     return l.useExperiment(
         { location: t },
         {
@@ -79,5 +79,5 @@ function o(e) {
     );
 }
 function a(e) {
-    i.h.getCurrentConfig({ location: e }).isInHoldout || l.trackExposure({ location: e });
+    i.Y.getCurrentConfig({ location: e }).isInHoldout || l.trackExposure({ location: e });
 }

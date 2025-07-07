@@ -164,12 +164,13 @@ if (k) {
 let W = {};
 if (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports('notifications')) {
     try {
-        (C.ZP.on('NOTIFICATIONS_RECEIVED_RESPONSE', (e, t, n) => {
-            if ('dismiss' === t) delete W[n];
-            else {
-                var r, i, a;
+        (C.ZP.on('NOTIFICATIONS_RECEIVED_RESPONSE', (e, t, n, r) => {
+            if ('dismiss' === t) return void delete W[n];
+            if ('clicked' === t) {
+                var i, a, o;
                 let e = W[n];
-                (N.isPlatformEmbedded ? C.ZP.focus() : window.focus(), (null == e || null == (r = e.options) ? void 0 : r.omitClickTracking) || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, e.trackingProps)), T.default.track(R.rMx.NOTIFICATION_CLICKED, e.clickTrackingProps)), null == e || null == (a = e.options) || null == (i = a.onClick) || i.call(a));
+                (N.isPlatformEmbedded ? C.ZP.focus() : window.focus(), (null == e || null == (i = e.options) ? void 0 : i.omitClickTracking) || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, e.trackingProps)), T.default.track(R.rMx.NOTIFICATION_CLICKED, e.clickTrackingProps)), null == e || null == (o = e.options) || null == (a = o.onClick) || a.call(o, r));
+                return;
             }
         }),
             C.ZP.invoke('NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS'));
@@ -253,7 +254,7 @@ async function Q(e, t, n, r, i) {
             title: t,
             body: n
         };
-        (null != e && (a.icon = e), (null == i ? void 0 : i.sound) != null && (a.sound = V(i.sound, i.soundpack)), (null == i ? void 0 : i.tag) != null && (a.identifier = i.tag));
+        (null != e && (a.icon = e), (null == i ? void 0 : i.sound) != null && (a.sound = V(i.sound, i.soundpack)), (null == i ? void 0 : i.tag) != null && (a.identifier = i.tag), Array.isArray(i.actions) && (a.actions = i.actions));
         let o = d.Z.getCurrentConfig(
             { location: 'showNotification' },
             {
@@ -327,9 +328,11 @@ async function Q(e, t, n, r, i) {
         return;
     }
     return (ee(g, r),
-    (g.onclick = () => {
-        var e;
-        (N.isPlatformEmbedded ? C.ZP.focus() : (window.focus(), g.close()), i.omitClickTracking || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, r)), T.default.track(R.rMx.NOTIFICATION_CLICKED, q)), null == (e = i.onClick) || e.call(i));
+    (g.onclick = (e) => {
+        var t;
+        (N.isPlatformEmbedded ? C.ZP.focus() : (window.focus(), g.close()), i.omitClickTracking || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, r)), T.default.track(R.rMx.NOTIFICATION_CLICKED, q)));
+        let n = '';
+        null == (t = i.onClick) || t.call(i, n);
     }),
     M)
         ? {

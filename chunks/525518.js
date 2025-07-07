@@ -1,8 +1,8 @@
 n.d(t, { B: () => m });
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    l = n(626135),
+    l = n(481060),
+    a = n(626135),
     s = n(572004),
     o = n(215023),
     c = n(981631),
@@ -11,23 +11,23 @@ var r = n(255367),
 function m(e) {
     let { skuId: t, tab: n } = e,
         m = i.useCallback(() => {
-            l.default.track(c.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t });
+            a.default.track(c.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t });
             let e = ''
                 .concat(location.protocol, '//')
                 .concat(location.host)
                 .concat(c.Z5c.COLLECTIBLES_SHOP)
                 .concat((0, o.aK)(n) ? '?tab='.concat(n) : '', '#itemSkuId=')
                 .concat(t);
-            (0, s.JG)(e, () => (0, a.showToast)((0, a.createToast)(u.intl.string(u.t['L/PwZW']), a.ToastType.SUCCESS)));
+            (0, s.JG)(e, () => (0, l.showToast)((0, l.createToast)(u.intl.string(u.t['L/PwZW']), l.ToastType.SUCCESS)));
         }, [t, n]);
-    return (0, r.jsx)(a.zxk, {
+    return (0, r.jsx)(l.zxk, {
         'aria-label': u.intl.string(u.t.WqhZsr),
-        look: a.zxk.Looks.BLANK,
-        size: a.zxk.Sizes.NONE,
+        look: l.zxk.Looks.BLANK,
+        size: l.zxk.Sizes.NONE,
         onClick: m,
         innerClassName: d.buttonContent,
         className: d.button,
-        children: (0, r.jsx)(a.xPt, {
+        children: (0, r.jsx)(l.xPt, {
             size: 'md',
             color: 'currentColor',
             className: d.shareIcon

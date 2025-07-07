@@ -69,7 +69,7 @@ function I(e) {
         s = (0, C.$)();
     return (0, i.jsx)(o.Text, {
         variant: t,
-        color: r ? 'header-secondary' : 'always-white',
+        color: r ? 'text-secondary' : 'always-white',
         className: l()(v.description, {
             [v.descriptionBottomMargin]: n,
             [v.descriptionV2]: r

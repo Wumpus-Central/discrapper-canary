@@ -16,7 +16,7 @@ let r = (0, n.B)({
 });
 function l(e) {
     let { location: t, autoTrackExposure: o = !0 } = e,
-        { isInHoldout: n } = i.h.useExperiment({ location: t }, { autoTrackExposure: o });
+        { isInHoldout: n } = i.Y.useExperiment({ location: t }, { autoTrackExposure: o });
     return r.useExperiment(
         { location: t },
         {

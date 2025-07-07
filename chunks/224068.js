@@ -2,8 +2,8 @@
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    l = n(278074),
+    l = n.n(i),
+    a = n(278074),
     s = n(979554),
     o = n(481060),
     c = n(388032),
@@ -15,7 +15,7 @@ function d(e) {
             ((t = n.type),
             d
                 ? c.intl.string(c.t['0TmQRE'])
-                : (0, l.EQ)(t)
+                : (0, a.EQ)(t)
                       .with(s.Z.AVATAR_DECORATION, () => c.intl.string(c.t['7v0T9P']))
                       .with(s.Z.PROFILE_EFFECT, () => c.intl.string(c.t.wR5wOj))
                       .otherwise(() => null));
@@ -23,7 +23,7 @@ function d(e) {
         ? null
         : (0, r.jsx)(o.Text, {
               variant: 'text-xxs/normal',
-              className: a()([u.container, i ? u.darkText : u.lightText]),
+              className: l()([u.container, i ? u.darkText : u.lightText]),
               children: m
           });
 }

@@ -17,7 +17,7 @@ let a = { doGroupEligibilityCheck: !1 },
     });
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = i.h.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: r } = i.Y.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return o.getCurrentConfig(
         { location: t },
         {

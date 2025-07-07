@@ -46,8 +46,8 @@ var i,
     W = n(695346),
     x = n(601964),
     Y = n(592125),
-    z = n(430824),
-    q = n(375954),
+    q = n(430824),
+    z = n(375954),
     B = n(292959),
     X = n(496675),
     j = n(306680),
@@ -209,16 +209,22 @@ async function tm(t, e) {
     to.Z.showNotification(
         l,
         td.intl.formatToPlainString(td.t.kO0pfX, {
-            username: ti.ZP.getName(null, null, i),
+            name: ti.ZP.getName(null, null, i),
             activity: t.name
         }),
         '',
         { notif_type: 'game_notif' },
         {
-            onClick: () => {
+            onClick: (t) => {
                 d.Z.openPrivateChannel({ recipientIds: e });
             },
-            isUserAvatar: !1
+            isUserAvatar: !1,
+            actions: [
+                {
+                    content: td.intl.string(td.t['E+yYpq']),
+                    args: 'open_message_action'
+                }
+            ]
         }
     );
 }
@@ -230,7 +236,7 @@ function tP(t) {
 }
 class tO extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(tt.default, Y.Z, B.Z, z.Z, F.Z, J.Z, X.Z, te.Z, P.Z);
+        this.waitFor(tt.default, Y.Z, B.Z, q.Z, F.Z, J.Z, X.Z, te.Z, P.Z);
     }
 }
 (tc(tO, 'displayName', 'NotificationStore'),
@@ -306,7 +312,7 @@ class tO extends (i = r.ZP.Store) {
                           B.Z.getDesktopType() === tu.qrD.NEVER)
                       )
                           return (S && to.Z.playNotificationSound(tg, tE, C), !1);
-                      let M = null != (r = q.Z.getMessage(o, u.id)) ? r : (0, O.e5)(u);
+                      let M = null != (r = z.Z.getMessage(o, u.id)) ? r : (0, O.e5)(u);
                       to.Z.showNotification(
                           m,
                           y,
@@ -393,7 +399,7 @@ class tO extends (i = r.ZP.Store) {
                       if (null == i) return;
                       let { channelId: l, guildId: a, suppress: r, requestToSpeakTimestamp: o } = i;
                       if (null == l || null == a || !(!r && null != o)) return;
-                      let u = z.Z.getGuild(a),
+                      let u = q.Z.getGuild(a),
                           s = Y.Z.getChannel(l),
                           d = F.Z.getStageInstanceByChannel(l);
                       null != u &&
@@ -414,7 +420,7 @@ class tO extends (i = r.ZP.Store) {
                       let { instance: e } = t;
                       if (ty() || !e.send_start_notification || tP(e.channel_id)) return !1;
                       let n = tt.default.getCurrentUser(),
-                          i = z.Z.getGuild(e.guild_id),
+                          i = q.Z.getGuild(e.guild_id),
                           l = Y.Z.getChannel(e.channel_id),
                           r = tt.default.getUser(e.host_id);
                       if (null == n || null == l || null == i || null == r || !(0, U.LL)(n, r, l) || !X.Z.can(a.$e(tu.Plq.CONNECT, tu.Plq.VIEW_CHANNEL), l) || tN.has(e.id)) return !1;
@@ -453,7 +459,7 @@ class tO extends (i = r.ZP.Store) {
                                     let e = t.channel_id;
                                     if (null == e || tP(e)) return;
                                     let n = tt.default.getCurrentUser(),
-                                        i = z.Z.getGuild(t.guild_id),
+                                        i = q.Z.getGuild(t.guild_id),
                                         l = Y.Z.getChannel(t.channel_id),
                                         r = tt.default.getUser(t.host_id);
                                     if (null != n && null != l && null != i && null != r && X.Z.can(a.$e(tu.Plq.CONNECT, tu.Plq.VIEW_CHANNEL), l))
@@ -481,7 +487,7 @@ class tO extends (i = r.ZP.Store) {
                                 (function (t) {
                                     if (ty()) return;
                                     let e = tt.default.getCurrentUser(),
-                                        n = z.Z.getGuild(t.guild_id);
+                                        n = q.Z.getGuild(t.guild_id);
                                     if (null != e && null != n)
                                         to.Z.showNotification(
                                             (0, x.EB)(n, 128),
@@ -508,7 +514,7 @@ class tO extends (i = r.ZP.Store) {
                       if (null == l || !tu.TPd.GUILD_THREADS_ONLY.has(l.type) || !i || !(0, U.FI)(n, l, !tT)) return !1;
                       let { author: a, user: r } = (0, C.MC)(n);
                       if (null == r) return !1;
-                      let o = z.Z.getGuild(l.guild_id);
+                      let o = q.Z.getGuild(l.guild_id);
                       if (null == o) return !1;
                       let u = td.intl.formatToPlainString(td.t['2IGVl5'], {
                               channelName: l.name,

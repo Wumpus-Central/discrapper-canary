@@ -22,7 +22,7 @@ let o = (0, r.B)({
 });
 function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = i.h.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: r } = i.Y.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return o.getCurrentConfig(
         { location: t },
         {
@@ -33,7 +33,7 @@ function a(e) {
 }
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = i.h.useExperiment({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: r } = i.Y.useExperiment({ location: t }, { autoTrackExposure: n });
     return o.useExperiment(
         { location: t },
         {

@@ -80,7 +80,7 @@ let a = {
     });
 function c(e) {
     let { location: t, autoTrackExposure: o = !0 } = e,
-        { isInHoldout: n } = i.h.useExperiment({ location: t }, { autoTrackExposure: o });
+        { isInHoldout: n } = i.Y.useExperiment({ location: t }, { autoTrackExposure: o });
     return s.useExperiment(
         { location: t },
         {

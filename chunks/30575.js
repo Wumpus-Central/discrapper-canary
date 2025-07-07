@@ -25,14 +25,14 @@ function p(e) {
 function f(e) {
     let t,
         { device: n, certifiedDeviceMetadata: f, onClose: D, transitionState: v } = e,
-        [_, h] = (0, a.useState)(null != n ? p(n.type) : null),
-        x = (0, a.useRef)(!1),
-        { optOutPerDevice: C } = (0, c.H)({ location: 'ConnectedDevice' });
+        [_, x] = (0, a.useState)(null != n ? p(n.type) : null),
+        C = (0, a.useRef)(!1),
+        { optOutPerDevice: h } = (0, c.H)({ location: 'ConnectedDevice' });
     function T() {
-        ((x.current = !0), d.Wz(n.displayName));
+        ((C.current = !0), d.Wz(n.displayName));
     }
     ((0, l.zq)(() => {
-        x.current || T();
+        C.current || T();
     }),
         (0, a.useEffect)(() => {
             r.default.track(u.rMx.OPEN_MODAL, {
@@ -74,7 +74,7 @@ function f(e) {
                         className: N.options,
                         onChange: (e) => {
                             let { value: t } = e;
-                            return h(p(t));
+                            return x(p(t));
                         },
                         options: [
                             {
@@ -119,15 +119,15 @@ function f(e) {
                                     look: o.zxk.Looks.LINK,
                                     color: o.zxk.Colors.LINK,
                                     onClick: () => {
-                                        (C
-                                            ? ((x.current = !0),
+                                        (h
+                                            ? ((C.current = !0),
                                               d.Gl(n.displayName),
                                               r.default.track(u.rMx.MODAL_DISMISSED, {
                                                   type: null != f ? 'New Audio Device Detected - Certified' : 'New Audio Device Detected - Not Certified',
                                                   location_object: n.displayName,
                                                   dismiss_type: 'permanent'
                                               }))
-                                            : ((x.current = !0),
+                                            : ((C.current = !0),
                                               d.oI(),
                                               r.default.track(u.rMx.MODAL_DISMISSED, {
                                                   type: null != f ? 'New Audio Device Detected - Certified' : 'New Audio Device Detected - Not Certified',
@@ -135,7 +135,7 @@ function f(e) {
                                               })),
                                             D());
                                     },
-                                    children: C ? m.intl.formatToPlainString(m.t.cwS3Ex, { device: n.displayName }) : m.intl.string(m.t['5E9SBw'])
+                                    children: h ? m.intl.formatToPlainString(m.t.cwS3Ex, { device: n.displayName }) : m.intl.string(m.t['5E9SBw'])
                                 })
                             ]
                         },
@@ -157,7 +157,7 @@ function f(e) {
                         }),
                         (0, i.jsx)(o.zxk, {
                             onClick: () => {
-                                ((x.current = !0), null != _ && d.mo(n.displayName, _, 'New Audio Device Detected Modal'), D());
+                                ((C.current = !0), null != _ && d.mo(n.displayName, _, 'New Audio Device Detected Modal'), D());
                             },
                             children: m.intl.string(m.t.ydkoDQ)
                         })
