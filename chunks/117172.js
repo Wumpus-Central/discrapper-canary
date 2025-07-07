@@ -4,6 +4,7 @@ e.exports = {
     active: 'active__98cbd',
     buttonContainer: 'buttonContainer__98cbd',
     labelContainer: 'labelContainer__98cbd',
+    boostProgressBackground: 'boostProgressBackground__98cbd',
     warning: 'warning__98cbd',
     contentContainer: 'contentContainer__98cbd',
     headerContainer: 'headerContainer__98cbd',

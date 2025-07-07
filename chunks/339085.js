@@ -424,7 +424,7 @@ function eE(e, t) {
     en[e] = new X(e, n.id, t, r);
 }
 function eb(e) {
-    for (let t of (eh(), e.guilds)) eE(t.id, t.emojis);
+    for (let t of (eh(), e.guilds)) eE(t.id, t.emojis.items);
     ((ee = +!!e.guilds.every((e) => null != e.emojis)), eg());
 }
 function ey(e) {
@@ -438,7 +438,7 @@ function ev() {
     eh();
 }
 function eI(e) {
-    (1 === ee && null == e.guild.emojis && null != e.guild.emojiUpdates && (ee = 0), eE(e.guild.id, e.guild.emojis), eg());
+    (1 === ee && 'update' === e.guild.emojis.op && null == e.guild.emojis.items && (ee = 0), eE(e.guild.id, e.guild.emojis.items), eg());
 }
 function eT(e) {
     (eE(e.guild.id, e.guild.emojis), eg());

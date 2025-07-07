@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685), n(49124));
+(n.d(t, { Z: () => C }), n(388685), n(49124));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -18,7 +18,7 @@ var i = n(255367),
     _ = n(981631),
     E = n(388032),
     j = n(40713);
-function C(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -43,17 +43,17 @@ function C(e) {
     }
     return e;
 }
-function O() {
+function C() {
     let [e] = r.useState(() => p.ZP.getEnableHardwareAcceleration()),
         t = h.bm.useSetting(),
         n = h.Sb.useSetting(),
-        O = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
+        C = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
         S = (0, s.e7)([g.ZP], () => g.ZP.showPlayAgain),
         v = r.useCallback((e) => {
             h.bm.updateSetting(!e);
         }, []),
         T = r.useCallback((e) => {
-            e ? (0, l.h7j)((e) => (0, i.jsx)(b.Z, C({}, e))) : a.mc();
+            e ? (0, l.h7j)((e) => (0, i.jsx)(b.Z, O({}, e))) : a.mc();
         }, []),
         N = r.useCallback((e) => {
             (0, c.BV)(e, o.Z.USER_SETTINGS);
@@ -64,7 +64,7 @@ function O() {
                 let s = e ? E.intl.format(E.t.LYXRxM, {}) : E.intl.format(E.t.uDP3Ky, {});
                 return (0, i.jsx)(
                     l.ConfirmModal,
-                    ((n = C(
+                    ((n = O(
                         {
                             header: E.intl.string(E.t.aqpAvr),
                             confirmText: E.intl.string(E.t.vT7ckp),
@@ -154,7 +154,7 @@ function O() {
             (0, i.jsx)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                 children: (0, i.jsx)(l.j7V, {
-                    value: null != O,
+                    value: null != C,
                     note: E.intl.string(E.t['52hMnJ']),
                     onChange: T,
                     children: E.intl.string(E.t.erOqlp)

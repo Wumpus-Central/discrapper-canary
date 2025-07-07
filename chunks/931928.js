@@ -1,7 +1,7 @@
 n.d(t, {
     ED: () => x,
     fO: () => j,
-    qp: () => C
+    qp: () => O
 });
 var i = n(255367),
     r = n(73800),
@@ -82,17 +82,17 @@ let x = (e) =>
                 }
                 return r;
             })(e, ['onClose', 'onCtaClick', 'targetElementRef', 'isGuildBarScrolling', 'children']);
-        let C = r.useRef(null),
-            O = r.useCallback((e) => {
+        let O = r.useRef(null),
+            C = r.useCallback((e) => {
                 let t = window.innerHeight - ((0, m.t4)() + j.COACHMARK_VERTICAL_OFFSET);
                 return e.top <= t;
             }, []),
             S = (0, l.e7)([d.Z], () => d.Z.getExpandedFolders().size);
         (r.useEffect(() => {
-            null !== C.current && C.current.updateElementPositionWithPolling();
+            null !== O.current && O.current.updateElementPositionWithPolling();
         }, [S]),
             r.useEffect(() => {
-                null !== C.current && C.current.updateElementPosition();
+                null !== O.current && O.current.updateElementPosition();
             }, [g]));
         let v = (0, s.TH)().pathname,
             T = r.useCallback(() => {
@@ -102,9 +102,9 @@ let x = (e) =>
             m.WS,
             ((t = b(
                 {
-                    positionControlRef: C,
+                    positionControlRef: O,
                     targetElementRef: u,
-                    calculateVisibility: O,
+                    calculateVisibility: C,
                     defaultCoachmarkAlign: E.align,
                     popoutElement: (0, i.jsx)(
                         x,
@@ -138,7 +138,7 @@ let x = (e) =>
         );
     };
 j.COACHMARK_VERTICAL_OFFSET = 10;
-let C = (e) => {
+let O = (e) => {
     let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: i } = e,
         s = r.useCallback(() => {
             if (null !== n.current) {

@@ -15,11 +15,11 @@ function f(e) {
     let { guildId: n, powerup: t } = e,
         [f, x] = i.useState(void 0);
     (0, u.KT)(f);
-    let [b, v] = i.useState(!1),
-        g = (0, s.Z)(n, t),
-        h = (0, m.d)(null != g);
+    let [b, g] = i.useState(!1),
+        v = (0, s.Z)(n, t),
+        h = (0, m.d)(null != v);
     return (0, r.jsxs)(l.Z, {
-        onHover: (e) => v(e),
+        onHover: (e) => g(e),
         guildId: n,
         powerup: t,
         children: [

@@ -37,7 +37,7 @@ class _ extends i.PureComponent {
         });
     }
 }
-let O = (e) => [
+let E = (e) => [
     {
         key: g.intl.string(g.t['0TcHzs']),
         value: e.operating_system_version
@@ -71,7 +71,7 @@ let O = (e) => [
         value: e.notes
     }
 ];
-class E extends i.PureComponent {
+class O extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { systemRequirements: n } = e,
             { selectedOperatingSystem: r } = t,
@@ -114,7 +114,7 @@ class E extends i.PureComponent {
     }
     renderRequirementsSection(e, t) {
         if (null == e) return null;
-        let n = O(e)
+        let n = E(e)
             .map((e, t) => {
                 let n = null != e.value ? e.value.trim() : null;
                 return null == n || 0 === n.length
@@ -181,4 +181,4 @@ class E extends i.PureComponent {
         this.state = { selectedOperatingSystem: l };
     }
 }
-let y = E;
+let y = O;

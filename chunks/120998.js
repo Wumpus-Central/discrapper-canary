@@ -78,20 +78,20 @@ class d extends (r = l.PureComponent) {
                 let b = i.length >= o ? o : i.length;
                 (h.setTransform(1, 0, 0, -1, 0, r.height), h.clearRect(0, 0, r.width, r.height), h.translate(0, 0.5 * h.lineWidth));
                 let _ = Math.floor(r.width / (b - 3)),
-                    O = 0.5 * _;
+                    E = 0.5 * _;
                 (h.translate(_ - _ * p, 0), h.beginPath());
-                let E = -_;
+                let O = -_;
                 (i.forEach((e, r) => {
                     ((t = {
-                        x: E,
+                        x: O,
                         y: (g * e) / f
                     }),
-                        0 === r ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + O, n.y, t.x - O, t.y, t.x, t.y),
+                        0 === r ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + E, n.y, t.x - E, t.y, t.x, t.y),
                         (n = t),
-                        (E += _));
+                        (O += _));
                 }),
                     h.stroke(),
-                    h.lineTo(E - _, 0),
+                    h.lineTo(O - _, 0),
                     h.lineTo(0, 0),
                     h.fill(),
                     u && p < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation)));

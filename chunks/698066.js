@@ -1,44 +1,44 @@
-n.d(e, { Z: () => i });
-var l = n(626135),
-    r = n(981631);
-function i(t) {
-    let { problem: e, stream: n, feedback: i, streamApplication: s, analyticsData: a, location: o, rating: c = null } = t;
-    l.default.track(
-        r.rMx.STREAM_REPORT_PROBLEM,
-        (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var n = null != arguments[e] ? arguments[e] : {},
-                    l = Object.keys(n);
+n.d(t, { Z: () => i });
+var r = n(626135),
+    o = n(981631);
+function i(e) {
+    let { problem: t, stream: n, feedback: i, streamApplication: l, analyticsData: a, location: c, rating: s = null } = e;
+    r.default.track(
+        o.rMx.STREAM_REPORT_PROBLEM,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
                 ('function' == typeof Object.getOwnPropertySymbols &&
-                    (l = l.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    l.forEach(function (e) {
-                        var l;
-                        ((l = n[e]),
-                            e in t
-                                ? Object.defineProperty(t, e, {
-                                      value: l,
+                    r.forEach(function (t) {
+                        var r;
+                        ((r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (t[e] = l));
+                                : (e[t] = r));
                     }));
             }
-            return t;
+            return e;
         })(
             {
-                reason: e,
+                reason: t,
                 streamer_user_id: n.ownerId,
                 stream_channel_id: n.channelId,
                 guild_id: n.guildId,
-                application_id: null != s ? s.id : null,
-                application_name: null != s ? s.name : null,
-                location: o,
-                rating: c,
+                application_id: null != l ? l.id : null,
+                application_name: null != l ? l.name : null,
+                location: c,
+                rating: s,
                 feedback: i
             },
             a

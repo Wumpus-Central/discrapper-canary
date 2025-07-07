@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(493773),
     b = n(607070),
     _ = n(209613),
-    O = n(325708),
-    E = n(320149),
+    E = n(325708),
+    O = n(320149),
     y = n(82295),
     I = n(252618),
     v = n(605236),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(96479),
     K = n(480874),
     q = n(687683),
-    X = n(981631),
-    Q = n(921944),
+    Q = n(981631),
+    X = n(921944),
     J = n(526761),
     $ = n(388032),
     ee = n(596576),
@@ -91,7 +91,7 @@ function en() {
             },
             [l, n, f]
         ),
-        O = i.useCallback(
+        E = i.useCallback(
             () =>
                 (0, r.jsxs)(
                     y.Z,
@@ -192,7 +192,7 @@ function en() {
                                   paddingBottom: 24,
                                   sectionHeight: q.oi,
                                   rowHeight: q.WN,
-                                  renderSection: O,
+                                  renderSection: E,
                                   renderRow: b,
                                   sections: [n.length],
                                   chunkSize: 30,
@@ -211,12 +211,12 @@ function er(e) {
         i = (0, c.e7)([L.ZP], () => L.ZP.getSidebarState(L.uZ)),
         l = (0, c.e7)([w.Z], () => w.Z.getChannel(null == i ? void 0 : i.channelId));
     if (null == i || i.type !== j.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
-    let a = t - X.R7I;
-    return (0, r.jsx)(O.Z, {
-        sidebarType: O.y.MessageRequestSidebar,
+    let a = t - Q.R7I;
+    return (0, r.jsx)(E.Z, {
+        sidebarType: E.y.MessageRequestSidebar,
         maxWidth: a,
         onWidthChange: n,
-        children: (0, r.jsx)(E.Z, {
+        children: (0, r.jsx)(O.Z, {
             channel: l,
             baseChannelId: L.uZ
         })
@@ -229,7 +229,7 @@ let ei = function (e) {
             content: $.intl.string($.t.apPgJC),
             buttonCTA: $.intl.string($.t.LNoAQU),
             className: ee.messageRequestCoachmark,
-            onClick: () => t(Q.L.UNKNOWN),
+            onClick: () => t(X.L.UNKNOWN),
             markAsDismissed: t,
             caretPosition: Z.DF.TOP_CENTER,
             headerClassName: ee.__invalid_header
@@ -260,7 +260,7 @@ let ei = function (e) {
                                             secondaryButtonCTA: $.intl.string($.t.LNoAQU),
                                             className: ee.messageRequestCoachmark,
                                             onClick: (e) => {
-                                                (e.stopPropagation(), h.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.FY.MESSAGE_REQUESTS_V2 }));
+                                                (e.stopPropagation(), h.Z.open(Q.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.FY.MESSAGE_REQUESTS_V2 }));
                                             },
                                             markAsDismissed: o,
                                             caretPosition: Z.DF.TOP_CENTER,
@@ -286,7 +286,7 @@ let eo = (0, f.Z)(function (e) {
     let { width: t } = e,
         n = (0, H.q)();
     (0, m.ZP)(() => {
-        (p.Y(X.Z5c.MESSAGE_REQUESTS), (0, A.e)('message-requests'), D.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), N.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW }));
+        (p.Y(Q.Z5c.MESSAGE_REQUESTS), (0, A.e)('message-requests'), D.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), N.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW }));
     });
     let l = (0, c.e7)([x.Z], () => x.Z.theme),
         o = (0, z.w)(),
@@ -298,11 +298,11 @@ let eo = (0, f.Z)(function (e) {
         g = null == f ? void 0 : f.channelId,
         b = null != f,
         _ = (0, M.T)(g),
-        O = (0, k.J)(g),
-        E = i.useRef(null);
+        E = (0, k.J)(g),
+        O = i.useRef(null);
     i.useEffect(() => {
-        null != g && !_ && O && b && ((0, T.Kh)(g), P.Z.closeChannelSidebar(L.uZ));
-    }, [g, O, b, _]);
+        null != g && !_ && E && b && ((0, T.Kh)(g), P.Z.closeChannelSidebar(L.uZ));
+    }, [g, E, b, _]);
     let [y, v] = i.useState(q.pS.REQUESTS),
         C = (e) => {
             v(e);
@@ -329,9 +329,9 @@ let eo = (0, f.Z)(function (e) {
                                             'aria-hidden': !0
                                         }),
                                         (0, r.jsx)(el, {
-                                            targetElementRef: E,
+                                            targetElementRef: O,
                                             children: (0, r.jsx)(S.Z.Title, {
-                                                ref: E,
+                                                ref: O,
                                                 children: $.intl.string($.t.e7GWjY)
                                             })
                                         }),

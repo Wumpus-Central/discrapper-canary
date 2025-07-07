@@ -48,7 +48,14 @@ class s {
         );
     }
     handleOneGuildCreate(e, t) {
-        (null != e.stickers && this.replace(e.id, e.stickers, t), null != e.stickerUpdates && this.update(e.id, e.stickerUpdates.writes, e.stickerUpdates.deletes, t));
+        let { id: n, stickers: r } = e;
+        switch (r.op) {
+            case 'full_sync':
+                this.replace(n, r.items, t);
+                break;
+            case 'update':
+                this.update(n, r.writes, r.deletes, t);
+        }
     }
     resetInMemoryState() {}
     replace(e, t, n) {

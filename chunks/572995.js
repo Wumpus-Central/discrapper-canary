@@ -22,8 +22,8 @@ var i,
     _ = n(872532),
     E = n(91342),
     j = n(181708),
-    C = n(290650),
-    O = n(751125),
+    O = n(290650),
+    C = n(751125),
     S = n(357003),
     v = n(904505),
     T = n(712626),
@@ -124,7 +124,7 @@ let M = () => {
                     title: g.intl.string(g.t['6b3ydH']),
                     description: g.intl.string(g.t['Y+IJys']),
                     previewImage: f,
-                    videoUrl: n ? C.ZP : O.ZP
+                    videoUrl: n ? O.ZP : C.ZP
                 }
             ]
         ]

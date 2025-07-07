@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(597688),
     d = n(1870),
     p = n(870289),
-    g = n(501431),
-    f = n(929255),
+    f = n(501431),
+    g = n(929255),
     h = n(426171),
     b = n(752053),
     m = n(81136),
@@ -33,7 +33,7 @@ function E(e) {
             [n, y, u, T, m]
         ),
         L = (0, p.F)('content'),
-        { searchQuery: k } = (0, g.S0)();
+        { searchQuery: k } = (0, f.S)();
     return (l.useEffect(() => {
         L && '' !== k && P('search');
     }, [L, k, P]),
@@ -51,7 +51,7 @@ function E(e) {
                 tab: t,
                 transitionState: d
             })
-          : (0, r.jsx)(f.Z, {
+          : (0, r.jsx)(g.Z, {
                 isFullScreen: n,
                 scrollerRef: s,
                 tab: t,

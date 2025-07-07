@@ -27,7 +27,7 @@ function _(e) {
     }
     m[e] = Date.now();
 }
-function O(e, t, n, r) {
+function E(e, t, n, r) {
     f[e].add(t);
     let i = m[t];
     ((null == i || i + 300000 > Date.now()) && _(t),
@@ -37,7 +37,7 @@ function O(e, t, n, r) {
             userId: r
         }));
 }
-function E(e) {
+function O(e) {
     let { channel: t } = e;
     (delete g[t.id], delete m[t.id]);
 }
@@ -93,14 +93,14 @@ class y extends (a = c.ZP.Store) {
             if (null == a) return !1;
             let o = a.guild_id;
             if (null == o || null == f[o]) return !1;
-            O(o, n, r.id, null == (t = r.author) ? void 0 : t.id);
+            E(o, n, r.id, null == (t = r.author) ? void 0 : t.id);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
             delete f[t.id];
         },
-        CHANNEL_DELETE: E,
-        THREAD_DELETE: E,
+        CHANNEL_DELETE: O,
+        THREAD_DELETE: O,
         ACTIVE_CHANNELS_FETCH_START: function (e) {
             let { guildId: t } = e;
             b[t] = {
@@ -120,7 +120,7 @@ class y extends (a = c.ZP.Store) {
                 n.forEach((e) => {
                     let { channel_id: n, messages: r } = e;
                     r.forEach((e) => {
-                        O(t, n, e.message_id, e.user_id);
+                        E(t, n, e.message_id, e.user_id);
                     });
                 }));
         },

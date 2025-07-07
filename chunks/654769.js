@@ -166,7 +166,7 @@ if (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports('notificatio
     try {
         (C.ZP.on('NOTIFICATIONS_RECEIVED_RESPONSE', (e, t, n, r) => {
             if ('dismiss' === t) return void delete W[n];
-            if ('clicked' === t) {
+            {
                 var i, a, o;
                 let e = W[n];
                 (N.isPlatformEmbedded ? C.ZP.focus() : window.focus(), (null == e || null == (i = e.options) ? void 0 : i.omitClickTracking) || (T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: 'CLICK' }, e.trackingProps)), T.default.track(R.rMx.NOTIFICATION_CLICKED, e.clickTrackingProps)), null == e || null == (o = e.options) || null == (a = o.onClick) || a.call(o, r));

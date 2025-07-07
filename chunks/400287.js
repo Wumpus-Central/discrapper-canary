@@ -24,8 +24,8 @@ function x() {
         _ = p.vF.useSetting(),
         E = p.H1.useSetting(),
         j = p.ev.useSetting(),
-        C = p.x4.useSetting(),
-        O = p.RS.useSetting(),
+        O = p.x4.useSetting(),
+        C = p.RS.useSetting(),
         S = p.NA.useSetting(),
         v = p.nc.useSetting(),
         { analyticsLocations: T } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
@@ -44,7 +44,7 @@ function x() {
                         setting: g.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, i.jsx)(l.j7V, {
                             className: s()(b.marginTop8, b.marginBottom20),
-                            value: O,
+                            value: C,
                             onChange: p.RS.updateSetting,
                             children: f.intl.string(f.t.U47N1t)
                         })
@@ -53,7 +53,7 @@ function x() {
                         setting: g.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, i.jsx)(l.j7V, {
                             className: s()(b.marginTop8, b.marginBottom20),
-                            value: C,
+                            value: O,
                             note: f.intl.formatToPlainString(f.t.qjjvqK, { maxSize: 10 }),
                             onChange: p.x4.updateSetting,
                             children: f.intl.string(f.t.VP11Nj)

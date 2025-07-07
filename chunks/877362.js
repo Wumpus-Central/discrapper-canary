@@ -14,8 +14,8 @@ var r = t(255367),
     f = t(742409),
     x = t(518950),
     b = t(271383),
-    v = t(485386),
-    g = t(430824),
+    g = t(485386),
+    v = t(430824),
     h = t(594174),
     j = t(709586),
     C = t(5192),
@@ -29,9 +29,9 @@ let P = E.ZP.getEnableHardwareAcceleration() ? c.Xo$ : d.Z;
 function S(e) {
     var n, t, i;
     let { guildId: d } = e,
-        E = (0, s.e7)([g.Z], () => g.Z.getGuild(d)),
-        S = (0, s.e7)([v.Z], () =>
-            Object.values(v.Z.getRoles(d)).find((e) => {
+        E = (0, s.e7)([v.Z], () => v.Z.getGuild(d)),
+        S = (0, s.e7)([g.Z], () =>
+            Object.values(g.Z.getRoles(d)).find((e) => {
                 var n;
                 return (null == e || null == (n = e.tags) ? void 0 : n.premium_subscriber) !== void 0;
             })
@@ -40,16 +40,16 @@ function S(e) {
         R = null == y ? void 0 : y.id,
         T = (0, s.e7)([b.ZP], () => (null != R ? b.ZP.getMember(d, R) : void 0), [R, d]),
         L = (null == T ? void 0 : T.premiumSince) != null,
-        A = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        k = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         {
-            avatarDecorationSrc: k,
+            avatarDecorationSrc: A,
             avatarSrc: D,
             eventHandlers: U
         } = (0, x.Z)({
             user: y,
             guildId: d,
             size: c.EFr.SIZE_40,
-            animateOnHover: !A
+            animateOnHover: !k
         });
     return null == E || null == T || null == y
         ? null
@@ -118,7 +118,7 @@ function S(e) {
                                   {
                                       user: y,
                                       src: D,
-                                      avatarDecoration: k,
+                                      avatarDecoration: A,
                                       size: c.EFr.SIZE_40,
                                       'aria-hidden': !0,
                                       animate: !0

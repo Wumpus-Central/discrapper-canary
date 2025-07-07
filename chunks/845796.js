@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => g }), n(388685), n(642613));
+(n.d(t, { ZP: () => f }), n(388685), n(642613));
 var r = n(255367),
     l = n(73800),
     i = n(497598),
@@ -37,11 +37,11 @@ let p = (e) => {
             ]
         });
     },
-    g = () => {
+    f = () => {
         let [e, t] = l.useState(!1),
             n = l.useRef(null),
-            { sort: d, onSetSort: g } = (0, s.S0)(),
-            f = l.useCallback((e) => {
+            { sort: d, onSetSort: f } = (0, s.S)(),
+            g = l.useCallback((e) => {
                 let { sortType: t, sortDirection: n } = e;
                 return t === o.E.RECENCY
                     ? n === i.F.DESC
@@ -94,7 +94,7 @@ let p = (e) => {
                     })[e],
                 []
             ),
-            b = f(d);
+            b = g(d);
         return (0, r.jsx)(a.yRy, {
             children: () =>
                 (0, r.jsx)(a.zxk, {
@@ -110,10 +110,10 @@ let p = (e) => {
             align: 'right',
             renderPopout: () =>
                 (0, r.jsx)(p, {
-                    options: c.aP.map(f),
+                    options: c.aP.map(g),
                     selected: b,
                     onSelect: (e) => {
-                        g(h(e));
+                        f(h(e));
                     }
                 }),
             shouldShow: e,

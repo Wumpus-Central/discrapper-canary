@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(710845),
     b = n(581567),
     _ = n(594190),
-    O = n(38618),
-    E = n(501640),
+    E = n(38618),
+    O = n(501640),
     y = n(924301),
     I = n(734307),
     v = n(355298),
@@ -58,7 +58,7 @@ function q(e, t, n) {
         e
     );
 }
-function X(e) {
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,10 +74,10 @@ function X(e) {
     }
     return e;
 }
-class Q extends i.PureComponent {
+class X extends i.PureComponent {
     componentDidUpdate(e) {
         var t, n, r, i, l, c;
-        let { voiceChannelId: d, voiceChannelGuildId: h, voiceChannelType: O, voiceChannelBitrate: E, videoEnabled: I, isScreenSharing: v, runningGame: x, runningGamePid: w, selectedChannelId: k, selectedGuildId: M, connected: G } = this.props;
+        let { voiceChannelId: d, voiceChannelGuildId: h, voiceChannelType: E, voiceChannelBitrate: O, videoEnabled: I, isScreenSharing: v, runningGame: x, runningGamePid: w, selectedChannelId: k, selectedGuildId: M, connected: G } = this.props;
         if (e.voiceChannelId !== d && null != e.voiceChannelId) {
             let t = _.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
@@ -85,7 +85,7 @@ class Q extends i.PureComponent {
                 i = y.ZP.getActiveEventByChannel(e.voiceChannelId);
             z.default.track(
                 K.rMx.LEAVE_VOICE_CHANNEL,
-                X(
+                Q(
                     {
                         channel_id: e.voiceChannelId,
                         channel_type: e.voiceChannelType,
@@ -111,18 +111,18 @@ class Q extends i.PureComponent {
                 t = null != e ? e.name : '',
                 n = P.Z.getStageInstanceByChannel(d),
                 r = y.ZP.getActiveEventByChannel(d);
-            ((0, u.yw)(K.rMx.CHANNEL_OPENED, X({}, (0, u.$H)(d))), (0, p.a)(K.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: d }));
+            ((0, u.yw)(K.rMx.CHANNEL_OPENED, Q({}, (0, u.$H)(d))), (0, p.a)(K.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: d }));
             let i = null,
                 l = F.default.getFocusedPID();
             (null != l && N.default.getOverlayMethod(l) !== o.gl.Disabled && (F.default.isInstanceLocked() ? (i = K.ADE.OVERLAY_LOCKED_ACTIVATED) : F.default.isInstanceLocked() || (i = F.default.isPinned(K.Odu.TEXT) ? K.ADE.OVERLAY_UNLOCKED_PINNED : K.ADE.OVERLAY_UNLOCKED)),
                 z.default.track(
                     K.rMx.JOIN_VOICE_CHANNEL,
-                    X(
+                    Q(
                         {
                             location: i,
                             channel_id: d,
-                            channel_type: O,
-                            channel_bitrate: E,
+                            channel_type: E,
+                            channel_bitrate: O,
                             guild_id: h,
                             game_name: t,
                             game_platform: this.props.gamePlatform,
@@ -181,8 +181,8 @@ class Q extends i.PureComponent {
                         game_detection_enabled: (0, _.ik)(x),
                         executable_path: l,
                         voice_channel_id: d,
-                        voice_channel_type: O,
-                        voice_channel_bitrate: E,
+                        voice_channel_type: E,
+                        voice_channel_bitrate: O,
                         voice_channel_guild_id: h,
                         distributor_game_id: x.sku,
                         hidden_by_distributor: x.hidden
@@ -204,7 +204,7 @@ class Q extends i.PureComponent {
             (v ? ((e = 'screen'), (n = (0, f.t)())) : I && (e = 'camera'),
                 z.default.track(
                     K.rMx.VIDEO_INPUT_TOGGLED,
-                    X(
+                    Q(
                         {
                             video_input_type: e,
                             video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
@@ -232,7 +232,7 @@ class Q extends i.PureComponent {
                         });
                 z.default.track(
                     K.rMx.ACK_COMMUNITY_MESSAGES,
-                    X(
+                    Q(
                         {
                             last_message_id: null == i ? void 0 : i.id,
                             last_message_reference_message_id: null == i || null == (c = i.messageReference) ? void 0 : c.message_id,
@@ -279,11 +279,11 @@ function J() {
         ),
         C = (0, l.e7)([H.ZP], () => H.ZP.getState().section, []),
         S = (0, l.e7)([V.Z], () => V.Z.getHomeLink(), []),
-        N = (0, l.e7)([O.Z], () => O.Z.isConnected(), []),
+        N = (0, l.e7)([E.Z], () => E.Z.isConnected(), []),
         [T, P] = (0, l.Wu)([w.Z], () => [w.Z.isVideoEnabled(), w.Z.isScreenSharing()], []),
         j = (0, l.e7)([U.Z], () => U.Z.getPrimaryActivity(), []),
         Z = (0, l.e7)([_.ZP], () => _.ZP.getCurrentGameForAnalytics(), []),
-        R = (0, E.Z)(f),
+        R = (0, O.Z)(f),
         D = (0, l.e7)([v.Z], () => v.Z.getMessageRequestsCount(), []),
         F = {
             selectedChannelId: t,
@@ -318,7 +318,7 @@ function J() {
     (i.useEffect(() => {
         if (Y && null != ee) {
             let e = (0, d.K)(A.Z.getChannel(ee), !0);
-            ((0, u.yw)(K.rMx.CHANNEL_OPENED, X({}, e, (0, u.$H)(ee))), (0, p.a)(K.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }), W.current.isTextInVoice && (0, u.yw)(K.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: W.current.isNSFWChannel }));
+            ((0, u.yw)(K.rMx.CHANNEL_OPENED, Q({}, e, (0, u.$H)(ee))), (0, p.a)(K.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }), W.current.isTextInVoice && (0, u.yw)(K.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: W.current.isNSFWChannel }));
         }
     }, [Y, ee]),
         i.useEffect(() => {
@@ -328,7 +328,7 @@ function J() {
             if (Y && null != et) {
                 var e, t, n, r;
                 let i =
-                    ((n = X(
+                    ((n = Q(
                         {},
                         $
                             ? {
@@ -365,6 +365,6 @@ function J() {
         i.useEffect(() => {
             Y && null == et && J === K.Z5c.MESSAGE_REQUESTS && !en.current && ((en.current = !0), z.default.track(K.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: W.current.numMessageRequests }));
         }, [Y, et, J]),
-        (0, r.jsx)(Q, X({}, F))
+        (0, r.jsx)(X, Q({}, F))
     );
 }

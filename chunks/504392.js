@@ -14,8 +14,8 @@ var r = t(255367),
     f = t(184478),
     x = t(877362),
     b = t(460608),
-    v = t(279604),
-    g = t(332538),
+    g = t(279604),
+    v = t(332538),
     h = t(535396),
     j = t(93841),
     C = t(388032),
@@ -26,7 +26,7 @@ function Z(e) {
     (i.useEffect(() => {
         ((0, d.Sn)(n), (0, d.Fm)(n));
     }, [n]),
-        (0, g.Wj)(n));
+        (0, v.Wj)(n));
     let o = (0, s.e7)([u.Z], () => u.Z.getStateForGuild(n)),
         Z = (0, m.Z)(n),
         O = i.useRef(!1);
@@ -34,7 +34,7 @@ function Z(e) {
         var e;
         if (null == t) return;
         let r = null == o || null == (e = o.allPowerups) ? void 0 : e[t];
-        null == r || O.current || ((0, v.KE)(n, r), (O.current = !0));
+        null == r || O.current || ((0, g.KE)(n, r), (O.current = !0));
     }, [n, t, null == o ? void 0 : o.allPowerups]),
     (null == o ? void 0 : o.powerupCatalog) == null)
         ? null

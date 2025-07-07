@@ -1,155 +1,155 @@
-t.d(n, { Z: () => p });
-var r = t(255367);
-t(73800);
-var i = t(442837),
-    l = t(692547),
-    o = t(481060),
-    a = t(493683),
-    c = t(129861),
-    s = t(700582),
-    u = t(594174),
-    d = t(388032),
-    f = t(837014);
+r.d(n, { Z: () => b });
+var t = r(255367);
+r(73800);
+var i = r(442837),
+    s = r(692547),
+    o = r(481060),
+    l = r(493683),
+    a = r(129861),
+    d = r(700582),
+    c = r(594174),
+    u = r(388032),
+    m = r(837014);
 function h(e) {
-    let { color: n, className: t } = e;
-    return (0, r.jsx)('svg', {
-        className: t,
+    let { color: n, className: r } = e;
+    return (0, t.jsx)('svg', {
+        className: r,
         height: '16',
         width: '80',
         viewBox: '0 0 80 16',
         xmlns: 'http://www.w3.org/2000/svg',
-        children: (0, r.jsxs)('g', {
+        children: (0, t.jsxs)('g', {
             fill: 'none',
             fillRule: 'evenodd',
             opacity: '.6',
             children: [
-                (0, r.jsx)('path', { d: 'm0 0h80v16h-80z' }),
-                (0, r.jsxs)('g', {
+                (0, t.jsx)('path', { d: 'm0 0h80v16h-80z' }),
+                (0, t.jsxs)('g', {
                     stroke: n,
                     strokeLinecap: 'round',
                     strokeLinejoin: 'round',
                     strokeWidth: '2',
                     children: [
-                        (0, r.jsx)('path', { d: 'm71 1h4v4.16' }),
-                        (0, r.jsx)('path', {
+                        (0, t.jsx)('path', { d: 'm71 1h4v4.16' }),
+                        (0, t.jsx)('path', {
                             d: 'm2 1h4v4.16',
                             transform: 'matrix(-1 0 0 1 8 0)'
                         }),
-                        (0, r.jsx)('path', { d: 'm51 1h4m6 0h4m-24 0h4m-14 0h4m-14 0h4m-23 11v-2m9-9h4' }),
-                        (0, r.jsx)('path', { d: 'm72.13 10.474 2.869 3.12 2.631-3.12' })
+                        (0, t.jsx)('path', { d: 'm51 1h4m6 0h4m-24 0h4m-14 0h4m-14 0h4m-23 11v-2m9-9h4' }),
+                        (0, t.jsx)('path', { d: 'm72.13 10.474 2.869 3.12 2.631-3.12' })
                     ]
                 })
             ]
         })
     });
 }
-function p(e, n) {
-    let t = (0, i.e7)([u.default], () => u.default.getCurrentUser());
-    return null == t || n.ownerId !== t.id || e.id === t.id
+function b(e, n) {
+    let r = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+    return null == r || n.ownerId !== r.id || e.id === r.id
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, t.jsx)(o.sNh, {
               id: 'make-dm-owner',
               color: 'danger',
-              label: d.intl.string(d.t['6t3CyM']),
+              label: u.intl.string(u.t['6t3CyM']),
               action: () => {
                   (0, o.h7j)((i) => {
-                      var u, p;
-                      return (0, r.jsxs)(
+                      var c, b;
+                      return (0, t.jsxs)(
                           o.ConfirmModal,
-                          ((u = (function (e) {
+                          ((c = (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
-                                  var t = null != arguments[n] ? arguments[n] : {},
-                                      r = Object.keys(t);
+                                  var r = null != arguments[n] ? arguments[n] : {},
+                                      t = Object.keys(r);
                                   ('function' == typeof Object.getOwnPropertySymbols &&
-                                      (r = r.concat(
-                                          Object.getOwnPropertySymbols(t).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                      (t = t.concat(
+                                          Object.getOwnPropertySymbols(r).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                           })
                                       )),
-                                      r.forEach(function (n) {
-                                          var r;
-                                          ((r = t[n]),
+                                      t.forEach(function (n) {
+                                          var t;
+                                          ((t = r[n]),
                                               n in e
                                                   ? Object.defineProperty(e, n, {
-                                                        value: r,
+                                                        value: t,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[n] = r));
+                                                  : (e[n] = t));
                                       }));
                               }
                               return e;
                           })(
                               {
-                                  bodyClassName: f.confirmModal,
-                                  header: d.intl.string(d.t.WZoUsr),
-                                  confirmText: d.intl.string(d.t['cY+Ooa']),
-                                  cancelText: d.intl.string(d.t['ETE/oK']),
-                                  onConfirm: () => a.Z.setDMOwner(n.id, e.id)
+                                  bodyClassName: m.confirmModal,
+                                  header: u.intl.string(u.t.WZoUsr),
+                                  confirmText: u.intl.string(u.t['cY+Ooa']),
+                                  cancelText: u.intl.string(u.t['ETE/oK']),
+                                  onConfirm: () => l.Z.setDMOwner(n.id, e.id)
                               },
                               i
                           )),
-                          (p = p =
+                          (b = b =
                               {
                                   children: [
-                                      (0, r.jsx)(h, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
-                                      (0, r.jsxs)('div', {
-                                          className: f.fromToWrapper,
+                                      (0, t.jsx)(h, { color: s.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, t.jsxs)('div', {
+                                          className: m.fromToWrapper,
                                           children: [
-                                              (0, r.jsx)('div', {
-                                                  className: f.from,
-                                                  children: (0, r.jsx)(s.Z, {
-                                                      user: t,
+                                              (0, t.jsx)('div', {
+                                                  className: m.from,
+                                                  children: (0, t.jsx)(d.Z, {
+                                                      user: r,
                                                       size: o.EFr.SIZE_80
                                                   })
                                               }),
-                                              (0, r.jsx)('div', {
-                                                  className: f.to,
-                                                  children: (0, r.jsx)(s.Z, {
+                                              (0, t.jsx)('div', {
+                                                  className: m.to,
+                                                  children: (0, t.jsx)(d.Z, {
                                                       user: e,
                                                       size: o.EFr.SIZE_80
                                                   })
                                               })
                                           ]
                                       }),
-                                      (0, r.jsx)(o.Text, {
+                                      (0, t.jsx)(o.Text, {
                                           variant: 'text-md/normal',
-                                          children: d.intl.format(d.t.gsBb3N, {
-                                              usernameHook: (n, t) =>
-                                                  (0, r.jsx)(
-                                                      c.Z,
+                                          children: u.intl.format(u.t.gsBb3N, {
+                                              usernameHook: (n, r) =>
+                                                  (0, t.jsx)(
+                                                      a.Z,
                                                       {
-                                                          usernameIcon: (0, r.jsx)(o.qEK, {
-                                                              className: f.avatarIcon,
+                                                          usernameIcon: (0, t.jsx)(o.qEK, {
+                                                              className: m.avatarIcon,
                                                               src: e.getAvatarURL(void 0, 16),
                                                               size: o.EFr.SIZE_16,
                                                               'aria-hidden': !0
                                                           }),
-                                                          className: f.discordTag,
-                                                          usernameClass: f.username,
-                                                          discriminatorClass: f.discriminator,
+                                                          className: m.discordTag,
+                                                          usernameClass: m.username,
+                                                          discriminatorClass: m.discriminator,
                                                           user: e
                                                       },
-                                                      t
+                                                      r
                                                   )
                                           })
                                       })
                                   ]
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(p))
+                              ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(b))
                               : (function (e, n) {
-                                    var t = Object.keys(e);
+                                    var r = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
-                                        var r = Object.getOwnPropertySymbols(e);
-                                        t.push.apply(t, r);
+                                        var t = Object.getOwnPropertySymbols(e);
+                                        r.push.apply(r, t);
                                     }
-                                    return t;
-                                })(Object(p)).forEach(function (e) {
-                                    Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(p, e));
+                                    return r;
+                                })(Object(b)).forEach(function (e) {
+                                    Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(b, e));
                                 }),
-                          u)
+                          c)
                       );
                   });
               }

@@ -1,4 +1,4 @@
-(n.d(t, { f: () => C }), n(388685), n(49124));
+(n.d(t, { f: () => O }), n(388685), n(49124));
 var i = n(255367),
     r = n(73800),
     s = n(245364),
@@ -59,7 +59,7 @@ function j(e, t) {
         e
     );
 }
-function C() {
+function O() {
     return (0, i.jsx)(m.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
@@ -72,14 +72,14 @@ function C() {
                     className: x.labelSpacing,
                     children: 'Payment-method-specific components and views may not appear for you unless your browser is supported for that payment method and they have been configured on your browser.'
                 }),
-                (0, i.jsx)(O, {}),
+                (0, i.jsx)(C, {}),
                 (0, i.jsx)(I, {}),
                 (0, i.jsx)(w, {})
             ]
         })
     });
 }
-function O() {
+function C() {
     return (0, i.jsxs)(h.$0, {
         children: [
             (0, i.jsx)(o.X6q, {

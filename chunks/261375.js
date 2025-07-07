@@ -103,7 +103,14 @@ let x = new (class {
         this.handleOneGuildCreate(e.guild, t);
     }
     handleOneGuildCreate(e, t) {
-        null != e.channelUpdates ? this.onGuildUpdate(e.id, e.channelUpdates.writes, e.channelUpdates.deletes, t) : this.onGuildSync(e.id, t);
+        let { id: n, channels: i } = e;
+        switch (i.op) {
+            case 'full_sync':
+                this.onGuildSync(n, t);
+                break;
+            case 'update':
+                this.onGuildUpdate(n, i.writes, i.deletes, t);
+        }
     }
     handleGuildUpdate(e, t) {
         this.unsync(e.guild.id, t);

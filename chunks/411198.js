@@ -1,12 +1,12 @@
 (n.d(t, {
-    $5: () => E,
-    EO: () => O,
-    Qs: () => g,
-    cL: () => y,
+    $5: () => b,
+    EO: () => v,
+    Qs: () => E,
+    cL: () => O,
     di: () => p,
     rk: () => f,
     sp: () => _,
-    tK: () => b,
+    tK: () => y,
     wD: () => d
 }),
     n(953529),
@@ -47,7 +47,7 @@ function u(e) {
     return e;
 }
 function d(e, t) {
-    var n, r, s, c, u, d, f, _, p, g, E, b, y, O;
+    var n, r, s, c, u, d, f, _, p, m, E, b, y, O;
     let v = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
         I = null != (n = e.premium_subscription_count) ? n : 0;
     if (null == e.properties) {
@@ -90,7 +90,7 @@ function d(e, t) {
         rulesChannelId: e.properties.rules_channel_id,
         safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
         publicUpdatesChannelId: e.properties.public_updates_channel_id,
-        maxStageVideoChannelUsers: null != (g = e.properties.max_stage_video_channel_users) ? g : -1,
+        maxStageVideoChannelUsers: null != (m = e.properties.max_stage_video_channel_users) ? m : -1,
         maxVideoChannelUsers: null != (E = e.properties.max_video_channel_users) ? E : -1,
         maxMembers: null != (b = e.properties.max_members) ? b : -1,
         nsfwLevel: null != (y = e.properties.nsfw_level) ? y : l.V_K.DEFAULT,
@@ -99,7 +99,7 @@ function d(e, t) {
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
         profile: e.properties.profile,
         premiumFeatures: null != e.properties.premium_features ? h(e.properties.premium_features) : null,
-        moderatorReporting: null != e.properties.moderator_reporting ? m(e.properties.moderator_reporting) : null
+        moderatorReporting: null != e.properties.moderator_reporting ? g(e.properties.moderator_reporting) : null
     };
     return null == t ? (0, a.gh)(T, o.ZP) : t.merge(T);
 }
@@ -107,45 +107,46 @@ function f(e, t) {
     return new o.Bg(u({}, e, t));
 }
 function _(e, t) {
-    var n, r, i, a, o, s, c, u, d, f, _, p, h, m;
-    let g = null != (n = e.properties) ? n : b(t),
-        E = {
+    var n, r, i, a, o, s, c, u, d, f, _, p, m, g;
+    let E = null != (n = e.properties) ? n : y(t),
+        b = {
             id: e.id,
-            name: null != (r = g.name) ? r : '',
-            description: g.description,
-            icon: g.icon,
-            splash: g.splash,
-            banner: g.banner,
-            homeHeader: g.home_header,
-            features: new Set(null != (i = g.features) ? i : []),
-            preferredLocale: null != (a = g.preferred_locale) ? a : 'en-us',
-            ownerId: g.owner_id,
-            application_id: g.application_id,
-            afkChannelId: g.afk_channel_id,
-            afkTimeout: g.afk_timeout,
-            systemChannelId: g.system_channel_id,
-            verificationLevel: null != (o = g.verification_level) ? o : l.sFg.NONE,
-            explicitContentFilter: null != (s = g.explicit_content_filter) ? s : l.lxg.DISABLED,
-            defaultMessageNotifications: null != (c = g.default_message_notifications) ? c : l.bL.ALL_MESSAGES,
-            mfaLevel: null != (u = g.mfa_level) ? u : l.BpS.NONE,
-            vanityURLCode: g.vanity_url_code,
-            premiumTier: null != (d = g.premium_tier) ? d : l.Eu4.NONE,
-            premiumProgressBarEnabled: g.premium_progress_bar_enabled || !1,
-            systemChannelFlags: g.system_channel_flags,
-            discoverySplash: g.discovery_splash,
-            rulesChannelId: g.rules_channel_id,
-            safetyAlertsChannelId: g.safety_alerts_channel_id,
-            publicUpdatesChannelId: g.public_updates_channel_id,
-            maxStageVideoChannelUsers: null != (f = g.max_stage_video_channel_users) ? f : -1,
-            maxVideoChannelUsers: null != (_ = g.max_video_channel_users) ? _ : -1,
-            maxMembers: null != (p = g.max_members) ? p : -1,
-            nsfwLevel: null != (h = g.nsfw_level) ? h : l.V_K.DEFAULT,
-            ownerConfiguredContentLevel: null != (m = g.owner_configured_content_level) ? m : null,
-            hubType: g.hub_type,
-            latestOnboardingQuestionId: g.latest_onboarding_question_id,
-            profile: g.profile
+            name: null != (r = E.name) ? r : '',
+            description: E.description,
+            icon: E.icon,
+            splash: E.splash,
+            banner: E.banner,
+            homeHeader: E.home_header,
+            features: new Set(null != (i = E.features) ? i : []),
+            preferredLocale: null != (a = E.preferred_locale) ? a : 'en-us',
+            ownerId: E.owner_id,
+            application_id: E.application_id,
+            afkChannelId: E.afk_channel_id,
+            afkTimeout: E.afk_timeout,
+            systemChannelId: E.system_channel_id,
+            verificationLevel: null != (o = E.verification_level) ? o : l.sFg.NONE,
+            explicitContentFilter: null != (s = E.explicit_content_filter) ? s : l.lxg.DISABLED,
+            defaultMessageNotifications: null != (c = E.default_message_notifications) ? c : l.bL.ALL_MESSAGES,
+            mfaLevel: null != (u = E.mfa_level) ? u : l.BpS.NONE,
+            vanityURLCode: E.vanity_url_code,
+            premiumTier: null != (d = E.premium_tier) ? d : l.Eu4.NONE,
+            premiumProgressBarEnabled: E.premium_progress_bar_enabled || !1,
+            systemChannelFlags: E.system_channel_flags,
+            discoverySplash: E.discovery_splash,
+            rulesChannelId: E.rules_channel_id,
+            safetyAlertsChannelId: E.safety_alerts_channel_id,
+            publicUpdatesChannelId: E.public_updates_channel_id,
+            maxStageVideoChannelUsers: null != (f = E.max_stage_video_channel_users) ? f : -1,
+            maxVideoChannelUsers: null != (_ = E.max_video_channel_users) ? _ : -1,
+            maxMembers: null != (p = E.max_members) ? p : -1,
+            nsfwLevel: null != (m = E.nsfw_level) ? m : l.V_K.DEFAULT,
+            ownerConfiguredContentLevel: null != (g = E.owner_configured_content_level) ? g : null,
+            hubType: E.hub_type,
+            latestOnboardingQuestionId: E.latest_onboarding_question_id,
+            profile: E.profile,
+            premiumFeatures: null != E.premium_features ? h(E.premium_features) : null
         };
-    return t.merge(E);
+    return t.merge(b);
 }
 function p(e, t) {
     let n = {
@@ -187,7 +188,7 @@ function p(e, t) {
         latestOnboardingQuestionId: e.latest_onboarding_question_id,
         profile: e.profile,
         premiumFeatures: null != e.premium_features ? h(e.premium_features) : null,
-        moderatorReporting: null != e.moderator_reporting ? m(e.moderator_reporting) : null
+        moderatorReporting: null != e.moderator_reporting ? g(e.moderator_reporting) : null
     };
     return null == t ? new o.ZP(n) : t.merge(n);
 }
@@ -200,13 +201,21 @@ function h(e) {
     };
 }
 function m(e) {
+    return {
+        features: e.features,
+        additional_emoji_slots: e.additionalEmojiSlots,
+        additional_sticker_slots: e.additionalStickerSlots,
+        additional_sound_slots: e.additionalSoundSlots
+    };
+}
+function g(e) {
     var t;
     return {
         moderatorReportingEnabled: e.moderator_reporting_enabled,
         moderatorReportChannelId: null != (t = e.moderator_report_channel_id) ? t : null
     };
 }
-function g(e) {
+function E(e) {
     let t = {
         id: e.id,
         name: e.name,
@@ -224,7 +233,7 @@ function g(e) {
     };
     return new o.ZP(t);
 }
-function E(e) {
+function b(e) {
     let t = {
         id: e.id,
         name: e.name,
@@ -236,7 +245,7 @@ function E(e) {
     };
     return new o.ZP(t);
 }
-function b(e) {
+function y(e) {
     var t;
     return {
         id: e.id,
@@ -260,6 +269,7 @@ function b(e) {
         vanity_url_code: null != (t = e.vanityURLCode) ? t : void 0,
         premium_tier: e.premiumTier,
         premium_progress_bar_enabled: e.premiumProgressBarEnabled,
+        premium_features: null != e.premiumFeatures ? m(e.premiumFeatures) : null,
         system_channel_flags: e.systemChannelFlags,
         discovery_splash: e.discoverySplash,
         rules_channel_id: e.rulesChannelId,
@@ -276,11 +286,11 @@ function b(e) {
         profile: e.profile
     };
 }
-function y(e) {
+function O(e) {
     var t;
     return (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null != (t = e.features) ? t : [])), (0, a.gh)(e, o.ZP));
 }
-function O(e, t, n, r) {
+function v(e, t, n, r) {
     let i = (null != r && r.length > 0) || (null != n && n.length > 0);
     if ((i && (t = u({}, t)), null != r)) for (let e of r) delete t[e];
     if (null != n && n.length > 0) for (let e of n) t[e.id] = (0, s.CL)(e);

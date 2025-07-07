@@ -25,7 +25,7 @@ function b(e) {
             authorizing: m.Z.isFetchingAuthorization
         })),
         [E, j] = r.useState(null != b ? b : ''),
-        [C, O] = r.useState('8080'),
+        [O, C] = r.useState('8080'),
         [S, v] = r.useState('localhost'),
         T = (0, u.Dt)(),
         N = f.test(E);
@@ -39,7 +39,7 @@ function b(e) {
                 case 'proxy':
                     return (0, c.ZP)(n);
             }
-        })(S, C, E);
+        })(S, O, E);
         null != (await o.Wt(E, e)) && t();
     }
     r.useEffect(() => () => a.Z.wait(() => o.q$()), []);
@@ -134,16 +134,16 @@ function b(e) {
                                           title: p.intl.string(p.t.fF4zxs),
                                           required: !0,
                                           children: (0, i.jsx)(l.oil, {
-                                              value: C,
+                                              value: O,
                                               maxLength: 5,
-                                              onChange: (e) => O(e),
+                                              onChange: (e) => C(e),
                                               disabled: _
                                           })
                                       }),
                                 (0, i.jsx)(l.zxk, {
                                     submitting: _,
                                     type: 'submit',
-                                    disabled: !N || 0 === E.length || ('localhost' === S && 0 === C.length),
+                                    disabled: !N || 0 === E.length || ('localhost' === S && 0 === O.length),
                                     color: y ? l.zxk.Colors.RED : l.zxk.Colors.GREEN,
                                     children: y ? p.intl.string(p.t.d6TR3N) : p.intl.string(p.t.qwuK5O)
                                 })

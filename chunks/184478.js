@@ -1,4 +1,4 @@
-t.d(n, { Z: () => v });
+t.d(n, { Z: () => g });
 var r = t(255367);
 t(73800);
 var i = t(793030),
@@ -15,10 +15,10 @@ var i = t(793030),
     f = t(93841),
     x = t(388032),
     b = t(466649);
-function v(e) {
+function g(e) {
     let { guildId: n } = e,
         t = (0, o.e7)([c.Z], () => c.Z.getGuild(n)),
-        { available: v, spent: g, total: h } = (0, u.Z)(n);
+        { available: g, spent: v, total: h } = (0, u.Z)(n);
     if (null != t)
         return (0, r.jsxs)('div', {
             className: b.container,
@@ -42,11 +42,11 @@ function v(e) {
                     className: b.contentContainer,
                     children: [
                         (0, r.jsx)(p.Z, {
-                            count: v,
+                            count: g,
                             type: p.b.AVAILABLE
                         }),
                         (0, r.jsx)(p.Z, {
-                            count: g,
+                            count: v,
                             type: p.b.SPENT
                         }),
                         (0, r.jsx)(p.Z, {

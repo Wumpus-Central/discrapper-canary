@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -16,7 +16,7 @@ let s = '1',
     m = '3',
     b = '4',
     _ = '5',
-    O = {
+    E = {
         [a.aIt.ESRB]: {
             [s]: o.esrbEveryone,
             [c]: o.esrbEveryoneTenPlus,
@@ -33,8 +33,8 @@ let s = '1',
             [_]: o.pegiEighteen
         }
     },
-    E = (e) => {
+    O = (e) => {
         let { agency: t, rating: n, className: i } = e,
-            a = O[t][n];
+            a = E[t][n];
         return null == a ? null : (0, r.jsx)('div', { className: l()(o.contentRating, a, i) });
     };

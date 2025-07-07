@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(501431),
     d = n(888302),
     p = n(193227),
-    g = n(845796),
-    f = n(841875),
+    f = n(845796),
+    g = n(841875),
     h = n(312030),
     b = n(795343),
     m = n(763891),
@@ -23,13 +23,13 @@ function E(e) {
             scrollerRef: n,
             sortedCategories: E
         });
-    (0, u.Ab)();
+    (0, u.A)();
     let y = (0, c.F)('CollectiblesBrowse'),
         [j, T] = l.useState(y);
     l.useEffect(() => {
         y || T(!1);
     }, [y, T]);
-    let P = (0, u.S0)((e) => e.hasFilters());
+    let P = (0, u.S)((e) => e.hasFilters());
     return (0, r.jsx)('div', {
         className: o()(O.pageWrapper, { [O.pageWrapperFilter]: y }),
         children: (0, r.jsxs)('main', {
@@ -52,7 +52,7 @@ function E(e) {
                                     (0, r.jsxs)('div', {
                                         className: O.controlsRightSide,
                                         children: [
-                                            (0, r.jsx)(g.ZP, {}),
+                                            (0, r.jsx)(f.ZP, {}),
                                             (0, r.jsx)(a.zxk, {
                                                 onClick: () => T((e) => !e),
                                                 look: a.iLD.OUTLINED,
@@ -107,7 +107,7 @@ function E(e) {
                 j &&
                     (0, r.jsx)('aside', {
                         className: O.filterBar,
-                        children: (0, r.jsx)(f.Z, {})
+                        children: (0, r.jsx)(g.Z, {})
                     })
             ]
         })

@@ -14,10 +14,10 @@ var r = t(255367),
     f = t(981631),
     x = t(93841),
     b = t(388032),
-    v = t(106180);
-function g() {
+    g = t(106180);
+function v() {
     return (0, r.jsx)('div', {
-        className: v.staffContainer,
+        className: g.staffContainer,
         children: (0, r.jsx)(i.xv, {
             variant: 'text-sm/medium',
             children: b.intl.string(x.default.l9n4QU)
@@ -51,14 +51,14 @@ function h(e) {
                     : void 0;
     return null != N || t
         ? (0, r.jsxs)('div', {
-              className: v.container,
+              className: g.container,
               children: [
                   (0, r.jsx)(i.xv, {
                       variant: 'eyebrow',
                       color: 'text-secondary',
                       children: b.intl.string(x.default['3FRira'])
                   }),
-                  t && (0, r.jsx)(g, {}),
+                  t && (0, r.jsx)(v, {}),
                   N
               ]
           })

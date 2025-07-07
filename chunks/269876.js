@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => O }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,10 +18,10 @@ var i = n(255367),
     _ = n(893354),
     E = n(20493);
 let j = (0, p.hQ)();
-function C() {
+function O() {
     let [e, t] = r.useState(-100),
         [n, s] = r.useState(!1),
-        { threshold: C, autoThreshold: O } = (0, a.cj)([g.Z], () => ({
+        { threshold: O, autoThreshold: C } = (0, a.cj)([g.Z], () => ({
             threshold: g.Z.getModeOptions().threshold,
             autoThreshold: g.Z.getModeOptions().autoThreshold
         })),
@@ -57,9 +57,9 @@ function C() {
     let y = (0, i.jsx)('section', {
         className: l()(b.inputSensitivityToggle, b.manual),
         children: (0, i.jsx)(u.iRW, {
-            initialValue: C + 100,
+            initialValue: O + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => I(-((100 - e) * 1), O),
+            onValueChange: (e) => I(-((100 - e) * 1), C),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': j,
@@ -76,7 +76,7 @@ function C() {
         })
     });
     return (
-        O &&
+        C &&
             (y = (0, i.jsxs)('section', {
                 className: b.inputSensitivityToggle,
                 children: [
@@ -112,8 +112,8 @@ function C() {
                                     }),
                                     (0, i.jsx)(u.rsf, {
                                         id: e,
-                                        checked: O,
-                                        onChange: (e) => I(C, e)
+                                        checked: C,
+                                        onChange: (e) => I(O, e)
                                     })
                                 ]
                             })

@@ -16,8 +16,8 @@ var i = n(243814),
     m = n(596223),
     b = n(838195),
     _ = n(333861),
-    O = n(928518),
-    E = n(23750),
+    E = n(928518),
+    O = n(23750),
     y = n(592125),
     I = n(293273),
     v = n(885110),
@@ -166,7 +166,7 @@ let G = {
                     application: t.application,
                     channelId: null == l ? void 0 : l.id
                 }),
-                c = null != s ? O.Z.getWindow(s) : void 0;
+                c = null != s ? E.Z.getWindow(s) : void 0;
             (null == c ? void 0 : c.closed) && (c = void 0);
             let u = null != c ? k.IlC.POPOUT : k.IlC.APP;
             ((0, j.Pr)({}, null == c ? void 0 : c.document),
@@ -244,7 +244,7 @@ let G = {
             return new Promise((e, t) => {
                 !(function (e, t) {
                     let n;
-                    if ((0, h.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
+                    if ((0, h.R)()) n = E.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
                     else {
                         var r;
                         let e = C.Z.getLastFocusedWindowId();
@@ -335,7 +335,7 @@ let G = {
                             width: l.width
                         }
                     ]),
-                    (n = new E.ZP({
+                    (n = new O.ZP({
                         id: T.default.cast(T.default.fromTimestamp(Date.now())),
                         applicationId: p,
                         content: c,
@@ -347,7 +347,7 @@ let G = {
                 let t = !1,
                     r = (0, R.jU)(d),
                     l = a.z1l;
-                ((O.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
+                ((E.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
                     (0, _.M)({
                         applicationId: p,
                         channel: h,

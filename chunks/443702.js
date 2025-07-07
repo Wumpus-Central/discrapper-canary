@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(78839),
     E = n(706454),
     j = n(726985),
-    C = n(981631),
-    O = n(388032),
+    O = n(981631),
+    C = n(388032),
     S = n(189435);
 let v = () =>
     (0, i.jsx)('div', {
@@ -33,7 +33,7 @@ class T extends r.PureComponent {
         });
     }
     handleRedemptionRedirect() {
-        c.Z.setSection(C.oAB.INVENTORY);
+        c.Z.setSection(O.oAB.INVENTORY);
     }
     render() {
         let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: r, locale: s, premiumSubscription: a, isRemovingPaymentSource: o, isUpdatingPaymentSource: c } = this.props;
@@ -49,7 +49,7 @@ class T extends r.PureComponent {
                                 children: (0, i.jsx)(m.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: r,
-                                    premiumSubscriptionPaymentSourceId: null != a && a.status !== C.O0b.CANCELED ? a.paymentSourceId : null,
+                                    premiumSubscriptionPaymentSourceId: null != a && a.status !== O.O0b.CANCELED ? a.paymentSourceId : null,
                                     locale: s,
                                     removing: o,
                                     submitting: c
@@ -62,7 +62,7 @@ class T extends r.PureComponent {
                               children: (0, i.jsxs)(l.y5t, {
                                   component: (0, i.jsx)(l.vwX, {
                                       tag: 'h1',
-                                      children: O.intl.string(O.t.obLrcH)
+                                      children: C.intl.string(C.t.obLrcH)
                                   }),
                                   children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(u.Z, { locale: s })]
                               })
@@ -71,7 +71,7 @@ class T extends r.PureComponent {
                       (0, i.jsx)(l.Zbd, {
                           className: S.codeRedemptionRedirect,
                           type: l.Zbd.Types.CUSTOM,
-                          children: O.intl.format(O.t['8b+FXF'], { onClick: this.handleRedemptionRedirect })
+                          children: C.intl.format(C.t['8b+FXF'], { onClick: this.handleRedemptionRedirect })
                       })
                   ]
               });

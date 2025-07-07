@@ -1,6 +1,6 @@
 (n.d(t, {
-    Co: () => X,
-    ZP: () => Q,
+    Co: () => Q,
+    ZP: () => X,
     bZ: () => q,
     gt: () => B
 }),
@@ -21,8 +21,8 @@ var r,
     m = n(565799),
     b = n(501655),
     _ = n(192079),
-    O = n(427679),
-    E = n(448206),
+    E = n(427679),
+    O = n(448206),
     y = n(496675),
     I = n(938475),
     v = n(626135),
@@ -136,7 +136,7 @@ function V(e) {
                       className: G.stageIcon
                   })
                 : null,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 1
@@ -357,7 +357,7 @@ function K(e) {
             className: G.stageIcon
         }),
         topic: t.topic,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 2
@@ -365,12 +365,12 @@ function K(e) {
     });
 }
 var q = (((r = {})[(r.VOICE = 1)] = 'VOICE'), (r[(r.STAGE = 2)] = 'STAGE'), (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM'), r);
-function X(e) {
+function Q(e) {
     let { channel: t, speakers: n, voiceType: r } = e,
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
         p = (0, s.e7)([y.Z], () => y.Z.can(M.Plq.CONNECT, t)),
-        h = (0, E.Z)(t.id),
+        h = (0, O.Z)(t.id),
         f = U.intl.string(U.t.VJlc0d);
     switch (r) {
         case 1:
@@ -417,13 +417,13 @@ function X(e) {
               ]
           });
 }
-let Q = l.memo(function (e) {
+let X = l.memo(function (e) {
     let { guild: t } = e,
         { showRedesignedLiveChannelNotice: n } = (0, p.o)(!0),
         r = (0, Z.y)(t.id),
         l = (0, L.k5)(t.id),
         a = (0, L.Vm)(t.id),
-        o = (0, s.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
+        o = (0, s.e7)([E.Z], () => E.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
         { isStageNoticeHidden: c, isEventNoticeHidden: u } = (0, s.cj)(
             [P.Z],
             () => ({

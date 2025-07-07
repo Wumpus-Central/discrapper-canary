@@ -24,8 +24,8 @@ var i = n(255367),
     _ = n(956221),
     E = n(771173),
     j = n(385499),
-    C = n(570908),
-    O = n(702321),
+    O = n(570908),
+    C = n(702321),
     S = n(201895),
     v = n(43267),
     T = n(933557),
@@ -206,7 +206,7 @@ let et = K.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
                         ),
                         {
                             children: [
-                                (0, i.jsx)(C.Z, {
+                                (0, i.jsx)(O.Z, {
                                     muted: !1,
                                     avatar: (0, i.jsx)(r, {
                                         size: 'refresh_sm',
@@ -246,12 +246,12 @@ function eo(e) {
         e_ = !ef && !eb && t.type === q.d4z.DM,
         eE = e_ && (null == u ? void 0 : u.primaryGuild) != null,
         ej = (0, m.e7)([z.ZP], () => z.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        { ignored: eC, blocked: eO } = (0, m.cj)([F.Z], () => ({
+        { ignored: eO, blocked: eC } = (0, m.cj)([F.Z], () => ({
             ignored: F.Z.isIgnored(t.getRecipientId()),
             blocked: F.Z.isBlocked(t.getRecipientId())
         })),
-        eS = e_ && eC,
-        ev = e_ && eO,
+        eS = e_ && eO,
+        ev = e_ && eC,
         eT = (ej || eS || ev) && !(a || K),
         eN = (0, m.e7)([G.ZP], () => G.ZP.getMentionCount(t.id) > 0),
         eI = (0, T.ZP)(t),
@@ -341,7 +341,7 @@ function eo(e) {
             t.isSystemDM()
                 ? (0, i.jsx)('div', {
                       className: Q.subtext,
-                      children: (0, O.Z)(t.id) ? X.intl.string(X.t.FL5T09) : X.intl.string(X.t.NnY5lZ)
+                      children: (0, C.Z)(t.id) ? X.intl.string(X.t.FL5T09) : X.intl.string(X.t.NnY5lZ)
                   })
                 : t.isMultiUserDM()
                   ? (0, i.jsx)('div', {
@@ -477,7 +477,7 @@ function eo(e) {
                                         r
                                     ),
                                     {
-                                        children: (0, i.jsx)(C.Z, {
+                                        children: (0, i.jsx)(O.Z, {
                                             ref: ez,
                                             avatar: eF(),
                                             highlighted: eN && !(eA && eT),

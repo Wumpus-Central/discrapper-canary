@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(594174),
     b = n(626135),
     _ = n(617136),
-    O = n(113434),
-    E = n(497505),
+    E = n(113434),
+    O = n(497505),
     y = n(475595),
     I = n(352084),
     v = n(125011),
@@ -36,7 +36,7 @@ let P = (0, i.memo)(function (e) {
         B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
         { ref: V, height: H = 0 } = (0, p.ZP)(),
         F = (0, h.ZP)(),
-        z = (0, O.B6)(null == (t = Z.userStatus) ? void 0 : t.claimedAt, {
+        z = (0, E.B6)(null == (t = Z.userStatus) ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
@@ -44,9 +44,9 @@ let P = (0, i.memo)(function (e) {
         Y = Z.config.rewards[W],
         K = (null == Y ? void 0 : Y.type) === s.w.FRACTIONAL_PREMIUM,
         q = (null == Y ? void 0 : Y.type) === s.w.COLLECTIBLE,
-        X = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
-        Q = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
-        J = (null == Q ? void 0 : Q.type) === o.Z.AVATAR_DECORATION ? Q : null;
+        Q = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
+        X = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
+        J = (null == X ? void 0 : X.type) === o.Z.AVATAR_DECORATION ? X : null;
     (0, p.PM)(M, (e) => {
         let { height: t } = e;
         if (!q || null == t || null == U.current || null == M.current || null == G.current) return;
@@ -59,7 +59,7 @@ let P = (0, i.memo)(function (e) {
         ee = (0, i.useMemo)(() => null != Z.config.cosponsorMetadata, [Z]),
         et = (0, i.useMemo)(() => (0, y.fh)(Z, y.eC.REWARD), [Z]),
         en = x ? H + 8 : 0,
-        er = (0, _.mH)(E.jn.TROPHY_CASE_CARD),
+        er = (0, _.mH)(O.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
         ea = (function (e, t) {
             if (null == e) return {};
@@ -147,7 +147,7 @@ let P = (0, i.memo)(function (e) {
                           }),
                       K
                           ? (0, r.jsx)(I.Z, { className: T.image })
-                          : X
+                          : Q
                             ? (0, r.jsx)(v.Z, { className: T.image })
                             : et.isAnimated
                               ? (0, r.jsx)(g.Z, {

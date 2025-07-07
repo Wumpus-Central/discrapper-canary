@@ -21,22 +21,22 @@ let x = {
 function _(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: _ } = e,
         E = p.Z.getCameraComponent(),
-        [j, C] = r.useState((0, c.P)(g.default.getCurrentUser())),
-        O = r.useRef(!1),
+        [j, O] = r.useState((0, c.P)(g.default.getCurrentUser())),
+        C = r.useRef(!1),
         S = r.useRef(j),
         v = (0, o.O)(),
         T = (0, s.e7)([p.Z], () => p.Z.isVideoAvailable());
     return (
         r.useEffect(
             () => () => {
-                O.current && a.Z.wait(() => (0, d.Up)(S.current));
+                C.current && a.Z.wait(() => (0, d.Up)(S.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
             selectedBackgroundOption: j,
             onSelectBackgroundOption: (e) => {
-                ((O.current = !0), (S.current = e), C(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4));
+                ((C.current = !0), (S.current = e), O(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4));
             },
             onCancelPreview: _,
             renderCamera: (e) =>

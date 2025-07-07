@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(745752),
     b = n(17181),
     _ = n(388032),
-    O = n(150718),
-    E = n(113728);
+    E = n(150718),
+    O = n(113728);
 function y(e) {
     let { guildId: t, channelId: n } = e,
         { ref: l, width: y, height: I } = (0, c.ZP)(),
@@ -42,30 +42,30 @@ function y(e) {
         ),
         N = (0, d.N)(S);
     return (0, r.jsxs)('div', {
-        className: a()(O.outerWrapping, E.main, { [E.fullBorderWithGradient]: null == S }),
+        className: a()(E.outerWrapping, O.main, { [O.fullBorderWithGradient]: null == S }),
         ref: l,
         children: [
             null != S
                 ? (0, r.jsx)(u.Z, {
-                      className: E.artwork,
+                      className: O.artwork,
                       src: S,
                       width: y,
                       height: I,
-                      imageClassName: E.cover
+                      imageClassName: O.cover
                   })
                 : (0, r.jsx)(p.Z, {}),
             null != N &&
                 null != S &&
                 (0, r.jsx)('div', {
-                    className: E.gradient,
+                    className: O.gradient,
                     style: { background: 'linear-gradient(180deg, '.concat((0, g.aD)(N, 0.16), ' 0%, ').concat((0, g.aD)(N, 1), ' 100%)') }
                 }),
-            null != S && (0, r.jsx)('div', { className: E.gradient }),
+            null != S && (0, r.jsx)('div', { className: O.gradient }),
             (0, r.jsxs)('div', {
-                className: a()(O.explainerContainer, O.transparentBackground),
+                className: a()(E.explainerContainer, E.transparentBackground),
                 children: [
                     (0, r.jsxs)('div', {
-                        className: O.header,
+                        className: E.header,
                         children: [
                             (0, r.jsx)(s.X6q, {
                                 variant: 'heading-xxl/normal',

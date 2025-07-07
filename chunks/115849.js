@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function O(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function O(e, t) {
         e
     );
 }
-let E = n(349181),
+let O = n(349181),
     y = {
         canSend: !1,
         hint: null,
@@ -72,14 +72,14 @@ function S(e, t) {
         case 'RESET':
             return y;
         case 'SUCCESS':
-            return O(_({}, y), { success: t.text });
+            return E(_({}, y), { success: t.text });
         case 'HINT':
-            return O(_({}, y), {
+            return E(_({}, y), {
                 canSend: !0,
                 hint: t.text
             });
         case 'ERROR':
-            return O(_({}, e), {
+            return E(_({}, e), {
                 canSend: !0,
                 error: t.text
             });
@@ -90,7 +90,7 @@ function N(e) {
         n = i.useRef(null),
         l = i.useRef(null),
         [o, d] = i.useReducer(S, y),
-        { canSend: _, hint: O, success: N, error: T } = o;
+        { canSend: _, hint: E, success: N, error: T } = o;
     return (
         i.useEffect(() => {
             null != N && (s()(null != n.current, 'Input is submitting when not mounted'), (n.current.value = ''), n.current.focus());
@@ -139,7 +139,7 @@ function N(e) {
                             })
                         }),
                         (0, r.jsx)('img', {
-                            src: E,
+                            src: O,
                             alt: 'Wumpus Waving'
                         })
                     ]
@@ -193,11 +193,11 @@ function N(e) {
                                 'aria-invalid': null != T || void 0,
                                 'aria-describedby': null != T ? C : v
                             }),
-                            null != O &&
+                            null != E &&
                                 (0, r.jsx)('div', {
                                     className: m.addFriendHint,
                                     'aria-hidden': !0,
-                                    children: O
+                                    children: E
                                 }),
                             (0, r.jsx)(c.zxk, {
                                 size: c.zxk.Sizes.SMALL,

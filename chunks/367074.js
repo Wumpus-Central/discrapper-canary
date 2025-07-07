@@ -141,8 +141,7 @@ async function x() {
     });
 }
 async function k() {
-    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (!(await x(e))) return;
-    let t = N.Z.bogoPromotion;
-    (null != t && new Date(t.endDate).valueOf() >= Date.now()) || (await (0, S.L9)());
+    if (!(await x(!1))) return;
+    let e = N.Z.bogoPromotion;
+    (null != e && new Date(e.endDate).valueOf() >= Date.now()) || (await (0, S.L9)());
 }

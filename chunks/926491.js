@@ -185,11 +185,11 @@ let L = function (e) {
     };
 function G(e) {
     let t = _.Z.getGuild(e.id);
-    null != t && null != e.stickers && (e.stickers.forEach((e) => L(e, !0, t)), R(t.id, e.stickers));
+    null != t && null != e.stickers.items && (e.stickers.items.forEach((e) => L(e, !0, t)), R(t.id, e.stickers.items));
 }
 function B(e) {
     let { guild: t } = e;
-    d.Z.isLurking(t.id) || (G(t), 1 === O && null == t.stickers && null != t.stickerUpdates && (O = 0));
+    d.Z.isLurking(t.id) || (G(t), 1 === O && 'update' === t.stickers.op && null == t.stickers.items && (O = 0));
 }
 function V(e) {
     var t;

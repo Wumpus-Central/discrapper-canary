@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(381585),
     d = n(139668),
     p = n(364111),
-    g = n(303952),
-    f = n(752053),
+    f = n(303952),
+    g = n(752053),
     h = n(258939),
     b = n(81136),
     m = n(953655),
@@ -30,9 +30,9 @@ let T = (e) => {
             S = (0, u.sp)(),
             x = null != (t = null == S ? void 0 : S.sessionId) ? t : '';
         l.useEffect(() => {
-            (0, g.n)({
+            (0, f.n)({
                 sessionId: x,
-                checkpoint: g.a.SHOP_MOUNTED,
+                checkpoint: f.a.SHOP_MOUNTED,
                 tab: c,
                 isFullScreen: d,
                 unpublishedCategoriesShown: E,
@@ -66,9 +66,9 @@ let T = (e) => {
                 null != T ||
                     y ||
                     0 === P.length ||
-                    (0, g.n)({
+                    (0, f.n)({
                         sessionId: x,
-                        checkpoint: g.a.SHOP_RENDERED,
+                        checkpoint: f.a.SHOP_RENDERED,
                         tab: c,
                         isFullScreen: d,
                         unpublishedCategoriesShown: E,
@@ -77,9 +77,9 @@ let T = (e) => {
             }, [T, y, P.length, E, h, x, c, d]),
             null != T)
         )
-            return (0, r.jsx)(f.Z, {
+            return (0, r.jsx)(g.Z, {
                 onRetry: k,
-                errorOrigin: f.i.SHOP_PAGE,
+                errorOrigin: g.i.SHOP_PAGE,
                 errorMessage: T.message
             });
         if (y || 0 === P.length)
@@ -183,8 +183,8 @@ let T = (e) => {
     },
     P = (e) => {
         let { isFullScreen: t, scrollerRef: n, handleTransition: i, tab: a, transitionState: p } = e,
-            g = (0, d.R)('CollectiblesFeedShop'),
-            f = (0, h.R)(),
+            f = (0, d.R)('CollectiblesFeedShop'),
+            g = (0, h.R)(),
             b = (0, u.sp)(),
             [m, _] = l.useState(S.IV),
             [C, O] = l.useState(!1);
@@ -194,7 +194,7 @@ let T = (e) => {
                     let e = () => {
                             if (null == n.current) return;
                             let e = n.current.getDistanceFromBottom();
-                            m >= g ? O(e < 20) : e <= 200 && _((e) => e + S.IV);
+                            m >= f ? O(e < 20) : e <= 200 && _((e) => e + S.IV);
                         },
                         t = n.current.getScrollerNode();
                     return (
@@ -204,7 +204,7 @@ let T = (e) => {
                         }
                     );
                 }
-            }, [n, m, g, _, O]),
+            }, [n, m, f, _, O]),
             (0, r.jsxs)('div', {
                 className: j.shop,
                 children: [
@@ -214,12 +214,12 @@ let T = (e) => {
                             (0, r.jsx)(T, {
                                 handleTransition: i,
                                 numVisibleItems: m,
-                                isFetchingCategories: f,
+                                isFetchingCategories: g,
                                 tab: a,
                                 isFullScreen: t
                             }),
                             a !== S.AW.CATALOG &&
-                                m >= g &&
+                                m >= f &&
                                 (0, r.jsxs)('div', {
                                     className: j.endOfFeed,
                                     children: [

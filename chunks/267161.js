@@ -19,8 +19,8 @@ var r = n(255367),
     m = n(300986),
     b = n(314451),
     _ = n(35583),
-    O = n(821020),
-    E = n(370774),
+    E = n(821020),
+    O = n(370774),
     y = n(340137),
     I = n(522474),
     v = n(141321),
@@ -91,7 +91,7 @@ function B() {
         c = null != i ? i : null == a ? void 0 : a.guild_id,
         u = (0, o.e7)([N.Z], () => N.Z.getGuild(c), [c]),
         d = (0, h.Z)(),
-        p = (0, E.D)(),
+        p = (0, O.D)(),
         f = null;
     return (
         p
@@ -144,7 +144,7 @@ let V = i.memo(function () {
     }, []);
     let l = (0, o.e7)([C.Z], () => (C.Z.darkSidebar ? L.BRd.DARK : void 0)),
         a = (0, o.e7)([j.Z, I.Z], () => (0, Z.rB)()),
-        { notificationCenterVariant: h, entrypoint: g } = O.Lk.useExperiment({ location: 'AppTitleBar' });
+        { notificationCenterVariant: h, entrypoint: g } = E.Lk.useExperiment({ location: 'AppTitleBar' });
     return a
         ? null
         : (0, r.jsx)(s.Wdt, {
@@ -181,7 +181,7 @@ let V = i.memo(function () {
                                                   })
                                               ]
                                           }),
-                                      null !== h && g === O.u3.TITLE_BAR_LEFT && (0, r.jsx)(y.Z, {})
+                                      null !== h && g === E.u3.TITLE_BAR_LEFT && (0, r.jsx)(y.Z, {})
                                   ]
                               }),
                               title: (0, r.jsx)(B, {}),

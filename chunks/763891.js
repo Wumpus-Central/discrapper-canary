@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(594174),
     d = n(381585),
     p = n(597688),
-    g = n(370039),
-    f = n(937510),
+    f = n(370039),
+    g = n(937510),
     h = n(303952),
     b = n(38900),
     m = n(709999),
@@ -33,8 +33,8 @@ function k(e) {
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
         { noCache: R, includeUnpublished: w } = (0, _.Z)(),
         Z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [F, M] = l.useState(1),
+        M = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [D, F] = l.useState(1),
         H = () => {
             var e;
             null == I || null == (e = I.current) || e.scrollToTop({ animate: !0 });
@@ -53,18 +53,18 @@ function k(e) {
                     return [O.intl.string(O.t.FYFppq), V ? S.Z : v.Z, i.Z.BUNDLE];
             }
         }, [B, V]),
-        Y = (0, g.a)(),
+        Y = (0, f.a)(),
         q = l.useMemo(
             () =>
                 Y(
-                    D.filter((e) => {
+                    M.filter((e) => {
                         var t;
                         return e.type === z || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
                     })
                 ),
-            [D, z, Y]
+            [M, z, Y]
         ),
-        K = (0, f.l)(q);
+        K = (0, g.l)(q);
     return (l.useEffect(() => {
         (0, h.n)({
             sessionId: A,
@@ -100,7 +100,7 @@ function k(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: E.products,
-                      children: K.slice(40 * (F - 1), 40 * F).map((e, t) => {
+                      children: K.slice(40 * (D - 1), 40 * D).map((e, t) => {
                           let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
@@ -128,11 +128,11 @@ function k(e) {
                           className: E.paginationContainer,
                           children: (0, r.jsx)('div', {
                               children: (0, r.jsx)(s.DsT, {
-                                  currentPage: F,
+                                  currentPage: D,
                                   totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      (M(e), H());
+                                      (F(e), H());
                                   },
                                   disablePaginationGap: !0
                               })

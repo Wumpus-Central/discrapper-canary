@@ -18,8 +18,8 @@ var i = n(399606),
     _ = n(269987),
     E = n(548629),
     j = n(507084),
-    C = n(680313),
-    O = n(926433),
+    O = n(680313),
+    C = n(926433),
     S = n(302036),
     v = n(994554),
     T = n(1549),
@@ -105,7 +105,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             moreGuildsAlt: {
                 title: p.intl.string(p.t.Bv8Pfn),
                 description: p.intl.string(p.t.JMfaTU),
-                imageSource: M(n, j, C),
+                imageSource: M(n, j, O),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
@@ -118,7 +118,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             soundboard: {
                 title: p.intl.string(p.t['lGcW+f']),
                 description: p.intl.string(p.t['/fDyOz']),
-                imageSource: M(n, O, S),
+                imageSource: M(n, C, S),
                 imageClassName: t.soundboardImage
             },
             stickers: {

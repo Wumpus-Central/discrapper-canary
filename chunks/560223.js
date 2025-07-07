@@ -46,12 +46,12 @@ let b = (e) => {
     x = (e) => {
         let { className: t, variant: n, noBackground: s = !1, leftAlignHeaders: x = !1, showAllPerksButton: _, headerClassname: E } = e,
             j = r.useRef(null),
-            C = n === p.gM.WHATS_NEW,
-            O = (0, u.x)();
+            O = n === p.gM.WHATS_NEW,
+            C = (0, u.x)();
         r.useEffect(() => {
-            C && O();
-        }, [O, C]);
-        let S = (0, g.re)(C),
+            O && C();
+        }, [C, O]);
+        let S = (0, g.re)(O),
             v = (0, m.Z)(),
             T = (0, g.mN)(),
             { fractionalState: N } = (0, o.Z)(),
@@ -90,7 +90,7 @@ let b = (e) => {
                     className: l()(f.subtitle, {
                         [f.subtitle]: null == _ || x,
                         [f.subtitleWithButton]: null != _ && !x,
-                        [f.fullWidth]: C || x,
+                        [f.fullWidth]: O || x,
                         [f.moreSubtitleMargin]: P,
                         [f.leftAlignSubtitle]: x,
                         [f.centerAlignSubtitle]: !x

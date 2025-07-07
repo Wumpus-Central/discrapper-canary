@@ -73,7 +73,7 @@ function D(t) {
             });
         n.type === c.ABu.XBOX
             ? (0, r.ZDy)(async () => {
-                  let { default: n } = await Promise.all([e.e('65383'), e.e('522')]).then(e.bind(e, 200623));
+                  let { default: n } = await Promise.all([e.e('30856'), e.e('522')]).then(e.bind(e, 200623));
                   return (e) => (0, i.jsx)(n, g(T({}, e), { channel: t }));
               })
             : (n.type === c.ABu.PLAYSTATION || n.type === c.ABu.PLAYSTATION_STAGING) &&

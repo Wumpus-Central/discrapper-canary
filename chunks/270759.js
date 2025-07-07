@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(5254),
     b = n(984370),
     _ = n(518311),
-    O = n(199104),
-    E = n(108427),
+    E = n(199104),
+    O = n(108427),
     y = n(210887),
     I = n(974042),
     v = n(849862),
@@ -49,7 +49,7 @@ let Z = function (e) {
             });
     }, [l, n]),
         i.useEffect(() => {
-            (p.Y(N.Z5c.FRIENDS), (0, E.e)('friends'));
+            (p.Y(N.Z5c.FRIENDS), (0, O.e)('friends'));
         }, []));
     let _ = (0, c.e7)([y.Z], () => y.Z.theme),
         Z = (0, v.If)(),
@@ -173,7 +173,7 @@ let Z = function (e) {
                     }),
                     (0, r.jsx)('div', {
                         className: j.nowPlayingColumn,
-                        children: (0, r.jsx)(O.Z, {})
+                        children: (0, r.jsx)(E.Z, {})
                     })
                 ]
             })

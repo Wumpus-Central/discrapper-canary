@@ -1,76 +1,44 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    l = n.n(i),
-    a = n(114858),
-    o = n(674746),
-    s = n(442837),
-    c = n(780384),
-    u = n(481060),
-    d = n(410575),
-    p = n(730749),
-    h = n(666743),
-    f = n(410030),
-    g = n(100527),
-    m = n(906732),
-    b = n(600164),
-    _ = n(984370),
-    O = n(299657),
-    E = n(594174),
-    y = n(74538),
-    I = n(981631),
-    v = n(474936),
-    C = n(388032),
-    S = n(881207);
-let N = s.ZP.connectStores([E.default], () => ({ user: E.default.getCurrentUser() }))(
-    (0, h.Z)(
-        (0, p.Z)((e) => {
+var i = n(114858),
+    l = n(442837),
+    a = n(481060),
+    o = n(730749),
+    s = n(666743),
+    c = n(100527),
+    u = n(906732),
+    d = n(600164),
+    p = n(299657),
+    h = n(594174),
+    f = n(632257),
+    g = n(981631),
+    m = n(474936),
+    b = n(881207);
+let _ = l.ZP.connectStores([h.default], () => ({ user: h.default.getCurrentUser() }))(
+    (0, s.Z)(
+        (0, o.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
-                { analyticsLocations: i } = (0, m.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
-                s = (0, y.I5)(n, v.p9.TIER_2),
-                p = (0, f.ZP)();
+                { analyticsLocations: l } = (0, u.ZP)(c.Z.HOME_PAGE_PREMIUM_TAB);
             return t
                 ? (0, r.jsxs)('div', {
-                      className: S.homeWrapperNormal,
+                      className: b.homeWrapperNormal,
                       children: [
-                          (0, r.jsx)(d.Z, {
-                              section: I.jXE.NAVIGATION,
-                              children: (0, r.jsx)(u.f6W, {
-                                  theme: p,
-                                  children: (e) =>
-                                      (0, r.jsxs)(_.Z, {
-                                          isAuthenticated: t,
-                                          className: l()(S.headerBar, e, {
-                                              [S.headerBarV2LightBackground]: !s && !(0, c.wj)(p),
-                                              [S.headerBarV2DarkBackground]: !s && (0, c.wj)(p)
-                                          }),
-                                          role: 'navigation',
-                                          children: [
-                                              (0, r.jsx)(_.Z.Icon, {
-                                                  icon: u.SrA,
-                                                  'aria-hidden': !0,
-                                                  color: s ? void 0 : o.Z.PREMIUM_TIER_2_PINK
-                                              }),
-                                              (0, r.jsx)(_.Z.Title, { children: C.intl.string(C.t.Ipxkoq) })
-                                          ]
-                                      })
-                              })
-                          }),
-                          (0, r.jsx)(m.Gt, {
-                              value: i,
+                          null == n && (0, r.jsx)(f.Z, {}),
+                          (0, r.jsx)(u.Gt, {
+                              value: l,
                               children:
                                   null == n
-                                      ? (0, r.jsx)(b.Z, {
-                                            align: b.Z.Align.CENTER,
-                                            justify: b.Z.Justify.CENTER,
-                                            children: (0, r.jsx)(u.$jN, { className: S.spinner })
+                                      ? (0, r.jsx)(d.Z, {
+                                            align: d.Z.Align.CENTER,
+                                            justify: d.Z.Justify.CENTER,
+                                            children: (0, r.jsx)(a.$jN, { className: b.spinner })
                                         })
-                                      : (0, r.jsx)(O.Z, { entrypoint: v.EZ.ApplicationStoreHome })
+                                      : (0, r.jsx)(p.Z, { entrypoint: m.EZ.ApplicationStoreHome })
                           })
                       ]
                   })
-                : (0, r.jsx)(a.l_, { to: I.Z5c.LOGIN });
+                : (0, r.jsx)(i.l_, { to: g.Z5c.LOGIN });
         })
     )
 );

@@ -19,8 +19,8 @@ var r = n(120356),
     _ = n(695349),
     E = n(249689),
     j = n(104494),
-    C = n(639119),
-    O = n(8647),
+    O = n(639119),
+    C = n(8647),
     S = n(533525),
     v = n(736519),
     T = n(784238),
@@ -39,12 +39,12 @@ let k = (e) => {
             { headingText: o, headingTop: c } = U(),
             d = p.default.getCurrentUser(),
             m = (0, l.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
-            h = (0, C.N)(),
+            h = (0, O.N)(),
             f = (0, j.Ng)(),
             b = (0, j.Wp)(f, A.Si.TIER_2) ? A.Si.TIER_2 : void 0,
             x = null != m && m.status !== P.O0b.ACCOUNT_HOLD && m.hasAnyPremiumNitro,
             _ = (0, u.Z)(),
-            O = (0, E.C)('nitro-home', d) && _.isFractionalPremiumActive && !x;
+            C = (0, E.C)('nitro-home', d) && _.isFractionalPremiumActive && !x;
         return (0, i.jsxs)('div', {
             className: s()(D.container, r),
             'data-testid': 'subscriber-nitro-home-hero-header',
@@ -67,7 +67,7 @@ let k = (e) => {
                         (0, i.jsxs)('div', {
                             className: D.heroHeadingOriginalButtonContainer,
                             children: [
-                                O &&
+                                C &&
                                     (0, i.jsx)(T.Z, {
                                         color: a.Ttl.BRAND,
                                         className: s()(D.button, D.subscribeButton),
@@ -163,7 +163,7 @@ let k = (e) => {
                             })
                         }),
                         !t && (0, i.jsx)(I.Z, {}),
-                        t && (0, i.jsx)(O.Z, { variant: O.C.SUBSCRIBER_HOME })
+                        t && (0, i.jsx)(C.Z, { variant: C.C.SUBSCRIBER_HOME })
                     ]
                 })
             ]
@@ -179,12 +179,12 @@ let k = (e) => {
             h = R.intl.string(R.t.qYKftb),
             E = (0, S.b)(n),
             j = (0, i.jsx)(k, { className: t }),
-            C = R.intl.string(R.t.ifwQZW),
-            { fractionalState: O, endsAt: v } = (0, u.Z)(),
+            O = R.intl.string(R.t.ifwQZW),
+            { fractionalState: C, endsAt: v } = (0, u.Z)(),
             T = (0, d.ZP)(v, d.aj.CREDITS_ENDS_IN);
-        l || p ? ((C = R.intl.string(R.t.ifwQZW)), (j = (0, i.jsx)(B, { isEligibleForBogoPromotion: p }))) : E && ((h = R.intl.string(R.t.qYKftb)), (C = R.intl.string(R.t.ifwQZW)), (j = (0, i.jsx)(L, {})));
+        l || p ? ((O = R.intl.string(R.t.ifwQZW)), (j = (0, i.jsx)(B, { isEligibleForBogoPromotion: p }))) : E && ((h = R.intl.string(R.t.qYKftb)), (O = R.intl.string(R.t.ifwQZW)), (j = (0, i.jsx)(L, {})));
         let I = null;
-        if (O === A.a$.NONE || l)
+        if (C === A.a$.NONE || l)
             I = (0, i.jsx)(N.Cy, {
                 className: s()(D.trialPill, { [D.hidden]: !g }),
                 text: h,
@@ -269,7 +269,7 @@ let k = (e) => {
             value: r,
             children: (0, i.jsx)(M.Provider, {
                 value: {
-                    headingText: C,
+                    headingText: O,
                     headingTop: I
                 },
                 children: j

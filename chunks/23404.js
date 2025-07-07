@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(373370),
     b = n(475595),
     _ = n(566078),
-    O = n(602667),
-    E = n(611855),
+    E = n(602667),
+    O = n(611855),
     y = n(670638),
     I = n(667105),
     v = n(860151),
@@ -87,7 +87,7 @@ function A(e) {
 function Z(e) {
     var t, n, l, c;
     let { nodeRef: b, quest: _ } = e,
-        O = (0, u.O5)(),
+        E = (0, u.O5)(),
         N = (0, o.e7)([h.Z], () => h.Z.isEnrolling(_.id), [_]),
         Z = (0, o.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []),
         [x, L] = i.useState(!1),
@@ -106,7 +106,7 @@ function Z(e) {
         }, [_]),
         U = i.useCallback(() => {
             null != _ &&
-                (O({
+                (E({
                     questId: _.id,
                     questContent: f.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS,
@@ -116,9 +116,9 @@ function Z(e) {
                     fromContent: f.jn.ACTIVITY_PANEL,
                     questId: _.id
                 }));
-        }, [_, O]),
+        }, [_, E]),
         G = i.useCallback(() => {
-            (O({
+            (E({
                 questId: _.id,
                 questContent: f.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE,
@@ -128,7 +128,7 @@ function Z(e) {
                     fromContent: f.jn.ACTIVITY_PANEL,
                     questId: _.id
                 }));
-        }, [_.id, O]),
+        }, [_.id, E]),
         B = (0, I.hf)({
             quest: _,
             questContent: f.jn.ACTIVITY_PANEL,
@@ -164,7 +164,7 @@ function Z(e) {
                   (0, r.jsxs)('div', {
                       className: P.utils,
                       children: [
-                          H ? (0, r.jsx)(A, { quest: _ }) : (0, r.jsx)(E.Z, {}),
+                          H ? (0, r.jsx)(A, { quest: _ }) : (0, r.jsx)(O.Z, {}),
                           (0, r.jsx)(y.r, {
                               quest: _,
                               questContent: f.jn.ACTIVITY_PANEL,
@@ -278,7 +278,7 @@ function Z(e) {
           });
 }
 let x = function (e) {
-    return (0, r.jsx)(O.A, {
+    return (0, r.jsx)(E.A, {
         questOrQuests: e.quest,
         questContent: f.jn.ACTIVITY_PANEL,
         sourceQuestContent: f.jn.ACTIVITY_PANEL,

@@ -80,7 +80,7 @@ function h(e) {
             _ === d.a$.NONE && ((j.transfer.disabled = !0), (j.transfer.subtext = u.intl.string(u.t.LiLRRU)), (0, a.y)('guild_boost_slot_popout', E, _) || ((j.cancel.subtext = u.intl.string(u.t['1ywaWF'])), (j.cancel.disabled = !0), (j.uncancel.disabled = !0)));
     }
     (0, a.y)('guild_boost_slot_popout', E, _) && ((j.cancel.subtext = u.intl.string(u.t.dq4vq6)), (j.cancel.disabled = !0), (j.uncancel.disabled = !0));
-    let C = r.useMemo(
+    let O = r.useMemo(
         () =>
             b.isPausedOrPausePending && _ === d.a$.NONE
                 ? (0, i.jsx)(s.sNh, {
@@ -145,7 +145,7 @@ function h(e) {
                       disabled: j.cancel.disabled,
                       color: 'danger'
                   }),
-            C
+            O
         ]
     });
 }

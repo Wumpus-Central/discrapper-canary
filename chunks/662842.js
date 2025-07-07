@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(151864),
     b = n(725436),
     _ = n(497656),
-    O = n(554747),
-    E = n(230900),
+    E = n(554747),
+    O = n(230900),
     y = n(854698),
     I = n(703656),
     v = n(922482),
@@ -35,7 +35,7 @@ var r = n(255367),
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, _.y)(t.id),
-        d = (0, O.k5)(t.id),
+        d = (0, E.k5)(t.id),
         P = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
         { isStageNoticeHidden: D, isEventNoticeHidden: M } = (0, o.cj)(
             [m.Z],
@@ -60,8 +60,8 @@ function D(e) {
         title: Y,
         location: K,
         locationIcon: q,
-        canListenIn: X,
-        buttonText: Q,
+        canListenIn: Q,
+        buttonText: X,
         users: J,
         overflowUsers: $,
         onClose: ee
@@ -70,7 +70,7 @@ function D(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: l, myRole: a, eventCreator: o, speakers: s, listenerCount: u, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     _ = null != n && null != i && !h,
-                    O = null != t ? (0, y.DK)(t) : null;
+                    E = null != t ? (0, y.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -178,9 +178,9 @@ function D(e) {
                         }
                     );
                 } else if (t.entity_type === L.WX.EXTERNAL) {
-                    let e = (0, E.cS)(t);
+                    let e = (0, O.cS)(t);
                     if (null == e) return { noticeType: null };
-                    let n = f.ZP.getUserCount(t.id, O);
+                    let n = f.ZP.getUserCount(t.id, E);
                     return {
                         noticeType: 1,
                         title: t.name,
@@ -220,7 +220,7 @@ function D(e) {
                     };
                 } else if (t.entity_type === L.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
-                        n = f.ZP.getUserCount(t.id, O);
+                        n = f.ZP.getUserCount(t.id, E);
                     return {
                         noticeType: 2,
                         title: t.name,
@@ -343,12 +343,12 @@ function D(e) {
                           })
                       ]
                   }),
-                  X || 1 === W
+                  Q || 1 === W
                       ? (0, r.jsx)(c.zxk, {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.GREEN,
                             onClick: () => {
-                                if (X) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, I.XU)(l.getGuildId(), l.id));
+                                if (Q) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, I.XU)(l.getGuildId(), l.id));
                                 else {
                                     if (null == d) return;
                                     (0, h.bO)({ eventId: d.id });
@@ -356,7 +356,7 @@ function D(e) {
                             },
                             className: R.button,
                             fullWidth: !0,
-                            children: Q
+                            children: X
                         })
                       : null
               ]

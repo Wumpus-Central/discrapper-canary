@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(524444),
     b = n(626135),
     _ = n(960048),
-    O = n(981631),
-    E = n(921944),
+    E = n(981631),
+    O = n(921944),
     y = n(388032),
     I = n(937976);
 function v(e) {
@@ -112,13 +112,13 @@ function P(e) {
         [H, F] = i.useState(Date.now()),
         [z, W] = i.useState(0),
         [Y, K] = i.useState(0),
-        [q, X] = i.useState(!1),
-        [Q, J] = i.useState(!0),
+        [q, Q] = i.useState(!1),
+        [X, J] = i.useState(!0),
         $ = i.useRef(H),
         ee = i.useRef(z),
         et = i.useRef(Y),
         en = i.useRef(q),
-        er = i.useRef(Q),
+        er = i.useRef(X),
         [ei, el] = i.useState(S),
         ea = i.useRef(!1);
     function eo() {
@@ -162,17 +162,17 @@ function P(e) {
             [ei]
         ),
         i.useEffect(() => {
-            (($.current = H), (ee.current = z), (et.current = Y), (en.current = q), (er.current = Q));
-        }, [H, z, Y, q, Q]),
+            (($.current = H), (ee.current = z), (et.current = Y), (en.current = q), (er.current = X));
+        }, [H, z, Y, q, X]),
         i.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
                     let [e, t] = eo();
-                    (b.default.track(O.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+                    (b.default.track(E.rMx.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: R,
                         seconds_played: Math.round(e / 1000)
                     }),
-                        b.default.track(O.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+                        b.default.track(E.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: R,
                             seconds_unmuted: Math.round(t / 1000)
                         }));
@@ -184,13 +184,13 @@ function P(e) {
             null != P && (0, g.kk)(P);
             let e = Date.now();
             return (
-                b.default.track(O.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
+                b.default.track(E.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
                 () => {
-                    (b.default.track(O.rMx.CHANGE_LOG_CLOSED, {
+                    (b.default.track(E.rMx.CHANGE_LOG_CLOSED, {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != P && (0, f.Q3)(P, { dismissAction: E.L.DISMISS }));
+                        null != P && (0, f.Q3)(P, { dismissAction: O.L.DISMISS }));
                 }
             );
         }, [P, R]),
@@ -224,16 +224,16 @@ function P(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      (b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), F(Date.now()), X(!0), J(e.currentTarget.muted));
+                                      (b.default.track(E.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), F(Date.now()), Q(!0), J(e.currentTarget.muted));
                                   },
                                   onEnded: (e) => {
-                                      (eo(), J(e.currentTarget.muted), X(!1));
+                                      (eo(), J(e.currentTarget.muted), Q(!1));
                                   },
                                   onVolumeChange: (e) => {
                                       (eo(), J(e.currentTarget.muted));
                                   },
                                   onPause: (e) => {
-                                      (eo(), J(e.currentTarget.muted), X(!1));
+                                      (eo(), J(e.currentTarget.muted), Q(!1));
                                   },
                                   disablePictureInPicture: !0,
                                   children:
@@ -270,7 +270,7 @@ function P(e) {
                                     renderImageComponent: m.Yi,
                                     renderLinkComponent: m.iT,
                                     onPlay: () => {
-                                        b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R });
+                                        b.default.track(E.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R });
                                     }
                                 })
                               : 'image' === l.type

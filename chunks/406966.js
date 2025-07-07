@@ -39,10 +39,19 @@ class l {
         this.commit(t);
     }
     handleGuildCreate(e, t) {
-        var n;
-        let r = e.guild,
-            i = e.guild.id;
-        (this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null == (n = r.channelUpdates) ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t));
+        let n = e.guild,
+            r = e.guild.id;
+        function i(e) {
+            switch (e.op) {
+                case 'full_sync':
+                    return e.items;
+                case 'update':
+                    return e.writes;
+                default:
+                    return [];
+            }
+        }
+        (this.updateWith(r, [n]), this.updateWith(r, i(n.emojis)), this.updateWith(r, i(n.stickers)), this.updateWith(r, i(n.channels)), this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t));
     }
     handleGuildUpdate(e, t) {
         let n = e.guild,
@@ -84,12 +93,11 @@ class l {
         this.pending.set(e, null);
     }
     updateWith(e, t) {
-        if (null != t) {
-            var n, r;
-            let i = Math.max(null != (n = this.committed.get(e)) ? n : 0, null != (r = this.pending.get(e)) ? r : 0),
-                a = this.computeLatestVersion(i, t);
-            a > i && this.pending.set(e, a);
-        }
+        var n, r;
+        if (0 === t.length) return;
+        let i = Math.max(null != (n = this.committed.get(e)) ? n : 0, null != (r = this.pending.get(e)) ? r : 0),
+            a = this.computeLatestVersion(i, t);
+        a > i && this.pending.set(e, a);
     }
     computeLatestVersion(e, t) {
         let n = e;

@@ -1,42 +1,44 @@
-(n.d(t, { Z: () => u }), n(388685));
+(n.d(t, { Z: () => d }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(392711),
     o = n(481060),
     a = n(501431),
-    s = n(388032),
-    c = n(234209);
-function u() {
+    s = n(149705),
+    c = n(388032),
+    u = n(234209);
+function d() {
     let [e, t] = l.useState(''),
-        [n, u] = l.useState(''),
-        { searchQuery: d, onSetSearchQuery: p } = (0, a.S0)(),
-        g = l.useMemo(
+        [n, d] = l.useState(''),
+        { searchQuery: p, onSetSearchQuery: f, setQueryPageOffset: g } = (0, a.S)(),
+        { clear: h } = (0, s.a)(),
+        b = l.useMemo(
             () =>
                 (0, i.debounce)((e) => {
-                    (p(e), u(e));
-                }, 250),
-            [p]
+                    (h(), g(0), f(e), d(e));
+                }, 500),
+            [f, h, g]
         );
     return (
         l.useEffect(() => {
-            if ('' === d && '' !== n) {
-                (t(''), u(''));
+            if ('' === p && '' !== n) {
+                (t(''), d(''));
                 return;
             }
-            e !== d && g(e);
-        }, [e, d, n, g]),
+            e !== p && b(e);
+        }, [e, p, n, b]),
         l.useEffect(
             () => () => {
-                g.cancel();
+                b.cancel();
             },
-            [g]
+            [b]
         ),
         (0, r.jsx)(o.E1j, {
-            className: c.searchBar,
+            className: u.searchBar,
             query: e,
             onChange: t,
             onClear: () => t(''),
-            placeholder: s.intl.string(s.t['hIt/Nj'])
+            placeholder: c.intl.string(c.t['hIt/Nj'])
         })
     );
 }

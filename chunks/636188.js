@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(709054),
     E = n(647177),
     j = n(63985),
-    C = n(678916),
-    O = n(981631),
+    O = n(678916),
+    C = n(981631),
     S = n(190378),
     v = n(486324),
     T = n(474936),
@@ -137,7 +137,7 @@ function R(e) {
 }
 function D(e) {
     var { option: t, source: r, selected: s = !1, onSelectOption: u, isAnimatedImage: x, isVideo: _, hotspotLocation: j } = e,
-        C = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -176,7 +176,7 @@ function D(e) {
         null != j &&
             P &&
             (h.Kw(j),
-            b.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
+            b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: T.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
                 location: S.location,
                 location_stack: v
@@ -184,7 +184,7 @@ function D(e) {
     }
     return (0, i.jsxs)(
         o.P3F,
-        A(y({}, C), {
+        A(y({}, O), {
             className: l()(I.backgroundOption, { [I.backgroundOptionSelected]: s }),
             onClick: () => u(t),
             onContextMenu: (e) =>
@@ -289,7 +289,7 @@ function k(e) {
         { analyticsLocations: r } = (0, p.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, u.ZP)(() => {
-            b.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
+            b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: T.cd.VIDEO_BACKGROUNDS_INLINE,
                 location: n.location,
                 location_stack: r
@@ -322,7 +322,7 @@ function L(e) {
                             e,
                             y(
                                 {
-                                    maxFileSizeBytes: C.SJ,
+                                    maxFileSizeBytes: O.SJ,
                                     onComplete: (e) => {
                                         let { imageUri: n, file: i, isFromTenor: r } = e;
                                         return t(n, i, r);
@@ -349,7 +349,7 @@ function B(e) {
         u = r.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? _.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
         g = u.length >= 25,
         { analyticsLocations: h } = (0, p.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
-        f = Object.values((0, j.Z)()).sort((e, t) => C.E1[e.id] - C.E1[t.id]);
+        f = Object.values((0, j.Z)()).sort((e, t) => O.E1[e.id] - O.E1[t.id]);
     return (0, i.jsx)(p.Gt, {
         value: h,
         children: (0, i.jsxs)('div', {
@@ -363,9 +363,9 @@ function B(e) {
                 }),
                 (0, i.jsx)(P, {
                     className: I.__invalid_backgroundOptionBlurred,
-                    selected: s === C.f7,
+                    selected: s === O.f7,
                     icon: o.yMH,
-                    onClick: () => l(C.f7),
+                    onClick: () => l(O.f7),
                     text: N.intl.string(N.t.LhSyLy),
                     children: (0, i.jsx)('div', { className: I.backgroundOptionBlurBackground })
                 }),

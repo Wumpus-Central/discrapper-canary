@@ -1,4 +1,7 @@
-n.d(t, { Z: () => g });
+n.d(t, {
+    G_: () => h,
+    g: () => g
+});
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -94,31 +97,30 @@ function p(e) {
     });
 }
 let g = r.memo(function (e) {
-    let { whatsNewBoxes: t, bestOfBoxes: n } = (0, o.ZP)();
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsx)(
-                p,
-                m(
-                    {
-                        boxLayout: t,
-                        title: d.intl.string(d.t.LRmNAg)
-                    },
-                    e
-                )
-            ),
-            (0, i.jsx)(
-                p,
-                m(
-                    {
-                        boxLayout: n,
-                        title: d.intl.string(d.t.EnzW2N),
-                        includeSideGradient: !0,
-                        startLeftAligned: !0
-                    },
-                    e
-                )
+        let { whatsNewBoxes: t } = (0, o.ZP)();
+        return (0, i.jsx)(
+            p,
+            m(
+                {
+                    boxLayout: t,
+                    title: d.intl.string(d.t.LRmNAg)
+                },
+                e
             )
-        ]
+        );
+    }),
+    h = r.memo(function (e) {
+        let { bestOfBoxes: t } = (0, o.ZP)();
+        return (0, i.jsx)(
+            p,
+            m(
+                {
+                    boxLayout: t,
+                    title: d.intl.string(d.t.EnzW2N),
+                    includeSideGradient: !0,
+                    startLeftAligned: !0
+                },
+                e
+            )
+        );
     });
-});

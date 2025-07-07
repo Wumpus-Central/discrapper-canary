@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => C }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,10 +18,10 @@ var i = n(255367),
     _ = n(578504),
     E = n(839526),
     j = n(4046),
-    C = n(423741);
-let O = r.forwardRef((e, t) => {
+    O = n(423741);
+let C = r.forwardRef((e, t) => {
     var n, s;
-    let { className: O, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: N } = e,
+    let { className: C, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: N } = e,
         { analyticsLocations: I } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         y = (0, p.Ng)(),
         A = (0, p.Wp)(y, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
@@ -38,7 +38,7 @@ let O = r.forwardRef((e, t) => {
             value: I,
             children: (0, i.jsxs)('div', {
                 ref: t,
-                className: l()(_.container, O),
+                className: l()(_.container, C),
                 children: [
                     (0, i.jsx)(a.X6q, {
                         className: _.footerHeader,
@@ -66,7 +66,7 @@ let O = r.forwardRef((e, t) => {
                             },
                             ref: Z,
                             children: (0, i.jsx)('source', {
-                                src: D ? E.Z : C.Z,
+                                src: D ? E.Z : O.Z,
                                 type: D ? b.m.MP4 : b.m.WEBM
                             })
                         })

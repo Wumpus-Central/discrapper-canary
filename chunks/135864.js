@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(626135),
     b = n(836768),
     _ = n(766219),
-    O = n(749681),
-    E = n(49898),
+    E = n(749681),
+    O = n(49898),
     y = n(981631),
     I = n(46140),
     v = n(388032),
@@ -29,11 +29,11 @@ function S(e) {
             () =>
                 (function (e, t) {
                     switch (e) {
-                        case E.GlobalDiscoveryTab.SERVERS:
+                        case O.GlobalDiscoveryTab.SERVERS:
                             return (0, r.jsx)(s.QTo, { color: 'currentColor' });
-                        case E.GlobalDiscoveryTab.APPS:
+                        case O.GlobalDiscoveryTab.APPS:
                             return t ? (0, r.jsx)(s.iWm, { color: 'currentColor' }) : (0, r.jsx)(s.jje, { color: 'currentColor' });
-                        case E.GlobalDiscoveryTab.QUESTS:
+                        case O.GlobalDiscoveryTab.QUESTS:
                             return (0, r.jsx)(s.qDn, { color: 'currentColor' });
                     }
                 })(t, n),
@@ -43,33 +43,33 @@ function S(e) {
         N = l === t,
         T = i.useCallback(() => {
             switch (t) {
-                case E.GlobalDiscoveryTab.QUESTS:
+                case O.GlobalDiscoveryTab.QUESTS:
                     return (
                         N && g.Z.resetState(),
                         m.default.track(y.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, u.Gy)().uuid }),
-                        (0, O.transitionToGlobalDiscovery)({
-                            tab: E.GlobalDiscoveryTab.QUESTS,
+                        (0, E.transitionToGlobalDiscovery)({
+                            tab: O.GlobalDiscoveryTab.QUESTS,
                             location: I.dr.DISCOVERY_SIDEBAR,
                             questContent: o.j.DISCOVERY_SIDEBAR
                         })
                     );
-                case E.GlobalDiscoveryTab.APPS:
+                case O.GlobalDiscoveryTab.APPS:
                     if (!N)
-                        return (0, O.transitionToGlobalDiscovery)({
+                        return (0, E.transitionToGlobalDiscovery)({
                             tab: t,
                             newSessionState: {
                                 entrypoint: { name: p.xF.GLOBAL_DISCOVERY_SIDEBAR },
                                 restorePreviousView: !0
                             }
                         });
-                    (d.Z.resetState(), (0, O.transitionToGlobalDiscovery)({ tab: t }));
+                    (d.Z.resetState(), (0, E.transitionToGlobalDiscovery)({ tab: t }));
                     return;
-                case E.GlobalDiscoveryTab.SERVERS:
-                    if (!N) return (0, O.transitionToGlobalDiscovery)({ tab: t });
+                case O.GlobalDiscoveryTab.SERVERS:
+                    if (!N) return (0, E.transitionToGlobalDiscovery)({ tab: t });
                     (h.Z.resetState(), f.Z.resetState());
                     return;
                 default:
-                    return (0, O.transitionToGlobalDiscovery)({ tab: t });
+                    return (0, E.transitionToGlobalDiscovery)({ tab: t });
             }
         }, [t, N]);
     return (0, r.jsxs)(s.P3F, {
@@ -101,7 +101,7 @@ let N = function () {
             }),
             (0, r.jsx)('nav', {
                 className: C.nav,
-                children: E.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(S, { tab: e }, e))
+                children: O.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(S, { tab: e }, e))
             })
         ]
     });

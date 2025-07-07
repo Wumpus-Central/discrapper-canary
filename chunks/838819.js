@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(150063),
     p = n(211266),
-    g = n(906732),
-    f = n(702486),
+    f = n(906732),
+    g = n(702486),
     h = n(977395),
     b = n(214852),
     m = n(290026),
@@ -59,7 +59,7 @@ let R = (e) => {
             [i, w]
         );
         let { onClose: Z } = (0, L.Db)(),
-            { categories: D, refreshCategories: F } = (0, x.ZP)(
+            { categories: M, refreshCategories: D } = (0, x.ZP)(
                 {
                     location: 'CollectiblesShop.web',
                     logPerf: !0
@@ -71,7 +71,7 @@ let R = (e) => {
                 }
             );
         (0, m.P)();
-        let M = (0, y.O)(D),
+        let F = (0, y.O)(M),
             [H, W] = l.useState(),
             V = (0, s.e7)([v.Z], () => {
                 var e;
@@ -82,7 +82,7 @@ let R = (e) => {
                 (G(e), W(t));
             }, []),
             { selectedTab: Y, transitionState: q, transitionToTab: K } = (0, j.B)(N, n, t),
-            { handleScroll: X } = (0, f.z)(N, i, Y);
+            { handleScroll: X } = (0, g.z)(N, i, Y);
         ((0, S.q3)(i, Y, V, q, U),
             (0, S.EB)(Y, c),
             (0, k.Z)(),
@@ -100,7 +100,7 @@ let R = (e) => {
                 }
             }, [t]));
         let { analyticsLocations: ee } = (0, S.MV)(Y);
-        return (0, r.jsx)(g.Gt, {
+        return (0, r.jsx)(f.Gt, {
             value: ee,
             children: (0, r.jsx)(E.k0, {
                 newValue: {
@@ -137,10 +137,10 @@ let R = (e) => {
                                         tab: Y,
                                         isFullScreen: t,
                                         scrollerRef: N,
-                                        refreshCategories: F,
+                                        refreshCategories: D,
                                         transitionToTab: K,
                                         transitionState: q,
-                                        sortedCategories: M,
+                                        sortedCategories: F,
                                         updateAnalyticsState: z
                                     })
                                 ]

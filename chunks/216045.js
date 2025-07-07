@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(243778),
     E = n(957730),
     j = n(53691),
-    C = n(267717),
-    O = n(296810),
+    O = n(267717),
+    C = n(296810),
     S = n(678135),
     v = n(610794),
     T = n(935147),
@@ -107,7 +107,7 @@ function F() {
               value: Q,
               children: [
                   (0, i.jsx)(b.Z, {}),
-                  (0, i.jsx)(O.Z, {
+                  (0, i.jsx)(C.Z, {
                       showViewFullProfileButton: ec,
                       profilePreview: (0, i.jsx)(
                           S.Z,
@@ -186,7 +186,7 @@ function F() {
                       (0, i.jsx)(j.p, {
                           className: G.floatingNitroUpsell,
                           showUpsell: ed && !el,
-                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, C.y)({ analyticsSource: J }) }),
+                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: J }) }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(d.gtL, {
                               className: G.floatingNitroButton,

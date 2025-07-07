@@ -15,17 +15,17 @@ var r = n(255367),
     m = n(358085),
     b = n(821020),
     _ = n(370774),
-    O = n(961040),
-    E = n(739340),
+    E = n(961040),
+    O = n(739340),
     y = n(981631),
     I = n(388032),
     v = n(61626);
 function C(e) {
     let { onClick: t, selectedOverride: n = !1, popoutProps: l, ref: o } = e,
         [g, b] = i.useState(!1),
-        O = (0, _.D)(),
+        E = (0, _.D)(),
         { unreadRecentMentionsCount: y, unreadChannelIds: C } = (function () {
-            let e = (0, E.wt)(),
+            let e = (0, O.wt)(),
                 t = (0, s.e7)([f.ZP], () => e.filter((e) => f.ZP.hasUnread(e)), [e]),
                 n = (0, s.e7)([d.Z], () => d.Z.getSettingsFilteredMentions());
             return {
@@ -52,7 +52,7 @@ function C(e) {
                         count: C.length
                     }
                   : { type: null },
-        N = n || n || O,
+        N = n || n || E,
         T = (0, r.jsx)(c.Dkj, {
             className: v.icon,
             color: g || N ? c.TVs.colors.ICON_PRIMARY : c.TVs.colors.ICON_TERTIARY,
@@ -175,7 +175,7 @@ function S() {
     return t === b.jP.SIDEBAR
         ? (0, r.jsx)(C, { onClick: () => (0, o.uL)(l) })
         : t === b.jP.POPOUT
-          ? (0, r.jsx)(O.Z, {
+          ? (0, r.jsx)(E.Z, {
                 targetElementRef: e,
                 popoutPosition: 'bottom',
                 popoutAlign: 'center',

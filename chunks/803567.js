@@ -19,8 +19,8 @@ var r = n(120356),
     _ = n(726985),
     E = n(981631),
     j = n(388032),
-    C = n(20493);
-let O = n(775322),
+    O = n(20493);
+let C = n(775322),
     S = n(853453),
     v = (0, u.hQ)(),
     T = {
@@ -70,17 +70,17 @@ function I(e) {
             value: 0
         }),
         (0, i.jsxs)(o.hjN, {
-            className: t ? void 0 : C.marginBottom20,
+            className: t ? void 0 : O.marginBottom20,
             children: [
                 (0, i.jsx)(o.vwX, {
                     id: v,
                     tag: o.RB0.H3,
-                    className: C.marginBottom8,
+                    className: O.marginBottom8,
                     children: j.intl.string(j.t.t8QhiY)
                 }),
                 (0, i.jsx)(o.R94, {
                     type: o.R94.Types.DESCRIPTION,
-                    className: C.marginBottom8,
+                    className: O.marginBottom8,
                     children: j.intl.string(j.t.najZCQ)
                 }),
                 (0, i.jsx)(o.FXm, {
@@ -92,10 +92,10 @@ function I(e) {
                 }),
                 m &&
                     (0, i.jsx)(o.ToO, {
-                        className: C.marginBottom8,
+                        className: O.marginBottom8,
                         type: o.Dd5.PRIMARY,
                         imageData: {
-                            src: (0, a.ap)(n) ? O : S,
+                            src: (0, a.ap)(n) ? C : S,
                             width: 70,
                             height: 40
                         },
@@ -132,7 +132,7 @@ function y(e) {
         })),
         {
             hasEchoCancellation: b,
-            hasNoiseSuppression: O,
+            hasNoiseSuppression: C,
             hasAutomaticGainControl: S
         } = (0, l.cj)(
             [p.Z],
@@ -146,16 +146,16 @@ function y(e) {
         v = n === E.pM4.VOICE_ACTIVITY && u,
         T = (0, i.jsxs)(x.Z, {
             children: [
-                (b || O || S) &&
+                (b || C || S) &&
                     (0, i.jsx)(o.R94, {
-                        className: t ? void 0 : C.marginBottom20,
+                        className: t ? void 0 : O.marginBottom20,
                         type: o.R94.Types.DESCRIPTION,
                         children: j.intl.string(j.t['/Whuzs'])
                     }),
                 (0, i.jsx)(m.F, {
                     setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                     children: (0, i.jsx)(o.j7V, {
-                        className: t ? void 0 : s()(C.marginTop8, C.marginBottom20),
+                        className: t ? void 0 : s()(O.marginTop8, O.marginBottom20),
                         value: a,
                         onChange: (e) =>
                             c.Z.setEchoCancellation(e, {
@@ -214,7 +214,7 @@ function y(e) {
     return t
         ? T
         : (0, i.jsx)(o.hjN, {
-              className: C.marginBottom20,
+              className: O.marginBottom20,
               title: j.intl.string(j.t['6I6GUl']),
               children: T
           });

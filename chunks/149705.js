@@ -48,8 +48,6 @@ let o = {
         currentPage: 0,
         totalCount: 0,
         hasMorePages: !1,
-        pageOffset: 0,
-        pageLimit: 0,
         searchError: null
     },
     a = (0, r.U)((e) =>

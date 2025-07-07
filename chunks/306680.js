@@ -846,13 +846,13 @@ function eJ(e) {
         });
 }
 function e$(e) {
-    var t, n;
-    let { guilds: r, relationships: i, initialPrivateChannels: a, readState: o } = e;
+    var t;
+    let { guilds: n, relationships: r, initialPrivateChannels: i, readState: a } = e;
     (eA(),
         (ep = null),
-        eh || o.partial || eM.clearAll(),
+        eh || a.partial || eM.clearAll(),
         (eh = !1),
-        o.entries.forEach((e) => {
+        a.entries.forEach((e) => {
             var t, n;
             let r = null != (t = e.read_state_type) ? t : ei.W.CHANNEL;
             r !== ei.W.CHANNEL && (e = eC(e));
@@ -862,9 +862,9 @@ function e$(e) {
             (null != a && (0, L.Q5)(a.type) && (null == e.last_message_id || 0 === e.last_message_id) ? (i.ackMessageId = G.default.fromTimestamp(eW(a.guild_id, a.id))) : i.ackedWhileCached ? -1 === G.default.compare(i.ackMessageId, e.last_message_id) && (i.ackMessageId = e.last_message_id) : (i.ackMessageId = e.last_message_id), (i.ackedWhileCached = void 0), (i.ackPinTimestamp = eN(e.last_pin_timestamp)), eM._mentionChannels.delete(i.channelId), i._mentionCount > 0 && i.canHaveMentions() && eM._mentionChannels.add(i.channelId));
         }),
         eM.resetGuildSentinels());
-    let s = null == (t = J.default.getCurrentUser()) ? void 0 : t.id;
-    for (let e of (null != s && (eM.get(s, ei.W.NOTIFICATION_CENTER).lastMessageId = G.default.fromTimestamp(Date.now())), eB(i), ej(a), r)) (ej(null != (n = e.channels) ? n : []), e3(e), eG(e));
-    (e0(), (eE = setTimeout(() => e2(o.entries), 10 * k.Z.Millis.SECOND)));
+    let o = null == (t = J.default.getCurrentUser()) ? void 0 : t.id;
+    for (let e of (null != o && (eM.get(o, ei.W.NOTIFICATION_CENTER).lastMessageId = G.default.fromTimestamp(Date.now())), eB(r), ej(i), n)) (ej('full_sync' === e.channels.op ? e.channels.items : e.channels.writes), null != e.channelTimestampUpdates && e3(e.channelTimestampUpdates), eG(e));
+    (e0(), (eE = setTimeout(() => e2(a.entries), 10 * k.Z.Millis.SECOND)));
 }
 function e0() {
     null != eE && clearTimeout(eE);
@@ -883,15 +883,10 @@ function e2(e) {
     }
 }
 function e3(e) {
-    if (null != e.channelUpdates) {
-        var t;
-        ej(null == (t = e.channelUpdates) ? void 0 : t.writes);
+    for (let t of e) {
+        let e = eM.get(t.id);
+        (null != t.last_message_id && (e.lastMessageId = t.last_message_id), null != t.last_pin_timestamp && (e.lastPinTimestamp = eN(t.last_pin_timestamp)));
     }
-    if (null != e.channelTimestampUpdates)
-        for (let t of e.channelTimestampUpdates) {
-            let e = eM.get(t.id);
-            (null != t.last_message_id && (e.lastMessageId = t.last_message_id), null != t.last_pin_timestamp && (e.lastPinTimestamp = eN(t.last_pin_timestamp)));
-        }
 }
 function e4(e) {
     let { lazyPrivateChannels: t } = e;
@@ -910,15 +905,14 @@ function e5(e) {
         }));
 }
 function e6(e) {
-    var t;
-    let { guild: n } = e,
-        r = ev();
+    let { guild: t } = e,
+        n = ev();
     (eM.forEach((e) => {
-        e.guildId === n.id && e.shouldDeleteReadState(r) && e.delete(!1);
+        e.guildId === t.id && e.shouldDeleteReadState(n) && e.delete(!1);
     }),
-        ej(null != (t = n.channels) ? t : []),
-        e3(n),
-        eG(n));
+        ej('full_sync' === t.channels.op ? t.channels.items : t.channels.writes),
+        null != t.channelTimestampUpdates && e3(t.channelTimestampUpdates),
+        eG(t));
 }
 function e8(e) {
     let { channelId: t, isAfter: n, messages: r } = e,

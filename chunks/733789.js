@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(953529), n(388685));
+(n.d(t, { Z: () => O }), n(953529), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -88,7 +88,7 @@ let _ = {
         other: (e) => f.intl.format(f.t.Yx1rjY, { count: e })
     }
 };
-class O extends i.PureComponent {
+class E extends i.PureComponent {
     renderDescription(e, t) {
         let n = _[e];
         return 1 === t.length ? n.single(t[0].user, (e) => this.renderActivityDiscordTag(e)) : 2 === t.length ? n.double(t[0].user, t[1].user, (e) => this.renderActivityDiscordTag(e)) : n.other(t.length);
@@ -223,4 +223,4 @@ class O extends i.PureComponent {
             ));
     }
 }
-let E = O;
+let O = E;

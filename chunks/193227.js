@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(819640),
     d = n(594174),
     p = n(381585),
-    g = n(328347),
-    f = n(870289),
+    f = n(328347),
+    g = n(870289),
     h = n(370039),
     b = n(937510),
     m = n(303952),
@@ -91,7 +91,7 @@ function I(e) {
         })(e, ['category', 'initialItemCardRef']);
     let o = (0, b.l)(t.products),
         s = (0, h.a)()(o),
-        c = (0, a.e7)([g.Z], () => g.Z.initialProductSkuId),
+        c = (0, a.e7)([f.Z], () => f.Z.initialProductSkuId),
         u = l.useCallback(
             (e, t) => {
                 var r;
@@ -170,7 +170,7 @@ function B(e) {
 }
 function N(e) {
     var t;
-    let { sortedCategories: n, setCategoryRef: i, isFullScreen: c, currentPage: d, handlePageChange: g } = e,
+    let { sortedCategories: n, setCategoryRef: i, isFullScreen: c, currentPage: d, handlePageChange: f } = e,
         h = (0, p.sp)(),
         b = (0, S.R)(),
         _ = null != (t = null == h ? void 0 : h.sessionId) ? t : '',
@@ -208,7 +208,7 @@ function N(e) {
         isLayer: k,
         initialItemCardRef: j
     });
-    let I = (0, f.F)('CollectiblesBrowse');
+    let I = (0, g.F)('CollectiblesBrowse');
     return b
         ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)('div', {
@@ -243,7 +243,7 @@ function N(e) {
                           currentPage: d,
                           totalCount: n.length,
                           pageSize: T.kN,
-                          onPageChange: g,
+                          onPageChange: f,
                           disablePaginationGap: !0
                       })
                   })

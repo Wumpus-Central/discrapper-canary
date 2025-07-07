@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(629654),
     E = n(53691),
     j = n(165583),
-    C = n(267717),
-    O = n(643879),
+    O = n(267717),
+    C = n(643879),
     S = n(350327),
     v = n(996073),
     T = n(25990),
@@ -180,7 +180,7 @@ function G(e) {
                                   (0, i.jsx)(w.Z, {
                                       className: V.customizationSection,
                                       user: G,
-                                      pendingAvatarSrc: (0, O.SD)({
+                                      pendingAvatarSrc: (0, C.SD)({
                                           userId: G.id,
                                           image: null != q ? q : Y
                                       }),
@@ -240,7 +240,7 @@ function G(e) {
                               showUpsell: !0,
                               text: U.intl.format(U.t.TmfgIy, {
                                   onClick: () => {
-                                      (0, C.y)({
+                                      (0, O.y)({
                                           analyticsSource: er,
                                           onSubscribeFinish: el
                                       });

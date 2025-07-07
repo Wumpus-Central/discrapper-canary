@@ -24,8 +24,8 @@ var i = n(255367),
     _ = n(600164),
     E = n(925329),
     j = n(963249),
-    C = n(301766),
-    O = n(594174),
+    O = n(301766),
+    C = n(594174),
     S = n(626135),
     v = n(63063),
     T = n(74538),
@@ -43,8 +43,8 @@ var i = n(255367),
 function B(e) {
     let t,
         { subscription: n, renewalInvoicePreview: r, fractionalPremiumInfo: s, fromStandaloneBillingPage: a = !0, className: c } = e,
-        d = (0, u.e7)([O.default], () => {
-            let e = O.default.getCurrentUser();
+        d = (0, u.e7)([C.default], () => {
+            let e = C.default.getCurrentUser();
             return (o()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e);
         });
     if (0 === (0, T.uV)(n.additionalPlans)) return null;
@@ -368,9 +368,9 @@ function W(e) {
             analyticsLocation: c
         }),
         _ = null == l ? void 0 : l.invalid,
-        E = (0, u.e7)([O.default], () => {
+        E = (0, u.e7)([C.default], () => {
             var e;
-            return null == (e = O.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
+            return null == (e = C.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
         }),
         j = d()(r.currentPeriodEnd),
         S = null != r.paymentSourceId,
@@ -387,7 +387,7 @@ function W(e) {
     return null == b || null == x
         ? (0, i.jsx)(p.$jN, {})
         : (null != r.renewalMutations &&
-              ((r.renewalMutations.planId !== r.planId && !(0, C.Q0)(r.renewalMutations.planId)) || r.hasExternalPlanChange) &&
+              ((r.renewalMutations.planId !== r.planId && !(0, O.Q0)(r.renewalMutations.planId)) || r.hasExternalPlanChange) &&
               (n = (0, i.jsx)(D.Z, {
                   subscription: r,
                   renewalMutations: r.renewalMutations,

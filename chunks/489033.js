@@ -48,7 +48,17 @@ class s {
         );
     }
     handleOneGuildCreate(e, t) {
-        null != e.emojiUpdates ? this.update(e.id, e.emojiUpdates.writes, e.emojiUpdates.deletes, t) : null != e.emojis && this.replace(e.id, e.emojis, t);
+        switch (e.emojis.op) {
+            case 'full_sync':
+                this.replace(e.id, e.emojis.items, t);
+                break;
+            case 'update':
+                this.update(e.id, e.emojis.writes, e.emojis.deletes, t);
+                break;
+            default:
+                e.emojis;
+                return;
+        }
     }
     resetInMemoryState() {}
     replace(e, t, n) {

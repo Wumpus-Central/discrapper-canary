@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(224336),
     b = n(730749),
     _ = n(666743),
-    O = n(115130),
-    E = n(812206),
+    E = n(115130),
+    O = n(812206),
     y = n(770146),
     I = n(600164),
     v = n(606081),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(506648),
     K = n(449275),
     q = n(445986),
-    X = n(119520),
-    Q = n(450233),
+    Q = n(119520),
+    X = n(450233),
     J = n(726581),
     $ = n(74153),
     ee = n(125930),
@@ -397,7 +397,7 @@ class ed extends i.PureComponent {
                       children: this.renderListing()
                   });
             return (0, r.jsxs)(i.Fragment, {
-                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(X.Z, { game: e }), n]
+                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(Q.Z, { game: e }), n]
             });
         }
         return a
@@ -559,8 +559,8 @@ class ed extends i.PureComponent {
                                 children: [
                                     null != t ? (0, N.Z)(t) : null,
                                     null != e && null != t ? (0, r.jsx)('div', { children: 'deprecated!' }) : null,
-                                    (0, r.jsx)(Q.Z, {
-                                        messageStyle: Q.G.SHORT,
+                                    (0, r.jsx)(X.Z, {
+                                        messageStyle: X.G.SHORT,
                                         className: eo.purchaseError
                                     })
                                 ]
@@ -600,23 +600,23 @@ class ed extends i.PureComponent {
 }
 let ep = (0, b.Z)(
     (0, _.Z)(
-        o.ZP.connectStores([L.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, O.Z, E.Z, x.Z, A.Z, w.Z], (e) => {
+        o.ZP.connectStores([L.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, x.Z, A.Z, w.Z], (e) => {
             let t,
                 n,
                 r,
                 { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: o, channel: s } = e;
             if (null == l) {
                 if (null == i) throw Error('Needs applicationId or skuId');
-                ((t = i), null != (l = null != (n = R.Z.get(i)) ? n.applicationId : null) && (r = E.Z.getApplication(l)));
+                ((t = i), null != (l = null != (n = R.Z.get(i)) ? n.applicationId : null) && (r = O.Z.getApplication(l)));
             } else if (null == i) {
                 if (null == l) throw Error('Needs applicationId or skuId');
-                (null != (r = E.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null));
+                (null != (r = O.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null));
             }
             (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
-            let c = null != l && (k.Z.inTestModeForApplication(l) || O.Z.inDevModeForApplication(l));
+            let c = null != l && (k.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
-                application: null != l ? E.Z.getApplication(l) : null,
+                application: null != l ? O.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && w.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && w.Z.applicationIdsFetched.has(l),
                 shouldFetchStatistics: o && null != l && x.Z.shouldFetchStatisticsForApplication(l),

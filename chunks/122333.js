@@ -16,8 +16,8 @@ var l = n(481060),
     m = n(486472),
     b = n(430824),
     _ = n(914010),
-    O = n(594174),
-    E = n(823379),
+    E = n(594174),
+    O = n(823379),
     y = n(358085),
     I = n(929809),
     v = n(179645),
@@ -132,7 +132,7 @@ class x extends o.Z {
                             case null:
                                 break;
                             default:
-                                E.vE(e);
+                                O.vE(e);
                         }
                     };
                     r = await (0, l.ZDy)(
@@ -159,7 +159,7 @@ class x extends o.Z {
                 open: (e) => c.j(y.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !o && null != O.default.getCurrentUser() && !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a && !(0, p.g)('new_user_manager');
+                    return !o && null != E.default.getCurrentUser() && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a && !(0, p.g)('new_user_manager');
                 }
             },
             {
@@ -167,7 +167,7 @@ class x extends o.Z {
                 open: (e) => (0, u.hk)(Z, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return o && !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a;
+                    return o && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a;
                 }
             },
             {

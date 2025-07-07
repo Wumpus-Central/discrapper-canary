@@ -23,8 +23,8 @@ var i = n(255367),
     _ = n(410575),
     E = n(941129),
     j = n(634894),
-    C = n(586902),
-    O = n(980591),
+    O = n(586902),
+    C = n(980591),
     S = n(468363),
     v = n(326255),
     T = n(771173),
@@ -77,8 +77,8 @@ var i = n(255367),
     e_ = n(294629),
     eE = n(875527),
     ej = n(702977),
-    eC = n(56848),
-    eO = n(940315),
+    eO = n(56848),
+    eC = n(940315),
     eS = n(378441),
     ev = n(358820),
     eT = n(723547),
@@ -182,7 +182,7 @@ function ta(e) {
         E = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
         j = (0, G.Z)('Account') ? 32 : E,
         {
-            updateOpenPopoutRef: C,
+            updateOpenPopoutRef: O,
             highlightBadge: S,
             setHighlightBadge: v
         } = (function () {
@@ -195,7 +195,7 @@ function ta(e) {
                 [n, i] = r.useState(),
                 [s, l] = r.useState(!1);
             return (
-                (0, O.Z)(() => l(!0), 750),
+                (0, C.Z)(() => l(!0), 750),
                 r.useEffect(() => {
                     let t = (t) => {
                         var n;
@@ -252,7 +252,7 @@ function ta(e) {
                       (d(), v(void 0));
                   },
                   children: (e) => (
-                      C(e),
+                      O(e),
                       (0, i.jsxs)(
                           f.P3F,
                           ti(
@@ -644,14 +644,14 @@ class to extends r.PureComponent {
     }
 }
 function tc(e) {
-    let { selfDeaf: t, selfMute: n, awaitingRemote: r, serverMute: s, serverDeaf: l, suppress: a, shouldShowSpeakingWhileMutedTooltip: o, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: p, handleToggleSelfMute: g, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: x, handleOpenSettingsContextMenu: _, dismissibleContents: E, nameplate: j, accountContainerRef: C } = e,
-        O = (0, et.A)(j);
+    let { selfDeaf: t, selfMute: n, awaitingRemote: r, serverMute: s, serverDeaf: l, suppress: a, shouldShowSpeakingWhileMutedTooltip: o, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: p, handleToggleSelfMute: g, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: x, handleOpenSettingsContextMenu: _, dismissibleContents: E, nameplate: j, accountContainerRef: O } = e,
+        C = (0, et.A)(j);
     return (0, i.jsxs)('div', {
         className: te.buttons,
-        style: O,
+        style: C,
         children: [
             (0, i.jsx)(tm, {
-                accountContainerRef: C,
+                accountContainerRef: O,
                 selfMute: n,
                 serverMute: s,
                 suppress: a,
@@ -709,7 +709,7 @@ function td() {
             };
         }),
         a = (0, d.e7)([eR.Z], () => eR.Z.getAnyStreamForUser(n)),
-        c = (0, C.Z)({ userId: n }),
+        c = (0, O.Z)({ userId: n }),
         m = e$.ZP.useUserTag(t, { decoration: 'never' }),
         p = (0, d.e7)([eV.Z], () => eV.Z.hidePersonalInformation),
         g = (0, d.e7)([eB.Z, eZ.Z], () => {
@@ -717,7 +717,7 @@ function td() {
             return null != e ? eZ.Z.getChannel(e) : null;
         }),
         { mute: h, selfMute: b, suppress: x } = (0, e_.Z)(g),
-        { selfDeaf: _, deaf: O } = (0, ex.Z)(g),
+        { selfDeaf: _, deaf: C } = (0, ex.Z)(g),
         v = (0, d.e7)([D.C], () => {
             var e;
             return (0, Z.fD)() ? (null == (e = D.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web) : null;
@@ -786,7 +786,7 @@ function td() {
                 premiumSubscription: T,
                 selfDeaf: _,
                 selfMute: b,
-                serverDeaf: O,
+                serverDeaf: C,
                 serverMute: h,
                 speaking: c,
                 speakingWhileMuted: N,
@@ -842,15 +842,15 @@ function tu(e) {
     });
 }
 function tm(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: a, tooltipText: o, tooltipColor: m, tooltipForceOpen: p, iconForeground: g, onMouseEnter: b, onMouseLeave: x, onClick: _, onContextMenu: E, nameplate: j, accountContainerRef: C } = e,
-        O = t || s || n,
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: a, tooltipText: o, tooltipColor: m, tooltipForceOpen: p, iconForeground: g, onMouseEnter: b, onMouseLeave: x, onClick: _, onContextMenu: E, nameplate: j, accountContainerRef: O } = e,
+        C = t || s || n,
         S = r.useRef(null),
         v = r.useRef(null),
-        T = (0, eP.b)(O),
+        T = (0, eP.b)(C),
         { activeVoice: N, mostRecentlyRequestedVoiceId: I, lastInitAttemptMayHaveCrashed: P } = (0, eS.o)(),
-        { showSilentLagWarning: R } = (0, eO.Y)(),
+        { showSilentLagWarning: R } = (0, eC.Y)(),
         D = null != N,
-        Z = (0, eC.z)(N),
+        Z = (0, eO.z)(N),
         w = (0, d.e7)([eB.Z], () => eB.Z.isConnected()),
         { Component: k, events: B, play: M } = T,
         U = n || s ? f.v0G : k,
@@ -886,7 +886,7 @@ function tm(e) {
             location: y.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0
         });
-    r.useEffect(() => () => M(), [O, M]);
+    r.useEffect(() => () => M(), [C, M]);
     let K = r.useCallback(
             (e) => {
                 E(e, H);
@@ -922,8 +922,8 @@ function tm(e) {
     let ee = r.useCallback(() => {
             P || (0, ev.r5)();
         }, [P]),
-        et = O ? f.TVs.colors.STATUS_DANGER : R ? f.TVs.colors.STATUS_WARNING : 'currentColor',
-        en = O || R,
+        et = C ? f.TVs.colors.STATUS_DANGER : R ? f.TVs.colors.STATUS_WARNING : 'currentColor',
+        en = C || R,
         ei = (0, es.Z)({ location: 'Account' });
     return (0, i.jsx)(A.Gt, {
         value: H,
@@ -954,14 +954,14 @@ function tm(e) {
                     role: 'switch',
                     className: l()({ [te.micButtonWithMenu]: z }),
                     orangeGlow: R,
-                    redGlow: O,
+                    redGlow: C,
                     'aria-label': e9.intl.string(e9.t['w4m94+']),
-                    'aria-checked': O,
+                    'aria-checked': C,
                     disabled: a
                 }),
                 z &&
                     (0, i.jsx)(f.yRy, {
-                        targetElementRef: C,
+                        targetElementRef: O,
                         position: 'top',
                         align: 'left',
                         nudgeAlignIntoViewport: !1,
@@ -1059,7 +1059,7 @@ function tm(e) {
                                                             role: 'button',
                                                             className: te.buttonChevron,
                                                             orangeGlow: R,
-                                                            redGlow: O,
+                                                            redGlow: C,
                                                             'aria-label': e9.intl.string(e9.t.Hapb4O),
                                                             disabled: a,
                                                             onClick: (e) => {

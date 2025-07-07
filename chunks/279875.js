@@ -124,7 +124,7 @@ function x(e) {
                         size: s.zxk.Sizes.SMALL,
                         disabled: null == p,
                         onClick: function () {
-                            null != p && (m(p), t());
+                            null != p && m(p);
                         },
                         children: c.intl.string(c.t['cY+Ooa'])
                     })

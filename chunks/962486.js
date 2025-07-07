@@ -18,8 +18,8 @@ let f = {
 function g(e) {
     let { tab: t, guildIds: n, loading: p, onScroll: g, onGuildCardClick: m, onGuildCardSeen: b } = e,
         _ = (0, u.Mf)(t),
-        O = (0, u.a$)(t),
-        E = (0, u.QW)(t),
+        E = (0, u.a$)(t),
+        O = (0, u.QW)(t),
         y = (0, u.lg)(t),
         I = i.useMemo(() => {
             let e = p ? 30 : n.length,
@@ -46,7 +46,7 @@ function g(e) {
         children: [
             (0, r.jsx)(o.Z, {
                 title: _,
-                description: O,
+                description: E,
                 children: (0, r.jsx)(a.Z, {})
             }),
             (0, r.jsxs)(s.Z, {
@@ -55,7 +55,7 @@ function g(e) {
                         className: h.sectionTitle,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        children: E
+                        children: O
                     }),
                     (0, r.jsx)('div', {
                         className: h.content,

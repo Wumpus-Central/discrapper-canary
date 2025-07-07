@@ -227,13 +227,16 @@ function ei(e) {
     eP();
 }
 function ea(e) {
-    if (null != e.channels) for (let t of (C.fileOnly('GuildCreate contained full channels for '.concat(e.id, ' #:').concat(e.channels.length)), q(e.id), G.add(e.id), f.Z.restored(e.id), e.channels)) et(t);
-    if (null != e.channelUpdates) {
-        let t = e.channelUpdates;
-        for (let n of ((t.writes.length > 0 || t.deletes.length > 0) && f.Z.invalidate(e.id), t.deletes)) eO(P[n]);
-        for (let e of t.writes) et(e);
+    let { id: t, channels: n, threads: r } = e;
+    switch (n.op) {
+        case 'full_sync':
+            for (let e of (C.fileOnly('ConnectionOpen contained full channels for '.concat(t, ' #:').concat(n.items.length)), q(t), G.add(t), f.Z.restored(t), n.items)) et(e);
+            break;
+        case 'update':
+            for (let e of ((n.writes.length > 0 || n.deletes.length > 0) && f.Z.invalidate(t), n.deletes)) eO(P[e]);
+            for (let e of n.writes) et(e);
     }
-    if (null != e.threads) for (let t of e.threads) ee(t);
+    if (null != r) for (let e of r) ee(e);
 }
 function eo(e) {
     let { lazyPrivateChannels: t } = e;

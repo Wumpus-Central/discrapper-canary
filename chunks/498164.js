@@ -16,8 +16,8 @@ var i = n(756647),
     m = n(100527),
     b = n(728345),
     _ = n(185669),
-    O = n(962220),
-    E = n(69580),
+    E = n(962220),
+    O = n(69580),
     y = n(703656),
     I = n(314897),
     v = n(553795),
@@ -96,7 +96,7 @@ let w = {
                 args: { code: t }
             } = e;
             if (null == C.default.getCurrentUser()) return;
-            let { guildTemplate: i } = await O.Z.resolveGuildTemplate(t);
+            let { guildTemplate: i } = await E.Z.resolveGuildTemplate(t);
             if (null == i) throw new j.Z({ errorCode: Z.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
             return (
                 P.ZP.focus(),
@@ -218,8 +218,8 @@ let w = {
                 case A.jE.OAUTH2:
                     let r = new URL(Z.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
                     r.search = n.search;
-                    let i = (0, E.getOAuth2AuthorizeProps)(r.toString());
-                    if (null != i) return ((0, E.openOAuth2ModalWithCreateGuildModal)(i), !0);
+                    let i = (0, O.getOAuth2AuthorizeProps)(r.toString());
+                    if (null != i) return ((0, O.openOAuth2ModalWithCreateGuildModal)(i), !0);
                     return !1;
                 case A.jE.SHOP:
                     null != n &&

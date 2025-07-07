@@ -42,7 +42,7 @@ let g = 'isHideDevBanner',
             : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, r.jsxs)('div', {
                     className: a()(f.devBanner, f.staging),
-                    children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.format(h.t.uyrfYG, { buildNumber: '415931' }), (0, r.jsx)(b, {})]
+                    children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.format(h.t.uyrfYG, { buildNumber: '416056' }), (0, r.jsx)(b, {})]
                 })
               : null;
     };
