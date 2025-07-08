@@ -5717,6 +5717,7 @@
   "SYlkPj": "[!!{username}!!](!!{username}!!) added a new emoji, !!{emojiPreview}!! :[!!{emojiName}!!](!!{emojiName}!!):",
   "k6Jc9f": "$[!!{username}!!]({{usernameHook}}) added a new emoji.",
   "7NBgIS": "[!!{username}!!](!!{username}!!) added a new emoji.",
+  "BaxFf3": ":$[!!{emojiName}!!]({{emojiNameHook}}): added to $[!!{guildName}!!]({{guildNameHook}})",
   "yZFibW": "Add to Favorites",
   "gi2qEB": "Available with Nitro",
   "O783tb": "Activities",
