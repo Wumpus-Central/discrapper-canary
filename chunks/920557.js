@@ -4,20 +4,20 @@ var r = n(255367),
     l = n(120356),
     a = n.n(l),
     o = n(528708),
-    s = n(451463),
+    s = n(264738),
     c = n(278074),
     u = n(748780),
     d = n(481060),
     p = n(313201),
     m = n(542578),
     f = n(203143),
-    g = n(79390),
-    _ = n(839963),
+    _ = n(79390),
+    g = n(839963),
     h = n(139256),
     b = n(294608),
     E = n(388032),
     y = n(709893);
-function x(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,21 +42,21 @@ function x(e) {
     }
     return e;
 }
-function C(e) {
+function x(e) {
     let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
-        [_, h] = i.useState(''),
-        [E, C] = i.useState(!1),
-        v = '' !== _ && E,
+        [g, h] = i.useState(''),
+        [E, x] = i.useState(!1),
+        v = '' !== g && E,
         O = i.useCallback(() => {
-            h((0, g.e1)(u, c, a));
+            h((0, _.e1)(u, c, a));
         }, [u, c, a]),
         j = i.useCallback(() => {
-            (O(), C(!0));
+            (O(), x(!0));
         }, [O]),
         I = i.useCallback(() => {
-            C(!1);
+            x(!1);
         }, []),
         S = i.useCallback(() => {
             (0, f.n)({
@@ -92,7 +92,7 @@ function C(e) {
                                   variant: 'text-sm/normal',
                                   color: 'text-muted',
                                   scaleFontToUserSetting: !0,
-                                  children: _
+                                  children: g
                               }),
                               forceOpen: v,
                               'aria-label': !1,
@@ -100,7 +100,7 @@ function C(e) {
                                   var t, n;
                                   return (0, r.jsx)(
                                       d.zxk,
-                                      ((t = x({}, e)),
+                                      ((t = C({}, e)),
                                       (n = n =
                                           {
                                               onMouseEnter: j,
@@ -133,7 +133,7 @@ function C(e) {
                           v &&
                               (0, r.jsx)(o.T, {
                                   id: s,
-                                  children: _
+                                  children: g
                               })
                       ]
                   })
@@ -172,14 +172,14 @@ function O(e) {
         answersInteraction: t,
         didSelfVote: i
     })
-        .with({ answersInteraction: _.Y7.RADIO_BUTTONS }, () =>
+        .with({ answersInteraction: g.Y7.RADIO_BUTTONS }, () =>
             (0, r.jsx)(h.Og, {
                 isSelected: n,
                 size: 24,
                 className: o
             })
         )
-        .with({ answersInteraction: _.Y7.CHECKBOXES }, () =>
+        .with({ answersInteraction: g.Y7.CHECKBOXES }, () =>
             (0, r.jsx)(h.zs, {
                 isSelected: n,
                 size: 20,
@@ -188,7 +188,7 @@ function O(e) {
         )
         .with(
             {
-                answersInteraction: _.Y7.LIST,
+                answersInteraction: g.Y7.LIST,
                 didSelfVote: !0
             },
             () =>
@@ -209,7 +209,7 @@ function j(e) {
         m = t.shouldAnimateTransition;
     return (0, r.jsxs)('div', {
         className: a()(y.answerInner, {
-            [y.currentlyVoting]: i !== _.Y7.LIST,
+            [y.currentlyVoting]: i !== g.Y7.LIST,
             [y.selected]: c
         }),
         children: [
@@ -233,7 +233,7 @@ function j(e) {
             }),
             t.didSelfVote && (0, r.jsx)(o.T, { children: E.intl.string(E.t['8DAM+/']) }),
             l &&
-                (0, r.jsx)(C, {
+                (0, r.jsx)(x, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: s,
@@ -273,7 +273,7 @@ function I(e) {
         })(e, ['isExpired', 'answersInteraction', 'canShowVoteCounts', 'canTapAnswers']);
     return (0, r.jsx)(
         h.$e,
-        x(
+        C(
             {
                 className: y.answersContainer,
                 answerClassName: y.answer,

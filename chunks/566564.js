@@ -22,8 +22,8 @@ var r = n(255367),
     S = n(215023),
     x = n(981631),
     y = n(388032),
-    j = n(806734);
-let T = (e) => {
+    T = n(806734);
+let j = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: o, isFetchingCategories: s, tab: c, isFullScreen: d } = e,
             { noCache: h, includeUnpublished: E } = (0, b.Z)(),
@@ -41,7 +41,7 @@ let T = (e) => {
         }, [c]);
         let {
                 isFetchingShopHome: y,
-                fetchShopHomeError: T,
+                fetchShopHomeError: j,
                 shopBlocks: P,
                 refreshShopHome: L
             } = (0, p.E)(
@@ -63,7 +63,7 @@ let T = (e) => {
             }, [L]);
         if (
             (l.useEffect(() => {
-                null != T ||
+                null != j ||
                     y ||
                     0 === P.length ||
                     (0, f.n)({
@@ -74,17 +74,17 @@ let T = (e) => {
                         unpublishedCategoriesShown: E,
                         cacheDisabled: h
                     });
-            }, [T, y, P.length, E, h, x, c, d]),
-            null != T)
+            }, [j, y, P.length, E, h, x, c, d]),
+            null != j)
         )
             return (0, r.jsx)(g.Z, {
                 onRetry: I,
                 errorOrigin: g.i.SHOP_PAGE,
-                errorMessage: T.message
+                errorMessage: j.message
             });
         if (y || 0 === P.length)
             return (0, r.jsxs)('div', {
-                className: j.loadingContainer,
+                className: T.loadingContainer,
                 children: [
                     (0, r.jsx)(C.Z, {
                         isLoading: y,
@@ -173,7 +173,7 @@ let T = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: i()(j.blockContainer, { [j.topBlockContainer]: 0 === t }),
+                    className: i()(T.blockContainer, { [T.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
@@ -206,12 +206,12 @@ let T = (e) => {
                 }
             }, [n, m, f, _, O]),
             (0, r.jsxs)('div', {
-                className: j.shop,
+                className: T.shop,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: i()(j.content, j.mainContent),
+                        className: i()(T.content, T.mainContent),
                         children: [
-                            (0, r.jsx)(T, {
+                            (0, r.jsx)(j, {
                                 handleTransition: o,
                                 numVisibleItems: m,
                                 isFetchingCategories: g,
@@ -221,14 +221,14 @@ let T = (e) => {
                             a !== S.AW.CATALOG &&
                                 m >= f &&
                                 (0, r.jsxs)('div', {
-                                    className: j.endOfFeed,
+                                    className: T.endOfFeed,
                                     children: [
                                         (0, r.jsx)(s.X6q, {
                                             variant: 'heading-md/semibold',
                                             children: y.intl.string(y.t.Yr70c3)
                                         }),
                                         (0, r.jsx)(s.zxk, {
-                                            className: j.endOfFeedButton,
+                                            className: T.endOfFeedButton,
                                             onClick: () => {
                                                 (o('shop all button', void 0, !0),
                                                     c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {

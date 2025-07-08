@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -12,17 +12,17 @@ var i = n(481060),
     p = n(981631),
     m = n(388032),
     f = n(861477);
-function g(e) {
-    let { compact: t, message: n, channel: g } = e,
-        _ = (0, c.ZP)(n),
+function _(e) {
+    let { compact: t, message: n, channel: _ } = e,
+        g = (0, c.ZP)(n),
         h = (0, u.l)({
             user: n.author,
             channelId: n.channel_id,
-            guildId: g.guild_id,
+            guildId: _.guild_id,
             messageId: n.id
-        })(_),
+        })(g),
         b = (0, a.j)('HDStreamingUpgradedMessage'),
-        E = () => (0, o.k)(g, 'HDStreamingUpgradedMessage'),
+        E = () => (0, o.k)(_, 'HDStreamingUpgradedMessage'),
         y = b ? E : s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -33,7 +33,7 @@ function g(e) {
                     timestamp: n.timestamp,
                     compact: t,
                     children: m.intl.format(m.t['u0qJ4+'], {
-                        actorName: _.nick,
+                        actorName: g.nick,
                         actorHook: h
                     })
                 })

@@ -25,10 +25,10 @@ function E(e) {
         });
     (0, u.A)();
     let y = (0, c.F)('CollectiblesBrowse'),
-        [j, T] = l.useState(y);
+        [T, j] = l.useState(y);
     l.useEffect(() => {
-        y || T(!1);
-    }, [y, T]);
+        y || j(!1);
+    }, [y, j]);
     let P = (0, u.S)((e) => e.hasFilters());
     return (0, r.jsx)('div', {
         className: i()(O.pageWrapper, { [O.pageWrapperFilter]: y }),
@@ -54,13 +54,13 @@ function E(e) {
                                         children: [
                                             (0, r.jsx)(f.ZP, {}),
                                             (0, r.jsx)(a.zxk, {
-                                                onClick: () => T((e) => !e),
+                                                onClick: () => j((e) => !e),
                                                 look: a.iLD.OUTLINED,
                                                 color: a.Ttl.PRIMARY,
                                                 children: (0, r.jsxs)('div', {
                                                     className: O.filterButton,
                                                     children: [
-                                                        C.intl.string(j ? C.t.fYtm6e : C.t.TeTYEx),
+                                                        C.intl.string(T ? C.t.fYtm6e : C.t.TeTYEx),
                                                         (0, r.jsx)(a.gXV, {
                                                             size: 'xs',
                                                             color: 'var(--button-outline-primary-text)'
@@ -104,8 +104,8 @@ function E(e) {
                                 })
                     ]
                 }),
-                j &&
-                    (0, r.jsx)('aside', {
+                T &&
+                    (0, r.jsx)(a.Ttm, {
                         className: O.filterBar,
                         children: (0, r.jsx)(g.Z, {})
                     })

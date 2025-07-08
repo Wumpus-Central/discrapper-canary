@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(387188),
     m = n(466794),
     f = n(659215),
-    g = n(222677),
-    _ = n(995774),
+    _ = n(222677),
+    g = n(995774),
     h = n(931651),
     b = n(594174),
     E = n(630388),
     y = n(74538),
-    x = n(566006),
-    C = n(981631),
+    C = n(566006),
+    x = n(981631),
     v = n(185923),
     O = n(474936),
     j = n(388032),
@@ -57,20 +57,20 @@ class P extends i.Component {
     render() {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
-            c = t.state === C.yb.SENDING,
-            f = e === x.O.BURST;
-        if (c || (0, E.yE)(t.flags, C.iLy.EPHEMERAL)) return null;
-        let g = b.default.getCurrentUser(),
-            _ = (0, y.I5)(g),
+            c = t.state === x.yb.SENDING,
+            f = e === C.O.BURST;
+        if (c || (0, E.yE)(t.flags, x.iLy.EPHEMERAL)) return null;
+        let _ = b.default.getCurrentUser(),
+            g = (0, y.I5)(_),
             h = f ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
-        !_ && f && (h = (0, r.jsx)(m.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
+        !g && f && (h = (0, r.jsx)(m.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
         let O = l ? S : I,
             T = {
                 size: 'sm',
                 color: 'currentColor',
                 className: O.icon
             };
-        return t.type === C.uaV.EMOJI_ADDED && 0 === t.reactions.length
+        return t.type === x.uaV.EMOJI_ADDED && 0 === t.reactions.length
             ? (0, r.jsx)(p.e, {
                   message: t,
                   className: a()(O.reactionBtn, n)
@@ -129,7 +129,7 @@ class P extends i.Component {
             T(this, 'onAddReaction', (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: r, isForumToolbar: i } = this.props;
-                (0, g.rU)(n.id, r.id, (0, _.g1)(e), i ? g.TW.FORUM_TOOLBAR : g.TW.MESSAGE_INLINE_BUTTON, { burst: t });
+                (0, _.rU)(n.id, r.id, (0, g.g1)(e), i ? _.TW.FORUM_TOOLBAR : _.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
             T(this, 'handleReactionPickerToggle', () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
@@ -138,14 +138,14 @@ class P extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = b.default.getCurrentUser();
-                (t !== x.O.BURST ||
+                (t !== C.O.BURST ||
                     (0, y.I5)(r) ||
                     (0, f.m)({
                         analytics: {
                             type: O.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
-                            section: (0, _.s4)(n),
-                            object: C.qAy.INLINE_REACTION_PICKER_UPSELL
+                            page: null != n.getGuildId() ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
+                            section: (0, g.s4)(n),
+                            object: x.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle());
@@ -155,11 +155,11 @@ class P extends i.Component {
                     { type: n, channel: i, message: l } = this.props,
                     a = N(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === x.O.BURST && {
+                        n === C.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != i.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
-                            section: (0, _.s4)(i),
-                            object: C.qAy.REACTION_RAIL
+                            page: null != i.getGuildId() ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
+                            section: (0, g.s4)(i),
+                            object: x.qAy.REACTION_RAIL
                         }
                     ),
                     o = (0, r.jsx)(h.$, {

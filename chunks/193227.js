@@ -22,8 +22,8 @@ var r = n(255367),
     S = n(258939),
     x = n(81136),
     y = n(619899),
-    j = n(302800),
-    T = n(215023),
+    T = n(302800),
+    j = n(215023),
     P = n(981631),
     L = n(484920);
 function I(e) {
@@ -56,7 +56,7 @@ function I(e) {
                                           category: o,
                                           product: e,
                                           user: i,
-                                          tab: T.AW.CATALOG
+                                          tab: j.AW.CATALOG
                                       },
                                       e.skuId
                                   )
@@ -138,7 +138,7 @@ function k(e) {
 function N(e) {
     let { category: t, initialItemCardRef: n, isFullScreen: o } = e,
         [i, a] = l.useState(!1),
-        s = (0, j.M7)(t.skuId),
+        s = (0, T.M7)(t.skuId),
         u = (0, c.O)(
             (e) => {
                 a(e && null != s);
@@ -176,14 +176,14 @@ function B(e) {
         _ = null != (t = null == h ? void 0 : h.sessionId) ? t : '',
         { noCache: O, includeUnpublished: v } = (0, x.Z)(),
         y = l.useMemo(() => {
-            let e = (d - 1) * T.kN;
-            return n.slice(e, e + T.kN);
+            let e = (d - 1) * j.kN;
+            return n.slice(e, e + j.kN);
         }, [n, d]);
     (l.useEffect(() => {
         (0, m.n)({
             sessionId: _,
             checkpoint: m.a.SHOP_MOUNTED,
-            tab: T.AW.CATALOG,
+            tab: j.AW.CATALOG,
             isFullScreen: c,
             unpublishedCategoriesShown: v,
             cacheDisabled: O
@@ -195,18 +195,18 @@ function B(e) {
                 (0, m.n)({
                     sessionId: _,
                     checkpoint: m.a.SHOP_RENDERED,
-                    tab: T.AW.CATALOG,
+                    tab: j.AW.CATALOG,
                     isFullScreen: c,
                     unpublishedCategoriesShown: v,
                     cacheDisabled: O
                 });
         }, [_, c, v, O, b, y.length]));
-    let j = l.useRef(null),
+    let T = l.useRef(null),
         I = (0, a.e7)([u.Z], () => u.Z.getLayers().includes(P.S9g.COLLECTIBLES_SHOP));
     (0, C.Kp)({
         isFetchingCategories: b,
         isLayer: I,
-        initialItemCardRef: j
+        initialItemCardRef: T
     });
     let k = (0, g.F)('CollectiblesBrowse');
     return b
@@ -229,7 +229,7 @@ function B(e) {
                                       newValue: { categoryPosition: t },
                                       children: (0, r.jsx)(N, {
                                           category: e,
-                                          initialItemCardRef: j,
+                                          initialItemCardRef: T,
                                           isFullScreen: c
                                       })
                                   })
@@ -242,7 +242,7 @@ function B(e) {
                       children: (0, r.jsx)(s.DsT, {
                           currentPage: d,
                           totalCount: n.length,
-                          pageSize: T.kN,
+                          pageSize: j.kN,
                           onPageChange: f,
                           disablePaginationGap: !0
                       })

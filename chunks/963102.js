@@ -22,8 +22,8 @@ var r = n(255367),
     S = n(870289),
     x = n(534517),
     y = n(304742),
-    j = n(554067),
-    T = n(215023),
+    T = n(554067),
+    j = n(215023),
     P = n(981631),
     L = n(388032),
     I = n(774457);
@@ -113,21 +113,21 @@ function B(e) {
         w = (0, x.S)('collectibles_shop_header_bar'),
         Z = [
             {
-                tab: T.AW.HOME,
+                tab: j.AW.HOME,
                 displayText: L.intl.string(L.t.ijDDw8)
             },
             {
-                tab: T.AW.CATALOG,
+                tab: j.AW.CATALOG,
                 displayText: w ? L.intl.string(L.t.Ah5sJi) : L.intl.string(L.t.xFcotb)
             }
         ];
     R &&
         Z.push({
-            tab: T.AW.ORBS,
+            tab: j.AW.ORBS,
             displayText: L.intl.string(L.t.EBYkzs)
         });
     let F = n ? v.DR : o,
-        D = f === T.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
+        D = f === j.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
         M = l.useCallback(() => {
             (t && (F(), (0, u.Ou)()),
                 (0, m.Y)({
@@ -142,13 +142,14 @@ function B(e) {
         theme: y,
         children: (e) =>
             (0, r.jsxs)(h.Z, {
+                disableDoubleClick: !0,
                 className: i()(e, I.headerBar, { [I.fullscreenHeaderBar]: t }),
                 innerClassname: R ? I.headerBarInner : void 0,
                 toolbar: t || !A ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsxs)(c.P3F, {
                         className: I.shopHomeLink,
-                        onClick: () => g(T.AW.HOME),
+                        onClick: () => g(j.AW.HOME),
                         'aria-label': L.intl.string(L.t.pWG4zc) + ' home',
                         children: [(0, r.jsx)(E.Z, { className: I.discordLogo }), (0, r.jsx)(h.Z.Title, { children: L.intl.string(L.t.pWG4zc) })]
                     }),
@@ -156,12 +157,12 @@ function B(e) {
                         className: I.tabs,
                         children: Z.map((e) => {
                             let { tab: t, displayText: n } = e;
-                            return t === T.AW.CATALOG && w
+                            return t === j.AW.CATALOG && w
                                 ? (0, r.jsx)(
                                       N,
                                       {
                                           tab: t,
-                                          selected: (0, T.RE)(f) || f === t,
+                                          selected: (0, j.RE)(f) || f === t,
                                           displayText: n,
                                           handleTransition: g
                                       },
@@ -183,7 +184,7 @@ function B(e) {
                         (0, r.jsxs)('div', {
                             className: I.alignedRightContent,
                             children: [
-                                H && (0, r.jsx)(j.Z, {}),
+                                H && (0, r.jsx)(T.Z, {}),
                                 R &&
                                     (0, r.jsx)(C.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',

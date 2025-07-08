@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(237583),
     m = n(598077),
     f = n(63063),
-    g = n(153066),
-    _ = n(51144),
+    _ = n(153066),
+    g = n(51144),
     h = n(620662),
     b = n(994339),
     E = n(503438),
     y = n(981631),
-    x = n(616922),
-    C = n(388032),
+    C = n(616922),
+    x = n(388032),
     v = n(638128);
 function O(e, t, n) {
     return (
@@ -91,7 +91,7 @@ function S(e) {
               children: (e) => {
                   var i;
                   return (0, r.jsx)(o.ua7, {
-                      text: null != (i = t.nick) ? i : _.ZP.getName(t.user),
+                      text: null != (i = t.nick) ? i : g.ZP.getName(t.user),
                       children: (i) =>
                           (0, r.jsx)(
                               o.P3F,
@@ -162,20 +162,20 @@ class T extends i.PureComponent {
     }
     getHelpdeskArticleURL() {
         let { partyId: e } = this.props;
-        return null != e && (0, x.Ps)(e) ? y.BhN.SPOTIFY_CONNECTION : y.BhN.RICH_PRESENCE_INTRODUCTION;
+        return null != e && (0, C.Ps)(e) ? y.BhN.SPOTIFY_CONNECTION : y.BhN.RICH_PRESENCE_INTRODUCTION;
     }
     renderHeaderText() {
         let { activityActionType: e, name: t } = this.props;
         switch (e) {
             case y.mFx.LISTEN:
-                return C.intl.formatToPlainString(C.t['/8czHx'], { name: t });
+                return x.intl.formatToPlainString(x.t['/8czHx'], { name: t });
             case y.mFx.WATCH:
-                return C.intl.formatToPlainString(C.t.BBJXVl, { name: t });
+                return x.intl.formatToPlainString(x.t.BBJXVl, { name: t });
             case y.mFx.JOIN:
-                return C.intl.string(C.t['hC/Ze3']);
+                return x.intl.string(x.t['hC/Ze3']);
             case y.mFx.JOIN_REQUEST:
             default:
-                return C.intl.string(C.t.Ckxb6u);
+                return x.intl.string(x.t.Ckxb6u);
         }
     }
     renderPartyStatus() {
@@ -184,13 +184,13 @@ class T extends i.PureComponent {
         if (this.isDeadInvite())
             switch (e) {
                 case y.mFx.LISTEN:
-                    return C.intl.string(C.t['84qx9v']);
+                    return x.intl.string(x.t['84qx9v']);
                 case y.mFx.WATCH:
-                    return C.intl.string(C.t.B9kbnZ);
+                    return x.intl.string(x.t.B9kbnZ);
                 case y.mFx.JOIN:
                 case y.mFx.JOIN_REQUEST:
                 default:
-                    return C.intl.string(C.t['2Gbof3']);
+                    return x.intl.string(x.t['2Gbof3']);
             }
         return !l || i || this.isEmbeddedActivityApplication() || e !== y.mFx.JOIN
             ? this.isActionType(y.mFx.LISTEN) || this.isActionType(y.mFx.WATCH)
@@ -212,7 +212,7 @@ class T extends i.PureComponent {
                               'div',
                               {
                                   className: v.state,
-                                  children: C.intl.format(C.t.uU9le3, {
+                                  children: x.intl.format(x.t.uU9le3, {
                                       artists: s.state,
                                       artistsHook: (e, t) =>
                                           null != s.state
@@ -233,24 +233,24 @@ class T extends i.PureComponent {
                           )
                       ]
                     : this.isActionType(y.mFx.LISTEN)
-                      ? C.intl.string(C.t.gXYoq6)
-                      : C.intl.string(C.t.eyKDl5)
+                      ? x.intl.string(x.t.gXYoq6)
+                      : x.intl.string(x.t.eyKDl5)
                 : this.isActionType(y.mFx.JOIN_REQUEST)
                   ? this.isPartyFull()
-                      ? C.intl.string(C.t.jfrMtr)
+                      ? x.intl.string(x.t.jfrMtr)
                       : this.hasPartySize() && 0 !== d
-                        ? C.intl.formatToPlainString(C.t.XWapnZ, { number: d - c })
+                        ? x.intl.formatToPlainString(x.t.XWapnZ, { number: d - c })
                         : null
                   : this.isInParty()
-                    ? C.intl.string(C.t.KC26NT)
+                    ? x.intl.string(x.t.KC26NT)
                     : t || n || i || this.isEmbeddedActivityApplication()
                       ? this.isPartyFull()
-                          ? C.intl.string(C.t.jfrMtr)
+                          ? x.intl.string(x.t.jfrMtr)
                           : this.hasPartySize() && 0 !== d
-                            ? C.intl.formatToPlainString(C.t.XWapnZ, { number: d - c })
+                            ? x.intl.formatToPlainString(x.t.XWapnZ, { number: d - c })
                             : null
-                      : C.intl.formatToPlainString(C.t.SqJBnJ, { name: a })
-            : C.intl.string(C.t.c3EWuL);
+                      : x.intl.formatToPlainString(x.t.SqJBnJ, { name: a })
+            : x.intl.string(x.t.c3EWuL);
     }
     renderActionButton() {
         let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: i, partyId: l, activity: a, message: s, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
@@ -261,7 +261,7 @@ class T extends i.PureComponent {
             p = null != u ? u(d) : null;
         return null != p
             ? p
-            : !this.isDeadInvite() && this.isActionType(y.mFx.LISTEN) && null != l && null != s && null != a && (0, x.Ps)(l)
+            : !this.isDeadInvite() && this.isActionType(y.mFx.LISTEN) && null != l && null != s && null != a && (0, C.Ps)(l)
               ? c(
                     I(j({}, d), {
                         activity: a,
@@ -277,31 +277,31 @@ class T extends i.PureComponent {
                             t || !e || this.isDeadInvite() || this.isEmbeddedActivityApplication()
                                 ? this.canJoin()
                                     ? {
-                                          children: C.intl.string(C.t.VJlc0d),
+                                          children: x.intl.string(x.t.VJlc0d),
                                           onClick: this.handleJoin
                                       }
                                     : this.canSync()
                                       ? {
-                                            children: C.intl.string(C.t.VJlc0d),
+                                            children: x.intl.string(x.t.VJlc0d),
                                             onClick: this.handleSync
                                         }
                                       : this.canSendInvite()
                                         ? {
-                                              children: C.intl.string(C.t['hC/Ze3']),
+                                              children: x.intl.string(x.t['hC/Ze3']),
                                               onClick: this.handleInvite,
                                               disabled: i
                                           }
                                         : this.isInParty()
                                           ? {
-                                                children: C.intl.string(C.t.KC26NT),
+                                                children: x.intl.string(x.t.KC26NT),
                                                 disabled: !0
                                             }
                                           : {
-                                                children: this.isActionType(y.mFx.JOIN_REQUEST) ? C.intl.string(C.t['hC/Ze3']) : C.intl.string(C.t.VJlc0d),
+                                                children: this.isActionType(y.mFx.JOIN_REQUEST) ? x.intl.string(x.t['hC/Ze3']) : x.intl.string(x.t.VJlc0d),
                                                 disabled: !0
                                             }
                                 : {
-                                      children: C.intl.string(C.t.gUZonZ),
+                                      children: x.intl.string(x.t.gUZonZ),
                                       onClick: this.handleDownloadApp
                                   }
                         ),
@@ -355,7 +355,7 @@ class T extends i.PureComponent {
             : (u = (0, r.jsx)('img', {
                   alt: '',
                   src: t,
-                  className: (0, g.l)(v, 'artwork', this.getActionableMode())
+                  className: (0, _.l)(v, 'artwork', this.getActionableMode())
               }));
         let d = null != i && null != u && null != i.assets && null != i.assets.large_text && '' !== i.assets.large_text && !s && (0, E.Z)(i) ? i.assets.large_text : null,
             p =
@@ -379,7 +379,7 @@ class T extends i.PureComponent {
                 (0, r.jsx)('div', {
                     className: v.coverImageWrapper,
                     children: (0, r.jsx)('div', {
-                        className: a()((0, g.l)(v, 'coverImage', this.getActionableMode()), null != u ? v.blurred : null),
+                        className: a()((0, _.l)(v, 'coverImage', this.getActionableMode()), null != u ? v.blurred : null),
                         style: { backgroundImage: null != t ? "url('".concat(t, "')") : void 0 }
                     })
                 }),

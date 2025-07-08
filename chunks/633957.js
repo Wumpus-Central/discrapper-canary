@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(317381),
     m = n(638880),
     f = n(122613),
-    g = n(527805),
-    _ = n(100527),
+    _ = n(527805),
+    g = n(100527),
     h = n(906732),
     b = n(895924),
     E = n(311819),
     y = n(758199),
-    x = n(943762),
-    C = n(914498),
+    C = n(943762),
+    x = n(914498),
     v = n(515344),
     O = n(429551),
     j = n(973616),
@@ -60,7 +60,7 @@ let B = i.memo(function (e) {
     var t, n, l, s;
     let d,
         { application: O, channelId: w, guildId: R } = e,
-        { analyticsLocations: B } = (0, h.ZP)(_.Z.ACTIVITY_INSTANCE_EMBED),
+        { analyticsLocations: B } = (0, h.ZP)(g.Z.ACTIVITY_INSTANCE_EMBED),
         G = (0, u.O)(),
         H = (0, o.e7)([S.Z], () => S.Z.getChannel(w), [w]),
         V = (null == H || null == (t = H.isThread) ? void 0 : t.call(H)) ? (null == H ? void 0 : H.parent_id) : w,
@@ -104,7 +104,7 @@ let B = i.memo(function (e) {
             let e = new j.ZP(O);
             return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = D.wT), e);
         }, [O]),
-        ee = (0, g.s5)({
+        ee = (0, _.s5)({
             userId: z,
             channelId: w,
             application: $
@@ -161,11 +161,11 @@ let B = i.memo(function (e) {
     let ec = N.default.getCurrentUser(),
         eu = q.length,
         ed = null != (s = null == Q || null == (n = Q.timestamps) ? void 0 : n.start) ? s : null == Q ? void 0 : Q.created_at,
-        ep = (0, x.r)(Q),
+        ep = (0, C.r)(Q),
         em = [
             {
                 label: et ? M.intl.string(M.t.cnBQPD) : M.intl.string(M.t.VJlc0d),
-                trackingArea: C.j_.PLAY,
+                trackingArea: x.j_.PLAY,
                 onClick: el,
                 disabledReason: d,
                 submitting: ei
@@ -230,7 +230,7 @@ let B = i.memo(function (e) {
                                   ]
                               }),
                           eu > 0 &&
-                              (0, r.jsx)(x.K, {
+                              (0, r.jsx)(C.K, {
                                   activityUsers: q,
                                   guildId: R,
                                   activityText: ep.text
@@ -242,7 +242,7 @@ let B = i.memo(function (e) {
         onClickContent: eo,
         trackingConfig: {
             id: O.id,
-            linkType: C.Un.ACTIVITY_INSTANCE
+            linkType: x.Un.ACTIVITY_INSTANCE
         }
     });
 });

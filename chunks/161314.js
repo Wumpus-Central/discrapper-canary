@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(213609),
     m = n(565138),
     f = n(267101),
-    g = n(336197),
-    _ = n(661824),
+    _ = n(336197),
+    g = n(661824),
     h = n(430824),
     b = n(626135),
     E = n(76535),
     y = n(866104),
-    x = n(886176),
-    C = n(981631),
+    C = n(886176),
+    x = n(981631),
     v = n(388032),
     O = n(24665);
 function j(e) {
@@ -30,7 +30,7 @@ function j(e) {
         T = (0, f.ue)(n, { publishedOnly: !0 }),
         N = i.useCallback(async () => {
             (b.default.track(
-                C.rMx.GUILD_SHOP_EMBED_CLICKED,
+                x.rMx.GUILD_SHOP_EMBED_CLICKED,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,7 +57,7 @@ function j(e) {
                     return e;
                 })({}, (0, d.hH)(n))
             ),
-                await (0, g.Z)(C.Z5c.SERVER_SHOP(n)));
+                await (0, _.Z)(x.Z5c.SERVER_SHOP(n)));
         }, [n]);
     (0, p.Z)(
         {
@@ -82,7 +82,7 @@ function j(e) {
                     (0, r.jsxs)('div', {
                         className: O.serverShopLabel,
                         children: [
-                            (0, r.jsx)(x.Z, {
+                            (0, r.jsx)(C.Z, {
                                 height: '16px',
                                 width: '16px',
                                 color: s.Z.INTERACTIVE_NORMAL
@@ -109,7 +109,7 @@ function j(e) {
                         children: I.description
                     }),
                     (0, r.jsx)(u.LZC, { size: 16 }),
-                    (0, r.jsx)(_.Z, {}),
+                    (0, r.jsx)(g.Z, {}),
                     (0, r.jsx)(u.LZC, { size: 16 }),
                     (0, r.jsxs)('div', {
                         className: O.guildShopEmbedFooter,
@@ -141,7 +141,7 @@ function j(e) {
                                 children: (0, r.jsxs)('div', {
                                     className: O.guildShopEmbedCtaContent,
                                     children: [
-                                        (0, r.jsx)(x.Z, {
+                                        (0, r.jsx)(C.Z, {
                                             height: '18px',
                                             width: '18px'
                                         }),

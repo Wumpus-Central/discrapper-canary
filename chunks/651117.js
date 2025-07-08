@@ -25,8 +25,6 @@ e.exports = {
     containerBackground: 'containerBackground_c880e8',
     responsiveContainer: 'responsiveContainer_c880e8',
     heroHeadingV2Container: 'heroHeadingV2Container_c880e8',
-    heroHeadingV2Art: 'heroHeadingV2Art_c880e8',
-    heroHeadingV2ArtContainer: 'heroHeadingV2ArtContainer_c880e8',
     heroHeaderSideGradient: 'heroHeaderSideGradient_c880e8',
     heroHeaderBackgroundStars: 'heroHeaderBackgroundStars_c880e8'
 };

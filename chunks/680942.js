@@ -20,8 +20,8 @@ let C = (e) => {
         { analyticsLocations: S } = (0, a.ZP)(),
         x = l.useRef(null),
         y = (0, p.hv)('CollectiblesShopGiftButton'),
-        j = (0, u.sp)(),
-        T = (0, f.Z)();
+        T = (0, u.sp)(),
+        j = (0, f.Z)();
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.ua7, {
@@ -68,14 +68,14 @@ let C = (e) => {
                               onClick: (e) => {
                                   (e.stopPropagation(),
                                       c.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
+                                          collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
                                           sku_id: t.skuId,
-                                          page_section: null == j ? void 0 : j.pageSection,
-                                          page_category: null == j ? void 0 : j.pageCategory,
+                                          page_section: null == T ? void 0 : T.pageSection,
+                                          page_category: null == T ? void 0 : T.pageCategory,
                                           tile_type: o.Z[t.type],
-                                          tile_position: String(null == j ? void 0 : j.tilePosition),
+                                          tile_position: String(null == T ? void 0 : T.tilePosition),
                                           cta_name: 'gift button',
-                                          page_type: T || 'home'
+                                          page_type: j || 'home'
                                       }),
                                       (0, s.Z)({
                                           skuId: (0, g.S)({

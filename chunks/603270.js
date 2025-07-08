@@ -18,14 +18,14 @@ var r = n(255367),
     p = n(812206),
     m = n(307643),
     f = n(171246),
-    g = n(263519),
-    _ = n(592125),
+    _ = n(263519),
+    g = n(592125),
     h = n(509545),
     b = n(238),
     E = n(55563),
     y = n(551428),
-    x = n(626135),
-    C = n(572004),
+    C = n(626135),
+    x = n(572004),
     v = n(601911),
     O = n(504211),
     j = n(970321),
@@ -66,13 +66,13 @@ let A = (0, o.Kb)([E.Z, y.Z, h.Z], {
 function Z(e) {
     let { appId: t, message: l } = e,
         a = (0, j.R)(t),
-        [u, d, f, g, h, E, y] = (0, o.Wu)(
-            [p.Z, b.Z, _.Z],
+        [u, d, f, _, h, E, y] = (0, o.Wu)(
+            [p.Z, b.Z, g.Z],
             () => {
                 var e;
                 let n = p.Z.getApplication(t),
                     r = null != n ? (0, v.y)(n, 45) : void 0,
-                    i = null == (e = _.Z.getBasicChannel(l.channel_id)) ? void 0 : e.guild_id;
+                    i = null == (e = g.Z.getBasicChannel(l.channel_id)) ? void 0 : e.guild_id;
                 return [n, p.Z.isFetchingApplication(t), p.Z.didFetchingApplicationFail(t), b.Z.getStoreLayout(t), b.Z.getFetchStatus(t), i, r];
             },
             [t, l.channel_id]
@@ -80,21 +80,21 @@ function Z(e) {
     i.useEffect(() => {
         (h === b.N.NONE && (0, c.k)(t), null != u || d || f || (0, m.UM)(t));
     }, [u, t, f, d, h]);
-    let C = g.subscriptions.length,
-        I = g.otps.length,
+    let x = _.subscriptions.length,
+        I = _.otps.length,
         A = i.useMemo(
             () =>
-                C > 0 && I > 0
+                x > 0 && I > 0
                     ? N.intl.formatToPlainString(N.t['jA648/'], {
-                          subCount: C,
+                          subCount: x,
                           itemCount: I
                       })
-                    : C > 0
-                      ? N.intl.formatToPlainString(N.t.GSfibG, { count: C })
+                    : x > 0
+                      ? N.intl.formatToPlainString(N.t.GSfibG, { count: x })
                       : I > 0
                         ? N.intl.formatToPlainString(N.t.j7Go5O, { count: I })
                         : N.intl.string(N.t.rMA98v),
-            [I, C]
+            [I, x]
         );
     if (!a || null == u) return null;
     let w = () => {
@@ -120,7 +120,7 @@ function Z(e) {
         iconSrc: y,
         onIconClick: () => {
             (w(),
-                x.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                C.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
                     area: 'app_icon'
                 }));
@@ -128,7 +128,7 @@ function Z(e) {
         children: (0, r.jsx)(s.zxk, {
             onClick: () => {
                 (w(),
-                    x.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    C.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'open_store_button'
                     }));
@@ -162,16 +162,16 @@ function R(e) {
         })(c, a),
         { data: E } = (0, d.IX)(null == m ? void 0 : m.applicationId),
         y = (0, o.e7)(
-            [_.Z],
+            [g.Z],
             () => {
                 var e;
-                return null == (e = _.Z.getBasicChannel(u.channel_id)) ? void 0 : e.guild_id;
+                return null == (e = g.Z.getBasicChannel(u.channel_id)) ? void 0 : e.guild_id;
             },
             [u]
         ),
-        C = i.useMemo(() => (null != E ? (0, v.y)(E, 45) : void 0), [E]),
+        x = i.useMemo(() => (null != E ? (0, v.y)(E, 45) : void 0), [E]),
         Z = (0, j.R)(null != (l = null == E ? void 0 : E.id) ? l : ''),
-        { openModal: R, subscriptionPurchaseButtonState: L } = (0, g.Z)({
+        { openModal: R, subscriptionPurchaseButtonState: L } = (0, _.Z)({
             skuId: c,
             initialSubscribeForGuild: y
         });
@@ -249,7 +249,7 @@ function R(e) {
               : t.trim();
     '' === B && (B = void 0);
     let G = () => {
-        x.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+        C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
             application_id: E.id,
             sku_id: m.id,
             area: 'purchase_button'
@@ -263,10 +263,10 @@ function R(e) {
         onLinkCopy: () => {
             (0, O.X)(E.id, O.B.SKU_EMBED, c);
         },
-        iconSrc: C,
+        iconSrc: x,
         onIconClick: () => {
             (U(),
-                x.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                     application_id: E.id,
                     sku_id: m.id,
                     area: 'app_icon'
@@ -279,7 +279,7 @@ function R(e) {
                     color: s.Ttl.CUSTOM,
                     onClick: () => {
                         (F(),
-                            x.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                            C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                 application_id: E.id,
                                 sku_id: m.id,
                                 area: 'view_details'
@@ -339,13 +339,13 @@ function k(e) {
                             })
                         ]
                     }),
-                    C.wS &&
+                    x.wS &&
                         (0, r.jsx)(s.zxk, {
                             look: s.iLD.BLANK,
                             size: s.PhG.ICON,
                             'aria-label': N.intl.string(N.t.WqhZsr),
                             onClick: () => {
-                                (0, C.JG)(l, () => {
+                                (0, x.JG)(l, () => {
                                     ((0, s.showToast)((0, s.createToast)(N.intl.string(N.t['L/PwZW']), s.ToastType.SUCCESS)), c());
                                 });
                             },

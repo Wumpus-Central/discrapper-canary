@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(442837),
     m = n(692547),
     f = n(481060),
-    g = n(256638),
-    _ = n(385499),
+    _ = n(256638),
+    g = n(385499),
     h = n(528011),
     b = n(533244),
     E = n(825829),
     y = n(226192),
-    x = n(36459),
-    C = n(434404),
+    C = n(36459),
+    x = n(434404),
     v = n(518950),
     O = n(670188),
     j = n(592125),
@@ -167,7 +167,7 @@ function G(e) {
             guildId: o,
             size: 12
         }),
-        g = i.useRef(null);
+        _ = i.useRef(null);
     return (0, r.jsx)(z, {
         compact: l,
         header: (0, r.jsxs)(i.Fragment, {
@@ -199,7 +199,7 @@ function G(e) {
                                     children: R.intl.string(R.t.qlFrXV)
                                 }),
                                 (0, r.jsx)(O.Z, {
-                                    targetElementRef: g,
+                                    targetElementRef: _,
                                     user: a,
                                     guildId: o,
                                     channelId: n.channel_id,
@@ -210,7 +210,7 @@ function G(e) {
                                             D(
                                                 L(
                                                     {
-                                                        innerRef: g,
+                                                        innerRef: _,
                                                         className: k.alertsEnabledSubHeaderAvatarUsername
                                                     },
                                                     e
@@ -259,16 +259,16 @@ function G(e) {
 function H(e) {
     var t;
     let { message: n, compact: l } = e,
-        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: g, resolvedReason: _ } = (0, E.FL)(n),
-        x = (0, p.e7)([j.Z], () => j.Z.getChannel(n.channel_id), [n.channel_id]),
-        C = null != (t = null == x ? void 0 : x.guild_id) ? t : null,
-        { shouldShowIncidentActions: v } = (0, h.mI)(C),
+        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: _, resolvedReason: g } = (0, E.FL)(n),
+        C = (0, p.e7)([j.Z], () => j.Z.getChannel(n.channel_id), [n.channel_id]),
+        x = null != (t = null == C ? void 0 : C.guild_id) ? t : null,
+        { shouldShowIncidentActions: v } = (0, h.mI)(x),
         O = (0, N.sR)(n.author.id, n.channel_id),
         I = i.useCallback(() => {
-            let e = null == x ? void 0 : x.guild_id;
+            let e = null == C ? void 0 : C.guild_id;
             null != e && (0, y.kW)(n.id, e);
-        }, [n.id, x]),
-        S = g === d.$.DM_RAID,
+        }, [n.id, C]),
+        S = _ === d.$.DM_RAID,
         T = S ? f.P4T : f.b6m;
     return (0, r.jsx)(z, {
         compact: l,
@@ -361,7 +361,7 @@ function H(e) {
                               children: (0, r.jsx)(f.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-link',
-                                  children: (0, E.ge)(_)
+                                  children: (0, E.ge)(g)
                               })
                           })
                       })
@@ -412,8 +412,8 @@ function V(e) {
                     onClick: function () {
                         null != a &&
                             null != c &&
-                            (0, x.UE)(a, c, () => {
-                                ((0, g.c)(u), (0, x.T9)(a));
+                            (0, C.UE)(a, c, () => {
+                                ((0, _.c)(u), (0, C.T9)(a));
                             });
                     },
                     color: f.zxk.Colors.LINK,
@@ -432,7 +432,7 @@ function V(e) {
                 (0, r.jsx)(M, {}),
                 (0, r.jsx)(f.zxk, {
                     onClick: function () {
-                        null != a && C.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
+                        null != a && x.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: f.zxk.Colors.LINK,
                     look: f.zxk.Looks.LINK,
@@ -517,7 +517,7 @@ function W(e) {
                                     className: k.username,
                                     children: R.intl.string(R.t.hG1StL)
                                 }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(g.Z, {
                                     type: Z.Hb.SYSTEM_DM,
                                     className: k.systemTag
                                 }),

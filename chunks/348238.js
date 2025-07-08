@@ -30,14 +30,14 @@ var r = n(255367),
     p = n(235894),
     m = n(675478),
     f = n(592125),
-    g = n(323873),
-    _ = n(375954),
+    _ = n(323873),
+    g = n(375954),
     h = n(594174),
     b = n(585483),
     E = n(5967),
     y = n(630388),
-    x = n(358085),
-    C = n(51144),
+    C = n(358085),
+    x = n(51144),
     v = n(91047),
     O = n(50284),
     j = n(804063),
@@ -53,7 +53,7 @@ function T(e, t, n) {
             let i = h.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let l = '@'.concat(C.ZP.getUserTag(i, { decoration: 'never' })),
+            let l = '@'.concat(x.ZP.getUserTag(i, { decoration: 'never' })),
                 a = '<@'.concat(e, '>');
             (b.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
                 plainText: l,
@@ -105,15 +105,15 @@ function D(e, t, a, o) {
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!x.isPlatformEmbedded) {
+            if (!C.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
             let i = f.Z.getChannel(c),
-                s = _.Z.getMessage(c, u),
-                d = g.Z.isEditing(c, u);
+                s = g.Z.getMessage(c, u),
+                d = _.Z.isEditing(c, u);
             null == i ||
                 null == s ||
                 d ||
@@ -235,8 +235,8 @@ function G(e) {
     let { groupId: r, message: l, defaultValue: a, popouts: o } = e,
         { canShowReactionsOnMessageHover: s } = c.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         f = l.author.id,
-        g = ''.concat(r, ':').concat(f),
-        _ = i.useRef(a),
+        _ = ''.concat(r, ':').concat(f),
+        g = i.useRef(a),
         h =
             ((t = l),
             (n = o),
@@ -262,21 +262,21 @@ function G(e) {
                 [t, n]
             )),
         [E, y] = i.useState(a);
-    _.current = E || _.current;
-    let x = i.useCallback(
+    g.current = E || g.current;
+    let C = i.useCallback(
             (e) => {
-                (s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, g, !0), h(e), y(!0)));
+                (s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, _, !0), h(e), y(!0)));
             },
-            [E, g, s, h]
+            [E, _, s, h]
         ),
-        C = i.useCallback(() => {
-            (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, g, !1), y(!1));
-        }, [g]);
+        x = i.useCallback(() => {
+            (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, _, !1), y(!1));
+        }, [_]);
     return {
-        hasHovered: _.current,
+        hasHovered: g.current,
         isHovered: E,
-        handleMouseEnter: x,
-        handleMouseLeave: C
+        handleMouseEnter: C,
+        handleMouseLeave: x
     };
 }
 function H(e, t) {

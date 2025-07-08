@@ -226,15 +226,22 @@ async function j(e) {
         paymentMethodId: n
     };
 }
-async function U(e) {
-    let t = null != e ? { regional_payment_element_source_types: e.regionalPaymentMethods } : void 0;
+async function U() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        t = arguments.length > 1 ? arguments[1] : void 0,
+        n = null != t ? { regional_payment_element_source_types: t.regionalPaymentMethods } : void 0;
     return (
-        await l.tn.post({
-            url: v.ANM.BILLING_STRIPE_SETUP_INTENT_SECRET,
-            oldFormErrors: !0,
-            rejectWithError: !0,
-            body: t
-        })
+        await l.tn.post(
+            C(
+                {
+                    url: v.ANM.BILLING_STRIPE_SETUP_INTENT_SECRET,
+                    oldFormErrors: !0,
+                    rejectWithError: !0,
+                    body: n
+                },
+                e
+            )
+        )
     ).body.client_secret;
 }
 async function G(e) {

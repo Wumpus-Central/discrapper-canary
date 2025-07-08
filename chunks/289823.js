@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(630403);
 let m = {},
     f = 1 / 4;
-function g(e) {
+function _(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)('div', {
         style: {
@@ -29,7 +29,7 @@ function g(e) {
         })
     });
 }
-function _(e) {
+function g(e) {
     let { isTyping: t, statusCoords: n, status: i } = e,
         l = (0, c.vjg)(c.Skl.ONLINE);
     return t
@@ -39,7 +39,7 @@ function _(e) {
                   top: n.y,
                   left: n.x
               },
-              children: (0, r.jsx)(g, {
+              children: (0, r.jsx)(_, {
                   height: n.height,
                   fillColor: l
               })
@@ -115,8 +115,8 @@ let b = {
     },
     E = function (e) {
         var t,
-            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: g, style: E, className: y } = e,
-            x = (function (e, t) {
+            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: _, style: E, className: y } = e,
+            C = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -135,7 +135,7 @@ let b = {
                 }
                 return i;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: C } = c.ny6[s],
+        let { size: x } = c.ny6[s],
             {
                 statusCoords: v,
                 frontAvatarOffsetPx: O,
@@ -143,7 +143,7 @@ let b = {
                 backAvatarSizePx: I
             } = i.useMemo(() => {
                 var e;
-                let t = ''.concat(C, '-').concat(f);
+                let t = ''.concat(x, '-').concat(f);
                 return null != (e = m[t])
                     ? e
                     : (function (e, t, n) {
@@ -160,8 +160,8 @@ let b = {
                               };
                           return ((m[n] = s), s);
                       })(s, f, t);
-            }, [C, f, s]),
-            S = ((t = null != g), f ? b[s].typing : t ? b[s].status : b[s].default);
+            }, [x, f, s]),
+            S = ((t = null != _), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -189,19 +189,19 @@ let b = {
                 return e;
             })(
                 {
-                    width: C,
-                    height: C
+                    width: x,
+                    height: x
                 },
                 E
             ),
-            'aria-label': x['aria-label'],
-            'aria-hidden': x['aria-hidden'],
+            'aria-label': C['aria-label'],
+            'aria-hidden': C['aria-hidden'],
             className: a()(p.container, y),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
-                    height: C,
-                    width: C,
+                    height: x,
+                    width: x,
                     children: [
                         (0, r.jsx)('img', {
                             src: n,
@@ -219,14 +219,14 @@ let b = {
                                 src: l,
                                 size: j,
                                 isTyping: f,
-                                status: g
+                                status: _
                             })
                         })
                     ]
                 }),
-                (0, r.jsx)(_, {
+                (0, r.jsx)(g, {
                     statusCoords: v,
-                    status: g,
+                    status: _,
                     isTyping: f
                 })
             ]

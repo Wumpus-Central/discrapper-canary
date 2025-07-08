@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(131704),
     m = n(592125),
     f = n(594174),
-    g = n(823379),
-    _ = n(358595),
+    _ = n(823379),
+    g = n(358595),
     h = n(981631),
     b = n(388032),
     E = n(273254);
 function y(e) {
     let t,
-        { invite: n, message: l, currentUserId: y, onTransitionToInviteChannel: x, onAcceptInstantInvite: C } = e,
+        { invite: n, message: l, currentUserId: y, onTransitionToInviteChannel: C, onAcceptInstantInvite: x } = e,
         v = y === l.author.id,
         O = n.state === h.r2o.ACCEPTING,
         j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
@@ -27,7 +27,7 @@ function y(e) {
         S = null != j,
         T = i.useCallback(() => {
             let e = 'noop';
-            (S ? (x(), (e = 'transition')) : (C(), (e = 'accept')),
+            (S ? (C(), (e = 'transition')) : (x(), (e = 'accept')),
                 (0, s.r$)(
                     {
                         invite: n,
@@ -37,9 +37,9 @@ function y(e) {
                     },
                     I
                 ));
-        }, [n, l, I, S, x, C]);
+        }, [n, l, I, S, C, x]);
     if (null == j) {
-        if (null == n.channel) return (0, r.jsx)(_.Z, {});
+        if (null == n.channel) return (0, r.jsx)(g.Z, {});
         ((j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []));
     } else {
         t = j.recipients.reduce((e, t) => {
@@ -54,7 +54,7 @@ function y(e) {
         (N =
             t.length > 0
                 ? t
-                      .filter(g.lm)
+                      .filter(_.lm)
                       .map((e) => e.username)
                       .join(', ')
                 : b.intl.string(b.t.LJpTRE));

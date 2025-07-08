@@ -89,8 +89,8 @@ let E = s()((e) => {
             { isPurchased: S } = (0, h.L)(n),
             x = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(o)),
             { onFocus: y } = x,
-            j = O(x, ['onFocus']),
-            T = l.useCallback(
+            T = O(x, ['onFocus']),
+            j = l.useCallback(
                 (e) => {
                     (e.preventDefault(), e.stopPropagation(), (0, g.$)(t, o), y());
                 },
@@ -103,7 +103,7 @@ let E = s()((e) => {
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,
-                    C(_({}, j), {
+                    C(_({}, T), {
                         tag: 'li',
                         onMouseEnter: () => {
                             var t;
@@ -121,9 +121,9 @@ let E = s()((e) => {
                             var t;
                             (f(), null == (t = e.onMouseLeave) || t.call(e));
                         },
-                        onClick: T,
+                        onClick: j,
                         onKeyDown: (e) => {
-                            e.key === u.R8.ENTER && T(e);
+                            e.key === u.R8.ENTER && j(e);
                         },
                         className: m.colorVariant,
                         children: (0, r.jsx)('div', {
@@ -154,7 +154,7 @@ let E = s()((e) => {
             x = null !== E ? (null == (n = l.variants) ? void 0 : n[E]) : void 0,
             y = (0, f.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
         if (null == S) return null;
-        let j = null != x ? x.variantLabel : null == S ? void 0 : S.variantLabel;
+        let T = null != x ? x.variantLabel : null == S ? void 0 : S.variantLabel;
         return (0, r.jsx)(c.bG, {
             navigator: y,
             children: (0, r.jsx)(c.SJ, {
@@ -199,7 +199,7 @@ let E = s()((e) => {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
                                     className: m.variantLabel,
-                                    children: d ? b.intl.string(b.t.wbgaj4) : j
+                                    children: d ? b.intl.string(b.t.wbgaj4) : T
                                 })
                             ]
                         })

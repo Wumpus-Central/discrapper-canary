@@ -22,8 +22,8 @@ var r = n(255367),
     S = n(619899),
     x = n(215023),
     y = n(981631),
-    j = n(388032),
-    T = n(806734);
+    T = n(388032),
+    j = n(806734);
 let P = (e) => {
     var t;
     let { isLoading: n, sortedSkuIds: o, handleTransition: P, numVisibleItems: L, tab: I } = e,
@@ -55,23 +55,23 @@ let P = (e) => {
     return null == k
         ? null
         : (0, r.jsxs)('div', {
-              className: i()(T.popularPicksSection, T.centeredSection),
+              className: i()(j.popularPicksSection, j.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
-                      className: T.blockHeader,
+                      className: j.blockHeader,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: T.headerLeft,
+                              className: j.headerLeft,
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: I === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
+                                      children: I === x.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS)
                                   }),
                                   D &&
                                       (0, r.jsx)(s.ua7, {
-                                          text: j.intl.string(j.t['3taPdn']),
+                                          text: T.intl.string(T.t['3taPdn']),
                                           position: 'top',
-                                          'aria-label': j.intl.string(j.t['3taPdn']),
+                                          'aria-label': T.intl.string(T.t['3taPdn']),
                                           children: (e) => {
                                               var t, n;
                                               return (0, r.jsx)(
@@ -104,7 +104,7 @@ let P = (e) => {
                                                   (n = n =
                                                       {
                                                           onClick: () => (0, c.Z)(g.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
-                                                          className: T.informationIcon,
+                                                          className: j.informationIcon,
                                                           children: (0, r.jsx)(s.d3s, { size: 'sm' })
                                                       }),
                                                   Object.getOwnPropertyDescriptors
@@ -126,19 +126,19 @@ let P = (e) => {
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: T.headerRight,
+                              className: j.headerRight,
                               children: [
                                   B &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(s.Text, {
                                                   variant: 'text-md/medium',
-                                                  children: j.intl.string(j.t.uaX709)
+                                                  children: T.intl.string(T.t.uaX709)
                                               }),
                                               (0, r.jsx)(s.PhF, {
                                                   options: Z,
                                                   select: K,
-                                                  className: T.sortSelect,
+                                                  className: j.sortSelect,
                                                   isSelected: (e) => e === A,
                                                   serialize: (e) => e
                                               })
@@ -158,20 +158,20 @@ let P = (e) => {
                                                         f.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: Y }));
                                                 },
                                                 disabled: U !== v.g.MOUNTED && U !== v.g.FINISHED,
-                                                children: j.intl.string(j.t.X3tnc3)
+                                                children: T.intl.string(T.t.X3tnc3)
                                             })
                                           : (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
                                                 look: s.iLD.FILLED,
                                                 onClick: () => P('shop all top'),
-                                                children: j.intl.string(j.t.xFcotb)
+                                                children: T.intl.string(T.t.xFcotb)
                                             }))
                               ]
                           })
                       ]
                   }),
                   (0, r.jsx)('div', {
-                      className: T.feed,
+                      className: j.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(O.K, {}, t + 1)) })
                           : M.slice(0, L).map((e, t) => {
@@ -179,8 +179,8 @@ let P = (e) => {
                                     l = m.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (V)
-                                    if (U === v.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: T.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
-                                    else U === v.g.SORT_OUT ? (n = T.sortChangedOutro) : U === v.g.SHUFFLE_IN ? (n = T.shuffleIntro) : U === v.g.SORT_IN && (n = T.sortChangedIntro);
+                                    if (U === v.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: j.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
+                                    else U === v.g.SORT_OUT ? (n = j.sortChangedOutro) : U === v.g.SHUFFLE_IN ? (n = j.shuffleIntro) : U === v.g.SORT_IN && (n = j.sortChangedIntro);
                                 return (0, r.jsx)(
                                     b.k0,
                                     {

@@ -21,20 +21,20 @@ let _ = (e) => {
     null != E && (C = null == (t = p.Z.getCategoryByStoreListingId(null == E ? void 0 : E.categoryStoreListingId)) ? void 0 : t.skuId);
     let x = null != (n = null != C ? C : null == O ? void 0 : O.skuId) ? n : '',
         { handleCardVisibilityChange: y } = (0, f.E)(x, 'home', 'marketing featured block'),
-        { featuredBlockBanner: j } = (0, g.YG)(O, E),
-        T = l.useRef(null),
+        { featuredBlockBanner: T } = (0, g.YG)(O, E),
+        j = l.useRef(null),
         P = x === a.T.NAMEPLATES_V3,
         L = P ? 'NAMEPLATES VOL.3' : null,
         I = null == E ? void 0 : E.bodyText,
         k = (0, d.sp)();
     return (0, r.jsx)(s.$, {
-        innerRef: T,
+        innerRef: j,
         onChange: y,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
             className: m.featuredBlock,
-            innerRef: T,
-            style: { backgroundImage: 'url('.concat(j, ')') },
+            innerRef: j,
+            style: { backgroundImage: 'url('.concat(T, ')') },
             onClick: () => {
                 (S('shop marketing tile', x),
                     u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {

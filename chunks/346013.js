@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(100527),
     m = n(367907),
     f = n(676742),
-    g = n(1585),
-    _ = n(841762),
+    _ = n(1585),
+    g = n(841762),
     h = n(336197),
     b = n(406432),
     E = n(348238),
     y = n(38267),
-    x = n(884902),
-    C = n(670188),
+    C = n(884902),
+    x = n(670188),
     v = n(695346),
     O = n(271383),
     j = n(594174),
@@ -102,7 +102,7 @@ function M(e) {
             var e;
             return [null != (e = null == et ? void 0 : et.colorString) ? e : 'inherit', null == et ? void 0 : et.colorStrings, null == et ? void 0 : et.colorRoleId];
         }, [et]),
-        ea = (0, x.X7)(null == et ? void 0 : et.guildId, null != (l = null == V ? void 0 : V.authorId) ? l : void 0, ei),
+        ea = (0, C.X7)(null == et ? void 0 : et.guildId, null != (l = null == V ? void 0 : V.authorId) ? l : void 0, ei),
         { reducedMotion: eo } = i.useContext(u.Sfi),
         [es, ec] = i.useState(!1),
         eu = i.useCallback(() => {
@@ -124,15 +124,15 @@ function M(e) {
     if (null == V) return null;
     let em = (0, I.NZ)({
             avatarDecoration: en,
-            size: (0, g.y9)(u.EFr.SIZE_40),
+            size: (0, _.y9)(u.EFr.SIZE_40),
             canAnimate: es
         }),
         ef = null == (n = V.user) ? void 0 : n.getAvatarURL(V.guildId, 40, es),
-        eg = () => {
+        e_ = () => {
             eo.enabled || ec((e) => !e);
         },
-        e_ = V.coverImage,
-        eh = null != e_ && (0, b.d$)(e_);
+        eg = V.coverImage,
+        eh = null != eg && (0, b.d$)(eg);
     return (0, r.jsxs)('div', {
         className: R.postPreviewContainer,
         children: [
@@ -150,9 +150,9 @@ function M(e) {
                                   onContextMenu: W,
                                   onError: () => J(!0)
                               })
-                            : (0, r.jsx)(_.Z, {
-                                  src: !(Y && (K || X)) && eh ? ''.concat(e_, '?format=png') : e_,
-                                  backgroundSrc: ''.concat(e_, '?format=png'),
+                            : (0, r.jsx)(g.Z, {
+                                  src: !(Y && (K || X)) && eh ? ''.concat(eg, '?format=png') : eg,
+                                  backgroundSrc: ''.concat(eg, '?format=png'),
                                   alt: Z.intl.string(Z.t.rIbh8P),
                                   aspectRatio: 16 / 9,
                                   className: a()(R.thumbnail, { [R.spoiler]: V.shouldSpoiler }),
@@ -205,7 +205,7 @@ function M(e) {
                         children: [
                             null != V.authorId &&
                                 null != ef &&
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(x.Z, {
                                     targetElementRef: H,
                                     userId: V.authorId,
                                     guildId: V.guildId,
@@ -217,8 +217,8 @@ function M(e) {
                                     spacing: 12,
                                     children: (e) =>
                                         (0, r.jsx)('div', {
-                                            onMouseEnter: eg,
-                                            onMouseLeave: eg,
+                                            onMouseEnter: e_,
+                                            onMouseLeave: e_,
                                             children: (0, r.jsx)(
                                                 u.qEK,
                                                 D(L({}, e), {
@@ -270,7 +270,7 @@ function M(e) {
                                                               className: R.authorName
                                                           })
                                                         : (0, r.jsx)(
-                                                              C.Z,
+                                                              x.Z,
                                                               {
                                                                   targetElementRef: G,
                                                                   userId: V.authorId,

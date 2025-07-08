@@ -23,8 +23,8 @@ function f(e, t, n) {
         e
     );
 }
-let g = {},
-    _ = 0,
+let _ = {},
+    g = 0,
     h = {},
     b = {},
     E = (e, t) => {
@@ -35,13 +35,13 @@ let g = {},
                 messageData: e,
                 errorMessage: (0, d.uF)(e, t)
             };
-        ((g[n] = r), _++);
+        ((_[n] = r), g++);
     },
-    y = (e) => g[e],
-    x = (e) => {
-        (null != g[e] && delete g[e], _++);
+    y = (e) => _[e],
+    C = (e) => {
+        (null != _[e] && delete _[e], g++);
     };
-function C(e) {
+function x(e) {
     let { messageData: t, errorResponseBody: n } = e;
     return (E(t, n), !0);
 }
@@ -69,11 +69,11 @@ function v(e) {
 }
 class O extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(c.Z), null != e && ((g = e.automodFailedMessages), (h = e.mentionRaidDetectionByGuild)));
+        (this.waitFor(c.Z), null != e && ((_ = e.automodFailedMessages), (h = e.mentionRaidDetectionByGuild)));
     }
     getState() {
         return {
-            automodFailedMessages: g,
+            automodFailedMessages: _,
             mentionRaidDetectionByGuild: h,
             lastIncidentAlertMessage: b
         };
@@ -83,7 +83,7 @@ class O extends (r = i.ZP.PersistedStore) {
         return null == e ? null : null != (t = y(e)) ? t : null;
     }
     getMessagesVersion() {
-        return _;
+        return g;
     }
     getMentionRaidDetected(e) {
         var t;
@@ -97,7 +97,7 @@ class O extends (r = i.ZP.PersistedStore) {
 (f(O, 'displayName', 'GuildAutomodMessageStore'), f(O, 'persistKey', 'GuildAutomodMessages'));
 let j = new O(l.Z, {
     CONNECTION_OPEN: function (e) {
-        return 0 !== Object.keys(g).length && ((g = {}), _++, !0);
+        return 0 !== Object.keys(_).length && ((_ = {}), g++, !0);
     },
     LOAD_MESSAGES_SUCCESS: v,
     LOCAL_MESSAGES_LOADED: v,
@@ -107,18 +107,18 @@ let j = new O(l.Z, {
         let r = (0, o.e5)(n);
         return !!(0, p.nY)(r) && !!(0, p.OP)(r) && ((b[t] = r.id), !0);
     },
-    MESSAGE_SEND_FAILED_AUTOMOD: C,
-    MESSAGE_EDIT_FAILED_AUTOMOD: C,
+    MESSAGE_SEND_FAILED_AUTOMOD: x,
+    MESSAGE_EDIT_FAILED_AUTOMOD: x,
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
         let { messageId: t } = e;
-        return (x(t), !0);
+        return (C(t), !0);
     },
     MESSAGE_END_EDIT: function (e) {
         let { response: t } = e;
         if ((null == t ? void 0 : t.body) == null || t.body.code === m.evJ.AUTOMOD_MESSAGE_BLOCKED) return !1;
         let n = t.body.id;
         if (null == n) return !1;
-        x(n);
+        C(n);
     },
     AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
         let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: r } = e;

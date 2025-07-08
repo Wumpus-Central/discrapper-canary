@@ -11,29 +11,29 @@ var r,
     p = n(590783),
     m = n(669079),
     f = n(981631);
-let g = {},
-    _ = new Map(),
+let _ = {},
+    g = new Map(),
     h = [],
     b = [],
     E = [],
     y = new Set(),
-    x = {},
     C = {},
+    x = {},
     v = new Set();
 function O(e) {
     let t = p.Z.createFromServer(e),
         n = t.code;
-    if (_.has(n)) _.set(n, _.get(n).merge(t));
-    else if ((_.set(n, t), null != t.expiresAt)) {
+    if (g.has(n)) g.set(n, g.get(n).merge(t));
+    else if ((g.set(n, t), null != t.expiresAt)) {
         let e = new c.V7();
-        ((g[n] = e),
+        ((_[n] = e),
             (function e(t) {
-                let n = _.get(t);
+                let n = g.get(t);
                 if (null == n || null == n.expiresAt) return;
                 let r = n.expiresAt.valueOf() - o()().valueOf();
-                if (r <= 0) (_.delete(t), delete g[t], A.emitChange());
+                if (r <= 0) (g.delete(t), delete _[t], A.emitChange());
                 else {
-                    let n = g[t];
+                    let n = _[t];
                     if (null == n) return;
                     n.start(Math.min(2147483647, r), () => e(t));
                 }
@@ -71,14 +71,14 @@ function N(e) {
 }
 class P extends (r = s.ZP.Store) {
     get(e) {
-        let t = _.get(e);
+        let t = g.get(e);
         return null == t || t.isExpired() ? null : t;
     }
     getError(e) {
-        return null != e ? C[e] : null;
+        return null != e ? x[e] : null;
     }
     getForGifterSKUAndPlan(e, t, n) {
-        return Array.from(_.values()).filter((r) => r.userId === e && r.skuId === t && (null == n || r.subscriptionPlanId === n) && !r.isExpired());
+        return Array.from(g.values()).filter((r) => r.userId === e && r.skuId === t && (null == n || r.subscriptionPlanId === n) && !r.isExpired());
     }
     getIsResolving(e) {
         return h.includes(e);
@@ -93,7 +93,7 @@ class P extends (r = s.ZP.Store) {
         return y.has((0, m.Bg)(e, t));
     }
     getUserGiftCodesLoadedAtForSKUAndPlan(e, t) {
-        return x[(0, m.Bg)(e, t)];
+        return C[(0, m.Bg)(e, t)];
     }
     getResolvingCodes() {
         return h;
@@ -138,9 +138,9 @@ let A = new P(u.Z, {
         GIFT_CODE_REDEEM_SUCCESS: function (e) {
             let { code: t } = e;
             b = b.filter((e) => e !== t);
-            let n = _.get(t);
+            let n = g.get(t);
             null != n &&
-                _.set(
+                g.set(
                     t,
                     n.merge({
                         redeemed: !0,
@@ -151,21 +151,21 @@ let A = new P(u.Z, {
         GIFT_CODE_REDEEM_FAILURE: function (e) {
             let { code: t, error: n } = e;
             b = b.filter((e) => e !== t);
-            let r = _.get(t);
-            if (((C[t] = n), null != r))
+            let r = g.get(t);
+            if (((x[t] = n), null != r))
                 switch (n.code) {
                     case f.evJ.UNKNOWN_GIFT_CODE:
-                        _.set(t, r.set('revoked', !0));
+                        g.set(t, r.set('revoked', !0));
                         break;
                     case f.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-                        _.set(t, r.set('uses', r.maxUses));
+                        g.set(t, r.set('uses', r.maxUses));
                 }
         },
         GIFT_CODE_REVOKE_SUCCESS: function (e) {
             let { code: t } = e;
-            _.delete(t);
-            let n = g[t];
-            (null != n && (n.stop(), delete g[t]), E.includes(t) || (E = [...E, t]));
+            g.delete(t);
+            let n = _[t];
+            (null != n && (n.stop(), delete _[t]), E.includes(t) || (E = [...E, t]));
         },
         GIFT_CODE_CREATE_SUCCESS: function (e) {
             let { giftCode: t } = e;
@@ -179,7 +179,7 @@ let A = new P(u.Z, {
             let { giftCodes: t, skuId: n, subscriptionPlanId: r } = e;
             t.forEach(O);
             let i = (0, m.Bg)(n, r);
-            ((x[i] = Date.now()), y.delete(i));
+            ((C[i] = Date.now()), y.delete(i));
         },
         GIFT_CODES_FETCH_FAILURE: function (e) {
             let { skuId: t, subscriptionPlanId: n } = e;
@@ -208,8 +208,8 @@ let A = new P(u.Z, {
         },
         GIFT_CODE_UPDATE: function (e) {
             let { uses: t, code: n } = e,
-                r = _.get(n);
-            null != r && _.set(n, r.set('uses', Math.max(r.uses, t)));
+                r = g.get(n);
+            null != r && g.set(n, r.set('uses', Math.max(r.uses, t)));
         },
         LOAD_THREADS_SUCCESS: N,
         LOAD_ARCHIVED_THREADS_SUCCESS: N,

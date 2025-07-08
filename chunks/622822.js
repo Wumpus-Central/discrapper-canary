@@ -17,14 +17,14 @@ var r = n(81643),
     p = n(723359),
     m = n(981631),
     f = n(388032);
-let g = new Date('06/16/2020'),
-    _ = [m.V_K.AGE_RESTRICTED, m.V_K.EXPLICIT];
+let _ = new Date('06/16/2020'),
+    g = [m.V_K.AGE_RESTRICTED, m.V_K.EXPLICIT];
 function h() {
     let e = c.default.getCurrentUser();
-    return null != e && u.default.extractTimestamp(e.id) > g.getTime() && null == e.nsfwAllowed;
+    return null != e && u.default.extractTimestamp(e.id) > _.getTime() && null == e.nsfwAllowed;
 }
 function b(e) {
-    return _.includes(e.nsfwLevel);
+    return g.includes(e.nsfwLevel);
 }
 function E() {
     let e = (0, i.s8)({ location: 'age-gate-utils' }),
@@ -44,7 +44,7 @@ function y(e) {
               verifyGateDescription: n ? f.intl.string(f.t.akjk0d) : f.intl.string(f.t['u/xqhY'])
           };
 }
-let x = () => {
+let C = () => {
         let e = c.default.getCurrentUser();
         if (null == e) return !1;
         let t = (function () {
@@ -54,8 +54,8 @@ let x = () => {
         })();
         return null == e.nsfwAllowed || t;
     },
-    C = (e) => {
-        if (!x() || null == e) return !1;
+    x = (e) => {
+        if (!C() || null == e) return !1;
         let t = s.Z.getGuild(e);
         return (
             null != t &&
@@ -68,8 +68,8 @@ let x = () => {
     },
     v = (e) => {
         var t;
-        return !!x() && null != e && (null == (t = o.Z.getChannel(e)) ? void 0 : t.isNSFW());
+        return !!C() && null != e && (null == (t = o.Z.getChannel(e)) ? void 0 : t.isNSFW());
     };
 function O(e, t, n) {
-    return C(e) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_SERVER) : v(t) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_CHANNEL) : void 0;
+    return x(e) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_SERVER) : v(t) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_CHANNEL) : void 0;
 }

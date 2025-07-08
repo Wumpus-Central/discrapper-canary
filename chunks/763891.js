@@ -22,8 +22,8 @@ var r = n(255367),
     S = n(662128),
     x = n(676790),
     y = n(665195),
-    j = n(42742),
-    T = n(283727),
+    T = n(42742),
+    j = n(283727),
     P = n(266058),
     L = n(719138);
 function I(e) {
@@ -48,7 +48,7 @@ function I(e) {
                 case C.AW.PROFILE_EFFECTS:
                     return [O.intl.string(O.t['1cNjt7']), V ? L.Z : P.Z, o.Z.PROFILE_EFFECT];
                 case C.AW.NAMEPLATES:
-                    return [O.intl.string(O.t.V68Fq6), V ? T.Z : j.Z, o.Z.NAMEPLATE];
+                    return [O.intl.string(O.t.V68Fq6), V ? j.Z : T.Z, o.Z.NAMEPLATE];
                 case C.AW.BUNDLES:
                     return [O.intl.string(O.t.FYFppq), V ? S.Z : v.Z, o.Z.BUNDLE];
             }

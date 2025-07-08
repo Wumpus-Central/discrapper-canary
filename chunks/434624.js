@@ -11,15 +11,15 @@ var r = n(255367),
     p = n(566006),
     m = n(287151),
     f = n(92254),
-    g = n(588429);
-let _ = i.memo(function (e) {
+    _ = n(588429);
+let g = i.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: _, count: h, me: b, me_burst: E, burst_count: y, burst_colors: x, readOnly: C, isLurking: v, isGuest: O, isPendingMember: j, type: I, emojiSize: S } = e,
+            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: h, me: b, me_burst: E, burst_count: y, burst_colors: C, readOnly: x, isLurking: v, isGuest: O, isPendingMember: j, type: I, emojiSize: S } = e,
             T = I === p.O.BURST,
             N = (0, m.y4)(b, E, I),
-            P = (0, d.v)(T && null != x ? x : []),
-            A = i ? g : f,
+            P = (0, d.v)(T && null != C ? C : []),
+            A = i ? _ : f,
             w = T ? y : h,
             Z = (0, u.y)(w, m.aO),
             R = {};
@@ -35,9 +35,9 @@ let _ = i.memo(function (e) {
             borderColor: n
         };
         return (0, r.jsxs)('div', {
-            className: a()(A.reaction, A.reactionInner, _, {
+            className: a()(A.reaction, A.reactionInner, g, {
                 [A.reactionMe]: N,
-                [A.reactionReadOnly]: C && !v && !j && !O
+                [A.reactionReadOnly]: x && !v && !j && !O
             }),
             style: R,
             children: [
@@ -91,14 +91,14 @@ let _ = i.memo(function (e) {
                 [a, s]
             ),
             f = (0, c.O)(d),
-            g = (a && !s) || t ? m.le : _;
+            _ = (a && !s) || t ? m.le : g;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', { ref: f }),
                 n.map((e) => {
                     var t, n, i;
                     return (0, r.jsx)(
-                        g,
+                        _,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},

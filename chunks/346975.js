@@ -525,8 +525,8 @@ function eT(e) {
             updateMasonryListScrollerRef: e0,
             getItemKey: e3,
             renderGridSection: e6,
-            renderGridItem: e1,
-            getGridSectionHeight: e8,
+            renderGridItem: e8,
+            getGridSectionHeight: e1,
             getSectionProps: e9,
             handleGridFocus: e4
         } = (function (e) {
@@ -693,7 +693,7 @@ function eT(e) {
         parentId: t.id,
         focusedThreadId: eT
     });
-    let e5 = i.useCallback(() => {
+    let e2 = i.useCallback(() => {
             var e, n;
             if (ey) return;
             let r = eo ? (null == (e = e$.current) ? void 0 : e.getScrollerState()) : null == (n = ea.current) ? void 0 : n.getScrollerState();
@@ -705,16 +705,16 @@ function eT(e) {
             let i = r.scrollTop + r.offsetHeight;
             r.scrollHeight - i < (eo ? Math.max(200, (0, es.KW)(ek)) : 200) && _();
         }, [ey, eo, t.guild_id, t.id, ek, _]),
-        e2 = (0, g.e7)([j.Z], () => j.Z.keyboardModeEnabled),
+        e5 = (0, g.e7)([j.Z], () => j.Z.keyboardModeEnabled),
         e7 = (0, ed.ZP)({
             id: 'forum-grid-view',
-            isEnabled: eo && e2,
+            isEnabled: eo && e5,
             setFocus: e4
         }),
         te = (0, eu.Z)({
             listRef: ea,
             padding: 96,
-            isEnabled: !eo && e2,
+            isEnabled: !eo && e5,
             channel: t
         }),
         tt = e7.containerProps,
@@ -763,12 +763,12 @@ function eT(e) {
                                               columns: eM,
                                               sections: eD,
                                               getItemKey: e3,
-                                              getSectionHeight: e8,
+                                              getSectionHeight: e1,
                                               getItemHeight: eC,
                                               renderSection: e6,
-                                              renderItem: e1,
+                                              renderItem: e8,
                                               getSectionProps: e9,
-                                              onScroll: v ? e5 : void 0,
+                                              onScroll: v ? e2 : void 0,
                                               chunkSize: 350
                                           },
                                           tr,
@@ -796,7 +796,7 @@ function eT(e) {
                                                           renderRow: eJ,
                                                           renderSection: eK,
                                                           chunkSize: 150,
-                                                          onScroll: v ? e5 : void 0,
+                                                          onScroll: v ? e2 : void 0,
                                                           paddingBottom: 24
                                                       },
                                                       i,

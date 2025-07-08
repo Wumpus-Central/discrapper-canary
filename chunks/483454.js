@@ -149,12 +149,17 @@ let O = [c.h8.PAYMENT_ELEMENT],
         });
     },
     S = (e) => {
-        let { elementsOptions: t, isLoading: n } = (0, d.S)({ shouldGenerateSetupIntent: !0 });
-        return n
-            ? (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
+        var { onSetupError: t } = e,
+            n = b(e, ['onSetupError']);
+        let { elementsOptions: i, isLoading: o, setupError: s } = (0, d.S)({ onSetupError: t });
+        return o || null != s
+            ? (0, r.jsx)('div', {
+                  className: p.loadingContainer,
+                  children: (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE_SIMPLE })
+              })
             : (0, r.jsxs)(a.Elements, {
                   stripe: (0, u.d2)(),
-                  options: m({}, t),
-                  children: [(0, r.jsx)(T, m({}, e)), ';']
+                  options: m({}, i),
+                  children: [(0, r.jsx)(T, m({}, n)), ';']
               });
     };

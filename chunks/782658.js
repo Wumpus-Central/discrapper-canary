@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(997431),
     m = n(924301),
     f = n(11868),
-    g = n(413605),
-    _ = n(451603),
+    _ = n(413605),
+    g = n(451603),
     h = n(885714),
     b = n(314897),
     E = n(430824),
     y = n(701190),
-    x = n(411198),
-    C = n(610699),
+    C = n(411198),
+    x = n(610699),
     v = n(313876),
     O = n(778333),
     j = n(949981),
@@ -68,10 +68,10 @@ function R(e) {
         },
         z = () => {
             if (null == B && (null == k ? void 0 : k.guild) != null) {
-                let e = x.Qs(k.guild);
+                let e = C.Qs(k.guild);
                 if ((0, c.bN)() && (0, c.Yt)(e)) return void (0, s.mN)(Z.L0.NSFW_SERVER_INVITE_EMBED);
             }
-            (0, _.yU)()
+            (0, g.yU)()
                 ? (0, h.Z)({
                       analyticsSource: { page: w.ZY5.INVITE_EMBED },
                       analyticsLocation: {
@@ -112,8 +112,8 @@ function R(e) {
             });
             break;
         default:
-            switch ((0, g.VR)(M)) {
-                case g.wx.GROUP_DM:
+            switch ((0, _.VR)(M)) {
+                case _.wx.GROUP_DM:
                     W = (0, r.jsx)(j.Z, {
                         onTransitionToInviteChannel: V,
                         onAcceptInstantInvite: z,
@@ -122,7 +122,7 @@ function R(e) {
                         message: n
                     });
                     break;
-                case g.wx.FRIEND:
+                case _.wx.FRIEND:
                     W = (0, r.jsx)(O.Z, {
                         invite: M,
                         message: n,
@@ -130,7 +130,7 @@ function R(e) {
                     });
                     break;
                 default:
-                    if ((0, g.TY)(M)) {
+                    if ((0, _.TY)(M)) {
                         W = (0, r.jsx)(A.Z, {
                             onTransitionToInviteChannel: V,
                             onAcceptInstantInvite: z,
@@ -141,7 +141,7 @@ function R(e) {
                         });
                         break;
                     }
-                    if ((0, g.Tx)(M)) {
+                    if ((0, _.Tx)(M)) {
                         W = (0, r.jsx)(f.ZP, {
                             guildScheduledEvent: H,
                             guild: M.guild,
@@ -152,7 +152,7 @@ function R(e) {
                         });
                         break;
                     }
-                    if ((0, g.$P)(M)) {
+                    if ((0, _.$P)(M)) {
                         W = (0, r.jsx)(P.Z, {
                             invite: M,
                             stageInstance: M.stage_instance,
@@ -164,8 +164,8 @@ function R(e) {
                         });
                         break;
                     }
-                    if ((0, g.P1)(M)) {
-                        W = (0, r.jsx)(C.Z, {
+                    if ((0, _.P1)(M)) {
+                        W = (0, r.jsx)(x.Z, {
                             invite: M,
                             getAcceptInviteContext: R,
                             message: n

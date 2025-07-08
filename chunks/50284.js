@@ -1,40 +1,40 @@
-(n.d(t, { Z: () => O }), n(642613), n(583741));
-var r = n(544891),
-    i = n(710845),
+(n.d(t, { Z: () => h }), n(642613), n(583741));
+var i = n(544891),
+    r = n(710845),
     l = n(569471),
     o = n(346479),
-    a = n(592125),
-    c = n(375954),
-    s = n(306680),
-    u = n(594174),
-    d = n(709054),
+    s = n(592125),
+    a = n(375954),
+    c = n(306680),
+    d = n(594174),
+    u = n(709054),
     _ = n(981631);
-let E = new i.Z('markUnread');
-async function O(e, t) {
-    let n = u.default.getCurrentUser();
+let E = new r.Z('markUnread');
+async function h(e, t) {
+    let n = d.default.getCurrentUser();
     if (null == n) return;
-    let i = c.Z.getMessages(e),
-        O = i
+    let r = a.Z.getMessages(e),
+        h = r
             .toArray()
-            .filter((e) => 0 > d.default.compare(e.id, t))
-            .sort((e, t) => d.default.compare(e.id, t.id))
+            .filter((e) => 0 > u.default.compare(e.id, t))
+            .sort((e, t) => u.default.compare(e.id, t.id))
             .reverse()[0],
-        I = null == O ? d.default.atPreviousMillisecond(t) : O.id,
-        T = 0;
-    i.forAll((e) => {
-        d.default.compare(e.id, I) > 0 && (0, s.Ex)(e, n) && T++;
+        I = null == h ? u.default.atPreviousMillisecond(t) : h.id,
+        p = 0;
+    r.forAll((e) => {
+        u.default.compare(e.id, I) > 0 && (0, c.Ex)(e, n) && p++;
     });
-    let p = a.Z.getChannel(e);
-    (null != p && p.isThread() && (p.isArchivedThread() && (await o.Z.unarchiveThread(p, !1)), l.Z.hasJoined(e) || (await o.Z.joinThread(p, 'Mark Unread'))),
+    let C = s.Z.getChannel(e);
+    (null != C && C.isThread() && (C.isArchivedThread() && (await o.Z.unarchiveThread(C, !1)), l.Z.hasJoined(e) || (await o.Z.joinThread(C, 'Mark Unread'))),
         E.log('Marking unread', {
             channelId: e,
             messageId: t
         }),
-        r.tn.post({
+        i.tn.post({
             url: _.ANM.MESSAGE_ACK(e, I),
             body: {
                 manual: !0,
-                mention_count: T
+                mention_count: p
             },
             oldFormErrors: !0,
             rejectWithError: !0

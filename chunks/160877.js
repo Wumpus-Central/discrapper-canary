@@ -1,6 +1,6 @@
 (n.d(t, {
     $: () => v,
-    s: () => C
+    s: () => x
 }),
     n(953529));
 var r = n(255367),
@@ -15,8 +15,8 @@ var r = n(255367),
     p = n(406432),
     m = n(584656),
     f = n(247206),
-    g = n(470734),
-    _ = n(719548),
+    _ = n(470734),
+    g = n(719548),
     h = n(388032),
     b = n(580297);
 let E = (e) => {
@@ -24,7 +24,7 @@ let E = (e) => {
             { url: n, description: i } = t;
         return null == n
             ? null
-            : (0, r.jsx)(x, {
+            : (0, r.jsx)(C, {
                   url: n,
                   description: i
               });
@@ -32,11 +32,11 @@ let E = (e) => {
     y = (e) => {
         var t, n, i;
         let { embed: l } = e;
-        if (!_.n2.has(l.type)) return null;
+        if (!g.n2.has(l.type)) return null;
         let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
-        return null == a ? null : (0, r.jsx)(x, { url: a });
+        return null == a ? null : (0, r.jsx)(C, { url: a });
     },
-    x = (e) => {
+    C = (e) => {
         let { url: t, description: n } = e,
             i = (0, p.cb)(t);
         return (0, r.jsx)('div', {
@@ -54,7 +54,7 @@ let E = (e) => {
                   })
         });
     };
-function C(e) {
+function x(e) {
     (c.Z.pop(),
         (0, m.t)({
             id: 'explicit-media-false-positive-modal',
@@ -64,9 +64,9 @@ function C(e) {
 }
 function v(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: d, transitionState: p, onClose: m } = e,
-        _ = (0, u.Dt)(),
-        x = (0, g.pn)('ExplicitMediaFalsePositiveModal'),
-        C = i.useCallback(() => {
+        g = (0, u.Dt)(),
+        C = (0, _.pn)('ExplicitMediaFalsePositiveModal'),
+        x = i.useCallback(() => {
             ((0, f.aP)({
                 action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
@@ -92,21 +92,21 @@ function v(e) {
             context: a
         });
     }, [t, n, a]);
-    let O = i.useMemo(() => (x ? h.intl.string(h.t['z4du/P']) : h.intl.string(h.t.gg5Dp6)), [x]);
+    let O = i.useMemo(() => (C ? h.intl.string(h.t['z4du/P']) : h.intl.string(h.t.gg5Dp6)), [C]);
     return (0, r.jsxs)(s.Y0X, {
         transitionState: p,
-        'aria-labelledby': _,
+        'aria-labelledby': g,
         size: s.CgR.SMALL,
         parentComponent: 'ExplicitMediaFalsePositiveModal',
         children: [
             (0, r.jsxs)(s.hzk, {
                 children: [
                     (0, r.jsx)(s.olH, {
-                        onClick: C,
+                        onClick: x,
                         className: b.closeButton
                     }),
                     (0, r.jsx)(s.X6q, {
-                        id: _,
+                        id: g,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
                         className: b.header,
@@ -138,7 +138,7 @@ function v(e) {
                         disabled: l,
                         color: s.zxk.Colors.TRANSPARENT,
                         size: s.zxk.Sizes.MEDIUM,
-                        onClick: C,
+                        onClick: x,
                         children: h.intl.string(h.t['ETE/oK'])
                     })
                 ]

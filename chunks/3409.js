@@ -419,7 +419,10 @@ function eP(e) {
         tv = i.useRef(null),
         [tI, tT] = i.useState(!1),
         [tS, tA] = i.useState(null),
-        tN = {
+        tN = i.useCallback(() => {
+            (tA(null), e$(C.h8.PAYMENT_TYPE));
+        }, [e$]),
+        tC = {
             shouldRender: !1,
             stripePaymentElementProps: {},
             stripeAddressElementProps: {}
@@ -428,7 +431,7 @@ function eP(e) {
         case C.h8.ATTEMPT_GOOGLE_PAY:
         case C.h8.ATTEMPT_APPLE_PAY:
         case C.h8.PAYMENT_TYPE:
-            let tC = (e, t) => {
+            let tR = (e, t) => {
                     let n = eC && (0, v.qH)(e, eP) ? () => e0(e) : e$;
                     switch (e) {
                         case X.He.CARD:
@@ -471,29 +474,29 @@ function eP(e) {
                     }
                     null != M.Z.error && (0, _.fw)();
                 },
-                tR = (e, t) => {
+                tP = (e, t) => {
                     (e9((e) => er(et({}, e), { info: t })), ez(eM), tm(e));
                 },
-                tP = () => {
+                tw = () => {
                     (ez(eU), e$(C.h8.PAYMENT_TYPE));
                 },
-                tw = async (e) => {
-                    if (((0, _.Xt)(e), null == e)) return void tP();
+                tD = async (e) => {
+                    if (((0, _.Xt)(e), null == e)) return void tw();
                     try {
                         let t = await (0, d.i6)(e, void 0, H),
                             { billingAddressInfo: n } = (0, F.az)(e);
-                        tR(t, n);
+                        tP(t, n);
                     } catch (e) {}
                 };
             if (eZ === C.h8.ATTEMPT_GOOGLE_PAY || eZ === C.h8.ATTEMPT_APPLE_PAY) {
                 let e = Q.intl.string(eZ === C.h8.ATTEMPT_APPLE_PAY ? Q.t.czhXDg : Q.t.Zj2xQ0),
                     t = Q.intl.string(eZ === C.h8.ATTEMPT_APPLE_PAY ? Q.t.WoXvJC : Q.t.wnVVr6);
                 ((n = (0, r.jsx)(L.t, {
-                    onChooseType: tC,
+                    onChooseType: tR,
                     paymentRequestWallet: eZ === C.h8.ATTEMPT_APPLE_PAY ? 'applePay' : 'googlePay',
-                    onStripePaymentMethodReceived: tw,
+                    onStripePaymentMethodReceived: tD,
                     onPaymentRequestFailure: () => {
-                        (tC(X.He.CARD), eW(e));
+                        (tR(X.He.CARD), eW(e));
                     },
                     onValidPaymentRequest: () => tb(!0),
                     paymentRequestRef: ty
@@ -508,8 +511,8 @@ function eP(e) {
                 break;
             }
             ((n = (0, r.jsx)(ey, {
-                onChooseType: tC,
-                onStripePaymentMethodReceived: tw,
+                onChooseType: tR,
+                onStripePaymentMethodReceived: tD,
                 paymentRequestWallets: tg,
                 isEligibleForTrial: ee,
                 paymentRequestPaymentContext: {
@@ -522,35 +525,32 @@ function eP(e) {
             break;
         case C.h8.PAYMENT_ELEMENT:
             if (!eC) throw (0, d.SQ)('Payment Elements not enabled, invalid step');
-            ((tN.shouldRender = !0),
-                (tN.stripePaymentElementProps = {
+            ((tC.shouldRender = !0),
+                (tC.stripePaymentElementProps = {
                     onChange: (e) => {
                         (eo.log('PaymentElements onChange event:', e), tT(e.complete), tA((0, v.hR)(e.value.type)));
                     }
                 }));
-            let tD = () => {
-                    (tA(null), e$(C.h8.PAYMENT_TYPE));
-                },
-                tL = () => {
-                    te(!0);
-                    try {
-                        if (null == tS || !(0, v.qH)(tS, eP)) throw (0, d.SQ)('Valid Payment Element source type not found');
-                        let { steps: e, methodType: t } = ek[tS];
-                        (ez({
-                            steps: e,
-                            methodType: t === X.He.UNKNOWN ? tS : t
-                        }),
-                            tS === X.He.PAYPAL ? e$(C.h8.PAYPAL_INFORMATION) : e$(C.h8.ADDRESS));
-                    } catch (t) {
-                        var e;
-                        eo.error(null != (e = t.message) ? e : JSON.stringify(t));
-                    } finally {
-                        te(!1);
-                    }
-                };
+            let tL = () => {
+                te(!0);
+                try {
+                    if (null == tS || !(0, v.qH)(tS, eP)) throw (0, d.SQ)('Valid Payment Element source type not found');
+                    let { steps: e, methodType: t } = ek[tS];
+                    (ez({
+                        steps: e,
+                        methodType: t === X.He.UNKNOWN ? tS : t
+                    }),
+                        tS === X.He.PAYPAL ? e$(C.h8.PAYPAL_INFORMATION) : e$(C.h8.ADDRESS));
+                } catch (t) {
+                    var e;
+                    eo.error(null != (e = t.message) ? e : JSON.stringify(t));
+                } finally {
+                    te(!1);
+                }
+            };
             ((n = null),
                 (o = (0, r.jsx)(eR, {
-                    onBack: tD,
+                    onBack: tN,
                     primaryCTA: P.Z.CTAType.CONTINUE,
                     primaryType: 'submit',
                     primaryText: Q.intl.string(Q.t.PDTjLC),
@@ -842,9 +842,9 @@ function eP(e) {
                     ((h = C.h8.PAYMENT_TYPE), (p = X.He.CARD));
             }
             if ((eC && null != tS && (h = C.h8.PAYMENT_ELEMENT), eC)) {
-                tN.shouldRender = !0;
+                tC.shouldRender = !0;
                 let { name: e, address: t } = (0, F.XZ)(e7.info);
-                tN.stripeAddressElementProps = {
+                tC.stripeAddressElementProps = {
                     options: {
                         mode: 'billing',
                         defaultValues: et(
@@ -908,7 +908,7 @@ function eP(e) {
         default:
             throw Error('Unexpected step: '.concat(eZ));
     }
-    let tZ = eC && tN.shouldRender,
+    let tZ = eC && tC.shouldRender,
         tH = (0, r.jsxs)(c.qBt, {
             className: $.sequencer,
             staticClassName: $.sequencerStatic,
@@ -925,8 +925,9 @@ function eP(e) {
                         paymentElementSelectedType: tS,
                         originalPaymentType: eK.methodType,
                         elementsRef: tv,
-                        stripePaymentElementProps: tN.stripePaymentElementProps,
-                        stripeAddressElementProps: tN.stripeAddressElementProps
+                        stripePaymentElementProps: tC.stripePaymentElementProps,
+                        stripeAddressElementProps: tC.stripeAddressElementProps,
+                        onSetupError: tN
                     }),
                 n
             ]

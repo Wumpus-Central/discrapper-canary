@@ -46,7 +46,7 @@ let b = (e, t) => {
                 x(e)
             );
         }, [_, x, S, t, v, l, b, O]),
-        j = r.useCallback(() => {
+        T = r.useCallback(() => {
             (E((e) => e + 1), C(i.m.RANDOM));
         }, []);
     return {
@@ -78,6 +78,6 @@ let b = (e, t) => {
             );
         }, [m]),
         showRecommendationOption: m,
-        shuffleProducts: j
+        shuffleProducts: T
     };
 };
